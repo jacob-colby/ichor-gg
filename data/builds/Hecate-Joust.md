@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - The Cosmic Horror
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -23,8 +23,8 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -37,7 +37,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    The Cosmic Horror:
+    Doom Orb:
       total: 0.65
       efficiency: 0.53
       win: 0.5
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Divine Ruin
   - Bancroft's Talon
-  - Death Metal
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
-  - Bancroft's Talon
   - Doom Orb
+  - Bancroft's Talon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -90,26 +90,26 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Divine Ruin:
+      total: 0.56
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Bancroft's Talon:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Death Metal:
-      total: 0.59
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Triton's Conch:
-      total: 0.61
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
+  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
-  - Triton's Conch
   flex_slots:
   - Spear of the Magus
-  - Triton's Conch
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Doom Orb:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
@@ -188,37 +194,31 @@ builds:
       pick: 0.0
       fit: 0.66
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -240,12 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Spectral Armor:
-      total: 0.56
-      efficiency: 0.57
+    Void Stone:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.65
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -269,24 +269,24 @@ builds:
   archetype: anti-tank
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - The Cosmic Horror
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -299,7 +299,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    The Cosmic Horror:
+    Doom Orb:
       total: 0.68
       efficiency: 0.53
       win: 0.5
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.94
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -381,7 +381,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Chronos' Pendant
+  - Gem of Focus
   - Spear of Desolation
   - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Totem of Death
-  - Genji's Guard
+  - Gem of Focus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,18 +423,18 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Chronos' Pendant:
       total: 0.59
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Gem of Focus:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Spear of Desolation:
       total: 0.71
       efficiency: 0.57
@@ -442,8 +442,8 @@ builds:
       pick: 0.0
       fit: 0.86
     Totem of Death:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.37
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Spear of Desolation
-  - The Cosmic Horror
+  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - The Cosmic Horror
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -480,8 +480,8 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -494,7 +494,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    The Cosmic Horror:
+    Doom Orb:
       total: 0.65
       efficiency: 0.53
       win: 0.5
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0

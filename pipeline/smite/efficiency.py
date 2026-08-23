@@ -601,6 +601,117 @@ def efficiency_scores(items):
 # pinned by a test rather than assumed; register §4.10 is what happens when a
 # setting is applied where nothing reads it.
 
+# ── WHAT EARNS A PLACE ON THIS LIST (the rule, derived 2026-08-22) ──────────
+#
+# Mana was argued case by case. Adding a second stat forces the general form,
+# and it is two mechanical tests, neither of which is a judgement about SMITE:
+#
+#   (i)  NO `role_stats` ENTRY NAMES IT AT ALL. Not "the role that wants it
+#        has no entry" — no entry anywhere. A stat named for SOME role and not
+#        another has a contrast, and the silence on the second role is then a
+#        POSITIVE statement by the same table that spoke about the first. A
+#        stat named nowhere has no contrast to be read, so its absence carries
+#        no information and charging against it asserts something the table
+#        never said.
+#
+#   (ii) NO INSTRUMENT IN THIS REPO CAN PRICE IT. If `combat.py` can see the
+#        stat, then charging it is a hypothesis `build_quality` can check, and
+#        the honest move is to check it rather than to exempt it.
+#
+# Run over every stat the buildable pool carries, the two tests select exactly
+# three columns, which is the reason to trust the rule — it is not a filter
+# that lets everything through:
+#
+#     stat                  carriers   g/pt   named by a role map   priced by combat.py
+#     Max Health                  52   1.37   YES (6 of 21)         effective_health
+#     Physical Protection         39  21.93   YES (6 of 21)         mitigation
+#     Magical Protection          37  19.40   YES (5 of 21)         mitigation
+#     Intelligence/Strength/...    -      -   YES                   damage
+#     Plating / Dampening         13  ~38     no                    plating_multiplier
+#     Tenacity                     5  23.70   no                    TENACITY_CAP
+#     Echo                         5  21.59   no                    echo_multiplier
+#     Attack Damage                9  21.95   no                    basic attack
+#     Max Mana                    23   1.26   NO                    NOTHING  <- exempt
+#     Mana Regen                  20   5.37   NO                    NOTHING  <- exempt
+#     Health Regen                12  76.40   NO                    NOTHING  <- exempt
+#
+# ATTACK DAMAGE IS THE INSTRUCTIVE ROW. It fails (ii) — the basic attack is
+# modelled — and it is the one stat named by no role map that got a WEIGHT
+# instead, `attack_damage_fit`, because `damage_value.stat_weights` supplied
+# an exchange rate. So the rule has three outcomes, not two: price it if an
+# instrument can, weight it if a leakage-free exchange rate exists, exempt it
+# only when neither is available. An exemption is the LAST resort and it is
+# the weakest of the three, because it says only "do not charge".
+#
+# THE §4.15 DEFECT STATS FAIL BOTH TESTS AND MUST NOT BE ADDED. Max Health and
+# Physical Protection are named by 6 of the 21 entries and by 36 of 89 merged
+# god maps, so the Carry map's silence about them is that table declining to
+# say for Carry what it says for Solo, Support, Tank, Guardian, Warrior and
+# Brawler. And `combat.effective_health` prices both exactly. Charging a Carry
+# for them is a claim the non-circular instrument can adjudicate, and does.
+#
+#
+# ── HEALTH REGEN (added 2026-08-22, at control fingerprint `c68c33d49845` — ──
+#    baseline 5.6%, probe 39.1%, best 40.0%)
+#
+# The stat §4.16 left named as the next one to examine: 33% of the off-map
+# gold this charge removes from a Solo core and 39% from a Support one, and
+# the whole of Solo's -9.4pp, which sparing mana did not move by a digit.
+#
+# TEST (i) PASSES, and this is the strongest single fact here. Of the 21
+# `role_stats` entries, Health Regen is named by ZERO — the same standing as
+# Max Mana and Mana Regen, and unlike every defensive stat it gets grouped
+# with in §4.15's composition table. Over the 89 merged fit maps (role map +
+# kit overlay + `attack_damage_fit`): Health Regen 0 of 89, against Max Health
+# 36, Physical Protection 36, Magical Protection 36.
+#
+# TEST (ii) PASSES. `combat.py` contains the string "regen" ZERO times. Health
+# Regen is a RATE — points per 5 seconds — and this repo has no clock; register
+# §4.12 refused to invent one, and even the clock it refused was a COMBAT
+# clock, while regeneration is mostly what happens between fights. So there is
+# no path by which `build_quality`, the only non-circular instrument, could
+# ever adjudicate a Health Regen charge either way.
+#
+# THE GAME HANDS IT OUT AS A CONSTANT. Scraped `base_stats`, community-free,
+# at level 20 (88 gods; Xing Tian's page carries no base stats at all):
+#
+#     role     n   HP@20   HP5@20   HP5 as % of pool   within-role IQR
+#     Carry   20    2272     5.57              0.246     0.234-0.249
+#     Jungle  21    2438     5.67              0.233     0.227-0.242
+#     Mid     20    2247     5.54              0.247     0.249-0.249
+#     Solo    14    2472     5.79              0.234     0.228-0.238
+#     Support 13    2611     5.91              0.226     0.222-0.232
+#     ROSTER  88    2388     5.67              0.238     range 0.208-0.277
+#
+# HP5 at 20 spans 5.50-6.22 over the whole roster — a 13% band — with 44 of
+# the 88 gods on exactly 5.50 and the per-level term taking three distinct
+# values in total (0.20 on 67 gods, 0.22 on 16, 0.23 on 5). As a share of the
+# health pool the five role means span 0.020pp inside a roster range of
+# 0.069pp. There is no per-role number to read off this, which is the same
+# conclusion the mana kit table reached and the same reason: a roster constant.
+#
+# AND THE TILT THAT DOES EXIST POINTS THE WRONG WAY for the story anyone would
+# tell from the game — Mid (0.247) and Carry (0.246) regenerate the MOST
+# relative to their pool and Support (0.226) the least, so even taken at face
+# value this table would not hand Solo or Support a Health Regen column.
+#
+# WHERE THIS CASE IS WEAKER THAN MANA'S, said plainly. Mana's argument had a
+# DEMAND side: ability mana costs are scraped, so `rot/pool` measured what
+# each role actually spends. Health regen's demand is incoming damage, which
+# is not a property of the kit and is not scraped anywhere — it is positional,
+# and reading it off a role would be exactly the invented constant §4.12 and
+# §4.13 turned on refusing. So this case rests on test (i), test (ii) and a
+# SUPPLY-side constant, with no demand measurement behind it. That is a
+# genuinely thinner base than mana had, and it is why the rule above is
+# written as two mechanical tests rather than as an argument about SMITE.
+#
+# WHAT IT COSTS THE §4.15 CORRECTION: 21% of one item's charge, and none of
+# the answer. Berserker's Shield carries Health Regen 4 = 306 of the 2400g it
+# spends, so against the one stat a Carry's map names its off-map gold goes
+# 1457 -> 1151. It is still repriced out of the Carry core; see the sweep
+# under `offmap_efficiency` in _weights.yaml. The 12 buildable carriers hold
+# 3-6 points each, 9-20% of the item's price.
+
 
 def offmap_gold(eff_row, role_map, exempt=()):
     """Gold this item spent on stats the god's fit map does not name.

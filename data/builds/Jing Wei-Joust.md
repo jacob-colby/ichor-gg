@@ -8,23 +8,23 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
-  - Pharaoh's Curse
   flex_slots:
+  - Dominance
   - The Reaper
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -43,15 +43,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Dominance:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     The Reaper:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.67
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -145,15 +145,15 @@ builds:
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Deathbringer
+  - Toxic Blade
   - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.53
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -176,14 +176,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Riptalon:
-      total: 0.65
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.78
     Damaru:
-      total: 0.54
-      efficiency: 0.5
+      total: 0.5
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
   - Berserker's Shield
-  - Shield of the Phoenix
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
+  - Umbral Link
   flex_slots:
-  - Berserker's Shield
-  - Shield of the Phoenix
+  - Umbral Link
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Erosion:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Umbral Link:
+      total: 0.56
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -272,11 +272,11 @@ builds:
   - Jotunn's Revenge
   - Riptalon
   - Silverbranch Bow
-  - The Crusher
+  - Tekko-Kagi
   - Heartseeker
   flex_slots:
-  - The Crusher
-  - Heartseeker
+  - Tekko-Kagi
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -294,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.7
-      efficiency: 0.46
+      total: 0.68
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.93
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -317,12 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    The Crusher:
-      total: 0.57
-      efficiency: 0.57
+    Tekko-Kagi:
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Heartseeker:
       total: 0.57
       efficiency: 0.47
@@ -335,23 +335,23 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - Qin's Blade
   - Riptalon
   - Demon Blade
-  - Amanita Charm
   flex_slots:
-  - Demon Blade
   - Qin's Blade
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -359,8 +359,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -370,6 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Dominance:
+      total: 0.5
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Qin's Blade:
       total: 0.53
       efficiency: 0.37
@@ -377,8 +383,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Riptalon:
-      total: 0.67
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -388,35 +394,29 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Amanita Charm:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Genji's Guard
-  - Breastplate of Valor
+  - Chandra's Grace
   - Jotunn's Revenge
-  - Shield of the Phoenix
+  - Tyrfing
   - Hydra's Lament
+  - Demon Blade
   flex_slots:
-  - Genji's Guard
-  - Breastplate of Valor
+  - Toxic Blade
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -424,38 +424,38 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.46
+      total: 0.46
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
-    Breastplate of Valor:
-      total: 0.49
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
-    Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.57
+    Chandra's Grace:
+      total: 0.47
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Tyrfing:
+      total: 0.48
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Demon Blade:
+      total: 0.44
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -465,23 +465,23 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
-  - Pharaoh's Curse
   flex_slots:
+  - Dominance
   - The Reaper
-  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.55
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -500,15 +500,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Dominance:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     The Reaper:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.52
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.67
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -518,11 +524,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
   starter: *id001
 ---

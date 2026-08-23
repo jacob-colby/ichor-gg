@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - The Crusher
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
   - Death Metal
-  - The Crusher
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -55,15 +55,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    The Crusher:
-      total: 0.56
-      efficiency: 0.57
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.58
     Soul Gem:
-      total: 0.71
-      efficiency: 0.57
+      total: 0.69
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Bragi's Harp
   - Death Metal
   - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Bragi's Harp
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,23 +93,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Bragi's Harp:
+      total: 0.56
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Death Metal:
       total: 0.57
       efficiency: 0.61
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -182,20 +182,20 @@ builds:
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.62
     Soul Gem:
-      total: 0.68
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -206,12 +206,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Silverbranch Bow
-  - The Crusher
+  - Tekko-Kagi
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Heartseeker
   - Silverbranch Bow
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -229,8 +229,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.72
-      efficiency: 0.46
+      total: 0.71
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.98
@@ -246,12 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    The Crusher:
-      total: 0.62
-      efficiency: 0.57
+    Tekko-Kagi:
+      total: 0.58
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Heartseeker:
       total: 0.62
       efficiency: 0.47
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -294,8 +294,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.46
+      total: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
+  - Pendulum Blade
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Genji's Guard
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -359,17 +359,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.72
@@ -388,9 +382,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Pendulum Blade:
+      total: 0.5
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -402,11 +402,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - The Crusher
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
   - Death Metal
-  - The Crusher
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,8 +424,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -447,15 +447,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    The Crusher:
-      total: 0.56
-      efficiency: 0.57
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.58
     Soul Gem:
-      total: 0.71
-      efficiency: 0.57
+      total: 0.69
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.86

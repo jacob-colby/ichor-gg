@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -220,8 +220,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -312,14 +312,14 @@ builds:
       pick: 0.0
       fit: 0.79
     Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.54
     Shogun's Ofuda:
-      total: 0.54
-      efficiency: 0.53
+      total: 0.52
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -335,13 +335,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
-  - The Crusher
+  - Death Metal
+  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Void Shield
-  - The Crusher
+  - Heartseeker
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -359,8 +359,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.46
+      total: 0.62
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -370,18 +370,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Void Shield:
+    Death Metal:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Heartseeker:
       total: 0.53
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
-    The Crusher:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -424,8 +424,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -489,8 +489,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -554,8 +554,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -676,8 +676,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -858,24 +858,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Shogun's Ofuda
-  - Erosion
+  - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -888,6 +888,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
@@ -901,14 +907,8 @@ builds:
       pick: 0.0
       fit: 0.49
     Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Shogun's Ofuda:
-      total: 0.51
-      efficiency: 0.53
+      total: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -926,12 +926,12 @@ builds:
   - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
+  - Heartseeker
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Void Stone
   - Avenging Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -940,8 +940,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -966,18 +966,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Void Shield:
-      total: 0.57
+    Heartseeker:
+      total: 0.52
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.68
-    Void Stone:
-      total: 0.56
-      efficiency: 0.45
+      fit: 0.58
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -993,11 +993,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
+  - Death Metal
   - Riptalon
-  - Pharaoh's Curse
   flex_slots:
-  - Jotunn's Revenge
   - Tyrfing
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1038,18 +1038,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Death Metal:
+      total: 0.49
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Riptalon:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Pharaoh's Curse:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested

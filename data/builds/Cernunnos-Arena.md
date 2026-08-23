@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Rod of Tahuti
-  - Rod of Asclepius
+  - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Jotunn's Revenge
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,9 +31,15 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -49,18 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
-    Rod of Asclepius:
+    Riptalon:
       total: 0.63
-      efficiency: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.75
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Bancroft's Talon
   - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
   - Bancroft's Talon
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,9 +98,15 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -128,12 +134,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Triton's Conch:
-      total: 0.55
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: crit
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.57
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -206,12 +206,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
+  - Spear of Desolation
   - Rod of Tahuti
-  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Pharaoh's Curse
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -246,18 +246,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -275,12 +275,12 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Shogun's Ofuda
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -312,14 +312,14 @@ builds:
       pick: 0.0
       fit: 0.6
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -335,13 +335,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
-  - The Crusher
+  - Death Metal
+  - Spear of Desolation
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Void Stone
-  - The Crusher
+  - Death Metal
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -359,8 +359,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
-      efficiency: 0.46
+      total: 0.62
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -370,24 +370,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Void Shield:
-      total: 0.58
-      efficiency: 0.47
+    Death Metal:
+      total: 0.52
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.7
-    Void Stone:
-      total: 0.58
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-    The Crusher:
-      total: 0.53
+      fit: 0.43
+    Spear of Desolation:
+      total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Nimble Ring
   - Riptalon
-  - Pharaoh's Curse
-  - Shogun's Ofuda
-  - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Tyrfing
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,55 +423,55 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.53
+    Lernaean Bow:
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.51
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Riptalon:
       total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Shogun's Ofuda:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
+  - Hydra's Lament
   - Spear of Desolation
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Hydra's Lament
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -480,17 +480,23 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.46
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -500,24 +506,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Hydra's Lament:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Shogun's Ofuda:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Rod of Tahuti
-  - Rod of Asclepius
+  - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Jotunn's Revenge
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -553,9 +553,15 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+      total: 0.58
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -571,18 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
-    Rod of Asclepius:
+    Riptalon:
       total: 0.63
-      efficiency: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.75
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -604,8 +604,8 @@ builds:
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -670,14 +670,14 @@ builds:
   - Bancroft's Talon
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -725,19 +725,19 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Death Metal
   - Demon Blade
   - Deathbringer
-  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Demon Blade
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -750,6 +750,12 @@ builds:
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Toxic Blade:
       total: 0.6
       efficiency: 0.46
@@ -774,12 +780,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -793,13 +793,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Death Metal
   - Rod of Tahuti
-  - Pharaoh's Curse
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Pharaoh's Curse
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -808,8 +808,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -828,18 +828,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Death Metal:
+      total: 0.51
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -857,19 +857,19 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Stampede
   - Erosion
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -877,11 +877,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -901,14 +907,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -926,12 +926,12 @@ builds:
   - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
+  - Rod of Tahuti
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Avenging Blade
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -940,8 +940,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -966,24 +966,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Void Shield:
-      total: 0.62
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
-    Void Stone:
+    Rod of Tahuti:
       total: 0.61
-      efficiency: 0.45
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.37
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -991,23 +991,23 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
+  - Jotunn's Revenge
   - Riptalon
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Golden Blade
-  - Shogun's Ofuda
+  - Triton's Conch
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -1026,30 +1026,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Riptalon:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Shogun's Ofuda:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Soul Gem:
       total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.96
+    Triton's Conch:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -1057,17 +1057,17 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Hydra's Lament
   - Spear of Desolation
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Hydra's Lament
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -1092,30 +1092,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Pharaoh's Curse:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Shogun's Ofuda:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Soul Gem:
       total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
   starter: *id001
   aspect: Aspect of Strife
 - source: suggested
@@ -1132,8 +1132,8 @@ builds:
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm

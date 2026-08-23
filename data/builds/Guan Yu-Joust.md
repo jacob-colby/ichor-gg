@@ -13,7 +13,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Pharaoh's Curse
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -105,14 +105,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
     Shield of the Phoenix:
-      total: 0.68
-      efficiency: 0.57
+      total: 0.66
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -299,21 +299,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Breastplate of Valor:
+      total: 0.55
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Shield of the Phoenix:
-      total: 0.69
-      efficiency: 0.57
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -340,7 +340,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
+  - Pharaoh's Curse
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Pharaoh's Curse
   flex_slots:
-  - Toxic Blade
+  - Pharaoh's Curse
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.32
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.58
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63

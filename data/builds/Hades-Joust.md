@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Kinetic Cuirass
+  - Divine Ruin
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -14,7 +14,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Erosion
-  - Kinetic Cuirass
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
+    Divine Ruin:
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -75,12 +75,12 @@ builds:
   slot_order:
   - Divine Ruin
   - Bancroft's Talon
-  - Death Metal
+  - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
-  - Death Metal
+  - Bancroft's Talon
   - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
@@ -105,17 +105,17 @@ builds:
       pick: 0.0
       fit: 0.61
     Bancroft's Talon:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.45
     Doom Orb:
       total: 0.48
       efficiency: 0.53
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.5
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -205,20 +205,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
+      total: 0.59
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -240,12 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Spectral Armor:
-      total: 0.56
-      efficiency: 0.57
+    Void Stone:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.65
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - The Crusher
+  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - The Crusher
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -500,12 +500,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    The Crusher:
+    Heartseeker:
       total: 0.53
-      efficiency: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.59
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
@@ -513,8 +513,8 @@ builds:
       pick: 0.0
       fit: 0.32
     Soul Gem:
-      total: 0.76
-      efficiency: 0.57
+      total: 0.74
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -554,8 +554,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.54
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -578,8 +578,8 @@ builds:
       pick: 0.0
       fit: 0.39
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -593,7 +593,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Kinetic Cuirass
+  - Divine Ruin
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -601,7 +601,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Erosion
-  - Kinetic Cuirass
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -613,17 +613,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
+    Divine Ruin:
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
@@ -649,8 +649,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0

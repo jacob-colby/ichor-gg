@@ -8,26 +8,26 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
+  - Hydra's Lament
   - Pendulum Blade
-  - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Pendulum Blade
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
+    Hydra's Lament:
+      total: 0.61
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pendulum Blade:
       total: 0.66
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.9
-    The Crusher:
-      total: 0.68
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Heartseeker:
       total: 0.68
       efficiency: 0.47
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.89
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -87,11 +87,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.57
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.66
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -141,11 +141,11 @@ builds:
   - Jotunn's Revenge
   - Spear of Desolation
   - Pendulum Blade
-  - The Crusher
+  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - The Crusher
+  - Heartseeker
   - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -181,12 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Crusher:
+    Heartseeker:
       total: 0.61
-      efficiency: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.76
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -203,43 +203,43 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
-  - Spectral Armor
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Spectral Armor
-  - Kinetic Cuirass
+  - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Spectral Armor:
+    Void Shield:
       total: 0.61
-      efficiency: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.75
+    Void Stone:
+      total: 0.6
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Pendulum Blade
   - The Crusher
   - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
-  - Avatar's Parashu
-  - Pendulum Blade
+  - Titan's Bane
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -299,15 +299,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.93
-    Pendulum Blade:
-      total: 0.68
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.93
     The Crusher:
-      total: 0.73
-      efficiency: 0.57
+      total: 0.68
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -317,6 +311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+    Titan's Bane:
+      total: 0.68
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
     Avatar's Parashu:
       total: 0.72
       efficiency: 0.45
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.99
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -340,7 +340,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Tyrfing
+  - Golden Blade
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,8 +359,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Toxic Blade:
-      total: 0.69
-      efficiency: 0.46
+      total: 0.67
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -454,8 +454,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -465,26 +465,26 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
+  - Hydra's Lament
   - Pendulum Blade
-  - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Pendulum Blade
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -500,18 +500,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
+    Hydra's Lament:
+      total: 0.61
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pendulum Blade:
       total: 0.66
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.9
-    The Crusher:
-      total: 0.68
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Heartseeker:
       total: 0.68
       efficiency: 0.47
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 0.89
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -529,27 +529,27 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
+  - Hydra's Lament
   - Pendulum Blade
-  - The Crusher
   - Heartseeker
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Pendulum Blade
+  - Hydra's Lament
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Hydra's Lament:
+      total: 0.61
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Pendulum Blade:
       total: 0.66
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.9
-    The Crusher:
-      total: 0.68
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Heartseeker:
       total: 0.68
       efficiency: 0.47
@@ -584,8 +584,8 @@ builds:
       pick: 0.0
       fit: 0.52
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.76
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 1.0

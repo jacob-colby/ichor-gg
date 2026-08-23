@@ -757,6 +757,12 @@ def _role_table(rows, keys, labels):
 #: The stat keys a "defence" claim is made of, in report order.
 DEFENSIVE_STATS = ("Physical Protection", "Magical Protection", "Max Health")
 
+# Mean Physical Protection, in points per Carry core, above which
+# `carry_mechanism_lines` reads the surplus as still open. Half a point is a
+# twentieth of the smallest protection roll in the pool, so this is "any item
+# at all" with room for float noise — not a tolerance anyone tuned.
+SURPLUS_EPSILON = 0.5
+
 
 def defence_by_role(rows):
     """Mean defensive stats bought, per role, community against ours.
@@ -798,12 +804,16 @@ def defence_drivers(rows, role, items_by_name, top=3):
 
 
 def carry_mechanism_lines(rows, items_by_name):
-    """WHERE THE CARRY SURPLUS COMES FROM — recorded, not acted on.
+    """WHERE THE CARRY SURPLUS COMES FROM — measured on every run, both ways.
 
-    This is a diagnosis handed to a later session on purpose: the session that
-    found it should not also be the one that fixes it. Nothing here changes a
-    weight, a build or an item, and the numbers re-measure on every run so a
-    refresh that moves them says so instead of leaving this paragraph stale.
+    Written as a diagnosis handed to a later session, and that session came:
+    `offmap_efficiency` shipped at 0.55 on 2026-08-22 (STATE.md §4.15) and the
+    protection surplus this section was built to describe went to zero. The
+    section therefore has TWO branches and picks by measurement, because a
+    finding that has been fixed must not keep reading as a finding — and a
+    hard-coded "it is fixed" would be the same mistake in the other direction
+    the first time a refresh brings it back. Nothing here changes a weight, a
+    build or an item.
 
     One hypothesis is already excluded, mechanically rather than statistically,
     and is recorded in docs/STATE.md §4 so it is not re-derived: neither
@@ -817,11 +827,20 @@ def carry_mechanism_lines(rows, items_by_name):
     carry = defence.get("Carry")
     if not carry:
         return []
+    surplus = carry["ours"]["Physical Protection"] - carry["community"]["Physical Protection"]
+    open_defect = surplus > SURPLUS_EPSILON
     lines = [
-        "### Where the Carry surplus comes from — recorded, not acted on", "",
-        "The row above is the finding this section was built for, so its mechanism is written "
-        "down. **Nothing here has been changed in response to it**; the diagnosis is deliberately "
-        "left to a session other than the one that found it.", "",
+        "### Where the Carry surplus comes from — "
+        + ("recorded, not acted on" if open_defect else "measured, and currently closed"), "",
+        ("The row above is the finding this section was built for, so its mechanism is written "
+         "down. **Nothing here has been changed in response to it**; the diagnosis is deliberately "
+         "left to a session other than the one that found it."
+         if open_defect else
+         "This section describes a defect that is **not currently present**: our Carry cores buy "
+         "no more Physical Protection than the community's. It re-measures on every run rather "
+         "than asserting that, so a refresh or a weight change that brings the surplus back "
+         "restores the diagnosis in the same paragraph. `offmap_efficiency` is the flag that "
+         "closed it — see docs/STATE.md §4.15."), "",
         "Mean defensive stats bought at level 20, community (C) against our `model` core (O):", "",
         "| Role | n | " + " | ".join(f"{s} C / O" for s in DEFENSIVE_STATS) + " |",
         "|---|---|" + "---|" * len(DEFENSIVE_STATS),
@@ -832,24 +851,39 @@ def carry_mechanism_lines(rows, items_by_name):
     drivers = defence_drivers(rows, "Carry", items_by_name)
     lines += [
         "",
-        f"The community buys **exactly {carry['community']['Physical Protection']:,.1f} Physical "
-        f"Protection** across all {carry['n']} Carries; we buy "
-        f"{carry['ours']['Physical Protection']:,.1f}. It is not spread across the pool — the "
-        "items carrying it, with how many of our Carry cores hold each against how many of the "
-        "community's:", "",
+        (f"The community buys **exactly {carry['community']['Physical Protection']:,.1f} Physical "
+         f"Protection** across all {carry['n']} Carries; we buy "
+         f"{carry['ours']['Physical Protection']:,.1f}. It is not spread across the pool — the "
+         "items carrying it, with how many of our Carry cores hold each against how many of the "
+         "community's:"
+         if open_defect else
+         f"The community buys {carry['community']['Physical Protection']:,.1f} Physical Protection "
+         f"across all {carry['n']} Carries and we buy {carry['ours']['Physical Protection']:,.1f}, "
+         f"a surplus of {surplus:+,.1f}. The defensive items still reaching a Carry core, with how "
+         "many of ours hold each against how many of the community's — an EMPTY list here is the "
+         "measurement, not a missing section:"), "",
     ]
     for name, mine, seen, stats in drivers:
         line = " · ".join(f"{k} {v:g}" for k, v in sorted(stats.items()))
         lines.append(f"- **{name}** — ours {mine} of {carry['n']}, community {seen} of "
                      f"{carry['n']} ({line})")
+    if not drivers:
+        lines.append("- _(none — no item carrying a defensive stat holds a Carry core slot)_")
     phys = by_role(rows, "ehp_physical")["Carry"]["quantiles"].get(50, float("nan"))
     mag = by_role(rows, "ehp_magical")["Carry"]["quantiles"].get(50, float("nan"))
     lines += [
         "",
-        "Two things a later session should not have to rediscover. The protection is **physical "
-        "only**, so against the magical burst a Carry most often dies to it buys health and "
-        f"nothing else — which is why the same builds read {_pct(phys)} on effective health "
-        f"physical and {_pct(mag)} magical. And `defense_affinity` and "
+        ("Two things a later session should not have to rediscover. The protection is **physical "
+         "only**, so against the magical burst a Carry most often dies to it buys health and "
+         f"nothing else — which is why the same builds read {_pct(phys)} on effective health "
+         f"physical and {_pct(mag)} magical."
+         if open_defect else
+         "Two things worth keeping now that the surplus is gone. Effective health is the quantity "
+         f"to read it on, and it is {_pct(phys)} physical and {_pct(mag)} magical against the "
+         "community's — LEVEL is the honest target here, not zero, because §4.13 means no "
+         "threshold in this report can charge us for buying too LITTLE defence, so a figure "
+         "BELOW the community's would not be visible as a cost.")
+        + " And `defense_affinity` and "
         "`draft.archetype_scaled_stats` are "
         "**excluded as causes**: both are read only by the viewer's draft overlay "
         "(`viewer/src/lib/threats.ts`), which is applied on top of a finished core and never "

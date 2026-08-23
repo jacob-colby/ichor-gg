@@ -1,4 +1,6 @@
-from smite import efficiency
+import pathlib
+
+from smite import combat, efficiency, recommend, scoring
 
 
 def test_parse_stat_value_plain_number():
@@ -393,3 +395,45 @@ def test_offmap_exempt_is_inert_while_the_charge_is_off():
            "stat_gold": {"Max Mana": 800.0}}
     assert efficiency.offmap_adjusted_score(row, {"Strength": 1.0}, 0.0,
                                             exempt=("Max Mana",)) == 0.681
+
+
+# ── the exempt list's membership rule (STATE.md §4.17) ────────────────────
+
+def test_the_shipped_exempt_list_is_the_three_stats_the_rule_selects():
+    """A stat earns a place only if NO `role_stats` entry names it AND no
+    instrument here can price it. Pinning the membership, not just the
+    mechanism: the danger this list carries is a defensive stat drifting onto
+    it, which would silently undo the correction §4.15 measured."""
+    weights = scoring.DEFAULT_WEIGHTS
+    assert weights["offmap_exempt"] == ["Max Mana", "Mana Regen", "Health Regen"]
+    named = {stat for entry in weights["role_stats"].values() for stat in entry}
+    for stat in weights["offmap_exempt"]:
+        assert stat not in named, f"{stat} is named by a role map; weight it, don't exempt it"
+    # The §4.15 defect stats fail test (i) and must never appear here.
+    for stat in ("Max Health", "Physical Protection", "Magical Protection"):
+        assert stat in named
+        assert stat not in weights["offmap_exempt"]
+
+
+def test_combat_cannot_see_any_exempted_stat():
+    """Test (ii), driven off the module itself rather than restated. If
+    `combat.py` ever learns to price mana or regeneration, this fails and the
+    exemption has to be re-argued against an instrument that can check it."""
+    src = (pathlib.Path(combat.__file__).read_text(encoding="utf-8")).lower()
+    assert "regen" not in src
+    assert "mana" not in src
+    # and the contrast: it does price what the defect stats are made of
+    assert "effective_health" in src and "mitigation" in src
+
+
+def test_health_regen_is_a_roster_constant_in_the_scraped_base_stats():
+    """The supply-side half of Health Regen's case, driven off the scrape so
+    it re-measures rather than sitting in a comment. Base HP5 at level 20 is
+    near-constant across the roster; if a future god broke that, the "roster
+    constant" claim would need re-making."""
+    gods = [g for g in recommend.load_gods()
+            if (g.get("base_stats") or {}).get("health_regen", {}).get("base")]
+    at20 = [d["base"] + 19.0 * d["per_level"]
+            for d in (g["base_stats"]["health_regen"] for g in gods)]
+    assert len(gods) >= 85
+    assert max(at20) / min(at20) < 1.20, "base HP5 is no longer a roster constant"

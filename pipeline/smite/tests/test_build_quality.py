@@ -186,9 +186,24 @@ def test_community_core_is_the_first_entry_aspect_or_not():
 
 
 def test_suggested_core_takes_the_base_kit_model_entry():
+    """The contract is WHICH entry is read, not which items are in it.
+
+    This used to assert `suggested_core(note) == MEDUSA_OURS`, which coupled a
+    reader to a hand-computation fixture that only happened to match the
+    shipped core; `offmap_efficiency` shipping at 0.55 broke it and the reader
+    was fine. Same lesson as the three tests decoupled from refresh-owned data
+    in `ab26833` — assert the contract, not the current answer."""
     note = recommend.load_build_note("Medusa")
-    assert bq.suggested_core(note) == MEDUSA_OURS
-    assert bq.suggested_core(note, "core") != MEDUSA_OURS
+    model = bq.suggested_core(note)
+    raw = [b for b in note["builds"]
+           if b.get("source") == "suggested" and b.get("archetype") == "model"
+           and not b.get("aspect")]
+    assert model == [n if isinstance(n, str) else n.get("name")
+                     for n in raw[0]["slot_order"]]
+    assert len(model) == 6
+    # It reads `model`, never the meta-blended `core`, and they differ here.
+    assert bq.suggested_core(note, "core") != model
+    # An aspect overlay is not the base kit.
     assert bq.suggested_core({"builds": [
         {"source": "suggested", "archetype": "model", "aspect": "X", "slot_order": ["a"] * 6},
     ]}) == []
@@ -366,9 +381,65 @@ def test_the_report_says_the_role_split_does_not_escape_the_blind_spot(
     # What is unmeasurable is named, not implied.
     for phrase in bq.UNMEASURABLE:
         assert phrase in text, phrase
-    # The Carry mechanism is recorded and explicitly not acted on.
-    assert "recorded, not acted on" in section
-    assert "Berserker's Shield" in section
+    # The Carry mechanism section is present in whichever of its two branches
+    # the measurement selects, and says which. Asserting the OPEN branch (or
+    # the item that used to drive it) would make this test fail the moment the
+    # defect is fixed, which is what happened at `offmap_efficiency` 0.55.
+    assert ("recorded, not acted on" in section) ^ ("currently closed" in section)
+    assert "Mean defensive stats bought at level 20" in section
+    assert "excluded as causes" in section
+
+
+def _carry_row(name, prot, items, theirs_prot=0.0, theirs_items=()):
+    theirs, mine = _profile(100.0, 3000.0), _profile(100.0, 3000.0)
+    theirs["stats"] = {"Physical Protection": theirs_prot}
+    mine["stats"] = {"Physical Protection": prot}
+    theirs["items"] = list(theirs_items)
+    mine["items"] = list(items)
+    return _full_row(name, "Carry", theirs, mine)
+
+
+def _carry_text(rows, items_by_name):
+    return "\n".join(bq.carry_mechanism_lines(rows, items_by_name))
+
+
+def test_the_carry_section_reports_an_open_surplus_as_open(items_by_name):
+    """The branch this section was written for: we buy protection the
+    community does not, so it names the items and says it is not acted on."""
+    rows = [_carry_row("g1", 40.0, ["Berserker's Shield"]),
+            _carry_row("g2", 40.0, ["Berserker's Shield"])]
+    text = _carry_text(rows, items_by_name)
+    assert "recorded, not acted on" in text
+    assert "Berserker's Shield" in text
+    assert "currently closed" not in text
+
+
+def test_the_carry_section_reports_a_closed_surplus_as_closed(items_by_name):
+    """And the branch `offmap_efficiency` at 0.55 put it in. A section that
+    keeps reading as a live defect after the defect is gone is a stale doc
+    with a measurement attached, which is the thing this module exists to
+    avoid — so the prose is chosen by the number, not by hand."""
+    rows = [_carry_row("g1", 0.0, ["Deathbringer"]),
+            _carry_row("g2", 0.0, ["Deathbringer"])]
+    text = _carry_text(rows, items_by_name)
+    assert "currently closed" in text
+    assert "recorded, not acted on" not in text
+    # The measurement is still printed, and an empty driver list SAYS so
+    # rather than rendering as a missing section.
+    assert "Mean defensive stats bought at level 20" in text
+    assert "no item carrying a defensive stat holds a Carry core slot" in text
+    assert "excluded as causes" in text
+
+
+def test_the_carry_section_switches_branch_on_the_measurement_alone(items_by_name):
+    """One point of mean protection either side of `SURPLUS_EPSILON` flips it,
+    so the branch cannot drift away from what it is reporting."""
+    closed = [_carry_row("g", 0.0, ["Deathbringer"])]
+    opened = [_carry_row("g", 1.0, ["Deathbringer"])]
+    assert "currently closed" in _carry_text(closed, items_by_name)
+    assert "recorded, not acted on" in _carry_text(opened, items_by_name)
+
+
 
 
 # ── The blind spot ────────────────────────────────────────────────────────

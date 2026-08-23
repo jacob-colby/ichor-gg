@@ -9,16 +9,16 @@ builds:
   - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
-  - Spectral Armor
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.67
-      efficiency: 0.6
+      total: 0.65
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -49,12 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Spectral Armor:
+    Shifter's Shield:
       total: 0.59
-      efficiency: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -75,20 +75,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
+  - Rod of Asclepius
   - Erosion
-  - Soul Gem
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,8 +99,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.66
-      efficiency: 0.6
+      total: 0.64
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -110,30 +110,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Spectral Armor:
-      total: 0.6
-      efficiency: 0.57
+    Void Stone:
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.73
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Rod of Asclepius:
+      total: 0.69
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Erosion:
       total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Soul Gem:
-      total: 0.72
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,18 +142,18 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
+  - Amanita Charm
   - Erosion
-  - Soul Gem
   flex_slots:
   - Erosion
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Stone of Binding:
-      total: 0.63
-      efficiency: 0.54
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -187,18 +187,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
     Erosion:
       total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Soul Gem:
-      total: 0.78
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -214,8 +214,8 @@ builds:
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Stygian Anchor — magical protection
     swap_item: Stygian Anchor
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.6
+      total: 0.51
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -275,12 +275,12 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.54
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Soul Gem:
-      total: 0.77
-      efficiency: 0.57
+      total: 0.74
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -336,19 +336,19 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
   - Erosion
-  - Pharaoh's Curse
   flex_slots:
   - Kinetic Cuirass
-  - Pharaoh's Curse
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -371,11 +371,17 @@ builds:
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.6
+      total: 0.54
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Shield Splitter:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
       total: 0.76
       efficiency: 0.65
@@ -388,12 +394,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -405,12 +405,12 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Kinetic Cuirass
   - Triton's Conch
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.6
+      total: 0.53
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -466,16 +466,16 @@ builds:
   - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
-  - Spectral Armor
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Spectral Armor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Kinetic Cuirass:
-      total: 0.67
-      efficiency: 0.6
+      total: 0.65
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -506,12 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Spectral Armor:
+    Shifter's Shield:
       total: 0.59
-      efficiency: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

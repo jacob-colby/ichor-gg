@@ -8,20 +8,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -43,12 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Spectral Armor:
-      total: 0.65
-      efficiency: 0.57
+    Void Stone:
+      total: 0.64
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.83
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spectral Armor
+  - Void Shield
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
+  - Void Shield
   - Kinetic Cuirass
-  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -90,8 +90,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -99,23 +99,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.76
     Shield of the Phoenix:
-      total: 0.76
-      efficiency: 0.57
+      total: 0.74
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.94
-    Spectral Armor:
-      total: 0.67
-      efficiency: 0.57
+    Void Shield:
+      total: 0.66
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.86
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.63
-      efficiency: 0.54
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.9
     Pharaoh's Curse:
-      total: 0.64
-      efficiency: 0.55
+      total: 0.62
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -268,19 +268,19 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Freya's Tears
-  - Spectral Armor
   - Erosion
   - Stampede
   flex_slots:
   - Jotunn's Revenge
-  - Spectral Armor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -293,6 +293,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
@@ -300,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.47
     Shield of the Phoenix:
-      total: 0.72
-      efficiency: 0.57
+      total: 0.7
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -311,12 +317,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Spectral Armor:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Erosion:
       total: 0.62
       efficiency: 0.51
@@ -335,20 +335,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Spectral Armor
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spectral Armor
   - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -359,8 +359,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.68
-      efficiency: 0.6
+      total: 0.66
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -370,12 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Spectral Armor:
-      total: 0.65
-      efficiency: 0.57
+    Void Stone:
+      total: 0.64
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.83
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

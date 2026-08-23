@@ -14,16 +14,19 @@ Five things that are easy to get wrong here, all expanded in that file:
    moving the *other* way is expected and is not by itself a reason to revert.
 
 2. **Check the negative-results register (§4) first.** Sixteen correct-looking
-   improvements have been implemented, measured, and shipped off. Re-running
-   them against the old metric will just reproduce the old answer. Two of the
-   sixteen are *not* "we measured this and it is false" — §4.13 and §4.14 —
-   and each says on its own line what it is instead. A third, §4.15, is a
-   two-gate DISAGREEMENT: the leakage-free gate refuses it and
-   `build_quality` says it fixes the defect it was built for. A fourth,
-   §4.16, is a REFUSAL to write a constant: it says why mana cannot be given
-   a fit weight on any evidence available here, and measures the exemption
-   that needs none. §4.16 also amends §4.15 on two points — read them
-   together, not §4.15 alone.
+   improvements have been implemented and measured, and all but one shipped
+   off. Re-running them against the old metric will just reproduce the old
+   answer. Four of the sixteen are *not* "we measured this and it is false",
+   and each says on its own line what it is instead. §4.13 and §4.14 are the
+   first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
+   ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
+   history of how a two-gate disagreement got resolved rather than as a
+   reason not to try it. §4.16 is a REFUSAL to write a constant: it says why
+   mana cannot be given a fit weight on any evidence available here, and
+   measures the exemption that needs none. The three are one story and must
+   be read together — §4.16 amends §4.15 on two points, then a third stat
+   (Health Regen, on §4.16's two mechanical tests) removed the disagreement
+   and let §4.15 ship.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately
