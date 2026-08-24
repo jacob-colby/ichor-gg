@@ -399,14 +399,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Golden Blade
-  - Toxic Blade
+  - Shell of Rebuke
   - Hide of the Nemean Lion
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Toxic Blade
   - Hide of the Nemean Lion
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -418,8 +418,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -429,12 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Toxic Blade:
-      total: 0.59
-      efficiency: 0.46
+    Shell of Rebuke:
+      total: 0.24
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.2
     Hide of the Nemean Lion:
       total: 0.38
       efficiency: 0.52
@@ -462,8 +462,12 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Erosion
-    reason: Conquest community 57% win over 172 matches (vs 49% on this god), taking
+    reason: Conquest community 57% win over 190 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
+  - added: Shell of Rebuke
+    removed: Toxic Blade
+    reason: Conquest community 57% win over 168 matches (vs 49% on this god), taking
+      the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001
 ---

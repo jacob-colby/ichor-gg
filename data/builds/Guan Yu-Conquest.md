@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the General
   aspect_pick_rate: 0.7
-  aspect_win_rate: 0.61
+  aspect_win_rate: 0.62
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.21
-    win_rate: 0.59
+    win_rate: 0.57
     alternates:
-    - name: Heartwood Charm
-      pick_rate: 0.12
-      win_rate: 0.61
     - name: Breastplate of Valor
       pick_rate: 0.11
-      win_rate: 0.53
+      win_rate: 0.56
+    - name: Heartwood Charm
+      pick_rate: 0.11
+      win_rate: 0.61
   - name: Genji's Guard
     pick_rate: 0.24
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.21
-      win_rate: 0.62
+      pick_rate: 0.22
+      win_rate: 0.61
     - name: Chronos' Pendant
       pick_rate: 0.11
       win_rate: 0.64
   - name: Breastplate of Valor
-    pick_rate: 0.22
+    pick_rate: 0.21
     win_rate: 0.67
     alternates:
     - name: Genji's Guard
       pick_rate: 0.2
-      win_rate: 0.65
+      win_rate: 0.64
     - name: Freya's Tears
       pick_rate: 0.13
-      win_rate: 0.52
+      win_rate: 0.54
   - name: Freya's Tears
     pick_rate: 0.11
     win_rate: 0.63
     alternates:
     - name: Genji's Guard
       pick_rate: 0.13
-      win_rate: 0.72
+      win_rate: 0.73
     - name: Shell of Rebuke
       pick_rate: 0.11
-      win_rate: 0.61
+      win_rate: 0.6
   - name: Shell of Rebuke
     pick_rate: 0.07
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Freya's Tears
       pick_rate: 0.13
-      win_rate: 0.78
+      win_rate: 0.79
     - name: Draconic Scale
       pick_rate: 0.05
-      win_rate: 0.42
+      win_rate: 0.39
   - name: Draconic Scale
     pick_rate: 0.05
     win_rate: 0.56
     alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.04
-      win_rate: 0.77
     - name: Captain's Ring
-      pick_rate: 0.04
+      pick_rate: 0.05
       win_rate: 0.67
+    - name: Olmec Blue
+      pick_rate: 0.05
+      win_rate: 0.8
   community_starters:
   - name: Sands Of Time
     pick_rate: 0.32
-    win_rate: 0.55
+    win_rate: 0.56
   - name: Pendulum of the Ages
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.69
   - name: Hunter's Cowl
     pick_rate: 0.1
-    win_rate: 0.63
+    win_rate: 0.64
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-08-23'
-  god_win_rate: 0.5746388443017657
-  god_matches_won: 358
-  god_matches_played: 623
+  last_verified: '2026-08-24'
+  god_win_rate: 0.579250720461095
+  god_matches_won: 402
+  god_matches_played: 694
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-23'
-  god_matches_analyzed: 15677
+  god_window_end: '2026-08-24'
+  god_matches_analyzed: 17273
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -126,25 +126,25 @@ builds:
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.59
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.56
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.6
     Freya's Tears:
@@ -156,7 +156,7 @@ builds:
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.5
   starter: &id001
@@ -182,8 +182,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -198,25 +198,25 @@ builds:
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
       total: 0.59
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.3
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.4
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.79
     Freya's Tears:
@@ -226,9 +226,9 @@ builds:
       pick: 0.18
       fit: 0.45
     Amanita Charm:
-      total: 0.62
+      total: 0.63
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.8
   starter: *id001
@@ -242,7 +242,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Freya's Tears
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -265,27 +265,27 @@ builds:
     the Storm, The Reaper, Shield of the Phoenix, Erosion, Eye of Providence, Tyrfing.'
   slot_scores:
     Stone of Binding:
-      total: 0.55
+      total: 0.56
       efficiency: 0.51
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.66
     Berserker's Shield:
       total: 0.56
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.32
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.24
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.55
     Freya's Tears:
@@ -297,7 +297,7 @@ builds:
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.38
   starter: *id001
@@ -309,7 +309,7 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Tyrfing
-  - Freya's Tears
+  - Amanita Charm
   flex_slots:
   - Golden Blade
   - Tyrfing
@@ -318,8 +318,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
@@ -336,39 +336,39 @@ builds:
     Golden Blade:
       total: 0.54
       efficiency: 0.52
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.56
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.22
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.24
     Tyrfing:
       total: 0.53
       efficiency: 0.48
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
+    Amanita Charm:
       total: 0.56
-      efficiency: 0.61
-      win: 0.63
-      pick: 0.18
-      fit: 0.34
+      efficiency: 0.65
+      win: 0.62
+      pick: 0.0
+      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -406,25 +406,25 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.33
       fit: 0.44
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.34
     Breastplate of Valor:
       total: 0.61
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.44
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.43
     Freya's Tears:
@@ -434,9 +434,9 @@ builds:
       pick: 0.18
       fit: 0.58
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.4
   starter: *id001
@@ -476,25 +476,25 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.33
       fit: 0.32
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.56
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.6
     Freya's Tears:
@@ -506,7 +506,7 @@ builds:
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.5
   starter: *id001
@@ -546,25 +546,25 @@ builds:
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.59
       efficiency: 0.65
       win: 0.67
-      pick: 0.34
+      pick: 0.33
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.56
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.6
     Freya's Tears:
@@ -576,13 +576,13 @@ builds:
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.5
   swaps:
   - added: Breastplate of Valor
     removed: Genji's Guard
-    reason: community 67% win over 137 matches (vs 57% on this god), taking the model's
+    reason: community 67% win over 146 matches (vs 58% on this god), taking the model's
       weakest slot from Genji's Guard
   starter: *id001
 ---

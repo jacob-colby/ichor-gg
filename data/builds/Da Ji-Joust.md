@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Barbed Carver
+  - Pendulum Blade
+  - Heartseeker
+  - Titan's Bane
+  flex_slots:
+  - Hydra's Lament
+  - Barbed Carver
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.86
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Hydra's Lament:
+      total: 0.65
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Barbed Carver:
+      total: 0.44
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Heartseeker:
+      total: 0.72
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
+    Titan's Bane:
+      total: 0.68
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: Barbed Carver
+    removed: The Crusher
+    reason: Conquest community 59% win over 222 matches (vs 52% on this god), taking
+      the model's weakest slot from The Crusher
+  borrowed_from: Conquest
+  starter: *id001
 ---

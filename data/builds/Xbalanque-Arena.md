@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Toxic Blade
-    reason: Conquest community 71% win over 189 matches (vs 58% on this god), taking
+    reason: Conquest community 70% win over 206 matches (vs 58% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

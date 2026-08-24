@@ -9,22 +9,22 @@ builds:
   aspect_win_rate: 0.58
   slot_order:
   - name: The Cosmic Horror
-    pick_rate: 0.28
-    win_rate: 0.55
+    pick_rate: 0.27
+    win_rate: 0.56
     alternates:
     - name: Damaru
       pick_rate: 0.13
-      win_rate: 0.69
+      win_rate: 0.7
     - name: Gauntlet of Thebes
       pick_rate: 0.12
-      win_rate: 0.51
+      win_rate: 0.54
   - name: Totem of Death
     pick_rate: 0.21
     win_rate: 0.57
     alternates:
     - name: The Cosmic Horror
       pick_rate: 0.21
-      win_rate: 0.61
+      win_rate: 0.62
     - name: Damaru
       pick_rate: 0.12
       win_rate: 0.57
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.6
     - name: Omen Drum
       pick_rate: 0.12
-      win_rate: 0.67
+      win_rate: 0.68
   - name: Omen Drum
-    pick_rate: 0.27
-    win_rate: 0.61
+    pick_rate: 0.26
+    win_rate: 0.6
     alternates:
     - name: Totem of Death
-      pick_rate: 0.12
-      win_rate: 0.65
+      pick_rate: 0.13
+      win_rate: 0.68
     - name: Damaru
-      pick_rate: 0.09
-      win_rate: 0.52
+      pick_rate: 0.08
+      win_rate: 0.51
   - name: Rod of Tahuti
-    pick_rate: 0.16
-    win_rate: 0.65
+    pick_rate: 0.15
+    win_rate: 0.64
     alternates:
     - name: Omen Drum
       pick_rate: 0.07
-      win_rate: 0.69
+      win_rate: 0.67
     - name: Evil Eye
       pick_rate: 0.06
-      win_rate: 0.65
+      win_rate: 0.66
   - name: Evil Eye
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.09
-      win_rate: 0.76
+      win_rate: 0.75
     - name: Obsidian Shard
       pick_rate: 0.06
-      win_rate: 0.74
+      win_rate: 0.76
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.3
+    pick_rate: 0.29
     win_rate: 0.68
   - name: Bluestone Pendant
     pick_rate: 0.29
     win_rate: 0.5
   - name: Selflessness
     pick_rate: 0.13
-    win_rate: 0.52
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/khepri/
-  last_verified: '2026-08-23'
-  god_win_rate: 0.5710843373493976
-  god_matches_won: 711
-  god_matches_played: 1245
+  last_verified: '2026-08-24'
+  god_win_rate: 0.5796783625730995
+  god_matches_won: 793
+  god_matches_played: 1368
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-23'
-  god_matches_analyzed: 15677
+  god_window_end: '2026-08-24'
+  god_matches_analyzed: 17273
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,7 +100,7 @@ builds:
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Obsidian Shard
+  - Freya's Tears
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -145,13 +145,13 @@ builds:
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.15
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.25
     Amanita Charm:
@@ -173,7 +173,7 @@ builds:
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Obsidian Shard
+  - Kinetic Cuirass
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -217,13 +217,13 @@ builds:
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.16
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.26
     Amanita Charm:
@@ -285,15 +285,15 @@ builds:
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
-      total: 0.67
+      total: 0.66
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.41
     Obsidian Shard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.51
     Amanita Charm:
@@ -358,13 +358,13 @@ builds:
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.08
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.18
     Amanita Charm:
@@ -427,15 +427,15 @@ builds:
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.13
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.23
     Amanita Charm:
@@ -500,15 +500,15 @@ builds:
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.2
     Obsidian Shard:
-      total: 0.58
+      total: 0.59
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.3
     Amanita Charm:
@@ -573,15 +573,15 @@ builds:
       pick: 0.0
       fit: 0.18
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.86
-      win: 0.65
-      pick: 0.35
+      win: 0.64
+      pick: 0.32
       fit: 0.32
     Obsidian Shard:
-      total: 0.6
+      total: 0.61
       efficiency: 0.54
-      win: 0.74
+      win: 0.76
       pick: 0.18
       fit: 0.42
     Amanita Charm:
@@ -661,81 +661,5 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.7
-  starter: *id001
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Genji's Guard
-  - Kinetic Cuirass
-  - Freya's Tears
-  - Shifter's Shield
-  - Rod of Tahuti
-  - Amanita Charm
-  flex_slots:
-  - Shifter's Shield
-  - Genji's Guard
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Freya''s
-    Tears, Shifter''s Shield, Genji''s Guard, Breastplate of Valor, Erosion, Eye of
-    Providence, Draconic Scale, Shield of the Phoenix, Stone of Binding, Magi''s Cloak,
-    Helm of Radiance, Gluttonous Grimoire, Mantle Of Discord, Screeching Gargoyle,
-    Midgardian Mail, Prophetic Cloak, Hide of the Nemean Lion, Leviathan''s Hide,
-    Helm of Darkness, Void Shield, Stampede, Spear of Desolation, Ancile, Oni Hunter''s
-    Garb, Gladiator''s Shield, Xibalban Effigy.'
-  slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.58
-      pick: 0.0
-      fit: 0.4
-    Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.56
-      win: 0.58
-      pick: 0.0
-      fit: 0.8
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.58
-      pick: 0.0
-      fit: 0.65
-    Shifter's Shield:
-      total: 0.56
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.0
-      fit: 0.7
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
-      win: 0.65
-      pick: 0.35
-      fit: 0.15
-    Amanita Charm:
-      total: 0.6
-      efficiency: 0.65
-      win: 0.58
-      pick: 0.0
-      fit: 0.7
-  swaps:
-  - added: Rod of Tahuti
-    removed: Breastplate of Valor
-    reason: community 65% win over 199 matches (vs 57% on this god), taking the model's
-      weakest slot from Breastplate of Valor
   starter: *id001
 ---

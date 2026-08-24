@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: The World Stone
     removed: Tyrfing
-    reason: Conquest community 76% win over 52 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 57 matches (vs 56% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

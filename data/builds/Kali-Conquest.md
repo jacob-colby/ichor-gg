@@ -9,32 +9,32 @@ builds:
   aspect_win_rate: 0.58
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.4
+    pick_rate: 0.41
     win_rate: 0.6
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.16
-      win_rate: 0.39
+      pick_rate: 0.15
+      win_rate: 0.38
     - name: Book of Thoth
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Hastened Fatalis
-    pick_rate: 0.2
+    pick_rate: 0.21
     win_rate: 0.65
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.15
-      win_rate: 0.57
+      win_rate: 0.59
     - name: The Cosmic Horror
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.46
   - name: Polynomicon
     pick_rate: 0.13
     win_rate: 0.42
     alternates:
     - name: Hastened Fatalis
-      pick_rate: 0.12
-      win_rate: 0.6
+      pick_rate: 0.13
+      win_rate: 0.59
     - name: Sun Beam Bow
       pick_rate: 0.12
       win_rate: 0.58
@@ -42,51 +42,51 @@ builds:
     pick_rate: 0.12
     win_rate: 0.55
     alternates:
-    - name: Rod of Tahuti
-      pick_rate: 0.09
-      win_rate: 0.33
     - name: Silverbranch Bow
+      pick_rate: 0.1
+      win_rate: 0.66
+    - name: Totem of Death
       pick_rate: 0.09
-      win_rate: 0.64
+      win_rate: 0.52
   - name: The Executioner
-    pick_rate: 0.14
-    win_rate: 0.68
+    pick_rate: 0.13
+    win_rate: 0.67
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.08
-      win_rate: 0.41
+      win_rate: 0.42
     - name: Obsidian Shard
       pick_rate: 0.08
-      win_rate: 0.53
+      win_rate: 0.56
   - name: Silverbranch Bow
     pick_rate: 0.13
-    win_rate: 0.71
+    win_rate: 0.72
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.1
-      win_rate: 0.61
+      win_rate: 0.63
     - name: Manchu Bow
       pick_rate: 0.07
       win_rate: 0.61
   community_starters:
-  - name: Death's Embrace
-    pick_rate: 0.22
-    win_rate: 0.65
   - name: Archmage's Gem
     pick_rate: 0.21
-    win_rate: 0.6
+    win_rate: 0.61
+  - name: Death's Embrace
+    pick_rate: 0.21
+    win_rate: 0.65
   - name: Conduit Gem
     pick_rate: 0.13
-    win_rate: 0.3
+    win_rate: 0.29
   source_url: https://smitebrain.com/gods/kali/
-  last_verified: '2026-08-23'
-  god_win_rate: 0.5392156862745098
-  god_matches_won: 275
-  god_matches_played: 510
+  last_verified: '2026-08-24'
+  god_win_rate: 0.5390334572490706
+  god_matches_won: 290
+  god_matches_played: 538
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-23'
-  god_matches_analyzed: 15677
+  god_window_end: '2026-08-24'
+  god_matches_analyzed: 17273
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -122,7 +122,8 @@ builds:
     Demon Blade, Toxic Blade, Gluttonous Grimoire, Bracer of The Abyss, Musashi''s
     Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum Blade, Transcendence, The World
     Stone, Arondight, Runeforged Hammer, Dreamer''s Idol, Damaru, Rage, Qin''s Blade,
-    Ancient Signet, Chronos'' Pendant, Avenging Blade, Berserker''s Shield.'
+    Ancient Signet, Chronos'' Pendant, Avenging Blade, Berserker''s Shield, Spear
+    of Desolation.'
   slot_scores:
     Lernaean Bow:
       total: 0.52
@@ -140,7 +141,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.68
     Death Metal:
       total: 0.54
@@ -149,9 +150,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.6
+      total: 0.61
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.53
     Tekko-Kagi:
@@ -195,7 +196,7 @@ builds:
     Titan''s Bane, The Crusher, Dreamer''s Idol, Transcendence, Deathbringer, Golden
     Blade, The Reaper, Arondight, Gem of Focus, Pendulum Blade, Runeforged Hammer,
     Musashi''s Dual Swords, Soul Reaver, Riptalon, Avatar''s Parashu, Rod of Asclepius,
-    Demon Blade, Book of Thoth, The Cosmic Horror.'
+    Book of Thoth, Demon Blade, Spear of Desolation, The Cosmic Horror.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -207,7 +208,7 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.51
     Hydra's Lament:
       total: 0.52
@@ -222,15 +223,15 @@ builds:
       pick: 0.0
       fit: 0.54
     Silverbranch Bow:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.34
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.86
-      win: 0.41
+      win: 0.42
       pick: 0.17
       fit: 0.42
   starter: *id001
@@ -244,8 +245,8 @@ builds:
   - Silverbranch Bow
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
   - Tyrfing
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -270,7 +271,7 @@ builds:
     Blade, Helm of Radiance, Hydra''s Lament, Chandra''s Grace, Daybreak Gavel.'
   slot_scores:
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.68
       win: 0.56
       pick: 0.0
@@ -291,12 +292,12 @@ builds:
       total: 0.53
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.45
     Silverbranch Bow:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.32
     Amanita Charm:
@@ -309,15 +310,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - The Executioner
   - Jotunn's Revenge
   - Tyrfing
   - Silverbranch Bow
   - Tekko-Kagi
   - Heartseeker
+  - Obsidian Shard
   flex_slots:
   - Heartseeker
-  - The Executioner
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -338,16 +339,10 @@ builds:
     Parashu, Avenging Blade, Dreamer''s Idol, Hydra''s Lament, Pendulum Blade, Bragi''s
     Harp, Golden Blade, Dominance, Deathbringer, Bracer of The Abyss, Oath-Sworn Spear,
     Demon Blade, Musashi''s Dual Swords, Transcendence, Runeforged Hammer, Arondight,
-    Ancient Signet, Chronos'' Pendant, Damaru, The Cosmic Horror.'
+    Ancient Signet, Chronos'' Pendant, Damaru, Spear of Desolation, The Cosmic Horror.'
   slot_scores:
-    The Executioner:
-      total: 0.53
-      efficiency: 0.35
-      win: 0.68
-      pick: 0.3
-      fit: 0.59
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
       win: 0.56
       pick: 0.0
@@ -356,12 +351,12 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.55
     Silverbranch Bow:
       total: 0.62
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.64
     Tekko-Kagi:
@@ -376,6 +371,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.77
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.56
+      pick: 0.17
+      fit: 0.53
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -409,7 +410,8 @@ builds:
     The Abyss, Qin''s Blade, Titan''s Bane, The Crusher, Deathbringer, Demon Blade,
     Doom Orb, The World Stone, Ancient Signet, Blood-Bound Book, Transcendence, Dreamer''s
     Idol, Musashi''s Dual Swords, Chronos'' Pendant, Runeforged Hammer, Arondight,
-    Berserker''s Shield, Avatar''s Parashu, Bancroft''s Talon, Pendulum Blade.'
+    Berserker''s Shield, Avatar''s Parashu, Bancroft''s Talon, Pendulum Blade, Spear
+    of Desolation.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -421,7 +423,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.67
     Nimble Ring:
       total: 0.54
@@ -430,7 +432,7 @@ builds:
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.56
       pick: 0.0
@@ -444,7 +446,7 @@ builds:
     Silverbranch Bow:
       total: 0.61
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.57
   starter: *id001
@@ -458,7 +460,7 @@ builds:
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Tyrfing
+  - Hydra's Lament
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -477,11 +479,11 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Hydra''s
     Lament, Death Metal, Chronos'' Pendant, Nimble Ring, Spear of the Magus, Arondight,
     Gem of Focus, Lernaean Bow, Pendulum Blade, Tekko-Kagi, Heartseeker, Gluttonous
-    Grimoire, Bragi''s Harp, Bracer of The Abyss, Totem of Death, Doom Orb, The World
-    Stone, Ancient Signet, Titan''s Bane, Riptalon, The Crusher, Breastplate of Valor,
-    Golden Blade, Dreamer''s Idol, Deathbringer, Dominance, Genji''s Guard, The Reaper,
-    Toxic Blade, Transcendence, Musashi''s Dual Swords, Runeforged Hammer, Demon Blade,
-    Qin''s Blade, Avatar''s Parashu.'
+    Grimoire, Bragi''s Harp, Bracer of The Abyss, Doom Orb, The World Stone, Ancient
+    Signet, Titan''s Bane, Riptalon, Spear of Desolation, The Crusher, Breastplate
+    of Valor, Golden Blade, Dreamer''s Idol, Deathbringer, Dominance, Genji''s Guard,
+    The Reaper, Toxic Blade, Transcendence, Musashi''s Dual Swords, Runeforged Hammer,
+    Demon Blade, Qin''s Blade, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -490,13 +492,13 @@ builds:
       pick: 0.0
       fit: 0.59
     Tyrfing:
-      total: 0.52
+      total: 0.53
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.44
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.54
       win: 0.56
       pick: 0.0
@@ -510,7 +512,7 @@ builds:
     Silverbranch Bow:
       total: 0.58
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.37
     Soul Gem:
@@ -548,12 +550,12 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Jotunn''s Revenge, Death Metal, Tekko-Kagi, Lernaean
     Bow, Heartseeker, Nimble Ring, Bragi''s Harp, Golden Blade, Spear of the Magus,
-    Hydra''s Lament, Titan''s Bane, The Crusher, Dominance, Deathbringer, Soul Gem,
-    The Reaper, Riptalon, Demon Blade, Toxic Blade, Gluttonous Grimoire, Bracer of
-    The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum Blade,
-    Transcendence, The World Stone, Arondight, Runeforged Hammer, Dreamer''s Idol,
-    Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos'' Pendant, Avenging Blade,
-    Berserker''s Shield.'
+    Hydra''s Lament, Titan''s Bane, Spear of Desolation, The Crusher, Dominance, Deathbringer,
+    Soul Gem, The Reaper, Riptalon, Demon Blade, Toxic Blade, Gluttonous Grimoire,
+    Bracer of The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum
+    Blade, Transcendence, The World Stone, Arondight, Runeforged Hammer, Dreamer''s
+    Idol, Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos'' Pendant, Avenging
+    Blade, Berserker''s Shield.'
   slot_scores:
     Lernaean Bow:
       total: 0.52
@@ -571,7 +573,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.6
-      pick: 0.4
+      pick: 0.41
       fit: 0.68
     Death Metal:
       total: 0.54
@@ -586,9 +588,9 @@ builds:
       pick: 0.0
       fit: 0.69
     Rod of Tahuti:
-      total: 0.53
+      total: 0.54
       efficiency: 0.86
-      win: 0.41
+      win: 0.42
       pick: 0.17
       fit: 0.26
   starter: *id001
@@ -620,18 +622,18 @@ builds:
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Death Metal, Tekko-Kagi,
     Lernaean Bow, Heartseeker, Nimble Ring, Bragi''s Harp, Golden Blade, Spear of
-    the Magus, Hydra''s Lament, Titan''s Bane, The Crusher, Dominance, Deathbringer,
-    Soul Gem, The Reaper, Riptalon, Demon Blade, Toxic Blade, Gluttonous Grimoire,
-    Bracer of The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum
-    Blade, Transcendence, The World Stone, Arondight, Runeforged Hammer, Dreamer''s
-    Idol, Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos'' Pendant, Avenging
-    Blade, Berserker''s Shield.'
+    the Magus, Hydra''s Lament, Titan''s Bane, Spear of Desolation, The Crusher, Dominance,
+    Deathbringer, Soul Gem, The Reaper, Riptalon, Demon Blade, Toxic Blade, Gluttonous
+    Grimoire, Bracer of The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom
+    Orb, Pendulum Blade, Transcendence, The World Stone, Arondight, Runeforged Hammer,
+    Dreamer''s Idol, Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos'' Pendant,
+    Avenging Blade, Berserker''s Shield.'
   slot_scores:
     The Executioner:
-      total: 0.5
+      total: 0.49
       efficiency: 0.35
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.28
       fit: 0.35
     Jotunn's Revenge:
       total: 0.58
@@ -649,32 +651,32 @@ builds:
       total: 0.47
       efficiency: 0.32
       win: 0.65
-      pick: 0.27
+      pick: 0.29
       fit: 0.34
     Silverbranch Bow:
-      total: 0.6
+      total: 0.61
       efficiency: 0.53
-      win: 0.71
+      win: 0.72
       pick: 0.4
       fit: 0.53
     Rod of Tahuti:
-      total: 0.53
+      total: 0.54
       efficiency: 0.86
-      win: 0.41
+      win: 0.42
       pick: 0.17
       fit: 0.26
   swaps:
   - added: Silverbranch Bow
     removed: Lernaean Bow
-    reason: community 71% win over 66 matches (vs 54% on this god), taking the model's
+    reason: community 72% win over 70 matches (vs 54% on this god), taking the model's
       weakest slot from Lernaean Bow
   - added: The Executioner
     removed: Tyrfing
-    reason: community 68% win over 71 matches (vs 54% on this god), taking the model's
+    reason: community 67% win over 70 matches (vs 54% on this god), taking the model's
       weakest slot from Tyrfing
   - added: Hastened Fatalis
     removed: Tekko-Kagi
-    reason: community 65% win over 102 matches (vs 54% on this god), taking the model's
+    reason: community 65% win over 113 matches (vs 54% on this god), taking the model's
       weakest slot from Tekko-Kagi
   starter: *id001
 ---

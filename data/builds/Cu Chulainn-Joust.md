@@ -399,14 +399,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
+  - Shell of Rebuke
   - Hide of the Nemean Lion
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Berserker's Shield
   - Hide of the Nemean Lion
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -415,8 +415,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -429,12 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+    Shell of Rebuke:
+      total: 0.24
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.2
     Hide of the Nemean Lion:
       total: 0.38
       efficiency: 0.52
@@ -462,8 +462,12 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Erosion
-    reason: Conquest community 57% win over 172 matches (vs 49% on this god), taking
+    reason: Conquest community 57% win over 190 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
+  - added: Shell of Rebuke
+    removed: Berserker's Shield
+    reason: Conquest community 57% win over 168 matches (vs 49% on this god), taking
+      the model's weakest slot from Berserker's Shield
   borrowed_from: Conquest
   starter: *id001
 ---
