@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Breastplate of Valor
     removed: Shogun's Ofuda
-    reason: Conquest community 67% win over 146 matches (vs 58% on this god), taking
+    reason: Conquest community 68% win over 159 matches (vs 58% on this god), taking
       the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001

@@ -10,57 +10,57 @@ builds:
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.39
-    win_rate: 0.63
+    win_rate: 0.64
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.23
-      win_rate: 0.62
-    - name: Mystical Mail
+      pick_rate: 0.21
+      win_rate: 0.61
+    - name: Genji's Guard
       pick_rate: 0.06
-      win_rate: 0.46
+      win_rate: 0.56
   - name: Breastplate of Valor
     pick_rate: 0.24
     win_rate: 0.63
     alternates:
     - name: Genji's Guard
       pick_rate: 0.2
-      win_rate: 0.62
+      win_rate: 0.6
     - name: Shifter's Shield
       pick_rate: 0.18
-      win_rate: 0.62
+      win_rate: 0.64
   - name: Genji's Guard
-    pick_rate: 0.27
+    pick_rate: 0.26
     win_rate: 0.67
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.17
-      win_rate: 0.65
+      win_rate: 0.67
     - name: Shifter's Shield
-      pick_rate: 0.08
-      win_rate: 0.61
+      pick_rate: 0.07
+      win_rate: 0.6
   - name: Freya's Tears
     pick_rate: 0.09
-    win_rate: 0.56
+    win_rate: 0.54
     alternates:
     - name: Genji's Guard
       pick_rate: 0.14
       win_rate: 0.54
     - name: Breastplate of Valor
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Kinetic Cuirass
     pick_rate: 0.06
-    win_rate: 0.65
+    win_rate: 0.64
     alternates:
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.74
+      win_rate: 0.76
     - name: Hide of the Nemean Lion
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Hide of the Nemean Lion
-    pick_rate: 0.06
-    win_rate: 0.73
+    pick_rate: 0.05
+    win_rate: 0.67
     alternates:
     - name: Mote of Chaos
       pick_rate: 0.05
@@ -70,23 +70,23 @@ builds:
       win_rate: 0.63
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.66
   - name: Bluestone Brooch
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.65
   - name: Bumba's Cudgel
     pick_rate: 0.18
-    win_rate: 0.51
+    win_rate: 0.54
   source_url: https://smitebrain.com/gods/odin/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.5894736842105263
-  god_matches_won: 224
-  god_matches_played: 380
+  last_verified: '2026-08-25'
+  god_win_rate: 0.5961538461538461
+  god_matches_won: 248
+  god_matches_played: 416
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -97,21 +97,21 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Transcendence
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
+  - Shifter's Shield
   - Breastplate of Valor
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -127,7 +127,7 @@ builds:
       total: 0.6
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.29
     Breastplate of Valor:
       total: 0.57
@@ -136,27 +136,27 @@ builds:
       pick: 0.33
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.63
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.46
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.64
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.63
-      pick: 0.0
-      fit: 0.21
+    Shifter's Shield:
+      total: 0.57
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.25
+      fit: 0.54
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.54
   starter: &id001
@@ -169,11 +169,11 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Hide of the Nemean Lion
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -182,8 +182,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -195,10 +195,10 @@ builds:
     Transcendence, Midgardian Mail, Mantle Of Discord, The Reaper, Arondight.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.29
     Breastplate of Valor:
       total: 0.57
@@ -207,27 +207,27 @@ builds:
       pick: 0.33
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.63
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.56
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.46
-    Hide of the Nemean Lion:
+    Shifter's Shield:
       total: 0.55
-      efficiency: 0.52
-      win: 0.73
-      pick: 0.18
-      fit: 0.23
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.25
+      fit: 0.36
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.36
   starter: *id001
@@ -238,18 +238,18 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Hide of the Nemean Lion
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
-  - Hide of the Nemean Lion
+  - Kinetic Cuirass
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -257,7 +257,7 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Runeforged Hammer,
+    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Runeforged Hammer,
     The Reaper, Shield Splitter, Eye of the Storm, Berserker''s Shield, Erosion, Yogi''s
     Necklace, Eye of Providence, Hydra''s Lament, Draconic Scale, Phoenix Feather,
     Avenging Blade, Heartseeker, Chandra''s Grace, Glorious Pridwen, Stone of Binding,
@@ -267,36 +267,36 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.27
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.62
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.77
-    Hide of the Nemean Lion:
+    Shifter's Shield:
       total: 0.57
-      efficiency: 0.52
-      win: 0.73
-      pick: 0.18
-      fit: 0.36
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.25
+      fit: 0.52
     Amanita Charm:
       total: 0.64
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.82
   starter: *id001
@@ -304,14 +304,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
+  - Avenging Blade
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
-  - Stone of Binding
-  - Breastplate of Valor
+  - Kinetic Cuirass
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -320,13 +320,13 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Amanita Charm, Kinetic Cuirass, Stone of Binding, Avenging Blade,
+    for this god: Amanita Charm, Stone of Binding, Kinetic Cuirass, Avenging Blade,
     Screeching Gargoyle, Void Shield, Heartseeker, Shield Splitter, Void Stone, Runeforged
     Hammer, Berserker''s Shield, Titan''s Bane, The Crusher, Eye of the Storm, The
     Reaper, Erosion, Eye of Providence, Hydra''s Lament, Draconic Scale, Shield of
@@ -336,37 +336,37 @@ builds:
     Stone of Binding:
       total: 0.57
       efficiency: 0.51
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.71
+    Avenging Blade:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.64
+      pick: 0.0
+      fit: 0.69
     Genji's Guard:
       total: 0.59
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
-      fit: 0.24
-    Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.63
-      pick: 0.33
+      pick: 0.4
       fit: 0.24
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.56
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.57
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.54
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.44
   starter: *id001
@@ -403,39 +403,39 @@ builds:
     Draconic Scale, Magi''s Cloak, Heartseeker, Daybreak Gavel.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.52
     Genji's Guard:
       total: 0.58
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.19
     Berserker's Shield:
-      total: 0.58
+      total: 0.59
       efficiency: 0.68
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.27
     Riptalon:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.48
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.35
   starter: *id001
@@ -446,21 +446,21 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
+  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Freya's Tears
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -476,7 +476,7 @@ builds:
       total: 0.62
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.44
     Breastplate of Valor:
       total: 0.59
@@ -487,25 +487,25 @@ builds:
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.5
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.51
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.56
-      pick: 0.15
-      fit: 0.59
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.25
+      fit: 0.41
     Amanita Charm:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.41
   starter: *id001
@@ -546,36 +546,36 @@ builds:
       total: 0.6
       efficiency: 0.66
       win: 0.67
-      pick: 0.42
+      pick: 0.4
       fit: 0.29
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.63
       efficiency: 0.72
-      win: 0.63
+      win: 0.64
       pick: 0.39
       fit: 0.46
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
-      win: 0.65
+      win: 0.64
       pick: 0.13
       fit: 0.64
     Shield Splitter:
-      total: 0.56
+      total: 0.57
       efficiency: 0.55
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.59
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.56
+      win: 0.54
       pick: 0.15
       fit: 0.49
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.63
+      win: 0.64
       pick: 0.0
       fit: 0.54
   starter: *id001

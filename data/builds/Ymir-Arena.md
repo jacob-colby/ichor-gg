@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Void Stone
-    reason: Conquest community 71% win over 52 matches (vs 56% on this god), taking
+    reason: Conquest community 70% win over 58 matches (vs 56% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

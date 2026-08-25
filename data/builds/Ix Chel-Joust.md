@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Stygian Anchor
-    reason: Conquest community 51% win over 305 matches (vs 44% on this god), taking
+    reason: Conquest community 52% win over 301 matches (vs 44% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Spear of Desolation
     removed: Void Shield
-    reason: Conquest community 49% win over 528 matches (vs 44% on this god), taking
+    reason: Conquest community 50% win over 581 matches (vs 44% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

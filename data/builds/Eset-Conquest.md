@@ -10,21 +10,21 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.3
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.17
-      win_rate: 0.49
+      win_rate: 0.48
     - name: Stampede
       pick_rate: 0.08
-      win_rate: 0.66
+      win_rate: 0.67
   - name: Genji's Guard
     pick_rate: 0.12
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.09
-      win_rate: 0.57
+      pick_rate: 0.1
+      win_rate: 0.54
     - name: Book of Thoth
       pick_rate: 0.08
       win_rate: 0.6
@@ -34,59 +34,59 @@ builds:
     alternates:
     - name: Genji's Guard
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Rod of Tahuti
       pick_rate: 0.1
-      win_rate: 0.62
+      win_rate: 0.61
   - name: Rod of Tahuti
-    pick_rate: 0.18
-    win_rate: 0.58
+    pick_rate: 0.19
+    win_rate: 0.57
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.11
-      win_rate: 0.46
+      win_rate: 0.47
     - name: Freya's Tears
-      pick_rate: 0.09
-      win_rate: 0.64
+      pick_rate: 0.1
+      win_rate: 0.63
   - name: Obsidian Shard
     pick_rate: 0.11
     win_rate: 0.61
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.06
-      win_rate: 0.4
+      win_rate: 0.43
     - name: Shell of Rebuke
-      pick_rate: 0.06
-      win_rate: 0.61
+      pick_rate: 0.05
+      win_rate: 0.63
   - name: Evil Eye
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.53
     alternates:
     - name: Void Shard
       pick_rate: 0.05
-      win_rate: 0.55
-    - name: Oracle Staff
-      pick_rate: 0.04
-      win_rate: 0.5
+      win_rate: 0.58
+    - name: Veve Charm
+      pick_rate: 0.05
+      win_rate: 0.64
   community_starters:
   - name: Conduit Gem
     pick_rate: 0.19
-    win_rate: 0.56
+    win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.17
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Bumba's Cudgel
     pick_rate: 0.12
-    win_rate: 0.6
+    win_rate: 0.59
   source_url: https://smitebrain.com/gods/eset/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.5614678899082569
-  god_matches_won: 306
-  god_matches_played: 545
+  last_verified: '2026-08-25'
+  god_win_rate: 0.5641025641025641
+  god_matches_won: 330
+  god_matches_played: 585
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -132,7 +132,7 @@ builds:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 1.0
     Spear of the Magus:
@@ -144,8 +144,8 @@ builds:
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.77
     Obsidian Shard:
       total: 0.61
@@ -203,7 +203,7 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 0.61
     Doom Orb:
@@ -221,8 +221,8 @@ builds:
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.57
     Obsidian Shard:
       total: 0.56
@@ -270,9 +270,9 @@ builds:
       pick: 0.11
       fit: 0.22
     Spear of Desolation:
-      total: 0.58
+      total: 0.59
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 0.78
     Spear of the Magus:
@@ -282,10 +282,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.56
     Obsidian Shard:
       total: 0.58
@@ -341,14 +341,14 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.64
-      pick: 0.15
+      win: 0.63
+      pick: 0.17
       fit: 0.42
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.38
     Obsidian Shard:
       total: 0.55
@@ -405,7 +405,7 @@ builds:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 1.0
     Doom Orb:
@@ -423,8 +423,8 @@ builds:
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.84
     Obsidian Shard:
       total: 0.62
@@ -493,8 +493,8 @@ builds:
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.31
     Obsidian Shard:
       total: 0.54
@@ -557,14 +557,14 @@ builds:
     Spear of Desolation:
       total: 0.6
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 0.86
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.37
     Obsidian Shard:
       total: 0.55
@@ -621,9 +621,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 0.56
     Spear of the Magus:
@@ -635,8 +635,8 @@ builds:
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.43
     Obsidian Shard:
       total: 0.56
@@ -705,16 +705,16 @@ builds:
       pick: 0.0
       fit: 0.3
     Spear of Desolation:
-      total: 0.57
+      total: 0.58
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 0.7
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.55
     Obsidian Shard:
       total: 0.57
@@ -759,7 +759,7 @@ builds:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.56
+      win: 0.57
       pick: 0.3
       fit: 1.0
     Doom Orb:
@@ -777,8 +777,8 @@ builds:
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
-      win: 0.58
-      pick: 0.3
+      win: 0.57
+      pick: 0.32
       fit: 0.77
     Obsidian Shard:
       total: 0.61

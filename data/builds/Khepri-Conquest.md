@@ -5,51 +5,51 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Laceration
-  aspect_pick_rate: 0.81
-  aspect_win_rate: 0.58
+  aspect_pick_rate: 0.8
+  aspect_win_rate: 0.59
   slot_order:
   - name: The Cosmic Horror
-    pick_rate: 0.27
+    pick_rate: 0.26
     win_rate: 0.56
     alternates:
+    - name: Gauntlet of Thebes
+      pick_rate: 0.13
+      win_rate: 0.54
     - name: Damaru
       pick_rate: 0.13
-      win_rate: 0.7
-    - name: Gauntlet of Thebes
-      pick_rate: 0.12
-      win_rate: 0.54
+      win_rate: 0.69
   - name: Totem of Death
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.57
     alternates:
     - name: The Cosmic Horror
-      pick_rate: 0.21
-      win_rate: 0.62
+      pick_rate: 0.2
+      win_rate: 0.61
     - name: Damaru
       pick_rate: 0.12
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Damaru
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.56
     alternates:
     - name: Totem of Death
-      pick_rate: 0.21
+      pick_rate: 0.2
       win_rate: 0.6
     - name: Omen Drum
       pick_rate: 0.12
-      win_rate: 0.68
+      win_rate: 0.67
   - name: Omen Drum
-    pick_rate: 0.26
+    pick_rate: 0.25
     win_rate: 0.6
     alternates:
     - name: Totem of Death
       pick_rate: 0.13
-      win_rate: 0.68
+      win_rate: 0.69
     - name: Damaru
       pick_rate: 0.08
       win_rate: 0.51
   - name: Rod of Tahuti
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.64
     alternates:
     - name: Omen Drum
@@ -57,36 +57,36 @@ builds:
       win_rate: 0.67
     - name: Evil Eye
       pick_rate: 0.06
-      win_rate: 0.66
+      win_rate: 0.65
   - name: Evil Eye
-    pick_rate: 0.1
+    pick_rate: 0.11
     win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.09
-      win_rate: 0.75
+      win_rate: 0.76
     - name: Obsidian Shard
       pick_rate: 0.06
       win_rate: 0.76
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.29
-    win_rate: 0.68
+    pick_rate: 0.28
+    win_rate: 0.69
   - name: Bluestone Pendant
-    pick_rate: 0.29
-    win_rate: 0.5
+    pick_rate: 0.28
+    win_rate: 0.51
   - name: Selflessness
-    pick_rate: 0.13
-    win_rate: 0.56
+    pick_rate: 0.14
+    win_rate: 0.55
   source_url: https://smitebrain.com/gods/khepri/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.5796783625730995
-  god_matches_won: 793
-  god_matches_played: 1368
+  last_verified: '2026-08-25'
+  god_win_rate: 0.5820178448867536
+  god_matches_won: 848
+  god_matches_played: 1457
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -143,10 +143,10 @@ builds:
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.15
     Obsidian Shard:
       total: 0.58
@@ -218,7 +218,7 @@ builds:
       total: 0.63
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.16
     Obsidian Shard:
       total: 0.58
@@ -288,7 +288,7 @@ builds:
       total: 0.66
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.41
     Obsidian Shard:
       total: 0.62
@@ -356,10 +356,10 @@ builds:
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.08
     Obsidian Shard:
       total: 0.57
@@ -430,7 +430,7 @@ builds:
       total: 0.62
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.13
     Obsidian Shard:
       total: 0.58
@@ -503,7 +503,7 @@ builds:
       total: 0.63
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.2
     Obsidian Shard:
       total: 0.59
@@ -576,7 +576,7 @@ builds:
       total: 0.65
       efficiency: 0.86
       win: 0.64
-      pick: 0.32
+      pick: 0.3
       fit: 0.32
     Obsidian Shard:
       total: 0.61

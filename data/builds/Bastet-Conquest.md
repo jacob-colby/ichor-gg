@@ -5,8 +5,8 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Watchful Pride
-  aspect_pick_rate: 0.15
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.14
+  aspect_win_rate: 0.52
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.63
@@ -14,79 +14,79 @@ builds:
     alternates:
     - name: Transcendence
       pick_rate: 0.1
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Shifter's Shield
       pick_rate: 0.08
-      win_rate: 0.56
+      win_rate: 0.58
   - name: Barbed Carver
     pick_rate: 0.23
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Transcendence
       pick_rate: 0.21
       win_rate: 0.53
     - name: Jotunn's Revenge
       pick_rate: 0.13
-      win_rate: 0.53
+      win_rate: 0.54
   - name: The Crusher
     pick_rate: 0.14
     win_rate: 0.55
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.16
-      win_rate: 0.55
+      pick_rate: 0.17
+      win_rate: 0.56
     - name: Pendulum Blade
       pick_rate: 0.12
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Heartseeker
     pick_rate: 0.32
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.1
-      win_rate: 0.58
+      pick_rate: 0.11
+      win_rate: 0.56
     - name: The Crusher
-      pick_rate: 0.08
-      win_rate: 0.61
+      pick_rate: 0.07
+      win_rate: 0.6
   - name: Titan's Bane
     pick_rate: 0.14
     win_rate: 0.6
     alternates:
     - name: Heartseeker
       pick_rate: 0.17
-      win_rate: 0.59
+      win_rate: 0.58
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.63
-  - name: Lucerne Hammer
-    pick_rate: 0.1
-    win_rate: 0.53
-    alternates:
-    - name: Skeggox
-      pick_rate: 0.1
       win_rate: 0.61
+  - name: Skeggox
+    pick_rate: 0.1
+    win_rate: 0.62
+    alternates:
+    - name: Lucerne Hammer
+      pick_rate: 0.1
+      win_rate: 0.52
     - name: Titan's Bane
-      pick_rate: 0.09
-      win_rate: 0.64
+      pick_rate: 0.08
+      win_rate: 0.65
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.38
+    pick_rate: 0.37
     win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.3
     win_rate: 0.46
-  - name: Pendulum of the Ages
-    pick_rate: 0.07
-    win_rate: 0.46
+  - name: Leather Cowl
+    pick_rate: 0.09
+    win_rate: 0.55
   source_url: https://smitebrain.com/gods/bastet/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.5427782888684453
-  god_matches_won: 590
-  god_matches_played: 1087
+  last_verified: '2026-08-25'
+  god_win_rate: 0.5401521555367709
+  god_matches_won: 639
+  god_matches_played: 1183
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -149,7 +149,7 @@ builds:
     Heartseeker:
       total: 0.61
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 1.0
     Titan's Bane:
@@ -206,7 +206,7 @@ builds:
       pick: 0.29
       fit: 0.39
     Hydra's Lament:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
       win: 0.56
       pick: 0.0
@@ -218,9 +218,9 @@ builds:
       pick: 0.22
       fit: 0.57
     Heartseeker:
-      total: 0.58
+      total: 0.57
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 0.77
     Titan's Bane:
@@ -275,7 +275,7 @@ builds:
       pick: 0.29
       fit: 0.22
     Hydra's Lament:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
       win: 0.56
       pick: 0.0
@@ -289,7 +289,7 @@ builds:
     Heartseeker:
       total: 0.57
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 0.76
     Titan's Bane:
@@ -309,7 +309,7 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
+  - Heartseeker
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -345,21 +345,21 @@ builds:
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
       win: 0.56
       pick: 0.0
       fit: 0.73
     Shifter's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.56
+      win: 0.58
       pick: 0.08
       fit: 0.56
     Heartseeker:
       total: 0.55
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 0.6
     Amanita Charm:
@@ -408,7 +408,7 @@ builds:
       pick: 0.63
       fit: 1.0
     The Reaper:
-      total: 0.56
+      total: 0.57
       efficiency: 0.5
       win: 0.56
       pick: 0.0
@@ -422,7 +422,7 @@ builds:
     Heartseeker:
       total: 0.61
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 1.0
     Titan's Bane:
@@ -442,14 +442,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
   - Riptalon
   - Silverbranch Bow
+  - Tekko-Kagi
   - Heartseeker
   flex_slots:
-  - Silverbranch Bow
-  - Transcendence
+  - Heartseeker
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -476,12 +476,6 @@ builds:
       win: 0.55
       pick: 0.63
       fit: 0.37
-    Transcendence:
-      total: 0.46
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.29
-      fit: 0.17
     Tyrfing:
       total: 0.54
       efficiency: 0.48
@@ -500,10 +494,16 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.69
+    Tekko-Kagi:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.0
+      fit: 0.65
     Heartseeker:
       total: 0.54
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 0.53
   starter: *id001
@@ -511,14 +511,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Arondight
-  - Pendulum Blade
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Pendulum Blade
   - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -546,28 +546,28 @@ builds:
       win: 0.55
       pick: 0.63
       fit: 0.85
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.53
+      pick: 0.29
+      fit: 0.15
     Hydra's Lament:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
       win: 0.56
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.52
+      total: 0.53
       efficiency: 0.5
       win: 0.56
       pick: 0.0
       fit: 0.65
-    Pendulum Blade:
-      total: 0.52
-      efficiency: 0.42
-      win: 0.52
-      pick: 0.19
-      fit: 0.85
     Heartseeker:
       total: 0.54
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 0.55
     Titan's Bane:
@@ -624,7 +624,7 @@ builds:
     Pendulum Blade:
       total: 0.54
       efficiency: 0.42
-      win: 0.52
+      win: 0.51
       pick: 0.19
       fit: 1.0
     The Crusher:
@@ -636,7 +636,7 @@ builds:
     Heartseeker:
       total: 0.61
       efficiency: 0.47
-      win: 0.6
+      win: 0.59
       pick: 0.53
       fit: 1.0
     Titan's Bane:

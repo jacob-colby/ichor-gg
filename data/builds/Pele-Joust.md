@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: The Crusher
-    reason: Conquest community 80% win over 44 matches (vs 57% on this god), taking
+    reason: Conquest community 77% win over 48 matches (vs 58% on this god), taking
       the model's weakest slot from The Crusher
   borrowed_from: Conquest
   starter: *id001

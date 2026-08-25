@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the Warped
   aspect_pick_rate: 0.13
-  aspect_win_rate: 0.46
+  aspect_win_rate: 0.47
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.51
@@ -14,79 +14,79 @@ builds:
     alternates:
     - name: Mystical Mail
       pick_rate: 0.18
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Genji's Guard
       pick_rate: 0.05
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Mystical Mail
     pick_rate: 0.16
     win_rate: 0.48
     alternates:
     - name: Gladiator's Shield
       pick_rate: 0.14
-      win_rate: 0.49
+      win_rate: 0.5
     - name: Shifter's Shield
       pick_rate: 0.13
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Genji's Guard
     pick_rate: 0.12
-    win_rate: 0.49
+    win_rate: 0.51
     alternates:
     - name: Freya's Tears
       pick_rate: 0.11
       win_rate: 0.51
     - name: Kinetic Cuirass
       pick_rate: 0.1
-      win_rate: 0.49
+      win_rate: 0.5
   - name: Freya's Tears
     pick_rate: 0.1
     win_rate: 0.51
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.51
     - name: Kinetic Cuirass
       pick_rate: 0.09
-      win_rate: 0.55
-  - name: Shell of Rebuke
+      win_rate: 0.54
+  - name: Draconic Scale
     pick_rate: 0.08
     win_rate: 0.57
     alternates:
-    - name: Draconic Scale
+    - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.56
+      win_rate: 0.58
     - name: Hide of the Nemean Lion
-      pick_rate: 0.07
-      win_rate: 0.49
+      pick_rate: 0.08
+      win_rate: 0.5
   - name: Hide of the Nemean Lion
-    pick_rate: 0.09
-    win_rate: 0.57
+    pick_rate: 0.08
+    win_rate: 0.58
     alternates:
     - name: Engraved Guard
       pick_rate: 0.06
-      win_rate: 0.42
+      win_rate: 0.41
     - name: Medal of Defense
       pick_rate: 0.05
-      win_rate: 0.5
+      win_rate: 0.52
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.51
-    win_rate: 0.59
+    win_rate: 0.6
   - name: Bluestone Pendant
     pick_rate: 0.37
-    win_rate: 0.38
+    win_rate: 0.37
   - name: Leather Cowl
     pick_rate: 0.09
-    win_rate: 0.32
+    win_rate: 0.29
   source_url: https://smitebrain.com/gods/cu-chulainn/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.49335232668566004
-  god_matches_won: 1039
-  god_matches_played: 2106
+  last_verified: '2026-08-25'
+  god_win_rate: 0.49530621367903443
+  god_matches_won: 1108
+  god_matches_played: 2237
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -97,18 +97,18 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
+  - Runeforged Hammer
   - Kinetic Cuirass
-  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
   - vs_tag: physical_heavy
     swap: Hide of the Nemean Lion — physical protection
     swap_item: Hide of the Nemean Lion
@@ -123,39 +123,39 @@ builds:
     Shield of the Phoenix, Silverbranch Bow, Toxic Blade, Stone of Binding.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.6
     Berserker's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.5
       efficiency: 0.56
-      win: 0.49
+      win: 0.5
       pick: 0.16
       fit: 0.44
-    Shifter's Shield:
-      total: 0.49
-      efficiency: 0.55
-      win: 0.49
-      pick: 0.51
-      fit: 0.34
-    Amanita Charm:
+    Runeforged Hammer:
       total: 0.5
+      efficiency: 0.57
+      win: 0.51
+      pick: 0.0
+      fit: 0.46
+    Amanita Charm:
+      total: 0.51
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.34
   starter: &id001
@@ -167,22 +167,22 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Shield of the Phoenix
   - Draconic Scale
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
+  - Shield of the Phoenix
   - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Hide of the Nemean Lion — physical protection
+    swap_item: Hide of the Nemean Lion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -195,39 +195,39 @@ builds:
     Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.47
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.52
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.26
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
-      win: 0.49
+      win: 0.5
       pick: 0.16
       fit: 0.54
-    Shifter's Shield:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.49
-      pick: 0.51
-      fit: 0.44
+    Shield of the Phoenix:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.51
+      pick: 0.0
+      fit: 0.63
     Draconic Scale:
-      total: 0.5
+      total: 0.51
       efficiency: 0.5
-      win: 0.56
+      win: 0.57
       pick: 0.17
       fit: 0.44
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.74
   starter: *id001
@@ -251,8 +251,8 @@ builds:
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -265,39 +265,39 @@ builds:
     Avatar''s Parashu.'
   slot_scores:
     Avenging Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.49
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.67
     Berserker's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.49
     Transcendence:
-      total: 0.43
+      total: 0.44
       efficiency: 0.53
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.17
     Heartseeker:
-      total: 0.48
+      total: 0.49
       efficiency: 0.47
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.66
     Amanita Charm:
-      total: 0.49
+      total: 0.5
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.25
   starter: *id001
@@ -305,14 +305,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Tyrfing
-  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
   - Tyrfing
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -334,39 +334,39 @@ builds:
     Blade, Erosion, Heartseeker, Shield of the Phoenix, Qin''s Blade, Stone of Binding.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.6
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.66
+      win: 0.51
+      pick: 0.19
+      fit: 0.1
     Berserker's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.4
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.51
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.18
     Tyrfing:
-      total: 0.48
+      total: 0.49
       efficiency: 0.48
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.59
-    Freya's Tears:
-      total: 0.48
-      efficiency: 0.61
-      win: 0.51
-      pick: 0.17
-      fit: 0.18
     Amanita Charm:
-      total: 0.49
+      total: 0.5
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.25
   starter: *id001
@@ -390,8 +390,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -404,27 +404,27 @@ builds:
     Eye of Providence, Silverbranch Bow, Stone of Binding.'
   slot_scores:
     Genji's Guard:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
-      win: 0.49
+      win: 0.51
       pick: 0.19
       fit: 0.36
     Berserker's Shield:
-      total: 0.51
+      total: 0.52
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.32
     Breastplate of Valor:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.41
     Freya's Tears:
@@ -434,9 +434,9 @@ builds:
       pick: 0.17
       fit: 0.43
     Amanita Charm:
-      total: 0.49
+      total: 0.5
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.24
   starter: *id001
@@ -474,39 +474,39 @@ builds:
     Stone of Binding.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.6
     Berserker's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.5
       efficiency: 0.56
-      win: 0.49
+      win: 0.5
       pick: 0.16
       fit: 0.44
     Runeforged Hammer:
-      total: 0.49
+      total: 0.5
       efficiency: 0.57
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.46
     Amanita Charm:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.34
   starter: *id001
@@ -516,12 +516,12 @@ builds:
   - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Shell of Rebuke
   - Hide of the Nemean Lion
+  - Draconic Scale
   - Amanita Charm
   flex_slots:
+  - Draconic Scale
   - Hide of the Nemean Lion
-  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -544,49 +544,49 @@ builds:
     Bow, Toxic Blade, Stone of Binding.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.6
     Berserker's Shield:
-      total: 0.52
+      total: 0.53
       efficiency: 0.68
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.72
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.31
-    Shell of Rebuke:
-      total: 0.39
-      efficiency: 0.28
-      win: 0.57
-      pick: 0.17
-      fit: 0.2
     Hide of the Nemean Lion:
       total: 0.49
       efficiency: 0.52
-      win: 0.57
-      pick: 0.28
+      win: 0.58
+      pick: 0.25
       fit: 0.24
+    Draconic Scale:
+      total: 0.49
+      efficiency: 0.5
+      win: 0.57
+      pick: 0.17
+      fit: 0.34
     Amanita Charm:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.49
+      win: 0.51
       pick: 0.0
       fit: 0.34
   swaps:
   - added: Hide of the Nemean Lion
     removed: Kinetic Cuirass
-    reason: community 57% win over 190 matches (vs 49% on this god), taking the model's
+    reason: community 58% win over 179 matches (vs 50% on this god), taking the model's
       weakest slot from Kinetic Cuirass
-  - added: Shell of Rebuke
+  - added: Draconic Scale
     removed: Runeforged Hammer
-    reason: community 57% win over 168 matches (vs 49% on this god), taking the model's
+    reason: community 57% win over 179 matches (vs 50% on this god), taking the model's
       weakest slot from Runeforged Hammer
   starter: *id001
 ---

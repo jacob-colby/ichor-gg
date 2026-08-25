@@ -5,8 +5,8 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Harmony
-  aspect_pick_rate: 0.02
-  aspect_win_rate: 0.53
+  aspect_pick_rate: 0.03
+  aspect_win_rate: 0.57
   slot_order:
   - name: Tyrfing
     pick_rate: 0.6
@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.12
-      win_rate: 0.52
+      win_rate: 0.51
     - name: Avenging Blade
       pick_rate: 0.09
       win_rate: 0.54
@@ -24,27 +24,27 @@ builds:
     alternates:
     - name: Dagger of Frenzy
       pick_rate: 0.16
-      win_rate: 0.53
+      win_rate: 0.51
     - name: Toxic Blade
       pick_rate: 0.08
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Silverbranch Bow
     pick_rate: 0.19
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.2
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Riptalon
       pick_rate: 0.11
-      win_rate: 0.57
+      win_rate: 0.56
   - name: The Executioner
     pick_rate: 0.23
-    win_rate: 0.53
+    win_rate: 0.51
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.22
-      win_rate: 0.54
+      pick_rate: 0.23
+      win_rate: 0.53
     - name: Riptalon
       pick_rate: 0.12
       win_rate: 0.54
@@ -54,39 +54,39 @@ builds:
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.17
-      win_rate: 0.55
+      win_rate: 0.54
     - name: The Executioner
-      pick_rate: 0.13
+      pick_rate: 0.14
       win_rate: 0.61
   - name: Manchu Bow
     pick_rate: 0.12
-    win_rate: 0.51
+    win_rate: 0.48
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.11
       win_rate: 0.51
     - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.64
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.31
-    win_rate: 0.63
+    win_rate: 0.62
   - name: Sharpshooter's Arrow
-    pick_rate: 0.2
-    win_rate: 0.56
+    pick_rate: 0.19
+    win_rate: 0.55
   - name: Leather Cowl
     pick_rate: 0.16
-    win_rate: 0.41
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-08-24'
-  god_win_rate: 0.536064627813041
-  god_matches_won: 929
-  god_matches_played: 1733
+  last_verified: '2026-08-25'
+  god_win_rate: 0.5281199785752544
+  god_matches_won: 986
+  god_matches_played: 1867
   god_division: obsidian
   god_window_start: '2026-08-11'
-  god_window_end: '2026-08-24'
-  god_matches_analyzed: 17273
+  god_window_end: '2026-08-25'
+  god_matches_analyzed: 18716
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -117,8 +117,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Lernaean Bow, Golden Blade, Tekko-Kagi, Demon Blade,
-    Deathbringer, The Reaper, Dominance, Hydra''s Lament, Toxic Blade, Musashi''s
-    Dual Swords, Heartseeker, Damaru, Rage, Qin''s Blade, Titan''s Bane, The Crusher,
+    Deathbringer, The Reaper, Dominance, Hydra''s Lament, Musashi''s Dual Swords,
+    Toxic Blade, Heartseeker, Damaru, Rage, Qin''s Blade, Titan''s Bane, The Crusher,
     Transcendence, Arondight, Runeforged Hammer, Avenging Blade, Berserker''s Shield,
     Sun Beam Bow, Barbed Carver, Avatar''s Parashu, Bloodforge, Pendulum Blade.'
   slot_scores:
@@ -153,9 +153,9 @@ builds:
       pick: 0.28
       fit: 0.56
     Silverbranch Bow:
-      total: 0.52
+      total: 0.51
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.3
       fit: 0.45
   starter: &id001
@@ -188,7 +188,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Hydra''s Lament, Lernaean Bow, Heartseeker, The Reaper, Tekko-Kagi, Dominance,
-    Deathbringer, Titan''s Bane, Golden Blade, The Crusher, Toxic Blade, Transcendence,
+    Deathbringer, Titan''s Bane, Golden Blade, The Crusher, Transcendence, Toxic Blade,
     Arondight, Musashi''s Dual Swords, Demon Blade, Runeforged Hammer, Avenging Blade,
     Pendulum Blade, Avatar''s Parashu, Damaru, Rage, Qin''s Blade, Barbed Carver,
     Berserker''s Shield, Breastplate of Valor, Genji''s Guard.'
@@ -220,7 +220,7 @@ builds:
     Silverbranch Bow:
       total: 0.5
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.3
       fit: 0.33
     Heartseeker:
@@ -422,7 +422,7 @@ builds:
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.3
       fit: 0.61
     Tekko-Kagi:
@@ -501,9 +501,9 @@ builds:
       pick: 0.28
       fit: 0.59
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.3
       fit: 0.5
   starter: *id001
@@ -534,11 +534,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
-    Lernaean Bow, Arondight, The Reaper, Deathbringer, Tekko-Kagi, Golden Blade, Toxic
-    Blade, Dominance, Heartseeker, Pendulum Blade, Breastplate of Valor, Demon Blade,
-    Musashi''s Dual Swords, Genji''s Guard, Qin''s Blade, Titan''s Bane, The Crusher,
-    Transcendence, Runeforged Hammer, Avenging Blade, Damaru, Berserker''s Shield,
-    Rage, Sun Beam Bow, Daybreak Gavel.'
+    Lernaean Bow, Arondight, The Reaper, Deathbringer, Tekko-Kagi, Golden Blade, Dominance,
+    Heartseeker, Pendulum Blade, Toxic Blade, Breastplate of Valor, Demon Blade, Musashi''s
+    Dual Swords, Genji''s Guard, Qin''s Blade, Titan''s Bane, The Crusher, Transcendence,
+    Runeforged Hammer, Avenging Blade, Damaru, Berserker''s Shield, Rage, Sun Beam
+    Bow, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -571,9 +571,9 @@ builds:
       pick: 0.28
       fit: 0.38
     Silverbranch Bow:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.3
       fit: 0.31
   starter: *id001

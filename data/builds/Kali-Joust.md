@@ -527,11 +527,11 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Bragi's Harp
-    reason: Conquest community 72% win over 70 matches (vs 54% on this god), taking
+    reason: Conquest community 70% win over 77 matches (vs 54% on this god), taking
       the model's weakest slot from Bragi's Harp
   - added: The Executioner
     removed: Death Metal
-    reason: Conquest community 67% win over 70 matches (vs 54% on this god), taking
+    reason: Conquest community 65% win over 83 matches (vs 54% on this god), taking
       the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001

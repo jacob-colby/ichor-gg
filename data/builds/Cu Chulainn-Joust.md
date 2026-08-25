@@ -399,14 +399,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Shell of Rebuke
   - Hide of the Nemean Lion
+  - Draconic Scale
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Draconic Scale
   - Hide of the Nemean Lion
-  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -429,18 +429,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Shell of Rebuke:
-      total: 0.24
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
     Hide of the Nemean Lion:
       total: 0.38
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.24
+    Draconic Scale:
+      total: 0.42
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
@@ -462,11 +462,11 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Erosion
-    reason: Conquest community 57% win over 190 matches (vs 49% on this god), taking
+    reason: Conquest community 58% win over 179 matches (vs 50% on this god), taking
       the model's weakest slot from Erosion
-  - added: Shell of Rebuke
+  - added: Draconic Scale
     removed: Berserker's Shield
-    reason: Conquest community 57% win over 168 matches (vs 49% on this god), taking
+    reason: Conquest community 57% win over 179 matches (vs 50% on this god), taking
       the model's weakest slot from Berserker's Shield
   borrowed_from: Conquest
   starter: *id001

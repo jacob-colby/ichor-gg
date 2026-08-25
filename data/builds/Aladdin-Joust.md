@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: The Crusher
-    reason: Conquest community 67% win over 135 matches (vs 53% on this god), taking
+    reason: Conquest community 67% win over 141 matches (vs 52% on this god), taking
       the model's weakest slot from The Crusher
   borrowed_from: Conquest
   starter: *id001
