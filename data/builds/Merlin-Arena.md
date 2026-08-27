@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Chronos' Pendant
     removed: Doom Orb
-    reason: Conquest community 74% win over 31 matches (vs 56% on this god), taking
+    reason: Conquest community 62% win over 60 matches (vs 49% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001
