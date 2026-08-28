@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Righteous Flame
-  aspect_pick_rate: 0.51
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.47
+  aspect_win_rate: 0.58
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.3
-    win_rate: 0.57
+    pick_rate: 0.36
+    win_rate: 0.55
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.14
+      pick_rate: 0.11
       win_rate: 0.4
     - name: Runeforged Hammer
-      pick_rate: 0.09
-      win_rate: 0.33
+      pick_rate: 0.1
+      win_rate: 0.44
   - name: Rage
-    pick_rate: 0.22
+    pick_rate: 0.16
     win_rate: 0.8
     alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.12
+      win_rate: 0.64
     - name: Jotunn's Revenge
       pick_rate: 0.07
-      win_rate: 0.8
-    - name: Shifter's Shield
-      pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.67
   - name: Deathbringer
-    pick_rate: 0.22
+    pick_rate: 0.17
     win_rate: 0.67
     alternates:
-    - name: Genji's Guard
-      pick_rate: 0.16
-      win_rate: 0.55
     - name: Heartseeker
+      pick_rate: 0.15
+      win_rate: 0.54
+    - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.63
+      win_rate: 0.55
   - name: Titan's Bane
-    pick_rate: 0.16
-    win_rate: 0.4
+    pick_rate: 0.13
+    win_rate: 0.36
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.1
+      pick_rate: 0.07
       win_rate: 0.5
     - name: Deathbringer
-      pick_rate: 0.08
-      win_rate: 0.8
+      pick_rate: 0.07
+      win_rate: 0.67
   - name: Heartseeker
-    pick_rate: 0.05
+    pick_rate: 0.04
     win_rate: 1.0
     alternates:
-    - name: Musashi's Dual Swords
+    - name: Deathbringer
       pick_rate: 0.05
-      win_rate: 0.67
+      win_rate: 0.5
     - name: Titan's Bane
       pick_rate: 0.05
-      win_rate: 0.33
-  - name: Mote of Chaos
+      win_rate: 0.25
+  - name: Skeggox
     pick_rate: 0.08
-    win_rate: 0.33
+    win_rate: 0.5
     alternates:
-    - name: Spirit Robe
-      pick_rate: 0.08
+    - name: Mote of Chaos
+      pick_rate: 0.06
       win_rate: 0.33
-    - name: Heartseeker
-      pick_rate: 0.05
-      win_rate: 0.0
+    - name: Spirit Robe
+      pick_rate: 0.06
+      win_rate: 0.33
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.17
+    pick_rate: 0.18
     win_rate: 0.75
   - name: Hunter's Cowl
-    pick_rate: 0.14
-    win_rate: 0.6
-  - name: Warrior's Axe
     pick_rate: 0.13
-    win_rate: 0.33
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.11
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/ne-zha/
-  last_verified: '2026-08-27'
-  god_win_rate: 0.5797101449275363
-  god_matches_won: 40
-  god_matches_played: 69
+  last_verified: '2026-08-28'
+  god_win_rate: 0.5604395604395604
+  god_matches_won: 51
+  god_matches_played: 91
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-08-27'
-  god_matches_analyzed: 2301
+  god_window_end: '2026-08-28'
+  god_matches_analyzed: 3498
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -117,16 +117,16 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Heartseeker, Hydra''s Lament, Pendulum Blade, The Crusher, The Reaper,
-    Arondight, Avatar''s Parashu, Tekko-Kagi, Transcendence, Musashi''s Dual Swords,
-    Avenging Blade, Lernaean Bow, Shield Splitter, Dominance, Oath-Sworn Spear, Barbed
-    Carver, Tyrfing, Breastplate of Valor, Bloodforge, Eye of the Storm, Damaru, Daybreak
-    Gavel, Golden Blade, Sanguine Lash, Runeforged Hammer.'
+    Arondight, Avatar''s Parashu, Tekko-Kagi, Transcendence, Avenging Blade, Lernaean
+    Bow, Shield Splitter, Dominance, Runeforged Hammer, Oath-Sworn Spear, Barbed Carver,
+    Tyrfing, Breastplate of Valor, Bloodforge, Eye of the Storm, Damaru, Daybreak
+    Gavel, Musashi''s Dual Swords, Golden Blade, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 1.0
     Transcendence:
       total: 0.49
@@ -144,7 +144,7 @@ builds:
       total: 0.55
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.44
     Pendulum Blade:
       total: 0.53
@@ -153,10 +153,10 @@ builds:
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.77
+      total: 0.76
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.98
   starter: &id001
     base: Bumba's Golden Dagger
@@ -188,16 +188,16 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Heartseeker,
     Hydra''s Lament, The Crusher, The Reaper, Transcendence, Arondight, Pendulum Blade,
-    Avatar''s Parashu, Musashi''s Dual Swords, Tekko-Kagi, Avenging Blade, Dominance,
-    Breastplate of Valor, Lernaean Bow, Shield Splitter, Oath-Sworn Spear, Daybreak
-    Gavel, Barbed Carver, Tyrfing, Bloodforge, Yogi''s Necklace, Eye of the Storm,
-    Damaru, Eye of Erebus, Runeforged Hammer.'
+    Avatar''s Parashu, Tekko-Kagi, Avenging Blade, Dominance, Breastplate of Valor,
+    Lernaean Bow, Shield Splitter, Runeforged Hammer, Oath-Sworn Spear, Daybreak Gavel,
+    Barbed Carver, Tyrfing, Bloodforge, Yogi''s Necklace, Eye of the Storm, Damaru,
+    Eye of Erebus, Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 0.71
     Transcendence:
       total: 0.48
@@ -215,7 +215,7 @@ builds:
       total: 0.53
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.29
     The Crusher:
       total: 0.49
@@ -227,7 +227,7 @@ builds:
       total: 0.73
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.77
   starter: *id001
 - source: suggested
@@ -258,15 +258,15 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Heartseeker, Hydra''s Lament, Pendulum Blade, The Crusher, The Reaper, Arondight,
     Avatar''s Parashu, Tekko-Kagi, Transcendence, Avenging Blade, Breastplate of Valor,
-    Lernaean Bow, Shield Splitter, Dominance, Daybreak Gavel, Oath-Sworn Spear, Barbed
-    Carver, Tyrfing, Eye of Erebus, Screeching Gargoyle, Bloodforge, Chandra''s Grace,
-    Freya''s Tears, Silverbranch Bow, Riptalon, Yogi''s Necklace, Runeforged Hammer.'
+    Lernaean Bow, Shield Splitter, Dominance, Runeforged Hammer, Daybreak Gavel, Oath-Sworn
+    Spear, Barbed Carver, Tyrfing, Eye of Erebus, Screeching Gargoyle, Bloodforge,
+    Chandra''s Grace, Freya''s Tears, Silverbranch Bow, Riptalon, Yogi''s Necklace.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 0.78
     Transcendence:
       total: 0.45
@@ -284,7 +284,7 @@ builds:
       total: 0.52
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.22
     Pendulum Blade:
       total: 0.5
@@ -296,28 +296,28 @@ builds:
       total: 0.73
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.76
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Shield of the Phoenix
-  - Transcendence
+  - Shifter's Shield
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
-  - Transcendence
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -329,38 +329,38 @@ builds:
     Freya''s Tears, The Reaper, Shield Splitter, Breastplate of Valor, Eye of the
     Storm, Berserker''s Shield, Erosion, Yogi''s Necklace, Eye of Providence, Draconic
     Scale, Hydra''s Lament, Phoenix Feather, Chandra''s Grace, Avenging Blade, Glorious
-    Pridwen, Stone of Binding, Midgardian Mail, Daybreak Gavel, Hide of the Nemean
-    Lion, The Crusher, Magi''s Cloak, Shifter''s Shield, Runeforged Hammer.'
+    Pridwen, Runeforged Hammer, Stone of Binding, Midgardian Mail, Daybreak Gavel,
+    Hide of the Nemean Lion, The Crusher, Magi''s Cloak.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.25
-      fit: 0.27
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 0.48
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.53
+      pick: 0.0
+      fit: 0.62
     Shield of the Phoenix:
       total: 0.54
       efficiency: 0.53
       win: 0.53
       pick: 0.0
       fit: 0.77
-    Transcendence:
-      total: 0.45
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.0
-      fit: 0.21
+    Shifter's Shield:
+      total: 0.57
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.16
+      fit: 0.52
     Heartseeker:
       total: 0.7
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.57
     Amanita Charm:
       total: 0.59
@@ -398,20 +398,20 @@ builds:
     for this god: Heartseeker, The Crusher, The Reaper, Pendulum Blade, Avatar''s
     Parashu, Hydra''s Lament, Tekko-Kagi, Avenging Blade, Arondight, Oath-Sworn Spear,
     Transcendence, Lernaean Bow, Screeching Gargoyle, Shield Splitter, Dominance,
-    Silverbranch Bow, Riptalon, Breastplate of Valor, Daybreak Gavel, Barbed Carver,
-    Tyrfing, Toxic Blade, Bloodforge, Eye of the Storm, Damaru, Runeforged Hammer.'
+    Runeforged Hammer, Silverbranch Bow, Riptalon, Breastplate of Valor, Daybreak
+    Gavel, Barbed Carver, Tyrfing, Toxic Blade, Bloodforge, Eye of the Storm, Damaru.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 1.0
     Rage:
       total: 0.53
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.3
     The Reaper:
       total: 0.54
@@ -435,7 +435,7 @@ builds:
       total: 0.77
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -474,8 +474,8 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 0.42
     Tyrfing:
       total: 0.52
@@ -487,7 +487,7 @@ builds:
       total: 0.51
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.16
     Riptalon:
       total: 0.53
@@ -502,10 +502,10 @@ builds:
       pick: 0.0
       fit: 0.64
     Heartseeker:
-      total: 0.7
+      total: 0.69
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.51
   starter: *id001
 - source: suggested
@@ -518,8 +518,8 @@ builds:
   - Pendulum Blade
   - Heartseeker
   flex_slots:
-  - Rage
   - Arondight
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -538,14 +538,14 @@ builds:
     Blade, Arondight, Breastplate of Valor, The Crusher, The Reaper, Avatar''s Parashu,
     Eye of Erebus, Transcendence, Screeching Gargoyle, Chandra''s Grace, Freya''s
     Tears, Tekko-Kagi, Avenging Blade, Shield of the Phoenix, Daybreak Gavel, Lernaean
-    Bow, Gladiator''s Shield, Shield Splitter, Dominance, Prophetic Cloak, Oath-Sworn
-    Spear, Heartwood Charm, Barbed Carver, Tyrfing, Runeforged Hammer.'
+    Bow, Gladiator''s Shield, Shield Splitter, Dominance, Runeforged Hammer, Prophetic
+    Cloak, Oath-Sworn Spear, Heartwood Charm, Barbed Carver, Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.64
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 0.85
     Hydra's Lament:
       total: 0.54
@@ -557,7 +557,7 @@ builds:
       total: 0.51
       efficiency: 0.32
       win: 0.8
-      pick: 0.3
+      pick: 0.22
       fit: 0.15
     Arondight:
       total: 0.51
@@ -575,7 +575,7 @@ builds:
       total: 0.7
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.55
   starter: *id001
 - source: suggested
@@ -613,8 +613,8 @@ builds:
     Jotunn's Revenge:
       total: 0.67
       efficiency: 0.72
-      win: 0.57
-      pick: 0.3
+      win: 0.55
+      pick: 0.36
       fit: 1.0
     Transcendence:
       total: 0.49
@@ -635,16 +635,16 @@ builds:
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.77
+      total: 0.76
       efficiency: 0.47
       win: 1.0
-      pick: 0.11
+      pick: 0.09
       fit: 0.98
     Titan's Bane:
-      total: 0.49
+      total: 0.47
       efficiency: 0.47
-      win: 0.4
-      pick: 0.27
+      win: 0.36
+      pick: 0.22
       fit: 0.88
   starter: *id001
 ---

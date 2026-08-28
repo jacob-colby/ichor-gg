@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Erosion
-    reason: Conquest community 76% win over 30 matches (vs 51% on this god), taking
+    reason: Conquest community 64% win over 48 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001
