@@ -143,8 +143,19 @@ describe("DraftDock — expand and edit in place", () => {
     fireEvent.click(screen.getByRole("button", { name: /default core/i }));
     fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
     fireEvent.click(screen.getByText("EnemyHealer"));
-    // The picker closes and the slot reflects the pick, live.
+    // The slot reflects the pick, live.
     expect(screen.getByRole("button", { name: "Change enemy 1 (EnemyHealer)" })).toBeInTheDocument();
+  });
+
+  it("advances to the next empty slot exactly as the full page does", () => {
+    // Two surfaces render one board. A board that advances on one and not the
+    // other is two boards — see `nextEmptySlot`.
+    render(dock());
+    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
+    expect(screen.getByText("for enemy 2")).toBeInTheDocument();
   });
 
   it("switches mode, resizing the slots shown", () => {

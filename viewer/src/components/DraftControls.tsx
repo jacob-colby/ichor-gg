@@ -36,7 +36,7 @@ export function Icon({ name, className, item = false }: { name: string; classNam
  * listbox arrow semantics would misdescribe them. Enter takes the first
  * available match.
  */
-export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
+export function GodPickerModal({ gods, taken, onPick, onClose, opener, slotLabel, restoreSlot }: {
   gods: God[];
   /** Gods this slot may not take — already on the SAME team, so they're
    *  disabled. Not the whole board: the two teams may mirror each other, and
@@ -49,14 +49,47 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
    * because `autoFocus` commits before effects run — so focus was being
    * "restored" to an unmounting node and landing on <body>. */
   opener: HTMLElement | null;
+  /** `data-slot` of the slot currently being filled. On close the picker
+   *  returns focus HERE rather than to `opener`, because `opener` is usually
+   *  gone: an empty slot renders a `+` button and a filled one renders a
+   *  different button in a different branch, so the node that opened the
+   *  dialog is unmounted by the very pick it took, and focusing a detached
+   *  node drops the reader on <body>. Advancing made that the terminal state
+   *  of the main flow — fill five slots, land nowhere — rather than an
+   *  occasional one, which is how it was found.
+   *
+   *  Resolved by `data-slot` query rather than a ref because the node this
+   *  needs does not exist yet when the picker opens. Unambiguous: the dock is
+   *  suppressed on the draft page, so only one board is ever mounted. */
+  restoreSlot?: string;
+  /** Which slot is being filled, e.g. "enemy 3". The dialog stays mounted
+   *  while a pick advances it to the next empty slot, so the heading is the
+   *  only thing that can say it moved — and being the dialog's accessible
+   *  name, it says so to a screen reader too. */
+  slotLabel?: string;
 }) {
   const [q, setQ] = useState("");
   const [lane, setLane] = useState<Lane | undefined>();
   const panelRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
+  // Read at unmount, so it has to be a ref: the teardown below closes over the
+  // props from the render its effect last ran on, and the slot changes on
+  // every advance without re-running it.
+  const restoreRef = useRef(restoreSlot);
+  restoreRef.current = restoreSlot;
+
+  // Advancing to the next slot is a fresh question, so it gets a fresh search
+  // box and the focus back on the heading — the same state a re-open would
+  // give. The lane filter deliberately SURVIVES: filling five enemy slots is
+  // one job, and re-picking "Support" for each of them would be the ten
+  // clicks the advance exists to remove. Runs on mount too, which is where
+  // the heading focus used to live.
+  useEffect(() => {
+    setQ("");
+    headingRef.current?.focus();
+  }, [slotLabel]);
 
   useEffect(() => {
-    headingRef.current?.focus();
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") { e.stopPropagation(); onClose(); return; }
       if (e.key !== "Tab") return;
@@ -68,7 +101,12 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     };
     document.addEventListener("keydown", onKeyDown, true);
-    return () => { document.removeEventListener("keydown", onKeyDown, true); opener?.focus?.(); };
+    return () => {
+      document.removeEventListener("keydown", onKeyDown, true);
+      const id = restoreRef.current;
+      const slot = id ? document.querySelector<HTMLElement>(`[data-slot="${id}"]`) : null;
+      (slot ?? (opener?.isConnected ? opener : null))?.focus?.();
+    };
   }, [onClose, opener]);
 
   const { isPinned } = usePins();
@@ -100,7 +138,8 @@ export function GodPickerModal({ gods, taken, onPick, onClose, opener }: {
       >
         <div className="mb-3 flex items-center gap-2">
           <h2 id="god-picker-title" ref={headingRef} tabIndex={-1} className="font-display text-lead font-semibold text-ink focus:outline-none">
-            Pick a god
+            Pick a god{" "}
+            {slotLabel && <span className="ml-1 text-small font-normal text-muted">{slotLabel}</span>}
           </h2>
           <button type="button" onClick={onClose} aria-label="Close"
             className="press ml-auto rounded-md bg-bg2 px-2 py-1 text-small text-faint hover:text-ink">✕</button>
@@ -200,9 +239,12 @@ export type SlotKind = "you" | "ally" | "enemy";
  * "You" is a badge on the slot rather than a caption above it — as a caption
  * it only existed on ally slots, which pushed the whole ally row a line below
  * the enemy row it's meant to be read against. */
-export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemove,
+export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemove, slotId,
   aspectName, aspectOn, onToggleAspect, aspectChangesBuild }: {
   kind: SlotKind; position: number; name: string; size?: string; onOpen: () => void; onRemove?: () => void;
+  /** Stable handle on this slot across the empty/filled branch swap, so the
+   *  picker can hand focus back to it — see `restoreSlot`. */
+  slotId?: string;
   /** Aspect controls, wired only on the "you" slot — the draft builds for
    *  your god, so nobody else's aspect changes anything it can show. */
   aspectName?: string; aspectOn?: boolean; onToggleAspect?: () => void;
@@ -218,14 +260,14 @@ export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemov
   return (
     <div className="relative">
       {!name ? (
-        <button type="button" onClick={onOpen} aria-label={ariaLabel}
+        <button type="button" onClick={onOpen} aria-label={ariaLabel} data-slot={slotId}
           className={`press flex ${size} flex-none items-center justify-center rounded-md text-title leading-none text-faint hover:border-line-strong hover:text-muted ${
             isYou ? "border-2 border-gold" : "border border-dashed border-line-strong"}`}>
           +
         </button>
       ) : (
         <>
-          <button type="button" onClick={onOpen} aria-label={ariaLabel} title={name}
+          <button type="button" onClick={onOpen} aria-label={ariaLabel} title={name} data-slot={slotId}
             className={`press flex ${size} flex-none items-center justify-center overflow-hidden rounded-md bg-bg2 p-0.5 ${
               isYou ? "border-2 border-gold shadow-glow" : "border border-line hover:border-line-strong"}`}>
             <Icon name={name} className="h-full w-full rounded-sm" />

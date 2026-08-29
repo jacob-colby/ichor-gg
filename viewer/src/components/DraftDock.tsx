@@ -15,7 +15,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { BuildNote, DraftConfig, God, Item } from "../types";
 import { toHash } from "../lib/useHashRoute";
-import { useDraft, type DraftMode } from "../lib/draft";
+import { useDraft, nextEmptySlot, pickerSlotLabel, type DraftMode } from "../lib/draft";
 import { useDraftResult } from "../lib/useDraftResult";
 import { Icon, Slot, GodPickerModal } from "./DraftControls";
 
@@ -94,11 +94,16 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
     openerRef.current = document.activeElement as HTMLElement | null;
     setPickSlot({ kind, index });
   };
+  /* Advances to the next empty slot on that side, exactly as the full page
+     does — see `nextEmptySlot`. Two surfaces render one board; a board that
+     advances on one and not the other is two boards. */
   const pick = (name: string) => {
     if (!pickSlot) return;
+    const side = pickSlot.kind === "enemy" ? draft.enemies : draft.allies;
+    const wasEmpty = !side[pickSlot.index];
     if (pickSlot.kind === "enemy") setEnemy(pickSlot.index, name);
     else setAlly(pickSlot.index, name);
-    setPickSlot(null);
+    setPickSlot(nextEmptySlot(draft, pickSlot.kind, pickSlot.index, wasEmpty));
   };
 
   // Escape collapses the panel — but only when the picker isn't the thing
@@ -186,6 +191,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
             <div className="mt-1 flex flex-wrap gap-1.5">
               {draft.allies.map((name, i) => (
                 <Slot key={i} kind={i === 0 ? "you" : "ally"} position={i + 1} name={name} size="h-10 w-10"
+                  slotId={`ally-${i}`}
                   onOpen={() => openPicker("ally", i)}
                   onRemove={name ? () => setAlly(i, "") : undefined} />
               ))}
@@ -194,6 +200,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
             <div className="mt-1 flex flex-wrap gap-1.5">
               {draft.enemies.map((name, i) => (
                 <Slot key={i} kind="enemy" position={i + 1} name={name} size="h-10 w-10"
+                  slotId={`enemy-${i}`}
                   onOpen={() => openPicker("enemy", i)}
                   onRemove={name ? () => setEnemy(i, "") : undefined} />
               ))}
@@ -306,7 +313,9 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
 
       {pickSlot && (
         <GodPickerModal gods={eligibleGods} taken={takenFor(pickSlot.kind, pickSlot.index)} onPick={pick}
-          onClose={() => setPickSlot(null)} opener={openerRef.current} />
+          onClose={() => setPickSlot(null)} opener={openerRef.current}
+          slotLabel={pickerSlotLabel(pickSlot.kind, pickSlot.index)}
+          restoreSlot={`${pickSlot.kind}-${pickSlot.index}`} />
       )}
     </div>
   );

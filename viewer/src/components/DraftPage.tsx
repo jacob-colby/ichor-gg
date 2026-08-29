@@ -17,7 +17,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { BuildNote, DraftConfig, God, Item } from "../types";
 import { toHash } from "../lib/useHashRoute";
-import { useDraft, MODE_TEAM_SIZE, encodeDraftHash, type DraftMode } from "../lib/draft";
+import { useDraft, MODE_TEAM_SIZE, encodeDraftHash, nextEmptySlot, pickerSlotLabel, type DraftMode } from "../lib/draft";
 import { useDraftResult } from "../lib/useDraftResult";
 import type { ThreatKey } from "../lib/threats";
 import { Icon, Slot, GodPickerModal } from "./DraftControls";
@@ -102,7 +102,8 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
     return (name: string) => names.has(name);
   }, [eligibleGods]);
 
-  const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft({ syncUrl: true, isKnownGod });
+  const { draft, mode, setMode, setAlly, setEnemy, clear, dropped, dismissDropped } =
+    useDraft({ syncUrl: true, isKnownGod });
   const [pickSlot, setPickSlot] = useState<{ kind: "ally" | "enemy"; index: number } | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
   const openPicker = (kind: "ally" | "enemy", index: number) => {
@@ -134,11 +135,17 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
     }).catch(() => { /* permission denied — button just does nothing */ });
   };
 
+  /* Fill the slot, then move to the next empty one on that side rather than
+     closing — see `nextEmptySlot`. `draft` is read before the write on
+     purpose: the rule looks FORWARD of the slot just filled, and those slots
+     are the ones this pick cannot have changed. */
   const pick = (name: string) => {
     if (!pickSlot) return;
+    const side = pickSlot.kind === "enemy" ? draft.enemies : draft.allies;
+    const wasEmpty = !side[pickSlot.index];
     if (pickSlot.kind === "enemy") setEnemy(pickSlot.index, name);
     else setAlly(pickSlot.index, name);
-    setPickSlot(null);
+    setPickSlot(nextEmptySlot(draft, pickSlot.kind, pickSlot.index, wasEmpty));
   };
 
   return (
@@ -193,12 +200,36 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
           {meName ? `${changeCount} of ${coreSize} items changed by this draft.` : ""}
         </p>
 
+        {/* A shared link that quietly came up a god short. The validation is
+            right — a slot holding a god with no scored build can only render
+            as a hole — but the board silently disagreed with the link that
+            produced it, and the address bar was then rewritten to match the
+            board, erasing the evidence. Says which names and why, next to the
+            row that is missing them. Not gold: this is the page reporting on
+            its own input, not the model talking (audit F11). */}
+        {dropped.length > 0 && (
+          <div role="status"
+            className="mt-3 flex items-start gap-3 rounded-md border border-line-strong bg-bg2 px-3 py-2.5">
+            <p className="min-w-0 text-small text-muted">
+              <span className="text-ink-soft">{dropped.join(", ")}</span>
+              {dropped.length === 1 ? " has" : " have"} no scored build here, so{" "}
+              {dropped.length === 1 ? "that slot" : "those slots"} came up empty. The rest of the
+              link loaded.
+            </p>
+            <button type="button" onClick={dismissDropped} aria-label="Dismiss"
+              className="press ml-auto flex h-6 w-6 flex-none items-center justify-center rounded-sm text-small text-faint hover:text-ink">
+              ✕
+            </button>
+          </div>
+        )}
+
         <div data-testid="draft-teams" className="mt-3 flex flex-col gap-5 lg:flex-row lg:gap-10">
           <div>
             <h3 className={`${eyebrow} mb-2`}>Allies</h3>
             <div className="flex flex-wrap gap-3">
               {draft.allies.map((name, i) => (
                 <Slot key={i} kind={i === 0 ? "you" : "ally"} position={i + 1} name={name}
+                  slotId={`ally-${i}`}
                   onOpen={() => openPicker("ally", i)}
                   onRemove={name ? () => setAlly(i, "") : undefined}
                   aspectName={i === 0 ? meAspect : undefined}
@@ -214,6 +245,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
             <div className="flex flex-wrap gap-3">
               {draft.enemies.map((name, i) => (
                 <Slot key={i} kind="enemy" position={i + 1} name={name}
+                  slotId={`enemy-${i}`}
                   onOpen={() => openPicker("enemy", i)}
                   onRemove={name ? () => setEnemy(i, "") : undefined} />
               ))}
@@ -506,7 +538,9 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
 
       {pickSlot && (
         <GodPickerModal gods={eligibleGods} taken={takenFor(pickSlot.kind, pickSlot.index)} onPick={pick}
-          onClose={() => setPickSlot(null)} opener={openerRef.current} />
+          onClose={() => setPickSlot(null)} opener={openerRef.current}
+          slotLabel={pickerSlotLabel(pickSlot.kind, pickSlot.index)}
+          restoreSlot={`${pickSlot.kind}-${pickSlot.index}`} />
       )}
     </article>
   );

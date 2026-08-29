@@ -290,6 +290,9 @@ describe("DraftPage", () => {
     fireEvent.click(screen.getByLabelText("Add ally 2"));
     fireEvent.click(screen.getByText("Buddy"));
     expect(screen.getByLabelText("Change ally 2 (Buddy)")).toBeInTheDocument();
+    // The pick advanced the picker to ally 3; close it, so what follows is
+    // testing the X control rather than the advance.
+    fireEvent.click(screen.getByLabelText("Close"));
 
     fireEvent.click(screen.getByLabelText("Remove Buddy from allies"));
     expect(screen.getByLabelText("Add ally 2")).toBeInTheDocument();
@@ -315,6 +318,96 @@ describe("DraftPage", () => {
   it("does not show a remove control on an empty slot", () => {
     render(<DraftPage gods={GODS} items={[]} builds={[]} />);
     expect(screen.queryByLabelText(/^Remove /)).not.toBeInTheDocument();
+  });
+
+  /* Adding five enemies cost ten clicks — every slot had to be opened before a
+     god could go in it. See `nextEmptySlot` for the two rules that keep the
+     advance from being a surprise. */
+  describe("the picker advances", () => {
+    it("moves to the next empty slot on the same side instead of closing", () => {
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      fireEvent.click(screen.getByLabelText("Add enemy 1"));
+      fireEvent.click(screen.getByText("EnemyHealer"));
+      // Still open, and saying which slot it moved to.
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+      expect(screen.getByText("for enemy 2")).toBeInTheDocument();
+      expect(screen.getByLabelText("Change enemy 1 (EnemyHealer)")).toBeInTheDocument();
+    });
+
+    it("fills a whole row without re-opening the picker", () => {
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      fireEvent.click(screen.getByLabelText("Add enemy 1"));
+      // One open, three picks. Each god is disabled for the next slot on its
+      // own team, so this also proves the taken-set follows the advance.
+      fireEvent.click(screen.getByText("EnemyHealer"));
+      fireEvent.click(screen.getByText("Buddy"));
+      fireEvent.click(screen.getByText("TestGod"));
+      expect(screen.getByLabelText("Change enemy 1 (EnemyHealer)")).toBeInTheDocument();
+      expect(screen.getByLabelText("Change enemy 2 (Buddy)")).toBeInTheDocument();
+      expect(screen.getByLabelText("Change enemy 3 (TestGod)")).toBeInTheDocument();
+    });
+
+    it("closes rather than advancing when the slot re-filled was already occupied", () => {
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      fireEvent.click(screen.getByLabelText("Add enemy 1"));
+      fireEvent.click(screen.getByText("EnemyHealer"));
+      fireEvent.click(screen.getByLabelText("Close"));
+      // Re-opening a filled slot is an edit; jumping afterwards would read as
+      // having changed the wrong slot.
+      fireEvent.click(screen.getByLabelText("Change enemy 1 (EnemyHealer)"));
+      fireEvent.click(screen.getByText("Buddy"));
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
+
+    it("clears the search box on each advance, so the next slot starts fresh", () => {
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      fireEvent.click(screen.getByLabelText("Add enemy 1"));
+      const search = screen.getByLabelText("Search gods");
+      fireEvent.change(search, { target: { value: "EnemyHealer" } });
+      fireEvent.click(screen.getByText("EnemyHealer"));
+      expect(screen.getByLabelText("Search gods")).toHaveValue("");
+      // ...and the gods the old query hid are back.
+      expect(screen.getByText("Buddy")).toBeInTheDocument();
+    });
+  });
+
+  /* The link named a god this build cannot place, the board came up short, and
+     the address bar was then rewritten to match the board — erasing the only
+     evidence that anything was refused (audit F11, 2026-08-23). */
+  describe("a link carrying names this build cannot place", () => {
+    it("says which names were dropped, and why", () => {
+      window.location.hash = "#/draft?m=conquest&me=TestGod&e=EnemyHealer,Hel,Cabrakan";
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      const notice = screen.getByRole("status");
+      expect(notice).toHaveTextContent("Hel, Cabrakan");
+      expect(notice).toHaveTextContent(/no scored build here/i);
+      // The names it COULD place are on the board, not in the notice.
+      expect(screen.getByLabelText("Change enemy 1 (EnemyHealer)")).toBeInTheDocument();
+    });
+
+    it("says nothing on a link it could read in full", () => {
+      window.location.hash = "#/draft?m=conquest&me=TestGod&e=EnemyHealer";
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      expect(screen.queryByRole("status")).not.toBeInTheDocument();
+    });
+
+    it("is dismissible, and does not outlive an edit to the board", () => {
+      window.location.hash = "#/draft?m=conquest&me=TestGod&e=Hel";
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      expect(screen.getByRole("status")).toBeInTheDocument();
+      fireEvent.click(screen.getByLabelText("Add enemy 1"));
+      fireEvent.click(screen.getByText("EnemyHealer"));
+      // A sentence about a URL must not outlive the draft that URL produced.
+      expect(screen.queryByRole("status")).not.toBeInTheDocument();
+    });
+
+    it("keeps the notice out of gold — the page reporting on its own input is not the model talking", () => {
+      window.location.hash = "#/draft?m=conquest&me=TestGod&e=Hel";
+      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      const notice = screen.getByRole("status");
+      expect(notice.className).not.toMatch(/gold/);
+      expect(within(notice).getByText(/Hel/).className).not.toMatch(/gold/);
+    });
   });
 
   it("keeps gold off item cost — it is neither selection, primary action, nor the model's signal", () => {
