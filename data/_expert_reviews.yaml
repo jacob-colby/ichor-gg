@@ -119,7 +119,7 @@ reviews:
       Eye of Providence seems to be overvalued because it's assuming you'll get
       the gold from it.
     status: resolved
-    last_verdict: partial
+    last_verdict: clear
     notes: >-
       Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
       read as a 250g bargain — the discount is really the ward economy's price
@@ -127,6 +127,40 @@ reviews:
       cores; those gods' own players buy it, in any slot or as any alternate,
       on exactly one. Tagged `ward-economy` with a -0.15 conquest tag_bonus;
       16 cores -> 4, and the leakage-free gate moved 29.3% -> 30.0%.
+
+      RAISED partial -> clear 2026-08-29, ON A REFRESH AND NOT ON A FIX. The
+      checker now reads `absent from all 36 Conquest cores in scope`. It read
+      `still in 1/36 cores: ['Geb']` at 811fb46, the last commit before five
+      `chore(data): daily community refresh` landed, and nothing but data
+      changed across that window — no weights, no model code, no hand edit to
+      this file. The scope has been 36 gods on both sides; the "34" above is
+      the 2026-08-09 roster and is left as written.
+
+      IT IS THE GOOD KIND OF CLEAR, checked the way this file's header asks.
+      Geb's core kept 5 of its 6 slots. The one that moved was Eye of
+      Providence out and Genji's Guard in, so the claim did not clear because
+      the build churned underneath it — and the item that replaced it is the
+      community's own second slot for Geb, at pick 0.26.
+
+      THE MECHANISM IS THE UNKNOWN-WIN CONSTANT CROSSING A MEASURED RATE, and
+      it is worth reading as evidence for STATE.md section 5. Pre-refresh, Eye
+      of Providence held that slot on efficiency 0.61 with pick 0.00 and win
+      0.55 — and 0.55 was not a measurement of anything. It is Geb's own
+      median measured win rate standing in for "no record"
+      (`scoring.god_unknown_win_rate`). Genji's Guard, an item with a real
+      record, measured 0.50 at that slot: BELOW the placeholder the unmeasured
+      item was handed for free. The refresh moved Geb's median to 0.61 and
+      Genji's measured rate to 0.64, the order flipped, and the item carrying
+      evidence took the slot. That is the reviewer's objection resolving on
+      exactly its own terms — "it's assuming you'll get the gold from it" —
+      because the item was in the core on gold-efficiency and no evidence, and
+      it left the moment something with evidence outranked it.
+
+      IT IS ALSO A THRESHOLD CROSSING AND CAN COME BACK. Geb's median and
+      Genji's measured rate are 0.03 apart and both move on every refresh. If
+      a later refresh puts Eye of Providence back, `--check` going red is this
+      gate doing its job; diagnose it, and do not lower this line to match —
+      see the header.
 
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
