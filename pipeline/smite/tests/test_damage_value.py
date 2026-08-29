@@ -242,7 +242,10 @@ def test_the_fit_map_has_no_attack_damage_column_of_its_own():
 
     measured = [g for g in gods
                 if dv.stat_weights(g).get("Attack Damage", 0.0) > 0]
-    assert len(measured) == 78, len(measured)
+    # 78 before Ravana, who carries basic-attack scaling like most of the
+    # roster. A roster-wide count, so it moves whenever a god is added -- that
+    # is the check working, not breaking.
+    assert len(measured) == 79, len(measured)
 
 
 def test_attack_damage_fit_credits_the_measured_weight():
