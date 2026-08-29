@@ -13,7 +13,7 @@ def test_validate_is_called_with_explicit_argv(monkeypatch):
     monkeypatch.setattr(refresh_and_deploy.recommend, "main", lambda *a, **k: 0)
     monkeypatch.setattr(refresh_and_deploy.recommend, "load_items", lambda: [])
     monkeypatch.setattr(refresh_and_deploy.build_index, "write_index", lambda *a, **k: None)
-    monkeypatch.setattr(refresh_and_deploy.snapshots, "write_snapshot", lambda *a, **k: "snap.json")
+    monkeypatch.setattr(refresh_and_deploy.snapshots, "write_snapshot_if_changed", lambda *a, **k: "snap.json")
     monkeypatch.setattr(refresh_and_deploy, "_run_git", lambda *a, **k: None)
     # Whichever branch the developer happens to be on must not decide whether
     # this test runs — the guard has its own tests below.
@@ -40,7 +40,7 @@ def _stub_pipeline(monkeypatch, ran):
         monkeypatch.setattr(getattr(refresh_and_deploy, name), attr,
                             lambda *a, **k: ran.setdefault("scraped", True))
     monkeypatch.setattr(refresh_and_deploy.recommend, "load_items", lambda: [])
-    monkeypatch.setattr(refresh_and_deploy.snapshots, "write_snapshot", lambda *a, **k: "s.json")
+    monkeypatch.setattr(refresh_and_deploy.snapshots, "write_snapshot_if_changed", lambda *a, **k: "s.json")
     monkeypatch.setattr(refresh_and_deploy, "_run_git",
                         lambda *a, **k: ran.setdefault("committed", True))
 

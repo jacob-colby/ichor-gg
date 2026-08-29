@@ -58,6 +58,16 @@ def main(argv=None):
 
     refresh.refresh_all()
     recommend.main(["--all"])
+
+    # Before the index, not after. `build_index` READS the snapshot store to
+    # build `patch_notes`, so banking this run's snapshot afterwards shipped
+    # every patch note one refresh late — the run that scraped the change
+    # published an index that could not see it.
+    snapshot_path = snapshots.write_snapshot_if_changed(
+        recommend.load_items(), date.today().isoformat())
+    print(f"refresh_and_deploy: wrote item-stat snapshot to {snapshot_path}"
+          if snapshot_path else "refresh_and_deploy: item stats unchanged, no snapshot banked")
+
     build_index.write_index(
         recommend.REPO_ROOT,
         recommend.REPO_ROOT / "viewer" / "public" / "index.json",
@@ -65,9 +75,6 @@ def main(argv=None):
     # Explicit argv: this runs with refresh_and_deploy's own flags still on
     # sys.argv, and validate.main(None) would let argparse re-parse them.
     validate.main([])
-
-    snapshot_path = snapshots.write_snapshot(recommend.load_items(), date.today().isoformat())
-    print(f"refresh_and_deploy: wrote item-stat snapshot to {snapshot_path}")
 
     root = recommend.REPO_ROOT
     paths = [
