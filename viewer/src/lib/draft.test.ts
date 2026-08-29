@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { renderHook, act } from "@testing-library/react";
-import { useDraft, decodeDraftHash, encodeDraftHash } from "./draft";
+import { useDraft, decodeDraftHash, encodeDraftHash, nextEmptySlot } from "./draft";
 
 const KEY = "smite:draft";
 
@@ -171,7 +171,9 @@ describe("decodeDraftHash / encodeDraftHash", () => {
     const draft = { allies: ["Agni", "Ymir", "", "", ""], enemies: ["Loki", "Thor", "", "", ""] };
     const hash = encodeDraftHash("conquest", draft);
     const decoded = decodeDraftHash(hash);
-    expect(decoded).toEqual({ mode: "conquest", allies: draft.allies, enemies: draft.enemies });
+    expect(decoded).toEqual({
+      mode: "conquest", allies: draft.allies, enemies: draft.enemies, dropped: [],
+    });
   });
 
   it("omits empty rows from the encoded query", () => {
@@ -195,6 +197,67 @@ describe("decodeDraftHash / encodeDraftHash", () => {
     expect(decoded?.allies[0]).toBe("Agni");
     expect(decoded?.allies[1]).toBe(""); // Bogus dropped
     expect(decoded?.enemies).toEqual(["Loki", "", "", "", ""]);
+  });
+
+  /* The drop is right; doing it in silence is not. The board came up a god
+     short of the link that produced it and the address bar was then rewritten
+     to match the board, so nothing anywhere recorded that a name was refused
+     (audit F11, 2026-08-23). */
+  it("reports which names it dropped, in the order the link gave them", () => {
+    const known = new Set(["Agni", "Loki"]);
+    const decoded = decodeDraftHash(
+      "#/draft?m=conquest&me=Agni&a=Bogus&e=Loki,NotReal,Hel", (n) => known.has(n));
+    expect(decoded?.dropped).toEqual(["Bogus", "NotReal", "Hel"]);
+  });
+
+  it("reports nothing dropped on a clean link", () => {
+    const known = new Set(["Agni", "Loki"]);
+    expect(decodeDraftHash("#/draft?me=Agni&e=Loki", (n) => known.has(n))?.dropped).toEqual([]);
+  });
+
+  it("counts a name as dropped only against a roster it was actually given", () => {
+    // No `isKnownGod` means nothing can be judged unknown — the hook's other
+    // mounts decode without a roster and must not raise a false notice.
+    expect(decodeDraftHash("#/draft?me=Agni&e=Whoever")?.dropped).toEqual([]);
+  });
+});
+
+/* Adding five gods cost ten clicks: the picker closed after every pick, so a
+   reader opened it once per slot to do one job. */
+describe("nextEmptySlot", () => {
+  const board = (allies: string[], enemies: string[]) => ({ allies, enemies });
+
+  it("advances to the next empty slot on the same side", () => {
+    const d = board(["Agni", "", "", "", ""], ["Loki", "", "", "", ""]);
+    expect(nextEmptySlot(d, "enemy", 0, true)).toEqual({ kind: "enemy", index: 1 });
+  });
+
+  it("skips slots that are already filled", () => {
+    const d = board(["", "", "", "", ""], ["Loki", "Thor", "Ymir", "", ""]);
+    expect(nextEmptySlot(d, "enemy", 0, true)).toEqual({ kind: "enemy", index: 3 });
+  });
+
+  it("closes rather than crossing from allies into enemies", () => {
+    // A pick implies the next slot, not the other team.
+    const d = board(["Agni", "Ymir", "Thor"], ["", "", ""]);
+    expect(nextEmptySlot(d, "ally", 2, true)).toBeNull();
+  });
+
+  it("closes when the side is full", () => {
+    const d = board(["Agni", "Ymir", "Thor"], ["Loki", "Hun Batz", "Ra"]);
+    expect(nextEmptySlot(d, "enemy", 2, true)).toBeNull();
+  });
+
+  it("does not advance when the slot was already occupied", () => {
+    // Re-opening a filled slot is an edit. Jumping somewhere else afterwards
+    // would read as having changed the wrong slot.
+    const d = board(["Agni", "", "", "", ""], ["Loki", "", "", "", ""]);
+    expect(nextEmptySlot(d, "enemy", 0, false)).toBeNull();
+  });
+
+  it("never advances backwards to an earlier gap", () => {
+    const d = board(["", "", "", "", ""], ["", "", "Ymir", "", ""]);
+    expect(nextEmptySlot(d, "enemy", 2, true)).toEqual({ kind: "enemy", index: 3 });
   });
 });
 
