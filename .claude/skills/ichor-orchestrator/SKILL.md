@@ -138,7 +138,46 @@ fixed. The check is cheap — grep for the symbol the entry names.
 
 **Standing backlog** — carried here because sessions lose it:
 
-- **Our Carry builds buy defence the community never buys, on 18 of 18 gods.**
+- **RESOLVED 2026-08-22, kept as the worked example.** *Our Carry builds buy
+  defence the community never buys.* `offmap_efficiency` shipped at 0.55 with
+  `offmap_exempt: [Max Mana, Mana Regen, Health Regen]` and Berserker's Shield
+  went 17 of 18 Carry `model` cores to **0 of 18** — re-verified 2026-08-29.
+  Carry now reads 14 ahead / 3 behind on raw DPS at +40.3% median with
+  effective health LEVEL with the community's. The path that got there is the
+  reusable part: a defect found by `build_quality`, a lever measured and
+  shipped OFF twice (§4.15, §4.16) because it was too blunt, and shipped only
+  once two exemptions made the collateral damage vanish. Three sessions, two
+  register entries, one flag.
+
+- **The upstream sample window RESETS, and nothing warns you.** Measured
+  2026-08-29: it accumulated 11 Aug to a peak of 18,716 matches on the 25 Aug
+  refresh, then restarted — 888, 2,301, 3,498. Daily intake is unchanged and
+  `_patch.json` did not move, so this is upstream behaviour, not a patch. The
+  model is currently fitting on roughly a **fifth** of the evidence it had,
+  which moved the control 43.6/39.4 → 41.3/38.2 with no code change at all.
+  **Before attributing any coverage move to anyone's change, check the sample
+  size**, not just the fingerprint. `doc_audit`'s "Community sample" row
+  computes it.
+
+- **The gates cannot detect a god whose kit was silently blanked.** Measured
+  2026-08-29 by `08-29 B`: blanking Ullr's, Artio's and Merlin's kits and
+  recomputing moves win-weighted coverage **UP** 0.2pp, `validate --check`
+  PASSES, and `data_audit` reports **0** god findings. `audit_gods` checks
+  outputs (build present, item count, starter, damage type) and a kitless god
+  still gets a build, because `kit_stat_overlay` returns `{}` below 3 abilities
+  and fit falls back to the role label. The wiki parser degrades to empty on
+  everything except a missing infobox, and `merge_god_note` REPLACES the
+  frontmatter — so a silent miss overwrites the only copy. This is why the
+  scrape is not scheduled.
+
+- **An item with no community record is handed its god's median win rate**
+  (`scoring.god_unknown_win_rate`) and can beat an item carrying a real, lower,
+  measured rate. Demonstrated 2026-08-29: Eye of Providence held Geb's slot on
+  win 0.55 that was never a measurement, against Genji's Guard's measured 0.50.
+  A refresh moved the median to 0.61 and Genji's to 0.64, the order flipped,
+  and the objection an expert raised in August cleared by itself. The same
+  absence-rendered-as-a-number family as audit finding F2.
+
   Measured 2026-08-21 by `08-21 H`: the community buys *exactly zero*
   protections across all 18 Carries; we buy a mean 37.8, and it is Berserker's
   Shield (2400g) in **17 of our 18 Carry cores and 0 of 18 community ones**.
