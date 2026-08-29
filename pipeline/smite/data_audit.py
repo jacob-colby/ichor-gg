@@ -7,7 +7,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from smite import scoring
+from smite import kit, scoring
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 INDEX_PATH = REPO_ROOT / "viewer" / "public" / "index.json"
@@ -199,7 +199,18 @@ def audit_gods(gods: list, builds: list, items: list) -> list:
     """Every tracked god must produce a usable Conquest core build: present,
     at least MIN_CORE_ITEMS items, a stamped starter, and no off-damage-type
     item leaking in (reuses the same damage filter the recommender scores
-    with). This is the coverage/correctness gate for the full roster."""
+    with). This is the coverage/correctness gate for the full roster.
+
+    It also checks the god's KIT, because every rule above is a check on the
+    OUTPUT and the output survives a god whose kit went missing. Blanking the
+    abilities of Ullr, Artio and Merlin and recomputing their cores produced
+    zero findings here, PASSed `validate --check`, and moved win-weighted
+    coverage from 0.5530 to 0.5552 — up (measured 2026-08-29). The reason is
+    `kit.kit_stat_overlay`, which returns {} below 3 abilities so god-fit
+    falls back silently to the role label and still builds something
+    plausible. `refresh.ParseCollapse` refuses to write that note in the first
+    place; these two findings are the second line, for a note that got in
+    before the guard existed or by way of --allow-shrink."""
     items_by_name = {it["name"]: it for it in items}
     conquest_by_god = {}
     for bg in builds:
@@ -209,6 +220,20 @@ def audit_gods(gods: list, builds: list, items: list) -> list:
     findings = []
     for god in gods:
         name = god.get("name")
+
+        abilities = god.get("abilities") or []
+        if not abilities:
+            findings.append({"god": name, "issue": "no-abilities",
+                             "detail": "kit is empty — the wiki page has none, "
+                                       "which no god page does"})
+        elif kit.scaling_profile(god).get("n_scaling_abilities", 0) == 0:
+            # The exact Ullr/Artio/Merlin symptom: tables present, scaling
+            # lines not. Below 3 the overlay is {} anyway, but 0 is the one
+            # that cannot be a real kit.
+            findings.append({"god": name, "issue": "no-scaling-abilities",
+                             "detail": f"{len(abilities)} abilities, none carrying "
+                                       f"a scaling line"})
+
         core = _suggested_core(conquest_by_god.get(name))
         if core is None:
             findings.append({"god": name, "issue": "no-build",

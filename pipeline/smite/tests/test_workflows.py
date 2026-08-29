@@ -47,3 +47,44 @@ def test_the_daily_job_commits_the_snapshot_store():
     text = _run_text("refresh-data.yml")
     assert "git add data" in text
     assert "data/Analysis" not in text.split("git reset")[-1]
+
+
+# -- the watcher -------------------------------------------------------------
+#
+# The decision this encodes: automated DETECTION, manual ACTION. A scheduled
+# `refresh --all` would not have found Ravana (it re-pulls only what is already
+# tracked) and could not be gated safely (blanking three gods' kits PASSes
+# `validate --check` and yields zero `data_audit` findings). So the scheduled
+# job may read the wiki and must never write from it.
+
+def test_the_watcher_is_scheduled():
+    spec = yaml.safe_load((WORKFLOWS / "watch-wiki.yml").read_text(encoding="utf-8"))
+    # PyYAML resolves the unquoted key `on` to the boolean True (YAML 1.1).
+    triggers = spec.get("on", spec.get(True))
+    assert "schedule" in triggers
+
+
+def test_the_watcher_never_writes_data():
+    """The load-bearing property. If this job ever commits, the whole argument
+    for keeping the scrape manual has been quietly reversed."""
+    text = _run_text("watch-wiki.yml")
+    for forbidden in ("git commit", "git push", "git add",
+                      "smite.refresh", "smite.recommend", "smite.build_index"):
+        assert forbidden not in text, f"the watcher must not run `{forbidden}`"
+
+
+def test_the_watcher_has_no_write_access_to_the_repo():
+    spec = yaml.safe_load((WORKFLOWS / "watch-wiki.yml").read_text(encoding="utf-8"))
+    assert spec["permissions"]["contents"] == "read"
+    assert spec["permissions"]["issues"] == "write"
+
+
+def test_the_two_scheduled_jobs_do_not_share_a_slot():
+    """Both open a checkout of the same repo; queueing them together buys
+    nothing and makes a failure harder to read."""
+    crons = {}
+    for name in ("refresh-data.yml", "watch-wiki.yml"):
+        spec = yaml.safe_load((WORKFLOWS / name).read_text(encoding="utf-8"))
+        triggers = spec.get("on", spec.get(True))
+        crons[name] = [s["cron"] for s in triggers["schedule"]]
+    assert crons["refresh-data.yml"] != crons["watch-wiki.yml"]
