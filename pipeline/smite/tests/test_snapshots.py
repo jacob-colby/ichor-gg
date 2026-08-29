@@ -267,3 +267,84 @@ def test_report_from_dir_globs_json_files_in_snapshots_dir(tmp_path):
 def test_report_from_dir_empty_when_dir_missing(tmp_path):
     missing_dir = tmp_path / "does-not-exist"
     assert snapshots.report_from_dir(snapshots_dir=missing_dir, limit=5) == []
+
+
+# -- write_snapshot_if_changed -----------------------------------------------
+#
+# The scheduled job pulls SmiteBrain only, and item cost/tier/stats are wiki
+# data. An unconditional daily write banks a byte-identical file every morning;
+# build_patch_report diffs consecutive pairs and keeps 5, so five quiet days
+# push every real change off the report and leave the page reading "Items have
+# moved 0 times across 5 refreshes".
+
+ITEMS_A = [{"name": "Deathbringer", "cost": 2900, "tier": 3, "stats": {"Strength": "45"}}]
+ITEMS_B = [{"name": "Deathbringer", "cost": 2700, "tier": 3, "stats": {"Strength": "45"}}]
+
+
+def test_write_if_changed_banks_the_first_snapshot(tmp_path):
+    out = snapshots.write_snapshot_if_changed(ITEMS_A, "2026-01-01", tmp_path / "snaps")
+    assert out == tmp_path / "snaps" / "2026-01-01.json"
+
+
+def test_write_if_changed_is_a_no_op_when_item_stats_did_not_move(tmp_path):
+    snaps = tmp_path / "snaps"
+    snapshots.write_snapshot(ITEMS_A, "2026-01-01", snaps)
+
+    assert snapshots.write_snapshot_if_changed(ITEMS_A, "2026-01-02", snaps) is None
+    assert [p.name for p in sorted(snaps.glob("*.json"))] == ["2026-01-01.json"]
+
+
+def test_write_if_changed_banks_when_a_cost_moves(tmp_path):
+    snaps = tmp_path / "snaps"
+    snapshots.write_snapshot(ITEMS_A, "2026-01-01", snaps)
+
+    out = snapshots.write_snapshot_if_changed(ITEMS_B, "2026-01-02", snaps)
+
+    assert out == snaps / "2026-01-02.json"
+    assert snapshots.load_snapshot(out)["Deathbringer"]["cost"] == 2700
+
+
+def test_a_quiet_week_leaves_one_period_on_the_report(tmp_path):
+    """The whole point. Seven days of an unchanged item table must still leave
+    the day the cost moved as the newest period, not bury it under six empty
+    ones."""
+    snaps = tmp_path / "snaps"
+    snapshots.write_snapshot(ITEMS_A, "2026-01-01", snaps)
+    snapshots.write_snapshot_if_changed(ITEMS_B, "2026-01-02", snaps)
+    for day in range(3, 10):
+        snapshots.write_snapshot_if_changed(ITEMS_B, f"2026-01-{day:02d}", snaps)
+
+    report = snapshots.report_from_dir(snaps)
+
+    assert len(report) == 1
+    assert (report[0]["from"], report[0]["to"]) == ("2026-01-01", "2026-01-02")
+    assert report[0]["changed"][0]["verdict"] == "buff"
+
+
+def test_a_re_run_on_the_same_day_compares_against_the_day_before(tmp_path):
+    """A workflow_dispatch re-run must not compare today against itself and
+    conclude nothing moved."""
+    snaps = tmp_path / "snaps"
+    snapshots.write_snapshot(ITEMS_A, "2026-01-01", snaps)
+    snapshots.write_snapshot_if_changed(ITEMS_B, "2026-01-02", snaps)
+
+    out = snapshots.write_snapshot_if_changed(ITEMS_B, "2026-01-02", snaps)
+
+    assert out == snaps / "2026-01-02.json"
+    assert snapshots.load_snapshot(out)["Deathbringer"]["cost"] == 2700
+
+
+def test_a_same_day_re_run_that_reverts_removes_the_redundant_file(tmp_path):
+    """Leaving it would put two identical snapshots next to each other, which
+    is the empty period this function exists to prevent."""
+    snaps = tmp_path / "snaps"
+    snapshots.write_snapshot(ITEMS_A, "2026-01-01", snaps)
+    snapshots.write_snapshot_if_changed(ITEMS_B, "2026-01-02", snaps)
+
+    assert snapshots.write_snapshot_if_changed(ITEMS_A, "2026-01-02", snaps) is None
+    assert [p.name for p in sorted(snaps.glob("*.json"))] == ["2026-01-01.json"]
+    assert snapshots.report_from_dir(snaps) == []
+
+
+def test_latest_snapshot_path_is_none_on_an_empty_store(tmp_path):
+    assert snapshots.latest_snapshot_path(tmp_path / "nope") is None

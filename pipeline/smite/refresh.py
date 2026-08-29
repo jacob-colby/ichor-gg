@@ -60,6 +60,19 @@ def _download_icon(image_url: str, slug: str) -> None:
     out_path.write_bytes(response.content)
 
 
+def scrape_patch_version(wiki_fetcher, force: bool = False):
+    """The current SMITE 2 patch string from the wiki's Patch_notes index, or
+    None. Reads only — `refresh_patch_version` is the half that persists it,
+    and `wiki_watch` needs to compare without writing anything."""
+    try:
+        html = wiki_fetcher.fetch(WIKI_BASE + "Patch_notes", force=force)
+    except Exception as exc:
+        print(f"  [patch skip] {exc}")
+        return None
+    numbers = [int(m.group(1)) for m in _PATCH_VERSION_RE.finditer(html)]
+    return f"Open Beta {max(numbers)}" if numbers else None
+
+
 def refresh_patch_version(wiki_fetcher, force: bool = False):
     """Scrape the wiki's Patch_notes index for the current SMITE 2 patch
     (e.g. "Open Beta 39") and persist it to data/_patch.json, so the viewer
@@ -79,11 +92,10 @@ def refresh_patch_version(wiki_fetcher, force: bool = False):
     import json
 
     try:
-        html = wiki_fetcher.fetch(WIKI_BASE + "Patch_notes", force=force)
-        numbers = [int(m.group(1)) for m in _PATCH_VERSION_RE.finditer(html)]
-        if not numbers:
+        version = scrape_patch_version(wiki_fetcher, force=force)
+        if version is None:
             return None
-        patch = {"patch": f"Open Beta {max(numbers)}", "captured": date.today().isoformat()}
+        patch = {"patch": version, "captured": date.today().isoformat()}
     except Exception as exc:
         print(f"  [patch skip] {exc}")
         return None
@@ -105,9 +117,59 @@ def _head_icon_overrides():
     return doc.get("head_icons") or {}
 
 
-def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
+class ParseCollapse(Exception):
+    """A scrape that would replace real data with less of it.
+
+    `wiki_parser.parse_god_page` raises on exactly one thing — a missing
+    infobox. Every other shape change degrades silently to empty: no `Roles`
+    row and `role` is absent, no `Abilities` heading and `abilities` is `[]`.
+    That is not a read-only failure, because `notes.merge_god_note` ends in
+    `write_note(path, scraped_frontmatter, ...)` — the scrape REPLACES the
+    frontmatter, and the note is the only copy. A silent miss does not fail to
+    update, it overwrites.
+
+    It has happened. Ullr, Artio and Merlin put their abilities inside a
+    `div.img-tab-wrapper` the walk did not enter, and all three reported
+    `n_scaling_abilities: 0` (STATE.md §7, `wiki_parser._section_tables`).
+    Nothing downstream saw it: blanking those three kits and recomputing moves
+    win-weighted coverage from 0.5530 to 0.5552 — UP — leaves `validate
+    --check` PASSing and `data_audit`'s god audit at zero findings, because
+    `kit_stat_overlay` returns {} below 3 abilities and god-fit quietly falls
+    back to the role label. Measured 2026-08-29, in memory, on this data.
+
+    So the refusal lives here, at the write, where the old value is still in
+    hand. `--allow-shrink` is the override for a genuine rework."""
+
+
+def _refuse_god_collapse(name: str, existing: dict, parsed: dict) -> None:
+    """Raise unless `parsed` is at least as complete as what the note holds.
+
+    Two rules, and the first is not a special case of the second: a god page
+    with zero abilities does not exist on the wiki, so zero is a parse failure
+    on its own, including for a god nobody has scraped before. That is the
+    "half-parses a new god" case."""
+    old_n = len(existing.get("abilities") or [])
+    new_n = len(parsed.get("abilities") or [])
+    if new_n == 0:
+        raise ParseCollapse(
+            f"{name}: {old_n} abilities -> 0. No god page has zero abilities, "
+            f"so this is a parse failure, not a rework. Note left unchanged.")
+    if new_n < old_n:
+        raise ParseCollapse(
+            f"{name}: {old_n} abilities -> {new_n}. Note left unchanged. If the "
+            f"patch really removed {old_n - new_n}, re-run with --allow-shrink.")
+
+
+def refresh_god(name: str, wiki_fetcher, force: bool = False,
+                allow_shrink: bool = False) -> None:
     url = WIKI_BASE + name.replace(" ", "_")
     parsed = wiki_parser.parse_god_page(wiki_fetcher.fetch(url, force=force))
+
+    # Read before write, so the refusal can quote both sides. `read_note` on a
+    # path that does not exist returns empty, which is the new-god case.
+    god_path = DATA_ROOT / "Gods" / f"{name}.md"
+    if not allow_shrink:
+        _refuse_god_collapse(name, notes.read_note(god_path)[0] or {}, parsed)
 
     frontmatter = {
         "type": "smite-god",
@@ -124,7 +186,7 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
         "last_verified": date.today().isoformat(),
     }
     wiki_block = "\n".join(f"- {a['name']}" for a in parsed["abilities"])
-    notes.merge_god_note(DATA_ROOT / "Gods" / f"{name}.md", frontmatter, wiki_block,
+    notes.merge_god_note(god_path, frontmatter, wiki_block,
                           log_dir=DATA_ROOT / "_logs")
     slug = name.lower().replace(" ", "-").replace("'", "")
     _download_icon(parsed.get("image_url"), slug)
@@ -135,9 +197,34 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False) -> None:
     _download_icon(head_url, slug + "-head")
 
 
-def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
+def _refuse_item_collapse(name: str, existing: dict, parsed: dict) -> None:
+    """The item-side twin of `_refuse_god_collapse`, and deliberately narrower.
+
+    Zero stats is NOT a parse failure for an item the way zero abilities is for
+    a god: Mote of Chaos and Survivor's Sash are genuinely statless tier-2s and
+    are two of `data_audit`'s standing findings. So this refuses only on a
+    LOSS — stats that were there and are not, or a cost that was readable and
+    is not. A statless item that stays statless writes as normal."""
+    old_stats = existing.get("stats") or {}
+    new_stats = parsed.get("stats") or {}
+    if old_stats and not new_stats:
+        raise ParseCollapse(
+            f"{name}: {len(old_stats)} stats -> 0. Note left unchanged. If the "
+            f"patch really stripped it, re-run with --allow-shrink.")
+    if existing.get("cost") is not None and parsed.get("cost") is None:
+        raise ParseCollapse(
+            f"{name}: cost {existing['cost']} -> unreadable. Note left "
+            f"unchanged. Re-run with --allow-shrink to accept it.")
+
+
+def refresh_item(name: str, wiki_fetcher, force: bool = False,
+                 allow_shrink: bool = False) -> None:
     url = WIKI_BASE + name.replace(" ", "_")
     parsed = wiki_parser.parse_item_page(wiki_fetcher.fetch(url, force=force))
+
+    item_path = DATA_ROOT / "Items" / f"{name}.md"
+    if not allow_shrink:
+        _refuse_item_collapse(name, notes.read_note(item_path)[0] or {}, parsed)
 
     frontmatter = {
         "type": "smite-item",
@@ -157,7 +244,7 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False) -> None:
     # every reader already treats as absent.
     if parsed.get("god"):
         frontmatter["god"] = parsed["god"]
-    notes.merge_item_note(DATA_ROOT / "Items" / f"{name}.md", frontmatter,
+    notes.merge_item_note(item_path, frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
     _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
 
@@ -435,7 +522,7 @@ def refresh_community(force: bool = True) -> int:
     return len(failures)
 
 
-def refresh_all(force: bool = False) -> None:
+def refresh_all(force: bool = False, allow_shrink: bool = False) -> int:
     """Re-pull every god/item already known (i.e. already has a note under
     Gods/ or Items/) plus the community build for every Build note's god.
     Discovering brand-new gods/items that don't have a note yet is still a
@@ -446,7 +533,12 @@ def refresh_all(force: bool = False) -> None:
     A failure on one god/item/build (changed wiki layout, malformed note,
     wrong SmiteBrain slug, ...) is isolated and logged rather than aborting
     the whole run — an unattended weekly pass should get through everything
-    it can and report what it couldn't, not silently stop partway."""
+    it can and report what it couldn't, not silently stop partway.
+
+    Returns the failure count. It used to return None while `main` returned 0
+    regardless, so a run that printed twelve `[FAILED]` lines still exited
+    clean — which made every "gate it on the exit code" plan for this command
+    a no-op. `refresh_community` had it right; this is the same contract."""
     wiki_fetcher = BrowserFetcher(DATA_ROOT / "_cache" / "wiki")
     community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
     failures = []
@@ -456,7 +548,7 @@ def refresh_all(force: bool = False) -> None:
     god_names = [notes.read_note(p)[0].get("name") for p in (DATA_ROOT / "Gods").glob("*.md")]
     for name in filter(None, god_names):
         try:
-            refresh_god(name, wiki_fetcher, force=force)
+            refresh_god(name, wiki_fetcher, force=force, allow_shrink=allow_shrink)
         except Exception as exc:
             print(f"  [FAILED] god '{name}': {exc}")
             failures.append(f"god '{name}': {exc}")
@@ -464,7 +556,7 @@ def refresh_all(force: bool = False) -> None:
     item_names = [notes.read_note(p)[0].get("name") for p in (DATA_ROOT / "Items").glob("*.md")]
     for name in filter(None, item_names):
         try:
-            refresh_item(name, wiki_fetcher, force=force)
+            refresh_item(name, wiki_fetcher, force=force, allow_shrink=allow_shrink)
         except Exception as exc:
             print(f"  [FAILED] item '{name}': {exc}")
             failures.append(f"item '{name}': {exc}")
@@ -510,6 +602,7 @@ def refresh_all(force: bool = False) -> None:
         print(f"{len(failures)} failed:")
         for f in failures:
             print(f"  - {f}")
+    return len(failures)
 
 
 # Pantheon/section labels that appear alongside gods in the wiki's Gods grid.
@@ -520,27 +613,38 @@ _ROSTER_NON_GODS = {
 }
 
 
+def parse_roster_names(html: str) -> list:
+    """God names from the wiki's Gods grid, in document order.
+
+    Split out of `refresh_roster` so `wiki_watch` can ask what the roster says
+    without writing `_roster.json` — a detector that mutates the thing it is
+    watching has nothing left to compare against next time."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, "html.parser")
+    names = []
+    for a in soup.select('span[typeof="mw:File"] a[href^="/w/"][title]'):
+        t = a.get("title")
+        if t and t not in _ROSTER_NON_GODS and t not in names:
+            names.append(t)
+    return names
+
+
 def refresh_roster(wiki_fetcher, force: bool = False) -> list:
     """Scrape the full SMITE 2 god roster (names) from the wiki's Gods page so the
     dev add-god modal can list every god, tracked or not. Thumbnails on that page
     are JS-loaded placeholders, so the roster is names-only; the modal shows local
     head icons for tracked gods and initials for the rest."""
     import json
-    from bs4 import BeautifulSoup
 
-    soup = BeautifulSoup(wiki_fetcher.fetch(WIKI_BASE + "Gods", force=force), "html.parser")
-    names = []
-    for a in soup.select('span[typeof="mw:File"] a[href^="/w/"][title]'):
-        t = a.get("title")
-        if t and t not in _ROSTER_NON_GODS and t not in names:
-            names.append(t)
+    names = parse_roster_names(wiki_fetcher.fetch(WIKI_BASE + "Gods", force=force))
     roster = [{"name": n, "thumb": ""} for n in sorted(names)]
     (DATA_ROOT / "_roster.json").write_text(
         json.dumps(roster, indent=2, ensure_ascii=False), encoding="utf-8")
     return roster
 
 
-def refresh_roster_add_all(force: bool = False) -> dict:
+def refresh_roster_add_all(force: bool = False, allow_shrink: bool = False) -> dict:
     """Scrape every roster god not yet tracked so the pool can grow toward
     the full roster in one run. A single god's scrape failure (Cloudflare,
     parse error, wrong slug, ...) is caught and recorded rather than
@@ -566,7 +670,7 @@ def refresh_roster_add_all(force: bool = False) -> dict:
     failed = []
     for name in untracked:
         try:
-            refresh_god(name, wiki, force=force)
+            refresh_god(name, wiki, force=force, allow_shrink=allow_shrink)
             refresh_god_builds(name, "Conquest", community, force=force)
             added.append(name)
         except Exception as exc:
@@ -593,6 +697,14 @@ def main(argv=None) -> int:
     parser.add_argument("--discover-items", action="store_true",
                          help="list items the cached wiki references but Items/ doesn't track")
     parser.add_argument("--force", action="store_true", help="bypass the local cache")
+    # NOT folded into --force. --force means "ignore the HTTP cache" and a
+    # patch-day operator passes it on every run; overloading it would turn
+    # the collapse guard off exactly when it matters most.
+    parser.add_argument("--allow-shrink", action="store_true",
+                         help="accept a scrape that REMOVES abilities or stats "
+                              "(a genuine rework). Off by default: the same shape "
+                              "change reads as a silent parse miss, and the note "
+                              "is overwritten, not merged.")
     args = parser.parse_args(argv)
 
     if args.patch:
@@ -620,7 +732,7 @@ def main(argv=None) -> int:
         return 0
 
     if args.roster_add_all:
-        summary = refresh_roster_add_all(force=args.force)
+        summary = refresh_roster_add_all(force=args.force, allow_shrink=args.allow_shrink)
         if summary.get("note"):
             print(summary["note"])
         print(f"Added {len(summary['added'])}, failed {len(summary['failed'])}, "
@@ -635,9 +747,12 @@ def main(argv=None) -> int:
         return 1 if refresh_community(force=True) else 0
 
     if args.all:
-        refresh_all(force=args.force)
+        # Non-zero on any failure, same contract as --community. This used to
+        # return 0 unconditionally, so a run printing twelve [FAILED] lines
+        # still exited clean.
+        n_failed = refresh_all(force=args.force, allow_shrink=args.allow_shrink)
         print("Refreshed all tracked gods, items, and builds")
-        return 0
+        return 1 if n_failed else 0
 
     if args.refresh:
         if args.kind not in ("god", "item"):
@@ -645,9 +760,11 @@ def main(argv=None) -> int:
             return 1
         wiki_fetcher = BrowserFetcher(DATA_ROOT / "_cache" / "wiki")
         if args.kind == "god":
-            refresh_god(args.refresh, wiki_fetcher, force=args.force)
+            refresh_god(args.refresh, wiki_fetcher, force=args.force,
+                        allow_shrink=args.allow_shrink)
         else:
-            refresh_item(args.refresh, wiki_fetcher, force=args.force)
+            refresh_item(args.refresh, wiki_fetcher, force=args.force,
+                         allow_shrink=args.allow_shrink)
             refresh_builds_into()
         print(f"Refreshed {args.kind} '{args.refresh}'")
         return 0

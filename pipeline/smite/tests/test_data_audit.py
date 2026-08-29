@@ -148,8 +148,23 @@ def test_findings_are_sorted_by_item_then_issue():
 
 # --- audit_gods -----------------------------------------------------------
 
-def _mag_god(name="Mage"):
-    return {"name": name, "damage_type": "magical"}
+# Four abilities that each carry a scaling line. `audit_gods` now checks the
+# KIT as well as the build, so a fixture god with no abilities trips
+# `no-abilities` in every test that uses it -- correctly: no god page has an
+# empty kit, and a fixture standing in for one should not either.
+# `kit.scaling_profile` reads the `details` list, not the prose, and only
+# lines containing "scaling" -- the wiki's own shape, e.g.
+# "Damage Scaling: 105% Intelligence".
+_SCALING_KIT = [
+    {"slot": f"Ability {i}", "name": f"Ability {i}",
+     "details": ["Damage Scaling: 100% Intelligence"]}
+    for i in range(4)
+]
+
+
+def _mag_god(name="Mage", abilities=None):
+    return {"name": name, "damage_type": "magical",
+            "abilities": _SCALING_KIT if abilities is None else abilities}
 
 
 _GODS_ITEMS = [
@@ -344,3 +359,32 @@ def test_a_god_specific_item_that_costs_real_gold_is_unaffected():
     acorn = [{"name": "Briskberry Acorn", "tier": "God Specific", "cost": 0,
               "stats": {"Strength": "45"}, "god": "Ratatoskr"}]
     assert [f["issue"] for f in data_audit.audit_items(acorn)] == ["blank-cost"]
+
+
+# --- audit_gods: the kit ----------------------------------------------------
+#
+# Every other rule in `audit_gods` checks the OUTPUT, and the output survives a
+# god whose kit went missing: `kit.kit_stat_overlay` returns {} below 3
+# abilities, so god-fit falls back to the role label and still builds something
+# plausible. Measured 2026-08-29 -- blanking Ullr, Artio and Merlin and
+# recomputing gave zero findings here, PASSed `validate --check`, and moved
+# win-weighted coverage 0.5530 -> 0.5552, upward.
+
+def test_audit_gods_flags_an_empty_kit():
+    findings = data_audit.audit_gods([_mag_god(abilities=[])],
+                                     [_core_build()], _GODS_ITEMS)
+    assert [f["issue"] for f in findings] == ["no-abilities"]
+
+
+def test_audit_gods_flags_abilities_that_carry_no_scaling():
+    """Tables present, scaling lines not -- the exact Ullr/Artio/Merlin
+    symptom, and distinct from a page that vanished entirely."""
+    bare = [{"slot": f"Ability {i}", "name": f"Ability {i}",
+             "details": ["Range: 55"]} for i in range(4)]
+    findings = data_audit.audit_gods([_mag_god(abilities=bare)],
+                                     [_core_build()], _GODS_ITEMS)
+    assert [f["issue"] for f in findings] == ["no-scaling-abilities"]
+
+
+def test_audit_gods_passes_a_god_with_a_real_kit():
+    assert data_audit.audit_gods([_mag_god()], [_core_build()], _GODS_ITEMS) == []

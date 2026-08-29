@@ -4,6 +4,7 @@ from pathlib import Path
 from unittest import mock
 from unittest.mock import Mock
 
+import pytest
 import requests
 
 from smite import notes, refresh
@@ -160,6 +161,9 @@ def test_main_all_takes_precedence_over_refresh(tmp_path, monkeypatch):
 
     with mock.patch("smite.refresh.refresh_all") as mock_refresh_all, \
          mock.patch("smite.refresh.refresh_god") as mock_refresh_god:
+        # `--all` now exits on the failure count, so the stub has to return
+        # one. A bare Mock is truthy and would read as a failed refresh.
+        mock_refresh_all.return_value = 0
         result = refresh.main(["--all", "--refresh", "Chiron", "--kind", "god"])
 
     assert result == 0
@@ -327,7 +331,7 @@ def test_refresh_roster_add_all_continues_after_a_god_failure(tmp_path, monkeypa
     (tmp_path / "Gods").mkdir()
     _write_roster(tmp_path, ["BrokenGod", "GoodGod"])
 
-    def fake_refresh_god(name, fetcher, force=False):
+    def fake_refresh_god(name, fetcher, force=False, allow_shrink=False):
         if name == "BrokenGod":
             raise ValueError("simulated wiki layout change")
 
@@ -485,3 +489,87 @@ def test_refresh_god_builds_skips_community_for_modes_smitebrain_lacks(tmp_path,
                         lambda html: {"aspects": [], "items": [{"name": "X", "pick_rate": 0.5}]})
     refresh.refresh_god_builds("Agni", "Joust", _F())
     assert calls == [], "must not even fetch SmiteBrain for a mode it doesn't cover"
+
+
+# -- the collapse guard ------------------------------------------------------
+#
+# `wiki_parser.parse_god_page` raises on one thing: a missing infobox. Every
+# other shape change degrades to empty, and `notes.merge_god_note` REPLACES the
+# frontmatter — so a silent parse miss overwrites the only copy. Measured
+# 2026-08-29: blanking Ullr, Artio and Merlin's kits moves win-weighted
+# coverage 0.5530 -> 0.5552 (up), PASSes `validate --check`, and produces zero
+# `data_audit` findings. Nothing downstream can catch this, so it is caught at
+# the write.
+
+def test_a_kit_that_parses_to_zero_is_refused_and_says_what_it_saw():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_god_collapse("Ullr", {"abilities": [1, 2, 3, 4]}, {"abilities": []})
+    assert "Ullr: 4 abilities -> 0" in str(exc.value)
+
+
+def test_a_shrinking_kit_is_refused_and_names_the_override():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_god_collapse("Merlin", {"abilities": [1] * 12}, {"abilities": [1] * 5})
+    assert "Merlin: 12 abilities -> 5" in str(exc.value)
+    assert "--allow-shrink" in str(exc.value)
+
+
+def test_a_brand_new_god_that_parses_to_zero_is_still_refused():
+    """The "half-parses a new god and commits it" case. There is no previous
+    value to compare against, and zero is still not a kit."""
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_god_collapse("Ravana", {}, {"abilities": []})
+    assert "0 abilities -> 0" in str(exc.value)
+
+
+def test_a_growing_or_steady_kit_writes_normally():
+    refresh._refuse_god_collapse("Ra", {"abilities": [1, 2, 3]}, {"abilities": [1, 2, 3]})
+    refresh._refuse_god_collapse("Ra", {"abilities": [1, 2, 3]}, {"abilities": [1, 2, 3, 4]})
+    refresh._refuse_god_collapse("Ravana", {}, {"abilities": [1, 2, 3, 4, 5, 6]})
+
+
+def test_an_item_losing_every_stat_is_refused():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_item_collapse(
+            "Deathbringer", {"stats": {"Strength": "45"}, "cost": 2900},
+            {"stats": {}, "cost": 2900})
+    assert "Deathbringer: 1 stats -> 0" in str(exc.value)
+
+
+def test_an_item_losing_a_readable_cost_is_refused():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_item_collapse(
+            "Deathbringer", {"stats": {"Strength": "45"}, "cost": 2900},
+            {"stats": {"Strength": "45"}, "cost": None})
+    assert "cost 2900 -> unreadable" in str(exc.value)
+
+
+def test_a_genuinely_statless_item_is_not_a_collapse():
+    """Mote of Chaos and Survivor's Sash are real statless tier-2s and two of
+    `data_audit`'s standing findings. Zero stats is only a defect for a god."""
+    refresh._refuse_item_collapse("Mote of Chaos", {"stats": {}, "cost": 500},
+                                  {"stats": {}, "cost": 500})
+
+
+def test_refresh_all_exit_code_is_the_failure_count(monkeypatch, tmp_path):
+    """It returned None while `main` returned 0 regardless, so a run printing
+    twelve [FAILED] lines still exited clean — which made every "gate it on the
+    exit code" plan for this command a no-op."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "builds")
+    (tmp_path / "Gods").mkdir()
+    (tmp_path / "Items").mkdir()
+    (tmp_path / "builds").mkdir()
+    (tmp_path / "Gods" / "Ullr.md").write_text("---\nname: Ullr\n---\n", encoding="utf-8")
+
+    monkeypatch.setattr(refresh, "BrowserFetcher", lambda *a, **k: object())
+    monkeypatch.setattr(refresh, "CachedFetcher", lambda *a, **k: object())
+    monkeypatch.setattr(refresh, "refresh_patch_version", lambda *a, **k: None)
+    monkeypatch.setattr(refresh, "refresh_god_index", lambda *a, **k: {})
+    monkeypatch.setattr(refresh, "refresh_item_index", lambda *a, **k: 0)
+
+    def boom(name, *a, **k):
+        raise refresh.ParseCollapse(f"{name}: 4 abilities -> 0")
+    monkeypatch.setattr(refresh, "refresh_god", boom)
+
+    assert refresh.refresh_all() == 1

@@ -1,0 +1,105 @@
+# Tell someone the wiki moved. Never touch the data.
+#
+# THIS IS THE JOB THAT IS NOT A SCRAPE, AND THAT IS THE POINT. Ravana shipped
+# and the site did not know. The obvious fix — schedule `smite.refresh --all`
+# — does not work and is not safe:
+#
+#   It does not work.  `refresh_all` re-pulls what is ALREADY tracked, by
+#                      design. It would never have found Ravana. Roster growth
+#                      is `--roster` then `--roster-add-all`, by hand.
+#
+#   It is not safe.    `wiki_parser.parse_god_page` raises on one thing only,
+#                      a missing infobox; every other shape change degrades to
+#                      empty, and `notes.merge_god_note` REPLACES the note. A
+#                      silent miss does not fail to update — it overwrites the
+#                      only copy. Blanking the kits of Ullr, Artio and Merlin
+#                      and recomputing moves win-weighted coverage 0.5530 ->
+#                      0.5552 (UP), PASSes `validate --check`, and yields zero
+#                      `data_audit` findings. Gating an unattended scrape on
+#                      those numbers gates nothing.
+#
+# So: automated detection, manual action. Wrong toward missing data beats
+# wrong toward wrong data — a missing god is visible and costs one command; a
+# silently emptied kit is invisible and moves every core the god touches.
+#
+# Two page loads a day, not the ~315 a full `--all` would make against
+# Cloudflare from a datacentre IP (89 gods + 226 items at a 2.5s floor is 13+
+# minutes of browser traffic, daily, for data that moves monthly).
+name: Watch the wiki
+
+on:
+  # 09:45 UTC, half an hour behind the community refresh so the two never
+  # queue against each other. Off the hour for the same reason that one is.
+  schedule:
+    - cron: "45 9 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: watch-wiki
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pipeline dependencies
+        working-directory: pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      # Exit 1 means "a human has something to do", not "the job broke", so
+      # this records the verdict instead of failing the step. A genuine crash
+      # still fails, because `set -e` is on and the exit code is captured from
+      # a command that ran.
+      - name: Survey the wiki
+        id: survey
+        working-directory: pipeline
+        run: |
+          set +e
+          python -m smite.wiki_watch --out "$GITHUB_WORKSPACE/wiki-watch.md"
+          echo "actionable=$?" >> "$GITHUB_OUTPUT"
+
+      # One issue, reused. Editing a body does not notify; creating does. So a
+      # standing "Ravana is not tracked" ticket stays one ticket and keeps
+      # itself current, rather than nagging every morning.
+      - name: Open or update the tracking issue
+        if: steps.survey.outputs.actionable == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="wiki-watch: the wiki has moved ahead of the site"
+          BODY_FILE="$GITHUB_WORKSPACE/wiki-watch.md"
+          printf '\n---\n_Filed by `.github/workflows/watch-wiki.yml`. Updated in place; closing it is how you say "done"._\n' >> "$BODY_FILE"
+          EXISTING=$(gh issue list --state open --label wiki-watch --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --body-file "$BODY_FILE"
+            echo "Updated #$EXISTING"
+          else
+            gh label create wiki-watch --description "Raised by the wiki watcher" --color BFD4F2 --force
+            gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label wiki-watch
+          fi
+
+      # An open ticket that has been dealt with should close itself, or the
+      # next real change lands on a ticket everyone has learned to ignore.
+      - name: Close the tracking issue when there is nothing left to do
+        if: steps.survey.outputs.actionable == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EXISTING=$(gh issue list --state open --label wiki-watch --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "The site has caught up with the wiki."
+          fi

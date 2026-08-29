@@ -1,8 +1,23 @@
 """Per-refresh item-stat snapshots. Invisible plumbing: banks item cost/tier/
 stats to a dated JSON file every refresh so a future patch-notes page can diff
 item stats across patches.
+
+THE STORE IS A CHANGE LOG, NOT A CALENDAR. `write_snapshot_if_changed` is the
+entry point every caller should use, and the reason is `build_patch_report`:
+it diffs CONSECUTIVE pairs and caps the report at 5 periods. Item cost/tier/
+stats are wiki data, and the scheduled job pulls SmiteBrain only — so an
+unconditional daily write banks ~30 byte-identical files a month, and within
+five days of any real change that change has been pushed off the report by
+five empty periods. The page would then read "Items have moved 0 times across
+5 refreshes", which is worse than the empty state it replaced.
+
+    python -m smite.snapshots          # bank today's, if item stats moved
+    python -m smite.snapshots --date 2026-08-29
 """
+import argparse
 import json
+import sys
+from datetime import date as _date
 from pathlib import Path
 
 from smite.data_audit import STAT_VALUE_RE
@@ -36,6 +51,38 @@ def write_snapshot(items: list, date: str, snapshots_dir: Path = SNAPSHOTS_DIR) 
         encoding="utf-8",
     )
     return out_path
+
+
+def latest_snapshot_path(snapshots_dir: Path = SNAPSHOTS_DIR, exclude_date: str = None):
+    """The newest stored snapshot by filename date, or None when the store is
+    empty. `exclude_date` skips one stem so a re-run on a day that already
+    banked a snapshot compares against the day before it, not against itself."""
+    snapshots_dir = Path(snapshots_dir)
+    if not snapshots_dir.exists():
+        return None
+    paths = sorted((p for p in snapshots_dir.glob("*.json") if p.stem != exclude_date),
+                   key=lambda p: p.stem)
+    return paths[-1] if paths else None
+
+
+def write_snapshot_if_changed(items: list, date: str,
+                              snapshots_dir: Path = SNAPSHOTS_DIR):
+    """Bank a snapshot only when item cost/tier/stats differ from the newest
+    one already stored. Returns the path written, or None when nothing moved.
+
+    See the module docstring for why the unconditional write is the wrong
+    default on a daily schedule."""
+    snapshots_dir = Path(snapshots_dir)
+    prior = latest_snapshot_path(snapshots_dir, exclude_date=date)
+    if prior is not None and load_snapshot(prior) == snapshot_of(items):
+        # A same-date file from an earlier run today is now redundant: leaving
+        # it in place would put an identical consecutive pair in the store,
+        # which is exactly the empty period this function exists to avoid.
+        same_date = snapshots_dir / f"{date}.json"
+        if same_date.exists():
+            same_date.unlink()
+        return None
+    return write_snapshot(items, date, snapshots_dir)
 
 
 def load_snapshot(path: Path) -> dict:
@@ -164,3 +211,30 @@ def report_from_dir(snapshots_dir: Path = SNAPSHOTS_DIR, limit: int = 5) -> list
         return []
     paths = sorted(snapshots_dir.glob("*.json"))
     return build_patch_report(paths, limit=limit)
+
+
+def main(argv=None) -> int:
+    """Bank today's item-stat snapshot if item stats moved. This is a step in
+    the scheduled refresh rather than something `build_index` does for itself:
+    the index READS the store, and a reader that also writes would bank a
+    snapshot on every local rebuild, including rebuilds of test vaults."""
+    # Imported here, not at module scope: `build_index` imports this module,
+    # and `recommend` is the heavier half of the pipeline.
+    from smite import recommend
+
+    parser = argparse.ArgumentParser(description="Bank an item-stat snapshot")
+    parser.add_argument("--date", default=_date.today().isoformat(),
+                        help="snapshot date (default: today)")
+    args = parser.parse_args(argv)
+
+    path = write_snapshot_if_changed(recommend.load_items(), args.date)
+    if path is None:
+        prior = latest_snapshot_path()
+        print(f"snapshots: item stats unchanged since {prior.stem} — nothing banked")
+    else:
+        print(f"snapshots: wrote {path}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

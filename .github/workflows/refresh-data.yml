@@ -51,6 +51,19 @@ jobs:
         working-directory: pipeline
         run: python -m smite.refresh --community
 
+      # Patch notes are a diff between two item-stat snapshots, and until this
+      # step existed nothing on any schedule wrote one: `write_snapshot` was
+      # called from `refresh_and_deploy` alone, which is a manual patch-day
+      # command. The store held a single file from 2026-08-01, a diff needs
+      # two, and `patch_notes` had therefore been `[]` since the page shipped.
+      #
+      # Runs BEFORE the index, because the index reads the store. It banks a
+      # file only when item cost/tier/stats actually moved — see the module
+      # docstring for why writing one every morning would be worse than none.
+      - name: Bank an item-stat snapshot if items moved
+        working-directory: pipeline
+        run: python -m smite.snapshots
+
       - name: Recompute builds and rebuild the index
         working-directory: pipeline
         run: |

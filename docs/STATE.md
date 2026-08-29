@@ -1444,6 +1444,42 @@ that loop and both should stay green: `--discover-items` scans the wiki cache,
 and `data_audit` flags any item a community build names. Twelve items were
 missing before those existed, including the pool's first anti-heal item.
 
+**Adding a new GOD is manual for a second reason, and it is stronger.** The
+same `refresh_all` limitation applies — it would never have found Ravana — but
+scheduling the wiki scrape would also be unsafe, and that is measured rather
+than assumed. `wiki_parser.parse_god_page` raises on exactly one thing, a
+missing infobox; every other shape change degrades to empty, and
+`notes.merge_god_note` REPLACES the note's frontmatter, so a silent parse miss
+does not fail to update — it overwrites the only copy. Blanking the kits of
+Ullr, Artio and Merlin (the three this happened to, see `_section_tables`
+above) and recomputing their cores moves win-weighted coverage 0.5530 ->
+0.5552, UPWARD, PASSes `validate --check`, and produces zero `data_audit`
+findings. So the scrape stays a human's decision and the detection is
+automated: `smite.wiki_watch` runs daily, reads two pages, writes nothing, and
+opens one reusable issue. Be wrong toward missing data, never toward wrong
+data — a missing god is self-announcing and costs one command, a silently
+emptied kit is invisible and moves every core it touches.
+
+**A scrape that shrinks a note is refused, not written.** `refresh.ParseCollapse`
+fires when a god's ability count drops (zero always, including for a god nobody
+has scraped before — no god page has an empty kit) or when an item loses every
+stat or a readable cost, and it prints both sides: `Ullr: 4 abilities -> 0`. The
+override is `--allow-shrink`, deliberately NOT `--force`: `--force` means
+"ignore the HTTP cache" and a patch-day operator passes it every run, so folding
+the two would disable the guard exactly when it matters. `data_audit.audit_gods`
+carries the same rule as `no-abilities` / `no-scaling-abilities`, for a note
+that got in before the guard existed.
+
+**The snapshot store is a change log, not a calendar.** `patch_notes` is a diff
+between two item-stat snapshots, and it was `[]` from the day the page shipped
+because `write_snapshot` had one caller — `refresh_and_deploy`, a manual
+command. The daily job now runs `smite.snapshots` before `build_index` (the
+index READS the store; banked after, a note ships one refresh late). It writes
+only when item stats moved: `build_patch_report` keeps 5 consecutive pairs, and
+since item stats are wiki data while the daily job pulls SmiteBrain only, an
+unconditional write would bank an identical file every morning and bury any
+real change under five empty periods within a week.
+
 **Tuning lives in `data/_weights.yaml`** — signals, role stat maps, kit blend,
 hybrid scaling, flavors, aspects, per-mode overrides, lifesteal/stat caps,
 cap overflow, passive pricing, draft overlay, build order, starters. Every
@@ -1455,8 +1491,13 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (812) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (845) ·
 `cd viewer && npm test -- --run` (660).
+
+Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
+snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
+`contents: read`, commits nothing). The wiki scrape itself is
+`smite.refresh_and_deploy`, by hand, on `main`.
 
 ---
 
@@ -1464,12 +1505,12 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (812) ·
 
 | | |
 |---|---|
-| Gods tracked | 89 of 89 on the roster |
+| Gods tracked | 90 of 92 on the roster — Ravana added 2026-08-29, four days after his 25 Aug release, by the manual path `smite.wiki_watch` now points at. The other two the wiki lists, Hachiman and Hel, are roster entries with no page behind them ("There is currently no text in this page"), so the grid leads the wiki's own content and this row will read N of N+2 until it catches up. That is why the watcher triggers on NAMES and a page probe, never on a count |
 | Items | 226 |
-| Build groups | 267 (89 gods × 3 modes) |
+| Build groups | 270 (90 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
-| Conquest gods placed | 89 / 89 |
-| Joust / Arena gods placed | 0 / 89 — no outcome data exists |
+| Conquest gods placed | 90 / 90 |
+| Joust / Arena gods placed | 0 / 90 — no outcome data exists |
 | Items placed | 191 / 226 — the 25 Aug window reset (see Community sample) took the community record down with it, and 19 items that carried a tier band on the thirteen-day window no longer have the sightings to earn one. Tracks the DATA, not the model |
 | Community sample | 3,498 Obsidian+ Conquest matches, 25 Aug – 28 Aug — the upstream window RESET rather than decayed, and every model figure below inherits that. It accumulated from 11 Aug to a peak of 18,716 matches on the 25 Aug refresh, then restarted at 25 Aug and has been rebuilding since: 888, then 2,301, then 3,498. Daily intake is unchanged at roughly 1,200–1,600, so this row is three days deep where the superseded one was thirteen, and the model is now fitting on about a fifth of the evidence it had. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
 | Headline gate | coverage 49.6%, win-weighted 53.0% — the 25 Aug window reset (see Community sample) moved this −1.2pp on coverage and +0.6pp on win-weighted, off the 50.8%/52.4% this row carried at fingerprint `527eb8f0a586`; nothing shipped between the two readings. The two targets moving in OPPOSITE directions on one refresh is what a gate with both of its targets as model inputs looks like when the evidence thins (§1), and is a reason to read neither as a verdict. See `unknown_win_per_god`; `offmap_efficiency` at 0.55 moved this +1.4pp/+1.2pp off the 48.2%/50.0% this row carried, which is REPORTING and not a target (§1) — the flag was chosen on the leakage-free row below and this gate has both of its targets as model inputs; the gap to a naive reading IS the removed community-agreement prior. `price_adaptive` moved it +1.9pp/+2.0pp off the 47.4%/49.3% this row carried, which is reporting and not a target (§1) |
@@ -1480,7 +1521,7 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (812) ·
 | Gods at 0% coverage | 2 — Ares, Yemoja. The 25 Aug window reset (see Community sample) took Nut and Sun Wukong off it, to 40% and 25% coverage. CHECKED THAT THIS IS REAL: all 89 gods are still in `validate.compute`'s per-god denominator, so neither left by dropping out of the measure, which is the failure mode this row would otherwise hide. Fewer zero-coverage gods on a fifth of the data is not a paradox — a thinner window reshuffles which items hold the community's top slots, and for those two it moved toward items our cores already held. Sun Wukong left the list with `price_adaptive` and came back on the 22 Aug refresh, with Yemoja; the row before that (Achilles, Chaac, Danzaburou) predates an earlier refresh. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 812 pipeline · 660 viewer |
+| Tests | 845 pipeline · 660 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
