@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Toxic Blade
+  - Tyrfing
+  - Spear of Desolation
+  - Silverbranch Bow
+  - Soul Gem
+  flex_slots:
+  - Silverbranch Bow
+  - Spear of Desolation
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Toxic Blade:
+      total: 0.71
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Tyrfing:
+      total: 0.64
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Silverbranch Bow:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Spear of Desolation
+    removed: Bragi's Harp
+    reason: Conquest community 71% win over 34 matches (vs 52% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
+  starter: *id001
 ---
