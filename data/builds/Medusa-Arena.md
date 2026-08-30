@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Riptalon
+  - Silverbranch Bow
+  - Soul Gem
+  flex_slots:
+  - Lernaean Bow
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Riptalon:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Silverbranch Bow
+    removed: Tyrfing
+    reason: Conquest community 71% win over 60 matches (vs 59% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

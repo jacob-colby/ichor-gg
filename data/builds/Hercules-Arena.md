@@ -396,6 +396,77 @@ builds:
       fit: 0.78
   starter: *id001
 - source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Void Shield
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Void Shield
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Void Shield:
+      total: 0.63
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.7
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    Stampede:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+  swaps:
+  - added: Freya's Tears
+    removed: Void Stone
+    reason: Conquest community 64% win over 50 matches (vs 50% on this god), taking
+      the model's weakest slot from Void Stone
+  borrowed_from: Conquest
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Kinetic Cuirass
@@ -789,6 +860,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+  starter: *id001
+  aspect: Aspect of Preservation
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Void Shield
+  - Void Stone
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Void Stone
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Shield:
+      total: 0.65
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Void Stone:
+      total: 0.64
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.71
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+    Stampede:
+      total: 0.67
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+  swaps:
+  - added: Freya's Tears
+    removed: Kinetic Cuirass
+    reason: Conquest community 64% win over 50 matches (vs 50% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
+  borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Preservation
 ---

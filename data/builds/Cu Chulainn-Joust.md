@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Freya's Tears
+  - Draconic Scale
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Berserker's Shield
-  - Freya's Tears
+  - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Freya's Tears:
+    Draconic Scale:
       total: 0.42
-      efficiency: 0.61
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.23
+      fit: 0.34
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
@@ -460,9 +460,9 @@ builds:
       pick: 0.0
       fit: 0.64
   swaps:
-  - added: Freya's Tears
+  - added: Draconic Scale
     removed: Erosion
-    reason: Conquest community 69% win over 58 matches (vs 50% on this god), taking
+    reason: Conquest community 62% win over 59 matches (vs 49% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001

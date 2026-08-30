@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Bragi's Harp
-    reason: Conquest community 71% win over 34 matches (vs 52% on this god), taking
+    reason: Conquest community 68% win over 37 matches (vs 50% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001

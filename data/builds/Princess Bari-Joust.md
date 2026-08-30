@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Jotunn's Revenge
-    reason: Conquest community 71% win over 34 matches (vs 52% on this god), taking
+    reason: Conquest community 68% win over 37 matches (vs 50% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
