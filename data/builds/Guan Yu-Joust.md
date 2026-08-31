@@ -395,4 +395,79 @@ builds:
       pick: 0.0
       fit: 0.63
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Freya's Tears
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Kinetic Cuirass:
+      total: 0.58
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shell of Rebuke:
+      total: 0.32
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Amanita Charm:
+      total: 0.8
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
+    Erosion:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+  swaps:
+  - added: Shell of Rebuke
+    removed: Shogun's Ofuda
+    reason: Conquest community 75% win over 42 matches (vs 57% on this god), taking
+      the model's weakest slot from Shogun's Ofuda
+  - added: Freya's Tears
+    removed: Pharaoh's Curse
+    reason: Conquest community 67% win over 95 matches (vs 57% on this god), taking
+      the model's weakest slot from Pharaoh's Curse
+  borrowed_from: Conquest
+  starter: *id001
 ---

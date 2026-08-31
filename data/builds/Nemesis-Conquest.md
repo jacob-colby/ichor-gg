@@ -5,103 +5,103 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Justice
-  aspect_pick_rate: 0.06
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.07
+  aspect_win_rate: 0.69
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.46
-    win_rate: 0.61
+    pick_rate: 0.44
+    win_rate: 0.62
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.24
-      win_rate: 0.51
+      pick_rate: 0.27
+      win_rate: 0.46
     - name: Avenging Blade
       pick_rate: 0.08
       win_rate: 0.67
   - name: Hydra's Lament
-    pick_rate: 0.42
+    pick_rate: 0.4
     win_rate: 0.65
     alternates:
     - name: The Reaper
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.11
+      win_rate: 0.52
     - name: Jotunn's Revenge
       pick_rate: 0.06
-      win_rate: 0.67
+      win_rate: 0.58
   - name: The Reaper
     pick_rate: 0.12
-    win_rate: 0.67
+    win_rate: 0.64
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.09
-      win_rate: 0.57
+      win_rate: 0.65
     - name: Blinking Abyss
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.53
   - name: Heartseeker
     pick_rate: 0.19
-    win_rate: 0.64
+    win_rate: 0.65
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.13
-      win_rate: 0.67
+      win_rate: 0.64
     - name: Pendulum Blade
-      pick_rate: 0.08
-      win_rate: 0.5
+      pick_rate: 0.07
+      win_rate: 0.46
   - name: Titan's Bane
     pick_rate: 0.11
-    win_rate: 0.43
+    win_rate: 0.5
     alternates:
     - name: Heartseeker
-      pick_rate: 0.17
-      win_rate: 0.81
+      pick_rate: 0.16
+      win_rate: 0.77
     - name: Blinking Abyss
-      pick_rate: 0.09
+      pick_rate: 0.07
       win_rate: 0.55
   - name: Magi's Cloak
-    pick_rate: 0.12
-    win_rate: 0.64
+    pick_rate: 0.11
+    win_rate: 0.58
     alternates:
+    - name: Heartseeker
+      pick_rate: 0.08
+      win_rate: 0.56
     - name: Titan's Bane
       pick_rate: 0.08
-      win_rate: 0.71
-    - name: Heartseeker
-      pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.67
   community_starters:
+  - name: Bumba's Hammer
+    pick_rate: 0.28
+    win_rate: 0.74
   - name: Hunter's Cowl
     pick_rate: 0.28
-    win_rate: 0.58
-  - name: Bumba's Hammer
-    pick_rate: 0.27
-    win_rate: 0.76
+    win_rate: 0.64
   - name: Bumba's Cudgel
-    pick_rate: 0.16
-    win_rate: 0.33
+    pick_rate: 0.14
+    win_rate: 0.31
   source_url: https://smitebrain.com/gods/nemesis/
-  last_verified: '2026-08-30'
-  god_win_rate: 0.5751633986928104
-  god_matches_won: 88
-  god_matches_played: 153
+  last_verified: '2026-08-31'
+  god_win_rate: 0.5752688172043011
+  god_matches_won: 107
+  god_matches_played: 186
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-08-30'
-  god_matches_analyzed: 5563
+  god_window_end: '2026-08-31'
+  god_matches_analyzed: 7103
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
+  - Tyrfing
   - Hydra's Lament
   - Death Metal
-  - Rod of Tahuti
+  - Tekko-Kagi
+  - Heartseeker
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Tyrfing
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -124,29 +124,23 @@ builds:
     Stone, Arondight, Qin''s Blade, Runeforged Hammer, Dreamer''s Idol, Damaru, Rage,
     Ancient Signet, Chronos'' Pendant, Sun Beam Bow, Pendulum Blade.'
   slot_scores:
-    Book of Thoth:
-      total: 0.48
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.0
-      fit: 0.06
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.49
-    Transcendence:
-      total: 0.51
-      efficiency: 0.53
+    Tyrfing:
+      total: 0.57
+      efficiency: 0.48
       win: 0.64
       pick: 0.0
-      fit: 0.25
+      fit: 0.73
     Hydra's Lament:
       total: 0.57
       efficiency: 0.54
       win: 0.65
-      pick: 0.57
+      pick: 0.55
       fit: 0.39
     Death Metal:
       total: 0.58
@@ -154,12 +148,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.51
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+    Tekko-Kagi:
+      total: 0.56
+      efficiency: 0.49
       win: 0.64
       pick: 0.0
-      fit: 0.26
+      fit: 0.69
+    Heartseeker:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.65
+      pick: 0.32
+      fit: 0.64
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -206,8 +206,8 @@ builds:
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.52
     Transcendence:
       total: 0.51
@@ -219,7 +219,7 @@ builds:
       total: 0.58
       efficiency: 0.54
       win: 0.65
-      pick: 0.57
+      pick: 0.55
       fit: 0.49
     Death Metal:
       total: 0.58
@@ -240,22 +240,22 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Hydra's Lament
-  - The Reaper
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -276,10 +276,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.3
     Kinetic Cuirass:
       total: 0.56
@@ -287,18 +287,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.49
+    Shield of the Phoenix:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.64
+      pick: 0.0
+      fit: 0.6
     Hydra's Lament:
       total: 0.55
       efficiency: 0.54
       win: 0.65
-      pick: 0.57
+      pick: 0.55
       fit: 0.28
-    The Reaper:
-      total: 0.57
-      efficiency: 0.5
-      win: 0.67
-      pick: 0.19
-      fit: 0.57
     Amanita Charm:
       total: 0.62
       efficiency: 0.65
@@ -350,8 +350,8 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.61
     Transcendence:
       total: 0.5
@@ -366,9 +366,9 @@ builds:
       pick: 0.0
       fit: 0.68
     Heartseeker:
-      total: 0.58
+      total: 0.59
       efficiency: 0.47
-      win: 0.64
+      win: 0.65
       pick: 0.32
       fit: 0.77
     Rod of Tahuti:
@@ -414,10 +414,10 @@ builds:
     Pendulum Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.31
     Tyrfing:
       total: 0.56
@@ -429,7 +429,7 @@ builds:
       total: 0.55
       efficiency: 0.54
       win: 0.65
-      pick: 0.57
+      pick: 0.55
       fit: 0.27
     Nimble Ring:
       total: 0.57
@@ -488,14 +488,14 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.59
     Hydra's Lament:
       total: 0.59
       efficiency: 0.54
       win: 0.65
-      pick: 0.57
+      pick: 0.55
       fit: 0.55
     Death Metal:
       total: 0.55
@@ -559,8 +559,8 @@ builds:
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
-      win: 0.61
-      pick: 0.46
+      win: 0.62
+      pick: 0.44
       fit: 0.49
     Tyrfing:
       total: 0.57

@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of the Mother's Light
   aspect_pick_rate: 0.11
-  aspect_win_rate: 0.31
+  aspect_win_rate: 0.28
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.39
-    win_rate: 0.58
+    win_rate: 0.59
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.15
-      win_rate: 0.57
+      pick_rate: 0.16
+      win_rate: 0.59
     - name: Gem of Focus
-      pick_rate: 0.13
-      win_rate: 0.47
+      pick_rate: 0.12
+      win_rate: 0.49
   - name: The World Stone
-    pick_rate: 0.34
-    win_rate: 0.55
+    pick_rate: 0.33
+    win_rate: 0.56
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.14
-      win_rate: 0.56
+      pick_rate: 0.15
+      win_rate: 0.54
     - name: Book of Thoth
       pick_rate: 0.09
-      win_rate: 0.49
+      win_rate: 0.51
   - name: Rod of Tahuti
-    pick_rate: 0.15
+    pick_rate: 0.16
     win_rate: 0.59
     alternates:
     - name: The World Stone
       pick_rate: 0.13
-      win_rate: 0.59
+      win_rate: 0.58
     - name: Soul Gem
       pick_rate: 0.13
       win_rate: 0.54
   - name: Obsidian Shard
-    pick_rate: 0.15
-    win_rate: 0.44
+    pick_rate: 0.17
+    win_rate: 0.5
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.28
+      pick_rate: 0.27
       win_rate: 0.57
-    - name: The World Stone
+    - name: Soul Gem
       pick_rate: 0.05
-      win_rate: 0.46
+      win_rate: 0.52
   - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.69
+    pick_rate: 0.09
+    win_rate: 0.68
     alternates:
-    - name: Rod of Tahuti
-      pick_rate: 0.18
-      win_rate: 0.56
     - name: Obsidian Shard
+      pick_rate: 0.18
+      win_rate: 0.49
+    - name: Rod of Tahuti
       pick_rate: 0.17
-      win_rate: 0.51
+      win_rate: 0.58
   - name: Void Shard
     pick_rate: 0.08
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Evil Eye
       pick_rate: 0.11
-      win_rate: 0.48
+      win_rate: 0.53
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.83
+      win_rate: 0.76
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.36
-    win_rate: 0.55
+    pick_rate: 0.37
+    win_rate: 0.56
   - name: Sands Of Time
-    pick_rate: 0.24
-    win_rate: 0.44
+    pick_rate: 0.23
+    win_rate: 0.45
   - name: Archmage's Gem
     pick_rate: 0.13
-    win_rate: 0.59
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-08-30'
-  god_win_rate: 0.5158450704225352
-  god_matches_won: 293
-  god_matches_played: 568
+  last_verified: '2026-08-31'
+  god_win_rate: 0.5238095238095238
+  god_matches_won: 363
+  god_matches_played: 693
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-08-30'
-  god_matches_analyzed: 5563
+  god_window_end: '2026-08-31'
+  god_matches_analyzed: 7103
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -124,39 +124,39 @@ builds:
     Mail, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.32
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.6
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.36
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.5
   starter: &id001
@@ -195,39 +195,39 @@ builds:
     of Binding, Draconic Scale, Triton''s Conch, Screeching Gargoyle, Daybreak Gavel.'
   slot_scores:
     Book of Thoth:
-      total: 0.48
+      total: 0.49
       efficiency: 0.51
-      win: 0.57
-      pick: 0.15
+      win: 0.59
+      pick: 0.16
       fit: 0.25
     Genji's Guard:
       total: 0.53
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.28
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.28
     Spear of Desolation:
-      total: 0.54
+      total: 0.55
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.4
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.37
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.35
   starter: *id001
@@ -265,39 +265,39 @@ builds:
     Signet.'
   slot_scores:
     Book of Thoth:
-      total: 0.46
+      total: 0.47
       efficiency: 0.51
-      win: 0.57
-      pick: 0.15
+      win: 0.59
+      pick: 0.16
       fit: 0.14
     Genji's Guard:
       total: 0.53
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.27
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.39
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.49
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.35
     Amanita Charm:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.37
   starter: *id001
@@ -335,33 +335,33 @@ builds:
     Blood-Bound Book, Chronos'' Pendant.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.6
     Freya's Tears:
       total: 0.54
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.36
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.8
     Soul Gem:
@@ -405,40 +405,40 @@ builds:
     Pearl, Magi''s Cloak.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.66
     Stone of Binding:
       total: 0.54
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.68
     Gluttonous Grimoire:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
     Spear of Desolation:
       total: 0.57
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.59
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.48
   starter: *id001
 - source: suggested
@@ -475,64 +475,64 @@ builds:
     Pearl, Draconic Scale, Magi''s Cloak.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.28
     Nimble Ring:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.34
     Bragi's Harp:
-      total: 0.48
+      total: 0.49
       efficiency: 0.44
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.47
     Gluttonous Grimoire:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.29
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.21
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Amanita Charm
   flex_slots:
   - Breastplate of Valor
-  - Amanita Charm
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -544,42 +544,42 @@ builds:
     Draconic Scale, Stone of Binding, Rod of Asclepius, Eye of Erebus, Magi''s Cloak,
     Daybreak Gavel, Midgardian Mail, Mantle Of Discord, Gem of Focus.'
   slot_scores:
+    Book of Thoth:
+      total: 0.47
+      efficiency: 0.51
+      win: 0.59
+      pick: 0.16
+      fit: 0.09
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.58
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.52
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.21
-    Amanita Charm:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
-      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: model
@@ -615,39 +615,39 @@ builds:
     Cloak, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.32
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.6
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.58
+      win: 0.59
       pick: 0.39
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.23
+      pick: 0.25
       fit: 0.36
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.5
   starter: *id001

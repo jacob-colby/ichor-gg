@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.62
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Runeforged Hammer
+  - Heartseeker
+  - Titan's Bane
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Runeforged Hammer
+  - Titan's Bane
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.65
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.76
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Erosion:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+  swaps:
+  - added: Titan's Bane
+    removed: Toxic Blade
+    reason: Conquest community 58% win over 99 matches (vs 48% on this god), taking
+      the model's weakest slot from Toxic Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---
