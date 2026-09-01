@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Kinetic Cuirass
-    reason: Conquest community 59% win over 270 matches (vs 52% on this god), taking
+    reason: Conquest community 59% win over 303 matches (vs 53% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001

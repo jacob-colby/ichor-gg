@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.9
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Freya's Tears
+  - Shifter's Shield
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Shifter's Shield
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.68
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Shell of Rebuke:
+      total: 0.39
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Freya's Tears:
+      total: 0.63
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Shifter's Shield:
+      total: 0.63
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.71
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+  swaps:
+  - added: Shell of Rebuke
+    removed: Stygian Anchor
+    reason: Conquest community 67% win over 34 matches (vs 45% on this god), taking
+      the model's weakest slot from Stygian Anchor
+  borrowed_from: Conquest
+  starter: *id001
 ---

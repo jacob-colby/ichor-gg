@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: 0.63
   slot_order:
   - name: Stampede
-    pick_rate: 0.15
-    win_rate: 0.49
+    pick_rate: 0.14
+    win_rate: 0.53
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.58
     - name: Tyrfing
       pick_rate: 0.12
       win_rate: 0.64
   - name: Genji's Guard
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.55
     alternates:
     - name: Stampede
       pick_rate: 0.11
-      win_rate: 0.48
+      win_rate: 0.5
     - name: Breastplate of Valor
       pick_rate: 0.09
-      win_rate: 0.33
+      win_rate: 0.38
   - name: Breastplate of Valor
     pick_rate: 0.11
-    win_rate: 0.48
+    win_rate: 0.51
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.22
-      win_rate: 0.37
+      pick_rate: 0.21
+      win_rate: 0.38
     - name: Freya's Tears
-      pick_rate: 0.07
-      win_rate: 0.61
+      pick_rate: 0.09
+      win_rate: 0.6
   - name: Freya's Tears
     pick_rate: 0.12
-    win_rate: 0.64
+    win_rate: 0.67
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.1
       win_rate: 0.45
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.71
+      win_rate: 0.73
   - name: Shell of Rebuke
-    pick_rate: 0.06
-    win_rate: 0.65
+    pick_rate: 0.05
+    win_rate: 0.61
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.09
-      win_rate: 0.55
+      pick_rate: 0.08
+      win_rate: 0.53
     - name: Spirit Robe
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Olmec Blue
     pick_rate: 0.07
-    win_rate: 0.53
+    win_rate: 0.5
     alternates:
     - name: Captain's Ring
-      pick_rate: 0.06
-      win_rate: 0.5
+      pick_rate: 0.07
+      win_rate: 0.47
     - name: Medal of Defense
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.67
   community_starters:
   - name: Selflessness
-    pick_rate: 0.28
-    win_rate: 0.5
+    pick_rate: 0.27
+    win_rate: 0.49
   - name: Heroism
     pick_rate: 0.13
-    win_rate: 0.54
-  - name: Hunter's Cowl
+    win_rate: 0.55
+  - name: Sharpshooter's Arrow
     pick_rate: 0.09
-    win_rate: 0.75
+    win_rate: 0.2
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-08-31'
-  god_win_rate: 0.5184381778741866
-  god_matches_won: 239
-  god_matches_played: 461
+  last_verified: '2026-09-01'
+  god_win_rate: 0.5293040293040293
+  god_matches_won: 289
+  god_matches_played: 546
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-08-31'
-  god_matches_analyzed: 7103
+  god_window_end: '2026-09-01'
+  god_matches_analyzed: 8200
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -94,24 +94,24 @@ builds:
   archetype: core
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
-  - Erosion
   flex_slots:
   - Shifter's Shield
-  - Erosion
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -127,7 +127,13 @@ builds:
       total: 0.55
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
+      fit: 0.39
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.51
+      pick: 0.17
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55
@@ -136,9 +142,9 @@ builds:
       pick: 0.0
       fit: 0.73
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.62
     Shifter's Shield:
@@ -150,12 +156,6 @@ builds:
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.55
-      pick: 0.0
-      fit: 0.63
-    Erosion:
-      total: 0.52
-      efficiency: 0.51
       win: 0.55
       pick: 0.0
       fit: 0.63
@@ -182,8 +182,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -199,7 +199,7 @@ builds:
       total: 0.55
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.36
     Kinetic Cuirass:
       total: 0.55
@@ -214,9 +214,9 @@ builds:
       pick: 0.0
       fit: 0.9
     Freya's Tears:
-      total: 0.6
+      total: 0.61
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.55
     Shifter's Shield:
@@ -275,12 +275,12 @@ builds:
       total: 0.54
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.28
     Freya's Tears:
-      total: 0.58
+      total: 0.59
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.44
     Spear of Desolation:
@@ -322,8 +322,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -339,7 +339,7 @@ builds:
       total: 0.53
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.21
     Bracer of The Abyss:
       total: 0.47
@@ -360,9 +360,9 @@ builds:
       pick: 0.0
       fit: 0.46
     Freya's Tears:
-      total: 0.56
+      total: 0.58
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.33
     Amanita Charm:
@@ -382,7 +382,7 @@ builds:
   - Spear of Desolation
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
+  - Kinetic Cuirass
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -409,12 +409,12 @@ builds:
       total: 0.57
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.48
     Breastplate of Valor:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.48
+      win: 0.51
       pick: 0.17
       fit: 0.48
     Kinetic Cuirass:
@@ -424,9 +424,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.64
     Spear of Desolation:
@@ -482,7 +482,7 @@ builds:
       total: 0.53
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.24
     Berserker's Shield:
       total: 0.54
@@ -503,9 +503,9 @@ builds:
       pick: 0.12
       fit: 0.52
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.38
     Amanita Charm:
@@ -535,8 +535,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -555,7 +555,7 @@ builds:
       total: 0.53
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.25
     Jotunn's Revenge:
       total: 0.56
@@ -570,9 +570,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Freya's Tears:
-      total: 0.57
+      total: 0.59
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.39
     Spear of Desolation:
@@ -625,12 +625,12 @@ builds:
       total: 0.55
       efficiency: 0.66
       win: 0.55
-      pick: 0.33
+      pick: 0.34
       fit: 0.39
     Breastplate of Valor:
-      total: 0.51
+      total: 0.53
       efficiency: 0.65
-      win: 0.48
+      win: 0.51
       pick: 0.17
       fit: 0.39
     Kinetic Cuirass:
@@ -640,9 +640,9 @@ builds:
       pick: 0.0
       fit: 0.73
     Freya's Tears:
-      total: 0.61
+      total: 0.62
       efficiency: 0.61
-      win: 0.64
+      win: 0.67
       pick: 0.2
       fit: 0.62
     Shifter's Shield:

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mother's Light
-  aspect_pick_rate: 0.11
-  aspect_win_rate: 0.28
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.26
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.59
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.16
+      pick_rate: 0.17
       win_rate: 0.59
     - name: Gem of Focus
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.49
   - name: The World Stone
-    pick_rate: 0.33
+    pick_rate: 0.32
     win_rate: 0.56
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.15
-      win_rate: 0.54
+      pick_rate: 0.16
+      win_rate: 0.58
     - name: Book of Thoth
       pick_rate: 0.09
-      win_rate: 0.51
+      win_rate: 0.48
   - name: Rod of Tahuti
-    pick_rate: 0.16
+    pick_rate: 0.17
     win_rate: 0.59
     alternates:
     - name: The World Stone
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.55
     - name: Soul Gem
       pick_rate: 0.13
       win_rate: 0.54
   - name: Obsidian Shard
     pick_rate: 0.17
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.27
-      win_rate: 0.57
+      pick_rate: 0.26
+      win_rate: 0.58
     - name: Soul Gem
-      pick_rate: 0.05
-      win_rate: 0.52
+      pick_rate: 0.06
+      win_rate: 0.57
   - name: Evil Eye
     pick_rate: 0.09
-    win_rate: 0.68
+    win_rate: 0.7
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.18
-      win_rate: 0.49
+      win_rate: 0.51
     - name: Rod of Tahuti
-      pick_rate: 0.17
-      win_rate: 0.58
+      pick_rate: 0.16
+      win_rate: 0.59
   - name: Void Shard
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.58
     alternates:
     - name: Evil Eye
-      pick_rate: 0.11
-      win_rate: 0.53
+      pick_rate: 0.12
+      win_rate: 0.55
     - name: Obsidian Shard
-      pick_rate: 0.07
-      win_rate: 0.76
+      pick_rate: 0.06
+      win_rate: 0.73
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.37
+    pick_rate: 0.36
     win_rate: 0.56
   - name: Sands Of Time
-    pick_rate: 0.23
-    win_rate: 0.45
+    pick_rate: 0.24
+    win_rate: 0.46
   - name: Archmage's Gem
     pick_rate: 0.13
-    win_rate: 0.56
+    win_rate: 0.58
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-08-31'
-  god_win_rate: 0.5238095238095238
-  god_matches_won: 363
-  god_matches_played: 693
+  last_verified: '2026-09-01'
+  god_win_rate: 0.5269761606022585
+  god_matches_won: 420
+  god_matches_played: 797
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-08-31'
-  god_matches_analyzed: 7103
+  god_window_end: '2026-09-01'
+  god_matches_analyzed: 8200
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -145,13 +145,13 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.36
     Amanita Charm:
       total: 0.57
@@ -198,7 +198,7 @@ builds:
       total: 0.49
       efficiency: 0.51
       win: 0.59
-      pick: 0.16
+      pick: 0.17
       fit: 0.25
     Genji's Guard:
       total: 0.53
@@ -216,13 +216,13 @@ builds:
       total: 0.55
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.4
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.37
     Amanita Charm:
       total: 0.54
@@ -268,7 +268,7 @@ builds:
       total: 0.47
       efficiency: 0.51
       win: 0.59
-      pick: 0.16
+      pick: 0.17
       fit: 0.14
     Genji's Guard:
       total: 0.53
@@ -286,13 +286,13 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.49
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.35
     Amanita Charm:
       total: 0.55
@@ -350,13 +350,13 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.36
     Amanita Charm:
       total: 0.61
@@ -426,7 +426,7 @@ builds:
       total: 0.57
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.59
     Spear of the Magus:
       total: 0.54
@@ -438,7 +438,7 @@ builds:
       total: 0.65
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.48
   starter: *id001
 - source: suggested
@@ -502,13 +502,13 @@ builds:
       total: 0.53
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.29
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.21
   starter: *id001
 - source: suggested
@@ -548,7 +548,7 @@ builds:
       total: 0.47
       efficiency: 0.51
       win: 0.59
-      pick: 0.16
+      pick: 0.17
       fit: 0.09
     Genji's Guard:
       total: 0.56
@@ -572,13 +572,13 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.52
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.21
   starter: *id001
 - source: suggested
@@ -636,13 +636,13 @@ builds:
       total: 0.56
       efficiency: 0.57
       win: 0.59
-      pick: 0.39
+      pick: 0.38
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.25
+      pick: 0.26
       fit: 0.36
     Amanita Charm:
       total: 0.57

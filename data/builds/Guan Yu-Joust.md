@@ -401,19 +401,19 @@ builds:
   - Toxic Blade
   - Kinetic Cuirass
   - Shell of Rebuke
-  - Freya's Tears
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Freya's Tears
+  - Pharaoh's Curse
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -441,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -459,15 +453,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Pharaoh's Curse:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
   swaps:
   - added: Shell of Rebuke
     removed: Shogun's Ofuda
-    reason: Conquest community 75% win over 42 matches (vs 57% on this god), taking
+    reason: Conquest community 78% win over 43 matches (vs 58% on this god), taking
       the model's weakest slot from Shogun's Ofuda
-  - added: Freya's Tears
-    removed: Pharaoh's Curse
-    reason: Conquest community 67% win over 95 matches (vs 57% on this god), taking
-      the model's weakest slot from Pharaoh's Curse
   borrowed_from: Conquest
   starter: *id001
 ---
