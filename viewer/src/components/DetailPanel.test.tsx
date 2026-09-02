@@ -203,6 +203,52 @@ describe("DetailPanel — the buy ledger", () => {
     expect(screen.queryByText(/why this item/i)).not.toBeInTheDocument();
   });
 
+  /* AUDIT F1. `value 0.55  win 0.55  pick 0.00  fit 0.69` is the product's
+   * whole pitch and a new player has no anchor for it — no scale, no
+   * direction. The definitions existed in exactly two places: a `title` on
+   * these labels, and the Method page nothing linked to. A `title` needs a
+   * pointer to hover, so on the phone a draft actually happens on, the four
+   * numbers that carry this site had no meaning attached to them ANYWHERE.
+   * The row above carries the same figures `aria-hidden` with no title at
+   * all, so there was no fallback either.
+   *
+   * These assert the definitions are in the accessible tree as text. A fix
+   * that reaches for another tooltip is the bug again, so `title` is asserted
+   * absent rather than merely not required. */
+  it("defines all four signals as text, reachable with no hover", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("A"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    expect(why).toHaveTextContent(/stats returned per gold spent/i);
+    expect(why).toHaveTextContent(/community win rate with this item on this god/i);
+    expect(why).toHaveTextContent(/how often this god.s players buy it/i);
+    expect(why).toHaveTextContent(/how well the item.s stats match this god.s kit/i);
+  });
+
+  it("carries no definition that only a pointer can reach", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("A"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    for (const label of ["value", "win", "pick", "fit"]) {
+      const el = within(why).getByText(label);
+      expect(el).not.toHaveAttribute("title");
+    }
+  });
+
+  /* Joust and Arena drop win and pick. A definition for a signal that is not
+   * on the panel would describe a number that isn't there. */
+  it("defines only the signals the mode actually measures", () => {
+    const noCommunity = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "",
+        slot_scores: { A: { total: 0.6, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.8 } } },
+    ] }];
+    render(panel({ items, builds: noCommunity as never, mode: "Joust" }));
+    fireEvent.click(row("A"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    expect(why).toHaveTextContent(/stats returned per gold spent/i);
+    expect(why).not.toHaveTextContent(/community win rate with this item/i);
+  });
+
   it("headlines the composite score inside the breakdown", () => {
     render(panel({ items, builds: withMeta as never }));
     fireEvent.click(row("A"));

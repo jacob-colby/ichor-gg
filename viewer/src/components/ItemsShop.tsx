@@ -517,6 +517,17 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
           does. Open one to see the arithmetic. It answers whether an item is cheap for what it
           gives &mdash; not whether it wins, which is a separate figure on every card.
         </p>
+          {/* Seam to the working (DESIGN.md, the Seam Rule; audit's central
+              finding). Named as the visitor's own question, not as the route. */}
+        <p className="mt-2">
+          <a
+            href={toHash.method()}
+            data-testid="method-seam"
+            className="press -mx-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+          >
+            How every stat gets its gold price &rarr;
+          </a>
+        </p>
         <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-label text-faint">
           <span>{withCommunity} of {items.length} have community data</span>
           {unscored > 0 && <span className="before:mr-3 before:content-['·']">{unscored} not priced (starters and statless items)</span>}

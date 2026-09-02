@@ -169,6 +169,17 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                 : "The model's default core for your god. Add an enemy and it starts adapting."
               : `Scored against ${enemiesKnown} of ${roster} enemies. Each change below names what it displaced and why.`}
         </p>
+          {/* Seam to the working (DESIGN.md, the Seam Rule; audit's central
+              finding). Named as the visitor's own question, not as the route. */}
+        <p className="mt-2.5">
+          <a
+            href={toHash.method()}
+            data-testid="method-seam"
+            className="press -mx-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+          >
+            Where these scores come from &rarr;
+          </a>
+        </p>
       </header>
 
       {/* ── Board ─────────────────────────────────────────────────── */}

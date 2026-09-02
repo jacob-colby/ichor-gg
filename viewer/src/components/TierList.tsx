@@ -332,6 +332,22 @@ export function TierList({ tierlist, communitySource }: {
           </p>
         )}
         {result.ranked > 0 && <CommunitySource source={communitySource} className="mt-1.5" />}
+        {/* Seam to the working (DESIGN.md, the Seam Rule). This page keeps the
+            model out of the order on purpose and says so a line above — which
+            makes "then what does it decide?" the visitor's next question, and
+            leaves this the one surface whose seam is a distinction rather than
+            an explanation. Outside the `ranked > 0` guards deliberately: in
+            Joust and Arena this page has no ranking at all, and that is
+            precisely when a visitor needs telling the builds still work. */}
+        <p className="mt-2.5">
+          <a
+            href={toHash.method()}
+            data-testid="method-seam"
+            className="press -mx-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+          >
+            What the model does decide &rarr;
+          </a>
+        </p>
       </header>
 
       {/* Controls */}

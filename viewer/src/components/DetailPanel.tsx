@@ -93,14 +93,34 @@ function ItemIcon({ name, className }: { name: string; className: string }) {
   );
 }
 
+/** One axis of the decomposition: its name, its magnitude, its figure — and,
+ *  in the flow of the page, what it actually means.
+ *
+ * The definition used to live in a `title` on the label and nowhere else. A
+ * `title` needs a pointer to hover, so on the phone a draft actually happens on
+ * (audit F1) the four numbers that carry this whole product had no meaning
+ * attached to them anywhere in the app. The row above carries the same figures
+ * `aria-hidden` with no title at all, so this panel is the only place the
+ * definition can be read at all — which is why it is now text.
+ *
+ * `title` is deliberately gone rather than kept alongside: with the definition
+ * rendered, a tooltip repeating it is a second announcement of the same string
+ * for anyone on a screen reader. */
 function ScoreBar({ label, value, help }: { label: string; value: number; help?: string }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="w-12 shrink-0 text-label text-muted" title={help}>{label}</span>
-      <div className="h-1.5 min-w-0 flex-1 rounded-sm bg-bg3">
-        <div className="h-1.5 rounded-sm bg-gold" style={{ width: `${Math.round(Math.min(Math.max(value, 0), 1) * 100)}%` }} />
+    <div>
+      <div className="flex items-center gap-2">
+        <span className="w-12 shrink-0 text-label font-semibold text-ink-soft">{label}</span>
+        <div className="h-1.5 min-w-0 flex-1 rounded-sm bg-bg3">
+          <div className="h-1.5 rounded-sm bg-gold" style={{ width: `${Math.round(Math.min(Math.max(value, 0), 1) * 100)}%` }} />
+        </div>
+        <span className="w-8 shrink-0 text-right font-mono text-micro text-ink">{value.toFixed(2)}</span>
       </div>
-      <span className="w-8 shrink-0 text-right font-mono text-micro text-ink">{value.toFixed(2)}</span>
+      {help && (
+        // pl-14 = the label's w-12 plus the row's gap-2, so the definition
+        // hangs off its own label rather than off the panel edge.
+        <p className="pl-14 text-label leading-snug text-muted">{help}</p>
+      )}
     </div>
   );
 }
@@ -124,7 +144,7 @@ function WhyScoreBlock({ score, measured, meta }: {
         <span className="font-mono text-label uppercase tracking-[0.1em] text-faint">Why this item</span>
         <span className="font-mono text-label text-gold">{score.total.toFixed(2)}</span>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         {axes.map((a) => (
           <ScoreBar key={a.key} label={a.label} value={score[a.key]} help={a.help} />
         ))}
@@ -699,6 +719,27 @@ export function DetailPanel({
               )}
             </p>
           </div>
+
+          {/* The seam to the working (DESIGN.md, the Seam Rule; audit F1's
+              second half). Every figure below — the composite, the four axes,
+              the gold spine — is produced by a blend whose weights, fitted
+              stat prices and stated blind spots live on one page that, until
+              this line, nothing on the site pointed at. Named as the question
+              a visitor actually has rather than as the route it goes to, and
+              placed against the numbers rather than in a footer.
+
+              py-1.5, matching the other four seams: at py-0.5 it came out 18px
+              tall, under the 24px floor of WCAG 2.2 SC 2.5.8, on the surface a
+              phone uses most. */}
+          <p className="mt-1">
+            <a
+              href={toHash.method()}
+              data-testid="method-seam"
+              className="press -mx-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+            >
+              How an item gets its score &rarr;
+            </a>
+          </p>
 
           {/* Said once, where the build is, because the shape of this data is
               not obvious and reads as a recommendation otherwise. Measured:
