@@ -209,6 +209,20 @@ function StateBlock({ board, tierlist, source, ranked }: {
                   never on anything this site models.</>
               : " No community results in this index yet, so nothing below is ranked."}
           </p>
+          {/* The standfirst above has promised "shows its working" since the
+              2026-08-05 positioning change, and for that whole time the page
+              holding the working was reachable only from the nav rail. This is
+              the promise made clickable — the Seam Rule, in the visitor's own
+              words rather than as a route label. */}
+          <p className="mt-2.5">
+            <a
+              href={toHash.method()}
+              data-testid="method-seam"
+              className="press -mx-1 rounded-sm px-1 py-1.5 text-label font-medium text-blue hover:underline"
+            >
+              See the working &rarr;
+            </a>
+          </p>
         </div>
 
         {measured && <WorthActingOn board={board} tierlist={tierlist} source={source} />}
