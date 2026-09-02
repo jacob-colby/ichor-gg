@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.08
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/hercules/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.519280205655527
   god_matches_won: 202
   god_matches_played: 389

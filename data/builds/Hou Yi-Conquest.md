@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/hou-yi/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5301204819277109
   god_matches_won: 660
   god_matches_played: 1245

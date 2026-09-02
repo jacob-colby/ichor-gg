@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.23
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/hua-mulan/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5510204081632653
   god_matches_won: 108
   god_matches_played: 196

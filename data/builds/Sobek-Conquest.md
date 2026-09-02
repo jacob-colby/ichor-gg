@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/sobek/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5609756097560976
   god_matches_won: 460
   god_matches_played: 820

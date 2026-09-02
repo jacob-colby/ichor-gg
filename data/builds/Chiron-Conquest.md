@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.44
   source_url: https://smitebrain.com/gods/chiron/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5042735042735043
   god_matches_won: 177
   god_matches_played: 351

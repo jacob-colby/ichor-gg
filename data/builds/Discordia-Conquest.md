@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.43
   source_url: https://smitebrain.com/gods/discordia/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5219512195121951
   god_matches_won: 214
   god_matches_played: 410

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.06
     win_rate: 0.55
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5080213903743316
   god_matches_won: 95
   god_matches_played: 187

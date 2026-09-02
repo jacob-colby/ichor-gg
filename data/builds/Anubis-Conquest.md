@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.44
   source_url: https://smitebrain.com/gods/anubis/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.4824120603015075
   god_matches_won: 96
   god_matches_played: 199

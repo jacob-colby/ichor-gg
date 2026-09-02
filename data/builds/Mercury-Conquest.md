@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.17
     win_rate: 0.54
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.48226950354609927
   god_matches_won: 68
   god_matches_played: 141

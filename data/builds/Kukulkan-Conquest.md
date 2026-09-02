@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.2
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/kukulkan/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5100502512562815
   god_matches_won: 203
   god_matches_played: 398

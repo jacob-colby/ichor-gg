@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.12
     win_rate: 0.62
   source_url: https://smitebrain.com/gods/tsukuyomi/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.535796766743649
   god_matches_won: 232
   god_matches_played: 433

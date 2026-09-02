@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.52
   source_url: https://smitebrain.com/gods/medusa/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5826972010178118
   god_matches_won: 229
   god_matches_played: 393

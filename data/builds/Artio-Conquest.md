@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.66
   source_url: https://smitebrain.com/gods/artio/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5555555555555556
   god_matches_won: 145
   god_matches_played: 261

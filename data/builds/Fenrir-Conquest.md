@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/fenrir/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5548780487804879
   god_matches_won: 91
   god_matches_played: 164

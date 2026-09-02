@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.1
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/cu-chulainn/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5045992115637319
   god_matches_won: 384
   god_matches_played: 761

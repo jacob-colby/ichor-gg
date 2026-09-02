@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/cerberus/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5769230769230769
   god_matches_won: 255
   god_matches_played: 442

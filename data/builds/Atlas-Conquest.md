@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/atlas/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.502906976744186
   god_matches_won: 173
   god_matches_played: 344

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/anhur/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5313001605136437
   god_matches_won: 331
   god_matches_played: 623

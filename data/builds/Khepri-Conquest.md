@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.21
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/khepri/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.553133514986376
   god_matches_won: 203
   god_matches_played: 367

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.11
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/ne-zha/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5458715596330275
   god_matches_won: 119
   god_matches_played: 218

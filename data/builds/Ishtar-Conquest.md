@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.17
     win_rate: 0.42
   source_url: https://smitebrain.com/gods/ishtar/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.537525354969574
   god_matches_won: 265
   god_matches_played: 493

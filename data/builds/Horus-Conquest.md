@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.77
   source_url: https://smitebrain.com/gods/horus/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.6311188811188811
   god_matches_won: 361
   god_matches_played: 572

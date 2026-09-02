@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.2
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5293040293040293
   god_matches_won: 289
   god_matches_played: 546

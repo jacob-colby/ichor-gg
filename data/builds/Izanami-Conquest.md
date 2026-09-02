@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.45
   source_url: https://smitebrain.com/gods/izanami/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5755102040816327
   god_matches_won: 423
   god_matches_played: 735

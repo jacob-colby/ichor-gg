@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/ah-puch/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.4868421052631579
   god_matches_won: 111
   god_matches_played: 228

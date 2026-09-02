@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.11
     win_rate: 0.45
   source_url: https://smitebrain.com/gods/danzaburou/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.483695652173913
   god_matches_won: 89
   god_matches_played: 184

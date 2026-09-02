@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.07
     win_rate: 0.46
   source_url: https://smitebrain.com/gods/the-morrigan/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5443037974683544
   god_matches_won: 215
   god_matches_played: 395

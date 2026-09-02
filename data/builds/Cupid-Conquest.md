@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.69
   source_url: https://smitebrain.com/gods/cupid/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5965770171149144
   god_matches_won: 244
   god_matches_played: 409

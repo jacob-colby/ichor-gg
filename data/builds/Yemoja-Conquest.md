@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.06
     win_rate: 0.73
   source_url: https://smitebrain.com/gods/yemoja/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5399239543726235
   god_matches_won: 142
   god_matches_played: 263

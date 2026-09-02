@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.47
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.49514563106796117
   god_matches_won: 102
   god_matches_played: 206

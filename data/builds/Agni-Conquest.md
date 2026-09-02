@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.11
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/agni/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5616591928251121
   god_matches_won: 501
   god_matches_played: 892

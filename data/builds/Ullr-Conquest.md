@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.523725834797891
   god_matches_won: 298
   god_matches_played: 569
