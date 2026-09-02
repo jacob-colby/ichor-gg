@@ -797,3 +797,52 @@ describe("DetailPanel — underrated for this god", () => {
     expect(screen.queryByRole("heading", { name: /underrated/i })).not.toBeInTheDocument();
   });
 });
+
+/* F8. Chronos' Pendant on Ra reads 0.54 in Conquest and 0.62 in Joust, and
+ * nothing on the page said the denominator had changed. The per-row caveat
+ * names what is missing; it does not say what that does to the number beside
+ * it, which is where a reader concludes the build is simply better in Joust. */
+describe("DetailPanel — the score's scale across modes", () => {
+  beforeEach(() => localStorage.clear());
+
+  const items = [itemFx("A", 2650)];
+  const scored = { A: { total: 0.62, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.8 } };
+  const joust = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
+    { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+      rationale: "", slot_scores: scored },
+  ] }];
+  const conquest = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+    { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+      slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6 }] },
+    { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+      rationale: "", slot_scores: scored },
+  ] }];
+  const signals = { efficiency: 0.35, win: 0.45, pick: 0.05, fit: 0.15 };
+
+  it("says the score is on a different scale where two signals are missing", () => {
+    render(panel({ items, builds: joust as never, mode: "Joust", signals }));
+    const note = screen.getByTestId("mode-scale-note");
+    expect(note).toHaveTextContent(/no community data in joust/i);
+    expect(note).toHaveTextContent(/own scale/i);
+    expect(note).toHaveTextContent(/do not compare/i);
+  });
+
+  it("states the weights the pipeline actually renormalised to", () => {
+    render(panel({ items, builds: joust as never, mode: "Joust", signals }));
+    // 0.35 and 0.15 over their own sum — the same arithmetic the Method page
+    // prints for the Model build, not a number typed into the copy.
+    expect(screen.getByTestId("mode-scale-note")).toHaveTextContent("0.70 / 0.30");
+  });
+
+  it("still renders the note when the index ships no weights", () => {
+    render(panel({ items, builds: joust as never, mode: "Joust" }));
+    const note = screen.getByTestId("mode-scale-note");
+    expect(note).toHaveTextContent(/own scale/i);
+    expect(note).not.toHaveTextContent("/");
+  });
+
+  it("says nothing in a mode where all four signals are measured", () => {
+    render(panel({ items, builds: conquest as never, signals }));
+    expect(screen.queryByTestId("mode-scale-note")).not.toBeInTheDocument();
+  });
+});
