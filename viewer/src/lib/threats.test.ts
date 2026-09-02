@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { deriveThreats, threatOverlay, damageOverlay } from "./threats";
+import { deriveThreats, threatOverlay, damageOverlay, threatAnswer } from "./threats";
 import type { God, DraftConfig, ThreatModel } from "../types";
 
 const god = (name: string, damage_type: string, specs: string[] = []): God =>
@@ -291,5 +291,55 @@ describe("threatOverlay — a defensive bonus respects the god's archetype", () 
   it("falls back to flat for an index built before defense_affinity shipped", () => {
     const o = threatOverlay(threats, CFG2, god("G", "physical"));
     expect(o.stats["Magical Protection"]).toBeGreaterThan(0);
+  });
+});
+
+/* F10. The board raised `1/5 healing · Aphrodite` and the core silently
+ * contained no anti-heal, with nothing to tell a reader whether that was a
+ * judgement or an oversight. */
+describe("threatAnswer", () => {
+  const cfg = {
+    max_bonus: 0.12, per_share: 0.1, ally_covered: -0.5, ally_gap: 0.5,
+    tag_bonus: { healers: { "anti-heal": 2 } },
+    stat_bonus: { magical: { "Magical Protection": 1 } },
+    relics: { walls: { item: "Shell of Rebuke", because: "walks your team out" } },
+  } as DraftConfig;
+  const items = {
+    "Divine Ruin": { effect_tags: ["anti-heal"], stats: { Intelligence: 70 } },
+    "Genji's Guard": { effect_tags: [], stats: { "Magical Protection": 60 } },
+    "Rod of Tahuti": { effect_tags: [], stats: { Intelligence: 120 } },
+  };
+
+  it("names the core item that answers a threat", () => {
+    expect(threatAnswer("healers", ["Rod of Tahuti", "Divine Ruin"], items, cfg))
+      .toEqual({ kind: "answered", by: ["Divine Ruin"] });
+  });
+
+  it("answers on the stat channel too, not only on tags", () => {
+    expect(threatAnswer("magical", ["Genji's Guard"], items, cfg))
+      .toEqual({ kind: "answered", by: ["Genji's Guard"] });
+  });
+
+  /* `threatOverlay` raises everything carrying the threat's tags or stats the
+   * moment its count is non-zero, so a threat with either map WAS weighed. The
+   * page may say so without claiming anything the model didn't do. */
+  it("reports a threat with an item channel and no answer in the core as weighed", () => {
+    expect(threatAnswer("healers", ["Rod of Tahuti"], items, cfg)).toEqual({ kind: "weighed" });
+  });
+
+  it("separates a threat the model cannot answer with an item at all", () => {
+    // `walls` has neither a tag_bonus nor a stat_bonus entry — the model
+    // offers a relic instead, and that is a different fact from "considered
+    // and nothing won a slot".
+    expect(threatAnswer("walls", ["Divine Ruin"], items, cfg)).toEqual({ kind: "no-item-channel" });
+  });
+
+  it("claims no answer when the config is missing", () => {
+    expect(threatAnswer("healers", ["Divine Ruin"], items, undefined))
+      .toEqual({ kind: "no-item-channel" });
+  });
+
+  it("ignores a core name the item table doesn't have", () => {
+    expect(threatAnswer("healers", ["Nonexistent"], items, cfg)).toEqual({ kind: "weighed" });
   });
 });

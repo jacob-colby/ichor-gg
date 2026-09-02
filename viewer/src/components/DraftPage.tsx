@@ -19,7 +19,7 @@ import type { BuildNote, DraftConfig, God, Item } from "../types";
 import { toHash } from "../lib/useHashRoute";
 import { useDraft, MODE_TEAM_SIZE, encodeDraftHash, nextEmptySlot, pickerSlotLabel, type DraftMode } from "../lib/draft";
 import { useDraftResult } from "../lib/useDraftResult";
-import type { ThreatKey } from "../lib/threats";
+import { threatAnswer, type ThreatKey } from "../lib/threats";
 import { Icon, Slot, GodPickerModal } from "./DraftControls";
 
 const THREAT_DEFS: { key: ThreatKey; label: string; answer: string }[] = [
@@ -514,6 +514,13 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               // predicate over the same enemies, so the list's length is the
               // count — one source, not two that could disagree.
               const who = culprits[t.key];
+              /* F10. A named threat that changed nothing left the reader
+                 unable to tell "weighed and nothing beat the core" from "never
+                 considered". Every other row on this page states its
+                 reasoning; this one went quiet exactly where it mattered. */
+              const answer = who.length > 0
+                ? threatAnswer(t.key, result?.adapted.core ?? [], itemsByName, draftConfig)
+                : null;
               return (
                 <li key={t.key} className="flex flex-wrap items-baseline gap-x-2 border-b border-line py-1 text-label">
                   <span className={`font-mono ${who.length > 0 ? "text-ink-soft" : "text-faint"}`}>{who.length}/{roster}</span>
@@ -521,6 +528,22 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                   {who.length > 0
                     ? <span className="min-w-0 truncate text-faint">{who.join(", ")}</span>
                     : <span className="text-faint">—</span>}
+                  {answer && (
+                    <span className="basis-full truncate text-label text-faint">
+                      {answer.kind === "answered" ? (
+                        <><span className="text-under">answered</span> · {answer.by.join(", ")}</>
+                      ) : answer.kind === "weighed" ? (
+                        // True by construction: `threatOverlay` raises every
+                        // item carrying this threat's tags or stats the moment
+                        // the count is non-zero. Nothing carrying them won a slot.
+                        <>weighed · nothing that answers it outscored the core</>
+                      ) : (
+                        // `walls` is the only one, and the relic row above says
+                        // what the model offers instead.
+                        <>no item answers this{draftConfig?.relics?.[t.key] ? " · relic only" : ""}</>
+                      )}
+                    </span>
+                  )}
                 </li>
               );
             })}

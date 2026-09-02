@@ -417,3 +417,72 @@ describe("DraftPage", () => {
     screen.getAllByText("2500g").forEach((c) => expect(c).not.toHaveClass("text-gold"));
   });
 });
+
+/* F10. The draft board is the best surface on the site at naming its own
+ * reasoning — which is exactly why a threat it raises and then does nothing
+ * about stands out. The reader could not tell a judgement from an oversight. */
+describe("DraftPage — a named threat that changed nothing", () => {
+  /** No anti-heal item exists at all, so the healing threat can be weighed and
+   *  still lose every slot. */
+  const noAnswer = [item("Alpha"), item("Beta"), item("Gamma"), item("Delta"),
+    item("Epsilon"), item("Zeta")];
+
+  it("says a threat was weighed when the core still doesn't answer it", () => {
+    render(<DraftPage gods={GODS} items={noAnswer} builds={[]}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    const healing = threats.getByText("healing").parentElement!;
+    expect(healing).toHaveTextContent("1/5");
+    expect(healing).toHaveTextContent(/weighed · nothing that answers it outscored the core/i);
+  });
+
+  it("names the item when the core does answer it", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    const healing = threats.getByText("healing").parentElement!;
+    expect(healing).toHaveTextContent(/answered · AntiHeal/);
+    expect(healing).not.toHaveTextContent(/weighed/i);
+  });
+
+  /* A threat with no tag_bonus and no stat_bonus was never in the running for
+   * a core slot — a different fact from "considered and beaten", and the one
+   * the relic row exists to answer. */
+  it("separates a threat the model cannot answer with an item at all", () => {
+    const waller = god("Waller", { threat_kit: { wall: 1, heal: 0, hard_cc: 0 } } as Partial<God>);
+    const cfg: DraftConfig = { ...DRAFT_CFG,
+      relics: { walls: { item: "Shell of Rebuke", because: "walks your team out of their walls" } } };
+    render(<DraftPage gods={[...GODS, waller]} items={ITEMS} builds={[]}
+      godItemScores={{ ...GOD_ITEM_SCORES, Waller: { conquest: { Alpha: 0.5 }, joust: { Alpha: 0.5 }, arena: { Alpha: 0.5 } } }}
+      draftConfig={cfg} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("Waller"));
+    const threats = within(screen.getByTestId("draft-threats"));
+    const walls = threats.getByText("player-made walls").parentElement!;
+    expect(walls).toHaveTextContent("1/5");
+    expect(walls).toHaveTextContent(/no item answers this · relic only/i);
+  });
+
+  it("stays silent about a threat the enemies don't pose", () => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={[]}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    // `0/5 crit —` is a measured zero and already reads correctly; it has no
+    // answer to report because there is nothing to answer.
+    const crit = within(screen.getByTestId("draft-threats")).getByText("crit").parentElement!;
+    expect(crit).not.toHaveTextContent(/weighed|answered|no item answers/i);
+  });
+});
