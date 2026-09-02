@@ -817,32 +817,28 @@ describe("DetailPanel — the score's scale across modes", () => {
     { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
       rationale: "", slot_scores: scored },
   ] }];
-  const signals = { efficiency: 0.35, win: 0.45, pick: 0.05, fit: 0.15 };
-
   it("says the score is on a different scale where two signals are missing", () => {
-    render(panel({ items, builds: joust as never, mode: "Joust", signals }));
+    render(panel({ items, builds: joust as never, mode: "Joust" }));
     const note = screen.getByTestId("mode-scale-note");
     expect(note).toHaveTextContent(/no community data in joust/i);
     expect(note).toHaveTextContent(/own scale/i);
     expect(note).toHaveTextContent(/do not compare/i);
   });
 
-  it("states the weights the pipeline actually renormalised to", () => {
-    render(panel({ items, builds: joust as never, mode: "Joust", signals }));
-    // 0.35 and 0.15 over their own sum — the same arithmetic the Method page
-    // prints for the Model build, not a number typed into the copy.
-    expect(screen.getByTestId("mode-scale-note")).toHaveTextContent("0.70 / 0.30");
-  });
-
-  it("still renders the note when the index ships no weights", () => {
+  /* The note must not print weights. `index.json` ships only Conquest's
+   * `method.signals`; Joust and Arena carry their own 0.50 / 0.50 in
+   * `_weights.yaml` and it is NOT Conquest's 0.35 / 0.15 renormalised, which
+   * would read 0.70 / 0.30. Measured on the running app: Spear of Desolation
+   * on Ra is 0.79 in Joust, which 0.50 / 0.50 reproduces exactly and the
+   * renormalisation misses by 0.09. A number the viewer cannot get right does
+   * not belong in a line whose whole job is to be trusted about scale. */
+  it("does not state weights the index does not ship", () => {
     render(panel({ items, builds: joust as never, mode: "Joust" }));
-    const note = screen.getByTestId("mode-scale-note");
-    expect(note).toHaveTextContent(/own scale/i);
-    expect(note).not.toHaveTextContent("/");
+    expect(screen.getByTestId("mode-scale-note")).not.toHaveTextContent(/0\.\d\d\s*\/\s*0\.\d\d/);
   });
 
   it("says nothing in a mode where all four signals are measured", () => {
-    render(panel({ items, builds: conquest as never, signals }));
+    render(panel({ items, builds: conquest as never }));
     expect(screen.queryByTestId("mode-scale-note")).not.toBeInTheDocument();
   });
 });

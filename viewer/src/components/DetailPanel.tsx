@@ -16,7 +16,7 @@
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type {
-  BuildEntry, BuildNote, CuratedBuildEntry, God, Item, MethodData, SlotScore,
+  BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
   dedupeCoreAgainstModel, communityRecordedItems, splitRationale } from "../lib/builds";
@@ -73,10 +73,6 @@ interface DetailPanelProps {
    *  whatever the build filenames sorted to. */
   modeOrder?: string[];
   starters?: { base: string; upgrade: string }[];
-  /** The pipeline's own blend weights, so the scale note states what was
-   *  actually used rather than a restatement of it. Optional — an older index
-   *  simply leaves the two renormalised figures out of the sentence. */
-  signals?: MethodData["signals"];
   onReload?: () => void;
   /** Controlled by App — the portrait carries the toggle now, so this panel
    *  reads the state rather than owning it. Defaults keep the component
@@ -465,7 +461,11 @@ function UnderratedList({ god, names }: { god: string; names: string[] }) {
           <span className="font-mono">{shown.length}</span> of{" "}
           <span className="font-mono">{names.length}</span> the model rates highly and this
           god&rsquo;s players rarely buy ·{" "}
-          <a href={toHash.method()} className="press rounded-sm text-blue hover:underline">
+          {/* F11 again, from the other side: an 11px inline link is a 14px
+              tall target. The padding is vertical only and the element stays
+              inline, so the hit box clears 24px without opening up the line
+              it sits in. */}
+          <a href={toHash.method()} className="press -my-1.5 rounded-sm py-1.5 text-blue hover:underline">
             how that&rsquo;s decided
           </a>
         </p>
@@ -493,7 +493,7 @@ function UnderratedList({ god, names }: { god: string; names: string[] }) {
 
 export function DetailPanel({
   god, godData, items, builds, mode, onModeChange, modeOrder, starters = [],
-  signals, aspectOn: aspectProp, onAspectChange,
+  aspectOn: aspectProp, onAspectChange,
 }: DetailPanelProps) {
   const godNotes = builds.filter((b) => b.god === god);
   const note = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
@@ -648,15 +648,6 @@ export function DetailPanel({
   // unmeasured too — pick falls to a literal zero and win to this god's median,
   // and both then print exactly like a measurement. F2.
   const measuredMode = !!communityEntry;
-  /* What the pipeline actually renormalises to when win and pick are switched
-     off: the two survivors over their own sum. Same arithmetic the Method page
-     prints for the Model build. */
-  const renormalised = (() => {
-    if (!signals) return null;
-    const sum = signals.efficiency + signals.fit;
-    if (!(sum > 0)) return null;
-    return { eff: (signals.efficiency / sum).toFixed(2), fit: (signals.fit / sum).toFixed(2) };
-  })();
   const recordedItems = communityRecordedItems(communityEntry);
   const axisStateFor = (name: string): AxisState =>
     !measuredMode ? "mode-unmeasured"
@@ -811,8 +802,13 @@ export function DetailPanel({
 
           {/* F8. Same god, same item, a different number in each mode — and
               nothing said the denominator had changed. A mode with no community
-              entry drops two of the four signals and renormalises over the
-              other two, so its scores are on their own scale; a reader
+              entry scores on two of the four signals under its own weights
+              (Joust and Arena are 0.50 / 0.50 in `_weights.yaml`, NOT
+              Conquest's 0.35 / 0.15 renormalised, which would be 0.70 / 0.30
+              — measured: Spear of Desolation on Ra reads 0.79 in Joust and the
+              renormalisation predicts 0.70). Those per-mode weights are not in
+              `index.json`, so this line does not print numbers it cannot get
+              right; a reader
               comparing a Joust 0.69 to a Conquest 0.69 is comparing a two-
               signal number to a four-signal one. The per-row "win/pick not
               measured here" says what is missing and not what that does to the
@@ -824,14 +820,9 @@ export function DetailPanel({
           {!measuredMode && scores && (
             <p data-testid="mode-scale-note" className="mt-2 max-w-[70ch] text-small leading-relaxed text-muted">
               <span className="text-premium">No community data in {note.mode}.</span>{" "}
-              These scores are value and fit alone
-              {renormalised && (
-                <>, renormalised to{" "}
-                  <span className="font-mono text-ink-soft">{renormalised.eff}</span> /{" "}
-                  <span className="font-mono text-ink-soft">{renormalised.fit}</span></>
-              )}
-              {" "}— where Conquest blends four. They are on their own scale, so the same
-              item&rsquo;s Conquest score is not the same measurement and the two do not compare.
+              These scores are value and fit alone, weighted for this mode — where Conquest
+              blends four signals. They are on their own scale: the same item&rsquo;s Conquest
+              score is not the same measurement, and the two numbers do not compare.
             </p>
           )}
 

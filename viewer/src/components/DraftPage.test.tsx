@@ -453,6 +453,22 @@ describe("DraftPage — a named threat that changed nothing", () => {
     expect(healing).not.toHaveTextContent(/weighed/i);
   });
 
+  /* Against a three-tank comp six of Ra's items carry penetration or shred.
+   * Naming all six in a 340px column is the same dump F7 is about, and
+   * `truncate` would drop the tail without saying it had. */
+  it("names two answers and counts the rest", () => {
+    const many = ["Alpha", "Beta", "Gamma", "Delta"].map((n) => item(n, ["anti-heal"]))
+      .concat([item("Epsilon"), item("Zeta")]);
+    render(<DraftPage gods={GODS} items={many} builds={[]}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+    const healing = within(screen.getByTestId("draft-threats")).getByText("healing").parentElement!;
+    expect(healing).toHaveTextContent(/answered · Alpha, Beta \+2/);
+  });
+
   /* A threat with no tag_bonus and no stat_bonus was never in the running for
    * a core slot — a different fact from "considered and beaten", and the one
    * the relic row exists to answer. */

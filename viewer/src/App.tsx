@@ -276,7 +276,6 @@ function App() {
                 onModeChange={setMode}
                 modeOrder={data.modes}
                 starters={data.starters ?? []}
-                signals={data.method?.signals}
                 aspectOn={aspectOn}
                 onAspectChange={setAspectOn}
               />

@@ -531,7 +531,16 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                   {answer && (
                     <span className="basis-full truncate text-label text-faint">
                       {answer.kind === "answered" ? (
-                        <><span className="text-under">answered</span> · {answer.by.join(", ")}</>
+                        // Two names and a count, not the whole list: against a
+                        // three-tank comp six of Ra's items carry penetration
+                        // or shred, and naming all six in a 340px column is the
+                        // dump F7 is about. `truncate` would hide the tail
+                        // silently, which is worse than saying how long it is.
+                        <>
+                          <span className="text-under">answered</span> ·{" "}
+                          {answer.by.slice(0, 2).join(", ")}
+                          {answer.by.length > 2 && ` +${answer.by.length - 2}`}
+                        </>
                       ) : answer.kind === "weighed" ? (
                         // True by construction: `threatOverlay` raises every
                         // item carrying this threat's tags or stats the moment

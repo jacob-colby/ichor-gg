@@ -185,7 +185,6 @@ export function SubjectFrame({
                     on={aspectOn}
                     onToggle={onToggleAspect}
                     changesBuild={aspectChangesBuild}
-                    className="h-5 w-5"
                   />
                 )}
               </div>

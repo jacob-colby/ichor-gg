@@ -282,6 +282,16 @@ describe("SubjectFrame — the aspect badge sits on the portrait", () => {
       .toHaveAttribute("aria-pressed", "true");
   });
 
+  /* F11. The size lives in AspectBadge now, so the two call sites cannot
+   * disagree with it. This asserts the portrait is one of the two that stopped
+   * sending one — AspectBadge.test.tsx checks what the box comes out as. */
+  it("does not send the toggle a size of its own", () => {
+    render(frame({ god: raWithAspect, onToggleAspect: () => {} }));
+    const button = screen.getByRole("button", { name: /Thermotherapy/i });
+    const sizes = button.className.split(/\s+/).filter((c) => /^[hw]-\d/.test(c));
+    expect(sizes.sort()).toEqual(["h-6", "w-6"]);
+  });
+
   it("says when the aspect has no scoring overlay behind it", () => {
     // 65 of the 72 gods with an aspect. A control that can be pressed and
     // changes nothing has to say so, or it reads as broken.
