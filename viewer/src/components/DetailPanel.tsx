@@ -19,7 +19,7 @@ import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
-  dedupeCoreAgainstModel, communityRecordedItems } from "../lib/builds";
+  dedupeCoreAgainstModel, communityRecordedItems, splitRationale } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
@@ -431,6 +431,62 @@ function LedgerRowView({
   );
 }
 
+/** How many underrated items read as a recommendation rather than a category.
+ *  The lists themselves run to 39. */
+const UNDERRATED_SHOWN = 5;
+
+/** F7. "Underrated for this god" as a short ranked list instead of a run-on
+ * sentence naming a median of 25 items.
+ *
+ * The claim was always fine — the Method page's definition (top 30% on
+ * efficiency and fit, pick at or below 15%) makes every name on it legitimate,
+ * and the lists are recomputed from current data rather than stale. What broke
+ * was the format: 25 undifferentiated names, in prose, against a pool of 226,
+ * with no ordering visible, no cut-off stated, and the build's own items among
+ * them. That is a category, not a recommendation, and "underrated" is a claim.
+ *
+ * So: the strongest few, in the pipeline's own ranking order, with the count it
+ * came from, a route to the definition (nothing else on this page has one), and
+ * the remainder one press away rather than dropped.
+ */
+function UnderratedList({ god, names }: { god: string; names: string[] }) {
+  const [showAll, setShowAll] = useState(false);
+  const shown = showAll ? names : names.slice(0, UNDERRATED_SHOWN);
+  const more = names.length - UNDERRATED_SHOWN;
+  return (
+    <div className="mt-3.5">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+        <h3 className={eyebrow}>Underrated for {god}</h3>
+        <p className="text-label text-muted">
+          <span className="font-mono">{shown.length}</span> of{" "}
+          <span className="font-mono">{names.length}</span> the model rates highly and this
+          god&rsquo;s players rarely buy ·{" "}
+          <a href={toHash.method()} className="press rounded-sm text-blue hover:underline">
+            how that&rsquo;s decided
+          </a>
+        </p>
+      </div>
+      <ul className="mt-1.5 flex flex-wrap gap-1.5">
+        {shown.map((name) => (
+          <li key={name}>
+            <a href={toHash.item(name)}
+              className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
+              <ItemIcon name={name} className="h-6 w-6" />
+              <span className="max-w-[18ch] truncate text-small text-ink">{name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {more > 0 && (
+        <button type="button" onClick={() => setShowAll((v) => !v)}
+          className="press mt-1.5 rounded-sm px-1 py-1 text-small text-blue hover:underline">
+          {showAll ? `Show the top ${UNDERRATED_SHOWN}` : `Show all ${names.length}`}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export function DetailPanel({
   god, godData, items, builds, mode, onModeChange, modeOrder, starters = [],
   aspectOn: aspectProp, onAspectChange,
@@ -600,6 +656,16 @@ export function DetailPanel({
     communityOrder: compareToMeta ? communityEntry!.slot_order : undefined,
     flexSlots: flexList,
   });
+
+  /* F7. The pipeline appends every underrated item to the rationale string,
+     and the page printed all of them as one run-on sentence — a median of 25
+     names, an average of 2.8 of which are in the six-item core directly above.
+     Items already on this ledger are dropped: the row carries `off-meta` for
+     exactly that fact, and naming them again is the part of the list that
+     reads as an error. */
+  const rationale = splitRationale(!community ? (active as CuratedBuildEntry).rationale : undefined);
+  const onLedger = new Set(ledger.rows.filter((r) => r.status !== "removed").map((r) => r.name));
+  const underrated = rationale.underrated.filter((n) => !onLedger.has(n));
 
   const popularItems = communityEntry?.popular_items ?? [];
   const suggestedCore = note.builds.find(
@@ -944,9 +1010,14 @@ export function DetailPanel({
       )}
 
       {!community && (active as CuratedBuildEntry).rationale && (
-        <p className="mt-6 max-w-[74ch] border-t border-line pt-3 text-small leading-relaxed text-muted">
-          {(active as CuratedBuildEntry).rationale}
-        </p>
+        <div className="mt-6 max-w-[74ch] border-t border-line pt-3">
+          {rationale.lead && (
+            <p className="text-small leading-relaxed text-muted">{rationale.lead}</p>
+          )}
+          {underrated.length > 0 && (
+            <UnderratedList god={god} names={underrated} />
+          )}
+        </div>
       )}
     </article>
   );

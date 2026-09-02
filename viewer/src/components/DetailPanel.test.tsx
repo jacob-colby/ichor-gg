@@ -718,3 +718,82 @@ describe("DetailPanel — modes come from the data", () => {
     expect(screen.queryByRole("group", { name: "Game mode" })).not.toBeInTheDocument();
   });
 });
+
+/* F7. The list was legitimate and unreadable: a median of 25 names against a
+ * pool of 226, rendered as prose, ordering invisible, cut-off unstated, and
+ * with a mean of 2.8 items already sitting in the core printed above it. */
+describe("DetailPanel — underrated for this god", () => {
+  beforeEach(() => localStorage.clear());
+
+  const items = [itemFx("A", 2650), itemFx("B", 2350), itemFx("C", 3000)];
+  const long = ["C", "D", "E", "F", "G", "H", "I"];
+  const withUnderrated = (names: string[]) => ([{
+    type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [],
+        rationale: `Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: ${names.join(", ")}.` },
+    ],
+  }]);
+
+  it("keeps the rationale prose and drops the run-on sentence", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    expect(screen.getByText(/top weighted-score core/i)).toBeInTheDocument();
+    expect(screen.queryByText(/underrated for this god: C, D/i)).not.toBeInTheDocument();
+  });
+
+  it("shows the top five as links, not all of them as text", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    for (const n of ["C", "D", "E", "F", "G"]) {
+      expect(screen.getByRole("link", { name: n })).toHaveAttribute("href", `#/items/${n}`);
+    }
+    expect(screen.queryByRole("link", { name: "H" })).not.toBeInTheDocument();
+  });
+
+  it("says how many it is showing out of how many there are", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    const head = screen.getByRole("heading", { name: /underrated for chiron/i }).parentElement!;
+    expect(head).toHaveTextContent(/5 of 7/);
+    expect(head).toHaveTextContent(/rarely buy/i);
+    expect(screen.getByRole("button", { name: /show all 7/i })).toBeInTheDocument();
+  });
+
+  it("hides nothing — the rest are one press away", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    fireEvent.click(screen.getByRole("button", { name: /show all 7/i }));
+    expect(screen.getByRole("link", { name: "H" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "I" })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /show the top 5/i }));
+    expect(screen.queryByRole("link", { name: "H" })).not.toBeInTheDocument();
+  });
+
+  /* The part that read as an error: naming the build's own items as things
+   * nobody builds, directly under the build. The row already carries
+   * `off-meta` for that fact. */
+  it("does not name items that are already in the build above it", () => {
+    render(panel({ items, builds: withUnderrated(["A", "B", "C", "D"]) as never }));
+    const list = screen.getByRole("heading", { name: /underrated for chiron/i }).closest("div")!.parentElement!;
+    expect(within(list).queryByRole("link", { name: "A" })).not.toBeInTheDocument();
+    expect(within(list).queryByRole("link", { name: "B" })).not.toBeInTheDocument();
+    expect(within(list).getByRole("link", { name: "C" })).toBeInTheDocument();
+    // ...and the count is of what's left, not of what the pipeline sent.
+    expect(screen.queryByRole("button", { name: /show all/i })).not.toBeInTheDocument();
+  });
+
+  /* "Underrated" is a claim, and the page that defines it was reachable only
+   * from the nav rail. The Seam Rule: name the destination in the reader's
+   * terms, where the claim is made. */
+  it("routes to the definition of the claim", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    expect(screen.getByRole("link", { name: /how that.s decided/i }))
+      .toHaveAttribute("href", "#/method");
+  });
+
+  it("renders nothing when the rationale carries no list", () => {
+    const plain = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+        rationale: "For fun — deliberately fights this god's kit." },
+    ] }];
+    render(panel({ items, builds: plain as never }));
+    expect(screen.getByText(/deliberately fights this god/i)).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /underrated/i })).not.toBeInTheDocument();
+  });
+});
