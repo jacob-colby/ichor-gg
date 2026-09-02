@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { toHash } from "../lib/useHashRoute";
 
 function Swatch({ className }: { className: string }) {
   return <span className={`inline-block h-2 w-2 rounded-full ${className}`} />;
@@ -71,15 +72,45 @@ export function Legend({ onClose }: { onClose: () => void }) {
           <span className="inline-flex items-center gap-1.5"><Swatch className="bg-gold" />The model&rsquo;s own signal</span>
         </div>
 
+        {/* Every claim on this list is checked against what the app actually
+            renders, not against what it used to. The 2026-08-23 audit (F3)
+            found four stale strings here at once — the retired
+            model-versus-meta positioning, a "Suggested" tab, a "BUILD ORDER"
+            heading, and an aspect claim true for 7 gods of 73 — because this
+            copy was written once and the surfaces moved underneath it. The
+            tests beside this file pin each one to the string the UI renders. */}
         <ul className="flex flex-col gap-2 text-body text-muted">
-          <li><b className="text-ink">Home</b> ranks every lane by how far our model and the community&rsquo;s meta disagree. <b className="text-ink">Pick a god</b> anywhere to see its builds.</li>
-          <li><b className="text-ink">Suggested</b> tabs are our scoring engine&rsquo;s picks (a heuristic). <b className="text-ink">Community</b> is SmiteBrain&rsquo;s high-elo meta. <b className="text-ink">Your</b> saved builds are the named tabs.</li>
-          <li><b className="text-ink">Flavors</b> (crit / burst / bruiser / anti-tank) re-weight the build; the <b className="text-ink">Aspect</b> toggle swaps to that god&rsquo;s aspect build; the <b className="text-ink">Conquest / Joust / Arena</b> toggle changes mode, which re-weights the build and can drop items that mode&rsquo;s shop doesn&rsquo;t stock.</li>
-          <li><b className="text-ink">BUILD ORDER</b> is a recommended buy order; <b className="text-ink">flex</b> slots are the ones situational swaps replace.</li>
+          <li><b className="text-ink">Home</b> ranks gods on their own win rates in top-ranked Conquest play &mdash; never on anything this site models. <b className="text-ink">Pick a god</b> anywhere to see its builds.</li>
+          <li><b className="text-ink">Model</b> is this site&rsquo;s own answer, with the community switched off. <b className="text-ink">Community</b> is SmiteBrain&rsquo;s high-elo meta. <b className="text-ink">Hybrid</b> keeps the model&rsquo;s strongest picks and lets real results fill the rest. Your saved builds are the named tabs.</li>
+          <li><b className="text-ink">Balanced</b> and the flavour tabs (crit / burst / bruiser / anti-tank &hellip;) re-weight the same signals; the <b className="text-ink">Conquest / Joust / Arena</b> toggle changes mode, which re-weights the build and can drop items that mode&rsquo;s shop doesn&rsquo;t stock.</li>
+          <li>The <b className="text-ink">Aspect</b> hexagon on a god&rsquo;s portrait switches to that god&rsquo;s aspect. It always changes the kit text; on most gods it leaves the six items alone, because only a few aspects have their own scoring behind them.</li>
+          <li><b className="text-ink">BUY ORDER</b> is a recommended buy order; <b className="text-ink">flex</b> slots are the ones situational swaps replace.</li>
           <li>The <b className="text-ink">Items</b> shop rates every item <b className="text-under">Undervalued</b> / <b className="text-ink">Fair</b> / <b className="text-premium">Premium</b> by gold efficiency, with filters.</li>
-          <li>Gods and items the community hasn&rsquo;t scored are shown <b className="text-ink">unranked</b> — never given an invented tier.</li>
-          <li>Your builds save in <b className="text-ink">your browser</b> (nothing is uploaded). Scores are heuristics — a fan project, not official.</li>
+          <li>Gods and items the community hasn&rsquo;t scored are shown <b className="text-ink">not measured</b> &mdash; never given an invented tier.</li>
+          <li>Your builds save in <b className="text-ink">your browser</b> (nothing is uploaded). Scores are heuristics &mdash; a fan project, not official.</li>
         </ul>
+
+        {/* The one thing this dialog could never answer in seven bullets, and
+            the page a lost visitor is actually looking for. It was reachable
+            only from the nav rail, last of six. */}
+        <div className="mt-4 border-t border-line pt-3">
+          <p className="text-body text-muted">
+            <b className="text-ink">Every score on this site decomposes.</b> The signal weights, the
+            fitted gold price of each stat, and what the model cannot see are all written down.
+          </p>
+          {/* On its own line rather than inline in the sentence: this is the
+              control a lost visitor is meant to press, and inline it came out
+              16px tall — inside SC 2.5.8's inline exception, but under the
+              floor for the one link in this dialog that goes anywhere. */}
+          <a
+            href={toHash.method()}
+            onClick={onClose}
+            data-testid="legend-method-seam"
+            className="press -mx-1 mt-1 inline-block rounded-sm px-1 py-1.5 text-body font-medium text-blue hover:underline"
+          >
+            How the model decides &rarr;
+          </a>
+        </div>
 
         {/* The footer used to hold this on every screen, forever — 43px of
             permanent chrome for a disclaimer you read once. It lives here now,
