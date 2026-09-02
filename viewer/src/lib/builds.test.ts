@@ -7,6 +7,7 @@ import {
   applySwap,
   tabLabel,
   dedupeCoreAgainstModel,
+  communityRecordedItems,
 } from "./builds";
 import type { BuildEntry, CommunityBuildEntry, CuratedBuildEntry } from "../types";
 
@@ -188,5 +189,43 @@ describe("dedupeCoreAgainstModel", () => {
     const six = ["A", "B", "C", "D", "E", "F"];
     const input = [b("core", six), b("crit", six)];
     expect(dedupeCoreAgainstModel(input)).toEqual(input);
+  });
+});
+
+/* F2. The set the god page asks before it renders `win` and `pick` as
+ * measurements. Its domain has to match the pipeline's `lookup_rates` exactly:
+ * slot picks first, then the slots' alternates, and nothing else. */
+describe("communityRecordedItems", () => {
+  const entry: CommunityBuildEntry = {
+    source: "community",
+    aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+    source_url: "u",
+    slot_order: [
+      { name: "Tyrfing", pick_rate: 0.51, win_rate: 0.62,
+        alternates: [{ name: "Transcendence", pick_rate: 0.16, win_rate: 0.64 }] },
+      { name: "Riptalon", pick_rate: 0.15, win_rate: 0.54 },
+    ],
+    popular_items: [{ name: "Tyrfing", pick_rate: 0.51, win_rate: 0.62 }],
+  };
+
+  it("counts the community's own slot picks", () => {
+    const seen = communityRecordedItems(entry);
+    expect(seen.has("Tyrfing")).toBe(true);
+    expect(seen.has("Riptalon")).toBe(true);
+  });
+
+  it("counts an item recorded only as a slot alternate", () => {
+    // The row for one of these prints a real pick/win pair, so it is a
+    // measurement and must not be captioned as an absence.
+    expect(communityRecordedItems(entry).has("Transcendence")).toBe(true);
+  });
+
+  it("excludes an item the entry has no record of at all", () => {
+    expect(communityRecordedItems(entry).has("Rod of Tahuti")).toBe(false);
+  });
+
+  it("is empty for a mode with no community entry, and for a model build", () => {
+    expect(communityRecordedItems(undefined).size).toBe(0);
+    expect(communityRecordedItems(mineEntry).size).toBe(0);
   });
 });

@@ -19,7 +19,7 @@ import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
-  dedupeCoreAgainstModel } from "../lib/builds";
+  dedupeCoreAgainstModel, communityRecordedItems } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
@@ -49,6 +49,18 @@ const AXES: { key: keyof Omit<SlotScore, "total">; label: string; help: string }
   { key: "pick", label: "pick", help: "How often this god's players buy it, among matches that got that far" },
   { key: "fit", label: "fit", help: "How well the item's stats match this god's kit" },
 ];
+
+/** Whether `win` and `pick` on one row are a measurement, and if not, why not.
+ *
+ * F2. There are two different absences behind the same pair of numbers and
+ * PRODUCT.md Principle 3 forbids rendering them the same way as a measurement:
+ *  - `mode-unmeasured` — Joust and Arena ship no community entry at all.
+ *  - `item-unmeasured` — the mode has one, but it carries no record of THIS
+ *    item on THIS god. 236 of the 582 Conquest core rows in the shipped index.
+ *    These used to print `win 0.56 · pick 0.00`, and the whole of Medusa’s
+ *    core read as six items measured at the same win rate when in fact none of
+ *    the six had ever been measured. */
+type AxisState = "measured" | "mode-unmeasured" | "item-unmeasured";
 
 interface DetailPanelProps {
   god: string;
@@ -112,11 +124,12 @@ function ScoreBar({ label, value, help }: { label: string; value: number; help?:
  * The row already prints these four numbers, so the bars here earn their place
  * by showing relative magnitude — and the block adds what the row can't fit:
  * what the community did with the same item. */
-function WhyScoreBlock({ score, measured, meta }: {
+function WhyScoreBlock({ score, axisState, meta }: {
   score: SlotScore;
-  measured: boolean;
+  axisState: AxisState;
   meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
+  const measured = axisState === "measured";
   const axes = measured ? AXES : AXES.filter((a) => a.key !== "win" && a.key !== "pick");
   return (
     <div>
@@ -130,9 +143,16 @@ function WhyScoreBlock({ score, measured, meta }: {
         ))}
       </div>
       <p className="mt-1.5 text-label leading-relaxed text-faint">
-        {measured
+        {axisState === "measured"
           ? "Four signals, weighted into one score. Higher is better on every axis."
-          : "No community data in this mode, so win and pick aren’t measured here."}
+          : axisState === "mode-unmeasured"
+            ? "No community data in this mode, so win and pick aren’t measured here."
+            /* F2. The mode HAS community data; this item is not in it. The two
+               axes still carry their weight in the total above — win on the
+               god’s own median, pick on a literal zero — so saying only
+               “not measured” would leave the score looking like it was
+               computed on the other two. */
+            : "No community record for this item on this god, so win and pick aren’t measured here. The score still spends their weight on a stand-in."}
       </p>
       {measured && (
         <p className="mt-1.5 border-t border-line pt-1.5 text-label leading-relaxed text-faint">
@@ -160,16 +180,16 @@ function WhyScoreBlock({ score, measured, meta }: {
 
 /** Item identity plus, when the item is scored, its breakdown — one panel,
  * one disclosure, the same on every breakpoint. */
-function ItemDetailCard({ item, name, score, measured = true, meta }: {
+function ItemDetailCard({ item, name, score, axisState = "measured", meta }: {
   item?: Item;
   name: string;
   score?: SlotScore;
-  measured?: boolean;
+  axisState?: AxisState;
   meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
   const scoreBlock = score && (
     <div className="mt-2 border-t border-line pt-2">
-      <WhyScoreBlock score={score} measured={measured} meta={meta} />
+      <WhyScoreBlock score={score} axisState={axisState} meta={meta} />
     </div>
   );
   if (!item) {
@@ -238,7 +258,7 @@ const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 /** One purchase: where it lands on the gold spine, what the model scores it,
  * and what the community does with the same item. */
 function LedgerRowView({
-  row, index, expanded, onToggle, item, showScores, measuredAxes, communityRates, ownRates, alternates,
+  row, index, expanded, onToggle, item, showScores, axisState, communityRates, ownRates, alternates,
 }: {
   row: LedgerRow;
   index: number;
@@ -247,9 +267,9 @@ function LedgerRowView({
   item?: Item;
   showScores: boolean;
   communityRates: boolean;
-  /** There is community data behind the win/pick axes. Without it they carry a
-   * neutral default rather than a measurement. */
-  measuredAxes: boolean;
+  /** Whether the win/pick axes on THIS row are a measurement — and when they
+   * are not, which of the two absences it is. See `AxisState`. */
+  axisState: AxisState;
   /** This row's own pick/win, when the row *is* a community slot rather than
    * a model slot being compared against one. */
   ownRates?: { pick_rate: number; win_rate: number };
@@ -259,6 +279,7 @@ function LedgerRowView({
 }) {
   const removed = row.status === "removed";
   const added = row.status === "added";
+  const measuredAxes = axisState === "measured";
 
   const label = [
     `${row.name}`,
@@ -351,9 +372,10 @@ function LedgerRowView({
           {row.score && !removed && (
             <span className="flex gap-x-2">
               {AXES.map((a) => (
-                // win and pick come from community data. Where there is none,
-                // they're a neutral default rather than a measurement, and
-                // printing "win 0.50 · pick 0.00" would read as a finding.
+                // win and pick come from community data. Where there is none
+                // — for the whole mode, or for this one item on this one god
+                // — they are a stand-in rather than a measurement, and
+                // printing "win 0.56 · pick 0.00" would read as a finding.
                 measuredAxes || (a.key !== "win" && a.key !== "pick") ? (
                   <span key={a.key}>
                     {a.label} <span className="font-mono text-muted">{row.score![a.key].toFixed(2)}</span>
@@ -397,7 +419,7 @@ function LedgerRowView({
             item={item}
             name={row.name}
             score={row.score}
-            measured={measuredAxes}
+            axisState={axisState}
             meta={showScores && row.metaPosition != null
               ? { position: row.metaPosition, pickRate: row.metaPickRate, winRate: row.metaWinRate,
                   modelPosition: row.modelPosition }
@@ -560,9 +582,16 @@ export function DetailPanel({
   // every row and say nothing. A `mine` build isn't the model's either — the
   // comparison copy says "model", so it may only run on the model's builds.
   const compareToMeta = active.source === "suggested" && !isFun && !!communityEntry;
-  // win/pick are community-derived. Joust ships no community entries at all,
-  // so those axes carry a neutral default there rather than a measurement.
-  const measuredAxes = !!communityEntry;
+  // win/pick are community-derived, and there are two ways to have none of it.
+  // Joust and Arena ship no community entry at all, so the whole mode is
+  // unmeasured. Inside a mode that HAS one, an item the entry has never seen is
+  // unmeasured too — pick falls to a literal zero and win to this god's median,
+  // and both then print exactly like a measurement. F2.
+  const recordedItems = communityRecordedItems(communityEntry);
+  const axisStateFor = (name: string): AxisState =>
+    !communityEntry ? "mode-unmeasured"
+      : recordedItems.has(name) ? "measured"
+        : "item-unmeasured";
 
   const ledger = buildLedger({
     preview,
@@ -742,7 +771,7 @@ export function DetailPanel({
                 onToggle={() => setExpandedIndex((cur) => (cur === i ? null : i))}
                 item={itemsByName.get(row.name)}
                 showScores={compareToMeta}
-                measuredAxes={measuredAxes}
+                axisState={axisStateFor(row.name)}
                 communityRates={community}
                 ownRates={community
                   ? (active.slot_order[i] as { pick_rate?: number; win_rate?: number } | undefined)?.pick_rate != null

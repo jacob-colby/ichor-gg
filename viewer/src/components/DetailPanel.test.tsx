@@ -210,8 +210,59 @@ describe("DetailPanel — the buy ledger", () => {
     expect(why).toHaveTextContent("0.59");
   });
 
-  it("says the community skips the item rather than implying a measured zero", () => {
+  /* F2. B is in neither the community's slot order nor any slot's alternates,
+   * so the pipeline handed its row `pick 0` and `win` = this god's median. Both
+   * used to print like measurements. PRODUCT.md Principle 3: "we didn't measure
+   * this" and "this is bad" must never render the same way. */
+  it("does not print win/pick as measurements for an item the community has no record of", () => {
     render(panel({ items, builds: withMeta as never }));
+    const unrecorded = row("B");
+    expect(unrecorded).toHaveTextContent("value");
+    expect(unrecorded).toHaveTextContent("fit");
+    expect(unrecorded).toHaveTextContent(/win\/pick not measured here/i);
+    // The two numbers themselves are gone, not merely captioned.
+    expect(unrecorded).not.toHaveTextContent(/win 0/);
+    expect(unrecorded).not.toHaveTextContent(/pick 0/);
+    expect(unrecorded).not.toHaveTextContent("0.00");
+  });
+
+  it("keeps win and pick on a row the community DOES have a record for", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(row("A")).not.toHaveTextContent(/not measured here/i);
+    expect(row("A")).toHaveTextContent("win");
+    expect(row("A")).toHaveTextContent("pick");
+  });
+
+  /* The panel has to say which absence it is, because the score above it still
+   * spent win's 0.45 weight on the stand-in. "Not measured" alone would read as
+   * "computed on the other two". */
+  it("names the absence and says the score still spends its weight", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("B"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    expect(why).toHaveTextContent(/no community record for this item on this god/i);
+    expect(why).toHaveTextContent(/still spends their weight on a stand-in/i);
+    // The mode-level wording is a different fact and must not appear here.
+    expect(why).not.toHaveTextContent(/no community data in this mode/i);
+  });
+
+  /* Recorded, but only as somebody else's slot alternate — a measurement, so
+   * the axes stay, and the older "not in their order" copy is still the right
+   * thing to say about it. */
+  it("keeps the axes for an item the community records only as an alternate", () => {
+    const asAlternate = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6,
+          alternates: [{ name: "B", pick_rate: 0.27, win_rate: 0.48 }] }] },
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [], rationale: "",
+        slot_scores: {
+          A: { total: 0.59, efficiency: 0.41, win: 0.6, pick: 0.51, fit: 1 },
+          B: { total: 0.48, efficiency: 0.5, win: 0.48, pick: 0.27, fit: 0.9 },
+        } },
+    ] }];
+    render(panel({ items, builds: asAlternate as never }));
+    expect(row("B")).not.toHaveTextContent(/not measured here/i);
+    expect(row("B")).toHaveTextContent(/meta buys this 27%/);
     fireEvent.click(row("B"));
     expect(screen.getByText(/community build doesn.t include this item/i)).toBeInTheDocument();
   });

@@ -135,8 +135,13 @@ export interface CommunityBuildEntry {
   popular_items?: PopularItem[];
 }
 
-/** Per-item score breakdown stamped by the Python pipeline (2dp). win 0.5
- * means "no data" neutral; pick 0 means unpicked. */
+/** Per-item score breakdown stamped by the Python pipeline (2dp).
+ *
+ * `win` and `pick` are NOT self-describing: an item this god's community entry
+ * has no record of arrives here with `pick` at a literal 0 and `win` at the
+ * god's own median measured rate (`scoring.god_unknown_win_rate` — not the
+ * flat 0.5 this comment used to name). Neither is a measurement, and neither
+ * says so. Ask `communityRecordedItems` before rendering either as one. F2. */
 export interface SlotScore {
   total: number;
   efficiency: number;
