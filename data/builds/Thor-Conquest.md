@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.17
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5532608695652174
   god_matches_won: 509
   god_matches_played: 920

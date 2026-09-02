@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.08
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/charon/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.4727272727272727
   god_matches_won: 130
   god_matches_played: 275

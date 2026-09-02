@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.4963054187192118
   god_matches_won: 403
   god_matches_played: 812

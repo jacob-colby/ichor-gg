@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.77
   source_url: https://smitebrain.com/gods/bellona/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.6
   god_matches_won: 87
   god_matches_played: 145

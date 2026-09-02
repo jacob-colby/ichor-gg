@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.43
   source_url: https://smitebrain.com/gods/neith/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5134328358208955
   god_matches_won: 172
   god_matches_played: 335

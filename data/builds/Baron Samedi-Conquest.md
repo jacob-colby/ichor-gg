@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.59
   source_url: https://smitebrain.com/gods/baron-samedi/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5358851674641149
   god_matches_won: 112
   god_matches_played: 209

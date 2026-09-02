@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5269761606022585
   god_matches_won: 420
   god_matches_played: 797

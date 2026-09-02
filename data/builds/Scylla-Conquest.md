@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.05
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/scylla/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5348432055749129
   god_matches_won: 307
   god_matches_played: 574

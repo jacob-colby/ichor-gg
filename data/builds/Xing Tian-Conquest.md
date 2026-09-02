@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.43
   source_url: https://smitebrain.com/gods/xing-tian/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5992217898832685
   god_matches_won: 462
   god_matches_played: 771

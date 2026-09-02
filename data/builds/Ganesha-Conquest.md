@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.35
   source_url: https://smitebrain.com/gods/ganesha/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.4519230769230769
   god_matches_won: 141
   god_matches_played: 312

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.38
   source_url: https://smitebrain.com/gods/rama/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5491803278688525
   god_matches_won: 201
   god_matches_played: 366

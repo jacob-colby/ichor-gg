@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/ra/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5424133811230586
   god_matches_won: 454
   god_matches_played: 837

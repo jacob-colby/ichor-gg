@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/hecate/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5451388888888888
   god_matches_won: 157
   god_matches_played: 288

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.68
   source_url: https://smitebrain.com/gods/sol/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5231316725978647
   god_matches_won: 147
   god_matches_played: 281

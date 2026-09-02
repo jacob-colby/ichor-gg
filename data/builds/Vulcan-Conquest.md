@@ -106,7 +106,7 @@ builds:
     pick_rate: 0.2
     win_rate: 0.44
   source_url: https://smitebrain.com/gods/vulcan/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5396825396825397
   god_matches_won: 306
   god_matches_played: 567

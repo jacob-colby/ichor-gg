@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.34
   source_url: https://smitebrain.com/gods/nemesis/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5622119815668203
   god_matches_won: 122
   god_matches_played: 217

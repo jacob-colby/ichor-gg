@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.05
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/mordred/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.536
   god_matches_won: 201
   god_matches_played: 375

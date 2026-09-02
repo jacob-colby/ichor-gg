@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.07
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/da-ji/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5597189695550351
   god_matches_won: 239
   god_matches_played: 427

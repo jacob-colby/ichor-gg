@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/cernunnos/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5777777777777777
   god_matches_won: 182
   god_matches_played: 315

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.2
     win_rate: 0.46
   source_url: https://smitebrain.com/gods/merlin/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.48079658605974396
   god_matches_won: 338
   god_matches_played: 703

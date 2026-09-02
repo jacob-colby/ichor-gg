@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.51
   source_url: https://smitebrain.com/gods/bacchus/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5139664804469274
   god_matches_won: 184
   god_matches_played: 358

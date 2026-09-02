@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.46
   source_url: https://smitebrain.com/gods/awilix/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5576407506702413
   god_matches_won: 208
   god_matches_played: 373

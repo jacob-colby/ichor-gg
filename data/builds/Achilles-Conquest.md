@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.36
   source_url: https://smitebrain.com/gods/achilles/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5040871934604905
   god_matches_won: 185
   god_matches_played: 367

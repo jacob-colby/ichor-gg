@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.12
     win_rate: 0.63
   source_url: https://smitebrain.com/gods/hades/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.6391382405745063
   god_matches_won: 356
   god_matches_played: 557

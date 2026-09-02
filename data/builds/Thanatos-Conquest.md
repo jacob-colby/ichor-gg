@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.65
   source_url: https://smitebrain.com/gods/thanatos/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5764895330112721
   god_matches_won: 358
   god_matches_played: 621

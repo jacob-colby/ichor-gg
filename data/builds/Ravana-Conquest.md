@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.1
     win_rate: 0.54
   source_url: https://smitebrain.com/gods/ravana/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.47066326530612246
   god_matches_won: 738
   god_matches_played: 1568

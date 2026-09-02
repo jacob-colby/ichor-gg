@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/loki/
-  last_verified: '2026-09-01'
+  last_verified: '2026-09-02'
   god_win_rate: 0.5671100362756953
   god_matches_won: 469
   god_matches_played: 827
