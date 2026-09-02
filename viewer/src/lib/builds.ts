@@ -123,3 +123,59 @@ export function applySwap(slotOrder: string[], swapItem: string | null, flexSlot
   base.splice(idx + 1, 0, { name: swapItem, status: "added" });
   return base;
 }
+
+/** Every item this god's community entry carries a record for, in this mode.
+ *
+ * F2. The pipeline's `scoring.lookup_rates` returns `(0.0, None)` for an item
+ * the community entry has never seen — pick falls to a literal zero and win is
+ * filled in with the god's own median (`god_unknown_win_rate`). Both then print
+ * on the row exactly like a measurement, and `pick 0.00` in particular reads as
+ * "players had the option and declined". It is the other fact: nobody has a
+ * record of this item on this god.
+ *
+ * `lookup_rates` reads slot picks first and the slots' `alternates` after, and
+ * nothing else, so this set is that function's domain — the names it can hand a
+ * number back for. Checked against the shipped index: over the 582 Conquest
+ * core rows, membership here and `pick === 0` disagree on zero of them.
+ */
+export function communityRecordedItems(entry?: BuildEntry): Set<string> {
+  const names = new Set<string>();
+  if (!entry || !isCommunityEntry(entry)) return names;
+  for (const slot of entry.slot_order ?? []) {
+    if (typeof slot === "string") continue;
+    if (slot.name) names.add(slot.name);
+    for (const alt of slot.alternates ?? []) {
+      if (alt.name) names.add(alt.name);
+    }
+  }
+  return names;
+}
+
+/** The pipeline's rationale string, split into its prose and its item list.
+ *
+ * F7. `recommend._rationale` appends " Underrated for this god: A, B, C." to
+ * every non-fun rationale, and the god page rendered the whole thing as one
+ * run-on paragraph. Across the 90 Conquest groups in the shipped index those
+ * lists run 22 to 39 names, median 25, against a pool of 226 items — and a
+ * mean of 2.8 of them are already in the six-item core printed directly above.
+ * A list that long, unordered on the page and overlapping the build, is not a
+ * recommendation.
+ *
+ * The names come out in the order the pipeline ranked them, descending by the
+ * model's own score for this god (`scoring.score_god_items` returns
+ * `sorted(rows, key=-total)`), so the head of `underrated` is the strongest end
+ * of it and a caller may take the first few and say how many it left.
+ *
+ * No item name in the index contains a comma or ends in a period, so the split
+ * is unambiguous. An unrecognised rationale is returned whole as `lead`.
+ */
+export function splitRationale(rationale?: string): { lead: string; underrated: string[] } {
+  const marker = "Underrated for this god:";
+  const at = rationale?.indexOf(marker) ?? -1;
+  if (!rationale || at < 0) return { lead: rationale?.trim() ?? "", underrated: [] };
+  const tail = rationale.slice(at + marker.length).trim().replace(/\.$/, "");
+  return {
+    lead: rationale.slice(0, at).trim(),
+    underrated: tail.split(",").map((n) => n.trim()).filter(Boolean),
+  };
+}

@@ -19,7 +19,7 @@ import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
 import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
-  dedupeCoreAgainstModel } from "../lib/builds";
+  dedupeCoreAgainstModel, communityRecordedItems, splitRationale } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
@@ -49,6 +49,18 @@ const AXES: { key: keyof Omit<SlotScore, "total">; label: string; help: string }
   { key: "pick", label: "pick", help: "How often this god's players buy it, among matches that got that far" },
   { key: "fit", label: "fit", help: "How well the item's stats match this god's kit" },
 ];
+
+/** Whether `win` and `pick` on one row are a measurement, and if not, why not.
+ *
+ * F2. There are two different absences behind the same pair of numbers and
+ * PRODUCT.md Principle 3 forbids rendering them the same way as a measurement:
+ *  - `mode-unmeasured` — Joust and Arena ship no community entry at all.
+ *  - `item-unmeasured` — the mode has one, but it carries no record of THIS
+ *    item on THIS god. 236 of the 582 Conquest core rows in the shipped index.
+ *    These used to print `win 0.56 · pick 0.00`, and the whole of Medusa’s
+ *    core read as six items measured at the same win rate when in fact none of
+ *    the six had ever been measured. */
+type AxisState = "measured" | "mode-unmeasured" | "item-unmeasured";
 
 interface DetailPanelProps {
   god: string;
@@ -132,11 +144,12 @@ function ScoreBar({ label, value, help }: { label: string; value: number; help?:
  * The row already prints these four numbers, so the bars here earn their place
  * by showing relative magnitude — and the block adds what the row can't fit:
  * what the community did with the same item. */
-function WhyScoreBlock({ score, measured, meta }: {
+function WhyScoreBlock({ score, axisState, meta }: {
   score: SlotScore;
-  measured: boolean;
+  axisState: AxisState;
   meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
+  const measured = axisState === "measured";
   const axes = measured ? AXES : AXES.filter((a) => a.key !== "win" && a.key !== "pick");
   return (
     <div>
@@ -150,9 +163,16 @@ function WhyScoreBlock({ score, measured, meta }: {
         ))}
       </div>
       <p className="mt-1.5 text-label leading-relaxed text-faint">
-        {measured
+        {axisState === "measured"
           ? "Four signals, weighted into one score. Higher is better on every axis."
-          : "No community data in this mode, so win and pick aren’t measured here."}
+          : axisState === "mode-unmeasured"
+            ? "No community data in this mode, so win and pick aren’t measured here."
+            /* F2. The mode HAS community data; this item is not in it. The two
+               axes still carry their weight in the total above — win on the
+               god’s own median, pick on a literal zero — so saying only
+               “not measured” would leave the score looking like it was
+               computed on the other two. */
+            : "No community record for this item on this god, so win and pick aren’t measured here. The score still spends their weight on a stand-in."}
       </p>
       {measured && (
         <p className="mt-1.5 border-t border-line pt-1.5 text-label leading-relaxed text-faint">
@@ -180,16 +200,16 @@ function WhyScoreBlock({ score, measured, meta }: {
 
 /** Item identity plus, when the item is scored, its breakdown — one panel,
  * one disclosure, the same on every breakpoint. */
-function ItemDetailCard({ item, name, score, measured = true, meta }: {
+function ItemDetailCard({ item, name, score, axisState = "measured", meta }: {
   item?: Item;
   name: string;
   score?: SlotScore;
-  measured?: boolean;
+  axisState?: AxisState;
   meta?: { position: number; pickRate: number | null; winRate: number | null; modelPosition: number | null };
 }) {
   const scoreBlock = score && (
     <div className="mt-2 border-t border-line pt-2">
-      <WhyScoreBlock score={score} measured={measured} meta={meta} />
+      <WhyScoreBlock score={score} axisState={axisState} meta={meta} />
     </div>
   );
   if (!item) {
@@ -258,7 +278,7 @@ const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 /** One purchase: where it lands on the gold spine, what the model scores it,
  * and what the community does with the same item. */
 function LedgerRowView({
-  row, index, expanded, onToggle, item, showScores, measuredAxes, communityRates, ownRates, alternates,
+  row, index, expanded, onToggle, item, showScores, axisState, communityRates, ownRates, alternates,
 }: {
   row: LedgerRow;
   index: number;
@@ -267,9 +287,9 @@ function LedgerRowView({
   item?: Item;
   showScores: boolean;
   communityRates: boolean;
-  /** There is community data behind the win/pick axes. Without it they carry a
-   * neutral default rather than a measurement. */
-  measuredAxes: boolean;
+  /** Whether the win/pick axes on THIS row are a measurement — and when they
+   * are not, which of the two absences it is. See `AxisState`. */
+  axisState: AxisState;
   /** This row's own pick/win, when the row *is* a community slot rather than
    * a model slot being compared against one. */
   ownRates?: { pick_rate: number; win_rate: number };
@@ -279,6 +299,7 @@ function LedgerRowView({
 }) {
   const removed = row.status === "removed";
   const added = row.status === "added";
+  const measuredAxes = axisState === "measured";
 
   const label = [
     `${row.name}`,
@@ -371,9 +392,10 @@ function LedgerRowView({
           {row.score && !removed && (
             <span className="flex gap-x-2">
               {AXES.map((a) => (
-                // win and pick come from community data. Where there is none,
-                // they're a neutral default rather than a measurement, and
-                // printing "win 0.50 · pick 0.00" would read as a finding.
+                // win and pick come from community data. Where there is none
+                // — for the whole mode, or for this one item on this one god
+                // — they are a stand-in rather than a measurement, and
+                // printing "win 0.56 · pick 0.00" would read as a finding.
                 measuredAxes || (a.key !== "win" && a.key !== "pick") ? (
                   <span key={a.key}>
                     {a.label} <span className="font-mono text-muted">{row.score![a.key].toFixed(2)}</span>
@@ -417,7 +439,7 @@ function LedgerRowView({
             item={item}
             name={row.name}
             score={row.score}
-            measured={measuredAxes}
+            axisState={axisState}
             meta={showScores && row.metaPosition != null
               ? { position: row.metaPosition, pickRate: row.metaPickRate, winRate: row.metaWinRate,
                   modelPosition: row.modelPosition }
@@ -426,6 +448,66 @@ function LedgerRowView({
         </div>
       )}
     </li>
+  );
+}
+
+/** How many underrated items read as a recommendation rather than a category.
+ *  The lists themselves run to 39. */
+const UNDERRATED_SHOWN = 5;
+
+/** F7. "Underrated for this god" as a short ranked list instead of a run-on
+ * sentence naming a median of 25 items.
+ *
+ * The claim was always fine — the Method page's definition (top 30% on
+ * efficiency and fit, pick at or below 15%) makes every name on it legitimate,
+ * and the lists are recomputed from current data rather than stale. What broke
+ * was the format: 25 undifferentiated names, in prose, against a pool of 226,
+ * with no ordering visible, no cut-off stated, and the build's own items among
+ * them. That is a category, not a recommendation, and "underrated" is a claim.
+ *
+ * So: the strongest few, in the pipeline's own ranking order, with the count it
+ * came from, a route to the definition (nothing else on this page has one), and
+ * the remainder one press away rather than dropped.
+ */
+function UnderratedList({ god, names }: { god: string; names: string[] }) {
+  const [showAll, setShowAll] = useState(false);
+  const shown = showAll ? names : names.slice(0, UNDERRATED_SHOWN);
+  const more = names.length - UNDERRATED_SHOWN;
+  return (
+    <div className="mt-3.5">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+        <h3 className={eyebrow}>Underrated for {god}</h3>
+        <p className="text-label text-muted">
+          <span className="font-mono">{shown.length}</span> of{" "}
+          <span className="font-mono">{names.length}</span> the model rates highly and this
+          god&rsquo;s players rarely buy ·{" "}
+          {/* F11 again, from the other side: an 11px inline link is a 14px
+              tall target. The padding is vertical only and the element stays
+              inline, so the hit box clears 24px without opening up the line
+              it sits in. */}
+          <a href={toHash.method()} className="press -my-1.5 rounded-sm py-1.5 text-blue hover:underline">
+            how that&rsquo;s decided
+          </a>
+        </p>
+      </div>
+      <ul className="mt-1.5 flex flex-wrap gap-1.5">
+        {shown.map((name) => (
+          <li key={name}>
+            <a href={toHash.item(name)}
+              className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
+              <ItemIcon name={name} className="h-6 w-6" />
+              <span className="max-w-[18ch] truncate text-small text-ink">{name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {more > 0 && (
+        <button type="button" onClick={() => setShowAll((v) => !v)}
+          className="press mt-1.5 rounded-sm px-1 py-1 text-small text-blue hover:underline">
+          {showAll ? `Show the top ${UNDERRATED_SHOWN}` : `Show all ${names.length}`}
+        </button>
+      )}
+    </div>
   );
 }
 
@@ -580,9 +662,17 @@ export function DetailPanel({
   // every row and say nothing. A `mine` build isn't the model's either — the
   // comparison copy says "model", so it may only run on the model's builds.
   const compareToMeta = active.source === "suggested" && !isFun && !!communityEntry;
-  // win/pick are community-derived. Joust ships no community entries at all,
-  // so those axes carry a neutral default there rather than a measurement.
-  const measuredAxes = !!communityEntry;
+  // win/pick are community-derived, and there are two ways to have none of it.
+  // Joust and Arena ship no community entry at all, so the whole mode is
+  // unmeasured. Inside a mode that HAS one, an item the entry has never seen is
+  // unmeasured too — pick falls to a literal zero and win to this god's median,
+  // and both then print exactly like a measurement. F2.
+  const measuredMode = !!communityEntry;
+  const recordedItems = communityRecordedItems(communityEntry);
+  const axisStateFor = (name: string): AxisState =>
+    !measuredMode ? "mode-unmeasured"
+      : recordedItems.has(name) ? "measured"
+        : "item-unmeasured";
 
   const ledger = buildLedger({
     preview,
@@ -591,6 +681,16 @@ export function DetailPanel({
     communityOrder: compareToMeta ? communityEntry!.slot_order : undefined,
     flexSlots: flexList,
   });
+
+  /* F7. The pipeline appends every underrated item to the rationale string,
+     and the page printed all of them as one run-on sentence — a median of 25
+     names, an average of 2.8 of which are in the six-item core directly above.
+     Items already on this ledger are dropped: the row carries `off-meta` for
+     exactly that fact, and naming them again is the part of the list that
+     reads as an error. */
+  const rationale = splitRationale(!community ? (active as CuratedBuildEntry).rationale : undefined);
+  const onLedger = new Set(ledger.rows.filter((r) => r.status !== "removed").map((r) => r.name));
+  const underrated = rationale.underrated.filter((n) => !onLedger.has(n));
 
   const popularItems = communityEntry?.popular_items ?? [];
   const suggestedCore = note.builds.find(
@@ -740,6 +840,31 @@ export function DetailPanel({
               How an item gets its score &rarr;
             </a>
           </p>
+          {/* F8. Same god, same item, a different number in each mode — and
+              nothing said the denominator had changed. A mode with no community
+              entry scores on two of the four signals under its own weights
+              (Joust and Arena are 0.50 / 0.50 in `_weights.yaml`, NOT
+              Conquest's 0.35 / 0.15 renormalised, which would be 0.70 / 0.30
+              — measured: Spear of Desolation on Ra reads 0.79 in Joust and the
+              renormalisation predicts 0.70). Those per-mode weights are not in
+              `index.json`, so this line does not print numbers it cannot get
+              right; a reader
+              comparing a Joust 0.69 to a Conquest 0.69 is comparing a two-
+              signal number to a four-signal one. The per-row "win/pick not
+              measured here" says what is missing and not what that does to the
+              number beside it, which is the whole of the confusion.
+
+              Said where the scores are, once, rather than on every row: unlike
+              the per-row caveat this is a fact about the column, not about any
+              item in it. */}
+          {!measuredMode && scores && (
+            <p data-testid="mode-scale-note" className="mt-2 max-w-[70ch] text-small leading-relaxed text-muted">
+              <span className="text-premium">No community data in {note.mode}.</span>{" "}
+              These scores are value and fit alone, weighted for this mode — where Conquest
+              blends four signals. They are on their own scale: the same item&rsquo;s Conquest
+              score is not the same measurement, and the two numbers do not compare.
+            </p>
+          )}
 
           {/* Said once, where the build is, because the shape of this data is
               not obvious and reads as a recommendation otherwise. Measured:
@@ -783,7 +908,7 @@ export function DetailPanel({
                 onToggle={() => setExpandedIndex((cur) => (cur === i ? null : i))}
                 item={itemsByName.get(row.name)}
                 showScores={compareToMeta}
-                measuredAxes={measuredAxes}
+                axisState={axisStateFor(row.name)}
                 communityRates={community}
                 ownRates={community
                   ? (active.slot_order[i] as { pick_rate?: number; win_rate?: number } | undefined)?.pick_rate != null
@@ -956,9 +1081,14 @@ export function DetailPanel({
       )}
 
       {!community && (active as CuratedBuildEntry).rationale && (
-        <p className="mt-6 max-w-[74ch] border-t border-line pt-3 text-small leading-relaxed text-muted">
-          {(active as CuratedBuildEntry).rationale}
-        </p>
+        <div className="mt-6 max-w-[74ch] border-t border-line pt-3">
+          {rationale.lead && (
+            <p className="text-small leading-relaxed text-muted">{rationale.lead}</p>
+          )}
+          {underrated.length > 0 && (
+            <UnderratedList god={god} names={underrated} />
+          )}
+        </div>
       )}
     </article>
   );

@@ -256,8 +256,59 @@ describe("DetailPanel — the buy ledger", () => {
     expect(why).toHaveTextContent("0.59");
   });
 
-  it("says the community skips the item rather than implying a measured zero", () => {
+  /* F2. B is in neither the community's slot order nor any slot's alternates,
+   * so the pipeline handed its row `pick 0` and `win` = this god's median. Both
+   * used to print like measurements. PRODUCT.md Principle 3: "we didn't measure
+   * this" and "this is bad" must never render the same way. */
+  it("does not print win/pick as measurements for an item the community has no record of", () => {
     render(panel({ items, builds: withMeta as never }));
+    const unrecorded = row("B");
+    expect(unrecorded).toHaveTextContent("value");
+    expect(unrecorded).toHaveTextContent("fit");
+    expect(unrecorded).toHaveTextContent(/win\/pick not measured here/i);
+    // The two numbers themselves are gone, not merely captioned.
+    expect(unrecorded).not.toHaveTextContent(/win 0/);
+    expect(unrecorded).not.toHaveTextContent(/pick 0/);
+    expect(unrecorded).not.toHaveTextContent("0.00");
+  });
+
+  it("keeps win and pick on a row the community DOES have a record for", () => {
+    render(panel({ items, builds: withMeta as never }));
+    expect(row("A")).not.toHaveTextContent(/not measured here/i);
+    expect(row("A")).toHaveTextContent("win");
+    expect(row("A")).toHaveTextContent("pick");
+  });
+
+  /* The panel has to say which absence it is, because the score above it still
+   * spent win's 0.45 weight on the stand-in. "Not measured" alone would read as
+   * "computed on the other two". */
+  it("names the absence and says the score still spends its weight", () => {
+    render(panel({ items, builds: withMeta as never }));
+    fireEvent.click(row("B"));
+    const why = screen.getByText(/why this item/i).closest("div")!.parentElement!;
+    expect(why).toHaveTextContent(/no community record for this item on this god/i);
+    expect(why).toHaveTextContent(/still spends their weight on a stand-in/i);
+    // The mode-level wording is a different fact and must not appear here.
+    expect(why).not.toHaveTextContent(/no community data in this mode/i);
+  });
+
+  /* Recorded, but only as somebody else's slot alternate — a measurement, so
+   * the axes stay, and the older "not in their order" copy is still the right
+   * thing to say about it. */
+  it("keeps the axes for an item the community records only as an alternate", () => {
+    const asAlternate = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+        slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6,
+          alternates: [{ name: "B", pick_rate: 0.27, win_rate: 0.48 }] }] },
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [], rationale: "",
+        slot_scores: {
+          A: { total: 0.59, efficiency: 0.41, win: 0.6, pick: 0.51, fit: 1 },
+          B: { total: 0.48, efficiency: 0.5, win: 0.48, pick: 0.27, fit: 0.9 },
+        } },
+    ] }];
+    render(panel({ items, builds: asAlternate as never }));
+    expect(row("B")).not.toHaveTextContent(/not measured here/i);
+    expect(row("B")).toHaveTextContent(/meta buys this 27%/);
     fireEvent.click(row("B"));
     expect(screen.getByText(/community build doesn.t include this item/i)).toBeInTheDocument();
   });
@@ -711,5 +762,129 @@ describe("DetailPanel — modes come from the data", () => {
   it("hides the strip when the god has only one mode", () => {
     render(panel({ items: modeItems, builds: [threeModes[0]] as never, mode: "Conquest" }));
     expect(screen.queryByRole("group", { name: "Game mode" })).not.toBeInTheDocument();
+  });
+});
+
+/* F7. The list was legitimate and unreadable: a median of 25 names against a
+ * pool of 226, rendered as prose, ordering invisible, cut-off unstated, and
+ * with a mean of 2.8 items already sitting in the core printed above it. */
+describe("DetailPanel — underrated for this god", () => {
+  beforeEach(() => localStorage.clear());
+
+  const items = [itemFx("A", 2650), itemFx("B", 2350), itemFx("C", 3000)];
+  const long = ["C", "D", "E", "F", "G", "H", "I"];
+  const withUnderrated = (names: string[]) => ([{
+    type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A", "B"], situational_swaps: [],
+        rationale: `Top weighted-score core (efficiency + fit + win/pick). Underrated for this god: ${names.join(", ")}.` },
+    ],
+  }]);
+
+  it("keeps the rationale prose and drops the run-on sentence", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    expect(screen.getByText(/top weighted-score core/i)).toBeInTheDocument();
+    expect(screen.queryByText(/underrated for this god: C, D/i)).not.toBeInTheDocument();
+  });
+
+  it("shows the top five as links, not all of them as text", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    for (const n of ["C", "D", "E", "F", "G"]) {
+      expect(screen.getByRole("link", { name: n })).toHaveAttribute("href", `#/items/${n}`);
+    }
+    expect(screen.queryByRole("link", { name: "H" })).not.toBeInTheDocument();
+  });
+
+  it("says how many it is showing out of how many there are", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    const head = screen.getByRole("heading", { name: /underrated for chiron/i }).parentElement!;
+    expect(head).toHaveTextContent(/5 of 7/);
+    expect(head).toHaveTextContent(/rarely buy/i);
+    expect(screen.getByRole("button", { name: /show all 7/i })).toBeInTheDocument();
+  });
+
+  it("hides nothing — the rest are one press away", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    fireEvent.click(screen.getByRole("button", { name: /show all 7/i }));
+    expect(screen.getByRole("link", { name: "H" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "I" })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /show the top 5/i }));
+    expect(screen.queryByRole("link", { name: "H" })).not.toBeInTheDocument();
+  });
+
+  /* The part that read as an error: naming the build's own items as things
+   * nobody builds, directly under the build. The row already carries
+   * `off-meta` for that fact. */
+  it("does not name items that are already in the build above it", () => {
+    render(panel({ items, builds: withUnderrated(["A", "B", "C", "D"]) as never }));
+    const list = screen.getByRole("heading", { name: /underrated for chiron/i }).closest("div")!.parentElement!;
+    expect(within(list).queryByRole("link", { name: "A" })).not.toBeInTheDocument();
+    expect(within(list).queryByRole("link", { name: "B" })).not.toBeInTheDocument();
+    expect(within(list).getByRole("link", { name: "C" })).toBeInTheDocument();
+    // ...and the count is of what's left, not of what the pipeline sent.
+    expect(screen.queryByRole("button", { name: /show all/i })).not.toBeInTheDocument();
+  });
+
+  /* "Underrated" is a claim, and the page that defines it was reachable only
+   * from the nav rail. The Seam Rule: name the destination in the reader's
+   * terms, where the claim is made. */
+  it("routes to the definition of the claim", () => {
+    render(panel({ items, builds: withUnderrated(long) as never }));
+    expect(screen.getByRole("link", { name: /how that.s decided/i }))
+      .toHaveAttribute("href", "#/method");
+  });
+
+  it("renders nothing when the rationale carries no list", () => {
+    const plain = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+        rationale: "For fun — deliberately fights this god's kit." },
+    ] }];
+    render(panel({ items, builds: plain as never }));
+    expect(screen.getByText(/deliberately fights this god/i)).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /underrated/i })).not.toBeInTheDocument();
+  });
+});
+
+/* F8. Chronos' Pendant on Ra reads 0.54 in Conquest and 0.62 in Joust, and
+ * nothing on the page said the denominator had changed. The per-row caveat
+ * names what is missing; it does not say what that does to the number beside
+ * it, which is where a reader concludes the build is simply better in Joust. */
+describe("DetailPanel — the score's scale across modes", () => {
+  beforeEach(() => localStorage.clear());
+
+  const items = [itemFx("A", 2650)];
+  const scored = { A: { total: 0.62, efficiency: 0.5, win: 0.5, pick: 0, fit: 0.8 } };
+  const joust = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
+    { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+      rationale: "", slot_scores: scored },
+  ] }];
+  const conquest = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+    { source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null, source_url: "u",
+      slot_order: [{ name: "A", pick_rate: 0.5, win_rate: 0.6 }] },
+    { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [],
+      rationale: "", slot_scores: scored },
+  ] }];
+  it("says the score is on a different scale where two signals are missing", () => {
+    render(panel({ items, builds: joust as never, mode: "Joust" }));
+    const note = screen.getByTestId("mode-scale-note");
+    expect(note).toHaveTextContent(/no community data in joust/i);
+    expect(note).toHaveTextContent(/own scale/i);
+    expect(note).toHaveTextContent(/do not compare/i);
+  });
+
+  /* The note must not print weights. `index.json` ships only Conquest's
+   * `method.signals`; Joust and Arena carry their own 0.50 / 0.50 in
+   * `_weights.yaml` and it is NOT Conquest's 0.35 / 0.15 renormalised, which
+   * would read 0.70 / 0.30. Measured on the running app: Spear of Desolation
+   * on Ra is 0.79 in Joust, which 0.50 / 0.50 reproduces exactly and the
+   * renormalisation misses by 0.09. A number the viewer cannot get right does
+   * not belong in a line whose whole job is to be trusted about scale. */
+  it("does not state weights the index does not ship", () => {
+    render(panel({ items, builds: joust as never, mode: "Joust" }));
+    expect(screen.getByTestId("mode-scale-note")).not.toHaveTextContent(/0\.\d\d\s*\/\s*0\.\d\d/);
+  });
+
+  it("says nothing in a mode where all four signals are measured", () => {
+    render(panel({ items, builds: conquest as never }));
+    expect(screen.queryByTestId("mode-scale-note")).not.toBeInTheDocument();
   });
 });

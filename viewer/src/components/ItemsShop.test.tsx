@@ -202,6 +202,30 @@ describe("ItemsShop — filters", () => {
     expect(screen.getByText("Rage")).toBeInTheDocument();
   });
 
+  /* F11. With no search text and a filter on, this read "No item matches those
+   * filters with the filters you have on." The trailing clause qualifies a
+   * query; without one it restates the subject of its own sentence. */
+  it("does not name the filters twice when there is no search text", () => {
+    render(shop());
+    // Aegis is the only Premium item and it is T3; no T1 item is Premium.
+    fireEvent.click(within(screen.getByRole("group", { name: /value rating/i }))
+      .getByRole("button", { name: "Premium" }));
+    fireEvent.click(within(screen.getByRole("group", { name: /item tier/i }))
+      .getByRole("button", { name: "T1" }));
+    const copy = screen.getByText(/^No item matches/i);
+    expect(copy).toHaveTextContent("No item matches those filters.");
+    expect(copy).not.toHaveTextContent(/filters.*filters/i);
+  });
+
+  it("still qualifies a failed search with the filters that narrowed it", () => {
+    render(shop());
+    const rating = within(screen.getByRole("group", { name: /value rating/i }));
+    fireEvent.click(rating.getByRole("button", { name: "Premium" }));
+    fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "zzzz" } });
+    expect(screen.getByText(/^No item matches/i))
+      .toHaveTextContent(/No item matches .zzzz. with the filters you have on\./);
+  });
+
   it("reports the narrowed count against the whole set", () => {
     render(shop());
     fireEvent.change(screen.getByLabelText(/search items by name/i), { target: { value: "rage" } });

@@ -62,6 +62,16 @@ export function AspectMark({ on = true, className = "" }: { on?: boolean; classN
  * "aspect" and not *which* aspect, and 65 of the 72 gods that have one have no
  * scoring overlay behind it — a reader deserves to know which of those they
  * are looking at, which is what `changesBuild` carries.
+ *
+ * F11. The TARGET is 24px and the MARK inside it is 20px, which is why the
+ * size is fixed here rather than passed in. Both call sites used to send
+ * `h-5 w-5`, and a class that beats the component's own `h-4 w-4` in
+ * Tailwind's cascade rather than in the class attribute is not a size a
+ * caller can reason about — it measured 20×20 at 375px, under WCAG 2.2
+ * SC 2.5.8's 24px floor, and it was the only element on the site that was.
+ * (The other sub-24px hit, the 1×1 skip link, is exempt and correct.) The
+ * padding grows the hit area outward without moving the hexagon: the offsets
+ * carry the extra 2px so the mark still sits where it sat on the portrait.
  */
 export function AspectToggle({ aspectName, on, onToggle, changesBuild = true, className = "" }: {
   aspectName?: string;
@@ -85,7 +95,7 @@ export function AspectToggle({ aspectName, on, onToggle, changesBuild = true, cl
       aria-pressed={on}
       aria-label={label}
       title={label}
-      className={`press absolute -bottom-1 -right-1 z-10 h-4 w-4 rounded-sm transition-colors duration-150 ease-standard
+      className={`press absolute -bottom-1.5 -right-1.5 z-10 h-6 w-6 p-0.5 rounded-sm transition-colors duration-150 ease-standard
         ${on ? "text-aspect" : "text-faint hover:text-aspect"}
         drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] ${className}`}
     >

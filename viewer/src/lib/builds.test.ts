@@ -7,6 +7,8 @@ import {
   applySwap,
   tabLabel,
   dedupeCoreAgainstModel,
+  communityRecordedItems,
+  splitRationale,
 } from "./builds";
 import type { BuildEntry, CommunityBuildEntry, CuratedBuildEntry } from "../types";
 
@@ -188,5 +190,76 @@ describe("dedupeCoreAgainstModel", () => {
     const six = ["A", "B", "C", "D", "E", "F"];
     const input = [b("core", six), b("crit", six)];
     expect(dedupeCoreAgainstModel(input)).toEqual(input);
+  });
+});
+
+/* F2. The set the god page asks before it renders `win` and `pick` as
+ * measurements. Its domain has to match the pipeline's `lookup_rates` exactly:
+ * slot picks first, then the slots' alternates, and nothing else. */
+describe("communityRecordedItems", () => {
+  const entry: CommunityBuildEntry = {
+    source: "community",
+    aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+    source_url: "u",
+    slot_order: [
+      { name: "Tyrfing", pick_rate: 0.51, win_rate: 0.62,
+        alternates: [{ name: "Transcendence", pick_rate: 0.16, win_rate: 0.64 }] },
+      { name: "Riptalon", pick_rate: 0.15, win_rate: 0.54 },
+    ],
+    popular_items: [{ name: "Tyrfing", pick_rate: 0.51, win_rate: 0.62 }],
+  };
+
+  it("counts the community's own slot picks", () => {
+    const seen = communityRecordedItems(entry);
+    expect(seen.has("Tyrfing")).toBe(true);
+    expect(seen.has("Riptalon")).toBe(true);
+  });
+
+  it("counts an item recorded only as a slot alternate", () => {
+    // The row for one of these prints a real pick/win pair, so it is a
+    // measurement and must not be captioned as an absence.
+    expect(communityRecordedItems(entry).has("Transcendence")).toBe(true);
+  });
+
+  it("excludes an item the entry has no record of at all", () => {
+    expect(communityRecordedItems(entry).has("Rod of Tahuti")).toBe(false);
+  });
+
+  it("is empty for a mode with no community entry, and for a model build", () => {
+    expect(communityRecordedItems(undefined).size).toBe(0);
+    expect(communityRecordedItems(mineEntry).size).toBe(0);
+  });
+});
+
+/* F7. The pipeline glues its underrated list onto the end of the rationale
+ * prose; the god page has to be able to take it apart to render it as a list. */
+describe("splitRationale", () => {
+  const real = "Top weighted-score core (efficiency + fit + win/pick). "
+    + "Underrated for this god: Spear of the Magus, Gluttonous Grimoire, Doom Orb.";
+
+  it("separates the prose from the item list", () => {
+    const { lead, underrated } = splitRationale(real);
+    expect(lead).toBe("Top weighted-score core (efficiency + fit + win/pick).");
+    expect(underrated).toEqual(["Spear of the Magus", "Gluttonous Grimoire", "Doom Orb"]);
+  });
+
+  it("keeps the pipeline's ranking order", () => {
+    // `score_god_items` returns rows sorted by total descending, so the head of
+    // the list is the strongest end of it and taking the first few is meaningful.
+    expect(splitRationale(real).underrated[0]).toBe("Spear of the Magus");
+  });
+
+  it("returns an unrecognised rationale whole, losing nothing", () => {
+    const fun = "For fun — deliberately fights this god's kit. Not meta-checked.";
+    expect(splitRationale(fun)).toEqual({ lead: fun, underrated: [] });
+  });
+
+  it("handles a missing rationale", () => {
+    expect(splitRationale(undefined)).toEqual({ lead: "", underrated: [] });
+  });
+
+  it("does not split on the apostrophes and periods inside item names", () => {
+    const s = "Core (efficiency + fit). Underrated for this god: Chronos' Pendant, Typhon's Heart.";
+    expect(splitRationale(s).underrated).toEqual(["Chronos' Pendant", "Typhon's Heart"]);
   });
 });

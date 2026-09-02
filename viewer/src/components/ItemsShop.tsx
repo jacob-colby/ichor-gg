@@ -610,9 +610,20 @@ export function ItemsShop({ items, openItem, tierItems = [], goldValues = {} }: 
 
       {shown.length === 0 ? (
         <div className="flex flex-col items-start gap-2 py-16">
+          {/* F11. "those filters" and "the filters you have on" are the same
+              words twice: with no search box text and a filter on, this read
+              "No item matches those filters with the filters you have on." The
+              trailing clause exists to say that a search found nothing BECAUSE
+              something else is also narrowing the shelf, so it only belongs
+              where there is a query for it to qualify. */}
           <p className="max-w-[64ch] text-body leading-relaxed text-muted">
-            No item matches {filter.q?.trim() ? <>&ldquo;{filter.q.trim()}&rdquo;</> : "those filters"}
-            {filter.efficiency || filter.tier != null || filter.tag || filter.stat ? " with the filters you have on" : ""}.
+            {filter.q?.trim() ? (
+              <>
+                No item matches &ldquo;{filter.q.trim()}&rdquo;
+                {filter.efficiency || filter.tier != null || filter.tag || filter.stat
+                  ? " with the filters you have on" : ""}.
+              </>
+            ) : "No item matches those filters."}
           </p>
           <button type="button" onClick={clear} className="press rounded-sm px-1 py-1 text-small text-blue hover:underline">
             Clear filters

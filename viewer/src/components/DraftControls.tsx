@@ -291,7 +291,6 @@ export function Slot({ kind, position, name, size = "h-16 w-16", onOpen, onRemov
           on={!!aspectOn}
           onToggle={onToggleAspect}
           changesBuild={aspectChangesBuild}
-          className="h-5 w-5"
         />
       )}
       {/* Centred ON the bottom edge, not tucked inside it: sitting 2px above

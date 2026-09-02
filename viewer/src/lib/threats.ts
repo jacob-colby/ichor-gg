@@ -194,3 +194,45 @@ export function damageOverlay(
   }
   return out;
 }
+
+/** What the build did about one named threat.
+ *
+ * F10. The board names a threat and the core silently does nothing about it.
+ * With `1/5 healing · Aphrodite` on screen and no anti-heal in the six, a
+ * reader cannot tell "weighed and nothing beat what's already there" from "not
+ * considered at all" — and on this surface, which otherwise names its
+ * reasoning on every row, that silence is the odd one out.
+ *
+ * Both states are derivable from what already drives the build.
+ * `threatOverlay` raises every item carrying a tag in `tag_bonus[threat]` or a
+ * stat in `stat_bonus[threat]` whenever the count is non-zero, so a threat with
+ * either map WAS weighed, by construction. A threat with neither has no
+ * item-side channel at all: `walls` is the only one, and the model answers it
+ * with a relic instead, which the page already surfaces separately.
+ *
+ * `answered` names the items in the core that carry the answer — matching on
+ * the same exact `effect_tags` and `stats` keys `draftBuild` scores against, so
+ * this cannot claim an answer the overlay didn't credit.
+ */
+export type ThreatAnswer =
+  | { kind: "answered"; by: string[] }
+  | { kind: "weighed" }
+  | { kind: "no-item-channel" };
+
+export function threatAnswer(
+  threat: ThreatKey,
+  core: string[],
+  itemsByName: Record<string, { effect_tags?: string[]; stats?: Record<string, unknown> }>,
+  cfg?: DraftConfig,
+): ThreatAnswer {
+  const tags = cfg?.tag_bonus?.[threat];
+  const stats = cfg?.stat_bonus?.[threat];
+  if (!tags && !stats) return { kind: "no-item-channel" };
+  const by = core.filter((name) => {
+    const it = itemsByName[name];
+    if (!it) return false;
+    if (tags && (it.effect_tags ?? []).some((t) => tags[t])) return true;
+    return !!stats && Object.keys(it.stats ?? {}).some((s) => stats[s]);
+  });
+  return by.length ? { kind: "answered", by } : { kind: "weighed" };
+}
