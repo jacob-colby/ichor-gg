@@ -1228,7 +1228,7 @@ Everything else validates against community data, which §1 shows cannot
 adjudicate the model's central claims. `data/_expert_reviews.yaml` +
 `smite.expert_review` are the first gate here that isn't made of that data: a
 strong player's judgements, written down in a shape a script can replay. Four
-claims from one reviewer (2026-08-09) — two now resolved, two open.
+claims from one reviewer (2026-08-09) — three resolved, one open.
 
 **It is not a measurement and must never be quoted as one.** One reviewer,
 claims chosen because they looked wrong. It answers "did the thing they
@@ -1237,6 +1237,17 @@ capturing real games — "I played this build, here's what happened" — and tha
 remains the highest-value thing left. What exists now is the cheapest possible
 stand-in for it, and its value is that judgements stop evaporating when the
 conversation ends.
+
+**The vocabulary is six checkable kinds as of 2026-09-03, up from two.** The
+original two were both item membership; the four added are an ordering
+(`buy-order`), a matchup swap (`situational-swap`), a floor or ceiling on how
+many core items carry a stat or tag (`composition`), and a required
+co-purchase (`pairing`). Each was admitted on one bar — checkable today from
+`index.json`, and able to go `holds` — and the shapes refused for failing it
+(outcomes, pairing-as-statistic, score rankings, timing, roles) are listed in
+the module docstring so nobody re-derives them. The two `narrative` claims on
+file were re-examined and fit none of the six; each says in its `notes` what
+it would need. Still four claims: this built the pipe and did not fill it.
 
 ### The win signal is still a constant for ~92% of the pool
 SmiteBrain reports a win rate for a median of **11 items per god** against a
@@ -1521,7 +1532,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 845 pipeline · 681 viewer — the pipeline count is unchanged; the viewer count rose 660 → 681 across the merges into `main` this row was stale against, unrelated to this session's diagnostic-only change (§4, `god_unknown_win_rate`) |
+| Tests | 871 pipeline · 753 viewer — the pipeline count rose 845 → 871 on the 2026-09-03 expert-review vocabulary (`test_expert_review_vocab`, 26 tests, one per way each new kind can be right, wrong or malformed); the viewer count is as measured the same day and did not move on this change |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

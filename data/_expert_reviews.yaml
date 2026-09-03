@@ -38,10 +38,53 @@
 #                when a fix lands; change it downward only as a recorded
 #                decision, in `notes`, with what was traded for what.
 #
-# CLAIM KINDS the checker understands:
+# CLAIM KINDS the checker understands. Every kind reads only the shipped
+# `core` build in index.json — the one the app opens on, never a flavor — and
+# every kind can come back `holds`. A malformed `detail` RAISES rather than
+# scoring: before 2026-09-03 a misspelled key read as an empty item list and
+# an empty list of absent items cleared the claim.
+#
 #   missing-item      detail.items should appear in this god's core and do not
-#   item-overweighted detail.items should NOT appear in this god's core
-#   narrative         prose only; recorded, never auto-checked
+#                       items: [name, ...]
+#   item-overweighted detail.items should NOT appear in this god's core, or in
+#                     any core in `scope`
+#                       items: [name, ...]
+#                       scope: support-solo | role:<Role>   (optional; counted
+#                              across the roster, partial at <= 1 in 8 cores)
+#   buy-order         "X before Y on this god." detail.order must appear in
+#                     that relative order in the core's buy order; items
+#                     between them are fine. Fewer than two of them in the
+#                     core is `holds`, not unchecked — the claim has lost its
+#                     subject and a human should look, not a script go quiet.
+#                       order: [name, name, ...]           (two or more)
+#   situational-swap  "Against <situation> bring X." The build's own swap row
+#                     for that situation must name one of detail.items, or the
+#                     core must already contain one. A named item filed under a
+#                     DIFFERENT situation is `partial`. Only the four
+#                     situations the model emits are accepted; anything else
+#                     ("tanky comp") raises, because nothing here could check it.
+#                       vs: heavy_cc | magic_heavy | physical_heavy | sustain
+#                       items: [name, ...]                 (any one satisfies)
+#   composition       "Carries shouldn't buy protections." "Build him as a
+#                     bruiser." A floor and/or ceiling on how many core items
+#                     carry a stat or an effect tag. Two-valued for one god
+#                     (clear / holds); a population verdict under `scope`.
+#                       stat: <item stat key, e.g. Physical Protection>
+#                         or tag: <effect tag, e.g. sustain>   (exactly one)
+#                       min: N and/or max: N
+#                       scope: support-solo | role:<Role>   (optional)
+#   pairing           "X only works alongside Z." If detail.item is in the
+#                     core, every item in detail.with must be too. A core
+#                     without the item is vacuously clear and the report says
+#                     "vacuous" so that green is not mistaken for a fix.
+#                       item: name
+#                       with: [name, ...]
+#   narrative         prose only; recorded, never auto-checked. Use it when
+#                     the reviewer said something none of the above can hold,
+#                     and say in `notes` what shape it would need — that list
+#                     is what tells the next person what to stop trying to
+#                     record. Shapes already refused, and why, are in the
+#                     `smite.expert_review` module docstring.
 
 reviews:
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
@@ -249,6 +292,19 @@ reviews:
       source at all: smitebrain gives per-slot marginals plus two alternates,
       never a joint distribution. That needs match-level data.
 
+      RE-EXAMINED 2026-09-03 AGAINST THE FOUR NEW CLAIM KINDS; STAYS
+      NARRATIVE. This is a claim about the METHOD — no god, no item, no pair
+      is named — and its two halves need different things. "It recommends
+      the statistically best items independently" is true by construction
+      (six arg-maxes) and can only be verified by reading code, which a
+      replay of output cannot do. "Consider item pairing" is a prescription
+      for an input the source does not carry. The `pairing` kind added today
+      is the concrete form of this ("X only alongside Z" on a named god,
+      checked as co-membership in one core), and the reviewer did not say
+      that; writing one down would be a claim from the maintainer, not from
+      them. What it would need to become checkable here: a named pair on a
+      named god from the reviewer, or a joint pick distribution.
+
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
     claim: narrative
@@ -265,3 +321,13 @@ reviews:
       0.222 at slot 6. Pick is now conditional on reaching the slot
       (scoring.SLOT_REACH). 214 community slot picks stopped being read as
       "rarely picked" by the underrated flag.
+
+      RE-EXAMINED 2026-09-03 AGAINST THE FOUR NEW CLAIM KINDS; STAYS
+      NARRATIVE. This is a claim about how a DENOMINATOR is read, not about
+      any build, and its checkable consequence is an invariant on scoring
+      rather than a property of a core. That invariant is guarded where it
+      belongs — `test_scoring` pins `SLOT_REACH` conditioning — so a replay
+      gate keyed on builds has nothing to add. What it would need to become
+      checkable here: per-game outcome data that separates "not bought" from
+      "the game ended first", which is the same match-level source every
+      refused shape needs.
