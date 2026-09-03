@@ -502,3 +502,67 @@ describe("DraftPage — a named threat that changed nothing", () => {
     expect(crit).not.toHaveTextContent(/weighed|answered|no item answers/i);
   });
 });
+
+/* A draft that reorders the same six items.
+ *
+ * `diffCore` reduced both cores to a membership Set, so this case produced
+ * `added: []`, `removed: []` and a board that said "nothing changed" under a
+ * list that had visibly changed. The fixture puts the anti-heal tag on an item
+ * ALREADY in the core, so the healer's bonus promotes it without displacing
+ * anything — which is a routine outcome of `adaptedCore` filling greedily in
+ * adjusted-score order, not a corner case. */
+describe("DraftPage — order-only adaptation", () => {
+  const REORDER_ITEMS = [
+    item("Alpha"), item("Beta"), item("Gamma"),
+    item("Delta"), item("Epsilon"), item("Zeta", ["anti-heal"]),
+  ];
+  const REORDER_SCORES: Record<string, Record<string, Record<string, number>>> = perMode<Record<string, number>>({
+    TestGod: { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55 },
+    EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
+  });
+
+  const draftWithHealer = () => {
+    render(<DraftPage gods={GODS} items={REORDER_ITEMS} builds={[]}
+      godItemScores={REORDER_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+  };
+
+  it("says the build was resequenced instead of claiming nothing moved", () => {
+    draftWithHealer();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/resequenced/i);
+    expect(screen.getByRole("heading", { level: 1 })).not.toHaveTextContent(/hasn.t moved/i);
+  });
+
+  it("names it as same items, different order", () => {
+    draftWithHealer();
+    const changed = within(screen.getByTestId("draft-changed"));
+    expect(changed.getByText(/same six items/i)).toBeInTheDocument();
+    expect(changed.getByText(/different order/i)).toBeInTheDocument();
+    expect(changed.queryByText(/nothing so far/i)).not.toBeInTheDocument();
+  });
+
+  it("shows the moved item, where it moved to, and why", () => {
+    draftWithHealer();
+    const rows = screen.getAllByTestId("draft-moved");
+    expect(rows.length).toBeGreaterThan(0);
+    const promoted = within(rows[0]);
+    expect(promoted.getByText("Zeta")).toBeInTheDocument();
+    expect(promoted.getByText(/earlier/i)).toBeInTheDocument();
+    // The reason strings already existed on AdaptedCore.reasons; the board
+    // simply had no row to put them on.
+    expect(promoted.getByText(/answers/i)).toBeInTheDocument();
+    expect(promoted.getByText("anti-heal")).toBeInTheDocument();
+  });
+
+  it("keeps every item — an order-only change is not a swap", () => {
+    draftWithHealer();
+    const core = within(screen.getByTestId("draft-core"));
+    expect(core.queryByText(/in place of/i)).not.toBeInTheDocument();
+    for (const name of ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"]) {
+      expect(core.getAllByText(name).length).toBeGreaterThan(0);
+    }
+  });
+});

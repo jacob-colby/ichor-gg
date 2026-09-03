@@ -205,12 +205,31 @@ export interface CoreChange {
   reason?: string;
 }
 
+/** An item both builds contain, bought at a different point in the order. */
+export interface CoreMove {
+  name: string;
+  /** 1-based position in the un-adapted core. */
+  from: number;
+  /** 1-based position after the draft overlay. */
+  to: number;
+  /** Clamped score bonus the overlay gave it — 0 when it moved because
+   *  something else did. */
+  bonus: number;
+  /** Tags/stats that earned the bonus, when it earned one. */
+  reason?: string;
+}
+
 export interface CoreDiff {
   changes: CoreChange[];
   /** Items in both builds — the part the draft didn't touch. */
   unchanged: string[];
   /** Pushed out with no matching arrival (rare; only on odd-sized diffs). */
   droppedOnly: string[];
+  /** Items in BOTH builds whose position changed, earliest arrival first.
+   *  Order is a claim the build makes, so a change to it is a change. */
+  moved: CoreMove[];
+  /** Same items, different sequence: `changes` is empty and `moved` is not. */
+  orderOnly: boolean;
 }
 
 /**
@@ -224,12 +243,41 @@ export interface CoreDiff {
  * Arrivals and departures are paired by rank within their own lists: the
  * highest-scoring newcomer takes the place of the highest-scoring casualty.
  * That's a presentational pairing, not a claim the assembler made it.
+ *
+ * IT ALSO REPORTS ORDER, and until 2026-09-02 it could not. Both sides were
+ * reduced to `new Set(...)` and diffed for membership, so a draft that put the
+ * same six items in a different sequence produced `added: []`, `removed: []`
+ * and a board that said nothing changed — while the build on screen above it
+ * had visibly changed. `adaptedCore` fills greedily in adjusted-score order,
+ * so a bonus large enough to move an item up but not large enough to displace
+ * anything is a routine outcome, not a corner case.
+ *
+ * `moved` is the items present in both at different positions and `orderOnly`
+ * is the case worth its own sentence on the page: nothing swapped, the
+ * sequence changed, and `reasons` says why. A reordering is a real claim —
+ * `assemble.build_order` on the pipeline side treats buy order as something
+ * the community record can contradict — so reporting it as "no adaptation" was
+ * wrong about the product, not merely incomplete.
  */
 export function diffCore(base: AdaptedCore, adapted: AdaptedCore): CoreDiff {
   const baseSet = new Set(base.core);
   const adaptedSet = new Set(adapted.core);
   const added = adapted.core.filter((n) => !baseSet.has(n));
   const removed = base.core.filter((n) => !adaptedSet.has(n));
+
+  const basePos = new Map(base.core.map((n, i) => [n, i + 1]));
+  const moved: CoreMove[] = [];
+  adapted.core.forEach((name, i) => {
+    const from = basePos.get(name);
+    if (from === undefined || from === i + 1) return;
+    moved.push({
+      name,
+      from,
+      to: i + 1,
+      bonus: adapted.bonuses[name] ?? 0,
+      reason: adapted.reasons[name],
+    });
+  });
 
   return {
     changes: added.map((name, i) => ({
@@ -240,5 +288,7 @@ export function diffCore(base: AdaptedCore, adapted: AdaptedCore): CoreDiff {
     })),
     unchanged: adapted.core.filter((n) => baseSet.has(n)),
     droppedOnly: removed.slice(added.length),
+    moved,
+    orderOnly: added.length === 0 && removed.length === 0 && moved.length > 0,
   };
 }

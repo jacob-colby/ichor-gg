@@ -92,10 +92,43 @@ describe("diffCore", () => {
     expect(d.unchanged).toEqual(["A", "B", "C"]);
   });
 
-  it("treats a pure reorder as unchanged — the same six items are the same build", () => {
+  /* This test used to assert the opposite — "a pure reorder is unchanged, the
+     same six items are the same build" — and that was the bug, written down.
+     A build asserts an ORDER; `assemble.build_order` on the pipeline side
+     treats buy order as something the community record can contradict. The
+     board reported `added: []`, `removed: []` under a list that had visibly
+     moved. */
+  it("reports a pure reorder as a change, not as nothing", () => {
     const d = diffCore(core(["A", "B", "C"]), core(["C", "A", "B"]));
     expect(d.changes).toEqual([]);
     expect(d.unchanged).toEqual(["C", "A", "B"]);
+    expect(d.orderOnly).toBe(true);
+    expect(d.moved).toEqual([
+      { name: "C", from: 3, to: 1, bonus: 0, reason: undefined },
+      { name: "A", from: 1, to: 2, bonus: 0, reason: undefined },
+      { name: "B", from: 2, to: 3, bonus: 0, reason: undefined },
+    ]);
+  });
+
+  it("carries the reason a reordered item was promoted", () => {
+    const d = diffCore(
+      core(["A", "B"]),
+      core(["B", "A"], { B: 0.09 }, { B: "anti-heal" }),
+    );
+    expect(d.orderOnly).toBe(true);
+    expect(d.moved[0]).toEqual({ name: "B", from: 2, to: 1, bonus: 0.09, reason: "anti-heal" });
+  });
+
+  it("is not orderOnly when something actually swapped, even if others moved", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["X", "C", "A"], { X: 0.1 }));
+    expect(d.orderOnly).toBe(false);
+    expect(d.moved.map((m) => m.name)).toEqual(["C", "A"]);
+  });
+
+  it("leaves `moved` empty when the order is identical", () => {
+    const d = diffCore(core(["A", "B", "C"]), core(["A", "B", "C"]));
+    expect(d.moved).toEqual([]);
+    expect(d.orderOnly).toBe(false);
   });
 
   it("pairs multiple swaps by rank within each list", () => {
@@ -119,7 +152,7 @@ describe("diffCore", () => {
 
   it("handles empty builds", () => {
     const d = diffCore(core([]), core([]));
-    expect(d).toEqual({ changes: [], unchanged: [], droppedOnly: [] });
+    expect(d).toEqual({ changes: [], unchanged: [], droppedOnly: [], moved: [], orderOnly: false });
   });
 });
 

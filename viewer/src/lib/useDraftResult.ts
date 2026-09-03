@@ -99,6 +99,9 @@ export interface DraftResult {
   result: { base: AdaptedCore; adapted: AdaptedCore; diff: CoreDiff } | null;
   draftEnabled: boolean;
   changeCount: number;
+  /** Items in both builds bought at a different point. A draft that only
+   *  reorders is an adaptation, and the dock used to call it "nothing". */
+  moveCount: number;
   coreSize: number;
 }
 
@@ -229,6 +232,7 @@ export function useDraftResult(
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,
     result, draftEnabled,
     changeCount: result?.diff.changes.length ?? 0,
+    moveCount: result?.diff.moved.length ?? 0,
     coreSize: result?.adapted.core.length ?? 6,
   };
 }

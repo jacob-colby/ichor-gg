@@ -295,3 +295,46 @@ describe("DraftDock — it has to be visible", () => {
     expect(gold).toHaveLength(1);
   });
 });
+
+/* The dock's twin of DraftPage's order-only case. It reported "Nothing moved
+ * yet" while the list directly beneath it was in a new order, because
+ * `changeCount` counted membership swaps only. */
+describe("DraftDock — order-only adaptation", () => {
+  const REORDER_ITEMS = [
+    item("Alpha"), item("Beta"), item("Gamma"),
+    item("Delta"), item("Epsilon"), item("Zeta", ["anti-heal"]),
+  ];
+  const REORDER_SCORES: Record<string, Record<string, Record<string, number>>> = perMode<Record<string, number>>({
+    TestGod: { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55 },
+    EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
+  });
+
+  const open = () => {
+    render(<DraftDock gods={GODS} items={REORDER_ITEMS} builds={[]}
+      godItemScores={REORDER_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByRole("button", { name: /start a draft/i }));
+    fireEvent.click(screen.getByLabelText("Add you"));
+    fireEvent.click(screen.getByText("TestGod"));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
+  };
+
+  it("does not call a resequenced build 'nothing moved'", () => {
+    open();
+    const d = screen.getByTestId("draft-dock");
+    expect(d).toHaveTextContent(/same items, new order/i);
+    expect(d).not.toHaveTextContent(/nothing moved yet/i);
+  });
+
+  it("calls the list an adapted core, not the default one", () => {
+    open();
+    expect(screen.getByTestId("draft-dock")).toHaveTextContent(/your adapted core/i);
+  });
+
+  it("lists which item moved and where to", () => {
+    open();
+    const rows = screen.getAllByTestId("dock-moved");
+    expect(rows.length).toBeGreaterThan(0);
+    expect(within(rows[0]).getByText("Zeta")).toBeInTheDocument();
+  });
+});
