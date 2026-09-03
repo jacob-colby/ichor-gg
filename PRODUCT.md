@@ -47,7 +47,7 @@ Name: **ichor**. Explicitly a fan project — not affiliated with or endorsed by
 - Design specs and implementation plans for prior viewer work: `docs/specs/`, `docs/plans/`.
 - Living engineering doc — current state, design decisions with their evidence, negative-results register, what's left: `docs/STATE.md`. The dated files in `docs/specs/` and `docs/plans/` are point-in-time and never updated.
 - The combat model is calibrated against twelve in-game readings at 0.0% worst-case error (`pipeline/smite/combat.py`, gated by `smite.calibrate_combat`).
-- Test suites back the pipeline and viewer: 860 Python tests (`pipeline/smite/tests`), 753 viewer tests.
+- Test suites back the pipeline and viewer: 909 Python tests (`pipeline/smite/tests`), 765 viewer tests.
 - No invented testimonials, customer logos, or pricing exist and none should be fabricated — this is a free fan tool, not a commercial product.
 
 ## Product Principles
