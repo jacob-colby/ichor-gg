@@ -102,7 +102,12 @@ NUMBER_WORDS = {
     7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "Eleven", 12: "Twelve",
     13: "Thirteen", 14: "Fourteen", 15: "Fifteen", 16: "Sixteen",
     17: "Seventeen", 18: "Eighteen", 19: "Nineteen", 20: "Twenty",
+    21: "Twenty-one", 22: "Twenty-two", 23: "Twenty-three", 24: "Twenty-four",
+    25: "Twenty-five",
 }
+# Above twenty the word is hyphenated, so the two register checks below read
+# `[\w-]+` rather than `\w+` — with `\w+` a doc saying "Twenty-one" audited as
+# "one" and drifted against itself (2026-09-02, the day the register reached 21).
 
 #: §7 rows, and parts of rows, that are deliberately not checked. Every entry
 #: names a row that must exist — an entry for a row that has been renamed or
@@ -531,7 +536,7 @@ CHECKS = [
           lambda f, d: (str(pipeline_test_count()), str(viewer_test_count())),
           source="product", note=_tests_note),
     Check("negative-results register",
-          prose(r"(\w+) correct-looking improvements have been measured"),
+          prose(r"([\w-]+) correct-looking improvements have been measured"),
           _register_word, source="product"),
     Check("leakage-free measure",
           prose(r"\((\d+\.\d+)% against a (\d+\.\d+)% random core\)"),
@@ -539,7 +544,7 @@ CHECKS = [
                         _pct(f.calibration["baseline"]["mean"])),
           source="product", tier="model"),
     Check("negative-results register",
-          prose(r"(\w+) correct-looking improvements have been implemented"),
+          prose(r"([\w-]+) correct-looking improvements have been implemented"),
           _register_word, source="claude"),
 ]
 

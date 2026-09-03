@@ -475,6 +475,15 @@ Why this one first, in order of weight:
    Agility Greaves +1,566 → ~+1,009. If the sweep moves coverage by more than
    Shell's 20 slots can account for, something else moved.
 
+**Measured 2026-09-02, and it ships OFF — the falsifier fired.** Register
+§4.21 and `price_stat_multipliers` in `_weights.yaml` carry the numbers. The
+four residual predictions held to within 50 gold (Shell +740 → +224). Shell
+of Rebuke enters zero cores in every mode; coverage moved anyway (probe
+40.9% → 40.1%, best 37.6% → 37.5%, both intervals containing zero) and 40 of
+90 Conquest cores changed without a relic in any of them. That is not this
+flag's mechanism, it is reported and not explained, and the question it
+leaves is in STATE.md §5.
+
 The two next in line, if this one ships or nulls:
 
 - **`price_on_hit`** (B1, flat unconditional members first: Tyrfing +15,

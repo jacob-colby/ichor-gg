@@ -332,6 +332,14 @@ shipped **off**. Numbers are in the named module.
       an attempt that assumes it will should check that first.
 5. **Pricing item passives** — the extraction is right and the prices are
    visibly more sensible; the recommender still got worse.
+
+    _Scoped 2026-09-02 (§4.20)._ Read this entry as a verdict on `price_passives`'
+    CONFIGURATION, not on unconditional grants as a class: beyond the thirteen
+    items the shipped carve-outs price, the flag reaches nine tier-2 components,
+    Dominance and Shogun's Ofuda, and prices the Adaptive Stat clause as its own
+    single-class column (the defect `price_adaptive` records). That is what was
+    measured worse. The unconditional grants it never reached — Triton's Conch,
+    Dwarven Plate — it never reached because of the parser, and are in §5.
 6. **The 2026-08-05 weight sweep's own winner** — rejected as leakage (§1).
 7. **Build coherence (2026-08-09)** — the only term that scores a *set* rather
    than an item, discounting an item by how much of its stat line the core
@@ -1270,6 +1278,42 @@ shipped **off**. Numbers are in the named module.
     catalogue names and the next carve-out must not repeat). Predictions are
     written before the sweep in `docs/PASSIVES.md` §6.
 
+21. **`price_stat_multipliers` (2026-09-02)** — the carve-out §4.20 proposed,
+    built exactly as proposed, default OFF, and it ships OFF: **the falsifier
+    written into the commit before the sweep fired.** Numbers, the paired CIs,
+    the churn and the role verdicts are under `price_stat_multipliers` in
+    `_weights.yaml`; the design is in `passives.multiplier_grants`. Measured
+    at control fingerprint `f00ab519045f` (baseline 5.7%, probe 40.9%, best
+    37.6%).
+
+    The four residual predictions held to within 50 gold each (Shell of
+    Rebuke +740 → +224 against a predicted ~+205). The one prediction that
+    mattered was the falsifier: Shell is the only one of the four relics with
+    a community record, so coverage could move only through Shell. **Shell
+    enters zero cores** — 0 of 90 in every mode with the flag on, as with it
+    off — and coverage moved anyway: probe 40.9% → 40.1% (−0.83pp,
+    [−3.11, +1.22], 7 better / 8 worse), best 37.6% → 37.5% (−0.19pp,
+    [−0.93, +0.48]), with 40 of 90 Conquest model cores, 29 Joust and 50
+    Arena changing. Every one of those cores changed without a relic
+    entering or leaving it.
+
+    **By the rule the commit set, that is reported and not explained.** What
+    is recorded beside it, as measurement only: the regression intercept
+    reads 934 with the flag off and 854 on, Strength 21.81 → 22.87 g/pt, and
+    the Conquest churn is Genji's Guard, Breastplate of Valor and
+    Transcendence arriving against Pendulum Blade, Shield Splitter and
+    Shifter's Shield leaving. The Carry guard holds (Berserker's Shield 0 of
+    18 either way); `build_quality`'s verdicts are unmoved for Carry, Jungle
+    and Mid and give up one god each on Solo and Support. Diagnosing why four
+    items that reach no core move forty cores is the next session's work and
+    is in §5, deliberately not this entry's.
+
+    Two things the catalogue said that the sweep confirms without touching
+    the ship decision: the A2 exchange rate is exact (the residuals landed
+    where the pool reference said they would), and a `priced` claim in
+    `data/_passive_classes.yaml` is refused by its test until a flag actually
+    ships — the four relics stay unpriced there because the flag is off.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1440,6 +1484,44 @@ to hold any carve-out to that the shipped three were not: the reference build
 must come from item data (the shipped `conversion_reference` is a community
 median), and a converted magnitude must land inside the column's fitted range.
 
+### The leakage-free measure carries a community reference inside a shipped flag
+Found by the passive catalogue (§4.20) and verified by the maintainer on
+2026-09-02: `conversion_reference` — the reference build `price_conversions`
+prices Transcendence, Book of Thoth, Rod of Tahuti and Nimble Ring against — is
+`passives.measure_conversion_reference`, a MEDIAN OVER COMMUNITY BUILDS, and
+`calibrate` does not neutralise it the way it zeroes `win` and `pick`. So the
+two "leakage-free" splits are not fully leakage-free, and every coverage figure
+quoted since that flag shipped (2026-08-14) carries it. **This is its own
+session.** Do not fix it in passing; the fix is a pool-derived reference of the
+kind `multiplier_reference` already is (§4.21, `passives.measure_multiplier_reference`),
+re-swept, with the two controls compared — and the size of the leak, which
+nobody has measured, is the first number to produce.
+
+### Why four items that reach no core move forty cores
+§4.21's open question, deliberately handed on rather than answered there.
+`price_stat_multipliers` gives four relics ~535 gold of priced stat line each;
+none of the four enters a core with the flag on, and 40 of 90 Conquest cores,
+29 Joust and 50 Arena change anyway, with the intercept moving 934 → 854 and
+Strength 21.81 → 22.87 g/pt. `price_adaptive` recorded a gain with the same
+shape — "the gain is not the eight items, it is the intercept" — and this is
+the same shape with the opposite sign. Whether that is the fit's identifiability
+(four relics with a 20-column stat line each), the pool-mean reference vector
+spreading a relic's premium across every column, or something else, is not
+decided here. Whoever takes it should re-run the sweep with the flag's grant
+restricted to the columns the relic already carries (the `conversion_grants`
+"amplify only" precedent) as the first arm.
+
+### Two parser precision notes, small and separate
+Both inert today and both recorded in `docs/PASSIVES.md` §7 (2026-09-02).
+`passives.is_persistent_stacker` reads Kinetic Cuirass ("Stacks up to 2
+times", consumed on the next attack) and Oni Hunter's Garb ("Max 3 stacks",
+per enemy in range) as persistent — wrong the day `price_stacks` is turned on.
+`passives.unconditional_grants` misses two real A1 grants: Triton's Conch's
+"+5 (+0.5 per Level)" grammar, and Dwarven Plate's always-on protections
+because "On Use" appears later in the text and `is_conditional` reads the
+whole passive rather than the clause (`stat_conversions` already splits by
+sentence for exactly this reason).
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -1593,7 +1675,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (848) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (856) ·
 `cd viewer && npm test -- --run` (753).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -1623,7 +1705,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 848 pipeline · 753 viewer — the pipeline count rose 845 → 848 with `test_passive_catalogue.py` (§4.20, the only test this session added); the viewer count reads 753 on `npm test -- --run` after `npm ci`, up from the 681 this row carried, on merges into `main` unrelated to this session |
+| Tests | 856 pipeline · 753 viewer — the pipeline count rose 845 → 856 with `test_passive_catalogue.py` (§4.20) and the `price_stat_multipliers` tests in `test_passives.py` (§4.21); the viewer count reads 753 on `npm test -- --run` after `npm ci`, up from the 681 this row carried, on merges into `main` unrelated to this session |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
