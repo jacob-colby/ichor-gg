@@ -491,6 +491,12 @@ The two next in line, if this one ships or nulls:
   slots (57) and the one §4.15 pointed at. Two design questions before code —
   the level convention for "per Level" text, and whether a magical bonus on a
   physical hit is priced at the symmetric reference or refused (a §4.17 mix).
+  _Measured 2026-09-02 (STATE.md §4.22), ships OFF._ The extraction is
+  right, the falsifier did not fire, and coverage fell on both splits (probe
+  40.9% → 39.6%, best 37.6% → 37.0%) because the three items enter cores on
+  gods whose players do not buy them there — Tyrfing on 17 gods against 3 in
+  the record. The price is god-agnostic; where it lands is the fit map's,
+  and the fit map credits Attack Damage to 78 of 89 gods.
 - **`price_cooldown_returns`** (A4, Chronos' Pendant alone): exact, tiny,
   and a clean test of whether a one-item conversion into an existing column
   moves anything at all.

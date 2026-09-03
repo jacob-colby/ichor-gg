@@ -1078,6 +1078,49 @@ multiplier_reference:
 # through a core one of them ENTERS OR LEAVES. A god whose coverage moves
 # with none of the three entering or leaving its core is not this mechanism
 # and is reported, not explained.
+#
+# MEASURED 2026-09-02, at control fingerprint 8da1ada3e67c (baseline 5.7%,
+# probe 40.9%, best 37.6%). Paired per god, 2000-resample bootstrap:
+#
+#     split                 off      on     delta       95% CI          better / worse
+#     probe 0.70:0.30     40.9%   39.6%   -1.30pp   [-3.28, +0.56]        5 / 9
+#     best  0.45:0.55     37.6%   37.0%   -0.63pp   [-1.52, +0.22]        1 / 4
+#
+# Exact random-core baseline 5.7427% both ways. Residuals, predicted -> got:
+#
+#     Tyrfing         +164 -> ~-165    got   -91   (fair)
+#     Golden Blade     +58 -> ~-162    got  -109   (fair)
+#     Bragi's Harp    +275 ->  ~+55    got   +86   (premium -> fair)
+#
+# Within 75 gold each, and the refit did what the paragraph above said it
+# would: Attack Damage 21.95 -> 20.31 g/pt, intercept 934 -> 931, Strength
+# 21.81 -> 21.50. THE FALSIFIER DID NOT FIRE — this time the mechanism IS the
+# one priced. 35 of 90 Conquest `model` cores moved and 28 of them by one of
+# the three items entering (20 `core` cores, 18 with a priced item; Joust
+# 17 of 90, 15; Arena 14 of 90, 12). Tyrfing goes from 12 to 29 Conquest
+# model cores, Golden Blade 8 -> 16, Bragi's Harp 0 -> 7. Nothing leaves.
+#
+# AND IT IS A NULL, for the reason that decides it: the cores the three enter
+# are not the cores the community holds them in. Tyrfing enters 17 cores and
+# is in the community record on 3 of them (Cupid, Izanami, Medusa); Golden
+# Blade enters 8 and is in the record on none; Bragi's Harp enters 7 and is
+# in the record on one (Nut). The community holds Tyrfing on 13 gods, and
+# with the flag on we hold it on 29 — the price is now right and the
+# recommendation lands on the wrong gods, which is §4.5's sentence on a
+# clean three-item subset: the extraction is right, the prices are visibly
+# more sensible, the recommender still gets worse. Where they enter is the
+# fit map's decision, and the fit map credits Attack Damage on 78 of 89 gods
+# (`attack_damage_fit`) whether or not the god auto-attacks — the same
+# Scylla-buys-Parashu shape §4.12 recorded for the per-second clock.
+#
+# The Carry guard holds (Berserker's Shield 0 of 18 both ways) but Golden
+# Blade in Carry model cores goes 5 -> 8 — the item §4.14 named beside
+# Berserker's, made cheaper by this flag — and the Carry maximand's median
+# falls 28.96 -> 26.89 DPS per 1000g while Carry stays 12 ahead / 6 behind.
+# Jungle 11/7 -> 12/6, Solo and Support unchanged, Mid unchanged.
+#
+# SHIPS OFF. Worse on both leakage-free splits, both intervals containing
+# zero, and the items land where the community does not buy them.
 price_on_hit: false
 
 # What an item with no community record scores on `win` -- the god's own median

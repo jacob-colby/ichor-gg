@@ -1314,6 +1314,42 @@ shipped **off**. Numbers are in the named module.
     `data/_passive_classes.yaml` is refused by its test until a flag actually
     ships — the four relics stay unpriced there because the flag is off.
 
+22. **`price_on_hit` (2026-09-02)** — the catalogue's second carve-out (class
+    B1, flat unconditional on-hit damage priced as Attack Damage on the same
+    hit), built as proposed, default OFF, and it ships OFF as a plain null.
+    Numbers, paired CIs, churn and verdicts under `price_on_hit` in
+    `_weights.yaml`; the design and the survey in `passives.on_hit_grants`.
+    Measured at control fingerprint `8da1ada3e67c` (5.7% / 40.9% / 37.6%).
+
+    **The extraction is right and the falsifier did not fire.** Three items
+    carry the clause (Tyrfing +15, Bragi's Harp +10, Golden Blade +10; a
+    test pins that no fourth item and no component does). The residual
+    predictions held to within 75 gold and the refit behaved as written
+    beforehand (Attack Damage 21.95 → 20.31 g/pt, intercept unmoved). Unlike
+    §4.21, the cores that moved moved BECAUSE of the priced items — 28 of 35
+    Conquest model cores by one of the three entering, nothing leaving.
+
+    **And coverage fell on both splits** — probe 40.9% → 39.6% (−1.30pp,
+    [−3.28, +0.56], 5 better / 9 worse), best 37.6% → 37.0% (−0.63pp,
+    [−1.52, +0.22]) — because the items enter cores on gods whose players do
+    not buy them there. Tyrfing enters 17 cores and is in the community
+    record on 3 (Cupid, Izanami, Medusa); Golden Blade enters 8, in the
+    record on none; Bragi's Harp enters 7, in the record on one (Nut). The
+    community holds Tyrfing on 13 gods; with the flag on we hold it on 29.
+    That is §4.5's sentence reproduced on a clean three-item subset, with
+    the cause now visible: a correct PRICE is god-agnostic, and WHERE the
+    cheaper item lands is the fit map's call — `attack_damage_fit` credits
+    Attack Damage on 78 of 89 gods whether or not the god auto-attacks, the
+    same shape as §4.12's Scylla buying Avatar's Parashu.
+
+    **So the lesson generalises past this flag**: for the attack channel, a
+    pricing carve-out cannot ship alone. It needs the fit side to know which
+    gods swing — a per-god basic-attack share the kit does not state and
+    §4.12 refused to invent — or it will put every on-hit item on every god
+    with an Attack Damage column. Golden Blade in Carry cores going 5 → 8
+    (Berserker's Shield stays at 0 of 18) is the same mechanism seen from
+    §4.14's side.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1675,7 +1711,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (856) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (860) ·
 `cd viewer && npm test -- --run` (753).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -1705,7 +1741,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 856 pipeline · 753 viewer — the pipeline count rose 845 → 856 with `test_passive_catalogue.py` (§4.20) and the `price_stat_multipliers` tests in `test_passives.py` (§4.21); the viewer count reads 753 on `npm test -- --run` after `npm ci`, up from the 681 this row carried, on merges into `main` unrelated to this session |
+| Tests | 860 pipeline · 753 viewer — the pipeline count rose 845 → 860 with `test_passive_catalogue.py` (§4.20) and the `price_stat_multipliers` and `price_on_hit` tests in `test_passives.py` (§4.21, §4.22); the viewer count reads 753 on `npm test -- --run` after `npm ci`, up from the 681 this row carried, on merges into `main` unrelated to this session |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
