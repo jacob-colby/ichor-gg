@@ -5,48 +5,48 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the General
-  aspect_pick_rate: 0.84
-  aspect_win_rate: 0.58
+  aspect_pick_rate: 0.83
+  aspect_win_rate: 0.57
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.39
-    win_rate: 0.61
+    win_rate: 0.6
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.11
-      win_rate: 0.67
+      win_rate: 0.63
     - name: Heartwood Charm
       pick_rate: 0.09
-      win_rate: 0.61
+      win_rate: 0.59
   - name: Chronos' Pendant
-    pick_rate: 0.29
+    pick_rate: 0.28
     win_rate: 0.66
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.2
-      win_rate: 0.55
+      pick_rate: 0.19
+      win_rate: 0.52
     - name: Breastplate of Valor
-      pick_rate: 0.17
-      win_rate: 0.58
+      pick_rate: 0.16
+      win_rate: 0.54
   - name: Breastplate of Valor
     pick_rate: 0.27
     win_rate: 0.57
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.25
+      pick_rate: 0.24
       win_rate: 0.62
     - name: Freya's Tears
       pick_rate: 0.1
-      win_rate: 0.64
+      win_rate: 0.58
   - name: Genji's Guard
-    pick_rate: 0.23
-    win_rate: 0.61
+    pick_rate: 0.22
+    win_rate: 0.6
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
-      win_rate: 0.55
+      win_rate: 0.51
     - name: Breastplate of Valor
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.58
   - name: Freya's Tears
     pick_rate: 0.19
@@ -54,39 +54,39 @@ builds:
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.1
-      win_rate: 0.73
-    - name: Sage's Ring
+      win_rate: 0.69
+    - name: Heartwood Charm
       pick_rate: 0.06
-      win_rate: 0.34
+      win_rate: 0.6
   - name: Shell of Rebuke
-    pick_rate: 0.07
-    win_rate: 0.78
+    pick_rate: 0.08
+    win_rate: 0.8
     alternates:
     - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.75
+      win_rate: 0.68
     - name: Adroit Ring
       pick_rate: 0.06
-      win_rate: 0.79
+      win_rate: 0.67
   community_starters:
   - name: Sands Of Time
-    pick_rate: 0.35
+    pick_rate: 0.34
     win_rate: 0.51
   - name: Pendulum of the Ages
-    pick_rate: 0.19
-    win_rate: 0.71
-  - name: Hunter's Cowl
-    pick_rate: 0.11
+    pick_rate: 0.2
     win_rate: 0.67
+  - name: Hunter's Cowl
+    pick_rate: 0.12
+    win_rate: 0.64
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-09-02'
-  god_win_rate: 0.577922077922078
-  god_matches_won: 356
-  god_matches_played: 616
+  last_verified: '2026-09-03'
+  god_win_rate: 0.5625823451910409
+  god_matches_won: 427
+  god_matches_played: 759
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-01'
-  god_matches_analyzed: 8200
+  god_window_end: '2026-09-03'
+  god_matches_analyzed: 10626
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -179,11 +179,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -382,7 +382,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
+  - Genji's Guard
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -407,10 +407,10 @@ builds:
     Grace.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.58
       efficiency: 0.66
-      win: 0.61
-      pick: 0.38
+      win: 0.6
+      pick: 0.37
       fit: 0.44
     Berserker's Shield:
       total: 0.59
@@ -479,8 +479,8 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.66
-      win: 0.61
-      pick: 0.38
+      win: 0.6
+      pick: 0.37
       fit: 0.32
     Berserker's Shield:
       total: 0.6
@@ -565,10 +565,10 @@ builds:
       pick: 0.0
       fit: 0.6
     Shell of Rebuke:
-      total: 0.51
+      total: 0.52
       efficiency: 0.28
-      win: 0.78
-      pick: 0.22
+      win: 0.8
+      pick: 0.25
       fit: 0.35
     Freya's Tears:
       total: 0.61
@@ -585,7 +585,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Genji's Guard
-    reason: community 78% win over 43 matches (vs 58% on this god), taking the model's
+    reason: community 80% win over 61 matches (vs 56% on this god), taking the model's
       weakest slot from Genji's Guard
   starter: *id001
 ---

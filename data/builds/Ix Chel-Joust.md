@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Stygian Anchor
-    reason: Conquest community 59% win over 303 matches (vs 53% on this god), taking
+    reason: Conquest community 58% win over 390 matches (vs 53% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

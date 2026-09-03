@@ -5,36 +5,36 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Pandemonium
-  aspect_pick_rate: 0.07
-  aspect_win_rate: 0.43
+  aspect_pick_rate: 0.06
+  aspect_win_rate: 0.41
   slot_order:
   - name: Chronos' Pendant
-    pick_rate: 0.31
-    win_rate: 0.49
+    pick_rate: 0.3
+    win_rate: 0.5
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.26
       win_rate: 0.47
     - name: Book of Thoth
       pick_rate: 0.16
-      win_rate: 0.48
+      win_rate: 0.49
   - name: Soul Reaver
-    pick_rate: 0.18
-    win_rate: 0.45
+    pick_rate: 0.19
+    win_rate: 0.48
     alternates:
     - name: The Cosmic Horror
-      pick_rate: 0.17
-      win_rate: 0.46
+      pick_rate: 0.15
+      win_rate: 0.47
     - name: Spear of Desolation
-      pick_rate: 0.12
-      win_rate: 0.55
+      pick_rate: 0.13
+      win_rate: 0.53
   - name: Soul Gem
-    pick_rate: 0.17
+    pick_rate: 0.19
     win_rate: 0.45
     alternates:
     - name: Totem of Death
-      pick_rate: 0.13
-      win_rate: 0.42
+      pick_rate: 0.12
+      win_rate: 0.43
     - name: Ethereal Staff
       pick_rate: 0.1
       win_rate: 0.53
@@ -43,50 +43,50 @@ builds:
     win_rate: 0.51
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.15
-      win_rate: 0.51
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: Omen Drum
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.56
   - name: Obsidian Shard
     pick_rate: 0.19
-    win_rate: 0.51
+    win_rate: 0.54
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.17
+      pick_rate: 0.18
       win_rate: 0.62
     - name: Evil Eye
-      pick_rate: 0.11
-      win_rate: 0.44
+      pick_rate: 0.1
+      win_rate: 0.43
   - name: Evil Eye
-    pick_rate: 0.18
-    win_rate: 0.48
+    pick_rate: 0.16
+    win_rate: 0.47
     alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.12
-      win_rate: 0.5
     - name: Rod of Tahuti
       pick_rate: 0.12
       win_rate: 0.56
+    - name: Obsidian Shard
+      pick_rate: 0.11
+      win_rate: 0.5
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.36
+    pick_rate: 0.37
     win_rate: 0.6
   - name: Bluestone Pendant
-    pick_rate: 0.23
-    win_rate: 0.37
+    pick_rate: 0.22
+    win_rate: 0.38
   - name: Pendulum of the Ages
     pick_rate: 0.2
-    win_rate: 0.46
+    win_rate: 0.49
   source_url: https://smitebrain.com/gods/merlin/
-  last_verified: '2026-09-02'
-  god_win_rate: 0.48079658605974396
-  god_matches_won: 338
-  god_matches_played: 703
+  last_verified: '2026-09-03'
+  god_win_rate: 0.48928974069898534
+  god_matches_won: 434
+  god_matches_played: 887
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-01'
-  god_matches_analyzed: 8200
+  god_window_end: '2026-09-03'
+  god_matches_analyzed: 10626
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -100,7 +100,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
+  - Soul Gem
   - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
@@ -123,10 +123,10 @@ builds:
     Ring.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.49
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.63
     Spear of Desolation:
       total: 0.58
@@ -147,16 +147,16 @@ builds:
       pick: 0.42
       fit: 0.79
     Obsidian Shard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.89
     Soul Gem:
       total: 0.55
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 1.0
   starter: &id001
     base: Conduit Gem
@@ -195,7 +195,7 @@ builds:
     Book of Thoth:
       total: 0.46
       efficiency: 0.51
-      win: 0.48
+      win: 0.49
       pick: 0.16
       fit: 0.39
     Spear of Desolation:
@@ -211,7 +211,7 @@ builds:
       pick: 0.0
       fit: 0.57
     The World Stone:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
       win: 0.48
       pick: 0.0
@@ -223,9 +223,9 @@ builds:
       pick: 0.42
       fit: 0.57
     Obsidian Shard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.57
   starter: *id001
@@ -261,10 +261,10 @@ builds:
     of Valor, Bancroft''s Talon, Genji''s Guard, Helm of Radiance.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.49
+      total: 0.5
       efficiency: 0.55
-      win: 0.49
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.44
     Spear of Desolation:
       total: 0.54
@@ -285,16 +285,16 @@ builds:
       pick: 0.42
       fit: 0.56
     Obsidian Shard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.66
     Soul Gem:
       total: 0.53
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 0.88
   starter: *id001
 - source: suggested
@@ -331,7 +331,7 @@ builds:
     Glorious Pridwen.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.51
       efficiency: 0.56
       win: 0.48
       pick: 0.0
@@ -349,9 +349,9 @@ builds:
       pick: 0.42
       fit: 0.39
     Obsidian Shard:
-      total: 0.51
+      total: 0.53
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.49
     Amanita Charm:
@@ -364,7 +364,7 @@ builds:
       total: 0.53
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 0.89
   starter: *id001
 - source: suggested
@@ -424,16 +424,16 @@ builds:
       pick: 0.42
       fit: 0.85
     Obsidian Shard:
-      total: 0.58
+      total: 0.6
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.95
     Soul Gem:
       total: 0.55
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 1.0
   starter: *id001
 - source: suggested
@@ -493,16 +493,16 @@ builds:
       pick: 0.42
       fit: 0.32
     Obsidian Shard:
-      total: 0.5
+      total: 0.52
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.42
     Soul Gem:
       total: 0.5
       efficiency: 0.57
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 0.58
   starter: *id001
 - source: suggested
@@ -538,10 +538,10 @@ builds:
     Tears, Polynomicon, Blood-Bound Book, Jade Scepter.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.49
-      pick: 0.31
+      win: 0.5
+      pick: 0.3
       fit: 0.63
     Gem of Focus:
       total: 0.49
@@ -562,16 +562,16 @@ builds:
       pick: 0.42
       fit: 0.37
     Obsidian Shard:
-      total: 0.51
+      total: 0.53
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.47
     Soul Gem:
       total: 0.54
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 0.96
   starter: *id001
 - source: suggested
@@ -631,16 +631,16 @@ builds:
       pick: 0.42
       fit: 0.79
     Obsidian Shard:
-      total: 0.57
+      total: 0.59
       efficiency: 0.54
-      win: 0.51
+      win: 0.54
       pick: 0.41
       fit: 0.89
     Soul Gem:
       total: 0.55
       efficiency: 0.52
       win: 0.45
-      pick: 0.26
+      pick: 0.3
       fit: 1.0
   starter: *id001
 ---

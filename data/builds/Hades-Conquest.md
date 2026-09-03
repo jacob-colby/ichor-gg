@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Daybreak Gavel
-    pick_rate: 0.29
-    win_rate: 0.62
+    pick_rate: 0.31
+    win_rate: 0.63
     alternates:
     - name: Bancroft's Talon
       pick_rate: 0.19
-      win_rate: 0.7
+      win_rate: 0.68
     - name: Spear of Desolation
-      pick_rate: 0.1
-      win_rate: 0.72
+      pick_rate: 0.11
+      win_rate: 0.7
   - name: The World Stone
     pick_rate: 0.34
     win_rate: 0.67
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.28
+      pick_rate: 0.3
       win_rate: 0.63
     - name: Daybreak Gavel
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.55
   - name: Shifter's Shield
     pick_rate: 0.14
-    win_rate: 0.67
+    win_rate: 0.66
     alternates:
     - name: The World Stone
-      pick_rate: 0.3
-      win_rate: 0.59
+      pick_rate: 0.32
+      win_rate: 0.61
     - name: Spear of Desolation
       pick_rate: 0.11
       win_rate: 0.66
   - name: Rod of Tahuti
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.71
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.19
+      pick_rate: 0.2
       win_rate: 0.61
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.76
+      win_rate: 0.75
   - name: Obsidian Shard
     pick_rate: 0.08
-    win_rate: 0.72
+    win_rate: 0.73
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.18
-      win_rate: 0.7
+      pick_rate: 0.2
+      win_rate: 0.69
     - name: Freya's Tears
       pick_rate: 0.07
-      win_rate: 0.6
+      win_rate: 0.64
   - name: Evil Eye
-    pick_rate: 0.07
-    win_rate: 0.52
+    pick_rate: 0.08
+    win_rate: 0.53
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.09
-      win_rate: 0.71
+      pick_rate: 0.08
+      win_rate: 0.69
     - name: Blinking Abyss
-      pick_rate: 0.07
-      win_rate: 0.84
+      pick_rate: 0.06
+      win_rate: 0.82
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.38
-    win_rate: 0.66
+    pick_rate: 0.4
+    win_rate: 0.68
   - name: Conduit Gem
-    pick_rate: 0.31
+    pick_rate: 0.3
     win_rate: 0.59
   - name: Pendulum of the Ages
-    pick_rate: 0.12
-    win_rate: 0.63
+    pick_rate: 0.11
+    win_rate: 0.65
   source_url: https://smitebrain.com/gods/hades/
-  last_verified: '2026-09-02'
-  god_win_rate: 0.6391382405745063
-  god_matches_won: 356
-  god_matches_played: 557
+  last_verified: '2026-09-03'
+  god_win_rate: 0.6475524475524476
+  god_matches_won: 463
+  god_matches_played: 715
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-01'
-  god_matches_analyzed: 8200
+  god_window_end: '2026-09-03'
+  god_matches_analyzed: 10626
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -150,12 +150,12 @@ builds:
       total: 0.71
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.47
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.57
   starter: &id001
@@ -221,12 +221,12 @@ builds:
       total: 0.7
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.42
     Obsidian Shard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.45
   starter: *id001
@@ -290,12 +290,12 @@ builds:
       total: 0.7
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.4
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.5
   starter: *id001
@@ -303,21 +303,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -337,22 +337,22 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.61
-    Shifter's Shield:
+    Spear of Desolation:
       total: 0.58
-      efficiency: 0.55
-      win: 0.67
-      pick: 0.22
-      fit: 0.51
+      efficiency: 0.57
+      win: 0.66
+      pick: 0.17
+      fit: 0.49
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.39
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.49
     Amanita Charm:
@@ -428,12 +428,12 @@ builds:
       total: 0.73
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.58
     Obsidian Shard:
       total: 0.63
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.68
   starter: *id001
@@ -497,12 +497,12 @@ builds:
       total: 0.68
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.25
     Obsidian Shard:
       total: 0.58
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.35
   starter: *id001
@@ -555,7 +555,7 @@ builds:
       total: 0.58
       efficiency: 0.61
       win: 0.61
-      pick: 0.32
+      pick: 0.33
       fit: 0.51
     Spear of Desolation:
       total: 0.6
@@ -567,7 +567,7 @@ builds:
       total: 0.68
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.26
     Soul Gem:
       total: 0.59
@@ -639,12 +639,12 @@ builds:
       total: 0.69
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.32
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.42
   starter: *id001
@@ -711,12 +711,12 @@ builds:
       total: 0.7
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.39
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.72
+      win: 0.73
       pick: 0.17
       fit: 0.49
   starter: *id001
@@ -763,7 +763,7 @@ builds:
       total: 0.56
       efficiency: 0.61
       win: 0.61
-      pick: 0.32
+      pick: 0.33
       fit: 0.36
     Gluttonous Grimoire:
       total: 0.6
@@ -787,7 +787,7 @@ builds:
       total: 0.71
       efficiency: 0.86
       win: 0.71
-      pick: 0.4
+      pick: 0.42
       fit: 0.47
   starter: *id001
 ---

@@ -591,6 +591,77 @@ builds:
       fit: 0.81
   starter: *id001
 - source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Reaper
+  - Riptalon
+  - Avatar's Parashu
+  flex_slots:
+  - Lernaean Bow
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    The Reaper:
+      total: 0.61
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Riptalon:
+      total: 0.66
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Avatar's Parashu:
+      total: 0.5
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+  swaps:
+  - added: Avatar's Parashu
+    removed: Tyrfing
+    reason: Conquest community 78% win over 40 matches (vs 51% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Toxic Blade
@@ -1182,6 +1253,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+  starter: *id001
+  aspect: Aspect of the Heroic Tutor
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Reaper
+  - Riptalon
+  - Heartseeker
+  - Avatar's Parashu
+  flex_slots:
+  - Heartseeker
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Jotunn's Revenge:
+      total: 0.62
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    The Reaper:
+      total: 0.66
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Riptalon:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Avatar's Parashu:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+  swaps:
+  - added: Avatar's Parashu
+    removed: Transcendence
+    reason: Conquest community 78% win over 40 matches (vs 51% on this god), taking
+      the model's weakest slot from Transcendence
+  borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 ---
