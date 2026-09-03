@@ -536,3 +536,58 @@ def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per
     assert passives.all_stats_multiplier(lamp) == 0.0
     assert passives.all_stats_multiplier(lamp, level=20) == pytest.approx(0.12)
     assert not scoring.is_buildable(lamp)
+
+
+# ── Flat on-hit damage (catalogue class B1, unconditional members) ─────────
+
+def test_the_flat_on_hit_grant_is_read_from_both_grammars():
+    tyrfing = _p("Attacks deal +15 bonus Physical Damage. On God hit: Increase bonus "
+                 "Damage by +15 for 4s Stacks once, +1 Stack per 4 Levels (Max 6 Stacks)")
+    assert passives.on_hit_flat_damage(tyrfing) == 15.0        # the ramp is not counted
+    golden = _p("Attacks deal bonus Physical Damage. Damage = +10 + 20% of your Item "
+                "Protections Damages all Enemies within 2.5m")
+    assert passives.on_hit_flat_damage(golden) == 10.0         # the protections term is not
+    bragi = _p("Attack Hit: +10 (+3 per Level) bonus Magical Damage. Structures and "
+               "Bosses take half damage from Bragi's Harp")
+    assert passives.on_hit_flat_damage(bragi) == 10.0          # the per-Level term is not
+    assert passives.on_hit_grants(tyrfing) == {"Attack Damage": 15.0}
+
+
+def test_a_gated_or_scaled_on_hit_clause_is_refused():
+    for text in (
+        "Ability Used: Your next Attack deals bonus Magical Damage Damage = 80% of your "
+        "Intelligence Cooldown: 2s",                                   # Polynomicon, per cast
+        "Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60% Attack Damage) "
+        "Physical Damage",                                             # Odysseus', a rate
+        "Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health",  # Qin's
+        "Store 25% of your Lifesteal healing as bonus Magical Damage on your next Attack.",
+        "On Attack Hit: 25% bonus Physical Damage to Enemies within 1.92m of the target",
+        "+35% Critical Strike Damage.",
+    ):
+        assert passives.on_hit_flat_damage(_p(text)) == 0.0, text
+        assert passives.on_hit_grants(_p(text)) == {}
+
+
+def test_price_on_hit_lands_in_the_attack_damage_column_and_is_a_no_op_off():
+    from smite import efficiency
+    tyrfing = {"name": "Tyrfing", "tier": 3, "cost": 2400,
+               "stats": {"Strength": "25", "Attack Damage": "25", "Attack Speed": "10%"},
+               "passive": "Attacks deal +15 bonus Physical Damage. On God hit: +15 for 4s"}
+    before = efficiency.apply_pricing_flags({})
+    try:
+        off = efficiency.item_stat_values(tyrfing)
+        efficiency.apply_pricing_flags({"price_on_hit": True})
+        on = efficiency.item_stat_values(tyrfing)
+    finally:
+        efficiency.restore_pricing_flags(before)
+    assert off == {"Strength": 25.0, "Attack Damage": 25.0, "Attack Speed %": 10.0}
+    assert on == {"Strength": 25.0, "Attack Damage": 40.0, "Attack Speed %": 10.0}
+
+
+def test_exactly_three_items_in_the_whole_item_set_carry_a_flat_on_hit_clause():
+    """The survey the flag rests on, re-run rather than trusted: no component
+    carries one, so the regression pool sees only these three."""
+    from smite import recommend
+    carriers = sorted((it["name"], passives.on_hit_flat_damage(it))
+                      for it in recommend.load_items() if passives.on_hit_flat_damage(it) > 0)
+    assert carriers == [("Bragi's Harp", 10.0), ("Golden Blade", 10.0), ("Tyrfing", 15.0)]

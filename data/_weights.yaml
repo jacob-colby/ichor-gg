@@ -1046,6 +1046,40 @@ multiplier_reference:
   Strength: 47.5746
   Tenacity: 2.6119
 
+# Flat bonus damage on every basic attack, priced as Attack Damage on the
+# same hit — catalogue class B1, its unconditional members (docs/PASSIVES.md,
+# STATE.md §4.20). Three buildable items: Tyrfing (+15), Bragi's Harp (+10,
+# its +3/level term NOT priced — no level in the scorer, the Lamp's rule) and
+# Golden Blade (+10, its +20% of item protections NOT priced — the reference
+# shape §4.21 could not attribute). Every other on-hit clause in the pool is
+# gated or scaled off something the item does not carry; the survey is in
+# `passives.on_hit_grants`.
+#
+# THE EXCHANGE RATE IS THE ATTACK'S OWN UNIT AND NEEDS NO CLOCK: a basic
+# attack scales 100% Attack Damage on 84 of 89 gods (MEASURED), so +N per hit
+# is +N Attack Damage per hit, into a column with 11 carriers priced at
+# 21.95 g/pt. Damage type is read as the same currency, at the symmetric
+# reference `build_quality` declares; against base protections a magical
+# point is worth ~13% more than a physical one, so Bragi's is understated.
+#
+# DEFAULT OFF, SWEPT AGAINST BOTH LEAKAGE-FREE SPLITS. The paragraph below
+# was written BEFORE the sweep; the sweep follows it.
+#
+# PREDICTIONS, at the shipped fit, before the refit moves them by some tens
+# of gold as §4.21's did:
+#   Tyrfing         +164  ->  ~-165
+#   Golden Blade     +58  ->  ~-162
+#   Bragi's Harp    +275  ->   ~+55
+# Two of the three already carry Attack Damage, so the grant lands in a
+# column they are in rather than opening twenty (§4.21's shape); the Attack
+# Damage price should fall a little, the intercept should barely move.
+# THE FALSIFIER: the three hold 13 + 2 + 1 = 16 of 543 Conquest community
+# slots (Tyrfing, Golden Blade, Bragi's Harp), so coverage can move only
+# through a core one of them ENTERS OR LEAVES. A god whose coverage moves
+# with none of the three entering or leaving its core is not this mechanism
+# and is reported, not explained.
+price_on_hit: false
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #

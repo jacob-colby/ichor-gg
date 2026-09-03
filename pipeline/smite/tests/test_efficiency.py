@@ -243,7 +243,8 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
                 efficiency.PRICE_ADAPTIVE, efficiency.ADAPTIVE_BRANCH,
                 dict(efficiency.CONVERSION_REFERENCE),
                 efficiency.PRICE_STAT_MULTIPLIERS,
-                dict(efficiency.MULTIPLIER_REFERENCE))
+                dict(efficiency.MULTIPLIER_REFERENCE),
+                efficiency.PRICE_ON_HIT)
 
     before = efficiency.apply_pricing_flags(
         {"price_passives": True, "price_stacks": True,
@@ -251,13 +252,14 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
          "price_adaptive": True, "adaptive_branch": "intelligence",
          "conversion_reference": {"Max Mana": 500},
          "price_stat_multipliers": True,
-         "multiplier_reference": {"Strength": 40.0}})
+         "multiplier_reference": {"Strength": 40.0},
+         "price_on_hit": True})
     try:
         assert snapshot() == (True, True, True, True, True, "intelligence",
-                              {"Max Mana": 500}, True, {"Strength": 40.0})
+                              {"Max Mana": 500}, True, {"Strength": 40.0}, True)
         efficiency.apply_pricing_flags({})
         assert snapshot() == (False, False, False, False, False, "strength", {},
-                              False, {})
+                              False, {}, False)
         # It returns the prior values so a sweep can restore them.
         prior = efficiency.apply_pricing_flags({"price_stacks": True})
         assert prior == {"PRICE_PASSIVES": False, "PRICE_STACKS": False,
@@ -265,7 +267,7 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
                          "PRICE_CONVERSIONS": False, "CONVERSION_REFERENCE": {},
                          "PRICE_ADAPTIVE": False, "ADAPTIVE_BRANCH": "strength",
                          "PRICE_STAT_MULTIPLIERS": False,
-                         "MULTIPLIER_REFERENCE": {}}
+                         "MULTIPLIER_REFERENCE": {}, "PRICE_ON_HIT": False}
     finally:
         efficiency.restore_pricing_flags(before)
 

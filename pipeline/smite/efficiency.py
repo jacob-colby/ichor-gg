@@ -167,13 +167,18 @@ PRICE_STAT_MULTIPLIERS = False
 # carries the numbers under `multiplier_reference`.
 MULTIPLIER_REFERENCE = {}
 
+# Whether flat bonus damage on every basic attack counts as Attack Damage on
+# the same hit — catalogue class B1's unconditional members, three items. See
+# `passives.on_hit_grants`. Flipped by `price_on_hit` in _weights.yaml.
+PRICE_ON_HIT = False
+
 
 #: Every module global `apply_pricing_flags` owns. The list the save/restore
 #: pair walks, so a new switch is covered by adding it in one place.
 PRICING_FLAGS = ("PRICE_PASSIVES", "PRICE_STACKS", "STACK_FRACTION",
                  "PRICE_CRIT_MULTIPLIERS", "PRICE_CONVERSIONS",
                  "CONVERSION_REFERENCE", "PRICE_ADAPTIVE", "ADAPTIVE_BRANCH",
-                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE")
+                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE", "PRICE_ON_HIT")
 
 
 def apply_pricing_flags(weights):
@@ -196,7 +201,7 @@ def apply_pricing_flags(weights):
     global PRICE_PASSIVES, PRICE_STACKS, PRICE_CRIT_MULTIPLIERS
     global PRICE_CONVERSIONS, CONVERSION_REFERENCE, STACK_FRACTION
     global PRICE_ADAPTIVE, ADAPTIVE_BRANCH
-    global PRICE_STAT_MULTIPLIERS, MULTIPLIER_REFERENCE
+    global PRICE_STAT_MULTIPLIERS, MULTIPLIER_REFERENCE, PRICE_ON_HIT
     before = {k: globals()[k] for k in PRICING_FLAGS}
     before["CONVERSION_REFERENCE"] = dict(CONVERSION_REFERENCE)
     before["MULTIPLIER_REFERENCE"] = dict(MULTIPLIER_REFERENCE)
@@ -211,6 +216,7 @@ def apply_pricing_flags(weights):
     ADAPTIVE_BRANCH = str(w.get("adaptive_branch") or "strength")
     PRICE_STAT_MULTIPLIERS = bool(w.get("price_stat_multipliers"))
     MULTIPLIER_REFERENCE = dict(w.get("multiplier_reference") or {})
+    PRICE_ON_HIT = bool(w.get("price_on_hit"))
     return before
 
 
@@ -259,6 +265,10 @@ def item_stat_values(item):
         # clause (Genie's Lamp) prices at nothing here. See `passives`.
         from smite import passives
         for key, amount in passives.multiplier_grants(item, MULTIPLIER_REFERENCE).items():
+            out[key] = out.get(key, 0.0) + amount
+    if PRICE_ON_HIT:
+        from smite import passives
+        for key, amount in passives.on_hit_grants(item).items():
             out[key] = out.get(key, 0.0) + amount
     return out
 
