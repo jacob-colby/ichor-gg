@@ -13,10 +13,10 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Nineteen
+2. **Check the negative-results register (§4) first.** Twenty
    correct-looking improvements have been implemented and measured, and all
    but one shipped off. Re-running them against the old metric will just
-   reproduce the old answer. Six of the nineteen are *not* "we measured this
+   reproduce the old answer. Seven of the twenty are *not* "we measured this
    and it is false", and each says on its own line what it is instead. §4.13
    and §4.14 are the first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
    ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
@@ -41,6 +41,11 @@ Five things that are easy to get wrong here, all expanded in that file:
    Plating and Dampening turn out to be — and it carries a warning worth more
    than either verdict: **`quality` rank does not decide core membership**, so
    a score-gap argument cannot show a change is safe. Rebuild the cores.
+   **§4.20 is the seventh** and is the widest: the passive catalogue
+   (`docs/PASSIVES.md`) refuses nine CLASSES of passive at once, each for a
+   reason an earlier entry already gives, and names the carve-out to try next.
+   Read it before pricing any passive — the class an item belongs to is
+   already decided there.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately
