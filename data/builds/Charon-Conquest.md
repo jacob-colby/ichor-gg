@@ -159,6 +159,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -231,6 +235,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,6 +309,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,6 +383,9 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -442,6 +457,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
@@ -515,6 +534,9 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -588,6 +610,9 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -658,5 +683,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
+  - Shifter's Shield
   starter: *id001
 ---

@@ -159,6 +159,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Shifter's Shield
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -231,6 +235,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,6 +309,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,12 +382,15 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
@@ -406,17 +420,17 @@ builds:
     Eye of Erebus, Spear of the Magus, Mantle Of Discord, Glorious Pridwen, Midgardian
     Mail, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.46
-      pick: 0.33
-      fit: 0.48
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
       win: 0.55
       pick: 0.11
+      fit: 0.48
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.46
+      pick: 0.33
       fit: 0.48
     Kinetic Cuirass:
       total: 0.51
@@ -442,12 +456,16 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Shifter's Shield
@@ -476,17 +494,17 @@ builds:
     Hide of the Nemean Lion, Helm of Darkness, Leviathan''s Hide, Void Shield, Ancile,
     Oni Hunter''s Garb, Xibalban Effigy, Spear of Desolation, Hussar''s Wings.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.46
-      pick: 0.33
-      fit: 0.39
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
       win: 0.55
       pick: 0.11
+      fit: 0.39
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.46
+      pick: 0.33
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55
@@ -512,5 +530,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Shifter's Shield
   starter: *id001
 ---

@@ -172,6 +172,14 @@ export interface CuratedBuildEntry {
    *  and Arena have no record of their own, so their Hybrid borrows Conquest's
    *  minus the parts that don't transfer. Disclosed, never passed off. */
   borrowed_from?: string;
+  /** Which of the six got their POSITION in `slot_order` from this god's own
+   *  community slot record rather than from the tag-and-cost heuristic
+   *  (`assemble.build_order`). Absent — never empty — when none did, which is
+   *  every Joust and Arena build: those modes have no record of their own and
+   *  are deliberately not given a borrowed one for ORDER. The page states the
+   *  count, because a buy order that is half evidence and half heuristic
+   *  should not read as if all six were either. */
+  community_ordered?: string[];
 }
 
 export interface HybridSwap {

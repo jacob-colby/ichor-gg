@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Golden Blade
-  - Odysseus' Bow
   - Lernaean Bow
   - Tyrfing
   - Riptalon
   - Silverbranch Bow
+  - Demon Blade
   flex_slots:
+  - Demon Blade
   - Silverbranch Bow
-  - Odysseus' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -559,12 +559,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
-    Odysseus' Bow:
-      total: 0.43
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Lernaean Bow:
       total: 0.64
       efficiency: 0.52
@@ -589,15 +583,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Demon Blade:
+      total: 0.62
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   swaps:
   - added: Silverbranch Bow
     removed: Toxic Blade
-    reason: Conquest community 65% win over 177 matches (vs 53% on this god), taking
+    reason: Conquest community 66% win over 133 matches (vs 54% on this god), taking
       the model's weakest slot from Toxic Blade
-  - added: Odysseus' Bow
-    removed: Demon Blade
-    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
-      the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
 ---

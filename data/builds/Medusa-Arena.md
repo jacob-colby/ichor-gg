@@ -723,15 +723,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - The Executioner
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Riptalon
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
+  - Lernaean Bow
   - Silverbranch Bow
-  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -748,12 +748,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    The Executioner:
-      total: 0.34
-      efficiency: 0.35
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.59
     Toxic Blade:
       total: 0.59
       efficiency: 0.44
@@ -785,14 +785,10 @@ builds:
       pick: 0.0
       fit: 1.0
   swaps:
-  - added: The Executioner
-    removed: Tyrfing
-    reason: Conquest community 73% win over 77 matches (vs 59% on this god), taking
-      the model's weakest slot from Tyrfing
   - added: Silverbranch Bow
-    removed: Lernaean Bow
-    reason: Conquest community 69% win over 113 matches (vs 59% on this god), taking
-      the model's weakest slot from Lernaean Bow
+    removed: Tyrfing
+    reason: Conquest community 70% win over 90 matches (vs 58% on this god), taking
+      the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
 ---

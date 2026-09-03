@@ -118,15 +118,20 @@ def god_report(god, items, god_build, weights, tags_map):
 
 
 def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
-           flex_count, starter, aspect_name, fun=False, extra=None):
+           flex_count, starter, aspect_name, fun=False, extra=None, positions=None):
     """One suggested build entry from an already-assembled core.
 
     Extracted so every archetype is packaged identically — `model` differs from
     `core` only in how its rows were ranked, and that difference has to stay the
     only difference between them.
+
+    `positions` is this build group's OWN community slot record (see
+    `_build_entry_set`); it decides buy ORDER only and never membership, so
+    `core` arrives already assembled and leaves with the same six items.
     """
     flex = assemble.flex_slots(core, rows, count=flex_count)
-    ordered = assemble.build_order(core, items_by_name, tags_map, weights)
+    ordered = assemble.build_order(core, items_by_name, tags_map, weights, positions)
+    backed = assemble.community_ordered(ordered, positions, weights)
     swaps = assemble.situational_swaps(rows, items_by_name, tags_map, core=core)
     by_name = {r["item"]: r for r in rows}
     slot_scores = {
@@ -142,6 +147,10 @@ def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
         "situational_swaps": swaps,
         "rationale": _rationale(archetype, rows, profile),
         "slot_scores": slot_scores,
+        # Which of the six got their position from the community record rather
+        # than from tags and cost. Absent, never empty, when none did — the
+        # page has to be able to tell "no evidence" from "not stamped yet".
+        **({"community_ordered": backed} if backed else {}),
         **(extra or {}),
         **({"fun": True} if fun else {}),
         **({"starter": starter} if starter else {}),
@@ -154,6 +163,21 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      gold_values=None):
     entries = []
     core_rows = core_profile = None
+    # Buy order reads THIS mode's own community record and nothing else.
+    #
+    # `god_build` is the note for `mode`, and Joust and Arena notes carry no
+    # community entry at all, so this is `{}` for 180 of the 270 build groups
+    # and `build_order` falls straight back to the heuristic there. That is a
+    # decision and not an omission: the Hybrid may BORROW Conquest's record for
+    # item CHOICE (`borrow_community`, and it says `borrowed_from` on the build
+    # when it does), but a slot centroid is a claim about WHEN a power spike
+    # lands, and both other modes deliberately zero `win` and `pick` on the
+    # grounds that Conquest's rates describe a different game. Timing is more
+    # mode-specific than choice, not less — Arena's gold spools from 0:00 at
+    # 900g/min — so borrowing it would assert something no source here states.
+    # The god page already discloses those two modes as "a shortlist rather
+    # than a buy order"; this leaves that sentence true.
+    positions = scoring.slot_positions(god_build, weights)
     eligible = scoring.eligible_flavors(god, weights, items)
     for flavor in [None] + eligible:
         cfg = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
@@ -177,7 +201,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             core_rows, core_profile = rows, profile
         entries.append(_entry(archetype, core, rows, items_by_name, tags_map,
                               weights, profile, flex_count, starter, aspect_name,
-                              fun=bool(cfg.get("fun"))))
+                              fun=bool(cfg.get("fun")), positions=positions))
 
     # The model's own answer, with the meta switched off.
     #
@@ -201,7 +225,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             **assemble.overflow_args(weights, eff_scores, gold_values))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
-                              starter, aspect_name))
+                              starter, aspect_name, positions=positions))
 
         # And the hybrid: that same core, corrected only where the model is
         # near-indifferent and the community's record is strong enough to
@@ -244,7 +268,8 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                 extra["borrowed_from"] = borrowed_from
             entries.append(_entry("hybrid", hy_core, model_rows, items_by_name,
                                   tags_map, weights, core_profile, flex_count,
-                                  starter, aspect_name, extra=extra))
+                                  starter, aspect_name, extra=extra,
+                                  positions=positions))
     return entries
 
 

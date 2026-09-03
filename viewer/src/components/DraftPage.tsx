@@ -81,6 +81,49 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
   );
 }
 
+/** An item both builds buy, at a different point in the order.
+ *
+ *  Deliberately quieter than `ChangeRow`: a swap changes WHAT you buy and a
+ *  move changes WHEN, and the page should not spend the same emphasis on both.
+ *  No bonus bar — an item can move because something else did, in which case
+ *  its own bonus is 0.00 and a bar would imply a force that wasn't applied. */
+function MoveRow({ move, itemsByName }: {
+  move: { name: string; from: number; to: number; bonus: number; reason?: string };
+  itemsByName: Record<string, Item>;
+}) {
+  const earlier = move.to < move.from;
+  const cost = itemsByName[move.name]?.cost;
+  return (
+    <li
+      data-testid="draft-moved"
+      className="grid grid-cols-[36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md border border-line bg-bg2/50 px-2 py-2.5"
+    >
+      <Icon name={move.name} item className="col-start-1 h-9 w-9" />
+      <span className="col-start-2 flex min-w-0 flex-wrap items-baseline gap-x-2">
+        <a href={toHash.item(move.name)}
+          className="press -my-1 truncate rounded-sm py-1 text-body font-medium text-ink hover:underline">
+          {move.name}
+        </a>
+        <span className="text-label text-faint">
+          {earlier ? "earlier" : "later"} — slot{" "}
+          <span className="font-mono text-muted">{move.from}</span>
+          <span aria-hidden="true"> → </span>
+          <span className="font-mono text-ink-soft">{move.to}</span>
+        </span>
+      </span>
+      <span className="col-start-3 shrink-0 font-mono text-label text-faint">
+        {move.bonus > 0 ? `+${move.bonus.toFixed(2)}` : "—"}
+      </span>
+      {move.reason && (
+        <span className="col-start-2 col-span-2 text-small text-muted">
+          answers <span className="text-ink-soft">{move.reason}</span>
+          {cost != null && <span className="font-mono text-faint"> · {cost}g</span>}
+        </span>
+      )}
+    </li>
+  );
+}
+
 interface DraftPageProps {
   gods: God[];
   items: Item[];
@@ -117,7 +160,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
 
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
-    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
+    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, moveCount, coreSize, starters,
     startersAreConquest, relicPicks, aspectScored, meGod,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage,
     aspectOn);
@@ -156,13 +199,17 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
             ? <>Build for the match you&rsquo;re actually in.</>
             : changeCount > 0
               ? <>Your draft moved <span className="text-gold">{changeCount} of {coreSize}</span> items.</>
-              : <>Your draft hasn&rsquo;t moved this build yet.</>}
+              // Reordering the same six IS moving the build. The headline said
+              // it had not, above a list that had.
+              : moveCount > 0
+                ? <>Your draft <span className="text-gold">resequenced</span> this build.</>
+                : <>Your draft hasn&rsquo;t moved this build yet.</>}
         </h1>
         <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
           {!meName
             ? "Put your god in the gold slot, then add the enemies as they lock in. Every item that changes shows what it displaced and which threat it answers."
             : enemiesKnown === 0
-              ? changeCount > 0
+              ? changeCount > 0 || moveCount > 0
                 // Ally composition is draft information too — saying "nothing
                 // is adapting yet" while showing changes was a contradiction.
                 ? "Adapted to your ally line-up so far. Add enemies and it sharpens."
@@ -481,18 +528,33 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
 
             <div className="mt-5" data-testid="draft-changed">
               <h3 className={eyebrow}>What changed</h3>
-              {result.diff.changes.length === 0 ? (
+              {result.diff.changes.length === 0 && !result.diff.orderOnly ? (
                 <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
                   {enemiesKnown === 0
                     ? "Nothing yet — add an enemy and the model starts re-ranking against them."
                     : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
                 </p>
               ) : (
-                <ul className="mt-2 flex flex-col gap-1.5">
-                  {result.diff.changes.map((c) => (
-                    <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
-                  ))}
-                </ul>
+                <>
+                  {/* A draft that reorders the same six items used to land in
+                      the branch above — "nothing changed", printed under a
+                      build that had visibly changed. The order is a claim the
+                      page makes, so it gets a sentence rather than silence. */}
+                  {result.diff.orderOnly && (
+                    <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
+                      Same six items, <span className="text-ink-soft">different order</span> — this
+                      draft doesn&rsquo;t change what to buy, it changes when.
+                    </p>
+                  )}
+                  <ul className="mt-2 flex flex-col gap-1.5">
+                    {result.diff.changes.map((c) => (
+                      <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
+                    ))}
+                    {result.diff.moved.map((m) => (
+                      <MoveRow key={`move-${m.name}`} move={m} itemsByName={itemsByName} />
+                    ))}
+                  </ul>
+                </>
               )}
             </div>
             </>

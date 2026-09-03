@@ -376,6 +376,32 @@ describe("DetailPanel — the buy ledger", () => {
     expect(screen.queryByText("off-meta")).not.toBeInTheDocument();
   });
 
+  /* `assemble.build_order` reads this god's own slot record now, per item, so
+     part of a Conquest buy order is evidence and part is still tags and cost.
+     Saying nothing would let the reader take all six as measured. */
+  it("says how many of the six are placed where the community buys them", () => {
+    const backed = [{ type: "smite-build", god: "Chiron", mode: "Conquest", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A", "B", "C"],
+        community_ordered: ["A", "C"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: backed as never }));
+    expect(screen.getByText(/2 of 3/)).toBeInTheDocument();
+    expect(screen.getByText(/the slot this god.s players actually buy them in/i)).toBeInTheDocument();
+    expect(screen.getByText(/ordered by effect and cost/i)).toBeInTheDocument();
+    // The line the whole change has to keep making.
+    expect(screen.getByText(/not a claim about outcomes/i)).toBeInTheDocument();
+  });
+
+  it("says nothing about placement when no position came from the record", () => {
+    const unbacked = [{ type: "smite-build", god: "Chiron", mode: "Joust", builds: [
+      { source: "suggested", archetype: "core", slot_order: ["A"], situational_swaps: [], rationale: "" },
+    ] }];
+    render(panel({ items, builds: unbacked as never, mode: "Joust" }));
+    expect(screen.queryByText(/the slot this god.s players actually buy them in/i)).not.toBeInTheDocument();
+    // Joust's own disclosure is the one that stands there, and it still does.
+    expect(screen.getByText(/shortlist rather than a buy order/i)).toBeInTheDocument();
+  });
+
   /* No shipped flavor sets `fun` any more — `fun-crit` was retired for focused
    * builds meant to be played. The mechanism stays tested because the entry
    * shape still carries the flag, and a build that opts out of the meta

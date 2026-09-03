@@ -484,6 +484,66 @@ def lookup_rates(god_build, item_name, weights=None):
     return best_alternate or (0.0, None)
 
 
+def slot_positions(god_build, weights=None, include_picks=True,
+                   include_alternates=True):
+    """`{item -> (centroid_slot, mass)}` — WHEN this god's community buys each
+    item, from the same `slot_order` block `lookup_rates` reads for WHETHER.
+
+    The scrape has always carried this and the model has always thrown it
+    away. Each `slot_order` entry is a per-slot distribution, not a flat list:
+    the same item turns up in several slots at different rates (Medusa's
+    Silverbranch Bow in slots 3, 4 and 5), and slot 1 is far more concentrated
+    than slot 6. `build_index.popular_items` flattens all of that to each
+    item's single highest pick rate anywhere, which is the right answer to the
+    question it asks ("what does this playerbase buy") and discards the answer
+    to a different one.
+
+    Each sighting is divided by `SLOT_REACH` first, for exactly the reason
+    that constant exists: a raw slot-6 rate is divided by matches that never
+    bought a sixth item, so an uncorrected centroid is pulled EARLIER by
+    attrition rather than by preference. Conditioned, the numbers are "of the
+    players who reached this slot, this share bought this item", which is the
+    only form in which two slots are comparable.
+
+    `mass` is the conditioned mass summed over slots and is the CONFIDENCE, not
+    a rate: an item the community reliably buys somewhere reads near or above
+    1.0, an item three players tried reads ~0.05. Callers clamp it at 1.0, the
+    same convention and for the same reason as `lookup_rates`.
+
+    `include_picks` / `include_alternates` split the record into its two
+    halves. Both ship on. They exist so an ordering fit on the slot PICKS
+    alone can be scored against the ALTERNATES it never read — the only
+    held-out check available against data that has no outcome side
+    (`order_agreement.held_out`). Turning both off returns `{}`."""
+    reach = slot_reach(weights)
+    per_slot: dict = {}
+    for entry in (god_build or {}).get("builds", []) or []:
+        if entry.get("source") != "community":
+            continue
+        for index, slot in enumerate(entry.get("slot_order") or [], start=1):
+            if not isinstance(slot, dict):
+                continue
+            seen = ([slot] if include_picks else [])
+            if include_alternates:
+                seen = seen + list(slot.get("alternates") or [])
+            for cand in seen:
+                name, rate = cand.get("name"), cand.get("pick_rate")
+                if not name or rate is None:
+                    continue
+                # min(.., 1.0) matches `lookup_rates`: a single sighting cannot
+                # be worth more than "everybody who got here bought it".
+                cond = min(rate / reach.get(index, 1.0), 1.0)
+                by_slot = per_slot.setdefault(name, {})
+                by_slot[index] = max(by_slot.get(index, 0.0), cond)
+    out = {}
+    for name, by_slot in per_slot.items():
+        mass = sum(by_slot.values())
+        if mass <= 0:
+            continue
+        out[name] = (sum(i * v for i, v in by_slot.items()) / mass, mass)
+    return out
+
+
 # What an item scores on the `win` signal when the community has never built
 # it. NOT a neutral value, despite reading like one — and the distinction runs
 # the recommender.

@@ -50,3 +50,11 @@ data/Analysis/*.md
 # same inputs, and its diff is the instrument for re-testing a model change
 # such as `damage_fit_blend` moving off 0.0.
 !data/Analysis/_build_quality.md
+# `_order_agreement.md` earns its place for a reason neither of the other two
+# has: it is the ONLY record of a claim no gate in this repo can hold. Coverage
+# is blind to order and `build_quality` is blind to order, so a buy order that
+# drifted back to cost-sorting would fail nothing and nobody would find out.
+# Its diff is the only alarm there is. Deterministic on the same inputs
+# (`smite.order_agreement --sweep`), and it says on its first line that it
+# measures agreement with observed play and not outcomes.
+!data/Analysis/_order_agreement.md

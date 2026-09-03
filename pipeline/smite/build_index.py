@@ -68,6 +68,16 @@ def popular_items(build_entry: dict) -> list:
     item seen more than once (as a slot pick here, an alternate there) is
     deduped, keeping the sighting with the highest pick_rate. Sorted by
     pick_rate descending, then name ascending so ties are deterministic.
+    THE FLATTENING IS DELIBERATE HERE AND WAS A HOLE EVERYWHERE ELSE. This
+    answers "what does this playerbase buy", for a panel that lists items, and
+    dropping the slot is right for that question. It was the only reader of
+    `slot_order` for years, so the POSITIONAL half of the record — the same
+    item at different rates in slots 3, 4 and 5, slot 1 far more concentrated
+    than slot 6 — reached nothing downstream, and `assemble.build_order`'s own
+    docstring said "we have no real build-path data" while the data sat in the
+    dict this function was reading. `scoring.slot_positions` is the other
+    reading; neither replaces the other.
+
     Pure function over a single dict — no disk access — so it's unit-testable
     on its own; see test_build_index.py."""
     best: dict = {}

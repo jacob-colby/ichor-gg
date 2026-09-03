@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Void Stone
-    reason: Conquest community 72% win over 104 matches (vs 55% on this god), taking
+    reason: Conquest community 70% win over 74 matches (vs 56% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

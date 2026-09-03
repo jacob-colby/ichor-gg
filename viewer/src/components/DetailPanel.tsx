@@ -971,6 +971,27 @@ export function DetailPanel({
               these modes directly (checked 2026-08-10: SmiteBrain is Conquest
               only, smite2.live offers a Joust/Arena selector with no data
               behind it, SmiteTracker's meta report is Conquest only). */}
+          {/* WHERE THE ORDER CAME FROM. `build_order` used to be tags and
+              cost alone and its docstring said "we have no real build-path
+              data" — which was false: every community `slot_order` entry is a
+              per-slot distribution and the model was flattening it away. It
+              reads that record now, per item, so the page has to say how much
+              of the sequence is evidence and how much is still the heuristic.
+              Absent on Joust and Arena, whose disclosure is the paragraph
+              below: they have no record, and Conquest's is not borrowed for
+              ORDER because when a power spike lands is more mode-specific
+              than which item it is. */}
+          {!community && (active as CuratedBuildEntry).community_ordered?.length ? (
+            <p className="mt-2 border-t border-line pt-2 text-small leading-relaxed text-muted">
+              <span className="text-ink-soft">
+                {(active as CuratedBuildEntry).community_ordered!.length} of {baseNames.length}
+              </span>{" "}
+              of these are placed using the slot this god&rsquo;s players actually buy them in
+              ({(active as CuratedBuildEntry).community_ordered!.join(", ")}), weighted by how
+              often. The rest are ordered by effect and cost. Agreement with observed play, not
+              a claim about outcomes.
+            </p>
+          ) : null}
           {!community && !compareToMeta && !isFun && (
             <p className="mt-2 border-t border-line pt-2 text-small leading-relaxed text-muted">
               <span className="text-premium">No outcome data exists for {note.mode}.</span>{" "}

@@ -1971,13 +1971,66 @@ modes:
     label: "Arena — math + mode profile (no meta win/pick data)"
 
 # ── Build order (recommended purchase sequence) ─────────────────────────────
-# Heuristic buy-order for suggested cores (we have no real build-path data).
-# stage = default_stage + sum(tag_stage for the item's effect_tags) +
-# cost * cost_weight. Core is sorted ascending by stage (ties: cost, then name).
+# Buy order for suggested cores. Two signals and only one of them is evidence.
+#
+# THE HEURISTIC, which is all there was until 2026-09-02 and is still the whole
+# answer for any item with no community record:
+#   stage = default_stage + sum(tag_stage for the item's effect_tags) +
+#           cost * cost_weight, ascending (ties: cost, then name).
 # flex_count = how many lowest-scored core items situational swaps may replace.
+#
+# `community_weight` mixes in `scoring.slot_positions` — the god's own
+# `slot_order` block read POSITIONALLY, slot-reach corrected — as
+#   key = (1 - w) * heuristic_rank + w * centroid,  w = community_weight * min(1, mass)
+# See `assemble.build_order` for why the heuristic's rank is the right thing to
+# mix a slot centroid with (both are already on the six-slot clock, so no scale
+# constant is invented) and `smite.order_agreement` for the measurement.
+#
+# WHAT WAS WRONG. `assemble.build_order`'s docstring read "heuristic - we have
+# no real build-path data", and that was false for as long as the scrape has
+# returned per-slot distributions. Every community `slot_order` entry is a
+# distribution over slots, not a flat list; `build_index.popular_items` flattens
+# it to each item's highest pick rate anywhere before anything downstream can
+# see it. Inside tier 3 the shipped costs cluster 2350-3000g, so `cost_weight`
+# spans ~0.26 of a stage against a tag's +/-1: the order inside a core was
+# effectively cheapest-first, and the community's is not.
+#
+# HOW BAD IT WAS, at control fingerprint 208b8d329f8e, Conquest `core`
+# (`python -m smite.order_agreement`). Of 380 pairs of items we BOTH build
+# whose community centroids differ by at least a slot, we ordered 68 (17.9%)
+# backwards, on 39 gods; on the displacement reading, 63 of 319 shared items
+# (19.7%) sat two or more slots from the community's centroid, on 49 of 90
+# gods. It is not diffuse - `Shifter's Shield before Freya's Tears` accounts
+# for 12 inversions, `Soul Gem before Obsidian Shard` 10, `Soul Gem before Rod
+# of Tahuti` 7. Shifter's Shield is 2650g and bought FIRST; Genji's Guard is
+# 2350g and bought THIRD.
+#
+# THE HEURISTIC WAS NOT WRONG IN SHAPE, which is why this is a weight and not a
+# replacement: the community's own centroid correlates +0.655 with cost (ours
+# +0.728), pooled Spearman between the two orders was +0.614, and the per-god
+# mean was +0.590, positive on 61 of the 70 gods with 3+ shared items.
+#
+# WHY 1.0, AND WHAT IT IS NOT. It is the identity - the only real free
+# parameter is the `min(1, mass)` damping, which is confidence and is measured
+# rather than chosen. Swept 0.25/0.50/0.75/1.00 and judged on a HELD-OUT split
+# (fit the order on slot picks only, score it against the alternates it never
+# read), because scoring an ordering on the data that produced it is circular
+# and §1 is about exactly that. Numbers are in `order_agreement`'s report.
+#
+# AND WHAT IT CANNOT CLAIM. Nothing here says a buy order is GOOD. `calibrate`
+# measures membership and is blind to order; `build_quality` scores a finished
+# six-item build at level 20 and is blind to order. This is agreement with
+# observed play. Membership is untouched by construction (`build_order`
+# receives an already-assembled core), and per-mode core churn is 0/0/0 -
+# checked, not assumed.
+#
+# 0.0 is an exact no-op by construction, not by arithmetic: `build_order`
+# returns the heuristic list itself. Joust and Arena pass `positions={}` for
+# the same reason (see `recommend._build_entry_set`) and are unchanged.
 build_order:
   default_stage: 0
   cost_weight: 0.0004
+  community_weight: 1.0
   flex_count: 2
   tag_stage:
     anti-heal: -1

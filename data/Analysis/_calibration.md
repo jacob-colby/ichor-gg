@@ -2,7 +2,7 @@
 
 > **Read the leakage probe before the grid.** Both of this metric's targets are also model inputs, so the grid's ranking is partly the metric grading its own input. See `calibrate.py`.
 
-_Input fingerprint: `8da1ada3e67c` — items, gods, tags, community builds, weights. Check it against `python -m smite.calibrate --control` before quoting any number below._
+_Input fingerprint: `edaa4af3cdc5` — items, gods, tags, community builds, weights. Check it against `python -m smite.calibrate --control` before quoting any number below._
 
 ## 1. Leakage probe — what the objective actually maximises
 
@@ -10,9 +10,9 @@ Each row deletes the model and hands the metric one of its own inputs. A corner 
 
 | Weights | Spearman (pooled) | Within-god | Coverage |
 |---|---|---|---|
-| win only (Spearman's target verbatim) | 1.000 | +1.00 (positive on 90/90) | 46.3% |
-| pick only (community membership) | -0.011 | -0.11 (positive on 36/90) | 91.1% |
-| model only (efficiency + fit) | -0.027 | +0.06 (positive on 45/90) | 40.9% |
+| win only (Spearman's target verbatim) | 1.000 | +1.00 (positive on 90/90) | 45.7% |
+| pick only (community membership) | -0.007 | -0.10 (positive on 36/90) | 91.2% |
+| model only (efficiency + fit) | -0.017 | +0.07 (positive on 46/90) | 40.9% |
 
 `win only` scores a perfect Spearman because the score *is* the target. `pick only` all but reproduces the community build. Neither contains any modeling.
 
@@ -26,29 +26,29 @@ A **random** legal 6-item core, drawn 200x per god from the same candidate pool 
 
 | efficiency | fit | coverage | 95% CI | vs chance |
 |---|---|---|---|---|
-| 0.00 | 1.00 | 26.9% | [22.1%, 31.9%] | 4.7x |
+| 0.00 | 1.00 | 26.8% | [22.1%, 31.9%] | 4.7x |
 | 0.05 | 0.95 | 30.4% | [25.2%, 35.9%] | 5.3x |
 | 0.10 | 0.90 | 30.6% | [25.4%, 36.1%] | 5.4x |
-| 0.15 | 0.85 | 31.7% | [26.6%, 37.0%] | 5.5x |
-| 0.20 | 0.80 | 33.0% | [27.8%, 38.4%] | 5.8x |
-| 0.25 | 0.75 | 34.8% | [29.7%, 40.1%] | 6.1x |
+| 0.15 | 0.85 | 31.7% | [26.5%, 37.0%] | 5.6x |
+| 0.20 | 0.80 | 33.0% | [27.8%, 38.3%] | 5.8x |
+| 0.25 | 0.75 | 34.7% | [29.7%, 40.0%] | 6.1x |
 | 0.30 | 0.70 | 36.6% | [31.6%, 41.7%] | 6.4x |
-| 0.35 | 0.65 | 36.2% | [31.2%, 41.4%] | 6.3x |
-| 0.40 | 0.60 | 37.0% | [32.0%, 41.9%] | 6.5x |
-| 0.45 | 0.55 | 37.6% | [32.7%, 42.7%] | 6.6x |
-| 0.50 | 0.50 | 37.5% | [32.4%, 42.6%] | 6.6x |
-| 0.55 | 0.45 | 36.8% | [31.6%, 42.0%] | 6.4x |
-| 0.60 | 0.40 | 36.4% | [31.1%, 41.5%] | 6.4x |
-| 0.65 | 0.35 | 37.7% | [32.6%, 42.9%] | 6.6x |
-| 0.70 | 0.30 | 40.9% | [35.8%, 46.0%] | 7.2x |
-| 0.75 | 0.25 | 41.2% | [35.9%, 46.8%] | 7.2x |
-| 0.80 | 0.20 | 41.0% | [35.7%, 46.3%] | 7.2x |
+| 0.35 | 0.65 | 36.2% | [31.1%, 41.4%] | 6.3x |
+| 0.40 | 0.60 | 36.9% | [31.9%, 41.9%] | 6.5x |
+| 0.45 | 0.55 | 37.6% | [32.6%, 42.7%] | 6.6x |
+| 0.50 | 0.50 | 37.4% | [32.3%, 42.5%] | 6.6x |
+| 0.55 | 0.45 | 36.8% | [31.6%, 42.0%] | 6.5x |
+| 0.60 | 0.40 | 36.4% | [31.0%, 41.5%] | 6.4x |
+| 0.65 | 0.35 | 37.7% | [32.5%, 42.8%] | 6.6x |
+| 0.70 | 0.30 | 40.9% | [35.7%, 46.0%] | 7.2x |
+| 0.75 | 0.25 | 41.1% | [35.8%, 46.7%] | 7.2x |
+| 0.80 | 0.20 | 41.0% | [35.7%, 46.2%] | 7.2x |
 | 0.85 | 0.15 | 40.0% | [34.7%, 45.5%] | 7.0x |
 | 0.90 | 0.10 | 38.4% | [33.2%, 43.9%] | 6.7x |
 | 0.95 | 0.05 | 38.6% | [33.5%, 43.9%] | 6.8x |
-| 1.00 | 0.00 | 30.5% | [26.1%, 34.7%] | 5.3x |
+| 1.00 | 0.00 | 30.5% | [26.1%, 34.6%] | 5.3x |
 
-Best: efficiency 0.75 : fit 0.25 at 41.2%. **18 of 21 splits have a CI overlapping it** — treat a winner inside that band as noise and leave the shipped split alone.
+Best: efficiency 0.75 : fit 0.25 at 41.1%. **19 of 21 splits have a CI overlapping it** — treat a winner inside that band as noise and leave the shipped split alone.
 
 ## 4. Guardrailed grid — the trade-off frontier, not a winner
 
@@ -58,21 +58,21 @@ Guardrails: efficiency+fit ≥ 0.50, pick ≤ 0.15, sum = 1. Objective = 0.5·no
 
 | eff | win | pick | fit | objective | Spearman | coverage |
 |---|---|---|---|---|---|---|
-| 0.35 | 0.35 | 0.15 | 0.15 | 0.644 | 0.29 | 64% |
-| 0.4 | 0.35 | 0.15 | 0.1 | 0.640 | 0.29 | 63% |
-| 0.3 | 0.35 | 0.15 | 0.2 | 0.639 | 0.29 | 63% |
-| 0.35 | 0.4 | 0.1 | 0.15 | 0.633 | 0.35 | 59% |
-| 0.4 | 0.4 | 0.1 | 0.1 | 0.630 | 0.35 | 58% |
-| 0.4 | 0.3 | 0.15 | 0.15 | 0.628 | 0.23 | 64% |
-| 0.45 | 0.35 | 0.15 | 0.05 | 0.626 | 0.28 | 61% |
-| 0.25 | 0.35 | 0.15 | 0.25 | 0.625 | 0.28 | 61% |
-| 0.35 | 0.3 | 0.15 | 0.2 | 0.624 | 0.23 | 63% |
-| 0.4 | 0.35 | 0.1 | 0.15 | 0.617 | 0.29 | 59% |
-| 0.3 | 0.4 | 0.1 | 0.2 | 0.617 | 0.34 | 56% |
-| 0.4 | 0.45 | 0.05 | 0.1 | 0.616 | 0.41 | 53% |
-| 0.35 | 0.45 | 0.05 | 0.15 | 0.616 | 0.40 | 53% ←current |
-| 0.45 | 0.3 | 0.15 | 0.1 | 0.615 | 0.23 | 62% |
-| 0.3 | 0.3 | 0.15 | 0.25 | 0.610 | 0.23 | 61% |
+| 0.35 | 0.35 | 0.15 | 0.15 | 0.646 | 0.30 | 64% |
+| 0.4 | 0.35 | 0.15 | 0.1 | 0.643 | 0.30 | 63% |
+| 0.3 | 0.35 | 0.15 | 0.2 | 0.640 | 0.30 | 63% |
+| 0.35 | 0.4 | 0.1 | 0.15 | 0.635 | 0.36 | 59% |
+| 0.4 | 0.4 | 0.1 | 0.1 | 0.632 | 0.36 | 58% |
+| 0.4 | 0.3 | 0.15 | 0.15 | 0.631 | 0.24 | 64% |
+| 0.45 | 0.35 | 0.15 | 0.05 | 0.630 | 0.29 | 61% |
+| 0.35 | 0.3 | 0.15 | 0.2 | 0.626 | 0.24 | 63% |
+| 0.25 | 0.35 | 0.15 | 0.25 | 0.626 | 0.29 | 61% |
+| 0.4 | 0.35 | 0.1 | 0.15 | 0.619 | 0.29 | 59% |
+| 0.45 | 0.3 | 0.15 | 0.1 | 0.618 | 0.24 | 62% |
+| 0.3 | 0.4 | 0.1 | 0.2 | 0.618 | 0.35 | 56% |
+| 0.4 | 0.45 | 0.05 | 0.1 | 0.617 | 0.42 | 53% |
+| 0.35 | 0.45 | 0.05 | 0.15 | 0.617 | 0.41 | 53% ←current |
+| 0.3 | 0.3 | 0.15 | 0.25 | 0.610 | 0.24 | 60% |
 
 ## 5. Leave-one-god-out winners
 
