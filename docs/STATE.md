@@ -1538,6 +1538,98 @@ shipped **off**. Numbers are in the named module.
     notes were already stale against the same day's data by 13 rounding-only
     `fit` values, which reproduce under the parent commit's own code.
 
+25. **Why four items that reach no core move forty cores (2026-09-03)** —
+    §4.21's open question, answered. **The churn is not the regression refit,
+    and it is not assembly. It is that `efficiency_scores` min-max normalises
+    the residual pool, so the efficiency signal's SCALE is set by two items,
+    and `price_stat_multipliers` reprices one of them.** A DIAGNOSIS: no flag
+    moved, no shipped value changed. Re-measured at control fingerprint
+    `edaa4af3cdc5` (baseline 5.7%, probe 40.9%, best 37.6%), unchanged at the
+    end. Reproduce with `python -m smite.scripts.refit_decomposition`; the
+    mechanism is in `efficiency.efficiency_scores`' docstring.
+
+    **It reproduces, and three of §4.21's integers do not.** At 2340ea14, and
+    identically at §4.21's own commit `254a7270` and fingerprint
+    `f00ab519045f`, the flag moves **39 of 90 Conquest model cores, 32 Joust
+    and 52 Arena** (36 / 32 / 52 for `core`), against the recorded 40 / 29 / 50
+    (38 `core`). The coverage half of §4.21 reproduces exactly: probe
+    40.9074% → 40.0370%, **7 better / 8 worse**; best 37.6111% → 37.4259%,
+    **−0.19pp, 1 better / 2 worse** — the recorded god counts and the recorded
+    best-split delta, to the digit. The harness is pinned: with the flag off it
+    reproduces all **270 shipped build groups** in `data/builds/`, `model` and
+    `core`, exactly, and `recommend.build_suggested_entries` itself gives the
+    same 39 / 32 / 52. So the phenomenon is real and larger than recorded on
+    two modes; the three integers are a counting difference in the original
+    sweep that nothing here can recover. **§4.21's verdict is untouched** — the
+    falsifier still fires, and this entry is why it fired.
+
+    **The decomposition.** The flag has exactly two inputs downstream: the
+    fitted gold table (global) and the five items' own stat lines (local).
+    Every residual is `cost - intercept - Σ price·stat`, so an item the flag
+    does not price can only move through the table. Run each half alone:
+
+        arm      what is held                     Conquest  Joust  Arena
+        ON       both move                              39     32     52
+        REFIT    fit ON prices, flag-off stat lines     20      8     15
+        LOCAL    flag-on stat lines, fit OFF prices     36     28     54
+        NORM     nothing but hi/lo/span/mean/std        32     22     47
+
+    **LOCAL moves no item's residual, no item's price and no item's efficiency
+    rank — 0 of 187 rank moves — and still moves 36 / 28 / 54 cores.** Its
+    entire effect on those 187 items is `score = 1.2259 * score_off − 0.2259`,
+    to a maximum deviation of 4.4e-16. That is machine epsilon: it is not
+    approximately a rescale, it is a rescale.
+
+    **A rescale of `score` is a weight change, exactly.** `signal_score` is
+    linear in it and an additive constant cannot reorder, so gain `a` moves the
+    efficiency:fit ratio from `w_eff` to `a·w_eff`. Verified end to end rather
+    than argued: LOCAL and "flag OFF, `signals.efficiency` × 1.2259" produce
+    **identical coverage at both splits, 40.4815% and 37.4259%**.
+
+    **Where the scale comes from, and why the top of it is soft.** `hi` is
+    Agility Greaves in every arm, and `hi == 2500 − intercept` exactly (1566.47
+    off, 1646.13 at the ON intercept). Its one printed stat is `Movement Speed:
+    5`, the only carrier in the pool, so `MIN_STAT_CARRIERS` drops the column
+    and the fit sees an all-zero row — its residual is its cost against the
+    intercept, which `efficiency_pool` already calls "not a measurement of
+    anything" when it excludes statless items. Agility Greaves is not statless,
+    so it slips that rule and sets the pool maximum. `lo` is Heroism, a real
+    stat line, both ways. **So `hi` tracks the intercept**, and any flag that
+    moves the intercept reweights this signal for every god.
+
+    **Coverage, by channel.** At the best split the refit contributes exactly
+    zero (37.6111%, unmoved to four decimals) and LOCAL, NORM and ON all land
+    on the same 37.4259%: the whole move is the rescale. At the probe split
+    ON is −0.87pp, NORM −0.39, LOCAL −0.43, REFIT −0.28 — overlapping, not
+    additive, and the rescale is the larger half.
+
+    **What it is not.** Not the convergence loop: at `conversion_passes: 1` the
+    flag still moves 38 / 30 / 44, so `assemble_core_converged` amplifies by at
+    most 1 / 2 / 8 and causes none of it. Not new regression columns: 20 either
+    way. Not the relics winning slots: **0 of 270 build groups hold any of the
+    five in any arm**, `model` or `core`.
+
+    **The register carries this.** Any flag that moves the intercept or moves
+    an extreme residual reweights `efficiency` against `fit` for every god, so
+    a carve-out's coverage delta is never purely the items it prices. §4.15,
+    §4.16, §4.21 and §4.22 all state deltas measured this way, and so do the
+    three flags that SHIPPED ON. §4.22 is the reassuring case and shows what to
+    look for — its intercept is unmoved and 28 of its 35 moved cores move by a
+    priced item entering — but it is reassuring by inspection, not by
+    construction. **Nothing here says any of those verdicts is wrong**; it says
+    the attribution sentence in each is weaker than it reads, and that the
+    cheap check is the one this entry ran: does the arm move an extreme
+    residual or the intercept, and does the churn survive holding the
+    normaliser fixed.
+
+    **Not fixed here, and the fix is not obvious.** A scale-free efficiency
+    signal (rank, or a robust spread) would re-base every number in §4 at once
+    and is its own session with its own control. Whoever takes it should also
+    decide whether an item the fit sees as an all-zero row belongs in the
+    scored pool at all — that is `efficiency_pool`'s statless rule with one
+    carrier instead of none, and it is what puts Agility Greaves at the top of
+    the scale.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1802,19 +1894,31 @@ kind `multiplier_reference` already is (§4.21, `passives.measure_multiplier_ref
 re-swept, with the two controls compared — and the size of the leak, which
 nobody has measured, is the first number to produce.
 
-### Why four items that reach no core move forty cores
-§4.21's open question, deliberately handed on rather than answered there.
-`price_stat_multipliers` gives four relics ~535 gold of priced stat line each;
-none of the four enters a core with the flag on, and 40 of 90 Conquest cores,
-29 Joust and 50 Arena change anyway, with the intercept moving 934 → 854 and
-Strength 21.81 → 22.87 g/pt. `price_adaptive` recorded a gain with the same
-shape — "the gain is not the eight items, it is the intercept" — and this is
-the same shape with the opposite sign. Whether that is the fit's identifiability
-(four relics with a 20-column stat line each), the pool-mean reference vector
-spreading a relic's premium across every column, or something else, is not
-decided here. Whoever takes it should re-run the sweep with the flag's grant
-restricted to the columns the relic already carries (the `conversion_grants`
-"amplify only" precedent) as the first arm.
+### ~~Why four items that reach no core move forty cores~~ — answered 2026-09-03
+§4.21's open question, now **§4.25**. It is not the fit's identifiability and
+not the reference vector: `efficiency_scores` min-max normalises the residual
+pool, `hi` is Agility Greaves (whose only printed stat has one carrier, so the
+fit sees an all-zero row and its residual is `2500 − intercept`), and pricing
+it rescales every other item's efficiency score by 1.226 with zero change to
+any residual or rank. That rescale is exactly an efficiency:fit weight change,
+verified to identical coverage on both splits. The suggested first arm there —
+restricting the grant to the columns the relic already carries — was not run
+and is not the next move; the open question this leaves is whether a scale-free
+efficiency signal is worth re-basing all of §4 for.
+
+### The efficiency signal's scale is set by two items, and every §4 delta rides on it
+§4.25 (2026-09-03). `score = (hi − residual) / span` over the whole pool, so
+any change that moves the most-premium or most-undervalued item — including any
+change to the intercept, since `hi == 2500 − intercept` today — reweights
+`efficiency` against `fit` for every god. Every carve-out's measured coverage
+delta therefore mixes "the items I priced" with "I moved the signal's gain",
+and §4.15, §4.16, §4.21, §4.22 and the three flags that shipped ON were all
+measured on it. **This is a caveat, not a known error**: §4.25 checked and
+changed no verdict. Two things a fix would have to hold: a scale-free signal
+re-bases every number in §4 at once and needs its own control on both splits,
+and an item the fit sees as an all-zero row (one carrier, dropped by
+`MIN_STAT_CARRIERS`) probably does not belong in the scored pool — which is
+`efficiency_pool`'s statless rule with one carrier instead of none.
 
 ### Two parser precision notes, small and separate
 Both inert today and both recorded in `docs/PASSIVES.md` §7 (2026-09-02).

@@ -440,7 +440,40 @@ def efficiency_scores(items):
     Only numeric-cost, non-starter items are scored (a residual needs a real
     cost; tier-1 starters are passive-priced and sit out the model). The
     continuous `score` is what the aggregator consumes; `tier` is the report
-    label."""
+    label.
+
+    `score` IS MIN-MAX NORMALISED, SO ITS SCALE IS SET BY TWO ITEMS — the
+    pool's most-premium and most-undervalued — AND MOVING EITHER ONE REWEIGHTS
+    THE EFFICIENCY SIGNAL FOR EVERY GOD. This is register §4.25, diagnosed
+    2026-09-03, and it is the reason `price_stat_multipliers` moved 39 of 90
+    Conquest model cores while the four items it prices entered none of them.
+
+    The arithmetic. `score = (hi - residual) / span`. Change anything that
+    moves `hi` or `lo` and every other item's residual can stay bit-identical
+    while its score becomes `a * score + b`, with `a = span_old / span_new`.
+    In `scoring.signal_score` both `total` and `quality` are linear in this
+    score, and an additive constant cannot reorder anything, so that transform
+    is EXACTLY a change of the efficiency:fit weight ratio from `w_eff` to
+    `a * w_eff`. Measured: pricing the four relics leaves all 187 other items'
+    residuals, gold prices and efficiency RANKS untouched (0 rank moves, max
+    deviation from the affine map 4.4e-16) and still moves 36 Conquest, 28
+    Joust and 54 Arena model cores, because `a` is 1.226. Coverage under that
+    arm is byte-identical to running the flag OFF with `signals.efficiency`
+    multiplied by 1.226 — 40.4815% and 37.4259% both ways, on both splits.
+
+    WHY THE TOP OF THE SCALE IS PARTICULARLY SOFT. `hi` is Agility Greaves in
+    every arm measured, and `hi == 2500 - intercept` exactly, because its one
+    printed stat (Movement Speed 5) has a single carrier and `collect_stat_
+    names` drops it — so the fit sees an all-zero row and its residual is its
+    cost against the intercept. That is the same arithmetic `efficiency_pool`
+    calls "not a measurement of anything" when it excludes statless items;
+    Agility Greaves is not statless, so it slips the rule and lands as the
+    pool maximum. The consequence is that `hi` moves with the INTERCEPT, so
+    any pricing flag anywhere reweights this signal a little.
+
+    Not fixed here, deliberately: every carve-out in §4 was measured on this
+    normaliser, and changing it silently re-bases all of them. See §4.25 for
+    what a fix would have to hold."""
     gold, _ = fit_gold_values(items)
     scored_items = efficiency_pool(items)
     residuals = {it["name"]: it["cost"] - predicted_cost(it, gold) for it in scored_items}
