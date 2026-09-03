@@ -332,6 +332,14 @@ shipped **off**. Numbers are in the named module.
       an attempt that assumes it will should check that first.
 5. **Pricing item passives** — the extraction is right and the prices are
    visibly more sensible; the recommender still got worse.
+
+    _Scoped 2026-09-02 (§4.20)._ Read this entry as a verdict on `price_passives`'
+    CONFIGURATION, not on unconditional grants as a class: beyond the thirteen
+    items the shipped carve-outs price, the flag reaches nine tier-2 components,
+    Dominance and Shogun's Ofuda, and prices the Adaptive Stat clause as its own
+    single-class column (the defect `price_adaptive` records). That is what was
+    measured worse. The unconditional grants it never reached — Triton's Conch,
+    Dwarven Plate — it never reached because of the parser, and are in §5.
 6. **The 2026-08-05 weight sweep's own winner** — rejected as leakage (§1).
 7. **Build coherence (2026-08-09)** — the only term that scores a *set* rather
    than an item, discounting an item by how much of its stat line the core
@@ -1190,6 +1198,158 @@ shipped **off**. Numbers are in the named module.
     the interval instead of collapsing it is the same argument, and it gets
     harder, not easier, with four corners.
 
+20. **The passive catalogue (2026-09-02)** — a REFUSAL in §4.16's shape,
+    applied to nine classes of passive at once, and the entry exists so that
+    "price the passives" stops being re-attempted per item. The whole
+    argument is `docs/PASSIVES.md`; the data is `data/_passive_classes.yaml`,
+    every buildable item's passive classified by the SHAPE of its value and
+    held to the pool by `test_passive_catalogue.py`. Measured at fingerprint
+    `208b8d329f8e` (baseline 5.7%, probe 40.9%, best 37.6%).
+
+    **The problem it starts from is the one `build_quality` prints on every
+    run**: 137 of 138 buildable items carry passive text, the shipped flags
+    read 13, `combat.py` reads one, and 75% of the community's slots sit on
+    the other 124. §4.5 is the broad attempt and is refuted; three narrow
+    carve-outs of the same idea shipped on. Nobody had said what the 124 ARE.
+
+    **Twenty classes in five families**, by three questions a passive has to
+    answer yes to before a price can be written without a constant: is the
+    value a CURRENCY the model prices (a column, or a `combat.py` quantity
+    with a documented exchange rate into one); is its UPTIME one, or stated
+    by the text or the build; does any REFERENCE it needs come from item
+    data, the kit or combat constants and not from the community. Family A
+    is a priced stat in prose (27 items), B a combat quantity with an
+    exchange rate (29), C a currency gated by an uptime no source supplies
+    (64), D value whose recipient is not the scored god (9), E no currency
+    (8). Plus a fourth condition on the PRICE rather than the passive: a
+    converted magnitude outside the range a column was fitted on is an
+    extrapolation — Yogi's Necklace is exactly Health Regen, and at 60 HP5
+    against a column fitted on 2–6 the linear price says 4,600 gold for a
+    2,250-gold item.
+
+    **The hypothesis this session was handed — "a carve-out works when the
+    passive converts into a stat the model already prices" — is confirmed as
+    a filter and refuted as a predictor.** All three shipped flags are A1,
+    A2, B1, and family E has never produced a priceable item. But 33 items
+    with a priced-currency clause sit in family C: Berserker's Shield
+    converts into three priced stats and cannot be priced, because a health
+    state gates it. What the three shipped flags share and the hypothesis
+    does not name is that the quantity is UNCONDITIONAL and the exchange rate
+    was measured, documented or read off the item's own text. Under the
+    conjunction, roughly twenty of the 124 are reachable today and about a
+    hundred need a primitive this repo has refused (§4.12's clock, a stated
+    mix) or lacks (an attacker, allies, a healing model).
+
+    **What is refused, and it is nine classes, each the same refusal as an
+    existing entry applied to a class.** C1 health-state (36 community slots)
+    needs time-below-threshold, no source; C2 self-trigger is the clock; C3
+    enemy-trigger (75 slots — Freya's Tears and Genji's Guard, the two
+    most-bought blind items) is the attacker's behaviour, of which a build
+    score contains none, which is §4.17's argument; C4 outcome-trigger fires
+    on kills, so any rate for it is §1's leakage; C5 cooldown-gated is the
+    clock stated plainly and is the LARGEST class in the pool, 32 primary
+    and 46 carriers; C6 is §4.8; D1 ally-directed has no allies in a per-god
+    score (the draft does, and a tag bonus there is not a price); D2
+    enemy-debuff needs the attacker's build or a healing model, and
+    `build_quality` has neither, so a charge could not even be checked; E is
+    a game-state change with no damage or effective-health expression, and
+    the tag axis is already the instrument for it.
+
+    **Three findings worth more than the classification.** (i) `price_passives`
+    beyond the thirteen priced items reaches nine tier-2 components,
+    Dominance and Shogun's Ofuda, and prices the adaptive clause as its own
+    column — §4.5 refutes that configuration, and is barely evidence about
+    unconditional grants on buildable items. (ii) The model OVER-BUYS the
+    families it cannot price: C-primary items hold 376 of our 540 Conquest
+    slots against 229 of the community's 543, because their stat lines are
+    discounted for a passive the model then ignores — C1's mean residual is
+    −81 and every A/B class is positive. (iii) The three hard cases all have
+    a place. Genie's Lamp and Shell of Rebuke are A2, the "% of all Stats"
+    multiplier, exact against a POOL-derived five-item reference (557 gold at
+    7.5%, most of Shell's +740 residual; the Lamp's problem is then its
+    missing price, not its value). The Executioner's shred is B3:
+    `effective_protection` already implements the reduction terms, one stack
+    is a 214-gold floor against the 70-protection reference, and what defeats
+    the additive model is the stack RAMP, an uptime, not the shred.
+
+    **Proposed and not built**: `price_stat_multipliers`, A2's four relics
+    and the Lamp, against the pool reference rather than `conversion_reference`
+    (which is community-derived, a leak inside a shipped flag that the
+    catalogue names and the next carve-out must not repeat). Predictions are
+    written before the sweep in `docs/PASSIVES.md` §6.
+
+21. **`price_stat_multipliers` (2026-09-02)** — the carve-out §4.20 proposed,
+    built exactly as proposed, default OFF, and it ships OFF: **the falsifier
+    written into the commit before the sweep fired.** Numbers, the paired CIs,
+    the churn and the role verdicts are under `price_stat_multipliers` in
+    `_weights.yaml`; the design is in `passives.multiplier_grants`. Measured
+    at control fingerprint `f00ab519045f` (baseline 5.7%, probe 40.9%, best
+    37.6%).
+
+    The four residual predictions held to within 50 gold each (Shell of
+    Rebuke +740 → +224 against a predicted ~+205). The one prediction that
+    mattered was the falsifier: Shell is the only one of the four relics with
+    a community record, so coverage could move only through Shell. **Shell
+    enters zero cores** — 0 of 90 in every mode with the flag on, as with it
+    off — and coverage moved anyway: probe 40.9% → 40.1% (−0.83pp,
+    [−3.11, +1.22], 7 better / 8 worse), best 37.6% → 37.5% (−0.19pp,
+    [−0.93, +0.48]), with 40 of 90 Conquest model cores, 29 Joust and 50
+    Arena changing. Every one of those cores changed without a relic
+    entering or leaving it.
+
+    **By the rule the commit set, that is reported and not explained.** What
+    is recorded beside it, as measurement only: the regression intercept
+    reads 934 with the flag off and 854 on, Strength 21.81 → 22.87 g/pt, and
+    the Conquest churn is Genji's Guard, Breastplate of Valor and
+    Transcendence arriving against Pendulum Blade, Shield Splitter and
+    Shifter's Shield leaving. The Carry guard holds (Berserker's Shield 0 of
+    18 either way); `build_quality`'s verdicts are unmoved for Carry, Jungle
+    and Mid and give up one god each on Solo and Support. Diagnosing why four
+    items that reach no core move forty cores is the next session's work and
+    is in §5, deliberately not this entry's.
+
+    Two things the catalogue said that the sweep confirms without touching
+    the ship decision: the A2 exchange rate is exact (the residuals landed
+    where the pool reference said they would), and a `priced` claim in
+    `data/_passive_classes.yaml` is refused by its test until a flag actually
+    ships — the four relics stay unpriced there because the flag is off.
+
+22. **`price_on_hit` (2026-09-02)** — the catalogue's second carve-out (class
+    B1, flat unconditional on-hit damage priced as Attack Damage on the same
+    hit), built as proposed, default OFF, and it ships OFF as a plain null.
+    Numbers, paired CIs, churn and verdicts under `price_on_hit` in
+    `_weights.yaml`; the design and the survey in `passives.on_hit_grants`.
+    Measured at control fingerprint `8da1ada3e67c` (5.7% / 40.9% / 37.6%).
+
+    **The extraction is right and the falsifier did not fire.** Three items
+    carry the clause (Tyrfing +15, Bragi's Harp +10, Golden Blade +10; a
+    test pins that no fourth item and no component does). The residual
+    predictions held to within 75 gold and the refit behaved as written
+    beforehand (Attack Damage 21.95 → 20.31 g/pt, intercept unmoved). Unlike
+    §4.21, the cores that moved moved BECAUSE of the priced items — 28 of 35
+    Conquest model cores by one of the three entering, nothing leaving.
+
+    **And coverage fell on both splits** — probe 40.9% → 39.6% (−1.30pp,
+    [−3.28, +0.56], 5 better / 9 worse), best 37.6% → 37.0% (−0.63pp,
+    [−1.52, +0.22]) — because the items enter cores on gods whose players do
+    not buy them there. Tyrfing enters 17 cores and is in the community
+    record on 3 (Cupid, Izanami, Medusa); Golden Blade enters 8, in the
+    record on none; Bragi's Harp enters 7, in the record on one (Nut). The
+    community holds Tyrfing on 13 gods; with the flag on we hold it on 29.
+    That is §4.5's sentence reproduced on a clean three-item subset, with
+    the cause now visible: a correct PRICE is god-agnostic, and WHERE the
+    cheaper item lands is the fit map's call — `attack_damage_fit` credits
+    Attack Damage on 78 of 89 gods whether or not the god auto-attacks, the
+    same shape as §4.12's Scylla buying Avatar's Parashu.
+
+    **So the lesson generalises past this flag**: for the attack channel, a
+    pricing carve-out cannot ship alone. It needs the fit side to know which
+    gods swing — a per-god basic-attack share the kit does not state and
+    §4.12 refused to invent — or it will put every on-hit item on every god
+    with an Attack Damage column. Golden Blade in Carry cores going 5 → 8
+    (Berserker's Shield stays at 0 of 18) is the same mechanism seen from
+    §4.14's side.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1358,6 +1518,57 @@ pair. Read §4.17 before starting — the case for reporting the interval instea
 of collapsing it is the same case, and it is harder with four corners than with
 two.
 
+### The passive ceiling now has a catalogue, and a proposed next carve-out
+Register §4.20 and `docs/PASSIVES.md` (2026-09-02). Every buildable item's
+passive is classified by the shape of its value in `data/_passive_classes.yaml`,
+held to the pool by a test. Roughly twenty of the 124 unpriced items are
+reachable without a new constant; about a hundred are refused, by class, for
+the reasons existing entries already give (§4.12's clock, §4.17's attacker,
+§4.8's stacks, §1's leakage). The proposed carve-out is `price_stat_multipliers`
+— the four "+X% of all Stats from Items" relics and Genie's Lamp, class A2 —
+with its predictions written down before any sweep. It is not built. Two things
+to hold any carve-out to that the shipped three were not: the reference build
+must come from item data (the shipped `conversion_reference` is a community
+median), and a converted magnitude must land inside the column's fitted range.
+
+### The leakage-free measure carries a community reference inside a shipped flag
+Found by the passive catalogue (§4.20) and verified by the maintainer on
+2026-09-02: `conversion_reference` — the reference build `price_conversions`
+prices Transcendence, Book of Thoth, Rod of Tahuti and Nimble Ring against — is
+`passives.measure_conversion_reference`, a MEDIAN OVER COMMUNITY BUILDS, and
+`calibrate` does not neutralise it the way it zeroes `win` and `pick`. So the
+two "leakage-free" splits are not fully leakage-free, and every coverage figure
+quoted since that flag shipped (2026-08-14) carries it. **This is its own
+session.** Do not fix it in passing; the fix is a pool-derived reference of the
+kind `multiplier_reference` already is (§4.21, `passives.measure_multiplier_reference`),
+re-swept, with the two controls compared — and the size of the leak, which
+nobody has measured, is the first number to produce.
+
+### Why four items that reach no core move forty cores
+§4.21's open question, deliberately handed on rather than answered there.
+`price_stat_multipliers` gives four relics ~535 gold of priced stat line each;
+none of the four enters a core with the flag on, and 40 of 90 Conquest cores,
+29 Joust and 50 Arena change anyway, with the intercept moving 934 → 854 and
+Strength 21.81 → 22.87 g/pt. `price_adaptive` recorded a gain with the same
+shape — "the gain is not the eight items, it is the intercept" — and this is
+the same shape with the opposite sign. Whether that is the fit's identifiability
+(four relics with a 20-column stat line each), the pool-mean reference vector
+spreading a relic's premium across every column, or something else, is not
+decided here. Whoever takes it should re-run the sweep with the flag's grant
+restricted to the columns the relic already carries (the `conversion_grants`
+"amplify only" precedent) as the first arm.
+
+### Two parser precision notes, small and separate
+Both inert today and both recorded in `docs/PASSIVES.md` §7 (2026-09-02).
+`passives.is_persistent_stacker` reads Kinetic Cuirass ("Stacks up to 2
+times", consumed on the next attack) and Oni Hunter's Garb ("Max 3 stacks",
+per enemy in range) as persistent — wrong the day `price_stacks` is turned on.
+`passives.unconditional_grants` misses two real A1 grants: Triton's Conch's
+"+5 (+0.5 per Level)" grammar, and Dwarven Plate's always-on protections
+because "On Use" appears later in the text and `is_conditional` reads the
+whole passive rather than the clause (`stat_conversions` already splits by
+sentence for exactly this reason).
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -1368,6 +1579,9 @@ two.
   unbuildable, and that is the honest state: fixing it needs a value model for
   multiplicative items, not a parser change. Briskberry Acorn was the same
   symptom with a different cause and is fixed (`wiki_parser._stats_from_prose`).
+  _Catalogued 2026-09-02 (§4.20, `docs/PASSIVES.md`): the multiplier is class A2,
+  exact against a pool-derived reference (891 gold at level 20); what is left is
+  that the Lamp has no PRICE, and writing one is a constant._
 - ~~**Cu Chulainn and Ix Chel** have empty wiki pages~~ — fixed 2026-08-19.
   Both pages filled in and both scraped clean, so the pool is now 89 of 89.
   Cu Chulainn is a **stance god** (Human / Berserk) and landed all 10 abilities
@@ -1491,6 +1705,12 @@ since item stats are wiki data while the daily job pulls SmiteBrain only, an
 unconditional write would bank an identical file every morning and bury any
 real change under five empty periods within a week.
 
+**The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
+buildable item with passive text, classes per clause, `priced` per clause;
+`test_passive_catalogue.py` fails if the pool and the file disagree or if a
+`priced` claim does not match what the shipped flags reprice. A carve-out that
+ships must update it. `docs/PASSIVES.md` is the argument.
+
 **Tuning lives in `data/_weights.yaml`** — signals, role stat maps, kit blend,
 hybrid scaling, flavors, aspects, per-mode overrides, lifesteal/stat caps,
 cap overflow, passive pricing, draft overlay, build order, starters. Every
@@ -1502,8 +1722,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (845) ·
-`cd viewer && npm test -- --run` (681).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (860) ·
+`cd viewer && npm test -- --run` (753).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
@@ -1532,7 +1752,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 871 pipeline · 753 viewer — the pipeline count rose 845 → 871 on the 2026-09-03 expert-review vocabulary (`test_expert_review_vocab`, 26 tests, one per way each new kind can be right, wrong or malformed); the viewer count is as measured the same day and did not move on this change |
+| Tests | 886 pipeline · 753 viewer — the pipeline count rose 845 → 871 on the 2026-09-03 expert-review vocabulary (`test_expert_review_vocab`, 26 tests), then to 886 with `test_passive_catalogue.py` (§4.20) and the `price_stat_multipliers` and `price_on_hit` tests in `test_passives.py` (§4.21, §4.22); the viewer count reads 753 on `npm test -- --run` after `npm ci`, up from the 681 this row carried before 2026-09-02, on merges unrelated to either session |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

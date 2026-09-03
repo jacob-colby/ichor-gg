@@ -946,6 +946,183 @@ conversion_reference:
   Max Mana: 500
   Intelligence: 325
 
+# "+X% of all Stats from Items", priced as X% of a POOL-DERIVED five-item
+# reference stat line — catalogue class A2 (docs/PASSIVES.md, STATE.md §4.20).
+# Four buildable relics carry the flat form (Agility Greaves, Shell of Rebuke,
+# Talisman of Purification at 7.5%; Time-lock Aegis at 6%); Genie's Lamp's
+# per-Level form is parsed and reaches nothing (no level in the scorer, no
+# cost, no printed stats — see `passives.all_stats_multiplier`).
+#
+# DEFAULT OFF, SWEPT AGAINST BOTH LEAKAGE-FREE SPLITS. The numbers below this
+# paragraph are the sweep; the paragraph itself was written BEFORE it.
+#
+# THE REFERENCE IS ITEM DATA ONLY. `multiplier_reference` is
+# `passives.measure_multiplier_reference`: the mean printed stat line of a
+# tier-3 buildable item times the five other slots. Deliberately NOT
+# `conversion_reference`, which is a median over community builds — a
+# community-derived number inside a shipped flag that the catalogue names as
+# a leak in the leakage-free measure itself and that is its own session
+# (STATE.md §5). At the shipped fit the reference is worth 7133 gold of
+# priced stats, so 7.5% is 535 gold and 6% is 428.
+#
+# PREDICTIONS, WRITTEN FIRST (§4.16's trap). Residuals at the shipped fit:
+#   Shell of Rebuke            +740  ->  ~+205
+#   Talisman of Purification  +1022  ->  ~+487
+#   Time-lock Aegis            +946  ->  ~+518
+#   Agility Greaves           +1566  ->  ~+1031
+# Shell of Rebuke is the ONLY one of the four with a community record — 20 of
+# the 543 Conquest community slots; the other three have 0 — so leakage-free
+# coverage can move only through Shell. THE FALSIFIER: a coverage move larger
+# than 20 slots can account for (20 slots / 543 = 3.7pp at the absolute
+# outside, and far less in practice since Shell would have to enter exactly
+# the cores whose community record holds it) is not this flag's mechanism and
+# is to be reported as such, not explained.
+#
+# MEASURED 2026-09-02, at control fingerprint f00ab519045f (baseline 5.7%,
+# probe 40.9%, best 37.6%; the fingerprint moved from 208b8d329f8e with this
+# key, because the hash covers this file — the three control numbers did not).
+# Paired per god, 2000-resample bootstrap on the per-god coverage delta:
+#
+#     split                 off      on     delta       95% CI          better / worse
+#     probe 0.70:0.30     40.9%   40.1%   -0.83pp   [-3.11, +1.22]        7 / 8
+#     best  0.45:0.55     37.6%   37.5%   -0.19pp   [-0.93, +0.48]        1 / 2
+#
+# Exact random-core baseline 5.7427% both ways. Residuals, predicted -> got:
+#
+#     Shell of Rebuke            +740 -> ~+205    got  +224   (premium)
+#     Talisman of Purification  +1022 -> ~+487    got  +526   (premium)
+#     Time-lock Aegis            +946 -> ~+518    got  +551   (premium)
+#     Agility Greaves           +1566 -> ~+1031   got +1083   (premium)
+#
+# The four residual predictions held to within 50 gold. THE FALSIFIER FIRED.
+# Shell of Rebuke — and each of the other three — is in 0 model cores with the
+# flag off and 0 with it on, in all three modes, on all 90 gods; it ENTERS no
+# core. Yet 40 of 90 Conquest `model` cores moved (38 `core`), 29 of 90 Joust
+# and 50 of 90 Arena, and the 15 gods whose probe-split coverage changed
+# (better: Anhur, Apollo, Geb, Hua Mulan, Janus, Pele, Vulcan; worse: Artio,
+# Baron Samedi, Chaac, Ix Chel, Kali, Medusa, Neith, Princess Bari) changed
+# without any relic entering or leaving. So the coverage move is NOT the
+# mechanism this flag was built to price, and by the rule written above it is
+# reported and not explained. What is recorded alongside it, as measurement:
+# the intercept reads 934 off and 854 on, Strength 21.81 -> 22.87 g/pt, and
+# the churn lists read Genji's Guard +9 / Breastplate of Valor +8 /
+# Transcendence +7 in and Pendulum Blade -9 / Shield Splitter -7 / Shifter's
+# Shield -6 out on Conquest. Diagnosing that is the next session's, not this
+# one's (STATE.md §4.21).
+#
+# The Carry guard holds either way (Berserker's Shield 0 of 18 Carry model
+# cores; Golden Blade 5 -> 3). build_quality's role verdicts, `model`,
+# ahead/behind/level/mix: Carry 12/6/0/0 both ways (median maximand 28.96 ->
+# 27.57); Jungle 11/7 both ways; Mid 18/4 both ways; Solo 16/1/0/1 -> 16/2/0/0;
+# Support 11/0/0/3 -> 10/1/1/2. Not one number moves in this flag's favour.
+#
+# SHIPS OFF. Worse on both leakage-free splits, both intervals containing
+# zero, on a mechanism that is demonstrably not the one priced.
+price_stat_multipliers: false
+
+# Mean printed stat line of a tier-3 buildable item, times the five other
+# slots, keyed the way the regression keys columns. From
+# `passives.measure_multiplier_reference`; a test holds it to the re-derivation
+# so it cannot silently outlive the item data it was measured on.
+multiplier_reference:
+  Attack Damage: 8.0224
+  Attack Speed %: 18.097
+  Cooldown Rate: 12.3881
+  Critical Chance %: 4.6642
+  Dampening: 1.4925
+  Echo: 3.9179
+  Health Regen: 1.8284
+  Intelligence: 92.1642
+  Lifesteal %: 3.5448
+  Magical Protection: 42.4254
+  Mana Regen: 2.7425
+  Max Health: 536.3806
+  Max Mana: 195.8955
+  Pathfinding: 0.4478
+  Penetration: 3.3582
+  Penetration %: 4.6642
+  Physical Protection: 43.3582
+  Plating: 1.8657
+  Strength: 47.5746
+  Tenacity: 2.6119
+
+# Flat bonus damage on every basic attack, priced as Attack Damage on the
+# same hit — catalogue class B1, its unconditional members (docs/PASSIVES.md,
+# STATE.md §4.20). Three buildable items: Tyrfing (+15), Bragi's Harp (+10,
+# its +3/level term NOT priced — no level in the scorer, the Lamp's rule) and
+# Golden Blade (+10, its +20% of item protections NOT priced — the reference
+# shape §4.21 could not attribute). Every other on-hit clause in the pool is
+# gated or scaled off something the item does not carry; the survey is in
+# `passives.on_hit_grants`.
+#
+# THE EXCHANGE RATE IS THE ATTACK'S OWN UNIT AND NEEDS NO CLOCK: a basic
+# attack scales 100% Attack Damage on 84 of 89 gods (MEASURED), so +N per hit
+# is +N Attack Damage per hit, into a column with 11 carriers priced at
+# 21.95 g/pt. Damage type is read as the same currency, at the symmetric
+# reference `build_quality` declares; against base protections a magical
+# point is worth ~13% more than a physical one, so Bragi's is understated.
+#
+# DEFAULT OFF, SWEPT AGAINST BOTH LEAKAGE-FREE SPLITS. The paragraph below
+# was written BEFORE the sweep; the sweep follows it.
+#
+# PREDICTIONS, at the shipped fit, before the refit moves them by some tens
+# of gold as §4.21's did:
+#   Tyrfing         +164  ->  ~-165
+#   Golden Blade     +58  ->  ~-162
+#   Bragi's Harp    +275  ->   ~+55
+# Two of the three already carry Attack Damage, so the grant lands in a
+# column they are in rather than opening twenty (§4.21's shape); the Attack
+# Damage price should fall a little, the intercept should barely move.
+# THE FALSIFIER: the three hold 13 + 2 + 1 = 16 of 543 Conquest community
+# slots (Tyrfing, Golden Blade, Bragi's Harp), so coverage can move only
+# through a core one of them ENTERS OR LEAVES. A god whose coverage moves
+# with none of the three entering or leaving its core is not this mechanism
+# and is reported, not explained.
+#
+# MEASURED 2026-09-02, at control fingerprint 8da1ada3e67c (baseline 5.7%,
+# probe 40.9%, best 37.6%). Paired per god, 2000-resample bootstrap:
+#
+#     split                 off      on     delta       95% CI          better / worse
+#     probe 0.70:0.30     40.9%   39.6%   -1.30pp   [-3.28, +0.56]        5 / 9
+#     best  0.45:0.55     37.6%   37.0%   -0.63pp   [-1.52, +0.22]        1 / 4
+#
+# Exact random-core baseline 5.7427% both ways. Residuals, predicted -> got:
+#
+#     Tyrfing         +164 -> ~-165    got   -91   (fair)
+#     Golden Blade     +58 -> ~-162    got  -109   (fair)
+#     Bragi's Harp    +275 ->  ~+55    got   +86   (premium -> fair)
+#
+# Within 75 gold each, and the refit did what the paragraph above said it
+# would: Attack Damage 21.95 -> 20.31 g/pt, intercept 934 -> 931, Strength
+# 21.81 -> 21.50. THE FALSIFIER DID NOT FIRE — this time the mechanism IS the
+# one priced. 35 of 90 Conquest `model` cores moved and 28 of them by one of
+# the three items entering (20 `core` cores, 18 with a priced item; Joust
+# 17 of 90, 15; Arena 14 of 90, 12). Tyrfing goes from 12 to 29 Conquest
+# model cores, Golden Blade 8 -> 16, Bragi's Harp 0 -> 7. Nothing leaves.
+#
+# AND IT IS A NULL, for the reason that decides it: the cores the three enter
+# are not the cores the community holds them in. Tyrfing enters 17 cores and
+# is in the community record on 3 of them (Cupid, Izanami, Medusa); Golden
+# Blade enters 8 and is in the record on none; Bragi's Harp enters 7 and is
+# in the record on one (Nut). The community holds Tyrfing on 13 gods, and
+# with the flag on we hold it on 29 — the price is now right and the
+# recommendation lands on the wrong gods, which is §4.5's sentence on a
+# clean three-item subset: the extraction is right, the prices are visibly
+# more sensible, the recommender still gets worse. Where they enter is the
+# fit map's decision, and the fit map credits Attack Damage on 78 of 89 gods
+# (`attack_damage_fit`) whether or not the god auto-attacks — the same
+# Scylla-buys-Parashu shape §4.12 recorded for the per-second clock.
+#
+# The Carry guard holds (Berserker's Shield 0 of 18 both ways) but Golden
+# Blade in Carry model cores goes 5 -> 8 — the item §4.14 named beside
+# Berserker's, made cheaper by this flag — and the Carry maximand's median
+# falls 28.96 -> 26.89 DPS per 1000g while Carry stays 12 ahead / 6 behind.
+# Jungle 11/7 -> 12/6, Solo and Support unchanged, Mid unchanged.
+#
+# SHIPS OFF. Worse on both leakage-free splits, both intervals containing
+# zero, and the items land where the community does not buy them.
+price_on_hit: false
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #

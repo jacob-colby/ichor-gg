@@ -436,3 +436,158 @@ def test_only_the_standing_clause_counts_when_an_item_has_two():
     assert "+13 Strength or +16 Intelligence" in gavel["passive"]
     assert passives.adaptive_grants(gavel, "strength") == {"Strength": 60.0}
     assert passives.adaptive_grants(gavel, "intelligence") == {"Intelligence": 80.0}
+
+
+# ── "% of all Stats from Items" (catalogue class A2) ───────────────────────
+
+def test_the_flat_multiplier_is_read_and_needs_no_level():
+    shell = _p("+7.5% of all Stats from Items. On Use: Create a field of rebuke "
+               "for allies that mitigates 35% Damage. Cooldown: 120s")
+    assert passives.all_stats_multiplier(shell) == pytest.approx(0.075)
+    aegis = _p("+6% of all Stats from Items. On Use: Become time-locked")
+    assert passives.all_stats_multiplier(aegis) == pytest.approx(0.06)
+
+
+def test_a_per_level_multiplier_needs_a_level_and_is_zero_without_one():
+    """Genie's Lamp. The scorer states no level, so `item_stat_values` passes
+    none and the Lamp prices at nothing there — pinned, not assumed."""
+    lamp = _p("+0.6% (per Level) of all Stats from Items. On Use: Access 3 Wishes")
+    assert passives.all_stats_multiplier(lamp) == 0.0
+    assert passives.all_stats_multiplier(lamp, level=20) == pytest.approx(0.12)
+    assert passives.multiplier_grants(lamp, {"Strength": 100.0}) == {}
+    assert passives.multiplier_grants(lamp, {"Strength": 100.0}, level=20) == {
+        "Strength": pytest.approx(12.0)}
+
+
+def test_an_item_without_the_clause_gets_nothing():
+    assert passives.all_stats_multiplier(_p("+35% Critical Strike Damage.")) == 0.0
+    assert passives.multiplier_grants(_p("+35% Critical Strike Damage."),
+                                      {"Strength": 100.0}) == {}
+    assert passives.multiplier_grants(_p("+7.5% of all Stats from Items"), {}) == {}
+
+
+def test_the_grant_is_every_column_of_the_reference_scaled():
+    shell = _p("+7.5% of all Stats from Items.")
+    ref = {"Strength": 40.0, "Max Health": 500.0, "Pathfinding": 0.0}
+    out = passives.multiplier_grants(shell, ref)
+    assert out == {"Strength": pytest.approx(3.0), "Max Health": pytest.approx(37.5)}
+
+
+def test_the_reference_is_the_pool_mean_over_tier_3_items_times_five():
+    """Item data only — relics (the items being priced) and components are
+    out, zeros count in the mean, and the keys carry the regression's unit."""
+    items = [
+        {"name": "A", "tier": 3, "cost": 2500, "stats": {"Strength": "40", "Attack Speed": "20%"}},
+        {"name": "B", "tier": 3, "cost": 2500, "stats": {"Strength": "20"}},
+        {"name": "Relic", "tier": "Relic", "cost": 2500, "stats": {"Physical Protection": "20"}},
+        {"name": "Comp", "tier": 2, "cost": 900, "stats": {"Strength": "100"}},
+    ]
+    ref = passives.measure_multiplier_reference(items)
+    assert ref == {"Attack Speed %": pytest.approx(10.0 * 5),
+                   "Strength": pytest.approx(30.0 * 5)}
+    assert passives.measure_multiplier_reference([]) == {}
+
+
+def test_the_flag_prices_the_clause_through_item_stat_values_and_is_a_no_op_off():
+    from smite import efficiency
+    shell = {"name": "Shell of Rebuke", "tier": "Relic", "cost": 2500,
+             "stats": {"Magical Protection": "20", "Physical Protection": "20"},
+             "passive": "+7.5% of all Stats from Items. On Use: Create a field"}
+    ref = {"Strength": 40.0, "Physical Protection": 40.0}
+    before = efficiency.apply_pricing_flags({})
+    try:
+        off = efficiency.item_stat_values(shell)
+        efficiency.apply_pricing_flags({"price_stat_multipliers": True,
+                                        "multiplier_reference": ref})
+        on = efficiency.item_stat_values(shell)
+        # Without a reference the flag prices nothing rather than guessing.
+        efficiency.apply_pricing_flags({"price_stat_multipliers": True})
+        bare = efficiency.item_stat_values(shell)
+    finally:
+        efficiency.restore_pricing_flags(before)
+    assert off == {"Magical Protection": 20.0, "Physical Protection": 20.0}
+    assert bare == off
+    assert on == {"Magical Protection": 20.0,
+                  "Physical Protection": pytest.approx(20.0 + 3.0),
+                  "Strength": pytest.approx(3.0)}
+
+
+def test_the_shipped_reference_is_the_re_derivation_not_a_typed_number():
+    """`multiplier_reference` in _weights.yaml is a measurement and a wiki
+    refresh can move it; this fails when it has, so it is re-measured rather
+    than quietly outliving its data."""
+    from smite import recommend, scoring
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    stored = weights.get("multiplier_reference") or {}
+    live = passives.measure_multiplier_reference(recommend.load_items())
+    assert set(stored) == set(live)
+    for key, value in live.items():
+        assert stored[key] == pytest.approx(value, abs=0.01), key
+
+
+def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+    from smite import recommend, scoring
+    items = recommend.load_items()
+    flat = sorted(it["name"] for it in items
+                  if scoring.is_buildable(it) and passives.all_stats_multiplier(it) > 0)
+    assert flat == ["Agility Greaves", "Shell of Rebuke",
+                    "Talisman of Purification", "Time-lock Aegis"]
+    lamp = next(it for it in items if it["name"] == "Genie's Lamp")
+    assert passives.all_stats_multiplier(lamp) == 0.0
+    assert passives.all_stats_multiplier(lamp, level=20) == pytest.approx(0.12)
+    assert not scoring.is_buildable(lamp)
+
+
+# ── Flat on-hit damage (catalogue class B1, unconditional members) ─────────
+
+def test_the_flat_on_hit_grant_is_read_from_both_grammars():
+    tyrfing = _p("Attacks deal +15 bonus Physical Damage. On God hit: Increase bonus "
+                 "Damage by +15 for 4s Stacks once, +1 Stack per 4 Levels (Max 6 Stacks)")
+    assert passives.on_hit_flat_damage(tyrfing) == 15.0        # the ramp is not counted
+    golden = _p("Attacks deal bonus Physical Damage. Damage = +10 + 20% of your Item "
+                "Protections Damages all Enemies within 2.5m")
+    assert passives.on_hit_flat_damage(golden) == 10.0         # the protections term is not
+    bragi = _p("Attack Hit: +10 (+3 per Level) bonus Magical Damage. Structures and "
+               "Bosses take half damage from Bragi's Harp")
+    assert passives.on_hit_flat_damage(bragi) == 10.0          # the per-Level term is not
+    assert passives.on_hit_grants(tyrfing) == {"Attack Damage": 15.0}
+
+
+def test_a_gated_or_scaled_on_hit_clause_is_refused():
+    for text in (
+        "Ability Used: Your next Attack deals bonus Magical Damage Damage = 80% of your "
+        "Intelligence Cooldown: 2s",                                   # Polynomicon, per cast
+        "Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60% Attack Damage) "
+        "Physical Damage",                                             # Odysseus', a rate
+        "Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health",  # Qin's
+        "Store 25% of your Lifesteal healing as bonus Magical Damage on your next Attack.",
+        "On Attack Hit: 25% bonus Physical Damage to Enemies within 1.92m of the target",
+        "+35% Critical Strike Damage.",
+    ):
+        assert passives.on_hit_flat_damage(_p(text)) == 0.0, text
+        assert passives.on_hit_grants(_p(text)) == {}
+
+
+def test_price_on_hit_lands_in_the_attack_damage_column_and_is_a_no_op_off():
+    from smite import efficiency
+    tyrfing = {"name": "Tyrfing", "tier": 3, "cost": 2400,
+               "stats": {"Strength": "25", "Attack Damage": "25", "Attack Speed": "10%"},
+               "passive": "Attacks deal +15 bonus Physical Damage. On God hit: +15 for 4s"}
+    before = efficiency.apply_pricing_flags({})
+    try:
+        off = efficiency.item_stat_values(tyrfing)
+        efficiency.apply_pricing_flags({"price_on_hit": True})
+        on = efficiency.item_stat_values(tyrfing)
+    finally:
+        efficiency.restore_pricing_flags(before)
+    assert off == {"Strength": 25.0, "Attack Damage": 25.0, "Attack Speed %": 10.0}
+    assert on == {"Strength": 25.0, "Attack Damage": 40.0, "Attack Speed %": 10.0}
+
+
+def test_exactly_three_items_in_the_whole_item_set_carry_a_flat_on_hit_clause():
+    """The survey the flag rests on, re-run rather than trusted: no component
+    carries one, so the regression pool sees only these three."""
+    from smite import recommend
+    carriers = sorted((it["name"], passives.on_hit_flat_damage(it))
+                      for it in recommend.load_items() if passives.on_hit_flat_damage(it) > 0)
+    assert carriers == [("Bragi's Harp", 10.0), ("Golden Blade", 10.0), ("Tyrfing", 15.0)]
