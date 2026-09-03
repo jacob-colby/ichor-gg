@@ -95,9 +95,9 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -137,6 +137,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.61
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.51
     Hide of the Nemean Lion:
       total: 0.55
       efficiency: 0.52
@@ -149,28 +155,26 @@ builds:
       win: 0.5
       pick: 0.15
       fit: 0.47
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.51
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.51
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
-  - Hide of the Nemean Lion
   - Shifter's Shield
+  - Genji's Guard
+  - Hide of the Nemean Lion
   - Rod of Tahuti
   - Amanita Charm
   flex_slots:
@@ -199,30 +203,30 @@ builds:
     Scale, Screeching Gargoyle, Magi''s Cloak, Titan''s Bane, Helm of Darkness, Triton''s
     Conch, The Crusher, Daybreak Gavel, Oni Hunter''s Garb.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.48
-      pick: 0.25
-      fit: 0.29
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.51
       pick: 0.0
       fit: 0.45
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.68
-      pick: 0.31
-      fit: 0.23
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
       win: 0.54
       pick: 0.51
       fit: 0.36
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.48
+      pick: 0.25
+      fit: 0.29
+    Hide of the Nemean Lion:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.68
+      pick: 0.31
+      fit: 0.23
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
@@ -235,14 +239,18 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Shifter's Shield
+  - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Shifter's Shield
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Shifter's Shield
   - Rod of Tahuti
   - Amanita Charm
   flex_slots:
@@ -277,6 +285,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.48
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.38
     Hide of the Nemean Lion:
       total: 0.54
       efficiency: 0.52
@@ -289,12 +303,6 @@ builds:
       win: 0.5
       pick: 0.15
       fit: 0.41
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.38
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
@@ -307,15 +315,19 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Shield of the Phoenix
   - Hide of the Nemean Lion
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
@@ -355,6 +367,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.6
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.5
     Shield of the Phoenix:
       total: 0.55
       efficiency: 0.53
@@ -367,27 +385,25 @@ builds:
       win: 0.68
       pick: 0.31
       fit: 0.34
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.5
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.8
+  community_ordered:
+  - Shifter's Shield
+  - Shield of the Phoenix
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Stone of Binding
   - Jotunn's Revenge
+  - Shifter's Shield
   - Kinetic Cuirass
   - Hide of the Nemean Lion
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Stone of Binding
@@ -427,6 +443,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.54
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.42
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
@@ -439,28 +461,25 @@ builds:
       win: 0.68
       pick: 0.31
       fit: 0.27
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.42
     Amanita Charm:
       total: 0.52
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Berserker's Shield
+  - Shifter's Shield
   - Jotunn's Revenge
   - Nimble Ring
   - Hide of the Nemean Lion
-  - Shifter's Shield
   flex_slots:
   - Nimble Ring
   - Golden Blade
@@ -499,6 +518,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.4
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.34
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.72
@@ -517,22 +542,19 @@ builds:
       win: 0.68
       pick: 0.31
       fit: 0.22
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.34
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
-  - Jotunn's Revenge
-  - Hide of the Nemean Lion
-  - Freya's Tears
+  - Genji's Guard
   - Shifter's Shield
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Hide of the Nemean Lion
   flex_slots:
   - Breastplate of Valor
   - Shifter's Shield
@@ -560,51 +582,56 @@ builds:
     Mail, Daybreak Gavel, Heartseeker, Pendulum Blade, Glorious Pridwen, Chandra''s
     Grace, Jade Scepter.'
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.66
-      win: 0.48
-      pick: 0.25
-      fit: 0.44
     Breastplate of Valor:
       total: 0.52
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.44
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.51
-      pick: 0.0
-      fit: 0.5
-    Hide of the Nemean Lion:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.68
-      pick: 0.31
-      fit: 0.26
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.15
-      fit: 0.59
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.48
+      pick: 0.25
+      fit: 0.44
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
       win: 0.54
       pick: 0.51
       fit: 0.41
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.72
+      win: 0.51
+      pick: 0.0
+      fit: 0.5
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.15
+      fit: 0.59
+    Hide of the Nemean Lion:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.68
+      pick: 0.31
+      fit: 0.26
+  community_ordered:
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Freya's Tears
@@ -645,6 +672,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.49
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.39
     Hide of the Nemean Lion:
       total: 0.54
       efficiency: 0.52
@@ -657,27 +690,25 @@ builds:
       win: 0.5
       pick: 0.15
       fit: 0.39
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.39
     Amanita Charm:
       total: 0.52
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -718,6 +749,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.52
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.51
+      fit: 0.42
     Hide of the Nemean Lion:
       total: 0.54
       efficiency: 0.52
@@ -730,18 +767,16 @@ builds:
       win: 0.5
       pick: 0.15
       fit: 0.38
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.51
-      fit: 0.42
     Amanita Charm:
       total: 0.52
       efficiency: 0.65
       win: 0.51
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Shifter's Shield
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -814,5 +849,7 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.51
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 ---

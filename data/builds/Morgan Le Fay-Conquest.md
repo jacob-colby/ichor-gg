@@ -159,6 +159,12 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 1.0
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -230,6 +236,11 @@ builds:
       win: 0.59
       pick: 0.28
       fit: 0.57
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -299,6 +310,12 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.88
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +385,11 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.81
+  community_ordered:
+  - Chronos' Pendant
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -438,6 +460,11 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -507,6 +534,10 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.58
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -577,14 +608,20 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.96
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -625,18 +662,18 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.65
-    Nimble Ring:
-      total: 0.47
-      efficiency: 0.6
-      win: 0.47
-      pick: 0.0
-      fit: 0.35
     Spear of Desolation:
       total: 0.5
       efficiency: 0.57
       win: 0.46
       pick: 0.28
       fit: 0.55
+    Nimble Ring:
+      total: 0.47
+      efficiency: 0.6
+      win: 0.47
+      pick: 0.0
+      fit: 0.35
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
@@ -649,6 +686,11 @@ builds:
       win: 0.59
       pick: 0.28
       fit: 0.54
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -721,6 +763,12 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.79
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: model
@@ -791,13 +839,18 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
   - Chronos' Pendant
-  - Ethereal Staff
   - Spear of Desolation
+  - Ethereal Staff
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
@@ -831,18 +884,18 @@ builds:
       win: 0.57
       pick: 0.15
       fit: 0.36
-    Ethereal Staff:
-      total: 0.54
-      efficiency: 0.46
-      win: 0.57
-      pick: 0.14
-      fit: 0.79
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
       win: 0.46
       pick: 0.28
       fit: 0.62
+    Ethereal Staff:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.57
+      pick: 0.14
+      fit: 0.79
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
@@ -861,6 +914,13 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.92
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -931,6 +991,12 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.46
+  community_ordered:
+  - Genji's Guard
+  - Chronos' Pendant
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1002,6 +1068,12 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.89
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1073,6 +1145,11 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.83
+  community_ordered:
+  - Chronos' Pendant
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1144,6 +1221,12 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 1.0
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1215,6 +1298,10 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.67
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1286,6 +1373,13 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.94
+  community_ordered:
+  - Genji's Guard
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1359,6 +1453,10 @@ builds:
       win: 0.59
       pick: 0.28
       fit: 0.41
+  community_ordered:
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1366,8 +1464,8 @@ builds:
   slot_order:
   - Chronos' Pendant
   - Jotunn's Revenge
-  - Ethereal Staff
   - Spear of Desolation
+  - Ethereal Staff
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -1408,18 +1506,18 @@ builds:
       win: 0.47
       pick: 0.0
       fit: 0.51
-    Ethereal Staff:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.57
-      pick: 0.14
-      fit: 0.71
     Spear of Desolation:
       total: 0.5
       efficiency: 0.57
       win: 0.46
       pick: 0.28
       fit: 0.51
+    Ethereal Staff:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.57
+      pick: 0.14
+      fit: 0.71
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
@@ -1432,6 +1530,12 @@ builds:
       win: 0.59
       pick: 0.28
       fit: 0.51
+  community_ordered:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Ethereal Staff
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of the Cursed Crown
 - source: suggested
@@ -1503,6 +1607,11 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 0.92
+  community_ordered:
+  - Genji's Guard
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
 ---

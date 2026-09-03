@@ -158,6 +158,11 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -229,6 +234,10 @@ builds:
       win: 0.57
       pick: 0.24
       fit: 0.57
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +307,11 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +382,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.89
+  community_ordered:
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +454,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +527,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.58
+  community_ordered:
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +600,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: strength
@@ -648,6 +676,10 @@ builds:
       win: 0.57
       pick: 0.24
       fit: 0.44
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -720,6 +752,10 @@ builds:
       win: 0.57
       pick: 0.24
       fit: 0.56
+  community_ordered:
+  - Book of Thoth
+  - Spear of the Magus
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: model
@@ -789,5 +825,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 ---

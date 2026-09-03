@@ -158,6 +158,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -230,6 +234,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: burst
@@ -300,6 +308,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -370,6 +382,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Shifter's Shield
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -440,6 +457,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -510,6 +531,10 @@ builds:
       win: 0.71
       pick: 0.18
       fit: 0.53
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -580,6 +605,10 @@ builds:
       win: 0.71
       pick: 0.18
       fit: 0.55
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -650,5 +679,9 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
   starter: *id001
 ---

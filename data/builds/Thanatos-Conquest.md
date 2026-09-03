@@ -158,6 +158,13 @@ builds:
       win: 0.65
       pick: 0.22
       fit: 0.91
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -229,6 +236,12 @@ builds:
       win: 0.74
       pick: 0.22
       fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +311,13 @@ builds:
       win: 0.65
       pick: 0.22
       fit: 0.56
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +388,11 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +462,13 @@ builds:
       win: 0.65
       pick: 0.22
       fit: 0.94
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +538,10 @@ builds:
       win: 0.74
       pick: 0.22
       fit: 0.43
+  community_ordered:
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +612,11 @@ builds:
       win: 0.74
       pick: 0.22
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Crusher
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +686,11 @@ builds:
       win: 0.74
       pick: 0.22
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

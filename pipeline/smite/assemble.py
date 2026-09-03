@@ -501,10 +501,51 @@ def assemble_core_converged(rows, items_by_name, passes=2, **kwargs):
     return first, {"passes": passes, "converged": False, "oscillated": False}
 
 
-def build_order(core, items_by_name, tags_map, weights):
-    """Recommended purchase order for a core (heuristic — we have no real
-    build-path data). stage = default + sum(tag_stage for the item's tags) +
-    cost*cost_weight; sorted ascending (ties: cost, then name)."""
+def build_order(core, items_by_name, tags_map, weights, positions=None):
+    """Recommended purchase order for a core.
+
+    TWO SIGNALS, AND ONLY ONE OF THEM IS EVIDENCE. The heuristic is
+    `default_stage + sum(tag_stage for the item's tags) + cost*cost_weight`,
+    sorted ascending (ties: cost, then name) — that is where this function
+    started and it is still the whole answer for any item the community has no
+    positional record of. `positions` is `scoring.slot_positions` for THIS
+    build group's own community record: `{item -> (centroid_slot, mass)}`,
+    slot-reach corrected, i.e. which slot this god's players actually buy the
+    item in.
+
+    THE DOCSTRING THIS REPLACES SAID "we have no real build-path data" AND
+    THAT WAS FALSE for as long as the scrape has returned per-slot
+    distributions. It is worth saying plainly, because the sentence is why
+    nobody looked: the data was in `slot_order` the whole time and
+    `build_index.popular_items` flattened it away before anything downstream
+    could see it.
+
+    THE BLEND. Both quantities are already on the same clock — "which of the
+    six slots" — so the heuristic's own RANK is what the community's centroid
+    is mixed with, and no scale constant is invented:
+
+        key = (1 - w) * heuristic_rank + w * centroid,
+        w   = community_weight * min(1.0, mass)
+
+    The `min(1.0, mass)` damping is the confidence and is not a free
+    parameter: an item three players tried carries mass ~0.05 and moves
+    essentially nothing, an item the community reliably buys carries mass near
+    or above 1.0 and moves to its own centroid. The clamp is `lookup_rates`'
+    convention, for `lookup_rates`' reason.
+
+    AT `community_weight: 0.0` THIS IS EXACTLY THE OLD FUNCTION, by returning
+    the heuristic list itself rather than by arithmetic that happens to agree
+    (§4.10 in docs/STATE.md is what happens when a strength is applied where
+    nothing reads it). `positions=None` — which is every Joust and Arena build,
+    because neither mode has a community record and Conquest's is evidence
+    about a different game — is the same path.
+
+    WHAT THIS DOES NOT CLAIM. Ordering by the community's record is agreement
+    with observed play, never a claim about outcomes: no instrument in this
+    repo can say a buy order is good (`calibrate` measures membership and is
+    blind to order; `build_quality` evaluates a finished six-item build at
+    level 20 and is blind to order). `smite.order_agreement` is the
+    measurement that ships with it and says so on every path out."""
     cfg = (weights or {}).get("build_order") or {}
     default_stage = cfg.get("default_stage", 0)
     cost_weight = cfg.get("cost_weight", 0)
@@ -517,7 +558,38 @@ def build_order(core, items_by_name, tags_map, weights):
         cost = item.get("cost") or 0
         return (s + cost * cost_weight, cost, name)
 
-    return sorted(core, key=stage)
+    heuristic = sorted(core, key=stage)
+    strength = cfg.get("community_weight", 0.0)
+    if not strength or not positions:
+        return heuristic
+
+    rank = {name: index for index, name in enumerate(heuristic, start=1)}
+
+    def key(name):
+        centroid, mass = positions.get(name, (None, 0.0))
+        if centroid is None:
+            return (rank[name], rank[name])
+        share = strength * min(1.0, mass)
+        return ((1 - share) * rank[name] + share * centroid, rank[name])
+
+    return sorted(heuristic, key=key)
+
+
+def community_ordered(core, positions, weights=None):
+    """The subset of `core` whose position `build_order` actually took from the
+    community record rather than from the heuristic — stamped on the build so
+    the page can say how many of the six are evidence-backed instead of
+    letting the reader assume all six are. Empty for every Joust and Arena
+    build, which is the honest answer there and not a missing feature.
+
+    It reads the same `community_weight` `build_order` does, so at 0.0 it is
+    empty even where a record exists: the claim is "this position came from
+    the record", and at 0.0 no position did. Without that gate the flag's
+    no-op would stop being one — the order would be unchanged and the build
+    would still carry a provenance list naming items nothing had used."""
+    if not (weights or {}).get("build_order", {}).get("community_weight", 0.0):
+        return []
+    return [name for name in core if name in (positions or {})]
 
 
 def flex_slots(core, rows, count=2):

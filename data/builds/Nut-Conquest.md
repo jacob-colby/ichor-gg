@@ -161,6 +161,11 @@ builds:
       win: 0.58
       pick: 0.24
       fit: 0.48
+  community_ordered:
+  - Bragi's Harp
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -234,6 +239,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.62
+  community_ordered:
+  - Bragi's Harp
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -306,6 +315,11 @@ builds:
       win: 0.58
       pick: 0.24
       fit: 0.5
+  community_ordered:
+  - Bragi's Harp
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -378,6 +392,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.79
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -450,14 +467,18 @@ builds:
       win: 0.58
       pick: 0.24
       fit: 0.59
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Nimble Ring
   - Bragi's Harp
+  - Nimble Ring
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -497,18 +518,18 @@ builds:
       win: 0.53
       pick: 0.47
       fit: 0.63
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.53
-      pick: 0.0
-      fit: 0.48
     Bragi's Harp:
       total: 0.52
       efficiency: 0.44
       win: 0.54
       pick: 0.56
       fit: 0.63
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.53
+      pick: 0.0
+      fit: 0.48
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -521,6 +542,11 @@ builds:
       win: 0.58
       pick: 0.24
       fit: 0.41
+  community_ordered:
+  - Tyrfing
+  - Bragi's Harp
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -593,6 +619,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.78
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
@@ -665,5 +695,9 @@ builds:
       win: 0.58
       pick: 0.24
       fit: 0.48
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 ---

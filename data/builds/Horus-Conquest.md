@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -123,17 +123,17 @@ builds:
     Discord, Hydra''s Lament, Hide of the Nemean Lion, Gladiator''s Shield, Leviathan''s
     Hide, Void Shield, Ancile, Oni Hunter''s Garb, Void Stone.'
   slot_scores:
-    Genji's Guard:
-      total: 0.6
-      efficiency: 0.66
-      win: 0.65
-      pick: 0.33
-      fit: 0.42
     Breastplate of Valor:
       total: 0.63
       efficiency: 0.65
       win: 0.73
       pick: 0.14
+      fit: 0.42
+    Genji's Guard:
+      total: 0.6
+      efficiency: 0.66
+      win: 0.65
+      pick: 0.33
       fit: 0.42
     Kinetic Cuirass:
       total: 0.61
@@ -159,6 +159,11 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
@@ -231,6 +236,10 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,6 +310,10 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.46
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,12 +384,15 @@ builds:
       win: 0.82
       pick: 0.11
       fit: 0.35
+  community_ordered:
+  - Breastplate of Valor
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Jotunn's Revenge
   - Freya's Tears
   - Draconic Scale
@@ -406,17 +422,17 @@ builds:
     Midgardian Mail, Glorious Pridwen, Daybreak Gavel, Mantle Of Discord, Hide of
     the Nemean Lion, Avenging Blade.'
   slot_scores:
-    Genji's Guard:
-      total: 0.61
-      efficiency: 0.66
-      win: 0.65
-      pick: 0.33
-      fit: 0.48
     Breastplate of Valor:
       total: 0.64
       efficiency: 0.65
       win: 0.73
       pick: 0.14
+      fit: 0.48
+    Genji's Guard:
+      total: 0.61
+      efficiency: 0.66
+      win: 0.65
+      pick: 0.33
       fit: 0.48
     Jotunn's Revenge:
       total: 0.62
@@ -442,15 +458,20 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.43
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Genji's Guard
@@ -476,41 +497,45 @@ builds:
     Mantle Of Discord, Hydra''s Lament, Hide of the Nemean Lion, Gladiator''s Shield,
     Leviathan''s Hide, Void Shield, Ancile, Oni Hunter''s Garb, Void Stone.'
   slot_scores:
-    Genji's Guard:
-      total: 0.6
-      efficiency: 0.66
-      win: 0.65
-      pick: 0.33
-      fit: 0.42
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.66
       pick: 0.0
       fit: 0.34
+    Genji's Guard:
+      total: 0.6
+      efficiency: 0.66
+      win: 0.65
+      pick: 0.33
+      fit: 0.42
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.56
       win: 0.66
       pick: 0.0
       fit: 0.76
-    Freya's Tears:
-      total: 0.62
-      efficiency: 0.61
-      win: 0.66
-      pick: 0.18
-      fit: 0.64
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
       win: 0.59
       pick: 0.19
       fit: 0.66
+    Freya's Tears:
+      total: 0.62
+      efficiency: 0.61
+      win: 0.66
+      pick: 0.18
+      fit: 0.64
     Amanita Charm:
       total: 0.63
       efficiency: 0.65
       win: 0.66
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 ---

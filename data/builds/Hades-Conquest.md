@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Book of Thoth
   - Gluttonous Grimoire
-  - Spear of Desolation
   - The World Stone
+  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -134,18 +134,18 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.74
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.66
-      pick: 0.17
-      fit: 0.6
     The World Stone:
       total: 0.58
       efficiency: 0.52
       win: 0.67
       pick: 0.46
       fit: 0.47
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.66
+      pick: 0.17
+      fit: 0.6
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86
@@ -158,6 +158,11 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.57
+  community_ordered:
+  - The World Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -166,8 +171,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Gluttonous Grimoire
-  - Spear of Desolation
   - The World Stone
+  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -205,18 +210,18 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.55
-    Spear of Desolation:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.66
-      pick: 0.17
-      fit: 0.45
     The World Stone:
       total: 0.57
       efficiency: 0.52
       win: 0.67
       pick: 0.46
       fit: 0.42
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.66
+      pick: 0.17
+      fit: 0.45
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86
@@ -229,6 +234,11 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.45
+  community_ordered:
+  - The World Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,14 +308,18 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.5
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
   - Shifter's Shield
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
@@ -343,18 +357,18 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.51
-    Rod of Tahuti:
-      total: 0.7
-      efficiency: 0.86
-      win: 0.71
-      pick: 0.4
-      fit: 0.39
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
       win: 0.72
       pick: 0.17
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.7
+      efficiency: 0.86
+      win: 0.71
+      pick: 0.4
+      fit: 0.39
     Amanita Charm:
       total: 0.65
       efficiency: 0.65
@@ -367,14 +381,18 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.89
+  community_ordered:
+  - Shifter's Shield
+  - Obsidian Shard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Book of Thoth
   - Gluttonous Grimoire
-  - Spear of Desolation
   - The World Stone
+  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -412,18 +430,18 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.81
-    Spear of Desolation:
-      total: 0.61
-      efficiency: 0.57
-      win: 0.66
-      pick: 0.17
-      fit: 0.68
     The World Stone:
       total: 0.59
       efficiency: 0.52
       win: 0.67
       pick: 0.46
       fit: 0.58
+    Spear of Desolation:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.66
+      pick: 0.17
+      fit: 0.68
     Rod of Tahuti:
       total: 0.73
       efficiency: 0.86
@@ -436,6 +454,11 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.68
+  community_ordered:
+  - The World Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -505,14 +528,17 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.35
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -551,18 +577,18 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.43
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.61
-      pick: 0.32
-      fit: 0.51
     Spear of Desolation:
       total: 0.6
       efficiency: 0.57
       win: 0.66
       pick: 0.17
       fit: 0.61
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.32
+      fit: 0.51
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.86
@@ -575,6 +601,10 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Spear of Desolation
+  - Freya's Tears
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: strength
@@ -647,6 +677,10 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.42
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -719,16 +753,19 @@ builds:
       win: 0.72
       pick: 0.17
       fit: 0.49
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Gluttonous Grimoire
+  - Freya's Tears
   - Spear of Desolation
-  - Spear of the Magus
   - Rod of Tahuti
+  - Spear of the Magus
   flex_slots:
   - Kinetic Cuirass
   - Freya's Tears
@@ -759,35 +796,39 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.5
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.61
-      pick: 0.32
-      fit: 0.36
     Gluttonous Grimoire:
       total: 0.6
       efficiency: 0.55
       win: 0.67
       pick: 0.0
       fit: 0.74
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.32
+      fit: 0.36
     Spear of Desolation:
       total: 0.6
       efficiency: 0.57
       win: 0.66
       pick: 0.17
       fit: 0.6
-    Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.0
-      fit: 0.47
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86
       win: 0.71
       pick: 0.4
       fit: 0.47
+    Spear of the Magus:
+      total: 0.58
+      efficiency: 0.6
+      win: 0.67
+      pick: 0.0
+      fit: 0.47
+  community_ordered:
+  - Freya's Tears
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 ---

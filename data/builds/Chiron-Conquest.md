@@ -157,6 +157,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.34
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Crusher
+  - Avatar's Parashu
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -227,6 +233,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.29
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: crit
@@ -295,6 +307,10 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.32
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: burst
@@ -363,6 +379,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.33
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -433,12 +455,16 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.62
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - The Executioner
   - Toxic Blade
+  - The Executioner
   - Jotunn's Revenge
   - Riptalon
   - The Crusher
@@ -465,18 +491,18 @@ builds:
     Demon Blade, Musashi''s Dual Swords, Arondight, Oath-Sworn Spear, Runeforged Hammer,
     Damaru, Rage, Qin''s Blade, Berserker''s Shield, Screeching Gargoyle.'
   slot_scores:
-    The Executioner:
-      total: 0.51
-      efficiency: 0.35
-      win: 0.63
-      pick: 0.2
-      fit: 0.6
     Toxic Blade:
       total: 0.52
       efficiency: 0.44
       win: 0.62
       pick: 0.11
       fit: 0.56
+    The Executioner:
+      total: 0.51
+      efficiency: 0.35
+      win: 0.63
+      pick: 0.2
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -501,6 +527,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.45
+  community_ordered:
+  - Toxic Blade
+  - The Executioner
+  - Jotunn's Revenge
+  - The Crusher
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -569,6 +601,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.26
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Silverbranch Bow
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -638,6 +676,11 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.21
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: model
@@ -706,6 +749,9 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.58
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: core
@@ -774,6 +820,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.41
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -843,6 +895,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.33
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -912,6 +970,10 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.32
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -981,6 +1043,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.38
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1052,6 +1120,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.77
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1121,6 +1193,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.53
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1190,6 +1268,12 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.26
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Silverbranch Bow
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1260,6 +1344,11 @@ builds:
       win: 0.75
       pick: 0.25
       fit: 0.25
+  community_ordered:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Crusher
+  - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1330,6 +1419,10 @@ builds:
       win: 0.49
       pick: 0.22
       fit: 0.61
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 ---

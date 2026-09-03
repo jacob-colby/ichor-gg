@@ -93,11 +93,11 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Freya's Tears
@@ -122,17 +122,17 @@ builds:
     Cloak, Helm of Darkness, Leviathan''s Hide, Void Shield, Ancile, Oni Hunter''s
     Garb, Xibalban Effigy, Spear of Desolation, Hussar''s Wings.'
   slot_scores:
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.26
-      fit: 0.39
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
       win: 0.61
       pick: 0.16
+      fit: 0.39
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.66
+      win: 0.64
+      pick: 0.26
       fit: 0.39
     Kinetic Cuirass:
       total: 0.59
@@ -140,35 +140,40 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.81
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.59
-      pick: 0.16
-      fit: 0.64
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
       win: 0.6
       pick: 0.34
       fit: 0.71
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.59
+      pick: 0.16
+      fit: 0.64
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
       win: 0.6
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Shield of the Phoenix
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Genji's Guard
@@ -193,42 +198,46 @@ builds:
     Lifebinder, Midgardian Mail, Stone of Binding, Stampede, Helm of Radiance, Leviathan''s
     Hide, Void Shield, Magi''s Cloak, Ancile.'
   slot_scores:
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.26
-      fit: 0.36
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
       win: 0.6
       pick: 0.0
       fit: 0.8
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.66
+      win: 0.64
+      pick: 0.26
+      fit: 0.36
     Shield of the Phoenix:
       total: 0.59
       efficiency: 0.53
       win: 0.6
       pick: 0.0
       fit: 0.92
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.59
-      pick: 0.16
-      fit: 0.57
     Shifter's Shield:
       total: 0.58
       efficiency: 0.55
       win: 0.6
       pick: 0.34
       fit: 0.7
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.59
+      pick: 0.16
+      fit: 0.57
     Amanita Charm:
       total: 0.65
       efficiency: 0.65
       win: 0.6
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -236,8 +245,8 @@ builds:
   - Stone of Binding
   - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Freya's Tears
@@ -280,30 +289,34 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.59
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.59
-      pick: 0.16
-      fit: 0.44
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.6
       pick: 0.34
       fit: 0.49
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.59
+      pick: 0.16
+      fit: 0.44
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.6
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
@@ -331,17 +344,17 @@ builds:
     of the Magus, Spear of Desolation, Bragi''s Harp, Rod of Asclepius, Midgardian
     Mail, Mantle Of Discord, Bracer of The Abyss, Obsidian Shard, Leviathan''s Hide.'
   slot_scores:
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.26
-      fit: 0.2
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
       win: 0.61
       pick: 0.16
+      fit: 0.2
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.64
+      pick: 0.26
       fit: 0.2
     Bracer of The Abyss:
       total: 0.49
@@ -367,15 +380,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -401,17 +417,17 @@ builds:
     Magi''s Cloak, Rod of Asclepius, Eye of Erebus, Spear of the Magus, Mantle Of
     Discord, Glorious Pridwen, Midgardian Mail, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.6
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.26
-      fit: 0.48
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
       win: 0.61
       pick: 0.16
+      fit: 0.48
+    Genji's Guard:
+      total: 0.6
+      efficiency: 0.66
+      win: 0.64
+      pick: 0.26
       fit: 0.48
     Kinetic Cuirass:
       total: 0.55
@@ -419,24 +435,29 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.59
-      pick: 0.16
-      fit: 0.64
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.6
       pick: 0.34
       fit: 0.45
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.59
+      pick: 0.16
+      fit: 0.64
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.6
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
@@ -509,6 +530,8 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -582,15 +605,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Genji's Guard
@@ -615,17 +641,17 @@ builds:
     Gargoyle, Prophetic Cloak, Helm of Darkness, Leviathan''s Hide, Void Shield, Stampede,
     Ancile, Oni Hunter''s Garb, Xibalban Effigy, Spear of Desolation, Hussar''s Wings.'
   slot_scores:
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.64
-      pick: 0.26
-      fit: 0.39
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
       win: 0.61
       pick: 0.16
+      fit: 0.39
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.66
+      win: 0.64
+      pick: 0.26
       fit: 0.39
     Kinetic Cuirass:
       total: 0.59
@@ -633,23 +659,28 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.81
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.59
-      pick: 0.16
-      fit: 0.64
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
       win: 0.6
       pick: 0.34
       fit: 0.71
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.59
+      pick: 0.16
+      fit: 0.64
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
       win: 0.6
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 ---

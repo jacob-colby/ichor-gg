@@ -158,6 +158,11 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -229,6 +234,11 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +308,11 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +383,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.89
+  community_ordered:
+  - Book of Thoth
+  - Doom Orb
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +456,11 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -445,8 +469,8 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Doom Orb
   - Rod of Tahuti
+  - Doom Orb
   flex_slots:
   - Book of Thoth
   - Bracer of The Abyss
@@ -494,18 +518,22 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.63
-    Doom Orb:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.63
-      pick: 0.02
-      fit: 0.32
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.56
       pick: 0.28
       fit: 0.32
+    Doom Orb:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.63
+      pick: 0.02
+      fit: 0.32
+  community_ordered:
+  - Book of Thoth
+  - Rod of Tahuti
+  - Doom Orb
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +604,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Book of Thoth
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: model
@@ -646,5 +680,10 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 ---

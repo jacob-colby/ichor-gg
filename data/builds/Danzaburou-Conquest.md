@@ -161,6 +161,12 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.3
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Tyrfing
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -234,6 +240,11 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.39
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: crit
@@ -305,6 +316,10 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.3
+  community_ordered:
+  - Jotunn's Revenge
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -377,6 +392,11 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.43
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -450,6 +470,11 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -522,6 +547,12 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -593,6 +624,11 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.27
+  community_ordered:
+  - Jotunn's Revenge
+  - Tyrfing
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -665,6 +701,11 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.65
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -737,6 +778,11 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.44
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -809,6 +855,11 @@ builds:
       win: 0.67
       pick: 0.22
       fit: 0.43
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
@@ -881,5 +932,8 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.43
+  community_ordered:
+  - Jotunn's Revenge
+  - Rod of Tahuti
   starter: *id001
 ---

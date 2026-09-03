@@ -94,10 +94,10 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
-  - Qin's Blade
+  - Lernaean Bow
   - Silverbranch Bow
+  - Qin's Blade
   - Demon Blade
   flex_slots:
   - Demon Blade
@@ -128,36 +128,40 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.72
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.0
-      fit: 0.66
     Tyrfing:
       total: 0.57
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.82
-    Qin's Blade:
-      total: 0.53
-      efficiency: 0.37
-      win: 0.63
-      pick: 0.31
-      fit: 0.68
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.0
+      fit: 0.66
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.42
       win: 0.66
       pick: 0.45
       fit: 0.48
+    Qin's Blade:
+      total: 0.53
+      efficiency: 0.37
+      win: 0.63
+      pick: 0.31
+      fit: 0.68
     Demon Blade:
       total: 0.53
       efficiency: 0.38
       win: 0.6
       pick: 0.0
       fit: 0.87
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Qin's Blade
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -165,8 +169,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
+  - Transcendence
   - Hydra's Lament
   - Silverbranch Bow
   - Heartseeker
@@ -199,18 +203,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.45
-    Transcendence:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.25
     Tyrfing:
       total: 0.53
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.51
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.25
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
@@ -229,6 +233,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: crit
@@ -298,14 +305,17 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Golden Blade
+  - Tyrfing
   - Berserker's Shield
   - Kinetic Cuirass
-  - Tyrfing
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
@@ -338,6 +348,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.58
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.48
+      win: 0.54
+      pick: 0.73
+      fit: 0.53
     Berserker's Shield:
       total: 0.58
       efficiency: 0.68
@@ -350,12 +366,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.51
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.48
-      win: 0.54
-      pick: 0.73
-      fit: 0.53
     Runeforged Hammer:
       total: 0.53
       efficiency: 0.57
@@ -368,6 +378,8 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Tyrfing
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,16 +449,19 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
+  - Lernaean Bow
+  - Silverbranch Bow
   - Qin's Blade
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
   - Golden Blade
   - Riptalon
@@ -476,18 +491,24 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.67
-    Lernaean Bow:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.0
-      fit: 0.56
     Tyrfing:
       total: 0.56
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.77
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.0
+      fit: 0.56
+    Silverbranch Bow:
+      total: 0.54
+      efficiency: 0.42
+      win: 0.66
+      pick: 0.45
+      fit: 0.5
     Qin's Blade:
       total: 0.53
       efficiency: 0.37
@@ -500,22 +521,21 @@ builds:
       win: 0.6
       pick: 0.3
       fit: 0.6
-    Silverbranch Bow:
-      total: 0.54
-      efficiency: 0.42
-      win: 0.66
-      pick: 0.45
-      fit: 0.5
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Qin's Blade
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
+  - Jotunn's Revenge
   - Hydra's Lament
-  - Arondight
   - Silverbranch Bow
+  - Arondight
   flex_slots:
   - Arondight
   - Lernaean Bow
@@ -546,43 +566,46 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.4
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.67
-      win: 0.6
-      pick: 0.0
-      fit: 0.43
     Tyrfing:
       total: 0.52
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.5
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.67
+      win: 0.6
+      pick: 0.0
+      fit: 0.43
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.6
       pick: 0.0
       fit: 0.53
-    Arondight:
-      total: 0.51
-      efficiency: 0.5
-      win: 0.6
-      pick: 0.0
-      fit: 0.43
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.42
       win: 0.66
       pick: 0.45
       fit: 0.3
+    Arondight:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.6
+      pick: 0.0
+      fit: 0.43
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
+  - Lernaean Bow
   - Dominance
   - Demon Blade
   - Deathbringer
@@ -615,18 +638,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.72
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.0
-      fit: 0.66
     Tyrfing:
       total: 0.57
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.82
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.0
+      fit: 0.66
     Dominance:
       total: 0.53
       efficiency: 0.45
@@ -645,13 +668,15 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Tyrfing
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
+  - Lernaean Bow
   - Silverbranch Bow
   - Demon Blade
   - Deathbringer
@@ -684,18 +709,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.72
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.0
-      fit: 0.66
     Tyrfing:
       total: 0.57
       efficiency: 0.48
       win: 0.54
       pick: 0.73
       fit: 0.82
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.6
+      pick: 0.0
+      fit: 0.66
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.42
@@ -714,6 +739,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
   swaps:
   - added: Silverbranch Bow
     removed: Dominance

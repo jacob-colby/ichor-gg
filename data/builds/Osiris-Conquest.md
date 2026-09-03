@@ -158,6 +158,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Berserker's Shield
+  - Freya's Tears
+  - Draconic Scale
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -166,8 +170,8 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -206,18 +210,18 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.26
-    Freya's Tears:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.56
-      pick: 0.22
-      fit: 0.3
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
       win: 0.52
       pick: 0.45
       fit: 0.44
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.22
+      fit: 0.3
     Draconic Scale:
       total: 0.52
       efficiency: 0.5
@@ -230,6 +234,11 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.74
+  community_ordered:
+  - Berserker's Shield
+  - Shifter's Shield
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -299,6 +308,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Berserker's Shield
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -368,6 +381,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Berserker's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -438,6 +454,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Berserker's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -508,5 +527,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Golden Blade
+  - Berserker's Shield
+  - Kinetic Cuirass
   starter: *id001
 ---

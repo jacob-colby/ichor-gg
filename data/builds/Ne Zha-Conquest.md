@@ -158,6 +158,9 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 0.98
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -229,6 +232,11 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 0.77
+  community_ordered:
+  - Jotunn's Revenge
+  - Rage
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: burst
@@ -299,6 +307,10 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 0.76
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -369,6 +381,11 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Jotunn's Revenge
+  - Hide of the Nemean Lion
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -438,6 +455,9 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -508,6 +528,10 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 0.51
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -578,6 +602,10 @@ builds:
       win: 0.75
       pick: 0.11
       fit: 0.55
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -647,6 +675,10 @@ builds:
       win: 0.35
       pick: 0.18
       fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -716,6 +748,11 @@ builds:
       win: 0.35
       pick: 0.18
       fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Rage
+  - Heartseeker
+  - Titan's Bane
   swaps:
   - added: Rage
     removed: Transcendence

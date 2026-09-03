@@ -159,6 +159,8 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.5
+  community_ordered:
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -231,6 +233,8 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.8
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,6 +305,8 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,13 +377,15 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
+  - Genji's Guard
   - Jotunn's Revenge
   - Freya's Tears
   - Amanita Charm
@@ -406,12 +414,6 @@ builds:
     Daybreak Gavel, Midgardian Mail, Shogun''s Ofuda, Mantle Of Discord, Chandra''s
     Grace.'
   slot_scores:
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.61
-      pick: 0.38
-      fit: 0.44
     Berserker's Shield:
       total: 0.59
       efficiency: 0.68
@@ -423,6 +425,12 @@ builds:
       efficiency: 0.65
       win: 0.57
       pick: 0.42
+      fit: 0.44
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.66
+      win: 0.61
+      pick: 0.38
       fit: 0.44
     Jotunn's Revenge:
       total: 0.61
@@ -442,13 +450,17 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Amanita Charm
@@ -476,12 +488,6 @@ builds:
     Screeching Gargoyle, Magi''s Cloak, Shogun''s Ofuda, Midgardian Mail, Mantle Of
     Discord, Heartseeker, Hide of the Nemean Lion, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.61
-      pick: 0.38
-      fit: 0.32
     Berserker's Shield:
       total: 0.6
       efficiency: 0.68
@@ -494,6 +500,12 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.4
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.61
+      pick: 0.38
+      fit: 0.32
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
@@ -512,6 +524,9 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.5
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -519,8 +534,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shell of Rebuke
   - Freya's Tears
+  - Shell of Rebuke
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -564,24 +579,27 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.6
-    Shell of Rebuke:
-      total: 0.51
-      efficiency: 0.28
-      win: 0.78
-      pick: 0.22
-      fit: 0.35
     Freya's Tears:
       total: 0.61
       efficiency: 0.61
       win: 0.67
       pick: 0.41
       fit: 0.49
+    Shell of Rebuke:
+      total: 0.51
+      efficiency: 0.28
+      win: 0.78
+      pick: 0.22
+      fit: 0.35
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
       win: 0.66
       pick: 0.0
       fit: 0.5
+  community_ordered:
+  - Freya's Tears
+  - Shell of Rebuke
   swaps:
   - added: Shell of Rebuke
     removed: Genji's Guard

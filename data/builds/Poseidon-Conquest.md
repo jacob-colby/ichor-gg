@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Spear of the Magus
   - The World Stone
   - Rod of Tahuti
@@ -122,18 +122,18 @@ builds:
     Talon, Helm of Radiance, Ethereal Staff, Staff of Myrddin, Wish-Granting Pearl,
     Typhon’s Heart, Bracer of The Abyss.'
   slot_scores:
-    Nimble Ring:
-      total: 0.49
-      efficiency: 0.39
-      win: 0.62
-      pick: 0.33
-      fit: 0.42
     Spear of Desolation:
       total: 0.63
       efficiency: 0.57
       win: 0.56
       pick: 0.52
       fit: 1.0
+    Nimble Ring:
+      total: 0.49
+      efficiency: 0.39
+      win: 0.62
+      pick: 0.33
+      fit: 0.42
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
@@ -158,6 +158,12 @@ builds:
       win: 0.6
       pick: 0.32
       fit: 0.89
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -229,6 +235,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.71
+  community_ordered:
+  - Spear of Desolation
+  - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +309,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Spear of Desolation
+  - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,12 +384,16 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.89
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Spear of the Magus
   - The World Stone
   - Rod of Tahuti
@@ -401,18 +421,18 @@ builds:
     Talon, Helm of Radiance, Chronos'' Pendant, Ethereal Staff, Screeching Gargoyle,
     Wish-Granting Pearl, Typhon’s Heart, Breastplate of Valor, Bracer of The Abyss.'
   slot_scores:
-    Nimble Ring:
-      total: 0.48
-      efficiency: 0.39
-      win: 0.62
-      pick: 0.33
-      fit: 0.3
     Spear of Desolation:
       total: 0.63
       efficiency: 0.57
       win: 0.56
       pick: 0.52
       fit: 1.0
+    Nimble Ring:
+      total: 0.48
+      efficiency: 0.39
+      win: 0.62
+      pick: 0.33
+      fit: 0.3
     Spear of the Magus:
       total: 0.59
       efficiency: 0.6
@@ -437,14 +457,20 @@ builds:
       win: 0.6
       pick: 0.32
       fit: 0.95
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Bracer of The Abyss
+  - Spear of Desolation
   - Nimble Ring
   - Bragi's Harp
-  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -476,6 +502,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.4
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.56
+      pick: 0.52
+      fit: 0.4
     Nimble Ring:
       total: 0.6
       efficiency: 0.65
@@ -488,12 +520,6 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.63
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.52
-      fit: 0.4
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -506,6 +532,11 @@ builds:
       win: 0.6
       pick: 0.32
       fit: 0.42
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -575,14 +606,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Jotunn's Revenge
+  - Spear of Desolation
   - Transcendence
   - Nimble Ring
-  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
@@ -616,6 +651,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.65
+    Spear of Desolation:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.56
+      pick: 0.52
+      fit: 0.55
     Transcendence:
       total: 0.48
       efficiency: 0.53
@@ -628,12 +669,6 @@ builds:
       win: 0.62
       pick: 0.33
       fit: 0.35
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.52
-      fit: 0.55
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
@@ -646,6 +681,11 @@ builds:
       win: 0.6
       pick: 0.32
       fit: 0.54
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -718,6 +758,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.79
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
@@ -787,5 +831,9 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 ---

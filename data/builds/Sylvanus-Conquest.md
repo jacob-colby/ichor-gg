@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Shifter's Shield
@@ -123,17 +123,17 @@ builds:
     Midgardian Mail, Hide of the Nemean Lion, Spear of the Magus, Leviathan''s Hide,
     Void Shield, Ancile, Stampede.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.39
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
       win: 0.51
       pick: 0.17
+      fit: 0.39
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55
@@ -159,14 +159,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Shield of the Phoenix
   - Freya's Tears
   - Shifter's Shield
@@ -195,18 +199,18 @@ builds:
     Sphere of Negation, Stone of Binding, Midgardian Mail, Screeching Gargoyle, Jade
     Scepter, Wish-Granting Pearl, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.36
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
       win: 0.55
       pick: 0.0
       fit: 0.72
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
+      fit: 0.36
     Shield of the Phoenix:
       total: 0.57
       efficiency: 0.53
@@ -231,6 +235,9 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.92
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,12 +308,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Genji's Guard
   - Bracer of The Abyss
+  - Genji's Guard
   - Nimble Ring
   - Bragi's Harp
   - Freya's Tears
@@ -335,18 +345,18 @@ builds:
     Cloak, Daybreak Gavel, Obsidian Shard, Bracer of The Abyss, Midgardian Mail, Mantle
     Of Discord, Chronos'' Pendant, Jade Scepter.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.21
     Bracer of The Abyss:
       total: 0.47
       efficiency: 0.52
       win: 0.55
       pick: 0.0
       fit: 0.26
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
+      fit: 0.21
     Nimble Ring:
       total: 0.52
       efficiency: 0.65
@@ -371,12 +381,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.34
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
@@ -405,17 +418,17 @@ builds:
     of Binding, Gem of Focus, Magi''s Cloak, Rod of Asclepius, Eye of Erebus, Spear
     of the Magus, Mantle Of Discord, Glorious Pridwen, Midgardian Mail, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.48
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
       win: 0.51
       pick: 0.17
+      fit: 0.48
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
       fit: 0.48
     Kinetic Cuirass:
       total: 0.53
@@ -441,12 +454,16 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
+  - Genji's Guard
   - Jotunn's Revenge
   - Tyrfing
   - Freya's Tears
@@ -478,18 +495,18 @@ builds:
     Pharaoh''s Curse, Rod of Asclepius, Magi''s Cloak, Bragi''s Harp, The Reaper,
     Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.24
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
       win: 0.55
       pick: 0.0
       fit: 0.33
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -514,12 +531,16 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Genji's Guard
+  - Tyrfing
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
@@ -551,18 +572,18 @@ builds:
     The World Stone, Titan''s Bane, Helm of Darkness, Ancient Signet, The Crusher,
     Mantle Of Discord, Daybreak Gavel, Dreamer''s Idol.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.25
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.42
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
+      fit: 0.25
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
@@ -587,12 +608,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Shifter's Shield
@@ -621,17 +645,17 @@ builds:
     of Asclepius, Prophetic Cloak, Midgardian Mail, Hide of the Nemean Lion, Spear
     of the Magus, Leviathan''s Hide, Void Shield, Stampede, Ancile.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.55
-      pick: 0.34
-      fit: 0.39
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
       win: 0.51
       pick: 0.17
+      fit: 0.39
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.34
       fit: 0.39
     Kinetic Cuirass:
       total: 0.55
@@ -657,5 +681,9 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 ---

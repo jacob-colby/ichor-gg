@@ -158,6 +158,10 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.77
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -228,6 +232,10 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.53
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
@@ -297,6 +305,10 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.61
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -367,6 +379,9 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.78
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -436,6 +451,10 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.87
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -504,6 +523,10 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.62
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -574,6 +597,10 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.42
+  community_ordered:
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: model
@@ -643,5 +670,8 @@ builds:
       win: 0.5
       pick: 0.3
       fit: 0.77
+  community_ordered:
+  - Hydra's Lament
+  - Titan's Bane
   starter: *id001
 ---

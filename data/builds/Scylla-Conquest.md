@@ -158,14 +158,20 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Polynomicon
   - Spear of Desolation
+  - Polynomicon
   - Doom Orb
   - Rod of Tahuti
   - Obsidian Shard
@@ -193,18 +199,18 @@ builds:
     Blood-Bound Book, Jade Scepter, Divine Ruin, Wish-Granting Pearl, Helm of Radiance,
     Breastplate of Valor, Ethereal Staff.'
   slot_scores:
-    Polynomicon:
-      total: 0.52
-      efficiency: 0.46
-      win: 0.61
-      pick: 0.31
-      fit: 0.49
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
       win: 0.51
       pick: 0.4
       fit: 0.61
+    Polynomicon:
+      total: 0.52
+      efficiency: 0.46
+      win: 0.61
+      pick: 0.31
+      fit: 0.49
     Doom Orb:
       total: 0.57
       efficiency: 0.53
@@ -229,6 +235,13 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 0.71
+  community_ordered:
+  - Spear of Desolation
+  - Polynomicon
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +311,12 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 0.88
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +387,11 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 0.89
+  community_ordered:
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +461,12 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +536,10 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 0.58
+  community_ordered:
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +610,12 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 0.96
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +685,11 @@ builds:
       win: 0.54
       pick: 0.16
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 ---

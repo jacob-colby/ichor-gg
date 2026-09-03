@@ -94,8 +94,8 @@ builds:
   archetype: core
   slot_order:
   - Bracer of The Abyss
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
@@ -128,18 +128,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.44
-      pick: 0.3
-      fit: 0.68
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
       win: 0.53
       pick: 0.19
       fit: 0.56
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.44
+      pick: 0.3
+      fit: 0.68
     Spear of the Magus:
       total: 0.5
       efficiency: 0.6
@@ -158,14 +158,19 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.54
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Nimble Ring
   - Polynomicon
+  - Nimble Ring
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
@@ -193,18 +198,18 @@ builds:
     Reaver, Rod of Asclepius, The Cosmic Horror, Typhon’s Heart, Totem of Death, Jade
     Scepter, Divine Ruin, Triton''s Conch, Wish-Granting Pearl.'
   slot_scores:
-    Nimble Ring:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.44
-      pick: 0.3
-      fit: 0.48
     Polynomicon:
       total: 0.49
       efficiency: 0.46
       win: 0.59
       pick: 0.11
       fit: 0.38
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.44
+      pick: 0.3
+      fit: 0.48
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
@@ -229,12 +234,18 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.44
+  community_ordered:
+  - Polynomicon
+  - Nimble Ring
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Nimble Ring
   - Bragi's Harp
+  - Nimble Ring
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
@@ -262,18 +273,18 @@ builds:
     Horror, Bancroft''s Talon, Rod of Asclepius, Totem of Death, Typhon’s Heart, Soul
     Reaver, Jade Scepter, Divine Ruin, Breastplate of Valor, Genji''s Guard.'
   slot_scores:
-    Nimble Ring:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.44
-      pick: 0.3
-      fit: 0.44
     Bragi's Harp:
       total: 0.47
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.44
+      pick: 0.3
+      fit: 0.44
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
@@ -298,6 +309,11 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.5
+  community_ordered:
+  - Nimble Ring
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,12 +384,16 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
@@ -401,18 +421,18 @@ builds:
     Focus, Rod of Asclepius, Typhon’s Heart, Soul Reaver, Totem of Death, Jade Scepter,
     Divine Ruin, Screeching Gargoyle, Helm of Radiance, Bragi''s Harp, Ethereal Staff.'
   slot_scores:
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.44
-      pick: 0.3
-      fit: 0.53
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
       win: 0.53
       pick: 0.19
       fit: 0.66
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.44
+      pick: 0.3
+      fit: 0.53
     Doom Orb:
       total: 0.49
       efficiency: 0.53
@@ -437,6 +457,11 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.67
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +531,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +605,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: strength
@@ -648,6 +681,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -720,13 +758,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Bracer of The Abyss
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
@@ -759,18 +802,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.44
-      pick: 0.3
-      fit: 0.68
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
       win: 0.53
       pick: 0.19
       fit: 0.56
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.44
+      pick: 0.3
+      fit: 0.68
     Spear of the Magus:
       total: 0.5
       efficiency: 0.6
@@ -789,6 +832,11 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.54
+  community_ordered:
+  - Spear of Desolation
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: core
@@ -859,6 +907,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -929,6 +982,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+  community_ordered:
+  - Polynomicon
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -999,6 +1057,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1070,6 +1132,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1141,6 +1207,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1212,6 +1282,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
+  community_ordered:
+  - Nimble Ring
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1283,6 +1357,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1356,6 +1434,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1429,6 +1511,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.91
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
@@ -1500,6 +1586,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   aspect: Aspect of Relativity
 ---

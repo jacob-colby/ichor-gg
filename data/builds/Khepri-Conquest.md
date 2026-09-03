@@ -160,6 +160,9 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Freya's Tears
+  - Obsidian Shard
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -232,6 +235,9 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.98
+  community_ordered:
+  - Freya's Tears
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -303,6 +309,10 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Freya's Tears
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -374,6 +384,9 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Freya's Tears
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -445,6 +458,10 @@ builds:
       win: 0.73
       pick: 0.11
       fit: 0.23
+  community_ordered:
+  - Freya's Tears
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: strength
@@ -518,6 +535,10 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Freya's Tears
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -592,6 +613,10 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Freya's Tears
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
@@ -663,5 +688,8 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 ---

@@ -96,8 +96,8 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
@@ -144,24 +144,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.78
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.62
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.68
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.62
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.68
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -171,8 +174,8 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
@@ -219,24 +222,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.9
-    Freya's Tears:
-      total: 0.59
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.54
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.66
+    Freya's Tears:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.54
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.96
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -244,8 +250,8 @@ builds:
   - Stone of Binding
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -292,24 +298,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.58
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.43
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.48
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.43
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.48
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -383,6 +392,8 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.37
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -390,8 +401,8 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -438,24 +449,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
-      total: 0.61
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.64
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.45
+    Freya's Tears:
+      total: 0.61
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.64
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
@@ -463,8 +477,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -511,24 +525,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.52
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.38
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.42
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.38
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -536,8 +553,8 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
@@ -584,24 +601,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.48
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.38
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.42
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.38
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -609,8 +629,8 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
@@ -657,23 +677,27 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.78
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.17
-      fit: 0.62
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.54
       pick: 0.2
       fit: 0.68
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.17
+      fit: 0.62
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.68
+  community_ordered:
+  - Genji's Guard
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 ---

@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -123,17 +123,17 @@ builds:
     Leviathan''s Hide, Void Shield, Stampede, Ancile, Prophetic Cloak, Oni Hunter''s
     Garb, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.44
-      fit: 0.33
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.65
       win: 0.56
       pick: 0.52
+      fit: 0.33
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.44
       fit: 0.33
     Kinetic Cuirass:
       total: 0.55
@@ -159,14 +159,19 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.6
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Breastplate of Valor
   - Shield of the Phoenix
   - Freya's Tears
   - Draconic Scale
@@ -195,18 +200,18 @@ builds:
     Gavel, Magi''s Cloak, Leviathan''s Hide, Heartseeker, Void Shield, Hide of the
     Nemean Lion.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.52
-      fit: 0.3
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.68
+    Breastplate of Valor:
+      total: 0.55
+      efficiency: 0.65
+      win: 0.56
+      pick: 0.52
+      fit: 0.3
     Shield of the Phoenix:
       total: 0.56
       efficiency: 0.53
@@ -231,13 +236,17 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Freya's Tears
   - Draconic Scale
   - Amanita Charm
@@ -271,17 +280,17 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.71
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.44
-      fit: 0.24
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
       win: 0.56
       pick: 0.52
+      fit: 0.24
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.44
       fit: 0.24
     Freya's Tears:
       total: 0.57
@@ -301,6 +310,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.43
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,12 +385,15 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -405,17 +422,17 @@ builds:
     Magi''s Cloak, Eye of Erebus, Mantle Of Discord, Midgardian Mail, Daybreak Gavel,
     Chandra''s Grace, Leviathan''s Hide, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.44
-      fit: 0.48
     Breastplate of Valor:
       total: 0.58
       efficiency: 0.65
       win: 0.56
       pick: 0.52
+      fit: 0.48
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.44
       fit: 0.48
     Kinetic Cuirass:
       total: 0.53
@@ -441,15 +458,20 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shifter's Shield
   - Shield Splitter
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Shield Splitter
@@ -487,6 +509,12 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.7
+    Shifter's Shield:
+      total: 0.54
+      efficiency: 0.55
+      win: 0.51
+      pick: 0.62
+      fit: 0.6
     Shield Splitter:
       total: 0.54
       efficiency: 0.55
@@ -499,24 +527,22 @@ builds:
       win: 0.62
       pick: 0.32
       fit: 0.54
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.51
-      pick: 0.62
-      fit: 0.6
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.56
       pick: 0.0
       fit: 0.6
+  community_ordered:
+  - Jotunn's Revenge
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Breastplate of Valor
   - Freya's Tears
   - Draconic Scale
   - Amanita Charm
@@ -545,18 +571,18 @@ builds:
     Midgardian Mail, Sanguine Lash, Stone of Binding, Yogi''s Necklace, Phoenix Feather,
     Jotunn''s Revenge.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.52
-      fit: 0.29
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.56
       win: 0.56
       pick: 0.0
       fit: 0.71
+    Breastplate of Valor:
+      total: 0.55
+      efficiency: 0.65
+      win: 0.56
+      pick: 0.52
+      fit: 0.29
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
@@ -581,6 +607,10 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.91
+  community_ordered:
+  - Breastplate of Valor
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -652,6 +682,9 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -723,14 +756,17 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.75
+  community_ordered:
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Berserker's Shield
-  - Freya's Tears
   - Draconic Scale
+  - Freya's Tears
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
@@ -763,18 +799,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.48
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.62
-      pick: 0.32
-      fit: 0.31
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
       win: 0.69
       pick: 0.22
       fit: 0.4
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.32
+      fit: 0.31
     Amanita Charm:
       total: 0.62
       efficiency: 0.65
@@ -793,13 +829,16 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.78
+  community_ordered:
+  - Draconic Scale
+  - Freya's Tears
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Freya's Tears
   - Draconic Scale
   - Amanita Charm
@@ -828,17 +867,17 @@ builds:
     Eye of Providence, Shogun''s Ofuda, Pharaoh''s Curse, Eye of the Storm, Mystical
     Mail, Prophetic Cloak, Eye of Erebus.'
   slot_scores:
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.56
-      pick: 0.44
-      fit: 0.45
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
       win: 0.56
       pick: 0.52
+      fit: 0.45
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.44
       fit: 0.45
     Freya's Tears:
       total: 0.6
@@ -864,6 +903,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.77
+  community_ordered:
+  - Breastplate of Valor
+  - Genji's Guard
+  - Freya's Tears
+  - Draconic Scale
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -935,6 +979,8 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.91
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
   aspect: Aspect of Preservation
 ---

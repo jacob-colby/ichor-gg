@@ -157,6 +157,12 @@ builds:
       win: 0.69
       pick: 0.26
       fit: 1.0
+  community_ordered:
+  - Ashwhorl Acorn
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -167,8 +173,8 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - The Reaper
   - Heartseeker
+  - The Reaper
   flex_slots:
   - Hydra's Lament
   - Transcendence
@@ -216,18 +222,23 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.63
-    The Reaper:
-      total: 0.65
-      efficiency: 0.5
-      win: 0.88
-      pick: 0.22
-      fit: 0.47
     Heartseeker:
       total: 0.6
       efficiency: 0.47
       win: 0.67
       pick: 0.32
       fit: 0.77
+    The Reaper:
+      total: 0.65
+      efficiency: 0.5
+      win: 0.88
+      pick: 0.22
+      fit: 0.47
+  community_ordered:
+  - Ashwhorl Acorn
+  - Jotunn's Revenge
+  - Heartseeker
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: burst
@@ -297,6 +308,12 @@ builds:
       win: 0.69
       pick: 0.26
       fit: 0.66
+  community_ordered:
+  - Ashwhorl Acorn
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -367,6 +384,12 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Ashwhorl Acorn
+  - Briskberry Acorn
+  - Jotunn's Revenge
+  - The Reaper
+  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -436,6 +459,12 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.94
+  community_ordered:
+  - Ashwhorl Acorn
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -505,6 +534,10 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Ashwhorl Acorn
+  - Jotunn's Revenge
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -574,6 +607,10 @@ builds:
       win: 0.66
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Ashwhorl Acorn
+  - Thistlethorn Acorn
+  - Jotunn's Revenge
   starter: *id001
 - source: suggested
   archetype: model
@@ -643,5 +680,12 @@ builds:
       win: 0.69
       pick: 0.26
       fit: 1.0
+  community_ordered:
+  - Ashwhorl Acorn
+  - Briskberry Acorn
+  - Thistlethorn Acorn
+  - Jotunn's Revenge
+  - The Crusher
+  - Titan's Bane
   starter: *id001
 ---

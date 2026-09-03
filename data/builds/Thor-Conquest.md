@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Transcendence
   - Runeforged Hammer
   - Heartseeker
@@ -122,18 +122,18 @@ builds:
     Shield of the Phoenix, Daybreak Gavel, Avatar''s Parashu, Midgardian Mail, Stone
     of Binding, Tyrfing, Pendulum Blade, Transcendence, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.17
-      fit: 0.18
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.55
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.17
+      fit: 0.18
     Transcendence:
       total: 0.48
       efficiency: 0.53
@@ -158,14 +158,19 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Runeforged Hammer
+  - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Transcendence
   - Hydra's Lament
   - Runeforged Hammer
@@ -193,18 +198,18 @@ builds:
     Erosion, Eye of Providence, Oni Hunter''s Garb, Pendulum Blade, Stone of Binding,
     Draconic Scale, Midgardian Mail, Tyrfing.'
   slot_scores:
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.17
-      fit: 0.26
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.53
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.17
+      fit: 0.26
     Transcendence:
       total: 0.47
       efficiency: 0.53
@@ -229,12 +234,18 @@ builds:
       win: 0.55
       pick: 0.42
       fit: 0.62
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Hydra's Lament
+  - Runeforged Hammer
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Transcendence
   - Hydra's Lament
   - Runeforged Hammer
@@ -263,18 +274,18 @@ builds:
     of Binding, Draconic Scale, Midgardian Mail, Magi''s Cloak, Hide of the Nemean
     Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.17
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.56
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.17
+      fit: 0.24
     Transcendence:
       total: 0.46
       efficiency: 0.53
@@ -299,12 +310,18 @@ builds:
       win: 0.55
       pick: 0.42
       fit: 0.6
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Hydra's Lament
+  - Runeforged Hammer
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Runeforged Hammer
@@ -333,18 +350,18 @@ builds:
     Crusher, Daybreak Gavel, Hide of the Nemean Lion, Magi''s Cloak, Leviathan''s
     Hide.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.17
-      fit: 0.21
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.45
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.17
+      fit: 0.21
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
@@ -369,13 +386,17 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Runeforged Hammer
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Transcendence
   - Runeforged Hammer
   - Heartseeker
@@ -408,18 +429,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.77
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.17
-      fit: 0.14
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.66
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.17
+      fit: 0.14
     Transcendence:
       total: 0.47
       efficiency: 0.53
@@ -438,14 +459,19 @@ builds:
       win: 0.55
       pick: 0.42
       fit: 0.82
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Runeforged Hammer
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Genji's Guard
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Berserker's Shield
   - Runeforged Hammer
   - Riptalon
   flex_slots:
@@ -483,18 +509,18 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.1
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.68
-      win: 0.55
-      pick: 0.0
-      fit: 0.42
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.54
       pick: 0.48
       fit: 0.27
+    Berserker's Shield:
+      total: 0.55
+      efficiency: 0.68
+      win: 0.55
+      pick: 0.0
+      fit: 0.42
     Runeforged Hammer:
       total: 0.56
       efficiency: 0.57
@@ -507,6 +533,10 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.59
+  community_ordered:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Runeforged Hammer
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -577,6 +607,12 @@ builds:
       win: 0.51
       pick: 0.11
       fit: 0.53
+  community_ordered:
+  - Genji's Guard
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -646,5 +682,8 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Runeforged Hammer
   starter: *id001
 ---

@@ -158,6 +158,11 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -165,8 +170,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Reaper
   - Heartseeker
   - Titan's Bane
@@ -199,18 +204,18 @@ builds:
       win: 0.57
       pick: 0.42
       fit: 0.71
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.39
     Hydra's Lament:
       total: 0.55
       efficiency: 0.54
       win: 0.55
       pick: 0.43
       fit: 0.63
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.0
+      fit: 0.39
     The Reaper:
       total: 0.54
       efficiency: 0.5
@@ -229,13 +234,19 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Reaper
   - Heartseeker
   - Titan's Bane
@@ -268,18 +279,18 @@ builds:
       win: 0.57
       pick: 0.42
       fit: 0.78
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.22
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.55
       pick: 0.43
       fit: 0.54
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.0
+      fit: 0.22
     The Reaper:
       total: 0.55
       efficiency: 0.5
@@ -298,6 +309,12 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 0.66
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +385,10 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +458,11 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.94
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +532,10 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 0.43
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +606,11 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +680,10 @@ builds:
       win: 0.67
       pick: 0.24
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

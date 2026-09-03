@@ -159,6 +159,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Runeforged Hammer
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -231,6 +234,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,6 +307,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -371,6 +380,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -442,6 +454,10 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Gladiator's Shield
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -512,5 +528,7 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 ---

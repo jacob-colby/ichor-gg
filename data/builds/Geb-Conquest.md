@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
@@ -123,18 +123,18 @@ builds:
     Garb, Xibalban Effigy, Gladiator''s Shield, Void Stone, Spectral Armor, Doublet
     of Binding, Stygian Anchor.'
   slot_scores:
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.41
-      fit: 0.45
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
       win: 0.55
       pick: 0.0
       fit: 0.95
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.41
+      fit: 0.45
     Freya's Tears:
       total: 0.62
       efficiency: 0.61
@@ -159,14 +159,17 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Shield of the Phoenix
   - Freya's Tears
   - Shifter's Shield
@@ -195,18 +198,18 @@ builds:
     Magi''s Cloak, Hussar''s Wings, Void Stone, Spectral Armor, Mantle Of Discord,
     Screeching Gargoyle, Yogi''s Necklace.'
   slot_scores:
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.41
-      fit: 0.42
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
       win: 0.55
       pick: 0.0
       fit: 0.94
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.41
+      fit: 0.42
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
@@ -231,6 +234,9 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 1.0
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -301,12 +307,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.53
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Genji's Guard
   - Bracer of The Abyss
+  - Genji's Guard
   - Nimble Ring
   - Bragi's Harp
   - Freya's Tears
@@ -335,17 +344,17 @@ builds:
     Garb, Void Stone, Spectral Armor, Xibalban Effigy, Prophetic Cloak, Doublet of
     Binding, Gladiator''s Shield.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.41
-      fit: 0.21
     Bracer of The Abyss:
       total: 0.4
       efficiency: 0.35
       win: 0.55
       pick: 0.0
+      fit: 0.21
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.41
       fit: 0.21
     Nimble Ring:
       total: 0.48
@@ -371,6 +380,9 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -442,12 +454,16 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.47
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
+  - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Freya's Tears
@@ -478,18 +494,18 @@ builds:
     Discord, Screeching Gargoyle, Midgardian Mail, Daybreak Gavel, Hide of the Nemean
     Lion, Arondight, Leviathan''s Hide, Void Shield, Dominance, Ancile.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.68
+      win: 0.55
+      pick: 0.0
+      fit: 0.38
     Genji's Guard:
       total: 0.56
       efficiency: 0.66
       win: 0.6
       pick: 0.41
       fit: 0.23
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.55
-      pick: 0.0
-      fit: 0.37
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
@@ -514,12 +530,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.44
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
@@ -551,18 +570,18 @@ builds:
     of Darkness, Chronos'' Pendant, Titan''s Bane, The Crusher, Ancient Signet, Screeching
     Gargoyle, Mantle Of Discord, Dreamer''s Idol, Midgardian Mail.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.41
-      fit: 0.22
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.4
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.41
+      fit: 0.22
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
@@ -587,6 +606,9 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -657,5 +679,7 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 ---

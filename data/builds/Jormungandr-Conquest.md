@@ -95,9 +95,9 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Eye of Erebus
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
@@ -137,6 +137,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.31
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.49
+      fit: 0.48
     Eye of Erebus:
       total: 0.52
       efficiency: 0.53
@@ -149,18 +155,16 @@ builds:
       win: 0.62
       pick: 0.15
       fit: 0.43
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.49
-      fit: 0.48
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.48
+  community_ordered:
+  - Shifter's Shield
+  - Eye of Erebus
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -235,6 +239,10 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+  community_ordered:
+  - Ethereal Staff
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -307,6 +315,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.37
+  community_ordered:
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -380,6 +391,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.37
+  community_ordered:
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -453,15 +467,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Eye of Erebus
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Amanita Charm
@@ -502,6 +519,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.49
+      fit: 0.42
     Eye of Erebus:
       total: 0.52
       efficiency: 0.53
@@ -514,27 +537,25 @@ builds:
       win: 0.62
       pick: 0.15
       fit: 0.38
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.49
-      fit: 0.42
     Amanita Charm:
       total: 0.52
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Shifter's Shield
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Eye of Erebus
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Amanita Charm
@@ -575,6 +596,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Shifter's Shield:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.49
+      fit: 0.36
     Eye of Erebus:
       total: 0.51
       efficiency: 0.53
@@ -587,18 +614,16 @@ builds:
       win: 0.62
       pick: 0.15
       fit: 0.33
-    Shifter's Shield:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.49
-      fit: 0.36
     Amanita Charm:
       total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Shifter's Shield
+  - Eye of Erebus
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -672,5 +697,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 ---

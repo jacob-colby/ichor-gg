@@ -94,9 +94,9 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
+  - Tyrfing
   - Lernaean Bow
   - Transcendence
-  - Tyrfing
   - Riptalon
   - Silverbranch Bow
   flex_slots:
@@ -128,6 +128,12 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.73
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.59
+      pick: 0.73
+      fit: 0.83
     Lernaean Bow:
       total: 0.55
       efficiency: 0.52
@@ -140,12 +146,6 @@ builds:
       win: 0.8
       pick: 0.05
       fit: 0.21
-    Tyrfing:
-      total: 0.6
-      efficiency: 0.48
-      win: 0.59
-      pick: 0.73
-      fit: 0.83
     Riptalon:
       total: 0.56
       efficiency: 0.41
@@ -158,6 +158,11 @@ builds:
       win: 0.68
       pick: 0.43
       fit: 0.52
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
+  - Silverbranch Bow
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -165,8 +170,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
+  - Transcendence
   - Hydra's Lament
   - Riptalon
   - Silverbranch Bow
@@ -199,18 +204,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.44
-    Transcendence:
-      total: 0.58
-      efficiency: 0.53
-      win: 0.8
-      pick: 0.05
-      fit: 0.24
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.59
       pick: 0.73
       fit: 0.53
+    Transcendence:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.8
+      pick: 0.05
+      fit: 0.24
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
@@ -229,6 +234,11 @@ builds:
       win: 0.68
       pick: 0.43
       fit: 0.37
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: crit
@@ -298,14 +308,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Transcendence
+  - Tyrfing
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Tyrfing
   - Kinetic Cuirass
   - Transcendence
-  - Tyrfing
   - Riptalon
   - Amanita Charm
   flex_slots:
@@ -338,6 +352,12 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.48
+    Tyrfing:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.59
+      pick: 0.73
+      fit: 0.54
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
@@ -350,12 +370,6 @@ builds:
       win: 0.8
       pick: 0.05
       fit: 0.12
-    Tyrfing:
-      total: 0.55
-      efficiency: 0.48
-      win: 0.59
-      pick: 0.73
-      fit: 0.54
     Riptalon:
       total: 0.57
       efficiency: 0.41
@@ -368,13 +382,17 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
+  - Transcendence
   - Riptalon
   - Silverbranch Bow
   - Tekko-Kagi
@@ -407,18 +425,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.47
-    Transcendence:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.8
-      pick: 0.05
-      fit: 0.14
     Tyrfing:
       total: 0.56
       efficiency: 0.48
       win: 0.59
       pick: 0.73
       fit: 0.58
+    Transcendence:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.8
+      pick: 0.05
+      fit: 0.14
     Riptalon:
       total: 0.62
       efficiency: 0.51
@@ -437,14 +455,19 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Tyrfing
   - Lernaean Bow
   - Transcendence
-  - Tyrfing
   - Riptalon
   - Silverbranch Bow
   flex_slots:
@@ -476,6 +499,12 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.65
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
+      win: 0.59
+      pick: 0.73
+      fit: 0.75
     Lernaean Bow:
       total: 0.54
       efficiency: 0.52
@@ -488,12 +517,6 @@ builds:
       win: 0.8
       pick: 0.05
       fit: 0.16
-    Tyrfing:
-      total: 0.58
-      efficiency: 0.48
-      win: 0.59
-      pick: 0.73
-      fit: 0.75
     Riptalon:
       total: 0.55
       efficiency: 0.41
@@ -506,16 +529,21 @@ builds:
       win: 0.68
       pick: 0.43
       fit: 0.49
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
+  - Transcendence
   - Hydra's Lament
-  - Arondight
   - Riptalon
+  - Arondight
   flex_slots:
   - Riptalon
   - Arondight
@@ -546,36 +574,40 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.41
-    Transcendence:
-      total: 0.56
-      efficiency: 0.53
-      win: 0.8
-      pick: 0.05
-      fit: 0.1
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.59
       pick: 0.73
       fit: 0.52
+    Transcendence:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.8
+      pick: 0.05
+      fit: 0.1
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.61
       pick: 0.0
       fit: 0.51
-    Arondight:
-      total: 0.51
-      efficiency: 0.5
-      win: 0.61
-      pick: 0.0
-      fit: 0.41
     Riptalon:
       total: 0.52
       efficiency: 0.41
       win: 0.68
       pick: 0.31
       fit: 0.4
+    Arondight:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.61
+      pick: 0.0
+      fit: 0.41
+  community_ordered:
+  - Tyrfing
+  - Transcendence
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -648,6 +680,10 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Transcendence
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -721,13 +757,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.34
+  community_ordered:
+  - Transcendence
+  - Tyrfing
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
+  - Lernaean Bow
   - Dominance
   - Demon Blade
   - Deathbringer
@@ -760,18 +801,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.73
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.61
-      pick: 0.0
-      fit: 0.64
     Tyrfing:
       total: 0.6
       efficiency: 0.48
       win: 0.59
       pick: 0.73
       fit: 0.83
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.61
+      pick: 0.0
+      fit: 0.64
     Dominance:
       total: 0.53
       efficiency: 0.45
@@ -790,15 +831,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Tyrfing
+  - Dominance
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Tyrfing
-  - Silverbranch Bow
+  - Lernaean Bow
   - Demon Blade
+  - Silverbranch Bow
   - Deathbringer
   flex_slots:
   - Deathbringer
@@ -829,36 +873,39 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.73
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.61
-      pick: 0.0
-      fit: 0.64
     Tyrfing:
       total: 0.6
       efficiency: 0.48
       win: 0.59
       pick: 0.73
       fit: 0.83
-    Silverbranch Bow:
+    Lernaean Bow:
       total: 0.55
-      efficiency: 0.42
-      win: 0.68
-      pick: 0.43
-      fit: 0.52
+      efficiency: 0.52
+      win: 0.61
+      pick: 0.0
+      fit: 0.64
     Demon Blade:
       total: 0.54
       efficiency: 0.38
       win: 0.61
       pick: 0.0
       fit: 0.87
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.42
+      win: 0.68
+      pick: 0.43
+      fit: 0.52
     Deathbringer:
       total: 0.53
       efficiency: 0.51
       win: 0.61
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
   swaps:
   - added: Silverbranch Bow
     removed: Dominance

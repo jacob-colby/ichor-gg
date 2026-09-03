@@ -160,6 +160,10 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.44
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
+  - Avatar's Parashu
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -233,6 +237,12 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.34
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: burst
@@ -304,6 +314,11 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.4
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -376,6 +391,9 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -448,6 +466,13 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.57
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -519,6 +544,9 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.27
+  community_ordered:
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -591,6 +619,10 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -663,6 +695,9 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.64
+  community_ordered:
+  - Jotunn's Revenge
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -735,6 +770,10 @@ builds:
       win: 0.78
       pick: 0.13
       fit: 0.41
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: model
@@ -806,5 +845,7 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.27
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
 ---

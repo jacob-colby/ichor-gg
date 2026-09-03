@@ -169,6 +169,10 @@ Each of these has its evidence in the named module.
 | That column is **credited but not charged** | `scoring.god_fit_score` | `fit` is normalised by the sum of the map, so charging it shrinks every non-carrier's stat term (−12.5% over 10,065 pairs) and promotes the flat tag bonuses added after normalisation — which pulled 43 anti-heal items into Joust and Arena cores, the two modes with no gate to catch it |
 | An item is **charged** for the gold it spent on stats the god's map does not name | `efficiency.offmap_adjusted_score` | `efficiency` prices every stat whoever is buying and `god_fit_score` normalises over the map alone, so an off-map stat was credited by one half of `quality` and invisible to the other. Shipped at 0.55 once `offmap_exempt` covered the three stats no map names and no instrument prices; Berserker's Shield leaves 17 of 18 Carry cores and their effective health lands LEVEL with the community's |
 | The strength is the **midpoint of a region**, never the argmax | `offmap_efficiency` in `_weights.yaml` | Both leakage-free splits are at or above control across 0.45–0.65; 0.60/0.65 being joint-highest on the probe split is not a reason to pick them (§4.4's plateau). The best split reads 40.0% at five consecutive settings because every core that changes inside the region swaps an item in NEITHER side's community record — checked item by item, not assumed |
+| Buy ORDER reads the community's **slot distribution**, not just tags and cost | `assemble.build_order` | `build_order`'s docstring said "we have no real build-path data" and that was FALSE — every community `slot_order` entry is a per-slot distribution and `build_index.popular_items` flattened it to each item's highest rate anywhere. Inside tier 3 costs cluster 2350-3000g, so the order was cheapest-first: 68 of 380 orderable pairs (17.9%) ran backwards against the community on 39 gods, 40 (10.5%) after |
+| Ordering agreement is measured as **inversions**, never as displacement alone | `order_agreement.inversions` | Our core and theirs share 3-4 of 6 items, so "our slot 4 vs their slot 2" is two different clocks. A pair of items we BOTH build, whose community centroids differ by a slot, cannot be moved by membership at all |
+| Joust and Arena get **no** positional order, borrowed or otherwise | `recommend._build_entry_set` | The Hybrid may borrow Conquest's record for item CHOICE and says `borrowed_from` when it does. A slot centroid is a claim about WHEN a spike lands, and both modes zero `win`/`pick` on the grounds that Conquest describes a different game — Arena's gold spools from 0:00. Timing is more mode-specific than choice, not less (§4.20) |
+| `diffCore` reports **order**, not only membership | `draftBuild.diffCore` | Both cores were reduced to `new Set(...)`, so a draft that resequenced the same six produced `added: []`, `removed: []` and a board reading "nothing changed" under a list that had. A test asserted that behaviour as correct |
 | The damage model counts the **basic attack**, and its unit is one rotation plus one swing | `damage_value.item_damage_gain` | `ability_damage_components` skips the Basic Attack slot, so Attack Damage — 100% of a basic attack on 84 of 89 gods, and no ability in the roster scales on it — was worth exactly 0.0 in the only damage path that reaches a recommendation. 12 items carried it, 10 more carry Critical Chance. The 1:1 mix is a declaration, not a measurement; the clock that would replace it is register §4.12 |
 
 ### The combat model is exact and should stay that way
@@ -1190,6 +1194,84 @@ shipped **off**. Numbers are in the named module.
     the interval instead of collapsing it is the same argument, and it gets
     harder, not easier, with four corners.
 
+20. **Borrowing Conquest's slot record to ORDER Joust and Arena builds
+    (2026-09-02)** — a REFUSAL, in §4.16's shape, and it is here because it is
+    the obvious next move the moment someone reads the report: the positional
+    buy order improves Conquest and leaves **180 of 270 build groups exactly
+    as they were**, and the machinery to borrow already exists and is already
+    used. Measured at control fingerprint `208b8d329f8e` (baseline 5.7%, probe
+    40.9%, best 37.6%).
+
+    **The gap it would close is real and is measured.** Scored against
+    Conquest's record — which is what a borrower would be asserting — the
+    Joust `core` builds run 47 of 201 orderable pairs backwards (23.4%) and
+    Arena 36 of 175 (20.6%), against Conquest's own 68 of 380 (17.9%) before
+    the change and 40 (10.5%) after. Feeding those modes the borrowed
+    positions takes Joust to 34 (16.9%) and Arena to 28 (16.0%). So the
+    intervention works in the only sense this repo can check, and it still
+    ships off.
+
+    **Why. The precedent that looks like permission is about a different
+    question.** `borrow_community` lets the Hybrid take Conquest's record for
+    item CHOICE, minus tags that do not transfer, disclosed as borrowed
+    (§3). A slot centroid is not a claim about which item — it is a claim
+    about WHEN a power spike lands, and both modes deliberately zero `win` and
+    `pick` on the grounds that Conquest's rates describe a different game.
+    Timing is MORE mode-specific than choice, not less: `modes.arena.economy`
+    is 1250 start gold and 15 gold/sec spooling from 0:00 against Conquest's
+    back-loaded Titan, which is the same fact `time_value_multiplier` already
+    prices — the two modes disagree about when an item is worth buying, in
+    this file, with sources. Borrowing the centroid would assert the opposite
+    of a constant the repo already carries.
+
+    **And nothing could catch it. Both blindnesses are measured here, not
+    argued.** With 337 of 810 Conquest suggested builds reordered,
+    `calibrate --control` reads **40.9% / 37.6% against 40.9% / 37.6%**, to the
+    digit on both leakage-free splits, and BOTH committed reports REGENERATE
+    byte-identical except for their own input-fingerprint line:
+    `_build_quality.md` keeps every count, every median and every role verdict,
+    and `_calibration.md` — the full ~7-minute run, the whole grid and both
+    bootstrap CIs — keeps every number in it. The fingerprint moves because
+    it hashes `_weights.yaml` and a key was added there; that is the file, and
+    the two reports agreeing to the digit is what says so. §1's gate reads
+    membership; `build_quality` scores a finished six-item build at level 20,
+    and the same six items at level 20 are the same numbers whatever sequence
+    bought them. The only measurement is agreement
+    with the community record, and in a borrowed mode that measurement is
+    scored against the very record it was ordered by — circular twice over,
+    since the record is not even that mode's. This is §4.19's shape exactly:
+    "a monotone push across 178 of 267 build groups, argued for by nothing and
+    refuted by nothing, which is the worst shape a change can have here."
+
+    **What ships instead is the honest degradation.** `slot_positions` reads
+    the note for the mode being built, Joust and Arena notes carry no
+    community entry, so `build_order` receives `{}` and returns the heuristic
+    — no mode special-case, no flag. The god page's existing disclosure for
+    those modes ("no outcome data exists for {mode} … read this as a shortlist
+    rather than a buy order") is left TRUE rather than being worked around,
+    and `community_ordered` is absent on all 180 groups rather than empty, so
+    the page can tell "no evidence" from "not stamped".
+
+    **The measurement's own limits, stated once so they are not rediscovered.**
+    `order_agreement` reports agreement with observed play and NOT outcomes,
+    and its headline count is scored against the same `slot_order` block
+    `build_order` now reads. The one non-circular reading available is the
+    held-out split — order on the community's top pick at each slot, score
+    against the ALTERNATES that ordering never saw — and it moves 49 of 278
+    inversions (17.6%) to 41 (14.7%), monotonically across the sweep, which is
+    what put `community_weight` at 1.0 rather than the in-sample table. It is
+    a weak check: both halves come from one scrape of one set of matches, so
+    they are not independent samples. It is also the only one there is, and
+    saying so is the point of the entry.
+
+    **Membership does not move, and that was checked rather than assumed.**
+    `build_order` receives an already-assembled core, so per-mode core churn
+    is **0 / 0 / 0** over all 2,433 suggested entries with 337 of 810 Conquest
+    entries reordered and 0 of 811 Joust and 0 of 812 Arena. Both baselines
+    are REGENERATED (§4.16's trap, walked into twice before): the committed
+    notes were already stale against the same day's data by 13 rounding-only
+    `fit` values, which reproduce under the parent commit's own code.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1330,6 +1412,31 @@ precedent (§3, priced against a typical build) — and the column has to ship
 `denom_exclude`d for the reason `attack_damage_fit` does, or about a third of
 whatever it reads will be the normaliser shrinking every non-carrier (§4.4).
 
+### Nothing here can say a buy ORDER is good
+Found and worked around rather than solved, 2026-09-02. `calibrate` measures
+membership overlap and is blind to order — reordering the same six items moves
+it exactly 0.0pp. `build_quality` points `combat.py` at a finished six-item
+build at level 20 and is equally blind, because the same six items at level 20
+are the same numbers whatever sequence bought them. So the repo's usual bar,
+"beat control on both leakage-free splits", **cannot be met by any ordering
+change at all**, and the shipped positional buy order is measured on
+agreement with observed play instead (`smite.order_agreement`, and it says so
+on every path out).
+
+**What would change it is a clock, and it is §4.12's clock.** An order is a
+claim about power over TIME — the value of holding item A at minute 8 rather
+than minute 20 — and this repo has no time axis on either side: no cast times,
+no match timeline, and `time_value_multiplier` prices a whole build's window
+per mode rather than a purchase's. §4.12 refused to invent a combat clock and
+that refusal stands; what an order needs is a *gold* clock (when does each
+purchase complete, at what income) and `modes.<mode>.economy` already carries
+one with sources and tiers. Whether a completion time plus `build_quality`'s
+level-20 arithmetic can score a sequence is open and nobody has tried it.
+
+**Until then the honest position is the one shipped:** the community's own
+record is evidence about order, it is the only evidence there is, it exists
+for one mode of three, and it is labelled everywhere it is used (§4.20).
+
 ### `effective_health` has no term for Plating or Dampening
 Found the same way, 2026-08-23 (§4.19). `combat.damage_dealt` applies both —
 Plating against Attacks, Dampening against Abilities — but only to the TARGET,
@@ -1397,6 +1504,9 @@ python -m smite.doc_audit --check        # non-zero exit if a §7 figure has dri
 python -m smite.build_quality            # combat.py pointed at whole builds, ours vs community (~4s)
 python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
+python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
+python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split
+python -m smite.order_agreement --god Medusa   # one god, heuristic order beside the shipped one
 ```
 
 `doc_audit` gates the derivable figures in §7 below, and the few `PRODUCT.md`
@@ -1491,8 +1601,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (845) ·
-`cd viewer && npm test -- --run` (681).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (863) ·
+`cd viewer && npm test -- --run` (765).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
@@ -1514,14 +1624,14 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Items placed | 204 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 matches, and 13 more items crossed into enough sightings to earn a tier band. Still below the 226 the pre-reset thirteen-day window placed. Tracks the DATA, not the model |
 | Community sample | 8,200 Obsidian+ Conquest matches, 25 Aug – 1 Sep — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now seven days deep against a peak of 18,716 on thirteen. Three more `chore(data): daily community refresh` commits (af04139, e910b75, ea3b5e7) landed since the 3,498/three-day reading; `git diff --name-only d957319 HEAD` (the commit that reading was taken at) touches only `data/builds/`, `data/_community_items.json` and `viewer/public/index.json` — no weights, no pipeline or viewer code — so every figure below this row that moved, moved on data alone. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
 | Headline gate | coverage 53.0%, win-weighted 54.9% — up +3.4pp/+1.9pp off the 49.6%/53.0% this row carried at fingerprint `052cab0a44cc`, on the data move above and nothing else. Read this as more evidence arriving, not as a verdict — both targets are model inputs (§1) |
-| **Leakage-free** | **40.9% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.6–7.2×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-01 at input fingerprint `208b8d329f8e`: the 41.5 · 38.4 vs 5.7 this row carried was fingerprint `052cab0a44cc` and describes the 3,498-match reading, so the −0.6pp/−0.8pp is the three `chore(data): daily community refresh` commits named above and NOT a model change — same diff, same "touches only data" check. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%** at both fingerprints, off a byte-identical pool of 90 gods and 226 items, so the 5.7%/5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and the leakage-free probe moved in OPPOSITE directions on the same data move (headline gate up, this row down), which is exactly what §1 says a metric with the community's own build as a target will do and not a reason to prefer either reading |
+| **Leakage-free** | **40.9% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.6–7.2×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-02 at input fingerprint `9f722a7ad5c8` — moved from `208b8d329f8e` by `build_order.community_weight` landing in `_weights.yaml`, which the hash covers; the two splits read **40.9% / 37.6% at both**, to the digit, with 337 of 810 Conquest builds reordered, because order cannot move a membership measure (§4.20). Previously measured 2026-09-01 at `208b8d329f8e`: the 41.5 · 38.4 vs 5.7 this row carried was fingerprint `052cab0a44cc` and describes the 3,498-match reading, so the −0.6pp/−0.8pp is the three `chore(data): daily community refresh` commits named above and NOT a model change — same diff, same "touches only data" check. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%** at both fingerprints, off a byte-identical pool of 90 gods and 226 items, so the 5.7%/5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and the leakage-free probe moved in OPPOSITE directions on the same data move (headline gate up, this row down), which is exactly what §1 says a metric with the community's own build as a target will do and not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
 | Cap overflow | 47 -> 0, and back -> 0 of 2433 builds over the penetration cap. `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — and `offmap_efficiency` at 0.55 put three back (§7's 2026-08-29 reading, 3 of 2390). The community window rebuilding (see Community sample) moved both numbers again: suggested-build count went 2,479 (post-reset) → 2,433 (Conquest 810, Joust 811, Arena 812) and the three over-cap builds are gone with it. That the count fell further while the community sample GREW is not the direction the Items-placed and Headline-gate rows moved in, and this file does not have a mechanism for it on record — reported as a fact, not explained away. Neither number is a model change: no weights, pipeline or viewer code moved in the commits behind it (see Community sample). See `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 845 pipeline · 681 viewer — the pipeline count is unchanged; the viewer count rose 660 → 681 across the merges into `main` this row was stale against, unrelated to this session's diagnostic-only change (§4, `god_unknown_win_rate`) |
+| Tests | 863 pipeline · 765 viewer — +18 and +12 for the positional buy order (`order_agreement`, `slot_positions`, `build_order`'s no-op, `diffCore`'s order detection and both boards' copy). The viewer side was reading 681 against an actual 753 before this session: `doc_audit` cannot count viewer tests at all (a `.each` table, 3 UNCOMPUTABLE rows), so that row drifted unwatched across merges and both numbers here are now measured rather than carried forward |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

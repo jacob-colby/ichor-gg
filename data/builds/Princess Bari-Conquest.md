@@ -94,10 +94,10 @@ builds:
   archetype: core
   slot_order:
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Silverbranch Bow
+  - Nimble Ring
   - Rod of Tahuti
+  - Silverbranch Bow
   - Obsidian Shard
   flex_slots:
   - Tyrfing
@@ -130,36 +130,40 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.79
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.57
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.47
-    Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.53
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.69
+      fit: 0.57
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.36
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.69
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
       win: 0.7
       pick: 0.33
       fit: 0.46
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -167,8 +171,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Hydra's Lament
-  - Nimble Ring
   - Spear of Desolation
+  - Nimble Ring
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
@@ -203,18 +207,18 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.49
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.48
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.45
+    Nimble Ring:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.59
+      pick: 0.0
+      fit: 0.48
     The World Stone:
       total: 0.52
       efficiency: 0.52
@@ -233,15 +237,20 @@ builds:
       win: 0.7
       pick: 0.33
       fit: 0.44
+  community_ordered:
+  - Spear of Desolation
+  - The World Stone
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Silverbranch Bow
+  - Nimble Ring
   - Rod of Tahuti
+  - Silverbranch Bow
   - Obsidian Shard
   flex_slots:
   - Silverbranch Bow
@@ -274,36 +283,40 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.67
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.44
     Spear of Desolation:
       total: 0.6
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.56
-    Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.53
+    Nimble Ring:
+      total: 0.56
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.65
+      fit: 0.44
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.4
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.65
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
       win: 0.7
       pick: 0.33
       fit: 0.5
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -311,9 +324,9 @@ builds:
   - Berserker's Shield
   - Spear of Desolation
   - Rod of Tahuti
+  - Soul Gem
   - Obsidian Shard
   - Amanita Charm
-  - Soul Gem
   flex_slots:
   - Berserker's Shield
   - Spear of Desolation
@@ -358,6 +371,12 @@ builds:
       win: 0.58
       pick: 0.55
       fit: 0.24
+    Soul Gem:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.61
+      pick: 0.23
+      fit: 0.77
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
@@ -370,12 +389,11 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.65
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.61
-      pick: 0.23
-      fit: 0.77
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -383,8 +401,8 @@ builds:
   - Nimble Ring
   - Spear of Desolation
   - Silverbranch Bow
-  - Tekko-Kagi
   - Rod of Tahuti
+  - Tekko-Kagi
   - Obsidian Shard
   flex_slots:
   - Nimble Ring
@@ -429,33 +447,37 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.75
-    Tekko-Kagi:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.59
-      pick: 0.0
-      fit: 0.67
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.49
+    Tekko-Kagi:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.59
+      pick: 0.0
+      fit: 0.67
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
       win: 0.7
       pick: 0.33
       fit: 0.59
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Riptalon
+  - Nimble Ring
   - Rod of Tahuti
+  - Riptalon
   - Obsidian Shard
   flex_slots:
   - Riptalon
@@ -488,36 +510,40 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.64
-    Nimble Ring:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.49
     Spear of Desolation:
       total: 0.57
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.38
-    Riptalon:
-      total: 0.54
-      efficiency: 0.51
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.62
+      fit: 0.49
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.29
+    Riptalon:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.59
+      pick: 0.0
+      fit: 0.62
     Obsidian Shard:
       total: 0.58
       efficiency: 0.54
       win: 0.7
       pick: 0.33
       fit: 0.39
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -526,8 +552,8 @@ builds:
   - Spear of Desolation
   - Silverbranch Bow
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
+  - Obsidian Shard
   flex_slots:
   - Hydra's Lament
   - Silverbranch Bow
@@ -578,27 +604,32 @@ builds:
       win: 0.58
       pick: 0.55
       fit: 0.24
-    Obsidian Shard:
-      total: 0.57
-      efficiency: 0.54
-      win: 0.7
-      pick: 0.33
-      fit: 0.34
     Soul Gem:
       total: 0.6
       efficiency: 0.57
       win: 0.61
       pick: 0.23
       fit: 0.77
+    Obsidian Shard:
+      total: 0.57
+      efficiency: 0.54
+      win: 0.7
+      pick: 0.33
+      fit: 0.34
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Spear of the Magus
+  - Nimble Ring
   - Rod of Tahuti
+  - Spear of the Magus
   - Obsidian Shard
   flex_slots:
   - Tyrfing
@@ -632,29 +663,29 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.76
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.41
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.49
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.6
+    Nimble Ring:
+      total: 0.55
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.39
+      fit: 0.41
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.58
       pick: 0.55
+      fit: 0.39
+    Spear of the Magus:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.59
+      pick: 0.0
       fit: 0.39
     Obsidian Shard:
       total: 0.6
@@ -662,15 +693,19 @@ builds:
       win: 0.7
       pick: 0.33
       fit: 0.49
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Silverbranch Bow
+  - Nimble Ring
   - Rod of Tahuti
+  - Silverbranch Bow
   - Obsidian Shard
   flex_slots:
   - Tyrfing
@@ -704,46 +739,50 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.76
-    Nimble Ring:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.52
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.48
-    Silverbranch Bow:
-      total: 0.54
-      efficiency: 0.53
+    Nimble Ring:
+      total: 0.57
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.63
+      fit: 0.52
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.38
+    Silverbranch Bow:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.63
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
       win: 0.7
       pick: 0.33
       fit: 0.48
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Nimble Ring
   - Spear of Desolation
-  - Silverbranch Bow
+  - Nimble Ring
   - Rod of Tahuti
+  - Silverbranch Bow
   flex_slots:
   - Silverbranch Bow
   - Spear of Desolation
@@ -781,29 +820,33 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.79
-    Nimble Ring:
-      total: 0.58
-      efficiency: 0.65
-      win: 0.59
-      pick: 0.0
-      fit: 0.57
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
       win: 0.64
       pick: 0.5
       fit: 0.47
-    Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.53
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.65
       win: 0.59
       pick: 0.0
-      fit: 0.69
+      fit: 0.57
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
       win: 0.58
       pick: 0.55
       fit: 0.36
+    Silverbranch Bow:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 ---

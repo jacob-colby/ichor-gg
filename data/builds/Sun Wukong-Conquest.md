@@ -95,9 +95,9 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Runeforged Hammer
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Runeforged Hammer
@@ -138,6 +138,12 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.37
+    Shifter's Shield:
+      total: 0.49
+      efficiency: 0.55
+      win: 0.46
+      pick: 0.43
+      fit: 0.45
     Runeforged Hammer:
       total: 0.49
       efficiency: 0.57
@@ -150,18 +156,16 @@ builds:
       win: 0.53
       pick: 0.15
       fit: 0.29
-    Shifter's Shield:
-      total: 0.49
-      efficiency: 0.55
-      win: 0.46
-      pick: 0.43
-      fit: 0.45
     Amanita Charm:
       total: 0.5
       efficiency: 0.65
       win: 0.46
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Shifter's Shield
+  - Runeforged Hammer
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -170,9 +174,9 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
@@ -212,6 +216,12 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.31
+    Shifter's Shield:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.46
+      pick: 0.43
+      fit: 0.54
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
@@ -224,18 +234,15 @@ builds:
       win: 0.53
       pick: 0.15
       fit: 0.37
-    Shifter's Shield:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.46
-      pick: 0.43
-      fit: 0.54
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
       win: 0.46
       pick: 0.0
       fit: 0.84
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -309,6 +316,8 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -381,6 +390,8 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.29
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -454,6 +465,8 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.31
+  community_ordered:
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -527,5 +540,7 @@ builds:
       win: 0.46
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Runeforged Hammer
   starter: *id001
 ---

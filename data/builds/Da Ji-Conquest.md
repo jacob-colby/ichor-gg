@@ -94,11 +94,11 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Reaper
-  - The Crusher
   - Heartseeker
+  - The Crusher
   flex_slots:
   - Hydra's Lament
   - Transcendence
@@ -128,36 +128,42 @@ builds:
       win: 0.59
       pick: 0.6
       fit: 1.0
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.44
     Hydra's Lament:
       total: 0.59
       efficiency: 0.54
       win: 0.56
       pick: 0.6
       fit: 0.77
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.44
     The Reaper:
       total: 0.59
       efficiency: 0.5
       win: 0.64
       pick: 0.25
       fit: 0.78
-    The Crusher:
-      total: 0.62
-      efficiency: 0.47
-      win: 0.69
-      pick: 0.22
-      fit: 0.88
     Heartseeker:
       total: 0.59
       efficiency: 0.47
       win: 0.56
       pick: 0.62
       fit: 0.98
+    The Crusher:
+      total: 0.62
+      efficiency: 0.47
+      win: 0.69
+      pick: 0.22
+      fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - The Crusher
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -165,11 +171,11 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Reaper
-  - The Crusher
   - Heartseeker
+  - The Crusher
   flex_slots:
   - The Reaper
   - Transcendence
@@ -199,46 +205,52 @@ builds:
       win: 0.59
       pick: 0.6
       fit: 0.71
-    Transcendence:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.39
     Hydra's Lament:
       total: 0.57
       efficiency: 0.54
       win: 0.56
       pick: 0.6
       fit: 0.63
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.39
     The Reaper:
       total: 0.54
       efficiency: 0.5
       win: 0.64
       pick: 0.25
       fit: 0.47
-    The Crusher:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.69
-      pick: 0.22
-      fit: 0.57
     Heartseeker:
       total: 0.56
       efficiency: 0.47
       win: 0.56
       pick: 0.62
       fit: 0.77
+    The Crusher:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.69
+      pick: 0.22
+      fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - The Crusher
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Reaper
-  - The Crusher
   - Heartseeker
+  - The Crusher
   flex_slots:
   - Hydra's Lament
   - Transcendence
@@ -268,43 +280,49 @@ builds:
       win: 0.59
       pick: 0.6
       fit: 0.78
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.22
     Hydra's Lament:
       total: 0.55
       efficiency: 0.54
       win: 0.56
       pick: 0.6
       fit: 0.54
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.22
     The Reaper:
       total: 0.56
       efficiency: 0.5
       win: 0.64
       pick: 0.25
       fit: 0.56
-    The Crusher:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.69
-      pick: 0.22
-      fit: 0.66
     Heartseeker:
       total: 0.56
       efficiency: 0.47
       win: 0.56
       pick: 0.62
       fit: 0.76
+    The Crusher:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.69
+      pick: 0.22
+      fit: 0.66
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - The Crusher
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Hydra's Lament
+  - Kinetic Cuirass
   - The Reaper
   - The Crusher
   - Amanita Charm
@@ -338,18 +356,18 @@ builds:
       win: 0.59
       pick: 0.6
       fit: 0.48
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.56
-      pick: 0.0
-      fit: 0.62
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.56
       pick: 0.6
       fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.56
+      pick: 0.0
+      fit: 0.62
     The Reaper:
       total: 0.57
       efficiency: 0.5
@@ -368,6 +386,11 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +460,12 @@ builds:
       win: 0.55
       pick: 0.26
       fit: 0.95
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +535,10 @@ builds:
       win: 0.69
       pick: 0.22
       fit: 0.41
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -514,8 +547,8 @@ builds:
   - Hydra's Lament
   - The Reaper
   - Pendulum Blade
-  - The Crusher
   - Heartseeker
+  - The Crusher
   flex_slots:
   - Pendulum Blade
   - The Reaper
@@ -564,25 +597,31 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.85
-    The Crusher:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.69
-      pick: 0.22
-      fit: 0.45
     Heartseeker:
       total: 0.53
       efficiency: 0.47
       win: 0.56
       pick: 0.62
       fit: 0.55
+    The Crusher:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.69
+      pick: 0.22
+      fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - The Crusher
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - Pendulum Blade
   - Heartseeker
   - Titan's Bane
@@ -615,18 +654,18 @@ builds:
       win: 0.59
       pick: 0.6
       fit: 1.0
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.44
     Hydra's Lament:
       total: 0.59
       efficiency: 0.54
       win: 0.56
       pick: 0.6
       fit: 0.77
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.44
     Pendulum Blade:
       total: 0.55
       efficiency: 0.42
@@ -645,5 +684,10 @@ builds:
       win: 0.55
       pick: 0.26
       fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

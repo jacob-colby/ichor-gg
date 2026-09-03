@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - The Reaper
+  - Hydra's Lament
   - Heartseeker
   - Avatar's Parashu
   flex_slots:
@@ -134,18 +134,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.58
-      efficiency: 0.54
-      win: 0.61
-      pick: 0.0
-      fit: 0.77
     The Reaper:
       total: 0.6
       efficiency: 0.5
       win: 0.63
       pick: 0.45
       fit: 0.78
+    Hydra's Lament:
+      total: 0.58
+      efficiency: 0.54
+      win: 0.61
+      pick: 0.0
+      fit: 0.77
     Heartseeker:
       total: 0.6
       efficiency: 0.47
@@ -158,6 +158,11 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.78
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -166,8 +171,8 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - The Reaper
+  - Hydra's Lament
   - Heartseeker
   - Avatar's Parashu
   flex_slots:
@@ -205,18 +210,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.39
-    Hydra's Lament:
-      total: 0.56
-      efficiency: 0.54
-      win: 0.61
-      pick: 0.0
-      fit: 0.63
     The Reaper:
       total: 0.55
       efficiency: 0.5
       win: 0.63
       pick: 0.45
       fit: 0.47
+    Hydra's Lament:
+      total: 0.56
+      efficiency: 0.54
+      win: 0.61
+      pick: 0.0
+      fit: 0.63
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -229,14 +234,19 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.47
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - The Reaper
+  - Hydra's Lament
   - Heartseeker
   - Avatar's Parashu
   flex_slots:
@@ -274,18 +284,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.22
-    Hydra's Lament:
-      total: 0.55
-      efficiency: 0.54
-      win: 0.61
-      pick: 0.0
-      fit: 0.54
     The Reaper:
       total: 0.56
       efficiency: 0.5
       win: 0.63
       pick: 0.45
       fit: 0.56
+    Hydra's Lament:
+      total: 0.55
+      efficiency: 0.54
+      win: 0.61
+      pick: 0.0
+      fit: 0.54
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -298,14 +308,19 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.56
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Magi's Cloak
   - The Reaper
+  - Magi's Cloak
   - Avatar's Parashu
   - Amanita Charm
   flex_slots:
@@ -344,18 +359,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.62
-    Magi's Cloak:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.77
-      pick: 0.22
-      fit: 0.32
     The Reaper:
       total: 0.58
       efficiency: 0.5
       win: 0.63
       pick: 0.45
       fit: 0.67
+    Magi's Cloak:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.77
+      pick: 0.22
+      fit: 0.32
     Avatar's Parashu:
       total: 0.56
       efficiency: 0.45
@@ -368,6 +383,11 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Magi's Cloak
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +457,12 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.85
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +532,10 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.31
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -575,6 +605,10 @@ builds:
       win: 0.74
       pick: 0.19
       fit: 0.35
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: model
@@ -644,5 +678,9 @@ builds:
       win: 0.48
       pick: 0.18
       fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

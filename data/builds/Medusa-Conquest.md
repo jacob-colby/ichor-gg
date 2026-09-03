@@ -161,6 +161,10 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.19
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Silverbranch Bow
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -235,6 +239,10 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: crit
@@ -307,6 +315,10 @@ builds:
       win: 0.69
       pick: 0.13
       fit: 0.49
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: burst
@@ -379,6 +391,10 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -452,6 +468,9 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -524,6 +543,11 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.34
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Silverbranch Bow
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -596,6 +620,11 @@ builds:
       win: 0.69
       pick: 0.13
       fit: 0.44
+  community_ordered:
+  - Jotunn's Revenge
+  - Tyrfing
+  - Silverbranch Bow
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -668,6 +697,9 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.65
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -740,6 +772,10 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -812,6 +848,10 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.31
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model
@@ -884,6 +924,8 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.48
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -956,6 +998,9 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.48
+  community_ordered:
+  - Jotunn's Revenge
+  - Silverbranch Bow
   swaps:
   - added: Silverbranch Bow
     removed: Lernaean Bow

@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - Death Metal
   - Rod of Tahuti
   flex_slots:
@@ -136,18 +136,18 @@ builds:
       win: 0.59
       pick: 0.44
       fit: 0.49
-    Transcendence:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.25
     Hydra's Lament:
       total: 0.56
       efficiency: 0.54
       win: 0.63
       pick: 0.56
       fit: 0.39
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.25
     Death Metal:
       total: 0.56
       efficiency: 0.61
@@ -160,6 +160,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -168,8 +171,8 @@ builds:
   slot_order:
   - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - Death Metal
   - Rod of Tahuti
   flex_slots:
@@ -209,18 +212,18 @@ builds:
       win: 0.59
       pick: 0.44
       fit: 0.52
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.28
     Hydra's Lament:
       total: 0.57
       efficiency: 0.54
       win: 0.63
       pick: 0.56
       fit: 0.49
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.28
     Death Metal:
       total: 0.56
       efficiency: 0.61
@@ -233,14 +236,17 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Hydra's Lament
+  - Kinetic Cuirass
   - The Reaper
   - Amanita Charm
   flex_slots:
@@ -281,18 +287,18 @@ builds:
       win: 0.59
       pick: 0.44
       fit: 0.3
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.6
-      pick: 0.0
-      fit: 0.49
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.63
       pick: 0.56
       fit: 0.28
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.6
+      pick: 0.0
+      fit: 0.49
     The Reaper:
       total: 0.56
       efficiency: 0.5
@@ -305,6 +311,10 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -377,13 +387,17 @@ builds:
       win: 0.6
       pick: 0.32
       fit: 0.77
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Hydra's Lament
+  - Tyrfing
   - Nimble Ring
   - Riptalon
   - Silverbranch Bow
@@ -419,18 +433,18 @@ builds:
       win: 0.59
       pick: 0.44
       fit: 0.31
-    Tyrfing:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.6
-      pick: 0.0
-      fit: 0.67
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.63
       pick: 0.56
       fit: 0.27
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.6
+      pick: 0.0
+      fit: 0.67
     Nimble Ring:
       total: 0.56
       efficiency: 0.65
@@ -449,6 +463,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -521,6 +538,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
   starter: *id001
 - source: suggested
   archetype: model
@@ -592,5 +612,7 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
 ---

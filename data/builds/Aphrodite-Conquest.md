@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
@@ -123,18 +123,18 @@ builds:
     Helm of Darkness, Screeching Gargoyle, Doom Orb, Magi''s Cloak, Midgardian Mail,
     Mantle Of Discord.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.32
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
       win: 0.51
       pick: 0.0
       fit: 0.6
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.32
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
@@ -159,14 +159,17 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.5
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Heartwood Charm
   - Rod of Tahuti
@@ -194,18 +197,18 @@ builds:
     Shield of the Phoenix, Jade Scepter, Erosion, Eye of Providence, Stone of Binding,
     Draconic Scale, Triton''s Conch, Screeching Gargoyle, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.28
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.56
       win: 0.51
       pick: 0.0
       fit: 0.45
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.28
     Freya's Tears:
       total: 0.49
       efficiency: 0.61
@@ -230,12 +233,16 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Genji's Guard
+  - Heartwood Charm
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
@@ -264,18 +271,18 @@ builds:
     Idol, Jade Scepter, Wish-Granting Pearl, Magi''s Cloak, Daybreak Gavel, Ancient
     Signet.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.27
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
       win: 0.51
       pick: 0.0
       fit: 0.47
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.27
     Freya's Tears:
       total: 0.5
       efficiency: 0.61
@@ -300,12 +307,15 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.37
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Rod of Tahuti
   - Amanita Charm
@@ -334,18 +344,18 @@ builds:
     Providence, Phoenix Feather, Draconic Scale, Jade Scepter, Wish-Granting Pearl,
     Glorious Pridwen, Blood-Bound Book.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.3
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
       win: 0.51
       pick: 0.0
       fit: 0.6
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.3
     Freya's Tears:
       total: 0.51
       efficiency: 0.61
@@ -370,6 +380,9 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.9
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -439,12 +452,14 @@ builds:
       win: 0.48
       pick: 0.15
       fit: 0.48
+  community_ordered:
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Genji's Guard
   - Bracer of The Abyss
+  - Genji's Guard
   - Nimble Ring
   - Bragi's Harp
   - Gluttonous Grimoire
@@ -473,18 +488,18 @@ builds:
     Daybreak Gavel, Screeching Gargoyle, Jade Scepter, Ancient Signet, Wish-Granting
     Pearl, Draconic Scale, Magi''s Cloak.'
   slot_scores:
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.18
     Bracer of The Abyss:
       total: 0.45
       efficiency: 0.52
       win: 0.51
       pick: 0.0
       fit: 0.28
+    Genji's Guard:
+      total: 0.49
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.18
     Nimble Ring:
       total: 0.51
       efficiency: 0.65
@@ -509,12 +524,15 @@ builds:
       win: 0.48
       pick: 0.15
       fit: 0.21
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Freya's Tears
+  - Genji's Guard
   - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
@@ -543,18 +561,18 @@ builds:
     Gem of Focus, Draconic Scale, Stone of Binding, Rod of Asclepius, Eye of Erebus,
     Magi''s Cloak, Daybreak Gavel, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.44
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
       win: 0.51
       pick: 0.0
       fit: 0.58
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.44
     Heartwood Charm:
       total: 0.51
       efficiency: 0.34
@@ -579,12 +597,16 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Genji's Guard
+  - Heartwood Charm
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
+  - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Freya's Tears
@@ -615,18 +637,18 @@ builds:
     Death Metal, Titan''s Bane, Eye of Providence, Stone of Binding, The Crusher,
     Draconic Scale, Jade Scepter, Doom Orb, Screeching Gargoyle, Toxic Blade.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.22
     Berserker's Shield:
       total: 0.51
       efficiency: 0.68
       win: 0.51
       pick: 0.0
       fit: 0.31
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.22
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
@@ -651,12 +673,14 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
@@ -688,18 +712,18 @@ builds:
     The Crusher, Ancient Signet, Magi''s Cloak, Dreamer''s Idol, Triton''s Conch,
     Helm of Darkness, Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.51
       pick: 0.0
       fit: 0.44
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.24
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
@@ -724,12 +748,14 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
@@ -758,18 +784,18 @@ builds:
     Pearl, Helm of Darkness, Screeching Gargoyle, Doom Orb, Magi''s Cloak, Midgardian
     Mail, Mantle Of Discord.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.49
-      pick: 0.31
-      fit: 0.32
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
       win: 0.51
       pick: 0.0
       fit: 0.6
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.49
+      pick: 0.31
+      fit: 0.32
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
@@ -794,5 +820,8 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.5
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 ---

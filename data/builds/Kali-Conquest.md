@@ -161,6 +161,10 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Tyrfing
+  - Riptalon
+  - Silverbranch Bow
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -235,14 +239,17 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Book of Thoth
+  - Transcendence
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Tyrfing
+  - Kinetic Cuirass
   - Riptalon
   - Amanita Charm
   flex_slots:
@@ -283,18 +290,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.3
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.54
-      pick: 0.0
-      fit: 0.49
     Tyrfing:
       total: 0.52
       efficiency: 0.48
       win: 0.56
       pick: 0.54
       fit: 0.45
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
     Riptalon:
       total: 0.55
       efficiency: 0.46
@@ -307,6 +314,9 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Tyrfing
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -379,6 +389,10 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.77
+  community_ordered:
+  - Tyrfing
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -451,6 +465,10 @@ builds:
       win: 0.54
       pick: 0.23
       fit: 0.57
+  community_ordered:
+  - Tyrfing
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -523,13 +541,16 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.69
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
+  - Jotunn's Revenge
   - Death Metal
   - Tekko-Kagi
   - Rod of Tahuti
@@ -565,18 +586,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.59
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
-      win: 0.54
-      pick: 0.0
-      fit: 0.49
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.56
       pick: 0.54
       fit: 0.68
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.72
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
     Death Metal:
       total: 0.53
       efficiency: 0.61
@@ -595,5 +616,7 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Tyrfing
   starter: *id001
 ---

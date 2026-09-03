@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -135,18 +135,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.73
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.62
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.37
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.62
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
@@ -159,6 +159,11 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.41
+  community_ordered:
+  - Genji's Guard
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -167,8 +172,8 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -207,18 +212,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.9
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.55
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.38
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.55
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
@@ -231,14 +236,18 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.43
+  community_ordered:
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Screeching Gargoyle
   - Stone of Binding
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -277,18 +286,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.72
-    Freya's Tears:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.44
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.55
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.44
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
@@ -301,14 +310,18 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.29
+  community_ordered:
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Bracer of The Abyss
   - Nimble Ring
-  - Bragi's Harp
   - Spear of Desolation
+  - Bragi's Harp
   - Rod of Tahuti
   - Stampede
   flex_slots:
@@ -347,18 +360,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.32
-    Bragi's Harp:
-      total: 0.47
-      efficiency: 0.44
-      win: 0.54
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.2
+    Bragi's Harp:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.54
+      pick: 0.0
+      fit: 0.46
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.86
@@ -371,14 +384,18 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.22
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -417,18 +434,18 @@ builds:
       win: 0.48
       pick: 0.16
       fit: 0.48
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.64
     Spear of Desolation:
       total: 0.57
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.46
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.64
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
@@ -441,14 +458,20 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.29
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -489,18 +512,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.45
-    Freya's Tears:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.38
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.33
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.38
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -513,14 +536,18 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.25
+  community_ordered:
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
+  - Freya's Tears
   - Amanita Charm
   - Stampede
   flex_slots:
@@ -562,18 +589,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.5
-    Freya's Tears:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.54
-      pick: 0.17
-      fit: 0.39
     Spear of Desolation:
       total: 0.57
       efficiency: 0.57
       win: 0.65
       pick: 0.17
       fit: 0.42
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.17
+      fit: 0.39
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -586,6 +613,10 @@ builds:
       win: 0.72
       pick: 0.14
       fit: 0.26
+  community_ordered:
+  - Spear of Desolation
+  - Freya's Tears
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: model
@@ -656,5 +687,9 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Freya's Tears
   starter: *id001
 ---

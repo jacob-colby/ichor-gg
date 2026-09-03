@@ -158,6 +158,11 @@ builds:
       win: 0.62
       pick: 0.31
       fit: 0.91
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -229,6 +234,12 @@ builds:
       win: 0.62
       pick: 0.31
       fit: 0.47
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +309,12 @@ builds:
       win: 0.62
       pick: 0.31
       fit: 0.56
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -305,8 +322,8 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
   - The Reaper
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
   - Runeforged Hammer
@@ -350,24 +367,27 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.57
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.54
     The Reaper:
       total: 0.56
       efficiency: 0.5
       win: 0.59
       pick: 0.36
       fit: 0.7
+    Runeforged Hammer:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.56
+      pick: 0.0
+      fit: 0.54
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
       win: 0.56
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +457,12 @@ builds:
       win: 0.62
       pick: 0.31
       fit: 0.94
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -506,6 +532,9 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.65
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -514,8 +543,8 @@ builds:
   - Transcendence
   - Hydra's Lament
   - Arondight
-  - Pendulum Blade
   - Heartseeker
+  - Pendulum Blade
   flex_slots:
   - Heartseeker
   - Transcendence
@@ -564,18 +593,22 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.65
-    Pendulum Blade:
-      total: 0.53
-      efficiency: 0.42
-      win: 0.56
-      pick: 0.0
-      fit: 0.85
     Heartseeker:
       total: 0.52
       efficiency: 0.47
       win: 0.53
       pick: 0.65
       fit: 0.55
+    Pendulum Blade:
+      total: 0.53
+      efficiency: 0.42
+      win: 0.56
+      pick: 0.0
+      fit: 0.85
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +678,10 @@ builds:
       win: 0.53
       pick: 0.22
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

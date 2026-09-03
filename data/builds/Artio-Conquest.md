@@ -161,6 +161,11 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -235,6 +240,10 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -307,6 +316,11 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -379,12 +393,15 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.3
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Gladiator's Shield
   - Daybreak Gavel
   - Freya's Tears
@@ -416,18 +433,18 @@ builds:
     Cloak, Chandra''s Grace, Midgardian Mail, Glorious Pridwen, Obsidian Shard, Mantle
     Of Discord, Jade Scepter, Wish-Granting Pearl, Avenging Blade.'
   slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.51
-      pick: 0.22
-      fit: 0.48
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.47
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.51
+      pick: 0.22
+      fit: 0.48
     Gladiator's Shield:
       total: 0.59
       efficiency: 0.39
@@ -452,6 +469,11 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.43
+  community_ordered:
+  - Genji's Guard
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: strength
@@ -525,6 +547,10 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -598,6 +624,11 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.4
+  community_ordered:
+  - Gladiator's Shield
+  - Daybreak Gavel
+  - Hide of the Nemean Lion
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -605,8 +636,8 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Shield Splitter
@@ -653,23 +684,26 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.61
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.55
-      pick: 0.23
-      fit: 0.5
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
       win: 0.51
       pick: 0.23
       fit: 0.56
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.55
+      pick: 0.23
+      fit: 0.5
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
       win: 0.55
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
 ---

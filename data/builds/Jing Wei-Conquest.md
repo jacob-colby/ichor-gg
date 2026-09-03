@@ -96,9 +96,9 @@ builds:
   - Lernaean Bow
   - Tyrfing
   - Musashi's Dual Swords
+  - Deathbringer
   - Riptalon
   - Silverbranch Bow
-  - Deathbringer
   flex_slots:
   - Tyrfing
   - Musashi's Dual Swords
@@ -139,6 +139,12 @@ builds:
       win: 0.59
       pick: 0.3
       fit: 0.54
+    Deathbringer:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.54
     Riptalon:
       total: 0.54
       efficiency: 0.41
@@ -151,12 +157,12 @@ builds:
       win: 0.7
       pick: 0.25
       fit: 0.44
-    Deathbringer:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.54
+  community_ordered:
+  - Tyrfing
+  - Musashi's Dual Swords
+  - Deathbringer
+  - Riptalon
+  - Silverbranch Bow
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -165,9 +171,9 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - Deathbringer
   - Riptalon
   - Silverbranch Bow
-  - Deathbringer
   - Heartseeker
   flex_slots:
   - Hydra's Lament
@@ -203,6 +209,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.42
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.34
     Riptalon:
       total: 0.55
       efficiency: 0.51
@@ -215,28 +227,26 @@ builds:
       win: 0.7
       pick: 0.25
       fit: 0.33
-    Deathbringer:
-      total: 0.51
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.34
     Heartseeker:
       total: 0.5
       efficiency: 0.47
       win: 0.57
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Deathbringer
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: crit
   slot_order:
   - Lernaean Bow
   - Musashi's Dual Swords
+  - Deathbringer
   - Riptalon
   - Silverbranch Bow
   - Demon Blade
-  - Deathbringer
   flex_slots:
   - Lernaean Bow
   - Demon Blade
@@ -271,6 +281,12 @@ builds:
       win: 0.59
       pick: 0.3
       fit: 0.57
+    Deathbringer:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.57
     Riptalon:
       total: 0.54
       efficiency: 0.41
@@ -289,12 +305,11 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.88
-    Deathbringer:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.57
+  community_ordered:
+  - Musashi's Dual Swords
+  - Deathbringer
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -365,6 +380,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -434,6 +452,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.67
+  community_ordered:
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -441,9 +462,9 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Tyrfing
+  - Deathbringer
   - Riptalon
   - Silverbranch Bow
-  - Deathbringer
   flex_slots:
   - Lernaean Bow
   - Golden Blade
@@ -484,6 +505,12 @@ builds:
       win: 0.52
       pick: 0.27
       fit: 0.75
+    Deathbringer:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.41
     Riptalon:
       total: 0.55
       efficiency: 0.41
@@ -496,12 +523,11 @@ builds:
       win: 0.7
       pick: 0.25
       fit: 0.49
-    Deathbringer:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.41
+  community_ordered:
+  - Tyrfing
+  - Deathbringer
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -509,9 +535,9 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Arondight
+  - Deathbringer
   - Riptalon
   - Silverbranch Bow
-  - Deathbringer
   flex_slots:
   - Deathbringer
   - Arondight
@@ -553,6 +579,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.41
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.3
     Riptalon:
       total: 0.51
       efficiency: 0.41
@@ -565,12 +597,10 @@ builds:
       win: 0.7
       pick: 0.25
       fit: 0.28
-    Deathbringer:
-      total: 0.51
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.3
+  community_ordered:
+  - Deathbringer
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model
@@ -578,9 +608,9 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Tyrfing
+  - Deathbringer
   - Dominance
   - Demon Blade
-  - Deathbringer
   flex_slots:
   - Deathbringer
   - Dominance
@@ -621,6 +651,12 @@ builds:
       win: 0.52
       pick: 0.27
       fit: 0.75
+    Deathbringer:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.62
+      fit: 0.54
     Dominance:
       total: 0.44
       efficiency: 0.45
@@ -633,11 +669,9 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.87
-    Deathbringer:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.62
-      fit: 0.54
+  community_ordered:
+  - Tyrfing
+  - Deathbringer
+  - Dominance
   starter: *id001
 ---

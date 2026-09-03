@@ -96,8 +96,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   - Rod of Tahuti
   flex_slots:
   - Tyrfing
@@ -143,24 +143,28 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.43
-    Riptalon:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.65
-      pick: 0.3
-      fit: 0.53
     Silverbranch Bow:
       total: 0.55
       efficiency: 0.53
       win: 0.61
       pick: 0.52
       fit: 0.44
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.65
+      pick: 0.3
+      fit: 0.53
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
       pick: 0.0
       fit: 0.19
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -235,6 +239,8 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Tyrfing
   starter: *id001
 - source: suggested
   archetype: crit
@@ -307,6 +313,9 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: burst
@@ -379,6 +388,8 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -386,8 +397,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   - Amanita Charm
   flex_slots:
   - Silverbranch Bow
@@ -434,34 +445,37 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.42
-    Riptalon:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.65
-      pick: 0.3
-      fit: 0.66
     Silverbranch Bow:
       total: 0.53
       efficiency: 0.53
       win: 0.61
       pick: 0.52
       fit: 0.3
+    Riptalon:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.65
+      pick: 0.3
+      fit: 0.66
     Amanita Charm:
       total: 0.59
       efficiency: 0.65
       win: 0.59
       pick: 0.0
       fit: 0.62
+  community_ordered:
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Jotunn's Revenge
   - Tyrfing
+  - Jotunn's Revenge
   - Death Metal
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   flex_slots:
   - Tyrfing
   - Death Metal
@@ -494,36 +508,41 @@ builds:
       win: 0.67
       pick: 0.06
       fit: 0.53
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.59
-      pick: 0.0
-      fit: 0.5
     Tyrfing:
       total: 0.54
       efficiency: 0.48
       win: 0.57
       pick: 0.79
       fit: 0.47
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.72
+      win: 0.59
+      pick: 0.0
+      fit: 0.5
     Death Metal:
       total: 0.54
       efficiency: 0.61
       win: 0.59
       pick: 0.0
       fit: 0.36
-    Riptalon:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.65
-      pick: 0.3
-      fit: 0.62
     Silverbranch Bow:
       total: 0.57
       efficiency: 0.53
       win: 0.61
       pick: 0.52
       fit: 0.54
+    Riptalon:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.65
+      pick: 0.3
+      fit: 0.62
+  community_ordered:
+  - Avenging Blade
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -531,8 +550,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   - Rod of Tahuti
   flex_slots:
   - Tyrfing
@@ -578,24 +597,28 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.35
-    Riptalon:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.65
-      pick: 0.3
-      fit: 0.57
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
       win: 0.61
       pick: 0.52
       fit: 0.49
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.65
+      pick: 0.3
+      fit: 0.57
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.59
       pick: 0.0
       fit: 0.16
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -668,6 +691,8 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.65
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model

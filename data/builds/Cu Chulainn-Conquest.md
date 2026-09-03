@@ -95,9 +95,9 @@ builds:
   slot_order:
   - Golden Blade
   - Berserker's Shield
+  - Shifter's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
@@ -134,6 +134,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.44
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.52
+      pick: 0.57
+      fit: 0.34
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
@@ -146,18 +152,15 @@ builds:
       win: 0.56
       pick: 0.25
       fit: 0.44
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.52
-      pick: 0.57
-      fit: 0.34
     Amanita Charm:
       total: 0.51
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.34
+  community_ordered:
+  - Shifter's Shield
+  - Kinetic Cuirass
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -166,9 +169,9 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Shifter's Shield
   - Amanita Charm
   flex_slots:
   - Shifter's Shield
@@ -206,6 +209,12 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.26
+    Shifter's Shield:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.52
+      pick: 0.57
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
@@ -218,18 +227,15 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.63
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.52
-      pick: 0.57
-      fit: 0.44
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.52
       pick: 0.0
       fit: 0.74
+  community_ordered:
+  - Shifter's Shield
+  - Kinetic Cuirass
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -300,6 +306,8 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.25
+  community_ordered:
+  - Kinetic Cuirass
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -369,6 +377,8 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.25
+  community_ordered:
+  - Kinetic Cuirass
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -377,8 +387,8 @@ builds:
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Freya's Tears
+  - Kinetic Cuirass
   flex_slots:
   - Kinetic Cuirass
   - Genji's Guard
@@ -427,18 +437,22 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.41
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.56
-      pick: 0.25
-      fit: 0.34
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
       win: 0.52
       pick: 0.25
       fit: 0.43
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.56
+      pick: 0.25
+      fit: 0.34
+  community_ordered:
+  - Genji's Guard
+  - Freya's Tears
+  - Kinetic Cuirass
   starter: *id001
 - source: suggested
   archetype: model
@@ -509,5 +523,7 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.34
+  community_ordered:
+  - Kinetic Cuirass
   starter: *id001
 ---

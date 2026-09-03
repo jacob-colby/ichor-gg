@@ -95,10 +95,10 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
+  - Jotunn's Revenge
   - Silverbranch Bow
+  - Riptalon
   flex_slots:
   - Lernaean Bow
   - Golden Blade
@@ -134,30 +134,34 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.6
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.55
-      pick: 0.0
-      fit: 0.3
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.54
       pick: 0.61
       fit: 0.71
-    Riptalon:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.57
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.55
+      pick: 0.0
+      fit: 0.3
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
       win: 0.59
       pick: 0.35
       fit: 0.46
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.57
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -167,8 +171,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   - Heartseeker
   flex_slots:
   - Hydra's Lament
@@ -211,24 +215,28 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.42
-    Riptalon:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.4
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
       win: 0.59
       pick: 0.35
       fit: 0.34
+    Riptalon:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.4
     Heartseeker:
       total: 0.49
       efficiency: 0.47
       win: 0.55
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: crit
@@ -236,8 +244,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Musashi's Dual Swords
-  - Riptalon
   - Demon Blade
+  - Riptalon
   - Deathbringer
   flex_slots:
   - Demon Blade
@@ -280,32 +288,35 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.52
-    Riptalon:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.55
     Demon Blade:
       total: 0.5
       efficiency: 0.38
       win: 0.55
       pick: 0.0
       fit: 0.79
+    Riptalon:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.55
     Deathbringer:
       total: 0.5
       efficiency: 0.51
       win: 0.55
       pick: 0.0
       fit: 0.52
+  community_ordered:
+  - Tyrfing
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Tyrfing
+  - Kinetic Cuirass
   - Riptalon
   - Amanita Charm
   flex_slots:
@@ -344,18 +355,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.19
-    Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.55
-      pick: 0.0
-      fit: 0.47
     Tyrfing:
       total: 0.52
       efficiency: 0.48
       win: 0.54
       pick: 0.61
       fit: 0.49
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.56
+      win: 0.55
+      pick: 0.0
+      fit: 0.47
     Riptalon:
       total: 0.58
       efficiency: 0.51
@@ -368,14 +379,17 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.67
+  community_ordered:
+  - Tyrfing
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   - Tekko-Kagi
   - Heartseeker
   flex_slots:
@@ -413,18 +427,18 @@ builds:
       win: 0.54
       pick: 0.61
       fit: 0.54
-    Riptalon:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.69
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
       win: 0.59
       pick: 0.35
       fit: 0.61
+    Riptalon:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.69
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.49
@@ -437,16 +451,20 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.67
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
+  - Jotunn's Revenge
   - Silverbranch Bow
+  - Riptalon
   flex_slots:
   - Lernaean Bow
   - Golden Blade
@@ -482,30 +500,34 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.52
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.72
-      win: 0.55
-      pick: 0.0
-      fit: 0.22
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.54
       pick: 0.61
       fit: 0.7
-    Riptalon:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.59
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.72
+      win: 0.55
+      pick: 0.0
+      fit: 0.22
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
       win: 0.59
       pick: 0.35
       fit: 0.5
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.59
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -514,8 +536,8 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - Arondight
-  - Riptalon
   - Silverbranch Bow
+  - Riptalon
   flex_slots:
   - Hydra's Lament
   - Arondight
@@ -564,26 +586,30 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.4
-    Riptalon:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.32
-      fit: 0.39
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.53
       win: 0.59
       pick: 0.35
       fit: 0.31
+    Riptalon:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.64
+      pick: 0.32
+      fit: 0.39
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
+  - Jotunn's Revenge
   - Riptalon
   - Tekko-Kagi
   flex_slots:
@@ -622,18 +648,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.6
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.55
-      pick: 0.0
-      fit: 0.3
     Tyrfing:
       total: 0.55
       efficiency: 0.48
       win: 0.54
       pick: 0.61
       fit: 0.71
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.55
+      pick: 0.0
+      fit: 0.3
     Riptalon:
       total: 0.57
       efficiency: 0.51
@@ -646,5 +672,8 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Tyrfing
+  - Riptalon
   starter: *id001
 ---

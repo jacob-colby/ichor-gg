@@ -162,6 +162,10 @@ builds:
       win: 0.42
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Book of Thoth
+  - Genji's Guard
+  - Rod of Tahuti
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -236,6 +240,11 @@ builds:
       win: 0.42
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Gladiator's Shield
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
@@ -308,6 +317,11 @@ builds:
       win: 0.6
       pick: 0.11
       fit: 0.34
+  community_ordered:
+  - Book of Thoth
+  - Genji's Guard
+  - Gladiator's Shield
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -381,6 +395,10 @@ builds:
       win: 0.42
       pick: 0.0
       fit: 0.73
+  community_ordered:
+  - Book of Thoth
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -454,6 +472,10 @@ builds:
       win: 0.42
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Book of Thoth
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -526,6 +548,9 @@ builds:
       win: 0.6
       pick: 0.11
       fit: 0.21
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -599,12 +624,17 @@ builds:
       win: 0.6
       pick: 0.11
       fit: 0.22
+  community_ordered:
+  - Genji's Guard
+  - Breastplate of Valor
+  - Gladiator's Shield
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Rod of Tahuti
@@ -636,18 +666,18 @@ builds:
     Mail, Titan''s Bane, Death Metal, Chronos'' Pendant, The Crusher, Daybreak Gavel,
     The World Stone, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.26
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.5
       efficiency: 0.72
       win: 0.42
       pick: 0.0
       fit: 0.4
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.26
+      fit: 0.24
     Kinetic Cuirass:
       total: 0.47
       efficiency: 0.56
@@ -672,5 +702,8 @@ builds:
       win: 0.42
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Genji's Guard
+  - Rod of Tahuti
   starter: *id001
 ---

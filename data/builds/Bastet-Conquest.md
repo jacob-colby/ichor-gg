@@ -158,6 +158,13 @@ builds:
       win: 0.52
       pick: 0.3
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -229,6 +236,12 @@ builds:
       win: 0.52
       pick: 0.3
       fit: 0.57
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +311,12 @@ builds:
       win: 0.52
       pick: 0.3
       fit: 0.66
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +387,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +460,13 @@ builds:
       win: 0.52
       pick: 0.3
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -445,8 +475,8 @@ builds:
   - Transcendence
   - Tyrfing
   - Riptalon
-  - Silverbranch Bow
   - Heartseeker
+  - Silverbranch Bow
   flex_slots:
   - Heartseeker
   - Transcendence
@@ -494,18 +524,22 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.79
-    Silverbranch Bow:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.0
-      fit: 0.69
     Heartseeker:
       total: 0.51
       efficiency: 0.47
       win: 0.54
       pick: 0.53
       fit: 0.53
+    Silverbranch Bow:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.53
+      pick: 0.0
+      fit: 0.69
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +610,11 @@ builds:
       win: 0.54
       pick: 0.53
       fit: 0.55
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +684,11 @@ builds:
       win: 0.52
       pick: 0.3
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

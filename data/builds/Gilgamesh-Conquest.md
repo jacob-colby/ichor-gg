@@ -158,6 +158,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.32
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -229,6 +234,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.21
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -298,6 +308,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -367,6 +382,10 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.26
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -436,6 +455,10 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.24
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -506,6 +529,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.24
+  community_ordered:
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -575,5 +603,10 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.32
+  community_ordered:
+  - Golden Blade
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
   starter: *id001
 ---

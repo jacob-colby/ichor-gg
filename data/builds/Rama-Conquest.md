@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
+  - Transcendence
   - The Reaper
   - Tekko-Kagi
   flex_slots:
@@ -134,18 +134,18 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.38
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.18
     Tyrfing:
       total: 0.51
       efficiency: 0.38
       win: 0.59
       pick: 0.65
       fit: 0.54
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.0
+      fit: 0.18
     The Reaper:
       total: 0.51
       efficiency: 0.55
@@ -158,6 +158,8 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.6
+  community_ordered:
+  - Tyrfing
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -513,10 +515,10 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
+  - Jotunn's Revenge
   - Silverbranch Bow
+  - Riptalon
   flex_slots:
   - Toxic Blade
   - Lernaean Bow
@@ -552,37 +554,42 @@ builds:
       win: 0.63
       pick: 0.12
       fit: 0.54
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.57
-      pick: 0.0
-      fit: 0.29
     Tyrfing:
       total: 0.56
       efficiency: 0.48
       win: 0.59
       pick: 0.65
       fit: 0.64
-    Riptalon:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.54
-      pick: 0.3
-      fit: 0.62
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.57
+      pick: 0.0
+      fit: 0.29
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
       win: 0.58
       pick: 0.34
       fit: 0.54
+    Riptalon:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.54
+      pick: 0.3
+      fit: 0.62
+  community_ordered:
+  - Toxic Blade
+  - Tyrfing
+  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Lernaean Bow
-  - Jotunn's Revenge
   - Tyrfing
+  - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - Arondight
@@ -616,18 +623,18 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.37
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.57
-      pick: 0.0
-      fit: 0.48
     Tyrfing:
       total: 0.49
       efficiency: 0.38
       win: 0.59
       pick: 0.65
       fit: 0.37
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.72
+      win: 0.57
+      pick: 0.0
+      fit: 0.48
     Hydra's Lament:
       total: 0.52
       efficiency: 0.54
@@ -646,6 +653,8 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.37
+  community_ordered:
+  - Tyrfing
   starter: *id001
 - source: suggested
   archetype: model

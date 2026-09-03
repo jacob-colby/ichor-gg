@@ -160,6 +160,13 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 0.52
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -233,6 +240,13 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 0.57
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -304,6 +318,11 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Jotunn's Revenge
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -376,6 +395,11 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.8
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -447,6 +471,13 @@ builds:
       win: 0.57
       pick: 0.65
       fit: 0.7
+  community_ordered:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -455,8 +486,8 @@ builds:
   - Transcendence
   - Tyrfing
   - Nimble Ring
-  - Riptalon
   - Rod of Tahuti
+  - Riptalon
   flex_slots:
   - Tyrfing
   - Transcendence
@@ -506,18 +537,22 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.42
-    Riptalon:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.53
-      pick: 0.0
-      fit: 0.7
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.58
       pick: 0.71
       fit: 0.2
+    Riptalon:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.53
+      pick: 0.0
+      fit: 0.7
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -590,16 +625,21 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.95
+  community_ordered:
+  - Jotunn's Revenge
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - Spear of Desolation
-  - Heartseeker
+  - Hydra's Lament
   - Rod of Tahuti
+  - Heartseeker
   flex_slots:
   - Hydra's Lament
   - Transcendence
@@ -637,29 +677,35 @@ builds:
       win: 0.58
       pick: 0.23
       fit: 0.38
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.53
-      pick: 0.0
-      fit: 0.68
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
       win: 0.5
       pick: 0.5
       fit: 0.62
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.52
-      pick: 0.41
-      fit: 0.89
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.53
+      pick: 0.0
+      fit: 0.68
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
       win: 0.58
       pick: 0.71
       fit: 0.42
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.52
+      pick: 0.41
+      fit: 0.89
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Heartseeker
   starter: *id001
 ---

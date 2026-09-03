@@ -94,9 +94,9 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -131,24 +131,24 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.38
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.67
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.45
-      fit: 0.53
     Shifter's Shield:
       total: 0.57
       efficiency: 0.55
       win: 0.61
       pick: 0.39
       fit: 0.57
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.45
+      fit: 0.53
+    Kinetic Cuirass:
+      total: 0.59
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.67
     Draconic Scale:
       total: 0.59
       efficiency: 0.5
@@ -161,6 +161,11 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -168,9 +173,9 @@ builds:
   archetype: bruiser
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
+  - Kinetic Cuirass
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -205,12 +210,6 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.39
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.65
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
@@ -223,6 +222,12 @@ builds:
       win: 0.64
       pick: 0.45
       fit: 0.46
+    Kinetic Cuirass:
+      total: 0.59
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.65
     Draconic Scale:
       total: 0.58
       efficiency: 0.5
@@ -235,14 +240,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Stone of Binding
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Freya's Tears
+  - Kinetic Cuirass
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -283,18 +292,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.54
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.52
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
       win: 0.64
       pick: 0.45
       fit: 0.39
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.52
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
@@ -307,14 +316,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Berserker's Shield
-  - Kinetic Cuirass
   - Nimble Ring
+  - Kinetic Cuirass
   - Freya's Tears
   - Amanita Charm
   flex_slots:
@@ -355,18 +368,18 @@ builds:
       win: 0.57
       pick: 0.26
       fit: 0.43
-    Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.46
     Nimble Ring:
       total: 0.55
       efficiency: 0.65
       win: 0.61
       pick: 0.0
       fit: 0.3
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.46
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
@@ -379,6 +392,11 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Golden Blade
+  - Berserker's Shield
+  - Kinetic Cuirass
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -386,8 +404,8 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Freya's Tears
+  - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -434,32 +452,35 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.46
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.55
     Freya's Tears:
       total: 0.62
       efficiency: 0.61
       win: 0.64
       pick: 0.45
       fit: 0.64
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.55
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
       win: 0.61
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Freya's Tears
+  - Kinetic Cuirass
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -495,24 +516,24 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.4
-    Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.49
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.45
-      fit: 0.39
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.61
       pick: 0.39
       fit: 0.39
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.45
+      fit: 0.39
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.49
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
@@ -525,14 +546,19 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
   - Draconic Scale
   - Amanita Charm
   flex_slots:
@@ -568,24 +594,24 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.41
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.51
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.64
-      pick: 0.45
-      fit: 0.38
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.61
       pick: 0.39
       fit: 0.41
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.45
+      fit: 0.38
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.51
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
@@ -598,14 +624,19 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Shifter's Shield
+  - Freya's Tears
+  - Kinetic Cuirass
+  - Draconic Scale
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Genji's Guard
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Shield Splitter
+  - Kinetic Cuirass
   - Freya's Tears
   - Amanita Charm
   flex_slots:
@@ -646,18 +677,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.38
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.28
-      fit: 0.67
     Shield Splitter:
       total: 0.56
       efficiency: 0.55
       win: 0.61
       pick: 0.0
       fit: 0.61
+    Kinetic Cuirass:
+      total: 0.59
+      efficiency: 0.56
+      win: 0.62
+      pick: 0.28
+      fit: 0.67
     Freya's Tears:
       total: 0.6
       efficiency: 0.61
@@ -670,5 +701,8 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.57
+  community_ordered:
+  - Kinetic Cuirass
+  - Freya's Tears
   starter: *id001
 ---

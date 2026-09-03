@@ -158,14 +158,18 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Freya's Tears
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Hydra's Lament
   - Freya's Tears
@@ -193,18 +197,18 @@ builds:
     Titan''s Bane, The Crusher, Daybreak Gavel, Oni Hunter''s Garb, Transcendence,
     Midgardian Mail, Mantle Of Discord, The Reaper, Arondight.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.51
-      pick: 0.61
-      fit: 0.29
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.57
       pick: 0.36
       fit: 0.45
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.51
+      pick: 0.61
+      fit: 0.29
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
@@ -229,6 +233,11 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.36
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Hydra's Lament
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -298,6 +307,10 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.82
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -368,6 +381,10 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.44
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -437,12 +454,15 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.35
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Hydra's Lament
   - Freya's Tears
@@ -471,18 +491,18 @@ builds:
     of Erebus, Mantle Of Discord, Midgardian Mail, Daybreak Gavel, Heartseeker, Pendulum
     Blade, Hide of the Nemean Lion.'
   slot_scores:
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.66
-      win: 0.51
-      pick: 0.61
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.57
       pick: 0.36
       fit: 0.5
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.51
+      pick: 0.61
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
@@ -507,12 +527,17 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.41
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Hydra's Lament
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
@@ -541,18 +566,18 @@ builds:
     Bane, The Crusher, Hide of the Nemean Lion, Leviathan''s Hide, Void Shield, Stampede,
     Daybreak Gavel.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.66
-      win: 0.51
-      pick: 0.61
-      fit: 0.29
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.57
       pick: 0.36
       fit: 0.46
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.51
+      pick: 0.61
+      fit: 0.29
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.56
@@ -577,5 +602,9 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Jotunn's Revenge
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 ---

@@ -157,6 +157,13 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.91
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -164,8 +171,8 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - The Crusher
   - Heartseeker
   - Avatar's Parashu
@@ -197,18 +204,18 @@ builds:
       win: 0.56
       pick: 0.48
       fit: 0.71
-    Transcendence:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.71
-      pick: 0.25
-      fit: 0.39
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.51
       pick: 0.52
       fit: 0.63
+    Transcendence:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.71
+      pick: 0.25
+      fit: 0.39
     The Crusher:
       total: 0.51
       efficiency: 0.47
@@ -227,13 +234,20 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.47
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - Pendulum Blade
   - Heartseeker
   - Avatar's Parashu
@@ -266,18 +280,18 @@ builds:
       win: 0.56
       pick: 0.48
       fit: 0.78
-    Transcendence:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.71
-      pick: 0.25
-      fit: 0.22
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
       win: 0.51
       pick: 0.52
       fit: 0.54
+    Transcendence:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.71
+      pick: 0.25
+      fit: 0.22
     Pendulum Blade:
       total: 0.53
       efficiency: 0.42
@@ -296,6 +310,12 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.56
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Transcendence
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -366,6 +386,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.86
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -435,6 +460,13 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.94
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -504,13 +536,17 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.33
+  community_ordered:
+  - Jotunn's Revenge
+  - Transcendence
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Transcendence
   - Pendulum Blade
   - Heartseeker
   - Avatar's Parashu
@@ -543,18 +579,18 @@ builds:
       win: 0.56
       pick: 0.48
       fit: 0.85
-    Transcendence:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.71
-      pick: 0.25
-      fit: 0.15
     Hydra's Lament:
       total: 0.56
       efficiency: 0.54
       win: 0.51
       pick: 0.52
       fit: 0.75
+    Transcendence:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.71
+      pick: 0.25
+      fit: 0.15
     Pendulum Blade:
       total: 0.54
       efficiency: 0.42
@@ -573,6 +609,12 @@ builds:
       win: 0.78
       pick: 0.25
       fit: 0.35
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Transcendence
+  - Heartseeker
+  - Avatar's Parashu
   starter: *id001
 - source: suggested
   archetype: model
@@ -642,5 +684,11 @@ builds:
       win: 0.54
       pick: 0.3
       fit: 1.0
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 ---

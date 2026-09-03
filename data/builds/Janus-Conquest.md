@@ -95,10 +95,10 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
+  - Soul Gem
   - Rod of Tahuti
   - Obsidian Shard
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Book of Thoth
@@ -134,6 +134,12 @@ builds:
       win: 0.51
       pick: 0.49
       fit: 1.0
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 1.0
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.86
@@ -152,12 +158,13 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.78
-    Soul Gem:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 1.0
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -167,9 +174,9 @@ builds:
   - Ancient Signet
   - Spear of Desolation
   - Doom Orb
+  - Soul Gem
   - Rod of Tahuti
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Doom Orb
   - Ancient Signet
@@ -211,6 +218,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.57
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 0.71
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
@@ -223,22 +236,21 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.47
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 0.71
+  community_ordered:
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Book of Thoth
   - Spear of Desolation
+  - Soul Gem
   - Rod of Tahuti
   - Obsidian Shard
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Book of Thoth
@@ -274,6 +286,12 @@ builds:
       win: 0.51
       pick: 0.49
       fit: 0.78
+    Soul Gem:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 0.88
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
@@ -292,22 +310,23 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.56
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 0.88
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
   - Spear of Desolation
+  - Soul Gem
   - Rod of Tahuti
   - Dreamer's Idol
   - Amanita Charm
-  - Soul Gem
   flex_slots:
   - Spear of Desolation
   - Kinetic Cuirass
@@ -344,6 +363,12 @@ builds:
       win: 0.51
       pick: 0.49
       fit: 0.48
+    Soul Gem:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 0.88
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -362,22 +387,21 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.82
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 0.88
+  community_ordered:
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Spear of Desolation
   - Doom Orb
+  - Soul Gem
   - Rod of Tahuti
   - Obsidian Shard
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Doom Orb
@@ -413,6 +437,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.85
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 1.0
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
@@ -431,12 +461,12 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.85
-    Soul Gem:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -444,9 +474,9 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Soul Gem
   - Rod of Tahuti
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -488,6 +518,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.64
+    Soul Gem:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.51
+      pick: 0.56
+      fit: 0.57
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
@@ -500,22 +536,20 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.3
-    Soul Gem:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.51
-      pick: 0.56
-      fit: 0.57
+  community_ordered:
+  - Soul Gem
+  - Rod of Tahuti
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Gem of Focus
   - Spear of Desolation
+  - Soul Gem
   - Rod of Tahuti
   - Obsidian Shard
   - Dreamer's Idol
-  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Gem of Focus
@@ -552,6 +586,12 @@ builds:
       win: 0.51
       pick: 0.49
       fit: 0.85
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 0.95
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -570,12 +610,12 @@ builds:
       win: 0.67
       pick: 0.31
       fit: 0.35
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 0.95
+  community_ordered:
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
   starter: *id001
 - source: suggested
   archetype: model
@@ -583,9 +623,9 @@ builds:
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
+  - Soul Gem
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Doom Orb
@@ -628,6 +668,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.78
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.51
+      pick: 0.56
+      fit: 1.0
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.86
@@ -640,11 +686,10 @@ builds:
       win: 0.49
       pick: 0.63
       fit: 0.88
-    Soul Gem:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.56
-      fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Soul Gem
+  - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 ---

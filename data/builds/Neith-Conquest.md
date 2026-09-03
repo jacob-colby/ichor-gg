@@ -160,6 +160,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Tyrfing
+  - Rod of Tahuti
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -214,7 +217,7 @@ builds:
       efficiency: 0.54
       win: 0.52
       pick: 0.0
-      fit: 0.42
+      fit: 0.43
     Death Metal:
       total: 0.52
       efficiency: 0.61
@@ -233,6 +236,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Tyrfing
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: crit
@@ -241,8 +247,8 @@ builds:
   - Tyrfing
   - Death Metal
   - Musashi's Dual Swords
-  - Deathbringer
   - Rod of Tahuti
+  - Deathbringer
   flex_slots:
   - Deathbringer
   - Musashi's Dual Swords
@@ -292,26 +298,29 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.36
-    Deathbringer:
-      total: 0.46
-      efficiency: 0.51
-      win: 0.52
-      pick: 0.0
-      fit: 0.36
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.52
       pick: 0.16
       fit: 0.3
+    Deathbringer:
+      total: 0.46
+      efficiency: 0.51
+      win: 0.52
+      pick: 0.0
+      fit: 0.36
+  community_ordered:
+  - Tyrfing
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
   - Spear of Desolation
+  - Death Metal
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -352,18 +361,18 @@ builds:
       win: 0.62
       pick: 0.25
       fit: 0.45
-    Death Metal:
-      total: 0.51
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.43
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
       win: 0.52
       pick: 0.25
       fit: 0.46
+    Death Metal:
+      total: 0.51
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.43
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
@@ -376,6 +385,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -448,6 +461,9 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.73
+  community_ordered:
+  - Tyrfing
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -519,6 +535,11 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.64
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Silverbranch Bow
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -527,8 +548,8 @@ builds:
   - Tyrfing
   - Nimble Ring
   - Death Metal
-  - Silverbranch Bow
   - Rod of Tahuti
+  - Silverbranch Bow
   flex_slots:
   - Death Metal
   - Silverbranch Bow
@@ -578,26 +599,30 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.41
-    Silverbranch Bow:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.14
-      fit: 0.46
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
       win: 0.52
       pick: 0.16
       fit: 0.25
+    Silverbranch Bow:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.14
+      fit: 0.46
+  community_ordered:
+  - Tyrfing
+  - Rod of Tahuti
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
   - Spear of Desolation
+  - Death Metal
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -638,18 +663,18 @@ builds:
       win: 0.62
       pick: 0.25
       fit: 0.41
-    Death Metal:
-      total: 0.5
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.35
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
       win: 0.52
       pick: 0.25
       fit: 0.49
+    Death Metal:
+      total: 0.5
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.35
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.86
@@ -662,6 +687,10 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -669,8 +698,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
-  - Death Metal
   - Spear of Desolation
+  - Death Metal
   - Rod of Tahuti
   flex_slots:
   - Death Metal
@@ -716,24 +745,28 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.5
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
       win: 0.52
       pick: 0.25
       fit: 0.46
+    Death Metal:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.5
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.52
       pick: 0.16
       fit: 0.35
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -741,8 +774,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
-  - Death Metal
   - Spear of Desolation
+  - Death Metal
   - Rod of Tahuti
   flex_slots:
   - Nimble Ring
@@ -788,32 +821,36 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.43
-    Death Metal:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.53
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
       win: 0.52
       pick: 0.25
       fit: 0.39
+    Death Metal:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.53
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.52
       pick: 0.16
       fit: 0.31
+  community_ordered:
+  - Tyrfing
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
   - Nimble Ring
-  - Death Metal
   - Spear of Desolation
+  - Death Metal
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -853,18 +890,18 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.44
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.49
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
       win: 0.52
       pick: 0.25
       fit: 0.38
+    Death Metal:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.49
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
@@ -877,5 +914,8 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.56
+  community_ordered:
+  - Spear of Desolation
+  - Rod of Tahuti
   starter: *id001
 ---

@@ -159,6 +159,11 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -231,6 +236,12 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.27
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Freya's Tears
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
@@ -301,6 +312,11 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.29
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -371,6 +387,11 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.81
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - The Reaper
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -440,6 +461,12 @@ builds:
       win: 0.59
       pick: 0.15
       fit: 0.67
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - The Reaper
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -510,6 +537,10 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.55
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
+  - The Reaper
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -580,6 +611,11 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.31
+  community_ordered:
+  - Jotunn's Revenge
+  - Hydra's Lament
+  - Freya's Tears
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: model
@@ -650,6 +686,9 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.42
+  community_ordered:
+  - Jotunn's Revenge
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -720,6 +759,10 @@ builds:
       win: 0.59
       pick: 0.15
       fit: 0.55
+  community_ordered:
+  - Jotunn's Revenge
+  - The Reaper
+  - Titan's Bane
   swaps:
   - added: Titan's Bane
     removed: Shield Splitter

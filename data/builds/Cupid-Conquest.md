@@ -161,6 +161,8 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.58
+  community_ordered:
+  - Silverbranch Bow
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -210,7 +212,7 @@ builds:
       efficiency: 0.54
       win: 0.65
       pick: 0.0
-      fit: 0.42
+      fit: 0.43
     Death Metal:
       total: 0.58
       efficiency: 0.61
@@ -235,6 +237,8 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.54
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: crit
@@ -379,6 +383,8 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.63
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -524,6 +530,8 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.65
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -596,6 +604,9 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.25
+  community_ordered:
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -668,6 +679,8 @@ builds:
       win: 0.65
       pick: 0.0
       fit: 0.66
+  community_ordered:
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: model

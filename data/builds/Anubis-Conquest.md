@@ -158,6 +158,10 @@ builds:
       win: 0.5
       pick: 0.32
       fit: 0.79
+  community_ordered:
+  - The Cosmic Horror
+  - Totem of Death
+  - Rod of Tahuti
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -229,6 +233,9 @@ builds:
       win: 0.5
       pick: 0.32
       fit: 0.57
+  community_ordered:
+  - Totem of Death
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: burst
@@ -298,6 +305,10 @@ builds:
       win: 0.5
       pick: 0.32
       fit: 0.56
+  community_ordered:
+  - The Cosmic Horror
+  - Totem of Death
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -368,6 +379,8 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.7
+  community_ordered:
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -437,6 +450,9 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - The Cosmic Horror
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -445,8 +461,8 @@ builds:
   - Nimble Ring
   - Bragi's Harp
   - Gluttonous Grimoire
-  - Spear of the Magus
   - Rod of Tahuti
+  - Spear of the Magus
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -494,18 +510,20 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.49
-    Spear of the Magus:
-      total: 0.48
-      efficiency: 0.6
-      win: 0.49
-      pick: 0.0
-      fit: 0.32
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.32
       fit: 0.32
+    Spear of the Magus:
+      total: 0.48
+      efficiency: 0.6
+      win: 0.49
+      pick: 0.0
+      fit: 0.32
+  community_ordered:
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -576,6 +594,10 @@ builds:
       win: 0.38
       pick: 0.18
       fit: 0.96
+  community_ordered:
+  - Totem of Death
+  - Rod of Tahuti
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: model
@@ -645,5 +667,11 @@ builds:
       win: 0.38
       pick: 0.18
       fit: 1.0
+  community_ordered:
+  - Spear of Desolation
+  - Doom Orb
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
   starter: *id001
 ---

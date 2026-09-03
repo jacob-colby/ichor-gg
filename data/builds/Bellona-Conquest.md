@@ -93,8 +93,8 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Berserker's Shield
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
@@ -123,18 +123,18 @@ builds:
     Mail, Screeching Gargoyle, Hide of the Nemean Lion, Heartseeker, Leviathan''s
     Hide, Void Shield, Stampede, Ancile, Prophetic Cloak, Oni Hunter''s Garb.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.6
-      win: 0.61
-      pick: 0.53
-      fit: 0.38
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.61
       pick: 0.0
       fit: 0.4
+    Berserker's Shield:
+      total: 0.57
+      efficiency: 0.6
+      win: 0.61
+      pick: 0.53
+      fit: 0.38
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.56
@@ -159,14 +159,17 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.6
+  community_ordered:
+  - Berserker's Shield
+  - Kinetic Cuirass
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Berserker's Shield
   - Shield of the Phoenix
   - Runeforged Hammer
   - Freya's Tears
@@ -195,18 +198,18 @@ builds:
     Grace, Glorious Pridwen, Stone of Binding, Midgardian Mail, Hide of the Nemean
     Lion, Daybreak Gavel, Magi''s Cloak, Leviathan''s Hide, Heartseeker.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.6
-      win: 0.61
-      pick: 0.53
-      fit: 0.4
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.61
       pick: 0.0
       fit: 0.42
+    Berserker's Shield:
+      total: 0.57
+      efficiency: 0.6
+      win: 0.61
+      pick: 0.53
+      fit: 0.4
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
@@ -231,14 +234,16 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.88
+  community_ordered:
+  - Berserker's Shield
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Screeching Gargoyle
   - Stone of Binding
-  - Avenging Blade
   - Berserker's Shield
+  - Avenging Blade
   - Jotunn's Revenge
   - Amanita Charm
   flex_slots:
@@ -277,18 +282,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.71
-    Avenging Blade:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.0
-      fit: 0.7
     Berserker's Shield:
       total: 0.55
       efficiency: 0.6
       win: 0.61
       pick: 0.53
       fit: 0.28
+    Avenging Blade:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.61
+      pick: 0.0
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
@@ -301,12 +306,14 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.43
+  community_ordered:
+  - Berserker's Shield
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Berserker's Shield
   - Tyrfing
   - Freya's Tears
   - Riptalon
@@ -334,18 +341,18 @@ builds:
     Toxic Blade, Eye of the Storm, Shield of the Phoenix, Hydra''s Lament, Draconic
     Scale, Magi''s Cloak, Screeching Gargoyle, Daybreak Gavel, The Reaper, Tekko-Kagi.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.61
-      efficiency: 0.68
-      win: 0.61
-      pick: 0.53
-      fit: 0.45
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.61
       pick: 0.0
       fit: 0.21
+    Berserker's Shield:
+      total: 0.61
+      efficiency: 0.68
+      win: 0.61
+      pick: 0.53
+      fit: 0.45
     Tyrfing:
       total: 0.53
       efficiency: 0.48
@@ -370,6 +377,10 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Berserker's Shield
+  - Tyrfing
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -441,6 +452,8 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Berserker's Shield
   starter: *id001
 - source: suggested
   archetype: model
@@ -512,5 +525,8 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.6
+  community_ordered:
+  - Kinetic Cuirass
+  - Shifter's Shield
   starter: *id001
 ---

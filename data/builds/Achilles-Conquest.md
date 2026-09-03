@@ -159,6 +159,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.46
+  community_ordered:
+  - Genji's Guard
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -230,6 +233,10 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.27
+  community_ordered:
+  - Genji's Guard
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -300,6 +307,9 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.85
+  community_ordered:
+  - Genji's Guard
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -369,6 +379,11 @@ builds:
       win: 0.6
       pick: 0.17
       fit: 0.71
+  community_ordered:
+  - Avenging Blade
+  - Genji's Guard
+  - Heartseeker
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -438,6 +453,8 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.27
+  community_ordered:
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -508,6 +525,8 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.31
+  community_ordered:
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: model
