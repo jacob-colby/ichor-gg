@@ -690,3 +690,114 @@ def adaptive_grants(item, branch="strength"):
         raise ValueError(f"adaptive_branch must be one of {BRANCHES}, got {branch!r}")
     return ({"Strength": float(match.group(1))} if key == "strength"
             else {"Intelligence": float(match.group(2))})
+
+
+# ── "% of all Stats from Items": the multiplier on the rest of the build ──
+#
+# Catalogue class A2 (docs/PASSIVES.md, STATE.md §4.20). Four buildable relics
+# read `+7.5% of all Stats from Items` (Agility Greaves, Shell of Rebuke,
+# Talisman of Purification) or `+6%` (Time-lock Aegis), and Genie's Lamp reads
+# `+0.6% (per Level) of all Stats from Items`. It is the conversion shape with
+# SOURCE = EVERY STAT: the item's worth is a function of the build around it,
+# which is exactly what `conversion_grants` prices for Transcendence, and it
+# was the backlog's "cannot be modelled at all" case only because nothing had
+# named the shape.
+#
+# PRICED AGAINST A POOL-DERIVED REFERENCE, NOT A COMMUNITY ONE. The precedent
+# above prices against `conversion_reference`, a median over COMMUNITY builds
+# — a community-derived number inside a shipped flag, which the catalogue
+# names as a leak and which is its own session (STATE.md §5). This reference
+# is `measure_multiplier_reference`: the mean printed stat line of a tier-3
+# buildable item, from item data alone, times the five other slots. It is
+# god-agnostic on purpose (efficiency is), and the god side is already handled
+# downstream — `offmap_efficiency` bills the share of the grant on stats the
+# god's map does not name, so a Carry is not credited for the Intelligence
+# a pool-mean build carries.
+#
+# ONE PASS, NO FIXED POINT, the same discipline as `conversion_grants`: the
+# grant is X% of a typical build, never of the core being assembled, so
+# adding Shell of Rebuke cannot raise the value of Shell of Rebuke.
+#
+# PREDICTIONS WRITTEN BEFORE THE SWEEP (STATE.md §4.16's trap, deliberately
+# not walked into): at the shipped fit the reference is worth 7,133 gold of
+# priced stats, so 7.5% is 535 gold and 6% is 428. Residuals should move
+# Shell of Rebuke +740 -> ~+205, Talisman +1,022 -> ~+487, Time-lock +946 ->
+# ~+518, Agility Greaves +1,566 -> ~+1,031. Shell is the only one of the four
+# with a community record (20 of 543 Conquest slots; the other three have 0),
+# so leakage-free coverage can move ONLY through Shell, and a move larger
+# than 20 slots can account for is something else and must be reported as
+# such, not explained. Numbers under `price_stat_multipliers` in _weights.yaml.
+#
+# THE LAMP IS PARSED AND REACHES NOTHING, and that is pinned by a test rather
+# than assumed. Its clause is per-Level, so it needs a level to evaluate; the
+# scorer states no level (`build_quality` uses 20, in a diagnostic), so
+# `item_stat_values` passes none and the Lamp's grant is zero there. It would
+# not matter if it were not: the Lamp has no cost and no printed stats, so it
+# has no residual and `scoring.is_buildable` refuses it. Giving it a price is
+# writing a constant, which is the one thing this module does not do.
+_ALL_STATS_MULTIPLIER = re.compile(
+    r"\+\s*([\d.]+)\s*%\s*(\(\s*per\s+Level\s*\)\s*)?of\s+all\s+Stats\s+from\s+Items",
+    re.I)
+
+
+def all_stats_multiplier(item, level=None):
+    """The fraction of the rest of the build's stats this item grants, or 0.0.
+
+    A `(per Level)` clause is multiplied by `level`, and is 0.0 when no level
+    is given — the caller has to SAY which level it means. The flat form needs
+    none and is the only form the four buildable carriers use."""
+    text = (item.get("passive") or "").strip()
+    if not text:
+        return 0.0
+    m = _ALL_STATS_MULTIPLIER.search(text)
+    if not m:
+        return 0.0
+    fraction = float(m.group(1)) / 100.0
+    if m.group(2):
+        return fraction * level if level else 0.0
+    return fraction
+
+
+def measure_multiplier_reference(items, slots=5):
+    """`{column: typical total across the OTHER five slots}` — the reference a
+    "% of all Stats from Items" clause is priced against.
+
+    Mean printed stat line over god-agnostic buildable TIER-3 items (relics
+    and god-specific items excluded — a relic is the item being priced, and a
+    typical build is five tier-3 items around it), keyed the way the
+    regression keys columns, times `slots`. Zeros count in the mean: a stat
+    carried by 12 of 134 items is worth 12/134 of its typical roll to a
+    typical slot, which is what "all Stats from Items" averages over.
+
+    Item data only — no community build enters. Re-derivable so the numbers
+    in _weights.yaml stay a measurement rather than something typed."""
+    from smite import scoring
+    from smite.efficiency import parse_stat_value, stat_key
+    pool = [it for it in items or ()
+            if scoring.is_buildable(it) and it.get("tier") == 3]
+    if not pool:
+        return {}
+    totals = {}
+    for it in pool:
+        for name, raw in (it.get("stats") or {}).items():
+            val = parse_stat_value(raw)
+            if val is not None:
+                key = stat_key(name, raw)
+                totals[key] = totals.get(key, 0.0) + val
+    n = len(pool)
+    return {key: round(total / n * slots, 4) for key, total in sorted(totals.items())}
+
+
+def multiplier_grants(item, reference, level=None):
+    """`{column: amount}` a "% of all Stats" clause is worth against `reference`.
+
+    Every column of the reference, scaled — the passive really does grant every
+    stat the build carries, and which of them the buyer can use is the god
+    side's judgement (`offmap_efficiency`), not this function's. `{}` for the
+    133 buildable items without the clause, and for a per-Level clause with no
+    level."""
+    fraction = all_stats_multiplier(item, level=level)
+    if fraction <= 0 or not reference:
+        return {}
+    return {key: fraction * float(amount) for key, amount in reference.items()
+            if float(amount) > 0}

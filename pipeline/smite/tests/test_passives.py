@@ -436,3 +436,103 @@ def test_only_the_standing_clause_counts_when_an_item_has_two():
     assert "+13 Strength or +16 Intelligence" in gavel["passive"]
     assert passives.adaptive_grants(gavel, "strength") == {"Strength": 60.0}
     assert passives.adaptive_grants(gavel, "intelligence") == {"Intelligence": 80.0}
+
+
+# ── "% of all Stats from Items" (catalogue class A2) ───────────────────────
+
+def test_the_flat_multiplier_is_read_and_needs_no_level():
+    shell = _p("+7.5% of all Stats from Items. On Use: Create a field of rebuke "
+               "for allies that mitigates 35% Damage. Cooldown: 120s")
+    assert passives.all_stats_multiplier(shell) == pytest.approx(0.075)
+    aegis = _p("+6% of all Stats from Items. On Use: Become time-locked")
+    assert passives.all_stats_multiplier(aegis) == pytest.approx(0.06)
+
+
+def test_a_per_level_multiplier_needs_a_level_and_is_zero_without_one():
+    """Genie's Lamp. The scorer states no level, so `item_stat_values` passes
+    none and the Lamp prices at nothing there — pinned, not assumed."""
+    lamp = _p("+0.6% (per Level) of all Stats from Items. On Use: Access 3 Wishes")
+    assert passives.all_stats_multiplier(lamp) == 0.0
+    assert passives.all_stats_multiplier(lamp, level=20) == pytest.approx(0.12)
+    assert passives.multiplier_grants(lamp, {"Strength": 100.0}) == {}
+    assert passives.multiplier_grants(lamp, {"Strength": 100.0}, level=20) == {
+        "Strength": pytest.approx(12.0)}
+
+
+def test_an_item_without_the_clause_gets_nothing():
+    assert passives.all_stats_multiplier(_p("+35% Critical Strike Damage.")) == 0.0
+    assert passives.multiplier_grants(_p("+35% Critical Strike Damage."),
+                                      {"Strength": 100.0}) == {}
+    assert passives.multiplier_grants(_p("+7.5% of all Stats from Items"), {}) == {}
+
+
+def test_the_grant_is_every_column_of_the_reference_scaled():
+    shell = _p("+7.5% of all Stats from Items.")
+    ref = {"Strength": 40.0, "Max Health": 500.0, "Pathfinding": 0.0}
+    out = passives.multiplier_grants(shell, ref)
+    assert out == {"Strength": pytest.approx(3.0), "Max Health": pytest.approx(37.5)}
+
+
+def test_the_reference_is_the_pool_mean_over_tier_3_items_times_five():
+    """Item data only — relics (the items being priced) and components are
+    out, zeros count in the mean, and the keys carry the regression's unit."""
+    items = [
+        {"name": "A", "tier": 3, "cost": 2500, "stats": {"Strength": "40", "Attack Speed": "20%"}},
+        {"name": "B", "tier": 3, "cost": 2500, "stats": {"Strength": "20"}},
+        {"name": "Relic", "tier": "Relic", "cost": 2500, "stats": {"Physical Protection": "20"}},
+        {"name": "Comp", "tier": 2, "cost": 900, "stats": {"Strength": "100"}},
+    ]
+    ref = passives.measure_multiplier_reference(items)
+    assert ref == {"Attack Speed %": pytest.approx(10.0 * 5),
+                   "Strength": pytest.approx(30.0 * 5)}
+    assert passives.measure_multiplier_reference([]) == {}
+
+
+def test_the_flag_prices_the_clause_through_item_stat_values_and_is_a_no_op_off():
+    from smite import efficiency
+    shell = {"name": "Shell of Rebuke", "tier": "Relic", "cost": 2500,
+             "stats": {"Magical Protection": "20", "Physical Protection": "20"},
+             "passive": "+7.5% of all Stats from Items. On Use: Create a field"}
+    ref = {"Strength": 40.0, "Physical Protection": 40.0}
+    before = efficiency.apply_pricing_flags({})
+    try:
+        off = efficiency.item_stat_values(shell)
+        efficiency.apply_pricing_flags({"price_stat_multipliers": True,
+                                        "multiplier_reference": ref})
+        on = efficiency.item_stat_values(shell)
+        # Without a reference the flag prices nothing rather than guessing.
+        efficiency.apply_pricing_flags({"price_stat_multipliers": True})
+        bare = efficiency.item_stat_values(shell)
+    finally:
+        efficiency.restore_pricing_flags(before)
+    assert off == {"Magical Protection": 20.0, "Physical Protection": 20.0}
+    assert bare == off
+    assert on == {"Magical Protection": 20.0,
+                  "Physical Protection": pytest.approx(20.0 + 3.0),
+                  "Strength": pytest.approx(3.0)}
+
+
+def test_the_shipped_reference_is_the_re_derivation_not_a_typed_number():
+    """`multiplier_reference` in _weights.yaml is a measurement and a wiki
+    refresh can move it; this fails when it has, so it is re-measured rather
+    than quietly outliving its data."""
+    from smite import recommend, scoring
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    stored = weights.get("multiplier_reference") or {}
+    live = passives.measure_multiplier_reference(recommend.load_items())
+    assert set(stored) == set(live)
+    for key, value in live.items():
+        assert stored[key] == pytest.approx(value, abs=0.01), key
+
+
+def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+    from smite import recommend, scoring
+    items = recommend.load_items()
+    flat = sorted(it["name"] for it in items
+                  if scoring.is_buildable(it) and passives.all_stats_multiplier(it) > 0)
+    assert flat == ["Agility Greaves", "Shell of Rebuke",
+                    "Talisman of Purification", "Time-lock Aegis"]
+    lamp = next(it for it in items if it["name"] == "Genie's Lamp")
+    assert passives.all_stats_multiplier(lamp) == 0.0
+    assert passives.all_stats_multiplier(lamp, level=20) == pytest.approx(0.12)
+    assert not scoring.is_buildable(lamp)

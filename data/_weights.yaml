@@ -946,6 +946,65 @@ conversion_reference:
   Max Mana: 500
   Intelligence: 325
 
+# "+X% of all Stats from Items", priced as X% of a POOL-DERIVED five-item
+# reference stat line — catalogue class A2 (docs/PASSIVES.md, STATE.md §4.20).
+# Four buildable relics carry the flat form (Agility Greaves, Shell of Rebuke,
+# Talisman of Purification at 7.5%; Time-lock Aegis at 6%); Genie's Lamp's
+# per-Level form is parsed and reaches nothing (no level in the scorer, no
+# cost, no printed stats — see `passives.all_stats_multiplier`).
+#
+# DEFAULT OFF, SWEPT AGAINST BOTH LEAKAGE-FREE SPLITS. The numbers below this
+# paragraph are the sweep; the paragraph itself was written BEFORE it.
+#
+# THE REFERENCE IS ITEM DATA ONLY. `multiplier_reference` is
+# `passives.measure_multiplier_reference`: the mean printed stat line of a
+# tier-3 buildable item times the five other slots. Deliberately NOT
+# `conversion_reference`, which is a median over community builds — a
+# community-derived number inside a shipped flag that the catalogue names as
+# a leak in the leakage-free measure itself and that is its own session
+# (STATE.md §5). At the shipped fit the reference is worth 7133 gold of
+# priced stats, so 7.5% is 535 gold and 6% is 428.
+#
+# PREDICTIONS, WRITTEN FIRST (§4.16's trap). Residuals at the shipped fit:
+#   Shell of Rebuke            +740  ->  ~+205
+#   Talisman of Purification  +1022  ->  ~+487
+#   Time-lock Aegis            +946  ->  ~+518
+#   Agility Greaves           +1566  ->  ~+1031
+# Shell of Rebuke is the ONLY one of the four with a community record — 20 of
+# the 543 Conquest community slots; the other three have 0 — so leakage-free
+# coverage can move only through Shell. THE FALSIFIER: a coverage move larger
+# than 20 slots can account for (20 slots / 543 = 3.7pp at the absolute
+# outside, and far less in practice since Shell would have to enter exactly
+# the cores whose community record holds it) is not this flag's mechanism and
+# is to be reported as such, not explained.
+price_stat_multipliers: false
+
+# Mean printed stat line of a tier-3 buildable item, times the five other
+# slots, keyed the way the regression keys columns. From
+# `passives.measure_multiplier_reference`; a test holds it to the re-derivation
+# so it cannot silently outlive the item data it was measured on.
+multiplier_reference:
+  Attack Damage: 8.0224
+  Attack Speed %: 18.097
+  Cooldown Rate: 12.3881
+  Critical Chance %: 4.6642
+  Dampening: 1.4925
+  Echo: 3.9179
+  Health Regen: 1.8284
+  Intelligence: 92.1642
+  Lifesteal %: 3.5448
+  Magical Protection: 42.4254
+  Mana Regen: 2.7425
+  Max Health: 536.3806
+  Max Mana: 195.8955
+  Pathfinding: 0.4478
+  Penetration: 3.3582
+  Penetration %: 4.6642
+  Physical Protection: 43.3582
+  Plating: 1.8657
+  Strength: 47.5746
+  Tenacity: 2.6119
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #
