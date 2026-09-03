@@ -33,8 +33,9 @@ a point on it is a product decision, not a measurement.
 
 WHAT CAN BE MEASURED HONESTLY
 
-Zero `win` and `pick` and the leakage is gone: nothing derived from the target
-enters the score. What is left — efficiency and fit — can then be graded
+Zero `win` and `pick` and the SIGNAL leakage is gone: no signal derived from
+the target enters the score. (Not all of it - see the next section, which is
+the exception and its size.) What is left — efficiency and fit — can then be graded
 against a real baseline, a random legal 6-item core drawn from the same
 candidate pool (median 92 items per god):
 
@@ -47,6 +48,39 @@ quote, and the number to move. It is also what showed the day's work was worth
 shipping when the headline gate said otherwise — holding the data fixed and
 restoring the pre-2026-08-05 rules scores 4.17x against the current 4.81x,
 while `mean_coverage` fell 51.0% -> 49.6% over the same change.
+
+IT ZEROES SIGNALS. IT DOES NOT NEUTRALISE COMMUNITY-DERIVED CONSTANTS.
+
+"Nothing derived from the target enters the score" is true of the four SIGNALS
+and false of the model's constants, and one shipped flag reaches that
+distinction. `passives.measure_conversion_reference` builds `conversion_reference`
+by iterating community build entries and skipping every other source; that key
+is read by `efficiency.item_stat_values` and `assemble.conversion_args`, and
+`price_conversions` ships ON. So a number measured off the community record is
+inside every figure this module prints, and zeroing `win` and `pick` does not
+touch it.
+
+Audited and measured 2026-09-03 (docs/STATE.md 4.20, full tables under
+`conversion_reference` in _weights.yaml). The short version: replacing it with
+the community-free analogue - the mean stat line of a tier-3 buildable, from
+item data alone - costs 2.6pp on the probe split and 0.6pp at eff 0.45, and
+changes no verdict, because every verdict in the register is a delta with the
+constant held identical on both arms. `price_conversions` still beats OFF on
+the same standard with a community-free reference. Two things bound it: the
+community value is NOT a peak in reference magnitude (1.25x and 1.50x both
+score higher), and nothing in production re-derives the key, so the 3.1% the
+record has drifted under it since 2026-08-14 costs 0.00pp on both splits.
+
+WHY THIS MODULE DOES NOT FIX IT BY SUBSTITUTION. Zeroing a signal is
+well-defined; a constant has no zero. Emptying `conversion_reference` does not
+remove it, it substitutes 0 - and in the assembly half that is the OPPOSITE of
+neutral, since `conversion_score_bonus` then subtracts no reference and credits
+a converter with its whole mana. The only available "neutralisation" is to
+substitute a different constant, which is a model change, and a `calibrate`
+that silently swaps constants reports the number for a model nobody ships -
+exactly the defect `efficiency.apply_pricing_flags` exists to close, arriving
+from the other side. Whether the MODEL should carry a community-free reference
+is a decision for _weights.yaml, not a thing this module should do behind it.
 
 It comes with a matching negative. Within the community's own set the model
 cannot rank at all: mean within-god rank correlation -0.02, and measured

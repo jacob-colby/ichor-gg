@@ -942,6 +942,86 @@ conversion_passes: 3
 # which would price Rod of Tahuti and Nimble Ring at nothing - the two items
 # this exists to fix. It is also the wrong question, since Tahuti is only ever
 # bought by a god who builds Intelligence.
+#
+# IT IS COMMUNITY-DERIVED, INSIDE A FLAG THAT SHIPS ON, AND `calibrate` DOES
+# NOT NEUTRALISE IT. `measure_conversion_reference` iterates community build
+# entries and skips everything else, so the leakage-free measure - which zeroes
+# the `win` and `pick` SIGNALS - still reads a number measured off the
+# community record. Audited and measured 2026-09-03 (STATE.md 4.20); the leak
+# is REAL and does not change any verdict. Numbers, at fingerprint
+# `208b8d329f8e`, exact random-core baseline 5.7427%:
+#
+# THE TWO CONSTANTS. The community-free analogue is the mean `item_stat_values`
+# over the 134 tier-3 buildables with zeros counted, times six slots - the same
+# construction `passives.measure_multiplier_reference` uses, at six rather than
+# five because `conversion_grants` includes the item's own contribution ("you
+# own it once the item is bought"):
+#
+#   reference                          Max Mana   Intelligence
+#   community median (this key)             500            325
+#   community median re-derived today       500            335
+#   A  pool mean x6                       235.1          110.6
+#   B  pool mean over CARRIERS x6        1369.6          380.0
+#   C  per item: own + pool mean x5     446-546         92-172
+#
+# A and B bracket the community number from both sides. C is the shape that
+# matches how the value is actually used - a converter is bought into a build
+# that already contains it - and it recovers the community's 500 from item data
+# alone: Transcendence 446, Book of Thoth 546. That is the finding underneath
+# all the coverage figures below. **The community median is not carrying
+# information the item pool does not already have.**
+#
+# WHAT MOVES AT THE ITEM LEVEL (community -> A):
+#
+#   item             grant                        residual / tier
+#   Transcendence    +15.0 Str  -> +7.1            +39 fair  ->  +179 fair
+#   Book of Thoth    +25.0 Int  -> +11.8           +90 fair  ->  +203 fair
+#   Rod of Tahuti    +81.2 Int  -> +27.6           -916 under -> -258 under
+#   Nimble Ring      +32.5 AS%  -> +11.1           -319 under ->   +25 fair
+#
+# The whole-pool refit moves with them: Max Mana 1.26 -> 1.51 g/pt,
+# Intelligence 14.77 -> 15.80, Strength 21.81 -> 22.25, Attack Speed %
+# 20.89 -> 23.31.
+#
+# WHAT IT COSTS, at the shipped `conversion_passes: 3`, paired per-god
+# bootstrap (2000 resamples) against this key's shipped value:
+#
+#   arm                     probe 0.70:0.30            best 0.45:0.55
+#   community 500/325         40.9% (7.13x)              37.6% (6.56x)
+#   re-derived 500/335        40.9%  identical           37.6%  identical
+#   A pool mean x6            38.4%  -2.59pp             37.0%  -0.63pp
+#                             [-4.83, -0.50] 5b/15w      [-1.48, +0.00] 0b/3w
+#   B carriers x6             39.2%  -1.76pp             37.0%  -0.63pp
+#   C per item                38.5%                      37.0%
+#
+# So the leak is worth about -2.6pp of LEVEL on the probe corner and -0.6pp on
+# the other, and only the first interval excludes zero. Every register entry
+# measured since 2026-08-14 (7d025f4, where this key and `price_conversions`
+# landed together; `validate` and `calibrate` have applied pricing flags since
+# fa22fd0, 2026-08-10) quotes a level carrying that much. It cannot bias any of
+# their VERDICTS, which are deltas with this key held identical on both arms.
+#
+# TWO REASONS THE LEAK IS SMALLER THAN ITS SHAPE SUGGESTS, both measured
+# rather than argued. (1) THIS NUMBER IS NOT A PEAK. Scaling it and re-reading
+# coverage, the community value sits on the rising shoulder of a broad hump,
+# not on a maximum - 1.25x scores 41.2% on the probe and 1.50x scores 38.3% on
+# the best split, both ABOVE the shipped 1.0x. A constant tuned by the target
+# would sit at the top; this one does not. (Read that sweep only near 1.0: this
+# key feeds BOTH the efficiency pricing and `assemble.conversion_score_bonus`,
+# and as it goes to zero the assembly half stops subtracting a reference and
+# hands a converter credit for its entire mana, so the low rows are maximum
+# credit rather than a no-op.) (2) IT DOES NOT TRACK THE RECORD. Nothing in
+# production calls `measure_conversion_reference`; this is a number a human
+# stamped on 2026-08-14 and has not re-derived since. The record has drifted
+# 3.1% under it - Intelligence re-derives to 335 today against the 325 below -
+# and that drift costs 0.00pp on both splits and moves 0 of 90 gods. The
+# channel exists; its gain at the amplitude the data actually moves is zero.
+#
+# THE VALUE BELOW IS DELIBERATELY LEFT STALE. Re-stamping it to 335 is a
+# one-character edit that changes nothing measurable and would move the input
+# fingerprint, invalidating every control quoted against `208b8d329f8e` for a
+# number that measures identically. Whoever changes this key should change it
+# to a community-free reference or not at all.
 conversion_reference:
   Max Mana: 500
   Intelligence: 325

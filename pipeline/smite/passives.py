@@ -565,6 +565,21 @@ def measure_conversion_reference(builds, items):
     items this exists to fix. It is also the wrong question: Tahuti is only
     ever bought by a god who builds Intelligence, so the reference it should be
     measured against is a typical INTELLIGENCE build, not a typical build.
+
+    IT IS A LEAK, IT IS MEASURED, AND IT IS SMALL. This is the only
+    community-derived CONSTANT inside a pricing flag that ships ON, and
+    `calibrate` does not neutralise it the way it zeroes the community-derived
+    signals - so its output reaches `efficiency` inside the measurement that
+    exists to be free of exactly that. Audited 2026-09-03: swapping in the
+    community-free analogue costs 2.6pp / 0.6pp of leakage-free coverage and
+    changes no verdict, and a per-item pool reference recovers this function
+    two numbers to within 10% from item data alone. Tables under
+    `conversion_reference` in _weights.yaml; STATE.md 4.20.
+
+    NOTHING IN PRODUCTION CALLS THIS. The constant is stamped into
+    _weights.yaml by hand, so the leak is a one-time human transfer and not a
+    live loop - which is why the value there is 3.1% stale and measures
+    identically anyway. Do not "fix" that staleness on its own; see the key.
     """
     from smite.efficiency import parse_stat_value
     by_name = {i.get("name"): i for i in items or ()}

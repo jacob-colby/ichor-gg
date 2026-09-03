@@ -46,6 +46,15 @@ cd pipeline && python -m smite.calibrate --control   # the same control, ~7s
 Chance is ~5.7%. Shipped is ~39.7% at the probe split and ~40.3% at eff
 0.45, i.e. **~7.0× chance**.
 
+**"Leakage-free" means the SIGNALS are zeroed — it does not mean no
+community-derived number reaches the score.** One shipped pricing flag reads a
+constant measured off the community record (`conversion_reference`), and
+`calibrate` does not neutralise it. Audited and measured 2026-09-03: it is
+worth about −2.6pp of level here and −0.6pp at the second split, and changes
+no verdict in §4, because every verdict there is a delta with the constant
+held fixed on both arms. **§4.20** has the numbers and the blast radius; read
+it before quoting an absolute figure dated on or after 2026-08-14.
+
 **Do not quote those figures — re-measure them.** They move with the data, not
 just with the model, which is what `--control` exists for: the baseline, the
 same two fixed splits, and an input fingerprint, in ~7s instead of ~7 minutes.
@@ -1350,6 +1359,103 @@ shipped **off**. Numbers are in the named module.
     (Berserker's Shield stays at 0 of 18) is the same mechanism seen from
     §4.14's side.
 
+23. **The community-derived constant inside a shipped pricing flag
+    (2026-09-03)** — the seventh entry that is not "we measured this and it is
+    false". Nothing was implemented and nothing shipped off: this is an audit
+    of a leak that is real, and the answer is that it costs about **−2.6pp of
+    LEVEL on the probe split and −0.6pp at eff 0.45, and changes no verdict in
+    this register.** Read it before quoting any absolute leakage-free figure
+    dated on or after 2026-08-14, and before "fixing" `conversion_reference`.
+
+    **The leak.** `passives.measure_conversion_reference` builds
+    `{stat: median total}` by iterating community build entries and skipping
+    everything else. That constant is stamped into `_weights.yaml` as
+    `conversion_reference`, read by `efficiency.item_stat_values` and
+    `assemble.conversion_args`, and feeds `price_conversions`, which SHIPS ON.
+    `calibrate` zeroes the `win` and `pick` SIGNALS and does nothing about it,
+    so community-derived information reaches `efficiency` inside the
+    measurement that exists to be free of it. It has been true since
+    `7d025f4` (2026-08-14), where the key and the flag landed together;
+    `validate` and `calibrate` have applied pricing flags since `fa22fd0`
+    (2026-08-10), so there is no window where the flag was configured but
+    unmeasured.
+
+    **The magnitude.** Measured at fingerprint `208b8d329f8e`, exact
+    random-core baseline 5.7427%, against three community-free references that
+    bracket the community one — the pool mean over the 134 tier-3 buildables
+    ×6 (A), the same over carriers only (B), and per-item own + pool mean ×5
+    (C). At the shipped `conversion_passes: 3`, with the paired per-god
+    bootstrap:
+
+        arm                    probe 0.70:0.30      best 0.45:0.55
+        community (shipped)      40.9%                37.6%
+        A pool mean ×6           38.4%  −2.59pp       37.0%  −0.63pp
+                                 [−4.83, −0.50]       [−1.48, +0.00]
+        B carriers ×6            39.2%  −1.76pp       37.0%  −0.63pp
+        C per item               38.5%                37.0%
+        price_conversions OFF    37.7%                31.6%
+
+    Only the probe interval excludes zero. Item-level the move is much larger
+    than the coverage move — Rod of Tahuti's residual −916 → −258, Nimble Ring
+    −319 → +25 and out of the `undervalued` band — so this is not a change too
+    small to see; it is a change the coverage measure is nearly indifferent to.
+    Full tables under `conversion_reference` in `_weights.yaml`.
+
+    **The flag still earns its place, on the same standard.** Against
+    `price_conversions` OFF, at the shipped pass count: community +3.24pp
+    (CI spans zero) / +6.02pp (excludes zero, 27 gods better 2 worse); pool A
+    +0.65pp (spans zero) / +5.39pp (excludes zero, 24/2); pool B +1.48pp /
+    +5.39pp. Same verdict on all three — unresolvable at the probe corner,
+    clearly positive at the split §1 calls the leakage-free optimum. **The
+    community-derived constant is not what is carrying the flag.**
+
+    **Why it is smaller than its shape suggests**, both measured. (1) The
+    community value is not a peak: scaling the reference, 1.25× scores 41.2%
+    on the probe and 1.50× scores 38.3% on the best split, both above the
+    shipped 1.0×. A constant tuned by the target would sit at the maximum.
+    (2) It does not track the record — nothing in production calls
+    `measure_conversion_reference`, so the number is a hand stamp from
+    2026-08-14. The record has drifted 3.1% under it (Intelligence re-derives
+    to **335** today against the committed 325) and that drift costs **0.00pp
+    on both splits and moves 0 of 90 gods**. And C, the per-item pool
+    reference, recovers the community's 500 from item data alone —
+    Transcendence 446, Book of Thoth 546. The community median is not carrying
+    information the item pool does not already have, which is the mechanism
+    under every number above.
+
+    **Blast radius — one caveat, not twelve.** Every leakage-free coverage
+    figure measured on or after 2026-08-14 quotes a LEVEL carrying this: §4.2's
+    re-measure, §4.9, §4.10's re-measure and its `price_adaptive` carve-out,
+    §4.11–§4.19, the `_weights.yaml` evidence blocks dated in that window
+    (`price_adaptive`, `attack_damage_fit`, `blend_stat_values`, `cap_overflow`,
+    `offmap_efficiency`, `damage_per_second`, `conversion_passes`), §7's
+    Leakage-free row, and `_calibration.md`. **None of their verdicts is
+    affected**, because each is a delta between two arms with this constant
+    held identical on both. What is overstated is the headline multiple: ~7.1×
+    chance at the probe corner is ~6.7× with a community-free reference.
+    Interaction is not ruled out for the four that touch the same two stats or
+    the same four items — **§4.9** (`conversion_fit`, the fit half of this
+    exact mechanism, whose verdict rests on two splits moving in opposite
+    directions), **§4.16** (whose refusal to price Max Mana cites §4.9),
+    **§4.15/§4.18** (`offmap_efficiency` charges stats off a role map, and both
+    reference stats are off several), and **`conversion_passes`** itself, whose
+    1/2/3/4 table was measured against this constant and which demonstrably
+    interacts with it: pool A is the BEST arm on the probe split at one pass
+    (41.6%) and the worst at three (38.4%). Those four are the ones to re-run
+    first if the constant is ever changed. Listed, not re-run and not amended.
+
+    **Nothing here recommends turning `price_conversions` off**, and nothing
+    here changes a value. The value in `_weights.yaml` is deliberately left
+    stale: re-stamping 325 → 335 measures identically and would move the input
+    fingerprint, invalidating every control quoted against `208b8d329f8e` for
+    no gain. The open question — whether `calibrate` should neutralise
+    community-derived CONSTANTS the way it zeroes community-derived SIGNALS —
+    is answered "it cannot" in `calibrate.py`'s docstring: a signal has a zero
+    and a constant does not, emptying this key is the opposite of neutral in
+    the assembly half, and the only real neutralisation is substituting a
+    different constant, which is a model change and belongs in `_weights.yaml`.
+    §5 carries what to do instead.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1408,6 +1514,51 @@ co-purchase (`pairing`). Each was admitted on one bar — checkable today from
 the module docstring so nobody re-derives them. The two `narrative` claims on
 file were re-examined and fit none of the six; each says in its `notes` what
 it would need. Still four claims: this built the pipe and did not fill it.
+
+### "Leakage-free" is a claim about signals, and constants are not covered
+§4.23 found and measured the one place this bites — `conversion_reference`, a
+median over community builds, read by a flag that ships ON — and the answer was
+−2.6pp / −0.6pp of level and no verdict. What is left is the rule, and it is a
+decision rather than a measurement, so it is recorded here and not taken.
+
+**`calibrate` should NOT neutralise community-derived constants, because it
+cannot.** Zeroing a signal is well-defined: the weight goes to zero and the
+term vanishes. A constant has no zero — emptying `conversion_reference` does
+not remove it, it substitutes 0, and in the assembly half that is the
+*opposite* of neutral, since `assemble.conversion_score_bonus` then subtracts
+no reference and credits a converter with its whole mana. The only available
+neutralisation is substituting a different constant, which is a model change; a
+`calibrate` that swaps constants behind the config reports the number for a
+model nobody ships, which is precisely the defect `efficiency.apply_pricing_flags`
+exists to close, arriving from the other side. There is also nothing to
+intercept at runtime: `measure_conversion_reference` has no production caller,
+so this leak is a one-time human transfer and not a live loop.
+
+Three things that would help, in order of cost:
+
+1. **Declare, don't neutralise.** A registry — a list naming every
+   `_weights.yaml` key derived from the community record, and a test that fails
+   when a key not on it is produced by a function reading
+   `entry["source"] == "community"` — makes the next one declared rather than
+   discovered eleven weeks later. That is enforceable; zeroing is not.
+2. **Decide whether the MODEL should carry a community-free reference.**
+   §4.20 measured three candidates and they cost the same: −2.6pp / −0.6pp of
+   level, no verdict changed, `price_conversions` still beating OFF on the same
+   standard. It is a small, cheap, honest change and it is the only way to make
+   the leakage-free measure actually leakage-free here. It also moves the input
+   fingerprint, so it wants its own session and a re-stamped `_calibration.md`.
+3. **Sequence it with the passive work.** 09-02 D's `measure_multiplier_reference`
+   already builds a pool-derived reference (`slots=5`, because the item being
+   priced is the sixth). A conversion reference wants `slots=6` —
+   `conversion_grants` includes the item's own contribution, "you own it once
+   the item is bought" — so the two are the same measurement at different slot
+   counts and a shared helper must keep `slots` a parameter. **Do not unify
+   them at 5.** And prefer the per-item shape (the item's own value plus the
+   pool mean over the other five slots) over a flat pool mean: the flat mean
+   prices Transcendence's source stat at 235 when the item alone carries 300,
+   while the per-item form recovers the community's own 500 from item data
+   alone (Transcendence 446, Book of Thoth 546). It needs
+   `conversion_grants` to take a per-item reference, which nothing does today.
 
 ### The win signal is still a constant for ~92% of the pool
 SmiteBrain reports a win rate for a median of **11 items per god** against a
@@ -1745,7 +1896,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Items placed | 204 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 matches, and 13 more items crossed into enough sightings to earn a tier band. Still below the 226 the pre-reset thirteen-day window placed. Tracks the DATA, not the model |
 | Community sample | 8,200 Obsidian+ Conquest matches, 25 Aug – 1 Sep — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now seven days deep against a peak of 18,716 on thirteen. Three more `chore(data): daily community refresh` commits (af04139, e910b75, ea3b5e7) landed since the 3,498/three-day reading; `git diff --name-only d957319 HEAD` (the commit that reading was taken at) touches only `data/builds/`, `data/_community_items.json` and `viewer/public/index.json` — no weights, no pipeline or viewer code — so every figure below this row that moved, moved on data alone. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
 | Headline gate | coverage 53.0%, win-weighted 54.9% — up +3.4pp/+1.9pp off the 49.6%/53.0% this row carried at fingerprint `052cab0a44cc`, on the data move above and nothing else. Read this as more evidence arriving, not as a verdict — both targets are model inputs (§1) |
-| **Leakage-free** | **40.9% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.6–7.2×** — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-01 at input fingerprint `208b8d329f8e`: the 41.5 · 38.4 vs 5.7 this row carried was fingerprint `052cab0a44cc` and describes the 3,498-match reading, so the −0.6pp/−0.8pp is the three `chore(data): daily community refresh` commits named above and NOT a model change — same diff, same "touches only data" check. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%** at both fingerprints, off a byte-identical pool of 90 gods and 226 items, so the 5.7%/5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and the leakage-free probe moved in OPPOSITE directions on the same data move (headline gate up, this row down), which is exactly what §1 says a metric with the community's own build as a target will do and not a reason to prefer either reading |
+| **Leakage-free** | **40.9% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.6–7.2×** — **this level is not fully leakage-free and §4.20 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-01 at input fingerprint `208b8d329f8e`: the 41.5 · 38.4 vs 5.7 this row carried was fingerprint `052cab0a44cc` and describes the 3,498-match reading, so the −0.6pp/−0.8pp is the three `chore(data): daily community refresh` commits named above and NOT a model change — same diff, same "touches only data" check. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%** at both fingerprints, off a byte-identical pool of 90 gods and 226 items, so the 5.7%/5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and the leakage-free probe moved in OPPOSITE directions on the same data move (headline gate up, this row down), which is exactly what §1 says a metric with the community's own build as a target will do and not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
 | Cap overflow | 47 -> 0, and back -> 0 of 2433 builds over the penetration cap. `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — and `offmap_efficiency` at 0.55 put three back (§7's 2026-08-29 reading, 3 of 2390). The community window rebuilding (see Community sample) moved both numbers again: suggested-build count went 2,479 (post-reset) → 2,433 (Conquest 810, Joust 811, Arena 812) and the three over-cap builds are gone with it. That the count fell further while the community sample GREW is not the direction the Items-placed and Headline-gate rows moved in, and this file does not have a mechanism for it on record — reported as a fact, not explained away. Neither number is a model change: no weights, pipeline or viewer code moved in the commits behind it (see Community sample). See `cap_overflow` |
 | Combat model | 0.0% worst case over 12 observations |
