@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Void Shield
+  - Spear of Desolation
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Void Shield
+  - Spear of Desolation
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.65
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Void Shield:
+      total: 0.64
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Spear of Desolation:
+      total: 0.47
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.72
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.93
+    Stampede:
+      total: 0.66
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+  swaps:
+  - added: Spear of Desolation
+    removed: Void Stone
+    reason: Conquest community 67% win over 57 matches (vs 53% on this god), taking
+      the model's weakest slot from Void Stone
+  borrowed_from: Conquest
+  starter: *id001
 ---
