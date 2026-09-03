@@ -42,8 +42,25 @@ const perMode = <T,>(flat: Record<string, T>) =>
 
 const GOD_ITEM_SCORES = perMode({ TestGod: SCORES });
 
+/* THE BUILD IS THE PIPELINE'S, so every case needs the note that carries it.
+ * The board no longer assembles six items out of GOD_ITEM_SCORES — that second
+ * assembler is what put the draft and the god page on different builds for
+ * 2,057 of 2,247 build groups — so the table is the CANDIDATE pool and the
+ * note is the build. `flex_slots` names Zeta, the slot the pipeline is least
+ * sure about, which is where a swap lands. */
+const CORE6 = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
+const suggested = (archetype: string, slot_order: string[], extra: Record<string, unknown> = {}) =>
+  ({ source: "suggested", archetype, slot_order, flex_slots: ["Zeta"], ...extra });
+const note = (mode: string, entries: unknown[], god = "TestGod") =>
+  ({ type: "smite-build", god, mode, builds: entries });
+const CORES = ["Conquest", "Joust", "Arena"].map(
+  (m) => note(m, [suggested("core", CORE6)])) as unknown as BuildNote[];
+
 const DRAFT_CFG: DraftConfig = {
-  max_bonus: 0.5, per_share: 0.5,
+  // `per_share` is 4 rather than production's 0.1 so ONE healer clears the swap
+  // bar (`max_bonus`) on its own: a swap now has to be paid for by the overlay,
+  // so a fixture that never clears the bar would test nothing.
+  max_bonus: 0.5, per_share: 4,
   tag_bonus: { healers: { "anti-heal": 1 } }, stat_bonus: {},
   ally_covered: -0.5, ally_gap: 0.5,
 };
@@ -60,7 +77,7 @@ const run = (
   const opts = (scores && "builds" in scores ? scores : {}) as { builds?: BuildNote[] };
   const useScores = (scores && "builds" in scores ? GOD_ITEM_SCORES : scores) as typeof GOD_ITEM_SCORES;
   return renderHook(() => useDraftResult(
-    comp(allies, enemies), "conquest", GODS, ITEMS, opts.builds ?? [], useScores, cfg,
+    comp(allies, enemies), "conquest", GODS, ITEMS, opts.builds ?? CORES, useScores, cfg,
   )).result.current;
 };
 
@@ -200,7 +217,7 @@ describe("draftMaxLifesteal — reads the shipped rule, not a copy of it", () =>
 describe("useDraftResult — what your god opens with", () => {
   const withStarters = [{
     god: "TestGod", mode: "Conquest", type: "smite-build",
-    builds: [{
+    builds: [suggested("core", CORE6), {
       source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
       slot_order: [], source_url: "",
       community_starters: [
@@ -249,22 +266,52 @@ describe("useDraftResult — the mode selector selects a model, not a label", ()
       arena: { Alpha: 0.1, Beta: 0.1, Gamma: 0.9, Delta: 0.1, Epsilon: 0.1, Zeta: 0.1 },
     },
   };
-  const at = (mode: "conquest" | "joust") => renderHook(() => useDraftResult(
-    comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
-    mode, GODS, ITEMS, [], PER_MODE, DRAFT_CFG,
+  /* The mode now selects TWO things and both are the pipeline's: the build
+     note it scored for that mode, and the candidate table the overlay ranks
+     against. The note comes first — a mode's core is `assemble_core_converged`
+     run under `modes.<mode>` weights, which is a different build and not a
+     re-ranking of Conquest's. */
+  const PER_MODE_NOTES = [
+    note("Conquest", [suggested("core", CORE6)]),
+    note("Joust", [suggested("core", ["Beta", "Alpha", "Gamma", "Delta", "Epsilon", "Zeta"])]),
+    note("Arena", [suggested("core", ["Gamma", "Alpha", "Beta", "Delta", "Epsilon", "Zeta"])]),
+  ] as unknown as BuildNote[];
+  const at = (mode: "conquest" | "joust", enemies = ["", "", "", "", ""]) => renderHook(() => useDraftResult(
+    comp(["TestGod", "", "", "", ""], enemies),
+    mode, GODS, ITEMS, PER_MODE_NOTES, PER_MODE, DRAFT_CFG,
   )).result.current;
 
-  it("reads the table for the selected mode", () => {
+  it("reads the build the pipeline assembled for the selected mode", () => {
     expect(at("conquest").result?.adapted.core[0]).toBe("Alpha");
     expect(at("joust").result?.adapted.core[0]).toBe("Beta");
+  });
+
+  it("ranks candidates in the selected mode's own table", () => {
+    // AntiHeal is absent from PER_MODE entirely, so the one candidate that
+    // could answer a healer is not in the pool and the build cannot move —
+    // which is the mode's table doing the deciding rather than Conquest's.
+    const r = at("joust", ["EnemyHealer", "", "", "", ""]);
+    expect(r.result?.adapted.core).toEqual(
+      ["Beta", "Alpha", "Gamma", "Delta", "Epsilon", "Zeta"]);
   });
 
   it("disables the draft for a god with no table in this mode", () => {
     const r = renderHook(() => useDraftResult(
       comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
-      "joust", GODS, ITEMS, [], { TestGod: { conquest: { Alpha: 0.9 } } }, DRAFT_CFG,
+      "joust", GODS, ITEMS, PER_MODE_NOTES, { TestGod: { conquest: { Alpha: 0.9 } } }, DRAFT_CFG,
     )).result.current;
     expect(r.draftEnabled).toBe(false);
+  });
+
+  it("disables the draft for a god the pipeline shipped no build for", () => {
+    const r = renderHook(() => useDraftResult(
+      comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
+      "conquest", GODS, ITEMS, [], PER_MODE, DRAFT_CFG,
+    )).result.current;
+    // There is one assembler and it is the pipeline's, so no note means no
+    // build — the board says so rather than inventing a sixth-best six.
+    expect(r.draftEnabled).toBe(false);
+    expect(r.result).toBeNull();
   });
 });
 
@@ -276,12 +323,12 @@ describe("useDraftResult — the mode selector selects a model, not a label", ()
 describe("useDraftResult — openers fall back to Conquest, and say so", () => {
   const conquestOnly = [{
     god: "TestGod", mode: "Conquest", type: "smite-build",
-    builds: [{
+    builds: [suggested("core", CORE6), {
       source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
       slot_order: [], source_url: "",
       community_starters: [{ name: "Archmage's Gem", pick_rate: 0.25, win_rate: 0.64 }],
     }],
-  }] as unknown as BuildNote[];
+  }, ...CORES.slice(1)] as unknown as BuildNote[];
   const at = (mode: "conquest" | "joust") => renderHook(() => useDraftResult(
     comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
     mode, GODS, ITEMS, conquestOnly, GOD_ITEM_SCORES, DRAFT_CFG,
@@ -312,7 +359,7 @@ describe("useDraftResult — relics answer threats the six slots cannot", () => 
   const CFG: DraftConfig = { ...DRAFT_CFG, relics: { walls: { item: "Shell of Rebuke", because: "walls" } } };
   const at = (enemies: string[], cfg: DraftConfig = CFG) => renderHook(() => useDraftResult(
     comp(["TestGod", "", "", "", ""], enemies),
-    "conquest", [...GODS, waller], ITEMS, [], GOD_ITEM_SCORES, cfg,
+    "conquest", [...GODS, waller], ITEMS, CORES, GOD_ITEM_SCORES, cfg,
   )).result.current;
 
   it("suggests the relic once a wall-maker is on the board", () => {
@@ -347,12 +394,20 @@ describe("useDraftResult — the aspect selects a different table when one exist
     },
   };
   const UNSCORED = { TestGod: { conquest: { Alpha: 0.9, Beta: 0.1, Gamma: 0.1 } } };
+  /* The god page ships a SECOND family of entries for a god with an aspect,
+     stamped with the aspect's name, and the toggle selects that family here
+     the same way it does there. */
+  const ASPECT_NOTES = [note("Conquest", [
+    suggested("core", CORE6),
+    suggested("core", ["Beta", "Alpha", "Gamma", "Delta", "Epsilon", "Zeta"],
+      { aspect: "Aspect of Testing" }),
+  ])] as unknown as BuildNote[];
   const at = (scores: typeof SCORED | typeof UNSCORED, aspectOn: boolean) => renderHook(() => useDraftResult(
     comp(["TestGod", "", "", "", ""], ["", "", "", "", ""]),
-    "conquest", GODS, ITEMS, [], scores as never, DRAFT_CFG, undefined, aspectOn,
+    "conquest", GODS, ITEMS, ASPECT_NOTES, scores as never, DRAFT_CFG, undefined, aspectOn,
   )).result.current;
 
-  it("builds from the aspect table when the god has one", () => {
+  it("builds from the aspect's own entry when the god has one", () => {
     expect(at(SCORED, false).result?.adapted.core[0]).toBe("Alpha");
     expect(at(SCORED, true).result?.adapted.core[0]).toBe("Beta");
     expect(at(SCORED, true).aspectScored).toBe(true);

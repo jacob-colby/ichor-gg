@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, within } from "@testing-library/react";
 import { DraftPage } from "./DraftPage";
-import type { DraftConfig, God, Item } from "../types";
+import type { BuildNote, DraftConfig, God, Item } from "../types";
 
 const god = (name: string, overrides: Partial<God> = {}): God =>
   ({
@@ -41,11 +41,30 @@ const GOD_ITEM_SCORES: Record<string, Record<string, Record<string, number>>> = 
   TestGod: SCORES, EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
 });
 
+/* THE BOARD STARTS FROM THE PIPELINE'S BUILD, so a fixture needs one.
+ *
+ * Until 2026-09-03 these tests passed `builds={BUILDS}` and the page re-assembled
+ * six items out of GOD_ITEM_SCORES — which is exactly the second assembler
+ * that made the draft and the god page disagree on 2,057 of 2,247 build
+ * groups. There is one assembler now and it is the pipeline's, so the note is
+ * the input and a god without one has nothing to adapt. */
+const CORE6 = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
+const buildNote = (mode: string, entries: Record<string, unknown>[]): BuildNote =>
+  ({ type: "smite-build", god: "TestGod", mode, builds: entries }) as unknown as BuildNote;
+const suggested = (archetype: string, slot_order: string[], extra: Record<string, unknown> = {}) =>
+  ({ source: "suggested", archetype, slot_order, flex_slots: [], ...extra });
+const BUILDS: BuildNote[] = ["Conquest", "Joust", "Arena"].map(
+  (m) => buildNote(m, [suggested("core", CORE6)]));
+
 // Exaggerated weights vs. production _weights.yaml — the point of this
 // fixture is a deterministic, clearly visible promotion, not realism.
 const DRAFT_CFG: DraftConfig = {
   max_bonus: 0.5,
-  per_share: 0.5,
+  // `per_share` is 4 rather than production's 0.1 so ONE healer clears the
+  // swap bar (`max_bonus`) on its own — the board now demands that a swap be
+  // paid for by the overlay, so a fixture that never clears the bar would test
+  // nothing. See `adaptFromCore`.
+  per_share: 4,
   tag_bonus: { healers: { "anti-heal": 1 } },
   stat_bonus: {},
   ally_covered: -0.5,
@@ -59,29 +78,29 @@ beforeEach(() => {
 
 describe("DraftPage", () => {
   it("labels ally slot 1 as yours, visually distinct from the rest of the row", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     expect(screen.getByText("You")).toBeInTheDocument();
     expect(screen.getByLabelText("Add you")).toBeInTheDocument();
   });
 
   it("shows a teaching empty state and renders no build while the you-slot is empty", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     expect(screen.getByText(/put your god in the gold slot/i)).toBeInTheDocument();
     expect(screen.queryByText("AntiHeal")).not.toBeInTheDocument();
     expect(screen.queryByText(/adapted core/i)).not.toBeInTheDocument();
   });
 
   it("renders the adapted core once the you-slot is filled", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     // With no enemies entered nothing has adapted, so the list says so.
-    expect(screen.getByText(/the default core/i)).toBeInTheDocument();
+    expect(screen.getByText(/the god page.s build/i)).toBeInTheDocument();
     expect(screen.getAllByText(/^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|AntiHeal)$/)).toHaveLength(6);
   });
 
   it("promotes a countering item once a threat is entered", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -93,7 +112,7 @@ describe("DraftPage", () => {
   });
 
   it("names what a promoted item displaced, and by how much", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -104,7 +123,7 @@ describe("DraftPage", () => {
     // Hedged: the pairing is by rank, not a swap the assembler made.
     expect(core.getByText(/in place of/i)).toBeInTheDocument();
     expect(core.getByText("Zeta")).toBeInTheDocument();
-    expect(core.getByText(/^\+0\.\d\d$/)).toBeInTheDocument();
+    expect(core.getByText(/^\+\d\.\d\d$/)).toBeInTheDocument();
     // The threat names sit in their own span now (they are the answer, so
     // they carry `ink-soft` inside a `muted` sentence), so this has to match
     // across elements rather than within one.
@@ -113,7 +132,7 @@ describe("DraftPage", () => {
   });
 
   it("puts the build itself above the diff that explains it", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -129,15 +148,15 @@ describe("DraftPage", () => {
   });
 
   it("states plainly when the draft has not moved the build", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/hasn.t moved this build yet/i);
-    expect(within(screen.getByTestId("draft-core")).getByText(/add an enemy and the model starts re-ranking/i)).toBeInTheDocument();
+    expect(within(screen.getByTestId("draft-core")).getByText(/add an enemy and the model starts weighing it/i)).toBeInTheDocument();
   });
 
   it("leads with the number of items the draft moved", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -146,7 +165,7 @@ describe("DraftPage", () => {
   });
 
   it("denominates threats by the enemy roster, not by how many are entered", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -160,7 +179,7 @@ describe("DraftPage", () => {
   });
 
   it("renders threats that measured zero, once anything has been scouted", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -174,7 +193,7 @@ describe("DraftPage", () => {
   it("does not print measured zeros before anything has been scouted", () => {
     // The opposite error to the one this redesign fixed: with no enemies in,
     // "0/5 crit" is unmeasured, not measured.
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     const threats = within(screen.getByTestId("draft-threats"));
@@ -186,14 +205,14 @@ describe("DraftPage", () => {
     // A physical god alone used to trigger the all-physical penetration bonus
     // at full strength, so the page reported "moved 4 of 6 items" directly
     // above copy saying nothing had adapted yet.
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/hasn.t moved this build yet/i);
   });
 
   it("names the enemies behind a threat", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
@@ -202,7 +221,7 @@ describe("DraftPage", () => {
   });
 
   it("mode toggle switches Conquest(5v5) to Joust(3v3) and truncates rather than clears", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Add ally 5"));
@@ -217,7 +236,7 @@ describe("DraftPage", () => {
   it("renders a Copy link button that copies the current URL to the clipboard", () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.assign(navigator, { clipboard: { writeText } });
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     fireEvent.click(screen.getByRole("button", { name: /copy link/i }));
     // Encoded from state, not read off the address bar — the two can disagree.
     expect(writeText).toHaveBeenCalledWith(expect.stringContaining("#/draft"));
@@ -225,7 +244,7 @@ describe("DraftPage", () => {
 
   it("keeps the shareable URL in sync (via replaceState) as the draft is entered", () => {
     window.location.hash = "#/draft";
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     expect(window.location.hash).toContain("me=TestGod");
@@ -234,13 +253,13 @@ describe("DraftPage", () => {
   it("a URL draft wins over a saved localStorage draft on load", () => {
     localStorage.setItem("smite:draft", JSON.stringify({ mode: "conquest", allies: ["Buddy", "", "", "", ""], enemies: [] }));
     window.location.hash = "#/draft?m=conquest&me=TestGod";
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     expect(screen.getByLabelText("Change you (TestGod)")).toBeInTheDocument();
   });
 
   it("ignores unknown/untracked god names from the URL", () => {
     window.location.hash = "#/draft?m=conquest&me=NotTracked";
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     expect(screen.getByLabelText("Add you")).toBeInTheDocument();
   });
 
@@ -249,7 +268,7 @@ describe("DraftPage", () => {
    * line below the enemy row it exists to be compared against. It is a badge on
    * the slot now, so both rows share one structure and one baseline. */
   it("gives ally and enemy slots identical structure, so the rows share a baseline", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     const ally = screen.getByLabelText("Add ally 2");
     const enemy = screen.getByLabelText("Add enemy 2");
     expect(ally.className).toBe(enemy.className);
@@ -257,7 +276,7 @@ describe("DraftPage", () => {
   });
 
   it("marks your own slot once, without a caption row", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     const labels = screen.getAllByText("You");
     expect(labels).toHaveLength(1);
     // A badge on the slot, not a line above it.
@@ -268,7 +287,7 @@ describe("DraftPage", () => {
   /* The portrait is the slot. The name used to sit inside the button under the
    * icon, costing it half its height for a label the art already carries. */
   it("gives the portrait the whole slot and keeps the name reachable", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     fireEvent.click(screen.getByLabelText("Add ally 2"));
     fireEvent.click(screen.getByText("Buddy"));
     const slot = screen.getByLabelText("Change ally 2 (Buddy)");
@@ -279,14 +298,14 @@ describe("DraftPage", () => {
   });
 
   it("stacks Allies and Enemies until there is room for them side by side", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     const teams = screen.getByTestId("draft-teams");
     expect(teams.className).toMatch(/flex-col/);
     expect(teams.className).toMatch(/lg:flex-row/);
   });
 
   it("removes a filled ally slot via its X control without opening the god picker", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     fireEvent.click(screen.getByLabelText("Add ally 2"));
     fireEvent.click(screen.getByText("Buddy"));
     expect(screen.getByLabelText("Change ally 2 (Buddy)")).toBeInTheDocument();
@@ -300,7 +319,7 @@ describe("DraftPage", () => {
   });
 
   it("removes the you-slot via its X control, distinctly labeled from a plain ally slot", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     fireEvent.click(screen.getByLabelText("Remove TestGod from allies"));
@@ -308,7 +327,7 @@ describe("DraftPage", () => {
   });
 
   it("removes a filled enemy slot via its X control, labeled with the enemies row", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
     fireEvent.click(screen.getByLabelText("Add enemy 1"));
     fireEvent.click(screen.getByText("EnemyHealer"));
     fireEvent.click(screen.getByLabelText("Remove EnemyHealer from enemies"));
@@ -316,7 +335,7 @@ describe("DraftPage", () => {
   });
 
   it("does not show a remove control on an empty slot", () => {
-    render(<DraftPage gods={GODS} items={[]} builds={[]} />);
+    render(<DraftPage gods={GODS} items={[]} builds={BUILDS} />);
     expect(screen.queryByLabelText(/^Remove /)).not.toBeInTheDocument();
   });
 
@@ -325,7 +344,7 @@ describe("DraftPage", () => {
      advance from being a surprise. */
   describe("the picker advances", () => {
     it("moves to the next empty slot on the same side instead of closing", () => {
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       fireEvent.click(screen.getByLabelText("Add enemy 1"));
       fireEvent.click(screen.getByText("EnemyHealer"));
       // Still open, and saying which slot it moved to.
@@ -335,7 +354,7 @@ describe("DraftPage", () => {
     });
 
     it("fills a whole row without re-opening the picker", () => {
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       fireEvent.click(screen.getByLabelText("Add enemy 1"));
       // One open, three picks. Each god is disabled for the next slot on its
       // own team, so this also proves the taken-set follows the advance.
@@ -348,7 +367,7 @@ describe("DraftPage", () => {
     });
 
     it("closes rather than advancing when the slot re-filled was already occupied", () => {
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       fireEvent.click(screen.getByLabelText("Add enemy 1"));
       fireEvent.click(screen.getByText("EnemyHealer"));
       fireEvent.click(screen.getByLabelText("Close"));
@@ -360,7 +379,7 @@ describe("DraftPage", () => {
     });
 
     it("clears the search box on each advance, so the next slot starts fresh", () => {
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       fireEvent.click(screen.getByLabelText("Add enemy 1"));
       const search = screen.getByLabelText("Search gods");
       fireEvent.change(search, { target: { value: "EnemyHealer" } });
@@ -377,7 +396,7 @@ describe("DraftPage", () => {
   describe("a link carrying names this build cannot place", () => {
     it("says which names were dropped, and why", () => {
       window.location.hash = "#/draft?m=conquest&me=TestGod&e=EnemyHealer,Hel,Cabrakan";
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       const notice = screen.getByRole("status");
       expect(notice).toHaveTextContent("Hel, Cabrakan");
       expect(notice).toHaveTextContent(/no scored build here/i);
@@ -387,13 +406,13 @@ describe("DraftPage", () => {
 
     it("says nothing on a link it could read in full", () => {
       window.location.hash = "#/draft?m=conquest&me=TestGod&e=EnemyHealer";
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       expect(screen.queryByRole("status")).not.toBeInTheDocument();
     });
 
     it("is dismissible, and does not outlive an edit to the board", () => {
       window.location.hash = "#/draft?m=conquest&me=TestGod&e=Hel";
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       expect(screen.getByRole("status")).toBeInTheDocument();
       fireEvent.click(screen.getByLabelText("Add enemy 1"));
       fireEvent.click(screen.getByText("EnemyHealer"));
@@ -403,7 +422,7 @@ describe("DraftPage", () => {
 
     it("keeps the notice out of gold — the page reporting on its own input is not the model talking", () => {
       window.location.hash = "#/draft?m=conquest&me=TestGod&e=Hel";
-      render(<DraftPage gods={GODS} items={[]} builds={[]} godItemScores={GOD_ITEM_SCORES} />);
+      render(<DraftPage gods={GODS} items={[]} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} />);
       const notice = screen.getByRole("status");
       expect(notice.className).not.toMatch(/gold/);
       expect(within(notice).getByText(/Hel/).className).not.toMatch(/gold/);
@@ -411,7 +430,7 @@ describe("DraftPage", () => {
   });
 
   it("keeps gold off item cost — it is neither selection, primary action, nor the model's signal", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
     screen.getAllByText("2500g").forEach((c) => expect(c).not.toHaveClass("text-gold"));
@@ -428,7 +447,7 @@ describe("DraftPage — a named threat that changed nothing", () => {
     item("Epsilon"), item("Zeta")];
 
   it("says a threat was weighed when the core still doesn't answer it", () => {
-    render(<DraftPage gods={GODS} items={noAnswer} builds={[]}
+    render(<DraftPage gods={GODS} items={noAnswer} builds={BUILDS}
       godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
@@ -441,7 +460,7 @@ describe("DraftPage — a named threat that changed nothing", () => {
   });
 
   it("names the item when the core does answer it", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]}
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS}
       godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
@@ -459,7 +478,7 @@ describe("DraftPage — a named threat that changed nothing", () => {
   it("names two answers and counts the rest", () => {
     const many = ["Alpha", "Beta", "Gamma", "Delta"].map((n) => item(n, ["anti-heal"]))
       .concat([item("Epsilon"), item("Zeta")]);
-    render(<DraftPage gods={GODS} items={many} builds={[]}
+    render(<DraftPage gods={GODS} items={many} builds={BUILDS}
       godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
@@ -476,7 +495,7 @@ describe("DraftPage — a named threat that changed nothing", () => {
     const waller = god("Waller", { threat_kit: { wall: 1, heal: 0, hard_cc: 0 } } as Partial<God>);
     const cfg: DraftConfig = { ...DRAFT_CFG,
       relics: { walls: { item: "Shell of Rebuke", because: "walks your team out of their walls" } } };
-    render(<DraftPage gods={[...GODS, waller]} items={ITEMS} builds={[]}
+    render(<DraftPage gods={[...GODS, waller]} items={ITEMS} builds={BUILDS}
       godItemScores={{ ...GOD_ITEM_SCORES, Waller: { conquest: { Alpha: 0.5 }, joust: { Alpha: 0.5 }, arena: { Alpha: 0.5 } } }}
       draftConfig={cfg} />);
     fireEvent.click(screen.getByLabelText("Add you"));
@@ -490,7 +509,7 @@ describe("DraftPage — a named threat that changed nothing", () => {
   });
 
   it("stays silent about a threat the enemies don't pose", () => {
-    render(<DraftPage gods={GODS} items={ITEMS} builds={[]}
+    render(<DraftPage gods={GODS} items={ITEMS} builds={BUILDS}
       godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
@@ -503,66 +522,89 @@ describe("DraftPage — a named threat that changed nothing", () => {
   });
 });
 
-/* A draft that reorders the same six items.
+/* THE BOARD IS THE GOD PAGE'S BUILD, AND IT OFFERS THE GOD PAGE'S TABS.
  *
- * `diffCore` reduced both cores to a membership Set, so this case produced
- * `added: []`, `removed: []` and a board that said "nothing changed" under a
- * list that had visibly changed. The fixture puts the anti-heal tag on an item
- * ALREADY in the core, so the healer's bonus promotes it without displacing
- * anything — which is a routine outcome of `adaptedCore` filling greedily in
- * adjusted-score order, not a corner case. */
-describe("DraftPage — order-only adaptation", () => {
-  const REORDER_ITEMS = [
-    item("Alpha"), item("Beta"), item("Gamma"),
-    item("Delta"), item("Epsilon"), item("Zeta", ["anti-heal"]),
-  ];
-  const REORDER_SCORES: Record<string, Record<string, Record<string, number>>> = perMode<Record<string, number>>({
-    TestGod: { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55 },
+ * The block this replaces tested an order-only adaptation: the same six items
+ * in a new sequence, which `adaptedCore` produced routinely because it filled
+ * greedily by adjusted score. That state no longer exists — the board starts
+ * from the pipeline's `slot_order` and a swap takes the departed item's slot,
+ * so the draft changes WHAT you buy and never WHEN. The page says so in one
+ * line instead of reporting a resequencing it was causing itself.
+ *
+ * What is tested here instead is the property that replaced it. */
+describe("DraftPage — the pipeline's build, and its tabs", () => {
+  const CRIT6 = ["Zeta", "Epsilon", "Delta", "Gamma", "Beta", "Alpha"];
+  const MULTI: BuildNote[] = ["Conquest", "Joust", "Arena"].map((m) => buildNote(m, [
+    suggested("core", CORE6),
+    suggested("crit", CRIT6),
+  ]));
+  // A score table that DISAGREES with both builds, so anything the board gets
+  // right it gets right by reading the note rather than by re-ranking.
+  const CONTRARY = perMode<Record<string, number>>({
+    TestGod: { AntiHeal: 0.99, Zeta: 0.98, Alpha: 0.1, Beta: 0.2, Gamma: 0.3, Delta: 0.4, Epsilon: 0.5 },
     EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
   });
 
-  const draftWithHealer = () => {
-    render(<DraftPage gods={GODS} items={REORDER_ITEMS} builds={[]}
-      godItemScores={REORDER_SCORES} draftConfig={DRAFT_CFG} />);
+  const board = (builds: BuildNote[], scores = CONTRARY) => {
+    render(<DraftPage gods={GODS} items={ITEMS} builds={builds}
+      godItemScores={scores} draftConfig={DRAFT_CFG} />);
     fireEvent.click(screen.getByLabelText("Add you"));
     fireEvent.click(screen.getByText("TestGod"));
-    fireEvent.click(screen.getByLabelText("Add enemy 1"));
-    fireEvent.click(screen.getByText("EnemyHealer"));
   };
 
-  it("says the build was resequenced instead of claiming nothing moved", () => {
-    draftWithHealer();
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/resequenced/i);
-    expect(screen.getByRole("heading", { level: 1 })).not.toHaveTextContent(/hasn.t moved/i);
+  const shown = () => within(screen.getByTestId("draft-core"))
+    .getAllByText(/^(Alpha|Beta|Gamma|Delta|Epsilon|Zeta|AntiHeal)$/)
+    .map((el) => el.textContent);
+
+  it("shows the shipped build in the shipped order, not a re-ranking of the score table", () => {
+    board(MULTI);
+    expect(shown()).toEqual(CORE6);
   });
 
-  it("names it as same items, different order", () => {
-    draftWithHealer();
-    const changed = within(screen.getByTestId("draft-changed"));
-    expect(changed.getByText(/same six items/i)).toBeInTheDocument();
-    expect(changed.getByText(/different order/i)).toBeInTheDocument();
-    expect(changed.queryByText(/nothing so far/i)).not.toBeInTheDocument();
+  it("offers one tab per build the god actually has", () => {
+    board(MULTI);
+    const strip = within(screen.getByTestId("draft-archetypes"));
+    expect(strip.getByRole("button", { name: "Balanced" })).toBeInTheDocument();
+    expect(strip.getByRole("button", { name: "Crit" })).toBeInTheDocument();
+    // Not a tab this god has no build for.
+    expect(strip.queryByRole("button", { name: "Bruiser" })).not.toBeInTheDocument();
   });
 
-  it("shows the moved item, where it moved to, and why", () => {
-    draftWithHealer();
-    const rows = screen.getAllByTestId("draft-moved");
-    expect(rows.length).toBeGreaterThan(0);
-    const promoted = within(rows[0]);
-    expect(promoted.getByText("Zeta")).toBeInTheDocument();
-    expect(promoted.getByText(/earlier/i)).toBeInTheDocument();
-    // The reason strings already existed on AdaptedCore.reasons; the board
-    // simply had no row to put them on.
-    expect(promoted.getByText(/answers/i)).toBeInTheDocument();
-    expect(promoted.getByText("anti-heal")).toBeInTheDocument();
+  it("does not offer a strip at all when there is only one build", () => {
+    board(BUILDS);
+    expect(screen.queryByTestId("draft-archetypes")).not.toBeInTheDocument();
   });
 
-  it("keeps every item — an order-only change is not a swap", () => {
-    draftWithHealer();
+  it("switching tab shows that build, item for item", () => {
+    board(MULTI);
+    fireEvent.click(within(screen.getByTestId("draft-archetypes")).getByRole("button", { name: "Crit" }));
+    expect(shown()).toEqual(CRIT6);
+  });
+
+  it("says the buy order is the model's and the draft does not move it", () => {
+    board(MULTI);
+    expect(within(screen.getByTestId("draft-changed"))
+      .getByText(/buy order is the model.s and the draft doesn.t move it/i)).toBeInTheDocument();
+  });
+
+  it("still swaps an item in against a real threat, from whichever tab is open", () => {
+    board(MULTI);
+    fireEvent.click(within(screen.getByTestId("draft-archetypes")).getByRole("button", { name: "Crit" }));
+    fireEvent.click(screen.getByLabelText("Add enemy 1"));
+    fireEvent.click(screen.getByText("EnemyHealer"));
     const core = within(screen.getByTestId("draft-core"));
-    expect(core.queryByText(/in place of/i)).not.toBeInTheDocument();
-    for (const name of ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"]) {
-      expect(core.getAllByText(name).length).toBeGreaterThan(0);
-    }
+    expect(core.getAllByText("AntiHeal").length).toBeGreaterThan(0);
+    expect(core.getByText(/in place of/i)).toBeInTheDocument();
+  });
+
+  it("discloses a borrowed community record rather than passing it off", () => {
+    const borrowed: BuildNote[] = ["Conquest", "Joust", "Arena"].map((m) => buildNote(m, [
+      suggested("core", CORE6),
+      suggested("hybrid", CRIT6, { borrowed_from: "Conquest" }),
+    ]));
+    board(borrowed);
+    expect(screen.queryByText(/No Conquest record exists/i)).not.toBeInTheDocument();
+    fireEvent.click(within(screen.getByTestId("draft-archetypes")).getByRole("button", { name: "Hybrid" }));
+    expect(screen.getByText(/No Conquest record exists, so this build uses/i)).toBeInTheDocument();
   });
 });

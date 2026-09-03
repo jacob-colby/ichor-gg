@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { adaptedCore, diffCore } from "./draftBuild";
+import { adaptFromCore, diffCore } from "./draftBuild";
 import type { Item } from "../types";
 
 const item = (name: string, stats: Record<string, string> = {}, tags: string[] = []): Item =>
@@ -12,60 +12,106 @@ const ITEMS = [
   item("Boots1", { "Movement Speed": "18%" }), item("Boots2", { "Movement Speed": "18%" }),
   item("Sustain1", { Lifesteal: "10%" }), item("Sustain2", {}, ["sustain"]),
 ];
+/** The candidate pool — `god_item_scores` for one god in one mode. It ranks
+ *  candidates against each other and nothing else; it does NOT decide the six.
+ *  Deliberately DISAGREES with SHIPPED below (Boots1 outscores Zeta), because
+ *  that disagreement is the bug this module exists to stop the draft acting
+ *  on: `assemble_core_converged` re-prices during assembly and these totals
+ *  are from before it. */
 const BASE: Record<string, number> = {
   Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55,
   AntiHeal: 0.40, Boots1: 0.54, Boots2: 0.53, Sustain1: 0.52, Sustain2: 0.51,
 };
+/** What the pipeline actually assembled and the god page actually shows. */
+const SHIPPED = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
 const byName = Object.fromEntries(ITEMS.map((i) => [i.name, i]));
 
-it("returns the base top-6 when there is no threat overlay", () => {
-  const r = adaptedCore(BASE, byName, { tags: {}, stats: {} }, { maxBonus: 0.12 });
-  expect(r.core).toEqual(["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"]);
+const adapt = (
+  overlay: Parameters<typeof adaptFromCore>[3],
+  opts: Partial<Parameters<typeof adaptFromCore>[4]> = {},
+  shipped: string[] = SHIPPED,
+  base: Record<string, number> = BASE,
+) => adaptFromCore(shipped, base, byName, overlay, { maxBonus: 0.12, ...opts });
+
+const NONE = { tags: {}, stats: {} };
+
+it("returns the pipeline's core verbatim when there is no threat overlay", () => {
+  expect(adapt(NONE).core).toEqual(SHIPPED);
+});
+
+/* THE BUG THIS MODULE EXISTS FOR. `Boots1` outranks `Zeta` in the score table
+ * and the pipeline still did not put it in the core — because it re-prices as
+ * it fills and the shipped totals are from before that. The old draft read the
+ * table, re-assembled, and produced a different build from the god page for
+ * 2,057 of 2,247 build groups. A disagreement in the table is the pipeline's
+ * to have; it is not the draft's to act on. */
+it("does not second-guess the pipeline with the score table", () => {
+  const r = adapt(NONE, {}, SHIPPED, { ...BASE, Boots1: 0.99, AntiHeal: 0.98 });
+  expect(r.core).toEqual(SHIPPED);
 });
 
 it("promotes an item whose tag the overlay rewards, with a reason", () => {
-  const r = adaptedCore(BASE, byName, { tags: { "anti-heal": 0.3 }, stats: {} },
-    { maxBonus: 0.5 });
+  const r = adapt({ tags: { "anti-heal": 0.3 }, stats: {} }, { maxBonus: 0.12 });
   expect(r.core).toContain("AntiHeal");
   expect(r.reasons["AntiHeal"]).toMatch(/anti-heal/i);
 });
 
-it("clamps the total bonus so a huge overlay cannot fully rewrite the build", () => {
-  const r = adaptedCore(BASE, byName, { tags: { "anti-heal": 99 }, stats: {} },
-    { maxBonus: 0.12 });
-  const changed = r.core.filter((n) => !["Alpha","Beta","Gamma","Delta","Epsilon","Zeta"].includes(n));
-  expect(changed.length).toBeLessThanOrEqual(3);
+/* The draft may only spend what the comp earned. A bonus under the bar is
+ * evidence too weak to displace a slot the pipeline chose, and the old code
+ * had no such test at all — anything that out-scored the sixth item went in. */
+it("refuses a swap the overlay did not pay for", () => {
+  const r = adapt({ tags: { "anti-heal": 0.11 }, stats: {} }, { maxBonus: 0.12 });
+  expect(r.core).toEqual(SHIPPED);
+  const paid = adapt({ tags: { "anti-heal": 0.12 }, stats: {} }, { maxBonus: 0.12 });
+  expect(paid.core).toContain("AntiHeal");
 });
 
-it("allows at most one boots", () => {
-  const base = { ...BASE, Boots1: 0.99, Boots2: 0.98 };
-  const r = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12 });
+it("takes the slot the pipeline is least sure about, when it says which", () => {
+  const withFlex = adapt({ tags: { "anti-heal": 0.3 }, stats: {} },
+    { maxBonus: 0.12, flexSlots: ["Gamma"] });
+  expect(withFlex.core).toEqual(["Alpha", "Beta", "AntiHeal", "Delta", "Epsilon", "Zeta"]);
+  // With no flex marked it spends the LAST slot, which is the same rule the
+  // god page's `applySwap` falls back to.
+  const without = adapt({ tags: { "anti-heal": 0.3 }, stats: {} }, { maxBonus: 0.12 });
+  expect(without.core).toEqual(["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "AntiHeal"]);
+});
+
+it("clamps the total bonus so a huge overlay cannot fully rewrite the build", () => {
+  const r = adapt({ tags: { "anti-heal": 99 }, stats: {} }, { maxBonus: 0.12 });
+  expect(r.core.filter((n) => !SHIPPED.includes(n)).length).toBeLessThanOrEqual(3);
+});
+
+it("allows at most one boots — an arriving boots displaces the boots", () => {
+  const shipped = ["Boots1", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
+  const r = adapt({ tags: { "anti-heal": 0.3 }, stats: {} }, { maxBonus: 0.12 },
+    shipped, { ...BASE, Boots2: 0.99 });
   expect(r.core.filter((n) => n.startsWith("Boots")).length).toBe(1);
 });
 
 it("respects the lifesteal cap", () => {
-  const base = { ...BASE, Sustain1: 0.99, Sustain2: 0.98 };
-  const r = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12, maxLifesteal: 1 });
+  const shipped = ["Sustain1", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
+  const r = adapt({ tags: { sustain: 0.3 }, stats: {} }, { maxBonus: 0.12, maxLifesteal: 1 },
+    shipped, { ...BASE, Sustain2: 0.99 });
   expect(r.core.filter((n) => n.startsWith("Sustain")).length).toBe(1);
 });
 
 it("always returns six unique items", () => {
-  const r = adaptedCore(BASE, byName, { tags: {}, stats: {} }, { maxBonus: 0.12 });
+  const r = adapt({ tags: { "anti-heal": 0.3 }, stats: {} });
   expect(r.core).toHaveLength(6);
   expect(new Set(r.core).size).toBe(6);
 });
 
 describe("determinism", () => {
-  it("sorts ties by name ascending regardless of base-object key order", () => {
-    const tiedItems = [item("Zed"), item("Ana"), item("Mno")];
-    const tiedByName = Object.fromEntries(tiedItems.map((i) => [i.name, i]));
-    // Insert keys in an order that does NOT match alphabetical, all equal score.
-    const tiedBase: Record<string, number> = { Zed: 0.5, Ana: 0.5, Mno: 0.5 };
-    const r = adaptedCore(tiedBase, tiedByName, { tags: {}, stats: {} },
-      { maxBonus: 0.12, n: 3 });
-    expect(r.core).toEqual(["Ana", "Mno", "Zed"]);
+  it("breaks ties between arrivals by name, not by base-object key order", () => {
+    const its = { ...byName, Zed: item("Zed", {}, ["anti-heal"]), Ana: item("Ana", {}, ["anti-heal"]) };
+    // Insert keys in an order that does NOT match alphabetical, equal score.
+    const base = { ...BASE, Zed: 0.5, Ana: 0.5 };
+    const r = adaptFromCore(SHIPPED, base, its, { tags: { "anti-heal": 0.3 }, stats: {} },
+      { maxBonus: 0.12 });
+    expect(r.core[5]).toBe("Ana");
   });
 });
+
 
 describe("diffCore", () => {
   const core = (names: string[], bonuses: Record<string, number> = {}, reasons: Record<string, string> = {}) =>
@@ -159,40 +205,43 @@ describe("diffCore", () => {
 /* B6: the per-item damage channel. The tag/stat channels describe an item by
  * its properties; this one carries a number measured for THAT item against the
  * comp actually on the board. */
-describe("adaptedCore — the damage channel", () => {
-  const items = [item("Pen", { Penetration: "20%" }), item("Power", { Intelligence: "100" })];
-  const byName = Object.fromEntries(items.map((i) => [i.name, i]));
-  const base = { Pen: 0.5, Power: 0.52 };
+describe("adaptFromCore — the damage channel", () => {
+  const items = { ...byName, Pen: item("Pen", { Penetration: "20%" }),
+    Power: item("Power", { Intelligence: "100" }) };
+  const base = { ...BASE, Pen: 0.5, Power: 0.52 };
+  const shippedWithPen = ["Pen", "Alpha", "Beta", "Gamma", "Delta", "Epsilon"];
+  const shippedWithout = ["Power", "Alpha", "Beta", "Gamma", "Delta", "Epsilon"];
 
-  it("can promote an item on damage alone", () => {
-    const flat = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12, n: 1 });
-    expect(flat.core).toEqual(["Power"]);
-    const withDamage = adaptedCore(base, byName,
-      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.12, n: 1 });
-    expect(withDamage.core).toEqual(["Pen"]);
+  it("can bring an item in on damage alone", () => {
+    const flat = adaptFromCore(shippedWithout, base, items, NONE, { maxBonus: 0.05 });
+    expect(flat.core).toEqual(shippedWithout);
+    const withDamage = adaptFromCore(shippedWithout, base, items,
+      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.05 });
+    expect(withDamage.core).toContain("Pen");
   });
 
   it("says why, in the diff's own language", () => {
-    const r = adaptedCore(base, byName,
-      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.12, n: 2 });
+    const r = adaptFromCore(shippedWithPen, base, items,
+      { tags: {}, stats: {}, items: { Pen: 0.05 } }, { maxBonus: 0.12 });
     expect(r.reasons["Pen"]).toContain("damage vs their build");
   });
 
   it("names a negative shift as a loss rather than a gain", () => {
-    const r = adaptedCore(base, byName,
-      { tags: {}, stats: {}, items: { Power: -0.05 } }, { maxBonus: 0.12, n: 2 });
+    const r = adaptFromCore(shippedWithout, base, items,
+      { tags: {}, stats: {}, items: { Power: -0.05 } }, { maxBonus: 0.12 });
     expect(r.reasons["Power"]).toContain("less damage");
   });
 
   it("is still bounded by maxBonus, like every other channel", () => {
-    const r = adaptedCore(base, byName,
-      { tags: {}, stats: {}, items: { Pen: 5 } }, { maxBonus: 0.12, n: 2 });
+    const r = adaptFromCore(shippedWithPen, base, items,
+      { tags: {}, stats: {}, items: { Pen: 5 } }, { maxBonus: 0.12 });
     expect(r.bonuses["Pen"]).toBe(0.12);
   });
 
   it("changes nothing when the overlay carries no item channel", () => {
-    const without = adaptedCore(base, byName, { tags: {}, stats: {} }, { maxBonus: 0.12, n: 2 });
-    const empty = adaptedCore(base, byName, { tags: {}, stats: {}, items: {} }, { maxBonus: 0.12, n: 2 });
+    const without = adaptFromCore(shippedWithPen, base, items, NONE, { maxBonus: 0.12 });
+    const empty = adaptFromCore(shippedWithPen, base, items,
+      { tags: {}, stats: {}, items: {} }, { maxBonus: 0.12 });
     expect(empty).toEqual(without);
   });
 });
@@ -204,60 +253,65 @@ describe("adaptedCore — the damage channel", () => {
  * paid the full anti-heal bonus to a second anti-heal item while the first was
  * sitting in the build, and that second copy displaced whatever the build still
  * genuinely needed. */
-describe("adaptedCore — a job already done isn't paid for twice", () => {
+describe("adaptFromCore — a job already done isn't paid for twice", () => {
   const items: Record<string, Item> = {
     AntiHeal1: { name: "AntiHeal1", stats: {}, effect_tags: ["anti-heal"] },
     AntiHeal2: { name: "AntiHeal2", stats: {}, effect_tags: ["anti-heal"] },
     Needed: { name: "Needed", stats: {}, effect_tags: [] },
+    Filler: { name: "Filler", stats: {}, effect_tags: [] },
   } as unknown as Record<string, Item>;
-  // Needed out-scores AntiHeal2 on merit; the overlay is what promotes it.
-  const base = { AntiHeal1: 0.60, Needed: 0.52, AntiHeal2: 0.50 };
+  const base = { AntiHeal1: 0.60, Needed: 0.52, AntiHeal2: 0.50, Filler: 0.40 };
   const overlay = { tags: { "anti-heal": 0.10 }, stats: {} };
+  // The pipeline already bought the first answer; `Needed` is the slot a second
+  // copy would take.
+  const shipped = ["AntiHeal1", "Needed"];
 
   it("pays in full for the FIRST answer to a threat", () => {
-    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 1, selfCovered: 0 });
-    expect(r.core).toEqual(["AntiHeal1"]);
+    const r = adaptFromCore(["AntiHeal1", "Filler"], base, items, overlay,
+      { maxBonus: 1, selfCovered: 0 });
     expect(r.bonuses.AntiHeal1).toBeCloseTo(0.10);
   });
 
   it("does not let a second copy displace what the build still needs", () => {
-    const full = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 1 });
-    expect(full.core).toEqual(["AntiHeal1", "AntiHeal2"]);   // the old behaviour
+    // The bar is `maxBonus`, so at 0.10 an UNDAMPED second copy clears it by
+    // exactly the amount the first one earned — the old behaviour, kept
+    // reachable so the damping is measured against something.
+    const full = adaptFromCore(shipped, base, items, overlay,
+      { maxBonus: 0.10, selfCovered: 1 });
+    expect(full.core).toEqual(["AntiHeal1", "AntiHeal2"]);
 
-    const damped = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0 });
-    expect(damped.core).toEqual(["AntiHeal1", "Needed"]);
+    const damped = adaptFromCore(shipped, base, items, overlay,
+      { maxBonus: 0.10, selfCovered: 0 });
+    expect(damped.core).toEqual(shipped);
   });
 
-  it("still lets a second copy in when it is better on merit anyway", () => {
-    // AntiHeal2 now beats Needed without any overlay help at all.
-    const strong = { AntiHeal1: 0.60, AntiHeal2: 0.55, Needed: 0.50 };
-    const r = adaptedCore(strong, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0 });
-    expect(r.core).toEqual(["AntiHeal1", "AntiHeal2"]);
+  it("still answers a threat the core does NOT already cover", () => {
+    // The damping is keyed on the exact overlay key, so a build with no
+    // anti-heal in it pays in full and the swap goes through — which is the
+    // half of this rule that has to keep working.
+    const r = adaptFromCore(["Filler", "Needed"], base, items, overlay,
+      { maxBonus: 0.10, selfCovered: 0 });
+    expect(r.core).toContain("AntiHeal1");
   });
 
   it("names the damping in the reason, so the row can explain itself", () => {
-    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 2, selfCovered: 0.5 });
-    expect(r.reasons.AntiHeal1).toBe("anti-heal");
+    const r = adaptFromCore(["AntiHeal1", "AntiHeal2"], base, items, overlay,
+      { maxBonus: 1, selfCovered: 0.5 });
+    expect(r.reasons.AntiHeal1).toContain("already covered");
     expect(r.reasons.AntiHeal2).toContain("already covered");
   });
 
   /* A penalty is not a job that can be "already done". Damping it would
    * quietly re-promote the very items the overlay is pushing down. */
   it("never damps a negative bonus", () => {
-    const penalised = { A: 0.60, B: 0.59 };
     const its: Record<string, Item> = {
       A: { name: "A", stats: {}, effect_tags: ["mobility"] },
       B: { name: "B", stats: {}, effect_tags: ["mobility"] },
     } as unknown as Record<string, Item>;
-    const r = adaptedCore(penalised, its, { tags: { mobility: -0.10 }, stats: {} },
-                          { maxBonus: 1, n: 2, selfCovered: 0 });
+    const r = adaptFromCore(["A", "B"], { A: 0.60, B: 0.59 }, its,
+      { tags: { mobility: -0.10 }, stats: {} }, { maxBonus: 1, selfCovered: 0 });
     expect(r.bonuses.A).toBeCloseTo(-0.10);
     expect(r.bonuses.B).toBeCloseTo(-0.10);
-  });
-
-  it("is unchanged from the old single-sort behaviour at selfCovered = 1", () => {
-    const r = adaptedCore(base, items, overlay, { maxBonus: 1, n: 3, selfCovered: 1 });
-    expect(r.core).toEqual(["AntiHeal1", "AntiHeal2", "Needed"]);
   });
 
   /* Per-item damage is measured against the enemy build for THIS item; no
@@ -267,9 +321,9 @@ describe("adaptedCore — a job already done isn't paid for twice", () => {
       A: { name: "A", stats: { Penetration: "20" }, effect_tags: [] },
       B: { name: "B", stats: { Penetration: "20" }, effect_tags: [] },
     } as unknown as Record<string, Item>;
-    const r = adaptedCore({ A: 0.6, B: 0.5 }, its,
+    const r = adaptFromCore(["A", "B"], { A: 0.6, B: 0.5 }, its,
       { tags: {}, stats: {}, items: { A: 0.05, B: 0.05 } },
-      { maxBonus: 1, n: 2, selfCovered: 0 });
+      { maxBonus: 1, selfCovered: 0 });
     expect(r.bonuses.A).toBeCloseTo(0.05);
     expect(r.bonuses.B).toBeCloseTo(0.05);
   });
@@ -286,47 +340,40 @@ describe("adaptedCore — a job already done isn't paid for twice", () => {
  * comp are byte-identical either way. The sharpest symptom of the old rule was
  * that 2 healers and 4 healers produced the SAME build: the bonus doubled and
  * the clamp ate the difference. */
-describe("adaptedCore — the clamp bounds the stack, not the strongest channel", () => {
+describe("adaptFromCore — the clamp bounds the stack, not the strongest channel", () => {
   const opts = { maxBonus: 0.12 };
-  // `bonuses` only records items that made the core, so the item under test
-  // carries a base high enough to survive even the penalty case.
   const MARK = item("Mark", { A: "1", B: "1", C: "1" }, ["anti-heal"]);
   const ITEMS2 = { ...byName, Mark: MARK };
   const BASE2 = { ...BASE, Mark: 0.9 };
+  // Mark is IN the build, so its price is read off the build the reader sees.
+  const SHIPPED2 = ["Mark", "Alpha", "Beta", "Gamma", "Delta", "Epsilon"];
+  const priced = (overlay: Parameters<typeof adaptFromCore>[3]) =>
+    adaptFromCore(SHIPPED2, BASE2, ITEMS2, overlay, opts);
 
   it("lets one well-evidenced channel exceed the flat clamp", () => {
-    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
-    expect(r.bonuses.Mark).toBeCloseTo(0.24, 6);
+    expect(priced({ tags: { "anti-heal": 0.24 }, stats: {} }).bonuses.Mark).toBeCloseTo(0.24, 6);
   });
 
   it("still bounds many weak channels stacking into a rewrite", () => {
     // Four small channels summing past the clamp is exactly the failure the
     // clamp exists for, and none of them individually earned more than 0.12.
-    const r = adaptedCore(BASE2, ITEMS2, {
-      tags: { "anti-heal": 0.05 }, stats: { A: 0.05, B: 0.05, C: 0.05 },
-    }, opts);
+    const r = priced({ tags: { "anti-heal": 0.05 }, stats: { A: 0.05, B: 0.05, C: 0.05 } });
     expect(r.bonuses.Mark).toBeCloseTo(0.12, 6);  // 0.20 earned, clamped
   });
 
   it("distinguishes a 2-of-5 threat from a 4-of-5 one", () => {
     // The old rule could not: both saturated the flat clamp and produced the
-    // same build, so the draft was blind to twice the evidence. Measured on
-    // the shipped data, 2 healers and 4 healers gave 16/31 gods either way.
-    const weak = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.12 }, stats: {} }, opts);
-    const strong = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
+    // same build, so the draft was blind to twice the evidence.
+    const weak = priced({ tags: { "anti-heal": 0.12 }, stats: {} });
+    const strong = priced({ tags: { "anti-heal": 0.24 }, stats: {} });
     expect(strong.bonuses.Mark).toBeGreaterThan(weak.bonuses.Mark);
   });
 
   it("does not widen the floor for a penalty", () => {
-    // A penalty is not a well-evidenced answer to anything, and letting a
-    // strong positive channel widen the negative bound would push items down
-    // harder than the overlay intended.
-    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": -0.4 }, stats: {} }, opts);
-    expect(r.bonuses.Mark).toBeCloseTo(-0.12, 6);
+    expect(priced({ tags: { "anti-heal": -0.4 }, stats: {} }).bonuses.Mark).toBeCloseTo(-0.12, 6);
   });
 
   it("leaves an item with no channels untouched", () => {
-    const r = adaptedCore(BASE2, ITEMS2, { tags: { "anti-heal": 0.24 }, stats: {} }, opts);
-    expect(r.bonuses.Alpha).toBeUndefined();
+    expect(priced({ tags: { "anti-heal": 0.24 }, stats: {} }).bonuses.Alpha).toBeUndefined();
   });
 });
