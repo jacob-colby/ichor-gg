@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.96
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Death Metal
+  - The Reaper
+  flex_slots:
+  - The Reaper
+  - Death Metal
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Toxic Blade:
+      total: 0.66
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Tyrfing:
+      total: 0.61
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Death Metal:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    The Reaper:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+  swaps:
+  - added: The Reaper
+    removed: Golden Blade
+    reason: Conquest community 69% win over 46 matches (vs 54% on this god), taking
+      the model's weakest slot from Golden Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Transcendence
+  - Death Metal
+  - Riptalon
+  - Soul Gem
+  flex_slots:
+  - Jotunn's Revenge
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Transcendence:
+      total: 0.35
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.18
+    Death Metal:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Riptalon:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: Transcendence
+    removed: Tyrfing
+    reason: Conquest community 63% win over 75 matches (vs 51% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

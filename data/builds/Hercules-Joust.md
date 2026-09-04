@@ -396,6 +396,77 @@ builds:
       fit: 0.8
   starter: *id001
 - source: suggested
+  archetype: hybrid
+  slot_order:
+  - Stygian Anchor
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Draconic Scale
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Stygian Anchor
+  - Draconic Scale
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Stygian Anchor:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shield Splitter:
+      total: 0.61
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Draconic Scale:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+  swaps:
+  - added: Draconic Scale
+    removed: Void Shield
+    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Kinetic Cuirass
@@ -789,6 +860,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.91
+  starter: *id001
+  aspect: Aspect of Preservation
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Void Shield
+  - Void Stone
+  - Draconic Scale
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Kinetic Cuirass
+  - Draconic Scale
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Doublet of Binding — magical protection
+    swap_item: Doublet of Binding
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.64
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Void Shield:
+      total: 0.65
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Void Stone:
+      total: 0.64
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Draconic Scale:
+      total: 0.56
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.71
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+  swaps:
+  - added: Draconic Scale
+    removed: Shield of the Phoenix
+    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+      the model's weakest slot from Shield of the Phoenix
+  borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Preservation
 ---

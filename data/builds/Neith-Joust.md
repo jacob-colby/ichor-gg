@@ -720,4 +720,79 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Tyrfing
+  - Riptalon
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Tyrfing
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Tyrfing:
+      total: 0.49
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Riptalon:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Obsidian Shard:
+      total: 0.47
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Tyrfing
+    removed: Jotunn's Revenge
+    reason: Conquest community 67% win over 128 matches (vs 51% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  - added: Obsidian Shard
+    removed: Death Metal
+    reason: Conquest community 70% win over 54 matches (vs 51% on this god), taking
+      the model's weakest slot from Death Metal
+  borrowed_from: Conquest
+  starter: *id001
 ---

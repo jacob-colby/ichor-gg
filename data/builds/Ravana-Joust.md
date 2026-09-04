@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Toxic Blade
-    reason: Conquest community 59% win over 110 matches (vs 47% on this god), taking
+    reason: Conquest community 59% win over 144 matches (vs 49% on this god), taking
       the model's weakest slot from Toxic Blade
   - added: The Reaper
     removed: Runeforged Hammer
-    reason: Conquest community 54% win over 188 matches (vs 47% on this god), taking
+    reason: Conquest community 55% win over 267 matches (vs 49% on this god), taking
       the model's weakest slot from Runeforged Hammer
   borrowed_from: Conquest
   starter: *id001

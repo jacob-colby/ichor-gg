@@ -590,4 +590,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Odysseus' Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Death Metal
+  - Riptalon
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - Odysseus' Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Odysseus' Bow:
+      total: 0.37
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Death Metal:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Riptalon:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Odysseus' Bow
+    removed: Lernaean Bow
+    reason: Conquest community 65% win over 234 matches (vs 59% on this god), taking
+      the model's weakest slot from Lernaean Bow
+  borrowed_from: Conquest
+  starter: *id001
 ---

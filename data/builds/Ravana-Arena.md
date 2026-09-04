@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Void Stone
-    reason: Conquest community 59% win over 110 matches (vs 47% on this god), taking
+    reason: Conquest community 59% win over 144 matches (vs 49% on this god), taking
       the model's weakest slot from Void Stone
   - added: The Reaper
     removed: Void Shield
-    reason: Conquest community 54% win over 188 matches (vs 47% on this god), taking
+    reason: Conquest community 55% win over 267 matches (vs 49% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
