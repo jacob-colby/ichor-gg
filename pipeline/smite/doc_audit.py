@@ -52,6 +52,17 @@ behaviour and not a defect in the gate — three sessions running in parallel
 all add tests, so it will fire for real — and `_tests_note` says so in the
 failure output, because it otherwise reads as the gate being broken.
 
+COUNTED BY THE THING THAT GENERATES THEM. Both test counts come from a
+COLLECTION — `pytest --collect-only`, `vitest list` — and never from a regex
+over source, because a regex cannot see a case a table generates. It was
+tried: a static viewer counter was exact until `methodSeam.test.tsx` arrived
+with an `it.each`, at which point the counter correctly REFUSED, which left
+three rows unverifiable and the gate red on every run. While it was blind the
+viewer figure drifted to 681 against an actual 765 and two sessions
+rediscovered that independently. `static_viewer_test_count` survives only as
+the fallback for a worktree with no `node_modules`, keeping its refusals;
+`vitest_test_count` goes first wherever it can run.
+
 WHAT IS DELIBERATELY NOT GATED is in `UNGATED`, with a reason each. The short
 version: counterfactuals that cannot be re-derived without flipping a weight
 and re-running (the `47 ->` arm of Cap overflow), judgements rather than
@@ -69,6 +80,7 @@ import json
 import re
 import subprocess
 import sys
+import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
@@ -83,7 +95,8 @@ STATE_PATH = REPO_ROOT / "docs" / "STATE.md"
 PRODUCT_PATH = REPO_ROOT / "PRODUCT.md"
 CLAUDE_PATH = REPO_ROOT / "CLAUDE.md"
 INDEX_PATH = REPO_ROOT / "viewer" / "public" / "index.json"
-VIEWER_SRC = REPO_ROOT / "viewer" / "src"
+VIEWER_ROOT = REPO_ROOT / "viewer"
+VIEWER_SRC = VIEWER_ROOT / "src"
 TAGS_PATH = REPO_ROOT / "data" / "_tags.yaml"
 WEIGHTS_PATH = REPO_ROOT / "data" / "_weights.yaml"
 REVIEWS_PATH = REPO_ROOT / "data" / "_expert_reviews.yaml"
@@ -255,7 +268,7 @@ def pipeline_test_count() -> int:
 
 
 #: A bare `it(` / `test(` at the start of a line. Anything fancier is refused
-#: rather than guessed at — see `viewer_test_count`.
+#: rather than guessed at — see `static_viewer_test_count`.
 VIEWER_TEST = re.compile(r"^[ \t]*(?:it|test)\s*\(", re.M)
 VIEWER_TEST_MODIFIER = re.compile(r"^[ \t]*(?:it|test)\.[a-zA-Z]+\s*\(", re.M)
 VIEWER_TEST_FILE = re.compile(r"\.test\.[a-z]+$")
@@ -269,19 +282,20 @@ def _short(path: Path) -> str:
         return str(path)
 
 
-def viewer_test_count(root: Path = VIEWER_SRC) -> int:
-    """Viewer tests, counted statically off the source.
+def static_viewer_test_count(root: Path = VIEWER_SRC) -> int:
+    """Viewer tests, counted statically off the source. The FALLBACK.
 
-    `vitest` is the authority, but a worktree has no `node_modules` — this one
-    does not — so a gate that shelled out to it would be unrunnable exactly
-    where it is needed. A static count is EXACT for this suite today: 43 files,
-    660 declarations, zero `.each` and zero `it.only`/`it.skip`.
+    `vitest` is the authority and `vitest_test_count` asks it. This exists for
+    the tree that cannot be asked — a fresh worktree has no `node_modules` —
+    so the gate still says something where the toolchain is absent.
 
-    It stops being exact the moment a table-driven or modified declaration
-    appears, so both are refused rather than miscounted. `it.each` generates a
-    row per case and `it.skip` still counts as collected, so either would make
-    this number quietly wrong — and a quietly wrong staleness gate is worse
-    than none.
+    Exact only while every declaration is a bare one. It stops being exact the
+    moment a table-driven or modified declaration appears, so both are REFUSED
+    rather than miscounted: `it.each` generates a row per case and `it.skip`
+    still counts as collected, so either would make this number quietly wrong,
+    and a quietly wrong staleness gate is worse than none. Refusing is what
+    kept the count honest between 2026-09-02 and this commit; what it could
+    not do was produce the number, which is why the authority now goes first.
     """
     total, files = 0, 0
     for path in sorted(root.rglob("*")):
@@ -291,18 +305,75 @@ def viewer_test_count(root: Path = VIEWER_SRC) -> int:
         text = path.read_text(encoding="utf-8")
         if ".each" in text:
             raise Uncomputable(
-                f"{_short(path)} uses a `.each` table — the static count cannot "
-                "see how many cases it generates. Count viewer tests another "
-                "way or drop this check; do not let it guess.")
+                f"{_short(path)} uses a `.each` table — this static count cannot "
+                "see how many cases it generates, and `vitest` — which can — is "
+                f"not installed under {_short(VIEWER_ROOT)}. Run `npm ci` there "
+                "and the count is exact; do not let this one guess.")
         modifier = VIEWER_TEST_MODIFIER.search(text)
         if modifier:
             raise Uncomputable(
-                f"{_short(path)} uses `{modifier.group(0).strip()}` — the static "
+                f"{_short(path)} uses `{modifier.group(0).strip()}` — this static "
                 "count does not model modifiers. See above.")
         total += len(VIEWER_TEST.findall(text))
     if not files:
         raise Uncomputable(f"no viewer test files under {root}")
     return total
+
+
+#: `vitest`'s own entry point, relative to the viewer. Invoked through `node`
+#: rather than through `node_modules/.bin`, whose shim is a shell script on
+#: POSIX and a `.cmd` on Windows; `node` on the module runs the same either way.
+VITEST_ENTRY = Path("node_modules") / "vitest" / "vitest.mjs"
+
+
+@functools.cache
+def vitest_test_count(viewer_root: Path = VIEWER_ROOT) -> int | None:
+    """What `vitest` itself collects, or `None` where it cannot be asked.
+
+    THE AUTHORITY, and the counterpart of `pipeline_test_count` above: `vitest
+    list` COLLECTS without running, exactly as `pytest --collect-only` does, so
+    this costs a collection and not a suite. It sees table-driven cases because
+    it is the thing that generates them.
+
+    Returns `None` rather than raising when `vitest` is not installed, because
+    that is the bare-worktree case `static_viewer_test_count` exists to cover
+    and not a broken tree. A `vitest` that IS installed and then fails to
+    collect is a finding, for the same reason a broken `pytest --collect-only`
+    is one: falling back there would report a number for a tree whose
+    collection does not work.
+
+    Cached because three rows check this figure and each collection is seconds.
+    """
+    if not (viewer_root / VITEST_ENTRY).exists():
+        return None
+    with tempfile.TemporaryDirectory() as tmp:
+        listing = Path(tmp) / "tests.json"
+        try:
+            proc = subprocess.run(
+                ["node", str(VITEST_ENTRY), "list", f"--json={listing}"],
+                cwd=viewer_root, capture_output=True, text=True)
+        except OSError:
+            return None                    # no `node` on PATH: also unaskable
+        if proc.returncode != 0 or not listing.exists():
+            raise Uncomputable(
+                f"`vitest list` did not collect (exit {proc.returncode}); "
+                "viewer collection is broken, fix that first — "
+                + " ".join((proc.stderr or proc.stdout).split())[-300:])
+        return len(json.loads(listing.read_text(encoding="utf-8")))
+
+
+def viewer_test_count(root: Path = VIEWER_SRC,
+                      viewer_root: Path = VIEWER_ROOT) -> int:
+    """Viewer tests: `vitest`'s number where it can be had, the parser's where
+    it cannot, and a refusal where neither can speak.
+
+    The two counters answer different questions and the precedence is the whole
+    point. `vitest` is definitionally right; the parser is right only about
+    source it fully models, and says so. Neither ever guesses, so the gate can
+    still only be green on a number something measured.
+    """
+    counted = vitest_test_count(viewer_root)
+    return static_viewer_test_count(root) if counted is None else counted
 
 
 def over_penetration_cap(facts: Facts) -> tuple:

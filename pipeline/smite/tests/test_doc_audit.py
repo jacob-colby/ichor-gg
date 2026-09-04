@@ -9,6 +9,7 @@ row is checked against the real patterns, with all seven of its numbers in
 place, to prove the anchors cannot pick up a retired one.
 """
 import re
+import subprocess
 
 import pytest
 
@@ -342,29 +343,75 @@ def test_register_word_matches_the_shipped_register():
     assert doc_audit._register_word(None, ()) == (doc_audit.NUMBER_WORDS[count],)
 
 
-def test_viewer_count_refuses_a_table_driven_test(tmp_path):
+def test_static_viewer_count_refuses_a_table_driven_test(tmp_path):
     (tmp_path / "a.test.ts").write_text(
         "it.each([[1],[2]])('x', () => {})\n", encoding="utf-8")
+    with pytest.raises(doc_audit.Uncomputable, match="each"):
+        doc_audit.static_viewer_test_count(tmp_path)
+
+
+def test_static_viewer_count_refuses_a_modified_declaration(tmp_path):
+    (tmp_path / "a.test.ts").write_text("it.skip('x', () => {})\n", encoding="utf-8")
+    with pytest.raises(doc_audit.Uncomputable, match="modifiers"):
+        doc_audit.static_viewer_test_count(tmp_path)
+
+
+def test_static_viewer_count_refuses_an_empty_tree(tmp_path):
+    with pytest.raises(doc_audit.Uncomputable, match="no viewer test files"):
+        doc_audit.static_viewer_test_count(tmp_path)
+
+
+def test_static_viewer_count_counts_plain_declarations(tmp_path):
+    (tmp_path / "a.test.tsx").write_text(
+        "describe('g', () => {\n  it('one', () => {})\n  test('two', () => {})\n})\n",
+        encoding="utf-8")
+    assert doc_audit.static_viewer_test_count(tmp_path) == 2
+
+
+# `vitest` is the authority; the parser is the fallback. These fix the
+# PRECEDENCE, which is the part that decides whether one table-driven file can
+# make the gate unusable — one did, for the whole of 2026-09-02.
+
+def test_viewer_count_prefers_vitest_over_the_parser(tmp_path, monkeypatch):
+    """The regression: a file the parser MUST refuse still yields a number."""
+    (tmp_path / "a.test.tsx").write_text(
+        "it.each([[1],[2]])('x', () => {})\n", encoding="utf-8")
+    monkeypatch.setattr(doc_audit, "vitest_test_count", lambda _root=None: 18)
+    assert doc_audit.viewer_test_count(tmp_path) == 18
+
+
+def test_viewer_count_falls_back_to_the_parser_without_vitest(tmp_path, monkeypatch):
+    (tmp_path / "a.test.tsx").write_text(
+        "it('one', () => {})\ntest('two', () => {})\n", encoding="utf-8")
+    monkeypatch.setattr(doc_audit, "vitest_test_count", lambda _root=None: None)
+    assert doc_audit.viewer_test_count(tmp_path) == 2
+
+
+def test_viewer_count_still_refuses_when_neither_can_speak(tmp_path, monkeypatch):
+    """No vitest AND source the parser does not model: a finding, not a guess."""
+    (tmp_path / "a.test.tsx").write_text(
+        "it.each([[1],[2]])('x', () => {})\n", encoding="utf-8")
+    monkeypatch.setattr(doc_audit, "vitest_test_count", lambda _root=None: None)
     with pytest.raises(doc_audit.Uncomputable, match="each"):
         doc_audit.viewer_test_count(tmp_path)
 
 
-def test_viewer_count_refuses_a_modified_declaration(tmp_path):
-    (tmp_path / "a.test.ts").write_text("it.skip('x', () => {})\n", encoding="utf-8")
-    with pytest.raises(doc_audit.Uncomputable, match="modifiers"):
-        doc_audit.viewer_test_count(tmp_path)
+def test_vitest_count_is_none_when_it_is_not_installed(tmp_path):
+    assert doc_audit.vitest_test_count(tmp_path) is None
 
 
-def test_viewer_count_refuses_an_empty_tree(tmp_path):
-    with pytest.raises(doc_audit.Uncomputable, match="no viewer test files"):
-        doc_audit.viewer_test_count(tmp_path)
-
-
-def test_viewer_count_counts_plain_declarations(tmp_path):
-    (tmp_path / "a.test.tsx").write_text(
-        "describe('g', () => {\n  it('one', () => {})\n  test('two', () => {})\n})\n",
-        encoding="utf-8")
-    assert doc_audit.viewer_test_count(tmp_path) == 2
+def test_vitest_count_raises_when_collection_is_broken(tmp_path, monkeypatch):
+    """An installed vitest that cannot collect must NOT fall through to the
+    parser: that would report a number for a tree whose collection is broken.
+    """
+    entry = tmp_path / doc_audit.VITEST_ENTRY
+    entry.parent.mkdir(parents=True)
+    entry.write_text("", encoding="utf-8")
+    monkeypatch.setattr(
+        doc_audit.subprocess, "run",
+        lambda *a, **k: subprocess.CompletedProcess(a, 1, "", "boom"))
+    with pytest.raises(doc_audit.Uncomputable, match="collection is broken"):
+        doc_audit.vitest_test_count(tmp_path)
 
 
 def test_placed_counts_only_banded_entries():
