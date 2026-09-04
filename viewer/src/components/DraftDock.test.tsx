@@ -38,14 +38,24 @@ const GOD_ITEM_SCORES: Record<string, Record<string, Record<string, number>>> = 
 });
 
 const DRAFT_CFG: DraftConfig = {
-  max_bonus: 0.5, per_share: 0.5,
+  max_bonus: 0.5, per_share: 4,
   tag_bonus: { healers: { "anti-heal": 1 } }, stat_bonus: {},
   ally_covered: -0.5, ally_gap: 0.5,
 };
 
+/* THE DOCK STARTS FROM THE PIPELINE'S BUILD TOO, so every fixture needs one.
+ * The dock and /draft share `useDraftResult` precisely so they cannot disagree
+ * about what the build is; giving one a note and the other none would be a
+ * fixture that hides that. */
+const CORE6 = ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta"];
+const SUGGESTED = { source: "suggested", archetype: "core", slot_order: CORE6, flex_slots: [] };
+const CORES = ["Conquest", "Joust", "Arena"].map((mode) => ({
+  type: "smite-build", god: "TestGod", mode, builds: [SUGGESTED],
+})) as unknown as BuildNote[];
+
 const BUILDS = [{
   type: "smite-build", god: "TestGod", mode: "Conquest",
-  builds: [{
+  builds: [SUGGESTED, {
     source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
     slot_order: [], source_url: "",
     community_starters: [
@@ -53,9 +63,9 @@ const BUILDS = [{
       { name: "Bumba's Golden Dagger", pick_rate: 0.21, win_rate: 0.49 },
     ],
   }],
-}] as unknown as BuildNote[];
+}, ...CORES.slice(1)] as unknown as BuildNote[];
 
-const dock = (builds: BuildNote[] = []) => (
+const dock = (builds: BuildNote[] = CORES) => (
   <DraftDock gods={GODS} items={ITEMS} builds={builds} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />
 );
 
@@ -132,7 +142,7 @@ describe("DraftDock — expand and edit in place", () => {
 
   it("expands to reveal every slot, editable", () => {
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /moved|default core|nothing moved/i }));
+    fireEvent.click(screen.getByRole("button", { name: /moved|god page.s build|nothing moved/i }));
     expect(screen.getByRole("button", { name: "Change you (TestGod)" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Add ally 2" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Add enemy 1" })).toBeInTheDocument();
@@ -140,7 +150,7 @@ describe("DraftDock — expand and edit in place", () => {
 
   it("fills a slot from the dock without navigating away", () => {
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
     fireEvent.click(screen.getByText("EnemyHealer"));
     // The slot reflects the pick, live.
@@ -151,7 +161,7 @@ describe("DraftDock — expand and edit in place", () => {
     // Two surfaces render one board. A board that advances on one and not the
     // other is two boards — see `nextEmptySlot`.
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
     fireEvent.click(screen.getByText("EnemyHealer"));
     expect(screen.getByRole("dialog")).toBeInTheDocument();
@@ -160,7 +170,7 @@ describe("DraftDock — expand and edit in place", () => {
 
   it("switches mode, resizing the slots shown", () => {
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     const modeGroup = within(screen.getByRole("group", { name: /game mode/i }));
     fireEvent.click(modeGroup.getByRole("button", { name: "Joust" }));
     expect(screen.getByRole("button", { name: "Add ally 3" })).toBeInTheDocument();
@@ -169,14 +179,14 @@ describe("DraftDock — expand and edit in place", () => {
 
   it("clears the board from the dock", () => {
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     fireEvent.click(screen.getByRole("button", { name: /clear board/i }));
     expect(screen.getByTestId("draft-dock")).toHaveTextContent(/start a draft/i);
   });
 
   it("collapses on Escape and returns focus to the toggle", () => {
     render(dock());
-    const toggle = screen.getByRole("button", { name: /default core/i });
+    const toggle = screen.getByRole("button", { name: /god page.s build/i });
     fireEvent.click(toggle);
     expect(screen.getByRole("group", { name: /game mode/i })).toBeInTheDocument();
     fireEvent.keyDown(window, { key: "Escape" });
@@ -186,7 +196,7 @@ describe("DraftDock — expand and edit in place", () => {
 
   it("collapses from its own ✕ control", () => {
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     fireEvent.click(screen.getByRole("button", { name: /collapse/i }));
     expect(screen.queryByRole("group", { name: /game mode/i })).not.toBeInTheDocument();
   });
@@ -203,8 +213,8 @@ describe("DraftDock — the build, in place", () => {
   it("shows the whole core, so its own claim is checkable here", () => {
     seed(["", "", "", "", ""]);
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
-    const core = screen.getByText("The default core").parentElement!;
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
+    const core = screen.getByText("The god page's build").parentElement!;
     // Six named items, not a count of them.
     expect(within(core).getAllByRole("link")).toHaveLength(6);
     expect(within(core).getByRole("link", { name: /^Alpha/ })).toHaveAttribute("href", "#/items/Alpha");
@@ -231,7 +241,7 @@ describe("DraftDock — the build, in place", () => {
   it("links to the full board for the complete ledger", () => {
     seed(["", "", "", "", ""]);
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     expect(screen.getByRole("link", { name: /full board/i })).toHaveAttribute("href", "#/draft");
   });
 
@@ -240,7 +250,7 @@ describe("DraftDock — the build, in place", () => {
   it("opens the build where the match does, not at item one", () => {
     seed(["", "", "", "", ""]);
     render(dock(BUILDS));
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     const starters = within(screen.getByTestId("dock-starters"));
     expect(starters.getByRole("link", { name: /Gilded Arrow — opened with by 62%/i }))
       .toHaveAttribute("href", "#/items/Gilded%20Arrow");
@@ -250,7 +260,7 @@ describe("DraftDock — the build, in place", () => {
   it("says nothing about openers for a god with no community data", () => {
     seed(["", "", "", "", ""]);
     render(dock());
-    fireEvent.click(screen.getByRole("button", { name: /default core/i }));
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
     expect(screen.queryByTestId("dock-starters")).not.toBeInTheDocument();
   });
 });
@@ -296,45 +306,49 @@ describe("DraftDock — it has to be visible", () => {
   });
 });
 
-/* The dock's twin of DraftPage's order-only case. It reported "Nothing moved
- * yet" while the list directly beneath it was in a new order, because
- * `changeCount` counted membership swaps only. */
-describe("DraftDock — order-only adaptation", () => {
-  const REORDER_ITEMS = [
-    item("Alpha"), item("Beta"), item("Gamma"),
-    item("Delta"), item("Epsilon"), item("Zeta", ["anti-heal"]),
-  ];
-  const REORDER_SCORES: Record<string, Record<string, Record<string, number>>> = perMode<Record<string, number>>({
-    TestGod: { Alpha: 0.6, Beta: 0.59, Gamma: 0.58, Delta: 0.57, Epsilon: 0.56, Zeta: 0.55 },
+/* THE DOCK AND /draft SHOW THE SAME BUILD, AND IT IS THE GOD PAGE'S.
+ *
+ * This replaces the dock's order-only case. That state is gone: the board no
+ * longer re-assembles the six by adjusted score, so a bonus too small to
+ * displace anything no longer shuffles the list, and the dock can no longer
+ * report a resequencing. What has to hold instead is that an untouched board
+ * shows the shipped build verbatim — the dock is the surface most likely to
+ * drift, since it renders on every route. */
+describe("DraftDock — the pipeline's build", () => {
+  const CONTRARY: Record<string, Record<string, Record<string, number>>> = perMode<Record<string, number>>({
+    // Deliberately ranks the score table AGAINST the shipped order.
+    TestGod: { AntiHeal: 0.99, Zeta: 0.98, Alpha: 0.1, Beta: 0.2, Gamma: 0.3, Delta: 0.4, Epsilon: 0.5 },
     EnemyHealer: { Alpha: 0.5 }, Buddy: { Alpha: 0.3 },
   });
 
-  const open = () => {
-    render(<DraftDock gods={GODS} items={REORDER_ITEMS} builds={[]}
-      godItemScores={REORDER_SCORES} draftConfig={DRAFT_CFG} />);
-    fireEvent.click(screen.getByRole("button", { name: /start a draft/i }));
-    fireEvent.click(screen.getByLabelText("Add you"));
-    fireEvent.click(screen.getByText("TestGod"));
-    fireEvent.click(screen.getByLabelText("Add enemy 1"));
-    fireEvent.click(screen.getByText("EnemyHealer"));
+  const open = (enemies: string[]) => {
+    localStorage.setItem("smite:draft", JSON.stringify({
+      mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies,
+    }));
+    render(<DraftDock gods={GODS} items={ITEMS} builds={CORES}
+      godItemScores={CONTRARY} draftConfig={DRAFT_CFG} />);
   };
 
-  it("does not call a resequenced build 'nothing moved'", () => {
-    open();
+  it("shows the shipped six in the shipped order, not the score table's", () => {
+    open(["", "", "", "", ""]);
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
+    const core = screen.getByText("The god page's build").parentElement!;
+    expect(within(core).getAllByRole("link").map((a) => a.textContent)).toEqual(
+      CORE6.map((n, i) => `${i + 1}${n}`));
+  });
+
+  it("says nothing moved when nothing moved", () => {
+    open(["", "", "", "", ""]);
     const d = screen.getByTestId("draft-dock");
-    expect(d).toHaveTextContent(/same items, new order/i);
-    expect(d).not.toHaveTextContent(/nothing moved yet/i);
+    expect(d).toHaveTextContent(/god page.s build/i);
+    expect(d).not.toHaveTextContent(/same items, new order/i);
   });
 
-  it("calls the list an adapted core, not the default one", () => {
-    open();
-    expect(screen.getByTestId("draft-dock")).toHaveTextContent(/your adapted core/i);
-  });
-
-  it("lists which item moved and where to", () => {
-    open();
-    const rows = screen.getAllByTestId("dock-moved");
-    expect(rows.length).toBeGreaterThan(0);
-    expect(within(rows[0]).getByText("Zeta")).toBeInTheDocument();
+  it("still reports a real swap, and names it", () => {
+    open(["EnemyHealer", "", "", "", ""]);
+    fireEvent.click(screen.getByRole("button", { name: /items moved/i }));
+    const d = screen.getByTestId("draft-dock");
+    expect(d).toHaveTextContent(/your adapted core/i);
+    expect(within(d).getByText(/for Zeta/i)).toBeInTheDocument();
   });
 });

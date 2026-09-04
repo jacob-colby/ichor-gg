@@ -64,22 +64,6 @@ function MiniChange({ added, removed }: { added: string; removed?: string }) {
   );
 }
 
-/** Same item, different slot. Set in `ink` rather than `under`: `under` is the
- *  dock's mark for "the draft put this in your build", and a move did not. */
-function MiniMove({ name, from, to }: { name: string; from: number; to: number }) {
-  return (
-    <li data-testid="dock-moved" className="flex items-center gap-2 py-1">
-      <Icon name={name} item className="h-6 w-6 shrink-0" />
-      <span className="min-w-0 flex-1 truncate text-small text-ink">{name}</span>
-      <span className="shrink-0 font-mono text-label text-faint">
-        {from}
-        <span aria-hidden="true"> → </span>
-        {to}
-      </span>
-    </li>
-  );
-}
-
 interface DraftDockProps {
   gods: God[];
   items: Item[];
@@ -93,7 +77,7 @@ interface DraftDockProps {
 
 export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftDockProps) {
   const { draft, mode, setMode, setAlly, setEnemy, clear } = useDraft();
-  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, moveCount, coreSize, starters,
+  const { meName, taken, takenFor, enemiesKnown, roster, result, changeCount, coreSize, starters,
     startersAreConquest } =
     useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage);
 
@@ -150,11 +134,10 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
       ? "Add your god"
       : changeCount > 0
         ? `${changeCount} of ${coreSize} items moved`
-        // Same six, different sequence. It reported "Nothing moved yet" while
-        // the list underneath was visibly in a new order.
-        : moveCount > 0
-          ? "Same items, new order"
-          : enemiesKnown === 0 ? "Default core" : "Nothing moved yet";
+        // No "same items, new order" state any more: the board starts from the
+        // pipeline's build and a swap takes the departed item's slot, so the
+        // draft cannot resequence anything. See `adaptFromCore`.
+        : enemiesKnown === 0 ? "God page's build" : "Nothing moved yet";
 
   return (
     <div data-testid="draft-dock" className="fixed bottom-3 right-3 z-30 w-[min(94vw,420px)] sm:bottom-4 sm:right-4">
@@ -276,7 +259,7 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
             {result && (
               <div className="mt-2 border-t border-line pt-2">
                 <div className={label}>
-                  {changeCount > 0 || moveCount > 0 ? "Your adapted core" : "The default core"}
+                  {changeCount > 0 ? "Your adapted core" : "The god page's build"}
                 </div>
                 {/* No community record backs this mode's score at all (§1 of
                     STATE.md) — efficiency + kit-fit only. Same fact DetailPanel
@@ -310,15 +293,10 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
               </div>
             )}
 
-            {result && (changeCount > 0 || result.diff.orderOnly) && (
+            {result && changeCount > 0 && (
               <ul className="mt-2 flex flex-col divide-y divide-line border-t border-line pt-1">
                 {result.diff.changes.slice(0, 3).map((c) => (
                   <MiniChange key={c.added} added={c.added} removed={c.removed} />
-                ))}
-                {/* Only when NOTHING swapped. Beside a real swap the moves are
-                    mostly that swap's wake, and the dock has three rows. */}
-                {result.diff.orderOnly && result.diff.moved.slice(0, 3).map((m) => (
-                  <MiniMove key={`move-${m.name}`} name={m.name} from={m.from} to={m.to} />
                 ))}
               </ul>
             )}

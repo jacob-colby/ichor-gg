@@ -18,7 +18,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { BuildNote, DraftConfig, God, Item } from "../types";
 import { toHash } from "../lib/useHashRoute";
 import { useDraft, MODE_TEAM_SIZE, encodeDraftHash, nextEmptySlot, pickerSlotLabel, type DraftMode } from "../lib/draft";
-import { useDraftResult } from "../lib/useDraftResult";
+import { useDraftResult, DEFAULT_ARCHETYPE } from "../lib/useDraftResult";
+import { tabLabel } from "../lib/builds";
 import { threatAnswer, type ThreatKey } from "../lib/threats";
 import { Icon, Slot, GodPickerModal } from "./DraftControls";
 
@@ -38,6 +39,16 @@ const eyebrow = "font-mono text-label uppercase tracking-[0.1em] text-faint";
 
 const segBtn = (active: boolean) =>
   `press flex flex-col items-center rounded-md px-3.5 py-1.5 font-display text-small font-semibold transition-colors duration-150 ease-standard ${
+    active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
+
+/* The god page's build strip, to the class. Two surfaces offering the same
+   eleven builds under the same `tabLabel` should be the same control, and the
+   sizing is not a free choice: `py-1` measured 26px here, which DetailPanel
+   already found and fixed once — "under every touch-target guideline going,
+   and there are eleven of them in a row". `capitalize` is part of it too;
+   without it one surface said "Anti-tank" and the other "Anti-Tank". */
+const buildTab = (active: boolean) =>
+  `press rounded-md px-2.5 py-2 font-display text-small font-semibold capitalize transition-colors duration-150 ease-standard ${
     active ? "bg-gold text-bg0" : "bg-bg2 text-muted hover:text-ink"}`;
 
 /** One displacement: what arrived, what it pushed out, and by how much. */
@@ -81,49 +92,6 @@ function ChangeRow({ change, itemsByName, maxBonus }: {
   );
 }
 
-/** An item both builds buy, at a different point in the order.
- *
- *  Deliberately quieter than `ChangeRow`: a swap changes WHAT you buy and a
- *  move changes WHEN, and the page should not spend the same emphasis on both.
- *  No bonus bar — an item can move because something else did, in which case
- *  its own bonus is 0.00 and a bar would imply a force that wasn't applied. */
-function MoveRow({ move, itemsByName }: {
-  move: { name: string; from: number; to: number; bonus: number; reason?: string };
-  itemsByName: Record<string, Item>;
-}) {
-  const earlier = move.to < move.from;
-  const cost = itemsByName[move.name]?.cost;
-  return (
-    <li
-      data-testid="draft-moved"
-      className="grid grid-cols-[36px_minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 rounded-md border border-line bg-bg2/50 px-2 py-2.5"
-    >
-      <Icon name={move.name} item className="col-start-1 h-9 w-9" />
-      <span className="col-start-2 flex min-w-0 flex-wrap items-baseline gap-x-2">
-        <a href={toHash.item(move.name)}
-          className="press -my-1 truncate rounded-sm py-1 text-body font-medium text-ink hover:underline">
-          {move.name}
-        </a>
-        <span className="text-label text-faint">
-          {earlier ? "earlier" : "later"} — slot{" "}
-          <span className="font-mono text-muted">{move.from}</span>
-          <span aria-hidden="true"> → </span>
-          <span className="font-mono text-ink-soft">{move.to}</span>
-        </span>
-      </span>
-      <span className="col-start-3 shrink-0 font-mono text-label text-faint">
-        {move.bonus > 0 ? `+${move.bonus.toFixed(2)}` : "—"}
-      </span>
-      {move.reason && (
-        <span className="col-start-2 col-span-2 text-small text-muted">
-          answers <span className="text-ink-soft">{move.reason}</span>
-          {cost != null && <span className="font-mono text-faint"> · {cost}g</span>}
-        </span>
-      )}
-    </li>
-  );
-}
-
 interface DraftPageProps {
   gods: God[];
   items: Item[];
@@ -157,15 +125,31 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
   /* The draft builds for YOUR god, so only your aspect can change anything it
      shows. Reset when the you-slot changes — an aspect describes a god. */
   const [aspectOn, setAspectOn] = useState(false);
+  /* WHICH OF THE GOD PAGE'S BUILDS THIS BOARD IS ADAPTING.
+     The board shows one archetype at a time and it is the god page's own —
+     with an empty board the two surfaces render the same six items in the same
+     order, which `archetypeParity.test.ts` asserts for all 2,247 of them.
+     Which archetypes exist is per god (`scoring.eligible_flavors` refuses a
+     flavor a god's scaling can't carry), so the strip is built from what the
+     note contains and a god is never offered a tab it has no build for. */
+  const [archetype, setArchetype] = useState<string>(DEFAULT_ARCHETYPE);
 
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
-    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, moveCount, coreSize, starters,
-    startersAreConquest, relicPicks, aspectScored, meGod,
+    allyAllPhysical, allyCount, allyPhysical, result, draftEnabled, changeCount, coreSize, starters,
+    startersAreConquest, relicPicks, aspectScored, meGod, archetypes, activeEntry,
   } = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage,
-    aspectOn);
+    aspectOn, archetype);
   const meAspect = meGod?.aspects?.[0]?.name;
   useEffect(() => { setAspectOn(false); }, [meName]);
+  /* A god without the selected archetype falls back rather than emptying the
+     board. `useDraftResult` already resolves that for the build; this puts the
+     STRIP back in agreement with it, so the pressed tab is the one on screen. */
+  useEffect(() => {
+    if (activeEntry?.archetype && activeEntry.archetype !== archetype) {
+      setArchetype(activeEntry.archetype);
+    }
+  }, [activeEntry, archetype]);
 
   const copyLink = () => {
     if (!navigator.clipboard?.writeText) return;
@@ -199,21 +183,22 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
             ? <>Build for the match you&rsquo;re actually in.</>
             : changeCount > 0
               ? <>Your draft moved <span className="text-gold">{changeCount} of {coreSize}</span> items.</>
-              // Reordering the same six IS moving the build. The headline said
-              // it had not, above a list that had.
-              : moveCount > 0
-                ? <>Your draft <span className="text-gold">resequenced</span> this build.</>
-                : <>Your draft hasn&rsquo;t moved this build yet.</>}
+              // The board no longer claims a resequencing. It used to report
+              // one, because it re-assembled the six by adjusted score and a
+              // bonus too small to displace anything still moved an item up
+              // the list — order the pipeline had not asked for. See
+              // `adaptFromCore`.
+              : <>Your draft hasn&rsquo;t moved this build yet.</>}
         </h1>
         <p className="mt-2.5 max-w-[70ch] text-body leading-relaxed text-ink-soft">
           {!meName
             ? "Put your god in the gold slot, then add the enemies as they lock in. Every item that changes shows what it displaced and which threat it answers."
             : enemiesKnown === 0
-              ? changeCount > 0 || moveCount > 0
+              ? changeCount > 0
                 // Ally composition is draft information too — saying "nothing
                 // is adapting yet" while showing changes was a contradiction.
                 ? "Adapted to your ally line-up so far. Add enemies and it sharpens."
-                : "The model's default core for your god. Add an enemy and it starts adapting."
+                : "The god page's own build for your god, item for item. Add an enemy and it starts adapting."
               : `Scored against ${enemiesKnown} of ${roster} enemies. Each change below names what it displaced and why.`}
         </p>
           {/* Seam to the working (DESIGN.md, the Seam Rule; audit's central
@@ -320,7 +305,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
       {(!meName || enemiesKnown === 0) && (
         <ol data-testid="draft-steps" className="grid grid-cols-1 gap-3 border-t border-line pt-5 sm:grid-cols-3">
           {[
-            { n: 1, title: "Pick your god", body: "The gold-ringed slot. That alone gets you the model's default core.", done: !!meName },
+            { n: 1, title: "Pick your god", body: "The gold-ringed slot. That alone gets you the god page's own build for them.", done: !!meName },
             { n: 2, title: "Add the enemies you know", body: "Each one re-weights the score. Two of five is already enough to move items.", done: enemiesKnown > 0 },
             { n: 3, title: "Read what changed", body: "Every swap names the item it displaced and the threat it answers.", done: changeCount > 0 },
           ].map((step) => (
@@ -358,7 +343,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               item list, not the word "core". It moves off `faint` only so it
               stops matching the reasoning line exactly. */}
           <h2 id="draft-core-h" className="font-mono text-label uppercase tracking-[0.1em] text-muted">
-            {changeCount > 0 ? "Your adapted core" : "The default core"}
+            {changeCount > 0 ? "Your adapted core" : "The god page's build"}
             {/* 65 of the 72 gods with an aspect have no scoring overlay behind
                 it, so the toggle can be pressed and change nothing. Saying so
                 beats a control that looks broken. */}
@@ -381,10 +366,46 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
               This core is ranked by efficiency and kit-fit alone — not by what {MODE_LABEL[mode]} players buy.
             </p>
           )}
+
+          {/* ── Which build ────────────────────────────────────────────
+              The god page's own strip, minus the community and `mine` entries
+              the draft has nothing to adapt: same `tabLabel`, same
+              `orderBuilds`/`dedupeCoreAgainstModel` (in `archetypeEntries`), so
+              the two surfaces cannot name or order these differently. */}
+          {archetypes.length > 1 && (
+            <div role="group" aria-label="Build" data-testid="draft-archetypes"
+              className="mt-2.5 flex flex-wrap gap-1">
+              {archetypes.map((e) => {
+                const active = e.archetype === activeEntry?.archetype;
+                return (
+                  <button key={e.archetype} type="button" aria-pressed={active}
+                    onClick={() => setArchetype(e.archetype!)}
+                    className={buildTab(active)}>
+                    {tabLabel(e)}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+          {/* Joust and Arena have no community record of their own, so a
+              HYBRID build there is Conquest's evidence judged to transfer.
+              Same sentence the god page uses, from the same field on the same
+              entry — not a second disclosure invented for this surface. */}
+          {activeEntry?.borrowed_from && (
+            <p className="mt-1.5 max-w-[64ch] text-label leading-relaxed text-muted">
+              No {MODE_LABEL[mode]} record exists, so this build uses{" "}
+              <span className="text-ink-soft">{activeEntry.borrowed_from}</span>&rsquo;s — minus
+              items whose value arrives too late for {MODE_LABEL[mode]}, and those that only
+              answer a {activeEntry.borrowed_from} problem.
+            </p>
+          )}
           {!draftEnabled || !result ? (
             <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
-              {meName} has no scored items in this index yet, so there&rsquo;s nothing to adapt.
-              Pick a different god, or check back after the next data refresh.
+              {meName} has no scored build for {MODE_LABEL[mode]} in this index yet, so
+              there&rsquo;s nothing to adapt. The board starts from the build the god page
+              ships and does not assemble one of its own — see &ldquo;where these scores
+              come from&rdquo; above. Pick a different god, or check back after the next
+              data refresh.
             </p>
           ) : (
             <>
@@ -528,34 +549,31 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
 
             <div className="mt-5" data-testid="draft-changed">
               <h3 className={eyebrow}>What changed</h3>
-              {result.diff.changes.length === 0 && !result.diff.orderOnly ? (
+              {result.diff.changes.length === 0 ? (
                 <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
                   {enemiesKnown === 0
-                    ? "Nothing yet — add an enemy and the model starts re-ranking against them."
-                    : "Nothing so far. This draft doesn't threaten anything the default core wasn't already handling."}
+                    ? "Nothing yet — add an enemy and the model starts weighing it against this build."
+                    : "Nothing so far. This draft doesn't threaten anything the build wasn't already handling."}
                 </p>
               ) : (
-                <>
-                  {/* A draft that reorders the same six items used to land in
-                      the branch above — "nothing changed", printed under a
-                      build that had visibly changed. The order is a claim the
-                      page makes, so it gets a sentence rather than silence. */}
-                  {result.diff.orderOnly && (
-                    <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
-                      Same six items, <span className="text-ink-soft">different order</span> — this
-                      draft doesn&rsquo;t change what to buy, it changes when.
-                    </p>
-                  )}
-                  <ul className="mt-2 flex flex-col gap-1.5">
-                    {result.diff.changes.map((c) => (
-                      <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
-                    ))}
-                    {result.diff.moved.map((m) => (
-                      <MoveRow key={`move-${m.name}`} move={m} itemsByName={itemsByName} />
-                    ))}
-                  </ul>
-                </>
+                <ul className="mt-2 flex flex-col gap-1.5">
+                  {result.diff.changes.map((c) => (
+                    <ChangeRow key={c.added} change={c} itemsByName={itemsByName} maxBonus={draftConfig!.max_bonus} />
+                  ))}
+                </ul>
               )}
+              {/* The draft changes WHAT you buy and never WHEN. Said once,
+                  here, because the page used to report a resequencing it was
+                  producing by accident: it re-assembled the six by adjusted
+                  score, so a bonus too small to displace anything still moved
+                  an item up the list. The order now comes from
+                  `assemble.build_order`, which blends a tag-and-cost heuristic
+                  with this god's own community slot record — neither of which
+                  the viewer has. A swap takes the departed item's slot. */}
+              <p className="mt-2 max-w-[64ch] text-label leading-relaxed text-faint">
+                Buy order is the model&rsquo;s and the draft doesn&rsquo;t move it — an item
+                that swaps in takes the slot of the one it replaced.
+              </p>
             </div>
             </>
           )}

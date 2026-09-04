@@ -10,11 +10,36 @@
 import { useCallback, useMemo } from "react";
 import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
 import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
-import { adaptedCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
+import { adaptFromCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
 import { groupStarters, type StarterPath } from "./starters";
+import { dedupeCoreAgainstModel, orderBuilds } from "./builds";
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
+
+/** The archetype a board opens on. `core` is the four-signal blend and is what
+ *  the tier list, the data audit and this page's own baseline all read by
+ *  name; a god whose note has no `core` entry falls through to its first. */
+export const DEFAULT_ARCHETYPE = "core";
+
+/** The suggested builds this god can actually satisfy in this mode, in the
+ *  god page's own order (`orderBuilds` / `dedupeCoreAgainstModel` — one
+ *  authority for what the strip contains and what it is called, so the two
+ *  surfaces cannot offer different tabs for the same god).
+ *
+ *  WHICH ARCHETYPES EXIST IS PER GOD. `scoring.eligible_flavors` refuses a
+ *  flavor a god's own scaling cannot support, so Ymir has no `crit` entry and
+ *  offering the tab would be offering a build the pipeline declined to make.
+ *  This returns what the note contains and nothing else. */
+export function archetypeEntries(
+  builds: BuildNote[], god: string, mode: DraftMode, aspect: boolean,
+): CuratedBuildEntry[] {
+  const note = builds.find((b) => b.god === god && b.mode === MODE_LABEL[mode]);
+  const suggested = (note?.builds ?? []).filter(
+    (b) => b.source === "suggested" && !!(b as CuratedBuildEntry).aspect === aspect,
+  );
+  return orderBuilds(dedupeCoreAgainstModel(suggested)) as CuratedBuildEntry[];
+}
 
 /** Applies the shipped `lifesteal_caps` rules — the same data `god_max_lifesteal`
  *  reads, in the same first-match-wins order.
@@ -95,13 +120,18 @@ export interface DraftResult {
   allyCount: number;
   allyPhysical: number;
   /** Present once the you-slot is scored; absent gods (no `god_item_scores`
-   *  entry, or no draftConfig at all) leave this null. */
+   *  entry, no shipped core for this archetype, or no draftConfig at all)
+   *  leave this null. */
   result: { base: AdaptedCore; adapted: AdaptedCore; diff: CoreDiff } | null;
+  /** The suggested builds this god has in this mode — the tabs the board may
+   *  offer, already deduped and ordered the way the god page orders them. */
+  archetypes: CuratedBuildEntry[];
+  /** The one being adapted. Carries the pipeline's own disclosures with it
+   *  (`borrowed_from`, `community_ordered`, `fun`), so the board states them
+   *  from the same entry it built from rather than from a second lookup. */
+  activeEntry?: CuratedBuildEntry;
   draftEnabled: boolean;
   changeCount: number;
-  /** Items in both builds bought at a different point. A draft that only
-   *  reorders is an adaptation, and the dock used to call it "nothing". */
-  moveCount: number;
   coreSize: number;
 }
 
@@ -115,6 +145,8 @@ export function useDraftResult(
    *  have an `<mode>:aspect` table; for anyone else this is inert by
    *  construction rather than by a separate guard. */
   aspectOn = false,
+  /** Which of the god page's builds the board is adapting. */
+  archetype: string = DEFAULT_ARCHETYPE,
 ): DraftResult {
   const godsByName = useMemo(() => {
     const m: Record<string, God> = {};
@@ -191,23 +223,44 @@ export function useDraftResult(
    *  board says which of the two it is rather than leaving a pressed control
    *  that changed nothing. */
   const aspectScored = aspectOn && !!byMode?.[`${mode}:aspect`];
-  const draftEnabled = !!meName && !!modeScores && !!draftConfig;
+
+  /* THE BOARD'S STARTING BUILD IS THE PIPELINE'S, NOT ONE THIS FILE ASSEMBLES.
+     Both families are read — the aspect one only when the god has it AND the
+     toggle is on — so the tab strip never offers a build that isn't there. */
+  const archetypes = useMemo(
+    () => archetypeEntries(builds, meName, mode, aspectOn && !!byMode?.[`${mode}:aspect`]),
+    [builds, meName, mode, aspectOn, byMode],
+  );
+  const activeEntry = useMemo(
+    () => archetypes.find((e) => e.archetype === archetype)
+      ?? archetypes.find((e) => e.archetype === DEFAULT_ARCHETYPE)
+      ?? archetypes[0],
+    [archetypes, archetype],
+  );
+
+  const draftEnabled = !!meName && !!modeScores && !!draftConfig && !!activeEntry;
   const result = useMemo(() => {
     if (!draftEnabled) return null;
+    const shipped = activeEntry!.slot_order as string[];
     const opts = {
       maxBonus: draftConfig!.max_bonus,
       maxLifesteal: draftMaxLifesteal(meGod, draftConfig!.lifesteal_caps),
       // Defaults to 1 (pay in full) on an index built before the rule shipped,
       // so an older data file keeps behaving exactly as it did.
       selfCovered: draftConfig!.self_covered ?? 1,
+      flexSlots: activeEntry!.flex_slots,
     };
-    const base = adaptedCore(modeScores!, itemsByName, { tags: {}, stats: {} }, opts);
+    // The un-adapted side is the shipped core VERBATIM — not a re-derivation
+    // of it that happens to agree. There is one assembler and it is
+    // `assemble.assemble_core_converged`; see `adaptFromCore`.
+    const base: AdaptedCore = { core: [...shipped], reasons: {}, bonuses: {} };
     const overlay = threatOverlay(threats, draftConfig!, meGod);
     overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);
-    const adapted = adaptedCore(modeScores!, itemsByName, overlay, opts);
+    const adapted = adaptFromCore(shipped, modeScores!, itemsByName, overlay, opts);
     // Both builds survive: the diff is the product's whole claim.
     return { base, adapted, diff: diffCore(base, adapted) };
-  }, [draftEnabled, draftConfig, modeScores, godItemDamage, meName, itemsByName, threats, meGod]);
+  }, [draftEnabled, draftConfig, activeEntry, modeScores, godItemDamage, meName,
+      itemsByName, threats, meGod]);
 
   const taken = useMemo(
     () => new Set([...draft.allies, ...draft.enemies].filter(Boolean)),
@@ -230,9 +283,8 @@ export function useDraftResult(
     enemiesKnown: threats.enemyCount, roster: threats.rosterSize,
     threatCulprits: culprits,
     allyAllPhysical: threats.allyAllPhysical, allyCount: threats.allyCount, allyPhysical: threats.allyPhysical,
-    result, draftEnabled,
+    result, archetypes, activeEntry, draftEnabled,
     changeCount: result?.diff.changes.length ?? 0,
-    moveCount: result?.diff.moved.length ?? 0,
     coreSize: result?.adapted.core.length ?? 6,
   };
 }
