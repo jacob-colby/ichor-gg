@@ -582,6 +582,15 @@ UNKNOWN_WIN_RATE = 0.5
 #: Never fires on real data - the thinnest god carries 6.
 UNKNOWN_WIN_MIN_ITEMS = 3
 
+# How far the stand-in is pulled from the god's MEDIAN measured win rate toward
+# the god's WORST one. 0.0 is the median; 1.0 is the floor at which an
+# unmeasured item can no longer outrank ANY measured one on `win`. Both
+# endpoints are the god's own measured numbers, so the INTERVAL invents nothing
+# -- but the position inside it is invented, and that is the finding. SHIPS AT
+# 0.0. The sweep, and why it stays there, are in `god_unknown_win_rate` and
+# docs/STATE.md section 4.26.
+UNKNOWN_WIN_SHRINK = 0.0
+
 
 def unknown_win_rate(weights):
     return (weights or {}).get("unknown_win_rate", UNKNOWN_WIN_RATE)
@@ -614,7 +623,72 @@ def god_unknown_win_rate(god_build, weights=None):
     items outranked all of them and their cores filled with unknowns. On the
     current sample no god is fully below — the worst is Mercury at 67% of its
     items — so that specific failure has largely dissolved with more data. The
-    units error has not."""
+    units error has not.
+
+    ── THE MEDIAN'S CONSEQUENCE, MEASURED 2026-09-03 (register §4.26) ─────────
+
+    A stand-in that sits at the middle of the god's distribution outranks the
+    bottom half of it. Measured at control `edaa4af3cdc5`, over the 582 Conquest
+    `core` slots: **236 are held by an item with no measured win rate, and 163
+    of those go to an item that HAS a record** the moment the placeholder can no
+    longer outrank a measurement — 82 of 97 cores, 75 of 90 gods. The stand-in
+    sits a median 0.147 above the god's own worst measured rate, worth up to
+    0.221 of `total` against core margins measured at 0.0057. Joust and Arena
+    zero the `win` weight, so all 1164 of their slots are unmeasured and not one
+    of them moves at any setting: this is Conquest-only.
+
+    NOTHING HERE CAN GRADE THE REPAIR, AND THAT IS THE HEADLINE. `calibrate`
+    evaluates at `win: 0.0`, so this function is multiplied by zero inside the
+    only non-circular measure the project has. Run the control with the
+    placeholder at the god's median, at its floor, at 0.0 and at 1.0 and
+    coverage is **40.9074% / 37.6111% in all four**, identical to four decimals
+    at both splits. A defect deciding 28% of Conquest core slots is invisible to
+    the primary gate by construction, and 0.0pp there is not evidence of
+    anything.
+
+    `unknown_win_shrink` IS THE REPAIR, IT IS MEASURED, AND IT SHIPS OFF. It
+    pulls the stand-in from the median toward the god's worst measured rate;
+    1.0 is the floor at which an unmeasured item can never outrank a measured
+    one. Two findings sank it.
+
+    FIRST, THERE IS NO NEUTRAL SETTING, AND THAT IS ARITHMETIC RATHER THAN
+    TASTE. `total` is additive and the stand-in is ONE number, so it necessarily
+    outranks every measured item below it and loses to every one above it. "An
+    unmeasured item cannot outrank a measurement" is therefore satisfied only at
+    `p <= min(measured)` — which is "an unmeasured item loses to every
+    measurement". The two rules are the same rule for a scalar, and only the
+    first is defensible; §4.16 refused to charge mana because absence from a map
+    is not evidence against a stat, and absence from a record is not evidence
+    against an item. The sweep confirms there is nowhere to hide: cores changed
+    run 41 / 62 / 72 / 82 of 97 at shrink 0.25 / 0.50 / 0.75 / 1.00, monotone,
+    no plateau, so no setting is preferable to its neighbour on any evidence.
+
+    SECOND, THE ONE INSTRUMENT THAT CAN SEE IT SAYS THE BUILDS GET WORSE.
+    `build_quality` never reads `win`. Head-to-head at shrink 1.0 against the
+    shipped core, on the 76 gods whose core moves and with no community
+    reference in the comparison: sustained DPS **32 better / 42 worse** (median
+    −3.9%), burst **21 / 44** (−2.4%), effective health level on both channels
+    (median 0.0%), and **150g more spent**. Every role's verdict against the
+    community degrades — Mid 17 ahead / 5 behind → 12 / 8, Carry's median
+    +20.2% → +12.1%. At 0.25, the mildest setting that clears the expert gate,
+    it is still 14 / 22 on DPS and 8 / 23 on burst. That module's bias runs the
+    other way (a verdict in OUR favour is the one to distrust, and §4.13: it
+    cannot charge us for buying too LITTLE defence), so these are floors on the
+    cost, not ceilings.
+
+    TWO GATES DO MOVE AND BOTH MOVE FOR DISQUALIFYING REASONS. `expert_review`
+    goes partial → clear at every setting from 0.25 up, because Eye of
+    Providence leaves Ymir's core — but the rule that removes it removes every
+    unmeasured item's ability to compete, which is the 163 slots. And
+    `validate.compute` reads 53% → 60% coverage / 55% → 62% win-weighted,
+    because demoting unmeasured items promotes community-recorded ones, which is
+    exactly what coverage counts. That is docs/STATE.md §1's leakage sitting
+    inside the model, and it is the reason a coverage rise here is evidence
+    against the change rather than for it.
+
+    NOT the efficiency rescale of §4.25: this function never reaches
+    `efficiency_scores`, and `lo`, `hi`, `span` and all 187 item scores are
+    bit-identical at every shrink setting (fingerprint `61f5025baa3b`)."""
     cfg = weights or {}
     if not cfg.get("unknown_win_per_god", True):
         return unknown_win_rate(weights)
@@ -628,7 +702,13 @@ def god_unknown_win_rate(god_build, weights=None):
     # the median is 8.
     if len(rates) < cfg.get("unknown_win_min_items", UNKNOWN_WIN_MIN_ITEMS):
         return unknown_win_rate(weights)
-    return statistics.median(rates)
+    median = statistics.median(rates)
+    # `unknown_win_shrink` pulls the stand-in toward the god's worst measured
+    # rate. OFF (0.0) is the median and this returns before touching anything.
+    shrink = cfg.get("unknown_win_shrink", UNKNOWN_WIN_SHRINK) or 0.0
+    if not shrink:
+        return median
+    return median - shrink * (median - min(rates))
 
 
 def measured_win_rates(god_build, weights=None):

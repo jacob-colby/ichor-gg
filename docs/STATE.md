@@ -55,6 +55,20 @@ no verdict in §4, because every verdict there is a delta with the constant
 held fixed on both arms. **§4.20** has the numbers and the blast radius; read
 it before quoting an absolute figure dated on or after 2026-08-14.
 
+**IT IS ALSO BLIND TO ANYTHING THE `win` AND `pick` WEIGHTS MULTIPLY BY
+ZERO.** Zeroing the two signals is what makes the measure honest, and it is
+also why the measure cannot see a decision that lives *inside* one of them.
+`scoring.god_unknown_win_rate` — what an item with no community record scores
+on `win` — is such a decision, and it currently decides **28% of Conquest core
+slots**. Run the control with that placeholder at the god's median, at the
+god's floor, at 0.0 and at 1.0: coverage is **40.9074% / 37.6111% in all four**,
+identical to four decimals at both splits. **§4.26** has the demonstration and
+the size. Read it beside §4.23: that entry found a community-derived constant
+this measure cannot *neutralise*, and §4.26 finds a model decision it cannot
+*see*. Both are the same sentence — "leakage-free" is a claim about the four
+signals and about nothing else — and together they bound what a 0.0pp reading
+is allowed to mean.
+
 **Do not quote those figures — re-measure them.** They move with the data, not
 just with the model, which is what `--control` exists for: the baseline, the
 same two fixed splits, and an input fingerprint, in ~7s instead of ~7 minutes.
@@ -1630,6 +1644,116 @@ shipped **off**. Numbers are in the named module.
     carrier instead of none, and it is what puts Agility Greaves at the top of
     the scale.
 
+26. **Discounting an item with no community record (2026-09-03)** —
+    `unknown_win_shrink`, shipped **OFF** at 0.0.
+
+    **LEAD WITH THIS, BECAUSE IT STANDS WHATEVER SHIPS: the only non-circular
+    gate this project has is structurally blind to a defect that decides 28% of
+    Conquest core slots.** `calibrate` evaluates at `win: 0.0` — that is what
+    makes it leakage-free — so `scoring.god_unknown_win_rate` is multiplied by
+    zero inside it. Demonstrated rather than argued: run `calibrate.control`
+    with the placeholder at the god's median, at the god's floor, at **0.0** and
+    at **1.0**, and coverage is **40.9074% and 37.6111% in all four arms**,
+    identical to four decimal places at both splits. Only the 200-draw baseline
+    moves (5.70 / 5.64 / 5.73 / 5.79%), which is CLAUDE.md rule 5's documented
+    ±0.15pp reshuffle and not data. **A 0.0pp reading on the splits is not
+    evidence of harmlessness here; it is the gate declining to answer.** This is
+    the same shape as §4.23 — "leakage-free" is a claim about the four signals
+    and about nothing else — arriving from the other side: §4.23 found a
+    community-derived number the measure cannot neutralise, this finds a model
+    decision the measure cannot see.
+
+    **The defect, at control `edaa4af3cdc5`.** Of the **582** Conquest `core`
+    slots, **236 (40.5%)** are held by an item with no measured win rate, and
+    **163 of those (69%) — 82 of 97 cores, 75 of 90 gods** — go to an item that
+    HAS a record the moment the placeholder can no longer outrank a measurement.
+    The stand-in sits a median **0.147** above its god's own worst measured
+    rate, worth up to **0.221** of `total` against the 0.0057 margin the Ymir
+    case turned on. Joust and Arena zero the `win` weight, so all **1164** of
+    their slots are unmeasured and **not one moves at any setting** — this is
+    Conquest-only, and the 80% figure over all three modes is not the defect.
+    The harness reproduces all **291** shipped `core` build groups exactly with
+    the flag off, and reproduces 09-02 C's independent **236 of 582** display
+    count; `pick == 0.00` and `win is None` agree on **12,423 of 12,423**
+    buildable god/item pairs, so the two absences are one absence.
+
+    **THE PROPOSED FIX CANNOT BE BUILT TO ITS OWN BAR, AND THE REASON IS
+    ARITHMETIC.** The bar is that absence must become NEUTRAL, not punished —
+    §4.16's rule, that absence from a map is not evidence against a stat, run
+    on an item instead of a stat. But `total` is additive and the stand-in is
+    ONE number, so it necessarily outranks every measured item below it and
+    loses to every one above it. "Cannot outrank a measurement" is satisfied
+    only at `p <= min(measured)`, which IS "loses to every measurement". **The
+    two rules the bar distinguishes are the same rule for a scalar**, and only
+    the first is defensible. A pairwise rule would separate them, and
+    `assemble_core` cannot consume one — it needs a total order.
+
+    **The sweep confirms there is nowhere to hide.** Cores changed run **41 /
+    62 / 72 / 82 of 97** at shrink 0.25 / 0.50 / 0.75 / 1.00, displacing 57 /
+    97 / 129 / 163 slots. Monotone, no plateau, no overlapping CIs to shelter
+    in — unlike the efficiency:fit band in §1 there is no "the choice within it
+    is not measurable" to fall back on, because every setting is a different
+    answer and nothing ranks them. That is §4.16's refusal, measured.
+
+    **`build_quality` CAN see it, and says the builds get worse.** It never
+    reads `win`. Head-to-head at shrink 1.0 against the shipped core, on the 76
+    gods whose base Conquest core moves, **with no community reference in the
+    comparison at all**:
+
+        metric          n   better  worse  level     p25   median     p75
+        dps_70         76      32     42      2   -13.1%    -3.9%   +7.5%
+        dps_170        76      31     42      3   -15.6%    -5.0%   +8.5%
+        burst_70       75      21     44     10    -7.6%    -2.4%   +1.6%
+        ehp_physical   76      14     22     40    -4.5%    +0.0%   +0.0%
+        ehp_magical    76      20     18     38    +0.0%    +0.0%   +1.5%
+        gold                                              +150g median
+
+    Less damage, no effective health bought with it, and 150g more spent. Every
+    role's verdict against the community degrades on its own objective — Carry
+    median +20.2% → +12.1%, Jungle +7.7% → +2.8%, **Mid 17 ahead / 5 behind →
+    12 / 8**, Solo +40.3%/+30.9% → +31.3%/+26.8%, Support +23.3%/+16.5% →
+    +13.0%/+10.2%. At **0.25**, the mildest setting that clears the expert gate,
+    it is already 14 / 22 on DPS and 8 / 23 on burst.
+
+    **Read that with the module's own bias, which runs the other way.** A
+    verdict in OUR favour is the one to distrust (~90% of the pool carries
+    passive value the arithmetic cannot see), and §4.13 says it cannot charge us
+    for buying too LITTLE defence. Both make this measurement a FLOOR on the
+    cost rather than a ceiling. Biased with a known direction is what was
+    available, and the direction is against the change.
+
+    **TWO GATES DO MOVE AND BOTH MOVE FOR DISQUALIFYING REASONS.**
+    `expert_review` goes **partial → clear** at every setting from 0.25 up:
+    Eye of Providence leaves Ymir's core and the checker reads `absent from all
+    36 Conquest cores in scope`. That is the claim clearing — and it is the
+    coincidence the file's own header warns about, because the rule that removes
+    the item removes every unmeasured item's ability to compete, which is the
+    163 slots. `validate.compute` reads coverage **53% → 60%** and win-weighted
+    **55% → 62%** at shrink 0.25, because demoting unmeasured items promotes
+    community-recorded ones and that is precisely what coverage counts. **A
+    coverage rise here is evidence against the change, not for it** (§1).
+
+    **What is left standing.** The median is not merely defensible, it is the
+    least-committal point available: the maximum-entropy estimate for an item
+    drawn from this god's distribution, and the only value that makes "we did
+    not measure this" mean neither good nor bad. The docstring's units argument
+    was right and this entry does not touch it. **The defect is therefore not
+    the placeholder's LOCATION but the weight it is entered at** — 0.45, with no
+    uncertainty term, against measurements carrying real evidence. §5 already
+    calls that weight "the largest single unexamined number in the model"; this
+    entry adds that it cannot be examined either, for the same reason.
+
+    **Not the efficiency rescale of §4.25.** This change never reaches
+    `efficiency_scores`; `lo` (−1336.2), `hi` (+1566.5), `span` (2902.7) and all
+    187 item scores are bit-identical at every shrink setting (fingerprint
+    `61f5025baa3b`). None of the churn is a reweighting of efficiency against
+    fit.
+
+    **Reproduce.** `unknown_win_shrink` in `_weights.yaml`; the numbers and the
+    argument are in `scoring.god_unknown_win_rate`'s docstring. The flag at 0.0
+    is a byte no-op end to end — `recommend --all` and `build_index` reproduce
+    every build note, every Analysis report and `index.json` unchanged.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -1746,6 +1870,21 @@ rank-3-to-10 margin**, purely for appearing in the data.
 constant for 92% of the pool cannot be justified or refuted by anything here:
 `calibrate` zeroes `win`, and the headline gate uses it as its own target. It
 is the largest single unexamined number in the model.
+
+**AND THE FLATNESS IS NOT AS ADDRESSED AS THIS SECTION USED TO CLAIM — §4.26,
+2026-09-03.** Moving the stand-in from a global 0.5 to the god's own median
+fixed the units error and nothing else. The median still sits above the bottom
+half of the distribution it is drawn from, so **236 of 582 Conquest `core`
+slots are held by an item with no measured win rate and 163 of those displace
+an item that has one**, across 75 of 90 gods. §4.26 ships the repair
+(`unknown_win_shrink`) **OFF** and says why: no scalar can be neutral in an
+additive blend — "cannot outrank a measurement" and "loses to every
+measurement" are the same rule for one number — and `build_quality`, the one
+instrument that can see this at all, says the discounted builds are worse.
+**What survives is this section's own point.** The defect is not the
+placeholder's location, which is already the least-committal one available; it
+is the 0.45 weight it is entered at with no uncertainty term. That is the
+number named above, and §4.26 adds that it cannot be examined either.
 
 ### ~~Our Carries over-buy defence, and one item is why~~ — fixed 2026-08-22
 The role split (§2, §3) found it and deliberately did not fix it: the
@@ -2087,8 +2226,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (909) ·
-`cd viewer && npm test -- --run` (765).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (913) ·
+`cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
@@ -2117,7 +2256,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 909 pipeline · 765 viewer |
+| Tests | 913 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

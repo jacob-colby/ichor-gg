@@ -819,6 +819,48 @@ def test_unknown_win_respects_an_explicit_constant_when_per_god_is_off():
         build, {"unknown_win_per_god": False, "unknown_win_rate": 0.55}) == 0.55
 
 
+def test_unknown_win_shrink_is_off_by_default_and_returns_the_median():
+    """The flag ships at 0.0 and must be a byte no-op there — the whole point
+    of measuring it is that the shipped answer does not move."""
+    build = _win_build(0.40, 0.60, 0.62, 0.64)
+    assert scoring.UNKNOWN_WIN_SHRINK == 0.0
+    assert scoring.god_unknown_win_rate(build, {}) == pytest.approx(0.61)
+    assert scoring.god_unknown_win_rate(
+        build, {"unknown_win_shrink": 0.0}) == pytest.approx(0.61)
+
+
+def test_unknown_win_shrink_at_one_cannot_outrank_any_measurement():
+    """`shrink: 1.0` is the rule "an item with no record must not beat an item
+    carrying a real, lower, measured one", written as a scalar — and this test
+    is also the proof that the rule collapses into "loses to every
+    measurement", because the only value satisfying it is the minimum."""
+    rates = [0.40, 0.60, 0.62, 0.64]
+    build = _win_build(*rates)
+    got = scoring.god_unknown_win_rate(build, {"unknown_win_shrink": 1.0})
+    assert got == pytest.approx(0.40)
+    assert all(got <= r for r in rates)
+
+
+def test_unknown_win_shrink_interpolates_between_the_median_and_the_floor():
+    """Both endpoints are the god's OWN measured numbers, so the interval
+    invents nothing. The position inside it is invented, which is why the flag
+    is off: 0.5 is no more defensible than 0.4."""
+    build = _win_build(0.40, 0.60, 0.62, 0.64)
+    assert scoring.god_unknown_win_rate(
+        build, {"unknown_win_shrink": 0.5}) == pytest.approx(0.61 - 0.5 * 0.21)
+
+
+def test_unknown_win_shrink_does_nothing_without_a_distribution_to_shrink_in():
+    """No measured rates means no median and no floor. Shrinking a constant
+    toward itself would fabricate a number out of nothing, which is the units
+    error this whole family exists to avoid."""
+    assert scoring.god_unknown_win_rate(
+        {"builds": []}, {"unknown_win_shrink": 1.0}) == scoring.UNKNOWN_WIN_RATE
+    off = {"unknown_win_per_god": False, "unknown_win_shrink": 1.0}
+    assert scoring.god_unknown_win_rate(
+        _win_build(0.40, 0.60, 0.64), off) == scoring.UNKNOWN_WIN_RATE
+
+
 def test_measured_win_rates_mirror_what_lookup_rates_hands_out():
     """One rate per ITEM, not per sighting. `lookup_rates` prefers a slot pick
     over an alternate and takes only the best alternate for an unslotted item,

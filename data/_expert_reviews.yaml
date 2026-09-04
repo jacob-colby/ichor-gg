@@ -270,6 +270,63 @@ reviews:
 
       None of the three is implemented here. Core churn this session is 0.
 
+      CANDIDATE 1 WAS BUILT AND MEASURED 2026-09-03 AND IT SHIPS OFF
+      (`unknown_win_shrink`, register section 4.26). THE VERDICT HERE DOES NOT
+      MOVE: it stays `partial`, and the checker still reads `still in 1/36
+      cores: ['Ymir']`, because the flag ships at 0.0 and the shipped model is
+      byte-identical. This note records what would have happened, so the next
+      session does not re-run it.
+
+      IT WOULD HAVE CLEARED THIS CLAIM, AT EVERY SETTING FROM 0.25 UP. Eye of
+      Providence leaves Ymir's core and the checker reads `absent from all 36
+      Conquest cores in scope`, exit 0. That is this file's header's own
+      warning arriving in its strongest form: the claim would clear because a
+      rule was applied that removes EVERY unmeasured item's ability to compete
+      on `win`, not because anything was learned about ward economy. The same
+      rule moves **163 core slots across 75 of 90 gods** — 82 of 97 Conquest
+      cores at 1.0, 41 at 0.25 — so the item this reviewer named would leave
+      alongside 162 others nobody has judged.
+
+      AND THE ONE NON-CIRCULAR INSTRUMENT SAYS THE RESULTING BUILDS ARE WORSE.
+      `build_quality` never reads `win`. Head-to-head against the shipped core
+      at shrink 1.0, on the 76 gods whose core moves, with no community
+      reference in the comparison: sustained DPS 32 better / 42 worse (median
+      -3.9%), rotation burst 21 / 44 (-2.4%), effective health level on both
+      channels, 150g more spent. Every role's verdict against the community
+      degrades; Mid goes 17 ahead / 5 behind to 12 / 8. Its bias runs toward
+      flattering us, so that is a floor on the cost.
+
+      WHY CANDIDATE 1 CANNOT BE BUILT TO ITS OWN BAR, which is the part worth
+      keeping. The bar is that absence must become NEUTRAL rather than
+      punished. `total` is additive and the stand-in is one number, so it
+      necessarily outranks every measured item below it and loses to every one
+      above it: "cannot outrank a measurement" is satisfied only at
+      `p <= min(measured)`, which is "loses to every measurement". The two are
+      the same rule for a scalar. The floor this note proposed in August is
+      therefore not a milder version of the punishment - it IS the punishment,
+      and section 4.16's refusal applies to it directly.
+
+      CANDIDATE 2 IS ALSO ANSWERED, AND WORSE THAN RECORDED. Dropping `win`
+      for unmeasured items and renormalising over efficiency and fit puts Eye
+      of Providence into FIVE Conquest cores (Atlas, Charon, Geb, Sobek, Ymir)
+      rather than removing it, because `quality` and `total` are on different
+      scales and an unmeasured item with high gold-efficiency floats up once
+      the blend stops anchoring it.
+
+      CANDIDATE 3 IS NOW THE ONLY ONE LEFT, and section 4.26 sharpens what it
+      has to do. `calibrate` cannot adjudicate this at all - it evaluates at
+      `win: 0.0`, and a placeholder of 0.0 and one of 1.0 give coverage
+      identical to four decimals at both splits - so `build_quality` is not
+      merely the better instrument here, it is the only one. Extending it to
+      give a verdict on whether a ward-economy item is overvalued for a given
+      Support/Solo core remains the recommendation.
+
+      THE THRESHOLD WARNING FROM 08-29 STILL STANDS UNCHANGED. Ymir's gap is
+      0.04 wide and both numbers move on every refresh. If a later refresh
+      clears this claim on its own, that is still the coincidence this entry
+      has now documented twice, and the baseline below is still set to what the
+      checker says today.
+
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
     claim: narrative
