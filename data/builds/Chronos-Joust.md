@@ -1315,4 +1315,76 @@ builds:
       fit: 0.47
   starter: *id001
   aspect: Aspect of Relativity
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Divine Ruin
+  - Void Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Divine Ruin
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Divine Ruin:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Void Stone:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Obsidian Shard:
+      total: 0.47
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Obsidian Shard
+    removed: Doublet of Binding
+    reason: Conquest community 63% win over 40 matches (vs 47% on this god), taking
+      the model's weakest slot from Doublet of Binding
+  borrowed_from: Conquest
+  starter: *id001
+  aspect: Aspect of Relativity
 ---

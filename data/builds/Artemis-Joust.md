@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.5
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Jotunn's Revenge
+  - Dominance
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  flex_slots:
+  - Jotunn's Revenge
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.37
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Dominance:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    The Reaper:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Riptalon:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Demon Blade:
+      total: 0.59
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+  swaps:
+  - added: The Executioner
+    removed: Deathbringer
+    reason: Conquest community 69% win over 213 matches (vs 62% on this god), taking
+      the model's weakest slot from Deathbringer
+  borrowed_from: Conquest
+  starter: *id001
 ---

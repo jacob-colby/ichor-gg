@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Void Stone
-    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 48 matches (vs 50% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
@@ -929,7 +929,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Kinetic Cuirass
-    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 48 matches (vs 50% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001

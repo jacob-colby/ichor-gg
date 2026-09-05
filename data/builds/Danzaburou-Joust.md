@@ -724,14 +724,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
+  - Book of Thoth
   - Transcendence
   - Death Metal
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -754,12 +754,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+    Book of Thoth:
+      total: 0.28
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.05
     Transcendence:
       total: 0.35
       efficiency: 0.53
@@ -787,8 +787,12 @@ builds:
   swaps:
   - added: Transcendence
     removed: Tyrfing
-    reason: Conquest community 63% win over 75 matches (vs 51% on this god), taking
+    reason: Conquest community 65% win over 83 matches (vs 52% on this god), taking
       the model's weakest slot from Tyrfing
+  - added: Book of Thoth
+    removed: Jotunn's Revenge
+    reason: Conquest community 68% win over 38 matches (vs 52% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---

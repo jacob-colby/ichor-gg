@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Void Shield
-    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 48 matches (vs 50% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
@@ -929,7 +929,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Shield of the Phoenix
-    reason: Conquest community 77% win over 44 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 48 matches (vs 50% on this god), taking
       the model's weakest slot from Shield of the Phoenix
   borrowed_from: Conquest
   starter: *id001

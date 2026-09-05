@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.75
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Toxic Blade
+  - Draconic Scale
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Toxic Blade
+  - Draconic Scale
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.63
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Draconic Scale:
+      total: 0.42
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    Pharaoh's Curse:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Shogun's Ofuda:
+      total: 0.62
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+  swaps:
+  - added: Draconic Scale
+    removed: Stampede
+    reason: Conquest community 69% win over 30 matches (vs 50% on this god), taking
+      the model's weakest slot from Stampede
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Void Shield
-  - Draconic Scale
+  - Freya's Tears
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Void Shield
-  - Draconic Scale
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Draconic Scale:
-      total: 0.58
-      efficiency: 0.5
+    Freya's Tears:
+      total: 0.63
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -460,9 +460,9 @@ builds:
       pick: 0.0
       fit: 0.83
   swaps:
-  - added: Draconic Scale
+  - added: Freya's Tears
     removed: Void Stone
-    reason: Conquest community 81% win over 40 matches (vs 62% on this god), taking
+    reason: Conquest community 71% win over 105 matches (vs 62% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

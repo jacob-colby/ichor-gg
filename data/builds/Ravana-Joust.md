@@ -529,21 +529,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
-  - Eye of the Storm
-  - The Reaper
+  - Runeforged Hammer
   - Heartseeker
   - Titan's Bane
+  - Amanita Charm
   - Erosion
   flex_slots:
-  - Eye of the Storm
+  - Runeforged Hammer
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,18 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Eye of the Storm:
-      total: 0.54
-      efficiency: 0.52
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    The Reaper:
-      total: 0.6
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
+      fit: 0.55
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -583,6 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.76
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
     Erosion:
       total: 0.57
       efficiency: 0.51
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Toxic Blade
-    reason: Conquest community 59% win over 144 matches (vs 49% on this god), taking
+    reason: Conquest community 59% win over 157 matches (vs 49% on this god), taking
       the model's weakest slot from Toxic Blade
-  - added: The Reaper
-    removed: Runeforged Hammer
-    reason: Conquest community 55% win over 267 matches (vs 49% on this god), taking
-      the model's weakest slot from Runeforged Hammer
   borrowed_from: Conquest
   starter: *id001
 ---

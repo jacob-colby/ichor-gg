@@ -529,21 +529,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
-  - Mystical Mail
-  - The Reaper
+  - Void Shield
   - Titan's Bane
+  - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Mystical Mail
+  - Void Shield
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,24 +559,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Mystical Mail:
-      total: 0.57
-      efficiency: 0.43
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.71
-    The Reaper:
-      total: 0.6
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Titan's Bane:
       total: 0.51
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Amanita Charm:
+      total: 0.81
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
     Erosion:
       total: 0.62
       efficiency: 0.51
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Void Stone
-    reason: Conquest community 59% win over 144 matches (vs 49% on this god), taking
+    reason: Conquest community 59% win over 157 matches (vs 49% on this god), taking
       the model's weakest slot from Void Stone
-  - added: The Reaper
-    removed: Void Shield
-    reason: Conquest community 55% win over 267 matches (vs 49% on this god), taking
-      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

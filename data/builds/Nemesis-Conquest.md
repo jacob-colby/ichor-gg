@@ -5,103 +5,103 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Justice
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.64
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.69
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.39
+    pick_rate: 0.37
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.27
-      win_rate: 0.43
+      pick_rate: 0.28
+      win_rate: 0.46
     - name: Avenging Blade
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.69
   - name: Hydra's Lament
-    pick_rate: 0.38
+    pick_rate: 0.37
     win_rate: 0.63
     alternates:
     - name: The Reaper
-      pick_rate: 0.08
-      win_rate: 0.44
+      pick_rate: 0.09
+      win_rate: 0.52
     - name: Jotunn's Revenge
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.54
   - name: The Reaper
     pick_rate: 0.14
-    win_rate: 0.69
+    win_rate: 0.68
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.09
       win_rate: 0.52
     - name: Blinking Abyss
-      pick_rate: 0.08
-      win_rate: 0.48
+      pick_rate: 0.07
+      win_rate: 0.5
   - name: Heartseeker
-    pick_rate: 0.24
-    win_rate: 0.62
+    pick_rate: 0.25
+    win_rate: 0.63
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.11
+      win_rate: 0.53
     - name: Shifter's Shield
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.65
   - name: Titan's Bane
     pick_rate: 0.1
-    win_rate: 0.44
+    win_rate: 0.45
     alternates:
     - name: Heartseeker
-      pick_rate: 0.15
-      win_rate: 0.61
+      pick_rate: 0.16
+      win_rate: 0.6
     - name: Blinking Abyss
       pick_rate: 0.09
-      win_rate: 0.65
+      win_rate: 0.64
   - name: Magi's Cloak
     pick_rate: 0.09
-    win_rate: 0.59
+    win_rate: 0.56
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.08
-      win_rate: 0.64
-    - name: Heartseeker
+      pick_rate: 0.07
+      win_rate: 0.6
+    - name: Skeggox
       pick_rate: 0.06
-      win_rate: 0.67
+      win_rate: 0.54
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.3
+    pick_rate: 0.29
     win_rate: 0.63
   - name: Hunter's Cowl
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.66
   - name: Bumba's Cudgel
     pick_rate: 0.18
-    win_rate: 0.39
+    win_rate: 0.42
   source_url: https://smitebrain.com/gods/nemesis/
-  last_verified: '2026-09-04'
-  god_win_rate: 0.5446153846153846
-  god_matches_won: 177
-  god_matches_played: 325
+  last_verified: '2026-09-05'
+  god_win_rate: 0.5583333333333333
+  god_matches_won: 201
+  god_matches_played: 360
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-04'
-  god_matches_analyzed: 11911
+  god_window_end: '2026-09-05'
+  god_matches_analyzed: 13197
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Tyrfing
+  - Transcendence
   - Death Metal
-  - The Reaper
   - Heartseeker
-  - Tekko-Kagi
+  - Rod of Tahuti
   flex_slots:
-  - Heartseeker
-  - Tekko-Kagi
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -119,50 +119,49 @@ builds:
     this god: Rod of Tahuti, Death Metal, Tyrfing, Tekko-Kagi, Silverbranch Bow, Lernaean
     Bow, Golden Blade, Nimble Ring, Bragi''s Harp, Spear of the Magus, Riptalon, Spear
     of Desolation, The Crusher, Dominance, Obsidian Shard, Deathbringer, Soul Gem,
-    Toxic Blade, Avenging Blade, Demon Blade, Gluttonous Grimoire, Bracer of The Abyss,
+    Toxic Blade, Demon Blade, Avenging Blade, Gluttonous Grimoire, Bracer of The Abyss,
     Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum Blade, Transcendence,
     The World Stone, Arondight, Qin''s Blade, Runeforged Hammer, Dreamer''s Idol,
     Damaru, Rage, Ancient Signet, Chronos'' Pendant, Sun Beam Bow.'
   slot_scores:
+    Book of Thoth:
+      total: 0.47
+      efficiency: 0.51
+      win: 0.63
+      pick: 0.0
+      fit: 0.06
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.49
-    Tyrfing:
-      total: 0.56
-      efficiency: 0.48
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
       win: 0.63
       pick: 0.0
-      fit: 0.73
+      fit: 0.25
     Death Metal:
       total: 0.57
       efficiency: 0.61
       win: 0.63
       pick: 0.0
       fit: 0.51
-    The Reaper:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.69
-      pick: 0.22
-      fit: 0.44
     Heartseeker:
       total: 0.56
       efficiency: 0.47
-      win: 0.62
-      pick: 0.4
+      win: 0.63
+      pick: 0.42
       fit: 0.64
-    Tekko-Kagi:
-      total: 0.56
-      efficiency: 0.49
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.86
       win: 0.63
       pick: 0.0
-      fit: 0.69
+      fit: 0.26
   community_ordered:
   - Jotunn's Revenge
-  - The Reaper
   - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
@@ -211,13 +210,13 @@ builds:
       total: 0.61
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.52
     Hydra's Lament:
       total: 0.57
       efficiency: 0.54
       win: 0.63
-      pick: 0.52
+      pick: 0.5
       fit: 0.49
     Transcendence:
       total: 0.51
@@ -283,10 +282,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.3
     Kinetic Cuirass:
       total: 0.55
@@ -297,14 +296,14 @@ builds:
     The Reaper:
       total: 0.58
       efficiency: 0.5
-      win: 0.69
+      win: 0.68
       pick: 0.22
       fit: 0.57
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
       win: 0.65
-      pick: 0.13
+      pick: 0.12
       fit: 0.39
     Amanita Charm:
       total: 0.62
@@ -362,7 +361,7 @@ builds:
       total: 0.62
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.61
     Transcendence:
       total: 0.5
@@ -373,14 +372,14 @@ builds:
     The Reaper:
       total: 0.58
       efficiency: 0.5
-      win: 0.69
+      win: 0.68
       pick: 0.22
       fit: 0.57
     Heartseeker:
       total: 0.58
       efficiency: 0.47
-      win: 0.62
-      pick: 0.4
+      win: 0.63
+      pick: 0.42
       fit: 0.77
     Rod of Tahuti:
       total: 0.65
@@ -432,7 +431,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.31
     Tyrfing:
       total: 0.55
@@ -506,13 +505,13 @@ builds:
       total: 0.62
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.59
     Hydra's Lament:
       total: 0.58
       efficiency: 0.54
       win: 0.63
-      pick: 0.52
+      pick: 0.5
       fit: 0.55
     Death Metal:
       total: 0.55
@@ -580,7 +579,7 @@ builds:
       total: 0.6
       efficiency: 0.72
       win: 0.58
-      pick: 0.39
+      pick: 0.37
       fit: 0.49
     Tyrfing:
       total: 0.56
@@ -614,85 +613,5 @@ builds:
       fit: 0.26
   community_ordered:
   - Jotunn's Revenge
-  starter: *id001
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Jotunn's Revenge
-  - Tyrfing
-  - Death Metal
-  - The Reaper
-  - Tekko-Kagi
-  - Rod of Tahuti
-  flex_slots:
-  - Tekko-Kagi
-  - The Reaper
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Tyrfing,
-    Tekko-Kagi, Silverbranch Bow, Lernaean Bow, Golden Blade, Nimble Ring, Bragi''s
-    Harp, Spear of the Magus, Riptalon, Spear of Desolation, The Crusher, Dominance,
-    Obsidian Shard, Deathbringer, Soul Gem, Toxic Blade, Demon Blade, Gluttonous Grimoire,
-    Bracer of The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum
-    Blade, Transcendence, The World Stone, Arondight, Qin''s Blade, Runeforged Hammer,
-    Dreamer''s Idol, Damaru, Rage, Ancient Signet, Chronos'' Pendant, Avenging Blade,
-    Sun Beam Bow.'
-  slot_scores:
-    Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
-      win: 0.58
-      pick: 0.39
-      fit: 0.49
-    Tyrfing:
-      total: 0.56
-      efficiency: 0.48
-      win: 0.63
-      pick: 0.0
-      fit: 0.73
-    Death Metal:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.63
-      pick: 0.0
-      fit: 0.51
-    The Reaper:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.69
-      pick: 0.22
-      fit: 0.44
-    Tekko-Kagi:
-      total: 0.56
-      efficiency: 0.49
-      win: 0.63
-      pick: 0.0
-      fit: 0.69
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
-      win: 0.63
-      pick: 0.0
-      fit: 0.26
-  community_ordered:
-  - Jotunn's Revenge
-  - The Reaper
-  swaps:
-  - added: The Reaper
-    removed: Silverbranch Bow
-    reason: community 69% win over 46 matches (vs 54% on this god), taking the model's
-      weakest slot from Silverbranch Bow
   starter: *id001
 ---

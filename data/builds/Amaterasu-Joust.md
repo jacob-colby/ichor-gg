@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Freya's Tears
-    reason: Conquest community 78% win over 42 matches (vs 60% on this god), taking
+    reason: Conquest community 78% win over 40 matches (vs 60% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

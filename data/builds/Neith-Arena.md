@@ -723,15 +723,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Odysseus' Bow
   - Toxic Blade
-  - Tyrfing
+  - Jotunn's Revenge
+  - Death Metal
   - Riptalon
-  - Obsidian Shard
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Odysseus' Bow
+  - Jotunn's Revenge
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -748,21 +748,21 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Odysseus' Bow:
-      total: 0.37
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Toxic Blade:
       total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Tyrfing:
-      total: 0.49
-      efficiency: 0.48
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Death Metal:
+      total: 0.55
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -772,12 +772,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Obsidian Shard:
+    Silverbranch Bow:
       total: 0.47
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.41
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -785,18 +785,10 @@ builds:
       pick: 0.0
       fit: 1.0
   swaps:
-  - added: Tyrfing
+  - added: Silverbranch Bow
     removed: Lernaean Bow
-    reason: Conquest community 67% win over 128 matches (vs 51% on this god), taking
+    reason: Conquest community 71% win over 38 matches (vs 51% on this god), taking
       the model's weakest slot from Lernaean Bow
-  - added: Obsidian Shard
-    removed: Jotunn's Revenge
-    reason: Conquest community 70% win over 54 matches (vs 51% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
-  - added: Odysseus' Bow
-    removed: Death Metal
-    reason: Conquest community 63% win over 74 matches (vs 51% on this god), taking
-      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---

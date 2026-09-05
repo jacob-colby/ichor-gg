@@ -724,14 +724,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Tyrfing
+  - Death Metal
   - Riptalon
+  - Silverbranch Bow
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Tyrfing
-  - Obsidian Shard
+  - Death Metal
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -754,9 +754,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Tyrfing:
-      total: 0.49
-      efficiency: 0.48
+    Death Metal:
+      total: 0.55
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -766,18 +766,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Silverbranch Bow:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Obsidian Shard:
-      total: 0.47
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -785,14 +785,10 @@ builds:
       pick: 0.0
       fit: 1.0
   swaps:
-  - added: Tyrfing
+  - added: Silverbranch Bow
     removed: Jotunn's Revenge
-    reason: Conquest community 67% win over 128 matches (vs 51% on this god), taking
+    reason: Conquest community 71% win over 38 matches (vs 51% on this god), taking
       the model's weakest slot from Jotunn's Revenge
-  - added: Obsidian Shard
-    removed: Death Metal
-    reason: Conquest community 70% win over 54 matches (vs 51% on this god), taking
-      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---
