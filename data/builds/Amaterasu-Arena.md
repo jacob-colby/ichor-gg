@@ -529,21 +529,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Golden Blade
+  - Kinetic Cuirass
   - Void Shield
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Draconic Scale
+  - Kinetic Cuirass
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Void Shield:
       total: 0.62
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Draconic Scale:
-      total: 0.53
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -590,14 +590,10 @@ builds:
       pick: 0.0
       fit: 0.76
   swaps:
-  - added: Draconic Scale
-    removed: Void Stone
-    reason: Conquest community 78% win over 40 matches (vs 60% on this god), taking
-      the model's weakest slot from Void Stone
   - added: Golden Blade
-    removed: Kinetic Cuirass
-    reason: Conquest community 70% win over 113 matches (vs 60% on this god), taking
-      the model's weakest slot from Kinetic Cuirass
+    removed: Void Stone
+    reason: Conquest community 70% win over 125 matches (vs 60% on this god), taking
+      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Transformation
-  aspect_pick_rate: 0.13
-  aspect_win_rate: 0.34
+  aspect_pick_rate: 0.14
+  aspect_win_rate: 0.36
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.41
-    win_rate: 0.53
+    win_rate: 0.52
     alternates:
     - name: Chronos' Pendant
       pick_rate: 0.06
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Gem of Focus
       pick_rate: 0.06
       win_rate: 0.53
   - name: Gladiator's Shield
     pick_rate: 0.09
-    win_rate: 0.38
+    win_rate: 0.4
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.13
-      win_rate: 0.49
+      win_rate: 0.47
     - name: Prophetic Cloak
       pick_rate: 0.08
-      win_rate: 0.46
+      win_rate: 0.43
   - name: Genji's Guard
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.51
     alternates:
     - name: Freya's Tears
       pick_rate: 0.1
-      win_rate: 0.41
+      win_rate: 0.42
     - name: Soul Gem
-      pick_rate: 0.08
-      win_rate: 0.67
+      pick_rate: 0.07
+      win_rate: 0.64
   - name: Freya's Tears
     pick_rate: 0.09
     win_rate: 0.57
     alternates:
     - name: Gladiator's Shield
-      pick_rate: 0.08
-      win_rate: 0.54
+      pick_rate: 0.09
+      win_rate: 0.57
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.52
+      win_rate: 0.5
   - name: Hide of the Nemean Lion
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.5
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.07
-      win_rate: 0.4
+      pick_rate: 0.08
+      win_rate: 0.45
     - name: Shell of Rebuke
       pick_rate: 0.06
       win_rate: 0.59
   - name: Engraved Guard
     pick_rate: 0.07
-    win_rate: 0.58
+    win_rate: 0.62
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.05
-      win_rate: 0.5
-    - name: Triton's Conch
       pick_rate: 0.04
       win_rate: 0.5
+    - name: Freya's Tears
+      pick_rate: 0.04
+      win_rate: 0.86
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.31
-    win_rate: 0.59
+    pick_rate: 0.3
+    win_rate: 0.58
   - name: Bluestone Pendant
-    pick_rate: 0.18
-    win_rate: 0.46
+    pick_rate: 0.19
+    win_rate: 0.43
   - name: Archmage's Gem
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/sun-wukong/
-  last_verified: '2026-09-05'
-  god_win_rate: 0.48909657320872274
-  god_matches_won: 157
-  god_matches_played: 321
+  last_verified: '2026-09-06'
+  god_win_rate: 0.4852941176470588
+  god_matches_won: 165
+  god_matches_played: 340
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-05'
-  god_matches_analyzed: 13197
+  god_window_end: '2026-09-06'
+  god_matches_analyzed: 14585
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,8 +100,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
   - Runeforged Hammer
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -121,9 +121,10 @@ builds:
     Blade, Gluttonous Grimoire, Lernaean Bow, Breastplate of Valor, Hydra''s Lament,
     Erosion, Pharaoh''s Curse, Eye of Providence, Heartseeker, Draconic Scale, Shogun''s
     Ofuda, Golden Blade, Shield of the Phoenix, Tekko-Kagi, Bragi''s Harp, Rod of
-    Asclepius, Daybreak Gavel, Nimble Ring, Helm of Radiance, Midgardian Mail, Stone
-    of Binding, Triton''s Conch, Dominance, Spear of the Magus, Titan''s Bane, Death
-    Metal, Leviathan''s Hide, Jade Scepter, The Crusher, Void Shield.'
+    Asclepius, Daybreak Gavel, Nimble Ring, Helm of Radiance, Midgardian Mail, Triton''s
+    Conch, Stone of Binding, Dominance, Spear of the Magus, Titan''s Bane, Death Metal,
+    Leviathan''s Hide, Jade Scepter, The Crusher, Void Shield, Hide of the Nemean
+    Lion.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -138,9 +139,9 @@ builds:
       pick: 0.0
       fit: 0.37
     Shifter's Shield:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.53
+      win: 0.52
       pick: 0.41
       fit: 0.45
     Runeforged Hammer:
@@ -177,8 +178,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Shifter's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -200,7 +201,8 @@ builds:
     Feather, Gluttonous Grimoire, Avenging Blade, Pharaoh''s Curse, Shogun''s Ofuda,
     Lernaean Bow, Hydra''s Lament, Lifebinder, Stone of Binding, Midgardian Mail,
     Helm of Radiance, Chandra''s Grace, Daybreak Gavel, Magi''s Cloak, Leviathan''s
-    Hide, Sphere of Negation, Void Shield, Stampede, Heartseeker, Ancile.'
+    Hide, Sphere of Negation, Void Shield, Stampede, Hide of the Nemean Lion, Heartseeker,
+    Ancile.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -217,7 +219,7 @@ builds:
     Shifter's Shield:
       total: 0.53
       efficiency: 0.55
-      win: 0.53
+      win: 0.52
       pick: 0.41
       fit: 0.54
     Freya's Tears:
@@ -233,10 +235,10 @@ builds:
       pick: 0.0
       fit: 0.84
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.52
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.11
       fit: 0.54
   community_ordered:
   - Shifter's Shield
@@ -263,8 +265,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -310,10 +312,10 @@ builds:
       pick: 0.0
       fit: 0.39
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.52
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.11
       fit: 0.52
   community_ordered:
   - Freya's Tears
@@ -345,7 +347,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Rod of Tahuti, Berserker''s Shield, Nimble Ring, Golden Blade,
+    this god: Rod of Tahuti, Berserker''s Shield, Soul Gem, Nimble Ring, Golden Blade,
     Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire, Tyrfing, Riptalon, Kinetic
     Cuirass, Runeforged Hammer, Lernaean Bow, Silverbranch Bow, Toxic Blade, Pharaoh''s
     Curse, Breastplate of Valor, Shogun''s Ofuda, Shield Splitter, Tekko-Kagi, Bragi''s
@@ -385,10 +387,10 @@ builds:
       pick: 0.15
       fit: 0.19
     Soul Gem:
-      total: 0.55
+      total: 0.53
       efficiency: 0.57
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.11
       fit: 0.29
   community_ordered:
   - Freya's Tears
@@ -431,10 +433,10 @@ builds:
     Ofuda, Prophetic Cloak, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.66
       win: 0.51
-      pick: 0.22
+      pick: 0.2
       fit: 0.44
     Berserker's Shield:
       total: 0.52
@@ -461,10 +463,10 @@ builds:
       pick: 0.15
       fit: 0.52
     Soul Gem:
-      total: 0.58
+      total: 0.56
       efficiency: 0.52
-      win: 0.67
-      pick: 0.12
+      win: 0.64
+      pick: 0.11
       fit: 0.59
   community_ordered:
   - Genji's Guard
@@ -503,8 +505,9 @@ builds:
     Hydra''s Lament, Erosion, Pharaoh''s Curse, Eye of Providence, Heartseeker, Draconic
     Scale, Shogun''s Ofuda, Golden Blade, Shield of the Phoenix, Tekko-Kagi, Bragi''s
     Harp, Rod of Asclepius, Daybreak Gavel, Nimble Ring, Helm of Radiance, Midgardian
-    Mail, Triton''s Conch, Stone of Binding, Dominance, Spear of the Magus, Titan''s
-    Bane, Death Metal, Leviathan''s Hide, Jade Scepter, The Crusher, Void Shield.'
+    Mail, Triton''s Conch, Stone of Binding, Dominance, Hide of the Nemean Lion, Spear
+    of the Magus, Titan''s Bane, Death Metal, Leviathan''s Hide, Jade Scepter, The
+    Crusher, Void Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.54

@@ -14,79 +14,79 @@ builds:
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.16
-      win_rate: 0.44
+      win_rate: 0.46
     - name: Avenging Blade
       pick_rate: 0.06
-      win_rate: 0.53
+      win_rate: 0.54
   - name: Odysseus' Bow
-    pick_rate: 0.31
-    win_rate: 0.54
+    pick_rate: 0.3
+    win_rate: 0.53
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.19
-      win_rate: 0.59
+      pick_rate: 0.18
+      win_rate: 0.58
     - name: Hastened Fatalis
-      pick_rate: 0.09
-      win_rate: 0.63
+      pick_rate: 0.1
+      win_rate: 0.66
   - name: Silverbranch Bow
     pick_rate: 0.21
     win_rate: 0.54
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.2
+      pick_rate: 0.22
       win_rate: 0.59
     - name: Riptalon
-      pick_rate: 0.12
-      win_rate: 0.59
+      pick_rate: 0.11
+      win_rate: 0.57
   - name: The Executioner
     pick_rate: 0.16
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.25
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Riptalon
       pick_rate: 0.15
-      win_rate: 0.65
+      win_rate: 0.64
   - name: Riptalon
     pick_rate: 0.14
-    win_rate: 0.55
+    win_rate: 0.51
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.18
+      pick_rate: 0.19
       win_rate: 0.69
     - name: The Executioner
       pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.58
   - name: Manchu Bow
     pick_rate: 0.11
-    win_rate: 0.53
+    win_rate: 0.52
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.09
-      win_rate: 0.47
-    - name: Bow
+      win_rate: 0.46
+    - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.8
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.3
     win_rate: 0.6
   - name: Hunter's Cowl
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.66
   - name: Gilded Arrow
-    pick_rate: 0.15
-    win_rate: 0.39
+    pick_rate: 0.14
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/rama/
-  last_verified: '2026-09-05'
-  god_win_rate: 0.5431192660550459
-  god_matches_won: 296
-  god_matches_played: 545
+  last_verified: '2026-09-06'
+  god_win_rate: 0.5411764705882353
+  god_matches_won: 322
+  god_matches_played: 595
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-05'
-  god_matches_analyzed: 13197
+  god_window_end: '2026-09-06'
+  god_matches_analyzed: 14585
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -96,12 +96,12 @@ builds:
   - Lernaean Bow
   - Tyrfing
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
-  - Riptalon
   - Tekko-Kagi
   flex_slots:
   - Tyrfing
-  - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -140,18 +140,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.38
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.0
+      fit: 0.18
     The Reaper:
       total: 0.5
       efficiency: 0.55
       win: 0.54
       pick: 0.0
       fit: 0.44
-    Riptalon:
-      total: 0.49
-      efficiency: 0.43
-      win: 0.55
-      pick: 0.3
-      fit: 0.52
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.49
@@ -160,7 +160,6 @@ builds:
       fit: 0.6
   community_ordered:
   - Tyrfing
-  - Riptalon
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -193,7 +192,7 @@ builds:
     Revenge, Hydra''s Lament, Lernaean Bow, Heartseeker, The Reaper, Tekko-Kagi, Dominance,
     Deathbringer, Titan''s Bane, The Crusher, Transcendence, Arondight, Musashi''s
     Dual Swords, Demon Blade, Runeforged Hammer, Pendulum Blade, Avatar''s Parashu,
-    Damaru, Rage, Avenging Blade, Barbed Carver, Berserker''s Shield, Breastplate
+    Avenging Blade, Damaru, Rage, Barbed Carver, Berserker''s Shield, Breastplate
     of Valor, Golden Blade, Genji''s Guard, Bloodforge, Daybreak Gavel.'
   slot_scores:
     Lernaean Bow:
@@ -262,7 +261,7 @@ builds:
     this god: Jotunn''s Revenge, Lernaean Bow, Tekko-Kagi, The Reaper, Deathbringer,
     Heartseeker, Demon Blade, Hydra''s Lament, Dominance, Musashi''s Dual Swords,
     Titan''s Bane, The Crusher, Damaru, Rage, Transcendence, Avatar''s Parashu, Arondight,
-    Runeforged Hammer, Pendulum Blade, Berserker''s Shield, Golden Blade, Avenging
+    Runeforged Hammer, Pendulum Blade, Berserker''s Shield, Avenging Blade, Golden
     Blade, Barbed Carver, Bloodforge, Vital Amplifier, Daybreak Gavel, Toxic Blade.'
   slot_scores:
     Lernaean Bow:
@@ -401,9 +400,8 @@ builds:
     of the Phoenix, Kinetic Cuirass, Runeforged Hammer, Freya''s Tears, Genji''s Guard,
     Breastplate of Valor, Yogi''s Necklace, Shifter''s Shield, Shield Splitter, Pharaoh''s
     Curse, Lernaean Bow, Shogun''s Ofuda, Eye of the Storm, Phoenix Feather, Erosion,
-    Tekko-Kagi, Eye of Providence, Heartseeker, Daybreak Gavel, Chandra''s Grace,
-    Hydra''s Lament, Draconic Scale, Stone of Binding, Avenging Blade, Midgardian
-    Mail.'
+    Tekko-Kagi, Eye of Providence, Avenging Blade, Heartseeker, Daybreak Gavel, Chandra''s
+    Grace, Hydra''s Lament, Draconic Scale, Stone of Binding, Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -541,7 +539,7 @@ builds:
     Toxic Blade, Heartseeker, Hydra''s Lament, Deathbringer, Dominance, Demon Blade,
     Qin''s Blade, Titan''s Bane, The Crusher, Musashi''s Dual Swords, Sun Beam Bow,
     Transcendence, Runeforged Hammer, Arondight, Damaru, Rage, Berserker''s Shield,
-    Avatar''s Parashu, Pendulum Blade, Avenging Blade, Barbed Carver.'
+    Avatar''s Parashu, Avenging Blade, Pendulum Blade, Barbed Carver.'
   slot_scores:
     Lernaean Bow:
       total: 0.5
@@ -568,9 +566,9 @@ builds:
       pick: 0.33
       fit: 0.54
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
-      win: 0.55
+      win: 0.51
       pick: 0.3
       fit: 0.62
     Tekko-Kagi:

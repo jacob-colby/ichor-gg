@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Deathbringer
-    reason: Conquest community 69% win over 213 matches (vs 62% on this god), taking
+    reason: Conquest community 69% win over 233 matches (vs 62% on this god), taking
       the model's weakest slot from Deathbringer
   borrowed_from: Conquest
   starter: *id001

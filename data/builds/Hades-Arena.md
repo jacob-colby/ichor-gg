@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 0.68
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Void Shield
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Spear of Desolation
+  - Void Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Shield:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Spear of Desolation:
+      total: 0.59
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Rod of Tahuti:
+      total: 0.66
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Amanita Charm:
+      total: 0.8
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.95
+    Erosion:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Stampede:
+      total: 0.6
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+  swaps:
+  - added: Rod of Tahuti
+    removed: Void Stone
+    reason: Conquest community 70% win over 242 matches (vs 64% on this god), taking
+      the model's weakest slot from Void Stone
+  borrowed_from: Conquest
+  starter: *id001
 ---

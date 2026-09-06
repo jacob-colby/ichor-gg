@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Dominance
-    reason: Conquest community 64% win over 209 matches (vs 57% on this god), taking
+    reason: Conquest community 65% win over 233 matches (vs 58% on this god), taking
       the model's weakest slot from Dominance
   borrowed_from: Conquest
   starter: *id001

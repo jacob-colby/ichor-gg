@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Kinetic Cuirass
-    reason: Conquest community 60% win over 350 matches (vs 53% on this god), taking
+    reason: Conquest community 61% win over 407 matches (vs 54% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   - added: Spear of Desolation
     removed: Void Stone
-    reason: Conquest community 58% win over 475 matches (vs 53% on this god), taking
+    reason: Conquest community 58% win over 534 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

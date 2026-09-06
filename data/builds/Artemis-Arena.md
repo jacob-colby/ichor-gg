@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Jotunn's Revenge
-    reason: Conquest community 69% win over 213 matches (vs 62% on this god), taking
+    reason: Conquest community 69% win over 233 matches (vs 62% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Void Shield
+  - Shell of Rebuke
   - Freya's Tears
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Freya's Tears
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -559,12 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Void Shield:
-      total: 0.64
-      efficiency: 0.47
+    Shell of Rebuke:
+      total: 0.37
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.45
     Freya's Tears:
       total: 0.62
       efficiency: 0.61
@@ -592,8 +592,12 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Void Stone
-    reason: Conquest community 64% win over 97 matches (vs 54% on this god), taking
+    reason: Conquest community 64% win over 106 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
+  - added: Shell of Rebuke
+    removed: Void Shield
+    reason: Conquest community 69% win over 48 matches (vs 54% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -1382,7 +1382,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Doublet of Binding
-    reason: Conquest community 63% win over 40 matches (vs 47% on this god), taking
+    reason: Conquest community 64% win over 40 matches (vs 49% on this god), taking
       the model's weakest slot from Doublet of Binding
   borrowed_from: Conquest
   starter: *id001

@@ -5,12 +5,12 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Passionate Storm
-  aspect_pick_rate: 0.2
-  aspect_win_rate: 0.58
+  aspect_pick_rate: 0.21
+  aspect_win_rate: 0.59
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.73
-    win_rate: 0.54
+    pick_rate: 0.74
+    win_rate: 0.55
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.13
@@ -24,69 +24,69 @@ builds:
     alternates:
     - name: Hastened Fatalis
       pick_rate: 0.16
-      win_rate: 0.56
+      win_rate: 0.58
     - name: Dagger of Frenzy
-      pick_rate: 0.13
-      win_rate: 0.49
+      pick_rate: 0.14
+      win_rate: 0.5
   - name: Hastened Fatalis
     pick_rate: 0.16
-    win_rate: 0.55
+    win_rate: 0.53
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.18
-      win_rate: 0.52
-    - name: The Executioner
+      win_rate: 0.54
+    - name: Riptalon
       pick_rate: 0.14
-      win_rate: 0.51
+      win_rate: 0.66
   - name: Silverbranch Bow
     pick_rate: 0.28
     win_rate: 0.64
     alternates:
     - name: The Executioner
-      pick_rate: 0.19
-      win_rate: 0.51
+      pick_rate: 0.2
+      win_rate: 0.53
     - name: Riptalon
       pick_rate: 0.15
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Riptalon
     pick_rate: 0.14
     win_rate: 0.58
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.22
+      pick_rate: 0.23
       win_rate: 0.58
     - name: The Executioner
       pick_rate: 0.13
       win_rate: 0.56
   - name: Hunter's Bow
     pick_rate: 0.11
-    win_rate: 0.57
+    win_rate: 0.59
     alternates:
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.55
+      win_rate: 0.56
     - name: Manchu Bow
       pick_rate: 0.09
-      win_rate: 0.35
+      win_rate: 0.37
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.37
+    pick_rate: 0.36
     win_rate: 0.61
   - name: Sharpshooter's Arrow
-    pick_rate: 0.23
+    pick_rate: 0.24
     win_rate: 0.61
   - name: Leather Cowl
-    pick_rate: 0.16
-    win_rate: 0.45
+    pick_rate: 0.15
+    win_rate: 0.46
   source_url: https://smitebrain.com/gods/ishtar/
-  last_verified: '2026-09-05'
-  god_win_rate: 0.5432756324900133
-  god_matches_won: 408
-  god_matches_played: 751
+  last_verified: '2026-09-06'
+  god_win_rate: 0.5472392638036809
+  god_matches_won: 446
+  god_matches_played: 815
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-05'
-  god_matches_analyzed: 13197
+  god_window_end: '2026-09-06'
+  god_matches_analyzed: 14585
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -129,10 +129,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Tyrfing:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.82
     Lernaean Bow:
       total: 0.53
@@ -205,8 +205,8 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.51
     Hydra's Lament:
       total: 0.51
@@ -276,10 +276,10 @@ builds:
       pick: 0.0
       fit: 0.6
     Tyrfing:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.75
     Musashi's Dual Swords:
       total: 0.5
@@ -351,8 +351,8 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.53
     Berserker's Shield:
       total: 0.56
@@ -421,10 +421,10 @@ builds:
       pick: 0.0
       fit: 0.51
     Tyrfing:
-      total: 0.53
+      total: 0.54
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.57
     Silverbranch Bow:
       total: 0.59
@@ -494,10 +494,10 @@ builds:
       pick: 0.0
       fit: 0.67
     Tyrfing:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.77
     Lernaean Bow:
       total: 0.52
@@ -568,10 +568,10 @@ builds:
       pick: 0.0
       fit: 0.4
     Tyrfing:
-      total: 0.52
+      total: 0.53
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.5
     Jotunn's Revenge:
       total: 0.55
@@ -640,10 +640,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Tyrfing:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.82
     Lernaean Bow:
       total: 0.53
@@ -712,10 +712,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Tyrfing:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
-      win: 0.54
-      pick: 0.73
+      win: 0.55
+      pick: 0.74
       fit: 0.82
     Lernaean Bow:
       total: 0.53
@@ -747,7 +747,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Dominance
-    reason: community 64% win over 210 matches (vs 54% on this god), taking the model's
+    reason: community 64% win over 228 matches (vs 55% on this god), taking the model's
       weakest slot from Dominance
   starter: *id001
 ---

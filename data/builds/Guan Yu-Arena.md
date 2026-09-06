@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Golden Blade
-    reason: Conquest community 64% win over 168 matches (vs 56% on this god), taking
+    reason: Conquest community 65% win over 171 matches (vs 57% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001
