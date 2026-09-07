@@ -1849,6 +1849,141 @@ shipped **off**. Numbers are in the named module.
     `modes.arena.excluded_items` drops both carriers outright, so no pair
     exists there.
 
+28. **The `hybrid` archetype is outside the penetration cap charge
+    (2026-09-07)** — a DEFECT, and a measured refusal to close it the obvious
+    way. Nothing here shipped; the §7 Cap overflow row is left reading **1**
+    with this beside it, because a row that reads 1 with a reason is worth more
+    than a row that reads 0 because someone typed it.
+
+    **The offender.** `doc_audit` read `-> 1 of 2479 builds over the
+    penetration cap` for the first time. It is Morgan Le Fay, Conquest,
+    archetype `hybrid`, aspect overlay *Aspect of the Cursed Crown*:
+    `Penetration %` totals **45.0 against a `stat_caps` cap of 40** —
+    Gluttonous Grimoire 10, Spear of the Magus 10, Rod of Tahuti 5, Obsidian
+    Shard 20.
+
+    **Three candidate causes, and it is the third.** The flag has not stopped
+    firing (`cap_overflow: 1.0`, live). The penalty is not too small to
+    displace Obsidian Shard's 20 points. **The penalty is never computed for
+    this build at all**, because the `hybrid` archetype is assembled somewhere
+    the charge was never wired into. `recommend._build_entry_set` passes
+    `**assemble.overflow_args(...)` on both of its `assemble_core_converged`
+    calls, covering `core`, all eleven flavors and `model` — and it is called
+    twice, bare and with the aspect overlay, so **aspect builds consult the cap
+    exactly as base builds do**. `hybrid.hybrid_core` does not go through it:
+    it calls `assemble.assemble_core` directly with only `n`, `max_lifesteal`,
+    `stat_caps` and `coherence_args`. No `cap_overflow`, and no `conversion` or
+    `economy` either.
+
+    **The measurement that says "hybrid" and not "aspect".** Adding the charge
+    to that one call and rebuilding all 89 gods × 3 modes changes **69 cores,
+    every one of them `hybrid`**. Zero cores of any other archetype move. The
+    aspect is incidental — it is what makes a swap fire for this god at all,
+    since Morgan Le Fay's bare entry set emits no hybrid — and all 73 hybrid
+    entries are unguarded, 61 bare and 12 aspect.
+
+    **It has been wrong since the flag shipped, not since this refresh.**
+    `cap_overflow` landed 2026-08-21 (`285dbb4`); the `hybrid_core` assembly
+    call last moved 2026-08-20 (`114edbb`) and has not changed. The `hybrid`
+    archetype has never consulted the cap. The recorded `47 -> 29 -> 0` counts
+    were honest counts over all suggested builds; what was never true is the
+    implication that the guard covered the set they were counted over.
+
+    **WHY IT SURFACED NOW, AND IT RETIRES THE ROW'S OWN STANDING PUZZLE.** The
+    §7 Cap overflow row used to say the suggested-build count fell while the
+    community sample grew and that "this file does not have a mechanism for it
+    on record". There is one. Non-hybrid suggested entries are **exactly 2,406
+    at every commit checked** from 2026-08-29 to today (`d65efdf`, `af04139`,
+    `e910b75`, `522456a`, `0e28d47`, `a54a124`, `ea3b5e7`, `2340ea1`,
+    `68744e5`, `0e5d8f1`, `f8e4174`, `d5ead22`, HEAD). Every movement in that
+    denominator is hybrid emission, because an entry whose swaps do not survive
+    is not emitted — 13 / 19 / 23 / 27 / 48 / 27 / 61 / 68 / 73 across the same
+    commits. **2,433 -> 2,479 is 27 -> 73 hybrids and nothing else.** The
+    unguarded population nearly tripled in six days as the community window
+    deepened, and one of them crossed the cap.
+
+    **WHY THE ONE-LINE FIX IS NOT ONE, AND THIS IS THE PART TO READ BEFORE
+    TRYING IT.** `coherence` ships at 0.0, so `coherence_args` returns `{}` and
+    the `hybrid_core` call satisfies `not coherence and not economy and not
+    conversion and not cap_overflow` — it takes `assemble_core`'s **walk
+    path**, which consumes rows in the order handed to it. `hybrid_core` builds
+    that order deliberately, accepted community picks first, and it is the only
+    mechanism that makes a swap stick. Passing `cap_overflow` flips the same
+    call to the **re-rank path**, where the constructed order survives only as
+    a tie-break and the swap is re-adjudicated on score. Measured over all 89
+    gods × 3 modes:
+
+        arm                          entries   hybrid entries   cores changed
+        shipped                        2,479         73             —
+        + cap charge in hybrid         2,426         20             69
+
+    Over-cap goes 1 -> 0 and **53 of 73 hybrid builds stop existing**. That is
+    not a price this session was scoped to pay, and it is not a price the
+    penetration cap is worth on its own evidence.
+
+    **A second hazard underneath it.** The re-rank path reads `score_key`,
+    default `"total"`, and `hybrid_core` is handed `model_rows` — sorted by
+    `quality`. `assemble_core`'s own comment records this exact trap for the
+    `model` archetype: turning re-ranking on without settling `score_key` puts
+    `win` and `pick` back into a build built to be free of them. Any closure
+    has to decide both at once.
+
+    **What a session that closes it must decide** — with its own control, per
+    CLAUDE.md rule 5 — is a charge that prices the waste without re-adjudicating
+    the swaps (charge the fill but not the accepted picks; or charge the choice
+    of DISPLACED item rather than the choice of added one), or an explicit,
+    measured acceptance that swaps get re-adjudicated. Not a plumbing change.
+    Retuning `cap_overflow`'s strength is a third thing again and is not
+    indicated: 1.0 is the principled value (`_weights.yaml`), and the charge is
+    not firing here at any strength.
+
+    **Guard.** `test_hybrid.py::test_an_accepted_swap_survives_reassembly_however_low_the_model_rates_it`
+    pins the ordering invariant and fails on exactly this trade, so the 73 ->
+    20 cannot be made silently.
+
+    **Also unwired, and deliberately out of scope**: `analysis.py`'s
+    disagreement report omits the charge too, but it writes
+    `Analysis/_disagreements.md` and no build, so no shipped number depends on
+    it.
+
+29. **An expert-review baseline that cleared on a refresh, and did not clear
+    for the reason it looks like (2026-09-07)** — a record correction, and the
+    one kind of finding this register exists to stop being lost.
+
+    The `item-overweighted` claim (Eye of Providence, `support-solo` scope) is
+    recorded `resolved` with `last_verdict: partial`. The checker now reads
+    `absent from all 36 Conquest cores in scope`, so the baseline was stale and
+    `test_the_shipped_register_baselines_match_what_the_checker_says_today`
+    was right to fail. It is raised to `clear`.
+
+    **The reason matters more than the verdict, and it is not the one the
+    shape suggests.** §4.26's `unknown_win_shrink` would also have cleared this
+    claim, at every setting from 0.25 up, by demoting unmeasured items on
+    `win`. That is NOT what happened. On Ymir today the placeholder still sits
+    above the measured rate it is compared against — Eye of Providence
+    unmeasured at Ymir's median 0.575 and scoring 0.5442, Genji's Guard
+    measured at 0.52 and scoring 0.5290 — and the gap the `win` term opens is
+    now 0.0248 against a 0.0152 margin, where 09-01 recorded 0.018 against
+    0.0057. **The mechanism §4.26 names is wider than when it was diagnosed,
+    not repaired.** The claim cleared because Kinetic Cuirass entered Ymir's
+    core on the 09-04 refresh and Eye of Providence fell off the end — and
+    Kinetic Cuirass has no community record for Ymir either. An unmeasured item
+    displaced an unmeasured item; nothing carrying evidence took the slot.
+
+    Full evidence, including the third instance of §4.26's mechanism it turned
+    up — an item *promoted by losing its record*, worth +0.030 of `total`, and
+    measured as NOT sufficient to explain the clear — is in the dated 09-07
+    note in `data/_expert_reviews.yaml`, next to the claim it is about.
+
+    **§4.26 IS NOT RE-OPENED.** `unknown_win_shrink` ships OFF at 0.0 and stays
+    there. One line of its ledger changes: `expert_review` going partial ->
+    clear was one of the two gates that moved for the flag, and that reason is
+    now gone outright, because the claim is clear without it. The verdict is
+    unaffected — it never rested on that gate — and the two passages in
+    `_expert_reviews.yaml` asserting the verdict "stays `partial`" are marked
+    false in place rather than edited away, because what they claimed and when
+    is the record.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -2322,7 +2457,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (922) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (923) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2342,17 +2477,17 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
 | Conquest gods placed | 90 / 90 |
 | Joust / Arena gods placed | 0 / 90 — no outcome data exists |
-| Items placed | 208 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 matches, and 13 more items crossed into enough sightings to earn a tier band. Still below the 226 the pre-reset thirteen-day window placed. Tracks the DATA, not the model |
-| Community sample | 8,200 Obsidian+ Conquest matches, 25 Aug – 1 Sep — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now seven days deep against a peak of 18,716 on thirteen. Three more `chore(data): daily community refresh` commits (af04139, e910b75, ea3b5e7) landed since the 3,498/three-day reading; `git diff --name-only d957319 HEAD` (the commit that reading was taken at) touches only `data/builds/`, `data/_community_items.json` and `viewer/public/index.json` — no weights, no pipeline or viewer code — so every figure below this row that moved, moved on data alone. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
-| Headline gate | coverage 53.0%, win-weighted 54.9% — up +3.4pp/+1.9pp off the 49.6%/53.0% this row carried at fingerprint `052cab0a44cc`, on the data move above and nothing else. Read this as more evidence arriving, not as a verdict — both targets are model inputs (§1) |
-| **Leakage-free** | **40.9% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.6–7.2×** — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-02 at input fingerprint `9f722a7ad5c8` — moved from `208b8d329f8e` by `build_order.community_weight` landing in `_weights.yaml`, which the hash covers; the two splits read **40.9% / 37.6% at both**, to the digit, with 337 of 810 Conquest builds reordered, because order cannot move a membership measure (§4.24). Previously measured 2026-09-01 at `208b8d329f8e`: the 41.5 · 38.4 vs 5.7 this row carried was fingerprint `052cab0a44cc` and describes the 3,498-match reading, so the −0.6pp/−0.8pp is the three `chore(data): daily community refresh` commits named above and NOT a model change — same diff, same "touches only data" check. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%** at both fingerprints, off a byte-identical pool of 90 gods and 226 items, so the 5.7%/5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and the leakage-free probe moved in OPPOSITE directions on the same data move (headline gate up, this row down), which is exactly what §1 says a metric with the community's own build as a target will do and not a reason to prefer either reading |
+| Items placed | 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
+| Community sample | 16,223 Obsidian+ Conquest matches, 25 Aug – 7 Sep — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
+| Headline gate | coverage 51.9%, win-weighted 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
+| **Leakage-free** | **41.3% probe · 37.1% at eff 0.45, vs 5.7% chance = 6.5–7.3×** — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 0, and back -> 0 of 2433 builds over the penetration cap. `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — and `offmap_efficiency` at 0.55 put three back (§7's 2026-08-29 reading, 3 of 2390). The community window rebuilding (see Community sample) moved both numbers again: suggested-build count went 2,479 (post-reset) → 2,433 (Conquest 810, Joust 811, Arena 812) and the three over-cap builds are gone with it. That the count fell further while the community sample GREW is not the direction the Items-placed and Headline-gate rows moved in, and this file does not have a mechanism for it on record — reported as a fact, not explained away. Neither number is a model change: no weights, pipeline or viewer code moved in the commits behind it (see Community sample). See `cap_overflow` |
+| Cap overflow | 47 -> 1 of 2479 builds over the penetration cap. **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
 | Combat model | 0.0% worst case over 12 observations |
-| Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
+| Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 922 pipeline · 775 viewer |
+| Tests | 923 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

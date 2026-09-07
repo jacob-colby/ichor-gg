@@ -13,10 +13,10 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Twenty-seven
+2. **Check the negative-results register (§4) first.** Twenty-nine
    correct-looking improvements have been implemented and measured, and all
    but one shipped off. Re-running them against the old metric will just
-   reproduce the old answer. Eleven of the twenty-seven are *not* "we measured this
+   reproduce the old answer. Thirteen of the twenty-nine are *not* "we measured this
    and it is false", and each says on its own line what it is instead. §4.13
    and §4.14 are the first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
    ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
@@ -45,7 +45,15 @@ Five things that are easy to get wrong here, all expanded in that file:
    (`docs/PASSIVES.md`) refuses nine CLASSES of passive at once, each for a
    reason an earlier entry already gives, and names the carve-out to try next.
    Read it before pricing any passive — the class an item belongs to is
-   already decided there.
+   already decided there. **§4.28 is the newest and is not a null in any
+   sense**: it is a live DEFECT — the `hybrid` archetype has never consulted
+   the penetration cap, on any build, aspect or not — recorded rather than
+   fixed because the obvious closure re-adjudicates every community swap and
+   costs 53 of the 73 hybrid builds. Read it before wiring a pricing context
+   into `hybrid.hybrid_core`; a test fails if you do it silently. §4.29 is
+   its neighbour and is a record correction: an `_expert_reviews.yaml`
+   baseline cleared on a data refresh, and did NOT clear for the reason it
+   looks like.
 
 3. **The combat model is exact — keep it that way.** `smite.calibrate_combat`
    must stay at 0.0%. Constants carry evidence tiers, and several deliberately

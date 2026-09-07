@@ -75,6 +75,36 @@ def test_swaps_in_a_confident_community_pick_the_model_was_indifferent_about():
     assert "62%" in swaps[0]["reason"] and "500" in swaps[0]["reason"]
 
 
+def test_an_accepted_swap_survives_reassembly_however_low_the_model_rates_it():
+    """The invariant a cap charge cannot be wired past. See docs/STATE.md §4.28.
+
+    `hybrid_core` re-runs the assembler so boots and lifesteal caps hold after a
+    swap, and it makes the swap STICK BY ORDERING: accepted picks lead the rows
+    it hands in, and `assemble_core`'s walk path consumes that order as given.
+    That path is taken only while no re-ranking context is passed — `coherence`
+    ships at 0.0, and `economy`, `conversion` and `cap_overflow` are not passed
+    here at all, which is why the `hybrid` archetype is the one build outside
+    the penetration cap charge.
+
+    Pass any of them and the same call flips to the re-rank path, where the
+    constructed order survives only as a tie-break: the swap is re-adjudicated
+    on `total` and loses. Measured 2026-09-07 over all 89 gods x 3 modes —
+    hybrid entries 73 -> 20, 69 cores changed, all of them `hybrid`. So this
+    test failing is not a broken test; it is that trade being made silently.
+    """
+    core = ["A", "B", "C", "D", "E", "F"]
+    # The community pick is the WORST row in the pool by a wide margin, so the
+    # order hybrid_core builds is the only thing that can be keeping it in.
+    rows = _rows(A=.9, B=.8, C=.7, D=.6, E=.5, F=.4, Weak=.35, Community=.01)
+    entry = _community(god_win_rate=0.50, played=1000, Community=(0.62, 0.50))
+
+    got, swaps = hybrid.hybrid_core(core, rows, entry, ITEMS, WEIGHTS)
+
+    assert "Community" in got, "the re-rank path dropped the accepted pick"
+    assert got.index("Community") == 0, "accepted picks must lead the core"
+    assert [s["added"] for s in swaps] == ["Community"]
+
+
 def test_the_models_protected_picks_are_never_overridden():
     """Evidence fills the model's uncertainty, it does not overrule its
     convictions. With 6 slots and protected=3, only the bottom 3 are open — so
