@@ -116,7 +116,8 @@ NUMBER_WORDS = {
     13: "Thirteen", 14: "Fourteen", 15: "Fifteen", 16: "Sixteen",
     17: "Seventeen", 18: "Eighteen", 19: "Nineteen", 20: "Twenty",
     21: "Twenty-one", 22: "Twenty-two", 23: "Twenty-three", 24: "Twenty-four",
-    25: "Twenty-five",
+    25: "Twenty-five", 26: "Twenty-six", 27: "Twenty-seven",
+    28: "Twenty-eight", 29: "Twenty-nine", 30: "Thirty",
 }
 # Above twenty the word is hyphenated, so the two register checks below read
 # `[\w-]+` rather than `\w+` — with `\w+` a doc saying "Twenty-one" audited as

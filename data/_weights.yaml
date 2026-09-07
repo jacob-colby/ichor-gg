@@ -1237,6 +1237,44 @@ price_on_hit: false
 # Set false to restore the flat constant; `unknown_win_rate` still sets it.
 unknown_win_per_god: true
 
+# ── The unmeasured item's discount — measured, and shipped OFF ──────────────
+# How far the stand-in above is pulled from the god's MEDIAN measured win rate
+# toward the god's WORST one. 0.0 is the median. 1.0 is the floor at which an
+# unmeasured item can no longer outrank ANY measured one on `win`, which is the
+# rule "an item with no record must not beat an item carrying a real, lower,
+# measured one" written as a scalar.
+#
+# THE DEFECT IS REAL AND ITS SIZE IS 163 SLOTS. Of the 582 Conquest `core`
+# slots, 236 are held by an item with no measured win rate, and 163 of those —
+# across 75 of 90 gods, 82 of 97 cores — go to an item that HAS a record the
+# moment the placeholder can no longer outrank a measurement. Joust and Arena
+# zero the `win` weight, so all 1164 of their slots are unmeasured and none of
+# them moves at any setting; this is a Conquest-only defect.
+#
+# IT SHIPS OFF ANYWAY, on the one instrument that can see it. See section 4.26.
+# `calibrate` cannot adjudicate this at ALL — it evaluates at `win: 0.0`, and
+# a placeholder of 0.0 and one of 1.0 produce coverage identical to four
+# decimal places at both splits. `build_quality` can, because it never reads
+# `win`. At 1.0, against the shipped core on the 76 gods whose core moves:
+# sustained DPS 32 better / 42 worse (median -3.9%), burst 21 / 44 (-2.4%),
+# effective health level on both channels, and 150g MORE spent. Every role's
+# verdict against the community degrades — Mid goes 17 ahead / 5 behind to
+# 12 / 8. The mildest setting that clears the expert gate, 0.25, is already
+# 14 / 22 on DPS and 8 / 23 on burst.
+#
+# AND THERE IS NO NEUTRAL SETTING TO FIND. The stand-in is one number entered
+# additively, so it necessarily outranks every measured item below it and loses
+# to every one above: "cannot outrank a measurement" is satisfied only at
+# `shrink: 1.0`, which is "loses to every measurement". The two are the same
+# rule for a scalar. The sweep is monotone with no plateau — 41 / 62 / 72 / 82
+# cores changed at 0.25 / 0.50 / 0.75 / 1.00 — so there is nothing to prefer a
+# setting for, which is section 4.16's refusal exactly.
+#
+# The median is already the least-committal point available: it is the maximum
+# entropy estimate for an item drawn from this god's distribution, and it is
+# what makes "we did not measure this" mean neither good nor bad.
+unknown_win_shrink: 0.0
+
 # ── Build coherence — measured, and shipped OFF ────────────────────────────
 # The one term that scores a BUILD rather than an item: an item's worth is
 # discounted by how much of its stat line the core already holds
