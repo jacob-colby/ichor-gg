@@ -175,9 +175,15 @@ describe("draft adaptation still works", () => {
         brought.push({ god: g.name, item: name, reason: r.adapted.reasons[name] ?? "" });
       }
     }
-    // Not a corner case firing on one god: 59 arrivals across 58 of the 90
-    // Conquest `core` boards, measured on the shipped index 2026-09-03.
-    expect(brought.length).toBe(59);
+    // Not a corner case firing on one god: 64 arrivals across 62 of the 90
+    // Conquest `core` boards, measured on the shipped index 2026-09-07 at
+    // calibrate input fingerprint 339839d1a880, community sample 16,223.
+    // Was 59 across 58 on 2026-09-03; four `chore(data): daily community
+    // refresh` commits moved it and no viewer or pipeline code did — every
+    // suggested entry in the index rebuilds byte-identical at that commit.
+    // THE MAGNITUDE IS DATA AND DRIFTS; the three properties below are the
+    // invariant and none of them moved.
+    expect(brought.length).toBe(64);
     // Every arrival names what it answers. An item that appears with no reason
     // is the draft moving a build for a cause it cannot state.
     for (const b of brought) expect(b.reason).not.toBe("");
@@ -216,6 +222,8 @@ describe("draft adaptation still works", () => {
       const base = new Set(r.shipped);
       return r.adapted.core.some((x) => !base.has(x));
     }).length;
-    expect({ one: swapped(1), five: swapped(5) }).toEqual({ one: 0, five: 58 });
+    // `five` is the same drifting count as above (58 -> 62, same refreshes,
+    // same fingerprint). `one: 0` is the property and is unmoved.
+    expect({ one: swapped(1), five: swapped(5) }).toEqual({ one: 0, five: 62 });
   });
 });

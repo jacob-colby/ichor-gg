@@ -162,7 +162,7 @@ reviews:
       Eye of Providence seems to be overvalued because it's assuming you'll get
       the gold from it.
     status: resolved
-    last_verdict: partial
+    last_verdict: clear
     notes: >-
       Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
       read as a 250g bargain — the discount is really the ward economy's price
@@ -271,11 +271,19 @@ reviews:
       None of the three is implemented here. Core churn this session is 0.
 
       CANDIDATE 1 WAS BUILT AND MEASURED 2026-09-03 AND IT SHIPS OFF
-      (`unknown_win_shrink`, register section 4.26). THE VERDICT HERE DOES NOT
-      MOVE: it stays `partial`, and the checker still reads `still in 1/36
-      cores: ['Ymir']`, because the flag ships at 0.0 and the shipped model is
-      byte-identical. This note records what would have happened, so the next
-      session does not re-run it.
+      (`unknown_win_shrink`, register section 4.26). THE VERDICT HERE DID NOT
+      MOVE ON 09-03: it stayed `partial`, and the checker still read `still in
+      1/36 cores: ['Ymir']`, because the flag ships at 0.0 and the shipped
+      model is byte-identical. This note records what would have happened, so
+      the next session does not re-run it.
+
+      THOSE TWO SENTENCES WERE OVERTAKEN BY DATA ON 2026-09-07 AND ARE LEFT AS
+      WRITTEN RATHER THAN EDITED AWAY, because what they claimed and when is
+      the record. The verdict is now `clear` and the checker reads `absent from
+      all 36 Conquest cores in scope`. `unknown_win_shrink` still ships at 0.0
+      and section 4.26's verdict is untouched by this: the claim cleared on a
+      community refresh, by a mechanism that is not the one this flag repairs.
+      The 09-07 note at the end of this entry has the numbers.
 
       IT WOULD HAVE CLEARED THIS CLAIM, AT EVERY SETTING FROM 0.25 UP. Eye of
       Providence leaves Ymir's core and the checker reads `absent from all 36
@@ -322,10 +330,12 @@ reviews:
       Support/Solo core remains the recommendation.
 
       CANDIDATE 3 WAS BUILT AND RUN 2026-09-03 (`build_quality --ward-economy`,
-      register section 4.27). THE VERDICT HERE DOES NOT MOVE - it stays
-      `partial`, the checker still reads `still in 1/36 cores: ['Ymir']`, and
-      no shipped value changed. What follows is what the instrument said, and
-      it is not what this claim predicts.
+      register section 4.27). THE VERDICT HERE DID NOT MOVE ON 09-03 - it
+      stayed `partial`, the checker still read `still in 1/36 cores: ['Ymir']`,
+      and no shipped value changed. (Both halves of that sentence stopped being
+      true on 2026-09-07, on data rather than on this section; see the 09-07
+      note at the end of this entry. Nothing below it moves.) What follows is
+      what the instrument said, and it is not what this claim predicts.
 
       IT ARGUES THE OTHER WAY. Over 56 paired cores - the same god's shipped
       `core` against the core the model builds with the `ward-economy`
@@ -373,6 +383,76 @@ reviews:
       clears this claim on its own, that is still the coincidence this entry
       has now documented twice, and the baseline below is still set to what the
       checker says today.
+
+      RAISED partial -> clear 2026-09-07, ON A REFRESH, AND IT IS THE
+      COINCIDENCE THE PARAGRAPH ABOVE PREDICTED RATHER THAN THE GOOD KIND OF
+      CLEAR. The checker reads `absent from all 36 Conquest cores in scope`.
+      Four `chore(data): daily community refresh` commits landed since 09-03
+      (68744e5, 0e5d8f1, f8e4174, d5ead22); the only non-data change in the
+      window is `unknown_win_shrink: 0.0` arriving in `_weights.yaml`, which
+      `scoring.god_unknown_win_rate` short-circuits before reading anything.
+      Measured at input fingerprint `339839d1a880`, community sample 16,223
+      Obsidian+ Conquest matches to 7 Sep.
+
+      THE MECHANISM THIS ENTRY NAMES IS NOT REPAIRED - IT IS WIDER THAN WHEN
+      09-01 DIAGNOSED IT. On Ymir today the placeholder still sits above the
+      measured rate of the item this entry has twice compared it against: Eye
+      of Providence is unmeasured for Ymir and is handed Ymir's median, 0.575;
+      Genji's Guard has a record and measures 0.52. Full lines - Eye of
+      Providence efficiency 0.614 / win 0.575 / pick 0.00 / fit 0.470 ->
+      **0.5442**; Genji's Guard efficiency 0.656 / win 0.52 / pick 0.15 / fit
+      0.386 -> **0.5290**. The unmeasured item still wins that comparison, and
+      the gap the win term opens is now `0.45 * (0.575 - 0.52)` = 0.0248
+      against a 0.0152 margin, where 09-01 recorded 0.018 against 0.0057. So
+      the claim did NOT clear because a measurement finally outranked the
+      placeholder.
+
+      WHAT ACTUALLY CLEARED IT: KINETIC CUIRASS ENTERED YMIR'S CORE ON THE
+      09-04 REFRESH AND EYE OF PROVIDENCE FELL OFF THE END. Ymir's Conquest
+      core went `Eye of Providence, Breastplate of Valor, Freya's Tears,
+      Shifter's Shield, Amanita Charm, Erosion` (ea3b5e7) to `Breastplate of
+      Valor, Kinetic Cuirass, Shifter's Shield, Freya's Tears, Amanita Charm,
+      Erosion` (today). Five of six slots kept, one item in, one out - which is
+      the first half of 08-29's own test for a good clear, and it passes.
+
+      IT FAILS THE SECOND HALF, AND THAT IS THE FINDING. 08-29 also checked
+      that "the item that replaced it is the community's own second slot for
+      Geb, at pick 0.26". Kinetic Cuirass has NO community record for Ymir at
+      all: pick 0.00, win = the same 0.575 placeholder Eye of Providence is
+      handed. An unmeasured item displaced an unmeasured item. Nothing carrying
+      evidence took the slot, and Genji's Guard - the item that does carry
+      evidence, and the one 09-01 said should have it - is still 11th and still
+      below both of them.
+
+      AND KINETIC CUIRASS WAS PROMOTED BY LOSING ITS EVIDENCE. At ea3b5e7 it
+      had a record on Ymir: win 0.50, pick 0.07. It is absent from Ymir's
+      community entry from 68744e5 onward, so the model swapped its measured
+      0.50 for the 0.575 placeholder - worth +0.030 of `total`, taking it from
+      0.5489 to 0.5791. THIS IS NOT SUFFICIENT TO EXPLAIN THE CLEAR AND IS NOT
+      CLAIMED TO BE: restoring that record into today's note and re-assembling
+      keeps Kinetic Cuirass in the core (0.5489, still ahead of Breastplate of
+      Valor) and does NOT bring Eye of Providence back. Recorded because it is
+      a third instance of section 4.26's mechanism on this one claim, running a
+      direction the register had not yet seen - an item rewarded for ceasing to
+      be measured - not because it is the cause.
+
+      SO THE BASELINE IS RAISED AND THE ENTRY IS NOT CLOSED. The header forbids
+      lowering a baseline to match a build you broke; it does not license
+      leaving one stale in the other direction, and a `resolved` claim whose
+      recorded verdict contradicts the checker is worse than no baseline,
+      because this file is read as settled. The verdict is what the checker
+      says. What it means is written here: the claim is clear, the reviewer's
+      objection is not answered, and section 4.26's placeholder decides this
+      slot exactly as it did on 09-01. If a later refresh puts Eye of
+      Providence back, `--check` going red is this gate doing its job.
+
+      ONE THING IT DOES SETTLE, FOR SECTION 4.26 AND NOT FOR THIS CLAIM.
+      4.26 recorded that `unknown_win_shrink` moved two gates, and that
+      `expert_review` going partial -> clear was one of the two reasons to want
+      it - discounted there because the rule that clears it removes 163 slots
+      nobody judged. That reason is now gone outright: the claim is clear
+      without the flag. Nothing else in 4.26 changes, and it stays shipped off
+      on the evidence it already carries.
 
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09
