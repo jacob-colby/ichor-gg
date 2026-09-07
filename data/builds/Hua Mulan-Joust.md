@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Kinetic Cuirass
+  - Gladiator's Shield
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  flex_slots:
+  - Pharaoh's Curse
+  - Gladiator's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Gladiator's Shield:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.82
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.99
+    Erosion:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+  swaps:
+  - added: Gladiator's Shield
+    removed: Shield Splitter
+    reason: Conquest community 67% win over 62 matches (vs 55% on this god), taking
+      the model's weakest slot from Shield Splitter
+  borrowed_from: Conquest
+  starter: *id001
 ---

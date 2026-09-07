@@ -5,69 +5,69 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Calamity
-  aspect_pick_rate: 0.02
-  aspect_win_rate: 0.63
+  aspect_pick_rate: 0.03
+  aspect_win_rate: 0.54
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.57
     alternates:
     - name: Stampede
-      pick_rate: 0.2
-      win_rate: 0.61
+      pick_rate: 0.19
+      win_rate: 0.58
     - name: Yogi's Necklace
-      pick_rate: 0.09
-      win_rate: 0.54
+      pick_rate: 0.08
+      win_rate: 0.56
   - name: Genji's Guard
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.59
     alternates:
     - name: Stampede
-      pick_rate: 0.15
-      win_rate: 0.58
+      pick_rate: 0.16
+      win_rate: 0.55
     - name: Breastplate of Valor
-      pick_rate: 0.13
-      win_rate: 0.51
+      pick_rate: 0.12
+      win_rate: 0.54
   - name: Shell of Rebuke
     pick_rate: 0.13
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.22
-      win_rate: 0.6
-    - name: Breastplate of Valor
-      pick_rate: 0.1
-      win_rate: 0.54
+      pick_rate: 0.21
+      win_rate: 0.58
+    - name: Freya's Tears
+      pick_rate: 0.09
+      win_rate: 0.7
   - name: Freya's Tears
-    pick_rate: 0.18
-    win_rate: 0.67
+    pick_rate: 0.17
+    win_rate: 0.66
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.14
-      win_rate: 0.59
+      pick_rate: 0.12
+      win_rate: 0.57
     - name: Genji's Guard
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.56
-  - name: Captain's Ring
-    pick_rate: 0.05
-    win_rate: 0.25
+  - name: Spirit Robe
+    pick_rate: 0.06
+    win_rate: 0.86
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.63
+      win_rate: 0.65
     - name: Shell of Rebuke
-      pick_rate: 0.05
-      win_rate: 0.56
-  - name: Medal of Defense
-    pick_rate: 0.06
-    win_rate: 0.55
-    alternates:
-    - name: Captain's Ring
       pick_rate: 0.06
-      win_rate: 0.36
+      win_rate: 0.59
+  - name: Captain's Ring
+    pick_rate: 0.06
+    win_rate: 0.38
+    alternates:
+    - name: Engraved Guard
+      pick_rate: 0.06
+      win_rate: 0.46
     - name: Shield
       pick_rate: 0.05
-      win_rate: 0.8
+      win_rate: 0.83
   community_starters:
   - name: Selflessness
     pick_rate: 0.4
@@ -75,18 +75,18 @@ builds:
   - name: Heroism
     pick_rate: 0.25
     win_rate: 0.64
-  - name: Conduit Gem
-    pick_rate: 0.08
-    win_rate: 0.55
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.09
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/geb/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.5677083333333334
-  god_matches_won: 218
-  god_matches_played: 384
+  last_verified: '2026-09-07'
+  god_win_rate: 0.569593147751606
+  god_matches_won: 266
+  god_matches_played: 467
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -104,14 +104,14 @@ builds:
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Eye of Providence — magical protection
-    swap_item: Eye of Providence
+    swap: Spirit Robe — magical protection
+    swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Draconic Scale — physical protection
-    swap_item: Draconic Scale
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -133,13 +133,13 @@ builds:
       total: 0.58
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.45
     Freya's Tears:
       total: 0.64
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.76
     Shifter's Shield:
       total: 0.57
@@ -170,7 +170,7 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Genji's Guard
-  - Shield of the Phoenix
+  - Spirit Robe
   - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
@@ -185,15 +185,15 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
-    swap_item: Eye of Providence
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Shifter''s Shield,
     Erosion, Eye of Providence, Draconic Scale, Phoenix Feather, Glorious Pridwen,
-    Chandra''s Grace, Midgardian Mail, Stone of Binding, Yogi''s Necklace, Hide of
+    Yogi''s Necklace, Chandra''s Grace, Midgardian Mail, Stone of Binding, Hide of
     the Nemean Lion, Leviathan''s Hide, Void Shield, Ancile, Oni Hunter''s Garb, Gladiator''s
     Shield, Magi''s Cloak, Hussar''s Wings, Void Stone, Spectral Armor, Mantle Of
     Discord, Screeching Gargoyle.'
@@ -208,19 +208,19 @@ builds:
       total: 0.57
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.42
-    Shield of the Phoenix:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 1.0
+    Spirit Robe:
+      total: 0.63
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.82
     Freya's Tears:
       total: 0.63
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.68
     Shifter's Shield:
       total: 0.57
@@ -236,6 +236,7 @@ builds:
       fit: 1.0
   community_ordered:
   - Genji's Guard
+  - Spirit Robe
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -246,17 +247,17 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
-  - Amanita Charm
+  - Spirit Robe
   flex_slots:
   - Kinetic Cuirass
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -287,7 +288,7 @@ builds:
       total: 0.55
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.28
     Kinetic Cuirass:
       total: 0.54
@@ -298,18 +299,19 @@ builds:
     Freya's Tears:
       total: 0.6
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.47
-    Amanita Charm:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.0
-      fit: 0.53
+    Spirit Robe:
+      total: 0.57
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.38
   community_ordered:
   - Genji's Guard
   - Freya's Tears
+  - Spirit Robe
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -317,22 +319,22 @@ builds:
   - Bracer of The Abyss
   - Genji's Guard
   - Nimble Ring
-  - Bragi's Harp
+  - Spirit Robe
   - Freya's Tears
-  - Amanita Charm
+  - Bragi's Harp
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -354,7 +356,7 @@ builds:
       total: 0.54
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.21
     Nimble Ring:
       total: 0.49
@@ -362,26 +364,27 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.28
+    Spirit Robe:
+      total: 0.55
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.28
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.66
+      pick: 0.28
+      fit: 0.35
     Bragi's Harp:
       total: 0.45
       efficiency: 0.37
       win: 0.56
       pick: 0.0
       fit: 0.42
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.67
-      pick: 0.3
-      fit: 0.35
-    Amanita Charm:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.0
-      fit: 0.39
   community_ordered:
   - Genji's Guard
+  - Spirit Robe
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -392,17 +395,17 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Amanita Charm
+  - Spirit Robe
   flex_slots:
   - Kinetic Cuirass
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -428,13 +431,13 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.5
     Breastplate of Valor:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.51
-      pick: 0.18
+      win: 0.54
+      pick: 0.16
       fit: 0.5
     Kinetic Cuirass:
       total: 0.53
@@ -445,19 +448,20 @@ builds:
     Freya's Tears:
       total: 0.63
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.67
-    Amanita Charm:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.0
-      fit: 0.47
+    Spirit Robe:
+      total: 0.56
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.33
   community_ordered:
   - Genji's Guard
   - Breastplate of Valor
   - Freya's Tears
+  - Spirit Robe
   starter: *id001
 - source: suggested
   archetype: strength
@@ -467,20 +471,20 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Freya's Tears
-  - Amanita Charm
+  - Spirit Robe
   flex_slots:
-  - Berserker's Shield
+  - Genji's Guard
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -504,7 +508,7 @@ builds:
       total: 0.55
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.23
     Jotunn's Revenge:
       total: 0.57
@@ -519,20 +523,21 @@ builds:
       pick: 0.0
       fit: 0.54
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.39
-    Amanita Charm:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.0
-      fit: 0.44
+    Spirit Robe:
+      total: 0.56
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.31
   community_ordered:
   - Genji's Guard
   - Freya's Tears
+  - Spirit Robe
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -542,20 +547,20 @@ builds:
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
-  - Amanita Charm
+  - Spirit Robe
   flex_slots:
   - Kinetic Cuirass
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -577,10 +582,10 @@ builds:
       pick: 0.0
       fit: 0.4
     Genji's Guard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.66
       win: 0.59
-      pick: 0.33
+      pick: 0.31
       fit: 0.22
     Kinetic Cuirass:
       total: 0.53
@@ -595,20 +600,21 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.37
-    Amanita Charm:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.0
-      fit: 0.42
+    Spirit Robe:
+      total: 0.56
+      efficiency: 0.34
+      win: 0.86
+      pick: 0.13
+      fit: 0.3
   community_ordered:
   - Genji's Guard
   - Freya's Tears
+  - Spirit Robe
   starter: *id001
 - source: suggested
   archetype: model
@@ -658,8 +664,8 @@ builds:
     Freya's Tears:
       total: 0.64
       efficiency: 0.61
-      win: 0.67
-      pick: 0.3
+      win: 0.66
+      pick: 0.28
       fit: 0.76
     Shifter's Shield:
       total: 0.57

@@ -5,8 +5,8 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fortification
-  aspect_pick_rate: 0.1
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.09
+  aspect_win_rate: 0.55
   slot_order:
   - name: Book of Thoth
     pick_rate: 0.34
@@ -14,10 +14,10 @@ builds:
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.31
-      win_rate: 0.53
+      win_rate: 0.52
     - name: The World Stone
       pick_rate: 0.09
-      win_rate: 0.52
+      win_rate: 0.54
   - name: Spear of Desolation
     pick_rate: 0.25
     win_rate: 0.61
@@ -26,72 +26,72 @@ builds:
       pick_rate: 0.17
       win_rate: 0.52
     - name: Book of Thoth
-      pick_rate: 0.17
+      pick_rate: 0.16
       win_rate: 0.51
   - name: Soul Gem
     pick_rate: 0.17
-    win_rate: 0.51
+    win_rate: 0.5
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.17
+      pick_rate: 0.16
       win_rate: 0.55
     - name: The World Stone
-      pick_rate: 0.12
+      pick_rate: 0.13
       win_rate: 0.55
   - name: Rod of Tahuti
     pick_rate: 0.28
-    win_rate: 0.63
+    win_rate: 0.61
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.23
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Soul Reaver
       pick_rate: 0.07
-      win_rate: 0.35
+      win_rate: 0.36
   - name: Obsidian Shard
     pick_rate: 0.18
-    win_rate: 0.62
+    win_rate: 0.61
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.14
-      win_rate: 0.55
+      pick_rate: 0.15
+      win_rate: 0.56
     - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.53
+      win_rate: 0.54
   - name: Shrapnel Mod
     pick_rate: 0.21
-    win_rate: 0.48
+    win_rate: 0.49
     alternates:
     - name: Thermal Mod
-      pick_rate: 0.11
-      win_rate: 0.58
+      pick_rate: 0.12
+      win_rate: 0.56
     - name: Surplus Mod
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.48
   - name: Surplus Mod
-    pick_rate: 0.29
+    pick_rate: 0.3
     win_rate: 0.5
     alternates:
     - name: Shrapnel Mod
-      pick_rate: 0.33
-      win_rate: 0.58
+      pick_rate: 0.32
+      win_rate: 0.59
     - name: Thermal Mod
-      pick_rate: 0.22
-      win_rate: 0.56
+      pick_rate: 0.23
+      win_rate: 0.55
   - name: Seismic Mod
-    pick_rate: 0.12
+    pick_rate: 0.13
     win_rate: 0.42
     alternates:
     - name: Surplus Mod
-      pick_rate: 0.72
+      pick_rate: 0.71
       win_rate: 0.6
     - name: Thermal Mod
-      pick_rate: 0.09
-      win_rate: 0.61
+      pick_rate: 0.1
+      win_rate: 0.59
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.29
-    win_rate: 0.58
+    win_rate: 0.59
   - name: Archmage's Gem
     pick_rate: 0.26
     win_rate: 0.61
@@ -99,14 +99,14 @@ builds:
     pick_rate: 0.2
     win_rate: 0.47
   source_url: https://smitebrain.com/gods/vulcan/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.5404837013669821
-  god_matches_won: 514
-  god_matches_played: 951
+  last_verified: '2026-09-07'
+  god_win_rate: 0.539282250242483
+  god_matches_won: 556
+  god_matches_played: 1031
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -149,7 +149,7 @@ builds:
       pick: 0.34
       fit: 0.35
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
       win: 0.53
       pick: 0.0
@@ -167,15 +167,15 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.71
+      total: 0.7
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.66
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.76
   community_ordered:
@@ -243,15 +243,15 @@ builds:
       pick: 0.23
       fit: 0.52
     Rod of Tahuti:
-      total: 0.68
+      total: 0.67
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.52
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.53
   community_ordered:
@@ -318,15 +318,15 @@ builds:
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
-      total: 0.68
+      total: 0.67
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.5
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.6
   community_ordered:
@@ -381,15 +381,15 @@ builds:
       pick: 0.34
       fit: 0.45
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.36
     Obsidian Shard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.46
     Amanita Charm:
@@ -401,7 +401,7 @@ builds:
     Soul Gem:
       total: 0.55
       efficiency: 0.52
-      win: 0.51
+      win: 0.5
       pick: 0.26
       fit: 0.85
   community_ordered:
@@ -449,7 +449,7 @@ builds:
       pick: 0.34
       fit: 0.26
     Nimble Ring:
-      total: 0.5
+      total: 0.51
       efficiency: 0.6
       win: 0.53
       pick: 0.0
@@ -467,15 +467,15 @@ builds:
       pick: 0.0
       fit: 0.75
     Rod of Tahuti:
-      total: 0.72
+      total: 0.71
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.75
     Obsidian Shard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.85
   community_ordered:
@@ -541,15 +541,15 @@ builds:
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.32
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.42
   community_ordered:
@@ -609,21 +609,21 @@ builds:
       pick: 0.34
       fit: 0.76
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.33
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.43
     Soul Gem:
       total: 0.55
       efficiency: 0.52
-      win: 0.51
+      win: 0.5
       pick: 0.26
       fit: 0.86
   community_ordered:
@@ -666,7 +666,7 @@ builds:
     of Radiance, Ethereal Staff, Wish-Granting Pearl, Typhon’s Heart, Bragi''s Harp.'
   slot_scores:
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
       win: 0.53
       pick: 0.0
@@ -690,15 +690,15 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.71
+      total: 0.7
       efficiency: 0.86
-      win: 0.63
+      win: 0.61
       pick: 0.47
       fit: 0.66
     Obsidian Shard:
       total: 0.6
       efficiency: 0.54
-      win: 0.62
+      win: 0.61
       pick: 0.39
       fit: 0.76
   community_ordered:

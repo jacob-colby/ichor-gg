@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Totem of Death
     removed: Doom Orb
-    reason: Conquest community 66% win over 72 matches (vs 51% on this god), taking
+    reason: Conquest community 68% win over 77 matches (vs 52% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001

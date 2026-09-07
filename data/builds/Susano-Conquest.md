@@ -9,11 +9,11 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Barbed Carver
-    pick_rate: 0.49
+    pick_rate: 0.5
     win_rate: 0.57
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.25
+      pick_rate: 0.24
       win_rate: 0.55
     - name: Hydra's Lament
       pick_rate: 0.19
@@ -27,46 +27,46 @@ builds:
       win_rate: 0.56
     - name: The Reaper
       pick_rate: 0.15
-      win_rate: 0.6
+      win_rate: 0.61
   - name: The Reaper
     pick_rate: 0.22
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
-    - name: Heartseeker
-      pick_rate: 0.14
-      win_rate: 0.56
     - name: Hydra's Lament
+      pick_rate: 0.14
+      win_rate: 0.59
+    - name: Heartseeker
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.55
   - name: Heartseeker
     pick_rate: 0.43
     win_rate: 0.54
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.13
+      pick_rate: 0.14
       win_rate: 0.52
     - name: Titan's Bane
       pick_rate: 0.07
-      win_rate: 0.49
+      win_rate: 0.48
   - name: Blinking Abyss
     pick_rate: 0.15
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Heartseeker
       pick_rate: 0.18
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Titan's Bane
       pick_rate: 0.11
       win_rate: 0.52
   - name: Skeggox
     pick_rate: 0.1
-    win_rate: 0.59
+    win_rate: 0.57
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.11
-      win_rate: 0.65
+      win_rate: 0.62
     - name: Avatar's Parashu
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.62
   community_starters:
   - name: Bumba's Hammer
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.6
   - name: Bumba's Cudgel
     pick_rate: 0.28
-    win_rate: 0.48
+    win_rate: 0.49
   - name: Hunter's Cowl
     pick_rate: 0.08
-    win_rate: 0.63
+    win_rate: 0.62
   source_url: https://smitebrain.com/gods/susano/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.5594679186228482
-  god_matches_won: 715
-  god_matches_played: 1278
+  last_verified: '2026-09-07'
+  god_win_rate: 0.559177888022679
+  god_matches_won: 789
+  god_matches_played: 1411
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -126,7 +126,7 @@ builds:
       total: 0.66
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 1.0
     Transcendence:
       total: 0.52
@@ -141,9 +141,9 @@ builds:
       pick: 0.6
       fit: 0.71
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.91
     Heartseeker:
@@ -156,7 +156,7 @@ builds:
       total: 0.59
       efficiency: 0.45
       win: 0.62
-      pick: 0.28
+      pick: 0.31
       fit: 0.91
   community_ordered:
   - Jotunn's Revenge
@@ -203,7 +203,7 @@ builds:
       total: 0.62
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 0.71
     Transcendence:
       total: 0.5
@@ -220,7 +220,7 @@ builds:
     The Reaper:
       total: 0.52
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.47
     Heartseeker:
@@ -233,7 +233,7 @@ builds:
       total: 0.52
       efficiency: 0.45
       win: 0.62
-      pick: 0.28
+      pick: 0.31
       fit: 0.47
   community_ordered:
   - Jotunn's Revenge
@@ -278,7 +278,7 @@ builds:
       total: 0.63
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 0.78
     Transcendence:
       total: 0.47
@@ -293,9 +293,9 @@ builds:
       pick: 0.6
       fit: 0.54
     The Reaper:
-      total: 0.53
+      total: 0.54
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.56
     Heartseeker:
@@ -305,10 +305,10 @@ builds:
       pick: 0.72
       fit: 0.76
     Avatar's Parashu:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
       win: 0.62
-      pick: 0.28
+      pick: 0.31
       fit: 0.56
   community_ordered:
   - Jotunn's Revenge
@@ -354,7 +354,7 @@ builds:
       total: 0.58
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 0.44
     Kinetic Cuirass:
       total: 0.55
@@ -369,9 +369,9 @@ builds:
       pick: 0.0
       fit: 0.57
     The Reaper:
-      total: 0.55
+      total: 0.56
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.7
     Runeforged Hammer:
@@ -426,12 +426,12 @@ builds:
       total: 0.66
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 1.0
     The Reaper:
       total: 0.59
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.94
     The Crusher:
@@ -456,7 +456,7 @@ builds:
       total: 0.59
       efficiency: 0.45
       win: 0.62
-      pick: 0.28
+      pick: 0.31
       fit: 0.94
   community_ordered:
   - Jotunn's Revenge
@@ -501,7 +501,7 @@ builds:
       total: 0.57
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 0.37
     Tyrfing:
       total: 0.54
@@ -510,9 +510,9 @@ builds:
       pick: 0.0
       fit: 0.79
     The Reaper:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.44
     Riptalon:
@@ -574,7 +574,7 @@ builds:
       total: 0.64
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 0.85
     Transcendence:
       total: 0.46
@@ -647,12 +647,12 @@ builds:
       total: 0.66
       efficiency: 0.72
       win: 0.55
-      pick: 0.25
+      pick: 0.24
       fit: 1.0
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.34
       fit: 0.91
     Pendulum Blade:

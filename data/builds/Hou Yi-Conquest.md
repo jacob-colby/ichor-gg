@@ -6,35 +6,35 @@ builds:
 - source: community
   aspect: Aspect of the Mark
   aspect_pick_rate: 0.12
-  aspect_win_rate: 0.58
+  aspect_win_rate: 0.57
   slot_order:
   - name: Tyrfing
     pick_rate: 0.55
     win_rate: 0.52
     alternates:
     - name: Avenging Blade
-      pick_rate: 0.2
-      win_rate: 0.5
+      pick_rate: 0.21
+      win_rate: 0.51
     - name: Devourer's Gauntlet
       pick_rate: 0.16
       win_rate: 0.56
   - name: Dagger of Frenzy
     pick_rate: 0.39
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.29
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Toxic Blade
       pick_rate: 0.05
-      win_rate: 0.49
+      win_rate: 0.5
   - name: Dominance
     pick_rate: 0.16
     win_rate: 0.46
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.14
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Odysseus' Bow
       pick_rate: 0.14
       win_rate: 0.57
@@ -44,13 +44,13 @@ builds:
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.16
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Deathbringer
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.52
   - name: Riptalon
     pick_rate: 0.19
-    win_rate: 0.6
+    win_rate: 0.58
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.15
@@ -60,33 +60,33 @@ builds:
       win_rate: 0.54
   - name: Manchu Bow
     pick_rate: 0.1
-    win_rate: 0.45
+    win_rate: 0.47
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.1
-      win_rate: 0.4
+      win_rate: 0.41
     - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.68
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.37
     win_rate: 0.57
   - name: Hunter's Cowl
-    pick_rate: 0.26
-    win_rate: 0.58
+    pick_rate: 0.25
+    win_rate: 0.59
   - name: Gilded Arrow
     pick_rate: 0.17
-    win_rate: 0.36
+    win_rate: 0.37
   source_url: https://smitebrain.com/gods/hou-yi/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.5154983309489747
-  god_matches_won: 1081
-  god_matches_played: 2097
+  last_verified: '2026-09-07'
+  god_win_rate: 0.5176220806794055
+  god_matches_won: 1219
+  god_matches_played: 2355
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -120,8 +120,8 @@ builds:
     Bow, Soul Gem, Golden Blade, Bragi''s Harp, Tekko-Kagi, Demon Blade, Gluttonous
     Grimoire, The Reaper, Hydra''s Lament, Bracer of The Abyss, Musashi''s Dual Swords,
     Heartseeker, Spear of the Magus, Spear of Desolation, Obsidian Shard, Qin''s Blade,
-    Damaru, Rage, Titan''s Bane, The Crusher, Blood-Bound Book, Transcendence, Ancient
-    Signet, Arondight, Toxic Blade, Runeforged Hammer, Chronos'' Pendant, Berserker''s
+    Damaru, Rage, Titan''s Bane, The Crusher, Toxic Blade, Blood-Bound Book, Transcendence,
+    Ancient Signet, Arondight, Runeforged Hammer, Chronos'' Pendant, Berserker''s
     Shield, Bancroft''s Talon, Sun Beam Bow, Doom Orb, The World Stone.'
   slot_scores:
     Lernaean Bow:
@@ -155,9 +155,9 @@ builds:
       pick: 0.32
       fit: 0.44
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.55
   community_ordered:
@@ -226,9 +226,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.4
     Rod of Tahuti:
@@ -272,7 +272,7 @@ builds:
     Tekko-Kagi, The Reaper, Hydra''s Lament, Musashi''s Dual Swords, Bracer of The
     Abyss, Spear of the Magus, Heartseeker, Spear of Desolation, Damaru, Obsidian
     Shard, Rage, Qin''s Blade, Titan''s Bane, The Crusher, Blood-Bound Book, Transcendence,
-    Ancient Signet, Arondight, Runeforged Hammer, Chronos'' Pendant, Toxic Blade,
+    Ancient Signet, Toxic Blade, Arondight, Runeforged Hammer, Chronos'' Pendant,
     Bancroft''s Talon, Doom Orb, Berserker''s Shield, Sun Beam Bow, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
@@ -294,9 +294,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.52
     Demon Blade:
@@ -309,7 +309,7 @@ builds:
       total: 0.5
       efficiency: 0.51
       win: 0.52
-      pick: 0.27
+      pick: 0.25
       fit: 0.49
   community_ordered:
   - Tyrfing
@@ -376,9 +376,9 @@ builds:
       pick: 0.0
       fit: 0.46
     Riptalon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.65
     Amanita Charm:
@@ -420,7 +420,7 @@ builds:
     for this god: Rod of Tahuti, Jotunn''s Revenge, Soul Gem, Gluttonous Grimoire,
     Nimble Ring, Death Metal, The Reaper, Tekko-Kagi, Spear of the Magus, Heartseeker,
     Obsidian Shard, Spear of Desolation, Titan''s Bane, Lernaean Bow, The Crusher,
-    Doom Orb, The World Stone, Toxic Blade, Dreamer''s Idol, Hydra''s Lament, Bragi''s
+    Doom Orb, Toxic Blade, The World Stone, Dreamer''s Idol, Hydra''s Lament, Bragi''s
     Harp, Golden Blade, Avatar''s Parashu, Bracer of The Abyss, Pendulum Blade, Demon
     Blade, Musashi''s Dual Swords, The Cosmic Horror, Ancient Signet, Oath-Sworn Spear,
     Blood-Bound Book, Transcendence, Qin''s Blade, Chronos'' Pendant, Runeforged Hammer.'
@@ -450,9 +450,9 @@ builds:
       pick: 0.32
       fit: 0.6
     Riptalon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.68
     Rod of Tahuti:
@@ -495,11 +495,10 @@ builds:
     this god: Rod of Tahuti, Nimble Ring, Jotunn''s Revenge, Death Metal, Lernaean
     Bow, Golden Blade, Soul Gem, Bragi''s Harp, Tekko-Kagi, Gluttonous Grimoire, The
     Reaper, Hydra''s Lament, Bracer of The Abyss, Demon Blade, Qin''s Blade, Spear
-    of the Magus, Heartseeker, Obsidian Shard, Spear of Desolation, Musashi''s Dual
-    Swords, Toxic Blade, Ancient Signet, Sun Beam Bow, Titan''s Bane, Blood-Bound
-    Book, The Crusher, Transcendence, Chronos'' Pendant, Damaru, Rage, Runeforged
-    Hammer, Arondight, Berserker''s Shield, Bancroft''s Talon, Doom Orb, The World
-    Stone.'
+    of the Magus, Heartseeker, Obsidian Shard, Spear of Desolation, Toxic Blade, Musashi''s
+    Dual Swords, Ancient Signet, Sun Beam Bow, Titan''s Bane, Blood-Bound Book, The
+    Crusher, Transcendence, Chronos'' Pendant, Damaru, Rage, Runeforged Hammer, Arondight,
+    Berserker''s Shield, Bancroft''s Talon, Doom Orb, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.52
@@ -532,9 +531,9 @@ builds:
       pick: 0.32
       fit: 0.47
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.56
   community_ordered:
@@ -649,7 +648,7 @@ builds:
     Ancient Signet, Heartseeker, Blood-Bound Book, Dreamer''s Idol, Gem of Focus,
     Bancroft''s Talon, Golden Blade, Titan''s Bane, The Crusher, Arondight, Rod of
     Asclepius, Book of Thoth, The Cosmic Horror, Musashi''s Dual Swords, Polynomicon,
-    Demon Blade, Typhon’s Heart, Pendulum Blade, Toxic Blade.'
+    Toxic Blade, Demon Blade, Typhon’s Heart, Pendulum Blade.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -676,9 +675,9 @@ builds:
       pick: 0.0
       fit: 0.5
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.46
     Rod of Tahuti:
@@ -722,8 +721,8 @@ builds:
     Heartseeker, Bracer of The Abyss, Hydra''s Lament, Doom Orb, Golden Blade, The
     World Stone, Titan''s Bane, The Crusher, Ancient Signet, Dreamer''s Idol, Blood-Bound
     Book, Chronos'' Pendant, Demon Blade, Musashi''s Dual Swords, Bancroft''s Talon,
-    Transcendence, Runeforged Hammer, Avatar''s Parashu, Arondight, Gem of Focus,
-    Toxic Blade, The Cosmic Horror, Rod of Asclepius, Book of Thoth.'
+    Transcendence, Toxic Blade, Runeforged Hammer, Avatar''s Parashu, Arondight, Gem
+    of Focus, The Cosmic Horror, Rod of Asclepius, Book of Thoth.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -750,9 +749,9 @@ builds:
       pick: 0.32
       fit: 0.42
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.5
     Spear of the Magus:
@@ -899,9 +898,9 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.41
       fit: 0.55
     Rod of Tahuti:
@@ -916,7 +915,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Lernaean Bow
-    reason: community 60% win over 398 matches (vs 52% on this god), taking the model's
+    reason: community 58% win over 447 matches (vs 52% on this god), taking the model's
       weakest slot from Lernaean Bow
   starter: *id001
 ---

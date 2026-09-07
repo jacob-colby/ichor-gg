@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.74
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Gladiator's Shield
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Shogun's Ofuda
+  - Gladiator's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Gladiator's Shield:
+      total: 0.47
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.68
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Stampede:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Pharaoh's Curse:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Shogun's Ofuda:
+      total: 0.62
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+  swaps:
+  - added: Gladiator's Shield
+    removed: Kinetic Cuirass
+    reason: Conquest community 67% win over 62 matches (vs 55% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
+  borrowed_from: Conquest
+  starter: *id001
 ---

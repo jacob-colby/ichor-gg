@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Tyrfing
-    reason: Conquest community 72% win over 115 matches (vs 56% on this god), taking
+    reason: Conquest community 70% win over 118 matches (vs 55% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

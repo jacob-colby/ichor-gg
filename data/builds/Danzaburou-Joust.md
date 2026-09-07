@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: Transcendence
     removed: Tyrfing
-    reason: Conquest community 65% win over 93 matches (vs 52% on this god), taking
+    reason: Conquest community 62% win over 101 matches (vs 51% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

@@ -401,12 +401,12 @@ builds:
   - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
-  - Draconic Scale
+  - Shell of Rebuke
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Draconic Scale
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -441,12 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Draconic Scale:
-      total: 0.55
-      efficiency: 0.5
+    Shell of Rebuke:
+      total: 0.36
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.43
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -460,9 +460,9 @@ builds:
       pick: 0.0
       fit: 0.8
   swaps:
-  - added: Draconic Scale
+  - added: Shell of Rebuke
     removed: Void Shield
-    reason: Conquest community 68% win over 53 matches (vs 49% on this god), taking
+    reason: Conquest community 61% win over 101 matches (vs 50% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
@@ -866,14 +866,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
+  - Shell of Rebuke
   - Void Shield
   - Void Stone
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Kinetic Cuirass
-  - Draconic Scale
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -896,6 +896,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Shell of Rebuke:
+      total: 0.33
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Void Shield:
       total: 0.65
       efficiency: 0.47
@@ -908,12 +914,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Draconic Scale:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -927,9 +927,9 @@ builds:
       pick: 0.0
       fit: 0.91
   swaps:
-  - added: Draconic Scale
+  - added: Shell of Rebuke
     removed: Shield of the Phoenix
-    reason: Conquest community 68% win over 53 matches (vs 49% on this god), taking
+    reason: Conquest community 61% win over 101 matches (vs 50% on this god), taking
       the model's weakest slot from Shield of the Phoenix
   borrowed_from: Conquest
   starter: *id001

@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Kinetic Cuirass
-  - Freya's Tears
+  - Shell of Rebuke
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Freya's Tears
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
+    Shell of Rebuke:
+      total: 0.32
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.35
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -460,9 +460,9 @@ builds:
       pick: 0.0
       fit: 0.63
   swaps:
-  - added: Freya's Tears
+  - added: Shell of Rebuke
     removed: Shogun's Ofuda
-    reason: Conquest community 65% win over 171 matches (vs 57% on this god), taking
+    reason: Conquest community 67% win over 124 matches (vs 57% on this god), taking
       the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001

@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Stygian Anchor
-    reason: Conquest community 61% win over 407 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 449 matches (vs 54% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Spear of Desolation
     removed: Void Shield
-    reason: Conquest community 58% win over 534 matches (vs 54% on this god), taking
+    reason: Conquest community 58% win over 589 matches (vs 54% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fellowship
-  aspect_pick_rate: 0.09
+  aspect_pick_rate: 0.08
   aspect_win_rate: 0.45
   slot_order:
   - name: Transcendence
     pick_rate: 0.29
-    win_rate: 0.65
+    win_rate: 0.62
     alternates:
     - name: Tyrfing
       pick_rate: 0.16
-      win_rate: 0.46
+      win_rate: 0.45
     - name: Book of Thoth
       pick_rate: 0.13
-      win_rate: 0.37
+      win_rate: 0.36
   - name: Book of Thoth
     pick_rate: 0.13
-    win_rate: 0.64
+    win_rate: 0.61
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.1
       win_rate: 0.56
     - name: Jotunn's Revenge
       pick_rate: 0.09
-      win_rate: 0.59
+      win_rate: 0.58
   - name: Polynomicon
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.46
     alternates:
     - name: The World Stone
       pick_rate: 0.07
-      win_rate: 0.33
+      win_rate: 0.3
     - name: The Executioner
-      pick_rate: 0.06
-      win_rate: 0.47
+      pick_rate: 0.07
+      win_rate: 0.52
   - name: Rod of Tahuti
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.59
     alternates:
     - name: Polynomicon
       pick_rate: 0.08
-      win_rate: 0.48
+      win_rate: 0.46
     - name: Obsidian Shard
-      pick_rate: 0.07
-      win_rate: 0.59
-  - name: Obsidian Shard
-    pick_rate: 0.07
-    win_rate: 0.65
+      pick_rate: 0.08
+      win_rate: 0.56
+  - name: Silverbranch Bow
+    pick_rate: 0.08
+    win_rate: 0.48
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.12
-      win_rate: 0.5
-    - name: Silverbranch Bow
+      win_rate: 0.44
+    - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.45
+      win_rate: 0.65
   - name: Void Shard
     pick_rate: 0.07
-    win_rate: 0.36
+    win_rate: 0.38
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.71
     - name: Evil Eye
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.5
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.17
-    win_rate: 0.57
+    win_rate: 0.56
   - name: Conduit Gem
     pick_rate: 0.13
-    win_rate: 0.49
+    win_rate: 0.48
   - name: Hunter's Cowl
-    pick_rate: 0.12
+    pick_rate: 0.13
     win_rate: 0.49
   source_url: https://smitebrain.com/gods/danzaburou/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.515625
-  god_matches_won: 165
-  god_matches_played: 320
+  last_verified: '2026-09-07'
+  god_win_rate: 0.5114942528735632
+  god_matches_won: 178
+  god_matches_played: 348
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -100,7 +100,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Nimble Ring
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -125,34 +125,34 @@ builds:
     Chronos'' Pendant, Pendulum Blade, Bancroft''s Talon, The World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.48
+      total: 0.47
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.05
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.37
     Transcendence:
-      total: 0.52
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.18
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.39
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Obsidian Shard:
       total: 0.54
@@ -179,7 +179,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Nimble Ring
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -204,34 +204,34 @@ builds:
     Soul Reaver, Pendulum Blade, Polynomicon, The World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.51
+      total: 0.5
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.44
     Transcendence:
-      total: 0.53
+      total: 0.51
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.24
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.4
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.35
     Obsidian Shard:
       total: 0.55
@@ -283,32 +283,32 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.34
     Death Metal:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.49
     Demon Blade:
-      total: 0.46
+      total: 0.47
       efficiency: 0.38
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.67
     Deathbringer:
-      total: 0.47
+      total: 0.48
       efficiency: 0.51
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Obsidian Shard:
       total: 0.54
@@ -331,7 +331,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Nimble Ring
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -357,34 +357,34 @@ builds:
     World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.49
+      total: 0.48
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.13
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.46
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.13
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.37
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.33
     Obsidian Shard:
       total: 0.56
@@ -403,10 +403,10 @@ builds:
   archetype: bruiser
   slot_order:
   - Book of Thoth
+  - Berserker's Shield
   - Jotunn's Revenge
   - Transcendence
   - Rod of Tahuti
-  - Obsidian Shard
   - Amanita Charm
   flex_slots:
   - Transcendence
@@ -419,13 +419,13 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Amanita Charm, Berserker''s Shield, Soul Gem, The
+    this god: Amanita Charm, Jotunn''s Revenge, Berserker''s Shield, Soul Gem, The
     Reaper, Riptalon, Gluttonous Grimoire, Shield of the Phoenix, Rod of Asclepius,
     Nimble Ring, Death Metal, Kinetic Cuirass, Runeforged Hammer, Golden Blade, Freya''s
     Tears, Genji''s Guard, Blood-Bound Book, Breastplate of Valor, Ethereal Staff,
@@ -435,39 +435,39 @@ builds:
     Hydra''s Lament, Eye of Providence, Daybreak Gavel, Toxic Blade, Chandra''s Grace.'
   slot_scores:
     Book of Thoth:
-      total: 0.48
+      total: 0.47
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.03
+    Berserker's Shield:
+      total: 0.53
+      efficiency: 0.68
+      win: 0.52
+      pick: 0.0
+      fit: 0.39
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.25
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.12
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.14
-    Obsidian Shard:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.65
-      pick: 0.15
-      fit: 0.24
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -475,7 +475,6 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Rod of Tahuti
-  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -487,7 +486,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Nimble Ring
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -507,40 +506,40 @@ builds:
     Death Metal, The Reaper, Tekko-Kagi, Spear of the Magus, Heartseeker, Spear of
     Desolation, Titan''s Bane, Lernaean Bow, The Crusher, Doom Orb, Avenging Blade,
     Toxic Blade, Hydra''s Lament, Dreamer''s Idol, Bragi''s Harp, Deathbringer, Avatar''s
-    Parashu, Dominance, Golden Blade, Pendulum Blade, Bracer of The Abyss, Demon Blade,
-    Musashi''s Dual Swords, The Cosmic Horror, Oath-Sworn Spear, Ancient Signet, Blood-Bound
-    Book, The Executioner, Runeforged Hammer, Chronos'' Pendant, Arondight, The World
-    Stone.'
+    Parashu, Dominance, Golden Blade, Pendulum Blade, Bracer of The Abyss, The Executioner,
+    Demon Blade, Musashi''s Dual Swords, The Cosmic Horror, Oath-Sworn Spear, Ancient
+    Signet, Blood-Bound Book, Runeforged Hammer, Chronos'' Pendant, Arondight, The
+    World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.48
+      total: 0.47
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.04
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.48
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.15
     Nimble Ring:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.32
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.35
     Obsidian Shard:
       total: 0.56
@@ -559,14 +558,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Nimble Ring
+  - Death Metal
   - Riptalon
-  - Rod of Tahuti
+  - Silverbranch Bow
   - Obsidian Shard
   flex_slots:
   - Riptalon
-  - Tyrfing
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -592,33 +591,33 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.28
-    Tyrfing:
-      total: 0.48
-      efficiency: 0.48
-      win: 0.46
-      pick: 0.16
-      fit: 0.62
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.36
+    Death Metal:
+      total: 0.5
+      efficiency: 0.61
+      win: 0.52
+      pick: 0.0
+      fit: 0.37
     Riptalon:
-      total: 0.49
+      total: 0.5
       efficiency: 0.51
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.6
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.86
-      win: 0.59
-      pick: 0.18
-      fit: 0.17
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.48
+      pick: 0.17
+      fit: 0.52
     Obsidian Shard:
       total: 0.53
       efficiency: 0.54
@@ -627,8 +626,7 @@ builds:
       fit: 0.27
   community_ordered:
   - Jotunn's Revenge
-  - Tyrfing
-  - Rod of Tahuti
+  - Silverbranch Bow
   - Obsidian Shard
   starter: *id001
 - source: suggested
@@ -641,7 +639,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -667,39 +665,39 @@ builds:
     Genji''s Guard, Qin''s Blade, The World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.49
+      total: 0.47
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.08
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.48
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.08
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.57
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Soul Gem:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.65
   community_ordered:
@@ -744,34 +742,34 @@ builds:
     Heart, Polynomicon, The World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.51
+      total: 0.49
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.2
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.38
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.13
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.34
     Obsidian Shard:
       total: 0.56
@@ -822,34 +820,34 @@ builds:
     Rod of Asclepius, The World Stone.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.49
       efficiency: 0.51
-      win: 0.64
+      win: 0.61
       pick: 0.18
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.36
     Transcendence:
-      total: 0.52
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.18
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.33
     Obsidian Shard:
       total: 0.56
@@ -900,39 +898,39 @@ builds:
     Talon.'
   slot_scores:
     Lernaean Bow:
-      total: 0.48
+      total: 0.49
       efficiency: 0.52
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.37
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Soul Gem:
-      total: 0.49
+      total: 0.5
       efficiency: 0.57
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.43
   community_ordered:
@@ -975,39 +973,39 @@ builds:
     Blade, Bancroft''s Talon.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.59
+      win: 0.58
       pick: 0.12
       fit: 0.37
     Transcendence:
-      total: 0.52
+      total: 0.5
       efficiency: 0.53
-      win: 0.65
+      win: 0.62
       pick: 0.29
       fit: 0.18
     Nimble Ring:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.59
-      pick: 0.18
+      pick: 0.17
       fit: 0.2
     Soul Gem:
-      total: 0.49
+      total: 0.5
       efficiency: 0.57
-      win: 0.5
+      win: 0.52
       pick: 0.0
       fit: 0.43
   community_ordered:
@@ -1017,7 +1015,7 @@ builds:
   swaps:
   - added: Transcendence
     removed: Lernaean Bow
-    reason: community 65% win over 93 matches (vs 52% on this god), taking the model's
+    reason: community 62% win over 101 matches (vs 51% on this god), taking the model's
       weakest slot from Lernaean Bow
   starter: *id001
 ---

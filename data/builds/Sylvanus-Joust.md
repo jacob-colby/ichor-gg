@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Shifter's Shield
-    reason: Conquest community 69% win over 48 matches (vs 54% on this god), taking
+    reason: Conquest community 67% win over 55 matches (vs 54% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

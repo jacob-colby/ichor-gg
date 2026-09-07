@@ -462,11 +462,11 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Void Stone
-    reason: Conquest community 78% win over 48 matches (vs 61% on this god), taking
+    reason: Conquest community 79% win over 53 matches (vs 61% on this god), taking
       the model's weakest slot from Void Stone
   - added: Freya's Tears
     removed: Void Shield
-    reason: Conquest community 72% win over 105 matches (vs 61% on this god), taking
+    reason: Conquest community 72% win over 116 matches (vs 61% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

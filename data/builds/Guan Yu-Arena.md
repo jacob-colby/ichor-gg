@@ -398,7 +398,7 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Freya's Tears
+  - Shell of Rebuke
   - Amanita Charm
   - Erosion
   - Stampede
@@ -406,7 +406,7 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Freya's Tears
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
+    Shell of Rebuke:
+      total: 0.32
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.35
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -460,9 +460,9 @@ builds:
       pick: 0.0
       fit: 0.73
   swaps:
-  - added: Freya's Tears
+  - added: Shell of Rebuke
     removed: Golden Blade
-    reason: Conquest community 65% win over 171 matches (vs 57% on this god), taking
+    reason: Conquest community 67% win over 124 matches (vs 57% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

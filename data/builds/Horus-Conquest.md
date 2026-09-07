@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Falcon
-  aspect_pick_rate: 0.05
-  aspect_win_rate: 0.2
+  aspect_pick_rate: 0.06
+  aspect_win_rate: 0.17
   slot_order:
   - name: Stampede
     pick_rate: 0.21
     win_rate: 0.62
     alternates:
+    - name: Gauntlet of Thebes
+      pick_rate: 0.18
+      win_rate: 0.61
     - name: Shifter's Shield
       pick_rate: 0.18
       win_rate: 0.59
-    - name: Gauntlet of Thebes
-      pick_rate: 0.17
-      win_rate: 0.6
   - name: Genji's Guard
-    pick_rate: 0.23
+    pick_rate: 0.22
     win_rate: 0.61
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.13
-      win_rate: 0.63
+      win_rate: 0.62
     - name: Stampede
       pick_rate: 0.12
-      win_rate: 0.6
+      win_rate: 0.59
   - name: Shell of Rebuke
-    pick_rate: 0.14
-    win_rate: 0.61
+    pick_rate: 0.13
+    win_rate: 0.6
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.18
+      pick_rate: 0.19
       win_rate: 0.61
     - name: Freya's Tears
       pick_rate: 0.11
-      win_rate: 0.62
+      win_rate: 0.63
   - name: Freya's Tears
     pick_rate: 0.11
     win_rate: 0.72
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.15
+      pick_rate: 0.16
       win_rate: 0.67
     - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.62
+      win_rate: 0.63
   - name: Draconic Scale
     pick_rate: 0.05
-    win_rate: 0.78
+    win_rate: 0.79
     alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.08
-      win_rate: 0.62
     - name: Freya's Tears
-      pick_rate: 0.08
+      pick_rate: 0.09
       win_rate: 0.7
+    - name: Shell of Rebuke
+      pick_rate: 0.09
+      win_rate: 0.65
   - name: Engraved Guard
     pick_rate: 0.08
-    win_rate: 0.75
+    win_rate: 0.76
     alternates:
     - name: Legionnaire Armor
       pick_rate: 0.07
-      win_rate: 0.8
+      win_rate: 0.74
     - name: Sage's Ring
-      pick_rate: 0.07
-      win_rate: 0.72
+      pick_rate: 0.06
+      win_rate: 0.71
   community_starters:
   - name: Selflessness
     pick_rate: 0.26
     win_rate: 0.57
   - name: Warrior's Axe
     pick_rate: 0.17
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Bluestone Pendant
     pick_rate: 0.14
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/horus/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.6138509968520461
-  god_matches_won: 585
-  god_matches_played: 953
+  last_verified: '2026-09-07'
+  god_win_rate: 0.6109537299339
+  god_matches_won: 647
+  god_matches_played: 1059
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
@@ -150,7 +150,7 @@ builds:
     Draconic Scale:
       total: 0.63
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.66
     Amanita Charm:
@@ -182,8 +182,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -225,7 +225,7 @@ builds:
     Draconic Scale:
       total: 0.63
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.66
     Amanita Charm:
@@ -278,7 +278,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Stone of Binding:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.67
       pick: 0.0
@@ -298,7 +298,7 @@ builds:
     Draconic Scale:
       total: 0.6
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.46
     Amanita Charm:
@@ -337,7 +337,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Jotunn''s Revenge, Draconic Scale, Amanita Charm,
+    this god: Berserker''s Shield, Draconic Scale, Jotunn''s Revenge, Amanita Charm,
     Kinetic Cuirass, Golden Blade, Breastplate of Valor, Tyrfing, Runeforged Hammer,
     Shield Splitter, Pharaoh''s Curse, Riptalon, Lernaean Bow, Silverbranch Bow, Shogun''s
     Ofuda, Hydra''s Lament, Shield of the Phoenix, Toxic Blade, Erosion, Eye of the
@@ -345,7 +345,7 @@ builds:
     Magi''s Cloak, The Reaper, Tekko-Kagi.'
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.67
       pick: 0.0
@@ -375,9 +375,9 @@ builds:
       pick: 0.18
       fit: 0.34
     Draconic Scale:
-      total: 0.58
+      total: 0.59
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.35
   community_ordered:
@@ -410,10 +410,10 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Breastplate of
-    Valor, Draconic Scale, Amanita Charm, Shield of the Phoenix, Kinetic Cuirass,
-    Hydra''s Lament, Screeching Gargoyle, Berserker''s Shield, Shield Splitter, Prophetic
-    Cloak, Runeforged Hammer, Gladiator''s Shield, Erosion, Eye of Providence, Arondight,
+    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Draconic Scale,
+    Breastplate of Valor, Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Hydra''s
+    Lament, Screeching Gargoyle, Berserker''s Shield, Shield Splitter, Prophetic Cloak,
+    Runeforged Hammer, Gladiator''s Shield, Erosion, Eye of Providence, Arondight,
     Eye of the Storm, Stone of Binding, Eye of Erebus, Magi''s Cloak, Chandra''s Grace,
     Midgardian Mail, Glorious Pridwen, Daybreak Gavel, Mantle Of Discord, Hide of
     the Nemean Lion, Avenging Blade.'
@@ -428,7 +428,7 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.61
-      pick: 0.31
+      pick: 0.3
       fit: 0.48
     Jotunn's Revenge:
       total: 0.62
@@ -445,11 +445,11 @@ builds:
     Draconic Scale:
       total: 0.6
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.43
     Amanita Charm:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
       win: 0.67
       pick: 0.0
@@ -502,7 +502,7 @@ builds:
       total: 0.58
       efficiency: 0.66
       win: 0.61
-      pick: 0.31
+      pick: 0.3
       fit: 0.42
     Kinetic Cuirass:
       total: 0.61
@@ -577,7 +577,7 @@ builds:
       total: 0.58
       efficiency: 0.66
       win: 0.61
-      pick: 0.31
+      pick: 0.3
       fit: 0.42
     Kinetic Cuirass:
       total: 0.61
@@ -594,7 +594,7 @@ builds:
     Draconic Scale:
       total: 0.63
       efficiency: 0.5
-      win: 0.78
+      win: 0.79
       pick: 0.11
       fit: 0.66
     Amanita Charm:
@@ -610,7 +610,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Shifter's Shield
-    reason: community 78% win over 48 matches (vs 61% on this god), taking the model's
+    reason: community 79% win over 53 matches (vs 61% on this god), taking the model's
       weakest slot from Shifter's Shield
   starter: *id001
 ---

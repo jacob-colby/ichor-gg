@@ -5,103 +5,103 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Heroic Tutor
-  aspect_pick_rate: 0.25
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.24
+  aspect_win_rate: 0.53
   slot_order:
   - name: Transcendence
-    pick_rate: 0.34
-    win_rate: 0.5
+    pick_rate: 0.35
+    win_rate: 0.51
     alternates:
     - name: Tyrfing
-      pick_rate: 0.25
-      win_rate: 0.52
+      pick_rate: 0.26
+      win_rate: 0.51
     - name: Daybreak Gavel
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.51
   - name: Jotunn's Revenge
-    pick_rate: 0.29
-    win_rate: 0.5
+    pick_rate: 0.3
+    win_rate: 0.51
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.14
-      win_rate: 0.57
+      pick_rate: 0.15
+      win_rate: 0.53
     - name: Transcendence
       pick_rate: 0.08
       win_rate: 0.54
   - name: The Crusher
     pick_rate: 0.15
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Heartseeker
-      pick_rate: 0.12
-      win_rate: 0.51
+      pick_rate: 0.13
+      win_rate: 0.53
     - name: Odysseus' Bow
       pick_rate: 0.12
-      win_rate: 0.51
+      win_rate: 0.53
   - name: Heartseeker
     pick_rate: 0.15
-    win_rate: 0.49
+    win_rate: 0.52
     alternates:
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.53
     - name: The Executioner
       pick_rate: 0.11
       win_rate: 0.59
   - name: Titan's Bane
     pick_rate: 0.13
-    win_rate: 0.52
+    win_rate: 0.55
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.09
-      win_rate: 0.65
+      pick_rate: 0.1
+      win_rate: 0.66
     - name: The Executioner
       pick_rate: 0.08
-      win_rate: 0.45
+      win_rate: 0.46
   - name: Avatar's Parashu
-    pick_rate: 0.07
-    win_rate: 0.81
+    pick_rate: 0.08
+    win_rate: 0.84
     alternates:
-    - name: Skeggox
-      pick_rate: 0.07
-      win_rate: 0.56
     - name: Manchu Bow
       pick_rate: 0.07
-      win_rate: 0.67
+      win_rate: 0.63
+    - name: Skeggox
+      pick_rate: 0.06
+      win_rate: 0.58
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.25
-    win_rate: 0.55
+    pick_rate: 0.26
+    win_rate: 0.57
   - name: Hunter's Cowl
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.56
   - name: Bluestone Pendant
-    pick_rate: 0.13
-    win_rate: 0.39
+    pick_rate: 0.14
+    win_rate: 0.37
   source_url: https://smitebrain.com/gods/chiron/
-  last_verified: '2026-09-06'
-  god_win_rate: 0.5153970826580226
-  god_matches_won: 318
-  god_matches_played: 617
+  last_verified: '2026-09-07'
+  god_win_rate: 0.5147492625368731
+  god_matches_won: 349
+  god_matches_played: 678
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-06'
-  god_matches_analyzed: 14585
+  god_window_end: '2026-09-07'
+  god_matches_analyzed: 16223
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
-  - Tyrfing
   - Riptalon
   - Silverbranch Bow
   - Tekko-Kagi
   - Avatar's Parashu
   flex_slots:
-  - Tyrfing
   - Tekko-Kagi
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -121,45 +121,44 @@ builds:
     Pendulum Blade, Damaru, Rage, Runeforged Hammer, Qin''s Blade, Berserker''s Shield,
     Avenging Blade, Barbed Carver, Sun Beam Bow, Bloodforge.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.4
-      fit: 0.44
-    Tyrfing:
+    Lernaean Bow:
       total: 0.5
-      efficiency: 0.48
-      win: 0.52
-      pick: 0.25
-      fit: 0.57
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.0
+      fit: 0.5
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.72
+      win: 0.51
+      pick: 0.41
+      fit: 0.44
     Riptalon:
       total: 0.51
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.47
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.49
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.58
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.34
   community_ordered:
   - Jotunn's Revenge
-  - Tyrfing
   - Silverbranch Bow
   - Avatar's Parashu
   starter: &id001
@@ -197,40 +196,40 @@ builds:
     Carver, Berserker''s Shield, Breastplate of Valor, Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.44
     Transcendence:
-      total: 0.46
+      total: 0.47
       efficiency: 0.53
-      win: 0.5
-      pick: 0.34
+      win: 0.51
+      pick: 0.35
       fit: 0.24
     Hydra's Lament:
       total: 0.5
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.32
     Heartseeker:
-      total: 0.48
+      total: 0.49
       efficiency: 0.47
-      win: 0.49
+      win: 0.52
       pick: 0.25
       fit: 0.55
     Avatar's Parashu:
-      total: 0.58
+      total: 0.59
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.29
   community_ordered:
   - Jotunn's Revenge
@@ -273,38 +272,38 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.41
     Musashi's Dual Swords:
       total: 0.47
       efficiency: 0.46
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.46
     Demon Blade:
-      total: 0.47
+      total: 0.48
       efficiency: 0.38
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.64
     Deathbringer:
-      total: 0.48
+      total: 0.49
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.32
   community_ordered:
   - Jotunn's Revenge
@@ -343,40 +342,40 @@ builds:
     Berserker''s Shield, Breastplate of Valor, Barbed Carver, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.46
     Hydra's Lament:
       total: 0.49
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.36
     The Reaper:
-      total: 0.49
+      total: 0.5
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Silverbranch Bow:
       total: 0.55
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.42
     Tekko-Kagi:
       total: 0.49
       efficiency: 0.49
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.5
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.33
   community_ordered:
   - Jotunn's Revenge
@@ -419,37 +418,37 @@ builds:
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.38
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.3
     Riptalon:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.68
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.32
     Avatar's Parashu:
-      total: 0.57
+      total: 0.58
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.23
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.62
   community_ordered:
@@ -464,11 +463,11 @@ builds:
   - Riptalon
   - Silverbranch Bow
   - Tekko-Kagi
-  - The Crusher
+  - Heartseeker
   - Avatar's Parashu
   flex_slots:
   - Tekko-Kagi
-  - The Crusher
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -489,45 +488,45 @@ builds:
     Damaru, Rage, Qin''s Blade, Berserker''s Shield, Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.53
     Riptalon:
       total: 0.52
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.63
     Silverbranch Bow:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.56
     Tekko-Kagi:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.64
-    The Crusher:
-      total: 0.5
+    Heartseeker:
+      total: 0.51
       efficiency: 0.47
-      win: 0.54
-      pick: 0.23
-      fit: 0.55
+      win: 0.52
+      pick: 0.25
+      fit: 0.65
     Avatar's Parashu:
-      total: 0.6
+      total: 0.62
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.45
   community_ordered:
   - Jotunn's Revenge
   - Silverbranch Bow
-  - The Crusher
+  - Heartseeker
   - Avatar's Parashu
   starter: *id001
 - source: suggested
@@ -562,40 +561,40 @@ builds:
     Shield, Damaru, Rage, Avenging Blade, Dagger of Frenzy, Barbed Carver.'
   slot_scores:
     Lernaean Bow:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.35
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
-      win: 0.52
-      pick: 0.25
+      win: 0.51
+      pick: 0.26
       fit: 0.6
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.6
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.52
     Avatar's Parashu:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.26
   community_ordered:
   - Jotunn's Revenge
@@ -638,38 +637,38 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.49
     Hydra's Lament:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.46
     Arondight:
-      total: 0.47
+      total: 0.48
       efficiency: 0.5
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.36
     Riptalon:
       total: 0.49
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.43
     Silverbranch Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.36
     Avatar's Parashu:
-      total: 0.57
+      total: 0.58
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.21
   community_ordered:
   - Jotunn's Revenge
@@ -710,37 +709,37 @@ builds:
     Lernaean Bow:
       total: 0.5
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.44
     The Reaper:
       total: 0.5
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.43
     Riptalon:
       total: 0.51
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.47
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.49
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.58
   community_ordered:
@@ -782,38 +781,38 @@ builds:
     Lernaean Bow:
       total: 0.5
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.5
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.44
     The Reaper:
       total: 0.5
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.43
     Riptalon:
       total: 0.51
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.49
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.58
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.34
   community_ordered:
   - Jotunn's Revenge
@@ -821,21 +820,21 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Silverbranch Bow
-    reason: community 81% win over 43 matches (vs 52% on this god), taking the model's
+    reason: community 84% win over 54 matches (vs 51% on this god), taking the model's
       weakest slot from Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Silverbranch Bow
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
+  - Titan's Bane
   - Hydra's Lament
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -858,43 +857,43 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.53
-    Transcendence:
-      total: 0.46
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.34
-      fit: 0.2
     Hydra's Lament:
       total: 0.5
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.53
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
-      fit: 0.36
-    Avatar's Parashu:
-      total: 0.6
-      efficiency: 0.45
-      win: 0.81
+      win: 0.66
       pick: 0.22
+      fit: 0.36
+    Titan's Bane:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.28
+      fit: 0.51
+    Avatar's Parashu:
+      total: 0.61
+      efficiency: 0.45
+      win: 0.84
+      pick: 0.25
       fit: 0.41
   community_ordered:
   - Jotunn's Revenge
-  - Transcendence
   - Silverbranch Bow
+  - Titan's Bane
   - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -930,40 +929,40 @@ builds:
     Toxic Blade, Bloodforge, Genji''s Guard, Shield Splitter.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.5
     Transcendence:
       total: 0.47
       efficiency: 0.53
-      win: 0.5
-      pick: 0.34
+      win: 0.51
+      pick: 0.35
       fit: 0.27
     Hydra's Lament:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.47
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.22
     Heartseeker:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
-      win: 0.49
+      win: 0.52
       pick: 0.25
       fit: 0.6
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.33
   community_ordered:
   - Jotunn's Revenge
@@ -1007,38 +1006,38 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.41
     Musashi's Dual Swords:
       total: 0.47
       efficiency: 0.46
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.46
     Demon Blade:
-      total: 0.47
+      total: 0.48
       efficiency: 0.38
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.64
     Deathbringer:
-      total: 0.48
+      total: 0.49
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Avatar's Parashu:
-      total: 0.58
+      total: 0.6
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.32
   community_ordered:
   - Jotunn's Revenge
@@ -1050,14 +1049,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Silverbranch Bow
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
+  - Titan's Bane
   - Hydra's Lament
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1078,45 +1077,45 @@ builds:
     Carver, Breastplate of Valor, Genji''s Guard, Bloodforge, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.53
-    Transcendence:
-      total: 0.45
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.34
-      fit: 0.15
     Hydra's Lament:
-      total: 0.49
+      total: 0.5
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.4
     The Reaper:
-      total: 0.5
+      total: 0.51
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.45
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
-      fit: 0.33
-    Avatar's Parashu:
-      total: 0.59
-      efficiency: 0.45
-      win: 0.81
+      win: 0.66
       pick: 0.22
+      fit: 0.33
+    Titan's Bane:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.28
+      fit: 0.48
+    Avatar's Parashu:
+      total: 0.61
+      efficiency: 0.45
+      win: 0.84
+      pick: 0.25
       fit: 0.38
   community_ordered:
   - Jotunn's Revenge
-  - Transcendence
   - Silverbranch Bow
+  - Titan's Bane
   - Avatar's Parashu
   starter: *id001
   aspect: Aspect of the Heroic Tutor
@@ -1156,37 +1155,37 @@ builds:
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.3
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.34
     The Reaper:
       total: 0.53
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.63
     Silverbranch Bow:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.23
     Avatar's Parashu:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.26
     Amanita Charm:
       total: 0.59
       efficiency: 0.65
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.77
   community_ordered:
@@ -1205,8 +1204,8 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - The Crusher
   - Titan's Bane
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1229,38 +1228,38 @@ builds:
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.62
     The Reaper:
       total: 0.53
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.62
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.48
     The Crusher:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
-      win: 0.54
+      win: 0.55
       pick: 0.23
       fit: 0.63
     Titan's Bane:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
-      win: 0.52
+      win: 0.55
       pick: 0.28
       fit: 0.63
     Avatar's Parashu:
-      total: 0.61
+      total: 0.63
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.53
   community_ordered:
   - Jotunn's Revenge
@@ -1302,40 +1301,40 @@ builds:
     Shield, Damaru, Rage, Avenging Blade, Dagger of Frenzy, Barbed Carver.'
   slot_scores:
     Lernaean Bow:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.35
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
-      win: 0.52
-      pick: 0.25
+      win: 0.51
+      pick: 0.26
       fit: 0.6
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.6
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.52
     Avatar's Parashu:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.26
   community_ordered:
   - Jotunn's Revenge
@@ -1377,40 +1376,40 @@ builds:
     Barbed Carver, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.57
     Hydra's Lament:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.52
     The Reaper:
-      total: 0.48
+      total: 0.49
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.33
     Arondight:
-      total: 0.48
+      total: 0.49
       efficiency: 0.5
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.65
-      pick: 0.19
+      win: 0.66
+      pick: 0.22
       fit: 0.26
     Avatar's Parashu:
-      total: 0.57
+      total: 0.59
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.25
   community_ordered:
   - Jotunn's Revenge
@@ -1453,37 +1452,37 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.53
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.5
-      pick: 0.34
+      win: 0.51
+      pick: 0.35
       fit: 0.2
     Hydra's Lament:
       total: 0.5
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.53
     Heartseeker:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
-      win: 0.49
+      win: 0.52
       pick: 0.25
       fit: 0.61
     Deathbringer:
-      total: 0.49
+      total: 0.5
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.49
   community_ordered:
@@ -1527,38 +1526,38 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.5
-      pick: 0.4
+      win: 0.51
+      pick: 0.41
       fit: 0.53
     Hydra's Lament:
       total: 0.5
       efficiency: 0.54
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.53
     Deathbringer:
-      total: 0.49
+      total: 0.5
       efficiency: 0.51
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.49
     Heartseeker:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
-      win: 0.49
+      win: 0.52
       pick: 0.25
       fit: 0.61
     Avatar's Parashu:
-      total: 0.6
+      total: 0.61
       efficiency: 0.45
-      win: 0.81
-      pick: 0.22
+      win: 0.84
+      pick: 0.25
       fit: 0.41
   community_ordered:
   - Jotunn's Revenge
@@ -1567,7 +1566,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Transcendence
-    reason: community 81% win over 43 matches (vs 52% on this god), taking the model's
+    reason: community 84% win over 54 matches (vs 51% on this god), taking the model's
       weakest slot from Transcendence
   starter: *id001
   aspect: Aspect of the Heroic Tutor
