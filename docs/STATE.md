@@ -1754,6 +1754,101 @@ shipped **off**. Numbers are in the named module.
     is a byte no-op end to end — `recommend --all` and `build_index` reproduce
     every build note, every Analysis report and `index.json` unchanged.
 
+27. **Adjudicating a ward-economy item with combat arithmetic (2026-09-03)** —
+    `build_quality --ward-economy`. **The section SHIPS; its answer is a
+    refusal, and a verdict it also refuses to hide.**
+
+    §4.26 left candidate 3 of `_expert_reviews.yaml`'s recommendation list as
+    the only one standing: point `build_quality` — which never reads `win` and
+    has never seen a community build — at the claim "Eye of Providence is
+    overvalued because it's assuming you'll get the gold from it". This is that.
+
+    **What it measures.** 56 paired cores (28 Conquest, 28 Joust; 27 Support,
+    23 Solo, 6 Mid): the same god's shipped `core`, read from `data/builds/`,
+    against the core the model builds with the `ward-economy` tag_bonus
+    neutralised. They differ by one item. Eye of Providence is the only carrier
+    that ever reaches a core — **Eye of Erebus reads +576g residual, premium,
+    and holds zero slots in either arm**, so one of the two tagged items is
+    inert and the section says so on every run.
+
+    **The ward core is cheaper on 55 of 56 pairs, median −250g**, and that
+    discount is both the thing under objection and the denominator of every
+    per-gold figure:
+
+        metric          absolute (ahead/behind, median)   per 1000g
+        dps_70                 0 / 30   −1.7%              26 / 28   −0.5%
+        burst_70               0 /  8   +0.0% (46 level)   42 /  8   +1.5%
+        ehp_physical          41 /  4   +5.7%              52 /  4   +7.6%
+        ehp_magical           42 /  4   +6.8%              51 /  2   +8.6%
+
+    Every metric moves toward the ward item once divided by gold. Burst goes
+    from 0 ahead to 42.
+
+    **THE VERDICT, RECORDED BECAUSE IT IS THE ANSWER THE INSTRUMENT GAVE.** On
+    each role's own objective the ward item is neutral to positive — Support
+    **+7.2%**, Solo +0.1% / +0.4%, Mid +1.2%. Priced in gold, a Support core
+    would need it to cost a median **+1,063g** (physical) / **+1,060g**
+    (magical) MORE before it stopped preferring it. On this arithmetic the
+    reviewer's item is not overvalued and **does not need the ward gold to win
+    at all**. That is the opposite of what the claim predicts and it is not
+    buried.
+
+    **TWO INDEPENDENT REASONS THE VERDICT DOES NOT SETTLE THE CLAIM.**
+
+    *One: nothing here is independent of the printed cost.* `efficiency` is
+    `cost − predicted_cost`; every per-1000g figure divides by the core's cost.
+    The ward subsidy IS that price — 30/30 protections + 250 health for 2300g
+    against a fitted 2550g stat line, which `_tags.yaml` already calls "a 250g
+    bargain that is really the ward economy's price tag". So this module
+    reading "good stats per gold" **inherits the discount rather than checking
+    it**. The claim is about whether a conditional gold stream is collected in
+    real games, and that is observed nowhere in this repo. `combat.py` being
+    community-blind made it the right instrument to reach for and does not make
+    it independent of the price.
+
+    *Two: the objective is won by this shape of item by construction.*
+    Support's maximand is `ehp_*/1000g` — no damage term, and §4.13 records both
+    of this module's thresholds as inert, so nothing bounds it. A cheap
+    protections-and-health brick wins it necessarily, and the **1.7% DPS the
+    swap gives away is invisible to the metric scoring it**. The +7.2% is a fact
+    about `ROLE_OBJECTIVES` as much as about the item. This is §4.17's warning
+    arriving from the other direction: there it was refusing to collapse two
+    channels into one number, here it is refusing to read one channel as the
+    whole answer.
+
+    So the section prints the absolute reading beside the per-gold one and
+    refuses to average or drop either, and a test
+    (`test_ward_economy_reports_both_readings_because_they_disagree`) fails if
+    a later tidy-up keeps one table.
+
+    **NOT A VERDICT ON THE −0.25, DELIBERATELY OUT OF SCOPE.** The counterfactual
+    arm neutralises the tag_bonus because that is the only way to make a core
+    holding the item exist; that is the definition of "what does this tag do",
+    not a proposal about its size. One consequence is worth stating once and
+    not acting on: the penalty was sized against the leakage-free gate, which
+    §2 says measures conventionality and never "better", and on the instrument
+    that can say better **it costs the 27 Support cores it touches about 7%
+    effective health per 1000 gold**. That is a price, not a refutation — the
+    penalty may still be right, and nothing here can say.
+
+    **Implementation notes worth not rediscovering.** The shipped arm is READ
+    from `data/builds/` with `suggested_core`, the same way `compare` reads it,
+    so the build being defended is the one that ships; only the counterfactual
+    arm is assembled. What makes them comparable is
+    `test_rebuild_core_reproduces_every_shipped_core`, which requires the
+    builder to reproduce all 180 Conquest/Joust shipped cores exactly **with
+    the pricing flags applied the way `recommend.main --all` applies them** —
+    skip that and the harness silently scores a different, unshipped model,
+    which is the reproduction trap `_expert_reviews.yaml` already records.
+    Swapping the shipped arm from rebuilt to note-read changed no figure, which
+    is independent evidence the two agree.
+
+    **Behind a flag, not in the default report**: it builds every core a second
+    time (~20s, against ~4s for the whole default run) and answers a question
+    about two items rather than about the roster. Arena is excluded because
+    `modes.arena.excluded_items` drops both carriers outright, so no pair
+    exists there.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -2123,6 +2218,7 @@ python -m smite.doc_audit --check        # non-zero exit if a §7 figure has dri
 python -m smite.build_quality            # combat.py pointed at whole builds, ours vs community (~4s)
 python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
+python -m smite.build_quality --ward-economy  # the `ward-economy` carriers against a core built without them (~20s)
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split
 python -m smite.order_agreement --god Medusa   # one god, heuristic order beside the shipped one
@@ -2226,7 +2322,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (913) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (922) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2256,7 +2352,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Khepri. The community window rebuilding (see Community sample) took Ares and Yemoja off it, to 20% and 60% coverage; Khepri is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). CHECKED THAT THIS IS REAL: all 90 gods (Ravana now included) are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide. This row tracks the DATA more than the model |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 913 pipeline · 775 viewer |
+| Tests | 922 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

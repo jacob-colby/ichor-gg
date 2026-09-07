@@ -321,6 +321,53 @@ reviews:
       give a verdict on whether a ward-economy item is overvalued for a given
       Support/Solo core remains the recommendation.
 
+      CANDIDATE 3 WAS BUILT AND RUN 2026-09-03 (`build_quality --ward-economy`,
+      register section 4.27). THE VERDICT HERE DOES NOT MOVE - it stays
+      `partial`, the checker still reads `still in 1/36 cores: ['Ymir']`, and
+      no shipped value changed. What follows is what the instrument said, and
+      it is not what this claim predicts.
+
+      IT ARGUES THE OTHER WAY. Over 56 paired cores - the same god's shipped
+      `core` against the core the model builds with the `ward-economy`
+      tag_bonus neutralised, differing by one item - the ward core is cheaper
+      on 55 of 56 (median -250g), has MORE effective health (41-42 of 56
+      ahead, +5.7% / +6.8% absolute) and LESS sustained damage (0 ahead, 30
+      behind, -1.7%). On each role's own objective it is neutral to positive:
+      Support +7.2%, Solo +0.1% / +0.4%, Mid +1.2%. Priced in gold, a Support
+      core would need Eye of Providence to cost a median 1,063g MORE before it
+      stopped preferring it. On combat arithmetic the item does not need the
+      ward gold to earn its slot.
+
+      DO NOT READ THAT AS THE CLAIM REFUTED, FOR TWO REASONS THE SECTION
+      PRINTS EVERY RUN. First, nothing in this repo is independent of the
+      item's printed cost - `efficiency` is `cost - predicted_cost` and every
+      per-1000g figure divides by the core's cost - and the ward subsidy IS
+      that price. `combat.py` reading "good stats per gold" inherits the
+      discount rather than checking it, so being community-blind made it the
+      right instrument to reach for without making it independent of the
+      number under objection. Whether the ward gold is actually collected is
+      observed nowhere here. Second, Support's objective is effective health
+      per 1000 gold with no damage term and, per register section 4.13, no
+      threshold that can fire - so a cheap protections-and-health item wins it
+      by construction, and the 1.7% damage the swap gives away is invisible to
+      the metric scoring it.
+
+      WHAT IT DID SETTLE. Eye of Erebus is tagged `ward-economy` and reaches
+      ZERO cores in either arm (+576g residual, premium), so half the tag's
+      surface is inert and the report now says so on every run. And the -0.25
+      penalty, which was sized against the leakage-free gate, costs the 27
+      Support cores it touches about 7% effective health per 1000 gold on the
+      one instrument that can say "better" rather than "more conventional".
+      That is a price on a shipped constant, not a verdict about it; sizing
+      the constant was deliberately left out of scope.
+
+      SO THE RECOMMENDATION LIST IS NOW EXHAUSTED. Candidates 1 and 2 were
+      answered by section 4.26 and candidate 3 by section 4.27, and none of
+      the three moved this verdict. What would move it is evidence this repo
+      does not hold: whether a player collects the ward gold. That is a
+      match-level observation, the same missing source as `pairing` and the
+      outcome claims this file already refuses.
+
       THE THRESHOLD WARNING FROM 08-29 STILL STANDS UNCHANGED. Ymir's gap is
       0.04 wide and both numbers move on every refresh. If a later refresh
       clears this claim on its own, that is still the coincidence this entry

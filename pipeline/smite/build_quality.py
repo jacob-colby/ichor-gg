@@ -36,6 +36,13 @@ roles that do not share a job. `ROLE_OBJECTIVES` names, per role, the quantity
 MAXIMISED and the quantity treated as a THRESHOLD, so a reader can disagree
 with the choice rather than only with the number.
 
+AND IT CAN BE POINTED AT ONE CLAIM AT A TIME. `--ward-economy` sets the cores
+holding a `ward-economy` item against the same gods' cores without one, which is
+the one question an expert raised that no other gate here could answer. It ships
+behind a flag, it prints the absolute reading beside the per-gold one because
+they disagree by construction, and its answer is a refusal with a verdict inside
+it — register §4.27 has both.
+
 AN OBJECTIVE WITH AN EFFECTIVE-HEALTH TERM IS SCORED ON BOTH DAMAGE CHANNELS
 AND READ AS THE INTERVAL BETWEEN THEM. A build has one damage output and TWO
 effective healths, and which one its survival is read on is a property of the
@@ -148,6 +155,7 @@ imputed (the rule `damage_value._base_cooldown` already applies).
     python -m smite.build_quality --role Carry    # one role's verdict, to stdout
 """
 import argparse
+import copy
 import re
 import sys
 import types
@@ -156,7 +164,8 @@ from pathlib import Path
 
 import numpy as np
 
-from smite import calibrate, combat, damage_value, efficiency, recommend, scoring
+from smite import (assemble, calibrate, combat, damage_value, efficiency,
+                   recommend, scoring)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "data" / "Analysis" / "_build_quality.md"
@@ -1712,6 +1721,334 @@ def emit(blind, body, head=(), out_path=None):
     return out_path
 
 
+# ── Ward economy ──────────────────────────────────────────────────────────
+#
+# THE CLAIM THIS SECTION EXISTS FOR. An expert reviewer, 2026-08-09: "Eye of
+# Providence seems to be overvalued because it's assuming you'll get the gold
+# from it." `_expert_reviews.yaml` records the fix that followed — a
+# `ward-economy` tag with a -0.25 Conquest `tag_bonus` — and, in 2026-09-01's
+# note, names extending THIS module as the one candidate that would replace a
+# coin-flip between two win-rate numbers with a verdict. `combat.py` has never
+# seen a community build, so it is the only instrument here that could.
+#
+# IT CANNOT, AND THE REASON IS STRUCTURAL RATHER THAN A MISSING FEATURE.
+# Every instrument in this repo is downstream of the item's PRINTED COST.
+# `efficiency` is `cost - predicted_cost`; every per-1000g figure below divides
+# by the core's cost. And the ward subsidy IS that price: Eye of Providence is
+# 30/30 protections + 250 health for 2300 gold against a fitted stat line of
+# 2550, so the game has already discounted it by the value of a ward engine.
+# This module reading "good stats per gold" is INHERITING that discount, not
+# checking it. The claim is about whether a conditional gold stream gets
+# collected in real games, and nothing here observes one.
+#
+# So the section is written to bound the claim rather than to settle it, which
+# is register section 4.17's shape: report the pair, say what the pair bounds,
+# refuse the average. What it prints is measured, and what it refuses is named.
+#
+# WHAT IT DOES MEASURE, AND WHY THE PAIR MATTERS. Each row is the same god's
+# `core` twice: as shipped, and as the model would build it if the
+# `ward-economy` tag_bonus were neutral. The two differ by one item. Both
+# readings are printed for every metric, because they disagree by construction:
+#
+#   ABSOLUTE       what the six items do at level 20.
+#   PER 1000 GOLD  the same, divided by what they cost -- and a ward-economy
+#                  item is cheap PRECISELY BECAUSE part of its price is the
+#                  ward engine, so this reading credits the discount under
+#                  objection as though it were free value. It is each role's
+#                  own objective in `ROLE_OBJECTIVES`, so it cannot simply be
+#                  dropped; it can only be shown next to the figure that does
+#                  not contain the assumption.
+#
+# Measured 2026-09-03 at control `047109f54fd7`, over 56 paired cores (28
+# Conquest, 28 Joust; 27 Support, 23 Solo, 6 Mid). Eye of Providence is the
+# only carrier that ever reaches a core -- Eye of Erebus reads +576g residual,
+# premium, and holds zero slots in either arm. The ward core is cheaper on 55
+# of 56 pairs, median -250g. Absolute: DPS 0 ahead / 30 behind (-1.7%), burst
+# level on 46 of 54, effective health 41-42 ahead / 4 behind (+5.7% / +6.8%).
+# Per 1000 gold every one of those moves toward the ward item -- burst goes
+# from 0 ahead to 42, effective health to 52 of 56.
+#
+# THE VERDICT, RECORDED WITH THE REASON TO DISTRUST IT. On each role's own
+# objective the ward item is neutral to positive: Support +7.2%, Solo +0.1% /
+# +0.4%, Mid +1.2%. Priced in gold, a Support core would need the item to cost
+# a median 1060g MORE before it stopped preferring it. On this arithmetic the
+# reviewer's item is not overvalued and does not need the ward gold to win.
+#
+# Distrust that for a second reason, independent of the price one above.
+# Support's objective is `ehp_*/1000g`: a pure maximand, no damage term, and
+# section 4.13 records both of this module's thresholds as inert. A cheap
+# protections-and-health brick wins that objective BY CONSTRUCTION, and the
+# 1.7% DPS the swap gives away is invisible to the metric scoring it. So the
+# +7.2% is a fact about `ROLE_OBJECTIVES` as much as about the item.
+#
+# NOT A VERDICT ON THE -0.25, WHICH IS OUT OF SCOPE HERE. The counterfactual
+# arm neutralises the tag_bonus because that is the only way to make a core
+# containing the item exist at all; it is the definition of "what does this tag
+# do", not a proposal about its size. What follows from it and is worth stating
+# once: the penalty was sized against the leakage-free gate, which STATE.md
+# section 2 says measures conventionality and never "better", and on the
+# instrument that can say better it costs the 27 Support cores it touches
+# about 7% effective health per 1000 gold. That is a price, not a refutation.
+
+WARD_ECONOMY_TAG = "ward-economy"
+#: Arena is absent on purpose: `modes.arena.excluded_items` drops both carriers
+#: outright for having no wards, so there is no pair to build there.
+WARD_ECONOMY_MODES = ("Conquest", "Joust")
+
+
+def ward_economy_carriers(tags_map):
+    """Every item carrying the tag, from `_tags.yaml` rather than a list here —
+    a hardcoded pair would go stale the first time a third item is tagged."""
+    return sorted(name for name, tags in (tags_map or {}).items()
+                  if WARD_ECONOMY_TAG in (tags or []))
+
+
+def neutralise_tag_bonus(weights, tag):
+    """A deep copy with `tag` dropped from every mode's `tag_bonus`.
+
+    Dropped, not set to 0.0: `scoring.god_fit_score` reads the map with
+    `.get(tag, 0.0)`, so absent and 0.0 are the same number — but only one of
+    them also survives a future change to how a missing key is treated.
+    """
+    out = copy.deepcopy(weights)
+    for mode in (out.get("modes") or {}).values():
+        if isinstance(mode, dict) and isinstance(mode.get("tag_bonus"), dict):
+            mode["tag_bonus"].pop(tag, None)
+    return out
+
+
+def rebuild_core(god, items, god_build, weights, tags_map, mode, eff_scores,
+                 gold_values, items_by_name):
+    """The `core` archetype for one god and mode, assembled the way
+    `recommend._build_entry_set` assembles it.
+
+    A second implementation of a shipped path is a liability, so it is pinned
+    rather than trusted: `test_rebuild_core_reproduces_every_shipped_core`
+    runs this at the shipped weights against all 270 build groups' `core`
+    entries and requires an exact match. If `recommend` changes how the core
+    is assembled, that test fails here rather than this section quietly
+    reporting a build nobody ships.
+    """
+    profile_ = scoring.resolve_profile(weights, mode, None)
+    rows = scoring.score_god_items(god, items, god_build, eff_scores, weights,
+                                   tags_map, profile_)
+    core, _ = assemble.assemble_core_converged(
+        rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
+        max_lifesteal=scoring.god_max_lifesteal(god, weights, profile_),
+        require=None, stat_caps=weights.get("stat_caps"),
+        economy=profile_.get("economy"),
+        **assemble.coherence_args(items, weights),
+        **assemble.conversion_args(weights, eff_scores, gold_values),
+        **assemble.overflow_args(weights, eff_scores, gold_values))
+    return list(core)
+
+
+def ward_economy_pairs(gods, items, weights, tags_map, modes=WARD_ECONOMY_MODES):
+    """`(rows, carriers)` — one row per core that GAINS a ward-economy item
+    when the tag_bonus is neutralised.
+
+    THE TWO ARMS COME FROM DIFFERENT PLACES ON PURPOSE. The shipped arm is read
+    from `data/builds/` with `suggested_core`, the same way `compare` reads it,
+    so the thing being defended is literally the build that ships rather than a
+    reconstruction of it. Only the counterfactual arm — which has never
+    shipped and so cannot be read from anywhere — is assembled here.
+
+    What makes the two comparable is `rebuild_core`'s test, which requires the
+    builder to reproduce every shipped `core` exactly at the shipped weights.
+    If it ever stops doing so, that test fails rather than this section
+    quietly comparing a shipped build against a differently-built arm.
+
+    A god whose shipped core ALREADY holds a carrier is skipped: there is no
+    swap to read, and the two cores it would pair are the same one.
+    """
+    carriers = set(ward_economy_carriers(tags_map))
+    if not carriers:
+        return [], []
+    neutral = neutralise_tag_bonus(weights, WARD_ECONOMY_TAG)
+    eff_scores, gold_values = efficiency.efficiency_scores(items)
+    items_by_name = {it["name"]: it for it in items}
+    rows = []
+    for god in sorted(gods, key=lambda g: g["name"]):
+        for mode in modes:
+            note = recommend.load_build_note(god["name"], mode)
+            # Conquest scores against its own community entry; the other modes
+            # carry none, exactly as `recommend.main` runs them.
+            god_build = note if mode == "Conquest" else {"builds": []}
+            shipped = suggested_core(note, "core")
+            if not shipped or carriers.intersection(shipped):
+                continue  # no shipped core, or it already holds one
+            gained = rebuild_core(god, items, god_build, neutral, tags_map, mode,
+                                  eff_scores, gold_values, items_by_name)
+            ward = sorted(carriers.intersection(gained))
+            if not ward or len(shipped) < 6 or len(gained) < 6:
+                continue
+            if any(n not in items_by_name for n in shipped + gained):
+                continue
+            rows.append({
+                "god": god["name"], "mode": mode, "role": god.get("role"),
+                "primary_role": primary_role(god), "ward": ward,
+                "displaced": sorted(set(shipped) - set(gained)),
+                "with_ward": profile(god, gained[:6], items_by_name),
+                "without_ward": profile(god, shipped[:6], items_by_name),
+            })
+    return rows, sorted(carriers)
+
+
+def ward_economy_premium(row, key):
+    """The gold that would have to be ADDED to the ward core's price before it
+    stopped beating the other on `key` per 1000 gold.
+
+    `obj_in / (cost_in + d) == obj_out / cost_out`, so
+    `d = cost_out * obj_in / obj_out - cost_in`. Positive means the ward core
+    wins by that much gold-equivalent WITHOUT any credit for the ward engine;
+    negative means it is behind even at its discounted price.
+
+    Returns None for a key with no per-gold twin. Solo's duel score is the
+    case: it is a product that already carries the build's gold twice, which
+    is why `metric` refuses `duel_*/1000g` — so there is no denominator here to
+    solve against, and inventing one would be exactly the constant section 4.16
+    refuses.
+    """
+    base = key[:-len("/1000g")] if key.endswith("/1000g") else None
+    if base is None or base.startswith("duel_"):
+        return None
+    a_in, a_out = metric(row["with_ward"], base), metric(row["without_ward"], base)
+    if not a_out or a_out != a_out:
+        return None
+    return row["without_ward"]["cost"] * (a_in / a_out) - row["with_ward"]["cost"]
+
+
+#: Read on both damage channels and both effective-health channels, plus burst,
+#: because two of the five role maximands are burst and effective health.
+#: `METRICS` itself is the four-row headline table and carries no burst row.
+WARD_ECONOMY_METRICS = ("dps_70", "dps_170", "burst_70",
+                        "ehp_physical", "ehp_magical")
+
+
+def ward_economy_distribution(rows, key):
+    """Ahead / behind / level for the ward core on one metric, as a ratio over
+    the same god's other core.
+
+    Same shape and the same ±0.5% level band as `distribution`, but BOTH ARMS
+    ARE OURS — there is no community reference anywhere in this section, which
+    is the whole reason this module can be pointed at the question at all.
+    """
+    deltas = []
+    for row in rows:
+        theirs = metric(row["without_ward"], key)
+        mine = metric(row["with_ward"], key)
+        deltas.append((mine / theirs - 1.0) * 100.0 if theirs else float("nan"))
+    arr = np.array([d for d in deltas if not np.isnan(d)], dtype=float)
+    if not arr.size:
+        return None
+    return {"n": int(arr.size),
+            "ahead": int((arr > 0.5).sum()),
+            "behind": int((arr < -0.5).sum()),
+            "level": int((np.abs(arr) <= 0.5).sum()),
+            "median": float(np.percentile(arr, 50))}
+
+
+def ward_economy_lines(rows, carriers):
+    """The section. Absolute beside per-1000g on every metric, then each role
+    on its own objective, then what the arithmetic refuses."""
+    lines = ["## Ward economy", ""]
+    if not carriers:
+        return lines + [f"No item carries `{WARD_ECONOMY_TAG}` in `_tags.yaml`, "
+                        "so there is nothing to adjudicate.", ""]
+    lines += [f"Carriers in `_tags.yaml`: "
+              + ", ".join(f"`{c}`" for c in carriers) + ".", ""]
+    if not rows:
+        return lines + [
+            "**No paired core exists on this data.** Neutralising the "
+            f"`{WARD_ECONOMY_TAG}` tag_bonus turns no core into one holding a "
+            "carrier, so there is no swap to read and this section has no "
+            "verdict to give — a fact about the current build set, re-measured "
+            "on every run rather than asserted once.", ""]
+
+    seen = Counter(w for r in rows for w in r["ward"])
+    never = [c for c in carriers if c not in seen]
+    by_mode = Counter(r["mode"] for r in rows)
+    by_role = Counter(r["primary_role"] for r in rows)
+    lines += [
+        f"**{len(rows)} paired cores** — the same god's `core` as shipped and as "
+        "the model would build it with the tag_bonus neutral, differing by one "
+        "item. "
+        + " · ".join(f"{m} {n}" for m, n in sorted(by_mode.items())) + " · "
+        + " · ".join(f"{r} {n}" for r, n in sorted(by_role.items())) + ".",
+        "",
+        "Reaching a core: "
+        + ", ".join(f"`{c}` {n}x" for c, n in seen.most_common()) + "."]
+    if never:
+        lines.append("Never reaching one in either arm: "
+                     + ", ".join(f"`{c}`" for c in never)
+                     + " — tagged, but the tag is doing nothing to a shipped build.")
+    gold = np.array([r["with_ward"]["cost"] - r["without_ward"]["cost"]
+                     for r in rows], dtype=float)
+    lines += ["", f"The ward core is CHEAPER on **{int((gold < 0).sum())} of "
+                  f"{gold.size}** pairs, median {np.percentile(gold, 50):+,.0f}g. "
+                  "That discount is the thing under objection, and it is also the "
+                  "denominator of every per-1000g figure below.", ""]
+
+    for scope, suffix in (("Absolute", ""), ("Per 1000 gold", "/1000g")):
+        lines += [f"### {scope}", "",
+                  "| Metric | n | ward ahead | behind | level (±0.5%) | median |",
+                  "|---|---|---|---|---|---|"]
+        for key in WARD_ECONOMY_METRICS:
+            dist = ward_economy_distribution(rows, key + suffix)
+            if dist:
+                lines.append(f"| {key}{suffix} | {dist['n']} | {dist['ahead']} | "
+                             f"{dist['behind']} | {dist['level']} | "
+                             f"{_pct(dist['median'])} |")
+        lines.append("")
+
+    lines += ["### Each role on its own objective, and what that is worth in gold",
+              "",
+              "| Role | n | Objective | Objective median | Absolute median | Implied premium |",
+              "|---|---|---|---|---|---|"]
+    for role, group in group_by_role(rows).items():
+        objective = ROLE_OBJECTIVES.get(role)
+        if objective is None:
+            lines.append(f"| {role} | {len(group)} | — | — | — | "
+                         "no objective recorded for this role label |")
+            continue
+        for key in objective["maximise"][0]:
+            obj = ward_economy_distribution(group, key)
+            base = key[:-len("/1000g")] if key.endswith("/1000g") else key
+            absolute = ward_economy_distribution(group, base)
+            prem = [p for p in (ward_economy_premium(r, key) for r in group)
+                    if p is not None]
+            cell = (f"{np.percentile(prem, 50):+,.0f}g" if prem
+                    else "— no per-gold twin")
+            lines.append(
+                f"| {role} | {len(group)} | `{key}` | "
+                f"{_pct(obj['median']) if obj else '—'} | "
+                f"{_pct(absolute['median']) if absolute else '—'} | {cell} |")
+    lines += ["",
+              "**Implied premium** is the gold that would have to be ADDED to the "
+              "ward core's price before it stopped winning that objective. Positive "
+              "means it wins WITHOUT any credit for the ward engine; negative means "
+              "it is behind even at its discounted price.", ""]
+
+    lines += ["### What this cannot decide", "",
+              "**The claim is not settled here, and that is structural rather than "
+              "a missing feature.** Every instrument in this repo is downstream of "
+              "the item's printed cost — `efficiency` is `cost - predicted_cost`, "
+              "and every per-1000g figure above divides by the core's cost — and "
+              "the ward subsidy IS that price. This module reading \"good stats per "
+              "gold\" inherits the discount rather than checking it. Whether a "
+              "conditional gold stream is collected in a real game is observed "
+              "nowhere in this repo.",
+              "",
+              "**Distrust the objective column for a second, independent reason.** "
+              "A role whose maximand is effective health per 1000 gold is won by a "
+              "cheap protections-and-health item by construction, and "
+              "`threshold_probe` re-measures every run that neither threshold which "
+              "would bound it can fire. Damage the swap gives away is invisible to "
+              "the metric scoring it. Read the absolute column beside the objective "
+              "column for that reason, and neither on its own.", ""]
+    return lines
+
+
 # ── CLI ───────────────────────────────────────────────────────────────────
 
 def _fingerprint(items, weights, tags_map, gods, builds_by_god):
@@ -1731,6 +2068,9 @@ def build_parser():
     ap.add_argument("--role", help="print one role's verdict on its own objective and stop")
     ap.add_argument("--archetype", default=DEFAULT_ARCHETYPE,
                     help="our build to compare (default: model)")
+    ap.add_argument("--ward-economy", action="store_true",
+                    help="adjudicate the `ward-economy` tag's carriers "
+                         "against a core built without them, and stop")
     ap.add_argument("--out", type=Path, default=REPORT_PATH)
     return ap
 
@@ -1746,6 +2086,16 @@ def main(argv=None):
     # Measured before any path can print: the roster-wide blind spot is the
     # caveat on a single god's table as much as on the distribution.
     blind = passive_blind_spot(items, gods, builds_by_god, weights, args.archetype)
+
+    if args.ward_economy:
+        # Deliberately behind a flag rather than in the default report: it
+        # builds every core a second time at a modified tag_bonus, which is the
+        # whole cost of the run again, and it answers a question about two
+        # items rather than about the roster.
+        efficiency.apply_pricing_flags(weights)
+        pairs, carriers = ward_economy_pairs(gods, items, weights, tags_map)
+        emit(blind, ward_economy_lines(pairs, carriers))
+        return 0
 
     if args.god:
         rows, skipped = run([g for g in gods if g["name"] == args.god], items, builds_by_god,

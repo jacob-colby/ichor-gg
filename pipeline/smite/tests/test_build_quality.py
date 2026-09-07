@@ -1078,3 +1078,160 @@ def test_target_side_only_stats_are_named_by_no_role_map_either():
     named = {stat for entry in weights["role_stats"].values() for stat in entry}
     for stat in bq.TARGET_SIDE_ONLY:
         assert stat not in named, f"{stat} is now named by a role map; §4.19 needs re-running"
+
+
+# ── Ward economy ──────────────────────────────────────────────────────────
+
+def _ward_row(cost_in, cost_out, ehp_in, ehp_out):
+    """Two profile-shaped stubs, enough for the premium arithmetic."""
+    def prof(cost, ehp):
+        return {"cost": cost, "ehp_physical": ehp,
+                "per_1000g": {"ehp_physical": ehp / (cost / 1000.0)}}
+    return {"with_ward": prof(cost_in, ehp_in),
+            "without_ward": prof(cost_out, ehp_out)}
+
+
+def test_rebuild_core_reproduces_every_shipped_core():
+    """THE LINCHPIN OF THE WARD SECTION. `rebuild_core` is a second
+    implementation of a path `recommend._build_entry_set` already owns, and the
+    ward comparison sets a build it assembles against a build that shipped — so
+    the two are only comparable while the builder and the notes agree.
+
+    Note the pricing flags. `recommend.main --all` applies them before scoring,
+    and skipping that step silently reproduces a different, unshipped model —
+    the reproduction trap `_expert_reviews.yaml` records against this exact
+    kind of harness. The autouse fixture turns them OFF for every other test
+    here, so this one turns them back on deliberately.
+    """
+    items = recommend.load_items()
+    gods = recommend.load_gods()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    efficiency.apply_pricing_flags(weights)
+    tags_map = scoring.load_tags(recommend.TAGS_PATH)
+    eff_scores, gold_values = efficiency.efficiency_scores(items)
+    items_by_name = {it["name"]: it for it in items}
+
+    checked, mismatched = 0, []
+    for god in gods:
+        for mode in bq.WARD_ECONOMY_MODES:
+            note = recommend.load_build_note(god["name"], mode)
+            shipped = bq.suggested_core(note, "core")
+            if not shipped:
+                continue
+            god_build = note if mode == "Conquest" else {"builds": []}
+            built = bq.rebuild_core(god, items, god_build, weights, tags_map, mode,
+                                    eff_scores, gold_values, items_by_name)
+            checked += 1
+            if sorted(built) != sorted(shipped):
+                mismatched.append(f"{god['name']} {mode}: "
+                                  f"built {sorted(built)} vs shipped {sorted(shipped)}")
+    assert checked >= 170, f"only {checked} cores compared — the roster or the notes moved"
+    assert not mismatched, mismatched[:5]
+
+
+def test_neutralise_tag_bonus_removes_the_key_and_leaves_the_original_alone():
+    """The counterfactual arm must not leak into the shipped one. Dropping the
+    key rather than zeroing it is deliberate — `god_fit_score` reads the map
+    with a 0.0 default, so the two are the same number today and only one of
+    them stays neutral if that default ever changes."""
+    weights = {"modes": {"conquest": {"tag_bonus": {"ward-economy": -0.25,
+                                                    "sustain": 0.25}},
+                         "joust": {"tag_bonus": {"ward-economy": -0.25}},
+                         "arena": {"excluded_items": ["Eye of Providence"]}}}
+    out = bq.neutralise_tag_bonus(weights, "ward-economy")
+    assert "ward-economy" not in out["modes"]["conquest"]["tag_bonus"]
+    assert "ward-economy" not in out["modes"]["joust"]["tag_bonus"]
+    assert out["modes"]["conquest"]["tag_bonus"]["sustain"] == 0.25
+    assert out["modes"]["arena"]["excluded_items"] == ["Eye of Providence"]
+    assert weights["modes"]["conquest"]["tag_bonus"]["ward-economy"] == -0.25
+
+
+def test_ward_economy_carriers_come_from_the_tag_file_not_a_hardcoded_pair():
+    """A third tagged item has to appear here without an edit, or the section
+    silently stops adjudicating it."""
+    assert bq.ward_economy_carriers({"A": ["ward-economy"], "B": ["sustain"],
+                                     "C": ["aura", "ward-economy"], "D": None}) == ["A", "C"]
+    assert bq.ward_economy_carriers({}) == []
+    shipped = bq.ward_economy_carriers(scoring.load_tags(recommend.TAGS_PATH))
+    assert "Eye of Providence" in shipped
+
+
+def test_ward_economy_premium_is_the_gold_that_makes_the_swap_a_wash():
+    """`d = cost_out * obj_in/obj_out - cost_in`: add `d` to the ward core's
+    price and the two read identically per 1000 gold."""
+    row = _ward_row(cost_in=13750, cost_out=14000, ehp_in=1057, ehp_out=1000)
+    d = bq.ward_economy_premium(row, "ehp_physical/1000g")
+    assert d == pytest.approx(14000 * 1.057 - 13750)
+    assert (row["with_ward"]["ehp_physical"] / ((13750 + d) / 1000.0)
+            == pytest.approx(row["without_ward"]["per_1000g"]["ehp_physical"]))
+
+
+def test_ward_economy_premium_is_negative_when_the_discount_does_not_save_it():
+    row = _ward_row(cost_in=13750, cost_out=14000, ehp_in=900, ehp_out=1000)
+    assert bq.ward_economy_premium(row, "ehp_physical/1000g") < 0
+
+
+def test_ward_economy_premium_refuses_a_maximand_with_no_per_gold_twin():
+    """Solo's objective is a duel score, which already carries the build's gold
+    twice — `metric` refuses `duel_*/1000g` for that reason, so there is no
+    denominator to solve against and no premium to report. Inventing one would
+    be the constant register §4.16 refuses."""
+    row = _ward_row(cost_in=13750, cost_out=14000, ehp_in=1057, ehp_out=1000)
+    assert bq.ward_economy_premium(row, "duel_physical_70") is None
+    assert bq.ward_economy_premium(row, "ehp_physical") is None
+
+
+#: One real pair, so the section is exercised on profiles `combat.py` actually
+#: produced rather than on a stub that would drift from `metric`'s key space.
+WARD_WITHOUT = ["Genji's Guard", "Kinetic Cuirass", "Freya's Tears",
+                "Shifter's Shield", "Amanita Charm", "Erosion"]
+WARD_WITH = ["Eye of Providence", "Kinetic Cuirass", "Freya's Tears",
+             "Shifter's Shield", "Amanita Charm", "Erosion"]
+
+
+def _real_ward_rows(items_by_name):
+    god = _god("Ymir")
+    return [{"god": "Ymir", "mode": "Conquest", "role": "Support",
+             "primary_role": "Support", "ward": ["Eye of Providence"],
+             "displaced": ["Genji's Guard"],
+             "with_ward": bq.profile(god, WARD_WITH, items_by_name),
+             "without_ward": bq.profile(god, WARD_WITHOUT, items_by_name)}]
+
+
+def test_ward_economy_reports_both_readings_because_they_disagree(items_by_name):
+    """§4.17's shape, pinned. A per-gold figure divides by the very discount
+    under objection, so the section may not report it alone — and an absolute
+    figure ignores that the ward core is cheaper, so it may not stand alone
+    either. A future tidy-up that keeps one table fails here."""
+    text = "\n".join(bq.ward_economy_lines(_real_ward_rows(items_by_name),
+                                           ["Eye of Providence"]))
+    assert "### Absolute" in text and "### Per 1000 gold" in text
+    assert "What this cannot decide" in text
+    assert "printed cost" in text
+    # And the two readings really do disagree on this pair, which is why both
+    # are printed: the ward core is cheaper, so per-gold flatters it.
+    rows = _real_ward_rows(items_by_name)
+    assert (rows[0]["with_ward"]["cost"] < rows[0]["without_ward"]["cost"])
+    absolute = bq.ward_economy_distribution(rows, "ehp_physical")["median"]
+    per_gold = bq.ward_economy_distribution(rows, "ehp_physical/1000g")["median"]
+    assert per_gold > absolute
+
+
+def test_ward_economy_names_a_carrier_that_never_reaches_a_core(items_by_name):
+    """Eye of Erebus is tagged and holds no slot in either arm. Printing the
+    carrier list without saying which ones are inert would let a tag look
+    load-bearing when it does nothing."""
+    text = "\n".join(bq.ward_economy_lines(_real_ward_rows(items_by_name),
+                                           ["Eye of Erebus", "Eye of Providence"]))
+    assert "Never reaching one in either arm" in text
+    assert "Eye of Erebus" in text
+
+
+def test_ward_economy_says_so_rather_than_printing_an_empty_verdict():
+    """Two different kinds of nothing, and neither may look like a verdict:
+    no item carries the tag, and no core changes when it is neutralised."""
+    nothing_tagged = "\n".join(bq.ward_economy_lines([], []))
+    assert "nothing to adjudicate" in nothing_tagged
+    no_pairs = "\n".join(bq.ward_economy_lines([], ["Eye of Providence"]))
+    assert "No paired core exists" in no_pairs
+    assert "re-measured" in no_pairs
