@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Toxic Blade
-    reason: Conquest community 59% win over 184 matches (vs 49% on this god), taking
+    reason: Conquest community 60% win over 196 matches (vs 49% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

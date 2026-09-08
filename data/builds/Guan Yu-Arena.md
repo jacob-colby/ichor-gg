@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Golden Blade
-    reason: Conquest community 67% win over 124 matches (vs 57% on this god), taking
+    reason: Conquest community 69% win over 147 matches (vs 58% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

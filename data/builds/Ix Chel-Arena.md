@@ -529,21 +529,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Void Shield
-  - Spear of Desolation
+  - Void Stone
   - Rod of Tahuti
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Void Shield
-  - Spear of Desolation
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,12 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
+    Void Stone:
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.73
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Kinetic Cuirass
-    reason: Conquest community 61% win over 449 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 480 matches (vs 53% on this god), taking
       the model's weakest slot from Kinetic Cuirass
-  - added: Spear of Desolation
-    removed: Void Stone
-    reason: Conquest community 58% win over 589 matches (vs 54% on this god), taking
-      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

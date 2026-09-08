@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
-  - Spear of Desolation
   - Rod of Tahuti
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Spear of Desolation
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Void Shield:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Stygian Anchor
-    reason: Conquest community 61% win over 449 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 480 matches (vs 53% on this god), taking
       the model's weakest slot from Stygian Anchor
-  - added: Spear of Desolation
-    removed: Void Shield
-    reason: Conquest community 58% win over 589 matches (vs 54% on this god), taking
-      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

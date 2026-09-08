@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Golden Blade
     removed: Void Stone
-    reason: Conquest community 69% win over 137 matches (vs 59% on this god), taking
+    reason: Conquest community 69% win over 143 matches (vs 60% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

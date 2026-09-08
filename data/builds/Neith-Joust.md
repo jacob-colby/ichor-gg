@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Jotunn's Revenge
-    reason: Conquest community 67% win over 54 matches (vs 51% on this god), taking
+    reason: Conquest community 67% win over 66 matches (vs 51% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

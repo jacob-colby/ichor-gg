@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Transcendence
-    reason: Conquest community 73% win over 54 matches (vs 57% on this god), taking
+    reason: Conquest community 73% win over 56 matches (vs 57% on this god), taking
       the model's weakest slot from Transcendence
   borrowed_from: Conquest
   starter: *id001

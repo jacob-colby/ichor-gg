@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Shifter's Shield
-    reason: Conquest community 64% win over 92 matches (vs 51% on this god), taking
+    reason: Conquest community 60% win over 105 matches (vs 50% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

@@ -14,79 +14,79 @@ builds:
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.13
-      win_rate: 0.51
+      win_rate: 0.53
     - name: The Cosmic Horror
       pick_rate: 0.11
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Blood-Bound Book
     pick_rate: 0.18
-    win_rate: 0.41
+    win_rate: 0.4
     alternates:
     - name: The Cosmic Horror
       pick_rate: 0.15
-      win_rate: 0.66
+      win_rate: 0.68
     - name: Bancroft's Talon
       pick_rate: 0.12
       win_rate: 0.53
   - name: Totem of Death
     pick_rate: 0.18
-    win_rate: 0.68
+    win_rate: 0.7
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.14
-      win_rate: 0.51
+      pick_rate: 0.13
+      win_rate: 0.49
     - name: Spear of Desolation
-      pick_rate: 0.1
-      win_rate: 0.51
+      pick_rate: 0.11
+      win_rate: 0.5
   - name: Rod of Tahuti
-    pick_rate: 0.26
-    win_rate: 0.52
+    pick_rate: 0.27
+    win_rate: 0.53
     alternates:
     - name: Soul Gem
       pick_rate: 0.12
-      win_rate: 0.49
+      win_rate: 0.47
     - name: Totem of Death
-      pick_rate: 0.1
-      win_rate: 0.5
+      pick_rate: 0.09
+      win_rate: 0.51
   - name: Obsidian Shard
-    pick_rate: 0.17
-    win_rate: 0.54
+    pick_rate: 0.16
+    win_rate: 0.55
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.12
-      win_rate: 0.56
+      win_rate: 0.54
     - name: Doom Orb
       pick_rate: 0.1
-      win_rate: 0.43
+      win_rate: 0.44
   - name: Evil Eye
-    pick_rate: 0.17
-    win_rate: 0.54
+    pick_rate: 0.16
+    win_rate: 0.52
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.1
-      win_rate: 0.52
+      pick_rate: 0.11
+      win_rate: 0.54
     - name: Blinking Abyss
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.61
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.29
+    pick_rate: 0.28
     win_rate: 0.53
   - name: Conduit Gem
     pick_rate: 0.24
     win_rate: 0.47
   - name: Pendulum of the Ages
-    pick_rate: 0.17
-    win_rate: 0.58
+    pick_rate: 0.16
+    win_rate: 0.61
   source_url: https://smitebrain.com/gods/anubis/
-  last_verified: '2026-09-07'
-  god_win_rate: 0.5199063231850117
-  god_matches_won: 222
-  god_matches_played: 427
+  last_verified: '2026-09-08'
+  god_win_rate: 0.5212765957446809
+  god_matches_won: 245
+  god_matches_played: 470
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-07'
-  god_matches_analyzed: 16223
+  god_window_end: '2026-09-08'
+  god_matches_analyzed: 17639
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -123,15 +123,15 @@ builds:
     of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 1.0
     The Cosmic Horror:
-      total: 0.58
+      total: 0.59
       efficiency: 0.45
-      win: 0.66
+      win: 0.68
       pick: 0.2
       fit: 0.79
     Spear of the Magus:
@@ -141,22 +141,22 @@ builds:
       pick: 0.0
       fit: 0.79
     Totem of Death:
-      total: 0.57
+      total: 0.58
       efficiency: 0.4
-      win: 0.68
+      win: 0.7
       pick: 0.28
       fit: 0.73
     Rod of Tahuti:
-      total: 0.67
+      total: 0.68
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.79
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.89
   community_ordered:
   - Spear of Desolation
@@ -205,9 +205,9 @@ builds:
       pick: 0.0
       fit: 0.49
     The Cosmic Horror:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
-      win: 0.66
+      win: 0.68
       pick: 0.2
       fit: 0.47
     The World Stone:
@@ -217,22 +217,22 @@ builds:
       pick: 0.0
       fit: 0.57
     Totem of Death:
-      total: 0.54
+      total: 0.55
       efficiency: 0.4
-      win: 0.68
+      win: 0.7
       pick: 0.28
       fit: 0.53
     Rod of Tahuti:
-      total: 0.64
+      total: 0.65
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.57
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.57
   community_ordered:
   - The Cosmic Horror
@@ -250,8 +250,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - Totem of Death
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -275,37 +275,37 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 0.78
     The Cosmic Horror:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
-      win: 0.66
+      win: 0.68
       pick: 0.2
       fit: 0.56
     Totem of Death:
-      total: 0.54
+      total: 0.55
       efficiency: 0.4
-      win: 0.68
+      win: 0.7
       pick: 0.28
       fit: 0.54
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.56
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.66
     Soul Gem:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
-      win: 0.49
+      win: 0.47
       pick: 0.2
       fit: 0.88
   community_ordered:
@@ -319,22 +319,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - The Cosmic Horror
+  - Totem of Death
   - Obsidian Shard
   - Rod of Tahuti
   - Amanita Charm
-  - Soul Gem
+  - Rod of Asclepius
   flex_slots:
-  - Kinetic Cuirass
-  - The Cosmic Horror
+  - Totem of Death
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -348,29 +348,29 @@ builds:
     of Negation, Erosion, Yogi''s Necklace, Eye of Providence, Draconic Scale, Phoenix
     Feather, Jade Scepter, Chandra''s Grace, Wish-Granting Pearl, Glorious Pridwen.'
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.52
-      pick: 0.0
-      fit: 0.61
     The Cosmic Horror:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
-      win: 0.66
+      win: 0.68
       pick: 0.2
       fit: 0.39
+    Totem of Death:
+      total: 0.53
+      efficiency: 0.4
+      win: 0.7
+      pick: 0.28
+      fit: 0.41
     Obsidian Shard:
       total: 0.53
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.49
     Rod of Tahuti:
-      total: 0.61
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.39
     Amanita Charm:
       total: 0.58
@@ -378,17 +378,17 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.81
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.49
-      pick: 0.2
-      fit: 0.89
+    Rod of Asclepius:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.52
+      pick: 0.0
+      fit: 0.7
   community_ordered:
   - The Cosmic Horror
+  - Totem of Death
   - Obsidian Shard
   - Rod of Tahuti
-  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -423,15 +423,15 @@ builds:
     of Valor, Bracer of The Abyss.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 1.0
     The Cosmic Horror:
-      total: 0.59
+      total: 0.6
       efficiency: 0.45
-      win: 0.66
+      win: 0.68
       pick: 0.2
       fit: 0.85
     Spear of the Magus:
@@ -441,21 +441,21 @@ builds:
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
-      total: 0.68
+      total: 0.69
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.85
     Obsidian Shard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.95
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.49
+      win: 0.47
       pick: 0.2
       fit: 1.0
   community_ordered:
@@ -471,9 +471,9 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - The Cosmic Horror
+  - Totem of Death
   - Rod of Tahuti
-  - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -515,41 +515,41 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.63
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.86
-      win: 0.52
-      pick: 0.43
-      fit: 0.32
-    Obsidian Shard:
-      total: 0.51
-      efficiency: 0.54
-      win: 0.54
-      pick: 0.37
-      fit: 0.42
-    Soul Gem:
+    The Cosmic Horror:
       total: 0.52
-      efficiency: 0.57
-      win: 0.49
+      efficiency: 0.45
+      win: 0.68
       pick: 0.2
-      fit: 0.58
+      fit: 0.32
+    Totem of Death:
+      total: 0.52
+      efficiency: 0.4
+      win: 0.7
+      pick: 0.28
+      fit: 0.35
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
+      win: 0.53
+      pick: 0.45
+      fit: 0.32
   community_ordered:
+  - The Cosmic Horror
+  - Totem of Death
   - Rod of Tahuti
-  - Obsidian Shard
-  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
   - Spear of Desolation
+  - The Cosmic Horror
   - Totem of Death
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - The Cosmic Horror
   - Obsidian Shard
-  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -570,44 +570,45 @@ builds:
     Screeching Gargoyle, Bragi''s Harp, Rod of Asclepius, Book of Thoth, Chandra''s
     Grace, Freya''s Tears, Polynomicon, Soul Reaver, Jade Scepter.'
   slot_scores:
-    Chronos' Pendant:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.52
-      pick: 0.0
-      fit: 0.63
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 0.86
-    Totem of Death:
-      total: 0.57
-      efficiency: 0.4
+    The Cosmic Horror:
+      total: 0.53
+      efficiency: 0.45
       win: 0.68
+      pick: 0.2
+      fit: 0.37
+    Totem of Death:
+      total: 0.58
+      efficiency: 0.4
+      win: 0.7
       pick: 0.28
       fit: 0.73
     Rod of Tahuti:
-      total: 0.61
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.37
     Obsidian Shard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.47
     Soul Gem:
       total: 0.55
       efficiency: 0.52
-      win: 0.49
+      win: 0.47
       pick: 0.2
       fit: 0.96
   community_ordered:
   - Spear of Desolation
+  - The Cosmic Horror
   - Totem of Death
   - Rod of Tahuti
   - Obsidian Shard
@@ -646,15 +647,15 @@ builds:
     of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 1.0
     Doom Orb:
       total: 0.51
       efficiency: 0.53
-      win: 0.43
+      win: 0.44
       pick: 0.22
       fit: 0.79
     Spear of the Magus:
@@ -664,21 +665,21 @@ builds:
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.67
+      total: 0.68
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.79
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.89
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.49
+      win: 0.47
       pick: 0.2
       fit: 1.0
   community_ordered:
@@ -721,10 +722,10 @@ builds:
     Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.51
-      pick: 0.16
+      win: 0.5
+      pick: 0.17
       fit: 1.0
     Spear of the Magus:
       total: 0.56
@@ -733,27 +734,27 @@ builds:
       pick: 0.0
       fit: 0.79
     Totem of Death:
-      total: 0.57
+      total: 0.58
       efficiency: 0.4
-      win: 0.68
+      win: 0.7
       pick: 0.28
       fit: 0.73
     Rod of Tahuti:
-      total: 0.67
+      total: 0.68
       efficiency: 0.86
-      win: 0.52
-      pick: 0.43
+      win: 0.53
+      pick: 0.45
       fit: 0.79
     Obsidian Shard:
       total: 0.59
       efficiency: 0.54
-      win: 0.54
-      pick: 0.37
+      win: 0.55
+      pick: 0.35
       fit: 0.89
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.49
+      win: 0.47
       pick: 0.2
       fit: 1.0
   community_ordered:
@@ -765,7 +766,7 @@ builds:
   swaps:
   - added: Totem of Death
     removed: Doom Orb
-    reason: community 68% win over 77 matches (vs 52% on this god), taking the model's
+    reason: community 70% win over 85 matches (vs 52% on this god), taking the model's
       weakest slot from Doom Orb
   starter: *id001
 ---

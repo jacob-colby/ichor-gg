@@ -590,13 +590,13 @@ builds:
       pick: 0.0
       fit: 0.85
   swaps:
-  - added: Shell of Rebuke
-    removed: Void Stone
-    reason: Conquest community 64% win over 61 matches (vs 45% on this god), taking
-      the model's weakest slot from Void Stone
   - added: Freya's Tears
+    removed: Void Stone
+    reason: Conquest community 61% win over 72 matches (vs 45% on this god), taking
+      the model's weakest slot from Void Stone
+  - added: Shell of Rebuke
     removed: Void Shield
-    reason: Conquest community 60% win over 67 matches (vs 45% on this god), taking
+    reason: Conquest community 60% win over 66 matches (vs 45% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

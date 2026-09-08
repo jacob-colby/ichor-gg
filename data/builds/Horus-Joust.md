@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Draconic Scale
     removed: Stygian Anchor
-    reason: Conquest community 79% win over 53 matches (vs 61% on this god), taking
+    reason: Conquest community 80% win over 59 matches (vs 62% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

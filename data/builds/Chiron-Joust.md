@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Demon Blade
-    reason: Conquest community 84% win over 54 matches (vs 51% on this god), taking
+    reason: Conquest community 84% win over 53 matches (vs 52% on this god), taking
       the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
@@ -1322,7 +1322,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Deathbringer
-    reason: Conquest community 84% win over 54 matches (vs 51% on this god), taking
+    reason: Conquest community 84% win over 53 matches (vs 52% on this god), taking
       the model's weakest slot from Deathbringer
   borrowed_from: Conquest
   starter: *id001

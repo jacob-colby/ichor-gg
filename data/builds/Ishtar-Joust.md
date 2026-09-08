@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: The Reaper
-    reason: Conquest community 63% win over 253 matches (vs 55% on this god), taking
+    reason: Conquest community 62% win over 279 matches (vs 55% on this god), taking
       the model's weakest slot from The Reaper
   borrowed_from: Conquest
   starter: *id001

@@ -9,21 +9,21 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.8
+    pick_rate: 0.81
     win_rate: 0.59
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.06
-      win_rate: 0.56
+      win_rate: 0.58
     - name: Avenging Blade
       pick_rate: 0.05
-      win_rate: 0.62
+      win_rate: 0.6
   - name: Hastened Fatalis
-    pick_rate: 0.31
+    pick_rate: 0.32
     win_rate: 0.6
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.31
+      pick_rate: 0.3
       win_rate: 0.58
     - name: Dagger of Frenzy
       pick_rate: 0.08
@@ -34,19 +34,19 @@ builds:
     alternates:
     - name: Hastened Fatalis
       pick_rate: 0.19
-      win_rate: 0.57
+      win_rate: 0.59
     - name: Odysseus' Bow
-      pick_rate: 0.16
-      win_rate: 0.61
+      pick_rate: 0.15
+      win_rate: 0.6
   - name: Riptalon
     pick_rate: 0.2
     win_rate: 0.59
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.3
+      pick_rate: 0.29
       win_rate: 0.61
     - name: The Executioner
-      pick_rate: 0.12
+      pick_rate: 0.13
       win_rate: 0.62
   - name: The Executioner
     pick_rate: 0.13
@@ -54,39 +54,39 @@ builds:
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.22
-      win_rate: 0.58
+      win_rate: 0.6
     - name: Riptalon
       pick_rate: 0.15
-      win_rate: 0.65
+      win_rate: 0.64
   - name: Hunter's Bow
-    pick_rate: 0.1
-    win_rate: 0.54
+    pick_rate: 0.09
+    win_rate: 0.55
     alternates:
     - name: Qin's Blade
       pick_rate: 0.09
-      win_rate: 0.61
-    - name: Riptalon
+      win_rate: 0.6
+    - name: Manchu Bow
       pick_rate: 0.08
-      win_rate: 0.68
+      win_rate: 0.62
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.39
+    pick_rate: 0.4
     win_rate: 0.63
   - name: Hunter's Cowl
-    pick_rate: 0.19
-    win_rate: 0.63
+    pick_rate: 0.2
+    win_rate: 0.64
   - name: Gilded Arrow
-    pick_rate: 0.16
-    win_rate: 0.5
+    pick_rate: 0.15
+    win_rate: 0.51
   source_url: https://smitebrain.com/gods/izanami/
-  last_verified: '2026-09-07'
-  god_win_rate: 0.587890625
-  god_matches_won: 903
-  god_matches_played: 1536
+  last_verified: '2026-09-08'
+  god_win_rate: 0.591753774680604
+  god_matches_won: 1019
+  god_matches_played: 1722
   god_division: obsidian
   god_window_start: '2026-08-25'
-  god_window_end: '2026-09-07'
-  god_matches_analyzed: 16223
+  god_window_end: '2026-09-08'
+  god_matches_analyzed: 17639
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -135,7 +135,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.55
     Nimble Ring:
       total: 0.55
@@ -211,7 +211,7 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.48
     Hydra's Lament:
       total: 0.52
@@ -285,7 +285,7 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.52
     Death Metal:
       total: 0.55
@@ -359,7 +359,7 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.45
     Death Metal:
       total: 0.55
@@ -434,7 +434,7 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.41
     Jotunn's Revenge:
       total: 0.56
@@ -491,8 +491,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, Jotunn''s Revenge, Soul Gem, Nimble Ring, Gluttonous
     Grimoire, Death Metal, The Reaper, Tekko-Kagi, Spear of Desolation, Spear of the
-    Magus, Heartseeker, Obsidian Shard, Avenging Blade, Titan''s Bane, Lernaean Bow,
-    The Crusher, Hydra''s Lament, Doom Orb, Toxic Blade, The World Stone, Dreamer''s
+    Magus, Heartseeker, Obsidian Shard, Titan''s Bane, Lernaean Bow, The Crusher,
+    Avenging Blade, Hydra''s Lament, Doom Orb, Toxic Blade, The World Stone, Dreamer''s
     Idol, Deathbringer, Bragi''s Harp, Pendulum Blade, Avatar''s Parashu, Dominance,
     Golden Blade, Bracer of The Abyss, Demon Blade, Musashi''s Dual Swords, Chronos''
     Pendant, Ancient Signet, Arondight, The Cosmic Horror, Blood-Bound Book, Oath-Sworn
@@ -508,7 +508,7 @@ builds:
       total: 0.55
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.47
     Death Metal:
       total: 0.54
@@ -583,7 +583,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.59
     Nimble Ring:
       total: 0.55
@@ -659,7 +659,7 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.59
-      pick: 0.8
+      pick: 0.81
       fit: 0.42
     Death Metal:
       total: 0.54
