@@ -5,113 +5,113 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Justice
-  aspect_pick_rate: 0.36
-  aspect_win_rate: 0.44
+  aspect_pick_rate: 0.35
+  aspect_win_rate: 0.45
   slot_order:
   - name: Hydra's Lament
-    pick_rate: 0.24
-    win_rate: 0.83
+    pick_rate: 0.23
+    win_rate: 0.86
     alternates:
     - name: Golden Blade
-      pick_rate: 0.2
-      win_rate: 0.6
-    - name: Daybreak Gavel
-      pick_rate: 0.16
-      win_rate: 0.75
-  - name: Berserker's Shield
-    pick_rate: 0.12
-    win_rate: 1.0
-    alternates:
-    - name: The Crusher
-      pick_rate: 0.12
-      win_rate: 0.67
-    - name: Genji's Guard
-      pick_rate: 0.08
+      pick_rate: 0.19
       win_rate: 0.5
+    - name: Daybreak Gavel
+      pick_rate: 0.19
+      win_rate: 0.83
+  - name: The Crusher
+    pick_rate: 0.13
+    win_rate: 0.75
+    alternates:
+    - name: Berserker's Shield
+      pick_rate: 0.1
+      win_rate: 1.0
+    - name: Hydra's Lament
+      pick_rate: 0.1
+      win_rate: 0.33
   - name: The Reaper
-    pick_rate: 0.12
-    win_rate: 0.33
+    pick_rate: 0.13
+    win_rate: 0.5
     alternates:
     - name: Daybreak Gavel
-      pick_rate: 0.08
+      pick_rate: 0.1
       win_rate: 0.0
-    - name: Brawler’s Beat Stick
-      pick_rate: 0.08
-      win_rate: 1.0
+    - name: Freya's Tears
+      pick_rate: 0.06
+      win_rate: 0.5
   - name: Shifter's Shield
     pick_rate: 0.17
     win_rate: 0.0
     alternates:
     - name: Heartseeker
-      pick_rate: 0.13
+      pick_rate: 0.14
       win_rate: 1.0
-    - name: Berserker's Shield
-      pick_rate: 0.08
+    - name: Shell of Rebuke
+      pick_rate: 0.07
       win_rate: 1.0
   - name: Veve Charm
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.0
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.5
     - name: Freya's Tears
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 1.0
   - name: Shell of Rebuke
-    pick_rate: 0.2
+    pick_rate: 0.15
     win_rate: 0.5
     alternates:
     - name: Infused Axe
-      pick_rate: 0.2
+      pick_rate: 0.15
       win_rate: 0.5
     - name: Genji's Guard
-      pick_rate: 0.1
+      pick_rate: 0.08
       win_rate: 0.0
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.28
-    win_rate: 0.43
+    pick_rate: 0.26
+    win_rate: 0.5
   - name: Hunter's Cowl
-    pick_rate: 0.2
+    pick_rate: 0.16
     win_rate: 0.6
   - name: Bumba's Cudgel
-    pick_rate: 0.12
-    win_rate: 0.67
+    pick_rate: 0.13
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/nemesis/
-  last_verified: '2026-09-09'
-  god_win_rate: 0.48
-  god_matches_won: 12
-  god_matches_played: 25
+  last_verified: '2026-09-10'
+  god_win_rate: 0.4838709677419355
+  god_matches_won: 15
+  god_matches_played: 31
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-09'
-  god_matches_analyzed: 921
+  god_window_end: '2026-09-10'
+  god_matches_analyzed: 1308
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
   - Berserker's Shield
-  - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Daybreak Gavel
+  - Freya's Tears
+  - The Crusher
   - Heartseeker
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - The Crusher
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Brawler’s Beat Stick — physical protection
-    swap_item: Brawler’s Beat Stick
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -124,45 +124,48 @@ builds:
     The World Stone, Arondight, Qin''s Blade, Runeforged Hammer, Dreamer''s Idol,
     Damaru, Rage, Ancient Signet, Chronos'' Pendant, Avenging Blade, Sun Beam Bow.'
   slot_scores:
-    Book of Thoth:
-      total: 0.47
-      efficiency: 0.51
-      win: 0.64
-      pick: 0.0
-      fit: 0.06
     Berserker's Shield:
       total: 0.66
       efficiency: 0.46
       win: 1.0
-      pick: 0.16
-      fit: 0.25
-    Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
-      win: 0.64
-      pick: 0.0
-      fit: 0.49
-    Transcendence:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.64
-      pick: 0.0
+      pick: 0.14
       fit: 0.25
     Hydra's Lament:
-      total: 0.63
+      total: 0.65
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.39
+    Daybreak Gavel:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.83
+      pick: 0.19
+      fit: 0.0
+    Freya's Tears:
+      total: 0.59
+      efficiency: 0.36
+      win: 1.0
+      pick: 0.19
+      fit: 0.04
+    The Crusher:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.18
+      fit: 0.54
     Heartseeker:
       total: 0.72
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.64
   community_ordered:
   - Berserker's Shield
   - Hydra's Lament
+  - Daybreak Gavel
+  - Freya's Tears
+  - The Crusher
   - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
@@ -171,21 +174,21 @@ builds:
   archetype: mana-stack
   slot_order:
   - Berserker's Shield
-  - Jotunn's Revenge
   - Hydra's Lament
   - Freya's Tears
+  - The Crusher
   - Heartseeker
   - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
-  - Freya's Tears
+  - Rod of Tahuti
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Brawler’s Beat Stick — magical protection
-    swap_item: Brawler’s Beat Stick
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -205,63 +208,64 @@ builds:
       total: 0.64
       efficiency: 0.46
       win: 1.0
-      pick: 0.16
+      pick: 0.14
       fit: 0.15
-    Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
-      win: 0.64
-      pick: 0.0
-      fit: 0.52
     Hydra's Lament:
-      total: 0.65
+      total: 0.66
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.49
     Freya's Tears:
       total: 0.6
       efficiency: 0.36
       win: 1.0
-      pick: 0.22
+      pick: 0.19
       fit: 0.1
+    The Crusher:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.18
+      fit: 0.44
     Heartseeker:
       total: 0.72
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.62
     Rod of Tahuti:
-      total: 0.65
+      total: 0.59
       efficiency: 0.86
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.42
   community_ordered:
   - Berserker's Shield
   - Hydra's Lament
   - Freya's Tears
+  - The Crusher
   - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
   - Berserker's Shield
   - Hydra's Lament
+  - Daybreak Gavel
   - Freya's Tears
+  - The Crusher
   - Heartseeker
-  - Amanita Charm
   flex_slots:
-  - Amanita Charm
-  - Hydra's Lament
+  - Daybreak Gavel
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -269,55 +273,56 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Rod of Tahuti, Jotunn''s Revenge, Shield of the Phoenix,
-    Rod of Asclepius, Kinetic Cuirass, Soul Gem, Death Metal, Riptalon, Runeforged
-    Hammer, Gluttonous Grimoire, Breastplate of Valor, Shield Splitter, Ethereal Staff,
-    Yogi''s Necklace, Eye of the Storm, Pharaoh''s Curse, Tyrfing, Lernaean Bow, Phoenix
-    Feather, Erosion, Nimble Ring, Shogun''s Ofuda, Toxic Blade, Silverbranch Bow,
-    Eye of Providence, Spear of the Magus, Tekko-Kagi, Lifebinder, Draconic Scale,
-    Avenging Blade, Helm of Radiance, Chandra''s Grace.'
+    this god: Berserker''s Shield, Amanita Charm, Rod of Tahuti, Jotunn''s Revenge,
+    Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Soul Gem, Death Metal,
+    Riptalon, Runeforged Hammer, Gluttonous Grimoire, Breastplate of Valor, Shield
+    Splitter, Ethereal Staff, Yogi''s Necklace, Eye of the Storm, Pharaoh''s Curse,
+    Tyrfing, Lernaean Bow, Phoenix Feather, Erosion, Nimble Ring, Shogun''s Ofuda,
+    Toxic Blade, Silverbranch Bow, Eye of Providence, Spear of the Magus, Tekko-Kagi,
+    Lifebinder, Draconic Scale, Avenging Blade, Helm of Radiance, Chandra''s Grace.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.64
-      efficiency: 0.42
-      win: 1.0
-      pick: 0.12
-      fit: 0.24
     Berserker's Shield:
       total: 0.76
       efficiency: 0.68
       win: 1.0
-      pick: 0.16
+      pick: 0.14
       fit: 0.42
     Hydra's Lament:
-      total: 0.62
+      total: 0.63
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.28
+    Daybreak Gavel:
+      total: 0.61
+      efficiency: 0.59
+      win: 0.83
+      pick: 0.19
+      fit: 0.15
     Freya's Tears:
-      total: 0.72
+      total: 0.71
       efficiency: 0.61
       win: 1.0
-      pick: 0.22
+      pick: 0.19
       fit: 0.27
+    The Crusher:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.18
+      fit: 0.37
     Heartseeker:
-      total: 0.69
+      total: 0.7
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.47
-    Amanita Charm:
-      total: 0.62
-      efficiency: 0.65
-      win: 0.64
-      pick: 0.0
-      fit: 0.69
   community_ordered:
-  - Brawler’s Beat Stick
   - Berserker's Shield
   - Hydra's Lament
+  - Daybreak Gavel
   - Freya's Tears
+  - The Crusher
   - Heartseeker
   starter: *id001
 - source: suggested
@@ -331,17 +336,17 @@ builds:
   - Heartseeker
   flex_slots:
   - Freya's Tears
-  - The Crusher
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Brawler’s Beat Stick — magical protection
-    swap_item: Brawler’s Beat Stick
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -359,37 +364,37 @@ builds:
       total: 0.65
       efficiency: 0.46
       win: 1.0
-      pick: 0.16
+      pick: 0.14
       fit: 0.19
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.57
       efficiency: 0.72
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.61
     Hydra's Lament:
-      total: 0.62
+      total: 0.64
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.32
     Freya's Tears:
       total: 0.59
       efficiency: 0.36
       win: 1.0
-      pick: 0.22
+      pick: 0.19
       fit: 0.03
     The Crusher:
-      total: 0.57
+      total: 0.61
       efficiency: 0.47
-      win: 0.67
-      pick: 0.16
+      win: 0.75
+      pick: 0.18
       fit: 0.67
     Heartseeker:
       total: 0.74
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.77
   community_ordered:
   - Berserker's Shield
@@ -415,58 +420,59 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Brawler’s Beat Stick — magical protection
-    swap_item: Brawler’s Beat Stick
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Jotunn''s Revenge, Nimble Ring, Riptalon, Tyrfing, Silverbranch
-    Bow, Death Metal, Soul Gem, Lernaean Bow, Gluttonous Grimoire, Tekko-Kagi, Spear
-    of the Magus, Toxic Blade, Bragi''s Harp, Obsidian Shard, Spear of Desolation,
-    Dominance, Bracer of The Abyss, Qin''s Blade, Titan''s Bane, Deathbringer, Demon
-    Blade, Doom Orb, The World Stone, Ancient Signet, Sun Beam Bow, Blood-Bound Book,
-    Transcendence, Dreamer''s Idol, Chronos'' Pendant, Musashi''s Dual Swords, Runeforged
-    Hammer, Arondight, Avatar''s Parashu, Bancroft''s Talon, Pendulum Blade.'
+    this god: Berserker''s Shield, Rod of Tahuti, Jotunn''s Revenge, Nimble Ring,
+    Riptalon, Tyrfing, Silverbranch Bow, Death Metal, Soul Gem, Lernaean Bow, Gluttonous
+    Grimoire, Tekko-Kagi, Spear of the Magus, Toxic Blade, Bragi''s Harp, Obsidian
+    Shard, Spear of Desolation, Dominance, Bracer of The Abyss, Qin''s Blade, Titan''s
+    Bane, Deathbringer, Demon Blade, Doom Orb, The World Stone, Ancient Signet, Sun
+    Beam Bow, Blood-Bound Book, Transcendence, Dreamer''s Idol, Chronos'' Pendant,
+    Musashi''s Dual Swords, Runeforged Hammer, Arondight, Avatar''s Parashu, Bancroft''s
+    Talon, Pendulum Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.66
       efficiency: 0.46
       win: 1.0
-      pick: 0.16
+      pick: 0.14
       fit: 0.26
     Hydra's Lament:
-      total: 0.62
+      total: 0.63
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.27
     Nimble Ring:
-      total: 0.57
+      total: 0.51
       efficiency: 0.65
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.39
     Freya's Tears:
       total: 0.59
       efficiency: 0.36
       win: 1.0
-      pick: 0.22
+      pick: 0.19
       fit: 0.03
     Riptalon:
-      total: 0.56
+      total: 0.5
       efficiency: 0.51
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.65
     Heartseeker:
       total: 0.7
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.47
   community_ordered:
   - Berserker's Shield
@@ -480,19 +486,19 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Hydra's Lament
+  - Daybreak Gavel
   - Freya's Tears
-  - Spear of Desolation
   - Heartseeker
   flex_slots:
   - Jotunn's Revenge
-  - Spear of Desolation
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Brawler’s Beat Stick — magical protection
-    swap_item: Brawler’s Beat Stick
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -510,44 +516,45 @@ builds:
     Demon Blade, Avatar''s Parashu.'
   slot_scores:
     Berserker's Shield:
-      total: 0.65
+      total: 0.64
       efficiency: 0.46
       win: 1.0
-      pick: 0.16
+      pick: 0.14
       fit: 0.17
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.56
       efficiency: 0.72
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.59
     Hydra's Lament:
-      total: 0.66
+      total: 0.67
       efficiency: 0.54
-      win: 0.83
-      pick: 0.24
+      win: 0.86
+      pick: 0.23
       fit: 0.55
+    Daybreak Gavel:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.83
+      pick: 0.19
+      fit: 0.0
     Freya's Tears:
       total: 0.64
       efficiency: 0.36
       win: 1.0
-      pick: 0.22
+      pick: 0.19
       fit: 0.34
-    Spear of Desolation:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.64
-      pick: 0.0
-      fit: 0.59
     Heartseeker:
       total: 0.69
       efficiency: 0.47
       win: 1.0
-      pick: 0.22
+      pick: 0.23
       fit: 0.44
   community_ordered:
   - Berserker's Shield
   - Hydra's Lament
+  - Daybreak Gavel
   - Freya's Tears
   - Heartseeker
   starter: *id001
@@ -587,39 +594,39 @@ builds:
     Sun Beam Bow.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.55
       efficiency: 0.72
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.56
+      total: 0.5
       efficiency: 0.48
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.73
     Death Metal:
-      total: 0.58
+      total: 0.52
       efficiency: 0.61
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.56
+      total: 0.5
       efficiency: 0.53
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.58
     Tekko-Kagi:
-      total: 0.56
+      total: 0.5
       efficiency: 0.49
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.69
     Rod of Tahuti:
-      total: 0.62
+      total: 0.56
       efficiency: 0.86
-      win: 0.64
+      win: 0.5
       pick: 0.0
       fit: 0.26
   starter: *id001

@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.16
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/achilles/
-  last_verified: '2026-09-09'
+  last_verified: '2026-09-10'
   god_win_rate: 0.47368421052631576
   god_matches_won: 9
   god_matches_played: 19
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-09'
-  god_matches_analyzed: 921
+  god_window_end: '2026-09-10'
+  god_matches_analyzed: 1308
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear

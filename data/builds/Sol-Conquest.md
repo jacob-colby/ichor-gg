@@ -5,49 +5,49 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Conflagration
-  aspect_pick_rate: 0.6
+  aspect_pick_rate: 0.56
   aspect_win_rate: 0.56
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.33
+    pick_rate: 0.31
     win_rate: 1.0
     alternates:
     - name: Tyrfing
-      pick_rate: 0.27
-      win_rate: 0.25
+      pick_rate: 0.31
+      win_rate: 0.2
     - name: Daybreak Gavel
       pick_rate: 0.13
       win_rate: 0.0
   - name: The World Stone
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 1.0
     alternates:
+    - name: Odysseus' Bow
+      pick_rate: 0.19
+      win_rate: 0.0
     - name: Vital Amplifier
       pick_rate: 0.13
       win_rate: 0.5
-    - name: Odysseus' Bow
-      pick_rate: 0.13
-      win_rate: 0.0
   - name: Rod of Tahuti
-    pick_rate: 0.27
+    pick_rate: 0.25
     win_rate: 1.0
     alternates:
     - name: Cursed Sickle
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 1.0
     - name: Vital Amplifier
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.0
-  - name: Void Shard
-    pick_rate: 0.13
-    win_rate: 1.0
+  - name: The Executioner
+    pick_rate: 0.19
+    win_rate: 0.0
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.27
+      pick_rate: 0.25
       win_rate: 0.25
-    - name: The Executioner
+    - name: Void Shard
       pick_rate: 0.13
-      win_rate: 0.0
+      win_rate: 1.0
   - name: Hunter's Bow
     pick_rate: 0.21
     win_rate: 0.33
@@ -70,23 +70,23 @@ builds:
       win_rate: 0.0
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.27
+    pick_rate: 0.25
     win_rate: 0.0
   - name: Archmage's Gem
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 1.0
   - name: Pendulum of the Ages
-    pick_rate: 0.2
+    pick_rate: 0.19
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/sol/
-  last_verified: '2026-09-09'
-  god_win_rate: 0.4
+  last_verified: '2026-09-10'
+  god_win_rate: 0.375
   god_matches_won: 6
-  god_matches_played: 15
+  god_matches_played: 16
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-09'
-  god_matches_analyzed: 921
+  god_window_end: '2026-09-10'
+  god_matches_analyzed: 1308
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -138,19 +138,19 @@ builds:
       total: 0.75
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.58
     The World Stone:
       total: 0.71
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.46
     Rod of Tahuti:
       total: 0.84
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.46
     Dreamer's Idol:
       total: 0.71
@@ -208,7 +208,7 @@ builds:
       total: 0.73
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.45
     Doom Orb:
       total: 0.43
@@ -220,13 +220,13 @@ builds:
       total: 0.71
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.42
     Rod of Tahuti:
       total: 0.83
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.42
     Dreamer's Idol:
       total: 0.69
@@ -288,19 +288,19 @@ builds:
       total: 0.75
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.56
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.4
     Rod of Tahuti:
       total: 0.83
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.4
     Dreamer's Idol:
       total: 0.7
@@ -357,19 +357,19 @@ builds:
       total: 0.72
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.36
     The World Stone:
       total: 0.69
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.28
     Rod of Tahuti:
       total: 0.81
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.28
     Dreamer's Idol:
       total: 0.68
@@ -432,7 +432,7 @@ builds:
       total: 0.77
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.66
     Spear of the Magus:
       total: 0.48
@@ -444,13 +444,13 @@ builds:
       total: 0.73
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.56
     Rod of Tahuti:
       total: 0.85
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.56
     Dreamer's Idol:
       total: 0.73
@@ -518,19 +518,19 @@ builds:
       total: 0.73
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.39
     Rod of Tahuti:
       total: 0.82
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.31
     The World Stone:
       total: 0.69
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.31
   community_ordered:
   - Spear of Desolation
@@ -580,19 +580,19 @@ builds:
       total: 0.76
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.6
     The World Stone:
       total: 0.68
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.26
     Rod of Tahuti:
       total: 0.81
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.26
     Dreamer's Idol:
       total: 0.68
@@ -663,19 +663,19 @@ builds:
       total: 0.74
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.49
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.39
     Rod of Tahuti:
       total: 0.83
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.39
     Dreamer's Idol:
       total: 0.7
@@ -740,19 +740,19 @@ builds:
       total: 0.74
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.48
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.27
+      pick: 0.26
       fit: 0.38
     Rod of Tahuti:
       total: 0.83
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.38
     Dreamer's Idol:
       total: 0.7
@@ -815,13 +815,13 @@ builds:
       total: 0.75
       efficiency: 0.57
       win: 1.0
-      pick: 0.33
+      pick: 0.31
       fit: 0.58
     Rod of Tahuti:
       total: 0.84
       efficiency: 0.86
       win: 1.0
-      pick: 0.42
+      pick: 0.39
       fit: 0.46
     Spear of the Magus:
       total: 0.47

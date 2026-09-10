@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.13
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/baron-samedi/
-  last_verified: '2026-09-09'
+  last_verified: '2026-09-10'
   god_win_rate: 0.4166666666666667
   god_matches_won: 20
   god_matches_played: 48
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-09'
-  god_matches_analyzed: 921
+  god_window_end: '2026-09-10'
+  god_matches_analyzed: 1308
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem

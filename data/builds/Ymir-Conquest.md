@@ -9,57 +9,57 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.19
+    pick_rate: 0.16
     win_rate: 0.5
     alternates:
     - name: Circe's Hexstone
-      pick_rate: 0.13
-      win_rate: 1.0
+      pick_rate: 0.14
+      win_rate: 0.8
     - name: Golden Blade
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.67
-  - name: Erosion
-    pick_rate: 0.16
-    win_rate: 1.0
+  - name: Stampede
+    pick_rate: 0.19
+    win_rate: 0.29
     alternates:
-    - name: Stampede
+    - name: Erosion
       pick_rate: 0.16
-      win_rate: 0.4
+      win_rate: 0.83
     - name: Freya's Tears
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 1.0
   - name: Stygian Anchor
     pick_rate: 0.19
-    win_rate: 1.0
+    win_rate: 0.86
     alternates:
+    - name: Genji's Guard
+      pick_rate: 0.17
+      win_rate: 0.67
     - name: Shell of Rebuke
-      pick_rate: 0.16
-      win_rate: 0.4
-    - name: Shogun's Ofuda
-      pick_rate: 0.16
+      pick_rate: 0.14
       win_rate: 0.4
   - name: Genji's Guard
-    pick_rate: 0.19
-    win_rate: 0.83
+    pick_rate: 0.22
+    win_rate: 0.75
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.13
+      pick_rate: 0.11
       win_rate: 0.25
     - name: Spectral Armor
-      pick_rate: 0.1
+      pick_rate: 0.08
       win_rate: 0.67
   - name: Spirit Robe
-    pick_rate: 0.15
+    pick_rate: 0.13
     win_rate: 0.75
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.67
     - name: Hide of the Nemean Lion
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.33
   - name: Draconic Scale
-    pick_rate: 0.13
+    pick_rate: 0.11
     win_rate: 0.5
     alternates:
     - name: Mana Tome
@@ -69,24 +69,24 @@ builds:
       pick_rate: 0.06
       win_rate: 0.0
   community_starters:
-  - name: War Banner
-    pick_rate: 0.16
-    win_rate: 0.8
   - name: Heroism
-    pick_rate: 0.13
-    win_rate: 0.5
+    pick_rate: 0.14
+    win_rate: 0.4
+  - name: War Banner
+    pick_rate: 0.14
+    win_rate: 0.8
   - name: War Flag
-    pick_rate: 0.13
-    win_rate: 0.75
+    pick_rate: 0.14
+    win_rate: 0.6
   source_url: https://smitebrain.com/gods/ymir/
-  last_verified: '2026-09-09'
-  god_win_rate: 0.5625
-  god_matches_won: 18
-  god_matches_played: 32
+  last_verified: '2026-09-10'
+  god_win_rate: 0.5405405405405406
+  god_matches_won: 20
+  god_matches_played: 37
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-09'
-  god_matches_analyzed: 921
+  god_window_end: '2026-09-10'
+  god_matches_analyzed: 1308
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -95,56 +95,56 @@ builds:
   slot_order:
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
+  - Kinetic Cuirass
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Amanita Charm
   - Spectral Armor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Circe's Hexstone — CC-immunity / cleanse
+    swap_item: Circe's Hexstone
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Shifter''s Shield, Rod of Tahuti, Breastplate
-    of Valor, Eye of Providence, Shield of the Phoenix, Stone of Binding, Magi''s
-    Cloak, Helm of Radiance, Mantle Of Discord, Midgardian Mail, Screeching Gargoyle,
-    Prophetic Cloak, Leviathan''s Hide, Void Shield, Helm of Darkness, Ancile, Oni
-    Hunter''s Garb, Xibalban Effigy, Hussar''s Wings, Void Stone.'
+    this god: Amanita Charm, Spectral Armor, Kinetic Cuirass, Shifter''s Shield, Rod
+    of Tahuti, Breastplate of Valor, Eye of Providence, Shield of the Phoenix, Stone
+    of Binding, Magi''s Cloak, Helm of Radiance, Mantle Of Discord, Midgardian Mail,
+    Screeching Gargoyle, Prophetic Cloak, Leviathan''s Hide, Void Shield, Helm of
+    Darkness, Ancile, Oni Hunter''s Garb, Xibalban Effigy, Hussar''s Wings, Void Stone.'
   slot_scores:
     Stygian Anchor:
-      total: 0.7
+      total: 0.64
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.51
     Genji's Guard:
-      total: 0.68
+      total: 0.64
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.39
-    Circe's Hexstone:
-      total: 0.59
-      efficiency: 0.23
-      win: 1.0
-      pick: 0.13
-      fit: 0.33
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Spectral Armor:
       total: 0.55
       efficiency: 0.5
       win: 0.67
-      pick: 0.17
+      pick: 0.13
       fit: 0.46
     Amanita Charm:
       total: 0.56
@@ -153,15 +153,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Erosion:
-      total: 0.75
+      total: 0.67
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.72
   community_ordered:
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
   - Spectral Armor
   - Erosion
   starter: &id001
@@ -172,23 +171,23 @@ builds:
   slot_order:
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
   - Spirit Robe
+  - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Circe's Hexstone
   - Spirit Robe
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Circe's Hexstone — CC-immunity / cleanse
+    swap_item: Circe's Hexstone
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -200,29 +199,29 @@ builds:
     Hide, Void Shield, Magi''s Cloak, Ancile, Oni Hunter''s Garb.'
   slot_scores:
     Stygian Anchor:
-      total: 0.69
+      total: 0.62
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.43
     Genji's Guard:
-      total: 0.67
+      total: 0.64
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.35
-    Circe's Hexstone:
-      total: 0.6
-      efficiency: 0.23
-      win: 1.0
-      pick: 0.13
-      fit: 0.41
     Spirit Robe:
       total: 0.58
       efficiency: 0.34
       win: 0.75
-      pick: 0.32
+      pick: 0.28
       fit: 0.73
+    Spectral Armor:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.67
+      pick: 0.13
+      fit: 0.49
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
@@ -230,40 +229,40 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.75
+      total: 0.67
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.7
   community_ordered:
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
   - Spirit Robe
+  - Spectral Armor
   - Erosion
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
   - Spectral Armor
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spectral Armor
   - Amanita Charm
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Circe's Hexstone — CC-immunity / cleanse
+    swap_item: Circe's Hexstone
   - vs_tag: magic_heavy
     swap: Spirit Robe — magical protection
     swap_item: Spirit Robe
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -275,29 +274,29 @@ builds:
     The World Stone, Magi''s Cloak, Dreamer''s Idol, Mantle Of Discord, Midgardian
     Mail, Rod of Asclepius.'
   slot_scores:
+    Stone of Binding:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Stygian Anchor:
-      total: 0.67
+      total: 0.61
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.34
     Genji's Guard:
-      total: 0.66
+      total: 0.62
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.25
-    Circe's Hexstone:
-      total: 0.57
-      efficiency: 0.23
-      win: 1.0
-      pick: 0.13
-      fit: 0.22
     Spectral Armor:
       total: 0.53
       efficiency: 0.5
       win: 0.67
-      pick: 0.17
+      pick: 0.13
       fit: 0.31
     Amanita Charm:
       total: 0.53
@@ -306,15 +305,14 @@ builds:
       pick: 0.0
       fit: 0.48
     Erosion:
-      total: 0.71
+      total: 0.64
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.48
   community_ordered:
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
   - Spectral Armor
   - Erosion
   starter: *id001
@@ -351,16 +349,16 @@ builds:
     Grimoire, Bracer of The Abyss, Leviathan''s Hide, Void Shield, Ancile.'
   slot_scores:
     Stygian Anchor:
-      total: 0.66
+      total: 0.6
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.27
     Genji's Guard:
-      total: 0.65
+      total: 0.62
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.2
     Bracer of The Abyss:
       total: 0.44
@@ -381,9 +379,9 @@ builds:
       pick: 0.0
       fit: 0.45
     Erosion:
-      total: 0.7
+      total: 0.62
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.38
   community_ordered:
@@ -402,7 +400,7 @@ builds:
   - Erosion
   flex_slots:
   - Spectral Armor
-  - Breastplate of Valor
+  - Circe's Hexstone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -425,16 +423,16 @@ builds:
     Glorious Pridwen, Midgardian Mail, Daybreak Gavel, Chandra''s Grace.'
   slot_scores:
     Stygian Anchor:
-      total: 0.67
+      total: 0.61
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.32
     Genji's Guard:
-      total: 0.69
+      total: 0.66
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.48
     Breastplate of Valor:
       total: 0.53
@@ -443,21 +441,21 @@ builds:
       pick: 0.0
       fit: 0.48
     Circe's Hexstone:
-      total: 0.6
+      total: 0.51
       efficiency: 0.23
-      win: 1.0
-      pick: 0.13
+      win: 0.8
+      pick: 0.14
       fit: 0.45
     Spectral Armor:
-      total: 0.53
+      total: 0.52
       efficiency: 0.5
       win: 0.67
-      pick: 0.17
+      pick: 0.13
       fit: 0.29
     Erosion:
-      total: 0.71
+      total: 0.63
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.45
   community_ordered:
@@ -474,21 +472,21 @@ builds:
   - Stygian Anchor
   - Genji's Guard
   - Jotunn's Revenge
-  - Circe's Hexstone
+  - Spectral Armor
   - Erosion
   flex_slots:
-  - Circe's Hexstone
   - Jotunn's Revenge
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Circe's Hexstone — CC-immunity / cleanse
+    swap_item: Circe's Hexstone
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -500,25 +498,26 @@ builds:
     Spear of the Magus, Tekko-Kagi, Eye of Providence, Avenging Blade, Helm of Radiance,
     Stone of Binding, Shield of the Phoenix, Soul Gem, Titan''s Bane, Obsidian Shard,
     Silverbranch Bow, The Crusher, Pharaoh''s Curse, Magi''s Cloak, Toxic Blade, Nimble
-    Ring, The Reaper, Screeching Gargoyle, Mantle Of Discord, Midgardian Mail.'
+    Ring, The Reaper, Shogun''s Ofuda, Screeching Gargoyle, Mantle Of Discord, Midgardian
+    Mail.'
   slot_scores:
     Golden Blade:
       total: 0.57
       efficiency: 0.52
       win: 0.67
-      pick: 0.09
+      pick: 0.08
       fit: 0.53
     Stygian Anchor:
-      total: 0.67
+      total: 0.6
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.3
     Genji's Guard:
-      total: 0.65
+      total: 0.62
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.22
     Jotunn's Revenge:
       total: 0.54
@@ -526,23 +525,23 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Circe's Hexstone:
-      total: 0.57
-      efficiency: 0.23
-      win: 1.0
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.67
       pick: 0.13
-      fit: 0.19
+      fit: 0.27
     Erosion:
-      total: 0.7
+      total: 0.63
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.42
   community_ordered:
   - Golden Blade
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
+  - Spectral Armor
   - Erosion
   starter: *id001
 - source: suggested
@@ -552,21 +551,21 @@ builds:
   - Stygian Anchor
   - Genji's Guard
   - Jotunn's Revenge
-  - Circe's Hexstone
+  - Spectral Armor
   - Erosion
   flex_slots:
-  - Golden Blade
   - Jotunn's Revenge
+  - Spectral Armor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Circe's Hexstone — CC-immunity / cleanse
+    swap_item: Circe's Hexstone
   - vs_tag: magic_heavy
-    swap: Spirit Robe — magical protection
-    swap_item: Spirit Robe
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Spirit Robe — physical protection
+    swap_item: Spirit Robe
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -585,19 +584,19 @@ builds:
       total: 0.55
       efficiency: 0.52
       win: 0.67
-      pick: 0.09
+      pick: 0.08
       fit: 0.42
     Stygian Anchor:
-      total: 0.66
+      total: 0.6
       efficiency: 0.45
-      win: 1.0
+      win: 0.86
       pick: 0.3
       fit: 0.29
     Genji's Guard:
-      total: 0.65
+      total: 0.62
       efficiency: 0.66
-      win: 0.83
-      pick: 0.32
+      win: 0.75
+      pick: 0.37
       fit: 0.22
     Jotunn's Revenge:
       total: 0.53
@@ -605,30 +604,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Circe's Hexstone:
-      total: 0.57
-      efficiency: 0.23
-      win: 1.0
+    Spectral Armor:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.67
       pick: 0.13
-      fit: 0.19
+      fit: 0.26
     Erosion:
-      total: 0.7
+      total: 0.62
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.4
   community_ordered:
   - Golden Blade
   - Stygian Anchor
   - Genji's Guard
-  - Circe's Hexstone
+  - Spectral Armor
   - Erosion
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
@@ -654,25 +653,26 @@ builds:
     of Tahuti, Breastplate of Valor, Eye of Providence, Shield of the Phoenix, Stone
     of Binding, Magi''s Cloak, Helm of Radiance, Mantle Of Discord, Midgardian Mail,
     Screeching Gargoyle, Prophetic Cloak, Leviathan''s Hide, Void Shield, Helm of
-    Darkness, Ancile, Oni Hunter''s Garb, Xibalban Effigy, Hussar''s Wings, Void Stone.'
+    Darkness, Ancile, Oni Hunter''s Garb, Xibalban Effigy, Hussar''s Wings, Void Stone,
+    Spectral Armor.'
   slot_scores:
-    Genji's Guard:
-      total: 0.68
-      efficiency: 0.66
-      win: 0.83
-      pick: 0.32
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Genji's Guard:
+      total: 0.64
+      efficiency: 0.66
+      win: 0.75
+      pick: 0.37
+      fit: 0.39
     Freya's Tears:
       total: 0.43
       efficiency: 0.61
       win: 0.25
-      pick: 0.22
+      pick: 0.18
       fit: 0.64
     Shifter's Shield:
       total: 0.53
@@ -687,9 +687,9 @@ builds:
       pick: 0.0
       fit: 0.72
     Erosion:
-      total: 0.75
+      total: 0.67
       efficiency: 0.51
-      win: 1.0
+      win: 0.83
       pick: 0.22
       fit: 0.72
   community_ordered:
