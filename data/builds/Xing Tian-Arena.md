@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Genji's Guard
     removed: Void Stone
-    reason: Conquest community 78% win over 36 matches (vs 60% on this god), taking
+    reason: Conquest community 77% win over 58 matches (vs 60% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

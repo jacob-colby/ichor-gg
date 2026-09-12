@@ -590,4 +590,75 @@ builds:
       pick: 0.0
       fit: 0.54
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  flex_slots:
+  - Toxic Blade
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Tyrfing:
+      total: 0.46
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    The Reaper:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Demon Blade:
+      total: 0.54
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+  swaps:
+  - added: Tyrfing
+    removed: Heartseeker
+    reason: Conquest community 64% win over 76 matches (vs 52% on this god), taking
+      the model's weakest slot from Heartseeker
+  borrowed_from: Conquest
+  starter: *id001
 ---

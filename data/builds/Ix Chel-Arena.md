@@ -530,12 +530,12 @@ builds:
   slot_order:
   - Spear of Desolation
   - The World Stone
-  - Obsidian Shard
+  - Rod of Tahuti
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Obsidian Shard
+  - Spear of Desolation
   - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Obsidian Shard:
-      total: 0.5
-      efficiency: 0.54
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.36
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -592,15 +592,15 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Kinetic Cuirass
-    reason: Conquest community 68% win over 81 matches (vs 52% on this god), taking
+    reason: Conquest community 66% win over 112 matches (vs 53% on this god), taking
       the model's weakest slot from Kinetic Cuirass
-  - added: The World Stone
+  - added: Rod of Tahuti
     removed: Void Stone
-    reason: Conquest community 67% win over 75 matches (vs 52% on this god), taking
+    reason: Conquest community 65% win over 92 matches (vs 53% on this god), taking
       the model's weakest slot from Void Stone
-  - added: Obsidian Shard
+  - added: The World Stone
     removed: Void Shield
-    reason: Conquest community 69% win over 36 matches (vs 52% on this god), taking
+    reason: Conquest community 64% win over 116 matches (vs 53% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
