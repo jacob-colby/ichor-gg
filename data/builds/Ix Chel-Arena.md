@@ -528,9 +528,9 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Void Shield
   - Spear of Desolation
   - The World Stone
-  - Rod of Tahuti
   - Amanita Charm
   - Erosion
   - Stampede
@@ -553,6 +553,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Void Shield:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
@@ -562,12 +568,6 @@ builds:
     The World Stone:
       total: 0.44
       efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -592,16 +592,12 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Kinetic Cuirass
-    reason: Conquest community 66% win over 112 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 153 matches (vs 51% on this god), taking
       the model's weakest slot from Kinetic Cuirass
-  - added: Rod of Tahuti
-    removed: Void Stone
-    reason: Conquest community 65% win over 92 matches (vs 53% on this god), taking
-      the model's weakest slot from Void Stone
   - added: The World Stone
-    removed: Void Shield
-    reason: Conquest community 64% win over 116 matches (vs 53% on this god), taking
-      the model's weakest slot from Void Shield
+    removed: Void Stone
+    reason: Conquest community 60% win over 158 matches (vs 51% on this god), taking
+      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

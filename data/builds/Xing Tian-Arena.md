@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Void Shield
+  - Shell of Rebuke
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Genji's Guard
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Void Shield:
-      total: 0.66
-      efficiency: 0.47
+    Shell of Rebuke:
+      total: 0.4
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.51
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -592,8 +592,12 @@ builds:
   swaps:
   - added: Genji's Guard
     removed: Void Stone
-    reason: Conquest community 77% win over 58 matches (vs 60% on this god), taking
+    reason: Conquest community 72% win over 77 matches (vs 57% on this god), taking
       the model's weakest slot from Void Stone
+  - added: Shell of Rebuke
+    removed: Void Shield
+    reason: Conquest community 72% win over 60 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

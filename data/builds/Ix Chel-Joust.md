@@ -529,9 +529,9 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
+  - Freya's Tears
   - Spear of Desolation
   - The World Stone
-  - Rod of Tahuti
   - Amanita Charm
   - Erosion
   flex_slots:
@@ -559,6 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
@@ -568,12 +574,6 @@ builds:
     The World Stone:
       total: 0.44
       efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -592,16 +592,12 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Stygian Anchor
-    reason: Conquest community 66% win over 112 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 153 matches (vs 51% on this god), taking
       the model's weakest slot from Stygian Anchor
-  - added: Rod of Tahuti
-    removed: Void Shield
-    reason: Conquest community 65% win over 92 matches (vs 53% on this god), taking
-      the model's weakest slot from Void Shield
   - added: The World Stone
-    removed: Freya's Tears
-    reason: Conquest community 64% win over 116 matches (vs 53% on this god), taking
-      the model's weakest slot from Freya's Tears
+    removed: Void Shield
+    reason: Conquest community 60% win over 158 matches (vs 51% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---
