@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Genji's Guard
     removed: Stygian Anchor
-    reason: Conquest community 72% win over 77 matches (vs 57% on this god), taking
+    reason: Conquest community 68% win over 89 matches (vs 57% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Shell of Rebuke
     removed: Freya's Tears
-    reason: Conquest community 72% win over 60 matches (vs 57% on this god), taking
+    reason: Conquest community 69% win over 68 matches (vs 57% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

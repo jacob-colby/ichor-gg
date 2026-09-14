@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Prophetic Cloak
     removed: Stygian Anchor
-    reason: Conquest community 77% win over 31 matches (vs 52% on this god), taking
+    reason: Conquest community 73% win over 34 matches (vs 53% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

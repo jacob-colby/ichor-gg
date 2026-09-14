@@ -529,13 +529,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
   - The World Stone
+  - Obsidian Shard
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Spear of Desolation
+  - Obsidian Shard
   - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,12 +559,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
@@ -577,6 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -592,12 +592,16 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Stygian Anchor
-    reason: Conquest community 63% win over 153 matches (vs 51% on this god), taking
+    reason: Conquest community 61% win over 196 matches (vs 51% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: The World Stone
     removed: Void Shield
-    reason: Conquest community 60% win over 158 matches (vs 51% on this god), taking
+    reason: Conquest community 59% win over 209 matches (vs 51% on this god), taking
       the model's weakest slot from Void Shield
+  - added: Obsidian Shard
+    removed: Freya's Tears
+    reason: Conquest community 61% win over 91 matches (vs 51% on this god), taking
+      the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
 ---

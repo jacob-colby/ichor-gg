@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Genji's Guard
     removed: Void Stone
-    reason: Conquest community 72% win over 77 matches (vs 57% on this god), taking
+    reason: Conquest community 68% win over 89 matches (vs 57% on this god), taking
       the model's weakest slot from Void Stone
   - added: Shell of Rebuke
     removed: Void Shield
-    reason: Conquest community 72% win over 60 matches (vs 57% on this god), taking
+    reason: Conquest community 69% win over 68 matches (vs 57% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

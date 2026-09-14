@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Void Shield
   - Spear of Desolation
   - The World Stone
+  - Obsidian Shard
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spear of Desolation
+  - Obsidian Shard
   - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,12 +553,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Obsidian Shard:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -592,12 +592,16 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Kinetic Cuirass
-    reason: Conquest community 63% win over 153 matches (vs 51% on this god), taking
+    reason: Conquest community 61% win over 196 matches (vs 51% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   - added: The World Stone
     removed: Void Stone
-    reason: Conquest community 60% win over 158 matches (vs 51% on this god), taking
+    reason: Conquest community 59% win over 209 matches (vs 51% on this god), taking
       the model's weakest slot from Void Stone
+  - added: Obsidian Shard
+    removed: Void Shield
+    reason: Conquest community 61% win over 91 matches (vs 51% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

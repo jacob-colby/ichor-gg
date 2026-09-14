@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Bragi's Harp
-    reason: Conquest community 76% win over 54 matches (vs 54% on this god), taking
+    reason: Conquest community 73% win over 72 matches (vs 57% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001
