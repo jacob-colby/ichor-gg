@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
   - Shell of Rebuke
+  - Freya's Tears
   - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Genji's Guard
+  - Freya's Tears
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,12 +553,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.69
       efficiency: 0.56
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Freya's Tears:
+      total: 0.63
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Shifter's Shield:
       total: 0.63
       efficiency: 0.55
@@ -590,14 +590,10 @@ builds:
       pick: 0.0
       fit: 0.91
   swaps:
-  - added: Genji's Guard
-    removed: Stygian Anchor
-    reason: Conquest community 68% win over 89 matches (vs 57% on this god), taking
-      the model's weakest slot from Stygian Anchor
   - added: Shell of Rebuke
-    removed: Freya's Tears
-    reason: Conquest community 69% win over 68 matches (vs 57% on this god), taking
-      the model's weakest slot from Freya's Tears
+    removed: Stygian Anchor
+    reason: Conquest community 71% win over 86 matches (vs 57% on this god), taking
+      the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001
 ---

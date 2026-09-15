@@ -592,15 +592,15 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Stygian Anchor
-    reason: Conquest community 61% win over 196 matches (vs 51% on this god), taking
+    reason: Conquest community 59% win over 225 matches (vs 50% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: The World Stone
     removed: Void Shield
-    reason: Conquest community 59% win over 209 matches (vs 51% on this god), taking
+    reason: Conquest community 58% win over 232 matches (vs 50% on this god), taking
       the model's weakest slot from Void Shield
   - added: Obsidian Shard
     removed: Freya's Tears
-    reason: Conquest community 61% win over 91 matches (vs 51% on this god), taking
+    reason: Conquest community 60% win over 116 matches (vs 50% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

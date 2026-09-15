@@ -6,21 +6,21 @@ builds:
 - source: community
   aspect: Aspect of Unbound Destruction
   aspect_pick_rate: 0.44
-  aspect_win_rate: 0.56
+  aspect_win_rate: 0.54
   slot_order:
   - name: Tyrfing
     pick_rate: 0.6
     win_rate: 0.54
     alternates:
-    - name: Book of Thoth
-      pick_rate: 0.07
-      win_rate: 0.67
     - name: Daybreak Gavel
       pick_rate: 0.06
-      win_rate: 0.73
+      win_rate: 0.77
+    - name: Book of Thoth
+      pick_rate: 0.06
+      win_rate: 0.62
   - name: Hastened Fatalis
-    pick_rate: 0.38
-    win_rate: 0.56
+    pick_rate: 0.39
+    win_rate: 0.53
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.16
@@ -29,64 +29,64 @@ builds:
       pick_rate: 0.04
       win_rate: 0.5
   - name: Odysseus' Bow
-    pick_rate: 0.3
-    win_rate: 0.55
+    pick_rate: 0.32
+    win_rate: 0.54
     alternates:
     - name: Hastened Fatalis
-      pick_rate: 0.19
-      win_rate: 0.48
+      pick_rate: 0.18
+      win_rate: 0.49
     - name: Riptalon
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.43
   - name: The Executioner
-    pick_rate: 0.22
-    win_rate: 0.54
+    pick_rate: 0.24
+    win_rate: 0.53
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.15
-      win_rate: 0.65
+      win_rate: 0.57
     - name: Odysseus' Bow
-      pick_rate: 0.1
-      win_rate: 0.65
+      pick_rate: 0.09
+      win_rate: 0.67
   - name: Silverbranch Bow
-    pick_rate: 0.25
-    win_rate: 0.67
+    pick_rate: 0.24
+    win_rate: 0.69
     alternates:
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.67
+      win_rate: 0.63
     - name: Manchu Bow
-      pick_rate: 0.09
-      win_rate: 0.36
-  - name: Manchu Bow
+      pick_rate: 0.08
+      win_rate: 0.4
+  - name: Qin's Blade
     pick_rate: 0.13
-    win_rate: 0.44
+    win_rate: 0.63
     alternates:
-    - name: Qin's Blade
-      pick_rate: 0.13
-      win_rate: 0.75
+    - name: Manchu Bow
+      pick_rate: 0.12
+      win_rate: 0.41
     - name: Silverbranch Bow
-      pick_rate: 0.1
-      win_rate: 0.67
+      pick_rate: 0.09
+      win_rate: 0.69
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.32
-    win_rate: 0.72
+    win_rate: 0.7
   - name: Leather Cowl
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.25
   - name: Death's Embrace
-    pick_rate: 0.16
-    win_rate: 0.66
+    pick_rate: 0.15
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/kali/
-  last_verified: '2026-09-14'
-  god_win_rate: 0.5659340659340659
-  god_matches_won: 103
-  god_matches_played: 182
+  last_verified: '2026-09-15'
+  god_win_rate: 0.5402843601895735
+  god_matches_won: 114
+  god_matches_played: 211
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-14'
-  god_matches_analyzed: 6946
+  god_window_end: '2026-09-15'
+  god_matches_analyzed: 8017
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - Daybreak Gavel
   - Death Metal
   - Riptalon
-  - Qin's Blade
   - Silverbranch Bow
   flex_slots:
-  - Tyrfing
   - Death Metal
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -126,9 +126,9 @@ builds:
     Berserker''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.49
     Tyrfing:
@@ -137,34 +137,34 @@ builds:
       win: 0.54
       pick: 0.6
       fit: 0.68
+    Daybreak Gavel:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.77
+      pick: 0.06
+      fit: 0.0
     Death Metal:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Riptalon:
-      total: 0.55
+      total: 0.53
       efficiency: 0.46
-      win: 0.67
+      win: 0.63
       pick: 0.19
       fit: 0.53
-    Qin's Blade:
-      total: 0.57
-      efficiency: 0.37
-      win: 0.75
-      pick: 0.4
-      fit: 0.54
     Silverbranch Bow:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.67
-      pick: 0.54
+      win: 0.69
+      pick: 0.52
       fit: 0.53
   community_ordered:
   - Tyrfing
+  - Daybreak Gavel
   - Riptalon
-  - Qin's Blade
   - Silverbranch Bow
   starter: &id001
     base: Bumba's Golden Dagger
@@ -174,13 +174,13 @@ builds:
   slot_order:
   - Book of Thoth
   - Jotunn's Revenge
-  - Death Metal
-  - Qin's Blade
+  - Transcendence
+  - Hydra's Lament
   - Silverbranch Bow
   - Rod of Tahuti
   flex_slots:
-  - Death Metal
   - Book of Thoth
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -195,8 +195,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
-    of Tahuti, Jotunn''s Revenge, Death Metal, Book of Thoth, Spear of Desolation,
-    Hydra''s Lament, Nimble Ring, Soul Gem, Spear of the Magus, Obsidian Shard, Heartseeker,
+    of Tahuti, Jotunn''s Revenge, Death Metal, Spear of Desolation, Hydra''s Lament,
+    Nimble Ring, Soul Gem, Spear of the Magus, Book of Thoth, Obsidian Shard, Heartseeker,
     Bragi''s Harp, Lernaean Bow, Doom Orb, Tekko-Kagi, Gluttonous Grimoire, Ancient
     Signet, The World Stone, Chronos'' Pendant, Dominance, Bracer of The Abyss, Titan''s
     Bane, The Crusher, Dreamer''s Idol, Transcendence, Deathbringer, Golden Blade,
@@ -205,58 +205,57 @@ builds:
     Demon Blade, Polynomicon.'
   slot_scores:
     Book of Thoth:
-      total: 0.53
+      total: 0.5
       efficiency: 0.51
-      win: 0.67
-      pick: 0.07
+      win: 0.62
+      pick: 0.06
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.52
-    Death Metal:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.56
-      pick: 0.0
-      fit: 0.54
-    Qin's Blade:
-      total: 0.55
-      efficiency: 0.37
-      win: 0.75
-      pick: 0.4
-      fit: 0.4
-    Silverbranch Bow:
-      total: 0.56
+    Transcendence:
+      total: 0.47
       efficiency: 0.53
-      win: 0.67
-      pick: 0.54
+      win: 0.54
+      pick: 0.0
+      fit: 0.28
+    Hydra's Lament:
+      total: 0.51
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
+    Silverbranch Bow:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.69
+      pick: 0.52
       fit: 0.34
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.42
   community_ordered:
   - Book of Thoth
-  - Qin's Blade
   - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Jotunn's Revenge
   - Daybreak Gavel
   - Riptalon
-  - Qin's Blade
   - Silverbranch Bow
   - Amanita Charm
   flex_slots:
   - Berserker's Shield
-  - Qin's Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -271,7 +270,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Rod of Tahuti, Daybreak Gavel, Berserker''s Shield, Jotunn''s
+    this god: Daybreak Gavel, Amanita Charm, Rod of Tahuti, Berserker''s Shield, Jotunn''s
     Revenge, Shield of the Phoenix, Rod of Asclepius, Kinetic Cuirass, Soul Gem, Death
     Metal, The Reaper, Runeforged Hammer, Golden Blade, Freya''s Tears, Gluttonous
     Grimoire, Genji''s Guard, Shifter''s Shield, Shield Splitter, Breastplate of Valor,
@@ -281,59 +280,58 @@ builds:
     Blade, Avenging Blade, Helm of Radiance, Hydra''s Lament, Chandra''s Grace.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.68
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.42
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.54
+      pick: 0.0
+      fit: 0.3
     Daybreak Gavel:
-      total: 0.56
+      total: 0.58
       efficiency: 0.59
-      win: 0.73
+      win: 0.77
       pick: 0.06
       fit: 0.15
     Riptalon:
-      total: 0.57
+      total: 0.55
       efficiency: 0.46
-      win: 0.67
+      win: 0.63
       pick: 0.19
       fit: 0.62
-    Qin's Blade:
-      total: 0.55
-      efficiency: 0.37
-      win: 0.75
-      pick: 0.4
-      fit: 0.4
     Silverbranch Bow:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.67
-      pick: 0.54
+      win: 0.69
+      pick: 0.52
       fit: 0.32
     Amanita Charm:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.69
   community_ordered:
   - Daybreak Gavel
   - Riptalon
-  - Qin's Blade
   - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
+  - Daybreak Gavel
   - Riptalon
-  - Qin's Blade
-  - Tekko-Kagi
   - Silverbranch Bow
-  - Heartseeker
+  - Tekko-Kagi
   flex_slots:
   - Tekko-Kagi
-  - Heartseeker
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,58 +356,59 @@ builds:
     Ancient Signet, Chronos'' Pendant, Damaru.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.61
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.54
+      pick: 0.6
+      fit: 0.55
+    Daybreak Gavel:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.77
+      pick: 0.06
+      fit: 0.0
     Riptalon:
-      total: 0.57
+      total: 0.55
       efficiency: 0.46
-      win: 0.67
+      win: 0.63
       pick: 0.19
       fit: 0.64
-    Qin's Blade:
-      total: 0.56
-      efficiency: 0.37
-      win: 0.75
-      pick: 0.4
-      fit: 0.46
+    Silverbranch Bow:
+      total: 0.62
+      efficiency: 0.53
+      win: 0.69
+      pick: 0.52
+      fit: 0.64
     Tekko-Kagi:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.76
-    Silverbranch Bow:
-      total: 0.61
-      efficiency: 0.53
-      win: 0.67
-      pick: 0.54
-      fit: 0.64
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.56
-      pick: 0.0
-      fit: 0.77
   community_ordered:
+  - Tyrfing
+  - Daybreak Gavel
   - Riptalon
-  - Qin's Blade
   - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Book of Thoth
-  - Tyrfing
   - Jotunn's Revenge
+  - Tyrfing
+  - Daybreak Gavel
   - Riptalon
   - Qin's Blade
   - Silverbranch Bow
   flex_slots:
-  - Tyrfing
-  - Book of Thoth
+  - Daybreak Gavel
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -433,45 +432,45 @@ builds:
     Swords, Chronos'' Pendant, Runeforged Hammer, Arondight, Berserker''s Shield,
     Avatar''s Parashu, Bancroft''s Talon, Pendulum Blade.'
   slot_scores:
-    Book of Thoth:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.67
-      pick: 0.07
-      fit: 0.04
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.54
+      pick: 0.0
+      fit: 0.31
     Tyrfing:
       total: 0.54
       efficiency: 0.48
       win: 0.54
       pick: 0.6
       fit: 0.67
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.56
-      pick: 0.0
-      fit: 0.31
-    Riptalon:
-      total: 0.59
+    Daybreak Gavel:
+      total: 0.53
       efficiency: 0.51
-      win: 0.67
+      win: 0.77
+      pick: 0.06
+      fit: 0.0
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.63
       pick: 0.19
       fit: 0.65
     Qin's Blade:
-      total: 0.58
+      total: 0.53
       efficiency: 0.37
-      win: 0.75
+      win: 0.63
       pick: 0.4
       fit: 0.63
     Silverbranch Bow:
-      total: 0.6
+      total: 0.61
       efficiency: 0.53
-      win: 0.67
-      pick: 0.54
+      win: 0.69
+      pick: 0.52
       fit: 0.57
   community_ordered:
-  - Book of Thoth
   - Tyrfing
+  - Daybreak Gavel
   - Riptalon
   - Qin's Blade
   - Silverbranch Bow
@@ -480,13 +479,13 @@ builds:
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
+  - Daybreak Gavel
   - Spear of Desolation
-  - Qin's Blade
   - Rod of Tahuti
   - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Daybreak Gavel
   - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
@@ -512,43 +511,43 @@ builds:
     Musashi''s Dual Swords, Runeforged Hammer, Demon Blade, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.59
+    Daybreak Gavel:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.77
+      pick: 0.06
+      fit: 0.0
     Spear of Desolation:
-      total: 0.54
+      total: 0.53
       efficiency: 0.57
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.59
-    Qin's Blade:
-      total: 0.55
-      efficiency: 0.37
-      win: 0.75
-      pick: 0.4
-      fit: 0.43
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.24
     Silverbranch Bow:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.67
-      pick: 0.54
+      win: 0.69
+      pick: 0.52
       fit: 0.37
     Soul Gem:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.69
   community_ordered:
-  - Qin's Blade
+  - Daybreak Gavel
   - Silverbranch Bow
   starter: *id001
 - source: suggested
@@ -587,9 +586,9 @@ builds:
     Blade, Berserker''s Shield.'
   slot_scores:
     Lernaean Bow:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.59
     Tyrfing:
@@ -599,30 +598,110 @@ builds:
       pick: 0.6
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.49
     Death Metal:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Tekko-Kagi:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.69
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
-      win: 0.56
+      win: 0.54
       pick: 0.0
       fit: 0.26
   community_ordered:
   - Tyrfing
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Tyrfing
+  - Death Metal
+  - Tekko-Kagi
+  - Silverbranch Bow
+  - Rod of Tahuti
+  flex_slots:
+  - Tyrfing
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
+    Death Metal, Tekko-Kagi, Lernaean Bow, Heartseeker, Nimble Ring, Bragi''s Harp,
+    Golden Blade, Spear of the Magus, Hydra''s Lament, Titan''s Bane, Spear of Desolation,
+    The Crusher, Dominance, Obsidian Shard, Deathbringer, Soul Gem, The Reaper, Demon
+    Blade, Toxic Blade, Gluttonous Grimoire, Bracer of The Abyss, Musashi''s Dual
+    Swords, Avatar''s Parashu, Doom Orb, Pendulum Blade, Transcendence, The World
+    Stone, Arondight, Runeforged Hammer, Dreamer''s Idol, Damaru, Rage, Ancient Signet,
+    Chronos'' Pendant, Avenging Blade, Berserker''s Shield.'
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.72
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.54
+      pick: 0.6
+      fit: 0.68
+    Death Metal:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.0
+      fit: 0.51
+    Tekko-Kagi:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.54
+      pick: 0.0
+      fit: 0.69
+    Silverbranch Bow:
+      total: 0.6
+      efficiency: 0.53
+      win: 0.69
+      pick: 0.52
+      fit: 0.53
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.86
+      win: 0.54
+      pick: 0.0
+      fit: 0.26
+  community_ordered:
+  - Tyrfing
+  - Silverbranch Bow
+  swaps:
+  - added: Silverbranch Bow
+    removed: Lernaean Bow
+    reason: community 69% win over 51 matches (vs 54% on this god), taking the model's
+      weakest slot from Lernaean Bow
   starter: *id001
 ---

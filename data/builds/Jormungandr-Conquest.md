@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Unyielding
-  aspect_pick_rate: 0.26
+  aspect_pick_rate: 0.24
   aspect_win_rate: 0.5
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.4
-    win_rate: 0.61
+    pick_rate: 0.41
+    win_rate: 0.6
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.56
     - name: Eye of Erebus
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.58
   - name: Sun Beam Bow
-    pick_rate: 0.16
+    pick_rate: 0.15
     win_rate: 0.6
     alternates:
     - name: Ethereal Staff
-      pick_rate: 0.14
+      pick_rate: 0.15
       win_rate: 0.67
     - name: Gladiator's Shield
       pick_rate: 0.12
-      win_rate: 0.5
+      win_rate: 0.52
   - name: Ethereal Staff
-    pick_rate: 0.16
-    win_rate: 0.43
+    pick_rate: 0.17
+    win_rate: 0.45
     alternates:
-    - name: Soul Reaver
-      pick_rate: 0.09
-      win_rate: 0.56
     - name: Gladiator's Shield
+      pick_rate: 0.1
+      win_rate: 0.58
+    - name: Soul Reaver
       pick_rate: 0.08
-      win_rate: 0.71
+      win_rate: 0.56
   - name: Freya's Tears
     pick_rate: 0.15
-    win_rate: 0.44
+    win_rate: 0.45
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.69
     - name: Soul Reaver
       pick_rate: 0.07
-      win_rate: 0.69
+      win_rate: 0.71
   - name: Shell of Rebuke
     pick_rate: 0.11
-    win_rate: 0.67
+    win_rate: 0.68
     alternates:
     - name: Soul Reaver
-      pick_rate: 0.09
-      win_rate: 0.47
+      pick_rate: 0.11
+      win_rate: 0.53
     - name: Hide of the Nemean Lion
       pick_rate: 0.05
       win_rate: 0.56
   - name: Medal of Defense
     pick_rate: 0.06
-    win_rate: 0.14
+    win_rate: 0.13
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.06
-      win_rate: 0.43
+      win_rate: 0.38
     - name: Freya's Tears
       pick_rate: 0.05
       win_rate: 0.5
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.41
-    win_rate: 0.5
+    pick_rate: 0.43
+    win_rate: 0.49
   - name: Bluestone Pendant
     pick_rate: 0.19
-    win_rate: 0.67
+    win_rate: 0.68
   - name: Death's Embrace
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.46
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-09-14'
-  god_win_rate: 0.5614973262032086
-  god_matches_won: 105
-  god_matches_played: 187
+  last_verified: '2026-09-15'
+  god_win_rate: 0.5577889447236181
+  god_matches_won: 111
+  god_matches_played: 199
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-14'
-  god_matches_analyzed: 6946
+  god_window_end: '2026-09-15'
+  god_matches_analyzed: 8017
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -145,10 +145,10 @@ builds:
       pick: 0.0
       fit: 0.58
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.48
     Shield Splitter:
       total: 0.52
@@ -221,10 +221,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Shifter's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.46
     Shield of the Phoenix:
       total: 0.54
@@ -297,8 +297,8 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.37
     Jotunn's Revenge:
       total: 0.57
@@ -372,8 +372,8 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.37
     Nimble Ring:
       total: 0.52
@@ -400,7 +400,7 @@ builds:
   - Jotunn's Revenge
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
+  - Shifter's Shield
   - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -421,10 +421,10 @@ builds:
     Cuirass, Shield of the Phoenix, Spear of Desolation, Hydra''s Lament, Screeching
     Gargoyle, Soul Gem, Chronos'' Pendant, Shield Splitter, Nimble Ring, Runeforged
     Hammer, Helm of Radiance, Gluttonous Grimoire, Erosion, Prophetic Cloak, Pharaoh''s
-    Curse, Golden Blade, Eye of Providence, Stone of Binding, Draconic Scale, Shogun''s
-    Ofuda, Eye of the Storm, Arondight, Gem of Focus, Lernaean Bow, Spear of the Magus,
-    Magi''s Cloak, Rod of Asclepius, Eye of Erebus, Daybreak Gavel, Mantle Of Discord,
-    Obsidian Shard, Midgardian Mail, Tyrfing.'
+    Curse, Eye of Erebus, Golden Blade, Eye of Providence, Stone of Binding, Draconic
+    Scale, Shogun''s Ofuda, Eye of the Storm, Arondight, Gem of Focus, Lernaean Bow,
+    Spear of the Magus, Magi''s Cloak, Rod of Asclepius, Daybreak Gavel, Mantle Of
+    Discord, Obsidian Shard, Midgardian Mail, Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -445,10 +445,10 @@ builds:
       pick: 0.0
       fit: 0.41
     Shifter's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.39
     Jotunn's Revenge:
       total: 0.56
@@ -522,8 +522,8 @@ builds:
     Shifter's Shield:
       total: 0.55
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.42
     Shield Splitter:
       total: 0.52
@@ -597,8 +597,8 @@ builds:
     Shifter's Shield:
       total: 0.54
       efficiency: 0.55
-      win: 0.61
-      pick: 0.4
+      win: 0.6
+      pick: 0.41
       fit: 0.36
     Kinetic Cuirass:
       total: 0.52
@@ -678,7 +678,7 @@ builds:
     Freya's Tears:
       total: 0.49
       efficiency: 0.61
-      win: 0.44
+      win: 0.45
       pick: 0.25
       fit: 0.43
     Amanita Charm:

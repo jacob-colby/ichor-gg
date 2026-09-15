@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Heartseeker
-    reason: Conquest community 79% win over 61 matches (vs 54% on this god), taking
+    reason: Conquest community 77% win over 64 matches (vs 54% on this god), taking
       the model's weakest slot from Heartseeker
   borrowed_from: Conquest
   starter: *id001

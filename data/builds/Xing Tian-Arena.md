@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
   - Shell of Rebuke
+  - Void Shield
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Genji's Guard
+  - Void Shield
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,12 +553,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.69
       efficiency: 0.56
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Void Shield:
+      total: 0.66
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -590,14 +590,10 @@ builds:
       pick: 0.0
       fit: 0.86
   swaps:
-  - added: Genji's Guard
-    removed: Void Stone
-    reason: Conquest community 68% win over 89 matches (vs 57% on this god), taking
-      the model's weakest slot from Void Stone
   - added: Shell of Rebuke
-    removed: Void Shield
-    reason: Conquest community 69% win over 68 matches (vs 57% on this god), taking
-      the model's weakest slot from Void Shield
+    removed: Void Stone
+    reason: Conquest community 71% win over 86 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

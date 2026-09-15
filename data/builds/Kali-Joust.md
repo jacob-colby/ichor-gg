@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Death Metal
+  - Silverbranch Bow
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.64
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Death Metal:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Soul Gem:
+      total: 0.69
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: Silverbranch Bow
+    removed: Bragi's Harp
+    reason: Conquest community 69% win over 51 matches (vs 54% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
+  starter: *id001
 ---
