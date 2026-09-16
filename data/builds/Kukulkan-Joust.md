@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Polynomicon
     removed: Doom Orb
-    reason: Conquest community 73% win over 61 matches (vs 56% on this god), taking
+    reason: Conquest community 71% win over 73 matches (vs 56% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001

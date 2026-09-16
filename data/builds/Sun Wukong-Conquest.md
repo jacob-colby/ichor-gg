@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Transformation
-  aspect_pick_rate: 0.2
+  aspect_pick_rate: 0.22
   aspect_win_rate: 0.31
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.49
-    win_rate: 0.52
+    pick_rate: 0.47
+    win_rate: 0.49
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.1
-      win_rate: 0.54
+      pick_rate: 0.09
+      win_rate: 0.57
     - name: Chronos' Pendant
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Gladiator's Shield
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.54
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.44
     - name: Prophetic Cloak
-      pick_rate: 0.09
-      win_rate: 0.36
-  - name: Genji's Guard
-    pick_rate: 0.15
-    win_rate: 0.58
-    alternates:
-    - name: Freya's Tears
-      pick_rate: 0.13
-      win_rate: 0.29
-    - name: Gladiator's Shield
-      pick_rate: 0.09
-      win_rate: 0.73
-  - name: Rod of Tahuti
-    pick_rate: 0.1
-    win_rate: 0.58
+      pick_rate: 0.08
+      win_rate: 0.33
+  - name: Freya's Tears
+    pick_rate: 0.14
+    win_rate: 0.24
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
+      pick_rate: 0.13
       win_rate: 0.58
+    - name: Gladiator's Shield
+      pick_rate: 0.09
+      win_rate: 0.77
+  - name: Rod of Tahuti
+    pick_rate: 0.1
+    win_rate: 0.57
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.09
+      win_rate: 0.62
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.64
   - name: Obsidian Shard
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.38
     alternates:
-    - name: Brawler’s Beat Stick
-      pick_rate: 0.07
-      win_rate: 0.71
     - name: Shell of Rebuke
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.57
+    - name: Brawler’s Beat Stick
+      pick_rate: 0.06
+      win_rate: 0.71
   - name: Medal of Defense
-    pick_rate: 0.07
-    win_rate: 0.6
+    pick_rate: 0.08
+    win_rate: 0.5
     alternates:
     - name: Hide of the Nemean Lion
-      pick_rate: 0.07
-      win_rate: 0.4
+      pick_rate: 0.08
+      win_rate: 0.5
     - name: Freya's Tears
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.75
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.34
+    pick_rate: 0.32
     win_rate: 0.58
   - name: Bluestone Pendant
-    pick_rate: 0.28
-    win_rate: 0.46
+    pick_rate: 0.25
+    win_rate: 0.43
   - name: Archmage's Gem
-    pick_rate: 0.1
-    win_rate: 0.62
+    pick_rate: 0.11
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/sun-wukong/
-  last_verified: '2026-09-15'
-  god_win_rate: 0.4881889763779528
-  god_matches_won: 62
-  god_matches_played: 127
+  last_verified: '2026-09-16'
+  god_win_rate: 0.47297297297297297
+  god_matches_won: 70
+  god_matches_played: 148
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-15'
-  god_matches_analyzed: 8017
+  god_window_end: '2026-09-16'
+  god_matches_analyzed: 9166
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -107,14 +107,14 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
+  - vs_tag: physical_heavy
+    swap: Brawler’s Beat Stick — physical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Runeforged Hammer,
     Kinetic Cuirass, Shield Splitter, Eye of the Storm, Avenging Blade, Gluttonous
@@ -129,7 +129,7 @@ builds:
       total: 0.53
       efficiency: 0.66
       win: 0.58
-      pick: 0.23
+      pick: 0.2
       fit: 0.17
     Berserker's Shield:
       total: 0.55
@@ -183,11 +183,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Brawler’s Beat Stick — physical protection
+    swap: Brawler’s Beat Stick — magical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -205,7 +205,7 @@ builds:
       total: 0.53
       efficiency: 0.66
       win: 0.58
-      pick: 0.23
+      pick: 0.2
       fit: 0.2
     Berserker's Shield:
       total: 0.55
@@ -257,11 +257,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -276,10 +276,10 @@ builds:
     of Asclepius, Eye of Providence, Shield of the Phoenix.'
   slot_scores:
     Book of Thoth:
-      total: 0.43
+      total: 0.45
       efficiency: 0.51
-      win: 0.54
-      pick: 0.1
+      win: 0.57
+      pick: 0.09
       fit: 0.04
     Berserker's Shield:
       total: 0.53
@@ -306,9 +306,9 @@ builds:
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
-      win: 0.58
+      win: 0.57
       pick: 0.17
       fit: 0.39
   community_ordered:
@@ -332,11 +332,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Brawler’s Beat Stick — magical protection
-    swap_item: Brawler’s Beat Stick
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Brawler’s Beat Stick — physical protection
+    swap_item: Brawler’s Beat Stick
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -360,7 +360,7 @@ builds:
       total: 0.52
       efficiency: 0.66
       win: 0.58
-      pick: 0.23
+      pick: 0.2
       fit: 0.11
     Berserker's Shield:
       total: 0.55
@@ -395,12 +395,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
-  - Chronos' Pendant
   - Jotunn's Revenge
+  - Spear of Desolation
   - Amanita Charm
   flex_slots:
-  - Chronos' Pendant
   - Amanita Charm
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -416,8 +416,8 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Breastplate of
-    Valor, Berserker''s Shield, Chronos'' Pendant, Amanita Charm, Spear of Desolation,
-    Hydra''s Lament, Shield of the Phoenix, Soul Gem, Kinetic Cuirass, Screeching
+    Valor, Berserker''s Shield, Amanita Charm, Spear of Desolation, Hydra''s Lament,
+    Shield of the Phoenix, Chronos'' Pendant, Soul Gem, Kinetic Cuirass, Screeching
     Gargoyle, Gluttonous Grimoire, Runeforged Hammer, Gladiator''s Shield, Arondight,
     Gem of Focus, Nimble Ring, Eye of Erebus, Helm of Radiance, Rod of Asclepius,
     Shield Splitter, Spear of the Magus, Chandra''s Grace, Eye of the Storm, Daybreak
@@ -429,7 +429,7 @@ builds:
       total: 0.57
       efficiency: 0.66
       win: 0.58
-      pick: 0.23
+      pick: 0.2
       fit: 0.44
     Berserker's Shield:
       total: 0.53
@@ -443,15 +443,15 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
-    Chronos' Pendant:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.06
-      fit: 0.45
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.57
       win: 0.54
       pick: 0.0
       fit: 0.49
@@ -463,7 +463,6 @@ builds:
       fit: 0.31
   community_ordered:
   - Genji's Guard
-  - Chronos' Pendant
   starter: *id001
 - source: suggested
   archetype: model

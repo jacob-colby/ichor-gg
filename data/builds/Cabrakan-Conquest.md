@@ -5,7 +5,7 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Rotund Jotunn
-  aspect_pick_rate: 0.16
+  aspect_pick_rate: 0.15
   aspect_win_rate: 0.61
   slot_order:
   - name: Runeforged Hammer
@@ -13,28 +13,28 @@ builds:
     win_rate: 0.54
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.21
-      win_rate: 0.5
+      pick_rate: 0.2
+      win_rate: 0.48
     - name: Stampede
       pick_rate: 0.13
-      win_rate: 0.48
+      win_rate: 0.46
   - name: Genji's Guard
     pick_rate: 0.18
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.52
     - name: Shifter's Shield
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.42
   - name: Freya's Tears
-    pick_rate: 0.14
-    win_rate: 0.48
+    pick_rate: 0.13
+    win_rate: 0.45
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.19
-      win_rate: 0.55
+      pick_rate: 0.2
+      win_rate: 0.56
     - name: Omen Drum
       pick_rate: 0.05
       win_rate: 0.8
@@ -43,50 +43,50 @@ builds:
     win_rate: 0.5
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.67
-    - name: Genji's Guard
       pick_rate: 0.09
+      win_rate: 0.68
+    - name: Genji's Guard
+      pick_rate: 0.08
       win_rate: 0.71
   - name: Totem of Death
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.8
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.12
+      win_rate: 0.55
     - name: Freya's Tears
       pick_rate: 0.1
-      win_rate: 0.94
+      win_rate: 0.83
   - name: The Cosmic Horror
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.75
     alternates:
     - name: Sage's Ring
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.38
     - name: Veve Charm
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.86
   community_starters:
   - name: Bumba's Cudgel
     pick_rate: 0.28
-    win_rate: 0.33
+    win_rate: 0.32
   - name: Bumba's Hammer
-    pick_rate: 0.19
-    win_rate: 0.79
-  - name: Bluestone Pendant
-    pick_rate: 0.13
-    win_rate: 0.54
+    pick_rate: 0.21
+    win_rate: 0.7
+  - name: Bluestone Brooch
+    pick_rate: 0.12
+    win_rate: 0.74
   source_url: https://smitebrain.com/gods/cabrakan/
-  last_verified: '2026-09-15'
-  god_win_rate: 0.5221674876847291
-  god_matches_won: 106
-  god_matches_played: 203
+  last_verified: '2026-09-16'
+  god_win_rate: 0.5112107623318386
+  god_matches_won: 114
+  god_matches_played: 223
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-15'
-  god_matches_analyzed: 8017
+  god_window_end: '2026-09-16'
+  god_matches_analyzed: 9166
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -107,8 +107,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -128,37 +128,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.37
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.31
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.67
     Shield Splitter:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.63
     Totem of Death:
       total: 0.55
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.26
     Amanita Charm:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.57
   community_ordered:
@@ -205,37 +205,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.39
     Genji's Guard:
       total: 0.55
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.28
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.66
     Shield of the Phoenix:
-      total: 0.55
+      total: 0.54
       efficiency: 0.53
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.8
     Totem of Death:
       total: 0.55
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.27
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.86
   community_ordered:
@@ -245,25 +245,25 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
-  - Genji's Guard
   - Jotunn's Revenge
-  - Transcendence
+  - Genji's Guard
   - The Cosmic Horror
+  - Totem of Death
   - Rod of Tahuti
+  - Amanita Charm
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Totem of Death
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
+    swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -277,45 +277,46 @@ builds:
     Magi''s Cloak, Pendulum Blade, Dreamer''s Idol, Avatar''s Parashu, Mantle Of Discord,
     Midgardian Mail, Daybreak Gavel, Rod of Asclepius.'
   slot_scores:
-    Book of Thoth:
-      total: 0.43
-      efficiency: 0.51
-      win: 0.54
-      pick: 0.0
-      fit: 0.04
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
-      win: 0.59
-      pick: 0.25
-      fit: 0.23
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.54
-    Transcendence:
-      total: 0.45
-      efficiency: 0.53
-      win: 0.54
-      pick: 0.0
-      fit: 0.16
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.25
+      fit: 0.23
     The Cosmic Horror:
       total: 0.56
       efficiency: 0.45
       win: 0.75
-      pick: 0.25
+      pick: 0.22
       fit: 0.34
+    Totem of Death:
+      total: 0.54
+      efficiency: 0.4
+      win: 0.8
+      pick: 0.17
+      fit: 0.22
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.34
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.53
+      pick: 0.0
+      fit: 0.42
   community_ordered:
   - Genji's Guard
   - The Cosmic Horror
+  - Totem of Death
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -353,39 +354,39 @@ builds:
     Tekko-Kagi, Rod of Asclepius, Avenging Blade.'
   slot_scores:
     Golden Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.52
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.54
     Genji's Guard:
       total: 0.54
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.2
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.68
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.43
     Nimble Ring:
       total: 0.51
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.3
     Totem of Death:
       total: 0.54
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.2
     Amanita Charm:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.37
   community_ordered:
@@ -398,22 +399,22 @@ builds:
   - Breastplate of Valor
   - Genji's Guard
   - Jotunn's Revenge
-  - Freya's Tears
+  - The Cosmic Horror
   - Totem of Death
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Freya's Tears
+  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -429,45 +430,45 @@ builds:
     Hide, Jade Scepter, Void Shield.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.54
+      win: 0.52
       pick: 0.18
       fit: 0.48
     Genji's Guard:
       total: 0.58
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.48
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.46
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.48
+    The Cosmic Horror:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.75
       pick: 0.22
-      fit: 0.64
+      fit: 0.13
     Totem of Death:
       total: 0.59
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.52
     Amanita Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.45
   community_ordered:
   - Breastplate of Valor
   - Genji's Guard
-  - Freya's Tears
+  - The Cosmic Horror
   - Totem of Death
   starter: *id001
 - source: suggested
@@ -480,8 +481,8 @@ builds:
   - Totem of Death
   - Amanita Charm
   flex_slots:
+  - Berserker's Shield
   - Amanita Charm
-  - The Cosmic Horror
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -490,8 +491,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -508,37 +509,37 @@ builds:
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.36
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.23
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.45
     The Cosmic Horror:
       total: 0.53
       efficiency: 0.45
       win: 0.75
-      pick: 0.25
+      pick: 0.22
       fit: 0.19
     Totem of Death:
       total: 0.54
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.22
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.42
   community_ordered:
@@ -585,37 +586,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.41
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.59
+      win: 0.6
       pick: 0.25
       fit: 0.23
     The Cosmic Horror:
       total: 0.55
       efficiency: 0.45
       win: 0.75
-      pick: 0.25
+      pick: 0.22
       fit: 0.33
     Totem of Death:
       total: 0.56
       efficiency: 0.4
       win: 0.8
-      pick: 0.19
+      pick: 0.17
       fit: 0.36
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.33
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.42
   community_ordered:
@@ -661,37 +662,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.37
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.67
     Shield Splitter:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.63
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.5
-      pick: 0.21
+      win: 0.48
+      pick: 0.2
       fit: 0.57
     Freya's Tears:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
-      win: 0.48
-      pick: 0.22
+      win: 0.45
+      pick: 0.2
       fit: 0.52
     Amanita Charm:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.57
   community_ordered:
