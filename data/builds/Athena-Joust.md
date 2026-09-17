@@ -525,4 +525,79 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Brawler’s Beat Stick
+  - Stygian Anchor
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Spirit Robe
+  - Erosion
+  flex_slots:
+  - Spirit Robe
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.6
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Stygian Anchor:
+      total: 0.62
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Kinetic Cuirass:
+      total: 0.67
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Shell of Rebuke:
+      total: 0.39
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Spirit Robe:
+      total: 0.54
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Erosion:
+      total: 0.7
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: Spirit Robe
+    removed: Freya's Tears
+    reason: Conquest community 80% win over 34 matches (vs 58% on this god), taking
+      the model's weakest slot from Freya's Tears
+  - added: Shell of Rebuke
+    removed: Shifter's Shield
+    reason: Conquest community 69% win over 82 matches (vs 58% on this god), taking
+      the model's weakest slot from Shifter's Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

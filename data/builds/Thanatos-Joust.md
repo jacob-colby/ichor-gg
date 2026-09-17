@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Heartseeker
+  - Titan's Bane
+  - Avatar's Parashu
+  flex_slots:
+  - Heartseeker
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.86
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Reaper:
+      total: 0.75
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.73
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Heartseeker:
+      total: 0.73
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.74
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Avatar's Parashu:
+      total: 0.68
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+  swaps:
+  - added: Avatar's Parashu
+    removed: Pendulum Blade
+    reason: Conquest community 69% win over 121 matches (vs 59% on this god), taking
+      the model's weakest slot from Pendulum Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

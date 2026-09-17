@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Daybreak Gavel
+  - Shell of Rebuke
   - Void Shield
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Kinetic Cuirass
-  - Daybreak Gavel
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -559,12 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Daybreak Gavel:
-      total: 0.38
-      efficiency: 0.59
+    Shell of Rebuke:
+      total: 0.33
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.17
+      fit: 0.38
     Void Shield:
       total: 0.62
       efficiency: 0.47
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.76
   swaps:
-  - added: Daybreak Gavel
+  - added: Shell of Rebuke
     removed: Void Stone
-    reason: Conquest community 64% win over 189 matches (vs 56% on this god), taking
+    reason: Conquest community 68% win over 82 matches (vs 56% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

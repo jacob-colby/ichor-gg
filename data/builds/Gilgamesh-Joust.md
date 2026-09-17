@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Shifter's Shield
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Jotunn's Revenge
+  - Shifter's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Shifter's Shield:
+      total: 0.43
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
+    Amanita Charm:
+      total: 0.71
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+  swaps:
+  - added: Shifter's Shield
+    removed: Berserker's Shield
+    reason: Conquest community 74% win over 35 matches (vs 54% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---
