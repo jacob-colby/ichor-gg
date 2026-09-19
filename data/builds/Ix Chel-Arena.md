@@ -590,13 +590,13 @@ builds:
       pick: 0.0
       fit: 0.73
   swaps:
-  - added: The World Stone
-    removed: Kinetic Cuirass
-    reason: Conquest community 58% win over 298 matches (vs 52% on this god), taking
-      the model's weakest slot from Kinetic Cuirass
   - added: Spear of Desolation
+    removed: Kinetic Cuirass
+    reason: Conquest community 61% win over 359 matches (vs 54% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
+  - added: The World Stone
     removed: Void Stone
-    reason: Conquest community 58% win over 280 matches (vs 52% on this god), taking
+    reason: Conquest community 60% win over 381 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

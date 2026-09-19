@@ -590,13 +590,13 @@ builds:
       pick: 0.0
       fit: 0.7
   swaps:
-  - added: The World Stone
-    removed: Stygian Anchor
-    reason: Conquest community 58% win over 298 matches (vs 52% on this god), taking
-      the model's weakest slot from Stygian Anchor
   - added: Spear of Desolation
+    removed: Stygian Anchor
+    reason: Conquest community 61% win over 359 matches (vs 54% on this god), taking
+      the model's weakest slot from Stygian Anchor
+  - added: The World Stone
     removed: Void Shield
-    reason: Conquest community 58% win over 280 matches (vs 52% on this god), taking
+    reason: Conquest community 60% win over 381 matches (vs 54% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

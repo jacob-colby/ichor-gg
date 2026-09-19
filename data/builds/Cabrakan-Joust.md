@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.77
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Stygian Anchor
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Stygian Anchor
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Stygian Anchor:
+      total: 0.58
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Kinetic Cuirass:
+      total: 0.62
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Shield Splitter:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.64
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+  swaps:
+  - added: Genji's Guard
+    removed: Void Shield
+    reason: Conquest community 62% win over 53 matches (vs 48% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

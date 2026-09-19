@@ -5,39 +5,39 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fortification
-  aspect_pick_rate: 0.07
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.08
+  aspect_win_rate: 0.47
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.38
+    pick_rate: 0.39
     win_rate: 0.57
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.31
-      win_rate: 0.56
+      pick_rate: 0.29
+      win_rate: 0.58
     - name: Chronos' Pendant
       pick_rate: 0.08
       win_rate: 0.64
   - name: The World Stone
-    pick_rate: 0.22
-    win_rate: 0.55
+    pick_rate: 0.21
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.25
-      win_rate: 0.54
+      win_rate: 0.56
     - name: Book of Thoth
-      pick_rate: 0.14
+      pick_rate: 0.13
       win_rate: 0.54
   - name: Rod of Tahuti
-    pick_rate: 0.21
-    win_rate: 0.67
+    pick_rate: 0.23
+    win_rate: 0.66
     alternates:
     - name: The World Stone
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.59
     - name: Soul Gem
-      pick_rate: 0.13
-      win_rate: 0.44
+      pick_rate: 0.12
+      win_rate: 0.47
   - name: Obsidian Shard
     pick_rate: 0.21
     win_rate: 0.59
@@ -47,20 +47,20 @@ builds:
       win_rate: 0.62
     - name: Soul Gem
       pick_rate: 0.1
-      win_rate: 0.58
+      win_rate: 0.62
   - name: Evil Eye
     pick_rate: 0.11
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.19
-      win_rate: 0.65
+      win_rate: 0.66
     - name: Rod of Tahuti
-      pick_rate: 0.12
-      win_rate: 0.48
+      pick_rate: 0.11
+      win_rate: 0.49
   - name: Shrapnel Mod
     pick_rate: 0.17
-    win_rate: 0.64
+    win_rate: 0.63
     alternates:
     - name: Thermal Mod
       pick_rate: 0.13
@@ -73,47 +73,40 @@ builds:
     win_rate: 0.55
     alternates:
     - name: Shrapnel Mod
-      pick_rate: 0.29
+      pick_rate: 0.31
       win_rate: 0.63
     - name: Thermal Mod
-      pick_rate: 0.24
-      win_rate: 0.58
-  - name: Thermal Mod
-    pick_rate: 0.13
-    win_rate: 0.69
-    alternates:
-    - name: Surplus Mod
-      pick_rate: 0.66
-      win_rate: 0.64
-    - name: Seismic Mod
-      pick_rate: 0.12
-      win_rate: 0.46
+      pick_rate: 0.23
+      win_rate: 0.6
   - name: Seismic Mod
-    pick_rate: 0.38
-    win_rate: 0.58
+    pick_rate: 0.12
+    win_rate: 0.5
     alternates:
     - name: Surplus Mod
-      pick_rate: 0.62
-      win_rate: 0.77
+      pick_rate: 0.67
+      win_rate: 0.64
+    - name: Thermal Mod
+      pick_rate: 0.12
+      win_rate: 0.7
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.27
-    win_rate: 0.64
+    pick_rate: 0.28
+    win_rate: 0.63
   - name: Archmage's Gem
     pick_rate: 0.24
     win_rate: 0.63
   - name: Sands Of Time
     pick_rate: 0.21
-    win_rate: 0.5
+    win_rate: 0.52
   source_url: https://smitebrain.com/gods/vulcan/
-  last_verified: '2026-09-17'
-  god_win_rate: 0.5663082437275986
-  god_matches_won: 316
-  god_matches_played: 558
+  last_verified: '2026-09-19'
+  god_win_rate: 0.5687679083094556
+  god_matches_won: 397
+  god_matches_played: 698
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-17'
-  god_matches_analyzed: 10391
+  god_window_end: '2026-09-19'
+  god_matches_analyzed: 12806
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -127,7 +120,7 @@ builds:
   - Spear of the Magus
   - Obsidian Shard
   flex_slots:
-  - Chronos' Pendant
+  - Spear of the Magus
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
@@ -143,7 +136,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Spear of the Magus, Chronos'' Pendant, Gluttonous Grimoire, Nimble Ring,
+    this god: Chronos'' Pendant, Spear of the Magus, Gluttonous Grimoire, Nimble Ring,
     Doom Orb, Dreamer''s Idol, Bracer of The Abyss, The Cosmic Horror, Gem of Focus,
     Ancient Signet, Totem of Death, Rod of Asclepius, Polynomicon, Blood-Bound Book,
     Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s Talon, Helm of Radiance, Ethereal
@@ -159,24 +152,24 @@ builds:
       total: 0.6
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.83
     Nimble Ring:
-      total: 0.55
+      total: 0.54
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.72
+      total: 0.71
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.66
     Spear of the Magus:
-      total: 0.57
+      total: 0.56
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
@@ -226,39 +219,39 @@ builds:
     Ruin, Wish-Granting Pearl, Breastplate of Valor.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.56
-      pick: 0.31
+      win: 0.58
+      pick: 0.29
       fit: 0.35
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.56
     Nimble Ring:
-      total: 0.52
+      total: 0.51
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.35
     The World Stone:
       total: 0.52
       efficiency: 0.52
-      win: 0.55
-      pick: 0.3
+      win: 0.54
+      pick: 0.29
       fit: 0.52
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.52
     Doom Orb:
-      total: 0.52
+      total: 0.51
       efficiency: 0.53
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.52
   community_ordered:
@@ -277,7 +270,7 @@ builds:
   - Spear of the Magus
   - Obsidian Shard
   flex_slots:
-  - Chronos' Pendant
+  - Spear of the Magus
   - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
@@ -293,7 +286,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Spear of the Magus, Chronos'' Pendant, Gluttonous Grimoire, Doom Orb, Nimble
+    god: Chronos'' Pendant, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Nimble
     Ring, Dreamer''s Idol, Bragi''s Harp, Death Metal, Gem of Focus, Ancient Signet,
     The Cosmic Horror, Bracer of The Abyss, Totem of Death, Rod of Asclepius, Polynomicon,
     Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Breastplate of Valor,
@@ -309,24 +302,24 @@ builds:
       total: 0.58
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.7
     Nimble Ring:
       total: 0.51
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.3
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.5
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Obsidian Shard:
@@ -375,22 +368,22 @@ builds:
     Wish-Granting Pearl, Doom Orb.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.45
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.36
     Obsidian Shard:
       total: 0.54
@@ -401,13 +394,13 @@ builds:
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.76
     Rod of Asclepius:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.67
   community_ordered:
@@ -418,15 +411,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Nimble Ring
+  - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
+  - Nimble Ring
   - Rod of Tahuti
   - Spear of the Magus
   - Obsidian Shard
   flex_slots:
-  - Doom Orb
   - Nimble Ring
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -441,40 +434,40 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Spear of the Magus, Gluttonous Grimoire, Doom Orb, Dreamer''s Idol,
-    Chronos'' Pendant, The Cosmic Horror, Nimble Ring, Ancient Signet, Bracer of The
+    for this god: Spear of the Magus, Gluttonous Grimoire, Doom Orb, Chronos'' Pendant,
+    Dreamer''s Idol, The Cosmic Horror, Nimble Ring, Ancient Signet, Bracer of The
     Abyss, Gem of Focus, Rod of Asclepius, Polynomicon, Totem of Death, Blood-Bound
     Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s Talon, Helm of Radiance,
     Screeching Gargoyle, Ethereal Staff, Wish-Granting Pearl, Typhon’s Heart.'
   slot_scores:
-    Nimble Ring:
-      total: 0.53
-      efficiency: 0.6
-      win: 0.57
-      pick: 0.0
-      fit: 0.38
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.58
+      pick: 0.29
+      fit: 0.26
     Spear of Desolation:
       total: 0.61
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.88
-    Doom Orb:
-      total: 0.56
-      efficiency: 0.53
-      win: 0.57
+    Nimble Ring:
+      total: 0.52
+      efficiency: 0.6
+      win: 0.56
       pick: 0.0
-      fit: 0.75
+      fit: 0.38
     Rod of Tahuti:
       total: 0.73
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.75
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.75
     Obsidian Shard:
@@ -484,6 +477,7 @@ builds:
       pick: 0.35
       fit: 0.85
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -523,32 +517,32 @@ builds:
     Bracer of The Abyss:
       total: 0.5
       efficiency: 0.52
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.4
     Bragi's Harp:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.32
     Obsidian Shard:
       total: 0.54
@@ -571,8 +565,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Soul Gem
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -604,19 +598,19 @@ builds:
       total: 0.59
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.76
     Spear of the Magus:
-      total: 0.52
+      total: 0.51
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.33
     Rod of Tahuti:
-      total: 0.67
+      total: 0.66
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.33
     Obsidian Shard:
       total: 0.54
@@ -625,10 +619,10 @@ builds:
       pick: 0.35
       fit: 0.43
     Soul Gem:
-      total: 0.52
+      total: 0.53
       efficiency: 0.52
-      win: 0.44
-      pick: 0.2
+      win: 0.47
+      pick: 0.19
       fit: 0.86
   community_ordered:
   - Chronos' Pendant
@@ -670,33 +664,33 @@ builds:
     of Radiance, Ethereal Staff, Wish-Granting Pearl, Typhon’s Heart, Bragi''s Harp.'
   slot_scores:
     Nimble Ring:
-      total: 0.55
+      total: 0.54
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.51
     Spear of Desolation:
       total: 0.6
       efficiency: 0.57
       win: 0.57
-      pick: 0.38
+      pick: 0.39
       fit: 0.83
     Doom Orb:
       total: 0.54
       efficiency: 0.53
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.72
+      total: 0.71
       efficiency: 0.86
-      win: 0.67
-      pick: 0.33
+      win: 0.66
+      pick: 0.36
       fit: 0.66
     Spear of the Magus:
-      total: 0.57
+      total: 0.56
       efficiency: 0.6
-      win: 0.57
+      win: 0.56
       pick: 0.0
       fit: 0.66
     Obsidian Shard:

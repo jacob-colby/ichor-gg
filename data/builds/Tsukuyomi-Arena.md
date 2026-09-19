@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Golden Blade
-    reason: Conquest community 69% win over 92 matches (vs 53% on this god), taking
+    reason: Conquest community 71% win over 127 matches (vs 54% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the General
-  aspect_pick_rate: 0.91
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.9
+  aspect_win_rate: 0.52
   slot_order:
   - name: Chandra's Grace
     pick_rate: 0.29
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.13
-      win_rate: 0.49
+      win_rate: 0.5
     - name: Heartwood Charm
-      pick_rate: 0.13
-      win_rate: 0.54
+      pick_rate: 0.12
+      win_rate: 0.55
   - name: Breastplate of Valor
-    pick_rate: 0.22
-    win_rate: 0.55
+    pick_rate: 0.21
+    win_rate: 0.56
     alternates:
     - name: Genji's Guard
       pick_rate: 0.18
-      win_rate: 0.44
+      win_rate: 0.43
     - name: Heartwood Charm
-      pick_rate: 0.09
-      win_rate: 0.51
+      pick_rate: 0.08
+      win_rate: 0.54
   - name: Genji's Guard
     pick_rate: 0.22
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.2
-      win_rate: 0.5
+      win_rate: 0.51
     - name: Freya's Tears
       pick_rate: 0.1
-      win_rate: 0.59
+      win_rate: 0.61
   - name: Freya's Tears
     pick_rate: 0.14
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
     - name: Genji's Guard
       pick_rate: 0.15
       win_rate: 0.54
-    - name: Rod of Asclepius
+    - name: Shell of Rebuke
       pick_rate: 0.09
-      win_rate: 0.62
+      win_rate: 0.63
   - name: Shell of Rebuke
-    pick_rate: 0.1
-    win_rate: 0.62
+    pick_rate: 0.09
+    win_rate: 0.59
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.11
-      win_rate: 0.62
+      pick_rate: 0.12
+      win_rate: 0.61
     - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.53
   - name: Sage's Ring
     pick_rate: 0.07
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.52
+      win_rate: 0.59
     - name: Captain's Ring
       pick_rate: 0.06
       win_rate: 0.5
   community_starters:
   - name: Sands Of Time
-    pick_rate: 0.4
+    pick_rate: 0.41
     win_rate: 0.47
   - name: Pendulum of the Ages
     pick_rate: 0.24
-    win_rate: 0.59
+    win_rate: 0.62
   - name: Selflessness
     pick_rate: 0.08
-    win_rate: 0.52
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-09-17'
-  god_win_rate: 0.5139949109414759
-  god_matches_won: 404
-  god_matches_played: 786
+  last_verified: '2026-09-19'
+  god_win_rate: 0.5196078431372549
+  god_matches_won: 477
+  god_matches_played: 918
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-17'
-  god_matches_analyzed: 10391
+  god_window_end: '2026-09-19'
+  god_matches_analyzed: 12806
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -126,37 +126,37 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.43
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.55
+      win: 0.56
       pick: 0.34
       fit: 0.32
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
-      win: 0.55
-      pick: 0.3
+      win: 0.56
+      pick: 0.29
       fit: 0.32
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.4
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.49
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.5
   community_ordered:
@@ -200,39 +200,39 @@ builds:
     Screeching Gargoyle.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.45
     Genji's Guard:
       total: 0.54
       efficiency: 0.66
-      win: 0.55
+      win: 0.56
       pick: 0.34
       fit: 0.3
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.4
     Shield of the Phoenix:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.79
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.45
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.8
   community_ordered:
@@ -273,39 +273,39 @@ builds:
     Scale, Tyrfing, Shifter''s Shield.'
   slot_scores:
     Berserker's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.32
     Genji's Guard:
       total: 0.53
       efficiency: 0.66
-      win: 0.55
+      win: 0.56
       pick: 0.34
       fit: 0.24
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
-      win: 0.55
-      pick: 0.3
+      win: 0.56
+      pick: 0.29
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.55
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.37
     Amanita Charm:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.38
   community_ordered:
@@ -347,39 +347,39 @@ builds:
     Cloak, The Reaper, Tekko-Kagi.'
   slot_scores:
     Golden Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.56
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.24
     Tyrfing:
       total: 0.5
       efficiency: 0.48
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.34
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.35
   community_ordered:
@@ -422,37 +422,37 @@ builds:
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.34
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
-      win: 0.55
+      win: 0.56
       pick: 0.34
       fit: 0.44
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.65
-      win: 0.55
-      pick: 0.3
+      win: 0.56
+      pick: 0.29
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.43
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.58
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.4
   community_ordered:
@@ -496,37 +496,37 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.43
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.55
+      win: 0.56
       pick: 0.34
       fit: 0.32
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.6
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.6
+      win: 0.59
       pick: 0.23
       fit: 0.49
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.5
   community_ordered:
