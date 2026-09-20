@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Spirit Robe
     removed: Freya's Tears
-    reason: Conquest community 77% win over 41 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 46 matches (vs 55% on this god), taking
       the model's weakest slot from Freya's Tears
   - added: Shell of Rebuke
     removed: Shifter's Shield
-    reason: Conquest community 66% win over 107 matches (vs 56% on this god), taking
+    reason: Conquest community 65% win over 120 matches (vs 55% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

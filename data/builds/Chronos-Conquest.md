@@ -5,95 +5,95 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Relativity
-  aspect_pick_rate: 0.2
-  aspect_win_rate: 0.49
+  aspect_pick_rate: 0.21
+  aspect_win_rate: 0.5
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.27
-    win_rate: 0.47
+    pick_rate: 0.26
+    win_rate: 0.49
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.12
-      win_rate: 0.58
+      pick_rate: 0.13
+      win_rate: 0.6
     - name: Tyrfing
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.65
   - name: Spear of Desolation
-    pick_rate: 0.14
-    win_rate: 0.42
+    pick_rate: 0.13
+    win_rate: 0.45
     alternates:
     - name: Book of Thoth
       pick_rate: 0.13
-      win_rate: 0.62
+      win_rate: 0.63
     - name: Nimble Ring
       pick_rate: 0.05
-      win_rate: 0.47
+      win_rate: 0.5
   - name: Nimble Ring
     pick_rate: 0.18
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.13
-      win_rate: 0.52
-    - name: Odysseus' Bow
+      win_rate: 0.53
+    - name: Polynomicon
       pick_rate: 0.05
-      win_rate: 0.82
+      win_rate: 0.47
   - name: Rod of Tahuti
     pick_rate: 0.24
-    win_rate: 0.52
+    win_rate: 0.55
     alternates:
     - name: Nimble Ring
       pick_rate: 0.15
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Obsidian Shard
       pick_rate: 0.05
-      win_rate: 0.5
+      win_rate: 0.56
   - name: Obsidian Shard
     pick_rate: 0.12
     win_rate: 0.53
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.11
-      win_rate: 0.59
+      win_rate: 0.58
     - name: Polynomicon
       pick_rate: 0.07
       win_rate: 0.75
   - name: Evil Eye
     pick_rate: 0.06
-    win_rate: 0.36
+    win_rate: 0.33
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.63
     - name: Killing Stone
       pick_rate: 0.06
       win_rate: 0.64
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.23
-    win_rate: 0.59
+    win_rate: 0.6
   - name: Sands Of Time
     pick_rate: 0.19
-    win_rate: 0.37
+    win_rate: 0.4
   - name: Archmage's Gem
     pick_rate: 0.11
-    win_rate: 0.63
+    win_rate: 0.58
   source_url: https://smitebrain.com/gods/chronos/
-  last_verified: '2026-09-19'
-  god_win_rate: 0.5297450424929179
-  god_matches_won: 187
-  god_matches_played: 353
+  last_verified: '2026-09-20'
+  god_win_rate: 0.5340314136125655
+  god_matches_won: 204
+  god_matches_played: 382
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-19'
-  god_matches_analyzed: 12806
+  god_window_end: '2026-09-20'
+  god_matches_analyzed: 14083
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
-  - Bracer of The Abyss
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
   - Spear of the Magus
@@ -101,7 +101,7 @@ builds:
   - Obsidian Shard
   flex_slots:
   - Obsidian Shard
-  - Bracer of The Abyss
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,16 +122,16 @@ builds:
     Rod of Asclepius, Totem of Death, Soul Reaver, Bragi''s Harp, Jade Scepter, Divine
     Ruin, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
-    Bracer of The Abyss:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.55
-      pick: 0.0
-      fit: 0.56
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.51
+      win: 0.49
+      pick: 0.26
+      fit: 0.24
     Nimble Ring:
       total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.68
     Polynomicon:
@@ -147,9 +147,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.44
     Obsidian Shard:
@@ -159,6 +159,7 @@ builds:
       pick: 0.26
       fit: 0.54
   community_ordered:
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
@@ -207,7 +208,7 @@ builds:
     Nimble Ring:
       total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.48
     Polynomicon:
@@ -223,9 +224,9 @@ builds:
       pick: 0.0
       fit: 0.42
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.42
     Spear of the Magus:
@@ -242,7 +243,7 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Bragi's Harp
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
   - Spear of the Magus
@@ -250,7 +251,7 @@ builds:
   - Obsidian Shard
   flex_slots:
   - Obsidian Shard
-  - Bragi's Harp
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -271,16 +272,16 @@ builds:
     Talon, Rod of Asclepius, Totem of Death, Typhon’s Heart, Soul Reaver, Jade Scepter,
     Divine Ruin, Breastplate of Valor, Genji''s Guard.'
   slot_scores:
-    Bragi's Harp:
-      total: 0.5
-      efficiency: 0.44
-      win: 0.55
-      pick: 0.0
-      fit: 0.62
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.51
+      win: 0.49
+      pick: 0.26
+      fit: 0.16
     Nimble Ring:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.44
     Polynomicon:
@@ -296,9 +297,9 @@ builds:
       pick: 0.0
       fit: 0.4
     Rod of Tahuti:
-      total: 0.61
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.4
     Obsidian Shard:
@@ -308,6 +309,7 @@ builds:
       pick: 0.26
       fit: 0.5
   community_ordered:
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
@@ -365,9 +367,9 @@ builds:
       pick: 0.0
       fit: 0.31
     Rod of Tahuti:
-      total: 0.59
+      total: 0.61
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.27
     Amanita Charm:
@@ -389,15 +391,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
-  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,10 +420,16 @@ builds:
     of Asclepius, Typhon’s Heart, Soul Reaver, Totem of Death, Jade Scepter, Divine
     Ruin, Screeching Gargoyle, Helm of Radiance, Bragi''s Harp, Ethereal Staff.'
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.51
+      win: 0.49
+      pick: 0.26
+      fit: 0.19
     Nimble Ring:
       total: 0.58
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.53
     Polynomicon:
@@ -430,12 +438,6 @@ builds:
       win: 0.75
       pick: 0.15
       fit: 0.29
-    Doom Orb:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.0
-      fit: 0.57
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
@@ -443,9 +445,9 @@ builds:
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
-      total: 0.64
+      total: 0.65
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.57
     Obsidian Shard:
@@ -455,6 +457,7 @@ builds:
       pick: 0.26
       fit: 0.67
   community_ordered:
+  - Book of Thoth
   - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
@@ -499,9 +502,9 @@ builds:
       pick: 0.0
       fit: 0.41
     Nimble Ring:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.49
     Bragi's Harp:
@@ -517,9 +520,9 @@ builds:
       pick: 0.15
       fit: 0.26
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.3
     Soul Gem:
@@ -537,14 +540,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Chronos' Pendant
-  - Gem of Focus
   - Polynomicon
+  - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Spear of the Magus
-  - Gem of Focus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -572,18 +575,18 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
-    Gem of Focus:
-      total: 0.49
-      efficiency: 0.5
-      win: 0.55
-      pick: 0.0
-      fit: 0.45
     Polynomicon:
       total: 0.54
       efficiency: 0.46
       win: 0.75
       pick: 0.15
       fit: 0.2
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.45
+      pick: 0.18
+      fit: 0.59
     Spear of the Magus:
       total: 0.49
       efficiency: 0.6
@@ -591,9 +594,9 @@ builds:
       pick: 0.0
       fit: 0.24
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.24
     Soul Gem:
@@ -604,20 +607,21 @@ builds:
       fit: 0.77
   community_ordered:
   - Polynomicon
+  - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Odysseus' Bow
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Polynomicon
+  - Nimble Ring
   - Rod of Tahuti
-  - Soul Gem
   flex_slots:
-  - Polynomicon
-  - Odysseus' Bow
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -641,60 +645,60 @@ builds:
     Hammer, Bancroft''s Talon, Gem of Focus, The Cosmic Horror, Avenging Blade, Barbed
     Carver, Rod of Asclepius.'
   slot_scores:
-    Odysseus' Bow:
-      total: 0.52
-      efficiency: 0.34
-      win: 0.82
-      pick: 0.08
-      fit: 0.22
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.51
+      win: 0.49
+      pick: 0.26
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.59
+    Transcendence:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 0.29
     Tyrfing:
       total: 0.57
       efficiency: 0.48
       win: 0.65
-      pick: 0.09
+      pick: 0.08
       fit: 0.69
-    Polynomicon:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.75
-      pick: 0.15
-      fit: 0.3
+    Nimble Ring:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.58
+      pick: 0.28
+      fit: 0.41
     Rod of Tahuti:
-      total: 0.61
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.39
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 0.69
   community_ordered:
-  - Odysseus' Bow
+  - Book of Thoth
   - Tyrfing
-  - Polynomicon
+  - Nimble Ring
   - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Odysseus' Bow
   - Jotunn's Revenge
   - Tyrfing
+  - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
-  - Soul Gem
+  - Spear of the Magus
   flex_slots:
-  - Soul Gem
-  - Odysseus' Bow
+  - Polynomicon
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -718,12 +722,6 @@ builds:
     Pendulum Blade, Qin''s Blade, Avatar''s Parashu, Transcendence, The Cosmic Horror,
     Runeforged Hammer, Rod of Asclepius, Typhon’s Heart.'
   slot_scores:
-    Odysseus' Bow:
-      total: 0.54
-      efficiency: 0.34
-      win: 0.82
-      pick: 0.08
-      fit: 0.33
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
@@ -734,8 +732,14 @@ builds:
       total: 0.57
       efficiency: 0.48
       win: 0.65
-      pick: 0.09
+      pick: 0.08
       fit: 0.7
+    Nimble Ring:
+      total: 0.58
+      efficiency: 0.65
+      win: 0.58
+      pick: 0.28
+      fit: 0.53
     Polynomicon:
       total: 0.55
       efficiency: 0.46
@@ -743,20 +747,20 @@ builds:
       pick: 0.15
       fit: 0.31
     Rod of Tahuti:
-      total: 0.61
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.39
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.57
+    Spear of the Magus:
+      total: 0.52
+      efficiency: 0.6
       win: 0.55
       pick: 0.0
-      fit: 0.66
+      fit: 0.39
   community_ordered:
-  - Odysseus' Bow
   - Tyrfing
+  - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
   starter: *id001
@@ -799,15 +803,15 @@ builds:
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.48
+      total: 0.5
       efficiency: 0.57
-      win: 0.42
-      pick: 0.19
+      win: 0.45
+      pick: 0.18
       fit: 0.56
     Nimble Ring:
       total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.68
     Spear of the Magus:
@@ -817,9 +821,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.44
     Obsidian Shard:
@@ -868,10 +872,10 @@ builds:
     Ancile.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.51
-      win: 0.47
-      pick: 0.27
+      win: 0.49
+      pick: 0.26
       fit: 0.12
     Genji's Guard:
       total: 0.51
@@ -880,9 +884,9 @@ builds:
       pick: 0.0
       fit: 0.25
     Nimble Ring:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.5
     Polynomicon:
@@ -892,9 +896,9 @@ builds:
       pick: 0.15
       fit: 0.23
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.29
     Spear of the Magus:
@@ -961,9 +965,9 @@ builds:
       pick: 0.0
       fit: 0.31
     Rod of Tahuti:
-      total: 0.61
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.37
     Soul Gem:
@@ -1016,15 +1020,15 @@ builds:
     Scepter, Gem of Focus, Wish-Granting Pearl, Daybreak Gavel, Bancroft''s Talon.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.51
-      win: 0.47
-      pick: 0.27
+      win: 0.49
+      pick: 0.26
       fit: 0.14
     Nimble Ring:
       total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.39
     Polynomicon:
@@ -1040,9 +1044,9 @@ builds:
       pick: 0.0
       fit: 0.35
     Rod of Tahuti:
-      total: 0.61
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.35
     Obsidian Shard:
@@ -1105,9 +1109,9 @@ builds:
       pick: 0.15
       fit: 0.19
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.21
     Amanita Charm:
@@ -1136,12 +1140,12 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Nimble Ring
   - Polynomicon
   - Void Stone
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Obsidian Shard
@@ -1166,6 +1170,12 @@ builds:
     Wish-Granting Pearl, Gem of Focus, Bancroft''s Talon, Ethereal Staff, Freya''s
     Tears, Erosion.'
   slot_scores:
+    Nimble Ring:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.58
+      pick: 0.28
+      fit: 0.4
     Polynomicon:
       total: 0.54
       efficiency: 0.46
@@ -1185,9 +1195,9 @@ builds:
       pick: 0.0
       fit: 0.43
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.43
     Obsidian Shard:
@@ -1196,13 +1206,8 @@ builds:
       win: 0.53
       pick: 0.26
       fit: 0.53
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 1.0
   community_ordered:
+  - Nimble Ring
   - Polynomicon
   - Rod of Tahuti
   - Obsidian Shard
@@ -1250,7 +1255,7 @@ builds:
     Nimble Ring:
       total: 0.56
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.28
       fit: 0.38
     Bragi's Harp:
@@ -1266,9 +1271,9 @@ builds:
       pick: 0.15
       fit: 0.19
     Rod of Tahuti:
-      total: 0.58
+      total: 0.6
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.21
     Soul Gem:
@@ -1317,10 +1322,10 @@ builds:
     World Stone, Blood-Bound Book, Jade Scepter.'
   slot_scores:
     Book of Thoth:
-      total: 0.42
+      total: 0.43
       efficiency: 0.51
-      win: 0.47
-      pick: 0.27
+      win: 0.49
+      pick: 0.26
       fit: 0.09
     Genji's Guard:
       total: 0.53
@@ -1341,9 +1346,9 @@ builds:
       pick: 0.15
       fit: 0.19
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.21
     Soul Gem:
@@ -1361,15 +1366,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Odysseus' Bow
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Polynomicon
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Polynomicon
-  - Odysseus' Bow
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1393,34 +1398,34 @@ builds:
     Death Metal, Pendulum Blade, Lifebinder, Chronos'' Pendant, Doom Orb, Dominance,
     Screeching Gargoyle, Transcendence.'
   slot_scores:
-    Odysseus' Bow:
-      total: 0.52
-      efficiency: 0.34
-      win: 0.82
-      pick: 0.08
-      fit: 0.2
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.49
+      pick: 0.26
+      fit: 0.1
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.57
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 0.26
     Tyrfing:
       total: 0.56
       efficiency: 0.48
       win: 0.65
-      pick: 0.09
+      pick: 0.08
       fit: 0.62
-    Polynomicon:
-      total: 0.54
-      efficiency: 0.46
-      win: 0.75
-      pick: 0.15
-      fit: 0.2
     Rod of Tahuti:
-      total: 0.59
+      total: 0.61
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.28
     Soul Gem:
@@ -1430,31 +1435,30 @@ builds:
       pick: 0.0
       fit: 0.9
   community_ordered:
-  - Odysseus' Bow
+  - Book of Thoth
   - Tyrfing
-  - Polynomicon
   - Rod of Tahuti
   starter: *id001
   aspect: Aspect of Relativity
 - source: suggested
   archetype: str-int
   slot_order:
-  - Odysseus' Bow
   - Jotunn's Revenge
   - Tyrfing
   - Polynomicon
   - Rod of Tahuti
+  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
   - Polynomicon
-  - Odysseus' Bow
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
@@ -1471,12 +1475,6 @@ builds:
     Bow, Doublet of Binding, The World Stone, Titan''s Bane, Ancient Signet, The Crusher,
     Dominance, Dreamer''s Idol, Blood-Bound Book.'
   slot_scores:
-    Odysseus' Bow:
-      total: 0.54
-      efficiency: 0.34
-      win: 0.82
-      pick: 0.08
-      fit: 0.29
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
@@ -1487,7 +1485,7 @@ builds:
       total: 0.56
       efficiency: 0.48
       win: 0.65
-      pick: 0.09
+      pick: 0.08
       fit: 0.6
     Polynomicon:
       total: 0.55
@@ -1496,11 +1494,17 @@ builds:
       pick: 0.15
       fit: 0.28
     Rod of Tahuti:
-      total: 0.6
+      total: 0.62
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.32
+    Pharaoh's Curse:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.55
+      pick: 0.0
+      fit: 0.61
     Soul Gem:
       total: 0.58
       efficiency: 0.57
@@ -1508,7 +1512,6 @@ builds:
       pick: 0.0
       fit: 0.91
   community_ordered:
-  - Odysseus' Bow
   - Tyrfing
   - Polynomicon
   - Rod of Tahuti
@@ -1554,10 +1557,10 @@ builds:
       pick: 0.0
       fit: 0.25
     Spear of Desolation:
-      total: 0.47
+      total: 0.48
       efficiency: 0.57
-      win: 0.42
-      pick: 0.19
+      win: 0.45
+      pick: 0.18
       fit: 0.46
     Spear of the Magus:
       total: 0.5
@@ -1566,9 +1569,9 @@ builds:
       pick: 0.0
       fit: 0.29
     Rod of Tahuti:
-      total: 0.6
+      total: 0.61
       efficiency: 0.86
-      win: 0.52
+      win: 0.55
       pick: 0.4
       fit: 0.29
     Obsidian Shard:

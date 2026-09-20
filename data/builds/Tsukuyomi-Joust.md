@@ -661,11 +661,11 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
+  - Hydra's Lament
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Hydra's Lament
   - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
@@ -701,12 +701,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Death Metal:
-      total: 0.56
-      efficiency: 0.61
+    Hydra's Lament:
+      total: 0.47
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.39
     Avatar's Parashu:
       total: 0.45
       efficiency: 0.45
@@ -722,8 +722,12 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Bragi's Harp
-    reason: Conquest community 71% win over 127 matches (vs 54% on this god), taking
+    reason: Conquest community 72% win over 138 matches (vs 54% on this god), taking
       the model's weakest slot from Bragi's Harp
+  - added: Hydra's Lament
+    removed: Death Metal
+    reason: Conquest community 62% win over 138 matches (vs 54% on this god), taking
+      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---

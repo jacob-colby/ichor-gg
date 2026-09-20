@@ -5,73 +5,73 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mother's Light
-  aspect_pick_rate: 0.2
-  aspect_win_rate: 0.47
+  aspect_pick_rate: 0.19
+  aspect_win_rate: 0.45
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.32
-    win_rate: 0.61
-    alternates:
-    - name: Book of Thoth
-      pick_rate: 0.12
-      win_rate: 0.57
-    - name: Gem of Focus
-      pick_rate: 0.11
-      win_rate: 0.54
-  - name: The World Stone
-    pick_rate: 0.34
     win_rate: 0.6
     alternates:
     - name: Book of Thoth
+      pick_rate: 0.13
+      win_rate: 0.58
+    - name: Gem of Focus
       pick_rate: 0.11
-      win_rate: 0.55
+      win_rate: 0.52
+  - name: The World Stone
+    pick_rate: 0.33
+    win_rate: 0.6
+    alternates:
     - name: Spear of Desolation
+      pick_rate: 0.12
+      win_rate: 0.49
+    - name: Book of Thoth
       pick_rate: 0.11
-      win_rate: 0.48
-  - name: Soul Gem
-    pick_rate: 0.13
-    win_rate: 0.56
+      win_rate: 0.52
+  - name: Rod of Tahuti
+    pick_rate: 0.14
+    win_rate: 0.67
     alternates:
     - name: The World Stone
       pick_rate: 0.15
-      win_rate: 0.52
-    - name: Rod of Tahuti
+      win_rate: 0.51
+    - name: Soul Gem
       pick_rate: 0.13
-      win_rate: 0.68
-  - name: Rod of Tahuti
-    pick_rate: 0.26
-    win_rate: 0.55
-    alternates:
-    - name: Obsidian Shard
-      pick_rate: 0.16
-      win_rate: 0.6
-    - name: The World Stone
-      pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.55
   - name: Obsidian Shard
     pick_rate: 0.16
     win_rate: 0.59
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.13
-      win_rate: 0.59
-    - name: Evil Eye
-      pick_rate: 0.09
-      win_rate: 0.53
+      pick_rate: 0.26
+      win_rate: 0.54
+    - name: The World Stone
+      pick_rate: 0.05
+      win_rate: 0.49
   - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.58
+    pick_rate: 0.09
+    win_rate: 0.56
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.08
+      pick_rate: 0.16
       win_rate: 0.57
-    - name: Oracle Staff
-      pick_rate: 0.06
-      win_rate: 0.47
+    - name: Rod of Tahuti
+      pick_rate: 0.13
+      win_rate: 0.58
+  - name: Oracle Staff
+    pick_rate: 0.06
+    win_rate: 0.47
+    alternates:
+    - name: Evil Eye
+      pick_rate: 0.09
+      win_rate: 0.58
+    - name: Obsidian Shard
+      pick_rate: 0.08
+      win_rate: 0.58
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.28
-    win_rate: 0.62
+    pick_rate: 0.29
+    win_rate: 0.61
   - name: Sands Of Time
     pick_rate: 0.28
     win_rate: 0.46
@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.13
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-09-19'
-  god_win_rate: 0.5388046387154326
-  god_matches_won: 604
-  god_matches_played: 1121
+  last_verified: '2026-09-20'
+  god_win_rate: 0.5324675324675324
+  god_matches_won: 656
+  god_matches_played: 1232
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-19'
-  god_matches_analyzed: 12806
+  god_window_end: '2026-09-20'
+  god_matches_analyzed: 14083
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -100,8 +100,8 @@ builds:
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
   - Kinetic Cuirass
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -136,22 +136,22 @@ builds:
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.5
     Rod of Tahuti:
-      total: 0.62
+      total: 0.67
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.36
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
       win: 0.59
-      pick: 0.35
+      pick: 0.27
       fit: 0.46
     Amanita Charm:
       total: 0.56
@@ -207,26 +207,26 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.4
     The World Stone:
       total: 0.53
       efficiency: 0.52
       win: 0.6
-      pick: 0.46
+      pick: 0.45
       fit: 0.37
     Rod of Tahuti:
-      total: 0.62
+      total: 0.67
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.37
     Obsidian Shard:
       total: 0.53
       efficiency: 0.54
       win: 0.59
-      pick: 0.35
+      pick: 0.27
       fit: 0.41
     Amanita Charm:
       total: 0.53
@@ -243,7 +243,7 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
+  - Freya's Tears
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
@@ -251,14 +251,14 @@ builds:
   - Amanita Charm
   flex_slots:
   - The World Stone
-  - Book of Thoth
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -273,35 +273,35 @@ builds:
     Idol, Jade Scepter, Wish-Granting Pearl, Magi''s Cloak, Daybreak Gavel, Ancient
     Signet.'
   slot_scores:
-    Book of Thoth:
-      total: 0.45
-      efficiency: 0.51
-      win: 0.55
-      pick: 0.15
-      fit: 0.14
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.49
     The World Stone:
       total: 0.53
       efficiency: 0.52
       win: 0.6
-      pick: 0.46
+      pick: 0.45
       fit: 0.35
     Rod of Tahuti:
-      total: 0.62
+      total: 0.66
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.35
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
       win: 0.59
-      pick: 0.35
+      pick: 0.27
       fit: 0.45
     Amanita Charm:
       total: 0.54
@@ -310,7 +310,6 @@ builds:
       pick: 0.0
       fit: 0.37
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
@@ -326,8 +325,8 @@ builds:
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
   - Kinetic Cuirass
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -356,22 +355,22 @@ builds:
       pick: 0.0
       fit: 0.6
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.5
     Rod of Tahuti:
-      total: 0.62
+      total: 0.67
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.36
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
       win: 0.59
-      pick: 0.35
+      pick: 0.27
       fit: 0.46
     Amanita Charm:
       total: 0.6
@@ -380,9 +379,9 @@ builds:
       pick: 0.0
       fit: 0.8
     Soul Gem:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.2
       fit: 0.9
   community_ordered:
@@ -394,7 +393,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
+  - Stone of Binding
   - Gluttonous Grimoire
   - Spear of Desolation
   - The World Stone
@@ -402,7 +401,7 @@ builds:
   - Obsidian Shard
   flex_slots:
   - The World Stone
-  - Book of Thoth
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -411,8 +410,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -424,12 +423,12 @@ builds:
     of Providence, Draconic Scale, Chronos'' Pendant, Jade Scepter, Wish-Granting
     Pearl, Magi''s Cloak.'
   slot_scores:
-    Book of Thoth:
-      total: 0.46
+    Stone of Binding:
+      total: 0.53
       efficiency: 0.51
-      win: 0.55
-      pick: 0.15
-      fit: 0.17
+      win: 0.56
+      pick: 0.0
+      fit: 0.68
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.55
@@ -439,29 +438,28 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.59
     The World Stone:
       total: 0.55
       efficiency: 0.52
       win: 0.6
-      pick: 0.46
+      pick: 0.45
       fit: 0.48
     Rod of Tahuti:
-      total: 0.64
+      total: 0.68
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.48
     Obsidian Shard:
       total: 0.56
       efficiency: 0.54
       win: 0.59
-      pick: 0.35
+      pick: 0.27
       fit: 0.58
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
@@ -521,7 +519,7 @@ builds:
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.29
     Gluttonous Grimoire:
@@ -531,10 +529,10 @@ builds:
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
-      total: 0.6
+      total: 0.64
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.21
   community_ordered:
   - Spear of Desolation
@@ -570,8 +568,8 @@ builds:
     of Valor, Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Screeching Gargoyle,
     Gluttonous Grimoire, Shifter''s Shield, Chronos'' Pendant, Spear of the Magus,
     Helm of Radiance, Prophetic Cloak, Erosion, Gladiator''s Shield, Eye of Providence,
-    Draconic Scale, Stone of Binding, Gem of Focus, Rod of Asclepius, Eye of Erebus,
-    Magi''s Cloak, Daybreak Gavel, Midgardian Mail, Mantle Of Discord.'
+    Draconic Scale, Stone of Binding, Rod of Asclepius, Eye of Erebus, Magi''s Cloak,
+    Daybreak Gavel, Midgardian Mail, Mantle Of Discord, Gem of Focus.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -586,9 +584,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.52
     Freya's Tears:
@@ -598,10 +596,10 @@ builds:
       pick: 0.0
       fit: 0.58
     Rod of Tahuti:
-      total: 0.6
+      total: 0.64
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.21
     Amanita Charm:
       total: 0.54
@@ -659,9 +657,9 @@ builds:
       pick: 0.0
       fit: 0.6
     Spear of Desolation:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.61
+      win: 0.6
       pick: 0.32
       fit: 0.5
     Freya's Tears:
@@ -671,10 +669,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.62
+      total: 0.67
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.36
     Amanita Charm:
       total: 0.56
@@ -735,7 +733,7 @@ builds:
       total: 0.53
       efficiency: 0.52
       win: 0.6
-      pick: 0.46
+      pick: 0.45
       fit: 0.36
     Freya's Tears:
       total: 0.54
@@ -744,10 +742,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.62
+      total: 0.67
       efficiency: 0.86
-      win: 0.55
-      pick: 0.43
+      win: 0.67
+      pick: 0.22
       fit: 0.36
     Amanita Charm:
       total: 0.56
@@ -761,7 +759,7 @@ builds:
   swaps:
   - added: The World Stone
     removed: Spear of Desolation
-    reason: community 60% win over 381 matches (vs 54% on this god), taking the model's
+    reason: community 60% win over 407 matches (vs 53% on this god), taking the model's
       weakest slot from Spear of Desolation
   starter: *id001
 ---

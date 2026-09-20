@@ -5,29 +5,29 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Grover's Wrath
-  aspect_pick_rate: 0.16
-  aspect_win_rate: 0.53
+  aspect_pick_rate: 0.15
+  aspect_win_rate: 0.54
   slot_order:
   - name: Stampede
     pick_rate: 0.17
-    win_rate: 0.54
+    win_rate: 0.52
     alternates:
     - name: Chandra's Grace
       pick_rate: 0.16
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Tyrfing
-      pick_rate: 0.13
-      win_rate: 0.53
+      pick_rate: 0.12
+      win_rate: 0.54
   - name: Genji's Guard
     pick_rate: 0.16
-    win_rate: 0.47
+    win_rate: 0.48
     alternates:
     - name: Stampede
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.51
     - name: Breastplate of Valor
       pick_rate: 0.08
-      win_rate: 0.46
+      win_rate: 0.49
   - name: Breastplate of Valor
     pick_rate: 0.1
     win_rate: 0.55
@@ -37,56 +37,56 @@ builds:
       win_rate: 0.43
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.62
+      win_rate: 0.61
   - name: Shell of Rebuke
-    pick_rate: 0.1
-    win_rate: 0.56
+    pick_rate: 0.11
+    win_rate: 0.59
     alternates:
     - name: Freya's Tears
       pick_rate: 0.1
       win_rate: 0.54
     - name: Genji's Guard
-      pick_rate: 0.09
-      win_rate: 0.45
+      pick_rate: 0.08
+      win_rate: 0.43
   - name: Freya's Tears
-    pick_rate: 0.09
-    win_rate: 0.55
+    pick_rate: 0.08
+    win_rate: 0.57
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.05
-      win_rate: 0.47
+      win_rate: 0.5
     - name: Genji's Guard
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.48
   - name: Sage's Ring
     pick_rate: 0.06
-    win_rate: 0.52
+    win_rate: 0.5
     alternates:
     - name: Medal of Defense
-      pick_rate: 0.06
-      win_rate: 0.57
-    - name: Captain's Ring
       pick_rate: 0.05
-      win_rate: 0.59
+      win_rate: 0.57
+    - name: Veve Charm
+      pick_rate: 0.05
+      win_rate: 0.42
   community_starters:
   - name: Selflessness
     pick_rate: 0.32
-    win_rate: 0.45
+    win_rate: 0.46
   - name: Heroism
-    pick_rate: 0.15
-    win_rate: 0.61
-  - name: Bluestone Pendant
+    pick_rate: 0.16
+    win_rate: 0.62
+  - name: Conduit Gem
     pick_rate: 0.09
-    win_rate: 0.44
+    win_rate: 0.25
   source_url: https://smitebrain.com/gods/sylvanus/
-  last_verified: '2026-09-19'
-  god_win_rate: 0.5055762081784386
-  god_matches_won: 408
-  god_matches_played: 807
+  last_verified: '2026-09-20'
+  god_win_rate: 0.5095828635851184
+  god_matches_won: 452
+  god_matches_played: 887
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-19'
-  god_matches_analyzed: 12806
+  god_window_end: '2026-09-20'
+  god_matches_analyzed: 14083
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -138,8 +138,8 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.62
     Shifter's Shield:
       total: 0.53
@@ -179,8 +179,8 @@ builds:
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -219,8 +219,8 @@ builds:
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.55
     Shifter's Shield:
       total: 0.53
@@ -284,10 +284,10 @@ builds:
       pick: 0.16
       fit: 0.28
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.44
     Spear of Desolation:
       total: 0.53
@@ -369,10 +369,10 @@ builds:
       pick: 0.0
       fit: 0.46
     Freya's Tears:
-      total: 0.52
+      total: 0.53
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.33
     Amanita Charm:
       total: 0.53
@@ -394,7 +394,7 @@ builds:
   - Spear of Desolation
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Kinetic Cuirass
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,9 +424,9 @@ builds:
       pick: 0.16
       fit: 0.48
     Genji's Guard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
-      win: 0.47
+      win: 0.48
       pick: 0.22
       fit: 0.48
     Kinetic Cuirass:
@@ -436,10 +436,10 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.64
     Spear of Desolation:
       total: 0.51
@@ -486,9 +486,9 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Amanita Charm, Kinetic Cuirass, Shield Splitter, Golden Blade, Runeforged
-    Hammer, Gluttonous Grimoire, Hydra''s Lament, Shifter''s Shield, Spear of Desolation,
-    Eye of the Storm, Tyrfing, Heartseeker, Spear of the Magus, Soul Gem, Helm of
-    Radiance, Obsidian Shard, Lernaean Bow, Shield of the Phoenix, Erosion, Silverbranch
+    Hammer, Gluttonous Grimoire, Hydra''s Lament, Tyrfing, Shifter''s Shield, Spear
+    of Desolation, Eye of the Storm, Heartseeker, Spear of the Magus, Soul Gem, Helm
+    of Radiance, Obsidian Shard, Lernaean Bow, Shield of the Phoenix, Erosion, Silverbranch
     Bow, Eye of Providence, Avenging Blade, Nimble Ring, Tekko-Kagi, Stone of Binding,
     Draconic Scale, Titan''s Bane, Toxic Blade, The Crusher, Screeching Gargoyle,
     Pharaoh''s Curse, Rod of Asclepius, Magi''s Cloak, Bragi''s Harp, The Reaper,
@@ -519,10 +519,10 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.38
     Amanita Charm:
       total: 0.53
@@ -589,10 +589,10 @@ builds:
       pick: 0.0
       fit: 0.5
     Freya's Tears:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.39
     Spear of Desolation:
       total: 0.51
@@ -650,9 +650,9 @@ builds:
       pick: 0.16
       fit: 0.39
     Genji's Guard:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
-      win: 0.47
+      win: 0.48
       pick: 0.22
       fit: 0.39
     Kinetic Cuirass:
@@ -664,8 +664,8 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.55
-      pick: 0.19
+      win: 0.57
+      pick: 0.17
       fit: 0.62
     Shifter's Shield:
       total: 0.53

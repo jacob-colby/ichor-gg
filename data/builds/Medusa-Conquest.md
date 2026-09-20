@@ -13,80 +13,80 @@ builds:
     win_rate: 0.53
     alternates:
     - name: Avenging Blade
-      pick_rate: 0.17
-      win_rate: 0.57
+      pick_rate: 0.18
+      win_rate: 0.59
     - name: Transcendence
       pick_rate: 0.11
-      win_rate: 0.39
+      win_rate: 0.38
   - name: Odysseus' Bow
     pick_rate: 0.16
     win_rate: 0.49
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.15
+      pick_rate: 0.16
       win_rate: 0.53
     - name: Hastened Fatalis
       pick_rate: 0.11
-      win_rate: 0.67
+      win_rate: 0.68
   - name: Riptalon
     pick_rate: 0.14
-    win_rate: 0.47
+    win_rate: 0.49
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.11
-      win_rate: 0.56
+      win_rate: 0.54
     - name: The Executioner
-      pick_rate: 0.09
-      win_rate: 0.48
+      pick_rate: 0.1
+      win_rate: 0.45
   - name: The Executioner
     pick_rate: 0.18
-    win_rate: 0.64
+    win_rate: 0.63
     alternates:
     - name: Riptalon
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.45
     - name: Silverbranch Bow
-      pick_rate: 0.14
-      win_rate: 0.57
+      pick_rate: 0.15
+      win_rate: 0.53
   - name: Silverbranch Bow
-    pick_rate: 0.17
-    win_rate: 0.56
+    pick_rate: 0.16
+    win_rate: 0.57
     alternates:
+    - name: The Executioner
+      pick_rate: 0.09
+      win_rate: 0.62
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.38
-    - name: The Executioner
-      pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.39
   - name: Hunter's Bow
     pick_rate: 0.12
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
     - name: Manchu Bow
-      pick_rate: 0.11
-      win_rate: 0.3
+      pick_rate: 0.12
+      win_rate: 0.31
     - name: Silverbranch Bow
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.64
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.29
+    pick_rate: 0.3
     win_rate: 0.57
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.16
+    win_rate: 0.6
   - name: Leather Cowl
     pick_rate: 0.15
-    win_rate: 0.44
-  - name: Sharpshooter's Arrow
-    pick_rate: 0.15
-    win_rate: 0.64
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/medusa/
-  last_verified: '2026-09-19'
-  god_win_rate: 0.5045592705167173
-  god_matches_won: 166
-  god_matches_played: 329
+  last_verified: '2026-09-20'
+  god_win_rate: 0.5056818181818182
+  god_matches_won: 178
+  god_matches_played: 352
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-19'
-  god_matches_analyzed: 12806
+  god_window_end: '2026-09-20'
+  god_matches_analyzed: 14083
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -150,10 +150,10 @@ builds:
       pick: 0.0
       fit: 0.43
     Silverbranch Bow:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.45
     Rod of Tahuti:
       total: 0.57
@@ -221,10 +221,10 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.5
+      total: 0.51
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.33
     Rod of Tahuti:
       total: 0.59
@@ -297,8 +297,8 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.43
     Demon Blade:
       total: 0.47
@@ -326,7 +326,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Silverbranch Bow
+  - Death Metal
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -372,8 +372,8 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.42
     Rod of Tahuti:
       total: 0.59
@@ -447,8 +447,8 @@ builds:
     Silverbranch Bow:
       total: 0.5
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.31
     Amanita Charm:
       total: 0.56
@@ -468,15 +468,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
+  - Avenging Blade
   - The Executioner
-  - Death Metal
+  - Jotunn's Revenge
   - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - The Executioner
-  - Death Metal
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -500,29 +500,29 @@ builds:
     Signet, The Cosmic Horror, Arondight, Blood-Bound Book, Oath-Sworn Spear, Runeforged
     Hammer, Transcendence.'
   slot_scores:
+    Avenging Blade:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.59
+      pick: 0.18
+      fit: 0.52
+    The Executioner:
+      total: 0.51
+      efficiency: 0.35
+      win: 0.63
+      pick: 0.3
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.53
       pick: 0.0
       fit: 0.5
-    The Executioner:
-      total: 0.52
-      efficiency: 0.35
-      win: 0.64
-      pick: 0.3
-      fit: 0.59
-    Death Metal:
-      total: 0.51
-      efficiency: 0.61
-      win: 0.53
-      pick: 0.0
-      fit: 0.36
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.55
     Rod of Tahuti:
       total: 0.59
@@ -537,6 +537,7 @@ builds:
       pick: 0.0
       fit: 0.59
   community_ordered:
+  - Avenging Blade
   - The Executioner
   - Silverbranch Bow
   starter: *id001
@@ -602,8 +603,8 @@ builds:
     Silverbranch Bow:
       total: 0.53
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.49
     Rod of Tahuti:
       total: 0.56
@@ -671,8 +672,8 @@ builds:
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.35
     Rod of Tahuti:
       total: 0.57
@@ -751,8 +752,8 @@ builds:
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.37
     Rod of Tahuti:
       total: 0.59
@@ -823,10 +824,10 @@ builds:
       pick: 0.0
       fit: 0.53
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
-      win: 0.56
-      pick: 0.37
+      win: 0.57
+      pick: 0.35
       fit: 0.38
     Rod of Tahuti:
       total: 0.58
@@ -951,9 +952,9 @@ builds:
       pick: 0.0
       fit: 0.39
     The Executioner:
-      total: 0.48
+      total: 0.47
       efficiency: 0.35
-      win: 0.64
+      win: 0.63
       pick: 0.3
       fit: 0.34
     Nimble Ring:
@@ -985,7 +986,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Lernaean Bow
-    reason: community 64% win over 59 matches (vs 50% on this god), taking the model's
+    reason: community 63% win over 63 matches (vs 51% on this god), taking the model's
       weakest slot from Lernaean Bow
   starter: *id001
 ---
