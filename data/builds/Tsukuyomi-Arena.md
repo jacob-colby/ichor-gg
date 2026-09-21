@@ -660,13 +660,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
-  - Hydra's Lament
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
+  - Jotunn's Revenge
   - Avatar's Parashu
-  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -695,18 +695,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Tyrfing:
       total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Hydra's Lament:
-      total: 0.47
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Avatar's Parashu:
       total: 0.55
       efficiency: 0.45
@@ -722,12 +722,8 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Golden Blade
-    reason: Conquest community 72% win over 138 matches (vs 54% on this god), taking
+    reason: Conquest community 74% win over 151 matches (vs 54% on this god), taking
       the model's weakest slot from Golden Blade
-  - added: Hydra's Lament
-    removed: Jotunn's Revenge
-    reason: Conquest community 62% win over 138 matches (vs 54% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---

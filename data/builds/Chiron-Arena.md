@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Tyrfing
-    reason: Conquest community 65% win over 118 matches (vs 54% on this god), taking
+    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
@@ -1322,7 +1322,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Transcendence
-    reason: Conquest community 65% win over 118 matches (vs 54% on this god), taking
+    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
       the model's weakest slot from Transcendence
   borrowed_from: Conquest
   starter: *id001

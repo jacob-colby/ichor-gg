@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Stygian Anchor
-    reason: Conquest community 65% win over 128 matches (vs 54% on this god), taking
+    reason: Conquest community 63% win over 139 matches (vs 54% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

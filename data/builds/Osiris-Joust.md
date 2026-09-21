@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.65
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Berserker's Shield
+  - Gladiator's Shield
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Berserker's Shield
+  - Gladiator's Shield
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Berserker's Shield:
+      total: 0.56
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Gladiator's Shield:
+      total: 0.39
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Amanita Charm:
+      total: 0.73
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  swaps:
+  - added: Gladiator's Shield
+    removed: Tyrfing
+    reason: Conquest community 63% win over 58 matches (vs 50% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

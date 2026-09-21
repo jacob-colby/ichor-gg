@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Thunderstruck
   aspect_pick_rate: 0.5
-  aspect_win_rate: 0.58
+  aspect_win_rate: 0.57
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.4
@@ -17,9 +17,9 @@ builds:
       win_rate: 0.56
     - name: Shifter's Shield
       pick_rate: 0.1
-      win_rate: 0.58
+      win_rate: 0.56
   - name: Shifter's Shield
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
@@ -33,18 +33,18 @@ builds:
     win_rate: 0.57
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.54
     - name: The Crusher
       pick_rate: 0.09
-      win_rate: 0.59
+      win_rate: 0.6
   - name: Heartseeker
     pick_rate: 0.22
     win_rate: 0.57
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Genji's Guard
       pick_rate: 0.08
       win_rate: 0.61
@@ -54,20 +54,20 @@ builds:
     alternates:
     - name: Heartseeker
       pick_rate: 0.09
-      win_rate: 0.54
+      win_rate: 0.55
     - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.59
+      win_rate: 0.6
   - name: Skeggox
     pick_rate: 0.07
     win_rate: 0.57
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.05
-      win_rate: 0.51
+      pick_rate: 0.04
+      win_rate: 0.53
     - name: Engraved Guard
       pick_rate: 0.04
-      win_rate: 0.4
+      win_rate: 0.43
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.27
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.59
   - name: Bumba's Cudgel
     pick_rate: 0.17
-    win_rate: 0.49
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-09-20'
-  god_win_rate: 0.5650793650793651
-  god_matches_won: 1068
-  god_matches_played: 1890
+  last_verified: '2026-09-21'
+  god_win_rate: 0.5621414913957935
+  god_matches_won: 1176
+  god_matches_played: 2092
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-20'
-  god_matches_analyzed: 14083
+  god_window_end: '2026-09-21'
+  god_matches_analyzed: 15551
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -117,7 +117,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Runeforged Hammer, Genji''s Guard, Kinetic Cuirass, Shield
-    Splitter, Eye of the Storm, The Crusher, Avenging Blade, Berserker''s Shield,
+    Splitter, The Crusher, Eye of the Storm, Avenging Blade, Berserker''s Shield,
     Breastplate of Valor, The Reaper, Erosion, Eye of Providence, Golden Blade, Draconic
     Scale, Shield of the Phoenix, Avatar''s Parashu, Midgardian Mail, Stone of Binding,
     Tyrfing, Pendulum Blade, Transcendence, Hide of the Nemean Lion.'
@@ -191,11 +191,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
-    Guard, Amanita Charm, Breastplate of Valor, Runeforged Hammer, Kinetic Cuirass,
-    The Crusher, Shield Splitter, Eye of the Storm, Berserker''s Shield, Avenging
-    Blade, Shield of the Phoenix, Transcendence, The Reaper, Arondight, Screeching
-    Gargoyle, Erosion, Eye of Providence, Oni Hunter''s Garb, Pendulum Blade, Stone
-    of Binding, Draconic Scale, Midgardian Mail, Tyrfing.'
+    Guard, Amanita Charm, Breastplate of Valor, Runeforged Hammer, The Crusher, Kinetic
+    Cuirass, Shield Splitter, Eye of the Storm, Berserker''s Shield, Avenging Blade,
+    Shield of the Phoenix, Transcendence, The Reaper, Arondight, Screeching Gargoyle,
+    Erosion, Eye of Providence, Oni Hunter''s Garb, Pendulum Blade, Stone of Binding,
+    Draconic Scale, Midgardian Mail, Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -255,8 +255,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -340,8 +340,8 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Genji''s Guard,
     Runeforged Hammer, The Reaper, Shield Splitter, Eye of the Storm, Berserker''s
-    Shield, Erosion, Eye of Providence, Breastplate of Valor, Yogi''s Necklace, Draconic
-    Scale, The Crusher, Avenging Blade, Phoenix Feather, Stone of Binding, Midgardian
+    Shield, Erosion, The Crusher, Eye of Providence, Breastplate of Valor, Yogi''s
+    Necklace, Draconic Scale, Avenging Blade, Phoenix Feather, Stone of Binding, Midgardian
     Mail, Chandra''s Grace, Hide of the Nemean Lion, Magi''s Cloak, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
@@ -366,7 +366,7 @@ builds:
       total: 0.55
       efficiency: 0.55
       win: 0.58
-      pick: 0.25
+      pick: 0.26
       fit: 0.55
     Shield of the Phoenix:
       total: 0.55
@@ -432,7 +432,7 @@ builds:
     The Crusher:
       total: 0.55
       efficiency: 0.47
-      win: 0.59
+      win: 0.6
       pick: 0.14
       fit: 0.72
     Heartseeker:
@@ -541,8 +541,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
   - Hydra's Lament
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -559,8 +559,8 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
     Amanita Charm, Shield of the Phoenix, Screeching Gargoyle, Kinetic Cuirass, Runeforged
-    Hammer, Arondight, Berserker''s Shield, Gladiator''s Shield, Pendulum Blade, Eye
-    of Erebus, Shield Splitter, Prophetic Cloak, The Crusher, Chandra''s Grace, Eye
+    Hammer, Arondight, Berserker''s Shield, Gladiator''s Shield, Pendulum Blade, The
+    Crusher, Eye of Erebus, Shield Splitter, Prophetic Cloak, Chandra''s Grace, Eye
     of the Storm, Erosion, Eye of Providence, Avenging Blade, Draconic Scale, Stone
     of Binding, Midgardian Mail.'
   slot_scores:
@@ -589,10 +589,10 @@ builds:
       pick: 0.25
       fit: 0.56
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.54
-      pick: 0.16
+      win: 0.5
+      pick: 0.15
       fit: 0.53
     Amanita Charm:
       total: 0.53

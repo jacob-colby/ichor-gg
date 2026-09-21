@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the General
   aspect_pick_rate: 0.9
-  aspect_win_rate: 0.51
+  aspect_win_rate: 0.52
   slot_order:
   - name: Chandra's Grace
     pick_rate: 0.28
@@ -19,13 +19,13 @@ builds:
       pick_rate: 0.11
       win_rate: 0.55
   - name: Breastplate of Valor
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.55
     alternates:
     - name: Genji's Guard
       pick_rate: 0.18
       win_rate: 0.42
-    - name: Heartwood Charm
+    - name: Chronos' Pendant
       pick_rate: 0.08
       win_rate: 0.52
   - name: Genji's Guard
@@ -39,54 +39,54 @@ builds:
       pick_rate: 0.1
       win_rate: 0.6
   - name: Freya's Tears
-    pick_rate: 0.13
-    win_rate: 0.58
+    pick_rate: 0.14
+    win_rate: 0.57
     alternates:
     - name: Genji's Guard
       pick_rate: 0.15
       win_rate: 0.53
     - name: Shell of Rebuke
       pick_rate: 0.09
-      win_rate: 0.61
+      win_rate: 0.6
   - name: Shell of Rebuke
     pick_rate: 0.09
-    win_rate: 0.59
+    win_rate: 0.57
     alternates:
     - name: Freya's Tears
       pick_rate: 0.12
       win_rate: 0.59
     - name: Sage's Ring
       pick_rate: 0.05
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Sage's Ring
     pick_rate: 0.06
-    win_rate: 0.57
+    win_rate: 0.55
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.59
+      win_rate: 0.61
     - name: Captain's Ring
       pick_rate: 0.06
       win_rate: 0.52
   community_starters:
   - name: Sands Of Time
-    pick_rate: 0.41
-    win_rate: 0.47
+    pick_rate: 0.42
+    win_rate: 0.48
   - name: Pendulum of the Ages
     pick_rate: 0.24
     win_rate: 0.61
-  - name: Selflessness
-    pick_rate: 0.07
-    win_rate: 0.51
+  - name: Bumba's Cudgel
+    pick_rate: 0.09
+    win_rate: 0.2
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-09-20'
-  god_win_rate: 0.5146612740141557
-  god_matches_won: 509
-  god_matches_played: 989
+  last_verified: '2026-09-21'
+  god_win_rate: 0.5168539325842697
+  god_matches_won: 552
+  god_matches_played: 1068
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-20'
-  god_matches_analyzed: 14083
+  god_window_end: '2026-09-21'
+  god_matches_analyzed: 15551
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -139,7 +139,7 @@ builds:
       total: 0.54
       efficiency: 0.65
       win: 0.55
-      pick: 0.29
+      pick: 0.27
       fit: 0.32
     Jotunn's Revenge:
       total: 0.56
@@ -150,8 +150,8 @@ builds:
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.49
     Amanita Charm:
       total: 0.55
@@ -176,7 +176,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
+  - Freya's Tears
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -226,8 +226,8 @@ builds:
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.45
     Amanita Charm:
       total: 0.6
@@ -288,7 +288,7 @@ builds:
       total: 0.53
       efficiency: 0.65
       win: 0.55
-      pick: 0.29
+      pick: 0.27
       fit: 0.24
     Jotunn's Revenge:
       total: 0.58
@@ -299,8 +299,8 @@ builds:
     Freya's Tears:
       total: 0.54
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.37
     Amanita Charm:
       total: 0.53
@@ -371,10 +371,10 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.34
     Amanita Charm:
       total: 0.53
@@ -435,7 +435,7 @@ builds:
       total: 0.56
       efficiency: 0.65
       win: 0.55
-      pick: 0.29
+      pick: 0.27
       fit: 0.44
     Jotunn's Revenge:
       total: 0.56
@@ -446,8 +446,8 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.58
     Amanita Charm:
       total: 0.54
@@ -520,8 +520,8 @@ builds:
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.58
-      pick: 0.22
+      win: 0.57
+      pick: 0.23
       fit: 0.49
     Amanita Charm:
       total: 0.55

@@ -722,11 +722,11 @@ builds:
   swaps:
   - added: Odysseus' Bow
     removed: Toxic Blade
-    reason: Conquest community 66% win over 437 matches (vs 60% on this god), taking
+    reason: Conquest community 65% win over 496 matches (vs 60% on this god), taking
       the model's weakest slot from Toxic Blade
   - added: Silverbranch Bow
     removed: Demon Blade
-    reason: Conquest community 68% win over 175 matches (vs 60% on this god), taking
+    reason: Conquest community 67% win over 195 matches (vs 60% on this god), taking
       the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001

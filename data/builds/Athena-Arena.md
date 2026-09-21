@@ -530,20 +530,20 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Shell of Rebuke
-  - Spirit Robe
-  - Hussar's Wings
+  - Void Shield
+  - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Spirit Robe
+  - Void Shield
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -565,18 +565,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Spirit Robe:
-      total: 0.54
-      efficiency: 0.34
+    Void Shield:
+      total: 0.65
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Hussar's Wings:
-      total: 0.64
-      efficiency: 0.39
+      fit: 0.84
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 1.0
     Erosion:
       total: 0.75
       efficiency: 0.51
@@ -590,14 +590,10 @@ builds:
       pick: 0.0
       fit: 0.84
   swaps:
-  - added: Spirit Robe
-    removed: Void Stone
-    reason: Conquest community 74% win over 46 matches (vs 55% on this god), taking
-      the model's weakest slot from Void Stone
   - added: Shell of Rebuke
-    removed: Void Shield
-    reason: Conquest community 65% win over 120 matches (vs 55% on this god), taking
-      the model's weakest slot from Void Shield
+    removed: Void Stone
+    reason: Conquest community 64% win over 132 matches (vs 55% on this god), taking
+      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

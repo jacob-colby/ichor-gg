@@ -6,17 +6,17 @@ builds:
 - source: community
   aspect: Aspect of the Mark
   aspect_pick_rate: 0.1
-  aspect_win_rate: 0.55
+  aspect_win_rate: 0.53
   slot_order:
   - name: Tyrfing
     pick_rate: 0.54
     win_rate: 0.53
     alternates:
     - name: Avenging Blade
-      pick_rate: 0.3
-      win_rate: 0.56
+      pick_rate: 0.29
+      win_rate: 0.54
     - name: Devourer's Gauntlet
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.53
   - name: Dagger of Frenzy
     pick_rate: 0.4
@@ -28,13 +28,13 @@ builds:
     - name: Hastened Fatalis
       pick_rate: 0.05
       win_rate: 0.58
-  - name: Dominance
+  - name: Riptalon
     pick_rate: 0.17
-    win_rate: 0.56
+    win_rate: 0.58
     alternates:
-    - name: Riptalon
+    - name: Dominance
       pick_rate: 0.17
-      win_rate: 0.59
+      win_rate: 0.56
     - name: Odysseus' Bow
       pick_rate: 0.14
       win_rate: 0.52
@@ -43,50 +43,50 @@ builds:
     win_rate: 0.54
     alternates:
     - name: Riptalon
-      pick_rate: 0.17
-      win_rate: 0.55
+      pick_rate: 0.18
+      win_rate: 0.54
     - name: Silverbranch Bow
       pick_rate: 0.15
       win_rate: 0.51
-  - name: Riptalon
-    pick_rate: 0.17
-    win_rate: 0.52
+  - name: Silverbranch Bow
+    pick_rate: 0.15
+    win_rate: 0.57
     alternates:
-    - name: Silverbranch Bow
-      pick_rate: 0.15
-      win_rate: 0.56
+    - name: Riptalon
+      pick_rate: 0.17
+      win_rate: 0.52
     - name: Deathbringer
       pick_rate: 0.11
-      win_rate: 0.59
+      win_rate: 0.58
   - name: Manchu Bow
     pick_rate: 0.1
-    win_rate: 0.44
+    win_rate: 0.47
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.08
-      win_rate: 0.45
-    - name: Bow
+      win_rate: 0.46
+    - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.51
+      win_rate: 0.64
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.38
-    win_rate: 0.57
+    win_rate: 0.56
   - name: Hunter's Cowl
     pick_rate: 0.22
     win_rate: 0.59
   - name: Gilded Arrow
-    pick_rate: 0.19
-    win_rate: 0.45
+    pick_rate: 0.2
+    win_rate: 0.44
   source_url: https://smitebrain.com/gods/hou-yi/
-  last_verified: '2026-09-20'
-  god_win_rate: 0.5303834808259587
-  god_matches_won: 899
-  god_matches_played: 1695
+  last_verified: '2026-09-21'
+  god_win_rate: 0.5275548421615838
+  god_matches_won: 986
+  god_matches_played: 1869
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-20'
-  god_matches_analyzed: 14083
+  god_window_end: '2026-09-21'
+  god_matches_analyzed: 15551
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -101,7 +101,7 @@ builds:
   - Deathbringer
   flex_slots:
   - Silverbranch Bow
-  - Riptalon
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -143,21 +143,21 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.51
+      total: 0.54
       efficiency: 0.51
-      win: 0.52
-      pick: 0.37
+      win: 0.58
+      pick: 0.26
       fit: 0.55
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.32
       fit: 0.44
     Deathbringer:
       total: 0.52
       efficiency: 0.51
-      win: 0.59
+      win: 0.58
       pick: 0.24
       fit: 0.46
   community_ordered:
@@ -173,13 +173,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - Hydra's Lament
   - Death Metal
-  - Dominance
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Dominance
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -214,18 +214,18 @@ builds:
       win: 0.53
       pick: 0.54
       fit: 0.5
+    Hydra's Lament:
+      total: 0.5
+      efficiency: 0.54
+      win: 0.54
+      pick: 0.0
+      fit: 0.42
     Death Metal:
       total: 0.53
       efficiency: 0.61
       win: 0.54
       pick: 0.0
       fit: 0.51
-    Dominance:
-      total: 0.5
-      efficiency: 0.45
-      win: 0.56
-      pick: 0.26
-      fit: 0.5
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
@@ -240,7 +240,6 @@ builds:
       fit: 0.54
   community_ordered:
   - Tyrfing
-  - Dominance
   starter: *id001
 - source: suggested
   archetype: crit
@@ -248,11 +247,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - Silverbranch Bow
+  - Riptalon
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Silverbranch Bow
+  - Deathbringer
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,12 +293,12 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.55
-    Silverbranch Bow:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.32
-      fit: 0.42
+    Riptalon:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.58
+      pick: 0.26
+      fit: 0.52
     Demon Blade:
       total: 0.49
       efficiency: 0.38
@@ -307,14 +306,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Deathbringer:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
-      win: 0.59
+      win: 0.58
       pick: 0.24
       fit: 0.49
   community_ordered:
   - Tyrfing
-  - Silverbranch Bow
+  - Riptalon
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -322,13 +321,13 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Tyrfing
   - Kinetic Cuirass
+  - Death Metal
   - Riptalon
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Tyrfing
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -353,7 +352,7 @@ builds:
     Daybreak Gavel, Hydra''s Lament, Stone of Binding, Sphere of Negation.'
   slot_scores:
     Berserker's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.68
       win: 0.54
       pick: 0.0
@@ -364,23 +363,23 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.18
-    Tyrfing:
-      total: 0.5
-      efficiency: 0.48
-      win: 0.53
-      pick: 0.54
-      fit: 0.47
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
       win: 0.54
       pick: 0.0
       fit: 0.46
+    Death Metal:
+      total: 0.51
+      efficiency: 0.61
+      win: 0.54
+      pick: 0.0
+      fit: 0.33
     Riptalon:
-      total: 0.53
+      total: 0.55
       efficiency: 0.51
-      win: 0.52
-      pick: 0.37
+      win: 0.58
+      pick: 0.26
       fit: 0.65
     Amanita Charm:
       total: 0.57
@@ -389,7 +388,6 @@ builds:
       pick: 0.0
       fit: 0.66
   community_ordered:
-  - Tyrfing
   - Riptalon
   starter: *id001
 - source: suggested
@@ -402,8 +400,8 @@ builds:
   - Silverbranch Bow
   - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - Death Metal
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -445,19 +443,19 @@ builds:
       pick: 0.0
       fit: 0.38
     Riptalon:
-      total: 0.53
+      total: 0.55
       efficiency: 0.51
-      win: 0.52
-      pick: 0.37
+      win: 0.58
+      pick: 0.26
       fit: 0.68
     Silverbranch Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.32
       fit: 0.6
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.86
       win: 0.54
       pick: 0.0
@@ -477,8 +475,8 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
+  - Jotunn's Revenge
   - Death Metal
-  - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -502,7 +500,7 @@ builds:
     Berserker''s Shield, Bancroft''s Talon, Doom Orb, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.72
       win: 0.54
       pick: 0.0
@@ -526,15 +524,15 @@ builds:
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.51
+      total: 0.54
       efficiency: 0.51
-      win: 0.52
-      pick: 0.37
+      win: 0.58
+      pick: 0.26
       fit: 0.56
     Silverbranch Bow:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
+      win: 0.57
       pick: 0.32
       fit: 0.47
   community_ordered:
@@ -689,15 +687,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
-  - Nimble Ring
+  - Tyrfing
   - Death Metal
-  - Rod of Tahuti
+  - Riptalon
+  - Silverbranch Bow
+  - Deathbringer
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Tyrfing
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -721,42 +719,47 @@ builds:
     Toxic Blade, Transcendence, Runeforged Hammer, Avatar''s Parashu, Arondight, Gem
     of Focus, The Cosmic Horror, Rod of Asclepius, Book of Thoth.'
   slot_scores:
-    Book of Thoth:
-      total: 0.45
-      efficiency: 0.51
-      win: 0.54
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.72
       win: 0.54
       pick: 0.0
       fit: 0.36
-    Transcendence:
-      total: 0.45
-      efficiency: 0.53
-      win: 0.54
-      pick: 0.0
-      fit: 0.18
-    Nimble Ring:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.54
-      pick: 0.0
-      fit: 0.45
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.53
+      pick: 0.54
+      fit: 0.55
     Death Metal:
       total: 0.54
       efficiency: 0.61
       win: 0.54
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
-      win: 0.54
-      pick: 0.0
-      fit: 0.33
+    Riptalon:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.58
+      pick: 0.26
+      fit: 0.5
+    Silverbranch Bow:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.32
+      fit: 0.42
+    Deathbringer:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.58
+      pick: 0.24
+      fit: 0.37
+  community_ordered:
+  - Tyrfing
+  - Riptalon
+  - Silverbranch Bow
+  - Deathbringer
   starter: *id001
 - source: suggested
   archetype: model
@@ -811,7 +814,7 @@ builds:
       pick: 0.0
       fit: 0.27
     Nimble Ring:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
       win: 0.54
       pick: 0.0

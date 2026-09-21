@@ -13,23 +13,23 @@ builds:
     win_rate: 0.45
     alternates:
     - name: Daybreak Gavel
-      pick_rate: 0.27
+      pick_rate: 0.29
       win_rate: 0.49
     - name: Shifter's Shield
       pick_rate: 0.09
-      win_rate: 0.46
+      win_rate: 0.47
   - name: Shifter's Shield
     pick_rate: 0.18
-    win_rate: 0.5
+    win_rate: 0.51
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.12
-      win_rate: 0.43
+      win_rate: 0.44
     - name: Barbed Carver
       pick_rate: 0.1
       win_rate: 0.45
   - name: The Reaper
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.43
     alternates:
     - name: The Crusher
@@ -37,9 +37,9 @@ builds:
       win_rate: 0.49
     - name: Shifter's Shield
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.45
   - name: Heartseeker
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.49
     alternates:
     - name: Freya's Tears
@@ -50,43 +50,43 @@ builds:
       win_rate: 0.49
   - name: Titan's Bane
     pick_rate: 0.06
-    win_rate: 0.51
+    win_rate: 0.53
     alternates:
     - name: Heartseeker
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.54
     - name: Blinking Abyss
       pick_rate: 0.05
-      win_rate: 0.51
+      win_rate: 0.52
   - name: Skeggox
     pick_rate: 0.07
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.05
-      win_rate: 0.58
     - name: Lucerne Hammer
       pick_rate: 0.05
       win_rate: 0.33
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.05
+      win_rate: 0.56
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.31
+    pick_rate: 0.32
     win_rate: 0.53
   - name: Bumba's Cudgel
     pick_rate: 0.19
-    win_rate: 0.34
+    win_rate: 0.33
   - name: Bluestone Brooch
     pick_rate: 0.11
-    win_rate: 0.54
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/ravana/
-  last_verified: '2026-09-20'
-  god_win_rate: 0.4681753889674682
-  god_matches_won: 662
-  god_matches_played: 1414
+  last_verified: '2026-09-21'
+  god_win_rate: 0.46981627296587924
+  god_matches_won: 716
+  god_matches_played: 1524
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-20'
-  god_matches_analyzed: 14083
+  god_window_end: '2026-09-21'
+  god_matches_analyzed: 15551
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -107,18 +107,18 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Freya''s Tears, Amanita Charm, Runeforged Hammer, Kinetic Cuirass, Shield
-    Splitter, Eye of the Storm, Genji''s Guard, Breastplate of Valor, Hydra''s Lament,
-    Titan''s Bane, Berserker''s Shield, Avenging Blade, Shield of the Phoenix, Erosion,
+    this god: Freya''s Tears, Amanita Charm, Runeforged Hammer, Kinetic Cuirass, Titan''s
+    Bane, Shield Splitter, Eye of the Storm, Genji''s Guard, Breastplate of Valor,
+    Hydra''s Lament, Berserker''s Shield, Avenging Blade, Shield of the Phoenix, Erosion,
     Eye of Providence, Draconic Scale, Pendulum Blade, Arondight, Midgardian Mail,
     Golden Blade, Screeching Gargoyle, Stone of Binding, Avatar''s Parashu.'
   slot_scores:
@@ -150,7 +150,7 @@ builds:
       total: 0.5
       efficiency: 0.47
       win: 0.49
-      pick: 0.4
+      pick: 0.38
       fit: 0.65
     Amanita Charm:
       total: 0.51
@@ -182,8 +182,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -192,7 +192,7 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Freya''s
     Tears, Amanita Charm, Genji''s Guard, Breastplate of Valor, Hydra''s Lament, Runeforged
-    Hammer, Kinetic Cuirass, Titan''s Bane, Shield Splitter, Eye of the Storm, Berserker''s
+    Hammer, Titan''s Bane, Kinetic Cuirass, Shield Splitter, Eye of the Storm, Berserker''s
     Shield, Avenging Blade, Shield of the Phoenix, Transcendence, Arondight, Screeching
     Gargoyle, Erosion, Eye of Providence, Oni Hunter''s Garb, Stone of Binding, Draconic
     Scale, Pendulum Blade, Midgardian Mail.'
@@ -225,7 +225,7 @@ builds:
       total: 0.5
       efficiency: 0.47
       win: 0.49
-      pick: 0.4
+      pick: 0.38
       fit: 0.62
     Amanita Charm:
       total: 0.49
@@ -255,8 +255,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -264,8 +264,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Freya''s Tears, Amanita Charm, Genji''s Guard, Breastplate of Valor, Runeforged
-    Hammer, Kinetic Cuirass, Titan''s Bane, Hydra''s Lament, Berserker''s Shield,
+    god: Freya''s Tears, Amanita Charm, Genji''s Guard, Titan''s Bane, Breastplate
+    of Valor, Runeforged Hammer, Kinetic Cuirass, Hydra''s Lament, Berserker''s Shield,
     Shield of the Phoenix, Shield Splitter, Eye of the Storm, Pendulum Blade, Avenging
     Blade, Screeching Gargoyle, Arondight, Erosion, Eye of Providence, Draconic Scale,
     Avatar''s Parashu, Stone of Binding, Midgardian Mail, Leviathan''s Hide.'
@@ -298,7 +298,7 @@ builds:
       total: 0.49
       efficiency: 0.47
       win: 0.49
-      pick: 0.4
+      pick: 0.38
       fit: 0.6
     Amanita Charm:
       total: 0.49
@@ -321,8 +321,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -339,8 +339,8 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Freya''s Tears, Shield of the Phoenix, Kinetic Cuirass,
     Runeforged Hammer, Shield Splitter, Genji''s Guard, Breastplate of Valor, Eye
-    of the Storm, Berserker''s Shield, Erosion, Yogi''s Necklace, Eye of Providence,
-    Hydra''s Lament, Titan''s Bane, Draconic Scale, Phoenix Feather, Avenging Blade,
+    of the Storm, Berserker''s Shield, Titan''s Bane, Erosion, Yogi''s Necklace, Eye
+    of Providence, Hydra''s Lament, Draconic Scale, Phoenix Feather, Avenging Blade,
     Chandra''s Grace, Glorious Pridwen, Stone of Binding, Midgardian Mail, Magi''s
     Cloak.'
   slot_scores:
@@ -365,7 +365,7 @@ builds:
     Shifter's Shield:
       total: 0.51
       efficiency: 0.55
-      win: 0.5
+      win: 0.51
       pick: 0.25
       fit: 0.51
     Freya's Tears:
@@ -395,7 +395,7 @@ builds:
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Titan's Bane
+  - Avenging Blade
   - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -411,7 +411,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Freya''s Tears, Avenging Blade, Titan''s Bane, Amanita Charm, Screeching
+    for this god: Titan''s Bane, Freya''s Tears, Avenging Blade, Amanita Charm, Screeching
     Gargoyle, Runeforged Hammer, Stone of Binding, Kinetic Cuirass, Void Shield, Genji''s
     Guard, Breastplate of Valor, Void Stone, Hydra''s Lament, Shield Splitter, Pendulum
     Blade, Eye of the Storm, Berserker''s Shield, Avatar''s Parashu, Shield of the
@@ -439,12 +439,12 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.49
-      pick: 0.4
+      pick: 0.38
       fit: 0.77
     Titan's Bane:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.51
+      win: 0.53
       pick: 0.13
       fit: 0.67
     Amanita Charm:
@@ -476,11 +476,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Hide of the Nemean Lion — physical protection
-    swap_item: Hide of the Nemean Lion
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -548,8 +548,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,9 +559,9 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Genji''s Guard, Breastplate
     of Valor, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Kinetic Cuirass,
-    Screeching Gargoyle, Runeforged Hammer, Berserker''s Shield, Arondight, Gladiator''s
-    Shield, Eye of Erebus, Pendulum Blade, Shield Splitter, Prophetic Cloak, Titan''s
-    Bane, Chandra''s Grace, Eye of the Storm, Erosion, Eye of Providence, Avenging
+    Screeching Gargoyle, Runeforged Hammer, Berserker''s Shield, Arondight, Titan''s
+    Bane, Gladiator''s Shield, Eye of Erebus, Pendulum Blade, Shield Splitter, Prophetic
+    Cloak, Chandra''s Grace, Eye of the Storm, Erosion, Eye of Providence, Avenging
     Blade, Draconic Scale, Midgardian Mail, Stone of Binding.'
   slot_scores:
     Genji's Guard:

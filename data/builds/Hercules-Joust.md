@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Void Shield
-    reason: Conquest community 71% win over 36 matches (vs 48% on this god), taking
+    reason: Conquest community 71% win over 35 matches (vs 48% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
@@ -929,7 +929,7 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Shield of the Phoenix
-    reason: Conquest community 71% win over 36 matches (vs 48% on this god), taking
+    reason: Conquest community 71% win over 35 matches (vs 48% on this god), taking
       the model's weakest slot from Shield of the Phoenix
   borrowed_from: Conquest
   starter: *id001

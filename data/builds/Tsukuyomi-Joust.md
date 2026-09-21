@@ -660,13 +660,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Hydra's Lament
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Avatar's Parashu
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -695,18 +695,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
       total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Hydra's Lament:
-      total: 0.47
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Avatar's Parashu:
       total: 0.45
       efficiency: 0.45
@@ -722,11 +722,11 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Bragi's Harp
-    reason: Conquest community 72% win over 138 matches (vs 54% on this god), taking
+    reason: Conquest community 74% win over 151 matches (vs 54% on this god), taking
       the model's weakest slot from Bragi's Harp
-  - added: Hydra's Lament
+  - added: Transcendence
     removed: Death Metal
-    reason: Conquest community 62% win over 138 matches (vs 54% on this god), taking
+    reason: Conquest community 60% win over 328 matches (vs 54% on this god), taking
       the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
