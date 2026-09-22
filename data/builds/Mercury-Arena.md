@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - The Reaper
+  - Pendulum Blade
+  - Heartseeker
+  - Avatar's Parashu
+  flex_slots:
+  - Toxic Blade
+  - Pendulum Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.64
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Jotunn's Revenge:
+      total: 0.78
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    The Reaper:
+      total: 0.71
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+    Pendulum Blade:
+      total: 0.63
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Heartseeker:
+      total: 0.67
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Avatar's Parashu:
+      total: 0.66
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+  swaps:
+  - added: Avatar's Parashu
+    removed: Tyrfing
+    reason: Conquest community 72% win over 33 matches (vs 54% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

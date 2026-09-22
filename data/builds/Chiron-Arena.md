@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Lernaean Bow
   - Avatar's Parashu
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -618,12 +618,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Toxic Blade:
       total: 0.6
       efficiency: 0.44
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Titan's Bane:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Avatar's Parashu:
       total: 0.5
       efficiency: 0.45
@@ -657,8 +657,12 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Tyrfing
-    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
+    reason: Conquest community 64% win over 128 matches (vs 53% on this god), taking
       the model's weakest slot from Tyrfing
+  - added: Titan's Bane
+    removed: Lernaean Bow
+    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
+      the model's weakest slot from Lernaean Bow
   borrowed_from: Conquest
   starter: *id001
 - source: suggested
@@ -1262,11 +1266,11 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Heartseeker
   - Avatar's Parashu
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -1307,12 +1311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Heartseeker:
-      total: 0.54
+    Titan's Bane:
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.51
     Avatar's Parashu:
       total: 0.53
       efficiency: 0.45
@@ -1322,8 +1326,12 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Transcendence
-    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
+    reason: Conquest community 64% win over 128 matches (vs 53% on this god), taking
       the model's weakest slot from Transcendence
+  - added: Titan's Bane
+    removed: Heartseeker
+    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
+      the model's weakest slot from Heartseeker
   borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of the Heroic Tutor

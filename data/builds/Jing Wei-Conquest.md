@@ -9,52 +9,52 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.33
-    win_rate: 0.33
+    pick_rate: 0.32
+    win_rate: 0.34
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.31
-      win_rate: 0.45
+      win_rate: 0.42
     - name: Avenging Blade
-      pick_rate: 0.24
-      win_rate: 0.66
+      pick_rate: 0.23
+      win_rate: 0.67
   - name: Dagger of Frenzy
     pick_rate: 0.49
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.09
-      win_rate: 0.13
+      pick_rate: 0.1
+      win_rate: 0.19
     - name: Dominance
       pick_rate: 0.08
       win_rate: 0.46
   - name: Musashi's Dual Swords
-    pick_rate: 0.22
+    pick_rate: 0.21
     win_rate: 0.43
     alternates:
     - name: Deathbringer
       pick_rate: 0.13
-      win_rate: 0.55
+      win_rate: 0.52
     - name: Dominance
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.65
   - name: Deathbringer
-    pick_rate: 0.31
+    pick_rate: 0.3
     win_rate: 0.45
     alternates:
     - name: Riptalon
       pick_rate: 0.14
       win_rate: 0.45
-    - name: Musashi's Dual Swords
-      pick_rate: 0.1
-      win_rate: 0.73
+    - name: Dominance
+      pick_rate: 0.12
+      win_rate: 0.53
   - name: Riptalon
     pick_rate: 0.19
     win_rate: 0.64
     alternates:
     - name: Deathbringer
-      pick_rate: 0.17
-      win_rate: 0.52
+      pick_rate: 0.19
+      win_rate: 0.5
     - name: Dominance
       pick_rate: 0.1
       win_rate: 0.2
@@ -70,23 +70,23 @@ builds:
       win_rate: 0.7
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.6
+    pick_rate: 0.59
     win_rate: 0.49
   - name: Gilded Arrow
     pick_rate: 0.22
-    win_rate: 0.34
+    win_rate: 0.32
   - name: Hunter's Cowl
     pick_rate: 0.09
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.4375
-  god_matches_won: 70
-  god_matches_played: 160
+  last_verified: '2026-09-22'
+  god_win_rate: 0.4397590361445783
+  god_matches_won: 73
+  god_matches_played: 166
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -131,14 +131,14 @@ builds:
     Avenging Blade:
       total: 0.51
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.31
     Deathbringer:
       total: 0.49
       efficiency: 0.51
       win: 0.45
-      pick: 0.52
+      pick: 0.5
       fit: 0.54
     Dominance:
       total: 0.58
@@ -199,10 +199,10 @@ builds:
     Genji''s Guard.'
   slot_scores:
     Avenging Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.28
     Jotunn's Revenge:
       total: 0.53
@@ -244,8 +244,8 @@ builds:
   slot_order:
   - Avenging Blade
   - Musashi's Dual Swords
-  - Dominance
   - Deathbringer
+  - Dominance
   - Demon Blade
   - Riptalon
   flex_slots:
@@ -274,14 +274,20 @@ builds:
     Avenging Blade:
       total: 0.51
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.3
     Musashi's Dual Swords:
       total: 0.46
       efficiency: 0.46
       win: 0.43
-      pick: 0.34
+      pick: 0.33
+      fit: 0.57
+    Deathbringer:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.45
+      pick: 0.5
       fit: 0.57
     Dominance:
       total: 0.58
@@ -289,12 +295,6 @@ builds:
       win: 0.7
       pick: 0.28
       fit: 0.6
-    Deathbringer:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.45
-      pick: 0.52
-      fit: 0.57
     Demon Blade:
       total: 0.48
       efficiency: 0.38
@@ -310,8 +310,8 @@ builds:
   community_ordered:
   - Avenging Blade
   - Musashi's Dual Swords
-  - Dominance
   - Deathbringer
+  - Dominance
   - Riptalon
   starter: *id001
 - source: suggested
@@ -350,8 +350,8 @@ builds:
     Avenging Blade:
       total: 0.54
       efficiency: 0.49
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.38
     Berserker's Shield:
       total: 0.52
@@ -421,10 +421,10 @@ builds:
     Sun Beam Bow, Barbed Carver.'
   slot_scores:
     Avenging Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.54
     Jotunn's Revenge:
       total: 0.49
@@ -467,12 +467,12 @@ builds:
   - Golden Blade
   - Lernaean Bow
   - Avenging Blade
-  - Dagger of Frenzy
+  - Deathbringer
   - Dominance
   - Riptalon
   flex_slots:
   - Golden Blade
-  - Dagger of Frenzy
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -506,17 +506,17 @@ builds:
       pick: 0.0
       fit: 0.55
     Avenging Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.26
-    Dagger of Frenzy:
+    Deathbringer:
       total: 0.47
-      efficiency: 0.37
-      win: 0.52
-      pick: 0.67
-      fit: 0.49
+      efficiency: 0.51
+      win: 0.45
+      pick: 0.5
+      fit: 0.41
     Dominance:
       total: 0.57
       efficiency: 0.45
@@ -531,7 +531,7 @@ builds:
       fit: 0.59
   community_ordered:
   - Avenging Blade
-  - Dagger of Frenzy
+  - Deathbringer
   - Dominance
   - Riptalon
   starter: *id001
@@ -569,10 +569,10 @@ builds:
     Grace.'
   slot_scores:
     Avenging Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.44
-      win: 0.66
-      pick: 0.24
+      win: 0.67
+      pick: 0.23
       fit: 0.2
     Jotunn's Revenge:
       total: 0.51
@@ -656,14 +656,14 @@ builds:
     Tyrfing:
       total: 0.45
       efficiency: 0.48
-      win: 0.33
-      pick: 0.33
+      win: 0.34
+      pick: 0.32
       fit: 0.75
     Deathbringer:
       total: 0.49
       efficiency: 0.51
       win: 0.45
-      pick: 0.52
+      pick: 0.5
       fit: 0.54
     Dominance:
       total: 0.58
@@ -729,14 +729,14 @@ builds:
     Tyrfing:
       total: 0.45
       efficiency: 0.48
-      win: 0.33
-      pick: 0.33
+      win: 0.34
+      pick: 0.32
       fit: 0.75
     Deathbringer:
       total: 0.49
       efficiency: 0.51
       win: 0.45
-      pick: 0.52
+      pick: 0.5
       fit: 0.54
     Demon Blade:
       total: 0.48
@@ -757,7 +757,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Dominance
-    reason: community 64% win over 30 matches (vs 44% on this god), taking the model's
+    reason: community 64% win over 32 matches (vs 44% on this god), taking the model's
       weakest slot from Dominance
   starter: *id001
 ---

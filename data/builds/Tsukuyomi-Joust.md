@@ -722,11 +722,11 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Bragi's Harp
-    reason: Conquest community 74% win over 151 matches (vs 54% on this god), taking
+    reason: Conquest community 74% win over 160 matches (vs 54% on this god), taking
       the model's weakest slot from Bragi's Harp
   - added: Transcendence
     removed: Death Metal
-    reason: Conquest community 60% win over 328 matches (vs 54% on this god), taking
+    reason: Conquest community 60% win over 359 matches (vs 54% on this god), taking
       the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001

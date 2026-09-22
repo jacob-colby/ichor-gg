@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spirit Robe
     removed: Void Stone
-    reason: Conquest community 74% win over 48 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 40 matches (vs 51% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

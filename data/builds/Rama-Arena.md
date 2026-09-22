@@ -590,4 +590,79 @@ builds:
       pick: 0.0
       fit: 0.7
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - The Executioner
+  - Jotunn's Revenge
+  - The Reaper
+  - Riptalon
+  - Silverbranch Bow
+  flex_slots:
+  - Silverbranch Bow
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Executioner:
+      total: 0.36
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    The Reaper:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Silverbranch Bow:
+      total: 0.42
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+  swaps:
+  - added: The Executioner
+    removed: Toxic Blade
+    reason: Conquest community 64% win over 102 matches (vs 53% on this god), taking
+      the model's weakest slot from Toxic Blade
+  - added: Silverbranch Bow
+    removed: Demon Blade
+    reason: Conquest community 62% win over 124 matches (vs 53% on this god), taking
+      the model's weakest slot from Demon Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

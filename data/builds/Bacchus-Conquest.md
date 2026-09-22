@@ -10,17 +10,17 @@ builds:
   slot_order:
   - name: Gauntlet of Thebes
     pick_rate: 0.16
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
-    - name: Shifter's Shield
-      pick_rate: 0.15
-      win_rate: 0.51
     - name: Stampede
+      pick_rate: 0.15
+      win_rate: 0.54
+    - name: Shifter's Shield
       pick_rate: 0.15
       win_rate: 0.52
   - name: Genji's Guard
     pick_rate: 0.14
-    win_rate: 0.54
+    win_rate: 0.56
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.11
@@ -34,10 +34,10 @@ builds:
     alternates:
     - name: Genji's Guard
       pick_rate: 0.12
-      win_rate: 0.5
+      win_rate: 0.51
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.61
+      win_rate: 0.63
   - name: Shell of Rebuke
     pick_rate: 0.13
     win_rate: 0.49
@@ -47,46 +47,46 @@ builds:
       win_rate: 0.56
     - name: Genji's Guard
       pick_rate: 0.07
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Hide of the Nemean Lion
     pick_rate: 0.07
-    win_rate: 0.56
+    win_rate: 0.53
     alternates:
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.6
+      win_rate: 0.62
     - name: Shell of Rebuke
       pick_rate: 0.06
       win_rate: 0.58
   - name: Engraved Guard
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.67
     alternates:
     - name: Medal of Defense
       pick_rate: 0.06
-      win_rate: 0.59
+      win_rate: 0.63
     - name: Shield
       pick_rate: 0.05
       win_rate: 0.42
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.23
-    win_rate: 0.48
+    win_rate: 0.5
   - name: Bluestone Brooch
     pick_rate: 0.13
-    win_rate: 0.61
+    win_rate: 0.6
   - name: Warrior's Axe
-    pick_rate: 0.11
-    win_rate: 0.42
+    pick_rate: 0.12
+    win_rate: 0.41
   source_url: https://smitebrain.com/gods/bacchus/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.537117903930131
-  god_matches_won: 369
-  god_matches_played: 687
+  last_verified: '2026-09-22'
+  god_win_rate: 0.5419532324621733
+  god_matches_won: 394
+  god_matches_played: 727
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -119,28 +119,28 @@ builds:
     this god: Amanita Charm, Rod of Tahuti, Kinetic Cuirass, Jotunn''s Revenge, Breastplate
     of Valor, Erosion, Eye of Providence, Draconic Scale, Berserker''s Shield, Shield
     Splitter, Shield of the Phoenix, Stone of Binding, Magi''s Cloak, Eye of the Storm,
-    Helm of Radiance, Mantle Of Discord, Gluttonous Grimoire, Runeforged Hammer, Midgardian
-    Mail, Screeching Gargoyle, Stampede, Prophetic Cloak, Leviathan''s Hide, Void
-    Shield, Ancile, Oni Hunter''s Garb, Helm of Darkness, Xibalban Effigy, Void Stone,
-    Spectral Armor, Spear of Desolation, Hussar''s Wings, Gladiator''s Shield, Rod
-    of Asclepius, Daybreak Gavel, Doublet of Binding, Hydra''s Lament, Soul Gem.'
+    Helm of Radiance, Mantle Of Discord, Gluttonous Grimoire, Stampede, Runeforged
+    Hammer, Midgardian Mail, Screeching Gargoyle, Prophetic Cloak, Leviathan''s Hide,
+    Void Shield, Ancile, Oni Hunter''s Garb, Helm of Darkness, Xibalban Effigy, Void
+    Stone, Spectral Armor, Spear of Desolation, Hussar''s Wings, Gladiator''s Shield,
+    Rod of Asclepius, Daybreak Gavel, Doublet of Binding, Hydra''s Lament, Soul Gem.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.37
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.25
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.78
     Shifter's Shield:
@@ -158,7 +158,7 @@ builds:
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.68
   community_ordered:
@@ -198,27 +198,27 @@ builds:
     Rod of Asclepius, Jotunn''s Revenge, Soul Gem, Breastplate of Valor, Berserker''s
     Shield, Erosion, Eye of Providence, Draconic Scale, Ethereal Staff, Phoenix Feather,
     Gluttonous Grimoire, Yogi''s Necklace, Shield Splitter, Chandra''s Grace, Runeforged
-    Hammer, Eye of the Storm, Glorious Pridwen, Midgardian Mail, Stone of Binding,
-    Lifebinder, Stampede, Helm of Radiance, Leviathan''s Hide, Void Shield, Magi''s
+    Hammer, Eye of the Storm, Glorious Pridwen, Stampede, Midgardian Mail, Stone of
+    Binding, Lifebinder, Helm of Radiance, Leviathan''s Hide, Void Shield, Magi''s
     Cloak, Ancile, Oni Hunter''s Garb, Daybreak Gavel, Screeching Gargoyle, Sphere
     of Negation, Void Stone, Mantle Of Discord, Spectral Armor, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.34
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.26
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.76
     Shifter's Shield:
@@ -230,13 +230,13 @@ builds:
     Shield of the Phoenix:
       total: 0.56
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.9
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.96
   community_ordered:
@@ -253,8 +253,8 @@ builds:
   - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
+  - Stone of Binding
   - Kinetic Cuirass
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -281,19 +281,19 @@ builds:
     Stone of Binding:
       total: 0.53
       efficiency: 0.51
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.74
     Genji's Guard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.26
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.48
     Shifter's Shield:
@@ -305,13 +305,13 @@ builds:
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.58
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.48
   community_ordered:
@@ -322,9 +322,9 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Shifter's Shield
   - Nimble Ring
   - Amanita Charm
   flex_slots:
@@ -335,8 +335,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
@@ -357,41 +357,41 @@ builds:
     Golden Blade:
       total: 0.5
       efficiency: 0.52
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.54
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.19
+      fit: 0.2
     Berserker's Shield:
       total: 0.54
       efficiency: 0.68
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.21
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.59
-      pick: 0.15
-      fit: 0.37
     Nimble Ring:
       total: 0.51
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.3
     Amanita Charm:
       total: 0.52
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.37
   community_ordered:
-  - Shifter's Shield
+  - Genji's Guard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -430,21 +430,21 @@ builds:
     Shard, Leviathan''s Hide, Jade Scepter, Void Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.48
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.46
     Shifter's Shield:
@@ -460,9 +460,9 @@ builds:
       pick: 0.16
       fit: 0.64
     Amanita Charm:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.45
   community_ordered:
@@ -507,21 +507,21 @@ builds:
     Of Discord, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.23
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.45
     Shifter's Shield:
@@ -531,15 +531,15 @@ builds:
       pick: 0.15
       fit: 0.42
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.52
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.52
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.42
   community_ordered:
@@ -583,21 +583,21 @@ builds:
     Gargoyle, Mantle Of Discord, Dreamer''s Idol, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.53
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.23
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.52
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.52
     Shifter's Shield:
@@ -609,13 +609,13 @@ builds:
     Shield Splitter:
       total: 0.5
       efficiency: 0.55
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.48
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.42
   community_ordered:
@@ -659,21 +659,21 @@ builds:
     Soul Gem.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
-      win: 0.54
+      win: 0.56
       pick: 0.19
       fit: 0.37
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.25
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.56
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.78
     Shifter's Shield:
@@ -691,7 +691,7 @@ builds:
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.68
   community_ordered:

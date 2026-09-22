@@ -527,7 +527,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Bragi's Harp
-    reason: Conquest community 76% win over 106 matches (vs 56% on this god), taking
+    reason: Conquest community 76% win over 110 matches (vs 56% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001

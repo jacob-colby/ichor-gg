@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spirit Robe
     removed: Shifter's Shield
-    reason: Conquest community 74% win over 48 matches (vs 51% on this god), taking
+    reason: Conquest community 74% win over 40 matches (vs 51% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

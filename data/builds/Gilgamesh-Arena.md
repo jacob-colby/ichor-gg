@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.7
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Toxic Blade
+  - Titan's Bane
+  - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - Shogun's Ofuda
+  - Titan's Bane
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Erosion — magical protection
+    swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Titan's Bane:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Amanita Charm:
+      total: 0.76
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Pharaoh's Curse:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shogun's Ofuda:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+  swaps:
+  - added: Titan's Bane
+    removed: Stampede
+    reason: Conquest community 74% win over 32 matches (vs 54% on this god), taking
+      the model's weakest slot from Stampede
+  borrowed_from: Conquest
+  starter: *id001
 ---

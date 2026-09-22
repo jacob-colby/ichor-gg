@@ -398,22 +398,22 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
+  - Shell of Rebuke
   - Hide of the Nemean Lion
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Stygian Anchor
   - Hide of the Nemean Lion
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,12 +423,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.59
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
@@ -441,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Shell of Rebuke:
+      total: 0.36
+      efficiency: 0.28
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Hide of the Nemean Lion:
       total: 0.45
       efficiency: 0.52
@@ -462,8 +462,12 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Void Shield
-    reason: Conquest community 71% win over 35 matches (vs 48% on this god), taking
+    reason: Conquest community 71% win over 33 matches (vs 49% on this god), taking
       the model's weakest slot from Void Shield
+  - added: Shell of Rebuke
+    removed: Stygian Anchor
+    reason: Conquest community 63% win over 51 matches (vs 49% on this god), taking
+      the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001
 - source: suggested
@@ -865,22 +869,22 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Kinetic Cuirass
+  - Shell of Rebuke
   - Hide of the Nemean Lion
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
   - Hide of the Nemean Lion
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Doublet of Binding — magical protection
-    swap_item: Doublet of Binding
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -890,12 +894,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.64
-      efficiency: 0.56
+    Shell of Rebuke:
+      total: 0.33
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.37
     Hide of the Nemean Lion:
       total: 0.47
       efficiency: 0.52
@@ -929,8 +933,12 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Shield of the Phoenix
-    reason: Conquest community 71% win over 35 matches (vs 48% on this god), taking
+    reason: Conquest community 71% win over 33 matches (vs 49% on this god), taking
       the model's weakest slot from Shield of the Phoenix
+  - added: Shell of Rebuke
+    removed: Kinetic Cuirass
+    reason: Conquest community 63% win over 51 matches (vs 49% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Preservation

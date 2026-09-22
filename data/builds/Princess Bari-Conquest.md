@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.63
-    win_rate: 0.42
+    pick_rate: 0.64
+    win_rate: 0.41
     alternates:
     - name: Chronos' Pendant
-      pick_rate: 0.14
-      win_rate: 0.65
+      pick_rate: 0.15
+      win_rate: 0.61
     - name: Gem of Focus
-      pick_rate: 0.05
+      pick_rate: 0.04
       win_rate: 0.58
   - name: The World Stone
     pick_rate: 0.3
-    win_rate: 0.48
+    win_rate: 0.46
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.17
-      win_rate: 0.58
+      win_rate: 0.55
     - name: Chronos' Pendant
       pick_rate: 0.14
-      win_rate: 0.43
+      win_rate: 0.42
   - name: Rod of Tahuti
     pick_rate: 0.35
-    win_rate: 0.43
+    win_rate: 0.4
     alternates:
     - name: Soul Gem
-      pick_rate: 0.18
-      win_rate: 0.55
+      pick_rate: 0.17
+      win_rate: 0.54
     - name: The World Stone
-      pick_rate: 0.12
-      win_rate: 0.59
+      pick_rate: 0.13
+      win_rate: 0.5
   - name: Obsidian Shard
-    pick_rate: 0.26
-    win_rate: 0.39
+    pick_rate: 0.25
+    win_rate: 0.38
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.24
-      win_rate: 0.54
+      pick_rate: 0.25
+      win_rate: 0.52
     - name: Void Shard
-      pick_rate: 0.06
-      win_rate: 0.4
+      pick_rate: 0.08
+      win_rate: 0.35
   - name: Evil Eye
-    pick_rate: 0.09
-    win_rate: 0.24
+    pick_rate: 0.08
+    win_rate: 0.22
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.24
+      pick_rate: 0.23
       win_rate: 0.63
-    - name: Rod of Tahuti
+    - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.5
   - name: Dreamer's Idol
     pick_rate: 0.1
     win_rate: 0.62
     alternates:
     - name: Evil Eye
       pick_rate: 0.12
-      win_rate: 0.53
+      win_rate: 0.5
     - name: Rod of Tahuti
       pick_rate: 0.08
       win_rate: 0.7
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.26
-    win_rate: 0.5
+    win_rate: 0.49
   - name: Conduit Gem
-    pick_rate: 0.21
-    win_rate: 0.37
+    pick_rate: 0.2
+    win_rate: 0.38
   - name: Bluestone Brooch
     pick_rate: 0.14
-    win_rate: 0.58
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.4524714828897338
-  god_matches_won: 119
-  god_matches_played: 263
+  last_verified: '2026-09-22'
+  god_win_rate: 0.4412811387900356
+  god_matches_won: 124
+  god_matches_played: 281
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -125,34 +125,34 @@ builds:
     Rod of Asclepius, Book of Thoth.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
       total: 0.49
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.47
     Gem of Focus:
       total: 0.48
       efficiency: 0.5
       win: 0.58
-      pick: 0.05
+      pick: 0.04
       fit: 0.31
     Rod of Tahuti:
-      total: 0.57
+      total: 0.56
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.36
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.67
     Dreamer's Idol:
       total: 0.53
@@ -173,13 +173,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Spear of Desolation
+  - Gem of Focus
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
   - Dreamer's Idol
   flex_slots:
-  - Spear of Desolation
+  - Gem of Focus
   - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -206,32 +206,32 @@ builds:
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.52
-    Spear of Desolation:
+    Gem of Focus:
       total: 0.49
-      efficiency: 0.57
-      win: 0.42
-      pick: 0.63
-      fit: 0.45
+      efficiency: 0.5
+      win: 0.58
+      pick: 0.04
+      fit: 0.31
     The World Stone:
-      total: 0.48
+      total: 0.47
       efficiency: 0.52
-      win: 0.48
+      win: 0.46
       pick: 0.41
       fit: 0.42
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.42
     Soul Gem:
       total: 0.55
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.62
     Dreamer's Idol:
       total: 0.52
@@ -240,7 +240,7 @@ builds:
       pick: 0.31
       fit: 0.34
   community_ordered:
-  - Spear of Desolation
+  - Gem of Focus
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
@@ -272,7 +272,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Jotunn''s Revenge, Nimble Ring, Gem of Focus, Riptalon, Gluttonous Grimoire,
+    god: Jotunn''s Revenge, Gem of Focus, Nimble Ring, Riptalon, Gluttonous Grimoire,
     Silverbranch Bow, Spear of the Magus, Tyrfing, The Reaper, Tekko-Kagi, Heartseeker,
     Hydra''s Lament, Lernaean Bow, Toxic Blade, Golden Blade, Bragi''s Harp, Doom
     Orb, Titan''s Bane, The Crusher, Bracer of The Abyss, Pendulum Blade, Death Metal,
@@ -281,34 +281,34 @@ builds:
     Sun Beam Bow, Rod of Asclepius, Book of Thoth.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
       total: 0.5
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.56
     Gem of Focus:
       total: 0.49
       efficiency: 0.5
       win: 0.58
-      pick: 0.05
+      pick: 0.04
       fit: 0.32
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.4
     Soul Gem:
       total: 0.57
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.73
     Dreamer's Idol:
       total: 0.53
@@ -361,19 +361,19 @@ builds:
     Berserker's Shield:
       total: 0.49
       efficiency: 0.68
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.41
     Jotunn's Revenge:
-      total: 0.49
+      total: 0.48
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.28
     Rod of Tahuti:
-      total: 0.56
+      total: 0.54
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.24
     Dreamer's Idol:
@@ -383,16 +383,16 @@ builds:
       pick: 0.31
       fit: 0.24
     Amanita Charm:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.77
   community_ordered:
   - Rod of Tahuti
@@ -402,15 +402,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
-  - Spear of Desolation
   - Jotunn's Revenge
+  - Spear of Desolation
+  - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   - Dreamer's Idol
   flex_slots:
   - Spear of Desolation
-  - Book of Thoth
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -426,42 +426,42 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, Riptalon, Silverbranch Bow, Gluttonous Grimoire,
-    Nimble Ring, Spear of the Magus, Gem of Focus, The Reaper, Tekko-Kagi, Tyrfing,
+    Nimble Ring, Gem of Focus, Spear of the Magus, The Reaper, Tekko-Kagi, Tyrfing,
     Toxic Blade, Heartseeker, Doom Orb, Titan''s Bane, The Crusher, Lernaean Bow,
     Golden Blade, Bragi''s Harp, Bracer of The Abyss, Hydra''s Lament, Avenging Blade,
     Pendulum Blade, The Cosmic Horror, Avatar''s Parashu, Ancient Signet, Qin''s Blade,
     Blood-Bound Book, Death Metal, Dominance, Bancroft''s Talon, The Executioner,
     Arondight, Sun Beam Bow, Oath-Sworn Spear, Transcendence.'
   slot_scores:
-    Book of Thoth:
-      total: 0.4
-      efficiency: 0.51
-      win: 0.43
-      pick: 0.0
-      fit: 0.16
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.42
-      pick: 0.63
-      fit: 0.57
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.55
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.41
+      pick: 0.64
+      fit: 0.57
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.42
+      pick: 0.0
+      fit: 0.75
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.49
     Soul Gem:
       total: 0.57
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.76
     Dreamer's Idol:
       total: 0.54
@@ -481,8 +481,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
-  - Riptalon
   - Rod of Tahuti
+  - Riptalon
   - Dreamer's Idol
   flex_slots:
   - Riptalon
@@ -510,35 +510,35 @@ builds:
     Horror, Typhon’s Heart.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.49
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.35
     Tyrfing:
-      total: 0.46
+      total: 0.45
       efficiency: 0.48
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.64
     Nimble Ring:
       total: 0.49
       efficiency: 0.65
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.55
+      efficiency: 0.86
+      win: 0.4
+      pick: 0.55
+      fit: 0.29
     Riptalon:
       total: 0.46
       efficiency: 0.51
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
-      win: 0.43
-      pick: 0.55
-      fit: 0.29
     Dreamer's Idol:
       total: 0.52
       efficiency: 0.51
@@ -559,8 +559,8 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   flex_slots:
-  - Dreamer's Idol
   - Gem of Focus
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -586,32 +586,32 @@ builds:
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.59
     Gem of Focus:
       total: 0.51
       efficiency: 0.5
       win: 0.58
-      pick: 0.05
+      pick: 0.04
       fit: 0.45
     Rod of Tahuti:
-      total: 0.56
+      total: 0.54
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.24
     Soul Gem:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.77
     Dreamer's Idol:
       total: 0.51
@@ -663,32 +663,32 @@ builds:
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
-      total: 0.5
+      total: 0.49
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.49
     Gem of Focus:
       total: 0.48
       efficiency: 0.5
       win: 0.58
-      pick: 0.05
+      pick: 0.04
       fit: 0.3
     Rod of Tahuti:
-      total: 0.58
+      total: 0.56
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.39
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.69
     Dreamer's Idol:
       total: 0.53
@@ -739,34 +739,34 @@ builds:
     Thoth.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
       total: 0.49
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.48
     Gem of Focus:
       total: 0.48
       efficiency: 0.5
       win: 0.58
-      pick: 0.05
+      pick: 0.04
       fit: 0.3
     Rod of Tahuti:
-      total: 0.58
+      total: 0.56
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.38
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.55
-      pick: 0.28
+      win: 0.54
+      pick: 0.26
       fit: 0.66
     Dreamer's Idol:
       total: 0.53
@@ -816,39 +816,39 @@ builds:
     Heart, Dagger of Frenzy, Rod of Asclepius, Book of Thoth.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.72
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
       total: 0.49
       efficiency: 0.57
-      win: 0.42
-      pick: 0.63
+      win: 0.41
+      pick: 0.64
       fit: 0.47
     Tyrfing:
       total: 0.48
       efficiency: 0.48
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.79
     Nimble Ring:
-      total: 0.51
+      total: 0.5
       efficiency: 0.65
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
-      total: 0.57
+      total: 0.56
       efficiency: 0.86
-      win: 0.43
+      win: 0.4
       pick: 0.55
       fit: 0.36
     Silverbranch Bow:
       total: 0.48
       efficiency: 0.53
-      win: 0.43
+      win: 0.42
       pick: 0.0
       fit: 0.69
   community_ordered:

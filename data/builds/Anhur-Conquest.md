@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Pride
-  aspect_pick_rate: 0.17
-  aspect_win_rate: 0.45
+  aspect_pick_rate: 0.16
+  aspect_win_rate: 0.46
   slot_order:
   - name: Tyrfing
     pick_rate: 0.59
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Avenging Blade
       pick_rate: 0.25
       win_rate: 0.5
     - name: Devourer's Gauntlet
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.41
   - name: Dagger of Frenzy
     pick_rate: 0.31
-    win_rate: 0.47
+    win_rate: 0.46
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.25
       win_rate: 0.5
     - name: Hastened Fatalis
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.5
   - name: The Executioner
     pick_rate: 0.18
-    win_rate: 0.47
+    win_rate: 0.45
     alternates:
     - name: Riptalon
       pick_rate: 0.14
-      win_rate: 0.54
-    - name: Odysseus' Bow
-      pick_rate: 0.14
       win_rate: 0.55
+    - name: Hastened Fatalis
+      pick_rate: 0.14
+      win_rate: 0.56
   - name: Riptalon
     pick_rate: 0.18
     win_rate: 0.51
     alternates:
     - name: The Executioner
-      pick_rate: 0.24
-      win_rate: 0.47
+      pick_rate: 0.23
+      win_rate: 0.48
     - name: Silverbranch Bow
-      pick_rate: 0.17
-      win_rate: 0.6
+      pick_rate: 0.18
+      win_rate: 0.58
   - name: Silverbranch Bow
     pick_rate: 0.19
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Riptalon
       pick_rate: 0.14
-      win_rate: 0.52
+      win_rate: 0.5
     - name: The Executioner
       pick_rate: 0.11
-      win_rate: 0.5
+      win_rate: 0.49
   - name: Manchu Bow
     pick_rate: 0.12
     win_rate: 0.54
     alternates:
     - name: Hunter's Bow
       pick_rate: 0.1
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Riptalon
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.47
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.31
-    win_rate: 0.55
+    pick_rate: 0.32
+    win_rate: 0.54
   - name: Hunter's Cowl
-    pick_rate: 0.28
-    win_rate: 0.56
+    pick_rate: 0.27
+    win_rate: 0.55
   - name: Gilded Arrow
     pick_rate: 0.18
-    win_rate: 0.33
+    win_rate: 0.31
   source_url: https://smitebrain.com/gods/anhur/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.4909560723514212
-  god_matches_won: 380
-  god_matches_played: 774
+  last_verified: '2026-09-22'
+  god_win_rate: 0.4841463414634146
+  god_matches_won: 397
+  god_matches_played: 820
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -137,7 +137,7 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.71
     Jotunn's Revenge:
@@ -153,9 +153,9 @@ builds:
       pick: 0.3
       fit: 0.57
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.46
   community_ordered:
@@ -204,9 +204,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.5
+      total: 0.49
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.5
     Hydra's Lament:
@@ -222,9 +222,9 @@ builds:
       pick: 0.3
       fit: 0.4
     Silverbranch Bow:
-      total: 0.49
+      total: 0.5
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.34
     Heartseeker:
@@ -279,7 +279,7 @@ builds:
     Tyrfing:
       total: 0.52
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.66
     Musashi's Dual Swords:
@@ -291,7 +291,7 @@ builds:
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.44
     Demon Blade:
@@ -320,8 +320,8 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Tyrfing
   - Kinetic Cuirass
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -356,9 +356,9 @@ builds:
       pick: 0.0
       fit: 0.19
     Tyrfing:
-      total: 0.5
+      total: 0.49
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.49
     Kinetic Cuirass:
@@ -424,13 +424,13 @@ builds:
     Tyrfing:
       total: 0.5
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.54
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.61
     Riptalon:
@@ -501,9 +501,9 @@ builds:
       pick: 0.0
       fit: 0.52
     Tyrfing:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.7
     Jotunn's Revenge:
@@ -521,7 +521,7 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.5
   community_ordered:
@@ -571,7 +571,7 @@ builds:
     Tyrfing:
       total: 0.49
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.47
     Hydra's Lament:
@@ -595,7 +595,7 @@ builds:
     Silverbranch Bow:
       total: 0.49
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.41
       fit: 0.31
   community_ordered:
@@ -650,7 +650,7 @@ builds:
     Tyrfing:
       total: 0.53
       efficiency: 0.48
-      win: 0.5
+      win: 0.49
       pick: 0.59
       fit: 0.71
     Jotunn's Revenge:

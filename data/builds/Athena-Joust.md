@@ -528,31 +528,37 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Brawler’s Beat Stick
   - Stygian Anchor
   - Kinetic Cuirass
-  - Shell of Rebuke
+  - Spirit Robe
   - Shifter's Shield
-  - Amanita Charm
   - Erosion
   flex_slots:
-  - Shifter's Shield
-  - Shell of Rebuke
+  - Brawler’s Beat Stick
+  - Spirit Robe
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.6
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Stygian Anchor:
       total: 0.62
       efficiency: 0.45
@@ -565,24 +571,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Shell of Rebuke:
-      total: 0.39
-      efficiency: 0.28
+    Spirit Robe:
+      total: 0.54
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.74
     Shifter's Shield:
       total: 0.62
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
     Erosion:
       total: 0.7
       efficiency: 0.51
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.88
   swaps:
-  - added: Shell of Rebuke
+  - added: Spirit Robe
     removed: Freya's Tears
-    reason: Conquest community 64% win over 132 matches (vs 55% on this god), taking
+    reason: Conquest community 69% win over 54 matches (vs 55% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

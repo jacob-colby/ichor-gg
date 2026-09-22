@@ -6,87 +6,87 @@ builds:
 - source: community
   aspect: Aspect of Hysteria
   aspect_pick_rate: 0.62
-  aspect_win_rate: 0.53
+  aspect_win_rate: 0.52
   slot_order:
   - name: Lifebinder
     pick_rate: 0.19
-    win_rate: 0.51
+    win_rate: 0.49
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.12
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Chronos' Pendant
       pick_rate: 0.09
-      win_rate: 0.48
+      win_rate: 0.49
   - name: Prophetic Cloak
     pick_rate: 0.12
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Genji's Guard
       pick_rate: 0.09
       win_rate: 0.43
     - name: Stampede
       pick_rate: 0.09
-      win_rate: 0.67
+      win_rate: 0.69
   - name: Genji's Guard
-    pick_rate: 0.13
-    win_rate: 0.52
+    pick_rate: 0.12
+    win_rate: 0.51
     alternates:
     - name: Breastplate of Valor
       pick_rate: 0.09
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Rod of Tahuti
-      pick_rate: 0.06
-      win_rate: 0.48
-  - name: Shell of Rebuke
+      pick_rate: 0.07
+      win_rate: 0.5
+  - name: Rod of Tahuti
     pick_rate: 0.09
-    win_rate: 0.59
+    win_rate: 0.52
     alternates:
     - name: Genji's Guard
       pick_rate: 0.09
-      win_rate: 0.69
-    - name: Rod of Tahuti
+      win_rate: 0.7
+    - name: Shell of Rebuke
       pick_rate: 0.09
-      win_rate: 0.54
+      win_rate: 0.59
   - name: Freya's Tears
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.58
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.67
+      win_rate: 0.68
     - name: Obsidian Shard
       pick_rate: 0.06
-      win_rate: 0.39
+      win_rate: 0.38
   - name: Obsidian Shard
     pick_rate: 0.05
     win_rate: 0.62
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.05
-      win_rate: 0.62
-    - name: Veve Charm
+      pick_rate: 0.06
+      win_rate: 0.67
+    - name: Engraved Guard
       pick_rate: 0.04
-      win_rate: 0.11
+      win_rate: 0.4
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.16
-    win_rate: 0.58
-  - name: Bluestone Brooch
-    pick_rate: 0.15
     win_rate: 0.59
   - name: Pendulum of the Ages
-    pick_rate: 0.15
+    pick_rate: 0.16
     win_rate: 0.59
+  - name: Sands Of Time
+    pick_rate: 0.15
+    win_rate: 0.42
   source_url: https://smitebrain.com/gods/baron-samedi/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.5267489711934157
-  god_matches_won: 256
-  god_matches_played: 486
+  last_verified: '2026-09-22'
+  god_win_rate: 0.5255905511811023
+  god_matches_won: 267
+  god_matches_played: 508
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -94,24 +94,24 @@ builds:
   archetype: core
   slot_order:
   - Breastplate of Valor
-  - Kinetic Cuirass
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
   - Amanita Charm
+  - Stampede
   flex_slots:
+  - Stampede
   - Breastplate of Valor
-  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -126,27 +126,21 @@ builds:
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
-      win: 0.58
+      win: 0.57
       pick: 0.14
       fit: 0.31
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.56
-      pick: 0.0
-      fit: 0.59
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.58
-      pick: 0.17
-      fit: 0.48
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
-      win: 0.54
+      win: 0.52
       pick: 0.15
       fit: 0.37
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.58
+      pick: 0.15
+      fit: 0.48
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
@@ -154,16 +148,23 @@ builds:
       pick: 0.15
       fit: 0.47
     Amanita Charm:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.49
+    Stampede:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.12
+      fit: 0.32
   community_ordered:
   - Breastplate of Valor
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
+  - Stampede
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -177,7 +178,7 @@ builds:
   - Obsidian Shard
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Amanita Charm
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -200,27 +201,27 @@ builds:
     Scale, Triton''s Conch, Screeching Gargoyle, Daybreak Gavel, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
-      win: 0.52
-      pick: 0.2
+      win: 0.51
+      pick: 0.19
       fit: 0.28
     Breastplate of Valor:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.58
+      win: 0.57
       pick: 0.14
       fit: 0.28
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
+      pick: 0.15
       fit: 0.33
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
-      win: 0.54
+      win: 0.52
       pick: 0.15
       fit: 0.37
     Obsidian Shard:
@@ -230,9 +231,9 @@ builds:
       pick: 0.15
       fit: 0.41
     Amanita Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.35
   community_ordered:
@@ -246,18 +247,18 @@ builds:
   archetype: burst
   slot_order:
   - Breastplate of Valor
-  - Spear of Desolation
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
   - Amanita Charm
+  - Stampede
   flex_slots:
   - Breastplate of Valor
-  - Spear of Desolation
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -276,29 +277,23 @@ builds:
     Chronos'' Pendant.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.58
+      win: 0.57
       pick: 0.14
       fit: 0.27
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.12
-      fit: 0.49
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.86
+      win: 0.52
+      pick: 0.15
+      fit: 0.35
     Freya's Tears:
       total: 0.54
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
-      fit: 0.39
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.86
-      win: 0.54
       pick: 0.15
-      fit: 0.35
+      fit: 0.39
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
@@ -306,34 +301,40 @@ builds:
       pick: 0.15
       fit: 0.45
     Amanita Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.37
+    Stampede:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.12
+      fit: 0.24
   community_ordered:
   - Breastplate of Valor
-  - Spear of Desolation
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Breastplate of Valor
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
   - Amanita Charm
+  - Stampede
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Breastplate of Valor
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -351,24 +352,18 @@ builds:
     Scale, Jade Scepter, Wish-Granting Pearl, Blood-Bound Book, Glorious Pridwen,
     Chronos'' Pendant.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.58
-      pick: 0.14
-      fit: 0.29
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.86
+      win: 0.52
+      pick: 0.15
+      fit: 0.37
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
-      fit: 0.44
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
-      win: 0.54
       pick: 0.15
-      fit: 0.37
+      fit: 0.44
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
@@ -378,43 +373,49 @@ builds:
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.79
+    Stampede:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.12
+      fit: 0.34
     Soul Gem:
       total: 0.57
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.91
   community_ordered:
-  - Breastplate of Valor
-  - Freya's Tears
   - Rod of Tahuti
+  - Freya's Tears
   - Obsidian Shard
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Breastplate of Valor
   - Gluttonous Grimoire
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
+  - Stampede
   flex_slots:
   - Spear of Desolation
-  - Breastplate of Valor
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -426,34 +427,28 @@ builds:
     Erosion, Eye of Providence, Draconic Scale, Jade Scepter, Wish-Granting Pearl,
     Magi''s Cloak, Chronos'' Pendant.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.58
-      pick: 0.14
-      fit: 0.26
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.55
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.7
     Freya's Tears:
       total: 0.54
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
+      pick: 0.15
       fit: 0.4
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
-      win: 0.55
+      win: 0.54
       pick: 0.12
       fit: 0.59
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.86
-      win: 0.54
+      win: 0.52
       pick: 0.15
       fit: 0.48
     Obsidian Shard:
@@ -462,12 +457,18 @@ builds:
       win: 0.62
       pick: 0.15
       fit: 0.58
+    Stampede:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.12
+      fit: 0.27
   community_ordered:
-  - Breastplate of Valor
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -475,9 +476,9 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
+  - Obsidian Shard
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -486,11 +487,11 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -503,44 +504,44 @@ builds:
     Draconic Scale, Chronos'' Pendant.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.48
+      total: 0.47
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.28
     Nimble Ring:
       total: 0.53
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.33
     Bragi's Harp:
       total: 0.48
       efficiency: 0.44
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.47
-    Freya's Tears:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.58
-      pick: 0.17
-      fit: 0.28
     Gluttonous Grimoire:
       total: 0.53
       efficiency: 0.6
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.46
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.86
-      win: 0.54
+      win: 0.52
       pick: 0.15
       fit: 0.22
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.62
+      pick: 0.15
+      fit: 0.32
   community_ordered:
-  - Freya's Tears
   - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -549,15 +550,15 @@ builds:
   - Breastplate of Valor
   - Spear of Desolation
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Stampede
   flex_slots:
   - Genji's Guard
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -573,50 +574,50 @@ builds:
     Grimoire, Screeching Gargoyle, Shifter''s Shield, Spear of the Magus, Helm of
     Radiance, Erosion, Gladiator''s Shield, Eye of Providence, Gem of Focus, Stone
     of Binding, Draconic Scale, Rod of Asclepius, Eye of Erebus, Magi''s Cloak, Daybreak
-    Gavel, Midgardian Mail, Mantle Of Discord, Chronos'' Pendant.'
+    Gavel, Chronos'' Pendant, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.66
-      win: 0.52
-      pick: 0.2
+      win: 0.51
+      pick: 0.19
       fit: 0.43
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.65
-      win: 0.58
+      win: 0.57
       pick: 0.14
       fit: 0.43
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
-      win: 0.55
+      win: 0.54
       pick: 0.12
       fit: 0.53
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
-      fit: 0.56
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.54
       pick: 0.15
-      fit: 0.23
+      fit: 0.56
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.39
+    Stampede:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.12
+      fit: 0.25
   community_ordered:
   - Genji's Guard
   - Breastplate of Valor
   - Spear of Desolation
   - Freya's Tears
-  - Rod of Tahuti
+  - Stampede
   starter: *id001
 - source: suggested
   archetype: model
@@ -652,39 +653,39 @@ builds:
     Stone, Magi''s Cloak, Midgardian Mail, Dreamer''s Idol.'
   slot_scores:
     Genji's Guard:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
-      win: 0.52
-      pick: 0.2
+      win: 0.51
+      pick: 0.19
       fit: 0.31
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
-      win: 0.55
+      win: 0.54
       pick: 0.12
       fit: 0.51
     Freya's Tears:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
       win: 0.58
-      pick: 0.17
+      pick: 0.15
       fit: 0.48
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
-      win: 0.54
+      win: 0.52
       pick: 0.15
       fit: 0.37
     Amanita Charm:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.49
   community_ordered:

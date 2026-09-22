@@ -595,12 +595,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Tyrfing
   - The Reaper
   - Riptalon
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Tyrfing
+  - Titan's Bane
   - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
@@ -630,12 +630,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     The Reaper:
       total: 0.61
       efficiency: 0.55
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Titan's Bane:
+      total: 0.46
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Avatar's Parashu:
       total: 0.4
       efficiency: 0.45
@@ -657,8 +657,12 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Demon Blade
-    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
+    reason: Conquest community 64% win over 128 matches (vs 53% on this god), taking
       the model's weakest slot from Demon Blade
+  - added: Titan's Bane
+    removed: Tyrfing
+    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
+      the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
 - source: suggested
@@ -1262,10 +1266,10 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Riptalon
-  - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1307,12 +1311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Heartseeker:
-      total: 0.54
+    Titan's Bane:
+      total: 0.49
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.51
     Avatar's Parashu:
       total: 0.43
       efficiency: 0.45
@@ -1322,8 +1326,12 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Deathbringer
-    reason: Conquest community 65% win over 119 matches (vs 53% on this god), taking
+    reason: Conquest community 64% win over 128 matches (vs 53% on this god), taking
       the model's weakest slot from Deathbringer
+  - added: Titan's Bane
+    removed: Heartseeker
+    reason: Conquest community 60% win over 196 matches (vs 53% on this god), taking
+      the model's weakest slot from Heartseeker
   borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of the Heroic Tutor

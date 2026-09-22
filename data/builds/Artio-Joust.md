@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Shield Splitter
-  - Shell of Rebuke
+  - Daybreak Gavel
   - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Shield
-  - Shell of Rebuke
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Shell of Rebuke:
-      total: 0.33
-      efficiency: 0.28
+    Daybreak Gavel:
+      total: 0.38
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.17
     Void Shield:
       total: 0.57
       efficiency: 0.47
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.76
   swaps:
-  - added: Shell of Rebuke
+  - added: Daybreak Gavel
     removed: Stygian Anchor
-    reason: Conquest community 63% win over 139 matches (vs 54% on this god), taking
+    reason: Conquest community 60% win over 382 matches (vs 55% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

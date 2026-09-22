@@ -14,17 +14,17 @@ builds:
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.31
-      win_rate: 0.5
-    - name: Book of Thoth
-      pick_rate: 0.26
       win_rate: 0.51
+    - name: Book of Thoth
+      pick_rate: 0.27
+      win_rate: 0.52
   - name: Book of Thoth
     pick_rate: 0.34
     win_rate: 0.51
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.21
-      win_rate: 0.53
+      win_rate: 0.52
     - name: The World Stone
       pick_rate: 0.13
       win_rate: 0.54
@@ -34,10 +34,10 @@ builds:
     alternates:
     - name: Soul Gem
       pick_rate: 0.24
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Rod of Tahuti
       pick_rate: 0.14
-      win_rate: 0.51
+      win_rate: 0.53
   - name: Rod of Tahuti
     pick_rate: 0.51
     win_rate: 0.53
@@ -60,14 +60,14 @@ builds:
       win_rate: 0.44
   - name: Dreamer's Idol
     pick_rate: 0.11
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Killing Stone
       pick_rate: 0.11
       win_rate: 0.56
     - name: Obsidian Shard
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.59
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.56
@@ -79,14 +79,14 @@ builds:
     pick_rate: 0.09
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.5058889512058329
-  god_matches_won: 902
-  god_matches_played: 1783
+  last_verified: '2026-09-22'
+  god_win_rate: 0.5085470085470085
+  god_matches_won: 952
+  god_matches_played: 1872
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -141,9 +141,9 @@ builds:
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
@@ -153,9 +153,9 @@ builds:
       pick: 0.78
       fit: 0.88
     Dreamer's Idol:
-      total: 0.58
+      total: 0.59
       efficiency: 0.51
-      win: 0.6
+      win: 0.61
       pick: 0.34
       fit: 0.78
   community_ordered:
@@ -227,7 +227,7 @@ builds:
     Soul Gem:
       total: 0.54
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 0.71
     Obsidian Shard:
@@ -296,7 +296,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 0.88
     Obsidian Shard:
@@ -308,7 +308,7 @@ builds:
     Dreamer's Idol:
       total: 0.55
       efficiency: 0.51
-      win: 0.6
+      win: 0.61
       pick: 0.34
       fit: 0.56
   community_ordered:
@@ -373,7 +373,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 0.88
     Obsidian Shard:
@@ -445,9 +445,9 @@ builds:
       pick: 0.85
       fit: 0.85
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
@@ -457,9 +457,9 @@ builds:
       pick: 0.78
       fit: 0.95
     Dreamer's Idol:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
-      win: 0.6
+      win: 0.61
       pick: 0.34
       fit: 0.85
   community_ordered:
@@ -529,7 +529,7 @@ builds:
     Soul Gem:
       total: 0.54
       efficiency: 0.57
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 0.57
     Obsidian Shard:
@@ -596,7 +596,7 @@ builds:
     Soul Gem:
       total: 0.58
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 0.95
     Obsidian Shard:
@@ -608,7 +608,7 @@ builds:
     Dreamer's Idol:
       total: 0.52
       efficiency: 0.51
-      win: 0.6
+      win: 0.61
       pick: 0.34
       fit: 0.35
   community_ordered:
@@ -664,7 +664,7 @@ builds:
       pick: 0.45
       fit: 1.0
     Spear of the Magus:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
       win: 0.53
       pick: 0.0
@@ -676,9 +676,9 @@ builds:
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
@@ -726,7 +726,7 @@ builds:
     Pearl, Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of the Magus:
-      total: 0.56
+      total: 0.57
       efficiency: 0.6
       win: 0.53
       pick: 0.0
@@ -744,9 +744,9 @@ builds:
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.52
-      win: 0.52
+      win: 0.53
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
@@ -756,9 +756,9 @@ builds:
       pick: 0.78
       fit: 0.88
     Dreamer's Idol:
-      total: 0.58
+      total: 0.59
       efficiency: 0.51
-      win: 0.6
+      win: 0.61
       pick: 0.34
       fit: 0.78
   community_ordered:
@@ -770,7 +770,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Doom Orb
-    reason: community 60% win over 196 matches (vs 51% on this god), taking the model's
+    reason: community 61% win over 206 matches (vs 51% on this god), taking the model's
       weakest slot from Doom Orb
   starter: *id001
 ---

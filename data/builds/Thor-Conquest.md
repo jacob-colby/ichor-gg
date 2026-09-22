@@ -5,25 +5,25 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Thunderstruck
-  aspect_pick_rate: 0.5
-  aspect_win_rate: 0.57
+  aspect_pick_rate: 0.51
+  aspect_win_rate: 0.58
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.4
+    pick_rate: 0.39
     win_rate: 0.55
     alternates:
     - name: Daybreak Gavel
-      pick_rate: 0.31
-      win_rate: 0.56
+      pick_rate: 0.32
+      win_rate: 0.57
     - name: Shifter's Shield
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Shifter's Shield
     pick_rate: 0.19
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.18
+      pick_rate: 0.17
       win_rate: 0.54
     - name: Barbed Carver
       pick_rate: 0.12
@@ -34,13 +34,13 @@ builds:
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.54
+      win_rate: 0.53
     - name: The Crusher
       pick_rate: 0.09
       win_rate: 0.6
   - name: Heartseeker
     pick_rate: 0.22
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
@@ -50,68 +50,68 @@ builds:
       win_rate: 0.61
   - name: Titan's Bane
     pick_rate: 0.08
-    win_rate: 0.61
+    win_rate: 0.6
     alternates:
     - name: Heartseeker
       pick_rate: 0.09
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.61
   - name: Skeggox
     pick_rate: 0.07
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Titan's Bane
       pick_rate: 0.04
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Engraved Guard
       pick_rate: 0.04
-      win_rate: 0.43
+      win_rate: 0.44
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.27
-    win_rate: 0.61
+    win_rate: 0.6
   - name: Bluestone Brooch
-    pick_rate: 0.2
+    pick_rate: 0.21
     win_rate: 0.59
   - name: Bumba's Cudgel
-    pick_rate: 0.17
+    pick_rate: 0.16
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-09-21'
-  god_win_rate: 0.5621414913957935
-  god_matches_won: 1176
-  god_matches_played: 2092
+  last_verified: '2026-09-22'
+  god_win_rate: 0.5621354867653656
+  god_matches_won: 1253
+  god_matches_played: 2229
   god_division: obsidian
   god_window_start: '2026-09-08'
-  god_window_end: '2026-09-21'
-  god_matches_analyzed: 15551
+  god_window_end: '2026-09-22'
+  god_matches_analyzed: 16573
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Transcendence
   - Runeforged Hammer
   - Heartseeker
-  - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Titan's Bane
+  - Genji's Guard
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -122,11 +122,17 @@ builds:
     Scale, Shield of the Phoenix, Avatar''s Parashu, Midgardian Mail, Stone of Binding,
     Tyrfing, Pendulum Blade, Transcendence, Hide of the Nemean Lion.'
   slot_scores:
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.61
+      pick: 0.13
+      fit: 0.18
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.55
     Transcendence:
       total: 0.49
@@ -141,17 +147,11 @@ builds:
       pick: 0.0
       fit: 0.58
     Heartseeker:
-      total: 0.54
+      total: 0.55
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.37
       fit: 0.71
-    Titan's Bane:
-      total: 0.54
-      efficiency: 0.47
-      win: 0.61
-      pick: 0.17
-      fit: 0.61
     Amanita Charm:
       total: 0.55
       efficiency: 0.65
@@ -159,9 +159,9 @@ builds:
       pick: 0.0
       fit: 0.45
   community_ordered:
+  - Genji's Guard
   - Jotunn's Revenge
   - Heartseeker
-  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -213,7 +213,7 @@ builds:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.53
     Transcendence:
       total: 0.48
@@ -222,9 +222,9 @@ builds:
       pick: 0.0
       fit: 0.29
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.37
       fit: 0.62
     Amanita Charm:
@@ -242,13 +242,13 @@ builds:
   archetype: burst
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Transcendence
   - Heartseeker
-  - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Titan's Bane
+  - Breastplate of Valor
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -258,8 +258,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -276,11 +276,17 @@ builds:
       win: 0.61
       pick: 0.13
       fit: 0.24
+    Breastplate of Valor:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.57
+      pick: 0.0
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.56
     Transcendence:
       total: 0.46
@@ -291,15 +297,9 @@ builds:
     Heartseeker:
       total: 0.53
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.37
       fit: 0.6
-    Titan's Bane:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.61
-      pick: 0.17
-      fit: 0.5
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -310,7 +310,6 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Heartseeker
-  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -351,10 +350,10 @@ builds:
       pick: 0.13
       fit: 0.21
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.45
     Kinetic Cuirass:
       total: 0.55
@@ -427,7 +426,7 @@ builds:
       total: 0.62
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.66
     The Crusher:
       total: 0.55
@@ -436,15 +435,15 @@ builds:
       pick: 0.14
       fit: 0.72
     Heartseeker:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.37
       fit: 0.82
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.47
-      win: 0.61
+      win: 0.6
       pick: 0.17
       fit: 0.72
     Amanita Charm:
@@ -507,7 +506,7 @@ builds:
       total: 0.56
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.27
     Berserker's Shield:
       total: 0.56
@@ -580,13 +579,13 @@ builds:
       total: 0.61
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.6
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
       win: 0.54
-      pick: 0.25
+      pick: 0.23
       fit: 0.56
     Freya's Tears:
       total: 0.53
@@ -642,7 +641,7 @@ builds:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.4
+      pick: 0.39
       fit: 0.55
     Kinetic Cuirass:
       total: 0.54

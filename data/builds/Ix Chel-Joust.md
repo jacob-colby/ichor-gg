@@ -592,15 +592,15 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Stygian Anchor
-    reason: Conquest community 65% win over 186 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 196 matches (vs 53% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Spear of Desolation
     removed: Void Shield
-    reason: Conquest community 61% win over 452 matches (vs 53% on this god), taking
+    reason: Conquest community 60% win over 475 matches (vs 53% on this god), taking
       the model's weakest slot from Void Shield
   - added: The World Stone
     removed: Freya's Tears
-    reason: Conquest community 59% win over 452 matches (vs 53% on this god), taking
+    reason: Conquest community 58% win over 475 matches (vs 53% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
