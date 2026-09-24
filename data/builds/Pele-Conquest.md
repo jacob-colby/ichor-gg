@@ -5,113 +5,113 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Obsidian
-  aspect_pick_rate: 0.03
-  aspect_win_rate: 1.0
+  aspect_pick_rate: 0.1
+  aspect_win_rate: 0.67
   slot_order:
   - name: Barbed Carver
-    pick_rate: 0.33
-    win_rate: 0.5
+    pick_rate: 0.34
+    win_rate: 0.62
     alternates:
-    - name: Jotunn's Revenge
-      pick_rate: 0.2
-      win_rate: 0.67
     - name: Devourer's Gauntlet
-      pick_rate: 0.13
-      win_rate: 0.75
-  - name: The Reaper
-    pick_rate: 0.3
-    win_rate: 0.56
-    alternates:
-    - name: Jotunn's Revenge
       pick_rate: 0.23
       win_rate: 0.43
+    - name: Jotunn's Revenge
+      pick_rate: 0.18
+      win_rate: 0.55
+  - name: The Reaper
+    pick_rate: 0.39
+    win_rate: 0.63
+    alternates:
     - name: Barbed Carver
-      pick_rate: 0.23
-      win_rate: 0.86
-  - name: Brawler’s Beat Stick
-    pick_rate: 0.1
-    win_rate: 1.0
+      pick_rate: 0.18
+      win_rate: 0.64
+    - name: Jotunn's Revenge
+      pick_rate: 0.15
+      win_rate: 0.33
+  - name: The Crusher
+    pick_rate: 0.18
+    win_rate: 0.82
     alternates:
     - name: The Reaper
-      pick_rate: 0.28
-      win_rate: 0.63
+      pick_rate: 0.2
+      win_rate: 0.42
     - name: Barbed Carver
-      pick_rate: 0.14
+      pick_rate: 0.13
       win_rate: 0.5
   - name: Heartseeker
-    pick_rate: 0.35
-    win_rate: 0.56
+    pick_rate: 0.37
+    win_rate: 0.62
     alternates:
-    - name: Titan's Bane
-      pick_rate: 0.12
-      win_rate: 0.67
+    - name: The Reaper
+      pick_rate: 0.09
+      win_rate: 0.8
     - name: The Crusher
-      pick_rate: 0.12
-      win_rate: 0.33
+      pick_rate: 0.09
+      win_rate: 0.2
   - name: Magi's Cloak
     pick_rate: 0.1
     win_rate: 1.0
     alternates:
     - name: Heartseeker
-      pick_rate: 0.19
-      win_rate: 0.75
-    - name: Skeggox
-      pick_rate: 0.1
+      pick_rate: 0.17
+      win_rate: 0.5
+    - name: Blinking Abyss
+      pick_rate: 0.08
       win_rate: 0.5
   - name: Skeggox
-    pick_rate: 0.38
-    win_rate: 0.2
+    pick_rate: 0.21
+    win_rate: 0.17
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.15
-      win_rate: 1.0
-    - name: Olmec Blue
-      pick_rate: 0.08
-      win_rate: 1.0
+      pick_rate: 0.14
+      win_rate: 0.75
+    - name: Engraved Guard
+      pick_rate: 0.07
+      win_rate: 0.0
   community_starters:
-  - name: Leather Cowl
-    pick_rate: 0.33
-    win_rate: 0.5
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.75
+    pick_rate: 0.37
+    win_rate: 0.65
+  - name: Leather Cowl
+    pick_rate: 0.26
+    win_rate: 0.56
   - name: Bumba's Cudgel
-    pick_rate: 0.17
-    win_rate: 0.4
+    pick_rate: 0.11
+    win_rate: 0.29
   source_url: https://smitebrain.com/gods/pele/
-  last_verified: '2026-09-23'
-  god_win_rate: 0.6333333333333333
-  god_matches_won: 19
-  god_matches_played: 30
+  last_verified: '2026-09-24'
+  god_win_rate: 0.5806451612903226
+  god_matches_won: 36
+  god_matches_played: 62
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-23'
-  god_matches_analyzed: 962
+  god_window_end: '2026-09-24'
+  god_matches_analyzed: 1954
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: core
   slot_order:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - The Reaper
   - Transcendence
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - The Reaper
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Magi's Cloak — magical protection
+    swap_item: Magi's Cloak
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -122,46 +122,45 @@ builds:
     Spear, Breastplate of Valor, Bloodforge, Genji''s Guard, Deathbringer, Eye of
     the Storm, Damaru, Daybreak Gavel.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
-    Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
-      win: 0.43
-      pick: 0.31
-      fit: 1.0
-    The Reaper:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.56
-      pick: 0.41
-      fit: 0.78
     Transcendence:
-      total: 0.5
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.44
-    Heartseeker:
-      total: 0.59
+    Hydra's Lament:
+      total: 0.58
+      efficiency: 0.54
+      win: 0.62
+      pick: 0.0
+      fit: 0.77
+    The Reaper:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.63
+      pick: 0.53
+      fit: 0.78
+    The Crusher:
+      total: 0.68
       efficiency: 0.47
-      win: 0.56
-      pick: 0.58
+      win: 0.82
+      pick: 0.28
+      fit: 0.88
+    Heartseeker:
+      total: 0.62
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.62
       fit: 0.98
     Titan's Bane:
-      total: 0.77
+      total: 0.66
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.75
+      pick: 0.43
       fit: 0.88
   community_ordered:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
   - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   starter: &id001
@@ -170,19 +169,19 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - Magi's Cloak
+  - Transcendence
   - Hydra's Lament
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Magi's Cloak
-  - Hydra's Lament
+  - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -199,61 +198,60 @@ builds:
     Oath-Sworn Spear, Daybreak Gavel, Riptalon, Toxic Blade, Bloodforge, Yogi''s Necklace,
     Deathbringer, Eye of the Storm.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
-      win: 0.43
-      pick: 0.31
-      fit: 0.71
-    Magi's Cloak:
-      total: 0.55
-      efficiency: 0.26
-      win: 1.0
-      pick: 0.22
-      fit: 0.0
+    Transcendence:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.62
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
-      total: 0.54
+      total: 0.56
       efficiency: 0.54
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.63
-    Heartseeker:
-      total: 0.56
+    The Reaper:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.63
+      pick: 0.53
+      fit: 0.47
+    The Crusher:
+      total: 0.63
       efficiency: 0.47
-      win: 0.56
-      pick: 0.58
+      win: 0.82
+      pick: 0.28
+      fit: 0.57
+    Heartseeker:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.62
       fit: 0.77
     Titan's Bane:
-      total: 0.72
+      total: 0.61
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.75
+      pick: 0.43
       fit: 0.57
   community_ordered:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - Magi's Cloak
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - The Reaper
   - Magi's Cloak
+  - Hydra's Lament
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
   - Magi's Cloak
-  - The Reaper
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -274,61 +272,60 @@ builds:
     Bow, Shield Splitter, Dominance, Daybreak Gavel, Oath-Sworn Spear, Eye of Erebus,
     Screeching Gargoyle, Bloodforge, Chandra''s Grace.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.43
-      pick: 0.31
-      fit: 0.78
-    The Reaper:
-      total: 0.53
-      efficiency: 0.5
-      win: 0.56
-      pick: 0.41
-      fit: 0.56
     Magi's Cloak:
       total: 0.55
       efficiency: 0.26
       win: 1.0
       pick: 0.22
       fit: 0.0
-    Heartseeker:
-      total: 0.56
+    Hydra's Lament:
+      total: 0.55
+      efficiency: 0.54
+      win: 0.62
+      pick: 0.0
+      fit: 0.54
+    The Reaper:
+      total: 0.57
+      efficiency: 0.5
+      win: 0.63
+      pick: 0.53
+      fit: 0.56
+    The Crusher:
+      total: 0.65
       efficiency: 0.47
-      win: 0.56
-      pick: 0.58
+      win: 0.82
+      pick: 0.28
+      fit: 0.66
+    Heartseeker:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.62
       fit: 0.76
     Titan's Bane:
-      total: 0.74
+      total: 0.62
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.75
+      pick: 0.43
       fit: 0.66
   community_ordered:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - The Reaper
   - Magi's Cloak
+  - The Reaper
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
   - Kinetic Cuirass
+  - The Reaper
   - Magi's Cloak
-  - Shield of the Phoenix
+  - The Crusher
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
+  - The Reaper
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -338,8 +335,8 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -351,66 +348,67 @@ builds:
     Avenging Blade, Glorious Pridwen, Stone of Binding, Midgardian Mail, Daybreak
     Gavel, Golden Blade, Hide of the Nemean Lion.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.65
-      efficiency: 0.42
-      win: 1.0
-      pick: 0.16
-      fit: 0.32
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.57
       efficiency: 0.56
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.62
+    The Reaper:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.63
+      pick: 0.53
+      fit: 0.67
     Magi's Cloak:
       total: 0.7
       efficiency: 0.53
       win: 1.0
       pick: 0.22
       fit: 0.32
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.56
-      pick: 0.0
-      fit: 0.77
-    Titan's Bane:
-      total: 0.71
+    The Crusher:
+      total: 0.62
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.82
+      pick: 0.28
+      fit: 0.47
+    Titan's Bane:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.43
       fit: 0.47
     Amanita Charm:
-      total: 0.6
+      total: 0.63
       efficiency: 0.65
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.82
   community_ordered:
-  - Brawler’s Beat Stick
+  - The Reaper
   - Magi's Cloak
+  - The Crusher
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Brawler’s Beat Stick
   - Jotunn's Revenge
   - The Reaper
-  - Magi's Cloak
+  - Pendulum Blade
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Brawler’s Beat Stick
-  - Magi's Cloak
+  - Pendulum Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Magi's Cloak — magical protection
+    swap_item: Magi's Cloak
   - vs_tag: physical_heavy
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
@@ -424,66 +422,65 @@ builds:
     Gargoyle, Shield Splitter, Dominance, Breastplate of Valor, Genji''s Guard, Daybreak
     Gavel, Bloodforge, Deathbringer, Eye of the Storm.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.56
       efficiency: 0.72
-      win: 0.43
-      pick: 0.31
+      win: 0.33
+      pick: 0.2
       fit: 1.0
     The Reaper:
-      total: 0.57
+      total: 0.61
       efficiency: 0.5
-      win: 0.56
-      pick: 0.41
+      win: 0.63
+      pick: 0.53
       fit: 0.85
-    Magi's Cloak:
-      total: 0.55
-      efficiency: 0.26
-      win: 1.0
-      pick: 0.22
-      fit: 0.0
-    Heartseeker:
-      total: 0.59
+    Pendulum Blade:
+      total: 0.58
+      efficiency: 0.42
+      win: 0.62
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.69
       efficiency: 0.47
-      win: 0.56
-      pick: 0.58
+      win: 0.82
+      pick: 0.28
+      fit: 0.95
+    Heartseeker:
+      total: 0.62
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.62
       fit: 1.0
     Titan's Bane:
-      total: 0.78
+      total: 0.67
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.75
+      pick: 0.43
       fit: 0.95
   community_ordered:
-  - Brawler’s Beat Stick
   - Jotunn's Revenge
   - The Reaper
-  - Magi's Cloak
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Brawler’s Beat Stick
-  - Magi's Cloak
   - Tyrfing
+  - The Reaper
   - Riptalon
   - Silverbranch Bow
+  - The Crusher
   - Titan's Bane
   flex_slots:
   - Tyrfing
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -500,63 +497,63 @@ builds:
     Hammer, Dagger of Frenzy, Avenging Blade, Vital Amplifier, Hastened Fatalis, Bloodforge,
     The Executioner, Daybreak Gavel.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
-    Magi's Cloak:
-      total: 0.55
-      efficiency: 0.26
-      win: 1.0
-      pick: 0.22
-      fit: 0.0
     Tyrfing:
-      total: 0.53
+      total: 0.56
       efficiency: 0.48
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.74
+    The Reaper:
+      total: 0.56
+      efficiency: 0.55
+      win: 0.63
+      pick: 0.53
+      fit: 0.41
     Riptalon:
-      total: 0.54
+      total: 0.57
       efficiency: 0.51
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.74
     Silverbranch Bow:
-      total: 0.53
+      total: 0.56
       efficiency: 0.53
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.64
-    Titan's Bane:
-      total: 0.7
+    The Crusher:
+      total: 0.61
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.82
+      pick: 0.28
+      fit: 0.41
+    Titan's Bane:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.43
       fit: 0.41
   community_ordered:
-  - Brawler’s Beat Stick
-  - Magi's Cloak
+  - The Reaper
+  - The Crusher
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - Magi's Cloak
   - Hydra's Lament
+  - Arondight
   - Pendulum Blade
+  - The Crusher
+  - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Magi's Cloak
   - Pendulum Blade
+  - Arondight
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -574,46 +571,45 @@ builds:
     Golden Blade, Daybreak Gavel, Toxic Blade, Lernaean Bow, Gladiator''s Shield,
     Shield Splitter, Dominance.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.3
-      win: 1.0
-      pick: 0.16
-      fit: 0.0
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.43
-      pick: 0.31
-      fit: 0.85
-    Magi's Cloak:
-      total: 0.55
-      efficiency: 0.26
-      win: 1.0
-      pick: 0.22
-      fit: 0.0
     Hydra's Lament:
-      total: 0.55
+      total: 0.58
       efficiency: 0.54
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.75
+    Arondight:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.62
+      pick: 0.0
+      fit: 0.65
     Pendulum Blade:
-      total: 0.53
+      total: 0.55
       efficiency: 0.42
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.85
-    Titan's Bane:
-      total: 0.71
+    The Crusher:
+      total: 0.61
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.82
+      pick: 0.28
+      fit: 0.45
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.62
+      fit: 0.55
+    Titan's Bane:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.75
+      pick: 0.43
       fit: 0.45
   community_ordered:
-  - Brawler’s Beat Stick
-  - Jotunn's Revenge
-  - Magi's Cloak
+  - The Crusher
+  - Heartseeker
   - Titan's Bane
   starter: *id001
 - source: suggested
@@ -649,40 +645,40 @@ builds:
     Deathbringer, Eye of the Storm, Damaru, Daybreak Gavel.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.56
       efficiency: 0.72
-      win: 0.43
-      pick: 0.31
+      win: 0.33
+      pick: 0.2
       fit: 1.0
     Transcendence:
-      total: 0.5
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.44
     Hydra's Lament:
-      total: 0.56
+      total: 0.58
       efficiency: 0.54
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 0.77
     Pendulum Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.42
-      win: 0.56
+      win: 0.62
       pick: 0.0
       fit: 1.0
     Heartseeker:
-      total: 0.59
+      total: 0.62
       efficiency: 0.47
-      win: 0.56
-      pick: 0.58
+      win: 0.62
+      pick: 0.62
       fit: 0.98
     Titan's Bane:
-      total: 0.77
+      total: 0.66
       efficiency: 0.47
-      win: 1.0
-      pick: 0.46
+      win: 0.75
+      pick: 0.43
       fit: 0.88
   community_ordered:
   - Jotunn's Revenge
