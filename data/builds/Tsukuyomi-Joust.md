@@ -655,4 +655,79 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Heartseeker
+  - Avatar's Parashu
+  - Soul Gem
+  flex_slots:
+  - Heartseeker
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.66
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Jotunn's Revenge:
+      total: 0.6
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Avatar's Parashu:
+      total: 0.45
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Soul Gem:
+      total: 0.69
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: Avatar's Parashu
+    removed: Bragi's Harp
+    reason: Conquest community 73% win over 30 matches (vs 55% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  - added: Heartseeker
+    removed: Death Metal
+    reason: Conquest community 65% win over 84 matches (vs 55% on this god), taking
+      the model's weakest slot from Death Metal
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -655,4 +655,79 @@ builds:
       pick: 0.0
       fit: 0.96
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Tyrfing
+  - Heartseeker
+  - Avatar's Parashu
+  - Soul Gem
+  flex_slots:
+  - Heartseeker
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.6
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Toxic Blade:
+      total: 0.66
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Heartseeker:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Avatar's Parashu:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Soul Gem:
+      total: 0.74
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.96
+  swaps:
+  - added: Avatar's Parashu
+    removed: Golden Blade
+    reason: Conquest community 73% win over 30 matches (vs 55% on this god), taking
+      the model's weakest slot from Golden Blade
+  - added: Heartseeker
+    removed: Jotunn's Revenge
+    reason: Conquest community 65% win over 84 matches (vs 55% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
+  starter: *id001
 ---

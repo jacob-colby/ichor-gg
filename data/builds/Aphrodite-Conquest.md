@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Chandra's Grace
-    pick_rate: 0.27
-    win_rate: 0.69
+    pick_rate: 0.35
+    win_rate: 0.73
     alternates:
     - name: Stampede
-      pick_rate: 0.17
+      pick_rate: 0.13
       win_rate: 0.63
     - name: Genji's Guard
       pick_rate: 0.1
-      win_rate: 0.4
-  - name: Genji's Guard
-    pick_rate: 0.15
-    win_rate: 0.43
+      win_rate: 0.5
+  - name: Breastplate of Valor
+    pick_rate: 0.19
+    win_rate: 0.58
     alternates:
     - name: Chandra's Grace
-      pick_rate: 0.15
-      win_rate: 0.71
-    - name: Breastplate of Valor
-      pick_rate: 0.15
-      win_rate: 0.43
-  - name: Heartwood Charm
-    pick_rate: 0.13
-    win_rate: 0.33
-    alternates:
+      pick_rate: 0.13
+      win_rate: 0.75
     - name: Genji's Guard
-      pick_rate: 0.29
-      win_rate: 0.5
-    - name: Breastplate of Valor
+      pick_rate: 0.11
+      win_rate: 0.43
+  - name: Genji's Guard
+    pick_rate: 0.27
+    win_rate: 0.59
+    alternates:
+    - name: Stampede
+      pick_rate: 0.11
+      win_rate: 0.29
+    - name: Heartwood Charm
       pick_rate: 0.1
-      win_rate: 0.6
+      win_rate: 0.33
   - name: Shell of Rebuke
-    pick_rate: 0.34
-    win_rate: 0.73
+    pick_rate: 0.37
+    win_rate: 0.71
     alternates:
     - name: Rod of Asclepius
       pick_rate: 0.07
       win_rate: 1.0
-    - name: Stampede
-      pick_rate: 0.07
-      win_rate: 0.33
-  - name: The World Stone
-    pick_rate: 0.13
-    win_rate: 1.0
+    - name: Mana Tome
+      pick_rate: 0.05
+      win_rate: 0.0
+  - name: Chronos' Pendant
+    pick_rate: 0.14
+    win_rate: 0.86
     alternates:
-    - name: Chronos' Pendant
-      pick_rate: 0.13
-      win_rate: 0.8
+    - name: The World Stone
+      pick_rate: 0.12
+      win_rate: 0.83
     - name: Adroit Ring
-      pick_rate: 0.11
+      pick_rate: 0.08
       win_rate: 0.0
   - name: Oracle Staff
-    pick_rate: 0.28
-    win_rate: 0.4
+    pick_rate: 0.24
+    win_rate: 0.5
     alternates:
     - name: Adroit Ring
-      pick_rate: 0.17
-      win_rate: 0.67
+      pick_rate: 0.16
+      win_rate: 0.75
     - name: The World Stone
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 1.0
   community_starters:
   - name: Sands Of Time
-    pick_rate: 0.46
-    win_rate: 0.41
+    pick_rate: 0.47
+    win_rate: 0.48
   - name: Pendulum of the Ages
-    pick_rate: 0.21
+    pick_rate: 0.24
     win_rate: 0.8
   - name: Selflessness
     pick_rate: 0.13
-    win_rate: 0.0
+    win_rate: 0.25
   source_url: https://smitebrain.com/gods/aphrodite/
-  last_verified: '2026-09-24'
-  god_win_rate: 0.4375
-  god_matches_won: 21
-  god_matches_played: 48
+  last_verified: '2026-09-25'
+  god_win_rate: 0.5161290322580645
+  god_matches_won: 32
+  god_matches_played: 62
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-24'
-  god_matches_analyzed: 1954
+  god_window_end: '2026-09-25'
+  god_matches_analyzed: 2996
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -124,33 +124,33 @@ builds:
     Mail, Mantle Of Discord.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.6
     Chronos' Pendant:
-      total: 0.62
+      total: 0.65
       efficiency: 0.55
-      win: 0.8
-      pick: 0.28
+      win: 0.86
+      pick: 0.3
       fit: 0.35
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.49
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.36
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.36
     Rod of Asclepius:
@@ -170,13 +170,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Book of Thoth
+  - Genji's Guard
   - Chronos' Pendant
-  - Rod of Tahuti
   - The World Stone
-  - Wish-Granting Pearl
+  - Rod of Tahuti
   - Rod of Asclepius
   flex_slots:
-  - Wish-Granting Pearl
+  - Genji's Guard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -200,35 +200,35 @@ builds:
     Gavel.'
   slot_scores:
     Book of Thoth:
-      total: 0.52
+      total: 0.51
       efficiency: 0.51
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.25
-    Chronos' Pendant:
-      total: 0.61
-      efficiency: 0.55
-      win: 0.8
-      pick: 0.28
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.59
+      pick: 0.42
       fit: 0.28
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.67
-      pick: 0.0
-      fit: 0.37
+    Chronos' Pendant:
+      total: 0.64
+      efficiency: 0.55
+      win: 0.86
+      pick: 0.3
+      fit: 0.28
     The World Stone:
-      total: 0.7
+      total: 0.71
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.37
-    Wish-Granting Pearl:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.67
+    Rod of Tahuti:
+      total: 0.65
+      efficiency: 0.86
+      win: 0.65
       pick: 0.0
-      fit: 0.36
+      fit: 0.37
     Rod of Asclepius:
       total: 0.7
       efficiency: 0.57
@@ -236,6 +236,7 @@ builds:
       pick: 0.12
       fit: 0.29
   community_ordered:
+  - Genji's Guard
   - Chronos' Pendant
   - The World Stone
   - Rod of Asclepius
@@ -274,33 +275,33 @@ builds:
     Gavel, Ancient Signet.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.49
       efficiency: 0.51
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.14
     Chronos' Pendant:
-      total: 0.61
+      total: 0.64
       efficiency: 0.55
-      win: 0.8
-      pick: 0.28
+      win: 0.86
+      pick: 0.3
       fit: 0.28
     Spear of Desolation:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.49
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.35
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.35
     Rod of Asclepius:
@@ -324,7 +325,7 @@ builds:
   - Amanita Charm
   - Rod of Asclepius
   flex_slots:
-  - Chronos' Pendant
+  - Amanita Charm
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -348,33 +349,33 @@ builds:
     Glorious Pridwen, Blood-Bound Book.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.6
     Chronos' Pendant:
-      total: 0.62
+      total: 0.65
       efficiency: 0.55
-      win: 0.8
-      pick: 0.28
+      win: 0.86
+      pick: 0.3
       fit: 0.35
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.36
     The World Stone:
       total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.36
     Amanita Charm:
-      total: 0.65
+      total: 0.64
       efficiency: 0.65
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.8
     Rod of Asclepius:
@@ -422,33 +423,33 @@ builds:
     Pearl, Magi''s Cloak.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.59
     Chronos' Pendant:
-      total: 0.61
+      total: 0.64
       efficiency: 0.55
-      win: 0.8
-      pick: 0.28
+      win: 0.86
+      pick: 0.3
       fit: 0.28
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.48
     The World Stone:
       total: 0.72
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.48
     Rod of Tahuti:
-      total: 0.67
+      total: 0.66
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.48
     Rod of Asclepius:
@@ -496,33 +497,33 @@ builds:
     Wish-Granting Pearl, Draconic Scale, Magi''s Cloak.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.28
     Nimble Ring:
-      total: 0.58
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.34
     Bragi's Harp:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.47
     The World Stone:
       total: 0.68
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.21
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.21
     Rod of Asclepius:
@@ -538,15 +539,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Freya's Tears
+  - Genji's Guard
   - Chronos' Pendant
-  - Spear of Desolation
+  - Freya's Tears
   - The World Stone
   - Rod of Tahuti
   - Rod of Asclepius
   flex_slots:
   - Freya's Tears
-  - Spear of Desolation
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -555,8 +556,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -568,34 +569,34 @@ builds:
     Shield, Eye of Providence, Gem of Focus, Draconic Scale, Stone of Binding, Eye
     of Erebus, Magi''s Cloak, Daybreak Gavel, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
+    Genji's Guard:
+      total: 0.58
+      efficiency: 0.66
+      win: 0.59
+      pick: 0.42
+      fit: 0.44
+    Chronos' Pendant:
+      total: 0.65
+      efficiency: 0.55
+      win: 0.86
+      pick: 0.3
+      fit: 0.39
     Freya's Tears:
-      total: 0.6
+      total: 0.59
       efficiency: 0.61
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.58
-    Chronos' Pendant:
-      total: 0.63
-      efficiency: 0.55
-      win: 0.8
-      pick: 0.28
-      fit: 0.39
-    Spear of Desolation:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.67
-      pick: 0.0
-      fit: 0.52
     The World Stone:
       total: 0.68
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.21
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.21
     Rod of Asclepius:
@@ -605,6 +606,7 @@ builds:
       pick: 0.12
       fit: 0.21
   community_ordered:
+  - Genji's Guard
   - Chronos' Pendant
   - The World Stone
   - Rod of Asclepius
@@ -612,15 +614,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Book of Thoth
+  - Berserker's Shield
+  - Chronos' Pendant
   - Jotunn's Revenge
-  - Transcendence
   - The World Stone
   - Rod of Tahuti
   - Rod of Asclepius
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Jotunn's Revenge
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -629,8 +631,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -645,34 +647,34 @@ builds:
     of Binding, The Crusher, Draconic Scale, Jade Scepter, Doom Orb, Screeching Gargoyle,
     Toxic Blade.'
   slot_scores:
-    Book of Thoth:
-      total: 0.5
-      efficiency: 0.51
-      win: 0.67
+    Berserker's Shield:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.65
       pick: 0.0
-      fit: 0.14
+      fit: 0.31
+    Chronos' Pendant:
+      total: 0.63
+      efficiency: 0.55
+      win: 0.86
+      pick: 0.3
+      fit: 0.24
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.43
-    Transcendence:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.67
-      pick: 0.0
-      fit: 0.2
     The World Stone:
       total: 0.69
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.27
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.27
     Rod of Asclepius:
@@ -682,21 +684,22 @@ builds:
       pick: 0.12
       fit: 0.25
   community_ordered:
+  - Chronos' Pendant
   - The World Stone
   - Rod of Asclepius
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
+  - Chronos' Pendant
+  - Freya's Tears
   - The World Stone
   - Rod of Tahuti
   - Rod of Asclepius
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Jotunn's Revenge
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -705,8 +708,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -721,34 +724,34 @@ builds:
     The Crusher, Ancient Signet, Magi''s Cloak, Dreamer''s Idol, Triton''s Conch,
     Helm of Darkness, Daybreak Gavel.'
   slot_scores:
-    Book of Thoth:
-      total: 0.51
-      efficiency: 0.51
-      win: 0.67
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.44
-    Transcendence:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.67
+    Chronos' Pendant:
+      total: 0.64
+      efficiency: 0.55
+      win: 0.86
+      pick: 0.3
+      fit: 0.29
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.65
       pick: 0.0
-      fit: 0.18
+      fit: 0.38
     The World Stone:
-      total: 0.69
+      total: 0.7
       efficiency: 0.52
       win: 1.0
-      pick: 0.28
+      pick: 0.37
       fit: 0.33
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.33
     Rod of Asclepius:
@@ -758,14 +761,15 @@ builds:
       pick: 0.12
       fit: 0.3
   community_ordered:
+  - Chronos' Pendant
   - The World Stone
   - Rod of Asclepius
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Kinetic Cuirass
   - Genji's Guard
+  - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
@@ -794,40 +798,40 @@ builds:
     Wish-Granting Pearl, Helm of Darkness, Screeching Gargoyle, Doom Orb, Magi''s
     Cloak, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.66
+      win: 0.59
+      pick: 0.42
+      fit: 0.32
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.6
-    Genji's Guard:
-      total: 0.48
-      efficiency: 0.66
-      win: 0.43
-      pick: 0.2
-      fit: 0.32
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.36
     Amanita Charm:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
-      win: 0.67
+      win: 0.65
       pick: 0.0
       fit: 0.5
   community_ordered:
