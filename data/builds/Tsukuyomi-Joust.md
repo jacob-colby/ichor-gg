@@ -661,11 +661,11 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Heartseeker
+  - Death Metal
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
-  - Heartseeker
+  - Death Metal
   - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
@@ -701,12 +701,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
+    Death Metal:
+      total: 0.56
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.51
     Avatar's Parashu:
       total: 0.45
       efficiency: 0.45
@@ -722,12 +722,8 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Bragi's Harp
-    reason: Conquest community 73% win over 30 matches (vs 55% on this god), taking
+    reason: Conquest community 74% win over 36 matches (vs 56% on this god), taking
       the model's weakest slot from Bragi's Harp
-  - added: Heartseeker
-    removed: Death Metal
-    reason: Conquest community 65% win over 84 matches (vs 55% on this god), taking
-      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---

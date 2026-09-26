@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Cosmos
-  aspect_pick_rate: 0.03
-  aspect_win_rate: 0.17
+  aspect_pick_rate: 0.04
+  aspect_win_rate: 0.25
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.45
     alternates:
     - name: Tyrfing
       pick_rate: 0.35
-      win_rate: 0.43
+      win_rate: 0.45
     - name: Devourer's Gauntlet
-      pick_rate: 0.06
-      win_rate: 0.5
+      pick_rate: 0.07
+      win_rate: 0.4
   - name: Bragi's Harp
-    pick_rate: 0.3
-    win_rate: 0.43
+    pick_rate: 0.31
+    win_rate: 0.47
     alternates:
     - name: Staff of Myrddin
       pick_rate: 0.2
-      win_rate: 0.41
-    - name: Doom Orb
-      pick_rate: 0.06
-      win_rate: 0.45
+      win_rate: 0.42
+    - name: Tyrfing
+      pick_rate: 0.05
+      win_rate: 0.6
   - name: Barbed Carver
     pick_rate: 0.19
-    win_rate: 0.41
+    win_rate: 0.4
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.14
-      win_rate: 0.59
+      win_rate: 0.55
     - name: Staff of Myrddin
       pick_rate: 0.1
-      win_rate: 0.55
+      win_rate: 0.5
   - name: Rod of Tahuti
-    pick_rate: 0.17
-    win_rate: 0.52
+    pick_rate: 0.16
+    win_rate: 0.48
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.15
-      win_rate: 0.37
+      pick_rate: 0.14
+      win_rate: 0.34
     - name: The Executioner
       pick_rate: 0.14
-      win_rate: 0.5
+      win_rate: 0.54
   - name: Riptalon
-    pick_rate: 0.09
-    win_rate: 0.64
+    pick_rate: 0.1
+    win_rate: 0.61
     alternates:
+    - name: The Executioner
+      pick_rate: 0.1
+      win_rate: 0.59
     - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.58
-    - name: The Executioner
-      pick_rate: 0.07
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Hunter's Bow
-    pick_rate: 0.08
+    pick_rate: 0.06
     win_rate: 0.78
     alternates:
-    - name: Time-lock Aegis
+    - name: Obsidian Shard
+      pick_rate: 0.06
+      win_rate: 0.67
+    - name: Riptalon
       pick_rate: 0.05
-      win_rate: 0.8
-    - name: Killing Stone
-      pick_rate: 0.05
-      win_rate: 0.4
+      win_rate: 0.5
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.31
-    win_rate: 0.55
+    pick_rate: 0.32
+    win_rate: 0.56
   - name: Archmage's Gem
     pick_rate: 0.17
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Conduit Gem
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-09-25'
-  god_win_rate: 0.46733668341708545
-  god_matches_won: 93
-  god_matches_played: 199
+  last_verified: '2026-09-26'
+  god_win_rate: 0.46402877697841727
+  god_matches_won: 129
+  god_matches_played: 278
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-25'
-  god_matches_analyzed: 2996
+  god_window_end: '2026-09-26'
+  god_matches_analyzed: 4198
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -100,15 +100,15 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   flex_slots:
-  - Bragi's Harp
+  - Spear of Desolation
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Time-lock Aegis — magical protection
-    swap_item: Time-lock Aegis
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -117,9 +117,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Nimble Ring, Soul Gem, Gluttonous Grimoire, Spear
-    of the Magus, Tekko-Kagi, The Reaper, Lernaean Bow, Bracer of The Abyss, Doom
-    Orb, Heartseeker, Hydra''s Lament, The World Stone, Chronos'' Pendant, Dreamer''s
-    Idol, Dominance, Death Metal, Titan''s Bane, Blood-Bound Book, The Crusher, Ancient
+    of the Magus, Tekko-Kagi, The Reaper, Lernaean Bow, Bracer of The Abyss, Heartseeker,
+    Hydra''s Lament, Doom Orb, The World Stone, Chronos'' Pendant, Dreamer''s Idol,
+    Dominance, Death Metal, Titan''s Bane, Blood-Bound Book, The Crusher, Ancient
     Signet, Bancroft''s Talon, Gem of Focus, Arondight, Pendulum Blade, Silverbranch
     Bow, The Cosmic Horror, Avatar''s Parashu, Transcendence, Rod of Asclepius, Book
     of Thoth, Typhon’s Heart, Runeforged Hammer, Polynomicon, Berserker''s Shield,
@@ -132,28 +132,28 @@ builds:
       pick: 0.0
       fit: 0.45
     Bragi's Harp:
-      total: 0.48
+      total: 0.5
       efficiency: 0.44
-      win: 0.43
-      pick: 0.41
+      win: 0.47
+      pick: 0.42
       fit: 0.71
     Spear of Desolation:
       total: 0.5
       efficiency: 0.57
       win: 0.45
-      pick: 0.39
+      pick: 0.38
       fit: 0.48
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.43
-      win: 0.64
-      pick: 0.19
+      win: 0.61
+      pick: 0.22
       fit: 0.54
     Rod of Tahuti:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.38
     Spear of the Magus:
       total: 0.47
@@ -179,15 +179,15 @@ builds:
   - Rod of Tahuti
   - Riptalon
   flex_slots:
-  - Bragi's Harp
+  - Spear of Desolation
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Time-lock Aegis — magical protection
-    swap_item: Time-lock Aegis
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -196,7 +196,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Nimble Ring, Soul Gem, Gluttonous Grimoire, Hydra''s Lament, Spear of
-    the Magus, Heartseeker, Lernaean Bow, The Reaper, Doom Orb, Tekko-Kagi, Ancient
+    the Magus, Heartseeker, Lernaean Bow, The Reaper, Tekko-Kagi, Doom Orb, Ancient
     Signet, The World Stone, Dominance, Bracer of The Abyss, Death Metal, Chronos''
     Pendant, Bancroft''s Talon, Titan''s Bane, The Crusher, Blood-Bound Book, Dreamer''s
     Idol, Transcendence, Arondight, Gem of Focus, Book of Thoth, Polynomicon, Pendulum
@@ -216,28 +216,28 @@ builds:
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.48
+      total: 0.5
       efficiency: 0.44
-      win: 0.43
-      pick: 0.41
+      win: 0.47
+      pick: 0.42
       fit: 0.71
     Spear of Desolation:
       total: 0.49
       efficiency: 0.57
       win: 0.45
-      pick: 0.39
+      pick: 0.38
       fit: 0.45
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.42
     Riptalon:
-      total: 0.51
+      total: 0.49
       efficiency: 0.43
-      win: 0.64
-      pick: 0.19
+      win: 0.61
+      pick: 0.22
       fit: 0.4
   community_ordered:
   - Bragi's Harp
@@ -248,22 +248,22 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
+  - Bragi's Harp
   - Spear of Desolation
-  - Transcendence
-  - Rod of Tahuti
   - Riptalon
+  - Rod of Tahuti
+  - Spear of the Magus
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Bragi's Harp
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Time-lock Aegis — magical protection
-    swap_item: Time-lock Aegis
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -280,46 +280,47 @@ builds:
     Asclepius, Book of Thoth, Totem of Death, Typhon’s Heart, Polynomicon, Avenging
     Blade.'
   slot_scores:
-    Book of Thoth:
-      total: 0.4
-      efficiency: 0.51
-      win: 0.45
-      pick: 0.0
-      fit: 0.16
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.45
       pick: 0.0
       fit: 0.56
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.47
+      pick: 0.42
+      fit: 0.62
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
       win: 0.45
-      pick: 0.39
+      pick: 0.38
       fit: 0.56
-    Transcendence:
-      total: 0.41
-      efficiency: 0.53
+    Riptalon:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.61
+      pick: 0.22
+      fit: 0.52
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.86
+      win: 0.48
+      pick: 0.27
+      fit: 0.4
+    Spear of the Magus:
+      total: 0.47
+      efficiency: 0.6
       win: 0.45
       pick: 0.0
-      fit: 0.16
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
-      win: 0.52
-      pick: 0.28
       fit: 0.4
-    Riptalon:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.64
-      pick: 0.19
-      fit: 0.52
   community_ordered:
+  - Bragi's Harp
   - Spear of Desolation
-  - Rod of Tahuti
   - Riptalon
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -327,16 +328,16 @@ builds:
   - Book of Thoth
   - Berserker's Shield
   - Jotunn's Revenge
-  - Riptalon
   - Rod of Tahuti
+  - Riptalon
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Time-lock Aegis — CC-immunity / cleanse
-    swap_item: Time-lock Aegis
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -374,18 +375,18 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.3
-    Riptalon:
-      total: 0.55
-      efficiency: 0.43
-      win: 0.64
-      pick: 0.19
-      fit: 0.66
     Rod of Tahuti:
-      total: 0.59
+      total: 0.57
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.25
+    Riptalon:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.61
+      pick: 0.22
+      fit: 0.66
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -393,28 +394,28 @@ builds:
       pick: 0.0
       fit: 0.64
   community_ordered:
-  - Riptalon
   - Rod of Tahuti
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Bragi's Harp
   - Spear of Desolation
   - Riptalon
-  - Spear of the Magus
   - Rod of Tahuti
-  - Tekko-Kagi
+  - Spear of the Magus
   flex_slots:
   - Spear of the Magus
-  - Tekko-Kagi
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Time-lock Aegis — magical protection
-    swap_item: Time-lock Aegis
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -437,37 +438,38 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.55
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.47
+      pick: 0.42
+      fit: 0.61
     Spear of Desolation:
       total: 0.51
       efficiency: 0.57
       win: 0.45
-      pick: 0.39
+      pick: 0.38
       fit: 0.57
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.43
-      win: 0.64
-      pick: 0.19
+      win: 0.61
+      pick: 0.22
       fit: 0.62
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.86
+      win: 0.48
+      pick: 0.27
+      fit: 0.49
     Spear of the Magus:
       total: 0.49
       efficiency: 0.6
       win: 0.45
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
-      win: 0.52
-      pick: 0.28
-      fit: 0.49
-    Tekko-Kagi:
-      total: 0.47
-      efficiency: 0.49
-      win: 0.45
-      pick: 0.0
-      fit: 0.67
   community_ordered:
+  - Bragi's Harp
   - Spear of Desolation
   - Riptalon
   - Rod of Tahuti
@@ -477,20 +479,20 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Spear of Desolation
   - Nimble Ring
+  - Bragi's Harp
   - Rod of Tahuti
   - Riptalon
   flex_slots:
-  - Spear of Desolation
   - Tyrfing
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Time-lock Aegis — magical protection
-    swap_item: Time-lock Aegis
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -500,7 +502,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Nimble Ring, Soul Gem, Gluttonous Grimoire, Silverbranch
     Bow, Spear of the Magus, Lernaean Bow, Tekko-Kagi, The Reaper, Golden Blade, Bracer
-    of The Abyss, Hydra''s Lament, Heartseeker, Doom Orb, Toxic Blade, Chronos'' Pendant,
+    of The Abyss, Hydra''s Lament, Heartseeker, Toxic Blade, Doom Orb, Chronos'' Pendant,
     The World Stone, Dominance, Ancient Signet, Dreamer''s Idol, Blood-Bound Book,
     Death Metal, Titan''s Bane, The Crusher, Qin''s Blade, Bancroft''s Talon, Gem
     of Focus, Arondight, Transcendence, Sun Beam Bow, Pendulum Blade, The Cosmic Horror,
@@ -513,53 +515,53 @@ builds:
       pick: 0.0
       fit: 0.36
     Tyrfing:
-      total: 0.47
+      total: 0.48
       efficiency: 0.48
-      win: 0.43
+      win: 0.45
       pick: 0.35
       fit: 0.63
-    Spear of Desolation:
-      total: 0.48
-      efficiency: 0.57
-      win: 0.45
-      pick: 0.39
-      fit: 0.39
     Nimble Ring:
       total: 0.5
       efficiency: 0.65
       win: 0.45
       pick: 0.0
       fit: 0.48
+    Bragi's Harp:
+      total: 0.48
+      efficiency: 0.44
+      win: 0.47
+      pick: 0.42
+      fit: 0.63
     Rod of Tahuti:
-      total: 0.59
+      total: 0.57
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.31
     Riptalon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
-      win: 0.64
-      pick: 0.19
+      win: 0.61
+      pick: 0.22
       fit: 0.63
   community_ordered:
   - Tyrfing
-  - Spear of Desolation
+  - Bragi's Harp
   - Rod of Tahuti
   - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
   - Jotunn's Revenge
-  - Spear of Desolation
   - Hydra's Lament
+  - Bragi's Harp
+  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Chronos' Pendant
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -583,23 +585,11 @@ builds:
     Bow, Transcendence, Avatar''s Parashu, Runeforged Hammer, The Cosmic Horror, Berserker''s
     Shield, Rod of Asclepius, Book of Thoth.'
   slot_scores:
-    Chronos' Pendant:
-      total: 0.46
-      efficiency: 0.55
-      win: 0.45
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.45
       pick: 0.0
-      fit: 0.6
-    Spear of Desolation:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.45
-      pick: 0.39
       fit: 0.6
     Hydra's Lament:
       total: 0.47
@@ -607,11 +597,23 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.54
+    Bragi's Harp:
+      total: 0.47
+      efficiency: 0.44
+      win: 0.47
+      pick: 0.42
+      fit: 0.52
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.45
+      pick: 0.38
+      fit: 0.6
     Rod of Tahuti:
-      total: 0.59
+      total: 0.57
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.26
     Soul Gem:
       total: 0.52
@@ -620,6 +622,7 @@ builds:
       pick: 0.0
       fit: 0.78
   community_ordered:
+  - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
@@ -674,7 +677,7 @@ builds:
       total: 0.5
       efficiency: 0.57
       win: 0.45
-      pick: 0.39
+      pick: 0.38
       fit: 0.48
     Spear of the Magus:
       total: 0.47
@@ -683,16 +686,16 @@ builds:
       pick: 0.0
       fit: 0.38
     Rod of Tahuti:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
-      win: 0.52
-      pick: 0.28
+      win: 0.48
+      pick: 0.27
       fit: 0.38
     Obsidian Shard:
-      total: 0.44
+      total: 0.43
       efficiency: 0.54
-      win: 0.37
-      pick: 0.25
+      win: 0.34
+      pick: 0.23
       fit: 0.48
   community_ordered:
   - Spear of Desolation

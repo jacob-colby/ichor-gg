@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Rage
-    pick_rate: 0.52
-    win_rate: 0.54
+    pick_rate: 0.57
+    win_rate: 0.55
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.19
-      win_rate: 0.53
+      pick_rate: 0.2
+      win_rate: 0.52
     - name: Hydra's Lament
-      pick_rate: 0.15
-      win_rate: 0.69
+      pick_rate: 0.12
+      win_rate: 0.56
   - name: Dagger of Frenzy
-    pick_rate: 0.27
-    win_rate: 0.42
+    pick_rate: 0.31
+    win_rate: 0.43
     alternates:
     - name: Rage
-      pick_rate: 0.4
-      win_rate: 0.61
+      pick_rate: 0.36
+      win_rate: 0.56
     - name: Hydra's Lament
-      pick_rate: 0.09
-      win_rate: 1.0
+      pick_rate: 0.12
+      win_rate: 0.75
   - name: Deathbringer
-    pick_rate: 0.39
-    win_rate: 0.5
+    pick_rate: 0.45
+    win_rate: 0.51
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.16
-      win_rate: 0.57
+      pick_rate: 0.17
+      win_rate: 0.5
     - name: Musashi's Dual Swords
-      pick_rate: 0.07
-      win_rate: 0.67
+      pick_rate: 0.08
+      win_rate: 0.73
   - name: Titan's Bane
-    pick_rate: 0.15
+    pick_rate: 0.13
     win_rate: 0.5
     alternates:
     - name: Deathbringer
-      pick_rate: 0.3
+      pick_rate: 0.28
       win_rate: 0.54
     - name: Musashi's Dual Swords
-      pick_rate: 0.1
-      win_rate: 1.0
-  - name: Hydra's Lament
-    pick_rate: 0.08
-    win_rate: 0.67
+      pick_rate: 0.11
+      win_rate: 0.79
+  - name: Riptalon
+    pick_rate: 0.09
+    win_rate: 0.4
     alternates:
     - name: Titan's Bane
       pick_rate: 0.25
-      win_rate: 0.72
-    - name: Riptalon
+      win_rate: 0.61
+    - name: Hydra's Lament
       pick_rate: 0.08
-      win_rate: 0.33
-  - name: Blinking Abyss
-    pick_rate: 0.11
-    win_rate: 1.0
+      win_rate: 0.67
+  - name: Skeggox
+    pick_rate: 0.08
+    win_rate: 0.83
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.16
-      win_rate: 0.57
-    - name: Skeggox
-      pick_rate: 0.09
-      win_rate: 0.75
+      pick_rate: 0.12
+      win_rate: 0.56
+    - name: Blinking Abyss
+      pick_rate: 0.08
+      win_rate: 1.0
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.58
+    pick_rate: 0.28
+    win_rate: 0.57
   - name: Sharpshooter's Arrow
     pick_rate: 0.22
     win_rate: 0.5
   - name: Gilded Arrow
-    pick_rate: 0.17
+    pick_rate: 0.19
     win_rate: 0.6
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-09-25'
-  god_win_rate: 0.5730337078651685
-  god_matches_won: 51
-  god_matches_played: 89
+  last_verified: '2026-09-26'
+  god_win_rate: 0.5522388059701493
+  god_matches_won: 74
+  god_matches_played: 134
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-25'
-  god_matches_analyzed: 2996
+  god_window_end: '2026-09-26'
+  god_matches_analyzed: 4198
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -141,10 +141,10 @@ builds:
       pick: 0.17
       fit: 0.66
     Musashi's Dual Swords:
-      total: 0.69
+      total: 0.59
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.45
     Tekko-Kagi:
       total: 0.52
@@ -170,11 +170,11 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
+  - Deathbringer
   - Musashi's Dual Swords
-  - The Crusher
   - Heartseeker
   flex_slots:
-  - The Crusher
+  - Deathbringer
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -214,18 +214,18 @@ builds:
       win: 0.67
       pick: 0.17
       fit: 0.59
-    Musashi's Dual Swords:
-      total: 0.67
-      efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+    Deathbringer:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.51
+      pick: 0.7
       fit: 0.3
-    The Crusher:
-      total: 0.48
-      efficiency: 0.47
-      win: 0.54
-      pick: 0.0
-      fit: 0.53
+    Musashi's Dual Swords:
+      total: 0.57
+      efficiency: 0.46
+      win: 0.79
+      pick: 0.18
+      fit: 0.3
     Heartseeker:
       total: 0.51
       efficiency: 0.47
@@ -234,6 +234,7 @@ builds:
       fit: 0.72
   community_ordered:
   - Hydra's Lament
+  - Deathbringer
   - Musashi's Dual Swords
   starter: *id001
 - source: suggested
@@ -287,10 +288,10 @@ builds:
       pick: 0.17
       fit: 0.51
     Musashi's Dual Swords:
-      total: 0.66
+      total: 0.56
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.24
     The Crusher:
       total: 0.5
@@ -366,10 +367,10 @@ builds:
       pick: 0.17
       fit: 0.39
     Musashi's Dual Swords:
-      total: 0.66
+      total: 0.56
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.23
     Amanita Charm:
       total: 0.59
@@ -432,10 +433,10 @@ builds:
       pick: 0.17
       fit: 0.49
     Musashi's Dual Swords:
-      total: 0.67
+      total: 0.57
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.32
     Tekko-Kagi:
       total: 0.54
@@ -510,10 +511,10 @@ builds:
       pick: 0.17
       fit: 0.35
     Musashi's Dual Swords:
-      total: 0.65
+      total: 0.56
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.19
     Silverbranch Bow:
       total: 0.52
@@ -577,10 +578,10 @@ builds:
       pick: 0.0
       fit: 0.59
     Musashi's Dual Swords:
-      total: 0.65
+      total: 0.55
       efficiency: 0.46
-      win: 1.0
-      pick: 0.17
+      win: 0.79
+      pick: 0.18
       fit: 0.18
     Pendulum Blade:
       total: 0.5
@@ -664,7 +665,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.5
-      pick: 0.25
+      pick: 0.22
       fit: 0.77
   community_ordered:
   - Hydra's Lament

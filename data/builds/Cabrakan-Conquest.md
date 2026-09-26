@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Rotund Jotunn
-  aspect_pick_rate: 0.1
-  aspect_win_rate: 0.67
+  aspect_pick_rate: 0.11
+  aspect_win_rate: 0.64
   slot_order:
   - name: Runeforged Hammer
-    pick_rate: 0.27
-    win_rate: 0.59
+    pick_rate: 0.35
+    win_rate: 0.63
     alternates:
-    - name: Gauntlet of Thebes
-      pick_rate: 0.17
-      win_rate: 0.36
     - name: Shifter's Shield
       pick_rate: 0.16
-      win_rate: 0.6
-  - name: Stone of Binding
-    pick_rate: 0.14
-    win_rate: 0.78
-    alternates:
-    - name: Breastplate of Valor
-      pick_rate: 0.11
-      win_rate: 0.29
-    - name: Genji's Guard
-      pick_rate: 0.06
       win_rate: 0.5
-  - name: Genji's Guard
-    pick_rate: 0.14
+    - name: Gauntlet of Thebes
+      pick_rate: 0.13
+      win_rate: 0.38
+  - name: Breastplate of Valor
+    pick_rate: 0.16
     win_rate: 0.44
     alternates:
-    - name: Brawler’s Beat Stick
+    - name: Stone of Binding
       pick_rate: 0.11
-      win_rate: 1.0
-    - name: Freya's Tears
+      win_rate: 0.73
+    - name: Genji's Guard
       pick_rate: 0.1
-      win_rate: 0.83
-  - name: Spirit Robe
-    pick_rate: 0.14
+      win_rate: 0.5
+  - name: Genji's Guard
+    pick_rate: 0.16
     win_rate: 0.38
+    alternates:
+    - name: Breastplate of Valor
+      pick_rate: 0.13
+      win_rate: 0.69
+    - name: Brawler’s Beat Stick
+      pick_rate: 0.08
+      win_rate: 1.0
+  - name: Freya's Tears
+    pick_rate: 0.17
+    win_rate: 0.56
     alternates:
     - name: Genji's Guard
       pick_rate: 0.14
-      win_rate: 0.63
-    - name: Freya's Tears
-      pick_rate: 0.12
-      win_rate: 0.57
-  - name: Freya's Tears
-    pick_rate: 0.1
-    win_rate: 0.6
+      win_rate: 0.69
+    - name: Spirit Robe
+      pick_rate: 0.09
+      win_rate: 0.38
+  - name: Spirit Robe
+    pick_rate: 0.07
+    win_rate: 0.67
     alternates:
+    - name: Freya's Tears
+      pick_rate: 0.09
+      win_rate: 0.57
     - name: Hide of the Nemean Lion
-      pick_rate: 0.1
-      win_rate: 0.6
-    - name: Veve Charm
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.5
   - name: Shell of Rebuke
-    pick_rate: 0.13
-    win_rate: 1.0
+    pick_rate: 0.12
+    win_rate: 0.83
     alternates:
-    - name: Engraved Guard
-      pick_rate: 0.1
-      win_rate: 0.67
     - name: Spirit Robe
       pick_rate: 0.1
-      win_rate: 0.67
+      win_rate: 0.6
+    - name: Olmec Blue
+      pick_rate: 0.08
+      win_rate: 0.25
   community_starters:
   - name: Bumba's Cudgel
-    pick_rate: 0.3
-    win_rate: 0.58
+    pick_rate: 0.29
+    win_rate: 0.59
   - name: Bumba's Hammer
-    pick_rate: 0.22
-    win_rate: 0.57
+    pick_rate: 0.29
+    win_rate: 0.62
   - name: Bluestone Pendant
-    pick_rate: 0.14
-    win_rate: 0.33
+    pick_rate: 0.11
+    win_rate: 0.27
   source_url: https://smitebrain.com/gods/cabrakan/
-  last_verified: '2026-09-25'
-  god_win_rate: 0.5714285714285714
-  god_matches_won: 36
-  god_matches_played: 63
+  last_verified: '2026-09-26'
+  god_win_rate: 0.5656565656565656
+  god_matches_won: 56
+  god_matches_played: 99
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-25'
-  god_matches_analyzed: 2996
+  god_window_end: '2026-09-26'
+  god_matches_analyzed: 4198
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Jotunn's Revenge
-  - Freya's Tears
+  - Runeforged Hammer
   - Shell of Rebuke
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
-  - Freya's Tears
+  - Amanita Charm
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -110,8 +110,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -129,43 +129,44 @@ builds:
       total: 0.67
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.41
     Stone of Binding:
-      total: 0.62
-      efficiency: 0.51
-      win: 0.78
-      pick: 0.19
-      fit: 0.51
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.6
-      pick: 0.0
-      fit: 0.37
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.6
-      pick: 0.22
-      fit: 0.52
-    Shell of Rebuke:
-      total: 0.63
-      efficiency: 0.28
-      win: 1.0
-      pick: 0.4
-      fit: 0.41
-    Amanita Charm:
       total: 0.59
+      efficiency: 0.51
+      win: 0.73
+      pick: 0.15
+      fit: 0.51
+    Runeforged Hammer:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.48
+    Shell of Rebuke:
+      total: 0.55
+      efficiency: 0.28
+      win: 0.83
+      pick: 0.37
+      fit: 0.41
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.28
+      fit: 0.52
+    Amanita Charm:
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.57
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Freya's Tears
+  - Runeforged Hammer
   - Shell of Rebuke
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -174,23 +175,23 @@ builds:
   slot_order:
   - Brawler’s Beat Stick
   - Stone of Binding
+  - Runeforged Hammer
   - Jotunn's Revenge
-  - Shield of the Phoenix
-  - Shell of Rebuke
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
+  - Freya's Tears
   - Jotunn's Revenge
-  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -208,42 +209,43 @@ builds:
       total: 0.66
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.34
     Stone of Binding:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.78
-      pick: 0.19
-      fit: 0.44
-    Jotunn's Revenge:
       total: 0.58
+      efficiency: 0.51
+      win: 0.73
+      pick: 0.15
+      fit: 0.44
+    Runeforged Hammer:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.54
+    Jotunn's Revenge:
+      total: 0.55
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.39
-    Shield of the Phoenix:
-      total: 0.58
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.8
-    Shell of Rebuke:
-      total: 0.62
-      efficiency: 0.28
-      win: 1.0
-      pick: 0.4
-      fit: 0.34
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.28
+      fit: 0.46
     Amanita Charm:
-      total: 0.63
+      total: 0.6
       efficiency: 0.65
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.86
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Shell of Rebuke
+  - Runeforged Hammer
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -251,22 +253,22 @@ builds:
   - Brawler’s Beat Stick
   - Stone of Binding
   - Jotunn's Revenge
+  - Runeforged Hammer
+  - Shell of Rebuke
+  - Freya's Tears
+  flex_slots:
   - Freya's Tears
   - Shell of Rebuke
-  - Amanita Charm
-  flex_slots:
-  - Amanita Charm
-  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -284,43 +286,44 @@ builds:
       total: 0.65
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.3
     Stone of Binding:
-      total: 0.64
+      total: 0.62
       efficiency: 0.51
-      win: 0.78
-      pick: 0.19
+      win: 0.73
+      pick: 0.15
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.57
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.54
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.6
-      pick: 0.22
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
       fit: 0.38
     Shell of Rebuke:
-      total: 0.61
+      total: 0.54
       efficiency: 0.28
-      win: 1.0
-      pick: 0.4
+      win: 0.83
+      pick: 0.37
       fit: 0.3
-    Amanita Charm:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.6
-      pick: 0.0
-      fit: 0.42
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.28
+      fit: 0.38
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Freya's Tears
+  - Runeforged Hammer
   - Shell of Rebuke
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -329,8 +332,8 @@ builds:
   - Brawler’s Beat Stick
   - Stone of Binding
   - Berserker's Shield
+  - Runeforged Hammer
   - Nimble Ring
-  - Shell of Rebuke
   flex_slots:
   - Nimble Ring
   - Golden Blade
@@ -339,8 +342,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -358,45 +361,45 @@ builds:
     Avenging Blade.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.5
       efficiency: 0.52
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.54
     Brawler’s Beat Stick:
-      total: 0.65
+      total: 0.64
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.26
     Stone of Binding:
-      total: 0.59
+      total: 0.57
       efficiency: 0.51
-      win: 0.78
-      pick: 0.19
+      win: 0.73
+      pick: 0.15
       fit: 0.36
     Berserker's Shield:
-      total: 0.57
+      total: 0.54
       efficiency: 0.68
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.43
+    Runeforged Hammer:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.31
     Nimble Ring:
-      total: 0.54
+      total: 0.51
       efficiency: 0.65
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.3
-    Shell of Rebuke:
-      total: 0.61
-      efficiency: 0.28
-      win: 1.0
-      pick: 0.4
-      fit: 0.26
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Shell of Rebuke
+  - Runeforged Hammer
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -404,22 +407,22 @@ builds:
   - Brawler’s Beat Stick
   - Stone of Binding
   - Jotunn's Revenge
+  - Runeforged Hammer
   - Shield of the Phoenix
   - Freya's Tears
-  - Shell of Rebuke
   flex_slots:
-  - Jotunn's Revenge
+  - Runeforged Hammer
   - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -437,66 +440,66 @@ builds:
       total: 0.65
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.32
     Stone of Binding:
-      total: 0.6
+      total: 0.58
       efficiency: 0.51
-      win: 0.78
-      pick: 0.19
+      win: 0.73
+      pick: 0.15
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.46
-    Shield of the Phoenix:
+    Runeforged Hammer:
       total: 0.55
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.32
+    Shield of the Phoenix:
+      total: 0.52
       efficiency: 0.53
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.61
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.6
-      pick: 0.22
+      win: 0.56
+      pick: 0.28
       fit: 0.64
-    Shell of Rebuke:
-      total: 0.62
-      efficiency: 0.28
-      win: 1.0
-      pick: 0.4
-      fit: 0.32
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
+  - Runeforged Hammer
   - Freya's Tears
-  - Shell of Rebuke
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Runeforged Hammer
   - Shell of Rebuke
-  - Amanita Charm
+  - Freya's Tears
   flex_slots:
-  - Berserker's Shield
-  - Amanita Charm
+  - Freya's Tears
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -514,42 +517,44 @@ builds:
       total: 0.65
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.3
     Stone of Binding:
-      total: 0.6
+      total: 0.57
       efficiency: 0.51
-      win: 0.78
-      pick: 0.19
+      win: 0.73
+      pick: 0.15
       fit: 0.4
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
-      win: 0.6
-      pick: 0.0
-      fit: 0.36
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.45
+    Runeforged Hammer:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.44
     Shell of Rebuke:
-      total: 0.61
+      total: 0.54
       efficiency: 0.28
-      win: 1.0
-      pick: 0.4
+      win: 0.83
+      pick: 0.37
       fit: 0.3
-    Amanita Charm:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.6
-      pick: 0.0
-      fit: 0.42
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.28
+      fit: 0.38
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
+  - Runeforged Hammer
   - Shell of Rebuke
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -557,22 +562,22 @@ builds:
   - Brawler’s Beat Stick
   - Stone of Binding
   - Jotunn's Revenge
+  - Runeforged Hammer
+  - Shell of Rebuke
+  - Freya's Tears
+  flex_slots:
   - Freya's Tears
   - Shell of Rebuke
-  - Amanita Charm
-  flex_slots:
-  - Amanita Charm
-  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -590,43 +595,44 @@ builds:
       total: 0.65
       efficiency: 0.42
       win: 1.0
-      pick: 0.17
+      pick: 0.12
       fit: 0.3
     Stone of Binding:
-      total: 0.6
+      total: 0.57
       efficiency: 0.51
-      win: 0.78
-      pick: 0.19
+      win: 0.73
+      pick: 0.15
       fit: 0.4
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.55
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.41
-    Freya's Tears:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.6
-      pick: 0.22
-      fit: 0.38
-    Shell of Rebuke:
-      total: 0.61
-      efficiency: 0.28
-      win: 1.0
-      pick: 0.4
-      fit: 0.3
-    Amanita Charm:
+    Runeforged Hammer:
       total: 0.56
-      efficiency: 0.65
-      win: 0.6
-      pick: 0.0
-      fit: 0.42
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.35
+      fit: 0.4
+    Shell of Rebuke:
+      total: 0.54
+      efficiency: 0.28
+      win: 0.83
+      pick: 0.37
+      fit: 0.3
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.56
+      pick: 0.28
+      fit: 0.38
   community_ordered:
   - Brawler’s Beat Stick
   - Stone of Binding
-  - Freya's Tears
+  - Runeforged Hammer
   - Shell of Rebuke
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -664,39 +670,39 @@ builds:
     Helm of Darkness, Soul Gem, Spear of the Magus.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.55
       efficiency: 0.72
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.37
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.54
       efficiency: 0.56
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.67
     Shield Splitter:
-      total: 0.56
+      total: 0.52
       efficiency: 0.55
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.63
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.6
-      pick: 0.22
+      win: 0.56
+      pick: 0.28
       fit: 0.52
     Shifter's Shield:
-      total: 0.56
+      total: 0.51
       efficiency: 0.55
-      win: 0.6
+      win: 0.5
       pick: 0.16
       fit: 0.57
     Amanita Charm:
-      total: 0.59
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.53
       pick: 0.0
       fit: 0.57
   community_ordered:

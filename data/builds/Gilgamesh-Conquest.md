@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Shamash
-  aspect_pick_rate: 0.66
+  aspect_pick_rate: 0.63
   aspect_win_rate: 0.59
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.23
-    win_rate: 0.5
+    pick_rate: 0.21
+    win_rate: 0.46
     alternates:
-    - name: Transcendence
-      pick_rate: 0.21
-      win_rate: 0.75
     - name: Devourer's Gauntlet
-      pick_rate: 0.15
+      pick_rate: 0.17
       win_rate: 0.73
-  - name: Shifter's Shield
-    pick_rate: 0.14
-    win_rate: 0.57
-    alternates:
-    - name: Jotunn's Revenge
-      pick_rate: 0.26
-      win_rate: 0.72
     - name: Transcendence
-      pick_rate: 0.11
-      win_rate: 0.55
+      pick_rate: 0.17
+      win_rate: 0.71
   - name: Barbed Carver
-    pick_rate: 0.2
-    win_rate: 0.47
+    pick_rate: 0.14
+    win_rate: 0.61
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.09
-      win_rate: 0.67
-    - name: Shogun's Ofuda
-      pick_rate: 0.08
-      win_rate: 0.25
-  - name: The Reaper
-    pick_rate: 0.16
-    win_rate: 0.6
+      pick_rate: 0.23
+      win_rate: 0.72
+    - name: Shifter's Shield
+      pick_rate: 0.14
+      win_rate: 0.61
+  - name: Berserker's Shield
+    pick_rate: 0.11
+    win_rate: 0.79
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.1
-      win_rate: 0.78
+      pick_rate: 0.16
+      win_rate: 0.5
+    - name: Jotunn's Revenge
+      pick_rate: 0.11
+      win_rate: 0.64
+  - name: The Reaper
+    pick_rate: 0.16
+    win_rate: 0.65
+    alternates:
     - name: Berserker's Shield
-      pick_rate: 0.1
-      win_rate: 0.22
+      pick_rate: 0.08
+      win_rate: 0.3
+    - name: Barbed Carver
+      pick_rate: 0.07
+      win_rate: 0.78
   - name: Heartseeker
-    pick_rate: 0.13
-    win_rate: 0.64
+    pick_rate: 0.16
+    win_rate: 0.67
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.08
+      pick_rate: 0.06
       win_rate: 0.86
     - name: Titan's Bane
-      pick_rate: 0.06
+      pick_rate: 0.04
       win_rate: 1.0
   - name: Blinking Abyss
-    pick_rate: 0.09
+    pick_rate: 0.07
     win_rate: 0.6
     alternates:
-    - name: Titan's Bane
+    - name: Magi's Cloak
       pick_rate: 0.07
+      win_rate: 0.8
+    - name: Titan's Bane
+      pick_rate: 0.06
       win_rate: 0.75
-    - name: The Reaper
-      pick_rate: 0.05
-      win_rate: 0.67
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.28
-    win_rate: 0.59
+    pick_rate: 0.31
+    win_rate: 0.64
   - name: Hunter's Cowl
-    pick_rate: 0.26
-    win_rate: 0.56
-  - name: Bumba's Hammer
-    pick_rate: 0.14
-    win_rate: 0.57
+    pick_rate: 0.21
+    win_rate: 0.58
+  - name: Bluestone Pendant
+    pick_rate: 0.12
+    win_rate: 0.47
   source_url: https://smitebrain.com/gods/gilgamesh/
-  last_verified: '2026-09-25'
-  god_win_rate: 0.5463917525773195
-  god_matches_won: 53
-  god_matches_played: 97
+  last_verified: '2026-09-26'
+  god_win_rate: 0.5555555555555556
+  god_matches_won: 70
+  god_matches_played: 126
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-25'
-  god_matches_analyzed: 2996
+  god_window_end: '2026-09-26'
+  god_matches_analyzed: 4198
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Jotunn's Revenge
-  - Transcendence
-  - Heartseeker
+  - Berserker's Shield
+  - Magi's Cloak
+  - Runeforged Hammer
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Golden Blade
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -119,49 +119,48 @@ builds:
     this god: Amanita Charm, Golden Blade, Runeforged Hammer, Kinetic Cuirass, Tyrfing,
     Lernaean Bow, Shield Splitter, Tekko-Kagi, Genji''s Guard, Breastplate of Valor,
     Freya''s Tears, Eye of the Storm, Silverbranch Bow, Toxic Blade, Hydra''s Lament,
-    Pharaoh''s Curse, Avenging Blade, The Crusher, Daybreak Gavel, Deathbringer, Dominance,
-    Erosion, Eye of Providence, Shield of the Phoenix, Shogun''s Ofuda.'
+    Pharaoh''s Curse, Avenging Blade, Shogun''s Ofuda, The Crusher, Daybreak Gavel,
+    Deathbringer, Dominance, Erosion, Eye of Providence, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.52
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.6
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.23
-      fit: 0.37
-    Transcendence:
-      total: 0.56
+    Berserker's Shield:
+      total: 0.66
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.4
+    Magi's Cloak:
+      total: 0.58
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.2
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.64
-      pick: 0.28
-      fit: 0.54
+      win: 0.8
+      pick: 0.22
+      fit: 0.18
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.67
+      pick: 0.0
+      fit: 0.44
     Titan's Bane:
       total: 0.58
       efficiency: 0.47
       win: 0.75
-      pick: 0.22
+      pick: 0.18
       fit: 0.44
     Amanita Charm:
-      total: 0.55
+      total: 0.58
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.32
   community_ordered:
-  - Jotunn's Revenge
-  - Transcendence
-  - Heartseeker
+  - Berserker's Shield
+  - Magi's Cloak
   - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
@@ -170,24 +169,24 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Jotunn's Revenge
+  - Berserker's Shield
+  - Breastplate of Valor
   - Transcendence
+  - Magi's Cloak
   - Heartseeker
-  - Titan's Bane
-  - Amanita Charm
   flex_slots:
-  - Amanita Charm
-  - Genji's Guard
+  - Breastplate of Valor
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -199,69 +198,69 @@ builds:
     Eye of Providence, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.53
+      total: 0.56
       efficiency: 0.66
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.2
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.23
-      fit: 0.41
+    Berserker's Shield:
+      total: 0.64
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.27
+    Breastplate of Valor:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.67
+      pick: 0.0
+      fit: 0.2
     Transcendence:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.71
+      pick: 0.17
+      fit: 0.22
+    Magi's Cloak:
       total: 0.57
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.22
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.64
-      pick: 0.28
-      fit: 0.53
-    Titan's Bane:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.75
+      win: 0.8
       pick: 0.22
-      fit: 0.37
-    Amanita Charm:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.6
-      pick: 0.0
-      fit: 0.21
+      fit: 0.12
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.67
+      pick: 0.35
+      fit: 0.53
   community_ordered:
-  - Jotunn's Revenge
+  - Berserker's Shield
   - Transcendence
+  - Magi's Cloak
   - Heartseeker
-  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Berserker's Shield
   - Kinetic Cuirass
-  - Transcendence
-  - The Reaper
-  - Heartseeker
+  - Magi's Cloak
+  - Shield of the Phoenix
   - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -269,57 +268,57 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Golden Blade,
     Runeforged Hammer, Riptalon, Freya''s Tears, Shield Splitter, Genji''s Guard,
     Breastplate of Valor, Yogi''s Necklace, Eye of the Storm, Lernaean Bow, Tyrfing,
-    Pharaoh''s Curse, Phoenix Feather, Erosion, Tekko-Kagi, Toxic Blade, Eye of Providence,
-    Avenging Blade, Silverbranch Bow, Hydra''s Lament, Draconic Scale, Shogun''s Ofuda.'
+    Pharaoh''s Curse, Phoenix Feather, Erosion, Shogun''s Ofuda, Tekko-Kagi, Toxic
+    Blade, Eye of Providence, Avenging Blade, Silverbranch Bow, Hydra''s Lament, Draconic
+    Scale.'
   slot_scores:
+    Berserker's Shield:
+      total: 0.67
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.43
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.57
       efficiency: 0.56
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.5
-    Transcendence:
-      total: 0.56
+    Magi's Cloak:
+      total: 0.59
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.17
-    The Reaper:
-      total: 0.55
-      efficiency: 0.5
-      win: 0.6
-      pick: 0.27
+      win: 0.8
+      pick: 0.22
+      fit: 0.25
+    Shield of the Phoenix:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.67
+      pick: 0.0
       fit: 0.6
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.47
-      win: 0.64
-      pick: 0.28
-      fit: 0.5
     Titan's Bane:
       total: 0.57
       efficiency: 0.47
       win: 0.75
-      pick: 0.22
+      pick: 0.18
       fit: 0.4
     Amanita Charm:
-      total: 0.6
+      total: 0.64
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.7
   community_ordered:
-  - Transcendence
-  - The Reaper
-  - Heartseeker
+  - Berserker's Shield
+  - Magi's Cloak
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Jotunn's Revenge
-  - Transcendence
+  - Berserker's Shield
+  - Magi's Cloak
   - Heartseeker
   - Titan's Bane
   - Amanita Charm
@@ -347,44 +346,44 @@ builds:
     Eye of the Storm, Pharaoh''s Curse, Avatar''s Parashu.'
   slot_scores:
     Avenging Blade:
-      total: 0.54
+      total: 0.58
       efficiency: 0.49
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.68
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.23
-      fit: 0.48
-    Transcendence:
-      total: 0.56
+    Berserker's Shield:
+      total: 0.65
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.33
+    Magi's Cloak:
+      total: 0.58
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.16
+      win: 0.8
+      pick: 0.22
+      fit: 0.14
     Heartseeker:
-      total: 0.56
+      total: 0.58
       efficiency: 0.47
-      win: 0.64
-      pick: 0.28
+      win: 0.67
+      pick: 0.35
       fit: 0.65
     Titan's Bane:
-      total: 0.6
+      total: 0.59
       efficiency: 0.47
       win: 0.75
-      pick: 0.22
+      pick: 0.18
       fit: 0.55
     Amanita Charm:
-      total: 0.54
+      total: 0.57
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.26
   community_ordered:
-  - Jotunn's Revenge
-  - Transcendence
+  - Berserker's Shield
+  - Magi's Cloak
   - Heartseeker
   - Titan's Bane
   starter: *id001
@@ -392,18 +391,18 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Transcendence
-  - Tyrfing
+  - Berserker's Shield
+  - Magi's Cloak
   - Riptalon
   - Titan's Bane
   - Amanita Charm
   flex_slots:
+  - Titan's Bane
   - Riptalon
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -416,69 +415,70 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Golden Blade, Riptalon, Tyrfing, Silverbranch Bow, Kinetic
     Cuirass, Runeforged Hammer, Toxic Blade, Genji''s Guard, Lernaean Bow, Breastplate
-    of Valor, Freya''s Tears, Pharaoh''s Curse, Tekko-Kagi, Shield Splitter, Hydra''s
-    Lament, Daybreak Gavel, Eye of the Storm, Avenging Blade, Dominance, Erosion,
-    Shield of the Phoenix, Eye of Providence, Stone of Binding, Shogun''s Ofuda.'
+    of Valor, Freya''s Tears, Pharaoh''s Curse, Tekko-Kagi, Shogun''s Ofuda, Shield
+    Splitter, Hydra''s Lament, Daybreak Gavel, Eye of the Storm, Avenging Blade, Dominance,
+    Erosion, Shield of the Phoenix, Eye of Providence, Stone of Binding.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.52
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.56
-    Transcendence:
-      total: 0.55
+    Berserker's Shield:
+      total: 0.66
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.38
+    Magi's Cloak:
+      total: 0.58
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.11
-    Tyrfing:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.6
-      pick: 0.0
-      fit: 0.55
+      win: 0.8
+      pick: 0.22
+      fit: 0.14
     Riptalon:
-      total: 0.53
+      total: 0.56
       efficiency: 0.51
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.51
     Titan's Bane:
       total: 0.56
       efficiency: 0.47
       win: 0.75
-      pick: 0.22
+      pick: 0.18
       fit: 0.32
     Amanita Charm:
-      total: 0.54
+      total: 0.57
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.24
   community_ordered:
-  - Transcendence
+  - Berserker's Shield
+  - Magi's Cloak
   - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Breastplate of Valor
-  - Jotunn's Revenge
-  - Transcendence
+  - Magi's Cloak
   - Freya's Tears
-  - Titan's Bane
+  - Amanita Charm
   flex_slots:
-  - Transcendence
   - Freya's Tears
+  - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -490,49 +490,48 @@ builds:
     Freya''s Tears, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Kinetic
     Cuirass, Screeching Gargoyle, Runeforged Hammer, Golden Blade, Silverbranch Bow,
     Lernaean Bow, Arondight, Tyrfing, Pharaoh''s Curse, Shield Splitter, Daybreak
-    Gavel, Toxic Blade, Eye of Erebus, Tekko-Kagi, Eye of the Storm, Gladiator''s
-    Shield, Avenging Blade, Erosion, Eye of Providence, Shogun''s Ofuda.'
+    Gavel, Toxic Blade, Eye of Erebus, Shogun''s Ofuda, Tekko-Kagi, Eye of the Storm,
+    Gladiator''s Shield, Avenging Blade, Erosion, Eye of Providence.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.58
       efficiency: 0.66
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.33
+    Berserker's Shield:
+      total: 0.65
+      efficiency: 0.68
+      win: 0.79
+      pick: 0.17
+      fit: 0.3
     Breastplate of Valor:
-      total: 0.55
+      total: 0.58
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.33
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.23
-      fit: 0.45
-    Transcendence:
-      total: 0.54
+    Magi's Cloak:
+      total: 0.58
       efficiency: 0.53
-      win: 0.75
-      pick: 0.21
-      fit: 0.08
+      win: 0.8
+      pick: 0.22
+      fit: 0.13
     Freya's Tears:
-      total: 0.54
+      total: 0.58
       efficiency: 0.61
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.39
-    Titan's Bane:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.75
-      pick: 0.22
-      fit: 0.28
+    Amanita Charm:
+      total: 0.57
+      efficiency: 0.65
+      win: 0.67
+      pick: 0.0
+      fit: 0.24
   community_ordered:
-  - Jotunn's Revenge
-  - Transcendence
-  - Titan's Bane
+  - Berserker's Shield
+  - Magi's Cloak
   starter: *id001
 - source: suggested
   archetype: model
@@ -567,39 +566,39 @@ builds:
     Gavel, Deathbringer, Dominance, Erosion, Eye of Providence, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.57
       efficiency: 0.52
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.72
-      win: 0.5
-      pick: 0.23
+      win: 0.46
+      pick: 0.21
       fit: 0.37
     Berserker's Shield:
-      total: 0.41
+      total: 0.66
       efficiency: 0.68
-      win: 0.22
+      win: 0.79
       pick: 0.17
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.56
       efficiency: 0.56
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.42
     Runeforged Hammer:
-      total: 0.53
+      total: 0.56
       efficiency: 0.57
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.55
+      total: 0.58
       efficiency: 0.65
-      win: 0.6
+      win: 0.67
       pick: 0.0
       fit: 0.32
   community_ordered:
