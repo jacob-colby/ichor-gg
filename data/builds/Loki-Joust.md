@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Barbed Carver
     removed: Tyrfing
-    reason: Conquest community 67% win over 82 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 100 matches (vs 53% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

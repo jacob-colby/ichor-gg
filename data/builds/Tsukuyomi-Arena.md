@@ -660,13 +660,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
+  - Titan's Bane
   - Avatar's Parashu
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Avatar's Parashu
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -695,18 +695,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Tyrfing:
       total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Avatar's Parashu:
       total: 0.55
       efficiency: 0.45
@@ -720,10 +720,14 @@ builds:
       pick: 0.0
       fit: 0.96
   swaps:
-  - added: Avatar's Parashu
+  - added: Titan's Bane
     removed: Golden Blade
-    reason: Conquest community 74% win over 36 matches (vs 56% on this god), taking
+    reason: Conquest community 70% win over 78 matches (vs 57% on this god), taking
       the model's weakest slot from Golden Blade
+  - added: Avatar's Parashu
+    removed: Jotunn's Revenge
+    reason: Conquest community 72% win over 46 matches (vs 57% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---
