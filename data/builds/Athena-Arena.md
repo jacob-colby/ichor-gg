@@ -525,4 +525,79 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Deathbringer
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Genji's Guard
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Kinetic Cuirass:
+      total: 0.67
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Deathbringer:
+      total: 0.2
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.06
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.75
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.98
+    Stampede:
+      total: 0.67
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+  swaps:
+  - added: Deathbringer
+    removed: Void Stone
+    reason: Conquest community 81% win over 31 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Stone
+  - added: Genji's Guard
+    removed: Void Shield
+    reason: Conquest community 70% win over 67 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -526,6 +526,77 @@ builds:
       fit: 1.0
   starter: *id001
 - source: suggested
+  archetype: hybrid
+  slot_order:
+  - Nimble Ring
+  - Spear of Desolation
+  - Spear of the Magus
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
+  flex_slots:
+  - Spear of the Magus
+  - Nimble Ring
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Nimble Ring:
+      total: 0.4
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Spear of Desolation:
+      total: 0.79
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Spear of the Magus:
+      total: 0.66
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Rod of Tahuti:
+      total: 0.79
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Obsidian Shard:
+      total: 0.68
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Dreamer's Idol:
+      total: 0.71
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+  swaps:
+  - added: Nimble Ring
+    removed: Doom Orb
+    reason: Conquest community 64% win over 121 matches (vs 54% on this god), taking
+      the model's weakest slot from Doom Orb
+  borrowed_from: Conquest
+  starter: *id001
+- source: suggested
   archetype: core
   slot_order:
   - Genji's Guard
@@ -1051,6 +1122,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Nimble Ring
+  - Void Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Dreamer's Idol
+  - Doublet of Binding
+  flex_slots:
+  - Dreamer's Idol
+  - Nimble Ring
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Nimble Ring:
+      total: 0.26
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.13
+    Void Stone:
+      total: 0.6
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Spear of Desolation:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Dreamer's Idol:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Doublet of Binding:
+      total: 0.57
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  swaps:
+  - added: Nimble Ring
+    removed: Genji's Guard
+    reason: Conquest community 64% win over 121 matches (vs 54% on this god), taking
+      the model's weakest slot from Genji's Guard
+  borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---

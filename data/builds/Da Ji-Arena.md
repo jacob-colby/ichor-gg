@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Transcendence
-    reason: Conquest community 85% win over 32 matches (vs 61% on this god), taking
+    reason: Conquest community 81% win over 37 matches (vs 61% on this god), taking
       the model's weakest slot from Transcendence
   borrowed_from: Conquest
   starter: *id001

@@ -720,13 +720,13 @@ builds:
       pick: 0.0
       fit: 0.96
   swaps:
-  - added: Titan's Bane
-    removed: Golden Blade
-    reason: Conquest community 70% win over 78 matches (vs 57% on this god), taking
-      the model's weakest slot from Golden Blade
   - added: Avatar's Parashu
+    removed: Golden Blade
+    reason: Conquest community 72% win over 51 matches (vs 57% on this god), taking
+      the model's weakest slot from Golden Blade
+  - added: Titan's Bane
     removed: Jotunn's Revenge
-    reason: Conquest community 72% win over 46 matches (vs 57% on this god), taking
+    reason: Conquest community 67% win over 102 matches (vs 57% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

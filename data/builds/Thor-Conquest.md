@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Thunderstruck
-  aspect_pick_rate: 0.49
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.48
+  aspect_win_rate: 0.55
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.49
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.18
-      win_rate: 0.59
+      pick_rate: 0.17
+      win_rate: 0.57
     - name: Daybreak Gavel
-      pick_rate: 0.08
-      win_rate: 0.67
+      pick_rate: 0.07
+      win_rate: 0.63
   - name: Hydra's Lament
-    pick_rate: 0.21
-    win_rate: 0.48
-    alternates:
-    - name: Barbed Carver
-      pick_rate: 0.12
-      win_rate: 0.51
-    - name: Shifter's Shield
-      pick_rate: 0.09
-      win_rate: 0.65
-  - name: Barbed Carver
-    pick_rate: 0.1
+    pick_rate: 0.22
     win_rate: 0.51
     alternates:
+    - name: Barbed Carver
+      pick_rate: 0.13
+      win_rate: 0.51
+    - name: Jotunn's Revenge
+      pick_rate: 0.09
+      win_rate: 0.6
+  - name: Barbed Carver
+    pick_rate: 0.11
+    win_rate: 0.52
+    alternates:
+    - name: Heartseeker
+      pick_rate: 0.1
+      win_rate: 0.54
     - name: Genji's Guard
       pick_rate: 0.1
-      win_rate: 0.66
-    - name: Heartseeker
-      pick_rate: 0.09
-      win_rate: 0.55
+      win_rate: 0.63
   - name: Heartseeker
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.55
     alternates:
-    - name: Freya's Tears
-      pick_rate: 0.08
-      win_rate: 0.58
     - name: Genji's Guard
-      pick_rate: 0.08
-      win_rate: 0.57
+      pick_rate: 0.07
+      win_rate: 0.52
+    - name: Freya's Tears
+      pick_rate: 0.07
+      win_rate: 0.54
   - name: Titan's Bane
     pick_rate: 0.1
-    win_rate: 0.56
+    win_rate: 0.54
     alternates:
     - name: Heartseeker
-      pick_rate: 0.08
-      win_rate: 0.58
+      pick_rate: 0.09
+      win_rate: 0.6
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.67
+      win_rate: 0.64
   - name: Skeggox
-    pick_rate: 0.08
-    win_rate: 0.58
+    pick_rate: 0.07
+    win_rate: 0.54
     alternates:
-    - name: Axe
+    - name: Lucerne Hammer
       pick_rate: 0.05
-      win_rate: 0.7
+      win_rate: 0.5
     - name: Magi's Cloak
       pick_rate: 0.04
-      win_rate: 0.56
+      win_rate: 0.5
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.3
-    win_rate: 0.6
+    pick_rate: 0.31
+    win_rate: 0.59
   - name: Bluestone Brooch
-    pick_rate: 0.25
-    win_rate: 0.6
+    pick_rate: 0.24
+    win_rate: 0.59
   - name: Bumba's Cudgel
-    pick_rate: 0.17
-    win_rate: 0.4
+    pick_rate: 0.18
+    win_rate: 0.42
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-09-27'
-  god_win_rate: 0.5478260869565217
-  god_matches_won: 378
-  god_matches_played: 690
+  last_verified: '2026-09-28'
+  god_win_rate: 0.5403225806451613
+  god_matches_won: 469
+  god_matches_played: 868
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-27'
-  god_matches_analyzed: 5610
+  god_window_end: '2026-09-28'
+  god_matches_analyzed: 7013
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -96,72 +96,73 @@ builds:
   - Jotunn's Revenge
   - Genji's Guard
   - Transcendence
-  - Daybreak Gavel
-  - Runeforged Hammer
+  - Freya's Tears
+  - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Daybreak Gavel
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Runeforged Hammer, Daybreak Gavel, Kinetic Cuirass, Shield
-    Splitter, Freya''s Tears, Eye of the Storm, Avenging Blade, Berserker''s Shield,
+    this god: Freya''s Tears, Amanita Charm, Runeforged Hammer, Kinetic Cuirass, Daybreak
+    Gavel, Shield Splitter, Eye of the Storm, Avenging Blade, Berserker''s Shield,
     Breastplate of Valor, The Crusher, The Reaper, Erosion, Eye of Providence, Golden
     Blade, Draconic Scale, Shield of the Phoenix, Avatar''s Parashu, Midgardian Mail,
     Stone of Binding, Tyrfing, Pendulum Blade, Transcendence, Hide of the Nemean Lion.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.55
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
       fit: 0.18
     Transcendence:
-      total: 0.49
+      total: 0.47
       efficiency: 0.53
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.3
-    Daybreak Gavel:
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.13
+      fit: 0.31
+    Heartseeker:
       total: 0.54
-      efficiency: 0.59
-      win: 0.67
-      pick: 0.08
-      fit: 0.18
-    Runeforged Hammer:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.0
-      fit: 0.58
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.4
+      fit: 0.71
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.45
   community_ordered:
   - Jotunn's Revenge
   - Genji's Guard
-  - Daybreak Gavel
+  - Freya's Tears
+  - Heartseeker
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -170,28 +171,28 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Genji's Guard
-  - Transcendence
   - Daybreak Gavel
+  - Freya's Tears
   - Heartseeker
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Transcendence
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Daybreak
-    Gavel, Amanita Charm, Breastplate of Valor, Freya''s Tears, Runeforged Hammer,
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Freya''s
+    Tears, Amanita Charm, Daybreak Gavel, Breastplate of Valor, Runeforged Hammer,
     Kinetic Cuirass, Shield Splitter, Eye of the Storm, Berserker''s Shield, Avenging
     Blade, The Crusher, Shield of the Phoenix, Transcendence, The Reaper, Arondight,
     Screeching Gargoyle, Erosion, Eye of Providence, Oni Hunter''s Garb, Pendulum
@@ -200,43 +201,44 @@ builds:
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.53
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
       fit: 0.26
-    Transcendence:
-      total: 0.48
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.29
     Daybreak Gavel:
-      total: 0.53
+      total: 0.51
       efficiency: 0.59
-      win: 0.67
-      pick: 0.08
+      win: 0.63
+      pick: 0.07
       fit: 0.11
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.13
+      fit: 0.26
     Heartseeker:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
       win: 0.55
-      pick: 0.42
+      pick: 0.4
       fit: 0.62
     Amanita Charm:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.26
   community_ordered:
   - Jotunn's Revenge
   - Genji's Guard
   - Daybreak Gavel
+  - Freya's Tears
   - Heartseeker
   starter: *id001
 - source: suggested
@@ -245,8 +247,8 @@ builds:
   - Jotunn's Revenge
   - Genji's Guard
   - Transcendence
-  - Daybreak Gavel
   - Freya's Tears
+  - Heartseeker
   - Amanita Charm
   flex_slots:
   - Amanita Charm
@@ -256,8 +258,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -265,54 +267,54 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Freya''s Tears, Daybreak Gavel, Amanita Charm, Breastplate of Valor, Runeforged
+    god: Freya''s Tears, Amanita Charm, Daybreak Gavel, Breastplate of Valor, Runeforged
     Hammer, Kinetic Cuirass, Shield Splitter, The Crusher, Berserker''s Shield, Shield
     of the Phoenix, The Reaper, Eye of the Storm, Pendulum Blade, Screeching Gargoyle,
     Avenging Blade, Arondight, Erosion, Avatar''s Parashu, Eye of Providence, Stone
-    of Binding, Draconic Scale, Midgardian Mail, Magi''s Cloak, Hide of the Nemean
-    Lion.'
+    of Binding, Draconic Scale, Midgardian Mail, Hide of the Nemean Lion, Magi''s
+    Cloak.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.56
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
       fit: 0.24
     Transcendence:
-      total: 0.46
+      total: 0.45
       efficiency: 0.53
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.16
-    Daybreak Gavel:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.67
-      pick: 0.08
-      fit: 0.11
     Freya's Tears:
-      total: 0.53
+      total: 0.56
       efficiency: 0.61
-      win: 0.58
+      win: 0.64
       pick: 0.13
       fit: 0.32
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.55
+      pick: 0.4
+      fit: 0.6
     Amanita Charm:
-      total: 0.53
+      total: 0.51
       efficiency: 0.65
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.27
   community_ordered:
   - Jotunn's Revenge
   - Genji's Guard
-  - Daybreak Gavel
   - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -320,72 +322,73 @@ builds:
   - Jotunn's Revenge
   - Genji's Guard
   - Kinetic Cuirass
+  - Freya's Tears
   - Shifter's Shield
-  - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
   - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Daybreak Gavel,
-    Freya''s Tears, Runeforged Hammer, The Reaper, Shield Splitter, Eye of the Storm,
+    this god: Amanita Charm, Freya''s Tears, Kinetic Cuirass, Shield of the Phoenix,
+    Daybreak Gavel, Runeforged Hammer, The Reaper, Shield Splitter, Eye of the Storm,
     Berserker''s Shield, Erosion, Eye of Providence, Breastplate of Valor, Yogi''s
     Necklace, Draconic Scale, Avenging Blade, Phoenix Feather, Stone of Binding, Midgardian
-    Mail, Chandra''s Grace, The Crusher, Magi''s Cloak, Hide of the Nemean Lion, Leviathan''s
-    Hide.'
+    Mail, Chandra''s Grace, The Crusher, Hide of the Nemean Lion, Leviathan''s Hide,
+    Magi''s Cloak.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.45
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
       fit: 0.21
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.65
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.13
+      fit: 0.38
     Shifter's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.55
-      win: 0.59
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.55
-    Shield of the Phoenix:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.72
     Amanita Charm:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.85
   community_ordered:
   - Jotunn's Revenge
   - Genji's Guard
+  - Freya's Tears
   - Shifter's Shield
   starter: *id001
 - source: suggested
@@ -396,9 +399,9 @@ builds:
   - Genji's Guard
   - Transcendence
   - Heartseeker
-  - Titan's Bane
+  - Freya's Tears
   flex_slots:
-  - Titan's Bane
+  - Avenging Blade
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -414,146 +417,146 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Avenging Blade, Amanita Charm, Daybreak Gavel, The Crusher, Stone
-    of Binding, Runeforged Hammer, The Reaper, Kinetic Cuirass, Freya''s Tears, Void
+    for this god: Freya''s Tears, Avenging Blade, Amanita Charm, The Crusher, Daybreak
+    Gavel, Stone of Binding, Runeforged Hammer, The Reaper, Kinetic Cuirass, Void
     Shield, Screeching Gargoyle, Shield Splitter, Void Stone, Avatar''s Parashu, Eye
     of the Storm, Breastplate of Valor, Pendulum Blade, Berserker''s Shield, Tekko-Kagi,
     Erosion, Eye of Providence, Toxic Blade, Shield of the Phoenix, Draconic Scale.'
   slot_scores:
     Avenging Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.66
     Genji's Guard:
-      total: 0.55
+      total: 0.54
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
       fit: 0.14
     Transcendence:
-      total: 0.47
+      total: 0.46
       efficiency: 0.53
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.23
     Heartseeker:
-      total: 0.56
+      total: 0.55
       efficiency: 0.47
       win: 0.55
-      pick: 0.42
+      pick: 0.4
       fit: 0.82
-    Titan's Bane:
+    Freya's Tears:
       total: 0.54
-      efficiency: 0.47
-      win: 0.56
-      pick: 0.22
-      fit: 0.72
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.13
+      fit: 0.24
   community_ordered:
   - Jotunn's Revenge
   - Genji's Guard
   - Heartseeker
-  - Titan's Bane
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Genji's Guard
   - Jotunn's Revenge
+  - Genji's Guard
   - Berserker's Shield
-  - Daybreak Gavel
+  - Freya's Tears
   - Riptalon
   flex_slots:
-  - Daybreak Gavel
+  - Golden Blade
   - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Golden Blade, Daybreak Gavel, Amanita Charm, Riptalon,
-    Tyrfing, Silverbranch Bow, Toxic Blade, Freya''s Tears, Kinetic Cuirass, Lernaean
+    this god: Berserker''s Shield, Freya''s Tears, Golden Blade, Amanita Charm, Daybreak
+    Gavel, Riptalon, Tyrfing, Silverbranch Bow, Toxic Blade, Kinetic Cuirass, Lernaean
     Bow, Runeforged Hammer, Breastplate of Valor, Tekko-Kagi, Pharaoh''s Curse, The
     Reaper, Shogun''s Ofuda, Shield Splitter, Eye of the Storm, Dominance, Avenging
     Blade, Erosion, Qin''s Blade, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.62
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.66
-      win: 0.66
-      pick: 0.16
-      fit: 0.1
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.27
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.63
+      pick: 0.16
+      fit: 0.1
     Berserker's Shield:
-      total: 0.56
+      total: 0.54
       efficiency: 0.68
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.42
-    Daybreak Gavel:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.67
-      pick: 0.08
-      fit: 0.11
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.64
+      pick: 0.13
+      fit: 0.18
     Riptalon:
-      total: 0.52
+      total: 0.51
       efficiency: 0.51
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.59
   community_ordered:
-  - Genji's Guard
   - Jotunn's Revenge
-  - Daybreak Gavel
+  - Genji's Guard
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
-  - Daybreak Gavel
+  - Breastplate of Valor
+  - Transcendence
+  - Hydra's Lament
   - Freya's Tears
-  - Amanita Charm
   flex_slots:
-  - Daybreak Gavel
-  - Amanita Charm
+  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -562,52 +565,52 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Breastplate of Valor,
-    Daybreak Gavel, Amanita Charm, Shield of the Phoenix, Screeching Gargoyle, Kinetic
+    Amanita Charm, Shield of the Phoenix, Daybreak Gavel, Screeching Gargoyle, Kinetic
     Cuirass, Runeforged Hammer, Arondight, Berserker''s Shield, Gladiator''s Shield,
     Pendulum Blade, Eye of Erebus, Shield Splitter, Prophetic Cloak, Chandra''s Grace,
     Eye of the Storm, Erosion, Eye of Providence, Avenging Blade, Draconic Scale,
     Stone of Binding, Midgardian Mail, The Crusher.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.66
-      win: 0.66
+      win: 0.63
       pick: 0.16
-      fit: 0.44
-    Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.6
-    Daybreak Gavel:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.67
-      pick: 0.08
-      fit: 0.12
+    Breastplate of Valor:
+      total: 0.54
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.0
+      fit: 0.44
+    Transcendence:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.0
+      fit: 0.11
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.51
+      pick: 0.3
+      fit: 0.56
     Freya's Tears:
-      total: 0.56
+      total: 0.59
       efficiency: 0.61
-      win: 0.58
+      win: 0.64
       pick: 0.13
       fit: 0.53
-    Amanita Charm:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
-      fit: 0.3
   community_ordered:
   - Genji's Guard
   - Jotunn's Revenge
-  - Daybreak Gavel
+  - Hydra's Lament
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -644,39 +647,39 @@ builds:
     of the Nemean Lion.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.72
-      win: 0.52
+      win: 0.53
       pick: 0.49
       fit: 0.55
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.52
       efficiency: 0.56
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.56
     Eye of the Storm:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.61
     Runeforged Hammer:
-      total: 0.54
+      total: 0.53
       efficiency: 0.57
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.57
+      win: 0.54
       pick: 0.0
       fit: 0.45
   community_ordered:

@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  flex_slots:
+  - The Reaper
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    The Reaper:
+      total: 0.54
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+  swaps:
+  - added: The Reaper
+    removed: Berserker's Shield
+    reason: Conquest community 67% win over 37 matches (vs 51% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---

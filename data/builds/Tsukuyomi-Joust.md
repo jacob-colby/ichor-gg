@@ -720,13 +720,13 @@ builds:
       pick: 0.0
       fit: 0.86
   swaps:
-  - added: Titan's Bane
-    removed: Bragi's Harp
-    reason: Conquest community 70% win over 78 matches (vs 57% on this god), taking
-      the model's weakest slot from Bragi's Harp
   - added: Avatar's Parashu
+    removed: Bragi's Harp
+    reason: Conquest community 72% win over 51 matches (vs 57% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  - added: Titan's Bane
     removed: Death Metal
-    reason: Conquest community 72% win over 46 matches (vs 57% on this god), taking
+    reason: Conquest community 67% win over 102 matches (vs 57% on this god), taking
       the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001

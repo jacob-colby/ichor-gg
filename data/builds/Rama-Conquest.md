@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Precision
-  aspect_pick_rate: 0.02
+  aspect_pick_rate: 0.01
   aspect_win_rate: 0.5
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.73
+    pick_rate: 0.7
     win_rate: 0.6
     alternates:
     - name: Tyrfing
-      pick_rate: 0.19
-      win_rate: 0.52
+      pick_rate: 0.21
+      win_rate: 0.55
     - name: Avenging Blade
       pick_rate: 0.06
-      win_rate: 0.71
+      win_rate: 0.72
   - name: Dagger of Frenzy
-    pick_rate: 0.38
+    pick_rate: 0.37
     win_rate: 0.6
     alternates:
     - name: Tyrfing
       pick_rate: 0.16
       win_rate: 0.58
     - name: Odysseus' Bow
-      pick_rate: 0.12
-      win_rate: 0.48
+      pick_rate: 0.11
+      win_rate: 0.53
   - name: Odysseus' Bow
     pick_rate: 0.17
-    win_rate: 0.61
+    win_rate: 0.58
     alternates:
     - name: Dominance
+      pick_rate: 0.17
+      win_rate: 0.47
+    - name: The Executioner
       pick_rate: 0.16
       win_rate: 0.48
-    - name: The Executioner
-      pick_rate: 0.16
-      win_rate: 0.45
   - name: Silverbranch Bow
     pick_rate: 0.21
-    win_rate: 0.57
+    win_rate: 0.55
     alternates:
     - name: Riptalon
-      pick_rate: 0.17
-      win_rate: 0.6
+      pick_rate: 0.18
+      win_rate: 0.63
     - name: The Executioner
       pick_rate: 0.13
-      win_rate: 0.61
+      win_rate: 0.6
   - name: Deathbringer
-    pick_rate: 0.19
-    win_rate: 0.49
+    pick_rate: 0.17
+    win_rate: 0.51
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.16
-      win_rate: 0.58
+      win_rate: 0.59
     - name: Dominance
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.72
-  - name: Qin's Blade
+  - name: Riptalon
     pick_rate: 0.08
-    win_rate: 0.47
+    win_rate: 0.65
     alternates:
+    - name: Manchu Bow
+      pick_rate: 0.08
+      win_rate: 0.59
     - name: Deathbringer
       pick_rate: 0.08
-      win_rate: 0.8
-    - name: Hunter's Bow
-      pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.71
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.45
-    win_rate: 0.61
+    pick_rate: 0.46
+    win_rate: 0.6
   - name: Gilded Arrow
     pick_rate: 0.19
-    win_rate: 0.57
+    win_rate: 0.54
   - name: Hunter's Cowl
     pick_rate: 0.17
-    win_rate: 0.65
+    win_rate: 0.69
   source_url: https://smitebrain.com/gods/rama/
-  last_verified: '2026-09-27'
-  god_win_rate: 0.5855513307984791
-  god_matches_won: 154
-  god_matches_played: 263
+  last_verified: '2026-09-28'
+  god_win_rate: 0.5828025477707006
+  god_matches_won: 183
+  god_matches_played: 314
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-27'
-  god_matches_analyzed: 5610
+  god_window_end: '2026-09-28'
+  god_matches_analyzed: 7013
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -100,8 +100,8 @@ builds:
   - Riptalon
   - Tekko-Kagi
   flex_slots:
+  - Tekko-Kagi
   - The Reaper
-  - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -116,7 +116,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Lernaean Bow, Tekko-Kagi, Avenging Blade, The Reaper,
+    this god: Jotunn''s Revenge, Avenging Blade, Lernaean Bow, Tekko-Kagi, The Reaper,
     Heartseeker, Demon Blade, Hydra''s Lament, Titan''s Bane, The Crusher, Musashi''s
     Dual Swords, Damaru, Rage, Transcendence, Avatar''s Parashu, Arondight, Runeforged
     Hammer, Pendulum Blade, Golden Blade, Berserker''s Shield, Barbed Carver, Bloodforge,
@@ -125,37 +125,37 @@ builds:
     Lernaean Bow:
       total: 0.52
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.54
     Avenging Blade:
       total: 0.52
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.28
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.38
     The Reaper:
       total: 0.52
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Riptalon:
-      total: 0.51
+      total: 0.53
       efficiency: 0.43
-      win: 0.6
-      pick: 0.28
+      win: 0.65
+      pick: 0.25
       fit: 0.52
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.49
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.6
   community_ordered:
@@ -199,37 +199,37 @@ builds:
     Lernaean Bow:
       total: 0.51
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Avenging Blade:
       total: 0.52
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Transcendence:
       total: 0.48
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.24
     Hydra's Lament:
       total: 0.51
       efficiency: 0.54
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.42
     Heartseeker:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.55
   community_ordered:
@@ -238,15 +238,15 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Lernaean Bow
   - Avenging Blade
   - Jotunn's Revenge
   - Musashi's Dual Swords
+  - Riptalon
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Musashi's Dual Swords
   - Deathbringer
+  - Musashi's Dual Swords
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -267,44 +267,45 @@ builds:
     Hammer, Pendulum Blade, Berserker''s Shield, Golden Blade, Barbed Carver, Bloodforge,
     Vital Amplifier, Daybreak Gavel, Toxic Blade.'
   slot_scores:
-    Lernaean Bow:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.57
-      pick: 0.0
-      fit: 0.5
     Avenging Blade:
       total: 0.52
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.26
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.36
     Musashi's Dual Swords:
       total: 0.49
       efficiency: 0.46
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.46
+    Riptalon:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.25
+      fit: 0.5
     Demon Blade:
       total: 0.5
       efficiency: 0.38
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.7
     Deathbringer:
       total: 0.49
       efficiency: 0.51
-      win: 0.49
-      pick: 0.41
+      win: 0.51
+      pick: 0.37
       fit: 0.46
   community_ordered:
   - Avenging Blade
+  - Riptalon
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -314,7 +315,7 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - The Reaper
+  - Riptalon
   - Tekko-Kagi
   flex_slots:
   - Hydra's Lament
@@ -340,43 +341,44 @@ builds:
     Daybreak Gavel, Golden Blade, Genji''s Guard, Bloodforge.'
   slot_scores:
     Avenging Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.23
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.46
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.13
     Hydra's Lament:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.36
-    The Reaper:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.0
-      fit: 0.39
+    Riptalon:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.25
+      fit: 0.43
     Tekko-Kagi:
-      total: 0.5
+      total: 0.51
       efficiency: 0.49
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.5
   community_ordered:
   - Avenging Blade
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -385,10 +387,10 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - The Reaper
+  - Riptalon
   - Amanita Charm
   flex_slots:
-  - The Reaper
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -415,41 +417,42 @@ builds:
     Avenging Blade:
       total: 0.55
       efficiency: 0.49
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.35
     Berserker's Shield:
       total: 0.56
       efficiency: 0.68
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.41
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.25
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.56
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
-    The Reaper:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.0
-      fit: 0.59
+    Riptalon:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.25
+      fit: 0.64
     Amanita Charm:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.64
   community_ordered:
   - Avenging Blade
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -457,7 +460,7 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Transcendence
-  - The Reaper
+  - Riptalon
   - Tekko-Kagi
   - Heartseeker
   flex_slots:
@@ -486,41 +489,42 @@ builds:
     Avenging Blade:
       total: 0.56
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.5
     Transcendence:
       total: 0.47
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.15
-    The Reaper:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.0
-      fit: 0.55
+    Riptalon:
+      total: 0.55
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.25
+      fit: 0.61
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.49
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.68
     Heartseeker:
-      total: 0.52
+      total: 0.53
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.67
   community_ordered:
   - Avenging Blade
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -549,21 +553,21 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Avenging Blade, Lernaean Bow, Tekko-Kagi, Golden
-    Blade, The Reaper, Toxic Blade, Heartseeker, Hydra''s Lament, Demon Blade, Titan''s
-    Bane, The Crusher, Musashi''s Dual Swords, Sun Beam Bow, Transcendence, Runeforged
-    Hammer, Arondight, Damaru, Rage, Berserker''s Shield, Avatar''s Parashu, Pendulum
-    Blade, Barbed Carver.'
+    Blade, The Reaper, Toxic Blade, Heartseeker, Hydra''s Lament, Demon Blade, Qin''s
+    Blade, Titan''s Bane, The Crusher, Musashi''s Dual Swords, Sun Beam Bow, Transcendence,
+    Runeforged Hammer, Arondight, Damaru, Rage, Berserker''s Shield, Avatar''s Parashu,
+    Pendulum Blade, Barbed Carver.'
   slot_scores:
     Lernaean Bow:
       total: 0.51
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Avenging Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.23
     Tyrfing:
@@ -573,21 +577,21 @@ builds:
       pick: 0.22
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.29
     Riptalon:
-      total: 0.56
+      total: 0.58
       efficiency: 0.51
-      win: 0.6
-      pick: 0.28
+      win: 0.65
+      pick: 0.25
       fit: 0.62
     Silverbranch Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.57
+      win: 0.55
       pick: 0.35
       fit: 0.54
   community_ordered:
@@ -603,10 +607,10 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Reaper
   - Arondight
+  - Riptalon
   flex_slots:
-  - The Reaper
+  - Lernaean Bow
   - Arondight
   situational_swaps:
   - vs_tag: heavy_cc
@@ -630,43 +634,44 @@ builds:
     Erebus, Golden Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.37
     Avenging Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
-      win: 0.71
+      win: 0.72
       pick: 0.06
       fit: 0.18
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Hydra's Lament:
       total: 0.52
       efficiency: 0.54
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.47
-    The Reaper:
-      total: 0.49
-      efficiency: 0.55
-      win: 0.57
-      pick: 0.0
-      fit: 0.27
     Arondight:
       total: 0.49
       efficiency: 0.5
-      win: 0.57
+      win: 0.58
       pick: 0.0
+      fit: 0.37
+    Riptalon:
+      total: 0.51
+      efficiency: 0.43
+      win: 0.65
+      pick: 0.25
       fit: 0.37
   community_ordered:
   - Avenging Blade
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: model
@@ -703,37 +708,37 @@ builds:
     Lernaean Bow:
       total: 0.52
       efficiency: 0.52
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.72
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.38
     The Reaper:
       total: 0.52
       efficiency: 0.55
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.49
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.6
     Deathbringer:
-      total: 0.48
+      total: 0.49
       efficiency: 0.51
-      win: 0.49
-      pick: 0.41
+      win: 0.51
+      pick: 0.37
       fit: 0.44
     Heartseeker:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.57
+      win: 0.58
       pick: 0.0
       fit: 0.54
   community_ordered:

@@ -5,113 +5,113 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Unyielding
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.07
+  aspect_win_rate: 0.6
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.47
-    win_rate: 0.56
+    pick_rate: 0.44
+    win_rate: 0.62
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.11
-      win_rate: 0.55
+      win_rate: 0.47
     - name: Eye of Erebus
-      pick_rate: 0.08
-      win_rate: 0.25
-  - name: Ethereal Staff
-    pick_rate: 0.16
-    win_rate: 0.67
-    alternates:
-    - name: Prophetic Cloak
-      pick_rate: 0.11
-      win_rate: 0.55
-    - name: Shifter's Shield
-      pick_rate: 0.11
-      win_rate: 0.36
-  - name: Soul Reaver
+      pick_rate: 0.09
+      win_rate: 0.5
+  - name: Gladiator's Shield
     pick_rate: 0.12
-    win_rate: 0.55
+    win_rate: 0.71
     alternates:
     - name: Ethereal Staff
-      pick_rate: 0.17
-      win_rate: 0.38
-    - name: Gladiator's Shield
-      pick_rate: 0.09
+      pick_rate: 0.12
+      win_rate: 0.71
+    - name: Shifter's Shield
+      pick_rate: 0.12
       win_rate: 0.56
-  - name: Genji's Guard
-    pick_rate: 0.12
-    win_rate: 0.64
+  - name: Ethereal Staff
+    pick_rate: 0.17
+    win_rate: 0.48
     alternates:
     - name: Gladiator's Shield
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.64
+    - name: Soul Reaver
+      pick_rate: 0.09
+      win_rate: 0.62
+  - name: Genji's Guard
+    pick_rate: 0.11
+    win_rate: 0.71
+    alternates:
+    - name: Gladiator's Shield
+      pick_rate: 0.12
+      win_rate: 0.69
+    - name: Shell of Rebuke
+      pick_rate: 0.08
+      win_rate: 0.8
+  - name: Hide of the Nemean Lion
+    pick_rate: 0.09
+    win_rate: 0.55
+    alternates:
     - name: Soul Reaver
       pick_rate: 0.08
-      win_rate: 0.57
-  - name: Brawler’s Beat Stick
-    pick_rate: 0.08
-    win_rate: 0.86
-    alternates:
+      win_rate: 0.4
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.5
-    - name: Soul Reaver
-      pick_rate: 0.07
-      win_rate: 0.17
-  - name: Hide of the Nemean Lion
-    pick_rate: 0.1
-    win_rate: 0.5
+      win_rate: 0.56
+  - name: Shell of Rebuke
+    pick_rate: 0.06
+    win_rate: 0.8
     alternates:
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.1
+      win_rate: 0.63
     - name: Medal of Defense
-      pick_rate: 0.09
+      pick_rate: 0.06
       win_rate: 0.6
-    - name: Captain's Ring
-      pick_rate: 0.05
-      win_rate: 0.0
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.48
-    win_rate: 0.61
+    pick_rate: 0.51
+    win_rate: 0.66
   - name: Bluestone Pendant
-    pick_rate: 0.21
-    win_rate: 0.65
-  - name: Death's Embrace
+    pick_rate: 0.2
+    win_rate: 0.7
+  - name: Bumba's Spear
     pick_rate: 0.07
-    win_rate: 0.57
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/jormungandr/
-  last_verified: '2026-09-27'
-  god_win_rate: 0.5729166666666666
-  god_matches_won: 55
-  god_matches_played: 96
+  last_verified: '2026-09-28'
+  god_win_rate: 0.6159420289855072
+  god_matches_won: 85
+  god_matches_played: 138
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-27'
-  god_matches_analyzed: 5610
+  god_window_end: '2026-09-28'
+  god_matches_analyzed: 7013
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
-  - Brawler’s Beat Stick
   - Genji's Guard
-  - Shifter's Shield
   - Berserker's Shield
+  - Shifter's Shield
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -125,44 +125,43 @@ builds:
     Midgardian Mail, Bragi''s Harp, Tekko-Kagi, Daybreak Gavel, Spear of Desolation,
     Heartseeker, Rod of Asclepius, Leviathan''s Hide, Void Shield, Stampede, Ancile.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.59
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.34
     Genji's Guard:
-      total: 0.57
+      total: 0.6
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.26
-    Shifter's Shield:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.56
-      pick: 0.47
-      fit: 0.48
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
+      fit: 0.48
+    Shifter's Shield:
+      total: 0.57
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.31
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.57
+      pick: 0.0
+      fit: 0.58
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.48
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
   - Shifter's Shield
   starter: &id001
@@ -171,25 +170,25 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
   - Genji's Guard
   - Berserker's Shield
-  - Ethereal Staff
+  - Shifter's Shield
   - Jotunn's Revenge
+  - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -203,53 +202,52 @@ builds:
     Blade, Lifebinder, Helm of Radiance, Stone of Binding, Glorious Pridwen, Daybreak
     Gavel, Midgardian Mail, Bragi''s Harp, Tekko-Kagi, Sphere of Negation.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.59
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.28
     Genji's Guard:
-      total: 0.56
+      total: 0.59
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.23
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.49
-    Ethereal Staff:
-      total: 0.57
-      efficiency: 0.46
-      win: 0.67
-      pick: 0.22
-      fit: 0.62
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
+      fit: 0.46
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.32
+    Shield of the Phoenix:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.0
+      fit: 0.71
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.76
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
-  - Ethereal Staff
+  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Brawler’s Beat Stick
   - Stone of Binding
   - Genji's Guard
+  - Shifter's Shield
   - Berserker's Shield
   - Jotunn's Revenge
   - Amanita Charm
@@ -261,11 +259,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -279,52 +277,52 @@ builds:
     Nimble Ring, Pharaoh''s Curse, The Reaper, Helm of Radiance, Eye of Providence,
     Shield of the Phoenix, Draconic Scale, Doom Orb, Shogun''s Ofuda, Tyrfing.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.58
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.26
     Stone of Binding:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.66
     Genji's Guard:
-      total: 0.56
+      total: 0.59
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.2
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
+      fit: 0.37
     Berserker's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.37
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.47
     Amanita Charm:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.37
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
+  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Brawler’s Beat Stick
   - Genji's Guard
+  - Shifter's Shield
   - Berserker's Shield
   - Nimble Ring
   - Amanita Charm
@@ -336,11 +334,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -356,57 +354,57 @@ builds:
     Avenging Blade.'
   slot_scores:
     Golden Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.54
-    Brawler’s Beat Stick:
-      total: 0.58
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.26
     Genji's Guard:
-      total: 0.56
+      total: 0.59
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.2
-    Berserker's Shield:
+    Shifter's Shield:
       total: 0.55
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
+      fit: 0.37
+    Berserker's Shield:
+      total: 0.56
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.43
     Nimble Ring:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.3
     Amanita Charm:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.37
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
+  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Brawler’s Beat Stick
   - Genji's Guard
   - Berserker's Shield
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Shifter's Shield
+  - Gladiator's Shield
   - Freya's Tears
   flex_slots:
   - Berserker's Shield
-  - Breastplate of Valor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -415,8 +413,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -425,74 +423,75 @@ builds:
     Freya''s Tears, Berserker''s Shield, Breastplate of Valor, Amanita Charm, Kinetic
     Cuirass, Shield of the Phoenix, Spear of Desolation, Hydra''s Lament, Screeching
     Gargoyle, Soul Gem, Chronos'' Pendant, Shield Splitter, Nimble Ring, Runeforged
-    Hammer, Helm of Radiance, Gluttonous Grimoire, Erosion, Pharaoh''s Curse, Golden
-    Blade, Eye of Providence, Stone of Binding, Draconic Scale, Shogun''s Ofuda, Eye
-    of the Storm, Arondight, Gem of Focus, Lernaean Bow, Spear of the Magus, Magi''s
-    Cloak, Rod of Asclepius, Daybreak Gavel, Mantle Of Discord, Obsidian Shard, Midgardian
-    Mail, Tyrfing, Eye of Erebus.'
+    Hammer, Helm of Radiance, Gluttonous Grimoire, Erosion, Prophetic Cloak, Pharaoh''s
+    Curse, Golden Blade, Eye of Providence, Stone of Binding, Draconic Scale, Shogun''s
+    Ofuda, Eye of the Storm, Arondight, Gem of Focus, Lernaean Bow, Spear of the Magus,
+    Magi''s Cloak, Rod of Asclepius, Daybreak Gavel, Mantle Of Discord, Obsidian Shard,
+    Midgardian Mail, Tyrfing, Eye of Erebus.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.58
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.28
     Genji's Guard:
-      total: 0.59
+      total: 0.62
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.41
     Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
-      win: 0.55
-      pick: 0.0
-      fit: 0.39
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.55
-      pick: 0.0
-      fit: 0.41
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.55
-      pick: 0.0
-      fit: 0.39
-    Freya's Tears:
       total: 0.55
+      efficiency: 0.68
+      win: 0.57
+      pick: 0.0
+      fit: 0.39
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.72
+      win: 0.57
+      pick: 0.0
+      fit: 0.39
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
+      fit: 0.39
+    Gladiator's Shield:
+      total: 0.56
+      efficiency: 0.39
+      win: 0.71
+      pick: 0.16
+      fit: 0.62
+    Freya's Tears:
+      total: 0.56
       efficiency: 0.61
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.55
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
+  - Shifter's Shield
+  - Gladiator's Shield
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Brawler’s Beat Stick
   - Genji's Guard
-  - Shifter's Shield
   - Berserker's Shield
+  - Shifter's Shield
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Shifter's Shield
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -507,59 +506,58 @@ builds:
     Nimble Ring, Shogun''s Ofuda, Screeching Gargoyle, Mantle Of Discord, Midgardian
     Mail, Daybreak Gavel, Silverbranch Bow.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.59
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.3
     Genji's Guard:
-      total: 0.56
+      total: 0.59
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.23
-    Shifter's Shield:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.56
-      pick: 0.47
-      fit: 0.42
     Berserker's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.36
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
+      fit: 0.42
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.45
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.57
+      pick: 0.0
+      fit: 0.52
     Amanita Charm:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.42
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
   - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Brawler’s Beat Stick
   - Genji's Guard
-  - Shifter's Shield
   - Berserker's Shield
+  - Shifter's Shield
   - Jotunn's Revenge
+  - Gladiator's Shield
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Shifter's Shield
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -584,46 +582,46 @@ builds:
     Jade Scepter, Doom Orb, Silverbranch Bow, Wish-Granting Pearl, Avenging Blade,
     Death Metal, Chronos'' Pendant, Magi''s Cloak.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.58
-      efficiency: 0.42
-      win: 0.86
-      pick: 0.17
-      fit: 0.26
     Genji's Guard:
-      total: 0.56
+      total: 0.59
       efficiency: 0.66
-      win: 0.64
-      pick: 0.2
+      win: 0.71
+      pick: 0.18
       fit: 0.2
-    Shifter's Shield:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.56
-      pick: 0.47
-      fit: 0.36
     Berserker's Shield:
-      total: 0.54
+      total: 0.55
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
+      fit: 0.36
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.62
+      pick: 0.44
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.35
-    Amanita Charm:
+    Gladiator's Shield:
       total: 0.53
+      efficiency: 0.39
+      win: 0.71
+      pick: 0.16
+      fit: 0.4
+    Amanita Charm:
+      total: 0.54
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.36
   community_ordered:
-  - Brawler’s Beat Stick
   - Genji's Guard
   - Shifter's Shield
+  - Gladiator's Shield
   starter: *id001
 - source: suggested
   archetype: model
@@ -662,39 +660,39 @@ builds:
     Ancile.'
   slot_scores:
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.56
       efficiency: 0.72
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.31
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.58
     Shield Splitter:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.52
     Freya's Tears:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.43
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.57
       pick: 0.0
       fit: 0.48
   starter: *id001
