@@ -661,16 +661,16 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
+  - Death Metal
   - Titan's Bane
-  - Avatar's Parashu
   - Soul Gem
   flex_slots:
+  - Death Metal
   - Titan's Bane
-  - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -701,18 +701,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Death Metal:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Titan's Bane:
       total: 0.51
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Avatar's Parashu:
-      total: 0.45
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Soul Gem:
       total: 0.69
       efficiency: 0.52
@@ -720,14 +720,10 @@ builds:
       pick: 0.0
       fit: 0.86
   swaps:
-  - added: Avatar's Parashu
-    removed: Bragi's Harp
-    reason: Conquest community 72% win over 51 matches (vs 57% on this god), taking
-      the model's weakest slot from Bragi's Harp
   - added: Titan's Bane
-    removed: Death Metal
-    reason: Conquest community 67% win over 102 matches (vs 57% on this god), taking
-      the model's weakest slot from Death Metal
+    removed: Bragi's Harp
+    reason: Conquest community 66% win over 121 matches (vs 56% on this god), taking
+      the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001
 ---

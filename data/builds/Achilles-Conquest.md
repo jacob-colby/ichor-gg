@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Prowess
-  aspect_pick_rate: 0.24
-  aspect_win_rate: 0.61
+  aspect_pick_rate: 0.23
+  aspect_win_rate: 0.62
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.21
+    pick_rate: 0.22
     win_rate: 0.44
     alternates:
     - name: Daybreak Gavel
-      pick_rate: 0.21
-      win_rate: 0.51
+      pick_rate: 0.2
+      win_rate: 0.52
     - name: Jotunn's Revenge
-      pick_rate: 0.12
-      win_rate: 0.59
+      pick_rate: 0.11
+      win_rate: 0.57
   - name: Hydra's Lament
-    pick_rate: 0.1
-    win_rate: 0.54
+    pick_rate: 0.09
+    win_rate: 0.57
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.2
-      win_rate: 0.61
+      win_rate: 0.6
     - name: Genji's Guard
-      pick_rate: 0.07
-      win_rate: 0.47
+      pick_rate: 0.06
+      win_rate: 0.5
   - name: Genji's Guard
     pick_rate: 0.11
-    win_rate: 0.43
+    win_rate: 0.45
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.56
     - name: Freya's Tears
       pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Heartseeker
     pick_rate: 0.1
-    win_rate: 0.63
+    win_rate: 0.66
     alternates:
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.33
-    - name: Freya's Tears
+      win_rate: 0.38
+    - name: Shell of Rebuke
       pick_rate: 0.06
-      win_rate: 0.53
+      win_rate: 0.61
   - name: Freya's Tears
-    pick_rate: 0.08
-    win_rate: 0.56
+    pick_rate: 0.07
+    win_rate: 0.58
     alternates:
     - name: Hide of the Nemean Lion
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.38
     - name: Blinking Abyss
       pick_rate: 0.04
       win_rate: 0.7
-  - name: Hide of the Nemean Lion
-    pick_rate: 0.06
-    win_rate: 0.78
+  - name: Engraved Guard
+    pick_rate: 0.05
+    win_rate: 0.56
     alternates:
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.05
+      win_rate: 0.78
     - name: Shell of Rebuke
       pick_rate: 0.04
       win_rate: 0.71
-    - name: Engraved Guard
-      pick_rate: 0.04
-      win_rate: 0.57
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.18
-    win_rate: 0.47
+    pick_rate: 0.17
+    win_rate: 0.45
   - name: Bumba's Hammer
     pick_rate: 0.16
-    win_rate: 0.61
+    win_rate: 0.62
   - name: Warrior's Axe
-    pick_rate: 0.14
+    pick_rate: 0.15
     win_rate: 0.4
   source_url: https://smitebrain.com/gods/achilles/
-  last_verified: '2026-09-28'
-  god_win_rate: 0.5275862068965518
-  god_matches_won: 153
-  god_matches_played: 290
+  last_verified: '2026-09-29'
+  god_win_rate: 0.528125
+  god_matches_won: 169
+  god_matches_played: 320
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-28'
-  god_matches_analyzed: 7013
+  god_window_end: '2026-09-29'
+  god_matches_analyzed: 8229
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -117,17 +117,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Amanita Charm, Runeforged Hammer, Kinetic Cuirass,
-    Eye of the Storm, Shield Splitter, Avenging Blade, Berserker''s Shield, Breastplate
-    of Valor, Titan''s Bane, The Crusher, Hydra''s Lament, Erosion, The Reaper, Eye
-    of Providence, Draconic Scale, Shield of the Phoenix, Golden Blade, Midgardian
+    Eye of the Storm, Shield Splitter, Avenging Blade, Hydra''s Lament, Berserker''s
+    Shield, Breastplate of Valor, Titan''s Bane, The Crusher, Erosion, The Reaper,
+    Eye of Providence, Draconic Scale, Shield of the Phoenix, Golden Blade, Midgardian
     Mail, Avatar''s Parashu, Stone of Binding, Leviathan''s Hide, Void Shield, Pendulum
     Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.54
     Transcendence:
       total: 0.48
@@ -139,7 +139,7 @@ builds:
       total: 0.59
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.33
     Runeforged Hammer:
       total: 0.54
@@ -148,9 +148,9 @@ builds:
       pick: 0.0
       fit: 0.59
     Heartseeker:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
-      win: 0.63
+      win: 0.66
       pick: 0.17
       fit: 0.69
     Amanita Charm:
@@ -169,14 +169,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Transcendence
+  - Hydra's Lament
   - Hide of the Nemean Lion
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
+  - Amanita Charm
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -186,29 +186,23 @@ builds:
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
-    Revenge, Amanita Charm, Breastplate of Valor, Runeforged Hammer, Hydra''s Lament,
+    Revenge, Hydra''s Lament, Amanita Charm, Breastplate of Valor, Runeforged Hammer,
     Kinetic Cuirass, Shield Splitter, Eye of the Storm, Berserker''s Shield, Avenging
     Blade, Titan''s Bane, The Crusher, Shield of the Phoenix, Transcendence, The Reaper,
     Arondight, Screeching Gargoyle, Erosion, Eye of Providence, Oni Hunter''s Garb,
     Stone of Binding, Draconic Scale, Pendulum Blade, Midgardian Mail, Golden Blade.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
-      fit: 0.25
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.52
     Transcendence:
       total: 0.48
@@ -216,16 +210,22 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.28
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.54
+      win: 0.57
+      pick: 0.12
+      fit: 0.49
     Hide of the Nemean Lion:
       total: 0.57
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.19
     Heartseeker:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.63
+      win: 0.66
       pick: 0.17
       fit: 0.62
     Amanita Charm:
@@ -236,6 +236,7 @@ builds:
       fit: 0.27
   community_ordered:
   - Jotunn's Revenge
+  - Hydra's Lament
   - Hide of the Nemean Lion
   - Heartseeker
   starter: *id001
@@ -249,18 +250,18 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
+  - Kinetic Cuirass
   - Shield of the Phoenix
-  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -268,15 +269,15 @@ builds:
     this god: Amanita Charm, Jotunn''s Revenge, Kinetic Cuirass, Shield of the Phoenix,
     Runeforged Hammer, The Reaper, Shield Splitter, Eye of the Storm, Berserker''s
     Shield, Erosion, Eye of Providence, Breastplate of Valor, Yogi''s Necklace, Draconic
-    Scale, Avenging Blade, Phoenix Feather, Stone of Binding, Midgardian Mail, Titan''s
-    Bane, Chandra''s Grace, The Crusher, Hydra''s Lament, Magi''s Cloak, Leviathan''s
+    Scale, Avenging Blade, Phoenix Feather, Hydra''s Lament, Stone of Binding, Midgardian
+    Mail, Titan''s Bane, Chandra''s Grace, The Crusher, Magi''s Cloak, Leviathan''s
     Hide.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.45
     Kinetic Cuirass:
       total: 0.55
@@ -294,12 +295,12 @@ builds:
       total: 0.6
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.38
     Heartseeker:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
-      win: 0.63
+      win: 0.66
       pick: 0.17
       fit: 0.61
     Amanita Charm:
@@ -342,8 +343,8 @@ builds:
     for this god: Jotunn''s Revenge, Avenging Blade, Amanita Charm, Titan''s Bane,
     The Crusher, Runeforged Hammer, Stone of Binding, The Reaper, Kinetic Cuirass,
     Void Shield, Screeching Gargoyle, Void Stone, Shield Splitter, Eye of the Storm,
-    Avatar''s Parashu, Berserker''s Shield, Breastplate of Valor, Pendulum Blade,
-    Hydra''s Lament, Tekko-Kagi, Erosion, Eye of Providence, Shield of the Phoenix,
+    Avatar''s Parashu, Hydra''s Lament, Berserker''s Shield, Breastplate of Valor,
+    Pendulum Blade, Tekko-Kagi, Erosion, Eye of Providence, Shield of the Phoenix,
     Draconic Scale, Toxic Blade.'
   slot_scores:
     Avenging Blade:
@@ -353,10 +354,10 @@ builds:
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.65
     Transcendence:
       total: 0.47
@@ -368,12 +369,12 @@ builds:
       total: 0.58
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.25
     Heartseeker:
-      total: 0.58
+      total: 0.59
       efficiency: 0.47
-      win: 0.63
+      win: 0.66
       pick: 0.17
       fit: 0.81
     Amanita Charm:
@@ -395,17 +396,17 @@ builds:
   - Jotunn's Revenge
   - Hide of the Nemean Lion
   - Riptalon
-  - Amanita Charm
+  - Heartseeker
   flex_slots:
-  - Amanita Charm
+  - Golden Blade
   - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -413,11 +414,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Berserker''s Shield, Golden Blade, Amanita Charm,
+    this god: Berserker''s Shield, Jotunn''s Revenge, Golden Blade, Amanita Charm,
     Riptalon, Tyrfing, Silverbranch Bow, Toxic Blade, Kinetic Cuirass, Runeforged
     Hammer, Lernaean Bow, Breastplate of Valor, Pharaoh''s Curse, Tekko-Kagi, The
-    Reaper, Shogun''s Ofuda, Shield Splitter, Eye of the Storm, Avenging Blade, Dominance,
-    Hydra''s Lament, Erosion, Shield of the Phoenix, Eye of Providence, Qin''s Blade.'
+    Reaper, Shogun''s Ofuda, Hydra''s Lament, Shield Splitter, Eye of the Storm, Avenging
+    Blade, Dominance, Erosion, Shield of the Phoenix, Eye of Providence, Qin''s Blade.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -432,16 +433,16 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.27
     Hide of the Nemean Lion:
       total: 0.57
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.2
     Riptalon:
       total: 0.52
@@ -449,15 +450,16 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.58
-    Amanita Charm:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
-      fit: 0.27
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.66
+      pick: 0.17
+      fit: 0.44
   community_ordered:
   - Jotunn's Revenge
   - Hide of the Nemean Lion
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -467,17 +469,17 @@ builds:
   - Hydra's Lament
   - Hide of the Nemean Lion
   - Freya's Tears
-  - Amanita Charm
+  - Heartseeker
   flex_slots:
-  - Amanita Charm
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -486,7 +488,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Breastplate of
-    Valor, Amanita Charm, Shield of the Phoenix, Hydra''s Lament, Kinetic Cuirass,
+    Valor, Hydra''s Lament, Amanita Charm, Shield of the Phoenix, Kinetic Cuirass,
     Screeching Gargoyle, Runeforged Hammer, Berserker''s Shield, Arondight, Gladiator''s
     Shield, Eye of Erebus, Pendulum Blade, Shield Splitter, Prophetic Cloak, Chandra''s
     Grace, Eye of the Storm, Erosion, Eye of Providence, Avenging Blade, Draconic
@@ -499,40 +501,41 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.59
     Hydra's Lament:
-      total: 0.52
+      total: 0.54
       efficiency: 0.54
-      win: 0.54
-      pick: 0.14
+      win: 0.57
+      pick: 0.12
       fit: 0.55
     Hide of the Nemean Lion:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
       win: 0.78
-      pick: 0.18
+      pick: 0.15
       fit: 0.22
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.61
-      win: 0.56
-      pick: 0.17
+      win: 0.58
+      pick: 0.15
       fit: 0.52
-    Amanita Charm:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.57
-      pick: 0.0
-      fit: 0.31
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.66
+      pick: 0.17
+      fit: 0.44
   community_ordered:
   - Jotunn's Revenge
   - Hydra's Lament
   - Hide of the Nemean Lion
   - Freya's Tears
+  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -568,10 +571,10 @@ builds:
     Shield, Pendulum Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.59
-      pick: 0.12
+      win: 0.57
+      pick: 0.11
       fit: 0.54
     Kinetic Cuirass:
       total: 0.54

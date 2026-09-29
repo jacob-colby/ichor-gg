@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Genji's Guard
+  - Void Shield
+  - Void Stone
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Void Stone
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Void Stone:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Stampede:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Genji's Guard
+    removed: Kinetic Cuirass
+    reason: Conquest community 71% win over 39 matches (vs 54% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
+  borrowed_from: Conquest
+  starter: *id001
 ---

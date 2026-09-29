@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Dreamer's Idol
+  - Erosion
+  - Soul Gem
+  flex_slots:
+  - Erosion
+  - Dreamer's Idol
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Spear of Desolation:
+      total: 0.59
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Rod of Tahuti:
+      total: 0.66
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Obsidian Shard:
+      total: 0.56
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Dreamer's Idol:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Erosion:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Dreamer's Idol
+    removed: Divine Ruin
+    reason: Conquest community 72% win over 54 matches (vs 59% on this god), taking
+      the model's weakest slot from Divine Ruin
+  borrowed_from: Conquest
+  starter: *id001
 ---

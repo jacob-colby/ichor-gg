@@ -592,11 +592,11 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Freya's Tears
-    reason: Conquest community 81% win over 31 matches (vs 57% on this god), taking
+    reason: Conquest community 79% win over 36 matches (vs 56% on this god), taking
       the model's weakest slot from Freya's Tears
   - added: Genji's Guard
     removed: Shifter's Shield
-    reason: Conquest community 70% win over 67 matches (vs 57% on this god), taking
+    reason: Conquest community 67% win over 78 matches (vs 56% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Kinetic Cuirass
-    reason: Conquest community 76% win over 31 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 32 matches (vs 56% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001

@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Nimble Ring
     removed: Doom Orb
-    reason: Conquest community 64% win over 121 matches (vs 54% on this god), taking
+    reason: Conquest community 64% win over 134 matches (vs 53% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001
@@ -1191,7 +1191,7 @@ builds:
   swaps:
   - added: Nimble Ring
     removed: Genji's Guard
-    reason: Conquest community 64% win over 121 matches (vs 54% on this god), taking
+    reason: Conquest community 64% win over 134 matches (vs 53% on this god), taking
       the model's weakest slot from Genji's Guard
   borrowed_from: Conquest
   starter: *id001

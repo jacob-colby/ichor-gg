@@ -527,7 +527,7 @@ builds:
   swaps:
   - added: The Reaper
     removed: Berserker's Shield
-    reason: Conquest community 67% win over 37 matches (vs 51% on this god), taking
+    reason: Conquest community 67% win over 37 matches (vs 50% on this god), taking
       the model's weakest slot from Berserker's Shield
   borrowed_from: Conquest
   starter: *id001
