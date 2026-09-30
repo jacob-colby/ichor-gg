@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.71
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Mystical Mail
+  - Void Shield
+  - Erosion
+  - Stampede
+  - Sanguine Lash
+  flex_slots:
+  - Sanguine Lash
+  - Mystical Mail
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.65
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Mystical Mail:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Erosion:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Stampede:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Sanguine Lash:
+      total: 0.57
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+  swaps:
+  - added: Sanguine Lash
+    removed: Void Stone
+    reason: Conquest community 61% win over 123 matches (vs 51% on this god), taking
+      the model's weakest slot from Void Stone
+  borrowed_from: Conquest
+  starter: *id001
 ---

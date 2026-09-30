@@ -725,13 +725,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Devourer's Gauntlet
   - Death Metal
+  - Gluttonous Grimoire
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Devourer's Gauntlet
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -760,18 +760,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Devourer's Gauntlet:
-      total: 0.41
-      efficiency: 0.33
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Death Metal:
       total: 0.52
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Gluttonous Grimoire:
+      total: 0.47
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.86
@@ -785,9 +785,9 @@ builds:
       pick: 0.0
       fit: 0.93
   swaps:
-  - added: Devourer's Gauntlet
+  - added: Gluttonous Grimoire
     removed: Tyrfing
-    reason: Conquest community 66% win over 168 matches (vs 58% on this god), taking
+    reason: Conquest community 72% win over 61 matches (vs 59% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

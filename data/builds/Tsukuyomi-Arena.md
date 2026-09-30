@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Golden Blade
-    reason: Conquest community 66% win over 121 matches (vs 56% on this god), taking
+    reason: Conquest community 68% win over 133 matches (vs 56% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

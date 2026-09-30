@@ -529,13 +529,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Devourer's Gauntlet
   - Eye of the Storm
-  - Runeforged Hammer
   - Heartseeker
   - Erosion
   flex_slots:
-  - Eye of the Storm
+  - Kinetic Cuirass
   - Devourer's Gauntlet
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,6 +559,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Devourer's Gauntlet:
       total: 0.4
       efficiency: 0.29
@@ -571,12 +577,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Runeforged Hammer:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Devourer's Gauntlet
     removed: Toxic Blade
-    reason: Conquest community 58% win over 219 matches (vs 50% on this god), taking
+    reason: Conquest community 58% win over 297 matches (vs 51% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

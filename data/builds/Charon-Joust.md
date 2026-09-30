@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
+  - Shell of Rebuke
   - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Freya's Tears
   - Genji's Guard
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Freya's Tears:
-      total: 0.63
-      efficiency: 0.61
+    Shell of Rebuke:
+      total: 0.4
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.51
     Shifter's Shield:
       total: 0.63
       efficiency: 0.55
@@ -590,10 +590,14 @@ builds:
       pick: 0.0
       fit: 0.91
   swaps:
-  - added: Genji's Guard
+  - added: Shell of Rebuke
     removed: Stygian Anchor
-    reason: Conquest community 67% win over 53 matches (vs 54% on this god), taking
+    reason: Conquest community 72% win over 33 matches (vs 54% on this god), taking
       the model's weakest slot from Stygian Anchor
+  - added: Genji's Guard
+    removed: Freya's Tears
+    reason: Conquest community 67% win over 62 matches (vs 54% on this god), taking
+      the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
 ---

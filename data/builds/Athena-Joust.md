@@ -529,13 +529,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Stygian Anchor
-  - Genji's Guard
   - Kinetic Cuirass
+  - Shifter's Shield
   - Deathbringer
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Genji's Guard
+  - Shifter's Shield
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.66
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Kinetic Cuirass:
       total: 0.67
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Shifter's Shield:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Deathbringer:
       total: 0.2
       efficiency: 0.34
@@ -592,12 +592,8 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Freya's Tears
-    reason: Conquest community 79% win over 36 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 36 matches (vs 56% on this god), taking
       the model's weakest slot from Freya's Tears
-  - added: Genji's Guard
-    removed: Shifter's Shield
-    reason: Conquest community 67% win over 78 matches (vs 56% on this god), taking
-      the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001
 ---

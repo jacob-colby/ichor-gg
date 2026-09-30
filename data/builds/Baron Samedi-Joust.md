@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Genji's Guard
     removed: Stygian Anchor
-    reason: Conquest community 71% win over 39 matches (vs 54% on this god), taking
+    reason: Conquest community 68% win over 42 matches (vs 53% on this god), taking
       the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001

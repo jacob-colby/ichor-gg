@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Rage
-    pick_rate: 0.61
-    win_rate: 0.59
+    pick_rate: 0.63
+    win_rate: 0.58
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.19
-      win_rate: 0.52
+      pick_rate: 0.18
+      win_rate: 0.53
     - name: Hydra's Lament
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.6
   - name: Dagger of Frenzy
     pick_rate: 0.34
     win_rate: 0.47
     alternates:
     - name: Rage
-      pick_rate: 0.31
-      win_rate: 0.57
+      pick_rate: 0.28
+      win_rate: 0.58
     - name: Hydra's Lament
-      pick_rate: 0.12
-      win_rate: 0.76
+      pick_rate: 0.11
+      win_rate: 0.74
   - name: Deathbringer
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.52
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.16
-      win_rate: 0.59
+      pick_rate: 0.15
+      win_rate: 0.56
     - name: Musashi's Dual Swords
       pick_rate: 0.08
-      win_rate: 0.78
+      win_rate: 0.76
   - name: Titan's Bane
-    pick_rate: 0.12
-    win_rate: 0.56
+    pick_rate: 0.11
+    win_rate: 0.57
     alternates:
     - name: Deathbringer
-      pick_rate: 0.28
-      win_rate: 0.61
+      pick_rate: 0.26
+      win_rate: 0.59
     - name: Musashi's Dual Swords
       pick_rate: 0.1
-      win_rate: 0.61
+      win_rate: 0.62
   - name: Riptalon
     pick_rate: 0.09
-    win_rate: 0.42
+    win_rate: 0.45
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.19
+      pick_rate: 0.18
+      win_rate: 0.62
+    - name: Deathbringer
+      pick_rate: 0.06
       win_rate: 0.67
-    - name: Hydra's Lament
-      pick_rate: 0.07
-      win_rate: 0.57
   - name: Skeggox
     pick_rate: 0.09
-    win_rate: 0.69
+    win_rate: 0.64
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.09
-      win_rate: 0.69
+      win_rate: 0.71
     - name: Titan's Bane
       pick_rate: 0.08
-      win_rate: 0.55
+      win_rate: 0.62
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.27
-    win_rate: 0.55
+    win_rate: 0.58
   - name: Sharpshooter's Arrow
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.6
   - name: Gilded Arrow
     pick_rate: 0.15
-    win_rate: 0.54
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-09-29'
-  god_win_rate: 0.5684647302904564
-  god_matches_won: 137
-  god_matches_played: 241
+  last_verified: '2026-09-30'
+  god_win_rate: 0.5620437956204379
+  god_matches_won: 154
+  god_matches_played: 274
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-29'
-  god_matches_analyzed: 8229
+  god_window_end: '2026-09-30'
+  god_matches_analyzed: 9423
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -135,10 +135,10 @@ builds:
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.64
+      total: 0.63
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.66
     Tekko-Kagi:
       total: 0.54
@@ -153,10 +153,10 @@ builds:
       pick: 0.0
       fit: 0.87
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.47
-      win: 0.56
-      pick: 0.2
+      win: 0.57
+      pick: 0.18
       fit: 0.77
   community_ordered:
   - Hydra's Lament
@@ -209,10 +209,10 @@ builds:
       pick: 0.0
       fit: 0.36
     Hydra's Lament:
-      total: 0.63
+      total: 0.62
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.59
     The Crusher:
       total: 0.5
@@ -229,8 +229,8 @@ builds:
     Titan's Bane:
       total: 0.51
       efficiency: 0.47
-      win: 0.56
-      pick: 0.2
+      win: 0.57
+      pick: 0.18
       fit: 0.53
   community_ordered:
   - Hydra's Lament
@@ -281,10 +281,10 @@ builds:
       pick: 0.0
       fit: 0.2
     Hydra's Lament:
-      total: 0.62
+      total: 0.61
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.51
     The Crusher:
       total: 0.51
@@ -301,8 +301,8 @@ builds:
     Titan's Bane:
       total: 0.52
       efficiency: 0.47
-      win: 0.56
-      pick: 0.2
+      win: 0.57
+      pick: 0.18
       fit: 0.61
   community_ordered:
   - Hydra's Lament
@@ -366,10 +366,10 @@ builds:
       pick: 0.0
       fit: 0.73
     Hydra's Lament:
-      total: 0.6
+      total: 0.59
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.39
     Amanita Charm:
       total: 0.61
@@ -425,10 +425,10 @@ builds:
       pick: 0.0
       fit: 0.27
     Hydra's Lament:
-      total: 0.61
+      total: 0.6
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.49
     Tekko-Kagi:
       total: 0.55
@@ -445,8 +445,8 @@ builds:
     Titan's Bane:
       total: 0.56
       efficiency: 0.47
-      win: 0.56
-      pick: 0.2
+      win: 0.57
+      pick: 0.18
       fit: 0.87
   community_ordered:
   - Hydra's Lament
@@ -503,10 +503,10 @@ builds:
       pick: 0.0
       fit: 0.72
     Hydra's Lament:
-      total: 0.59
+      total: 0.58
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.35
     Silverbranch Bow:
       total: 0.54
@@ -569,10 +569,10 @@ builds:
       pick: 0.0
       fit: 0.14
     Hydra's Lament:
-      total: 0.64
+      total: 0.63
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.69
     Arondight:
       total: 0.52
@@ -640,10 +640,10 @@ builds:
       pick: 0.0
       fit: 0.38
     Hydra's Lament:
-      total: 0.64
+      total: 0.63
       efficiency: 0.54
-      win: 0.76
-      pick: 0.16
+      win: 0.74
+      pick: 0.15
       fit: 0.66
     Tekko-Kagi:
       total: 0.54
@@ -658,10 +658,10 @@ builds:
       pick: 0.0
       fit: 0.87
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.47
-      win: 0.56
-      pick: 0.2
+      win: 0.57
+      pick: 0.18
       fit: 0.77
   community_ordered:
   - Hydra's Lament
