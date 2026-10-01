@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Devourer's Gauntlet
     removed: Toxic Blade
-    reason: Conquest community 58% win over 297 matches (vs 51% on this god), taking
+    reason: Conquest community 57% win over 359 matches (vs 51% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

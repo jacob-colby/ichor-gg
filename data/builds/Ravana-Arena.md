@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Void Stone
-    reason: Conquest community 61% win over 123 matches (vs 51% on this god), taking
+    reason: Conquest community 59% win over 155 matches (vs 51% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

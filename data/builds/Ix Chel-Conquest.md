@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mother's Light
-  aspect_pick_rate: 0.13
+  aspect_pick_rate: 0.12
   aspect_win_rate: 0.48
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.35
-    win_rate: 0.57
+    win_rate: 0.56
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.23
-      win_rate: 0.54
+      pick_rate: 0.22
+      win_rate: 0.55
     - name: The World Stone
-      pick_rate: 0.08
-      win_rate: 0.63
+      pick_rate: 0.09
+      win_rate: 0.62
   - name: The World Stone
     pick_rate: 0.29
-    win_rate: 0.53
+    win_rate: 0.52
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.16
+      win_rate: 0.53
+    - name: Book of Thoth
+      pick_rate: 0.09
       win_rate: 0.49
-    - name: Chronos' Pendant
-      pick_rate: 0.08
-      win_rate: 0.55
   - name: Rod of Tahuti
     pick_rate: 0.19
     win_rate: 0.5
     alternates:
     - name: Soul Gem
       pick_rate: 0.13
-      win_rate: 0.58
+      win_rate: 0.57
     - name: The World Stone
-      pick_rate: 0.09
-      win_rate: 0.44
+      pick_rate: 0.1
+      win_rate: 0.47
   - name: Obsidian Shard
     pick_rate: 0.15
     win_rate: 0.45
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.25
-      win_rate: 0.61
+      pick_rate: 0.26
+      win_rate: 0.62
     - name: The World Stone
       pick_rate: 0.05
       win_rate: 0.56
   - name: Evil Eye
     pick_rate: 0.09
-    win_rate: 0.55
+    win_rate: 0.59
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.22
-      win_rate: 0.61
+      pick_rate: 0.23
+      win_rate: 0.62
     - name: Rod of Tahuti
-      pick_rate: 0.11
-      win_rate: 0.65
+      pick_rate: 0.12
+      win_rate: 0.62
   - name: Void Shard
     pick_rate: 0.07
-    win_rate: 0.67
+    win_rate: 0.65
     alternates:
     - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.38
-    - name: Rod of Tahuti
+      win_rate: 0.37
+    - name: Oracle Staff
       pick_rate: 0.05
-      win_rate: 0.63
+      win_rate: 0.41
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.31
-    win_rate: 0.65
+    win_rate: 0.64
   - name: Sands Of Time
-    pick_rate: 0.22
-    win_rate: 0.44
-  - name: Archmage's Gem
-    pick_rate: 0.15
-    win_rate: 0.54
+    pick_rate: 0.21
+    win_rate: 0.45
+  - name: Conduit Gem
+    pick_rate: 0.17
+    win_rate: 0.55
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-09-30'
-  god_win_rate: 0.545016077170418
-  god_matches_won: 339
-  god_matches_played: 622
+  last_verified: '2026-10-01'
+  god_win_rate: 0.5455882352941176
+  god_matches_won: 371
+  god_matches_played: 680
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-30'
-  god_matches_analyzed: 9423
+  god_window_end: '2026-10-01'
+  god_matches_analyzed: 10386
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -119,7 +119,7 @@ builds:
     this god: Amanita Charm, Freya''s Tears, Kinetic Cuirass, Gluttonous Grimoire,
     Genji''s Guard, Breastplate of Valor, Shifter''s Shield, Spear of the Magus, Helm
     of Radiance, Shield of the Phoenix, Erosion, Eye of Providence, Rod of Asclepius,
-    Draconic Scale, Chronos'' Pendant, Stone of Binding, Jade Scepter, Wish-Granting
+    Draconic Scale, Stone of Binding, Chronos'' Pendant, Jade Scepter, Wish-Granting
     Pearl, Helm of Darkness, Screeching Gargoyle, Doom Orb, Magi''s Cloak, Midgardian
     Mail, Mantle Of Discord.'
   slot_scores:
@@ -138,7 +138,7 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.5
     Freya's Tears:
@@ -193,16 +193,15 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Amanita
     Charm, Genji''s Guard, Breastplate of Valor, Gluttonous Grimoire, Freya''s Tears,
     Kinetic Cuirass, Spear of the Magus, Helm of Radiance, Shifter''s Shield, Rod
-    of Asclepius, Wish-Granting Pearl, Doom Orb, Chronos'' Pendant, Ancient Signet,
-    Death Metal, Shield of the Phoenix, Jade Scepter, Erosion, Eye of Providence,
-    Stone of Binding, Draconic Scale, Triton''s Conch, Screeching Gargoyle, Daybreak
-    Gavel.'
+    of Asclepius, Wish-Granting Pearl, Doom Orb, Ancient Signet, Death Metal, Chronos''
+    Pendant, Shield of the Phoenix, Jade Scepter, Erosion, Eye of Providence, Stone
+    of Binding, Draconic Scale, Triton''s Conch, Screeching Gargoyle, Daybreak Gavel.'
   slot_scores:
     Book of Thoth:
       total: 0.47
       efficiency: 0.51
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.25
     Genji's Guard:
       total: 0.52
@@ -213,7 +212,7 @@ builds:
     Spear of Desolation:
       total: 0.53
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.4
     Breastplate of Valor:
@@ -267,16 +266,16 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Amanita Charm, Gluttonous Grimoire, Freya''s Tears, Genji''s Guard, Breastplate
     of Valor, Kinetic Cuirass, Spear of the Magus, Helm of Radiance, Shifter''s Shield,
-    Shield of the Phoenix, Chronos'' Pendant, Doom Orb, Rod of Asclepius, Erosion,
+    Shield of the Phoenix, Doom Orb, Rod of Asclepius, Erosion, Chronos'' Pendant,
     Screeching Gargoyle, Eye of Providence, Stone of Binding, Draconic Scale, Dreamer''s
     Idol, Jade Scepter, Wish-Granting Pearl, Magi''s Cloak, Daybreak Gavel, Ancient
     Signet.'
   slot_scores:
     Book of Thoth:
-      total: 0.45
+      total: 0.46
       efficiency: 0.51
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.14
     Genji's Guard:
       total: 0.52
@@ -285,9 +284,9 @@ builds:
       pick: 0.0
       fit: 0.27
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.49
     Freya's Tears:
@@ -305,7 +304,7 @@ builds:
     Soul Gem:
       total: 0.54
       efficiency: 0.52
-      win: 0.58
+      win: 0.57
       pick: 0.2
       fit: 0.59
   community_ordered:
@@ -344,8 +343,8 @@ builds:
     Kinetic Cuirass, Freya''s Tears, Ethereal Staff, Genji''s Guard, Breastplate of
     Valor, Shifter''s Shield, Lifebinder, Spear of the Magus, Helm of Radiance, Sphere
     of Negation, Yogi''s Necklace, Erosion, Chandra''s Grace, Eye of Providence, Phoenix
-    Feather, Draconic Scale, Chronos'' Pendant, Jade Scepter, Wish-Granting Pearl,
-    Glorious Pridwen, Blood-Bound Book.'
+    Feather, Draconic Scale, Jade Scepter, Wish-Granting Pearl, Glorious Pridwen,
+    Blood-Bound Book, Chronos'' Pendant.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.53
@@ -362,7 +361,7 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.5
     Rod of Tahuti:
@@ -378,9 +377,9 @@ builds:
       pick: 0.0
       fit: 0.8
     Soul Gem:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.58
+      win: 0.57
       pick: 0.2
       fit: 0.9
   community_ordered:
@@ -394,8 +393,8 @@ builds:
   - Screeching Gargoyle
   - Stone of Binding
   - Spear of Desolation
-  - Spear of the Magus
   - Rod of Tahuti
+  - Spear of the Magus
   - Soul Gem
   flex_slots:
   - Stone of Binding
@@ -417,9 +416,9 @@ builds:
     for this god: Gluttonous Grimoire, Amanita Charm, Spear of the Magus, Stone of
     Binding, Screeching Gargoyle, Freya''s Tears, Kinetic Cuirass, Genji''s Guard,
     Breastplate of Valor, Void Shield, Void Stone, Doom Orb, Helm of Radiance, Shifter''s
-    Shield, Dreamer''s Idol, Shield of the Phoenix, Rod of Asclepius, Erosion, Chronos''
-    Pendant, Eye of Providence, Draconic Scale, Jade Scepter, Wish-Granting Pearl,
-    Magi''s Cloak.'
+    Shield, Dreamer''s Idol, Shield of the Phoenix, Rod of Asclepius, Erosion, Eye
+    of Providence, Draconic Scale, Chronos'' Pendant, Jade Scepter, Wish-Granting
+    Pearl, Magi''s Cloak.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.52
@@ -436,25 +435,25 @@ builds:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.59
-    Spear of the Magus:
-      total: 0.53
-      efficiency: 0.6
-      win: 0.55
-      pick: 0.0
-      fit: 0.48
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.3
       fit: 0.48
+    Spear of the Magus:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.55
+      pick: 0.0
+      fit: 0.48
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
-      win: 0.58
+      win: 0.57
       pick: 0.2
       fit: 0.69
   community_ordered:
@@ -490,8 +489,8 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Gluttonous Grimoire, Amanita Charm, Freya''s Tears, Genji''s
     Guard, Breastplate of Valor, Kinetic Cuirass, Spear of the Magus, Helm of Radiance,
-    Shifter''s Shield, Rod of Asclepius, Chronos'' Pendant, Bragi''s Harp, Shield
-    of the Phoenix, Bracer of The Abyss, Stone of Binding, Erosion, Eye of Providence,
+    Shifter''s Shield, Rod of Asclepius, Bragi''s Harp, Shield of the Phoenix, Bracer
+    of The Abyss, Stone of Binding, Erosion, Chronos'' Pendant, Eye of Providence,
     Daybreak Gavel, Screeching Gargoyle, Jade Scepter, Ancient Signet, Wish-Granting
     Pearl, Draconic Scale, Magi''s Cloak.'
   slot_scores:
@@ -508,9 +507,9 @@ builds:
       pick: 0.0
       fit: 0.34
     Spear of Desolation:
-      total: 0.52
+      total: 0.51
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.29
     Bragi's Harp:
@@ -526,9 +525,9 @@ builds:
       pick: 0.3
       fit: 0.21
     Soul Gem:
-      total: 0.54
+      total: 0.53
       efficiency: 0.57
-      win: 0.58
+      win: 0.57
       pick: 0.2
       fit: 0.44
   community_ordered:
@@ -546,8 +545,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Breastplate of Valor
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -564,7 +563,7 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Freya''s Tears, Genji''s Guard, Breastplate
     of Valor, Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Screeching Gargoyle,
-    Gluttonous Grimoire, Chronos'' Pendant, Shifter''s Shield, Spear of the Magus,
+    Gluttonous Grimoire, Shifter''s Shield, Chronos'' Pendant, Spear of the Magus,
     Helm of Radiance, Prophetic Cloak, Erosion, Gladiator''s Shield, Eye of Providence,
     Gem of Focus, Draconic Scale, Stone of Binding, Rod of Asclepius, Eye of Erebus,
     Magi''s Cloak, Daybreak Gavel, Midgardian Mail, Mantle Of Discord.'
@@ -584,7 +583,7 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.52
     Freya's Tears:
@@ -602,7 +601,7 @@ builds:
     Soul Gem:
       total: 0.54
       efficiency: 0.52
-      win: 0.58
+      win: 0.57
       pick: 0.2
       fit: 0.62
   community_ordered:
@@ -658,7 +657,7 @@ builds:
     Spear of Desolation:
       total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.56
       pick: 0.35
       fit: 0.5
     Freya's Tears:

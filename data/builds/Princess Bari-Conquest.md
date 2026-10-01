@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.56
-    win_rate: 0.45
+    pick_rate: 0.57
+    win_rate: 0.47
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.14
-      win_rate: 0.45
+      win_rate: 0.46
     - name: Chronos' Pendant
       pick_rate: 0.12
-      win_rate: 0.56
+      win_rate: 0.54
   - name: Chronos' Pendant
-    pick_rate: 0.21
-    win_rate: 0.5
+    pick_rate: 0.2
+    win_rate: 0.49
     alternates:
     - name: The World Stone
-      pick_rate: 0.19
-      win_rate: 0.49
+      pick_rate: 0.18
+      win_rate: 0.5
     - name: Spear of Desolation
       pick_rate: 0.14
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Rod of Tahuti
     pick_rate: 0.21
-    win_rate: 0.47
+    win_rate: 0.46
     alternates:
     - name: Soul Gem
-      pick_rate: 0.16
-      win_rate: 0.49
+      pick_rate: 0.17
+      win_rate: 0.53
     - name: The World Stone
       pick_rate: 0.07
       win_rate: 0.5
   - name: Obsidian Shard
-    pick_rate: 0.15
-    win_rate: 0.43
+    pick_rate: 0.14
+    win_rate: 0.4
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.24
-      win_rate: 0.46
+      win_rate: 0.48
     - name: Spear of the Magus
       pick_rate: 0.08
-      win_rate: 0.61
+      win_rate: 0.62
   - name: Evil Eye
     pick_rate: 0.1
-    win_rate: 0.4
+    win_rate: 0.38
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.16
-      win_rate: 0.59
+      pick_rate: 0.15
+      win_rate: 0.57
     - name: Rod of Tahuti
       pick_rate: 0.14
-      win_rate: 0.64
+      win_rate: 0.62
   - name: Blinking Abyss
-    pick_rate: 0.06
-    win_rate: 0.7
+    pick_rate: 0.07
+    win_rate: 0.58
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.67
     - name: Riptalon
       pick_rate: 0.06
       win_rate: 0.7
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.22
-    win_rate: 0.52
+    pick_rate: 0.23
+    win_rate: 0.55
   - name: Bluestone Brooch
-    pick_rate: 0.18
-    win_rate: 0.59
+    pick_rate: 0.17
+    win_rate: 0.56
   - name: Conduit Gem
-    pick_rate: 0.15
-    win_rate: 0.24
+    pick_rate: 0.16
+    win_rate: 0.28
   source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-09-30'
-  god_win_rate: 0.4820846905537459
-  god_matches_won: 148
-  god_matches_played: 307
+  last_verified: '2026-10-01'
+  god_win_rate: 0.486404833836858
+  god_matches_won: 161
+  god_matches_played: 331
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-09-30'
-  god_matches_analyzed: 9423
+  god_window_end: '2026-10-01'
+  god_matches_analyzed: 10386
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -94,14 +94,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Spear of Desolation
   - Tyrfing
-  - Riptalon
   - Rod of Tahuti
-  - Silverbranch Bow
+  - Riptalon
   - Spear of the Magus
   flex_slots:
+  - Spear of Desolation
   - Tyrfing
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -130,39 +130,40 @@ builds:
       win: 0.49
       pick: 0.0
       fit: 0.43
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.47
+      pick: 0.57
+      fit: 0.47
     Tyrfing:
       total: 0.51
       efficiency: 0.48
       win: 0.49
       pick: 0.0
       fit: 0.79
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.86
+      win: 0.46
+      pick: 0.33
+      fit: 0.36
     Riptalon:
       total: 0.62
       efficiency: 0.51
       win: 0.7
       pick: 0.18
       fit: 0.79
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.47
-      pick: 0.33
-      fit: 0.36
-    Silverbranch Bow:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.49
-      pick: 0.0
-      fit: 0.69
     Spear of the Magus:
       total: 0.55
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.36
   community_ordered:
-  - Riptalon
+  - Spear of Desolation
   - Rod of Tahuti
+  - Riptalon
   - Spear of the Magus
   starter: &id001
     base: Conduit Gem
@@ -208,10 +209,10 @@ builds:
       pick: 0.0
       fit: 0.52
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.57
-      win: 0.45
-      pick: 0.56
+      win: 0.47
+      pick: 0.57
       fit: 0.45
     Hydra's Lament:
       total: 0.48
@@ -222,7 +223,7 @@ builds:
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.42
     Riptalon:
@@ -232,9 +233,9 @@ builds:
       pick: 0.18
       fit: 0.6
     Spear of the Magus:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.34
   community_ordered:
@@ -269,7 +270,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Jotunn''s Revenge, Spear of the Magus, Nimble Ring, Gluttonous Grimoire,
+    god: Spear of the Magus, Jotunn''s Revenge, Nimble Ring, Gluttonous Grimoire,
     Silverbranch Bow, Tyrfing, The Reaper, Tekko-Kagi, Heartseeker, Hydra''s Lament,
     Lernaean Bow, Toxic Blade, Golden Blade, Bragi''s Harp, Doom Orb, Titan''s Bane,
     The Crusher, Bracer of The Abyss, Dreamer''s Idol, Pendulum Blade, Death Metal,
@@ -284,10 +285,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.51
+      total: 0.52
       efficiency: 0.57
-      win: 0.45
-      pick: 0.56
+      win: 0.47
+      pick: 0.57
       fit: 0.56
     Riptalon:
       total: 0.61
@@ -296,9 +297,9 @@ builds:
       pick: 0.18
       fit: 0.73
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.4
     Silverbranch Bow:
@@ -308,9 +309,9 @@ builds:
       pick: 0.0
       fit: 0.65
     Spear of the Magus:
-      total: 0.55
+      total: 0.56
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.4
   community_ordered:
@@ -375,20 +376,20 @@ builds:
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.24
     Spear of the Magus:
       total: 0.53
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.24
     Soul Gem:
-      total: 0.55
+      total: 0.57
       efficiency: 0.57
-      win: 0.49
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.77
   community_ordered:
   - Riptalon
@@ -437,10 +438,10 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
-      win: 0.45
-      pick: 0.56
+      win: 0.47
+      pick: 0.57
       fit: 0.57
     Riptalon:
       total: 0.63
@@ -451,7 +452,7 @@ builds:
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.49
     Silverbranch Bow:
@@ -463,7 +464,7 @@ builds:
     Spear of the Magus:
       total: 0.57
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.49
   community_ordered:
@@ -527,7 +528,7 @@ builds:
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.29
     Riptalon:
@@ -539,7 +540,7 @@ builds:
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.29
   community_ordered:
@@ -583,16 +584,16 @@ builds:
     of Frenzy.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.5
+      total: 0.49
       efficiency: 0.55
-      win: 0.5
-      pick: 0.29
+      win: 0.49
+      pick: 0.27
       fit: 0.45
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.57
-      win: 0.45
-      pick: 0.56
+      win: 0.47
+      pick: 0.57
       fit: 0.59
     Jotunn's Revenge:
       total: 0.56
@@ -603,20 +604,20 @@ builds:
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.24
     Spear of the Magus:
       total: 0.53
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.24
     Soul Gem:
-      total: 0.55
+      total: 0.57
       efficiency: 0.57
-      win: 0.49
-      pick: 0.25
+      win: 0.53
+      pick: 0.26
       fit: 0.77
   community_ordered:
   - Chronos' Pendant
@@ -628,15 +629,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
+  - Spear of Desolation
+  - Tyrfing
   - Rod of Tahuti
   - Riptalon
   - Spear of the Magus
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Spear of Desolation
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -660,28 +661,28 @@ builds:
     of Focus, Qin''s Blade, The Cosmic Horror, Avenging Blade, Barbed Carver, Rod
     of Asclepius.'
   slot_scores:
-    Book of Thoth:
-      total: 0.43
-      efficiency: 0.51
-      win: 0.49
-      pick: 0.0
-      fit: 0.19
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.49
       pick: 0.0
       fit: 0.59
-    Transcendence:
-      total: 0.45
-      efficiency: 0.53
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.47
+      pick: 0.57
+      fit: 0.49
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.48
       win: 0.49
       pick: 0.0
-      fit: 0.29
+      fit: 0.76
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.39
     Riptalon:
@@ -691,12 +692,13 @@ builds:
       pick: 0.18
       fit: 0.66
     Spear of the Magus:
-      total: 0.55
+      total: 0.56
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.39
   community_ordered:
+  - Spear of Desolation
   - Rod of Tahuti
   - Riptalon
   - Spear of the Magus
@@ -704,15 +706,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
+  - Spear of Desolation
+  - Tyrfing
   - Rod of Tahuti
   - Riptalon
   - Spear of the Magus
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Spear of Desolation
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -736,28 +738,28 @@ builds:
     The Cosmic Horror, Runeforged Hammer, Sun Beam Bow, Rod of Asclepius, Book of
     Thoth.'
   slot_scores:
-    Book of Thoth:
-      total: 0.43
-      efficiency: 0.51
-      win: 0.49
-      pick: 0.0
-      fit: 0.21
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.49
       pick: 0.0
       fit: 0.48
-    Transcendence:
-      total: 0.44
-      efficiency: 0.53
+    Spear of Desolation:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.47
+      pick: 0.57
+      fit: 0.48
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.48
       win: 0.49
       pick: 0.0
-      fit: 0.21
+      fit: 0.76
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.38
     Riptalon:
@@ -769,10 +771,11 @@ builds:
     Spear of the Magus:
       total: 0.55
       efficiency: 0.6
-      win: 0.61
+      win: 0.62
       pick: 0.13
       fit: 0.38
   community_ordered:
+  - Spear of Desolation
   - Rod of Tahuti
   - Riptalon
   - Spear of the Magus
@@ -818,10 +821,10 @@ builds:
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.57
-      win: 0.45
-      pick: 0.56
+      win: 0.47
+      pick: 0.57
       fit: 0.47
     Tyrfing:
       total: 0.51
@@ -838,7 +841,7 @@ builds:
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
-      win: 0.47
+      win: 0.46
       pick: 0.33
       fit: 0.36
     Silverbranch Bow:

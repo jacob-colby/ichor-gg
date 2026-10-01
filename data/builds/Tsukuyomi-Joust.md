@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Bragi's Harp
-    reason: Conquest community 68% win over 133 matches (vs 56% on this god), taking
+    reason: Conquest community 68% win over 139 matches (vs 56% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001

@@ -527,7 +527,7 @@ builds:
   swaps:
   - added: The Reaper
     removed: Stampede
-    reason: Conquest community 67% win over 48 matches (vs 51% on this god), taking
+    reason: Conquest community 67% win over 53 matches (vs 51% on this god), taking
       the model's weakest slot from Stampede
   borrowed_from: Conquest
   starter: *id001

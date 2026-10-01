@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Book of Thoth
     removed: Doom Orb
-    reason: Conquest community 68% win over 54 matches (vs 55% on this god), taking
+    reason: Conquest community 68% win over 57 matches (vs 55% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001
