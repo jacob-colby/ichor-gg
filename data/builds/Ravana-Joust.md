@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Devourer's Gauntlet
   - Eye of the Storm
   - Heartseeker
   - Erosion
+  - Sanguine Lash
   flex_slots:
   - Kinetic Cuirass
-  - Devourer's Gauntlet
+  - Sanguine Lash
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -565,12 +565,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Devourer's Gauntlet:
-      total: 0.4
-      efficiency: 0.29
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Eye of the Storm:
       total: 0.54
       efficiency: 0.52
@@ -589,10 +583,16 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Sanguine Lash:
+      total: 0.52
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
   swaps:
-  - added: Devourer's Gauntlet
+  - added: Sanguine Lash
     removed: Toxic Blade
-    reason: Conquest community 57% win over 359 matches (vs 51% on this god), taking
+    reason: Conquest community 62% win over 188 matches (vs 52% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

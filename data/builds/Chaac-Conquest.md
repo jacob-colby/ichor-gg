@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fulmination
-  aspect_pick_rate: 0.2
+  aspect_pick_rate: 0.21
   aspect_win_rate: 0.48
   slot_order:
   - name: Shifter's Shield
     pick_rate: 0.21
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.38
     - name: Daybreak Gavel
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Breastplate of Valor
     pick_rate: 0.13
-    win_rate: 0.56
+    win_rate: 0.53
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.16
-      win_rate: 0.45
+      win_rate: 0.46
     - name: Genji's Guard
-      pick_rate: 0.09
-      win_rate: 0.48
-  - name: Genji's Guard
-    pick_rate: 0.13
-    win_rate: 0.57
-    alternates:
-    - name: Freya's Tears
-      pick_rate: 0.12
-      win_rate: 0.43
-    - name: Shifter's Shield
       pick_rate: 0.08
-      win_rate: 0.4
+      win_rate: 0.48
   - name: Freya's Tears
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.45
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.57
+      pick_rate: 0.12
+      win_rate: 0.56
     - name: Brawler’s Beat Stick
-      pick_rate: 0.09
-      win_rate: 0.32
-  - name: Shell of Rebuke
-    pick_rate: 0.06
-    win_rate: 0.27
+      pick_rate: 0.08
+      win_rate: 0.57
+  - name: Genji's Guard
+    pick_rate: 0.1
+    win_rate: 0.55
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.07
-      win_rate: 0.44
+      pick_rate: 0.13
+      win_rate: 0.43
+    - name: Brawler’s Beat Stick
+      pick_rate: 0.1
+      win_rate: 0.35
+  - name: Shell of Rebuke
+    pick_rate: 0.05
+    win_rate: 0.25
+    alternates:
     - name: Genji's Guard
       pick_rate: 0.06
-      win_rate: 0.59
+      win_rate: 0.63
+    - name: Freya's Tears
+      pick_rate: 0.06
+      win_rate: 0.44
   - name: Veve Charm
     pick_rate: 0.05
-    win_rate: 0.56
+    win_rate: 0.5
     alternates:
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.05
+      win_rate: 0.3
     - name: Engraved Guard
       pick_rate: 0.05
       win_rate: 0.44
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.05
-      win_rate: 0.33
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.42
+    pick_rate: 0.41
     win_rate: 0.53
   - name: Bluestone Pendant
-    pick_rate: 0.31
-    win_rate: 0.45
-  - name: Blood-soaked Shroud
+    pick_rate: 0.3
+    win_rate: 0.43
+  - name: Leather Cowl
     pick_rate: 0.09
-    win_rate: 1.0
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-10-01'
-  god_win_rate: 0.47318611987381703
-  god_matches_won: 150
-  god_matches_played: 317
+  last_verified: '2026-10-02'
+  god_win_rate: 0.46839080459770116
+  god_matches_won: 163
+  god_matches_played: 348
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-10-01'
-  god_matches_analyzed: 10386
+  god_window_end: '2026-10-02'
+  god_matches_analyzed: 11578
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -96,8 +96,8 @@ builds:
   - Book of Thoth
   - Breastplate of Valor
   - Genji's Guard
-  - Shifter's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Transcendence
   flex_slots:
   - Transcendence
@@ -132,29 +132,29 @@ builds:
       pick: 0.0
       fit: 0.15
     Breastplate of Valor:
-      total: 0.53
+      total: 0.51
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.24
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.24
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.21
-      fit: 0.45
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.72
       win: 0.45
       pick: 0.0
       fit: 0.4
+    Shifter's Shield:
+      total: 0.51
+      efficiency: 0.55
+      win: 0.53
+      pick: 0.21
+      fit: 0.45
     Transcendence:
       total: 0.41
       efficiency: 0.53
@@ -210,16 +210,16 @@ builds:
       pick: 0.0
       fit: 0.25
     Breastplate of Valor:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.29
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.29
     Jotunn's Revenge:
       total: 0.52
@@ -249,8 +249,8 @@ builds:
   - Book of Thoth
   - Breastplate of Valor
   - Genji's Guard
-  - Shifter's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Transcendence
   flex_slots:
   - Transcendence
@@ -260,16 +260,16 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Daybreak Gavel, Gluttonous
+    god: Rod of Tahuti, Jotunn''s Revenge, Daybreak Gavel, Amanita Charm, Gluttonous
     Grimoire, Spear of Desolation, Kinetic Cuirass, Soul Gem, Spear of the Magus,
     Obsidian Shard, Shield Splitter, Runeforged Hammer, Helm of Radiance, Berserker''s
     Shield, Hydra''s Lament, Heartseeker, Shield of the Phoenix, Eye of the Storm,
@@ -285,29 +285,29 @@ builds:
       pick: 0.0
       fit: 0.14
     Breastplate of Valor:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.27
     Genji's Guard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.27
-    Shifter's Shield:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.21
-      fit: 0.38
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.72
       win: 0.45
       pick: 0.0
       fit: 0.48
+    Shifter's Shield:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.53
+      pick: 0.21
+      fit: 0.38
     Transcendence:
       total: 0.41
       efficiency: 0.53
@@ -322,22 +322,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Book of Thoth
   - Breastplate of Valor
   - Genji's Guard
-  - Shifter's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Amanita Charm
-  - Soul Gem
   flex_slots:
-  - Shifter's Shield
-  - Soul Gem
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -355,46 +355,45 @@ builds:
     Pearl, Stone of Binding, Doom Orb, Glorious Pridwen, Midgardian Mail, Titan''s
     Bane.'
   slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.51
+      win: 0.45
+      pick: 0.0
+      fit: 0.16
     Breastplate of Valor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.22
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.22
-    Shifter's Shield:
-      total: 0.51
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.21
-      fit: 0.43
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.72
       win: 0.45
       pick: 0.0
       fit: 0.42
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.45
+      pick: 0.0
+      fit: 0.17
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
       win: 0.45
       pick: 0.0
       fit: 0.73
-    Soul Gem:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.45
-      pick: 0.0
-      fit: 0.8
   community_ordered:
   - Breastplate of Valor
   - Genji's Guard
-  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -402,8 +401,8 @@ builds:
   - Book of Thoth
   - Breastplate of Valor
   - Genji's Guard
-  - Shifter's Shield
   - Jotunn's Revenge
+  - Shifter's Shield
   - Transcendence
   flex_slots:
   - Transcendence
@@ -422,7 +421,7 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Daybreak Gavel,
+    for this god: Rod of Tahuti, Jotunn''s Revenge, Daybreak Gavel, Amanita Charm,
     Gluttonous Grimoire, Stone of Binding, Spear of Desolation, Spear of the Magus,
     Avenging Blade, Kinetic Cuirass, Screeching Gargoyle, Soul Gem, Obsidian Shard,
     Void Shield, Heartseeker, Void Stone, Shield Splitter, Runeforged Hammer, Helm
@@ -438,29 +437,29 @@ builds:
       pick: 0.0
       fit: 0.13
     Breastplate of Valor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.21
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.21
-    Shifter's Shield:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.21
-      fit: 0.38
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
       win: 0.45
       pick: 0.0
       fit: 0.49
+    Shifter's Shield:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.53
+      pick: 0.21
+      fit: 0.38
     Transcendence:
       total: 0.41
       efficiency: 0.53
@@ -479,7 +478,7 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
-  - Shifter's Shield
+  - Jotunn's Revenge
   - Nimble Ring
   flex_slots:
   - Nimble Ring
@@ -489,11 +488,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -514,10 +513,10 @@ builds:
       pick: 0.0
       fit: 0.45
     Genji's Guard:
-      total: 0.52
+      total: 0.51
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.17
     Berserker's Shield:
       total: 0.5
@@ -526,17 +525,17 @@ builds:
       pick: 0.0
       fit: 0.37
     Breastplate of Valor:
-      total: 0.51
+      total: 0.5
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.17
-    Shifter's Shield:
+    Jotunn's Revenge:
       total: 0.49
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.21
-      fit: 0.31
+      efficiency: 0.72
+      win: 0.45
+      pick: 0.0
+      fit: 0.25
     Nimble Ring:
       total: 0.48
       efficiency: 0.65
@@ -546,7 +545,6 @@ builds:
   community_ordered:
   - Genji's Guard
   - Breastplate of Valor
-  - Shifter's Shield
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -554,28 +552,28 @@ builds:
   - Breastplate of Valor
   - Genji's Guard
   - Jotunn's Revenge
+  - Daybreak Gavel
   - Shifter's Shield
   - Freya's Tears
-  - Amanita Charm
   flex_slots:
   - Shifter's Shield
-  - Amanita Charm
+  - Daybreak Gavel
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Amanita Charm, Daybreak Gavel, Spear of Desolation, Kinetic Cuirass, Soul Gem,
+    Daybreak Gavel, Amanita Charm, Spear of Desolation, Kinetic Cuirass, Soul Gem,
     Shield of the Phoenix, Hydra''s Lament, Screeching Gargoyle, Gluttonous Grimoire,
     Berserker''s Shield, Chronos'' Pendant, Shield Splitter, Spear of the Magus, Runeforged
     Hammer, Helm of Radiance, Prophetic Cloak, Erosion, Obsidian Shard, Eye of Providence,
@@ -585,16 +583,16 @@ builds:
     Grace.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.56
+      win: 0.53
       pick: 0.18
       fit: 0.43
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.43
     Jotunn's Revenge:
       total: 0.53
@@ -602,27 +600,28 @@ builds:
       win: 0.45
       pick: 0.0
       fit: 0.51
+    Daybreak Gavel:
+      total: 0.49
+      efficiency: 0.59
+      win: 0.59
+      pick: 0.08
+      fit: 0.12
     Shifter's Shield:
-      total: 0.51
+      total: 0.5
       efficiency: 0.55
-      win: 0.54
+      win: 0.53
       pick: 0.21
       fit: 0.4
     Freya's Tears:
-      total: 0.52
+      total: 0.51
       efficiency: 0.61
       win: 0.45
-      pick: 0.23
+      pick: 0.2
       fit: 0.58
-    Amanita Charm:
-      total: 0.49
-      efficiency: 0.65
-      win: 0.45
-      pick: 0.0
-      fit: 0.4
   community_ordered:
   - Breastplate of Valor
   - Genji's Guard
+  - Daybreak Gavel
   - Shifter's Shield
   - Freya's Tears
   starter: *id001
@@ -668,10 +667,10 @@ builds:
       pick: 0.0
       fit: 0.4
     Genji's Guard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.66
-      win: 0.57
-      pick: 0.2
+      win: 0.55
+      pick: 0.17
       fit: 0.24
     Kinetic Cuirass:
       total: 0.48
@@ -683,7 +682,7 @@ builds:
       total: 0.49
       efficiency: 0.61
       win: 0.45
-      pick: 0.23
+      pick: 0.2
       fit: 0.4
     Rod of Tahuti:
       total: 0.55

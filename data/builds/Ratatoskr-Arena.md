@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Avatar's Parashu
     removed: Pendulum Blade
-    reason: Conquest community 78% win over 35 matches (vs 53% on this god), taking
+    reason: Conquest community 79% win over 38 matches (vs 53% on this god), taking
       the model's weakest slot from Pendulum Blade
   borrowed_from: Conquest
   starter: *id001

@@ -10,98 +10,98 @@ builds:
   slot_order:
   - name: Book of Thoth
     pick_rate: 0.34
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.3
       win_rate: 0.5
     - name: Chronos' Pendant
-      pick_rate: 0.26
-      win_rate: 0.51
+      pick_rate: 0.25
+      win_rate: 0.52
   - name: Spear of Desolation
-    pick_rate: 0.23
-    win_rate: 0.54
+    pick_rate: 0.24
+    win_rate: 0.55
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.26
-      win_rate: 0.47
+      pick_rate: 0.25
+      win_rate: 0.46
     - name: Chronos' Pendant
-      pick_rate: 0.16
+      pick_rate: 0.17
       win_rate: 0.54
   - name: Soul Gem
-    pick_rate: 0.22
-    win_rate: 0.56
+    pick_rate: 0.21
+    win_rate: 0.55
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.25
+      pick_rate: 0.24
       win_rate: 0.49
     - name: Rod of Tahuti
-      pick_rate: 0.17
-      win_rate: 0.5
+      pick_rate: 0.16
+      win_rate: 0.49
   - name: Rod of Tahuti
     pick_rate: 0.5
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.18
-      win_rate: 0.48
+      win_rate: 0.47
     - name: Soul Gem
       pick_rate: 0.09
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Obsidian Shard
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.56
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.14
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Evil Eye
-      pick_rate: 0.1
-      win_rate: 0.47
+      pick_rate: 0.11
+      win_rate: 0.45
   - name: Dreamer's Idol
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.57
     alternates:
+    - name: Evil Eye
+      pick_rate: 0.09
+      win_rate: 0.41
     - name: Killing Stone
       pick_rate: 0.09
-      win_rate: 0.56
-    - name: Obsidian Shard
-      pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.54
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.56
+    pick_rate: 0.55
     win_rate: 0.55
   - name: Conduit Gem
     pick_rate: 0.3
-    win_rate: 0.46
+    win_rate: 0.44
   - name: Pendulum of the Ages
-    pick_rate: 0.08
-    win_rate: 0.62
+    pick_rate: 0.09
+    win_rate: 0.64
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-10-01'
-  god_win_rate: 0.5210727969348659
-  god_matches_won: 544
-  god_matches_played: 1044
+  last_verified: '2026-10-02'
+  god_win_rate: 0.5194805194805194
+  god_matches_won: 600
+  god_matches_played: 1155
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-10-01'
-  god_matches_analyzed: 10386
+  god_window_end: '2026-10-02'
+  god_matches_analyzed: 11578
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
+  - Doom Orb
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Book of Thoth
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -122,48 +122,47 @@ builds:
     Talon, Helm of Radiance, Ethereal Staff, Staff of Myrddin, Wish-Granting Pearl,
     Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
-    Book of Thoth:
-      total: 0.5
-      efficiency: 0.51
-      win: 0.54
-      pick: 0.34
-      fit: 0.44
+    Doom Orb:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 0.78
     Spear of Desolation:
       total: 0.61
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 1.0
     Spear of the Magus:
-      total: 0.57
+      total: 0.58
       efficiency: 0.6
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
-      total: 0.7
+      total: 0.71
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.78
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 1.0
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.88
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 1.0
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -174,8 +173,8 @@ builds:
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Doom Orb
   - The World Stone
@@ -200,46 +199,46 @@ builds:
     of Valor, Ethereal Staff.'
   slot_scores:
     Doom Orb:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.57
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 0.61
     The World Stone:
       total: 0.51
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.57
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 0.71
     Obsidian Shard:
       total: 0.57
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.57
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 0.71
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: burst
@@ -248,8 +247,8 @@ builds:
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Book of Thoth
@@ -276,45 +275,45 @@ builds:
     Book of Thoth:
       total: 0.47
       efficiency: 0.51
-      win: 0.54
+      win: 0.53
       pick: 0.34
       fit: 0.22
     Spear of Desolation:
       total: 0.58
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 0.78
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.56
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 0.88
     Obsidian Shard:
       total: 0.58
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.66
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 0.88
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -322,8 +321,8 @@ builds:
   - Kinetic Cuirass
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -350,46 +349,46 @@ builds:
     Glorious Pridwen, Stone of Binding.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.53
+      total: 0.54
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 0.48
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.37
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 0.88
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.47
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 0.88
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.82
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -398,8 +397,8 @@ builds:
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Spear of the Magus
   - Doom Orb
@@ -426,44 +425,44 @@ builds:
     Doom Orb:
       total: 0.56
       efficiency: 0.53
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.85
     Spear of Desolation:
       total: 0.61
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 1.0
     Spear of the Magus:
-      total: 0.58
+      total: 0.59
       efficiency: 0.6
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
-      total: 0.71
+      total: 0.72
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.85
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 1.0
     Obsidian Shard:
       total: 0.62
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.95
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 1.0
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -472,8 +471,8 @@ builds:
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -500,43 +499,43 @@ builds:
     Bracer of The Abyss:
       total: 0.49
       efficiency: 0.52
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.41
     Nimble Ring:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
       total: 0.5
       efficiency: 0.44
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.3
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.34
-      fit: 0.57
     Obsidian Shard:
       total: 0.54
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.4
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.33
+      fit: 0.57
   community_ordered:
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -545,8 +544,8 @@ builds:
   - Gem of Focus
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Chronos' Pendant
   - Gem of Focus
@@ -572,47 +571,47 @@ builds:
     the Phoenix.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.53
+      total: 0.54
       efficiency: 0.55
-      win: 0.51
-      pick: 0.26
+      win: 0.52
+      pick: 0.25
       fit: 0.65
     Gem of Focus:
       total: 0.52
       efficiency: 0.5
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
       total: 0.59
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 0.85
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.35
-    Soul Gem:
-      total: 0.59
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 0.95
     Obsidian Shard:
       total: 0.55
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.45
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 0.95
   community_ordered:
   - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: model
@@ -621,8 +620,8 @@ builds:
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Doom Orb
@@ -647,45 +646,45 @@ builds:
     Pearl, Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
     Doom Orb:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.78
     Spear of Desolation:
       total: 0.61
       efficiency: 0.57
-      win: 0.54
-      pick: 0.31
+      win: 0.55
+      pick: 0.33
       fit: 1.0
     Spear of the Magus:
-      total: 0.57
+      total: 0.58
       efficiency: 0.6
-      win: 0.54
+      win: 0.55
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
-      total: 0.7
+      total: 0.71
       efficiency: 0.86
-      win: 0.54
+      win: 0.55
       pick: 0.83
       fit: 0.78
-    Soul Gem:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.34
-      fit: 1.0
     Obsidian Shard:
       total: 0.61
       efficiency: 0.54
       win: 0.56
-      pick: 0.78
+      pick: 0.76
       fit: 0.88
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.55
+      pick: 0.33
+      fit: 1.0
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 ---

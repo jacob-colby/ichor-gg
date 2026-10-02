@@ -6,47 +6,47 @@ builds:
 - source: community
   aspect: Aspect of Pride
   aspect_pick_rate: 0.19
-  aspect_win_rate: 0.49
+  aspect_win_rate: 0.5
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.59
+    pick_rate: 0.6
     win_rate: 0.54
     alternates:
     - name: Tyrfing
-      pick_rate: 0.22
+      pick_rate: 0.21
       win_rate: 0.54
     - name: Avenging Blade
       pick_rate: 0.15
-      win_rate: 0.42
+      win_rate: 0.45
   - name: Dagger of Frenzy
-    pick_rate: 0.46
-    win_rate: 0.53
+    pick_rate: 0.48
+    win_rate: 0.54
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.17
-      win_rate: 0.52
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: Tyrfing
-      pick_rate: 0.15
-      win_rate: 0.52
+      pick_rate: 0.14
+      win_rate: 0.5
   - name: Dominance
-    pick_rate: 0.23
+    pick_rate: 0.25
     win_rate: 0.56
     alternates:
     - name: The Executioner
-      pick_rate: 0.16
-      win_rate: 0.5
+      pick_rate: 0.17
+      win_rate: 0.54
     - name: Odysseus' Bow
       pick_rate: 0.11
-      win_rate: 0.51
+      win_rate: 0.53
   - name: Riptalon
     pick_rate: 0.21
-    win_rate: 0.54
+    win_rate: 0.57
     alternates:
     - name: The Executioner
       pick_rate: 0.15
-      win_rate: 0.48
+      win_rate: 0.49
     - name: Dominance
-      pick_rate: 0.14
+      pick_rate: 0.13
       win_rate: 0.55
   - name: Silverbranch Bow
     pick_rate: 0.13
@@ -54,54 +54,54 @@ builds:
     alternates:
     - name: Deathbringer
       pick_rate: 0.13
-      win_rate: 0.55
+      win_rate: 0.57
     - name: Riptalon
       pick_rate: 0.12
-      win_rate: 0.57
+      win_rate: 0.6
   - name: Manchu Bow
     pick_rate: 0.11
-    win_rate: 0.48
+    win_rate: 0.49
     alternates:
     - name: Riptalon
-      pick_rate: 0.08
-      win_rate: 0.61
+      pick_rate: 0.09
+      win_rate: 0.6
     - name: Deathbringer
       pick_rate: 0.08
-      win_rate: 0.63
+      win_rate: 0.67
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.36
-    win_rate: 0.54
+    pick_rate: 0.37
+    win_rate: 0.56
   - name: Hunter's Cowl
-    pick_rate: 0.27
+    pick_rate: 0.26
     win_rate: 0.66
   - name: Gilded Arrow
     pick_rate: 0.16
-    win_rate: 0.36
+    win_rate: 0.34
   source_url: https://smitebrain.com/gods/anhur/
-  last_verified: '2026-10-01'
-  god_win_rate: 0.5151515151515151
-  god_matches_won: 340
-  god_matches_played: 660
+  last_verified: '2026-10-02'
+  god_win_rate: 0.5208053691275167
+  god_matches_won: 388
+  god_matches_played: 745
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-10-01'
-  god_matches_analyzed: 10386
+  god_window_end: '2026-10-02'
+  god_matches_analyzed: 11578
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   flex_slots:
+  - Deathbringer
   - Dominance
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -122,12 +122,6 @@ builds:
     Runeforged Hammer, Berserker''s Shield, Sun Beam Bow, Barbed Carver, Avatar''s
     Parashu, Bloodforge, Pendulum Blade, Avenging Blade.'
   slot_scores:
-    Lernaean Bow:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.0
-      fit: 0.6
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
@@ -138,18 +132,18 @@ builds:
       total: 0.53
       efficiency: 0.48
       win: 0.54
-      pick: 0.22
+      pick: 0.21
       fit: 0.71
     Dominance:
       total: 0.52
       efficiency: 0.45
       win: 0.56
-      pick: 0.36
+      pick: 0.39
       fit: 0.6
     Riptalon:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.57
     Silverbranch Bow:
@@ -158,11 +152,18 @@ builds:
       win: 0.57
       pick: 0.28
       fit: 0.46
+    Deathbringer:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.28
+      fit: 0.5
   community_ordered:
   - Tyrfing
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -170,13 +171,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Hydra's Lament
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   flex_slots:
-  - Tyrfing
+  - Deathbringer
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -204,12 +205,6 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.5
-      efficiency: 0.48
-      win: 0.54
-      pick: 0.22
-      fit: 0.5
     Hydra's Lament:
       total: 0.5
       efficiency: 0.54
@@ -220,12 +215,12 @@ builds:
       total: 0.5
       efficiency: 0.45
       win: 0.56
-      pick: 0.36
+      pick: 0.39
       fit: 0.5
     Riptalon:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.4
     Silverbranch Bow:
@@ -234,11 +229,17 @@ builds:
       win: 0.57
       pick: 0.28
       fit: 0.34
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.28
+      fit: 0.34
   community_ordered:
-  - Tyrfing
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   starter: *id001
 - source: suggested
   archetype: crit
@@ -282,7 +283,7 @@ builds:
       total: 0.52
       efficiency: 0.48
       win: 0.54
-      pick: 0.22
+      pick: 0.21
       fit: 0.66
     Musashi's Dual Swords:
       total: 0.48
@@ -291,9 +292,9 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.55
     Demon Blade:
@@ -303,9 +304,9 @@ builds:
       pick: 0.0
       fit: 0.79
     Deathbringer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.55
+      win: 0.57
       pick: 0.28
       fit: 0.52
   community_ordered:
@@ -371,9 +372,9 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.66
     Amanita Charm:
@@ -414,8 +415,8 @@ builds:
     for this god: Jotunn''s Revenge, The Reaper, Tekko-Kagi, Heartseeker, Titan''s
     Bane, The Crusher, Lernaean Bow, Toxic Blade, Hydra''s Lament, Golden Blade, Avatar''s
     Parashu, Pendulum Blade, Demon Blade, Musashi''s Dual Swords, Oath-Sworn Spear,
-    Transcendence, Qin''s Blade, Runeforged Hammer, Arondight, Damaru, Rage, Berserker''s
-    Shield, Avenging Blade, Barbed Carver.'
+    Transcendence, Avenging Blade, Qin''s Blade, Runeforged Hammer, Arondight, Damaru,
+    Rage, Berserker''s Shield, Barbed Carver.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
@@ -436,9 +437,9 @@ builds:
       pick: 0.28
       fit: 0.61
     Riptalon:
-      total: 0.54
+      total: 0.56
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.69
     Tekko-Kagi:
@@ -460,15 +461,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   flex_slots:
   - Dominance
-  - Lernaean Bow
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,12 +490,6 @@ builds:
     Rage, Runeforged Hammer, Berserker''s Shield, Arondight, Barbed Carver, Vital
     Amplifier, Avatar''s Parashu, Avenging Blade.'
   slot_scores:
-    Lernaean Bow:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.0
-      fit: 0.52
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.72
@@ -505,18 +500,18 @@ builds:
       total: 0.53
       efficiency: 0.48
       win: 0.54
-      pick: 0.22
+      pick: 0.21
       fit: 0.7
     Dominance:
-      total: 0.5
+      total: 0.51
       efficiency: 0.45
       win: 0.56
-      pick: 0.36
+      pick: 0.39
       fit: 0.52
     Riptalon:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.59
     Silverbranch Bow:
@@ -525,11 +520,18 @@ builds:
       win: 0.57
       pick: 0.28
       fit: 0.5
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.28
+      fit: 0.38
   community_ordered:
   - Tyrfing
   - Dominance
   - Riptalon
   - Silverbranch Bow
+  - Deathbringer
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -574,7 +576,7 @@ builds:
       total: 0.49
       efficiency: 0.48
       win: 0.54
-      pick: 0.22
+      pick: 0.21
       fit: 0.47
     Hydra's Lament:
       total: 0.51
@@ -589,9 +591,9 @@ builds:
       pick: 0.0
       fit: 0.4
     Riptalon:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.39
     Silverbranch Bow:
@@ -653,7 +655,7 @@ builds:
       total: 0.53
       efficiency: 0.48
       win: 0.54
-      pick: 0.22
+      pick: 0.21
       fit: 0.71
     Jotunn's Revenge:
       total: 0.54
@@ -662,9 +664,9 @@ builds:
       pick: 0.0
       fit: 0.3
     Riptalon:
-      total: 0.52
+      total: 0.54
       efficiency: 0.51
-      win: 0.54
+      win: 0.57
       pick: 0.35
       fit: 0.57
     Tekko-Kagi:

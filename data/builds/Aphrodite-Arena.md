@@ -659,14 +659,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Chandra's Grace
-  - Shell of Rebuke
   - Void Shield
+  - Void Stone
   - Rod of Tahuti
   - Erosion
   - Stampede
   flex_slots:
+  - Void Stone
   - Chandra's Grace
-  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -689,15 +689,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Shell of Rebuke:
-      total: 0.32
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Void Shield:
       total: 0.6
       efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Void Stone:
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -722,12 +722,8 @@ builds:
   swaps:
   - added: Chandra's Grace
     removed: Kinetic Cuirass
-    reason: Conquest community 66% win over 103 matches (vs 51% on this god), taking
+    reason: Conquest community 63% win over 118 matches (vs 49% on this god), taking
       the model's weakest slot from Kinetic Cuirass
-  - added: Shell of Rebuke
-    removed: Void Stone
-    reason: Conquest community 67% win over 42 matches (vs 51% on this god), taking
-      the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
 ---

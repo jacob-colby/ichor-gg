@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Void Stone
-    reason: Conquest community 74% win over 39 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 36 matches (vs 57% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001
