@@ -467,10 +467,10 @@ builds:
   - Magi's Cloak
   - Tyrfing
   - The Reaper
-  - Heartseeker
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - Heartseeker
+  - Tyrfing
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
@@ -512,31 +512,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Pharaoh's Curse:
       total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
   swaps:
-  - added: The Reaper
-    removed: Berserker's Shield
-    reason: Conquest community 71% win over 65 matches (vs 54% on this god), taking
-      the model's weakest slot from Berserker's Shield
   - added: Magi's Cloak
+    removed: Berserker's Shield
+    reason: Conquest community 74% win over 39 matches (vs 53% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  - added: The Reaper
     removed: Jotunn's Revenge
-    reason: Conquest community 73% win over 38 matches (vs 54% on this god), taking
+    reason: Conquest community 68% win over 73 matches (vs 53% on this god), taking
       the model's weakest slot from Jotunn's Revenge
-  - added: Heartseeker
-    removed: Shogun's Ofuda
-    reason: Conquest community 68% win over 65 matches (vs 54% on this god), taking
-      the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001
 ---

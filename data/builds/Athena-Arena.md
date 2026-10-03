@@ -529,21 +529,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
+  - Spirit Robe
   - Void Shield
-  - Deathbringer
-  - Amanita Charm
+  - Hussar's Wings
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
-  - Deathbringer
+  - Hussar's Wings
+  - Spirit Robe
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -559,24 +559,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Spirit Robe:
+      total: 0.54
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Void Shield:
       total: 0.65
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Deathbringer:
-      total: 0.2
-      efficiency: 0.34
+    Hussar's Wings:
+      total: 0.64
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.06
-    Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
+      fit: 0.88
     Erosion:
       total: 0.75
       efficiency: 0.51
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.84
   swaps:
-  - added: Deathbringer
+  - added: Spirit Robe
     removed: Void Stone
-    reason: Conquest community 74% win over 36 matches (vs 57% on this god), taking
+    reason: Conquest community 85% win over 41 matches (vs 57% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

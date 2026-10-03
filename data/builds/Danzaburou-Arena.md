@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: Polynomicon
     removed: Jotunn's Revenge
-    reason: Conquest community 68% win over 35 matches (vs 51% on this god), taking
+    reason: Conquest community 68% win over 39 matches (vs 53% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

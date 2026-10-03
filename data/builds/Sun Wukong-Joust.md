@@ -395,4 +395,79 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Runeforged Hammer
+  - Freya's Tears
+  - Gluttonous Grimoire
+  - Erosion
+  - Triton's Conch
+  flex_slots:
+  - Gluttonous Grimoire
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Freya's Tears:
+      total: 0.45
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Gluttonous Grimoire:
+      total: 0.48
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Gluttonous Grimoire
+    removed: Berserker's Shield
+    reason: Conquest community 68% win over 130 matches (vs 57% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  - added: Freya's Tears
+    removed: Shogun's Ofuda
+    reason: Conquest community 66% win over 121 matches (vs 57% on this god), taking
+      the model's weakest slot from Shogun's Ofuda
+  borrowed_from: Conquest
+  starter: *id001
 ---

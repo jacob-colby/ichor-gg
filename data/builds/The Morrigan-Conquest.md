@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Mischief
-  aspect_pick_rate: 0.26
-  aspect_win_rate: 0.43
+  aspect_pick_rate: 0.27
+  aspect_win_rate: 0.42
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.26
-    win_rate: 0.48
+    pick_rate: 0.25
+    win_rate: 0.49
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.15
-      win_rate: 0.57
-    - name: Chronos' Pendant
-      pick_rate: 0.12
-      win_rate: 0.52
+      pick_rate: 0.16
+      win_rate: 0.58
+    - name: The World Stone
+      pick_rate: 0.13
+      win_rate: 0.54
   - name: The World Stone
-    pick_rate: 0.29
-    win_rate: 0.55
+    pick_rate: 0.28
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.15
-      win_rate: 0.44
-    - name: Polynomicon
-      pick_rate: 0.11
-      win_rate: 0.43
+      win_rate: 0.47
+    - name: Gem of Focus
+      pick_rate: 0.1
+      win_rate: 0.65
   - name: Polynomicon
     pick_rate: 0.26
     win_rate: 0.52
     alternates:
     - name: The World Stone
-      pick_rate: 0.2
+      pick_rate: 0.19
       win_rate: 0.46
     - name: Spear of Desolation
-      pick_rate: 0.18
-      win_rate: 0.57
+      pick_rate: 0.16
+      win_rate: 0.56
   - name: Rod of Tahuti
     pick_rate: 0.23
-    win_rate: 0.58
+    win_rate: 0.59
     alternates:
     - name: Polynomicon
-      pick_rate: 0.15
-      win_rate: 0.54
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: Gem of Focus
       pick_rate: 0.09
       win_rate: 0.55
   - name: Obsidian Shard
     pick_rate: 0.19
-    win_rate: 0.55
+    win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.25
-      win_rate: 0.53
+      pick_rate: 0.23
+      win_rate: 0.52
     - name: Polynomicon
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Evil Eye
-    pick_rate: 0.09
-    win_rate: 0.65
+    pick_rate: 0.08
+    win_rate: 0.58
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.15
-      win_rate: 0.69
-    - name: Dreamer's Idol
-      pick_rate: 0.07
-      win_rate: 0.38
+      pick_rate: 0.14
+      win_rate: 0.68
+    - name: Void Shard
+      pick_rate: 0.06
+      win_rate: 0.64
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.32
-    win_rate: 0.53
+    pick_rate: 0.35
+    win_rate: 0.51
   - name: Conduit Gem
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.41
   - name: Pendulum of the Ages
-    pick_rate: 0.12
-    win_rate: 0.6
+    pick_rate: 0.11
+    win_rate: 0.62
   source_url: https://smitebrain.com/gods/the-morrigan/
-  last_verified: '2026-10-02'
-  god_win_rate: 0.5100286532951289
-  god_matches_won: 178
-  god_matches_played: 349
+  last_verified: '2026-10-03'
+  god_win_rate: 0.5101522842639594
+  god_matches_won: 201
+  god_matches_played: 394
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-10-02'
-  god_matches_analyzed: 11578
+  god_window_end: '2026-10-03'
+  god_matches_analyzed: 12830
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -116,46 +116,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Spear of the Magus, Soul Gem, Gluttonous Grimoire, Doom Orb, The Cosmic
-    Horror, Chronos'' Pendant, Ancient Signet, Totem of Death, Rod of Asclepius, Blood-Bound
-    Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s Talon, Helm of Radiance,
-    Ethereal Staff, Wish-Granting Pearl, Staff of Myrddin, Typhon’s Heart, Bracer
-    of The Abyss, Nimble Ring.'
+    this god: Spear of the Magus, Soul Gem, Gluttonous Grimoire, Doom Orb, Dreamer''s
+    Idol, Chronos'' Pendant, The Cosmic Horror, Ancient Signet, Totem of Death, Rod
+    of Asclepius, Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s
+    Talon, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl, Staff of Myrddin,
+    Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 1.0
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.8
     The World Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
-      win: 0.55
-      pick: 0.4
+      win: 0.54
+      pick: 0.38
       fit: 0.8
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.8
     Obsidian Shard:
-      total: 0.59
+      total: 0.61
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.9
     Soul Gem:
       total: 0.58
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 1.0
   community_ordered:
@@ -193,45 +193,45 @@ builds:
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
     Gem, Spear of the Magus, Doom Orb, Death Metal, Gluttonous Grimoire, Ancient Signet,
-    Chronos'' Pendant, Bragi''s Harp, Soul Reaver, The Cosmic Horror, Rod of Asclepius,
-    Bancroft''s Talon, Totem of Death, Triton''s Conch, Blood-Bound Book, Jade Scepter,
-    Divine Ruin, Wish-Granting Pearl, Helm of Radiance, Breastplate of Valor, Ethereal
-    Staff.'
+    Chronos'' Pendant, Dreamer''s Idol, Bragi''s Harp, Soul Reaver, The Cosmic Horror,
+    Rod of Asclepius, Bancroft''s Talon, Totem of Death, Triton''s Conch, Blood-Bound
+    Book, Jade Scepter, Divine Ruin, Wish-Granting Pearl, Helm of Radiance, Breastplate
+    of Valor, Ethereal Staff.'
   slot_scores:
     Spear of Desolation:
       total: 0.56
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 0.61
     Doom Orb:
       total: 0.52
       efficiency: 0.53
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.57
     The World Stone:
       total: 0.53
       efficiency: 0.52
-      win: 0.55
-      pick: 0.4
+      win: 0.54
+      pick: 0.38
       fit: 0.57
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.57
     Obsidian Shard:
-      total: 0.54
+      total: 0.56
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.57
     Soul Gem:
       total: 0.54
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.71
   community_ordered:
@@ -266,46 +266,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Chronos'' Pendant,
-    Death Metal, The Cosmic Horror, Ancient Signet, Bragi''s Harp, Totem of Death,
-    Rod of Asclepius, Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Triton''s
-    Conch, Breastplate of Valor, Bancroft''s Talon, Genji''s Guard, Helm of Radiance,
-    Ethereal Staff.'
+    god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Dreamer''s Idol,
+    Chronos'' Pendant, Death Metal, The Cosmic Horror, Ancient Signet, Bragi''s Harp,
+    Totem of Death, Rod of Asclepius, Blood-Bound Book, Soul Reaver, Jade Scepter,
+    Divine Ruin, Triton''s Conch, Breastplate of Valor, Bancroft''s Talon, Genji''s
+    Guard, Helm of Radiance, Ethereal Staff.'
   slot_scores:
     Spear of Desolation:
-      total: 0.59
+      total: 0.58
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 0.78
     Spear of the Magus:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.56
     The World Stone:
       total: 0.53
       efficiency: 0.52
-      win: 0.55
-      pick: 0.4
+      win: 0.54
+      pick: 0.38
       fit: 0.56
     Rod of Tahuti:
-      total: 0.66
+      total: 0.67
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.56
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.66
     Soul Gem:
       total: 0.56
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.88
   community_ordered:
@@ -325,11 +325,11 @@ builds:
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Obsidian Shard
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
@@ -350,37 +350,37 @@ builds:
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.61
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 0.49
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.39
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.81
     Obsidian Shard:
-      total: 0.53
+      total: 0.55
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.49
     Soul Gem:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.89
   community_ordered:
@@ -414,46 +414,46 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Spear of the Magus, Soul Gem, Gluttonous Grimoire, Doom Orb, The
-    Cosmic Horror, Chronos'' Pendant, Ancient Signet, Rod of Asclepius, Totem of Death,
-    Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s Talon, Helm
-    of Radiance, Ethereal Staff, Screeching Gargoyle, Wish-Granting Pearl, Typhon’s
-    Heart, Breastplate of Valor, Bracer of The Abyss.'
+    for this god: Spear of the Magus, Soul Gem, Gluttonous Grimoire, Doom Orb, Dreamer''s
+    Idol, The Cosmic Horror, Chronos'' Pendant, Ancient Signet, Rod of Asclepius,
+    Totem of Death, Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s
+    Talon, Helm of Radiance, Ethereal Staff, Screeching Gargoyle, Wish-Granting Pearl,
+    Typhon’s Heart, Breastplate of Valor, Bracer of The Abyss.'
   slot_scores:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 1.0
     Spear of the Magus:
       total: 0.59
       efficiency: 0.6
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.86
     The World Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.55
-      pick: 0.4
+      win: 0.54
+      pick: 0.38
       fit: 0.86
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.86
     Obsidian Shard:
-      total: 0.6
+      total: 0.62
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.96
     Soul Gem:
       total: 0.58
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 1.0
   community_ordered:
@@ -467,9 +467,9 @@ builds:
   slot_order:
   - Bracer of The Abyss
   - Nimble Ring
-  - Spear of Desolation
   - Bragi's Harp
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Bragi's Harp
@@ -489,50 +489,50 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Soul Gem, Gluttonous Grimoire, Spear of the Magus, Bragi''s
-    Harp, Bracer of The Abyss, Doom Orb, Ancient Signet, Blood-Bound Book, Death Metal,
-    Chronos'' Pendant, Bancroft''s Talon, The Cosmic Horror, Rod of Asclepius, Typhon’s
-    Heart, Soul Reaver, Jade Scepter, Divine Ruin, Totem of Death, Helm of Radiance,
-    Daybreak Gavel.'
+    Harp, Bracer of The Abyss, Doom Orb, Chronos'' Pendant, Ancient Signet, Dreamer''s
+    Idol, Blood-Bound Book, Death Metal, Bancroft''s Talon, The Cosmic Horror, Rod
+    of Asclepius, Typhon’s Heart, Soul Reaver, Jade Scepter, Divine Ruin, Totem of
+    Death, Helm of Radiance, Daybreak Gavel.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.49
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.4
     Nimble Ring:
       total: 0.55
       efficiency: 0.65
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.48
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.28
-      fit: 0.4
     Bragi's Harp:
       total: 0.5
       efficiency: 0.44
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.32
-    Soul Gem:
+    Obsidian Shard:
       total: 0.53
+      efficiency: 0.54
+      win: 0.58
+      pick: 0.41
+      fit: 0.42
+    Soul Gem:
+      total: 0.54
       efficiency: 0.57
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.58
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -562,15 +562,15 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Chronos'' Pendant, Spear
     of the Magus, Gluttonous Grimoire, Totem of Death, Doom Orb, Breastplate of Valor,
-    Genji''s Guard, Ancient Signet, Death Metal, The Cosmic Horror, Staff of Myrddin,
-    Eye of Erebus, Screeching Gargoyle, Bragi''s Harp, Rod of Asclepius, Chandra''s
-    Grace, Freya''s Tears, Blood-Bound Book, Soul Reaver, Jade Scepter.'
+    Dreamer''s Idol, Genji''s Guard, Ancient Signet, Death Metal, The Cosmic Horror,
+    Staff of Myrddin, Eye of Erebus, Screeching Gargoyle, Bragi''s Harp, Rod of Asclepius,
+    Chandra''s Grace, Freya''s Tears, Blood-Bound Book, Soul Reaver, Jade Scepter.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.52
+      total: 0.54
       efficiency: 0.55
-      win: 0.52
-      pick: 0.12
+      win: 0.56
+      pick: 0.0
       fit: 0.62
     Gem of Focus:
       total: 0.52
@@ -579,31 +579,30 @@ builds:
       pick: 0.15
       fit: 0.62
     Spear of Desolation:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 0.86
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.38
     Obsidian Shard:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.48
     Soul Gem:
-      total: 0.57
+      total: 0.58
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.96
   community_ordered:
-  - Chronos' Pendant
   - Gem of Focus
   - Spear of Desolation
   - Rod of Tahuti
@@ -636,45 +635,45 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Spear of the Magus, Soul Gem, Gluttonous Grimoire, Doom
-    Orb, Chronos'' Pendant, The Cosmic Horror, Ancient Signet, Totem of Death, Rod
-    of Asclepius, Blood-Bound Book, Soul Reaver, Jade Scepter, Divine Ruin, Bancroft''s
-    Talon, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl, Staff of Myrddin,
-    Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
+    Orb, Dreamer''s Idol, Chronos'' Pendant, The Cosmic Horror, Ancient Signet, Totem
+    of Death, Rod of Asclepius, Blood-Bound Book, Soul Reaver, Jade Scepter, Divine
+    Ruin, Bancroft''s Talon, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl,
+    Staff of Myrddin, Typhon’s Heart, Bracer of The Abyss, Nimble Ring.'
   slot_scores:
     Spear of Desolation:
       total: 0.62
       efficiency: 0.57
-      win: 0.57
-      pick: 0.28
+      win: 0.56
+      pick: 0.25
       fit: 1.0
     Doom Orb:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.8
     Spear of the Magus:
       total: 0.58
       efficiency: 0.6
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.8
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86
-      win: 0.58
+      win: 0.59
       pick: 0.38
       fit: 0.8
     Obsidian Shard:
-      total: 0.59
+      total: 0.61
       efficiency: 0.54
-      win: 0.55
+      win: 0.58
       pick: 0.41
       fit: 0.9
     Soul Gem:
       total: 0.58
       efficiency: 0.52
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 1.0
   community_ordered:

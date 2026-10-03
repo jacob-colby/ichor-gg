@@ -660,13 +660,13 @@ builds:
   slot_order:
   - Chandra's Grace
   - Kinetic Cuirass
-  - Void Shield
+  - Shell of Rebuke
   - Freya's Tears
   - Rod of Tahuti
   - Erosion
   flex_slots:
-  - Void Shield
   - Chandra's Grace
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -695,12 +695,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Shield:
-      total: 0.55
-      efficiency: 0.47
+    Shell of Rebuke:
+      total: 0.32
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.35
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
@@ -720,10 +720,14 @@ builds:
       pick: 0.0
       fit: 0.7
   swaps:
-  - added: Chandra's Grace
+  - added: Shell of Rebuke
     removed: Stygian Anchor
-    reason: Conquest community 63% win over 118 matches (vs 49% on this god), taking
+    reason: Conquest community 67% win over 53 matches (vs 50% on this god), taking
       the model's weakest slot from Stygian Anchor
+  - added: Chandra's Grace
+    removed: Void Shield
+    reason: Conquest community 62% win over 146 matches (vs 50% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -529,13 +529,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Eye of the Storm
+  - Runeforged Hammer
   - Heartseeker
   - Erosion
   - Sanguine Lash
   flex_slots:
-  - Kinetic Cuirass
+  - Eye of the Storm
   - Sanguine Lash
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Eye of the Storm:
       total: 0.54
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Toxic Blade
-    reason: Conquest community 62% win over 188 matches (vs 52% on this god), taking
+    reason: Conquest community 63% win over 220 matches (vs 54% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

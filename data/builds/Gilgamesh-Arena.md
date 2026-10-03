@@ -467,10 +467,10 @@ builds:
   - Toxic Blade
   - Magi's Cloak
   - The Reaper
-  - Heartseeker
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Heartseeker
+  - The Reaper
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
@@ -512,31 +512,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Erosion:
       total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Pharaoh's Curse:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   swaps:
-  - added: The Reaper
-    removed: Stampede
-    reason: Conquest community 71% win over 65 matches (vs 54% on this god), taking
-      the model's weakest slot from Stampede
   - added: Magi's Cloak
+    removed: Stampede
+    reason: Conquest community 74% win over 39 matches (vs 53% on this god), taking
+      the model's weakest slot from Stampede
+  - added: The Reaper
     removed: Shogun's Ofuda
-    reason: Conquest community 73% win over 38 matches (vs 54% on this god), taking
+    reason: Conquest community 68% win over 73 matches (vs 53% on this god), taking
       the model's weakest slot from Shogun's Ofuda
-  - added: Heartseeker
-    removed: Pharaoh's Curse
-    reason: Conquest community 68% win over 65 matches (vs 54% on this god), taking
-      the model's weakest slot from Pharaoh's Curse
   borrowed_from: Conquest
   starter: *id001
 ---
