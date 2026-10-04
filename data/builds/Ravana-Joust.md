@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Eye of the Storm
-  - Runeforged Hammer
+  - Shifter's Shield
   - Heartseeker
   - Erosion
   - Sanguine Lash
   flex_slots:
-  - Eye of the Storm
   - Sanguine Lash
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Runeforged Hammer:
-      total: 0.56
-      efficiency: 0.57
+    Shifter's Shield:
+      total: 0.49
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.42
     Heartseeker:
       total: 0.56
       efficiency: 0.47
@@ -592,8 +592,12 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Toxic Blade
-    reason: Conquest community 63% win over 220 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 279 matches (vs 54% on this god), taking
       the model's weakest slot from Toxic Blade
+  - added: Shifter's Shield
+    removed: Runeforged Hammer
+    reason: Conquest community 64% win over 109 matches (vs 54% on this god), taking
+      the model's weakest slot from Runeforged Hammer
   borrowed_from: Conquest
   starter: *id001
 ---

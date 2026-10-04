@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Magi's Cloak
   - The Reaper
   - Erosion
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
+  - Erosion
   - The Reaper
-  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -500,12 +500,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Magi's Cloak:
-      total: 0.45
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     The Reaper:
       total: 0.54
       efficiency: 0.5
@@ -524,15 +518,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Shogun's Ofuda:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   swaps:
-  - added: Magi's Cloak
-    removed: Stampede
-    reason: Conquest community 74% win over 39 matches (vs 53% on this god), taking
-      the model's weakest slot from Stampede
   - added: The Reaper
-    removed: Shogun's Ofuda
-    reason: Conquest community 68% win over 73 matches (vs 53% on this god), taking
-      the model's weakest slot from Shogun's Ofuda
+    removed: Stampede
+    reason: Conquest community 66% win over 76 matches (vs 54% on this god), taking
+      the model's weakest slot from Stampede
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Mystical Mail
-  - Void Shield
+  - Shifter's Shield
   - Erosion
   - Stampede
   - Sanguine Lash
   flex_slots:
-  - Sanguine Lash
   - Mystical Mail
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -565,12 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Void Shield:
-      total: 0.59
-      efficiency: 0.47
+    Shifter's Shield:
+      total: 0.49
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.42
     Erosion:
       total: 0.62
       efficiency: 0.51
@@ -592,8 +592,12 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Void Stone
-    reason: Conquest community 63% win over 220 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 279 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
+  - added: Shifter's Shield
+    removed: Void Shield
+    reason: Conquest community 64% win over 109 matches (vs 54% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

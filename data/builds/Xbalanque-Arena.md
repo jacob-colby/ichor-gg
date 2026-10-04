@@ -663,9 +663,9 @@ builds:
   - Lernaean Bow
   - Tyrfing
   - Riptalon
-  - Demon Blade
+  - Silverbranch Bow
   flex_slots:
-  - Demon Blade
+  - Silverbranch Bow
   - Odysseus' Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -713,17 +713,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Demon Blade:
-      total: 0.63
-      efficiency: 0.38
+    Silverbranch Bow:
+      total: 0.47
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.52
   swaps:
-  - added: Odysseus' Bow
+  - added: Silverbranch Bow
     removed: Toxic Blade
-    reason: Conquest community 62% win over 237 matches (vs 56% on this god), taking
+    reason: Conquest community 67% win over 83 matches (vs 56% on this god), taking
       the model's weakest slot from Toxic Blade
+  - added: Odysseus' Bow
+    removed: Demon Blade
+    reason: Conquest community 62% win over 256 matches (vs 56% on this god), taking
+      the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
 ---

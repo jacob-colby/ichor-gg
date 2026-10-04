@@ -722,11 +722,11 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Stygian Anchor
-    reason: Conquest community 67% win over 53 matches (vs 50% on this god), taking
+    reason: Conquest community 67% win over 61 matches (vs 51% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Chandra's Grace
     removed: Void Shield
-    reason: Conquest community 62% win over 146 matches (vs 50% on this god), taking
+    reason: Conquest community 61% win over 165 matches (vs 51% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

@@ -787,7 +787,7 @@ builds:
   swaps:
   - added: Devourer's Gauntlet
     removed: Tyrfing
-    reason: Conquest community 65% win over 293 matches (vs 59% on this god), taking
+    reason: Conquest community 64% win over 340 matches (vs 59% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

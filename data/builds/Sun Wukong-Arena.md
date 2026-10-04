@@ -399,10 +399,10 @@ builds:
   archetype: hybrid
   slot_order:
   - Void Shield
+  - Void Stone
   - Freya's Tears
   - Gluttonous Grimoire
   - Erosion
-  - Pharaoh's Curse
   - Triton's Conch
   flex_slots:
   - Gluttonous Grimoire
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Void Stone:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Freya's Tears:
       total: 0.45
       efficiency: 0.61
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Pharaoh's Curse:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Triton's Conch:
       total: 0.63
       efficiency: 0.44
@@ -462,11 +462,11 @@ builds:
   swaps:
   - added: Gluttonous Grimoire
     removed: Stampede
-    reason: Conquest community 68% win over 130 matches (vs 57% on this god), taking
+    reason: Conquest community 66% win over 148 matches (vs 56% on this god), taking
       the model's weakest slot from Stampede
   - added: Freya's Tears
     removed: Shogun's Ofuda
-    reason: Conquest community 66% win over 121 matches (vs 57% on this god), taking
+    reason: Conquest community 65% win over 138 matches (vs 56% on this god), taking
       the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001

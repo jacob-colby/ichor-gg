@@ -10,83 +10,83 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.56
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.15
-      win_rate: 0.47
+      pick_rate: 0.14
+      win_rate: 0.48
     - name: Chronos' Pendant
       pick_rate: 0.13
-      win_rate: 0.56
+      win_rate: 0.58
   - name: Chronos' Pendant
-    pick_rate: 0.19
-    win_rate: 0.55
+    pick_rate: 0.18
+    win_rate: 0.53
     alternates:
     - name: The World Stone
       pick_rate: 0.17
       win_rate: 0.52
     - name: Spear of Desolation
-      pick_rate: 0.15
-      win_rate: 0.52
+      pick_rate: 0.16
+      win_rate: 0.54
   - name: Rod of Tahuti
     pick_rate: 0.2
     win_rate: 0.51
     alternates:
     - name: Soul Gem
       pick_rate: 0.2
-      win_rate: 0.54
+      win_rate: 0.53
     - name: The World Stone
-      pick_rate: 0.07
-      win_rate: 0.54
+      pick_rate: 0.08
+      win_rate: 0.5
   - name: Obsidian Shard
     pick_rate: 0.13
     win_rate: 0.46
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.26
-      win_rate: 0.51
+      pick_rate: 0.27
+      win_rate: 0.5
     - name: Spear of the Magus
       pick_rate: 0.07
-      win_rate: 0.64
+      win_rate: 0.63
   - name: Evil Eye
-    pick_rate: 0.1
-    win_rate: 0.41
+    pick_rate: 0.11
+    win_rate: 0.39
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.15
-      win_rate: 0.62
+      pick_rate: 0.14
+      win_rate: 0.59
     - name: Rod of Tahuti
       pick_rate: 0.13
-      win_rate: 0.63
+      win_rate: 0.59
   - name: Blinking Abyss
     pick_rate: 0.08
-    win_rate: 0.6
+    win_rate: 0.59
     alternates:
+    - name: Obsidian Shard
+      pick_rate: 0.09
+      win_rate: 0.72
     - name: Killing Stone
       pick_rate: 0.08
-      win_rate: 0.4
-    - name: Obsidian Shard
-      pick_rate: 0.07
-      win_rate: 0.71
+      win_rate: 0.38
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.23
-    win_rate: 0.59
+    win_rate: 0.57
   - name: Bluestone Brooch
     pick_rate: 0.18
     win_rate: 0.59
   - name: Conduit Gem
-    pick_rate: 0.17
+    pick_rate: 0.16
     win_rate: 0.31
   source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-10-03'
-  god_win_rate: 0.5123762376237624
-  god_matches_won: 207
-  god_matches_played: 404
+  last_verified: '2026-10-04'
+  god_win_rate: 0.5080459770114942
+  god_matches_won: 221
+  god_matches_played: 435
   god_division: obsidian
   god_window_start: '2026-09-22'
-  god_window_end: '2026-10-03'
-  god_matches_analyzed: 12830
+  god_window_end: '2026-10-04'
+  god_matches_analyzed: 14293
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -133,7 +133,7 @@ builds:
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.47
     Tyrfing:
@@ -155,9 +155,9 @@ builds:
       pick: 0.31
       fit: 0.36
     Spear of the Magus:
-      total: 0.56
+      total: 0.55
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.36
   community_ordered:
@@ -210,7 +210,7 @@ builds:
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.45
     Hydra's Lament:
@@ -232,9 +232,9 @@ builds:
       pick: 0.31
       fit: 0.42
     Spear of the Magus:
-      total: 0.56
+      total: 0.55
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.34
   community_ordered:
@@ -268,7 +268,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Spear of the Magus, Jotunn''s Revenge, Nimble Ring, Riptalon, Gluttonous
+    god: Jotunn''s Revenge, Spear of the Magus, Nimble Ring, Riptalon, Gluttonous
     Grimoire, Silverbranch Bow, Tyrfing, The Reaper, Tekko-Kagi, Heartseeker, Hydra''s
     Lament, Lernaean Bow, Toxic Blade, Golden Blade, Bragi''s Harp, Doom Orb, Titan''s
     Bane, The Crusher, Bracer of The Abyss, Dreamer''s Idol, Pendulum Blade, Death
@@ -283,9 +283,9 @@ builds:
       pick: 0.0
       fit: 0.56
     Spear of Desolation:
-      total: 0.54
+      total: 0.53
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.56
     Silverbranch Bow:
@@ -303,13 +303,13 @@ builds:
     Spear of the Magus:
       total: 0.56
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.4
     Soul Gem:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.31
       fit: 0.73
   community_ordered:
@@ -368,7 +368,7 @@ builds:
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.24
     Rod of Tahuti:
@@ -386,7 +386,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.31
       fit: 0.77
   community_ordered:
@@ -399,13 +399,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Spear of Desolation
-  - Silverbranch Bow
+  - Nimble Ring
   - Rod of Tahuti
-  - Spear of the Magus
-  - Soul Gem
-  flex_slots:
-  - Spear of Desolation
   - Silverbranch Bow
+  - Spear of the Magus
+  flex_slots:
+  - Silverbranch Bow
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -437,38 +437,37 @@ builds:
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.57
-    Silverbranch Bow:
+    Nimble Ring:
       total: 0.53
-      efficiency: 0.53
+      efficiency: 0.65
       win: 0.51
       pick: 0.0
-      fit: 0.75
+      fit: 0.45
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.51
       pick: 0.31
       fit: 0.49
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.51
+      pick: 0.0
+      fit: 0.75
     Spear of the Magus:
-      total: 0.58
+      total: 0.57
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.49
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.54
-      pick: 0.31
-      fit: 0.76
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
   - Spear of the Magus
-  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -535,9 +534,9 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of the Magus:
-      total: 0.55
+      total: 0.54
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.29
   community_ordered:
@@ -580,15 +579,15 @@ builds:
     Hammer, Dagger of Frenzy.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.55
-      pick: 0.26
+      win: 0.53
+      pick: 0.25
       fit: 0.45
     Spear of Desolation:
       total: 0.54
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.59
     Jotunn's Revenge:
@@ -606,13 +605,13 @@ builds:
     Spear of the Magus:
       total: 0.54
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.24
     Soul Gem:
       total: 0.57
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.31
       fit: 0.77
   community_ordered:
@@ -664,9 +663,9 @@ builds:
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.49
     Tyrfing:
@@ -684,13 +683,13 @@ builds:
     Spear of the Magus:
       total: 0.56
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.39
     Soul Gem:
       total: 0.56
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.31
       fit: 0.69
   community_ordered:
@@ -741,9 +740,9 @@ builds:
       pick: 0.0
       fit: 0.48
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.48
     Tyrfing:
@@ -761,13 +760,13 @@ builds:
     Spear of the Magus:
       total: 0.56
       efficiency: 0.6
-      win: 0.64
+      win: 0.63
       pick: 0.12
       fit: 0.38
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.31
       fit: 0.66
   community_ordered:
@@ -819,7 +818,7 @@ builds:
     Spear of Desolation:
       total: 0.52
       efficiency: 0.57
-      win: 0.5
+      win: 0.49
       pick: 0.56
       fit: 0.47
     Tyrfing:

@@ -464,14 +464,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Toxic Blade
-  - Magi's Cloak
+  - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - The Reaper
   - Tyrfing
-  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -494,12 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Magi's Cloak:
-      total: 0.35
-      efficiency: 0.53
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.18
+      fit: 0.37
     Tyrfing:
       total: 0.52
       efficiency: 0.48
@@ -525,14 +525,10 @@ builds:
       pick: 0.0
       fit: 0.6
   swaps:
-  - added: Magi's Cloak
-    removed: Berserker's Shield
-    reason: Conquest community 74% win over 39 matches (vs 53% on this god), taking
-      the model's weakest slot from Berserker's Shield
   - added: The Reaper
-    removed: Jotunn's Revenge
-    reason: Conquest community 68% win over 73 matches (vs 53% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
+    removed: Berserker's Shield
+    reason: Conquest community 66% win over 76 matches (vs 54% on this god), taking
+      the model's weakest slot from Berserker's Shield
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -722,11 +722,11 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Kinetic Cuirass
-    reason: Conquest community 67% win over 53 matches (vs 50% on this god), taking
+    reason: Conquest community 67% win over 61 matches (vs 51% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   - added: Chandra's Grace
     removed: Void Stone
-    reason: Conquest community 62% win over 146 matches (vs 50% on this god), taking
+    reason: Conquest community 61% win over 165 matches (vs 51% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

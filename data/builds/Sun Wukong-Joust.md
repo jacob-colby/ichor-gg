@@ -462,11 +462,11 @@ builds:
   swaps:
   - added: Gluttonous Grimoire
     removed: Berserker's Shield
-    reason: Conquest community 68% win over 130 matches (vs 57% on this god), taking
+    reason: Conquest community 66% win over 148 matches (vs 56% on this god), taking
       the model's weakest slot from Berserker's Shield
   - added: Freya's Tears
     removed: Shogun's Ofuda
-    reason: Conquest community 66% win over 121 matches (vs 57% on this god), taking
+    reason: Conquest community 65% win over 138 matches (vs 56% on this god), taking
       the model's weakest slot from Shogun's Ofuda
   borrowed_from: Conquest
   starter: *id001

@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spirit Robe
     removed: Freya's Tears
-    reason: Conquest community 85% win over 41 matches (vs 57% on this god), taking
+    reason: Conquest community 77% win over 46 matches (vs 57% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
