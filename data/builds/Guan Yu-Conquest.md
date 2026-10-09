@@ -5,113 +5,113 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the General
-  aspect_pick_rate: 0.3
-  aspect_win_rate: 0.33
+  aspect_pick_rate: 0.33
+  aspect_win_rate: 0.54
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.35
-    win_rate: 0.71
+    pick_rate: 0.3
+    win_rate: 0.58
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.2
+      pick_rate: 0.1
       win_rate: 0.25
-    - name: Contagion
-      pick_rate: 0.05
-      win_rate: 0.0
+    - name: Stampede
+      pick_rate: 0.1
+      win_rate: 0.5
   - name: Sanguine Lash
-    pick_rate: 0.3
-    win_rate: 0.67
+    pick_rate: 0.2
+    win_rate: 0.5
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.1
+      pick_rate: 0.13
       win_rate: 1.0
     - name: Berserker's Shield
-      pick_rate: 0.1
+      pick_rate: 0.08
       win_rate: 0.0
   - name: Genji's Guard
-    pick_rate: 0.2
-    win_rate: 0.25
+    pick_rate: 0.15
+    win_rate: 0.5
     alternates:
-    - name: Umbral Link
-      pick_rate: 0.1
-      win_rate: 1.0
-    - name: Breastplate of Valor
+    - name: Freya's Tears
       pick_rate: 0.1
       win_rate: 0.5
+    - name: Umbral Link
+      pick_rate: 0.08
+      win_rate: 0.67
   - name: Freya's Tears
-    pick_rate: 0.22
-    win_rate: 0.25
+    pick_rate: 0.18
+    win_rate: 0.29
     alternates:
+    - name: Genji's Guard
+      pick_rate: 0.08
+      win_rate: 0.33
     - name: Shifter's Shield
-      pick_rate: 0.11
-      win_rate: 0.5
-    - name: Brawler’s Beat Stick
-      pick_rate: 0.11
-      win_rate: 1.0
+      pick_rate: 0.08
+      win_rate: 0.67
   - name: Shifter's Shield
-    pick_rate: 0.21
-    win_rate: 0.67
+    pick_rate: 0.13
+    win_rate: 0.5
     alternates:
-    - name: Umbral Link
+    - name: Spectral Armor
+      pick_rate: 0.07
+      win_rate: 0.5
+    - name: Freya's Tears
       pick_rate: 0.07
       win_rate: 1.0
-    - name: Shell of Rebuke
-      pick_rate: 0.07
-      win_rate: 0.0
-  - name: Captain's Ring
+  - name: Hussar's Wings
     pick_rate: 0.08
-    win_rate: 0.0
+    win_rate: 1.0
     alternates:
+    - name: Captain's Ring
+      pick_rate: 0.04
+      win_rate: 0.0
     - name: Mana Tome
-      pick_rate: 0.08
-      win_rate: 1.0
-    - name: Shell of Rebuke
-      pick_rate: 0.08
+      pick_rate: 0.04
       win_rate: 1.0
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.35
-    win_rate: 0.57
+    pick_rate: 0.28
+    win_rate: 0.55
   - name: Bluestone Brooch
-    pick_rate: 0.15
-    win_rate: 0.67
-  - name: Sands Of Time
+    pick_rate: 0.13
+    win_rate: 0.8
+  - name: Selflessness
     pick_rate: 0.1
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/guan-yu/
-  last_verified: '2026-10-08'
-  god_win_rate: 0.4
-  god_matches_won: 8
-  god_matches_played: 20
+  last_verified: '2026-10-09'
+  god_win_rate: 0.45
+  god_matches_won: 18
+  god_matches_played: 40
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-08'
-  god_matches_analyzed: 1596
+  god_window_end: '2026-10-09'
+  god_matches_analyzed: 2961
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
-  - Brawler’s Beat Stick
+  - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shifter's Shield
-  - Shell of Rebuke
-  - Umbral Link
+  - Transcendence
+  - Hussar's Wings
+  - Amanita Charm
   flex_slots:
-  - Shifter's Shield
-  - Kinetic Cuirass
+  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -123,72 +123,71 @@ builds:
     Shogun''s Ofuda, Midgardian Mail, Mantle Of Discord, Heartseeker, Hide of the
     Nemean Lion, Daybreak Gavel, Berserker''s Shield.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.66
-      efficiency: 0.42
+    Genji's Guard:
+      total: 0.51
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.23
+      fit: 0.32
+    Breastplate of Valor:
+      total: 0.74
+      efficiency: 0.65
       win: 1.0
       pick: 0.18
-      fit: 0.35
+      fit: 0.32
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.54
       efficiency: 0.72
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.4
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.56
-      win: 0.67
+    Transcendence:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
       pick: 0.0
-      fit: 0.6
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.67
-      pick: 0.45
-      fit: 0.5
-    Shell of Rebuke:
-      total: 0.61
-      efficiency: 0.28
+      fit: 0.21
+    Hussar's Wings:
+      total: 0.67
+      efficiency: 0.39
       win: 1.0
       pick: 0.25
-      fit: 0.35
-    Umbral Link:
-      total: 0.61
-      efficiency: 0.36
-      win: 1.0
-      pick: 0.16
-      fit: 0.17
+      fit: 0.5
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
   community_ordered:
-  - Brawler’s Beat Stick
-  - Shifter's Shield
-  - Shell of Rebuke
-  - Umbral Link
+  - Genji's Guard
+  - Breastplate of Valor
+  - Hussar's Wings
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Brawler’s Beat Stick
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Shifter's Shield
-  - Shell of Rebuke
+  - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Hussar's Wings
   - Amanita Charm
-  - Umbral Link
   flex_slots:
-  - Shell of Rebuke
-  - Shifter's Shield
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -200,70 +199,68 @@ builds:
     Curse, Riptalon, Lernaean Bow, Shogun''s Ofuda, Stone of Binding, Screeching Gargoyle,
     Berserker''s Shield.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.65
-      efficiency: 0.42
+    Breastplate of Valor:
+      total: 0.73
+      efficiency: 0.65
       win: 1.0
       pick: 0.18
-      fit: 0.31
+      fit: 0.3
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.54
       efficiency: 0.72
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.4
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.67
-      pick: 0.45
-      fit: 0.5
-    Shell of Rebuke:
-      total: 0.61
-      efficiency: 0.28
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shield of the Phoenix:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Hussar's Wings:
+      total: 0.67
+      efficiency: 0.39
       win: 1.0
       pick: 0.25
-      fit: 0.31
+      fit: 0.5
     Amanita Charm:
-      total: 0.65
+      total: 0.57
       efficiency: 0.65
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.8
-    Umbral Link:
-      total: 0.65
-      efficiency: 0.36
-      win: 1.0
-      pick: 0.16
-      fit: 0.46
   community_ordered:
-  - Brawler’s Beat Stick
-  - Shifter's Shield
-  - Shell of Rebuke
-  - Umbral Link
+  - Breastplate of Valor
+  - Hussar's Wings
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
-  - Brawler’s Beat Stick
   - Stone of Binding
+  - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Shell of Rebuke
-  - Umbral Link
+  - Hussar's Wings
+  - Amanita Charm
   flex_slots:
   - Stone of Binding
-  - Screeching Gargoyle
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -275,56 +272,56 @@ builds:
     Shield of the Phoenix, Erosion, Eye of Providence, Draconic Scale, Tyrfing, Berserker''s
     Shield.'
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.67
-      pick: 0.0
-      fit: 0.64
-    Brawler’s Beat Stick:
-      total: 0.65
-      efficiency: 0.42
-      win: 1.0
-      pick: 0.18
-      fit: 0.26
     Stone of Binding:
-      total: 0.58
+      total: 0.5
       efficiency: 0.51
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.66
+    Genji's Guard:
+      total: 0.5
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.23
+      fit: 0.24
+    Breastplate of Valor:
+      total: 0.72
+      efficiency: 0.65
+      win: 1.0
+      pick: 0.18
+      fit: 0.24
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.56
       efficiency: 0.72
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.55
-    Shell of Rebuke:
-      total: 0.6
-      efficiency: 0.28
+    Hussar's Wings:
+      total: 0.66
+      efficiency: 0.39
       win: 1.0
       pick: 0.25
-      fit: 0.26
-    Umbral Link:
-      total: 0.6
-      efficiency: 0.36
-      win: 1.0
-      pick: 0.16
-      fit: 0.13
+      fit: 0.38
+    Amanita Charm:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
   community_ordered:
-  - Brawler’s Beat Stick
-  - Shell of Rebuke
-  - Umbral Link
+  - Genji's Guard
+  - Breastplate of Valor
+  - Hussar's Wings
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Brawler’s Beat Stick
+  - Breastplate of Valor
+  - Jotunn's Revenge
   - Tyrfing
-  - Shell of Rebuke
+  - Hussar's Wings
   - Pharaoh's Curse
-  - Umbral Link
   flex_slots:
   - Tyrfing
   - Pharaoh's Curse
@@ -336,8 +333,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -350,68 +347,67 @@ builds:
     Berserker''s Shield.'
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.49
       efficiency: 0.52
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.56
-    Brawler’s Beat Stick:
-      total: 0.64
-      efficiency: 0.42
+    Breastplate of Valor:
+      total: 0.72
+      efficiency: 0.65
       win: 1.0
       pick: 0.18
+      fit: 0.22
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
       fit: 0.24
     Tyrfing:
-      total: 0.55
+      total: 0.48
       efficiency: 0.48
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.55
-    Shell of Rebuke:
-      total: 0.6
-      efficiency: 0.28
+    Hussar's Wings:
+      total: 0.65
+      efficiency: 0.39
       win: 1.0
       pick: 0.25
-      fit: 0.24
+      fit: 0.35
     Pharaoh's Curse:
-      total: 0.55
+      total: 0.47
       efficiency: 0.51
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.43
-    Umbral Link:
-      total: 0.64
-      efficiency: 0.43
-      win: 1.0
-      pick: 0.16
-      fit: 0.19
   community_ordered:
-  - Brawler’s Beat Stick
-  - Shell of Rebuke
-  - Umbral Link
+  - Breastplate of Valor
+  - Hussar's Wings
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Brawler’s Beat Stick
+  - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Shield of the Phoenix
-  - Hydra's Lament
-  - Shifter's Shield
-  - Shell of Rebuke
+  - Kinetic Cuirass
+  - Hussar's Wings
+  - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
-  - Hydra's Lament
+  - Amanita Charm
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -423,46 +419,46 @@ builds:
     the Storm, Pharaoh''s Curse, Eye of Erebus, Magi''s Cloak, Daybreak Gavel, Midgardian
     Mail, Shogun''s Ofuda, Mantle Of Discord, Chandra''s Grace, Berserker''s Shield.'
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.65
-      efficiency: 0.42
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.23
+      fit: 0.44
+    Breastplate of Valor:
+      total: 0.75
+      efficiency: 0.65
       win: 1.0
       pick: 0.18
-      fit: 0.28
+      fit: 0.44
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.54
       efficiency: 0.72
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.43
-    Shield of the Phoenix:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.67
-      pick: 0.0
-      fit: 0.57
-    Hydra's Lament:
-      total: 0.57
-      efficiency: 0.54
-      win: 0.67
+    Kinetic Cuirass:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
       pick: 0.0
       fit: 0.5
-    Shifter's Shield:
-      total: 0.58
-      efficiency: 0.55
-      win: 0.67
-      pick: 0.45
-      fit: 0.4
-    Shell of Rebuke:
-      total: 0.6
-      efficiency: 0.28
+    Hussar's Wings:
+      total: 0.66
+      efficiency: 0.39
       win: 1.0
       pick: 0.25
-      fit: 0.28
+      fit: 0.4
+    Amanita Charm:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
   community_ordered:
-  - Brawler’s Beat Stick
-  - Shifter's Shield
-  - Shell of Rebuke
+  - Genji's Guard
+  - Breastplate of Valor
+  - Hussar's Wings
   starter: *id001
 - source: suggested
   archetype: model
@@ -498,39 +494,39 @@ builds:
     Discord, Heartseeker, Hide of the Nemean Lion, Daybreak Gavel.'
   slot_scores:
     Genji's Guard:
-      total: 0.41
+      total: 0.51
       efficiency: 0.66
-      win: 0.25
-      pick: 0.31
+      win: 0.5
+      pick: 0.23
       fit: 0.32
     Berserker's Shield:
       total: 0.31
       efficiency: 0.68
       win: 0.0
-      pick: 0.14
+      pick: 0.11
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.54
       efficiency: 0.72
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.51
       efficiency: 0.56
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.6
     Freya's Tears:
-      total: 0.42
+      total: 0.43
       efficiency: 0.61
-      win: 0.25
-      pick: 0.37
+      win: 0.29
+      pick: 0.3
       fit: 0.49
     Amanita Charm:
-      total: 0.61
+      total: 0.53
       efficiency: 0.65
-      win: 0.67
+      win: 0.5
       pick: 0.0
       fit: 0.5
   community_ordered:
