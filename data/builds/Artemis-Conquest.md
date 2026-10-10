@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Wild
-  aspect_pick_rate: 0.09
-  aspect_win_rate: 0.5
+  aspect_pick_rate: 0.08
+  aspect_win_rate: 0.47
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.56
-    win_rate: 0.62
+    pick_rate: 0.53
+    win_rate: 0.6
     alternates:
     - name: Tyrfing
-      pick_rate: 0.35
-      win_rate: 0.48
+      pick_rate: 0.39
+      win_rate: 0.56
     - name: Avenging Blade
       pick_rate: 0.04
-      win_rate: 0.43
+      win_rate: 0.44
   - name: Dagger of Frenzy
     pick_rate: 0.36
     win_rate: 0.63
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.31
-      win_rate: 0.59
+      pick_rate: 0.34
+      win_rate: 0.65
     - name: Tyrfing
       pick_rate: 0.07
-      win_rate: 0.54
+      win_rate: 0.44
   - name: Riptalon
-    pick_rate: 0.17
+    pick_rate: 0.18
     win_rate: 0.53
     alternates:
-    - name: Silverbranch Bow
-      pick_rate: 0.15
-      win_rate: 0.5
     - name: Dominance
       pick_rate: 0.15
-      win_rate: 0.65
+      win_rate: 0.62
+    - name: Silverbranch Bow
+      pick_rate: 0.14
+      win_rate: 0.54
   - name: Silverbranch Bow
-    pick_rate: 0.23
-    win_rate: 0.62
+    pick_rate: 0.2
+    win_rate: 0.63
     alternates:
     - name: Riptalon
       pick_rate: 0.19
-      win_rate: 0.58
+      win_rate: 0.59
     - name: The Executioner
-      pick_rate: 0.12
-      win_rate: 0.62
+      pick_rate: 0.15
+      win_rate: 0.64
   - name: The Executioner
     pick_rate: 0.13
-    win_rate: 0.67
+    win_rate: 0.72
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.11
-      win_rate: 0.47
+      pick_rate: 0.14
+      win_rate: 0.59
     - name: Deathbringer
       pick_rate: 0.08
-      win_rate: 0.77
+      win_rate: 0.78
   - name: Manchu Bow
     pick_rate: 0.13
-    win_rate: 0.53
+    win_rate: 0.59
     alternates:
     - name: Hunter's Bow
-      pick_rate: 0.08
-      win_rate: 0.6
+      pick_rate: 0.1
+      win_rate: 0.53
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.78
+      win_rate: 0.75
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.32
-    win_rate: 0.59
+    win_rate: 0.64
   - name: Sharpshooter's Arrow
     pick_rate: 0.26
-    win_rate: 0.66
-  - name: Gilded Arrow
+    win_rate: 0.61
+  - name: Leather Cowl
     pick_rate: 0.17
-    win_rate: 0.33
+    win_rate: 0.55
   source_url: https://smitebrain.com/gods/artemis/
-  last_verified: '2026-10-09'
-  god_win_rate: 0.5586592178770949
-  god_matches_won: 100
-  god_matches_played: 179
+  last_verified: '2026-10-10'
+  god_win_rate: 0.5737704918032787
+  god_matches_won: 140
+  god_matches_played: 244
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-09'
-  god_matches_analyzed: 2961
+  god_window_end: '2026-10-10'
+  god_matches_analyzed: 4063
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -141,9 +141,9 @@ builds:
       pick: 0.0
       fit: 0.21
     Dominance:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
-      win: 0.65
+      win: 0.62
       pick: 0.23
       fit: 0.6
     Tekko-Kagi:
@@ -155,7 +155,7 @@ builds:
     Deathbringer:
       total: 0.61
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.5
   community_ordered:
@@ -171,10 +171,10 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Dominance
   - Deathbringer
+  - Heartseeker
   flex_slots:
-  - Lernaean Bow
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -220,20 +220,19 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.42
-    Dominance:
-      total: 0.54
-      efficiency: 0.45
-      win: 0.65
-      pick: 0.23
-      fit: 0.5
     Deathbringer:
-      total: 0.58
+      total: 0.59
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.34
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.0
+      fit: 0.55
   community_ordered:
-  - Dominance
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -246,7 +245,7 @@ builds:
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Demon Blade
+  - Dominance
   - Musashi's Dual Swords
   situational_swaps:
   - vs_tag: heavy_cc
@@ -281,9 +280,9 @@ builds:
       pick: 0.0
       fit: 0.28
     Dominance:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
-      win: 0.65
+      win: 0.62
       pick: 0.23
       fit: 0.55
     Musashi's Dual Swords:
@@ -301,7 +300,7 @@ builds:
     Deathbringer:
       total: 0.61
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.52
   community_ordered:
@@ -368,7 +367,7 @@ builds:
     Deathbringer:
       total: 0.58
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.32
     Amanita Charm:
@@ -384,14 +383,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
+  - The Executioner
   - The Reaper
   - Tekko-Kagi
   - Deathbringer
   - Heartseeker
   flex_slots:
+  - Tekko-Kagi
   - Heartseeker
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -418,12 +417,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.5
-    Transcendence:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.62
-      pick: 0.0
-      fit: 0.15
+    The Executioner:
+      total: 0.55
+      efficiency: 0.35
+      win: 0.72
+      pick: 0.28
+      fit: 0.61
     The Reaper:
       total: 0.55
       efficiency: 0.55
@@ -439,7 +438,7 @@ builds:
     Deathbringer:
       total: 0.59
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.36
     Heartseeker:
@@ -449,6 +448,7 @@ builds:
       pick: 0.0
       fit: 0.67
   community_ordered:
+  - The Executioner
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -456,8 +456,8 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Tyrfing
   - Jotunn's Revenge
-  - Dominance
   - Silverbranch Bow
   - Deathbringer
   flex_slots:
@@ -495,32 +495,32 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.52
+    Tyrfing:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.56
+      pick: 0.39
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.62
       pick: 0.0
       fit: 0.22
-    Dominance:
-      total: 0.54
-      efficiency: 0.45
-      win: 0.65
-      pick: 0.23
-      fit: 0.52
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.53
-      win: 0.62
-      pick: 0.38
+      win: 0.63
+      pick: 0.33
       fit: 0.5
     Deathbringer:
       total: 0.59
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.38
   community_ordered:
-  - Dominance
+  - Tyrfing
   - Silverbranch Bow
   - Deathbringer
   starter: *id001
@@ -529,13 +529,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
+  - The Executioner
   - Hydra's Lament
-  - Dominance
   - Arondight
   - Deathbringer
   flex_slots:
-  - Lernaean Bow
   - Arondight
+  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -569,18 +569,18 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.43
+    The Executioner:
+      total: 0.51
+      efficiency: 0.35
+      win: 0.72
+      pick: 0.28
+      fit: 0.3
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
       win: 0.62
       pick: 0.0
       fit: 0.5
-    Dominance:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.65
-      pick: 0.23
-      fit: 0.39
     Arondight:
       total: 0.51
       efficiency: 0.5
@@ -590,11 +590,11 @@ builds:
     Deathbringer:
       total: 0.58
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.29
   community_ordered:
-  - Dominance
+  - The Executioner
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -662,7 +662,7 @@ builds:
     Deathbringer:
       total: 0.61
       efficiency: 0.51
-      win: 0.77
+      win: 0.78
       pick: 0.17
       fit: 0.5
   community_ordered:

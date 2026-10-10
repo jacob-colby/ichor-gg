@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  - Triton's Conch
+  flex_slots:
+  - Shogun's Ofuda
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Freya's Tears:
+      total: 0.45
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Pharaoh's Curse:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Shogun's Ofuda:
+      total: 0.62
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Triton's Conch:
+      total: 0.63
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+  swaps:
+  - added: Freya's Tears
+    removed: Stampede
+    reason: Conquest community 66% win over 89 matches (vs 55% on this god), taking
+      the model's weakest slot from Stampede
+  borrowed_from: Conquest
+  starter: *id001
 ---
