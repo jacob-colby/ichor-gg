@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Golden Blade
-    reason: Conquest community 66% win over 146 matches (vs 58% on this god), taking
+    reason: Conquest community 67% win over 169 matches (vs 59% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

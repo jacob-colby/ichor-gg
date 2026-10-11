@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Tyrfing
-    reason: Conquest community 63% win over 61 matches (vs 49% on this god), taking
+    reason: Conquest community 60% win over 73 matches (vs 49% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
@@ -1322,7 +1322,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Transcendence
-    reason: Conquest community 63% win over 61 matches (vs 49% on this god), taking
+    reason: Conquest community 60% win over 73 matches (vs 49% on this god), taking
       the model's weakest slot from Transcendence
   borrowed_from: Conquest
   starter: *id001

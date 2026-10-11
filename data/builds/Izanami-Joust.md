@@ -590,4 +590,75 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Death Metal
+  - Riptalon
+  - Deathbringer
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Death Metal:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Riptalon:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Deathbringer:
+      total: 0.45
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Soul Gem:
+      total: 0.75
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.93
+  swaps:
+  - added: Deathbringer
+    removed: Tyrfing
+    reason: Conquest community 78% win over 50 matches (vs 57% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
+  starter: *id001
 ---

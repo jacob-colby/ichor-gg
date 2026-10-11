@@ -395,4 +395,79 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Freya's Tears
+  - Erosion
+  - Shogun's Ofuda
+  - Sanguine Lash
+  flex_slots:
+  - Sanguine Lash
+  - Shogun's Ofuda
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shield Splitter:
+      total: 0.61
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Erosion:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Shogun's Ofuda:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Sanguine Lash:
+      total: 0.56
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+  swaps:
+  - added: Shogun's Ofuda
+    removed: Void Shield
+    reason: Conquest community 81% win over 30 matches (vs 61% on this god), taking
+      the model's weakest slot from Void Shield
+  - added: Sanguine Lash
+    removed: Stygian Anchor
+    reason: Conquest community 69% win over 145 matches (vs 61% on this god), taking
+      the model's weakest slot from Stygian Anchor
+  borrowed_from: Conquest
+  starter: *id001
 ---
