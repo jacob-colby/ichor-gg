@@ -462,11 +462,11 @@ builds:
   swaps:
   - added: Shogun's Ofuda
     removed: Void Stone
-    reason: Conquest community 81% win over 30 matches (vs 61% on this god), taking
+    reason: Conquest community 77% win over 38 matches (vs 60% on this god), taking
       the model's weakest slot from Void Stone
   - added: Sanguine Lash
     removed: Void Shield
-    reason: Conquest community 69% win over 145 matches (vs 61% on this god), taking
+    reason: Conquest community 67% win over 218 matches (vs 60% on this god), taking
       the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001

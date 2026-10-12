@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Transformation
-  aspect_pick_rate: 0.07
-  aspect_win_rate: 0.6
+  aspect_pick_rate: 0.06
+  aspect_win_rate: 0.55
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.85
-    win_rate: 0.57
+    pick_rate: 0.86
+    win_rate: 0.56
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.04
-      win_rate: 0.65
-    - name: Gauntlet of Thebes
+      win_rate: 0.64
+    - name: Jotunn's Revenge
       pick_rate: 0.01
-      win_rate: 0.67
+      win_rate: 0.63
   - name: Sanguine Lash
-    pick_rate: 0.57
-    win_rate: 0.59
+    pick_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.12
-      win_rate: 0.6
+      pick_rate: 0.11
+      win_rate: 0.59
     - name: Breastplate of Valor
       pick_rate: 0.05
       win_rate: 0.52
   - name: Umbral Link
-    pick_rate: 0.21
-    win_rate: 0.61
+    pick_rate: 0.22
+    win_rate: 0.59
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.18
+      pick_rate: 0.17
       win_rate: 0.59
     - name: Sanguine Lash
       pick_rate: 0.12
-      win_rate: 0.52
+      win_rate: 0.49
   - name: Freya's Tears
     pick_rate: 0.26
-    win_rate: 0.61
+    win_rate: 0.59
     alternates:
     - name: Sundering Echo
-      pick_rate: 0.08
-      win_rate: 0.62
+      pick_rate: 0.09
+      win_rate: 0.58
     - name: Brawler’s Beat Stick
       pick_rate: 0.08
-      win_rate: 0.62
+      win_rate: 0.61
   - name: Brawler’s Beat Stick
     pick_rate: 0.08
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.11
-      win_rate: 0.54
+      pick_rate: 0.13
+      win_rate: 0.58
     - name: Sundering Echo
-      pick_rate: 0.08
-      win_rate: 0.55
+      pick_rate: 0.07
+      win_rate: 0.5
   - name: Sundering Echo
-    pick_rate: 0.08
-    win_rate: 0.83
+    pick_rate: 0.07
+    win_rate: 0.79
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.07
-      win_rate: 0.77
-    - name: Brawler’s Beat Stick
+      pick_rate: 0.08
+      win_rate: 0.73
+    - name: Hide of the Nemean Lion
       pick_rate: 0.06
-      win_rate: 0.75
+      win_rate: 0.43
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.52
-    win_rate: 0.61
+    win_rate: 0.6
   - name: Bluestone Pendant
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.42
   - name: Hunter's Cowl
-    pick_rate: 0.07
-    win_rate: 0.76
+    pick_rate: 0.09
+    win_rate: 0.69
   source_url: https://smitebrain.com/gods/sun-wukong/
-  last_verified: '2026-10-11'
-  god_win_rate: 0.5645161290322581
-  god_matches_won: 280
-  god_matches_played: 496
+  last_verified: '2026-10-12'
+  god_win_rate: 0.5559105431309904
+  god_matches_won: 348
+  god_matches_played: 626
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-11'
-  god_matches_analyzed: 5242
+  god_window_end: '2026-10-12'
+  god_matches_analyzed: 6672
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -107,62 +107,62 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
+    swap: Shifter's Shield — magical protection
     swap_item: Shifter's Shield
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s Shield, Amanita Charm,
+    this god: Jotunn''s Revenge, Rod of Tahuti, Berserker''s Shield, Amanita Charm,
     Runeforged Hammer, Kinetic Cuirass, Shield Splitter, Eye of the Storm, Avenging
     Blade, Genji''s Guard, Gluttonous Grimoire, Lernaean Bow, Hydra''s Lament, Erosion,
     Pharaoh''s Curse, Eye of Providence, Heartseeker, Draconic Scale, Shogun''s Ofuda,
     Golden Blade, Shield of the Phoenix, Tekko-Kagi, Bragi''s Harp, Rod of Asclepius,
     Daybreak Gavel, Nimble Ring, Helm of Radiance, Midgardian Mail, Triton''s Conch,
-    Stone of Binding, Dominance, Hide of the Nemean Lion, Spear of the Magus, Titan''s
-    Bane, Death Metal, Leviathan''s Hide, Jade Scepter, The Crusher, Void Shield,
-    Breastplate of Valor.'
+    Stone of Binding, Dominance, Spear of the Magus, Titan''s Bane, Death Metal, Leviathan''s
+    Hide, Jade Scepter, Breastplate of Valor, The Crusher, Void Shield.'
   slot_scores:
     Berserker's Shield:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.37
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
       total: 0.55
       efficiency: 0.57
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.56
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.61
+      win: 0.59
       pick: 0.43
       fit: 0.29
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.45
   community_ordered:
+  - Jotunn's Revenge
   - Freya's Tears
   starter: &id001
     base: Warrior's Axe
@@ -193,53 +193,53 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Rod of Tahuti, Berserker''s Shield, Jotunn''s Revenge,
+    this god: Amanita Charm, Jotunn''s Revenge, Rod of Tahuti, Berserker''s Shield,
     Kinetic Cuirass, Shield of the Phoenix, Rod of Asclepius, Runeforged Hammer, Shield
     Splitter, Eye of the Storm, Soul Gem, Erosion, Genji''s Guard, Ethereal Staff,
     The Reaper, Eye of Providence, Yogi''s Necklace, Draconic Scale, Phoenix Feather,
     Gluttonous Grimoire, Avenging Blade, Pharaoh''s Curse, Shogun''s Ofuda, Lernaean
     Bow, Hydra''s Lament, Lifebinder, Stone of Binding, Midgardian Mail, Helm of Radiance,
-    Chandra''s Grace, Daybreak Gavel, Hide of the Nemean Lion, Magi''s Cloak, Leviathan''s
-    Hide, Sphere of Negation, Void Shield, Stampede, Heartseeker, Ancile, Breastplate
-    of Valor.'
+    Chandra''s Grace, Daybreak Gavel, Magi''s Cloak, Leviathan''s Hide, Sphere of
+    Negation, Void Shield, Stampede, Heartseeker, Ancile, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.31
     Kinetic Cuirass:
       total: 0.56
       efficiency: 0.56
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.64
     Shield of the Phoenix:
       total: 0.56
       efficiency: 0.53
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.71
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.61
+      win: 0.59
       pick: 0.43
       fit: 0.37
     Amanita Charm:
       total: 0.62
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.84
   community_ordered:
+  - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -281,39 +281,41 @@ builds:
     Book of Thoth:
       total: 0.45
       efficiency: 0.51
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.04
     Berserker's Shield:
       total: 0.55
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.62
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.56
     Transcendence:
       total: 0.48
       efficiency: 0.53
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.18
     Gluttonous Grimoire:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -341,52 +343,53 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Berserker''s Shield, Nimble Ring, Golden Blade, Jotunn''s
-    Revenge, Amanita Charm, Gluttonous Grimoire, Tyrfing, Riptalon, Kinetic Cuirass,
+    this god: Rod of Tahuti, Berserker''s Shield, Jotunn''s Revenge, Nimble Ring,
+    Golden Blade, Amanita Charm, Gluttonous Grimoire, Tyrfing, Riptalon, Kinetic Cuirass,
     Runeforged Hammer, Lernaean Bow, Silverbranch Bow, Toxic Blade, Pharaoh''s Curse,
     Genji''s Guard, Soul Gem, Shogun''s Ofuda, Shield Splitter, Tekko-Kagi, Bragi''s
     Harp, Eye of the Storm, Hydra''s Lament, The Reaper, Daybreak Gavel, Dominance,
     Avenging Blade, Helm of Radiance, Bracer of The Abyss, Rod of Asclepius, Spear
     of the Magus, Erosion, Shield of the Phoenix, Eye of Providence, Qin''s Blade,
-    Vital Amplifier, Heartseeker, Draconic Scale, Obsidian Shard, Breastplate of Valor.'
+    Vital Amplifier, Breastplate of Valor, Heartseeker, Draconic Scale, Obsidian Shard.'
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.52
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.65
     Berserker's Shield:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.19
     Nimble Ring:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.36
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.61
+      win: 0.59
       pick: 0.43
       fit: 0.19
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.29
   community_ordered:
+  - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -427,42 +430,43 @@ builds:
     Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.66
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.44
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.61
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.49
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.61
+      win: 0.59
       pick: 0.43
       fit: 0.52
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.57
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.31
   community_ordered:
+  - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
 - source: suggested
@@ -497,45 +501,47 @@ builds:
     of Valor, Hydra''s Lament, Erosion, Pharaoh''s Curse, Eye of Providence, Heartseeker,
     Draconic Scale, Shogun''s Ofuda, Golden Blade, Shield of the Phoenix, Tekko-Kagi,
     Bragi''s Harp, Rod of Asclepius, Daybreak Gavel, Nimble Ring, Helm of Radiance,
-    Midgardian Mail, Triton''s Conch, Stone of Binding, Dominance, Hide of the Nemean
-    Lion, Spear of the Magus, Titan''s Bane, Death Metal, Leviathan''s Hide, Jade
-    Scepter, The Crusher, Void Shield.'
+    Midgardian Mail, Triton''s Conch, Stone of Binding, Dominance, Spear of the Magus,
+    Titan''s Bane, Death Metal, Leviathan''s Hide, Jade Scepter, The Crusher, Void
+    Shield.'
   slot_scores:
     Berserker's Shield:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
-      win: 0.6
-      pick: 0.0
+      win: 0.63
+      pick: 0.01
       fit: 0.37
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.51
     Runeforged Hammer:
       total: 0.55
       efficiency: 0.57
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.56
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.6
+      win: 0.58
       pick: 0.0
       fit: 0.45
+  community_ordered:
+  - Jotunn's Revenge
   starter: *id001
 ---

@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Tyrfing
-    reason: Conquest community 78% win over 50 matches (vs 57% on this god), taking
+    reason: Conquest community 77% win over 63 matches (vs 56% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

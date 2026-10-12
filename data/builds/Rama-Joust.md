@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Heartseeker
-    reason: Conquest community 75% win over 31 matches (vs 54% on this god), taking
+    reason: Conquest community 76% win over 34 matches (vs 53% on this god), taking
       the model's weakest slot from Heartseeker
   borrowed_from: Conquest
   starter: *id001
