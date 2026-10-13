@@ -399,21 +399,21 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Shield Splitter
+  - Void Shield
+  - Amanita Charm
   - Erosion
   - Stampede
   - Shogun's Ofuda
-  - Sanguine Lash
   flex_slots:
-  - Shield Splitter
+  - Void Shield
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,12 +429,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Shield Splitter:
-      total: 0.61
-      efficiency: 0.55
+    Void Shield:
+      total: 0.63
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.78
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Erosion:
       total: 0.7
       efficiency: 0.51
@@ -453,21 +459,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Sanguine Lash:
-      total: 0.61
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
   swaps:
   - added: Shogun's Ofuda
     removed: Void Stone
-    reason: Conquest community 77% win over 38 matches (vs 60% on this god), taking
+    reason: Conquest community 73% win over 52 matches (vs 59% on this god), taking
       the model's weakest slot from Void Stone
-  - added: Sanguine Lash
-    removed: Void Shield
-    reason: Conquest community 67% win over 218 matches (vs 60% on this god), taking
-      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -1053,4 +1053,76 @@ builds:
       fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Void Stone
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
+  - Doublet of Binding
+  flex_slots:
+  - Doublet of Binding
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Stone:
+      total: 0.6
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Spear of Desolation:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Rod of Tahuti:
+      total: 0.62
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Doublet of Binding:
+      total: 0.57
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  swaps:
+  - added: Obsidian Shard
+    removed: Genji's Guard
+    reason: Conquest community 63% win over 161 matches (vs 55% on this god), taking
+      the model's weakest slot from Genji's Guard
+  borrowed_from: Conquest
+  starter: *id001
+  aspect: Aspect of Thermotherapy
 ---

@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Pride
-  aspect_pick_rate: 0.16
-  aspect_win_rate: 0.48
+  aspect_pick_rate: 0.17
+  aspect_win_rate: 0.43
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.73
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Tyrfing
-      pick_rate: 0.18
-      win_rate: 0.6
+      pick_rate: 0.17
+      win_rate: 0.57
     - name: Avenging Blade
       pick_rate: 0.06
-      win_rate: 0.42
+      win_rate: 0.38
   - name: Dagger of Frenzy
-    pick_rate: 0.63
+    pick_rate: 0.61
     win_rate: 0.55
     alternates:
     - name: Tyrfing
-      pick_rate: 0.1
-      win_rate: 0.49
+      pick_rate: 0.11
+      win_rate: 0.48
     - name: Odysseus' Bow
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.52
   - name: Dominance
     pick_rate: 0.37
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: The Executioner
       pick_rate: 0.15
       win_rate: 0.6
     - name: Riptalon
-      pick_rate: 0.13
-      win_rate: 0.51
+      pick_rate: 0.12
+      win_rate: 0.52
   - name: Riptalon
     pick_rate: 0.27
-    win_rate: 0.51
+    win_rate: 0.52
     alternates:
     - name: The Executioner
-      pick_rate: 0.18
-      win_rate: 0.51
+      pick_rate: 0.17
+      win_rate: 0.49
     - name: Dominance
       pick_rate: 0.13
-      win_rate: 0.55
+      win_rate: 0.51
   - name: Deathbringer
-    pick_rate: 0.15
-    win_rate: 0.5
+    pick_rate: 0.16
+    win_rate: 0.52
     alternates:
     - name: Riptalon
-      pick_rate: 0.16
-      win_rate: 0.61
+      pick_rate: 0.15
+      win_rate: 0.58
     - name: The Executioner
       pick_rate: 0.14
       win_rate: 0.67
   - name: Hunter's Bow
     pick_rate: 0.1
-    win_rate: 0.45
+    win_rate: 0.36
     alternates:
-    - name: Deathbringer
-      pick_rate: 0.1
-      win_rate: 0.5
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.7
+      win_rate: 0.68
+    - name: Deathbringer
+      pick_rate: 0.08
+      win_rate: 0.5
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.4
-    win_rate: 0.62
+    win_rate: 0.59
   - name: Hunter's Cowl
-    pick_rate: 0.23
-    win_rate: 0.6
+    pick_rate: 0.22
+    win_rate: 0.61
   - name: Gilded Arrow
     pick_rate: 0.18
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/anhur/
-  last_verified: '2026-10-12'
-  god_win_rate: 0.5359628770301624
-  god_matches_won: 231
-  god_matches_played: 431
+  last_verified: '2026-10-13'
+  god_win_rate: 0.5215686274509804
+  god_matches_won: 266
+  god_matches_played: 510
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-12'
-  god_matches_analyzed: 6672
+  god_window_end: '2026-10-13'
+  god_matches_analyzed: 7865
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -97,11 +97,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Dominance
-  - The Executioner
   - Riptalon
+  - Deathbringer
   flex_slots:
   - Lernaean Bow
-  - The Executioner
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -135,34 +135,34 @@ builds:
       pick: 0.0
       fit: 0.3
     Tyrfing:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.71
     Dominance:
       total: 0.52
       efficiency: 0.45
-      win: 0.55
+      win: 0.54
       pick: 0.58
       fit: 0.6
-    The Executioner:
-      total: 0.5
-      efficiency: 0.35
-      win: 0.67
-      pick: 0.3
-      fit: 0.39
     Riptalon:
       total: 0.52
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.57
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.52
+      pick: 0.35
+      fit: 0.5
   community_ordered:
   - Tyrfing
   - Dominance
-  - The Executioner
   - Riptalon
+  - Deathbringer
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -176,7 +176,7 @@ builds:
   - Hydra's Lament
   - Riptalon
   flex_slots:
-  - Riptalon
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -211,15 +211,15 @@ builds:
       pick: 0.0
       fit: 0.24
     Tyrfing:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.5
     Dominance:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
-      win: 0.55
+      win: 0.54
       pick: 0.58
       fit: 0.5
     Hydra's Lament:
@@ -231,7 +231,7 @@ builds:
     Riptalon:
       total: 0.49
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.4
   community_ordered:
@@ -244,8 +244,8 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Dominance
   - Musashi's Dual Swords
+  - Riptalon
   - Demon Blade
   - Deathbringer
   flex_slots:
@@ -278,23 +278,23 @@ builds:
       pick: 0.0
       fit: 0.28
     Tyrfing:
-      total: 0.55
+      total: 0.53
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.66
-    Dominance:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.55
-      pick: 0.58
-      fit: 0.55
     Musashi's Dual Swords:
       total: 0.48
       efficiency: 0.46
       win: 0.53
       pick: 0.0
       fit: 0.52
+    Riptalon:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.52
+      pick: 0.45
+      fit: 0.55
     Demon Blade:
       total: 0.49
       efficiency: 0.38
@@ -302,14 +302,14 @@ builds:
       pick: 0.0
       fit: 0.79
     Deathbringer:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.5
-      pick: 0.32
+      win: 0.52
+      pick: 0.35
       fit: 0.52
   community_ordered:
   - Tyrfing
-  - Dominance
+  - Riptalon
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -322,7 +322,7 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
+  - Tyrfing
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -365,15 +365,15 @@ builds:
       pick: 0.0
       fit: 0.47
     Tyrfing:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.49
     Riptalon:
       total: 0.53
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.66
     Amanita Charm:
@@ -416,7 +416,7 @@ builds:
     Titan''s Bane, The Crusher, Lernaean Bow, Toxic Blade, Hydra''s Lament, Golden
     Blade, Avatar''s Parashu, Pendulum Blade, Demon Blade, Musashi''s Dual Swords,
     Oath-Sworn Spear, Transcendence, Qin''s Blade, Runeforged Hammer, Arondight, Damaru,
-    Rage, Berserker''s Shield, Avenging Blade, Barbed Carver.'
+    Rage, Berserker''s Shield, Barbed Carver, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -425,10 +425,10 @@ builds:
       pick: 0.0
       fit: 0.5
     Tyrfing:
-      total: 0.53
+      total: 0.51
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.54
     The Executioner:
       total: 0.53
@@ -437,9 +437,9 @@ builds:
       pick: 0.3
       fit: 0.61
     Riptalon:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.69
     Silverbranch Bow:
@@ -498,15 +498,15 @@ builds:
       pick: 0.0
       fit: 0.22
     Tyrfing:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.7
     Dominance:
       total: 0.51
       efficiency: 0.45
-      win: 0.55
+      win: 0.54
       pick: 0.58
       fit: 0.52
     The Executioner:
@@ -518,7 +518,7 @@ builds:
     Riptalon:
       total: 0.52
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.59
     Silverbranch Bow:
@@ -543,7 +543,7 @@ builds:
   - Riptalon
   - Arondight
   flex_slots:
-  - Riptalon
+  - Dominance
   - Arondight
   situational_swaps:
   - vs_tag: heavy_cc
@@ -573,10 +573,10 @@ builds:
       pick: 0.0
       fit: 0.43
     Tyrfing:
-      total: 0.52
+      total: 0.5
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.47
     Hydra's Lament:
       total: 0.5
@@ -587,13 +587,13 @@ builds:
     Dominance:
       total: 0.49
       efficiency: 0.45
-      win: 0.55
+      win: 0.54
       pick: 0.58
       fit: 0.39
     Riptalon:
       total: 0.49
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.39
     Arondight:
@@ -658,15 +658,15 @@ builds:
       pick: 0.0
       fit: 0.3
     Tyrfing:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
-      win: 0.6
-      pick: 0.18
+      win: 0.57
+      pick: 0.17
       fit: 0.71
     Riptalon:
       total: 0.52
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.45
       fit: 0.57
     Tekko-Kagi:

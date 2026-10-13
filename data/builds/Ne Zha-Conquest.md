@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Righteous Flame
-  aspect_pick_rate: 0.26
+  aspect_pick_rate: 0.28
   aspect_win_rate: 0.42
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.39
-    win_rate: 0.58
+    win_rate: 0.54
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.11
-      win_rate: 0.41
+      win_rate: 0.43
     - name: Hydra's Lament
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.46
   - name: Hydra's Lament
-    pick_rate: 0.18
-    win_rate: 0.53
+    pick_rate: 0.19
+    win_rate: 0.49
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.1
-      win_rate: 0.43
+      pick_rate: 0.09
+      win_rate: 0.4
     - name: Deathbringer
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.47
   - name: Deathbringer
-    pick_rate: 0.21
-    win_rate: 0.59
+    pick_rate: 0.2
+    win_rate: 0.55
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.07
-      win_rate: 0.41
+      win_rate: 0.42
     - name: Jotunn's Revenge
       pick_rate: 0.06
-      win_rate: 0.43
+      win_rate: 0.47
   - name: Heartseeker
-    pick_rate: 0.09
-    win_rate: 0.55
+    pick_rate: 0.08
+    win_rate: 0.57
     alternates:
     - name: Deathbringer
       pick_rate: 0.19
-      win_rate: 0.5
+      win_rate: 0.46
     - name: Freya's Tears
       pick_rate: 0.07
-      win_rate: 0.35
+      win_rate: 0.39
   - name: Titan's Bane
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.56
     alternates:
     - name: Heartseeker
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.43
     - name: The Reaper
       pick_rate: 0.05
-      win_rate: 0.4
-  - name: Skeggox
-    pick_rate: 0.07
-    win_rate: 0.56
+      win_rate: 0.45
+  - name: Axe
+    pick_rate: 0.06
+    win_rate: 0.7
     alternates:
-    - name: Axe
-      pick_rate: 0.07
-      win_rate: 0.78
-    - name: Titan's Bane
+    - name: Skeggox
       pick_rate: 0.06
+      win_rate: 0.56
+    - name: Titan's Bane
+      pick_rate: 0.05
       win_rate: 0.63
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.22
-    win_rate: 0.67
+    pick_rate: 0.21
+    win_rate: 0.66
   - name: Bumba's Hammer
-    pick_rate: 0.17
-    win_rate: 0.54
+    pick_rate: 0.16
+    win_rate: 0.52
   - name: Bluestone Pendant
     pick_rate: 0.11
-    win_rate: 0.36
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/ne-zha/
-  last_verified: '2026-10-12'
-  god_win_rate: 0.5
-  god_matches_won: 119
-  god_matches_played: 238
+  last_verified: '2026-10-13'
+  god_win_rate: 0.48507462686567165
+  god_matches_won: 130
+  god_matches_played: 268
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-12'
-  god_matches_analyzed: 6672
+  god_window_end: '2026-10-13'
+  god_matches_analyzed: 7865
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -95,12 +95,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - Pendulum Blade
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Pendulum Blade
+  - The Crusher
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,51 +116,50 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Pendulum Blade, The Crusher, Arondight, Avatar''s Parashu, Tekko-Kagi,
-    Transcendence, Runeforged Hammer, Avenging Blade, The Reaper, Lernaean Bow, Shield
-    Splitter, Dominance, Oath-Sworn Spear, Barbed Carver, Tyrfing, Breastplate of
-    Valor, Bloodforge, Genji''s Guard, Eye of the Storm, Damaru, Daybreak Gavel, Rage,
-    Musashi''s Dual Swords, Golden Blade, Sanguine Lash.'
+    this god: Heartseeker, Pendulum Blade, The Crusher, Arondight, Avatar''s Parashu,
+    Tekko-Kagi, The Reaper, Transcendence, Runeforged Hammer, Avenging Blade, Lernaean
+    Bow, Shield Splitter, Dominance, Oath-Sworn Spear, Barbed Carver, Tyrfing, Breastplate
+    of Valor, Bloodforge, Genji''s Guard, Eye of the Storm, Damaru, Daybreak Gavel,
+    Rage, Musashi''s Dual Swords, Golden Blade, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.68
+      total: 0.66
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 1.0
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.56
-      efficiency: 0.54
-      win: 0.53
-      pick: 0.25
-      fit: 0.77
     Pendulum Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.42
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 1.0
+    The Crusher:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.54
+      pick: 0.0
+      fit: 0.88
     Heartseeker:
       total: 0.57
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.57
+      pick: 0.13
       fit: 0.98
     Titan's Bane:
       total: 0.56
       efficiency: 0.47
       win: 0.56
-      pick: 0.19
+      pick: 0.17
       fit: 0.88
   community_ordered:
   - Jotunn's Revenge
-  - Hydra's Lament
   - Heartseeker
   - Titan's Bane
   starter: &id001
@@ -191,48 +190,48 @@ builds:
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: The
-    Crusher, Transcendence, Arondight, Pendulum Blade, Avatar''s Parashu, Runeforged
-    Hammer, Tekko-Kagi, Avenging Blade, Dominance, Breastplate of Valor, Lernaean
-    Bow, Genji''s Guard, Shield Splitter, Oath-Sworn Spear, The Reaper, Daybreak Gavel,
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Heartseeker,
+    The Crusher, Transcendence, Arondight, Pendulum Blade, Avatar''s Parashu, Runeforged
+    Hammer, Tekko-Kagi, Avenging Blade, The Reaper, Dominance, Breastplate of Valor,
+    Lernaean Bow, Genji''s Guard, Shield Splitter, Oath-Sworn Spear, Daybreak Gavel,
     Barbed Carver, Tyrfing, Bloodforge, Yogi''s Necklace, Eye of the Storm, Damaru,
     Rage, Eye of Erebus, Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.62
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 0.71
     Transcendence:
       total: 0.49
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.39
     Hydra's Lament:
-      total: 0.54
+      total: 0.52
       efficiency: 0.54
-      win: 0.53
-      pick: 0.25
+      win: 0.49
+      pick: 0.26
       fit: 0.63
     The Crusher:
-      total: 0.5
+      total: 0.49
       efficiency: 0.47
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.53
+      total: 0.54
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.57
+      pick: 0.13
       fit: 0.77
     Titan's Bane:
       total: 0.51
       efficiency: 0.47
       win: 0.56
-      pick: 0.19
+      pick: 0.17
       fit: 0.57
   community_ordered:
   - Jotunn's Revenge
@@ -245,12 +244,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - Pendulum Blade
+  - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Pendulum Blade
+  - The Crusher
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -266,51 +265,50 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Pendulum Blade, The Crusher, Arondight, Avatar''s Parashu, Tekko-Kagi, Transcendence,
-    Runeforged Hammer, Avenging Blade, Breastplate of Valor, The Reaper, Genji''s
-    Guard, Lernaean Bow, Shield Splitter, Dominance, Daybreak Gavel, Oath-Sworn Spear,
-    Barbed Carver, Tyrfing, Eye of Erebus, Screeching Gargoyle, Bloodforge, Chandra''s
-    Grace, Silverbranch Bow, Riptalon, Yogi''s Necklace, Freya''s Tears.'
+    god: Heartseeker, Pendulum Blade, The Crusher, Arondight, Avatar''s Parashu, Tekko-Kagi,
+    The Reaper, Transcendence, Runeforged Hammer, Avenging Blade, Breastplate of Valor,
+    Genji''s Guard, Lernaean Bow, Shield Splitter, Dominance, Daybreak Gavel, Oath-Sworn
+    Spear, Barbed Carver, Tyrfing, Eye of Erebus, Screeching Gargoyle, Bloodforge,
+    Chandra''s Grace, Silverbranch Bow, Riptalon, Yogi''s Necklace, Freya''s Tears.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.63
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 0.78
     Transcendence:
-      total: 0.47
+      total: 0.46
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.22
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.54
-      win: 0.53
-      pick: 0.25
-      fit: 0.54
     Pendulum Blade:
       total: 0.51
       efficiency: 0.42
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.78
-    Heartseeker:
-      total: 0.53
+    The Crusher:
+      total: 0.51
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.54
+      pick: 0.0
+      fit: 0.66
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.57
+      pick: 0.13
       fit: 0.76
     Titan's Bane:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
       win: 0.56
-      pick: 0.19
+      pick: 0.17
       fit: 0.66
   community_ordered:
   - Jotunn's Revenge
-  - Hydra's Lament
   - Heartseeker
   - Titan's Bane
   starter: *id001
@@ -341,46 +339,46 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Runeforged Hammer,
-    Shield Splitter, Genji''s Guard, Breastplate of Valor, Eye of the Storm, Berserker''s
-    Shield, Erosion, Yogi''s Necklace, Eye of Providence, Draconic Scale, Phoenix
-    Feather, Chandra''s Grace, Avenging Blade, Glorious Pridwen, Stone of Binding,
-    Midgardian Mail, Daybreak Gavel, Hide of the Nemean Lion, The Crusher, Magi''s
-    Cloak, Shifter''s Shield, The Reaper, Freya''s Tears.'
+    Shield Splitter, Heartseeker, Genji''s Guard, Breastplate of Valor, Eye of the
+    Storm, Berserker''s Shield, Erosion, Yogi''s Necklace, Eye of Providence, Draconic
+    Scale, Phoenix Feather, Chandra''s Grace, Avenging Blade, Glorious Pridwen, Stone
+    of Binding, Midgardian Mail, The Reaper, Daybreak Gavel, Hide of the Nemean Lion,
+    The Crusher, Magi''s Cloak, Shifter''s Shield, Freya''s Tears.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.58
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.62
     Shield Splitter:
-      total: 0.52
+      total: 0.51
       efficiency: 0.55
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.53
     Shield of the Phoenix:
-      total: 0.55
+      total: 0.54
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.77
     Runeforged Hammer:
       total: 0.52
       efficiency: 0.57
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Amanita Charm:
       total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.82
   community_ordered:
@@ -412,47 +410,47 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Crusher, Pendulum Blade, Avatar''s Parashu, Tekko-Kagi, Avenging
-    Blade, Arondight, The Reaper, Oath-Sworn Spear, Transcendence, Runeforged Hammer,
-    Lernaean Bow, Screeching Gargoyle, Shield Splitter, Dominance, Silverbranch Bow,
-    Riptalon, Breastplate of Valor, Genji''s Guard, Daybreak Gavel, Barbed Carver,
+    for this god: Heartseeker, The Crusher, Pendulum Blade, Avatar''s Parashu, Tekko-Kagi,
+    The Reaper, Avenging Blade, Arondight, Oath-Sworn Spear, Transcendence, Runeforged
+    Hammer, Lernaean Bow, Screeching Gargoyle, Shield Splitter, Dominance, Silverbranch
+    Bow, Riptalon, Breastplate of Valor, Genji''s Guard, Daybreak Gavel, Barbed Carver,
     Tyrfing, Toxic Blade, Bloodforge, Eye of the Storm, Damaru.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.68
+      total: 0.66
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 1.0
     Transcendence:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.3
     Pendulum Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.42
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 1.0
     The Crusher:
       total: 0.55
       efficiency: 0.47
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.95
     Heartseeker:
-      total: 0.57
+      total: 0.58
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.57
+      pick: 0.13
       fit: 1.0
     Titan's Bane:
       total: 0.57
       efficiency: 0.47
       win: 0.56
-      pick: 0.19
+      pick: 0.17
       fit: 0.95
   community_ordered:
   - Jotunn's Revenge
@@ -485,46 +483,46 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Riptalon, Tyrfing, Silverbranch Bow, Lernaean Bow, Tekko-Kagi, Golden
-    Blade, Toxic Blade, Dominance, Qin''s Blade, The Crusher, Sun Beam Bow, Arondight,
-    Pendulum Blade, Transcendence, Berserker''s Shield, Avatar''s Parashu, Runeforged
-    Hammer, Dagger of Frenzy, Avenging Blade, Barbed Carver, The Reaper, Vital Amplifier,
-    Hastened Fatalis, Bloodforge, The Executioner, Daybreak Gavel.'
+    this god: Riptalon, Tyrfing, Silverbranch Bow, Lernaean Bow, Tekko-Kagi, Heartseeker,
+    Golden Blade, Toxic Blade, Dominance, Qin''s Blade, The Crusher, The Reaper, Sun
+    Beam Bow, Arondight, Pendulum Blade, Transcendence, Berserker''s Shield, Avatar''s
+    Parashu, Runeforged Hammer, Dagger of Frenzy, Avenging Blade, Barbed Carver, Vital
+    Amplifier, Hastened Fatalis, Bloodforge, The Executioner, Daybreak Gavel.'
   slot_scores:
     Lernaean Bow:
       total: 0.51
       efficiency: 0.52
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 0.42
     Tyrfing:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.74
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.64
     Tekko-Kagi:
-      total: 0.51
+      total: 0.5
       efficiency: 0.49
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.6
   community_ordered:
@@ -556,48 +554,48 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Pendulum Blade, Arondight, Breastplate
-    of Valor, Genji''s Guard, The Crusher, Avatar''s Parashu, Eye of Erebus, Transcendence,
-    Screeching Gargoyle, Runeforged Hammer, Chandra''s Grace, Tekko-Kagi, Avenging
-    Blade, Shield of the Phoenix, Daybreak Gavel, Lernaean Bow, Gladiator''s Shield,
-    Shield Splitter, Dominance, Prophetic Cloak, The Reaper, Oath-Sworn Spear, Heartwood
-    Charm, Barbed Carver, Tyrfing, Freya''s Tears.'
+    + fit + win/pick). Underrated for this god: Pendulum Blade, Arondight, Heartseeker,
+    Breastplate of Valor, Genji''s Guard, The Crusher, Avatar''s Parashu, Eye of Erebus,
+    Transcendence, Screeching Gargoyle, Runeforged Hammer, Chandra''s Grace, Tekko-Kagi,
+    Avenging Blade, The Reaper, Shield of the Phoenix, Daybreak Gavel, Lernaean Bow,
+    Gladiator''s Shield, Shield Splitter, Dominance, Prophetic Cloak, Oath-Sworn Spear,
+    Heartwood Charm, Barbed Carver, Tyrfing, Freya''s Tears.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.64
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 0.85
     Transcendence:
       total: 0.45
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.15
     Hydra's Lament:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
-      win: 0.53
-      pick: 0.25
+      win: 0.49
+      pick: 0.26
       fit: 0.75
     Arondight:
       total: 0.52
       efficiency: 0.5
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.65
     Pendulum Blade:
       total: 0.52
       efficiency: 0.42
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.85
     Heartseeker:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.57
+      pick: 0.13
       fit: 0.55
   community_ordered:
   - Jotunn's Revenge
@@ -630,47 +628,47 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Pendulum Blade, The Crusher, The Reaper, Arondight, Avatar''s
-    Parashu, Tekko-Kagi, Transcendence, Runeforged Hammer, Avenging Blade, Lernaean
-    Bow, Shield Splitter, Dominance, Oath-Sworn Spear, Barbed Carver, Tyrfing, Breastplate
-    of Valor, Bloodforge, Genji''s Guard, Eye of the Storm, Damaru, Daybreak Gavel,
-    Rage, Musashi''s Dual Swords, Golden Blade, Sanguine Lash.'
+    Underrated for this god: Heartseeker, Pendulum Blade, The Crusher, The Reaper,
+    Arondight, Avatar''s Parashu, Tekko-Kagi, Transcendence, Runeforged Hammer, Avenging
+    Blade, Lernaean Bow, Shield Splitter, Dominance, Oath-Sworn Spear, Barbed Carver,
+    Tyrfing, Breastplate of Valor, Bloodforge, Genji''s Guard, Eye of the Storm, Damaru,
+    Daybreak Gavel, Rage, Musashi''s Dual Swords, Golden Blade, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.68
+      total: 0.66
       efficiency: 0.72
-      win: 0.58
+      win: 0.54
       pick: 0.39
       fit: 1.0
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 0.44
     Hydra's Lament:
-      total: 0.56
+      total: 0.54
       efficiency: 0.54
-      win: 0.53
-      pick: 0.25
+      win: 0.49
+      pick: 0.26
       fit: 0.77
     Pendulum Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.42
-      win: 0.55
+      win: 0.54
       pick: 0.0
       fit: 1.0
     Heartseeker:
       total: 0.57
       efficiency: 0.47
-      win: 0.55
-      pick: 0.15
+      win: 0.57
+      pick: 0.13
       fit: 0.98
     Titan's Bane:
       total: 0.56
       efficiency: 0.47
       win: 0.56
-      pick: 0.19
+      pick: 0.17
       fit: 0.88
   community_ordered:
   - Jotunn's Revenge

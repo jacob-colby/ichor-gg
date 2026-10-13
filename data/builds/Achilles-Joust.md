@@ -460,4 +460,75 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Eye of the Storm
+  - Heartseeker
+  - Erosion
+  - Sanguine Lash
+  flex_slots:
+  - Eye of the Storm
+  - Sanguine Lash
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Jotunn's Revenge:
+      total: 0.63
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Eye of the Storm:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Heartseeker:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Erosion:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Sanguine Lash:
+      total: 0.54
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Sanguine Lash
+    removed: Runeforged Hammer
+    reason: Conquest community 62% win over 69 matches (vs 50% on this god), taking
+      the model's weakest slot from Runeforged Hammer
+  borrowed_from: Conquest
+  starter: *id001
 ---

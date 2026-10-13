@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Toxic Blade
-    reason: Conquest community 76% win over 34 matches (vs 53% on this god), taking
+    reason: Conquest community 77% win over 35 matches (vs 54% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

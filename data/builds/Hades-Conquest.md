@@ -10,41 +10,41 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.2
-    win_rate: 0.49
+    win_rate: 0.46
     alternates:
     - name: The World Stone
       pick_rate: 0.18
-      win_rate: 0.55
+      win_rate: 0.57
     - name: Blood-Bound Book
-      pick_rate: 0.14
-      win_rate: 0.62
+      pick_rate: 0.15
+      win_rate: 0.66
   - name: The World Stone
-    pick_rate: 0.23
-    win_rate: 0.58
+    pick_rate: 0.24
+    win_rate: 0.57
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.15
+      pick_rate: 0.14
       win_rate: 0.57
     - name: Spear of Desolation
       pick_rate: 0.11
-      win_rate: 0.45
+      win_rate: 0.5
   - name: Chronos' Pendant
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.46
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.18
-      win_rate: 0.73
+      pick_rate: 0.17
+      win_rate: 0.71
     - name: The World Stone
-      pick_rate: 0.15
+      pick_rate: 0.14
       win_rate: 0.52
   - name: Rod of Tahuti
     pick_rate: 0.32
     win_rate: 0.66
     alternates:
     - name: The World Stone
-      pick_rate: 0.09
-      win_rate: 0.47
+      pick_rate: 0.1
+      win_rate: 0.53
     - name: Blood-Bound Book
       pick_rate: 0.06
       win_rate: 0.64
@@ -53,40 +53,40 @@ builds:
     win_rate: 0.86
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.08
-      win_rate: 0.79
+      pick_rate: 0.09
+      win_rate: 0.8
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.54
   - name: Dreamer's Idol
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.83
     alternates:
     - name: Killing Stone
-      pick_rate: 0.08
-      win_rate: 0.44
+      pick_rate: 0.09
+      win_rate: 0.5
     - name: Evil Eye
-      pick_rate: 0.07
-      win_rate: 0.13
+      pick_rate: 0.08
+      win_rate: 0.11
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.45
+    pick_rate: 0.44
     win_rate: 0.63
   - name: Conduit Gem
     pick_rate: 0.28
     win_rate: 0.4
   - name: Pendulum of the Ages
-    pick_rate: 0.06
-    win_rate: 0.5
+    pick_rate: 0.08
+    win_rate: 0.6
   source_url: https://smitebrain.com/gods/hades/
-  last_verified: '2026-10-12'
-  god_win_rate: 0.5297297297297298
-  god_matches_won: 98
-  god_matches_played: 185
+  last_verified: '2026-10-13'
+  god_win_rate: 0.5431472081218274
+  god_matches_won: 107
+  god_matches_played: 197
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-12'
-  god_matches_analyzed: 6672
+  god_window_end: '2026-10-13'
+  god_matches_analyzed: 7865
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -156,7 +156,7 @@ builds:
       total: 0.64
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.47
   community_ordered:
   - Helm of Darkness
@@ -201,7 +201,7 @@ builds:
       total: 0.49
       efficiency: 0.51
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.29
     Genji's Guard:
       total: 0.52
@@ -231,7 +231,7 @@ builds:
       total: 0.62
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.35
   community_ordered:
   - Book of Thoth
@@ -305,7 +305,7 @@ builds:
       total: 0.63
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.4
   community_ordered:
   - Helm of Darkness
@@ -339,7 +339,7 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Rod of Asclepius, Shield of the Phoenix, Gluttonous
-    Grimoire, Kinetic Cuirass, Ethereal Staff, Freya''s Tears, Blood-Bound Book, Spear
+    Grimoire, Blood-Bound Book, Kinetic Cuirass, Ethereal Staff, Freya''s Tears, Spear
     of the Magus, Shifter''s Shield, Genji''s Guard, Breastplate of Valor, Lifebinder,
     Obsidian Shard, Helm of Radiance, Sphere of Negation, Erosion, Yogi''s Necklace,
     Eye of Providence, Draconic Scale, Phoenix Feather, Jade Scepter, Chandra''s Grace,
@@ -364,10 +364,10 @@ builds:
       pick: 0.53
       fit: 0.39
     Dreamer's Idol:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.39
     Amanita Charm:
       total: 0.61
@@ -434,8 +434,8 @@ builds:
     The World Stone:
       total: 0.54
       efficiency: 0.52
-      win: 0.58
-      pick: 0.31
+      win: 0.57
+      pick: 0.33
       fit: 0.58
     Spear of the Magus:
       total: 0.55
@@ -453,7 +453,7 @@ builds:
       total: 0.65
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.58
   community_ordered:
   - Helm of Darkness
@@ -487,8 +487,8 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Nimble Ring, Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s
-    Guard, Spear of the Magus, Breastplate of Valor, Blood-Bound Book, Kinetic Cuirass,
+    this god: Nimble Ring, Gluttonous Grimoire, Soul Gem, Blood-Bound Book, Amanita
+    Charm, Genji''s Guard, Spear of the Magus, Breastplate of Valor, Kinetic Cuirass,
     Freya''s Tears, Obsidian Shard, Helm of Radiance, Bragi''s Harp, Rod of Asclepius,
     Bracer of The Abyss, Shifter''s Shield, Doom Orb, Jade Scepter, Ancient Signet,
     Wish-Granting Pearl, Daybreak Gavel, Shield of the Phoenix, Eye of Providence,
@@ -528,7 +528,7 @@ builds:
       total: 0.6
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.25
   community_ordered:
   - Helm of Darkness
@@ -602,7 +602,7 @@ builds:
       total: 0.61
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.26
   community_ordered:
   - Helm of Darkness
@@ -675,10 +675,10 @@ builds:
       pick: 0.53
       fit: 0.32
     Dreamer's Idol:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.32
   community_ordered:
   - Helm of Darkness
@@ -724,7 +724,7 @@ builds:
       total: 0.48
       efficiency: 0.51
       win: 0.57
-      pick: 0.2
+      pick: 0.19
       fit: 0.21
     Jotunn's Revenge:
       total: 0.58
@@ -751,10 +751,10 @@ builds:
       pick: 0.53
       fit: 0.39
     Dreamer's Idol:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.83
-      pick: 0.34
+      pick: 0.31
       fit: 0.39
   community_ordered:
   - Book of Thoth
@@ -807,9 +807,9 @@ builds:
       pick: 0.0
       fit: 0.36
     Spear of Desolation:
-      total: 0.52
+      total: 0.51
       efficiency: 0.57
-      win: 0.49
+      win: 0.46
       pick: 0.2
       fit: 0.6
     Gluttonous Grimoire:

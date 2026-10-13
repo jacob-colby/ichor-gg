@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Devourer's Gauntlet
     removed: Shield Splitter
-    reason: Conquest community 73% win over 45 matches (vs 57% on this god), taking
+    reason: Conquest community 74% win over 49 matches (vs 57% on this god), taking
       the model's weakest slot from Shield Splitter
   borrowed_from: Conquest
   starter: *id001
