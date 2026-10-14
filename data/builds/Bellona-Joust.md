@@ -398,55 +398,49 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
-  - Shield Splitter
-  - Amanita Charm
+  - Shell of Rebuke
+  - Freya's Tears
   - Erosion
   - Shogun's Ofuda
+  - Sanguine Lash
   flex_slots:
-  - Stygian Anchor
   - Shogun's Ofuda
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.59
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Shield Splitter:
-      total: 0.61
-      efficiency: 0.55
+    Shell of Rebuke:
+      total: 0.36
+      efficiency: 0.28
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
+      fit: 0.43
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.54
     Erosion:
       total: 0.65
       efficiency: 0.51
@@ -459,11 +453,25 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Sanguine Lash:
+      total: 0.56
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   swaps:
-  - added: Shogun's Ofuda
+  - added: Shell of Rebuke
     removed: Void Shield
-    reason: Conquest community 73% win over 52 matches (vs 59% on this god), taking
+    reason: Conquest community 76% win over 43 matches (vs 59% on this god), taking
       the model's weakest slot from Void Shield
+  - added: Shogun's Ofuda
+    removed: Stygian Anchor
+    reason: Conquest community 73% win over 55 matches (vs 59% on this god), taking
+      the model's weakest slot from Stygian Anchor
+  - added: Sanguine Lash
+    removed: Shield Splitter
+    reason: Conquest community 65% win over 325 matches (vs 59% on this god), taking
+      the model's weakest slot from Shield Splitter
   borrowed_from: Conquest
   starter: *id001
 ---
