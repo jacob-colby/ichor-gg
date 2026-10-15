@@ -9,84 +9,84 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Rage
-    pick_rate: 0.61
+    pick_rate: 0.62
     win_rate: 0.5
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.14
-      win_rate: 0.42
+      win_rate: 0.43
     - name: Hydra's Lament
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.4
   - name: Dagger of Frenzy
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.5
     alternates:
-    - name: Hydra's Lament
-      pick_rate: 0.2
-      win_rate: 0.49
     - name: Rage
       pick_rate: 0.19
-      win_rate: 0.44
+      win_rate: 0.45
+    - name: Hydra's Lament
+      pick_rate: 0.19
+      win_rate: 0.49
   - name: Deathbringer
-    pick_rate: 0.5
-    win_rate: 0.5
+    pick_rate: 0.49
+    win_rate: 0.52
     alternates:
     - name: Dagger of Frenzy
-      pick_rate: 0.13
+      pick_rate: 0.14
       win_rate: 0.45
     - name: Musashi's Dual Swords
       pick_rate: 0.07
-      win_rate: 0.59
+      win_rate: 0.56
   - name: Riptalon
-    pick_rate: 0.18
+    pick_rate: 0.19
     win_rate: 0.55
     alternates:
     - name: Deathbringer
-      pick_rate: 0.18
-      win_rate: 0.44
+      pick_rate: 0.17
+      win_rate: 0.43
     - name: Musashi's Dual Swords
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.58
   - name: Dominance
     pick_rate: 0.12
-    win_rate: 0.59
+    win_rate: 0.61
     alternates:
     - name: Riptalon
-      pick_rate: 0.13
-      win_rate: 0.64
+      pick_rate: 0.14
+      win_rate: 0.63
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.6
+      win_rate: 0.62
   - name: Blinking Abyss
-    pick_rate: 0.12
-    win_rate: 0.67
+    pick_rate: 0.11
+    win_rate: 0.63
     alternates:
+    - name: Skeggox
+      pick_rate: 0.08
+      win_rate: 0.38
     - name: Titan's Bane
       pick_rate: 0.08
       win_rate: 0.46
-    - name: Skeggox
-      pick_rate: 0.08
-      win_rate: 0.42
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.29
     win_rate: 0.53
   - name: Hunter's Cowl
-    pick_rate: 0.26
+    pick_rate: 0.28
     win_rate: 0.62
   - name: Leather Cowl
     pick_rate: 0.15
-    win_rate: 0.35
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/mercury/
-  last_verified: '2026-10-14'
-  god_win_rate: 0.4940239043824701
-  god_matches_won: 124
-  god_matches_played: 251
+  last_verified: '2026-10-15'
+  god_win_rate: 0.4945054945054945
+  god_matches_won: 135
+  god_matches_played: 273
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-14'
-  god_matches_analyzed: 8861
+  god_window_end: '2026-10-15'
+  god_matches_analyzed: 9899
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -138,18 +138,18 @@ builds:
       total: 0.52
       efficiency: 0.54
       win: 0.49
-      pick: 0.27
+      pick: 0.26
       fit: 0.66
     Deathbringer:
-      total: 0.51
+      total: 0.52
       efficiency: 0.51
-      win: 0.5
-      pick: 0.78
+      win: 0.52
+      pick: 0.76
       fit: 0.45
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
-      win: 0.59
+      win: 0.61
       pick: 0.26
       fit: 0.56
     Heartseeker:
@@ -212,18 +212,18 @@ builds:
       total: 0.51
       efficiency: 0.54
       win: 0.49
-      pick: 0.27
+      pick: 0.26
       fit: 0.59
     Deathbringer:
       total: 0.49
       efficiency: 0.51
-      win: 0.5
-      pick: 0.78
+      win: 0.52
+      pick: 0.76
       fit: 0.3
     Dominance:
-      total: 0.51
+      total: 0.52
       efficiency: 0.45
-      win: 0.59
+      win: 0.61
       pick: 0.26
       fit: 0.5
     Heartseeker:
@@ -247,7 +247,7 @@ builds:
   - Riptalon
   - Heartseeker
   flex_slots:
-  - Dominance
+  - Riptalon
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -285,19 +285,19 @@ builds:
       total: 0.5
       efficiency: 0.54
       win: 0.49
-      pick: 0.27
+      pick: 0.26
       fit: 0.51
     Dominance:
-      total: 0.49
+      total: 0.5
       efficiency: 0.45
-      win: 0.59
+      win: 0.61
       pick: 0.26
       fit: 0.35
     Riptalon:
       total: 0.49
       efficiency: 0.46
       win: 0.55
-      pick: 0.3
+      pick: 0.32
       fit: 0.45
     Heartseeker:
       total: 0.49
@@ -425,10 +425,10 @@ builds:
       pick: 0.0
       fit: 0.82
     Riptalon:
-      total: 0.52
+      total: 0.53
       efficiency: 0.46
       win: 0.55
-      pick: 0.3
+      pick: 0.32
       fit: 0.68
     The Crusher:
       total: 0.52
@@ -503,16 +503,16 @@ builds:
       pick: 0.0
       fit: 0.72
     Dominance:
-      total: 0.51
+      total: 0.52
       efficiency: 0.45
-      win: 0.59
+      win: 0.61
       pick: 0.26
       fit: 0.53
     Riptalon:
       total: 0.55
       efficiency: 0.51
       win: 0.55
-      pick: 0.3
+      pick: 0.32
       fit: 0.72
     Silverbranch Bow:
       total: 0.5
@@ -529,13 +529,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Hydra's Lament
+  - Deathbringer
   - Dominance
   - Arondight
-  - Riptalon
   - Pendulum Blade
   flex_slots:
   - Dominance
-  - Riptalon
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -567,12 +567,18 @@ builds:
       total: 0.53
       efficiency: 0.54
       win: 0.49
-      pick: 0.27
+      pick: 0.26
       fit: 0.69
-    Dominance:
+    Deathbringer:
       total: 0.48
+      efficiency: 0.51
+      win: 0.52
+      pick: 0.76
+      fit: 0.18
+    Dominance:
+      total: 0.49
       efficiency: 0.45
-      win: 0.59
+      win: 0.61
       pick: 0.26
       fit: 0.29
     Arondight:
@@ -581,12 +587,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Riptalon:
-      total: 0.47
-      efficiency: 0.46
-      win: 0.55
-      pick: 0.3
-      fit: 0.34
     Pendulum Blade:
       total: 0.49
       efficiency: 0.42
@@ -595,8 +595,8 @@ builds:
       fit: 0.77
   community_ordered:
   - Hydra's Lament
+  - Deathbringer
   - Dominance
-  - Riptalon
   starter: *id001
 - source: suggested
   archetype: model
@@ -646,7 +646,7 @@ builds:
       total: 0.52
       efficiency: 0.54
       win: 0.49
-      pick: 0.27
+      pick: 0.26
       fit: 0.66
     Tekko-Kagi:
       total: 0.51

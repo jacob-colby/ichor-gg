@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Triumphant
-  aspect_pick_rate: 0.13
+  aspect_pick_rate: 0.12
   aspect_win_rate: 0.5
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.42
+    pick_rate: 0.41
     win_rate: 0.57
     alternates:
     - name: Stampede
-      pick_rate: 0.25
-      win_rate: 0.61
+      pick_rate: 0.24
+      win_rate: 0.62
     - name: Yogi's Necklace
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.55
   - name: Stampede
-    pick_rate: 0.28
-    win_rate: 0.49
+    pick_rate: 0.29
+    win_rate: 0.51
     alternates:
     - name: Genji's Guard
       pick_rate: 0.14
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.48
+      pick_rate: 0.09
+      win_rate: 0.52
   - name: Genji's Guard
     pick_rate: 0.17
-    win_rate: 0.47
+    win_rate: 0.48
     alternates:
     - name: Freya's Tears
       pick_rate: 0.15
-      win_rate: 0.61
+      win_rate: 0.66
     - name: Stampede
       pick_rate: 0.1
-      win_rate: 0.55
+      win_rate: 0.57
   - name: Freya's Tears
     pick_rate: 0.14
     win_rate: 0.7
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.56
     - name: Genji's Guard
       pick_rate: 0.1
-      win_rate: 0.68
+      win_rate: 0.66
   - name: Shell of Rebuke
-    pick_rate: 0.07
-    win_rate: 0.74
+    pick_rate: 0.08
+    win_rate: 0.78
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.09
+      pick_rate: 0.1
+      win_rate: 0.72
+    - name: Spirit Robe
+      pick_rate: 0.05
       win_rate: 0.71
-    - name: Veve Charm
-      pick_rate: 0.04
-      win_rate: 0.36
   - name: Engraved Guard
-    pick_rate: 0.09
-    win_rate: 0.79
+    pick_rate: 0.08
+    win_rate: 0.73
     alternates:
-    - name: Sage's Ring
+    - name: Freya's Tears
       pick_rate: 0.07
-      win_rate: 0.64
-    - name: Veve Charm
+      win_rate: 0.67
+    - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.8
+      win_rate: 0.64
   community_starters:
   - name: Selflessness
-    pick_rate: 0.41
-    win_rate: 0.48
+    pick_rate: 0.43
+    win_rate: 0.49
   - name: Heroism
-    pick_rate: 0.28
-    win_rate: 0.63
-  - name: Archmage's Gem
-    pick_rate: 0.08
-    win_rate: 0.57
+    pick_rate: 0.27
+    win_rate: 0.64
+  - name: Sundering Axe
+    pick_rate: 0.09
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/ganesha/
-  last_verified: '2026-10-14'
-  god_win_rate: 0.5592105263157895
-  god_matches_won: 170
-  god_matches_played: 304
+  last_verified: '2026-10-15'
+  god_win_rate: 0.5635838150289018
+  god_matches_won: 195
+  god_matches_played: 346
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-14'
-  god_matches_analyzed: 8861
+  god_window_end: '2026-10-15'
+  god_matches_analyzed: 9899
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -95,8 +95,8 @@ builds:
   slot_order:
   - Breastplate of Valor
   - Kinetic Cuirass
-  - Freya's Tears
   - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
@@ -135,18 +135,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.8
-    Freya's Tears:
-      total: 0.64
-      efficiency: 0.61
-      win: 0.7
-      pick: 0.23
-      fit: 0.65
     Shifter's Shield:
       total: 0.59
       efficiency: 0.55
       win: 0.64
       pick: 0.0
       fit: 0.7
+    Freya's Tears:
+      total: 0.64
+      efficiency: 0.61
+      win: 0.7
+      pick: 0.23
+      fit: 0.65
     Amanita Charm:
       total: 0.62
       efficiency: 0.65
@@ -314,8 +314,8 @@ builds:
   - Kinetic Cuirass
   - Bracer of The Abyss
   - Nimble Ring
-  - Freya's Tears
   - Bragi's Harp
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Bragi's Harp
@@ -359,18 +359,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.3
-    Freya's Tears:
-      total: 0.59
-      efficiency: 0.61
-      win: 0.7
-      pick: 0.23
-      fit: 0.33
     Bragi's Harp:
       total: 0.51
       efficiency: 0.44
       win: 0.64
       pick: 0.0
       fit: 0.44
+    Freya's Tears:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.7
+      pick: 0.23
+      fit: 0.33
     Amanita Charm:
       total: 0.57
       efficiency: 0.65
@@ -459,8 +459,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
   - Shield Splitter
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
@@ -507,18 +507,18 @@ builds:
       win: 0.64
       pick: 0.0
       fit: 0.51
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
-      win: 0.7
-      pick: 0.23
-      fit: 0.38
     Shield Splitter:
       total: 0.56
       efficiency: 0.55
       win: 0.64
       pick: 0.0
       fit: 0.51
+    Freya's Tears:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.7
+      pick: 0.23
+      fit: 0.38
     Amanita Charm:
       total: 0.58
       efficiency: 0.65
@@ -643,9 +643,9 @@ builds:
       pick: 0.0
       fit: 0.4
     Genji's Guard:
-      total: 0.51
+      total: 0.52
       efficiency: 0.66
-      win: 0.47
+      win: 0.48
       pick: 0.26
       fit: 0.4
     Kinetic Cuirass:

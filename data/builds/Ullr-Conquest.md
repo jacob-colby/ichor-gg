@@ -14,39 +14,39 @@ builds:
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.04
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Devourer's Gauntlet
-      pick_rate: 0.02
+      pick_rate: 0.01
       win_rate: 0.45
   - name: Hydra's Lament
     pick_rate: 0.68
-    win_rate: 0.51
+    win_rate: 0.52
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.23
-      win_rate: 0.54
+      pick_rate: 0.24
+      win_rate: 0.52
     - name: Transcendence
       pick_rate: 0.05
-      win_rate: 0.47
+      win_rate: 0.49
   - name: Jotunn's Revenge
-    pick_rate: 0.56
+    pick_rate: 0.55
     win_rate: 0.55
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.21
-      win_rate: 0.51
+      pick_rate: 0.23
+      win_rate: 0.5
     - name: The Crusher
       pick_rate: 0.05
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Heartseeker
     pick_rate: 0.59
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Titan's Bane
       pick_rate: 0.1
-      win_rate: 0.6
+      win_rate: 0.58
     - name: The Crusher
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.48
   - name: Titan's Bane
     pick_rate: 0.29
@@ -57,36 +57,36 @@ builds:
       win_rate: 0.59
     - name: The Crusher
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.52
   - name: Skeggox
     pick_rate: 0.12
-    win_rate: 0.49
+    win_rate: 0.5
     alternates:
     - name: Titan's Bane
       pick_rate: 0.15
       win_rate: 0.52
     - name: Blinking Abyss
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.51
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.59
     win_rate: 0.57
   - name: Bumba's Cudgel
-    pick_rate: 0.26
-    win_rate: 0.44
-  - name: Bluestone Brooch
-    pick_rate: 0.08
-    win_rate: 0.47
+    pick_rate: 0.27
+    win_rate: 0.46
+  - name: Hunter's Cowl
+    pick_rate: 0.09
+    win_rate: 0.57
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-10-14'
-  god_win_rate: 0.5152394775036284
-  god_matches_won: 355
-  god_matches_played: 689
+  last_verified: '2026-10-15'
+  god_win_rate: 0.5203679369250985
+  god_matches_won: 396
+  god_matches_played: 761
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-14'
-  god_matches_analyzed: 8861
+  god_window_end: '2026-10-15'
+  god_matches_analyzed: 9899
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -100,8 +100,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Transcendence
   - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -129,27 +129,27 @@ builds:
       pick: 0.92
       fit: 0.17
     Hydra's Lament:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.37
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.42
     Riptalon:
       total: 0.49
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.55
     Heartseeker:
       total: 0.53
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.52
     Titan's Bane:
@@ -202,7 +202,7 @@ builds:
     Lernaean Bow:
       total: 0.48
       efficiency: 0.52
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.44
     Transcendence:
@@ -214,19 +214,19 @@ builds:
     Hydra's Lament:
       total: 0.53
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.42
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.44
     Heartseeker:
       total: 0.53
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.55
     Titan's Bane:
@@ -284,30 +284,30 @@ builds:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.4
     Musashi's Dual Swords:
       total: 0.46
       efficiency: 0.46
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.43
     Demon Blade:
-      total: 0.46
+      total: 0.47
       efficiency: 0.38
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.52
+      total: 0.53
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.5
     Deathbringer:
-      total: 0.47
+      total: 0.48
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.43
   community_ordered:
@@ -325,8 +325,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Transcendence
   - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -354,27 +354,27 @@ builds:
       pick: 0.92
       fit: 0.13
     Hydra's Lament:
-      total: 0.52
+      total: 0.53
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.36
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.46
     The Reaper:
       total: 0.48
       efficiency: 0.55
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.39
     Heartseeker:
       total: 0.53
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.53
     Titan's Bane:
@@ -426,7 +426,7 @@ builds:
     Berserker's Shield:
       total: 0.53
       efficiency: 0.68
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.39
     Transcendence:
@@ -438,25 +438,25 @@ builds:
     Hydra's Lament:
       total: 0.51
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.28
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.28
     Heartseeker:
       total: 0.51
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.42
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -504,27 +504,27 @@ builds:
       pick: 0.92
       fit: 0.14
     Hydra's Lament:
-      total: 0.51
+      total: 0.52
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.32
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.53
     Riptalon:
-      total: 0.5
+      total: 0.51
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.54
+      total: 0.55
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.65
     Titan's Bane:
@@ -582,30 +582,30 @@ builds:
       total: 0.59
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.33
     Tyrfing:
-      total: 0.49
+      total: 0.5
       efficiency: 0.48
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.61
     Riptalon:
       total: 0.5
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.59
     Heartseeker:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.45
     Silverbranch Bow:
       total: 0.49
       efficiency: 0.53
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.51
   community_ordered:
@@ -654,25 +654,25 @@ builds:
     Hydra's Lament:
       total: 0.54
       efficiency: 0.54
-      win: 0.51
+      win: 0.52
       pick: 0.93
       fit: 0.47
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.48
     Arondight:
       total: 0.46
       efficiency: 0.5
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.37
     Heartseeker:
       total: 0.51
       efficiency: 0.47
-      win: 0.52
+      win: 0.53
       pick: 0.98
       fit: 0.4
     Titan's Bane:
@@ -723,37 +723,37 @@ builds:
     Lernaean Bow:
       total: 0.49
       efficiency: 0.52
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.51
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.72
       win: 0.55
-      pick: 0.87
+      pick: 0.86
       fit: 0.42
     Tyrfing:
       total: 0.49
       efficiency: 0.48
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.58
     The Reaper:
-      total: 0.48
+      total: 0.49
       efficiency: 0.55
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.41
     Riptalon:
       total: 0.49
       efficiency: 0.51
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.55
     Tekko-Kagi:
       total: 0.49
       efficiency: 0.49
-      win: 0.51
+      win: 0.52
       pick: 0.0
       fit: 0.56
   community_ordered:

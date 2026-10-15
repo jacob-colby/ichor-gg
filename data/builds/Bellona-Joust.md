@@ -462,15 +462,15 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Void Shield
-    reason: Conquest community 76% win over 43 matches (vs 59% on this god), taking
+    reason: Conquest community 77% win over 41 matches (vs 59% on this god), taking
       the model's weakest slot from Void Shield
   - added: Shogun's Ofuda
     removed: Stygian Anchor
-    reason: Conquest community 73% win over 55 matches (vs 59% on this god), taking
+    reason: Conquest community 74% win over 62 matches (vs 59% on this god), taking
       the model's weakest slot from Stygian Anchor
   - added: Sanguine Lash
     removed: Shield Splitter
-    reason: Conquest community 65% win over 325 matches (vs 59% on this god), taking
+    reason: Conquest community 65% win over 358 matches (vs 59% on this god), taking
       the model's weakest slot from Shield Splitter
   borrowed_from: Conquest
   starter: *id001

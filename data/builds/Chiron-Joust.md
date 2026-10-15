@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Demon Blade
-    reason: Conquest community 62% win over 103 matches (vs 52% on this god), taking
+    reason: Conquest community 62% win over 107 matches (vs 52% on this god), taking
       the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
@@ -1322,7 +1322,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Deathbringer
-    reason: Conquest community 62% win over 103 matches (vs 52% on this god), taking
+    reason: Conquest community 62% win over 107 matches (vs 52% on this god), taking
       the model's weakest slot from Deathbringer
   borrowed_from: Conquest
   starter: *id001

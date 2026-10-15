@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: The World Stone
     removed: Doom Orb
-    reason: Conquest community 62% win over 80 matches (vs 50% on this god), taking
+    reason: Conquest community 61% win over 88 matches (vs 49% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001

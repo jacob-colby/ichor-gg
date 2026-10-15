@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Brawler’s Beat Stick
+  - Amanita Charm
+  - Erosion
+  - Pharaoh's Curse
+  - Shogun's Ofuda
+  - Triton's Conch
+  flex_slots:
+  - Shogun's Ofuda
+  - Brawler’s Beat Stick
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.48
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Triton's Conch:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Brawler’s Beat Stick
+    removed: Berserker's Shield
+    reason: Conquest community 72% win over 54 matches (vs 56% on this god), taking
+      the model's weakest slot from Berserker's Shield
+  borrowed_from: Conquest
+  starter: *id001
 ---
