@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Brawler’s Beat Stick
     removed: Stampede
-    reason: Conquest community 72% win over 54 matches (vs 56% on this god), taking
+    reason: Conquest community 71% win over 50 matches (vs 56% on this god), taking
       the model's weakest slot from Stampede
   borrowed_from: Conquest
   starter: *id001

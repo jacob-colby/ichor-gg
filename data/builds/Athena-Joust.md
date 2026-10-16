@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
-  - Shell of Rebuke
   - Shifter's Shield
+  - Deathbringer
   - Amanita Charm
   - Erosion
   flex_slots:
   - Shifter's Shield
-  - Shell of Rebuke
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -565,18 +565,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Shell of Rebuke:
-      total: 0.39
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Shifter's Shield:
       total: 0.62
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Deathbringer:
+      total: 0.2
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.06
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.88
   swaps:
-  - added: Shell of Rebuke
+  - added: Deathbringer
     removed: Freya's Tears
-    reason: Conquest community 67% win over 77 matches (vs 55% on this god), taking
+    reason: Conquest community 71% win over 38 matches (vs 55% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

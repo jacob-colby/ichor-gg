@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Shell of Rebuke
   - Void Shield
+  - Deathbringer
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Void Shield
-  - Shell of Rebuke
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -559,18 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Shell of Rebuke:
-      total: 0.39
-      efficiency: 0.28
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Void Shield:
       total: 0.65
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.84
+    Deathbringer:
+      total: 0.2
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.06
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -590,9 +590,9 @@ builds:
       pick: 0.0
       fit: 0.84
   swaps:
-  - added: Shell of Rebuke
+  - added: Deathbringer
     removed: Void Stone
-    reason: Conquest community 67% win over 77 matches (vs 55% on this god), taking
+    reason: Conquest community 71% win over 38 matches (vs 55% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

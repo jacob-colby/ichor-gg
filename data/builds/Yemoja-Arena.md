@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Spear of Desolation
     removed: Void Stone
-    reason: Conquest community 60% win over 62 matches (vs 46% on this god), taking
+    reason: Conquest community 60% win over 72 matches (vs 46% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Hide of the Nemean Lion
     removed: Void Stone
-    reason: Conquest community 66% win over 42 matches (vs 51% on this god), taking
+    reason: Conquest community 66% win over 39 matches (vs 50% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

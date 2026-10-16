@@ -5,46 +5,46 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Tollkeeper
-  aspect_pick_rate: 0.23
+  aspect_pick_rate: 0.22
   aspect_win_rate: 0.47
   slot_order:
   - name: Stampede
-    pick_rate: 0.11
-    win_rate: 0.26
+    pick_rate: 0.12
+    win_rate: 0.29
     alternates:
     - name: Prophetic Cloak
-      pick_rate: 0.09
+      pick_rate: 0.1
       win_rate: 0.5
     - name: Gauntlet of Thebes
       pick_rate: 0.08
       win_rate: 0.63
   - name: Chronos' Pendant
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.54
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.39
+      pick_rate: 0.12
+      win_rate: 0.4
     - name: Breastplate of Valor
       pick_rate: 0.08
-      win_rate: 0.58
+      win_rate: 0.59
   - name: Freya's Tears
     pick_rate: 0.09
-    win_rate: 0.31
+    win_rate: 0.33
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.48
     - name: Genji's Guard
       pick_rate: 0.08
-      win_rate: 0.48
+      win_rate: 0.5
   - name: Shell of Rebuke
-    pick_rate: 0.09
-    win_rate: 0.42
+    pick_rate: 0.08
+    win_rate: 0.44
     alternates:
     - name: Freya's Tears
       pick_rate: 0.11
-      win_rate: 0.56
+      win_rate: 0.59
     - name: Totem of Death
       pick_rate: 0.05
       win_rate: 0.44
@@ -54,39 +54,39 @@ builds:
     alternates:
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.5
+      win_rate: 0.53
     - name: Shell of Rebuke
       pick_rate: 0.04
-      win_rate: 0.7
+      win_rate: 0.75
   - name: Medal of Defense
     pick_rate: 0.05
-    win_rate: 0.5
+    win_rate: 0.56
     alternates:
+    - name: Evil Eye
+      pick_rate: 0.04
+      win_rate: 0.38
     - name: Shell of Rebuke
       pick_rate: 0.04
       win_rate: 0.71
-    - name: Killing Stone
-      pick_rate: 0.04
-      win_rate: 0.86
   community_starters:
-  - name: Bluestone Brooch
-    pick_rate: 0.37
-    win_rate: 0.62
   - name: Bluestone Pendant
-    pick_rate: 0.37
-    win_rate: 0.4
+    pick_rate: 0.39
+    win_rate: 0.38
+  - name: Bluestone Brooch
+    pick_rate: 0.36
+    win_rate: 0.63
   - name: Gilded Arrow
     pick_rate: 0.09
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/charon/
-  last_verified: '2026-10-15'
-  god_win_rate: 0.49843260188087773
-  god_matches_won: 159
-  god_matches_played: 319
+  last_verified: '2026-10-16'
+  god_win_rate: 0.49855907780979825
+  god_matches_won: 173
+  god_matches_played: 347
   god_division: obsidian
   god_window_start: '2026-10-06'
-  god_window_end: '2026-10-15'
-  god_matches_analyzed: 9899
+  god_window_end: '2026-10-16'
+  god_matches_analyzed: 10934
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -130,9 +130,9 @@ builds:
       pick: 0.0
       fit: 0.46
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.39
     Kinetic Cuirass:
@@ -190,17 +190,17 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Rod of Tahuti, Breastplate of
-    Valor, Kinetic Cuirass, Rod of Asclepius, Shifter''s Shield, Soul Gem, Erosion,
-    Eye of Providence, Draconic Scale, Ethereal Staff, Gluttonous Grimoire, Phoenix
-    Feather, Yogi''s Necklace, Chandra''s Grace, Glorious Pridwen, Lifebinder, Midgardian
-    Mail, Stone of Binding, Helm of Radiance, Hide of the Nemean Lion, Leviathan''s
-    Hide, Void Shield, Magi''s Cloak, Ancile, Freya''s Tears, Stampede.'
+    this god: Amanita Charm, Breastplate of Valor, Shield of the Phoenix, Rod of Tahuti,
+    Kinetic Cuirass, Rod of Asclepius, Shifter''s Shield, Soul Gem, Erosion, Eye of
+    Providence, Draconic Scale, Ethereal Staff, Gluttonous Grimoire, Phoenix Feather,
+    Yogi''s Necklace, Chandra''s Grace, Glorious Pridwen, Lifebinder, Midgardian Mail,
+    Stone of Binding, Helm of Radiance, Hide of the Nemean Lion, Leviathan''s Hide,
+    Void Shield, Magi''s Cloak, Ancile, Freya''s Tears, Stampede.'
   slot_scores:
     Breastplate of Valor:
       total: 0.55
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.36
     Kinetic Cuirass:
@@ -285,7 +285,7 @@ builds:
     Breastplate of Valor:
       total: 0.54
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.27
     Kinetic Cuirass:
@@ -344,9 +344,9 @@ builds:
     Tears.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.2
     Kinetic Cuirass:
@@ -411,22 +411,22 @@ builds:
     + fit + win/pick). Underrated for this god: Breastplate of Valor, Rod of Tahuti,
     Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Spear of Desolation, Screeching
     Gargoyle, Soul Gem, Shifter''s Shield, Prophetic Cloak, Erosion, Helm of Radiance,
-    Gluttonous Grimoire, Eye of Providence, Gladiator''s Shield, Draconic Scale, Stone
-    of Binding, Gem of Focus, Magi''s Cloak, Freya''s Tears, Rod of Asclepius, Eye
-    of Erebus, Spear of the Magus, Mantle Of Discord, Glorious Pridwen, Midgardian
-    Mail, Daybreak Gavel.'
+    Gluttonous Grimoire, Eye of Providence, Gladiator''s Shield, Draconic Scale, Freya''s
+    Tears, Stone of Binding, Gem of Focus, Magi''s Cloak, Rod of Asclepius, Eye of
+    Erebus, Spear of the Magus, Mantle Of Discord, Glorious Pridwen, Midgardian Mail,
+    Daybreak Gavel.'
   slot_scores:
     Breastplate of Valor:
       total: 0.57
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.48
     Chronos' Pendant:
       total: 0.51
       efficiency: 0.55
       win: 0.54
-      pick: 0.2
+      pick: 0.19
       fit: 0.42
     Kinetic Cuirass:
       total: 0.5
@@ -501,7 +501,7 @@ builds:
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.23
     Jotunn's Revenge:
@@ -571,7 +571,7 @@ builds:
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.23
     Jotunn's Revenge:
@@ -642,15 +642,15 @@ builds:
     Hussar''s Wings.'
   slot_scores:
     Genji's Guard:
-      total: 0.47
+      total: 0.48
       efficiency: 0.66
-      win: 0.39
-      pick: 0.15
+      win: 0.4
+      pick: 0.16
       fit: 0.39
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.58
+      win: 0.59
       pick: 0.11
       fit: 0.39
     Kinetic Cuirass:
@@ -660,9 +660,9 @@ builds:
       pick: 0.0
       fit: 0.81
     Freya's Tears:
-      total: 0.46
+      total: 0.47
       efficiency: 0.61
-      win: 0.31
+      win: 0.33
       pick: 0.14
       fit: 0.64
     Shifter's Shield:

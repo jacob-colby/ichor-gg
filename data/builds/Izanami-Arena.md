@@ -593,14 +593,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Riptalon
+  - Silverbranch Bow
   - Deathbringer
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
+  - Silverbranch Bow
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -618,12 +618,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Toxic Blade:
       total: 0.59
       efficiency: 0.44
@@ -642,6 +636,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Silverbranch Bow:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Deathbringer:
       total: 0.45
       efficiency: 0.51
@@ -657,8 +657,12 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Tyrfing
-    reason: Conquest community 71% win over 91 matches (vs 58% on this god), taking
+    reason: Conquest community 71% win over 110 matches (vs 59% on this god), taking
       the model's weakest slot from Tyrfing
+  - added: Silverbranch Bow
+    removed: Lernaean Bow
+    reason: Conquest community 67% win over 178 matches (vs 59% on this god), taking
+      the model's weakest slot from Lernaean Bow
   borrowed_from: Conquest
   starter: *id001
 ---

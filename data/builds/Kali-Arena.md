@@ -527,7 +527,7 @@ builds:
   swaps:
   - added: Odysseus' Bow
     removed: Golden Blade
-    reason: Conquest community 67% win over 56 matches (vs 52% on this god), taking
+    reason: Conquest community 65% win over 61 matches (vs 53% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

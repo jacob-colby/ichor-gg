@@ -595,12 +595,12 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
   - Riptalon
+  - Silverbranch Bow
   - Deathbringer
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Silverbranch Bow
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -630,18 +630,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Riptalon:
       total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Silverbranch Bow:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Deathbringer:
       total: 0.45
       efficiency: 0.51
@@ -657,8 +657,12 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Tyrfing
-    reason: Conquest community 71% win over 91 matches (vs 58% on this god), taking
+    reason: Conquest community 71% win over 110 matches (vs 59% on this god), taking
       the model's weakest slot from Tyrfing
+  - added: Silverbranch Bow
+    removed: Death Metal
+    reason: Conquest community 67% win over 178 matches (vs 59% on this god), taking
+      the model's weakest slot from Death Metal
   borrowed_from: Conquest
   starter: *id001
 ---
