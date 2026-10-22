@@ -5,97 +5,97 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fulmination
-  aspect_pick_rate: 0.29
-  aspect_win_rate: 0.33
+  aspect_pick_rate: 0.39
+  aspect_win_rate: 0.27
   slot_order:
   - name: Regrowth Striders
-    pick_rate: 0.38
-    win_rate: 0.63
+    pick_rate: 0.32
+    win_rate: 0.67
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.19
-      win_rate: 0.5
-    - name: Jotunn's Revenge
-      pick_rate: 0.1
-      win_rate: 0.5
-  - name: Brawler’s Beat Stick
-    pick_rate: 0.38
-    win_rate: 0.75
-    alternates:
-    - name: Shifter's Shield
-      pick_rate: 0.14
+      pick_rate: 0.18
+      win_rate: 0.4
+    - name: Eye of the Storm
+      pick_rate: 0.11
       win_rate: 0.0
-    - name: Shield of the Phoenix
-      pick_rate: 0.1
-      win_rate: 0.5
-  - name: Genji's Guard
-    pick_rate: 0.48
-    win_rate: 0.6
+  - name: Brawler’s Beat Stick
+    pick_rate: 0.32
+    win_rate: 0.78
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.1
-      win_rate: 0.5
-    - name: Regrowth Striders
-      pick_rate: 0.05
-      win_rate: 1.0
+      pick_rate: 0.18
+      win_rate: 0.2
+    - name: Damaru
+      pick_rate: 0.11
+      win_rate: 0.0
+  - name: Genji's Guard
+    pick_rate: 0.39
+    win_rate: 0.55
+    alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.11
+      win_rate: 0.33
+    - name: Omen Drum
+      pick_rate: 0.07
+      win_rate: 0.0
   - name: Glorious Pridwen
-    pick_rate: 0.4
+    pick_rate: 0.31
     win_rate: 0.75
     alternates:
-    - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.5
     - name: Brawler’s Beat Stick
-      pick_rate: 0.1
+      pick_rate: 0.12
+      win_rate: 0.33
+    - name: Genji's Guard
+      pick_rate: 0.08
       win_rate: 0.5
   - name: Shell of Rebuke
-    pick_rate: 0.26
+    pick_rate: 0.21
     win_rate: 0.8
     alternates:
     - name: Captain's Ring
-      pick_rate: 0.11
+      pick_rate: 0.08
       win_rate: 0.5
-    - name: Brawler’s Beat Stick
-      pick_rate: 0.11
-      win_rate: 0.5
+    - name: Sundering Echo
+      pick_rate: 0.08
+      win_rate: 1.0
   - name: Sundering Echo
-    pick_rate: 0.15
+    pick_rate: 0.12
     win_rate: 0.5
     alternates:
     - name: Sage's Ring
-      pick_rate: 0.15
+      pick_rate: 0.12
       win_rate: 0.5
-    - name: Medallion
-      pick_rate: 0.08
+    - name: Captain's Ring
+      pick_rate: 0.06
       win_rate: 0.0
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.57
-    win_rate: 0.58
+    win_rate: 0.5
   - name: Bluestone Pendant
-    pick_rate: 0.38
-    win_rate: 0.38
-  - name: Hunter's Cowl
-    pick_rate: 0.05
-    win_rate: 1.0
+    pick_rate: 0.36
+    win_rate: 0.4
+  - name: Conduit Gem
+    pick_rate: 0.04
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-10-21'
-  god_win_rate: 0.5238095238095238
-  god_matches_won: 11
-  god_matches_played: 21
+  last_verified: '2026-10-22'
+  god_win_rate: 0.4642857142857143
+  god_matches_won: 13
+  god_matches_played: 28
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-21'
-  god_matches_analyzed: 814
+  god_window_end: '2026-10-22'
+  god_matches_analyzed: 1760
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Glorious Pridwen
   - Shell of Rebuke
@@ -119,31 +119,31 @@ builds:
     this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Freya''s
     Tears, Gluttonous Grimoire, Shield Splitter, Breastplate of Valor, Spear of Desolation,
     Runeforged Hammer, Spear of the Magus, Helm of Radiance, Soul Gem, Berserker''s
-    Shield, Obsidian Shard, Eye of the Storm, Shield of the Phoenix, Erosion, Eye
-    of Providence, Hydra''s Lament, Draconic Scale, Heartseeker, Stone of Binding,
-    Rod of Asclepius, Magi''s Cloak, Avenging Blade, Jade Scepter, Doom Orb, Screeching
-    Gargoyle, Wish-Granting Pearl, Mantle Of Discord, Helm of Darkness, Midgardian
-    Mail, Titan''s Bane, Death Metal, Chronos'' Pendant, The Crusher, Daybreak Gavel,
-    The World Stone, Hide of the Nemean Lion.'
+    Shield, Obsidian Shard, Erosion, Eye of Providence, Hydra''s Lament, Draconic
+    Scale, Heartseeker, Shield of the Phoenix, Stone of Binding, Rod of Asclepius,
+    Magi''s Cloak, Avenging Blade, Jade Scepter, Doom Orb, Screeching Gargoyle, Wish-Granting
+    Pearl, Mantle Of Discord, Helm of Darkness, Midgardian Mail, Titan''s Bane, Death
+    Metal, Chronos'' Pendant, The Crusher, Daybreak Gavel, The World Stone, Hide of
+    the Nemean Lion, Eye of the Storm.'
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.57
+      efficiency: 0.42
+      win: 0.78
+      pick: 0.44
+      fit: 0.32
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.61
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.5
-      pick: 0.1
+      pick: 0.0
       fit: 0.4
-    Brawler’s Beat Stick:
-      total: 0.56
-      efficiency: 0.42
-      win: 0.75
-      pick: 0.52
-      fit: 0.32
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.75
-      fit: 0.24
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
@@ -154,16 +154,15 @@ builds:
       total: 0.56
       efficiency: 0.38
       win: 0.75
-      pick: 0.67
+      pick: 0.52
       fit: 0.4
     Shell of Rebuke:
-      total: 0.54
+      total: 0.53
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.32
   community_ordered:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
   - Glorious Pridwen
@@ -174,11 +173,11 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
+  - Jotunn's Revenge
   - Shell of Rebuke
+  - Glorious Pridwen
   - Rod of Tahuti
   flex_slots:
   - Jotunn's Revenge
@@ -200,43 +199,43 @@ builds:
     of Tahuti, Jotunn''s Revenge, Amanita Charm, Breastplate of Valor, Freya''s Tears,
     Gluttonous Grimoire, Kinetic Cuirass, Spear of Desolation, Shield Splitter, Spear
     of the Magus, Hydra''s Lament, Runeforged Hammer, Helm of Radiance, Soul Gem,
-    Obsidian Shard, Heartseeker, Berserker''s Shield, Eye of the Storm, Rod of Asclepius,
-    Shield of the Phoenix, Wish-Granting Pearl, Doom Orb, Ancient Signet, The World
-    Stone, Erosion, Death Metal, Chronos'' Pendant, Jade Scepter, Stone of Binding,
-    Eye of Providence, Avenging Blade, Draconic Scale, Screeching Gargoyle, Magi''s
-    Cloak, Titan''s Bane, Helm of Darkness, Triton''s Conch, The Crusher, Daybreak
-    Gavel, Oni Hunter''s Garb.'
+    Obsidian Shard, Heartseeker, Berserker''s Shield, Rod of Asclepius, Wish-Granting
+    Pearl, Doom Orb, Ancient Signet, The World Stone, Shield of the Phoenix, Erosion,
+    Death Metal, Chronos'' Pendant, Jade Scepter, Stone of Binding, Eye of Providence,
+    Avenging Blade, Draconic Scale, Screeching Gargoyle, Magi''s Cloak, Titan''s Bane,
+    Helm of Darkness, Triton''s Conch, The Crusher, Daybreak Gavel, Oni Hunter''s
+    Garb, Eye of the Storm.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.1
-      fit: 0.45
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
-      win: 0.75
-      pick: 0.52
+      win: 0.78
+      pick: 0.44
       fit: 0.26
     Genji's Guard:
-      total: 0.58
+      total: 0.55
       efficiency: 0.66
-      win: 0.6
-      pick: 0.75
+      win: 0.55
+      pick: 0.61
       fit: 0.29
-    Glorious Pridwen:
-      total: 0.56
-      efficiency: 0.38
-      win: 0.75
-      pick: 0.67
-      fit: 0.35
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Shell of Rebuke:
-      total: 0.53
+      total: 0.52
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.26
+    Glorious Pridwen:
+      total: 0.55
+      efficiency: 0.38
+      win: 0.75
+      pick: 0.52
+      fit: 0.35
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
@@ -244,20 +243,19 @@ builds:
       pick: 0.0
       fit: 0.36
   community_ordered:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
   - Shell of Rebuke
+  - Glorious Pridwen
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
+  - Jotunn's Revenge
   - Shell of Rebuke
+  - Glorious Pridwen
   - Freya's Tears
   flex_slots:
   - Shell of Rebuke
@@ -278,44 +276,44 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Freya''s Tears, Gluttonous
     Grimoire, Spear of Desolation, Kinetic Cuirass, Breastplate of Valor, Soul Gem,
-    Spear of the Magus, Obsidian Shard, Shield Splitter, Shield of the Phoenix, Runeforged
-    Hammer, Helm of Radiance, Berserker''s Shield, Hydra''s Lament, Heartseeker, Eye
-    of the Storm, Erosion, Doom Orb, Rod of Asclepius, Eye of Providence, Screeching
-    Gargoyle, Stone of Binding, Chronos'' Pendant, Draconic Scale, The World Stone,
-    Titan''s Bane, The Crusher, Dreamer''s Idol, Magi''s Cloak, Jade Scepter, The
-    Reaper, Wish-Granting Pearl, Avenging Blade, Daybreak Gavel, Mantle Of Discord,
-    Midgardian Mail, Ancient Signet.'
+    Spear of the Magus, Obsidian Shard, Shield Splitter, Runeforged Hammer, Helm of
+    Radiance, Berserker''s Shield, Hydra''s Lament, Heartseeker, Shield of the Phoenix,
+    Erosion, Doom Orb, Rod of Asclepius, Eye of Providence, Screeching Gargoyle, Stone
+    of Binding, Chronos'' Pendant, Draconic Scale, The World Stone, Titan''s Bane,
+    The Crusher, Dreamer''s Idol, Magi''s Cloak, Jade Scepter, The Reaper, Wish-Granting
+    Pearl, Avenging Blade, Daybreak Gavel, Mantle Of Discord, Midgardian Mail, Ancient
+    Signet, Eye of the Storm.'
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.78
+      pick: 0.44
+      fit: 0.27
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.61
+      fit: 0.27
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.5
-      pick: 0.1
+      pick: 0.0
       fit: 0.48
-    Brawler’s Beat Stick:
-      total: 0.55
-      efficiency: 0.42
-      win: 0.75
-      pick: 0.52
-      fit: 0.27
-    Genji's Guard:
-      total: 0.58
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.75
-      fit: 0.27
-    Glorious Pridwen:
-      total: 0.57
-      efficiency: 0.38
-      win: 0.75
-      pick: 0.67
-      fit: 0.41
     Shell of Rebuke:
-      total: 0.53
+      total: 0.52
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.27
+    Glorious Pridwen:
+      total: 0.56
+      efficiency: 0.38
+      win: 0.75
+      pick: 0.52
+      fit: 0.41
     Freya's Tears:
       total: 0.5
       efficiency: 0.61
@@ -323,20 +321,19 @@ builds:
       pick: 0.0
       fit: 0.41
   community_ordered:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
   - Shell of Rebuke
+  - Glorious Pridwen
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
+  - Jotunn's Revenge
   - Shell of Rebuke
+  - Glorious Pridwen
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
@@ -349,52 +346,52 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Regrowth Striders — physical protection
+    swap_item: Regrowth Striders
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Soul Gem, Shield of
-    the Phoenix, Rod of Asclepius, Gluttonous Grimoire, Kinetic Cuirass, Ethereal
-    Staff, The Reaper, Freya''s Tears, Runeforged Hammer, Breastplate of Valor, Spear
-    of Desolation, Spear of the Magus, Shield Splitter, Berserker''s Shield, Lifebinder,
-    Obsidian Shard, Helm of Radiance, Eye of the Storm, Yogi''s Necklace, Sphere of
-    Negation, Hydra''s Lament, Erosion, Heartseeker, Phoenix Feather, Eye of Providence,
-    Chandra''s Grace, Draconic Scale, Avenging Blade, Blood-Bound Book, Jade Scepter,
-    Wish-Granting Pearl, Stone of Binding, Daybreak Gavel, Doom Orb, Midgardian Mail,
-    Titan''s Bane.'
+    this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Soul Gem, Rod of Asclepius,
+    Shield of the Phoenix, Gluttonous Grimoire, Kinetic Cuirass, Ethereal Staff, The
+    Reaper, Freya''s Tears, Runeforged Hammer, Breastplate of Valor, Spear of Desolation,
+    Spear of the Magus, Shield Splitter, Berserker''s Shield, Lifebinder, Obsidian
+    Shard, Helm of Radiance, Yogi''s Necklace, Sphere of Negation, Hydra''s Lament,
+    Erosion, Heartseeker, Phoenix Feather, Eye of Providence, Chandra''s Grace, Draconic
+    Scale, Avenging Blade, Blood-Bound Book, Jade Scepter, Wish-Granting Pearl, Stone
+    of Binding, Daybreak Gavel, Doom Orb, Midgardian Mail, Titan''s Bane, Eye of the
+    Storm.'
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.56
+      efficiency: 0.42
+      win: 0.78
+      pick: 0.44
+      fit: 0.26
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.66
+      win: 0.55
+      pick: 0.61
+      fit: 0.22
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.5
-      pick: 0.1
+      pick: 0.0
       fit: 0.42
-    Brawler’s Beat Stick:
-      total: 0.55
-      efficiency: 0.42
-      win: 0.75
-      pick: 0.52
-      fit: 0.26
-    Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.6
-      pick: 0.75
-      fit: 0.22
-    Glorious Pridwen:
-      total: 0.6
-      efficiency: 0.38
-      win: 0.75
-      pick: 0.67
-      fit: 0.65
     Shell of Rebuke:
-      total: 0.53
+      total: 0.52
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.26
+    Glorious Pridwen:
+      total: 0.59
+      efficiency: 0.38
+      win: 0.75
+      pick: 0.52
+      fit: 0.65
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
@@ -402,11 +399,10 @@ builds:
       pick: 0.0
       fit: 0.73
   community_ordered:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
   - Shell of Rebuke
+  - Glorious Pridwen
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -439,10 +435,10 @@ builds:
     Cuirass, Screeching Gargoyle, Soul Gem, Freya''s Tears, Obsidian Shard, Void Shield,
     Breastplate of Valor, Heartseeker, Void Stone, Shield Splitter, Runeforged Hammer,
     Helm of Radiance, Berserker''s Shield, Doom Orb, Titan''s Bane, The Crusher, The
-    World Stone, Shield of the Phoenix, Eye of the Storm, Hydra''s Lament, Dreamer''s
-    Idol, Erosion, The Reaper, Eye of Providence, Rod of Asclepius, Draconic Scale,
-    Magi''s Cloak, Jade Scepter, Daybreak Gavel, Wish-Granting Pearl, Mantle Of Discord,
-    Midgardian Mail.'
+    World Stone, Hydra''s Lament, Dreamer''s Idol, Erosion, The Reaper, Eye of Providence,
+    Rod of Asclepius, Shield of the Phoenix, Draconic Scale, Magi''s Cloak, Jade Scepter,
+    Daybreak Gavel, Wish-Granting Pearl, Mantle Of Discord, Midgardian Mail, Eye of
+    the Storm.'
   slot_scores:
     Stone of Binding:
       total: 0.5
@@ -451,39 +447,38 @@ builds:
       pick: 0.0
       fit: 0.67
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
-      win: 0.75
-      pick: 0.52
+      win: 0.78
+      pick: 0.44
       fit: 0.27
     Genji's Guard:
-      total: 0.57
+      total: 0.54
       efficiency: 0.66
-      win: 0.6
-      pick: 0.75
+      win: 0.55
+      pick: 0.61
       fit: 0.21
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.5
-      pick: 0.1
+      pick: 0.0
       fit: 0.49
     Glorious Pridwen:
-      total: 0.56
+      total: 0.55
       efficiency: 0.38
       win: 0.75
-      pick: 0.67
+      pick: 0.52
       fit: 0.34
     Shell of Rebuke:
-      total: 0.53
+      total: 0.52
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.27
   community_ordered:
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Jotunn's Revenge
   - Glorious Pridwen
   - Shell of Rebuke
   starter: *id001
@@ -513,15 +508,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s Shield, Gluttonous Grimoire,
+    this god: Rod of Tahuti, Berserker''s Shield, Jotunn''s Revenge, Gluttonous Grimoire,
     Nimble Ring, Amanita Charm, Soul Gem, Kinetic Cuirass, Freya''s Tears, Breastplate
     of Valor, Golden Blade, Riptalon, Spear of the Magus, Spear of Desolation, Silverbranch
     Bow, Helm of Radiance, Runeforged Hammer, Tyrfing, Shield Splitter, Obsidian Shard,
-    Lernaean Bow, Pharaoh''s Curse, Toxic Blade, Shield of the Phoenix, Shogun''s
-    Ofuda, The Reaper, Rod of Asclepius, Hydra''s Lament, Stone of Binding, Erosion,
-    Tekko-Kagi, Bragi''s Harp, Eye of Providence, Eye of the Storm, Bracer of The
-    Abyss, Heartseeker, Draconic Scale, Daybreak Gavel, Magi''s Cloak, Screeching
-    Gargoyle.'
+    Lernaean Bow, Pharaoh''s Curse, Toxic Blade, Shogun''s Ofuda, The Reaper, Rod
+    of Asclepius, Hydra''s Lament, Stone of Binding, Erosion, Tekko-Kagi, Bragi''s
+    Harp, Shield of the Phoenix, Eye of Providence, Bracer of The Abyss, Heartseeker,
+    Draconic Scale, Daybreak Gavel, Magi''s Cloak, Screeching Gargoyle, Eye of the
+    Storm.'
   slot_scores:
     Golden Blade:
       total: 0.48
@@ -530,16 +525,16 @@ builds:
       pick: 0.0
       fit: 0.45
     Brawler’s Beat Stick:
-      total: 0.54
+      total: 0.55
       efficiency: 0.42
-      win: 0.75
-      pick: 0.52
+      win: 0.78
+      pick: 0.44
       fit: 0.22
     Genji's Guard:
-      total: 0.56
+      total: 0.53
       efficiency: 0.66
-      win: 0.6
-      pick: 0.75
+      win: 0.55
+      pick: 0.61
       fit: 0.17
     Berserker's Shield:
       total: 0.52
@@ -548,10 +543,10 @@ builds:
       pick: 0.0
       fit: 0.37
     Glorious Pridwen:
-      total: 0.55
+      total: 0.54
       efficiency: 0.38
       win: 0.75
-      pick: 0.67
+      pick: 0.52
       fit: 0.28
     Nimble Ring:
       total: 0.5
@@ -567,15 +562,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
+  - Jotunn's Revenge
   - Shell of Rebuke
+  - Glorious Pridwen
   - Freya's Tears
   flex_slots:
-  - Shell of Rebuke
   - Freya's Tears
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -591,45 +586,45 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Freya''s Tears, Breastplate of Valor, Amanita Charm, Spear of Desolation, Shield
-    of the Phoenix, Kinetic Cuirass, Soul Gem, Hydra''s Lament, Screeching Gargoyle,
+    Freya''s Tears, Breastplate of Valor, Amanita Charm, Spear of Desolation, Kinetic
+    Cuirass, Soul Gem, Shield of the Phoenix, Hydra''s Lament, Screeching Gargoyle,
     Gluttonous Grimoire, Berserker''s Shield, Chronos'' Pendant, Shield Splitter,
     Spear of the Magus, Runeforged Hammer, Helm of Radiance, Prophetic Cloak, Erosion,
     Obsidian Shard, Eye of Providence, Stone of Binding, Draconic Scale, Gladiator''s
-    Shield, Eye of the Storm, Arondight, Gem of Focus, Magi''s Cloak, Rod of Asclepius,
-    Heartseeker, Eye of Erebus, Mantle Of Discord, Daybreak Gavel, Midgardian Mail,
-    Pendulum Blade, Hide of the Nemean Lion, Jade Scepter, Chandra''s Grace.'
+    Shield, Arondight, Gem of Focus, Magi''s Cloak, Rod of Asclepius, Heartseeker,
+    Eye of Erebus, Mantle Of Discord, Daybreak Gavel, Midgardian Mail, Pendulum Blade,
+    Hide of the Nemean Lion, Jade Scepter, Chandra''s Grace, Eye of the Storm.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.1
-      fit: 0.51
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.56
       efficiency: 0.42
-      win: 0.75
-      pick: 0.52
+      win: 0.78
+      pick: 0.44
       fit: 0.29
     Genji's Guard:
-      total: 0.6
+      total: 0.57
       efficiency: 0.66
-      win: 0.6
-      pick: 0.75
+      win: 0.55
+      pick: 0.61
       fit: 0.43
-    Glorious Pridwen:
-      total: 0.59
-      efficiency: 0.38
-      win: 0.75
-      pick: 0.67
-      fit: 0.58
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Shell of Rebuke:
       total: 0.53
       efficiency: 0.28
       win: 0.8
-      pick: 0.56
+      pick: 0.45
       fit: 0.29
+    Glorious Pridwen:
+      total: 0.58
+      efficiency: 0.38
+      win: 0.75
+      pick: 0.52
+      fit: 0.58
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
@@ -637,11 +632,10 @@ builds:
       pick: 0.0
       fit: 0.58
   community_ordered:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
   - Genji's Guard
-  - Glorious Pridwen
   - Shell of Rebuke
+  - Glorious Pridwen
   starter: *id001
 - source: suggested
   archetype: model
@@ -683,13 +677,13 @@ builds:
       total: 0.54
       efficiency: 0.72
       win: 0.5
-      pick: 0.1
+      pick: 0.0
       fit: 0.4
     Genji's Guard:
-      total: 0.57
+      total: 0.54
       efficiency: 0.66
-      win: 0.6
-      pick: 0.75
+      win: 0.55
+      pick: 0.61
       fit: 0.24
     Kinetic Cuirass:
       total: 0.5
@@ -716,7 +710,6 @@ builds:
       pick: 0.0
       fit: 0.45
   community_ordered:
-  - Jotunn's Revenge
   - Genji's Guard
   starter: *id001
 ---

@@ -4,89 +4,89 @@ god: Atlas
 mode: Conquest
 builds:
 - source: community
-  aspect: null
-  aspect_pick_rate: null
-  aspect_win_rate: null
+  aspect: Aspect of the Unburdened
+  aspect_pick_rate: 0.04
+  aspect_win_rate: 0.5
   slot_order:
-  - name: Gauntlet of Thebes
-    pick_rate: 0.29
-    win_rate: 0.63
+  - name: Stampede
+    pick_rate: 0.22
+    win_rate: 0.25
+    alternates:
+    - name: Gauntlet of Thebes
+      pick_rate: 0.2
+      win_rate: 0.55
+    - name: Mana Tome
+      pick_rate: 0.15
+      win_rate: 0.5
+  - name: Genji's Guard
+    pick_rate: 0.13
+    win_rate: 0.29
     alternates:
     - name: Stampede
-      pick_rate: 0.29
-      win_rate: 0.25
-    - name: Mana Tome
-      pick_rate: 0.11
+      pick_rate: 0.28
+      win_rate: 0.53
+    - name: Mystical Mail
+      pick_rate: 0.06
       win_rate: 0.67
-  - name: Stampede
-    pick_rate: 0.25
-    win_rate: 0.57
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.11
-      win_rate: 0.0
-    - name: Shell of Rebuke
-      pick_rate: 0.07
-      win_rate: 1.0
   - name: Shell of Rebuke
-    pick_rate: 0.22
-    win_rate: 0.33
+    pick_rate: 0.15
+    win_rate: 0.38
     alternates:
     - name: Screeching Gargoyle
-      pick_rate: 0.11
-      win_rate: 0.67
-    - name: Spectral Armor
-      pick_rate: 0.07
-      win_rate: 0.0
-  - name: Freya's Tears
-    pick_rate: 0.2
-    win_rate: 0.2
-    alternates:
-    - name: Shell of Rebuke
-      pick_rate: 0.16
-      win_rate: 0.75
-    - name: Genji's Guard
+      pick_rate: 0.1
+      win_rate: 0.6
+    - name: Ancile
       pick_rate: 0.08
       win_rate: 0.5
-  - name: Captain's Ring
+  - name: Freya's Tears
+    pick_rate: 0.22
+    win_rate: 0.45
+    alternates:
+    - name: Shell of Rebuke
+      pick_rate: 0.1
+      win_rate: 0.6
+    - name: Genji's Guard
+      pick_rate: 0.06
+      win_rate: 0.33
+  - name: Sage's Ring
     pick_rate: 0.09
     win_rate: 0.5
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.22
-      win_rate: 0.6
-    - name: Ethereal Staff
-      pick_rate: 0.09
+      pick_rate: 0.17
       win_rate: 0.5
+    - name: Shell of Rebuke
+      pick_rate: 0.11
+      win_rate: 0.4
   - name: Ethereal Staff
-    pick_rate: 0.27
-    win_rate: 0.75
+    pick_rate: 0.21
+    win_rate: 0.67
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.13
+      pick_rate: 0.07
       win_rate: 0.0
     - name: Flaming Pearl
-      pick_rate: 0.13
+      pick_rate: 0.07
       win_rate: 0.5
   community_starters:
   - name: Bumba's Cudgel
-    pick_rate: 0.32
-    win_rate: 0.78
+    pick_rate: 0.3
+    win_rate: 0.63
   - name: Bumba's Hammer
-    pick_rate: 0.21
-    win_rate: 0.33
+    pick_rate: 0.26
+    win_rate: 0.43
   - name: Bluestone Brooch
-    pick_rate: 0.14
-    win_rate: 0.25
+    pick_rate: 0.15
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/atlas/
-  last_verified: '2026-10-21'
-  god_win_rate: 0.4642857142857143
-  god_matches_won: 13
-  god_matches_played: 28
+  last_verified: '2026-10-22'
+  god_win_rate: 0.48148148148148145
+  god_matches_won: 26
+  god_matches_played: 54
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-21'
-  god_matches_analyzed: 814
+  god_window_end: '2026-10-22'
+  god_matches_analyzed: 1760
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -94,24 +94,24 @@ builds:
   archetype: core
   slot_order:
   - Screeching Gargoyle
-  - Breastplate of Valor
   - Kinetic Cuirass
-  - Stampede
+  - Mystical Mail
+  - Freya's Tears
   - Shifter's Shield
-  - Ethereal Staff
+  - Amanita Charm
   flex_slots:
-  - Stampede
-  - Breastplate of Valor
+  - Shifter's Shield
+  - Mystical Mail
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -119,50 +119,50 @@ builds:
     this god: Amanita Charm, Rod of Tahuti, Kinetic Cuirass, Shifter''s Shield, Breastplate
     of Valor, Erosion, Eye of Providence, Draconic Scale, Shield of the Phoenix, Stone
     of Binding, Magi''s Cloak, Helm of Radiance, Gluttonous Grimoire, Mantle Of Discord,
-    Midgardian Mail, Prophetic Cloak, Hide of the Nemean Lion, Helm of Darkness, Leviathan''s
-    Hide, Void Shield, Ancile, Oni Hunter''s Garb, Xibalban Effigy, Spear of Desolation,
-    Hussar''s Wings.'
+    Midgardian Mail, Ancile, Prophetic Cloak, Hide of the Nemean Lion, Helm of Darkness,
+    Leviathan''s Hide, Void Shield, Oni Hunter''s Garb, Xibalban Effigy, Spear of
+    Desolation, Hussar''s Wings.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.56
+      total: 0.53
       efficiency: 0.51
-      win: 0.67
-      pick: 0.17
+      win: 0.6
+      pick: 0.16
       fit: 0.49
-    Breastplate of Valor:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Stampede:
+    Mystical Mail:
       total: 0.52
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.34
+      efficiency: 0.43
+      win: 0.67
+      pick: 0.08
       fit: 0.46
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.45
+      pick: 0.37
+      fit: 0.64
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Ethereal Staff:
-      total: 0.6
-      efficiency: 0.46
-      win: 0.75
-      pick: 0.83
-      fit: 0.4
+    Amanita Charm:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
   community_ordered:
   - Screeching Gargoyle
-  - Stampede
-  - Ethereal Staff
+  - Mystical Mail
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -171,20 +171,20 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Kinetic Cuirass
-  - Stampede
+  - Mystical Mail
+  - Ethereal Staff
   - Shifter's Shield
   - Amanita Charm
-  - Ethereal Staff
   flex_slots:
-  - Stampede
+  - Screeching Gargoyle
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -196,14 +196,14 @@ builds:
     Rod of Asclepius, Shifter''s Shield, Soul Gem, Erosion, Eye of Providence, Breastplate
     of Valor, Draconic Scale, Gluttonous Grimoire, Phoenix Feather, Yogi''s Necklace,
     Chandra''s Grace, Glorious Pridwen, Lifebinder, Midgardian Mail, Stone of Binding,
-    Helm of Radiance, Hide of the Nemean Lion, Leviathan''s Hide, Void Shield, Magi''s
-    Cloak, Ancile.'
+    Ancile, Helm of Radiance, Hide of the Nemean Lion, Leviathan''s Hide, Void Shield,
+    Magi''s Cloak.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.56
+      total: 0.52
       efficiency: 0.51
-      win: 0.67
-      pick: 0.17
+      win: 0.6
+      pick: 0.16
       fit: 0.46
     Kinetic Cuirass:
       total: 0.54
@@ -211,12 +211,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Stampede:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.34
+    Mystical Mail:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.67
+      pick: 0.08
       fit: 0.48
+    Ethereal Staff:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.67
+      pick: 0.65
+      fit: 0.76
     Shifter's Shield:
       total: 0.52
       efficiency: 0.55
@@ -229,15 +235,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Ethereal Staff:
-      total: 0.66
-      efficiency: 0.46
-      win: 0.75
-      pick: 0.83
-      fit: 0.76
   community_ordered:
   - Screeching Gargoyle
-  - Stampede
+  - Mystical Mail
   - Ethereal Staff
   starter: *id001
 - source: suggested
@@ -246,22 +246,22 @@ builds:
   - Screeching Gargoyle
   - Stone of Binding
   - Kinetic Cuirass
-  - Spear of Desolation
+  - Mystical Mail
   - Ethereal Staff
   - Rod of Tahuti
   flex_slots:
   - Kinetic Cuirass
-  - Spear of Desolation
+  - Mystical Mail
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -274,10 +274,10 @@ builds:
     Mail, Rod of Asclepius, Hide of the Nemean Lion.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.59
+      total: 0.56
       efficiency: 0.51
-      win: 0.67
-      pick: 0.17
+      win: 0.6
+      pick: 0.16
       fit: 0.67
     Stone of Binding:
       total: 0.52
@@ -291,17 +291,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Spear of Desolation:
+    Mystical Mail:
       total: 0.5
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
+      efficiency: 0.43
+      win: 0.67
+      pick: 0.08
+      fit: 0.32
     Ethereal Staff:
-      total: 0.59
+      total: 0.54
       efficiency: 0.46
-      win: 0.75
-      pick: 0.83
+      win: 0.67
+      pick: 0.65
       fit: 0.3
     Rod of Tahuti:
       total: 0.59
@@ -311,6 +311,7 @@ builds:
       fit: 0.41
   community_ordered:
   - Screeching Gargoyle
+  - Mystical Mail
   - Ethereal Staff
   starter: *id001
 - source: suggested
@@ -327,8 +328,8 @@ builds:
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -347,10 +348,10 @@ builds:
     The Abyss, Obsidian Shard, Hide of the Nemean Lion, Leviathan''s Hide.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.53
+      total: 0.5
       efficiency: 0.51
-      win: 0.67
-      pick: 0.17
+      win: 0.6
+      pick: 0.16
       fit: 0.3
     Bracer of The Abyss:
       total: 0.44
@@ -371,10 +372,10 @@ builds:
       pick: 0.0
       fit: 0.44
     Ethereal Staff:
-      total: 0.58
+      total: 0.53
       efficiency: 0.46
-      win: 0.75
-      pick: 0.83
+      win: 0.67
+      pick: 0.65
       fit: 0.25
     Rod of Tahuti:
       total: 0.54
@@ -392,12 +393,12 @@ builds:
   - Screeching Gargoyle
   - Breastplate of Valor
   - Kinetic Cuirass
-  - Stampede
-  - Shield of the Phoenix
-  - Spear of Desolation
+  - Mystical Mail
+  - Freya's Tears
+  - Ethereal Staff
   flex_slots:
-  - Stampede
-  - Spear of Desolation
+  - Kinetic Cuirass
+  - Mystical Mail
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -406,8 +407,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -420,10 +421,10 @@ builds:
     of the Magus, Mantle Of Discord, Glorious Pridwen, Midgardian Mail, Daybreak Gavel.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.58
+      total: 0.54
       efficiency: 0.51
-      win: 0.67
-      pick: 0.17
+      win: 0.6
+      pick: 0.16
       fit: 0.58
     Breastplate of Valor:
       total: 0.53
@@ -437,27 +438,29 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Stampede:
+    Mystical Mail:
       total: 0.5
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.34
+      efficiency: 0.43
+      win: 0.67
+      pick: 0.08
       fit: 0.29
-    Shield of the Phoenix:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Spear of Desolation:
-      total: 0.49
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
+    Freya's Tears:
+      total: 0.53
+      efficiency: 0.61
+      win: 0.45
+      pick: 0.37
+      fit: 0.64
+    Ethereal Staff:
+      total: 0.54
+      efficiency: 0.46
+      win: 0.67
+      pick: 0.65
+      fit: 0.32
   community_ordered:
   - Screeching Gargoyle
-  - Stampede
+  - Mystical Mail
+  - Freya's Tears
+  - Ethereal Staff
   starter: *id001
 - source: suggested
   archetype: model
@@ -493,10 +496,10 @@ builds:
     Garb, Xibalban Effigy, Spear of Desolation, Hussar''s Wings.'
   slot_scores:
     Genji's Guard:
-      total: 0.3
+      total: 0.43
       efficiency: 0.66
-      win: 0.0
-      pick: 0.15
+      win: 0.29
+      pick: 0.18
       fit: 0.39
     Breastplate of Valor:
       total: 0.51
@@ -511,10 +514,10 @@ builds:
       pick: 0.0
       fit: 0.81
     Freya's Tears:
-      total: 0.42
+      total: 0.53
       efficiency: 0.61
-      win: 0.2
-      pick: 0.33
+      win: 0.45
+      pick: 0.37
       fit: 0.64
     Shifter's Shield:
       total: 0.52
