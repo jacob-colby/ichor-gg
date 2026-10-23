@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Mangetsu
-  aspect_pick_rate: 0.08
-  aspect_win_rate: 0.4
+  aspect_pick_rate: 0.06
+  aspect_win_rate: 0.36
   slot_order:
   - name: Transcendence
-    pick_rate: 0.45
-    win_rate: 0.6
+    pick_rate: 0.46
+    win_rate: 0.57
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.26
-      win_rate: 0.67
+      pick_rate: 0.27
+      win_rate: 0.58
     - name: Devourer's Gauntlet
-      pick_rate: 0.13
-      win_rate: 0.59
+      pick_rate: 0.1
+      win_rate: 0.58
   - name: Book of Thoth
-    pick_rate: 0.29
+    pick_rate: 0.27
     win_rate: 0.46
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.22
-      win_rate: 0.68
+      pick_rate: 0.23
+      win_rate: 0.67
     - name: Transcendence
-      pick_rate: 0.21
-      win_rate: 0.56
+      pick_rate: 0.18
+      win_rate: 0.53
   - name: Hydra's Lament
     pick_rate: 0.21
+    win_rate: 0.58
+    alternates:
+    - name: Heartseeker
+      pick_rate: 0.15
+      win_rate: 0.67
+    - name: Book of Thoth
+      pick_rate: 0.11
+      win_rate: 0.62
+  - name: Heartseeker
+    pick_rate: 0.39
     win_rate: 0.59
     alternates:
-    - name: Book of Thoth
-      pick_rate: 0.14
-      win_rate: 0.67
-    - name: Heartseeker
-      pick_rate: 0.12
-      win_rate: 0.67
-  - name: Heartseeker
-    pick_rate: 0.38
-    win_rate: 0.62
-    alternates:
-    - name: Hydra's Lament
+    - name: Avatar's Parashu
       pick_rate: 0.09
-      win_rate: 0.45
+      win_rate: 0.81
     - name: Titan's Bane
       pick_rate: 0.08
       win_rate: 0.8
   - name: Avatar's Parashu
     pick_rate: 0.14
-    win_rate: 0.69
+    win_rate: 0.61
     alternates:
     - name: Heartseeker
-      pick_rate: 0.23
-      win_rate: 0.64
+      pick_rate: 0.19
+      win_rate: 0.61
     - name: Titan's Bane
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.09
+      win_rate: 0.53
   - name: Skeggox
     pick_rate: 0.11
-    win_rate: 0.63
+    win_rate: 0.67
     alternates:
-    - name: Axe
-      pick_rate: 0.08
-      win_rate: 0.5
     - name: Titan's Bane
       pick_rate: 0.07
-      win_rate: 0.8
+      win_rate: 0.63
+    - name: Avatar's Parashu
+      pick_rate: 0.07
+      win_rate: 0.75
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.53
-    win_rate: 0.72
+    pick_rate: 0.55
+    win_rate: 0.67
   - name: Bumba's Cudgel
-    pick_rate: 0.29
-    win_rate: 0.43
+    pick_rate: 0.27
+    win_rate: 0.42
   - name: Bluestone Brooch
-    pick_rate: 0.08
-    win_rate: 0.5
+    pick_rate: 0.06
+    win_rate: 0.42
   source_url: https://smitebrain.com/gods/tsukuyomi/
-  last_verified: '2026-10-22'
-  god_win_rate: 0.5826771653543307
-  god_matches_won: 74
-  god_matches_played: 127
+  last_verified: '2026-10-23'
+  god_win_rate: 0.5675675675675675
+  god_matches_won: 105
+  god_matches_played: 185
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-22'
-  god_matches_analyzed: 1760
+  god_window_end: '2026-10-23'
+  god_matches_analyzed: 2743
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -98,14 +98,14 @@ builds:
   - Tyrfing
   - Death Metal
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   flex_slots:
-  - Tyrfing
+  - Titan's Bane
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -127,14 +127,14 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.49
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.6
-      pick: 0.45
+      win: 0.57
+      pick: 0.46
       fit: 0.24
     Tyrfing:
       total: 0.54
@@ -149,31 +149,31 @@ builds:
       pick: 0.0
       fit: 0.51
     Heartseeker:
-      total: 0.57
+      total: 0.56
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.64
-    Avatar's Parashu:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.69
-      pick: 0.3
-      fit: 0.44
+    Titan's Bane:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.63
+      pick: 0.22
+      fit: 0.54
   community_ordered:
   - Jotunn's Revenge
   - Transcendence
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Death Metal
   - Heartseeker
   - Rod of Tahuti
@@ -202,23 +202,23 @@ builds:
     Riptalon, Runeforged Hammer, Musashi''s Dual Swords, Soul Reaver, Rod of Asclepius,
     The Cosmic Horror, Toxic Blade.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
-      win: 0.68
-      pick: 0.3
-      fit: 0.52
-    Transcendence:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.45
-      fit: 0.28
     Book of Thoth:
       total: 0.45
       efficiency: 0.51
       win: 0.46
-      pick: 0.4
+      pick: 0.37
+      fit: 0.28
+    Jotunn's Revenge:
+      total: 0.65
+      efficiency: 0.72
+      win: 0.67
+      pick: 0.31
+      fit: 0.52
+    Transcendence:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.46
       fit: 0.28
     Death Metal:
       total: 0.56
@@ -227,10 +227,10 @@ builds:
       pick: 0.0
       fit: 0.54
     Heartseeker:
-      total: 0.57
+      total: 0.55
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.62
     Rod of Tahuti:
       total: 0.63
@@ -239,17 +239,17 @@ builds:
       pick: 0.0
       fit: 0.42
   community_ordered:
+  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Heartseeker
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Spear of Desolation
   - Heartseeker
   - Rod of Tahuti
@@ -278,23 +278,23 @@ builds:
     Deathbringer, Dominance, The Cosmic Horror, Musashi''s Dual Swords, Runeforged
     Hammer, Rod of Asclepius, Totem of Death, Demon Blade.'
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
-      win: 0.68
-      pick: 0.3
-      fit: 0.56
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.45
-      fit: 0.16
     Book of Thoth:
       total: 0.43
       efficiency: 0.51
       win: 0.46
-      pick: 0.4
+      pick: 0.37
+      fit: 0.16
+    Jotunn's Revenge:
+      total: 0.65
+      efficiency: 0.72
+      win: 0.67
+      pick: 0.31
+      fit: 0.56
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.46
       fit: 0.16
     Spear of Desolation:
       total: 0.55
@@ -303,21 +303,21 @@ builds:
       pick: 0.0
       fit: 0.56
     Heartseeker:
-      total: 0.56
+      total: 0.55
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.6
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.86
       win: 0.59
       pick: 0.0
       fit: 0.4
   community_ordered:
+  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Heartseeker
   starter: *id001
 - source: suggested
@@ -325,23 +325,23 @@ builds:
   slot_order:
   - Berserker's Shield
   - Jotunn's Revenge
-  - Transcendence
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
-  - Transcendence
+  - Kinetic Cuirass
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -362,17 +362,17 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.3
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.45
-      fit: 0.15
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.59
+      pick: 0.0
+      fit: 0.49
     Shield of the Phoenix:
       total: 0.54
       efficiency: 0.53
@@ -380,10 +380,10 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.54
+      total: 0.53
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.47
     Amanita Charm:
       total: 0.6
@@ -393,25 +393,24 @@ builds:
       fit: 0.69
   community_ordered:
   - Jotunn's Revenge
-  - Transcendence
   - Heartseeker
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Silverbranch Bow
-  - Spear of the Magus
   - Tekko-Kagi
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   flex_slots:
   - Silverbranch Bow
-  - Spear of the Magus
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -433,21 +432,21 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.6
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.46
+      fit: 0.19
     Silverbranch Bow:
       total: 0.55
       efficiency: 0.53
       win: 0.59
       pick: 0.0
       fit: 0.67
-    Spear of the Magus:
-      total: 0.54
-      efficiency: 0.6
-      win: 0.59
-      pick: 0.0
-      fit: 0.43
     Tekko-Kagi:
       total: 0.55
       efficiency: 0.49
@@ -455,34 +454,35 @@ builds:
       pick: 0.0
       fit: 0.76
     Heartseeker:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.77
-    Avatar's Parashu:
-      total: 0.57
-      efficiency: 0.45
-      win: 0.69
-      pick: 0.3
-      fit: 0.57
+    Titan's Bane:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.63
+      pick: 0.22
+      fit: 0.67
   community_ordered:
   - Jotunn's Revenge
+  - Transcendence
   - Heartseeker
-  - Avatar's Parashu
+  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
   - Tyrfing
   - Nimble Ring
-  - Heartseeker
   - Riptalon
+  - Heartseeker
+  - Silverbranch Bow
   flex_slots:
-  - Tyrfing
-  - Transcendence
+  - Silverbranch Bow
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -506,19 +506,13 @@ builds:
     Hammer, Arondight, Berserker''s Shield, Bancroft''s Talon, Pendulum Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.3
-    Transcendence:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.45
-      fit: 0.14
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.59
       pick: 0.0
@@ -529,21 +523,26 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.39
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.62
-      pick: 0.63
-      fit: 0.47
     Riptalon:
       total: 0.54
       efficiency: 0.51
       win: 0.59
       pick: 0.0
       fit: 0.65
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.47
+      win: 0.59
+      pick: 0.65
+      fit: 0.47
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.56
   community_ordered:
   - Jotunn's Revenge
-  - Transcendence
   - Heartseeker
   starter: *id001
 - source: suggested
@@ -584,23 +583,23 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.59
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.53
-      win: 0.6
-      pick: 0.45
+      win: 0.57
+      pick: 0.46
       fit: 0.1
     Hydra's Lament:
       total: 0.55
       efficiency: 0.54
-      win: 0.59
+      win: 0.58
       pick: 0.33
       fit: 0.55
     Spear of Desolation:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
       win: 0.59
       pick: 0.0
@@ -625,19 +624,19 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
+  - Nimble Ring
   - Death Metal
-  - Spear of Desolation
-  - Heartseeker
   - Rod of Tahuti
-  - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Soul Gem
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -656,58 +655,59 @@ builds:
     Arondight, The Cosmic Horror, Pendulum Blade, Rod of Asclepius, Toxic Blade, Polynomicon,
     Totem of Death, Blood-Bound Book, Musashi''s Dual Swords.'
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.51
+      win: 0.46
+      pick: 0.37
+      fit: 0.25
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.46
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.57
+      pick: 0.46
+      fit: 0.16
+    Nimble Ring:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.59
+      pick: 0.0
+      fit: 0.41
     Death Metal:
       total: 0.56
       efficiency: 0.61
       win: 0.59
       pick: 0.0
       fit: 0.54
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.59
-      pick: 0.0
-      fit: 0.54
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.62
-      pick: 0.63
-      fit: 0.53
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.59
       pick: 0.0
       fit: 0.41
-    Soul Gem:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.59
-      pick: 0.0
-      fit: 0.64
   community_ordered:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Heartseeker
+  - Transcendence
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Death Metal
+  - Spear of the Magus
   - Heartseeker
   - Rod of Tahuti
   flex_slots:
+  - Spear of the Magus
   - Transcendence
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -732,22 +732,16 @@ builds:
     Polynomicon.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.44
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
-      win: 0.6
-      pick: 0.45
-      fit: 0.22
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.51
-      win: 0.46
-      pick: 0.4
+      win: 0.57
+      pick: 0.46
       fit: 0.22
     Death Metal:
       total: 0.57
@@ -755,11 +749,17 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.59
+    Spear of the Magus:
+      total: 0.54
+      efficiency: 0.6
+      win: 0.59
+      pick: 0.0
+      fit: 0.41
     Heartseeker:
-      total: 0.57
+      total: 0.55
       efficiency: 0.47
-      win: 0.62
-      pick: 0.63
+      win: 0.59
+      pick: 0.65
       fit: 0.61
     Rod of Tahuti:
       total: 0.63
@@ -770,7 +770,6 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   - Transcendence
-  - Book of Thoth
   - Heartseeker
   starter: *id001
 - source: suggested
@@ -810,8 +809,8 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.72
-      win: 0.68
-      pick: 0.3
+      win: 0.67
+      pick: 0.31
       fit: 0.49
     Tyrfing:
       total: 0.54
@@ -838,7 +837,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.59
       pick: 0.0

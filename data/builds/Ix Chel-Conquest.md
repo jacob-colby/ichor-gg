@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Mother's Light
-  aspect_pick_rate: 0.1
-  aspect_win_rate: 0.25
+  aspect_pick_rate: 0.09
+  aspect_win_rate: 0.43
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.63
-    win_rate: 0.73
+    pick_rate: 0.54
+    win_rate: 0.65
     alternates:
     - name: The World Stone
-      pick_rate: 0.1
-      win_rate: 0.5
-    - name: Lotus Sickle
-      pick_rate: 0.07
+      pick_rate: 0.15
       win_rate: 0.33
-  - name: The World Stone
-    pick_rate: 0.37
-    win_rate: 0.53
-    alternates:
     - name: Book of Thoth
-      pick_rate: 0.2
-      win_rate: 0.63
+      pick_rate: 0.09
+      win_rate: 0.57
+  - name: The World Stone
+    pick_rate: 0.35
+    win_rate: 0.54
+    alternates:
     - name: Spear of Desolation
-      pick_rate: 0.12
-      win_rate: 0.6
+      pick_rate: 0.11
+      win_rate: 0.44
+    - name: Book of Thoth
+      pick_rate: 0.1
+      win_rate: 0.63
   - name: Rod of Tahuti
-    pick_rate: 0.28
-    win_rate: 0.64
+    pick_rate: 0.29
+    win_rate: 0.55
     alternates:
     - name: Soul Gem
-      pick_rate: 0.26
-      win_rate: 0.6
-    - name: The World Stone
-      pick_rate: 0.13
-      win_rate: 1.0
+      pick_rate: 0.16
+      win_rate: 0.58
+    - name: Spear of Desolation
+      pick_rate: 0.08
+      win_rate: 0.33
   - name: Obsidian Shard
-    pick_rate: 0.23
+    pick_rate: 0.24
     win_rate: 0.44
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.31
-      win_rate: 0.92
-    - name: Chandra's Grace
-      pick_rate: 0.08
-      win_rate: 0.33
-  - name: Void Shard
+      pick_rate: 0.26
+      win_rate: 0.74
+    - name: Spear of the Magus
+      pick_rate: 0.07
+      win_rate: 0.8
+  - name: Spear of the Magus
     pick_rate: 0.1
-    win_rate: 1.0
+    win_rate: 0.67
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.13
       win_rate: 0.25
-    - name: Spear of the Magus
-      pick_rate: 0.1
-      win_rate: 1.0
-  - name: Dreamer's Idol
-    pick_rate: 0.18
-    win_rate: 1.0
-    alternates:
     - name: Obsidian Shard
-      pick_rate: 0.12
-      win_rate: 0.0
+      pick_rate: 0.08
+      win_rate: 0.6
+  - name: Dreamer's Idol
+    pick_rate: 0.15
+    win_rate: 0.8
+    alternates:
+    - name: Ring of Dispel
+      pick_rate: 0.09
+      win_rate: 0.67
     - name: Gem
-      pick_rate: 0.12
-      win_rate: 0.5
+      pick_rate: 0.09
+      win_rate: 0.67
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.44
-    win_rate: 0.67
-  - name: Archmage's Gem
-    pick_rate: 0.22
-    win_rate: 0.56
+    pick_rate: 0.42
+    win_rate: 0.64
   - name: Sands Of Time
-    pick_rate: 0.15
-    win_rate: 0.5
+    pick_rate: 0.18
+    win_rate: 0.36
+  - name: Archmage's Gem
+    pick_rate: 0.16
+    win_rate: 0.54
   source_url: https://smitebrain.com/gods/ix-chel/
-  last_verified: '2026-10-22'
-  god_win_rate: 0.5853658536585366
-  god_matches_won: 24
-  god_matches_played: 41
+  last_verified: '2026-10-23'
+  god_win_rate: 0.5189873417721519
+  god_matches_won: 41
+  god_matches_played: 79
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-22'
-  god_matches_analyzed: 1760
+  god_window_end: '2026-10-23'
+  god_matches_analyzed: 2743
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -100,7 +100,7 @@ builds:
   - Dreamer's Idol
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Spear of the Magus
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -124,39 +124,39 @@ builds:
     Of Discord.'
   slot_scores:
     Freya's Tears:
-      total: 0.56
+      total: 0.58
       efficiency: 0.61
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.5
     Spear of the Magus:
-      total: 0.73
+      total: 0.58
       efficiency: 0.6
-      win: 1.0
+      win: 0.67
       pick: 0.22
       fit: 0.36
     Rod of Tahuti:
-      total: 0.66
+      total: 0.62
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.36
     Dreamer's Idol:
-      total: 0.71
+      total: 0.61
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.36
     Amanita Charm:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.5
   community_ordered:
@@ -200,40 +200,40 @@ builds:
     Scale, Triton''s Conch, Screeching Gargoyle, Daybreak Gavel.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.28
     Spear of Desolation:
-      total: 0.62
+      total: 0.58
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.4
     Breastplate of Valor:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.28
     Rod of Tahuti:
-      total: 0.67
+      total: 0.63
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.37
     Spear of the Magus:
-      total: 0.72
+      total: 0.57
       efficiency: 0.6
-      win: 1.0
+      win: 0.67
       pick: 0.22
       fit: 0.31
     Dreamer's Idol:
-      total: 0.7
+      total: 0.61
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.31
   community_ordered:
   - Spear of Desolation
@@ -274,39 +274,39 @@ builds:
     Pearl, Magi''s Cloak, Daybreak Gavel, Ancient Signet.'
   slot_scores:
     Freya's Tears:
-      total: 0.55
+      total: 0.56
       efficiency: 0.61
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.39
     Spear of Desolation:
-      total: 0.63
+      total: 0.59
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.49
     Spear of the Magus:
-      total: 0.72
+      total: 0.58
       efficiency: 0.6
-      win: 1.0
+      win: 0.67
       pick: 0.22
       fit: 0.35
     Rod of Tahuti:
-      total: 0.66
+      total: 0.62
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.35
     Dreamer's Idol:
-      total: 0.71
+      total: 0.61
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.35
     Amanita Charm:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.37
   community_ordered:
@@ -318,15 +318,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Shield of the Phoenix
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
-  - Amanita Charm
   - Dreamer's Idol
-  flex_slots:
   - Amanita Charm
-  - Soul Gem
+  flex_slots:
+  - Shield of the Phoenix
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -335,8 +335,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -344,51 +344,50 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Rod of Asclepius, Gluttonous Grimoire,
     Kinetic Cuirass, Freya''s Tears, Ethereal Staff, Genji''s Guard, Breastplate of
     Valor, Shifter''s Shield, Lifebinder, Helm of Radiance, Sphere of Negation, Yogi''s
-    Necklace, Erosion, Eye of Providence, Phoenix Feather, Draconic Scale, Jade Scepter,
-    Wish-Granting Pearl, Glorious Pridwen, Blood-Bound Book, Chronos'' Pendant, Chandra''s
-    Grace.'
+    Necklace, Erosion, Chandra''s Grace, Eye of Providence, Phoenix Feather, Draconic
+    Scale, Jade Scepter, Wish-Granting Pearl, Glorious Pridwen, Blood-Bound Book,
+    Chronos'' Pendant.'
   slot_scores:
+    Shield of the Phoenix:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.64
+      pick: 0.0
+      fit: 0.79
     Spear of Desolation:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.5
     Spear of the Magus:
-      total: 0.73
+      total: 0.58
       efficiency: 0.6
-      win: 1.0
+      win: 0.67
       pick: 0.22
       fit: 0.36
     Rod of Tahuti:
-      total: 0.66
+      total: 0.62
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.36
-    Soul Gem:
+    Dreamer's Idol:
       total: 0.61
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.4
-      fit: 0.9
+      efficiency: 0.51
+      win: 0.8
+      pick: 0.46
+      fit: 0.36
     Amanita Charm:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.8
-    Dreamer's Idol:
-      total: 0.71
-      efficiency: 0.51
-      win: 1.0
-      pick: 0.55
-      fit: 0.36
   community_ordered:
   - Spear of Desolation
   - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
   - Dreamer's Idol
   starter: *id001
 - source: suggested
@@ -396,12 +395,12 @@ builds:
   slot_order:
   - Stone of Binding
   - Spear of Desolation
-  - Spear of the Magus
+  - Gluttonous Grimoire
   - Rod of Tahuti
-  - Soul Gem
+  - Spear of the Magus
   - Dreamer's Idol
   flex_slots:
-  - Soul Gem
+  - Gluttonous Grimoire
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,46 +423,45 @@ builds:
     Chronos'' Pendant, Jade Scepter, Wish-Granting Pearl, Magi''s Cloak.'
   slot_scores:
     Stone of Binding:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.68
     Spear of Desolation:
-      total: 0.65
+      total: 0.61
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.59
+    Gluttonous Grimoire:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.64
+      pick: 0.0
+      fit: 0.7
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.86
+      win: 0.55
+      pick: 0.45
+      fit: 0.48
     Spear of the Magus:
-      total: 0.74
+      total: 0.6
       efficiency: 0.6
-      win: 1.0
+      win: 0.67
       pick: 0.22
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.68
-      efficiency: 0.86
-      win: 0.64
-      pick: 0.44
-      fit: 0.48
-    Soul Gem:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.6
-      pick: 0.4
-      fit: 0.69
     Dreamer's Idol:
-      total: 0.73
+      total: 0.63
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.48
   community_ordered:
   - Spear of Desolation
-  - Spear of the Magus
   - Rod of Tahuti
-  - Soul Gem
+  - Spear of the Magus
   - Dreamer's Idol
   starter: *id001
 - source: suggested
@@ -473,7 +471,7 @@ builds:
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
-  - Spear of the Magus
+  - Gluttonous Grimoire
   - Dreamer's Idol
   flex_slots:
   - Bragi's Harp
@@ -500,44 +498,43 @@ builds:
     Cloak.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.5
+      total: 0.51
       efficiency: 0.52
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.28
     Nimble Ring:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.34
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.47
     Rod of Tahuti:
-      total: 0.64
+      total: 0.6
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.21
-    Spear of the Magus:
-      total: 0.7
+    Gluttonous Grimoire:
+      total: 0.57
       efficiency: 0.6
-      win: 1.0
-      pick: 0.22
-      fit: 0.21
+      win: 0.64
+      pick: 0.0
+      fit: 0.45
     Dreamer's Idol:
-      total: 0.69
+      total: 0.59
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.21
   community_ordered:
   - Rod of Tahuti
-  - Spear of the Magus
   - Dreamer's Idol
   starter: *id001
 - source: suggested
@@ -545,13 +542,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Spear of Desolation
+  - Breastplate of Valor
   - Freya's Tears
   - Rod of Tahuti
-  - Spear of the Magus
   - Dreamer's Idol
   flex_slots:
-  - Freya's Tears
   - Genji's Guard
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -560,8 +557,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -574,45 +571,44 @@ builds:
     Gavel, Midgardian Mail, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.66
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.52
-    Freya's Tears:
+    Breastplate of Valor:
       total: 0.58
+      efficiency: 0.65
+      win: 0.64
+      pick: 0.0
+      fit: 0.44
+    Freya's Tears:
+      total: 0.59
       efficiency: 0.61
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.58
     Rod of Tahuti:
-      total: 0.64
+      total: 0.6
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
-      fit: 0.21
-    Spear of the Magus:
-      total: 0.7
-      efficiency: 0.6
-      win: 1.0
-      pick: 0.22
+      win: 0.55
+      pick: 0.45
       fit: 0.21
     Dreamer's Idol:
-      total: 0.69
+      total: 0.59
       efficiency: 0.51
-      win: 1.0
-      pick: 0.55
+      win: 0.8
+      pick: 0.46
       fit: 0.21
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
   - Dreamer's Idol
   starter: *id001
 - source: suggested
@@ -649,39 +645,39 @@ builds:
     Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.56
       efficiency: 0.66
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.32
     Spear of Desolation:
-      total: 0.64
+      total: 0.6
       efficiency: 0.57
-      win: 0.73
-      pick: 0.63
+      win: 0.65
+      pick: 0.54
       fit: 0.5
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.58
       efficiency: 0.56
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.6
     Freya's Tears:
-      total: 0.56
+      total: 0.58
       efficiency: 0.61
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.66
+      total: 0.62
       efficiency: 0.86
-      win: 0.64
-      pick: 0.44
+      win: 0.55
+      pick: 0.45
       fit: 0.36
     Amanita Charm:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
-      win: 0.61
+      win: 0.64
       pick: 0.0
       fit: 0.5
   community_ordered:
