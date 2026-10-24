@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fellowship
-  aspect_pick_rate: 0.02
-  aspect_win_rate: 0.0
+  aspect_pick_rate: 0.04
+  aspect_win_rate: 0.6
   slot_order:
   - name: Transcendence
-    pick_rate: 0.34
-    win_rate: 0.53
+    pick_rate: 0.37
+    win_rate: 0.52
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.23
-      win_rate: 0.7
+      pick_rate: 0.22
+      win_rate: 0.62
     - name: Tyrfing
       pick_rate: 0.09
-      win_rate: 0.0
-  - name: Dagger of Frenzy
-    pick_rate: 0.16
-    win_rate: 0.64
+      win_rate: 0.27
+  - name: Jotunn's Revenge
+    pick_rate: 0.17
+    win_rate: 0.4
     alternates:
-    - name: Book of Thoth
+    - name: Dagger of Frenzy
       pick_rate: 0.14
-      win_rate: 0.67
-    - name: Jotunn's Revenge
-      pick_rate: 0.13
-      win_rate: 0.45
+      win_rate: 0.56
+    - name: Book of Thoth
+      pick_rate: 0.12
+      win_rate: 0.64
   - name: Dominance
     pick_rate: 0.14
-    win_rate: 0.5
+    win_rate: 0.44
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.11
-      win_rate: 0.78
+      win_rate: 0.62
     - name: The Executioner
-      pick_rate: 0.11
-      win_rate: 0.56
-  - name: Riptalon
-    pick_rate: 0.14
-    win_rate: 0.45
-    alternates:
-    - name: Heartseeker
-      pick_rate: 0.1
-      win_rate: 0.25
-    - name: Rod of Tahuti
-      pick_rate: 0.1
-      win_rate: 0.63
-  - name: Rod of Tahuti
+      pick_rate: 0.09
+      win_rate: 0.6
+  - name: Heartseeker
     pick_rate: 0.11
-    win_rate: 0.25
+    win_rate: 0.17
+    alternates:
+    - name: Riptalon
+      pick_rate: 0.11
+      win_rate: 0.5
+    - name: The Executioner
+      pick_rate: 0.1
+      win_rate: 0.36
+  - name: Rod of Tahuti
+    pick_rate: 0.14
+    win_rate: 0.43
     alternates:
     - name: Heartseeker
-      pick_rate: 0.08
-      win_rate: 1.0
+      pick_rate: 0.1
+      win_rate: 0.8
     - name: Deathbringer
       pick_rate: 0.08
-      win_rate: 0.33
-  - name: Obsidian Shard
-    pick_rate: 0.09
-    win_rate: 0.0
+      win_rate: 0.38
+  - name: Blinking Abyss
+    pick_rate: 0.11
+    win_rate: 0.38
     alternates:
-    - name: Blinking Abyss
-      pick_rate: 0.09
-      win_rate: 0.4
-    - name: Skeggox
-      pick_rate: 0.06
-      win_rate: 0.67
+    - name: Obsidian Shard
+      pick_rate: 0.08
+      win_rate: 0.17
+    - name: Odysseus' Bow
+      pick_rate: 0.07
+      win_rate: 0.2
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.17
-    win_rate: 0.53
-  - name: Conduit Gem
     pick_rate: 0.16
-    win_rate: 0.57
-  - name: Sharpshooter's Arrow
+    win_rate: 0.58
+  - name: Conduit Gem
     pick_rate: 0.14
+    win_rate: 0.65
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.13
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/danzaburou/
-  last_verified: '2026-10-23'
-  god_win_rate: 0.5057471264367817
-  god_matches_won: 44
-  god_matches_played: 87
+  last_verified: '2026-10-24'
+  god_win_rate: 0.5254237288135594
+  god_matches_won: 62
+  god_matches_played: 118
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-23'
-  god_matches_analyzed: 2743
+  god_window_end: '2026-10-24'
+  god_matches_analyzed: 3785
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -97,8 +97,8 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Death Metal
-  - Heartseeker
+  - Riptalon
+  - Rod of Tahuti
   flex_slots:
   - Book of Thoth
   - Transcendence
@@ -125,47 +125,48 @@ builds:
     Talon, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.48
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.05
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.5
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.37
     Transcendence:
-      total: 0.47
+      total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.18
     Hydra's Lament:
-      total: 0.6
+      total: 0.53
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.32
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.48
-    Heartseeker:
-      total: 0.7
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.53
+    Riptalon:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.18
+      fit: 0.55
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.2
   community_ordered:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Riptalon
+  - Rod of Tahuti
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -177,7 +178,7 @@ builds:
   - Transcendence
   - Hydra's Lament
   - Death Metal
-  - Heartseeker
+  - Rod of Tahuti
   flex_slots:
   - Death Metal
   - Transcendence
@@ -204,60 +205,60 @@ builds:
     Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.52
+      total: 0.51
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.51
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.44
     Transcendence:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.24
     Hydra's Lament:
-      total: 0.61
+      total: 0.54
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.42
     Death Metal:
-      total: 0.52
+      total: 0.48
       efficiency: 0.61
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.51
-    Heartseeker:
-      total: 0.7
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.55
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.35
   community_ordered:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: crit
   slot_order:
   - Book of Thoth
+  - Transcendence
   - Hydra's Lament
   - Death Metal
-  - Musashi's Dual Swords
   - Demon Blade
-  - Heartseeker
+  - Deathbringer
   flex_slots:
+  - Deathbringer
   - Demon Blade
-  - Musashi's Dual Swords
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -281,45 +282,46 @@ builds:
     Blade, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.48
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.05
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.52
+      pick: 0.37
+      fit: 0.15
     Hydra's Lament:
-      total: 0.59
+      total: 0.52
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.29
     Death Metal:
-      total: 0.52
+      total: 0.47
       efficiency: 0.61
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.49
-    Musashi's Dual Swords:
-      total: 0.46
-      efficiency: 0.46
-      win: 0.52
-      pick: 0.0
-      fit: 0.44
     Demon Blade:
-      total: 0.47
+      total: 0.42
       efficiency: 0.38
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.67
-    Heartseeker:
-      total: 0.7
-      efficiency: 0.47
-      win: 1.0
+    Deathbringer:
+      total: 0.42
+      efficiency: 0.51
+      win: 0.38
       pick: 0.17
-      fit: 0.5
+      fit: 0.44
   community_ordered:
   - Book of Thoth
+  - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Deathbringer
   starter: *id001
 - source: suggested
   archetype: burst
@@ -328,10 +330,10 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
-  - Soul Gem
+  - Riptalon
+  - Rod of Tahuti
   flex_slots:
-  - Book of Thoth
+  - Riptalon
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -356,47 +358,48 @@ builds:
     Hammer, Rod of Asclepius, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.51
+      total: 0.49
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.13
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.51
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.46
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.13
     Hydra's Lament:
-      total: 0.6
+      total: 0.53
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.36
-    Heartseeker:
-      total: 0.7
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.53
-    Soul Gem:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.52
-      pick: 0.0
-      fit: 0.63
+    Riptalon:
+      total: 0.48
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.18
+      fit: 0.48
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.33
   community_ordered:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Riptalon
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -405,7 +408,7 @@ builds:
   - Berserker's Shield
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Riptalon
   - Amanita Charm
   flex_slots:
   - Book of Thoth
@@ -434,46 +437,46 @@ builds:
     Toxic Blade, Chandra''s Grace, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.49
+      total: 0.48
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.03
     Berserker's Shield:
-      total: 0.53
+      total: 0.48
       efficiency: 0.68
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.39
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.12
     Hydra's Lament:
-      total: 0.59
+      total: 0.51
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.24
-    Heartseeker:
-      total: 0.69
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.42
+    Riptalon:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.18
+      fit: 0.67
     Amanita Charm:
-      total: 0.56
+      total: 0.51
       efficiency: 0.65
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.63
   community_ordered:
   - Book of Thoth
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -482,8 +485,8 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
-  - Soul Gem
+  - Riptalon
+  - Rod of Tahuti
   flex_slots:
   - Book of Thoth
   - Transcendence
@@ -510,59 +513,60 @@ builds:
     Pendant, Arondight, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.48
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.04
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.51
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.48
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.15
     Hydra's Lament:
-      total: 0.59
+      total: 0.52
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.28
-    Heartseeker:
-      total: 0.72
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.65
-    Soul Gem:
+    Riptalon:
       total: 0.51
-      efficiency: 0.57
-      win: 0.52
-      pick: 0.0
-      fit: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.18
+      fit: 0.63
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.35
   community_ordered:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Riptalon
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Book of Thoth
+  - Transcendence
   - Hydra's Lament
   - Dagger of Frenzy
   - Nimble Ring
-  - Silverbranch Bow
-  - Heartseeker
+  - Riptalon
   flex_slots:
-  - Silverbranch Bow
+  - Transcendence
   - Dagger of Frenzy
   situational_swaps:
   - vs_tag: heavy_cc
@@ -583,50 +587,51 @@ builds:
     Bragi''s Harp, Spear of Desolation, Toxic Blade, Bracer of The Abyss, Qin''s Blade,
     Demon Blade, Titan''s Bane, The Crusher, Musashi''s Dual Swords, Doom Orb, Ancient
     Signet, The World Stone, Blood-Bound Book, Chronos'' Pendant, Dreamer''s Idol,
-    Sun Beam Bow, Runeforged Hammer, Arondight, Damaru, Bancroft''s Talon, Rage, Berserker''s
-    Shield, Tyrfing.'
+    Sun Beam Bow, Tyrfing, Runeforged Hammer, Arondight, Damaru, Bancroft''s Talon,
+    Rage, Berserker''s Shield.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.48
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.04
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.52
+      pick: 0.37
+      fit: 0.13
     Hydra's Lament:
-      total: 0.59
+      total: 0.52
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.25
     Dagger of Frenzy:
-      total: 0.49
+      total: 0.45
       efficiency: 0.37
-      win: 0.64
-      pick: 0.22
+      win: 0.56
+      pick: 0.19
       fit: 0.39
     Nimble Ring:
-      total: 0.51
+      total: 0.47
       efficiency: 0.65
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.36
-    Silverbranch Bow:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.52
-      pick: 0.0
-      fit: 0.52
-    Heartseeker:
-      total: 0.69
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.45
+    Riptalon:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.18
+      fit: 0.6
   community_ordered:
   - Book of Thoth
+  - Transcendence
   - Hydra's Lament
   - Dagger of Frenzy
-  - Heartseeker
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -635,10 +640,10 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Book of Thoth
+  - Soul Gem
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -663,39 +668,39 @@ builds:
     Dual Swords, Demon Blade, Genji''s Guard, Qin''s Blade, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
+      total: 0.49
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.08
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.51
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.48
     Transcendence:
       total: 0.45
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.08
     Hydra's Lament:
-      total: 0.62
+      total: 0.55
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.47
-    Heartseeker:
-      total: 0.68
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.4
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.2
     Soul Gem:
-      total: 0.53
+      total: 0.48
       efficiency: 0.57
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.65
   community_ordered:
@@ -703,19 +708,19 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: intelligence
   slot_order:
   - Book of Thoth
+  - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Death Metal
-  - Heartseeker
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Book of Thoth
+  - Soul Gem
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -740,46 +745,47 @@ builds:
     Blade, Polynomicon, Pendulum Blade, Typhon’s Heart, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.2
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.72
+      win: 0.4
+      pick: 0.23
+      fit: 0.38
     Transcendence:
       total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.13
     Hydra's Lament:
-      total: 0.6
+      total: 0.53
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.34
-    Death Metal:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.52
-      pick: 0.0
-      fit: 0.51
-    Heartseeker:
-      total: 0.69
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.47
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.34
     Soul Gem:
-      total: 0.52
+      total: 0.48
       efficiency: 0.57
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.62
   community_ordered:
   - Book of Thoth
+  - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -789,9 +795,9 @@ builds:
   - Transcendence
   - Hydra's Lament
   - Death Metal
-  - Heartseeker
+  - Rod of Tahuti
   flex_slots:
-  - Jotunn's Revenge
+  - Death Metal
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -816,47 +822,47 @@ builds:
     Arondight, Gem of Focus, The Cosmic Horror, Rod of Asclepius, Tyrfing.'
   slot_scores:
     Book of Thoth:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
-      win: 0.67
-      pick: 0.19
+      win: 0.64
+      pick: 0.16
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.5
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.36
     Transcendence:
-      total: 0.47
+      total: 0.46
       efficiency: 0.53
-      win: 0.53
-      pick: 0.34
+      win: 0.52
+      pick: 0.37
       fit: 0.18
     Hydra's Lament:
-      total: 0.6
+      total: 0.52
       efficiency: 0.54
-      win: 0.78
+      win: 0.62
       pick: 0.17
       fit: 0.31
     Death Metal:
-      total: 0.53
+      total: 0.48
       efficiency: 0.61
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.55
-    Heartseeker:
-      total: 0.7
-      efficiency: 0.47
-      win: 1.0
-      pick: 0.17
-      fit: 0.53
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.3
+      fit: 0.33
   community_ordered:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
-  - Heartseeker
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: model
@@ -893,39 +899,39 @@ builds:
     Blade, Bancroft''s Talon.'
   slot_scores:
     Lernaean Bow:
-      total: 0.49
+      total: 0.45
       efficiency: 0.52
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.5
       efficiency: 0.72
-      win: 0.45
-      pick: 0.18
+      win: 0.4
+      pick: 0.23
       fit: 0.37
     Nimble Ring:
-      total: 0.52
+      total: 0.47
       efficiency: 0.65
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.52
+      total: 0.47
       efficiency: 0.61
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.45
+      total: 0.54
       efficiency: 0.86
-      win: 0.25
-      pick: 0.24
+      win: 0.43
+      pick: 0.3
       fit: 0.2
     Soul Gem:
-      total: 0.49
+      total: 0.45
       efficiency: 0.57
-      win: 0.52
+      win: 0.42
       pick: 0.0
       fit: 0.43
   community_ordered:

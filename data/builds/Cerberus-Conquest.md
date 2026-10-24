@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Souls
-  aspect_pick_rate: 0.04
-  aspect_win_rate: 0.5
+  aspect_pick_rate: 0.03
+  aspect_win_rate: 0.4
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.56
-    win_rate: 0.58
+    pick_rate: 0.48
+    win_rate: 0.55
     alternates:
     - name: Stampede
-      pick_rate: 0.18
+      pick_rate: 0.19
       win_rate: 0.7
     - name: Amanita Charm
-      pick_rate: 0.04
-      win_rate: 0.2
+      pick_rate: 0.05
+      win_rate: 0.29
   - name: Stampede
-    pick_rate: 0.36
-    win_rate: 0.61
+    pick_rate: 0.31
+    win_rate: 0.58
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.17
-      win_rate: 0.74
+      pick_rate: 0.15
+      win_rate: 0.78
     - name: Screeching Gargoyle
-      pick_rate: 0.07
-      win_rate: 0.88
+      pick_rate: 0.08
+      win_rate: 0.62
   - name: Shell of Rebuke
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.63
     alternates:
     - name: Genji's Guard
       pick_rate: 0.13
-      win_rate: 0.5
+      win_rate: 0.53
     - name: Freya's Tears
-      pick_rate: 0.12
-      win_rate: 0.69
+      pick_rate: 0.11
+      win_rate: 0.71
   - name: Freya's Tears
-    pick_rate: 0.17
+    pick_rate: 0.19
     win_rate: 0.44
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.23
-      win_rate: 0.67
+      pick_rate: 0.21
+      win_rate: 0.62
     - name: Screeching Gargoyle
-      pick_rate: 0.07
-      win_rate: 0.43
-  - name: Veve Charm
-    pick_rate: 0.06
-    win_rate: 0.2
+      pick_rate: 0.06
+      win_rate: 0.5
+  - name: Captain's Ring
+    pick_rate: 0.05
+    win_rate: 0.5
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.2
+      pick_rate: 0.18
       win_rate: 0.76
     - name: Shell of Rebuke
       pick_rate: 0.09
-      win_rate: 0.5
+      win_rate: 0.64
   - name: Sage's Ring
-    pick_rate: 0.14
-    win_rate: 0.38
+    pick_rate: 0.13
+    win_rate: 0.4
     alternates:
     - name: Medal of Defense
       pick_rate: 0.11
-      win_rate: 1.0
-    - name: Olmec Blue
-      pick_rate: 0.07
+      win_rate: 0.88
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.05
       win_rate: 0.75
   community_starters:
   - name: Conduit Gem
-    pick_rate: 0.36
-    win_rate: 0.56
-  - name: Archmage's Gem
-    pick_rate: 0.16
-    win_rate: 0.61
+    pick_rate: 0.32
+    win_rate: 0.55
+  - name: Bluestone Brooch
+    pick_rate: 0.18
+    win_rate: 0.59
   - name: Bluestone Pendant
     pick_rate: 0.15
-    win_rate: 0.71
+    win_rate: 0.65
   source_url: https://smitebrain.com/gods/cerberus/
-  last_verified: '2026-10-23'
-  god_win_rate: 0.5964912280701754
-  god_matches_won: 68
-  god_matches_played: 114
+  last_verified: '2026-10-24'
+  god_win_rate: 0.5974025974025974
+  god_matches_won: 92
+  god_matches_played: 154
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-23'
-  god_matches_analyzed: 2743
+  god_window_end: '2026-10-24'
+  god_matches_analyzed: 3785
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -96,16 +96,16 @@ builds:
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
-  - Stampede
+  - Hide of the Nemean Lion
   - Shifter's Shield
   - Erosion
   flex_slots:
-  - Stampede
+  - Breastplate of Valor
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
@@ -117,17 +117,17 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Kinetic Cuirass, Shifter''s Shield, Breastplate of Valor,
-    Erosion, Eye of Providence, Draconic Scale, Shield of the Phoenix, Stone of Binding,
-    Helm of Radiance, Magi''s Cloak, Gluttonous Grimoire, Mantle Of Discord, Midgardian
-    Mail, Hide of the Nemean Lion, Leviathan''s Hide, Prophetic Cloak, Void Shield,
+    Erosion, Eye of Providence, Draconic Scale, Screeching Gargoyle, Shield of the
+    Phoenix, Stone of Binding, Helm of Radiance, Magi''s Cloak, Gluttonous Grimoire,
+    Mantle Of Discord, Midgardian Mail, Leviathan''s Hide, Prophetic Cloak, Void Shield,
     Ancile, Spear of Desolation, Nimble Ring, Helm of Darkness, Oni Hunter''s Garb,
-    Rod of Asclepius, Screeching Gargoyle, Amanita Charm.'
+    Rod of Asclepius, Amanita Charm.'
   slot_scores:
     Genji's Guard:
-      total: 0.63
+      total: 0.64
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.35
     Breastplate of Valor:
       total: 0.54
@@ -141,11 +141,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.73
-    Stampede:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.61
-      pick: 0.49
+    Hide of the Nemean Lion:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
       fit: 0.41
     Shifter's Shield:
       total: 0.55
@@ -161,7 +161,7 @@ builds:
       fit: 0.63
   community_ordered:
   - Genji's Guard
-  - Stampede
+  - Hide of the Nemean Lion
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -171,16 +171,16 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Stampede
+  - Hide of the Nemean Lion
   - Shifter's Shield
   - Rod of Asclepius
   flex_slots:
+  - Rod of Asclepius
   - Shifter's Shield
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -195,14 +195,14 @@ builds:
     Shifter''s Shield, Soul Gem, Breastplate of Valor, Erosion, Eye of Providence,
     Ethereal Staff, Draconic Scale, Gluttonous Grimoire, Phoenix Feather, Yogi''s
     Necklace, Chandra''s Grace, Lifebinder, Glorious Pridwen, Stone of Binding, Midgardian
-    Mail, Helm of Radiance, Hide of the Nemean Lion, Sphere of Negation, Leviathan''s
-    Hide, Magi''s Cloak, Void Shield, Amanita Charm.'
+    Mail, Helm of Radiance, Sphere of Negation, Leviathan''s Hide, Magi''s Cloak,
+    Void Shield, Amanita Charm.'
   slot_scores:
     Genji's Guard:
-      total: 0.62
+      total: 0.64
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.31
     Kinetic Cuirass:
       total: 0.57
@@ -216,11 +216,11 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.85
-    Stampede:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.61
-      pick: 0.49
+    Hide of the Nemean Lion:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
       fit: 0.43
     Shifter's Shield:
       total: 0.55
@@ -236,27 +236,27 @@ builds:
       fit: 0.62
   community_ordered:
   - Genji's Guard
-  - Stampede
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Stone of Binding
   - Genji's Guard
-  - Kinetic Cuirass
+  - Hide of the Nemean Lion
   - Gluttonous Grimoire
-  - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
-  - Spear of Desolation
+  - Stone of Binding
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -264,13 +264,19 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Rod of Tahuti, Stone of Binding, Gluttonous Grimoire, Kinetic Cuirass,
-    Spear of Desolation, Spear of the Magus, Void Shield, Soul Gem, Breastplate of
-    Valor, Obsidian Shard, Void Stone, Shifter''s Shield, Erosion, Eye of Providence,
-    Draconic Scale, Shield of the Phoenix, Doom Orb, Helm of Radiance, The World Stone,
-    Magi''s Cloak, Dreamer''s Idol, Nimble Ring, Mantle Of Discord, Midgardian Mail,
-    Rod of Asclepius, Screeching Gargoyle, Amanita Charm.'
+    for this god: Rod of Tahuti, Screeching Gargoyle, Stone of Binding, Gluttonous
+    Grimoire, Kinetic Cuirass, Spear of Desolation, Spear of the Magus, Void Shield,
+    Soul Gem, Breastplate of Valor, Obsidian Shard, Void Stone, Shifter''s Shield,
+    Erosion, Eye of Providence, Draconic Scale, Shield of the Phoenix, Doom Orb, Helm
+    of Radiance, The World Stone, Magi''s Cloak, Dreamer''s Idol, Nimble Ring, Mantle
+    Of Discord, Midgardian Mail, Rod of Asclepius, Amanita Charm.'
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.62
+      pick: 0.11
+      fit: 0.65
     Stone of Binding:
       total: 0.55
       efficiency: 0.51
@@ -278,29 +284,23 @@ builds:
       pick: 0.0
       fit: 0.72
     Genji's Guard:
-      total: 0.61
+      total: 0.63
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.25
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.58
-      pick: 0.0
-      fit: 0.55
+    Hide of the Nemean Lion:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
+      fit: 0.29
     Gluttonous Grimoire:
       total: 0.54
       efficiency: 0.55
       win: 0.58
       pick: 0.0
       fit: 0.61
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.58
-      pick: 0.0
-      fit: 0.47
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -308,7 +308,9 @@ builds:
       pick: 0.0
       fit: 0.38
   community_ordered:
+  - Screeching Gargoyle
   - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -318,7 +320,7 @@ builds:
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Rod of Tahuti
+  - Hide of the Nemean Lion
   flex_slots:
   - Bragi's Harp
   - Bracer of The Abyss
@@ -337,17 +339,17 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Nimble Ring, Kinetic Cuirass, Gluttonous Grimoire, Breastplate
-    of Valor, Shifter''s Shield, Soul Gem, Helm of Radiance, Erosion, Stone of Binding,
-    Eye of Providence, Shield of the Phoenix, Draconic Scale, Magi''s Cloak, Daybreak
-    Gavel, Spear of the Magus, Spear of Desolation, Bragi''s Harp, Rod of Asclepius,
-    Midgardian Mail, Mantle Of Discord, Bracer of The Abyss, Obsidian Shard, Hide
-    of the Nemean Lion, Leviathan''s Hide, Screeching Gargoyle, Amanita Charm.'
+    of Valor, Shifter''s Shield, Screeching Gargoyle, Soul Gem, Helm of Radiance,
+    Erosion, Stone of Binding, Eye of Providence, Shield of the Phoenix, Draconic
+    Scale, Magi''s Cloak, Daybreak Gavel, Spear of the Magus, Spear of Desolation,
+    Bragi''s Harp, Rod of Asclepius, Midgardian Mail, Mantle Of Discord, Bracer of
+    The Abyss, Obsidian Shard, Leviathan''s Hide, Amanita Charm.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.62
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.2
     Kinetic Cuirass:
       total: 0.53
@@ -373,54 +375,61 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.58
-      pick: 0.0
-      fit: 0.08
+    Hide of the Nemean Lion:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
+      fit: 0.23
   community_ordered:
   - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spear of Desolation
-  - Rod of Tahuti
+  - Hide of the Nemean Lion
   flex_slots:
+  - Kinetic Cuirass
   - Shield of the Phoenix
-  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shifter's Shield — magical protection
-    swap_item: Shifter's Shield
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Breastplate of Valor,
-    Kinetic Cuirass, Shield of the Phoenix, Spear of Desolation, Soul Gem, Shifter''s
-    Shield, Chronos'' Pendant, Helm of Radiance, Prophetic Cloak, Gluttonous Grimoire,
-    Erosion, Eye of Providence, Stone of Binding, Gladiator''s Shield, Draconic Scale,
-    Nimble Ring, Gem of Focus, Magi''s Cloak, Spear of the Magus, Rod of Asclepius,
-    Eye of Erebus, Mantle Of Discord, Midgardian Mail, Daybreak Gavel, Screeching
-    Gargoyle, Amanita Charm.'
+    Screeching Gargoyle, Kinetic Cuirass, Shield of the Phoenix, Spear of Desolation,
+    Soul Gem, Shifter''s Shield, Chronos'' Pendant, Helm of Radiance, Prophetic Cloak,
+    Gluttonous Grimoire, Erosion, Eye of Providence, Stone of Binding, Gladiator''s
+    Shield, Draconic Scale, Nimble Ring, Gem of Focus, Magi''s Cloak, Spear of the
+    Magus, Rod of Asclepius, Eye of Erebus, Mantle Of Discord, Midgardian Mail, Daybreak
+    Gavel, Amanita Charm.'
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.62
+      pick: 0.11
+      fit: 0.55
     Genji's Guard:
-      total: 0.64
+      total: 0.66
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.45
     Breastplate of Valor:
       total: 0.56
@@ -440,20 +449,16 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.56
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.58
-      pick: 0.0
-      fit: 0.42
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.58
-      pick: 0.0
-      fit: 0.12
+    Hide of the Nemean Lion:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
+      fit: 0.27
   community_ordered:
+  - Screeching Gargoyle
   - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: strength
@@ -463,10 +468,10 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
+  - Hide of the Nemean Lion
   flex_slots:
+  - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -483,19 +488,19 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Berserker''s
     Shield, Kinetic Cuirass, Shield Splitter, Runeforged Hammer, Breastplate of Valor,
-    Golden Blade, Shifter''s Shield, Gluttonous Grimoire, Eye of the Storm, Hydra''s
-    Lament, Heartseeker, Tyrfing, Spear of Desolation, Lernaean Bow, Erosion, Spear
-    of the Magus, Tekko-Kagi, Eye of Providence, Avenging Blade, Helm of Radiance,
-    Soul Gem, Stone of Binding, Shield of the Phoenix, Draconic Scale, Obsidian Shard,
-    Titan''s Bane, The Crusher, Pharaoh''s Curse, Silverbranch Bow, Magi''s Cloak,
-    Nimble Ring, The Reaper, Toxic Blade, Shogun''s Ofuda, Mantle Of Discord, Midgardian
-    Mail, Screeching Gargoyle, Amanita Charm.'
+    Golden Blade, Shifter''s Shield, Gluttonous Grimoire, Eye of the Storm, Screeching
+    Gargoyle, Hydra''s Lament, Heartseeker, Tyrfing, Spear of Desolation, Lernaean
+    Bow, Erosion, Spear of the Magus, Tekko-Kagi, Eye of Providence, Avenging Blade,
+    Helm of Radiance, Soul Gem, Stone of Binding, Shield of the Phoenix, Draconic
+    Scale, Obsidian Shard, Titan''s Bane, The Crusher, Pharaoh''s Curse, Silverbranch
+    Bow, Magi''s Cloak, Nimble Ring, The Reaper, Toxic Blade, Shogun''s Ofuda, Mantle
+    Of Discord, Midgardian Mail, Amanita Charm.'
   slot_scores:
     Genji's Guard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.23
     Berserker's Shield:
       total: 0.55
@@ -521,34 +526,35 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.52
-    Runeforged Hammer:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.58
-      pick: 0.0
-      fit: 0.44
+    Hide of the Nemean Lion:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
+      fit: 0.27
   community_ordered:
   - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Book of Thoth
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Transcendence
-  - Rod of Tahuti
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  - Gluttonous Grimoire
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Kinetic Cuirass
+  - Gluttonous Grimoire
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -566,17 +572,11 @@ builds:
     Blade, Death Metal, Magi''s Cloak, Chronos'' Pendant, Tekko-Kagi, Pharaoh''s Curse,
     The World Stone, Silverbranch Bow, Amanita Charm.'
   slot_scores:
-    Book of Thoth:
-      total: 0.46
-      efficiency: 0.51
-      win: 0.58
-      pick: 0.0
-      fit: 0.17
     Genji's Guard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.21
     Berserker's Shield:
       total: 0.55
@@ -590,20 +590,27 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.38
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
       win: 0.58
       pick: 0.0
-      fit: 0.17
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
+      fit: 0.49
+    Hide of the Nemean Lion:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.75
+      pick: 0.15
+      fit: 0.25
+    Gluttonous Grimoire:
+      total: 0.53
+      efficiency: 0.55
       win: 0.58
       pick: 0.0
-      fit: 0.3
+      fit: 0.51
   community_ordered:
   - Genji's Guard
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: model
@@ -634,15 +641,15 @@ builds:
     Underrated for this god: Amanita Charm, Rod of Tahuti, Kinetic Cuirass, Shifter''s
     Shield, Breastplate of Valor, Erosion, Eye of Providence, Draconic Scale, Shield
     of the Phoenix, Stone of Binding, Helm of Radiance, Magi''s Cloak, Gluttonous
-    Grimoire, Mantle Of Discord, Midgardian Mail, Screeching Gargoyle, Hide of the
-    Nemean Lion, Leviathan''s Hide, Prophetic Cloak, Void Shield, Ancile, Spear of
-    Desolation, Nimble Ring, Helm of Darkness, Oni Hunter''s Garb, Rod of Asclepius.'
+    Grimoire, Mantle Of Discord, Midgardian Mail, Screeching Gargoyle, Leviathan''s
+    Hide, Prophetic Cloak, Void Shield, Ancile, Spear of Desolation, Nimble Ring,
+    Helm of Darkness, Oni Hunter''s Garb, Rod of Asclepius.'
   slot_scores:
     Genji's Guard:
-      total: 0.63
+      total: 0.64
       efficiency: 0.66
-      win: 0.74
-      pick: 0.23
+      win: 0.78
+      pick: 0.2
       fit: 0.35
     Breastplate of Valor:
       total: 0.54
@@ -660,7 +667,7 @@ builds:
       total: 0.51
       efficiency: 0.61
       win: 0.44
-      pick: 0.28
+      pick: 0.32
       fit: 0.57
     Shifter's Shield:
       total: 0.55
@@ -669,10 +676,10 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.42
+      total: 0.46
       efficiency: 0.65
-      win: 0.2
-      pick: 0.04
+      win: 0.29
+      pick: 0.05
       fit: 0.63
   community_ordered:
   - Genji's Guard
