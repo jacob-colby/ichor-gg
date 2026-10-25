@@ -9,8 +9,8 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.93
-    win_rate: 0.48
+    pick_rate: 0.92
+    win_rate: 0.5
     alternates:
     - name: Avenging Blade
       pick_rate: 0.03
@@ -19,74 +19,74 @@ builds:
       pick_rate: 0.02
       win_rate: 0.0
   - name: Dagger of Frenzy
-    pick_rate: 0.88
-    win_rate: 0.5
+    pick_rate: 0.9
+    win_rate: 0.52
     alternates:
     - name: Tyrfing
-      pick_rate: 0.03
+      pick_rate: 0.02
       win_rate: 0.33
     - name: Berserker's Shield
-      pick_rate: 0.02
+      pick_rate: 0.01
       win_rate: 1.0
   - name: Dominance
-    pick_rate: 0.43
-    win_rate: 0.51
+    pick_rate: 0.44
+    win_rate: 0.53
     alternates:
     - name: Musashi's Dual Swords
       pick_rate: 0.14
-      win_rate: 0.69
+      win_rate: 0.65
     - name: Deathbringer
-      pick_rate: 0.13
-      win_rate: 0.47
+      pick_rate: 0.11
+      win_rate: 0.44
   - name: Deathbringer
-    pick_rate: 0.38
-    win_rate: 0.6
+    pick_rate: 0.37
+    win_rate: 0.63
     alternates:
     - name: Dominance
-      pick_rate: 0.19
-      win_rate: 0.38
+      pick_rate: 0.17
+      win_rate: 0.46
     - name: Riptalon
-      pick_rate: 0.15
-      win_rate: 0.53
+      pick_rate: 0.16
+      win_rate: 0.5
   - name: Riptalon
-    pick_rate: 0.26
+    pick_rate: 0.23
     win_rate: 0.57
     alternates:
     - name: Deathbringer
-      pick_rate: 0.28
-      win_rate: 0.5
+      pick_rate: 0.29
+      win_rate: 0.51
     - name: Dominance
-      pick_rate: 0.11
-      win_rate: 0.75
+      pick_rate: 0.13
+      win_rate: 0.69
   - name: Musashi's Dual Swords
-    pick_rate: 0.17
-    win_rate: 0.79
+    pick_rate: 0.15
+    win_rate: 0.8
     alternates:
     - name: Riptalon
-      pick_rate: 0.15
-      win_rate: 0.58
+      pick_rate: 0.16
+      win_rate: 0.56
     - name: Blinking Abyss
-      pick_rate: 0.1
-      win_rate: 0.63
+      pick_rate: 0.11
+      win_rate: 0.64
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.72
-    win_rate: 0.56
+    pick_rate: 0.73
+    win_rate: 0.57
   - name: Gilded Arrow
     pick_rate: 0.19
-    win_rate: 0.27
+    win_rate: 0.3
   - name: Hunter's Cowl
     pick_rate: 0.03
-    win_rate: 0.75
+    win_rate: 0.8
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-10-24'
-  god_win_rate: 0.5
-  god_matches_won: 58
-  god_matches_played: 116
+  last_verified: '2026-10-25'
+  god_win_rate: 0.5104895104895105
+  god_matches_won: 73
+  god_matches_played: 143
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-24'
-  god_matches_analyzed: 3785
+  god_window_end: '2026-10-25'
+  god_matches_analyzed: 4936
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -96,12 +96,12 @@ builds:
   - Lernaean Bow
   - Avenging Blade
   - Berserker's Shield
+  - Dominance
   - Deathbringer
   - Musashi's Dual Swords
-  - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Demon Blade
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -138,29 +138,30 @@ builds:
       total: 0.66
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.33
+    Dominance:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.53
+      pick: 0.69
+      fit: 0.64
     Deathbringer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.6
-      pick: 0.63
+      win: 0.63
+      pick: 0.62
       fit: 0.54
     Musashi's Dual Swords:
-      total: 0.62
+      total: 0.63
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.54
-    Demon Blade:
-      total: 0.52
-      efficiency: 0.38
-      win: 0.57
-      pick: 0.0
-      fit: 0.87
   community_ordered:
   - Avenging Blade
   - Berserker's Shield
+  - Dominance
   - Deathbringer
   - Musashi's Dual Swords
   starter: &id001
@@ -172,12 +173,12 @@ builds:
   - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - Dominance
   - Hydra's Lament
   - Musashi's Dual Swords
-  - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Heartseeker
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -208,7 +209,7 @@ builds:
       total: 0.64
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.16
     Jotunn's Revenge:
       total: 0.57
@@ -216,6 +217,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.44
+    Dominance:
+      total: 0.5
+      efficiency: 0.45
+      win: 0.53
+      pick: 0.69
+      fit: 0.5
     Hydra's Lament:
       total: 0.51
       efficiency: 0.54
@@ -223,20 +230,15 @@ builds:
       pick: 0.0
       fit: 0.42
     Musashi's Dual Swords:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.34
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.47
-      win: 0.57
-      pick: 0.0
-      fit: 0.55
   community_ordered:
   - Avenging Blade
   - Berserker's Shield
+  - Dominance
   - Musashi's Dual Swords
   starter: *id001
 - source: suggested
@@ -287,19 +289,19 @@ builds:
       total: 0.66
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.3
     Deathbringer:
-      total: 0.56
+      total: 0.58
       efficiency: 0.51
-      win: 0.6
-      pick: 0.63
+      win: 0.63
+      pick: 0.62
       fit: 0.57
     Musashi's Dual Swords:
       total: 0.63
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.57
     Demon Blade:
       total: 0.52
@@ -323,8 +325,8 @@ builds:
   - Musashi's Dual Swords
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Deathbringer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -356,7 +358,7 @@ builds:
       total: 0.76
       efficiency: 0.68
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.48
     Kinetic Cuirass:
       total: 0.53
@@ -365,16 +367,16 @@ builds:
       pick: 0.0
       fit: 0.5
     Deathbringer:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.6
-      pick: 0.63
+      win: 0.63
+      pick: 0.62
       fit: 0.32
     Musashi's Dual Swords:
       total: 0.59
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.32
     Amanita Charm:
       total: 0.59
@@ -393,13 +395,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Deathbringer
   - Musashi's Dual Swords
+  - Silverbranch Bow
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
+  - Deathbringer
   - Silverbranch Bow
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -430,35 +432,36 @@ builds:
       total: 0.65
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.22
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.57
-      pick: 0.0
-      fit: 0.47
+    Deathbringer:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.63
+      pick: 0.62
+      fit: 0.36
     Musashi's Dual Swords:
       total: 0.6
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.36
-    Riptalon:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.57
-      pick: 0.56
-      fit: 0.72
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.53
       win: 0.57
       pick: 0.0
       fit: 0.63
+    Riptalon:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.57
+      pick: 0.5
+      fit: 0.72
   community_ordered:
   - Avenging Blade
   - Berserker's Shield
+  - Deathbringer
   - Musashi's Dual Swords
   - Riptalon
   starter: *id001
@@ -516,19 +519,19 @@ builds:
       total: 0.66
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.29
     Deathbringer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.6
-      pick: 0.63
+      win: 0.63
+      pick: 0.62
       fit: 0.41
     Musashi's Dual Swords:
       total: 0.61
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.41
   community_ordered:
   - Avenging Blade
@@ -579,7 +582,7 @@ builds:
       total: 0.64
       efficiency: 0.46
       win: 1.0
-      pick: 0.03
+      pick: 0.01
       fit: 0.21
     Jotunn's Revenge:
       total: 0.55
@@ -602,8 +605,8 @@ builds:
     Musashi's Dual Swords:
       total: 0.59
       efficiency: 0.46
-      win: 0.79
-      pick: 0.52
+      win: 0.8
+      pick: 0.46
       fit: 0.3
   community_ordered:
   - Avenging Blade
@@ -658,19 +661,19 @@ builds:
       total: 0.43
       efficiency: 0.48
       win: 0.33
-      pick: 0.04
+      pick: 0.03
       fit: 0.75
     Dominance:
       total: 0.52
       efficiency: 0.45
-      win: 0.51
-      pick: 0.67
+      win: 0.53
+      pick: 0.69
       fit: 0.64
     Deathbringer:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.6
-      pick: 0.63
+      win: 0.63
+      pick: 0.62
       fit: 0.54
     Demon Blade:
       total: 0.52

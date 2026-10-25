@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Stygian Anchor
+  - Kinetic Cuirass
+  - Shifter's Shield
+  - Deathbringer
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Shifter's Shield
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Stygian Anchor:
+      total: 0.62
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Kinetic Cuirass:
+      total: 0.67
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Shifter's Shield:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Deathbringer:
+      total: 0.2
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.06
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.7
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: Deathbringer
+    removed: Freya's Tears
+    reason: Conquest community 72% win over 30 matches (vs 53% on this god), taking
+      the model's weakest slot from Freya's Tears
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.79
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Demon Blade
+  - Deathbringer
+  flex_slots:
+  - The Reaper
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    The Reaper:
+      total: 0.59
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Riptalon:
+      total: 0.66
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Demon Blade:
+      total: 0.59
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+  swaps:
+  - added: Deathbringer
+    removed: Dominance
+    reason: Conquest community 71% win over 50 matches (vs 56% on this god), taking
+      the model's weakest slot from Dominance
+  borrowed_from: Conquest
+  starter: *id001
 ---

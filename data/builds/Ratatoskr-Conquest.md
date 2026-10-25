@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Thickbark
-  aspect_pick_rate: 0.24
-  aspect_win_rate: 0.53
+  aspect_pick_rate: 0.23
+  aspect_win_rate: 0.54
   slot_order:
   - name: Briskberry Acorn
     pick_rate: 0.46
-    win_rate: 0.52
+    win_rate: 0.48
     alternates:
     - name: Thistlethorn Acorn
-      pick_rate: 0.26
-      win_rate: 0.56
+      pick_rate: 0.28
+      win_rate: 0.54
     - name: Ashwhorl Acorn
-      pick_rate: 0.2
-      win_rate: 0.53
+      pick_rate: 0.18
+      win_rate: 0.54
   - name: Thistlethorn Acorn
-    pick_rate: 0.34
-    win_rate: 0.53
+    pick_rate: 0.35
+    win_rate: 0.5
     alternates:
     - name: Briskberry Acorn
-      pick_rate: 0.33
+      pick_rate: 0.34
       win_rate: 0.53
     - name: Ashwhorl Acorn
       pick_rate: 0.12
-      win_rate: 0.48
+      win_rate: 0.46
   - name: Jotunn's Revenge
-    pick_rate: 0.26
-    win_rate: 0.54
+    pick_rate: 0.29
+    win_rate: 0.51
     alternates:
-    - name: Thistlethorn Acorn
-      pick_rate: 0.14
-      win_rate: 0.41
     - name: Briskberry Acorn
-      pick_rate: 0.14
-      win_rate: 0.56
+      pick_rate: 0.15
+      win_rate: 0.54
+    - name: Thistlethorn Acorn
+      pick_rate: 0.13
+      win_rate: 0.4
   - name: The Crusher
-    pick_rate: 0.19
-    win_rate: 0.53
+    pick_rate: 0.18
+    win_rate: 0.51
     alternates:
     - name: Heartseeker
       pick_rate: 0.16
-      win_rate: 0.68
+      win_rate: 0.61
     - name: Jotunn's Revenge
       pick_rate: 0.13
-      win_rate: 0.48
+      win_rate: 0.43
   - name: Heartseeker
-    pick_rate: 0.34
-    win_rate: 0.51
+    pick_rate: 0.37
+    win_rate: 0.46
     alternates:
     - name: The Crusher
       pick_rate: 0.11
-      win_rate: 0.5
+      win_rate: 0.44
     - name: Freya's Tears
-      pick_rate: 0.06
-      win_rate: 0.6
+      pick_rate: 0.05
+      win_rate: 0.59
   - name: Blinking Abyss
-    pick_rate: 0.11
-    win_rate: 0.65
+    pick_rate: 0.1
+    win_rate: 0.67
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.09
-      win_rate: 0.6
+      pick_rate: 0.1
+      win_rate: 0.5
     - name: Skeggox
       pick_rate: 0.09
-      win_rate: 0.53
+      win_rate: 0.52
   community_starters:
-  - name: Bluestone Brooch
-    pick_rate: 0.25
-    win_rate: 0.67
   - name: Bumba's Hammer
+    pick_rate: 0.26
+    win_rate: 0.53
+  - name: Bluestone Brooch
     pick_rate: 0.23
-    win_rate: 0.55
+    win_rate: 0.62
   - name: Bumba's Cudgel
-    pick_rate: 0.12
-    win_rate: 0.35
+    pick_rate: 0.14
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-10-24'
-  god_win_rate: 0.5243445692883895
-  god_matches_won: 140
-  god_matches_played: 267
+  last_verified: '2026-10-25'
+  god_win_rate: 0.5044776119402985
+  god_matches_won: 169
+  god_matches_played: 335
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-24'
-  god_matches_analyzed: 3785
+  god_window_end: '2026-10-25'
+  god_matches_analyzed: 4936
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -97,11 +97,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
+  - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Heartseeker
-  - Ashwhorl Acorn
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -125,46 +125,46 @@ builds:
     Ashwhorl Acorn:
       total: 0.57
       efficiency: 0.7
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.52
     Briskberry Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.71
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 1.0
-    Heartseeker:
-      total: 0.58
+    The Crusher:
+      total: 0.56
       efficiency: 0.47
       win: 0.51
-      pick: 0.74
+      pick: 0.3
       fit: 1.0
-    Titan's Bane:
-      total: 0.6
+    Heartseeker:
+      total: 0.56
       efficiency: 0.47
-      win: 0.6
-      pick: 0.28
+      win: 0.46
+      pick: 0.8
       fit: 1.0
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
+  - The Crusher
   - Heartseeker
-  - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -178,7 +178,7 @@ builds:
   - Heartseeker
   - Hydra's Lament
   flex_slots:
-  - Ashwhorl Acorn
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -203,37 +203,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.54
       efficiency: 0.7
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.29
     Briskberry Acorn:
-      total: 0.55
+      total: 0.53
       efficiency: 0.71
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.29
     Thistlethorn Acorn:
-      total: 0.58
+      total: 0.56
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 0.71
     Heartseeker:
-      total: 0.55
+      total: 0.53
       efficiency: 0.47
-      win: 0.51
-      pick: 0.74
+      win: 0.46
+      pick: 0.8
       fit: 0.77
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.54
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -250,11 +250,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
+  - The Crusher
   - Heartseeker
-  - Titan's Bane
   flex_slots:
   - Briskberry Acorn
-  - Ashwhorl Acorn
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -278,46 +278,46 @@ builds:
     Ashwhorl Acorn:
       total: 0.53
       efficiency: 0.7
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.22
     Briskberry Acorn:
-      total: 0.54
+      total: 0.52
       efficiency: 0.71
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.22
     Thistlethorn Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 0.78
-    Heartseeker:
-      total: 0.54
+    The Crusher:
+      total: 0.51
       efficiency: 0.47
       win: 0.51
-      pick: 0.74
-      fit: 0.76
-    Titan's Bane:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.6
-      pick: 0.28
+      pick: 0.3
       fit: 0.66
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.46
+      pick: 0.8
+      fit: 0.76
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
+  - The Crusher
   - Heartseeker
-  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -355,37 +355,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.6
       efficiency: 0.8
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.44
     Briskberry Acorn:
-      total: 0.61
+      total: 0.59
       efficiency: 0.82
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.44
     Thistlethorn Acorn:
-      total: 0.62
+      total: 0.61
       efficiency: 0.82
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 0.44
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.6
-      pick: 0.13
+      win: 0.59
+      pick: 0.11
       fit: 0.38
     Amanita Charm:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.86
   community_ordered:
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Briskberry Acorn
+  - Ashwhorl Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - The Crusher
-  - Briskberry Acorn
+  - Titan's Bane
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -427,44 +427,44 @@ builds:
     Dominance, Golden Blade, Barbed Carver, Screeching Gargoyle, Daybreak Gavel, Bloodforge,
     Breastplate of Valor, Genji''s Guard.'
   slot_scores:
-    Briskberry Acorn:
-      total: 0.56
-      efficiency: 0.71
-      win: 0.52
-      pick: 0.46
+    Ashwhorl Acorn:
+      total: 0.55
+      efficiency: 0.7
+      win: 0.54
+      pick: 0.18
       fit: 0.33
     Thistlethorn Acorn:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 1.0
     The Crusher:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.53
-      pick: 0.32
-      fit: 1.0
-    Heartseeker:
-      total: 0.58
+      total: 0.56
       efficiency: 0.47
       win: 0.51
-      pick: 0.74
+      pick: 0.3
+      fit: 1.0
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.46
+      pick: 0.8
       fit: 1.0
     Titan's Bane:
-      total: 0.6
+      total: 0.56
       efficiency: 0.47
-      win: 0.6
-      pick: 0.28
+      win: 0.5
+      pick: 0.31
       fit: 1.0
   community_ordered:
-  - Briskberry Acorn
+  - Ashwhorl Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
@@ -475,14 +475,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Ashwhorl Acorn
-  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Tyrfing
   - Riptalon
+  - Silverbranch Bow
   flex_slots:
-  - Briskberry Acorn
   - Tyrfing
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -506,42 +506,41 @@ builds:
     Ashwhorl Acorn:
       total: 0.59
       efficiency: 0.76
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.48
-    Briskberry Acorn:
-      total: 0.53
-      efficiency: 0.71
-      win: 0.52
-      pick: 0.46
-      fit: 0.17
     Thistlethorn Acorn:
-      total: 0.57
+      total: 0.56
       efficiency: 0.75
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 0.37
     Tyrfing:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.79
     Riptalon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.79
+    Silverbranch Bow:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.51
+      pick: 0.0
+      fit: 0.69
   community_ordered:
   - Ashwhorl Acorn
-  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   starter: *id001
@@ -553,10 +552,10 @@ builds:
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Hydra's Lament
-  - Titan's Bane
+  - Pendulum Blade
   flex_slots:
-  - Titan's Bane
-  - Ashwhorl Acorn
+  - Briskberry Acorn
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -581,45 +580,44 @@ builds:
     Ashwhorl Acorn:
       total: 0.52
       efficiency: 0.7
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.15
     Briskberry Acorn:
-      total: 0.53
+      total: 0.51
       efficiency: 0.71
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.15
     Thistlethorn Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 0.85
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
-      win: 0.53
+      win: 0.51
       pick: 0.0
       fit: 0.75
-    Titan's Bane:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.6
-      pick: 0.28
-      fit: 0.45
+    Pendulum Blade:
+      total: 0.5
+      efficiency: 0.42
+      win: 0.51
+      pick: 0.0
+      fit: 0.85
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Titan's Bane
   starter: *id001
 - source: suggested
   archetype: model
@@ -656,38 +654,38 @@ builds:
     Ashwhorl Acorn:
       total: 0.57
       efficiency: 0.7
-      win: 0.53
-      pick: 0.2
+      win: 0.54
+      pick: 0.18
       fit: 0.52
     Briskberry Acorn:
-      total: 0.58
+      total: 0.57
       efficiency: 0.71
-      win: 0.52
+      win: 0.48
       pick: 0.46
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.6
+      total: 0.59
       efficiency: 0.72
-      win: 0.53
-      pick: 0.46
+      win: 0.5
+      pick: 0.48
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.66
+      total: 0.65
       efficiency: 0.72
-      win: 0.54
-      pick: 0.4
+      win: 0.51
+      pick: 0.45
       fit: 1.0
     The Crusher:
-      total: 0.57
+      total: 0.56
       efficiency: 0.47
-      win: 0.53
-      pick: 0.32
+      win: 0.51
+      pick: 0.3
       fit: 1.0
     Titan's Bane:
-      total: 0.6
+      total: 0.56
       efficiency: 0.47
-      win: 0.6
-      pick: 0.28
+      win: 0.5
+      pick: 0.31
       fit: 1.0
   community_ordered:
   - Ashwhorl Acorn
