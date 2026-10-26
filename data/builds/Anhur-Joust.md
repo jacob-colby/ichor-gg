@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Dominance
-    reason: Conquest community 71% win over 50 matches (vs 56% on this god), taking
+    reason: Conquest community 69% win over 61 matches (vs 54% on this god), taking
       the model's weakest slot from Dominance
   borrowed_from: Conquest
   starter: *id001

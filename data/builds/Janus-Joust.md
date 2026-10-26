@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Doom Orb
-    reason: Conquest community 68% win over 69 matches (vs 47% on this god), taking
+    reason: Conquest community 67% win over 79 matches (vs 48% on this god), taking
       the model's weakest slot from Doom Orb
   borrowed_from: Conquest
   starter: *id001
