@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Cosmos
-  aspect_pick_rate: 0.03
+  aspect_pick_rate: 0.02
   aspect_win_rate: 0.54
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.43
-    win_rate: 0.55
+    pick_rate: 0.44
+    win_rate: 0.56
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.25
-      win_rate: 0.51
+      pick_rate: 0.24
+      win_rate: 0.48
     - name: Devourer's Gauntlet
-      pick_rate: 0.14
-      win_rate: 0.6
+      pick_rate: 0.15
+      win_rate: 0.61
   - name: Bragi's Harp
-    pick_rate: 0.4
-    win_rate: 0.56
+    pick_rate: 0.41
+    win_rate: 0.57
     alternates:
     - name: Tyrfing
       pick_rate: 0.16
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Staff of Myrddin
       pick_rate: 0.15
-      win_rate: 0.53
+      win_rate: 0.51
   - name: Barbed Carver
     pick_rate: 0.2
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Avenging Blade
       pick_rate: 0.14
-      win_rate: 0.45
+      win_rate: 0.47
     - name: Rod of Tahuti
       pick_rate: 0.12
-      win_rate: 0.59
+      win_rate: 0.53
   - name: The Executioner
     pick_rate: 0.23
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Riptalon
-      pick_rate: 0.12
-      win_rate: 0.48
+      pick_rate: 0.13
+      win_rate: 0.52
     - name: Rod of Tahuti
-      pick_rate: 0.1
-      win_rate: 0.65
+      pick_rate: 0.11
+      win_rate: 0.6
   - name: Riptalon
     pick_rate: 0.11
-    win_rate: 0.54
+    win_rate: 0.52
     alternates:
     - name: The Executioner
       pick_rate: 0.11
-      win_rate: 0.47
+      win_rate: 0.52
     - name: Avenging Blade
-      pick_rate: 0.09
-      win_rate: 0.55
-  - name: Hunter's Bow
-    pick_rate: 0.07
-    win_rate: 0.61
-    alternates:
-    - name: Riptalon
       pick_rate: 0.08
-      win_rate: 0.63
-    - name: Manchu Bow
+      win_rate: 0.6
+  - name: Manchu Bow
+    pick_rate: 0.08
+    win_rate: 0.58
+    alternates:
+    - name: Hunter's Bow
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.64
+    - name: Riptalon
+      pick_rate: 0.07
+      win_rate: 0.62
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.42
-    win_rate: 0.56
+    pick_rate: 0.41
+    win_rate: 0.57
   - name: Death's Toll
-    pick_rate: 0.19
+    pick_rate: 0.2
     win_rate: 0.56
   - name: Archmage's Gem
-    pick_rate: 0.14
-    win_rate: 0.65
+    pick_rate: 0.13
+    win_rate: 0.62
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-10-26'
-  god_win_rate: 0.5460992907801419
-  god_matches_won: 231
-  god_matches_played: 423
+  last_verified: '2026-10-27'
+  god_win_rate: 0.5449330783938815
+  god_matches_won: 285
+  god_matches_played: 523
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-26'
-  god_matches_analyzed: 6194
+  god_window_end: '2026-10-27'
+  god_matches_analyzed: 7385
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -132,22 +132,22 @@ builds:
       pick: 0.0
       fit: 0.19
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
       win: 0.55
       pick: 0.0
       fit: 0.45
     Transcendence:
-      total: 0.46
+      total: 0.45
       efficiency: 0.53
       win: 0.55
       pick: 0.0
       fit: 0.16
     Bragi's Harp:
-      total: 0.54
+      total: 0.55
       efficiency: 0.44
-      win: 0.56
-      pick: 0.55
+      win: 0.57
+      pick: 0.56
       fit: 0.71
     Nimble Ring:
       total: 0.56
@@ -156,9 +156,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Rod of Tahuti:
-      total: 0.63
+      total: 0.6
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.38
   community_ordered:
@@ -208,7 +208,7 @@ builds:
       pick: 0.0
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.72
       win: 0.55
       pick: 0.0
@@ -220,10 +220,10 @@ builds:
       pick: 0.0
       fit: 0.28
     Bragi's Harp:
-      total: 0.54
+      total: 0.55
       efficiency: 0.44
-      win: 0.56
-      pick: 0.55
+      win: 0.57
+      pick: 0.56
       fit: 0.71
     Hydra's Lament:
       total: 0.51
@@ -232,9 +232,9 @@ builds:
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.64
+      total: 0.61
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.42
   community_ordered:
@@ -251,8 +251,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Spear of the Magus
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -284,14 +284,14 @@ builds:
     Bragi's Harp:
       total: 0.53
       efficiency: 0.44
-      win: 0.56
-      pick: 0.55
+      win: 0.57
+      pick: 0.56
       fit: 0.62
     Spear of Desolation:
-      total: 0.53
+      total: 0.51
       efficiency: 0.57
-      win: 0.51
-      pick: 0.25
+      win: 0.48
+      pick: 0.24
       fit: 0.56
     Spear of the Magus:
       total: 0.52
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.4
     Rod of Tahuti:
-      total: 0.63
+      total: 0.61
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.4
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
       win: 0.55
       pick: 0.0
@@ -358,7 +358,7 @@ builds:
       pick: 0.0
       fit: 0.13
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.68
       win: 0.55
       pick: 0.0
@@ -370,9 +370,9 @@ builds:
       pick: 0.0
       fit: 0.3
     Rod of Tahuti:
-      total: 0.61
+      total: 0.58
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.25
     Amanita Charm:
@@ -395,12 +395,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Nimble Ring
-  - Spear of Desolation
+  - Bragi's Harp
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Spear of Desolation
+  - Spear of the Magus
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -436,12 +436,12 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.45
-    Spear of Desolation:
+    Bragi's Harp:
       total: 0.53
-      efficiency: 0.57
-      win: 0.51
-      pick: 0.25
-      fit: 0.57
+      efficiency: 0.44
+      win: 0.57
+      pick: 0.56
+      fit: 0.61
     Spear of the Magus:
       total: 0.53
       efficiency: 0.6
@@ -449,19 +449,19 @@ builds:
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.65
+      total: 0.62
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.49
     Obsidian Shard:
-      total: 0.53
+      total: 0.52
       efficiency: 0.54
       win: 0.55
       pick: 0.0
       fit: 0.59
   community_ordered:
-  - Spear of Desolation
+  - Bragi's Harp
   - Rod of Tahuti
   starter: *id001
 - source: suggested
@@ -474,8 +474,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - Bragi's Harp
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -506,27 +506,27 @@ builds:
       pick: 0.0
       fit: 0.36
     Tyrfing:
-      total: 0.53
+      total: 0.54
       efficiency: 0.48
-      win: 0.55
-      pick: 0.43
+      win: 0.56
+      pick: 0.44
       fit: 0.63
     Bragi's Harp:
       total: 0.53
       efficiency: 0.44
-      win: 0.56
-      pick: 0.55
+      win: 0.57
+      pick: 0.56
       fit: 0.63
     Nimble Ring:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
       win: 0.55
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.62
+      total: 0.59
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.31
     Soul Gem:
@@ -550,8 +550,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Hydra's Lament
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -588,21 +588,21 @@ builds:
       pick: 0.0
       fit: 0.54
     Bragi's Harp:
-      total: 0.51
+      total: 0.52
       efficiency: 0.44
-      win: 0.56
-      pick: 0.55
+      win: 0.57
+      pick: 0.56
       fit: 0.52
     Spear of Desolation:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.51
-      pick: 0.25
+      win: 0.48
+      pick: 0.24
       fit: 0.6
     Rod of Tahuti:
-      total: 0.61
+      total: 0.59
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.26
     Soul Gem:
@@ -652,7 +652,7 @@ builds:
     Berserker''s Shield, Totem of Death.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
       win: 0.55
       pick: 0.0
@@ -664,21 +664,21 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.52
+      total: 0.5
       efficiency: 0.57
-      win: 0.51
-      pick: 0.25
+      win: 0.48
+      pick: 0.24
       fit: 0.48
     Spear of the Magus:
-      total: 0.52
+      total: 0.51
       efficiency: 0.6
       win: 0.55
       pick: 0.0
       fit: 0.38
     Rod of Tahuti:
-      total: 0.63
+      total: 0.6
       efficiency: 0.86
-      win: 0.59
+      win: 0.53
       pick: 0.19
       fit: 0.38
     Obsidian Shard:

@@ -10,98 +10,98 @@ builds:
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.47
-    win_rate: 0.57
+    win_rate: 0.52
     alternates:
     - name: Chronos' Pendant
-      pick_rate: 0.24
-      win_rate: 0.31
+      pick_rate: 0.26
+      win_rate: 0.36
     - name: Devourer's Gauntlet
-      pick_rate: 0.11
+      pick_rate: 0.09
       win_rate: 0.31
   - name: Soul Gem
-    pick_rate: 0.14
-    win_rate: 0.53
+    pick_rate: 0.16
+    win_rate: 0.5
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.23
-      win_rate: 0.36
+      pick_rate: 0.21
+      win_rate: 0.37
     - name: Chronos' Pendant
-      pick_rate: 0.11
-      win_rate: 0.85
+      pick_rate: 0.12
+      win_rate: 0.71
   - name: Rod of Tahuti
-    pick_rate: 0.21
-    win_rate: 0.38
+    pick_rate: 0.22
+    win_rate: 0.41
     alternates:
     - name: Soul Gem
-      pick_rate: 0.22
+      pick_rate: 0.2
       win_rate: 0.56
     - name: The World Stone
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.67
   - name: Obsidian Shard
-    pick_rate: 0.11
-    win_rate: 0.25
+    pick_rate: 0.1
+    win_rate: 0.31
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.37
-      win_rate: 0.54
+      pick_rate: 0.38
+      win_rate: 0.51
     - name: Spear of the Magus
-      pick_rate: 0.05
-      win_rate: 0.5
+      pick_rate: 0.08
+      win_rate: 0.6
   - name: Spear of the Magus
     pick_rate: 0.09
-    win_rate: 0.67
+    win_rate: 0.55
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.21
-      win_rate: 0.36
+      pick_rate: 0.22
+      win_rate: 0.38
     - name: Rod of Tahuti
       pick_rate: 0.13
-      win_rate: 0.46
+      win_rate: 0.47
   - name: Evil Eye
-    pick_rate: 0.15
+    pick_rate: 0.14
     win_rate: 0.5
     alternates:
     - name: Dreamer's Idol
       pick_rate: 0.14
-      win_rate: 0.56
-    - name: Mote of Chaos
-      pick_rate: 0.09
       win_rate: 0.5
+    - name: Blinking Abyss
+      pick_rate: 0.08
+      win_rate: 0.17
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.36
-    win_rate: 0.56
+    pick_rate: 0.33
+    win_rate: 0.54
   - name: Conduit Gem
     pick_rate: 0.17
-    win_rate: 0.35
-  - name: Pendulum of the Ages
-    pick_rate: 0.13
-    win_rate: 0.5
+    win_rate: 0.38
+  - name: Bluestone Brooch
+    pick_rate: 0.14
+    win_rate: 0.47
   source_url: https://smitebrain.com/gods/princess-bari/
-  last_verified: '2026-10-26'
-  god_win_rate: 0.475
-  god_matches_won: 57
-  god_matches_played: 120
+  last_verified: '2026-10-27'
+  god_win_rate: 0.4642857142857143
+  god_matches_won: 65
+  god_matches_played: 140
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-26'
-  god_matches_analyzed: 6194
+  god_window_end: '2026-10-27'
+  god_matches_analyzed: 7385
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
-  - Nimble Ring
+  - Transcendence
   - Rod of Tahuti
-  - Spear of the Magus
+  - Nimble Ring
   - The World Stone
   flex_slots:
-  - Jotunn's Revenge
-  - Nimble Ring
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -124,46 +124,44 @@ builds:
     Pendulum Blade, The Cosmic Horror, Transcendence, Typhon’s Heart, Dagger of Frenzy,
     Rod of Asclepius, Book of Thoth.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.47
+    Transcendence:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.17
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.41
+      pick: 0.34
+      fit: 0.36
     Nimble Ring:
       total: 0.54
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.36
-    Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.36
     The World Stone:
       total: 0.54
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.36
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
   - The World Stone
   starter: &id001
     base: Conduit Gem
@@ -178,8 +176,8 @@ builds:
   - Spear of the Magus
   - The World Stone
   flex_slots:
-  - Spear of Desolation
   - Nimble Ring
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -209,9 +207,9 @@ builds:
       pick: 0.0
       fit: 0.52
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.57
-      win: 0.57
+      win: 0.52
       pick: 0.47
       fit: 0.45
     Nimble Ring:
@@ -221,22 +219,22 @@ builds:
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.55
+      total: 0.56
       efficiency: 0.86
-      win: 0.38
-      pick: 0.33
+      win: 0.41
+      pick: 0.34
       fit: 0.42
     Spear of the Magus:
-      total: 0.57
+      total: 0.52
       efficiency: 0.6
-      win: 0.67
+      win: 0.55
       pick: 0.19
       fit: 0.34
     The World Stone:
       total: 0.55
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.42
   community_ordered:
   - Spear of Desolation
@@ -247,15 +245,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
-  - Nimble Ring
+  - Transcendence
   - Rod of Tahuti
-  - Spear of the Magus
+  - Nimble Ring
   - The World Stone
   flex_slots:
-  - Rod of Tahuti
-  - Nimble Ring
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -278,46 +276,44 @@ builds:
     The Cosmic Horror, Bancroft''s Talon, Transcendence, Runeforged Hammer, Sun Beam
     Bow, Rod of Asclepius, Book of Thoth.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.16
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Spear of Desolation:
+    Transcendence:
+      total: 0.43
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.16
+    Rod of Tahuti:
       total: 0.56
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.56
+      efficiency: 0.86
+      win: 0.41
+      pick: 0.34
+      fit: 0.4
     Nimble Ring:
       total: 0.52
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.4
-    Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.4
     The World Stone:
       total: 0.55
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.4
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
   - The World Stone
   starter: *id001
 - source: suggested
@@ -325,20 +321,20 @@ builds:
   slot_order:
   - Berserker's Shield
   - Spear of Desolation
-  - Nimble Ring
-  - Rod of Tahuti
-  - Spear of the Magus
+  - Jotunn's Revenge
+  - The World Stone
   - Soul Gem
+  - Amanita Charm
   flex_slots:
-  - Rod of Tahuti
-  - Nimble Ring
+  - Jotunn's Revenge
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -362,39 +358,38 @@ builds:
       pick: 0.0
       fit: 0.41
     Spear of Desolation:
-      total: 0.53
+      total: 0.5
       efficiency: 0.57
-      win: 0.57
+      win: 0.52
       pick: 0.47
       fit: 0.31
-    Nimble Ring:
-      total: 0.51
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    The World Stone:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.67
+      pick: 0.11
+      fit: 0.24
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.22
+      fit: 0.77
+    Amanita Charm:
+      total: 0.55
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.37
-    Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.24
-    Spear of the Magus:
-      total: 0.56
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.24
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.53
-      pick: 0.19
-      fit: 0.77
+      fit: 0.65
   community_ordered:
   - Spear of Desolation
-  - Rod of Tahuti
-  - Spear of the Magus
+  - The World Stone
   - Soul Gem
   starter: *id001
 - source: suggested
@@ -402,13 +397,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Spear of Desolation
-  - Nimble Ring
-  - Rod of Tahuti
   - Spear of the Magus
   - The World Stone
+  - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Nimble Ring
+  - Spear of Desolation
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -438,50 +433,51 @@ builds:
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.57
+      total: 0.54
       efficiency: 0.57
-      win: 0.57
+      win: 0.52
       pick: 0.47
       fit: 0.57
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.49
     Spear of the Magus:
-      total: 0.6
+      total: 0.54
       efficiency: 0.6
-      win: 0.67
+      win: 0.55
       pick: 0.19
       fit: 0.49
     The World Stone:
       total: 0.56
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.41
+      pick: 0.34
+      fit: 0.49
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.22
+      fit: 0.76
   community_ordered:
   - Spear of Desolation
-  - Rod of Tahuti
   - Spear of the Magus
   - The World Stone
+  - Rod of Tahuti
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Jotunn's Revenge
   - Tyrfing
-  - Spear of Desolation
   - Nimble Ring
   - Rod of Tahuti
   - Riptalon
-  - Spear of the Magus
+  - The World Stone
   flex_slots:
   - Riptalon
   - Tyrfing
@@ -507,18 +503,18 @@ builds:
     Bow, Transcendence, Rod of Asclepius, Book of Thoth, Runeforged Hammer, Pendulum
     Blade, The Cosmic Horror, Typhon’s Heart.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Tyrfing:
       total: 0.49
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.38
     Nimble Ring:
       total: 0.53
       efficiency: 0.65
@@ -526,10 +522,10 @@ builds:
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.53
+      total: 0.54
       efficiency: 0.86
-      win: 0.38
-      pick: 0.33
+      win: 0.41
+      pick: 0.34
       fit: 0.29
     Riptalon:
       total: 0.5
@@ -537,16 +533,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Spear of the Magus:
-      total: 0.57
-      efficiency: 0.6
+    The World Stone:
+      total: 0.53
+      efficiency: 0.52
       win: 0.67
-      pick: 0.19
+      pick: 0.11
       fit: 0.29
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
+  - The World Stone
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -559,7 +554,7 @@ builds:
   - Soul Gem
   flex_slots:
   - The World Stone
-  - Rod of Tahuti
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -589,34 +584,34 @@ builds:
       pick: 0.0
       fit: 0.59
     Spear of Desolation:
-      total: 0.57
+      total: 0.55
       efficiency: 0.57
-      win: 0.57
+      win: 0.52
       pick: 0.47
       fit: 0.59
     Spear of the Magus:
-      total: 0.56
+      total: 0.5
       efficiency: 0.6
-      win: 0.67
+      win: 0.55
       pick: 0.19
       fit: 0.24
     The World Stone:
-      total: 0.53
+      total: 0.52
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.24
     Rod of Tahuti:
-      total: 0.52
+      total: 0.54
       efficiency: 0.86
-      win: 0.38
-      pick: 0.33
+      win: 0.41
+      pick: 0.34
       fit: 0.24
     Soul Gem:
-      total: 0.56
+      total: 0.55
       efficiency: 0.57
-      win: 0.53
-      pick: 0.19
+      win: 0.5
+      pick: 0.22
       fit: 0.77
   community_ordered:
   - Spear of Desolation
@@ -628,15 +623,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
-  - Nimble Ring
+  - Transcendence
   - Rod of Tahuti
-  - Spear of the Magus
+  - Nimble Ring
   - The World Stone
   flex_slots:
-  - Rod of Tahuti
-  - Nimble Ring
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -659,60 +654,58 @@ builds:
     Abyss, Transcendence, Runeforged Hammer, Bancroft''s Talon, Gem of Focus, Qin''s
     Blade, The Cosmic Horror, Avenging Blade, Barbed Carver, Rod of Asclepius.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.19
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.49
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.41
+      pick: 0.34
+      fit: 0.39
     Nimble Ring:
       total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.39
-    Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.39
     The World Stone:
       total: 0.55
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.39
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
   - The World Stone
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Spear of Desolation
-  - Nimble Ring
+  - Transcendence
   - Rod of Tahuti
-  - Spear of the Magus
+  - Nimble Ring
   - The World Stone
   flex_slots:
-  - Rod of Tahuti
-  - Nimble Ring
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -736,54 +729,52 @@ builds:
     The Cosmic Horror, Runeforged Hammer, Sun Beam Bow, Rod of Asclepius, Book of
     Thoth.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.21
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.48
+    Transcendence:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.21
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.41
+      pick: 0.34
+      fit: 0.38
     Nimble Ring:
       total: 0.53
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.38
-      pick: 0.33
-      fit: 0.38
-    Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.67
-      pick: 0.19
-      fit: 0.38
     The World Stone:
       total: 0.55
       efficiency: 0.52
       win: 0.67
-      pick: 0.12
+      pick: 0.11
       fit: 0.38
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
-  - Spear of the Magus
   - The World Stone
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Spear of Desolation
   - Tyrfing
+  - Spear of Desolation
   - Nimble Ring
   - Rod of Tahuti
   - Silverbranch Bow
@@ -818,18 +809,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.47
-      fit: 0.47
     Tyrfing:
       total: 0.51
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.52
+      pick: 0.47
+      fit: 0.47
     Nimble Ring:
       total: 0.54
       efficiency: 0.65
@@ -837,10 +828,10 @@ builds:
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
-      total: 0.54
+      total: 0.56
       efficiency: 0.86
-      win: 0.38
-      pick: 0.33
+      win: 0.41
+      pick: 0.34
       fit: 0.36
     Silverbranch Bow:
       total: 0.51

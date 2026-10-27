@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Calamity
-  aspect_pick_rate: 0.04
-  aspect_win_rate: 0.0
+  aspect_pick_rate: 0.07
+  aspect_win_rate: 0.5
   slot_order:
   - name: Gauntlet of Thebes
     pick_rate: 0.41
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Chandra's Grace
-      pick_rate: 0.19
-      win_rate: 0.65
+      pick_rate: 0.18
+      win_rate: 0.64
     - name: Stampede
       pick_rate: 0.12
-      win_rate: 0.63
+      win_rate: 0.59
   - name: Stampede
     pick_rate: 0.25
     win_rate: 0.54
     alternates:
     - name: Genji's Guard
       pick_rate: 0.22
-      win_rate: 0.64
+      win_rate: 0.65
     - name: Freya's Tears
       pick_rate: 0.12
-      win_rate: 0.63
+      win_rate: 0.59
   - name: Freya's Tears
-    pick_rate: 0.23
-    win_rate: 0.67
+    pick_rate: 0.22
+    win_rate: 0.69
     alternates:
     - name: Shell of Rebuke
-      pick_rate: 0.14
-      win_rate: 0.6
+      pick_rate: 0.15
+      win_rate: 0.59
     - name: Stampede
-      pick_rate: 0.12
-      win_rate: 0.72
+      pick_rate: 0.1
+      win_rate: 0.73
   - name: Shell of Rebuke
     pick_rate: 0.14
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.2
-      win_rate: 0.72
+      pick_rate: 0.21
+      win_rate: 0.74
     - name: Genji's Guard
-      pick_rate: 0.08
-      win_rate: 0.45
+      pick_rate: 0.09
+      win_rate: 0.48
   - name: Engraved Guard
-    pick_rate: 0.06
+    pick_rate: 0.05
     win_rate: 0.58
     alternates:
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.53
+      win_rate: 0.47
     - name: Shell of Rebuke
       pick_rate: 0.07
-      win_rate: 0.71
+      win_rate: 0.69
   - name: Sage's Ring
     pick_rate: 0.07
     win_rate: 0.5
     alternates:
     - name: Engraved Guard
       pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.64
     - name: Legionnaire Armor
-      pick_rate: 0.07
-      win_rate: 0.63
+      pick_rate: 0.06
+      win_rate: 0.67
   community_starters:
   - name: Selflessness
-    pick_rate: 0.43
+    pick_rate: 0.41
     win_rate: 0.61
   - name: Heroism
-    pick_rate: 0.26
-    win_rate: 0.61
+    pick_rate: 0.27
+    win_rate: 0.62
   - name: Conduit Gem
-    pick_rate: 0.09
-    win_rate: 0.61
+    pick_rate: 0.08
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/geb/
-  last_verified: '2026-10-26'
-  god_win_rate: 0.58984375
-  god_matches_won: 151
-  god_matches_played: 256
+  last_verified: '2026-10-27'
+  god_win_rate: 0.5993150684931506
+  god_matches_won: 175
+  god_matches_played: 292
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-26'
-  god_matches_analyzed: 6194
+  god_window_end: '2026-10-27'
+  god_matches_analyzed: 7385
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -124,9 +124,9 @@ builds:
     Spectral Armor, Doublet of Binding, Stygian Anchor.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.61
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.45
     Kinetic Cuirass:
@@ -136,10 +136,10 @@ builds:
       pick: 0.0
       fit: 0.95
     Freya's Tears:
-      total: 0.65
+      total: 0.66
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.76
     Shifter's Shield:
       total: 0.58
@@ -175,7 +175,7 @@ builds:
   - Shifter's Shield
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Shield of the Phoenix
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -201,7 +201,7 @@ builds:
     Genji's Guard:
       total: 0.6
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.42
     Kinetic Cuirass:
@@ -219,8 +219,8 @@ builds:
     Freya's Tears:
       total: 0.64
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.68
     Shifter's Shield:
       total: 0.58
@@ -286,14 +286,14 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.28
     Freya's Tears:
-      total: 0.6
+      total: 0.61
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.47
     Kinetic Cuirass:
       total: 0.55
@@ -345,9 +345,9 @@ builds:
     Cloak, Doublet of Binding, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.21
     Bracer of The Abyss:
@@ -363,10 +363,10 @@ builds:
       pick: 0.0
       fit: 0.28
     Freya's Tears:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.35
     Bragi's Harp:
       total: 0.46
@@ -427,7 +427,7 @@ builds:
     Genji's Guard:
       total: 0.61
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.5
     Breastplate of Valor:
@@ -437,10 +437,10 @@ builds:
       pick: 0.0
       fit: 0.5
     Freya's Tears:
-      total: 0.63
+      total: 0.64
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.67
     Kinetic Cuirass:
       total: 0.54
@@ -497,7 +497,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.23
     Berserker's Shield:
@@ -513,10 +513,10 @@ builds:
       pick: 0.0
       fit: 0.47
     Freya's Tears:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.39
     Kinetic Cuirass:
       total: 0.54
@@ -574,7 +574,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.66
-      win: 0.64
+      win: 0.65
       pick: 0.3
       fit: 0.22
     Jotunn's Revenge:
@@ -590,10 +590,10 @@ builds:
       pick: 0.0
       fit: 0.52
     Freya's Tears:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.37
     Shield Splitter:
       total: 0.52
@@ -657,10 +657,10 @@ builds:
       pick: 0.0
       fit: 0.95
     Freya's Tears:
-      total: 0.65
+      total: 0.66
       efficiency: 0.61
-      win: 0.67
-      pick: 0.36
+      win: 0.69
+      pick: 0.34
       fit: 0.76
     Shifter's Shield:
       total: 0.58
