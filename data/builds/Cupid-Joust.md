@@ -590,4 +590,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Riptalon
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Jotunn's Revenge
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.32
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Riptalon:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Soul Gem:
+      total: 0.78
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: The Executioner
+    removed: Death Metal
+    reason: Conquest community 66% win over 118 matches (vs 56% on this god), taking
+      the model's weakest slot from Death Metal
+  borrowed_from: Conquest
+  starter: *id001
 ---

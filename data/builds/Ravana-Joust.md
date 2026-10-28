@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Toxic Blade
-    reason: Conquest community 58% win over 168 matches (vs 50% on this god), taking
+    reason: Conquest community 59% win over 176 matches (vs 49% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

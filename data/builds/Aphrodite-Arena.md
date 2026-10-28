@@ -722,7 +722,7 @@ builds:
   swaps:
   - added: Rod of Tahuti
     removed: Kinetic Cuirass
-    reason: Conquest community 67% win over 63 matches (vs 53% on this god), taking
+    reason: Conquest community 69% win over 66 matches (vs 53% on this god), taking
       the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001

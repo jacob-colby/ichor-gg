@@ -6,115 +6,115 @@ builds:
 - source: community
   aspect: Aspect of Fulmination
   aspect_pick_rate: 0.25
-  aspect_win_rate: 0.27
+  aspect_win_rate: 0.26
   slot_order:
-  - name: Bancroft's Talon
-    pick_rate: 0.19
-    win_rate: 0.39
+  - name: Devourer's Gauntlet
+    pick_rate: 0.18
+    win_rate: 0.24
     alternates:
-    - name: Devourer's Gauntlet
-      pick_rate: 0.18
-      win_rate: 0.27
+    - name: Bancroft's Talon
+      pick_rate: 0.17
+      win_rate: 0.38
     - name: Regrowth Striders
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.53
   - name: Breastplate of Valor
-    pick_rate: 0.17
-    win_rate: 0.48
+    pick_rate: 0.16
+    win_rate: 0.45
     alternates:
     - name: Brawler’s Beat Stick
-      pick_rate: 0.14
+      pick_rate: 0.12
       win_rate: 0.59
     - name: Shifter's Shield
       pick_rate: 0.12
-      win_rate: 0.29
-  - name: Genji's Guard
-    pick_rate: 0.21
-    win_rate: 0.44
+      win_rate: 0.31
+  - name: Freya's Tears
+    pick_rate: 0.19
+    win_rate: 0.46
     alternates:
-    - name: Freya's Tears
-      pick_rate: 0.2
-      win_rate: 0.48
+    - name: Genji's Guard
+      pick_rate: 0.19
+      win_rate: 0.44
     - name: Regrowth Striders
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.38
-  - name: Gem of Focus
-    pick_rate: 0.11
-    win_rate: 0.5
+  - name: Genji's Guard
+    pick_rate: 0.09
+    win_rate: 0.33
     alternates:
-    - name: Glorious Pridwen
-      pick_rate: 0.1
-      win_rate: 0.64
     - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.11
+      win_rate: 0.5
+    - name: Gem of Focus
+      pick_rate: 0.09
+      win_rate: 0.5
   - name: Shell of Rebuke
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.71
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.09
-      win_rate: 0.67
+      pick_rate: 0.08
+      win_rate: 0.7
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.33
+      win_rate: 0.29
   - name: Hide of the Nemean Lion
     pick_rate: 0.08
-    win_rate: 0.5
+    win_rate: 0.43
     alternates:
-    - name: Soul Reaver
-      pick_rate: 0.05
-      win_rate: 0.75
     - name: Sundering Echo
-      pick_rate: 0.05
-      win_rate: 0.25
+      pick_rate: 0.06
+      win_rate: 0.2
+    - name: Engraved Guard
+      pick_rate: 0.06
+      win_rate: 0.4
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.52
+    pick_rate: 0.49
     win_rate: 0.44
   - name: Bluestone Pendant
-    pick_rate: 0.35
-    win_rate: 0.29
-  - name: Death's Embrace
-    pick_rate: 0.08
+    pick_rate: 0.32
+    win_rate: 0.27
+  - name: Blood-soaked Shroud
+    pick_rate: 0.07
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-10-27'
-  god_win_rate: 0.38016528925619836
-  god_matches_won: 46
-  god_matches_played: 121
+  last_verified: '2026-10-28'
+  god_win_rate: 0.38405797101449274
+  god_matches_won: 53
+  god_matches_played: 138
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-27'
-  god_matches_analyzed: 7385
+  god_window_end: '2026-10-28'
+  god_matches_analyzed: 8361
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Transcendence
-  - Soul Reaver
-  - Rod of Tahuti
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Shell of Rebuke
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
+    swap: Brawler’s Beat Stick — magical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Gluttonous
     Grimoire, Shield Splitter, Spear of Desolation, Runeforged Hammer, Spear of the
@@ -125,72 +125,74 @@ builds:
     Of Discord, Helm of Darkness, Midgardian Mail, Titan''s Bane, Death Metal, Chronos''
     Pendant, The Crusher, Daybreak Gavel, The World Stone.'
   slot_scores:
-    Book of Thoth:
-      total: 0.42
-      efficiency: 0.51
-      win: 0.49
-      pick: 0.0
-      fit: 0.15
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
+      fit: 0.24
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.4
-    Transcendence:
-      total: 0.43
-      efficiency: 0.53
-      win: 0.49
+    Kinetic Cuirass:
+      total: 0.47
+      efficiency: 0.56
+      win: 0.43
       pick: 0.0
-      fit: 0.17
-    Soul Reaver:
-      total: 0.54
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.35
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
-      win: 0.49
-      pick: 0.0
-      fit: 0.3
+      fit: 0.55
+    Shell of Rebuke:
+      total: 0.47
+      efficiency: 0.28
+      win: 0.71
+      pick: 0.13
+      fit: 0.32
+    Freya's Tears:
+      total: 0.5
+      efficiency: 0.61
+      win: 0.46
+      pick: 0.3
+      fit: 0.4
     Amanita Charm:
-      total: 0.52
+      total: 0.49
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.45
   community_ordered:
-  - Soul Reaver
+  - Breastplate of Valor
+  - Shell of Rebuke
+  - Freya's Tears
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Book of Thoth
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Transcendence
-  - Soul Reaver
+  - Shell of Rebuke
+  - Freya's Tears
   - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Amanita Charm
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
+    swap: Brawler’s Beat Stick — physical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass,
     Spear of Desolation, Shield Splitter, Spear of the Magus, Hydra''s Lament, Runeforged
@@ -201,70 +203,72 @@ builds:
     Scale, Screeching Gargoyle, Magi''s Cloak, Titan''s Bane, Helm of Darkness, Triton''s
     Conch, The Crusher, Daybreak Gavel, Oni Hunter''s Garb.'
   slot_scores:
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.51
-      win: 0.49
-      pick: 0.0
-      fit: 0.25
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
+      fit: 0.29
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.51
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.45
-    Transcendence:
-      total: 0.44
-      efficiency: 0.53
-      win: 0.49
-      pick: 0.0
-      fit: 0.25
-    Soul Reaver:
-      total: 0.55
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.45
+    Shell of Rebuke:
+      total: 0.46
+      efficiency: 0.28
+      win: 0.71
+      pick: 0.13
+      fit: 0.26
+    Freya's Tears:
+      total: 0.49
+      efficiency: 0.61
+      win: 0.46
+      pick: 0.3
+      fit: 0.35
     Rod of Tahuti:
-      total: 0.57
+      total: 0.55
       efficiency: 0.86
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.36
     Amanita Charm:
-      total: 0.5
+      total: 0.48
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.36
   community_ordered:
-  - Soul Reaver
+  - Breastplate of Valor
+  - Shell of Rebuke
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Transcendence
+  - Shell of Rebuke
   - Freya's Tears
-  - Soul Reaver
-  - Rod of Tahuti
+  - Spear of Desolation
+  - Amanita Charm
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Shell of Rebuke
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
+    swap: Brawler’s Beat Stick — physical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire, Spear
     of Desolation, Kinetic Cuirass, Soul Gem, Spear of the Magus, Obsidian Shard,
@@ -275,65 +279,66 @@ builds:
     Idol, Magi''s Cloak, Jade Scepter, The Reaper, Wish-Granting Pearl, Avenging Blade,
     Daybreak Gavel, Mantle Of Discord, Midgardian Mail, Ancient Signet.'
   slot_scores:
-    Book of Thoth:
-      total: 0.42
-      efficiency: 0.51
-      win: 0.49
-      pick: 0.0
-      fit: 0.14
+    Breastplate of Valor:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
+      fit: 0.27
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.48
-    Transcendence:
-      total: 0.43
-      efficiency: 0.53
-      win: 0.49
-      pick: 0.0
-      fit: 0.14
+    Shell of Rebuke:
+      total: 0.47
+      efficiency: 0.28
+      win: 0.71
+      pick: 0.13
+      fit: 0.27
     Freya's Tears:
-      total: 0.51
+      total: 0.5
       efficiency: 0.61
-      win: 0.48
-      pick: 0.31
+      win: 0.46
+      pick: 0.3
       fit: 0.41
-    Soul Reaver:
-      total: 0.53
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.34
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.49
+    Spear of Desolation:
+      total: 0.47
+      efficiency: 0.57
+      win: 0.43
       pick: 0.0
-      fit: 0.34
+      fit: 0.48
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.43
+      pick: 0.0
+      fit: 0.38
   community_ordered:
+  - Breastplate of Valor
+  - Shell of Rebuke
   - Freya's Tears
-  - Soul Reaver
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Glorious Pridwen
   - Freya's Tears
-  - Soul Reaver
   - Amanita Charm
+  - Soul Gem
   flex_slots:
-  - Freya's Tears
+  - Breastplate of Valor
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -348,74 +353,73 @@ builds:
     Storm, Yogi''s Necklace, Sphere of Negation, Hydra''s Lament, Erosion, Heartseeker,
     Phoenix Feather, Eye of Providence, Chandra''s Grace, Draconic Scale, Avenging
     Blade, Blood-Bound Book, Jade Scepter, Wish-Granting Pearl, Stone of Binding,
-    Daybreak Gavel, Doom Orb, Midgardian Mail, Titan''s Bane.'
+    Daybreak Gavel, Doom Orb, Glorious Pridwen, Midgardian Mail, Titan''s Bane.'
   slot_scores:
+    Breastplate of Valor:
+      total: 0.47
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
+      fit: 0.22
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.51
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.47
       efficiency: 0.56
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.53
-    Glorious Pridwen:
-      total: 0.53
-      efficiency: 0.38
-      win: 0.64
-      pick: 0.17
-      fit: 0.65
     Freya's Tears:
-      total: 0.5
+      total: 0.49
       efficiency: 0.61
-      win: 0.48
-      pick: 0.31
+      win: 0.46
+      pick: 0.3
       fit: 0.35
-    Soul Reaver:
-      total: 0.54
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.36
     Amanita Charm:
-      total: 0.56
+      total: 0.53
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.73
+    Soul Gem:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.43
+      pick: 0.0
+      fit: 0.8
   community_ordered:
-  - Glorious Pridwen
+  - Breastplate of Valor
   - Freya's Tears
-  - Soul Reaver
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
+  - Stone of Binding
+  - Breastplate of Valor
   - Jotunn's Revenge
-  - Transcendence
-  - Soul Reaver
-  - Rod of Tahuti
+  - Shell of Rebuke
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Stone of Binding
+  - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
+    swap: Brawler’s Beat Stick — physical protection
     swap_item: Brawler’s Beat Stick
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire,
     Stone of Binding, Spear of Desolation, Spear of the Magus, Avenging Blade, Kinetic
@@ -426,44 +430,46 @@ builds:
     of Asclepius, Shield of the Phoenix, Draconic Scale, Magi''s Cloak, Jade Scepter,
     Daybreak Gavel, Wish-Granting Pearl, Mantle Of Discord, Midgardian Mail.'
   slot_scores:
-    Book of Thoth:
-      total: 0.42
+    Stone of Binding:
+      total: 0.47
       efficiency: 0.51
-      win: 0.49
+      win: 0.43
       pick: 0.0
-      fit: 0.13
+      fit: 0.67
+    Breastplate of Valor:
+      total: 0.47
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
+      fit: 0.21
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.49
-    Transcendence:
-      total: 0.43
-      efficiency: 0.53
-      win: 0.49
-      pick: 0.0
-      fit: 0.14
-    Soul Reaver:
-      total: 0.53
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.33
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.49
-      pick: 0.0
-      fit: 0.4
+    Shell of Rebuke:
+      total: 0.47
+      efficiency: 0.28
+      win: 0.71
+      pick: 0.13
+      fit: 0.27
+    Freya's Tears:
+      total: 0.49
+      efficiency: 0.61
+      win: 0.46
+      pick: 0.3
+      fit: 0.34
     Amanita Charm:
-      total: 0.51
+      total: 0.48
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.38
   community_ordered:
-  - Soul Reaver
+  - Breastplate of Valor
+  - Shell of Rebuke
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -472,8 +478,8 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Nimble Ring
+  - Freya's Tears
   - Gluttonous Grimoire
-  - Soul Reaver
   flex_slots:
   - Nimble Ring
   - Golden Blade
@@ -485,8 +491,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -501,63 +507,63 @@ builds:
     Daybreak Gavel, Magi''s Cloak, Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
-      total: 0.47
+      total: 0.44
       efficiency: 0.52
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.45
     Berserker's Shield:
-      total: 0.51
+      total: 0.49
       efficiency: 0.68
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.37
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.48
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.25
     Nimble Ring:
-      total: 0.5
+      total: 0.47
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.33
+    Freya's Tears:
+      total: 0.48
+      efficiency: 0.61
+      win: 0.46
+      pick: 0.3
+      fit: 0.28
     Gluttonous Grimoire:
-      total: 0.5
+      total: 0.47
       efficiency: 0.6
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.45
-    Soul Reaver:
-      total: 0.53
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.31
   community_ordered:
-  - Soul Reaver
+  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Breastplate of Valor
-  - Genji's Guard
   - Jotunn's Revenge
-  - Glorious Pridwen
   - Freya's Tears
-  - Soul Reaver
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Amanita Charm
   flex_slots:
-  - Glorious Pridwen
-  - Genji's Guard
+  - Amanita Charm
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
@@ -572,50 +578,48 @@ builds:
     of Radiance, Prophetic Cloak, Erosion, Obsidian Shard, Eye of Providence, Stone
     of Binding, Draconic Scale, Gladiator''s Shield, Eye of the Storm, Arondight,
     Magi''s Cloak, Rod of Asclepius, Heartseeker, Eye of Erebus, Mantle Of Discord,
-    Daybreak Gavel, Midgardian Mail, Pendulum Blade, Jade Scepter, Chandra''s Grace.'
+    Daybreak Gavel, Midgardian Mail, Pendulum Blade, Glorious Pridwen, Jade Scepter,
+    Chandra''s Grace.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.48
-      pick: 0.23
-      fit: 0.43
-    Genji's Guard:
       total: 0.51
-      efficiency: 0.66
-      win: 0.44
-      pick: 0.33
+      efficiency: 0.65
+      win: 0.45
+      pick: 0.22
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.52
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.51
-    Glorious Pridwen:
-      total: 0.52
-      efficiency: 0.38
-      win: 0.64
-      pick: 0.17
-      fit: 0.58
     Freya's Tears:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
-      win: 0.48
-      pick: 0.31
+      win: 0.46
+      pick: 0.3
       fit: 0.58
-    Soul Reaver:
+    Spear of Desolation:
+      total: 0.47
+      efficiency: 0.57
+      win: 0.43
+      pick: 0.0
+      fit: 0.51
+    Rod of Tahuti:
       total: 0.53
-      efficiency: 0.4
-      win: 0.75
-      pick: 0.15
-      fit: 0.29
+      efficiency: 0.86
+      win: 0.43
+      pick: 0.0
+      fit: 0.22
+    Amanita Charm:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.43
+      pick: 0.0
+      fit: 0.4
   community_ordered:
   - Breastplate of Valor
-  - Genji's Guard
-  - Glorious Pridwen
   - Freya's Tears
-  - Soul Reaver
   starter: *id001
 - source: suggested
   archetype: model
@@ -653,39 +657,39 @@ builds:
     Metal, Chronos'' Pendant, The Crusher, Daybreak Gavel, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.5
       efficiency: 0.72
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.4
     Genji's Guard:
-      total: 0.48
+      total: 0.42
       efficiency: 0.66
-      win: 0.44
-      pick: 0.33
+      win: 0.33
+      pick: 0.15
       fit: 0.24
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.47
       efficiency: 0.56
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.51
+      total: 0.5
       efficiency: 0.61
-      win: 0.48
-      pick: 0.31
+      win: 0.46
+      pick: 0.3
       fit: 0.4
     Rod of Tahuti:
-      total: 0.56
+      total: 0.54
       efficiency: 0.86
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.3
     Amanita Charm:
-      total: 0.52
+      total: 0.49
       efficiency: 0.65
-      win: 0.49
+      win: 0.43
       pick: 0.0
       fit: 0.45
   community_ordered:
