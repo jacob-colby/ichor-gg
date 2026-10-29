@@ -657,7 +657,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Lernaean Bow
-    reason: Conquest community 66% win over 118 matches (vs 56% on this god), taking
+    reason: Conquest community 67% win over 136 matches (vs 57% on this god), taking
       the model's weakest slot from Lernaean Bow
   borrowed_from: Conquest
   starter: *id001

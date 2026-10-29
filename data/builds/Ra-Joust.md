@@ -1120,7 +1120,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Genji's Guard
-    reason: Conquest community 60% win over 168 matches (vs 51% on this god), taking
+    reason: Conquest community 62% win over 191 matches (vs 51% on this god), taking
       the model's weakest slot from Genji's Guard
   borrowed_from: Conquest
   starter: *id001

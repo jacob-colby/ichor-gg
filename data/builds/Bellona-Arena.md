@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Hussar's Wings
     removed: Void Stone
-    reason: Conquest community 81% win over 34 matches (vs 54% on this god), taking
+    reason: Conquest community 81% win over 37 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

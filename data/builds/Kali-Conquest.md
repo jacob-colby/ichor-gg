@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Unbound Destruction
-  aspect_pick_rate: 0.31
-  aspect_win_rate: 0.61
+  aspect_pick_rate: 0.32
+  aspect_win_rate: 0.58
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.36
+    pick_rate: 0.38
     win_rate: 0.56
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.18
-      win_rate: 0.47
+      pick_rate: 0.16
+      win_rate: 0.49
     - name: Devourer's Gauntlet
-      pick_rate: 0.14
-      win_rate: 0.57
+      pick_rate: 0.15
+      win_rate: 0.53
   - name: Odysseus' Bow
-    pick_rate: 0.12
-    win_rate: 0.73
+    pick_rate: 0.14
+    win_rate: 0.71
     alternates:
+    - name: Hastened Fatalis
+      pick_rate: 0.08
+      win_rate: 0.55
     - name: Berserker's Shield
       pick_rate: 0.08
-      win_rate: 0.56
-    - name: Hastened Fatalis
-      pick_rate: 0.08
-      win_rate: 0.47
+      win_rate: 0.53
   - name: Silverbranch Bow
-    pick_rate: 0.13
-    win_rate: 0.48
+    pick_rate: 0.15
+    win_rate: 0.5
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.12
-      win_rate: 0.77
+      pick_rate: 0.13
+      win_rate: 0.69
     - name: Hastened Fatalis
       pick_rate: 0.1
-      win_rate: 0.45
-  - name: Polynomicon
+      win_rate: 0.48
+  - name: Hastened Fatalis
     pick_rate: 0.08
-    win_rate: 0.5
+    win_rate: 0.58
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.14
-      win_rate: 0.72
+      win_rate: 0.67
     - name: Odysseus' Bow
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.5
   - name: The Executioner
-    pick_rate: 0.14
-    win_rate: 0.58
+    pick_rate: 0.16
+    win_rate: 0.51
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.53
     - name: Silverbranch Bow
       pick_rate: 0.07
-      win_rate: 0.43
-  - name: Blinking Abyss
-    pick_rate: 0.09
-    win_rate: 0.62
+      win_rate: 0.47
+  - name: Bow
+    pick_rate: 0.08
+    win_rate: 0.46
     alternates:
-    - name: Bow
-      pick_rate: 0.09
-      win_rate: 0.5
-    - name: The Executioner
+    - name: Blinking Abyss
       pick_rate: 0.08
+      win_rate: 0.62
+    - name: Manchu Bow
+      pick_rate: 0.07
       win_rate: 0.73
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.23
+    pick_rate: 0.24
     win_rate: 0.58
   - name: Archmage's Gem
-    pick_rate: 0.14
-    win_rate: 0.61
+    pick_rate: 0.13
+    win_rate: 0.63
   - name: Death's Embrace
     pick_rate: 0.12
-    win_rate: 0.56
+    win_rate: 0.54
   source_url: https://smitebrain.com/gods/kali/
-  last_verified: '2026-10-28'
-  god_win_rate: 0.5488372093023256
-  god_matches_won: 118
-  god_matches_played: 215
+  last_verified: '2026-10-29'
+  god_win_rate: 0.5413223140495868
+  god_matches_won: 131
+  god_matches_played: 242
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-28'
-  god_matches_analyzed: 8361
+  god_window_end: '2026-10-29'
+  god_matches_analyzed: 9506
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -121,9 +121,9 @@ builds:
     Titan''s Bane, Spear of Desolation, The Crusher, Dominance, Obsidian Shard, Deathbringer,
     Soul Gem, The Reaper, Riptalon, Demon Blade, Toxic Blade, Gluttonous Grimoire,
     Bracer of The Abyss, Musashi''s Dual Swords, Avatar''s Parashu, Doom Orb, Pendulum
-    Blade, Transcendence, The World Stone, Arondight, Berserker''s Shield, Runeforged
-    Hammer, Dreamer''s Idol, Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos''
-    Pendant, Avenging Blade.'
+    Blade, Transcendence, The World Stone, Arondight, Runeforged Hammer, Dreamer''s
+    Idol, Damaru, Rage, Qin''s Blade, Ancient Signet, Chronos'' Pendant, Avenging
+    Blade, Berserker''s Shield.'
   slot_scores:
     Lernaean Bow:
       total: 0.51
@@ -132,16 +132,16 @@ builds:
       pick: 0.0
       fit: 0.59
     Odysseus' Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
-      win: 0.73
-      pick: 0.16
+      win: 0.71
+      pick: 0.19
       fit: 0.35
     Tyrfing:
       total: 0.54
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.68
     Jotunn's Revenge:
       total: 0.56
@@ -187,8 +187,8 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -198,8 +198,8 @@ builds:
     Bow, Doom Orb, Tekko-Kagi, Gluttonous Grimoire, Ancient Signet, The World Stone,
     Chronos'' Pendant, Dominance, Bracer of The Abyss, Titan''s Bane, The Crusher,
     Dreamer''s Idol, Transcendence, Deathbringer, Golden Blade, The Reaper, Arondight,
-    Gem of Focus, Pendulum Blade, Runeforged Hammer, Musashi''s Dual Swords, Soul
-    Reaver, Polynomicon, Riptalon, Avatar''s Parashu, Rod of Asclepius, The Cosmic
+    Gem of Focus, Polynomicon, Pendulum Blade, Runeforged Hammer, Musashi''s Dual
+    Swords, Soul Reaver, Riptalon, Avatar''s Parashu, Rod of Asclepius, The Cosmic
     Horror, Demon Blade.'
   slot_scores:
     Jotunn's Revenge:
@@ -212,7 +212,7 @@ builds:
       total: 0.52
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.51
     Hydra's Lament:
       total: 0.5
@@ -233,9 +233,9 @@ builds:
       pick: 0.0
       fit: 0.45
     Rod of Tahuti:
-      total: 0.59
+      total: 0.61
       efficiency: 0.86
-      win: 0.5
+      win: 0.53
       pick: 0.15
       fit: 0.42
   community_ordered:
@@ -278,9 +278,9 @@ builds:
     Blade, Helm of Radiance, Hydra''s Lament, Chandra''s Grace, Daybreak Gavel.'
   slot_scores:
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.68
-      win: 0.56
+      win: 0.53
       pick: 0.11
       fit: 0.42
     Jotunn's Revenge:
@@ -299,7 +299,7 @@ builds:
       total: 0.51
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.45
     Shield of the Phoenix:
       total: 0.51
@@ -320,15 +320,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
   - Tyrfing
-  - Transcendence
+  - Silverbranch Bow
+  - Spear of the Magus
   - Tekko-Kagi
-  - Rod of Tahuti
+  - Heartseeker
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Silverbranch Bow
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -352,12 +352,6 @@ builds:
     Blade, Musashi''s Dual Swords, Transcendence, Runeforged Hammer, Arondight, Ancient
     Signet, Chronos'' Pendant, Damaru.'
   slot_scores:
-    Book of Thoth:
-      total: 0.41
-      efficiency: 0.51
-      win: 0.47
-      pick: 0.18
-      fit: 0.05
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.72
@@ -368,30 +362,35 @@ builds:
       total: 0.52
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.55
-    Transcendence:
-      total: 0.45
+    Silverbranch Bow:
+      total: 0.52
       efficiency: 0.53
+      win: 0.5
+      pick: 0.23
+      fit: 0.64
+    Spear of the Magus:
+      total: 0.51
+      efficiency: 0.6
       win: 0.53
       pick: 0.0
-      fit: 0.19
+      fit: 0.43
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.49
       win: 0.53
       pick: 0.0
       fit: 0.76
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.15
-      fit: 0.43
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.53
+      pick: 0.0
+      fit: 0.77
   community_ordered:
-  - Book of Thoth
   - Tyrfing
-  - Rod of Tahuti
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -400,11 +399,11 @@ builds:
   - Odysseus' Bow
   - Tyrfing
   - Nimble Ring
-  - Death Metal
+  - Silverbranch Bow
   - Riptalon
   flex_slots:
+  - Silverbranch Bow
   - Odysseus' Bow
-  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,8 +422,8 @@ builds:
     Bow, Gluttonous Grimoire, Tekko-Kagi, Golden Blade, The Reaper, Spear of the Magus,
     Toxic Blade, Bragi''s Harp, Heartseeker, Obsidian Shard, Spear of Desolation,
     Dominance, Hydra''s Lament, Bracer of The Abyss, Qin''s Blade, Titan''s Bane,
-    The Crusher, Berserker''s Shield, Deathbringer, Demon Blade, Doom Orb, The World
-    Stone, Ancient Signet, Sun Beam Bow, Blood-Bound Book, Transcendence, Dreamer''s
+    The Crusher, Deathbringer, Demon Blade, Doom Orb, The World Stone, Ancient Signet,
+    Sun Beam Bow, Blood-Bound Book, Berserker''s Shield, Transcendence, Dreamer''s
     Idol, Musashi''s Dual Swords, Chronos'' Pendant, Runeforged Hammer, Arondight,
     Avatar''s Parashu, Bancroft''s Talon, Pendulum Blade.'
   slot_scores:
@@ -435,16 +434,16 @@ builds:
       pick: 0.0
       fit: 0.31
     Odysseus' Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.34
-      win: 0.73
-      pick: 0.16
+      win: 0.71
+      pick: 0.19
       fit: 0.36
     Tyrfing:
       total: 0.54
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.67
     Nimble Ring:
       total: 0.52
@@ -452,12 +451,12 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.39
-    Death Metal:
-      total: 0.5
-      efficiency: 0.61
-      win: 0.53
-      pick: 0.0
-      fit: 0.32
+    Silverbranch Bow:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.23
+      fit: 0.57
     Riptalon:
       total: 0.51
       efficiency: 0.51
@@ -467,6 +466,7 @@ builds:
   community_ordered:
   - Odysseus' Bow
   - Tyrfing
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -511,10 +511,10 @@ builds:
       pick: 0.0
       fit: 0.59
     Tyrfing:
-      total: 0.5
+      total: 0.51
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.44
     Hydra's Lament:
       total: 0.51
@@ -529,9 +529,9 @@ builds:
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.57
+      total: 0.58
       efficiency: 0.86
-      win: 0.5
+      win: 0.53
       pick: 0.15
       fit: 0.24
     Soul Gem:
@@ -595,7 +595,7 @@ builds:
       total: 0.54
       efficiency: 0.48
       win: 0.56
-      pick: 0.36
+      pick: 0.38
       fit: 0.68
     Death Metal:
       total: 0.53
@@ -610,9 +610,9 @@ builds:
       pick: 0.0
       fit: 0.69
     Rod of Tahuti:
-      total: 0.57
+      total: 0.58
       efficiency: 0.86
-      win: 0.5
+      win: 0.53
       pick: 0.15
       fit: 0.26
   community_ordered:

@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Deathbringer
-    reason: Conquest community 70% win over 76 matches (vs 55% on this god), taking
+    reason: Conquest community 70% win over 85 matches (vs 55% on this god), taking
       the model's weakest slot from Deathbringer
   borrowed_from: Conquest
   starter: *id001
