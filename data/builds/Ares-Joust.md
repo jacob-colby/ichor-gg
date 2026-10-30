@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Stygian Anchor
+  - Gauntlet of Thebes
   - Kinetic Cuirass
   - Shell of Rebuke
   - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Stygian Anchor
   - Shell of Rebuke
+  - Gauntlet of Thebes
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.61
-      efficiency: 0.45
+    Gauntlet of Thebes:
+      total: 0.23
+      efficiency: 0.26
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.19
     Kinetic Cuirass:
       total: 0.67
       efficiency: 0.56
@@ -462,8 +462,12 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Shifter's Shield
-    reason: Conquest community 69% win over 56 matches (vs 55% on this god), taking
+    reason: Conquest community 68% win over 63 matches (vs 54% on this god), taking
       the model's weakest slot from Shifter's Shield
+  - added: Gauntlet of Thebes
+    removed: Stygian Anchor
+    reason: Conquest community 63% win over 130 matches (vs 54% on this god), taking
+      the model's weakest slot from Stygian Anchor
   borrowed_from: Conquest
   starter: *id001
 ---

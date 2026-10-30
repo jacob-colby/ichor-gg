@@ -529,14 +529,14 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Mystical Mail
-  - Void Shield
   - Erosion
   - Stampede
   - Sanguine Lash
   flex_slots:
-  - Sanguine Lash
   - Mystical Mail
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -559,15 +559,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Mystical Mail:
       total: 0.57
       efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
-    Void Shield:
-      total: 0.59
-      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -592,8 +592,12 @@ builds:
   swaps:
   - added: Sanguine Lash
     removed: Void Stone
-    reason: Conquest community 57% win over 203 matches (vs 49% on this god), taking
+    reason: Conquest community 57% win over 204 matches (vs 48% on this god), taking
       the model's weakest slot from Void Stone
+  - added: Kinetic Cuirass
+    removed: Void Shield
+    reason: Conquest community 58% win over 113 matches (vs 48% on this god), taking
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

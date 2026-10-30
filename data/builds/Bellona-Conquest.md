@@ -5,7 +5,7 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Vindication
-  aspect_pick_rate: 0.06
+  aspect_pick_rate: 0.05
   aspect_win_rate: 0.54
   slot_order:
   - name: Devourer's Gauntlet
@@ -13,58 +13,58 @@ builds:
     win_rate: 0.57
     alternates:
     - name: Vital Amplifier
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.49
     - name: Berserker's Shield
       pick_rate: 0.05
-      win_rate: 0.38
+      win_rate: 0.41
   - name: Berserker's Shield
-    pick_rate: 0.44
+    pick_rate: 0.45
     win_rate: 0.57
     alternates:
     - name: Sanguine Lash
-      pick_rate: 0.24
-      win_rate: 0.57
+      pick_rate: 0.23
+      win_rate: 0.59
     - name: Shogun's Ofuda
       pick_rate: 0.08
-      win_rate: 0.43
+      win_rate: 0.42
   - name: Sanguine Lash
     pick_rate: 0.17
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.22
-      win_rate: 0.58
+      win_rate: 0.57
     - name: Shogun's Ofuda
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Kinetic Cuirass
     pick_rate: 0.21
     win_rate: 0.49
     alternates:
     - name: Shogun's Ofuda
-      pick_rate: 0.09
-      win_rate: 0.58
+      pick_rate: 0.1
+      win_rate: 0.57
     - name: Hussar's Wings
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.68
   - name: Hussar's Wings
     pick_rate: 0.08
-    win_rate: 0.81
+    win_rate: 0.79
     alternates:
     - name: Kinetic Cuirass
-      pick_rate: 0.13
-      win_rate: 0.59
+      pick_rate: 0.14
+      win_rate: 0.62
     - name: Shogun's Ofuda
       pick_rate: 0.05
       win_rate: 0.48
   - name: Medal of Defense
-    pick_rate: 0.07
+    pick_rate: 0.08
     win_rate: 0.5
     alternates:
     - name: Veve Charm
       pick_rate: 0.06
-      win_rate: 0.72
+      win_rate: 0.68
     - name: Freya's Tears
       pick_rate: 0.06
       win_rate: 0.72
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.59
   - name: Leather Cowl
     pick_rate: 0.19
-    win_rate: 0.44
+    win_rate: 0.46
   source_url: https://smitebrain.com/gods/bellona/
-  last_verified: '2026-10-29'
-  god_win_rate: 0.5436681222707423
-  god_matches_won: 249
-  god_matches_played: 458
+  last_verified: '2026-10-30'
+  god_win_rate: 0.5471311475409836
+  god_matches_won: 267
+  god_matches_played: 488
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-29'
-  god_matches_analyzed: 9506
+  god_window_end: '2026-10-30'
+  god_matches_analyzed: 10706
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -130,10 +130,10 @@ builds:
       pick: 0.0
       fit: 0.4
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.6
       win: 0.57
-      pick: 0.6
+      pick: 0.61
       fit: 0.38
     Shield Splitter:
       total: 0.55
@@ -148,9 +148,9 @@ builds:
       pick: 0.18
       fit: 0.54
     Hussar's Wings:
-      total: 0.6
+      total: 0.59
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.6
     Amanita Charm:
@@ -209,7 +209,7 @@ builds:
       total: 0.56
       efficiency: 0.6
       win: 0.57
-      pick: 0.6
+      pick: 0.61
       fit: 0.4
     Shield of the Phoenix:
       total: 0.56
@@ -224,9 +224,9 @@ builds:
       pick: 0.18
       fit: 0.47
     Hussar's Wings:
-      total: 0.6
+      total: 0.59
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.58
     Amanita Charm:
@@ -283,7 +283,7 @@ builds:
       total: 0.54
       efficiency: 0.6
       win: 0.57
-      pick: 0.6
+      pick: 0.61
       fit: 0.28
     Jotunn's Revenge:
       total: 0.59
@@ -300,7 +300,7 @@ builds:
     Hussar's Wings:
       total: 0.57
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.43
     Amanita Charm:
@@ -357,7 +357,7 @@ builds:
       total: 0.59
       efficiency: 0.68
       win: 0.57
-      pick: 0.6
+      pick: 0.61
       fit: 0.45
     Tyrfing:
       total: 0.51
@@ -372,9 +372,9 @@ builds:
       pick: 0.18
       fit: 0.34
     Hussar's Wings:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.38
     Amanita Charm:
@@ -447,9 +447,9 @@ builds:
       pick: 0.18
       fit: 0.64
     Hussar's Wings:
-      total: 0.58
+      total: 0.57
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.45
     Amanita Charm:
@@ -594,9 +594,9 @@ builds:
       pick: 0.18
       fit: 0.54
     Hussar's Wings:
-      total: 0.6
+      total: 0.59
       efficiency: 0.39
-      win: 0.81
+      win: 0.79
       pick: 0.17
       fit: 0.6
     Amanita Charm:
@@ -612,7 +612,7 @@ builds:
   swaps:
   - added: Hussar's Wings
     removed: Shifter's Shield
-    reason: community 81% win over 37 matches (vs 54% on this god), taking the model's
+    reason: community 79% win over 39 matches (vs 55% on this god), taking the model's
       weakest slot from Shifter's Shield
   starter: *id001
 ---

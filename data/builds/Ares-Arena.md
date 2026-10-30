@@ -462,7 +462,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Void Stone
-    reason: Conquest community 69% win over 56 matches (vs 55% on this god), taking
+    reason: Conquest community 68% win over 63 matches (vs 54% on this god), taking
       the model's weakest slot from Void Stone
   borrowed_from: Conquest
   starter: *id001

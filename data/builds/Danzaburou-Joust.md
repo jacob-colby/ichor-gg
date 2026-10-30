@@ -720,4 +720,79 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Devourer's Gauntlet
+  - Death Metal
+  - Silverbranch Bow
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Silverbranch Bow
+  - Devourer's Gauntlet
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Devourer's Gauntlet:
+      total: 0.43
+      efficiency: 0.33
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Death Metal:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Silverbranch Bow:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+  swaps:
+  - added: Silverbranch Bow
+    removed: Tyrfing
+    reason: Conquest community 74% win over 38 matches (vs 53% on this god), taking
+      the model's weakest slot from Tyrfing
+  - added: Devourer's Gauntlet
+    removed: Jotunn's Revenge
+    reason: Conquest community 63% win over 132 matches (vs 53% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
+  starter: *id001
 ---

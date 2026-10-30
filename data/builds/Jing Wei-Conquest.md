@@ -19,51 +19,51 @@ builds:
       pick_rate: 0.02
       win_rate: 0.0
   - name: Dagger of Frenzy
-    pick_rate: 0.84
-    win_rate: 0.51
+    pick_rate: 0.83
+    win_rate: 0.5
     alternates:
     - name: Tyrfing
       pick_rate: 0.03
-      win_rate: 0.71
+      win_rate: 0.75
     - name: Dominance
       pick_rate: 0.03
       win_rate: 0.43
   - name: Dominance
     pick_rate: 0.41
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: The Executioner
-      pick_rate: 0.16
-      win_rate: 0.39
-    - name: Musashi's Dual Swords
+      pick_rate: 0.17
+      win_rate: 0.43
+    - name: Deathbringer
       pick_rate: 0.1
-      win_rate: 0.63
+      win_rate: 0.46
   - name: Deathbringer
     pick_rate: 0.35
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Riptalon
-      pick_rate: 0.16
+      pick_rate: 0.17
       win_rate: 0.49
     - name: Dominance
       pick_rate: 0.15
-      win_rate: 0.47
+      win_rate: 0.46
   - name: Riptalon
     pick_rate: 0.2
     win_rate: 0.62
     alternates:
     - name: Deathbringer
-      pick_rate: 0.29
-      win_rate: 0.57
+      pick_rate: 0.3
+      win_rate: 0.56
     - name: Dominance
-      pick_rate: 0.12
-      win_rate: 0.67
+      pick_rate: 0.11
+      win_rate: 0.65
   - name: Musashi's Dual Swords
     pick_rate: 0.13
-    win_rate: 0.82
+    win_rate: 0.78
     alternates:
     - name: Riptalon
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.5
     - name: Blinking Abyss
       pick_rate: 0.08
@@ -73,20 +73,20 @@ builds:
     pick_rate: 0.71
     win_rate: 0.53
   - name: Gilded Arrow
-    pick_rate: 0.2
-    win_rate: 0.38
+    pick_rate: 0.21
+    win_rate: 0.39
   - name: Bumba's Spear
     pick_rate: 0.04
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-10-29'
-  god_win_rate: 0.502127659574468
-  god_matches_won: 118
-  god_matches_played: 235
+  last_verified: '2026-10-30'
+  god_win_rate: 0.5019455252918288
+  god_matches_won: 129
+  god_matches_played: 257
   god_division: obsidian
   god_window_start: '2026-10-20'
-  god_window_end: '2026-10-29'
-  god_matches_analyzed: 9506
+  god_window_end: '2026-10-30'
+  god_matches_analyzed: 10706
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -135,21 +135,21 @@ builds:
       pick: 0.02
       fit: 0.31
     Tyrfing:
-      total: 0.6
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.75
     Deathbringer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.58
       fit: 0.54
     Musashi's Dual Swords:
-      total: 0.63
+      total: 0.61
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.54
     Riptalon:
@@ -193,7 +193,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Avenging
-    Blade, Jotunn''s Revenge, Tyrfing, Hydra''s Lament, Lernaean Bow, Heartseeker,
+    Blade, Tyrfing, Jotunn''s Revenge, Hydra''s Lament, Lernaean Bow, Heartseeker,
     The Reaper, Tekko-Kagi, Silverbranch Bow, Titan''s Bane, Golden Blade, The Crusher,
     Transcendence, Arondight, Demon Blade, Runeforged Hammer, Pendulum Blade, Toxic
     Blade, Avatar''s Parashu, Damaru, Qin''s Blade, Barbed Carver, Berserker''s Shield,
@@ -212,9 +212,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.56
+      total: 0.58
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.49
     Hydra's Lament:
@@ -224,9 +224,9 @@ builds:
       pick: 0.0
       fit: 0.42
     Musashi's Dual Swords:
-      total: 0.6
+      total: 0.58
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.34
     Heartseeker:
@@ -285,21 +285,21 @@ builds:
       pick: 0.02
       fit: 0.3
     Tyrfing:
-      total: 0.6
+      total: 0.61
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.71
     Deathbringer:
       total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.58
       fit: 0.57
     Musashi's Dual Swords:
-      total: 0.64
+      total: 0.62
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.57
     Demon Blade:
@@ -324,7 +324,7 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Tyrfing
+  - Berserker's Shield
   - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
@@ -340,7 +340,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Avenging Blade, Amanita Charm, Berserker''s Shield, Tyrfing, Kinetic
+    this god: Avenging Blade, Amanita Charm, Tyrfing, Berserker''s Shield, Kinetic
     Cuirass, Golden Blade, Runeforged Hammer, Shield of the Phoenix, Shifter''s Shield,
     Pharaoh''s Curse, Yogi''s Necklace, Shield Splitter, Shogun''s Ofuda, Lernaean
     Bow, Eye of the Storm, Phoenix Feather, Erosion, The Reaper, Eye of Providence,
@@ -360,15 +360,15 @@ builds:
       pick: 0.0
       fit: 0.48
     Tyrfing:
-      total: 0.56
+      total: 0.58
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.49
     Musashi's Dual Swords:
-      total: 0.6
+      total: 0.58
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.32
     Riptalon:
@@ -434,15 +434,15 @@ builds:
       pick: 0.0
       fit: 0.47
     Tyrfing:
-      total: 0.57
+      total: 0.59
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.53
     Musashi's Dual Swords:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.36
     Riptalon:
@@ -508,21 +508,21 @@ builds:
       pick: 0.02
       fit: 0.26
     Tyrfing:
-      total: 0.6
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.75
     Deathbringer:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.58
       fit: 0.41
     Musashi's Dual Swords:
-      total: 0.61
+      total: 0.59
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.41
     Riptalon:
@@ -584,9 +584,9 @@ builds:
       pick: 0.0
       fit: 0.41
     Tyrfing:
-      total: 0.56
+      total: 0.58
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.47
     Hydra's Lament:
@@ -602,9 +602,9 @@ builds:
       pick: 0.0
       fit: 0.41
     Musashi's Dual Swords:
-      total: 0.6
+      total: 0.58
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.3
   community_ordered:
@@ -657,21 +657,21 @@ builds:
       pick: 0.0
       fit: 0.64
     Tyrfing:
-      total: 0.6
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.75
     Dominance:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
-      win: 0.52
+      win: 0.51
       pick: 0.64
       fit: 0.64
     Deathbringer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.58
       fit: 0.54
     Demon Blade:
@@ -730,21 +730,21 @@ builds:
       pick: 0.0
       fit: 0.64
     Tyrfing:
-      total: 0.6
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.75
       pick: 0.04
       fit: 0.75
     Deathbringer:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.57
+      win: 0.58
       pick: 0.58
       fit: 0.54
     Musashi's Dual Swords:
-      total: 0.63
+      total: 0.61
       efficiency: 0.46
-      win: 0.82
+      win: 0.78
       pick: 0.4
       fit: 0.54
     Demon Blade:
@@ -760,7 +760,7 @@ builds:
   swaps:
   - added: Musashi's Dual Swords
     removed: Dominance
-    reason: community 82% win over 31 matches (vs 50% on this god), taking the model's
+    reason: community 78% win over 33 matches (vs 50% on this god), taking the model's
       weakest slot from Dominance
   starter: *id001
 ---
