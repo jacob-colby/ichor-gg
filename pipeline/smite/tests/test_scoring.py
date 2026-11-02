@@ -993,14 +993,26 @@ def test_a_relic_with_an_unreadable_cost_is_not_assumed_buildable():
         {"name": "Mystery", "tier": "Relic", "cost": None, "stats": {"Strength": "10"}}) is False
 
 
-def test_the_real_pool_admits_exactly_the_paid_statted_relics():
-    from smite import recommend
-    items = recommend.load_items()
-    relics = [i for i in items if i.get("tier") == "Relic"]
-    assert relics, "expected relics in the pool"
+def test_the_frozen_pool_admits_exactly_the_paid_statted_relics():
+    """Open Beta 40's four (frozen), named — the set the cost rule above was
+    written against."""
+    from smite.tests import frozen
+    relics = [i for i in frozen.items() if i.get("tier") == "Relic"]
     admitted = sorted(i["name"] for i in relics if scoring.is_buildable(i))
     assert admitted == ["Agility Greaves", "Shell of Rebuke",
                         "Talisman of Purification", "Time-lock Aegis"], admitted
+
+
+def test_the_live_pool_admits_exactly_the_paid_statted_relics():
+    """The rule, on whatever the patch says: a relic is buildable iff it was
+    paid for and has a stat. A new upgraded relic joins; a free or statless
+    one does not."""
+    from smite import recommend
+    relics = [i for i in recommend.load_items() if i.get("tier") == "Relic"]
+    assert relics, "expected relics in the pool"
+    for i in relics:
+        paid = isinstance(i.get("cost"), (int, float)) and i["cost"] > 0
+        assert scoring.is_buildable(i) == (paid and bool(i.get("stats"))), i["name"]
 
 
 # --- offense tags + adaptive fit -------------------------------------------

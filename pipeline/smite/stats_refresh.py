@@ -56,8 +56,10 @@ downstream gate. This path is built around that measurement:
      beside the live ones and swapped in by rename. `data_from` in the patch
      history is set only after the swap succeeds.
 
-Then the daily job's own gates (`validate --check`, `calibrate_combat`) run on
-the result before anything is committed; a failing gate fails the job and
+Then `smite.stats_gate` runs the whole pytest suite on the result and puts the
+old stats back if a test fails that passes without them (see that module), and
+the daily job's own gates (`validate --check`, `calibrate_combat`) run on the
+result before anything is committed; a failing gate fails the job and
 commits nothing, which on a runner is a full rollback.
 
 FAILURE NEVER FAILS THE COMMUNITY REFRESH. `main` exits 0 on every path. A

@@ -63,11 +63,13 @@ jobs:
         working-directory: pipeline
         run: python -m smite.refresh --community
 
-      # The game's patch label, from Steam's announcement feed (the wiki is
-      # Cloudflare-gated and stays a manual patch-day step). Records a new
-      # patch and its official link when there is one; changes nothing
-      # otherwise. Exits 0 on every path — a Steam outage must not cost the
-      # day's community data. See smite/patch_feed.py.
+      # The game's patch label, from Steam's announcement feed — read from
+      # the title, the official notes link or the body, since Hi-Rez stopped
+      # titling posts with it (measured on a recorded response, 2026-11-02).
+      # The weaker of the two patch sources now; `stats_refresh` cross-checks
+      # it against the wiki daily. Records a new patch and its official link
+      # when there is one. Exits 0 on every path — a Steam outage must not
+      # cost the day's community data. See smite/patch_feed.py.
       - name: Detect a new game patch
         working-directory: pipeline
         run: python -m smite.patch_feed

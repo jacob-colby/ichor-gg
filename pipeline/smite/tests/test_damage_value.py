@@ -7,14 +7,19 @@ they stay off and that the measurement stays reproducible.
 import pytest
 
 from smite import combat, damage_value as dv, kit, notes, recommend, scoring
+from smite.tests import frozen
 
 
+# Named gods and items are Open Beta 40's, frozen: these tests pin arithmetic
+# on given kits ("Qin's Blade is 30 Attack Damage", Medusa's 1.4 per level),
+# and a patch that rebalances one must not turn the math red. The roster-wide
+# tests below still read the live data.
 def _god(name):
-    return notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")[0]
+    return frozen.god(name)
 
 
 def _item(name):
-    return notes.read_note(recommend.DATA_ROOT / "Items" / f"{name}.md")[0]
+    return frozen.item(name)
 
 
 # ── The valuation itself ──────────────────────────────────────────────────

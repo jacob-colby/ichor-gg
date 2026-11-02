@@ -1,4 +1,531 @@
 {
+"Anubis": {
+"abilities": [
+{
+"damage_type": "magical",
+"description": "Fire a projectile that deals Magical Damage to the first enemy hit",
+"detail_kinds": [
+null,
+"magical",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Projectile stops on first target hit, and does not pass through walls",
+"Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+"Range: 8.8 meters",
+"Radius: 0.48 meters"
+],
+"name": "Anubis Basic Attack",
+"slot": "Basic Attack"
+},
+{
+"description": "Gain Lifesteal and Protections . Gain bonus Lifesteal and Protections scaled from missing Health",
+"detail_kinds": [
+null,
+null,
+"buff",
+"buff",
+"buff",
+"buff",
+"buff"
+],
+"details": [
+"Gain 1 stack of this buff for each 10% Health missing",
+"Bonus Lifesteal caps at 4% and 16 Protections at 20% Health",
+"Lifesteal: 2%",
+"Protections: 5 + 0.5 per level",
+"Bonus Lifesteal: +0.5% per stack",
+"Bonus Protections: +2 per stack",
+"Max Stacks: 8"
+],
+"name": "The Scales",
+"slot": "Passive"
+},
+{
+"cooldown": [
+10.0,
+9.5,
+9.0,
+8.5,
+8.0
+],
+"cost": [
+30.0,
+40.0,
+50.0,
+60.0,
+70.0
+],
+"damage_type": "magical",
+"description": "Locusts fly from your mouth, repeatedly dealing Magical Damage in an area in front of you",
+"detail_kinds": [
+null,
+"mechanic",
+null,
+null,
+"magical",
+"magical",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This is a channeled ability",
+"You are Displacement Immune and are Slowed while Channeling",
+"This ability hits 12 times over 2.5 seconds",
+"You can cancel this ability at any time",
+"Damage Per Tick: 15 | 22 | 29 | 36 | 43",
+"Damage Scaling Per Tick: 16 | 17 | 18 | 19 | 20% Intelligence",
+"Self Slow: 35 | 30 | 25 | 20 | 15%",
+"Radius: 5.6 meters",
+"Cone Angle: 110 degrees",
+"Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds",
+"Cost: 30 | 40 | 50 | 60 | 70 mana"
+],
+"name": "Plague of Locusts",
+"slot": "1st Ability"
+},
+{
+"cooldown": [
+16.0,
+15.5,
+15.0,
+14.5,
+14.0
+],
+"cost": [
+50.0,
+55.0,
+60.0,
+65.0,
+70.0
+],
+"damage_type": "magical",
+"description": "Fire a bandage projectile, dealing Magical Damage , mummifying, and Stunning the first god hit",
+"detail_kinds": [
+null,
+"magical",
+"magical",
+"stun",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability passes through non-god enemies, but stops on walls and enemy gods",
+"Damage: 60 | 85 | 110 | 135 | 160",
+"Damage Scaling: 55% Intelligence",
+"Stun Duration: 0.85 | 0.9 | 0.95 | 1 | 1.05 seconds",
+"Range: 11.2 meters",
+"Radius: 0.56 meters",
+"Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds",
+"Cost: 50 | 55 | 60 | 65 | 70 mana"
+],
+"name": "Mummify",
+"slot": "2nd Ability"
+},
+{
+"cooldown": [
+14.0,
+13.0,
+12.0,
+11.0,
+10.0
+],
+"cost": [
+40.0,
+50.0,
+60.0,
+70.0,
+80.0
+],
+"damage_type": "magical",
+"description": "Summon allies from the underworld, Slowing and dealing Magical Damage repeatedly to enemies in an area",
+"detail_kinds": [
+null,
+"slow",
+"magical",
+"magical",
+"slow",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability hits 4 times over 1.5 seconds",
+"Slow is refreshed on each hit, and does not stack",
+"Damage: 25 | 45 | 65 | 85 | 105",
+"Damage Scaling: 35% intelligence",
+"Slow: 25%",
+"Slow Duration: 2 seconds",
+"Range: 8.8 meters",
+"Radius: 3.2 meters",
+"Cooldown: 14 | 13 | 12 | 11 | 10 seconds",
+"Cost: 40 | 50 | 60 | 70 | 80 mana"
+],
+"name": "Grasping Hands",
+"slot": "3rd Ability"
+},
+{
+"cooldown": [
+90.0
+],
+"cost": [
+90.0
+],
+"damage_type": "magical",
+"description": "The Scales is always at full strength during Your piercing gaze burns enemies in a line",
+"detail_kinds": [
+"magical",
+"magical",
+"mechanic",
+null,
+"debuff",
+null,
+null,
+"magical",
+"magical",
+"magical",
+"magical",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This deals an initial burst of Magical Damage",
+"Then Channels to repeatedly deal Magical Damage",
+"You are CC Immune while using this ability",
+"Ability hits 24 times, plus the initial burst, over 2.4 seconds",
+"You are Rooted while Channeling",
+"You can cancel this ability at any time",
+"The Scales is always at full strength during Ultimate",
+"Initial Damage: 140 | 170 | 200 | 230 | 260",
+"Initial Damage Scaling: 90% Intelligence",
+"Damage Per Tick: 27 | 32 | 37 | 42 | 47",
+"Damage Scaling Per Tick: 18% Intelligence",
+"Range: 11.2 meters",
+"Radius: 0.72 meters",
+"Cooldown: 90 seconds",
+"Cost: 90 mana"
+],
+"name": "Death Gaze",
+"slot": "Ultimate"
+}
+],
+"aspects": [],
+"base_stats": {
+"attack_power": {
+"base": 40.85,
+"per_level": 2.21
+},
+"attack_speed": {
+"base": 0.96,
+"per_level": 1.4
+},
+"health": {
+"base": 619.0,
+"per_level": 94.0
+},
+"health_regen": {
+"base": 1.82,
+"per_level": 0.2
+},
+"magical_prot": {
+"base": 29.81,
+"per_level": 1.73
+},
+"mana": {
+"base": 319.68,
+"per_level": 45.36
+},
+"mana_regen": {
+"base": 1.56,
+"per_level": 0.12
+},
+"move_speed": {
+"base": 375.0,
+"per_level": 0.0
+},
+"physical_prot": {
+"base": 17.72,
+"per_level": 3.0
+}
+},
+"damage_type": "magical",
+"last_verified": "2026-08-01",
+"name": "Anubis",
+"pantheon": "Egyptian",
+"release_date": "May 2, 2024",
+"role": "Mid",
+"source_url": "https://wiki.smite2.com/w/Anubis",
+"specializations": [
+"Nuker",
+"Lockdown"
+],
+"type": "smite-god"
+},
+"Kukulkan": {
+"abilities": [
+{
+"damage_type": "magical",
+"description": "Fire a projectile that deals Magical Damage to the first enemy hit",
+"detail_kinds": [
+null,
+"magical",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Projectile stops on first target hit, and does not pass through walls",
+"Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+"Range: 8.8 meters",
+"Radius: 0.48 meters"
+],
+"name": "Kukulkan Basic Attack",
+"slot": "Basic Attack"
+},
+{
+"description": "As you build items that provide Mana, you gain Bonus Intelligence",
+"detail_kinds": [
+null,
+"buff"
+],
+"details": [
+"This effect does not scale off Base god Mana",
+"Intelligence From Item Mana: 7%"
+],
+"name": "Power of the Wind Jewel",
+"slot": "Passive"
+},
+{
+"cooldown": [
+7.0
+],
+"cost": [
+50.0,
+55.0,
+60.0,
+65.0,
+70.0
+],
+"damage_type": "magical",
+"description": "Fire a projectile that explodes on the first enemy hit. The explosion deals Magical Damage and Slows enemies in the area",
+"detail_kinds": [
+null,
+"magical",
+"magical",
+"slow",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability stops on first target hit, and does not pass through walls",
+"Damage: 85 | 135 | 185 | 235 | 285",
+"Damage Scaling: 85% Intelligence",
+"Slow: 20 | 25 | 30 | 35 | 40%",
+"Slow Duration: 3 seconds",
+"Range: 11.2 meters",
+"Radius: 0.64 meters",
+"Explosion Radius: 2.25 meters",
+"Cooldown: 7 seconds",
+"Cost: 50 | 55 | 60 | 65 | 70 mana"
+],
+"name": "Zephyr",
+"slot": "1st Ability"
+},
+{
+"cooldown": [
+13.0,
+12.5,
+12.0,
+11.5,
+11.0
+],
+"cost": [
+40.0,
+45.0,
+50.0,
+55.0,
+60.0
+],
+"description": "Activate this within a Whirlwind to Dash , dealing Magical Damage and Slowing enemies hit Summon the wind to become Slow Immune and gain Movement Speed that fades over time",
+"detail_kinds": [
+null,
+"buff",
+null,
+"buff",
+"buff",
+"magical",
+"magical",
+"slow",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Activate this within a Whirlwind to Dash, dealing Magical Damage and Slowing enemies hit",
+"Movement Speed Buff is applied as 4 stacks, stacks are lost one at a time",
+"Dash passes through and damages all enemies, but stops on walls",
+"Movement Speed: 7 | 9 | 11 | 13 | 15% Per Stack",
+"Buff Duration: 4 seconds",
+"Dash Damage: 95 | 145 | 195 | 245 | 295",
+"Dash Damage Scaling: 90% Intelligence",
+"Dash Slow: 20 | 25 | 30 | 35 | 40%",
+"Dash Slow Duration: 3 seconds",
+"Dash Range: 8.8 meters",
+"Dash Radius: 2 meters",
+"Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds",
+"Cost: 40 | 45 | 50 | 55 | 60 mana"
+],
+"name": "Slipstream",
+"slot": "2nd Ability"
+},
+{
+"cooldown": [
+15.0,
+14.0,
+13.0,
+12.0,
+11.0
+],
+"cost": [
+50.0,
+60.0,
+70.0,
+80.0,
+90.0
+],
+"damage_type": "magical",
+"description": "The attempts to apply the effect every 0.35 seconds for 4 seconds Create a , which spreads onto all enemies that enter its area",
+"detail_kinds": [
+"magical",
+null,
+"magical",
+"magical",
+"magical",
+"magical",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Affected enemies repeatedly take Magical Damage over time, even if they leave the area",
+"The Whirlwind attempts to apply the effect every 0.35 seconds for 4 seconds",
+"Damage Over Time is refreshed on each hit",
+"Damage Over Time hits 6 times over 2.5 seconds",
+"Damage Per Tick: 12 | 19 | 26 | 33 | 40",
+"Damage Scaling Per Tick: 20% Intelligence",
+"Range: 8.8 meters",
+"Radius: 3.2 meters",
+"Cooldown: 15 | 14 | 13 | 12 | 11 seconds",
+"Cost: 50 | 60 | 70 | 80 | 90 mana"
+],
+"name": "Whirlwind",
+"slot": "3rd Ability"
+},
+{
+"cooldown": [
+90.0
+],
+"cost": [
+120.0
+],
+"damage_type": "magical",
+"description": "Summon the Sprit of the Nine Winds to deal Magical Damage in a large path",
+"detail_kinds": [
+"stun",
+null,
+"magical",
+"magical",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Enemies hit are also Knocked Up away from the projectile",
+"This ability passes through and damages all enemies, and passes through walls",
+"Damage: 400 | 500 | 600 | 700 | 800",
+"Damage Scaling: 115% Intelligence",
+"Range: 20.8 meters",
+"Radius: 1.4 meters",
+"Cooldown: 90 seconds",
+"Cost: 120 mana"
+],
+"name": "Spirit of the Nine Winds",
+"slot": "Ultimate"
+}
+],
+"aspects": [
+{
+"kit_changes": "You gain Mana from Jungle monster kills and god kills and assists. Zephyr has a shorter range but fires 3 projectiles. Slipstream is always a dash and steals protections. Whirlwind attaches to you and explodes in a blast that knocks back enemies.",
+"name": "Aspect of the Squall"
+}
+],
+"base_stats": {
+"attack_power": {
+"base": 40.85,
+"per_level": 2.21
+},
+"attack_speed": {
+"base": 0.96,
+"per_level": 1.4
+},
+"health": {
+"base": 569.48,
+"per_level": 86.48
+},
+"health_regen": {
+"base": 1.7,
+"per_level": 0.2
+},
+"magical_prot": {
+"base": 27.38,
+"per_level": 1.38
+},
+"mana": {
+"base": 322.62,
+"per_level": 48.3
+},
+"mana_regen": {
+"base": 1.57,
+"per_level": 0.13
+},
+"move_speed": {
+"base": 370.0,
+"per_level": 0.0
+},
+"physical_prot": {
+"base": 17.48,
+"per_level": 2.76
+}
+},
+"damage_type": "magical",
+"last_verified": "2026-08-01",
+"name": "Kukulkan",
+"pantheon": "Maya",
+"release_date": "May 2, 2024",
+"role": "Mid",
+"source_url": "https://wiki.smite2.com/w/Kukulkan",
+"specializations": [
+"Nuker"
+],
+"type": "smite-god"
+},
 "Medusa": {
 "abilities": [
 {
@@ -262,6 +789,550 @@ null,
 ],
 "type": "smite-god"
 },
+"Neith": {
+"abilities": [
+{
+"damage_type": "physical",
+"description": "Fire a projectile that deals Physical Damage to the first enemy hit",
+"detail_kinds": [
+null,
+"physical",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Projectile stops on first target hit, and does not pass through walls",
+"Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+"Range: 8.8 meters",
+"Radius: 0.48 meters"
+],
+"name": "Neith Basic Attack",
+"slot": "Basic Attack"
+},
+{
+"damage_type": "physical",
+"description": "Your abilities either create or detonate Weaves",
+"detail_kinds": [
+"physical",
+"buff",
+"physical",
+"physical",
+"debuff",
+"buff",
+"buff",
+"buff",
+"buff",
+"buff",
+"buff"
+],
+"details": [
+"Detonating Weaves deals Physical Damage to nearby enemies and Roots them",
+"You gain a stacking Attack Speed and Intelligence buff per Weave detonated",
+"Damage: 25",
+"Damage Scaling: 5 Per Level + 15% Strength + 25% Intelligence",
+"Root Duration: 1 second",
+"Attack Speed: 4% Per Stack",
+"Attack Speed Scaling: 3% Strength Per Stack",
+"Intelligence: 8",
+"Intelligence Scaling: 0.4 Per Level",
+"Buff Duration: 30 seconds",
+"Max Buff Stacks: 3"
+],
+"name": "Broken Weave",
+"slot": "Passive"
+},
+{
+"cooldown": [
+13.0,
+12.5,
+12.0,
+11.5,
+11.0
+],
+"cost": [
+40.0,
+50.0,
+60.0,
+70.0,
+80.0
+],
+"damage_type": "physical",
+"description": "Fire a projectile that deals Physical Damage and Roots enemies",
+"detail_kinds": [
+null,
+null,
+"physical",
+"physical",
+"debuff",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability detonates Weaves it hits",
+"This ability passes through and damages all enemies, and passes through walls",
+"Damage: 80 | 145 | 210 | 275 | 340",
+"Damage Scaling: 95% Strength + 75% Intelligence",
+"Root Duration: 1 second",
+"Range: 10.4 meters",
+"Radius: 0.56 meters",
+"Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds",
+"Cost: 40 | 50 | 60 | 70 | 80 mana"
+],
+"name": "Spirit Arrow",
+"slot": "1st Ability"
+},
+{
+"cooldown": [
+12.0
+],
+"cost": [
+50.0,
+60.0,
+70.0,
+80.0,
+90.0
+],
+"damage_type": "physical",
+"description": "the world weaves, dealing Physical Damage to enemies in an area Increased",
+"detail_kinds": [
+null,
+"heal",
+"heal",
+null,
+"physical",
+"physical",
+"heal",
+"heal",
+"heal",
+"heal",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability creates a Weave",
+"You Heal for each enemy hit",
+"Hitting a god Heals for more",
+"Always creates a Weave in the center of the area. Creates additional Weaves for each enemy god hit at the locations of those gods",
+"Damage: 80 | 130 | 180 | 230 | 280",
+"Damage Scaling: 55% Strength + 80% Intelligence",
+"Heal: 11 | 15 | 19 | 23 | 27",
+"Heal Scaling: 5% Intelligence",
+"Increased Heal: 25 | 32 | 39 | 46 | 54",
+"Increased Heal Scaling: 5% Intelligence",
+"Range: 8.8 meters",
+"Radius: 3.2 meters",
+"Cooldown: 12 seconds",
+"Cost: 50 | 60 | 70 | 80 | 90 mana"
+],
+"name": "Unravel",
+"slot": "2nd Ability"
+},
+{
+"cooldown": [
+15.0,
+14.5,
+14.0,
+13.5,
+13.0
+],
+"cost": [
+50.0,
+55.0,
+60.0,
+65.0,
+70.0
+],
+"damage_type": "physical",
+"description": "Deal Physical Damage and Slow enemies in front of you, then Leap backwards",
+"detail_kinds": [
+null,
+null,
+"physical",
+"physical",
+"slow",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"This ability detonates Weaves that it hits",
+"This ability can travel over walls, as long as you can reach a valid landing area",
+"Damage: 85 | 130 | 175 | 220 | 265",
+"Damage Scaling: 60% Intelligence",
+"Slow: 30%",
+"Slow Duration: 2 | 2.5 | 3 | 3.5 | 4 seconds",
+"Range: 9.6 meters",
+"Cone Range: 5.6 meters",
+"Cone Angle:110 degrees",
+"Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+"Cost: 50 | 55 | 60 | 65 | 70 mana"
+],
+"name": "Back Flip",
+"slot": "3rd Ability"
+},
+{
+"cooldown": [
+100.0
+],
+"cost": [
+80.0,
+90.0,
+100.0,
+110.0,
+120.0
+],
+"damage_type": "physical",
+"description": "Charge up and fire an arrow across the world, locked on to an enemy god and ignoring obstacles",
+"detail_kinds": [
+"physical",
+null,
+null,
+null,
+null,
+null,
+null,
+"physical",
+"physical",
+"stun",
+"mechanic",
+"mechanic"
+],
+"details": [
+"The arrow deals Physical Damage and Stuns",
+"You can fire the arrow before it is fully charged, but it will deal reduced damage",
+"Damage scales linearly from 50% to 100% based on Channel time",
+"Channel for 0.5 seconds for minimum damage, or for 2 seconds to deal fully charged damage",
+"Enemy gods can step in front of this projectile to be hit by it instead of the selected god",
+"You can cancel this ability anytime before firing, the costs and cooldown will not be consumed",
+"This ability passes through non-god enemies, and passes through walls, but stops on enemy gods",
+"Damage: 200 | 250 | 300 | 350 | 400",
+"Damage Scaling: 105% Strength + 90% Intelligence",
+"Stun Duration: 1 second",
+"Cooldown: 100 seconds",
+"Cost: 80 | 90 | 100 | 110 | 120 mana"
+],
+"name": "World Weaver",
+"slot": "Ultimate"
+}
+],
+"aspects": [
+{
+"kit_changes": "Broken Weave explosions no longer Root enemies and the Buff has a reduced duration however the Attack Speed gained is much higher. Additionally using World Weaver provides stacks of Broken Weave.",
+"name": "Aspect of Wind"
+}
+],
+"base_stats": {
+"attack_power": {
+"base": 44.4,
+"per_level": 2.4
+},
+"attack_speed": {
+"base": 1.0,
+"per_level": 1.51
+},
+"health": {
+"base": 569.48,
+"per_level": 86.48
+},
+"health_regen": {
+"base": 1.7,
+"per_level": 0.2
+},
+"magical_prot": {
+"base": 25.3,
+"per_level": 1.38
+},
+"mana": {
+"base": 334.1,
+"per_level": 42.0
+},
+"mana_regen": {
+"base": 1.33,
+"per_level": 0.11
+},
+"move_speed": {
+"base": 370.0,
+"per_level": 0.0
+},
+"physical_prot": {
+"base": 18.76,
+"per_level": 2.76
+}
+},
+"damage_type": "physical",
+"last_verified": "2026-08-01",
+"name": "Neith",
+"pantheon": "Egyptian",
+"release_date": "May 2, 2024",
+"role": "Carry Mid",
+"source_url": "https://wiki.smite2.com/w/Neith",
+"specializations": [
+"Nuker",
+"Sharpshooter",
+"Global"
+],
+"type": "smite-god"
+},
+"Scylla": {
+"abilities": [
+{
+"damage_type": "magical",
+"description": "Fire a projectile that deals Magical Damage to the first enemy hit",
+"detail_kinds": [
+null,
+"magical",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Projectile stops on first target hit, and does not pass through walls",
+"Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+"Range: 8.8 meters",
+"Radius: 0.48 meters"
+],
+"name": "Scylla Basic Attack",
+"slot": "Basic Attack"
+},
+{
+"description": "MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional effect at max rank. In addition, gain Intelligence and Mana Regen for each max rank ability",
+"detail_kinds": [
+"buff",
+"buff"
+],
+"details": [
+"Intelligence: 20 Per Max Ability",
+"Mana Regen: 2 Per Max Ability"
+],
+"name": "Quick Learner",
+"slot": "Passive"
+},
+{
+"cooldown": [
+10.0
+],
+"cost": [
+60.0,
+65.0,
+70.0,
+75.0,
+80.0
+],
+"damage_type": "magical",
+"description": "Send two hounds forward, Rooting , Crippling , and dealing Magical Damage",
+"detail_kinds": [
+"buff",
+null,
+"magical",
+"magical",
+"debuff",
+"debuff",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"At max rank, the two closest enemies to the first target will also be hit",
+"This ability stops on first target hit, and does not pass through walls",
+"Damage: 85 | 130 | 175 | 220 | 265",
+"Damage Scaling: 75% Intelligence",
+"Root Duration: 1.75 seconds",
+"Cripple Duration: 1.75 seconds",
+"Range: 10.4 meters",
+"Radius: 0.48 meters",
+"Explosion Radius: 2.4 meters",
+"Cooldown: 10 seconds",
+"Cost: 60 | 65 | 70 | 75 | 80 mana"
+],
+"name": "Sic 'Em",
+"slot": "1st Ability"
+},
+{
+"cooldown": [
+10.0
+],
+"cost": [
+70.0,
+75.0,
+80.0,
+85.0,
+90.0
+],
+"damage_type": "magical",
+"description": "Creates a magical field that Slows enemies. After 5 seconds it detonates, dealing Magical Damage",
+"detail_kinds": [
+"debuff",
+null,
+null,
+"magical",
+"magical",
+"slow",
+"debuff",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"At max rank, enemies in the area also have their Magical Protections reduced and the field persists if detonated early",
+"Reactivate to detonate the field early",
+"This ability does 20% bonus damage to Minion and Jungle Monsters.",
+"Damage: 100 | 155 | 210 | 265 | 320",
+"Damage Scaling: 90% Intelligence",
+"Slow: 30%",
+"Magical Protection Reduced: 10%",
+"Range: 8.8 meters",
+"Radius: 3.2 meters",
+"Cooldown: 10 seconds",
+"Cost: 70 | 75 | 80 | 85 | 90 mana"
+],
+"name": "Crush",
+"slot": "2nd Ability"
+},
+{
+"cooldown": [
+15.0
+],
+"cost": [
+70.0,
+75.0,
+80.0,
+85.0,
+90.0
+],
+"damage_type": "magical",
+"description": "vision is granted through line of sight blockers Summon a sentinel at the target area, granting vision of enemies for 5 seconds. Reactive the ability to Leap to the sentinel location and gain a buff that causes your next Attack to deal Magical Damage",
+"detail_kinds": [
+"buff",
+null,
+"magical",
+"magical",
+"buff",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"At max rank, hitting an enemy god with the empowered Attack reduces your active ability cooldowns",
+"Sentinel vision is granted through line of sight blockers",
+"Damage: 40 | 45 | 50 | 55 | 60",
+"Damage Scaling: 50% Intelligence",
+"Buff Duration: 5 seconds",
+"Cooldown Reduction: -3 seconds",
+"Vision Radius: 6.4 | 8 | 9.6 | 11.2 | 12.8 meters",
+"Range: 11.2 meters",
+"Cooldown: 15 seconds",
+"Cost: 70 | 75 | 80 | 85 | 90 mana"
+],
+"name": "Sentinel",
+"slot": "3rd Ability"
+},
+{
+"cooldown": [
+90.0
+],
+"cost": [
+100.0
+],
+"damage_type": "magical",
+"description": "Become CC Immune for the next 6 seconds, and gain Movement Speed . Reactivate to deal Magical Damage at the target area",
+"detail_kinds": [
+null,
+"magical",
+"magical",
+"magical",
+"magical",
+"magical",
+"buff",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"If you kill an enemy god with this attack, the duration resets and you may attack again",
+"Whenever this ability deals damage to enemy gods you gain 1 stack, killing enemy gods provides 3. At max rank, each stack provides bonus damage to this ability",
+"Damage: 400 | 500 | 600 | 700 | 800",
+"Damage Scaling: 120% Intelligence",
+"Bonus Damage: 5 Per Stack",
+"Bonus Damage Scaling: 2% Intelligence Per Stack",
+"Movement Speed: 35%",
+"Range: 9.6 meters",
+"Radius: 2.4 meters",
+"Cooldown: 90 seconds",
+"Cost: 100 mana"
+],
+"name": "I'm a Monster",
+"slot": "Ultimate"
+}
+],
+"aspects": [
+{
+"kit_changes": "Your non-ultimate abilities now provide Mana when damaging enemies instead of spending it. I'm a Monster can only be used when at full Mana, consuming all of it. It no longer provides Movement Speed, but now can be fired up to 3 times and the damage scales from your Max Mana. I'm a Monster stacks now immediately provide max Mana and at max rank you gain bonus Mana. Sentinel's Empowered Attack also sclaes with Max Mana, but no longer Cooldown Reduces itself.",
+"name": "Aspect of the Devourer"
+}
+],
+"base_stats": {
+"attack_power": {
+"base": 40.85,
+"per_level": 2.21
+},
+"attack_speed": {
+"base": 0.96,
+"per_level": 1.4
+},
+"health": {
+"base": 569.48,
+"per_level": 86.48
+},
+"health_regen": {
+"base": 1.7,
+"per_level": 0.2
+},
+"magical_prot": {
+"base": 27.38,
+"per_level": 1.38
+},
+"mana": {
+"base": 322.62,
+"per_level": 48.3
+},
+"mana_regen": {
+"base": 1.56,
+"per_level": 0.12
+},
+"move_speed": {
+"base": 370.0,
+"per_level": 0.0
+},
+"physical_prot": {
+"base": 17.48,
+"per_level": 2.76
+}
+},
+"damage_type": "magical",
+"last_verified": "2026-08-01",
+"name": "Scylla",
+"pantheon": "Greek",
+"release_date": "June 2, 2025",
+"role": "Mid",
+"source_url": "https://wiki.smite2.com/w/Scylla",
+"specializations": [
+"Nuker",
+"Burst Damage"
+],
+"type": "smite-god"
+},
 "Thanatos": {
 "abilities": [
 {
@@ -500,6 +1571,267 @@ null,
 "Slayer",
 "Execute",
 "Global"
+],
+"type": "smite-god"
+},
+"Ymir": {
+"abilities": [
+{
+"damage_type": "magical",
+"description": "Deal Magical Damage to an enemy in front of you",
+"detail_kinds": [
+null,
+"magical",
+"mechanic",
+"mechanic"
+],
+"details": [
+"If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+"Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+"Range: 1.92 meters",
+"Cone Angle: 120 degrees"
+],
+"name": "Ymir Basic Attack",
+"slot": "Basic Attack"
+},
+{
+"damage_type": "magical",
+"description": "Frostbitten enemies take more Attack damage from you, deal less damage to you , and have decreased Attack Speed 's effect stacks with Critical Strikes Your abilities apply when they damage or CC enemies",
+"detail_kinds": [
+"magical",
+null,
+"magical",
+"debuff",
+"debuff"
+],
+"details": [
+"Frostbitten enemies take more Attack damage from you, deal less damage to you, and have decreased Attack Speed",
+"Frostbite's effect stacks with Critical Strikes",
+"Damage Scaling: 175% Basic Attack Damage",
+"Reduced Damage Dealt: 15%",
+"Attack Speed Slow: 10%"
+],
+"name": "Frostbite",
+"slot": "Passive"
+},
+{
+"cooldown": [
+15.0,
+14.5,
+14.0,
+13.5,
+13.0
+],
+"cost": [
+50.0,
+55.0,
+60.0,
+65.0,
+70.0
+],
+"description": "Create a Wall that Knocks Back enemies on creation",
+"detail_kinds": [
+null,
+null,
+"stun",
+"stun",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Reactivate to destroy the Wall early",
+"The Wall impedes all characters",
+"Create the Wall at your feet to Displace yourself up and forward",
+"Displaces enemies up and away from the Wall",
+"Wall Duration: 2.5 | 3 | 3.5 | 4 | 4.5 seconds",
+"Range: 11.2 meters",
+"Radius: 3.25 meters",
+"Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+"Cost: 50 | 55 | 60 | 65 | 70 mana"
+],
+"name": "Ice Wall",
+"slot": "1st Ability"
+},
+{
+"cooldown": [
+8.0,
+7.5,
+7.0,
+6.5,
+6.0
+],
+"cost": [
+45.0,
+50.0,
+55.0,
+60.0,
+65.0
+],
+"damage_type": "magical",
+"description": "Smash your club into the ground, creating a field of ice that deals Magical Damage and Slows",
+"detail_kinds": [
+null,
+"slow",
+"magical",
+"magical",
+"slow",
+"slow",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"Damaging area starts at Ymir and moves away over time",
+"You are Slowed during activation",
+"Damage: 90 | 150 | 210 | 270 | 330",
+"Damage Scaling: 70% Intelligence + 45% Strength",
+"Slow: 25%",
+"Slow Duration: 2 seconds",
+"Self Slow: 42.5%",
+"Range: 6 meters",
+"Radius: 3.6 meters",
+"Cooldown: 8 | 7.5 | 7 | 6.5 | 6 seconds",
+"Cost: 45 | 50 | 55 | 60 | 65 mana"
+],
+"name": "Glacial Strike",
+"slot": "2nd Ability"
+},
+{
+"cooldown": [
+14.0
+],
+"cost": [
+40.0,
+50.0,
+60.0,
+70.0,
+80.0
+],
+"damage_type": "magical",
+"description": "Unleash your freezing breath, Stunning enemies in front of you and dealing Magical Damage",
+"detail_kinds": [
+"debuff",
+"magical",
+"magical",
+"stun",
+"stun",
+"mechanic",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"You are Rooted during activation",
+"Damage: 65 | 100 | 135 | 170 | 205",
+"Damage Scaling: 55% Intelligence",
+"Stun Duration: 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds",
+"Stun Duration Scaling: 0.2 seconds per 100 Item Protections, stacking up to 2 times",
+"Range: 5.6 meters",
+"Cone Angle: 90 degrees",
+"Cooldown: 14 seconds",
+"Cost: 40 | 50 | 60 | 70 | 80 mana"
+],
+"name": "Frost Breath",
+"slot": "3rd Ability"
+},
+{
+"cooldown": [
+70.0
+],
+"cost": [
+80.0,
+90.0,
+100.0,
+110.0,
+120.0
+],
+"damage_type": "magical",
+"description": "Freeze the air around you, Slowing enemies as you Channel. After 3 seconds, erupt with a burst of Magical Damage to all enemies in range",
+"detail_kinds": [
+null,
+"mechanic",
+null,
+null,
+"debuff",
+"magical",
+"magical",
+"slow",
+"mechanic",
+"mechanic",
+"mechanic"
+],
+"details": [
+"You may cancel this ability early, dealing less damage",
+"You are CC Immune while using this ability",
+"Damage scales linearly from 50% to 100% based on Channel time",
+"Max Channel time of 3 seconds",
+"You are Rooted while Channeling",
+"Damage: 550 | 750 | 950 | 1,150 | 1,350",
+"Damage Scaling: 160% Intelligence + 45% Protections",
+"Slow: 40%",
+"Radius: 5.6 meters",
+"Cooldown: 70 seconds",
+"Cost: 80 | 90 | 100 | 110 | 120 mana"
+],
+"name": "Shards of Ice",
+"slot": "Ultimate"
+}
+],
+"aspects": [],
+"base_stats": {
+"attack_power": {
+"base": 44.59,
+"per_level": 2.59
+},
+"attack_speed": {
+"base": 0.98,
+"per_level": 1.51
+},
+"health": {
+"base": 675.1,
+"per_level": 108.1
+},
+"health_regen": {
+"base": 1.84,
+"per_level": 0.22
+},
+"magical_prot": {
+"base": 29.7,
+"per_level": 1.62
+},
+"mana": {
+"base": 296.0,
+"per_level": 42.0
+},
+"mana_regen": {
+"base": 1.45,
+"per_level": 0.12
+},
+"move_speed": {
+"base": 370.0,
+"per_level": 0.0
+},
+"physical_prot": {
+"base": 20.52,
+"per_level": 3.24
+}
+},
+"damage_type": "magical",
+"last_verified": "2026-08-01",
+"name": "Ymir",
+"pantheon": "Norse",
+"release_date": "May 2, 2024",
+"role": "Support",
+"source_url": "https://wiki.smite2.com/w/Ymir",
+"specializations": [
+"Brawler",
+"Tank",
+"Lockdown"
 ],
 "type": "smite-god"
 }

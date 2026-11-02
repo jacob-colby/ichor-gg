@@ -609,9 +609,18 @@ def test_a_shipped_multiplier_flag_needs_a_reference_measured_on_the_live_items(
         assert stored[key] == pytest.approx(value, abs=0.01), key
 
 
-def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+def test_on_live_data_the_flat_clause_is_read_wherever_the_text_has_it():
     from smite import recommend, scoring
-    items = recommend.load_items()
+    text = re.compile(r"\+\s*\d+(?:\.\d+)?% of all Stats from Items", re.I)
+    for it in recommend.load_items():
+        if scoring.is_buildable(it):
+            has = bool(text.search(it.get("passive") or ""))
+            assert (passives.all_stats_multiplier(it) > 0) == has, it["name"]
+
+
+def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+    """Open Beta 40's set (frozen)."""
+    items = frozen.items()
     flat = sorted(it["name"] for it in items
                   if scoring.is_buildable(it) and passives.all_stats_multiplier(it) > 0)
     assert flat == ["Agility Greaves", "Shell of Rebuke",
