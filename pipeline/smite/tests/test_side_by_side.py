@@ -147,12 +147,31 @@ def test_burst_is_every_ability_once_then_one_swing():
 
 # ── On-hit and on-ability passives through the clock ─────────────────────
 
-def test_odysseus_fires_on_every_fourth_swing_off_the_attack_damage_stat():
+def test_odysseus_reads_attack_damage_as_the_swing_and_hits_the_target_three_times():
     items = {"Odysseus' Bow": item("Odysseus' Bow", {"Attack Damage": "20"})}
     s = sbs.Sim(toy_god(), ["Odysseus' Bow"], items, target())
     s.run_window()
-    # swings 4 and 8 of 10: 2 x (15 + 0.6 x 20)
-    assert s.by_item["Odysseus' Bow"] == pytest.approx(2 * 27.0)
+    # Swing = 81 attack power + 100% x 20 Attack Damage = 101. Swings 4 and 8
+    # of 10, each 3 chain hits on the lone target of 15 + 0.6 x 101.
+    assert s.by_item["Odysseus' Bow"] == pytest.approx(2 * 3 * (15 + 0.6 * 101))
+
+
+def test_frozen_odysseus_text_and_value_on_medusa():
+    """Frozen OB46 item text and Medusa: the proc is 15 + 60% of HER swing
+    (81.564 attack power, no other stat), never 15 + 60% of a 0 stat."""
+    items = frozen_items()
+    text = items["Odysseus' Bow"]["passive"]
+    assert "Every fourth Attack Hit" in text and "15 (+60% Attack Damage)" in text
+    assert "Can hit the same target more than once" in text
+    assert ps.ODYSSEUS_HITS_ON_TARGET == 3
+    god = json.loads((FROZEN / "gods.json").read_text(encoding="utf-8"))["Medusa"]
+    s = sbs.Sim(god, ["Odysseus' Bow"], items, target())
+    assert s.attack_power == pytest.approx(81.564)
+    assert s.attacks_per_second() == pytest.approx(1.8357, abs=1e-4)
+    s.run_window()
+    # 19 swings in 10s at 1.8357/s -> procs on swings 4, 8, 12, 16.
+    assert s.by_item["Odysseus' Bow"] == pytest.approx(4 * 3 * (15 + 0.6 * 81.564))
+    assert round(s.by_item["Odysseus' Bow"], 2) == 767.26
 
 
 def test_silverbranch_arrows_count_whole_attacks_per_second():
@@ -264,8 +283,28 @@ def test_community_six_replaces_components_from_the_record_never_from_us():
     six, subs = sbs.community_six(god, note, frozen_items())
     assert six == ["Devourer's Gauntlet", "Dagger of Frenzy", "Dominance", "Riptalon",
                    "Silverbranch Bow", "The Executioner"]
-    assert subs == [{"slot": 6, "dropped": "Manchu Bow", "used": "The Executioner",
-                     "note": "most-picked alternate in the record"}]
+    assert subs == [{"slot": 6, "dropped": "Manchu Bow", "class": "unfinished",
+                     "used": "The Executioner", "position": 6,
+                     "note": "most-picked finished alternate in the record"}]
+
+
+def test_one_cleanup_rule_drop_then_fill_appended():
+    """The side-by-side and `community_target` agree on what the community
+    CHOSE (the scored slots, in order); the fill comes after them and is
+    never a slot choice."""
+    from smite import community_target as ct
+    items = {n: item(n) for n in ("A", "B", "C", "D", "E", "F", "G")}
+    items["Comp"] = item("Comp", tier=2)
+    items["Relic"] = dict(item("Relic", tier=None), stats={})
+    slots = [{"name": "A"}, {"name": "Comp", "alternates": [{"name": "B", "pick_rate": 0.1},
+                                                            {"name": "F", "pick_rate": 0.3}]},
+             {"name": "C"}, {"name": "Relic"}, {"name": "D"}, {"name": "E",
+             "alternates": [{"name": "G", "pick_rate": 0.2}]}]
+    six, fills = ct.comparison_six(slots, items)
+    assert ct.target(slots, items) == ["A", "C", "D", "E"]
+    assert six == ["A", "C", "D", "E", "F", "G"]            # scored first, fills appended
+    assert [(f["dropped"], f["class"], f["used"], f["position"]) for f in fills] == [
+        ("Comp", "unfinished", "F", 5), ("Relic", "unscoreable", "G", 6)]
 
 
 def test_community_rates_prefer_the_slot_pick_over_an_alternate():
@@ -349,10 +388,13 @@ def test_a_minority_or_exactly_half_aspect_leaves_the_base_kit():
 
 
 def test_an_unsimulated_aspect_god_gets_no_verdict_and_no_count():
+    flat = lambda d, s: {k: (d, s) for k in sbs.BREAKPOINTS}
     rows = [{"role": "Mid", "damage_axis": 0.5, "survival_axis": 2.0,
-             "verdict": sbs.ASPECT_NOT_SIMULATED,
+             "verdict": sbs.ASPECT_NOT_SIMULATED, "coverage": {"ok": True},
+             "breakpoint_axes": flat(0.5, 2.0),
              "kit": {"aspect": "A", "pick_rate": 0.8, "kit": "A", "simulated": False}},
             {"role": "Mid", "damage_axis": 1.2, "survival_axis": 1.0, "verdict": "Ichor better",
+             "coverage": {"ok": True}, "breakpoint_axes": flat(1.2, 1.0),
              "kit": {"aspect": None, "pick_rate": None, "kit": "base", "simulated": True}}]
     assert sbs.verdict_counts(rows) == {"Mid": {"Ichor better": 1}}
     assert [r["kit"]["aspect"] for r in sbs.aspect_excluded(rows)] == ["A"]
@@ -361,3 +403,55 @@ def test_an_unsimulated_aspect_god_gets_no_verdict_and_no_count():
 def test_the_frozen_medusa_note_is_on_the_base_kit():
     note = json.loads((FROZEN / "medusa_conquest.json").read_text(encoding="utf-8"))
     assert sbs.kit_for(note)["kit"] == "base"
+
+
+# ── Fairness: coverage, the 2/4/6 rule, phase labels ─────────────────────
+
+def test_simulated_share_counts_only_fully_simulated_or_passiveless_gold():
+    items = {"Riptalon": item("Riptalon", cost=3000),             # simulated
+             "Plain": item("Plain", cost=1000),                   # no passive
+             "Jotunn's Revenge": item("Jotunn's Revenge", passive="x", cost=2000),   # not simulated
+             "Bancroft's Talon": item("Bancroft's Talon", passive="x", cost=2000)}   # partial
+    assert sbs.simulated_share(list(items), items) == pytest.approx(4000 / 8000)
+
+
+@pytest.mark.parametrize("ours,theirs,ok", [
+    (0.80, 0.70, True), (0.49, 0.49, False), (0.90, 0.75, False), (0.64, 0.50, True)])
+def test_coverage_check_threshold_and_gap(ours, theirs, ok):
+    assert sbs.coverage_check(ours, theirs)[0] is ok
+
+
+def test_the_coverage_gap_is_the_band_over_one_median_passive():
+    # One item is ~1/6 of a build's gold; the median simulated passive is
+    # worth 5.8% on the damage axis (module comment). The gap is the share
+    # at which that stand-in moves the axis by exactly the band.
+    assert sbs.COVERAGE_GAP == pytest.approx(sbs.BAND / (6 * 0.058), abs=0.005)
+
+
+def test_weighted_axes_are_the_weighted_geometric_mean():
+    bp = {2: (1.21, 1.0), 4: (1.0, 1.0), 6: (0.81, 1.0)}
+    d, s = sbs.weighted_axes(bp)
+    assert d == pytest.approx((1.21 * 0.81) ** (1 / 3))
+    assert s == pytest.approx(1.0)
+    assert sum(sbs.BREAKPOINT_WEIGHTS.values()) == pytest.approx(1.0)
+
+
+def _row(bp, cov_ok=True, simulated=True):
+    return {"kit": {"simulated": simulated}, "coverage": {"ok": cov_ok},
+            "breakpoint_axes": bp, "damage_axis": bp[6][0], "survival_axis": bp[6][1]}
+
+
+def test_ahead_early_behind_at_six_is_an_early_game_build_not_a_loss():
+    bp = {2: (1.19, 1.0), 4: (1.08, 1.0), 6: (0.69, 1.0)}     # Medusa's shape
+    assert sbs.judge_six_only(_row(bp)) == "community better"
+    assert sbs.judge(_row(bp)) == sbs.EARLY_GAME
+    late = {2: (0.85, 1.0), 4: (0.9, 1.0), 6: (1.2, 1.0)}
+    assert sbs.judge(_row(late)) == sbs.LATE_GAME
+
+
+def test_coverage_withholds_before_any_win_or_loss_and_aspect_comes_first():
+    bp = {2: (1.3, 1.0), 4: (1.3, 1.0), 6: (1.3, 1.0)}
+    assert sbs.judge(_row(bp)) == "Ichor better"
+    assert sbs.judge(_row(bp, cov_ok=False)) == sbs.NOT_ENOUGH_SIMULATED
+    assert sbs.judge(_row(bp, cov_ok=False), withhold=False) == "Ichor better"
+    assert sbs.judge(_row(bp, cov_ok=False, simulated=False)) == sbs.ASPECT_NOT_SIMULATED

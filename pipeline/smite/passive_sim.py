@@ -13,7 +13,7 @@ lines of arithmetic that do what that one item says, inside the clock
 THE RULE: NEVER INVENT A VALUE. Every number below is read off the item text
 quoted beside it (the wiki scrape in `data/Items`, Open Beta 46 as of
 2026-11-02). Where the text needs a reading it does not settle — "Attack
-Damage" as the stat or as the swing, "dealt 4 times" as four instances of the
+Damage" (SMITE 2's name for the swing, not a stat), "dealt 4 times" as four instances of the
 stated amount — the reading taken is written next to the code and is the
 LITERAL one. Where the effect depends on something this comparison does not
 contain (a kill, crowd control, an enemy's shield, movement, an active's
@@ -215,15 +215,35 @@ def _bragi(sim, ev):
     sim.proc(10.0 + 3.0 * sim.level, "magical", ev)
 
 
+#: Chain Lightning hits on THE target per proc. The wiki text says "Hits
+#: target and up to 4 nearby enemies ... Can hit the same target more than
+#: once"; Jacob's in-game reading (2026-11-02) is that one target takes at most
+#: 3 of them — the first hit plus 2 bounces back. The side-by-side is a
+#: single-target duel, so ONLY the hits on that target count, and with no other
+#: enemy in range every bounce that can return to it does: 3. A teamfight would
+#: spread bounces over up to 5 enemies and land fewer on any one; that is not
+#: this comparison. The lower bound (the bounces all go elsewhere) is 1.
+ODYSSEUS_HITS_ON_TARGET = 3
+
+
+def odysseus_hit(attack_damage):
+    """One Chain Lightning hit: `15 + 60% Attack Damage`, physical."""
+    return 15.0 + 0.60 * attack_damage
+
+
 def _odysseus(sim, ev):
     # "Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60%
-    # Attack Damage) Physical Damage Hits target and up to 4 nearby enemies".
-    # LITERAL READING: "Attack Damage" is the stat of that name (Silverbranch's
-    # text says "Basic Attack Damage" when it means the swing, so the two texts
-    # are read as meaning different things). One target, so one hit — "can hit
-    # the same target more than once" needs another enemy to bounce through.
+    # Attack Damage) Physical Damage Hits target and up to 4 nearby enemies
+    # Bounce Range: 4.8m Can hit the same target more than once".
+    # "Attack Damage" is SMITE 2's name for the basic attack's damage — the
+    # god's attack power plus its basic-attack scaling (100% Strength, 20%
+    # Intelligence, 100% of the Attack Damage stat) — NOT the stat alone. The
+    # 2026-11-02 comparison read it as the stat, which made the proc 15 + ~0
+    # on almost every build. `ev.raw` is exactly that swing (its place in the
+    # god's attack chain included, item multipliers such as Riptalon's not —
+    # those apply to the attack, not to what the item reads).
     if ev.attack_index % 4 == 3:
-        sim.proc(15.0 + 0.60 * sim.stats.get("Attack Damage", 0.0), "physical", ev)
+        sim.proc(ODYSSEUS_HITS_ON_TARGET * odysseus_hit(ev.raw), "physical", ev)
 
 
 def _silverbranch(sim, ev):
@@ -479,9 +499,9 @@ REGISTRY = {
                                     grants=_brawler_grants),
     "Nimble Ring": Passive(SIMULATED, "per 10 Intelligence: +1 Attack Damage, +1% Attack Speed",
                            ("whole tens of Intelligence",), converts=_nimble),
-    "Odysseus' Bow": Passive(SIMULATED, "every 4th attack: 15 + 60% Attack Damage (stat), physical",
-                             ("literal reading: the Attack Damage STAT, not the swing",
-                              "one target, so one chain hit"),
+    "Odysseus' Bow": Passive(SIMULATED, "every 4th attack: chain lightning, 3 hits on the target of 15 + 60% of the basic attack's damage, physical",
+                             ("Attack Damage = the basic attack's damage (attack power + Str/Int/Attack Damage scaling), not the stat",
+                              "single target: only hits on the target count — the first plus 2 bounces (3)"),
                              on_attack=_odysseus),
     "Polynomicon": Passive(SIMULATED, "after an ability, next attack +80% Int magical (2s cooldown)",
                            on_attack=_polynomicon_attack, on_ability=_polynomicon_ability),

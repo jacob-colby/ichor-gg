@@ -47,8 +47,8 @@ Plating, Dampening — is a separate median over that role. Percent-health
 passives (Soul Reaver, Qin's Blade, Heartseeker) need a real health split
 between base and items, which a bare "70 protection" target does not have.
 
-THE VERDICT RULE (`verdict`), written before the run and not tuned after it.
-Two axes, each a geometric mean of Ichor-over-community ratios:
+THE VERDICT RULE (`judge`). The original rule (`verdict`, 2026-11-02, written
+before the run): two axes, each a geometric mean of Ichor-over-community ratios:
   damage D   = sustained 10s and burst, each vs squishy and vs tank (4 ratios)
   survival S = effective health vs physical and vs magical (2 ratios)
 With band b = `BAND` (5%):
@@ -56,6 +56,20 @@ With band b = `BAND` (5%):
   community better  one axis below 1-b, the other not above 1+b
   trade-off         one axis above 1+b and the other below 1-b
   level             both inside the band
+THE FAIRNESS PASS (2026-11-02, after a review found the six-item reading
+unfair in two ways). `judge` applies, in order:
+  1. kit — an aspect the community mostly plays and `combat.py` cannot play
+     gives ASPECT_NOT_SIMULATED (below);
+  2. coverage — under `COVERAGE_MIN` of either build's gold fully simulated,
+     or a gap over `COVERAGE_GAP`, gives NOT_ENOUGH_SIMULATED (the evidence for
+     both numbers is beside them);
+  3. phase — ahead at 2+4 items and behind at six on the composite
+     sqrt(D x S), each outside the band, is EARLY_GAME (the reverse LATE_GAME);
+  4. otherwise `verdict` on D and S as the `BREAKPOINT_WEIGHTS`-weighted
+     geometric mean of the 2-, 4- and 6-item axes.
+`judge_six_only` is the old rule, kept so the page prints old against new.
+The stack assumption at 2 and 4 items (none) favours Ichor, because the
+community front-loads stacking items; the report brackets it with stacks full.
 THE KIT IS MATCHED FIRST (2026-11-02, Jacob). The community six is what
 players built on the kit they played. Where more than `ASPECT_MAJORITY` of
 this god's community games are on an aspect, that aspect is the fair kit for
@@ -83,7 +97,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from smite import (build_quality as bq, combat, damage_value, efficiency,
+from smite import (build_quality as bq, combat, community_target, damage_value, efficiency,
                    passive_sim, recommend, scoring)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -105,6 +119,46 @@ ASPECT_MAJORITY = 0.5
 SIMULATED_ASPECTS = frozenset()
 ASPECT_NOT_SIMULATED = "aspect not simulated"
 SQUISHY_ROLE, TANK_ROLE = "Mid", "Support"
+
+#: SIMULATION COVERAGE (2026-11-02). A passive the clock cannot run is worth
+#: ZERO here, so the build holding more of them looks worse for a reason that
+#: is not the build. `simulated_share` is the share of a build's gold in items
+#: whose passive is fully simulated or that have none; PARTIAL and NOT
+#: SIMULATED items count as missing. Whole-item gold is an upper bound on
+#: what is missing (an item's STATS always run), and it is used because no
+#: tighter split is measurable here: fitting stat prices on the items with no
+#: passive and reading a passive's price as cost minus its stats gives a
+#: NEGATIVE passive price on 7 of 10 tier-3 items (tier 3 carries more stat
+#: per gold than components), and the shipped residual fit absorbs the passive
+#: into the stats (Jotunn's Revenge's passive prices at 0g). Both were tried.
+#:
+#: The gap is DERIVED, not chosen: the median simulated passive in a compared
+#: build moves the damage axis by 5.8% (506 passives, 2026-11-02), more than
+#: the whole verdict band, so one item of coverage gap (~1/6 of a build's
+#: gold) can flip a verdict on its own. COVERAGE_GAP = BAND / (6 x 5.8%) is the
+#: gap at which the median stand-in moves the axis by exactly the band.
+#: COVERAGE_MIN is "most of each build's gold is simulated": below half, the
+#: verdict is more assumption than computation. Either test failing withholds
+#: the verdict as NOT_ENOUGH_SIMULATED; the numbers and the verdict the rule
+#: WOULD give (`verdict_unwithheld`) are still shown.
+COVERAGE_MIN = 0.50
+COVERAGE_GAP = 0.14
+NOT_ENOUGH_SIMULATED = "not enough simulated"
+
+#: EARLY GAME (2026-11-02). The verdict weighs the 2-, 4- and 6-item points
+#: equally: each axis is the weighted geometric mean of the per-point axes.
+#: Equal thirds because each power spike is held for roughly a third of a
+#: Conquest game, and the record argues AGAINST weighting the finished six
+#: up — the community's slot 6 is a half-built component on 61 of 90 gods,
+#: i.e. most games end before six items exist. Stacking passives are at zero
+#: on the 2- and 4-item points (`passive_sim`'s docstring).
+BREAKPOINT_WEIGHTS = {2: 1 / 3, 4: 1 / 3, 6: 1 / 3}
+#: A god whose early points (2 and 4 items, equal weight) and finished six
+#: point opposite ways on the composite sqrt(damage x survival), each outside
+#: the band, gets a PHASE verdict instead of win/lose. Named from Ichor's side:
+#: "early-game build" = Ichor's build is ahead early and behind at six.
+EARLY_GAME = "early-game build"
+LATE_GAME = "late-game build"
 
 # "Range: 8.8 meters" on the Basic Attack. The roster splits into 1.92/2.56
 # (44 gods) and 5.6/6.4/8.8 (46), so any threshold in the gap gives the same
@@ -136,6 +190,18 @@ def printed_totals(names, items_by_name):
         return bq.build_totals(names, items_by_name)
     finally:
         efficiency.restore_pricing_flags(before)
+
+
+def simulated_share(names, items_by_name):
+    """Share of the build's gold in items the clock models fully (see
+    `COVERAGE_MIN`)."""
+    total = ok = 0.0
+    for n in names:
+        gold = float(items_by_name[n].get("cost") or 0.0)
+        total += gold
+        if passive_sim.lookup(items_by_name[n]).status in (passive_sim.SIMULATED, passive_sim.NO_PASSIVE):
+            ok += gold
+    return ok / total if total else 1.0
 
 
 def passives_for(names, items_by_name, disabled=()):
@@ -418,11 +484,17 @@ def profile(god, names, items_by_name, targets):
         pv = passive_sim.lookup(items_by_name[n])
         passives.append({"item": n, "status": pv.status, "summary": pv.summary,
                          "assumptions": list(pv.assumptions)})
-    breakpoints = {}
+    breakpoints, full_stacks = {}, {}
     for k in BREAKPOINTS:
         stacks = "full" if k == 6 else "none"
         pw = full if k == 6 else power(god, names[:k], items_by_name, targets, stacks=stacks)
         breakpoints[k] = {m: pw[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
+        # The other end of the stack assumption, for the bracket only: the
+        # community front-loads stacking items (50 in its first four slots
+        # against Ichor's 4 on 2026-11-02), so "none" at 2 and 4 items favours
+        # Ichor there, and "full" favours the community.
+        pf = full if k == 6 else power(god, names[:k], items_by_name, targets, stacks="full")
+        full_stacks[k] = {m: pf[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
     return {
         "items": names, "gold": s.gold, **full,
         "cooldowns": cds,
@@ -432,7 +504,8 @@ def profile(god, names, items_by_name, targets):
         "crit_chance": p, "crit_multiplier": s.crit_mult,
         "crit_ev": 1.0 + p * (s.crit_mult - 1.0),
         "attacks_per_second": s.attacks_per_second(),
-        "breakpoints": breakpoints, "passives": passives,
+        "breakpoints": breakpoints, "breakpoints_full_stacks": full_stacks, "passives": passives,
+        "simulated_share": simulated_share(names, items_by_name),
         "dropped_abilities": s.dropped,
     }
 
@@ -456,11 +529,12 @@ SURVIVAL_KEYS = ["ehp_physical", "ehp_magical"]
 # ── Which builds ──────────────────────────────────────────────────────────
 
 def community_six(god, build_note, items_by_name):
-    """The community's six, CLEANED: each slot's item if it can take a core
-    slot for this god (`scoring.is_buildable` — a tier 3, a paid relic with
-    stats, or the god's own item), else that slot's first alternate that can
-    and is not already taken. Returns `(names, substitutions)`; fewer than six
-    means the record cannot make a build and the god is skipped, named.
+    """The community's six, CLEANED by the one rule `community_target` owns:
+    its `scored` slots in bought order, then the community's next finished
+    picks appended to reach six (`community_target.comparison_six`, whose
+    docstring says why drop-then-fill and not swap-in-place). Returns
+    `(names, substitutions)`; fewer than six means the record cannot make a
+    build and the god is skipped, named.
 
     80 of 90 raw community slot lists contain a tier-2 component (Evil Eye,
     Skeggox, Sage's Ring...), a statless relic (Blinking Abyss) or a
@@ -470,36 +544,7 @@ def community_six(god, build_note, items_by_name):
     entry = next((b for b in build_note.get("builds") or [] if b.get("source") == "community"), None)
     if not entry:
         return [], []
-    ok = lambda n: n in items_by_name and scoring.is_buildable(items_by_name[n], god)
-    names, subs = [], []
-    for slot in entry.get("slot_order") or []:
-        name = slot.get("name") if isinstance(slot, dict) else slot
-        if ok(name) and name not in names:
-            names.append(name)
-            continue
-        alt = next((a["name"] for a in (slot.get("alternates") or [])
-                    if ok(a.get("name")) and a["name"] not in names), None) if isinstance(slot, dict) else None
-        if alt:
-            names.append(alt)
-            subs.append({"slot": len(names), "dropped": name, "used": alt})
-        else:
-            subs.append({"slot": None, "dropped": name, "used": None})
-    # A slot with no usable alternate (Medusa's sixth: Manchu Bow, whose
-    # alternates are Silverbranch Bow, already taken, and Hunter's Bow, a
-    # component) is filled with the most-picked usable alternate anywhere in
-    # the record — the community's own next choice, never ours.
-    pool = sorted(((a.get("pick_rate") or 0.0, a.get("name"))
-                   for slot in entry.get("slot_order") or [] if isinstance(slot, dict)
-                   for a in slot.get("alternates") or []), key=lambda x: -x[0])
-    for _, alt in pool:
-        if len(names) >= 6:
-            break
-        if ok(alt) and alt not in names:
-            names.append(alt)
-            gap = next((s for s in subs if s["used"] is None), None)
-            if gap:
-                gap.update(slot=len(names), used=alt, note="most-picked alternate in the record")
-    return names[:6], subs
+    return community_target.comparison_six(entry.get("slot_order"), items_by_name, god)
 
 
 def community_rates(build_note, name):
@@ -631,6 +676,61 @@ def verdict(d, s, band=BAND):
     return "level"
 
 
+def breakpoint_axes(ours, theirs, key="breakpoints"):
+    """`{k: (damage, survival)}` at each breakpoint."""
+    return {k: axes(ours[key][k], theirs[key][k]) for k in BREAKPOINTS}
+
+
+def weighted_axes(bp, weights=None):
+    """The weighted geometric mean of the per-point axes."""
+    weights = weights or BREAKPOINT_WEIGHTS
+    w = sum(weights.values())
+    return tuple(math.exp(sum(weights[k] * math.log(bp[k][i]) for k in weights) / w)
+                 for i in (0, 1))
+
+
+def phase(bp, band=BAND):
+    """EARLY_GAME / LATE_GAME / None from the composite at 2+4 vs at 6."""
+    comp = lambda d, s: math.sqrt(d * s)
+    early = math.sqrt(comp(*bp[2]) * comp(*bp[4]))
+    late = comp(*bp[6])
+    if early > 1 + band and late < 1 - band:
+        return EARLY_GAME
+    if early < 1 - band and late > 1 + band:
+        return LATE_GAME
+    return None
+
+
+def coverage_check(ours_share, theirs_share):
+    """`(ok, reason)` under COVERAGE_MIN and COVERAGE_GAP."""
+    low = min(ours_share, theirs_share)
+    gap = abs(ours_share - theirs_share)
+    if low < COVERAGE_MIN:
+        return False, f"{low:.0%} of one build's gold is simulated (minimum {COVERAGE_MIN:.0%})"
+    if gap > COVERAGE_GAP:
+        return False, f"coverage differs by {gap:.0%} (maximum {COVERAGE_GAP:.0%})"
+    return True, None
+
+
+def judge(r, band=BAND, withhold=True, key="breakpoint_axes"):
+    """The full rule on one comparison row: kit, then coverage, then the
+    phase label, then the weighted 2/4/6 verdict. `key` picks the stack
+    assumption at 2 and 4 items (the bracket reads the full-stack end)."""
+    if not r["kit"]["simulated"]:
+        return ASPECT_NOT_SIMULATED
+    if withhold and not r["coverage"]["ok"]:
+        return NOT_ENOUGH_SIMULATED
+    bp = {int(k): v for k, v in r[key].items()}
+    return phase(bp, band) or verdict(*weighted_axes(bp), band)
+
+
+def judge_six_only(r, band=BAND):
+    """The 2026-11-02 rule before this session: the finished six alone."""
+    if not r["kit"]["simulated"]:
+        return ASPECT_NOT_SIMULATED
+    return verdict(r["damage_axis"], r["survival_axis"], band)
+
+
 def kit_for(build_note):
     """Which kit the comparison is on, from the community entry's own aspect
     pick rate: `{kit, aspect, pick_rate, win_rate, simulated}`. `kit` is
@@ -657,6 +757,8 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
     p_ours = profile(god, ours, items_by_name, targets)
     p_theirs = profile(god, community, items_by_name, targets)
     d, s = axes(p_ours, p_theirs)
+    bp = breakpoint_axes(p_ours, p_theirs)
+    ok, why = coverage_check(p_ours["simulated_share"], p_theirs["simulated_share"])
     rows = model_rows or {}
 
     diffs = []
@@ -680,15 +782,23 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
                 entry["best_swap"] = best_swap(god, ours, name, ours_only, items_by_name, targets,
                                                p_ours)
             diffs.append(entry)
-    return {
+    out = {
         "god": god["name"], "role": bq.primary_role(god), "damage_type": god.get("damage_type"),
         "melee": is_melee(god), "level": LEVEL, "window": WINDOW,
         "ichor": p_ours, "community": p_theirs, "community_substitutions": subs,
         "shared": [n for n in ours if n in community],
         "damage_axis": d, "survival_axis": s, "kit": kit,
-        "verdict": verdict(d, s) if kit["simulated"] else ASPECT_NOT_SIMULATED,
+        "breakpoint_axes": bp, "weighted_axes": weighted_axes(bp),
+        "breakpoint_axes_full_stacks": breakpoint_axes(p_ours, p_theirs, "breakpoints_full_stacks"),
+        "coverage": {"ichor": p_ours["simulated_share"], "community": p_theirs["simulated_share"],
+                     "gap": abs(p_ours["simulated_share"] - p_theirs["simulated_share"]),
+                     "ok": ok, "reason": why},
         "diffs": diffs,
-    }, None
+    }
+    out["verdict"] = judge(out)
+    out["verdict_unwithheld"] = judge(out, withhold=False)
+    out["verdict_six_only"] = judge_six_only(out)
+    return out, None
 
 
 def best_swap(god, ours, incoming, candidates, items_by_name, targets, base):
@@ -737,11 +847,16 @@ def aspect_excluded(rows):
                   key=lambda r: -(r["kit"]["pick_rate"] or 0))
 
 
-def verdict_counts(rows, band=BAND):
-    """Per role, over `judged` rows only."""
+VERDICT_ORDER = ("Ichor better", "community better", "trade-off", "level",
+                 EARLY_GAME, LATE_GAME, NOT_ENOUGH_SIMULATED)
+
+
+def verdict_counts(rows, band=BAND, rule=None):
+    """Per role, over `judged` rows only, under `rule` (default `judge`)."""
+    rule = rule or judge
     out = {}
     for r in judged(rows):
-        v = verdict(r["damage_axis"], r["survival_axis"], band)
+        v = rule(r, band)
         out.setdefault(r["role"], {}).setdefault(v, 0)
         out[r["role"]][v] += 1
     return out
@@ -781,7 +896,15 @@ def god_lines(r):
     i, c = r["ichor"], r["community"]
     L = [f"## {r['god']} ({r['role']}, {r['damage_type']}, {'melee' if r['melee'] else 'ranged'})",
          "",
-         f"**Verdict: {r['verdict']}** — damage {_pct(r['damage_axis'])}, survival {_pct(r['survival_axis'])}",
+         f"**Verdict: {r['verdict']}**"
+         + (f" (the rule would say {r['verdict_unwithheld']}: {r['coverage']['reason']})"
+            if r["verdict"] == NOT_ENOUGH_SIMULATED else "")
+         + f" — weighted 2/4/6: damage {_pct(r['weighted_axes'][0])}, survival {_pct(r['weighted_axes'][1])}; "
+         f"six items: damage {_pct(r['damage_axis'])}, survival {_pct(r['survival_axis'])} "
+         f"(six-item rule: {r['verdict_six_only']})",
+         "",
+         f"Simulated: {r['coverage']['ichor']:.0%} of Ichor's gold, {r['coverage']['community']:.0%} "
+         "of the community's",
          "",
          f"Kit: {kit_line(r['kit'])}",
          "",
@@ -789,9 +912,9 @@ def god_lines(r):
          f"- Community ({c['gold']:.0f}g): {' · '.join(c['items'])}",
          ]
     for s in r["community_substitutions"]:
-        L.append(f"  - cleaned: slot item {s['dropped']} → "
-                 + (f"{s['used']} ({s.get('note', 'that slot’s alternate')})" if s["used"]
-                    else "no usable alternate"))
+        L.append(f"  - cleaned: slot {s['slot']} {s['dropped']} ({s['class']}) dropped"
+                 + (f"; filled at position {s['position']} with {s['used']} ({s['note']})"
+                    if s["used"] else ""))
     L += ["", "| | Ichor | Community | Δ |", "|---|---|---|---|",
           f"| gold | {i['gold']:.0f} | {c['gold']:.0f} | {i['gold'] - c['gold']:+.0f} |"]
     for key, label in (("burst_squishy", "burst vs squishy"), ("burst_tank", "burst vs tank"),
@@ -810,6 +933,9 @@ def god_lines(r):
                  f"| {b['sustained_squishy']:.0f} / {b['ehp_physical']:.0f} "
                  f"| {_pct(ratio(a['sustained_squishy'], b['sustained_squishy']))} / "
                  f"{_pct(ratio(a['ehp_physical'], b['ehp_physical']))} |")
+    for k in BREAKPOINTS:
+        dk, sk = r["breakpoint_axes"][k]
+        L.append(f"| {k} items: damage / survival axis | | | {_pct(dk)} / {_pct(sk)} |")
     L.append("")
     for d in r["diffs"]:
         cr = d["community"]
@@ -838,6 +964,43 @@ def god_lines(r):
     return L
 
 
+def totals(counts):
+    out = {}
+    for per_role in counts.values():
+        for v, n in per_role.items():
+            out[v] = out.get(v, 0) + n
+    return out
+
+
+def count_table(counts):
+    L = ["| role | " + " | ".join(VERDICT_ORDER) + " |", "|---" * (len(VERDICT_ORDER) + 1) + "|"]
+    tot = totals(counts)
+    for role in sorted(counts):
+        L.append(f"| {role} | " + " | ".join(str(counts[role].get(v, 0)) for v in VERDICT_ORDER) + " |")
+    L.append("| **all** | " + " | ".join(f"**{tot.get(v, 0)}**" for v in VERDICT_ORDER) + " |")
+    return L
+
+
+def community_wins(rows, withheld=False):
+    """Community-better gods, worst for Ichor first (weighted axes). With
+    `withheld`, the ones the coverage rule withholds instead."""
+    pick = [r for r in judged(rows)
+            if (r["verdict"] == NOT_ENOUGH_SIMULATED and r["verdict_unwithheld"] == "community better")
+            == withheld and (withheld or r["verdict"] == "community better")]
+    return sorted(pick, key=lambda r: r["weighted_axes"][0] * r["weighted_axes"][1])
+
+
+def top_swap(r):
+    """The community-only item that, swapped into Ichor's six, lifts Ichor's
+    damage axis most: `{item, replaces, damage_axis, survival_axis}`."""
+    best = None
+    for d in r["diffs"]:
+        bs = d.get("best_swap")
+        if bs and (best is None or bs["damage_axis"] > best["damage_axis"]):
+            best = dict(bs, item=d["item"])
+    return best
+
+
 def report_lines(rows, skipped, targets, data_patch):
     L = ["# Ichor vs community, passives simulated", "",
          f"Data: {data_patch}. Level {LEVEL}, {WINDOW:.0f}s window. Ichor = the `model` build "
@@ -850,23 +1013,43 @@ def report_lines(rows, skipped, targets, data_patch):
         L.append(f"| {k} | {t['role']} | {t['n']} | {t['base_health']:.0f} | {t['item_health']:.0f} "
                  f"| {t['physical_prot']:.0f} | {t['magical_prot']:.0f} | {t['plating']:.0f} | {t['dampening']:.0f} |")
     L += ["", "## Verdicts by role", "",
-          f"Rule: band ±{BAND:.0%} on damage and survival axes (see the module docstring).", "",
-          "| role | Ichor better | community better | trade-off | level |", "|---|---|---|---|---|"]
-    counts = verdict_counts(rows)
-    order = ("Ichor better", "community better", "trade-off", "level")
-    tot = {v: 0 for v in order}
-    for role in sorted(counts):
-        L.append(f"| {role} | " + " | ".join(str(counts[role].get(v, 0)) for v in order) + " |")
-        for v in order:
-            tot[v] += counts[role].get(v, 0)
-    L.append("| **all** | " + " | ".join(f"**{tot[v]}**" for v in order) + " |")
-    L += ["", "Band sensitivity (all roles):", ""]
+          f"Rule (module docstring): band ±{BAND:.0%}; the 2-, 4- and 6-item points weighted "
+          + " / ".join(f"{w:.2f}" for w in BREAKPOINT_WEIGHTS.values())
+          + "; a god ahead early and behind at six (or the reverse) is a phase verdict; withheld as "
+          f"\"{NOT_ENOUGH_SIMULATED}\" when either build has under {COVERAGE_MIN:.0%} of its gold "
+          f"simulated or the two differ by more than {COVERAGE_GAP:.0%}.", ""]
+    L += count_table(verdict_counts(rows))
+    L += ["", f"Old rule against new, all roles ({len(judged(rows))} gods with a kit match). "
+          "The bracket column re-runs the 2/4/6 rule with stacking passives FULL at 2 and 4 items "
+          "instead of empty — the other end of the stack assumption:", "",
+          "| verdict | six items only (old) | 2/4/6 weighted, not withheld | same, full stacks early (bracket) "
+          "| 2/4/6 weighted + coverage (new) |",
+          "|---|---|---|---|---|"]
+    old = totals(verdict_counts(rows, rule=judge_six_only))
+    mid = totals(verdict_counts(rows, rule=lambda r, b: judge(r, b, withhold=False)))
+    brk = totals(verdict_counts(rows, rule=lambda r, b: judge(r, b, withhold=False,
+                                                              key="breakpoint_axes_full_stacks")))
+    new = totals(verdict_counts(rows))
+    for v in VERDICT_ORDER:
+        L.append(f"| {v} | {old.get(v, 0)} | {mid.get(v, 0)} | {brk.get(v, 0)} | {new.get(v, 0)} |")
+    moved = [r for r in judged(rows) if r["verdict"] != r["verdict_six_only"]]
+    L.append(f"\n{len(moved)} verdicts differ from the six-item rule; "
+             f"{sum(1 for r in judged(rows) if r['verdict'] == NOT_ENOUGH_SIMULATED)} are withheld for coverage.")
+    L += ["", "Band sensitivity (all roles, new rule):", ""]
     for b in SENSITIVITY_BANDS:
-        c = {}
-        for r in judged(rows):
-            v = verdict(r["damage_axis"], r["survival_axis"], b)
-            c[v] = c.get(v, 0) + 1
-        L.append(f"- ±{b:.0%}: " + ", ".join(f"{v} {c.get(v, 0)}" for v in order))
+        c = totals(verdict_counts(rows, b))
+        L.append(f"- ±{b:.0%}: " + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER))
+    phased = [r for r in judged(rows) if r["verdict_unwithheld"] in (EARLY_GAME, LATE_GAME)]
+    if phased:
+        L += ["", "## Early- and late-game builds", "",
+              "Ichor's build ahead at 2 and 4 items and behind at six is an early-game build; the "
+              "reverse is a late-game build (composite √(damage × survival), Ichor over community):", ""]
+        for r in sorted(phased, key=lambda r: r["god"]):
+            bp = r["breakpoint_axes"]
+            L.append(f"- {r['god']} ({r['role']}): **{r['verdict_unwithheld']}**"
+                     + (" (withheld for coverage)" if r["verdict"] == NOT_ENOUGH_SIMULATED else "")
+                     + " — " + ", ".join(f"{k} items {_pct(math.sqrt(bp[k][0] * bp[k][1]))}"
+                                         for k in BREAKPOINTS))
     excluded = aspect_excluded(rows)
     L += ["", f"## Aspect not simulated ({len(excluded)} gods, no verdict, not counted)", "",
           f"The community plays an aspect in more than {ASPECT_MAJORITY:.0%} of these gods' games "
@@ -877,10 +1060,23 @@ def report_lines(rows, skipped, targets, data_patch):
         L.append(f"- {r['god']} ({r['role']}): {k['aspect']}, {k['pick_rate']:.0%} of games"
                  + (f", {k['win_rate']:.0%} win" if k.get("win_rate") is not None else ""))
     L += ["", "## Where the community wins", ""]
-    losses = sorted((r for r in rows if r["verdict"] == "community better"),
-                    key=lambda r: r["damage_axis"] * r["survival_axis"])
-    for r in losses:
-        L.append(f"- {r['god']} ({r['role']}): damage {_pct(r['damage_axis'])}, survival {_pct(r['survival_axis'])}")
+    for r in community_wins(rows):
+        d, sv = r["weighted_axes"]
+        swap = top_swap(r)
+        L.append(f"- {r['god']} ({r['role']}): weighted damage {_pct(d)}, survival {_pct(sv)}"
+                 + (f"; most recovered by {swap['item']} for {swap['replaces']} "
+                    f"(damage {_pct(swap['damage_axis'])})" if swap else ""))
+    withheld = community_wins(rows, withheld=True)
+    if withheld:
+        L += ["", "Would be community better, withheld for coverage:", ""]
+        for r in withheld:
+            d, sv = r["weighted_axes"]
+            c = r["coverage"]
+            swap = top_swap(r)
+            L.append(f"- {r['god']} ({r['role']}): weighted damage {_pct(d)}, survival {_pct(sv)}; "
+                     f"simulated {c['ichor']:.0%} Ichor / {c['community']:.0%} community"
+                     + (f"; most recovered by {swap['item']} for {swap['replaces']} "
+                        f"(damage {_pct(swap['damage_axis'])})" if swap else ""))
     L += ["", "## Not simulated (items in compared builds)", "",
           "| item | status | builds | why |", "|---|---|---|---|"]
     for name, e in not_simulated(rows).items():
@@ -920,7 +1116,10 @@ def viewer_god(r):
         return out
     return {"god": r["god"], "role": r["role"], "melee": r["melee"], "kit": r["kit"],
             "damage_axis": r["damage_axis"], "survival_axis": r["survival_axis"],
-            "verdict": r["verdict"], "shared": r["shared"],
+            "verdict": r["verdict"], "verdict_unwithheld": r["verdict_unwithheld"],
+            "verdict_six_only": r["verdict_six_only"], "coverage": r["coverage"],
+            "weighted_axes": r["weighted_axes"], "breakpoint_axes": r["breakpoint_axes"],
+            "shared": r["shared"],
             "substitutions": r["community_substitutions"],
             "ichor": side(r["ichor"]), "community": side(r["community"]),
             "diffs": r["diffs"]}
@@ -937,6 +1136,9 @@ def write_viewer_files(out_dir, rows, skipped, targets, patch):
         (out_dir / f"{slug(r['god'])}.json").write_text(dump(viewer_god(r)), encoding="utf-8")
     (out_dir / "_meta.json").write_text(dump({
         "data": patch, "level": LEVEL, "window": WINDOW, "band": BAND,
+        "breakpoint_weights": BREAKPOINT_WEIGHTS, "coverage_min": COVERAGE_MIN,
+        "coverage_gap": COVERAGE_GAP,
+        "verdict_counts_six_only": verdict_counts(rows, rule=judge_six_only),
         "targets": targets, "skipped": skipped, "verdict_counts": verdict_counts(rows),
         "aspect_majority": ASPECT_MAJORITY,
         "aspect_not_simulated": [r["god"] for r in aspect_excluded(rows)],

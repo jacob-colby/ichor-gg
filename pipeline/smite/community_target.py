@@ -23,6 +23,30 @@ Everything else is `scored`: a buildable item for this god, the thing the
 comparison is actually about. A paid relic WITH stats (Shell of Rebuke) is
 scored, because Ichor scores it.
 
+ONE RULE FOR EVERY COMPARISON (2026-11-02). Until then the side-by-side
+(`side_by_side.community_six`, PR #71) swapped a component IN PLACE for the
+slot's next finished pick while this module (PR #73) dropped it, so the two
+instruments disagreed on what the community built. The rule is now this
+module's, everywhere: a slot is a community CHOICE only if it is `scored`;
+`unfinished` and `unscoreable` slots are dropped from the target, and an
+unscoreable slot stays listed in its own class. An instrument that needs a
+FULL build to run (a power comparison cannot price five items against six)
+then tops the scored slots up with `comparison_six`: the community's next
+finished picks, appended AFTER the scored slots and labelled as fill, never
+counted as a slot choice. Why drop-then-fill rather than swap-in-place:
+
+  * a fill is not what that slot held, so it must not be an agreement
+    target — the agreement metric, `validate` and the viewer's ledger
+    (`ledger.ts communitySlotClass`) all already drop, and only drop-then-fill
+    leaves them untouched;
+  * appending keeps the scored slots in the order players bought them, which
+    the 2- and 4-item breakpoints read. Components sit in slots 5-6 on 72 of
+    90 sightings, so the fill lands where the half-built item was in almost
+    every case anyway;
+  * a fill favours the community (a simulated finished item where the record
+    holds a half-built one or a statless relic), so it can only make Ichor
+    look worse — the safe direction for a fairness check.
+
 THIS IS A COMPARISON LENS, NEVER A MODEL INPUT. `scoring`, `assemble`,
 `recommend` and `build_index`'s recommendation fields do not import it — the
 community slots keep feeding win and pick exactly as before, so nothing the
@@ -79,6 +103,45 @@ def split(slots, items_by_name, god=None) -> dict:
 def target(slots, items_by_name, god=None) -> list:
     """The names a comparison should score against: the `scored` class."""
     return split(slots, items_by_name, god)[SCORED]
+
+
+def comparison_six(slots, items_by_name, god=None, n=6):
+    """`(names, fills)`: the scored slots in bought order, then — only to
+    reach `n` — the community's next finished picks, appended.
+
+    A fill for a dropped slot is that slot's most-picked `scored` alternate
+    not already taken; if it has none, the most-picked scored alternate
+    anywhere in the record. Each dropped slot gives one `fills` entry
+    `{slot, dropped, class, used, position, note}`; `used` is None when the
+    record has nothing left. Fewer than `n` names means the record cannot make
+    a build."""
+    ok = lambda name: slot_class(items_by_name.get(name), god) == SCORED
+    names, dropped = [], []
+    for i, s in enumerate(slots or [], start=1):
+        name = _name(s)
+        if ok(name) and name not in names:
+            names.append(name)
+        else:
+            cls = slot_class(items_by_name.get(name), god)
+            dropped.append((i, s, "duplicate" if cls == SCORED else cls))
+    rate = lambda a: -(a.get("pick_rate") or 0.0)
+    pool = sorted((a for s in slots or [] if isinstance(s, dict)
+                   for a in s.get("alternates") or []), key=rate)
+    fills = []
+    for i, s, cls in dropped:
+        fill = {"slot": i, "dropped": _name(s), "class": cls, "used": None, "position": None}
+        if len(names) < n:
+            alts = sorted(s.get("alternates") or [], key=rate) if isinstance(s, dict) else []
+            pick = next((a["name"] for a in alts if ok(a.get("name")) and a["name"] not in names), None)
+            note = "that slot's most-picked finished alternate"
+            if pick is None:
+                pick = next((a["name"] for a in pool if ok(a.get("name")) and a["name"] not in names), None)
+                note = "most-picked finished alternate in the record"
+            if pick:
+                names.append(pick)
+                fill.update(used=pick, position=len(names), note=note)
+        fills.append(fill)
+    return names[:n], fills
 
 
 def agreement(ours, slots, items_by_name, god=None) -> dict:
