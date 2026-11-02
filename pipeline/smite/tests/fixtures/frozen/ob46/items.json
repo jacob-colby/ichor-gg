@@ -1,0 +1,4385 @@
+[
+ {
+  "type": "smite-item",
+  "name": "Adamantine Sickle",
+  "tier": 2,
+  "cost": 1200,
+  "stats": {
+   "Strength": "10",
+   "Lifesteal": "4%"
+  },
+  "passive": "While Below 50% Health: +10 Strength.",
+  "builds_from": [
+   "Axe",
+   "Scythe"
+  ],
+  "builds_into": [
+   "Bloodforge",
+   "Devourer's Gauntlet",
+   "Sanguine Lash",
+   "The Reaper"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Adamantine_Sickle",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Adroit Ring",
+  "tier": 2,
+  "cost": 650,
+  "stats": {
+   "Cooldown Rate": "10"
+  },
+  "passive": null,
+  "builds_from": [
+   "Ring"
+  ],
+  "builds_into": [
+   "Arondight",
+   "Chandra's Grace",
+   "Chronos' Pendant",
+   "Circe's Hexstone",
+   "Damaru",
+   "Eye of Erebus",
+   "Gem of Focus",
+   "Glorious Pridwen",
+   "Heartwood Charm",
+   "Hydra's Lament",
+   "Shield of the Phoenix",
+   "Totem of Death"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Adroit_Ring",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Agility Greaves",
+  "tier": "Relic",
+  "cost": 2500,
+  "stats": {
+   "Movement Speed": "5"
+  },
+  "passive": "+7.5% of all Stats from Items. Ranged Gods: +40% Attack projectile speed. Melee Gods: -15% Attack movement penalty. On Use: Dash in the direction you are currently moving Ranged Gods: +80% Attack projectile speed for 3s after using this active. Melee Gods: -30% Attack movement penalty for 3s after using this active. Cooldown: 20s",
+  "builds_from": [
+   "Agility Relic",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Agility_Greaves",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Alchemist Coat",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Intelligence": "40",
+   "Dampening": "15",
+   "Max Health": "250",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Use a Consumable: Gain 10 Dampening for 8s. Open inventory slot: Gain a Multi Potion once every 45s",
+  "builds_from": [
+   "Soul Reliquary",
+   "Runic Hide"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Alchemist_Coat",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Amanita Charm",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Physical Protection": "25",
+   "Magical Protection": "25",
+   "Max Health": "300",
+   "Health Regen": "4"
+  },
+  "passive": "On Use: Create a Healing Mushroom (6.4m radius) for 4.5s. +3% Health Heal every 1.5s +1 Stack of Damage Reduction per Heal 10% Attack and Ability Damage Reduction per Stack 5% Ultimate Damage Reduction per Stack All Stacks removed after triggering Cooldown: 60s You can own up to 3 active items at once",
+  "builds_from": [
+   "Engraved Guard",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Amanita_Charm",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ancient Signet",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Intelligence": "90",
+   "Max Mana": "250"
+  },
+  "passive": "Ability Hit: +20 (+12 per Level) bonus Magical Damage Kill or Assist a Minion: -2s Cooldown Cooldown: 15s",
+  "builds_from": [
+   "Oracle Staff",
+   "Soul Reliquary"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Ancient_Signet",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ancile",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Magical Protection": "55",
+   "Max Health": "300"
+  },
+  "passive": "On Use: Your next Ability that damages a god Silences them for 1.5s Cooldown: 70s You can own up to 3 active items at once",
+  "builds_from": [
+   "Circle of Protection",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Ancile",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Archmage's Gem",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Max Mana": "150",
+   "Mana Regen": "4"
+  },
+  "passive": "Adaptive Stat: +60 Strength or +90 Intelligence (based on highest item stat). Ability Hit a God: Deal bonus Magical Damage. Damage = 40% of your Intelligence & 50% of your Strength Cooldown: 20s Requires Level 20.",
+  "builds_from": [
+   "Conduit Gem"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Archmage's_Gem",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Arondight",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Strength": "55",
+   "Cooldown Rate": "15"
+  },
+  "passive": "On Use: Reveal enemy Gods within 17.6m for 6s. Reveal persists through Stealth If any God is revealed, +25% Movement Speed for 6s First time you damage a revealed God: +50 (+50% Strength) Physical Damage Cooldown: 60s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Arondight",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ashwhorl Acorn",
+  "tier": "God Specific",
+  "cost": 2000,
+  "stats": {
+   "Strength": "45",
+   "Attack Speed": "15%",
+   "Max Health": "400",
+   "Tenacity": "15"
+  },
+  "passive": "Non-Aspect: Flurry fires out multiple Acorn projectiles that return back at max range, dealing Physical Damage. Each enemy god hit provides Attack Speed Aspect: Flurry has 2 charges, hitting enemy gods Heals and provides Physical Protections",
+  "builds_from": [
+   "Lively Acorn"
+  ],
+  "builds_into": [],
+  "god": "Ratatoskr",
+  "source_url": "https://wiki.smite2.com/w/Ashwhorl_Acorn",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Avatar's Parashu",
+  "tier": 3,
+  "cost": 3700,
+  "stats": {
+   "Strength": "90",
+   "Penetration": "10%"
+  },
+  "passive": "On Use: +25% Strength and Immune to Displacement for 10s. Cooldown: 120s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Skeggox"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Avatar's_Parashu",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Avenging Blade",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Strength": "60",
+   "Max Health": "200"
+  },
+  "passive": "Attack hit a God: Debuff that God. -3.5% Protections When Debuffed God is in Jungle OR Heals 5% of their Health: Stacks become twice as effective. Debuff lasts 4s, Stacks up to 3 times.",
+  "builds_from": [
+   "Skeggox",
+   "Battle Axe"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Avenging_Blade",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Axe",
+  "tier": 1,
+  "cost": 450,
+  "stats": {
+   "Strength": "5"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Adamantine Sickle",
+   "Battle Axe",
+   "Caestus",
+   "Infused Axe",
+   "Kopesh",
+   "Skeggox",
+   "Zither"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Axe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bancroft's Talon",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Intelligence": "55",
+   "Max Mana": "150",
+   "Mana Regen": "2",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "Gain bonus Intelligence and Lifesteal scaled from missing Health. Caps at +60 Intelligence and +10% Lifesteal at 40% Health",
+  "builds_from": [
+   "Oracle Staff",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bancroft's_Talon",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Barbed Carver",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Strength": "40",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "Ability Hit: Target gains +1 Stack of Jagged Wounds for 5s (max 3) Triggers once per Ability, per target Each Stack: +8% (+1% per 10% Lifesteal) Attack and Ability Damage as Physical Damage.",
+  "builds_from": [
+   "Skeggox",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Barbed_Carver",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Battle Axe",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Strength": "15",
+   "Max Health": "100"
+  },
+  "passive": null,
+  "builds_from": [
+   "Axe",
+   "Medallion"
+  ],
+  "builds_into": [
+   "Avenging Blade",
+   "Golden Blade",
+   "Runeforged Hammer",
+   "Wyrmskin Hide"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Battle_Axe",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Berserker's Shield",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "50",
+   "Attack Speed": "20%",
+   "Max Health": "200",
+   "Health Regen": "4"
+  },
+  "passive": "When falling below 60% Health: Become Berserk for 8s. While Berserk: +15 Physical Protection +15 Magical Protection +25% Attack Speed",
+  "builds_from": [
+   "Olmec Blue",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Berserker's_Shield",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Blink Rune",
+  "tier": "Relic",
+  "cost": 0,
+  "stats": {},
+  "passive": "On Use: Teleport up to 5.6m. Cannot be used for 3s after dealing or taking God damage. Can be used while casting. Damage or Kill a God within 4s of use: -30s Cooldown Cooldown: 170s",
+  "builds_from": [],
+  "builds_into": [
+   "Blinking Abyss"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Blink_Rune",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Blinking Abyss",
+  "tier": "Relic",
+  "cost": 2600,
+  "stats": {
+   "Strength": "10%",
+   "Intelligence": "35"
+  },
+  "passive": "Adaptive Stat: +20 Strength or +35 Intelligence (based on highest item stat). +5% of all Stats from Items. On Use: Teleport up to 5.6m. Can be used in combat, but not while firing an ability. 1s after Teleport: Deal 25 (+10% Strength & Intelligence) Magical Damage in a 3.2m radius. If this damages a god, reduce cooldown by -65s. Cooldown: 200s",
+  "builds_from": [
+   "Blink Rune",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Blinking_Abyss",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Blood-Bound Book",
+  "tier": 3,
+  "cost": 2250,
+  "stats": {
+   "Intelligence": "80",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "On Use: + Health Shield for 6s. Shield = 7.5% Max Health & 75% Intelligence from Items While Shielded: +10% Lifesteal and 10% Penetration Kill a God: -25% Cooldown. Cooldown: 80s",
+  "builds_from": [
+   "Killing Stone",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Blood-Bound_Book",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Blood-soaked Shroud",
+  "tier": 2,
+  "cost": 2100,
+  "stats": {
+   "Max Health": "350",
+   "Lifesteal": "8%"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). Ability Hit: +1% Max Health Heal +1% Max Mana Recovery Requires Level 20.",
+  "builds_from": [
+   "Vampiric Shroud"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Blood-soaked_Shroud",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bloodforge",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Strength": "55",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "On Use: + Health Shield for 6s. Shield = 10% Max Health & 150% Strength from Items While Shielded: +10% Lifesteal Kill a God: -25% Cooldown. Cooldown: 80s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Adamantine Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bloodforge",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bluestone Brooch",
+  "tier": 2,
+  "cost": 2100,
+  "stats": {
+   "Max Health": "200",
+   "Health Regen": "4",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +50 Intelligence (based on highest item stat). Ability Hit:+100 Physical Damage over 2s Gods take additional damage = 7.5% of their current Health Subsequent hits on the same target: 50% bonus damage for 3s Requires Level 20.",
+  "builds_from": [
+   "Bluestone Pendant"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bluestone_Brooch",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bluestone Pendant",
+  "tier": 1,
+  "cost": 600,
+  "stats": {
+   "Health Regen": "1",
+   "Mana Regen": "1.5"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Ability Hit: +32 Physical Damage over 2s. Subsequent hits on the same target: 50% bonus damage for 3s Requires Level 20 to upgrade",
+  "builds_from": [],
+  "builds_into": [
+   "Bluestone Brooch"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Bluestone_Pendant",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Book of Thoth",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Intelligence": "30",
+   "Max Mana": "350",
+   "Mana Regen": "4"
+  },
+  "passive": "+Intelligence equal to 5% of Mana from Items. Deal 900 Damage to Minions or Jungle Monsters: +1 Evolve Stack +1 Mana Infusion Stack (Max 50 Stacks) Damage dealt to Gods counts double Per Mana Infusion Stack: +10 Mana. At 50 Evolve Stacks, Item evolves and gains: Additional +Intelligence equal to 2% of Mana from Items +5 Penetration +100 Mana",
+  "builds_from": [
+   "Oracle Staff",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Book_of_Thoth",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bow",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Attack Speed": "5%"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Enchanted Bracelet",
+   "Hunter's Bow",
+   "Manchu Bow"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Bow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bowl Drum",
+  "tier": 2,
+  "cost": 750,
+  "stats": {
+   "Echo": "10"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Eye of the Storm",
+   "Omen Drum",
+   "The Cosmic Horror"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Bowl_Drum",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bracer of The Abyss",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Intelligence": "60",
+   "Attack Speed": "30%"
+  },
+  "passive": "Hit enemy Gods or Jungle Bosses: +8 Attack Damage for 10s. Stacks up to 8 times.",
+  "builds_from": [
+   "Killing Stone",
+   "Enchanted Bracelet"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bracer_of_The_Abyss",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bragi's Harp",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Strength": "35",
+   "Intelligence": "25",
+   "Attack Speed": "10%"
+  },
+  "passive": "Attack Hit: +10 (+3 per Level) bonus Magical Damage. Structures and Bosses take half damage from Bragi's Harp",
+  "builds_from": [
+   "Manchu Bow",
+   "Zither"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bragi's_Harp",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Brawler’s Beat Stick",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +50 Intelligence (based on highest item stat). On God Damage Dealt: Apply 40% Healing Reduction for 5s While in Combat: +2% Strength, +2% Intelligence, and +2% Protections every 1.5s. Stacks up to 5 times. While Out of Combat: -1 stack every 0.5s Healing Reduction does not stack with other similar effects.Combat lasts for 6s upon dealing or taking damage.",
+  "builds_from": [
+   "Survivor's Sash",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Brawler’s_Beat_Stick",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Breastplate of Valor",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "45",
+   "Max Mana": "200",
+   "Mana Regen": "2",
+   "Cooldown Rate": "20"
+  },
+  "passive": "On 500 (+25 per Level) Health lost: -1s Ability Cooldowns.",
+  "builds_from": [
+   "Captain's Ring",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Breastplate_of_Valor",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Briskberry Acorn",
+  "tier": "God Specific",
+  "cost": 2000,
+  "stats": {
+   "Strength": "45",
+   "Pathfinding": "8",
+   "Max Health": "400",
+   "Health Regen": "4",
+   "Mana Regen": "2"
+  },
+  "passive": "Non-Aspect: 45 Strength 8 Pathfinding Aspect: 400 Max Health 4 Health Regen 2 Mana Regen Non-Aspect: Dart is shorter, wider, and now passes through enemy gods. The first enemy god hit becomes marked; hitting a non-marked god resets Dart's Cooldown. It cannot be reset more than twice Dart no longer benefits from the Cooldown Reduction from ability hits Aspect: After hitting an enemy god with Dart, they are Knocked Back and explode after a delay",
+  "builds_from": [
+   "Lively Acorn"
+  ],
+  "builds_into": [],
+  "god": "Ratatoskr",
+  "source_url": "https://wiki.smite2.com/w/Briskberry_Acorn",
+  "last_verified": "2026-08-09"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bumba's Cudgel",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Max Health": "75",
+   "Max Mana": "50"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Ability Used: Buff next Attack within 8s. +20 True Damage (+1 Per Level) to enemies within 1.92m of the target Hit this Attack: -0.33s Cooldowns Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Bumba's Hammer"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Bumba's_Cudgel",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bumba's Golden Dagger",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Max Health": "50",
+   "Attack Speed": "10%"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). On Attack Hit: 10% bonus Physical Damage to enemies within 1.92m of the target Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Bumba's Spear"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Bumba's_Golden_Dagger",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bumba's Hammer",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Max Health": "200",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +60 Intelligence (based on highest item stat). Ability Used: Next Attack deals +60 True Damage to enemies within 1.92m of the target Hit this Attack: -0.66s Cooldowns, +60 Heal Requires Level 20.",
+  "builds_from": [
+   "Bumba's Cudgel"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bumba's_Hammer",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Bumba's Spear",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Max Health": "200",
+   "Attack Speed": "30%"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +60 Intelligence (based on highest item stat). On Attack Hit: 25% bonus Physical Damage to Enemies within 1.92m of the target Requires Level 20.",
+  "builds_from": [
+   "Bumba's Golden Dagger"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Bumba's_Spear",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Caestus",
+  "tier": 2,
+  "cost": 1000,
+  "stats": {
+   "Strength": "10",
+   "Cooldown Rate": "10"
+  },
+  "passive": "When Hard Crowd Controlled: +15 Physical and Magical Protection for 4s.",
+  "builds_from": [
+   "Axe",
+   "Ring"
+  ],
+  "builds_into": [
+   "Jotunn's Revenge",
+   "Pendulum Blade"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Caestus",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Captain's Ring",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Physical Protection": "10",
+   "Cooldown Rate": "10"
+  },
+  "passive": null,
+  "builds_from": [
+   "Ring",
+   "Shield"
+  ],
+  "builds_into": [
+   "Breastplate of Valor",
+   "Freya's Tears",
+   "Gladiator's Shield",
+   "Regrowth Striders"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Captain's_Ring",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Chandra's Grace",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Max Health": "150",
+   "Max Mana": "300",
+   "Mana Regen": "5",
+   "Cooldown Rate": "20"
+  },
+  "passive": "+15% Increased Healing and Shielding Every 15s: Lowest Health ally within 8.8m gain: +20 Health Regen +20 Mana Regen 0.1s off Cooldowns, every 0.2s for 3s Buff lasts 3s. During Moonlight Phase: On trigger: You also gain the Buff",
+  "builds_from": [
+   "Veve Charm",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Chandra's_Grace",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Chronos' Pendant",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Intelligence": "55",
+   "Cooldown Rate": "25"
+  },
+  "passive": "Every 10s: -1s Ability Cooldowns.",
+  "builds_from": [
+   "Ring of Dispel",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Chronos'_Pendant",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Circe's Hexstone",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Max Health": "250",
+   "Health Regen": "4",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: Become Polymorphed Dash Forward, dealing 50 Physical Damage +CC Immune +60 Physical and Magical Protection On Enemy God Hit: Knock Up Bonus Damage equal to 10% of Current Health -40s Cooldown Cooldown: 120s You can own up to 3 active items at once",
+  "builds_from": [
+   "Olmec Blue",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Circe's_Hexstone",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Circle of Protection",
+  "tier": 2,
+  "cost": 750,
+  "stats": {
+   "Magical Protection": "22"
+  },
+  "passive": null,
+  "builds_from": [
+   "Rune"
+  ],
+  "builds_into": [
+   "Ancile",
+   "Doublet of Binding",
+   "Magi's Cloak",
+   "Phoenix Feather",
+   "Sanguine Lash",
+   "Screeching Gargoyle",
+   "Sphere of Negation",
+   "Spirit Robe",
+   "Void Stone"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Circle_of_Protection",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Circlet",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Max Mana": "150"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Infused Axe",
+   "Mana Tome",
+   "Odigba",
+   "Oracle Staff"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Circlet",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Cleric's Cloak",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Tenacity": "5"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Ethereal Staff",
+   "Mantle Of Discord",
+   "Resolute Mantle",
+   "Shroud of Vengeance"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Cleric's_Cloak",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Combat Boots",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Pathfinding": "8"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Mercury's Talaria"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Combat_Boots",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Conduit Gem",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Max Mana": "100",
+   "Mana Regen": "1"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +30 Intelligence (based on highest item stat). Every 0.5s: Gain 1 Stack (max 20). Damaging Abilities deals 3 True Damage per Stack (half vs Gods), then remove all Stacks. Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Archmage's Gem"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Conduit_Gem",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Contagion",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Max Health": "425",
+   "Health Regen": "6"
+  },
+  "passive": "Damaged by an Attack or Ability: Apply +1 Stack of Contagion (1 per hit) If an enemy Lifesteals 100 Health from you: Apply +5 Stacks Attack or Hard Crowd Control an afflicted enemy: Deal Magical Damage = 1% Max Health per stack in a 4m radius Remove the Stacks",
+  "builds_from": [
+   "Olmec Blue",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Contagion",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Cursed Sickle",
+  "tier": 2,
+  "cost": 850,
+  "stats": {
+   "Lifesteal": "7.5%"
+  },
+  "passive": null,
+  "builds_from": [
+   "Scythe"
+  ],
+  "builds_into": [
+   "Bancroft's Talon",
+   "Barbed Carver",
+   "Blood-Bound Book",
+   "Gluttonous Grimoire",
+   "Nimble Ring",
+   "Riptalon",
+   "Soul Gem",
+   "The Reaper",
+   "Typhon’s Heart",
+   "Umbral Link"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Cursed_Sickle",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Dagger of Frenzy",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Attack Damage": "25",
+   "Attack Speed": "25%"
+  },
+  "passive": "On Use: +10 (+4 per Level) Attack Damage +20% (+1% per Level) Attack Speed Buff lasts 6 Attacks. Killing a God refreshes Cooldown. Cooldown: 15s You can own up to 3 active items at once",
+  "builds_from": [
+   "Manchu Bow",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Dagger_of_Frenzy",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Damaru",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Mana Regen": "5",
+   "Echo": "20",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +50 Intelligence (based on highest item stat). Each time you Echo hitting a God or Jungle Boss: Gain +1 Stack of Rhythm Each Stack of Rhythm gives +2% Movement Speed for 5s up to 5 stacks. At 5 Stacks of Rhythm: Remove all stacks and gain Harmonized Harmonized gives +15% Movement Speed for 10s. While Harmonized you cannot gain Rhythm",
+  "builds_from": [
+   "Survivor's Sash",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Damaru",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Daybreak Gavel",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Max Health": "300"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +60 Intelligence (based on highest item stat). Healed yourself with a Healing Ability: +1 Stack (max 3) Non-Healing Ability Use: Consume all Stacks, +10 Strength or +15 Intelligence (based on highest item stat) for 8s per Stack (max 3) Cooldown: 4s",
+  "builds_from": [
+   "Survivor's Sash",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Daybreak_Gavel",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Death Metal",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Strength": "35",
+   "Intelligence": "40",
+   "Critical Chance": "20%"
+  },
+  "passive": "On Use: Lose all Intelligence. Gain 66% of it as Strength. +25% Crit Chance Buff lasts 6s. Cooldown: 45s You can own up to 3 active items at once",
+  "builds_from": [
+   "Zither",
+   "Hooked Sword"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Death_Metal",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Death's Embrace",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Max Health": "150",
+   "Lifesteal": "5%"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). Attack Hit: +1% Max Health Heal +2% Max Mana Restore -0.33s Non Ultimate Cooldowns Requires Level 20.",
+  "builds_from": [
+   "Death's Toll"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Death's_Embrace",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Death's Toll",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Max Health": "100"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Attack Hit: +2 (+0.3% Max Health) Heal +1 (+0.1% Max Mana) Restore Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Death's Embrace"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Death's_Toll",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Deathbringer",
+  "tier": 3,
+  "cost": 2900,
+  "stats": {
+   "Strength": "45",
+   "Critical Chance": "20%"
+  },
+  "passive": "+35% Critical Strike Damage.",
+  "builds_from": [
+   "Skeggox",
+   "Kopesh"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Deathbringer",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Demon Blade",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Strength": "30",
+   "Attack Speed": "15%",
+   "Critical Chance": "15%"
+  },
+  "passive": "Critically Strike: +30% Attack Speed for 3s.",
+  "builds_from": [
+   "Kopesh",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Demon_Blade",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Devourer's Gauntlet",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Strength": "35",
+   "Lifesteal": "5%"
+  },
+  "passive": "Kill Minion or Jungle Monsters: +1 Stack. Each Stack grants: +.4 Strength +0.05% Lifesteal At 75 Stacks, gain: +10 Strength +3% Lifesteal +5 Penetration Continue to stack more Slowly; 10 Minion Kills: +1 Stack, Jungle Boss Kill or Assist: +4 Stacks",
+  "builds_from": [
+   "Skeggox",
+   "Adamantine Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Devourer's_Gauntlet",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Divine Ruin",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Intelligence": "85"
+  },
+  "passive": "On God Damaged: Apply 40% Healing Reduction for 5s and trigger Chain Lightning when off cooldown Chain Lightning: Magical Damage = 40 + 20% Intelligence Hits enemy and up to 4 nearby enemies within 4.8m Can hit the same target more than once and applies the 40% Healing Reduction Cooldown: 15s. Healing Reduction does not stack with other similar effects.",
+  "builds_from": [
+   "Killing Stone",
+   "Evil Eye"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Divine_Ruin",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Dominance",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Strength": "40",
+   "Max Mana": "150",
+   "Mana Regen": "4",
+   "Attack Speed": "15%"
+  },
+  "passive": "Basic Attacks gain an additional +20% Penetration This effect ignores the Penetration cap",
+  "builds_from": [
+   "Infused Axe",
+   "Manchu Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Dominance",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Doom Orb",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Intelligence": "70",
+   "Max Mana": "200",
+   "Mana Regen": "2",
+   "Penetration": "10"
+  },
+  "passive": "Kill or Assist a Minion: +1 Stack. Kill or Assist a God: +5 Stacks. Per Stack: +8 Intelligence Max 5 Stacks. Stacks last 10s. Stacks fall off one at a time",
+  "builds_from": [
+   "Evil Eye",
+   "Oracle Staff"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Doom_Orb",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Doublet of Binding",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Magical Protection": "50",
+   "Dampening": "5",
+   "Max Health": "400"
+  },
+  "passive": "On Use: Gain Protective Link to a target. Protective Link redirects 20% of Damage they take, up to 600 Health. This Damage is mitigated by your Dampening. Cooldown: 45s You can own up to 3 active items at once",
+  "builds_from": [
+   "Veve Charm",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Doublet_of_Binding",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Draconic Scale",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Max Health": "300"
+  },
+  "passive": "Damaged by a God: Gain 4 Protections against that God's damage type Stacks last 1.5s (max 7) Stacks decay 1 at a time",
+  "builds_from": [
+   "Veve Charm",
+   "Stalwart Sigil"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Draconic_Scale",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Dreamer's Idol",
+  "tier": 3,
+  "cost": 3500,
+  "stats": {
+   "Intelligence": "130",
+   "Penetration": "10%"
+  },
+  "passive": "On Use: +25% Intelligence Become Immune to Displacement Buff lasts 10s. Cooldown: 120s You can own up to 3 active items at once",
+  "builds_from": [
+   "Killing Stone",
+   "Killing Stone"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Dreamer's_Idol",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Dwarven Plate",
+  "tier": 3,
+  "cost": 2800,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35"
+  },
+  "passive": "+15 Physical Protections +35 Magical Protections On Use: Switch which Protection is increased more. Cooldown: 30s You can own up to 3 active items at once",
+  "builds_from": [
+   "Engraved Guard",
+   "Stalwart Sigil"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Dwarven_Plate",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Enchanted Bracelet",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Intelligence": "20",
+   "Attack Speed": "8%"
+  },
+  "passive": null,
+  "builds_from": [
+   "Gem",
+   "Bow"
+  ],
+  "builds_into": [
+   "Bracer of The Abyss",
+   "Nimble Ring"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Enchanted_Bracelet",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Engraved Guard",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Physical Protection": "10",
+   "Magical Protection": "10"
+  },
+  "passive": null,
+  "builds_from": [
+   "Shield",
+   "Rune"
+  ],
+  "builds_into": [
+   "Amanita Charm",
+   "Brawler’s Beat Stick",
+   "Dwarven Plate",
+   "Erosion",
+   "Eye of Providence",
+   "Glorious Pridwen",
+   "Helm of Darkness",
+   "Kinetic Cuirass",
+   "Magi's Cloak",
+   "Mantle Of Discord",
+   "Radiant Bulwark",
+   "Shield Splitter",
+   "Shifter's Shield",
+   "Shroud of Vengeance",
+   "Stone of Binding",
+   "Stygian Anchor",
+   "Stygian Anchor"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Engraved_Guard",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Eros' Bow",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Intelligence": "35",
+   "Max Health": "150",
+   "Attack Speed": "25%",
+   "Mana Regen": "2.5"
+  },
+  "passive": "On Use: Mark an ally god as your Beloved Only one ally may be Marked at a time Mark breaks if ally is more than 20m away On Attack Hit: Grant yourself 1 stack of Devotion (max 10) Ability Buffed, Healed, or Shielded your Beloved: Consume your Devotion Grant your Beloved Passion, Increasing their Strength by 5 and Intelligence by 7.5 per stack consumed. You can own up to 3 active items at once",
+  "builds_from": [
+   "Hunter's Bow",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Eros'_Bow",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Erosion",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "20",
+   "Max Health": "250"
+  },
+  "passive": "-30% Shields applied to enemy Gods within 11.2m. When this occurs: +10% of your Physical and Magical Protections for 6s. Can stack up to 2 times",
+  "builds_from": [
+   "Medal of Defense",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Erosion",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ethereal Staff",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Intelligence": "60",
+   "Max Health": "250",
+   "Tenacity": "15"
+  },
+  "passive": "Ability Hit a God: Steal 5% Max Health and Mana from a single target. Triggers once per Ability Stacks last 60s Stacks decay 1 at a time",
+  "builds_from": [
+   "Flaming Pearl",
+   "Cleric's Cloak"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Ethereal_Staff",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Evil Eye",
+  "tier": 2,
+  "cost": 1200,
+  "stats": {
+   "Intelligence": "45"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Divine Ruin",
+   "Doom Orb",
+   "Necronomicon",
+   "Obsidian Shard",
+   "Rod of Tahuti",
+   "Rod of Tahuti",
+   "Spear of Desolation",
+   "Spear of the Magus",
+   "Totem of Death"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Evil_Eye",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Eye of Erebus",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Max Health": "350",
+   "Cooldown Rate": "15"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +50 Intelligence (based on highest item stat). On Use: Spawn a Watchful Eye that lasts 40s Enemy enters range: Fires a seeking projectile: Magical Damage equal to 15% of Enemy Max Health Reveal and +25% Slow for 2.5s Cooldown: 40s. During Moonlight Phase: Each time you deal damage to a god: -2s Cooldown of this item (Once per target, per Attack or Ability). You can own up to 3 active items at once",
+  "builds_from": [
+   "Adroit Ring",
+   "Survivor's Sash"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Eye_of_Erebus",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Eye of Providence",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Max Health": "250"
+  },
+  "passive": "Destroy a Ward: +50 Gold Open Consumable slot: Gain a Sentry Ward once every 120s If there is no open consumable slot, gain a Sentry Ward and restart timer the next time one is open. (Max 2 Wards can be Placed)",
+  "builds_from": [
+   "Engraved Guard",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Eye_of_Providence",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Eye of the Storm",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Strength": "40",
+   "Health Regen": "4",
+   "Echo": "30"
+  },
+  "passive": "Each time you Echo: Gain +1 Stack At 10 Stacks Next time you Echo: Open a storm within 4.8m, dealing Physical Damage every .5s for 3s. Damage = 10 + 20% of your Strength Storm will only spawn when hitting a god or Jungle Boss",
+  "builds_from": [
+   "Skeggox",
+   "Bowl Drum"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Eye_of_the_Storm",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Flaming Pearl",
+  "tier": 2,
+  "cost": 950,
+  "stats": {
+   "Intelligence": "25",
+   "Max Health": "100"
+  },
+  "passive": null,
+  "builds_from": [
+   "Gem",
+   "Medallion"
+  ],
+  "builds_into": [
+   "Ethereal Staff",
+   "Gem of Isolation",
+   "Gluttonous Grimoire",
+   "Jade Scepter",
+   "Lifebinder",
+   "Scepter of Dominion",
+   "Wish-Granting Pearl"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Flaming_Pearl",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Freya's Tears",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Cooldown Rate": "20"
+  },
+  "passive": "On 25% of your Health Lost: +15 Physical and Magical Protections for 5s Can stack up to 2 times",
+  "builds_from": [
+   "Sage's Ring",
+   "Captain's Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Freya's_Tears",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gauntlet of Thebes",
+  "tier": 3,
+  "cost": 2200,
+  "stats": {
+   "Max Health": "200",
+   "Max Mana": "150"
+  },
+  "passive": "Assist a Minion: +1 Stack. God Kill or Assist: +5 Stacks. Stacks grant +15 Max Health (max 40 Stacks). At 40 Stacks, Item evolves and gains: +100 Max Health +10 Physical and Magical Protection",
+  "builds_from": [
+   "Odigba"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Gauntlet_of_Thebes",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gem of Focus",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Intelligence": "65",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Ability Used: Gain a stack of Momentum. Momentum grants +7% Pathfinding for 8s. Stacks up to 3 times.",
+  "builds_from": [
+   "Killing Stone",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Gem_of_Focus",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gem of Isolation",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Intelligence": "50",
+   "Max Health": "250",
+   "Tenacity": "15"
+  },
+  "passive": "Damaging Ability Hit: 15% Slow. The Slow lasts for 2s.",
+  "builds_from": [
+   "Flaming Pearl",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Gem_of_Isolation",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gem",
+  "tier": 1,
+  "cost": 450,
+  "stats": {
+   "Intelligence": "15"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Enchanted Bracelet",
+   "Flaming Pearl",
+   "Killing Stone",
+   "Oracle Staff",
+   "Ring of Dispel",
+   "Soul Reliquary",
+   "Zither"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Gem",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Genie's Lamp",
+  "tier": "God Specific",
+  "cost": null,
+  "stats": {},
+  "passive": "+0.6% (per Level) of all Stats from Items. On Use: Access 3 Wishes Wealth (+250 Gold. +10% Gold Gains & God Kills/Assists grant +33 Gold for 3m) Immortality (While dead, instantly revive; Gain 75% Movement Speed for 10s) Power (Reset ability and item cooldowns; Gain 1 charge of Genie's Strength) Each Wish may be used once per match.",
+  "builds_from": [],
+  "builds_into": [],
+  "god": "Aladdin",
+  "source_url": "https://wiki.smite2.com/w/Genie's_Lamp",
+  "last_verified": "2026-08-09"
+ },
+ {
+  "type": "smite-item",
+  "name": "Genji's Guard",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Magical Protection": "55",
+   "Max Mana": "200",
+   "Mana Regen": "5",
+   "Cooldown Rate": "15"
+  },
+  "passive": "Hit by Magical Ability Damage: -3s Cooldowns. Cooldown: 20s",
+  "builds_from": [
+   "Sage's Ring",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Genji's_Guard",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gilded Arrow",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Attack Damage": "20",
+   "Attack Speed": "10%"
+  },
+  "passive": "Every 10s: Mark the highest Health enemy minion or jungle monster within 12.8m. If you land the killing blow: +3 Bonus Gold +15% Attack Speed for 8s +30 Mana Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Sharpshooter's Arrow"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Gilded_Arrow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gladiator's Shield",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Physical Protection": "25",
+   "Max Health": "200",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Abilities deal bonus Physical Damage. Damage = +10 + 40% of your Item Protections Triggers once per Ability Cast, per God",
+  "builds_from": [
+   "Medal of Defense",
+   "Captain's Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Gladiator's_Shield",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Glorious Pridwen",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Cooldown Rate": "12"
+  },
+  "passive": "On Use: Explode (4.8m radius): Deal Magical Damage (40% of Protections) Gain a Shield (125% of Protections) for 5s. When the Shield expires or breaks: Explode again: Deal Magic Damage (70% of your Protections). Cooldown: 45s You can own up to 3 active items at once",
+  "builds_from": [
+   "Engraved Guard",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Glorious_Pridwen",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Gluttonous Grimoire",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Intelligence": "55",
+   "Max Health": "150",
+   "Lifesteal": "7.5%",
+   "Penetration": "10%"
+  },
+  "passive": "Store 50% of your Lifesteal healing as bonus Magical Damage on your next Attack. If at full Health: Store 65% instead Stored damage is capped to 10% of your Max Health + 50% Intelligence",
+  "builds_from": [
+   "Flaming Pearl",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Gluttonous_Grimoire",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Golden Blade",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Strength": "15",
+   "Attack Damage": "20",
+   "Max Health": "200",
+   "Attack Speed": "20%"
+  },
+  "passive": "Attacks deal bonus Physical Damage. Damage = +10 + 20% of your Item Protections Damages all Enemies within 2.5m",
+  "builds_from": [
+   "Battle Axe",
+   "Manchu Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Golden_Blade",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hastened Fatalis",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Attack Damage": "25",
+   "Attack Speed": "25%"
+  },
+  "passive": "Attack Hits a God: -6.25% Attack Movement Penalty. Melee hits grants 4 Stacks. Stacks up to 8 times. Buff lasts 2s.",
+  "builds_from": [
+   "Manchu Bow",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Hastened_Fatalis",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Heartseeker",
+  "tier": 3,
+  "cost": 3000,
+  "stats": {
+   "Strength": "45",
+   "Max Mana": "250",
+   "Mana Regen": "2",
+   "Penetration": "10%"
+  },
+  "passive": "Ability Hit: +%Health Physical Damage. Damage = 2% of your Strength, as a % of the target's Max Health.",
+  "builds_from": [
+   "Lucerne Hammer",
+   "Infused Axe"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Heartseeker",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Heartwood Charm",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Intelligence": "45",
+   "Max Mana": "250",
+   "Mana Regen": "5",
+   "Cooldown Rate": "20"
+  },
+  "passive": "+10% Increased Healing and Shielding Passive: When you heal with abilities, store 20% of that healing. On Use: Heal all allies within 6.4m for the amount of healing stored. Cooldown: 90s You can own up to 3 active items at once",
+  "builds_from": [
+   "Adroit Ring",
+   "Oracle Staff"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Heartwood_Charm",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Helm of Darkness",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Intelligence": "45",
+   "Physical Protection": "25",
+   "Magical Protection": "25"
+  },
+  "passive": "On Use: Become Stealthed and pass through players and walls for 7s. Cannot use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health You can own up to 3 active items at once",
+  "builds_from": [
+   "Engraved Guard",
+   "Killing Stone"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Helm_of_Darkness",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Helm of Radiance",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Intelligence": "65",
+   "Physical Protection": "35"
+  },
+  "passive": "Take Physical Damage: +7 Physical Protection for 6s. Stacks up to 4 times.",
+  "builds_from": [
+   "Killing Stone",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Helm_of_Radiance",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Heroism",
+  "tier": 2,
+  "cost": 1800,
+  "stats": {
+   "Physical Protection": "45",
+   "Magical Protection": "45",
+   "Max Health": "250"
+  },
+  "passive": "+1 Gold per second. When an ally within 8.8m is hit by Hard Crowd Control: Give them a Shield equal to 50 +10% of your Max Health Cooldown: 15s Requires Level 20",
+  "builds_from": [
+   "Selflessness"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Heroism",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hide of the Nemean Lion",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "35",
+   "Max Health": "350",
+   "Health Regen": "4"
+  },
+  "passive": "On Use: Reflect: 40% of pre-mitigated Attack Damage 20% of pre-mitigated Ability Damage Damage is Reflected as Physical Damage Buff lasts 4s. Cooldown: 60s You can own up to 3 active items at once",
+  "builds_from": [
+   "Medal of Defense",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Hide_of_the_Nemean_Lion",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hooked Sword",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Critical Chance": "15%"
+  },
+  "passive": null,
+  "builds_from": [
+   "Sabre"
+  ],
+  "builds_into": [
+   "Death Metal",
+   "Musashi's Dual Swords",
+   "Rage"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Hooked_Sword",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hunter's Bow",
+  "tier": 2,
+  "cost": 750,
+  "stats": {
+   "Attack Speed": "15%"
+  },
+  "passive": null,
+  "builds_from": [
+   "Bow"
+  ],
+  "builds_into": [
+   "Berserker's Shield",
+   "Dagger of Frenzy",
+   "Demon Blade",
+   "Eros' Bow",
+   "Hastened Fatalis",
+   "Lernaean Bow",
+   "Odysseus' Bow",
+   "Odysseus' Bow",
+   "Pharaoh's Curse",
+   "Qin's Blade",
+   "Riptalon",
+   "Shogun's Ofuda",
+   "Tekko-Kagi",
+   "The Executioner"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Hunter's_Bow",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hunter's Cowl",
+  "tier": 2,
+  "cost": 2100,
+  "stats": {
+   "Lifesteal": "5%",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Adaptive Stat: +55 Strength or +80 Intelligence (based on highest item stat). Within 8.8m of a God: +30% Attack Speed, +5% Lifesteal, and +15% Movement Speed. Alone: +10% Movement Speed, +15% Attack Speed, and +2.5% Lifesteal. Requires Level 20.",
+  "builds_from": [
+   "Leather Cowl"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Hunter's_Cowl",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hussar's Wings",
+  "tier": 3,
+  "cost": 3500,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35",
+   "Max Health": "500"
+  },
+  "passive": "You are Immune to Slows.",
+  "builds_from": [
+   "Medal of Defense",
+   "Medal of Disruption"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Hussar's_Wings",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Hydra's Lament",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Strength": "45",
+   "Max Mana": "200",
+   "Mana Regen": "4",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Ability Used: Bonus Damage on your next successful Attack. +30% for Melee or +20% for Ranged Buff lasts 8s.",
+  "builds_from": [
+   "Infused Axe",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Hydra's_Lament",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Infused Axe",
+  "tier": 2,
+  "cost": 1050,
+  "stats": {
+   "Strength": "15",
+   "Max Mana": "150",
+   "Mana Regen": "1"
+  },
+  "passive": "Kill or Assist a God: +25% Mana",
+  "builds_from": [
+   "Axe",
+   "Circlet"
+  ],
+  "builds_into": [
+   "Dominance",
+   "Heartseeker",
+   "Hydra's Lament",
+   "Transcendence"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Infused_Axe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Jade Scepter",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Intelligence": "100",
+   "Max Health": "250"
+  },
+  "passive": "On Use: Place a jade current at a target location. After 1s it erupts, knocking away all gods. Enemies are knocked towards the caster. Cooldown: 60s You can own up to 3 active items at once",
+  "builds_from": [
+   "Flaming Pearl",
+   "Killing Stone"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Jade_Scepter",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Jotunn's Revenge",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Strength": "35",
+   "Max Mana": "250",
+   "Penetration": "5",
+   "Cooldown Rate": "25"
+  },
+  "passive": "God Kill or Assist: -1s Cooldown for Non-Ultimate Abilities -5s Cooldown for Ultimate Abilities",
+  "builds_from": [
+   "Skeggox",
+   "Caestus"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Jotunn's_Revenge",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Killing Stone",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Intelligence": "35"
+  },
+  "passive": null,
+  "builds_from": [
+   "Gem"
+  ],
+  "builds_into": [
+   "Blood-Bound Book",
+   "Bracer of The Abyss",
+   "Divine Ruin",
+   "Dreamer's Idol",
+   "Dreamer's Idol",
+   "Gem of Focus",
+   "Helm of Darkness",
+   "Helm of Radiance",
+   "Jade Scepter",
+   "Polynomicon",
+   "Rod of Asclepius",
+   "Sphere of Negation",
+   "Staff of Myrddin",
+   "Typhon’s Heart"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Killing_Stone",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Kinetic Cuirass",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "25",
+   "Magical Protection": "25",
+   "Plating": "5",
+   "Max Health": "300"
+  },
+  "passive": "Damaged by 3 Attacks from gods: Gain Kinetic. Stacks up to 2 times. Kinetic makes your next Attack unleash a shockwave, even if it misses, dealing 40 (+4% of your Health) Physical Damage.",
+  "builds_from": [
+   "Veve Charm",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Kinetic_Cuirass",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Kopesh",
+  "tier": 2,
+  "cost": 1250,
+  "stats": {
+   "Strength": "10",
+   "Critical Chance": "10%"
+  },
+  "passive": "Critically Strike a God: +5% Movement Speed for 4s.",
+  "builds_from": [
+   "Axe",
+   "Sabre"
+  ],
+  "builds_into": [
+   "Deathbringer",
+   "Demon Blade",
+   "Musashi's Dual Swords",
+   "Rage"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Kopesh",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Leather Cowl",
+  "tier": 1,
+  "cost": 600,
+  "stats": {
+   "Lifesteal": "4%",
+   "Mana Regen": "1.5"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Within 8.8m of a God: +15% Attack Speed and +2.5% Movement Speed. Alone: +5% Movement Speed and +7.5% Attack Speed. Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Hunter's Cowl"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Leather_Cowl",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Legionnaire Armor",
+  "tier": 2,
+  "cost": 750,
+  "stats": {
+   "Physical Protection": "18"
+  },
+  "passive": null,
+  "builds_from": [
+   "Shield"
+  ],
+  "builds_into": [
+   "Helm of Radiance",
+   "Leviathan's Hide",
+   "Midgardian Mail",
+   "Prophetic Cloak",
+   "Regrowth Striders",
+   "Spirit Robe",
+   "Stampede",
+   "Stone of Binding",
+   "Umbral Link",
+   "Void Shield"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Legionnaire_Armor",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Lernaean Bow",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Strength": "40",
+   "Attack Speed": "30%"
+  },
+  "passive": "On Use: Fire 3 arrows that pierce enemies in a 10.5m line. Deals 40% of your Attack Damage as Physical Damage -50% Shield Can Critically Strike Cooldown: 30s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Lernaean_Bow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Leviathan's Hide",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "45",
+   "Plating": "5",
+   "Max Health": "300"
+  },
+  "passive": "Damaged by God Attack: That God is -10% Strength & Attack Damage for 4s. Attack an Enemy God: +8 Max Health Permanently. Damaged by Enemy God: -0.5s once per Ability Cast or Attack. Cooldown: 10s.",
+  "builds_from": [
+   "Veve Charm",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Leviathan's_Hide",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Lifebinder",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Intelligence": "40",
+   "Max Health": "200",
+   "Mana Regen": "4"
+  },
+  "passive": "+8% Increased Healing and Shielding On Use: Fire a projectile that deals 60 (+8 per Level) Magic Damage. Marks enemy Gods for 6s First ally to damage a Marked target: +70 (+7 per Level) Heal +70 (+7 per Level) Shield Healing and Shielding from this effect are increase by your Healing and Shielding Strength at 150% effectiveness. Consumes the Mark Cooldown: 20s You can own up to 3 active items at once",
+  "builds_from": [
+   "Flaming Pearl",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Lifebinder",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Lucerne Hammer",
+  "tier": 2,
+  "cost": 1250,
+  "stats": {
+   "Strength": "20"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Heartseeker",
+   "Oath-Sworn Spear",
+   "The Crusher",
+   "Titan's Bane"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Lucerne_Hammer",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Magi's Cloak",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35"
+  },
+  "passive": "Every 90s: Gain a Hard Crowd Control protective bubble. When triggered, gain Crowd Control Immunity for 1.5s.",
+  "builds_from": [
+   "Engraved Guard",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Magi's_Cloak",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Mana Tome",
+  "tier": 2,
+  "cost": 500,
+  "stats": {
+   "Max Mana": "250",
+   "Mana Regen": "2"
+  },
+  "passive": null,
+  "builds_from": [
+   "Circlet"
+  ],
+  "builds_into": [
+   "Book of Thoth",
+   "Breastplate of Valor",
+   "Genji's Guard",
+   "Necronomicon",
+   "Oni Hunter's Garb",
+   "Scepter of Dominion",
+   "Transcendence",
+   "Xibalban Effigy",
+   "Yogi's Necklace"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Mana_Tome",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Manchu Bow",
+  "tier": 2,
+  "cost": 950,
+  "stats": {
+   "Attack Damage": "10",
+   "Attack Speed": "8%"
+  },
+  "passive": "Attacks deal +10 Physical Damage",
+  "builds_from": [
+   "Bow"
+  ],
+  "builds_into": [
+   "Bragi's Harp",
+   "Dagger of Frenzy",
+   "Dominance",
+   "Golden Blade",
+   "Hastened Fatalis",
+   "Qin's Blade",
+   "Silverbranch Bow",
+   "Silverbranch Bow",
+   "Sun Beam Bow",
+   "Toxic Blade",
+   "Toxic Blade",
+   "Tyrfing"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Manchu_Bow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Mantle Of Discord",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35",
+   "Tenacity": "15"
+  },
+  "passive": "Damaged while below 40% Health: Stuns enemies within 3.2m for 1s +Crowd Control Immunity for 1s +15 Dampening for 6s Cooldown: 110s",
+  "builds_from": [
+   "Engraved Guard",
+   "Cleric's Cloak"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Mantle_Of_Discord",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Masterwork Mod",
+  "tier": "God Specific",
+  "cost": 0,
+  "stats": {},
+  "passive": "Thumper gains 300 increased HP and applies a 10/15/20/25/30 Physical and Magical Protection buff to allied gods hit for 3s. Set 3 - You can only have one Mod from each set.Requires level 14.",
+  "builds_from": [],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Masterwork_Mod",
+  "last_verified": "2026-08-14",
+  "god": "Vulcan"
+ },
+ {
+  "type": "smite-item",
+  "name": "Medal of Defense",
+  "tier": 2,
+  "cost": 850,
+  "stats": {
+   "Physical Protection": "10",
+   "Max Health": "125"
+  },
+  "passive": null,
+  "builds_from": [
+   "Medallion",
+   "Shield"
+  ],
+  "builds_into": [
+   "Erosion",
+   "Gladiator's Shield",
+   "Hide of the Nemean Lion",
+   "Hussar's Wings",
+   "Mystical Mail",
+   "Ragnarok's Wake",
+   "Ragnarok's Wake",
+   "Shield of the Phoenix",
+   "Void Shield"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Medal_of_Defense",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Medal of Disruption",
+  "tier": 2,
+  "cost": 850,
+  "stats": {
+   "Magical Protection": "12",
+   "Max Health": "150"
+  },
+  "passive": null,
+  "builds_from": [
+   "Medallion",
+   "Rune"
+  ],
+  "builds_into": [
+   "Hussar's Wings",
+   "Oni Hunter's Garb",
+   "Pharaoh's Curse",
+   "Phoenix Feather",
+   "Shogun's Ofuda",
+   "Void Stone",
+   "Wyrmskin Hide"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Medal_of_Disruption",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Medallion",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Max Health": "75"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Battle Axe",
+   "Flaming Pearl",
+   "Medal of Defense",
+   "Medal of Disruption",
+   "Odigba",
+   "Olmec Blue",
+   "Veve Charm"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Medallion",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Mercury's Talaria",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Pathfinding": "12"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). While out of combat: Store energy as you move. Your next non-Ultimate Ability deals up to 8% more Damage based on stored energy. Movement Ability deals up to 10% more Damage instead",
+  "builds_from": [
+   "Survivor's Sash",
+   "Combat Boots"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Mercury's_Talaria",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Midgardian Mail",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "50",
+   "Plating": "5",
+   "Max Health": "250"
+  },
+  "passive": "Hit by a basic attack: the enemy has their Attack Speed reduced by 10% for 3s. Stacks up to 4 times.",
+  "builds_from": [
+   "Veve Charm",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Midgardian_Mail",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Mote of Chaos",
+  "tier": 2,
+  "cost": 1250,
+  "stats": {},
+  "passive": "+5% of all Stats from Items.",
+  "builds_from": [],
+  "builds_into": [
+   "Agility Greaves",
+   "Blinking Abyss",
+   "Shell of Rebuke",
+   "Sundering Echo",
+   "Talisman of Purification",
+   "Time-lock Aegis"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Mote_of_Chaos",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Musashi's Dual Swords",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Strength": "35",
+   "Critical Chance": "30%"
+  },
+  "passive": "Critically Strike: +15% Movement Speed for 5s.",
+  "builds_from": [
+   "Kopesh",
+   "Hooked Sword"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Musashi's_Dual_Swords",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Mystical Mail",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "40",
+   "Max Health": "300"
+  },
+  "passive": "Enemies within 4m: 15 (+1 per Level) Magical Damage and lose 25% of Health Shield per 1s. Range Scaling Damage: +50% at Close Range -50% at Maximum Range",
+  "builds_from": [
+   "Medal of Defense",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Mystical_Mail",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Necronomicon",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Intelligence": "50",
+   "Max Mana": "300",
+   "Mana Regen": "5"
+  },
+  "passive": "God Kill or Assist: +1 Stack of: +30 Intelligence Stacks up to 6 times. On Death: Lose 4 Stacks.",
+  "builds_from": [
+   "Evil Eye",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Necronomicon",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Nimble Ring",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Intelligence": "35",
+   "Attack Speed": "20%",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "For every 10 Intelligence: +1 Attack Damage +1% Attack Speed",
+  "builds_from": [
+   "Enchanted Bracelet",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Nimble_Ring",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Oath-Sworn Spear",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Strength": "50"
+  },
+  "passive": "Ability Hit: Target's Physical Protection is reduced by 5 for 4s. On God Kill or Assist: This effect increases by 1 Physical Protection. This effect caps at 20 total Physical Protection reduction.",
+  "builds_from": [
+   "Lucerne Hammer",
+   "Skeggox"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Oath-Sworn_Spear",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Obsidian Shard",
+  "tier": 3,
+  "cost": 2900,
+  "stats": {
+   "Intelligence": "70",
+   "Penetration": "20%"
+  },
+  "passive": "Gain the Shattering effect: First Ability Cast: Gains +20% Penetration This effect ignores the Penetration cap Shattering does not Stack with itself. Cooldown: 10s",
+  "builds_from": [
+   "Evil Eye",
+   "Void Shard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Obsidian_Shard",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Odigba",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Max Health": "125",
+   "Max Mana": "150"
+  },
+  "passive": "God Kill or Assist: Heal +5% Max Health over 6s.",
+  "builds_from": [
+   "Medallion",
+   "Circlet"
+  ],
+  "builds_into": [
+   "Gauntlet of Thebes",
+   "Wish-Granting Pearl"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Odigba",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Odysseus' Bow",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Attack Speed": "45%"
+  },
+  "passive": "Every fourth Attack Hit: Trigger Chain Lightning. Damage = 15 (+60% Attack Damage) Physical Damage Hits target and up to 4 nearby enemies Bounce Range: 4.8m Can hit the same target more than once",
+  "builds_from": [
+   "Hunter's Bow",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Odysseus'_Bow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Olmec Blue",
+  "tier": 2,
+  "cost": 700,
+  "stats": {
+   "Max Health": "185",
+   "Health Regen": "2"
+  },
+  "passive": null,
+  "builds_from": [
+   "Medallion",
+   "Sash"
+  ],
+  "builds_into": [
+   "Amanita Charm",
+   "Berserker's Shield",
+   "Circe's Hexstone",
+   "Contagion",
+   "Hide of the Nemean Lion",
+   "Lifebinder",
+   "Rod of Asclepius",
+   "Runeforged Hammer",
+   "Stampede",
+   "Vital Amplifier",
+   "Yogi's Necklace"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Olmec_Blue",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Omen Drum",
+  "tier": 3,
+  "cost": 2800,
+  "stats": {
+   "Echo": "30"
+  },
+  "passive": "Adaptive Stat: +50 Strength or +75 Intelligence (based on highest item stat). Each time you Echo: Gain +1 Stack of Dark Resonance Each Stack of Dark Resonance grants +10% Echo Damage up to 30 stacks. Stacks last 6 seconds and stacks are halved when duration ends. While Damaru is Harmonized: Gain +100% Echo Damage",
+  "builds_from": [
+   "Survivor's Sash",
+   "Bowl Drum"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Omen_Drum",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Oni Hunter's Garb",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Magical Protection": "50",
+   "Max Health": "150",
+   "Max Mana": "200",
+   "Mana Regen": "8"
+  },
+  "passive": "For each enemy god within 8.8m: +4% Damage Mitigation Max 3 stacks",
+  "builds_from": [
+   "Medal of Disruption",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Oni_Hunter's_Garb",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Oracle Staff",
+  "tier": 2,
+  "cost": 950,
+  "stats": {
+   "Intelligence": "20",
+   "Max Mana": "150",
+   "Mana Regen": "1"
+  },
+  "passive": "Kill or Assist a God: +25% Mana",
+  "builds_from": [
+   "Gem",
+   "Circlet"
+  ],
+  "builds_into": [
+   "Ancient Signet",
+   "Bancroft's Talon",
+   "Book of Thoth",
+   "Doom Orb",
+   "Heartwood Charm",
+   "Polynomicon",
+   "Soul Reaver",
+   "The World Stone",
+   "The World Stone"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Oracle_Staff",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Pendulum Blade",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Strength": "30",
+   "Penetration": "10%",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: -4s Ability Cooldowns. Cooldown: 40s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Caestus"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Pendulum_Blade",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Pendulum of the Ages",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Mana Regen": "4",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Adaptive Stat: +45 Strength or +70 Intelligence (based on highest item stat). +4 Mana per second per 10% of missing Mana. +3 Strength or +7 Intelligence (based on highest item stat) per 10% of available Mana. Requires Level 20.",
+  "builds_from": [
+   "Sands Of Time"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Pendulum_of_the_Ages",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Pharaoh's Curse",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Magical Protection": "30",
+   "Plating": "5",
+   "Max Health": "250",
+   "Attack Speed": "20%"
+  },
+  "passive": "On Use: Enemies within 5.6m: -50% Shields -20% Movement Speed -40% Attack Speed Debuff lasts 4s. Cooldown: 45s You can own up to 3 active items at once",
+  "builds_from": [
+   "Medal of Disruption",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Pharaoh's_Curse",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Phoenix Feather",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Magical Protection": "40",
+   "Dampening": "5",
+   "Max Health": "300"
+  },
+  "passive": "On Use: Fire 3 Pulses that Heal you and True Damage enemies within 3.2m. Heal = +75 Health +7.5 Missing Health True Damage = +3% Max Health from Items Cooldown: 120s You can own up to 3 active items at once",
+  "builds_from": [
+   "Circle of Protection",
+   "Medal of Disruption"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Phoenix_Feather",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Plated Metal",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Plating": "9"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Radiant Bulwark",
+   "Spectral Armor"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Plated_Metal",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Polynomicon",
+  "tier": 3,
+  "cost": 2450,
+  "stats": {
+   "Intelligence": "75",
+   "Max Mana": "200",
+   "Mana Regen": "3"
+  },
+  "passive": "Ability Used: Your next Attack deals bonus Magical Damage Damage = 80% of your Intelligence Cooldown: 2s",
+  "builds_from": [
+   "Killing Stone",
+   "Oracle Staff"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Polynomicon",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Prophetic Cloak",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "22",
+   "Magical Protection": "22",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Damage a God: +1 Protection Stack against the damage type they deal. Cooldown: 5s. At +15 of each Protection Stack, item evolves: +10 Physical Protection and Magical Protection +6% Damage Mitigation (or +12% if total Protections > 300)",
+  "builds_from": [
+   "Legionnaire Armor",
+   "Sage's Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Prophetic_Cloak",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Qin's Blade",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Attack Damage": "30",
+   "Attack Speed": "25%"
+  },
+  "passive": "Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health +5% Target Item Health",
+  "builds_from": [
+   "Manchu Bow",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Qin's_Blade",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Radiant Bulwark",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Plating": "15"
+  },
+  "passive": "On Use: Create a wall of light that protects allies behind you for 6s. Grants them all your Plating, Dampening, and half of your Protections from enemies on the other side and yourself 20% Damage Mitigation. You are Silenced, Disarmed, and cannot turn while channeling Cooldown: 100s You can own up to 3 active items at once",
+  "builds_from": [
+   "Engraved Guard",
+   "Plated Metal"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Radiant_Bulwark",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Rage",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Strength": "30",
+   "Critical Chance": "20%"
+  },
+  "passive": "God Kill or Assist: +4% Critical Strike Chance (Max 20%) After 5 God Kills or Assists: +10% additional Critical Strike Chance",
+  "builds_from": [
+   "Kopesh",
+   "Hooked Sword"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Rage",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ragnarok's Wake",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Physical Protection": "45",
+   "Max Health": "250"
+  },
+  "passive": "On Use: Buildup for 2s before flying for 2.5s to your target location as a meteor of Ragnarok. Can travel up to 30m. Enemies near where you land take 600 Magical Damage and are knocked straight up. Cooldown: 140s You can own up to 3 active items at once",
+  "builds_from": [
+   "Medal of Defense",
+   "Medal of Defense"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Ragnarok's_Wake",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Regrowth Striders",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "45",
+   "Mana Regen": "3",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Heal yourself with an Ability: +25% Movement Speed (decays to 0%) for 4s Cooldown: 10s Gain any Movement Speed buff: +5% Health Heal over 10s",
+  "builds_from": [
+   "Captain's Ring",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Regrowth_Striders",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Reliquary",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Mana Regen": "2"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Soul Reliquary"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Reliquary",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Resolute Mantle",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Max Health": "550",
+   "Tenacity": "10"
+  },
+  "passive": "When Hard Crowd Controlled by an Ability: +25 Health Regen and +5 Tenacity for 4s This effect can stack When stacks fall off, gain 0.5 Health Regen and 1 Tenacity permanently Stacks up to 20 times",
+  "builds_from": [
+   "Veve Charm",
+   "Cleric's Cloak"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Resolute_Mantle",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ring of Dispel",
+  "tier": 2,
+  "cost": 950,
+  "stats": {
+   "Intelligence": "20",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Hard Crowd Control a God: Target has -10 Strength and -16 Intelligence for 4s.",
+  "builds_from": [
+   "Gem",
+   "Ring"
+  ],
+  "builds_into": [
+   "Chronos' Pendant",
+   "Soul Gem",
+   "Spear of Desolation",
+   "Staff of Myrddin",
+   "The Cosmic Horror"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Ring_of_Dispel",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Ring",
+  "tier": 1,
+  "cost": 400,
+  "stats": {
+   "Cooldown Rate": "5"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Adroit Ring",
+   "Caestus",
+   "Captain's Ring",
+   "Ring of Dispel",
+   "Sage's Ring"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Ring",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Riptalon",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Attack Damage": "15",
+   "Attack Speed": "20%",
+   "Lifesteal": "7.5%",
+   "Penetration": "10%"
+  },
+  "passive": "While Above 50% Health: Attacks gain +10% Damage While Below 50% Health: Attacks gain +25% Damage +7.5% Lifesteal",
+  "builds_from": [
+   "Hunter's Bow",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Riptalon",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Rod of Asclepius",
+  "tier": 3,
+  "cost": 2350,
+  "stats": {
+   "Intelligence": "45",
+   "Max Health": "150",
+   "Health Regen": "2.5",
+   "Mana Regen": "2.5"
+  },
+  "passive": "+10% Increased Healing and Shielding Ability Healed an Ally: Your Healing is increased by 0.5% per 1% of your target's missing Health",
+  "builds_from": [
+   "Killing Stone",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Rod_of_Asclepius",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Rod of Tahuti",
+  "tier": 3,
+  "cost": 3000,
+  "stats": {
+   "Intelligence": "85",
+   "Max Mana": "250",
+   "Mana Regen": "2",
+   "Penetration": "5%"
+  },
+  "passive": "+Intelligence equal to 25% of your Intelligence from items.",
+  "builds_from": [
+   "Evil Eye",
+   "Evil Eye"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Rod_of_Tahuti",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Rune",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Magical Protection": "7"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Circle of Protection",
+   "Engraved Guard",
+   "Medal of Disruption",
+   "Sage's Ring"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Rune",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Runeforged Hammer",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Strength": "45",
+   "Max Health": "350",
+   "Health Regen": "3"
+  },
+  "passive": "Hard Crowd Control a God: Mark them with a Rune for 5s Attack to forge the Rune, dealing +50 (+65% of your Item Protections) as Magical Damage Hard Crowd Control a God: -6s Item Cooldown. Cooldown: 30s",
+  "builds_from": [
+   "Battle Axe",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Runeforged_Hammer",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Runic Hide",
+  "tier": 2,
+  "cost": 850,
+  "stats": {
+   "Dampening": "10"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Alchemist Coat"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Runic_Hide",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sabre",
+  "tier": 1,
+  "cost": 550,
+  "stats": {
+   "Critical Chance": "7%"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Hooked Sword",
+   "Kopesh"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Sabre",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sage's Ring",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Magical Protection": "12",
+   "Cooldown Rate": "10"
+  },
+  "passive": null,
+  "builds_from": [
+   "Ring",
+   "Rune"
+  ],
+  "builds_into": [
+   "Freya's Tears",
+   "Genji's Guard",
+   "Prophetic Cloak",
+   "Screeching Gargoyle"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Sage's_Ring",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sands Of Time",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Mana Regen": "2",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). +0.4 Mana per second per 10% of missing Mana. Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Pendulum of the Ages"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Sands_Of_Time",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sanguine Lash",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Magical Protection": "30",
+   "Strength": "25",
+   "Lifesteal": "5%"
+  },
+  "passive": "Enemy gods Within 4m: -0.5% Health (max 200) as Physical Damage per 1s. +0.66% for every 10% Lifesteal On Use: Now damages every 0.33s for 4s. Cooldown: 75s You can own up to 3 active items at once",
+  "builds_from": [
+   "Circle of Protection",
+   "Adamantine Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sanguine_Lash",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sash",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Health Regen": "2"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Olmec Blue"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Sash",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Scepter of Dominion",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Intelligence": "30",
+   "Max Health": "150",
+   "Max Mana": "200",
+   "Mana Regen": "3"
+  },
+  "passive": "On Use: Create a zone that puts gods into Stasis. The Zone appears after 1s The Stasis lasts 2s Cooldown: 90s You can own up to 3 active items at once",
+  "builds_from": [
+   "Flaming Pearl",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Scepter_of_Dominion",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Screeching Gargoyle",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Magical Protection": "50",
+   "Cooldown Rate": "15"
+  },
+  "passive": "On Use: Enemies in front of you: Silenced for 1s -10% Protections for 4s Cooldown: 90s During Moonlight Phase: Hits enemies around you Silence lasts 1.5s -15% Protections You can own up to 3 active items at once",
+  "builds_from": [
+   "Sage's Ring",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Screeching_Gargoyle",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Scythe",
+  "tier": 1,
+  "cost": 550,
+  "stats": {
+   "Lifesteal": "4%"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Adamantine Sickle",
+   "Cursed Sickle"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Scythe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Seismic Mod",
+  "tier": "God Specific",
+  "cost": 0,
+  "stats": {},
+  "passive": "Earthshaker Knocks Up and Trembles enemies it hits for 2s. Set 3 - You can only have one Mod from each set.Requires level 14.",
+  "builds_from": [],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Seismic_Mod",
+  "last_verified": "2026-08-14",
+  "god": "Vulcan"
+ },
+ {
+  "type": "smite-item",
+  "name": "Selflessness",
+  "tier": 1,
+  "cost": 550,
+  "stats": {
+   "Physical Protection": "10",
+   "Magical Protection": "10",
+   "Max Health": "100"
+  },
+  "passive": "Ally god within 8.8m is hit by Hard CC: Shield them for 25+5% of your Max Health Cooldown: 20s Requires Level 20 to upgrade",
+  "builds_from": [],
+  "builds_into": [
+   "Heroism"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Selflessness",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sharpshooter's Arrow",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Attack Damage": "60",
+   "Attack Speed": "25%",
+   "Critical Chance": "15%"
+  },
+  "passive": "+5% Gold Gain from Kills and AssistsIncreased Attack Damage against enemy Gods farther away, capping at +10% at 6m. Requires Level 20.",
+  "builds_from": [
+   "Gilded Arrow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sharpshooter's_Arrow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shell of Rebuke",
+  "tier": "Relic",
+  "cost": 2500,
+  "stats": {
+   "Magical Protection": "20",
+   "Physical Protection": "20"
+  },
+  "passive": "+7.5% of all Stats from Items. On Use: Create a field of rebuke for allies that mitigates 25% Damage, up to 300 (+40 Per Level). Upon Entering Field: +100 (+10 per Level) Shield for 3s. While it holds, gain player and player-made wall passthrough Cooldown: 120s",
+  "builds_from": [
+   "Phantom Shell",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shell_of_Rebuke",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shield Splitter",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Strength": "45",
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": "On Use: Fire a projectile 11.2m forward. +40 (+5 per Level) True Damage If an enemy is Shielded: -70% Shield You gain a Shield equal to the amount of Shield reduced Cooldown: 15s You can own up to 3 active items at once",
+  "builds_from": [
+   "Skeggox",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shield_Splitter",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shield of the Phoenix",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "35",
+   "Plating": "5",
+   "Max Health": "225",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Ability Hit a God: +1.5% Health Heal +2% Mana Restore Triggers once per Ability, per god.",
+  "builds_from": [
+   "Medal of Defense",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shield_of_the_Phoenix",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shield",
+  "tier": 1,
+  "cost": 300,
+  "stats": {
+   "Physical Protection": "6"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Captain's Ring",
+   "Engraved Guard",
+   "Legionnaire Armor",
+   "Medal of Defense"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Shield",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shifter's Shield",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Physical Protection": "25",
+   "Magical Protection": "25",
+   "Max Health": "200",
+   "Health Regen": "4"
+  },
+  "passive": "Over 75% Health:+30 Strength or +40 Intelligence (whichever is higher). Under 75% Health: +20 Physical and Magical Protection.",
+  "builds_from": [
+   "Survivor's Sash",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shifter's_Shield",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shogun's Ofuda",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Magical Protection": "40",
+   "Dampening": "5",
+   "Max Health": "200",
+   "Attack Speed": "15%"
+  },
+  "passive": "+20% Attack Speed for you and allies within 8.8m.",
+  "builds_from": [
+   "Medal of Disruption",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shogun's_Ofuda",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shrapnel Mod",
+  "tier": "God Specific",
+  "cost": 0,
+  "stats": {},
+  "passive": "Inferno Cannon applies additional damage over time on hit. Hits 6 times over 3s for 3/6/9/12/15 + 2% INT per hit. Set 2 - You can only have one Mod from each set. Requires level 7.",
+  "builds_from": [],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shrapnel_Mod",
+  "last_verified": "2026-08-14",
+  "god": "Vulcan"
+ },
+ {
+  "type": "smite-item",
+  "name": "Shroud of Vengeance",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Tenacity": "15"
+  },
+  "passive": "When Hard Crowd Controlled: Release a shockwave around yourself, dealing 50 (+40% of your Protections, up to 650) Physical Damage.",
+  "builds_from": [
+   "Engraved Guard",
+   "Cleric's Cloak"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Shroud_of_Vengeance",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Silverbranch Bow",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Attack Damage": "25",
+   "Attack Speed": "30%",
+   "Penetration": "10%"
+  },
+  "passive": "Every third Attack Hit: Fire a homing Silver Arrow at your target. Damage = 25% of you Basic Attack Damage as Physical Damage Fire 1 arrow for every 1 Attack Speed you have",
+  "builds_from": [
+   "Manchu Bow",
+   "Manchu Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Silverbranch_Bow",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Skeggox",
+  "tier": 2,
+  "cost": 1000,
+  "stats": {
+   "Strength": "15"
+  },
+  "passive": null,
+  "builds_from": [
+   "Axe"
+  ],
+  "builds_into": [
+   "Arondight",
+   "Avatar's Parashu",
+   "Avatar's Parashu",
+   "Avenging Blade",
+   "Barbed Carver",
+   "Bloodforge",
+   "Deathbringer",
+   "Devourer's Gauntlet",
+   "Eye of the Storm",
+   "Jotunn's Revenge",
+   "Lernaean Bow",
+   "Oath-Sworn Spear",
+   "Pendulum Blade",
+   "Shield Splitter",
+   "Tekko-Kagi",
+   "The Crusher",
+   "Tyrfing"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Skeggox",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Soul Gem",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Intelligence": "60",
+   "Lifesteal": "7.5%",
+   "Penetration": "5",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Ability Hit: +1 Stack. Three Stacks: Next Ability Hit: Deals Bonus Damage (40% Intelligence) +20(+6 per Level) Heal you and allies within 3.2m Removes the Stacks",
+  "builds_from": [
+   "Ring of Dispel",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Soul_Gem",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Soul Reaver",
+  "tier": 3,
+  "cost": 2950,
+  "stats": {
+   "Intelligence": "85",
+   "Max Mana": "250",
+   "Mana Regen": "5"
+  },
+  "passive": "Ability Hit: +Bonus Magical Damage. Bonus Damage = +1.2% Target Base Health & +3% Target Item Health, dealt 4 times over 2s. Triggers once per Ability, per god.",
+  "builds_from": [
+   "Oracle Staff",
+   "Soul Reliquary"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Soul_Reaver",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Soul Reliquary",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Intelligence": "20",
+   "Mana Regen": "4"
+  },
+  "passive": null,
+  "builds_from": [
+   "Reliquary",
+   "Gem"
+  ],
+  "builds_into": [
+   "Alchemist Coat",
+   "Ancient Signet",
+   "Soul Reaver"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Soul_Reliquary",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Spear of Desolation",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Intelligence": "75",
+   "Penetration": "10",
+   "Cooldown Rate": "10"
+  },
+  "passive": "God Kill: -3s Non Ultimate Cooldowns -10s Ultimate Cooldowns God Assist: -1.5s Non Ultimate Cooldowns -5s Ultimate Cooldowns",
+  "builds_from": [
+   "Evil Eye",
+   "Ring of Dispel"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Spear_of_Desolation",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Spear of the Magus",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Intelligence": "90",
+   "Penetration": "10%"
+  },
+  "passive": "Ability Hit a God: That God is marked for 8s. Marked Gods take 5% increased damage from all sources.",
+  "builds_from": [
+   "Evil Eye",
+   "Void Shard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Spear_of_the_Magus",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Spectral Armor",
+  "tier": 3,
+  "cost": 2300,
+  "stats": {
+   "Physical Protection": "20",
+   "Plating": "10",
+   "Max Health": "450"
+  },
+  "passive": "You take -30% Damage from Critical Strikes. Ability Critical Strikes are mitigated by your Plating. Allies within 8.8m: Take -15% Damage from Critical Strikes.",
+  "builds_from": [
+   "Plated Metal",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Spectral_Armor",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sphere of Negation",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Intelligence": "40",
+   "Magical Protection": "50"
+  },
+  "passive": "Gain +2% Max Health Magical Shield every 3s, up to a maximum of +14% Max Health.",
+  "builds_from": [
+   "Killing Stone",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sphere_of_Negation",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Spirit Robe",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Tenacity": "15"
+  },
+  "passive": "Hit by Hard Crowd Control: +40 Physical Protection +40 Magical Protection +4% Health Heal over time Buff lasts 6s.",
+  "builds_from": [
+   "Legionnaire Armor",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Spirit_Robe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Staff of Myrddin",
+  "tier": 3,
+  "cost": 2900,
+  "stats": {
+   "Intelligence": "75",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: Next non-Ultimate Ability used will have no cooldown. Cooldown: 80s You can own up to 3 active items at once",
+  "builds_from": [
+   "Killing Stone",
+   "Ring of Dispel"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Staff_of_Myrddin",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Stalwart Sigil",
+  "tier": 2,
+  "cost": 1150,
+  "stats": {
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Draconic Scale",
+   "Dwarven Plate",
+   "Xibalban Effigy"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Stalwart_Sigil",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Stampede",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Physical Protection": "30",
+   "Max Health": "250",
+   "Health Regen": "5"
+  },
+  "passive": "On Use: You and allies within 6.4m gain: Slow Immunity +60% Movement Speed that decays to +20% over 4s Cooldown: 90s You can own up to 3 active items at once",
+  "builds_from": [
+   "Olmec Blue",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Stampede",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Stone of Binding",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35",
+   "Dampening": "5"
+  },
+  "passive": "Hard Crowd Control an Enemy: Apply -10 Physical and Magical Protections for 6s. Stacks up to 3 times. Stacks fall off one at a time.",
+  "builds_from": [
+   "Engraved Guard",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Stone_of_Binding",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Stygian Anchor",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "30"
+  },
+  "passive": "On God Damage Dealt: Apply 40% Healing Reduction for 5s & Apply 1 Stack of Stygian Sludge for 3s. (Max 5)Stacks fall off one at a time. Triggers once per Ability, per god. Per Stack: -3% Attack Speed 5% of their Healing Echoed to you Healing Reduction does not stack with other similar effects.",
+  "builds_from": [
+   "Engraved Guard",
+   "Engraved Guard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Stygian_Anchor",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sun Beam Bow",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Attack Damage": "20",
+   "Attack Speed": "10%"
+  },
+  "passive": "Adaptive Stat: +20 Strength or +40 Intelligence (based on highest item stat). On Use: Fire +2 Projectiles per Attack Deals 10 +30% Attack Damage as Magical Damage 8.8m Range Toggleable -5% Max Mana per second while active. Structures and Bosses take 25% damage from Sun Beam Bow. You can own up to 3 active items at once",
+  "builds_from": [
+   "Manchu Bow",
+   "Survivor's Sash"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sun_Beam_Bow",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sundering Axe",
+  "tier": 2,
+  "cost": 2150,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +50 Intelligence (based on highest item stat). Damage a God: +150 (+10% of your Item Protections) Bonus True Damage +125 Heal Hits only one God per activation Requires Level 20 Cooldown: 8s",
+  "builds_from": [
+   "Warrior's Axe"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sundering_Axe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Sundering Echo",
+  "tier": "Relic",
+  "cost": 2500,
+  "stats": {},
+  "passive": "Adaptive Stat: +25 Strength or +45 Intelligence (based on highest item stat). +7.5% of all Stats from Items. On Use: Bleed enemies, dealing 25 (+4 per Level) True Damage 5 times over 4s. Jungle Monsters and Bosses take 50 (+8 per Level) instead. Enemies who die while bleeding explode, applying the bleed to nearby enemies. -30s Cooldown if only used on Jungle Monsters/Bosses. Cooldown: 120s",
+  "builds_from": [
+   "Sundering Arc",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Sundering_Echo",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Surplus Mod",
+  "tier": "God Specific",
+  "cost": 0,
+  "stats": {},
+  "passive": "You can have 2 Inferno Cannons deployed at the same time. Set 3 - You can only have one Mod from each set.Requires level 14.",
+  "builds_from": [],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Surplus_Mod",
+  "last_verified": "2026-08-14",
+  "god": "Vulcan"
+ },
+ {
+  "type": "smite-item",
+  "name": "Survivor's Sash",
+  "tier": 2,
+  "cost": 1000,
+  "stats": {},
+  "passive": "Adaptive Stat: +25 Strength or +35 Intelligence (based on highest item stat).",
+  "builds_from": [],
+  "builds_into": [
+   "Brawler’s Beat Stick",
+   "Damaru",
+   "Daybreak Gavel",
+   "Eye of Erebus",
+   "Mercury's Talaria",
+   "Omen Drum",
+   "Shifter's Shield",
+   "Sun Beam Bow",
+   "The Executioner",
+   "Vital Amplifier"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Survivor's_Sash",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Talisman of Purification",
+  "tier": "Relic",
+  "cost": 2500,
+  "stats": {
+   "Cooldown Rate": "20"
+  },
+  "passive": "+7.5% of all Stats from Items. On Use: You and Allies within 6.4m: Are Cleansed of all Crowd Control Gain Crowd Control Immunity for 1s Cooldown: 140s",
+  "builds_from": [
+   "Purification Beads",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Talisman_of_Purification",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Tekko-Kagi",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Strength": "40",
+   "Attack Speed": "20%",
+   "Penetration": "10"
+  },
+  "passive": "Ability Used: Gain a stack of Momentum. Momentum grants +7% Pathfinding for 8s. Stacks up to 3 times.",
+  "builds_from": [
+   "Skeggox",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Tekko-Kagi",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "The Cosmic Horror",
+  "tier": 3,
+  "cost": 2650,
+  "stats": {
+   "Intelligence": "55",
+   "Penetration": "10",
+   "Echo": "20"
+  },
+  "passive": "Each time you Echo: +1 Stack. At 3 Stacks: Next time you Echo: Spawn a tentacle that deals deals Bonus Magical Damage (45% Intelligence over 1.5s) Stacks are removed when a tentacle spawns. Tentacles can spawn once every second. Tentacles will only spawn when hitting a God or Jungle Boss",
+  "builds_from": [
+   "Ring of Dispel",
+   "Bowl Drum"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/The_Cosmic_Horror",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "The Crusher",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Strength": "55",
+   "Penetration": "10"
+  },
+  "passive": "Ability Hit: +Physical Damage. Damage = 35% of your Strength Damage is dealt over 1s Subsequent hits on the same target deal 33% bonus Damage, over 3s.",
+  "builds_from": [
+   "Lucerne Hammer",
+   "Skeggox"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/The_Crusher",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "The Executioner",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Attack Speed": "20%"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +55 Intelligence (based on hightest item stat). Attack a God or Boss: Apply 1 Stack of Piercing.Piercing reduces 7% Protections for 4s. Stacks up to 4 times.",
+  "builds_from": [
+   "Survivor's Sash",
+   "Hunter's Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/The_Executioner",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "The Reaper",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Strength": "45",
+   "Lifesteal": "7.5%",
+   "Penetration": "10"
+  },
+  "passive": "Kill a God: Heal +15% of Slain God's Max Health Assist a God: Heal +7.5% of Slain God's Max Health During Moonlight Phase: Heal +15% of Slain God's Max Health, on Kill or Assist",
+  "builds_from": [
+   "Adamantine Sickle",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/The_Reaper",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "The World Stone",
+  "tier": 3,
+  "cost": 2800,
+  "stats": {
+   "Intelligence": "70",
+   "Max Mana": "250",
+   "Mana Regen": "3",
+   "Penetration": "10"
+  },
+  "passive": "-25% Cooldown for your Ultimate Ability.",
+  "builds_from": [
+   "Oracle Staff",
+   "Oracle Staff"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/The_World_Stone",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Thermal Mod",
+  "tier": "God Specific",
+  "cost": 0,
+  "stats": {},
+  "passive": "Backfire and Magma Bomb deal 30 + 20% INT Bonus Magical Damage. Set 2 - You can only have one Mod from each set.Requires level 7.",
+  "builds_from": [],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Thermal_Mod",
+  "last_verified": "2026-08-14",
+  "god": "Vulcan"
+ },
+ {
+  "type": "smite-item",
+  "name": "Thistlethorn Acorn",
+  "tier": "God Specific",
+  "cost": 2000,
+  "stats": {
+   "Strength": "45",
+   "Lifesteal": "5%",
+   "Max Health": "400",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Non-Aspect: Acorn Blast attaches to enemy gods, or stops at max range, and explodes after a delay Aspect: Acorn Blast fires 5 projectiles and debuffs enemies hit, causing them to take more damage from you",
+  "builds_from": [
+   "Lively Acorn"
+  ],
+  "builds_into": [],
+  "god": "Ratatoskr",
+  "source_url": "https://wiki.smite2.com/w/Thistlethorn_Acorn",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Time-lock Aegis",
+  "tier": "Relic",
+  "cost": 2500,
+  "stats": {
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": "+6% of all Stats from Items. On Use: Become time-locked, unable to move and act. You are Immune (to damage and healing) for 2.25s. While Time-Locked, rapidly restore 15s worth of Regen and 7.5s of Cooldowns. Reactivate to exit early. Cooldown: 140s",
+  "builds_from": [
+   "Aegis of Acceleration",
+   "Mote of Chaos"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Time-lock_Aegis",
+  "last_verified": "2026-08-05"
+ },
+ {
+  "type": "smite-item",
+  "name": "Titan's Bane",
+  "tier": 3,
+  "cost": 2850,
+  "stats": {
+   "Strength": "40",
+   "Penetration": "20%"
+  },
+  "passive": "Gain the Shattering effect: First Ability Cast: Gains +20% Penetration This effect ignores the Penetration cap Shattering does not Stack with itself. Cooldown: 10s",
+  "builds_from": [
+   "Lucerne Hammer",
+   "Void Shard"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Titan's_Bane",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Totem of Death",
+  "tier": 3,
+  "cost": 2800,
+  "stats": {
+   "Intelligence": "55",
+   "Echo": "10",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Each time you Echo: Deals Bonus Magical Damage equal to 8% of target's Missing Health Can only affect Gods. Can only occur once every second.",
+  "builds_from": [
+   "Evil Eye",
+   "Adroit Ring"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Totem_of_Death",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Toxic Blade",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Attack Damage": "25",
+   "Max Health": "100",
+   "Attack Speed": "20%",
+   "Penetration": "10"
+  },
+  "passive": "Hit a God with an Attack: Apply 40% Healing Reduction and 7% Attack Speed reduction for 5s. Gain 7% Attack Speed for 5s. Attack Speed Buff and Debuff can stack up to 3 times.",
+  "builds_from": [
+   "Manchu Bow",
+   "Manchu Bow"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Toxic_Blade",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Transcendence",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Strength": "35",
+   "Max Mana": "250",
+   "Mana Regen": "4"
+  },
+  "passive": "+Strength equal to 3% of Mana from Items. Deal 700 Damage to Minions or Jungle Monsters: +1 Evolve Stack +1 Mana Infusion Stack (Max 50 Stacks) Damage dealt to Gods counts double Per Mana Infusion Stack: +10 Mana. At 50 Evolve Stacks, item evolves and gains: +10 Penetration +100 Mana",
+  "builds_from": [
+   "Infused Axe",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Transcendence",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Triton's Conch",
+  "tier": 3,
+  "cost": 2700,
+  "stats": {
+   "Strength": "25",
+   "Intelligence": "40",
+   "Max Health": "250"
+  },
+  "passive": "You and allies within 8.8m: +5 (+0.5 per Level) Strength +5 (+1 per Level) Intelligence",
+  "builds_from": [
+   "Zither",
+   "Veve Charm"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Triton's_Conch",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Typhon’s Heart",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Intelligence": "80",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "On Minion or Jungle Kill: +1 StackOn God Kill: +30 StacksOn Assist: +15 Stacks At 30 Stacks: Summon a Monster of Typhon Health = 200 (+55 per Level) Damage = 300% of your Lifesteal and 30% of your Intelligence Your Lifesteal heals the monster If another would be summoned: Fully Heal current monster Buff it with +25% Health, Attack Speed, and Movement Speed (Stacks up to 5x)",
+  "builds_from": [
+   "Killing Stone",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Typhon’s_Heart",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Tyrfing",
+  "tier": 3,
+  "cost": 2400,
+  "stats": {
+   "Strength": "25",
+   "Attack Damage": "25",
+   "Attack Speed": "10%"
+  },
+  "passive": "Attacks deal +15 bonus Physical Damage. On God hit: Increase bonus Damage by +15 for 4s Stacks once, +1 Stack per 4 Levels (Max 6 Stacks)",
+  "builds_from": [
+   "Manchu Bow",
+   "Skeggox"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Tyrfing",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Umbral Link",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Physical Protection": "40",
+   "Lifesteal": "10%"
+  },
+  "passive": "Above 50% Health: Split your Lifesteal Healing with allies within 11.2m. +10 Physical and Magical Protections for 8s per unique ally Healed",
+  "builds_from": [
+   "Legionnaire Armor",
+   "Cursed Sickle"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Umbral_Link",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Vampiric Shroud",
+  "tier": 1,
+  "cost": 600,
+  "stats": {
+   "Max Health": "100",
+   "Lifesteal": "4%"
+  },
+  "passive": "Adaptive Stat: +10 Strength or +20 Intelligence (based on highest item stat). Ability Hit: +4 Health Heal +4 Mana Recovery Once per target, per Ability. Requires Level 20 to upgrade.",
+  "builds_from": [],
+  "builds_into": [
+   "Blood-soaked Shroud"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Vampiric_Shroud",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Veve Charm",
+  "tier": 2,
+  "cost": 800,
+  "stats": {
+   "Max Health": "240"
+  },
+  "passive": null,
+  "builds_from": [
+   "Medallion"
+  ],
+  "builds_into": [
+   "Ancile",
+   "Chandra's Grace",
+   "Contagion",
+   "Daybreak Gavel",
+   "Doublet of Binding",
+   "Draconic Scale",
+   "Eros' Bow",
+   "Eye of Providence",
+   "Gem of Isolation",
+   "Kinetic Cuirass",
+   "Leviathan's Hide",
+   "Midgardian Mail",
+   "Mystical Mail",
+   "Resolute Mantle",
+   "Spectral Armor",
+   "Triton's Conch"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Veve_Charm",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Vital Amplifier",
+  "tier": 3,
+  "cost": 2500,
+  "stats": {
+   "Max Health": "200",
+   "Health Regen": "3",
+   "Attack Speed": "10%"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +45 Intelligence (based on highest item stat). Heal yourself with an Ability: +7.5% Attack Speed +5% Attack Damage (Ranged) +10% Attack Damage (Melee) Buff lasts 6s, Stacks up to 3x",
+  "builds_from": [
+   "Survivor's Sash",
+   "Olmec Blue"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Vital_Amplifier",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Void Shard",
+  "tier": 2,
+  "cost": 900,
+  "stats": {
+   "Penetration": "10%"
+  },
+  "passive": null,
+  "builds_from": [],
+  "builds_into": [
+   "Obsidian Shard",
+   "Spear of the Magus",
+   "Titan's Bane"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Void_Shard",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Void Shield",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Physical Protection": "55",
+   "Max Health": "150"
+  },
+  "passive": "Enemies within 8.8m: -10% Physical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range",
+  "builds_from": [
+   "Medal of Defense",
+   "Legionnaire Armor"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Void_Shield",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Void Stone",
+  "tier": 3,
+  "cost": 2550,
+  "stats": {
+   "Magical Protection": "60",
+   "Max Health": "150"
+  },
+  "passive": "Enemies Within 8.8m: -10% Magical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range",
+  "builds_from": [
+   "Medal of Disruption",
+   "Circle of Protection"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Void_Stone",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "War Banner",
+  "tier": 2,
+  "cost": 1850,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Attack Speed": "30%"
+  },
+  "passive": "Kill or Assist Minion or Jungle Monster: You and allies within 8.8m gain: +1% Health Heal +1.25% Mana Restore +3.5% Movement Speed +6.5% Attack Speed Movement and Attack Speed Buff lasts 10s, Stacks up to 6 times Requires Level 20 to upgrade.",
+  "builds_from": [
+   "War Flag"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/War_Banner",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "War Flag",
+  "tier": 1,
+  "cost": 600,
+  "stats": {
+   "Physical Protection": "10",
+   "Magical Protection": "10",
+   "Attack Speed": "10%"
+  },
+  "passive": "Kill or Assist Minion or Jungle Monster; You and Allied Gods within 8.8m gain: +0.5% Movement Speed +1% Attack Speed Buff lasts 10s, Stacks up to 6 times Assist Minion or Jungle Monster; You and Allied Gods within 8.8m: Heal 7 Health Requires Level 20 to upgrade",
+  "builds_from": [],
+  "builds_into": [
+   "War Banner"
+  ],
+  "source_url": "https://wiki.smite2.com/w/War_Flag",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Warrior's Axe",
+  "tier": 1,
+  "cost": 650,
+  "stats": {
+   "Physical Protection": "10",
+   "Magical Protection": "10"
+  },
+  "passive": "Adaptive Stat: +10 Strength or +20 Intelligence (based on highest item stat). Damage a God: +20 (+2 per Level) Bonus True Damage +40 (+1 per Level) Heal Hits only one God per activation Requires Level 20 to upgrade. Cooldown: 8s",
+  "builds_from": [],
+  "builds_into": [
+   "Sundering Axe"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Warrior's_Axe",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Wish-Granting Pearl",
+  "tier": 3,
+  "cost": 3550,
+  "stats": {
+   "Intelligence": "120",
+   "Max Health": "425",
+   "Max Mana": "200"
+  },
+  "passive": null,
+  "builds_from": [
+   "Flaming Pearl",
+   "Odigba"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Wish-Granting_Pearl",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Wyrmskin Hide",
+  "tier": 3,
+  "cost": 2600,
+  "stats": {
+   "Strength": "20",
+   "Magical Protection": "25",
+   "Dampening": "5",
+   "Max Health": "300"
+  },
+  "passive": "Hit a God (once every 8s): Gain 1 Dampening per level against them.",
+  "builds_from": [
+   "Battle Axe",
+   "Medal of Disruption"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Wyrmskin_Hide",
+  "last_verified": "2026-11-02"
+ },
+ {
+  "type": "smite-item",
+  "name": "Xibalban Effigy",
+  "tier": 3,
+  "cost": 2750,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Max Mana": "300",
+   "Mana Regen": "4"
+  },
+  "passive": "On Use: Take 50% Damage for 4s. After: Take Physical Damage equal to mitigated Damage Cannot drop below 5% Health Cooldown: 90s During Moonlight Phase: Only 50% of the mitigated Damage is dealt back You can own up to 3 active items at once",
+  "builds_from": [
+   "Stalwart Sigil",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Xibalban_Effigy",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Yogi's Necklace",
+  "tier": 3,
+  "cost": 2250,
+  "stats": {
+   "Max Health": "325",
+   "Max Mana": "250",
+   "Health Regen": "6",
+   "Mana Regen": "6"
+  },
+  "passive": "Heal +0.5% of your Max Health per second.",
+  "builds_from": [
+   "Olmec Blue",
+   "Mana Tome"
+  ],
+  "builds_into": [],
+  "source_url": "https://wiki.smite2.com/w/Yogi's_Necklace",
+  "last_verified": "2026-08-01"
+ },
+ {
+  "type": "smite-item",
+  "name": "Zither",
+  "tier": 2,
+  "cost": 1100,
+  "stats": {
+   "Strength": "12",
+   "Intelligence": "20"
+  },
+  "passive": null,
+  "builds_from": [
+   "Axe",
+   "Gem"
+  ],
+  "builds_into": [
+   "Bragi's Harp",
+   "Death Metal",
+   "Triton's Conch"
+  ],
+  "source_url": "https://wiki.smite2.com/w/Zither",
+  "last_verified": "2026-08-01"
+ }
+]
