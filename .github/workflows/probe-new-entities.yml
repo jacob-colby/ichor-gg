@@ -1,19 +1,24 @@
 # Record the wiki pages the new-entity path reads (roster, Items index, every
-# untracked god and item), from a runner. Read-only against the wiki. On a
-# feature-branch push it commits the responses as test fixtures; dispatched,
-# it only uploads them.
+# untracked god and item), from a runner. Read-only against the wiki.
+#
+# DISPATCH ONLY, AND IT NEVER COMMITS. It used to run on every feature-branch
+# push touching this file or the probe script and commit what it recorded.
+# "Untracked" is decided against the live `data/` at probe time, so once PR #70
+# added Nike, Hachiman, Kuzenbo and Hel the next re-record dropped all four from
+# `index.json` (f454b88, reaching main via #71) and turned 17 tests in
+# `test_new_entities` red, and it then pushed the same re-record onto an
+# unrelated branch (cff891a, #73). Those fixtures are fixed inputs: the tests
+# were written against the 0fd5b9d recording and `_forget_items` exists so they
+# keep passing as the live pool grows. Re-recording is a deliberate human step:
+# dispatch this, download the `new-entities` artifact, and commit it alongside
+# the test changes it needs.
 name: Probe new wiki entities
 
 on:
   workflow_dispatch:
-  push:
-    branches-ignore: [main]
-    paths:
-      - ".github/workflows/probe-new-entities.yml"
-      - "pipeline/scripts/probe_new_entities.py"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   probe:
@@ -34,10 +39,3 @@ jobs:
         with:
           name: new-entities
           path: pipeline/smite/tests/fixtures/recorded/new_entities
-      - name: Commit recorded fixtures
-        if: github.event_name == 'push'
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pipeline/smite/tests/fixtures/recorded/new_entities
-          git diff --cached --quiet || { git commit -m "test(fixtures): record new-entity wiki pages from a runner"; git push; }
