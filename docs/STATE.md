@@ -2507,7 +2507,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1029) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1033) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2571,7 +2571,17 @@ green with two warnings that a human should read:
     percent. Raw OB40's own 1.9x had a leave-one-out range of [1.48, 2.34],
     so it was never a stable reference. Pinning both columns back to OB40
     prices on OB46 data changes **0 of 90** Conquest cores. No code was
-    changed for either shift.
+    changed for either shift. **Fixed 2026-11-02: the check now reads the
+    shipped fit.** `efficiency.penetration_split` applies `_weights.yaml`'s
+    pricing flags and warns only when the shipped `Penetration %`/`Penetration`
+    ratio is at or below `PENETRATION_SPLIT_FLOOR = 1.0`. Shipped: OB40 1.26x
+    (leave-one-out [1.18, 1.38]), OB46 1.10x ([1.05, 1.20]); both frozen in
+    `tests/fixtures/frozen/`. 1.0 is not fitted between them. It is the point
+    where a percent point is priced no dearer than a flat one, which is wrong
+    against any target above 100 protections, and it sits under OB46's whole
+    leave-one-out range. Above it the ratio is a property of the item set, and
+    1.10 → 1.26 moved no core. The raw ratio stays in the message as
+    information only and never warns. The derivation is next to the constant.
 
 Two of the fourteen were not test pinning. **Blinking Abyss was never newly
 buildable.** `_stats_from_prose` read `Deal 25 (+10% Strength &
@@ -2617,7 +2627,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1029 pipeline · 775 viewer |
+| Tests | 1033 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

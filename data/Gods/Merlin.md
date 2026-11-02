@@ -183,8 +183,8 @@ abilities:
   - After the explosion reaches its apex, it collapses in on itself dealing Magical
     Damage again
   - During the explosion time, you can choose which stance to enter into next
-  - 'Damage: 0 | 80 | 110 | 140 | 170 | 210'
-  - 'Damage Scaling: 15% Intelligence'
+  - 'Damage: 0 | 90 | 120 | 150 | 180 | 220'
+  - 'Damage Scaling: 25% Intelligence'
   - 'Radius: 4 meters'
   - 'Cooldown: 40 | 40 | 35 | 30 | 25 | 20 seconds'
   - 'Cost: 40 | 40 | 50 | 60 | 70 | 80 mana'
@@ -416,8 +416,8 @@ abilities:
   - After the explosion reaches its apex, it collapses in on itself dealing Magical
     Damage again
   - During the explosion time, you can choose which stance to enter into next
-  - 'Damage: 0 | 80 | 110 | 140 | 170 | 210'
-  - 'Damage Scaling: 15% Intelligence'
+  - 'Damage: 0 | 90 | 120 | 150 | 180 | 220'
+  - 'Damage Scaling: 25% Intelligence'
   - 'Slow: 0 | 20 | 20 | 20 | 20 | 20%'
   - 'Slow Duration: 0 | 2 | 2 | 2 | 2 | 2 seconds'
   - 'Radius: 4 meters'
@@ -444,7 +444,7 @@ aspects:
     a random Stance is selected with 2 random primary abilities, Flicker will always
     persist. Using Elemental Mastery provides an Intelligence buff for a short duration.
 source_url: https://wiki.smite2.com/w/Merlin
-last_verified: '2026-08-09'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Merlin Basic Attack

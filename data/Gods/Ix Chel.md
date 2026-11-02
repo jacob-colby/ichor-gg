@@ -213,12 +213,15 @@ abilities:
   cost:
   - 90.0
   details:
-  - Simultaneously hitting an enemy god and allied god extends the channel
-  - Repeated hits deal increasing damage; this bonus rapidly decays when hits stop
+  - This ability lasts for 3 seconds, ticking every 0.2 seconds
+  - Simultaneously hitting an enemy god and allied god extends the channel, up to
+    a maximum of 6 seconds
+  - Repeated hits deal increasing damage, up to +100%; this bonus rapidly decays when
+    hits stop
   - Firing the beam grants maximum Rainbow Weaver stacks
   - If you start the Ability with maximum Rainbow Weaver stacks, gain bonus Echo for
     the duration
-  - 'Damage Per Tick: 26 | 38 | 40 | 52 | 64'
+  - 'Damage Per Tick: 23 | 35 | 47 | 59 | 71'
   - 'Damage Scaling Per Tick: 8% Intelligence'
   - 'Heal Per Tick: 2% of Missing Health'
   - 'Echo: 20'
@@ -227,6 +230,7 @@ abilities:
   - 'Cooldown: 110 seconds'
   - 'Cost: 90 mana'
   detail_kinds:
+  - null
   - null
   - null
   - null
@@ -247,9 +251,9 @@ aspects:
 - name: Aspect of the Mother's Light
   kit_changes: Gleaming Blast and the Great End no longer deal damage. Gleaming Blast
     now shields ally gods and slows enemy gods. Lunar Invocation and the Great End
-    have greatly increased healing
+    have greatly increased healing.
 source_url: https://wiki.smite2.com/w/Ix_Chel
-last_verified: '2026-08-19'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Ix Chel Basic Attack

@@ -46,3 +46,24 @@ def item(name: str) -> dict:
 
 def god(name: str) -> dict:
     return json.loads((ROOT / "gods.json").read_text(encoding="utf-8"))[name]
+
+
+OB46_ROOT = Path(__file__).resolve().parent / "fixtures" / "frozen" / "ob46"
+
+
+@lru_cache(maxsize=None)
+def _ob46_items() -> tuple:
+    return tuple(json.loads((OB46_ROOT / "items.json").read_text(encoding="utf-8")))
+
+
+def ob46_items() -> list:
+    """Every named item at Open Beta 46, for the penetration-split check
+    (`efficiency.penetration_split`) that was calibrated on it and on OB40.
+
+    Taken from f20dc13 — the OB46 data the refresh workflow wrote on PR #66's
+    branch before it was reverted — read with `notes.read_note`, and with the
+    one parser fix PR #66 shipped applied: Survivor's Sash and Sundering Echo
+    lose the `Strength`/`Intelligence` that `_stats_from_prose` read out of
+    their `Adaptive Stat: +X Strength or +Y Intelligence` clause. Same rule as
+    the OB40 files: never regenerate to make a test pass."""
+    return json.loads(json.dumps(list(_ob46_items())))

@@ -929,3 +929,74 @@ def offmap_adjusted_score(eff_row, role_map, strength, exempt=()):
         return score
     return max(0.0, min(score - strength * offmap_gold(eff_row, role_map, exempt)
                         / (eff_row.get("span") or 1.0), 1.0))
+
+
+# ── Penetration split health check ─────────────────────────────────────────
+
+# The shipped fit's `Penetration %` / `Penetration` gold ratio at or below
+# which the split is reported as collapsed. Measured 2026-11-02 under the
+# shipped pricing flags (`_weights.yaml`), on the frozen Open Beta 40 and
+# Open Beta 46 item sets in `tests/fixtures/frozen/`:
+#
+#                     shipped fit                 raw fit (flags OFF)
+#                     ratio  leave-one-out        ratio
+#     Open Beta 40    1.258  [1.18, 1.38]         1.92
+#     Open Beta 46    1.104  [1.05, 1.20]         1.39
+#
+# 1.0 is not tuned between those, it is where the fit stops making sense:
+# at or below it a point of percentage penetration is priced no dearer than a
+# point of flat, which is wrong against any target above 100 protections —
+# every god by the mid game (10% is 30 flat against 300). Everything above it
+# is a property of the patch's item set, not a defect: PR #68 pinned both
+# columns on Open Beta 46 back to Open Beta 40's shipped prices and 0 of 90
+# Conquest cores changed, so 1.10 -> 1.26 moves no build. 1.0 also sits under
+# Open Beta 46's whole leave-one-out range, so no single item's removal on the
+# current data can cross it — a firing is a pool-wide shift, not one reprice.
+PENETRATION_SPLIT_FLOOR = 1.0
+
+
+def _penetration_columns(items, weights):
+    before = apply_pricing_flags(weights)
+    try:
+        gold, _ = fit_gold_values(items)
+    finally:
+        restore_pricing_flags(before)
+    pct, flat = gold.get("Penetration %", 0.0), gold.get("Penetration", 0.0)
+    return {"percent": pct, "flat": flat,
+            "ratio": pct / flat if flat > 0 else float("inf")}
+
+
+def penetration_split(items, weights=None):
+    """How far apart the two penetration columns sit, under the pricing
+    configuration the site ships and, for information, with every flag OFF.
+
+    Returns `{"shipped": cols, "raw": cols, "collapsed": bool, "report": str}`
+    where `cols` is `{"percent", "flat", "ratio"}` in gold per point.
+    `collapsed` reads the SHIPPED ratio against `PENETRATION_SPLIT_FLOOR` and
+    nothing else.
+
+    WHY NOT THE RAW FIT. This check used to read `fit_gold_values` with no
+    flags set, which is not the model anyone ships: the raw ratio went 1.92 ->
+    1.39 on the Open Beta 46 data and warned, while the shipped one went 1.26
+    -> 1.10 and changed no core (PR #68, `docs/STATE.md`). Pricing passives,
+    conversions and adaptive grants moves gold off the penetration columns
+    that the raw fit had to park there, so the raw ratio swings on things the
+    shipped model already accounts for. It stays in the report so its history
+    is not lost, and it never sets `collapsed`.
+
+    `weights` defaults to `_weights.yaml`, the file `recommend.main` and the
+    gates apply. The module's flags are restored on return either way."""
+    if weights is None:
+        from smite import recommend, scoring
+        weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    shipped = _penetration_columns(items, weights)
+    raw = _penetration_columns(items, {})
+    collapsed = shipped["ratio"] <= PENETRATION_SPLIT_FLOOR
+    report = (
+        f"penetration split (shipped fit): {shipped['percent']:.1f} % vs "
+        f"{shipped['flat']:.1f} flat gold/point = {shipped['ratio']:.2f}x "
+        f"(floor {PENETRATION_SPLIT_FLOOR:.2f}x)"
+        f"{' — COLLAPSED' if collapsed else ''}\n"
+        f"  raw fit, flags off, information only: {raw['percent']:.1f} vs "
+        f"{raw['flat']:.1f} = {raw['ratio']:.2f}x")
+    return {"shipped": shipped, "raw": raw, "collapsed": collapsed, "report": report}

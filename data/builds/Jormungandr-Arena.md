@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Void Shield
+  - Berserker's Shield
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Berserker's Shield
   - Stampede
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -23,20 +23,20 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.59
-      efficiency: 0.47
+    Berserker's Shield:
+      total: 0.61
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.48
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.5
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -73,55 +73,49 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Eros' Bow
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
+  - Soul Gem
   flex_slots:
   - Erosion
-  - Stampede
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Eros' Bow:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Rod of Asclepius:
-      total: 0.7
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.82
     Erosion:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Stampede:
-      total: 0.61
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
     Pharaoh's Curse:
       total: 0.65
       efficiency: 0.51
@@ -130,10 +124,16 @@ builds:
       fit: 0.79
     Shogun's Ofuda:
       total: 0.64
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -155,29 +155,29 @@ builds:
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
       total: 0.65
-      efficiency: 0.46
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.83
     Void Shield:
       total: 0.7
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.94
     Void Stone:
-      total: 0.69
-      efficiency: 0.45
+      total: 0.7
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -210,7 +210,7 @@ builds:
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Shogun's Ofuda
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -220,17 +220,17 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -254,7 +254,7 @@ builds:
       fit: 0.73
     Shogun's Ofuda:
       total: 0.61
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Jotunn's Revenge
+  - Genji's Guard
   - Freya's Tears
+  - Eros' Bow
   - Erosion
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Freya's Tears
-  - Jotunn's Revenge
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -293,18 +293,24 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.54
+    Genji's Guard:
+      total: 0.55
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.41
     Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Eros' Bow:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Erosion:
       total: 0.6
       efficiency: 0.51
@@ -317,15 +323,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Pharaoh's Curse
   - Shogun's Ofuda
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -353,17 +353,17 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.69
     Amanita Charm:
       total: 0.81
       efficiency: 0.65
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -398,31 +398,43 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
+  - Eros' Bow
   - Amanita Charm
   - Erosion
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Triton's Conch
   flex_slots:
+  - Pharaoh's Curse
   - Shogun's Ofuda
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Eros' Bow:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
@@ -435,43 +447,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Stampede:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Pharaoh's Curse:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Triton's Conch:
-      total: 0.58
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
-  - Void Shield
+  - Berserker's Shield
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Berserker's Shield
   - Stampede
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -480,20 +480,20 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.59
-      efficiency: 0.47
+    Berserker's Shield:
+      total: 0.61
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.48
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.5
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.78

@@ -8,17 +8,17 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
-  - Dreamer's Idol
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -38,31 +38,31 @@ builds:
       pick: 0.0
       fit: 0.64
     Spear of Desolation:
-      total: 0.58
-      efficiency: 0.58
+      total: 0.59
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.85
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Obsidian Shard:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Dreamer's Idol:
-      total: 0.58
-      efficiency: 0.51
+    Rod of Tahuti:
+      total: 0.66
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.46
+    Eros' Bow:
+      total: 0.66
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Divine Ruin
   - Lotus Sickle
   - Bancroft's Talon
   - Bragi's Harp
   - Rod of Tahuti
+  - Eros' Bow
   - Triton's Conch
   flex_slots:
-  - Divine Ruin
+  - Triton's Conch
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,17 +93,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Lotus Sickle:
       total: 0.48
       efficiency: 0.57
@@ -118,16 +112,22 @@ builds:
       fit: 0.61
     Bragi's Harp:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.85
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Eros' Bow:
+      total: 0.6
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Triton's Conch:
       total: 0.55
       efficiency: 0.38
@@ -140,17 +140,17 @@ builds:
   slot_order:
   - Bragi's Harp
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
-  - Dreamer's Idol
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Obsidian Shard
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
       total: 0.57
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.85
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Obsidian Shard:
-      total: 0.52
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Dreamer's Idol:
-      total: 0.55
-      efficiency: 0.51
+    Rod of Tahuti:
+      total: 0.63
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.4
+    Eros' Bow:
+      total: 0.58
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Shield
   - Void Stone
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Void Shield
+  - Stampede
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Doublet of Binding — magical protection
-    swap_item: Doublet of Binding
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -228,26 +228,26 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Shield:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Void Stone:
       total: 0.56
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Eros' Bow:
+      total: 0.65
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
     Amanita Charm:
-      total: 0.81
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.98
     Erosion:
-      total: 0.6
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Spear of Desolation
-  - Doom Orb
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Dreamer's Idol
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -294,37 +294,37 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
+      total: 0.63
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Obsidian Shard:
       total: 0.62
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Doom Orb:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.85
+      total: 0.72
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Obsidian Shard:
-      total: 0.61
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Dreamer's Idol:
       total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Eros' Bow:
+      total: 0.61
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -334,14 +334,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Divine Ruin
-  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Divine Ruin
-  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,32 +364,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Bracer of The Abyss:
-      total: 0.46
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Nimble Ring:
       total: 0.56
-      efficiency: 0.65
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.85
+      total: 0.59
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.31
+    Eros' Bow:
+      total: 0.59
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Chronos' Pendant
-  - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Chronos' Pendant
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,7 +424,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lotus Sickle:
-      total: 0.51
+      total: 0.5
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -435,26 +435,26 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Bragi's Harp:
-      total: 0.48
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Spear of Desolation:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.6
     Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.85
+      total: 0.57
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.26
+    Eros' Bow:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -496,24 +496,24 @@ builds:
       fit: 0.71
     Toxic Blade:
       total: 0.63
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.59
     Tyrfing:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
   - Bragi's Harp
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Golden Blade
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -560,31 +560,31 @@ builds:
       pick: 0.0
       fit: 0.72
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.44
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Tyrfing:
-      total: 0.6
-      efficiency: 0.48
+      total: 0.61
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.72
     Bragi's Harp:
-      total: 0.59
-      efficiency: 0.44
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Eros' Bow:
+      total: 0.61
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -595,17 +595,17 @@ builds:
   slot_order:
   - Divine Ruin
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
-  - Dreamer's Idol
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -625,31 +625,31 @@ builds:
       pick: 0.0
       fit: 0.64
     Spear of Desolation:
-      total: 0.58
-      efficiency: 0.58
+      total: 0.59
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.85
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Obsidian Shard:
-      total: 0.55
-      efficiency: 0.55
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Dreamer's Idol:
-      total: 0.58
-      efficiency: 0.51
+    Rod of Tahuti:
+      total: 0.66
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.46
+    Eros' Bow:
+      total: 0.66
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0

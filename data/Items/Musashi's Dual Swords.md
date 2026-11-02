@@ -2,7 +2,7 @@
 type: smite-item
 name: Musashi's Dual Swords
 tier: 3
-cost: 2700
+cost: 2600
 stats:
   Strength: '35'
   Critical Chance: 30%
@@ -12,7 +12,7 @@ builds_from:
 - Hooked Sword
 builds_into: []
 source_url: https://wiki.smite2.com/w/Musashi's_Dual_Swords
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 Critically Strike: +15% Movement Speed for 5s.

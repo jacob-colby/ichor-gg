@@ -7,15 +7,17 @@ stats:
   Intelligence: '55'
   Penetration: '10'
   Echo: '20'
-passive: 'Echo > Cooldown Rate: +20% Echo Damage Echo < Cooldown Rate: +35 Intelligence
-  Echo = Cooldown Rate: +20% Echo Damage & +35 Intelligence'
+passive: 'Each time you Echo: +1 Stack. At 3 Stacks: Next time you Echo: Spawn a tentacle
+  that deals deals Bonus Magical Damage (45% Intelligence over 1.5s) Stacks are removed
+  when a tentacle spawns. Tentacles can spawn once every second. Tentacles will only
+  spawn when hitting a God or Jungle Boss'
 builds_from:
 - Ring of Dispel
 - Bowl Drum
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_Cosmic_Horror
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
-Echo > Cooldown Rate: +20% Echo Damage Echo < Cooldown Rate: +35 Intelligence Echo = Cooldown Rate: +20% Echo Damage & +35 Intelligence
+Each time you Echo: +1 Stack. At 3 Stacks: Next time you Echo: Spawn a tentacle that deals deals Bonus Magical Damage (45% Intelligence over 1.5s) Stacks are removed when a tentacle spawns. Tentacles can spawn once every second. Tentacles will only spawn when hitting a God or Jungle Boss
 <!-- WIKI:END -->

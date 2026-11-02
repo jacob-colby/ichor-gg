@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Riptalon
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Lernaean Bow
+  - Eros' Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,38 +31,38 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
-      total: 0.55
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.49
     Riptalon:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
   - Bancroft's Talon
   - Jotunn's Revenge
-  - Bragi's Harp
   - Death Metal
-  - Rod of Tahuti
-  flex_slots:
   - Bragi's Harp
-  - Lernaean Bow
+  - Rod of Tahuti
+  - Eros' Bow
+  flex_slots:
+  - Bancroft's Talon
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.51
@@ -111,38 +105,44 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Death Metal:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Bragi's Harp:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.85
+      total: 0.61
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: crit
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Demon Blade
   - Deathbringer
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -164,37 +164,37 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Death Metal:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.51
     Demon Blade:
-      total: 0.46
-      efficiency: 0.38
+      total: 0.45
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.54
     Deathbringer:
-      total: 0.43
-      efficiency: 0.5
+      total: 0.41
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -206,12 +206,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Spear of Desolation
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Eros' Bow
   - Death Metal
-  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -230,36 +230,36 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
     Death Metal:
-      total: 0.52
-      efficiency: 0.61
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Spear of Desolation:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.85
+      total: 0.6
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.33
+    Eros' Bow:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -269,18 +269,18 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
+  - Eros' Bow
   - Amanita Charm
-  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
+  - Pharaoh's Curse
   - Shogun's Ofuda
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Erosion — magical protection
     swap_item: Erosion
@@ -288,29 +288,29 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Eros' Bow:
+      total: 0.6
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Stampede:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Pharaoh's Curse:
       total: 0.58
       efficiency: 0.51
@@ -319,12 +319,12 @@ builds:
       fit: 0.65
     Shogun's Ofuda:
       total: 0.57
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -335,13 +335,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
   - Spear of Desolation
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Eros' Bow
   - Spear of Desolation
-  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -359,37 +359,37 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Death Metal:
-      total: 0.51
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Spear of Desolation:
-      total: 0.52
-      efficiency: 0.58
+      total: 0.53
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.47
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.85
+      total: 0.64
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Eros' Bow:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Nimble Ring
   - Death Metal
   - Riptalon
+  - Eros' Bow
+  - Soul Gem
   flex_slots:
+  - Death Metal
   - Tyrfing
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,55 +423,55 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.51
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.76
     Tyrfing:
-      total: 0.51
-      efficiency: 0.48
+      total: 0.52
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Death Metal:
-      total: 0.51
-      efficiency: 0.61
+      total: 0.52
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.64
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Eros' Bow
   - Hydra's Lament
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -488,38 +488,38 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.5
-      efficiency: 0.54
+      total: 0.51
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.46
     Spear of Desolation:
-      total: 0.53
-      efficiency: 0.58
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Eros' Bow:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -530,12 +530,12 @@ builds:
   slot_order:
   - Divine Ruin
   - Toxic Blade
-  - Jotunn's Revenge
-  - Bragi's Harp
   - Death Metal
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Toxic Blade
   - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,37 +554,37 @@ builds:
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.52
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Death Metal:
-      total: 0.56
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Eros' Bow:
+      total: 0.59
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,38 +618,38 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
     Death Metal:
-      total: 0.57
-      efficiency: 0.61
+      total: 0.58
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.53
     Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.85
+      total: 0.59
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.31
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -658,15 +658,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Riptalon
+  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Lernaean Bow
+  - Eros' Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -683,38 +683,38 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Toxic Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
-      total: 0.55
-      efficiency: 0.61
+      total: 0.56
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.49
     Riptalon:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.74
+    Rod of Tahuti:
+      total: 0.59
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0

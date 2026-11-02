@@ -13,8 +13,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -33,19 +33,19 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.81
     Void Shield:
       total: 0.66
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
     Void Stone:
       total: 0.66
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -74,21 +74,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Void Shield
+  - Void Stone
   - Amanita Charm
-  - Rod of Asclepius
   - Erosion
   - Stampede
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Void Shield
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -100,13 +100,13 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Void Shield:
-      total: 0.68
-      efficiency: 0.47
+    Void Stone:
+      total: 0.67
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -116,14 +116,8 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Rod of Asclepius:
-      total: 0.77
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.96
     Erosion:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -170,14 +170,14 @@ builds:
       pick: 0.0
       fit: 0.75
     Void Shield:
-      total: 0.74
-      efficiency: 0.47
+      total: 0.73
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Void Stone:
       total: 0.73
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
+  - Nimble Ring
   - Bragi's Harp
-  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -223,29 +223,29 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Bracer of The Abyss:
-      total: 0.38
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Nimble Ring:
-      total: 0.48
-      efficiency: 0.65
+      total: 0.47
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.44
-      efficiency: 0.44
+      total: 0.45
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Eros' Bow:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Void Shield
+  - Void Stone
   - Freya's Tears
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Void Shield
   - Genji's Guard
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -288,26 +288,26 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Void Shield:
+    Void Stone:
       total: 0.58
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.69
     Freya's Tears:
-      total: 0.62
-      efficiency: 0.61
+      total: 0.61
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -325,7 +325,7 @@ builds:
       fit: 0.69
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -340,8 +340,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -360,19 +360,19 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.81
     Void Shield:
       total: 0.66
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
     Void Stone:
       total: 0.66
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -394,5 +394,76 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Void Stone
+  - Draconic Scale
+  - Amanita Charm
+  - Erosion
+  - Stampede
+  flex_slots:
+  - Void Stone
+  - Draconic Scale
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.69
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Void Stone:
+      total: 0.66
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+    Draconic Scale:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Erosion:
+      total: 0.75
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Stampede:
+      total: 0.68
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: Draconic Scale
+    removed: Void Shield
+    reason: Conquest community 73% win over 49 matches (vs 57% on this god), taking
+      the model's weakest slot from Void Shield
+  borrowed_from: Conquest
   starter: *id001
 ---

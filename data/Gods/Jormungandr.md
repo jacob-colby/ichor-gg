@@ -14,9 +14,15 @@ base_stats:
   health:
     base: 668.5
     per_level: 101.52
+  health_regen:
+    base: 1.84
+    per_level: 0.22
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.5
     per_level: 3.24
@@ -26,18 +32,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 20.0
     per_level: 4.0
-  health_regen:
-    base: 1.84
-    per_level: 0.22
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Jormungandr Basic Attack
@@ -54,9 +54,6 @@ abilities:
   - 'Attack Speed Conversion: 25%'
   - 'Range: 5.6 meters'
   - 'Cone Angle: 45 degrees'
-  description: Deal Magical Damage to all enemies in front of you. As you attack,
-    your Overheat increases causing your firing rate to decrease
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -70,6 +67,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to all enemies in front of you. As you attack,
+    your Overheat increases causing your firing rate to decrease
 - slot: Passive
   name: Immovable
   details:
@@ -81,11 +81,6 @@ abilities:
   - 'Dazed Duration: 2 seconds'
   - 'Debuff Max Stacks: 14'
   - 'Debuff Duration: 6 seconds'
-  description: You are Hard Displacement Immune , but are instead Dazed , a debuff
-    that Slows you and increases the damage you take . Additionally, hits from Attacks
-    and Venomous Haze cause enemy gods to gain a Debuff stack. At max stacks, the
-    next hit deals damage based on your Max Health or Strength , and resets the Debuff
-  damage_type: magical
   detail_kinds:
   - stun
   - magical
@@ -94,6 +89,11 @@ abilities:
   - debuff
   - debuff
   - debuff
+  damage_type: magical
+  description: You are Hard Displacement Immune , but are instead Dazed , a debuff
+    that Slows you and increases the damage you take . Additionally, hits from Attacks
+    and Venomous Haze cause enemy gods to gain a Debuff stack. At max stacks, the
+    next hit deals damage based on your Max Health or Strength , and resets the Debuff
 - slot: 1st Ability
   name: Venomous Haze
   cooldown:
@@ -120,7 +120,7 @@ abilities:
   - 'Damage Scaling Per Tick: 5% Intelligence'
   - 'Slow: 20%'
   - 'Slow Duration: 1.5 seconds'
-  - 'Healing Reduction: -25%'
+  - 'Healing Reduction: -40%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Extra Cooling: 25% Base Rate'
   - 'Range: 12 meters'
@@ -128,10 +128,6 @@ abilities:
   - 'Outer Radius: 2.4 meters'
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: The cloud deals Magical Damage , Slows , and reduces enemy Healing
-    Fire noxious spit at an area dealing Magical Damage and creating a toxic cloud
-    that persists for 20 seconds
-  damage_type: magical
   detail_kinds:
   - magical
   - buff
@@ -151,6 +147,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: The cloud deals Magical Damage , Slows , and reduces enemy Healing
+    Fire noxious spit at an area dealing Magical Damage and creating a toxic cloud
+    that persists for 20 seconds
 - slot: 2nd Ability
   name: Consuming Bellow
   cooldown:
@@ -173,10 +173,6 @@ abilities:
   - 'Outer Radius: 4.8 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 70 mana'
-  description: Each cloud provides 2 seconds of Attack Empowerment , up to 6 seconds
-    max Channel briefly, drawing power from nearby toxic clouds, then roar to deal
-    Magical Damage , Slow , and Tremble enemies around you
-  damage_type: magical
   detail_kinds:
   - magical
   - buff
@@ -192,6 +188,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Each cloud provides 2 seconds of Attack Empowerment , up to 6 seconds
+    max Channel briefly, drawing power from nearby toxic clouds, then roar to deal
+    Magical Damage , Slow , and Tremble enemies around you
 - slot: 3rd Ability
   name: Submerge
   cooldown:
@@ -214,9 +214,6 @@ abilities:
   - 'Pulse Radius: 20 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: 'into the ground, becoming Stealthed and gaining Movement Speed . Reactivate
-    to emerge, Knocking Up and dealing Magical Damage to enemies Max Duration: 5 seconds'
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -229,6 +226,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: 'into the ground, becoming Stealthed and gaining Movement Speed . Reactivate
+    to emerge, Knocking Up and dealing Magical Damage to enemies Max Duration: 5 seconds'
 - slot: Ultimate
   name: The World Serpent
   cooldown:
@@ -260,9 +260,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Enter into the world before diving up to 3 times across the battlefield.
-    Each time you Submerge you deal Magical Damage to enemies hit
-  damage_type: magical
   detail_kinds:
   - magical
   - stun
@@ -280,6 +277,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Enter into the world before diving up to 3 times across the battlefield.
+    Each time you Submerge you deal Magical Damage to enemies hit
 aspects:
 - name: Aspect of the Unyielding
   kit_changes: Toxic clouds do not deal tick damage but allied gods within them gain
@@ -287,7 +287,7 @@ aspects:
     Venomous Haze. Consuming Bellow does not deal bonus damage but allies gain INT
     and STR. Submerge Knockup height is increased.
 source_url: https://wiki.smite2.com/w/Jormungandr
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Jormungandr Basic Attack

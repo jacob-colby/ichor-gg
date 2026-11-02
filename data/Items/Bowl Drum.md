@@ -8,12 +8,11 @@ stats:
 passive: null
 builds_from: []
 builds_into:
-- Damaru
+- Eye of the Storm
 - Omen Drum
 - The Cosmic Horror
-- The Crusher
 source_url: https://wiki.smite2.com/w/Bowl_Drum
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 

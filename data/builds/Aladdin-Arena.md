@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
-  - Hydra's Lament
   - Pendulum Blade
+  - The Crusher
+  - Titan's Bane
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
-  - Transcendence
+  - Pendulum Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Transcendence:
-      total: 0.45
-      efficiency: 0.52
+    Pendulum Blade:
+      total: 0.65
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.38
-    Hydra's Lament:
-      total: 0.61
+      fit: 0.9
+    The Crusher:
+      total: 0.64
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Titan's Bane:
+      total: 0.66
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.68
-    Pendulum Blade:
-      total: 0.66
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
+      fit: 0.79
     Heartseeker:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -99,37 +99,37 @@ builds:
     data).
   slot_scores:
     Book of Thoth:
-      total: 0.45
+      total: 0.44
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.39
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
     Heartseeker:
-      total: 0.61
-      efficiency: 0.46
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.85
+      total: 0.72
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.57
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.62
+      total: 0.63
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -141,16 +141,16 @@ builds:
   - Jotunn's Revenge
   - Spear of Desolation
   - Pendulum Blade
+  - Obsidian Shard
   - Rod of Tahuti
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Dreamer's Idol
+  - Obsidian Shard
   - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.74
-      efficiency: 0.69
+      total: 0.73
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of Desolation:
-      total: 0.68
-      efficiency: 0.58
+      total: 0.69
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
     Pendulum Blade:
-      total: 0.6
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Obsidian Shard:
+      total: 0.62
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Rod of Tahuti:
-      total: 0.7
-      efficiency: 0.85
+      total: 0.71
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Dreamer's Idol:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -210,8 +210,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -223,20 +223,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.75
     Void Stone:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -260,7 +260,7 @@ builds:
       fit: 0.75
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -269,18 +269,18 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Spear of Desolation
   - The Crusher
-  - Heartseeker
   - Titan's Bane
-  - Avatar's Parashu
+  - Heartseeker
   - Soul Gem
   flex_slots:
-  - Titan's Bane
   - The Crusher
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,38 +294,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.81
-      efficiency: 0.69
+      total: 0.8
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.93
+    Spear of Desolation:
+      total: 0.67
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     The Crusher:
-      total: 0.68
-      efficiency: 0.47
+      total: 0.69
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Titan's Bane:
+      total: 0.71
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.89
     Heartseeker:
-      total: 0.72
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.99
-    Titan's Bane:
-      total: 0.68
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.89
-    Avatar's Parashu:
-      total: 0.72
-      efficiency: 0.45
+      total: 0.71
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.99
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -347,11 +347,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -371,25 +371,25 @@ builds:
       pick: 0.0
       fit: 0.63
     Toxic Blade:
-      total: 0.67
-      efficiency: 0.44
+      total: 0.68
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.91
     Tyrfing:
       total: 0.6
-      efficiency: 0.48
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
     Riptalon:
-      total: 0.73
-      efficiency: 0.51
+      total: 0.71
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.95
     Soul Gem:
-      total: 0.78
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -430,32 +430,32 @@ builds:
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.85
     Hydra's Lament:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.58
+      total: 0.72
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.85
     Pendulum Blade:
       total: 0.63
-      efficiency: 0.42
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.85
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Transcendence
-  - Hydra's Lament
   - Pendulum Blade
+  - The Crusher
+  - Titan's Bane
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
-  - Transcendence
+  - Pendulum Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,38 +489,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.9
-    Transcendence:
-      total: 0.45
-      efficiency: 0.52
+    Pendulum Blade:
+      total: 0.65
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.38
-    Hydra's Lament:
-      total: 0.61
+      fit: 0.9
+    The Crusher:
+      total: 0.64
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Titan's Bane:
+      total: 0.66
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.68
-    Pendulum Blade:
-      total: 0.66
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
+      fit: 0.79
     Heartseeker:
-      total: 0.67
-      efficiency: 0.46
+      total: 0.66
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.89
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0

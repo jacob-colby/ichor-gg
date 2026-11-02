@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 626.52
     per_level: 101.52
+  health_regen:
+    base: 1.93
+    per_level: 0.2
   mana:
     base: 299.36
     per_level: 45.36
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 47.76
     per_level: 2.4
-  health_regen:
-    base: 1.93
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Sobek Basic Attack
@@ -46,13 +46,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Magical Damage to an enemy in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Blessing of the Nile
   details:
@@ -63,8 +63,6 @@ abilities:
   - 'Cooldown Rate Scaling: 0.2 Per Level'
   - 'Buff Duration: 10 seconds'
   - 'Max Buff Stacks: 3'
-  description: When Sobek deals damage he gains a stack of Protections and Cooldown
-    Rate
   detail_kinds:
   - null
   - buff
@@ -73,6 +71,8 @@ abilities:
   - buff
   - buff
   - buff
+  description: When Sobek deals damage he gains a stack of Protections and Cooldown
+    Rate
 - slot: 1st Ability
   name: Charge Prey
   cooldown:
@@ -97,9 +97,6 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 16 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: Dash forward. The first enemy hit takes Magical Damage and stops the
-    dash. Sobek Throws the enemy behind him
-  damage_type: magical
   detail_kinds:
   - stun
   - mechanic
@@ -112,6 +109,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Dash forward. The first enemy hit takes Magical Damage and stops the
+    dash. Sobek Throws the enemy behind him
 - slot: 2nd Ability
   name: Tail Whip
   cooldown:
@@ -131,8 +131,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Spin your tail, dealing Magical Damage in an area around Sobek
-  damage_type: magical
   detail_kinds:
   - stun
   - null
@@ -141,6 +139,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Spin your tail, dealing Magical Damage in an area around Sobek
 - slot: 3rd Ability
   name: Sickening Strike
   cooldown:
@@ -165,17 +165,12 @@ abilities:
   - 'God Disease Damage: 4 | 4.5 | 5 | 5.5 | 6% Max Health over 2.5 seconds'
   - 'Minion Disease Damage: 30 | 45 | 60 | 75 | 90 over 2.5 seconds'
   - 'Heal: 18 | 23 | 28 | 33 | 38'
-  - 'Healing Reduction: -25%'
+  - 'Healing Reduction: -40%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 5.6 meters'
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Diseased enemies take bonus Magical Damage over time , have Reduced
-    Healing , and can spread the Disease for 2.5 seconds Each enemy god hit by the
-    cone reduces this ability's cooldown by 1 second , up to 4 seconds Strike in front
-    of you. This strike deals Magical Damage in a cone and applies Disease
-  damage_type: magical
   detail_kinds:
   - debuff
   - magical
@@ -194,6 +189,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Diseased enemies take bonus Magical Damage over time , have Reduced
+    Healing , and can spread the Disease for 2.5 seconds Each enemy god hit by the
+    cone reduces this ability's cooldown by 1 second , up to 4 seconds Strike in front
+    of you. This strike deals Magical Damage in a cone and applies Disease
 - slot: Ultimate
   name: Lurking in the Waters
   cooldown:
@@ -206,8 +206,8 @@ abilities:
   - 120.0
   details:
   - You may cancel this ability early, dealing reduced damage
-  - Executes enemies below 10-25% HP, scaling with time submerged. Executed or killed
-    enemies Heal you and grants permanent bonus Health
+  - Executes low health enemies if submerged for the full duration. Executed or killed
+    enemies Heal you and grant permanent bonus Health
   - Lurking in the Waters deals 25% of its potential damage if emerging instantly
   - Sobek can pass through enemies and spawned walls while submerged
   - 'Damage: 300 | 420 | 540 | 660 | 780'
@@ -216,16 +216,13 @@ abilities:
   - 'Mana Regen: 10% Per Second'
   - 'Heal: 25% Max Health'
   - 'Bonus Health: 25'
+  - 'Execute Health %: 25%'
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
-  description: deals 25% of its potential damage if emerging instantly Submerge, Slowing
-    enemies nearby and granting you CC Immunity , Protections , and Mana Regen . After
-    4 seconds, emerge dealing Magical Damage to enemies in range
-  damage_type: magical
   detail_kinds:
   - magical
-  - physical
+  - debuff
   - null
   - null
   - magical
@@ -234,16 +231,21 @@ abilities:
   - buff
   - heal
   - buff
+  - physical
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: deals 25% of its potential damage if emerging instantly Submerge, Slowing
+    enemies nearby and granting you CC Immunity , Protections , and Mana Regen . After
+    4 seconds, emerge dealing Magical Damage to enemies in range
 aspects:
 - name: Aspect of Prey
   kit_changes: Charge Prey now passes through all targets, knocks them forward, and
     has bonus scaling. Sickening Strike deals increased damage against Jungle Monsters
     and the cooldown reduction now triggers off Jungle Monsters.
 source_url: https://wiki.smite2.com/w/Sobek
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Sobek Basic Attack

@@ -89,9 +89,9 @@ abilities:
   - Reduces enemy Healing
   - 'Damage: 70 | 105 | 140 | 175 | 210'
   - 'Damage Scaling: 35% Intelligence + 60% Strength'
-  - 'Heal: 30 | 50 | 70 | 90 | 110'
-  - 'Heal Scaling: 25% Intelligence'
-  - 'Healing Reduction: -25%'
+  - 'Heal: 25 | 45 | 65 | 85 | 105'
+  - 'Heal Scaling: 35% Intelligence'
+  - 'Healing Reduction: -40%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 4 meters'
   - 'Radius: 120 degrees'
@@ -152,8 +152,8 @@ abilities:
   - Enemies hit all 5 times are Rooted
   - 'Damage: 15 | 30 | 45 | 60 | 75'
   - 'Damage Scaling: 15% Intelligence'
-  - 'Heal: 10 | 15 | 20 | 25 | 30'
-  - 'Heal Scaling: 3% Intelligence'
+  - 'Heal: 8 | 13 | 18 | 23 | 28'
+  - 'Heal Scaling: 6% Intelligence'
   - 'Slow: 7%'
   - 'Slow Duration: 1 second'
   - 'Root Duration: 1 second'
@@ -211,7 +211,7 @@ abilities:
   - Reduces enemy Healing
   - 'Damage: 40 | 70 | 100 | 130 | 160'
   - 'Damage Scaling: 30% Intelligence + 50% Strength'
-  - 'Healing Reduction: -25%'
+  - 'Healing Reduction: -40%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 4 meters'
   - 'Radius: 120 degrees'
@@ -292,7 +292,7 @@ aspects:
   kit_changes: Artio can only change stances inside the fountain. Upon leaving the
     fountain, her abilities are enhanced and her ultimate changes based on her form.
 source_url: https://wiki.smite2.com/w/Artio
-last_verified: '2026-08-09'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Artio Basic Attack

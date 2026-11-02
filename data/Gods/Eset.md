@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 319.68
     per_level: 45.36
+  mana_regen:
+    base: 1.65
+    per_level: 0.12
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.98
     per_level: 1.51
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 41.04
     per_level: 2.4
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.65
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Eset Basic Attack
@@ -48,8 +48,6 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
   - 'Explosion Radius: 0.96 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -57,6 +55,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Funeral Rites
   details:
@@ -67,10 +67,6 @@ abilities:
   - 'Bonus Damage: 7.5% Intelligence Per Stack'
   - 'Health Regen: 0.4 Per Stack'
   - 'Mana Regen: 0.4 Per Stack'
-  description: Whenever a god dies within 12.8m of Eset, she gains a stack of ; granting
-    Health Regen and Mana Regen to her and nearby allies. Additionally, every third
-    Attack from Eset is empowered; allowing it to hit in a wider radius and dealing
-    Bonus Damage based on her stacks of Invocation
   detail_kinds:
   - buff
   - buff
@@ -78,6 +74,10 @@ abilities:
   - magical
   - buff
   - buff
+  description: Whenever a god dies within 12.8m of Eset, she gains a stack of ; granting
+    Health Regen and Mana Regen to her and nearby allies. Additionally, every third
+    Attack from Eset is empowered; allowing it to hit in a wider radius and dealing
+    Bonus Damage based on her stacks of Invocation
 - slot: 1st Ability
   name: Wing Gust
   cooldown:
@@ -105,10 +105,6 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: While channeling, Eset gains Movement Speed , reduced backpedal and
-    strafing penalties , and Knockback and Root immunity Fire 4 projectiles in a line,
-    each dealing Magical Damage to all targets in their path
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -121,6 +117,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: While channeling, Eset gains Movement Speed , reduced backpedal and
+    strafing penalties , and Knockback and Root immunity Fire 4 projectiles in a line,
+    each dealing Magical Damage to all targets in their path
 - slot: 2nd Ability
   name: Spirit Ball
   cooldown:
@@ -150,11 +150,6 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: Deals 105/172.5/240/307.5/375 + 105% Intelligence Magical Damage ,
-    and Stuns for 1.5 seconds at max range Send forth a ball of spirit energy. While
-    it travels, Eset can re-activate this ability to detonate the ball, dealing Magical
-    Damage and Stunning enemies
-  damage_type: magical
   detail_kinds:
   - magical
   - buff
@@ -167,6 +162,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deals 105/172.5/240/307.5/375 + 105% Intelligence Magical Damage ,
+    and Stuns for 1.5 seconds at max range Send forth a ball of spirit energy. While
+    it travels, Eset can re-activate this ability to detonate the ball, dealing Magical
+    Damage and Stunning enemies
 - slot: 3rd Ability
   name: Dispel Magic
   cooldown:
@@ -197,9 +197,6 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: If Eset successfully hits an enemy god, allies near the or Eset gain
-    a Health Shield Eset Silences and Slows enemy gods at her target location. Enemy
-    gods hit also have reduced Magical Protections
   detail_kinds:
   - shield
   - shield
@@ -214,6 +211,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: If Eset successfully hits an enemy god, allies near the or Eset gain
+    a Health Shield Eset Silences and Slows enemy gods at her target location. Enemy
+    gods hit also have reduced Magical Protections
 - slot: Ultimate
   name: Circle of Protection
   cooldown:
@@ -242,10 +242,6 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Call down your staff and create a Circle of Protective Magic for 5
-    seconds before it explodes, dealing Magical Damage to all enemies and Healing
-    all allies in the area
-  damage_type: magical
   detail_kinds:
   - magical
   - magical
@@ -261,14 +257,18 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Call down your staff and create a Circle of Protective Magic for 5
+    seconds before it explodes, dealing Magical Damage to all enemies and Healing
+    all allies in the area
 aspects:
 - name: Aspect of the Lifewarden
   kit_changes: Dispel Magic no longer requires an enemy god hit to shield allies and
-    now applies Transference to all allies it shields. Wing Gust no longer has damage
+    now applies Transference to all allies it shields. Wing Gust has reduced damage
     scaling, but applies a movement speed aura to allies, and when its projectiles
     hit enemies, all allies with Transference are healed.
 source_url: https://wiki.smite2.com/w/Eset
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Eset Basic Attack

@@ -12,9 +12,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 322.62
     per_level: 48.3
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -24,18 +30,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 40.85
     per_level: 2.21
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Scylla Basic Attack
@@ -44,23 +44,23 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Quick Learner
   details:
   - 'Intelligence: 20 Per Max Ability'
   - 'Mana Regen: 2 Per Max Ability'
-  description: MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional effect
-    at max rank. In addition, gain Intelligence and Mana Regen for each max rank ability
   detail_kinds:
   - buff
   - buff
+  description: MAX RANK ABILITIES ARE STRONGER Your abilities gain an additional effect
+    at max rank. In addition, gain Intelligence and Mana Regen for each max rank ability
 - slot: 1st Ability
   name: Sic 'Em
   cooldown:
@@ -83,9 +83,6 @@ abilities:
   - 'Explosion Radius: 2.4 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Send two hounds forward, Rooting , Crippling , and dealing Magical
-    Damage
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -98,6 +95,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Send two hounds forward, Rooting , Crippling , and dealing Magical
+    Damage
 - slot: 2nd Ability
   name: Crush
   cooldown:
@@ -112,30 +112,32 @@ abilities:
   - At max rank, enemies in the area also have their Magical Protections reduced and
     the field persists if detonated early
   - Reactivate to detonate the field early
-  - This ability does 20% bonus damage to Minion and Jungle Monsters.
+  - This ability does bonus damage to Minion and Jungle Monsters
   - 'Damage: 100 | 155 | 210 | 265 | 320'
   - 'Damage Scaling: 90% Intelligence'
   - 'Slow: 30%'
   - 'Magical Protection Reduced: 10%'
+  - 'Minion and Jungle Monster Bonus Damage: +20%'
   - 'Range: 8.8 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: Creates a magical field that Slows enemies. After 5 seconds it detonates,
-    dealing Magical Damage
-  damage_type: magical
   detail_kinds:
   - debuff
   - null
-  - null
+  - buff
   - magical
   - magical
   - slow
   - debuff
+  - buff
   - mechanic
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Creates a magical field that Slows enemies. After 5 seconds it detonates,
+    dealing Magical Damage
 - slot: 3rd Ability
   name: Sentinel
   cooldown:
@@ -158,11 +160,6 @@ abilities:
   - 'Range: 11.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: vision is granted through line of sight blockers Summon a sentinel
-    at the target area, granting vision of enemies for 5 seconds. Reactive the ability
-    to Leap to the sentinel location and gain a buff that causes your next Attack
-    to deal Magical Damage
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -174,6 +171,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: vision is granted through line of sight blockers Summon a sentinel
+    at the target area, granting vision of enemies for 5 seconds. Reactive the ability
+    to Leap to the sentinel location and gain a buff that causes your next Attack
+    to deal Magical Damage
 - slot: Ultimate
   name: I'm a Monster
   cooldown:
@@ -194,9 +196,6 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: Become CC Immune for the next 6 seconds, and gain Movement Speed .
-    Reactivate to deal Magical Damage at the target area
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -209,6 +208,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Become CC Immune for the next 6 seconds, and gain Movement Speed .
+    Reactivate to deal Magical Damage at the target area
 aspects:
 - name: Aspect of the Devourer
   kit_changes: Your non-ultimate abilities now provide Mana when damaging enemies
@@ -218,7 +220,7 @@ aspects:
     provide max Mana and at max rank you gain bonus Mana. Sentinel's Empowered Attack
     also sclaes with Max Mana, but no longer Cooldown Reduces itself.
 source_url: https://wiki.smite2.com/w/Scylla
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Scylla Basic Attack
