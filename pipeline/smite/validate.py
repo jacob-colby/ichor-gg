@@ -189,21 +189,36 @@ def write_tag_audit(items, tags_map, out_path):
     return issues
 
 
-def check_thresholds(agg, min_win_weighted=0.44, min_spearman=0.30):
+def check_thresholds(agg, min_win_weighted=0.44, min_spearman=None):
     # Floors set 2026-07-23 for the full 87-god roster (rank-favoring weights).
     # At full-roster scale coverage tops out ~57%, so the old 12-god 0.65/0.35
     # is unreachable; these are regression guards below the achievable
     # ~0.46/0.34, not aspirational targets. The manual spot-check is the real
     # "strong build" gate.
+    #
+    # Spearman has NO numeric floor by default (2026-11-02). Its value is set by
+    # the age of SmiteBrain's match window, not by the model or the scrape: the
+    # window resets every patch (2026-10-06, 2026-10-20) and, with code and
+    # weights unchanged, the pooled correlation falls day by day as it fills,
+    # 0.70 -> 0.34 over 10-07..10-14 and 0.72 -> 0.30 over 10-21..10-30.
+    # (`win` is a model input as well as the target, STATE.md section 1, so a
+    # young window's noisy win rates inflate it.) A fixed 0.30 therefore failed
+    # the refresh late in every window, 7 of the 29 days from 10-04 to 11-01,
+    # each with a clean scrape. A floor it crosses on a calendar is not a
+    # regression guard. Still enforced: Spearman n/a (no community pairs at
+    # all, e.g. patch day 2026-10-06) and the win-weighted floor, which held at
+    # 0.47-0.55 across both windows.
     failures = []
     if agg["mean_win_weighted"] < min_win_weighted:
         failures.append(
             f"win-weighted {agg['mean_win_weighted']:.2f} < {min_win_weighted}"
         )
     spearman_val = agg["pooled_spearman"]
-    if spearman_val is None or spearman_val < min_spearman:
-        spearman_display = "n/a" if spearman_val is None else f"{spearman_val:.2f}"
-        failures.append(f"spearman {spearman_display} < {min_spearman}")
+    if spearman_val is None:
+        failures.append(f"spearman n/a < {min_spearman}" if min_spearman is not None
+                        else "spearman n/a (no community win-rate pairs)")
+    elif min_spearman is not None and spearman_val < min_spearman:
+        failures.append(f"spearman {spearman_val:.2f} < {min_spearman}")
     return not failures, failures
 
 

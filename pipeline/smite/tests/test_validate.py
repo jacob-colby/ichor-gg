@@ -68,12 +68,19 @@ def test_check_thresholds_fails_both():
 
 
 def test_check_thresholds_default_floors():
-    # Pin the production defaults (full-roster, rank-favoring): 0.44 / 0.30.
+    # Pin the production defaults: win-weighted 0.44 enforced; Spearman has no
+    # numeric floor (it tracks SmiteBrain's window age, see check_thresholds)
+    # but an empty pool still fails.
     at_floor = {"mean_win_weighted": 0.44, "pooled_spearman": 0.30, "pooled_n": 10}
     assert validate.check_thresholds(at_floor) == (True, [])
     below = {"mean_win_weighted": 0.43, "pooled_spearman": 0.29, "pooled_n": 10}
     passed, failures = validate.check_thresholds(below)
-    assert passed is False and len(failures) == 2
+    assert passed is False and len(failures) == 1 and "win-weighted" in failures[0]
+    late_window = {"mean_win_weighted": 0.50, "pooled_spearman": 0.25, "pooled_n": 439}
+    assert validate.check_thresholds(late_window) == (True, [])
+    empty = {"mean_win_weighted": 0.0, "pooled_spearman": None, "pooled_n": 0}
+    passed, failures = validate.check_thresholds(empty)
+    assert passed is False and any("spearman n/a" in f for f in failures)
 
 
 def test_tag_audit_flags_mismatches():
