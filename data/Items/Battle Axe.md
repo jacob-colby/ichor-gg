@@ -12,12 +12,11 @@ builds_from:
 - Medallion
 builds_into:
 - Avenging Blade
-- Eye of the Storm
 - Golden Blade
 - Runeforged Hammer
 - Wyrmskin Hide
 source_url: https://wiki.smite2.com/w/Battle_Axe
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 

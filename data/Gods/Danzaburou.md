@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 322.62
     per_level: 48.3
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 47.95
     per_level: 2.59
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Danzaburou Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Physical Damage to the first enemy hit
-  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Dishonest Duplication
   details:
@@ -62,14 +62,14 @@ abilities:
   - 'Note: This feature is bugged, as clones are unable to spawn additional clones'
   - Clones target the enemy that was hit when they were created
   - 'Clone Spawn Chance: 5% + 0.5% Per Level + 0.05% Intelligence'
-  description: You have a chance of spawning a clone of yourself with each Basic Attack
-    hitting an enemy
   detail_kinds:
   - null
   - null
   - null
   - null
   - mechanic
+  description: You have a chance of spawning a clone of yourself with each Basic Attack
+    hitting an enemy
 - slot: 1st Ability
   name: Fool's Gold
   cooldown:
@@ -95,9 +95,6 @@ abilities:
   - 'Explode Radius: 1.92 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: Roll out 3 money bags that deal Physical Damage to enemies hit and
-    then explode dealing Physical Damage
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -112,6 +109,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Roll out 3 money bags that deal Physical Damage to enemies hit and
+    then explode dealing Physical Damage
 - slot: 2nd Ability
   name: Alluring Spirits
   cooldown:
@@ -135,7 +135,7 @@ abilities:
   - Taunt is not affected by Diminishing Returns
   - If the Taunted enemy takes more than 30% of their Max Health, the Taunt ends early
   - 'Heal Per Tick: 20 | 25 | 30 | 35 | 40'
-  - 'Heal Scaling Per Tick: 3% Intelligence'
+  - 'Heal Scaling Per Tick: 5% Intelligence'
   - 'Damage: 90 | 140 | 190 | 240 | 290'
   - 'Damage Scaling: 70% Strength + 40% Intelligence'
   - 'Slow: 10% Per Stack'
@@ -146,9 +146,6 @@ abilities:
   - 'Outer Radius: 2.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Drink some sake, Healing over time before throwing the bottle, dealing
-    Physical Damage to enemies hit
-  damage_type: physical
   detail_kinds:
   - slow
   - debuff
@@ -169,6 +166,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Drink some sake, Healing over time before throwing the bottle, dealing
+    Physical Damage to enemies hit
 - slot: 3rd Ability
   name: Tanuki Trickery
   cooldown:
@@ -189,12 +189,6 @@ abilities:
   - 'Radius: 3.84 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 70 mana'
-  description: As a leaf you gain increased Movement Speed , Slow Immunity , and a
-    buff that causes your next Basic Attack to deal Physical Damage Create a field
-    where you gain Movement Speed , Slow Immunity , your Attack Movement Penalty is
-    removed , and your Dishonest Duplication chance is doubled . When you leave the
-    area, it disappears and you transform into a leaf while decoys mimic your movement
-  damage_type: physical
   detail_kinds:
   - slow
   - buff
@@ -207,6 +201,12 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: As a leaf you gain increased Movement Speed , Slow Immunity , and a
+    buff that causes your next Basic Attack to deal Physical Damage Create a field
+    where you gain Movement Speed , Slow Immunity , your Attack Movement Penalty is
+    removed , and your Dishonest Duplication chance is doubled . When you leave the
+    area, it disappears and you transform into a leaf while decoys mimic your movement
 - slot: Ultimate
   name: Uproarious Rocket
   cooldown:
@@ -229,10 +229,6 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: Fire a rocket that locks onto enemy gods or reactive this ability to
-    become the rocket! The rocket deals Physical Damage , Stuns the first enemy god
-    hit, and explodes dealing Physical Damage
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -247,12 +243,16 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Fire a rocket that locks onto enemy gods or reactive this ability to
+    become the rocket! The rocket deals Physical Damage , Stuns the first enemy god
+    hit, and explodes dealing Physical Damage
 aspects:
 - name: Aspect of Fellowship
   kit_changes: Alluring Spirits no longer throws out a sake bottle but instead spawns
     2 Clones. All of your Clones deal more damage and take less damage.
 source_url: https://wiki.smite2.com/w/Danzaburou
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Danzaburou Basic Attack

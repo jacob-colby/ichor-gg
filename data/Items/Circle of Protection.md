@@ -11,7 +11,6 @@ builds_from:
 builds_into:
 - Ancile
 - Doublet of Binding
-- Eye of the Storm
 - Magi's Cloak
 - Phoenix Feather
 - Sanguine Lash
@@ -20,7 +19,7 @@ builds_into:
 - Spirit Robe
 - Void Stone
 source_url: https://wiki.smite2.com/w/Circle_of_Protection
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 

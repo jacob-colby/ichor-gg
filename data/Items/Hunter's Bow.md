@@ -10,6 +10,7 @@ builds_from:
 - Bow
 builds_into:
 - Berserker's Shield
+- Dagger of Frenzy
 - Demon Blade
 - Eros' Bow
 - Hastened Fatalis
@@ -23,7 +24,7 @@ builds_into:
 - Tekko-Kagi
 - The Executioner
 source_url: https://wiki.smite2.com/w/Hunter's_Bow
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 
