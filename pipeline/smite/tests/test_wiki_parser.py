@@ -572,3 +572,49 @@ def test_prose_recovery_skips_scaling_parentheticals():
                "Intelligence) Magical Damage in a 3.2m radius. Cooldown: 200s")
     assert _stats_from_prose(passive) == {}
     assert _stats_from_prose("Deal 30 (+20% Intelligence) damage. 45 Strength") == {"Strength": "45"}
+
+
+# --- the Adaptive Stat clause as a stat line ---------------------------------
+
+FROZEN_OB46 = FIXTURES / "frozen" / "ob46"
+
+
+def _sash():
+    return wiki_parser.parse_item_page(
+        (FROZEN_OB46 / "page_survivors_sash.html").read_text(encoding="utf-8"))
+
+
+def test_survivors_sash_carries_its_adaptive_stat_line():
+    """The Sash's whole stat line is its Adaptive Stat clause, printed in the
+    Passive cell with `Stats:` empty. It is recorded as the two alternatives
+    the game chooses between — not summed into `stats`."""
+    parsed = _sash()
+    assert parsed["adaptive_stat"] == {"Strength": 25.0, "Intelligence": 35.0}
+    assert "stats" not in parsed
+    assert parsed["tier"] == 2 and parsed["cost"] == 1000
+
+
+def test_adaptive_stat_is_never_also_written_into_stats():
+    """Counting it twice is the failure this field is shaped to prevent: the
+    grant is priced once, from the passive text, by `passives`."""
+    parsed = _sash()
+    assert not set(parsed.get("stats") or {}) & {"Strength", "Intelligence"}
+
+
+def test_sundering_echo_reads_the_same_way():
+    """Sundering Echo, the other statless page with the clause (a relic, so no
+    audit finding, but the same parse)."""
+    from smite.tests import frozen
+    echo = frozen.item("Sundering Echo")
+    assert echo["stats"] == {}
+    assert wiki_parser.adaptive_stat(echo["passive"]) == {"Strength": 25.0, "Intelligence": 45.0}
+
+
+def test_an_item_with_a_real_stats_cell_keeps_it_beside_the_clause():
+    """Daybreak Gavel (OB40) prints a Stats cell AND the clause. The cell is
+    untouched; the clause goes to its own field."""
+    from smite.tests import frozen
+    gavel = frozen.item("Daybreak Gavel")
+    assert gavel["stats"]
+    assert wiki_parser.adaptive_stat(gavel["passive"]) == {"Strength": 60.0, "Intelligence": 80.0}
+    assert wiki_parser.adaptive_stat("+5% of all Stats from Items.") == {}

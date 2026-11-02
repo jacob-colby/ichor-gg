@@ -14,6 +14,9 @@ builds_from:
 builds_into: []
 source_url: https://wiki.smite2.com/w/Bumba's_Hammer
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 35.0
+  Intelligence: 60.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +35 Strength or +60 Intelligence (based on highest item stat). Ability Used: Next Attack deals +60 True Damage to enemies within 1.92m of the target Hit this Attack: -0.66s Cooldowns, +60 Heal Requires Level 20.

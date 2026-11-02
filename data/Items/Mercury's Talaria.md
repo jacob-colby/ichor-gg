@@ -15,6 +15,9 @@ builds_from:
 builds_into: []
 source_url: https://wiki.smite2.com/w/Mercury's_Talaria
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 40.0
+  Intelligence: 70.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). While out of combat: Store energy as you move. Your next non-Ultimate Ability deals up to 8% more Damage based on stored energy. Movement Ability deals up to 10% more Damage instead

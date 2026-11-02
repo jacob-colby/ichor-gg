@@ -66,16 +66,47 @@ export interface LedgerRow {
  * other half of the comparison, which a model-only row list can't show. */
 export interface MetaOnlyRow {
   name: string;
+  /** See `communitySlotClass`. Only `scored` rows are a disagreement. */
+  slotClass: CommunitySlotClass;
   position: number;
   cumulative: number | null;
   pickRate: number | null;
   winRate: number | null;
 }
 
+/**
+ * What a community slot IS, for comparison purposes — the viewer's mirror of
+ * pipeline `smite.community_target`, which carries the measurement.
+ *
+ *  - `unfinished`: a tier-1/2 component. The match ended before the build did
+ *    (72 of 90 community slot-5/6 sightings on 2026-11-02 are Evil Eye, Sage's
+ *    Ring, Medal of Defense and friends). Dropped from the comparison.
+ *  - `unscoreable`: a relic or god-specific item with no stat line at all
+ *    (Blinking Abyss, Sundering Echo, Vulcan's Mods). Real, and invisible to
+ *    the model — its own labelled class, not a disagreement.
+ *  - `scored`: everything else, including an item the index lacks, which
+ *    stays a plain disagreement rather than being explained away.
+ */
+export type CommunitySlotClass = "scored" | "unfinished" | "unscoreable";
+
+export function communitySlotClass(item: Item | undefined): CommunitySlotClass {
+  if (!item) return "scored";
+  if (typeof item.tier === "number" && item.tier < 3) return "unfinished";
+  const statless = !item.stats || Object.keys(item.stats).length === 0;
+  if (typeof item.tier !== "number" && statless) return "unscoreable";
+  return "scored";
+}
+
 export interface Ledger {
   rows: LedgerRow[];
-  /** Community purchases absent from the model's build, in their own order. */
+  /** Community purchases absent from the model's build, in their own order —
+   *  the real disagreements (`scored` class only). */
   metaOnly: MetaOnlyRow[];
+  /** Community slots holding a component, absent from the model's build.
+   *  Not a disagreement: dropped from the comparison and listed as such. */
+  metaUnfinished: MetaOnlyRow[];
+  /** Community slots the model cannot score (statless relics, god Mods). */
+  metaUnscoreable: MetaOnlyRow[];
   /** Total gold for the model's build (excluding removed slots). */
   totalGold: number | null;
   metaTotalGold: number | null;
@@ -172,7 +203,7 @@ export function buildLedger({
 
   const kept = rows.filter((r) => r.status !== "removed");
   const modelNames = new Set(kept.map((r) => r.name));
-  const metaOnly: MetaOnlyRow[] = metaNames
+  const absent: MetaOnlyRow[] = metaNames
     .map((name, i) => ({ name, i }))
     .filter(({ name }) => !modelNames.has(name))
     .map(({ name, i }) => {
@@ -180,6 +211,7 @@ export function buildLedger({
       const rates = e && typeof e !== "string" ? e : undefined;
       return {
         name,
+        slotClass: communitySlotClass(itemsByName.get(name)),
         position: i + 1,
         cumulative: metaGold[i],
         pickRate: rates?.pick_rate ?? null,
@@ -187,9 +219,15 @@ export function buildLedger({
       };
     });
 
+  const metaOnly = absent.filter((m) => m.slotClass === "scored");
+  const metaUnfinished = absent.filter((m) => m.slotClass === "unfinished");
+  const metaUnscoreable = absent.filter((m) => m.slotClass === "unscoreable");
+
   return {
     rows,
     metaOnly,
+    metaUnfinished,
+    metaUnscoreable,
     totalGold: purchased.length > 0 ? purchasedGold[purchasedGold.length - 1] : null,
     metaTotalGold,
     shared: kept.filter((r) => r.inMeta).length,

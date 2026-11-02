@@ -933,7 +933,9 @@ export function DetailPanel({
               </p>
               {ledger.metaOnly.length === 0 ? (
                 <p className="mt-1.5 text-small text-muted">
-                  Nothing — the model buys every item the community does, in a different order.
+                  {ledger.metaUnfinished.length + ledger.metaUnscoreable.length > 0
+                    ? "Nothing finished that the model can score — the rest is listed below."
+                    : "Nothing — the model buys every item the community does, in a different order."}
                 </p>
               ) : (
                 <ul className="mt-1.5 flex flex-col">
@@ -957,6 +959,24 @@ export function DetailPanel({
                     </li>
                   ))}
                 </ul>
+              )}
+              {/* Not disagreements, so not in the list above. A component is a
+                  build the match ended before finishing; a statless relic or
+                  Mod is something the model cannot read. `smite.community_target`
+                  has the measurement. */}
+              {ledger.metaUnfinished.length > 0 && (
+                <p data-testid="meta-unfinished" className="mt-2 text-small text-muted">
+                  <span className="text-ink-soft">Unfinished, not compared:</span>{" "}
+                  {ledger.metaUnfinished.map((m) => `${m.name} (${ordinal(m.position)})`).join(", ")}
+                  {" "}— a component, held when the match ended.
+                </p>
+              )}
+              {ledger.metaUnscoreable.length > 0 && (
+                <p data-testid="meta-unscoreable" className="mt-1 text-small text-muted">
+                  <span className="text-ink-soft">Not scoreable by the model:</span>{" "}
+                  {ledger.metaUnscoreable.map((m) => `${m.name} (${ordinal(m.position)})`).join(", ")}
+                  {" "}— no stat line to read, so neither agreement nor disagreement.
+                </p>
               )}
             </div>
           )}

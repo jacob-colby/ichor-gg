@@ -2373,13 +2373,19 @@ move that row in the same commit.
 
 Scraping needs Playwright (`python -m playwright install chromium`).
 
-`data_audit` exits non-zero whenever it has findings, and it currently has
-four standing ones — Blink Rune (`cost: 0`, genuinely free), Genie's Lamp
-(`cost: None`; the wiki says `-1`, a sentinel meaning Aladdin is given it
-rather than buying it) and Mote of Chaos / Survivor's Sash (tier-2 items the
-wiki lists with no stats). All four are real properties of the source data,
-not defects, and none reaches a build. Treat "4 findings, all of them these"
-as green; treat a fifth as news.
+`data_audit` exits non-zero on any OPEN finding, and as of 2026-11-02 it exits
+0. The three standing ones — Blink Rune (`cost: 0`, genuinely free), Genie's
+Lamp (`cost: None`; the wiki's `-1` sentinel, Aladdin is given it) and Mote of
+Chaos (its whole effect is a `% of all Stats` multiplier) — are recorded with
+their reasons in `data/_audit_reviewed.yaml`, matched on item, issue AND
+detail, so a changed value is news again and an entry whose finding goes away
+reports as `stale-review`. The fourth, Survivor's Sash, was a parser gap and
+not a property of the item: its whole stat line is an Adaptive Stat clause in
+the Passive cell. `wiki_parser.adaptive_stat` now records that clause as its
+own `adaptive_stat` field on all 30 carriers, kept OUT of `stats` so the grant
+is still priced exactly once (`passives.adaptive_grants`) and no statless item
+— the Sash, Sundering Echo — silently enters the gold fit or the buildable
+pool. Doing either is a model change for `calibrate`, not a parser fix.
 
 A god's ABILITY MODS are exempt by shape (`God Specific`, cost exactly 0, no
 stats) — Vulcan's five are a kit upgrade the game grants, and without the
@@ -2389,6 +2395,24 @@ to a gate whose value is that a new finding means something.
 `cost == 0`, not merely falsy, which is what keeps Genie's Lamp visible: a Mod
 has no price because it is not bought, the Lamp has no price we could read,
 and only the second is a fact about our parsing.
+
+**Community slots that are not a target** (2026-11-02, `smite.community_target`).
+A community "six" is what players held at the final whistle. Tier-1/2
+components (Evil Eye, Sage's Ring, Medal of Defense, Skeggox) fill 72 community
+slot-5/6 sightings, and statless relics and god Mods (Blinking Abyss, Sundering
+Echo, Vulcan's Mods, Genie's Lamp) are purchases Ichor cannot read. Every
+comparison with community builds now drops the first class and counts the
+second as its own labelled class: `validate`'s report (its `in score` filter
+already excluded both, so its floors are unchanged by construction),
+`build_quality` (labelled; combat still runs on the six as bought, because a
+five-item comparison is the comparison pages' rework), and the viewer ledger's
+"what the community buys instead". `expert_review` compares against expert
+claims, not community builds, and is untouched. Nothing the site recommends
+reads it — a test pins the import boundary. On 2026-11-02 data: Ichor `core`
+shared 207 of 543 community slots (38.1%) before, 207 of 448 scored slots
+(46.2%) after; 95 of the 336 old "disagreements" (28%) were never a model
+error. `calibrate`'s leakage-free coverage still scores the raw community set
+and is deliberately not re-based here — every §4 number is measured on it.
 
 **Two sources, two spellings.** The community source and our item notes
 disagree on apostrophes and casing, and a failed join reads as "this god's

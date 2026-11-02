@@ -29388,6 +29388,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Archmage's_Gem",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 60.0,
+        "Intelligence": 90.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -29742,6 +29746,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Blinking_Abyss",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 20.0,
+        "Intelligence": 35.0
+      },
       "effect_tags": [
         "mobility"
       ],
@@ -29803,6 +29811,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Blood-soaked_Shroud",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 40.0,
+        "Intelligence": 70.0
+      },
       "effect_tags": [],
       "efficiency_tier": "fair",
       "efficiency": {
@@ -29868,6 +29880,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Bluestone_Brooch",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 30.0,
+        "Intelligence": 50.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -29898,6 +29914,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Bluestone_Pendant",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -30082,6 +30102,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Brawler\u2019s_Beat_Stick",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 35.0,
+        "Intelligence": 50.0
+      },
       "effect_tags": [
         "anti-heal",
         "ramp"
@@ -30183,6 +30207,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Bumba's_Cudgel",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -30208,6 +30236,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Bumba's_Golden_Dagger",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -30233,6 +30265,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Bumba's_Hammer",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 35.0,
+        "Intelligence": 60.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -30263,6 +30299,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Bumba's_Spear",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 35.0,
+        "Intelligence": 60.0
+      },
       "effect_tags": [],
       "efficiency_tier": "fair",
       "efficiency": {
@@ -30595,6 +30635,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Conduit_Gem",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 30.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -30729,6 +30773,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Damaru",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 35.0,
+        "Intelligence": 50.0
+      },
       "effect_tags": [
         "crit-scaling"
       ],
@@ -30761,6 +30809,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Daybreak_Gavel",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 40.0,
+        "Intelligence": 60.0
+      },
       "effect_tags": [
         "heal-scaling"
       ],
@@ -30827,6 +30879,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Death's_Embrace",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 40.0,
+        "Intelligence": 70.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -30856,6 +30912,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Death's_Toll",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -31449,6 +31509,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Eye_of_Erebus",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 35.0,
+        "Intelligence": 50.0
+      },
       "effect_tags": [
         "ward-economy",
         "percent-health",
@@ -32291,6 +32355,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Hunter's_Cowl",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 55.0,
+        "Intelligence": 80.0
+      },
       "effect_tags": [
         "sustain"
       ],
@@ -32613,6 +32681,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Leather_Cowl",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -33096,6 +33168,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Mercury's_Talaria",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 40.0,
+        "Intelligence": 70.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -33497,6 +33573,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Omen_Drum",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 50.0,
+        "Intelligence": 75.0
+      },
       "effect_tags": [
         "active"
       ],
@@ -33642,6 +33722,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Pendulum_of_the_Ages",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 45.0,
+        "Intelligence": 70.0
+      },
       "effect_tags": [],
       "efficiency_tier": "premium",
       "efficiency": {
@@ -34395,6 +34479,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Sands_Of_Time",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 15.0,
+        "Intelligence": 25.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null
@@ -35421,6 +35509,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Sun_Beam_Bow",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 20.0,
+        "Intelligence": 40.0
+      },
       "effect_tags": [
         "active",
         "wave-clear"
@@ -35454,6 +35546,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Sundering_Axe",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 30.0,
+        "Intelligence": 50.0
+      },
       "effect_tags": [],
       "efficiency_tier": "fair",
       "efficiency": {
@@ -35482,6 +35578,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Sundering_Echo",
       "last_verified": "2026-08-05",
+      "adaptive_stat": {
+        "Strength": 25.0,
+        "Intelligence": 45.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -35534,6 +35634,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Survivor's_Sash",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 25.0,
+        "Intelligence": 35.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -35690,6 +35794,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/The_Executioner",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 30.0,
+        "Intelligence": 55.0
+      },
       "effect_tags": [
         "protection-shred"
       ],
@@ -36147,6 +36255,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Vampiric_Shroud",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 10.0,
+        "Intelligence": 20.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,
@@ -36220,6 +36332,10 @@
       "builds_into": [],
       "source_url": "https://wiki.smite2.com/w/Vital_Amplifier",
       "last_verified": "2026-11-02",
+      "adaptive_stat": {
+        "Strength": 30.0,
+        "Intelligence": 45.0
+      },
       "effect_tags": [
         "heal-scaling"
       ],
@@ -36412,6 +36528,10 @@
       ],
       "source_url": "https://wiki.smite2.com/w/Warrior's_Axe",
       "last_verified": "2026-08-01",
+      "adaptive_stat": {
+        "Strength": 10.0,
+        "Intelligence": 20.0
+      },
       "effect_tags": [],
       "efficiency_tier": null,
       "efficiency": null,

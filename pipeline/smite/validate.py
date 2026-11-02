@@ -4,7 +4,7 @@ tag-audit report. Agreement is a proxy (win rate is popularity-biased,
 Conquest-only) — a falsifiable dashboard, not ground truth."""
 import math
 
-from smite import recommend, scoring, efficiency, assemble
+from smite import recommend, scoring, efficiency, assemble, community_target
 
 
 def coverage(core, community_names):
@@ -70,14 +70,25 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
         **assemble.coherence_args(items, weights),
         **assemble.conversion_args(weights, eff_scores, gold_values),
         **assemble.overflow_args(weights, eff_scores, gold_values))
-    community = [c for c in _community_slots(build_note)
-                 if c.get("name") in score and c.get("win_rate") is not None]
+    # The target is the community's SCORED slots (`community_target`): an
+    # unfinished component or a statless relic/Mod is never a disagreement.
+    # `in score` already excluded both, implicitly, since `score_god_items`
+    # rows are buildable items; the explicit filter says why, and the counts
+    # it drops go into the report.
+    slots = _community_slots(build_note)
+    parts = community_target.split(slots, items_by_name, god)
+    scored = set(parts[community_target.SCORED])
+    community = [c for c in slots
+                 if c.get("name") in scored and c.get("name") in score
+                 and c.get("win_rate") is not None]
     names = [c["name"] for c in community]
     return {
         "coverage": coverage(core, names),
         "win_weighted": win_weighted_coverage(core, community),
         "pairs": [(score[c["name"]], c["win_rate"]) for c in community],
         "n": len(community),
+        "unfinished": len(parts[community_target.UNFINISHED]),
+        "unscoreable": len(parts[community_target.UNSCOREABLE]),
     }
 
 
@@ -136,12 +147,21 @@ def write_report(per_god, agg, out_path):
         "",
         header,
         "",
-        "| God | Coverage | Win-weighted | Community items |",
-        "|---|---|---|---|",
+        "Community slots that are not a target are counted apart, never as a",
+        "disagreement: **unfinished** tier-1/2 components (the match ended before the",
+        "build did) are dropped, and **unscoreable** statless relics and god Mods are",
+        "their own class (`smite.community_target`).",
+        "",
+        f"Unfinished slots dropped: {sum(m.get('unfinished', 0) for m in per_god.values())}  ·  "
+        f"Unscoreable slots (separate class): {sum(m.get('unscoreable', 0) for m in per_god.values())}",
+        "",
+        "| God | Coverage | Win-weighted | Community items | Unfinished | Unscoreable |",
+        "|---|---|---|---|---|---|",
     ]
     for name in sorted(per_god):
         m = per_god[name]
-        lines.append(f"| {name} | {m['coverage']:.0%} | {m['win_weighted']:.0%} | {m['n']} |")
+        lines.append(f"| {name} | {m['coverage']:.0%} | {m['win_weighted']:.0%} | {m['n']} "
+                     f"| {m.get('unfinished', 0)} | {m.get('unscoreable', 0)} |")
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

@@ -684,3 +684,23 @@ def test_exactly_three_items_in_the_whole_item_set_carry_a_flat_on_hit_clause():
     carriers = sorted((it["name"], passives.on_hit_flat_damage(it))
                       for it in recommend.load_items() if passives.on_hit_flat_damage(it) > 0)
     assert carriers == [("Bragi's Harp", 10.0), ("Golden Blade", 10.0), ("Tyrfing", 15.0)]
+
+
+def test_the_recorded_adaptive_stat_does_not_price_the_grant_twice():
+    """`wiki_parser.adaptive_stat` records the clause as its own field. The
+    gold model must still see it exactly once: `item_stat_values` with the
+    shipped `price_adaptive` adds the Strength branch from the passive text,
+    and the recorded field must add nothing on top."""
+    from smite import efficiency, wiki_parser
+    from smite.tests import frozen
+    gavel = frozen.item("Daybreak Gavel")
+    before = efficiency.apply_pricing_flags({"price_adaptive": True, "adaptive_branch": "strength"})
+    try:
+        bare = efficiency.item_stat_values(gavel)
+        recorded = dict(gavel, adaptive_stat=wiki_parser.adaptive_stat(gavel["passive"]))
+        assert efficiency.item_stat_values(recorded) == bare
+        efficiency.apply_pricing_flags({})
+        printed = efficiency.item_stat_values(recorded)
+        assert bare["Strength"] - printed.get("Strength", 0.0) == 60.0   # once
+    finally:
+        efficiency.restore_pricing_flags(before)
