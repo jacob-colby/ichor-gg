@@ -2014,12 +2014,13 @@ Roughly in the order I would do them.
 
 ### Done criterion 2 — the engine is built, the page is not
 
-`side_by_side.py` (§2) answers the criterion's numbers for all 90 gods; the
+`side_by_side.py` (§2) answers the criterion's numbers for all 94 gods; the
 per-god table, item diffs, verdicts by role and the not-simulated list are in
-`data/Analysis/_side_by_side.md` (regenerated, not tracked — 390 KB of daily
-churn). On OB46 items and the OB46 community window (2026-11-02), at ±5%:
-**Ichor better 16, community better 32, trade-off 26, level 16**; the
-community wins most on Carry (11 of 18), almost all of it on DAMAGE with
+`data/Analysis/_side_by_side.md` (regenerated, not tracked — ~400 KB of daily
+churn). On OB46 items and the OB46 community window (2026-11-02, control
+fingerprint `ea7167529321`), at ±5%:
+**Ichor better 16, community better 33, trade-off 29, level 16**; the
+community wins most on Carry (11 of 19), almost all of it on DAMAGE with
 passives simulated. Left: (1) the viewer page (part B; `--json` writes its
 data); (2) for each "community better" god, a model change or a stated reason —
 the report lists them, and the swap rows show which single item recovers most;
@@ -2541,8 +2542,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1072) ·
-`cd viewer && npm test -- --run` (777).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1098) ·
+`cd viewer && npm test -- --run` (779).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
@@ -2661,7 +2662,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1072 pipeline · 777 viewer |
+| Tests | 1098 pipeline · 779 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
