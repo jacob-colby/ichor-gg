@@ -12,9 +12,15 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 323.0
     per_level: 48.26
+  mana_regen:
+    base: 1.57
+    per_level: 0.13
   physical_prot:
     base: 19.2
     per_level: 3.24
@@ -24,18 +30,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.29
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 48.0
     per_level: 2.21
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.57
-    per_level: 0.13
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Sun Wukong Basic Attack
@@ -46,14 +46,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Physical Damage to an enemy in front of you
-  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Undefeated Body
   cooldown:
@@ -64,16 +64,12 @@ abilities:
     deal 50% damage and are instantly killed by Hard Crowd Control effects, except
     Knockbacks and Banishes
   - 'Strength & Intelligence: 10'
-  - 'Strength & Intelligence Scaling: 1 Per Level'
+  - 'Strength & Intelligence Scaling: 1.5 Per Level'
   - 'Protections: 10'
-  - 'Protections Scaling: 1.5 Per Level'
+  - 'Protections Scaling: 2 Per Level'
   - 'Buff Duration: 8 seconds'
   - 'Clone Lifetime: 10 seconds'
   - 'Cooldown: 90 seconds'
-  description: When you drop below 60% Health, gain increased Strength , Intelligence
-    , and Protections . If you go above this threshold, the buff persists for a short
-    duration. When you drop below 30% Health, you spawn a clone. This effect has a
-    cooldown
   detail_kinds:
   - null
   - null
@@ -84,6 +80,10 @@ abilities:
   - buff
   - buff
   - mechanic
+  description: When you drop below 60% Health, gain increased Strength , Intelligence
+    , and Protections . If you go above this threshold, the buff persists for a short
+    duration. When you drop below 30% Health, you spawn a clone. This effect has a
+    cooldown
 - slot: 1st Ability
   name: The Magic Cudgel
   cooldown:
@@ -109,8 +109,6 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Slam down with your Cudgel, dealing Physical Damage
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -123,6 +121,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Slam down with your Cudgel, dealing Physical Damage
 - slot: 2nd Ability
   name: Master's Will
   cooldown:
@@ -146,9 +146,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 mana'
-  description: Strike around you dealing Physical Damage . Enemies hit are Slowed
-    and have reduced Attack Speed
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -163,6 +160,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Strike around you dealing Physical Damage . Enemies hit are Slowed
+    and have reduced Attack Speed
 - slot: 3rd Ability
   name: 72 Transformations
   cooldown:
@@ -192,7 +192,6 @@ abilities:
   - 'Stun Duration: 1.4 seconds'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
-  description: Transform into an Ox, Tiger, or Eagle, and Dash forward
   detail_kinds:
   - stun
   - physical
@@ -206,6 +205,7 @@ abilities:
   - stun
   - mechanic
   - mechanic
+  description: Transform into an Ox, Tiger, or Eagle, and Dash forward
 - slot: Ultimate
   name: Somersault Cloud
   cooldown:
@@ -227,9 +227,6 @@ abilities:
   - 'Radius: 4 meters'
   - 'Cooldown: 110 | 105 | 100 | 95 | 90 seconds'
   - 'Cost: 100 mana'
-  description: Rise into a cloud leaving a clone to fight in your stead. While in
-    the cloud you are Stealthed and Heal every 0.5 seconds
-  damage_type: physical
   detail_kinds:
   - physical
   - mechanic
@@ -241,6 +238,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Rise into a cloud leaving a clone to fight in your stead. While in
+    the cloud you are Stealthed and Heal every 0.5 seconds
 aspects:
 - name: Aspect of Transformation
   kit_changes: 72 Transformations has a reduced Cooldown and locks your animal form
@@ -248,7 +248,7 @@ aspects:
     Tiger form provides stacking Attack Speed on hits of The Magic Cudgel and Eagle
     form causes your other two non-ultimate abilities to have a reduced Cooldown.
 source_url: https://wiki.smite2.com/w/Sun_Wukong
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Sun Wukong Basic Attack

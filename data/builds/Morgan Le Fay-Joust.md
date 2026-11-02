@@ -9,8 +9,8 @@ builds:
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of the Magus
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
-      efficiency: 0.57
+      total: 0.8
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.7
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Rod of Tahuti:
-      total: 0.82
-      efficiency: 0.86
+      total: 0.68
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.72
-      efficiency: 0.54
+      total: 0.74
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Rod of Tahuti:
+      total: 0.83
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -73,10 +73,10 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Divine Ruin
   - Bancroft's Talon
   - Spear of Desolation
   - Doom Orb
+  - Obsidian Shard
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
@@ -93,17 +93,11 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Divine Ruin:
-      total: 0.56
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Bancroft's Talon:
       total: 0.55
       efficiency: 0.46
@@ -111,25 +105,31 @@ builds:
       pick: 0.0
       fit: 0.64
     Spear of Desolation:
-      total: 0.59
-      efficiency: 0.57
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.53
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Obsidian Shard:
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.86
+      total: 0.72
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.57
     Triton's Conch:
-      total: 0.57
+      total: 0.58
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -141,8 +141,8 @@ builds:
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of the Magus
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.68
-      efficiency: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.78
     Doom Orb:
-      total: 0.54
-      efficiency: 0.53
+      total: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.56
     Spear of the Magus:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.86
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.6
-      efficiency: 0.54
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Rod of Tahuti:
+      total: 0.71
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -210,15 +210,15 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.58
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.61
     Void Shield:
       total: 0.56
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
     Void Stone:
-      total: 0.55
-      efficiency: 0.45
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -260,7 +260,7 @@ builds:
       fit: 0.71
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -271,8 +271,8 @@ builds:
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of the Magus
@@ -294,38 +294,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
-      efficiency: 0.57
+      total: 0.8
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Doom Orb:
       total: 0.69
-      efficiency: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.85
     Spear of the Magus:
-      total: 0.73
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.85
-    Rod of Tahuti:
-      total: 0.85
-      efficiency: 0.86
+      total: 0.71
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.85
     Obsidian Shard:
-      total: 0.75
-      efficiency: 0.54
+      total: 0.77
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Rod of Tahuti:
+      total: 0.86
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -334,14 +334,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Divine Ruin
-  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Divine Ruin
-  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -360,37 +360,37 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Bracer of The Abyss:
-      total: 0.46
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Nimble Ring:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.86
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.32
+    Eros' Bow:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Soul Gem:
-      total: 0.78
-      efficiency: 0.57
+      total: 0.79
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -399,21 +399,21 @@ builds:
   archetype: cooldown
   slot_order:
   - Chronos' Pendant
-  - Gem of Focus
+  - Heartwood Charm
   - Spear of Desolation
   - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Totem of Death
-  - Gem of Focus
+  - Heartwood Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,15 +429,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Gem of Focus:
-      total: 0.51
+    Heartwood Charm:
+      total: 0.56
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.63
     Spear of Desolation:
-      total: 0.71
-      efficiency: 0.57
+      total: 0.72
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.73
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
+      total: 0.62
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.37
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Bragi's Harp
-  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - Heartseeker
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,38 +489,38 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
-      efficiency: 0.44
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.72
+      total: 0.67
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Bragi's Harp:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.86
+      total: 0.66
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.44
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -530,13 +530,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Spear of Desolation
+  - Obsidian Shard
   - Heartseeker
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Heartseeker
   - Obsidian Shard
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -554,38 +554,38 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.71
-      efficiency: 0.72
+      total: 0.69
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.69
     Spear of Desolation:
-      total: 0.63
-      efficiency: 0.57
+      total: 0.64
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Obsidian Shard:
+      total: 0.62
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Heartseeker:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.86
+      total: 0.72
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Obsidian Shard:
-      total: 0.6
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -596,8 +596,8 @@ builds:
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Spear of the Magus
@@ -619,38 +619,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.79
-      efficiency: 0.57
+      total: 0.8
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.7
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Rod of Tahuti:
-      total: 0.82
-      efficiency: 0.86
+      total: 0.68
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.79
     Obsidian Shard:
-      total: 0.72
-      efficiency: 0.54
+      total: 0.74
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.89
+    Rod of Tahuti:
+      total: 0.83
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -659,14 +659,14 @@ builds:
   archetype: core
   slot_order:
   - Void Stone
+  - Gluttonous Grimoire
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
-  - Rod of Asclepius
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Void Stone
   - Obsidian Shard
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -685,37 +685,37 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.57
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
-    Obsidian Shard:
-      total: 0.56
+    Gluttonous Grimoire:
+      total: 0.69
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Rod of Asclepius:
-      total: 0.73
-      efficiency: 0.57
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.62
+    Obsidian Shard:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Rod of Tahuti:
+      total: 0.67
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -725,13 +725,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Divine Ruin
+  - Chandra's Grace
+  - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
-  - Wish-Granting Pearl
-  - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Wish-Granting Pearl
+  - Chandra's Grace
   - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
@@ -751,34 +751,34 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.53
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Chandra's Grace:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Doom Orb:
       total: 0.49
-      efficiency: 0.53
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.86
+      total: 0.66
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Wish-Granting Pearl:
-      total: 0.5
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
-    Soul Gem:
-      total: 0.75
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.98
     Triton's Conch:
       total: 0.62
       efficiency: 0.44
@@ -790,15 +790,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Divine Ruin
   - Spear of Desolation
-  - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Obsidian Shard
-  - Spear of the Magus
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -810,38 +810,38 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.51
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Spear of Desolation:
-      total: 0.58
-      efficiency: 0.57
+      total: 0.59
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Spear of the Magus:
-      total: 0.51
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
-    Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Obsidian Shard:
-      total: 0.53
-      efficiency: 0.54
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Rod of Tahuti:
+      total: 0.65
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -863,15 +863,15 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -888,14 +888,14 @@ builds:
       pick: 0.0
       fit: 0.63
     Void Shield:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
     Void Stone:
-      total: 0.56
-      efficiency: 0.45
+      total: 0.57
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -913,7 +913,7 @@ builds:
       fit: 0.73
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -925,8 +925,8 @@ builds:
   - Void Stone
   - Spear of Desolation
   - Spear of the Magus
-  - Rod of Tahuti
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Obsidian Shard
@@ -942,44 +942,44 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Void Stone:
       total: 0.68
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.9
     Spear of Desolation:
-      total: 0.64
-      efficiency: 0.57
+      total: 0.65
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.7
     Spear of the Magus:
-      total: 0.6
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    Rod of Tahuti:
-      total: 0.72
-      efficiency: 0.86
+      total: 0.58
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
     Obsidian Shard:
-      total: 0.62
-      efficiency: 0.54
+      total: 0.64
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Rod of Tahuti:
+      total: 0.73
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -988,15 +988,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Triton's Conch
   - Bragi's Harp
-  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1013,33 +1013,33 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Bracer of The Abyss:
-      total: 0.41
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.31
     Nimble Ring:
       total: 0.51
-      efficiency: 0.65
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.37
     Bragi's Harp:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
+      total: 0.55
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.23
+    Eros' Bow:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Soul Gem:
       total: 0.72
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -1080,32 +1080,32 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.53
     Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
       total: 0.61
-      efficiency: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
+      total: 0.58
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.28
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -1122,13 +1122,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Runeforged Hammer
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Rod of Tahuti
-  - Runeforged Hammer
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1137,8 +1137,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -1146,32 +1146,32 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.46
+      total: 0.67
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Runeforged Hammer:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
+      total: 0.59
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.31
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Soul Gem:
       total: 0.71
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -1193,7 +1193,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1212,32 +1212,32 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.38
+      total: 0.6
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.51
     Spear of Desolation:
-      total: 0.54
-      efficiency: 0.57
+      total: 0.55
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+      total: 0.64
+      efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.41
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -1253,14 +1253,14 @@ builds:
   archetype: model
   slot_order:
   - Void Stone
+  - Gluttonous Grimoire
   - Spear of Desolation
-  - Rod of Tahuti
   - Obsidian Shard
-  - Rod of Asclepius
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Void Stone
   - Obsidian Shard
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1279,37 +1279,37 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.57
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
-    Obsidian Shard:
-      total: 0.56
+    Gluttonous Grimoire:
+      total: 0.69
       efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Rod of Asclepius:
-      total: 0.73
-      efficiency: 0.57
+      fit: 0.85
+    Spear of Desolation:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.62
+    Obsidian Shard:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Rod of Tahuti:
+      total: 0.67
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Soul Gem:
       total: 0.76
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0

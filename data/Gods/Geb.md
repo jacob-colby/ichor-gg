@@ -2,7 +2,7 @@
 type: smite-god
 name: Geb
 pantheon: Egyptian
-role: Support
+role: Support Carry
 specializations:
 - Tank
 - Area Control
@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 705.27
     per_level: 101.52
+  health_regen:
+    base: 1.84
+    per_level: 0.22
   mana:
     base: 299.36
     per_level: 45.36
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 44.4
     per_level: 2.4
-  health_regen:
-    base: 1.84
-    per_level: 0.22
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Geb Basic Attack
@@ -46,24 +46,24 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Magical Damage to an enemy in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Hard as Rock
   details:
   - 'Attack Damage Reduction: -5%'
   - 'Critical Strike Damage Reduction: -65%'
-  description: TAKE REDUCED DAMAGE Geb cannot take more than 20% of his max HP from
-    a single attack. Additionally, Geb takes Reduced Damage from enemy god Attacks
-    and Critical Strikes
   detail_kinds:
   - buff
   - buff
+  description: TAKE REDUCED DAMAGE Geb cannot take more than 20% of his max HP from
+    a single attack. Additionally, Geb takes Reduced Damage from enemy god Attacks
+    and Critical Strikes
 - slot: 1st Ability
   name: Roll Out
   cooldown:
@@ -97,8 +97,6 @@ abilities:
   - 'Leap Radius: 2.4 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Charge forward, stopping on the first enemy god hit
-  damage_type: magical
   detail_kinds:
   - magical
   - mechanic
@@ -115,6 +113,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Charge forward, stopping on the first enemy god hit
 - slot: 2nd Ability
   name: Shock Wave
   cooldown:
@@ -133,9 +133,6 @@ abilities:
   - 'Cone Range: 8.8 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Create a shock wave in a cone, dealing Magical Damage and Knocking
-    Up enemies hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -144,6 +141,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Create a shock wave in a cone, dealing Magical Damage and Knocking
+    Up enemies hit
 - slot: 3rd Ability
   name: Stone Shield
   cooldown:
@@ -154,13 +154,12 @@ abilities:
   - Allies also gain the Hard as Rock buff benefits while the Shield is active
   - The Shield also Cleanses CC when applied
   - 'Shield Health: 50 | 95 | 140 | 185 | 230'
-  - 'Shield Health Scaling: 10 Per Level + 0.05% Max Health'
+  - 'Shield Health Scaling: 10 Per Level + 0.05% of your Max Health'
   - 'Shield Duration: 3 | 3.5 | 4 | 4.5 | 5 seconds'
   - 'Range: 8.8 meters'
   - 'Radius: 2.4 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
-  description: Provide yourself or an allied god a Health Shield
   detail_kinds:
   - shield
   - shield
@@ -171,6 +170,7 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Provide yourself or an allied god a Health Shield
 - slot: Ultimate
   name: Cataclysm
   cooldown:
@@ -190,9 +190,6 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Pull apart the earth, dealing Magical Damage and Stunning enemy gods
-    hit
-  damage_type: magical
   detail_kinds:
   - magical
   - mechanic
@@ -202,6 +199,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Pull apart the earth, dealing Magical Damage and Stunning enemy gods
+    hit
 aspects:
 - name: Aspect of Calamity
   kit_changes: Geb's attacks are ranged, travel slowly, and pierce with damage falloff.
@@ -209,7 +209,7 @@ aspects:
     on god hit. Stone Shield is self-only and buffs attack damage. Cataclysm causes
     Knockback rather than a Stun. -7.5% Base Health, -5% Base Protections.
 source_url: https://wiki.smite2.com/w/Geb
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Geb Basic Attack

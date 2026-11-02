@@ -4,7 +4,7 @@ name: Regrowth Striders
 tier: 3
 cost: 2550
 stats:
-  Physical Protection: '35'
+  Physical Protection: '45'
   Mana Regen: '3'
   Cooldown Rate: '10'
 passive: 'Heal yourself with an Ability: +25% Movement Speed (decays to 0%) for 4s
@@ -14,7 +14,7 @@ builds_from:
 - Legionnaire Armor
 builds_into: []
 source_url: https://wiki.smite2.com/w/Regrowth_Striders
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 Heal yourself with an Ability: +25% Movement Speed (decays to 0%) for 4s Cooldown: 10s Gain any Movement Speed buff: +5% Health Heal over 10s

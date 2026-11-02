@@ -4,7 +4,7 @@ name: Rod of Tahuti
 tier: 3
 cost: 3000
 stats:
-  Intelligence: '80'
+  Intelligence: '85'
   Max Mana: '250'
   Mana Regen: '2'
   Penetration: 5%
@@ -14,7 +14,7 @@ builds_from:
 - Evil Eye
 builds_into: []
 source_url: https://wiki.smite2.com/w/Rod_of_Tahuti
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 +Intelligence equal to 25% of your Intelligence from items.

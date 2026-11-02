@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Brawler’s Beat Stick
   - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
-  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Brawler’s Beat Stick
   - Stygian Anchor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -26,11 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Stygian Anchor:
       total: 0.59
       efficiency: 0.45
@@ -44,17 +50,11 @@ builds:
       pick: 0.0
       fit: 0.7
     Shield Splitter:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Void Shield:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -74,27 +74,27 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
-  - Eye of the Storm
-  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Void Shield
-  - Eye of the Storm
+  - Shield Splitter
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,21 +104,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Shield of the Phoenix:
-      total: 0.67
-      efficiency: 0.53
+    Shield Splitter:
+      total: 0.6
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.82
-    Eye of the Storm:
-      total: 0.58
+      fit: 0.61
+    Shield of the Phoenix:
+      total: 0.67
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.65
-    Void Shield:
+      fit: 0.82
+    Void Stone:
       total: 0.58
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -152,11 +152,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -176,20 +176,20 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.57
     Void Shield:
       total: 0.67
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.88
     Void Stone:
       total: 0.67
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Riptalon
   - Shogun's Ofuda
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,26 +223,26 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
-      efficiency: 0.46
+      total: 0.63
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.6
+      efficiency: 0.75
       win: 0.5
       pick: 0.0
       fit: 0.45
     Riptalon:
-      total: 0.6
-      efficiency: 0.51
+      total: 0.57
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -260,7 +260,7 @@ builds:
       fit: 0.65
     Shogun's Ofuda:
       total: 0.57
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -275,7 +275,7 @@ builds:
   - Freya's Tears
   - Erosion
   flex_slots:
-  - Genji's Guard
+  - Jotunn's Revenge
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -288,38 +288,38 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
-      efficiency: 0.66
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Shield of the Phoenix:
       total: 0.69
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.63
-      efficiency: 0.61
+      total: 0.61
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Brawler’s Beat Stick
   - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
-  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Brawler’s Beat Stick
   - Stygian Anchor
-  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,11 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.6
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Stygian Anchor:
       total: 0.59
       efficiency: 0.45
@@ -371,17 +377,11 @@ builds:
       pick: 0.0
       fit: 0.7
     Shield Splitter:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.63
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Void Shield:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -418,8 +418,8 @@ builds:
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -431,19 +431,19 @@ builds:
       fit: 0.71
     Shield of the Phoenix:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
     Void Shield:
-      total: 0.65
-      efficiency: 0.47
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
     Void Stone:
-      total: 0.64
-      efficiency: 0.45
+      total: 0.65
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -471,7 +471,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Void Stone
+  - Void Shield
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -481,11 +481,11 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -497,19 +497,19 @@ builds:
       fit: 0.68
     Shield of the Phoenix:
       total: 0.67
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.82
     Void Shield:
       total: 0.63
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.8
     Void Stone:
       total: 0.63
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -520,7 +520,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -537,8 +537,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -562,20 +562,20 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Void Shield:
       total: 0.73
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Void Stone:
       total: 0.73
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -603,8 +603,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Erosion
   - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -616,20 +616,20 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
-      efficiency: 0.46
+      total: 0.65
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.82
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
+      total: 0.61
+      efficiency: 0.75
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -652,8 +652,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Shogun's Ofuda:
-      total: 0.64
-      efficiency: 0.5
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -662,15 +662,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Jotunn's Revenge
+  - Genji's Guard
   - Shield of the Phoenix
   - Void Shield
   - Void Stone
   - Freya's Tears
   - Erosion
   flex_slots:
-  - Void Stone
-  - Jotunn's Revenge
+  - Freya's Tears
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -682,38 +682,38 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.45
     Shield of the Phoenix:
       total: 0.68
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.84
     Void Shield:
-      total: 0.6
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Void Stone:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
+      total: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -748,8 +748,8 @@ builds:
     swap: Spectral Armor — physical protection
     swap_item: Spectral Armor
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -761,19 +761,19 @@ builds:
       fit: 0.71
     Shield of the Phoenix:
       total: 0.63
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.74
     Void Shield:
-      total: 0.65
-      efficiency: 0.47
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
     Void Stone:
-      total: 0.64
-      efficiency: 0.45
+      total: 0.65
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83

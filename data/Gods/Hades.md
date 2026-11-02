@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
+  health_regen:
+    base: 1.82
+    per_level: 0.2
   mana:
     base: 319.68
     per_level: 45.36
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 19.24
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 44.21
     per_level: 2.21
-  health_regen:
-    base: 1.82
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Hades Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Blight
   details:
@@ -60,14 +60,14 @@ abilities:
   - 'Damage Reduction: 5%'
   - 'Enhanced Damage Reduction: 10%'
   - 'Debuff Duration: 8 seconds'
-  description: ed enemies have reduced Strength and Intelligence Your abilities have
-    extra effects on ed enemies Your attacks and abilities apply
   detail_kinds:
   - debuff
   - null
   - debuff
   - debuff
   - debuff
+  description: ed enemies have reduced Strength and Intelligence Your abilities have
+    extra effects on ed enemies Your attacks and abilities apply
 - slot: 1st Ability
   name: Death From Below
   cooldown:
@@ -92,9 +92,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Leap through the underworld, then emerge and deal Magical Damage to
-    enemies
-  damage_type: magical
   detail_kinds:
   - slow
   - magical
@@ -105,6 +102,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Leap through the underworld, then emerge and deal Magical Damage to
+    enemies
 - slot: 2nd Ability
   name: Shroud of Darkness
   cooldown:
@@ -126,7 +126,6 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 60 mana'
-  description: Silence enemies in front of you
   detail_kinds:
   - debuff
   - null
@@ -137,6 +136,7 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Silence enemies in front of you
 - slot: 3rd Ability
   name: Devour Souls
   cooldown:
@@ -165,13 +165,10 @@ abilities:
   - 'Detonation Damage: 10 | 25 | 40 | 55 | 70'
   - 'Detonation Damage Scaling: 45% Intelligence'
   - 'Heal: 10 | 19 | 28 | 37 | 46'
-  - 'Heal Scaling: 3.5% Physical Protection + 3.5% Magical Protection + 3.5% Intelligence'
+  - 'Heal Scaling: 2.5% Physical Protection + 2.5% Magical Protection + 8% Intelligence'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Devour the souls of your enemies, dealing Magical Damage to enemies
-    around you
-  damage_type: magical
   detail_kinds:
   - magical
   - heal
@@ -187,10 +184,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Devour the souls of your enemies, dealing Magical Damage to enemies
+    around you
 - slot: Ultimate
   name: Pillar of Agony
   cooldown:
-  - 90.0
+  - 110.0
   cost:
   - 100.0
   details:
@@ -199,22 +199,18 @@ abilities:
   - Blighted enemies have their Protections reduced
   - You may use one other ability while Channeling
   - If you use Death From Below while Channeling, the remaining Channel time will
-    be 1.5 seconds regardless of when you used the ability
+    be 1.5 seconds regardless of remaining time
   - This Vortex increases in intensity as the Channel time progresses
   - You are Rooted while Channeling
   - You can cancel this ability at any time
   - 'Damage Per Tick: 40 | 55 | 70 | 85 | 100'
   - 'Damage Scaling Per Tick: 25% Intelligence'
-  - 'Protections: 30 | 50 | 70 | 90 | 110 + 10% Protections From Items'
+  - 'Protections: 20 | 35 | 50 | 65 | 80 + 10% Protections From Items'
   - 'Protections Reduced: 10 | 13 | 16 | 19 | 22 + 10%'
   - 'Debuff Duration: 4 seconds'
   - 'Radius: 4.8 meters'
-  - 'Cooldown: 90 seconds'
+  - 'Cooldown: 110 seconds'
   - 'Cost: 100 mana'
-  description: You are CC Immune , and gain increased Protections while Channeling
-    Channel a Vortex around you that drags foes to their death, and repeatedly deals
-    Magical Damage
-  damage_type: magical
   detail_kinds:
   - mechanic
   - null
@@ -232,9 +228,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: You are CC Immune , and gain increased Protections while Channeling
+    Channel a Vortex around you that drags foes to their death, and repeatedly deals
+    Magical Damage
 aspects: []
 source_url: https://wiki.smite2.com/w/Hades
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Hades Basic Attack

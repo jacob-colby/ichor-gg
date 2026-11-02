@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 661.0
     per_level: 94.0
+  health_regen:
+    base: 1.82
+    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 47.76
     per_level: 2.4
-  health_regen:
-    base: 1.82
-    per_level: 0.2
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Mordred Basic Attack
@@ -49,7 +49,6 @@ abilities:
   - 'Clarent Damage Scaling: 60% Strength + 100% Intelligence + 60% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Physical Damage to an enemy in front of you
   detail_kinds:
   - null
   - null
@@ -57,6 +56,7 @@ abilities:
   - physical
   - mechanic
   - mechanic
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Wrath of the Forsaken
   details:
@@ -82,9 +82,6 @@ abilities:
   - 'Range: 4 meters'
   - 'Radius: 1.5 meters'
   - 'Cooldown: 10 seconds'
-  description: After using an ability or attacking, your Interact Key becomes a Dash
-    forward
-  damage_type: physical
   detail_kinds:
   - physical
   - null
@@ -94,6 +91,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: After using an ability or attacking, your Interact Key becomes a Dash
+    forward
 - slot: 1st Ability
   name: Cruel Strikes
   cooldown:
@@ -128,9 +128,6 @@ abilities:
   - 'Slam Radius: 0.75 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: Then Slam, dealing Physical Damage to enemies in a line and either
-    dealing Bonus Damage or Healing , based on your Attack Chain Strike twice with
-    your swords
   detail_kinds:
   - physical
   - physical
@@ -150,6 +147,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Then Slam, dealing Physical Damage to enemies in a line and either
+    dealing Bonus Damage or Healing , based on your Attack Chain Strike twice with
+    your swords
 - slot: 2nd Ability
   name: Bloodrage
   cooldown:
@@ -179,9 +179,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Deal Physical Damage to enemies around you, then gain increased Attack
-    Speed and Movement Speed
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -199,6 +196,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Deal Physical Damage to enemies around you, then gain increased Attack
+    Speed and Movement Speed
 - slot: 3rd Ability
   name: Severing Slice
   cooldown:
@@ -228,10 +228,6 @@ abilities:
   - 'Inner Radius: 0.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: Direct hits with the center of the projectile cause targets to Bleed
-    , taking Bonus Physical Damage as they move Fire a projectile that deals Physical
-    Damage and Slows enemies
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -250,6 +246,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Direct hits with the center of the projectile cause targets to Bleed
+    , taking Bonus Physical Damage as they move Fire a projectile that deals Physical
+    Damage and Slows enemies
 - slot: Ultimate
   name: Heart Slash
   cooldown:
@@ -266,18 +266,13 @@ abilities:
   - 'Damage Scaling: 75% Strength'
   - 'Damage Per Tick: 30 | 40 | 50 | 60 | 70'
   - 'Damage Scaling Per Tick: 25% Intelligence'
-  - 'Heal: 10 | 20 | 30 | 40 | 50'
+  - 'Heal: 8 | 16 | 24 | 32 | 40'
   - 'Heal Scaling: 12.5% Intelligence'
   - 'Shield Health: 160 | 200 | 240 | 280 | 320'
   - 'Range: 6 meters'
   - 'Radius: 1 meter'
   - 'Cooldown: 20 seconds'
   - 'Cost: 40 Wrath'
-  description: If you hit an enemy god, they are Rooted . You then Channel to siphon
-    their lifeforce, gaining a Health Shield and Healing over time while dealing Physical
-    Damage repeatedly to that enemy Deal Physical Damage to enemies in an area in
-    front of you
-  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -293,6 +288,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: If you hit an enemy god, they are Rooted . You then Channel to siphon
+    their lifeforce, gaining a Health Shield and Healing over time while dealing Physical
+    Damage repeatedly to that enemy Deal Physical Damage to enemies in an area in
+    front of you
 - slot: Ultimate
   name: Pursue the Weak
   cost:
@@ -310,16 +310,11 @@ abilities:
   - 'Damage Scaling: 80% Strength + 75% Intelligence'
   - 'Damage Per Tick: 85 | 105 | 125 | 145 | 165'
   - 'Damage Scaling Per Tick: 20% Strength + 15% Intelligence'
-  - 'Heal: 30 | 35 | 40 | 45 | 50'
+  - 'Heal: 20 | 25 | 30 | 35 | 40'
   - 'Heal Scaling: 25% Intelligence'
   - 'Stun Duration: 0.5 seconds'
   - 'Radius: 3.2 meters'
   - 'Cost: 80 Wrath'
-  description: After a short delay, you Knock Up yourself and Stunned enemies into
-    the sky , repeatedly dealing Physical Damage If no enemy gods are able to be Knocked
-    Up , the follow-up attack will not start Become CC Immune and Dash forward, traveling
-    through walls, stopping on the first enemy god hit
-  damage_type: physical
   detail_kinds:
   - physical
   - stun
@@ -336,6 +331,11 @@ abilities:
   - stun
   - mechanic
   - mechanic
+  damage_type: physical
+  description: After a short delay, you Knock Up yourself and Stunned enemies into
+    the sky , repeatedly dealing Physical Damage If no enemy gods are able to be Knocked
+    Up , the follow-up attack will not start Become CC Immune and Dash forward, traveling
+    through walls, stopping on the first enemy god hit
 aspects:
 - name: Aspect of Rage
   kit_changes: Attacks while Bloodrage is active no longer provide bonus Protections
@@ -343,7 +343,7 @@ aspects:
     are lowered. Additionally Shoulder Charge deals more damage if it has hit an enemy
     god recently.
 source_url: https://wiki.smite2.com/w/Mordred
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Mordred Basic Attack

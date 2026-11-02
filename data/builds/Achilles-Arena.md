@@ -13,8 +13,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,20 +32,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
       total: 0.6
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Void Stone:
-      total: 0.59
-      efficiency: 0.45
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,20 +99,20 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
     Hydra's Lament:
       total: 0.52
-      efficiency: 0.54
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.49
     Heartseeker:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
+  - Void Shield
   - Shield of the Phoenix
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -164,20 +164,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.63
-      efficiency: 0.53
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.72
     Void Shield:
-      total: 0.63
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.78
     Void Stone:
       total: 0.62
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.85
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -223,8 +223,8 @@ builds:
     swap: Stampede — physical protection
     swap_item: Stampede
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -235,26 +235,26 @@ builds:
       pick: 0.0
       fit: 0.78
     Toxic Blade:
-      total: 0.65
-      efficiency: 0.38
+      total: 0.66
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.72
+      total: 0.67
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.65
     Void Shield:
       total: 0.71
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.95
     Void Stone:
-      total: 0.7
-      efficiency: 0.45
+      total: 0.71
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -285,11 +285,11 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Toxic Blade:
-      total: 0.69
-      efficiency: 0.46
+      total: 0.7
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.92
     Riptalon:
-      total: 0.67
-      efficiency: 0.51
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -325,7 +325,7 @@ builds:
       fit: 0.73
     Shogun's Ofuda:
       total: 0.61
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -336,12 +336,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Freya's Tears
+  - Hydra's Lament
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
   - Genji's Guard
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -359,29 +359,29 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
-      efficiency: 0.66
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
     Shield of the Phoenix:
       total: 0.67
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.82
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
+    Hydra's Lament:
+      total: 0.55
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.55
     Erosion:
       total: 0.56
       efficiency: 0.51
@@ -405,8 +405,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,20 +424,20 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
     Void Shield:
       total: 0.6
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Void Stone:
-      total: 0.59
-      efficiency: 0.45
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
