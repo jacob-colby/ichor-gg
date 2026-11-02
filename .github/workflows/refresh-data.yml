@@ -1,18 +1,20 @@
-# Daily community-data refresh.
+# Daily data refresh: community numbers every day, wiki stats when a patch lands.
 #
-# WHY THIS ONLY TOUCHES SMITEBRAIN. The pipeline has two sources and they need
-# different things to reach them:
+# TWO SOURCES, TWO CADENCES.
 #
 #   smitebrain.com   plain HTTP, no bot protection, numbers move every day —
-#                    win rates, pick rates, builds, starters.
-#   wiki.smite2.com  Cloudflare-gated, needs a real browser (Playwright), and
-#                    only changes on patch days — god kits, item stats, icons.
+#                    win rates, pick rates, builds, starters. Every run.
+#   wiki.smite2.com  item stats and god kits. Only changes on patch days, so
+#                    `smite.stats_refresh` fetches it only when `patch_feed`
+#                    has recorded a game patch newer than the item data (or
+#                    weekly). It is plain HTTP with an honest User-Agent:
+#                    Cloudflare challenges clients posing as a browser, not
+#                    ones that say what they are (measured from a runner,
+#                    2026-11-02 — see that module's docstring). All-or-nothing
+#                    and validated before it writes; it never fails the job.
 #
-# A daily job doing both would be a daily headless-browser run against
-# Cloudflare from a datacentre IP: the part most likely to start failing, and
-# the part least likely to have anything new in it. So this runs the community
-# half unattended, and the wiki half stays a deliberate local `--all` when a
-# patch lands. `workflow_dispatch` is here so you can also trigger this by hand.
+# New gods and items are still added by hand: `stats_refresh` refreshes what is
+# tracked, and `watch-wiki.yml` announces what is not.
 name: Refresh community data
 
 on:
@@ -21,6 +23,9 @@ on:
     # heavily at :00 and a job can be delayed or dropped entirely at peak.
     - cron: "15 9 * * *"
   workflow_dispatch:
+  # TEMPORARY-BRANCH-RUN: live end-to-end test before merge; removed before merge.
+  push:
+    branches: [feat/auto-stats-refresh]
 
 # Never let two refreshes race for the same commit.
 concurrency:
@@ -33,7 +38,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -59,6 +64,16 @@ jobs:
       - name: Detect a new game patch
         working-directory: pipeline
         run: python -m smite.patch_feed
+
+      # Wiki item and god stats, when a patch landed (or weekly). Runs after
+      # patch detection, which it keys off, and before the snapshot, so a
+      # patch's stat changes are banked as that patch's notes the same run.
+      # Not due: zero requests. Due: ~320 page loads at a 2.5s floor. Any
+      # fetch failure or validation problem writes nothing and prints a
+      # ::warning:: — exit 0 on every path, like patch_feed.
+      - name: Refresh wiki stats if a patch landed
+        working-directory: pipeline
+        run: python -m smite.stats_refresh
 
       # Patch notes are a diff between two item-stat snapshots, and until this
       # step existed nothing on any schedule wrote one: `write_snapshot` was
@@ -112,6 +127,6 @@ jobs:
           git commit -m "chore(data): daily community refresh
 
           Automated. SmiteBrain win/pick rates, community builds and starters,
-          then a recompute and reindex. Gods, items and icons come from the
-          wiki and are refreshed by hand on patch days."
+          wiki item and god stats when a patch landed (smite.stats_refresh),
+          then a recompute and reindex."
           git push

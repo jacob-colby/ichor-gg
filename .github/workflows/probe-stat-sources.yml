@@ -1,20 +1,16 @@
-# Can a GitHub-hosted runner reach a source of item and god stats?
+# Can a GitHub-hosted runner reach the wiki's stats pages?
 #
-# Read-only. Logs HTTP status and byte counts for the wiki (HTML, MediaWiki
-# api.php, a headless browser), SmiteBrain, smite2.com and SmiteSource. The
-# job log is the result; nothing is written or committed. Kept so the answer
-# can be re-checked when Cloudflare's posture changes.
+# Read-only, dispatch-only. Logs HTTP status, byte count and whether the
+# parser reads the page, for the honest User-Agent `smite.stats_refresh`
+# sends and for a spoofed browser UA. Run it when the stats refresh starts
+# reporting "source unreachable", to see whether Cloudflare's posture moved.
 name: Probe stat sources
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/probe-stat-sources.yml"
-      - "pipeline/scripts/probe_stat_sources*.py"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   probe:
@@ -32,12 +28,4 @@ jobs:
           pip install -r requirements.txt
       - name: Probe
         working-directory: pipeline
-        run: python scripts/probe_stat_sources_2.py
-      # TEMPORARY: records live responses as test fixtures onto this branch.
-      - name: Commit recorded fixtures
-        if: github.ref != 'refs/heads/main'
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pipeline/smite/tests/fixtures/recorded
-          git diff --cached --quiet || { git commit -m "test(fixtures): record live wiki responses from a runner"; git push; }
+        run: python scripts/probe_stat_sources.py

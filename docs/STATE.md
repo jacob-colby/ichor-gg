@@ -2404,6 +2404,21 @@ that loop and both should stay green: `--discover-items` scans the wiki cache,
 and `data_audit` flags any item a community build names. Twelve items were
 missing before those existed, including the pool's first anti-heal item.
 
+**Item and god STATS of what is tracked refresh themselves** (2026-11-02,
+`smite.stats_refresh`, on the daily job after `patch_feed`). Due when the game
+patch is newer than `data_patch`, or weekly; otherwise zero requests. Two
+measurements made it possible and they reverse half of the paragraph below.
+From a GitHub runner, the wiki challenges a spoofed-Chrome User-Agent (403
+`cf-mitigated`) and serves an honest bot UA (200) — so no browser is needed;
+and robots.txt disallows `/*api.php`, so it reads article pages only. It is
+all-or-nothing: every tracked page is fetched and parsed into memory, one
+fetch failure, parse exception or `ParseCollapse` writes nothing, aggregate
+coverage and null/numeric checks run against the data being replaced, and
+the notes are swapped in by directory rename before `data_from` is set. The
+Ullr/Artio/Merlin kit blanking below is a refusal on this path, not a silent
+write — it is a test. Roster growth stays manual for the first reason below.
+Evidence and rules are in the module docstring.
+
 **Adding a new GOD is manual for a second reason, and it is stronger.** The
 same `refresh_all` limitation applies — it would never have found Ravana — but
 scheduling the wiki scrape would also be unsafe, and that is measured rather
@@ -2448,8 +2463,8 @@ moved; written unattended by `smite.patch_feed` from Steam's announcement feed
 on the daily job) and `data_from` (wiki item data first scraped under it;
 written only by `refresh_patch_version`). Periods are attributed by
 `data_from`, so a game patch with no wiki refresh behind it does not relabel a
-period — as of 2026-11-02 the game is on Open Beta 46 but item data is still
-Open Beta 40's, and August's dataset expansion stays "within Open Beta 40".
+period — August's dataset expansion stays "within Open Beta 40". `data_from`
+is now written unattended by `smite.stats_refresh`, only after its write lands.
 `data/_patch.json` is derived from the history: `patch` is the game label the
 viewer prints, `data_patch` is what `wiki_watch` compares the wiki against.
 Links come from the Steam post (`official_url` on the row) and
@@ -2479,9 +2494,11 @@ Tests: `cd pipeline && python -m pytest smite/tests -q` (923) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
-snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
-`contents: read`, commits nothing). The wiki scrape itself is
-`smite.refresh_and_deploy`, by hand, on `main`.
+patch feed + wiki stats when due + snapshot + reindex, commits) and
+`watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`, `contents: read`, commits
+nothing). `probe-stat-sources.yml` is dispatch-only and re-checks which stat
+sources a runner can reach. Adding gods and items is still
+`smite.refresh_and_deploy` / `--refresh`, by hand, on `main`.
 
 ---
 
