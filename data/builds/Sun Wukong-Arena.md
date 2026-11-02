@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -145,7 +145,7 @@ builds:
   - Void Stone
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -177,7 +177,7 @@ builds:
       fit: 0.87
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Eros' Bow:
-      total: 0.61
-      efficiency: 0.52
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -260,7 +260,7 @@ builds:
       fit: 0.75
     Soul Gem:
       total: 0.71
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -275,8 +275,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Genji's Guard
   - Erosion
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
     Eros' Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -359,7 +359,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0

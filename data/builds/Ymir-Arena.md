@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.92
     Void Stone:
-      total: 0.68
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -242,7 +242,7 @@ builds:
       fit: 0.45
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.48
     Void Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -409,8 +409,8 @@ builds:
   - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Eros' Bow:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0

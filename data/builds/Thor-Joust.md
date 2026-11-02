@@ -32,19 +32,19 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.58
+      total: 0.57
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -99,14 +99,14 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -145,7 +145,7 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -307,7 +307,7 @@ builds:
       fit: 0.93
     Jotunn's Revenge:
       total: 0.67
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -366,7 +366,7 @@ builds:
       fit: 0.92
     Berserker's Shield:
       total: 0.58
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.64
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -489,19 +489,19 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.58
+      total: 0.57
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0

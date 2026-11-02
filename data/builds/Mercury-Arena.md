@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
   - The Reaper
-  - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Toxic Blade
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,19 +93,25 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Jotunn's Revenge:
-      total: 0.67
-      efficiency: 0.69
+      total: 0.66
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.66
     Transcendence:
-      total: 0.45
+      total: 0.44
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -122,12 +128,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Titan's Bane:
-      total: 0.54
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Heartseeker:
       total: 0.58
       efficiency: 0.44
@@ -145,7 +145,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Heartseeker:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.98
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.89
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Chandra's Grace:
-      total: 0.57
+      total: 0.56
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.73
-      efficiency: 0.69
+      total: 0.72
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.84

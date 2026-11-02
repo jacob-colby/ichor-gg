@@ -51,13 +51,13 @@ builds:
       fit: 0.66
     Dreamer's Idol:
       total: 0.68
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.86
     Eros' Bow:
       total: 0.65
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -124,7 +124,7 @@ builds:
       fit: 0.52
     Eros' Bow:
       total: 0.57
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -183,13 +183,13 @@ builds:
       fit: 0.5
     Dreamer's Idol:
       total: 0.6
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
     Eros' Bow:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -236,7 +236,7 @@ builds:
       fit: 0.72
     Eros' Bow:
       total: 0.64
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.73
+      total: 0.74
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -319,7 +319,7 @@ builds:
       fit: 0.75
     Dreamer's Idol:
       total: 0.73
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.95
@@ -359,14 +359,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
     Nimble Ring:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.32
     Eros' Bow:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.6
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.7
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lotus Sickle
   - Chronos' Pendant
   - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Chronos' Pendant
   - Heartwood Charm
-  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Chronos' Pendant:
       total: 0.56
       efficiency: 0.55
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
-    Eros' Bow:
-      total: 0.51
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -508,13 +508,13 @@ builds:
       fit: 0.66
     Dreamer's Idol:
       total: 0.68
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.86
     Eros' Bow:
       total: 0.65
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81

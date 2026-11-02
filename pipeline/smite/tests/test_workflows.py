@@ -167,11 +167,23 @@ def test_a_rejection_fails_the_run_after_the_commit():
     red run and not a line in a green log."""
     steps = _steps("refresh-data.yml")
     runs = [s.get("run", "") for s in steps]
-    fail = next(i for i, s in enumerate(steps)
-                if "steps.stats_gate.outputs.rejected" in str(s.get("if", "")))
-    assert fail == len(steps) - 1
-    assert "exit 1" in runs[fail]
-    assert _index(runs, "git commit") < fail
+    fails = [next(i for i, s in enumerate(steps)
+                  if f"steps.{gate}.outputs.rejected" in str(s.get("if", "")))
+             for gate in ("stats_gate", "new_entities")]
+    # Both gates' fail steps are the run's last steps, after the commit.
+    assert sorted(fails) == [len(steps) - 2, len(steps) - 1]
+    for fail in fails:
+        assert "exit 1" in runs[fail]
+        assert _index(runs, "git commit") < fail
+
+
+def test_new_entities_run_after_the_stats_gate_and_before_the_recompute():
+    """After, so the two gates never blame each other's change; before the
+    snapshot and recompute, so the day's index carries what was added."""
+    runs = [s.get("run", "") for s in _steps("refresh-data.yml")]
+    add = _index(runs, "smite.new_entities")
+    assert _index(runs, "smite.stats_gate check") < add < _index(runs, "smite.snapshots")
+    assert add < _index(runs, "smite.recommend --all")
 
 
 def test_the_job_installs_pytest():

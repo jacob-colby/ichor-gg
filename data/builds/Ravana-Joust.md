@@ -39,7 +39,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -145,7 +145,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.7
+      total: 0.69
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -210,7 +210,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Kinetic Cuirass
+  - Jotunn's Revenge
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.69
+      total: 0.67
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -366,7 +366,7 @@ builds:
       fit: 0.89
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -431,13 +431,13 @@ builds:
       fit: 0.43
     Breastplate of Valor:
       total: 0.53
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -496,7 +496,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -531,7 +531,7 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Heartseeker
+  - Titan's Bane
   - Erosion
   - Sanguine Lash
   flex_slots:
@@ -561,7 +561,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -571,12 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Heartseeker:
+    Titan's Bane:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
     Erosion:
       total: 0.57
       efficiency: 0.51

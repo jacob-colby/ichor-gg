@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Void Stone
-  - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Stone
-  - Freya's Tears
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Void Shield:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Void Stone:
       total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Freya's Tears:
-      total: 0.61
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Void Stone:
-      total: 0.63
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -229,14 +229,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.57
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -248,7 +248,7 @@ builds:
       fit: 0.45
     Eros' Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -301,7 +301,7 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -366,13 +366,13 @@ builds:
       fit: 0.76
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -400,20 +400,20 @@ builds:
   slot_order:
   - Brawler’s Beat Stick
   - Toxic Blade
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Brawler’s Beat Stick
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -435,12 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.5
     Amanita Charm:
       total: 0.75
       efficiency: 0.65
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Void Stone
-  - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Stone
-  - Freya's Tears
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -500,18 +500,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Void Shield:
+      total: 0.61
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Void Stone:
       total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Freya's Tears:
-      total: 0.61
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -591,9 +591,9 @@ builds:
       fit: 0.92
   swaps:
   - added: Hussar's Wings
-    removed: Freya's Tears
+    removed: Void Shield
     reason: Conquest community 72% win over 64 matches (vs 58% on this god), taking
-      the model's weakest slot from Freya's Tears
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

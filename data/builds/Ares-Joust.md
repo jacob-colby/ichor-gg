@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -236,7 +236,7 @@ builds:
       fit: 0.76
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -260,7 +260,7 @@ builds:
       fit: 0.63
     Soul Gem:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -301,13 +301,13 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -437,7 +437,7 @@ builds:
       fit: 0.78
     Gauntlet of Thebes:
       total: 0.21
-      efficiency: 0.24
+      efficiency: 0.23
       win: 0.5
       pick: 0.0
       fit: 0.19

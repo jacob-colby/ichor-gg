@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.61
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Erosion
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.61
       efficiency: 0.49
       win: 0.5
       pick: 0.0

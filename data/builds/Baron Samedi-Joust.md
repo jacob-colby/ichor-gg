@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
   - Triton's Conch
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -275,8 +275,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Stone of Binding
   - Spear of Desolation
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -359,8 +359,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Nimble Ring:
-      total: 0.49
-      efficiency: 0.64
+      total: 0.48
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -377,8 +377,8 @@ builds:
       pick: 0.0
       fit: 0.22
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -390,7 +390,7 @@ builds:
       fit: 0.48
     Soul Gem:
       total: 0.74
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -431,7 +431,7 @@ builds:
       fit: 0.43
     Breastplate of Valor:
       total: 0.53
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0

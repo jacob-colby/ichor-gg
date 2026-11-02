@@ -177,7 +177,7 @@ builds:
       fit: 0.79
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Berserker's Shield:
-      total: 0.59
-      efficiency: 0.75
+      total: 0.58
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -260,7 +260,7 @@ builds:
       fit: 0.63
     Soul Gem:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -301,13 +301,13 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -344,8 +344,8 @@ builds:
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41

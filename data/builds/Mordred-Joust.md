@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
   flex_slots:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -37,12 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
+    Stygian Anchor:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.67
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -171,7 +171,7 @@ builds:
       fit: 0.66
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Void Stone
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,14 +223,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -240,14 +246,8 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -307,7 +307,7 @@ builds:
       fit: 0.68
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -366,7 +366,7 @@ builds:
       fit: 0.8
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -431,7 +431,7 @@ builds:
       fit: 0.44
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -474,8 +474,8 @@ builds:
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -496,7 +496,7 @@ builds:
       fit: 0.58
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -594,21 +594,21 @@ builds:
   archetype: model
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
   flex_slots:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -624,12 +624,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
+    Stygian Anchor:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.67
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56

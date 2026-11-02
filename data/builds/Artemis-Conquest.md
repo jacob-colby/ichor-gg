@@ -119,8 +119,8 @@ builds:
     this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, The Reaper, Hydra''s Lament,
     Demon Blade, Titan''s Bane, Deathbringer, Musashi''s Dual Swords, Rage, The Crusher,
     Arondight, Heartseeker, Bloodforge, Transcendence, Berserker''s Shield, Runeforged
-    Hammer, Avenging Blade, Golden Blade, Barbed Carver, Eye of the Storm, Shield
-    Splitter, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
+    Hammer, Avenging Blade, Golden Blade, Barbed Carver, Shield Splitter, Eye of the
+    Storm, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
   slot_scores:
     Lernaean Bow:
       total: 0.53
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.3
@@ -141,8 +141,8 @@ builds:
       pick: 0.0
       fit: 0.21
     Dominance:
-      total: 0.51
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.47
       win: 0.55
       pick: 0.3
       fit: 0.6
@@ -192,13 +192,13 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Tekko-Kagi, Hydra''s Lament, The Reaper, Titan''s Bane, Lernaean Bow,
     Heartseeker, The Crusher, Arondight, Transcendence, Deathbringer, Musashi''s Dual
-    Swords, Runeforged Hammer, Bloodforge, Avenging Blade, Rage, Demon Blade, Pendulum
-    Blade, Avatar''s Parashu, Berserker''s Shield, Eye of the Storm, Shield Splitter,
-    Genji''s Guard, Barbed Carver, Golden Blade, Breastplate of Valor.'
+    Swords, Runeforged Hammer, Avenging Blade, Bloodforge, Rage, Demon Blade, Pendulum
+    Blade, Avatar''s Parashu, Berserker''s Shield, Shield Splitter, Eye of the Storm,
+    Genji''s Guard, Barbed Carver, Damaru, Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.44
@@ -216,7 +216,7 @@ builds:
       fit: 0.42
     Dominance:
       total: 0.5
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.55
       pick: 0.3
       fit: 0.5
@@ -265,12 +265,12 @@ builds:
     this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, The Reaper, Demon Blade,
     Deathbringer, Hydra''s Lament, Musashi''s Dual Swords, Titan''s Bane, Rage, The
     Crusher, Arondight, Heartseeker, Bloodforge, Transcendence, Berserker''s Shield,
-    Runeforged Hammer, Avenging Blade, Golden Blade, Barbed Carver, Eye of the Storm,
-    Shield Splitter, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
+    Runeforged Hammer, Avenging Blade, Golden Blade, Barbed Carver, Shield Splitter,
+    Eye of the Storm, Avatar''s Parashu, Vital Amplifier, Pendulum Blade, Damaru.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.28
@@ -310,22 +310,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
-  - Shield Splitter
+  - Jotunn's Revenge
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -333,22 +333,28 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, The Reaper, Jotunn''s Revenge, Shield
-    of the Phoenix, Kinetic Cuirass, Shield Splitter, Genji''s Guard, Yogi''s Necklace,
-    Runeforged Hammer, Phoenix Feather, Bloodforge, Tekko-Kagi, Breastplate of Valor,
-    Pharaoh''s Curse, Lernaean Bow, Freya''s Tears, Avenging Blade, Shogun''s Ofuda,
-    Oni Hunter''s Garb, Chandra''s Grace, Hydra''s Lament, Erosion, Eye of Providence,
-    Midgardian Mail, Draconic Scale, Titan''s Bane, Leviathan''s Hide, Stone of Binding.'
+    this god: Amanita Charm, Berserker''s Shield, The Reaper, Shield of the Phoenix,
+    Kinetic Cuirass, Jotunn''s Revenge, Genji''s Guard, Shield Splitter, Yogi''s Necklace,
+    Runeforged Hammer, Phoenix Feather, Bloodforge, Tekko-Kagi, Pharaoh''s Curse,
+    Breastplate of Valor, Lernaean Bow, Freya''s Tears, Avenging Blade, Oni Hunter''s
+    Garb, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Eye of Providence,
+    Midgardian Mail, Draconic Scale, Titan''s Bane, Leviathan''s Hide.'
   slot_scores:
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.69
+      win: 0.57
+      pick: 0.0
+      fit: 0.14
     Berserker's Shield:
       total: 0.58
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.57
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
+      total: 0.52
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.19
@@ -358,12 +364,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.47
-    Shield Splitter:
-      total: 0.52
-      efficiency: 0.59
-      win: 0.57
-      pick: 0.0
-      fit: 0.36
     The Reaper:
       total: 0.53
       efficiency: 0.56
@@ -407,16 +407,16 @@ builds:
     Heartseeker, Avenging Blade, Lernaean Bow, Hydra''s Lament, Avatar''s Parashu,
     Deathbringer, Pendulum Blade, Musashi''s Dual Swords, Arondight, Demon Blade,
     Oath-Sworn Spear, Transcendence, Rage, Bloodforge, Runeforged Hammer, Berserker''s
-    Shield, Toxic Blade, Eye of the Storm, Shield Splitter, Barbed Carver.'
+    Shield, Toxic Blade, Shield Splitter, Golden Blade, Barbed Carver.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.5
     The Reaper:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
       win: 0.57
       pick: 0.0
@@ -476,9 +476,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, Golden Blade, The Reaper,
     Hydra''s Lament, Toxic Blade, Titan''s Bane, Qin''s Blade, Demon Blade, Deathbringer,
-    Musashi''s Dual Swords, Arondight, The Crusher, Sun Beam Bow, Heartseeker, Berserker''s
-    Shield, Rage, Transcendence, Bloodforge, Runeforged Hammer, Avenging Blade, Barbed
-    Carver, Eye of the Storm, Vital Amplifier.'
+    Musashi''s Dual Swords, The Crusher, Arondight, Sun Beam Bow, Berserker''s Shield,
+    Heartseeker, Rage, Transcendence, Bloodforge, Runeforged Hammer, Avenging Blade,
+    Barbed Carver, Shield Splitter, Vital Amplifier.'
   slot_scores:
     Lernaean Bow:
       total: 0.51
@@ -488,7 +488,7 @@ builds:
       fit: 0.52
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.22
@@ -549,10 +549,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
     Arondight, Tekko-Kagi, Lernaean Bow, The Reaper, Titan''s Bane, Damaru, Genji''s
-    Guard, Pendulum Blade, Deathbringer, Musashi''s Dual Swords, The Crusher, Heartseeker,
-    Breastplate of Valor, Berserker''s Shield, Demon Blade, Transcendence, Bloodforge,
-    Rage, Chandra''s Grace, Runeforged Hammer, Avenging Blade, Eye of the Storm, Shield
-    Splitter, Barbed Carver, Eye of Erebus.'
+    Guard, Deathbringer, Pendulum Blade, Musashi''s Dual Swords, The Crusher, Breastplate
+    of Valor, Heartseeker, Demon Blade, Berserker''s Shield, Transcendence, Rage,
+    Bloodforge, Chandra''s Grace, Runeforged Hammer, Avenging Blade, Shield Splitter,
+    Eye of the Storm, Barbed Carver, Golden Blade.'
   slot_scores:
     Lernaean Bow:
       total: 0.49
@@ -562,7 +562,7 @@ builds:
       fit: 0.39
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.43
@@ -573,7 +573,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Arondight:
-      total: 0.51
+      total: 0.5
       efficiency: 0.54
       win: 0.57
       pick: 0.0
@@ -603,7 +603,7 @@ builds:
   - The Reaper
   - Tekko-Kagi
   flex_slots:
-  - Dominance
+  - The Reaper
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -622,8 +622,8 @@ builds:
     Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, The Reaper,
     Hydra''s Lament, Demon Blade, Titan''s Bane, Deathbringer, Musashi''s Dual Swords,
     Rage, The Crusher, Arondight, Heartseeker, Bloodforge, Transcendence, Berserker''s
-    Shield, Runeforged Hammer, Golden Blade, Avenging Blade, Barbed Carver, Eye of
-    the Storm, Shield Splitter, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
+    Shield, Runeforged Hammer, Golden Blade, Avenging Blade, Barbed Carver, Shield
+    Splitter, Eye of the Storm, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
   slot_scores:
     Lernaean Bow:
       total: 0.53
@@ -633,7 +633,7 @@ builds:
       fit: 0.6
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.3
@@ -644,8 +644,8 @@ builds:
       pick: 0.0
       fit: 0.21
     Dominance:
-      total: 0.51
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.47
       win: 0.55
       pick: 0.3
       fit: 0.6
@@ -674,7 +674,7 @@ builds:
   - Tekko-Kagi
   - Silverbranch Bow
   flex_slots:
-  - Dominance
+  - The Reaper
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -694,7 +694,7 @@ builds:
     Bow, The Reaper, Hydra''s Lament, Demon Blade, Titan''s Bane, Deathbringer, Musashi''s
     Dual Swords, Rage, The Crusher, Arondight, Heartseeker, Bloodforge, Transcendence,
     Berserker''s Shield, Runeforged Hammer, Golden Blade, Avenging Blade, Barbed Carver,
-    Eye of the Storm, Shield Splitter, Avatar''s Parashu, Vital Amplifier, Pendulum
+    Shield Splitter, Eye of the Storm, Avatar''s Parashu, Vital Amplifier, Pendulum
     Blade.'
   slot_scores:
     Lernaean Bow:
@@ -705,13 +705,13 @@ builds:
       fit: 0.6
     Jotunn's Revenge:
       total: 0.54
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.0
       fit: 0.3
     Dominance:
-      total: 0.51
-      efficiency: 0.46
+      total: 0.52
+      efficiency: 0.47
       win: 0.55
       pick: 0.3
       fit: 0.6

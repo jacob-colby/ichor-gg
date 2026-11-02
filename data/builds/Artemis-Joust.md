@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Jotunn's Revenge
+  - Tyrfing
   - Dominance
   - The Reaper
   - Tekko-Kagi
@@ -14,7 +14,7 @@ builds:
   - Demon Blade
   flex_slots:
   - Tekko-Kagi
-  - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,15 +31,15 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.49
-      efficiency: 0.69
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.6
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -118,7 +118,7 @@ builds:
       fit: 0.42
     Dominance:
       total: 0.48
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -138,14 +138,14 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
+  - Toxic Blade
   - Rage
-  - Jotunn's Revenge
   - Dominance
   - The Reaper
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Rage
   situational_swaps:
   - vs_tag: heavy_cc
@@ -158,26 +158,26 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.48
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Rage:
       total: 0.48
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Jotunn's Revenge:
-      total: 0.48
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.28
     Dominance:
       total: 0.51
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -275,8 +275,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -301,7 +301,7 @@ builds:
       fit: 0.83
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -318,13 +318,13 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -405,8 +405,8 @@ builds:
   - Dominance
   - Demon Blade
   flex_slots:
-  - Demon Blade
   - Dominance
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -449,7 +449,7 @@ builds:
       fit: 0.5
     Dominance:
       total: 0.43
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -463,7 +463,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Jotunn's Revenge
+  - Tyrfing
   - Dominance
   - The Reaper
   - Tekko-Kagi
@@ -471,7 +471,7 @@ builds:
   - Demon Blade
   flex_slots:
   - Tekko-Kagi
-  - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,15 +488,15 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.49
-      efficiency: 0.69
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.6
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -591,9 +591,9 @@ builds:
       fit: 0.79
   swaps:
   - added: Silverbranch Bow
-    removed: Jotunn's Revenge
+    removed: Tyrfing
     reason: Conquest community 71% win over 122 matches (vs 56% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
+      the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
 ---

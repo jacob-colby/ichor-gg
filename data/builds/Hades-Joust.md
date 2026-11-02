@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
-      total: 0.59
+      total: 0.6
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Erosion:
-      total: 0.55
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Divine Ruin
+  - Lotus Sickle
   - Chandra's Grace
   - Spear of Desolation
-  - Doom Orb
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
   - Chandra's Grace
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Lotus Sickle:
+      total: 0.48
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Chandra's Grace:
       total: 0.5
       efficiency: 0.47
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Doom Orb:
-      total: 0.48
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.87
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.83
     Spear of Desolation:
-      total: 0.63
+      total: 0.64
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -344,8 +344,8 @@ builds:
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -366,7 +366,7 @@ builds:
       fit: 0.53
     Nimble Ring:
       total: 0.51
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.25
     Eros' Bow:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.61
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.52
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -437,7 +437,7 @@ builds:
       fit: 0.43
     Breastplate of Valor:
       total: 0.53
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -470,7 +470,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Jotunn's Revenge
   - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,14 +489,14 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.32
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -625,7 +625,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
-      total: 0.59
+      total: 0.6
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -643,7 +643,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Erosion:
-      total: 0.55
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0

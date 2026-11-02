@@ -13,8 +13,8 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Toxic Blade
   - Tekko-Kagi
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -39,7 +39,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -118,7 +118,7 @@ builds:
       fit: 0.42
     Dominance:
       total: 0.48
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.46
     Jotunn's Revenge:
       total: 0.52
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -210,7 +210,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,14 +229,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Heartseeker:
-      total: 0.49
+      total: 0.48
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.75
+      total: 0.57
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -340,8 +340,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -366,7 +366,7 @@ builds:
       fit: 0.83
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -383,13 +383,13 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.56
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -467,11 +467,11 @@ builds:
   - Chandra's Grace
   - Jotunn's Revenge
   - Hydra's Lament
+  - Dominance
   - Pendulum Blade
-  - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -502,7 +502,7 @@ builds:
       fit: 0.53
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -512,18 +512,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Dominance:
+      total: 0.42
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Pendulum Blade:
-      total: 0.45
+      total: 0.44
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Heartseeker:
-      total: 0.42
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: model
@@ -535,8 +535,8 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Toxic Blade
   - Tekko-Kagi
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -561,7 +561,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38

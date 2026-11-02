@@ -118,16 +118,16 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Jotunn''s Revenge, Death Metal, Tekko-Kagi, Titan''s
     Bane, Lernaean Bow, Obsidian Shard, Bragi''s Harp, The Crusher, Hydra''s Lament,
-    Spear of Desolation, Golden Blade, Heartseeker, Nimble Ring, Dominance, The Reaper,
-    Soul Gem, Spear of the Magus, Toxic Blade, Arondight, Deathbringer, Demon Blade,
-    Musashi''s Dual Swords, Gluttonous Grimoire, Bracer of The Abyss, Doom Orb, Transcendence,
-    The World Stone, Riptalon, Avatar''s Parashu, Rage, Runeforged Hammer, Pendulum
-    Blade, Dreamer''s Idol, Eros'' Bow, Qin''s Blade, Chronos'' Pendant, Berserker''s
-    Shield, Avenging Blade, Eye of the Storm.'
+    Spear of Desolation, Golden Blade, Dominance, Nimble Ring, Heartseeker, The Reaper,
+    Soul Gem, Spear of the Magus, Toxic Blade, Deathbringer, Arondight, Demon Blade,
+    Musashi''s Dual Swords, Gluttonous Grimoire, Bracer of The Abyss, Doom Orb, The
+    World Stone, Transcendence, Riptalon, Avatar''s Parashu, Rage, Runeforged Hammer,
+    Eros'' Bow, Pendulum Blade, Dreamer''s Idol, Lotus Sickle, Qin''s Blade, Chronos''
+    Pendant, Berserker''s Shield, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.49
@@ -194,17 +194,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Jotunn''s Revenge, Death Metal, Spear of Desolation, Obsidian Shard,
-    Hydra''s Lament, Tekko-Kagi, Soul Gem, Nimble Ring, Bragi''s Harp, Titan''s Bane,
-    Spear of the Magus, Doom Orb, Heartseeker, Lernaean Bow, The World Stone, Dominance,
-    Gluttonous Grimoire, Chronos'' Pendant, The Crusher, Arondight, Bracer of The
-    Abyss, Ancient Signet, Heartwood Charm, Polynomicon, The Reaper, Transcendence,
-    Dreamer''s Idol, Golden Blade, Gem of Focus, Eros'' Bow, Blood-Bound Book, Soul
-    Reaver, Deathbringer, Musashi''s Dual Swords, Runeforged Hammer, The Cosmic Horror,
-    Pendulum Blade, Toxic Blade, Book of Thoth.'
+    Hydra''s Lament, Tekko-Kagi, Soul Gem, Lotus Sickle, Nimble Ring, Bragi''s Harp,
+    Titan''s Bane, Spear of the Magus, Doom Orb, The World Stone, Lernaean Bow, Heartseeker,
+    Dominance, Gluttonous Grimoire, Chronos'' Pendant, The Crusher, Bracer of The
+    Abyss, Arondight, Polynomicon, Heartwood Charm, Ancient Signet, The Reaper, Dreamer''s
+    Idol, Transcendence, Golden Blade, Eros'' Bow, Gem of Focus, Blood-Bound Book,
+    Soul Reaver, Deathbringer, Musashi''s Dual Swords, Runeforged Hammer, The Cosmic
+    Horror, Pendulum Blade, Book of Thoth.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.52
@@ -248,12 +248,12 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield of the Phoenix
-  - Death Metal
+  - Rod of Tahuti
   - Amanita Charm
+  - Soul Gem
   flex_slots:
+  - Soul Gem
   - Kinetic Cuirass
-  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -262,31 +262,31 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Rod of Tahuti, Jotunn''s Revenge,
-    Shield of the Phoenix, Soul Gem, Kinetic Cuirass, Death Metal, Shield Splitter,
-    The Reaper, Genji''s Guard, Golden Blade, Runeforged Hammer, Tekko-Kagi, Yogi''s
-    Necklace, Phoenix Feather, Ethereal Staff, Gluttonous Grimoire, Breastplate of
-    Valor, Titan''s Bane, Freya''s Tears, Obsidian Shard, Blood-Bound Book, Pharaoh''s
-    Curse, Lernaean Bow, Toxic Blade, Oni Hunter''s Garb, Riptalon, Erosion, Hydra''s
-    Lament, Chandra''s Grace, Eye of Providence, Spear of Desolation, Shogun''s Ofuda,
-    Midgardian Mail, Nimble Ring, Avenging Blade, Helm of Radiance, Eros'' Bow, Draconic
-    Scale, Sphere of Negation.'
+    Soul Gem, Shield of the Phoenix, Kinetic Cuirass, Death Metal, Shield Splitter,
+    The Reaper, Genji''s Guard, Golden Blade, Runeforged Hammer, Yogi''s Necklace,
+    Tekko-Kagi, Phoenix Feather, Ethereal Staff, Gluttonous Grimoire, Titan''s Bane,
+    Breastplate of Valor, Obsidian Shard, Freya''s Tears, Oni Hunter''s Garb, Blood-Bound
+    Book, Pharaoh''s Curse, Toxic Blade, Lernaean Bow, Erosion, Riptalon, Hydra''s
+    Lament, Eye of Providence, Eros'' Bow, Spear of Desolation, Chandra''s Grace,
+    Shogun''s Ofuda, Midgardian Mail, Helm of Radiance, Avenging Blade, Rod of Asclepius,
+    Nimble Ring, Draconic Scale.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.56
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.3
@@ -296,24 +296,26 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.49
-    Shield of the Phoenix:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.56
-      pick: 0.0
-      fit: 0.6
-    Death Metal:
-      total: 0.52
-      efficiency: 0.63
-      win: 0.56
-      pick: 0.0
-      fit: 0.31
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.13
+      fit: 0.16
     Amanita Charm:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
       win: 0.56
       pick: 0.0
       fit: 0.69
+    Soul Gem:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.59
+  community_ordered:
+  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -329,8 +331,8 @@ builds:
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -342,17 +344,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane, Obsidian
-    Shard, Death Metal, Spear of Desolation, The Crusher, Heartseeker, Soul Gem, Spear
-    of the Magus, The Reaper, Toxic Blade, Gluttonous Grimoire, Doom Orb, Lernaean
-    Bow, The World Stone, Avenging Blade, Hydra''s Lament, Avatar''s Parashu, Dreamer''s
-    Idol, Nimble Ring, Riptalon, Bragi''s Harp, Pendulum Blade, Dominance, Golden
-    Blade, The Cosmic Horror, Arondight, Deathbringer, Bracer of The Abyss, Musashi''s
-    Dual Swords, Oath-Sworn Spear, Transcendence, Runeforged Hammer, Demon Blade,
-    Chronos'' Pendant, Rage, Eros'' Bow.'
+    Shard, Death Metal, Spear of Desolation, The Crusher, Soul Gem, Heartseeker, Spear
+    of the Magus, The Reaper, Gluttonous Grimoire, Toxic Blade, Doom Orb, Lernaean
+    Bow, The World Stone, Avenging Blade, Hydra''s Lament, Dreamer''s Idol, Avatar''s
+    Parashu, Nimble Ring, Riptalon, Bragi''s Harp, Dominance, Pendulum Blade, Golden
+    Blade, The Cosmic Horror, Arondight, Bracer of The Abyss, Deathbringer, Musashi''s
+    Dual Swords, Oath-Sworn Spear, Transcendence, Lotus Sickle, Runeforged Hammer,
+    Demon Blade, Eros'' Bow, Rage.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.61
@@ -418,16 +420,16 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Jotunn''s Revenge, Nimble Ring, Tekko-Kagi, Death Metal,
     Soul Gem, Riptalon, Lernaean Bow, Golden Blade, The Reaper, Gluttonous Grimoire,
-    Obsidian Shard, Titan''s Bane, Toxic Blade, Spear of Desolation, Bragi''s Harp,
-    Dominance, Hydra''s Lament, The Crusher, Spear of the Magus, Qin''s Blade, Blood-Bound
-    Book, Heartseeker, Bracer of The Abyss, Doom Orb, Arondight, Eros'' Bow, The World
-    Stone, Sun Beam Bow, Berserker''s Shield, Transcendence, Demon Blade, Deathbringer,
-    Bloodforge, Musashi''s Dual Swords, Chronos'' Pendant, Dreamer''s Idol, Runeforged
-    Hammer, Bancroft''s Talon, Ancient Signet.'
+    Obsidian Shard, Titan''s Bane, Toxic Blade, Spear of Desolation, Dominance, Bragi''s
+    Harp, Hydra''s Lament, Spear of the Magus, The Crusher, Qin''s Blade, Blood-Bound
+    Book, Bracer of The Abyss, Heartseeker, Eros'' Bow, Doom Orb, Arondight, The World
+    Stone, Lotus Sickle, Sun Beam Bow, Berserker''s Shield, Transcendence, Demon Blade,
+    Deathbringer, Musashi''s Dual Swords, Bloodforge, Dreamer''s Idol, Chronos'' Pendant,
+    Runeforged Hammer, Bancroft''s Talon.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.31
@@ -445,7 +447,7 @@ builds:
       fit: 0.32
     Nimble Ring:
       total: 0.53
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.56
       pick: 0.0
       fit: 0.39
@@ -456,7 +458,7 @@ builds:
       pick: 0.25
       fit: 0.57
     Tekko-Kagi:
-      total: 0.53
+      total: 0.52
       efficiency: 0.55
       win: 0.56
       pick: 0.0
@@ -492,17 +494,17 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Rod of Tahuti,
-    Spear of Desolation, Soul Gem, Hydra''s Lament, Death Metal, Chronos'' Pendant,
-    Arondight, Tekko-Kagi, Obsidian Shard, Nimble Ring, Gem of Focus, Heartwood Charm,
-    Titan''s Bane, Spear of the Magus, Lernaean Bow, Pendulum Blade, Bragi''s Harp,
-    Gluttonous Grimoire, Doom Orb, The Crusher, Bracer of The Abyss, Totem of Death,
-    Heartseeker, The World Stone, Damaru, Genji''s Guard, Dominance, Golden Blade,
-    The Reaper, Toxic Blade, Dreamer''s Idol, Breastplate of Valor, Eros'' Bow, Ancient
-    Signet, Blood-Bound Book, Polynomicon, Transcendence, Chandra''s Grace, Deathbringer.'
+    Spear of Desolation, Soul Gem, Hydra''s Lament, Death Metal, Lotus Sickle, Chronos''
+    Pendant, Arondight, Tekko-Kagi, Obsidian Shard, Nimble Ring, Gem of Focus, Heartwood
+    Charm, Titan''s Bane, Spear of the Magus, Lernaean Bow, Pendulum Blade, Bragi''s
+    Harp, Gluttonous Grimoire, The Crusher, Doom Orb, Damaru, Bracer of The Abyss,
+    Totem of Death, The World Stone, Dominance, Genji''s Guard, Heartseeker, Golden
+    Blade, The Reaper, Toxic Blade, Dreamer''s Idol, Eros'' Bow, Breastplate of Valor,
+    Blood-Bound Book, Polynomicon, Ancient Signet, Transcendence, Deathbringer.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.59
@@ -567,16 +569,16 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Death Metal, Tekko-Kagi,
     Titan''s Bane, Lernaean Bow, Obsidian Shard, Bragi''s Harp, The Crusher, Hydra''s
-    Lament, Spear of Desolation, Golden Blade, Heartseeker, Nimble Ring, Dominance,
-    The Reaper, Soul Gem, Spear of the Magus, Toxic Blade, Arondight, Deathbringer,
+    Lament, Spear of Desolation, Golden Blade, Dominance, Nimble Ring, Heartseeker,
+    The Reaper, Soul Gem, Spear of the Magus, Toxic Blade, Deathbringer, Arondight,
     Demon Blade, Musashi''s Dual Swords, Gluttonous Grimoire, Bracer of The Abyss,
-    Doom Orb, Transcendence, The World Stone, Riptalon, Avatar''s Parashu, Rage, Runeforged
-    Hammer, Pendulum Blade, Dreamer''s Idol, Eros'' Bow, Qin''s Blade, Chronos'' Pendant,
-    Berserker''s Shield, Avenging Blade, Eye of the Storm.'
+    Doom Orb, The World Stone, Transcendence, Riptalon, Avatar''s Parashu, Rage, Runeforged
+    Hammer, Eros'' Bow, Pendulum Blade, Dreamer''s Idol, Lotus Sickle, Qin''s Blade,
+    Chronos'' Pendant, Berserker''s Shield, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.56
       pick: 0.0
       fit: 0.49

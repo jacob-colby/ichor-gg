@@ -39,7 +39,7 @@ builds:
       fit: 0.8
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.67
-      efficiency: 0.69
+      total: 0.66
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.92
     Berserker's Shield:
-      total: 0.59
-      efficiency: 0.75
+      total: 0.58
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -366,13 +366,13 @@ builds:
       fit: 0.43
     Breastplate of Valor:
       total: 0.53
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -431,7 +431,7 @@ builds:
       fit: 0.8
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54

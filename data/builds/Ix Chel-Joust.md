@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
-  - Void Stone
   - Spear of Desolation
+  - Rod of Tahuti
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Stygian Anchor
   - Spear of Desolation
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Spear of Desolation:
       total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -145,8 +145,8 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
   - Triton's Conch
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -275,8 +275,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Stone of Binding
   - Spear of Desolation
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.49
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -378,7 +378,7 @@ builds:
       fit: 0.21
     Eros' Bow:
       total: 0.55
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.49
     Soul Gem:
-      total: 0.74
-      efficiency: 0.58
+      total: 0.73
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -431,7 +431,7 @@ builds:
       fit: 0.44
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
-  - Void Stone
   - Spear of Desolation
+  - Rod of Tahuti
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Stygian Anchor
   - Spear of Desolation
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -500,18 +500,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Spear of Desolation:
       total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Amanita Charm:
       total: 0.8
       efficiency: 0.65

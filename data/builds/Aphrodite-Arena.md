@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Void Stone:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.79
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -269,24 +269,24 @@ builds:
   archetype: anti-tank
   slot_order:
   - Screeching Gargoyle
+  - Stone of Binding
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
+  - Stone of Binding
   - Screeching Gargoyle
-  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Stampede — physical protection
+    swap_item: Stampede
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -295,10 +295,16 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Stone of Binding:
+      total: 0.59
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Void Shield:
       total: 0.71
       efficiency: 0.46
@@ -312,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Amanita Charm:
-      total: 0.81
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -323,12 +329,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Stampede:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.49
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -372,7 +372,7 @@ builds:
       fit: 0.47
     Eros' Bow:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.79
-      efficiency: 0.58
+      total: 0.78
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -470,8 +470,8 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Golden Blade
   - Eros' Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -501,13 +501,13 @@ builds:
       pick: 0.0
       fit: 0.76
     Eros' Bow:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.59
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -535,8 +535,8 @@ builds:
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Void Stone
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -554,8 +554,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -566,7 +566,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -631,7 +631,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Void Stone:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -690,13 +690,13 @@ builds:
       pick: 0.0
       fit: 0.73
     Void Stone:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.73
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.87
       win: 0.5
       pick: 0.0

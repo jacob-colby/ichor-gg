@@ -149,8 +149,8 @@ builds:
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -236,7 +236,7 @@ builds:
       fit: 0.56
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -247,8 +247,8 @@ builds:
       pick: 0.0
       fit: 0.44
     Eros' Bow:
-      total: 0.53
-      efficiency: 0.52
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -301,7 +301,7 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -366,13 +366,13 @@ builds:
       fit: 0.76
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41

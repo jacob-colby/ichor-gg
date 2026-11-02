@@ -13,6 +13,7 @@ builds_from:
 builds_into:
 - Alchemist Coat
 - Ancient Signet
+- Soul Locket
 - Soul Reaver
 source_url: https://wiki.smite2.com/w/Soul_Reliquary
 last_verified: '2026-08-01'

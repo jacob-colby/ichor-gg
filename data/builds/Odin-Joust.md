@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -145,8 +145,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Toxic Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -171,7 +171,7 @@ builds:
       fit: 0.75
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -301,7 +301,7 @@ builds:
       fit: 0.82
     Berserker's Shield:
       total: 0.58
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -366,13 +366,13 @@ builds:
       fit: 0.44
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46

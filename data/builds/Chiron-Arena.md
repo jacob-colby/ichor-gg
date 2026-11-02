@@ -13,7 +13,7 @@ builds:
   - The Reaper
   - Riptalon
   flex_slots:
-  - Lernaean Bow
+  - Jotunn's Revenge
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -112,7 +112,7 @@ builds:
       fit: 0.62
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -208,9 +208,9 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
-  - Titan's Bane
+  - Tekko-Kagi
   flex_slots:
-  - Titan's Bane
+  - Tekko-Kagi
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -242,7 +242,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -258,32 +258,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Titan's Bane:
+    Tekko-Kagi:
       total: 0.48
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Toxic Blade
   - Amanita Charm
-  - Stampede
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Umbral Link
   flex_slots:
   - Shogun's Ofuda
-  - Stampede
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -305,7 +305,7 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
-    Stampede:
+    Erosion:
       total: 0.57
       efficiency: 0.51
       win: 0.5
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -535,7 +535,7 @@ builds:
   - The Reaper
   - Riptalon
   flex_slots:
-  - Lernaean Bow
+  - Jotunn's Revenge
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -566,8 +566,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -600,8 +600,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -625,8 +625,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -692,7 +692,7 @@ builds:
       fit: 0.52
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -709,7 +709,7 @@ builds:
       pick: 0.0
       fit: 0.47
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -763,8 +763,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -798,7 +798,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -823,8 +823,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -890,13 +890,13 @@ builds:
       fit: 0.67
     Berserker's Shield:
       total: 0.52
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.3
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -930,7 +930,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -956,7 +956,7 @@ builds:
       fit: 0.78
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -979,7 +979,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.59
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -1093,8 +1093,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -1128,8 +1128,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1153,8 +1153,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53

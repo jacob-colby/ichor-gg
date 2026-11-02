@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -106,7 +106,7 @@ builds:
       fit: 0.62
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -210,7 +210,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -236,7 +236,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Heartseeker:
-      total: 0.49
+      total: 0.48
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -301,7 +301,7 @@ builds:
       fit: 0.74
     Berserker's Shield:
       total: 0.56
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -337,11 +337,11 @@ builds:
   - Jotunn's Revenge
   - Tekko-Kagi
   - Riptalon
+  - Silverbranch Bow
   - Titan's Bane
-  - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -382,18 +382,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Silverbranch Bow:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Titan's Bane:
       total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
+      total: 0.51
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -501,8 +501,8 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -600,8 +600,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -625,8 +625,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -692,7 +692,7 @@ builds:
       fit: 0.52
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -703,7 +703,7 @@ builds:
       pick: 0.0
       fit: 0.47
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -763,8 +763,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -798,7 +798,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -823,8 +823,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -890,13 +890,13 @@ builds:
       fit: 0.67
     Berserker's Shield:
       total: 0.52
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.3
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -930,7 +930,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -956,7 +956,7 @@ builds:
       fit: 0.78
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -979,7 +979,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Heartseeker:
-      total: 0.59
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -1021,8 +1021,8 @@ builds:
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
+      total: 0.51
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -1060,10 +1060,10 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Pendulum Blade
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1093,8 +1093,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -1110,12 +1110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Heartseeker:
-      total: 0.45
-      efficiency: 0.44
+    Titan's Bane:
+      total: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.35
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1128,8 +1128,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1153,8 +1153,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53

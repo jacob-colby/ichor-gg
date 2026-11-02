@@ -13,6 +13,7 @@ builds_from:
 - Ring
 builds_into:
 - Chronos' Pendant
+- Lotus Sickle
 - Soul Gem
 - Spear of Desolation
 - Staff of Myrddin

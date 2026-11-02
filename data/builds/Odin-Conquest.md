@@ -110,21 +110,21 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield Splitter, Berserker''s Shield, Runeforged Hammer,
-    Erosion, Titan''s Bane, Eye of Providence, Draconic Scale, Stone of Binding, Shield
-    of the Phoenix, Oni Hunter''s Garb, Magi''s Cloak, Midgardian Mail, Mantle Of
-    Discord, Avenging Blade, The Crusher, Screeching Gargoyle, Leviathan''s Hide,
+    Erosion, Eye of Providence, Titan''s Bane, Draconic Scale, Oni Hunter''s Garb,
+    Shield of the Phoenix, Stone of Binding, Magi''s Cloak, Midgardian Mail, Avenging
+    Blade, The Crusher, Mantle Of Discord, Leviathan''s Hide, Screeching Gargoyle,
     Wyrmskin Hide, Arondight, The Reaper, Ancile, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.46
@@ -153,7 +153,7 @@ builds:
       pick: 0.2
       fit: 0.49
     Amanita Charm:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
       win: 0.64
       pick: 0.0
@@ -176,8 +176,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
   - Amanita Charm
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -193,20 +193,20 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Amanita
     Charm, Shield Splitter, Berserker''s Shield, Runeforged Hammer, Titan''s Bane,
-    Oni Hunter''s Garb, The Crusher, Erosion, Eye of Providence, Avenging Blade, Shield
+    Oni Hunter''s Garb, Erosion, The Crusher, Eye of Providence, Avenging Blade, Shield
     of the Phoenix, Stone of Binding, Arondight, Screeching Gargoyle, Draconic Scale,
-    Midgardian Mail, Magi''s Cloak, Mantle Of Discord, The Reaper, Leviathan''s Hide,
+    Midgardian Mail, Magi''s Cloak, The Reaper, Leviathan''s Hide, Mantle Of Discord,
     Wyrmskin Hide, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.45
     Breastplate of Valor:
       total: 0.57
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.64
       pick: 0.34
       fit: 0.29
@@ -269,13 +269,13 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Shield Splitter,
     The Reaper, Runeforged Hammer, Phoenix Feather, Yogi''s Necklace, Titan''s Bane,
-    Erosion, Chandra''s Grace, Eye of Providence, Draconic Scale, Oni Hunter''s Garb,
-    Avenging Blade, Midgardian Mail, The Crusher, Glorious Pridwen, Wyrmskin Hide,
-    Leviathan''s Hide, Regrowth Striders, Stone of Binding, Shifter''s Shield.'
+    Erosion, Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Draconic Scale,
+    Avenging Blade, Midgardian Mail, The Crusher, Regrowth Striders, Leviathan''s
+    Hide, Wyrmskin Hide, Glorious Pridwen, Stone of Binding, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.48
@@ -338,18 +338,18 @@ builds:
     swap: Stone of Binding — physical protection
     swap_item: Stone of Binding
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Amanita Charm, Stone of Binding, Shield Splitter, Screeching Gargoyle,
-    Avenging Blade, Berserker''s Shield, Titan''s Bane, Void Stone, Void Shield, The
-    Crusher, Runeforged Hammer, The Reaper, Erosion, Eye of Providence, Draconic Scale,
-    Tekko-Kagi, Oni Hunter''s Garb, Shield of the Phoenix, Midgardian Mail, Magi''s
-    Cloak, Mantle Of Discord, Leviathan''s Hide, Shifter''s Shield.'
+    for this god: Amanita Charm, Stone of Binding, Shield Splitter, Avenging Blade,
+    Screeching Gargoyle, Berserker''s Shield, Titan''s Bane, Void Stone, Void Shield,
+    The Crusher, Runeforged Hammer, The Reaper, Erosion, Oni Hunter''s Garb, Eye of
+    Providence, Draconic Scale, Tekko-Kagi, Shield of the Phoenix, Midgardian Mail,
+    Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.56
@@ -372,7 +372,7 @@ builds:
       pick: 0.2
       fit: 0.39
     Heartseeker:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.69
       pick: 0.17
@@ -416,11 +416,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Amanita Charm, Shield Splitter, Golden Blade, Tekko-Kagi,
+    this god: Berserker''s Shield, Amanita Charm, Golden Blade, Shield Splitter, Tekko-Kagi,
     Tyrfing, Toxic Blade, Silverbranch Bow, Runeforged Hammer, Pharaoh''s Curse, Lernaean
-    Bow, The Reaper, Titan''s Bane, Shogun''s Ofuda, Riptalon, Erosion, Oni Hunter''s
-    Garb, Stone of Binding, Eye of Providence, Midgardian Mail, Draconic Scale, Shield
-    of the Phoenix, Magi''s Cloak, Screeching Gargoyle.'
+    Bow, The Reaper, Oni Hunter''s Garb, Titan''s Bane, Shogun''s Ofuda, Riptalon,
+    Erosion, Eye of Providence, Stone of Binding, Midgardian Mail, Draconic Scale,
+    Shield of the Phoenix, Magi''s Cloak, Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -430,7 +430,7 @@ builds:
       fit: 0.52
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.64
       pick: 0.0
       fit: 0.42
@@ -441,7 +441,7 @@ builds:
       pick: 0.15
       fit: 0.45
     Freya's Tears:
-      total: 0.58
+      total: 0.57
       efficiency: 0.58
       win: 0.7
       pick: 0.2
@@ -490,20 +490,20 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Amanita Charm, Berserker''s Shield,
     Shield of the Phoenix, Shield Splitter, Screeching Gargoyle, Arondight, Runeforged
-    Hammer, Prophetic Cloak, Erosion, Eye of Providence, Oni Hunter''s Garb, Stone
-    of Binding, Draconic Scale, Titan''s Bane, Gladiator''s Shield, Midgardian Mail,
-    Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Chandra''s Grace, Eye of
-    Erebus, Regrowth Striders, Glorious Pridwen, Shifter''s Shield.'
+    Hammer, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Eye of Providence, Draconic
+    Scale, Stone of Binding, Titan''s Bane, Gladiator''s Shield, Midgardian Mail,
+    Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Chandra''s Grace, Regrowth
+    Striders, Eye of Erebus, Glorious Pridwen, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.5
     Breastplate of Valor:
       total: 0.59
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.64
       pick: 0.34
       fit: 0.44
@@ -565,15 +565,14 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Shield Splitter, Berserker''s Shield,
-    Runeforged Hammer, Erosion, Titan''s Bane, Eye of Providence, Draconic Scale,
-    Stone of Binding, Shield of the Phoenix, Oni Hunter''s Garb, Shifter''s Shield,
-    Magi''s Cloak, Midgardian Mail, Mantle Of Discord, Avenging Blade, The Crusher,
-    Screeching Gargoyle, Leviathan''s Hide, Wyrmskin Hide, Arondight, The Reaper,
-    Ancile.'
+    Runeforged Hammer, Erosion, Eye of Providence, Titan''s Bane, Draconic Scale,
+    Oni Hunter''s Garb, Shield of the Phoenix, Stone of Binding, Magi''s Cloak, Midgardian
+    Mail, Shifter''s Shield, Avenging Blade, The Crusher, Mantle Of Discord, Leviathan''s
+    Hide, Screeching Gargoyle, Wyrmskin Hide, Arondight, The Reaper, Ancile.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.57
       pick: 0.53
       fit: 0.46
@@ -602,7 +601,7 @@ builds:
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
       win: 0.64
       pick: 0.0

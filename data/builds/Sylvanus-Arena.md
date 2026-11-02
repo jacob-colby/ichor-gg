@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Void Stone:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
   - Stone of Binding
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
   - Stone of Binding
-  - Screeching Gargoyle
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,12 +163,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Stone of Binding:
       total: 0.61
       efficiency: 0.5
@@ -199,6 +193,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Stampede:
+      total: 0.6
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.48
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -242,7 +242,7 @@ builds:
       fit: 0.46
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -335,20 +335,20 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Stampede
+  - Pharaoh's Curse
   flex_slots:
   - Golden Blade
-  - Jotunn's Revenge
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -370,12 +370,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Amanita Charm:
       total: 0.79
       efficiency: 0.65
@@ -394,11 +388,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Pharaoh's Curse:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Jotunn's Revenge
+  - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
@@ -406,11 +406,11 @@ builds:
   - Triton's Conch
   flex_slots:
   - Void Stone
-  - Jotunn's Revenge
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -423,12 +423,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Void Shield:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.66
     Void Stone:
       total: 0.56
       efficiency: 0.46
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Void Stone:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0

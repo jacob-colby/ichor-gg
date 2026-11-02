@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.74
     Stampede:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.9
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -371,8 +371,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45

@@ -118,15 +118,15 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Titan''s Bane, Hydra''s Lament, Soul Gem, The Crusher, The Reaper, Pendulum
     Blade, Arondight, Tekko-Kagi, Spear of the Magus, Death Metal, Avatar''s Parashu,
-    Gluttonous Grimoire, Doom Orb, The World Stone, Chronos'' Pendant, Runeforged
-    Hammer, Dreamer''s Idol, Bragi''s Harp, Avenging Blade, Gem of Focus, Eye of the
-    Storm, Shield Splitter, The Cosmic Horror, Heartwood Charm, Dominance, Bloodforge,
-    Lernaean Bow, Ancient Signet, Blood-Bound Book, Triton''s Conch, Totem of Death,
-    Oath-Sworn Spear, Damaru, Genji''s Guard, Tyrfing.'
+    Gluttonous Grimoire, Doom Orb, The World Stone, Lotus Sickle, Dreamer''s Idol,
+    Chronos'' Pendant, Runeforged Hammer, Bragi''s Harp, Avenging Blade, The Cosmic
+    Horror, Gem of Focus, Shield Splitter, Eye of the Storm, Heartwood Charm, Dominance,
+    Bloodforge, Lernaean Bow, Blood-Bound Book, Triton''s Conch, Ancient Signet, Damaru,
+    Totem of Death, Genji''s Guard, Oath-Sworn Spear.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.9
@@ -194,17 +194,17 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Hydra''s Lament, Death Metal, Titan''s Bane, Doom Orb, Spear of the Magus,
-    The World Stone, Gluttonous Grimoire, The Crusher, Chronos'' Pendant, Heartwood
-    Charm, Arondight, Ancient Signet, The Reaper, Dreamer''s Idol, Bragi''s Harp,
-    Gem of Focus, Tekko-Kagi, Pendulum Blade, Soul Reaver, Blood-Bound Book, The Cosmic
-    Horror, Avatar''s Parashu, Runeforged Hammer, Bancroft''s Talon, Totem of Death,
-    Triton''s Conch, Dominance, Avenging Blade, Divine Ruin, Jade Scepter, Eye of
-    the Storm, Shield Splitter, Genji''s Guard.'
+    Gem, Hydra''s Lament, Lotus Sickle, Death Metal, Titan''s Bane, Doom Orb, Spear
+    of the Magus, The World Stone, Gluttonous Grimoire, The Crusher, Chronos'' Pendant,
+    Heartwood Charm, Arondight, The Reaper, Dreamer''s Idol, Ancient Signet, Bragi''s
+    Harp, Gem of Focus, Tekko-Kagi, Pendulum Blade, Soul Reaver, Blood-Bound Book,
+    The Cosmic Horror, Avatar''s Parashu, Runeforged Hammer, Bancroft''s Talon, Triton''s
+    Conch, Totem of Death, Dominance, Avenging Blade, Divine Ruin, Jade Scepter, Shield
+    Splitter, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.71
@@ -272,16 +272,16 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Soul Gem, Titan''s Bane, Spear of the Magus, Hydra''s Lament, Gluttonous
-    Grimoire, Doom Orb, The Crusher, The World Stone, The Reaper, Pendulum Blade,
-    Dreamer''s Idol, Chronos'' Pendant, Death Metal, Arondight, Tekko-Kagi, Gem of
-    Focus, The Cosmic Horror, Heartwood Charm, Avatar''s Parashu, Ancient Signet,
-    Bragi''s Harp, Blood-Bound Book, Totem of Death, Runeforged Hammer, Soul Reaver,
-    Avenging Blade, Divine Ruin, Jade Scepter, Damaru, Genji''s Guard, Eye of the
-    Storm, Shield Splitter, Triton''s Conch, Bancroft''s Talon.'
+    Grimoire, The Crusher, Doom Orb, The World Stone, Lotus Sickle, The Reaper, Dreamer''s
+    Idol, Pendulum Blade, Chronos'' Pendant, Death Metal, Arondight, Tekko-Kagi, The
+    Cosmic Horror, Gem of Focus, Heartwood Charm, Avatar''s Parashu, Bragi''s Harp,
+    Blood-Bound Book, Ancient Signet, Totem of Death, Runeforged Hammer, Soul Reaver,
+    Damaru, Avenging Blade, Divine Ruin, Jade Scepter, Genji''s Guard, Triton''s Conch,
+    Shield Splitter, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.78
@@ -347,19 +347,18 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Berserker''s Shield,
-    Kinetic Cuirass, Shield Splitter, Genji''s Guard, The Reaper, Runeforged Hammer,
-    Phoenix Feather, Freya''s Tears, Gluttonous Grimoire, Yogi''s Necklace, Breastplate
-    of Valor, Ethereal Staff, Titan''s Bane, Hydra''s Lament, Erosion, Chandra''s
-    Grace, Eye of Providence, Draconic Scale, Oni Hunter''s Garb, Avenging Blade,
-    Midgardian Mail, Blood-Bound Book, Shifter''s Shield, Helm of Radiance, Glorious
-    Pridwen, Leviathan''s Hide, Regrowth Striders, Rod of Asclepius, The Crusher,
-    Sphere of Negation, Stone of Binding, Helm of Darkness, Wyrmskin Hide, Screeching
-    Gargoyle.'
+    this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Kinetic Cuirass, Berserker''s
+    Shield, Shield Splitter, Genji''s Guard, The Reaper, Runeforged Hammer, Phoenix
+    Feather, Freya''s Tears, Yogi''s Necklace, Gluttonous Grimoire, Ethereal Staff,
+    Breastplate of Valor, Titan''s Bane, Erosion, Hydra''s Lament, Oni Hunter''s Garb,
+    Chandra''s Grace, Eye of Providence, Draconic Scale, Avenging Blade, Midgardian
+    Mail, Blood-Bound Book, Rod of Asclepius, Regrowth Striders, Helm of Radiance,
+    Leviathan''s Hide, Shifter''s Shield, Glorious Pridwen, The Crusher, Sphere of
+    Negation, Stone of Binding, Helm of Darkness, Wyrmskin Hide, Screeching Gargoyle.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.45
@@ -428,14 +427,14 @@ builds:
     for this god: Titan''s Bane, Soul Gem, The Crusher, The Reaper, Spear of the Magus,
     Tekko-Kagi, Pendulum Blade, Gluttonous Grimoire, Doom Orb, The World Stone, Avatar''s
     Parashu, Hydra''s Lament, Dreamer''s Idol, Avenging Blade, The Cosmic Horror,
-    Arondight, Death Metal, Oath-Sworn Spear, Chronos'' Pendant, Runeforged Hammer,
-    Gem of Focus, Bragi''s Harp, Heartwood Charm, Eye of the Storm, Shield Splitter,
-    Ancient Signet, Blood-Bound Book, Screeching Gargoyle, Dominance, Bloodforge,
-    Lernaean Bow, Damaru, Genji''s Guard, Totem of Death.'
+    Arondight, Death Metal, Lotus Sickle, Oath-Sworn Spear, Chronos'' Pendant, Runeforged
+    Hammer, Gem of Focus, Bragi''s Harp, Heartwood Charm, Shield Splitter, Eye of
+    the Storm, Blood-Bound Book, Ancient Signet, Dominance, Screeching Gargoyle, Bloodforge,
+    Damaru, Lernaean Bow, Genji''s Guard, Soul Reaver.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.93
@@ -452,7 +451,7 @@ builds:
       pick: 0.0
       fit: 0.89
     Rod of Tahuti:
-      total: 0.69
+      total: 0.68
       efficiency: 0.87
       win: 0.57
       pick: 0.65
@@ -504,14 +503,14 @@ builds:
     this god: Nimble Ring, Tyrfing, Tekko-Kagi, Soul Gem, Silverbranch Bow, Riptalon,
     Lernaean Bow, Golden Blade, The Reaper, Gluttonous Grimoire, Toxic Blade, Titan''s
     Bane, Hydra''s Lament, Bragi''s Harp, Dominance, Qin''s Blade, The Crusher, Spear
-    of the Magus, Bracer of The Abyss, Blood-Bound Book, Arondight, Death Metal, Eros''
-    Bow, Doom Orb, Sun Beam Bow, Chronos'' Pendant, The World Stone, Berserker''s
-    Shield, Bloodforge, Dreamer''s Idol, Runeforged Hammer, Pendulum Blade, Avatar''s
-    Parashu, Dagger of Frenzy, Bancroft''s Talon, Ancient Signet.'
+    of the Magus, Bracer of The Abyss, Blood-Bound Book, Arondight, Lotus Sickle,
+    Death Metal, Eros'' Bow, Doom Orb, Sun Beam Bow, Chronos'' Pendant, The World
+    Stone, Berserker''s Shield, Bloodforge, Dreamer''s Idol, Runeforged Hammer, Pendulum
+    Blade, Dagger of Frenzy, Bancroft''s Talon, Avatar''s Parashu.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.39
@@ -523,7 +522,7 @@ builds:
       fit: 0.71
     Nimble Ring:
       total: 0.52
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.53
       pick: 0.0
       fit: 0.42
@@ -576,18 +575,17 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Hydra''s Lament, Chronos''
-    Pendant, Arondight, Gem of Focus, Pendulum Blade, Heartwood Charm, Titan''s Bane,
-    Spear of the Magus, Totem of Death, Damaru, Gluttonous Grimoire, Genji''s Guard,
-    Doom Orb, The Crusher, The World Stone, Death Metal, Breastplate of Valor, The
-    Reaper, Dreamer''s Idol, Chandra''s Grace, Tekko-Kagi, Staff of Myrddin, Ancient
-    Signet, The Cosmic Horror, Blood-Bound Book, Avatar''s Parashu, Eye of Erebus,
-    Screeching Gargoyle, Runeforged Hammer, Bragi''s Harp, Soul Reaver, Freya''s Tears,
-    Avenging Blade.'
+    + fit + win/pick). Underrated for this god: Soul Gem, Hydra''s Lament, Lotus Sickle,
+    Chronos'' Pendant, Arondight, Gem of Focus, Heartwood Charm, Pendulum Blade, Titan''s
+    Bane, Spear of the Magus, Totem of Death, Damaru, Gluttonous Grimoire, Genji''s
+    Guard, The Crusher, Doom Orb, The World Stone, Death Metal, Breastplate of Valor,
+    The Reaper, Dreamer''s Idol, Chandra''s Grace, Tekko-Kagi, Staff of Myrddin, The
+    Cosmic Horror, Blood-Bound Book, Ancient Signet, Avatar''s Parashu, Eye of Erebus,
+    Runeforged Hammer, Screeching Gargoyle, Bragi''s Harp, Soul Reaver, Freya''s Tears.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.85
@@ -655,15 +653,15 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Titan''s Bane, Hydra''s Lament, Soul Gem, The Crusher,
     The Reaper, Pendulum Blade, Arondight, Tekko-Kagi, Spear of the Magus, Death Metal,
-    Avatar''s Parashu, Gluttonous Grimoire, Doom Orb, The World Stone, Chronos'' Pendant,
-    Runeforged Hammer, Dreamer''s Idol, Bragi''s Harp, Avenging Blade, Gem of Focus,
-    Eye of the Storm, Shield Splitter, The Cosmic Horror, Heartwood Charm, Dominance,
-    Bloodforge, Lernaean Bow, Ancient Signet, Blood-Bound Book, Triton''s Conch, Totem
-    of Death, Oath-Sworn Spear, Damaru, Genji''s Guard, Tyrfing.'
+    Avatar''s Parashu, Gluttonous Grimoire, Doom Orb, The World Stone, Lotus Sickle,
+    Dreamer''s Idol, Chronos'' Pendant, Runeforged Hammer, Bragi''s Harp, Avenging
+    Blade, The Cosmic Horror, Gem of Focus, Shield Splitter, Eye of the Storm, Heartwood
+    Charm, Dominance, Bloodforge, Lernaean Bow, Blood-Bound Book, Triton''s Conch,
+    Ancient Signet, Damaru, Totem of Death, Genji''s Guard, Oath-Sworn Spear.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.9

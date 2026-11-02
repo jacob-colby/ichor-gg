@@ -1,0 +1,43 @@
+# Record the wiki pages the new-entity path reads (roster, Items index, every
+# untracked god and item), from a runner. Read-only against the wiki. On a
+# feature-branch push it commits the responses as test fixtures; dispatched,
+# it only uploads them.
+name: Probe new wiki entities
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths:
+      - ".github/workflows/probe-new-entities.yml"
+      - "pipeline/scripts/probe_new_entities.py"
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        working-directory: pipeline
+        run: pip install -r requirements.txt
+      - name: Probe
+        working-directory: pipeline
+        run: python scripts/probe_new_entities.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: new-entities
+          path: pipeline/smite/tests/fixtures/recorded/new_entities
+      - name: Commit recorded fixtures
+        if: github.event_name == 'push'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pipeline/smite/tests/fixtures/recorded/new_entities
+          git diff --cached --quiet || { git commit -m "test(fixtures): record new-entity wiki pages from a runner"; git push; }

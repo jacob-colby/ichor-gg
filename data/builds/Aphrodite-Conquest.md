@@ -118,10 +118,10 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Genji''s Guard, Kinetic Cuirass, Gluttonous Grimoire,
     Freya''s Tears, Soul Gem, Breastplate of Valor, Helm of Radiance, Helm of Darkness,
-    Spear of the Magus, Erosion, Shield of the Phoenix, Eye of Providence, Draconic
-    Scale, Oni Hunter''s Garb, Chronos'' Pendant, Jade Scepter, Screeching Gargoyle,
-    Stone of Binding, Midgardian Mail, Doom Orb, Shifter''s Shield, Magi''s Cloak,
-    The World Stone, Mantle Of Discord, Leviathan''s Hide.'
+    Spear of the Magus, Erosion, Shield of the Phoenix, Lotus Sickle, Eye of Providence,
+    Oni Hunter''s Garb, Draconic Scale, Jade Scepter, Chronos'' Pendant, Stone of
+    Binding, Screeching Gargoyle, Midgardian Mail, Doom Orb, Magi''s Cloak, Shifter''s
+    Shield, The World Stone, Leviathan''s Hide, Mantle Of Discord.'
   slot_scores:
     Book of Thoth:
       total: 0.49
@@ -175,30 +175,30 @@ builds:
   - Spear of Desolation
   - Breastplate of Valor
   - Rod of Tahuti
-  - Amanita Charm
+  - Obsidian Shard
   flex_slots:
   - Breastplate of Valor
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
-    Guard, Amanita Charm, Breastplate of Valor, Gluttonous Grimoire, Kinetic Cuirass,
-    Soul Gem, Helm of Radiance, Freya''s Tears, Spear of the Magus, Death Metal, Helm
-    of Darkness, Doom Orb, The World Stone, Oni Hunter''s Garb, Chronos'' Pendant,
-    Jade Scepter, Wish-Granting Pearl, Shield of the Phoenix, Ancient Signet, Erosion,
-    Eye of Providence, Screeching Gargoyle, Polynomicon, Stone of Binding, Midgardian
-    Mail, Heartwood Charm.'
+    Guard, Amanita Charm, Gluttonous Grimoire, Kinetic Cuirass, Breastplate of Valor,
+    Soul Gem, Helm of Radiance, Lotus Sickle, Freya''s Tears, Spear of the Magus,
+    Death Metal, Helm of Darkness, Oni Hunter''s Garb, Doom Orb, The World Stone,
+    Jade Scepter, Chronos'' Pendant, Wish-Granting Pearl, Erosion, Shield of the Phoenix,
+    Eye of Providence, Polynomicon, Screeching Gargoyle, Midgardian Mail, Ancient
+    Signet, Triton''s Conch, Stone of Binding.'
   slot_scores:
     Book of Thoth:
       total: 0.5
@@ -220,7 +220,7 @@ builds:
       fit: 0.4
     Breastplate of Valor:
       total: 0.51
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.28
@@ -230,16 +230,17 @@ builds:
       win: 0.63
       pick: 0.28
       fit: 0.37
-    Amanita Charm:
+    Obsidian Shard:
       total: 0.52
-      efficiency: 0.65
-      win: 0.54
-      pick: 0.0
-      fit: 0.35
+      efficiency: 0.58
+      win: 0.56
+      pick: 0.15
+      fit: 0.41
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst
@@ -261,18 +262,18 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Amanita Charm, Genji''s Guard, Soul Gem, Gluttonous Grimoire, Kinetic Cuirass,
-    Breastplate of Valor, Freya''s Tears, Spear of the Magus, Helm of Radiance, Helm
-    of Darkness, Doom Orb, Shield of the Phoenix, The World Stone, Screeching Gargoyle,
-    Chronos'' Pendant, Death Metal, Erosion, Oni Hunter''s Garb, Eye of Providence,
-    Stone of Binding, Dreamer''s Idol, Midgardian Mail, Jade Scepter, Draconic Scale,
-    Magi''s Cloak, Leviathan''s Hide.'
+    god: Amanita Charm, Genji''s Guard, Gluttonous Grimoire, Soul Gem, Kinetic Cuirass,
+    Freya''s Tears, Breastplate of Valor, Spear of the Magus, Helm of Radiance, Lotus
+    Sickle, Helm of Darkness, Doom Orb, Shield of the Phoenix, The World Stone, Oni
+    Hunter''s Garb, Screeching Gargoyle, Chronos'' Pendant, Death Metal, Erosion,
+    Eye of Providence, Dreamer''s Idol, Jade Scepter, Midgardian Mail, Stone of Binding,
+    Draconic Scale, Magi''s Cloak, Leviathan''s Hide.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -342,12 +343,12 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Kinetic Cuirass, Gluttonous
-    Grimoire, Genji''s Guard, Ethereal Staff, Freya''s Tears, Breastplate of Valor,
-    Phoenix Feather, Blood-Bound Book, Helm of Radiance, Yogi''s Necklace, Rod of
-    Asclepius, Sphere of Negation, Helm of Darkness, Chandra''s Grace, Spear of the
-    Magus, Erosion, Eye of Providence, Jade Scepter, Oni Hunter''s Garb, Draconic
-    Scale, Glorious Pridwen, Chronos'' Pendant, Regrowth Striders.'
+    this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Gluttonous Grimoire,
+    Kinetic Cuirass, Genji''s Guard, Ethereal Staff, Freya''s Tears, Blood-Bound Book,
+    Phoenix Feather, Breastplate of Valor, Rod of Asclepius, Yogi''s Necklace, Helm
+    of Radiance, Sphere of Negation, Helm of Darkness, Chandra''s Grace, Spear of
+    the Magus, Erosion, Oni Hunter''s Garb, Lotus Sickle, Eye of Providence, Jade
+    Scepter, Draconic Scale, Regrowth Striders, Midgardian Mail, Glorious Pridwen.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.53
@@ -393,15 +394,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
-  - Stone of Binding
+  - Book of Thoth
+  - Genji's Guard
   - Spear of Desolation
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Screeching Gargoyle
-  - Stone of Binding
+  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -410,33 +411,33 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Amanita Charm, Soul Gem, Screeching Gargoyle,
-    Stone of Binding, Genji''s Guard, Spear of the Magus, Kinetic Cuirass, Freya''s
-    Tears, Void Stone, Breastplate of Valor, Void Shield, Doom Orb, The World Stone,
-    Helm of Radiance, Helm of Darkness, Dreamer''s Idol, Shield of the Phoenix, Erosion,
-    Eye of Providence, Oni Hunter''s Garb, Chronos'' Pendant, Draconic Scale, Jade
-    Scepter, Midgardian Mail.'
+    for this god: Gluttonous Grimoire, Amanita Charm, Soul Gem, Genji''s Guard, Screeching
+    Gargoyle, Stone of Binding, Spear of the Magus, Kinetic Cuirass, Void Stone, Freya''s
+    Tears, Void Shield, Doom Orb, Breastplate of Valor, The World Stone, Helm of Radiance,
+    Helm of Darkness, Dreamer''s Idol, Lotus Sickle, Oni Hunter''s Garb, Shield of
+    the Phoenix, Erosion, Eye of Providence, Jade Scepter, Chronos'' Pendant, Draconic
+    Scale, Midgardian Mail.'
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.0
-      fit: 0.66
-    Stone of Binding:
-      total: 0.52
+    Book of Thoth:
+      total: 0.49
       efficiency: 0.5
+      win: 0.62
+      pick: 0.15
+      fit: 0.17
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.69
       win: 0.54
       pick: 0.0
-      fit: 0.68
+      fit: 0.26
     Spear of Desolation:
-      total: 0.55
+      total: 0.56
       efficiency: 0.59
       win: 0.54
       pick: 0.32
@@ -448,7 +449,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
-      total: 0.68
+      total: 0.67
       efficiency: 0.87
       win: 0.63
       pick: 0.28
@@ -460,6 +461,7 @@ builds:
       pick: 0.15
       fit: 0.58
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -490,12 +492,12 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Nimble Ring, Gluttonous Grimoire, Amanita Charm, Soul Gem, Genji''s
+    this god: Gluttonous Grimoire, Nimble Ring, Amanita Charm, Soul Gem, Genji''s
     Guard, Kinetic Cuirass, Breastplate of Valor, Freya''s Tears, Helm of Radiance,
-    Eros'' Bow, Blood-Bound Book, Spear of the Magus, Helm of Darkness, Bragi''s Harp,
-    Oni Hunter''s Garb, Bracer of The Abyss, Screeching Gargoyle, Chronos'' Pendant,
-    Shield of the Phoenix, Death Metal, Stone of Binding, Jade Scepter, Erosion, Midgardian
-    Mail, Eye of Providence, Doom Orb.'
+    Eros'' Bow, Blood-Bound Book, Spear of the Magus, Helm of Darkness, Lotus Sickle,
+    Oni Hunter''s Garb, Bragi''s Harp, Bracer of The Abyss, Jade Scepter, Shield of
+    the Phoenix, Chronos'' Pendant, Screeching Gargoyle, Death Metal, Erosion, Midgardian
+    Mail, Stone of Binding, Eye of Providence, Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -505,7 +507,7 @@ builds:
       fit: 0.12
     Nimble Ring:
       total: 0.52
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.34
@@ -529,7 +531,7 @@ builds:
       fit: 0.21
     Eros' Bow:
       total: 0.48
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.54
       pick: 0.0
       fit: 0.37
@@ -543,33 +545,33 @@ builds:
   - Book of Thoth
   - Genji's Guard
   - Spear of Desolation
-  - Breastplate of Valor
   - Freya's Tears
   - Rod of Tahuti
+  - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
+  - Amanita Charm
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, Freya''s Tears, Breastplate
-    of Valor, Amanita Charm, Soul Gem, Kinetic Cuirass, Shield of the Phoenix, Screeching
-    Gargoyle, Gluttonous Grimoire, Chronos'' Pendant, Helm of Radiance, Prophetic
-    Cloak, Helm of Darkness, Erosion, Gem of Focus, Eye of Providence, Oni Hunter''s
-    Garb, Gladiator''s Shield, Heartwood Charm, Spear of the Magus, Stone of Binding,
-    Draconic Scale, Midgardian Mail, Magi''s Cloak, Chandra''s Grace, Leviathan''s
-    Hide.'
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Freya''s Tears, Amanita
+    Charm, Breastplate of Valor, Soul Gem, Kinetic Cuirass, Shield of the Phoenix,
+    Screeching Gargoyle, Lotus Sickle, Gluttonous Grimoire, Chronos'' Pendant, Helm
+    of Radiance, Prophetic Cloak, Oni Hunter''s Garb, Helm of Darkness, Erosion, Eye
+    of Providence, Gem of Focus, Gladiator''s Shield, Spear of the Magus, Heartwood
+    Charm, Draconic Scale, Stone of Binding, Midgardian Mail, Magi''s Cloak, Chandra''s
+    Grace, Leviathan''s Hide.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -589,12 +591,6 @@ builds:
       win: 0.54
       pick: 0.32
       fit: 0.52
-    Breastplate of Valor:
-      total: 0.53
-      efficiency: 0.64
-      win: 0.54
-      pick: 0.0
-      fit: 0.44
     Freya's Tears:
       total: 0.53
       efficiency: 0.58
@@ -602,11 +598,17 @@ builds:
       pick: 0.0
       fit: 0.58
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.87
       win: 0.63
       pick: 0.28
       fit: 0.21
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.0
+      fit: 0.39
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
@@ -629,23 +631,23 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Berserker''s Shield, Jotunn''s Revenge, Amanita
-    Charm, Shield Splitter, Genji''s Guard, Kinetic Cuirass, Golden Blade, Gluttonous
-    Grimoire, Runeforged Hammer, Breastplate of Valor, Tekko-Kagi, Soul Gem, Hydra''s
-    Lament, Freya''s Tears, Titan''s Bane, Tyrfing, Helm of Radiance, Spear of the
-    Magus, Death Metal, Helm of Darkness, Nimble Ring, The Crusher, Toxic Blade, Lernaean
-    Bow, Heartseeker, Bragi''s Harp, Silverbranch Bow, Arondight, Avenging Blade,
-    Shield of the Phoenix, Eros'' Bow, Oni Hunter''s Garb, Erosion, Screeching Gargoyle,
-    Chronos'' Pendant, Doom Orb, The Reaper, Eye of Providence, Stone of Binding.'
+    Charm, Genji''s Guard, Shield Splitter, Kinetic Cuirass, Golden Blade, Gluttonous
+    Grimoire, Runeforged Hammer, Tekko-Kagi, Soul Gem, Hydra''s Lament, Breastplate
+    of Valor, Titan''s Bane, Freya''s Tears, Tyrfing, Helm of Radiance, Spear of the
+    Magus, Death Metal, Helm of Darkness, The Crusher, Nimble Ring, Toxic Blade, Lotus
+    Sickle, Lernaean Bow, Bragi''s Harp, Oni Hunter''s Garb, Silverbranch Bow, Avenging
+    Blade, Eros'' Bow, Arondight, Heartseeker, Shield of the Phoenix, Erosion, Jade
+    Scepter, Doom Orb, Eye of Providence, Chronos'' Pendant, The Reaper.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -655,13 +657,13 @@ builds:
       fit: 0.14
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.54
       pick: 0.0
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.54
       pick: 0.0
       fit: 0.43
@@ -717,10 +719,10 @@ builds:
     Genji''s Guard, Shield Splitter, Berserker''s Shield, Gluttonous Grimoire, Kinetic
     Cuirass, Soul Gem, Freya''s Tears, Breastplate of Valor, Runeforged Hammer, Helm
     of Radiance, Hydra''s Lament, Titan''s Bane, Spear of the Magus, Helm of Darkness,
-    Death Metal, Doom Orb, The Crusher, Shield of the Phoenix, Chronos'' Pendant,
-    Erosion, Jade Scepter, Eye of Providence, Heartseeker, Oni Hunter''s Garb, The
-    World Stone, Screeching Gargoyle, Avenging Blade, Arondight, Stone of Binding,
-    Draconic Scale, Midgardian Mail, Magi''s Cloak, The Reaper, Tyrfing, Dreamer''s
+    Death Metal, Lotus Sickle, Oni Hunter''s Garb, The Crusher, Doom Orb, Shield of
+    the Phoenix, Jade Scepter, Erosion, Chronos'' Pendant, Eye of Providence, The
+    World Stone, Avenging Blade, Heartseeker, Screeching Gargoyle, Draconic Scale,
+    Arondight, Stone of Binding, Midgardian Mail, The Reaper, Magi''s Cloak, Dreamer''s
     Idol, Triton''s Conch, Leviathan''s Hide.'
   slot_scores:
     Book of Thoth:
@@ -730,8 +732,8 @@ builds:
       pick: 0.15
       fit: 0.18
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.54
       pick: 0.0
       fit: 0.44
@@ -792,10 +794,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Genji''s Guard, Kinetic Cuirass, Gluttonous
     Grimoire, Freya''s Tears, Soul Gem, Breastplate of Valor, Helm of Radiance, Helm
-    of Darkness, Spear of the Magus, Erosion, Shield of the Phoenix, Eye of Providence,
-    Draconic Scale, Oni Hunter''s Garb, Chronos'' Pendant, Jade Scepter, Screeching
-    Gargoyle, Stone of Binding, Midgardian Mail, Doom Orb, Shifter''s Shield, Magi''s
-    Cloak, The World Stone, Mantle Of Discord, Leviathan''s Hide.'
+    of Darkness, Spear of the Magus, Erosion, Shield of the Phoenix, Lotus Sickle,
+    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, Jade Scepter, Chronos''
+    Pendant, Stone of Binding, Screeching Gargoyle, Midgardian Mail, Doom Orb, Magi''s
+    Cloak, Shifter''s Shield, The World Stone, Leviathan''s Hide, Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
       total: 0.53

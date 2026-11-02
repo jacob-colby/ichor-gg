@@ -462,16 +462,13 @@ def _known_item_names():
 _KNOWN_ITEM_NAMES = None
 
 
-def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
-                       index_row: dict | None = None) -> None:
-    """`index_row` is this god's row from `refresh_god_index`, when the caller
-    has already pulled it. Absent, the note keeps only the aspect figures and
-    the tier list falls back to scoring by those — degraded, not broken."""
-    if mode.lower() not in COMMUNITY_MODES:
-        return
+def community_build_entry(god: str, html: str, index_row: dict | None = None) -> dict:
+    """The `source: community` entry for one god's SmiteBrain build page.
+    Split from `refresh_god_builds` so `new_entities` can build it before the
+    god's note exists and write it only if the god passes the gate."""
     slug = god.lower().replace(" ", "-").replace("'", "")
     url = f"{SMITEBRAIN_BASE}{slug}/"
-    parsed = smitebrain_parser.parse_build_page(community_fetcher.fetch(url, force=force))
+    parsed = smitebrain_parser.parse_build_page(html)
 
     aspect = parsed["aspects"][0] if parsed["aspects"] else None
     community_entry = {
@@ -495,8 +492,35 @@ def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = Fal
     # `notes.canonicalise_community_items` for what shipped broken.
     drift = notes.canonicalise_community_items(community_entry, _known_item_names())
     if drift:
-        print(f"  {god} {mode}: renamed {drift} community item(s) to our spelling")
-    notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode, community_entry)
+        print(f"  {god}: renamed {drift} community item(s) to our spelling")
+    return community_entry
+
+
+def community_url(god: str) -> str:
+    return f"{SMITEBRAIN_BASE}{god.lower().replace(' ', '-').replace(chr(39), '')}/"
+
+
+def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
+                       index_row: dict | None = None) -> None:
+    """`index_row` is this god's row from `refresh_god_index`, when the caller
+    has already pulled it. Absent, the note keeps only the aspect figures and
+    the tier list falls back to scoring by those — degraded, not broken."""
+    if mode.lower() not in COMMUNITY_MODES:
+        return
+    html = community_fetcher.fetch(community_url(god), force=force)
+    notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode,
+                           community_build_entry(god, html, index_row))
+
+
+def _not_published_yet(exc: Exception, build_frontmatter: dict) -> bool:
+    """A SmiteBrain 404 for a god whose note has NEVER had community data: a
+    god added from the wiki (`new_entities`) before SmiteBrain has a page for
+    him. Not a failure — the model's builds do not need it, and it fills in on
+    the first run after SmiteBrain publishes. A 404 for a god that HAS had
+    community data is still a failure: that is a slug change or an outage."""
+    status = getattr(getattr(exc, "response", None), "status_code", None)
+    had = any(b.get("source") == "community" for b in build_frontmatter.get("builds") or [])
+    return status == 404 and not had
 
 
 def refresh_community(force: bool = True) -> int:
@@ -549,6 +573,9 @@ def refresh_community(force: bool = True) -> int:
             refresh_god_builds(god, mode, community_fetcher, force=force,
                                index_row=god_index.get(god))
         except Exception as exc:
+            if _not_published_yet(exc, frontmatter):
+                print(f"  [not yet on SmiteBrain] {god}: no community page; model builds only")
+                continue
             print(f"  [FAILED] build '{god}-{mode}': {exc}")
             failures.append(f"build '{god}-{mode}': {exc}")
 

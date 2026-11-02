@@ -370,6 +370,11 @@ function ItemDetail({ item, byName, goldValues, community, onClose }: {
           <section className="mt-4 border-t border-line pt-3">
             <h3 className={eyebrow}>Passive</h3>
             <p className="mt-1.5 max-w-[68ch] text-small leading-relaxed text-ink-soft">{item.passive}</p>
+            {item.passive_uncatalogued && (
+              <p className="mt-1.5 max-w-[68ch] text-label text-muted">
+                New item, passive not yet catalogued — valued on its stats alone.
+              </p>
+            )}
           </section>
         )}
 

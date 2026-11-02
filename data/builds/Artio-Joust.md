@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -236,7 +236,7 @@ builds:
       fit: 0.78
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -301,18 +301,18 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
     Freya's Tears:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -347,8 +347,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -366,13 +366,13 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -405,8 +405,8 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
   - Kinetic Cuirass
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -431,7 +431,7 @@ builds:
       fit: 0.58
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42

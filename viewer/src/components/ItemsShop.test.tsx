@@ -119,6 +119,18 @@ describe("ItemsShop — the receipt", () => {
     expect(receipt.getByText("+300g")).toBeInTheDocument();
   });
 
+  it("says when a new item's passive is not catalogued, and only then", () => {
+    const fresh = [{ ...(items[1] as object), passive_uncatalogued: true }] as unknown as Item[];
+    render(shop({ items: fresh, openItem: "Aegis" }));
+    expect(within(screen.getByRole("dialog"))
+      .getByText(/passive not yet catalogued — valued on its stats alone/i)).toBeInTheDocument();
+  });
+
+  it("does not flag a catalogued passive", () => {
+    render(shop({ openItem: "Aegis" }));
+    expect(screen.queryByText(/passive not yet catalogued/i)).not.toBeInTheDocument();
+  });
+
   it("explains why a starter has no verdict rather than printing a dash", () => {
     render(shop({ openItem: "Pendant" }));
     expect(within(screen.getByRole("dialog"))

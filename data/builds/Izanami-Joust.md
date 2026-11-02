@@ -13,7 +13,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -63,7 +63,7 @@ builds:
       fit: 0.78
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -112,7 +112,7 @@ builds:
       fit: 0.55
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -171,7 +171,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -195,7 +195,7 @@ builds:
       fit: 0.41
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -236,7 +236,7 @@ builds:
       fit: 0.71
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -260,7 +260,7 @@ builds:
       fit: 0.33
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -301,7 +301,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.56
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Shogun's Ofuda:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.58
     Soul Gem:
       total: 0.72
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -337,10 +337,10 @@ builds:
   - Jotunn's Revenge
   - Tekko-Kagi
   - Silverbranch Bow
-  - Heartseeker
+  - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Heartseeker
+  - Titan's Bane
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -366,7 +366,7 @@ builds:
       fit: 0.84
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -382,15 +382,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Heartseeker:
+    Titan's Bane:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.52
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -431,12 +431,12 @@ builds:
       fit: 0.79
     Jotunn's Revenge:
       total: 0.5
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.32
     Tyrfing:
-      total: 0.55
+      total: 0.54
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -455,7 +455,7 @@ builds:
       fit: 0.49
     Soul Gem:
       total: 0.72
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -496,7 +496,7 @@ builds:
       fit: 0.64
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 0.35
     Spear of Desolation:
-      total: 0.53
+      total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.48
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -535,7 +535,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -585,7 +585,7 @@ builds:
       fit: 0.78
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -600,7 +600,7 @@ builds:
   - Deathbringer
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -625,8 +625,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -650,7 +650,7 @@ builds:
       fit: 0.39
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93

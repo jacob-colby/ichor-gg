@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.61
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -171,7 +171,7 @@ builds:
       fit: 0.79
     Jotunn's Revenge:
       total: 0.73
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Pendulum Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -295,12 +295,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -555,12 +555,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -585,7 +585,7 @@ builds:
       fit: 1.0
     Avatar's Parashu:
       total: 0.68
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.91

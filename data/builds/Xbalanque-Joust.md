@@ -13,8 +13,8 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Qin's Blade
   - Dominance
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -23,8 +23,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -45,7 +45,7 @@ builds:
       fit: 0.83
     Dominance:
       total: 0.55
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -106,7 +106,7 @@ builds:
       fit: 0.67
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.77
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -273,9 +273,9 @@ builds:
   - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Heartseeker
+  - Titan's Bane
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -323,12 +323,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Heartseeker:
+    Titan's Bane:
       total: 0.56
-      efficiency: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.57
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -372,7 +372,7 @@ builds:
       fit: 0.75
     Dominance:
       total: 0.51
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Demon Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.36
       win: 0.5
       pick: 0.0
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.64
+      total: 0.52
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Divine Ruin
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Eros' Bow
-  - Jotunn's Revenge
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,23 +483,23 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Toxic Blade:
       total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -514,13 +514,13 @@ builds:
       fit: 0.35
     Eros' Bow:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 0.34
     Soul Gem:
-      total: 0.74
+      total: 0.75
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -600,8 +600,8 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Qin's Blade
   - Dominance
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -610,8 +610,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -632,7 +632,7 @@ builds:
       fit: 0.83
     Dominance:
       total: 0.55
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64

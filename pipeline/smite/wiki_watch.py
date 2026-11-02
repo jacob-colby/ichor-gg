@@ -31,6 +31,11 @@ the roster grid leads the wiki's own content. On 2026-08-29 it listed 92 gods,
 of which Hachiman and Hel are placeholder pages reading "There is currently no
 text in this page". A count-based detector would have filed both as work.
 
+SINCE 2026-11-02 the ADD is automated after all, by `smite.new_entities`,
+which answers the argument above for new entities only: a new god has no good
+note to overwrite, so a parse that is not whole is refused, not written. This
+module still only announces.
+
     python -m smite.wiki_watch                 # exit 1 if there is something to do
     python -m smite.wiki_watch --out issue.md  # ...and write the issue body
 """
@@ -177,9 +182,10 @@ def report_markdown(result: dict) -> str:
             "python -m smite.recommend --all && python -m smite.build_index",
             "```",
             "",
-            "Run it locally, not here. The scrape overwrites god notes wholesale "
-            "and no gate in this repo can see a kit that silently parsed to "
-            "empty — see `smite/wiki_watch.py` for the measurement.",
+            "The daily `refresh-data.yml` job adds these on its own "
+            "(`smite.new_entities`); if one is still listed the day after, read "
+            "that step's log and `data/_new_entities.json` for why it was left "
+            "out. The commands above are the manual fallback.",
             "",
         ]
 
