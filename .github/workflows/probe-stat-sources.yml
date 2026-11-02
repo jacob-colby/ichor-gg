@@ -1,0 +1,36 @@
+# Can a GitHub-hosted runner reach a source of item and god stats?
+#
+# Read-only. Logs HTTP status and byte counts for the wiki (HTML, MediaWiki
+# api.php, a headless browser), SmiteBrain, smite2.com and SmiteSource. The
+# job log is the result; nothing is written or committed. Kept so the answer
+# can be re-checked when Cloudflare's posture changes.
+name: Probe stat sources
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/probe-stat-sources.yml"
+      - "pipeline/scripts/probe_stat_sources.py"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        working-directory: pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Probe
+        working-directory: pipeline
+        run: python scripts/probe_stat_sources.py
