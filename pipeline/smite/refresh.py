@@ -213,6 +213,9 @@ def item_note_content(name: str, parsed: dict, url: str, today: str = None) -> d
     # every reader already treats as absent.
     if parsed.get("god"):
         frontmatter["god"] = parsed["god"]
+    # Conditional for the same reason: 30 of 226 items carry an Adaptive Stat clause.
+    if parsed.get("adaptive_stat"):
+        frontmatter["adaptive_stat"] = parsed["adaptive_stat"]
     return frontmatter
 
 
@@ -254,8 +257,9 @@ def _refuse_item_collapse(name: str, existing: dict, parsed: dict) -> None:
     """The item-side twin of `_refuse_god_collapse`, and deliberately narrower.
 
     Zero stats is NOT a parse failure for an item the way zero abilities is for
-    a god: Mote of Chaos and Survivor's Sash are genuinely statless tier-2s and
-    are two of `data_audit`'s standing findings. So this refuses only on a
+    a god: Mote of Chaos is a genuinely statless tier-2 (a reviewed
+    `data_audit` fact), and Survivor's Sash keeps `stats: {}` beside its
+    recorded `adaptive_stat`. So this refuses only on a
     LOSS — stats that were there and are not, or a cost that was readable and
     is not. A statless item that stays statless writes as normal."""
     old_stats = existing.get("stats") or {}

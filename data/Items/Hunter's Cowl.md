@@ -15,6 +15,9 @@ builds_from:
 builds_into: []
 source_url: https://wiki.smite2.com/w/Hunter's_Cowl
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 55.0
+  Intelligence: 80.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +55 Strength or +80 Intelligence (based on highest item stat). Within 8.8m of a God: +30% Attack Speed, +5% Lifesteal, and +15% Movement Speed. Alone: +10% Movement Speed, +15% Attack Speed, and +2.5% Lifesteal. Requires Level 20.

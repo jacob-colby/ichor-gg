@@ -19,6 +19,9 @@ builds_into:
 - Vital Amplifier
 source_url: https://wiki.smite2.com/w/Survivor's_Sash
 last_verified: '2026-11-02'
+adaptive_stat:
+  Strength: 25.0
+  Intelligence: 35.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +25 Strength or +35 Intelligence (based on highest item stat).

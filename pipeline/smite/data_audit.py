@@ -97,7 +97,13 @@ def audit_items(items: list) -> list:
                 "detail": f"tier is {tier!r}",
             })
 
-        if not stats and is_numeric_tier:
+        # An Adaptive Stat clause IS a stat line — the wiki just prints it in
+        # the Passive cell. Survivor's Sash carries nothing else, and was this
+        # gate's standing "tier-2 with no stats" finding until the parser
+        # recorded it (`wiki_parser.adaptive_stat`). It is held apart from
+        # `stats` so nothing prices it twice, which is why this check has to
+        # read both fields.
+        if not stats and not it.get("adaptive_stat") and is_numeric_tier:
             findings.append({
                 "item": name, "issue": "empty-stats",
                 "detail": f"numeric tier {tier!r} has no stats",
@@ -320,6 +326,46 @@ def audit_patch_links(links_path: Path = REPO_ROOT / "data" / "_patch_links.yaml
     return findings
 
 
+REVIEWED_PATH = REPO_ROOT / "data" / "_audit_reviewed.yaml"
+
+
+def _load_reviewed() -> list:
+    """Findings a human has read and recorded as a property of the source data.
+
+    STATE.md said it in prose for months — "treat '4 findings, all of them
+    these' as green; treat a fifth as news" — which made the exit code useless
+    to anything that is not a human reading the list: the daily job ran this
+    gate as advisory because it could never pass. The file says the same thing
+    in a form the gate can check, entry by entry, with the reason beside it.
+
+    Each entry matches ONE finding on item, issue AND detail. So "Blink Rune:
+    cost is 0" is reviewed and "Blink Rune: cost is 250" is news, and an entry
+    whose finding has gone away is itself reported (`stale-review`) so the file
+    cannot quietly outlive the data it describes. Separate loader so a test can
+    inject its own."""
+    import yaml
+    if not REVIEWED_PATH.exists():
+        return []
+    doc = yaml.safe_load(REVIEWED_PATH.read_text(encoding="utf-8")) or {}
+    return list(doc.get("reviewed") or [])
+
+
+def split_reviewed(findings: list, reviewed: list) -> tuple:
+    """(open_findings, reviewed_findings, stale_findings)."""
+    key = lambda f: (f.get("item"), f.get("issue"), f.get("detail"))
+    reviewed_keys = {key(r) for r in reviewed}
+    open_, done = [], []
+    for f in findings:
+        (done if key(f) in reviewed_keys else open_).append(f)
+    seen = {key(f) for f in done}
+    stale = [{"item": r.get("item"), "issue": "stale-review",
+              "detail": f"reviewed entry '{r.get('issue')}: {r.get('detail')}' "
+                        f"no longer matches any finding; remove it from "
+                        f"data/_audit_reviewed.yaml"}
+             for r in reviewed if key(r) not in seen]
+    return open_, done, stale
+
+
 def _load_index() -> dict:
     return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
 
@@ -356,12 +402,17 @@ def main(argv=None) -> int:
     builds = index.get("builds", [])
 
     item_findings = audit_items(items) + audit_item_coverage(items, builds)
+    item_findings, reviewed_findings, stale = split_reviewed(item_findings, _load_reviewed())
+    item_findings += stale
     tag_findings, reviewed_empty = audit_tags(items, _load_tags())
     god_findings = audit_gods(gods, builds, items)
 
-    print(f"Item audit: {len(items)} items, {len(item_findings)} finding(s)")
+    print(f"Item audit: {len(items)} items, {len(item_findings)} finding(s), "
+          f"{len(reviewed_findings)} reviewed as source-data facts")
     for f in item_findings:
         print(f"{f['item']}: {f['issue']} - {f['detail']}")
+    for f in reviewed_findings:
+        print(f"  reviewed: {f['item']}: {f['issue']} - {f['detail']}")
     buildable = sum(1 for it in items if scoring.is_buildable(it))
     tagged = buildable - reviewed_empty - sum(
         1 for f in tag_findings if f["issue"] == "untagged-item")

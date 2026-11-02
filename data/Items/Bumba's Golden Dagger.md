@@ -14,6 +14,9 @@ builds_into:
 - Bumba's Spear
 source_url: https://wiki.smite2.com/w/Bumba's_Golden_Dagger
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 15.0
+  Intelligence: 25.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). On Attack Hit: 10% bonus Physical Damage to enemies within 1.92m of the target Requires Level 20 to upgrade.

@@ -1,0 +1,38 @@
+# Item-audit findings a human has read and recorded as true of the SOURCE DATA,
+# not as defects in ours. `smite.data_audit` prints them as "reviewed" and does
+# not fail on them. Each entry matches one finding on item + issue + detail, so
+# a changed value is news again, and an entry with no matching finding is
+# reported as `stale-review` — delete it when that happens.
+#
+# Before this file existed STATE.md carried the same list in prose ("treat '4
+# findings, all of them these' as green"), and the gate could never exit 0.
+# Survivor's Sash was the fourth; it is no longer here because it was a parser
+# gap, not a property of the item (`wiki_parser.adaptive_stat`, 2026-11-02).
+#
+# Adding an entry is a claim about the game. Write the reason as one.
+reviewed:
+  - item: Blink Rune
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      The base relic is free in the game. `scoring.is_buildable` refuses it on
+      cost (STATE.md §2: paid relics take one of the six, free ones do not) and
+      it appears in zero community six-item builds.
+    reviewed: '2026-11-02'
+  - item: Genie's Lamp
+    issue: blank-cost
+    detail: cost is None
+    reason: >-
+      The wiki prints `Cost: -1`, a sentinel: Aladdin is given the Lamp, nobody
+      buys it. `wiki_parser._parse_cost` reads the sentinel as None so it is
+      never priced at 1 gold. Modelling it needs a price, which would be a
+      constant (STATE.md §5, "Genie's Lamp cannot be modelled at all").
+    reviewed: '2026-11-02'
+  - item: Mote of Chaos
+    issue: empty-stats
+    detail: numeric tier 2 has no stats
+    reason: >-
+      Its entire effect is "+5% of all Stats from Items", a multiplier on the
+      rest of the build (passive class A2, docs/PASSIVES.md). There is no flat
+      stat line on the page to recover, unlike Survivor's Sash.
+    reviewed: '2026-11-02'

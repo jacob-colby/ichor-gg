@@ -164,7 +164,7 @@ from pathlib import Path
 
 import numpy as np
 
-from smite import (assemble, calibrate, combat, damage_value, efficiency,
+from smite import (assemble, calibrate, combat, community_target, damage_value, efficiency,
                    recommend, scoring)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -596,12 +596,20 @@ def compare(god, build_note, items_by_name, archetype=DEFAULT_ARCHETYPE,
         return None
     if any(n not in items_by_name for n in community + ours):
         return None
+    _parts = community_target.split(community[:6], items_by_name, god)
     return {
         "god": god["name"], "role": god.get("role"), "primary_role": primary_role(god),
         # Carried for `threshold_probe` alone: a threshold names an ATTACKER,
         # so the effective-health channel it reads is determined by that
         # attacker's damage type rather than chosen (see `EHP_CHANNELS`).
         "damage_type": god.get("damage_type"),
+        # The community six as bought, labelled (`community_target`). The
+        # combat profile still runs on all six: dropping a slot would compare
+        # five items' gold against six, and that rework belongs to the
+        # comparison pages. The labels are what stop a half-built component
+        # reading as a community choice Ichor beat.
+        "community_unfinished": _parts[community_target.UNFINISHED],
+        "community_unscoreable": _parts[community_target.UNSCOREABLE],
         "community": profile(god, community[:6], items_by_name, level, targets),
         "ours": profile(god, ours[:6], items_by_name, level, targets),
     }
@@ -1593,6 +1601,17 @@ def _dist_section(rows, skipped, heading, note=None):
         lines += [note, ""]
     lines.append(f"{len(rows)} gods compared" + (f"; skipped: {', '.join(skipped)}" if skipped else "") + ".")
     lines.append("")
+    unf = [r for r in rows if r.get("community_unfinished")]
+    uns = [r for r in rows if r.get("community_unscoreable")]
+    if unf or uns:
+        lines.append(
+            f"Community six, labelled (`community_target`): on {len(unf)} gods it holds an "
+            f"**unfinished** component ({sum(len(r['community_unfinished']) for r in unf)} slots — "
+            f"the match ended before the build did), and on {len(uns)} an **unscoreable** "
+            f"statless relic or god Mod ({sum(len(r['community_unscoreable']) for r in uns)} slots). "
+            "Combat still runs on the six as bought, so on those gods \"ahead\" is partly "
+            "ahead of a half-built item and is not a disagreement about what to finish on.")
+        lines.append("")
     lines.append("Delta is ours over the community's, per god; a ratio, so every god weighs the same.")
     lines.append("")
     lines += _dist_table(rows, keys + [k + "/1000g" for k in keys], title)

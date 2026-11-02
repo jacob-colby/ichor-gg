@@ -14,6 +14,9 @@ builds_into:
 - Hunter's Cowl
 source_url: https://wiki.smite2.com/w/Leather_Cowl
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 15.0
+  Intelligence: 25.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +15 Strength or +25 Intelligence (based on highest item stat). Within 8.8m of a God: +15% Attack Speed and +2.5% Movement Speed. Alone: +5% Movement Speed and +7.5% Attack Speed. Requires Level 20 to upgrade.

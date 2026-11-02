@@ -304,3 +304,23 @@ describe("buildLedger — components in a community build's tail", () => {
     expect(l.rows[0].unfinished).toBe(false);
   });
 });
+
+describe("buildLedger — community slots that are not a disagreement", () => {
+  const t = (name: string, tier: number | string, stats: Record<string, string>): Item => ({
+    type: "item", name, tier, cost: 1000, stats, passive: "",
+    builds_from: [], builds_into: [], source_url: "", last_verified: "",
+  } as Item);
+  const items = map(
+    t("Spear", 3, { Strength: "50" }), t("Thoth", 3, { Intelligence: "80" }),
+    t("Evil Eye", 2, { Strength: "20" }), t("Blinking Abyss", "Relic", {}),
+    t("Shell of Rebuke", "Relic", { "Physical Protection": "40" }),
+  );
+  const community = ["Spear", "Thoth", "Shell of Rebuke", "Blinking Abyss", "Evil Eye"] as SlotEntry[];
+
+  it("drops components and sets statless relics apart", () => {
+    const l = buildLedger({ preview: plain("Spear"), itemsByName: items, communityOrder: community });
+    expect(l.metaOnly.map((m) => m.name)).toEqual(["Thoth", "Shell of Rebuke"]);
+    expect(l.metaUnfinished.map((m) => m.name)).toEqual(["Evil Eye"]);
+    expect(l.metaUnscoreable.map((m) => m.name)).toEqual(["Blinking Abyss"]);
+  });
+});

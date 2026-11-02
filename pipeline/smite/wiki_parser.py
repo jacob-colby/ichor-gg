@@ -359,6 +359,45 @@ _SCALING_PAREN_RE = re.compile(r"\(\s*\+[^)]*\)")
 _ADAPTIVE_CLAUSE_RE = re.compile(r"Adaptive Stat:[^.]*?\(based on highest item stat\)\.?|Adaptive Stat:[^.]*\.", re.IGNORECASE)
 
 
+# `Adaptive Stat: +25 Strength or +35 Intelligence (based on highest item stat)`.
+# The same grammar `passives._ADAPTIVE` reads; kept here so the parser does not
+# import the pricing module.
+_ADAPTIVE_GRANT_RE = re.compile(
+    r"Adaptive Stat:\s*\+\s*(\d+(?:\.\d+)?)\s+Strength\s+or\s+\+\s*(\d+(?:\.\d+)?)\s+Intelligence",
+    re.IGNORECASE)
+
+
+def adaptive_stat(text: str) -> dict:
+    """`{"Strength": x, "Intelligence": y}` for an `Adaptive Stat:` clause, or `{}`.
+
+    The item's stat line when the wiki prints it in the Passive cell rather
+    than in `Stats:`. Survivor's Sash is the case this exists for: on every
+    scrape we hold (Open Beta 40 and 46) its `Stats:` cell is empty and its
+    whole stat line is "Adaptive Stat: +25 Strength or +35 Intelligence (based
+    on highest item stat)." It came back `stats: {}` and `data_audit` reported
+    it as a tier-2 item with no stats, which was true of the field and false of
+    the item.
+
+    Kept OUT of `stats`, deliberately, and that is what "without counting it
+    twice" means here. The game grants ONE branch, chosen by the buyer's build,
+    so the two numbers are alternatives, not a stat line to sum — which is why
+    `_stats_from_prose` cuts this clause. And the grant is already priced, once,
+    from the passive text: `passives.adaptive_grants` (the shipped
+    `price_adaptive`, one branch) or `passives.unconditional_grants` (the mean
+    of the two, under `price_passives`). Writing either branch into `stats` as
+    well would price it a second time on the 29 items whose `stats` already
+    carry a real Stats cell beside this clause (28 of the 30), and on the two that don't
+    (Survivor's Sash, Sundering Echo) it would turn a statless item into a
+    scored one — the Sash into the gold fit, the Echo, a paid relic, into the
+    buildable pool. Both are model changes with their own measurement, not a
+    parser fix. This field is a faithful record of what the page says; what to
+    price it at is decided where it always was."""
+    m = _ADAPTIVE_GRANT_RE.search(text or "")
+    if not m:
+        return {}
+    return {"Strength": float(m.group(1)), "Intelligence": float(m.group(2))}
+
+
 def _stats_from_prose(text: str) -> dict:
     """Stats an editor typed into the Passive Effect cell instead of Stats.
 
@@ -459,6 +498,10 @@ def parse_item_page(html: str) -> dict:
         recovered = _stats_from_prose(passive_text)
         if recovered:
             result["stats"] = recovered
+
+    adaptive = adaptive_stat(passive_text)
+    if adaptive:
+        result["adaptive_stat"] = adaptive
 
     result["image_url"] = _extract_image_url(infobox)
     owner = god_specific_owner(result["image_url"])

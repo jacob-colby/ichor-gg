@@ -14,6 +14,9 @@ builds_from:
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_Executioner
 last_verified: '2026-08-01'
+adaptive_stat:
+  Strength: 30.0
+  Intelligence: 55.0
 ---
 <!-- WIKI:START -->
 Adaptive Stat: +30 Strength or +55 Intelligence (based on hightest item stat). Attack a God or Boss: Apply 1 Stack of Piercing.Piercing reduces 7% Protections for 4s. Stacks up to 4 times.

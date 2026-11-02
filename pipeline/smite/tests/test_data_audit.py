@@ -1,3 +1,4 @@
+import pytest
 import json
 
 from smite import data_audit
@@ -270,6 +271,13 @@ def test_audit_tags_accepts_every_tag_the_shipped_file_uses():
 
 # --- main -----------------------------------------------------------------
 
+@pytest.fixture(autouse=True)
+def _no_shipped_reviews(monkeypatch):
+    """The shipped reviewed list names real items; against a synthetic index
+    every entry would correctly report as stale."""
+    monkeypatch.setattr(data_audit, "_load_reviewed", lambda: [])
+
+
 def _index(items=None, gods=None, builds=None):
     return {"items": items or [], "gods": gods or [], "builds": builds or []}
 
@@ -401,3 +409,35 @@ def test_audit_patch_links_flags_unofficial_and_unknown(tmp_path):
     issues = {(f["patch"], f["issue"]) for f in data_audit.audit_patch_links(links, hist)}
     assert issues == {("Open Beta 99", "unofficial-patch-link"),
                       ("Open Beta 99", "unknown-patch-label")}
+
+
+# --- the Adaptive Stat line, and reviewed findings ---------------------------
+
+def test_an_adaptive_only_tier2_is_not_an_empty_stats_finding():
+    """Survivor's Sash: `stats: {}` beside a recorded Adaptive Stat line. It has
+    a stat line; it is kept out of `stats` so nothing prices it twice."""
+    sash = {"name": "Survivor's Sash", "tier": 2, "cost": 1000, "stats": {},
+            "adaptive_stat": {"Strength": 25.0, "Intelligence": 35.0}}
+    assert data_audit.audit_items([sash]) == []
+    assert [f["issue"] for f in data_audit.audit_items([dict(sash, adaptive_stat={})])] == ["empty-stats"]
+
+
+def test_reviewed_findings_match_on_the_detail_and_go_stale():
+    found = [{"item": "Blink Rune", "issue": "blank-cost", "detail": "cost is 0"}]
+    reviewed = [{"item": "Blink Rune", "issue": "blank-cost", "detail": "cost is 0"},
+                {"item": "Gone", "issue": "empty-stats", "detail": "x"}]
+    open_, done, stale = data_audit.split_reviewed(found, reviewed)
+    assert open_ == [] and done == found
+    assert [(s["item"], s["issue"]) for s in stale] == [("Gone", "stale-review")]
+    # A changed value is news again.
+    changed = [{"item": "Blink Rune", "issue": "blank-cost", "detail": "cost is 250"}]
+    assert data_audit.split_reviewed(changed, reviewed[:1])[0] == changed
+
+
+def test_every_shipped_review_entry_carries_a_reason():
+    import yaml
+    doc = yaml.safe_load(data_audit.REVIEWED_PATH.read_text(encoding="utf-8"))
+    assert doc["reviewed"]
+    for entry in doc["reviewed"]:
+        assert entry.get("reason", "").strip(), entry
+        assert {"item", "issue", "detail"} <= set(entry)
