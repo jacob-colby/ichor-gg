@@ -51,6 +51,15 @@ jobs:
         working-directory: pipeline
         run: python -m smite.refresh --community
 
+      # The game's patch label, from Steam's announcement feed (the wiki is
+      # Cloudflare-gated and stays a manual patch-day step). Records a new
+      # patch and its official link when there is one; changes nothing
+      # otherwise. Exits 0 on every path — a Steam outage must not cost the
+      # day's community data. See smite/patch_feed.py.
+      - name: Detect a new game patch
+        working-directory: pipeline
+        run: python -m smite.patch_feed
+
       # Patch notes are a diff between two item-stat snapshots, and until this
       # step existed nothing on any schedule wrote one: `write_snapshot` was
       # called from `refresh_and_deploy` alone, which is a manual patch-day

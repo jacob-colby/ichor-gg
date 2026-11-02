@@ -49,6 +49,15 @@ def test_the_daily_job_commits_the_snapshot_store():
     assert "data/Analysis" not in text.split("git reset")[-1]
 
 
+def test_the_daily_job_detects_patches_before_the_index_is_built():
+    """`build_index` reads `_patch.json` for the label and the history for
+    period attribution; detected after, a new patch ships one day late."""
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    feed_at = next(i for i, r in enumerate(runs) if "smite.patch_feed" in r)
+    index_at = next(i for i, r in enumerate(runs) if "smite.build_index" in r)
+    assert feed_at < index_at
+
+
 # -- the watcher -------------------------------------------------------------
 #
 # The decision this encodes: automated DETECTION, manual ACTION. A scheduled

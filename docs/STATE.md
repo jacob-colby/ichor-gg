@@ -2440,16 +2440,23 @@ since item stats are wiki data while the daily job pulls SmiteBrain only, an
 unconditional write would bank an identical file every morning and bury any
 real change under five empty periods within a week.
 
-**A period is a patch only if the patch label moved.** Each `patch_notes`
-period carries `patch_from`/`patch_to` (from `data/_patch_history.json`,
-appended by `refresh_patch_version`), `crosses_patch`, automatic `highlights`
-and, for crossing periods only, a hand-verified `official_url` from
-`data/_patch_links.yaml`, the one hand-written input. As of 2026-11-02 no
-stored period crosses a patch: the only one is August's dataset expansion
-inside Open Beta 40. Two gaps keep it that way on the daily job: item stats
-and the patch label are both refreshed only by manual commands (`refresh
---all`, `refresh_and_deploy`), and gods are not snapshotted at all. The rule
-and its reasons are in `snapshots.py`'s docstring.
+**A period is a patch only if the ITEM DATA moved patch.** Each `patch_notes`
+period carries `patch_from`/`patch_to`, `crosses_patch`, automatic
+`highlights` and, for crossing periods only, an `official_url`.
+`data/_patch_history.json` keeps two dates per label: `first_seen` (the game
+moved; written unattended by `smite.patch_feed` from Steam's announcement feed
+on the daily job) and `data_from` (wiki item data first scraped under it;
+written only by `refresh_patch_version`). Periods are attributed by
+`data_from`, so a game patch with no wiki refresh behind it does not relabel a
+period — as of 2026-11-02 the game is on Open Beta 46 but item data is still
+Open Beta 40's, and August's dataset expansion stays "within Open Beta 40".
+`data/_patch.json` is derived from the history: `patch` is the game label the
+viewer prints, `data_patch` is what `wiki_watch` compares the wiki against.
+Links come from the Steam post (`official_url` on the row) and
+`data/_patch_links.yaml` overrides them. **Not yet verified live** — the
+session that wrote `patch_feed` could not reach Steam; its fixture is
+constructed. Gods are still not snapshotted. The rules and reasons are in the
+`snapshots.py` and `patch_feed.py` docstrings.
 
 **The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
 buildable item with passive text, classes per clause, `priced` per clause;

@@ -16,11 +16,26 @@ five empty periods. The page would then read "Items have moved 0 times across
 
 WHICH PATCH A PERIOD BELONGS TO, AND WHY MOST PERIODS ARE NOT A PATCH. A
 snapshot is dated by the refresh that banked it, not by the game, so a diff
-between two snapshots is a patch only if the game's patch label moved between
-them. `data/_patch_history.json` is that label over time (appended by
-`refresh.refresh_patch_version` whenever the scraped label changes;
-`record_patch`). Each period carries `patch_from`/`patch_to` and
-`crosses_patch`. A period that does NOT cross a patch is Ichor's data catching
+between two snapshots is a patch only if the ITEM DATA was re-scraped under a
+different patch between them. `data/_patch_history.json` records two dates per
+label and they must not be confused:
+
+    first_seen  when the GAME moved to this patch. Written unattended by
+                `patch_feed` (Steam announcements) on the daily job, or by
+                `record_patch` when a wiki refresh sees a label first.
+    data_from   when Ichor's wiki-sourced item data was first scraped under
+                this patch (`record_patch`, called by the wiki refresh only).
+                Absent = item data has never been pulled under this patch.
+
+Periods are attributed by `data_from` (`data_history`), never by
+`first_seen`. Measured on the shipped store: OB41 and OB42 both landed inside
+the 2026-08-01 -> 2026-08-29 period, so attributing by game date turns it into
+"Open Beta 40 to Open Beta 42" and highlights 67 dataset additions as patch
+additions — the exact falsehood the paragraph below describes. Items were last
+scraped under OB40 (`last_verified: 2026-08-01`) and the period changed zero
+items. A row with no `source` key predates this split and was written by the
+wiki refresh, so its `first_seen` is its `data_from`. Each period carries
+`patch_from`/`patch_to` and `crosses_patch`. A period that does NOT cross a patch is Ichor's data catching
 up with the game (a hand-run `refresh --kind item`, a wiki correction, a
 hotfix shipped under the same label), and the page says so instead of calling
 it a patch. The only period in the store on 2026-11-02 is one of those:
@@ -43,11 +58,15 @@ tier-3, and cost and stats are on different scales. It is a size, not a value
 judgement, and it is not weighted by how many builds hold the item; that
 would be a model input leaking into a changelog.
 
-OFFICIAL LINKS ARE THE ONE HAND-WRITTEN FIELD. `data/_patch_links.yaml` maps a
-patch label to its official notes URL and is read as-is, filtered to
-`OFFICIAL_HOSTS` over https. Nothing scrapes it: the only automated source is
-the community wiki, whose pages are not the official notes, and a URL built
-from a pattern is a guess. A patch with no verified entry ships no link.
+OFFICIAL LINKS. Two sources, and the hand-written one wins. `patch_feed`
+stores the URL a Steam announcement gives (or a smite2.com URL quoted in its
+body) as `official_url` on the history row; `data/_patch_links.yaml` maps a
+label to a hand-verified URL and overrides it (`patch_links`). Both are
+filtered to `is_official_url`: https on `OFFICIAL_HOSTS`, or a Steam news URL
+for SMITE 2's app id. A Steam announcement counts as official because only the
+developer can post to an app's announcement feed; `patch_feed` reads that feed
+only, never Steam's external-news feeds. A URL built from a pattern is a guess
+and is never written. A patch with no verified URL ships no link.
 """
 import argparse
 import json
@@ -65,6 +84,15 @@ PATCH_LINKS_PATH = DATA_ROOT / "_patch_links.yaml"
 HIGHLIGHT_LIMIT = 5
 OFFICIAL_HOSTS = ("smite2.com", "www.smite2.com",
                   "hirezstudios.com", "www.hirezstudios.com")
+STEAM_APP_ID = 2437170
+# Steam hosts are official only on these paths: SMITE 2's own news pages, and
+# the announcement-redirect form GetNewsForApp returns in its `url` field.
+STEAM_NEWS_PATHS = {
+    "store.steampowered.com": (f"/news/app/{STEAM_APP_ID}/",),
+    "steamcommunity.com": (f"/games/{STEAM_APP_ID}/announcements/",
+                           f"/app/{STEAM_APP_ID}/eventcomments/"),
+    "steamstore-a.akamaihd.net": ("/news/externalpost/steam_community_announcements/",),
+}
 
 
 def snapshot_of(items: list) -> dict:
@@ -285,16 +313,90 @@ def load_patch_history(path: Path = PATCH_HISTORY_PATH,
     return sorted(rows, key=lambda r: str(r["first_seen"]))
 
 
+def patch_number(label):
+    """N from "Open Beta N", or None. Labels compare by N, never by string
+    ("Open Beta 9" > "Open Beta 10" as strings) or by date."""
+    import re
+    m = re.fullmatch(r"Open Beta (\d+)", str(label or ""))
+    return int(m.group(1)) if m else None
+
+
+def _save_history(rows: list, path: Path) -> None:
+    rows = sorted(rows, key=lambda r: (str(r["first_seen"]), patch_number(r["patch"]) or -1))
+    Path(path).write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+
+
 def record_patch(patch: str, captured: str, path: Path = PATCH_HISTORY_PATH) -> bool:
-    """Append `patch` to the history when it differs from the newest label.
-    Returns True when a row was written. No fallback read: the caller has
-    usually just overwritten _patch.json with this same label."""
+    """The WIKI refresh saw `patch` on `captured`: item data now reflects it.
+
+    Sets `data_from` on that label's row, appending the row if the game-side
+    feed never recorded it. Returns True when the file changed. No fallback
+    read: the caller has usually just overwritten _patch.json with this label."""
     path = Path(path)
     rows = load_patch_history(path, fallback=False)
-    if rows and rows[-1]["patch"] == patch:
+    for row in rows:
+        if row["patch"] == patch:
+            if row.get("data_from") or "source" not in row:
+                return False
+            row["data_from"] = captured
+            _save_history(rows, path)
+            return True
+    row = {"patch": patch, "first_seen": captured, "data_from": captured, "source": "wiki"}
+    n = patch_number(patch)
+    later = [r for r in rows if n is not None and (patch_number(r["patch"]) or -1) > n]
+    if later:
+        # The wiki lags the feed and this is an older label the feed missed.
+        # Its game date is unknown; pin it no later than the next patch so
+        # the history stays in game order.
+        row["first_seen"] = min(captured, min(str(r["first_seen"]) for r in later))
+    rows.append(row)
+    _save_history(rows, path)
+    return True
+
+
+def data_history(history: list) -> list:
+    """[{patch, first_seen}] keyed by when ITEM DATA was first scraped under
+    each label — what snapshot periods are attributed by. See the module
+    docstring for why game dates are the wrong key here."""
+    out = []
+    for row in history:
+        day = row.get("data_from") or (row.get("first_seen") if "source" not in row else None)
+        if day:
+            out.append({"patch": row["patch"], "first_seen": str(day)})
+    return sorted(out, key=lambda r: r["first_seen"])
+
+
+def current_patch(history: list) -> dict:
+    """The data/_patch.json body derived from history, or None. Deterministic
+    in the history, so a run that recorded nothing rewrites nothing.
+
+    `patch` is the game's current label (what the viewer shows next to the
+    freshness date — community stats are pulled daily, so they are this
+    patch's). `data_patch` is the label the wiki-sourced item and god data
+    was scraped under, and is what `wiki_watch` compares against."""
+    if not history:
+        return None
+    newest = max(history, key=lambda r: (patch_number(r["patch"]) or -1, str(r["first_seen"])))
+    out = {"patch": newest["patch"], "captured": str(newest["first_seen"])}
+    data = data_history(history)
+    if data:
+        out["data_patch"] = data[-1]["patch"]
+    return out
+
+
+def write_current_patch(history: list, path: Path) -> bool:
+    """Write `current_patch(history)` to `path` when it differs. True if written."""
+    body = current_patch(history)
+    if body is None:
         return False
-    rows.append({"patch": patch, "first_seen": captured})
-    path.write_text(json.dumps(rows, indent=2) + "\n", encoding="utf-8")
+    path = Path(path)
+    try:
+        if json.loads(path.read_text(encoding="utf-8")) == body:
+            return False
+    except (OSError, ValueError):
+        pass
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(body, indent=2), encoding="utf-8")
     return True
 
 
@@ -313,7 +415,11 @@ def is_official_url(url) -> bool:
     if not isinstance(url, str):
         return False
     u = urlparse(url)
-    return u.scheme == "https" and u.hostname in OFFICIAL_HOSTS
+    if u.scheme != "https":
+        return False
+    if u.hostname in OFFICIAL_HOSTS:
+        return True
+    return any(u.path.startswith(p) for p in STEAM_NEWS_PATHS.get(u.hostname, ()))
 
 
 def load_patch_links(path: Path = PATCH_LINKS_PATH) -> dict:
@@ -327,13 +433,22 @@ def load_patch_links(path: Path = PATCH_LINKS_PATH) -> dict:
     return {str(k): v for k, v in links.items() if is_official_url(v)}
 
 
+def patch_links(history: list, overrides: dict = None) -> dict:
+    """Detected `official_url`s from the history, then the hand-written
+    overrides on top. The override wins: it is the only one a person opened."""
+    links = {r["patch"]: r["official_url"] for r in history
+             if is_official_url(r.get("official_url"))}
+    links.update(overrides or {})
+    return links
+
+
 def build_patch_report(snapshot_paths, limit: int = 5, history: list = None,
                        links: dict = None) -> list:
     """Diff each consecutive pair of snapshots (sorted by filename-stem
     date), newest period first, capped at `limit` periods. Fewer than 2
     snapshots -> []. Each period also carries its patch labels,
     `crosses_patch`, `highlights` and (crossing periods only) `official_url`."""
-    history = history or []
+    history = data_history(history or [])
     links = links or {}
     paths = sorted(snapshot_paths, key=lambda p: Path(p).stem)
     if len(paths) < 2:
@@ -380,10 +495,10 @@ def report_from_dir(snapshots_dir: Path = SNAPSHOTS_DIR, limit: int = 5,
         return []
     root = Path(data_root) if data_root else snapshots_dir.parents[1]
     paths = sorted(snapshots_dir.glob("*.json"))
+    history = load_patch_history(root / "_patch_history.json")
     return build_patch_report(
-        paths, limit=limit,
-        history=load_patch_history(root / "_patch_history.json"),
-        links=load_patch_links(root / "_patch_links.yaml"))
+        paths, limit=limit, history=history,
+        links=patch_links(history, load_patch_links(root / "_patch_links.yaml")))
 
 
 def main(argv=None) -> int:

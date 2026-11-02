@@ -1,0 +1,87 @@
+{
+  "_fixture_note": "CONSTRUCTED to ISteamNews/GetNewsForApp v2's documented shape, not recorded: the sandbox that wrote it could not reach api.steampowered.com. Titles follow the official smite2.com page titles (e.g. 'OB46-King Kappa Update'); gids are fake.",
+  "appnews": {
+    "appid": 2437170,
+    "newsitems": [
+      {
+        "gid": "5900000000000000006",
+        "title": "OB47 Preview - What's coming next update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/5900000000000000006",
+        "is_external_url": true,
+        "author": "SMITE 2 Team",
+        "contents": "A first look at Open Beta 47. Full notes on patch day.",
+        "feedlabel": "Community Announcements",
+        "date": 1793376000,
+        "feedname": "steam_community_announcements",
+        "feed_type": 1,
+        "appid": 2437170,
+        "tags": [
+          "patchnotes"
+        ]
+      },
+      {
+        "gid": "5900000000000000005",
+        "title": "OB46 Hotfix Notes",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/5900000000000000005",
+        "is_external_url": true,
+        "author": "SMITE 2 Team",
+        "contents": "Fixed a crash.",
+        "feedlabel": "Community Announcements",
+        "date": 1792684800,
+        "feedname": "steam_community_announcements",
+        "feed_type": 1,
+        "appid": 2437170,
+        "tags": [
+          "patchnotes"
+        ]
+      },
+      {
+        "gid": "5900000000000000004",
+        "title": "OB46 - King Kappa Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/5900000000000000004",
+        "is_external_url": true,
+        "author": "SMITE 2 Team",
+        "contents": "[p]Kuzenbo arrives.[/p][url=https://www.smite2.com/news/open-beta-46-update-notes/]Read the full notes[/url] and last patch: https://www.smite2.com/news/open-beta-45-update-notes/",
+        "feedlabel": "Community Announcements",
+        "date": 1792425600,
+        "feedname": "steam_community_announcements",
+        "feed_type": 1,
+        "appid": 2437170,
+        "tags": [
+          "patchnotes"
+        ]
+      },
+      {
+        "gid": "5900000000000000003",
+        "title": "SMITE 2 Halloween event is live",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/5900000000000000003",
+        "is_external_url": true,
+        "author": "SMITE 2 Team",
+        "contents": "Spooky.",
+        "feedlabel": "Community Announcements",
+        "date": 1792080000,
+        "feedname": "steam_community_announcements",
+        "feed_type": 1,
+        "appid": 2437170,
+        "tags": []
+      },
+      {
+        "gid": "5900000000000000002",
+        "title": "OB45 - Goddess Of Victory Update",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/5900000000000000002",
+        "is_external_url": true,
+        "author": "SMITE 2 Team",
+        "contents": "Nike arrives. No external link in this one.",
+        "feedlabel": "Community Announcements",
+        "date": 1791216000,
+        "feedname": "steam_community_announcements",
+        "feed_type": 1,
+        "appid": 2437170,
+        "tags": [
+          "patchnotes"
+        ]
+      }
+    ],
+    "count": 5
+  }
+}

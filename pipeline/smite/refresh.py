@@ -100,15 +100,20 @@ def refresh_patch_version(wiki_fetcher, force: bool = False):
         print(f"  [patch skip] {exc}")
         return None
 
+    # The history is the record; _patch.json is derived from it, so the wiki
+    # (which lags) can never walk back a newer label the Steam feed recorded
+    # — it only marks the label the item data was scraped under.
+    from smite import snapshots
+    history_path = DATA_ROOT / "_patch_history.json"
     patch_path = DATA_ROOT / "_patch.json"
-    patch_path.parent.mkdir(parents=True, exist_ok=True)
-    patch_path.write_text(json.dumps(patch, indent=2), encoding="utf-8")
     try:
-        from smite import snapshots
-        snapshots.record_patch(patch["patch"], patch["captured"],
-                               DATA_ROOT / "_patch_history.json")
+        snapshots.record_patch(patch["patch"], patch["captured"], history_path)
+        history = snapshots.load_patch_history(history_path, fallback=False)
     except Exception as exc:
         print(f"  [patch history skip] {exc}")
+        history = [{"patch": patch["patch"], "first_seen": patch["captured"]}]
+    patch_path.parent.mkdir(parents=True, exist_ok=True)
+    snapshots.write_current_patch(history, patch_path)
     return patch
 
 

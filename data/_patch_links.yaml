@@ -1,13 +1,24 @@
-# Official patch notes, one URL per patch label, hand-verified.
+# Official patch notes, one URL per patch label — the MANUAL OVERRIDE.
 #
-# This is the ONLY hand-written input to the patch notes page, and it is
-# hand-written on purpose: nothing Ichor scrapes is the official notes (the
-# wiki is community-edited), and a URL built from a pattern is a guess. Add an
-# entry only after opening the page and confirming it is the notes for that
-# exact patch. Only https URLs on smite2.com or hirezstudios.com are read;
-# anything else is dropped by `snapshots.load_patch_links` and flagged by
-# `data_audit`. A patch with no entry ships with no link.
+# Since `smite.patch_feed` the daily job fills in a link on its own, from the
+# Steam announcement for the patch (`official_url` in data/_patch_history.json).
+# An entry here beats that one: add one when the detected link is wrong, or for
+# a patch the feed did not see. Add an entry only after confirming it is the
+# notes for that exact patch; a URL built from a pattern is a guess. Only https
+# URLs on smite2.com or hirezstudios.com (or a Steam news URL for SMITE 2) are
+# read; anything else is dropped by `snapshots.load_patch_links` and flagged by
+# `data_audit`.
 #
-# Keys must match data/_patch_history.json labels exactly, e.g.
-#   "Open Beta 41": https://www.smite2.com/news/...
-links: {}
+# Keys must match data/_patch_history.json labels exactly.
+#
+# 2026-11-02 backfill. The three below were confirmed from a web search index
+# that returned each URL with that patch's own page title ("OB41 - The Light
+# Weaver Update", "OB44 - Goddess of the Underworld Update", "OB46-King Kappa
+# Update"). The pages were NOT opened: that session's sandbox could not reach
+# smite2.com. OB42, OB43 and OB45 have no entry because no search returned
+# their official page; the obvious URLs for them are exactly the pattern guess
+# this file refuses.
+links:
+  Open Beta 41: https://www.smite2.com/news/open-beta-41-update-notes/
+  Open Beta 44: https://www.smite2.com/news/open-beta-44-update-notes/
+  Open Beta 46: https://www.smite2.com/news/open-beta-46-update-notes/
