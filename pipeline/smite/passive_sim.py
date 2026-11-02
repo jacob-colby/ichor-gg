@@ -584,5 +584,12 @@ def lookup(item):
     if not text:
         return Passive(NO_PASSIVE, "")
     if "On Use" in text:
-        return Passive(NOT_SIMULATED, text[:90], (ACTIVE_REASON,))
-    return Passive(NOT_SIMULATED, text[:90], ("no simulator written yet",))
+        return Passive(NOT_SIMULATED, _clip(text), (ACTIVE_REASON,))
+    return Passive(NOT_SIMULATED, _clip(text), ("no simulator written yet",))
+
+
+def _clip(text, limit=110):
+    """The item's own text, cut at a word boundary with an ellipsis."""
+    if len(text) <= limit:
+        return text
+    return text[:limit].rsplit(" ", 1)[0].rstrip(" .,:;") + "…"

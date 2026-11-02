@@ -79,7 +79,7 @@ from smite import (build_quality as bq, combat, damage_value, efficiency,
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "data" / "Analysis" / "_side_by_side.md"
-JSON_PATH = REPO_ROOT / "viewer" / "public" / "side_by_side.json"
+JSON_DIR = REPO_ROOT / "viewer" / "public" / "side_by_side"
 
 LEVEL = 20
 WINDOW = 10.0
@@ -835,6 +835,44 @@ def _jsonable(x):
     return x
 
 
+def slug(name):
+    """File name for a god — the viewer's `iconSlug` exactly (spaces to
+    hyphens, apostrophes dropped), so the page can derive it from the name."""
+    return name.lower().replace(" ", "-").replace("'", "")
+
+
+def viewer_god(r):
+    """One god's comparison, trimmed to what the page draws."""
+    def side(p):
+        keep = DAMAGE_KEYS + SURVIVAL_KEYS + [
+            "items", "gold", "mean_cooldown", "ultimate_cooldown", "cooldown_rate",
+            "crit_chance", "crit_multiplier", "crit_ev", "attacks_per_second", "passives"]
+        out = {k: p[k] for k in keep}
+        out["breakpoints"] = p["breakpoints"]
+        return out
+    return {"god": r["god"], "role": r["role"], "melee": r["melee"],
+            "damage_axis": r["damage_axis"], "survival_axis": r["survival_axis"],
+            "verdict": r["verdict"], "shared": r["shared"],
+            "substitutions": r["community_substitutions"],
+            "ichor": side(r["ichor"]), "community": side(r["community"]),
+            "diffs": r["diffs"]}
+
+
+def write_viewer_files(out_dir, rows, skipped, targets, patch):
+    """`<dir>/<god>.json` per god plus `_meta.json` (targets, rule, counts).
+    Per god so the page fetches ~10 KB on demand instead of the roster."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for old in out_dir.glob("*.json"):
+        old.unlink()
+    dump = lambda obj: json.dumps(_jsonable(obj), ensure_ascii=False, separators=(",", ":"))
+    for r in rows:
+        (out_dir / f"{slug(r['god'])}.json").write_text(dump(viewer_god(r)), encoding="utf-8")
+    (out_dir / "_meta.json").write_text(dump({
+        "data": patch, "level": LEVEL, "window": WINDOW, "band": BAND,
+        "targets": targets, "skipped": skipped, "verdict_counts": verdict_counts(rows),
+    }), encoding="utf-8")
+
+
 def load_inputs():
     items = recommend.load_items()
     gods = recommend.load_gods()
@@ -856,8 +894,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--god")
     ap.add_argument("--out", type=Path, default=REPORT_PATH)
-    ap.add_argument("--json", type=Path, nargs="?", const=JSON_PATH, default=None,
-                    help=f"also write the viewer's data (default path {JSON_PATH})")
+    ap.add_argument("--json", type=Path, nargs="?", const=JSON_DIR, default=None,
+                    help=f"also write the viewer's per-god files (default dir {JSON_DIR})")
     args = ap.parse_args(argv)
     items, gods, weights, tags_map, builds = load_inputs()
     rows, skipped, targets = run(gods, items, builds, weights, tags_map, only=args.god)
@@ -870,12 +908,7 @@ def main(argv=None):
     patch = data_patch()
     args.out.write_text("\n".join(report_lines(rows, skipped, targets, patch)) + "\n", encoding="utf-8")
     if args.json:
-        args.json.parent.mkdir(parents=True, exist_ok=True)
-        args.json.write_text(json.dumps(_jsonable({
-        "data": patch, "level": LEVEL, "window": WINDOW, "band": BAND,
-        "targets": targets, "gods": rows, "skipped": skipped,
-        "verdict_counts": verdict_counts(rows),
-        }), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        write_viewer_files(args.json, rows, skipped, targets, patch)
     counts = verdict_counts(rows)
     print(f"{len(rows)} gods compared, {len(skipped)} skipped; wrote {args.out}"
           + (f" and {args.json}" if args.json else ""))
