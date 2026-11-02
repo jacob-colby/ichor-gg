@@ -7,13 +7,13 @@ builds:
   archetype: core
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
+  - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
+  - Triton's Conch
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
@@ -56,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -64,6 +58,12 @@ builds:
     Erosion:
       total: 0.58
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Triton's Conch:
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -171,7 +171,7 @@ builds:
       fit: 0.57
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -210,7 +210,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Erosion
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.75
+      total: 0.55
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -378,7 +378,7 @@ builds:
       fit: 0.69
     Eros' Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -390,7 +390,7 @@ builds:
       fit: 0.57
     Soul Gem:
       total: 0.72
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -464,13 +464,13 @@ builds:
   archetype: model
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
+  - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
+  - Triton's Conch
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
@@ -513,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -521,6 +515,12 @@ builds:
     Erosion:
       total: 0.58
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Triton's Conch:
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.65

@@ -39,7 +39,7 @@ builds:
       fit: 0.67
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.75
+      total: 0.57
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.75
+      total: 0.57
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -366,7 +366,7 @@ builds:
       fit: 0.67
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.39

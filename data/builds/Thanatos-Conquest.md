@@ -117,14 +117,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Crusher, Tekko-Kagi, Pendulum Blade, Arondight, Tyrfing, Transcendence,
-    Runeforged Hammer, Avenging Blade, Eye of the Storm, Shield Splitter, Golden Blade,
+    Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade,
     Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic
-    Blade, Barbed Carver, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Sanguine
-    Lash, Damaru.'
+    Blade, Barbed Carver, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Damaru,
+    Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 1.0
@@ -194,14 +194,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Arondight,
     Transcendence, The Crusher, Tekko-Kagi, Pendulum Blade, Tyrfing, Runeforged Hammer,
-    Dominance, Avenging Blade, Eye of the Storm, Shield Splitter, Genji''s Guard,
-    Bloodforge, Lernaean Bow, Breastplate of Valor, Golden Blade, Damaru, Chandra''s
+    Dominance, Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard,
+    Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Golden Blade, Chandra''s
     Grace, Oath-Sworn Spear, Silverbranch Bow, Barbed Carver, Yogi''s Necklace, Toxic
     Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 0.71
@@ -269,14 +269,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Pendulum Blade, The Crusher, Arondight, Tekko-Kagi, Transcendence, Tyrfing,
-    Runeforged Hammer, Avenging Blade, Silverbranch Bow, Damaru, Genji''s Guard, Eye
-    of the Storm, Shield Splitter, Toxic Blade, Breastplate of Valor, Dominance, Bloodforge,
+    Runeforged Hammer, Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield
+    Splitter, Eye of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge,
     Lernaean Bow, Chandra''s Grace, Golden Blade, Riptalon, Oath-Sworn Spear, Barbed
     Carver, Eye of Erebus.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 0.78
@@ -299,7 +299,7 @@ builds:
       pick: 0.56
       fit: 0.56
     Heartseeker:
-      total: 0.55
+      total: 0.54
       efficiency: 0.44
       win: 0.56
       pick: 0.52
@@ -331,11 +331,11 @@ builds:
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -344,15 +344,15 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
-    Shield of the Phoenix, Runeforged Hammer, Phoenix Feather, Genji''s Guard, Yogi''s
-    Necklace, Erosion, Freya''s Tears, Eye of Providence, Draconic Scale, Breastplate
-    of Valor, Avenging Blade, Oni Hunter''s Garb, Midgardian Mail, Shifter''s Shield,
+    Shield of the Phoenix, Runeforged Hammer, Genji''s Guard, Phoenix Feather, Yogi''s
+    Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s Garb, Draconic
+    Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Shifter''s Shield,
     Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide, Stone of Binding, Magi''s
     Cloak, Ancile, The Crusher.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 0.44
@@ -363,7 +363,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Shield Splitter:
-      total: 0.55
+      total: 0.54
       efficiency: 0.59
       win: 0.56
       pick: 0.0
@@ -418,14 +418,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Tekko-Kagi, Pendulum Blade, Avenging Blade, Silverbranch
-    Bow, Arondight, Tyrfing, Toxic Blade, Oath-Sworn Spear, Transcendence, Runeforged
-    Hammer, Riptalon, Eye of the Storm, Shield Splitter, Dominance, Bloodforge, Lernaean
+    Bow, Arondight, Toxic Blade, Tyrfing, Oath-Sworn Spear, Transcendence, Runeforged
+    Hammer, Riptalon, Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean
     Bow, Golden Blade, Barbed Carver, Screeching Gargoyle, Damaru, Genji''s Guard,
     Rage, Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 1.0
@@ -455,7 +455,7 @@ builds:
       fit: 1.0
     Avatar's Parashu:
       total: 0.57
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.58
       pick: 0.28
       fit: 0.94
@@ -497,11 +497,11 @@ builds:
     Bow, Toxic Blade, Dominance, Qin''s Blade, Sun Beam Bow, The Crusher, Arondight,
     Berserker''s Shield, Bloodforge, Transcendence, Dagger of Frenzy, Runeforged Hammer,
     Pendulum Blade, Avenging Blade, Barbed Carver, Vital Amplifier, Hastened Fatalis,
-    Eye of the Storm, Shield Splitter.'
+    Shield Splitter, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 0.37
@@ -568,14 +568,14 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Damaru,
     Genji''s Guard, Breastplate of Valor, The Crusher, Chandra''s Grace, Tekko-Kagi,
-    Tyrfing, Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
-    Freya''s Tears, Avenging Blade, Eye of the Storm, Shield Splitter, Shield of the
-    Phoenix, Silverbranch Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade, Golden
-    Blade.'
+    Tyrfing, Transcendence, Eye of Erebus, Runeforged Hammer, Screeching Gargoyle,
+    Freya''s Tears, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of
+    the Storm, Silverbranch Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade,
+    Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 0.85
@@ -598,7 +598,7 @@ builds:
       pick: 0.0
       fit: 0.85
     Heartseeker:
-      total: 0.52
+      total: 0.51
       efficiency: 0.44
       win: 0.56
       pick: 0.52
@@ -625,8 +625,8 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Heartseeker
   - Tekko-Kagi
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -642,14 +642,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Crusher, Tekko-Kagi, Pendulum Blade, Arondight, Tyrfing,
-    Transcendence, Runeforged Hammer, Avenging Blade, Eye of the Storm, Shield Splitter,
-    Golden Blade, Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn
+    Transcendence, Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the
+    Storm, Golden Blade, Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn
     Spear, Toxic Blade, Barbed Carver, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer,
-    Sanguine Lash, Damaru.'
+    Damaru, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.56
       pick: 0.63
       fit: 1.0

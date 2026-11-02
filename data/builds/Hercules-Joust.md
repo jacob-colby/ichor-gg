@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -301,13 +301,13 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -531,14 +531,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Jotunn's Revenge
+  - Toxic Blade
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
   flex_slots:
   - Avenging Blade
-  - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -550,8 +550,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -561,12 +561,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Jotunn's Revenge:
+    Toxic Blade:
       total: 0.62
-      efficiency: 0.69
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.83
     Void Shield:
       total: 0.73
       efficiency: 0.46
@@ -629,12 +629,12 @@ builds:
       fit: 0.82
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -712,7 +712,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.58
       win: 0.5
       pick: 0.0

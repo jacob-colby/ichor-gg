@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.75
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.69
+      total: 0.67
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Stampede:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -561,7 +561,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.63
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.58

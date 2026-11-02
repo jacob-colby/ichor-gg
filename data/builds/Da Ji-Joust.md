@@ -33,12 +33,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.61
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.73
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Pendulum Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -295,12 +295,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.94
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Riptalon:
-      total: 0.73
+      total: 0.72
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -399,21 +399,21 @@ builds:
   archetype: cooldown
   slot_order:
   - Chandra's Grace
-  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
+  - Damaru
   - Arondight
   - Pendulum Blade
   flex_slots:
   - Arondight
-  - Genji's Guard
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,15 +429,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -447,8 +441,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Damaru:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Arondight:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -490,12 +490,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0

@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.87
       win: 0.5
       pick: 0.0
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.87
       win: 0.5
       pick: 0.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.8
     Berserker's Shield:
       total: 0.58
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -275,8 +275,8 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Tekko-Kagi
   - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.97
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.69
+      total: 0.64
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Heartseeker:
-      total: 0.61
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -390,7 +390,7 @@ builds:
       fit: 0.56
     Soul Gem:
       total: 0.71
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
+  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Hydra's Lament
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,9 +429,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -470,8 +470,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Spear of Desolation
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -480,8 +480,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -619,14 +619,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -684,14 +684,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49

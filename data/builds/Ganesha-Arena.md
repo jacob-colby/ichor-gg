@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Void Shield:
-      total: 0.65
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -164,7 +164,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.63
+      total: 0.62
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -242,7 +242,7 @@ builds:
       fit: 0.44
     Eros' Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -340,7 +340,7 @@ builds:
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Golden Blade
+  - Stampede
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -409,8 +409,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Void Shield:
-      total: 0.65
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0

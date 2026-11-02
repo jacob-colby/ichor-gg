@@ -17,6 +17,7 @@ builds_into:
 - Jade Scepter
 - Lifebinder
 - Scepter of Dominion
+- Soul Locket
 - Wish-Granting Pearl
 source_url: https://wiki.smite2.com/w/Flaming_Pearl
 last_verified: '2026-08-01'

@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Lernaean Bow
-  - Jotunn's Revenge
   - Dominance
   - The Reaper
+  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
   - Dominance
-  - Jotunn's Revenge
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -37,15 +37,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Jotunn's Revenge:
-      total: 0.49
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -55,6 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Tekko-Kagi:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Riptalon:
       total: 0.55
       efficiency: 0.39
@@ -106,7 +106,7 @@ builds:
       fit: 0.54
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.52
     Dominance:
       total: 0.51
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -294,7 +294,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -307,7 +307,7 @@ builds:
       fit: 0.83
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -402,11 +402,11 @@ builds:
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
+  - Dominance
   flex_slots:
   - Toxic Blade
-  - Transcendence
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -442,36 +442,36 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Transcendence:
-      total: 0.31
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.09
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Dominance:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Lernaean Bow
-  - Jotunn's Revenge
   - Dominance
   - The Reaper
+  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
   - Dominance
-  - Jotunn's Revenge
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -494,15 +494,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Jotunn's Revenge:
-      total: 0.49
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Tekko-Kagi:
+      total: 0.5
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Riptalon:
       total: 0.55
       efficiency: 0.39
@@ -561,7 +561,7 @@ builds:
       fit: 0.7
     Dominance:
       total: 0.53
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -591,9 +591,9 @@ builds:
       fit: 0.79
   swaps:
   - added: Silverbranch Bow
-    removed: Jotunn's Revenge
+    removed: Tekko-Kagi
     reason: Conquest community 71% win over 122 matches (vs 56% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
+      the model's weakest slot from Tekko-Kagi
   borrowed_from: Conquest
   starter: *id001
 ---

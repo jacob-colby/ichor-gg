@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.67
-      efficiency: 0.69
+      total: 0.66
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Titan's Bane:
-      total: 0.54
+      total: 0.53
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -145,7 +145,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Heartseeker:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
+  - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   - Erosion
   flex_slots:
   - Kinetic Cuirass
-  - Jotunn's Revenge
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -220,8 +220,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -234,12 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Jotunn's Revenge:
+    Berserker's Shield:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.38
     Kinetic Cuirass:
       total: 0.57
       efficiency: 0.56
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.98
     Erosion:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.98
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.89
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Chandra's Grace:
-      total: 0.57
+      total: 0.56
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.73
-      efficiency: 0.69
+      total: 0.72
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.84

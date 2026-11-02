@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Demon Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.75
     Soul Gem:
       total: 0.69
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -112,7 +112,7 @@ builds:
       fit: 0.55
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -195,7 +195,7 @@ builds:
       fit: 0.49
     Soul Gem:
       total: 0.69
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -236,7 +236,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -260,7 +260,7 @@ builds:
       fit: 0.63
     Soul Gem:
       total: 0.67
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -272,11 +272,11 @@ builds:
   - Jotunn's Revenge
   - Tekko-Kagi
   - Silverbranch Bow
-  - Heartseeker
+  - Titan's Bane
   - Soul Gem
   flex_slots:
   - Tekko-Kagi
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -294,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -317,15 +317,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Heartseeker:
+    Titan's Bane:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.63
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.81
     Soul Gem:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -455,7 +455,7 @@ builds:
       fit: 0.43
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Divine Ruin
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Eros' Bow
-  - Jotunn's Revenge
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,23 +483,23 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Toxic Blade:
       total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 0.35
     Eros' Bow:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -579,13 +579,13 @@ builds:
       fit: 0.33
     Eros' Bow:
       total: 0.53
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.57
     Soul Gem:
       total: 0.78
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.98
@@ -643,14 +643,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Demon Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.75
     Soul Gem:
       total: 0.69
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8

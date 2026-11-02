@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
+  - Avenging Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
@@ -146,7 +146,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Screeching Gargoyle
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -163,15 +163,15 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.59
-      efficiency: 0.52
+    Avenging Blade:
+      total: 0.6
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.64
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.95
     Erosion:
-      total: 0.6
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Berserker's Shield
   - Golden Blade
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -242,7 +242,7 @@ builds:
       fit: 0.78
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0

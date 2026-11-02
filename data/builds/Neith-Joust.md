@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Riptalon
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Jotunn's Revenge
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
       total: 0.56
       efficiency: 0.63
@@ -61,9 +55,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
+    Eros' Bow:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -112,7 +112,7 @@ builds:
       fit: 0.55
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -182,20 +182,20 @@ builds:
       pick: 0.0
       fit: 0.54
     Deathbringer:
-      total: 0.42
+      total: 0.41
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.36
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.3
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.71
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -260,7 +260,7 @@ builds:
       fit: 0.33
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -275,7 +275,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Berserker's Shield
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Berserker's Shield:
-      total: 0.55
-      efficiency: 0.75
+      total: 0.54
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.35
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -325,7 +325,7 @@ builds:
       fit: 0.55
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -390,7 +390,7 @@ builds:
       fit: 0.4
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.62
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -455,7 +455,7 @@ builds:
       fit: 0.25
     Soul Gem:
       total: 0.76
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -520,7 +520,7 @@ builds:
       fit: 0.21
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Divine Ruin
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Eros' Bow
-  - Jotunn's Revenge
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,23 +548,23 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Toxic Blade:
       total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -579,13 +579,13 @@ builds:
       fit: 0.35
     Eros' Bow:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -600,18 +600,18 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Bragi's Harp
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -619,14 +619,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -650,7 +650,7 @@ builds:
       fit: 0.31
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -659,14 +659,14 @@ builds:
   archetype: model
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Riptalon
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Jotunn's Revenge
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -689,12 +689,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
       total: 0.56
       efficiency: 0.63
@@ -713,9 +707,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
+    Eros' Bow:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0

@@ -117,8 +117,8 @@ builds:
       pick: 0.0
       fit: 0.29
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Void Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -301,7 +301,7 @@ builds:
       fit: 0.58
     Nimble Ring:
       total: 0.41
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -312,8 +312,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Eros' Bow:
-      total: 0.47
-      efficiency: 0.42
+      total: 0.48
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -340,7 +340,7 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Erosion
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
@@ -371,14 +371,14 @@ builds:
       pick: 0.0
       fit: 0.38
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
     Eros' Bow:
-      total: 0.53
-      efficiency: 0.52
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.8
     Berserker's Shield:
-      total: 0.55
-      efficiency: 0.75
+      total: 0.54
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.51
     Amanita Charm:
-      total: 0.76
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -470,7 +470,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Berserker's Shield
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,14 +489,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.79
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -507,20 +507,20 @@ builds:
       pick: 0.0
       fit: 0.26
     Eros' Bow:
-      total: 0.55
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
       total: 0.75
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -637,7 +637,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0

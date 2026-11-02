@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Tyrfing
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -39,16 +39,16 @@ builds:
       fit: 0.84
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.56
     Amanita Charm:
       total: 0.71
       efficiency: 0.65
@@ -106,13 +106,13 @@ builds:
       fit: 0.68
     Berserker's Shield:
       total: 0.51
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.27
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.41
     Heartseeker:
-      total: 0.49
+      total: 0.48
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -171,7 +171,7 @@ builds:
       fit: 0.81
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -242,7 +242,7 @@ builds:
       fit: 0.92
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -301,7 +301,7 @@ builds:
       fit: 0.86
     Berserker's Shield:
       total: 0.56
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -372,13 +372,13 @@ builds:
       fit: 0.33
     Berserker's Shield:
       total: 0.52
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.3
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Tyrfing
   - Amanita Charm
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -431,16 +431,16 @@ builds:
       fit: 0.84
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Jotunn's Revenge:
+    Tyrfing:
       total: 0.53
-      efficiency: 0.69
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.56
     Amanita Charm:
       total: 0.71
       efficiency: 0.65

@@ -100,7 +100,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Amanita Charm
+  - Jotunn's Revenge
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,10 +116,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Amanita Charm, Shield Splitter, Runeforged Hammer,
+    this god: Amanita Charm, Jotunn''s Revenge, Shield Splitter, Runeforged Hammer,
     Tekko-Kagi, Tyrfing, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Avenging Blade,
-    Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Shogun''s Ofuda,
-    Toxic Blade, Oni Hunter''s Garb, Midgardian Mail, Erosion, Eye of Providence,
+    Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Oni Hunter''s
+    Garb, Toxic Blade, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence,
     Silverbranch Bow, The Crusher, Arondight, Wyrmskin Hide, Draconic Scale, Leviathan''s
     Hide.'
   slot_scores:
@@ -131,13 +131,13 @@ builds:
       fit: 0.64
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.45
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -171,20 +171,20 @@ builds:
   slot_order:
   - Golden Blade
   - Berserker's Shield
-  - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Shield of the Phoenix
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -192,11 +192,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix, Shield Splitter,
-    Runeforged Hammer, Genji''s Guard, Phoenix Feather, Yogi''s Necklace, The Reaper,
-    Tekko-Kagi, Tyrfing, Lernaean Bow, Breastplate of Valor, Pharaoh''s Curse, Erosion,
-    Hydra''s Lament, Eye of Providence, Oni Hunter''s Garb, Shogun''s Ofuda, Avenging
-    Blade, Draconic Scale, Chandra''s Grace, Titan''s Bane, Midgardian Mail, Toxic
+    this god: Amanita Charm, Shield of the Phoenix, Shield Splitter, Jotunn''s Revenge,
+    Runeforged Hammer, Genji''s Guard, Yogi''s Necklace, Phoenix Feather, The Reaper,
+    Tekko-Kagi, Tyrfing, Pharaoh''s Curse, Lernaean Bow, Oni Hunter''s Garb, Breastplate
+    of Valor, Erosion, Hydra''s Lament, Eye of Providence, Avenging Blade, Shogun''s
+    Ofuda, Draconic Scale, Midgardian Mail, Titan''s Bane, Chandra''s Grace, Toxic
     Blade, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
@@ -207,22 +207,22 @@ builds:
       fit: 0.59
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.47
-    Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.26
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.56
       win: 0.53
       pick: 0.37
       fit: 0.54
+    Shield Splitter:
+      total: 0.5
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Shield of the Phoenix:
       total: 0.5
       efficiency: 0.52
@@ -267,11 +267,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, Tekko-Kagi, Avenging Blade, Titan''s Bane, Amanita
-    Charm, Stone of Binding, Toxic Blade, Screeching Gargoyle, The Crusher, Genji''s
-    Guard, Silverbranch Bow, Runeforged Hammer, Shield Splitter, Heartseeker, Void
+    Charm, Toxic Blade, Stone of Binding, The Crusher, Genji''s Guard, Screeching
+    Gargoyle, Silverbranch Bow, Runeforged Hammer, Shield Splitter, Heartseeker, Void
     Stone, Void Shield, The Reaper, Tyrfing, Lernaean Bow, Hydra''s Lament, Breastplate
-    of Valor, Pharaoh''s Curse, Oni Hunter''s Garb, Avatar''s Parashu, Dominance,
-    Shogun''s Ofuda.'
+    of Valor, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance, Avatar''s Parashu,
+    Midgardian Mail.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -287,13 +287,13 @@ builds:
       fit: 0.68
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -342,9 +342,10 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Jotunn''s Revenge, Tyrfing, Genji''s Guard, Tekko-Kagi,
     Runeforged Hammer, Shield Splitter, Toxic Blade, Lernaean Bow, Silverbranch Bow,
-    Pharaoh''s Curse, Breastplate of Valor, Shogun''s Ofuda, Riptalon, Hydra''s Lament,
-    The Reaper, Dominance, Titan''s Bane, Oni Hunter''s Garb, Avenging Blade, Midgardian
-    Mail, Qin''s Blade, Erosion, Eye of Providence, Leviathan''s Hide, Vital Amplifier.'
+    Pharaoh''s Curse, Breastplate of Valor, Shogun''s Ofuda, Hydra''s Lament, Riptalon,
+    The Reaper, Oni Hunter''s Garb, Dominance, Titan''s Bane, Avenging Blade, Midgardian
+    Mail, Qin''s Blade, Erosion, Leviathan''s Hide, Eye of Providence, Shield of the
+    Phoenix.'
   slot_scores:
     Golden Blade:
       total: 0.57
@@ -354,13 +355,13 @@ builds:
       fit: 0.6
     Berserker's Shield:
       total: 0.56
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.41
     Jotunn's Revenge:
       total: 0.49
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.18
@@ -416,9 +417,9 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Genji''s Guard,
     Breastplate of Valor, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Screeching
     Gargoyle, Arondight, Runeforged Hammer, Shield Splitter, Tekko-Kagi, Tyrfing,
-    Lernaean Bow, Pharaoh''s Curse, Oni Hunter''s Garb, Chandra''s Grace, Eye of Erebus,
-    Titan''s Bane, Gladiator''s Shield, Midgardian Mail, Shogun''s Ofuda, Prophetic
-    Cloak, Toxic Blade, Avenging Blade, Erosion, Silverbranch Bow.'
+    Oni Hunter''s Garb, Lernaean Bow, Pharaoh''s Curse, Chandra''s Grace, Eye of Erebus,
+    Titan''s Bane, Midgardian Mail, Gladiator''s Shield, Shogun''s Ofuda, Toxic Blade,
+    Prophetic Cloak, Avenging Blade, Erosion, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -434,13 +435,13 @@ builds:
       fit: 0.36
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.33
     Breastplate of Valor:
       total: 0.5
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -451,8 +452,8 @@ builds:
       pick: 0.37
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
+      total: 0.52
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -487,10 +488,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Jotunn''s Revenge, Amanita Charm, Shield Splitter, Runeforged
+    Underrated for this god: Amanita Charm, Jotunn''s Revenge, Shield Splitter, Runeforged
     Hammer, Tekko-Kagi, Tyrfing, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Avenging
-    Blade, Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Shogun''s
-    Ofuda, Toxic Blade, Oni Hunter''s Garb, Midgardian Mail, Erosion, Eye of Providence,
+    Blade, Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Oni Hunter''s
+    Garb, Toxic Blade, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence,
     Silverbranch Bow, The Crusher, Arondight, Wyrmskin Hide, Draconic Scale, Leviathan''s
     Hide.'
   slot_scores:
@@ -502,13 +503,13 @@ builds:
       fit: 0.64
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.3
       fit: 0.45
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.3

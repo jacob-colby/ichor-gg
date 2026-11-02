@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -253,7 +253,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Stampede:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -301,7 +301,7 @@ builds:
       fit: 0.7
     Jotunn's Revenge:
       total: 0.61
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.89
     Erosion:
-      total: 0.57
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -390,7 +390,7 @@ builds:
       fit: 0.7
     Soul Gem:
       total: 0.74
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -431,7 +431,7 @@ builds:
       fit: 0.44
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.6
+      total: 0.61
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -539,8 +539,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -560,7 +560,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Void Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0

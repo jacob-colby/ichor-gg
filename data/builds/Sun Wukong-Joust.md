@@ -20,8 +20,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,13 +32,13 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -145,7 +145,7 @@ builds:
   - Void Stone
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -177,7 +177,7 @@ builds:
       fit: 0.87
     Jotunn's Revenge:
       total: 0.62
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -206,19 +206,19 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Riptalon
+  - Eros' Bow
   - Amanita Charm
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -246,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Amanita Charm:
       total: 0.7
       efficiency: 0.65
@@ -255,12 +261,6 @@ builds:
     Pharaoh's Curse:
       total: 0.58
       efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.56
+      total: 0.55
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -347,8 +347,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -359,13 +359,13 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0

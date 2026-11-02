@@ -45,7 +45,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.74
     Stampede:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Riptalon
   - Shogun's Ofuda
+  - Riptalon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -235,13 +235,13 @@ builds:
       pick: 0.0
       fit: 0.7
     Toxic Blade:
-      total: 0.64
+      total: 0.65
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.81
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Shogun's Ofuda:
-      total: 0.6
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -372,7 +372,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44

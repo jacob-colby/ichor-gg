@@ -532,6 +532,11 @@ The two next in line, if this one ships or nulls:
 Generated from `data/_passive_classes.yaml`; the note is the sidecar's.
 Primary class first. A priced clause is marked.
 
+Items added unattended from the wiki since 2026-11-02 (`smite.new_entities`)
+are not in this table: an unclassified passive goes into the sidecar as
+`uncatalogued: true` (stat-only, flagged in the viewer) and waits there for a
+human to give it classes. None of them is a guess at a value.
+
 | item | classes | note |
 |---|---|---|
 | Book of Thoth | **A2** (priced) · C6 | 5% of item mana as Intelligence (priced against the reference build); evolve stacks are §4.8 |

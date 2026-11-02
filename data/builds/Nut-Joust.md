@@ -13,7 +13,7 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Jotunn's Revenge
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -57,13 +57,13 @@ builds:
       fit: 0.38
     Eros' Bow:
       total: 0.57
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -99,7 +99,7 @@ builds:
     data).
   slot_scores:
     Divine Ruin:
-      total: 0.52
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.42
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.55
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -188,14 +188,14 @@ builds:
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.4
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -230,13 +230,13 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
     Eros' Bow:
-      total: 0.57
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -260,7 +260,7 @@ builds:
       fit: 0.6
     Soul Gem:
       total: 0.78
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -325,7 +325,7 @@ builds:
       fit: 0.49
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -384,13 +384,13 @@ builds:
       fit: 0.31
     Eros' Bow:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -398,7 +398,7 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
+  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
@@ -406,7 +406,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Toxic Blade
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,20 +418,20 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.34
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.44
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.69
+      total: 0.63
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -455,7 +455,7 @@ builds:
       fit: 0.26
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -470,7 +470,7 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Jotunn's Revenge
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -514,13 +514,13 @@ builds:
       fit: 0.38
     Eros' Bow:
       total: 0.57
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
