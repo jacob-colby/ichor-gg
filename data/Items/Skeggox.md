@@ -15,18 +15,19 @@ builds_into:
 - Avenging Blade
 - Barbed Carver
 - Bloodforge
-- Dagger of Frenzy
 - Deathbringer
 - Devourer's Gauntlet
+- Eye of the Storm
 - Jotunn's Revenge
 - Lernaean Bow
 - Oath-Sworn Spear
 - Pendulum Blade
 - Shield Splitter
 - Tekko-Kagi
+- The Crusher
 - Tyrfing
 source_url: https://wiki.smite2.com/w/Skeggox
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 

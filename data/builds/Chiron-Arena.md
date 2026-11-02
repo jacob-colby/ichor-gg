@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.51
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.57
     The Reaper:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.68
     Riptalon:
-      total: 0.66
-      efficiency: 0.51
+      total: 0.63
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -99,38 +99,38 @@ builds:
     data).
   slot_scores:
     Lernaean Bow:
-      total: 0.53
-      efficiency: 0.52
+      total: 0.5
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.54
     Toxic Blade:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Hydra's Lament:
-      total: 0.48
-      efficiency: 0.54
+      total: 0.47
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.48
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -139,14 +139,14 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Rage
   - Jotunn's Revenge
   - Riptalon
-  - Damaru
   - Demon Blade
   - Deathbringer
   flex_slots:
   - Deathbringer
-  - Damaru
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -165,37 +165,37 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Rage:
+      total: 0.42
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.65
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Damaru:
-      total: 0.42
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Demon Blade:
-      total: 0.51
-      efficiency: 0.38
+      total: 0.49
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.64
     Deathbringer:
-      total: 0.46
-      efficiency: 0.51
+      total: 0.43
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -208,9 +208,9 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Riptalon
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Heartseeker
+  - Titan's Bane
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,41 +229,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.51
-      efficiency: 0.52
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
     Toxic Blade:
-      total: 0.58
-      efficiency: 0.44
+      total: 0.57
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
     Tyrfing:
-      total: 0.47
-      efficiency: 0.48
+      total: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.45
     Riptalon:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.47
+    Titan's Bane:
+      total: 0.47
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -285,11 +285,11 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -300,32 +300,32 @@ builds:
       pick: 0.0
       fit: 0.74
     Amanita Charm:
-      total: 0.79
-      efficiency: 0.65
+      total: 0.77
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.92
     Erosion:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.55
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.62
     Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.51
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.68
     Shogun's Ofuda:
-      total: 0.59
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.68
     Umbral Link:
-      total: 0.59
-      efficiency: 0.43
+      total: 0.58
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
+  - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
   - Silverbranch Bow
-  - Lernaean Bow
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,55 +358,55 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
+    Toxic Blade:
+      total: 0.65
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Tekko-Kagi:
       total: 0.53
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Toxic Blade:
-      total: 0.65
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.86
-    Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Riptalon:
-      total: 0.7
-      efficiency: 0.51
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.88
     Silverbranch Bow:
-      total: 0.54
-      efficiency: 0.53
+      total: 0.53
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Heartseeker:
-      total: 0.56
-      efficiency: 0.47
+    Titan's Bane:
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
   flex_slots:
   - Golden Blade
-  - Jotunn's Revenge
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,38 +424,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Toxic Blade:
-      total: 0.63
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.82
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.72
+      fit: 0.6
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.55
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Tyrfing:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
     Riptalon:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.65
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Toxic Blade
+  - Chandra's Grace
   - Jotunn's Revenge
+  - Tyrfing
   - Hydra's Lament
-  - Riptalon
-  - Pendulum Blade
   flex_slots:
   - Lernaean Bow
-  - Pendulum Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,41 +489,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.49
-      efficiency: 0.52
+      total: 0.47
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.46
     Toxic Blade:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Hydra's Lament:
-      total: 0.5
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
-    Riptalon:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Pendulum Blade:
-      total: 0.46
+    Chandra's Grace:
+      total: 0.47
       efficiency: 0.42
       win: 0.5
       pick: 0.0
+      fit: 0.53
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
       fit: 0.49
+    Tyrfing:
+      total: 0.43
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: model
@@ -554,38 +554,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.54
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.51
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.57
     The Reaper:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.68
     Riptalon:
-      total: 0.66
-      efficiency: 0.51
+      total: 0.63
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Transcendence
   - The Reaper
   - Riptalon
+  - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Transcendence
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -619,38 +619,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Transcendence:
-      total: 0.37
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
     The Reaper:
-      total: 0.66
-      efficiency: 0.55
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.78
     Riptalon:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Heartseeker:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -660,14 +660,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lernaean Bow
+  - Toxic Blade
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
+  - Toxic Blade
   - Lernaean Bow
-  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -679,44 +679,44 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
     Lernaean Bow:
-      total: 0.48
-      efficiency: 0.52
+      total: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Toxic Blade:
+      total: 0.48
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Transcendence:
-      total: 0.4
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.27
     Hydra's Lament:
-      total: 0.51
-      efficiency: 0.54
+      total: 0.49
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.47
     The Reaper:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
     Heartseeker:
-      total: 0.53
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -726,14 +726,14 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Rage
   - Jotunn's Revenge
   - Riptalon
-  - Damaru
   - Demon Blade
   - Deathbringer
   flex_slots:
   - Deathbringer
-  - Damaru
+  - Rage
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -752,37 +752,37 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Rage:
+      total: 0.42
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
     Riptalon:
-      total: 0.65
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Damaru:
-      total: 0.42
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Demon Blade:
-      total: 0.51
-      efficiency: 0.38
+      total: 0.49
+      efficiency: 0.34
       win: 0.5
       pick: 0.0
       fit: 0.64
     Deathbringer:
-      total: 0.46
-      efficiency: 0.51
+      total: 0.43
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -794,11 +794,11 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - The Reaper
+  - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Hydra's Lament
+  - Titan's Bane
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -818,37 +818,37 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.53
     Transcendence:
-      total: 0.34
-      efficiency: 0.53
+      total: 0.32
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.15
-    Hydra's Lament:
-      total: 0.47
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     The Reaper:
-      total: 0.63
-      efficiency: 0.55
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Titan's Bane:
+      total: 0.49
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Heartseeker:
-      total: 0.52
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -858,14 +858,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
+  - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - The Reaper
   - Amanita Charm
-  - Erosion
   flex_slots:
   - Kinetic Cuirass
-  - Erosion
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -877,8 +877,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -888,36 +888,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Berserker's Shield:
+      total: 0.5
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.72
+      total: 0.49
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.34
     Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.56
+      total: 0.5
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.47
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.71
-      efficiency: 0.65
+      total: 0.69
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Erosion:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -926,16 +926,16 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
+  - The Crusher
+  - Titan's Bane
   - Heartseeker
-  - Titan's Bane
-  - Avatar's Parashu
   flex_slots:
-  - Avatar's Parashu
   - Titan's Bane
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -950,37 +950,37 @@ builds:
   slot_scores:
     Toxic Blade:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
-      total: 0.67
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.62
     The Reaper:
-      total: 0.71
-      efficiency: 0.55
+      total: 0.7
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Titan's Bane:
-      total: 0.55
-      efficiency: 0.47
+    The Crusher:
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Avatar's Parashu:
-      total: 0.59
-      efficiency: 0.45
+    Titan's Bane:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Heartseeker:
+      total: 0.57
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -990,14 +990,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
   flex_slots:
   - Golden Blade
-  - Jotunn's Revenge
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1015,38 +1015,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Toxic Blade:
-      total: 0.63
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.82
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.72
+      fit: 0.6
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.55
+    Toxic Blade:
+      total: 0.63
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Tyrfing:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
     Riptalon:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.65
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -1056,14 +1056,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
+  - Chandra's Grace
   - Jotunn's Revenge
   - Hydra's Lament
-  - The Reaper
   - Pendulum Blade
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
   - Pendulum Blade
-  - Heartseeker
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1081,41 +1081,41 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
-      efficiency: 0.44
+      total: 0.49
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    The Reaper:
-      total: 0.56
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Pendulum Blade:
-      total: 0.49
+    Chandra's Grace:
+      total: 0.5
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Heartseeker:
-      total: 0.46
-      efficiency: 0.47
+    Jotunn's Revenge:
+      total: 0.61
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.57
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Pendulum Blade:
+      total: 0.48
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Titan's Bane:
+      total: 0.43
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested
@@ -1123,13 +1123,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Transcendence
   - The Reaper
   - Riptalon
+  - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Transcendence
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1147,38 +1147,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Transcendence:
-      total: 0.37
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
     The Reaper:
-      total: 0.66
-      efficiency: 0.55
+      total: 0.65
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.78
     Riptalon:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Titan's Bane:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Heartseeker:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.61

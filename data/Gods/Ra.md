@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 322.62
     per_level: 48.3
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 40.85
     per_level: 2.21
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Ra Basic Attack
@@ -45,24 +45,24 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Speed of Light
   details:
   - 'Movement Speed: 5% Per Stack'
   - 'Buff Duration: 15 seconds'
   - 'Max Buff Stacks: 3'
-  description: USE ABILITY, MOVE FASTER After using an ability gain Movement Speed
   detail_kinds:
   - buff
   - buff
   - buff
+  description: USE ABILITY, MOVE FASTER After using an ability gain Movement Speed
 - slot: 1st Ability
   name: Celestial Beam
   cooldown:
@@ -81,8 +81,6 @@ abilities:
   - 'Radius: 0.72 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80'
-  description: Summon a moving beam of intense light, dealing Magical Damage to enemies
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -91,6 +89,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Summon a moving beam of intense light, dealing Magical Damage to enemies
 - slot: 2nd Ability
   name: Divine Light
   cooldown:
@@ -124,10 +124,6 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: For a period after activation, Attacks fire solar rays , dealing Magical
-    Damage Emanate light in the area around you that repeatedly Slows enemies before
-    exploding dealing Magical Damage
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -146,6 +142,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: For a period after activation, Attacks fire solar rays , dealing Magical
+    Damage Emanate light in the area around you that repeatedly Slows enemies before
+    exploding dealing Magical Damage
 - slot: 3rd Ability
   name: Solar Blessing
   cooldown:
@@ -174,10 +174,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 65 | 75 | 85 | 95 | 105 mana'
-  description: The light empowers you and allied gods in the area, granting Strength
-    , Intelligence , and Protections Summon a pillar of blessed light repeatedly dealing
-    Magical Damage and Healing allies
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -191,6 +187,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: The light empowers you and allied gods in the area, granting Strength
+    , Intelligence , and Protections Summon a pillar of blessed light repeatedly dealing
+    Magical Damage and Healing allies
 - slot: Ultimate
   name: Searing Pain
   cooldown:
@@ -211,9 +211,6 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 80 | 75 | 70 | 65 | 60 seconds'
   - 'Cost: 90 mana'
-  description: Blast enemies in front of you with a wave of extreme heat, dealing
-    Magical Damage
-  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -224,13 +221,17 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Blast enemies in front of you with a wave of extreme heat, dealing
+    Magical Damage
 aspects:
 - name: Aspect of Thermotherapy
-  kit_changes: Solar Blessing and Searing Pain only deal base damage with no scaling.
-    In return, Solar Blessing can be placed on allied gods, attaching to them and
-    Searing Pain Heals allied hits.
+  kit_changes: Solar Blessing and Searing Pain only deal base damage with no scaling,
+    Celestial Beam deals reduced damage, and Divine Light no longer grants Solar Rays.
+    In return, Celestial Beam grants Speed of Light to allies, Solar Blessing can
+    be placed on allied gods attaching to them, and Searing Pain Heals allies hit.
 source_url: https://wiki.smite2.com/w/Ra
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Ra Basic Attack

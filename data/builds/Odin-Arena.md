@@ -13,8 +13,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
+  - Void Shield
   - Kinetic Cuirass
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,44 +26,44 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
     Void Shield:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.75
     Void Stone:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.66
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.84
     Stampede:
-      total: 0.63
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -73,64 +73,64 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Chandra's Grace
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Void Stone
   - Heartseeker
-  - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Chandra's Grace
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Chandra's Grace:
+      total: 0.48
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Heartseeker:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Amanita Charm:
-      total: 0.78
+      total: 0.55
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.45
+    Void Stone:
+      total: 0.54
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Heartseeker:
+      total: 0.49
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Erosion:
-      total: 0.59
-      efficiency: 0.51
+      total: 0.57
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.66
     Stampede:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -145,8 +145,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
   - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Shield of the Phoenix:
-      total: 0.65
-      efficiency: 0.53
+      total: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.77
     Void Shield:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
     Void Stone:
-      total: 0.61
-      efficiency: 0.45
+      total: 0.6
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.67
-      efficiency: 0.51
+      total: 0.65
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.82
     Stampede:
-      total: 0.64
-      efficiency: 0.51
+      total: 0.62
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -210,7 +210,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
+  - Jotunn's Revenge
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -229,38 +229,38 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.56
     Void Shield:
-      total: 0.73
-      efficiency: 0.47
+      total: 0.71
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.98
     Void Stone:
-      total: 0.72
-      efficiency: 0.45
+      total: 0.71
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.98
     Amanita Charm:
-      total: 0.82
-      efficiency: 0.65
+      total: 0.8
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -275,7 +275,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
+  - Riptalon
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
@@ -288,8 +288,8 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -300,32 +300,32 @@ builds:
       pick: 0.0
       fit: 0.82
     Riptalon:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.78
-      efficiency: 0.65
+      total: 0.76
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.58
-      efficiency: 0.51
+      total: 0.57
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.65
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.6
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.72
     Shogun's Ofuda:
-      total: 0.61
-      efficiency: 0.5
+      total: 0.59
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Void Shield
   - Freya's Tears
   - Erosion
   - Stampede
   flex_slots:
-  - Stampede
-  - Void Shield
+  - Freya's Tears
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -353,44 +353,44 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.5
     Shield of the Phoenix:
-      total: 0.67
-      efficiency: 0.53
+      total: 0.65
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Void Shield:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Freya's Tears:
-      total: 0.6
-      efficiency: 0.61
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.59
     Erosion:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.6
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.71
     Stampede:
-      total: 0.59
-      efficiency: 0.51
+      total: 0.57
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -405,8 +405,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
+  - Void Shield
   - Kinetic Cuirass
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -418,44 +418,44 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.56
+      total: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
     Void Shield:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.75
     Void Stone:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
+      total: 0.81
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
-      efficiency: 0.51
+      total: 0.66
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.84
     Stampede:
-      total: 0.63
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75

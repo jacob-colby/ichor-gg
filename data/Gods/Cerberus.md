@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 668.52
     per_level: 101.52
+  health_regen:
+    base: 1.84
+    per_level: 0.22
   mana:
     base: 299.36
     per_level: 45.36
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 47.76
     per_level: 2.4
-  health_regen:
-    base: 1.84
-    per_level: 0.22
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Cerberus Basic Attack
@@ -47,25 +47,25 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Magical Damage to an enemy in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Spirit of Death
   details:
   - The amount stolen is based off of the base heal effect and does not include any
     increase or reduction applied
   - Severing an enemy's soul increases Healing stolen from them by 20% for 5 seconds
-  description: Any time a nearby enemy god is Healed , that Heal is reduced by 25%
-    and you receive 60% + 1% per level of the Heal
   detail_kinds:
   - null
   - heal
+  description: Any time a nearby enemy god is Healed , that Heal is reduced by 25%
+    and you receive 60% + 1% per level of the Heal
 - slot: 1st Ability
   name: Paralyzing Spit
   cooldown:
@@ -88,16 +88,13 @@ abilities:
     75% less effective within 2.5 meters
   - Each projectile that hits the same target deals 20% less damage
   - This ability passes through and damages all enemies, and passes through walls
-  - 'Damage: 65 | 90 | 115 | 140 | 165'
+  - 'Damage: 55 | 80 | 105 | 130 | 155'
   - 'Damage Scaling: 20% Intelligence'
   - 'Stun: 1.1 | 1.2 | 1.3 | 1.4 | 1.5 seconds'
   - 'Range: 8 meters'
   - 'Radius: 0.56 meters'
   - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Spit venom with your snake tail that passes through enemies dealing
-    Magical Damage
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -111,6 +108,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Spit venom with your snake tail that passes through enemies dealing
+    Magical Damage
 - slot: 2nd Ability
   name: Ghastly Breath
   cooldown:
@@ -139,9 +139,6 @@ abilities:
   - 'Slow Cone Angle: 30 degrees'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Your heads release a cone of noxious breath dealing Magical Damage
-    repeatedly to enemies in front of you
-  damage_type: magical
   detail_kinds:
   - debuff
   - slow
@@ -158,10 +155,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Your heads release a cone of noxious breath dealing Magical Damage
+    repeatedly to enemies in front of you
 - slot: 3rd Ability
   name: Soul Expulsion
   cooldown:
-  - 14.0
+  - 15.0
   cost:
   - 55.0
   details:
@@ -173,11 +173,8 @@ abilities:
   - 'Soul Health: 50 | 60 | 70 | 80 | 90'
   - 'Range: 8.8 meters'
   - 'Radius: 2.4 meters'
-  - 'Cooldown: 14 seconds'
+  - 'Cooldown: 15 seconds'
   - 'Cost: 55 mana'
-  description: Killing a soul Heals you and reduces 's cooldown by 2 seconds Leap
-    forward dealing Magical Damage to enemies and severing their souls when you land
-  damage_type: magical
   detail_kinds:
   - heal
   - magical
@@ -189,10 +186,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Killing a soul Heals you and reduces 's cooldown by 2 seconds Leap
+    forward dealing Magical Damage to enemies and severing their souls when you land
 - slot: Ultimate
   name: Stygian Torment
   cooldown:
-  - 90.0
+  - 105.0
   cost:
   - 60.0
   - 65.0
@@ -206,11 +206,8 @@ abilities:
   - 'Damage Scaling: 55% Intelligence'
   - 'Radius: 4.8 meters'
   - 'Displacement Distance: 3.6 meters'
-  - 'Cooldown: 90 seconds'
+  - 'Cooldown: 105 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Raise all enemy Gods into the air, severing their souls and dealing
-    Magical Damage to them before pulling them in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -220,12 +217,15 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Raise all enemy Gods into the air, severing their souls and dealing
+    Magical Damage to them before pulling them in front of you
 aspects:
 - name: Aspect of Souls
   kit_changes: Ghastly Breath ticks an additional time for every 3 god souls you have
     killed but souls no longer heal. Stygian Torment now only knocks up targets.
 source_url: https://wiki.smite2.com/w/Cerberus
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Cerberus Basic Attack

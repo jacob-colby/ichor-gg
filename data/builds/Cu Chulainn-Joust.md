@@ -13,21 +13,21 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Berserker's Shield
+  - Shogun's Ofuda
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -38,32 +38,32 @@ builds:
       pick: 0.0
       fit: 0.72
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.57
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.72
-      efficiency: 0.65
+      total: 0.7
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.79
     Erosion:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.51
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.54
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.5
+      total: 0.55
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -80,8 +80,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Shogun's Ofuda
   - Shield of the Phoenix
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -93,44 +93,44 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.71
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
+      total: 0.59
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.47
     Shield of the Phoenix:
-      total: 0.58
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.8
-      efficiency: 0.65
+      total: 0.78
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.94
     Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.51
+      total: 0.58
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.5
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -158,44 +158,44 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.58
-      efficiency: 0.49
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.67
     Toxic Blade:
-      total: 0.67
+      total: 0.66
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     Void Shield:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.78
     Void Stone:
-      total: 0.62
-      efficiency: 0.45
+      total: 0.61
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.78
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.65
+      total: 0.66
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
+  - Pharaoh's Curse
   - Shogun's Ofuda
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -223,44 +223,44 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.81
     Berserker's Shield:
-      total: 0.54
-      efficiency: 0.68
+      total: 0.55
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.4
     Riptalon:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.65
+      total: 0.66
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.7
     Pharaoh's Curse:
-      total: 0.56
-      efficiency: 0.51
+      total: 0.54
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.6
     Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.5
+      total: 0.53
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Freya's Tears
   - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
   - Genji's Guard
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -288,8 +288,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -305,27 +305,27 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Berserker's Shield:
+      total: 0.51
+      efficiency: 0.7
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
     Shield of the Phoenix:
-      total: 0.62
-      efficiency: 0.53
+      total: 0.6
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Freya's Tears:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Pharaoh's Curse:
-      total: 0.51
-      efficiency: 0.51
+      total: 0.5
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -340,21 +340,21 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Berserker's Shield
+  - Shogun's Ofuda
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -365,32 +365,32 @@ builds:
       pick: 0.0
       fit: 0.72
     Berserker's Shield:
-      total: 0.56
-      efficiency: 0.68
+      total: 0.57
+      efficiency: 0.7
       win: 0.5
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.72
-      efficiency: 0.65
+      total: 0.7
+      efficiency: 0.62
       win: 0.5
       pick: 0.0
       fit: 0.79
     Erosion:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.51
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.54
     Pharaoh's Curse:
-      total: 0.57
-      efficiency: 0.51
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.64
     Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.5
+      total: 0.55
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64

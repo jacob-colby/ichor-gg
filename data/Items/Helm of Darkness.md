@@ -4,10 +4,10 @@ name: Helm of Darkness
 tier: 3
 cost: 2700
 stats:
-  Intelligence: '40'
-  Physical Protection: '20'
+  Intelligence: '45'
+  Physical Protection: '25'
   Magical Protection: '25'
-passive: 'On Use: Become Stealthed and pass through players and walls for 6s. Cannot
+passive: 'On Use: Become Stealthed and pass through players and walls for 7s. Cannot
   use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement
   Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health
   You can own up to 3 active items at once'
@@ -16,8 +16,8 @@ builds_from:
 - Killing Stone
 builds_into: []
 source_url: https://wiki.smite2.com/w/Helm_of_Darkness
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
-On Use: Become Stealthed and pass through players and walls for 6s. Cannot use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health You can own up to 3 active items at once
+On Use: Become Stealthed and pass through players and walls for 7s. Cannot use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health You can own up to 3 active items at once
 <!-- WIKI:END -->

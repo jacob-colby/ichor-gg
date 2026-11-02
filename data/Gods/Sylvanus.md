@@ -14,9 +14,15 @@ base_stats:
   health:
     base: 705.27
     per_level: 101.52
+  health_regen:
+    base: 1.82
+    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -26,18 +32,12 @@ base_stats:
   attack_speed:
     base: 0.9
     per_level: 0.74
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 41.04
     per_level: 2.4
-  health_regen:
-    base: 1.82
-    per_level: 0.2
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Sylvanus Basic Attack
@@ -46,25 +46,25 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 6.4 meters'
   - 'Radius: 1.6 meters'
-  description: Lob a projectile at a target location that explodes, dealing Magical
-    Damage to all enemies
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Lob a projectile at a target location that explodes, dealing Magical
+    Damage to all enemies
 - slot: Passive
   name: Nature's Bounty
   details:
   - Reduces cooldowns by 0.5 seconds; at level 15 the reduction increases to 1 second
   - 'Mana Restore: 2.5%'
-  description: When your abilities hit or are deployed, a seed pod appears. Picking
-    it up restores Mana and reduces your cooldowns . Picking up 8 spawns a pod near
-    Sylvanus
   detail_kinds:
   - null
   - buff
+  description: When your abilities hit or are deployed, a seed pod appears. Picking
+    it up restores Mana and reduces your cooldowns . Picking up 8 spawns a pod near
+    Sylvanus
 - slot: 1st Ability
   name: Verdant Growth
   cooldown:
@@ -95,9 +95,6 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 15 | 14 | 13 | 12 | 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Throw a pod that deals Magical Damage , applies Protection Reduction
-    , and Roots enemies hit
-  damage_type: magical
   detail_kinds:
   - buff
   - debuff
@@ -112,6 +109,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Throw a pod that deals Magical Damage , applies Protection Reduction
+    , and Roots enemies hit
 - slot: 2nd Ability
   name: Wisps
   cooldown:
@@ -129,7 +129,7 @@ abilities:
   - Healing and Damage are reduced by 65% when affecting Minions. Seeds are not spawned
     when hitting Minions
   - 'Heal: 8 | 10 | 12 | 14 | 16'
-  - 'Heal Scaling: 3% Intelligence'
+  - 'Heal Scaling: 6% Intelligence'
   - 'Damage: 14 | 20 | 26 | 32 | 38'
   - 'Damage Scaling: 10% Intelligence'
   - 'Protections: 10 | 15 | 20 | 25 | 30'
@@ -137,10 +137,6 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: can revive Wilted Flowers or cause Living Flowers to grant their Protections
-    in an aura Release that restores Health to allies or deals Magical Damage to enemies
-    repeatedly over time. Allies gain Protections while healed
-  damage_type: magical
   detail_kinds:
   - heal
   - null
@@ -154,6 +150,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: can revive Wilted Flowers or cause Living Flowers to grant their Protections
+    in an aura Release that restores Health to allies or deals Magical Damage to enemies
+    repeatedly over time. Allies gain Protections while healed
 - slot: 3rd Ability
   name: Nature's Grasp
   cooldown:
@@ -178,8 +178,6 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 70 | 65 | 60 | 55 | 50 mana'
-  description: Extend a vine that Stuns the first enemy god hit and Pulls them toward
-    you
   detail_kinds:
   - buff
   - null
@@ -189,6 +187,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Extend a vine that Stuns the first enemy god hit and Pulls them toward
+    you
 - slot: Ultimate
   name: Wrath of Terra
   cooldown:
@@ -203,9 +203,6 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: Slam the ground, Knocking Up enemies in an area and dealing Magical
-    Damage repeatedly over time
-  damage_type: magical
   detail_kinds:
   - debuff
   - null
@@ -214,6 +211,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Slam the ground, Knocking Up enemies in an area and dealing Magical
+    Damage repeatedly over time
 aspects:
 - name: Aspect of Grover's Wrath
   kit_changes: 'Attacks: +15% damage to targets debuffed by Sylvanus. Wisp''s Heal,
@@ -222,7 +222,7 @@ aspects:
     Verdant Growth/Ally dies; +2 on Ultimate cast. At 4 stacks, Enrage: +Attack Speed
     and a free Wisps or Nature''s Grasp cast.'
 source_url: https://wiki.smite2.com/w/Sylvanus
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Sylvanus Basic Attack

@@ -13,6 +13,12 @@ base_stats:
   health:
     base: 0.0
     per_level: 0.0
+  health_regen:
+    base: 0.0
+    per_level: 0.0
+  mana_regen:
+    base: 0.0
+    per_level: 0.0
   physical_prot:
     base: 0.0
     per_level: 0.0
@@ -22,16 +28,10 @@ base_stats:
   attack_speed:
     base: 0.0
     per_level: 0.0
-  move_speed:
-    base: 0.0
-    per_level: 0.0
   attack_power:
     base: 0.0
     per_level: 0.0
-  health_regen:
-    base: 0.0
-    per_level: 0.0
-  mana_regen:
+  move_speed:
     base: 0.0
     per_level: 0.0
 abilities:
@@ -43,29 +43,29 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Magical Damage to an enemy in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Smouldering Rage
   details:
   - Stack duration refreshes when you hit with an ability
-  - 'Health Regen: 0.6'
+  - 'Health Regen: 0.4'
   - 'Maximum Health: 5'
   - 'Buff Duration: 18 seconds'
   - 'Max Stacks: 12'
-  description: Ability hits grant stacks. Each stack grants Health Regen and temporary
-    Maximum Health for a duration
   detail_kinds:
   - null
   - buff
   - buff
   - buff
   - buff
+  description: Ability hits grant stacks. Each stack grants Health Regen and temporary
+    Maximum Health for a duration
 - slot: 1st Ability
   name: Furious Roar
   cooldown:
@@ -80,17 +80,13 @@ abilities:
   - This ability passes through and damages all enemies, and passes through walls
   - 'Damage: 80 | 115 | 150 | 185 | 220'
   - 'Damage Scaling: 60% Intelligence'
-  - 'Damage Per Tick: 1 | 1.5 | 2 | 2.5 | 3% of Enemy''s Max Health'
-  - 'Basic Attack Damage Reduction: 20 | 25 | 30 | 35 | 40%'
+  - 'Damage Per Tick: 1 | 1.2 | 1.4 | 1.6 | 1.8% of Enemy''s Max Health'
+  - 'Basic Attack Damage Reduction: 20 | 22.5 | 25 | 27.5 | 30%'
   - 'Debuff Duration: 4 seconds'
   - 'Range: 7.2 meters'
   - 'Radius: 2.4 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: Shout from your chest in a line, dealing Magical Damage and reducing
-    enemy Basic Attack Damage for a duration. Enemies also take Magical Damage over
-    time based on their max Health
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -102,6 +98,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Shout from your chest in a line, dealing Magical Damage and reducing
+    enemy Basic Attack Damage for a duration. Enemies also take Magical Damage over
+    time based on their max Health
 - slot: 2nd Ability
   name: Hook Slam
   cooldown:
@@ -126,9 +126,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Knockup, Root, Slam Slam your axe upward, dealing Magical Damage and
-    Knocking Up enemies hit, then slam them into the ground for Magical Damage and
-    Rooting them for a duration
   detail_kinds:
   - magical
   - magical
@@ -139,6 +136,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Knockup, Root, Slam Slam your axe upward, dealing Magical Damage and
+    Knocking Up enemies hit, then slam them into the ground for Magical Damage and
+    Rooting them for a duration
 - slot: 3rd Ability
   name: Sky-Cutting Axe
   cooldown:
@@ -156,9 +156,6 @@ abilities:
   - 'Radius: 1.92 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
-  description: Leap forward, dealing Magical Damage to enemies where you land. Within
-    a short duration, Leap again
-  damage_type: magical
   detail_kinds:
   - buff
   - null
@@ -170,6 +167,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Leap forward, dealing Magical Damage to enemies where you land. Within
+    a short duration, Leap again
 - slot: Ultimate
   name: Whirlwind of Rage and Steel
   cooldown:
@@ -191,10 +191,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: Grabbed enemies take Magical Damage on the Grab , repeatedly during
-    the spin, and again on the Throw After a brief windup, spin with your axe, damaging
-    and Grabbing nearby enemies before Throwing them in the direction you are facing
-  damage_type: magical
   detail_kinds:
   - stun
   - mechanic
@@ -204,6 +200,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Grabbed enemies take Magical Damage on the Grab , repeatedly during
+    the spin, and again on the Throw After a brief windup, spin with your axe, damaging
+    and Grabbing nearby enemies before Throwing them in the direction you are facing
 aspects:
 - name: Aspect of Relentless Spite
   kit_changes: Smouldering Rage no longer grants Health Regen or temporary Maximum
@@ -212,7 +212,7 @@ aspects:
     can be ranked up at level 1, has no Cooldown, and no longer grabs enemies, but
     can be channeled as long as you have Spite.
 source_url: https://wiki.smite2.com/w/Xing_Tian
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
 - Xing Tian Basic Attack

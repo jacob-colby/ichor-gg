@@ -8,14 +8,14 @@ stats:
   Max Mana: '250'
   Mana Regen: '3'
   Penetration: '10'
-passive: -30% Cooldown for your Ultimate Ability.
+passive: -25% Cooldown for your Ultimate Ability.
 builds_from:
 - Oracle Staff
 - Oracle Staff
 builds_into: []
 source_url: https://wiki.smite2.com/w/The_World_Stone
-last_verified: '2026-08-01'
+last_verified: '2026-11-02'
 ---
 <!-- WIKI:START -->
--30% Cooldown for your Ultimate Ability.
+-25% Cooldown for your Ultimate Ability.
 <!-- WIKI:END -->
