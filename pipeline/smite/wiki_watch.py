@@ -76,9 +76,13 @@ def _recorded_patch(data_root: Path):
     path = data_root / "_patch.json"
     if not path.exists():
         return None
+    # `data_patch`, not `patch`: since `patch_feed` the game label moves on
+    # its own, and comparing against it would silence this report on exactly
+    # the day the item data goes stale. Older files carry only `patch`.
     try:
-        return json.loads(path.read_text(encoding="utf-8")).get("patch")
-    except ValueError:
+        d = json.loads(path.read_text(encoding="utf-8"))
+        return d.get("data_patch") or d.get("patch")
+    except (ValueError, AttributeError):
         return None
 
 

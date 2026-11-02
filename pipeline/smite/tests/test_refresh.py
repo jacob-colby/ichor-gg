@@ -380,7 +380,25 @@ def test_refresh_patch_version_picks_highest_numbered_beta_regardless_of_order(t
     fetcher.fetch.assert_called_once_with("https://wiki.smite2.com/w/Patch_notes", force=False)
 
     saved = json.loads((tmp_path / "_patch.json").read_text(encoding="utf-8"))
-    assert saved == {"patch": "Open Beta 39", "captured": date.today().isoformat()}
+    assert saved == {"patch": "Open Beta 39", "captured": date.today().isoformat(),
+                     "data_patch": "Open Beta 39"}
+
+
+def test_refresh_patch_version_never_walks_back_a_label_the_steam_feed_recorded(tmp_path, monkeypatch):
+    """The wiki lags the game. When `patch_feed` has already recorded OB40
+    from Steam, a wiki that still says OB39 marks the item data as OB39's and
+    leaves the game label where it is."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    (tmp_path / "_patch_history.json").write_text(json.dumps([
+        {"patch": "Open Beta 39", "first_seen": "2026-07-14", "source": "steam"},
+        {"patch": "Open Beta 40", "first_seen": "2026-07-28", "source": "steam"}]))
+    fetcher = Mock()
+    fetcher.fetch.return_value = (FIXTURES / "patch_notes_wiki.html").read_text(encoding="utf-8")
+
+    refresh.refresh_patch_version(fetcher)
+
+    saved = json.loads((tmp_path / "_patch.json").read_text(encoding="utf-8"))
+    assert saved == {"patch": "Open Beta 40", "captured": "2026-07-28", "data_patch": "Open Beta 39"}
 
 
 def test_refresh_patch_version_forwards_force_flag(tmp_path, monkeypatch):

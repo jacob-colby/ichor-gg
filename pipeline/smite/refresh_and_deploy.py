@@ -89,6 +89,9 @@ def main(argv=None):
         # The patch label the viewer prints. Omitted, the site keeps announcing
         # the previous patch while serving the new one's data.
         "data/_patch.json",
+        # Where _patch.json is derived from, and where `data_from` is set.
+        # Omitted, the next run re-derives the label from a stale history.
+        "data/_patch_history.json",
         # Art for items the patch introduced. Omitted, a brand-new item renders
         # as a fallback initial — the most visible possible symptom, on exactly
         # the items people came to look at.
