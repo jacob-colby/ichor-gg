@@ -272,8 +272,8 @@ def test_chain_multipliers_come_from_the_gods_own_detail_line():
     """Discovered by measurement, then found already scraped. Thanatos read
     58 / 43 / 87 — exactly 1 : 0.75 : 1.5 off a 58 base — and his detail line
     says "Attacks in order of 1, 0.75, 1.5x damage and swing time"."""
-    from smite import notes, recommend
-    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    from smite.tests import frozen
+    god = frozen.god("Thanatos")
     assert combat.attack_chain_multipliers(god) == [1.0, 0.75, 1.5]
 
 
@@ -348,14 +348,16 @@ def test_attack_power_correction_applies_to_the_base_not_item_power():
 
 def test_the_correction_reproduces_all_three_measured_gods():
     """Thanatos 32, Neith 30, Ymir 28 — melee and ranged, physical and
-    magical, one constant. That spread is what rules out a per-god quirk."""
+    magical, one constant. That spread is what rules out a per-god quirk.
+    Measured in-game on Open Beta 40, so it reads those gods' frozen notes:
+    a later patch moving a base stat changes the inputs, not the constant."""
     import math
-    from smite import notes, recommend
-    kuk, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Kukulkan.md")
+    from smite.tests import frozen
+    kuk = frozen.god("Kukulkan")
     phys = kuk["base_stats"]["physical_prot"]["base"]
     mag = kuk["base_stats"]["magical_prot"]["base"]
     for name, prot, seen in (("Thanatos", phys, 32), ("Neith", phys, 30), ("Ymir", mag, 28)):
-        god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")
+        god = frozen.god(name)
         hit = combat.attack_damage(combat.god_attack_power(god),
                                    combat.DEFAULT_ATTACK_SCALING, {})
         assert math.floor(combat.damage_dealt(hit, prot)) == seen, name
@@ -365,7 +367,7 @@ def test_a_clean_0_80_would_not_have_fitted():
     """The constant is 0.81 and not the rounder 0.80 because 0.80 misses
     Thanatos — worth pinning so nobody 'tidies' it."""
     import math
-    from smite import notes, recommend
-    god, _ = notes.read_note(recommend.DATA_ROOT / "Gods" / "Thanatos.md")
+    from smite.tests import frozen
+    god = frozen.god("Thanatos")
     at_080 = god["base_stats"]["attack_power"]["base"] * 0.80
     assert math.floor(combat.damage_dealt(at_080 * 1.5, 17.48)) != 49

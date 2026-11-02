@@ -4,9 +4,12 @@ The parser's job is knowing what it cannot read. Most of these pin a REFUSAL,
 because a false "unconditional" overprices an item by its own headline number
 while a false "conditional" costs one item's worth of signal.
 """
+import re
+
 import pytest
 
 from smite import efficiency, passives, notes, recommend, scoring
+from smite.tests import frozen
 
 
 def _items():
@@ -19,6 +22,18 @@ def _item(name):
     return notes.read_note(recommend.DATA_ROOT / "Items" / f"{name}.md")[0]
 
 
+def _all_live_items():
+    return [i for i in (notes.read_note(p)[0]
+                        for p in (recommend.DATA_ROOT / "Items").glob("*.md"))
+            if i.get("name")]
+
+
+# The clause as the game writes it, read independently of `passives._ADAPTIVE`
+# so the live invariants below are not the parser checked against itself.
+_ADAPTIVE_TEXT = re.compile(
+    r"Adaptive Stat:\s*\+(\d+(?:\.\d+)?) Strength or \+(\d+(?:\.\d+)?) Intelligence")
+
+
 # ── What it reads ─────────────────────────────────────────────────────────
 
 def test_the_adaptive_grant_is_read_as_its_own_good():
@@ -26,8 +41,23 @@ def test_the_adaptive_grant_is_read_as_its_own_good():
     It is one column, not Strength or Intelligence: you get whichever suits
     your build, and the two carry different gold prices, so folding it into
     either would pick a side of a coin the item never makes you flip."""
-    grants = passives.unconditional_grants(_item("Daybreak Gavel"))
-    assert grants == {passives.ADAPTIVE_KEY: 70.0}    # mean of +60 Str / +80 Int
+    grants = passives.unconditional_grants(frozen.item("Daybreak Gavel"))
+    assert grants == {passives.ADAPTIVE_KEY: 70.0}    # mean of +60 Str / +80 Int (OB40)
+
+
+def test_every_live_adaptive_grant_is_the_mean_of_its_two_branches():
+    """The same property over whatever the current patch says, so a rebalance
+    of the numbers moves the expectation with it."""
+    checked = 0
+    for item in _items():
+        m = _ADAPTIVE_TEXT.search(item.get("passive") or "")
+        if not m:
+            continue
+        strength, intelligence = float(m.group(1)), float(m.group(2))
+        assert passives.unconditional_grants(item)[passives.ADAPTIVE_KEY] == \
+            pytest.approx((strength + intelligence) / 2), item["name"]
+        checked += 1
+    assert checked >= 1
 
 
 def test_a_plain_unconditional_grant_is_read_with_its_unit():
@@ -72,12 +102,21 @@ def test_it_refuses_far_more_than_it_reads():
     """The parser reaches 10 of 129 passives. That ratio is the finding, not a
     shortfall to fix — 56% of passives state no stat and no damage number at
     all, and inventing values for reveals and silences would be worse than
-    admitting the gap."""
-    survey = passives.survey(_items())
+    admitting the gap. The counts are Open Beta 40's (frozen); the live test
+    below holds the ratio on whatever patch is current."""
+    buildable = [i for i in frozen.items() if scoring.is_buildable(i)]
+    survey = passives.survey(buildable)
     assert survey["with_passive"] >= 125
     assert survey["adaptive"] == 8
     assert survey["parsed"] <= 15
     assert survey["conditional"] > 90
+
+
+def test_on_live_data_it_still_refuses_far_more_than_it_reads():
+    survey = passives.survey(_items())
+    assert survey["parsed"] * 4 < survey["conditional"]
+    assert survey["adaptive"] == sum(1 for i in _items()
+                                     if _ADAPTIVE_TEXT.search(i.get("passive") or ""))
 
 
 # ── Wiring ────────────────────────────────────────────────────────────────
@@ -101,7 +140,7 @@ def test_effective_stats_adds_to_a_stat_the_item_already_lists():
 def test_the_flag_actually_changes_the_priced_stats():
     """Off is the default, not the only path — the measurement has to stay
     reproducible."""
-    gavel = _item("Daybreak Gavel")
+    gavel = frozen.item("Daybreak Gavel")
     assert passives.ADAPTIVE_KEY not in efficiency.item_stat_values(gavel)
     efficiency.PRICE_PASSIVES = True
     try:
@@ -417,10 +456,9 @@ def test_the_flag_ships_on_and_the_gates_can_see_it():
 def test_every_adaptive_item_is_priced_not_just_the_buildable_eight():
     """The regression pool keeps components on purpose (`efficiency_pool`), and
     17 of the 29 clause-carriers are in it. Pricing only the tier-3 eight would
-    leave the same unexplained cost in the intercept for the other nine."""
-    items = [i for i in (notes.read_note(p)[0]
-                         for p in (recommend.DATA_ROOT / "Items").glob("*.md"))
-             if i.get("name")]
+    leave the same unexplained cost in the intercept for the other nine.
+    (Open Beta 40's counts, frozen.)"""
+    items = frozen.items()
     carriers = [i for i in items if passives.adaptive_grants(i)]
     assert len(carriers) == 29
     priced = [i for i in efficiency.efficiency_pool(items) if passives.adaptive_grants(i)]
@@ -428,14 +466,43 @@ def test_every_adaptive_item_is_priced_not_just_the_buildable_eight():
     assert sum(1 for i in priced if i.get("tier") == 3) == 8
 
 
+def test_on_live_data_every_clause_carrier_in_the_pool_is_priced():
+    """The property the counts above stand for: with `price_adaptive` on,
+    every item in the regression pool whose text carries the clause gets the
+    grant, components included."""
+    items = _all_live_items()
+    carriers = {i["name"] for i in items if _ADAPTIVE_TEXT.search(i.get("passive") or "")}
+    assert carriers == {i["name"] for i in items if passives.adaptive_grants(i)}
+    before = efficiency.apply_pricing_flags({"price_adaptive": True, "adaptive_branch": "strength"})
+    try:
+        for item in efficiency.efficiency_pool(items):
+            if item["name"] in carriers:
+                assert passives.ADAPTIVE_KEY in efficiency.item_stat_values(item) or \
+                    "Strength" in efficiency.item_stat_values(item), item["name"]
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
 def test_only_the_standing_clause_counts_when_an_item_has_two():
     """Daybreak Gavel grants +60/+80 outright AND another +13/+16 "for 8s per
     Stack". Both are written in the adaptive grammar; only the first is a
     standing grant, and the `Adaptive Stat:` cue is what separates them."""
-    gavel = _item("Daybreak Gavel")
+    gavel = frozen.item("Daybreak Gavel")
     assert "+13 Strength or +16 Intelligence" in gavel["passive"]
     assert passives.adaptive_grants(gavel, "strength") == {"Strength": 60.0}
     assert passives.adaptive_grants(gavel, "intelligence") == {"Intelligence": 80.0}
+
+
+def test_on_live_data_the_standing_clause_is_the_one_read():
+    """Whatever the numbers are this patch: an item with the clause twice is
+    priced off the `Adaptive Stat:` one, never the stack bonus."""
+    for item in _all_live_items():
+        m = _ADAPTIVE_TEXT.search(item.get("passive") or "")
+        if not m:
+            continue
+        assert passives.adaptive_grants(item, "strength") == {"Strength": float(m.group(1))}, item["name"]
+        assert passives.adaptive_grants(item, "intelligence") == {
+            "Intelligence": float(m.group(2))}, item["name"]
 
 
 # ── "% of all Stats from Items" (catalogue class A2) ───────────────────────
@@ -513,11 +580,28 @@ def test_the_flag_prices_the_clause_through_item_stat_values_and_is_a_no_op_off(
 
 
 def test_the_shipped_reference_is_the_re_derivation_not_a_typed_number():
-    """`multiplier_reference` in _weights.yaml is a measurement and a wiki
-    refresh can move it; this fails when it has, so it is re-measured rather
-    than quietly outliving its data."""
+    """`multiplier_reference` in _weights.yaml is a measurement, taken on
+    Open Beta 40's items: the frozen copy reproduces it, so it was derived and
+    not typed."""
     from smite import recommend, scoring
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    stored = weights.get("multiplier_reference") or {}
+    measured = passives.measure_multiplier_reference(frozen.items())
+    assert set(stored) == set(measured)
+    for key, value in measured.items():
+        assert stored[key] == pytest.approx(value, abs=0.01), key
+
+
+def test_a_shipped_multiplier_flag_needs_a_reference_measured_on_the_live_items():
+    """A wiki refresh moves the reference. While `price_stat_multipliers` is
+    off (it is: §4 null) the stored number is inert and a historical record,
+    and requiring it to track every patch would block the patch's data for a
+    number nothing reads. The moment the flag ships, a stale reference is a
+    wrong price, so it has to be re-measured on the data it prices."""
+    from smite import recommend, scoring
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    if not weights.get("price_stat_multipliers"):
+        return
     stored = weights.get("multiplier_reference") or {}
     live = passives.measure_multiplier_reference(recommend.load_items())
     assert set(stored) == set(live)
@@ -525,9 +609,18 @@ def test_the_shipped_reference_is_the_re_derivation_not_a_typed_number():
         assert stored[key] == pytest.approx(value, abs=0.01), key
 
 
-def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+def test_on_live_data_the_flat_clause_is_read_wherever_the_text_has_it():
     from smite import recommend, scoring
-    items = recommend.load_items()
+    text = re.compile(r"\+\s*\d+(?:\.\d+)?% of all Stats from Items", re.I)
+    for it in recommend.load_items():
+        if scoring.is_buildable(it):
+            has = bool(text.search(it.get("passive") or ""))
+            assert (passives.all_stats_multiplier(it) > 0) == has, it["name"]
+
+
+def test_exactly_four_buildable_items_carry_the_flat_clause_and_the_lamp_the_per_level_one():
+    """Open Beta 40's set (frozen)."""
+    items = frozen.items()
     flat = sorted(it["name"] for it in items
                   if scoring.is_buildable(it) and passives.all_stats_multiplier(it) > 0)
     assert flat == ["Agility Greaves", "Shell of Rebuke",

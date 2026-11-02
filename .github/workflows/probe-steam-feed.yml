@@ -1,0 +1,44 @@
+# What does Steam's GetNewsForApp actually return for SMITE 2?
+#
+# Read-only against Steam. Dispatch-only on main. Run it when the patch feed
+# starts logging "no patch posts" or stops seeing new patches, to see whether
+# Hi-Rez's post titles moved. Prints every title; uploads the raw responses.
+name: Probe Steam patch feed
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths:
+      - ".github/workflows/probe-steam-feed.yml"
+      - "pipeline/scripts/probe_steam_feed.py"
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install requests
+      - name: Probe
+        working-directory: pipeline
+        run: python scripts/probe_steam_feed.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: steam-news
+          path: pipeline/smite/tests/fixtures/recorded/steam
+      # Records the responses as test fixtures on a feature branch only.
+      - name: Commit recorded fixtures
+        if: github.event_name == 'push'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pipeline/smite/tests/fixtures/recorded/steam
+          git diff --cached --quiet || { git commit -m "test(fixtures): record live Steam news responses from a runner"; git push; }

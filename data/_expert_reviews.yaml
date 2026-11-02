@@ -33,6 +33,19 @@
 #                gate stayed green: it only tested for a claim reverting all the
 #                way to `holds`. Omit it and that older, weaker rule applies.
 #
+#   verdict_patch the `data_patch` (`_patch.json`) the baseline was checked on.
+#                Required beside `last_verdict`. A baseline is a statement about
+#                the model ON SOME DATA; when a wiki refresh brings in a new
+#                patch the item stats under it change, and a claim can move with
+#                no change to the model at all. `test_expert_review` holds the
+#                baseline to the checker only while the data is still that
+#                patch, and the daily job prints `expert_review --check` as a
+#                ::warning:: either way — so a patch that regresses a resolved
+#                claim is reported loudly, and re-baselining it (with a note
+#                saying what the patch did) is a human's call, not a reason to
+#                keep last patch's stats live. Added 2026-11-02, when Open Beta
+#                46 put Eye of Providence back into 4 of 36 support cores.
+#
 #                IT IS A BASELINE, NOT A TARGET. Lowering it to match a build
 #                you just broke turns this gate into a rubber stamp. Raise it
 #                when a fix lands; change it downward only as a recorded
@@ -99,6 +112,7 @@ reviews:
       Jotunn's, etc.
     status: resolved
     last_verdict: clear
+    verdict_patch: Open Beta 40
     notes: >-
       Partly addressed. At the time of the review the model's core was
       Lernaean Bow / Berserker's Shield / Jotunn's / Riptalon / Damaru /
@@ -163,6 +177,7 @@ reviews:
       the gold from it.
     status: resolved
     last_verdict: clear
+    verdict_patch: Open Beta 40
     notes: >-
       Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
       read as a 250g bargain — the discount is really the ward economy's price

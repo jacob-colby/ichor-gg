@@ -559,3 +559,16 @@ def test_prose_recovery_skips_the_adaptive_clause():
         "Adaptive Stat: +25 Strength or +45 Intelligence (based on highest item stat). "
         "+7.5% of all Stats from Items.") == {}
     assert _stats_from_prose("Non-Aspect: 45 Strength 8 Pathfinding") == {"Strength": "45", "Pathfinding": "8"}
+
+
+def test_prose_recovery_skips_scaling_parentheticals():
+    """Blinking Abyss, Open Beta 46: `Deal 25 (+10% Strength & Intelligence)
+    Magical Damage` is a damage ratio. Read as a stat it was the item's only
+    stat, and made a statless relic buildable on a parse artifact."""
+    from smite.wiki_parser import _stats_from_prose
+    passive = ("Adaptive Stat: +20 Strength or +35 Intelligence (based on highest item stat). "
+               "+5% of all Stats from Items. On Use: Teleport up to 5.6m. Can be used in combat, "
+               "but not while firing an ability. 1s after Teleport: Deal 25 (+10% Strength & "
+               "Intelligence) Magical Damage in a 3.2m radius. Cooldown: 200s")
+    assert _stats_from_prose(passive) == {}
+    assert _stats_from_prose("Deal 30 (+20% Intelligence) damage. 45 Strength") == {"Strength": "45"}

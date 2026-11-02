@@ -355,6 +355,7 @@ _PROSE_STAT_RE = re.compile(
     r"(?<![\w.])(\d+(?:\.\d+)?%?)\s+(" + "|".join(ITEM_STAT_NAMES) + r")\b")
 
 
+_SCALING_PAREN_RE = re.compile(r"\(\s*\+[^)]*\)")
 _ADAPTIVE_CLAUSE_RE = re.compile(r"Adaptive Stat:[^.]*?\(based on highest item stat\)\.?|Adaptive Stat:[^.]*\.", re.IGNORECASE)
 
 
@@ -390,8 +391,17 @@ def _stats_from_prose(text: str) -> dict:
     Intelligence" is ONE grant the game picks for you, priced as such by
     `passives.adaptive_grants` from this same text; recovered here it became
     both stats at once. Open Beta 46 is when it surfaced: Survivor's Sash and
-    Sundering Echo gained that clause on pages whose `Stats:` stayed empty."""
+    Sundering Echo gained that clause on pages whose `Stats:` stayed empty.
+
+    Scaling parentheticals are cut too. Blinking Abyss's passive reads `Deal 25
+    (+10% Strength & Intelligence) Magical Damage` — a damage ratio, not a
+    stat — and with the Adaptive clause gone it was the only match left, so the
+    item came back as `{Strength: 10%}`. That one phantom stat made a relic
+    whose stats are `{}` on every earlier scrape "buildable" for the first time
+    on Open Beta 46 data, with an identical passive. A real prose stat line
+    ("45 Strength 8 Pathfinding") is never parenthesised and never signed."""
     text = _ADAPTIVE_CLAUSE_RE.sub(" ", text or "")
+    text = _SCALING_PAREN_RE.sub(" ", text)
     return {name: value for value, name in _PROSE_STAT_RE.findall(text)}
 
 

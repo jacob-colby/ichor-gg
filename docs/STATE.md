@@ -2421,7 +2421,8 @@ Damaru newly repriced — `test_build_quality`'s hand-computed Medusa,
 `test_scoring`'s relic set, `test_efficiency`'s penetration columns). They are
 evidence, not data checks, and re-deriving them is its own job; the first
 scheduled run on `main` after this lands will make the same OB46 change and
-turn them red there. The daily job does not run pytest, so nothing stops it. Two
+turn them red there. The daily job does not run pytest, so nothing stops it.
+**Superseded 2026-11-02, same day — see "The test gate" below.** Two
 measurements made it possible and they reverse half of the paragraph below.
 From a GitHub runner, the wiki challenges a spoofed-Chrome User-Agent (403
 `cf-mitigated`) and serves an honest bot UA (200) — so no browser is needed;
@@ -2505,7 +2506,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (978) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1029) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2514,6 +2515,54 @@ patch feed + wiki stats when due + snapshot + reindex, commits) and
 nothing). `probe-stat-sources.yml` is dispatch-only and re-checks which stat
 sources a runner can reach. Adding gods and items is still
 `smite.refresh_and_deploy` / `--refresh`, by hand, on `main`.
+
+**The test gate (2026-11-02).** A wiki stats refresh is kept only if the
+whole pytest suite still passes on it. `smite.stats_gate save` sets the
+owned files aside before `stats_refresh`. `check` then recomputes on the new
+stats and runs the suite. A test that fails on the new stats and passes on
+the old restores the old ones (the history and refresh state included, so
+the next run is due again). Each such test is printed as `::error::`, the
+community data still commits, and the run fails at its last step. It fails
+closed: a crash, a missing report or a timeout is a rejection. The argument
+is in the module docstring. That only works if the tests don't pin a patch,
+so the fourteen above were reworked rather than re-pinned. Arithmetic now
+reads Open Beta 40 inputs frozen in `tests/fixtures/frozen/` (see
+`tests/frozen.py`), each next to an invariant over the live data. The passive
+catalogue classifies a reshaped passive by `variants:` with a `match:` on
+the live text, so it is right on two patches at once. Expert-review
+baselines carry `verdict_patch`, and the job prints `expert_review --check`
+as an advisory step. On the OB46 data PR #66's run produced, the suite is
+green with two warnings that a human should read:
+
+  * Eye of Providence is back in 4 of 36 support cores (Atlas, Charon, Sobek,
+    Ymir). The `item-overweighted` claim reads `partial` against an OB40
+    baseline of `clear`. Its own stats did not change; the items around it
+    did. Re-baseline it with a note, or fix it.
+  * The penetration columns converged from 1.9x to 1.39x (49.9 vs 35.9
+    gold/point). The split is still two columns, and why they sit closer is
+    unexamined.
+
+Two of the fourteen were not test pinning. **Blinking Abyss was never newly
+buildable.** `_stats_from_prose` read `Deal 25 (+10% Strength &
+Intelligence)`, a damage ratio, as `Strength: 10%`, and that one phantom stat
+is all that made it pass `is_buildable`. Scaling parentheticals are now cut,
+so it is statless again, as on every earlier scrape. **Damaru** is a real
+rework: it became an Adaptive Stat item, which the flags now price. Six more
+catalogued passives changed shape on OB46 without failing anything, and they
+were reclassified along with it.
+
+**Steam's feed, measured (2026-11-02).** `probe-steam-feed.yml` recorded a
+real GetNewsForApp response from a runner (`tests/fixtures/recorded/steam/`).
+Since January 2026, titles carry no patch label. The label is in the body,
+as a `smite2.com/news/open-beta-NN-update-notes/` link (OB22–33), a heading
+(OB37) or prose (OB26, OB44). `patch_feed` now reads title, then link, then
+body, and finds 14 labels in that response, every one in game order and on
+the same day as the hand-recorded history where they overlap. Steam is
+still the weak source. Its newest post is 2026-10-06, and its newest
+LABELLED post is OB44, while the game is on OB46. Hi-Rez no longer announces
+every patch there. The wiki's Patch_notes index stays the primary due
+signal, and `stats_refresh` logs a `[patch sources]` cross-check against
+`data/_patch_feed.json` every day.
 
 ---
 
@@ -2537,7 +2586,7 @@ sources a runner can reach. Adding gods and items is still
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 978 pipeline · 775 viewer |
+| Tests | 1029 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

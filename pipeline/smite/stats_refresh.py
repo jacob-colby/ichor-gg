@@ -56,8 +56,10 @@ downstream gate. This path is built around that measurement:
      beside the live ones and swapped in by rename. `data_from` in the patch
      history is set only after the swap succeeds.
 
-Then the daily job's own gates (`validate --check`, `calibrate_combat`) run on
-the result before anything is committed; a failing gate fails the job and
+Then `smite.stats_gate` runs the whole pytest suite on the result and puts the
+old stats back if a test fails that passes without them (see that module), and
+the daily job's own gates (`validate --check`, `calibrate_combat`) run on the
+result before anything is committed; a failing gate fails the job and
 commits nothing, which on a runner is a full rollback.
 
 FAILURE NEVER FAILS THE COMMUNITY REFRESH. `main` exits 0 on every path. A
@@ -78,7 +80,7 @@ import traceback
 from datetime import date, timedelta
 from pathlib import Path
 
-from smite import notes, refresh, snapshots, wiki_parser
+from smite import notes, patch_feed, refresh, snapshots, wiki_parser
 
 DATA_ROOT = refresh.DATA_ROOT
 WIKI_BASE = refresh.WIKI_BASE
@@ -372,6 +374,10 @@ def run(data_root: Path = DATA_ROOT, fetcher=None, today: str = None,
         html = fetcher.fetch("Patch notes")
         nums = [int(m.group(1)) for m in refresh._PATCH_VERSION_RE.finditer(html)]
         wiki_patch = f"Open Beta {max(nums)}" if nums else None
+        try:
+            print(patch_feed.cross_check(patch_feed.load_state(data_root), wiki_patch))
+        except Exception as exc:          # a log line must never cost the refresh
+            print(f"[patch sources] cross-check failed: {exc!r}")
         if wiki_patch is None:
             if reason is None:
                 return {"status": "not-due"}

@@ -165,16 +165,45 @@ def test_a_claim_with_no_baseline_falls_back_to_the_old_rule():
     assert expert_review.regressions(_rows(index, partial, gone)) == [gone]
 
 
+def _data_patch():
+    import json
+    from smite import recommend
+    return json.loads((recommend.DATA_ROOT / "_patch.json").read_text(encoding="utf-8")).get("data_patch")
+
+
 def test_the_shipped_register_baselines_match_what_the_checker_says_today():
     """A baseline is only worth having if it is true when committed. This
     fails if someone lowers one to paper over a build they just broke, or
-    raises one without the fix landing."""
+    raises one without the fix landing.
+
+    On the data it was checked on. A baseline recorded on one patch's item
+    stats is not falsified by the next patch's — the claim moved because the
+    GAME did — and the daily job must not keep stale stats live to protect it.
+    Off its patch the row is reported, not asserted; `expert_review --check`
+    is printed as a warning by the daily job either way."""
+    import warnings
     reviews = expert_review.load_reviews()
     index = expert_review.load_index()
+    patch = _data_patch()
     for r in reviews:
+        if not r.get("last_verdict"):
+            continue
+        subject = f"{r.get('god') or 'whole model'} · {r.get('claim')}"
+        verdict = expert_review.check(r, index)[0]
+        if r.get("verdict_patch") != patch:
+            if verdict != r["last_verdict"]:
+                warnings.warn(f"{subject}: baseline {r['last_verdict']!r} was checked on "
+                              f"{r.get('verdict_patch')}, data is {patch} and it reads {verdict!r} "
+                              "— re-baseline with a note")
+            continue
+        assert verdict == r["last_verdict"], subject
+
+
+def test_every_baseline_names_the_patch_it_was_checked_on():
+    for r in expert_review.load_reviews():
         if r.get("last_verdict"):
-            assert expert_review.check(r, index)[0] == r["last_verdict"], (
-                f"{r.get('god') or 'whole model'} · {r.get('claim')}")
+            assert str(r.get("verdict_patch") or "").startswith("Open Beta "), (
+                f"{r.get('god') or 'whole model'} · {r.get('claim')} has no verdict_patch")
 
 
 def test_the_report_refuses_to_present_itself_as_a_score():

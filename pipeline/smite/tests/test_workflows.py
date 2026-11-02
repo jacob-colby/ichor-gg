@@ -119,3 +119,60 @@ def test_the_stats_refresh_is_gated_before_anything_is_committed():
     for gate in ("smite.validate --check", "smite.calibrate_combat"):
         gate_at = next(i for i, r in enumerate(runs) if gate in r)
         assert stats_at < gate_at < commit_at
+
+
+# -- the test gate -----------------------------------------------------------
+#
+# 2026-11-02: the first unattended stats refresh turned fourteen tests red,
+# and the job did not run pytest. These pin the gate's place in the job.
+
+def _index(runs, needle):
+    return next(i for i, r in enumerate(runs) if needle in r)
+
+
+def test_the_stats_are_set_aside_before_the_refresh_and_gated_after_it():
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    save_at = _index(runs, "smite.stats_gate save")
+    stats_at = _index(runs, "smite.stats_refresh")
+    check_at = _index(runs, "smite.stats_gate check")
+    assert _index(runs, "smite.patch_feed") < save_at < stats_at < check_at
+
+
+def test_the_gate_runs_before_the_snapshot_the_recompute_and_the_commit():
+    """A rejected refresh must bank no patch-notes snapshot and reach no
+    commit; restoring after either would be too late."""
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    check_at = _index(runs, "smite.stats_gate check")
+    assert check_at < _index(runs, "smite.snapshots")
+    assert check_at < _index(runs, "smite.recommend --all")
+    assert check_at < _index(runs, "git commit")
+
+
+def test_the_gate_compares_against_the_copy_the_save_step_made():
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    save = runs[_index(runs, "smite.stats_gate save")].split("save", 1)[1].strip()
+    check = runs[_index(runs, "smite.stats_gate check")].split("check", 1)[1].strip()
+    assert save == check and "RUNNER_TEMP" in save
+
+
+def test_the_gate_is_not_allowed_to_fail_open():
+    steps = _steps("refresh-data.yml")
+    gate = next(s for s in steps if "smite.stats_gate check" in s.get("run", ""))
+    assert not gate.get("continue-on-error")
+    assert gate.get("id") == "stats_gate"
+
+
+def test_a_rejection_fails_the_run_after_the_commit():
+    """Last, so the community data still lands; present, so a rejection is a
+    red run and not a line in a green log."""
+    steps = _steps("refresh-data.yml")
+    runs = [s.get("run", "") for s in steps]
+    fail = next(i for i, s in enumerate(steps)
+                if "steps.stats_gate.outputs.rejected" in str(s.get("if", "")))
+    assert fail == len(steps) - 1
+    assert "exit 1" in runs[fail]
+    assert _index(runs, "git commit") < fail
+
+
+def test_the_job_installs_pytest():
+    assert "pytest" in _run_text("refresh-data.yml")
