@@ -2445,8 +2445,9 @@ does not fail to update — it overwrites the only copy. Blanking the kits of
 Ullr, Artio and Merlin (the three this happened to, see `_section_tables`
 above) and recomputing their cores moves win-weighted coverage 0.5530 ->
 0.5552, UPWARD, PASSes `validate --check`, and produces zero `data_audit`
-findings. So the scrape stays a human's decision and the detection is
-automated: `smite.wiki_watch` runs daily, reads two pages, writes nothing, and
+findings. So the scrape of TRACKED notes stays guarded and the detection is
+automated (new entities are now added unattended, whole or not at all — see
+§6, "New gods and items"): `smite.wiki_watch` runs daily, reads two pages, writes nothing, and
 opens one reusable issue. Be wrong toward missing data, never toward wrong
 data — a missing god is self-announcing and costs one command, a silently
 emptied kit is invisible and moves every core it touches.
@@ -2513,8 +2514,24 @@ Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
 `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`, `contents: read`, commits
 nothing). `probe-stat-sources.yml` is dispatch-only and re-checks which stat
-sources a runner can reach. Adding gods and items is still
-`smite.refresh_and_deploy` / `--refresh`, by hand, on `main`.
+sources a runner can reach. New gods and items are added by the daily job too
+(`smite.new_entities`, below); `--refresh` by hand is now only for a page the
+unattended path refused.
+
+**New gods and items (2026-11-02).** `smite.new_entities` runs on the daily
+job after the stats gate. It adds any god on the roster grid, or item on the
+Items index, that `data/` does not track: whole or not at all (a page missing
+infobox fields, abilities, a scaling ability, or real base stats is left out
+and logged; Nox's pre-release page, every base stat 0.0, is the live example),
+an unclassified passive as `uncatalogued` in `_passive_classes.yaml` (stat-only
+by construction, flagged in the viewer), and behind the suite plus `validate
+--check` and `calibrate_combat`, with an entity that turns a check red bisected
+out and the rest kept. Log: `data/_new_entities.json`. This answers the
+wiki_watch argument above — the danger was overwriting a good note with an
+empty one; a NEW entity has no note to lose, so a bad parse can only be
+refused. The evidence is in the module docstring. A test that pins a roster
+or pool COUNT would keep every new entity out, so none may (the one that did,
+`test_damage_value`'s `== 79`, is now the invariant it stood for).
 
 **The test gate (2026-11-02).** A wiki stats refresh is kept only if the
 whole pytest suite still passes on it. `smite.stats_gate save` sets the
