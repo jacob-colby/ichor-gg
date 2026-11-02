@@ -2,23 +2,11 @@
   "Gods": {
     "file": "page_gods.html"
   },
-  "Nike": {
-    "file": "page_nike.html"
-  },
   "Kumbhakarna": {
     "error": "Kumbhakarna: HTTP 404"
   },
-  "Hachiman": {
-    "file": "page_hachiman.html"
-  },
-  "Kuzenbo": {
-    "file": "page_kuzenbo.html"
-  },
   "Heimdallr": {
     "error": "Heimdallr: HTTP 404"
-  },
-  "Hel": {
-    "file": "page_hel.html"
   },
   "Nox": {
     "file": "page_nox.html"
@@ -28,11 +16,5 @@
   },
   "Items": {
     "file": "page_items.html"
-  },
-  "Lotus Sickle": {
-    "file": "page_lotus_sickle.html"
-  },
-  "Soul Locket": {
-    "file": "page_soul_locket.html"
   }
 }
