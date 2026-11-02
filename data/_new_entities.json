@@ -1,0 +1,61 @@
+{
+  "added": [
+    {
+      "name": "Nike",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Hachiman",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Kuzenbo",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Hel",
+      "kind": "god",
+      "date": "2026-11-02"
+    }
+  ],
+  "last_run": {
+    "date": "2026-11-02",
+    "status": "added",
+    "excluded": [
+      {
+        "name": "Lotus Sickle",
+        "why": "fails with it, passes without: smite/tests/test_new_entities.py::test_a_dry_run_writes_nothing, smite/tests/test_new_entities.py::test_a_failing_gate_keeps_that_entity_out_and_everything_else_in, smite/tests/test_new_entities.py::test_a_failure_only_the_whole_set_causes_keeps_all_of_them_out, smite/tests/test_new_entities.py::test_a_failure_present_without_the_new_entities_does_not_block_them, smite/tests/test_new_entities.py::test_a_flag_the_catalogue_cannot_name_leaves_the_item_out, smite/tests/test_new_entities.py::test_a_new_item_with_a_catalogued_passive_shape_is_classed_from_the_catalogue, smite/tests/test_new_entities.py::test_a_new_item_with_an_uncatalogued_passive_is_added_stat_only_and_flagged, smite/tests/test_new_entities.py::test_a_re_run_adds_nothing_twice, smite/tests/test_new_entities.py::test_discovery_finds_exactly_the_untracked_entities, smite/tests/test_new_entities.py::test_the_four_live_gods_and_the_placeholder_nox"
+      },
+      {
+        "name": "Soul Locket",
+        "why": "fails with it, passes without: smite/tests/test_new_entities.py::test_a_dry_run_writes_nothing, smite/tests/test_new_entities.py::test_a_failing_gate_keeps_that_entity_out_and_everything_else_in, smite/tests/test_new_entities.py::test_a_failure_only_the_whole_set_causes_keeps_all_of_them_out, smite/tests/test_new_entities.py::test_a_failure_present_without_the_new_entities_does_not_block_them, smite/tests/test_new_entities.py::test_a_new_item_with_an_uncatalogued_passive_is_added_stat_only_and_flagged, smite/tests/test_new_entities.py::test_a_re_run_adds_nothing_twice, smite/tests/test_new_entities.py::test_an_item_page_without_stats_is_left_out, smite/tests/test_new_entities.py::test_discovery_finds_exactly_the_untracked_entities, smite/tests/test_new_entities.py::test_the_four_live_gods_and_the_placeholder_nox"
+      }
+    ],
+    "skipped": [
+      {
+        "name": "Kumbhakarna",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      },
+      {
+        "name": "Heimdallr",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      },
+      {
+        "name": "Nox",
+        "kind": "god",
+        "why": "incomplete: base stats read as zero (a placeholder page): ['health', 'attack_speed', 'attack_power', 'move_speed']"
+      },
+      {
+        "name": "Maman Brigitte",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      }
+    ],
+    "deferred": []
+  }
+}
