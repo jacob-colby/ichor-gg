@@ -68,19 +68,55 @@ def test_check_thresholds_fails_both():
 
 
 def test_check_thresholds_default_floors():
-    # Pin the production defaults: win-weighted 0.44 enforced; Spearman has no
-    # numeric floor (it tracks SmiteBrain's window age, see check_thresholds)
-    # but an empty pool still fails.
+    # Pin the production defaults: win-weighted 0.44; Spearman 0.30 early in
+    # SmiteBrain's window (and when its age is unknown), 0.20 from day 8.
     at_floor = {"mean_win_weighted": 0.44, "pooled_spearman": 0.30, "pooled_n": 10}
     assert validate.check_thresholds(at_floor) == (True, [])
     below = {"mean_win_weighted": 0.43, "pooled_spearman": 0.29, "pooled_n": 10}
     passed, failures = validate.check_thresholds(below)
-    assert passed is False and len(failures) == 1 and "win-weighted" in failures[0]
-    late_window = {"mean_win_weighted": 0.50, "pooled_spearman": 0.25, "pooled_n": 439}
-    assert validate.check_thresholds(late_window) == (True, [])
-    empty = {"mean_win_weighted": 0.0, "pooled_spearman": None, "pooled_n": 0}
-    passed, failures = validate.check_thresholds(empty)
-    assert passed is False and any("spearman n/a" in f for f in failures)
+    assert passed is False and len(failures) == 2
+
+
+def _agg(spearman, age):
+    return {"mean_win_weighted": 0.50, "pooled_spearman": spearman,
+            "pooled_n": 439, "window_age_days": age}
+
+
+def test_spearman_floor_early_window_fails_below_030():
+    passed, failures = validate.check_thresholds(_agg(0.28, 5))
+    assert passed is False and failures == ["spearman 0.28 < 0.3"]
+
+
+def test_spearman_floor_late_window_passes_at_028():
+    # 2026-10-31 / 11-01: day 11 and 12 of the 10-20 window, clean scrapes.
+    assert validate.check_thresholds(_agg(0.28, 11)) == (True, [])
+
+
+def test_spearman_floor_late_window_fails_below_relaxed_floor():
+    passed, failures = validate.check_thresholds(_agg(0.19, 12))
+    assert passed is False and failures == ["spearman 0.19 < 0.2"]
+
+
+def test_spearman_floor_boundary_and_unknown_age():
+    assert validate.spearman_floor(7)[0] == 0.30
+    assert validate.spearman_floor(8)[0] == 0.20
+    assert validate.spearman_floor(None)[0] == 0.30
+    assert validate.check_thresholds(_agg(0.28, None))[0] is False
+
+
+def test_spearman_none_fails_late_window():
+    passed, failures = validate.check_thresholds(_agg(None, 12))
+    assert passed is False and any("n/a" in f for f in failures)
+
+
+def test_window_age_days_takes_most_common_window():
+    def note(start, end):
+        return {"builds": [{"source": "community", "god_window_start": start,
+                            "god_window_end": end}]}
+    builds = {"A": note("2026-10-20", "2026-10-31"), "B": note("2026-10-20", "2026-10-31"),
+              "C": note("2026-10-06", "2026-10-31"), "D": {"builds": []}}
+    assert validate.window_age_days(builds) == 11
+    assert validate.window_age_days({"D": {"builds": []}}) is None
 
 
 def test_tag_audit_flags_mismatches():

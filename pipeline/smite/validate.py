@@ -117,7 +117,9 @@ def compute(items=None, weights=None, tags_map=None, gods=None, builds_by_god=No
             continue
         per_god[god["name"]] = god_metrics(god, items, build, weights, tags_map,
                                            eff_scores, items_by_name, gold_values)
-    return per_god, aggregate(per_god)
+    agg = aggregate(per_god)
+    agg["window_age_days"] = window_age_days(builds_by_god)
+    return per_god, agg
 
 
 def write_report(per_god, agg, out_path):
@@ -189,6 +191,53 @@ def write_tag_audit(items, tags_map, out_path):
     return issues
 
 
+# Spearman floor by age of SmiteBrain's match window (days from
+# god_window_start to god_window_end). Set 2026-11-02 from the two complete
+# windows on record, code and weights unchanged, scored with this gate:
+#
+#   age (days)   1    2    3    4    5    6    7  |  8    9   10   11   12   14
+#   10-06 win  .70  .64  .54  .45  .40  .39  .38  | .34  .35  .38  .28   -   .25
+#   10-20 win  .72  .60  .56  .48  .40  .36  .35  | .32   -   .30  .28  .28   -
+#
+# The window resets every patch, and `win` is a model input as well as the
+# target (STATE.md section 1), so a young window's noisy win rates inflate the
+# score and it decays as samples grow. A flat 0.30 failed every clean day from
+# age 11 on: 7 of the 29 days 10-04..11-01. So: 0.30 through day 7, where the
+# lowest observed is 0.35; 0.20 from day 8, where the lowest observed is 0.25.
+# Both keep a 0.05 margin. An unknown age gets the strict floor.
+SPEARMAN_FLOOR_EARLY = 0.30
+SPEARMAN_FLOOR_LATE = 0.20
+SPEARMAN_LATE_FROM_DAY = 8
+
+
+def window_age_days(builds_by_god):
+    """Most common SmiteBrain window length across the community builds, in
+    days, or None when no build carries both dates."""
+    from collections import Counter
+    from datetime import date
+    ages = Counter()
+    for note in builds_by_god.values():
+        for b in (note or {}).get("builds", []):
+            if b.get("source") != "community":
+                continue
+            start, end = b.get("god_window_start"), b.get("god_window_end")
+            if start and end:
+                try:
+                    ages[(date.fromisoformat(str(end)) - date.fromisoformat(str(start))).days] += 1
+                except ValueError:
+                    pass
+            break
+    return ages.most_common(1)[0][0] if ages else None
+
+
+def spearman_floor(age_days):
+    """(floor, label) for a window of `age_days`; None means unknown."""
+    if age_days is not None and age_days >= SPEARMAN_LATE_FROM_DAY:
+        return SPEARMAN_FLOOR_LATE, f"late window, day {age_days}"
+    label = "window age unknown" if age_days is None else f"early window, day {age_days}"
+    return SPEARMAN_FLOOR_EARLY, label
+
+
 def check_thresholds(agg, min_win_weighted=0.44, min_spearman=None):
     # Floors set 2026-07-23 for the full 87-god roster (rank-favoring weights).
     # At full-roster scale coverage tops out ~57%, so the old 12-god 0.65/0.35
@@ -196,29 +245,20 @@ def check_thresholds(agg, min_win_weighted=0.44, min_spearman=None):
     # ~0.46/0.34, not aspirational targets. The manual spot-check is the real
     # "strong build" gate.
     #
-    # Spearman has NO numeric floor by default (2026-11-02). Its value is set by
-    # the age of SmiteBrain's match window, not by the model or the scrape: the
-    # window resets every patch (2026-10-06, 2026-10-20) and, with code and
-    # weights unchanged, the pooled correlation falls day by day as it fills,
-    # 0.70 -> 0.34 over 10-07..10-14 and 0.72 -> 0.30 over 10-21..10-30.
-    # (`win` is a model input as well as the target, STATE.md section 1, so a
-    # young window's noisy win rates inflate it.) A fixed 0.30 therefore failed
-    # the refresh late in every window, 7 of the 29 days from 10-04 to 11-01,
-    # each with a clean scrape. A floor it crosses on a calendar is not a
-    # regression guard. Still enforced: Spearman n/a (no community pairs at
-    # all, e.g. patch day 2026-10-06) and the win-weighted floor, which held at
-    # 0.47-0.55 across both windows.
+    # `min_spearman` None means: pick it from agg["window_age_days"] with
+    # `spearman_floor` above. Spearman n/a (no community pairs, e.g. patch day
+    # 2026-10-06) always fails.
+    if min_spearman is None:
+        min_spearman, _ = spearman_floor(agg.get("window_age_days"))
     failures = []
     if agg["mean_win_weighted"] < min_win_weighted:
         failures.append(
             f"win-weighted {agg['mean_win_weighted']:.2f} < {min_win_weighted}"
         )
     spearman_val = agg["pooled_spearman"]
-    if spearman_val is None:
-        failures.append(f"spearman n/a < {min_spearman}" if min_spearman is not None
-                        else "spearman n/a (no community win-rate pairs)")
-    elif min_spearman is not None and spearman_val < min_spearman:
-        failures.append(f"spearman {spearman_val:.2f} < {min_spearman}")
+    if spearman_val is None or spearman_val < min_spearman:
+        spearman_display = "n/a" if spearman_val is None else f"{spearman_val:.2f}"
+        failures.append(f"spearman {spearman_display} < {min_spearman}")
     return not failures, failures
 
 
@@ -233,13 +273,15 @@ def main(argv=None):
     if args.check:
         per_god, agg = compute()
         passed, failures = check_thresholds(agg)
+        floor, floor_label = spearman_floor(agg.get("window_age_days"))
         spearman_val = agg["pooled_spearman"]
         spearman_display = "n/a" if spearman_val is None else f"{spearman_val:.2f}"
+        print(f"spearman {spearman_display}, floor {floor} ({floor_label})")
         if passed:
-            print(f"PASS — win-weighted {agg['mean_win_weighted']:.2f}, "
+            print(f"PASS - win-weighted {agg['mean_win_weighted']:.2f}, "
                   f"spearman {spearman_display}, n={agg['pooled_n']}")
         else:
-            print("FAIL — " + "; ".join(failures))
+            print("FAIL - " + "; ".join(failures))
         return 0 if passed else 1
 
     per_god, agg = compute()
