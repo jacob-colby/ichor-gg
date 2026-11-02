@@ -62,7 +62,32 @@ def root(tmp_path):
     shutil.copytree(recommend.DATA_ROOT / "Items", root / "Items")
     for f in ("_passive_classes.yaml", "_weights.yaml"):
         shutil.copy2(recommend.DATA_ROOT / f, root / f)
+    _forget_items(root, NEW_ITEMS)
     return root
+
+
+def _forget_items(root, names):
+    """Put the copied pool back to before `names` were added, so these tests
+    still see them as new once the live `data/` has them. Without this the
+    fixture read the live pool, and the first live run that added Lotus Sickle
+    turned ten of these tests red — and the gate, correctly, kept the item out
+    (2026-11-02). Removes the note, the components' back-links and the
+    catalogue entry; a no-op on data that never had them."""
+    for name in names:
+        path = root / "Items" / f"{name}.md"
+        if path.exists():
+            path.unlink()
+    for path in (root / "Items").glob("*.md"):
+        fm, body = ne.notes.read_note(path)
+        into = fm.get("builds_into") or []
+        if any(n in into for n in names):
+            fm["builds_into"] = [n for n in into if n not in names]
+            ne.notes.write_note(path, fm, body)
+    cat = root / "_passive_classes.yaml"
+    text = cat.read_text(encoding="utf-8")
+    for name in names:
+        text = re.sub(rf"^  {re.escape(name)}:\n(?:    .*\n)*", "", text, flags=re.M)
+    cat.write_text(text, encoding="utf-8")
 
 
 def _run(root, fetcher=None, checks=None, recompute=None, **kw):

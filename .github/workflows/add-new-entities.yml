@@ -3,7 +3,7 @@
 # The daily `refresh-data.yml` runs the same step every morning; this exists to
 # run it on a FEATURE BRANCH, where the result is committed back to that branch
 # for review — which is how the first four (Nike, Hachiman, Kuzenbo, Hel) came
-# in. The sandbox sessions cannot reach wiki.smite2.com; a runner can. Never
+# in (second run: the two items, after a fixture fix). The sandbox sessions cannot reach wiki.smite2.com; a runner can. Never
 # commits to main: there the daily job is the only writer.
 name: Add new wiki entities
 

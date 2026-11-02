@@ -2601,7 +2601,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 
 | | |
 |---|---|
-| Gods tracked | 90 of 92 on the roster — Ravana added 2026-08-29, four days after his 25 Aug release, by the manual path `smite.wiki_watch` now points at. The other two the wiki lists, Hachiman and Hel, are roster entries with no page behind them ("There is currently no text in this page"), so the grid leads the wiki's own content and this row will read N of N+2 until it catches up. That is why the watcher triggers on NAMES and a page probe, never on a count |
+| Gods tracked | 94 of 99 on the roster (2026-11-02). Ravana was added by hand 2026-08-29; Nike, Hachiman, Kuzenbo and Hel were the first added unattended, by `smite.new_entities` on a runner. The other five are on the grid without a usable page: Kumbhakarna, Heimdallr and Maman Brigitte 404, and Nox's pre-release page reads every base stat as 0.0, so it is refused until it fills in. The grid leads the wiki's own content, so this row reads N of N+k by design. `data/_new_entities.json` says which are waiting and why |
 | Items | 226 |
 | Build groups | 270 (90 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
