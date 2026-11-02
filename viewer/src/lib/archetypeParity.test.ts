@@ -166,24 +166,36 @@ describe("draft adaptation still works", () => {
   it("B. a healer comp brings in an item the base core did not contain, with a reason", () => {
     const five = healers.slice(0, 5);
     const brought: { god: string; item: string; reason: string }[] = [];
+    let boards = 0;
     for (const g of idx.gods) {
       const r = boardWith(five, g, "conquest", "core");
       if (!r) continue;
+      boards += 1;
       const base = new Set(r.shipped);
       for (const name of r.adapted.core) {
         if (base.has(name)) continue;
         brought.push({ god: g.name, item: name, reason: r.adapted.reasons[name] ?? "" });
       }
     }
-    // Not a corner case firing on one god: 64 arrivals across 62 of the 90
-    // Conquest `core` boards, measured on the shipped index 2026-09-07 at
-    // calibrate input fingerprint 339839d1a880, community sample 16,223.
-    // Was 59 across 58 on 2026-09-03; four `chore(data): daily community
-    // refresh` commits moved it and no viewer or pipeline code did — every
-    // suggested entry in the index rebuilds byte-identical at that commit.
-    // THE MAGNITUDE IS DATA AND DRIFTS; the three properties below are the
-    // invariant and none of them moved.
-    expect(brought.length).toBe(64);
+    const godsHit = new Set(brought.map((b) => b.god)).size;
+    // NO EXACT COUNT, ON PURPOSE. This used to pin `brought.length` to 64 and
+    // the test below to 62, and the comment beside it already said the
+    // magnitude was data. Replaying this file, with today's viewer code,
+    // against the last fifteen committed indexes (2026-10-15 .. 2026-11-02,
+    // all daily community refreshes or roster adds) gives 61..68 arrivals over
+    // 59..64 boards, and no index satisfied both pins. The two failures blamed
+    // on PR #70 (Nike, Hachiman, Kuzenbo, Hel) predate it: the index just
+    // before #70 already read 67 / 63. #70 added Hel to the five-healer comp
+    // below and left both counts where they were. A pin every refresh breaks
+    // guards nothing.
+    //
+    // What the old number was standing in for is "not a corner case firing on
+    // one god", and that is stated directly: most Conquest `core` boards adapt.
+    // A majority is the claim, not a tuned threshold. The first line keeps the
+    // harness honest, since a majority of an empty set is easy.
+    expect(boards * 2).toBeGreaterThan(idx.gods.length);
+    expect(godsHit * 2).toBeGreaterThan(boards);
+    expect(brought.length).toBeGreaterThanOrEqual(godsHit);
     // Every arrival names what it answers. An item that appears with no reason
     // is the draft moving a build for a cause it cannot state.
     for (const b of brought) expect(b.reason).not.toBe("");
@@ -205,11 +217,15 @@ describe("draft adaptation still works", () => {
       }
     }
     // Every archetype the index ships for Conquest, not a lucky one: a tab
-    // that could never swap would be a tab the draft cannot adapt.
-    expect([...hit].sort()).toEqual([
-      "anti-tank", "attack-speed", "bruiser", "burst", "cooldown", "core", "crit",
-      "hybrid", "intelligence", "mana-stack", "model", "str-int", "strength",
-    ]);
+    // that could never swap would be a tab the draft cannot adapt. Read from
+    // the index rather than listed here, so a new archetype is held to this
+    // the day it ships instead of being silently exempt from it.
+    const shipped = new Set<string>();
+    for (const g of idx.gods) {
+      for (const e of archetypeEntries(idx.builds, g.name, "conquest", false)) shipped.add(e.archetype!);
+    }
+    expect(shipped.size).toBeGreaterThan(8);
+    expect([...hit].sort()).toEqual([...shipped].sort());
   });
 
   it("the bar is evidence, not a threshold on the base score: one healer moves nothing", () => {
@@ -222,8 +238,12 @@ describe("draft adaptation still works", () => {
       const base = new Set(r.shipped);
       return r.adapted.core.some((x) => !base.has(x));
     }).length;
-    // `five` is the same drifting count as above (58 -> 62, same refreshes,
-    // same fingerprint). `one: 0` is the property and is unmoved.
-    expect({ one: swapped(1), five: swapped(5) }).toEqual({ one: 0, five: 62 });
+    // `one: 0` is the property. `five` is a drifting data count (see B above
+    // for why it is no longer pinned); what must hold is that the same comp
+    // that moves a majority of boards at five healers moves none at one.
+    const one = swapped(1);
+    const five = swapped(5);
+    expect(one).toBe(0);
+    expect(five * 2).toBeGreaterThan(idx.gods.length);
   });
 });
