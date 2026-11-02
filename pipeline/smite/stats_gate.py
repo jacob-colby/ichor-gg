@@ -136,8 +136,12 @@ def run_suite(nodeids=None) -> set:
     SuiteError when pytest wrote no report — a crash is not a pass."""
     with tempfile.TemporaryDirectory() as tmp:
         report = Path(tmp) / "junit.xml"
+        # --rootdir pins the paths in the report to PIPELINE. Without it the
+        # report's `file` came back as `test_x.py` (relative to the tests
+        # package), and the re-run on the old stats from PIPELINE found no
+        # such file — caught by the end-to-end run, 2026-11-02.
         cmd = [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", "-m", "not live",
-               f"--junitxml={report}", "-o", "junit_family=xunit1"]
+               f"--rootdir={PIPELINE}", f"--junitxml={report}", "-o", "junit_family=xunit1"]
         cmd += sorted(nodeids) if nodeids else ["smite/tests"]
         try:
             proc = subprocess.run(cmd, cwd=PIPELINE, timeout=TEST_TIMEOUT,

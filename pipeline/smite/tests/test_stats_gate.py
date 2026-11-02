@@ -5,6 +5,7 @@ throwaway data root; the real pytest invocation is exercised once, on a
 two-test file, to pin the report parsing it depends on.
 """
 import json
+import pathlib
 import subprocess
 import sys
 
@@ -198,3 +199,27 @@ def test_junit_parsing_matches_pytest_node_ids(tmp_path):
     rerun = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider",
                             *sorted(failed)], cwd=tmp_path, capture_output=True, text=True)
     assert "3 failed" in rerun.stdout
+
+
+
+def test_the_runner_pins_rootdir_so_its_ids_re_run_from_the_pipeline(tmp_path, monkeypatch):
+    """Without `--rootdir`, pytest reported `file="test_x.py"` (relative to
+    the tests package) and the re-run on the old stats, made from the
+    pipeline root, found no such file. The end-to-end run on 2026-11-02 caught
+    it; it failed closed, but attribution was lost."""
+    seen = []
+
+    def fake_run(cmd, **kw):
+        seen.append(cmd)
+        report = next(c.split("=", 1)[1] for c in cmd if c.startswith("--junitxml="))
+        pathlib.Path(report).write_text(
+            '<testsuites><testsuite><testcase classname="smite.tests.test_x" name="test_y" '
+            'file="smite/tests/test_x.py"><failure/></testcase></testsuite></testsuites>')
+        return subprocess.CompletedProcess(cmd, 1, stdout="1 failed")
+
+    monkeypatch.setattr(stats_gate.subprocess, "run", fake_run)
+    assert stats_gate.run_suite(None) == {"smite/tests/test_x.py::test_y"}
+    assert f"--rootdir={stats_gate.PIPELINE}" in seen[0]
+    assert seen[0][-1] == "smite/tests"
+    assert stats_gate.run_suite({"smite/tests/test_x.py::test_y"}) == {"smite/tests/test_x.py::test_y"}
+    assert seen[1][-1] == "smite/tests/test_x.py::test_y"
