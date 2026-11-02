@@ -103,6 +103,12 @@ def refresh_patch_version(wiki_fetcher, force: bool = False):
     patch_path = DATA_ROOT / "_patch.json"
     patch_path.parent.mkdir(parents=True, exist_ok=True)
     patch_path.write_text(json.dumps(patch, indent=2), encoding="utf-8")
+    try:
+        from smite import snapshots
+        snapshots.record_patch(patch["patch"], patch["captured"],
+                               DATA_ROOT / "_patch_history.json")
+    except Exception as exc:
+        print(f"  [patch history skip] {exc}")
     return patch
 
 
