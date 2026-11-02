@@ -176,8 +176,8 @@ reviews:
       Eye of Providence seems to be overvalued because it's assuming you'll get
       the gold from it.
     status: resolved
-    last_verdict: clear
-    verdict_patch: Open Beta 40
+    last_verdict: partial
+    verdict_patch: Open Beta 46
     notes: >-
       Confirmed and fixed. Cost 2300 against a fitted stat price of 2550, so it
       read as a 250g bargain — the discount is really the ward economy's price
@@ -468,6 +468,54 @@ reviews:
       nobody judged. That reason is now gone outright: the claim is clear
       without the flag. Nothing else in 4.26 changes, and it stays shipped off
       on the evidence it already carries.
+
+      RE-BASELINED clear -> partial 2026-11-02, FOR OPEN BETA 46, ON A PATCH
+      AND NOT ON A MODEL CHANGE. On OB46 item stats the checker reads `still
+      in 4/36 cores: ['Atlas', 'Charon', 'Sobek', 'Ymir']`; on OB40 it reads
+      clear. Weights, tags and model code are identical across the two, and
+      Eye of Providence's own line is identical (2300g, 30/30 protections,
+      250 Max Health). Its efficiency barely moved: residual -216 -> -191,
+      score 0.614 -> 0.611, `ward-economy` -0.15 still applied. It came back
+      because the items it competes with got worse, and both causes are real
+      game changes. Measured by reverting OB46 items to their OB40 notes one
+      group at a time and rebuilding the 36 in-scope Conquest cores:
+
+          OB46 as is                           4/36  Atlas Charon Sobek Ymir
+          revert Shifter's Shield              2/36  Charon Ymir
+          revert Freya's Tears                 4/36
+          revert the 7 mana-regen reworks      3/36  Atlas Charon Ymir
+          revert Shifter's + Freya's           1/36  Ymir
+          revert Shifter's + mana reworks      0/36
+          revert every changed item (= OB40)   0/36
+
+      1. SHIFTER'S SHIELD WAS NERFED. 2650 -> 2750 gold and Max Health 300 ->
+         200, stats otherwise unchanged. Residual -34 -> +212, tier fair ->
+         premium. It leaves Atlas, Charon and Sobek's cores. That is the
+         model pricing a nerf correctly.
+      2. MANA REGEN WAS PUT ON SIX ITEMS AT ROUGHLY CONSTANT PRICE (Heartwood
+         Charm, Lifebinder, Chandra's Grace, Damaru, Eros' Bow, Rod of
+         Asclepius; Polynomicon got cheaper). Each traded away Health, Health
+         Regen or Plating for it, so the fit now prices Mana Regen 5.4 -> 32.6
+         g/pt and Max Mana 1.26 -> 0.85 (shipped flags). That cost Breastplate
+         of Valor (200 Max Mana, 2 Mana Regen) 62g of value, score 0.653 ->
+         0.638, and it leaves Atlas, Sobek and Ymir. NOT one anchor item: on
+         OB46 the leave-one-out range of the Mana Regen price is [21.7, 42.6]
+         (Lifebinder the most influential), all far above OB40's 5.4. OB40 was
+         the fragile one: its leave-one-out range was [0.0, 16.9], and dropping
+         Jotunn's Revenge alone sent Mana Regen to zero.
+
+      THE PLACEHOLDER DID NOT DO THIS ONE. Unlike 08-29 and 09-01, every slot
+      in play has no community record on all four gods (pick 0.00 throughout),
+      so all of them carry the same `god_unknown_win_rate` and the win term
+      cancels. The swaps are efficiency and fit, as reassembled.
+
+      4/36 IS WHERE THE ORIGINAL FIX LANDED. The 2026-08-09 note above says the
+      tag took this claim 16 cores -> 4 and it shipped as `partial`; the clears
+      since were threshold crossings on refreshes. The reviewer's objection
+      (the ward gold is assumed) is still answered by the penalty, which is
+      unchanged. What changed is that two neighbours are honestly worse buys.
+      Lower than partial and `--check` goes red; that is the gate's job, and
+      this baseline should not be lowered to match it.
 
   - reviewer: "Masters-level SMITE 2 player (friend of the maintainer)"
     date: 2026-08-09

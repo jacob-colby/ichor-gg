@@ -2535,12 +2535,26 @@ as an advisory step. On the OB46 data PR #66's run produced, the suite is
 green with two warnings that a human should read:
 
   * Eye of Providence is back in 4 of 36 support cores (Atlas, Charon, Sobek,
-    Ymir). The `item-overweighted` claim reads `partial` against an OB40
-    baseline of `clear`. Its own stats did not change; the items around it
-    did. Re-baseline it with a note, or fix it.
+    Ymir). **Diagnosed 2026-11-02: real, re-baselined to `partial` for Open
+    Beta 46.** Two game changes did it, both on its neighbours: Shifter's
+    Shield was nerfed (+100g, −100 Max Health), and six items gained Mana
+    Regen, which repriced the mana columns and cost Breastplate of Valor 62g
+    of value. Reverting those two groups alone takes it back to 0/36. The
+    counterfactual table is in the claim's note in `_expert_reviews.yaml`.
   * The penetration columns converged from 1.9x to 1.39x (49.9 vs 35.9
-    gold/point). The split is still two columns, and why they sit closer is
-    unexamined.
+    gold/point). **Diagnosed 2026-11-02: real, and it changes no build.**
+    That warning reads the fit with every pricing flag OFF. The shipped fit
+    went 1.26x → 1.10x (54.9/43.6 → 51.3/46.5). The percentage side fell
+    because Titan's Bane (−250g) and Obsidian Shard (−150g) got cheaper with
+    the same stats. Most of the flat side's rise is The Crusher losing 25 Echo
+    for −50g. The fit can't see Crusher's passive, so the price it has left
+    over lands on its thinnest column. That is the standing passives-at-zero
+    property (§4.5), not a new artefact. No single item anchors either column
+    on OB46: the leave-one-out range is [43.0, 48.8] flat and [48.8, 55.1]
+    percent. Raw OB40's own 1.9x had a leave-one-out range of [1.48, 2.34],
+    so it was never a stable reference. Pinning both columns back to OB40
+    prices on OB46 data changes **0 of 90** Conquest cores. No code was
+    changed for either shift.
 
 Two of the fourteen were not test pinning. **Blinking Abyss was never newly
 buildable.** `_stats_from_prose` read `Deal 25 (+10% Strength &
