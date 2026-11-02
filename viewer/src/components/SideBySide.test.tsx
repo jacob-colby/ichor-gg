@@ -75,6 +75,22 @@ describe("SideBySide aspect matching", () => {
     expect(screen.getByTestId("kit")).toHaveTextContent("Base kit — the community plays Aspect of X in 20% of games");
   });
 
+  it("shows coverage beside the verdict and withholds it when too little is simulated", () => {
+    render(<SideBySideView d={{ ...data, verdict: "not enough simulated",
+      verdict_unwithheld: "community better", weighted_axes: [0.9, 1],
+      coverage: { ichor: 0.34, community: 0.84, gap: 0.5, ok: false,
+        reason: "34% of one build's gold is simulated (minimum 50%)" } }} meta={null} />);
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Not enough simulated");
+    expect(screen.getByTestId("coverage")).toHaveTextContent("34% of Ichor");
+    expect(screen.getByTestId("coverage")).toHaveTextContent("minimum 50%");
+    expect(screen.getByTestId("side-by-side")).toHaveTextContent("−10.0%");
+  });
+
+  it("names a phase verdict as an early-game build, not a loss", () => {
+    render(<SideBySideView d={{ ...data, verdict: "early-game build" }} meta={null} />);
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Ichor: early-game build");
+  });
+
   it("gives no verdict when the community's aspect cannot be simulated", () => {
     render(<SideBySideView d={{ ...data, verdict: "aspect not simulated",
       kit: { kit: "Aspect of Heartbreak", aspect: "Aspect of Heartbreak", pick_rate: 0.79,

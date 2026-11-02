@@ -41,12 +41,40 @@ export interface SideBySideData {
   /** Which kit the comparison is on. Absent in files written before
    *  2026-11-02's aspect matching; read as the base kit. */
   kit?: Kit;
+  /** Share of each build's gold the combat clock models fully, and whether
+   *  the verdict cleared the coverage rule. Absent before 2026-11-02's
+   *  fairness pass. */
+  coverage?: { ichor: number; community: number; gap: number; ok: boolean; reason: string | null };
+  /** The verdict the rule gives before coverage withholds it. */
+  verdict_unwithheld?: string;
+  /** Damage and survival axes weighted over the 2-, 4- and 6-item points. */
+  weighted_axes?: [number, number];
 }
 
 interface Kit { kit: string; aspect: string | null; pick_rate: number | null;
   win_rate: number | null; simulated: boolean }
 
 const ASPECT_NOT_SIMULATED = "aspect not simulated";
+const NOT_ENOUGH_SIMULATED = "not enough simulated";
+
+const VERDICT_LABEL: Record<string, string> = {
+  "Ichor better": "Ichor better", "community better": "Community better",
+  "trade-off": "A real trade-off", "level": "Level",
+  "early-game build": "Ichor: early-game build", "late-game build": "Ichor: late-game build",
+  [ASPECT_NOT_SIMULATED]: "No verdict", [NOT_ENOUGH_SIMULATED]: "Not enough simulated",
+};
+
+/** How much of each build the clock actually models, beside the verdict. */
+function CoverageLine({ c }: { c?: SideBySideData["coverage"] }) {
+  if (!c) return null;
+  const p = (x: number) => `${Math.round(x * 100)}%`;
+  return (
+    <p className="mt-1 font-mono text-label text-faint" data-testid="coverage">
+      Simulated: {p(c.ichor)} of Ichor&rsquo;s gold · {p(c.community)} of the community&rsquo;s
+      {!c.ok && c.reason ? ` — ${c.reason}` : ""}
+    </p>
+  );
+}
 
 /** The kit line every comparison carries: which kit, and how often the
  *  community plays the aspect. */
@@ -96,7 +124,10 @@ const VERDICT_TONE: Record<string, string> = {
   "community better": "border-premium/50 text-premium",
   "trade-off": "border-line-strong text-ink-soft",
   "level": "border-line-strong text-muted",
+  "early-game build": "border-line-strong text-ink-soft",
+  "late-game build": "border-line-strong text-ink-soft",
   [ASPECT_NOT_SIMULATED]: "border-dashed border-line-strong text-muted",
+  [NOT_ENOUGH_SIMULATED]: "border-dashed border-line-strong text-muted",
 };
 
 const ROWS: { key: Metric; label: string }[] = [
@@ -233,6 +264,7 @@ function DiffItem({ d }: { d: Diff }) {
 
 export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | null }) {
   const band = meta?.band ?? 0.05;
+  const [dmg, surv] = d.weighted_axes ?? [d.damage_axis, d.survival_axis];
   const shared = new Set(d.shared);
   const gaps = new Map<string, string>();
   for (const p of [...d.ichor.passives, ...d.community.passives]) {
@@ -246,12 +278,11 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
         <h2 className="font-display text-title font-semibold text-ink">Ichor vs the community</h2>
         <span className={`rounded-full border px-2.5 py-0.5 text-small font-semibold ${VERDICT_TONE[d.verdict] ?? "border-line text-muted"}`}
           data-testid="verdict">
-          {d.verdict === "Ichor better" ? "Ichor better" : d.verdict === "community better" ? "Community better"
-            : d.verdict === "trade-off" ? "A real trade-off"
-            : d.verdict === ASPECT_NOT_SIMULATED ? "No verdict" : "Level"}
+          {VERDICT_LABEL[d.verdict] ?? d.verdict}
         </span>
       </div>
       <KitLine kit={d.kit} />
+      <CoverageLine c={d.coverage} />
       {d.verdict === ASPECT_NOT_SIMULATED ? (
         <p className="mt-2 max-w-[70ch] rounded-md border border-dashed border-line-strong bg-bg1 p-3 text-small leading-relaxed text-ink-soft"
           data-testid="aspect-not-simulated">
@@ -262,11 +293,17 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
       ) : (
         <p className="mt-1.5 max-w-[70ch] text-small leading-relaxed text-muted">
           Both builds run through the combat model with item passives simulated, not priced.
+          {d.weighted_axes ? " Weighing the 2-, 4- and 6-item points equally, " : " "}
           Ichor&rsquo;s damage is{" "}
-          <span className={`font-mono ${tone(d.damage_axis, band)}`}>{pct(d.damage_axis)}</span> and its
+          <span className={`font-mono ${tone(dmg, band)}`}>{pct(dmg)}</span> and its
           survival{" "}
-          <span className={`font-mono ${tone(d.survival_axis, band)}`}>{pct(d.survival_axis)}</span> against
+          <span className={`font-mono ${tone(surv, band)}`}>{pct(surv)}</span> against
           the community&rsquo;s; within ±{Math.round(band * 100)}% counts as level.
+          {d.verdict === NOT_ENOUGH_SIMULATED && (
+            <> Too much of these builds is passives the model can&rsquo;t simulate yet, so this
+              {d.verdict_unwithheld ? ` (it would read “${VERDICT_LABEL[d.verdict_unwithheld] ?? d.verdict_unwithheld}”)` : ""}
+              {" "}is not a verdict.</>
+          )}
         </p>
       )}
 
@@ -278,7 +315,8 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
         <p className="mt-2 text-label text-faint">
           Community six cleaned:{" "}
           {d.substitutions.filter((s) => s.used).map((s) => `${s.dropped} → ${s.used}`).join(", ")}
-          {" "}(components and statless relics replaced from the community&rsquo;s own record).
+          {" "}(components and statless relics dropped, then the six filled from the community&rsquo;s
+          own next finished picks, added at the end).
         </p>
       )}
 

@@ -2017,23 +2017,57 @@ Roughly in the order I would do them.
 `side_by_side.py` (§2) answers the criterion's numbers for all 94 gods; the
 per-god table, item diffs, verdicts by role and the not-simulated list are in
 `data/Analysis/_side_by_side.md` (regenerated, not tracked — ~400 KB of daily
-churn). On OB46 items and the OB46 community window (2026-11-02, control
-fingerprint `ea7167529321`), at ±5%:
-**Ichor better 16, community better 31, trade-off 24, level 16** over the
-87 gods with a verdict; the community wins most on Carry (10 of 18), almost
-all of it on DAMAGE with passives simulated. **7 gods get no verdict** — the
-kit is matched first, and where most of the community plays an aspect
+churn).
+
+**The fairness pass (2026-11-02, control fingerprint `60bea8b0c5e6`) withholds
+75 of the 87 verdicts, and that is the headline.** A review found four ways the
+earlier tally (Ichor 16 / community 31 / trade-off 24 / level 16) was unfair;
+all four are fixed in `side_by_side.py`, `passive_sim.py` and
+`community_target.py`, with the evidence beside the constants:
+
+1. *Coverage.* A passive the clock cannot run is worth zero, and Ichor's
+   builds hold far more of them (378 item slots against the community's 244:
+   Jotunn's Revenge, Kinetic Cuirass, Genji's Guard, Spear of Desolation,
+   Amanita Charm and other actives). Each build now carries the share of its
+   gold the clock models fully (`simulated_share`), printed beside the
+   verdict. Under `COVERAGE_MIN` 50% or over a `COVERAGE_GAP` of 14% it is
+   NOT ENOUGH SIMULATED. The gap is derived: the median simulated passive moves
+   the damage axis 5.8%, more than the whole band, so one item of gap can flip
+   a verdict alone. Two tighter measures (stat-price residuals) were tried and
+   neither can separate a passive's price from its stats — see the constant.
+2. *Early game.* The verdict weighs the 2-, 4- and 6-item points equally
+   (`BREAKPOINT_WEIGHTS`); a build ahead early and behind at six is an
+   EARLY-GAME BUILD (reverse: LATE-GAME), not a loss. Before coverage: Ichor
+   better 14→31, community better 31→18. **Most of that swing is the stack
+   assumption, not the builds** — the community front-loads stacking items (50
+   in its first four slots, Ichor 4) and those read at zero stacks at 2 and 4
+   items; with stacks full early the same rule gives 16 / 27. The report prints
+   both ends.
+3. *Odysseus' Bow* reads "Attack Damage" as the swing (SMITE 2's term), not the
+   stat, and lands 3 hits on the lone target (`ODYSSEUS_HITS_ON_TARGET`): its
+   passive went from ~3-5% of a build's sustained damage to ~20-23%.
+4. *One community cleanup rule.* `community_target.comparison_six` is used
+   everywhere: drop components and statless relics/Mods (PR #73's classes),
+   then fill to six from the community's next finished picks, APPENDED. No
+   comparison six changed membership; six changed order.
+
+What survives: 12 verdicts — Ichor better 3, community better 1 (Nemesis),
+trade-off 2, level 5, early-game build 1 (Tsukuyomi). **7 gods get no verdict**
+because the kit is matched first: where most of the community plays an aspect
 (Aphrodite 79%, Khepri 76%, Nike 67%, Baron Samedi 66%, Gilgamesh 61%,
 Bacchus 59%, Cernunnos 53%) the comparison would need an aspect kit
 `combat.py` cannot play; their base-kit numbers are shown, labelled, and
-counted nowhere (`side_by_side.kit_for`). The god page draws it for Conquest (`SideBySide.tsx`, one
-`viewer/public/side_by_side/<god>.json` per god, written by `--json` in the
-daily refresh). Left: (1) a phone/desktop pass by Jacob on real gods;
-(1b) simulating those seven aspect kits, most-played first; (2) for each "community better" god, a model change or a stated reason —
-the report lists them, and the swap rows show which single item recovers most;
-(3) the passives still `not simulated` that sit in many builds — Jotunn's
-Revenge and Spear of Desolation (kill refunds), Genji's Guard and Kinetic
-Cuirass (need an attacker), and every active.
+counted nowhere (`side_by_side.kit_for`). The god page draws it for Conquest
+(`SideBySide.tsx`, one `viewer/public/side_by_side/<god>.json` per god, written
+by `--json` in the daily refresh), coverage line included. Left, in order:
+(1) simulate the passives that withhold the most verdicts — Jotunn's Revenge
+and Spear of Desolation need a kill model, Genji's Guard and Kinetic Cuirass
+an attacker on our god, and actives a press-timing rule — since until then the
+criterion cannot pass or fail on most gods; (2) a time-to-stack model for the
+2- and 4-item points, which would settle the bracket in item 2; (3) a
+phone/desktop pass by Jacob; (4) the seven aspect kits, most-played first;
+(5) for each surviving "community better" god, a model change or a stated
+reason — the report's swap rows name the single item that recovers most.
 
 ### Two thirds of the shipped builds rest on nothing measurable
 The builds are no longer *identical* to Conquest's, at least:
@@ -2573,8 +2607,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1115) ·
-`cd viewer && npm test -- --run` (787).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1125) ·
+`cd viewer && npm test -- --run` (789).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
