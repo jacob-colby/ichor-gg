@@ -56,6 +56,15 @@ With band b = `BAND` (5%):
   community better  one axis below 1-b, the other not above 1+b
   trade-off         one axis above 1+b and the other below 1-b
   level             both inside the band
+THE KIT IS MATCHED FIRST (2026-11-02, Jacob). The community six is what
+players built on the kit they played. Where more than `ASPECT_MAJORITY` of
+this god's community games are on an aspect, that aspect is the fair kit for
+the comparison. `combat.py` simulates no aspect kit change (`SIMULATED_ASPECTS`
+is empty, and saying so is the point), so those gods get the verdict
+`ASPECT_NOT_SIMULATED`: their base-kit numbers are still shown, labelled, but
+they get no verdict and are left out of every count. A base-kit comparison is
+never presented as fair against an aspect build. Every comparison carries
+`kit`: which kit was used and the aspect's pick rate.
 Gold is not an axis: both are finished builds, and the per-gold reading is
 `build_quality`'s. `verdict_counts` re-runs the rule at 2% and 10% so a reader
 can see how much of the split the band chose.
@@ -87,6 +96,14 @@ BREAKPOINTS = (2, 4, 6)
 BAND = 0.05
 SENSITIVITY_BANDS = (0.02, 0.05, 0.10)
 ARCHETYPE = "model"
+
+#: An aspect played in more than this share of the god's community games is
+#: the kit the community build was made for. "Mostly plays" — a majority.
+ASPECT_MAJORITY = 0.5
+#: Aspects whose kit change `combat.py` simulates. None today: the scrape
+#: carries aspect TEXT, and turning it into arithmetic is per-aspect work.
+SIMULATED_ASPECTS = frozenset()
+ASPECT_NOT_SIMULATED = "aspect not simulated"
 SQUISHY_ROLE, TANK_ROLE = "Mid", "Support"
 
 # "Range: 8.8 meters" on the Basic Attack. The roster splits into 1.92/2.56
@@ -614,6 +631,19 @@ def verdict(d, s, band=BAND):
     return "level"
 
 
+def kit_for(build_note):
+    """Which kit the comparison is on, from the community entry's own aspect
+    pick rate: `{kit, aspect, pick_rate, win_rate, simulated}`. `kit` is
+    "base" or the aspect's name; `simulated` is False only when the aspect is
+    the fair kit and `combat.py` cannot play it."""
+    entry = next((b for b in build_note.get("builds") or [] if b.get("source") == "community"), {})
+    aspect, rate = entry.get("aspect"), entry.get("aspect_pick_rate")
+    on_aspect = bool(aspect) and rate is not None and rate > ASPECT_MAJORITY
+    return {"kit": aspect if on_aspect else "base", "aspect": aspect,
+            "pick_rate": rate, "win_rate": entry.get("aspect_win_rate"),
+            "simulated": (not on_aspect) or aspect in SIMULATED_ASPECTS}
+
+
 def compare(god, build_note, items_by_name, targets, model_rows=None):
     """Everything criterion 2 names for one god, or None (with a reason)."""
     community, subs = community_six(god, build_note, items_by_name)
@@ -623,6 +653,7 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
     if len(ours) < 6 or any(n not in items_by_name for n in ours):
         return None, "no full model build"
     ours = ours[:6]
+    kit = kit_for(build_note)
     p_ours = profile(god, ours, items_by_name, targets)
     p_theirs = profile(god, community, items_by_name, targets)
     d, s = axes(p_ours, p_theirs)
@@ -654,7 +685,8 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
         "melee": is_melee(god), "level": LEVEL, "window": WINDOW,
         "ichor": p_ours, "community": p_theirs, "community_substitutions": subs,
         "shared": [n for n in ours if n in community],
-        "damage_axis": d, "survival_axis": s, "verdict": verdict(d, s),
+        "damage_axis": d, "survival_axis": s, "kit": kit,
+        "verdict": verdict(d, s) if kit["simulated"] else ASPECT_NOT_SIMULATED,
         "diffs": diffs,
     }, None
 
@@ -693,9 +725,22 @@ def run(gods, items, builds_by_god, weights, tags_map, only=None):
     return rows, skipped, targets
 
 
+def judged(rows):
+    """Rows that carry a verdict — every row except `ASPECT_NOT_SIMULATED`."""
+    return [r for r in rows if r["verdict"] != ASPECT_NOT_SIMULATED]
+
+
+def aspect_excluded(rows):
+    """Gods left out of every count because the community plays an aspect
+    the combat model cannot, most-played first — the follow-up list."""
+    return sorted((r for r in rows if r["verdict"] == ASPECT_NOT_SIMULATED),
+                  key=lambda r: -(r["kit"]["pick_rate"] or 0))
+
+
 def verdict_counts(rows, band=BAND):
+    """Per role, over `judged` rows only."""
     out = {}
-    for r in rows:
+    for r in judged(rows):
         v = verdict(r["damage_axis"], r["survival_axis"], band)
         out.setdefault(r["role"], {}).setdefault(v, 0)
         out[r["role"]][v] += 1
@@ -720,11 +765,25 @@ def _pct(x):
     return f"{(x - 1) * 100:+.1f}%"
 
 
+def kit_line(k):
+    if not k.get("aspect") or k.get("pick_rate") is None:
+        return "base (no aspect record)"
+    played = f"{k['aspect']} played in {k['pick_rate']:.0%} of games"
+    if k["kit"] == "base":
+        return f"base ({played})"
+    if not k["simulated"]:
+        return (f"{k['aspect']} ({k['pick_rate']:.0%} of games) — NOT SIMULATED: the numbers "
+                "below are on the base kit and carry no verdict")
+    return f"{k['aspect']} ({played})"
+
+
 def god_lines(r):
     i, c = r["ichor"], r["community"]
     L = [f"## {r['god']} ({r['role']}, {r['damage_type']}, {'melee' if r['melee'] else 'ranged'})",
          "",
          f"**Verdict: {r['verdict']}** — damage {_pct(r['damage_axis'])}, survival {_pct(r['survival_axis'])}",
+         "",
+         f"Kit: {kit_line(r['kit'])}",
          "",
          f"- Ichor ({i['gold']:.0f}g): {' · '.join(i['items'])}",
          f"- Community ({c['gold']:.0f}g): {' · '.join(c['items'])}",
@@ -804,10 +863,19 @@ def report_lines(rows, skipped, targets, data_patch):
     L += ["", "Band sensitivity (all roles):", ""]
     for b in SENSITIVITY_BANDS:
         c = {}
-        for r in rows:
+        for r in judged(rows):
             v = verdict(r["damage_axis"], r["survival_axis"], b)
             c[v] = c.get(v, 0) + 1
         L.append(f"- ±{b:.0%}: " + ", ".join(f"{v} {c.get(v, 0)}" for v in order))
+    excluded = aspect_excluded(rows)
+    L += ["", f"## Aspect not simulated ({len(excluded)} gods, no verdict, not counted)", "",
+          f"The community plays an aspect in more than {ASPECT_MAJORITY:.0%} of these gods' games "
+          "and `combat.py` cannot play an aspect kit, so a base-kit comparison would not be fair. "
+          "Most-played first — this is the list to simulate next:", ""]
+    for r in excluded:
+        k = r["kit"]
+        L.append(f"- {r['god']} ({r['role']}): {k['aspect']}, {k['pick_rate']:.0%} of games"
+                 + (f", {k['win_rate']:.0%} win" if k.get("win_rate") is not None else ""))
     L += ["", "## Where the community wins", ""]
     losses = sorted((r for r in rows if r["verdict"] == "community better"),
                     key=lambda r: r["damage_axis"] * r["survival_axis"])
@@ -850,7 +918,7 @@ def viewer_god(r):
         out = {k: p[k] for k in keep}
         out["breakpoints"] = p["breakpoints"]
         return out
-    return {"god": r["god"], "role": r["role"], "melee": r["melee"],
+    return {"god": r["god"], "role": r["role"], "melee": r["melee"], "kit": r["kit"],
             "damage_axis": r["damage_axis"], "survival_axis": r["survival_axis"],
             "verdict": r["verdict"], "shared": r["shared"],
             "substitutions": r["community_substitutions"],
@@ -870,6 +938,8 @@ def write_viewer_files(out_dir, rows, skipped, targets, patch):
     (out_dir / "_meta.json").write_text(dump({
         "data": patch, "level": LEVEL, "window": WINDOW, "band": BAND,
         "targets": targets, "skipped": skipped, "verdict_counts": verdict_counts(rows),
+        "aspect_majority": ASPECT_MAJORITY,
+        "aspect_not_simulated": [r["god"] for r in aspect_excluded(rows)],
     }), encoding="utf-8")
 
 
@@ -910,7 +980,8 @@ def main(argv=None):
     if args.json:
         write_viewer_files(args.json, rows, skipped, targets, patch)
     counts = verdict_counts(rows)
-    print(f"{len(rows)} gods compared, {len(skipped)} skipped; wrote {args.out}"
+    print(f"{len(rows)} gods compared, {len(judged(rows))} judged, "
+          f"{len(aspect_excluded(rows))} aspect not simulated, {len(skipped)} skipped; wrote {args.out}"
           + (f" and {args.json}" if args.json else ""))
     for role in sorted(counts):
         print(f"  {role:<8} " + ", ".join(f"{k} {v}" for k, v in sorted(counts[role].items())))

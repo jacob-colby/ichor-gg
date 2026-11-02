@@ -67,3 +67,20 @@ describe("SideBySide", () => {
     expect(f).toHaveBeenCalledWith("/side_by_side/hou-yi.json", expect.anything());
   });
 });
+
+describe("SideBySide aspect matching", () => {
+  it("names the kit and the aspect's pick rate on a base-kit comparison", () => {
+    render(<SideBySideView d={{ ...data, kit: { kit: "base", aspect: "Aspect of X", pick_rate: 0.2,
+      win_rate: 0.5, simulated: true } }} meta={null} />);
+    expect(screen.getByTestId("kit")).toHaveTextContent("Base kit — the community plays Aspect of X in 20% of games");
+  });
+
+  it("gives no verdict when the community's aspect cannot be simulated", () => {
+    render(<SideBySideView d={{ ...data, verdict: "aspect not simulated",
+      kit: { kit: "Aspect of Heartbreak", aspect: "Aspect of Heartbreak", pick_rate: 0.79,
+        win_rate: 0.53, simulated: false } }} meta={null} />);
+    expect(screen.getByTestId("verdict")).toHaveTextContent("No verdict");
+    expect(screen.getByTestId("aspect-not-simulated")).toHaveTextContent("not a fair comparison");
+    expect(screen.getByTestId("side-by-side")).not.toHaveTextContent("Ichor’s damage is");
+  });
+});

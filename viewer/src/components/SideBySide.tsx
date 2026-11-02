@@ -38,6 +38,25 @@ export interface SideBySideData {
   god: string; verdict: string; damage_axis: number; survival_axis: number;
   shared: string[]; ichor: Side; community: Side; diffs: Diff[];
   substitutions: { dropped: string; used: string | null; note?: string }[];
+  /** Which kit the comparison is on. Absent in files written before
+   *  2026-11-02's aspect matching; read as the base kit. */
+  kit?: Kit;
+}
+
+interface Kit { kit: string; aspect: string | null; pick_rate: number | null;
+  win_rate: number | null; simulated: boolean }
+
+const ASPECT_NOT_SIMULATED = "aspect not simulated";
+
+/** The kit line every comparison carries: which kit, and how often the
+ *  community plays the aspect. */
+function KitLine({ kit }: { kit?: Kit }) {
+  const played = kit?.aspect && kit.pick_rate != null
+    ? `${kit.aspect} in ${Math.round(kit.pick_rate * 100)}% of games` : null;
+  const text = !kit || kit.kit === "base"
+    ? `Base kit${played ? ` — the community plays ${played}` : ""}`
+    : `${kit.aspect} — the community plays it in ${Math.round((kit.pick_rate ?? 0) * 100)}% of games`;
+  return <p className="mt-1 font-mono text-label text-faint" data-testid="kit">Kit: {text}</p>;
 }
 
 interface Meta { data: string; level: number; window: number; band: number;
@@ -77,6 +96,7 @@ const VERDICT_TONE: Record<string, string> = {
   "community better": "border-premium/50 text-premium",
   "trade-off": "border-line-strong text-ink-soft",
   "level": "border-line-strong text-muted",
+  [ASPECT_NOT_SIMULATED]: "border-dashed border-line-strong text-muted",
 };
 
 const ROWS: { key: Metric; label: string }[] = [
@@ -227,17 +247,28 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
         <span className={`rounded-full border px-2.5 py-0.5 text-small font-semibold ${VERDICT_TONE[d.verdict] ?? "border-line text-muted"}`}
           data-testid="verdict">
           {d.verdict === "Ichor better" ? "Ichor better" : d.verdict === "community better" ? "Community better"
-            : d.verdict === "trade-off" ? "A real trade-off" : "Level"}
+            : d.verdict === "trade-off" ? "A real trade-off"
+            : d.verdict === ASPECT_NOT_SIMULATED ? "No verdict" : "Level"}
         </span>
       </div>
-      <p className="mt-1.5 max-w-[70ch] text-small leading-relaxed text-muted">
-        Both builds run through the combat model with item passives simulated, not priced.
-        Ichor&rsquo;s damage is{" "}
-        <span className={`font-mono ${tone(d.damage_axis, band)}`}>{pct(d.damage_axis)}</span> and its
-        survival{" "}
-        <span className={`font-mono ${tone(d.survival_axis, band)}`}>{pct(d.survival_axis)}</span> against
-        the community&rsquo;s; within ±{Math.round(band * 100)}% counts as level.
-      </p>
+      <KitLine kit={d.kit} />
+      {d.verdict === ASPECT_NOT_SIMULATED ? (
+        <p className="mt-2 max-w-[70ch] rounded-md border border-dashed border-line-strong bg-bg1 p-3 text-small leading-relaxed text-ink-soft"
+          data-testid="aspect-not-simulated">
+          Most of this god&rsquo;s players run {d.kit?.aspect}, and the combat model can&rsquo;t
+          play an aspect&rsquo;s kit yet. The community build was made for that kit, so the
+          numbers below — on the base kit — are not a fair comparison and carry no verdict.
+        </p>
+      ) : (
+        <p className="mt-1.5 max-w-[70ch] text-small leading-relaxed text-muted">
+          Both builds run through the combat model with item passives simulated, not priced.
+          Ichor&rsquo;s damage is{" "}
+          <span className={`font-mono ${tone(d.damage_axis, band)}`}>{pct(d.damage_axis)}</span> and its
+          survival{" "}
+          <span className={`font-mono ${tone(d.survival_axis, band)}`}>{pct(d.survival_axis)}</span> against
+          the community&rsquo;s; within ±{Math.round(band * 100)}% counts as level.
+        </p>
+      )}
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <BuildColumn label="Ichor" side={d.ichor} shared={shared} accent />
