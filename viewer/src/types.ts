@@ -262,12 +262,32 @@ export interface PatchDelta {
   verdict: "buff" | "nerf" | "mixed" | "adjusted";
 }
 
+/** One of a period's biggest changes, chosen by `snapshots.highlights_for`. */
+export interface PatchHighlight {
+  name: string;
+  /** Only "items" today: gods and systems are not in the snapshot store. */
+  group: "items" | "gods" | "systems";
+  change: "buff" | "nerf" | "mixed" | "added" | "removed";
+  headline: string;
+  magnitude?: number;
+}
+
 export interface PatchPeriod {
   from: string;
   to: string;
   added: string[];
   removed: string[];
   changed: PatchDelta[];
+  /** Game patch label on each end. Absent on an index built before patch
+   *  history existed; null before the first recorded label. */
+  patch_from?: string | null;
+  patch_to?: string | null;
+  /** False when both ends are the same patch: the period is Ichor's data
+   *  catching up, and its "added" items are not new to the game. */
+  crosses_patch?: boolean;
+  highlights?: PatchHighlight[];
+  /** Hand-verified official notes (data/_patch_links.yaml). */
+  official_url?: string;
 }
 
 export interface DraftComp {

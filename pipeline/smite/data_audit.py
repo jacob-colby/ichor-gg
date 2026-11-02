@@ -298,6 +298,28 @@ def audit_item_coverage(items: list, builds: list) -> list:
         key=lambda f: f["item"])
 
 
+def audit_patch_links(links_path: Path = REPO_ROOT / "data" / "_patch_links.yaml",
+                      history_path: Path = REPO_ROOT / "data" / "_patch_history.json") -> list:
+    """Every hand-written official patch link must be https on an official
+    host and keyed by a patch label Ichor has recorded. The loader already
+    drops a bad URL; this makes the drop loud instead of silent."""
+    import yaml
+    from smite import snapshots  # deferred: snapshots imports this module
+    if not Path(links_path).exists():
+        return []
+    doc = yaml.safe_load(Path(links_path).read_text(encoding="utf-8")) or {}
+    known = {r["patch"] for r in snapshots.load_patch_history(history_path)}
+    findings = []
+    for patch, url in (doc.get("links") or {}).items():
+        if not snapshots.is_official_url(url):
+            findings.append({"patch": str(patch), "issue": "unofficial-patch-link",
+                             "detail": f"{url!r} is not https on {', '.join(snapshots.OFFICIAL_HOSTS)}"})
+        if str(patch) not in known:
+            findings.append({"patch": str(patch), "issue": "unknown-patch-label",
+                             "detail": "not in data/_patch_history.json, so no period can show it"})
+    return findings
+
+
 def _load_index() -> dict:
     return json.loads(INDEX_PATH.read_text(encoding="utf-8"))
 
@@ -352,7 +374,12 @@ def main(argv=None) -> int:
     for f in god_findings:
         print(f"{f['god']}: {f['issue']} - {f['detail']}")
 
-    if not item_findings and not tag_findings and not god_findings:
+    link_findings = audit_patch_links()
+    print(f"Patch link audit: {len(link_findings)} finding(s)")
+    for f in link_findings:
+        print(f"{f['patch']}: {f['issue']} - {f['detail']}")
+
+    if not item_findings and not tag_findings and not god_findings and not link_findings:
         print("no issues found")
         return 0
     return 1

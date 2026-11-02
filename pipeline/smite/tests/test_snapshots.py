@@ -348,3 +348,126 @@ def test_a_same_day_re_run_that_reverts_removes_the_redundant_file(tmp_path):
 
 def test_latest_snapshot_path_is_none_on_an_empty_store(tmp_path):
     assert snapshots.latest_snapshot_path(tmp_path / "nope") is None
+
+
+# ---------------------------------------------------------------------------
+# Patch labels, highlights and official links
+# ---------------------------------------------------------------------------
+
+def _write(snapshots_dir, date, items):
+    return snapshots.write_snapshot(
+        [{"name": n, **v} for n, v in items.items()], date, snapshots_dir=snapshots_dir)
+
+
+def test_patch_at_picks_label_current_on_the_day():
+    hist = [{"patch": "Open Beta 40", "first_seen": "2026-08-01"},
+            {"patch": "Open Beta 41", "first_seen": "2026-08-15"}]
+    assert snapshots.patch_at(hist, "2026-07-31") is None
+    assert snapshots.patch_at(hist, "2026-08-01") == "Open Beta 40"
+    assert snapshots.patch_at(hist, "2026-08-14") == "Open Beta 40"
+    assert snapshots.patch_at(hist, "2026-09-01") == "Open Beta 41"
+
+
+def test_record_patch_appends_only_on_a_new_label(tmp_path):
+    path = tmp_path / "_patch_history.json"
+    assert snapshots.record_patch("Open Beta 40", "2026-08-01", path) is True
+    assert snapshots.record_patch("Open Beta 40", "2026-08-09", path) is False
+    assert snapshots.record_patch("Open Beta 41", "2026-08-15", path) is True
+    assert [r["patch"] for r in json.loads(path.read_text())] == ["Open Beta 40", "Open Beta 41"]
+
+
+def test_record_patch_does_not_read_the_current_label_as_history(tmp_path):
+    # refresh writes _patch.json first; a fallback read would see the new
+    # label as already recorded and never write it.
+    (tmp_path / "_patch.json").write_text(json.dumps({"patch": "Open Beta 41", "captured": "2026-08-15"}))
+    assert snapshots.record_patch("Open Beta 41", "2026-08-15", tmp_path / "_patch_history.json") is True
+
+
+def test_load_patch_history_falls_back_to_current_label(tmp_path):
+    (tmp_path / "_patch.json").write_text(json.dumps({"patch": "Open Beta 40", "captured": "2026-08-01"}))
+    assert snapshots.load_patch_history(tmp_path / "_patch_history.json") == [
+        {"patch": "Open Beta 40", "first_seen": "2026-08-01"}]
+
+
+def test_period_within_one_patch_does_not_highlight_additions(tmp_path):
+    d = tmp_path / "snapshots"
+    p1 = _write(d, "2026-08-01", {"A": {"cost": 100, "tier": 1, "stats": {}}})
+    p2 = _write(d, "2026-08-29", {"A": {"cost": 100, "tier": 1, "stats": {}},
+                                   "Axe": {"cost": 600, "tier": 1, "stats": {}}})
+    hist = [{"patch": "Open Beta 40", "first_seen": "2026-08-01"}]
+    [period] = snapshots.build_patch_report([p1, p2], history=hist)
+    assert period["crosses_patch"] is False
+    assert period["patch_from"] == period["patch_to"] == "Open Beta 40"
+    assert period["added"] == ["Axe"]
+    assert period["highlights"] == []
+
+
+def test_highlights_rank_removed_then_added_then_by_relative_move(tmp_path):
+    d = tmp_path / "snapshots"
+    old = {
+        "Small": {"cost": 3000, "tier": 3, "stats": {"Strength": "40"}},     # 40->42: 5%
+        "Big": {"cost": 3000, "tier": 3, "stats": {"Strength": "20"}},       # 20->30: 50%
+        "Pricier": {"cost": 2000, "tier": 3, "stats": {"Strength": "40"}},   # cost +25%
+        "Reworded": {"cost": 2000, "tier": 3, "stats": {"Passive": "a"}},    # adjusted
+        "Gone": {"cost": 2000, "tier": 3, "stats": {}},
+    }
+    new = {k: dict(v) for k, v in old.items() if k != "Gone"}
+    new["Small"] = {"cost": 3000, "tier": 3, "stats": {"Strength": "42"}}
+    new["Big"] = {"cost": 3000, "tier": 3, "stats": {"Strength": "30"}}
+    new["Pricier"] = {"cost": 2500, "tier": 3, "stats": {"Strength": "40"}}
+    new["Reworded"] = {"cost": 2000, "tier": 3, "stats": {"Passive": "b"}}
+    new["Fresh"] = {"cost": 2800, "tier": 3, "stats": {}}
+    p1, p2 = _write(d, "2026-08-01", old), _write(d, "2026-08-15", new)
+    hist = [{"patch": "Open Beta 40", "first_seen": "2026-08-01"},
+            {"patch": "Open Beta 41", "first_seen": "2026-08-15"}]
+    [period] = snapshots.build_patch_report([p1, p2], history=hist)
+    assert period["crosses_patch"] is True
+    hl = period["highlights"]
+    assert [(h["name"], h["change"]) for h in hl] == [
+        ("Gone", "removed"), ("Fresh", "added"),
+        ("Big", "buff"), ("Pricier", "nerf"), ("Small", "buff")]
+    assert hl[2]["headline"] == "Strength 20 → 30"
+    assert hl[3]["headline"] == "Cost 2000 → 2500"
+    assert all(h["group"] == "items" for h in hl)
+    mixed = {"name": "M", "stats": {"Mana": ["200", "250"], "Intelligence": ["70", "65"]}}
+    assert snapshots.change_magnitude(mixed)[1] == "Mana 200 \u2192 250 (+1 more)"
+    assert "official_url" not in period
+
+
+def test_highlights_cap_at_limit():
+    period = {"removed": [f"R{i}" for i in range(8)], "added": [], "changed": [],
+              "crosses_patch": True}
+    assert len(snapshots.highlights_for(period)) == snapshots.HIGHLIGHT_LIMIT
+
+
+def test_official_url_only_on_crossing_period_and_only_official_hosts(tmp_path):
+    (tmp_path / "_patch_links.yaml").write_text(
+        "links:\n"
+        "  Open Beta 41: https://www.smite2.com/news/ob41\n"
+        "  Open Beta 40: https://wiki.smite2.com/w/SMITE_2_Open_Beta_40\n")
+    links = snapshots.load_patch_links(tmp_path / "_patch_links.yaml")
+    assert links == {"Open Beta 41": "https://www.smite2.com/news/ob41"}
+    assert not snapshots.is_official_url("http://www.smite2.com/x")
+    assert not snapshots.is_official_url("https://smite2.com.evil.example/x")
+
+    d = tmp_path / "snapshots"
+    a = {"A": {"cost": 100, "tier": 1, "stats": {"Strength": "1"}}}
+    b = {"A": {"cost": 100, "tier": 1, "stats": {"Strength": "2"}}}
+    p1, p2, p3 = _write(d, "2026-08-01", a), _write(d, "2026-08-10", b), _write(d, "2026-08-20", a)
+    hist = [{"patch": "Open Beta 40", "first_seen": "2026-08-01"},
+            {"patch": "Open Beta 41", "first_seen": "2026-08-15"}]
+    newer, older = snapshots.build_patch_report([p1, p2, p3], history=hist, links=links)
+    assert newer["official_url"] == "https://www.smite2.com/news/ob41"
+    assert "official_url" not in older
+
+
+def test_shipped_store_has_no_patch_crossing_yet():
+    # Pins the 2026-11-02 diagnosis: the one stored period is a data-coverage
+    # catch-up inside Open Beta 40, so it must not present additions as new.
+    report = snapshots.report_from_dir()
+    if not report:
+        return
+    oldest = report[-1]
+    if oldest["from"] == "2026-08-01" and oldest["to"] == "2026-08-29":
+        assert oldest["crosses_patch"] is False
+        assert oldest["highlights"] == []

@@ -313644,6 +313644,9 @@
     {
       "from": "2026-08-01",
       "to": "2026-08-29",
+      "patch_from": "Open Beta 40",
+      "patch_to": "Open Beta 40",
+      "crosses_patch": false,
       "added": [
         "Adamantine Sickle",
         "Adroit Ring",
@@ -313714,7 +313717,8 @@
         "Zither"
       ],
       "removed": [],
-      "changed": []
+      "changed": [],
+      "highlights": []
     }
   ],
   "data_patch": "Open Beta 40"

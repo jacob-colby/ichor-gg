@@ -1,0 +1,13 @@
+# Official patch notes, one URL per patch label, hand-verified.
+#
+# This is the ONLY hand-written input to the patch notes page, and it is
+# hand-written on purpose: nothing Ichor scrapes is the official notes (the
+# wiki is community-edited), and a URL built from a pattern is a guess. Add an
+# entry only after opening the page and confirming it is the notes for that
+# exact patch. Only https URLs on smite2.com or hirezstudios.com are read;
+# anything else is dropped by `snapshots.load_patch_links` and flagged by
+# `data_audit`. A patch with no entry ships with no link.
+#
+# Keys must match data/_patch_history.json labels exactly, e.g.
+#   "Open Beta 41": https://www.smite2.com/news/...
+links: {}

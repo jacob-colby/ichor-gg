@@ -388,3 +388,16 @@ def test_audit_gods_flags_abilities_that_carry_no_scaling():
 
 def test_audit_gods_passes_a_god_with_a_real_kit():
     assert data_audit.audit_gods([_mag_god()], [_core_build()], _GODS_ITEMS) == []
+
+
+def test_audit_patch_links_flags_unofficial_and_unknown(tmp_path):
+    import json as _json
+    from smite import data_audit
+    links = tmp_path / "links.yaml"
+    hist = tmp_path / "hist.json"
+    hist.write_text(_json.dumps([{"patch": "Open Beta 40", "first_seen": "2026-08-01"}]))
+    links.write_text("links:\n  Open Beta 40: https://www.smite2.com/news/ob40\n"
+                     "  Open Beta 99: https://wiki.smite2.com/x\n")
+    issues = {(f["patch"], f["issue"]) for f in data_audit.audit_patch_links(links, hist)}
+    assert issues == {("Open Beta 99", "unofficial-patch-link"),
+                      ("Open Beta 99", "unknown-patch-label")}
