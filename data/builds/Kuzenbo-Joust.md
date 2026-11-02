@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.62
+      total: 0.61
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.78
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -84,8 +84,8 @@ builds:
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
     Stone of Binding:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.56
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Gladiator's Shield:
       total: 0.55
-      efficiency: 0.39
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -365,14 +365,14 @@ builds:
       pick: 0.0
       fit: 0.78
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -412,14 +412,14 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stygian Anchor — magical protection
-    swap_item: Stygian Anchor
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -489,14 +489,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.62
+      total: 0.61
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.78
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0

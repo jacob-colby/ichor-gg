@@ -39,12 +39,12 @@ builds:
       fit: 0.7
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64
     Shield Splitter:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
       win: 0.5
       pick: 0.0
@@ -106,7 +106,7 @@ builds:
       fit: 0.76
     Kinetic Cuirass:
       total: 0.59
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -155,8 +155,8 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -366,12 +366,12 @@ builds:
       fit: 0.7
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64
     Shield Splitter:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
       win: 0.5
       pick: 0.0

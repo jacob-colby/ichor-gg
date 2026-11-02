@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -57,7 +57,7 @@ builds:
       fit: 0.74
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -130,7 +130,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.72
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -189,7 +189,7 @@ builds:
       fit: 0.54
     Deathbringer:
       total: 0.43
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -248,13 +248,13 @@ builds:
       fit: 0.43
     Spear of Desolation:
       total: 0.52
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.46
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -336,12 +336,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Spear of Desolation
-  - Heartseeker
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Heartseeker
   - Spear of Desolation
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -365,29 +365,29 @@ builds:
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Spear of Desolation:
       total: 0.52
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Heartseeker:
-      total: 0.52
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -405,7 +405,7 @@ builds:
   - Death Metal
   - Riptalon
   flex_slots:
-  - Death Metal
+  - Tyrfing
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.72
+      total: 0.5
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -470,7 +470,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Rod of Tahuti
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -508,13 +508,13 @@ builds:
       fit: 0.46
     Spear of Desolation:
       total: 0.53
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
       total: 0.53
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.21
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -579,7 +579,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -607,11 +607,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -625,8 +625,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -644,7 +644,7 @@ builds:
       fit: 0.53
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -690,8 +690,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -709,7 +709,7 @@ builds:
       fit: 0.74
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.3

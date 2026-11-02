@@ -17,8 +17,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -39,7 +39,7 @@ builds:
       fit: 0.73
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -87,11 +87,11 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Void Shield:
-      total: 0.58
+      total: 0.59
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -344,8 +344,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -366,7 +366,7 @@ builds:
       fit: 0.73
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.65
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -491,7 +491,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -502,7 +502,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Void Shield:
-      total: 0.63
+      total: 0.64
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -537,8 +537,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -562,13 +562,13 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Void Shield:
-      total: 0.73
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -634,13 +634,13 @@ builds:
       pick: 0.0
       fit: 0.48
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.6
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -688,8 +688,8 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -755,7 +755,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71

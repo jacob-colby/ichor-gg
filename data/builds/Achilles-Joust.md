@@ -8,20 +8,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Eye of the Storm
   - Runeforged Hammer
-  - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Heartseeker
   - Runeforged Hammer
+  - Eye of the Storm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -38,23 +38,23 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Eye of the Storm:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Runeforged Hammer:
       total: 0.58
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Heartseeker:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -112,18 +112,18 @@ builds:
       fit: 0.49
     Runeforged Hammer:
       total: 0.5
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.43
     Heartseeker:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.69
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -164,14 +164,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.72
+      total: 0.67
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -359,20 +359,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -400,20 +400,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Eye of the Storm
   - Runeforged Hammer
-  - Heartseeker
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Heartseeker
   - Runeforged Hammer
+  - Eye of the Storm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -430,23 +430,23 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Eye of the Storm:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Runeforged Hammer:
       total: 0.58
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Heartseeker:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65

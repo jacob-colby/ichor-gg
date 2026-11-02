@@ -39,7 +39,7 @@ builds:
       fit: 0.81
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Shifter's Shield:
-      total: 0.64
+      total: 0.63
       efficiency: 0.55
       win: 0.5
       pick: 0.0
@@ -84,8 +84,8 @@ builds:
   - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
     Stone of Binding:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.83
     Erosion:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -300,19 +300,19 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -336,19 +336,19 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
   - Kinetic Cuirass
-  - Shield Splitter
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -365,20 +365,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    Shield Splitter:
-      total: 0.53
-      efficiency: 0.55
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -389,11 +383,17 @@ builds:
       pick: 0.0
       fit: 0.87
     Erosion:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -418,8 +418,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.39
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -496,7 +496,7 @@ builds:
       fit: 0.81
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Shifter's Shield:
-      total: 0.64
+      total: 0.63
       efficiency: 0.55
       win: 0.5
       pick: 0.0

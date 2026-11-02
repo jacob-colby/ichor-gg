@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -57,7 +57,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -124,7 +124,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -182,14 +182,14 @@ builds:
       pick: 0.0
       fit: 0.62
     Spear of Desolation:
-      total: 0.56
-      efficiency: 0.57
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+      total: 0.62
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -229,7 +229,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -294,26 +294,26 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.33
       win: 0.5
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
       total: 0.57
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -334,14 +334,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
   - Nimble Ring
   - Riptalon
   flex_slots:
   - Golden Blade
-  - Jotunn's Revenge
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,20 +364,20 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Toxic Blade:
       total: 0.64
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Tyrfing:
-      total: 0.56
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lernaean Bow
+  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Pendulum Blade
   - Soul Gem
   flex_slots:
   - Lernaean Bow
-  - Pendulum Blade
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -425,13 +425,19 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.52
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
-      total: 0.66
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -442,14 +448,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Spear of Desolation:
-      total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Pendulum Blade:
-      total: 0.51
-      efficiency: 0.42
+      total: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -501,8 +501,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -514,7 +514,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.38

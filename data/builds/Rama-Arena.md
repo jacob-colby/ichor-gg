@@ -13,7 +13,7 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Demon Blade
+  - Jotunn's Revenge
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -44,20 +44,20 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
     The Reaper:
       total: 0.62
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
       total: 0.6
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -100,19 +100,19 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.53
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
     Transcendence:
       total: 0.38
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -124,13 +124,13 @@ builds:
       fit: 0.42
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -165,19 +165,19 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
     The Reaper:
       total: 0.61
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -195,7 +195,7 @@ builds:
       fit: 0.7
     Deathbringer:
       total: 0.48
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.51
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -241,26 +241,26 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Transcendence:
       total: 0.33
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.13
     The Reaper:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.59
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.64
     Heartseeker:
-      total: 0.5
-      efficiency: 0.47
+      total: 0.49
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -325,7 +325,7 @@ builds:
       fit: 0.71
     Umbral Link:
       total: 0.6
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -371,14 +371,14 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.5
     The Reaper:
       total: 0.67
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -424,14 +424,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
     Lernaean Bow:
       total: 0.55
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -449,7 +449,7 @@ builds:
       fit: 0.64
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.49
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -501,20 +501,20 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
     Hydra's Lament:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.47
     The Reaper:
       total: 0.53
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -535,7 +535,7 @@ builds:
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Demon Blade
+  - Jotunn's Revenge
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -566,20 +566,20 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
     The Reaper:
       total: 0.62
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.69
     Riptalon:
       total: 0.6
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.77

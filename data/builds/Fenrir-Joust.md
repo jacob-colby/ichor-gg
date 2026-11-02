@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.86
-      efficiency: 0.72
+      total: 0.85
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -57,12 +57,12 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.73
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.74
+      total: 0.73
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.72
-      efficiency: 0.72
+      total: 0.7
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -112,7 +112,7 @@ builds:
       fit: 0.63
     The Reaper:
       total: 0.61
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -164,14 +164,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.75
-      efficiency: 0.72
+      total: 0.74
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.78
     The Reaper:
       total: 0.65
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Heartseeker:
       total: 0.61
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   flex_slots:
   - Void Shield
-  - Jotunn's Revenge
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Eye of the Storm — magical protection
+    swap_item: Eye of the Storm
   - vs_tag: physical_heavy
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
@@ -228,15 +228,9 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -249,6 +243,12 @@ builds:
     Void Shield:
       total: 0.58
       efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Void Stone:
+      total: 0.57
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -294,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.86
-      efficiency: 0.72
+      total: 0.85
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -319,12 +319,12 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.73
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.74
+      total: 0.73
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.72
     The Reaper:
       total: 0.62
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -390,7 +390,7 @@ builds:
       fit: 1.0
     Silverbranch Bow:
       total: 0.61
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.78
-      efficiency: 0.72
+      total: 0.77
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -442,20 +442,20 @@ builds:
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.53
+      total: 0.52
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.55
     Pendulum Blade:
-      total: 0.64
+      total: 0.63
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.85
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -489,14 +489,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.86
-      efficiency: 0.72
+      total: 0.85
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -514,12 +514,12 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.73
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 1.0
     Titan's Bane:
-      total: 0.74
+      total: 0.73
       efficiency: 0.47
       win: 0.5
       pick: 0.0

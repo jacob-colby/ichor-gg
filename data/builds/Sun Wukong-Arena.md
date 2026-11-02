@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Amanita Charm:
-      total: 0.75
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -279,8 +279,8 @@ builds:
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -359,7 +359,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Stampede:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0

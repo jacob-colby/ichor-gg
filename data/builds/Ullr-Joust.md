@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.58
     The Reaper:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -124,13 +124,13 @@ builds:
       fit: 0.42
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -195,7 +195,7 @@ builds:
       fit: 0.66
     Deathbringer:
       total: 0.47
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -254,13 +254,13 @@ builds:
       fit: 0.73
     Silverbranch Bow:
       total: 0.47
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.41
     Heartseeker:
-      total: 0.5
-      efficiency: 0.47
+      total: 0.49
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Berserker's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.68
       win: 0.5
       pick: 0.0
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -378,7 +378,7 @@ builds:
       fit: 0.88
     Silverbranch Bow:
       total: 0.54
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -389,8 +389,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Heartseeker:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -405,8 +405,8 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Jotunn's Revenge
   - Silverbranch Bow
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.72
+      total: 0.51
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -443,19 +443,19 @@ builds:
       fit: 0.61
     The Reaper:
       total: 0.56
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.68
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.84
     Silverbranch Bow:
       total: 0.52
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -507,13 +507,13 @@ builds:
       pick: 0.0
       fit: 0.41
     Hydra's Lament:
-      total: 0.5
+      total: 0.51
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.58
     The Reaper:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.6
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.66

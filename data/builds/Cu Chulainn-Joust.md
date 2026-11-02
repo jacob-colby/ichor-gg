@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Erosion:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -74,24 +74,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
   - Shield of the Phoenix
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shield of the Phoenix
-  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
@@ -117,11 +111,17 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.94
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.51
@@ -158,8 +158,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -188,13 +188,13 @@ builds:
       pick: 0.0
       fit: 0.78
     Void Stone:
-      total: 0.62
+      total: 0.61
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.78
     Amanita Charm:
-      total: 0.68
+      total: 0.67
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -217,14 +217,14 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -294,7 +294,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Erosion:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0

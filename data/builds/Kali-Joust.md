@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -118,13 +118,13 @@ builds:
       fit: 0.54
     Heartseeker:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -235,14 +235,14 @@ builds:
       pick: 0.0
       fit: 0.94
     Jotunn's Revenge:
-      total: 0.66
-      efficiency: 0.72
+      total: 0.65
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.61
     Silverbranch Bow:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.62
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.72
+      total: 0.5
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -312,14 +312,14 @@ builds:
       pick: 0.0
       fit: 0.67
     Riptalon:
-      total: 0.71
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.9
     Silverbranch Bow:
-      total: 0.55
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
+  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Pendulum Blade
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Pendulum Blade
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,9 +364,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -378,13 +384,7 @@ builds:
       fit: 0.55
     Spear of Desolation:
       total: 0.58
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    Pendulum Blade:
-      total: 0.5
-      efficiency: 0.42
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49

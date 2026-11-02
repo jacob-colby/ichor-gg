@@ -23,8 +23,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -112,12 +112,12 @@ builds:
       fit: 0.49
     Heartseeker:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.85
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.68
-      efficiency: 0.72
+      total: 0.67
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -344,8 +344,8 @@ builds:
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -359,14 +359,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Stampede:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -415,8 +415,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -424,8 +424,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54

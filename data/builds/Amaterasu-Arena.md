@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -275,8 +275,8 @@ builds:
   - Stampede
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -333,22 +333,22 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Jotunn's Revenge
   - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
   - Void Shield
-  - Jotunn's Revenge
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,15 +358,15 @@ builds:
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Void Shield:
       total: 0.56
       efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Void Stone:
+      total: 0.55
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.6
+      total: 0.61
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -424,8 +424,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0

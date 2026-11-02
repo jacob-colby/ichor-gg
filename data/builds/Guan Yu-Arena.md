@@ -80,7 +80,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Pharaoh's Curse
+  - Stampede
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.93
     Erosion:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -205,20 +205,20 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Riptalon
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Riptalon
   - Golden Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -240,18 +240,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Riptalon:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Amanita Charm:
       total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Pharaoh's Curse:
       total: 0.62
       efficiency: 0.51
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Shogun's Ofuda:
-      total: 0.62
+      total: 0.61
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -275,8 +275,8 @@ builds:
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Jotunn's Revenge
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.6
+      total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0

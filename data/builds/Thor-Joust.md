@@ -38,25 +38,25 @@ builds:
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
       total: 0.57
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.58
     Heartseeker:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.71
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -118,13 +118,13 @@ builds:
       fit: 0.49
     Runeforged Hammer:
       total: 0.49
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.42
     Heartseeker:
-      total: 0.55
-      efficiency: 0.47
+      total: 0.54
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -182,8 +182,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Heartseeker:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Toxic Blade
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -220,8 +220,8 @@ builds:
     swap: Eye of the Storm — magical protection
     swap_item: Eye of the Storm
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -234,15 +234,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -252,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Void Shield:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -294,14 +294,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.66
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.93
     Jotunn's Revenge:
-      total: 0.69
-      efficiency: 0.72
+      total: 0.68
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Heartseeker:
-      total: 0.65
-      efficiency: 0.47
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -347,8 +347,8 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.66
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -495,25 +495,25 @@ builds:
       pick: 0.0
       fit: 0.81
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Runeforged Hammer:
       total: 0.57
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.58
     Heartseeker:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.71
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0

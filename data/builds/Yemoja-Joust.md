@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Shifter's Shield
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -39,22 +39,22 @@ builds:
       fit: 0.75
     Kinetic Cuirass:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.66
+      total: 0.67
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -164,14 +164,14 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.6
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stone of Binding:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.5
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.26
     Nimble Ring:
-      total: 0.49
+      total: 0.48
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -300,19 +300,19 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
       total: 0.56
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -365,14 +365,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.59
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Shifter's Shield
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -496,22 +496,22 @@ builds:
       fit: 0.75
     Kinetic Cuirass:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

@@ -44,14 +44,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -195,7 +195,7 @@ builds:
       fit: 0.79
     Deathbringer:
       total: 0.51
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -275,7 +275,7 @@ builds:
   - Tekko-Kagi
   - Heartseeker
   flex_slots:
-  - Silverbranch Bow
+  - Heartseeker
   - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.91
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -312,8 +312,8 @@ builds:
       pick: 0.0
       fit: 0.94
     Silverbranch Bow:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.58
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -378,7 +378,7 @@ builds:
       fit: 0.65
     The Reaper:
       total: 0.54
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Demon Blade:
-      total: 0.44
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -501,14 +501,14 @@ builds:
       pick: 0.0
       fit: 0.7
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62

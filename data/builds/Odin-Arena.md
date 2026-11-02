@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.44
     Heartseeker:
-      total: 0.52
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -230,13 +230,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.99
     Erosion:
-      total: 0.62
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -359,8 +359,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64

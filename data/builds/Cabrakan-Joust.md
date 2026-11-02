@@ -39,7 +39,7 @@ builds:
       fit: 0.71
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Erosion:
-      total: 0.63
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -152,11 +152,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
-  - vs_tag: physical_heavy
-    swap: Erosion — physical protection
+    swap: Erosion — magical protection
     swap_item: Erosion
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -164,8 +164,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.61
-      efficiency: 0.51
+      total: 0.6
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.68
       win: 0.5
       pick: 0.0
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Shogun's Ofuda:
-      total: 0.57
+      total: 0.56
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -300,19 +300,19 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -365,19 +365,19 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
     Shield Splitter:
-      total: 0.54
+      total: 0.53
       efficiency: 0.55
       win: 0.5
       pick: 0.0
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Erosion:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -496,7 +496,7 @@ builds:
       fit: 0.71
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67

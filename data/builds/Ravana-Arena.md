@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -80,7 +80,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -112,12 +112,12 @@ builds:
       fit: 0.49
     Heartseeker:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.75
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
   - Shield of the Phoenix
   - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
   - Void Shield
-  - Jotunn's Revenge
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Mystical Mail — physical protection
     swap_item: Mystical Mail
@@ -228,12 +228,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Shield of the Phoenix:
       total: 0.65
       efficiency: 0.53
@@ -243,6 +237,12 @@ builds:
     Void Shield:
       total: 0.61
       efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Void Stone:
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.69
-      efficiency: 0.72
+      total: 0.68
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.94
     Amanita Charm:
-      total: 0.77
+      total: 0.76
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -409,8 +409,8 @@ builds:
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -424,14 +424,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Stampede:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -554,14 +554,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52

@@ -44,13 +44,13 @@ builds:
       pick: 0.0
       fit: 0.45
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.73
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -74,24 +74,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
   - Shield of the Phoenix
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
   - Shield of the Phoenix
-  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Berserker's Shield:
-      total: 0.58
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Shield of the Phoenix:
       total: 0.58
       efficiency: 0.53
@@ -117,11 +111,17 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.94
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Pharaoh's Curse:
       total: 0.59
       efficiency: 0.51
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.9
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.68
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Pharaoh's Curse
+  - Freya's Tears
   - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -371,13 +371,13 @@ builds:
       pick: 0.0
       fit: 0.45
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.73
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0

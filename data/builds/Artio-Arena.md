@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -56,13 +56,13 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.86
     Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -123,7 +123,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Erosion:
-      total: 0.68
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -138,22 +138,22 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Stone of Binding
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
-  - Stampede
   flex_slots:
   - Erosion
-  - Stampede
+  - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -163,9 +163,15 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Stone of Binding:
+      total: 0.59
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -193,12 +199,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Stampede:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Stampede:
-      total: 0.6
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -340,8 +340,8 @@ builds:
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Stampede
   - Pharaoh's Curse
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -405,8 +405,8 @@ builds:
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,13 +424,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
     Void Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -513,13 +513,13 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.68
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.86
     Stampede:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0

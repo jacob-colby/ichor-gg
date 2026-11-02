@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Rod of Asclepius:
-      total: 0.76
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -165,12 +165,12 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
     Void Shield:
-      total: 0.73
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -253,13 +253,13 @@ builds:
       pick: 0.0
       fit: 0.93
     Erosion:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stampede:
-      total: 0.58
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
   - Toxic Blade
-  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
   flex_slots:
   - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -358,18 +358,18 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Toxic Blade:
       total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Amanita Charm:
       total: 0.81
       efficiency: 0.65
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.69
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0

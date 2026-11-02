@@ -13,8 +13,8 @@ builds:
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Jotunn's Revenge
   - Deathbringer
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,26 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.72
+      total: 0.5
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.3
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -63,7 +63,7 @@ builds:
       fit: 0.79
     Deathbringer:
       total: 0.5
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -99,14 +99,14 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
     Transcendence:
       total: 0.38
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -117,20 +117,20 @@ builds:
       pick: 0.0
       fit: 0.42
     Dominance:
-      total: 0.47
+      total: 0.48
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.5
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.72
+      total: 0.48
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -177,7 +177,7 @@ builds:
       fit: 0.55
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -195,7 +195,7 @@ builds:
       fit: 0.79
     Deathbringer:
       total: 0.51
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.5
     The Reaper:
       total: 0.67
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -324,8 +324,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -378,7 +378,7 @@ builds:
       fit: 0.65
     The Reaper:
       total: 0.54
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.5
     Demon Blade:
-      total: 0.44
+      total: 0.43
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -470,8 +470,8 @@ builds:
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Jotunn's Revenge
   - Deathbringer
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,26 +489,26 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.72
+      total: 0.5
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.3
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -520,7 +520,7 @@ builds:
       fit: 0.79
     Deathbringer:
       total: 0.5
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Jotunn's Revenge
   - Dominance
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   - Demon Blade
+  - Deathbringer
   flex_slots:
-  - Jotunn's Revenge
+  - Deathbringer
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,27 +553,21 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
       total: 0.57
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -589,11 +583,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
   swaps:
   - added: Silverbranch Bow
-    removed: Deathbringer
+    removed: Jotunn's Revenge
     reason: Conquest community 70% win over 94 matches (vs 55% on this god), taking
-      the model's weakest slot from Deathbringer
+      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---

@@ -39,12 +39,12 @@ builds:
       fit: 0.78
     Kinetic Cuirass:
       total: 0.67
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.66
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -145,8 +145,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Jotunn's Revenge
   - Erosion
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -300,19 +300,19 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -366,12 +366,12 @@ builds:
       fit: 0.78
     Kinetic Cuirass:
       total: 0.67
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -424,14 +424,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Gauntlet of Thebes:
-      total: 0.23
+      total: 0.22
       efficiency: 0.26
       win: 0.5
       pick: 0.0
       fit: 0.19
     Kinetic Cuirass:
       total: 0.67
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.48
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
       win: 0.5
       pick: 0.0

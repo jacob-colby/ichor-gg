@@ -629,3 +629,12 @@ items:
   Yogi's Necklace:
     classes: [A5]
     note: "heal 0.5% of max health per second — exactly Health Regen (60 HP5 at the roster-median 2405 health), and TEN TIMES the largest value the column was fitted on (6); the linear price does not reach it"
+  # ── Added unattended by smite.new_entities ──
+  Lotus Sickle:
+    uncatalogued: true
+    added: '2026-11-02'
+    note: added unattended by smite.new_entities; passive not classified, so the model values this item on its stat line alone
+  Soul Locket:
+    uncatalogued: true
+    added: '2026-11-02'
+    note: added unattended by smite.new_entities; passive not classified, so the model values this item on its stat line alone

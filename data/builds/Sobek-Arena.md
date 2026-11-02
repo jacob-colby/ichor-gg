@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -123,13 +123,13 @@ builds:
       pick: 0.0
       fit: 0.96
     Erosion:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.7
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -165,12 +165,12 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
     Void Shield:
-      total: 0.73
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.69
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.81

@@ -13,8 +13,8 @@ builds:
   - The Reaper
   - Riptalon
   flex_slots:
-  - The Reaper
   - Golden Blade
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.7
     Lernaean Bow:
       total: 0.61
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -56,8 +56,8 @@ builds:
       pick: 0.0
       fit: 0.7
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.53
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -124,13 +124,13 @@ builds:
       fit: 0.42
     The Reaper:
       total: 0.57
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -195,7 +195,7 @@ builds:
       fit: 0.79
     Deathbringer:
       total: 0.51
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -214,8 +214,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -259,8 +259,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Umbral Link:
-      total: 0.61
-      efficiency: 0.43
+      total: 0.6
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -275,7 +275,7 @@ builds:
   - Silverbranch Bow
   - Heartseeker
   flex_slots:
-  - Silverbranch Bow
+  - Heartseeker
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.91
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.94
     Silverbranch Bow:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.56
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -366,7 +366,7 @@ builds:
       fit: 0.7
     Lernaean Bow:
       total: 0.57
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -384,7 +384,7 @@ builds:
       fit: 0.7
     The Reaper:
       total: 0.54
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.5
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -442,8 +442,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -470,8 +470,8 @@ builds:
   - The Reaper
   - Riptalon
   flex_slots:
-  - The Reaper
   - Golden Blade
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,14 +489,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.7
     Lernaean Bow:
       total: 0.61
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -513,8 +513,8 @@ builds:
       pick: 0.0
       fit: 0.7
     The Reaper:
-      total: 0.59
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.62

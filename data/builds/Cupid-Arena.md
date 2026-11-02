@@ -13,7 +13,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.52
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -44,8 +44,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Bancroft's Talon
   - Jotunn's Revenge
+  - Bragi's Harp
   - Death Metal
   - Rod of Tahuti
   flex_slots:
   - Bancroft's Talon
-  - Lernaean Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Toxic Blade:
       total: 0.54
       efficiency: 0.44
@@ -117,11 +111,17 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Bragi's Harp:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Death Metal:
       total: 0.56
       efficiency: 0.61
@@ -130,7 +130,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.53
     Deathbringer:
-      total: 0.43
-      efficiency: 0.51
+      total: 0.42
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -248,13 +248,13 @@ builds:
       fit: 0.43
     Spear of Desolation:
       total: 0.52
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.46
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -378,13 +378,13 @@ builds:
       fit: 0.41
     Spear of Desolation:
       total: 0.53
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -425,7 +425,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.51
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.72
+      total: 0.51
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.53
     Nimble Ring:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.49
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -501,8 +501,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -514,7 +514,7 @@ builds:
       fit: 0.46
     Spear of Desolation:
       total: 0.53
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -535,7 +535,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.52
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -566,8 +566,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -578,7 +578,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -600,7 +600,7 @@ builds:
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Death Metal
+  - Jotunn's Revenge
   - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
@@ -631,8 +631,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -643,7 +643,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0

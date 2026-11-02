@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Berserker's Shield
+  - Runeforged Hammer
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
@@ -14,7 +14,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Shogun's Ofuda
-  - Berserker's Shield
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -31,14 +31,14 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
+    Runeforged Hammer:
       total: 0.56
-      efficiency: 0.68
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.56
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.6
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Amanita Charm:
-      total: 0.7
+      total: 0.69
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -301,13 +301,13 @@ builds:
       fit: 0.44
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -333,7 +333,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Berserker's Shield
+  - Runeforged Hammer
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
@@ -341,7 +341,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Shogun's Ofuda
-  - Berserker's Shield
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -358,14 +358,14 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
+    Runeforged Hammer:
       total: 0.56
-      efficiency: 0.68
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.56
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0

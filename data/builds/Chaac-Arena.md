@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Triton's Conch:
-      total: 0.59
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -99,20 +99,20 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Heartseeker:
-      total: 0.52
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Triton's Conch:
-      total: 0.6
+      total: 0.61
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -164,8 +164,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -275,7 +275,7 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
+  - Jotunn's Revenge
   - Stone of Binding
   situational_swaps:
   - vs_tag: heavy_cc
@@ -295,13 +295,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -424,8 +424,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -436,7 +436,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Freya's Tears:
-      total: 0.6
+      total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Triton's Conch:
-      total: 0.59
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0

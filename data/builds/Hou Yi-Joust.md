@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -130,7 +130,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -182,14 +182,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Demon Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.75
     Deathbringer:
       total: 0.5
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -220,8 +220,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.67
+      total: 0.66
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -300,26 +300,26 @@ builds:
       pick: 0.0
       fit: 0.9
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.58
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.47
     Silverbranch Bow:
       total: 0.56
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -448,8 +448,8 @@ builds:
       pick: 0.0
       fit: 0.38
     Spear of Desolation:
-      total: 0.5
-      efficiency: 0.57
+      total: 0.51
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -514,7 +514,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -579,7 +579,7 @@ builds:
       fit: 0.55
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -637,7 +637,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0

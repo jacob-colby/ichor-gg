@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Dominance:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -57,7 +57,7 @@ builds:
       fit: 0.58
     Riptalon:
       total: 0.61
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.82
@@ -77,7 +77,7 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Riptalon
+  - The Reaper
   - Heartseeker
   flex_slots:
   - Tyrfing
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -122,15 +122,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Riptalon:
-      total: 0.58
-      efficiency: 0.51
+    The Reaper:
+      total: 0.57
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.6
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -170,14 +170,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Tyrfing:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.71
     Riptalon:
       total: 0.59
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -195,7 +195,7 @@ builds:
       fit: 0.88
     Deathbringer:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -260,7 +260,7 @@ builds:
       fit: 0.68
     Umbral Link:
       total: 0.56
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.93
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.59
+      total: 0.52
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -313,7 +313,7 @@ builds:
       fit: 0.97
     Silverbranch Bow:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -325,7 +325,7 @@ builds:
       fit: 0.59
     Heartseeker:
       total: 0.57
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Tyrfing:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -384,7 +384,7 @@ builds:
       fit: 0.69
     Riptalon:
       total: 0.62
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Chandra's Grace:
-      total: 0.47
+      total: 0.46
       efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.67
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Dominance:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -514,7 +514,7 @@ builds:
       fit: 0.58
     Riptalon:
       total: 0.61
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.82

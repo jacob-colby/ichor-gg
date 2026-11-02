@@ -39,7 +39,7 @@ builds:
       fit: 0.83
     Lernaean Bow:
       total: 0.63
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -57,7 +57,7 @@ builds:
       fit: 0.83
     Riptalon:
       total: 0.65
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.53
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,8 +129,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Heartseeker:
-      total: 0.51
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -177,7 +177,7 @@ builds:
       fit: 0.79
     Riptalon:
       total: 0.63
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -195,7 +195,7 @@ builds:
       fit: 0.88
     Deathbringer:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -260,7 +260,7 @@ builds:
       fit: 0.78
     Umbral Link:
       total: 0.61
-      efficiency: 0.43
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -294,8 +294,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.54
-      efficiency: 0.52
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 1.0
     Silverbranch Bow:
-      total: 0.61
-      efficiency: 0.53
+      total: 0.6
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
     Heartseeker:
       total: 0.57
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -366,7 +366,7 @@ builds:
       fit: 0.75
     Lernaean Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -377,14 +377,14 @@ builds:
       pick: 0.0
       fit: 0.79
     Tyrfing:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.75
     Riptalon:
       total: 0.62
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -431,19 +431,19 @@ builds:
       fit: 0.52
     Lernaean Bow:
       total: 0.51
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.5
     Chandra's Grace:
-      total: 0.47
+      total: 0.46
       efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.67
+      total: 0.53
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -470,8 +470,8 @@ builds:
   - Death Metal
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Divine Ruin
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.52
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -501,8 +501,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Lernaean Bow:
       total: 0.55
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -579,7 +579,7 @@ builds:
       fit: 0.57
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -626,7 +626,7 @@ builds:
       fit: 0.83
     Lernaean Bow:
       total: 0.63
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -644,7 +644,7 @@ builds:
       fit: 0.83
     Riptalon:
       total: 0.65
-      efficiency: 0.41
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.9

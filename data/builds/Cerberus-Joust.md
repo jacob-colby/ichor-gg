@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Shifter's Shield
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -39,22 +39,22 @@ builds:
       fit: 0.75
     Kinetic Cuirass:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
       total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
     Stone of Binding:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.51
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.45
     Breastplate of Valor:
-      total: 0.55
-      efficiency: 0.65
+      total: 0.54
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -336,19 +336,19 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
   - Kinetic Cuirass
-  - Shield Splitter
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -365,23 +365,17 @@ builds:
       pick: 0.0
       fit: 0.74
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Shield Splitter:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Amanita Charm:
       total: 0.76
       efficiency: 0.65
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Pharaoh's Curse:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -430,19 +430,19 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.75
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Stygian Anchor
   - Kinetic Cuirass
+  - Void Shield
   - Freya's Tears
-  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Shifter's Shield
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -496,22 +496,22 @@ builds:
       fit: 0.75
     Kinetic Cuirass:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Void Shield:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Freya's Tears:
       total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Shifter's Shield:
-      total: 0.59
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

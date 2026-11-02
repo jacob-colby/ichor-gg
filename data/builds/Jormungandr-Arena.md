@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Shogun's Ofuda:
-      total: 0.65
+      total: 0.64
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -139,24 +139,24 @@ builds:
   archetype: anti-tank
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Pharaoh's Curse
   flex_slots:
-  - Jotunn's Revenge
   - Erosion
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
-  - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
+    swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -164,17 +164,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Void Shield:
       total: 0.7
       efficiency: 0.47
@@ -182,18 +176,24 @@ builds:
       pick: 0.0
       fit: 0.94
     Void Stone:
-      total: 0.7
+      total: 0.69
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.94
     Amanita Charm:
-      total: 0.79
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.92
     Erosion:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Pharaoh's Curse:
       total: 0.59
       efficiency: 0.51
       win: 0.5
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.79
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -340,8 +340,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Jotunn's Revenge
   - Shogun's Ofuda
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -359,8 +359,8 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Pharaoh's Curse:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -405,12 +405,12 @@ builds:
   - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Triton's Conch
+  - Shogun's Ofuda
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.64
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0

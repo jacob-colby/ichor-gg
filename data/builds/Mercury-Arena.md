@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.78
-      efficiency: 0.72
+      total: 0.77
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.73
     The Reaper:
-      total: 0.71
-      efficiency: 0.5
+      total: 0.7
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -62,8 +62,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Heartseeker:
-      total: 0.67
-      efficiency: 0.47
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
+  - Toxic Blade
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Lernaean Bow
+  - Toxic Blade
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,26 +93,26 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.51
-      efficiency: 0.52
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.6
     Jotunn's Revenge:
-      total: 0.69
-      efficiency: 0.72
+      total: 0.67
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.66
     Transcendence:
       total: 0.44
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -124,13 +124,13 @@ builds:
       fit: 0.59
     The Reaper:
       total: 0.59
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.68
     Heartseeker:
-      total: 0.6
-      efficiency: 0.47
+      total: 0.59
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -170,32 +170,32 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.71
-      efficiency: 0.72
+      total: 0.7
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.71
     Transcendence:
       total: 0.36
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.2
     The Reaper:
       total: 0.63
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.76
     Pendulum Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.71
     Heartseeker:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -275,7 +275,7 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   flex_slots:
-  - Toxic Blade
+  - Avatar's Parashu
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,14 +300,14 @@ builds:
       pick: 0.0
       fit: 0.98
     Jotunn's Revenge:
-      total: 0.8
-      efficiency: 0.72
+      total: 0.79
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.89
     The Reaper:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Heartseeker:
-      total: 0.72
-      efficiency: 0.47
+      total: 0.71
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.72
     Lernaean Bow:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -384,7 +384,7 @@ builds:
       fit: 0.72
     The Reaper:
       total: 0.6
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -436,13 +436,13 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.74
-      efficiency: 0.72
+      total: 0.73
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.77
     Hydra's Lament:
-      total: 0.61
+      total: 0.62
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -495,8 +495,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Jotunn's Revenge:
-      total: 0.78
-      efficiency: 0.72
+      total: 0.77
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.73
     The Reaper:
-      total: 0.71
-      efficiency: 0.5
+      total: 0.7
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -519,8 +519,8 @@ builds:
       pick: 0.0
       fit: 0.84
     Heartseeker:
-      total: 0.67
-      efficiency: 0.47
+      total: 0.66
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87

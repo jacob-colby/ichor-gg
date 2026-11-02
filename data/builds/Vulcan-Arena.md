@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.7
-      efficiency: 0.57
+      total: 0.71
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -45,18 +45,18 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.76
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.76
     Dreamer's Idol:
-      total: 0.68
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lotus Sickle
   - Bancroft's Talon
   - Bragi's Harp
   - Spear of Desolation
-  - Doom Orb
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
   - Bancroft's Talon
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,6 +98,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.46
@@ -111,20 +117,14 @@ builds:
       pick: 0.0
       fit: 0.71
     Spear of Desolation:
-      total: 0.56
-      efficiency: 0.57
+      total: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Doom Orb:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Rod of Tahuti:
       total: 0.69
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -165,24 +165,24 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.64
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.5
     Obsidian Shard:
       total: 0.57
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.6
     Dreamer's Idol:
-      total: 0.6
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -229,7 +229,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Void Shield:
-      total: 0.59
+      total: 0.6
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -259,7 +259,7 @@ builds:
       pick: 0.0
       fit: 0.76
     Stampede:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.73
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.88
@@ -307,13 +307,13 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.8
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.75
     Obsidian Shard:
       total: 0.7
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Divine Ruin:
       total: 0.5
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -383,8 +383,8 @@ builds:
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
+      total: 0.58
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Divine Ruin
+  - Lotus Sickle
   - Chronos' Pendant
   - Spear of Desolation
   - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Chronos' Pendant
   - Totem of Death
-  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.48
-      efficiency: 0.43
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.56
     Chronos' Pendant:
       total: 0.55
       efficiency: 0.55
@@ -437,7 +437,7 @@ builds:
       fit: 0.56
     Spear of Desolation:
       total: 0.67
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -449,7 +449,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.7
-      efficiency: 0.57
+      total: 0.71
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -502,18 +502,18 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.76
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.66
     Obsidian Shard:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.76
     Dreamer's Idol:
-      total: 0.68
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0

@@ -9,12 +9,12 @@ builds:
   - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
-  - Freya's Tears
+  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Freya's Tears
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -32,14 +32,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.7
     Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -49,12 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Freya's Tears:
+    Void Shield:
       total: 0.57
-      efficiency: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.66
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.61
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -139,14 +139,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   flex_slots:
   - Stone of Binding
-  - Avenging Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,26 +158,26 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Avenging Blade:
+    Toxic Blade:
       total: 0.58
-      efficiency: 0.49
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.79
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -300,19 +300,19 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.56
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -340,12 +340,12 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Erosion
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -359,20 +359,20 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.86
+      efficiency: 0.85
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -389,7 +389,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.55
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -418,8 +418,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.59
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.41
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -466,12 +466,12 @@ builds:
   - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
-  - Freya's Tears
+  - Void Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Stygian Anchor
-  - Freya's Tears
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -489,14 +489,14 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.7
     Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
+      total: 0.62
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -506,12 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Freya's Tears:
+    Void Shield:
       total: 0.57
-      efficiency: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.66
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

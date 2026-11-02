@@ -117,10 +117,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Amanita Charm, Runeforged Hammer, Lernaean Bow, Tyrfing,
-    Shield Splitter, Eye of the Storm, Genji''s Guard, Breastplate of Valor, Pharaoh''s
-    Curse, Avenging Blade, Hydra''s Lament, Shogun''s Ofuda, Tekko-Kagi, Heartseeker,
-    Dominance, Deathbringer, Toxic Blade, Erosion, Silverbranch Bow, Daybreak Gavel,
-    Eye of Providence, Shield of the Phoenix, Shifter''s Shield, Draconic Scale, Midgardian
+    Shield Splitter, Eye of the Storm, Genji''s Guard, Pharaoh''s Curse, Breastplate
+    of Valor, Avenging Blade, Hydra''s Lament, Shogun''s Ofuda, Tekko-Kagi, Dominance,
+    Toxic Blade, Erosion, Deathbringer, Daybreak Gavel, Silverbranch Bow, Eye of Providence,
+    Heartseeker, Shield of the Phoenix, Draconic Scale, Shifter''s Shield, Midgardian
     Mail.'
   slot_scores:
     Golden Blade:
@@ -136,20 +136,20 @@ builds:
       pick: 0.28
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.72
+      total: 0.51
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.3
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.45
     Runeforged Hammer:
       total: 0.49
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -176,7 +176,7 @@ builds:
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Golden Blade
+  - Jotunn's Revenge
   - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
@@ -193,11 +193,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Jotunn''s Revenge, Shield of the Phoenix, Runeforged
-    Hammer, Shield Splitter, Eye of the Storm, Genji''s Guard, Breastplate of Valor,
-    The Reaper, Yogi''s Necklace, Pharaoh''s Curse, Lernaean Bow, Tyrfing, Riptalon,
-    Erosion, Shogun''s Ofuda, Phoenix Feather, Eye of Providence, Shifter''s Shield,
-    Avenging Blade, Draconic Scale, Hydra''s Lament, Chandra''s Grace, Stone of Binding,
-    Daybreak Gavel, Midgardian Mail.'
+    Hammer, Shield Splitter, Genji''s Guard, Eye of the Storm, Yogi''s Necklace, The
+    Reaper, Breastplate of Valor, Pharaoh''s Curse, Lernaean Bow, Tyrfing, Erosion,
+    Riptalon, Shogun''s Ofuda, Phoenix Feather, Eye of Providence, Avenging Blade,
+    Draconic Scale, Shifter''s Shield, Hydra''s Lament, Chandra''s Grace, Daybreak
+    Gavel, Midgardian Mail, Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -213,13 +213,13 @@ builds:
       fit: 0.47
     Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.72
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.26
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.54
@@ -266,14 +266,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Avenging Blade, Amanita Charm, Heartseeker, Tekko-Kagi,
-    Stone of Binding, Silverbranch Bow, Runeforged Hammer, Screeching Gargoyle, Void
-    Shield, Toxic Blade, Titan''s Bane, Void Stone, The Crusher, Genji''s Guard, Breastplate
-    of Valor, Lernaean Bow, The Reaper, Tyrfing, Shield Splitter, Hydra''s Lament,
-    Riptalon, Eye of the Storm, Pharaoh''s Curse, Avatar''s Parashu, Shifter''s Shield.'
+    for this god: Jotunn''s Revenge, Avenging Blade, Amanita Charm, Tekko-Kagi, Stone
+    of Binding, Heartseeker, Silverbranch Bow, Runeforged Hammer, Void Shield, Toxic
+    Blade, Screeching Gargoyle, Titan''s Bane, Void Stone, The Crusher, Genji''s Guard,
+    The Reaper, Lernaean Bow, Breastplate of Valor, Tyrfing, Shield Splitter, Hydra''s
+    Lament, Eye of the Storm, Riptalon, Pharaoh''s Curse, Daybreak Gavel, Shifter''s
+    Shield.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.52
       win: 0.5
       pick: 0.33
@@ -292,13 +293,13 @@ builds:
       fit: 0.33
     Kinetic Cuirass:
       total: 0.51
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.72
+      total: 0.54
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -340,11 +341,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Amanita Charm, Tyrfing, Riptalon, Runeforged Hammer,
-    Lernaean Bow, Genji''s Guard, Silverbranch Bow, Breastplate of Valor, Pharaoh''s
-    Curse, Toxic Blade, Shogun''s Ofuda, Shield Splitter, Eye of the Storm, Hydra''s
-    Lament, Tekko-Kagi, The Reaper, Daybreak Gavel, Avenging Blade, Dominance, Erosion,
-    Shield of the Phoenix, Eye of Providence, Heartseeker, Shifter''s Shield, Vital
-    Amplifier.'
+    Genji''s Guard, Lernaean Bow, Silverbranch Bow, Pharaoh''s Curse, Breastplate
+    of Valor, Toxic Blade, Shogun''s Ofuda, Shield Splitter, Hydra''s Lament, Eye
+    of the Storm, Tekko-Kagi, Daybreak Gavel, The Reaper, Dominance, Avenging Blade,
+    Erosion, Shield of the Phoenix, Eye of Providence, Midgardian Mail, Draconic Scale,
+    Shifter''s Shield.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -359,14 +360,14 @@ builds:
       pick: 0.28
       fit: 0.41
     Jotunn's Revenge:
-      total: 0.5
-      efficiency: 0.72
+      total: 0.49
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.18
     Kinetic Cuirass:
       total: 0.51
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.36
@@ -417,8 +418,8 @@ builds:
     Breastplate of Valor, Amanita Charm, Hydra''s Lament, Shield of the Phoenix, Screeching
     Gargoyle, Runeforged Hammer, Prophetic Cloak, Arondight, Lernaean Bow, Pharaoh''s
     Curse, Tyrfing, Shield Splitter, Daybreak Gavel, Eye of Erebus, Gladiator''s Shield,
-    Shogun''s Ofuda, Eye of the Storm, Chandra''s Grace, Silverbranch Bow, Erosion,
-    Avenging Blade, Eye of Providence, Stone of Binding, Shifter''s Shield.'
+    Shogun''s Ofuda, Eye of the Storm, Chandra''s Grace, Erosion, Silverbranch Bow,
+    Avenging Blade, Eye of Providence, Midgardian Mail, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -433,20 +434,20 @@ builds:
       pick: 0.28
       fit: 0.33
     Breastplate of Valor:
-      total: 0.51
-      efficiency: 0.65
+      total: 0.5
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.36
     Kinetic Cuirass:
       total: 0.51
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.72
+      total: 0.53
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -487,10 +488,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Jotunn''s Revenge, Amanita Charm, Runeforged Hammer,
-    Lernaean Bow, Tyrfing, Shield Splitter, Eye of the Storm, Genji''s Guard, Breastplate
-    of Valor, Pharaoh''s Curse, Shifter''s Shield, Avenging Blade, Hydra''s Lament,
-    Shogun''s Ofuda, Tekko-Kagi, Heartseeker, Dominance, Deathbringer, Toxic Blade,
-    Erosion, Silverbranch Bow, Daybreak Gavel, Eye of Providence, Shield of the Phoenix,
+    Lernaean Bow, Tyrfing, Shield Splitter, Eye of the Storm, Genji''s Guard, Pharaoh''s
+    Curse, Breastplate of Valor, Avenging Blade, Shifter''s Shield, Hydra''s Lament,
+    Shogun''s Ofuda, Tekko-Kagi, Dominance, Toxic Blade, Erosion, Deathbringer, Daybreak
+    Gavel, Silverbranch Bow, Eye of Providence, Heartseeker, Shield of the Phoenix,
     Draconic Scale, Midgardian Mail.'
   slot_scores:
     Golden Blade:
@@ -506,20 +507,20 @@ builds:
       pick: 0.28
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.72
+      total: 0.51
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.3
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.53
       pick: 0.4
       fit: 0.45
     Runeforged Hammer:
       total: 0.49
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.47

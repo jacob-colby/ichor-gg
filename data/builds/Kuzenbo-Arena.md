@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Void Stone:
-      total: 0.66
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -123,13 +123,13 @@ builds:
       pick: 0.0
       fit: 0.96
     Erosion:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 1.0
     Stampede:
-      total: 0.7
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -165,12 +165,12 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
     Void Shield:
-      total: 0.73
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.73
     Stampede:
-      total: 0.6
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -335,20 +335,20 @@ builds:
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Stampede
+  - Pharaoh's Curse
   flex_slots:
-  - Jotunn's Revenge
   - Stampede
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -370,12 +370,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Amanita Charm:
       total: 0.8
       efficiency: 0.65
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Pharaoh's Curse:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -405,8 +405,8 @@ builds:
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,13 +424,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.42
     Void Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Stampede:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Void Stone:
-      total: 0.66
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -555,7 +555,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.68
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -578,7 +578,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0

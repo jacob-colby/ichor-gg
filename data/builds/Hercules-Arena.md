@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -56,13 +56,13 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.9
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Void Shield:
-      total: 0.63
+      total: 0.64
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.88
     Stampede:
-      total: 0.66
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -165,13 +165,13 @@ builds:
   slot_scores:
     Stone of Binding:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.63
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Amanita Charm
   - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
-  - Umbral Link
   flex_slots:
   - Erosion
-  - Umbral Link
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -220,14 +220,20 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Toxic Blade:
       total: 0.62
       efficiency: 0.46
@@ -258,12 +264,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Umbral Link:
-      total: 0.59
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -275,8 +275,8 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Jotunn's Revenge
   - Void Shield
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -294,8 +294,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -312,7 +312,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -360,7 +360,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.63
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -383,13 +383,13 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.7
+      total: 0.71
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.9
     Stampede:
-      total: 0.65
+      total: 0.64
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -399,24 +399,24 @@ builds:
   archetype: core
   slot_order:
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Void Shield
-  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Stone
   - Kinetic Cuirass
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Doublet of Binding — magical protection
-    swap_item: Doublet of Binding
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -425,19 +425,19 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Shield of the Phoenix:
+      total: 0.63
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Void Shield:
       total: 0.65
       efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.83
-    Void Stone:
-      total: 0.64
-      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -491,7 +491,7 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.62
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -502,7 +502,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Void Shield:
-      total: 0.63
+      total: 0.64
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       pick: 0.0
       fit: 0.88
     Stampede:
-      total: 0.66
+      total: 0.65
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -537,7 +537,7 @@ builds:
   - Erosion
   - Stampede
   flex_slots:
-  - Erosion
+  - Jotunn's Revenge
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
@@ -556,13 +556,13 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.55
     Void Shield:
-      total: 0.73
+      total: 0.74
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -634,13 +634,13 @@ builds:
       pick: 0.0
       fit: 0.82
     Amanita Charm:
-      total: 0.78
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.9
     Erosion:
-      total: 0.6
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -688,8 +688,8 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.72
+      total: 0.57
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -729,24 +729,24 @@ builds:
   archetype: model
   slot_order:
   - Kinetic Cuirass
+  - Shield of the Phoenix
   - Void Shield
-  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Stone
   - Kinetic Cuirass
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Doublet of Binding — magical protection
-    swap_item: Doublet of Binding
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -755,19 +755,19 @@ builds:
   slot_scores:
     Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Shield of the Phoenix:
+      total: 0.63
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Void Shield:
       total: 0.65
       efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.83
-    Void Stone:
-      total: 0.64
-      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.83

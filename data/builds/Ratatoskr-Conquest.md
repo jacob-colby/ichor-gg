@@ -100,7 +100,7 @@ builds:
   - The Crusher
   - Heartseeker
   flex_slots:
-  - Briskberry Acorn
+  - Heartseeker
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,9 +116,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Pendulum Blade, Hydra''s Lament, Avatar''s Parashu, Tekko-Kagi,
+    this god: The Reaper, Hydra''s Lament, Pendulum Blade, Avatar''s Parashu, Tekko-Kagi,
     Tyrfing, Arondight, Transcendence, Runeforged Hammer, Avenging Blade, Golden Blade,
-    Lernaean Bow, Shield Splitter, Dominance, Silverbranch Bow, Oath-Sworn Spear,
+    Lernaean Bow, Dominance, Shield Splitter, Silverbranch Bow, Oath-Sworn Spear,
     Barbed Carver, Riptalon, Bloodforge, Toxic Blade, Deathbringer, Eye of the Storm,
     Damaru, Rage.'
   slot_scores:
@@ -130,7 +130,7 @@ builds:
       fit: 0.52
     Briskberry Acorn:
       total: 0.57
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.52
@@ -141,8 +141,8 @@ builds:
       pick: 0.5
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 1.0
@@ -153,8 +153,8 @@ builds:
       pick: 0.27
       fit: 1.0
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.49
       pick: 0.69
       fit: 1.0
@@ -178,7 +178,7 @@ builds:
   - Hydra's Lament
   - Heartseeker
   flex_slots:
-  - Briskberry Acorn
+  - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -194,21 +194,21 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Hydra''s
-    Lament, The Reaper, Transcendence, Arondight, Pendulum Blade, Avatar''s Parashu,
-    Runeforged Hammer, Tyrfing, Tekko-Kagi, Avenging Blade, Dominance, Breastplate
-    of Valor, Lernaean Bow, Genji''s Guard, Shield Splitter, Golden Blade, Oath-Sworn
-    Spear, Daybreak Gavel, Silverbranch Bow, Barbed Carver, Bloodforge, Riptalon,
-    Yogi''s Necklace, Deathbringer.'
+    Lament, The Reaper, Transcendence, Pendulum Blade, Arondight, Avatar''s Parashu,
+    Runeforged Hammer, Tyrfing, Tekko-Kagi, Avenging Blade, Dominance, Genji''s Guard,
+    Breastplate of Valor, Lernaean Bow, Shield Splitter, Golden Blade, Oath-Sworn
+    Spear, Daybreak Gavel, Silverbranch Bow, Barbed Carver, Bloodforge, Yogi''s Necklace,
+    Riptalon, Toxic Blade.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.57
+      total: 0.56
       efficiency: 0.7
       win: 0.59
       pick: 0.24
       fit: 0.29
     Briskberry Acorn:
       total: 0.53
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.29
@@ -219,8 +219,8 @@ builds:
       pick: 0.5
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.72
+      total: 0.6
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 0.71
@@ -232,7 +232,7 @@ builds:
       fit: 0.63
     Heartseeker:
       total: 0.53
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.49
       pick: 0.69
       fit: 0.77
@@ -271,9 +271,9 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Hydra''s Lament, Pendulum Blade, The Reaper, Arondight, Avatar''s Parashu,
     Tekko-Kagi, Transcendence, Runeforged Hammer, Tyrfing, Avenging Blade, Silverbranch
-    Bow, Breastplate of Valor, Genji''s Guard, Riptalon, Lernaean Bow, Shield Splitter,
-    Dominance, Toxic Blade, Daybreak Gavel, Golden Blade, Oath-Sworn Spear, Barbed
-    Carver, Eye of Erebus, Screeching Gargoyle.'
+    Bow, Genji''s Guard, Breastplate of Valor, Riptalon, Lernaean Bow, Dominance,
+    Toxic Blade, Shield Splitter, Daybreak Gavel, Golden Blade, Oath-Sworn Spear,
+    Barbed Carver, Eye of Erebus, Screeching Gargoyle.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.56
@@ -283,7 +283,7 @@ builds:
       fit: 0.22
     Briskberry Acorn:
       total: 0.52
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.22
@@ -294,20 +294,20 @@ builds:
       pick: 0.5
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 0.78
     The Crusher:
-      total: 0.51
+      total: 0.5
       efficiency: 0.47
       win: 0.51
       pick: 0.27
       fit: 0.66
     Heartseeker:
       total: 0.53
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.49
       pick: 0.69
       fit: 0.76
@@ -347,10 +347,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, Runeforged Hammer,
     The Reaper, Shield Splitter, Shifter''s Shield, Eye of the Storm, Freya''s Tears,
-    Berserker''s Shield, Erosion, Eye of Providence, Genji''s Guard, Breastplate of
-    Valor, Draconic Scale, Yogi''s Necklace, Phoenix Feather, Avenging Blade, Hydra''s
-    Lament, Stone of Binding, Midgardian Mail, Chandra''s Grace, Daybreak Gavel, Hide
-    of the Nemean Lion.'
+    Berserker''s Shield, Erosion, Genji''s Guard, Eye of Providence, Yogi''s Necklace,
+    Draconic Scale, Breastplate of Valor, Phoenix Feather, Avenging Blade, Hydra''s
+    Lament, Midgardian Mail, Stone of Binding, Oni Hunter''s Garb, Chandra''s Grace,
+    Daybreak Gavel, Leviathan''s Hide.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -371,14 +371,14 @@ builds:
       pick: 0.5
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.72
+      total: 0.56
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 0.44
     Kinetic Cuirass:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -422,9 +422,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Reaper, Avatar''s Parashu, Pendulum Blade, Tekko-Kagi, Avenging
     Blade, Hydra''s Lament, Silverbranch Bow, Riptalon, Oath-Sworn Spear, Transcendence,
-    Arondight, Tyrfing, Runeforged Hammer, Toxic Blade, Lernaean Bow, Shield Splitter,
-    Dominance, Golden Blade, Barbed Carver, Screeching Gargoyle, Daybreak Gavel, Bloodforge,
-    Breastplate of Valor, Genji''s Guard.'
+    Arondight, Tyrfing, Toxic Blade, Runeforged Hammer, Lernaean Bow, Dominance, Shield
+    Splitter, Golden Blade, Barbed Carver, Screeching Gargoyle, Daybreak Gavel, Bloodforge,
+    Genji''s Guard, Breastplate of Valor.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.57
@@ -434,7 +434,7 @@ builds:
       fit: 0.33
     Briskberry Acorn:
       total: 0.54
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.33
@@ -445,8 +445,8 @@ builds:
       pick: 0.5
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 1.0
@@ -457,8 +457,8 @@ builds:
       pick: 0.27
       fit: 1.0
     Heartseeker:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.46
       win: 0.49
       pick: 0.69
       fit: 1.0
@@ -496,21 +496,21 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Riptalon, Tyrfing, Silverbranch Bow, Tekko-Kagi, Lernaean Bow, Golden
-    Blade, The Reaper, Toxic Blade, Dominance, Qin''s Blade, Hydra''s Lament, Sun
-    Beam Bow, Transcendence, Berserker''s Shield, Avatar''s Parashu, Dagger of Frenzy,
+    this god: Riptalon, Tyrfing, Silverbranch Bow, Tekko-Kagi, Golden Blade, Lernaean
+    Bow, The Reaper, Toxic Blade, Dominance, Qin''s Blade, Hydra''s Lament, Sun Beam
+    Bow, Transcendence, Dagger of Frenzy, Berserker''s Shield, Avatar''s Parashu,
     Arondight, Runeforged Hammer, Pendulum Blade, Avenging Blade, Barbed Carver, Vital
-    Amplifier, Hastened Fatalis, Bloodforge.'
+    Amplifier, Hastened Fatalis, The Executioner.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.62
+      total: 0.61
       efficiency: 0.76
       win: 0.59
       pick: 0.24
       fit: 0.48
     Briskberry Acorn:
       total: 0.51
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.17
@@ -521,8 +521,8 @@ builds:
       pick: 0.5
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.72
+      total: 0.55
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 0.37
@@ -552,10 +552,10 @@ builds:
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Hydra's Lament
-  - Heartseeker
+  - Pendulum Blade
   flex_slots:
   - Briskberry Acorn
-  - Heartseeker
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -571,10 +571,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Pendulum Blade, Arondight,
-    Breastplate of Valor, Genji''s Guard, The Reaper, Avatar''s Parashu, Eye of Erebus,
-    Transcendence, Screeching Gargoyle, Runeforged Hammer, Tyrfing, Chandra''s Grace,
+    Genji''s Guard, Breastplate of Valor, The Reaper, Avatar''s Parashu, Eye of Erebus,
+    Transcendence, Screeching Gargoyle, Tyrfing, Runeforged Hammer, Chandra''s Grace,
     Freya''s Tears, Tekko-Kagi, Avenging Blade, Shield of the Phoenix, Silverbranch
-    Bow, Daybreak Gavel, Lernaean Bow, Gladiator''s Shield, Shield Splitter, Dominance,
+    Bow, Daybreak Gavel, Lernaean Bow, Dominance, Gladiator''s Shield, Shield Splitter,
     Riptalon.'
   slot_scores:
     Ashwhorl Acorn:
@@ -585,7 +585,7 @@ builds:
       fit: 0.15
     Briskberry Acorn:
       total: 0.51
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.15
@@ -596,8 +596,8 @@ builds:
       pick: 0.5
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 0.85
@@ -607,18 +607,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Heartseeker:
+    Pendulum Blade:
       total: 0.5
-      efficiency: 0.47
-      win: 0.49
-      pick: 0.69
-      fit: 0.55
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: model
@@ -646,9 +645,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Reaper, Pendulum Blade, Hydra''s Lament, Avatar''s
+    Underrated for this god: The Reaper, Hydra''s Lament, Pendulum Blade, Avatar''s
     Parashu, Tekko-Kagi, Tyrfing, Arondight, Transcendence, Runeforged Hammer, Avenging
-    Blade, Golden Blade, Lernaean Bow, Shield Splitter, Dominance, Silverbranch Bow,
+    Blade, Golden Blade, Lernaean Bow, Dominance, Shield Splitter, Silverbranch Bow,
     Oath-Sworn Spear, Barbed Carver, Riptalon, Bloodforge, Toxic Blade, Deathbringer,
     Eye of the Storm, Damaru, Rage.'
   slot_scores:
@@ -660,7 +659,7 @@ builds:
       fit: 0.52
     Briskberry Acorn:
       total: 0.57
-      efficiency: 0.71
+      efficiency: 0.72
       win: 0.48
       pick: 0.47
       fit: 0.52
@@ -671,8 +670,8 @@ builds:
       pick: 0.5
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.48
       fit: 1.0

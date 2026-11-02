@@ -13,15 +13,15 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Runeforged Hammer
   - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,26 +32,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
     Runeforged Hammer:
       total: 0.56
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.55
     Heartseeker:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.72
+      total: 0.61
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -112,18 +112,18 @@ builds:
       fit: 0.49
     Runeforged Hammer:
       total: 0.5
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.43
     Heartseeker:
       total: 0.54
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.69
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.72
+      total: 0.62
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -183,12 +183,12 @@ builds:
       fit: 0.51
     Heartseeker:
       total: 0.53
-      efficiency: 0.47
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.7
+      total: 0.69
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -229,14 +229,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.72
+      total: 0.59
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
     Kinetic Cuirass:
       total: 0.59
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.69
-      efficiency: 0.72
+      total: 0.68
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Amanita Charm:
-      total: 0.72
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -424,20 +424,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.55
       efficiency: 0.66
       win: 0.5
       pick: 0.0
       fit: 0.43
     Breastplate of Valor:
       total: 0.54
-      efficiency: 0.65
+      efficiency: 0.64
       win: 0.5
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
@@ -470,15 +470,15 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Runeforged Hammer
   - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Eye of the Storm — magical protection
-    swap_item: Eye of the Storm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -489,26 +489,26 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
     Runeforged Hammer:
       total: 0.56
-      efficiency: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.55
     Heartseeker:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.55
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -531,11 +531,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Eye of the Storm
-  - Heartseeker
+  - Runeforged Hammer
   - Erosion
   - Sanguine Lash
   flex_slots:
-  - Kinetic Cuirass
+  - Eye of the Storm
   - Sanguine Lash
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,14 +554,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
-      efficiency: 0.72
+      total: 0.64
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.58
     Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -571,12 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Heartseeker:
+    Runeforged Hammer:
       total: 0.56
-      efficiency: 0.47
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.55
     Erosion:
       total: 0.57
       efficiency: 0.51
@@ -591,13 +591,13 @@ builds:
       fit: 0.68
   swaps:
   - added: Sanguine Lash
-    removed: Toxic Blade
+    removed: Heartseeker
     reason: Conquest community 57% win over 204 matches (vs 48% on this god), taking
-      the model's weakest slot from Toxic Blade
+      the model's weakest slot from Heartseeker
   - added: Kinetic Cuirass
-    removed: Runeforged Hammer
+    removed: Toxic Blade
     reason: Conquest community 58% win over 113 matches (vs 48% on this god), taking
-      the model's weakest slot from Runeforged Hammer
+      the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001
 ---
