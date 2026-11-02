@@ -196,19 +196,106 @@ def test_shipped_penetration_columns_disagree_by_a_lot():
 
 def test_live_penetration_columns_are_still_two_columns():
     """The live half. That the two stay SEPARATE columns is structural and is
-    enforced; how far apart they sit is a property of the patch's item set
-    (4.5x, then 1.9x on Open Beta 40, 1.38x on Open Beta 46) and is reported
-    as a warning, because blocking a patch's data over it would keep stale
-    prices live to protect a ratio nobody fits against."""
+    enforced; how far apart they sit is a property of the patch's item set and
+    is reported as a warning, because blocking a patch's data over it would
+    keep stale prices live to protect a ratio nobody fits against.
+
+    The warning reads the SHIPPED fit — the pricing flags `_weights.yaml`
+    turns on — against `efficiency.PENETRATION_SPLIT_FLOOR`. It used to read
+    the raw fit at 1.5x, and fired on Open Beta 46 (raw 1.92x -> 1.39x) for a
+    shift the shipped fit absorbed (1.26x -> 1.10x, 0 of 90 cores moved). The
+    raw ratio is still in the message, as information."""
     import warnings
     from smite import notes, recommend
     items = [notes.read_note(p)[0] for p in (recommend.DATA_ROOT / "Items").glob("*.md")]
-    gold, _ = efficiency.fit_gold_values([i for i in items if i.get("name")])
-    assert "Penetration" in gold and "Penetration %" in gold
-    assert gold["Penetration"] > 0 and gold["Penetration %"] > 0
-    if gold["Penetration %"] <= 1.5 * gold["Penetration"]:
-        warnings.warn(f"penetration columns have converged: {gold['Penetration %']:.1f} vs "
-                      f"{gold['Penetration']:.1f} gold/point — re-read efficiency's split rationale")
+    split = efficiency.penetration_split([i for i in items if i.get("name")])
+    for cols in (split["shipped"], split["raw"]):
+        assert cols["flat"] > 0 and cols["percent"] > 0
+    if split["collapsed"]:
+        warnings.warn(split["report"] + "\n  re-read efficiency's split rationale")
+
+
+def _flags_snapshot():
+    return {k: getattr(efficiency, k) for k in efficiency.PRICING_FLAGS}
+
+
+def test_penetration_split_reads_the_shipped_pricing_config():
+    """The check is only worth having on the model the site serves. Its
+    shipped ratio must be the fit `recommend.main` and the gates compute after
+    `apply_pricing_flags(_weights.yaml)`, the raw ratio must be the flags-off
+    fit, and the module must be left as it was found."""
+    from smite import recommend, scoring
+    from smite.tests import frozen
+    items = frozen.items()
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    before = _flags_snapshot()
+    split = efficiency.penetration_split(items)
+    assert _flags_snapshot() == before
+
+    prior = efficiency.apply_pricing_flags(weights)
+    try:
+        shipped, _ = efficiency.fit_gold_values(items)
+    finally:
+        efficiency.restore_pricing_flags(prior)
+    prior = efficiency.apply_pricing_flags({})
+    try:
+        raw, _ = efficiency.fit_gold_values(items)
+    finally:
+        efficiency.restore_pricing_flags(prior)
+
+    assert split["shipped"]["percent"] == pytest.approx(shipped["Penetration %"])
+    assert split["shipped"]["flat"] == pytest.approx(shipped["Penetration"])
+    assert split["raw"]["percent"] == pytest.approx(raw["Penetration %"])
+    assert split["raw"]["flat"] == pytest.approx(raw["Penetration"])
+    # The two configs genuinely differ here (1.26x vs 1.92x on OB40), so this
+    # test would notice the check sliding back to the raw fit.
+    assert abs(split["shipped"]["ratio"] - split["raw"]["ratio"]) > 0.3
+    assert "information only" in split["report"]
+
+
+@pytest.mark.parametrize("patch, loader, shipped_ratio", [
+    ("Open Beta 40", "items", 1.258),
+    ("Open Beta 46", "ob46_items", 1.104),
+])
+def test_penetration_split_does_not_fire_on_the_patches_it_was_calibrated_on(
+        patch, loader, shipped_ratio):
+    """Both patches are real data the warning was wrong to worry about: PR #68
+    showed OB46's shift moves no core. The shipped ratio is pinned loosely so
+    a change in what the check reads shows up here, not as a silent pass."""
+    from smite.tests import frozen
+    split = efficiency.penetration_split(getattr(frozen, loader)())
+    assert not split["collapsed"], (patch, split["report"])
+    assert split["shipped"]["ratio"] == pytest.approx(shipped_ratio, abs=0.01)
+    assert split["shipped"]["ratio"] > efficiency.PENETRATION_SPLIT_FLOOR
+
+
+def test_penetration_split_fires_when_the_shipped_fit_collapses_the_ratio():
+    """A constructed pool priced exactly as cost = 100 + 20/Strength + 40/flat
+    + 38/percent penetration, so percent is genuinely cheaper per point than
+    flat. P2 also carries an Adaptive Stat clause worth 30 Strength (600g).
+    The shipped fit prices that clause (`price_adaptive`) and recovers 0.95x,
+    under the floor. The raw fit cannot see it, parks the 600g on P2's
+    percentage penetration and reads 1.51x — which the old raw 1.5x check
+    would have passed. So this fires only because it reads the shipped fit."""
+    adaptive = "Adaptive Stat: +30 Strength or +40 Intelligence (based on highest item stat)."
+    pool = [
+        {"name": "F1", "cost": 900, "tier": 3, "stats": {"Penetration": "10", "Strength": "20"}},
+        {"name": "F2", "cost": 1500, "tier": 3, "stats": {"Penetration": "20", "Strength": "30"}},
+        {"name": "P1", "cost": 880, "tier": 3, "stats": {"Penetration": "10%", "Strength": "20"}},
+        {"name": "P2", "cost": 2060, "tier": 3, "stats": {"Penetration": "20%", "Strength": "30"},
+         "passive": adaptive},
+        {"name": "S1", "cost": 900, "tier": 3, "stats": {"Strength": "40"}},
+        {"name": "S2", "cost": 1300, "tier": 3, "stats": {"Strength": "60"}},
+    ]
+    split = efficiency.penetration_split(pool)
+    assert split["shipped"]["ratio"] == pytest.approx(0.95, abs=1e-6)
+    assert split["raw"]["ratio"] > 1.5
+    assert split["collapsed"]
+    assert "COLLAPSED" in split["report"]
+
+    # The converse: the same pool with flags OFF as the "shipped" config is
+    # the old behaviour, and it does not fire.
+    assert not efficiency.penetration_split(pool, weights={})["collapsed"]
 
 
 def test_single_carrier_stat_gets_no_column():
