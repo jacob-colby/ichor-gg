@@ -14,6 +14,7 @@ import pytest
 
 from smite import (assemble, build_index, build_quality as bq, combat, efficiency,
                    notes, passives, recommend, scoring)
+from smite.tests import frozen
 
 
 @pytest.fixture(scope="module")
@@ -21,8 +22,19 @@ def items_by_name():
     return {it["name"]: it for it in recommend.load_items()}
 
 
+@pytest.fixture(scope="module")
+def frozen_items():
+    """Open Beta 40's items: the worked example was computed by hand on them,
+    and is only checkable against the inputs it was computed from."""
+    return frozen.items_by_name()
+
+
 def _god(name):
     return notes.read_note(recommend.DATA_ROOT / "Gods" / f"{name}.md")[0]
+
+
+def _frozen_god(name):
+    return frozen.god(name)
 
 
 @pytest.fixture(autouse=True)
@@ -41,12 +53,13 @@ MEDUSA_OURS = ["Berserker's Shield", "Jotunn's Revenge", "Nimble Ring", "Death M
 
 # ── The worked example ────────────────────────────────────────────────────
 
-def test_medusa_reproduces_the_hand_computation(items_by_name):
-    """Computed by hand on 2026-08-21, before the module existed. Every figure
-    to 0.1 — a module that differs has misread one of the four traps below."""
-    god = _god("Medusa")
-    community = bq.profile(god, MEDUSA_COMMUNITY, items_by_name)
-    ours = bq.profile(god, MEDUSA_OURS, items_by_name)
+def test_medusa_reproduces_the_hand_computation(frozen_items):
+    """Computed by hand on 2026-08-21, before the module existed, on Open
+    Beta 40's numbers (frozen). Every figure to 0.1 — a module that differs
+    has misread one of the four traps below."""
+    god = _frozen_god("Medusa")
+    community = bq.profile(god, MEDUSA_COMMUNITY, frozen_items)
+    ours = bq.profile(god, MEDUSA_OURS, frozen_items)
 
     assert community["cost"] == 13750
     assert ours["cost"] == 15400
@@ -66,37 +79,46 @@ def test_medusa_reproduces_the_hand_computation(items_by_name):
         assert prof["total_dps"][prot] == pytest.approx(total, abs=0.1)
 
 
-def test_medusa_viper_shot_is_skipped_by_the_shared_parser_not_by_special_case(items_by_name):
+def test_medusa_viper_shot_is_skipped_by_the_shared_parser_not_by_special_case():
     """The hand computation excluded Viper Shot. So does the module — because
     its scaling line reads `Damage Scaling Per Tick:`, which
     `damage_value.ability_damage_components` does not accept, and an ability
     with ranks and no scaling is skipped everywhere. No Medusa-shaped rule."""
-    counted, dropped = bq.ability_rotation(_god("Medusa"))
+    counted, dropped = bq.ability_rotation(_frozen_god("Medusa"))
     assert [a["name"] for a in counted] == ["Acid Spray", "Lacerate", "Petrify"]
     assert dropped == []
     code = inspect.getsource(bq).split('"""', 2)[2]   # past the module docstring
     assert "Viper" not in code
 
 
-def test_medusa_per_1000g_divides_by_the_builds_own_gold(items_by_name):
-    ours = bq.profile(_god("Medusa"), MEDUSA_OURS, items_by_name)
+def test_medusa_per_1000g_divides_by_the_builds_own_gold(frozen_items):
+    ours = bq.profile(_frozen_god("Medusa"), MEDUSA_OURS, frozen_items)
     assert ours["per_1000g"]["total_dps"][70] == pytest.approx(314.8 / 15.4, abs=0.05)
     assert ours["per_1000g"]["ehp_physical"] == pytest.approx(ours["ehp_physical"] / 15.4)
+
+
+def test_per_1000g_divides_by_the_builds_own_gold_on_live_data(items_by_name):
+    """The same identity on whatever the items cost this patch."""
+    ours = bq.profile(_god("Medusa"), MEDUSA_OURS, items_by_name)
+    thousands = sum(float(items_by_name[n]["cost"]) for n in MEDUSA_OURS) / 1000
+    assert ours["cost"] == pytest.approx(thousands * 1000)
+    assert ours["per_1000g"]["total_dps"][70] == pytest.approx(ours["total_dps"][70] / thousands)
+    assert ours["per_1000g"]["ehp_physical"] == pytest.approx(ours["ehp_physical"] / thousands)
 
 
 # ── The four traps ────────────────────────────────────────────────────────
 
 def test_attack_speed_per_level_is_a_percent():
     """Medusa: 1.0 base at 1.4 per level is 1.266 at level 20, not 27.6."""
-    assert bq.base_attack_speed(_god("Medusa"), 20) == pytest.approx(1.266)
-    assert bq.base_attack_speed(_god("Medusa"), 1) == pytest.approx(1.0)
+    assert bq.base_attack_speed(_frozen_god("Medusa"), 20) == pytest.approx(1.266)
+    assert bq.base_attack_speed(_frozen_god("Medusa"), 1) == pytest.approx(1.0)
 
 
-def test_attack_power_correction_is_combats_not_reimplemented(items_by_name):
+def test_attack_power_correction_is_combats_not_reimplemented(frozen_items):
     """0.81 on the base only, never on per-level growth — the module calls
     `combat.god_attack_power` rather than carrying its own copy."""
-    god = _god("Medusa")
-    prof = bq.profile(god, MEDUSA_COMMUNITY, items_by_name)
+    god = _frozen_god("Medusa")
+    prof = bq.profile(god, MEDUSA_COMMUNITY, frozen_items)
     assert prof["attack_power"] == pytest.approx(combat.god_attack_power(god, 20))
     assert prof["attack_power"] == pytest.approx(44.4 * 0.81 + 2.4 * 19)
     assert "ATTACK_POWER_SCALE" not in inspect.getsource(bq).split('"""', 2)[2]
@@ -123,7 +145,7 @@ def test_a_chain_god_swings_at_the_chains_mean(items_by_name):
     """Thanatos's 1 / 0.75 / 1.5 chain averages 1.0833 per swing; the
     multipliers apply to swing time too, so neither the first hit nor the
     sum is the sustained figure."""
-    god = _god("Thanatos")
+    god = _frozen_god("Thanatos")
     prof = bq.profile(god, [], items_by_name)
     assert prof["mean_swing"] == pytest.approx(1.0833, abs=1e-3)
     assert prof["raw_basic"] == pytest.approx(combat.god_attack_power(god, 20) * prof["mean_swing"])
@@ -136,17 +158,37 @@ def test_deathbringer_is_the_one_passive_combat_reads(items_by_name):
     assert bq.crit_multiplier_for(["Death Metal"]) == pytest.approx(1.5)
 
 
-def test_effective_health_is_level_20_base_plus_items(items_by_name):
+def test_effective_health_is_level_20_base_plus_items(frozen_items):
     """EHP = HP x (1 + prot/100) off the scraped base at level 20 and the
     build's Max Health / protections — `combat.effective_health`, not a
-    reimplementation."""
-    god = _god("Medusa")
-    prof = bq.profile(god, ["Berserker's Shield"], items_by_name)
+    reimplementation. Open Beta 40's numbers (frozen)."""
+    god = _frozen_god("Medusa")
+    prof = bq.profile(god, ["Berserker's Shield"], frozen_items)
     health = 569.48 + 86.48 * 19 + 200
     phys = 18.76 + 2.76 * 19 + 40
     assert prof["health"] == pytest.approx(health)
     assert prof["ehp_physical"] == pytest.approx(combat.effective_health(health, phys))
     assert prof["ehp_magical"] == pytest.approx(combat.effective_health(health, 25.3 + 1.38 * 19))
+
+
+def test_effective_health_reads_the_live_god_and_items_not_constants(items_by_name):
+    """The same identity on the current patch: base + 19 levels of growth +
+    the item's own Max Health and protection, read from the live notes."""
+    god = _god("Medusa")
+    shield = items_by_name["Berserker's Shield"]
+    prof = bq.profile(god, ["Berserker's Shield"], items_by_name)
+    base = god["base_stats"]
+    item = efficiency.item_stat_values(shield)
+
+    def at20(key):
+        return base[key]["base"] + base[key]["per_level"] * 19
+
+    health = at20("health") + item.get("Max Health", 0.0)
+    assert prof["health"] == pytest.approx(health)
+    assert prof["ehp_physical"] == pytest.approx(combat.effective_health(
+        health, at20("physical_prot") + item.get("Physical Protection", 0.0)))
+    assert prof["ehp_magical"] == pytest.approx(combat.effective_health(
+        health, at20("magical_prot") + item.get("Magical Protection", 0.0)))
 
 
 def test_an_ability_without_a_cooldown_is_dropped_and_named(items_by_name):

@@ -25,6 +25,18 @@
 # The digit is the sub-shape. Tractability is a property of the class, argued
 # once in docs/PASSIVES.md; per-item notes say only what the clause is and
 # which reference or constant it would need.
+#
+# A REWORKED PASSIVE IS A NEW ENTRY, NOT AN EDIT. When a patch rewrites a
+# passive into a different shape, the item takes `variants:` — one per text,
+# each with a `match:` substring that occurs in that text and no other — and
+# the test classifies the item by whichever variant its LIVE passive matches.
+# An item whose text matches no variant counts as uncatalogued. This is what
+# lets the file be right on the data `main` holds AND on the patch the daily
+# job is about to bring in, which `refresh-data.yml` now requires (it rejects a
+# stats refresh that turns a test red). Open Beta 46 reshaped seven, below;
+# once Open Beta 46 is on `main` the `Open Beta 40` variants are history and
+# may be pruned. An entry WITHOUT variants is not checked against its text —
+# a passive whose numbers moved but whose shape did not needs no change here.
 
 classes:
   A1:
@@ -159,9 +171,17 @@ items:
     priced: [A2]
     note: "per-10-Intelligence conversion into Attack Damage and Attack Speed, priced amplify-only (the Attack Speed half) against the reference"
   Omen Drum:
-    classes: [A1, C5, B2]
-    priced: [A1]
-    note: "Adaptive Stat priced; the mark-and-echo is an active on 90s"
+    variants:
+      - match: "On Use: For"
+        patch: Open Beta 40
+        classes: [A1, C5, B2]
+        priced: [A1]
+        note: "Adaptive Stat priced; the mark-and-echo is an active on 90s"
+      - match: "Dark Resonance"
+        patch: Open Beta 46
+        classes: [A1, C2]
+        priced: [A1]
+        note: "Adaptive Stat priced; each Echo stacks +10% Echo Damage (to 30, halving on expiry) — rate derivable from Echo, the decay needs the clock; +100% while Damaru is Harmonized is a two-item synergy nothing here scores"
   Rod of Tahuti:
     classes: [A2]
     priced: [A2]
@@ -248,8 +268,16 @@ items:
     classes: [C5, C4]
     note: "active +Attack Damage +Attack Speed for 6 attacks on 15s, refreshed by kills"
   Damaru:
-    classes: [C2]
-    note: "crit -> +8% ability damage 5s; echo -> +8% Attack Damage 5s — trigger rates derivable from crit chance and Echo, durations need the clock"
+    variants:
+      - match: "Critically Strike"
+        patch: Open Beta 40
+        classes: [C2]
+        note: "crit -> +8% ability damage 5s; echo -> +8% Attack Damage 5s — trigger rates derivable from crit chance and Echo, durations need the clock"
+      - match: "Stack of Rhythm"
+        patch: Open Beta 46
+        classes: [A1, C2]
+        priced: [A1]
+        note: "Adaptive Stat priced (new on Open Beta 46); Echo hits on gods stack +2% Movement Speed to 5, then +15% for 10s — uptime-gated movement speed"
   Death Metal:
     classes: [C5, A3]
     note: "active swaps Intelligence for 66% Strength and +25% crit for 6s on 45s"
@@ -293,8 +321,15 @@ items:
     classes: [E1]
     note: "wards and gold — ward-economy, the tag that already carries a penalty"
   Eye of the Storm:
-    classes: [C5, E1]
-    note: "toggled vortex that costs your own health"
+    variants:
+      - match: "Toggle Vortex"
+        patch: Open Beta 40
+        classes: [C5, E1]
+        note: "toggled vortex that costs your own health"
+      - match: "Open a storm"
+        patch: Open Beta 46
+        classes: [C2, B2]
+        note: "every 10th Echo on a god opens a 3s storm, 10 + 20% Strength per 0.5s — trigger rate derivable from Echo, damage is the cast channel's"
   Freya's Tears:
     classes: [C3, C1]
     note: "+15/+15 protections for 5s each time 25% of health is lost, 2 stacks — trigger is damage taken"
@@ -329,8 +364,15 @@ items:
     classes: [B2]
     note: "2% of your Strength as a % of the target's max health per ability hit — needs a target health reference; the base-health half is scraped"
   Heartwood Charm:
-    classes: [A4, D1, C5]
-    note: "-20% cooldowns on healing abilities (a standing fraction, healers only); stored healing released by an active"
+    variants:
+      - match: "-20% Cooldowns for your Healing Abilities"
+        patch: Open Beta 40
+        classes: [A4, D1, C5]
+        note: "-20% cooldowns on healing abilities (a standing fraction, healers only); stored healing released by an active"
+      - match: "Increased Healing and Shielding Passive"
+        patch: Open Beta 46
+        classes: [D1, C5]
+        note: "+10% healing and shielding (lands on whoever is healed); stored healing released by an active on 90s — the cooldown clause that made it A4 is gone"
   Helm of Darkness:
     classes: [C5, E1]
     note: "active stealth and wall passthrough on 90s"
@@ -383,8 +425,15 @@ items:
     classes: [C4]
     note: "+30 Intelligence per god kill or assist, 6 stacks, lose 4 on death"
   Oath-Sworn Spear:
-    classes: [B3, C2]
-    note: "-1 physical protection per level (-20 at 20) for 4s per ability hit — flat shred, a flat-penetration equivalent; one hit is the floor"
+    variants:
+      - match: "per your Level"
+        patch: Open Beta 40
+        classes: [B3, C2]
+        note: "-1 physical protection per level (-20 at 20) for 4s per ability hit — flat shred, a flat-penetration equivalent; one hit is the floor"
+      - match: "reduced by 5"
+        patch: Open Beta 46
+        classes: [B3, C4]
+        note: "-5 physical protection for 4s per ability hit, +1 per god kill or assist to 20 — the 5 is the B3 floor; the growth is outcome-triggered"
   Obsidian Shard:
     classes: [C5, A1]
     note: "+20% cap-ignoring penetration on the first ability cast, once per 10s — the stat is priced, the \"first cast\" needs a rotation length"
@@ -431,8 +480,15 @@ items:
     classes: [C1]
     note: "+10% Attack Damage above 50% health, +25% and +7.5% Lifesteal below — the +10% is common to both states and is a FLOOR"
   Rod of Asclepius:
-    classes: [C5, D1]
-    note: "active team heal on 90s"
+    variants:
+      - match: "On Use: Heal all allies"
+        patch: Open Beta 40
+        classes: [C5, D1]
+        note: "active team heal on 90s"
+      - match: "missing Health"
+        patch: Open Beta 46
+        classes: [D1]
+        note: "+10% healing and shielding, more on low-health allies — the active is gone; all of the value lands on the ally healed"
   Runeforged Hammer:
     classes: [C3, B2]
     note: "hard-CC a god, then an attack forges the rune for +50 + 65% of item protections — your own CC rate is kit-derivable, the rest needs a target"
@@ -506,8 +562,15 @@ items:
     classes: [C2]
     note: "+7% Pathfinding per ability used, 3 stacks, 8s — the same clause as Gem of Focus"
   The Cosmic Horror:
-    classes: [A3]
-    note: "Echo > Cooldown Rate gives +20% echo damage, Echo < Cooldown Rate gives +35 Intelligence — decided by the build's own stat line, no uptime; a reference build says which branch"
+    variants:
+      - match: "Echo > Cooldown Rate"
+        patch: Open Beta 40
+        classes: [A3]
+        note: "Echo > Cooldown Rate gives +20% echo damage, Echo < Cooldown Rate gives +35 Intelligence — decided by the build's own stat line, no uptime; a reference build says which branch"
+      - match: "Spawn a tentacle"
+        patch: Open Beta 46
+        classes: [C2, B2]
+        note: "every 4th Echo on a god spawns a tentacle, 45% Intelligence over 1.5s, at most once a second — the A3 build branch is gone"
   The Crusher:
     classes: [B2]
     note: "35% of your Strength per ability hit over 1s, +33% on repeat hits — a per-cast Strength conversion, needing the roster-median ability scaling as the exchange rate"

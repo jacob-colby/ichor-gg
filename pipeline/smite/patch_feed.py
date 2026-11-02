@@ -10,19 +10,41 @@ no documented feed, and its URL scheme is something we would be guessing at.
 SmiteBrain's god index carries no patch field. Steam's `GetNewsForApp` is a
 public, keyless JSON API, and filtered to `steam_community_announcements` it
 is the developer's own posts for app 2437170 — nobody else can write there.
-Patch-notes posts carry the label in the title ("OB46 - King Kappa Update").
 
-NOT VERIFIED LIVE. The sandbox this was written in could not reach
-api.steampowered.com, smite2.com or the wiki. `tests/fixtures/steam_news.json`
-is constructed to GetNewsForApp v2's documented shape, not recorded. The first
-scheduled run after this lands is the first live test; if the title format
-differs, the symptom is "[patch feed] no patch posts in N announcements" in
-the job log and NO change to the data — never a wrong label.
+WHERE THE LABEL ACTUALLY IS — RECORDED, NOT ASSUMED. The first version read the
+label from the TITLE only ("OB46 - King Kappa Update"), from a fixture built to
+the API's documentation. Its first live run (2026-11-02) found nothing newer
+than Open Beta 26. A real response, recorded from a GitHub runner the same day
+(`.github/workflows/probe-steam-feed.yml`, saved as
+`tests/fixtures/recorded/steam/`), shows why: since January 2026 Hi-Rez titles
+patch posts by their headline god or event ("Unleash HEL!", "TO VICTORY with
+NIKE!"), and the label moved into the BODY, in one of three forms:
 
-WHAT A POST MUST LOOK LIKE TO COUNT. Announcement feed only; a label in the
-title (`OB46`, `Open Beta 46`); none of `PREVIEW_WORDS` in the title. The last
-rule matters: Hi-Rez posts previews and PTS notes for a patch before it ships,
-and recording one would flip the label early. A hotfix post for a label
+    title        "Horus Ascends! Take Flight in Update 36"         1 post
+    notes link   smite2.com/news/open-beta-NN-update-notes/        OB22-OB33
+    body text    "[h1]OB 37- Goddess Of Cats Update[/h1]",
+                 "tested in live ... during OB44"                  OB26, 37, 44
+
+So a post is read title first, then the official notes link, then the body;
+`label_source` on each row says which. Checked against the recorded history:
+every label it reads is dated on or after that patch's recorded `first_seen`
+and before the next one's (`test_patch_feed.py`).
+
+STEAM IS NOW THE WEAK SOURCE, and this is a measurement too. The recorded
+response's newest post is 2026-10-06 and carries no label; the newest
+LABELLED post is Open Beta 44 (2026-09-22), while the game and the wiki are on
+Open Beta 46. Hi-Rez stopped announcing every patch on Steam, and of the
+recent ones it did announce, most name no patch anywhere. The wiki's
+Patch_notes index (`stats_refresh`) is the primary due signal; this feed is
+the cross-check, and `cross_check` logs every day the two disagree.
+
+WHAT A POST MUST LOOK LIKE TO COUNT. Announcement feed only; none of
+`PREVIEW_WORDS` in the title; a label from one of the three forms above. A
+body mention is dropped when the text just before it reads as a preview
+("coming", "next", "upcoming", "PTS"): Hi-Rez previews a patch before it ships,
+and recording one would flip the label early. The highest label left in a body
+is the post's — a launch post looks BACK at the last patch ("In OB36, the
+attenuation radius was...") but never past its own. A hotfix post for a label
 already recorded is a no-op by construction.
 
 WHAT IT RECORDS. Only labels NEWER (by number) than the newest recorded, each
@@ -57,6 +79,13 @@ ANNOUNCEMENTS_FEED = "steam_community_announcements"
 FETCH_COUNT = 50
 
 _LABEL_RE = re.compile(r"\b(?:OB|Open\s*Beta)\s*-?\s*(\d{1,3})\b", re.IGNORECASE)
+# "Take Flight in Update 36" — titles only; in a body "update 2" is too loose.
+_TITLE_UPDATE_RE = re.compile(r"\bUpdate\s+(\d{2,3})\b", re.IGNORECASE)
+_NOTES_LINK_RE = re.compile(r"smite2\.com/news/open-beta-(\d{1,3})-update-notes", re.IGNORECASE)
+# Left context that turns a body mention into a preview of a patch not out yet.
+_PREVIEW_CONTEXT = re.compile(r"\b(coming|next|upcoming|preview|pts|public\s+test|later\s+in|"
+                              r"arriv\w*\s+in|planned\s+for|until)\b[^.\]]*$", re.IGNORECASE)
+STATE_FILE = "_patch_feed.json"
 PREVIEW_WORDS = re.compile(r"\b(preview|pts|public\s+test|sneak|teaser|coming\s+soon|trailer|livestream)\b",
                            re.IGNORECASE)
 _URL_RE = re.compile(r"https://[^\s\"'<>\[\]]+")
@@ -84,6 +113,27 @@ def _official_link(item: dict, n: int):
     return url if snapshots.is_official_url(url) else None
 
 
+def post_label(item: dict):
+    """(n, how) for one announcement, or None. `how` is 'title', 'notes-link'
+    or 'body', tried in that order."""
+    title = item.get("title") or ""
+    if PREVIEW_WORDS.search(title):
+        return None
+    for rx in (_LABEL_RE, _TITLE_UPDATE_RE):
+        m = rx.search(title)
+        if m:
+            return int(m.group(1)), "title"
+    body = item.get("contents") or ""
+    links = [int(m.group(1)) for m in _NOTES_LINK_RE.finditer(body)]
+    if links:
+        return max(links), "notes-link"
+    mentions = [int(m.group(1)) for m in _LABEL_RE.finditer(body)
+                if not _PREVIEW_CONTEXT.search(body[max(0, m.start() - 80):m.start()])]
+    if mentions:
+        return max(mentions), "body"
+    return None
+
+
 def patch_posts(payload: dict) -> list:
     """[{patch, first_seen, official_url?}] one per label, earliest post wins.
     Raises on a payload that is not GetNewsForApp's shape — the caller logs."""
@@ -92,13 +142,12 @@ def patch_posts(payload: dict) -> list:
     for item in items:
         if item.get("feedname") != ANNOUNCEMENTS_FEED:
             continue
-        title = item.get("title") or ""
-        m = _LABEL_RE.search(title)
-        if not m or PREVIEW_WORDS.search(title):
+        label = post_label(item)
+        if label is None:
             continue
-        n = int(m.group(1))
+        n, how = label
         day = datetime.fromtimestamp(int(item["date"]), tz=timezone.utc).date().isoformat()
-        row = {"patch": f"Open Beta {n}", "first_seen": day, "source": "steam"}
+        row = {"patch": f"Open Beta {n}", "first_seen": day, "source": "steam", "label_source": how}
         link = _official_link(item, n)
         if link:
             row["official_url"] = link
@@ -148,6 +197,12 @@ def update(data_root: Path = DATA_ROOT, fetch=fetch_news, dry_run: bool = False)
         print(f"[patch feed] no patch posts in {n} announcements — nothing recorded")
         return []
 
+    newest = posts[-1]
+    print(f"[patch feed] newest labelled post: {newest['patch']} ({newest['first_seen']}, "
+          f"read from the {newest['label_source']})")
+    if not dry_run:
+        _write_state(data_root, newest)
+
     history = snapshots.load_patch_history(history_path)
     rows = new_rows(history, posts)
     if not rows:
@@ -162,6 +217,47 @@ def update(data_root: Path = DATA_ROOT, fetch=fetch_news, dry_run: bool = False)
     snapshots._save_history(merged, history_path)
     snapshots.write_current_patch(merged, data_root / "_patch.json")
     return rows
+
+
+def _write_state(data_root: Path, newest: dict) -> None:
+    """What Steam last said, for `cross_check`. No run date in it, so the file
+    only changes when Steam does and a quiet day commits nothing."""
+    body = {k: newest[k] for k in ("patch", "first_seen", "label_source")}
+    path = Path(data_root) / STATE_FILE
+    try:
+        if json.loads(path.read_text(encoding="utf-8")) == body:
+            return
+    except (OSError, ValueError):
+        pass
+    path.write_text(json.dumps(body, indent=2) + "\n", encoding="utf-8")
+
+
+def load_state(data_root: Path = DATA_ROOT) -> dict:
+    try:
+        return json.loads((Path(data_root) / STATE_FILE).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def cross_check(steam: dict, wiki_patch) -> str:
+    """One log line comparing Steam's newest labelled post with the wiki's
+    Patch_notes index. Steam BEHIND the wiki is the normal state since Hi-Rez
+    stopped labelling (a ::notice::); Steam AHEAD means the wiki is lagging and
+    a stats refresh will wait for it (a ::warning::). Neither changes data."""
+    s = snapshots.patch_number((steam or {}).get("patch"))
+    w = snapshots.patch_number(wiki_patch)
+    if s is None or w is None:
+        return (f"::notice::[patch sources] cannot compare: Steam says {(steam or {}).get('patch')}, "
+                f"the wiki says {wiki_patch}")
+    if s == w:
+        return f"[patch sources] agree: Steam and the wiki both say Open Beta {w}"
+    if s < w:
+        return (f"::notice::[patch sources] disagree: Steam's newest labelled post is Open Beta {s} "
+                f"({steam.get('first_seen')}, from the {steam.get('label_source')}), the wiki says "
+                f"Open Beta {w} — Steam is behind; the wiki drives the refresh")
+    return (f"::warning::[patch sources] disagree: Steam says Open Beta {s} "
+            f"({steam.get('first_seen')}), the wiki still says Open Beta {w} — the wiki is behind; "
+            "a stats refresh waits for it")
 
 
 def main(argv=None) -> int:

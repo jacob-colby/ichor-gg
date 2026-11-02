@@ -13,6 +13,14 @@
 #                    2026-11-02 — see that module's docstring). All-or-nothing
 #                    and validated before it writes; it never fails the job.
 #
+# THE TEST GATE. A stats refresh is kept only if the full pytest suite still
+# passes on it (`smite.stats_gate`). A test that fails on the new stats and
+# passes on the old puts the OLD stats back, prints each such test as an
+# ::error::, lets the community data commit anyway, and then fails the run at
+# its last step — so a rejection is loud (red run, owner emailed) and never
+# costs the day's community numbers. The gate runs only on a day the stats
+# actually changed; on every other day it makes no test run.
+#
 # New gods and items are still added by hand: `stats_refresh` refreshes what is
 # tracked, and `watch-wiki.yml` announces what is not.
 name: Refresh community data
@@ -35,7 +43,8 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # A patch day is ~14 min of wiki fetches plus up to three suite runs.
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
 
@@ -48,6 +57,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install "pytest>=8"
 
       - name: Pull community data
         working-directory: pipeline
@@ -70,9 +80,22 @@ jobs:
       # 2.5s floor, ~14 min (measured 2026-11-02). Any
       # fetch failure or validation problem writes nothing and prints a
       # ::warning:: — exit 0 on every path, like patch_feed.
+      - name: Set the current stats aside
+        working-directory: pipeline
+        run: python -m smite.stats_gate save "$RUNNER_TEMP/stats_before"
+
       - name: Refresh wiki stats if a patch landed
         working-directory: pipeline
         run: python -m smite.stats_refresh
+
+      # Before the snapshot, so a rejected refresh banks no patch notes. Exits
+      # 0 whenever it could put the old stats back (a rejection is reported by
+      # the `rejected` output and the last step); exits 1 only if it could NOT,
+      # which stops the job before anything is committed.
+      - name: Test gate — keep the new stats only if the suite still passes
+        id: stats_gate
+        working-directory: pipeline
+        run: python -m smite.stats_gate check "$RUNNER_TEMP/stats_before"
 
       # Patch notes are a diff between two item-stat snapshots, and until this
       # step existed nothing on any schedule wrote one: `write_snapshot` was
@@ -103,6 +126,21 @@ jobs:
         continue-on-error: true
         run: python -m smite.data_audit
 
+      # Advisory, like data_audit. A patch can move a resolved expert claim
+      # with no model change at all (Open Beta 46 put Eye of Providence back
+      # into 4 support cores), and re-baselining that is a human's call — so it
+      # is printed as a warning on the run rather than holding a patch's stats
+      # hostage. See `verdict_patch` in data/_expert_reviews.yaml.
+      - name: Expert-review regressions (advisory)
+        working-directory: pipeline
+        run: |
+          python -m smite.expert_review --check > "$RUNNER_TEMP/expert.txt" 2>&1 || {
+            cat "$RUNNER_TEMP/expert.txt"
+            grep '^REGRESSED' "$RUNNER_TEMP/expert.txt" | sed 's/^/::warning::/'
+            exit 0
+          }
+          cat "$RUNNER_TEMP/expert.txt"
+
       - name: Quality gate
         working-directory: pipeline
         run: python -m smite.validate --check
@@ -129,3 +167,12 @@ jobs:
           wiki item and god stats when a patch landed (smite.stats_refresh),
           then a recompute and reindex."
           git push
+
+      # Last, so the community data above is committed first. A rejected
+      # stats refresh fails the run here, with the failing tests already
+      # printed as ::error:: annotations by the gate step.
+      - name: Fail the run if the stats refresh was rejected
+        if: steps.stats_gate.outputs.rejected == 'true'
+        run: |
+          echo "::error::The wiki stats refresh was rejected by the test gate; the old stats are still live. See the 'Test gate' step."
+          exit 1
