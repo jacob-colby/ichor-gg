@@ -328,3 +328,36 @@ def test_nothing_in_the_model_imports_the_diagnostic():
         names = {a.name for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom))
                  for a in n.names}
         assert not names & {"side_by_side", "passive_sim", "smite.side_by_side", "smite.passive_sim"}
+
+
+# ── Aspect matching ───────────────────────────────────────────────────────
+
+def _note(aspect, rate):
+    return {"builds": [{"source": "community", "aspect": aspect, "aspect_pick_rate": rate,
+                        "aspect_win_rate": 0.55, "slot_order": []}]}
+
+
+def test_an_aspect_played_by_most_of_the_community_is_the_kit():
+    k = sbs.kit_for(_note("Aspect of Heartbreak", 0.79))
+    assert (k["kit"], k["simulated"]) == ("Aspect of Heartbreak", False)
+
+
+def test_a_minority_or_exactly_half_aspect_leaves_the_base_kit():
+    assert sbs.kit_for(_note("Aspect of X", 0.50))["kit"] == "base"
+    assert sbs.kit_for(_note("Aspect of X", 0.20)) ["simulated"] is True
+    assert sbs.kit_for(_note(None, None))["kit"] == "base"
+
+
+def test_an_unsimulated_aspect_god_gets_no_verdict_and_no_count():
+    rows = [{"role": "Mid", "damage_axis": 0.5, "survival_axis": 2.0,
+             "verdict": sbs.ASPECT_NOT_SIMULATED,
+             "kit": {"aspect": "A", "pick_rate": 0.8, "kit": "A", "simulated": False}},
+            {"role": "Mid", "damage_axis": 1.2, "survival_axis": 1.0, "verdict": "Ichor better",
+             "kit": {"aspect": None, "pick_rate": None, "kit": "base", "simulated": True}}]
+    assert sbs.verdict_counts(rows) == {"Mid": {"Ichor better": 1}}
+    assert [r["kit"]["aspect"] for r in sbs.aspect_excluded(rows)] == ["A"]
+
+
+def test_the_frozen_medusa_note_is_on_the_base_kit():
+    note = json.loads((FROZEN / "medusa_conquest.json").read_text(encoding="utf-8"))
+    assert sbs.kit_for(note)["kit"] == "base"
