@@ -39,7 +39,7 @@ builds:
       fit: 0.7
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -106,7 +106,7 @@ builds:
       fit: 0.76
     Berserker's Shield:
       total: 0.6
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -164,7 +164,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.6
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -235,8 +235,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Berserker's Shield:
-      total: 0.6
-      efficiency: 0.75
+      total: 0.59
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -301,13 +301,13 @@ builds:
       fit: 0.45
     Berserker's Shield:
       total: 0.54
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.34
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -366,7 +366,7 @@ builds:
       fit: 0.7
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44

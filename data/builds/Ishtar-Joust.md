@@ -51,7 +51,7 @@ builds:
       fit: 0.63
     Dominance:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -105,8 +105,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -236,7 +236,7 @@ builds:
       fit: 0.74
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -273,9 +273,9 @@ builds:
   - Riptalon
   - Silverbranch Bow
   - The Crusher
-  - Heartseeker
+  - Titan's Bane
   flex_slots:
-  - Heartseeker
+  - Titan's Bane
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -323,12 +323,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Heartseeker:
+    Titan's Bane:
       total: 0.57
-      efficiency: 0.44
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -372,7 +372,7 @@ builds:
       fit: 0.77
     Dominance:
       total: 0.51
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -430,14 +430,14 @@ builds:
       pick: 0.0
       fit: 0.6
     Chandra's Grace:
-      total: 0.51
+      total: 0.5
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.58
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.64
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -508,7 +508,7 @@ builds:
       fit: 0.63
     Dominance:
       total: 0.56
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66

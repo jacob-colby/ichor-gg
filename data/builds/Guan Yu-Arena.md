@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Void Stone
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
@@ -14,14 +14,14 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Void Stone
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Stone:
-      total: 0.58
-      efficiency: 0.46
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.62
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,6 +98,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Eros' Bow:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -119,12 +125,6 @@ builds:
     Pharaoh's Curse:
       total: 0.61
       efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
-    Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.82
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -236,7 +236,7 @@ builds:
       fit: 0.75
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -260,7 +260,7 @@ builds:
       fit: 0.71
     Soul Gem:
       total: 0.74
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -333,7 +333,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Void Stone
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
@@ -341,14 +341,14 @@ builds:
   - Shogun's Ofuda
   flex_slots:
   - Shogun's Ofuda
-  - Void Stone
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,12 +358,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Void Stone:
-      total: 0.58
-      efficiency: 0.46
+    Eros' Bow:
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.62
     Amanita Charm:
       total: 0.83
       efficiency: 0.65

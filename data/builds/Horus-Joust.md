@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
   flex_slots:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -26,8 +26,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -37,12 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Jotunn's Revenge:
+    Stygian Anchor:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.68
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.56
@@ -177,7 +177,7 @@ builds:
       fit: 0.7
     Jotunn's Revenge:
       total: 0.64
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -236,7 +236,7 @@ builds:
       fit: 0.78
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -301,13 +301,13 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.86
     Freya's Tears:
-      total: 0.61
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -334,14 +334,14 @@ builds:
   archetype: model
   slot_order:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   - Erosion
   flex_slots:
   - Brawler’s Beat Stick
-  - Jotunn's Revenge
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -353,8 +353,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -364,12 +364,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Jotunn's Revenge:
+    Stygian Anchor:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.68
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.56

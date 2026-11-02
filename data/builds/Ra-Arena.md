@@ -6,43 +6,43 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lotus Sickle
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.63
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.63
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
     Obsidian Shard:
       total: 0.7
       efficiency: 0.58
@@ -57,7 +57,7 @@ builds:
       fit: 0.72
     Dreamer's Idol:
       total: 0.71
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Divine Ruin
-  - Bancroft's Talon
+  - Lotus Sickle
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
+  - Soul Gem
   - Triton's Conch
   flex_slots:
   - Doom Orb
-  - Bancroft's Talon
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -93,23 +93,17 @@ builds:
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Divine Ruin:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Bancroft's Talon:
+    Lotus Sickle:
       total: 0.55
-      efficiency: 0.46
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.53
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
     Triton's Conch:
       total: 0.63
       efficiency: 0.38
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Spear of Desolation:
-      total: 0.68
+      total: 0.69
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.56
     Dreamer's Idol:
       total: 0.63
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -319,7 +319,7 @@ builds:
       fit: 0.81
     Dreamer's Idol:
       total: 0.75
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -366,7 +366,7 @@ builds:
       fit: 0.57
     Nimble Ring:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -384,13 +384,13 @@ builds:
       fit: 0.29
     Eros' Bow:
       total: 0.59
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.7
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -398,14 +398,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lotus Sickle
   - Chronos' Pendant
   - Heartwood Charm
   - Spear of Desolation
-  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Totem of Death
+  - Chronos' Pendant
   - Heartwood Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Chronos' Pendant:
       total: 0.6
       efficiency: 0.55
@@ -441,12 +447,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Totem of Death:
-      total: 0.57
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.87
@@ -463,43 +463,43 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lotus Sickle
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.63
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.63
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
     Obsidian Shard:
       total: 0.7
       efficiency: 0.58
@@ -514,7 +514,7 @@ builds:
       fit: 0.72
     Dreamer's Idol:
       total: 0.71
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.92
@@ -594,15 +594,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Spear of Desolation
+  - Lotus Sickle
   - Doom Orb
-  - The World Stone
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Lotus Sickle
   - Doom Orb
-  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -619,21 +619,15 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.59
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.43
     Doom Orb:
       total: 0.5
       efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
-    The World Stone:
-      total: 0.5
-      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -643,6 +637,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Eros' Bow:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -705,7 +705,7 @@ builds:
       fit: 0.45
     Dreamer's Idol:
       total: 0.58
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -819,7 +819,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.61
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -885,7 +885,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.49
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -909,13 +909,13 @@ builds:
       fit: 0.17
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
     Soul Gem:
       total: 0.77
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -925,14 +925,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Screeching Gargoyle
+  - Lotus Sickle
   - Genji's Guard
-  - Void Stone
   - Spear of Desolation
+  - Rod of Tahuti
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Triton's Conch
-  - Void Stone
+  - Screeching Gargoyle
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -951,40 +951,40 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.55
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Lotus Sickle:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Void Stone:
-      total: 0.54
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Spear of Desolation:
       total: 0.63
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
     Soul Gem:
       total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Triton's Conch:
-      total: 0.55
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested

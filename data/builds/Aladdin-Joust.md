@@ -32,8 +32,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -56,7 +56,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Heartseeker:
-      total: 0.67
+      total: 0.66
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Heartseeker:
-      total: 0.61
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Spear of Desolation
+  - Pendulum Blade
   - Obsidian Shard
-  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Heartseeker
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -165,13 +165,19 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.73
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of Desolation:
-      total: 0.68
+      total: 0.69
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Pendulum Blade:
+      total: 0.59
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.87
@@ -229,8 +229,8 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -294,8 +294,8 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.81
-      efficiency: 0.69
+      total: 0.8
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.93
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.89
     Heartseeker:
-      total: 0.72
+      total: 0.71
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.91
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -390,7 +390,7 @@ builds:
       fit: 0.61
     Soul Gem:
       total: 0.76
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -398,7 +398,7 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Chronos' Pendant
+  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
@@ -406,7 +406,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - Chronos' Pendant
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,15 +423,15 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Chronos' Pendant:
-      total: 0.6
-      efficiency: 0.55
+    Lotus Sickle:
+      total: 0.61
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -489,8 +489,8 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.79
-      efficiency: 0.69
+      total: 0.78
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.9
@@ -513,7 +513,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Heartseeker:
-      total: 0.67
+      total: 0.66
       efficiency: 0.44
       win: 0.5
       pick: 0.0

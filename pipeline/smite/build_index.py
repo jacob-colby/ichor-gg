@@ -152,6 +152,20 @@ def _enrich_items(items, tags, eff=None):
     return items
 
 
+def _flag_uncatalogued_passives(items, data_root: Path) -> None:
+    """`passive_uncatalogued: true` on an item the passive catalogue holds as
+    `uncatalogued` — added unattended by `smite.new_entities`, its passive
+    not yet classified, so the model values it on its stat line alone. The
+    viewer says so beside the passive. Absent on every other item."""
+    path = data_root / "_passive_classes.yaml"
+    if not path.exists():
+        return
+    entries = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("items") or {}
+    for it in items:
+        if (entries.get(it["name"]) or {}).get("uncatalogued"):
+            it["passive_uncatalogued"] = True
+
+
 def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     """`{god: {mode: {item: score}}}` — base item scores for the viewer's
     draft-aware re-rank, one table per mode.
@@ -291,6 +305,7 @@ def build_index(repo_root: Path) -> dict:
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
     _attach_item_meta(items, builds, _load_community_items(data_root))
+    _flag_uncatalogued_passives(items, data_root)
     _attach_popular_items(builds)
     index = {"gods": gods, "items": items, "builds": builds,
              # The fitted marginal gold price of each stat, plus the fit's

@@ -17,8 +17,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Stygian Anchor — magical protection
     swap_item: Stygian Anchor
@@ -78,14 +78,14 @@ builds:
   - Rod of Tahuti
   - Eros' Bow
   - Erosion
-  - Stampede
+  - Triton's Conch
   flex_slots:
   - Bancroft's Talon
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -117,8 +117,8 @@ builds:
       pick: 0.0
       fit: 0.29
     Eros' Bow:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -128,12 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Stampede:
-      total: 0.55
-      efficiency: 0.51
+    Triton's Conch:
+      total: 0.56
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.77
     Void Stone:
-      total: 0.62
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.41
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.42
     Eros' Bow:
-      total: 0.52
-      efficiency: 0.42
+      total: 0.53
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -365,14 +365,14 @@ builds:
       pick: 0.0
       fit: 0.38
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.51
     Eros' Bow:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -436,7 +436,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Amanita Charm:
-      total: 0.81
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -489,14 +489,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.79
     Eros' Bow:
-      total: 0.6
-      efficiency: 0.52
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Pharaoh's Curse:
-      total: 0.59
+      total: 0.58
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       fit: 0.66
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -539,8 +539,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Stygian Anchor — magical protection
     swap_item: Stygian Anchor
@@ -604,8 +604,8 @@ builds:
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -631,7 +631,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0

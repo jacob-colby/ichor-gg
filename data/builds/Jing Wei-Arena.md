@@ -23,8 +23,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -51,7 +51,7 @@ builds:
       fit: 0.75
     Dominance:
       total: 0.55
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -112,7 +112,7 @@ builds:
       fit: 0.63
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.97
     Silverbranch Bow:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -442,8 +442,8 @@ builds:
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.64
+      total: 0.52
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Hydra's Lament:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -480,8 +480,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.63
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -508,7 +508,7 @@ builds:
       fit: 0.75
     Dominance:
       total: 0.55
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.64

@@ -1,0 +1,64 @@
+{
+  "added": [
+    {
+      "name": "Nike",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Hachiman",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Kuzenbo",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Hel",
+      "kind": "god",
+      "date": "2026-11-02"
+    },
+    {
+      "name": "Lotus Sickle",
+      "kind": "item",
+      "date": "2026-11-02",
+      "passive": "uncatalogued"
+    },
+    {
+      "name": "Soul Locket",
+      "kind": "item",
+      "date": "2026-11-02",
+      "passive": "uncatalogued"
+    }
+  ],
+  "last_run": {
+    "date": "2026-11-02",
+    "status": "added",
+    "excluded": [],
+    "skipped": [
+      {
+        "name": "Kumbhakarna",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      },
+      {
+        "name": "Heimdallr",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      },
+      {
+        "name": "Nox",
+        "kind": "god",
+        "why": "incomplete: base stats read as zero (a placeholder page): ['health', 'attack_speed', 'attack_power', 'move_speed']"
+      },
+      {
+        "name": "Maman Brigitte",
+        "kind": "god",
+        "why": "no page yet (HTTP 404)"
+      }
+    ],
+    "deferred": []
+  }
+}

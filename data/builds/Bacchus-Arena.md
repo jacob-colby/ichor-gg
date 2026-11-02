@@ -204,24 +204,24 @@ builds:
   archetype: attack-speed
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Soul Gem
   flex_slots:
   - Shogun's Ofuda
-  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -234,18 +234,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
-    Berserker's Shield:
-      total: 0.59
-      efficiency: 0.75
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Amanita Charm:
-      total: 0.79
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.92
+    Erosion:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Pharaoh's Curse:
       total: 0.62
       efficiency: 0.51
@@ -260,7 +260,7 @@ builds:
       fit: 0.73
     Soul Gem:
       total: 0.71
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Jotunn's Revenge
+  - Void Stone
   - Freya's Tears
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Jotunn's Revenge
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -299,12 +299,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+    Void Stone:
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.69
     Freya's Tears:
       total: 0.61
       efficiency: 0.58
@@ -334,21 +334,21 @@ builds:
   archetype: strength
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -364,12 +364,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Amanita Charm:
       total: 0.81
       efficiency: 0.65
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -409,8 +409,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Void Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0

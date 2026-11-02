@@ -96,11 +96,11 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
-  - Heartseeker
   flex_slots:
-  - Heartseeker
+  - Tekko-Kagi
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,15 +116,16 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Titan''s Bane, The Crusher, The Reaper, Heartseeker, Tekko-Kagi, Pendulum
+    this god: Titan''s Bane, The Crusher, The Reaper, Tekko-Kagi, Heartseeker, Pendulum
     Blade, Avatar''s Parashu, Arondight, Transcendence, Runeforged Hammer, Hydra''s
-    Lament, Avenging Blade, Eye of the Storm, Shield Splitter, Golden Blade, Dominance,
-    Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Barbed Carver, Toxic
-    Blade, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Sanguine Lash, Damaru.'
+    Lament, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade, Dominance,
+    Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic Blade, Barbed
+    Carver, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine
+    Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 1.0
@@ -140,6 +141,12 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.91
+    Tekko-Kagi:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.55
+      pick: 0.0
+      fit: 0.91
     The Crusher:
       total: 0.57
       efficiency: 0.49
@@ -149,12 +156,6 @@ builds:
     Titan's Bane:
       total: 0.59
       efficiency: 0.54
-      win: 0.55
-      pick: 0.0
-      fit: 1.0
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.44
       win: 0.55
       pick: 0.0
       fit: 1.0
@@ -183,21 +184,21 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Titan''s
     Bane, Heartseeker, The Crusher, Arondight, The Reaper, Transcendence, Hydra''s
     Lament, Tekko-Kagi, Pendulum Blade, Avatar''s Parashu, Runeforged Hammer, Dominance,
-    Avenging Blade, Eye of the Storm, Shield Splitter, Genji''s Guard, Bloodforge,
-    Lernaean Bow, Breastplate of Valor, Golden Blade, Damaru, Chandra''s Grace, Oath-Sworn
-    Spear, Barbed Carver, Silverbranch Bow, Yogi''s Necklace, Toxic Blade, Rage.'
+    Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard, Bloodforge,
+    Lernaean Bow, Damaru, Breastplate of Valor, Golden Blade, Chandra''s Grace, Oath-Sworn
+    Spear, Silverbranch Bow, Barbed Carver, Yogi''s Necklace, Toxic Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 0.71
@@ -262,14 +263,14 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Titan''s Bane, The Crusher, Heartseeker, The Reaper, Pendulum Blade, Arondight,
     Tekko-Kagi, Avatar''s Parashu, Hydra''s Lament, Transcendence, Runeforged Hammer,
-    Avenging Blade, Silverbranch Bow, Damaru, Genji''s Guard, Eye of the Storm, Shield
-    Splitter, Toxic Blade, Breastplate of Valor, Dominance, Bloodforge, Lernaean Bow,
-    Chandra''s Grace, Golden Blade, Riptalon, Oath-Sworn Spear, Barbed Carver, Eye
-    of Erebus.'
+    Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield Splitter, Eye
+    of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge, Lernaean
+    Bow, Chandra''s Grace, Golden Blade, Riptalon, Oath-Sworn Spear, Barbed Carver,
+    Eye of Erebus.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.69
+      total: 0.61
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 0.78
@@ -298,7 +299,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.52
+      total: 0.51
       efficiency: 0.44
       win: 0.55
       pick: 0.0
@@ -333,15 +334,15 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield Splitter, Shield of the Phoenix, The Reaper, Runeforged
-    Hammer, Shifter''s Shield, Phoenix Feather, Genji''s Guard, Yogi''s Necklace,
-    Titan''s Bane, Erosion, Eye of Providence, Draconic Scale, Breastplate of Valor,
-    Avenging Blade, Oni Hunter''s Garb, Midgardian Mail, Wyrmskin Hide, The Crusher,
+    Hammer, Shifter''s Shield, Genji''s Guard, Phoenix Feather, Yogi''s Necklace,
+    Titan''s Bane, Erosion, Eye of Providence, Oni Hunter''s Garb, Draconic Scale,
+    Avenging Blade, Breastplate of Valor, Midgardian Mail, Wyrmskin Hide, The Crusher,
     Chandra''s Grace, Leviathan''s Hide, Heartseeker, Stone of Binding, Magi''s Cloak,
     Ancile, Hydra''s Lament.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 0.44
@@ -370,7 +371,7 @@ builds:
       pick: 0.15
       fit: 0.38
     Amanita Charm:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
       win: 0.55
       pick: 0.0
@@ -408,14 +409,14 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Titan''s Bane, The Crusher, The Reaper, Tekko-Kagi, Heartseeker,
     Avatar''s Parashu, Pendulum Blade, Avenging Blade, Silverbranch Bow, Arondight,
-    Toxic Blade, Oath-Sworn Spear, Transcendence, Runeforged Hammer, Riptalon, Eye
-    of the Storm, Hydra''s Lament, Shield Splitter, Dominance, Bloodforge, Lernaean
-    Bow, Golden Blade, Barbed Carver, Screeching Gargoyle, Damaru, Genji''s Guard,
-    Rage, Musashi''s Dual Swords.'
+    Toxic Blade, Oath-Sworn Spear, Transcendence, Runeforged Hammer, Riptalon, Hydra''s
+    Lament, Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow,
+    Golden Blade, Barbed Carver, Screeching Gargoyle, Damaru, Genji''s Guard, Rage,
+    Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 1.0
@@ -479,10 +480,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Tekko-Kagi, Silverbranch Bow, Riptalon, Golden Blade, Lernaean Bow,
-    The Reaper, Toxic Blade, Titan''s Bane, Dominance, Qin''s Blade, The Crusher,
+    Toxic Blade, The Reaper, Titan''s Bane, Dominance, Qin''s Blade, The Crusher,
     Heartseeker, Sun Beam Bow, Arondight, Bloodforge, Transcendence, Dagger of Frenzy,
     Runeforged Hammer, Avatar''s Parashu, Pendulum Blade, Avenging Blade, Barbed Carver,
-    Vital Amplifier, Hastened Fatalis, Eye of the Storm, Shield Splitter, Hydra''s
+    Vital Amplifier, Hastened Fatalis, Shield Splitter, Eye of the Storm, Hydra''s
     Lament.'
   slot_scores:
     Golden Blade:
@@ -492,8 +493,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 0.37
@@ -554,13 +555,13 @@ builds:
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Titan''s
     Bane, Hydra''s Lament, Damaru, Genji''s Guard, The Crusher, Heartseeker, Breastplate
     of Valor, The Reaper, Chandra''s Grace, Tekko-Kagi, Transcendence, Avatar''s Parashu,
-    Eye of Erebus, Screeching Gargoyle, Runeforged Hammer, Avenging Blade, Eye of
-    the Storm, Shield Splitter, Shield of the Phoenix, Silverbranch Bow, Dominance,
+    Eye of Erebus, Runeforged Hammer, Screeching Gargoyle, Avenging Blade, Shield
+    Splitter, Shield of the Phoenix, Eye of the Storm, Silverbranch Bow, Dominance,
     Bloodforge, Lernaean Bow, Toxic Blade, Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.69
+      total: 0.62
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 0.85
@@ -577,7 +578,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Freya's Tears:
-      total: 0.5
+      total: 0.49
       efficiency: 0.34
       win: 0.65
       pick: 0.15
@@ -609,8 +610,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Tekko-Kagi
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -625,16 +626,16 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Titan''s Bane, The Crusher, The Reaper, Heartseeker,
-    Tekko-Kagi, Hydra''s Lament, Pendulum Blade, Avatar''s Parashu, Arondight, Transcendence,
-    Runeforged Hammer, Avenging Blade, Eye of the Storm, Shield Splitter, Golden Blade,
-    Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Barbed
-    Carver, Toxic Blade, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Sanguine
-    Lash, Damaru.'
+    Underrated for this god: Titan''s Bane, The Crusher, The Reaper, Tekko-Kagi, Heartseeker,
+    Hydra''s Lament, Pendulum Blade, Avatar''s Parashu, Arondight, Transcendence,
+    Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade,
+    Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic
+    Blade, Barbed Carver, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Damaru,
+    Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.54
       pick: 0.33
       fit: 1.0

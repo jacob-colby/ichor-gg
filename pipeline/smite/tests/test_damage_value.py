@@ -245,12 +245,16 @@ def test_the_fit_map_has_no_attack_damage_column_of_its_own():
         assert base.get("Attack Damage", 0.0) == 0.0, god["name"]
         assert "Attack Damage" not in overlay, god["name"]
 
-    measured = [g for g in gods
+    valued = [g["name"] for g in gods if dv.stat_weights(g)]
+    measured = [g["name"] for g in gods
                 if dv.stat_weights(g).get("Attack Damage", 0.0) > 0]
-    # 78 before Ravana, who carries basic-attack scaling like most of the
-    # roster. A roster-wide count, so it moves whenever a god is added -- that
-    # is the check working, not breaking.
-    assert len(measured) == 79, len(measured)
+    # Every god whose kit supports a valuation measures Attack Damage. This
+    # was `len(measured) == 79` (78 before Ravana), a roster count that moved
+    # whenever a god was added; since `smite.new_entities` adds gods unattended
+    # behind the suite, a count here would keep every new god out forever. The
+    # property the count stood for is this equality, plus the floor below.
+    assert measured == valued, sorted(set(valued) - set(measured))
+    assert len(measured) >= 79, len(measured)
 
 
 def test_attack_damage_fit_credits_the_measured_weight():

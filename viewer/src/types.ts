@@ -64,6 +64,10 @@ export interface Item {
   god?: string;
   stats: Record<string, string>;
   passive: string;
+  /** The passive catalogue has not classified this passive yet: the item was
+   *  added unattended from the wiki (`smite.new_entities`) and the model values
+   *  it on its stat line alone. Absent on every catalogued item. */
+  passive_uncatalogued?: boolean;
   builds_from: string[];
   builds_into: string[];
   source_url: string;

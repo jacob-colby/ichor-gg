@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -112,7 +112,7 @@ builds:
       fit: 0.63
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -301,7 +301,7 @@ builds:
       fit: 0.91
     Jotunn's Revenge:
       total: 0.59
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Titan's Bane:
-      total: 0.56
+      total: 0.55
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -442,8 +442,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.55
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0

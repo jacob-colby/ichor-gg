@@ -13,8 +13,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
   - Toxic Blade
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -39,7 +39,7 @@ builds:
       fit: 0.69
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -106,7 +106,7 @@ builds:
       fit: 0.74
     Berserker's Shield:
       total: 0.62
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -236,12 +236,12 @@ builds:
       fit: 0.76
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.43
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -260,7 +260,7 @@ builds:
       fit: 0.63
     Soul Gem:
       total: 0.66
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -300,13 +300,13 @@ builds:
       pick: 0.0
       fit: 0.41
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.75
+      total: 0.56
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.39
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -366,13 +366,13 @@ builds:
       fit: 0.69
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -424,20 +424,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.69
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.36
     Eros' Bow:
-      total: 0.55
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -470,8 +470,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
   - Toxic Blade
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -496,7 +496,7 @@ builds:
       fit: 0.69
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.48

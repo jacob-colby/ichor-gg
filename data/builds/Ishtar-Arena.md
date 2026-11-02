@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Lernaean Bow:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
+  - Tyrfing
   - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
   - Titan's Bane
   flex_slots:
   - Titan's Bane
-  - Lernaean Bow
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,18 +293,18 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Toxic Blade:
       total: 0.71
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.96
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -436,14 +436,14 @@ builds:
       pick: 0.0
       fit: 0.5
     Chandra's Grace:
-      total: 0.51
+      total: 0.5
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.58
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.64
+      total: 0.53
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Lernaean Bow:
-      total: 0.64
+      total: 0.63
       efficiency: 0.51
       win: 0.5
       pick: 0.0

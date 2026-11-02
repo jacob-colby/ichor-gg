@@ -110,17 +110,18 @@ builds:
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Spear of the Magus, Blood-Bound
-    Book, Doom Orb, Bracer of The Abyss, Chronos'' Pendant, Dreamer''s Idol, Eros''
-    Bow, Gem of Focus, Bancroft''s Talon, The Cosmic Horror, Heartwood Charm, Ancient
-    Signet, Polynomicon, Book of Thoth, Typhon’s Heart, Soul Reaver, Totem of Death,
-    Divine Ruin, Jade Scepter, Helm of Radiance, Bragi''s Harp, Ethereal Staff.'
+    Book, Doom Orb, Lotus Sickle, Bracer of The Abyss, Dreamer''s Idol, Chronos''
+    Pendant, Eros'' Bow, Gem of Focus, The Cosmic Horror, Bancroft''s Talon, Heartwood
+    Charm, Polynomicon, Ancient Signet, Book of Thoth, Typhon’s Heart, Soul Reaver,
+    Totem of Death, Divine Ruin, Jade Scepter, Helm of Radiance, Bragi''s Harp, Ethereal
+    Staff.'
   slot_scores:
     Book of Thoth:
       total: 0.49
@@ -130,7 +131,7 @@ builds:
       fit: 0.26
     Nimble Ring:
       total: 0.58
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.58
       pick: 0.0
       fit: 0.64
@@ -169,14 +170,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lotus Sickle
   - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Doom Orb
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -192,12 +193,18 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Nimble Ring, Gluttonous Grimoire, Bragi''s Harp, Death Metal, Spear of the
-    Magus, Doom Orb, Blood-Bound Book, Chronos'' Pendant, Bracer of The Abyss, Ancient
-    Signet, Heartwood Charm, Polynomicon, Bancroft''s Talon, Book of Thoth, Dreamer''s
-    Idol, Gem of Focus, Eros'' Bow, Soul Reaver, The Cosmic Horror, Typhon’s Heart,
-    Totem of Death, Divine Ruin, Jade Scepter, Triton''s Conch.'
+    Gem, Nimble Ring, Gluttonous Grimoire, Lotus Sickle, Bragi''s Harp, Death Metal,
+    Spear of the Magus, Doom Orb, Blood-Bound Book, Chronos'' Pendant, Bracer of The
+    Abyss, Heartwood Charm, Polynomicon, Ancient Signet, Bancroft''s Talon, Dreamer''s
+    Idol, Book of Thoth, Gem of Focus, Eros'' Bow, Soul Reaver, The Cosmic Horror,
+    Typhon’s Heart, Totem of Death, Divine Ruin, Jade Scepter, Triton''s Conch.'
   slot_scores:
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.58
+      pick: 0.0
+      fit: 0.41
     Book of Thoth:
       total: 0.49
       efficiency: 0.5
@@ -210,12 +217,6 @@ builds:
       win: 0.55
       pick: 0.34
       fit: 0.47
-    Doom Orb:
-      total: 0.51
-      efficiency: 0.54
-      win: 0.58
-      pick: 0.0
-      fit: 0.44
     The World Stone:
       total: 0.52
       efficiency: 0.53
@@ -230,7 +231,7 @@ builds:
       fit: 0.44
     Soul Gem:
       total: 0.59
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.65
@@ -267,11 +268,11 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Spear of the Magus, Doom Orb,
-    Bragi''s Harp, Blood-Bound Book, Chronos'' Pendant, Death Metal, Dreamer''s Idol,
-    Bracer of The Abyss, Gem of Focus, Heartwood Charm, The Cosmic Horror, Eros''
-    Bow, Ancient Signet, Bancroft''s Talon, Polynomicon, Book of Thoth, Totem of Death,
-    Typhon’s Heart, Soul Reaver, Divine Ruin, Jade Scepter, Damaru.'
+    god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Spear of the Magus, Lotus Sickle,
+    Doom Orb, Bragi''s Harp, Blood-Bound Book, Chronos'' Pendant, Death Metal, Dreamer''s
+    Idol, Bracer of The Abyss, Gem of Focus, Heartwood Charm, The Cosmic Horror, Eros''
+    Bow, Polynomicon, Bancroft''s Talon, Ancient Signet, Book of Thoth, Totem of Death,
+    Typhon’s Heart, Soul Reaver, Damaru, Divine Ruin, Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -286,7 +287,7 @@ builds:
       pick: 0.34
       fit: 0.58
     Spear of the Magus:
-      total: 0.52
+      total: 0.53
       efficiency: 0.58
       win: 0.58
       pick: 0.0
@@ -305,7 +306,7 @@ builds:
       fit: 0.42
     Soul Gem:
       total: 0.61
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.77
@@ -339,15 +340,15 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Blood-Bound Book, Nimble
-    Ring, Shield of the Phoenix, Breastplate of Valor, Genji''s Guard, Ethereal Staff,
-    Kinetic Cuirass, Bancroft''s Talon, Yogi''s Necklace, Phoenix Feather, Freya''s
-    Tears, Helm of Radiance, Eros'' Bow, Sphere of Negation, Rod of Asclepius, Spear
-    of the Magus, Chandra''s Grace, Helm of Darkness, Oni Hunter''s Garb, Jade Scepter,
-    Erosion, Eye of Providence, Midgardian Mail.'
+    this god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Blood-Bound Book, Shield
+    of the Phoenix, Nimble Ring, Breastplate of Valor, Ethereal Staff, Genji''s Guard,
+    Kinetic Cuirass, Bancroft''s Talon, Yogi''s Necklace, Phoenix Feather, Eros''
+    Bow, Helm of Radiance, Rod of Asclepius, Freya''s Tears, Sphere of Negation, Spear
+    of the Magus, Helm of Darkness, Chandra''s Grace, Oni Hunter''s Garb, Jade Scepter,
+    Erosion, Lotus Sickle, Eye of Providence, Midgardian Mail.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -362,8 +363,8 @@ builds:
       pick: 0.0
       fit: 0.2
     Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.64
+      total: 0.53
+      efficiency: 0.63
       win: 0.62
       pick: 0.09
       fit: 0.2
@@ -381,7 +382,7 @@ builds:
       fit: 0.69
     Soul Gem:
       total: 0.62
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.86
@@ -418,11 +419,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Gluttonous Grimoire, Nimble Ring, Spear of the Magus,
-    Doom Orb, Dreamer''s Idol, Blood-Bound Book, The Cosmic Horror, Bracer of The
-    Abyss, Chronos'' Pendant, Eros'' Bow, Gem of Focus, Bancroft''s Talon, Ancient
-    Signet, Heartwood Charm, Polynomicon, Book of Thoth, Typhon’s Heart, Soul Reaver,
-    Totem of Death, Divine Ruin, Jade Scepter, Screeching Gargoyle, Helm of Radiance,
-    Ethereal Staff.'
+    Doom Orb, Dreamer''s Idol, Blood-Bound Book, The Cosmic Horror, Lotus Sickle,
+    Bracer of The Abyss, Chronos'' Pendant, Eros'' Bow, Gem of Focus, Bancroft''s
+    Talon, Polynomicon, Heartwood Charm, Ancient Signet, Book of Thoth, Typhon’s Heart,
+    Soul Reaver, Divine Ruin, Jade Scepter, Totem of Death, Helm of Radiance, Screeching
+    Gargoyle, Ethereal Staff.'
   slot_scores:
     Book of Thoth:
       total: 0.48
@@ -456,7 +457,7 @@ builds:
       fit: 0.6
     Soul Gem:
       total: 0.63
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.9
@@ -494,10 +495,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Bragi''s Harp, Spear of
-    the Magus, Blood-Bound Book, Bracer of The Abyss, Doom Orb, Death Metal, Chronos''
-    Pendant, Eros'' Bow, Dreamer''s Idol, Gem of Focus, Ancient Signet, Polynomicon,
-    Bancroft''s Talon, Heartwood Charm, Book of Thoth, The Cosmic Horror, Typhon’s
-    Heart, Soul Reaver, Divine Ruin, Jade Scepter, Totem of Death, Helm of Radiance.'
+    the Magus, Blood-Bound Book, Bracer of The Abyss, Lotus Sickle, Death Metal, Doom
+    Orb, Eros'' Bow, Chronos'' Pendant, Dreamer''s Idol, Gem of Focus, Polynomicon,
+    Ancient Signet, Bancroft''s Talon, Heartwood Charm, Book of Thoth, The Cosmic
+    Horror, Typhon’s Heart, Soul Reaver, Divine Ruin, Jade Scepter, Totem of Death,
+    Helm of Radiance.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.5
@@ -507,7 +509,7 @@ builds:
       fit: 0.4
     Nimble Ring:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.58
       pick: 0.0
       fit: 0.48
@@ -524,14 +526,14 @@ builds:
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.87
       win: 0.55
       pick: 0.3
       fit: 0.32
     Soul Gem:
       total: 0.58
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.58
@@ -543,14 +545,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lotus Sickle
   - Book of Thoth
-  - Chronos' Pendant
   - Spear of Desolation
-  - Gem of Focus
+  - Chronos' Pendant
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Gem of Focus
+  - Chronos' Pendant
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -566,36 +568,36 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Nimble Ring, Chronos'' Pendant,
-    Gluttonous Grimoire, Gem of Focus, Heartwood Charm, Spear of the Magus, Blood-Bound
-    Book, Breastplate of Valor, Bragi''s Harp, Doom Orb, Bracer of The Abyss, Totem
-    of Death, Death Metal, Damaru, Genji''s Guard, Dreamer''s Idol, Eros'' Bow, Ancient
-    Signet, Bancroft''s Talon, Polynomicon, Chandra''s Grace, Book of Thoth, The Cosmic
-    Horror, Typhon’s Heart.'
+    + fit + win/pick). Underrated for this god: Soul Gem, Nimble Ring, Lotus Sickle,
+    Gluttonous Grimoire, Chronos'' Pendant, Gem of Focus, Heartwood Charm, Spear of
+    the Magus, Blood-Bound Book, Breastplate of Valor, Bragi''s Harp, Doom Orb, Damaru,
+    Bracer of The Abyss, Totem of Death, Death Metal, Genji''s Guard, Dreamer''s Idol,
+    Eros'' Bow, Bancroft''s Talon, Polynomicon, Ancient Signet, Chandra''s Grace,
+    The Cosmic Horror, Typhon’s Heart, Soul Reaver.'
   slot_scores:
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.58
+      pick: 0.0
+      fit: 0.46
     Book of Thoth:
       total: 0.46
       efficiency: 0.5
       win: 0.59
       pick: 0.12
       fit: 0.11
-    Chronos' Pendant:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.57
       efficiency: 0.59
       win: 0.55
       pick: 0.34
       fit: 0.63
-    Gem of Focus:
-      total: 0.51
-      efficiency: 0.51
+    Chronos' Pendant:
+      total: 0.52
+      efficiency: 0.55
       win: 0.58
-      pick: 0.08
+      pick: 0.0
       fit: 0.46
     Rod of Tahuti:
       total: 0.61
@@ -605,14 +607,13 @@ builds:
       fit: 0.27
     Soul Gem:
       total: 0.61
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.63
       pick: 0.11
       fit: 0.82
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
-  - Gem of Focus
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
@@ -643,15 +644,15 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Spear of
-    the Magus, Blood-Bound Book, Doom Orb, Bracer of The Abyss, Chronos'' Pendant,
-    Dreamer''s Idol, Eros'' Bow, Bancroft''s Talon, Gem of Focus, The Cosmic Horror,
-    Heartwood Charm, Ancient Signet, Polynomicon, Typhon’s Heart, Book of Thoth, Soul
-    Reaver, Totem of Death, Divine Ruin, Jade Scepter, Helm of Radiance, Bragi''s
+    the Magus, Blood-Bound Book, Doom Orb, Lotus Sickle, Bracer of The Abyss, Dreamer''s
+    Idol, Chronos'' Pendant, Eros'' Bow, Bancroft''s Talon, Gem of Focus, The Cosmic
+    Horror, Heartwood Charm, Polynomicon, Ancient Signet, Typhon’s Heart, Soul Reaver,
+    Book of Thoth, Totem of Death, Divine Ruin, Jade Scepter, Helm of Radiance, Bragi''s
     Harp, Ethereal Staff.'
   slot_scores:
     Nimble Ring:
       total: 0.58
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.58
       pick: 0.0
       fit: 0.64

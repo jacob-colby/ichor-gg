@@ -50,20 +50,20 @@ builds:
       pick: 0.0
       fit: 0.6
     Rod of Tahuti:
-      total: 0.69
+      total: 0.68
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.5
     Eros' Bow:
       total: 0.65
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lotus Sickle
   - Bancroft's Talon
   - Bragi's Harp
-  - Doom Orb
   - Rod of Tahuti
   - Eros' Bow
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,6 +98,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.49
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Bancroft's Talon:
       total: 0.57
       efficiency: 0.51
@@ -110,21 +116,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Doom Orb:
-      total: 0.49
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.44
     Eros' Bow:
       total: 0.58
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -182,20 +182,20 @@ builds:
       pick: 0.0
       fit: 0.52
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.42
     Eros' Bow:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.67
     Eros' Bow:
       total: 0.64
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -260,7 +260,7 @@ builds:
       fit: 0.67
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -313,19 +313,19 @@ builds:
       fit: 0.6
     Dreamer's Idol:
       total: 0.65
-      efficiency: 0.5
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.8
     Eros' Bow:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.6
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.7
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -359,14 +359,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.5
+      total: 0.51
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
     Nimble Ring:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.32
     Eros' Bow:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.6
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.7
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Divine Ruin
+  - Lotus Sickle
   - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Chronos' Pendant
-  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,17 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.47
-      efficiency: 0.44
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.46
     Chronos' Pendant:
       total: 0.51
       efficiency: 0.55
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.27
     Eros' Bow:
-      total: 0.53
-      efficiency: 0.48
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.58
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -507,20 +507,20 @@ builds:
       pick: 0.0
       fit: 0.6
     Rod of Tahuti:
-      total: 0.69
+      total: 0.68
       efficiency: 0.87
       win: 0.5
       pick: 0.0
       fit: 0.5
     Eros' Bow:
       total: 0.65
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.81
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0

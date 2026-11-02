@@ -13,8 +13,8 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Eros' Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.29
     Eros' Bow:
-      total: 0.56
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -112,7 +112,7 @@ builds:
       fit: 0.55
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -130,7 +130,7 @@ builds:
       fit: 0.35
     Eros' Bow:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.51
     Demon Blade:
-      total: 0.46
+      total: 0.45
       efficiency: 0.36
       win: 0.5
       pick: 0.0
@@ -189,13 +189,13 @@ builds:
       fit: 0.36
     Eros' Bow:
       total: 0.56
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -253,14 +253,14 @@ builds:
       pick: 0.0
       fit: 0.33
     Eros' Bow:
-      total: 0.54
-      efficiency: 0.48
+      total: 0.55
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -301,7 +301,7 @@ builds:
       fit: 0.71
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -325,7 +325,7 @@ builds:
       fit: 0.64
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -384,13 +384,13 @@ builds:
       fit: 0.39
     Eros' Bow:
       total: 0.54
-      efficiency: 0.48
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -448,14 +448,14 @@ builds:
       pick: 0.0
       fit: 0.77
     Eros' Bow:
-      total: 0.55
-      efficiency: 0.48
+      total: 0.56
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -489,14 +489,14 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 0.49
     Eros' Bow:
-      total: 0.52
-      efficiency: 0.48
+      total: 0.53
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -535,8 +535,8 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Death Metal
   - Eros' Bow
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -578,14 +578,14 @@ builds:
       pick: 0.0
       fit: 0.29
     Eros' Bow:
-      total: 0.56
-      efficiency: 0.48
+      total: 0.57
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.65
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -610,8 +610,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -638,19 +638,19 @@ builds:
       fit: 0.27
     Eros' Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
     Rod of Asclepius:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.72
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -691,8 +691,8 @@ builds:
       pick: 0.0
       fit: 0.52
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -710,7 +710,7 @@ builds:
       fit: 0.33
     Eros' Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -776,13 +776,13 @@ builds:
       fit: 0.31
     Eros' Bow:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.68
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -798,7 +798,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Eros' Bow
+  - Jotunn's Revenge
   - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
@@ -824,7 +824,7 @@ builds:
       fit: 0.72
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -836,13 +836,13 @@ builds:
       fit: 0.31
     Eros' Bow:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.6
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -871,8 +871,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -889,8 +889,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Eros' Bow:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -914,7 +914,7 @@ builds:
       fit: 0.6
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -930,7 +930,7 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Jotunn's Revenge
   - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -961,8 +961,8 @@ builds:
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -974,13 +974,13 @@ builds:
       fit: 0.37
     Eros' Bow:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -1034,18 +1034,18 @@ builds:
       fit: 0.69
     Eros' Bow:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.68
     Soul Gem:
       total: 0.77
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.96
     Triton's Conch:
-      total: 0.51
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -1087,8 +1087,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -1106,13 +1106,13 @@ builds:
       fit: 0.46
     Eros' Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.56
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -1138,8 +1138,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -1166,19 +1166,19 @@ builds:
       fit: 0.27
     Eros' Bow:
       total: 0.58
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
     Rod of Asclepius:
       total: 0.59
-      efficiency: 0.45
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.72
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0

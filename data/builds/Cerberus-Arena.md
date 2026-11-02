@@ -20,14 +20,14 @@ builds:
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - Void Stone
+  - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
   - Void Stone
-  - Kinetic Cuirass
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,18 +98,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.64
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Void Stone:
       total: 0.64
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Eros' Bow:
+      total: 0.63
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -241,8 +241,8 @@ builds:
       pick: 0.0
       fit: 0.44
     Eros' Bow:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Void Stone
   - Freya's Tears
+  - Eros' Bow
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Void Stone
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -299,18 +299,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Void Stone:
-      total: 0.57
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Freya's Tears:
       total: 0.59
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Eros' Bow:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Erosion:
       total: 0.61
       efficiency: 0.51
@@ -334,21 +334,21 @@ builds:
   archetype: strength
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Amanita Charm
   - Erosion
   - Stampede
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - Jotunn's Revenge
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -364,12 +364,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Amanita Charm:
       total: 0.81
       efficiency: 0.65
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Shogun's Ofuda:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -409,8 +409,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -430,13 +430,13 @@ builds:
       pick: 0.0
       fit: 0.7
     Eros' Bow:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.65
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -477,14 +477,14 @@ builds:
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Stygian Anchor — magical protection
+    swap_item: Stygian Anchor
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:

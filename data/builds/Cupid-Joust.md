@@ -38,8 +38,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -63,7 +63,7 @@ builds:
       fit: 0.29
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -112,7 +112,7 @@ builds:
       fit: 0.55
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.69
+      total: 0.52
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -195,7 +195,7 @@ builds:
       fit: 0.35
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.73
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -260,7 +260,7 @@ builds:
       fit: 0.33
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -275,7 +275,7 @@ builds:
   - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Berserker's Shield
   - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
@@ -301,13 +301,13 @@ builds:
       fit: 0.71
     Berserker's Shield:
       total: 0.54
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.34
     Eros' Bow:
       total: 0.54
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -325,7 +325,7 @@ builds:
       fit: 0.54
     Soul Gem:
       total: 0.76
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.94
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -390,7 +390,7 @@ builds:
       fit: 0.39
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -455,7 +455,7 @@ builds:
       fit: 0.25
     Soul Gem:
       total: 0.77
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -489,14 +489,14 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.68
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -520,7 +520,7 @@ builds:
       fit: 0.21
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -560,8 +560,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
+      total: 0.53
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -585,7 +585,7 @@ builds:
       fit: 0.29
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -650,7 +650,7 @@ builds:
       fit: 0.29
     Soul Gem:
       total: 0.79
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 1.0

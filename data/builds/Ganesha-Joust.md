@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -50,7 +50,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Screeching Gargoyle
   - Erosion
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -165,12 +165,12 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.6
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.68
     Stone of Binding:
-      total: 0.63
+      total: 0.62
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -188,7 +188,7 @@ builds:
       pick: 0.0
       fit: 0.91
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -236,7 +236,7 @@ builds:
       fit: 0.56
     Nimble Ring:
       total: 0.47
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -248,7 +248,7 @@ builds:
       fit: 0.44
     Eros' Bow:
       total: 0.53
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -301,7 +301,7 @@ builds:
       fit: 0.48
     Breastplate of Valor:
       total: 0.56
-      efficiency: 0.64
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -366,13 +366,13 @@ builds:
       fit: 0.77
     Berserker's Shield:
       total: 0.55
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.35
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Jotunn's Revenge
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.69
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Freya's Tears:
-      total: 0.62
+      total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0

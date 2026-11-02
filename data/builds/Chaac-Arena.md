@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -300,8 +300,8 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.93
     Erosion:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -366,7 +366,7 @@ builds:
       fit: 0.77
     Eros' Bow:
       total: 0.59
-      efficiency: 0.52
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -390,7 +390,7 @@ builds:
       fit: 0.67
     Soul Gem:
       total: 0.77
-      efficiency: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -430,8 +430,8 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0

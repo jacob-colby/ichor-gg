@@ -39,7 +39,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -106,7 +106,7 @@ builds:
       fit: 0.71
     Berserker's Shield:
       total: 0.61
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Avenging Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -176,8 +176,8 @@ builds:
       pick: 0.0
       fit: 0.87
     Jotunn's Revenge:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.58
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -205,20 +205,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -229,19 +229,25 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.65
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.81
     Berserker's Shield:
       total: 0.57
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -255,12 +261,6 @@ builds:
     Pharaoh's Curse:
       total: 0.55
       efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -307,13 +307,13 @@ builds:
       fit: 0.36
     Berserker's Shield:
       total: 0.53
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.54
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -366,7 +366,7 @@ builds:
       fit: 0.72
     Berserker's Shield:
       total: 0.59
-      efficiency: 0.75
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.44

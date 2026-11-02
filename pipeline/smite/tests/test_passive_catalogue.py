@@ -90,6 +90,13 @@ def test_every_class_code_is_declared_and_carries_its_family_letter():
         else:
             flat.append((name, entry))
     for name, entry in flat:
+        if entry.get("uncatalogued"):
+            # Added unattended (`smite.new_entities`): no class is claimed, so
+            # nothing may be priced, and the date says how long it has waited.
+            assert not entry.get("classes") and not entry.get("priced"), \
+                f"{name} is uncatalogued and must not claim a class"
+            assert entry.get("added"), f"{name} is uncatalogued and has no `added` date"
+            continue
         classes = entry.get("classes") or []
         assert classes, f"{name} has no classes"
         unknown = [c for c in classes if c not in vocabulary]

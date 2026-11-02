@@ -13,6 +13,7 @@ builds_into:
 - Book of Thoth
 - Breastplate of Valor
 - Genji's Guard
+- Lotus Sickle
 - Necronomicon
 - Oni Hunter's Garb
 - Scepter of Dominion

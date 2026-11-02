@@ -9,12 +9,12 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
+  - Pendulum Blade
   - The Crusher
   - Titan's Bane
-  - Heartseeker
   flex_slots:
-  - Heartseeker
   - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -33,7 +33,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -44,8 +44,14 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -58,12 +64,6 @@ builds:
     Titan's Bane:
       total: 0.77
       efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Heartseeker:
-      total: 0.72
-      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -99,8 +99,8 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.7
-      efficiency: 0.69
+      total: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartseeker:
-      total: 0.61
+      total: 0.6
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -171,7 +171,7 @@ builds:
       fit: 0.79
     Jotunn's Revenge:
       total: 0.73
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Pendulum Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.41
       win: 0.5
       pick: 0.0
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Void Stone:
-      total: 0.63
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -295,12 +295,12 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -436,8 +436,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.77
-      efficiency: 0.69
+      total: 0.76
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -448,7 +448,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.55
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -466,12 +466,12 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
+  - Pendulum Blade
   - The Crusher
   - Titan's Bane
-  - Heartseeker
   flex_slots:
-  - Heartseeker
   - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -490,7 +490,7 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -501,8 +501,14 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -518,25 +524,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Heartseeker:
-      total: 0.72
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
   - The Reaper
   - The Crusher
   - Titan's Bane
-  - Heartseeker
   - Avatar's Parashu
   flex_slots:
   - Avatar's Parashu
-  - Heartseeker
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -555,12 +555,18 @@ builds:
   slot_scores:
     Jotunn's Revenge:
       total: 0.84
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Tyrfing:
+      total: 0.71
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.97
     The Reaper:
-      total: 0.76
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -577,23 +583,17 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Heartseeker:
+    Avatar's Parashu:
       total: 0.72
       efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.72
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
   swaps:
   - added: Avatar's Parashu
-    removed: Tyrfing
+    removed: Pendulum Blade
     reason: Conquest community 69% win over 168 matches (vs 57% on this god), taking
-      the model's weakest slot from Tyrfing
+      the model's weakest slot from Pendulum Blade
   borrowed_from: Conquest
   starter: *id001
 ---

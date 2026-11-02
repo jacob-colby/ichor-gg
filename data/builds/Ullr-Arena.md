@@ -45,7 +45,7 @@ builds:
       fit: 0.75
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -112,7 +112,7 @@ builds:
       fit: 0.62
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -138,9 +138,9 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Rage
-  - Jotunn's Revenge
   - Riptalon
   - Demon Blade
   - Deathbringer
@@ -163,6 +163,12 @@ builds:
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Toxic Blade:
       total: 0.59
       efficiency: 0.45
@@ -175,12 +181,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Riptalon:
       total: 0.62
       efficiency: 0.46
@@ -208,9 +208,9 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
-  - Titan's Bane
+  - Tekko-Kagi
   flex_slots:
-  - Titan's Bane
+  - Tekko-Kagi
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -242,7 +242,7 @@ builds:
       fit: 0.71
     Jotunn's Revenge:
       total: 0.57
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
@@ -258,35 +258,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Titan's Bane:
+    Tekko-Kagi:
       total: 0.48
-      efficiency: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Toxic Blade
-  - Berserker's Shield
   - Amanita Charm
+  - Erosion
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Umbral Link
   flex_slots:
   - Shogun's Ofuda
-  - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -299,18 +299,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.75
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Amanita Charm:
       total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.93
+    Erosion:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Pharaoh's Curse:
       total: 0.6
       efficiency: 0.51
@@ -365,8 +365,8 @@ builds:
       pick: 0.0
       fit: 0.85
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -442,7 +442,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Tyrfing:
-      total: 0.56
+      total: 0.55
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -508,12 +508,12 @@ builds:
       fit: 0.53
     Jotunn's Revenge:
       total: 0.58
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
     Tyrfing:
-      total: 0.46
+      total: 0.45
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -567,7 +567,7 @@ builds:
       fit: 0.75
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.69
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
