@@ -21,8 +21,14 @@
 # costs the day's community numbers. The gate runs only on a day the stats
 # actually changed; on every other day it makes no test run.
 #
-# New gods and items are still added by hand: `stats_refresh` refreshes what is
-# tracked, and `watch-wiki.yml` announces what is not.
+# NEW GODS AND ITEMS. `smite.new_entities` adds any god on the wiki's roster
+# grid, or item on its Items index, that `data/` does not track yet — whole or
+# not at all (a page that does not parse cleanly is left out and logged), with
+# an unclassified passive added as `uncatalogued` (stat-only, flagged), and
+# behind the same kind of gate: the suite plus `validate --check` and
+# `calibrate_combat`, with any entity that turns a check red left out and the
+# rest kept. A left-out entity fails the run at its last step, like a rejected
+# stats refresh. `watch-wiki.yml` still announces what is not tracked.
 name: Refresh community data
 
 on:
@@ -43,8 +49,10 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # A patch day is ~14 min of wiki fetches plus up to three suite runs.
-    timeout-minutes: 75
+    # A patch day is ~14 min of wiki fetches plus up to three suite runs; a day
+    # with new gods or items adds up to two more, plus one recompute per
+    # candidate if one of them turns a check red.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -98,6 +106,17 @@ jobs:
         id: stats_gate
         working-directory: pipeline
         run: python -m smite.stats_gate check "$RUNNER_TEMP/stats_before"
+
+      # After the stats gate, so the tracked stats are settled and the two
+      # gates never blame each other's change. Discovery is two page loads
+      # (the roster grid and the Items index) plus one per untracked entry,
+      # capped at 12. Nothing new: no test run. Something new: the gate runs
+      # the suite and the two numeric gates on it (see that module). Exits 0
+      # on every path; a left-out entity sets `rejected` for the last step.
+      - name: Add new gods and items from the wiki
+        id: new_entities
+        working-directory: pipeline
+        run: python -m smite.new_entities
 
       # Patch notes are a diff between two item-stat snapshots, and until this
       # step existed nothing on any schedule wrote one: `write_snapshot` was
@@ -167,7 +186,8 @@ jobs:
 
           Automated. SmiteBrain win/pick rates, community builds and starters,
           wiki item and god stats when a patch landed (smite.stats_refresh),
-          then a recompute and reindex."
+          new gods and items from the wiki (smite.new_entities), then a
+          recompute and reindex."
           git push
 
       # Last, so the community data above is committed first. A rejected
@@ -177,4 +197,12 @@ jobs:
         if: steps.stats_gate.outputs.rejected == 'true'
         run: |
           echo "::error::The wiki stats refresh was rejected by the test gate; the old stats are still live. See the 'Test gate' step."
+          exit 1
+
+      # Same contract for a new god or item the gate left out: the rest of the
+      # day's data is committed above, the run goes red here.
+      - name: Fail the run if a new god or item was left out
+        if: steps.new_entities.outputs.rejected == 'true'
+        run: |
+          echo "::error::A new god or item was left out by the gate; see the 'Add new gods and items' step and data/_new_entities.json."
           exit 1
