@@ -18,13 +18,15 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
-import { isCommunityEntry, slotItemName, iconSlug, applySwap, tabLabel, orderBuilds,
+import { isCommunityEntry, slotItemName, applySwap, tabLabel, orderBuilds,
   dedupeCoreAgainstModel, communityRecordedItems, splitRationale } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
 import { GodOnlyAsterisk, GodOnlyBadge } from "./GodOnlyMark";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
+import { ItemIcon } from "./ItemIcon";
+import { SideBySide } from "./SideBySide";
 import { getMine } from "../lib/mineStore";
 
 const VS_LABELS: Record<string, string> = {
@@ -84,26 +86,6 @@ interface DetailPanelProps {
 /** Item art with a real fallback — one cache-bust retry, then the item's
  * initial, never a hole in the row. State-based rather than imperative so a
  * different item landing at the same index can't inherit a hidden node. */
-function ItemIcon({ name, className }: { name: string; className: string }) {
-  const [tries, setTries] = useState(0);
-  if (tries > 1) {
-    return (
-      <span aria-hidden="true"
-        className={`flex flex-none items-center justify-center rounded-sm bg-bg3 font-display text-label font-bold text-faint ${className}`}>
-        {name.slice(0, 1)}
-      </span>
-    );
-  }
-  return (
-    <img
-      src={`/icons/${iconSlug(name)}.png${tries ? "?r=1" : ""}`}
-      alt=""
-      loading="lazy"
-      onError={() => setTries((t) => t + 1)}
-      className={`flex-none rounded-sm bg-bg2 object-cover ${className}`}
-    />
-  );
-}
 
 /** One axis of the decomposition: its name, its magnitude, its figure — and,
  *  in the flow of the page, what it actually means.
@@ -1069,6 +1051,11 @@ export function DetailPanel({
           </ul>
         </section>
       )}
+
+      {/* Done criterion 2: both builds through the combat model, passives
+          simulated. Conquest only — it is the only mode with a community
+          record to compare against. */}
+      {note?.mode === "Conquest" && <SideBySide god={god} />}
 
       {/* What the community's record changed, and what earned it. This is the
           hybrid's entire claim — without it the build is a third list of six
