@@ -136,6 +136,23 @@ quantity treated as a threshold — and §4.13 records that neither threshold ca
 be evaluated at all under the current damage model. The role split does **not**
 escape the passive blind spot; the report says so on the section.
 
+**Since 2026-11-02 there is a second instrument of that kind, and it closes
+most of the blind spot rather than printing it.** `side_by_side.py` runs our
+`model` core and the community's cleaned six through `combat.py` on a 10-second
+event clock with item passives SIMULATED, one item at a time from its own text
+(`passive_sim.py` — never one price per passive class, which §4.20 refused and
+the 2026-11-02 passives analysis measured at ~0% recovered). It reports burst
+and 10s sustained damage against a squishy and a tank taken as the medians of
+the community's own Mid and Support builds, effective cooldowns, crit EV,
+effective health on both channels (health-gated protection integrated over the
+bar), power at 2/4/6 items, and for every item only one side buys: its
+community pick and win rate, its passive's worth in numbers, and the model's
+own reason for not buying it. Each god gets a verdict under a rule written in
+the module docstring before the run. Items it cannot model honestly (kills,
+crowd control, actives, an attacker on us, movement) are marked `not
+simulated` with the reason, per build. It is a diagnostic and feeds nothing; a
+test pins the import boundary. Done criterion 2's status is in §5.
+
 ---
 
 ## 3. Design decisions worth not re-litigating
@@ -1995,6 +2012,21 @@ just reproduce the old answer.
 
 Roughly in the order I would do them.
 
+### Done criterion 2 — the engine is built, the page is not
+
+`side_by_side.py` (§2) answers the criterion's numbers for all 90 gods; the
+per-god table, item diffs, verdicts by role and the not-simulated list are in
+`data/Analysis/_side_by_side.md` (regenerated, not tracked — 390 KB of daily
+churn). On OB46 items and the OB46 community window (2026-11-02), at ±5%:
+**Ichor better 16, community better 32, trade-off 26, level 16**; the
+community wins most on Carry (11 of 18), almost all of it on DAMAGE with
+passives simulated. Left: (1) the viewer page (part B; `--json` writes its
+data); (2) for each "community better" god, a model change or a stated reason —
+the report lists them, and the swap rows show which single item recovers most;
+(3) the passives still `not simulated` that sit in many builds — Jotunn's
+Revenge and Spear of Desolation (kill refunds), Genji's Guard and Kinetic
+Cuirass (need an attacker), and every active.
+
 ### Two thirds of the shipped builds rest on nothing measurable
 The builds are no longer *identical* to Conquest's, at least:
 `modes.<mode>.economy` discounts an item by the share of the scoring window it
@@ -2354,6 +2386,8 @@ python -m smite.build_quality            # combat.py pointed at whole builds, ou
 python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
 python -m smite.build_quality --ward-economy  # the `ward-economy` carriers against a core built without them (~20s)
+python -m smite.side_by_side             # criterion 2: ours vs community, passives SIMULATED (~12s)
+python -m smite.side_by_side --god Medusa    # one god's side-by-side, item diffs and verdict
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split
 python -m smite.order_agreement --god Medusa   # one god, heuristic order beside the shipped one
@@ -2506,8 +2540,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1033) ·
-`cd viewer && npm test -- --run` (775).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1072) ·
+`cd viewer && npm test -- --run` (777).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
@@ -2610,7 +2644,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1033 pipeline · 775 viewer |
+| Tests | 1072 pipeline · 777 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
