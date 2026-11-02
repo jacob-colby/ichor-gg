@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
-  health_regen:
-    base: 1.93
-    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 19.0
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  attack_power:
-    base: 47.95
-    per_level: 2.59
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Nemesis Basic Attack
@@ -47,14 +47,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Scales of Fate
   details:
@@ -62,13 +62,13 @@ abilities:
   - 'Increase: 7% Per Stack'
   - 'Max Stacks: 3'
   - 'Duration: 5 seconds'
+  description: ATTACKS STEAL POWER Hitting enemies with Attacks reduces the target's
+    Inhand Power, Strength, and Intelligence while increasing yours
   detail_kinds:
   - debuff
   - buff
   - buff
   - buff
-  description: ATTACKS STEAL POWER Hitting enemies with Attacks reduces the target's
-    Inhand Power, Strength, and Intelligence while increasing yours
 - slot: 1st Ability
   name: Swift Vengeance
   cooldown:
@@ -85,6 +85,8 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 50 mana'
+  description: Dash in a line, passing through all enemies
+  damage_type: physical
   detail_kinds:
   - physical
   - null
@@ -95,8 +97,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Dash in a line, passing through all enemies
 - slot: 2nd Ability
   name: Slice and Dice
   cooldown:
@@ -120,6 +120,8 @@ abilities:
   - 'Center Cone Angle: 45 degrees'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Slash in a cone, dealing Physical Damage to all enemies hit
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -133,8 +135,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Slash in a cone, dealing Physical Damage to all enemies hit
 - slot: 3rd Ability
   name: Retribution
   cooldown:
@@ -155,9 +155,10 @@ abilities:
   - 'Reflect Damage: 40% of Damage Blocked'
   - 'Reflect Damage Scaling: 20% Strength'
   - 'Heal: 40% of Damage Blocked'
-  - 'Heal Scaling: 8% Intelligence'
+  - 'Heal Scaling: 5% Intelligence'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Gain a Health Shield for a duration
   detail_kinds:
   - physical
   - heal
@@ -171,7 +172,6 @@ abilities:
   - heal
   - mechanic
   - mechanic
-  description: Gain a Health Shield for a duration
 - slot: Ultimate
   name: Divine Judgement
   cooldown:
@@ -197,6 +197,9 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 | 95 | 100 | 105 | 110 mana'
+  description: Choose a single enemy god, dealing Physical Damage to them and all
+    enemies in an area around them
+  damage_type: physical
   detail_kinds:
   - buff
   - debuff
@@ -211,16 +214,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Choose a single enemy god, dealing Physical Damage to them and all
-    enemies in an area around them
 aspects:
 - name: Aspect of Justice
   kit_changes: Divine Judgement no longer does damage in an area but instead averages
     Nemesis's and the enemy god's current Health as long as Nemesis has less than
     the target.
 source_url: https://wiki.smite2.com/w/Nemesis
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Nemesis Basic Attack

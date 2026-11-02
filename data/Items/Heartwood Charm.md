@@ -4,20 +4,19 @@ name: Heartwood Charm
 tier: 3
 cost: 2650
 stats:
-  Intelligence: '45'
+  Max Health: '400'
   Max Mana: '250'
-  Mana Regen: '5'
-  Cooldown Rate: '20'
-passive: '+10% Increased Healing and Shielding Passive: When you heal with abilities,
+  Cooldown Rate: '10'
+passive: '-20% Cooldowns for your Healing Abilities. Passive: When you heal with abilities,
   store 20% of that healing. On Use: Heal all allies within 6.4m for the amount of
-  healing stored. Cooldown: 90s You can own up to 3 active items at once'
+  healing stored. Cooldown: 120s You can own up to 3 active items at once'
 builds_from:
 - Adroit Ring
-- Oracle Staff
+- Odigba
 builds_into: []
 source_url: https://wiki.smite2.com/w/Heartwood_Charm
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
-+10% Increased Healing and Shielding Passive: When you heal with abilities, store 20% of that healing. On Use: Heal all allies within 6.4m for the amount of healing stored. Cooldown: 90s You can own up to 3 active items at once
+-20% Cooldowns for your Healing Abilities. Passive: When you heal with abilities, store 20% of that healing. On Use: Heal all allies within 6.4m for the amount of healing stored. Cooldown: 120s You can own up to 3 active items at once
 <!-- WIKI:END -->

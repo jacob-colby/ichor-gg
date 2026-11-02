@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
-  health_regen:
-    base: 1.85
-    per_level: 0.23
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
   physical_prot:
     base: 19.0
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  attack_power:
-    base: 48.0
-    per_level: 2.37
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 48.0
+    per_level: 2.37
+  health_regen:
+    base: 1.85
+    per_level: 0.23
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Hercules Basic Attack
@@ -47,14 +47,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Apotheosis
   details:
@@ -70,6 +70,14 @@ abilities:
   - 'Apotheosis Protections Scaling: 2 Per Level'
   - 'Apotheosis Buff Duration: 10 seconds'
   - 'Apotheosis Buff Duration Scaling: 1 second Per Level'
+  description: 'At 4 stacks, enter an empowered state that immediately subtracts 2
+    seconds from active cooldowns and provides an additional Strength , Protections
+    , and Cleaving Attacks buff for the duration Strength from is equal to 1 stack
+    of Strength from taking damage from gods Hercules gains Strength when enemy gods
+    damage him. This stacks up to 3 times and lasts 5 seconds. Additionally, hit a
+    target with an ability to gain a stack towards achieving , or 2 stacks from his
+    Ultimate Protections: 10 Protections Scaling: 2 Per Level Buff Duration: 10 seconds
+    Buff Duration Scaling: 1 second Per Level'
   detail_kinds:
   - buff
   - null
@@ -80,14 +88,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: 'At 4 stacks, enter an empowered state that immediately subtracts 2
-    seconds from active cooldowns and provides an additional Strength , Protections
-    , and Cleaving Attacks buff for the duration Strength from is equal to 1 stack
-    of Strength from taking damage from gods Hercules gains Strength when enemy gods
-    damage him. This stacks up to 3 times and lasts 5 seconds. Additionally, hit a
-    target with an ability to gain a stack towards achieving , or 2 stacks from his
-    Ultimate Protections: 10 Protections Scaling: 2 Per Level Buff Duration: 10 seconds
-    Buff Duration Scaling: 1 second Per Level'
 - slot: 1st Ability
   name: Driving Strike
   cooldown:
@@ -106,6 +106,9 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: DASH, PUSHING ENEMIES Dash forward, dealing Physical Damage , Stunning
+    , and Pushing enemies hit
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -114,9 +117,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: DASH, PUSHING ENEMIES Dash forward, dealing Physical Damage , Stunning
-    , and Pushing enemies hit
 - slot: 2nd Ability
   name: Earthbreaker
   cooldown:
@@ -134,6 +134,9 @@ abilities:
   - 'Radius: 1.12 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: LINE, PULLS ENEMIES AT END Create a rift that deals Physical Damage
+    to enemies in front of you. Enemies hit by the end area are Pulled to you
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -141,9 +144,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: LINE, PULLS ENEMIES AT END Create a rift that deals Physical Damage
-    to enemies in front of you. Enemies hit by the end area are Pulled to you
 - slot: 3rd Ability
   name: Mitigate Wounds
   cooldown:
@@ -151,7 +151,7 @@ abilities:
   cost:
   - 50.0
   details:
-  - 'Initial Heal: 50 | 65 | 80 | 95 | 110'
+  - 'Initial Heal: 60 | 75 | 90 | 105 | 120'
   - 'Delayed Heal: 25 | 26.25 | 27.5 | 28.75 | 30% of Recent Damage Taken'
   - 'Attack Speed: 15 | 17.5 | 20 | 22.5 | 25%'
   - 'Protections: 10 | 15 | 20 | 25 | 30'
@@ -159,6 +159,9 @@ abilities:
   - 'Buff Duration: 4 seconds'
   - 'Cooldown: 15 seconds'
   - 'Cost: 50 mana'
+  description: HEAL, PROTECT Immediately Heal yourself and gain Attack Speed and Protections
+    . At the end of the duration Heal yourself again for a percentage of damage taken
+    during the effect
   detail_kinds:
   - heal
   - heal
@@ -168,9 +171,6 @@ abilities:
   - buff
   - mechanic
   - mechanic
-  description: HEAL, PROTECT Immediately Heal yourself and gain Attack Speed and Protections
-    . At the end of the duration Heal yourself again for a percentage of damage taken
-    during the effect
 - slot: Ultimate
   name: Excavate
   cooldown:
@@ -193,6 +193,10 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 100 mana'
+  description: Hurl a boulder at a location, Knocking Up enemies at the landing spot.
+    The boulder then rolls and bounces off walls, dealing Physical Damage to enemies
+    hit
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -205,10 +209,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Hurl a boulder at a location, Knocking Up enemies at the landing spot.
-    The boulder then rolls and bounces off walls, dealing Physical Damage to enemies
-    hit
 aspects:
 - name: Aspect of Preservation
   kit_changes: Mitigate Wounds no longer Heals based on damage or provides Attack
@@ -216,7 +216,7 @@ aspects:
     from Attacks and when the ability ends, stacks are expended to Heal nearby allied
     gods.
 source_url: https://wiki.smite2.com/w/Hercules
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hercules Basic Attack

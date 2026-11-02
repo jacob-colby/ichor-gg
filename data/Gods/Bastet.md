@@ -12,15 +12,9 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
-  health_regen:
-    base: 1.73
-    per_level: 0.23
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -30,12 +24,18 @@ base_stats:
   attack_speed:
     base: 0.98
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.73
+    per_level: 0.23
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Bastet Basic Attack
@@ -46,14 +46,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Nightstalker
   details:
@@ -64,6 +64,8 @@ abilities:
   - 'Max Buff Stacks: 3'
   - 'Buff Duration: 10 seconds'
   - 'Reveal Duration: 6 seconds'
+  description: Hitting enemies grants Lifesteal . Hitting enemy gods additionally
+    grants stacks of Strength and Reveals them to you for a duration
   detail_kinds:
   - buff
   - buff
@@ -72,8 +74,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: Hitting enemies grants Lifesteal . Hitting enemy gods additionally
-    grants stacks of Strength and Reveals them to you for a duration
 - slot: 1st Ability
   name: Pounce
   cooldown:
@@ -93,6 +93,10 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Leap to a target location, dealing Physical Damage to enemies in the
+    area. For a short duration, reactivate to Leap back to your initial location.
+    You gain increased Movement Speed while you can return
+  damage_type: physical
   detail_kinds:
   - null
   - physical
@@ -102,10 +106,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Leap to a target location, dealing Physical Damage to enemies in the
-    area. For a short duration, reactivate to Leap back to your initial location.
-    You gain increased Movement Speed while you can return
 - slot: 2nd Ability
   name: Razor Whip
   cooldown:
@@ -117,13 +117,16 @@ abilities:
   - 55.0
   - 60.0
   details:
-  - 'Damage Per Tick: 30 | 45 | 60 | 75 | 90'
-  - 'Damage Scaling Per Tick: 22% Strength'
+  - 'Damage Per Tick: 40 | 55 | 70 | 85 | 100'
+  - 'Damage Scaling Per Tick: 30% Strength'
   - 'Bleed Duration: 2 seconds'
   - 'Range: 5.6 meters'
   - 'Cone Angle: 68 degrees'
   - 'Cooldown: 10 seconds'
   - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
+  description: Cone Bleed Swipe at enemies in a cone, causing them to Bleed for Physical
+    Damage over time
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -132,9 +135,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Cone Bleed Swipe at enemies in a cone, causing them to Bleed for Physical
-    Damage over time
 - slot: 3rd Ability
   name: Ensnaring Claw
   cooldown:
@@ -160,6 +160,10 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 16 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Send a cat forward. If it hits an enemy, it Roots them and nearby enemies
+    briefly and deals Physical Damage . The cat persists for a duration or until defeated,
+    attacking nearby enemies for Physical Damage and applying a Slow
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -175,10 +179,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Send a cat forward. If it hits an enemy, it Roots them and nearby enemies
-    briefly and deals Physical Damage . The cat persists for a duration or until defeated,
-    attacking nearby enemies for Physical Damage and applying a Slow
 - slot: Ultimate
   name: Cat Call
   cooldown:
@@ -190,15 +190,14 @@ abilities:
   - 105.0
   - 110.0
   details:
-  - Ultimate cast causes brief CC immunity
   - Cats cannot block movement and cannot attack structures
   - Cats Dash attack bleeding enemies, dealing Physical Damage and Slowing them
   - When you cast Razor Whip, each cat resets its Dash Cooldown and Dashes to the
     first enemy hit
   - When you cast Pounce, cats follow you through the Leap
-  - 'Cat Dash Damage: 25 | 50 | 75 | 100 | 125'
+  - 'Cat Dash Damage: 40 | 65 | 90 | 115 | 140'
   - 'Cat Dash Damage Scaling: 50% Strength'
-  - 'Cat Attack Damage: 2 | 4 | 6 | 8 | 10'
+  - 'Cat Attack Damage: 5 | 10 | 15 | 20 | 25'
   - 'Cat Attack Damage Scaling: 20% Strength'
   - 'Slow: 12 | 14 | 16 | 18 | 20%'
   - 'Slow Duration: 2 seconds'
@@ -207,12 +206,13 @@ abilities:
   - 'Cats Dash Range: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 | 95 | 100 | 105 | 110'
+  description: Summon 3 spirit cats that follow you and attack nearby enemies for
+    a duration. While they are active, you gain Strength
   detail_kinds:
   - null
   - null
   - null
   - null
-  - null
   - physical
   - physical
   - physical
@@ -224,8 +224,6 @@ abilities:
   - null
   - mechanic
   - mechanic
-  description: cast causes brief CC immunity Summon 3 spirit cats that follow you
-    and attack nearby enemies for a duration. While they are active, you gain Strength
 aspects:
 - name: Aspect of the Watchful Pride
   kit_changes: Pounce can no longer be activated again to return to you to your starting
@@ -233,7 +231,7 @@ aspects:
     Whip deals less damage but Disarms bleeding enemies. Ensnaring Claw Stuns instead
     of Rooting. Cat Call becomes Huntress of Bast.
 source_url: https://wiki.smite2.com/w/Bastet
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Bastet Basic Attack

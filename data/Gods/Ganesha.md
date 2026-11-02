@@ -14,15 +14,9 @@ base_stats:
   health:
     base: 668.5
     per_level: 101.52
-  health_regen:
-    base: 1.84
-    per_level: 0.22
   mana:
     base: 337.0
     per_level: 45.37
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
   physical_prot:
     base: 20.5
     per_level: 3.24
@@ -32,12 +26,18 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  attack_power:
-    base: 44.0
-    per_level: 2.42
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.42
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ganesha Basic Attack
@@ -49,24 +49,24 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
   detail_kinds:
   - null
   - null
   - magical
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Good Fortune
   details:
-  - 'Bonus Gold Per Gifted God Kill: 65'
-  detail_kinds:
-  - mechanic
+  - 'Bonus Gold: 50 Per Gifted God Kill'
   description: GIFT KILLS TO ALLIES Any time you deal a killing blow, the nearest
     allied god receives the credit and you receive the rewards for an assist instead
     plus a bonus amount of gold. In addition, your assist range and the time before
     you lose assist credit is increased
+  detail_kinds:
+  - mechanic
 - slot: 1st Ability
   name: Turn of Fate
   cooldown:
@@ -88,7 +88,7 @@ abilities:
   - This ability passes through and damages all enemies, and passes through walls
   - 'Damage: 90 | 150 | 210 | 270 | 330'
   - 'Damage Scaling: 55% Intelligence'
-  - 'Mark Bonus Damage: 25'
+  - 'Mark Bonus Damage: 15'
   - 'Mark Bonus Damage Scaling: 5 Per Enemy Level'
   - 'Bonus Damage: 3% Per Stack'
   - 'Buff Duration: 4 seconds'
@@ -96,6 +96,9 @@ abilities:
   - 'Radius: 1.2 meters'
   - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
+  description: Send a curse forward dealing Magical Damage to enemies it passes through.
+    For each enemy hit, all nearby allied gods gain Bonus Damage
+  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -110,9 +113,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Send a curse forward dealing Magical Damage to enemies it passes through.
-    For each enemy hit, all nearby allied gods gain Bonus Damage
 - slot: 2nd Ability
   name: Ohm
   cooldown:
@@ -138,6 +138,8 @@ abilities:
   - 'Cone Angle: 45 degrees'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
+  description: Rise into the lotus position Silencing enemies in front of you and
+    increasing Protections of nearby allied gods
   detail_kinds:
   - buff
   - mechanic
@@ -149,16 +151,14 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Rise into the lotus position Silencing enemies in front of you and
-    increasing Protections of nearby allied gods
 - slot: 3rd Ability
   name: Remove Obstacles
   cooldown:
+  - 14.0
+  - 13.5
   - 13.0
   - 12.5
   - 12.0
-  - 11.5
-  - 11.0
   cost:
   - 70.0
   details:
@@ -174,8 +174,12 @@ abilities:
   - 'Stun Duration: 0.75 seconds'
   - 'Range: 7.5 meters'
   - 'Radius: 0.64 meters'
-  - 'Cooldown: 13 | 12.5 | 12 | 11.5 | 11 seconds'
+  - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 70 mana'
+  description: You cannot cancel this ability while Dashing , but you can on contact
+    with an enemy god Dash forward dealing Magical Damage to enemy minions you pass
+    through and stopping on enemy gods, Stunning them before Knocking them up
+  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -189,10 +193,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: You cannot cancel this ability while Dashing , but you can on contact
-    with an enemy god Dash forward dealing Magical Damage to enemy minions you pass
-    through and stopping on enemy gods, Stunning them before Knocking them up
 - slot: Ultimate
   name: Dharmic Pillars
   cooldown:
@@ -216,6 +216,10 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Cooldown: 75 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
+  description: Summon 4 Great Pillars to imprison your enemies. Enemies that pass
+    the field between each pillar take an initial hit of Magical Damage , are Slowed
+    , and have their Protections Reduced
+  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -229,10 +233,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Summon 4 Great Pillars to imprison your enemies. Enemies that pass
-    the field between each pillar take an initial hit of Magical Damage , are Slowed
-    , and have their Protections Reduced
 aspects:
 - name: Aspect of the Triumphant
   kit_changes: Ohm no longer silences but deals damage to enemies in front of you
@@ -241,7 +241,7 @@ aspects:
     no longer bestow kills to allies but each god kill provides permanent Cooldown
     Rate.
 source_url: https://wiki.smite2.com/w/Ganesha
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ganesha Basic Attack

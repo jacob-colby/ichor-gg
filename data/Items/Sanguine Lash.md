@@ -7,16 +7,16 @@ stats:
   Magical Protection: '30'
   Strength: '25'
   Lifesteal: 5%
-passive: 'Enemy gods Within 4m: -0.5% Health (max 200) as Physical Damage per 1s.
-  +0.66% for every 10% Lifesteal On Use: Now damages every 0.33s for 4s. Cooldown:
-  75s You can own up to 3 active items at once'
+passive: 'Enemy gods Within 4m: -0.75% Health (max 200) as Physical Damage per 1s.
+  +1% for every 10% Lifesteal On Use: Now damages every 0.33s for 4s. Cooldown: 60s
+  You can own up to 3 active items at once'
 builds_from:
 - Circle of Protection
 - Adamantine Sickle
 builds_into: []
 source_url: https://wiki.smite2.com/w/Sanguine_Lash
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
-Enemy gods Within 4m: -0.5% Health (max 200) as Physical Damage per 1s. +0.66% for every 10% Lifesteal On Use: Now damages every 0.33s for 4s. Cooldown: 75s You can own up to 3 active items at once
+Enemy gods Within 4m: -0.75% Health (max 200) as Physical Damage per 1s. +1% for every 10% Lifesteal On Use: Now damages every 0.33s for 4s. Cooldown: 60s You can own up to 3 active items at once
 <!-- WIKI:END -->

@@ -11,12 +11,13 @@ builds_from:
 - Axe
 - Sabre
 builds_into:
+- Damaru
 - Deathbringer
 - Demon Blade
 - Musashi's Dual Swords
 - Rage
 source_url: https://wiki.smite2.com/w/Kopesh
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 Critically Strike a God: +5% Movement Speed for 4s.

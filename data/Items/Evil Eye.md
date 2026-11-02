@@ -16,9 +16,8 @@ builds_into:
 - Rod of Tahuti
 - Spear of Desolation
 - Spear of the Magus
-- Totem of Death
 source_url: https://wiki.smite2.com/w/Evil_Eye
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 

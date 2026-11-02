@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 316.32
     per_level: 42.0
-  mana_regen:
-    base: 1.57
-    per_level: 0.14
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  attack_power:
-    base: 40.85
-    per_level: 2.21
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 40.85
+    per_level: 2.21
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.57
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Hecate Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Mythic Ritual
   details:
@@ -71,6 +71,7 @@ abilities:
   - 'Strength: 5 + 2 Per Level'
   - 'Intelligence: 8 + 3.2 Per Level'
   - 'Buff Duration: 300 seconds'
+  description: You may interact with things to empower them
   detail_kinds:
   - buff
   - buff
@@ -83,7 +84,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: You may interact with things to empower them
 - slot: 1st Ability
   name: Triplicate Form
   cooldown:
@@ -117,6 +117,9 @@ abilities:
   - 'Radius: 0.75 meters'
   - 'Cooldown: 9 | 8.5 | 8 | 7.5 | 7 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
+  description: Split yourself and fire a projectile, alternating between Power Form
+    and Hex Form
+  damage_type: magical
   detail_kinds:
   - magical
   - magical
@@ -133,9 +136,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Split yourself and fire a projectile, alternating between Power Form
-    and Hex Form
 - slot: 2nd Ability
   name: Spell Eater
   cooldown:
@@ -150,7 +150,7 @@ abilities:
   - Reactive to call down the Sigil and deal Magical Damage to enemies in the targeted
     area
   - Sigil has a max charge of 12
-  - Damage is increased by 5% per charge
+  - Damage is increased by 7.5% per charge
   - Max damage is 190% base damage and scaling
   - You can target this ability anywhere on the map, regardless of where the Sigil
     was created
@@ -162,6 +162,9 @@ abilities:
   - 'Attack Radius: 3.2 meters'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
+  description: Create a Sigil that charges up when gods activate abilities in a large
+    area
+  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -176,9 +179,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Create a Sigil that charges up when gods activate abilities in a large
-    area
 - slot: 3rd Ability
   name: Repel Magic
   cooldown:
@@ -201,6 +201,10 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 30 | 35 | 40 | 45 | 50 mana'
+  description: Activating this increases your Movement Speed , and gives Spell Eater
+    3 charges Grant yourself or an allied god a Magical Shield , absorbing Magical
+    Damage
+  damage_type: magical
   detail_kinds:
   - magical
   - buff
@@ -213,10 +217,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Activating this increases your Movement Speed , and gives Spell Eater
-    3 charges Grant yourself or an allied god a Magical Shield , absorbing Magical
-    Damage
 - slot: Ultimate
   name: Open the Gates
   cooldown:
@@ -238,6 +238,9 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
+  description: Open two Portals between realms, Stunning , then Teleporting enemy
+    gods to the opposite Portal
+  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -252,16 +255,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Open two Portals between realms, Stunning , then Teleporting enemy
-    gods to the opposite Portal
 aspects:
 - name: Aspect of Ruin
   kit_changes: Spell Eater can no longer be refired but instead reduces enemy ability
     damage in the area. Additionally, each time an enemy ability is cast a projectile
     lands and explodes at their location. Spell Eater's cooldown is increased.
 source_url: https://wiki.smite2.com/w/Hecate
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hecate Basic Attack

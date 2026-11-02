@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
   - Lernaean Bow
+  - Jotunn's Revenge
   - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
   flex_slots:
   - Dominance
-  - Golden Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -23,47 +23,47 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.48
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
+    Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.43
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Dominance:
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.57
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.71
     Demon Blade:
-      total: 0.57
-      efficiency: 0.34
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -99,38 +99,38 @@ builds:
     data).
   slot_scores:
     Lernaean Bow:
-      total: 0.5
-      efficiency: 0.47
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.65
+      total: 0.58
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.44
     Transcendence:
-      total: 0.36
-      efficiency: 0.49
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.24
     Hydra's Lament:
-      total: 0.47
-      efficiency: 0.52
+      total: 0.48
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.42
     The Reaper:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.48
-      efficiency: 0.41
+      total: 0.51
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -139,14 +139,14 @@ builds:
   archetype: crit
   slot_order:
   - Lernaean Bow
-  - Rage
-  - Dominance
+  - Jotunn's Revenge
   - The Reaper
+  - Damaru
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Deathbringer
-  - Rage
+  - Jotunn's Revenge
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -155,8 +155,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -164,38 +164,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Rage:
-      total: 0.47
-      efficiency: 0.41
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.52
-    Dominance:
-      total: 0.49
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+      fit: 0.28
     The Reaper:
-      total: 0.56
-      efficiency: 0.53
+      total: 0.57
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Damaru:
+      total: 0.47
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Demon Blade:
-      total: 0.57
-      efficiency: 0.34
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.79
     Deathbringer:
-      total: 0.48
-      efficiency: 0.45
+      total: 0.51
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Berserker's Shield
   - Amanita Charm
   - Erosion
+  - Stampede
   - Pharaoh's Curse
   - Shogun's Ofuda
   - Umbral Link
   flex_slots:
   - Erosion
-  - Berserker's Shield
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Void Shield — physical protection
     swap_item: Void Shield
@@ -228,39 +228,39 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.7
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Amanita Charm:
-      total: 0.79
-      efficiency: 0.62
+      total: 0.81
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.97
     Erosion:
-      total: 0.58
-      efficiency: 0.48
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Stampede:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.48
+      total: 0.63
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.74
     Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.47
+      total: 0.62
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
     Umbral Link:
-      total: 0.59
-      efficiency: 0.4
+      total: 0.61
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Tekko-Kagi
-  - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
-  - Titan's Bane
+  - Lernaean Bow
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,6 +293,12 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Toxic Blade:
       total: 0.58
       efficiency: 0.33
@@ -300,32 +306,26 @@ builds:
       pick: 0.0
       fit: 0.83
     Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.65
+      total: 0.61
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.5
     The Reaper:
-      total: 0.66
-      efficiency: 0.53
+      total: 0.67
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.8
     Tekko-Kagi:
-      total: 0.55
-      efficiency: 0.52
+      total: 0.53
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Titan's Bane:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Heartseeker:
-      total: 0.54
-      efficiency: 0.41
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -359,38 +359,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
-      efficiency: 0.44
+      total: 0.58
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.7
     Lernaean Bow:
-      total: 0.54
-      efficiency: 0.47
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.62
     Toxic Blade:
       total: 0.62
-      efficiency: 0.43
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.8
     Tyrfing:
-      total: 0.58
-      efficiency: 0.46
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.7
     The Reaper:
-      total: 0.53
-      efficiency: 0.53
+      total: 0.54
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.53
     Riptalon:
-      total: 0.64
-      efficiency: 0.45
+      total: 0.67
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Hydra's Lament
-  - Pharaoh's Curse
+  - Demon Blade
+  - Eros' Bow
   flex_slots:
-  - Toxic Blade
-  - Pharaoh's Curse
+  - Demon Blade
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -418,44 +418,44 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.48
-      efficiency: 0.47
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Toxic Blade:
-      total: 0.43
-      efficiency: 0.33
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Chandra's Grace:
-      total: 0.49
-      efficiency: 0.42
+      total: 0.46
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
       fit: 0.56
     Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.65
+      total: 0.58
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.43
     Hydra's Lament:
-      total: 0.51
-      efficiency: 0.52
+      total: 0.52
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Pharaoh's Curse:
-      total: 0.41
-      efficiency: 0.32
+    Demon Blade:
+      total: 0.44
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Eros' Bow:
+      total: 0.42
+      efficiency: 0.35
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
   - Lernaean Bow
+  - Jotunn's Revenge
   - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
   flex_slots:
   - Dominance
-  - Golden Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -480,47 +480,47 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.48
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
+    Jotunn's Revenge:
       total: 0.51
-      efficiency: 0.43
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Dominance:
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.57
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.71
     Demon Blade:
-      total: 0.57
-      efficiency: 0.34
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -545,8 +545,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -554,46 +554,46 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.61
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
     Dominance:
-      total: 0.51
-      efficiency: 0.43
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.6
     The Reaper:
-      total: 0.57
-      efficiency: 0.53
+      total: 0.59
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.57
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.71
     Silverbranch Bow:
-      total: 0.37
-      efficiency: 0.39
+      total: 0.38
+      efficiency: 0.42
       win: 0.5
       pick: 0.0
       fit: 0.35
     Demon Blade:
-      total: 0.57
-      efficiency: 0.34
+      total: 0.59
+      efficiency: 0.38
       win: 0.5
       pick: 0.0
       fit: 0.79
   swaps:
   - added: Silverbranch Bow
-    removed: Golden Blade
-    reason: Conquest community 70% win over 121 matches (vs 56% on this god), taking
-      the model's weakest slot from Golden Blade
+    removed: Jotunn's Revenge
+    reason: Conquest community 70% win over 94 matches (vs 55% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001
 ---

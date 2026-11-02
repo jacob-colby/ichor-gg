@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 661.0
     per_level: 94.0
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 299.36
     per_level: 45.36
-  mana_regen:
-    base: 1.47
-    per_level: 0.14
   physical_prot:
     base: 20.28
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.47
+    per_level: 0.14
 abilities:
 - slot: Basic Attack
   name: Chaac Basic Attack
@@ -47,28 +47,28 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Overflow
   details:
   - Cooldown -2 seconds
   - 'Heal: 10'
-  - 'Heal Scaling: 20% Intelligence'
+  - 'Heal Scaling: 12.5% Intelligence'
   - 'Heal Amount Per Level: 1'
+  description: FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability
+    you use costs 0 mana, has Lower Cooldown , and Heals you
   detail_kinds:
   - buff
   - heal
   - heal
   - heal
-  description: FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability
-    you use costs 0 mana, has Lower Cooldown , and Heals you
 - slot: 1st Ability
   name: Thunder Strike
   cooldown:
@@ -89,6 +89,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
+  description: Throw your Axe forward, dealing Physical Damage to enemies in the area
+    where it lands
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -99,9 +102,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Throw your Axe forward, dealing Physical Damage to enemies in the area
-    where it lands
 - slot: 2nd Ability
   name: Torrent
   cooldown:
@@ -134,6 +134,10 @@ abilities:
   - 'Dash Radius: 1.28 meters'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
+  description: If you Dash , you will still do the area attack upon reaching the Axe
+    Swing your Axe around you, dealing Physical Damage to enemies and gaining Protections
+    for each enemy hit
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -151,10 +155,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: If you Dash , you will still do the area attack upon reaching the Axe
-    Swing your Axe around you, dealing Physical Damage to enemies and gaining Protections
-    for each enemy hit
 - slot: 3rd Ability
   name: Rain Dance
   cooldown:
@@ -172,14 +172,15 @@ abilities:
   - Enemies in both Rain Storms are Slowed and Debuffed for twice as much
   - Grants a stack of Overflow every 1.5s
   - 'Heal Per Tick: 8 | 11 | 14 | 17 | 20'
-  - 'Heal Scaling Per Tick: 5% Intelligence'
+  - 'Heal Scaling Per Tick: 2.5% Intelligence'
   - 'Dampening: 9 | 10.5 | 12 | 13.5 | 15'
   - 'Slow: 15 | 17.5 | 20 | 22.5 | 25%'
-  - 'Attack Speed Slow: 15 | 17.5 | 20 | 22.5 | 25%'
+  - 'Attack Speed Slow: 10 | 12.5 | 15 | 17.5 | 20%'
   - 'Radius: 6.4 meters'
   - 'Axe Radius: 9.6 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 55 | 65 | 75 | 85 | 95 mana'
+  description: Create a rainstorm that Heals you over time and provides Dampening
   detail_kinds:
   - slow
   - heal
@@ -195,12 +196,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Create a rainstorm that Heals you over time and provides Dampening
-    Attack Speed
 - slot: Ultimate
   name: Storm Call
   cooldown:
-  - 75.0
+  - 90.0
   cost:
   - 80.0
   - 90.0
@@ -215,8 +214,11 @@ abilities:
   - 'Damage Mitigation: 50 | 55 | 60 | 65 | 70%'
   - 'Silence Duration: 1.5 seconds'
   - 'Radius: 5.6 meters'
-  - 'Cooldown: 75 seconds'
+  - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
+  description: Charge up your Lightning Axe, then unleash a blast dealing Physical
+    Damage , Knocking Up , and Silencing in an area around you
+  damage_type: physical
   detail_kinds:
   - mechanic
   - stun
@@ -227,14 +229,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Charge up your Lightning Axe, then unleash a blast dealing Physical
-    Damage , Knocking Up , and Silencing in an area around you
 aspects:
 - name: Aspect of Fulmination
   kit_changes: Rain Dance no longer heals but damages enemies in the area instead.
 source_url: https://wiki.smite2.com/w/Chaac
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Chaac Basic Attack

@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 577.0
     per_level: 94.0
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 322.62
     per_level: 48.3
-  mana_regen:
-    base: 1.44
-    per_level: 0.11
   physical_prot:
     base: 20.04
     per_level: 2.76
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.44
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Apollo Basic Attack
@@ -45,25 +45,25 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Audacity
   details:
   - 'Bonus Attack Speed: 100%'
   - 'Bonus Basic Attack Projectile Speed: 20%'
-  detail_kinds:
-  - buff
-  - buff
   description: FASTER ATTACKS AFTER HITS Gain a stack of for each successful Basic
     Attack on any enemy and for each successful damaging ability on enemy gods. At
     10 stacks you gain increased Attack Speed and Basic Attack Projectile Speed for
     your next 5 Basic Attacks
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: So Beautiful
   cooldown:
@@ -82,6 +82,8 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Send a projectile forward that deals Physical Damage
+  damage_type: physical
   detail_kinds:
   - null
   - physical
@@ -90,8 +92,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Send a projectile forward that deals Physical Damage
 - slot: 2nd Ability
   name: Serenade
   cooldown:
@@ -105,6 +105,8 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 mana'
+  description: MESMERIZE AND PROTECT Sing to Mesmerize all nearby enemies and gain
+    additional protections
   detail_kinds:
   - stun
   - buff
@@ -112,8 +114,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: MESMERIZE AND PROTECT Sing to Mesmerize all nearby enemies and gain
-    additional protections
 - slot: 3rd Ability
   name: The Moves
   cooldown:
@@ -132,6 +132,10 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 70 mana'
+  description: Dash forward dealing Physical Damage and Knocking Aside all enemies.
+    At the end of the Dash all nearby allies gain a Speed Buff and all nearby enemies
+    are Slowed
+  damage_type: physical
   detail_kinds:
   - null
   - physical
@@ -144,10 +148,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Dash forward dealing Physical Damage and Knocking Aside all enemies.
-    At the end of the Dash all nearby allies gain a Speed Buff and all nearby enemies
-    are Slowed
 - slot: Ultimate
   name: Across the Sky
   cooldown:
@@ -166,6 +166,10 @@ abilities:
   - 'Cost: 20 mana'
   - 'Cost Per Second: 35 | 40 | 45 | 50 | 55 mana'
   - 'Carrying Ally Bonus Cost: 5% mana'
+  description: Ride your Chariot across the sky, choosing when to land. When descending
+    you deal Physical Damage every 0.15 seconds for 0.6 seconds, Knocking Back enemies
+    on the last tick
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -177,19 +181,15 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Ride your Chariot across the sky, choosing when to land. When descending
-    you deal Physical Damage every 0.15 seconds for 0.6 seconds, Knocking Back enemies
-    on the last tick
 aspects:
 - name: Aspect of Harmony
   kit_changes: Audacity now grants free So Beautiful casts but no Attack Speed. So
     Beautiful scales with item Health, lowers enemy Attack Speed, and grants nearby
     allies Attack Speed on god or jungle boss hits, but deals less Base Damage. Serenade
-    now shields nearby allies and grants Protections while it holds. Buffing an ally
-    grants an Audacity stack.
+    now shields nearby allies and Protections while it holds. Buffing an ally grants
+    an Audacity stack.
 source_url: https://wiki.smite2.com/w/Apollo
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Apollo Basic Attack

@@ -362,8 +362,6 @@ def run(data_root: Path = DATA_ROOT, fetcher=None, today: str = None,
     data_root = Path(data_root)
     today = today or date.today().isoformat()
     reason = "forced" if force else due_reason(data_root, today)
-    if reason is None:
-        return {"status": "not-due"}
 
     current = json.loads((data_root / "_patch.json").read_text(encoding="utf-8"))
     data_n = snapshots.patch_number(current.get("data_patch"))
@@ -375,10 +373,22 @@ def run(data_root: Path = DATA_ROOT, fetcher=None, today: str = None,
         nums = [int(m.group(1)) for m in refresh._PATCH_VERSION_RE.finditer(html)]
         wiki_patch = f"Open Beta {max(nums)}" if nums else None
         if wiki_patch is None:
+            if reason is None:
+                return {"status": "not-due"}
             return {"status": "refused", "reason": reason,
                     "problems": ["the wiki's Patch_notes index names no patch — "
                                  "cannot say which patch the data would be"]}
         wiki_n = snapshots.patch_number(wiki_patch)
+        if reason is None:
+            # The second due signal. Steam's feed is the first, and on its
+            # first live run (2026-11-02) it found no label newer than Open
+            # Beta 26 in 50 posts: recent patch posts do not carry one in the
+            # title. Without this, a patch the feed misses would wait for the
+            # weekly check.
+            if data_n is not None and wiki_n > data_n:
+                reason = "wiki-patch"
+            else:
+                return {"status": "not-due"}
         if reason == "patch" and data_n is not None and wiki_n <= data_n:
             return {"status": "waiting-for-wiki", "reason": reason, "wiki_patch": wiki_patch,
                     "game_patch": current.get("patch")}
@@ -434,7 +444,8 @@ def run(data_root: Path = DATA_ROOT, fetcher=None, today: str = None,
 def report(result: dict) -> str:
     s = result["status"]
     if s == "not-due":
-        return "[stats refresh] not due: item data matches the game patch and was checked this week"
+        return ("[stats refresh] not due: item data matches the game and the wiki's patch, "
+                "and was checked this week")
     if s == "waiting-for-wiki":
         return (f"[stats refresh] game is on {result['game_patch']}, the wiki still says "
                 f"{result['wiki_patch']} — waiting for it to catch up, nothing written")

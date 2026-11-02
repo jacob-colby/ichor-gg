@@ -11,10 +11,10 @@ passive: 'On Use: +10 (+4 per Level) Attack Damage +20% (+1% per Level) Attack S
   up to 3 active items at once'
 builds_from:
 - Manchu Bow
-- Hunter's Bow
+- Skeggox
 builds_into: []
 source_url: https://wiki.smite2.com/w/Dagger_of_Frenzy
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 On Use: +10 (+4 per Level) Attack Damage +20% (+1% per Level) Attack Speed Buff lasts 6 Attacks. Killing a God refreshes Cooldown. Cooldown: 15s You can own up to 3 active items at once

@@ -6,8 +6,8 @@
 #                    win rates, pick rates, builds, starters. Every run.
 #   wiki.smite2.com  item stats and god kits. Only changes on patch days, so
 #                    `smite.stats_refresh` fetches it only when `patch_feed`
-#                    has recorded a game patch newer than the item data (or
-#                    weekly). It is plain HTTP with an honest User-Agent:
+#                    or the wiki's own Patch_notes index names a patch newer
+#                    than the item data (or weekly). It is plain HTTP with an honest User-Agent:
 #                    Cloudflare challenges clients posing as a browser, not
 #                    ones that say what they are (measured from a runner,
 #                    2026-11-02 — see that module's docstring). All-or-nothing
@@ -23,9 +23,6 @@ on:
     # heavily at :00 and a job can be delayed or dropped entirely at peak.
     - cron: "15 9 * * *"
   workflow_dispatch:
-  # TEMPORARY-BRANCH-RUN: live end-to-end test before merge; removed before merge.
-  push:
-    branches: [feat/auto-stats-refresh]
 
 # Never let two refreshes race for the same commit.
 concurrency:
@@ -68,7 +65,9 @@ jobs:
       # Wiki item and god stats, when a patch landed (or weekly). Runs after
       # patch detection, which it keys off, and before the snapshot, so a
       # patch's stat changes are banked as that patch's notes the same run.
-      # Not due: zero requests. Due: ~320 page loads at a 2.5s floor. Any
+      # Not due: one request (the wiki's Patch_notes index — the second due
+      # signal, for patches Steam's feed misses). Due: ~317 page loads at a
+      # 2.5s floor, ~14 min (measured 2026-11-02). Any
       # fetch failure or validation problem writes nothing and prints a
       # ::warning:: — exit 0 on every path, like patch_feed.
       - name: Refresh wiki stats if a patch landed

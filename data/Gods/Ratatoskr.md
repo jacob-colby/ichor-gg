@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 661.0
     per_level: 94.0
-  health_regen:
-    base: 1.93
-    per_level: 0.2
   mana:
     base: 279.04
     per_level: 45.36
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 19.0
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.98
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Ratatoskr Basic Attack
@@ -48,23 +48,23 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Acorn of Yggdrasil
   details:
   - After purchasing an Acorn, you cannot perform other actions and are Rooted for
     0.7 seconds
-  detail_kinds:
-  - debuff
   description: You spawn with a Magic Acorn in your inventory. This can be upgraded
     anywhere on the map to provide different bonuses
+  detail_kinds:
+  - debuff
 - slot: 1st Ability
   name: Dart
   cooldown:
@@ -91,6 +91,9 @@ abilities:
   - 'Briskberry Dash Radius: 1.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: Dash forward, dealing Physical Damage and Slowing enemies hit, stopping
+    on enemy gods
+  damage_type: physical
   detail_kinds:
   - buff
   - null
@@ -106,9 +109,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Dash forward, dealing Physical Damage and Slowing enemies hit, stopping
-    on enemy gods
 - slot: 2nd Ability
   name: Flurry
   cooldown:
@@ -121,9 +121,9 @@ abilities:
   - 80.0
   details:
   - This ability can be modified by purchasing the Ashwhorl Acorn
-  - 'Damage: 35 | 50 | 65 | 80 | 95'
+  - 'Damage: 25 | 40 | 55 | 70 | 85'
   - 'Damage Scaling: 25% Strength'
-  - 'Ashwhorl Damage: 25 | 30 | 35 | 40 | 45'
+  - 'Ashwhorl Damage: 20 | 25 | 30 | 35 | 40'
   - 'Ashwhorl Damage Scaling: 20% Strength'
   - 'Physical Protections Reduced: 2 | 3 | 4 | 5 | 6'
   - 'Debuff Duration: 3 seconds'
@@ -132,6 +132,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Spin 4 times and deal Physical Damage to enemies around you, reducing
+    their Physical Protections
+  damage_type: physical
   detail_kinds:
   - null
   - physical
@@ -145,9 +148,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Spin 4 times and deal Physical Damage to enemies around you, reducing
-    their Physical Protections
 - slot: 3rd Ability
   name: Acorn Blast
   cooldown:
@@ -174,6 +174,9 @@ abilities:
   - 'Cone Angle: 20 degrees'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Fire a blast of 3 Acorns that deal Physical Damage . Enemies hit by
+    3 Acorns are Stunned
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -189,12 +192,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Fire a blast of 3 Acorns that deal Physical Damage . Enemies hit by
-    3 Acorns are Stunned
 - slot: Ultimate
   name: Through the Cosmos
   cooldown:
+  - 110.0
+  - 105.0
+  - 100.0
+  - 95.0
   - 90.0
   cost:
   - 100.0
@@ -204,8 +208,11 @@ abilities:
   - 'Damage Scaling: 90% Strength'
   - 'Range: 14.4 meters'
   - 'Radius: 3.2 meters'
-  - 'Cooldown: 90 seconds'
+  - 'Cooldown: 110 | 105 | 100 | 95 | 90 seconds'
   - 'Cost: 100 mana'
+  description: Fly into the sky. Choose and leap to a location, up to twice, before
+    landing at a final location dealing Physical Damage and Knocking Up enemies
+  damage_type: physical
   detail_kinds:
   - mechanic
   - physical
@@ -214,9 +221,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Fly into the sky. Choose and leap to a location, up to twice, before
-    landing at a final location dealing Physical Damage and Knocking Up enemies
 aspects:
 - name: Aspect of the Thickbark
   kit_changes: Your tier 3 Acorn effects change. Briskberry causes Dart to knockback
@@ -224,7 +228,7 @@ aspects:
     and healing. Thistlethorn causes Acorn Blast to fire 5 projectiles and debuffs
     enemies.
 source_url: https://wiki.smite2.com/w/Ratatoskr
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ratatoskr Basic Attack

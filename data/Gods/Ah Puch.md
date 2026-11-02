@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
-  health_regen:
-    base: 1.82
-    per_level: 0.2
   mana:
     base: 320.0
     per_level: 45.37
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
   physical_prot:
     base: 19.2
     per_level: 3.24
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  attack_power:
-    base: 44.0
-    per_level: 2.21
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.0
+    per_level: 2.21
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Ah Puch Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Hollow Ground
   details:
@@ -61,6 +61,9 @@ abilities:
   - 'Cooldown Reduction: 1 second'
   - 'Max Health Restore: 3%'
   - 'Max Mana Restore: 3%'
+  description: Exhume decaying corpses at will. When you walk over a decaying corpse,
+    reduce the Cooldown of Undead Surge and Corpse Explosion , and restore a portion
+    of your max Health and Mana
   detail_kinds:
   - null
   - null
@@ -68,9 +71,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: Exhume decaying corpses at will. When you walk over a decaying corpse,
-    reduce the Cooldown of Undead Surge and Corpse Explosion , and restore a portion
-    of your max Health and Mana
 - slot: 1st Ability
   name: Undead Surge
   cooldown:
@@ -96,6 +96,10 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Corpses explode on contact, at max range, or when reactivating Raise
+    two decaying corpses from the underworld that surge forward, dealing Magical Damage
+    . Enemies hit are Slowed and have Reduced Healing for a duration
+  damage_type: magical
   detail_kinds:
   - debuff
   - null
@@ -111,10 +115,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Corpses explode on contact, at max range, or when reactivating Raise
-    two decaying corpses from the underworld that surge forward, dealing Magical Damage
-    . Enemies hit are Slowed and have Reduced Healing for a duration
 - slot: 2nd Ability
   name: Corpse Explosion
   cooldown:
@@ -124,13 +124,15 @@ abilities:
   details:
   - Any corpses in the area detonate, dealing additional Magical Damage
   - 'Damage: 60 | 70 | 80 | 90 | 100'
-  - 'Damage Scaling: 35% Intelligence'
+  - 'Damage Scaling: 30% Intelligence'
   - 'Corpse Damage: 55 | 80 | 105 | 130 | 155'
   - 'Corpse Damage Scaling: 30% Intelligence'
   - 'Range: 8.8 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 mana'
+  description: Cause the target area to explode, dealing Magical Damage Corpse
+  damage_type: magical
   detail_kinds:
   - magical
   - magical
@@ -141,8 +143,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Cause the target area to explode, dealing Magical Damage
 - slot: 3rd Ability
   name: Fleeting Breath
   cooldown:
@@ -159,14 +159,16 @@ abilities:
   - The corpse falls to the ground and remains behind
   - 'Tick Damage: 24 | 32 | 40 | 48 | 56'
   - 'Tick Damage Scaling: 16% Intelligence'
-  - 'Bonus Damage: 65 | 120 | 175 | 230 | 285'
-  - 'Bonus Damage Scaling: 50% Intelligence'
+  - 'Bonus Damage: 50 | 100 | 150 | 200 | 250'
+  - 'Bonus Damage Scaling: 40% Intelligence'
   - 'Debuff Duration: 4 seconds'
   - 'Stun Duration: 1.5 seconds'
   - 'Range: 8.8 meters'
   - 'Radius: 2.08 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Throw a charm from the underworld that awakens a decaying corpse, applying
+    miasma to enemies in an area, dealing Magical Damage over time
   detail_kinds:
   - heal
   - null
@@ -180,8 +182,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Throw a charm from the underworld that awakens a decaying corpse, applying
-    miasma to enemies in an area, dealing Magical Damage over time
 - slot: Ultimate
   name: Empty the Crypts
   cooldown:
@@ -206,6 +206,9 @@ abilities:
   - 'Radius: 16 meters'
   - 'Cooldown: 110 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Unleash a field of spirits at a target location for 6 seconds. Enemies
+    inside the field take Magical Damage every 0.5 seconds
+  damage_type: magical
   detail_kinds:
   - debuff
   - null
@@ -218,9 +221,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Unleash a field of spirits at a target location for 6 seconds. Enemies
-    inside the field take Magical Damage every 0.5 seconds
 aspects:
 - name: Aspect of the Death March
   kit_changes: Each decaying corpse you walk over reduces the Cooldown of Fleeting
@@ -229,7 +229,7 @@ aspects:
     targets on ability hits. Empty The Crypts deals less damage per tick but Slows
     haunted enemy gods inside the field.
 source_url: https://wiki.smite2.com/w/Ah_Puch
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Ah Puch Basic Attack

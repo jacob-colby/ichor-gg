@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.4
-  attack_power:
-    base: 50.7
-    per_level: 2.4
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 50.7
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Susano Basic Attack
@@ -47,14 +47,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Storm's Edge
   details:
@@ -63,9 +63,11 @@ abilities:
   - At 3 stacks, enemies also take increased damage
   - 'Strength Reduction: 10%'
   - 'Slow: 15%'
-  - 'Increased Damage Taken: +5%'
+  - 'Increased Damage Taken: 10%'
   - 'Debuff Duration: 5 seconds'
   - 'Buff Duration: 5 seconds'
+  description: After using an ability, your next Attack will add a debuff stack to
+    an enemy
   detail_kinds:
   - debuff
   - slow
@@ -75,16 +77,14 @@ abilities:
   - debuff
   - debuff
   - buff
-  description: After using an ability, your next Attack will add a debuff stack to
-    an enemy
 - slot: 1st Ability
   name: Storm Kata
   cooldown:
-  - 14.0
-  - 13.5
-  - 13.0
-  - 12.5
   - 12.0
+  - 11.5
+  - 11.0
+  - 10.5
+  - 10.0
   cost:
   - 50.0
   - 55.0
@@ -98,19 +98,21 @@ abilities:
   - This ability Cooldown is increased by 1 second for each additional attack used
   - Each attack of Storm Kata can trigger ability item effects
   - The Dash passes through and damages all enemies
-  - 'Strike Damage: 45 | 70 | 95 | 120 | 145'
-  - 'Strike Damage Scaling: 50% Strength'
-  - 'Spin Damage: 45 | 70 | 95 | 120 | 145'
-  - 'Spin Damage Scaling: 50% Strength'
+  - 'Strike Damage: 50 | 75 | 100 | 125 | 150'
+  - 'Strike Damage Scaling: 55% Strength'
+  - 'Spin Damage: 50 | 75 | 100 | 125 | 150'
+  - 'Spin Damage Scaling: 55% Strength'
   - 'Dash Damage: 20 | 32.5 | 45 | 57.5 | 70'
-  - 'Dash Damage Scaling: 20% Strength'
+  - 'Dash Damage Scaling: 25% Strength'
   - 'Strike Range: 4.8 meters'
   - 'Strike Cone Angle: 60 degrees'
   - 'Spin Radius: 4.8 meters'
   - 'Dash Range: 7 meters'
   - 'Dash Radius: 0.5 meters'
-  - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
+  - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: Each attack of can trigger ability item effects Strike 3 times in quick
+    succession
   detail_kinds:
   - physical
   - physical
@@ -131,8 +133,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Each attack of can trigger ability item effects Strike 3 times in quick
-    succession
 - slot: 2nd Ability
   name: Wind Siphon
   cooldown:
@@ -153,6 +153,9 @@ abilities:
   - 'Inner Cone Angle: 40 degrees'
   - 'Cooldown: 15 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
+  description: Command the winds to blow, dealing Physical Damage to enemies in front
+    of you
+  damage_type: physical
   detail_kinds:
   - stun
   - stun
@@ -163,9 +166,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Command the winds to blow, dealing Physical Damage to enemies in front
-    of you
 - slot: 3rd Ability
   name: Jet Stream
   cooldown:
@@ -189,6 +189,9 @@ abilities:
   - 'Radius: 0.64 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
+  description: Throw a gust of wind projectile that stops on walls or the first enemy
+    hit, creating a whirlwind
+  damage_type: physical
   detail_kinds:
   - physical
   - null
@@ -202,9 +205,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Throw a gust of wind projectile that stops on walls or the first enemy
-    hit, creating a whirlwind
 - slot: Ultimate
   name: Typhoon
   cooldown:
@@ -233,6 +233,9 @@ abilities:
   - 'Max Radius: 8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
+  description: Summon a typhoon which repeatedly deals Physical Damage as it grows
+    in size
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -249,12 +252,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Summon a typhoon which repeatedly deals Physical Damage as it grows
-    in size
 aspects: []
 source_url: https://wiki.smite2.com/w/Susano
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Susano Basic Attack

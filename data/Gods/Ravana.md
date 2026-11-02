@@ -42,8 +42,7 @@ abilities:
   details:
   - If multiple enemies are in the area, the enemy closest to the center of the area
     will be hit
-  - Has a 3 hit chain. Attacks in order of 0.75, 0.5, 1.25x damage and swing time.
-    The final hit cleaves
+  - Has a 3 hit chain. Attacks in order of 0.75, 0.5, 1.25x damage and swing time
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
@@ -211,9 +210,9 @@ aspects:
   kit_changes: Combo now stacks up to 999. Mystic Rush is replaced by an activator
     that lets you fire an enhanced version of your regular abilities. Using an enhanced
     ability consumes all Combo, grants a Shield equal to a percentage of your max
-    Health, and if you have 50 or more Combo, a buff based on how much Combo was consumed
+    Health, and if you have 50 or more Combo, a buff based on how much Combo was consumed.
 source_url: https://wiki.smite2.com/w/Ravana
-last_verified: '2026-11-02'
+last_verified: '2026-08-29'
 ---
 <!-- WIKI:START -->
 - Ravana Basic Attack

@@ -12,9 +12,10 @@ builds_from:
 - Circlet
 builds_into:
 - Gauntlet of Thebes
+- Heartwood Charm
 - Wish-Granting Pearl
 source_url: https://wiki.smite2.com/w/Odigba
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 God Kill or Assist: Heal +5% Max Health over 6s.

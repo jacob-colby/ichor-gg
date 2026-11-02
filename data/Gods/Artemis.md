@@ -12,15 +12,9 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.33
-    per_level: 0.11
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -30,12 +24,18 @@ base_stats:
   attack_speed:
     base: 1.02
     per_level: 1.51
-  attack_power:
-    base: 47.95
-    per_level: 2.59
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.95
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Artemis Basic Attack
@@ -44,13 +44,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Still Target
   details:
@@ -78,6 +78,10 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 45 mana'
+  description: Place a trap on the ground. Enemy gods that come in contact with it
+    activate it, Rooting , Crippling , and repeatedly dealing Physical Damage over
+    3 seconds
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -89,10 +93,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Place a trap on the ground. Enemy gods that come in contact with it
-    activate it, Rooting , Crippling , and repeatedly dealing Physical Damage over
-    3 seconds
 - slot: 2nd Ability
   name: Vengeful Assault
   cooldown:
@@ -110,10 +110,11 @@ abilities:
   - After reaching 4 charges they are consumed, extending the duration of the buff
     by 3 seconds
   - 'Movement Speed: 25%'
-  - 'Attack Speed: 20 | 30 | 40 | 50 | 60%'
+  - 'Attack Speed: 25 | 35 | 45 | 55 | 65%'
   - 'Buff Duration: 3 | 3.5 | 4 | 4.5 | 5 seconds'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Greatly increase your Movement Speed and Attack Speed
   detail_kinds:
   - slow
   - null
@@ -123,7 +124,6 @@ abilities:
   - buff
   - mechanic
   - mechanic
-  description: Greatly increase your Movement Speed and Attack Speed
 - slot: 3rd Ability
   name: Suppress the Insolent
   cooldown:
@@ -137,12 +137,15 @@ abilities:
   details:
   - 'Damage: 100 | 150 | 200 | 250 | 300'
   - 'Damage Scaling: 65% Strength'
-  - 'Slow: 20%'
+  - 'Slow: 25%'
   - 'Slow: 2 seconds'
   - 'Range: 8.8 meters'
   - 'Radius: 2.4 meters'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage
+    and Slowing enemies
+  damage_type: physical
   detail_kinds:
   - physical
   - physical
@@ -152,13 +155,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage
-    and Slowing enemies
 - slot: Ultimate
   name: Calydonian Boar
   cooldown:
-  - 100.0
+  - 90.0
   cost:
   - 45.0
   details:
@@ -172,8 +172,9 @@ abilities:
   - 'Stun: 0.9 | 1 | 1.1 | 1.2 | 1.3 seconds'
   - 'Boar Health: 350 | 450 | 550 | 650 | 750'
   - 'Radius: 9.6 meters'
-  - 'Cooldown: 100 seconds'
+  - 'Cooldown: 90 seconds'
   - 'Cost: 45 mana'
+  description: Summon the great that charges the nearest enemy god
   detail_kinds:
   - physical
   - mechanic
@@ -186,14 +187,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Summon the great that charges the nearest enemy god
 aspects:
 - name: Aspect of the Wild
   kit_changes: Transgressor's Fate no longer roots or cripples gods but can now target
     minions. Triggered traps now also heal Artemis and deal damage to enemies in a
     larger area.
 source_url: https://wiki.smite2.com/w/Artemis
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Artemis Basic Attack

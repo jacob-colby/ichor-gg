@@ -205,14 +205,26 @@ def test_a_failed_swap_puts_the_live_directories_back(root, monkeypatch):
 
 # -- nothing to do ----------------------------------------------------------
 
-def test_current_stats_make_no_request_and_write_nothing(root):
+def test_current_stats_cost_one_request_and_write_nothing(root):
     sr.run(root, RecordedWiki(), today=TODAY)
     before = _tree(root)
     wiki = RecordedWiki()
     res = sr.run(root, wiki, today="2026-11-03")
     assert res["status"] == "not-due"
-    assert wiki.requests == 0
+    assert wiki.requests == 1  # the wiki's Patch_notes index, nothing else
     assert _tree(root) == before
+
+
+def test_a_patch_the_steam_feed_missed_is_caught_from_the_wiki(root):
+    """The feed's first live run found no title newer than Open Beta 26. If
+    `_patch.json` never hears of a patch, the wiki's own index must still
+    make the refresh due — not a week later."""
+    (root / "_patch.json").write_text(json.dumps(
+        {"patch": "Open Beta 40", "captured": "2026-08-01", "data_patch": "Open Beta 40"}))
+    (root / sr.STATE_FILE).write_text(json.dumps({"last_success": "2026-11-01"}))
+    res = sr.run(root, RecordedWiki(), today=TODAY)
+    assert res["status"] == "refreshed" and res["reason"] == "wiki-patch"
+    assert json.loads((root / "_patch.json").read_text())["data_patch"] == "Open Beta 46"
 
 
 def test_a_weekly_check_with_nothing_new_changes_only_the_check_date(root):

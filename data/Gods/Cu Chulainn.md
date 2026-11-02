@@ -103,7 +103,7 @@ abilities:
   - 'Damage: 90 | 150 | 210 | 270 | 330'
   - 'Damage Scaling: 65% Strength'
   - 'Stun Duration: 2 seconds'
-  - 'Healing Reduction: -40%'
+  - 'Healing Reduction: -25%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Minion Rage Gain: 7'
   - 'God Rage Gain: 10'
@@ -243,16 +243,22 @@ abilities:
   - 13.0
   - 12.0
   details:
+  - Reduces enemy Healing
   - This ability passes through and damages all enemies, but stops on walls
   - 'Damage: 90 | 150 | 210 | 270 | 330'
   - 'Damage Scaling: 65% Strength'
   - 'Root Duration: 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds'
+  - 'Healing Reduction: -25%'
+  - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 7.2 meters'
   - 'Cooldown: 16 | 15 | 14 | 13 | 12 seconds'
   detail_kinds:
+  - debuff
   - null
   - physical
   - physical
+  - debuff
+  - debuff
   - debuff
   - mechanic
   - mechanic
@@ -333,7 +339,7 @@ aspects:
     0.5s. After reaching 0 Rage transform back to Human form with reduced Protections
     and Damage.
 source_url: https://wiki.smite2.com/w/Cu_Chulainn
-last_verified: '2026-11-02'
+last_verified: '2026-08-19'
 ---
 <!-- WIKI:START -->
 - Cu Chulainn Basic Attack

@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 668.52
     per_level: 101.52
-  health_regen:
-    base: 1.84
-    per_level: 0.22
   mana:
     base: 319.68
     per_level: 45.36
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
   physical_prot:
     base: 20.52
     per_level: 3.24
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.84
+    per_level: 0.22
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Bacchus Basic Attack
@@ -46,13 +46,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Magical Damage to an enemy in front of you
+  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: Drunk-O-Meter
   details:
@@ -64,6 +64,7 @@ abilities:
   - 'Strength: 5'
   - 'Intelligence: 10'
   - 'Protections: 6%'
+  description: As you become more Drunk, gain Strength , Intelligence , and Protections
   detail_kinds:
   - null
   - null
@@ -73,7 +74,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: As you become more Drunk, gain Strength , Intelligence , and Protections
 - slot: 1st Ability
   name: Chug
   cooldown:
@@ -94,6 +94,8 @@ abilities:
   - 'Drunkenness: 40 | 46 | 52 | 58 | 64 | 70%'
   - 'Cooldown: 10 seconds'
   - 'Cost: 20 mana'
+  description: Take a drink, Healing , and becoming more Drunk
+  damage_type: magical
   detail_kinds:
   - buff
   - magical
@@ -107,8 +109,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Take a drink, Healing , and becoming more Drunk
 - slot: 2nd Ability
   name: Belly Flop
   cooldown:
@@ -131,6 +131,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
+  description: Leap forward to and slam into the ground belly first, Knocking Up enemies
+  damage_type: magical
   detail_kinds:
   - magical
   - slow
@@ -143,8 +145,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Leap forward to and slam into the ground belly first, Knocking Up enemies
 - slot: 3rd Ability
   name: Belch of the Gods
   cooldown:
@@ -167,12 +167,15 @@ abilities:
   - 'Damage: 30 | 45 | 60 | 75 | 90'
   - 'Damage Scaling: 17.5% Intelligence'
   - 'Stun Duration: 0.9 | 0.95 | 1 | 1.05 | 1.1 seconds'
-  - 'Healing Reduction: -40%'
+  - 'Healing Reduction: -25%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 5.6 meters'
   - 'Cone Angle: 90 degrees'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
+  description: Channel a big ol' burp to deal Magical Damage repeatedly to enemies
+    in front of you
+  damage_type: magical
   detail_kinds:
   - stun
   - mechanic
@@ -187,9 +190,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Channel a big ol' burp to deal Magical Damage repeatedly to enemies
-    in front of you
 - slot: Ultimate
   name: Intoxicate
   cooldown:
@@ -207,6 +207,9 @@ abilities:
   - 'Radius: 5.6 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
+  description: 'Smash your jug of wine, dealing Magical Damage and Intoxicating enemies
+    around you Duration: 4 seconds'
+  damage_type: magical
   detail_kinds:
   - buff
   - magical
@@ -218,15 +221,12 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: 'Smash your jug of wine, dealing Magical Damage and Intoxicating enemies
-    around you Duration: 4 seconds'
 aspects:
 - name: Aspect of Revelry
   kit_changes: After using Chug, Bacchus's inhand attacks cleave and deal bonus damage
     scaling with Strength instead of Protections, for a short duration.
 source_url: https://wiki.smite2.com/w/Bacchus
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Bacchus Basic Attack

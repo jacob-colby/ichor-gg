@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 661.0
     per_level: 94.0
-  health_regen:
-    base: 1.82
-    per_level: 0.2
   mana:
     base: 334.1
     per_level: 42.0
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 19.0
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 0.98
     per_level: 1.4
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 375.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.82
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Guan Yu Basic Attack
@@ -48,14 +48,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Battle Fervor
   details:
@@ -66,10 +66,11 @@ abilities:
   - Dealing damage resets the max stacks buff duration
   - Despite the description, taking damage does not provide stacks of Fervor
   - 'Attack Speed: 1% Per Stack'
-  - 'Attack Speed At Max: 20%'
+  - 'Attack Speed At Max: 15%'
   - 'Bonus Attack Speed At Max: 1% Per Level'
   - 'Max Stacks Buff Duration: 5 seconds'
   - 'Max Stacks: 20'
+  description: Gain stacks of Fervor when dealing or taking damage
   detail_kinds:
   - buff
   - buff
@@ -82,7 +83,6 @@ abilities:
   - buff
   - buff
   - buff
-  description: Gain stacks of Fervor when dealing or taking damage
 - slot: 1st Ability
   name: Conviction
   cooldown:
@@ -90,19 +90,23 @@ abilities:
   cost:
   - 45.0
   details:
-  - Healing allied gods reduces cooldowns for Guan Yu
+  - Healing allied gods reduces cooldowns for Guan Yu and his allies
   - Allies are Healed for 75% of the total
   - Can be cast during any of Guan Yu's other abilities
   - If Guan Yu would benefit from the Cooldown Reduction, but it was used during the
     cast of another ability, that ability will receive the Cooldown Reduction when
     it goes on cooldown
-  - 'Heal: 30 | 55 | 80 | 105 | 130'
-  - 'Heal Scaling: 10% Intelligence'
-  - 'Cooldown Reduction: -1 seconds'
+  - 'Heal: 45 | 70 | 95 | 120 | 145'
+  - 'Heal Scaling: 6% Intelligence'
+  - 'Cooldown Reduction: -2 seconds'
+  - 'Ally Cooldown Reduction: -1.5 seconds'
   - 'Cooldown Reduction Scaling: 0.3% Intelligence'
   - 'Radius: 4.8 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 45 mana'
+  description: If Guan Yu would benefit from the Cooldown Reduction , but it was used
+    during the cast of another ability, that ability will receive the Cooldown Reduction
+    when it goes on cooldown Heal yourself and nearby allied gods
   detail_kinds:
   - heal
   - buff
@@ -112,12 +116,10 @@ abilities:
   - heal
   - buff
   - buff
+  - buff
   - mechanic
   - mechanic
   - mechanic
-  description: If Guan Yu would benefit from the Cooldown Reduction , but it was used
-    during the cast of another ability, that ability will receive the Cooldown Reduction
-    when it goes on cooldown Heal yourself and nearby allied gods
 - slot: 2nd Ability
   name: Warrior's Will
   cooldown:
@@ -137,6 +139,9 @@ abilities:
   - 'Radius: 0.96 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 50 mana'
+  description: Dash forward, dealing Physical Damage to and Slowing enemies you pass
+    through
+  damage_type: physical
   detail_kinds:
   - buff
   - physical
@@ -150,9 +155,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Dash forward, dealing Physical Damage to and Slowing enemies you pass
-    through
 - slot: 3rd Ability
   name: Taolu Assault
   cooldown:
@@ -175,6 +177,9 @@ abilities:
   - 'Range: 4.8 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
+  description: Swing your blade in a flurry, dealing Physical Damage repeatedly and
+    stealing protections from enemies hit up to 3 times
+  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -187,9 +192,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Swing your blade in a flurry, dealing Physical Damage repeatedly and
-    stealing protections from enemies hit up to 3 times
 - slot: Ultimate
   name: Cavalry Charge
   cooldown:
@@ -216,6 +218,10 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 80 | 90 | 100 | 110 | 120 mana'
+  description: Mount a warhorse, gaining CC Immunity . Strike enemies while riding,
+    dealing Physical Damage . Dismount with a final swing that also Stuns all enemies
+    hit
+  damage_type: physical
   detail_kinds:
   - debuff
   - null
@@ -230,10 +236,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Mount a warhorse, gaining CC Immunity . Strike enemies while riding,
-    dealing Physical Damage . Dismount with a final swing that also Stuns all enemies
-    hit
 aspects:
 - name: Aspect of the General
   kit_changes: Battle Fervor now provides Intelligence instead of Attack Speed. Conviction
@@ -241,7 +243,7 @@ aspects:
     Assault. However, Guan Yu loses all Strength scaling and reduced Intelligence
     damage scaling.
 source_url: https://wiki.smite2.com/w/Guan_Yu
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Guan Yu Basic Attack

@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 668.52
     per_level: 101.52
-  health_regen:
-    base: 1.93
-    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
   physical_prot:
     base: 19.0
     per_level: 3.0
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  attack_power:
-    base: 47.76
-    per_level: 2.4
   move_speed:
     base: 380.0
     per_level: 0.0
+  attack_power:
+    base: 47.76
+    per_level: 2.4
+  health_regen:
+    base: 1.93
+    per_level: 0.2
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
 abilities:
 - slot: Basic Attack
   name: Fenrir Basic Attack
@@ -46,13 +46,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
+  description: Deal Physical Damage to an enemy in front of you
+  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Unbound Runes
   details:
@@ -81,6 +81,8 @@ abilities:
   - 'Radius: 2.4 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
+  description: Savagely Leap forward, dealing Physical Damage when you land
+  damage_type: physical
   detail_kinds:
   - stun
   - null
@@ -92,8 +94,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Savagely Leap forward, dealing Physical Damage when you land
 - slot: 2nd Ability
   name: Seething Howl
   cooldown:
@@ -112,6 +112,7 @@ abilities:
   - 'Buff Duration: 6 seconds'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Unleash a howl, gaining increased Strength , Attack Speed , and Lifesteal
   detail_kinds:
   - null
   - buff
@@ -120,7 +121,6 @@ abilities:
   - buff
   - mechanic
   - mechanic
-  description: Unleash a howl, gaining increased Strength , Attack Speed , and Lifesteal
 - slot: 3rd Ability
   name: Brutalize
   cooldown:
@@ -147,12 +147,15 @@ abilities:
   - 'Damage Scaling: 40% Strength'
   - 'Increased Damage Scaling: 55% Strength'
   - 'Protections: 5 + 2 Per Level'
-  - 'Healing Reduction: -40%'
+  - 'Healing Reduction: -25%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 4.8 meters'
   - 'Radius: 1.6 meters'
   - 'Cooldown: 12 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Gain Protections , Leap forward, and grab onto an enemy, dealing Physical
+    Damage repeatedly to all nearby enemies
+  damage_type: physical
   detail_kinds:
   - mechanic
   - debuff
@@ -174,9 +177,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Gain Protections , Leap forward, and grab onto an enemy, dealing Physical
-    Damage repeatedly to all nearby enemies
 - slot: Ultimate
   name: Ragnarok
   cooldown:
@@ -197,6 +197,10 @@ abilities:
   - 'Cone Angle: 120 degrees'
   - 'Cooldown: 110 seconds'
   - 'Cost: 100 mana'
+  description: Gain increased Movement Speed , Protections , and become CC Immune
+    while massive Grow massive in size, and your next Basic Attack deals Physical
+    Damage and can Pick Up an enemy god and carry them to any position
+  damage_type: physical
   detail_kinds:
   - buff
   - null
@@ -211,17 +215,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Gain increased Movement Speed , Protections , and become CC Immune
-    while massive Grow massive in size, and your next Basic Attack deals Physical
-    Damage and can Pick Up an enemy god and carry them to any position
 aspects:
 - name: Aspect of Loyalty
   kit_changes: Brutalize deals less damage but applies a stacking Slow, provides increased
     Protections, and Protections persist afterwards. Seething Howl's Strength is decreased,
     but applies to all allies in an area around him and their Lifesteal heals Fenrir.
 source_url: https://wiki.smite2.com/w/Fenrir
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Fenrir Basic Attack

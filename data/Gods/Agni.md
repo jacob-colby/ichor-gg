@@ -13,15 +13,9 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 334.1
     per_level: 42.0
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -31,12 +25,18 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  attack_power:
-    base: 44.4
-    per_level: 2.4
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 44.4
+    per_level: 2.4
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
 abilities:
 - slot: Basic Attack
   name: Agni Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
+  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Combustion
   details:
@@ -59,17 +59,17 @@ abilities:
   - 'Damage Scaling: 6% Intelligence'
   - 'Debuff Duration: 3 seconds'
   - 'Hot Streak Duration: 10 seconds'
-  detail_kinds:
-  - magical
-  - magical
-  - debuff
-  - mechanic
-  damage_type: magical
   description: ATTACK TO BURN Hitting an enemy with a Basic Attack provides 1 stack
     of . Hitting an enemy god provides 2. At 4 stacks Agni's next Flame Wave or Rain
     Fire will ignite all enemies hit, dealing Magical Damage every 0.5 seconds for
     3 seconds. When Agni kills an enemy god, he goes on a Hot Streak. When on a Hot
     Streak, is fully charged and using Flame Wave or Rain Fire does not consume
+  damage_type: magical
+  detail_kinds:
+  - magical
+  - magical
+  - debuff
+  - mechanic
 - slot: 1st Ability
   name: Noxious Fumes
   cooldown:
@@ -88,12 +88,16 @@ abilities:
   - 'Explode Damage: 20 | 40 | 60 | 80 | 100'
   - 'Explode Damage Scaling: 20% Intelligence'
   - 'Stun Duration: 0.8 seconds'
-  - 'Healing Reduction: -40%'
+  - 'Healing Reduction: -25%'
   - 'Healing Reduction Duration: 5 seconds'
   - 'Range: 8.8 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Summon a cloud of noxious fumes which deals Magical Damage every second.
+    Hitting the fumes with any of your other abilities detonates the gas, Stunning
+    and dealing Magical Damage to enemies in the area
+  damage_type: magical
   detail_kinds:
   - debuff
   - null
@@ -108,10 +112,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Summon a cloud of noxious fumes which deals Magical Damage every second.
-    Hitting the fumes with any of your other abilities detonates the gas, Stunning
-    and dealing Magical Damage to enemies in the area
 - slot: 2nd Ability
   name: Flame Wave
   cooldown:
@@ -136,6 +136,8 @@ abilities:
   - 'Radius: 2.59 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Summon a wave of fire, dealing Magical Damage
+  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -146,8 +148,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Summon a wave of fire, dealing Magical Damage
 - slot: 3rd Ability
   name: Path of Flames
   cooldown:
@@ -170,6 +170,9 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 16 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
+  description: Dash forward and leave a trail of fire behind you. Enemies that enter
+    the area take Magical Damage every 0.5 seconds for 2 seconds
+  damage_type: magical
   detail_kinds:
   - null
   - mechanic
@@ -181,13 +184,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Dash forward and leave a trail of fire behind you. Enemies that enter
-    the area take Magical Damage every 0.5 seconds for 2 seconds
 - slot: Ultimate
   name: Rain Fire
   cooldown:
-  - 20.0
+  - 18.0
   cost:
   - 10.0
   details:
@@ -198,8 +198,11 @@ abilities:
   - 'Self Slow: 50%'
   - 'Range: 10.4 meters'
   - 'Radius: 3.2 meters'
-  - 'Cooldown: 20 seconds'
+  - 'Cooldown: 18 seconds'
   - 'Cost: 10 mana'
+  description: Summon a meteor, dealing Magical Damage . You can have up to 3 charges
+    of this ability
+  damage_type: magical
   detail_kinds:
   - null
   - slow
@@ -210,16 +213,13 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: magical
-  description: Summon a meteor, dealing Magical Damage . You can have up to 3 charges
-    of this ability
 aspects:
 - name: Aspect of Combustion
   kit_changes: Your Basic Attacks now ignite enemies dealing damage over time and
     stacking 5 times. Flame Wave and Rain of Fire consume ignites dealing a burst
     of damage. Rain of Fire deals reduced damage.
 source_url: https://wiki.smite2.com/w/Agni
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Agni Basic Attack

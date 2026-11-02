@@ -11,15 +11,9 @@ base_stats:
   health:
     base: 577.0
     per_level: 94.0
-  health_regen:
-    base: 1.7
-    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
-  mana_regen:
-    base: 1.33
-    per_level: 0.11
   physical_prot:
     base: 20.04
     per_level: 2.76
@@ -29,12 +23,18 @@ base_stats:
   attack_speed:
     base: 0.98
     per_level: 1.51
-  attack_power:
-    base: 50.89
-    per_level: 2.59
   move_speed:
     base: 370.0
     per_level: 0.0
+  attack_power:
+    base: 50.89
+    per_level: 2.59
+  health_regen:
+    base: 1.7
+    per_level: 0.2
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
 abilities:
 - slot: Basic Attack
   name: Hou Yi Basic Attack
@@ -43,25 +43,25 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
+  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Suntouched
   details:
   - 'Buff Duration: 3 seconds'
-  - Cooldown Reduction -1 seconds
-  detail_kinds:
-  - buff
-  - buff
+  - Cooldown Reduction -2 seconds
   description: MARK ATTACKERS When Critically Hit or taking more than 25% of your
     Health in a single blow, become , reducing active cooldowns and Marking the enemy
     who triggered this effect. While , you cannot be Critically Hit or send another
     Mark.
+  detail_kinds:
+  - buff
+  - buff
 - slot: 1st Ability
   name: Ricochet
   cooldown:
@@ -88,6 +88,11 @@ abilities:
   - 'Radius: 0.48 meters'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: 'bounces an additional time if you have 400 or more Intelligence Fire
+    an arrow that ricochets off walls, dealing Physical Damage to enemies it passes
+    through. Deals increasing Physical Damage with each ricochet Bonus Damage: +40%
+    Per'
+  damage_type: physical
   detail_kinds:
   - stun
   - null
@@ -100,11 +105,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: 'bounces an additional time if you have 400 or more Intelligence Fire
-    an arrow that ricochets off walls, dealing Physical Damage to enemies it passes
-    through. Deals increasing Physical Damage with each ricochet Bonus Damage: +40%
-    Per'
 - slot: 2nd Ability
   name: Mark of the Golden Crow
   cooldown:
@@ -115,7 +115,7 @@ abilities:
   - Ricochet Stuns Marked enemies
   - Divebomb Knocks Away Marked enemies
   - Sunbreaker Slows Marked enemies more
-  - 'Bonus Damage: 0 | 2 | 2.5 | 3 | 3.5 | 4% for every 10% Missing Health'
+  - 'Bonus Damage: 0 | 2 | 3 | 4 | 5 | 6% for every 10% Missing Health'
   - 'Bonus Stun Duration: 0 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 seconds'
   - 'Bonus Knockback: 0 | 25 | 30 | 35 | 40 | 45%'
   - 'Bonus Slow Duration: 0 | 0.3 | 0.35 | 0.4 | 0.45 | 0.5 seconds'
@@ -123,6 +123,10 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 50 mana'
+  description: Mark an enemy causing your other abilities to apply additional effects.
+    While Strength is higher than Intelligence, Marked enemies take bonus Physical
+    Damage based on their missing health. While Intelligence is higher than Strength,
+    Marked additional effects are amplified
   detail_kinds:
   - stun
   - stun
@@ -135,10 +139,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  description: Mark an enemy causing your other abilities to apply additional effects.
-    While Strength is higher than Intelligence, Marked enemies take bonus Physical
-    Damage based on their missing health. While Intelligence is higher than Strength,
-    Marked additional effects are amplified
 - slot: 3rd Ability
   name: Divebomb
   cooldown:
@@ -159,6 +159,9 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 17 | 16.5 | 16 | 15.5 | 15 seconds'
   - 'Cost: 70 mana'
+  description: Leap into the air before selecting a location to dive onto, dealing
+    Physical Damage to enemies where you land
+  damage_type: physical
   detail_kinds:
   - stun
   - null
@@ -169,9 +172,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Leap into the air before selecting a location to dive onto, dealing
-    Physical Damage to enemies where you land
 - slot: Ultimate
   name: Sunbreaker
   cooldown:
@@ -193,6 +193,10 @@ abilities:
   - 'Radius: 4.8 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
+  description: Shoot down 9 suns every 0.5 seconds onto a target area, dealing Physical
+    Damage and Slowing enemies hit. The first sun stays, acting as a wall that Ricochet
+    can bounce off of
+  damage_type: physical
   detail_kinds:
   - slow
   - physical
@@ -204,10 +208,6 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
-  damage_type: physical
-  description: Shoot down 9 suns every 0.5 seconds onto a target area, dealing Physical
-    Damage and Slowing enemies hit. The first sun stays, acting as a wall that Ricochet
-    can bounce off of
 aspects:
 - name: Aspect of the Mark
   kit_changes: Attacks now ricochet, dealing bonus damage to gods per bounce. Bounced
@@ -215,7 +215,7 @@ aspects:
     Mark of the Golden Crow on its first hit. If already marked, the mark spreads.
     Attacks hitting marked targets bounce to a nearby enemy.
 source_url: https://wiki.smite2.com/w/Hou_Yi
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
 - Hou Yi Basic Attack

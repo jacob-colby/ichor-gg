@@ -5,16 +5,14 @@ tier: 3
 cost: 2550
 stats:
   Strength: '50'
-passive: 'Ability Hit: Target''s Physical Protection is reduced by 5 for 4s. On God
-  Kill or Assist: This effect increases by 1 Physical Protection. This effect caps
-  at 20 total Physical Protection reduction.'
+passive: 'Ability Hit: Target is -1 Physical Protection per your Level for 4s.'
 builds_from:
 - Lucerne Hammer
 - Skeggox
 builds_into: []
 source_url: https://wiki.smite2.com/w/Oath-Sworn_Spear
-last_verified: '2026-11-02'
+last_verified: '2026-08-01'
 ---
 <!-- WIKI:START -->
-Ability Hit: Target's Physical Protection is reduced by 5 for 4s. On God Kill or Assist: This effect increases by 1 Physical Protection. This effect caps at 20 total Physical Protection reduction.
+Ability Hit: Target is -1 Physical Protection per your Level for 4s.
 <!-- WIKI:END -->
