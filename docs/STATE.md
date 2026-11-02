@@ -2404,6 +2404,36 @@ that loop and both should stay green: `--discover-items` scans the wiki cache,
 and `data_audit` flags any item a community build names. Twelve items were
 missing before those existed, including the pool's first anti-heal item.
 
+**Item and god STATS of what is tracked refresh themselves** (2026-11-02,
+`smite.stats_refresh`, on the daily job after `patch_feed`). Due when the game
+patch (Steam feed) or the wiki's Patch_notes index is newer than `data_patch`,
+or weekly; otherwise one request. The wiki signal exists because the Steam
+feed's first live run found no patch title newer than Open Beta 26 — recent
+posts do not carry the label, so `patch_feed` alone would miss OB47.
+First live run, 2026-11-02 on a runner: OB40 -> OB46, 45 gods and 66 items
+changed, 317 requests, ~14 min, every gate green. It exposed one parser bug,
+fixed in `wiki_parser._stats_from_prose`: an `Adaptive Stat:` clause on a page
+with an empty `Stats:` cell was recovered as BOTH stats (Survivor's Sash,
+Sundering Echo). That run's data was NOT merged: on it, 14 tests that pin
+Open Beta 40 evidence fail (`test_passives` adaptive values and counts,
+`test_passive_catalogue` — Blinking Abyss newly buildable and uncatalogued,
+Damaru newly repriced — `test_build_quality`'s hand-computed Medusa,
+`test_scoring`'s relic set, `test_efficiency`'s penetration columns). They are
+evidence, not data checks, and re-deriving them is its own job; the first
+scheduled run on `main` after this lands will make the same OB46 change and
+turn them red there. The daily job does not run pytest, so nothing stops it. Two
+measurements made it possible and they reverse half of the paragraph below.
+From a GitHub runner, the wiki challenges a spoofed-Chrome User-Agent (403
+`cf-mitigated`) and serves an honest bot UA (200) — so no browser is needed;
+and robots.txt disallows `/*api.php`, so it reads article pages only. It is
+all-or-nothing: every tracked page is fetched and parsed into memory, one
+fetch failure, parse exception or `ParseCollapse` writes nothing, aggregate
+coverage and null/numeric checks run against the data being replaced, and
+the notes are swapped in by directory rename before `data_from` is set. The
+Ullr/Artio/Merlin kit blanking below is a refusal on this path, not a silent
+write — it is a test. Roster growth stays manual for the first reason below.
+Evidence and rules are in the module docstring.
+
 **Adding a new GOD is manual for a second reason, and it is stronger.** The
 same `refresh_all` limitation applies — it would never have found Ravana — but
 scheduling the wiki scrape would also be unsafe, and that is measured rather
@@ -2448,8 +2478,8 @@ moved; written unattended by `smite.patch_feed` from Steam's announcement feed
 on the daily job) and `data_from` (wiki item data first scraped under it;
 written only by `refresh_patch_version`). Periods are attributed by
 `data_from`, so a game patch with no wiki refresh behind it does not relabel a
-period — as of 2026-11-02 the game is on Open Beta 46 but item data is still
-Open Beta 40's, and August's dataset expansion stays "within Open Beta 40".
+period — August's dataset expansion stays "within Open Beta 40". `data_from`
+is now written unattended by `smite.stats_refresh`, only after its write lands.
 `data/_patch.json` is derived from the history: `patch` is the game label the
 viewer prints, `data_patch` is what `wiki_watch` compares the wiki against.
 Links come from the Steam post (`official_url` on the row) and
@@ -2475,13 +2505,15 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (923) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (978) ·
 `cd viewer && npm test -- --run` (775).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
-snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`,
-`contents: read`, commits nothing). The wiki scrape itself is
-`smite.refresh_and_deploy`, by hand, on `main`.
+patch feed + wiki stats when due + snapshot + reindex, commits) and
+`watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`, `contents: read`, commits
+nothing). `probe-stat-sources.yml` is dispatch-only and re-checks which stat
+sources a runner can reach. Adding gods and items is still
+`smite.refresh_and_deploy` / `--refresh`, by hand, on `main`.
 
 ---
 
@@ -2505,7 +2537,7 @@ snapshot + reindex, commits) and `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 923 pipeline · 775 viewer |
+| Tests | 978 pipeline · 775 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

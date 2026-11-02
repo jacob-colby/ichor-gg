@@ -1,0 +1,31 @@
+# Can a GitHub-hosted runner reach the wiki's stats pages?
+#
+# Read-only, dispatch-only. Logs HTTP status, byte count and whether the
+# parser reads the page, for the honest User-Agent `smite.stats_refresh`
+# sends and for a spoofed browser UA. Run it when the stats refresh starts
+# reporting "source unreachable", to see whether Cloudflare's posture moved.
+name: Probe stat sources
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        working-directory: pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Probe
+        working-directory: pipeline
+        run: python scripts/probe_stat_sources.py

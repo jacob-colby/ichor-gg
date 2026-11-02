@@ -221,9 +221,10 @@ def report_markdown(result: dict) -> str:
             "## Patch",
             "",
             f"Wiki says **{result['patch_live']}**, `data/_patch.json` says "
-            f"**{result['patch_recorded']}**. Item stats may have moved; a full "
-            "`refresh_and_deploy` is what banks the snapshot that makes patch "
-            "notes say so.",
+            f"**{result['patch_recorded']}**. `smite.stats_refresh` on the daily "
+            "community job should pick this up on its next run; if this section "
+            "is still here the day after, read that step's `::warning::` lines "
+            "in the `Refresh community data` log for why it refused.",
             "",
         ]
 

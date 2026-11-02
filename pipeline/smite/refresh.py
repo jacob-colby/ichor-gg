@@ -171,17 +171,10 @@ def _refuse_god_collapse(name: str, existing: dict, parsed: dict) -> None:
             f"patch really removed {old_n - new_n}, re-run with --allow-shrink.")
 
 
-def refresh_god(name: str, wiki_fetcher, force: bool = False,
-                allow_shrink: bool = False) -> None:
-    url = WIKI_BASE + name.replace(" ", "_")
-    parsed = wiki_parser.parse_god_page(wiki_fetcher.fetch(url, force=force))
-
-    # Read before write, so the refusal can quote both sides. `read_note` on a
-    # path that does not exist returns empty, which is the new-god case.
-    god_path = DATA_ROOT / "Gods" / f"{name}.md"
-    if not allow_shrink:
-        _refuse_god_collapse(name, notes.read_note(god_path)[0] or {}, parsed)
-
+def god_note_content(name: str, parsed: dict, url: str, today: str = None) -> tuple:
+    """(frontmatter, wiki block) for a parsed god page. Shared by the manual
+    `refresh_god` and the unattended `stats_refresh`, so the two cannot write
+    different notes from the same page."""
     frontmatter = {
         "type": "smite-god",
         "name": name,
@@ -194,9 +187,58 @@ def refresh_god(name: str, wiki_fetcher, force: bool = False,
         "abilities": parsed["abilities"],
         "aspects": parsed["aspects"],
         "source_url": url,
-        "last_verified": date.today().isoformat(),
+        "last_verified": today or date.today().isoformat(),
     }
-    wiki_block = "\n".join(f"- {a['name']}" for a in parsed["abilities"])
+    return frontmatter, "\n".join(f"- {a['name']}" for a in parsed["abilities"])
+
+
+def item_note_content(name: str, parsed: dict, url: str, today: str = None) -> dict:
+    """Frontmatter for a parsed item page. `builds_into` is left empty — it is
+    derived across the whole set by `builds_into_map`."""
+    frontmatter = {
+        "type": "smite-item",
+        "name": name,
+        "tier": parsed.get("tier"),
+        "cost": parsed.get("cost"),
+        "stats": parsed.get("stats", {}),
+        "passive": parsed.get("passive"),
+        "builds_from": parsed.get("builds_from", []),
+        "builds_into": [],
+        "source_url": url,
+        "last_verified": today or date.today().isoformat(),
+    }
+    # Only `God Specific` items carry an owner (wiki_parser.god_specific_owner).
+    # Set conditionally rather than always: writing `god: null` onto the other
+    # 215 notes would be a 215-file diff on the next full refresh, for a key
+    # every reader already treats as absent.
+    if parsed.get("god"):
+        frontmatter["god"] = parsed["god"]
+    return frontmatter
+
+
+def builds_into_map(builds_from: dict) -> dict:
+    """{name: [items it builds into]} from {name: builds_from}, in the order
+    the names arrive. The wiki never shows this relationship directly."""
+    out = {name: [] for name in builds_from}
+    for name, components in builds_from.items():
+        for component in components or []:
+            if component in out:
+                out[component].append(name)
+    return out
+
+
+def refresh_god(name: str, wiki_fetcher, force: bool = False,
+                allow_shrink: bool = False) -> None:
+    url = WIKI_BASE + name.replace(" ", "_")
+    parsed = wiki_parser.parse_god_page(wiki_fetcher.fetch(url, force=force))
+
+    # Read before write, so the refusal can quote both sides. `read_note` on a
+    # path that does not exist returns empty, which is the new-god case.
+    god_path = DATA_ROOT / "Gods" / f"{name}.md"
+    if not allow_shrink:
+        _refuse_god_collapse(name, notes.read_note(god_path)[0] or {}, parsed)
+
+    frontmatter, wiki_block = god_note_content(name, parsed, url)
     notes.merge_god_note(god_path, frontmatter, wiki_block,
                           log_dir=DATA_ROOT / "_logs")
     slug = name.lower().replace(" ", "-").replace("'", "")
@@ -237,24 +279,7 @@ def refresh_item(name: str, wiki_fetcher, force: bool = False,
     if not allow_shrink:
         _refuse_item_collapse(name, notes.read_note(item_path)[0] or {}, parsed)
 
-    frontmatter = {
-        "type": "smite-item",
-        "name": name,
-        "tier": parsed.get("tier"),
-        "cost": parsed.get("cost"),
-        "stats": parsed.get("stats", {}),
-        "passive": parsed.get("passive"),
-        "builds_from": parsed.get("builds_from", []),
-        "builds_into": [],
-        "source_url": url,
-        "last_verified": date.today().isoformat(),
-    }
-    # Only `God Specific` items carry an owner (wiki_parser.god_specific_owner).
-    # Set conditionally rather than always: writing `god: null` onto the other
-    # 215 notes would be a 215-file diff on the next full refresh, for a key
-    # every reader already treats as absent.
-    if parsed.get("god"):
-        frontmatter["god"] = parsed["god"]
+    frontmatter = item_note_content(name, parsed, url)
     notes.merge_item_note(item_path, frontmatter,
                            parsed.get("passive", ""), log_dir=DATA_ROOT / "_logs")
     _download_icon(parsed.get("image_url"), name.lower().replace(" ", "-").replace("'", ""))
@@ -318,11 +343,8 @@ def refresh_builds_into() -> None:
         if frontmatter.get("name"):
             all_items[frontmatter["name"]] = (path, frontmatter, body)
 
-    builds_into = {name: [] for name in all_items}
-    for name, (_, frontmatter, _) in all_items.items():
-        for component in frontmatter.get("builds_from", []):
-            if component in builds_into:
-                builds_into[component].append(name)
+    builds_into = builds_into_map(
+        {name: fm.get("builds_from", []) for name, (_, fm, _) in all_items.items()})
 
     for name, (path, frontmatter, body) in all_items.items():
         frontmatter["builds_into"] = builds_into[name]

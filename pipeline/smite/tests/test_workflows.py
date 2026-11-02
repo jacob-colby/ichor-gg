@@ -97,3 +97,25 @@ def test_the_two_scheduled_jobs_do_not_share_a_slot():
         triggers = spec.get("on", spec.get(True))
         crons[name] = [s["cron"] for s in triggers["schedule"]]
     assert crons["refresh-data.yml"] != crons["watch-wiki.yml"]
+
+
+# -- the stats refresh -------------------------------------------------------
+
+def test_the_daily_job_refreshes_stats_between_patch_detection_and_the_snapshot():
+    """After `patch_feed`, because it is due only when the feed has seen a
+    newer patch than the data. Before `snapshots`, because the snapshot is
+    what turns the new stats into that patch's notes."""
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    feed_at = next(i for i, r in enumerate(runs) if "smite.patch_feed" in r)
+    stats_at = next(i for i, r in enumerate(runs) if "smite.stats_refresh" in r)
+    snap_at = next(i for i, r in enumerate(runs) if "smite.snapshots" in r)
+    assert feed_at < stats_at < snap_at
+
+
+def test_the_stats_refresh_is_gated_before_anything_is_committed():
+    runs = [step.get("run", "") for step in _steps("refresh-data.yml")]
+    stats_at = next(i for i, r in enumerate(runs) if "smite.stats_refresh" in r)
+    commit_at = next(i for i, r in enumerate(runs) if "git commit" in r)
+    for gate in ("smite.validate --check", "smite.calibrate_combat"):
+        gate_at = next(i for i, r in enumerate(runs) if gate in r)
+        assert stats_at < gate_at < commit_at

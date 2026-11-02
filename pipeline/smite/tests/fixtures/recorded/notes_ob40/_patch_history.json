@@ -1,0 +1,37 @@
+[
+  {
+    "patch": "Open Beta 40",
+    "first_seen": "2026-08-01",
+    "data_from": "2026-08-01"
+  },
+  {
+    "patch": "Open Beta 41",
+    "first_seen": "2026-08-11",
+    "source": "manual"
+  },
+  {
+    "patch": "Open Beta 42",
+    "first_seen": "2026-08-25",
+    "source": "manual"
+  },
+  {
+    "patch": "Open Beta 43",
+    "first_seen": "2026-09-08",
+    "source": "manual"
+  },
+  {
+    "patch": "Open Beta 44",
+    "first_seen": "2026-09-22",
+    "source": "manual"
+  },
+  {
+    "patch": "Open Beta 45",
+    "first_seen": "2026-10-06",
+    "source": "manual"
+  },
+  {
+    "patch": "Open Beta 46",
+    "first_seen": "2026-10-20",
+    "source": "manual"
+  }
+]

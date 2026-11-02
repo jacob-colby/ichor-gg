@@ -546,3 +546,16 @@ def test_a_zero_cost_is_still_a_price():
     </table>
     """
     assert wiki_parser.parse_item_page(html)["cost"] == 0
+
+
+def test_prose_recovery_skips_the_adaptive_clause():
+    """Survivor's Sash, Open Beta 46: empty `Stats:` cell, passive "Adaptive
+    Stat: +25 Strength or +35 Intelligence". That is one grant priced by
+    `passives.adaptive_grants`, not two stats."""
+    from smite.wiki_parser import _stats_from_prose
+    assert _stats_from_prose(
+        "Adaptive Stat: +25 Strength or +35 Intelligence (based on highest item stat).") == {}
+    assert _stats_from_prose(
+        "Adaptive Stat: +25 Strength or +45 Intelligence (based on highest item stat). "
+        "+7.5% of all Stats from Items.") == {}
+    assert _stats_from_prose("Non-Aspect: 45 Strength 8 Pathfinding") == {"Strength": "45", "Pathfinding": "8"}

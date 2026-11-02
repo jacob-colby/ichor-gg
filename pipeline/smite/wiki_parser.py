@@ -355,6 +355,9 @@ _PROSE_STAT_RE = re.compile(
     r"(?<![\w.])(\d+(?:\.\d+)?%?)\s+(" + "|".join(ITEM_STAT_NAMES) + r")\b")
 
 
+_ADAPTIVE_CLAUSE_RE = re.compile(r"Adaptive Stat:[^.]*?\(based on highest item stat\)\.?|Adaptive Stat:[^.]*\.", re.IGNORECASE)
+
+
 def _stats_from_prose(text: str) -> dict:
     """Stats an editor typed into the Passive Effect cell instead of Stats.
 
@@ -381,8 +384,15 @@ def _stats_from_prose(text: str) -> dict:
     follow, which the editor let run backwards over the stats.
 
     Only ever called when `Stats:` came back empty, so it can never override a
-    properly-filled cell."""
-    return {name: value for value, name in _PROSE_STAT_RE.findall(text or "")}
+    properly-filled cell.
+
+    The `Adaptive Stat:` clause is cut first. "+25 Strength or +35
+    Intelligence" is ONE grant the game picks for you, priced as such by
+    `passives.adaptive_grants` from this same text; recovered here it became
+    both stats at once. Open Beta 46 is when it surfaced: Survivor's Sash and
+    Sundering Echo gained that clause on pages whose `Stats:` stayed empty."""
+    text = _ADAPTIVE_CLAUSE_RE.sub(" ", text or "")
+    return {name: value for value, name in _PROSE_STAT_RE.findall(text)}
 
 
 def parse_item_page(html: str) -> dict:
