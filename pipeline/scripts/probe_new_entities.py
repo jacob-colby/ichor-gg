@@ -26,7 +26,13 @@ def slug(page):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     f = stats_refresh.WikiPageFetcher()
-    index = {}
+    # Start from what is already recorded. "Untracked" is decided against the
+    # live data/, so an entity added since the last recording is not fetched
+    # again, and replacing the index outright dropped it from the fixture —
+    # which is how Nike, Hachiman, Kuzenbo and Hel left it (f454b88). A
+    # re-record adds and refreshes entries; it never forgets one.
+    index_path = OUT / "index.json"
+    index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {}
 
     def get(page, parse=None):
         try:
@@ -74,7 +80,7 @@ def main():
         print(f"[probe] Items page: {len(links)} links, untracked icon names {sorted(cands)}")
     for nm in sorted(cands)[:CAP]:
         get(nm, wiki_parser.parse_item_page)
-    (OUT / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
+    index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
     return 0
 
 

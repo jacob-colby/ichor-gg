@@ -188,3 +188,16 @@ def test_new_entities_run_after_the_stats_gate_and_before_the_recompute():
 
 def test_the_job_installs_pytest():
     assert "pytest" in _run_text("refresh-data.yml")
+
+
+def test_the_new_entity_probe_never_commits_fixtures():
+    """It used to run on feature-branch pushes and commit its recording. The
+    recording decides "untracked" against live data, so once the new gods were
+    added it dropped them from the fixture index and turned test_new_entities
+    red on main (f454b88). It is dispatch-only, read-only, and uploads."""
+    spec = yaml.safe_load((WORKFLOWS / "probe-new-entities.yml").read_text(encoding="utf-8"))
+    triggers = spec.get("on", spec.get(True))
+    assert set(triggers) == {"workflow_dispatch"}
+    assert spec["permissions"] == {"contents": "read"}
+    text = _run_text("probe-new-entities.yml")
+    assert "git commit" not in text and "git push" not in text
