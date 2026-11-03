@@ -16,26 +16,30 @@ quoted beside it (the wiki scrape in `data/Items`, Open Beta 46 as of
 Damage" (SMITE 2's name for the swing, not a stat), "dealt 4 times" as four instances of the
 stated amount — the reading taken is written next to the code and is the
 LITERAL one. Where the effect depends on something this comparison does not
-contain (a kill, crowd control, an enemy's shield, movement, an active's
-timing, the enemy's hit rate on you), the item is `NOT_SIMULATED` with the
-reason, and the side-by-side prints that reason beside the build. A partly
-modelled item (`PARTIAL`) says which half is missing.
+contain (crowd control, an enemy's shield, movement, an ally, wards), the item
+is `NOT_SIMULATED` with the reason, and the side-by-side prints that reason
+beside the build. A partly modelled item (`PARTIAL`) says which half is
+missing. Kills, assists, an enemy hitting our god and "On Use" presses WERE
+on that list until 2026-11-02; `side_by_side`'s FIGHT block now puts them in
+the clock, each with a written assumption, and the items gated on them read
+those events.
 
 WHAT THE CLOCK ASSUMES, so the hooks below can be read without the engine:
   * one target, a god, in range for the whole window (so an aura such as
     Sanguine Lash's 4m ticks every second)
-  * our god at FULL health. Health-gated OFFENSIVE branches take the full-
-    health side (Riptalon +10%, Shifter's Shield's adaptive power, Bancroft's
-    Talon +0). Health-gated DEFENSIVE branches are not a guess at all: effective
-    health integrates over the whole health bar, so "below 60% health: +15
-    protections" is exact as a piecewise sum (`ehp_segments`)
-  * persistent stacks (Devourer's, Thebes, Book of Thoth, Transcendence) at
-    ZERO on the 2- and 4-item breakpoints and FULL on the finished six — the
-    two ends, not an invented time-to-full. `side_by_side.BREAKPOINTS` says so
-    on the page.
-  * kill- and assist-gated effects at zero kills: Rage's crit, Jotunn's and
-    Spear of Desolation's cooldown refunds, Doom Orb's stacks. A ten-second
-    window with one target contains no kill that would not end it.
+  * our god's OFFENCE at full health unless the hook reads the fight's
+    health bar (`sim.hp`: Bancroft's Talon, Berserker's Shield). Other
+    health-gated OFFENSIVE branches take the full-health side (Riptalon +10%,
+    Shifter's Shield's adaptive power). Health-gated DEFENSIVE branches are
+    exact: effective health integrates over the whole health bar, so "below
+    60% health: +15 protections" is a piecewise sum (`ehp_segments`), and the
+    fight run reads the same slices
+  * persistent stacks on the GAME CLOCK (`side_by_side.stack_state`): each
+    item bought `MINUTES_PER_ITEM` after the last, full
+    `STACK_MINUTES_TO_FULL` after purchase, read the moment each breakpoint is
+    reached. "full" and "none" are still accepted, for the bracket.
+  * takedowns from the FIGHT block: one kill per 10s fight when our damage
+    reaches the target's max health, one assist every 10s from 5s.
 
 HOOKS. Each `Passive` may carry any of:
   grants(ctx)           flat stats from the passive, before conversions
@@ -44,10 +48,20 @@ HOOKS. Each `Passive` may carry any of:
   on_ability(sim, ev)   extra hits on an ability hit
   ehp_segments(ctx)     `[(share_of_health_bar, extra_phys, extra_mag)]`
   cooldown(ctx)         `{"ultimate": multiplier}` on base cooldowns
+  on_takedown(sim, k)   a kill or an assist ("kill" | "assist")
+  on_hit_taken(sim, h)  after an enemy hit lands on our god
+  reduce_hit(sim, h)    a multiplier on an enemy hit before it lands
+  prot_bonus(sim, d)    extra protection against damage type d right now
+  stat_bonus(sim, k, v) a stat at this instant (`bonus_keys` names which)
+  active(sim)           an "On Use" press; True if it fired. Pressed at the
+                        fight's start, at the first hit taken, or after the
+                        opening casts (`active_trigger`), then on
+                        `active_cooldown`
 `ctx` is `StatContext` (the build's totals, level, stack state); `sim` is the
-live `side_by_side` state. Tests in `test_passive_sim.py` hand-compute each
-hook from frozen inputs.
+live `side_by_side` state. Tests in `test_side_by_side.py` and
+`test_fight.py` hand-compute each hook from frozen inputs.
 """
+import math
 from dataclasses import dataclass, field
 from typing import Callable, Optional
 
@@ -69,6 +83,18 @@ class Passive:
     ehp_segments: Optional[Callable] = None
     cooldown: Optional[Callable] = None
     stacking: bool = False
+    # The fight layer (2026-11-02, `side_by_side`'s FIGHT block): events the
+    # duel did not contain before — takedowns, an enemy hitting our god, and
+    # "On Use" presses.
+    on_takedown: Optional[Callable] = None     # (sim, "kill" | "assist")
+    on_hit_taken: Optional[Callable] = None    # (sim, hit) after the hit lands
+    reduce_hit: Optional[Callable] = None      # (sim, hit) -> multiplier, before it lands
+    prot_bonus: Optional[Callable] = None      # (sim, dtype) -> extra protection now
+    stat_bonus: Optional[Callable] = None      # (sim, key, value) -> value
+    bonus_keys: tuple = ()
+    active: Optional[Callable] = None          # (sim) -> True if it fired
+    active_cooldown: float = 0.0
+    active_trigger: str = "start"              # "start" | "hit_taken" | "after_casts"
 
 
 @dataclass
@@ -99,6 +125,23 @@ def _full(ctx):
     return ctx.stacks == "full"
 
 
+def stack_fraction(stacks, item):
+    """How far `item`'s persistent stacks are toward full: 1.0 under "full",
+    0.0 under "none", else the game-clock fraction `side_by_side.stack_state`
+    computed for that item (`STACK_MINUTES_TO_FULL`)."""
+    if stacks == "full":
+        return 1.0
+    if stacks == "none" or stacks is None:
+        return 0.0
+    return float(stacks.get(item, 1.0))
+
+
+def stack_count(ctx, item, cap):
+    """Whole stacks held: floor(cap x fraction). The evolutions below are
+    reached only at the cap, never by rounding up."""
+    return int(cap * stack_fraction(ctx.stacks, item) + 1e-9)
+
+
 # ── Persistent stacks ─────────────────────────────────────────────────────
 
 def _devourers(ctx):
@@ -106,52 +149,60 @@ def _devourers(ctx):
     # +10 Strength +3% Lifesteal +5 Penetration. Continue to stack more slowly"
     # Full = 75 stacks: 30 + 10 Strength, 3.75 + 3 Lifesteal, 5 Penetration.
     # Stacks past 75 are not counted: the text gives no rate for "more slowly".
-    if not _full(ctx):
+    n = stack_count(ctx, "Devourer's Gauntlet", 75)
+    if not n:
         return {}
-    return {"Strength": 0.4 * 75 + 10, "Lifesteal %": 0.05 * 75 + 3, "Penetration": 5.0}
+    out = {"Strength": 0.4 * n, "Lifesteal %": 0.05 * n}
+    if n == 75:
+        out = {"Strength": out["Strength"] + 10, "Lifesteal %": out["Lifesteal %"] + 3,
+               "Penetration": 5.0}
+    return out
 
 
 def _thebes(ctx):
     # "Stacks grant +15 Max Health (max 40 Stacks). At 40 Stacks, Item evolves
     # and gains: +100 Max Health +10 Physical and Magical Protection"
-    if not _full(ctx):
+    n = stack_count(ctx, "Gauntlet of Thebes", 40)
+    if not n:
         return {}
+    if n < 40:
+        return {"Max Health": 15.0 * n}
     return {"Max Health": 15 * 40 + 100, "Physical Protection": 10.0,
             "Magical Protection": 10.0}
 
 
-def _mana_from_items(ctx, per_stack_cap=50, per_stack=10, evolved_mana=100):
+def _mana_from_items(ctx, item, per_stack_cap=50, per_stack=10, evolved_mana=100):
     """Mana counted by a `...% of Mana from Items` clause: the printed Max
     Mana of the items, plus the item's own stack mana ("Per Mana Infusion
     Stack: +10 Mana", 50 stacks) and evolution mana when full. The stack and
     evolution mana are counted as mana FROM ITEMS because the item grants it;
     the text does not say otherwise."""
     mana = ctx.items.get("Max Mana", 0.0)
-    if _full(ctx):
-        mana += per_stack_cap * per_stack + evolved_mana
+    n = stack_count(ctx, item, per_stack_cap)
+    mana += n * per_stack + (evolved_mana if n == per_stack_cap else 0)
     return mana
 
 
 def _thoth_grants(ctx):
     # "+5 Penetration +100 Mana" on evolving; the mana goes in via the converter.
-    return {"Penetration": 5.0} if _full(ctx) else {}
+    return {"Penetration": 5.0} if stack_count(ctx, "Book of Thoth", 50) == 50 else {}
 
 
 def _thoth_converts(ctx):
     # "+Intelligence equal to 5% of Mana from Items" and, evolved, "Additional
     # +Intelligence equal to 2% of Mana from Items".
-    pct = 0.07 if _full(ctx) else 0.05
-    return {"Intelligence": pct * _mana_from_items(ctx)}
+    pct = 0.07 if stack_count(ctx, "Book of Thoth", 50) == 50 else 0.05
+    return {"Intelligence": pct * _mana_from_items(ctx, "Book of Thoth")}
 
 
 def _transcendence_grants(ctx):
     # Evolved: "+10 Penetration +100 Mana".
-    return {"Penetration": 10.0} if _full(ctx) else {}
+    return {"Penetration": 10.0} if stack_count(ctx, "Transcendence", 50) == 50 else {}
 
 
 def _transcendence_converts(ctx):
     # "+Strength equal to 3% of Mana from Items" — no evolved increase to the 3%.
-    return {"Strength": 0.03 * _mana_from_items(ctx)}
+    return {"Strength": 0.03 * _mana_from_items(ctx, "Transcendence")}
 
 
 # ── Conversions ───────────────────────────────────────────────────────────
@@ -351,18 +402,28 @@ def _heartseeker(sim, ev):
 
 def _crusher(sim, ev):
     # "Ability Hit: +Physical Damage. Damage = 35% of your Strength. Damage is
-    # dealt over 1s." The "+33% on subsequent hits, over 3s" clause has no
-    # stated base window and is not counted (`PARTIAL`).
-    sim.proc(0.35 * sim.stat("Strength"), "physical", ev)
+    # dealt over 1s. Subsequent hits on the same target deal 33% bonus Damage,
+    # over 3s." Reading taken (2026-11-02; PR #77 left the clause out): a
+    # Crusher hit within 3s of the previous one on the target is a SUBSEQUENT
+    # hit and deals 1.33x; "over 3s" is that window. One target, so every
+    # proc inside 3s of the last qualifies.
+    st = sim.item_state("The Crusher", last=-math.inf)
+    mult = 1.33 if ev.t - st["last"] <= 3.0 else 1.0
+    st["last"] = ev.t
+    sim.proc(mult * 0.35 * sim.stat("Strength"), "physical", ev)
 
 
 def _soul_gem(sim, ev):
     # "Ability Hit: +1 Stack. Three Stacks: Next Ability Hit: Deals Bonus
     # Damage (40% Intelligence) ... Removes the Stacks". The damage type is not
     # stated; it is taken as the god's own.
+    # "+20(+6 per Level) Heal you and allies within 3.2m": 140 at level 20,
+    # to our god (no allies in the comparison); it lands in the fight's
+    # health bar, so it shows in effective health, not damage.
     st = sim.item_state("Soul Gem", stacks=0)
     if st["stacks"] >= 3:
         sim.proc(0.40 * sim.stat("Intelligence"), sim.damage_type, ev)
+        sim.heal(20.0 + 6.0 * sim.level)
         st["stacks"] = 0
     else:
         st["stacks"] += 1
@@ -465,6 +526,441 @@ def _brawler_grants(ctx):
     return _adaptive(35.0, 50.0)(ctx)
 
 
+
+# ── Takedowns (the FIGHT block in `side_by_side`: a kill when our damage
+#    reaches the target's max health; an assist on a fixed cadence) ────────
+
+def _jotunn(sim, kind):
+    # "God Kill or Assist: -1s Cooldown for Non-Ultimate Abilities -5s
+    # Cooldown for Ultimate Abilities". Taken off whatever is left of each
+    # cooldown; a cooldown already over banks nothing.
+    sim.refund(1.0, 5.0)
+
+
+def _desolation(sim, kind):
+    # "God Kill: -3s Non Ultimate Cooldowns -10s Ultimate Cooldowns God
+    # Assist: -1.5s Non Ultimate Cooldowns -5s Ultimate Cooldowns"
+    if kind == "kill":
+        sim.refund(3.0, 10.0)
+    else:
+        sim.refund(1.5, 5.0)
+
+
+def _reaper(sim, kind):
+    # "Kill a God: Heal +15% of Slain God's Max Health Assist a God: Heal
+    # +7.5% of Slain God's Max Health". The slain god is the reference target
+    # in both cases (an assist's victim is not in the comparison; the target
+    # is the comparison's only god). The Moonlight Phase clause is a map
+    # phase this comparison does not contain, so it is read as off.
+    sim.heal((0.15 if kind == "kill" else 0.075) * sim.target["max_health"])
+
+
+def timed_stacks(state, t, duration):
+    """Stacks that "last Ns" and "fall off one at a time": the timer restarts
+    on every gain and on every single-stack loss. Returns the stacks held at
+    `t` and updates `state` ({"stacks", "expires"}) to that instant."""
+    while state["stacks"] and t >= state["expires"]:
+        state["stacks"] -= 1
+        state["expires"] += duration
+    return state["stacks"]
+
+
+DOOM_ORB_DURATION = 10.0   # "Stacks last 10s"
+
+
+def _doom_takedown(sim, kind):
+    # "Kill or Assist a God: +5 Stacks. Per Stack: +8 Intelligence Max 5
+    # Stacks. Stacks last 10s. Stacks fall off one at a time". No minions in
+    # the duel, so the minion clause never fires.
+    st = sim.item_state("Doom Orb", stacks=0, expires=0.0)
+    timed_stacks(st, sim.t, DOOM_ORB_DURATION)
+    st["stacks"], st["expires"] = min(5, st["stacks"] + 5), sim.t + DOOM_ORB_DURATION
+
+
+def _doom_bonus(sim, key, v):
+    st = sim.state.get("Doom Orb")
+    if not st:
+        return v
+    return v + 8.0 * timed_stacks(st, sim.t, DOOM_ORB_DURATION)
+
+
+RAGE_PER_STACK, RAGE_MAX_STACKS, RAGE_BONUS = 4.0, 5, 10.0
+
+
+def rage_crit(takedowns):
+    """"God Kill or Assist: +4% Critical Strike Chance (Max 20%) After 5 God
+    Kills or Assists: +10% additional Critical Strike Chance". No duration is
+    stated, so the stacks are permanent: earlier fights count
+    (`side_by_side.STACK_MINUTES_TO_FULL`), and takedowns in the window add."""
+    n = min(takedowns, RAGE_MAX_STACKS)
+    return RAGE_PER_STACK * n + (RAGE_BONUS if takedowns >= RAGE_MAX_STACKS else 0.0)
+
+
+def _rage_takedown(sim, kind):
+    st = sim.item_state("Rage", takedowns=_rage_start(sim))
+    st["takedowns"] += 1
+
+
+def _rage_start(sim):
+    return int(RAGE_MAX_STACKS * stack_fraction(sim.stacks, "Rage") + 1e-9)
+
+
+def _rage_bonus(sim, key, v):
+    st = sim.item_state("Rage", takedowns=_rage_start(sim))
+    return v + rage_crit(st["takedowns"])
+
+
+# ── Hits taken (the enemy profile in `side_by_side`'s FIGHT block) ────────
+
+def _genji(sim, hit):
+    # "Hit by Magical Ability Damage: -3s Cooldowns. Cooldown: 20s". "Cooldowns"
+    # with no qualifier is every ability, the ultimate included.
+    if hit["kind"] != "ability" or hit["dtype"] != "magical":
+        return
+    st = sim.item_state("Genji's Guard", ready=0.0)
+    if sim.t >= st["ready"]:
+        sim.refund(3.0, 3.0)
+        st["ready"] = sim.t + 20.0
+
+
+def kinetic_shockwave(max_health):
+    """"dealing 40 (+4% of your Health) Physical Damage" — your MAX health:
+    the clock's offence is read at full health (module docstring)."""
+    return 40.0 + 0.04 * max_health
+
+
+def _kinetic_taken(sim, hit):
+    # "Damaged by 3 Attacks from gods: Gain Kinetic. Stacks up to 2 times."
+    if hit["kind"] != "attack":
+        return
+    st = sim.item_state("Kinetic Cuirass", hits=0, kinetic=0)
+    st["hits"] += 1
+    if st["hits"] == 3:
+        st["hits"], st["kinetic"] = 0, min(2, st["kinetic"] + 1)
+
+
+def _kinetic_attack(sim, ev):
+    # "Kinetic makes your next Attack unleash a shockwave, even if it misses"
+    # — one Kinetic per attack.
+    st = sim.item_state("Kinetic Cuirass", hits=0, kinetic=0)
+    if st["kinetic"]:
+        st["kinetic"] -= 1
+        sim.proc(kinetic_shockwave(sim.max_health), "physical", ev)
+
+
+def breastplate_threshold(level):
+    """"On 500 (+25 per Level) Health lost" — 1000 at level 20."""
+    return 500.0 + 25.0 * level
+
+
+def _breastplate(sim, hit):
+    # "On 500 (+25 per Level) Health lost: -1s Ability Cooldowns." Health
+    # lost is cumulative real health (shields absorb first; a heal does not
+    # give it back). Every ability, the ultimate included.
+    st = sim.item_state("Breastplate of Valor", paid=0)
+    due = int(sim.health_lost // breastplate_threshold(sim.level))
+    while st["paid"] < due:
+        st["paid"] += 1
+        sim.refund(1.0, 1.0)
+
+
+DRACONIC_DURATION, DRACONIC_MAX, DRACONIC_PER = 1.5, 7, 4.0
+
+
+def _draconic_taken(sim, hit):
+    # "Damaged by a God: Gain 4 Protections against that God's damage type
+    # Stacks last 1.5s (max 7) Stacks decay 1 at a time". One pool per damage
+    # type; gained AFTER the hit that grants it.
+    st = sim.item_state("Draconic Scale:" + hit["dtype"], stacks=0, expires=0.0)
+    timed_stacks(st, sim.t, DRACONIC_DURATION)
+    st["stacks"], st["expires"] = min(DRACONIC_MAX, st["stacks"] + 1), sim.t + DRACONIC_DURATION
+
+
+def _draconic_prot(sim, dtype):
+    st = sim.state.get("Draconic Scale:" + dtype)
+    return DRACONIC_PER * timed_stacks(st, sim.t, DRACONIC_DURATION) if st else 0.0
+
+
+BERSERK_DURATION = 8.0   # "Become Berserk for 8s"
+
+
+def _berserk_taken(sim, hit):
+    # "When falling below 60% Health: Become Berserk for 8s. While Berserk:
+    # +15 Physical Protection +15 Magical Protection +25% Attack Speed". Fires
+    # on each crossing from above 60% to below (a heal back over re-arms it);
+    # the text states no cooldown.
+    st = sim.item_state("Berserker's Shield", armed=True, until=-1.0)
+    below = sim.hp < 0.60 * sim.max_health
+    if below and st["armed"]:
+        st["armed"], st["until"] = False, sim.t + BERSERK_DURATION
+    elif not below:
+        st["armed"] = True
+
+
+def _berserk_on(sim):
+    st = sim.state.get("Berserker's Shield")
+    return bool(st) and sim.t < st["until"]
+
+
+def _berserk_prot(sim, dtype):
+    return 15.0 if _berserk_on(sim) else 0.0
+
+
+def _berserk_bonus(sim, key, v):
+    return v + 25.0 if _berserk_on(sim) else v
+
+
+# ── "On Use" actives. Each is pressed the first moment its condition holds
+#    and again the moment its cooldown ends (`side_by_side`'s FIGHT block);
+#    the condition is written beside each one. ────────────────────────────
+
+def _frenzy_active(sim):
+    # "+10 (+4 per Level) Attack Damage +20% (+1% per Level) Attack Speed
+    # Buff lasts 6 Attacks." Pressed at the fight's start.
+    sim.item_state("Dagger of Frenzy", left=0)["left"] = 6
+    return True
+
+
+def _frenzy_bonus(sim, key, v):
+    st = sim.state.get("Dagger of Frenzy")
+    if not st or not st["left"]:
+        return v
+    return v + (10.0 + 4.0 * sim.level if key == "Attack Damage" else 20.0 + 1.0 * sim.level)
+
+
+def _frenzy_attack(sim, ev):
+    st = sim.state.get("Dagger of Frenzy")
+    if st and st["left"]:
+        sim.after(lambda: st.update(left=st["left"] - 1))
+
+
+def _frenzy_takedown(sim, kind):
+    # "Killing a God refreshes Cooldown." A kill only, not an assist.
+    if kind == "kill":
+        sim.ready_active("Dagger of Frenzy")
+
+
+def _timed_buff(name, duration):
+    def press(sim):
+        sim.item_state(name, until=-1.0)["until"] = sim.t + duration
+        return True
+    return press
+
+
+def _buff_on(sim, name):
+    st = sim.state.get(name)
+    return bool(st) and sim.t < st["until"]
+
+
+def _pct_of(name, pct):
+    # "+25% Strength" / "+25% Intelligence": a quarter of the god's total,
+    # applied after every flat bonus.
+    def bonus(sim, key, v):
+        return v * (1.0 + pct) if _buff_on(sim, name) else v
+    return bonus
+
+
+def _death_metal_active(sim):
+    # Pressed only by a PHYSICAL god: "Lose all Intelligence. Gain 66% of it
+    # as Strength" is a loss for a god whose damage scales on Intelligence.
+    if sim.damage_type != "physical":
+        return False
+    sim.item_state("Death Metal", until=-1.0)["until"] = sim.t + 6.0
+    return True
+
+
+def _lernaean(sim):
+    # "Fire 3 arrows that pierce enemies in a 10.5m line. Deals 40% of your
+    # Attack Damage as Physical Damage ... Can Critically Strike". Attack
+    # Damage is the swing (`_odysseus`); the target is in the line, so all
+    # three arrows hit it — the literal upper reading, written down. A crit
+    # is its expected value, as for basic attacks.
+    swing = sim.swing_raw()
+    sim.active_damage(3 * 0.40 * swing * sim.crit_ev(), "physical")
+    return True
+
+
+def _splitter(sim):
+    # "+40 (+5 per Level) True Damage". No enemy shields in the comparison, so
+    # the shield clauses do nothing. The target is inside 11.2m (the clock's
+    # in-range assumption).
+    sim.active_damage(40.0 + 5.0 * sim.level, "true")
+    return True
+
+
+def _erebus(sim):
+    # "Spawn a Watchful Eye ... Enemy enters range: Fires a seeking projectile:
+    # Magical Damage equal to 15% of Enemy Max Health". Read as one projectile
+    # per press: the eye is placed where the fight is and the target enters
+    # its range once. Moonlight Phase is not in the comparison.
+    sim.active_damage(0.15 * sim.target["max_health"], "magical")
+    return True
+
+
+def _pendulum(sim):
+    # "-4s Ability Cooldowns." Condition: an ability is on cooldown — so it is
+    # pressed straight after the opening casts.
+    if not sim.any_on_cooldown():
+        return False
+    sim.refund(4.0, 4.0)
+    return True
+
+
+def _bbb_active(sim):
+    # "+ Health Shield for 6s. Shield = 7.5% Max Health & 75% Intelligence
+    # from Items While Shielded: +10% Lifesteal and 10% Penetration". Pressed
+    # at the fight's start. The penetration holds while the shield does.
+    shield = 0.075 * sim.max_health + 0.75 * sim.item_totals.get("Intelligence", 0.0)
+    sim.add_shield("Blood-Bound Book", shield, sim.t + 6.0)
+    return True
+
+
+def _bbb_bonus(sim, key, v):
+    return v + 10.0 if sim.shield_up("Blood-Bound Book") else v
+
+
+def _bbb_takedown(sim, kind):
+    # "Kill a God: -25% Cooldown." Read as a quarter of the item's 80s off
+    # what remains.
+    if kind == "kill":
+        sim.shorten_active("Blood-Bound Book", 0.25 * 80.0)
+
+
+def _amanita(sim):
+    # "Create a Healing Mushroom (6.4m radius) for 4.5s. +3% Health Heal every
+    # 1.5s +1 Stack of Damage Reduction per Heal 10% Attack and Ability Damage
+    # Reduction per Stack ... All Stacks removed after triggering". Pressed
+    # at the first hit taken (a heal at full health is wasted); heals at
+    # +1.5, +3.0, +4.5s; the next hit after a heal spends every stack.
+    st = sim.item_state("Amanita Charm", heals=[], stacks=0)
+    st["heals"] = [sim.t + 1.5, sim.t + 3.0, sim.t + 4.5]
+    return True
+
+
+def _amanita_tick(sim):
+    st = sim.state.get("Amanita Charm")
+    if not st:
+        return
+    while st["heals"] and st["heals"][0] <= sim.t:
+        st["heals"].pop(0)
+        sim.heal(0.03 * sim.max_health)
+        st["stacks"] += 1
+
+
+def _amanita_reduce(sim, hit):
+    _amanita_tick(sim)
+    st = sim.state.get("Amanita Charm")
+    if not st or not st["stacks"]:
+        return 1.0
+    # Ultimates are 5% per stack; the enemy profile has no ultimate.
+    mult = max(0.0, 1.0 - 0.10 * st["stacks"])
+    st["stacks"] = 0
+    return mult
+
+
+def _hide(sim):
+    # "Reflect: 40% of pre-mitigated Attack Damage 20% of pre-mitigated
+    # Ability Damage Damage is Reflected as Physical Damage Buff lasts 4s."
+    # Pressed at the first hit taken. The attacker is the target (a duel).
+    sim.item_state("Hide of the Nemean Lion", until=-1.0)["until"] = sim.t + 4.0
+    return True
+
+
+def _hide_taken(sim, hit):
+    if _buff_on(sim, "Hide of the Nemean Lion"):
+        share = 0.40 if hit["kind"] == "attack" else 0.20
+        sim.active_damage(share * hit["raw"], "physical", item="Hide of the Nemean Lion")
+
+
+def shell_field_cap(level):
+    """"mitigates 25% Damage, up to 300 (+40 Per Level)" — 1100 at 20."""
+    return 300.0 + 40.0 * level
+
+
+def _shell_active(sim):
+    # "Create a field of rebuke for allies that mitigates 25% Damage, up to
+    # 300 (+40 Per Level). Upon Entering Field: +100 (+10 per Level) Shield for
+    # 3s." Pressed at the first hit taken; we stand in it until it is spent.
+    sim.item_state("Shell of Rebuke", left=shell_field_cap(sim.level))
+    sim.state["Shell of Rebuke"]["left"] = shell_field_cap(sim.level)
+    sim.add_shield("Shell of Rebuke", 100.0 + 10.0 * sim.level, sim.t + 3.0)
+    return True
+
+
+def _shell_reduce(sim, hit):
+    st = sim.state.get("Shell of Rebuke")
+    if not st or st["left"] <= 0:
+        return 1.0
+    mitigated = hit["raw"] * sim.mitigation_now(hit["dtype"])
+    cut = min(0.25 * mitigated, st["left"])
+    st["left"] -= cut
+    return 1.0 - cut / mitigated if mitigated else 1.0
+
+
+
+# ── Items the fight layer made simulable (2026-11-02) ─────────────────────
+
+def _bancroft_bonus(sim, key, v):
+    # "Gain bonus Intelligence and Lifesteal scaled from missing Health. Caps
+    # at +60 Intelligence and +10% Lifesteal at 40% Health". Linear in missing
+    # health from full (0) to 40% health (cap) — the literal "scaled from".
+    # Lifesteal heals nothing here. Our health is the fight's (an enemy hits
+    # back in the sustained window); a burst is at full health, +0.
+    missing = 1.0 - sim.hp / sim.max_health if sim.max_health else 0.0
+    return v + 60.0 * min(1.0, missing / 0.60)
+
+
+def _brawler_prot(sim, dtype):
+    # "+2% Protections every 1.5s. Stacks up to 5 times" in combat; combat
+    # starts at t=0 (the stat half is in `Sim._stat_raw`). 2% of our god's own
+    # protection of that type.
+    return sim.own_prot[dtype] * 0.02 * min(5, int(sim.t // 1.5))
+
+
+CHRONOS_INTERVAL, CHRONOS_FIRST = 10.0, 5.0
+
+
+def _chronos(sim):
+    # "Every 10s: -1s Ability Cooldowns." The 10s timer runs from the game,
+    # not the fight, so its phase is unknown: the first tick is at 5s, the
+    # mean of a uniform phase (the same reasoning as the FIGHT block's
+    # ASSIST_FIRST), then every 10s.
+    if sim.t < CHRONOS_FIRST:
+        sim.active_ready["Chronos' Pendant"] = CHRONOS_FIRST
+        return False
+    sim.refund(1.0, 1.0)
+    return True
+
+
+def demon_blade_uptime(crit_chance, attacks_in_window):
+    """P(at least one crit among the attacks of the last 3s)."""
+    return 1.0 - (1.0 - crit_chance) ** attacks_in_window
+
+
+def _demon_attack(sim, ev):
+    st = sim.item_state("Demon Blade", times=[])
+    sim.after(lambda: st["times"].append(ev.t))
+
+
+def _demon_bonus(sim, key, v):
+    # "Critically Strike: +30% Attack Speed for 3s." Crit is an expected
+    # value here, so the buff is too: +30% x P(a crit among the attacks made
+    # in the last 3s), the probability read off the build's crit chance.
+    st = sim.state.get("Demon Blade")
+    if not st:
+        return v
+    n = sum(1 for t in st["times"] if sim.t - 3.0 < t <= sim.t)
+    p = min(sim.base_stats.get("Critical Chance %", 0.0), 100.0) / 100.0
+    return v + 30.0 * demon_blade_uptime(p, n)
+
+
+def _sanguine_active(sim):
+    # "On Use: Now damages every 0.33s for 4s. Cooldown: 75s". Pressed at the
+    # fight's start; the clock ticks the aura every 0.33s while it lasts.
+    sim.item_state("Sanguine Lash", until=-1.0)["until"] = sim.t + 4.0
+    return True
+
+
 # Every item whose effect is simulated or explicitly refused. An item absent
 # from this table and carrying passive text reads `NOT_SIMULATED` with the
 # reason "no simulator written yet", which is a gap and says so.
@@ -492,11 +988,11 @@ REGISTRY = {
                            ("literal reading: four instances of the stated amount",
                             "once per ability per god"),
                            on_ability=_soul_reaver),
-    "Brawler’s Beat Stick": Passive(PARTIAL, "adaptive +35 Str / +50 Int; +2% Str/Int/protections per 1.5s in combat (5)",
+    "Brawler’s Beat Stick": Passive(SIMULATED, "adaptive +35 Str / +50 Int; +2% Str/Int/protections per 1.5s in combat (5)",
                                     ("stacks build from 0 at the start of the window",
-                                     "40% healing reduction not simulated (no healing in a duel)",
-                                     "effective health read at 0 stacks (entering the fight)"),
-                                    grants=_brawler_grants),
+                                     "40% healing reduction: the target never heals, so it reduces nothing",
+                                     "static effective health reads 0 stacks; the fight run builds them"),
+                                    grants=_brawler_grants, prot_bonus=_brawler_prot),
     "Nimble Ring": Passive(SIMULATED, "per 10 Intelligence: +1 Attack Damage, +1% Attack Speed",
                            ("whole tens of Intelligence",), converts=_nimble),
     "Odysseus' Bow": Passive(SIMULATED, "every 4th attack: chain lightning, 3 hits on the target of 15 + 60% of the basic attack's damage, physical",
@@ -505,8 +1001,10 @@ REGISTRY = {
                              on_attack=_odysseus),
     "Polynomicon": Passive(SIMULATED, "after an ability, next attack +80% Int magical (2s cooldown)",
                            on_attack=_polynomicon_attack, on_ability=_polynomicon_ability),
-    "Bancroft's Talon": Passive(PARTIAL, "up to +60 Int / +10% LS from missing health (cap at 40% health)",
-                                ("simulated at full health: +0. The ceiling is +60 Intelligence",)),
+    "Bancroft's Talon": Passive(SIMULATED, "up to +60 Int / +10% LS, linear in missing health to 40% health",
+                                ("our health is the fight's; a burst is at full health (+0)",
+                                 "lifesteal heals nothing in the comparison"),
+                                stat_bonus=_bancroft_bonus, bonus_keys=("Intelligence",)),
     "Ethereal Staff": Passive(PARTIAL, "each ability hit steals 5% max health (60s)",
                               ("health steal changes both sides' max health mid-fight; damage unaffected,"
                                " effective health read before the fight",)),
@@ -518,8 +1016,11 @@ REGISTRY = {
                                 ("the comparison contains no movement",)),
 
     # Near-misses and the items both sides buy most.
-    "Shell of Rebuke": Passive(PARTIAL, "+7.5% of all item stats; the rebuke field active is not simulated",
-                               ("applied to printed item stats only",), converts=_shell),
+    "Shell of Rebuke": Passive(SIMULATED, "+7.5% of all item stats; active: 25% damage cut up to 1100 and a 300 shield for 3s",
+                               ("applied to printed item stats only",
+                                "pressed at the first hit taken; we stand in the field until it is spent"),
+                               converts=_shell, active=_shell_active, active_cooldown=120.0,
+                               active_trigger="hit_taken", reduce_hit=_shell_reduce),
     "Silverbranch Bow": Passive(SIMULATED, "every 3rd attack: one arrow per whole attack/s, 25% of the swing each",
                                 on_attack=_silverbranch),
     "Riptalon": Passive(SIMULATED, "attacks +10% damage above 50% health",
@@ -544,20 +1045,27 @@ REGISTRY = {
                            on_attack=_toxic),
     "Hydra's Lament": Passive(SIMULATED, "after an ability, next attack +20% ranged / +30% melee",
                               on_attack=_hydra_attack, on_ability=_hydra_ability),
-    "The Crusher": Passive(PARTIAL, "ability hit: +35% Strength physical; the +33% follow-up is not counted",
+    "The Crusher": Passive(SIMULATED, "ability hit: +35% Strength physical; x1.33 within 3s of the last",
+                           ("'subsequent hits ... over 3s' read as a proc within 3s of the previous one",),
                            on_ability=_crusher),
-    "Soul Gem": Passive(PARTIAL, "every 4th ability hit: +40% Int; the heal is not simulated",
+    "Soul Gem": Passive(SIMULATED, "every 4th ability hit: +40% Int and a 140 heal (level 20)",
+                        ("the heal lands in the fight's health bar (effective health)",),
                         on_ability=_soul_gem),
     "Divine Ruin": Passive(PARTIAL, "chain lightning 40 + 20% Int every 15s; healing reduction not simulated",
                            on_ability=_divine_ruin),
     "Spear of the Magus": Passive(SIMULATED, "ability hit marks the target: +5% damage taken for 8s",
                                   on_ability=_spear_magus),
     "Avenging Blade": Passive(SIMULATED, "attacks shred 3.5% protections per stack (3)", on_attack=_avenging),
-    "Sanguine Lash": Passive(PARTIAL, "aura: 0.5% (+0.66% per 10% LS) target health per second; active not simulated",
-                             ("target inside 4m for the whole window",)),
+    "Sanguine Lash": Passive(SIMULATED, "aura: 0.5% (+0.66% per 10% LS) target health per second; active: every 0.33s for 4s (75s)",
+                             ("target inside 4m for the whole window", "active pressed at the fight's start"),
+                             active=_sanguine_active, active_cooldown=75.0),
     "The World Stone": Passive(SIMULATED, "-25% ultimate cooldown", cooldown=_world_stone),
-    "Berserker's Shield": Passive(PARTIAL, "below 60% health: +15/+15 protections (in EHP); +25% attack speed not in damage",
-                                  ("damage read at full health",), ehp_segments=_berserker_ehp),
+    "Berserker's Shield": Passive(SIMULATED, "below 60% health: berserk 8s, +15/+15 protections and +25% attack speed",
+                                  ("fires on each fall below 60% (no cooldown stated)",
+                                   "static effective health integrates the bottom 60% of the bar; the fight clock applies the 8s"),
+                                  ehp_segments=_berserker_ehp, on_hit_taken=_berserk_taken,
+                                  prot_bonus=_berserk_prot, stat_bonus=_berserk_bonus,
+                                  bonus_keys=("Attack Speed %",)),
     "Shifter's Shield": Passive(SIMULATED, "over 75% health +30 Str / +40 Int; under 75% +20/+20 protections",
                                 grants=_shifter_grants, ehp_segments=_shifter_ehp),
     "Freya's Tears": Passive(SIMULATED, "per 25% health lost: +15/+15 protections for 5s (2 stacks)",
@@ -565,16 +1073,86 @@ REGISTRY = {
     "Sun Beam Bow": Passive(PARTIAL, "adaptive +20 Str / +40 Int; the toggle active is not simulated",
                             grants=_adaptive(20.0, 40.0)),
 
+    # Takedowns: a kill when our damage reaches the target's max health, an
+    # assist on `side_by_side.ASSIST_INTERVAL` (its FIGHT block).
+    "Jotunn's Revenge": Passive(SIMULATED, "kill/assist: -1s abilities, -5s ultimate",
+                                ("kills and assists from the FIGHT block",),
+                                on_takedown=_jotunn),
+    "Spear of Desolation": Passive(SIMULATED, "kill: -3s / -10s ult; assist: -1.5s / -5s ult",
+                                   ("kills and assists from the FIGHT block",),
+                                   on_takedown=_desolation),
+    "Rage": Passive(SIMULATED, "+4% crit per god kill/assist (5), +10% more at 5",
+                    ("stacks are permanent: earlier fights by the game clock, plus takedowns in the window",),
+                    on_takedown=_rage_takedown, stat_bonus=_rage_bonus,
+                    bonus_keys=("Critical Chance %",), stacking=True),
+    "Doom Orb": Passive(SIMULATED, "kill/assist: +5 stacks of +8 Int (10s, fall off one at a time)",
+                        ("no minions in the duel",), on_takedown=_doom_takedown,
+                        stat_bonus=_doom_bonus, bonus_keys=("Intelligence",)),
+    "The Reaper": Passive(SIMULATED, "heal 15% (kill) / 7.5% (assist) of the slain god's max health",
+                          ("the slain god is the reference target", "Moonlight Phase off"),
+                          on_takedown=_reaper),
+    # Hits taken: the enemy profile in the FIGHT block.
+    "Genji's Guard": Passive(SIMULATED, "hit by magical ability damage: -3s cooldowns (20s)",
+                             ("every ability, the ultimate included",), on_hit_taken=_genji),
+    "Breastplate of Valor": Passive(SIMULATED, "per 1000 health lost (level 20): -1s ability cooldowns",
+                                    ("cumulative real health lost; every ability",),
+                                    on_hit_taken=_breastplate),
+    "Kinetic Cuirass": Passive(SIMULATED, "3 attacks taken: Kinetic (2); next attack +40 + 4% max health physical",
+                               ("your Health read as max health",),
+                               on_hit_taken=_kinetic_taken, on_attack=_kinetic_attack),
+    "Draconic Scale": Passive(SIMULATED, "per hit taken: +4 protection vs that type (7, 1.5s, decay one at a time)",
+                              on_hit_taken=_draconic_taken, prot_bonus=_draconic_prot),
+    # "On Use" actives, pressed on cooldown once their condition holds.
+    "Dagger of Frenzy": Passive(SIMULATED, "active: +90 Attack Damage, +40% attack speed for 6 attacks (15s); a kill refreshes it",
+                                ("pressed at the fight's start",),
+                                active=_frenzy_active, active_cooldown=15.0, on_attack=_frenzy_attack,
+                                stat_bonus=_frenzy_bonus, bonus_keys=("Attack Damage", "Attack Speed %"),
+                                on_takedown=_frenzy_takedown),
+    "Avatar's Parashu": Passive(SIMULATED, "active: +25% Strength for 10s (120s)",
+                                ("pressed at the fight's start", "displacement immunity: no CC in the comparison"),
+                                active=_timed_buff("Avatar's Parashu", 10.0), active_cooldown=120.0,
+                                stat_bonus=_pct_of("Avatar's Parashu", 0.25), bonus_keys=("Strength",)),
+    "Dreamer's Idol": Passive(SIMULATED, "active: +25% Intelligence for 10s (120s)",
+                              ("pressed at the fight's start", "displacement immunity: no CC in the comparison"),
+                              active=_timed_buff("Dreamer's Idol", 10.0), active_cooldown=120.0,
+                              stat_bonus=_pct_of("Dreamer's Idol", 0.25), bonus_keys=("Intelligence",)),
+    "Death Metal": Passive(SIMULATED, "active: all Int becomes 66% Strength, +25% crit, 6s (45s)",
+                           ("pressed at the fight's start, by a physical god only",),
+                           active=_death_metal_active, active_cooldown=45.0),
+    "Lernaean Bow": Passive(SIMULATED, "active: 3 arrows of 40% of the swing, physical, can crit (30s)",
+                            ("pressed at the fight's start", "all three arrows hit the target (literal upper reading)"),
+                            active=_lernaean, active_cooldown=30.0),
+    "Shield Splitter": Passive(SIMULATED, "active: 140 true damage at level 20 (15s)",
+                               ("pressed at the fight's start", "no enemy shields: the shield clauses do nothing"),
+                               active=_splitter, active_cooldown=15.0),
+    "Eye of Erebus": Passive(SIMULATED, "adaptive +35 Str / +50 Int; active: 15% of the target's max health, magical (40s)",
+                             ("one projectile per press: the target enters the eye's range once",
+                              "the slow and Moonlight Phase are not in the comparison"),
+                             grants=_adaptive(35.0, 50.0), active=_erebus, active_cooldown=40.0),
+    "Pendulum Blade": Passive(SIMULATED, "active: -4s ability cooldowns (40s)",
+                              ("pressed as soon as an ability is on cooldown",),
+                              active=_pendulum, active_cooldown=40.0, active_trigger="after_casts"),
+    "Blood-Bound Book": Passive(SIMULATED, "active: shield 7.5% max health + 75% item Int for 6s; +10% penetration while it holds (80s)",
+                                ("pressed at the fight's start", "lifesteal: no healing modelled", "a kill takes 20s (25% of 80s) off"),
+                                active=_bbb_active, active_cooldown=80.0, stat_bonus=_bbb_bonus,
+                                bonus_keys=("Penetration %",), on_takedown=_bbb_takedown),
+    "Amanita Charm": Passive(SIMULATED, "active: three heals of 3% max health over 4.5s, each a 10% cut on the next hit (60s)",
+                             ("pressed at the first hit taken",),
+                             active=_amanita, active_cooldown=60.0, active_trigger="hit_taken",
+                             reduce_hit=_amanita_reduce),
+    "Hide of the Nemean Lion": Passive(SIMULATED, "active: reflect 40% of attack / 20% of ability damage taken for 4s, physical (60s)",
+                                       ("pressed at the first hit taken", "the attacker is the target"),
+                                       active=_hide, active_cooldown=60.0, active_trigger="hit_taken",
+                                       on_hit_taken=_hide_taken),
+    "Chronos' Pendant": Passive(SIMULATED, "every 10s: -1s ability cooldowns",
+                                ("timer phase unknown: first tick at 5s, then every 10s",),
+                                active=_chronos, active_cooldown=CHRONOS_INTERVAL),
+    "Stampede": Passive(NOT_SIMULATED, "active: slow immunity and movement speed",
+                        ("the comparison contains no movement",)),
+    "Doublet of Binding": Passive(NOT_SIMULATED, "active: link redirects an ally's damage to you",
+                                  ("the comparison contains no ally",)),
+
     # Refused, each for the reason the comparison cannot contain.
-    "Jotunn's Revenge": Passive(NOT_SIMULATED, "cooldown refund on kill/assist", ("no kill in a 10s duel",)),
-    "Spear of Desolation": Passive(NOT_SIMULATED, "cooldown refund on kill/assist", ("no kill in a 10s duel",)),
-    "Rage": Passive(NOT_SIMULATED, "+crit chance on kill/assist", ("read at 0 kills: printed 20% only",)),
-    "Doom Orb": Passive(NOT_SIMULATED, "+8 Int per stack from kills/assists (10s)", ("no kill in a 10s duel",)),
-    "The Reaper": Passive(NOT_SIMULATED, "heal on kill/assist", ("no kill in a 10s duel",)),
-    "Genji's Guard": Passive(NOT_SIMULATED, "cooldowns refund when hit by magical abilities", ("no attacker on our god",)),
-    "Breastplate of Valor": Passive(NOT_SIMULATED, "cooldowns refund on health lost", ("no attacker on our god",)),
-    "Kinetic Cuirass": Passive(NOT_SIMULATED, "shockwave after taking 3 attacks", ("no attacker on our god",)),
-    "Draconic Scale": Passive(NOT_SIMULATED, "+4 protections per hit taken (1.5s)", ("needs the attacker's hit rate",)),
     "Erosion": Passive(NOT_SIMULATED, "reduces enemy shields", ("no enemy shield in the comparison",)),
     "Runeforged Hammer": Passive(NOT_SIMULATED, "rune on hard CC", ("no crowd control",)),
     "Gluttonous Grimoire": Passive(NOT_SIMULATED, "stores lifesteal healing as damage", ("no healing modelled",)),
@@ -582,16 +1160,19 @@ REGISTRY = {
     "Hastened Fatalis": Passive(NOT_SIMULATED, "movement penalty reduction", ("no movement",)),
     "Musashi's Dual Swords": Passive(NOT_SIMULATED, "movement speed on crit", ("no movement",)),
     "Hussar's Wings": Passive(NOT_SIMULATED, "slow immunity", ("no movement",)),
-    "Demon Blade": Passive(NOT_SIMULATED, "+30% attack speed for 3s after a crit",
-                           ("crit is an expected value here, not a sequence",)),
+    "Demon Blade": Passive(SIMULATED, "+30% attack speed for 3s after a crit, as an expected value",
+                           ("buff = 30% x P(a crit among the attacks of the last 3s)",),
+                           on_attack=_demon_attack, stat_bonus=_demon_bonus,
+                           bonus_keys=("Attack Speed %",)),
     "Shield of the Phoenix": Passive(NOT_SIMULATED, "heal on ability hit", ("no healing modelled",)),
     "Eye of Providence": Passive(NOT_SIMULATED, "ward economy", ("no wards",)),
 }
 
-#: Actives: "On Use" items. Their timing is a player decision with a
-#: cooldown measured in tens of seconds; the window would have to choose when
-#: to press it. Refused by a rule rather than one by one.
-ACTIVE_REASON = "active item: when it is pressed is a player decision"
+#: Actives: "On Use" items. Until 2026-11-02 every one was refused by this
+#: rule ("when it is pressed is a player decision"). Each active in a compared
+#: build now has an entry above, pressed on cooldown once its condition holds;
+#: an active outside every compared build falls through to this reason.
+ACTIVE_REASON = "active item: no simulator written yet (every active in a compared build has one)"
 
 
 def lookup(item):

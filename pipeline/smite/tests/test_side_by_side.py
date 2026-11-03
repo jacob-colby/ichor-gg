@@ -330,13 +330,22 @@ def test_frozen_medusa_reproduces_the_worked_example():
     t = target(prot=70.0, base_health=2212.6)
     six = ["Devourer's Gauntlet", "Dagger of Frenzy", "Dominance", "Riptalon",
            "Silverbranch Bow", "The Executioner"]
-    s = sbs.Sim(god, six, items, t)
+    s = sbs.Sim(god, six, items, t, disabled={"Dagger of Frenzy"})
     s.run_window()
     # 145 Strength (35 + 40 full-stack Devourer's + 40 Dominance + 30 adaptive),
-    # 2.66 swings/s; pinned so a change to the clock is a visible diff.
+    # 2.66 swings/s; pinned so a change to the clock is a visible diff. With
+    # Dagger of Frenzy's active off (its only effect), PR #77's figure stands:
+    # nothing else in the clock moved when the FIGHT block was added (this
+    # toy target carries no enemy, and no other item here reacts to a takedown).
     assert s.stat("Strength") == pytest.approx(145.0)
     assert s.attacks_per_second() == pytest.approx(2.6586, abs=1e-4)
     assert round(s.total()) == 8854
+    # The active on (2026-11-02): pressed at t=0, +90 Attack Damage and +40%
+    # attack speed for 6 attacks, 15s cooldown, refreshed by the one kill.
+    on = sbs.Sim(god, six, items, t)
+    on.run_window()
+    assert on.kills == 1 and on.assists == 1
+    assert round(on.total()) == 10445
 
 
 # ── Invariants over the live data ─────────────────────────────────────────
@@ -410,8 +419,8 @@ def test_the_frozen_medusa_note_is_on_the_base_kit():
 def test_simulated_share_counts_only_fully_simulated_or_passiveless_gold():
     items = {"Riptalon": item("Riptalon", cost=3000),             # simulated
              "Plain": item("Plain", cost=1000),                   # no passive
-             "Jotunn's Revenge": item("Jotunn's Revenge", passive="x", cost=2000),   # not simulated
-             "Bancroft's Talon": item("Bancroft's Talon", passive="x", cost=2000)}   # partial
+             "Tekko-Kagi": item("Tekko-Kagi", passive="x", cost=2000),   # not simulated
+             "Ethereal Staff": item("Ethereal Staff", passive="x", cost=2000)}   # partial
     assert sbs.simulated_share(list(items), items) == pytest.approx(4000 / 8000)
 
 

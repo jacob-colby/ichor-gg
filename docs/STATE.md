@@ -2059,12 +2059,37 @@ Bacchus 59%, Cernunnos 53%) the comparison would need an aspect kit
 `combat.py` cannot play; their base-kit numbers are shown, labelled, and
 counted nowhere (`side_by_side.kit_for`). The god page draws it for Conquest
 (`SideBySide.tsx`, one `viewer/public/side_by_side/<god>.json` per god, written
-by `--json` in the daily refresh), coverage line included. Left, in order:
-(1) simulate the passives that withhold the most verdicts — Jotunn's Revenge
-and Spear of Desolation need a kill model, Genji's Guard and Kinetic Cuirass
-an attacker on our god, and actives a press-timing rule — since until then the
-criterion cannot pass or fail on most gods; (2) a time-to-stack model for the
-2- and 4-item points, which would settle the bracket in item 2; (3) a
+by `--json` in the daily refresh), coverage line included.
+
+**The fight layer (2026-11-03, same fingerprint `60bea8b0c5e6`) cut the
+withheld verdicts from 75 to 47 of 87.** `side_by_side`'s FIGHT block puts
+four things in the clock, each under one written assumption that both builds
+share: a kill (one per 10s fight, when our damage reaches the target's max
+health — a first draft that counted every multiple of max health gave a carry
+five kills in 10s and was dropped before any verdict was read); an assist
+every 10s from 5s; an enemy on our god as lethal as the comparison asks us to
+be (the squishy's effective health over 10s, at the median community Carry's
+attack speed and Mid's cast rate); and every "On Use" press on cooldown once
+its condition holds. Effective health is now the raw damage that enemy deals
+before the bar is gone, which equals the static integral when nothing in the
+build reacts (tested). Twenty-nine items moved to SIMULATED from their text,
+each with a frozen-text test in `test_fight.py`; the readings taken are in
+`passive_sim` beside each one. Two results worth keeping: **assists barely
+matter** (all off: Ichor better 10 / community better 7, against 11 / 6), and
+**PR #77's early-game builds were the stack artifact it suspected** — with
+stacks on a game clock (an item every 5 minutes, full 10 minutes after
+purchase; neither measured, both bracketed in the report) they go 3 → 0.
+Counts now: Ichor better 11, community better 6, trade-off 11, level 12,
+early 0, late 0, withheld 47. What still withholds is mostly passives the
+comparison cannot contain at all — Tekko-Kagi's pathfinding (22 of the 47),
+Stampede, Runeforged Hammer, Eye of Providence, Erosion — and the coverage
+rule is doing its job there; loosening it to get verdicts would be tuning.
+
+Left, in order: (1) decide what a movement/CC/ward passive is worth in a
+comparison that has no movement, CC or wards — the honest options are a
+stated zero (and counting it as covered) or leaving those gods withheld, and
+that is a rule for Jacob, not a constant; (2) a measured farm/takedown rate
+for `STACK_MINUTES_TO_FULL`, which is reasoned, not measured; (3) a
 phone/desktop pass by Jacob; (4) the seven aspect kits, most-played first;
 (5) for each surviving "community better" god, a model change or a stated
 reason — the report's swap rows name the single item that recovers most.
@@ -2428,7 +2453,7 @@ python -m smite.build_quality            # combat.py pointed at whole builds, ou
 python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
 python -m smite.build_quality --ward-economy  # the `ward-economy` carriers against a core built without them (~20s)
-python -m smite.side_by_side             # criterion 2: ours vs community, passives SIMULATED (~12s)
+python -m smite.side_by_side             # criterion 2: ours vs community, passives SIMULATED (~40s)
 python -m smite.side_by_side --god Medusa    # one god's side-by-side, item diffs and verdict
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split

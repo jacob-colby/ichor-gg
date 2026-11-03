@@ -1,0 +1,117 @@
+[
+ {
+  "name": "Shield Splitter",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Strength": "45",
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": "On Use: Fire a projectile 11.2m forward. +40 (+5 per Level) True Damage If an enemy is Shielded: -70% Shield You gain a Shield equal to the amount of Shield reduced Cooldown: 15s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Hide of the Nemean Lion",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "35",
+   "Max Health": "350",
+   "Health Regen": "4"
+  },
+  "passive": "On Use: Reflect: 40% of pre-mitigated Attack Damage 20% of pre-mitigated Ability Damage Damage is Reflected as Physical Damage Buff lasts 4s. Cooldown: 60s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Stampede",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "30",
+   "Max Health": "250",
+   "Health Regen": "5"
+  },
+  "passive": "On Use: You and allies within 6.4m gain: Slow Immunity +60% Movement Speed that decays to +20% over 4s Cooldown: 90s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Avatar's Parashu",
+  "cost": 3700,
+  "tier": 3,
+  "stats": {
+   "Strength": "90",
+   "Penetration": "10%"
+  },
+  "passive": "On Use: +25% Strength and Immune to Displacement for 10s. Cooldown: 120s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Lernaean Bow",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Strength": "40",
+   "Attack Speed": "30%"
+  },
+  "passive": "On Use: Fire 3 arrows that pierce enemies in a 10.5m line. Deals 40% of your Attack Damage as Physical Damage -50% Shield Can Critically Strike Cooldown: 30s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Dreamer's Idol",
+  "cost": 3500,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "130",
+   "Penetration": "10%"
+  },
+  "passive": "On Use: +25% Intelligence Become Immune to Displacement Buff lasts 10s. Cooldown: 120s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Blood-Bound Book",
+  "cost": 2250,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "80",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "On Use: + Health Shield for 6s. Shield = 7.5% Max Health & 75% Intelligence from Items While Shielded: +10% Lifesteal and 10% Penetration Kill a God: -25% Cooldown. Cooldown: 80s"
+ },
+ {
+  "name": "Doublet of Binding",
+  "cost": 2700,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "50",
+   "Dampening": "5",
+   "Max Health": "400"
+  },
+  "passive": "On Use: Gain Protective Link to a target. Protective Link redirects 20% of Damage they take, up to 600 Health. This Damage is mitigated by your Dampening. Cooldown: 45s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Pendulum Blade",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Strength": "30",
+   "Penetration": "10%",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: -4s Ability Cooldowns. Cooldown: 40s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Eye of Erebus",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Max Health": "350",
+   "Cooldown Rate": "15"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +50 Intelligence (based on highest item stat). On Use: Spawn a Watchful Eye that lasts 40s Enemy enters range: Fires a seeking projectile: Magical Damage equal to 15% of Enemy Max Health Reveal and +25% Slow for 2.5s Cooldown: 40s. During Moonlight Phase: Each time you deal damage to a god: -2s Cooldown of this item (Once per target, per Attack or Ability). You can own up to 3 active items at once"
+ },
+ {
+  "name": "Chronos' Pendant",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "55",
+   "Cooldown Rate": "25"
+  },
+  "passive": "Every 10s: -1s Ability Cooldowns."
+ }
+]

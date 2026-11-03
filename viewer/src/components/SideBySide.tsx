@@ -351,7 +351,7 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
           ({n0(meta.targets.squishy.max_health)} HP, {n0(meta.targets.squishy.physical_prot)}/{n0(meta.targets.squishy.magical_prot)} prot);
           tank = median {meta.targets.tank.role}
           ({n0(meta.targets.tank.max_health)} HP, {n0(meta.targets.tank.physical_prot)}/{n0(meta.targets.tank.magical_prot)} prot).
-          Stacking items count full stacks at six items and none at two and four. Data: {meta.data}.
+          One kill per 10s fight when the target's health runs out, one assist every 10s; an enemy as lethal as this comparison asks of us hits back; actives pressed on cooldown. Stacking items fill over game time (an item every 5 minutes, full 10 minutes after purchase). Data: {meta.data}.
         </p>
       )}
     </section>
