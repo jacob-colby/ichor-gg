@@ -374,6 +374,55 @@ def lifesteal_healing(damage_dealt_amount, lifesteal, vs_minion=False):
     return damage_dealt_amount * (lifesteal / 100.0) * scale
 
 
+# ── Healing received (2026-11-03) ──────────────────────────────────────────
+# DOCUMENTED, off the item texts we scrape (data/Items, Open Beta 46). Every
+# anti-heal item in the pool is the same 40%, and two of them say how they
+# combine in so many words:
+#
+#   Brawler's Beat Stick  "Apply 40% Healing Reduction for 5s ... Healing
+#                         Reduction does not stack with other similar effects."
+#   Stygian Anchor        "Apply 40% Healing Reduction for 5s ... Healing
+#                         Reduction does not stack with other similar effects."
+#   Toxic Blade           "Apply 40% Healing Reduction ... for 5s"
+#   Divine Ruin           "Apply 40% Healing Reduction for 5s"
+#
+# So the reduction on a heal is the STRONGEST one live, never their sum: a
+# second anti-heal item on the same target cuts nothing more. That one
+# sentence is why a second anti-heal on the same team is mostly wasted, and
+# why this is `max` and not a product.
+#
+# NOT OBSERVED IN GAME. The rows in `_combat_observations.yaml`'s `healing`
+# block are the texts' own worked arithmetic, tier DOCUMENTED; they pin this
+# code to what the items say, not to what the game does. An in-game reading
+# (Toxic Blade on a lifestealing target in Jungle Practice) is the open item.
+HEALING_REDUCTION_STACKS = False
+
+
+def healing_received(amount, reductions=()):
+    """A heal of `amount` after healing reduction. `reductions` are fractions
+    (0.40 for 40%); only the strongest applies — DOCUMENTED above."""
+    cut = max((r for r in reductions), default=0.0)
+    return amount * (1.0 - min(max(cut, 0.0), 1.0))
+
+
+def calibrate_healing_report(rows):
+    """The healing block of the observations file: each row is
+    `{label, expected, damage, lifesteal?, heal?, reductions?}` — a heal of
+    `heal` plus `lifesteal`% of `damage`, then `reductions`. Same shape as
+    `calibrate_report`."""
+    out = []
+    for r in rows:
+        heal = float(r.get("heal", 0.0)) + lifesteal_healing(
+            float(r.get("damage", 0.0)), float(r.get("lifesteal", 0.0)))
+        actual = healing_received(heal, r.get("reductions") or ())
+        expected = r["expected"]
+        error = (actual - expected) / expected if expected else (0.0 if actual == 0 else float("inf"))
+        out.append({"label": r.get("label", ""), "expected": expected, "actual": actual,
+                    "shown": actual, "rel_error": error})
+    worst = max((abs(c["rel_error"]) for c in out), default=0.0)
+    return {"cases": out, "worst_rel_error": worst, "n": len(out)}
+
+
 def damage_dealt(raw, protection, *, flat_pen=0.0, pct_pen=0.0,
                  flat_reduction=0.0, pct_reduction=0.0,
                  plating=0.0, dampening=0.0, crit=False,

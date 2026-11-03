@@ -95,6 +95,9 @@ class Passive:
     active: Optional[Callable] = None          # (sim) -> True if it fired
     active_cooldown: float = 0.0
     active_trigger: str = "start"              # "start" | "hit_taken" | "after_casts"
+    # Healing (2026-11-03): True if the item heals our god in a fight, so a
+    # build holding it gets the fight run rather than the static integral.
+    heals: bool = False
 
 
 @dataclass
@@ -311,6 +314,13 @@ def _riptalon(sim, ev):
     ev.multiplier *= 1.10
 
 
+def _riptalon_bonus(sim, key, v):
+    # "While Below 50% Health: ... +7.5% Lifesteal". The DAMAGE branch keeps
+    # the module's full-health convention for offence; the lifesteal reads the
+    # fight's health bar, which is the only place a heal can land.
+    return v + 7.5 if sim.max_health and sim.hp < 0.5 * sim.max_health else v
+
+
 def _dominance(sim, ev):
     # "Basic Attacks gain an additional +20% Penetration This effect ignores
     # the Penetration cap"
@@ -340,8 +350,10 @@ def _bracer(sim, ev):
 
 
 def _toxic(sim, ev):
-    # "Gain 7% Attack Speed for 5s ... can stack up to 3 times." Self-buff only;
-    # the 40% healing reduction has nothing to reduce in a duel with no heals.
+    # "Gain 7% Attack Speed for 5s ... can stack up to 3 times." The 40%
+    # healing reduction is applied by `Sim` from `ANTI_HEAL`, like every
+    # anti-heal item; the 7% attack-speed DEBUFF on the target is not (the
+    # enemy's cadence is a fixed profile).
     st = sim.item_state("Toxic Blade", stacks=0, until=-1.0)
     stacks = st["stacks"] if ev.t <= st["until"] else 0
     st["stacks"], st["until"] = min(stacks + 1, 3), ev.t + 5.0
@@ -904,10 +916,11 @@ def _bancroft_bonus(sim, key, v):
     # "Gain bonus Intelligence and Lifesteal scaled from missing Health. Caps
     # at +60 Intelligence and +10% Lifesteal at 40% Health". Linear in missing
     # health from full (0) to 40% health (cap) — the literal "scaled from".
-    # Lifesteal heals nothing here. Our health is the fight's (an enemy hits
-    # back in the sustained window); a burst is at full health, +0.
+    # Our health is the fight's (an enemy hits back in the sustained window);
+    # a burst is at full health, +0. The lifesteal heals in the fight run.
     missing = 1.0 - sim.hp / sim.max_health if sim.max_health else 0.0
-    return v + 60.0 * min(1.0, missing / 0.60)
+    share = min(1.0, missing / 0.60)
+    return v + (10.0 if key == "Lifesteal %" else 60.0) * share
 
 
 def _brawler_prot(sim, dtype):
@@ -990,7 +1003,7 @@ REGISTRY = {
                            on_ability=_soul_reaver),
     "Brawler’s Beat Stick": Passive(SIMULATED, "adaptive +35 Str / +50 Int; +2% Str/Int/protections per 1.5s in combat (5)",
                                     ("stacks build from 0 at the start of the window",
-                                     "40% healing reduction: the target never heals, so it reduces nothing",
+                                     "god damage applies 40% healing reduction for 5s",
                                      "static effective health reads 0 stacks; the fight run builds them"),
                                     grants=_brawler_grants, prot_bonus=_brawler_prot),
     "Nimble Ring": Passive(SIMULATED, "per 10 Intelligence: +1 Attack Damage, +1% Attack Speed",
@@ -1003,8 +1016,9 @@ REGISTRY = {
                            on_attack=_polynomicon_attack, on_ability=_polynomicon_ability),
     "Bancroft's Talon": Passive(SIMULATED, "up to +60 Int / +10% LS, linear in missing health to 40% health",
                                 ("our health is the fight's; a burst is at full health (+0)",
-                                 "lifesteal heals nothing in the comparison"),
-                                stat_bonus=_bancroft_bonus, bonus_keys=("Intelligence",)),
+                                 "the lifesteal heals in the fight's health bar"),
+                                stat_bonus=_bancroft_bonus, bonus_keys=("Intelligence", "Lifesteal %"),
+                                heals=True),
     "Ethereal Staff": Passive(PARTIAL, "each ability hit steals 5% max health (60s)",
                               ("health steal changes both sides' max health mid-fight; damage unaffected,"
                                " effective health read before the fight",)),
@@ -1023,8 +1037,11 @@ REGISTRY = {
                                active_trigger="hit_taken", reduce_hit=_shell_reduce),
     "Silverbranch Bow": Passive(SIMULATED, "every 3rd attack: one arrow per whole attack/s, 25% of the swing each",
                                 on_attack=_silverbranch),
-    "Riptalon": Passive(SIMULATED, "attacks +10% damage above 50% health",
-                        ("full-health branch; below 50% it is +25% and +7.5% LS",), on_attack=_riptalon),
+    "Riptalon": Passive(SIMULATED, "attacks +10% damage above 50% health; +7.5% LS below 50%",
+                        ("damage: full-health branch (below 50% it is +25%)",
+                         "lifesteal: read off the fight's health bar"),
+                        on_attack=_riptalon, stat_bonus=_riptalon_bonus,
+                        bonus_keys=("Lifesteal %",), heals=True),
     "Heartseeker": Passive(SIMULATED, "ability hit: (2% of Strength)% of target max health, physical",
                            on_ability=_heartseeker),
     "Deathbringer": Passive(SIMULATED, "+35% crit damage, ADDS to 1.5x (measured in game)"),
@@ -1041,7 +1058,8 @@ REGISTRY = {
     "Golden Blade": Passive(SIMULATED, "attacks +10 + 20% item protections, physical", on_attack=_golden_blade),
     "Bragi's Harp": Passive(SIMULATED, "attacks +10 +3/level magical", on_attack=_bragi),
     "Bracer of The Abyss": Passive(SIMULATED, "+8 Attack Damage per god hit (8 stacks, 10s)", on_attack=_bracer),
-    "Toxic Blade": Passive(PARTIAL, "+7% attack speed per hit (3 stacks); healing reduction not simulated",
+    "Toxic Blade": Passive(PARTIAL, "+7% attack speed per hit (3 stacks); attacks apply 40% healing reduction for 5s",
+                           ("the -7% attack speed debuff on the target is not simulated",),
                            on_attack=_toxic),
     "Hydra's Lament": Passive(SIMULATED, "after an ability, next attack +20% ranged / +30% melee",
                               on_attack=_hydra_attack, on_ability=_hydra_ability),
@@ -1050,8 +1068,9 @@ REGISTRY = {
                            on_ability=_crusher),
     "Soul Gem": Passive(SIMULATED, "every 4th ability hit: +40% Int and a 140 heal (level 20)",
                         ("the heal lands in the fight's health bar (effective health)",),
-                        on_ability=_soul_gem),
-    "Divine Ruin": Passive(PARTIAL, "chain lightning 40 + 20% Int every 15s; healing reduction not simulated",
+                        on_ability=_soul_gem, heals=True),
+    "Divine Ruin": Passive(SIMULATED, "chain lightning 40 + 20% Int every 15s; god damage applies 40% healing reduction for 5s",
+                           ("one target: the chain's other four enemies are not in the comparison",),
                            on_ability=_divine_ruin),
     "Spear of the Magus": Passive(SIMULATED, "ability hit marks the target: +5% damage taken for 8s",
                                   on_ability=_spear_magus),
@@ -1133,9 +1152,10 @@ REGISTRY = {
                               ("pressed as soon as an ability is on cooldown",),
                               active=_pendulum, active_cooldown=40.0, active_trigger="after_casts"),
     "Blood-Bound Book": Passive(SIMULATED, "active: shield 7.5% max health + 75% item Int for 6s; +10% penetration while it holds (80s)",
-                                ("pressed at the fight's start", "lifesteal: no healing modelled", "a kill takes 20s (25% of 80s) off"),
+                                ("pressed at the fight's start", "+10% lifesteal while it holds", "a kill takes 20s (25% of 80s) off"),
                                 active=_bbb_active, active_cooldown=80.0, stat_bonus=_bbb_bonus,
-                                bonus_keys=("Penetration %",), on_takedown=_bbb_takedown),
+                                bonus_keys=("Penetration %", "Lifesteal %"), on_takedown=_bbb_takedown,
+                                heals=True),
     "Amanita Charm": Passive(SIMULATED, "active: three heals of 3% max health over 4.5s, each a 10% cut on the next hit (60s)",
                              ("pressed at the first hit taken",),
                              active=_amanita, active_cooldown=60.0, active_trigger="hit_taken",
@@ -1155,7 +1175,6 @@ REGISTRY = {
     # Refused, each for the reason the comparison cannot contain.
     "Erosion": Passive(NOT_SIMULATED, "reduces enemy shields", ("no enemy shield in the comparison",)),
     "Runeforged Hammer": Passive(NOT_SIMULATED, "rune on hard CC", ("no crowd control",)),
-    "Gluttonous Grimoire": Passive(NOT_SIMULATED, "stores lifesteal healing as damage", ("no healing modelled",)),
     "Tekko-Kagi": Passive(NOT_SIMULATED, "pathfinding on ability use", ("no movement",)),
     "Hastened Fatalis": Passive(NOT_SIMULATED, "movement penalty reduction", ("no movement",)),
     "Musashi's Dual Swords": Passive(NOT_SIMULATED, "movement speed on crit", ("no movement",)),
@@ -1164,9 +1183,99 @@ REGISTRY = {
                            ("buff = 30% x P(a crit among the attacks of the last 3s)",),
                            on_attack=_demon_attack, stat_bonus=_demon_bonus,
                            bonus_keys=("Attack Speed %",)),
-    "Shield of the Phoenix": Passive(NOT_SIMULATED, "heal on ability hit", ("no healing modelled",)),
     "Eye of Providence": Passive(NOT_SIMULATED, "ward economy", ("no wards",)),
 }
+
+# ── Healing (2026-11-03) ──────────────────────────────────────────────────
+# `Sim` now carries a healing channel on BOTH sides: our god heals (lifesteal
+# on every damage instance, plus the items below) at the enemy's expected
+# healing reduction, and the target heals off its own lifesteal at ours.
+# `combat.healing_received` is the arithmetic; the item texts are below.
+
+#: Every healing-reduction item in the pool: `(fraction, seconds, trigger)`,
+#: off its text. "attack" = "Hit a God with an Attack"; "any" = "On God
+#: Damage Dealt" / "On God Damaged". `combat.healing_received` takes the
+#: strongest live one ("does not stack with other similar effects").
+ANTI_HEAL = {
+    "Toxic Blade": (0.40, 5.0, "attack"),
+    "Divine Ruin": (0.40, 5.0, "any"),
+    "Brawler’s Beat Stick": (0.40, 5.0, "any"),
+    "Stygian Anchor": (0.40, 5.0, "any"),
+}
+
+
+def _phoenix(sim, ev):
+    # "Ability Hit a God: +1.5% Health Heal +2% Mana Restore Triggers once per
+    # Ability, per god." Health = our MAX health (the usual reading of
+    # "% Health Heal"); one target, so once per cast. Mana is not modelled.
+    sim.heal(0.015 * sim.max_health)
+
+
+GLUTTONOUS_SHARE, GLUTTONOUS_FULL_SHARE = 0.50, 0.65
+
+
+def gluttonous_cap(max_health, intelligence):
+    """"Stored damage is capped to 10% of your Max Health + 50% Intelligence"."""
+    return 0.10 * max_health + 0.50 * intelligence
+
+
+def _gluttonous_store(sim, nominal):
+    # "Store 50% of your Lifesteal healing as bonus Magical Damage on your
+    # next Attack. If at full Health: Store 65% instead". `nominal` is the
+    # lifesteal heal BEFORE overheal and healing reduction — at full health
+    # the heal lands on nothing, and the text still stores 65% of it.
+    st = sim.item_state("Gluttonous Grimoire", stored=0.0)
+    share = GLUTTONOUS_FULL_SHARE if sim.hp >= sim.max_health - 1e-9 else GLUTTONOUS_SHARE
+    cap = gluttonous_cap(sim.max_health, sim.stat("Intelligence"))
+    st["stored"] = min(cap, st["stored"] + share * nominal)
+
+
+def _gluttonous_attack(sim, ev):
+    st = sim.item_state("Gluttonous Grimoire", stored=0.0)
+    if st["stored"] > 0:
+        sim.proc(st["stored"], "magical", ev)
+        st["stored"] = 0.0
+
+
+def _bloodforge_active(sim):
+    # "+ Health Shield for 6s. Shield = 10% Max Health & 150% Strength from
+    # Items While Shielded: +10% Lifesteal". Pressed at the fight's start,
+    # like Blood-Bound Book, its twin.
+    shield = 0.10 * sim.max_health + 1.50 * sim.item_totals.get("Strength", 0.0)
+    sim.add_shield("Bloodforge", shield, sim.t + 6.0)
+    return True
+
+
+def _bloodforge_bonus(sim, key, v):
+    return v + 10.0 if sim.shield_up("Bloodforge") else v
+
+
+def _bloodforge_takedown(sim, kind):
+    # "Kill a God: -25% Cooldown." A quarter of the 80s off what remains.
+    if kind == "kill":
+        sim.shorten_active("Bloodforge", 0.25 * 80.0)
+
+
+REGISTRY.update({
+    "Shield of the Phoenix": Passive(SIMULATED, "ability hit: heal 1.5% of max health",
+                                     ("once per cast: one target", "the mana restore is not modelled"),
+                                     on_ability=_phoenix, heals=True),
+    "Gluttonous Grimoire": Passive(SIMULATED, "50% of lifesteal healing (65% at full health) as magical damage on the next attack, cap 10% max health + 50% Int",
+                                   ("stores the nominal heal, before overheal and healing reduction",),
+                                   on_attack=_gluttonous_attack, heals=True),
+    "Bloodforge": Passive(SIMULATED, "active: shield 10% max health + 150% item Str for 6s; +10% lifesteal while it holds (80s)",
+                          ("pressed at the fight's start", "a kill takes 20s (25% of 80s) off"),
+                          active=_bloodforge_active, active_cooldown=80.0,
+                          stat_bonus=_bloodforge_bonus, bonus_keys=("Lifesteal %",),
+                          on_takedown=_bloodforge_takedown, heals=True),
+    "Stygian Anchor": Passive(PARTIAL, "god damage applies 40% healing reduction for 5s",
+                              ("the -3% attack speed per Sludge stack on the target is not simulated",
+                               "'5% of their healing echoed to you' is"),
+                              heals=True),
+})
+for _n in ("The Reaper", "Amanita Charm"):
+    REGISTRY[_n].heals = True
+
 
 #: Actives: "On Use" items. Until 2026-11-02 every one was refused by this
 #: rule ("when it is pressed is a player decision"). Each active in a compared

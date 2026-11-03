@@ -91,7 +91,7 @@ Gold is not an axis: both are finished builds, and the per-gold reading is
 can see how much of the split the band chose.
 
 WHAT IS NOT IN IT, and the page prints it: crowd control, peel, mobility,
-lifesteal and health-regen sustain, allies, waves, objectives, and every passive
+health-regen sustain, allies, waves, objectives, and every passive
 `passive_sim` marks `not simulated` — listed per build, per item, with the
 reason.
 """
@@ -212,9 +212,55 @@ ASSIST_FIRST = 5.0
 #: static bar absorbs (`test_fight_ehp_equals_static_when_nothing_moves`).
 #: Our god's damage does not stop if it dies inside the window — survival is
 #: the other axis, and the two are not multiplied here. Health regen,
-#: lifesteal healing, Plating and Dampening on our side are not in it (they
-#: were not in effective health before either).
+#: Plating and Dampening on our side are not in it (they were not in
+#: effective health before either). Lifesteal and heals are, since the
+#: HEALING block below.
 ENEMY_SHARE = 0.5
+#
+# ── THE HEALING BLOCK (2026-11-03) ────────────────────────────────────────
+# Until this block nothing in the clock healed except three item hooks, and
+# the target never healed at all, so lifesteal, heal-on-hit items and every
+# anti-heal item read zero: sustain and its counter, the two things the
+# Joust and Arena profiles move most, were invisible to the comparison.
+# Each side now has a healing-received channel:
+#
+#   OUR GOD heals off its Lifesteal on EVERY damage instance it deals to the
+#   target (attack, ability, item proc, aura, active): `combat.
+#   lifesteal_healing` at the vs-god rate. "Lifesteal" with no qualifier is
+#   read as all damage dealt — the literal reading; no SMITE 2 source here
+#   states an ability or proc discount, and inventing one would be a
+#   constant. Heal-on-hit items (Shield of the Phoenix, Soul Gem, The Reaper,
+#   Amanita Charm, Gluttonous Grimoire's stored damage, Bloodforge and
+#   Blood-Bound Book's shield-lifesteal) land through the same `heal`. Every
+#   heal is cut by the enemy TEAM's expected healing reduction, `attacker.
+#   anti_heal` (`team_anti_heal`): 40% times the chance at least one of five
+#   enemies, one per role, holds an anti-heal item in its community six. A
+#   team because the reduction does not stack, so who applies it does not
+#   matter. On 2026-11-03 data only 3 of 94 community sixes hold one (2 Solo,
+#   1 Jungle), so the cut is ~6%. Overheal is wasted, so a heal at full
+#   health books nothing.
+#
+#   THE TARGET heals off ITS lifesteal on the damage the enemy deals our god
+#   — the target is the enemy hitting back, one opponent, not two — through
+#   OUR anti-heal (`passive_sim.ANTI_HEAL`: live for 5s after the trigger,
+#   the strongest one only). Its lifesteal is the MEAN over the reference
+#   role's community sixes, not the median every other target field uses: a
+#   median of a field most Mids leave at zero is zero, which would hide an
+#   effect a third of them carry, and expected healing is linear in the
+#   stat. A heal cannot exceed what our damage has taken off it this fight.
+#
+# What it moves: the SUSTAINED figure is now NET damage (dealt minus the
+# target's healing), and the kill rule counts net damage too, so anti-heal
+# reads on the damage axis; our healing lands in the fight's health bar, so
+# lifesteal reads on the survival axis (`fight_ehp`). A burst has no enemy,
+# so nothing heals in it. Health REGEN is still out: a per-second trickle
+# over a 10s window is small, and both builds' bases carry the same regen.
+HEALING = True
+#: Heals land only before this many seconds of a run. Unbounded in the
+#: verdict; the report re-runs the counts at one WINDOW (healing inside the
+#: first fight only), because an effective-health run is a chain of
+#: consecutive 10s fights and lifesteal compounds over the chain.
+HEAL_UNTIL = math.inf
 #: An effective-health run stops here if our god is still alive (it never is
 #: at these DPS; the remainder of the bar is then added statically).
 EHP_RUN_CAP = 600.0
@@ -406,6 +452,16 @@ class Sim:
             + self.base_stats.get("Magical Protection", 0.0)}
         self.health_lost, self.absorbed = 0.0, 0.0
         self.shields = {}
+        # HEALING block: both sides' healing-received channels.
+        self.healed, self.heal_by_item = 0.0, {}
+        self.heal_cut = (target["attacker"].get("anti_heal", 0.0)
+                         if self.enemy and HEALING else 0.0)
+        self.target_lifesteal = target.get("lifesteal", 0.0) if HEALING else 0.0
+        self.target_healed, self._fight_heal_start = 0.0, 0.0
+        self.anti_heal = [(n, *passive_sim.ANTI_HEAL[n]) for n in self.active
+                          if n in passive_sim.ANTI_HEAL] if HEALING else []
+        self.anti_heal_until, self.anti_heal_live = -1.0, 0.0
+        self.gluttonous = "Gluttonous Grimoire" in self.active
         self._segments, cuts = [], {0.0, 1.0}
         for _, p in self.passives:
             if p.ehp_segments and not p.prot_bonus:
@@ -515,10 +571,35 @@ class Sim:
         fight = int(self.t // WINDOW)
         if fight != self._fight:   # a new fight: fresh target, no kill yet
             self._fight, self._fight_start, self._fight_killed = fight, self.dealt, False
+            self._fight_heal_start = self.target_healed
         self.by_channel[channel] += amount
         if item is not None:
             self.by_item[item] = self.by_item.get(item, 0.0) + amount
         self.dealt += amount
+        if not HEALING or amount <= 0:
+            return
+        # Anti-heal lands on the target with the damage (HEALING block).
+        for _, cut, seconds, trigger in self.anti_heal:
+            if trigger == "any" or channel == "attack":
+                if self.t > self.anti_heal_until:
+                    self.anti_heal_live = 0.0
+                self.anti_heal_live = max(self.anti_heal_live, cut)
+                self.anti_heal_until = self.t + seconds
+        # Lifesteal: a share of EVERY damage instance to a god (`combat.
+        # lifesteal_healing`, the vs-god rate), read off the stat right now —
+        # but only on damage to a LIVE target. Past this fight's kill the
+        # damage still counts toward output (the sponge, KILL_RULE), yet
+        # there is no god left to steal from; without this a 10s fight's
+        # lifesteal ran on a corpse and a 30% lifesteal build out-healed the
+        # enemy forever (Ishtar's community six read 8x its static EHP).
+        ls = self.stat("Lifesteal %")
+        alive = self.target["max_health"] - (
+            (self.dealt - amount - self._fight_start) - (self.target_healed - self._fight_heal_start))
+        if ls > 0 and alive > 0:
+            nominal = combat.lifesteal_healing(min(amount, alive), ls)
+            if self.gluttonous:
+                passive_sim._gluttonous_store(self, nominal)
+            self.heal(nominal, item="Lifesteal")
 
     def _check_kills(self):
         """At most one kill per fight of WINDOW seconds: when our damage
@@ -526,7 +607,8 @@ class Sim:
         KILL_RULE)."""
         if not self.takedowns:
             return
-        if not self._fight_killed and self.dealt - self._fight_start >= self.target["max_health"]:
+        net = (self.dealt - self._fight_start) - (self.target_healed - self._fight_heal_start)
+        if not self._fight_killed and net >= self.target["max_health"]:
             self._fight_killed = True
             self.kills += 1
             self.kill_times.append(self.t)
@@ -576,8 +658,37 @@ class Sim:
         return min(times) if times else math.inf
 
     # ── our god's health ──
-    def heal(self, amount):
-        self.hp = min(self.max_health, self.hp + amount)
+    def heal(self, amount, item=None):
+        """Heal our god: the enemy's expected healing reduction first
+        (`heal_cut`), then capped at max health. Books what LANDED."""
+        if self.t >= HEAL_UNTIL:
+            return
+        amount = combat.healing_received(amount, (self.heal_cut,))
+        landed = max(0.0, min(self.max_health - self.hp, amount))
+        self.hp += landed
+        self.healed += landed
+        name = item or self._current_item or "?"
+        self.heal_by_item[name] = self.heal_by_item.get(name, 0.0) + landed
+
+    def target_cut(self):
+        """The healing reduction live on the TARGET now (ours)."""
+        return self.anti_heal_live if self.t <= self.anti_heal_until else 0.0
+
+    def _target_heal(self, damage_to_us):
+        """The target lifesteals off the damage it deals our god (it IS the
+        enemy hitting us), through our anti-heal, capped at what our damage
+        this fight has taken off it."""
+        if self.target_lifesteal <= 0 or damage_to_us <= 0:
+            return
+        heal = combat.healing_received(combat.lifesteal_healing(damage_to_us, self.target_lifesteal),
+                                       (self.target_cut(),))
+        missing = ((self.dealt - self._fight_start)
+                   - (self.target_healed - self._fight_heal_start))
+        heal = min(heal, max(0.0, missing))
+        self.target_healed += heal
+        if heal > 0 and "Stygian Anchor" in self.active and self.target_cut() > 0:
+            # "5% of their Healing Echoed to you"
+            self.heal(0.05 * heal, item="Stygian Anchor")
 
     def add_shield(self, name, amount, until):
         self.shields[name] = (amount, until)
@@ -622,6 +733,8 @@ class Sim:
                 mult *= p.reduce_hit(self, hit)
         left = raw * mult
         self.absorbed += raw - left
+        lost_before = self.health_lost
+        shield_before = sum(a for a, _ in self.shields.values())
         while left > 1e-9 and self.hp > 1e-9:
             floor = next((c for c in self._cuts_hp if c < self.hp - 1e-9), 0.0)
             m = 1.0 + self.prot_now(dtype, (self.hp + floor) / 2) / 100.0
@@ -644,6 +757,10 @@ class Sim:
                 self.absorbed += left
                 self.health_lost += d
                 left = 0.0
+        if HEALING:
+            taken = (self.health_lost - lost_before) + max(
+                0.0, shield_before - sum(a for a, _ in self.shields.values()))
+            self._target_heal(taken)
         for name, p in self.passives:
             if p.on_hit_taken:
                 self._current_item = name
@@ -794,7 +911,7 @@ class Sim:
                 f[0] = t + f[1]
         if until_dead:
             return self.absorbed + (self.remaining_ehp(self.enemy) if self.hp > 1e-9 else 0.0)
-        return self.total()
+        return self.total() - self.target_healed
 
     def run_burst(self):
         self._press("start")
@@ -847,9 +964,17 @@ FIGHT_HOOKS = ("on_takedown", "on_hit_taken", "reduce_hit", "prot_bonus", "activ
 
 
 def moves_in_a_fight(names, items_by_name, disabled=()):
-    """True if any item in the build reacts to the FIGHT block's events."""
-    return any(getattr(p, h) for _, p in passives_for(names, items_by_name, disabled)
-               for h in FIGHT_HOOKS)
+    """True if any item in the build reacts to the FIGHT block's events, or
+    heals our god in one (HEALING block: lifesteal on the stat line counts)."""
+    plist = passives_for(names, items_by_name, disabled)
+    if any(getattr(p, h) for _, p in plist for h in FIGHT_HOOKS):
+        return True
+    if not HEALING:
+        return False
+    if any(p.heals for _, p in plist):
+        return True
+    stats, _, _ = build_stats(names, items_by_name, disabled=disabled)
+    return stats.get("Lifesteal %", 0.0) > 0
 
 
 def fight_ehp(god, names, items_by_name, targets, stacks="full", disabled=()):
@@ -883,6 +1008,8 @@ def power(god, names, items_by_name, targets, stacks="clock", disabled=()):
         out[f"channels_{tname}"] = dict(s.by_channel)
         out[f"procs_{tname}"] = dict(s.by_item)
         out[f"takedowns_{tname}"] = {"kills": s.kills, "assists": s.assists}
+        out[f"healing_{tname}"] = {"healed": s.healed, "target_healed": s.target_healed,
+                                   "by_item": dict(s.heal_by_item)}
         b = Sim(god, names, items_by_name, target, window=None, stacks=stacks, disabled=disabled)
         out[f"burst_{tname}"] = b.run_burst()
     out["ehp_physical"], out["ehp_magical"], out["health"] = fight_ehp(
@@ -1008,7 +1135,14 @@ def target_from(god, names, items_by_name, level=LEVEL):
             + items.get("Physical Protection", 0.0),
             "magical_prot": bq.level_value(base.get("magical_prot"), level)
             + items.get("Magical Protection", 0.0),
-            "plating": items.get("Plating", 0.0), "dampening": items.get("Dampening", 0.0)}
+            "plating": items.get("Plating", 0.0), "dampening": items.get("Dampening", 0.0),
+            "lifesteal": items.get("Lifesteal %", 0.0),
+            "anti_heal": max((passive_sim.ANTI_HEAL[n][0] for n in names if n in passive_sim.ANTI_HEAL),
+                             default=0.0)}
+
+
+#: Fields of a reference target read as a MEAN, not a median (HEALING block).
+MEAN_FIELDS = ("lifesteal", "anti_heal")
 
 
 def reference_targets(gods, builds_by_god, items_by_name):
@@ -1023,7 +1157,8 @@ def reference_targets(gods, builds_by_god, items_by_name):
             six, _ = community_six(g, builds_by_god.get(g["name"]) or {}, items_by_name)
             if len(six) == 6:
                 rows.append(target_from(g, six, items_by_name))
-        t = {k: statistics.median(r[k] for r in rows) for k in rows[0]}
+        t = {k: (statistics.fmean if k in MEAN_FIELDS else statistics.median)(r[k] for r in rows)
+             for k in rows[0]}
         t["max_health"] = t["base_health"] + t["item_health"]
         t["role"], t["n"] = role, len(rows)
         out[label] = t
@@ -1041,12 +1176,14 @@ def attacker_profile(gods, builds_by_god, items_by_name, squishy):
     raw_dps = {"physical": combat.effective_health(squishy["max_health"], squishy["physical_prot"]) / WINDOW,
                "magical": combat.effective_health(squishy["max_health"], squishy["magical_prot"]) / WINDOW}
     aps, casts = [], []
+    cuts = {}   # role -> [healing reduction of each community six]
     for g in gods:
         role = bq.primary_role(g)
-        if role not in ("Carry", SQUISHY_ROLE):
-            continue
         six, _ = community_six(g, builds_by_god.get(g["name"]) or {}, items_by_name)
         if len(six) != 6:
+            continue
+        cuts.setdefault(role, []).append(target_from(g, six, items_by_name)["anti_heal"])
+        if role not in ("Carry", SQUISHY_ROLE):
             continue
         s = Sim(g, six, items_by_name, squishy, stacks=stack_state(six, 6))
         if role == "Carry":
@@ -1058,7 +1195,26 @@ def attacker_profile(gods, builds_by_god, items_by_name, squishy):
     return {"raw_dps": raw_dps,
             "interval": {"attack": 1.0 / statistics.median(aps),
                          "ability": 1.0 / statistics.median(casts)},
-            "n": {"attack": len(aps), "ability": len(casts)}}
+            "n": {"attack": len(aps), "ability": len(casts)},
+            # HEALING block: the expected healing reduction on our heals.
+            "anti_heal": team_anti_heal(cuts)}
+
+
+def team_anti_heal(cuts_by_role):
+    """The expected healing reduction on our god from a whole enemy TEAM, one
+    god per role: `cut x P(at least one role holds anti-heal)`, each role's
+    share read off its community sixes. A team, not one attacker, because
+    "Healing Reduction does not stack with other similar effects": whoever
+    applies it, our heal is cut once. `cut` is the strongest reduction any
+    holder carries (40% for every item in the pool)."""
+    miss, cut = 1.0, 0.0
+    for xs in cuts_by_role.values():
+        if not xs:
+            continue
+        held = [x for x in xs if x > 0]
+        miss *= 1.0 - len(held) / len(xs)
+        cut = max([cut] + held)
+    return cut * (1.0 - miss)
 
 
 # ── The model's reasons ───────────────────────────────────────────────────
@@ -1467,17 +1623,18 @@ def top_swap(r):
     return best
 
 
-def report_lines(rows, skipped, targets, data_patch, no_assists=None):
+def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivity=()):
     L = ["# Ichor vs community, passives simulated", "",
          f"Data: {data_patch}. Level {LEVEL}, {WINDOW:.0f}s window. Ichor = the `model` build "
          "(meta off); community = the cleaned six. Generated by `python -m smite.side_by_side`; "
          "the rules are in that module's docstring.", "",
          "## Targets (medians of the community's own builds)", "",
-         "| | role | n | base HP | item HP | phys prot | mag prot | plating | dampening |",
-         "|---|---|---|---|---|---|---|---|---|"]
+         "| | role | n | base HP | item HP | phys prot | mag prot | plating | dampening | lifesteal (mean) |",
+         "|---|---|---|---|---|---|---|---|---|---|"]
     for k, t in targets.items():
         L.append(f"| {k} | {t['role']} | {t['n']} | {t['base_health']:.0f} | {t['item_health']:.0f} "
-                 f"| {t['physical_prot']:.0f} | {t['magical_prot']:.0f} | {t['plating']:.0f} | {t['dampening']:.0f} |")
+                 f"| {t['physical_prot']:.0f} | {t['magical_prot']:.0f} | {t['plating']:.0f} | {t['dampening']:.0f} "
+                 f"| {t.get('lifesteal', 0.0):.1f}% |")
     att = targets["squishy"].get("attacker")
     if att:
         L += ["", "## The fight (module FIGHT block)", "",
@@ -1492,7 +1649,11 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None):
               f"Sustained window: each type at {ENEMY_SHARE:.0%}. Effective health: one type at full DPS "
               "until the bar is gone.",
               "- Actives: pressed the first moment their condition holds, again on cooldown "
-              "(conditions in `passive_sim`)."]
+              "(conditions in `passive_sim`).",
+              "- Healing (module HEALING block): our god lifesteals off every damage instance to a live "
+              "target and takes item heals, cut by the enemy team's expected healing reduction "
+              f"({att.get('anti_heal', 0.0):.1%}); the target lifesteals off the damage it deals us, cut by "
+              "our anti-heal while it is live. Sustained damage is NET of the target's healing."]
     L += ["", "## Verdicts by role", "",
           f"Rule (module docstring): band ±{BAND:.0%}; the 2-, 4- and 6-item points weighted "
           + " / ".join(f"{w:.2f}" for w in BREAKPOINT_WEIGHTS.values())
@@ -1535,6 +1696,9 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None):
         c = totals(verdict_counts(no_assists))
         L += ["", "Assists off (`ASSIST_FIRST` = never; kills unchanged), new rule: "
               + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER) + "."]
+    for label, alt in sensitivity:
+        c = totals(verdict_counts(alt))
+        L += ["", f"{label}, new rule: " + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER) + "."]
     L += ["", "Band sensitivity (all roles, new rule):", ""]
     for b in SENSITIVITY_BANDS:
         c = totals(verdict_counts(rows, b))
@@ -1587,6 +1751,25 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None):
     for r in rows:
         L += god_lines(r)
     return L
+
+
+def with_overrides(gods, items, builds_by_god, weights, tags_map, **overrides):
+    """The roster re-run with module constants overridden, for a sensitivity
+    line (`HEALING=False`, `HEAL_UNTIL=WINDOW`)."""
+    g = globals()
+    saved = {k: g[k] for k in overrides}
+    g.update(overrides)
+    try:
+        return run(gods, items, builds_by_god, weights, tags_map)[0]
+    finally:
+        g.update(saved)
+
+
+#: The healing sensitivity lines the report prints.
+HEALING_SENSITIVITY = (
+    ("Healing off (HEALING = False: no lifesteal, no heals, target never heals)", {"HEALING": False}),
+    (f"Heals in the first {WINDOW:.0f}s fight only (HEAL_UNTIL = WINDOW)", {"HEAL_UNTIL": WINDOW}),
+)
 
 
 def without_assists(gods, items, builds_by_god, weights, tags_map):
@@ -1688,8 +1871,10 @@ def main(argv=None):
         print("\n".join(god_lines(rows[0])))
         return 0
     patch = data_patch()
+    sens = [(label, with_overrides(gods, items, builds, weights, tags_map, **o))
+            for label, o in HEALING_SENSITIVITY]
     args.out.write_text("\n".join(report_lines(rows, skipped, targets, patch, without_assists(
-        gods, items, builds, weights, tags_map))) + "\n", encoding="utf-8")
+        gods, items, builds, weights, tags_map), sensitivity=sens)) + "\n", encoding="utf-8")
     if args.json:
         write_viewer_files(args.json, rows, skipped, targets, patch)
     counts = verdict_counts(rows)

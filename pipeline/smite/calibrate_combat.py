@@ -212,6 +212,14 @@ def load_observations(path):
     return real, examples, pending
 
 
+def load_healing(path):
+    """The `healing` block: documented healing arithmetic (see the file)."""
+    if not path.exists():
+        return []
+    doc = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return [dict(r) for r in (doc.get("healing") or [])]
+
+
 def report_lines(result, tolerance, examples=0):
     lines = []
     for case in result["cases"]:
@@ -280,6 +288,16 @@ def main(argv=None):
         print("\n".join(report_lines(open_report, args.tolerance)))
         print("  These are the open questions. They do not gate anything, and")
         print("  they are not allowed to disappear either.")
+
+    heal_rows = load_healing(args.file)
+    if heal_rows:
+        heal = combat.calibrate_healing_report(heal_rows)
+        print(f"\n{heal['n']} HEALING rows (tier DOCUMENTED: the item texts' own arithmetic)")
+        for c in heal["cases"]:
+            ok = abs(c["rel_error"]) <= args.tolerance
+            print(f"  [{'ok ' if ok else 'OFF'}] {c['label']:58} expected {c['expected']:>7,.1f}"
+                  f"   model {c['actual']:>8,.2f}   {c['rel_error']:+6.1%}")
+        result["worst_rel_error"] = max(result["worst_rel_error"], heal["worst_rel_error"])
 
     worst = result["worst_rel_error"]
     passed = worst <= args.tolerance

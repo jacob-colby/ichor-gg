@@ -2085,6 +2085,26 @@ comparison cannot contain at all — Tekko-Kagi's pathfinding (22 of the 47),
 Stampede, Runeforged Hammer, Eye of Providence, Erosion — and the coverage
 rule is doing its job there; loosening it to get verdicts would be tuning.
 
+**Healing (2026-11-03, same X
+HEALING block gives both sides a healing-received channel: our god lifesteals
+off every damage instance to a LIVE target plus the heal-on-hit items, cut by
+the enemy team's expected anti-heal; the target lifesteals off its hits on
+us, cut by ours (strongest reduction only — the item text says it does not
+stack), and sustained damage is net of it. Gluttonous Grimoire, Shield of the
+Phoenix, Bloodforge and Divine Ruin moved to SIMULATED; Toxic Blade and
+Stygian Anchor are PARTIAL (target attack-speed debuff). The healing rows in
+`_combat_observations.yaml` are tier DOCUMENTED (the texts' arithmetic), not
+in-game readings — that reading is still open. Counts 11 / 6 / 11 / 12 /
+withheld 47 → Ichor better 8, community better 10, trade-off 14, level 9,
+early 1, withheld 45. Coverage alone moved 2 (both out of withheld); healing
+moved 7, all on the SURVIVAL axis and all toward lifesteal-heavy community
+sixes (Sun Wukong, Chaac, Mordred, Ishtar, Hua Mulan, Sol, Ymir). **Read it
+with the one-fight bound beside it:** an effective-health run is a chain of
+10s fights and lifesteal compounds over the chain; with heals only in the
+first fight the counts are 11 / 7 / 13 / 10, late 1. Anti-heal moves the
+damage axis ~1%: the reference Mid carries 4.8% mean lifesteal, and only 3 of
+94 community sixes hold an anti-heal item at all.
+
 Left, in order: (1) decide what a movement/CC/ward passive is worth in a
 comparison that has no movement, CC or wards — the honest options are a
 stated zero (and counting it as covered) or leaving those gods withheld, and
@@ -2752,7 +2772,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1167 pipeline · 789 viewer |
+| Tests | 1184 pipeline · 789 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
