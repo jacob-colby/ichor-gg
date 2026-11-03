@@ -145,3 +145,40 @@ observations:
     crit: true
     crit_multiplier: 1.85
     expected: 179
+
+# ── Healing (2026-11-03) ──────────────────────────────────────────────────
+# Tier DOCUMENTED, not OBSERVED: each row is the arithmetic an item's own text
+# states (data/Items, Open Beta 46), so it pins `combat.healing_received` and
+# `combat.lifesteal_healing` to the texts and catches a regression in either.
+# It does NOT show the game agrees. The in-game reading still wanted: Jungle
+# Practice, a lifesteal item on the attacker, Toxic Blade on yourself and on
+# the dummy, read the green number with and without the debuff.
+#
+# FIELDS: damage (dealt to a god), lifesteal (percent), heal (a flat heal),
+# reductions (fractions of every live healing reduction), expected.
+healing:
+  - label: "7.5% Lifesteal on 200 damage to a god"
+    damage: 200
+    lifesteal: 7.5
+    expected: 15
+
+  - label: "Soul Gem heal at level 20 (20 + 6 per level)"
+    heal: 140
+    expected: 140
+
+  - label: "Toxic Blade's 40% on the Soul Gem heal"
+    heal: 140
+    reductions: [0.40]
+    expected: 84
+
+  - label: "Toxic Blade + Divine Ruin - does not stack"
+    heal: 140
+    reductions: [0.40, 0.40]
+    expected: 84
+
+  - label: "The Reaper kill (15% of 2,500) + 10% LS on 1,000, under anti-heal"
+    heal: 375
+    damage: 1000
+    lifesteal: 10
+    reductions: [0.40]
+    expected: 285
