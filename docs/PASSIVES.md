@@ -535,7 +535,9 @@ Primary class first. A priced clause is marked.
 Items added unattended from the wiki since 2026-11-02 (`smite.new_entities`)
 are not in this table: an unclassified passive goes into the sidecar as
 `uncatalogued: true` (stat-only, flagged in the viewer) and waits there for a
-human to give it classes. None of them is a guess at a value.
+human to give it classes. None of them is a guess at a value. Once classified
+(Lotus Sickle and Soul Locket, 2026-11-03) an item joins the table; the §2
+counts are the 2026-09-02 measurement and do not include them.
 
 | item | classes | note |
 |---|---|---|
@@ -612,6 +614,7 @@ human to give it classes. None of them is a guess at a value.
 | Lernaean Bow | C5 · B1 · D2 | active piercing volley on 30s with -50% shield; "Can Critically Strike" is permission |
 | Leviathan's Hide | D2 · C6 · C3 | -10% Strength on your attacker; +8 max health per attack on a god, permanent and UNCAPPED; -0.5s cooldown when damaged |
 | Lifebinder | C5 · D1 · B2 | active projectile that marks; the first ally to hit is healed and shielded |
+| Lotus Sickle | D1 · C2 | buffing, healing or shielding an ally grants a Lotus stack (max 3); an ally's next attack on an enemy consumes one for 30 (+20% Strength, +10% Intelligence, +20% Attack Damage) bonus magical damage — value lands on an ally, triggered by your ability |
 | Magi's Cloak | E1 · C5 | a hard-CC-immunity bubble every 90s |
 | Mantle Of Discord | C1 · C3 · E1 | below 40% health when damaged, stun and CC immunity, 110s |
 | Midgardian Mail | D2 · C3 | -8% attack speed on whoever hits you, 4 stacks |
@@ -647,6 +650,7 @@ human to give it classes. None of them is a guess at a value.
 | Shroud of Vengeance | C3 · B2 | shockwave of 50 + 40% of protections (to 650) when hard-CC'd |
 | Silverbranch Bow | B1 | every third attack hit fires arrows worth 25% of basic-attack damage, one per point of Attack Speed — a stated 1-in-3 rate scaled off your own swing |
 | Soul Gem | B2 · A5 · D1 | every third ability hit adds 40% Intelligence damage and heals you and nearby allies |
+| Soul Locket | C5 · B4 · D1 · E1 | +10% healing and shielding to allies; buffing allies builds Soul stacks (max 35); the 100s active spends them for 2% damage reduction each, +20% movement speed and Spirit Walk (pass through players and walls) for 2.5s |
 | Soul Reaver | B2 | +1.2% target base health +3% target item health per ability hit, over 2s — the same target reference as Qin's Blade |
 | Spear of Desolation | C4 | cooldown returns on god kill or assist |
 | Spear of the Magus | B2 · D1 · C2 | marked gods take +5% damage from all sources for 8s — a multiplier on your own damage (B2) and everyone else's (D1) |
