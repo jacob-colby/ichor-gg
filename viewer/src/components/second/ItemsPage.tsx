@@ -397,10 +397,12 @@ export function ItemsPage({ items, openItem, tierItems = [], goldValues = {} }: 
   const pool = useMemo(() => (shelf.tier === undefined ? items.filter((i) => !isComponent(i)) : items), [items, shelf.tier]);
   const shown = useMemo(() => sortItems(filterItems(pool, shelf), shelf.sort), [pool, shelf]);
 
-  // The claim counts what it says: buyable by every god, priced below its
-  // stats' worth. A price only one god can act on stays out of it.
+  // The claim counts what it says: buyable by every god, and Underpriced by
+  // the pipeline's bucket. Never the raw residual: a residual of -40g is noise
+  // the bucket calls "Fairly priced", and counting it made the claim (84)
+  // disagree with the Underpriced filter (13) on the same screen.
   const priceable = useMemo(() => items.filter((i) => i.efficiency && i.efficiency.comparable !== false), [items]);
-  const under = priceable.filter((i) => i.efficiency!.residual < 0).length;
+  const under = priceable.filter((i) => priceVerdict(i.efficiency_tier, i.efficiency!.residual) === "underpriced").length;
   const withRecord = items.filter((i) => i.meta).length;
   const unscored = items.filter((i) => !i.efficiency).length;
 
@@ -415,7 +417,7 @@ export function ItemsPage({ items, openItem, tierItems = [], goldValues = {} }: 
   return (
     <div className="mx-auto w-full max-w-[1240px] px-4 pb-12 lg:px-6">
       <PageHead title="Items" testId="items-head">
-        <p data-testid="items-claim"><Em>{under} of {priceable.length}</Em> items cost less than their stats are worth.</p>
+        <p data-testid="items-claim"><Em>{under} of {priceable.length}</Em> items are underpriced: they cost clearly less than their stats are worth.</p>
       </PageHead>
       <p className="mt-2 max-w-[62ch] text-note text-muted lg:text-copy">
         A regression prices every stat in gold, then sets what an item should cost against what it does. That says

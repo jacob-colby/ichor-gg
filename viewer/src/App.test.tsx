@@ -67,7 +67,7 @@ describe("App — Second Screen chrome", () => {
     // The redesigned Items page names itself in its h1 (a caption, never a
     // sentence) and carries the claim in the line under it.
     await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Items" })).toBeInTheDocument());
-    expect(screen.getByTestId("items-claim")).toHaveTextContent(/cost less than their stats are worth/i);
+    expect(screen.getByTestId("items-claim")).toHaveTextContent(/are underpriced/i);
   });
 
   it("keeps the reading routes and the fan-project line under More on a phone", async () => {

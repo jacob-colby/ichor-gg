@@ -35,7 +35,14 @@ describe("ItemsPage — the ledger", () => {
     render(page());
     expect(screen.getByRole("heading", { level: 1, name: "Items" })).toBeInTheDocument();
     // Rage and Gem are under; Acorn is too, but only Ratatoskr can act on it.
-    expect(screen.getByTestId("items-claim")).toHaveTextContent("2 of 3 items cost less than their stats are worth.");
+    expect(screen.getByTestId("items-claim")).toHaveTextContent("2 of 3 items are underpriced: they cost clearly less than their stats are worth.");
+  });
+
+  it("counts the claim by the pipeline's bucket, never the raw residual", () => {
+    const noise = { ...items[1], name: "Ward", efficiency_tier: "fair", efficiency: { predicted_cost: 2140, residual: -40, score: 0.5 } };
+    render(<ItemsPage items={[...items, noise] as typeof items} goldValues={GOLD} />);
+    // Ward costs 40g less than its stats are worth, but the bucket calls it fair.
+    expect(screen.getByTestId("items-claim")).toHaveTextContent("2 of 4 items are underpriced");
   });
 
   it("decomposes the arithmetic on every priced row: cost · worth · gap", () => {
