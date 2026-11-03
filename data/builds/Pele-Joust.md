@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
-  - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   flex_slots:
   - Silverbranch Bow
-  - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,18 +358,18 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
     Toxic Blade:
       total: 0.7
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.94
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Tyrfing:
       total: 0.62
       efficiency: 0.5

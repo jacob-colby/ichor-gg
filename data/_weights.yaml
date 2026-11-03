@@ -1871,10 +1871,10 @@ modes:
       # community scrape landed and the count went 4 -> 7.
       ward-economy: -0.25
 
-  # One lane, no jungle to rotate through, and you fight the same three people
-  # all game: sustain and anti-heal decide who can stay on the lane, auras
-  # always have a body next to them, and there is nowhere for mobility or a
-  # second wave to matter.
+  # One lane plus jungle camps, and you fight the same three people all game:
+  # sustain and anti-heal decide who can stay on the lane, auras always have a
+  # body next to them, and there is little rotation for mobility to buy. The
+  # wave is NOT a chore here -- it is how towers fall (see wave-clear below).
   joust:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     # Joust HAS wards, so the ward economy is real here and this item's stat
@@ -1888,7 +1888,15 @@ modes:
     # judgement about the mechanism carried over from the mode where it WAS
     # measured. Arena's excluded_items is the same kind of judgement, made the
     # same way, and predates it.
-    tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2, wave-clear: -0.15,
+    #
+    # wave-clear carries NO bonus (was -0.15 until 2026-11-03, Jacob's call).
+    # The old penalty read Joust as "one lane, so a second wave never matters".
+    # That is the wrong reading of the map: Joust is one lane PLUS jungle
+    # camps, and clearing the wave is how towers fall and how you buy the time
+    # to rotate to the buffs. Neither direction is measured -- there is no
+    # Joust community record -- so the bonus goes to neutral rather than flips
+    # sign: zero is the absence of a claim, +0.1 would be a new one.
+    tag_bonus: {sustain: 0.25, anti-heal: 0.3, aura: 0.2,
                 mobility: -0.1, ward-economy: -0.25}
     # Correct the model with CONQUEST's community record, minus the parts of it
     # that do not transfer. SmiteBrain publishes Conquest only, so without this
@@ -1916,10 +1924,10 @@ modes:
       # not the same question `tag_bonus` answers — that one prices an item,
       # continuously, for a mode where the evidence DOES apply.
       #
-      #   mobility / wave-clear   this mode's own note above: "there is nowhere
-      #                           for mobility or a second wave to matter". A
-      #                           Conquest win rate for a rotation item is a
-      #                           record of rotations Joust does not have.
+      #   mobility      this mode's own note above: "there is nowhere for
+      #                 mobility to matter". A Conquest win rate for a
+      #                 rotation item is a record of rotations Joust does not
+      #                 have.
       #
       # NOT rejected, deliberately:
       #   ward-economy  Joust HAS wards -- see the tag_bonus note above, which
@@ -1927,11 +1935,24 @@ modes:
       #                 Conquest measured, so the record transfers; it is
       #                 priced at -0.25 for the same reason it is in Conquest,
       #                 not because it is foreign here.
+      #   wave-clear    REMOVED 2026-11-03. It was rejected for the same
+      #                 reason the -0.15 above existed ("no second wave"), and
+      #                 that reason was wrong: the wave is how Joust towers
+      #                 fall. No measured reason to keep it was found, and it
+      #                 was NOT inert on 2026-11-03 data, so the MEASURED note
+      #                 above is stale for this tag: lifting the rejection
+      #                 alone (penalty still at -0.15) lets Osiris borrow
+      #                 Conquest's record for Golden Blade, the one tagged
+      #                 candidate that now clears the bar. With the penalty
+      #                 also gone the model core already holds Golden Blade,
+      #                 so there is nothing left to borrow and no hybrid is
+      #                 emitted. Net effect of this list change on shipped
+      #                 builds at that data: zero.
       #   stacking      22.5 minutes is long enough to collect. `economy` and
       #                 `assemble.time_value_multiplier` already discount a
       #                 late item continuously, which is the right instrument
       #                 for "slower" -- rejection is for "does not apply".
-      reject_tags: [mobility, wave-clear]
+      reject_tags: [mobility]
     # Joust is NOT a small Arena, and that is the whole finding. It has a Titan,
     # jungle camps and towers - structurally Conquest, paced faster. Its win
     # still happens at the END, so late items keep most of their value and the
@@ -1952,7 +1973,7 @@ modes:
   # No towers, no phoenixes, no jungle camps, and no fog worth warding: one
   # open box where ten players are in range of each other almost continuously.
   # Minions still matter — escorting yours and killing theirs is how tickets
-  # move — so wave-clear keeps a small positive rather than Joust's penalty.
+  # move — so wave-clear keeps a small positive (Joust is neutral).
   # Games are short, so the tag bonuses lean on effects that pay immediately.
   arena:
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}

@@ -6,14 +6,14 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Tekko-Kagi
+  - Lernaean Bow
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Toxic Blade:
       total: 0.53
       efficiency: 0.34
@@ -49,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Tekko-Kagi:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Riptalon:
       total: 0.58
       efficiency: 0.39
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - Dominance
   - The Reaper
   - Heartseeker
   flex_slots:
   - Dominance
-  - Transcendence
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.47
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Transcendence:
-      total: 0.39
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Hydra's Lament:
       total: 0.49
       efficiency: 0.56
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
-  - Qin's Blade
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   flex_slots:
   - Silverbranch Bow
-  - Qin's Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Toxic Blade:
       total: 0.65
       efficiency: 0.45
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Qin's Blade:
-      total: 0.5
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     The Reaper:
       total: 0.58
       efficiency: 0.56
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Hydra's Lament
-  - Dominance
   - Pendulum Blade
   flex_slots:
   - Pendulum Blade
-  - Dominance
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.44
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Toxic Blade:
       total: 0.47
       efficiency: 0.34
@@ -512,12 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Dominance:
-      total: 0.42
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Pendulum Blade:
       total: 0.44
       efficiency: 0.41
@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
-  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Tekko-Kagi
+  - Lernaean Bow
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,6 +553,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Toxic Blade:
       total: 0.53
       efficiency: 0.34
@@ -571,12 +577,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Tekko-Kagi:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Riptalon:
       total: 0.58
       efficiency: 0.39

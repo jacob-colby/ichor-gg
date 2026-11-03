@@ -39911,16 +39911,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
             "Riptalon",
             "Amanita Charm",
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -39930,8 +39930,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Shogun's Ofuda \u2014 magical protection",
+              "swap_item": "Shogun's Ofuda"
             },
             {
               "vs_tag": "physical_heavy",
@@ -39946,6 +39946,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.57,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.62
+            },
             "Toxic Blade": {
               "total": 0.7,
               "efficiency": 0.48,
@@ -39977,13 +39984,6 @@
             "Pharaoh's Curse": {
               "total": 0.57,
               "efficiency": 0.51,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
-            },
-            "Shogun's Ofuda": {
-              "total": 0.56,
-              "efficiency": 0.49,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.63
@@ -50725,8 +50725,8 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Jotunn's Revenge",
             "Tyrfing",
             "Riptalon",
             "Silverbranch Bow",
@@ -50734,7 +50734,7 @@
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Jotunn's Revenge"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -50760,19 +50760,19 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.54,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.61
+            },
             "Toxic Blade": {
               "total": 0.68,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.91
-            },
-            "Jotunn's Revenge": {
-              "total": 0.53,
-              "efficiency": 0.67,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.39
             },
             "Tyrfing": {
               "total": 0.6,
@@ -54968,16 +54968,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "The Reaper",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
             "Demon Blade",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -55003,6 +55003,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.61,
               "efficiency": 0.45,
@@ -55016,13 +55023,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.71
-            },
-            "Dominance": {
-              "total": 0.53,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.6
             },
             "The Reaper": {
               "total": 0.59,
@@ -55403,16 +55403,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Qin's Blade",
             "The Reaper",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
-            "Qin's Blade",
-            "Demon Blade"
+            "Golden Blade",
+            "Qin's Blade"
           ],
           "situational_swaps": [
             {
@@ -55438,6 +55438,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.53,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.62,
               "efficiency": 0.45,
@@ -55472,13 +55479,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.84
-            },
-            "Demon Blade": {
-              "total": 0.51,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.65
             }
           },
           "starter": {
@@ -55490,16 +55490,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Hydra's Lament",
-            "Dominance"
+            "Hydra's Lament"
           ],
           "flex_slots": [
             "Tyrfing",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -55525,6 +55525,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.45,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.39
+            },
             "Toxic Blade": {
               "total": 0.53,
               "efficiency": 0.45,
@@ -55559,13 +55566,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.5
-            },
-            "Dominance": {
-              "total": 0.43,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.39
             }
           },
           "starter": {
@@ -55577,16 +55577,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "The Reaper",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
             "Demon Blade",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -55612,6 +55612,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.61,
               "efficiency": 0.45,
@@ -55625,13 +55632,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.71
-            },
-            "Dominance": {
-              "total": 0.53,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.6
             },
             "The Reaper": {
               "total": 0.59,
@@ -62923,16 +62923,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "The Reaper",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
             "Demon Blade",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -62958,6 +62958,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.45,
@@ -62971,13 +62978,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.7
-            },
-            "Dominance": {
-              "total": 0.53,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.6
             },
             "The Reaper": {
               "total": 0.59,
@@ -63358,16 +63358,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Qin's Blade",
             "The Reaper",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
-            "Qin's Blade",
-            "Demon Blade"
+            "Golden Blade",
+            "Qin's Blade"
           ],
           "situational_swaps": [
             {
@@ -63393,6 +63393,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.53,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.62,
               "efficiency": 0.45,
@@ -63427,13 +63434,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.84
-            },
-            "Demon Blade": {
-              "total": 0.51,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.65
             }
           },
           "starter": {
@@ -63445,16 +63445,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Hydra's Lament",
-            "Dominance"
+            "Hydra's Lament"
           ],
           "flex_slots": [
             "Tyrfing",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -63480,6 +63480,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.45,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.39
+            },
             "Toxic Blade": {
               "total": 0.53,
               "efficiency": 0.45,
@@ -63514,13 +63521,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.5
-            },
-            "Dominance": {
-              "total": 0.43,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.39
             }
           },
           "starter": {
@@ -63532,16 +63532,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "The Reaper",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
             "Demon Blade",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -63567,6 +63567,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.45,
@@ -63580,13 +63587,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.7
-            },
-            "Dominance": {
-              "total": 0.53,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.6
             },
             "The Reaper": {
               "total": 0.59,
@@ -67441,7 +67441,7 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
-            "Tyrfing",
+            "Lernaean Bow",
             "Dominance",
             "The Reaper",
             "Tekko-Kagi",
@@ -67449,8 +67449,8 @@
             "Demon Blade"
           ],
           "flex_slots": [
-            "Tekko-Kagi",
-            "Tyrfing"
+            "Dominance",
+            "Tekko-Kagi"
           ],
           "situational_swaps": [
             {
@@ -67476,9 +67476,9 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Tyrfing": {
-              "total": 0.49,
-              "efficiency": 0.38,
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.6
@@ -67528,8 +67528,8 @@
           "source": "suggested",
           "archetype": "mana-stack",
           "slot_order": [
+            "Lernaean Bow",
             "Jotunn's Revenge",
-            "Transcendence",
             "Hydra's Lament",
             "Dominance",
             "The Reaper",
@@ -67537,7 +67537,7 @@
           ],
           "flex_slots": [
             "Dominance",
-            "Transcendence"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -67563,19 +67563,19 @@
           ],
           "rationale": "mana-stack (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.47,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.44
+            },
             "Jotunn's Revenge": {
               "total": 0.56,
               "efficiency": 0.67,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.44
-            },
-            "Transcendence": {
-              "total": 0.39,
-              "efficiency": 0.53,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.24
             },
             "Hydra's Lament": {
               "total": 0.49,
@@ -67615,7 +67615,7 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Toxic Blade",
+            "Lernaean Bow",
             "Rage",
             "Dominance",
             "The Reaper",
@@ -67623,7 +67623,7 @@
             "Deathbringer"
           ],
           "flex_slots": [
-            "Toxic Blade",
+            "Deathbringer",
             "Rage"
           ],
           "situational_swaps": [
@@ -67644,18 +67644,18 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.48,
-              "efficiency": 0.34,
+            "Lernaean Bow": {
+              "total": 0.53,
+              "efficiency": 0.51,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.63
+              "fit": 0.55
             },
             "Rage": {
               "total": 0.48,
@@ -67876,16 +67876,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Qin's Blade",
             "The Reaper",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
-            "Qin's Blade",
-            "Demon Blade"
+            "Golden Blade",
+            "Qin's Blade"
           ],
           "situational_swaps": [
             {
@@ -67911,6 +67911,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.53,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.62,
               "efficiency": 0.45,
@@ -67945,13 +67952,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.84
-            },
-            "Demon Blade": {
-              "total": 0.51,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.65
             }
           },
           "starter": {
@@ -67963,16 +67963,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Hydra's Lament",
-            "Dominance",
-            "Demon Blade"
+            "Dominance"
           ],
           "flex_slots": [
-            "Dominance",
-            "Demon Blade"
+            "Toxic Blade",
+            "Dominance"
           ],
           "situational_swaps": [
             {
@@ -67998,6 +67998,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.45,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.39
+            },
             "Toxic Blade": {
               "total": 0.44,
               "efficiency": 0.34,
@@ -68032,13 +68039,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.39
-            },
-            "Demon Blade": {
-              "total": 0.43,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.49
             }
           },
           "starter": {
@@ -68050,7 +68050,7 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
-            "Tyrfing",
+            "Lernaean Bow",
             "Dominance",
             "The Reaper",
             "Tekko-Kagi",
@@ -68058,8 +68058,8 @@
             "Demon Blade"
           ],
           "flex_slots": [
-            "Tekko-Kagi",
-            "Tyrfing"
+            "Dominance",
+            "Tekko-Kagi"
           ],
           "situational_swaps": [
             {
@@ -68085,9 +68085,9 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Tyrfing": {
-              "total": 0.49,
-              "efficiency": 0.38,
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.6
@@ -68137,15 +68137,15 @@
           "source": "suggested",
           "archetype": "hybrid",
           "slot_order": [
+            "Lernaean Bow",
             "Dominance",
             "The Reaper",
-            "Tekko-Kagi",
             "Riptalon",
             "Silverbranch Bow",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Tekko-Kagi",
+            "Dominance",
             "Silverbranch Bow"
           ],
           "situational_swaps": [
@@ -68172,6 +68172,13 @@
           ],
           "rationale": "The model's core, corrected where the community is clearly right (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Dominance": {
               "total": 0.53,
               "efficiency": 0.47,
@@ -68185,13 +68192,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.62
-            },
-            "Tekko-Kagi": {
-              "total": 0.5,
-              "efficiency": 0.55,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.45
             },
             "Riptalon": {
               "total": 0.55,
@@ -68218,8 +68218,8 @@
           "swaps": [
             {
               "added": "Silverbranch Bow",
-              "removed": "Tyrfing",
-              "reason": "Conquest community 71% win over 122 matches (vs 56% on this god), taking the model's weakest slot from Tyrfing"
+              "removed": "Tekko-Kagi",
+              "reason": "Conquest community 71% win over 122 matches (vs 56% on this god), taking the model's weakest slot from Tekko-Kagi"
             }
           ],
           "borrowed_from": "Conquest",
@@ -76775,16 +76775,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -76810,6 +76810,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -76823,13 +76830,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -84142,16 +84142,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -84177,6 +84177,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -84190,13 +84197,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -111193,16 +111193,16 @@
           "source": "suggested",
           "archetype": "strength",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Rod of Tahuti",
             "Soul Gem",
             "Triton's Conch"
           ],
           "flex_slots": [
-            "Rod of Tahuti",
-            "Tyrfing"
+            "Tyrfing",
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -111228,6 +111228,13 @@
           ],
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.55,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.59
+            },
             "Toxic Blade": {
               "total": 0.64,
               "efficiency": 0.48,
@@ -111248,13 +111255,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.62
-            },
-            "Rod of Tahuti": {
-              "total": 0.57,
-              "efficiency": 0.87,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.28
             },
             "Soul Gem": {
               "total": 0.79,
@@ -112723,16 +112723,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
             "Shogun's Ofuda",
-            "Tyrfing"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -112758,6 +112758,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.48,
@@ -112771,13 +112778,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.44
-            },
-            "Tyrfing": {
-              "total": 0.53,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.56
             },
             "Amanita Charm": {
               "total": 0.72,
@@ -112984,16 +112984,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Riptalon",
             "Amanita Charm",
             "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Tyrfing"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -113019,6 +113019,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.65,
               "efficiency": 0.48,
@@ -113032,13 +113039,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.4
-            },
-            "Tyrfing": {
-              "total": 0.54,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.59
             },
             "Riptalon": {
               "total": 0.59,
@@ -113158,16 +113158,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
             "Shogun's Ofuda",
-            "Tyrfing"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -113193,6 +113193,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.48,
@@ -113206,13 +113213,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.44
-            },
-            "Tyrfing": {
-              "total": 0.53,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.56
             },
             "Amanita Charm": {
               "total": 0.72,
@@ -118203,8 +118203,8 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
             "Riptalon",
@@ -118212,7 +118212,7 @@
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Jotunn's Revenge"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -118238,19 +118238,19 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.7,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.94
-            },
-            "Jotunn's Revenge": {
-              "total": 0.54,
-              "efficiency": 0.67,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.42
             },
             "Tyrfing": {
               "total": 0.62,
@@ -129798,16 +129798,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -129833,6 +129833,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -129846,13 +129853,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -134819,16 +134819,16 @@
           "source": "suggested",
           "archetype": "strength",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Berserker's Shield",
             "Jotunn's Revenge",
             "Shield Splitter",
             "Amanita Charm",
             "Erosion"
           ],
           "flex_slots": [
-            "Shield Splitter",
-            "Berserker's Shield"
+            "Golden Blade",
+            "Shield Splitter"
           ],
           "situational_swaps": [
             {
@@ -134854,19 +134854,19 @@
           ],
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.55,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.58
+            },
             "Toxic Blade": {
               "total": 0.64,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.8
-            },
-            "Berserker's Shield": {
-              "total": 0.54,
-              "efficiency": 0.74,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.35
             },
             "Jotunn's Revenge": {
               "total": 0.55,
@@ -136653,16 +136653,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
-            "Shogun's Ofuda",
-            "Tyrfing"
+            "Pharaoh's Curse",
+            "Shogun's Ofuda"
           ],
           "situational_swaps": [
             {
@@ -136688,6 +136688,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.48,
@@ -136701,13 +136708,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.4
-            },
-            "Tyrfing": {
-              "total": 0.53,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.56
             },
             "Amanita Charm": {
               "total": 0.71,
@@ -137001,16 +137001,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
             "Riptalon",
             "Amanita Charm",
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Pharaoh's Curse"
           ],
           "flex_slots": [
             "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -137020,8 +137020,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Shogun's Ofuda \u2014 magical protection",
+              "swap_item": "Shogun's Ofuda"
             },
             {
               "vs_tag": "physical_heavy",
@@ -137036,6 +137036,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.54,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Toxic Blade": {
               "total": 0.67,
               "efficiency": 0.48,
@@ -137067,13 +137074,6 @@
             "Pharaoh's Curse": {
               "total": 0.54,
               "efficiency": 0.51,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.58
-            },
-            "Shogun's Ofuda": {
-              "total": 0.53,
-              "efficiency": 0.49,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.58
@@ -137175,16 +137175,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
-            "Shogun's Ofuda",
-            "Tyrfing"
+            "Pharaoh's Curse",
+            "Shogun's Ofuda"
           ],
           "situational_swaps": [
             {
@@ -137210,6 +137210,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.48,
@@ -137223,13 +137230,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.4
-            },
-            "Tyrfing": {
-              "total": 0.53,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.56
             },
             "Amanita Charm": {
               "total": 0.71,
@@ -140902,16 +140902,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
             "The Reaper",
             "Tekko-Kagi",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -140937,6 +140937,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.54,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Toxic Blade": {
               "total": 0.64,
               "efficiency": 0.45,
@@ -140971,13 +140978,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.89
-            },
-            "Demon Blade": {
-              "total": 0.54,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.71
             }
           },
           "starter": {
@@ -141424,16 +141424,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -141459,6 +141459,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.52,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.58
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.45,
@@ -141472,13 +141479,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.68
-            },
-            "Qin's Blade": {
-              "total": 0.51,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.64
             },
             "The Reaper": {
               "total": 0.59,
@@ -141598,16 +141598,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
             "The Reaper",
             "Tekko-Kagi",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -141633,6 +141633,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.54,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Toxic Blade": {
               "total": 0.64,
               "efficiency": 0.45,
@@ -141667,13 +141674,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.89
-            },
-            "Demon Blade": {
-              "total": 0.54,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.71
             }
           },
           "starter": {
@@ -156900,16 +156900,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Death Metal",
-            "Qin's Blade",
             "Riptalon",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Death Metal",
-            "Qin's Blade"
+            "Golden Blade",
+            "Death Metal"
           ],
           "situational_swaps": [
             {
@@ -156935,6 +156935,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.52,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.57
+            },
             "Toxic Blade": {
               "total": 0.61,
               "efficiency": 0.45,
@@ -156955,13 +156962,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.41
-            },
-            "Qin's Blade": {
-              "total": 0.51,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
             },
             "Riptalon": {
               "total": 0.63,
@@ -161241,16 +161241,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -161276,6 +161276,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -161289,13 +161296,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -163156,16 +163156,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Bloodforge",
-            "Dominance",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Bloodforge"
+            "Lernaean Bow",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -163191,6 +163191,20 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.6,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.72
+            },
+            "Lernaean Bow": {
+              "total": 0.58,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.66
+            },
             "Toxic Blade": {
               "total": 0.57,
               "efficiency": 0.36,
@@ -163204,20 +163218,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.82
-            },
-            "Bloodforge": {
-              "total": 0.56,
-              "efficiency": 0.49,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
-            },
-            "Dominance": {
-              "total": 0.56,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.66
             },
             "Riptalon": {
               "total": 0.61,
@@ -163330,7 +163330,7 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Toxic Blade",
+            "Golden Blade",
             "Rage",
             "Tyrfing",
             "Riptalon",
@@ -163359,18 +163359,18 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
+            "Golden Blade": {
               "total": 0.56,
-              "efficiency": 0.36,
+              "efficiency": 0.47,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.75
+              "fit": 0.65
             },
             "Rage": {
               "total": 0.51,
@@ -163591,16 +163591,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "Qin's Blade",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
-            "Demon Blade",
-            "Dominance"
+            "Qin's Blade",
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -163626,6 +163626,20 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.57,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.67
+            },
+            "Lernaean Bow": {
+              "total": 0.54,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Toxic Blade": {
               "total": 0.58,
               "efficiency": 0.36,
@@ -163640,13 +163654,6 @@
               "pick": 0.0,
               "fit": 0.77
             },
-            "Dominance": {
-              "total": 0.51,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.56
-            },
             "Qin's Blade": {
               "total": 0.54,
               "efficiency": 0.38,
@@ -163660,13 +163667,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.85
-            },
-            "Demon Blade": {
-              "total": 0.53,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.7
             }
           },
           "starter": {
@@ -163678,16 +163678,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Hydra's Lament",
-            "Qin's Blade"
+            "Hydra's Lament"
           ],
           "flex_slots": [
             "Toxic Blade",
-            "Qin's Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -163713,6 +163713,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.45,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.4
+            },
             "Toxic Blade": {
               "total": 0.48,
               "efficiency": 0.36,
@@ -163747,13 +163754,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.53
-            },
-            "Qin's Blade": {
-              "total": 0.44,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.5
             }
           },
           "starter": {
@@ -163765,16 +163765,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Bloodforge",
-            "Dominance",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Bloodforge"
+            "Lernaean Bow",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -163800,6 +163800,20 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.6,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.72
+            },
+            "Lernaean Bow": {
+              "total": 0.58,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.66
+            },
             "Toxic Blade": {
               "total": 0.57,
               "efficiency": 0.36,
@@ -163813,20 +163827,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.82
-            },
-            "Bloodforge": {
-              "total": 0.56,
-              "efficiency": 0.49,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
-            },
-            "Dominance": {
-              "total": 0.56,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.66
             },
             "Riptalon": {
               "total": 0.61,
@@ -173377,16 +173377,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Bloodforge",
-            "Dominance",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Bloodforge"
+            "Golden Blade",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -173412,6 +173412,20 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
+            "Lernaean Bow": {
+              "total": 0.57,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.55,
               "efficiency": 0.36,
@@ -173425,20 +173439,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.75
-            },
-            "Bloodforge": {
-              "total": 0.54,
-              "efficiency": 0.49,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.58
-            },
-            "Dominance": {
-              "total": 0.55,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.64
             },
             "Riptalon": {
               "total": 0.59,
@@ -173551,7 +173551,7 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Toxic Blade",
+            "Lernaean Bow",
             "Rage",
             "Tyrfing",
             "Riptalon",
@@ -173580,18 +173580,18 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.54,
-              "efficiency": 0.36,
+            "Lernaean Bow": {
+              "total": 0.56,
+              "efficiency": 0.51,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.71
+              "fit": 0.6
             },
             "Rage": {
               "total": 0.51,
@@ -173812,16 +173812,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "Qin's Blade",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Demon Blade",
-            "Dominance"
+            "Qin's Blade",
+            "Demon Blade"
           ],
           "situational_swaps": [
             {
@@ -173847,6 +173847,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
             "Toxic Blade": {
               "total": 0.58,
               "efficiency": 0.36,
@@ -173860,13 +173867,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.75
-            },
-            "Dominance": {
-              "total": 0.51,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.55
             },
             "Qin's Blade": {
               "total": 0.54,
@@ -173899,16 +173899,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Hydra's Lament",
-            "Demon Blade"
+            "Hydra's Lament"
           ],
           "flex_slots": [
             "Toxic Blade",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -173934,6 +173934,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.46,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.4
+            },
             "Toxic Blade": {
               "total": 0.47,
               "efficiency": 0.36,
@@ -173968,13 +173975,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.51
-            },
-            "Demon Blade": {
-              "total": 0.44,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.51
             }
           },
           "starter": {
@@ -173986,16 +173986,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Bloodforge",
-            "Dominance",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Bloodforge"
+            "Golden Blade",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -174021,6 +174021,20 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
+            "Lernaean Bow": {
+              "total": 0.57,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.55,
               "efficiency": 0.36,
@@ -174034,20 +174048,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.75
-            },
-            "Bloodforge": {
-              "total": 0.54,
-              "efficiency": 0.49,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.58
-            },
-            "Dominance": {
-              "total": 0.55,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.64
             },
             "Riptalon": {
               "total": 0.59,
@@ -178211,16 +178211,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "Riptalon",
             "Silverbranch Bow",
             "Soul Gem"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -178246,6 +178246,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.52,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.57
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.45,
@@ -178259,13 +178266,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.67
-            },
-            "Qin's Blade": {
-              "total": 0.5,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
             },
             "Riptalon": {
               "total": 0.68,
@@ -188041,16 +188041,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -188076,6 +188076,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -188089,13 +188096,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -193616,8 +193616,8 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
             "Riptalon",
@@ -193625,7 +193625,7 @@
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Jotunn's Revenge"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -193651,19 +193651,19 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.55,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.62
+            },
             "Toxic Blade": {
               "total": 0.69,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.92
-            },
-            "Jotunn's Revenge": {
-              "total": 0.53,
-              "efficiency": 0.67,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.4
             },
             "Tyrfing": {
               "total": 0.61,
@@ -204457,16 +204457,16 @@
           "source": "suggested",
           "archetype": "strength",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Jotunn's Revenge",
             "Rod of Tahuti",
-            "Eros' Bow",
             "Soul Gem",
             "Triton's Conch"
           ],
           "flex_slots": [
             "Rod of Tahuti",
-            "Eros' Bow"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -204492,6 +204492,13 @@
           ],
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.59,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
             "Toxic Blade": {
               "total": 0.67,
               "efficiency": 0.48,
@@ -204512,13 +204519,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.31
-            },
-            "Eros' Bow": {
-              "total": 0.57,
-              "efficiency": 0.53,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.61
             },
             "Soul Gem": {
               "total": 0.71,
@@ -206827,8 +206827,8 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
             "Riptalon",
@@ -206836,7 +206836,7 @@
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Jotunn's Revenge"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -206862,19 +206862,19 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.7,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.94
-            },
-            "Jotunn's Revenge": {
-              "total": 0.54,
-              "efficiency": 0.67,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.42
             },
             "Tyrfing": {
               "total": 0.62,
@@ -212037,16 +212037,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "Riptalon",
             "Silverbranch Bow",
             "Soul Gem"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -212072,6 +212072,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.52,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.57
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.45,
@@ -212085,13 +212092,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.67
-            },
-            "Qin's Blade": {
-              "total": 0.5,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
             },
             "Riptalon": {
               "total": 0.68,
@@ -222721,16 +222721,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
-            "Shogun's Ofuda",
-            "Tyrfing"
+            "Pharaoh's Curse",
+            "Shogun's Ofuda"
           ],
           "situational_swaps": [
             {
@@ -222756,6 +222756,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.62,
               "efficiency": 0.48,
@@ -222769,13 +222776,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.45
-            },
-            "Tyrfing": {
-              "total": 0.54,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.59
             },
             "Amanita Charm": {
               "total": 0.73,
@@ -222982,16 +222982,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
             "Riptalon",
             "Amanita Charm",
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -223001,8 +223001,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Shogun's Ofuda \u2014 magical protection",
+              "swap_item": "Shogun's Ofuda"
             },
             {
               "vs_tag": "physical_heavy",
@@ -223017,6 +223017,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.6
+            },
             "Toxic Blade": {
               "total": 0.65,
               "efficiency": 0.48,
@@ -223048,13 +223055,6 @@
             "Pharaoh's Curse": {
               "total": 0.56,
               "efficiency": 0.51,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.61
-            },
-            "Shogun's Ofuda": {
-              "total": 0.55,
-              "efficiency": 0.49,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.61
@@ -223156,16 +223156,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Amanita Charm",
             "Pharaoh's Curse",
             "Shogun's Ofuda"
           ],
           "flex_slots": [
-            "Shogun's Ofuda",
-            "Tyrfing"
+            "Pharaoh's Curse",
+            "Shogun's Ofuda"
           ],
           "situational_swaps": [
             {
@@ -223191,6 +223191,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.62,
               "efficiency": 0.48,
@@ -223204,13 +223211,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.45
-            },
-            "Tyrfing": {
-              "total": 0.54,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.59
             },
             "Amanita Charm": {
               "total": 0.73,
@@ -225327,8 +225327,8 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
-            "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
             "Riptalon",
@@ -225336,7 +225336,7 @@
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Jotunn's Revenge"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -225362,19 +225362,19 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.7,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.94
-            },
-            "Jotunn's Revenge": {
-              "total": 0.54,
-              "efficiency": 0.67,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.42
             },
             "Tyrfing": {
               "total": 0.62,
@@ -230474,16 +230474,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Bragi's Harp",
             "Silverbranch Bow",
-            "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Silverbranch Bow",
-            "Bragi's Harp"
+            "Bragi's Harp",
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -230509,6 +230509,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -230536,13 +230543,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.69
-            },
-            "Rod of Tahuti": {
-              "total": 0.62,
-              "efficiency": 0.87,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.36
             },
             "Soul Gem": {
               "total": 0.79,
@@ -231257,16 +231257,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
             "Bragi's Harp",
             "Silverbranch Bow",
-            "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Silverbranch Bow",
-            "Bragi's Harp"
+            "Bragi's Harp",
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -231292,6 +231292,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -231319,13 +231326,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.69
-            },
-            "Rod of Tahuti": {
-              "total": 0.62,
-              "efficiency": 0.87,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.36
             },
             "Soul Gem": {
               "total": 0.79,
@@ -237840,15 +237840,15 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Jotunn's Revenge",
             "The Reaper",
-            "Tekko-Kagi",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Tekko-Kagi",
+            "Lernaean Bow",
             "Jotunn's Revenge"
           ],
           "situational_swaps": [
@@ -237875,6 +237875,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.53,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.54
+            },
             "Toxic Blade": {
               "total": 0.53,
               "efficiency": 0.34,
@@ -237895,13 +237902,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.69
-            },
-            "Tekko-Kagi": {
-              "total": 0.53,
-              "efficiency": 0.55,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.5
             },
             "Riptalon": {
               "total": 0.58,
@@ -237927,8 +237927,8 @@
           "source": "suggested",
           "archetype": "mana-stack",
           "slot_order": [
+            "Lernaean Bow",
             "Jotunn's Revenge",
-            "Transcendence",
             "Hydra's Lament",
             "Dominance",
             "The Reaper",
@@ -237936,7 +237936,7 @@
           ],
           "flex_slots": [
             "Dominance",
-            "Transcendence"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -237962,19 +237962,19 @@
           ],
           "rationale": "mana-stack (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.47,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.44
+            },
             "Jotunn's Revenge": {
               "total": 0.56,
               "efficiency": 0.67,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.44
-            },
-            "Transcendence": {
-              "total": 0.39,
-              "efficiency": 0.53,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.24
             },
             "Hydra's Lament": {
               "total": 0.49,
@@ -238362,16 +238362,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -238397,6 +238397,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.51,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.54
+            },
             "Toxic Blade": {
               "total": 0.65,
               "efficiency": 0.45,
@@ -238410,13 +238417,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.64
-            },
-            "Qin's Blade": {
-              "total": 0.5,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.61
             },
             "The Reaper": {
               "total": 0.58,
@@ -238449,16 +238449,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Hydra's Lament",
-            "Dominance",
             "Pendulum Blade"
           ],
           "flex_slots": [
             "Pendulum Blade",
-            "Dominance"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -238484,6 +238484,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.44,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.37
+            },
             "Toxic Blade": {
               "total": 0.47,
               "efficiency": 0.34,
@@ -238512,13 +238519,6 @@
               "pick": 0.0,
               "fit": 0.47
             },
-            "Dominance": {
-              "total": 0.42,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.37
-            },
             "Pendulum Blade": {
               "total": 0.44,
               "efficiency": 0.41,
@@ -238536,15 +238536,15 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Jotunn's Revenge",
             "The Reaper",
-            "Tekko-Kagi",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Tekko-Kagi",
+            "Lernaean Bow",
             "Jotunn's Revenge"
           ],
           "situational_swaps": [
@@ -238571,6 +238571,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.53,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.54
+            },
             "Toxic Blade": {
               "total": 0.53,
               "efficiency": 0.34,
@@ -238591,13 +238598,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.69
-            },
-            "Tekko-Kagi": {
-              "total": 0.53,
-              "efficiency": 0.55,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.5
             },
             "Riptalon": {
               "total": 0.58,
@@ -243271,16 +243271,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
             "Riptalon",
             "Amanita Charm",
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Shogun's Ofuda"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -243290,8 +243290,8 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Shogun's Ofuda \u2014 magical protection",
+              "swap_item": "Shogun's Ofuda"
             },
             {
               "vs_tag": "physical_heavy",
@@ -243306,6 +243306,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.59
+            },
             "Toxic Blade": {
               "total": 0.68,
               "efficiency": 0.48,
@@ -243337,13 +243344,6 @@
             "Pharaoh's Curse": {
               "total": 0.55,
               "efficiency": 0.51,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.6
-            },
-            "Shogun's Ofuda": {
-              "total": 0.55,
-              "efficiency": 0.49,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.6
@@ -252518,16 +252518,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
             "Riptalon",
-            "Eros' Bow",
             "Amanita Charm",
             "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Eros' Bow"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -252553,6 +252553,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.59,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
             "Toxic Blade": {
               "total": 0.67,
               "efficiency": 0.48,
@@ -252573,13 +252580,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.77
-            },
-            "Eros' Bow": {
-              "total": 0.57,
-              "efficiency": 0.53,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.61
             },
             "Amanita Charm": {
               "total": 0.7,
@@ -254860,16 +254860,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -254895,6 +254895,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -254908,13 +254915,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -259564,16 +259564,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "The Reaper",
             "Riptalon",
             "Silverbranch Bow"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -259599,6 +259599,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.69
+            },
             "Toxic Blade": {
               "total": 0.72,
               "efficiency": 0.45,
@@ -259612,13 +259619,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.79
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "The Reaper": {
               "total": 0.62,
@@ -264259,16 +264259,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Berserker's Shield",
-            "Tyrfing",
             "Riptalon",
             "Amanita Charm",
             "Pharaoh's Curse"
           ],
           "flex_slots": [
-            "Pharaoh's Curse",
-            "Tyrfing"
+            "Golden Blade",
+            "Pharaoh's Curse"
           ],
           "situational_swaps": [
             {
@@ -264294,6 +264294,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.57,
+              "efficiency": 0.52,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.62
+            },
             "Toxic Blade": {
               "total": 0.7,
               "efficiency": 0.48,
@@ -264307,13 +264314,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.42
-            },
-            "Tyrfing": {
-              "total": 0.55,
-              "efficiency": 0.5,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.61
             },
             "Riptalon": {
               "total": 0.65,
@@ -267153,16 +267153,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Qin's Blade",
             "Riptalon",
             "Silverbranch Bow",
             "Soul Gem"
           ],
           "flex_slots": [
             "Silverbranch Bow",
-            "Qin's Blade"
+            "Golden Blade"
           ],
           "situational_swaps": [
             {
@@ -267188,6 +267188,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.52,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Toxic Blade": {
               "total": 0.66,
               "efficiency": 0.45,
@@ -267201,13 +267208,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.66
-            },
-            "Qin's Blade": {
-              "total": 0.5,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.63
             },
             "Riptalon": {
               "total": 0.68,
@@ -269508,16 +269508,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
             "Tyrfing",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -269543,6 +269543,13 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.51,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.51
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.45,
@@ -269577,13 +269584,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.8
-            },
-            "Demon Blade": {
-              "total": 0.51,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.66
             }
           },
           "starter": {
@@ -270204,16 +270204,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Jotunn's Revenge",
             "Tyrfing",
             "The Reaper",
-            "Riptalon",
-            "Demon Blade"
+            "Riptalon"
           ],
           "flex_slots": [
             "Tyrfing",
-            "Demon Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -270239,6 +270239,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.51,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.51
+            },
             "Toxic Blade": {
               "total": 0.6,
               "efficiency": 0.45,
@@ -270273,13 +270280,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.8
-            },
-            "Demon Blade": {
-              "total": 0.51,
-              "efficiency": 0.36,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.66
             }
           },
           "starter": {
@@ -274689,16 +274689,16 @@
           "source": "suggested",
           "archetype": "core",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
-            "Qin's Blade",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Qin's Blade"
+            "Toxic Blade",
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -274724,6 +274724,20 @@
           ],
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.6,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.73
+            },
+            "Lernaean Bow": {
+              "total": 0.57,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.59,
               "efficiency": 0.36,
@@ -274737,20 +274751,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.83
-            },
-            "Dominance": {
-              "total": 0.55,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.64
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "Riptalon": {
               "total": 0.63,
@@ -274863,7 +274863,7 @@
           "source": "suggested",
           "archetype": "crit",
           "slot_order": [
-            "Toxic Blade",
+            "Golden Blade",
             "Rage",
             "Tyrfing",
             "Riptalon",
@@ -274892,18 +274892,18 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Contagion \u2014 anti-heal",
-              "swap_item": "Contagion"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.57,
-              "efficiency": 0.36,
+            "Golden Blade": {
+              "total": 0.58,
+              "efficiency": 0.47,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.79
+              "fit": 0.69
             },
             "Rage": {
               "total": 0.51,
@@ -275124,16 +275124,16 @@
           "source": "suggested",
           "archetype": "attack-speed",
           "slot_order": [
+            "Golden Blade",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
             "Qin's Blade",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Demon Blade",
-            "Dominance"
+            "Qin's Blade",
+            "Demon Blade"
           ],
           "situational_swaps": [
             {
@@ -275159,6 +275159,13 @@
           ],
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.56,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.65
+            },
             "Toxic Blade": {
               "total": 0.58,
               "efficiency": 0.36,
@@ -275172,13 +275179,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.75
-            },
-            "Dominance": {
-              "total": 0.51,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.55
             },
             "Qin's Blade": {
               "total": 0.54,
@@ -275211,16 +275211,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
+            "Lernaean Bow",
             "Toxic Blade",
             "Chandra's Grace",
             "Jotunn's Revenge",
             "Tyrfing",
-            "Hydra's Lament",
-            "Qin's Blade"
+            "Hydra's Lament"
           ],
           "flex_slots": [
             "Toxic Blade",
-            "Qin's Blade"
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -275246,6 +275246,13 @@
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.46,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.4
+            },
             "Toxic Blade": {
               "total": 0.49,
               "efficiency": 0.36,
@@ -275280,13 +275287,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.51
-            },
-            "Qin's Blade": {
-              "total": 0.45,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.52
             }
           },
           "starter": {
@@ -275472,16 +275472,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Golden Blade",
+            "Lernaean Bow",
             "Toxic Blade",
             "Tyrfing",
-            "Dominance",
-            "Qin's Blade",
             "Riptalon",
             "Demon Blade"
           ],
           "flex_slots": [
-            "Dominance",
-            "Qin's Blade"
+            "Toxic Blade",
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -275507,6 +275507,20 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
+            "Golden Blade": {
+              "total": 0.6,
+              "efficiency": 0.47,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.73
+            },
+            "Lernaean Bow": {
+              "total": 0.57,
+              "efficiency": 0.51,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.64
+            },
             "Toxic Blade": {
               "total": 0.59,
               "efficiency": 0.36,
@@ -275520,20 +275534,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.83
-            },
-            "Dominance": {
-              "total": 0.55,
-              "efficiency": 0.47,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.64
-            },
-            "Qin's Blade": {
-              "total": 0.55,
-              "efficiency": 0.38,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.72
             },
             "Riptalon": {
               "total": 0.63,
@@ -285614,6 +285614,7 @@
         "Spectral Armor": 0.5204,
         "Yogi's Necklace": 0.5183,
         "Chandra's Grace": 0.5166,
+        "Golden Blade": 0.5133,
         "The Crusher": 0.5109,
         "Hydra's Lament": 0.5035,
         "Doublet of Binding": 0.502,
@@ -285623,6 +285624,7 @@
         "Berserker's Shield": 0.4872,
         "Stygian Anchor": 0.487,
         "Bloodforge": 0.4832,
+        "Mystical Mail": 0.4801,
         "Shogun's Ofuda": 0.4801,
         "Draconic Scale": 0.4763,
         "Umbral Link": 0.4694,
@@ -285631,9 +285633,7 @@
         "Stampede": 0.4524,
         "Tyrfing": 0.4491,
         "Riptalon": 0.4451,
-        "Genji's Guard": 0.4448,
-        "Midgardian Mail": 0.441,
-        "Shifter's Shield": 0.4407
+        "Genji's Guard": 0.4448
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -286138,12 +286138,12 @@
         "Avenging Blade": 0.4465,
         "Dreamer's Idol": 0.443,
         "The Cosmic Horror": 0.4429,
+        "Lernaean Bow": 0.4347,
         "Eye of the Storm": 0.4305,
         "Chronos' Pendant": 0.4295,
         "Rod of Tahuti": 0.4259,
         "Riptalon": 0.4258,
-        "Heartwood Charm": 0.4245,
-        "Ethereal Staff": 0.4239
+        "Heartwood Charm": 0.4245
       },
       "arena": {
         "Jotunn's Revenge": 0.7627,
@@ -286263,6 +286263,7 @@
         "Berserker's Shield": 0.5028,
         "Hydra's Lament": 0.5007,
         "Yogi's Necklace": 0.4968,
+        "Mystical Mail": 0.4957,
         "Shogun's Ofuda": 0.4956,
         "Shifter's Shield": 0.4933,
         "Gladiator's Shield": 0.4913,
@@ -286270,8 +286271,7 @@
         "Spirit Robe": 0.4844,
         "Stone of Binding": 0.4813,
         "Toxic Blade": 0.4808,
-        "Breastplate of Valor": 0.4772,
-        "Prophetic Cloak": 0.4752
+        "Breastplate of Valor": 0.4772
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -286365,13 +286365,13 @@
         "Tyrfing": 0.5879,
         "The Reaper": 0.5849,
         "Demon Blade": 0.5773,
+        "Lernaean Bow": 0.5634,
         "Dominance": 0.5507,
+        "Golden Blade": 0.5421,
         "Bloodforge": 0.535,
         "Silverbranch Bow": 0.4924,
         "Tekko-Kagi": 0.4889,
-        "Lernaean Bow": 0.4884,
         "Qin's Blade": 0.4878,
-        "Golden Blade": 0.4671,
         "Jotunn's Revenge": 0.466,
         "Rage": 0.464,
         "Hydra's Lament": 0.4599,
@@ -286387,6 +286387,7 @@
         "Amanita Charm": 0.3999,
         "The Crusher": 0.3947,
         "Shogun's Ofuda": 0.3939,
+        "Odysseus' Bow": 0.39,
         "Dagger of Frenzy": 0.3893,
         "Chandra's Grace": 0.3889,
         "Berserker's Shield": 0.3854,
@@ -286395,11 +286396,10 @@
         "Avenging Blade": 0.3613,
         "Pendulum Blade": 0.3492,
         "Eye of the Storm": 0.3452,
+        "Sun Beam Bow": 0.3294,
         "Arondight": 0.3278,
         "Shield Splitter": 0.3255,
-        "Contagion": 0.323,
-        "Transcendence": 0.3217,
-        "Oath-Sworn Spear": 0.32
+        "Contagion": 0.323
       },
       "arena": {
         "Riptalon": 0.6647,
@@ -286646,6 +286646,7 @@
         "Umbral Link": 0.492,
         "Oni Hunter's Garb": 0.4888,
         "Gladiator's Shield": 0.4835,
+        "Mystical Mail": 0.4774,
         "Helm of Radiance": 0.4757,
         "Breastplate of Valor": 0.4733,
         "Bancroft's Talon": 0.4733,
@@ -286654,8 +286655,7 @@
         "Regrowth Striders": 0.4685,
         "Contagion": 0.4642,
         "Spear of the Magus": 0.4615,
-        "Shifter's Shield": 0.4605,
-        "Prophetic Cloak": 0.4568
+        "Shifter's Shield": 0.4605
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -286749,15 +286749,15 @@
         "Toxic Blade": 0.5845,
         "Tyrfing": 0.584,
         "Demon Blade": 0.5773,
+        "Lernaean Bow": 0.5634,
         "Dominance": 0.5507,
+        "Golden Blade": 0.5382,
         "Bloodforge": 0.535,
         "Tekko-Kagi": 0.4889,
         "Silverbranch Bow": 0.4885,
-        "Lernaean Bow": 0.4884,
         "Qin's Blade": 0.4839,
         "Jotunn's Revenge": 0.466,
         "Rage": 0.464,
-        "Golden Blade": 0.4632,
         "Hydra's Lament": 0.4599,
         "Sanguine Lash": 0.4568,
         "Devourer's Gauntlet": 0.452,
@@ -286771,6 +286771,7 @@
         "Amanita Charm": 0.3999,
         "The Crusher": 0.3947,
         "Shogun's Ofuda": 0.3939,
+        "Odysseus' Bow": 0.39,
         "Chandra's Grace": 0.3889,
         "Dagger of Frenzy": 0.3854,
         "Berserker's Shield": 0.3854,
@@ -286780,10 +286781,9 @@
         "Pendulum Blade": 0.3492,
         "Eye of the Storm": 0.3452,
         "Arondight": 0.3278,
+        "Sun Beam Bow": 0.3255,
         "Shield Splitter": 0.3255,
-        "Contagion": 0.323,
-        "Transcendence": 0.3217,
-        "Oath-Sworn Spear": 0.32
+        "Contagion": 0.323
       },
       "arena": {
         "Riptalon": 0.6609,
@@ -286897,6 +286897,7 @@
         "Ethereal Staff": 0.5367,
         "Berserker's Shield": 0.5363,
         "Gladiator's Shield": 0.536,
+        "Mystical Mail": 0.5292,
         "Shogun's Ofuda": 0.5291,
         "Umbral Link": 0.5251,
         "Prophetic Cloak": 0.5236,
@@ -286910,8 +286911,7 @@
         "Stampede": 0.5014,
         "Magi's Cloak": 0.4921,
         "Midgardian Mail": 0.49,
-        "Gluttonous Grimoire": 0.49,
-        "Brawler\u2019s Beat Stick": 0.4897
+        "Gluttonous Grimoire": 0.49
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287003,10 +287003,10 @@
         "The Reaper": 0.5849,
         "Riptalon": 0.5813,
         "Demon Blade": 0.5773,
+        "Lernaean Bow": 0.5634,
         "Dominance": 0.5507,
         "Bloodforge": 0.535,
         "Tekko-Kagi": 0.4889,
-        "Lernaean Bow": 0.4884,
         "Toxic Blade": 0.4862,
         "Tyrfing": 0.4857,
         "Jotunn's Revenge": 0.466,
@@ -287014,6 +287014,7 @@
         "Hydra's Lament": 0.4599,
         "Sanguine Lash": 0.4568,
         "Devourer's Gauntlet": 0.452,
+        "Golden Blade": 0.4493,
         "Titan's Bane": 0.4415,
         "Heartseeker": 0.4384,
         "Umbral Link": 0.4328,
@@ -287025,10 +287026,10 @@
         "The Crusher": 0.3947,
         "Shogun's Ofuda": 0.3939,
         "Silverbranch Bow": 0.3902,
+        "Odysseus' Bow": 0.39,
         "Chandra's Grace": 0.3889,
         "Berserker's Shield": 0.3854,
         "Qin's Blade": 0.3762,
-        "Golden Blade": 0.3743,
         "Runeforged Hammer": 0.3716,
         "Yogi's Necklace": 0.3669,
         "Avenging Blade": 0.3613,
@@ -287038,8 +287039,7 @@
         "Shield Splitter": 0.3255,
         "Contagion": 0.323,
         "Transcendence": 0.3217,
-        "Oath-Sworn Spear": 0.32,
-        "Avatar's Parashu": 0.3166
+        "Oath-Sworn Spear": 0.32
       },
       "arena": {
         "Lernaean Bow": 0.6134,
@@ -287160,14 +287160,14 @@
         "Umbral Link": 0.5016,
         "Yogi's Necklace": 0.5014,
         "The Reaper": 0.4988,
+        "Mystical Mail": 0.4955,
         "Shogun's Ofuda": 0.4955,
         "Shifter's Shield": 0.4883,
         "Gladiator's Shield": 0.4871,
         "Avenging Blade": 0.4849,
         "Toxic Blade": 0.4787,
         "Spirit Robe": 0.4747,
-        "Gluttonous Grimoire": 0.4734,
-        "Contagion": 0.4727
+        "Gluttonous Grimoire": 0.4734
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287281,6 +287281,7 @@
         "Ethereal Staff": 0.5418,
         "Pharaoh's Curse": 0.5405,
         "Berserker's Shield": 0.54,
+        "Mystical Mail": 0.5329,
         "Shogun's Ofuda": 0.5328,
         "Gladiator's Shield": 0.5324,
         "Umbral Link": 0.5271,
@@ -287294,8 +287295,7 @@
         "Breastplate of Valor": 0.5017,
         "Regrowth Striders": 0.497,
         "Magi's Cloak": 0.4962,
-        "Gluttonous Grimoire": 0.4956,
-        "Sphere of Negation": 0.4952
+        "Gluttonous Grimoire": 0.4956
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287406,6 +287406,7 @@
         "Oni Hunter's Garb": 0.5544,
         "Genji's Guard": 0.5525,
         "Gladiator's Shield": 0.5453,
+        "Mystical Mail": 0.5429,
         "Hussar's Wings": 0.5421,
         "Eye of Providence": 0.5379,
         "Spirit Robe": 0.5368,
@@ -287422,8 +287423,7 @@
         "Brawler\u2019s Beat Stick": 0.5049,
         "Midgardian Mail": 0.5037,
         "Leviathan's Hide": 0.4999,
-        "Helm of Darkness": 0.494,
-        "Eros' Bow": 0.4937
+        "Helm of Darkness": 0.494
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287529,16 +287529,16 @@
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
+        "Golden Blade": 0.5258,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
         "Silverbranch Bow": 0.4664,
-        "Golden Blade": 0.4508,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -287664,6 +287664,7 @@
         "Pharaoh's Curse": 0.5405,
         "Ethereal Staff": 0.54,
         "Berserker's Shield": 0.54,
+        "Mystical Mail": 0.5329,
         "Shogun's Ofuda": 0.5328,
         "Gladiator's Shield": 0.5324,
         "Umbral Link": 0.5271,
@@ -287678,8 +287679,7 @@
         "Breastplate of Valor": 0.5017,
         "Regrowth Striders": 0.497,
         "Magi's Cloak": 0.4962,
-        "Gluttonous Grimoire": 0.4938,
-        "Brawler\u2019s Beat Stick": 0.4937
+        "Gluttonous Grimoire": 0.4938
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287798,6 +287798,7 @@
         "Draconic Scale": 0.4896,
         "Oni Hunter's Garb": 0.4845,
         "Gladiator's Shield": 0.4774,
+        "Mystical Mail": 0.4731,
         "Helm of Radiance": 0.4708,
         "Bancroft's Talon": 0.4706,
         "Spear of the Magus": 0.4699,
@@ -287806,8 +287807,7 @@
         "Regrowth Striders": 0.4644,
         "Contagion": 0.4622,
         "Helm of Darkness": 0.4616,
-        "Shifter's Shield": 0.4539,
-        "Spirit Robe": 0.4509
+        "Shifter's Shield": 0.4539
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -287909,20 +287909,20 @@
         "Toxic Blade": 0.6155,
         "Riptalon": 0.5992,
         "Bloodforge": 0.5964,
+        "Golden Blade": 0.5525,
         "Sanguine Lash": 0.5303,
         "Runeforged Hammer": 0.5257,
         "Devourer's Gauntlet": 0.5255,
         "Dominance": 0.5246,
         "Avenging Blade": 0.5153,
         "Arondight": 0.5061,
+        "Lernaean Bow": 0.5035,
         "Eye of the Storm": 0.4993,
         "Silverbranch Bow": 0.497,
         "Shield Splitter": 0.4795,
         "Barbed Carver": 0.478,
-        "Golden Blade": 0.4775,
         "Transcendence": 0.4758,
         "Oath-Sworn Spear": 0.474,
-        "Lernaean Bow": 0.4285,
         "Rage": 0.4273,
         "Chandra's Grace": 0.4131,
         "Amanita Charm": 0.3999,
@@ -288051,6 +288051,7 @@
         "Umbral Link": 0.5119,
         "Shifter's Shield": 0.5084,
         "The Reaper": 0.5073,
+        "Mystical Mail": 0.5054,
         "Shogun's Ofuda": 0.5053,
         "Yogi's Necklace": 0.5011,
         "Gladiator's Shield": 0.4968,
@@ -288062,8 +288063,7 @@
         "Prophetic Cloak": 0.4817,
         "Eye of Providence": 0.4796,
         "Breastplate of Valor": 0.4783,
-        "Stampede": 0.4776,
-        "Regrowth Striders": 0.4736
+        "Golden Blade": 0.478
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -288182,6 +288182,7 @@
         "Berserker's Shield": 0.5054,
         "Jotunn's Revenge": 0.5022,
         "Hydra's Lament": 0.4986,
+        "Mystical Mail": 0.4983,
         "Shogun's Ofuda": 0.4983,
         "Yogi's Necklace": 0.4979,
         "Shifter's Shield": 0.4974,
@@ -288190,8 +288191,7 @@
         "Spirit Robe": 0.4873,
         "Stone of Binding": 0.4842,
         "Avenging Blade": 0.4781,
-        "Toxic Blade": 0.4764,
-        "Hussar's Wings": 0.4728
+        "Toxic Blade": 0.4764
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -288303,6 +288303,7 @@
         "Oni Hunter's Garb": 0.5285,
         "Shifter's Shield": 0.5265,
         "Umbral Link": 0.5183,
+        "Mystical Mail": 0.5171,
         "Gladiator's Shield": 0.5119,
         "Spirit Robe": 0.5081,
         "Yogi's Necklace": 0.5062,
@@ -288318,8 +288319,7 @@
         "Magi's Cloak": 0.4786,
         "Midgardian Mail": 0.4779,
         "Contagion": 0.4775,
-        "Brawler\u2019s Beat Stick": 0.4762,
-        "Leviathan's Hide": 0.474
+        "Brawler\u2019s Beat Stick": 0.4762
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -288465,6 +288465,7 @@
         "Tyrfing": 0.4963,
         "Lifebinder": 0.4955,
         "Bloodforge": 0.4896,
+        "Lernaean Bow": 0.4894,
         "Divine Ruin": 0.4874,
         "Obsidian Shard": 0.4828,
         "Dominance": 0.4767,
@@ -288475,6 +288476,7 @@
         "Demon Blade": 0.4568,
         "Heartseeker": 0.4562,
         "Hydra's Lament": 0.4529,
+        "Golden Blade": 0.4505,
         "Nimble Ring": 0.4475,
         "Bracer of The Abyss": 0.447,
         "Ethereal Staff": 0.4444,
@@ -288482,14 +288484,12 @@
         "Spear of the Magus": 0.4277,
         "Qin's Blade": 0.4237,
         "Umbral Link": 0.4149,
-        "Lernaean Bow": 0.4144,
         "Lotus Sickle": 0.4128,
         "The Crusher": 0.4124,
         "Sanguine Lash": 0.4115,
         "Chandra's Grace": 0.4093,
         "Devourer's Gauntlet": 0.4066,
-        "Amanita Charm": 0.3999,
-        "Doom Orb": 0.3971
+        "Amanita Charm": 0.3999
       },
       "joust:aspect": {
         "Soul Gem": 0.7805,
@@ -288508,6 +288508,7 @@
         "Jotunn's Revenge": 0.4936,
         "Divine Ruin": 0.4831,
         "Bloodforge": 0.4802,
+        "Golden Blade": 0.476,
         "Obsidian Shard": 0.4742,
         "Bragi's Harp": 0.4664,
         "Amanita Charm": 0.4636,
@@ -288517,6 +288518,7 @@
         "Heartseeker": 0.448,
         "Chandra's Grace": 0.448,
         "Hydra's Lament": 0.4466,
+        "Lernaean Bow": 0.4435,
         "Runeforged Hammer": 0.4366,
         "Yogi's Necklace": 0.4343,
         "Dominance": 0.4308,
@@ -288529,9 +288531,7 @@
         "Tekko-Kagi": 0.4099,
         "Umbral Link": 0.4094,
         "Lotus Sickle": 0.4061,
-        "Demon Blade": 0.405,
-        "The Crusher": 0.4043,
-        "Avenging Blade": 0.4035
+        "Demon Blade": 0.405
       },
       "arena": {
         "Soul Gem": 0.7979,
@@ -288812,6 +288812,7 @@
         "Oni Hunter's Garb": 0.5544,
         "Genji's Guard": 0.5525,
         "Gladiator's Shield": 0.5453,
+        "Mystical Mail": 0.5429,
         "Hussar's Wings": 0.5421,
         "Eye of Providence": 0.5379,
         "Spirit Robe": 0.5368,
@@ -288828,8 +288829,7 @@
         "Brawler\u2019s Beat Stick": 0.5049,
         "Midgardian Mail": 0.5037,
         "Leviathan's Hide": 0.4999,
-        "Helm of Darkness": 0.494,
-        "Eros' Bow": 0.4937
+        "Helm of Darkness": 0.494
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -288965,6 +288965,7 @@
         "Toxic Blade": 0.5961,
         "Jotunn's Revenge": 0.5327,
         "Tyrfing": 0.5173,
+        "Lernaean Bow": 0.5156,
         "Bloodforge": 0.5044,
         "Dominance": 0.5029,
         "Demon Blade": 0.5015,
@@ -288972,8 +288973,8 @@
         "Tekko-Kagi": 0.4996,
         "Titan's Bane": 0.4803,
         "Heartseeker": 0.4772,
+        "Golden Blade": 0.4715,
         "Hydra's Lament": 0.4681,
-        "Lernaean Bow": 0.4406,
         "Qin's Blade": 0.437,
         "The Crusher": 0.4335,
         "Sanguine Lash": 0.4263,
@@ -288983,13 +288984,13 @@
         "Rage": 0.4162,
         "Pendulum Blade": 0.416,
         "Amanita Charm": 0.3999,
-        "Golden Blade": 0.3965,
         "Pharaoh's Curse": 0.3948,
         "Barbed Carver": 0.386,
         "Musashi's Dual Swords": 0.3776,
         "Yogi's Necklace": 0.3669,
         "Deathbringer": 0.3667,
         "Shogun's Ofuda": 0.3659,
+        "Odysseus' Bow": 0.362,
         "Berserker's Shield": 0.3574,
         "Avatar's Parashu": 0.3554,
         "Runeforged Hammer": 0.3518,
@@ -288998,8 +288999,7 @@
         "Arondight": 0.336,
         "Shield of the Phoenix": 0.3333,
         "Eye of the Storm": 0.3254,
-        "Contagion": 0.323,
-        "Genji's Guard": 0.3101
+        "Contagion": 0.323
       },
       "joust:aspect": {
         "The Reaper": 0.6608,
@@ -289017,16 +289017,17 @@
         "Tyrfing": 0.4582,
         "Tekko-Kagi": 0.4524,
         "Devourer's Gauntlet": 0.4502,
+        "Lernaean Bow": 0.4492,
         "Silverbranch Bow": 0.4414,
         "Dominance": 0.4366,
         "Chandra's Grace": 0.4277,
         "Musashi's Dual Swords": 0.4227,
         "Barbed Carver": 0.4148,
+        "Golden Blade": 0.4124,
         "Deathbringer": 0.4117,
         "Sanguine Lash": 0.4051,
         "Avatar's Parashu": 0.3931,
         "Umbral Link": 0.3822,
-        "Lernaean Bow": 0.3742,
         "Runeforged Hammer": 0.3705,
         "Yogi's Necklace": 0.3669,
         "Arondight": 0.3654,
@@ -289035,7 +289036,6 @@
         "Amanita Charm": 0.3499,
         "Eye of the Storm": 0.3441,
         "Shield of the Phoenix": 0.344,
-        "Golden Blade": 0.3374,
         "Shield Splitter": 0.3243,
         "Contagion": 0.323,
         "Genji's Guard": 0.3208,
@@ -289430,8 +289430,10 @@
         "Toxic Blade": 0.5859,
         "Pharaoh's Curse": 0.5844,
         "Berserker's Shield": 0.5838,
+        "Golden Blade": 0.5663,
         "Shogun's Ofuda": 0.5654,
         "Erosion": 0.5247,
+        "Lernaean Bow": 0.5243,
         "Shield of the Phoenix": 0.5234,
         "Tyrfing": 0.5126,
         "Dominance": 0.5116,
@@ -289439,7 +289441,6 @@
         "Kinetic Cuirass": 0.4982,
         "The Reaper": 0.4972,
         "Void Shield": 0.4943,
-        "Golden Blade": 0.4913,
         "Void Stone": 0.4913,
         "Shield Splitter": 0.488,
         "Sanguine Lash": 0.4865,
@@ -289457,15 +289458,14 @@
         "Umbral Link": 0.455,
         "Doublet of Binding": 0.4545,
         "Bloodforge": 0.4506,
-        "Lernaean Bow": 0.4493,
         "Wyrmskin Hide": 0.4484,
         "Titan's Bane": 0.4466,
         "Tekko-Kagi": 0.4465,
         "Oni Hunter's Garb": 0.4442,
         "Heartseeker": 0.4434,
+        "Mystical Mail": 0.4327,
         "Genji's Guard": 0.4252,
-        "Glorious Pridwen": 0.4225,
-        "Draconic Scale": 0.4144
+        "Glorious Pridwen": 0.4225
       },
       "arena": {
         "Amanita Charm": 0.7556,
@@ -289571,6 +289571,7 @@
         "Tyrfing": 0.4827,
         "Obsidian Shard": 0.482,
         "Bloodforge": 0.4771,
+        "Lernaean Bow": 0.4762,
         "Spear of Desolation": 0.4758,
         "Silverbranch Bow": 0.4712,
         "Dominance": 0.4635,
@@ -289582,6 +289583,7 @@
         "Ethereal Staff": 0.4443,
         "Heartseeker": 0.4432,
         "Demon Blade": 0.4425,
+        "Golden Blade": 0.4369,
         "Lotus Sickle": 0.4283,
         "Spear of the Magus": 0.4269,
         "Chandra's Grace": 0.4249,
@@ -289589,11 +289591,9 @@
         "Triton's Conch": 0.4193,
         "Umbral Link": 0.4145,
         "Chronos' Pendant": 0.4031,
-        "Lernaean Bow": 0.4012,
         "Amanita Charm": 0.3999,
         "The Crusher": 0.3995,
-        "Sanguine Lash": 0.3989,
-        "Heartwood Charm": 0.398
+        "Sanguine Lash": 0.3989
       },
       "arena": {
         "Soul Gem": 0.7979,
@@ -289697,21 +289697,21 @@
         "Riptalon": 0.5422,
         "Arondight": 0.5366,
         "Sanguine Lash": 0.4944,
+        "Golden Blade": 0.49,
         "Runeforged Hammer": 0.4898,
         "Devourer's Gauntlet": 0.4896,
         "Dominance": 0.4887,
         "Chandra's Grace": 0.4795,
         "Avenging Blade": 0.4794,
+        "Lernaean Bow": 0.4676,
         "Eye of the Storm": 0.4634,
         "Shield Splitter": 0.4436,
         "Barbed Carver": 0.4421,
         "Silverbranch Bow": 0.4399,
         "Transcendence": 0.4399,
         "Oath-Sworn Spear": 0.4381,
-        "Golden Blade": 0.415,
         "Amanita Charm": 0.3999,
         "Shield of the Phoenix": 0.3959,
-        "Lernaean Bow": 0.3926,
         "Rage": 0.3913,
         "Genji's Guard": 0.3727,
         "Yogi's Necklace": 0.3669,
@@ -289816,6 +289816,7 @@
         "Toxic Blade": 0.5865,
         "Death Metal": 0.5434,
         "Eros' Bow": 0.5278,
+        "Lernaean Bow": 0.5263,
         "Tyrfing": 0.525,
         "Demon Blade": 0.516,
         "Dominance": 0.5136,
@@ -289827,10 +289828,10 @@
         "Gluttonous Grimoire": 0.4956,
         "Silverbranch Bow": 0.4905,
         "Bancroft's Talon": 0.4806,
+        "Golden Blade": 0.4791,
         "Titan's Bane": 0.4768,
         "Heartseeker": 0.4737,
         "Rod of Asclepius": 0.4659,
-        "Lernaean Bow": 0.4513,
         "Lifebinder": 0.4485,
         "Hydra's Lament": 0.4436,
         "Divine Ruin": 0.4404,
@@ -289843,7 +289844,6 @@
         "Rage": 0.4268,
         "Umbral Link": 0.4235,
         "Bracer of The Abyss": 0.4223,
-        "Golden Blade": 0.4041,
         "Amanita Charm": 0.3999,
         "Triton's Conch": 0.3991,
         "Pharaoh's Curse": 0.3986,
@@ -290208,19 +290208,19 @@
         "Toxic Blade": 0.5871,
         "Riptalon": 0.5708,
         "Sanguine Lash": 0.5325,
+        "Golden Blade": 0.528,
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
         "Silverbranch Bow": 0.4686,
-        "Golden Blade": 0.453,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -290344,6 +290344,7 @@
         "Ethereal Staff": 0.5543,
         "Oni Hunter's Garb": 0.5503,
         "Gladiator's Shield": 0.5489,
+        "Mystical Mail": 0.5389,
         "Prophetic Cloak": 0.5376,
         "Hussar's Wings": 0.5359,
         "Spirit Robe": 0.5324,
@@ -290360,8 +290361,7 @@
         "Brawler\u2019s Beat Stick": 0.5004,
         "Midgardian Mail": 0.4997,
         "Screeching Gargoyle": 0.4974,
-        "Leviathan's Hide": 0.4959,
-        "Eros' Bow": 0.4911
+        "Leviathan's Hide": 0.4959
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -290470,6 +290470,7 @@
         "Genji's Guard": 0.5049,
         "Oni Hunter's Garb": 0.5018,
         "Yogi's Necklace": 0.4944,
+        "Mystical Mail": 0.4904,
         "Shifter's Shield": 0.485,
         "Rod of Asclepius": 0.4786,
         "Spirit Robe": 0.4785,
@@ -290488,8 +290489,7 @@
         "Leviathan's Hide": 0.4473,
         "Brawler\u2019s Beat Stick": 0.4465,
         "Screeching Gargoyle": 0.4444,
-        "Mantle Of Discord": 0.4353,
-        "Ancile": 0.4335
+        "Mantle Of Discord": 0.4353
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -290582,14 +290582,15 @@
         "Toxic Blade": 0.6455,
         "Pharaoh's Curse": 0.568,
         "Berserker's Shield": 0.5674,
+        "Golden Blade": 0.5666,
         "Shogun's Ofuda": 0.549,
         "Riptalon": 0.544,
         "The Reaper": 0.5306,
         "Shield of the Phoenix": 0.5163,
         "Erosion": 0.514,
         "Tyrfing": 0.5122,
+        "Lernaean Bow": 0.4999,
         "Jotunn's Revenge": 0.4998,
-        "Golden Blade": 0.4916,
         "Runeforged Hammer": 0.4899,
         "Void Shield": 0.4893,
         "Kinetic Cuirass": 0.4875,
@@ -290616,8 +290617,7 @@
         "Demon Blade": 0.4375,
         "The Crusher": 0.4331,
         "Wyrmskin Hide": 0.4305,
-        "Lernaean Bow": 0.4249,
-        "Genji's Guard": 0.4174
+        "Mystical Mail": 0.4277
       },
       "arena": {
         "Amanita Charm": 0.7449,
@@ -290722,6 +290722,7 @@
         "Shield Splitter": 0.5305,
         "Glorious Pridwen": 0.5296,
         "Chandra's Grace": 0.5271,
+        "Golden Blade": 0.5263,
         "Ethereal Staff": 0.5254,
         "Void Shield": 0.5254,
         "Void Stone": 0.5224,
@@ -290743,9 +290744,8 @@
         "Tyrfing": 0.4714,
         "Gluttonous Grimoire": 0.4712,
         "Gladiator's Shield": 0.4641,
-        "Sphere of Negation": 0.4632,
-        "Wyrmskin Hide": 0.4622,
-        "Breastplate of Valor": 0.4602
+        "Mystical Mail": 0.4638,
+        "Sphere of Negation": 0.4632
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -290838,21 +290838,21 @@
         "The Reaper": 0.6448,
         "Toxic Blade": 0.6253,
         "Tyrfing": 0.5616,
+        "Lernaean Bow": 0.5439,
         "Demon Blade": 0.5363,
         "Bloodforge": 0.533,
         "Tekko-Kagi": 0.5314,
         "Dominance": 0.5312,
         "Silverbranch Bow": 0.5293,
+        "Golden Blade": 0.5158,
         "Titan's Bane": 0.5022,
         "Heartseeker": 0.4991,
-        "Lernaean Bow": 0.4689,
         "Qin's Blade": 0.4627,
         "The Crusher": 0.4554,
         "Sanguine Lash": 0.4548,
         "Devourer's Gauntlet": 0.45,
         "Jotunn's Revenge": 0.4422,
         "Rage": 0.4412,
-        "Golden Blade": 0.4408,
         "Umbral Link": 0.4321,
         "Barbed Carver": 0.4146,
         "Hydra's Lament": 0.4127,
@@ -290862,6 +290862,7 @@
         "Deathbringer": 0.3917,
         "Avatar's Parashu": 0.3773,
         "Shogun's Ofuda": 0.3758,
+        "Odysseus' Bow": 0.3718,
         "Runeforged Hammer": 0.3704,
         "Berserker's Shield": 0.3672,
         "Yogi's Necklace": 0.3669,
@@ -290872,8 +290873,7 @@
         "Shield Splitter": 0.3242,
         "Contagion": 0.323,
         "Transcendence": 0.3205,
-        "Oath-Sworn Spear": 0.3187,
-        "Chandra's Grace": 0.3173
+        "Oath-Sworn Spear": 0.3187
       },
       "arena": {
         "Riptalon": 0.7009,
@@ -291248,6 +291248,7 @@
         "Draconic Scale": 0.4896,
         "Oni Hunter's Garb": 0.4845,
         "Gladiator's Shield": 0.4774,
+        "Mystical Mail": 0.4731,
         "Helm of Radiance": 0.4708,
         "Bancroft's Talon": 0.4706,
         "Spear of the Magus": 0.4699,
@@ -291256,8 +291257,7 @@
         "Regrowth Striders": 0.4644,
         "Contagion": 0.4622,
         "Helm of Darkness": 0.4616,
-        "Shifter's Shield": 0.4539,
-        "Spirit Robe": 0.4509
+        "Shifter's Shield": 0.4539
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -291415,6 +291415,7 @@
         "Umbral Link": 0.5119,
         "Shifter's Shield": 0.5084,
         "The Reaper": 0.5073,
+        "Mystical Mail": 0.5054,
         "Shogun's Ofuda": 0.5053,
         "Yogi's Necklace": 0.5011,
         "Gladiator's Shield": 0.4968,
@@ -291426,8 +291427,7 @@
         "Eye of Providence": 0.4796,
         "Toxic Blade": 0.4786,
         "Breastplate of Valor": 0.4783,
-        "Stampede": 0.4776,
-        "Regrowth Striders": 0.4736
+        "Stampede": 0.4776
       },
       "joust:aspect": {
         "Amanita Charm": 0.8123,
@@ -291440,6 +291440,7 @@
         "Doublet of Binding": 0.6,
         "Pharaoh's Curse": 0.5859,
         "Sanguine Lash": 0.5822,
+        "Mystical Mail": 0.5782,
         "Shogun's Ofuda": 0.5781,
         "Shield Splitter": 0.5761,
         "Runeforged Hammer": 0.5587,
@@ -291463,13 +291464,12 @@
         "Jotunn's Revenge": 0.5089,
         "Hydra's Lament": 0.5054,
         "Genji's Guard": 0.5038,
-        "Mystical Mail": 0.5032,
+        "Golden Blade": 0.4965,
         "Hussar's Wings": 0.492,
         "Midgardian Mail": 0.489,
         "Eye of Providence": 0.4878,
         "Leviathan's Hide": 0.4851,
-        "The Reaper": 0.4764,
-        "Ancile": 0.4713
+        "The Reaper": 0.4764
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -291628,6 +291628,7 @@
         "Berserker's Shield": 0.5014,
         "Umbral Link": 0.501,
         "Yogi's Necklace": 0.5009,
+        "Mystical Mail": 0.4944,
         "Shogun's Ofuda": 0.4943,
         "Avenging Blade": 0.4928,
         "Breastplate of Valor": 0.4897,
@@ -291638,8 +291639,7 @@
         "Contagion": 0.4722,
         "Screeching Gargoyle": 0.4715,
         "Stone of Binding": 0.4704,
-        "Stampede": 0.4666,
-        "Hussar's Wings": 0.4619
+        "Stampede": 0.4666
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -291736,21 +291736,21 @@
         "Death Metal": 0.5644,
         "Demon Blade": 0.5538,
         "Eros' Bow": 0.548,
+        "Lernaean Bow": 0.5456,
         "Dominance": 0.5329,
         "Bragi's Harp": 0.5275,
+        "Golden Blade": 0.5242,
         "Blood-Bound Book": 0.5212,
         "Bloodforge": 0.5207,
         "Bancroft's Talon": 0.4894,
         "Silverbranch Bow": 0.4855,
         "Qin's Blade": 0.482,
-        "Lernaean Bow": 0.4706,
         "Tekko-Kagi": 0.47,
         "Rod of Asclepius": 0.4676,
         "Nimble Ring": 0.4587,
         "Gluttonous Grimoire": 0.4553,
         "Jotunn's Revenge": 0.452,
         "Lifebinder": 0.4502,
-        "Golden Blade": 0.4492,
         "Hydra's Lament": 0.447,
         "Rage": 0.4462,
         "Bracer of The Abyss": 0.4425,
@@ -291865,6 +291865,7 @@
         "Shield Splitter": 0.5781,
         "Toxic Blade": 0.5756,
         "Shogun's Ofuda": 0.5688,
+        "Golden Blade": 0.5534,
         "Stygian Anchor": 0.5515,
         "Glorious Pridwen": 0.5489,
         "Void Shield": 0.5486,
@@ -291886,16 +291887,15 @@
         "The Reaper": 0.4933,
         "Yogi's Necklace": 0.4929,
         "Tyrfing": 0.4921,
+        "Mystical Mail": 0.487,
         "Shifter's Shield": 0.4797,
-        "Golden Blade": 0.4784,
         "Spirit Robe": 0.4747,
         "Avenging Blade": 0.4734,
         "Gladiator's Shield": 0.4729,
         "Stone of Binding": 0.4716,
+        "Lernaean Bow": 0.4701,
         "Riptalon": 0.4672,
-        "Contagion": 0.4642,
-        "Breastplate of Valor": 0.4627,
-        "Stampede": 0.4592
+        "Contagion": 0.4642
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -291997,20 +291997,20 @@
         "Toxic Blade": 0.6003,
         "Bloodforge": 0.5985,
         "Riptalon": 0.584,
+        "Golden Blade": 0.5412,
         "Sanguine Lash": 0.5325,
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Silverbranch Bow": 0.4818,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
-        "Golden Blade": 0.4662,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -292115,13 +292115,13 @@
         "Tyrfing": 0.6434,
         "Riptalon": 0.6339,
         "Demon Blade": 0.6146,
+        "Golden Blade": 0.5976,
+        "Lernaean Bow": 0.5932,
         "Dominance": 0.5805,
         "Bloodforge": 0.5633,
         "Toxic Blade": 0.5615,
         "The Reaper": 0.5492,
         "Qin's Blade": 0.525,
-        "Golden Blade": 0.5226,
-        "Lernaean Bow": 0.5182,
         "Rage": 0.4898,
         "Sanguine Lash": 0.4852,
         "Devourer's Gauntlet": 0.4803,
@@ -292135,12 +292135,14 @@
         "Hydra's Lament": 0.4323,
         "Dagger of Frenzy": 0.4265,
         "Shogun's Ofuda": 0.4054,
+        "Odysseus' Bow": 0.4014,
         "Amanita Charm": 0.3999,
         "Berserker's Shield": 0.3969,
         "Runeforged Hammer": 0.39,
         "Avenging Blade": 0.3796,
         "Heartseeker": 0.3788,
         "Yogi's Necklace": 0.3669,
+        "Sun Beam Bow": 0.3666,
         "Eye of the Storm": 0.3636,
         "Jotunn's Revenge": 0.3543,
         "The Crusher": 0.349,
@@ -292149,9 +292151,7 @@
         "Transcendence": 0.3401,
         "Oath-Sworn Spear": 0.3383,
         "Titan's Bane": 0.3309,
-        "Odysseus' Bow": 0.3264,
-        "Contagion": 0.323,
-        "Chandra's Grace": 0.3173
+        "Contagion": 0.323
       },
       "arena": {
         "Golden Blade": 0.6476,
@@ -292270,6 +292270,7 @@
         "Umbral Link": 0.492,
         "Oni Hunter's Garb": 0.4888,
         "Gladiator's Shield": 0.4835,
+        "Mystical Mail": 0.4774,
         "Helm of Radiance": 0.4757,
         "Breastplate of Valor": 0.4733,
         "Bancroft's Talon": 0.4733,
@@ -292278,8 +292279,7 @@
         "Regrowth Striders": 0.4685,
         "Contagion": 0.4642,
         "Spear of the Magus": 0.4615,
-        "Shifter's Shield": 0.4605,
-        "Prophetic Cloak": 0.4568
+        "Shifter's Shield": 0.4605
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -292377,6 +292377,7 @@
         "Jotunn's Revenge": 0.5118,
         "Blood-Bound Book": 0.5076,
         "Tyrfing": 0.5076,
+        "Lernaean Bow": 0.5074,
         "Bloodforge": 0.4968,
         "Dominance": 0.4948,
         "Demon Blade": 0.4925,
@@ -292386,6 +292387,7 @@
         "Tekko-Kagi": 0.4782,
         "Bancroft's Talon": 0.4759,
         "Rod of Asclepius": 0.4629,
+        "Golden Blade": 0.4618,
         "Hydra's Lament": 0.4605,
         "Titan's Bane": 0.4598,
         "Heartseeker": 0.4566,
@@ -292393,7 +292395,6 @@
         "Divine Ruin": 0.4375,
         "Qin's Blade": 0.4346,
         "Obsidian Shard": 0.433,
-        "Lernaean Bow": 0.4324,
         "Nimble Ring": 0.4221,
         "Umbral Link": 0.4217,
         "Sanguine Lash": 0.4186,
@@ -292406,8 +292407,7 @@
         "Amanita Charm": 0.3999,
         "Pendulum Blade": 0.3951,
         "Ethereal Staff": 0.3945,
-        "Pharaoh's Curse": 0.394,
-        "Golden Blade": 0.3868
+        "Pharaoh's Curse": 0.394
       },
       "arena": {
         "Soul Gem": 0.7979,
@@ -292627,13 +292627,13 @@
         "Demon Blade": 0.6168,
         "Riptalon": 0.6151,
         "Tyrfing": 0.6074,
+        "Lernaean Bow": 0.5826,
         "Dominance": 0.5699,
+        "Golden Blade": 0.5616,
         "Toxic Blade": 0.5449,
         "Bloodforge": 0.5418,
         "The Reaper": 0.5276,
         "Qin's Blade": 0.5084,
-        "Lernaean Bow": 0.5076,
-        "Golden Blade": 0.4866,
         "Rage": 0.4832,
         "Sanguine Lash": 0.4636,
         "Devourer's Gauntlet": 0.4587,
@@ -292646,6 +292646,7 @@
         "Barbed Carver": 0.4233,
         "Shogun's Ofuda": 0.4142,
         "Hydra's Lament": 0.4129,
+        "Odysseus' Bow": 0.4102,
         "Dagger of Frenzy": 0.4099,
         "Berserker's Shield": 0.4057,
         "Amanita Charm": 0.3999,
@@ -292653,8 +292654,8 @@
         "Yogi's Necklace": 0.3669,
         "Avenging Blade": 0.3602,
         "Heartseeker": 0.3594,
+        "Sun Beam Bow": 0.35,
         "Eye of the Storm": 0.3442,
-        "Odysseus' Bow": 0.3352,
         "Jotunn's Revenge": 0.3349,
         "Hastened Fatalis": 0.332,
         "The Crusher": 0.3296,
@@ -292662,8 +292663,7 @@
         "Contagion": 0.323,
         "Transcendence": 0.3207,
         "Oath-Sworn Spear": 0.3189,
-        "Chandra's Grace": 0.3173,
-        "Titan's Bane": 0.3115
+        "Chandra's Grace": 0.3173
       },
       "arena": {
         "Lernaean Bow": 0.6326,
@@ -292766,6 +292766,7 @@
         "Lifebinder": 0.5434,
         "Shield Splitter": 0.536,
         "Stygian Anchor": 0.5292,
+        "Golden Blade": 0.529,
         "Void Shield": 0.5286,
         "Void Stone": 0.5255,
         "Glorious Pridwen": 0.5208,
@@ -292779,6 +292780,7 @@
         "Umbral Link": 0.4905,
         "Doublet of Binding": 0.4888,
         "Genji's Guard": 0.4879,
+        "Lernaean Bow": 0.4873,
         "Draconic Scale": 0.4842,
         "Yogi's Necklace": 0.484,
         "Oni Hunter's Garb": 0.4784,
@@ -292789,9 +292791,7 @@
         "Hydra's Lament": 0.47,
         "Jotunn's Revenge": 0.4694,
         "Riptalon": 0.4688,
-        "Bragi's Harp": 0.4642,
-        "Wyrmskin Hide": 0.4596,
-        "Contagion": 0.4553
+        "Mystical Mail": 0.467
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -292885,6 +292885,7 @@
         "Riptalon": 0.6108,
         "The Reaper": 0.5842,
         "Tyrfing": 0.5736,
+        "Lernaean Bow": 0.5609,
         "Jotunn's Revenge": 0.5601,
         "Tekko-Kagi": 0.5588,
         "Death Metal": 0.5584,
@@ -292895,15 +292896,14 @@
         "Silverbranch Bow": 0.5311,
         "Heartseeker": 0.5304,
         "Demon Blade": 0.5279,
+        "Golden Blade": 0.5278,
         "The Crusher": 0.4867,
-        "Lernaean Bow": 0.4859,
         "Hydra's Lament": 0.4815,
         "Rod of Asclepius": 0.4711,
         "Obsidian Shard": 0.4684,
         "Bloodforge": 0.4618,
         "Qin's Blade": 0.454,
         "Lifebinder": 0.4538,
-        "Golden Blade": 0.4528,
         "Divine Ruin": 0.4456,
         "Pendulum Blade": 0.4433,
         "Gluttonous Grimoire": 0.4419,
@@ -293030,6 +293030,7 @@
         "Ethereal Staff": 0.5543,
         "Oni Hunter's Garb": 0.5503,
         "Gladiator's Shield": 0.5489,
+        "Mystical Mail": 0.5389,
         "Prophetic Cloak": 0.5376,
         "Hussar's Wings": 0.5359,
         "Spirit Robe": 0.5324,
@@ -293046,8 +293047,7 @@
         "Brawler\u2019s Beat Stick": 0.5004,
         "Midgardian Mail": 0.4997,
         "Screeching Gargoyle": 0.4974,
-        "Leviathan's Hide": 0.4959,
-        "Eros' Bow": 0.4911
+        "Leviathan's Hide": 0.4959
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -293286,6 +293286,7 @@
         "Oni Hunter's Garb": 0.5532,
         "Genji's Guard": 0.5495,
         "Gladiator's Shield": 0.5478,
+        "Mystical Mail": 0.5418,
         "Hussar's Wings": 0.5344,
         "Eye of Providence": 0.5302,
         "Umbral Link": 0.5261,
@@ -293302,8 +293303,7 @@
         "Eros' Bow": 0.5016,
         "Leviathan's Hide": 0.4987,
         "Contagion": 0.4945,
-        "Magi's Cloak": 0.4942,
-        "Brawler\u2019s Beat Stick": 0.4917
+        "Magi's Cloak": 0.4942
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -293403,22 +293403,22 @@
         "Toxic Blade": 0.6646,
         "Avatar's Parashu": 0.6419,
         "Hydra's Lament": 0.6399,
+        "Golden Blade": 0.6248,
         "Tekko-Kagi": 0.6227,
         "Bloodforge": 0.5985,
         "Silverbranch Bow": 0.5654,
-        "Golden Blade": 0.5498,
         "Sanguine Lash": 0.5325,
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Qin's Blade": 0.403,
@@ -293529,6 +293529,7 @@
         "Tyrfing": 0.5123,
         "Jotunn's Revenge": 0.5107,
         "Blood-Bound Book": 0.5087,
+        "Lernaean Bow": 0.5063,
         "Bloodforge": 0.4957,
         "Dominance": 0.4936,
         "Demon Blade": 0.4914,
@@ -293537,6 +293538,7 @@
         "Bragi's Harp": 0.4847,
         "Tekko-Kagi": 0.4771,
         "Bancroft's Talon": 0.477,
+        "Golden Blade": 0.4665,
         "Rod of Asclepius": 0.4641,
         "Hydra's Lament": 0.4593,
         "Titan's Bane": 0.4586,
@@ -293545,7 +293547,6 @@
         "Qin's Blade": 0.4404,
         "Divine Ruin": 0.4386,
         "Obsidian Shard": 0.4341,
-        "Lernaean Bow": 0.4313,
         "Nimble Ring": 0.4232,
         "Umbral Link": 0.4217,
         "Spear of Desolation": 0.4197,
@@ -293558,8 +293559,7 @@
         "Amanita Charm": 0.3999,
         "Ethereal Staff": 0.3956,
         "Pharaoh's Curse": 0.394,
-        "Pendulum Blade": 0.394,
-        "Golden Blade": 0.3915
+        "Pendulum Blade": 0.394
       },
       "arena": {
         "Soul Gem": 0.7979,
@@ -293659,13 +293659,13 @@
         "Tyrfing": 0.6,
         "The Crusher": 0.5967,
         "Tekko-Kagi": 0.5862,
+        "Golden Blade": 0.5542,
+        "Lernaean Bow": 0.5446,
         "Silverbranch Bow": 0.5346,
         "Dominance": 0.5319,
         "Bloodforge": 0.5283,
         "Avatar's Parashu": 0.5186,
         "Arondight": 0.483,
-        "Golden Blade": 0.4792,
-        "Lernaean Bow": 0.4696,
         "Sanguine Lash": 0.4623,
         "Chandra's Grace": 0.4581,
         "Runeforged Hammer": 0.4576,
@@ -293939,11 +293939,11 @@
         "Hydra's Lament": 0.4817,
         "Titan's Bane": 0.4814,
         "Wyrmskin Hide": 0.4801,
+        "Mystical Mail": 0.4793,
         "Shogun's Ofuda": 0.4793,
         "Heartseeker": 0.4782,
         "Shifter's Shield": 0.4678,
-        "Spirit Robe": 0.4662,
-        "Stone of Binding": 0.4631
+        "Spirit Robe": 0.4662
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -294303,6 +294303,7 @@
         "Dominance": 0.4887,
         "Chandra's Grace": 0.4795,
         "Avenging Blade": 0.4794,
+        "Lernaean Bow": 0.4676,
         "Eye of the Storm": 0.4634,
         "Shield Splitter": 0.4436,
         "Barbed Carver": 0.4421,
@@ -294313,8 +294314,8 @@
         "Tyrfing": 0.435,
         "Amanita Charm": 0.3999,
         "Shield of the Phoenix": 0.3959,
-        "Lernaean Bow": 0.3926,
         "Rage": 0.3913,
+        "Golden Blade": 0.376,
         "Genji's Guard": 0.3727,
         "Yogi's Necklace": 0.3669,
         "Wyrmskin Hide": 0.3505,
@@ -294324,8 +294325,7 @@
         "Demon Blade": 0.3356,
         "Regrowth Striders": 0.3346,
         "Musashi's Dual Swords": 0.3306,
-        "Umbral Link": 0.328,
-        "Contagion": 0.323
+        "Umbral Link": 0.328
       },
       "arena": {
         "Jotunn's Revenge": 0.8151,
@@ -294429,6 +294429,7 @@
         "Jotunn's Revenge": 0.4948,
         "Divine Ruin": 0.4914,
         "Obsidian Shard": 0.4885,
+        "Lernaean Bow": 0.4798,
         "Bloodforge": 0.4787,
         "Tyrfing": 0.4766,
         "Spear of Desolation": 0.4677,
@@ -294443,17 +294444,16 @@
         "Heartseeker": 0.446,
         "Hydra's Lament": 0.442,
         "Spear of the Magus": 0.4334,
+        "Golden Blade": 0.4308,
         "Triton's Conch": 0.4238,
         "Lotus Sickle": 0.4177,
         "Umbral Link": 0.4158,
         "Qin's Blade": 0.4158,
         "Chandra's Grace": 0.4102,
-        "Lernaean Bow": 0.4048,
         "Doom Orb": 0.4027,
         "The Crusher": 0.4022,
         "The World Stone": 0.4021,
-        "Sanguine Lash": 0.4005,
-        "Amanita Charm": 0.3999
+        "Sanguine Lash": 0.4005
       },
       "arena": {
         "Soul Gem": 0.7979,
@@ -294547,10 +294547,12 @@
         "Riptalon": 0.6345,
         "Tyrfing": 0.5967,
         "The Reaper": 0.5835,
+        "Lernaean Bow": 0.5602,
         "Jotunn's Revenge": 0.5594,
         "Death Metal": 0.5584,
         "Tekko-Kagi": 0.5582,
         "Silverbranch Bow": 0.5548,
+        "Golden Blade": 0.5509,
         "Dominance": 0.5476,
         "Bragi's Harp": 0.5463,
         "Eros' Bow": 0.5359,
@@ -294558,10 +294560,8 @@
         "Heartseeker": 0.5298,
         "Demon Blade": 0.5273,
         "The Crusher": 0.4861,
-        "Lernaean Bow": 0.4852,
         "Hydra's Lament": 0.4809,
         "Qin's Blade": 0.4777,
-        "Golden Blade": 0.4759,
         "Rod of Asclepius": 0.4718,
         "Obsidian Shard": 0.469,
         "Bloodforge": 0.4612,
@@ -294698,6 +294698,7 @@
         "Berserker's Shield": 0.5045,
         "The Reaper": 0.5006,
         "Yogi's Necklace": 0.4975,
+        "Mystical Mail": 0.4975,
         "Shogun's Ofuda": 0.4974,
         "Shifter's Shield": 0.496,
         "Breastplate of Valor": 0.493,
@@ -294708,8 +294709,7 @@
         "Stone of Binding": 0.4832,
         "Toxic Blade": 0.4794,
         "Screeching Gargoyle": 0.4748,
-        "Hussar's Wings": 0.4714,
-        "Stampede": 0.4697
+        "Hussar's Wings": 0.4714
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -294938,6 +294938,7 @@
         "Rod of Asclepius": 0.5372,
         "Toxic Blade": 0.5337,
         "Obsidian Shard": 0.5277,
+        "Lernaean Bow": 0.5219,
         "Lifebinder": 0.5199,
         "Spear of Desolation": 0.5175,
         "Tekko-Kagi": 0.5131,
@@ -294953,7 +294954,6 @@
         "Hydra's Lament": 0.4686,
         "Triton's Conch": 0.46,
         "Lotus Sickle": 0.4487,
-        "Lernaean Bow": 0.4469,
         "Tyrfing": 0.4443,
         "Doom Orb": 0.4419,
         "The World Stone": 0.4414,
@@ -295084,6 +295084,7 @@
         "Titan's Bane": 0.4911,
         "Hydra's Lament": 0.4903,
         "Heartseeker": 0.488,
+        "Mystical Mail": 0.4868,
         "Shogun's Ofuda": 0.4867,
         "Shifter's Shield": 0.4794,
         "Spirit Robe": 0.4745,
@@ -295092,8 +295093,7 @@
         "Avenging Blade": 0.468,
         "Contagion": 0.4641,
         "Breastplate of Valor": 0.4625,
-        "Stampede": 0.459,
-        "Regrowth Striders": 0.4578
+        "Stampede": 0.459
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -295186,11 +295186,12 @@
         "Toxic Blade": 0.6094,
         "Pharaoh's Curse": 0.5899,
         "Berserker's Shield": 0.5893,
+        "Golden Blade": 0.5881,
         "Shogun's Ofuda": 0.5709,
         "Erosion": 0.5311,
         "Shield of the Phoenix": 0.5304,
         "Tyrfing": 0.526,
-        "Golden Blade": 0.5131,
+        "Lernaean Bow": 0.5202,
         "Runeforged Hammer": 0.5083,
         "Dominance": 0.5075,
         "Kinetic Cuirass": 0.5046,
@@ -295215,13 +295216,12 @@
         "Wyrmskin Hide": 0.4536,
         "Oni Hunter's Garb": 0.4516,
         "Bloodforge": 0.4484,
-        "Lernaean Bow": 0.4452,
         "Titan's Bane": 0.4439,
         "Tekko-Kagi": 0.442,
         "Heartseeker": 0.4408,
+        "Mystical Mail": 0.4401,
         "Genji's Guard": 0.4239,
-        "Draconic Scale": 0.4209,
-        "Silverbranch Bow": 0.4206
+        "Draconic Scale": 0.4209
       },
       "arena": {
         "Amanita Charm": 0.762,
@@ -295323,6 +295323,7 @@
         "Avatar's Parashu": 0.5751,
         "Bloodforge": 0.5605,
         "Tekko-Kagi": 0.5559,
+        "Golden Blade": 0.5479,
         "Arondight": 0.5366,
         "Silverbranch Bow": 0.4979,
         "Sanguine Lash": 0.4944,
@@ -295331,7 +295332,7 @@
         "Dominance": 0.4887,
         "Chandra's Grace": 0.4795,
         "Avenging Blade": 0.4794,
-        "Golden Blade": 0.4729,
+        "Lernaean Bow": 0.4676,
         "Eye of the Storm": 0.4634,
         "Shield Splitter": 0.4436,
         "Barbed Carver": 0.4421,
@@ -295339,7 +295340,6 @@
         "Oath-Sworn Spear": 0.4381,
         "Amanita Charm": 0.3999,
         "Shield of the Phoenix": 0.3959,
-        "Lernaean Bow": 0.3926,
         "Rage": 0.3913,
         "Genji's Guard": 0.3727,
         "Yogi's Necklace": 0.3669,
@@ -295574,12 +295574,14 @@
         "Eros' Bow": 0.6116,
         "Silverbranch Bow": 0.6085,
         "Blood-Bound Book": 0.5902,
+        "Golden Blade": 0.5831,
         "Bragi's Harp": 0.5821,
         "Gluttonous Grimoire": 0.5794,
         "Bancroft's Talon": 0.5584,
         "Qin's Blade": 0.5498,
         "Rod of Asclepius": 0.54,
         "Jotunn's Revenge": 0.5325,
+        "Lernaean Bow": 0.5278,
         "Lifebinder": 0.5226,
         "Nimble Ring": 0.5189,
         "Obsidian Shard": 0.5189,
@@ -295587,7 +295589,6 @@
         "Divine Ruin": 0.5145,
         "Spear of Desolation": 0.5102,
         "Bloodforge": 0.5084,
-        "Golden Blade": 0.5081,
         "Tekko-Kagi": 0.5074,
         "Bracer of The Abyss": 0.5061,
         "Titan's Bane": 0.4747,
@@ -295597,7 +295598,6 @@
         "Triton's Conch": 0.4651,
         "Spear of the Magus": 0.4638,
         "Lotus Sickle": 0.4529,
-        "Lernaean Bow": 0.4528,
         "Dagger of Frenzy": 0.4514,
         "Death Metal": 0.4428,
         "Doom Orb": 0.4331,
@@ -295950,6 +295950,7 @@
       "joust": {
         "The Reaper": 0.6199,
         "Riptalon": 0.6116,
+        "Lernaean Bow": 0.5354,
         "Demon Blade": 0.5329,
         "Toxic Blade": 0.5228,
         "Dominance": 0.5227,
@@ -295958,7 +295959,6 @@
         "Jotunn's Revenge": 0.5051,
         "Titan's Bane": 0.4829,
         "Heartseeker": 0.4798,
-        "Lernaean Bow": 0.4604,
         "Tyrfing": 0.4577,
         "Hydra's Lament": 0.446,
         "Sanguine Lash": 0.4389,
@@ -295967,6 +295967,7 @@
         "Devourer's Gauntlet": 0.4341,
         "Silverbranch Bow": 0.4268,
         "Umbral Link": 0.4265,
+        "Golden Blade": 0.4213,
         "Pharaoh's Curse": 0.4065,
         "Amanita Charm": 0.3999,
         "Barbed Carver": 0.3987,
@@ -295975,19 +295976,18 @@
         "Chandra's Grace": 0.3866,
         "Deathbringer": 0.3865,
         "Shogun's Ofuda": 0.3775,
+        "Odysseus' Bow": 0.3736,
         "Berserker's Shield": 0.369,
         "Yogi's Necklace": 0.3669,
         "Runeforged Hammer": 0.36,
         "Qin's Blade": 0.3599,
         "Avatar's Parashu": 0.358,
         "Avenging Blade": 0.3497,
-        "Golden Blade": 0.3463,
         "Eye of the Storm": 0.3336,
         "Contagion": 0.323,
         "Arondight": 0.314,
         "Shield Splitter": 0.3139,
-        "Transcendence": 0.3101,
-        "Oath-Sworn Spear": 0.3084
+        "Transcendence": 0.3101
       },
       "arena": {
         "The Reaper": 0.6199,
@@ -296097,15 +296097,15 @@
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
+        "Golden Blade": 0.5173,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
         "Silverbranch Bow": 0.4579,
-        "Golden Blade": 0.4423,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -296233,17 +296233,17 @@
         "Genji's Guard": 0.4787,
         "Oni Hunter's Garb": 0.4779,
         "Stygian Anchor": 0.4765,
+        "Golden Blade": 0.4743,
         "Pharaoh's Curse": 0.4742,
         "Berserker's Shield": 0.4736,
         "Bloodforge": 0.4713,
+        "Mystical Mail": 0.4665,
         "Shogun's Ofuda": 0.4664,
         "Umbral Link": 0.4642,
         "Gladiator's Shield": 0.4637,
         "Draconic Scale": 0.4574,
         "Freya's Tears": 0.4552,
-        "Stampede": 0.4387,
-        "Breastplate of Valor": 0.4365,
-        "Regrowth Striders": 0.4317
+        "Stampede": 0.4387
       },
       "arena": {
         "Amanita Charm": 0.7985,
@@ -296482,6 +296482,7 @@
         "Oni Hunter's Garb": 0.5544,
         "Genji's Guard": 0.5525,
         "Gladiator's Shield": 0.5453,
+        "Mystical Mail": 0.5429,
         "Hussar's Wings": 0.5421,
         "Eye of Providence": 0.5379,
         "Spirit Robe": 0.5368,
@@ -296498,8 +296499,7 @@
         "Brawler\u2019s Beat Stick": 0.5049,
         "Midgardian Mail": 0.5037,
         "Leviathan's Hide": 0.4999,
-        "Helm of Darkness": 0.494,
-        "Eros' Bow": 0.4937
+        "Helm of Darkness": 0.494
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -296735,6 +296735,7 @@
         "Void Stone": 0.5337,
         "Phoenix Feather": 0.5278,
         "The Reaper": 0.524,
+        "Golden Blade": 0.5235,
         "Avenging Blade": 0.5198,
         "Sanguine Lash": 0.5198,
         "Toxic Blade": 0.5189,
@@ -296742,6 +296743,7 @@
         "Yogi's Necklace": 0.5152,
         "Chandra's Grace": 0.5129,
         "Wyrmskin Hide": 0.5117,
+        "Lernaean Bow": 0.5081,
         "Jotunn's Revenge": 0.4999,
         "Doublet of Binding": 0.497,
         "Dominance": 0.4954,
@@ -296751,11 +296753,9 @@
         "Oni Hunter's Garb": 0.4866,
         "Contagion": 0.4865,
         "Stygian Anchor": 0.4832,
+        "Mystical Mail": 0.4752,
         "Titan's Bane": 0.4734,
-        "Bloodforge": 0.4714,
-        "Heartseeker": 0.4703,
-        "Draconic Scale": 0.4694,
-        "Umbral Link": 0.4675
+        "Bloodforge": 0.4714
       },
       "arena": {
         "Amanita Charm": 0.8106,
@@ -296857,20 +296857,20 @@
         "Toxic Blade": 0.5991,
         "Bloodforge": 0.5985,
         "Riptalon": 0.5828,
+        "Golden Blade": 0.54,
         "Sanguine Lash": 0.5325,
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Silverbranch Bow": 0.4806,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
-        "Golden Blade": 0.465,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -296998,6 +296998,7 @@
         "Sphere of Negation": 0.5238,
         "Prophetic Cloak": 0.5225,
         "Umbral Link": 0.5186,
+        "Mystical Mail": 0.5175,
         "Breastplate of Valor": 0.5124,
         "Eros' Bow": 0.509,
         "Spirit Robe": 0.5086,
@@ -297010,8 +297011,7 @@
         "Helm of Darkness": 0.4924,
         "Stampede": 0.4897,
         "Divine Ruin": 0.4869,
-        "Magi's Cloak": 0.4792,
-        "Midgardian Mail": 0.4783
+        "Magi's Cloak": 0.4792
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -297114,19 +297114,19 @@
         "Toxic Blade": 0.5904,
         "Riptalon": 0.5741,
         "Sanguine Lash": 0.5325,
+        "Golden Blade": 0.5313,
         "Runeforged Hammer": 0.5278,
         "Devourer's Gauntlet": 0.5276,
         "Dominance": 0.5267,
         "Avenging Blade": 0.5175,
         "Arondight": 0.5079,
+        "Lernaean Bow": 0.5056,
         "Eye of the Storm": 0.5014,
         "Shield Splitter": 0.4817,
         "Barbed Carver": 0.4801,
         "Transcendence": 0.4779,
         "Oath-Sworn Spear": 0.4762,
         "Silverbranch Bow": 0.4718,
-        "Golden Blade": 0.4563,
-        "Lernaean Bow": 0.4306,
         "Rage": 0.4294,
         "Chandra's Grace": 0.4128,
         "Amanita Charm": 0.3999,
@@ -297373,6 +297373,7 @@
         "Avenging Blade": 0.528,
         "Phoenix Feather": 0.524,
         "Wyrmskin Hide": 0.5235,
+        "Golden Blade": 0.5192,
         "The Crusher": 0.5174,
         "Spectral Armor": 0.5116,
         "Hydra's Lament": 0.5079,
@@ -297386,6 +297387,7 @@
         "Pharaoh's Curse": 0.479,
         "Berserker's Shield": 0.4785,
         "Pendulum Blade": 0.4752,
+        "Mystical Mail": 0.4714,
         "Shogun's Ofuda": 0.4713,
         "Umbral Link": 0.4711,
         "Draconic Scale": 0.4692,
@@ -297393,9 +297395,7 @@
         "Glorious Pridwen": 0.4605,
         "Riptalon": 0.4604,
         "Genji's Guard": 0.4471,
-        "Golden Blade": 0.4442,
-        "Stampede": 0.4436,
-        "Avatar's Parashu": 0.4393
+        "Stampede": 0.4436
       },
       "arena": {
         "Amanita Charm": 0.8104,
@@ -297489,10 +297489,12 @@
         "Riptalon": 0.6319,
         "Tyrfing": 0.5928,
         "The Reaper": 0.5823,
+        "Lernaean Bow": 0.559,
         "Death Metal": 0.5584,
         "Jotunn's Revenge": 0.5582,
         "Tekko-Kagi": 0.5569,
         "Silverbranch Bow": 0.5522,
+        "Golden Blade": 0.547,
         "Bragi's Harp": 0.5463,
         "Dominance": 0.5463,
         "Eros' Bow": 0.5372,
@@ -297500,11 +297502,9 @@
         "Heartseeker": 0.5285,
         "Demon Blade": 0.526,
         "The Crusher": 0.4848,
-        "Lernaean Bow": 0.484,
         "Hydra's Lament": 0.4796,
         "Qin's Blade": 0.4751,
         "Rod of Asclepius": 0.473,
-        "Golden Blade": 0.472,
         "Obsidian Shard": 0.4703,
         "Bloodforge": 0.4599,
         "Lifebinder": 0.4557,
@@ -297616,16 +297616,17 @@
         "The Reaper": 0.6054,
         "Toxic Blade": 0.5863,
         "Jotunn's Revenge": 0.5253,
+        "Lernaean Bow": 0.5209,
         "Tyrfing": 0.5205,
         "Demon Blade": 0.5099,
         "Dominance": 0.5082,
         "Bloodforge": 0.5078,
         "Tekko-Kagi": 0.4941,
         "Silverbranch Bow": 0.4903,
+        "Golden Blade": 0.4747,
         "Titan's Bane": 0.4717,
         "Hydra's Lament": 0.4715,
         "Heartseeker": 0.4685,
-        "Lernaean Bow": 0.4459,
         "Qin's Blade": 0.438,
         "Sanguine Lash": 0.4296,
         "The Crusher": 0.4248,
@@ -297635,13 +297636,13 @@
         "Chandra's Grace": 0.4182,
         "Pendulum Blade": 0.4086,
         "Amanita Charm": 0.3999,
-        "Golden Blade": 0.3997,
         "Pharaoh's Curse": 0.3979,
         "Barbed Carver": 0.3894,
         "Musashi's Dual Swords": 0.3829,
         "Deathbringer": 0.372,
         "Shogun's Ofuda": 0.369,
         "Yogi's Necklace": 0.3669,
+        "Odysseus' Bow": 0.3651,
         "Berserker's Shield": 0.3605,
         "Runeforged Hammer": 0.354,
         "Avatar's Parashu": 0.3467,
@@ -297650,8 +297651,7 @@
         "Arondight": 0.3395,
         "Shield of the Phoenix": 0.3345,
         "Eye of the Storm": 0.3276,
-        "Contagion": 0.323,
-        "Genji's Guard": 0.3113
+        "Contagion": 0.323
       },
       "arena": {
         "Riptalon": 0.6531,
@@ -297871,13 +297871,13 @@
         "Riptalon": 0.6548,
         "Tyrfing": 0.6471,
         "Demon Blade": 0.6168,
+        "Golden Blade": 0.6013,
         "Toxic Blade": 0.5846,
+        "Lernaean Bow": 0.5826,
         "Dominance": 0.5699,
         "Qin's Blade": 0.548,
         "Bloodforge": 0.5418,
         "The Reaper": 0.5276,
-        "Golden Blade": 0.5263,
-        "Lernaean Bow": 0.5076,
         "Rage": 0.4832,
         "Silverbranch Bow": 0.4746,
         "Sanguine Lash": 0.4636,
@@ -297891,23 +297891,23 @@
         "Barbed Carver": 0.4233,
         "Shogun's Ofuda": 0.4142,
         "Hydra's Lament": 0.4129,
+        "Odysseus' Bow": 0.4102,
         "Berserker's Shield": 0.4057,
         "Amanita Charm": 0.3999,
+        "Sun Beam Bow": 0.3897,
         "Hastened Fatalis": 0.3717,
         "Runeforged Hammer": 0.3706,
         "Yogi's Necklace": 0.3669,
         "Avenging Blade": 0.3602,
         "Heartseeker": 0.3594,
         "Eye of the Storm": 0.3442,
-        "Odysseus' Bow": 0.3352,
         "Jotunn's Revenge": 0.3349,
         "The Crusher": 0.3296,
         "Shield Splitter": 0.3244,
         "Contagion": 0.323,
         "Transcendence": 0.3207,
         "Oath-Sworn Spear": 0.3189,
-        "Chandra's Grace": 0.3173,
-        "Sun Beam Bow": 0.3147
+        "Chandra's Grace": 0.3173
       },
       "arena": {
         "Riptalon": 0.6548,
@@ -298018,6 +298018,7 @@
         "Oni Hunter's Garb": 0.5544,
         "Genji's Guard": 0.5525,
         "Gladiator's Shield": 0.5453,
+        "Mystical Mail": 0.5429,
         "Hussar's Wings": 0.5421,
         "Eye of Providence": 0.5379,
         "Spirit Robe": 0.5368,
@@ -298034,8 +298035,7 @@
         "Brawler\u2019s Beat Stick": 0.5049,
         "Midgardian Mail": 0.5037,
         "Leviathan's Hide": 0.4999,
-        "Helm of Darkness": 0.494,
-        "Eros' Bow": 0.4937
+        "Helm of Darkness": 0.494
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -298150,6 +298150,7 @@
         "Sphere of Negation": 0.5238,
         "Prophetic Cloak": 0.5225,
         "Umbral Link": 0.5186,
+        "Mystical Mail": 0.5175,
         "Breastplate of Valor": 0.5124,
         "Eros' Bow": 0.509,
         "Spirit Robe": 0.5086,
@@ -298162,8 +298163,7 @@
         "Helm of Darkness": 0.4924,
         "Stampede": 0.4897,
         "Divine Ruin": 0.4869,
-        "Magi's Cloak": 0.4792,
-        "Midgardian Mail": 0.4783
+        "Magi's Cloak": 0.4792
       },
       "arena": {
         "Amanita Charm": 0.8123,
@@ -298275,6 +298275,7 @@
         "Ethereal Staff": 0.5553,
         "Genji's Guard": 0.5507,
         "Hussar's Wings": 0.5458,
+        "Mystical Mail": 0.5453,
         "Gladiator's Shield": 0.5446,
         "Eye of Providence": 0.5416,
         "Spirit Robe": 0.5395,
@@ -298290,8 +298291,7 @@
         "Midgardian Mail": 0.5061,
         "Regrowth Striders": 0.5037,
         "Leviathan's Hide": 0.5023,
-        "Mantle Of Discord": 0.4963,
-        "Helm of Darkness": 0.494
+        "Mantle Of Discord": 0.4963
       },
       "arena": {
         "Amanita Charm": 0.8123,

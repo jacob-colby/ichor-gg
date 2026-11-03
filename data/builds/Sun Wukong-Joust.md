@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Berserker's Shield
   - Riptalon
-  - Eros' Bow
   - Amanita Charm
   - Pharaoh's Curse
   flex_slots:
+  - Golden Blade
   - Pharaoh's Curse
-  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Toxic Blade:
       total: 0.67
       efficiency: 0.48
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Eros' Bow:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Amanita Charm:
       total: 0.7
       efficiency: 0.65

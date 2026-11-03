@@ -1120,15 +1120,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Rod of Tahuti
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Rod of Tahuti
   - Tyrfing
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1145,6 +1145,12 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Toxic Blade:
       total: 0.64
       efficiency: 0.48
@@ -1163,12 +1169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.28
     Soul Gem:
       total: 0.79
       efficiency: 0.57

@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
-  - Qin's Blade
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   flex_slots:
   - Silverbranch Bow
-  - Qin's Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Toxic Blade:
       total: 0.72
       efficiency: 0.45
@@ -370,12 +376,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Qin's Blade:
-      total: 0.55
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
     The Reaper:
       total: 0.62
       efficiency: 0.56
