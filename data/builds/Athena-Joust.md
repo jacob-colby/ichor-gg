@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.7
       efficiency: 0.51
       win: 0.5
       pick: 0.0

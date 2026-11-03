@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/yemoja/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.4852941176470588
   god_matches_won: 165
   god_matches_played: 340
@@ -149,7 +149,7 @@ builds:
       fit: 0.3
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.2
@@ -192,13 +192,13 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Amanita Charm, Shield of the Phoenix, Soul Gem, Kinetic
-    Cuirass, Ethereal Staff, Phoenix Feather, Breastplate of Valor, Erosion, Gluttonous
-    Grimoire, Yogi''s Necklace, Chandra''s Grace, Eye of Providence, Draconic Scale,
-    Oni Hunter''s Garb, Rod of Asclepius, Helm of Darkness, Helm of Radiance, Glorious
-    Pridwen, Sphere of Negation, Blood-Bound Book, Regrowth Striders, Midgardian Mail,
-    Shifter''s Shield, Leviathan''s Hide, Jade Scepter, Screeching Gargoyle, Genji''s
-    Guard.'
+    this god: Rod of Tahuti, Amanita Charm, Obsidian Shard, Shield of the Phoenix,
+    Soul Gem, Kinetic Cuirass, Ethereal Staff, Phoenix Feather, Breastplate of Valor,
+    Erosion, Gluttonous Grimoire, Yogi''s Necklace, Chandra''s Grace, Eye of Providence,
+    Draconic Scale, Oni Hunter''s Garb, Rod of Asclepius, Helm of Darkness, Glorious
+    Pridwen, Helm of Radiance, Regrowth Striders, Sphere of Negation, Blood-Bound
+    Book, Midgardian Mail, Shifter''s Shield, Leviathan''s Hide, Screeching Gargoyle,
+    Genji''s Guard.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.54
@@ -226,7 +226,7 @@ builds:
       fit: 0.31
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.21
@@ -270,18 +270,18 @@ builds:
     for this god: Rod of Tahuti, Obsidian Shard, Amanita Charm, Soul Gem, Gluttonous
     Grimoire, Stone of Binding, Screeching Gargoyle, Kinetic Cuirass, Spear of the
     Magus, Void Stone, Void Shield, Breastplate of Valor, Doom Orb, Helm of Radiance,
-    The World Stone, Helm of Darkness, Erosion, Eye of Providence, Oni Hunter''s Garb,
-    Shield of the Phoenix, Dreamer''s Idol, Draconic Scale, Midgardian Mail, Magi''s
+    The World Stone, Helm of Darkness, Erosion, Oni Hunter''s Garb, Eye of Providence,
+    Shield of the Phoenix, Draconic Scale, Dreamer''s Idol, Midgardian Mail, Magi''s
     Cloak, Lotus Sickle, Mantle Of Discord, Shifter''s Shield, Genji''s Guard.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.52
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.54
       pick: 0.0
       fit: 0.68
     Stone of Binding:
-      total: 0.53
+      total: 0.52
       efficiency: 0.5
       win: 0.54
       pick: 0.0
@@ -299,8 +299,8 @@ builds:
       pick: 0.11
       fit: 0.53
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.87
+      total: 0.64
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.43
@@ -341,12 +341,12 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Obsidian Shard, Amanita Charm, Nimble Ring, Soul Gem,
-    Kinetic Cuirass, Gluttonous Grimoire, Breastplate of Valor, Helm of Radiance,
-    Eros'' Bow, Oni Hunter''s Garb, Helm of Darkness, Erosion, Blood-Bound Book, Shield
-    of the Phoenix, Eye of Providence, Stone of Binding, Screeching Gargoyle, Midgardian
-    Mail, Lotus Sickle, Bragi''s Harp, Draconic Scale, Magi''s Cloak, Leviathan''s
-    Hide, Bracer of The Abyss, Mantle Of Discord, Spear of the Magus, Genji''s Guard.'
+    this god: Rod of Tahuti, Obsidian Shard, Amanita Charm, Nimble Ring, Kinetic Cuirass,
+    Soul Gem, Gluttonous Grimoire, Breastplate of Valor, Helm of Radiance, Eros''
+    Bow, Oni Hunter''s Garb, Helm of Darkness, Erosion, Shield of the Phoenix, Eye
+    of Providence, Blood-Bound Book, Stone of Binding, Screeching Gargoyle, Midgardian
+    Mail, Bragi''s Harp, Draconic Scale, Lotus Sickle, Ancient Signet, Magi''s Cloak,
+    Leviathan''s Hide, Mantle Of Discord, Bracer of The Abyss, Genji''s Guard.'
   slot_scores:
     Nimble Ring:
       total: 0.51
@@ -368,7 +368,7 @@ builds:
       fit: 0.21
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.11
@@ -417,10 +417,10 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Obsidian Shard, Amanita
     Charm, Breastplate of Valor, Kinetic Cuirass, Soul Gem, Shield of the Phoenix,
     Screeching Gargoyle, Lotus Sickle, Chronos'' Pendant, Prophetic Cloak, Helm of
-    Radiance, Erosion, Helm of Darkness, Eye of Providence, Oni Hunter''s Garb, Gluttonous
-    Grimoire, Gladiator''s Shield, Draconic Scale, Gem of Focus, Stone of Binding,
-    Heartwood Charm, Midgardian Mail, Magi''s Cloak, Mantle Of Discord, Shifter''s
-    Shield, Leviathan''s Hide, Genji''s Guard.'
+    Radiance, Erosion, Helm of Darkness, Oni Hunter''s Garb, Eye of Providence, Gluttonous
+    Grimoire, Gladiator''s Shield, Draconic Scale, Stone of Binding, Gem of Focus,
+    Midgardian Mail, Heartwood Charm, Magi''s Cloak, Mantle Of Discord, Leviathan''s
+    Hide, Shifter''s Shield, Genji''s Guard.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -448,7 +448,7 @@ builds:
       fit: 0.23
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.13
@@ -492,13 +492,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Obsidian Shard, Berserker''s
     Shield, Jotunn''s Revenge, Amanita Charm, Shield Splitter, Kinetic Cuirass, Runeforged
-    Hammer, Tekko-Kagi, Breastplate of Valor, Hydra''s Lament, Soul Gem, Titan''s
-    Bane, Gluttonous Grimoire, Golden Blade, Helm of Radiance, Tyrfing, The Crusher,
-    Oni Hunter''s Garb, Helm of Darkness, Lernaean Bow, Spear of the Magus, Erosion,
-    Avenging Blade, Death Metal, Eye of Providence, Heartseeker, Shield of the Phoenix,
-    Arondight, Stone of Binding, Draconic Scale, Screeching Gargoyle, Midgardian Mail,
-    The Reaper, Nimble Ring, Lotus Sickle, Magi''s Cloak, Bragi''s Harp, Toxic Blade,
-    Genji''s Guard.'
+    Hammer, Tekko-Kagi, Breastplate of Valor, Hydra''s Lament, Titan''s Bane, Soul
+    Gem, Gluttonous Grimoire, Golden Blade, Helm of Radiance, Tyrfing, The Crusher,
+    Oni Hunter''s Garb, Helm of Darkness, Lernaean Bow, Erosion, Avenging Blade, Spear
+    of the Magus, Death Metal, Shield of the Phoenix, Eye of Providence, Arondight,
+    Heartseeker, Stone of Binding, Draconic Scale, Screeching Gargoyle, The Reaper,
+    Midgardian Mail, Nimble Ring, Magi''s Cloak, Toxic Blade, Bragi''s Harp, Lotus
+    Sickle, Genji''s Guard.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -525,8 +525,8 @@ builds:
       pick: 0.11
       fit: 0.33
     Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.87
+      total: 0.61
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.23
@@ -569,12 +569,12 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Obsidian Shard, Jotunn''s
     Revenge, Amanita Charm, Shield Splitter, Berserker''s Shield, Kinetic Cuirass,
     Soul Gem, Gluttonous Grimoire, Breastplate of Valor, Helm of Radiance, Runeforged
-    Hammer, Helm of Darkness, Hydra''s Lament, Titan''s Bane, Spear of the Magus,
-    Death Metal, Lotus Sickle, Oni Hunter''s Garb, Erosion, Chronos'' Pendant, Eye
-    of Providence, Shield of the Phoenix, The Crusher, Doom Orb, Jade Scepter, Stone
-    of Binding, Draconic Scale, Screeching Gargoyle, The World Stone, Midgardian Mail,
-    Avenging Blade, Magi''s Cloak, Heartseeker, Arondight, Mantle Of Discord, Leviathan''s
-    Hide, The Reaper, Dreamer''s Idol, Genji''s Guard.'
+    Hammer, Titan''s Bane, Hydra''s Lament, Helm of Darkness, Spear of the Magus,
+    Death Metal, Lotus Sickle, Oni Hunter''s Garb, Erosion, Ancient Signet, Chronos''
+    Pendant, Eye of Providence, Shield of the Phoenix, The Crusher, Doom Orb, Draconic
+    Scale, Jade Scepter, Stone of Binding, Screeching Gargoyle, Midgardian Mail, The
+    World Stone, Avenging Blade, Magi''s Cloak, Arondight, Heartseeker, Mantle Of
+    Discord, Leviathan''s Hide, The Reaper, Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -602,7 +602,7 @@ builds:
       fit: 0.42
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.32
@@ -648,8 +648,8 @@ builds:
     Scale, Shield of the Phoenix, Helm of Radiance, Oni Hunter''s Garb, Gluttonous
     Grimoire, Shifter''s Shield, Stone of Binding, Magi''s Cloak, Screeching Gargoyle,
     Midgardian Mail, Soul Gem, Mantle Of Discord, Leviathan''s Hide, Obsidian Shard,
-    Prophetic Cloak, Lotus Sickle, Ancile, Jade Scepter, Chronos'' Pendant, Hide of
-    the Nemean Lion.'
+    Prophetic Cloak, Lotus Sickle, Ancile, Jade Scepter, Hide of the Nemean Lion,
+    Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.44
@@ -677,7 +677,7 @@ builds:
       fit: 0.62
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.2
@@ -723,8 +723,8 @@ builds:
     of Providence, Draconic Scale, Shield of the Phoenix, Helm of Radiance, Oni Hunter''s
     Garb, Gluttonous Grimoire, Shifter''s Shield, Stone of Binding, Magi''s Cloak,
     Screeching Gargoyle, Midgardian Mail, Soul Gem, Mantle Of Discord, Leviathan''s
-    Hide, Obsidian Shard, Prophetic Cloak, Lotus Sickle, Ancile, Jade Scepter, Chronos''
-    Pendant, Hide of the Nemean Lion.'
+    Hide, Obsidian Shard, Prophetic Cloak, Lotus Sickle, Ancile, Jade Scepter, Hide
+    of the Nemean Lion, Chronos'' Pendant.'
   slot_scores:
     Genji's Guard:
       total: 0.44
@@ -752,7 +752,7 @@ builds:
       fit: 0.62
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.13
       fit: 0.2

@@ -32,13 +32,13 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -99,7 +99,7 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.4
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.43
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -183,7 +183,7 @@ builds:
       fit: 0.5
     Heartseeker:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Shield Splitter:
-      total: 0.57
+      total: 0.56
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.68
+      total: 0.69
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -489,13 +489,13 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -554,13 +554,13 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0

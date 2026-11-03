@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -205,20 +205,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Tyrfing
   - Riptalon
   - Amanita Charm
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
   - Pharaoh's Curse
-  - Tyrfing
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -240,14 +240,8 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Tyrfing:
-      total: 0.54
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Riptalon:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -261,6 +255,12 @@ builds:
     Pharaoh's Curse:
       total: 0.55
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Shogun's Ofuda:
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.6

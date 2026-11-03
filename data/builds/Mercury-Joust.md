@@ -63,7 +63,7 @@ builds:
       fit: 0.77
     Heartseeker:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -123,14 +123,14 @@ builds:
       pick: 0.0
       fit: 0.68
     Titan's Bane:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.53
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -195,7 +195,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.57
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.89
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 0.87
     Heartseeker:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -520,7 +520,7 @@ builds:
       fit: 0.77
     Heartseeker:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87

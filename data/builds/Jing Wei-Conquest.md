@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.49117647058823527
   god_matches_won: 167
   god_matches_played: 340
@@ -275,7 +275,7 @@ builds:
     Toxic Blade, The Crusher, Rage.'
   slot_scores:
     Avenging Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.83
       pick: 0.02
@@ -418,10 +418,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Avenging Blade, Tekko-Kagi, The Reaper, Silverbranch Bow, Titan''s
-    Bane, Jotunn''s Revenge, The Crusher, Heartseeker, Toxic Blade, Tyrfing, Lernaean
-    Bow, Golden Blade, Avatar''s Parashu, Demon Blade, Hydra''s Lament, Oath-Sworn
-    Spear, Qin''s Blade, Transcendence, Bloodforge, Berserker''s Shield, Runeforged
-    Hammer, Pendulum Blade, Sun Beam Bow, Shield Splitter, Rage.'
+    Bane, Jotunn''s Revenge, The Crusher, Toxic Blade, Heartseeker, Tyrfing, Lernaean
+    Bow, Golden Blade, Avatar''s Parashu, Demon Blade, Hydra''s Lament, Qin''s Blade,
+    Oath-Sworn Spear, Transcendence, Bloodforge, Berserker''s Shield, Runeforged Hammer,
+    Pendulum Blade, Sun Beam Bow, Barbed Carver, Rage.'
   slot_scores:
     Avenging Blade:
       total: 0.61
@@ -430,7 +430,7 @@ builds:
       pick: 0.02
       fit: 0.54
     Tekko-Kagi:
-      total: 0.52
+      total: 0.53
       efficiency: 0.55
       win: 0.51
       pick: 0.0
@@ -493,7 +493,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Avenging Blade, Tyrfing, Golden Blade, Lernaean Bow, Qin''s Blade, Demon
     Blade, Tekko-Kagi, Silverbranch Bow, Sun Beam Bow, Hydra''s Lament, Berserker''s
-    Shield, Transcendence, Bloodforge, Runeforged Hammer, The Reaper, Toxic Blade,
+    Shield, Bloodforge, Transcendence, Runeforged Hammer, The Reaper, Toxic Blade,
     Jotunn''s Revenge, Barbed Carver, Vital Amplifier, Shield Splitter, Eye of the
     Storm, Hastened Fatalis, Arondight, Rage.'
   slot_scores:

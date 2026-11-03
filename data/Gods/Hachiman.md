@@ -56,7 +56,7 @@ abilities:
   name: Master of Arms
   details:
   - Each stack refreshes the duration
-  - 'Attack Speed Per Stack: 1% + 0.1% Per Level'
+  - 'Attack Speed Per Stack: 2% + 0.1% Per Level'
   - 'Mana Regen Per Stack: 0.4 + 0.04 Per Level'
   - 'Max Stats: 5'
   - 'Buff Duration: 8 seconds'
@@ -81,7 +81,7 @@ abilities:
   details:
   - Long-range hits deal additional bonus damage based on your Basic Attack Damage
   - 'Damage: 10 | 25 | 40 | 55 | 70'
-  - 'Damage Scaling: 110% Basic Attack Damage'
+  - 'Damage Scaling: 115% Basic Attack Damage'
   - 'Long-Range Bonus Damage: 10%'
   - 'Range: 12.8 meters'
   - 'Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds'
@@ -218,7 +218,7 @@ aspects:
     to them and deliver a sweep attack. After arriving your Interact becomes a backward
     dash. Basic Attacks have falloff damage. +4% Base Health and Health scaling.
 source_url: https://wiki.smite2.com/w/Hachiman
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Hachiman Basic Attack

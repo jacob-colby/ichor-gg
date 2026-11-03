@@ -17,8 +17,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -63,7 +63,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -112,7 +112,7 @@ builds:
       fit: 0.28
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -124,7 +124,7 @@ builds:
       fit: 0.65
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -189,7 +189,7 @@ builds:
       fit: 0.67
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.64
@@ -254,7 +254,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -295,7 +295,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -384,7 +384,7 @@ builds:
       fit: 0.59
     Stampede:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -449,7 +449,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -470,7 +470,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Eros' Bow
+  - Erosion
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -528,43 +528,43 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   - Triton's Conch
   flex_slots:
-  - Void Stone
+  - Toxic Blade
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Void Stone:
-      total: 0.56
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Amanita Charm:
       total: 0.79
       efficiency: 0.65
@@ -579,7 +579,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -604,8 +604,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -650,7 +650,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -669,8 +669,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
@@ -697,7 +697,7 @@ builds:
       fit: 0.73
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -715,7 +715,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73

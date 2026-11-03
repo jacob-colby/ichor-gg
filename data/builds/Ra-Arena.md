@@ -51,7 +51,7 @@ builds:
       fit: 0.82
     Rod of Tahuti:
       total: 0.79
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -112,13 +112,13 @@ builds:
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.63
+      total: 0.62
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -254,7 +254,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -301,7 +301,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.67
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -312,8 +312,8 @@ builds:
       pick: 0.0
       fit: 0.91
     Rod of Tahuti:
-      total: 0.84
-      efficiency: 0.87
+      total: 0.83
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -378,12 +378,12 @@ builds:
       fit: 0.62
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
     Eros' Bow:
-      total: 0.59
+      total: 0.6
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -449,7 +449,7 @@ builds:
       fit: 0.85
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -508,7 +508,7 @@ builds:
       fit: 0.82
     Rod of Tahuti:
       total: 0.79
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -573,7 +573,7 @@ builds:
       fit: 0.65
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -627,13 +627,13 @@ builds:
       fit: 0.43
     Doom Orb:
       total: 0.5
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.47
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -699,7 +699,7 @@ builds:
       fit: 0.55
     Rod of Tahuti:
       total: 0.66
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -777,7 +777,7 @@ builds:
       fit: 0.87
     Stampede:
       total: 0.65
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -819,7 +819,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -842,8 +842,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.72
-      efficiency: 0.87
+      total: 0.71
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -903,12 +903,12 @@ builds:
       fit: 0.56
     Rod of Tahuti:
       total: 0.52
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.17
     Eros' Bow:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -951,7 +951,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -975,7 +975,7 @@ builds:
       fit: 0.67
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27
@@ -1035,7 +1035,7 @@ builds:
       fit: 0.65
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -1101,7 +1101,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39

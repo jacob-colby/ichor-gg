@@ -198,7 +198,7 @@ abilities:
   - After casting this ability, your next 3 Attacks also launch zombies that leave
     decaying corpses behind
   - 'Damage Per Tick: 50 | 55 | 60 | 65 | 70'
-  - 'Damage Scaling Per Tick: 15% Intelligence'
+  - 'Damage Scaling Per Tick: 20% Intelligence'
   - 'Healing Reduction: 25% per stack'
   - 'Damage Dealt Reduction: 3% per stack'
   - 'Debuff Duration: 5 seconds'
@@ -229,7 +229,7 @@ aspects:
     targets on ability hits. Empty The Crypts deals less damage per tick but Slows
     haunted enemy gods inside the field.
 source_url: https://wiki.smite2.com/w/Ah_Puch
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Ah Puch Basic Attack

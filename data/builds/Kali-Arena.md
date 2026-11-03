@@ -105,20 +105,20 @@ builds:
       pick: 0.0
       fit: 0.52
     Death Metal:
-      total: 0.59
+      total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.54
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -254,7 +254,7 @@ builds:
       fit: 0.67
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.9
     Eros' Bow:
-      total: 0.54
+      total: 0.55
       efficiency: 0.49
       win: 0.5
       pick: 0.0

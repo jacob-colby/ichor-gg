@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -118,7 +118,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Bragi's Harp:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -183,7 +183,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -254,7 +254,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -307,7 +307,7 @@ builds:
       fit: 0.67
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -378,7 +378,7 @@ builds:
       fit: 0.64
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -442,8 +442,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.87
+      total: 0.55
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.24
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.59
+      total: 0.58
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -573,7 +573,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -637,8 +637,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -703,7 +703,7 @@ builds:
       fit: 0.46
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -724,15 +724,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Bancroft's Talon
   - Bragi's Harp
+  - Ancient Signet
   - Rod of Tahuti
   - Eros' Bow
   - Triton's Conch
   flex_slots:
   - Bancroft's Talon
-  - Lotus Sickle
+  - Ancient Signet
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -749,12 +749,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.46
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Bancroft's Talon:
       total: 0.54
       efficiency: 0.51
@@ -767,9 +761,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+    Ancient Signet:
+      total: 0.46
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -829,7 +829,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -907,7 +907,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -949,7 +949,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -967,7 +967,7 @@ builds:
       fit: 0.57
     Rod of Tahuti:
       total: 0.65
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.43
@@ -1027,7 +1027,7 @@ builds:
       fit: 0.53
     Rod of Tahuti:
       total: 0.54
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.21
@@ -1099,7 +1099,7 @@ builds:
       fit: 0.52
     Rod of Tahuti:
       total: 0.54
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.21
@@ -1123,12 +1123,12 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Tyrfing
+  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Tyrfing
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1163,12 +1163,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Tyrfing:
-      total: 0.56
-      efficiency: 0.5
+    Eros' Bow:
+      total: 0.55
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.58
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -1224,8 +1224,8 @@ builds:
       pick: 0.0
       fit: 0.83
     Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.87
+      total: 0.59
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -1297,7 +1297,7 @@ builds:
       fit: 0.46
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29

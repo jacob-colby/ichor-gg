@@ -8,8 +8,8 @@ stats:
   Max Health: '200'
   Mana Regen: '5'
 passive: '+10% Increased Healing and Shielding Ability Buffed, Healed, or Shielded
-  another Allied God: Gain a Soul stack (Max 70). On Use: Gain Spirit Walk for 2.5s,
-  consuming your Soul stacks and granting you 1% Damage Reduction for each stack consumed
+  another Allied God: Gain a Soul stack (Max 35). On Use: Gain Spirit Walk for 2.5s,
+  consuming your Soul stacks and granting you 2% Damage Reduction for each stack consumed
   and +20% Movement Speed. Can pass through players and player-made walls Cooldown:
   100s You can own up to 3 active items at once'
 builds_from:
@@ -17,8 +17,8 @@ builds_from:
 - Flaming Pearl
 builds_into: []
 source_url: https://wiki.smite2.com/w/Soul_Locket
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
-+10% Increased Healing and Shielding Ability Buffed, Healed, or Shielded another Allied God: Gain a Soul stack (Max 70). On Use: Gain Spirit Walk for 2.5s, consuming your Soul stacks and granting you 1% Damage Reduction for each stack consumed and +20% Movement Speed. Can pass through players and player-made walls Cooldown: 100s You can own up to 3 active items at once
++10% Increased Healing and Shielding Ability Buffed, Healed, or Shielded another Allied God: Gain a Soul stack (Max 35). On Use: Gain Spirit Walk for 2.5s, consuming your Soul stacks and granting you 2% Damage Reduction for each stack consumed and +20% Movement Speed. Can pass through players and player-made walls Cooldown: 100s You can own up to 3 active items at once
 <!-- WIKI:END -->

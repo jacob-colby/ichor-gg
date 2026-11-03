@@ -63,7 +63,7 @@ builds:
       fit: 0.9
     Stampede:
       total: 0.64
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -130,7 +130,7 @@ builds:
       fit: 0.88
     Stampede:
       total: 0.65
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -325,7 +325,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -390,7 +390,7 @@ builds:
       fit: 0.9
     Stampede:
       total: 0.64
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -455,7 +455,7 @@ builds:
       fit: 0.91
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -521,7 +521,7 @@ builds:
       fit: 0.88
     Stampede:
       total: 0.65
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -531,18 +531,18 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
   - Avenging Blade
-  - Jotunn's Revenge
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
@@ -561,12 +561,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Void Shield:
       total: 0.73
       efficiency: 0.46
@@ -591,6 +585,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Stampede:
+      total: 0.61
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -719,7 +719,7 @@ builds:
       fit: 0.77
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -785,7 +785,7 @@ builds:
       fit: 0.91
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.83

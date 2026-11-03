@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -63,7 +63,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -112,7 +112,7 @@ builds:
       fit: 0.49
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -130,7 +130,7 @@ builds:
       fit: 0.57
     Stampede:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -195,7 +195,7 @@ builds:
       fit: 0.59
     Stampede:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -260,7 +260,7 @@ builds:
       fit: 0.81
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.68
+      total: 0.69
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -455,7 +455,7 @@ builds:
       fit: 0.61
     Stampede:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -554,13 +554,13 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
       fit: 0.73
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -579,7 +579,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71

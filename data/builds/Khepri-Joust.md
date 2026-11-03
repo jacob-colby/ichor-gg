@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -398,22 +398,22 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Brawler’s Beat Stick
   - Toxic Blade
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Amanita Charm
   - Erosion
   - Triton's Conch
   flex_slots:
   - Jotunn's Revenge
-  - Brawler’s Beat Stick
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Brawler’s Beat Stick — magical protection
+    swap_item: Brawler’s Beat Stick
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,12 +423,6 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.54
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Toxic Blade:
       total: 0.56
       efficiency: 0.4
@@ -441,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Amanita Charm:
       total: 0.76
       efficiency: 0.65

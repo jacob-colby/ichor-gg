@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.46
   source_url: https://smitebrain.com/gods/artemis/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5583224115334207
   god_matches_won: 426
   god_matches_played: 763
@@ -123,7 +123,7 @@ builds:
     Storm, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -209,7 +209,7 @@ builds:
       pick: 0.0
       fit: 0.24
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.57
       pick: 0.0
@@ -336,8 +336,8 @@ builds:
     this god: Amanita Charm, Berserker''s Shield, The Reaper, Shield of the Phoenix,
     Kinetic Cuirass, Jotunn''s Revenge, Genji''s Guard, Shield Splitter, Yogi''s Necklace,
     Runeforged Hammer, Phoenix Feather, Bloodforge, Tekko-Kagi, Pharaoh''s Curse,
-    Breastplate of Valor, Lernaean Bow, Freya''s Tears, Avenging Blade, Oni Hunter''s
-    Garb, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Eye of Providence,
+    Breastplate of Valor, Lernaean Bow, Freya''s Tears, Oni Hunter''s Garb, Avenging
+    Blade, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Eye of Providence,
     Midgardian Mail, Draconic Scale, Titan''s Bane, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
@@ -416,7 +416,7 @@ builds:
       pick: 0.0
       fit: 0.5
     The Reaper:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
       win: 0.57
       pick: 0.0
@@ -434,7 +434,7 @@ builds:
       pick: 0.35
       fit: 0.53
     The Crusher:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
       win: 0.57
       pick: 0.0
@@ -477,7 +477,7 @@ builds:
     this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, Golden Blade, The Reaper,
     Hydra''s Lament, Toxic Blade, Titan''s Bane, Qin''s Blade, Demon Blade, Deathbringer,
     Musashi''s Dual Swords, The Crusher, Arondight, Sun Beam Bow, Berserker''s Shield,
-    Heartseeker, Rage, Transcendence, Bloodforge, Runeforged Hammer, Avenging Blade,
+    Rage, Heartseeker, Transcendence, Bloodforge, Runeforged Hammer, Avenging Blade,
     Barbed Carver, Shield Splitter, Vital Amplifier.'
   slot_scores:
     Lernaean Bow:
@@ -487,7 +487,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.67
       win: 0.57
       pick: 0.0
@@ -549,10 +549,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
     Arondight, Tekko-Kagi, Lernaean Bow, The Reaper, Titan''s Bane, Damaru, Genji''s
-    Guard, Deathbringer, Pendulum Blade, Musashi''s Dual Swords, The Crusher, Breastplate
+    Guard, Pendulum Blade, Deathbringer, Musashi''s Dual Swords, The Crusher, Breastplate
     of Valor, Heartseeker, Demon Blade, Berserker''s Shield, Transcendence, Rage,
     Bloodforge, Chandra''s Grace, Runeforged Hammer, Avenging Blade, Shield Splitter,
-    Eye of the Storm, Barbed Carver, Golden Blade.'
+    Barbed Carver, Eye of the Storm.'
   slot_scores:
     Lernaean Bow:
       total: 0.49
@@ -598,13 +598,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - Transcendence
+  - Hydra's Lament
   - Dominance
   - The Reaper
   - Tekko-Kagi
   flex_slots:
   - The Reaper
-  - Transcendence
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -626,7 +626,7 @@ builds:
     Splitter, Eye of the Storm, Avatar''s Parashu, Vital Amplifier, Pendulum Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -637,12 +637,12 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.3
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
+    Hydra's Lament:
+      total: 0.5
+      efficiency: 0.56
       win: 0.57
       pick: 0.0
-      fit: 0.21
+      fit: 0.35
     Dominance:
       total: 0.52
       efficiency: 0.47
@@ -698,7 +698,7 @@ builds:
     Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -738,8 +738,8 @@ builds:
   - Silverbranch Bow
   swaps:
   - added: Silverbranch Bow
-    removed: Transcendence
+    removed: Hydra's Lament
     reason: community 71% win over 122 matches (vs 56% on this god), taking the model's
-      weakest slot from Transcendence
+      weakest slot from Hydra's Lament
   starter: *id001
 ---
