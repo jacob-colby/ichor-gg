@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/artio/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5303326810176126
   god_matches_won: 271
   god_matches_played: 511
@@ -117,14 +117,13 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Amanita Charm, Shield Splitter, Kinetic Cuirass, Jotunn''s
-    Revenge, Berserker''s Shield, Runeforged Hammer, Erosion, Hydra''s Lament, Eye
-    of Providence, Prophetic Cloak, Draconic Scale, Oni Hunter''s Garb, Shield of
-    the Phoenix, Helm of Darkness, Stone of Binding, Midgardian Mail, Avenging Blade,
-    Helm of Radiance, Gluttonous Grimoire, Magi''s Cloak, Titan''s Bane, Wyrmskin
-    Hide, Leviathan''s Hide, Mantle Of Discord, Breastplate of Valor, Screeching Gargoyle,
-    Spear of Desolation, Arondight, Obsidian Shard, Ancile, Death Metal, Soul Gem,
-    Stampede, Void Stone, Void Shield, The Crusher, Golden Blade, Hide of the Nemean
-    Lion.'
+    Revenge, Berserker''s Shield, Runeforged Hammer, Erosion, Eye of Providence, Hydra''s
+    Lament, Prophetic Cloak, Draconic Scale, Oni Hunter''s Garb, Shield of the Phoenix,
+    Helm of Darkness, Stone of Binding, Midgardian Mail, Avenging Blade, Helm of Radiance,
+    Gluttonous Grimoire, Titan''s Bane, Magi''s Cloak, Wyrmskin Hide, Leviathan''s
+    Hide, Mantle Of Discord, Screeching Gargoyle, Breastplate of Valor, Spear of Desolation,
+    Arondight, Obsidian Shard, Ancile, Death Metal, Soul Gem, Stampede, Void Stone,
+    Void Shield, The Crusher, Golden Blade, Hide of the Nemean Lion.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -195,13 +194,13 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Tahuti, Shield of the Phoenix, Kinetic Cuirass,
     Jotunn''s Revenge, Shield Splitter, Berserker''s Shield, Runeforged Hammer, Soul
-    Gem, Phoenix Feather, Yogi''s Necklace, The Reaper, Ethereal Staff, Erosion, Hydra''s
-    Lament, Eye of Providence, Oni Hunter''s Garb, Chandra''s Grace, Draconic Scale,
-    Avenging Blade, Gluttonous Grimoire, Midgardian Mail, Wyrmskin Hide, Glorious
-    Pridwen, Leviathan''s Hide, Regrowth Striders, Rod of Asclepius, Titan''s Bane,
+    Gem, Phoenix Feather, Yogi''s Necklace, The Reaper, Ethereal Staff, Erosion, Eye
+    of Providence, Hydra''s Lament, Oni Hunter''s Garb, Draconic Scale, Chandra''s
+    Grace, Avenging Blade, Gluttonous Grimoire, Midgardian Mail, Wyrmskin Hide, Regrowth
+    Striders, Glorious Pridwen, Leviathan''s Hide, Rod of Asclepius, Titan''s Bane,
     Blood-Bound Book, Helm of Radiance, Helm of Darkness, Stone of Binding, Sphere
-    of Negation, Spear of Desolation, Arondight, Magi''s Cloak, Breastplate of Valor,
-    Screeching Gargoyle, Ancile.'
+    of Negation, Spear of Desolation, Arondight, Magi''s Cloak, Screeching Gargoyle,
+    Breastplate of Valor, Ancile.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -269,11 +268,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Stone of Binding,
-    Avenging Blade, Gluttonous Grimoire, Titan''s Bane, Screeching Gargoyle, Shield
+    Avenging Blade, Titan''s Bane, Gluttonous Grimoire, Screeching Gargoyle, Shield
     Splitter, Berserker''s Shield, Spear of Desolation, Kinetic Cuirass, Obsidian
     Shard, Soul Gem, Void Stone, Void Shield, The Crusher, Runeforged Hammer, Spear
     of the Magus, Heartseeker, The Reaper, Hydra''s Lament, Oni Hunter''s Garb, Doom
-    Orb, Erosion, Tekko-Kagi, The World Stone, Eye of Providence, Helm of Radiance,
+    Orb, Erosion, Tekko-Kagi, Eye of Providence, The World Stone, Helm of Radiance,
     Draconic Scale, Shield of the Phoenix, Midgardian Mail, Helm of Darkness, Dreamer''s
     Idol, Magi''s Cloak, Breastplate of Valor, Leviathan''s Hide, Pendulum Blade,
     Avatar''s Parashu, Mantle Of Discord.'
@@ -345,12 +344,12 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Rod of Tahuti, Amanita Charm, Nimble Ring, Jotunn''s
     Revenge, Golden Blade, Kinetic Cuirass, Shield Splitter, Gluttonous Grimoire,
-    Tyrfing, Soul Gem, Runeforged Hammer, Tekko-Kagi, Pharaoh''s Curse, Lernaean Bow,
-    Toxic Blade, Hydra''s Lament, Silverbranch Bow, Eros'' Bow, Shogun''s Ofuda, Oni
-    Hunter''s Garb, Helm of Radiance, Erosion, Eye of Providence, Obsidian Shard,
-    Spear of Desolation, Midgardian Mail, Stone of Binding, Shield of the Phoenix,
-    The Reaper, Draconic Scale, Riptalon, Helm of Darkness, Dominance, Titan''s Bane,
-    Breastplate of Valor, Screeching Gargoyle, Magi''s Cloak, Bragi''s Harp, Blood-Bound
+    Tyrfing, Soul Gem, Tekko-Kagi, Runeforged Hammer, Pharaoh''s Curse, Lernaean Bow,
+    Toxic Blade, Silverbranch Bow, Eros'' Bow, Hydra''s Lament, Oni Hunter''s Garb,
+    Shogun''s Ofuda, Helm of Radiance, Erosion, Eye of Providence, Obsidian Shard,
+    Spear of Desolation, The Reaper, Midgardian Mail, Shield of the Phoenix, Stone
+    of Binding, Draconic Scale, Riptalon, Titan''s Bane, Dominance, Screeching Gargoyle,
+    Helm of Darkness, Breastplate of Valor, Magi''s Cloak, Bragi''s Harp, Blood-Bound
     Book.'
   slot_scores:
     Golden Blade:
@@ -413,21 +412,21 @@ builds:
     swap: Prophetic Cloak — magical protection
     swap_item: Prophetic Cloak
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Amanita Charm, Spear of Desolation, Prophetic Cloak, Berserker''s Shield, Kinetic
-    Cuirass, Hydra''s Lament, Shield of the Phoenix, Soul Gem, Breastplate of Valor,
-    Screeching Gargoyle, Shield Splitter, Lotus Sickle, Chronos'' Pendant, Arondight,
+    Amanita Charm, Spear of Desolation, Prophetic Cloak, Kinetic Cuirass, Berserker''s
+    Shield, Hydra''s Lament, Shield of the Phoenix, Soul Gem, Screeching Gargoyle,
+    Breastplate of Valor, Shield Splitter, Lotus Sickle, Chronos'' Pendant, Arondight,
     Runeforged Hammer, Helm of Radiance, Gluttonous Grimoire, Oni Hunter''s Garb,
-    Erosion, Helm of Darkness, Gladiator''s Shield, Eye of Providence, Gem of Focus,
+    Erosion, Gladiator''s Shield, Helm of Darkness, Eye of Providence, Gem of Focus,
     Obsidian Shard, Heartwood Charm, Draconic Scale, Stone of Binding, Midgardian
-    Mail, Chandra''s Grace, Magi''s Cloak, Eye of Erebus, Leviathan''s Hide, Regrowth
-    Striders, Mantle Of Discord, Glorious Pridwen, Jade Scepter, Titan''s Bane.'
+    Mail, Chandra''s Grace, Eye of Erebus, Magi''s Cloak, Regrowth Striders, Leviathan''s
+    Hide, Mantle Of Discord, Ancient Signet, Glorious Pridwen, Jade Scepter.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -455,7 +454,7 @@ builds:
       fit: 0.47
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.55
       pick: 0.0
       fit: 0.14
@@ -498,12 +497,12 @@ builds:
     win/pick). Underrated for this god: Rod of Tahuti, Berserker''s Shield, Jotunn''s
     Revenge, Amanita Charm, Shield Splitter, Kinetic Cuirass, Runeforged Hammer, Tekko-Kagi,
     Titan''s Bane, Golden Blade, Hydra''s Lament, Gluttonous Grimoire, Spear of Desolation,
-    Obsidian Shard, The Crusher, Tyrfing, Lernaean Bow, Avenging Blade, Heartseeker,
-    Soul Gem, Oni Hunter''s Garb, Erosion, Eye of Providence, Helm of Radiance, The
-    Reaper, Arondight, Draconic Scale, Shield of the Phoenix, Stone of Binding, Midgardian
-    Mail, Death Metal, Spear of the Magus, Toxic Blade, Helm of Darkness, Pharaoh''s
-    Curse, Wyrmskin Hide, Magi''s Cloak, Breastplate of Valor, Screeching Gargoyle,
-    Leviathan''s Hide.'
+    Obsidian Shard, The Crusher, Tyrfing, Lernaean Bow, Avenging Blade, Oni Hunter''s
+    Garb, Soul Gem, Heartseeker, Erosion, Eye of Providence, The Reaper, Helm of Radiance,
+    Arondight, Shield of the Phoenix, Draconic Scale, Midgardian Mail, Stone of Binding,
+    Toxic Blade, Death Metal, Spear of the Magus, Pharaoh''s Curse, Helm of Darkness,
+    Wyrmskin Hide, Magi''s Cloak, Screeching Gargoyle, Breastplate of Valor, Leviathan''s
+    Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -572,14 +571,14 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Amanita Charm, Shield Splitter, Berserker''s Shield, Gluttonous Grimoire, Kinetic
+    Amanita Charm, Shield Splitter, Gluttonous Grimoire, Berserker''s Shield, Kinetic
     Cuirass, Spear of Desolation, Obsidian Shard, Soul Gem, Runeforged Hammer, Helm
     of Radiance, Titan''s Bane, Spear of the Magus, Helm of Darkness, Hydra''s Lament,
-    Death Metal, Lotus Sickle, Oni Hunter''s Garb, The Crusher, Doom Orb, Erosion,
-    Jade Scepter, Eye of Providence, The World Stone, Avenging Blade, Heartseeker,
-    Draconic Scale, Shield of the Phoenix, Chronos'' Pendant, Stone of Binding, Midgardian
-    Mail, The Reaper, Magi''s Cloak, Triton''s Conch, Dreamer''s Idol, Breastplate
-    of Valor, Screeching Gargoyle, Arondight, Leviathan''s Hide.'
+    Death Metal, Oni Hunter''s Garb, Ancient Signet, Lotus Sickle, The Crusher, Erosion,
+    Doom Orb, Jade Scepter, Eye of Providence, The World Stone, Avenging Blade, Shield
+    of the Phoenix, Draconic Scale, Heartseeker, Midgardian Mail, Stone of Binding,
+    Chronos'' Pendant, The Reaper, Magi''s Cloak, Screeching Gargoyle, Triton''s Conch,
+    Arondight, Breastplate of Valor, Dreamer''s Idol.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -594,7 +593,7 @@ builds:
       pick: 0.0
       fit: 0.26
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.67
       win: 0.55
       pick: 0.0
@@ -649,13 +648,13 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Amanita Charm, Shield Splitter, Kinetic
     Cuirass, Jotunn''s Revenge, Berserker''s Shield, Runeforged Hammer, Breastplate
-    of Valor, Erosion, Hydra''s Lament, Eye of Providence, Draconic Scale, Oni Hunter''s
+    of Valor, Erosion, Eye of Providence, Hydra''s Lament, Draconic Scale, Oni Hunter''s
     Garb, Shield of the Phoenix, Helm of Darkness, Stone of Binding, Midgardian Mail,
-    Avenging Blade, Helm of Radiance, Gluttonous Grimoire, Magi''s Cloak, Titan''s
-    Bane, Wyrmskin Hide, Leviathan''s Hide, Mantle Of Discord, Screeching Gargoyle,
-    Spear of Desolation, Arondight, Obsidian Shard, Ancile, Death Metal, Hide of the
-    Nemean Lion, Soul Gem, Stampede, Void Stone, Void Shield, Prophetic Cloak, The
-    Crusher, Golden Blade.'
+    Avenging Blade, Helm of Radiance, Gluttonous Grimoire, Titan''s Bane, Magi''s
+    Cloak, Wyrmskin Hide, Leviathan''s Hide, Mantle Of Discord, Screeching Gargoyle,
+    Spear of Desolation, Arondight, Obsidian Shard, Ancile, Hide of the Nemean Lion,
+    Death Metal, Soul Gem, Stampede, Void Stone, Void Shield, The Crusher, Prophetic
+    Cloak, Golden Blade.'
   slot_scores:
     Genji's Guard:
       total: 0.53

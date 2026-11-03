@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Lernaean Bow:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.63
+      total: 0.64
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -182,7 +182,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Riptalon:
-      total: 0.62
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -324,7 +324,7 @@ builds:
       pick: 0.0
       fit: 0.61
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
       win: 0.5
       pick: 0.0
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Lernaean Bow:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.63
+      total: 0.64
       efficiency: 0.46
       win: 0.5
       pick: 0.0

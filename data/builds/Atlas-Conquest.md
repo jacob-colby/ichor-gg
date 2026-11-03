@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.17
     win_rate: 0.44
   source_url: https://smitebrain.com/gods/atlas/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.445916114790287
   god_matches_won: 202
   god_matches_played: 453
@@ -121,7 +121,7 @@ builds:
     Shifter''s Shield, Oni Hunter''s Garb, Stone of Binding, Magi''s Cloak, Midgardian
     Mail, Helm of Radiance, Mantle Of Discord, Gluttonous Grimoire, Screeching Gargoyle,
     Leviathan''s Hide, Prophetic Cloak, Spear of Desolation, Ancile, Hide of the Nemean
-    Lion, Void Stone, Void Shield, Soul Gem, Xibalban Effigy.'
+    Lion, Void Stone, Void Shield, Soul Gem, Obsidian Shard.'
   slot_scores:
     Eye of Providence:
       total: 0.48
@@ -192,8 +192,8 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Rod of Tahuti, Shield of the Phoenix, Kinetic Cuirass,
-    Soul Gem, Phoenix Feather, Erosion, Eye of Providence, Ethereal Staff, Draconic
-    Scale, Yogi''s Necklace, Breastplate of Valor, Oni Hunter''s Garb, Chandra''s
+    Soul Gem, Phoenix Feather, Erosion, Eye of Providence, Draconic Scale, Ethereal
+    Staff, Yogi''s Necklace, Breastplate of Valor, Oni Hunter''s Garb, Chandra''s
     Grace, Shifter''s Shield, Gluttonous Grimoire, Midgardian Mail, Glorious Pridwen,
     Helm of Darkness, Rod of Asclepius, Regrowth Striders, Helm of Radiance, Stone
     of Binding, Leviathan''s Hide, Sphere of Negation, Spear of Desolation, Ancile,
@@ -297,8 +297,8 @@ builds:
       pick: 0.0
       fit: 0.51
     Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.87
+      total: 0.56
+      efficiency: 0.86
       win: 0.44
       pick: 0.0
       fit: 0.41
@@ -338,11 +338,12 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Amanita Charm, Nimble Ring, Kinetic Cuirass, Gluttonous
-    Grimoire, Breastplate of Valor, Soul Gem, Helm of Radiance, Eros'' Bow, Oni Hunter''s
-    Garb, Erosion, Eye of Providence, Obsidian Shard, Stone of Binding, Spear of Desolation,
-    Helm of Darkness, Midgardian Mail, Draconic Scale, Shield of the Phoenix, Magi''s
-    Cloak, Screeching Gargoyle, Blood-Bound Book, Bragi''s Harp, Mantle Of Discord,
-    Shifter''s Shield, Bracer of The Abyss, Lotus Sickle, Leviathan''s Hide.'
+    Grimoire, Breastplate of Valor, Soul Gem, Eros'' Bow, Oni Hunter''s Garb, Helm
+    of Radiance, Erosion, Eye of Providence, Obsidian Shard, Stone of Binding, Spear
+    of Desolation, Helm of Darkness, Midgardian Mail, Draconic Scale, Shield of the
+    Phoenix, Magi''s Cloak, Screeching Gargoyle, Blood-Bound Book, Bragi''s Harp,
+    Mantle Of Discord, Ancient Signet, Shifter''s Shield, Leviathan''s Hide, Bracer
+    of The Abyss.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.47
@@ -412,9 +413,9 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Amanita Charm, Breastplate
     of Valor, Kinetic Cuirass, Spear of Desolation, Shield of the Phoenix, Screeching
     Gargoyle, Soul Gem, Lotus Sickle, Chronos'' Pendant, Prophetic Cloak, Helm of
-    Radiance, Erosion, Helm of Darkness, Eye of Providence, Oni Hunter''s Garb, Gluttonous
-    Grimoire, Gladiator''s Shield, Draconic Scale, Gem of Focus, Stone of Binding,
-    Obsidian Shard, Heartwood Charm, Midgardian Mail, Magi''s Cloak, Mantle Of Discord,
+    Radiance, Erosion, Helm of Darkness, Oni Hunter''s Garb, Eye of Providence, Gluttonous
+    Grimoire, Gladiator''s Shield, Draconic Scale, Obsidian Shard, Stone of Binding,
+    Gem of Focus, Midgardian Mail, Heartwood Charm, Magi''s Cloak, Mantle Of Discord,
     Shifter''s Shield, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
@@ -488,7 +489,7 @@ builds:
     of the Phoenix, Shifter''s Shield, Oni Hunter''s Garb, Stone of Binding, Magi''s
     Cloak, Midgardian Mail, Helm of Radiance, Mantle Of Discord, Gluttonous Grimoire,
     Leviathan''s Hide, Screeching Gargoyle, Prophetic Cloak, Spear of Desolation,
-    Ancile, Hide of the Nemean Lion, Void Stone, Void Shield, Soul Gem, Xibalban Effigy.'
+    Ancile, Hide of the Nemean Lion, Void Stone, Void Shield, Soul Gem, Obsidian Shard.'
   slot_scores:
     Eye of Providence:
       total: 0.48

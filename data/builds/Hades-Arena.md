@@ -39,7 +39,7 @@ builds:
       fit: 0.6
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -63,7 +63,7 @@ builds:
       fit: 0.7
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -111,8 +111,8 @@ builds:
       pick: 0.0
       fit: 0.54
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.87
+      total: 0.64
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -124,7 +124,7 @@ builds:
       fit: 0.56
     Stampede:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.87
+      total: 0.63
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -183,7 +183,7 @@ builds:
       fit: 0.57
     Stampede:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -254,7 +254,7 @@ builds:
       fit: 0.81
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.68
     Rod of Tahuti:
-      total: 0.73
-      efficiency: 0.87
+      total: 0.72
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -372,7 +372,7 @@ builds:
       fit: 0.52
     Rod of Tahuti:
       total: 0.56
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.25
@@ -384,7 +384,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.53
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -449,7 +449,7 @@ builds:
       fit: 0.59
     Stampede:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -501,8 +501,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.87
+      total: 0.59
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -561,7 +561,7 @@ builds:
       fit: 0.48
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -573,7 +573,7 @@ builds:
       fit: 0.6
     Stampede:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -626,7 +626,7 @@ builds:
       fit: 0.6
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -650,7 +650,7 @@ builds:
       fit: 0.7
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.07
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/hun-batz/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5757575757575758
   god_matches_won: 323
   god_matches_played: 561
@@ -117,7 +117,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Tekko-Kagi, Pendulum Blade, Tyrfing, Arondight, Runeforged
-    Hammer, Avenging Blade, Shield Splitter, Golden Blade, Eye of the Storm, Dominance,
+    Hammer, Avenging Blade, Golden Blade, Shield Splitter, Eye of the Storm, Dominance,
     Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic Blade, Barbed
     Carver, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine
     Lash.'
@@ -218,8 +218,8 @@ builds:
       pick: 0.15
       fit: 0.39
     Heartseeker:
-      total: 0.55
-      efficiency: 0.44
+      total: 0.54
+      efficiency: 0.43
       win: 0.53
       pick: 0.77
       fit: 0.77
@@ -270,7 +270,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: The Reaper, Pendulum Blade, Arondight, Tekko-Kagi, Tyrfing, Runeforged Hammer,
-    Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield Splitter, Eye
+    Damaru, Silverbranch Bow, Avenging Blade, Genji''s Guard, Shield Splitter, Eye
     of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge, Lernaean
     Bow, Golden Blade, Chandra''s Grace, Riptalon, Oath-Sworn Spear, Barbed Carver,
     Eye of Erebus.'
@@ -295,12 +295,12 @@ builds:
       fit: 0.22
     Heartseeker:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.53
       pick: 0.77
       fit: 0.76
     Titan's Bane:
-      total: 0.56
+      total: 0.57
       efficiency: 0.54
       win: 0.58
       pick: 0.34
@@ -348,8 +348,8 @@ builds:
     this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
     Shield of the Phoenix, The Reaper, Runeforged Hammer, Genji''s Guard, Phoenix
     Feather, Yogi''s Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s
-    Garb, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Shifter''s
-    Shield, Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide, Stone of Binding,
+    Garb, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Wyrmskin
+    Hide, Shifter''s Shield, Leviathan''s Hide, Chandra''s Grace, Stone of Binding,
     Magi''s Cloak, Ancile.'
   slot_scores:
     Berserker's Shield:
@@ -444,7 +444,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.53
       pick: 0.77
       fit: 1.0
@@ -566,13 +566,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Damaru,
-    Genji''s Guard, Breastplate of Valor, The Reaper, Chandra''s Grace, Tekko-Kagi,
-    Tyrfing, Eye of Erebus, Runeforged Hammer, Screeching Gargoyle, Freya''s Tears,
+    Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
+    Tyrfing, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer, Freya''s Tears,
     Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of the Storm, Silverbranch
-    Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade, Golden Blade.'
+    Bow, Dominance, Bloodforge, Toxic Blade, Lernaean Bow, Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.65
+      total: 0.64
       efficiency: 0.67
       win: 0.57
       pick: 0.51
@@ -640,7 +640,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Tyrfing, Arondight,
-    Runeforged Hammer, Avenging Blade, Shield Splitter, Golden Blade, Eye of the Storm,
+    Runeforged Hammer, Avenging Blade, Golden Blade, Shield Splitter, Eye of the Storm,
     Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic
     Blade, Barbed Carver, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer, Damaru,
     Sanguine Lash.'
@@ -671,7 +671,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.53
       pick: 0.77
       fit: 1.0

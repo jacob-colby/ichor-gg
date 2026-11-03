@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
+  - Dominance
+  - Qin's Blade
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Toxic Blade
-  - Lernaean Bow
+  - Dominance
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,18 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Lernaean Bow:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Toxic Blade:
       total: 0.59
       efficiency: 0.36
@@ -55,6 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Dominance:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Qin's Blade:
+      total: 0.55
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Riptalon:
       total: 0.63
       efficiency: 0.36
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Golden Blade
+  - Toxic Blade
   - Rage
   - Tyrfing
   - Riptalon
@@ -158,17 +158,17 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
+    Toxic Blade:
       total: 0.58
-      efficiency: 0.47
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.79
     Rage:
       total: 0.51
       efficiency: 0.44
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Tyrfing
+  - Dominance
   - Qin's Blade
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Qin's Blade
   - Demon Blade
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Toxic Blade:
       total: 0.58
       efficiency: 0.36
@@ -376,8 +370,14 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Dominance:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Qin's Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
+  - Qin's Blade
   flex_slots:
   - Toxic Blade
-  - Lernaean Bow
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.46
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
     Toxic Blade:
       total: 0.49
       efficiency: 0.36
@@ -459,6 +453,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Qin's Blade:
+      total: 0.45
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: intelligence
@@ -489,7 +489,7 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -508,7 +508,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -578,13 +578,13 @@ builds:
       pick: 0.0
       fit: 0.67
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
     Soul Gem:
-      total: 0.75
+      total: 0.74
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
-  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
+  - Dominance
+  - Qin's Blade
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Toxic Blade
-  - Lernaean Bow
+  - Dominance
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -618,18 +618,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.6
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Lernaean Bow:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Toxic Blade:
       total: 0.59
       efficiency: 0.36
@@ -642,6 +630,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Dominance:
+      total: 0.55
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Qin's Blade:
+      total: 0.55
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Riptalon:
       total: 0.63
       efficiency: 0.36

@@ -63,7 +63,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -78,14 +78,14 @@ builds:
   - Rod of Tahuti
   - Eros' Bow
   - Erosion
-  - Triton's Conch
+  - Stampede
   flex_slots:
   - Bancroft's Talon
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -112,7 +112,7 @@ builds:
       fit: 0.23
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -128,12 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Triton's Conch:
-      total: 0.56
-      efficiency: 0.44
+    Stampede:
+      total: 0.55
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -195,7 +195,7 @@ builds:
       fit: 0.83
     Stampede:
       total: 0.64
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -260,7 +260,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -301,7 +301,7 @@ builds:
       fit: 0.28
     Bragi's Harp:
       total: 0.4
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -325,7 +325,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.38
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -384,12 +384,12 @@ builds:
       fit: 0.66
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
     Soul Gem:
-      total: 0.77
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -449,7 +449,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.63
     Pharaoh's Curse:
-      total: 0.58
+      total: 0.59
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -585,7 +585,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -650,7 +650,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75

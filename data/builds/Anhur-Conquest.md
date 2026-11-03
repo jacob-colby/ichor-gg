@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.37
   source_url: https://smitebrain.com/gods/anhur/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5432989690721649
   god_matches_won: 527
   god_matches_played: 970
@@ -339,8 +339,8 @@ builds:
     Kinetic Cuirass, Jotunn''s Revenge, Golden Blade, Genji''s Guard, Shield Splitter,
     Yogi''s Necklace, Runeforged Hammer, Phoenix Feather, Bloodforge, Tekko-Kagi,
     Pharaoh''s Curse, Breastplate of Valor, Lernaean Bow, Freya''s Tears, Oni Hunter''s
-    Garb, Tyrfing, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Eye
-    of Providence, Toxic Blade, Midgardian Mail, Draconic Scale, Avenging Blade.'
+    Garb, Tyrfing, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Toxic
+    Blade, Eye of Providence, Midgardian Mail, Draconic Scale, Avenging Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -415,7 +415,7 @@ builds:
     Berserker''s Shield, Sun Beam Bow, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.55
       pick: 0.0
@@ -484,7 +484,7 @@ builds:
     this god: Tyrfing, Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, Golden Blade,
     The Reaper, Hydra''s Lament, Toxic Blade, Titan''s Bane, Qin''s Blade, Demon Blade,
     Musashi''s Dual Swords, The Crusher, Arondight, Sun Beam Bow, Berserker''s Shield,
-    Heartseeker, Rage, Transcendence, Bloodforge, Runeforged Hammer, Barbed Carver,
+    Rage, Heartseeker, Transcendence, Bloodforge, Runeforged Hammer, Barbed Carver,
     Shield Splitter, Vital Amplifier, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
@@ -506,7 +506,7 @@ builds:
       pick: 0.51
       fit: 0.52
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.46
       win: 0.55
       pick: 0.38
@@ -564,7 +564,7 @@ builds:
     Sun Beam Bow.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.67
       win: 0.55
       pick: 0.0

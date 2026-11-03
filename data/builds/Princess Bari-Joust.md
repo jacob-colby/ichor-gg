@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Tyrfing
   - Bragi's Harp
   - Silverbranch Bow
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Silverbranch Bow
   - Bragi's Harp
-  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Toxic Blade:
       total: 0.72
       efficiency: 0.45
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -130,7 +130,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -189,7 +189,7 @@ builds:
       fit: 0.65
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -319,7 +319,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -371,14 +371,14 @@ builds:
       pick: 0.0
       fit: 0.64
     Riptalon:
-      total: 0.66
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.87
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -507,14 +507,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Bragi's Harp:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -578,8 +578,8 @@ builds:
       pick: 0.0
       fit: 0.75
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.87
+      total: 0.62
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Tyrfing
   - Bragi's Harp
   - Silverbranch Bow
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Silverbranch Bow
   - Bragi's Harp
-  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,12 +618,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.58
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Toxic Blade:
       total: 0.72
       efficiency: 0.45
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Soul Gem:
       total: 0.79
       efficiency: 0.57

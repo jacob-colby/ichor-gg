@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Death Metal
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Tyrfing
-  - Death Metal
+  - Lernaean Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Lernaean Bow:
       total: 0.59
       efficiency: 0.51
@@ -42,25 +48,19 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Tyrfing:
       total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Death Metal:
-      total: 0.58
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
+      fit: 0.68
     Riptalon:
       total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Soul Gem:
       total: 0.74
       efficiency: 0.57
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.73
     Eros' Bow:
       total: 0.59
       efficiency: 0.53
@@ -401,12 +401,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
-  - Death Metal
+  - Spear of Desolation
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Death Metal
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -424,11 +424,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -441,12 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Death Metal:
+    Spear of Desolation:
       total: 0.51
-      efficiency: 0.63
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.43
     Eros' Bow:
       total: 0.54
       efficiency: 0.49
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -573,7 +573,7 @@ builds:
       fit: 0.65
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Death Metal
   - Riptalon
   - Soul Gem
   flex_slots:
-  - Tyrfing
-  - Death Metal
+  - Lernaean Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -618,6 +618,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Lernaean Bow:
       total: 0.59
       efficiency: 0.51
@@ -629,25 +635,19 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Tyrfing:
       total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Death Metal:
-      total: 0.58
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
+      fit: 0.68
     Riptalon:
       total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Soul Gem:
       total: 0.74
       efficiency: 0.57

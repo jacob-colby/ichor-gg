@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.87
+      total: 0.62
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -124,7 +124,7 @@ builds:
       fit: 0.71
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -183,7 +183,7 @@ builds:
       fit: 0.56
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -313,7 +313,7 @@ builds:
       fit: 0.57
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -442,13 +442,13 @@ builds:
       pick: 0.0
       fit: 0.6
     Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.87
+      total: 0.56
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.26
     Eros' Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.49
       win: 0.5
       pick: 0.0
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.71
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.87
+      total: 0.62
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38

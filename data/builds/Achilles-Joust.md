@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.43
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Shield Splitter:
-      total: 0.59
+      total: 0.58
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.8
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0

@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -248,7 +248,7 @@ builds:
       fit: 0.43
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -337,11 +337,11 @@ builds:
   - Jotunn's Revenge
   - Tekko-Kagi
   - Silverbranch Bow
-  - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Silverbranch Bow
   - Tekko-Kagi
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -382,12 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.87
+    Eros' Bow:
+      total: 0.51
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.53
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -554,7 +554,7 @@ builds:
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -594,14 +594,14 @@ builds:
   archetype: str-int
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
+  - Bragi's Harp
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -624,21 +624,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Death Metal:
       total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Bragi's Harp:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31

@@ -118,7 +118,7 @@ builds:
       fit: 0.74
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -210,8 +210,8 @@ builds:
   - Pharaoh's Curse
   - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
   - Riptalon
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.81
     Riptalon:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.57

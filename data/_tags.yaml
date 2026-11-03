@@ -437,3 +437,15 @@ Shell of Rebuke: [peel, mitigation]
 Talisman of Purification: [cc-immunity]
 Time-lock Aegis: [cc-immunity, ability-uptime]
 Sundering Echo: []
+
+# Added 2026-11-03 (Open Beta 47 text; approved by Jacob). Added unattended by
+# smite.new_entities on 2026-11-02; passive classes in _passive_classes.yaml
+# (PR #86).
+Soul Locket: [aura, sustain, mitigation, mobility, stacking, active]
+# Lotus Sickle: REVIEWED, held at [] until a kit check exists (Jacob,
+# 2026-11-03). Its passive needs YOUR ability to buff, heal or shield an ally,
+# and nothing yet stops an ally-dependent item reaching a god who cannot. Any
+# non-empty tag put it into Agni's Joust core over Doom Orb. Once ally-dependent
+# items only reach gods whose kit can buff/heal/shield an ally, give it real
+# tags (drafted: [aura, burst, stacking]).
+Lotus Sickle: []
