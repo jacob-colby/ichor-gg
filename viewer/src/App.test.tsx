@@ -91,14 +91,26 @@ describe("App — Second Screen chrome", () => {
     expect(main.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
   });
 
-  it("marks Build current on a god page and points it at that god", async () => {
+  it("has one Gods tab, current on a god page and on the roster alike — no separate Build tab", async () => {
     atUrl(toHash.god("Chiron"));
-    render(<App />);
+    const { unmount } = render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
     const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
-    const build = tabs.getByRole("link", { name: /Build/ });
-    expect(build).toHaveAttribute("aria-current", "page");
-    expect(build).toHaveAttribute("href", toHash.god("Chiron"));
+    expect(tabs.queryByRole("link", { name: /Build/ })).not.toBeInTheDocument();
+    expect(tabs.getAllByRole("link").map((a) => a.textContent)).toEqual(["Gods", "Draft"]);
+    const gods = tabs.getByRole("link", { name: "Gods" });
+    expect(gods).toHaveAttribute("aria-current", "page");
+    expect(gods).toHaveAttribute("href", toHash.home());
+    // The desktop bar names the god being read beside the one tab.
+    expect(within(screen.getByRole("navigation", { name: "Main" })).getByRole("link", { name: /Gods · Chiron/ }))
+      .toHaveAttribute("aria-current", "page");
+    unmount();
+
+    atUrl(toHash.home());
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: /Who are you playing/i });
+    const onRoster = within(screen.getByRole("navigation", { name: "Tabs" })).getByRole("link", { name: "Gods" });
+    expect(onRoster).toHaveAttribute("aria-current", "page");
   });
 
   it("keeps a god's own views under the god, not in the global bar", async () => {
@@ -117,7 +129,7 @@ describe("App — Second Screen chrome", () => {
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
     const main = within(screen.getByRole("navigation", { name: "Main" }));
     expect(main.getByRole("link", { name: "Items" })).not.toHaveAttribute("aria-current");
-    expect(main.getByRole("link", { name: /Build/ })).toHaveAttribute("aria-current", "page");
+    expect(main.getByRole("link", { name: /^Gods/ })).toHaveAttribute("aria-current", "page");
   });
 });
 

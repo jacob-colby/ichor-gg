@@ -29,7 +29,7 @@ import type { CuratedBuildEntry } from "./types";
 /* The Second Screen shell, with the typed query (direction A + C).
  *
  * The app opens on "Who are you playing?" and every other route sits inside
- * one chrome: a bottom tab bar on a phone (Build · Draft · Gods · More), a slim
+ * one chrome: a bottom tab bar on a phone (Gods · Draft · More), a slim
  * top bar from `lg` up. The old floating draft dock is gone from this shell —
  * the god page carries the enemy team itself, and Draft is one tab away
  * everywhere else, so the dock would only be a second copy of a control.
@@ -155,11 +155,9 @@ function App() {
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
   const lastGod = readLastGod();
-  const buildGod = god?.name ?? (lastGod && data.gods.some((g) => g.name === lastGod) ? lastGod : undefined);
 
-  const active: NavTab = route.god ? "build"
-    : route.lens === "draft" ? "draft"
-      : route.lens === "board" ? "gods" : "more";
+  const active: NavTab = route.god || route.lens === "board" ? "gods"
+    : route.lens === "draft" ? "draft" : "more";
   const activeMore = (["tiers", "items", "patch", "method"] as const).includes(route.lens as MoreLink)
     && !route.god ? (route.lens as MoreLink) : undefined;
 
@@ -200,7 +198,7 @@ function App() {
       </a>
 
       <AppNav active={active} activeMore={activeMore}
-        buildHref={buildGod ? toHash.god(buildGod) : toHash.home()} buildGod={buildGod}
+        currentGod={god?.name}
         onHelp={() => setLegendOpen(true)} dataUpdated={data.data_updated} dataPatch={data.data_patch}
         devSlot={devSlot} search={barField} />
 

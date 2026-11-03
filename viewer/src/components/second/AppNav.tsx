@@ -1,23 +1,26 @@
 /** Global navigation for the Second Screen chrome.
  *
  * One set of destinations, two shapes:
- *  - phone: a bottom tab bar — Build · Draft · Gods · More — inside thumb
+ *  - phone: a bottom tab bar — Gods · Draft · More — inside thumb
  *    reach, padded for the home indicator. "More" opens a sheet holding the
  *    reading routes, help, and the fan-project line.
  *  - desktop (lg+): a slim top bar carrying everything flat, because a mouse
  *    has no thumb to save — and the command field between the destinations
  *    and the reading routes, as the global search (`/` or Ctrl/⌘K).
  *
- * "Build" means YOUR god: the god page you are on, or the last one you
- * opened. With no god yet it lands on the roster, which is where you pick one.
+ * "Gods" is one tab for both halves of the same job: picking a god and reading
+ * its build. It used to be two tabs, Build (your god's page) and Gods (the
+ * roster), which Jacob read as the same thing twice. The tab lands on the
+ * roster; the roster's "Back to <god>" card is the one-tap return to the last
+ * build, and the tab stays current on every god page.
  */
 import { useState, type ReactNode } from "react";
 import { toHash } from "../../lib/useHashRoute";
 import { relativeDate } from "../../lib/relativeDate";
-import { BuildGlyph, DraftGlyph, GodsGlyph, MoreGlyph } from "./art";
+import { DraftGlyph, GodsGlyph, MoreGlyph } from "./art";
 import { Sheet } from "./Sheet";
 
-export type NavTab = "build" | "draft" | "gods" | "more";
+export type NavTab = "gods" | "draft" | "more";
 export type MoreLink = "tiers" | "items" | "patch" | "method";
 
 const MORE_LINKS: { key: MoreLink; label: string; href: string; blurb: string }[] = [
@@ -43,9 +46,8 @@ interface AppNavProps {
   active: NavTab;
   /** Sub-destination under More, for the desktop bar's current marker. */
   activeMore?: MoreLink;
-  buildHref: string;
-  /** "Build · Ra" reads better than "Build" once a god is known. */
-  buildGod?: string;
+  /** The god page being read, if any: the desktop bar says "Gods · Ra". */
+  currentGod?: string;
   onHelp: () => void;
   dataUpdated?: string;
   dataPatch?: string;
@@ -58,14 +60,13 @@ interface AppNavProps {
 const freshness = (updated?: string, patch?: string) =>
   updated ? `Updated ${relativeDate(updated)}${patch ? ` · ${patch}` : ""}` : null;
 
-export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUpdated, dataPatch, devSlot, search }: AppNavProps) {
+export function AppNav({ active, activeMore, currentGod, onHelp, dataUpdated, dataPatch, devSlot, search }: AppNavProps) {
   const [moreOpen, setMoreOpen] = useState(false);
   const stamp = freshness(dataUpdated, dataPatch);
 
-  const primary: { key: Exclude<NavTab, "more">; label: string; href: string; Glyph: typeof BuildGlyph }[] = [
-    { key: "build", label: "Build", href: buildHref, Glyph: BuildGlyph },
-    { key: "draft", label: "Draft", href: toHash.draft(), Glyph: DraftGlyph },
+  const primary: { key: Exclude<NavTab, "more">; label: string; href: string; Glyph: typeof GodsGlyph }[] = [
     { key: "gods", label: "Gods", href: toHash.home(), Glyph: GodsGlyph },
+    { key: "draft", label: "Draft", href: toHash.draft(), Glyph: DraftGlyph },
   ];
 
   return (
@@ -80,7 +81,7 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
             <a key={key} href={href} aria-current={active === key ? "page" : undefined}
               className={`press relative flex h-14 items-center px-3 font-cond text-[19px] font-bold uppercase ${
                 active === key ? "text-ink after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:bg-accent" : "text-muted hover:text-ink"}`}>
-              {label}{key === "build" && buildGod ? <span className="ml-1.5 text-quiet">· {buildGod}</span> : null}
+              {label}{key === "gods" && currentGod ? <>{" "}<span className="ml-1 text-quiet">· {currentGod}</span></> : null}
             </a>
           ))}
           {search ? (
@@ -110,7 +111,7 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
 
       {/* Phone: bottom tab bar. */}
       <nav aria-label="Tabs" className="safe-bottom fixed inset-x-0 bottom-0 z-40 border-t border-line bg-ground/95 backdrop-blur-sm lg:hidden">
-        <ul className="grid grid-cols-4">
+        <ul className="grid grid-cols-3">
           {primary.map(({ key, label, href, Glyph }) => (
             <li key={key}>
               <a href={href} aria-current={active === key ? "page" : undefined}

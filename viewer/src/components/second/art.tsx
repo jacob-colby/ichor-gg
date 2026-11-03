@@ -38,11 +38,6 @@ function Glyph({ size = 24, children, ...rest }: GlyphProps) {
   );
 }
 
-/** Six slots, stacked: the build. */
-export const BuildGlyph = (p: GlyphProps) => (
-  <Glyph {...p}><rect x="4" y="4" width="7" height="7" rx="1.5" /><rect x="13" y="4" width="7" height="7" rx="1.5" />
-    <rect x="4" y="13" width="7" height="7" rx="1.5" /><path d="M13 16.5h7M16.5 13v7" /></Glyph>
-);
 /** Two rows facing each other: the draft. */
 export const DraftGlyph = (p: GlyphProps) => (
   <Glyph {...p}><path d="M3 7h3M9 7h3M15 7h3M21 7h0" /><path d="M3 17h3M9 17h3M15 17h3M21 17h0" />

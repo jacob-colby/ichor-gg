@@ -210,7 +210,7 @@ A stepped near-black neutral stack, one violet, and a direction pair. No decorat
 
 **Phone first (390px).** Single column, 16px gutters, content padded clear of a fixed **bottom tab bar** (64px + the home indicator: `pb-tabbar`). The god page reads header → verdict sentence → starter → the six → disclosures, with the **enemy strip** sticky just above the tab bar the whole way down. God select reads hero → command field → recents → the 3-up card grid, with the **role filter** fixed above the tab bar in thumb reach.
 
-**Desktop (≥1024px, `useWide`).** A sticky 56px **top bar** inside a 1240px container: wordmark · Build · Draft · Gods · **the command field** (flex, 220–440px) · Tiers · Items · Patch notes · Method · freshness stamp (from 1280px; it steps out of the way while the field is open, because the open field widens over it) · Help. The god page becomes a real **second column**: `minmax(0,1fr) 380px`, gap 48px — the build column capped at 680px, and a sticky aside holding the enemy-team panel and "Why this build". God select puts the role filter beside the hero and grows the grid to 7-up. One layout is rendered, not two hidden by CSS, so each control has one copy in the accessibility tree.
+**Desktop (≥1024px, `useWide`).** A sticky 56px **top bar** inside a 1240px container: wordmark · Gods (reading “Gods · Ra” on a god page) · Draft · **the command field** (flex, 220–440px) · Tiers · Items · Patch notes · Method · freshness stamp (from 1280px; it steps out of the way while the field is open, because the open field widens over it) · Help. The god page becomes a real **second column**: `minmax(0,1fr) 380px`, gap 48px — the build column capped at 680px, and a sticky aside holding the enemy-team panel and "Why this build". God select puts the role filter beside the hero and grows the grid to 7-up. One layout is rendered, not two hidden by CSS, so each control has one copy in the accessibility tree.
 
 Spacing is airy by intent: about five item rows per phone screen, 6px between rows, 44px minimum for every tap target. Overlays — the suggestion list, sheets — sit above the page and never push layout.
 
@@ -272,7 +272,7 @@ Components feel **tactile and quiet**: every tappable thing carries `.press` (sc
 - **Phone keyboard:** the field scrolls itself to the top of the screen when opened, and the list's height is measured against `visualViewport`, so it ends above the keys rather than under them.
 
 ### Navigation
-- **Tab bar (phone):** Build · Draft · Gods · More, 64px, drawn glyphs (one 1.75 stroke set) over cond 15px labels; the active tab is ink with a 2px violet rule on top, the rest quiet. "Build" means *your* god — the page you're on or the last one opened. "More" opens a sheet with Tiers, Items, Patch notes, Method, Help, the freshness stamp and the fan-project line.
+- **Tab bar (phone):** Gods · Draft · More, 64px, drawn glyphs (one 1.75 stroke set) over cond 15px labels; the active tab is ink with a 2px violet rule on top, the rest quiet. **Gods is one tab for picking a god and reading its build**, current on the roster and on every god page. It lands on the roster, whose "Back to <god>" card is the one-tap return to the last build. It was two tabs, Build and Gods, until 2026-11-03: Jacob read them as the same thing twice, and they were. "More" opens a sheet with Tiers, Items, Patch notes, Method, Help, the freshness stamp and the fan-project line.
 - **Top bar (desktop):** the same destinations flat, the command field between them and the reading routes, the active one ink with a 2px violet underline.
 
 ### Sheets and dialogs
@@ -304,7 +304,7 @@ These bind every surface regardless of look.
 
 **The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows lives in the hash query: the god page's `mode`, `aspect`, `build` and `vs`; god select's `q` and `role`; the shop's filters. Defaults stay out of the query, so a bare `#/god/Ra` keeps meaning what it meant (and leaves the stored draft alone). A typed query lands on a URL that reproduces it; picker edits write `vs=` back. Writes are debounced `replaceState`, and a queued write is flushed before the app navigates so it can never land on the next page.
 
-**The Seam Rule.** Every surface names another it hands off to, in the visitor's terms: the god page links to the god's kit, every item ranked and its ranking; the Build tab returns to your god; recents reopen a matchup in one tap. A seam carries state where state exists — the shared draft is one draft across the god page, the Draft tab and the command field.
+**The Seam Rule.** Every surface names another it hands off to, in the visitor's terms: the god page links to the god's kit, every item ranked and its ranking; the roster's "Back to <god>" card returns to your last build; recents reopen a matchup in one tap. A seam carries state where state exists — the shared draft is one draft across the god page, the Draft tab and the command field.
 
 **The Honest-Verdict Rule.** The comparison states a verdict a player can act on, near the build, and says what it could not measure in the same sentence — the tail is half the claim, never a footnote. Joust and Arena have no outcome data: they show "No win data in Joust — model only" and an unranked build, never a tier.
 
