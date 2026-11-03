@@ -24,7 +24,7 @@ const KIND: Record<PatchHighlight["change"] | PatchDelta["verdict"], string> = {
 };
 
 function periodTitle(p: PatchPeriod): string {
-  if (p.crosses_patch && p.patch_to) return p.patch_from ? `${p.patch_from} to ${p.patch_to}` : p.patch_to;
+  if (p.crosses_patch && p.patch_to) return p.patch_to;
   if (p.patch_to) return `Data update within ${p.patch_to}`;
   return "Data update";
 }

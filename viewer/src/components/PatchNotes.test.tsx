@@ -30,7 +30,7 @@ describe("PatchNotes", () => {
 
   it("titles a patch-crossing period by its patches, with the dates beside it", () => {
     render(<PatchNotes periods={[crossing()]} />);
-    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Open Beta 40 to Open Beta 41");
+    expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(/^Open Beta 41$/);
     expect(screen.getByText("2026-07-10 to 2026-07-17")).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/1 patch\b/);
   });
