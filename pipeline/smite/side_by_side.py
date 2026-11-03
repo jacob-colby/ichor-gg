@@ -68,8 +68,15 @@ unfair in two ways). `judge` applies, in order:
   4. otherwise `verdict` on D and S as the `BREAKPOINT_WEIGHTS`-weighted
      geometric mean of the 2-, 4- and 6-item axes.
 `judge_six_only` is the old rule, kept so the page prints old against new.
-The stack assumption at 2 and 4 items (none) favours Ichor, because the
-community front-loads stacking items; the report brackets it with stacks full.
+Stacks follow the game clock (the FIGHT block: `MINUTES_PER_ITEM`,
+`STACK_MINUTES_TO_FULL`); the report prints the old none/full ends and the
+clock at two other times-to-full beside it.
+
+THE FIGHT (2026-11-02). Kills, assists, an enemy on our god and "On Use"
+presses are events in the clock, each under a written assumption in the
+FIGHT block below; effective health is the raw damage that enemy deals before
+our bar is gone (equal to the static integral when nothing in the build
+reacts — tested).
 THE KIT IS MATCHED FIRST (2026-11-02, Jacob). The community six is what
 players built on the kit they played. Where more than `ASPECT_MAJORITY` of
 this god's community games are on an aspect, that aspect is the fair kit for
@@ -84,7 +91,7 @@ Gold is not an axis: both are finished builds, and the per-gold reading is
 can see how much of the split the band chose.
 
 WHAT IS NOT IN IT, and the page prints it: crowd control, peel, mobility,
-lifesteal sustain, healing, waves, objectives, and every passive
+lifesteal and health-regen sustain, allies, waves, objectives, and every passive
 `passive_sim` marks `not simulated` — listed per build, per item, with the
 reason.
 """
@@ -150,8 +157,8 @@ NOT_ENOUGH_SIMULATED = "not enough simulated"
 #: Equal thirds because each power spike is held for roughly a third of a
 #: Conquest game, and the record argues AGAINST weighting the finished six
 #: up — the community's slot 6 is a half-built component on 61 of 90 gods,
-#: i.e. most games end before six items exist. Stacking passives are at zero
-#: on the 2- and 4-item points (`passive_sim`'s docstring).
+#: i.e. most games end before six items exist. Stacking passives are on the
+#: game clock at every point (`stack_state`, the FIGHT block).
 BREAKPOINT_WEIGHTS = {2: 1 / 3, 4: 1 / 3, 6: 1 / 3}
 #: A god whose early points (2 and 4 items, equal weight) and finished six
 #: point opposite ways on the composite sqrt(damage x survival), each outside
@@ -159,6 +166,103 @@ BREAKPOINT_WEIGHTS = {2: 1 / 3, 4: 1 / 3, 6: 1 / 3}
 #: "early-game build" = Ichor's build is ahead early and behind at six.
 EARLY_GAME = "early-game build"
 LATE_GAME = "late-game build"
+
+# ── THE FIGHT BLOCK (2026-11-02) ──────────────────────────────────────────
+# Until this block the duel held no kill, no enemy hitting our god and no
+# "On Use" press, so every item gated on one read zero and was NOT SIMULATED
+# — 378 unsimulated item slots on Ichor's side against the community's 244,
+# which withheld 75 of 87 verdicts. Each assumption below is chosen ONCE, is
+# the same for both builds of a god, and is printed on the page. None was
+# tuned against a verdict; the report's sensitivity lines re-run the counts
+# with each one moved.
+#
+# KILL_RULE. The target dies when our damage in the fight reaches its max
+# health: ONE kill per fight of WINDOW seconds (an effective-health run that
+# lasts longer is a run of consecutive fights, each with a fresh target and
+# at most one kill). Damage past the kill still counts toward the sustained
+# figure, as it always has (the window measures output, the sponge keeps its
+# debuffs), so no build without a takedown item moves. A first draft counted
+# a kill at EVERY multiple of max health and gave a carry ~5 kills in 10s —
+# a sponge, not a fight — and was dropped before any verdict was read. A
+# burst has no kills (a combo declared at t=0, nothing after it to refund).
+#
+#: ASSISTS. One assist every ASSIST_INTERVAL seconds of the sustained window
+#: and of the effective-health run, the first at ASSIST_FIRST. A 10s window
+#: that is a fight with teammates in it holds at least one teammate takedown
+#: our god is part of; one per window is the least non-zero reading, and the
+#: middle of the window is the mean arrival of one uniform event. It does not
+#: depend on either build — both get the same assists at the same instants —
+#: so it cannot be tuned toward a side. `--no-assists` style sensitivity is in
+#: the report ("assists off").
+ASSIST_INTERVAL = 10.0
+ASSIST_FIRST = 5.0
+#
+#: THE ENEMY. Someone hits our god: physical as basic attacks, magical as
+#: ability hits. Its raw DPS per damage type is the reference SQUISHY's
+#: effective health against that type over WINDOW — an enemy exactly as
+#: lethal as the comparison asks our god to be (kill the median Mid in 10s).
+#: The cadence is data too: attacks at the median community Carry's attack
+#: speed, ability hits at the median community Mid's casts per second
+#: (`attacker_profile`). In the sustained window the enemy deals each type at
+#: ENEMY_SHARE of that DPS (no record of the enemy team says otherwise; an
+#: even split favours neither Genji's Guard's magical trigger nor Kinetic
+#: Cuirass's physical one). In an effective-health run it deals ONE type at
+#: full DPS until our bar is gone. Static items read exactly what they read
+#: before: the DPS sets WHEN things happen, never how much raw damage a
+#: static bar absorbs (`test_fight_ehp_equals_static_when_nothing_moves`).
+#: Our god's damage does not stop if it dies inside the window — survival is
+#: the other axis, and the two are not multiplied here. Health regen,
+#: lifesteal healing, Plating and Dampening on our side are not in it (they
+#: were not in effective health before either).
+ENEMY_SHARE = 0.5
+#: An effective-health run stops here if our god is still alive (it never is
+#: at these DPS; the remainder of the bar is then added statically).
+EHP_RUN_CAP = 600.0
+#
+#: ACTIVES. Every "On Use" item in a compared build is pressed the first
+#: moment its condition holds and again the moment its cooldown ends; the
+#: condition is written beside each in `passive_sim`. A press refused (Death
+#: Metal on a magical god; Pendulum Blade with nothing on cooldown) is
+#: retried after ACTIVE_RETRY seconds — a quarter second, finer than any
+#: cooldown and any attack interval in the roster. An active that is only
+#: crowd control, movement or an ally link stays NOT SIMULATED, named.
+ACTIVE_RETRY = 0.25
+#: Sanguine Lash's active tick, "every 0.33s" off its text.
+SANGUINE_FAST = 0.33
+#
+#: THE GAME CLOCK FOR STACKS (2026-11-02). PR #77 held persistent stacks at
+#: ZERO at 2 and 4 items and FULL at six, the two ends. Now each finished item
+#: is bought MINUTES_PER_ITEM after the last, so the k-th completes at minute
+#: k x MINUTES_PER_ITEM, and each breakpoint is read the moment it is reached.
+#: 5 minutes because six items land near minute 30: the last measured SMITE
+#: Conquest average was 29 minutes (SMITE 1 community stats, 2022); SMITE 2
+#: guides give 25-45; and the community's slot 6 is a half-built component on
+#: 61 of 90 gods, i.e. games end about when the sixth would complete. Even
+#: pacing ignores that early gold is slower; the six-item point is unaffected
+#: by that and the early points err toward MORE stacks, which favours the
+#: community (it front-loads stacking items).
+MINUTES_PER_ITEM = 5.0
+#: A stacking item is full this many minutes after it is bought (Devourer's,
+#: Thebes, Book of Thoth, Transcendence, Rage — each fills off minions, damage
+#: to minions or god takedowns). NOT MEASURED: no farm or takedown rate is in
+#: this repo. 10 is the order of a laner's farm: 75 Devourer's stacks at ~8
+#: last hits a minute; 50 Thoth stacks of 900 damage each (45,000) to minions;
+#: Rage's 5 takedowns at ~1 per 2 minutes, the rate of ~15 takedowns in a
+#: 30-minute game. The report brackets it at STACK_MINUTES_BRACKET.
+STACK_MINUTES_TO_FULL = 10.0
+STACK_MINUTES_BRACKET = (5.0, 20.0)
+
+
+def stack_state(names, k, minutes_to_full=STACK_MINUTES_TO_FULL):
+    """`{item: fraction of full}` at the k-item breakpoint for every stacking
+    item among the first k: bought at minute j x MINUTES_PER_ITEM (slot j,
+    1-based), read at minute k x MINUTES_PER_ITEM, linear to full."""
+    out = {}
+    for j, n in enumerate(names[:k], start=1):
+        held = (k - j) * MINUTES_PER_ITEM
+        out[n] = min(1.0, held / minutes_to_full) if minutes_to_full > 0 else 1.0
+    return out
+
 
 # "Range: 8.8 meters" on the Basic Attack. The roster splits into 1.92/2.56
 # (44 gods) and 5.6/6.4/8.8 (46), so any threshold in the gap gives the same
@@ -242,12 +346,19 @@ class Event:
 
 
 class Sim:
-    """One build on one god against one target over one window."""
+    """One build on one god against one target over one window.
+
+    `enemy` turns on the FIGHT block's attacker: "both" (the sustained
+    window: each damage type at `ENEMY_SHARE` of its DPS), "physical" or
+    "magical" (an effective-health run, at full DPS). It needs the target to
+    carry an `attacker` profile (`reference_targets`); toy targets without one
+    get no enemy. `takedowns` turns on kills and assists (off in a burst)."""
 
     def __init__(self, god, names, items_by_name, target, *, window=WINDOW, level=LEVEL,
-                 stacks="full", disabled=()):
+                 stacks="full", disabled=(), enemy=None, takedowns=None):
         self.god, self.names, self.level, self.target = god, list(names), level, target
         self.window = window
+        self.stacks = stacks
         self.damage_type = (god.get("damage_type") or "physical").lower()
         self.melee = is_melee(god)
         self.base_stats, self.item_totals, self.gold = build_stats(
@@ -275,19 +386,72 @@ class Sim:
         cdr = self.base_stats.get("Cooldown Rate", 0.0)
         self.rotation = [dict(a, effective_cooldown=a["cooldown"] * (ult_mod if a["is_ultimate"] else 1.0)
                               * combat.cooldown_multiplier(cdr)) for a in rotation]
+        self.nxt = {}
+        # stat hooks, read on every stat lookup
+        self._bonus = [(set(p.bonus_keys), p.stat_bonus) for _, p in self.passives if p.stat_bonus]
+        self._bonus_keys = set().union(*(k for k, _ in self._bonus)) if self._bonus else set()
+        # the fight layer
+        self.enemy = enemy if target.get("attacker") else None
+        self.takedowns = (window is not None) if takedowns is None else takedowns
+        self.dealt, self.kills, self.assists = 0.0, 0, 0
+        self._fight, self._fight_start, self._fight_killed = 0, 0.0, False
+        self.casts, self.kill_times = [], []   # (t, ability) and t, for tests and the page
+        base = god.get("base_stats") or {}
+        self.max_health = bq.level_value(base.get("health"), level) + self.base_stats.get("Max Health", 0.0)
+        self.hp = self.max_health
+        self.own_prot = {
+            "physical": bq.level_value(base.get("physical_prot"), level)
+            + self.base_stats.get("Physical Protection", 0.0),
+            "magical": bq.level_value(base.get("magical_prot"), level)
+            + self.base_stats.get("Magical Protection", 0.0)}
+        self.health_lost, self.absorbed = 0.0, 0.0
+        self.shields = {}
+        self._segments, cuts = [], {0.0, 1.0}
+        for _, p in self.passives:
+            if p.ehp_segments and not p.prot_bonus:
+                lost, spans = 0.0, []
+                for share, ep, em in p.ehp_segments(None):
+                    spans.append((lost, lost + share, ep, em))
+                    lost += share
+                    cuts.add(round(lost, 9))
+                self._segments.append(spans)
+        self._cuts_hp = sorted({self.max_health * (1.0 - c) for c in cuts}, reverse=True)
+        self.actives = [(n, p) for n, p in self.passives if p.active]
+        self.active_ready = {n: 0.0 for n, _ in self.actives}
 
     # stats at the current instant
-    def stat(self, key):
+    def _stat_raw(self, key):
         v = self.base_stats.get(key, 0.0) + self.dynamic.get(key, 0.0)
         if "Brawler’s Beat Stick" in self.active and key in ("Strength", "Intelligence"):
             # "While in Combat: +2% Strength, +2% Intelligence ... every 1.5s.
             # Stacks up to 5 times." Combat starts at t=0, first stack at 1.5s.
             v *= 1.0 + 0.02 * min(5, int(self.t // 1.5))
+        if key in self._bonus_keys:
+            for keys, fn in self._bonus:
+                if key in keys:
+                    v = fn(self, key, v)
         return v
+
+    def _death_metal_on(self):
+        st = self.state.get("Death Metal")
+        return bool(st) and self.t < st["until"]
+
+    def stat(self, key):
+        if self._death_metal_on() and key in ("Intelligence", "Strength", "Critical Chance %"):
+            # Death Metal's active: "Lose all Intelligence. Gain 66% of it as
+            # Strength. +25% Crit Chance"
+            if key == "Intelligence":
+                return 0.0
+            if key == "Strength":
+                return self._stat_raw("Strength") + 0.66 * self._stat_raw("Intelligence")
+            return self._stat_raw(key) + 25.0
+        return self._stat_raw(key)
 
     @property
     def stats(self):
-        keys = set(self.base_stats) | set(self.dynamic)
+        keys = set(self.base_stats) | set(self.dynamic) | self._bonus_keys
+        if "Death Metal" in self.active:
+            keys |= {"Strength", "Critical Chance %"}
         return {k: self.stat(k) for k in keys}
 
     def attacks_per_second(self):
@@ -295,6 +459,12 @@ class Sim:
 
     def crit_chance(self):
         return min(self.stat("Critical Chance %"), 100.0) / 100.0
+
+    def crit_ev(self):
+        return 1.0 + self.crit_chance() * (self.crit_mult - 1.0)
+
+    def swing_raw(self):
+        return combat.attack_damage(self.attack_power, self.attack_scaling, self.stats, self.mean_swing)
 
     def item_state(self, item, **defaults):
         return self.state.setdefault(item, dict(defaults))
@@ -327,6 +497,8 @@ class Sim:
 
     # the arithmetic, delegated to combat wherever combat already has it
     def mitigated(self, raw, dtype, t, *, kind, uncapped=0.0):
+        if dtype == "true":
+            return raw * self.amplification(t)
         prot = self.target["physical_prot" if dtype == "physical" else "magical_prot"]
         flat = min(self.stat("Penetration"), combat.FLAT_PEN_CAP)
         pct = min(min(self.stat("Penetration %") / 100.0, combat.PCT_PEN_CAP) + uncapped, 1.0)
@@ -336,6 +508,158 @@ class Sim:
             out *= combat.flat_reduction_multiplier(self.target.get("plating", 0.0), combat.PLATING_CAP)
         elif kind == "ability":
             out *= combat.flat_reduction_multiplier(self.target.get("dampening", 0.0), combat.DAMPENING_CAP)
+        return out
+
+    # ── damage dealt, and the kills it makes ──
+    def _deal(self, amount, channel, item=None):
+        fight = int(self.t // WINDOW)
+        if fight != self._fight:   # a new fight: fresh target, no kill yet
+            self._fight, self._fight_start, self._fight_killed = fight, self.dealt, False
+        self.by_channel[channel] += amount
+        if item is not None:
+            self.by_item[item] = self.by_item.get(item, 0.0) + amount
+        self.dealt += amount
+
+    def _check_kills(self):
+        """At most one kill per fight of WINDOW seconds: when our damage
+        since that fight began reaches the target's max health (FIGHT block,
+        KILL_RULE)."""
+        if not self.takedowns:
+            return
+        if not self._fight_killed and self.dealt - self._fight_start >= self.target["max_health"]:
+            self._fight_killed = True
+            self.kills += 1
+            self.kill_times.append(self.t)
+            self._takedown("kill")
+
+    def _takedown(self, kind):
+        for name, p in self.passives:
+            if p.on_takedown:
+                self._current_item = name
+                p.on_takedown(self, kind)
+
+    def active_damage(self, amount, dtype, item=None):
+        """Damage from an active (or a reflect): mitigated as a proc, booked
+        to its item, counted toward kills."""
+        name = item or self._current_item
+        self._deal(self.mitigated(amount, dtype, self.t, kind="proc"), "proc", name)
+        self._check_kills()
+
+    # ── cooldowns ──
+    def refund(self, non_ult, ult):
+        """Take seconds off every ability still on cooldown, never past now."""
+        for i, a in enumerate(self.rotation):
+            if i in self.nxt and self.nxt[i] > self.t:
+                self.nxt[i] = max(self.t, self.nxt[i] - (ult if a["is_ultimate"] else non_ult))
+
+    def any_on_cooldown(self):
+        return any(v > self.t for v in self.nxt.values())
+
+    def ready_active(self, name):
+        if name in self.active_ready:
+            self.active_ready[name] = min(self.active_ready[name], self.t)
+
+    def shorten_active(self, name, seconds):
+        if name in self.active_ready:
+            self.active_ready[name] = max(self.t, self.active_ready[name] - seconds)
+
+    def _press(self, trigger):
+        for name, p in self.actives:
+            if p.active_trigger != trigger or self.t < self.active_ready[name]:
+                continue
+            self._current_item = name
+            if p.active(self):
+                self.active_ready[name] = self.t + p.active_cooldown
+
+    def _next_active(self, trigger):
+        times = [self.active_ready[n] for n, p in self.actives if p.active_trigger == trigger]
+        return min(times) if times else math.inf
+
+    # ── our god's health ──
+    def heal(self, amount):
+        self.hp = min(self.max_health, self.hp + amount)
+
+    def add_shield(self, name, amount, until):
+        self.shields[name] = (amount, until)
+
+    def shield_up(self, name):
+        s = self.shields.get(name)
+        return bool(s) and s[0] > 0 and self.t < s[1]
+
+    def prot_now(self, dtype, hp=None):
+        """Our protection against `dtype` at health `hp` (default: now). Read
+        it at a slice's MIDPOINT, as the static integral does."""
+        hp = self.hp if hp is None else hp
+        lost = 1.0 - hp / self.max_health if self.max_health else 1.0
+        extra = 0.0
+        for spans in self._segments:
+            for lo, hi, ep, em in spans:
+                if lo <= lost < hi:
+                    extra += ep if dtype == "physical" else em
+                    break
+        for _, p in self.passives:
+            if p.prot_bonus:
+                extra += p.prot_bonus(self, dtype)
+        return self.own_prot[dtype] + extra
+
+    def mitigation_now(self, dtype):
+        return combat.mitigation(self.prot_now(dtype))
+
+    def take_hit(self, raw, dtype, kind):
+        """One enemy hit of `raw` pre-mitigation damage. Shields take it
+        first, then health, slice by slice at the protection each slice
+        carries — exactly the static integral when nothing moves. Adds to
+        `absorbed` (raw damage taken) and `health_lost`."""
+        hit = {"raw": raw, "dtype": dtype, "kind": kind}
+        for name, p in self.actives:
+            if p.active_trigger == "hit_taken" and self.t >= self.active_ready[name]:
+                self._current_item = name
+                if p.active(self):
+                    self.active_ready[name] = self.t + p.active_cooldown
+        mult = 1.0
+        for _, p in self.passives:
+            if p.reduce_hit:
+                mult *= p.reduce_hit(self, hit)
+        left = raw * mult
+        self.absorbed += raw - left
+        while left > 1e-9 and self.hp > 1e-9:
+            floor = next((c for c in self._cuts_hp if c < self.hp - 1e-9), 0.0)
+            m = 1.0 + self.prot_now(dtype, (self.hp + floor) / 2) / 100.0
+            live = [(n, s) for n, s in self.shields.items() if s[0] > 1e-9 and self.t < s[1]]
+            if live:
+                n, (amt, until) = live[0]
+                take = min(amt, left / m)
+                self.shields[n] = (amt - take, until)
+                left -= take * m
+                self.absorbed += take * m
+                continue
+            drop = self.hp - floor
+            if left >= drop * m:
+                self.hp, left = floor, left - drop * m
+                self.absorbed += drop * m
+                self.health_lost += drop
+            else:
+                d = left / m
+                self.hp -= d
+                self.absorbed += left
+                self.health_lost += d
+                left = 0.0
+        for name, p in self.passives:
+            if p.on_hit_taken:
+                self._current_item = name
+                p.on_hit_taken(self, hit)
+
+    def remaining_ehp(self, dtype):
+        """Raw damage the rest of the bar (and any live shield) would take,
+        statically, at the protection each slice carries now."""
+        out, hp = 0.0, self.hp
+        for amt, until in self.shields.values():
+            if self.t < until:
+                out += amt * (1.0 + self.prot_now(dtype) / 100.0)
+        for floor in [c for c in self._cuts_hp if c < hp - 1e-9] + [0.0]:
+            if hp > floor:
+                out += (hp - floor) * (1.0 + self.prot_now(dtype, (hp + floor) / 2) / 100.0)
+                hp = floor
         return out
 
     def _resolve(self, ev):
@@ -354,14 +678,13 @@ class Sim:
             hit = self.mitigated(ev.raw * ev.multiplier, self.damage_type, ev.t, kind="ability",
                                  uncapped=ev.uncapped_pct_pen)
             hit *= combat.echo_multiplier(self.stat("Echo"), ev.is_ultimate)
-        self.by_channel[ev.kind] += hit
+        self._deal(hit, ev.kind)
         for amount, dtype, item in ev.procs:
-            d = self.mitigated(amount, dtype, ev.t, kind="proc")
-            self.by_channel["proc"] += d
-            self.by_item[item] = self.by_item.get(item, 0.0) + d
+            self._deal(self.mitigated(amount, dtype, ev.t, kind="proc"), "proc", item)
         pending, self._after = self._after, []
         for fn in pending:
             fn()
+        self._check_kills()
 
     def _attack(self, t, index):
         self.t = t
@@ -370,6 +693,7 @@ class Sim:
 
     def _ability(self, t, a):
         self.t = t
+        self.casts.append((t, a["name"]))
         raw = combat.ability_damage(a["base"], a["scaling"], self.stats)
         self._resolve(Event(t, "ability", a["name"], raw, is_ultimate=a["is_ultimate"]))
 
@@ -377,41 +701,103 @@ class Sim:
         if "Sanguine Lash" in self.active:
             self.t = t
             d = self.mitigated(passive_sim._sanguine(self, t), "physical", t, kind="proc")
-            self.by_channel["proc"] += d
-            self.by_item["Sanguine Lash"] = self.by_item.get("Sanguine Lash", 0.0) + d
+            self._deal(d, "proc", "Sanguine Lash")
+            self._check_kills()
 
-    def run_window(self):
-        """Abilities (rotation order) before a swing at the same instant;
-        aura ticks at whole seconds up to and including the window's end."""
-        nxt = {i: 0.0 for i in range(len(self.rotation))}
+    def _enemy_schedule(self):
+        """`[(next_t, interval, raw_per_hit, dtype, kind)]` for the enemy."""
+        if not self.enemy:
+            return []
+        prof = self.target["attacker"]
+        out = []
+        for dtype, kind in (("physical", "attack"), ("magical", "ability")):
+            if self.enemy not in ("both", dtype):
+                continue
+            share = ENEMY_SHARE if self.enemy == "both" else 1.0
+            step = prof["interval"][kind]
+            out.append([0.0, step, prof["raw_dps"][dtype] * share * step, dtype, kind])
+        return out
+
+    def run_window(self, until_dead=False):
+        """Event order at one instant: "start" actives, abilities (rotation
+        order), "after_casts" actives, the swing, the aura, an assist, then
+        the enemy's hits. Aura ticks at whole seconds up to and including the
+        window's end. With `until_dead`, runs until the enemy has taken our
+        god's whole bar (or the window ends) and returns raw damage taken."""
+        self.nxt = {i: 0.0 for i in range(len(self.rotation))}
         next_attack, index = 0.0, 0
-        auras = [float(k) for k in range(1, int(self.window) + 1)]
+        aura = 1.0 if "Sanguine Lash" in self.active else math.inf
+        assist = ASSIST_FIRST if self.takedowns else math.inf
+        foes = self._enemy_schedule()
         while True:
+            if until_dead and self.hp <= 1e-9:
+                break
             options = []
-            if nxt:
-                i = min(nxt, key=lambda k: (nxt[k], k))
-                if nxt[i] < self.window:
-                    options.append((nxt[i], 0, "ability", i))
+            ts = self._next_active("start")
+            if ts < self.window:
+                options.append((ts, -1, "start", None))
+            if self.nxt:
+                i = min(self.nxt, key=lambda k: (self.nxt[k], k))
+                if self.nxt[i] < self.window:
+                    options.append((self.nxt[i], 0, "ability", i))
+            ta = self._next_active("after_casts")
+            if ta < self.window:
+                options.append((ta, 0.5, "after_casts", None))
             if next_attack < self.window:
                 options.append((next_attack, 1, "attack", None))
-            if auras:
-                options.append((auras[0], 2, "aura", None))
+            if aura <= self.window:
+                options.append((aura, 2, "aura", None))
+            if assist < self.window:
+                options.append((assist, 3, "assist", None))
+            for j, f in enumerate(foes):
+                if f[0] < self.window:
+                    options.append((f[0], 4 + j, "enemy", j))
             if not options:
                 break
             t, _, kind, i = min(options)
             if kind == "ability":
                 self._ability(t, self.rotation[i])
-                nxt[i] = t + self.rotation[i]["effective_cooldown"]
+                self.nxt[i] = t + self.rotation[i]["effective_cooldown"]
             elif kind == "attack":
                 self._attack(t, index)
                 index += 1
                 aps = self.attacks_per_second()
                 next_attack = t + (1.0 / aps if aps > 0 else math.inf)
+            elif kind == "aura":
+                self._aura(t)
+                # Sanguine Lash's active: "Now damages every 0.33s for 4s";
+                # otherwise the aura ticks on whole seconds.
+                st = self.state.get("Sanguine Lash")
+                if st and t + SANGUINE_FAST <= st.get("until", -1.0):
+                    aura = t + SANGUINE_FAST
+                else:
+                    aura = float(math.floor(t + 1e-9) + 1)
+            elif kind in ("start", "after_casts"):
+                self.t = t
+                before = dict(self.active_ready)
+                self._press(kind)
+                for n, p in self.actives:  # a press refused now is retried later
+                    if p.active_trigger == kind and self.active_ready[n] == before[n] <= t:
+                        self.active_ready[n] = t + ACTIVE_RETRY
+                st = self.state.get("Sanguine Lash")
+                if st and st.get("until", -1.0) > t:
+                    aura = min(aura, t + SANGUINE_FAST)
+            elif kind == "assist":
+                self.t = t
+                self.assists += 1
+                self._takedown("assist")
+                assist = t + ASSIST_INTERVAL
             else:
-                self._aura(auras.pop(0))
+                self.t = t
+                f = foes[i]
+                self.take_hit(f[2], f[3], f[4])
+                f[0] = t + f[1]
+        if until_dead:
+            return self.absorbed + (self.remaining_ehp(self.enemy) if self.hp > 1e-9 else 0.0)
         return self.total()
 
     def run_burst(self):
+        self._press("start")
         for a in self.rotation:
             self._ability(0.0, a)
         self._attack(0.0, 0)
@@ -457,25 +843,57 @@ def effective_health(god, names, items_by_name, level=LEVEL, stacks="full", disa
 
 # ── One build ─────────────────────────────────────────────────────────────
 
-def power(god, names, items_by_name, targets, stacks="full", disabled=()):
-    """The four damage figures and the two effective healths."""
+FIGHT_HOOKS = ("on_takedown", "on_hit_taken", "reduce_hit", "prot_bonus", "active")
+
+
+def moves_in_a_fight(names, items_by_name, disabled=()):
+    """True if any item in the build reacts to the FIGHT block's events."""
+    return any(getattr(p, h) for _, p in passives_for(names, items_by_name, disabled)
+               for h in FIGHT_HOOKS)
+
+
+def fight_ehp(god, names, items_by_name, targets, stacks="full", disabled=()):
+    """`(ehp_physical, ehp_magical, health)` under the FIGHT block's enemy:
+    one damage type at full DPS until our bar is gone, our god fighting the
+    squishy (so its kills and the assists happen). Raw damage taken is the
+    effective health. A build with nothing that reacts to a fight gets the
+    static integral, which the run equals in that case."""
+    static = effective_health(god, names, items_by_name, stacks=stacks, disabled=disabled)
+    sq = targets.get("squishy") or {}
+    if not sq.get("attacker") or not moves_in_a_fight(names, items_by_name, disabled):
+        return static
+    out = []
+    for dtype in ("physical", "magical"):
+        s = Sim(god, names, items_by_name, sq, window=EHP_RUN_CAP, stacks=stacks,
+                disabled=disabled, enemy=dtype, takedowns=True)
+        out.append(s.run_window(until_dead=True))
+    return out[0], out[1], static[2]
+
+
+def power(god, names, items_by_name, targets, stacks="clock", disabled=()):
+    """The four damage figures and the two effective healths. `stacks` is
+    "full", "none", a `stack_state` dict, or "clock" — the game clock at
+    `len(names)` items."""
+    if stacks == "clock":
+        stacks = stack_state(names, len(names))
     out = {}
     for tname, target in targets.items():
-        s = Sim(god, names, items_by_name, target, stacks=stacks, disabled=disabled)
+        s = Sim(god, names, items_by_name, target, stacks=stacks, disabled=disabled, enemy="both")
         out[f"sustained_{tname}"] = s.run_window()
         out[f"channels_{tname}"] = dict(s.by_channel)
         out[f"procs_{tname}"] = dict(s.by_item)
+        out[f"takedowns_{tname}"] = {"kills": s.kills, "assists": s.assists}
         b = Sim(god, names, items_by_name, target, window=None, stacks=stacks, disabled=disabled)
         out[f"burst_{tname}"] = b.run_burst()
-    out["ehp_physical"], out["ehp_magical"], out["health"] = effective_health(
-        god, names, items_by_name, stacks=stacks, disabled=disabled)
+    out["ehp_physical"], out["ehp_magical"], out["health"] = fight_ehp(
+        god, names, items_by_name, targets, stacks=stacks, disabled=disabled)
     return out
 
 
 def profile(god, names, items_by_name, targets):
     names = list(names)
     full = power(god, names, items_by_name, targets)
-    s = Sim(god, names, items_by_name, targets["squishy"])
+    s = Sim(god, names, items_by_name, targets["squishy"], stacks=stack_state(names, len(names)))
     cds = [{"name": a["name"], "base": a["cooldown"], "effective": a["effective_cooldown"],
             "ultimate": a["is_ultimate"]} for a in s.rotation]
     p = s.crit_chance()
@@ -484,17 +902,28 @@ def profile(god, names, items_by_name, targets):
         pv = passive_sim.lookup(items_by_name[n])
         passives.append({"item": n, "status": pv.status, "summary": pv.summary,
                          "assumptions": list(pv.assumptions)})
-    breakpoints, full_stacks = {}, {}
+    keep = lambda pw: {m: pw[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
+    stacking = any(passive_sim.lookup(items_by_name[n]).stacking for n in names)
+    breakpoints, full_stacks, old_stacks = {}, {}, {}
+    brackets = {m: {} for m in STACK_MINUTES_BRACKET}
     for k in BREAKPOINTS:
-        stacks = "full" if k == 6 else "none"
-        pw = full if k == 6 else power(god, names[:k], items_by_name, targets, stacks=stacks)
-        breakpoints[k] = {m: pw[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
-        # The other end of the stack assumption, for the bracket only: the
-        # community front-loads stacking items (50 in its first four slots
-        # against Ichor's 4 on 2026-11-02), so "none" at 2 and 4 items favours
-        # Ichor there, and "full" favours the community.
-        pf = full if k == 6 else power(god, names[:k], items_by_name, targets, stacks="full")
-        full_stacks[k] = {m: pf[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
+        pw = full if k == 6 else power(god, names[:k], items_by_name, targets)
+        breakpoints[k] = keep(pw)
+        if not stacking:
+            full_stacks[k] = old_stacks[k] = breakpoints[k]
+            for m in STACK_MINUTES_BRACKET:
+                brackets[m][k] = breakpoints[k]
+            continue
+        # The two ends PR #77 used, kept for the before/after table: stacks
+        # FULL everywhere (the bracket), and NONE at 2 and 4 / FULL at six
+        # (the rule before the game clock).
+        pf = keep(power(god, names[:k], items_by_name, targets, stacks="full"))
+        full_stacks[k] = pf
+        old_stacks[k] = pf if k == 6 else keep(
+            power(god, names[:k], items_by_name, targets, stacks="none"))
+        for m in STACK_MINUTES_BRACKET:
+            brackets[m][k] = keep(power(god, names[:k], items_by_name, targets,
+                                        stacks=stack_state(names, k, m)))
     return {
         "items": names, "gold": s.gold, **full,
         "cooldowns": cds,
@@ -504,7 +933,10 @@ def profile(god, names, items_by_name, targets):
         "crit_chance": p, "crit_multiplier": s.crit_mult,
         "crit_ev": 1.0 + p * (s.crit_mult - 1.0),
         "attacks_per_second": s.attacks_per_second(),
-        "breakpoints": breakpoints, "breakpoints_full_stacks": full_stacks, "passives": passives,
+        "breakpoints": breakpoints, "breakpoints_full_stacks": full_stacks,
+        "breakpoints_old_stacks": old_stacks,
+        **{f"breakpoints_stacks_{m:g}min": brackets[m] for m in STACK_MINUTES_BRACKET},
+        "passives": passives,
         "simulated_share": simulated_share(names, items_by_name),
         "dropped_abilities": s.dropped,
     }
@@ -595,7 +1027,38 @@ def reference_targets(gods, builds_by_god, items_by_name):
         t["max_health"] = t["base_health"] + t["item_health"]
         t["role"], t["n"] = role, len(rows)
         out[label] = t
+    prof = attacker_profile(gods, builds_by_god, items_by_name, out["squishy"])
+    for t in out.values():
+        t["attacker"] = prof
     return out
+
+
+def attacker_profile(gods, builds_by_god, items_by_name, squishy):
+    """The FIGHT block's enemy. Raw DPS per type kills the reference squishy
+    in WINDOW; attacks come at the median community Carry's attack speed and
+    ability hits at the median community Mid's casts per second, each on its
+    finished six at level 20 (game-clock stacks)."""
+    raw_dps = {"physical": combat.effective_health(squishy["max_health"], squishy["physical_prot"]) / WINDOW,
+               "magical": combat.effective_health(squishy["max_health"], squishy["magical_prot"]) / WINDOW}
+    aps, casts = [], []
+    for g in gods:
+        role = bq.primary_role(g)
+        if role not in ("Carry", SQUISHY_ROLE):
+            continue
+        six, _ = community_six(g, builds_by_god.get(g["name"]) or {}, items_by_name)
+        if len(six) != 6:
+            continue
+        s = Sim(g, six, items_by_name, squishy, stacks=stack_state(six, 6))
+        if role == "Carry":
+            aps.append(s.attacks_per_second())
+        else:
+            rate = sum(1.0 / a["effective_cooldown"] for a in s.rotation if a["effective_cooldown"] > 0)
+            if rate > 0:
+                casts.append(rate)
+    return {"raw_dps": raw_dps,
+            "interval": {"attack": 1.0 / statistics.median(aps),
+                         "ability": 1.0 / statistics.median(casts)},
+            "n": {"attack": len(aps), "ability": len(casts)}}
 
 
 # ── The model's reasons ───────────────────────────────────────────────────
@@ -790,6 +1253,9 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
         "damage_axis": d, "survival_axis": s, "kit": kit,
         "breakpoint_axes": bp, "weighted_axes": weighted_axes(bp),
         "breakpoint_axes_full_stacks": breakpoint_axes(p_ours, p_theirs, "breakpoints_full_stacks"),
+        "breakpoint_axes_old_stacks": breakpoint_axes(p_ours, p_theirs, "breakpoints_old_stacks"),
+        **{f"breakpoint_axes_stacks_{m:g}min": breakpoint_axes(p_ours, p_theirs, f"breakpoints_stacks_{m:g}min")
+           for m in STACK_MINUTES_BRACKET},
         "coverage": {"ichor": p_ours["simulated_share"], "community": p_theirs["simulated_share"],
                      "gap": abs(p_ours["simulated_share"] - p_theirs["simulated_share"]),
                      "ok": ok, "reason": why},
@@ -1001,7 +1467,7 @@ def top_swap(r):
     return best
 
 
-def report_lines(rows, skipped, targets, data_patch):
+def report_lines(rows, skipped, targets, data_patch, no_assists=None):
     L = ["# Ichor vs community, passives simulated", "",
          f"Data: {data_patch}. Level {LEVEL}, {WINDOW:.0f}s window. Ichor = the `model` build "
          "(meta off); community = the cleaned six. Generated by `python -m smite.side_by_side`; "
@@ -1012,6 +1478,21 @@ def report_lines(rows, skipped, targets, data_patch):
     for k, t in targets.items():
         L.append(f"| {k} | {t['role']} | {t['n']} | {t['base_health']:.0f} | {t['item_health']:.0f} "
                  f"| {t['physical_prot']:.0f} | {t['magical_prot']:.0f} | {t['plating']:.0f} | {t['dampening']:.0f} |")
+    att = targets["squishy"].get("attacker")
+    if att:
+        L += ["", "## The fight (module FIGHT block)", "",
+              f"- Kill: when our damage in a {WINDOW:.0f}s fight reaches the target's max health; at most "
+              "one per fight. None in a burst.",
+              f"- Assist: one every {ASSIST_INTERVAL:g}s, first at {ASSIST_FIRST:g}s — the same instants "
+              "for both builds.",
+              f"- Enemy on our god: raw {att['raw_dps']['physical']:.0f} physical / "
+              f"{att['raw_dps']['magical']:.0f} magical DPS (kills the squishy in {WINDOW:.0f}s); attacks every "
+              f"{att['interval']['attack']:.2f}s (median of {att['n']['attack']} community Carries), ability hits "
+              f"every {att['interval']['ability']:.2f}s (median of {att['n']['ability']} community Mids). "
+              f"Sustained window: each type at {ENEMY_SHARE:.0%}. Effective health: one type at full DPS "
+              "until the bar is gone.",
+              "- Actives: pressed the first moment their condition holds, again on cooldown "
+              "(conditions in `passive_sim`)."]
     L += ["", "## Verdicts by role", "",
           f"Rule (module docstring): band ±{BAND:.0%}; the 2-, 4- and 6-item points weighted "
           + " / ".join(f"{w:.2f}" for w in BREAKPOINT_WEIGHTS.values())
@@ -1021,7 +1502,7 @@ def report_lines(rows, skipped, targets, data_patch):
     L += count_table(verdict_counts(rows))
     L += ["", f"Old rule against new, all roles ({len(judged(rows))} gods with a kit match). "
           "The bracket column re-runs the 2/4/6 rule with stacking passives FULL at 2 and 4 items "
-          "instead of empty — the other end of the stack assumption:", "",
+          "instead of on the game clock — the top end of the stack assumption:", "",
           "| verdict | six items only (old) | 2/4/6 weighted, not withheld | same, full stacks early (bracket) "
           "| 2/4/6 weighted + coverage (new) |",
           "|---|---|---|---|---|"]
@@ -1035,6 +1516,25 @@ def report_lines(rows, skipped, targets, data_patch):
     moved = [r for r in judged(rows) if r["verdict"] != r["verdict_six_only"]]
     L.append(f"\n{len(moved)} verdicts differ from the six-item rule; "
              f"{sum(1 for r in judged(rows) if r['verdict'] == NOT_ENOUGH_SIMULATED)} are withheld for coverage.")
+    L += ["", "### Stack timing: before and after the game clock", "",
+          f"Each finished item lands {MINUTES_PER_ITEM:g} minutes after the last; a stacking item is full "
+          f"{STACK_MINUTES_TO_FULL:g} minutes after it is bought (`STACK_MINUTES_TO_FULL`, not measured — "
+          "bracketed). \"Before\" is PR #77's rule: no stacks at 2 and 4 items, full at six.", "",
+          "| verdict | before: none early, full at six | game clock "
+          + " | ".join(f"(full in {m:g} min)" for m in STACK_MINUTES_BRACKET)
+          + f" | **game clock ({STACK_MINUTES_TO_FULL:g} min)** |",
+          "|---" * (3 + len(STACK_MINUTES_BRACKET)) + "|"]
+    stack_rules = [lambda r, b, k=k: judge(r, b, key=k) for k in
+                   ["breakpoint_axes_old_stacks"]
+                   + [f"breakpoint_axes_stacks_{m:g}min" for m in STACK_MINUTES_BRACKET]
+                   + ["breakpoint_axes"]]
+    stack_counts = [totals(verdict_counts(rows, rule=rule)) for rule in stack_rules]
+    for v in VERDICT_ORDER:
+        L.append(f"| {v} | " + " | ".join(str(c.get(v, 0)) for c in stack_counts) + " |")
+    if no_assists is not None:
+        c = totals(verdict_counts(no_assists))
+        L += ["", "Assists off (`ASSIST_FIRST` = never; kills unchanged), new rule: "
+              + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER) + "."]
     L += ["", "Band sensitivity (all roles, new rule):", ""]
     for b in SENSITIVITY_BANDS:
         c = totals(verdict_counts(rows, b))
@@ -1087,6 +1587,16 @@ def report_lines(rows, skipped, targets, data_patch):
     for r in rows:
         L += god_lines(r)
     return L
+
+
+def without_assists(gods, items, builds_by_god, weights, tags_map):
+    """The roster re-run with no assists, for the report's sensitivity line."""
+    global ASSIST_FIRST
+    saved, ASSIST_FIRST = ASSIST_FIRST, math.inf
+    try:
+        return run(gods, items, builds_by_god, weights, tags_map)[0]
+    finally:
+        ASSIST_FIRST = saved
 
 
 def _jsonable(x):
@@ -1178,7 +1688,8 @@ def main(argv=None):
         print("\n".join(god_lines(rows[0])))
         return 0
     patch = data_patch()
-    args.out.write_text("\n".join(report_lines(rows, skipped, targets, patch)) + "\n", encoding="utf-8")
+    args.out.write_text("\n".join(report_lines(rows, skipped, targets, patch, without_assists(
+        gods, items, builds, weights, tags_map))) + "\n", encoding="utf-8")
     if args.json:
         write_viewer_files(args.json, rows, skipped, targets, patch)
     counts = verdict_counts(rows)
