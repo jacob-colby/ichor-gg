@@ -418,8 +418,8 @@ builds:
     Splitter, Breastplate of Valor, Tekko-Kagi, Phoenix Feather, Runeforged Hammer,
     Golden Blade, Freya''s Tears, Bloodforge, Eros'' Bow, Helm of Radiance, Rod of
     Asclepius, Chandra''s Grace, Sphere of Negation, Hydra''s Lament, Titan''s Bane,
-    Spear of the Magus, Oni Hunter''s Garb, Toxic Blade, Regrowth Striders, Lernaean
-    Bow, Ancient Signet, Pharaoh''s Curse.'
+    Spear of the Magus, Soul Locket, Oni Hunter''s Garb, Toxic Blade, Regrowth Striders,
+    Lernaean Bow, Ancient Signet.'
   slot_scores:
     Berserker's Shield:
       total: 0.58

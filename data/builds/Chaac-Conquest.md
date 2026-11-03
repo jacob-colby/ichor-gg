@@ -348,10 +348,10 @@ builds:
     Grimoire, The Reaper, Shield Splitter, Ethereal Staff, Spear of Desolation, Obsidian
     Shard, Runeforged Hammer, Yogi''s Necklace, Phoenix Feather, Blood-Bound Book,
     Titan''s Bane, Rod of Asclepius, Helm of Radiance, Sphere of Negation, Hydra''s
-    Lament, Spear of the Magus, Oni Hunter''s Garb, Chandra''s Grace, Helm of Darkness,
-    Erosion, Eye of Providence, Death Metal, Jade Scepter, Avenging Blade, Draconic
-    Scale, Midgardian Mail, The Crusher, Lotus Sickle, Ancient Signet, Doom Orb, Leviathan''s
-    Hide.'
+    Lament, Spear of the Magus, Soul Locket, Oni Hunter''s Garb, Chandra''s Grace,
+    Helm of Darkness, Erosion, Eye of Providence, Death Metal, Jade Scepter, Avenging
+    Blade, Draconic Scale, Midgardian Mail, The Crusher, Lotus Sickle, Ancient Signet,
+    Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.4

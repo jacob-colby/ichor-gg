@@ -349,9 +349,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Gluttonous Grimoire, Kinetic Cuirass,
     Spear of the Magus, Phoenix Feather, Blood-Bound Book, Rod of Asclepius, Freya''s
     Tears, Yogi''s Necklace, Helm of Radiance, Sphere of Negation, Helm of Darkness,
-    Breastplate of Valor, Erosion, Genji''s Guard, Oni Hunter''s Garb, Eye of Providence,
-    Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian Mail, Lotus Sickle,
-    Doom Orb, Ancient Signet.'
+    Soul Locket, Breastplate of Valor, Erosion, Genji''s Guard, Oni Hunter''s Garb,
+    Eye of Providence, Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian
+    Mail, Lotus Sickle, Doom Orb.'
   slot_scores:
     Spear of Desolation:
       total: 0.52
@@ -878,11 +878,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Spear of the Magus, Amanita Charm, Jade Scepter,
-    Rod of Asclepius, Yogi''s Necklace, Oni Hunter''s Garb, Doom Orb, Phoenix Feather,
-    Chandra''s Grace, Lotus Sickle, Genji''s Guard, Blood-Bound Book, Dreamer''s Idol,
-    Wish-Granting Pearl, Ancient Signet, Sphere of Negation, Alchemist Coat, Lifebinder,
-    Ancile, Void Stone, Screeching Gargoyle, Kinetic Cuirass, Chronos'' Pendant, The
-    World Stone.'
+    Rod of Asclepius, Yogi''s Necklace, Oni Hunter''s Garb, Soul Locket, Doom Orb,
+    Phoenix Feather, Chandra''s Grace, Lotus Sickle, Genji''s Guard, Blood-Bound Book,
+    Dreamer''s Idol, Wish-Granting Pearl, Ancient Signet, Sphere of Negation, Alchemist
+    Coat, Lifebinder, Ancile, Void Stone, Screeching Gargoyle, Chronos'' Pendant,
+    The World Stone.'
   slot_scores:
     Ethereal Staff:
       total: 0.55
@@ -958,8 +958,8 @@ builds:
     Grimoire, Spear of the Magus, Lotus Sickle, Ancient Signet, Death Metal, Amanita
     Charm, Yogi''s Necklace, Doom Orb, Genji''s Guard, Blood-Bound Book, Jade Scepter,
     Rod of Asclepius, Oni Hunter''s Garb, Chandra''s Grace, Triton''s Conch, Wish-Granting
-    Pearl, Bancroft''s Talon, Heartwood Charm, Sphere of Negation, Polynomicon, Phoenix
-    Feather, Dreamer''s Idol, Chronos'' Pendant, Gem of Focus, The World Stone.'
+    Pearl, Soul Locket, Bancroft''s Talon, Heartwood Charm, Sphere of Negation, Polynomicon,
+    Phoenix Feather, Dreamer''s Idol, Chronos'' Pendant, The World Stone.'
   slot_scores:
     Lotus Sickle:
       total: 0.49
@@ -1034,9 +1034,9 @@ builds:
     god: Gluttonous Grimoire, Spear of the Magus, Amanita Charm, Genji''s Guard, Doom
     Orb, Lotus Sickle, Blood-Bound Book, Yogi''s Necklace, Chandra''s Grace, Jade
     Scepter, Death Metal, Rod of Asclepius, Dreamer''s Idol, Ancient Signet, Oni Hunter''s
-    Garb, Phoenix Feather, Screeching Gargoyle, Triton''s Conch, Sphere of Negation,
-    Chronos'' Pendant, Gem of Focus, Wish-Granting Pearl, Heartwood Charm, The Cosmic
-    Horror, The World Stone.'
+    Garb, Soul Locket, Phoenix Feather, Screeching Gargoyle, Triton''s Conch, Sphere
+    of Negation, Chronos'' Pendant, Gem of Focus, Wish-Granting Pearl, Heartwood Charm,
+    The World Stone.'
   slot_scores:
     Book of Thoth:
       total: 0.43
@@ -1112,8 +1112,8 @@ builds:
     Phoenix Feather, Freya''s Tears, Yogi''s Necklace, Spear of the Magus, Breastplate
     of Valor, Rod of Asclepius, Blood-Bound Book, Erosion, Helm of Radiance, Eye of
     Providence, Oni Hunter''s Garb, Sphere of Negation, Helm of Darkness, Genji''s
-    Guard, Chandra''s Grace, Draconic Scale, Midgardian Mail, Jade Scepter, Regrowth
-    Striders, Shifter''s Shield, Leviathan''s Hide.'
+    Guard, Chandra''s Grace, Soul Locket, Draconic Scale, Midgardian Mail, Jade Scepter,
+    Regrowth Striders, Shifter''s Shield.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.52
@@ -1187,8 +1187,8 @@ builds:
     for this god: Gluttonous Grimoire, Spear of the Magus, Doom Orb, Screeching Gargoyle,
     Amanita Charm, Void Stone, Dreamer''s Idol, Yogi''s Necklace, The Cosmic Horror,
     Jade Scepter, Rod of Asclepius, Oni Hunter''s Garb, Blood-Bound Book, Genji''s
-    Guard, Phoenix Feather, Chandra''s Grace, Lotus Sickle, The World Stone, Ancient
-    Signet, Wish-Granting Pearl, Sphere of Negation, Ancile, Alchemist Coat, Lifebinder,
+    Guard, Phoenix Feather, Soul Locket, Chandra''s Grace, Lotus Sickle, The World
+    Stone, Ancient Signet, Wish-Granting Pearl, Sphere of Negation, Ancile, Lifebinder,
     Chronos'' Pendant.'
   slot_scores:
     Spear of Desolation:
@@ -1266,8 +1266,8 @@ builds:
     Charm, Spear of the Magus, Yogi''s Necklace, Bancroft''s Talon, Genji''s Guard,
     Bragi''s Harp, Oni Hunter''s Garb, Ancient Signet, Bracer of The Abyss, Jade Scepter,
     Phoenix Feather, Rod of Asclepius, Lotus Sickle, Chandra''s Grace, Death Metal,
-    Doom Orb, Sphere of Negation, Screeching Gargoyle, Dreamer''s Idol, Chronos''
-    Pendant, The World Stone.'
+    Doom Orb, Soul Locket, Sphere of Negation, Screeching Gargoyle, Chronos'' Pendant,
+    The World Stone.'
   slot_scores:
     Nimble Ring:
       total: 0.51
@@ -1341,8 +1341,8 @@ builds:
     Gluttonous Grimoire, Lotus Sickle, Amanita Charm, Screeching Gargoyle, Spear of
     the Magus, Chronos'' Pendant, Gem of Focus, Yogi''s Necklace, Heartwood Charm,
     Eye of Erebus, Shield of the Phoenix, Oni Hunter''s Garb, Phoenix Feather, Blood-Bound
-    Book, Jade Scepter, Rod of Asclepius, Doom Orb, Ancient Signet, Damaru, Freya''s
-    Tears, Totem of Death, Death Metal, The World Stone.'
+    Book, Jade Scepter, Rod of Asclepius, Doom Orb, Ancient Signet, Soul Locket, Damaru,
+    Freya''s Tears, Totem of Death, The World Stone.'
   slot_scores:
     Book of Thoth:
       total: 0.42
@@ -1495,10 +1495,10 @@ builds:
     Runeforged Hammer, Spear of the Magus, The Reaper, Titan''s Bane, Amanita Charm,
     Hydra''s Lament, Death Metal, Blood-Bound Book, Jade Scepter, Rod of Asclepius,
     Triton''s Conch, The Crusher, Avenging Blade, Doom Orb, Lotus Sickle, Yogi''s
-    Necklace, Ancient Signet, Heartseeker, Genji''s Guard, Oni Hunter''s Garb, Dreamer''s
-    Idol, Phoenix Feather, Golden Blade, Sphere of Negation, Arondight, Wish-Granting
-    Pearl, Chandra''s Grace, Shield Splitter, Tekko-Kagi, Wyrmskin Hide, Tyrfing,
-    Alchemist Coat, Lifebinder, Chronos'' Pendant, The World Stone.'
+    Necklace, Soul Locket, Ancient Signet, Heartseeker, Genji''s Guard, Oni Hunter''s
+    Garb, Dreamer''s Idol, Phoenix Feather, Golden Blade, Sphere of Negation, Arondight,
+    Wish-Granting Pearl, Chandra''s Grace, Shield Splitter, Tekko-Kagi, Wyrmskin Hide,
+    Tyrfing, Lifebinder, Chronos'' Pendant, The World Stone.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -1570,10 +1570,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Spear
     of the Magus, Jade Scepter, Rod of Asclepius, Yogi''s Necklace, Oni Hunter''s
-    Garb, Doom Orb, Phoenix Feather, Chandra''s Grace, The World Stone, Lotus Sickle,
-    Blood-Bound Book, Dreamer''s Idol, Wish-Granting Pearl, Chronos'' Pendant, Ancient
-    Signet, Sphere of Negation, Lifebinder, Alchemist Coat, Ancile, Void Stone, Screeching
-    Gargoyle, Kinetic Cuirass.'
+    Garb, Soul Locket, Doom Orb, Phoenix Feather, Chandra''s Grace, The World Stone,
+    Lotus Sickle, Blood-Bound Book, Dreamer''s Idol, Wish-Granting Pearl, Chronos''
+    Pendant, Ancient Signet, Sphere of Negation, Lifebinder, Alchemist Coat, Ancile,
+    Void Stone, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.48

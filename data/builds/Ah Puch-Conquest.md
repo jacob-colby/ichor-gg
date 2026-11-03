@@ -341,10 +341,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Ethereal Staff, Soul Gem, Gluttonous Grimoire, Kinetic
     Cuirass, Phoenix Feather, Blood-Bound Book, Rod of Asclepius, Yogi''s Necklace,
-    Helm of Radiance, Sphere of Negation, Helm of Darkness, Spear of the Magus, Breastplate
-    of Valor, Erosion, Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Jade
-    Scepter, Draconic Scale, Midgardian Mail, Lotus Sickle, Doom Orb, Ancient Signet,
-    Spear of Desolation.'
+    Helm of Radiance, Sphere of Negation, Helm of Darkness, Spear of the Magus, Soul
+    Locket, Breastplate of Valor, Erosion, Oni Hunter''s Garb, Eye of Providence,
+    Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian Mail, Lotus Sickle,
+    Doom Orb, Spear of Desolation.'
   slot_scores:
     Genji's Guard:
       total: 0.57

@@ -196,9 +196,9 @@ builds:
     Soul Gem, Ethereal Staff, Phoenix Feather, Breastplate of Valor, Erosion, Gluttonous
     Grimoire, Yogi''s Necklace, Chandra''s Grace, Eye of Providence, Draconic Scale,
     Oni Hunter''s Garb, Spear of Desolation, Rod of Asclepius, Helm of Darkness, Glorious
-    Pridwen, Helm of Radiance, Regrowth Striders, Sphere of Negation, Blood-Bound
-    Book, Midgardian Mail, Shifter''s Shield, Leviathan''s Hide, Screeching Gargoyle,
-    Obsidian Shard.'
+    Pridwen, Helm of Radiance, Regrowth Striders, Sphere of Negation, Soul Locket,
+    Blood-Bound Book, Midgardian Mail, Shifter''s Shield, Leviathan''s Hide, Screeching
+    Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.55

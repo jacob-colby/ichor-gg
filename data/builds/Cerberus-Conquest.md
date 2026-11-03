@@ -197,8 +197,7 @@ builds:
     Breastplate of Valor, Oni Hunter''s Garb, Chandra''s Grace, Gluttonous Grimoire,
     Midgardian Mail, Shifter''s Shield, Rod of Asclepius, Glorious Pridwen, Leviathan''s
     Hide, Helm of Darkness, Regrowth Striders, Eros'' Bow, Helm of Radiance, Sphere
-    of Negation, Stone of Binding, Spear of Desolation, Blood-Bound Book, Yogi''s
-    Necklace.'
+    of Negation, Soul Locket, Stone of Binding, Spear of Desolation, Yogi''s Necklace.'
   slot_scores:
     Genji's Guard:
       total: 0.54

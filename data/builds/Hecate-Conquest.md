@@ -346,9 +346,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Gluttonous Grimoire, Kinetic Cuirass,
     Ethereal Staff, Genji''s Guard, Freya''s Tears, Phoenix Feather, Blood-Bound Book,
     Rod of Asclepius, Yogi''s Necklace, Helm of Radiance, Breastplate of Valor, Sphere
-    of Negation, Spear of the Magus, Helm of Darkness, Chandra''s Grace, Oni Hunter''s
-    Garb, Erosion, Eye of Providence, Jade Scepter, Draconic Scale, Lotus Sickle,
-    Midgardian Mail, Doom Orb, Regrowth Striders.'
+    of Negation, Spear of the Magus, Helm of Darkness, Soul Locket, Chandra''s Grace,
+    Oni Hunter''s Garb, Erosion, Eye of Providence, Jade Scepter, Draconic Scale,
+    Lotus Sickle, Midgardian Mail, Doom Orb.'
   slot_scores:
     Genji's Guard:
       total: 0.55

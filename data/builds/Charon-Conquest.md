@@ -195,8 +195,8 @@ builds:
     Necklace, Breastplate of Valor, Oni Hunter''s Garb, Chandra''s Grace, Shifter''s
     Shield, Gluttonous Grimoire, Midgardian Mail, Glorious Pridwen, Ethereal Staff,
     Helm of Darkness, Leviathan''s Hide, Rod of Asclepius, Regrowth Striders, Helm
-    of Radiance, Stone of Binding, Sphere of Negation, Spear of Desolation, Ancile,
-    Magi''s Cloak.'
+    of Radiance, Stone of Binding, Soul Locket, Sphere of Negation, Spear of Desolation,
+    Ancile.'
   slot_scores:
     Eye of Providence:
       total: 0.55

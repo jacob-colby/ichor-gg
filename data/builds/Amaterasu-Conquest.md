@@ -201,7 +201,7 @@ builds:
     Avenging Blade, Gluttonous Grimoire, Midgardian Mail, Regrowth Striders, Glorious
     Pridwen, Rod of Asclepius, Wyrmskin Hide, Leviathan''s Hide, Titan''s Bane, Blood-Bound
     Book, Helm of Radiance, Spear of Desolation, Helm of Darkness, Stone of Binding,
-    Sphere of Negation, Arondight, Screeching Gargoyle, Magi''s Cloak, Ancile.'
+    Sphere of Negation, Soul Locket, Arondight, Screeching Gargoyle, Magi''s Cloak.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59

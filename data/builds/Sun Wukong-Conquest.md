@@ -200,7 +200,7 @@ builds:
     of Valor, Tekko-Kagi, Midgardian Mail, Hydra''s Lament, Pharaoh''s Curse, Titan''s
     Bane, Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide, Rod of Asclepius, Shogun''s
     Ofuda, Lernaean Bow, Blood-Bound Book, Helm of Radiance, Stone of Binding, Helm
-    of Darkness, Sphere of Negation, Eros'' Bow, Magi''s Cloak, Ancile, Shifter''s
+    of Darkness, Sphere of Negation, Eros'' Bow, Soul Locket, Magi''s Cloak, Shifter''s
     Shield.'
   slot_scores:
     Berserker's Shield:

@@ -197,7 +197,7 @@ builds:
     Staff, Breastplate of Valor, Oni Hunter''s Garb, Chandra''s Grace, Shifter''s
     Shield, Gluttonous Grimoire, Midgardian Mail, Glorious Pridwen, Helm of Darkness,
     Leviathan''s Hide, Rod of Asclepius, Regrowth Striders, Helm of Radiance, Stone
-    of Binding, Sphere of Negation, Spear of Desolation, Ancile, Magi''s Cloak, Yogi''s
+    of Binding, Soul Locket, Sphere of Negation, Spear of Desolation, Ancile, Yogi''s
     Necklace.'
   slot_scores:
     Kinetic Cuirass:

@@ -344,9 +344,9 @@ builds:
     this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Blood-Bound Book, Shield
     of the Phoenix, Genji''s Guard, Kinetic Cuirass, Ethereal Staff, Eros'' Bow, Yogi''s
     Necklace, Bancroft''s Talon, Phoenix Feather, Rod of Asclepius, Breastplate of
-    Valor, Freya''s Tears, Helm of Radiance, Sphere of Negation, Spear of the Magus,
-    Oni Hunter''s Garb, Chandra''s Grace, Helm of Darkness, Erosion, Jade Scepter,
-    Eye of Providence, Ancient Signet, Midgardian Mail.'
+    Valor, Freya''s Tears, Helm of Radiance, Sphere of Negation, Soul Locket, Spear
+    of the Magus, Oni Hunter''s Garb, Chandra''s Grace, Helm of Darkness, Erosion,
+    Jade Scepter, Eye of Providence, Ancient Signet.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -867,8 +867,9 @@ builds:
     this god: Soul Gem, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard, Amanita Charm,
     Void Stone, Spear of the Magus, Lotus Sickle, Blood-Bound Book, Bracer of The
     Abyss, Doublet of Binding, Rod of Asclepius, Chronos'' Pendant, Screeching Gargoyle,
-    Ancient Signet, Doom Orb, The World Stone, Oni Hunter''s Garb, Jade Scepter, Dreamer''s
-    Idol, Gem of Focus, Heartwood Charm, Lifebinder, Bancroft''s Talon, Ethereal Staff.'
+    Ancient Signet, Soul Locket, Doom Orb, The World Stone, Oni Hunter''s Garb, Jade
+    Scepter, Dreamer''s Idol, Gem of Focus, Heartwood Charm, Lifebinder, Bancroft''s
+    Talon, Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -941,9 +942,8 @@ builds:
     Gem, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard, Triton''s Conch, Amanita
     Charm, Bragi''s Harp, Lotus Sickle, Ancient Signet, Spear of the Magus, Death
     Metal, Blood-Bound Book, Doom Orb, Rod of Asclepius, The World Stone, Void Stone,
-    Bracer of The Abyss, Chronos'' Pendant, Oni Hunter''s Garb, Doublet of Binding,
-    Jade Scepter, Bancroft''s Talon, Heartwood Charm, Dreamer''s Idol, Wish-Granting
-    Pearl.'
+    Soul Locket, Bracer of The Abyss, Chronos'' Pendant, Oni Hunter''s Garb, Doublet
+    of Binding, Jade Scepter, Bancroft''s Talon, Heartwood Charm, Dreamer''s Idol.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -1016,9 +1016,9 @@ builds:
     god: Soul Gem, Gluttonous Grimoire, Eros'' Bow, Genji''s Guard, Amanita Charm,
     Spear of the Magus, Triton''s Conch, Lotus Sickle, Bragi''s Harp, Doom Orb, Blood-Bound
     Book, Void Stone, The World Stone, Chronos'' Pendant, Rod of Asclepius, Ancient
-    Signet, Death Metal, Dreamer''s Idol, Bracer of The Abyss, Doublet of Binding,
-    Screeching Gargoyle, Jade Scepter, Gem of Focus, Oni Hunter''s Garb, Heartwood
-    Charm, The Cosmic Horror.'
+    Signet, Death Metal, Dreamer''s Idol, Bracer of The Abyss, Soul Locket, Doublet
+    of Binding, Screeching Gargoyle, Jade Scepter, Gem of Focus, Oni Hunter''s Garb,
+    Heartwood Charm.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -1089,11 +1089,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Eros'' Bow, Gluttonous Grimoire, Shield of
-    the Phoenix, Rod of Asclepius, Erosion, Blood-Bound Book, Genji''s Guard, Kinetic
-    Cuirass, Umbral Link, Lifebinder, Stampede, Void Stone, Void Shield, Ethereal
-    Staff, Yogi''s Necklace, Freya''s Tears, Breastplate of Valor, Spectral Armor,
-    Phoenix Feather, Doublet of Binding, Chandra''s Grace, Bancroft''s Talon, Oni
-    Hunter''s Garb, Helm of Radiance.'
+    the Phoenix, Rod of Asclepius, Erosion, Soul Locket, Blood-Bound Book, Genji''s
+    Guard, Kinetic Cuirass, Umbral Link, Lifebinder, Stampede, Void Stone, Void Shield,
+    Ethereal Staff, Yogi''s Necklace, Freya''s Tears, Breastplate of Valor, Spectral
+    Armor, Phoenix Feather, Doublet of Binding, Chandra''s Grace, Bancroft''s Talon,
+    Oni Hunter''s Garb.'
   slot_scores:
     Eros' Bow:
       total: 0.53
@@ -1166,8 +1166,8 @@ builds:
     Guard, Screeching Gargoyle, Spear of the Magus, Amanita Charm, Doom Orb, The World
     Stone, Dreamer''s Idol, Blood-Bound Book, Lotus Sickle, Doublet of Binding, Rod
     of Asclepius, Bracer of The Abyss, Chronos'' Pendant, Ancient Signet, The Cosmic
-    Horror, Oni Hunter''s Garb, Jade Scepter, Gem of Focus, Heartwood Charm, Lifebinder,
-    Bancroft''s Talon.'
+    Horror, Soul Locket, Oni Hunter''s Garb, Jade Scepter, Gem of Focus, Heartwood
+    Charm, Lifebinder, Bancroft''s Talon.'
   slot_scores:
     Void Stone:
       total: 0.52
@@ -1240,9 +1240,9 @@ builds:
     this god: Soul Gem, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard, Amanita Charm,
     Void Stone, Triton''s Conch, Bragi''s Harp, Spear of the Magus, Blood-Bound Book,
     Lotus Sickle, Doublet of Binding, Bracer of The Abyss, Rod of Asclepius, Ancient
-    Signet, Chronos'' Pendant, Screeching Gargoyle, Death Metal, Oni Hunter''s Garb,
-    Doom Orb, The World Stone, Jade Scepter, Dreamer''s Idol, Gem of Focus, Heartwood
-    Charm, Lifebinder.'
+    Signet, Chronos'' Pendant, Screeching Gargoyle, Soul Locket, Death Metal, Oni
+    Hunter''s Garb, Doom Orb, The World Stone, Jade Scepter, Dreamer''s Idol, Gem
+    of Focus, Heartwood Charm.'
   slot_scores:
     Bragi's Harp:
       total: 0.47
@@ -1316,8 +1316,8 @@ builds:
     Gluttonous Grimoire, Lotus Sickle, Amanita Charm, Chronos'' Pendant, Screeching
     Gargoyle, Void Stone, Triton''s Conch, Gem of Focus, Spear of the Magus, Heartwood
     Charm, Blood-Bound Book, Doublet of Binding, Bragi''s Harp, Rod of Asclepius,
-    Ancient Signet, Bracer of The Abyss, Oni Hunter''s Garb, Doom Orb, Damaru, Death
-    Metal, Chandra''s Grace, Eye of Erebus, The World Stone.'
+    Ancient Signet, Bracer of The Abyss, Soul Locket, Oni Hunter''s Garb, Doom Orb,
+    Damaru, Death Metal, Chandra''s Grace, Eye of Erebus.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -1470,8 +1470,8 @@ builds:
     Lament, Bragi''s Harp, Titan''s Bane, Silverbranch Bow, Spear of the Magus, Lernaean
     Bow, Runeforged Hammer, Sanguine Lash, Toxic Blade, Blood-Bound Book, Death Metal,
     Lotus Sickle, Riptalon, Rod of Asclepius, Void Stone, Ancient Signet, The Crusher,
-    Chronos'' Pendant, Bracer of The Abyss, Doom Orb, Dominance, Arondight, The World
-    Stone, Heartseeker, Doublet of Binding.'
+    Chronos'' Pendant, Bracer of The Abyss, Doom Orb, Soul Locket, Dominance, Arondight,
+    The World Stone, Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
@@ -1544,9 +1544,9 @@ builds:
     Underrated for this god: Soul Gem, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard,
     Amanita Charm, Void Stone, Spear of the Magus, Lotus Sickle, Blood-Bound Book,
     Bracer of The Abyss, Doublet of Binding, Rod of Asclepius, Chronos'' Pendant,
-    Screeching Gargoyle, Ancient Signet, Doom Orb, The World Stone, Oni Hunter''s
-    Garb, Jade Scepter, Dreamer''s Idol, Gem of Focus, Heartwood Charm, Lifebinder,
-    Bancroft''s Talon, Ethereal Staff.'
+    Screeching Gargoyle, Ancient Signet, Soul Locket, Doom Orb, The World Stone, Oni
+    Hunter''s Garb, Jade Scepter, Dreamer''s Idol, Gem of Focus, Heartwood Charm,
+    Lifebinder, Bancroft''s Talon, Ethereal Staff.'
   slot_scores:
     Genji's Guard:
       total: 0.51

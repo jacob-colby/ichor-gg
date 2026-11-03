@@ -347,9 +347,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Gluttonous Grimoire, Kinetic Cuirass,
     Ethereal Staff, Genji''s Guard, Phoenix Feather, Rod of Asclepius, Blood-Bound
     Book, Freya''s Tears, Helm of Radiance, Yogi''s Necklace, Sphere of Negation,
-    Helm of Darkness, Breastplate of Valor, Spear of the Magus, Erosion, Oni Hunter''s
-    Garb, Eye of Providence, Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian
-    Mail, Lotus Sickle, Lifebinder, Ancient Signet.'
+    Helm of Darkness, Soul Locket, Breastplate of Valor, Spear of the Magus, Erosion,
+    Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Jade Scepter, Draconic
+    Scale, Midgardian Mail, Lotus Sickle, Lifebinder.'
   slot_scores:
     Spear of Desolation:
       total: 0.52
