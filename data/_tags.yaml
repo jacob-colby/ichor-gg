@@ -437,3 +437,9 @@ Shell of Rebuke: [peel, mitigation]
 Talisman of Purification: [cc-immunity]
 Time-lock Aegis: [cc-immunity, ability-uptime]
 Sundering Echo: []
+
+# Added 2026-11-03 (Open Beta 47 text; approved by Jacob). Added unattended by
+# smite.new_entities on 2026-11-02; passive classes in _passive_classes.yaml
+# (PR #86). Lotus Sickle is held back: any non-empty tag on it moves Agni's
+# Joust core from Doom Orb to Lotus Sickle, whose passive Agni cannot trigger.
+Soul Locket: [aura, sustain, mitigation, mobility, stacking, active]
