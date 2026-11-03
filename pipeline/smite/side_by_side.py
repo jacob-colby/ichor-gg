@@ -104,8 +104,8 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from smite import (build_quality as bq, combat, community_target, damage_value, efficiency,
-                   passive_sim, recommend, scoring)
+from smite import (ability_heals, build_quality as bq, combat, community_target, damage_value,
+                   efficiency, passive_sim, recommend, scoring)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "data" / "Analysis" / "_side_by_side.md"
@@ -256,6 +256,9 @@ ENEMY_SHARE = 0.5
 # so nothing heals in it. Health REGEN is still out: a per-second trickle
 # over a 10s window is small, and both builds' bases carry the same regen.
 HEALING = True
+#: Self-heals in the god's own abilities (`ability_heals`, 2026-11-03) land in
+#: the same channel, on each cast. Off reproduces the #83 healing exactly.
+ABILITY_HEALS = True
 #: Heals land only before this many seconds of a run. Unbounded in the
 #: verdict; the report re-runs the counts at one WINDOW (healing inside the
 #: first fight only), because an effective-health run is a chain of
@@ -498,6 +501,14 @@ class Sim:
                           if n in passive_sim.ANTI_HEAL] if HEALING else []
         self.anti_heal_until, self.anti_heal_live = -1.0, 0.0
         self.gluttonous = "Gluttonous Grimoire" in self.active
+        # Ability self-heals (`ability_heals`), landed on each cast.
+        self.self_heals = ability_heals.god_self_heals(god) if HEALING and ABILITY_HEALS else {}
+        in_rotation = {a["name"] for a in self.rotation}
+        cdr_mult = combat.cooldown_multiplier(self.base_stats.get("Cooldown Rate", 0.0))
+        # Heal-only casts: abilities the damage rotation never casts.
+        self.heal_casts = {n: {"heal": h, "cooldown": (h.get("cooldown") or 0.0) * cdr_mult, "ready": 0.0}
+                           for n, h in self.self_heals.items()
+                           if n not in in_rotation and h.get("cooldown")}
         self._segments, cuts = [], {0.0, 1.0}
         for _, p in self.passives:
             if p.ehp_segments and not p.prot_bonus:
@@ -797,6 +808,13 @@ class Sim:
             taken = (self.health_lost - lost_before) + max(
                 0.0, shield_before - sum(a for a, _ in self.shields.values()))
             self._target_heal(taken)
+            for name, c in self.heal_casts.items():
+                if self.t >= c["ready"] and self.hp > 1e-9:
+                    prot = (self.prot_now("physical") + self.prot_now("magical")) / 2
+                    self.heal(ability_heals.amount(c["heal"], max_health=self.max_health, hp=self.hp,
+                                                   protections=prot, stats=self.stats),
+                              item=f"ability: {name}")
+                    c["ready"] = self.t + c["cooldown"]
         for name, p in self.passives:
             if p.on_hit_taken:
                 self._current_item = name
@@ -849,6 +867,12 @@ class Sim:
         self.casts.append((t, a["name"]))
         raw = combat.ability_damage(a["base"], a["scaling"], self.stats)
         self._resolve(Event(t, "ability", a["name"], raw, is_ultimate=a["is_ultimate"]))
+        h = self.self_heals.get(a["name"])
+        if h:
+            prot = (self.prot_now("physical") + self.prot_now("magical")) / 2
+            self.heal(ability_heals.amount(h, max_health=self.max_health, hp=self.hp,
+                                           protections=prot, stats=self.stats),
+                      item=f"ability: {a['name']}")
 
     def _aura(self, t):
         if "Sanguine Lash" in self.active:
@@ -999,9 +1023,12 @@ def effective_health(god, names, items_by_name, level=LEVEL, stacks="full", disa
 FIGHT_HOOKS = ("on_takedown", "on_hit_taken", "reduce_hit", "prot_bonus", "active")
 
 
-def moves_in_a_fight(names, items_by_name, disabled=()):
+def moves_in_a_fight(names, items_by_name, disabled=(), god=None):
     """True if any item in the build reacts to the FIGHT block's events, or
-    heals our god in one (HEALING block: lifesteal on the stat line counts)."""
+    heals our god in one (HEALING block: lifesteal on the stat line counts,
+    and so does a self-heal in the god's own kit)."""
+    if HEALING and ABILITY_HEALS and god is not None and ability_heals.god_self_heals(god):
+        return True
     plist = passives_for(names, items_by_name, disabled)
     if any(getattr(p, h) for _, p in plist for h in FIGHT_HOOKS):
         return True
@@ -1021,7 +1048,7 @@ def fight_ehp(god, names, items_by_name, targets, stacks="full", disabled=()):
     static integral, which the run equals in that case."""
     static = effective_health(god, names, items_by_name, stacks=stacks, disabled=disabled)
     sq = targets.get("squishy") or {}
-    if not sq.get("attacker") or not moves_in_a_fight(names, items_by_name, disabled):
+    if not sq.get("attacker") or not moves_in_a_fight(names, items_by_name, disabled, god):
         return static
     out = []
     for dtype in ("physical", "magical"):
