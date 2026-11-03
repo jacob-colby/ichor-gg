@@ -30,9 +30,46 @@ def team_config(weights):
     for mode in recommend.MODES:
         prof = scoring.resolve_profile(weights, mode)
         modes[mode] = {"team_size": ((weights.get("modes") or {}).get(mode.lower()) or {}).get("team_size"),
-                       "share": prof["team_share"], "bonus": prof["team_tag_bonus"]}
+                       "share": prof["team_share"], "shares": prof.get("team_shares", {}),
+                       "bonus": prof["team_tag_bonus"]}
     return {"tags": list(team.get("tags") or []),
             "duplicate_value": team.get("duplicate_value", 0.0), "modes": modes}
+
+
+def team_fit_items(gods, builds, items, weights, tags_map):
+    """`{god: {mode: [item]}}` — the team-tag items whose kit fit passes
+    `kit_fit.fits` against that mode's shipped core. The draft pays the "you
+    are your team's carrier" delta only on these, so an anti-heal or aura
+    item reaches a board only where the kit uses it."""
+    from smite import kit_fit
+    team = set((weights.get("team_tags") or {}).get("tags") or ())
+    if not team:
+        return {}
+    eff, _ = efficiency.efficiency_scores(items)
+    ib = {it["name"]: it for it in items}
+    cands = [n for n, tg in tags_map.items() if n in ib and scoring.is_buildable(ib[n])
+             and team & set(tg or ())]
+    by_note = {(b.get("god"), b.get("mode")): b for b in builds}
+    out = {}
+    for g in gods:
+        caps = kit_fit.capabilities(g)
+        per = {}
+        for mode in recommend.MODES:
+            note = by_note.get((g.get("name"), mode)) or {}
+            core = next((e.get("slot_order") for e in note.get("builds") or []
+                         if e.get("source") == "suggested" and e.get("archetype") == "core"
+                         and not e.get("aspect")), None) or []
+            core = [c.get("name") if isinstance(c, dict) else c for c in core]
+            if not core:
+                continue
+            fs = kit_fit.stat_fits(g, items, weights, tags_map, eff, mode)
+            floor = kit_fit.fit_floor(fs, core)
+            ok = sorted(n for n in cands if kit_fit.fits(g, ib[n], fs.get(n), floor, caps)[0])
+            if ok:
+                per[mode] = ok
+        if per:
+            out[g["name"]] = per
+    return out
 
 
 def _enrich_gods(gods, weights):
@@ -340,7 +377,8 @@ def build_index(repo_root: Path) -> dict:
                        # TEAM-LEVEL TAGS: what the static builds assumed about
                        # teammates, so the draft can replace the assumption
                        # with the teammates it can see (`teamTags.ts`).
-                       "team": team_config(weights)},
+                       "team": {**team_config(weights),
+                                "fit_items": team_fit_items(gods, builds, items, weights, tags_map)}},
              # The method page states the model's own weights. Shipping them
              # rather than restating them in TSX means the page cannot describe
              # a blend the pipeline stopped using.

@@ -6,67 +6,67 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
-  - Stampede
   flex_slots:
-  - Void Stone
-  - Void Shield
+  - Golden Blade
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Wyrmskin Hide — magical protection
+    swap_item: Wyrmskin Hide
   - vs_tag: physical_heavy
-    swap: Mystical Mail — physical protection
-    swap_item: Mystical Mail
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Void Shield:
-      total: 0.6
-      efficiency: 0.46
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Void Stone:
-      total: 0.6
-      efficiency: 0.46
+      fit: 0.56
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.54
+    Runeforged Hammer:
+      total: 0.58
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
-      total: 0.83
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Erosion:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
-    Stampede:
-      total: 0.62
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
+      fit: 0.71
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -74,21 +74,21 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
+  - Runeforged Hammer
   - Heartseeker
   - Amanita Charm
-  - Erosion
-  - Stampede
   flex_slots:
-  - Heartseeker
-  - Hydra's Lament
+  - Runeforged Hammer
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -104,12 +104,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Runeforged Hammer:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Heartseeker:
       total: 0.53
       efficiency: 0.43
@@ -117,88 +129,76 @@ builds:
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.74
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.82
-    Erosion:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Stampede:
-      total: 0.55
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
-  - Void Shield
-  - Void Stone
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
-  - Stampede
   flex_slots:
-  - Void Shield
-  - Shield of the Phoenix
+  - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Mystical Mail — physical protection
-    swap_item: Mystical Mail
+    swap: Magi's Cloak — physical protection
+    swap_item: Magi's Cloak
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Shield of the Phoenix:
       total: 0.62
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Void Shield:
-      total: 0.62
-      efficiency: 0.46
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.78
-    Void Stone:
-      total: 0.62
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
+      fit: 0.55
     Amanita Charm:
-      total: 0.83
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Erosion:
-      total: 0.68
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
       fit: 0.85
-    Stampede:
-      total: 0.64
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -206,22 +206,22 @@ builds:
   - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
-  - Amanita Charm
+  - The Reaper
+  - Titan's Bane
+  - Heartseeker
   flex_slots:
-  - Jotunn's Revenge
-  - Avenging Blade
+  - Heartseeker
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -235,58 +235,58 @@ builds:
       pick: 0.0
       fit: 0.78
     Toxic Blade:
-      total: 0.66
+      total: 0.62
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Void Shield:
-      total: 0.71
-      efficiency: 0.46
+    The Reaper:
+      total: 0.69
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.95
-    Void Stone:
-      total: 0.71
-      efficiency: 0.46
+      fit: 0.86
+    Titan's Bane:
+      total: 0.63
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.95
-    Amanita Charm:
-      total: 0.78
-      efficiency: 0.65
+      fit: 0.71
+    Heartseeker:
+      total: 0.62
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Toxic Blade
+  - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Berserker's Shield
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -300,11 +300,23 @@ builds:
       pick: 0.0
       fit: 0.72
     Toxic Blade:
-      total: 0.7
+      total: 0.66
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.83
+    Berserker's Shield:
+      total: 0.58
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Tyrfing:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Riptalon:
       total: 0.64
       efficiency: 0.46
@@ -312,36 +324,24 @@ builds:
       pick: 0.0
       fit: 0.83
     Amanita Charm:
-      total: 0.74
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.82
-    Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Shogun's Ofuda:
-      total: 0.61
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
-  - Erosion
-  - Stampede
+  - Freya's Tears
   flex_slots:
-  - Genji's Guard
-  - Hydra's Lament
+  - Freya's Tears
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -364,6 +364,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Breastplate of Valor:
+      total: 0.53
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -382,82 +388,76 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Erosion:
-      total: 0.56
-      efficiency: 0.51
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.61
-    Stampede:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
+      fit: 0.52
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
-  - Stampede
   flex_slots:
-  - Void Stone
-  - Void Shield
+  - Golden Blade
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Wyrmskin Hide — magical protection
+    swap_item: Wyrmskin Hide
   - vs_tag: physical_heavy
-    swap: Mystical Mail — physical protection
-    swap_item: Mystical Mail
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Void Shield:
-      total: 0.6
-      efficiency: 0.46
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Void Stone:
-      total: 0.6
-      efficiency: 0.46
+      fit: 0.56
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.54
+    Runeforged Hammer:
+      total: 0.58
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Amanita Charm:
-      total: 0.83
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Erosion:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
-    Stampede:
-      total: 0.62
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
+      fit: 0.71
   starter: *id001
 ---

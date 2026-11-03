@@ -886,12 +886,14 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         signals = {**signals, "win": 0.0, "pick": 0.0}
     team = weights.get("team_tags") or {}
     share = team_share(mode_prof.get("team_size"), team.get("duplicate_value", 0.0))
+    calibrated = ((team.get("share") or {}).get(mode.lower()) or {})
     mode_tb = dict(mode_prof.get("tag_bonus") or {})
-    team_raw = {}
+    team_raw, shares = {}, {}
     for t in team.get("tags") or ():
         if mode_tb.get(t, 0.0) > 0:
             team_raw[t] = mode_tb[t]
-            mode_tb[t] = mode_tb[t] * share
+            shares[t] = float(calibrated.get(t, share))
+            mode_tb[t] = mode_tb[t] * shares[t]
     tag_bonus = {**mode_tb,
                  **(asp.get("tag_bonus") or {}),
                  **(fl.get("tag_bonus") or {})}
@@ -910,6 +912,9 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         # share it was scaled by, for the draft (which knows the teammates).
         "team_tag_bonus": team_raw,
         "team_share": share,
+        # Per tag: the calibrated share (`team_tags.share.<mode>.<tag>`) where
+        # one is set, else `team_share`'s formula.
+        "team_shares": shares,
         "max_lifesteal": max_ls,
         "max_lifesteal_explicit": ls_explicit,
         "suppress_underrated": signals.get("pick", 1) == 0,

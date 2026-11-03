@@ -7,7 +7,7 @@
  * drifted from itself. So the derivation lives once, here, and both surfaces
  * call it rather than each computing their own.
  */
-import { teamOverlay } from "./teamTags";
+import { teamFitItems, teamOverlay } from "./teamTags";
 import { useCallback, useMemo } from "react";
 import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
 import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
@@ -259,6 +259,8 @@ export function useDraftResult(
     overlay.items = damageOverlay(threats, godItemDamage?.[meName], draftConfig!);
     // Teammates only: slot 0 is the build being adapted.
     overlay.team = teamOverlay(draftConfig!.team, MODE_LABEL[mode], draft.allies.slice(1), allyCores);
+    overlay.teamFit = teamFitItems(draftConfig!.team, meName, MODE_LABEL[mode]);
+    overlay.teamGated = draftConfig!.team?.tags;
     const adapted = adaptFromCore(shipped, modeScores!, itemsByName, overlay, opts);
     // Both builds survive: the diff is the product's whole claim.
     return { base, adapted, diff: diffCore(base, adapted) };

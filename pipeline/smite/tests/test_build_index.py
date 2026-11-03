@@ -80,8 +80,10 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      # `team_tags` block: share 1.0, nothing scaled).
                      "draft": {"lifesteal_caps": [],
                                "team": {"tags": [], "duplicate_value": 0.0,
-                                        "modes": {m: {"team_size": None, "share": 1.0, "bonus": {}}
-                                                  for m in recommend.MODES}}},
+                                        "modes": {m: {"team_size": None, "share": 1.0, "shares": {},
+                                                      "bonus": {}}
+                                                  for m in recommend.MODES},
+                                        "fit_items": {}}},
                      # Provenance for the community figures — None until the
                      # god-index scrape has run, never an empty dict.
                      "community_source": None,

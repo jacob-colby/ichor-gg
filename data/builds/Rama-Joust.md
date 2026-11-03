@@ -90,8 +90,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -155,8 +155,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - The Reaper
   - Amanita Charm
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Kinetic Cuirass
-  - Shogun's Ofuda
+  - Toxic Blade
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -288,11 +288,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.49
+      efficiency: 0.37
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -312,36 +318,30 @@ builds:
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.7
+      total: 0.66
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.67
     Pharaoh's Curse:
-      total: 0.51
+      total: 0.47
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.51
-    Shogun's Ofuda:
-      total: 0.5
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
+      fit: 0.44
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Tekko-Kagi
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -350,14 +350,20 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.34
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -376,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    The Crusher:
-      total: 0.53
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Titan's Bane:
       total: 0.56
       efficiency: 0.54
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.57
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.74
     Tyrfing:
       total: 0.57
       efficiency: 0.5

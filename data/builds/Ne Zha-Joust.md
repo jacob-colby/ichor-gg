@@ -90,8 +90,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -152,8 +152,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -207,11 +207,11 @@ builds:
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
   flex_slots:
-  - Erosion
   - Shield Splitter
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -252,18 +252,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Runeforged Hammer:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Amanita Charm:
-      total: 0.79
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.92
-    Erosion:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.64
     Toxic Blade:
-      total: 0.62
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.84
     Tyrfing:
       total: 0.62
       efficiency: 0.5

@@ -9,11 +9,11 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   - Amanita Charm
-  - Erosion
   flex_slots:
-  - Erosion
+  - Obsidian Shard
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -49,6 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -56,17 +62,11 @@ builds:
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.74
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.84
-    Erosion:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
+      fit: 0.77
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -77,8 +77,8 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
-  - Triton's Conch
   flex_slots:
   - Chandra's Grace
   - Genji's Guard
@@ -122,31 +122,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
-    Triton's Conch:
-      total: 0.51
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Kinetic Cuirass
+  - Freya's Tears
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Erosion
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Erosion
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Freya's Tears:
+      total: 0.49
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
@@ -187,31 +193,25 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
-    Erosion:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Soul Gem:
-      total: 0.73
+      total: 0.7
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   - Amanita Charm
-  - Erosion
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Erosion
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,6 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -247,36 +253,30 @@ builds:
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.77
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.89
-    Erosion:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
+      fit: 0.82
     Soul Gem:
-      total: 0.76
+      total: 0.73
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Stone of Binding
-  - Void Shield
   - Void Stone
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Stone of Binding
+  - Screeching Gargoyle
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -285,32 +285,32 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Stone of Binding:
       total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Void Shield:
-      total: 0.61
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Void Stone:
-      total: 0.61
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.7
     Spear of Desolation:
       total: 0.59
       efficiency: 0.59
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Soul Gem:
-      total: 0.76
+      total: 0.75
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -340,7 +340,7 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
+  - Eros' Bow
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -383,17 +383,17 @@ builds:
       pick: 0.0
       fit: 0.22
     Eros' Bow:
-      total: 0.5
+      total: 0.46
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.4
     Soul Gem:
-      total: 0.69
+      total: 0.65
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -454,11 +454,11 @@ builds:
       pick: 0.0
       fit: 0.53
     Soul Gem:
-      total: 0.75
+      total: 0.72
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: model
@@ -466,11 +466,11 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   - Amanita Charm
-  - Erosion
   flex_slots:
-  - Erosion
+  - Obsidian Shard
   - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
@@ -506,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -513,16 +519,10 @@ builds:
       pick: 0.0
       fit: 0.37
     Amanita Charm:
-      total: 0.74
+      total: 0.71
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.84
-    Erosion:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
+      fit: 0.77
   starter: *id001
 ---

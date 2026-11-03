@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,11 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
@@ -49,24 +55,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Draconic Scale:
-      total: 0.55
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Amanita Charm:
-      total: 0.8
+      total: 0.76
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.88
     Erosion:
-      total: 0.6
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.63
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -80,8 +80,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Runeforged Hammer
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -123,17 +123,17 @@ builds:
       pick: 0.0
       fit: 0.57
     Amanita Charm:
-      total: 0.82
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 0.91
     Erosion:
-      total: 0.59
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -145,8 +145,8 @@ builds:
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Stone of Binding
-  - Avenging Blade
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -182,23 +182,23 @@ builds:
       pick: 0.0
       fit: 0.57
     Void Shield:
-      total: 0.62
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.71
     Void Stone:
-      total: 0.62
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.71
     Amanita Charm:
-      total: 0.72
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,12 +206,12 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Golden Blade
-  - Pharaoh's Curse
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -235,17 +235,23 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.68
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Riptalon:
       total: 0.57
       efficiency: 0.46
@@ -253,17 +259,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.69
+      total: 0.66
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Pharaoh's Curse:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Freya's Tears
-  - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -353,11 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
@@ -376,24 +382,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Draconic Scale:
-      total: 0.55
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Amanita Charm:
-      total: 0.8
+      total: 0.76
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.88
     Erosion:
-      total: 0.6
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.63
   starter: *id001
 - source: suggested
   archetype: core
@@ -622,11 +622,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.72
     Berserker's Shield:
       total: 0.61
       efficiency: 0.74

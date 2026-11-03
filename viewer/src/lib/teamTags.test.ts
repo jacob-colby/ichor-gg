@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import raw from "../../public/index.json?raw";
-import { teamOverlay, teamValue, type TeamConfig } from "./teamTags";
+import { teamFitItems, teamOverlay, teamValue, type TeamConfig } from "./teamTags";
+import { threatOverlay } from "./threats";
 import { adaptFromCore } from "./draftBuild";
 import { archetypeEntries, draftMaxLifesteal } from "./useDraftResult";
-import type { BuildNote, CuratedBuildEntry, DraftConfig, God, Item } from "../types";
+import type { BuildNote, CuratedBuildEntry, DraftConfig, God, Item, ThreatModel } from "../types";
 
 const cfg: TeamConfig = {
   tags: ["anti-heal", "aura"], duplicate_value: 0.25,
@@ -41,15 +42,10 @@ describe("team-level tags", () => {
 });
 
 /** Measured on the SHIPPED index, Joust `core`: give every god two
- *  teammates and count the cores holding anti-heal. Two boards, the two ends:
- *  teammates that both carry anti-heal, and teammates that carry none.
- *
- *  2026-11-03, no enemies drafted: shipped 13 of 94; teammates without it 93;
- *  teammates with it 10. The 93 is the blunt end and is stated, not hidden:
- *  "you are your team's only anti-heal" is worth +0.15 here, which clears the
- *  0.12 swap bar for nearly every god, because the swap rule spends draft
- *  evidence and leaves WHICH item arrives to the model. Properties are pinned
- *  below rather than the counts, which move with every refresh. */
+ *  teammates, with and without anti-heal, against no enemies and against
+ *  three healers, and count the boards holding anti-heal. Counts move with
+ *  every refresh, so properties are pinned and the 2026-11-03 numbers are in
+ *  the PR and in STATE.md. */
 const idx = JSON.parse(raw) as {
   gods: God[]; items: Item[]; builds: BuildNote[];
   god_item_scores: Record<string, Record<string, Record<string, number>>>;
@@ -62,20 +58,22 @@ describe("team-level tags on the shipped Joust index", () => {
   const anti = (n: string) => (items[n]?.effect_tags ?? []).includes("anti-heal");
   const holds = (core: string[]) => core.some(anti);
 
-  const run = (teamHolds: boolean) => {
-    let before = 0, after = 0, n = 0;
-    const overlay = { tags: {}, stats: {},
-      team: teamOverlay(idx.draft.team, "Joust", ["T1", "T2"],
-        teamHolds ? { T1: ["anti-heal"], T2: ["anti-heal"] } : { T1: [], T2: [] }) };
+  const run = (teamHolds: boolean, healers: number) => {
+    let before = 0, after = 0, n = 0, unfit = 0;
+    const teammateTags = teamHolds ? { T1: ["anti-heal"], T2: ["anti-heal"] } : { T1: [], T2: [] };
+    const threats = { magical: 0, physical: 0, healers, lockdown: 0, walls: 0, crit: 0, tanks: 0,
+      enemyCount: healers, rosterSize: 3, allyCovers: teamHolds ? { "anti-heal": true } : {},
+      allyAllPhysical: false, allyCount: 2, allyPhysical: 0 } as unknown as ThreatModel;
     for (const g of idx.gods) {
-      // The board's default tab, as `useDraftResult` picks it: `core`, which
-      // `dedupeCoreAgainstModel` folds into `model` when the two are the same six.
       const entries = archetypeEntries(idx.builds, g.name, "joust", false);
       const entry = entries.find((e: CuratedBuildEntry) => e.archetype === "core")
         ?? entries.find((e: CuratedBuildEntry) => e.archetype === "model") ?? entries[0];
       const scores = idx.god_item_scores[g.name]?.joust;
       if (!entry || !scores) continue;
       n += 1;
+      const overlay = { ...threatOverlay(threats, idx.draft, gods[g.name]),
+        team: teamOverlay(idx.draft.team, "Joust", ["T1", "T2"], teammateTags),
+        teamFit: teamFitItems(idx.draft.team, g.name, "Joust"), teamGated: idx.draft.team?.tags };
       const shipped = entry.slot_order as string[];
       const out = adaptFromCore(shipped, scores, items, overlay, {
         maxBonus: idx.draft.max_bonus, selfCovered: idx.draft.self_covered ?? 1,
@@ -83,15 +81,30 @@ describe("team-level tags on the shipped Joust index", () => {
         flexSlots: entry.flex_slots });
       before += Number(holds(shipped));
       after += Number(holds(out.core));
+      const fit = new Set(overlay.teamFit ?? []);
+      unfit += out.core.filter((x) => anti(x) && !shipped.includes(x) && !fit.has(x)).length;
     }
-    return { n, before, after };
+    return { n, before, after, unfit };
   };
 
-  it("a team without anti-heal pulls it into more cores; a team with it, into fewer or none", () => {
-    expect(idx.draft.team?.modes?.Joust?.share).toBeCloseTo(0.5);
-    const none = run(false);
-    const both = run(true);
-    expect(none.after).toBeGreaterThan(none.before);
-    expect(both.after).toBeLessThanOrEqual(both.before);
+  it("the static share is calibrated near one core in three", () => {
+    const none = run(false, 0);
+    expect(none.before / none.n).toBeGreaterThan(0.25);
+    expect(none.before / none.n).toBeLessThan(0.42);
+  });
+
+  it("teammates without anti-heal never pull in fewer; teammates with it never more", () => {
+    for (const h of [0, 3]) {
+      expect(run(false, h).after).toBeGreaterThanOrEqual(run(true, h).after);
+      expect(run(true, h).after).toBeLessThanOrEqual(run(true, h).before + run(true, h).n);
+    }
+  });
+
+  it("against healers, anti-heal arrives only where it fits the kit, and more without a teammate's copy", () => {
+    const none = run(false, 3);
+    const both = run(true, 3);
+    expect(none.after).toBeGreaterThan(both.after);
+    // Neither channel adds an anti-heal item the kit check rejected.
+    expect(none.unfit).toBe(0);
   });
 });

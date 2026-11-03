@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Dominance
   - The Reaper
   - Heartseeker
   flex_slots:
+  - Heartseeker
   - Hydra's Lament
-  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -90,14 +90,20 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.5
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Dominance:
-      total: 0.48
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -207,18 +207,18 @@ builds:
   - Phoenix Feather
   - Berserker's Shield
   - Kinetic Cuirass
+  - Tyrfing
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
-  - Kinetic Cuirass
   - Phoenix Feather
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -252,18 +252,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Amanita Charm:
-      total: 0.73
+      total: 0.7
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.81
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.85
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -335,13 +335,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
+  - Toxic Blade
   - Tyrfing
   - Qin's Blade
   - Riptalon
-  - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Demon Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -353,8 +353,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -370,6 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Tyrfing:
       total: 0.63
       efficiency: 0.5
@@ -388,12 +394,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Demon Blade:
-      total: 0.53
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: cooldown

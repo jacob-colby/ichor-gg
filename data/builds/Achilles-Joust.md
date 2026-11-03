@@ -20,8 +20,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Wyrmskin Hide — magical protection
+    swap_item: Wyrmskin Hide
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -62,11 +62,11 @@ builds:
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.73
+      total: 0.7
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -129,11 +129,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.64
+      total: 0.6
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -142,11 +142,11 @@ builds:
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
   flex_slots:
-  - Erosion
   - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -155,8 +155,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Glorious Pridwen — physical protection
-    swap_item: Glorious Pridwen
+    swap: Erosion — physical protection
+    swap_item: Erosion
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -187,31 +187,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
-      total: 0.8
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
-  - Void Stone
   - The Reaper
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Void Stone
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -223,8 +223,8 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -234,18 +234,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Toxic Blade:
+      total: 0.61
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Void Stone:
-      total: 0.61
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     The Reaper:
       total: 0.69
       efficiency: 0.51
@@ -260,7 +260,7 @@ builds:
       fit: 0.71
     Heartseeker:
       total: 0.62
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -279,8 +279,8 @@ builds:
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.63
+      total: 0.65
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.82
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -324,11 +324,11 @@ builds:
       pick: 0.0
       fit: 0.83
     Amanita Charm:
-      total: 0.64
+      total: 0.6
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -344,8 +344,8 @@ builds:
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -412,8 +412,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Wyrmskin Hide — magical protection
+    swap_item: Wyrmskin Hide
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -454,10 +454,10 @@ builds:
       pick: 0.0
       fit: 0.59
     Amanita Charm:
-      total: 0.73
+      total: 0.7
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.74
   starter: *id001
 ---

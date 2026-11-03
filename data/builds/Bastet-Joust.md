@@ -90,8 +90,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -152,8 +152,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -210,8 +210,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Shield Splitter
   - Jotunn's Revenge
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -229,7 +229,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -253,17 +253,17 @@ builds:
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.81
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.89
     Erosion:
-      total: 0.59
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.65
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.89
     Tyrfing:
       total: 0.64
       efficiency: 0.5

@@ -13,12 +13,12 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Golden Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -56,17 +56,17 @@ builds:
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.77
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.82
     Erosion:
-      total: 0.57
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.57
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -90,8 +90,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -129,24 +129,24 @@ builds:
       pick: 0.0
       fit: 0.77
     Amanita Charm:
-      total: 0.79
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Stone of Binding
+  - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Void Shield
   - Void Stone
   - Amanita Charm
   flex_slots:
-  - Stone of Binding
-  - Toxic Blade
+  - Avenging Blade
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -155,8 +155,8 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -169,36 +169,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Toxic Blade:
+    Avenging Blade:
       total: 0.59
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Toxic Blade:
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Void Shield:
-      total: 0.61
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Void Stone:
-      total: 0.61
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.69
     Amanita Charm:
-      total: 0.7
+      total: 0.67
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,12 +206,12 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Golden Blade
-  - Pharaoh's Curse
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -235,17 +235,23 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.68
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Riptalon:
       total: 0.57
       efficiency: 0.46
@@ -253,30 +259,24 @@ builds:
       pick: 0.0
       fit: 0.69
     Amanita Charm:
-      total: 0.69
+      total: 0.66
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Pharaoh's Curse:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+      fit: 0.66
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
   flex_slots:
   - Berserker's Shield
-  - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -305,18 +305,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Shield of the Phoenix:
       total: 0.67
       efficiency: 0.52
@@ -340,12 +340,12 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Erosion
   - Golden Blade
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -383,16 +383,16 @@ builds:
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.77
+      total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.82
     Erosion:
-      total: 0.57
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.57
   starter: *id001
 ---

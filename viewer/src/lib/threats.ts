@@ -45,8 +45,12 @@ export function deriveThreats(
 ): ThreatModel {
   const enemies = comp.enemies.map((n) => godsByName[n]).filter(Boolean);
   const allies = comp.allies.map((n) => godsByName[n]).filter(Boolean);
+  // TEAMMATES only. Slot 0 is you — the build being adapted — and counting
+  // its own core as "an ally covers this" damped every threat your own core
+  // already answered, which is `self_covered`'s job inside `adaptFromCore`,
+  // applied a second time (fixed 2026-11-03).
   const allyCovers: Record<string, boolean> = {};
-  for (const name of comp.allies) {
+  for (const name of comp.allies.slice(1)) {
     for (const tag of allyCores[name] ?? []) allyCovers[tag] = true;
   }
   return {

@@ -26,6 +26,8 @@
 export interface TeamModeConfig {
   team_size: number | null;
   share: number;
+  /** Per tag: the CALIBRATED static share (`team_tags.share`), where set. */
+  shares?: Record<string, number>;
   /** Each team tag's UNSCALED mode bonus. */
   bonus: Record<string, number>;
 }
@@ -34,6 +36,10 @@ export interface TeamConfig {
   tags: string[];
   duplicate_value: number;
   modes: Record<string, TeamModeConfig>;
+  /** `{god: {mode: [item]}}`: team-tag items whose KIT FIT passes
+   *  (`pipeline/smite/kit_fit.py`). The "you are the carrier" delta is paid
+   *  only on these. Absent on an older index: no gate. */
+  fit_items?: Record<string, Record<string, string[]>>;
 }
 
 /** The value of YOUR copy of a team tag, given what the known teammates hold. */
@@ -41,6 +47,13 @@ export function teamValue(heldByTeammate: boolean, unknownSeats: number, duplica
   if (heldByTeammate) return duplicateValue;
   const u = Math.max(0, unknownSeats);
   return 1 / (u + 1) + (u / (u + 1)) * duplicateValue;
+}
+
+/** Items the positive delta may reach for this god and mode, or undefined
+ *  for "no gate" (an index built before `kit_fit`). */
+export function teamFitItems(cfg: TeamConfig | undefined, god: string, modeLabel: string) {
+  if (!cfg?.fit_items) return undefined;
+  return cfg.fit_items[god]?.[modeLabel] ?? [];
 }
 
 /** `{tag: delta}` to add to every item carrying that tag, for this board. */
@@ -59,7 +72,8 @@ export function teamOverlay(
     const b = m.bonus?.[tag];
     if (!b) continue;
     const held = known.some((n) => (teammateTags[n] ?? []).includes(tag));
-    const delta = b * (teamValue(held, unknown, cfg.duplicate_value) - m.share);
+    const share = m.shares?.[tag] ?? m.share;
+    const delta = b * (teamValue(held, unknown, cfg.duplicate_value) - share);
     if (Math.abs(delta) > 1e-9) out[tag] = delta;
   }
   return out;

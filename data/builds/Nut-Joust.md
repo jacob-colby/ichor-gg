@@ -6,37 +6,31 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
+  - Spear of Desolation
+  - Tekko-Kagi
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Toxic Blade
+  - Spear of Desolation
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -49,73 +43,85 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Tekko-Kagi:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38
-    Eros' Bow:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Soul Gem:
-      total: 0.79
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.96
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Divine Ruin
   - Bancroft's Talon
+  - Book of Thoth
   - Jotunn's Revenge
+  - Hydra's Lament
   - Bragi's Harp
   - Rod of Tahuti
-  - Eros' Bow
   flex_slots:
-  - Eros' Bow
-  - Divine Ruin
+  - Hydra's Lament
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Bancroft's Talon:
       total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Book of Thoth:
+      total: 0.39
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -128,47 +134,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Eros' Bow:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Obsidian Shard
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -187,6 +181,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
@@ -204,21 +204,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
+  - Rod of Tahuti
   - Eros' Bow
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Kinetic Cuirass
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -234,71 +234,65 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Kinetic Cuirass:
+      total: 0.5
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Rod of Tahuti:
+      total: 0.56
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Eros' Bow:
-      total: 0.58
+      total: 0.49
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.46
     Amanita Charm:
-      total: 0.75
+      total: 0.66
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.84
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
+      fit: 0.67
     Soul Gem:
-      total: 0.78
+      total: 0.7
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.82
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Spear of Desolation
+  - Tekko-Kagi
   - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
   - Spear of Desolation
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.59
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.84
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -308,6 +302,12 @@ builds:
     Spear of Desolation:
       total: 0.58
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Tekko-Kagi:
+      total: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -335,23 +335,23 @@ builds:
   slot_order:
   - Toxic Blade
   - Tyrfing
+  - Bragi's Harp
   - Riptalon
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Eros' Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -359,14 +359,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.74
     Tyrfing:
       total: 0.56
       efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Bragi's Harp:
+      total: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -382,18 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Eros' Bow:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Soul Gem:
-      total: 0.79
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -463,37 +463,31 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Bragi's Harp
+  - Spear of Desolation
+  - Tekko-Kagi
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Toxic Blade
+  - Spear of Desolation
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -506,23 +500,29 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Spear of Desolation:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Tekko-Kagi:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38
-    Eros' Bow:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Soul Gem:
-      total: 0.79
+      total: 0.77
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.96
   starter: *id001
 ---

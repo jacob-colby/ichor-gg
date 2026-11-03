@@ -42,10 +42,10 @@ def test_the_modes_anti_heal_and_aura_bonus_is_scaled_by_the_team_share():
     w = scoring.load_weights(recommend.WEIGHTS_PATH)
     raw = w["modes"]["joust"]["tag_bonus"]
     p = scoring.resolve_profile(w, "Joust")
-    share = scoring.team_share(3, w["team_tags"]["duplicate_value"])
-    assert p["team_share"] == pytest.approx(share)
-    assert p["tag_bonus"]["anti-heal"] == pytest.approx(raw["anti-heal"] * share)
-    assert p["tag_bonus"]["aura"] == pytest.approx(raw["aura"] * share)
+    cal = w["team_tags"]["share"]["joust"]
+    assert p["team_shares"] == {"anti-heal": cal["anti-heal"], "aura": cal["aura"]}
+    assert p["tag_bonus"]["anti-heal"] == pytest.approx(raw["anti-heal"] * cal["anti-heal"])
+    assert p["tag_bonus"]["aura"] == pytest.approx(raw["aura"] * cal["aura"])
     assert p["tag_bonus"]["sustain"] == raw["sustain"]          # not a team tag
     assert p["team_tag_bonus"] == {"anti-heal": raw["anti-heal"], "aura": raw["aura"]}
 
@@ -68,3 +68,28 @@ def test_the_index_ships_what_the_static_builds_assumed():
     assert t["tags"] == ["anti-heal", "aura"]
     assert t["modes"]["Joust"]["team_size"] == 3
     assert t["modes"]["Joust"]["bonus"]["anti-heal"] == w["modes"]["joust"]["tag_bonus"]["anti-heal"]
+
+
+def test_without_a_calibrated_share_the_formula_applies():
+    w = scoring.load_weights(recommend.WEIGHTS_PATH)
+    w["team_tags"].pop("share")
+    p = scoring.resolve_profile(w, "Arena")
+    share = scoring.team_share(5, w["team_tags"]["duplicate_value"])
+    assert p["tag_bonus"]["anti-heal"] == pytest.approx(w["modes"]["arena"]["tag_bonus"]["anti-heal"] * share)
+
+
+def test_the_calibrated_shares_put_static_cores_near_one_in_n():
+    """Pinned as a property, ±0.08 around 1/N, not as counts."""
+    from smite import efficiency
+    w = scoring.load_weights(recommend.WEIGHTS_PATH)
+    efficiency.apply_pricing_flags(w)
+    items, tags = recommend.load_items(), scoring.load_tags(recommend.TAGS_PATH)
+    gods = recommend.load_gods()
+    for mode, n_team in (("Joust", 3), ("Arena", 5)):
+        held = n = 0
+        for g in gods:
+            for e in recommend.build_suggested_entries(g, items, {"builds": []}, w, tags, mode):
+                if e["archetype"] == "core":
+                    n += 1
+                    held += any("anti-heal" in (tags.get(x) or []) for x in e["slot_order"])
+        assert abs(held / n - 1 / n_team) < 0.08, (mode, held, n)

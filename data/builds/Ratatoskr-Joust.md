@@ -90,8 +90,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -152,8 +152,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -207,11 +207,11 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
-  - Erosion
   flex_slots:
   - Kinetic Cuirass
-  - Erosion
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -252,18 +252,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Amanita Charm:
-      total: 0.81
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.96
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
+      fit: 0.89
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -359,11 +359,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.89
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.76
