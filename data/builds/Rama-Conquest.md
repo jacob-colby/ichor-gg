@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/rama/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.564873417721519
   god_matches_won: 357
   god_matches_played: 632
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Tekko-Kagi, The Reaper, Lernaean Bow, Titan''s Bane,
     Hydra''s Lament, The Crusher, Heartseeker, Demon Blade, Musashi''s Dual Swords,
-    Arondight, Rage, Transcendence, Bloodforge, Berserker''s Shield, Runeforged Hammer,
+    Arondight, Rage, Bloodforge, Transcendence, Berserker''s Shield, Runeforged Hammer,
     Avatar''s Parashu, Avenging Blade, Pendulum Blade, Golden Blade, Barbed Carver,
     Shield Splitter, Eye of the Storm, Vital Amplifier, Toxic Blade.'
   slot_scores:
@@ -191,7 +191,7 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Jotunn''s
     Revenge, Tekko-Kagi, Hydra''s Lament, The Reaper, Titan''s Bane, Lernaean Bow,
     Heartseeker, The Crusher, Arondight, Transcendence, Musashi''s Dual Swords, Runeforged
-    Hammer, Bloodforge, Rage, Avenging Blade, Demon Blade, Pendulum Blade, Avatar''s
+    Hammer, Bloodforge, Rage, Demon Blade, Avenging Blade, Pendulum Blade, Avatar''s
     Parashu, Berserker''s Shield, Shield Splitter, Eye of the Storm, Genji''s Guard,
     Barbed Carver, Damaru, Golden Blade.'
   slot_scores:
@@ -262,7 +262,7 @@ builds:
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: Jotunn''s Revenge, Tekko-Kagi, The Reaper, Lernaean Bow, Titan''s Bane,
     Hydra''s Lament, The Crusher, Musashi''s Dual Swords, Demon Blade, Heartseeker,
-    Rage, Arondight, Transcendence, Bloodforge, Berserker''s Shield, Runeforged Hammer,
+    Rage, Arondight, Bloodforge, Transcendence, Berserker''s Shield, Runeforged Hammer,
     Avatar''s Parashu, Avenging Blade, Pendulum Blade, Golden Blade, Barbed Carver,
     Shield Splitter, Eye of the Storm, Vital Amplifier, Toxic Blade.'
   slot_scores:
@@ -406,9 +406,9 @@ builds:
     this god: Amanita Charm, Berserker''s Shield, The Reaper, Jotunn''s Revenge, Shield
     of the Phoenix, Kinetic Cuirass, Genji''s Guard, Shield Splitter, Yogi''s Necklace,
     Tekko-Kagi, Runeforged Hammer, Phoenix Feather, Bloodforge, Breastplate of Valor,
-    Pharaoh''s Curse, Lernaean Bow, Titan''s Bane, Freya''s Tears, Oni Hunter''s Garb,
-    Shogun''s Ofuda, Hydra''s Lament, Avenging Blade, Chandra''s Grace, Erosion, Midgardian
-    Mail, Eye of Providence, Draconic Scale, Leviathan''s Hide, Stone of Binding.'
+    Pharaoh''s Curse, Titan''s Bane, Freya''s Tears, Lernaean Bow, Oni Hunter''s Garb,
+    Shogun''s Ofuda, Avenging Blade, Hydra''s Lament, Chandra''s Grace, Erosion, Midgardian
+    Mail, Eye of Providence, Draconic Scale, Leviathan''s Hide, Regrowth Striders.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -457,8 +457,8 @@ builds:
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Dominance
   - The Crusher
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -619,9 +619,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
-    Tekko-Kagi, Arondight, The Reaper, Lernaean Bow, Titan''s Bane, The Crusher, Pendulum
+    Tekko-Kagi, Arondight, The Reaper, Titan''s Bane, Lernaean Bow, The Crusher, Pendulum
     Blade, Damaru, Heartseeker, Genji''s Guard, Musashi''s Dual Swords, Transcendence,
-    Breastplate of Valor, Berserker''s Shield, Bloodforge, Demon Blade, Runeforged
+    Breastplate of Valor, Berserker''s Shield, Demon Blade, Bloodforge, Runeforged
     Hammer, Rage, Chandra''s Grace, Avenging Blade, Avatar''s Parashu, Shield Splitter,
     Eye of the Storm.'
   slot_scores:
@@ -692,7 +692,7 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, The Reaper, Lernaean Bow,
     Titan''s Bane, Hydra''s Lament, The Crusher, Heartseeker, Demon Blade, Musashi''s
-    Dual Swords, Arondight, Rage, Transcendence, Bloodforge, Berserker''s Shield,
+    Dual Swords, Arondight, Rage, Bloodforge, Transcendence, Berserker''s Shield,
     Runeforged Hammer, Avatar''s Parashu, Pendulum Blade, Golden Blade, Avenging Blade,
     Barbed Carver, Shield Splitter, Eye of the Storm, Vital Amplifier, Toxic Blade.'
   slot_scores:

@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56

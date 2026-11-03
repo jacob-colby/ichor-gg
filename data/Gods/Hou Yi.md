@@ -66,10 +66,6 @@ abilities:
   name: Ricochet
   cooldown:
   - 10.0
-  - 9.5
-  - 9.0
-  - 8.5
-  - 8.0
   cost:
   - 60.0
   - 65.0
@@ -80,13 +76,13 @@ abilities:
   - Marked enemies who are hit are Stunned
   - Ricochet bounces an additional time if you have 400 or more Intelligence
   - This ability passes through and damages all enemies, but bounces off walls
-  - 'Damage: 95 | 145 | 195 | 245 | 295'
-  - 'Damage Scaling: 70% Strength + 55% Intelligence'
+  - 'Damage: 85 | 130 | 175 | 220 | 265'
+  - 'Damage Scaling: 60% Strength + 55% Intelligence'
   - 'Bonus Damage: +40% Per Ricochet'
   - 'Stun Duration: 1 second'
   - 'Range: 11.2 meters'
   - 'Radius: 0.48 meters'
-  - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
+  - 'Cooldown: 10 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   detail_kinds:
   - stun
@@ -215,7 +211,7 @@ aspects:
     Mark of the Golden Crow on its first hit. If already marked, the mark spreads.
     Attacks hitting marked targets bounce to a nearby enemy.
 source_url: https://wiki.smite2.com/w/Hou_Yi
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Hou Yi Basic Attack

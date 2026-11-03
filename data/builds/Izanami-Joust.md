@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -254,7 +254,7 @@ builds:
       fit: 0.46
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.49
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -489,7 +489,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0

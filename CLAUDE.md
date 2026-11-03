@@ -86,6 +86,11 @@ Five things that are easy to get wrong here, all expanded in that file:
    data. `calibrate.exact_random_core_baseline` is the closed form if you need
    to settle it that way.
 
+**Merging.** Sessions may merge their own PRs to `main` once every gate is
+green (Jacob, 2026-11-02). One PR per slice; the gates and the control re-run
+above are unchanged, and a red gate means leave the PR open and say why.
+Details in `.claude/skills/ichor-orchestrator/SKILL.md`, "Process".
+
 Commands, tests and the tuning surface are in
 [`docs/STATE.md` §6](docs/STATE.md). Use `npm run build`, not `tsc --noEmit` —
 the latter misses errors the project reference build catches.

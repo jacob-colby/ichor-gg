@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0

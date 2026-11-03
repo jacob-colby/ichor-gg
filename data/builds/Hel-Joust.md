@@ -51,7 +51,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -124,7 +124,7 @@ builds:
       fit: 0.4
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -183,7 +183,7 @@ builds:
       fit: 0.45
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -242,7 +242,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.68
-      efficiency: 0.87
+      total: 0.67
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -377,8 +377,8 @@ builds:
       pick: 0.0
       fit: 0.47
     Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.87
+      total: 0.54
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.22
@@ -508,7 +508,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37

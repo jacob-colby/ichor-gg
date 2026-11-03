@@ -23,8 +23,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.57
+      total: 0.64
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.83
     Tyrfing:
       total: 0.58
       efficiency: 0.5
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Riptalon:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Dominance
   - The Reaper
   - Heartseeker
   flex_slots:
+  - Hydra's Lament
   - Tyrfing
-  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Dominance:
-      total: 0.48
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -155,8 +155,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.81
     Rage:
       total: 0.46
       efficiency: 0.44
@@ -220,8 +220,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -260,7 +260,7 @@ builds:
       fit: 0.44
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -270,23 +270,23 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Kinetic Cuirass
   - The Reaper
   - Amanita Charm
   - Pharaoh's Curse
+  - Shogun's Ofuda
   flex_slots:
-  - Kinetic Cuirass
   - Pharaoh's Curse
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -294,23 +294,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.63
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.78
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -318,17 +312,23 @@ builds:
       pick: 0.0
       fit: 0.61
     Amanita Charm:
-      total: 0.71
+      total: 0.76
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.87
     Pharaoh's Curse:
-      total: 0.51
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.62
+    Shogun's Ofuda:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -359,17 +359,17 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
+      total: 0.69
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.93
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Riptalon:
       total: 0.71
       efficiency: 0.46
@@ -415,8 +415,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.59
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.88
     Tyrfing:
       total: 0.59
       efficiency: 0.5
@@ -477,8 +477,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -489,17 +489,17 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.48
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -545,8 +545,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -560,11 +560,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.57
+      total: 0.64
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.83
     Tyrfing:
       total: 0.58
       efficiency: 0.5
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Riptalon:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0

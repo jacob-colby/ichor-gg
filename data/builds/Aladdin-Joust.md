@@ -20,11 +20,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -57,7 +57,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -87,11 +87,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -118,13 +118,13 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -152,8 +152,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -205,17 +205,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
-  - Shield Splitter
+  - Jotunn's Revenge
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
@@ -240,30 +240,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Shield Splitter:
-      total: 0.54
-      efficiency: 0.59
+    Void Stone:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.65
     Amanita Charm:
-      total: 0.78
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 1.0
     Erosion:
-      total: 0.56
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.7
     Soul Gem:
-      total: 0.67
+      total: 0.72
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -319,7 +319,7 @@ builds:
       fit: 0.89
     Heartseeker:
       total: 0.71
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -347,11 +347,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.61
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.91
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -389,11 +389,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.71
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -477,11 +477,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -514,7 +514,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89

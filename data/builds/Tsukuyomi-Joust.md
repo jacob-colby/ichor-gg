@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.88
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -62,11 +62,11 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.64
+      total: 0.69
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.86
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -87,11 +87,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Death Metal:
-      total: 0.59
+      total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -118,22 +118,22 @@ builds:
       fit: 0.67
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.71
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: burst
@@ -145,7 +145,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
+  - Spear of Desolation
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.78
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -189,7 +189,7 @@ builds:
       fit: 0.56
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Berserker's Shield
-  - Kinetic Cuirass
   - Amanita Charm
+  - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Golden Blade
+  - Pharaoh's Curse
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,42 +228,42 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Toxic Blade:
-      total: 0.56
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.8
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
-      total: 0.72
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.89
+    Pharaoh's Curse:
+      total: 0.56
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Shogun's Ofuda:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Soul Gem:
-      total: 0.61
+      total: 0.66
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -282,11 +282,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.71
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.97
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.67
@@ -319,16 +319,16 @@ builds:
       fit: 0.67
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Soul Gem:
-      total: 0.72
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.58
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.86
     Tyrfing:
       total: 0.58
       efficiency: 0.5
@@ -389,20 +389,20 @@ builds:
       pick: 0.0
       fit: 0.56
     Soul Gem:
-      total: 0.66
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Hydra's Lament
@@ -412,17 +412,23 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Lotus Sickle:
       total: 0.51
       efficiency: 0.57
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -463,31 +463,37 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Jotunn's Revenge
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -500,12 +506,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Bragi's Harp:
-      total: 0.56
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Spear of Desolation:
       total: 0.57
       efficiency: 0.59
@@ -514,7 +514,7 @@ builds:
       fit: 0.54
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -523,48 +523,48 @@ builds:
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
-  - Tyrfing
   - Death Metal
   - Bragi's Harp
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Jotunn's Revenge
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.61
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.55
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Death Metal:
       total: 0.61
       efficiency: 0.63
@@ -579,16 +579,16 @@ builds:
       fit: 0.73
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.41
     Soul Gem:
-      total: 0.71
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.99
   starter: *id001
 - source: suggested
   archetype: model
@@ -619,11 +619,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.88
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -649,11 +649,11 @@ builds:
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.64
+      total: 0.69
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.86
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -684,11 +684,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.88
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -709,16 +709,16 @@ builds:
       fit: 0.59
     Heartseeker:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.64
+      total: 0.69
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.86
   swaps:
   - added: Heartseeker
     removed: Death Metal

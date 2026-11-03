@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.67
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -56,8 +56,8 @@ builds:
       pick: 0.0
       fit: 0.9
     Rod of Tahuti:
-      total: 0.84
-      efficiency: 0.87
+      total: 0.83
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -76,9 +76,9 @@ builds:
   - Lotus Sickle
   - Spear of Desolation
   - Doom Orb
-  - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
+  - Triton's Conch
   flex_slots:
   - Doom Orb
   - Lotus Sickle
@@ -87,8 +87,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
@@ -112,19 +112,13 @@ builds:
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Obsidian Shard:
-      total: 0.58
-      efficiency: 0.58
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.57
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: burst
@@ -152,8 +152,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Doom Orb:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -204,18 +204,18 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Spear of Desolation
-  - Rod of Tahuti
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
-  - Spear of Desolation
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
@@ -234,36 +234,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Spear of Desolation:
-      total: 0.54
-      efficiency: 0.59
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.49
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.87
+      fit: 0.65
+    Void Stone:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.65
     Amanita Charm:
-      total: 0.78
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 1.0
     Erosion:
-      total: 0.56
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.71
     Soul Gem:
       total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -301,7 +301,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.7
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -319,7 +319,7 @@ builds:
       fit: 0.96
     Rod of Tahuti:
       total: 0.86
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Divine Ruin
   - Nimble Ring
   - Bragi's Harp
-  - Obsidian Shard
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Eros' Bow
+  - Bragi's Harp
+  - Divine Ruin
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -353,11 +353,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Divine Ruin:
+      total: 0.5
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Nimble Ring:
       total: 0.55
       efficiency: 0.63
@@ -365,35 +371,29 @@ builds:
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Obsidian Shard:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
     Eros' Bow:
-      total: 0.49
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.6
     Soul Gem:
-      total: 0.75
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -424,7 +424,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Lotus Sickle:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -448,8 +448,8 @@ builds:
       pick: 0.0
       fit: 0.86
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.87
+      total: 0.62
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.38
@@ -496,7 +496,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.67
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.8
@@ -513,8 +513,8 @@ builds:
       pick: 0.0
       fit: 0.9
     Rod of Tahuti:
-      total: 0.84
-      efficiency: 0.87
+      total: 0.83
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.8

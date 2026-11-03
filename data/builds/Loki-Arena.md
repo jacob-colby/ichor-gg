@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -90,8 +90,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.63
     The Reaper:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.57
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
   - Pendulum Blade
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,13 +158,19 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Crusher:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Titan's Bane:
       total: 0.6
       efficiency: 0.54
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Golden Blade
-  - Kinetic Cuirass
-  - Shield Splitter
   - Shield of the Phoenix
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Shield Splitter
-  - Golden Blade
+  - Void Shield
+  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Mystical Mail — physical protection
+    swap_item: Mystical Mail
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.57
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-    Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Shield Splitter:
-      total: 0.58
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Shield of the Phoenix:
       total: 0.62
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Void Shield:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Void Stone:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Amanita Charm:
-      total: 0.82
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 1.0
     Erosion:
-      total: 0.59
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.86
+    Stampede:
+      total: 0.65
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -350,8 +350,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -371,11 +371,11 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.63
+      total: 0.72
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.99
     Tyrfing:
       total: 0.64
       efficiency: 0.5
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.79
     The Reaper:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
-  - Transcendence
   - Hydra's Lament
   - Arondight
   - Pendulum Blade
   flex_slots:
   - Arondight
-  - Transcendence
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -418,11 +418,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Chandra's Grace:
       total: 0.59
       efficiency: 0.43
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Transcendence:
-      total: 0.34
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.15
     Hydra's Lament:
       total: 0.65
       efficiency: 0.56
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -566,7 +566,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0

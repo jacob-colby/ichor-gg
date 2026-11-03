@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Kinetic Cuirass
-  - Magi's Cloak
-  - Freya's Tears
-  - Mantle Of Discord
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Magi's Cloak
-  - Mantle Of Discord
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -37,24 +37,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Magi's Cloak:
-      total: 0.59
-      efficiency: 0.54
+    Void Shield:
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.58
+      fit: 0.81
+    Void Stone:
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Mantle Of Discord:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.81
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -62,11 +56,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.72
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.93
+    Stampede:
+      total: 0.66
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -74,14 +74,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
+  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
-  - Freya's Tears
+  - Void Stone
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.58
+    Void Stone:
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.83
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -117,23 +117,23 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.62
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
-    Stampede:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Soul Gem:
       total: 0.71
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+    Stampede:
+      total: 0.67
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    Soul Gem:
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -142,18 +142,18 @@ builds:
   - Stone of Binding
   - Void Shield
   - Void Stone
-  - Rod of Tahuti
-  - Soul Gem
+  - Amanita Charm
+  - Erosion
   flex_slots:
   - Stone of Binding
   - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -176,70 +176,58 @@ builds:
       pick: 0.0
       fit: 0.72
     Void Shield:
-      total: 0.64
+      total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.99
     Void Stone:
-      total: 0.64
+      total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
-    Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
-    Soul Gem:
-      total: 0.76
-      efficiency: 0.53
+      fit: 0.99
+    Amanita Charm:
+      total: 0.83
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Erosion:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Kinetic Cuirass
-  - Magi's Cloak
   - Nimble Ring
   - Bragi's Harp
   - Eros' Bow
   - Amanita Charm
+  - Erosion
+  - Stampede
   flex_slots:
   - Nimble Ring
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Magi's Cloak:
-      total: 0.49
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Nimble Ring:
       total: 0.48
       efficiency: 0.63
@@ -253,30 +241,42 @@ builds:
       pick: 0.0
       fit: 0.46
     Eros' Bow:
-      total: 0.5
+      total: 0.59
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.66
     Amanita Charm:
-      total: 0.68
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.89
+    Erosion:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Stampede:
+      total: 0.56
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
-  - Breastplate of Valor
-  - Kinetic Cuirass
+  - Void Stone
   - Freya's Tears
+  - Erosion
+  - Stampede
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Screeching Gargoyle
+  - Genji's Guard
+  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -293,127 +293,127 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Genji's Guard:
       total: 0.58
       efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Breastplate of Valor:
-      total: 0.56
-      efficiency: 0.63
+    Void Stone:
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.48
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+      fit: 0.69
     Freya's Tears:
       total: 0.61
       efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Erosion:
+      total: 0.63
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Stampede:
+      total: 0.6
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
     Soul Gem:
-      total: 0.73
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: strength
   slot_order:
-  - Golden Blade
-  - Berserker's Shield
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shield Splitter
+  - Toxic Blade
   - Amanita Charm
+  - Erosion
+  - Stampede
+  - Pharaoh's Curse
+  - Triton's Conch
   flex_slots:
-  - Shield Splitter
-  - Kinetic Cuirass
+  - Triton's Conch
+  - Pharaoh's Curse
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.55
-      efficiency: 0.52
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Kinetic Cuirass:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    Shield Splitter:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
+      fit: 0.7
     Amanita Charm:
-      total: 0.7
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.93
+    Erosion:
+      total: 0.6
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Stampede:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Pharaoh's Curse:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Triton's Conch:
+      total: 0.57
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Magi's Cloak
-  - Shield Splitter
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
+  - Triton's Conch
   flex_slots:
-  - Erosion
-  - Magi's Cloak
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,55 +423,55 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.67
+    Void Shield:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.42
-    Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.56
+      fit: 0.66
+    Void Stone:
+      total: 0.56
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.5
-    Magi's Cloak:
-      total: 0.51
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Shield Splitter:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
+      fit: 0.66
     Amanita Charm:
-      total: 0.71
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.95
     Erosion:
-      total: 0.52
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.7
+    Stampede:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Triton's Conch:
+      total: 0.6
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Magi's Cloak
-  - Freya's Tears
-  - Mantle Of Discord
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Magi's Cloak
-  - Mantle Of Discord
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -494,24 +494,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Magi's Cloak:
-      total: 0.59
-      efficiency: 0.54
+    Void Shield:
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.58
+      fit: 0.81
+    Void Stone:
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Mantle Of Discord:
-      total: 0.59
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.81
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -519,23 +513,29 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.72
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.93
+    Stampede:
+      total: 0.66
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Kinetic Cuirass
-  - Magi's Cloak
   - Shell of Rebuke
-  - Freya's Tears
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Magi's Cloak
+  - Void Stone
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
@@ -559,24 +559,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Magi's Cloak:
-      total: 0.59
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Shell of Rebuke:
       total: 0.37
       efficiency: 0.29
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Freya's Tears:
-      total: 0.6
-      efficiency: 0.58
+    Void Stone:
+      total: 0.63
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.81
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -584,16 +578,22 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.63
+      total: 0.72
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.93
+    Stampede:
+      total: 0.66
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   swaps:
   - added: Shell of Rebuke
-    removed: Mantle Of Discord
+    removed: Void Shield
     reason: Conquest community 66% win over 37 matches (vs 49% on this god), taking
-      the model's weakest slot from Mantle Of Discord
+      the model's weakest slot from Void Shield
   borrowed_from: Conquest
   starter: *id001
 ---

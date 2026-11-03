@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>ichor — SMITE 2 build recommender</title>
     <meta
       name="description"
       content="Build recommendations for every SMITE 2 god, scored by gold value and kit fit rather than copied from the meta. Tier lists, patch diffs, and draft-aware builds."
     />
-    <meta name="theme-color" content="#0b0e13" />
+    <meta name="theme-color" content="#101114" />
+    <meta name="color-scheme" content="dark" />
 
     <!-- Links get pasted into Discord more than anywhere else; these drive the unfurl. -->
     <meta property="og:type" content="website" />
@@ -34,6 +35,23 @@
     <link rel="apple-touch-icon" href="/og.png" />
   </head>
   <body>
+    <!--
+      DIRECTION A + TYPED QUERY · SECOND SCREEN — god first (chosen 2026-11-03; C's command field merged in)
+      THESIS: The phone beside the monitor, mid-draft. One answer per screen: who you are
+        playing, the six to buy in order, and how the enemy team bends it. Or type it:
+        "ra vs hecate ymir joust" + Enter lands on that adapted build.
+      OWN-WORLD: Thermal Ink, dark only. Broadcast lower-third caps (Sofia Sans Extra
+        Condensed) over Sofia Sans; violet is the model's voice and the only hue; the enemy
+        is an ink outline and the word "Enemy". Gold and percent of players are the only numbers.
+      STORY: Open on "Who are you playing?", tap your god, read one sentence and six rows.
+        As the enemy locks in, tap a slot, type three letters, and a row locks in with its reason.
+      FIRST VIEWPORT: god header, the verdict sentence, the starter, five of six items with
+        gold spent, the enemy strip riding above the tab bar.
+      FORM: god-first single column with a bottom tab bar on a phone; on desktop a slim top
+        bar and a real second column (enemy team + why). The full draft board is its own tab.
+        The command field is the top bar's global search on desktop (/ or Ctrl K) and the
+        god-select search box on a phone; the god page's enemy strip stays the enemy UI.
+    -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

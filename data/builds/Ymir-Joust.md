@@ -165,7 +165,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.56
+      total: 0.55
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Shield Splitter:
-      total: 0.56
+      total: 0.55
       efficiency: 0.59
       win: 0.5
       pick: 0.0

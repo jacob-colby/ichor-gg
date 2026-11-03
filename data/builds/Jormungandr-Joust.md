@@ -318,7 +318,7 @@ builds:
       pick: 0.0
       fit: 0.49
     Freya's Tears:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
       win: 0.5
       pick: 0.0

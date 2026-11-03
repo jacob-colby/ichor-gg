@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5609756097560976
   god_matches_won: 506
   god_matches_played: 902
@@ -123,7 +123,7 @@ builds:
     Shield Splitter, Eye of the Storm, Avatar''s Parashu, Avenging Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -210,7 +210,7 @@ builds:
       pick: 0.0
       fit: 0.24
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.57
       pick: 0.0
@@ -263,7 +263,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, Golden Blade, The Reaper,
+    this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, The Reaper, Golden Blade,
     Demon Blade, Deathbringer, Hydra''s Lament, Musashi''s Dual Swords, Titan''s Bane,
     Rage, Toxic Blade, The Crusher, Arondight, Qin''s Blade, Heartseeker, Bloodforge,
     Transcendence, Berserker''s Shield, Runeforged Hammer, Sun Beam Bow, Barbed Carver,
@@ -340,7 +340,7 @@ builds:
     Yogi''s Necklace, Runeforged Hammer, Phoenix Feather, Bloodforge, Tekko-Kagi,
     Pharaoh''s Curse, Breastplate of Valor, Lernaean Bow, Freya''s Tears, Oni Hunter''s
     Garb, Shogun''s Ofuda, Erosion, Hydra''s Lament, Chandra''s Grace, Eye of Providence,
-    Midgardian Mail, Toxic Blade, Draconic Scale, Avenging Blade.'
+    Toxic Blade, Midgardian Mail, Draconic Scale, Avenging Blade.'
   slot_scores:
     Genji's Guard:
       total: 0.52
@@ -483,7 +483,7 @@ builds:
     this god: Jotunn''s Revenge, Tekko-Kagi, Lernaean Bow, Golden Blade, The Reaper,
     Hydra''s Lament, Toxic Blade, Titan''s Bane, Qin''s Blade, Demon Blade, Deathbringer,
     Musashi''s Dual Swords, The Crusher, Arondight, Sun Beam Bow, Berserker''s Shield,
-    Heartseeker, Rage, Transcendence, Bloodforge, Runeforged Hammer, Barbed Carver,
+    Rage, Heartseeker, Transcendence, Bloodforge, Runeforged Hammer, Barbed Carver,
     Shield Splitter, Vital Amplifier, Avenging Blade.'
   slot_scores:
     Lernaean Bow:
@@ -493,7 +493,7 @@ builds:
       pick: 0.0
       fit: 0.52
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.67
       win: 0.57
       pick: 0.0
@@ -555,7 +555,7 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Hydra''s Lament,
     Arondight, Tekko-Kagi, Lernaean Bow, The Reaper, Titan''s Bane, Golden Blade,
-    Damaru, Genji''s Guard, Deathbringer, Pendulum Blade, Musashi''s Dual Swords,
+    Damaru, Genji''s Guard, Pendulum Blade, Deathbringer, Musashi''s Dual Swords,
     The Crusher, Toxic Blade, Qin''s Blade, Breastplate of Valor, Heartseeker, Demon
     Blade, Berserker''s Shield, Transcendence, Rage, Bloodforge, Chandra''s Grace,
     Runeforged Hammer, Sun Beam Bow.'
@@ -639,7 +639,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -712,7 +712,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0

@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Bragi's Harp
   - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Toxic Blade
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,11 +93,17 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
@@ -105,26 +111,20 @@ builds:
       pick: 0.0
       fit: 0.52
     Death Metal:
-      total: 0.59
+      total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.54
-    Bragi's Harp:
-      total: 0.56
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -206,12 +206,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tekko-Kagi
+  - Silverbranch Bow
   - Titan's Bane
-  - Heartseeker
   - Soul Gem
   flex_slots:
   - Titan's Bane
-  - Heartseeker
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -246,18 +246,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Titan's Bane:
+    Silverbranch Bow:
       total: 0.6
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Titan's Bane:
+      total: 0.61
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Soul Gem:
       total: 0.72
       efficiency: 0.53

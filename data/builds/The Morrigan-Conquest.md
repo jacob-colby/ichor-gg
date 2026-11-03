@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.08
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/the-morrigan/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5654545454545454
   god_matches_won: 311
   god_matches_played: 550
@@ -117,14 +117,14 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Dreamer''s
-    Idol, Lotus Sickle, Chronos'' Pendant, The Cosmic Horror, Heartwood Charm, Blood-Bound
-    Book, Ancient Signet, Totem of Death, Soul Reaver, Divine Ruin, Jade Scepter,
+    Idol, Lotus Sickle, Chronos'' Pendant, The Cosmic Horror, Ancient Signet, Heartwood
+    Charm, Blood-Bound Book, Totem of Death, Soul Reaver, Divine Ruin, Jade Scepter,
     Bancroft''s Talon, Helm of Radiance, Ethereal Staff, Staff of Myrddin, Typhon’s
-    Heart, Rod of Asclepius, Bracer of The Abyss, Alchemist Coat.'
+    Heart, Rod of Asclepius, Alchemist Coat, Bracer of The Abyss.'
   slot_scores:
     Book of Thoth:
       total: 0.52
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.61
       pick: 0.25
       fit: 0.4
@@ -136,13 +136,13 @@ builds:
       fit: 1.0
     The World Stone:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.56
       pick: 0.4
       fit: 0.8
     Rod of Tahuti:
-      total: 0.69
-      efficiency: 0.87
+      total: 0.68
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.8
@@ -193,8 +193,8 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Lotus Sickle, Death Metal, Doom Orb, Spear of the Magus, Gluttonous Grimoire,
-    Chronos'' Pendant, Heartwood Charm, Dreamer''s Idol, Ancient Signet, Bragi''s
+    Gem, Lotus Sickle, Death Metal, Doom Orb, Spear of the Magus, Ancient Signet,
+    Gluttonous Grimoire, Chronos'' Pendant, Heartwood Charm, Dreamer''s Idol, Bragi''s
     Harp, Soul Reaver, Blood-Bound Book, The Cosmic Horror, Bancroft''s Talon, Triton''s
     Conch, Totem of Death, Divine Ruin, Jade Scepter, Genji''s Guard, Helm of Radiance,
     Ethereal Staff, Wish-Granting Pearl.'
@@ -207,7 +207,7 @@ builds:
       fit: 0.53
     Book of Thoth:
       total: 0.52
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.61
       pick: 0.25
       fit: 0.39
@@ -219,13 +219,13 @@ builds:
       fit: 0.61
     The World Stone:
       total: 0.54
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.56
       pick: 0.4
       fit: 0.57
     Rod of Tahuti:
       total: 0.65
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.57
@@ -268,14 +268,14 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Lotus Sickle,
-    Dreamer''s Idol, Chronos'' Pendant, Death Metal, The Cosmic Horror, Heartwood
-    Charm, Bragi''s Harp, Blood-Bound Book, Ancient Signet, Totem of Death, Soul Reaver,
+    Dreamer''s Idol, Chronos'' Pendant, Death Metal, Ancient Signet, The Cosmic Horror,
+    Heartwood Charm, Bragi''s Harp, Blood-Bound Book, Totem of Death, Soul Reaver,
     Damaru, Divine Ruin, Jade Scepter, Genji''s Guard, Triton''s Conch, Bancroft''s
     Talon, Helm of Radiance, Ethereal Staff.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
-      efficiency: 0.5
+      total: 0.49
+      efficiency: 0.49
       win: 0.61
       pick: 0.25
       fit: 0.22
@@ -287,13 +287,13 @@ builds:
       fit: 0.78
     The World Stone:
       total: 0.54
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.56
       pick: 0.4
       fit: 0.56
     Rod of Tahuti:
       total: 0.65
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.56
@@ -343,15 +343,15 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Gluttonous Grimoire,
-    Kinetic Cuirass, Ethereal Staff, Genji''s Guard, Phoenix Feather, Blood-Bound
-    Book, Yogi''s Necklace, Freya''s Tears, Rod of Asclepius, Helm of Radiance, Spear
-    of the Magus, Sphere of Negation, Helm of Darkness, Breastplate of Valor, Erosion,
-    Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Jade Scepter, Draconic
-    Scale, Doom Orb, Midgardian Mail, Lotus Sickle.'
+    Kinetic Cuirass, Ethereal Staff, Genji''s Guard, Phoenix Feather, Freya''s Tears,
+    Blood-Bound Book, Yogi''s Necklace, Rod of Asclepius, Helm of Radiance, Spear
+    of the Magus, Sphere of Negation, Helm of Darkness, Breastplate of Valor, Soul
+    Locket, Erosion, Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Draconic
+    Scale, Jade Scepter, Midgardian Mail, Doom Orb, Lotus Sickle.'
   slot_scores:
     Book of Thoth:
       total: 0.49
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.61
       pick: 0.25
       fit: 0.2
@@ -369,7 +369,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.39
@@ -417,10 +417,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Dreamer''s
-    Idol, The Cosmic Horror, Lotus Sickle, Chronos'' Pendant, Heartwood Charm, Blood-Bound
-    Book, Ancient Signet, Soul Reaver, Totem of Death, Divine Ruin, Jade Scepter,
+    Idol, The Cosmic Horror, Lotus Sickle, Chronos'' Pendant, Ancient Signet, Heartwood
+    Charm, Blood-Bound Book, Soul Reaver, Totem of Death, Divine Ruin, Jade Scepter,
     Bancroft''s Talon, Helm of Radiance, Ethereal Staff, Screeching Gargoyle, Typhon’s
-    Heart, Rod of Asclepius, Genji''s Guard, Bracer of The Abyss.'
+    Heart, Rod of Asclepius, Genji''s Guard, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
       total: 0.62
@@ -436,13 +436,13 @@ builds:
       fit: 0.86
     The World Stone:
       total: 0.58
-      efficiency: 0.53
+      efficiency: 0.52
       win: 0.56
       pick: 0.4
       fit: 0.86
     Rod of Tahuti:
       total: 0.69
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.86
@@ -491,9 +491,9 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Nimble Ring, Soul Gem, Gluttonous Grimoire, Bragi''s Harp, Spear of
-    the Magus, Blood-Bound Book, Bracer of The Abyss, Lotus Sickle, Doom Orb, Death
-    Metal, Eros'' Bow, Chronos'' Pendant, Dreamer''s Idol, Bancroft''s Talon, Ancient
-    Signet, Heartwood Charm, The Cosmic Horror, Typhon’s Heart, Soul Reaver, Divine
+    the Magus, Blood-Bound Book, Bracer of The Abyss, Ancient Signet, Lotus Sickle,
+    Doom Orb, Death Metal, Eros'' Bow, Chronos'' Pendant, Dreamer''s Idol, Bancroft''s
+    Talon, Heartwood Charm, The Cosmic Horror, Typhon’s Heart, Soul Reaver, Divine
     Ruin, Jade Scepter, Totem of Death, Damaru.'
   slot_scores:
     Bracer of The Abyss:
@@ -503,7 +503,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.55
+      total: 0.54
       efficiency: 0.63
       win: 0.56
       pick: 0.0
@@ -522,7 +522,7 @@ builds:
       fit: 0.62
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.32
@@ -564,10 +564,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Lotus Sickle, Chronos''
     Pendant, Heartwood Charm, Spear of the Magus, Gluttonous Grimoire, Totem of Death,
-    Doom Orb, Damaru, Genji''s Guard, Dreamer''s Idol, Death Metal, Breastplate of
-    Valor, Chandra''s Grace, The Cosmic Horror, Staff of Myrddin, Blood-Bound Book,
-    Ancient Signet, Eye of Erebus, Bragi''s Harp, Screeching Gargoyle, Soul Reaver,
-    Divine Ruin.'
+    Damaru, Doom Orb, Genji''s Guard, Dreamer''s Idol, Ancient Signet, Death Metal,
+    Breastplate of Valor, Chandra''s Grace, The Cosmic Horror, Staff of Myrddin, Blood-Bound
+    Book, Eye of Erebus, Screeching Gargoyle, Bragi''s Harp, Soul Reaver, Freya''s
+    Tears.'
   slot_scores:
     Lotus Sickle:
       total: 0.54
@@ -577,7 +577,7 @@ builds:
       fit: 0.62
     Book of Thoth:
       total: 0.48
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.61
       pick: 0.25
       fit: 0.14
@@ -595,7 +595,7 @@ builds:
       fit: 0.62
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.38
@@ -638,10 +638,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom
-    Orb, Dreamer''s Idol, Lotus Sickle, Chronos'' Pendant, The Cosmic Horror, Heartwood
-    Charm, Blood-Bound Book, Ancient Signet, Totem of Death, Soul Reaver, Divine Ruin,
-    Jade Scepter, Bancroft''s Talon, Helm of Radiance, Ethereal Staff, Staff of Myrddin,
-    Typhon’s Heart, Rod of Asclepius, Bracer of The Abyss, Alchemist Coat.'
+    Orb, Dreamer''s Idol, Lotus Sickle, Chronos'' Pendant, The Cosmic Horror, Ancient
+    Signet, Heartwood Charm, Blood-Bound Book, Totem of Death, Soul Reaver, Divine
+    Ruin, Jade Scepter, Bancroft''s Talon, Helm of Radiance, Ethereal Staff, Staff
+    of Myrddin, Typhon’s Heart, Rod of Asclepius, Alchemist Coat, Bracer of The Abyss.'
   slot_scores:
     Spear of Desolation:
       total: 0.62
@@ -651,7 +651,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.56
       pick: 0.0
       fit: 0.8
@@ -662,8 +662,8 @@ builds:
       pick: 0.0
       fit: 0.8
     Rod of Tahuti:
-      total: 0.69
-      efficiency: 0.87
+      total: 0.68
+      efficiency: 0.86
       win: 0.53
       pick: 0.43
       fit: 0.8

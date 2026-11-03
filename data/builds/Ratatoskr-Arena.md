@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -63,7 +63,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -90,8 +90,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -117,7 +117,7 @@ builds:
       pick: 0.0
       fit: 0.63
     The Reaper:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.57
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -206,22 +206,22 @@ builds:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
-  - Kinetic Cuirass
   - Amanita Charm
   - Erosion
+  - Stampede
   flex_slots:
-  - Kinetic Cuirass
-  - Erosion
+  - Briskberry Acorn
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -246,24 +246,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Amanita Charm:
-      total: 0.82
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.98
+      fit: 1.0
     Erosion:
-      total: 0.59
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.86
+    Stampede:
+      total: 0.65
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -350,8 +350,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.63
+      total: 0.72
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.99
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.76
@@ -383,7 +383,7 @@ builds:
       pick: 0.0
       fit: 0.79
     The Reaper:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -399,21 +399,21 @@ builds:
   archetype: cooldown
   slot_order:
   - Thistlethorn Acorn
-  - Genji's Guard
   - Jotunn's Revenge
   - Hydra's Lament
+  - Damaru
   - Arondight
   - Pendulum Blade
   flex_slots:
   - Arondight
-  - Genji's Guard
+  - Damaru
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Genji's Guard:
-      total: 0.49
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Jotunn's Revenge:
       total: 0.76
       efficiency: 0.67
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+    Damaru:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Arondight:
       total: 0.54
       efficiency: 0.54
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0

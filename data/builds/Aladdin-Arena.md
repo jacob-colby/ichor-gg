@@ -23,8 +23,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -57,7 +57,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -73,58 +73,52 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
-  - Spear of Desolation
   - Heartseeker
   - Rod of Tahuti
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Spear of Desolation
-  - Hydra's Lament
+  - Heartseeker
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Hydra's Lament:
-      total: 0.59
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.62
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Shield Splitter
+  - Void Shield
+  - Void Stone
   - Amanita Charm
   - Erosion
+  - Stampede
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Shield Splitter
+  - Void Stone
+  - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,42 +228,42 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.67
+    Void Shield:
+      total: 0.6
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.45
-    Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.56
+      fit: 0.75
+    Void Stone:
+      total: 0.61
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.6
-    Shield Splitter:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
+      fit: 0.75
     Amanita Charm:
-      total: 0.79
+      total: 0.83
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 1.0
     Erosion:
-      total: 0.57
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.8
+    Stampede:
+      total: 0.63
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
     Soul Gem:
-      total: 0.68
+      total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -282,11 +282,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
-  - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
+    swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -319,7 +319,7 @@ builds:
       fit: 0.89
     Heartseeker:
       total: 0.71
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -334,24 +334,24 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - Riptalon
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Golden Blade
-  - Lernaean Bow
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -364,18 +364,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Lernaean Bow:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Toxic Blade:
-      total: 0.59
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.91
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -388,12 +382,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
-      total: 0.72
+      total: 0.79
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -480,8 +480,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -514,7 +514,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89

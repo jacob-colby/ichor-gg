@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.1
     win_rate: 0.8
   source_url: https://smitebrain.com/gods/osiris/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5083333333333333
   god_matches_won: 122
   god_matches_played: 240
@@ -118,7 +118,7 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Jotunn''s Revenge, Shield Splitter, Runeforged Hammer,
     Tekko-Kagi, Tyrfing, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Avenging Blade,
-    Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Oni Hunter''s
+    Titan''s Bane, Pharaoh''s Curse, Breastplate of Valor, Dominance, Oni Hunter''s
     Garb, Toxic Blade, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence,
     Silverbranch Bow, The Crusher, Arondight, Wyrmskin Hide, Draconic Scale, Leviathan''s
     Hide.'
@@ -136,7 +136,7 @@ builds:
       pick: 0.3
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -196,7 +196,7 @@ builds:
     Runeforged Hammer, Genji''s Guard, Yogi''s Necklace, Phoenix Feather, The Reaper,
     Tekko-Kagi, Tyrfing, Pharaoh''s Curse, Lernaean Bow, Oni Hunter''s Garb, Breastplate
     of Valor, Erosion, Hydra''s Lament, Eye of Providence, Avenging Blade, Shogun''s
-    Ofuda, Draconic Scale, Midgardian Mail, Titan''s Bane, Chandra''s Grace, Toxic
+    Ofuda, Draconic Scale, Titan''s Bane, Midgardian Mail, Chandra''s Grace, Toxic
     Blade, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
@@ -342,7 +342,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Jotunn''s Revenge, Tyrfing, Genji''s Guard, Tekko-Kagi,
     Runeforged Hammer, Shield Splitter, Toxic Blade, Lernaean Bow, Silverbranch Bow,
-    Pharaoh''s Curse, Breastplate of Valor, Shogun''s Ofuda, Hydra''s Lament, Riptalon,
+    Pharaoh''s Curse, Breastplate of Valor, Shogun''s Ofuda, Riptalon, Hydra''s Lament,
     The Reaper, Oni Hunter''s Garb, Dominance, Titan''s Bane, Avenging Blade, Midgardian
     Mail, Qin''s Blade, Erosion, Leviathan''s Hide, Eye of Providence, Shield of the
     Phoenix.'
@@ -419,7 +419,7 @@ builds:
     Gargoyle, Arondight, Runeforged Hammer, Shield Splitter, Tekko-Kagi, Tyrfing,
     Oni Hunter''s Garb, Lernaean Bow, Pharaoh''s Curse, Chandra''s Grace, Eye of Erebus,
     Titan''s Bane, Midgardian Mail, Gladiator''s Shield, Shogun''s Ofuda, Toxic Blade,
-    Prophetic Cloak, Avenging Blade, Erosion, Leviathan''s Hide.'
+    Prophetic Cloak, Avenging Blade, Erosion, Silverbranch Bow.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -490,7 +490,7 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Jotunn''s Revenge, Shield Splitter, Runeforged
     Hammer, Tekko-Kagi, Tyrfing, Genji''s Guard, Lernaean Bow, Hydra''s Lament, Avenging
-    Blade, Pharaoh''s Curse, Titan''s Bane, Breastplate of Valor, Dominance, Oni Hunter''s
+    Blade, Titan''s Bane, Pharaoh''s Curse, Breastplate of Valor, Dominance, Oni Hunter''s
     Garb, Toxic Blade, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence,
     Silverbranch Bow, The Crusher, Arondight, Wyrmskin Hide, Draconic Scale, Leviathan''s
     Hide.'
@@ -508,7 +508,7 @@ builds:
       pick: 0.3
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.5
       efficiency: 0.67
       win: 0.5
       pick: 0.0
