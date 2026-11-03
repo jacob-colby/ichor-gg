@@ -26,7 +26,7 @@ import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
 import { GodOnlyAsterisk, GodOnlyBadge } from "./GodOnlyMark";
 import { BuildEditor, type MineDraft } from "./BuildEditor";
 import { ItemIcon } from "./ItemIcon";
-import { SideBySide } from "./SideBySide";
+import { SideBySide, type Mode } from "./SideBySide";
 import { getMine } from "../lib/mineStore";
 
 const VS_LABELS: Record<string, string> = {
@@ -1073,9 +1073,10 @@ export function DetailPanel({
       )}
 
       {/* Done criterion 2: both builds through the combat model, passives
-          simulated. Conquest only — it is the only mode with a community
-          record to compare against. */}
-      {note?.mode === "Conquest" && <SideBySide god={god} />}
+          simulated. Every mode since 2026-11-03; Joust and Arena compare
+          against the BORROWED Conquest six and say so (`SideBySide`). The
+          section opens on the page's mode and has its own switch. */}
+      {note && <SideBySide god={god} mode={(note.mode as Mode) ?? "Conquest"} />}
 
       {/* What the community's record changed, and what earned it. This is the
           hybrid's entire claim — without it the build is a third list of six
