@@ -32,6 +32,22 @@ const board = () => (
 beforeEach(() => { localStorage.clear(); atUrl("#/draft"); });
 
 describe("DraftBoard — the board", () => {
+  it("opens with the build's own starter, the one the god page shows, not the community's favourite", () => {
+    const withStarter = ["Conquest", "Joust", "Arena"].map((m) => ({
+      type: "smite-build", god: "TestGod", mode: m,
+      builds: [
+        { source: "suggested", archetype: "model", slot_order: CORE6, flex_slots: [], starter: { base: "Seed", upgrade: "Tree" } },
+        { source: "community", slot_order: [], community_starters: [{ name: "Pebble", pick_rate: 0.6, win_rate: 0.5 }] },
+      ],
+    })) as unknown as BuildNote[];
+    localStorage.setItem("smite:draft", JSON.stringify({ mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies: ["", "", "", "", ""] }));
+    render(<DraftBoard gods={GODS} items={[...ITEMS, item("Seed"), item("Tree"), item("Pebble")]} builds={withStarter}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={CFG} />);
+    const row = screen.getByTestId("draft-starter");
+    expect(row).toHaveTextContent("Seed → Tree");
+    expect(row).not.toHaveTextContent("Pebble");
+  });
+
   it("names itself and teaches the empty board, with you in the violet slot", () => {
     render(board());
     expect(screen.getByRole("heading", { level: 1, name: "Draft" })).toBeInTheDocument();

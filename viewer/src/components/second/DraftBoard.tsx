@@ -143,7 +143,12 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
     return { name, position: i + 1, cumulative: unknownCost ? null : running, swapped: !!swap,
       reason: itemReason(name, { god: me, mode, community, item, swap }) };
   });
-  const starterPath = r.starters[0];
+  /* The build's own opener, exactly as the god page reads it. This used to be
+     `r.starters[0]`, the community's most-held opener, so for Ra the board said
+     Pendulum of the Ages while the god page said Conduit Gem: the mismatch the
+     audit found between the two surfaces, one row up from the six. */
+  const starter = r.activeEntry?.starter ?? community?.starter;
+  const starterPath = starter ? r.starters.find((p) => p.rootName === starter.base) : undefined;
 
   const unknownLine = known < roster
     ? `${roster - known} still unknown, so this six will keep moving`
@@ -235,17 +240,20 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
           value arrives too late for {MODE_NAME[mode]}.
         </p>
       )}
-      {starterPath && r.result && (
+      {starter && r.result && (
         <div className="flex min-h-11 items-center gap-3" data-testid="draft-starter">
           <span className="flex -space-x-2">
-            {starterPath.base && <Art name={starterPath.base.name} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />}
-            {starterPath.upgrade && <Art name={starterPath.upgrade.name} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />}
+            <Art name={starter.base} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />
+            <Art name={starter.upgrade} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />
           </span>
           <p className="min-w-0 text-note leading-snug text-muted">
             <span className="font-cond text-[16px] font-bold uppercase text-ink">Start</span>{" "}
-            {[starterPath.base?.name, starterPath.upgrade?.name].filter(Boolean).join(" → ")}
+            {starter.base} → {starter.upgrade}
             <span className="block text-quiet">
-              {r.startersAreConquest ? "In Conquest, " : ""}{Math.round(starterPath.lead.pick_rate * 100)}% of {me} players open this way · the draft doesn&rsquo;t move it
+              {starterPath
+                ? <>{r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : ""}{Math.round(starterPath.lead.pick_rate * 100)}% of {me} players open this way · </>
+                : <>{me}&rsquo;s players don&rsquo;t open this way · </>}
+              the draft doesn&rsquo;t move it
             </span>
           </p>
         </div>
