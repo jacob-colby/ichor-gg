@@ -2085,7 +2085,7 @@ comparison cannot contain at all — Tekko-Kagi's pathfinding (22 of the 47),
 Stampede, Runeforged Hammer, Eye of Providence, Erosion — and the coverage
 rule is doing its job there; loosening it to get verdicts would be tuning.
 
-**Healing (2026-11-03, same X
+**Healing (2026-11-03, fingerprint `8e8f564b83d6`).** `side_by_side`'s
 HEALING block gives both sides a healing-received channel: our god lifesteals
 off every damage instance to a LIVE target plus the heal-on-hit items, cut by
 the enemy team's expected anti-heal; the target lifesteals off its hits on
