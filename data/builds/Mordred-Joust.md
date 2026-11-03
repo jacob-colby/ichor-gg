@@ -106,13 +106,13 @@ builds:
       fit: 0.45
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.87
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.66
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -182,8 +182,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
-  - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Amanita Charm
   flex_slots:
   - Stone of Binding
-  - Avenging Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -288,8 +288,8 @@ builds:
     swap: Erosion — physical protection
     swap_item: Erosion
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -299,12 +299,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Avenging Blade:
+    Toxic Blade:
       total: 0.59
-      efficiency: 0.49
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -474,8 +474,8 @@ builds:
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -495,14 +495,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.4
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -535,7 +535,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc

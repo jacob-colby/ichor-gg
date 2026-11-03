@@ -32,13 +32,13 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Berserker's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.74
       win: 0.5
       pick: 0.0
@@ -275,7 +275,7 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Erosion
+  - Jotunn's Revenge
   - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.62
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.69
       win: 0.5
       pick: 0.0
@@ -359,13 +359,13 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.67
     Berserker's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.74
       win: 0.5
       pick: 0.0

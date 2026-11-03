@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 48.12
     per_level: 2.76
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.33
-    per_level: 0.11
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Cernunnos Basic Attack
@@ -45,26 +45,26 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Physical Damage to the first enemy hit
-  damage_type: physical
   detail_kinds:
   - null
   - physical
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Fire a projectile that deals Physical Damage to the first enemy hit
 - slot: Passive
   name: Heavy Glaive
   details:
-  - 'Damage Scaling: 30% Strength + 5% Intelligence'
+  - 'Damage Scaling: 30% Strength + 5% Intelligence + 30% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies
-    in melee range
-  damage_type: physical
   detail_kinds:
   - physical
   - mechanic
   - mechanic
+  damage_type: physical
+  description: MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies
+    in melee range
 - slot: 1st Ability
   name: Shifter Of Seasons
   details:
@@ -87,8 +87,6 @@ abilities:
   - 'Winter Slow: 10 | 11 | 12 | 13 | 14%'
   - 'Winter Slow Scaling: 2.5% Intelligence'
   - 'Winter Slow Duration: 2 seconds'
-  description: Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack
-    bonus effects
   detail_kinds:
   - heal
   - physical
@@ -107,6 +105,8 @@ abilities:
   - slow
   - slow
   - slow
+  description: Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack
+    bonus effects
 - slot: 2nd Ability
   name: Bramble Blast
   cooldown:
@@ -131,9 +131,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: Fire a bramble that explodes on hit or upon reaching max range, dealing
-    Physical Damage in an area
-  damage_type: physical
   detail_kinds:
   - debuff
   - physical
@@ -148,6 +145,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Fire a bramble that explodes on hit or upon reaching max range, dealing
+    Physical Damage in an area
 - slot: 3rd Ability
   name: Horn Charge
   cooldown:
@@ -172,8 +172,6 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: Dash forward, passing through all types of enemies
-  damage_type: physical
   detail_kinds:
   - physical
   - null
@@ -184,6 +182,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Dash forward, passing through all types of enemies
 - slot: Ultimate
   name: The Wild Hunt
   cooldown:
@@ -204,9 +204,6 @@ abilities:
   - 'Radius: 4 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
-  description: Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed
-    to look like harmless animals Polymorph enemy gods into wild boars and start
-  damage_type: physical
   detail_kinds:
   - physical
   - null
@@ -220,6 +217,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed
+    to look like harmless animals Polymorph enemy gods into wild boars and start
 aspects:
 - name: Aspect of Strife
   kit_changes: Your Basic Attacks are now melee and deal increased damage, cleave,
@@ -227,7 +227,7 @@ aspects:
     Horn Charge's cooldown is reduced when hitting a god or Jungle Monster and applies
     Shifter of Seasons.
 source_url: https://wiki.smite2.com/w/Cernunnos
-last_verified: '2026-08-01'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Cernunnos Basic Attack

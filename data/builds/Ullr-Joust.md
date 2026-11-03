@@ -99,13 +99,13 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -260,7 +260,7 @@ builds:
       fit: 0.43
     Heartseeker:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -337,11 +337,11 @@ builds:
   - Jotunn's Revenge
   - Tekko-Kagi
   - Riptalon
+  - Silverbranch Bow
   - Titan's Bane
-  - Heartseeker
   flex_slots:
   - Titan's Bane
-  - Heartseeker
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -382,18 +382,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+    Silverbranch Bow:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Titan's Bane:
       total: 0.54
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.47
     Pendulum Blade:
-      total: 0.44
+      total: 0.45
       efficiency: 0.41
       win: 0.5
       pick: 0.0

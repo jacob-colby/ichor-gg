@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.36
   source_url: https://smitebrain.com/gods/ishtar/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5354659248956884
   god_matches_won: 385
   god_matches_played: 719
@@ -120,7 +120,7 @@ builds:
     Berserker''s Shield, Rage, Qin''s Blade, Hydra''s Lament, Bloodforge, Transcendence,
     The Reaper, Runeforged Hammer, Sun Beam Bow, Jotunn''s Revenge, Barbed Carver,
     Shield Splitter, Eye of the Storm, Toxic Blade, Arondight, Avenging Blade, Vital
-    Amplifier, The Crusher, Heartseeker.'
+    Amplifier, The Crusher, Hastened Fatalis.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -227,8 +227,8 @@ builds:
       pick: 0.28
       fit: 0.33
     Heartseeker:
-      total: 0.48
-      efficiency: 0.44
+      total: 0.47
+      efficiency: 0.43
       win: 0.53
       pick: 0.0
       fit: 0.56
@@ -264,7 +264,7 @@ builds:
     this god: Lernaean Bow, Golden Blade, Demon Blade, Musashi''s Dual Swords, Rage,
     Tekko-Kagi, Berserker''s Shield, Qin''s Blade, Hydra''s Lament, Bloodforge, Transcendence,
     Sun Beam Bow, The Reaper, Runeforged Hammer, Jotunn''s Revenge, Barbed Carver,
-    Shield Splitter, Toxic Blade, Eye of the Storm, Arondight, Vital Amplifier, Avenging
+    Toxic Blade, Shield Splitter, Eye of the Storm, Arondight, Vital Amplifier, Avenging
     Blade, The Crusher.'
   slot_scores:
     Golden Blade:
@@ -335,10 +335,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Golden Blade, Shield
     Splitter, Yogi''s Necklace, Runeforged Hammer, Phoenix Feather, Shield of the
-    Phoenix, Bloodforge, Pharaoh''s Curse, Lernaean Bow, Oni Hunter''s Garb, The Reaper,
-    Shogun''s Ofuda, Erosion, Eye of Providence, Midgardian Mail, Draconic Scale,
+    Phoenix, Bloodforge, Pharaoh''s Curse, Oni Hunter''s Garb, The Reaper, Lernaean
+    Bow, Shogun''s Ofuda, Erosion, Eye of Providence, Midgardian Mail, Draconic Scale,
     Genji''s Guard, Leviathan''s Hide, Stone of Binding, Shifter''s Shield, Magi''s
-    Cloak, Ancile, Avenging Blade, Umbral Link.'
+    Cloak, Ancile, Umbral Link, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -407,14 +407,14 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Tekko-Kagi, The Reaper, Titan''s Bane, Jotunn''s Revenge, The Crusher,
-    Heartseeker, Toxic Blade, Lernaean Bow, Golden Blade, Avatar''s Parashu, Avenging
+    Toxic Blade, Heartseeker, Lernaean Bow, Golden Blade, Avatar''s Parashu, Avenging
     Blade, Berserker''s Shield, Musashi''s Dual Swords, Hydra''s Lament, Demon Blade,
-    Oath-Sworn Spear, Transcendence, Qin''s Blade, Bloodforge, Rage, Runeforged Hammer,
+    Oath-Sworn Spear, Qin''s Blade, Transcendence, Bloodforge, Rage, Runeforged Hammer,
     Pendulum Blade, Sun Beam Bow, Barbed Carver.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.55
+      total: 0.5
+      efficiency: 0.54
       win: 0.53
       pick: 0.0
       fit: 0.51
@@ -629,7 +629,7 @@ builds:
     Swords, Tekko-Kagi, Rage, Qin''s Blade, Hydra''s Lament, Bloodforge, Transcendence,
     The Reaper, Runeforged Hammer, Berserker''s Shield, Sun Beam Bow, Jotunn''s Revenge,
     Barbed Carver, Avenging Blade, Shield Splitter, Eye of the Storm, Toxic Blade,
-    Arondight, Vital Amplifier, The Crusher, Heartseeker.'
+    Arondight, Vital Amplifier, The Crusher, Hastened Fatalis.'
   slot_scores:
     Golden Blade:
       total: 0.51

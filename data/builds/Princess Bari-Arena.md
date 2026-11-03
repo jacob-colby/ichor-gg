@@ -80,7 +80,7 @@ builds:
   - Rod of Tahuti
   - Eros' Bow
   flex_slots:
-  - Eros' Bow
+  - Tyrfing
   - Bancroft's Talon
   situational_swaps:
   - vs_tag: heavy_cc
@@ -124,7 +124,7 @@ builds:
       fit: 0.7
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -313,7 +313,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Riptalon:
-      total: 0.66
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0

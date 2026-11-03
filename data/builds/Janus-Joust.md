@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -56,8 +56,8 @@ builds:
       pick: 0.0
       fit: 0.88
     Rod of Tahuti:
-      total: 0.83
-      efficiency: 0.87
+      total: 0.82
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -112,13 +112,13 @@ builds:
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.58
+      total: 0.57
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Doom Orb:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -301,7 +301,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.69
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -319,7 +319,7 @@ builds:
       fit: 0.95
     Rod of Tahuti:
       total: 0.86
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -371,14 +371,14 @@ builds:
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.87
+      total: 0.58
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.3
@@ -449,7 +449,7 @@ builds:
       fit: 0.85
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -496,7 +496,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -513,8 +513,8 @@ builds:
       pick: 0.0
       fit: 0.88
     Rod of Tahuti:
-      total: 0.83
-      efficiency: 0.87
+      total: 0.82
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.88
     Rod of Tahuti:
-      total: 0.83
-      efficiency: 0.87
+      total: 0.82
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.78

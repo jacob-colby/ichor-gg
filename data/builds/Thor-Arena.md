@@ -63,7 +63,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -105,14 +105,14 @@ builds:
       pick: 0.0
       fit: 0.53
     Hydra's Lament:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.49
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.62
@@ -130,7 +130,7 @@ builds:
       fit: 0.56
     Stampede:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.58
@@ -195,7 +195,7 @@ builds:
       fit: 0.57
     Stampede:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -260,7 +260,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.64
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -455,7 +455,7 @@ builds:
       fit: 0.6
     Stampede:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -520,7 +520,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71

@@ -77,7 +77,7 @@ abilities:
   - This ability passes through and damages non-god enemies, and passes through walls,
     but stops on enemy gods
   - 'Damage: 90 | 150 | 190 | 240 | 290'
-  - 'Damage Scaling: 85% Intelligence'
+  - 'Damage Scaling: 60% Intelligence'
   - 'Range: 8.8 meters'
   - 'Explosion Radius: 3.4 meters'
   - 'Cooldown: 8 seconds'
@@ -248,7 +248,7 @@ abilities:
   - 'Self Heal: 45 | 60 | 75 | 90 | 105'
   - 'Self Heal Scaling: 10% Intelligence'
   - 'Ally Heal Per Tick: 11 | 13 | 15 | 17 | 19'
-  - 'Ally Heal Per Tick Scaling: 10% Intelligence'
+  - 'Ally Heal Per Tick Scaling: 5% Intelligence'
   - 'Movement Speed: 20%'
   - 'Attack Speed: 20%'
   - 'Buff Duration: 5 seconds'
@@ -295,7 +295,7 @@ aspects:
     locking yourself to that form for the remainder of the match. While attuned, gain
     enhanced abilities and an new ultimate.
 source_url: https://wiki.smite2.com/w/Hel
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Hel Basic Attack

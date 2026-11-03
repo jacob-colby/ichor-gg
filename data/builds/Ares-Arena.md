@@ -63,7 +63,7 @@ builds:
       fit: 0.97
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -124,7 +124,7 @@ builds:
       fit: 0.95
     Stampede:
       total: 0.68
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -195,7 +195,7 @@ builds:
       fit: 0.77
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -319,7 +319,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -390,7 +390,7 @@ builds:
       fit: 0.97
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.83

@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Death Metal:
-      total: 0.57
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -51,7 +51,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -99,7 +99,7 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -124,7 +124,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -248,7 +248,7 @@ builds:
       fit: 0.43
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -378,7 +378,7 @@ builds:
       fit: 0.43
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -560,7 +560,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Death Metal:
-      total: 0.57
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -573,7 +573,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -632,7 +632,7 @@ builds:
       fit: 0.47
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27
@@ -704,7 +704,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -823,14 +823,14 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -908,7 +908,7 @@ builds:
       fit: 0.59
     Stampede:
       total: 0.55
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -968,7 +968,7 @@ builds:
       fit: 0.44
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -1081,7 +1081,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -1160,7 +1160,7 @@ builds:
       fit: 0.47
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27

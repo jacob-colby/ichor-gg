@@ -51,7 +51,7 @@ builds:
       fit: 0.76
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -118,7 +118,7 @@ builds:
       fit: 0.76
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -294,7 +294,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.69
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       fit: 0.7
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -378,7 +378,7 @@ builds:
       fit: 0.76
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.7

@@ -106,13 +106,13 @@ builds:
       fit: 0.45
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.87
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -182,8 +182,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Rod of Tahuti
   - Amanita Charm
   - Erosion
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Erosion
-  - Jotunn's Revenge
+  - Triton's Conch
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,15 +228,15 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Kinetic Cuirass:
       total: 0.54
-      efficiency: 0.67
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.53
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.48
       win: 0.5
       pick: 0.0

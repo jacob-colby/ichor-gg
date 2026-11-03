@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.17
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/thor/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5644599303135889
   god_matches_won: 972
   god_matches_played: 1722
@@ -118,8 +118,8 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield Splitter, Runeforged Hammer, Berserker''s Shield,
     Kinetic Cuirass, Genji''s Guard, Avenging Blade, The Reaper, Oni Hunter''s Garb,
-    Breastplate of Valor, Wyrmskin Hide, Golden Blade, Erosion, Eye of Providence,
-    Tekko-Kagi, Transcendence, Shifter''s Shield, Draconic Scale, Midgardian Mail,
+    Wyrmskin Hide, Breastplate of Valor, Golden Blade, Erosion, Eye of Providence,
+    Tekko-Kagi, Shifter''s Shield, Transcendence, Draconic Scale, Midgardian Mail,
     Arondight, Tyrfing, Shield of the Phoenix, Leviathan''s Hide.'
   slot_scores:
     Berserker's Shield:
@@ -147,7 +147,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.54
       win: 0.57
       pick: 0.17
@@ -191,9 +191,9 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
     Guard, Amanita Charm, Shield Splitter, Berserker''s Shield, Runeforged Hammer,
-    Breastplate of Valor, Kinetic Cuirass, Transcendence, Oni Hunter''s Garb, Arondight,
+    Breastplate of Valor, Kinetic Cuirass, Oni Hunter''s Garb, Transcendence, Arondight,
     Avenging Blade, The Reaper, Shield of the Phoenix, Screeching Gargoyle, Midgardian
-    Mail, Tekko-Kagi, Tyrfing, Yogi''s Necklace, Erosion, Eye of Providence, Leviathan''s
+    Mail, Tekko-Kagi, Erosion, Tyrfing, Yogi''s Necklace, Eye of Providence, Leviathan''s
     Hide, Wyrmskin Hide, Golden Blade, Stone of Binding.'
   slot_scores:
     Genji's Guard:
@@ -337,7 +337,7 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield Splitter, Kinetic Cuirass, Berserker''s Shield,
+    this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
     Shield of the Phoenix, The Reaper, Runeforged Hammer, Genji''s Guard, Phoenix
     Feather, Yogi''s Necklace, Erosion, Eye of Providence, Oni Hunter''s Garb, Shifter''s
     Shield, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail,
@@ -410,8 +410,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Avenging Blade, Amanita Charm, The Reaper, Shield Splitter, Berserker''s
-    Shield, Runeforged Hammer, Stone of Binding, Kinetic Cuirass, Genji''s Guard,
-    Screeching Gargoyle, Tekko-Kagi, Void Stone, Void Shield, Pendulum Blade, Breastplate
+    Shield, Runeforged Hammer, Stone of Binding, Kinetic Cuirass, Tekko-Kagi, Genji''s
+    Guard, Screeching Gargoyle, Void Stone, Void Shield, Pendulum Blade, Breastplate
     of Valor, Oni Hunter''s Garb, Toxic Blade, Erosion, Midgardian Mail, Eye of Providence,
     Arondight, Wyrmskin Hide, Draconic Scale.'
   slot_scores:
@@ -441,7 +441,7 @@ builds:
       fit: 0.72
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.58
       pick: 0.17
       fit: 0.82
@@ -467,8 +467,8 @@ builds:
   - Tekko-Kagi
   - Amanita Charm
   flex_slots:
-  - Tyrfing
   - Tekko-Kagi
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -483,11 +483,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Golden Blade, Amanita Charm, Tyrfing, Tekko-Kagi,
-    Toxic Blade, Silverbranch Bow, Genji''s Guard, Kinetic Cuirass, Shield Splitter,
-    Riptalon, Runeforged Hammer, Lernaean Bow, The Reaper, Pharaoh''s Curse, Breastplate
-    of Valor, Shogun''s Ofuda, Dominance, Oni Hunter''s Garb, Avenging Blade, Qin''s
-    Blade, Midgardian Mail, Erosion, Eye of Providence.'
+    this god: Berserker''s Shield, Golden Blade, Amanita Charm, Tekko-Kagi, Tyrfing,
+    Toxic Blade, Silverbranch Bow, Genji''s Guard, Kinetic Cuirass, Riptalon, Shield
+    Splitter, Runeforged Hammer, Lernaean Bow, The Reaper, Pharaoh''s Curse, Breastplate
+    of Valor, Shogun''s Ofuda, Dominance, Oni Hunter''s Garb, Avenging Blade, Midgardian
+    Mail, Qin''s Blade, Erosion, Eye of Providence.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -557,8 +557,8 @@ builds:
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
     Amanita Charm, Shield of the Phoenix, Berserker''s Shield, Screeching Gargoyle,
     Arondight, Kinetic Cuirass, Shield Splitter, Runeforged Hammer, Gladiator''s Shield,
-    Chandra''s Grace, Prophetic Cloak, Eye of Erebus, Pendulum Blade, Oni Hunter''s
-    Garb, Midgardian Mail, Damaru, Regrowth Striders, Erosion, Avenging Blade, Eye
+    Chandra''s Grace, Pendulum Blade, Eye of Erebus, Prophetic Cloak, Oni Hunter''s
+    Garb, Damaru, Midgardian Mail, Regrowth Striders, Erosion, Avenging Blade, Eye
     of Providence, Leviathan''s Hide, Draconic Scale.'
   slot_scores:
     Genji's Guard:
@@ -631,9 +631,9 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Shield Splitter, Runeforged Hammer, Berserker''s
     Shield, Kinetic Cuirass, Genji''s Guard, Avenging Blade, The Reaper, Oni Hunter''s
-    Garb, Breastplate of Valor, Wyrmskin Hide, Golden Blade, Erosion, Eye of Providence,
+    Garb, Wyrmskin Hide, Breastplate of Valor, Golden Blade, Erosion, Eye of Providence,
     Tekko-Kagi, Draconic Scale, Midgardian Mail, Arondight, Tyrfing, Shield of the
-    Phoenix, Leviathan''s Hide, Transcendence, Shifter''s Shield.'
+    Phoenix, Leviathan''s Hide, Shifter''s Shield, Transcendence.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -660,7 +660,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.54
       win: 0.57
       pick: 0.17

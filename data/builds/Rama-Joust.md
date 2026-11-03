@@ -99,13 +99,13 @@ builds:
     data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
     Transcendence:
-      total: 0.39
+      total: 0.38
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.46
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -260,7 +260,7 @@ builds:
       fit: 0.43
     Heartseeker:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.37
     Pendulum Blade:
-      total: 0.44
+      total: 0.45
       efficiency: 0.41
       win: 0.5
       pick: 0.0

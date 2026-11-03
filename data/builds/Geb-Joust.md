@@ -112,7 +112,7 @@ builds:
       fit: 0.23
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -230,7 +230,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.56
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -307,7 +307,7 @@ builds:
       fit: 0.28
     Bragi's Harp:
       total: 0.4
-      efficiency: 0.38
+      efficiency: 0.37
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -371,7 +371,7 @@ builds:
       pick: 0.0
       fit: 0.38
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -465,13 +465,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Rod of Tahuti
   - Eros' Bow
   - Pharaoh's Curse
+  - Shogun's Ofuda
   - Soul Gem
   flex_slots:
-  - Berserker's Shield
   - Pharaoh's Curse
+  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -500,12 +500,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.26
     Eros' Bow:
       total: 0.56
       efficiency: 0.53
@@ -513,8 +507,14 @@ builds:
       pick: 0.0
       fit: 0.59
     Pharaoh's Curse:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Shogun's Ofuda:
+      total: 0.53
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.56

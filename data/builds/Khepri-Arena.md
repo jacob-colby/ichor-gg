@@ -63,7 +63,7 @@ builds:
       fit: 1.0
     Stampede:
       total: 0.68
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -124,7 +124,7 @@ builds:
       fit: 0.98
     Stampede:
       total: 0.69
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -195,7 +195,7 @@ builds:
       fit: 0.79
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -319,7 +319,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -359,7 +359,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -384,7 +384,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -409,8 +409,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -449,7 +449,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -520,7 +520,7 @@ builds:
       fit: 1.0
     Stampede:
       total: 0.68
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.85

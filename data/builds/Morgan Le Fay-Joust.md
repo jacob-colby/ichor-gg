@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -57,7 +57,7 @@ builds:
       fit: 0.89
     Rod of Tahuti:
       total: 0.83
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -112,13 +112,13 @@ builds:
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.58
+      total: 0.57
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -170,8 +170,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Doom Orb:
-      total: 0.55
-      efficiency: 0.54
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -301,7 +301,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.69
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -319,7 +319,7 @@ builds:
       fit: 0.95
     Rod of Tahuti:
       total: 0.86
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -449,7 +449,7 @@ builds:
       fit: 0.86
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -513,8 +513,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.72
-      efficiency: 0.87
+      total: 0.71
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
+      total: 0.59
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -626,7 +626,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -644,7 +644,7 @@ builds:
       fit: 0.89
     Rod of Tahuti:
       total: 0.83
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -678,8 +678,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -709,7 +709,7 @@ builds:
       fit: 0.57
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -774,8 +774,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -816,7 +816,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -834,8 +834,8 @@ builds:
       pick: 0.0
       fit: 0.52
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.87
+      total: 0.64
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -846,7 +846,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.58
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -973,7 +973,7 @@ builds:
       fit: 0.69
     Rod of Tahuti:
       total: 0.73
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -1027,7 +1027,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.55
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.23
@@ -1044,7 +1044,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Triton's Conch:
-      total: 0.5
+      total: 0.49
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -1081,7 +1081,7 @@ builds:
   slot_scores:
     Screeching Gargoyle:
       total: 0.52
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -1104,8 +1104,8 @@ builds:
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.87
+      total: 0.57
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -1152,14 +1152,14 @@ builds:
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -1231,7 +1231,7 @@ builds:
       fit: 0.51
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -1272,8 +1272,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -1303,7 +1303,7 @@ builds:
       fit: 0.57
     Rod of Tahuti:
       total: 0.67
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47

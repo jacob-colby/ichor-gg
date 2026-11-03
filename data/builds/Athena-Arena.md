@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.74
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.98
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.84
@@ -124,7 +124,7 @@ builds:
       fit: 0.96
     Stampede:
       total: 0.68
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -319,7 +319,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -384,7 +384,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -409,8 +409,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -418,8 +418,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -449,7 +449,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -513,14 +513,14 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.74
+      total: 0.75
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.98
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.84

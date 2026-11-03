@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.49
   source_url: https://smitebrain.com/gods/thanatos/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5557917109458024
   god_matches_won: 523
   god_matches_played: 941
@@ -148,7 +148,7 @@ builds:
       fit: 0.91
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 1.0
@@ -193,7 +193,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Arondight,
-    Transcendence, The Crusher, Tekko-Kagi, Pendulum Blade, Tyrfing, Runeforged Hammer,
+    The Crusher, Transcendence, Tekko-Kagi, Pendulum Blade, Tyrfing, Runeforged Hammer,
     Dominance, Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard,
     Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Golden Blade, Chandra''s
     Grace, Oath-Sworn Spear, Silverbranch Bow, Barbed Carver, Yogi''s Necklace, Toxic
@@ -225,7 +225,7 @@ builds:
       fit: 0.47
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 0.77
@@ -268,14 +268,14 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Pendulum Blade, The Crusher, Arondight, Tekko-Kagi, Transcendence, Tyrfing,
+    god: Pendulum Blade, The Crusher, Arondight, Tekko-Kagi, Tyrfing, Transcendence,
     Runeforged Hammer, Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield
     Splitter, Eye of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge,
     Lernaean Bow, Chandra''s Grace, Golden Blade, Riptalon, Oath-Sworn Spear, Barbed
     Carver, Eye of Erebus.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.67
       win: 0.56
       pick: 0.63
@@ -300,7 +300,7 @@ builds:
       fit: 0.56
     Heartseeker:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 0.76
@@ -346,9 +346,9 @@ builds:
     this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
     Shield of the Phoenix, Runeforged Hammer, Genji''s Guard, Phoenix Feather, Yogi''s
     Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s Garb, Draconic
-    Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Shifter''s Shield,
-    Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide, Stone of Binding, Magi''s
-    Cloak, Ancile, The Crusher.'
+    Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Wyrmskin Hide, Shifter''s
+    Shield, Leviathan''s Hide, Chandra''s Grace, Stone of Binding, Magi''s Cloak,
+    Ancile, The Crusher.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -449,7 +449,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 1.0
@@ -494,7 +494,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Tyrfing, Tekko-Kagi, Silverbranch Bow, Riptalon, Golden Blade, Lernaean
-    Bow, Toxic Blade, Dominance, Qin''s Blade, Sun Beam Bow, The Crusher, Arondight,
+    Bow, Toxic Blade, Dominance, Qin''s Blade, The Crusher, Sun Beam Bow, Arondight,
     Berserker''s Shield, Bloodforge, Transcendence, Dagger of Frenzy, Runeforged Hammer,
     Pendulum Blade, Avenging Blade, Barbed Carver, Vital Amplifier, Hastened Fatalis,
     Shield Splitter, Eye of the Storm.'
@@ -568,7 +568,7 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Damaru,
     Genji''s Guard, Breastplate of Valor, The Crusher, Chandra''s Grace, Tekko-Kagi,
-    Tyrfing, Transcendence, Eye of Erebus, Runeforged Hammer, Screeching Gargoyle,
+    Tyrfing, Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
     Freya''s Tears, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of
     the Storm, Silverbranch Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade,
     Golden Blade.'
@@ -580,7 +580,7 @@ builds:
       pick: 0.63
       fit: 0.85
     Hydra's Lament:
-      total: 0.58
+      total: 0.57
       efficiency: 0.56
       win: 0.53
       pick: 0.59
@@ -599,7 +599,7 @@ builds:
       fit: 0.85
     Heartseeker:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 0.55
@@ -673,7 +673,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.56
       pick: 0.52
       fit: 1.0

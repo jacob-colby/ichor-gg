@@ -63,7 +63,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -130,7 +130,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.64
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.78
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 0.73
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -390,7 +390,7 @@ builds:
       fit: 0.85
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.76

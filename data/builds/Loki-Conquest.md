@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/loki/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5719398711524696
   god_matches_won: 799
   god_matches_played: 1397
@@ -117,8 +117,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum Blade, Arondight, Golden Blade,
-    Transcendence, Runeforged Hammer, Silverbranch Bow, Avenging Blade, Shield Splitter,
-    Toxic Blade, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow, Riptalon,
+    Transcendence, Runeforged Hammer, Silverbranch Bow, Avenging Blade, Toxic Blade,
+    Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow, Riptalon,
     Oath-Sworn Spear, Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sun Beam
     Bow.'
   slot_scores:
@@ -141,8 +141,8 @@ builds:
       pick: 0.0
       fit: 0.52
     Heartseeker:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.58
       pick: 0.63
       fit: 1.0
@@ -196,7 +196,7 @@ builds:
     The Reaper, Transcendence, Tyrfing, Tekko-Kagi, Pendulum Blade, Runeforged Hammer,
     Dominance, Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard,
     Golden Blade, Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Silverbranch
-    Bow, Chandra''s Grace, Oath-Sworn Spear, Toxic Blade, Yogi''s Necklace, Rage.'
+    Bow, Chandra''s Grace, Oath-Sworn Spear, Toxic Blade, Yogi''s Necklace, Riptalon.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -218,7 +218,7 @@ builds:
       fit: 0.39
     Heartseeker:
       total: 0.56
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.58
       pick: 0.63
       fit: 0.77
@@ -268,7 +268,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: The Reaper, Pendulum Blade, Arondight, Tekko-Kagi, Tyrfing, Transcendence,
-    Runeforged Hammer, Silverbranch Bow, Toxic Blade, Damaru, Avenging Blade, Genji''s
+    Silverbranch Bow, Runeforged Hammer, Toxic Blade, Damaru, Avenging Blade, Genji''s
     Guard, Shield Splitter, Eye of the Storm, Golden Blade, Dominance, Riptalon, Breastplate
     of Valor, Bloodforge, Lernaean Bow, Chandra''s Grace, Oath-Sworn Spear, Eye of
     Erebus.'
@@ -293,7 +293,7 @@ builds:
       fit: 0.22
     Heartseeker:
       total: 0.56
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.58
       pick: 0.63
       fit: 0.76
@@ -345,8 +345,8 @@ builds:
     this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
     Shield of the Phoenix, The Reaper, Runeforged Hammer, Genji''s Guard, Phoenix
     Feather, Yogi''s Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s
-    Garb, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Shifter''s
-    Shield, Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide, Golden Blade, Stone
+    Garb, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Wyrmskin
+    Hide, Shifter''s Shield, Leviathan''s Hide, Chandra''s Grace, Golden Blade, Stone
     of Binding, Magi''s Cloak.'
   slot_scores:
     Berserker's Shield:
@@ -439,8 +439,8 @@ builds:
       pick: 0.22
       fit: 1.0
     Heartseeker:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.58
       pick: 0.63
       fit: 1.0
@@ -562,8 +562,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Damaru,
-    Genji''s Guard, Breastplate of Valor, The Reaper, Chandra''s Grace, Tyrfing, Tekko-Kagi,
-    Transcendence, Eye of Erebus, Runeforged Hammer, Screeching Gargoyle, Silverbranch
+    Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tyrfing, Tekko-Kagi,
+    Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer, Silverbranch
     Bow, Freya''s Tears, Avenging Blade, Toxic Blade, Shield Splitter, Golden Blade,
     Shield of the Phoenix, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow.'
   slot_scores:
@@ -637,7 +637,7 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum Blade, Arondight,
     Golden Blade, Transcendence, Runeforged Hammer, Silverbranch Bow, Avenging Blade,
-    Shield Splitter, Toxic Blade, Eye of the Storm, Dominance, Bloodforge, Lernaean
+    Toxic Blade, Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean
     Bow, Riptalon, Oath-Sworn Spear, Rage, Musashi''s Dual Swords, Deathbringer, Damaru,
     Sun Beam Bow.'
   slot_scores:
@@ -710,7 +710,7 @@ builds:
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
     + fit + win/pick). Underrated for this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum
     Blade, Arondight, Golden Blade, Transcendence, Runeforged Hammer, Silverbranch
-    Bow, Avenging Blade, Shield Splitter, Toxic Blade, Eye of the Storm, Dominance,
+    Bow, Avenging Blade, Toxic Blade, Shield Splitter, Eye of the Storm, Dominance,
     Bloodforge, Lernaean Bow, Riptalon, Oath-Sworn Spear, Rage, Musashi''s Dual Swords,
     Deathbringer, Damaru, Sun Beam Bow.'
   slot_scores:

@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Bancroft's Talon
   - Jotunn's Revenge
   - Death Metal
-  - Bragi's Harp
   - Rod of Tahuti
   - Eros' Bow
   flex_slots:
+  - Toxic Blade
   - Bancroft's Talon
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.51
@@ -105,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -116,15 +122,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -138,11 +138,11 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Death Metal
   - Demon Blade
   - Deathbringer
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -163,12 +163,6 @@ builds:
   rationale: Crit / auto-attack skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Toxic Blade:
       total: 0.59
       efficiency: 0.45
@@ -176,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
+    Eros' Bow:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -248,7 +248,7 @@ builds:
       fit: 0.43
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -495,7 +495,7 @@ builds:
       pick: 0.0
       fit: 0.64
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
