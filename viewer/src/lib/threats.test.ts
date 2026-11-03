@@ -33,9 +33,16 @@ describe("deriveThreats", () => {
   });
 
   it("marks a job covered when an ally's core brings that tag", () => {
-    const t = deriveThreats({ allies: ["Ally"], enemies: [] },
-      { Ally: god("Ally", "magical") }, { Ally: ["anti-heal"] });
+    const t = deriveThreats({ allies: ["Me", "Ally"], enemies: [] },
+      { Me: god("Me", "physical"), Ally: god("Ally", "magical") }, { Ally: ["anti-heal"] });
     expect(t.allyCovers["anti-heal"]).toBe(true);
+  });
+
+  it("does not count your own slot as an ally covering a job", () => {
+    // Slot 0 is the build being adapted; its own core is `self_covered`'s job.
+    const t = deriveThreats({ allies: ["Me", "Ally"], enemies: [] },
+      { Me: god("Me", "physical"), Ally: god("Ally", "magical") }, { Me: ["anti-heal"], Ally: [] });
+    expect(t.allyCovers["anti-heal"]).toBeUndefined();
   });
 
   it("returns an all-zero model for an empty comp", () => {

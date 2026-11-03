@@ -353,6 +353,9 @@ export interface DraftConfig {
   self_covered?: number;
   /** Absent on an index built before the rule was shipped. */
   lifesteal_caps?: LifestealCap[];
+  /** Team-level tags (anti-heal, aura): what the static builds assumed about
+   *  teammates. Absent on an older index, which leaves the draft as it was. */
+  team?: import("./lib/teamTags").TeamConfig;
 }
 
 /** The model's own weights, shipped so the method page states what the

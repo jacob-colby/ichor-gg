@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Toxic Blade
   - Tyrfing
+  - Dominance
   - Riptalon
   - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Toxic Blade
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -23,11 +23,11 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -43,18 +43,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Toxic Blade:
-      total: 0.57
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Tyrfing:
       total: 0.66
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Dominance:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Riptalon:
       total: 0.61
       efficiency: 0.36
@@ -90,8 +90,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -155,8 +155,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
+  - Golden Blade
+  - Phoenix Feather
   - Berserker's Shield
+  - Kinetic Cuirass
+  - Tyrfing
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
-  - Umbral Link
   flex_slots:
-  - Toxic Blade
-  - Umbral Link
+  - Phoenix Feather
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.39
+    Golden Blade:
+      total: 0.55
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.58
+    Phoenix Feather:
+      total: 0.53
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Berserker's Shield:
       total: 0.61
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Amanita Charm:
-      total: 0.78
+      total: 0.7
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.91
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Umbral Link:
-      total: 0.56
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
+      fit: 0.74
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.71
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.96
+      fit: 0.85
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -340,8 +340,8 @@ builds:
   - Qin's Blade
   - Riptalon
   flex_slots:
-  - Qin's Blade
   - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -350,8 +350,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -371,11 +371,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.58
+      total: 0.53
       efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.7
     Tyrfing:
       total: 0.63
       efficiency: 0.5
@@ -399,27 +399,27 @@ builds:
   archetype: cooldown
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
+  - Qin's Blade
   flex_slots:
-  - Toxic Blade
   - Lernaean Bow
+  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
     swap_item: Talisman of Purification
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Toxic Blade:
-      total: 0.48
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Chandra's Grace:
       total: 0.5
       efficiency: 0.43
@@ -459,19 +453,25 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Qin's Blade:
+      total: 0.44
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Toxic Blade
   - Tyrfing
+  - Dominance
   - Riptalon
   - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Toxic Blade
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -480,11 +480,11 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
@@ -500,18 +500,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Toxic Blade:
-      total: 0.57
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
     Tyrfing:
       total: 0.66
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Dominance:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Riptalon:
       total: 0.61
       efficiency: 0.36

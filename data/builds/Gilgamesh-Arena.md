@@ -7,24 +7,24 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Berserker's Shield
+  - Lernaean Bow
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -37,73 +37,79 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Toxic Blade:
-      total: 0.66
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.75
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Amanita Charm:
-      total: 0.76
+      total: 0.61
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
-    Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-    Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
+      fit: 0.57
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
   - Heartseeker
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Heartseeker
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Golden Blade:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Toxic Blade:
-      total: 0.58
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
@@ -123,111 +129,111 @@ builds:
       pick: 0.0
       fit: 0.53
     Amanita Charm:
-      total: 0.71
+      total: 0.56
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.76
-    Pharaoh's Curse:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Toxic Blade
+  - Berserker's Shield
+  - Kinetic Cuirass
+  - Shield of the Phoenix
   - Amanita Charm
-  - Erosion
-  - Stampede
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Erosion
-  - Stampede
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Toxic Blade:
-      total: 0.64
+      total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.72
+    Berserker's Shield:
+      total: 0.59
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Kinetic Cuirass:
+      total: 0.53
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Shield of the Phoenix:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
-      total: 0.83
+      total: 0.68
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Erosion:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
       fit: 0.7
-    Stampede:
-      total: 0.59
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Pharaoh's Curse:
-      total: 0.62
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Shogun's Ofuda:
-      total: 0.61
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Golden Blade
   - Avenging Blade
   - Toxic Blade
+  - Berserker's Shield
   - Jotunn's Revenge
-  - Void Shield
-  - Void Stone
-  - Amanita Charm
+  - The Reaper
   flex_slots:
-  - Avenging Blade
-  - Jotunn's Revenge
+  - Golden Blade
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stampede — physical protection
-    swap_item: Stampede
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Avenging Blade:
       total: 0.59
       efficiency: 0.49
@@ -235,58 +241,52 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.7
+      total: 0.66
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.92
+      fit: 0.83
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Void Shield:
-      total: 0.67
-      efficiency: 0.46
+    The Reaper:
+      total: 0.61
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.89
-    Void Stone:
-      total: 0.68
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.89
-    Amanita Charm:
-      total: 0.73
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Golden Blade
   - Toxic Blade
+  - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Golden Blade
-  - Shogun's Ofuda
+  - Berserker's Shield
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -300,11 +300,23 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.67
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.77
+    Berserker's Shield:
+      total: 0.56
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Riptalon:
       total: 0.61
       efficiency: 0.46
@@ -312,64 +324,64 @@ builds:
       pick: 0.0
       fit: 0.76
     Amanita Charm:
-      total: 0.72
+      total: 0.57
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.79
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Shogun's Ofuda:
-      total: 0.58
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
+      fit: 0.49
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
   - Genji's Guard
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.5
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Toxic Blade:
-      total: 0.59
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.62
     Genji's Guard:
       total: 0.51
       efficiency: 0.69
       win: 0.5
       pick: 0.0
       fit: 0.33
+    Berserker's Shield:
+      total: 0.52
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -382,41 +394,29 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Pharaoh's Curse:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Shogun's Ofuda:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Amanita Charm
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
-  - Shogun's Ofuda
-  - Berserker's Shield
+  - Lernaean Bow
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -429,35 +429,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Toxic Blade:
-      total: 0.66
+      total: 0.62
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.75
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Amanita Charm:
-      total: 0.76
+      total: 0.61
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.87
-    Pharaoh's Curse:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-    Shogun's Ofuda:
-      total: 0.6
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
+      fit: 0.57
   starter: *id001
 ---

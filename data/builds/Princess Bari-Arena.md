@@ -9,22 +9,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Tyrfing
+  - Bragi's Harp
   - Silverbranch Bow
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Silverbranch Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -38,72 +38,78 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.72
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.9
     Tyrfing:
       total: 0.64
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Bragi's Harp:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Silverbranch Bow:
       total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Eros' Bow:
-      total: 0.63
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Soul Gem:
-      total: 0.79
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.92
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Bancroft's Talon
   - Jotunn's Revenge
   - Tyrfing
   - Rod of Tahuti
-  - Eros' Bow
   flex_slots:
-  - Tyrfing
+  - Golden Blade
   - Bancroft's Talon
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Golden Blade:
+      total: 0.58
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Toxic Blade:
-      total: 0.64
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.73
     Bancroft's Talon:
       total: 0.56
       efficiency: 0.51
@@ -128,47 +134,47 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Eros' Bow:
-      total: 0.6
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - Silverbranch Bow
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Eros' Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Toxic Blade:
-      total: 0.7
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.86
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -187,41 +193,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Eros' Bow:
-      total: 0.58
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Soul Gem:
-      total: 0.79
+      total: 0.78
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.98
   starter: *id001
 - source: suggested
   archetype: bruiser
   slot_order:
   - Golden Blade
   - Toxic Blade
-  - Eros' Bow
+  - Berserker's Shield
+  - Tyrfing
   - Amanita Charm
-  - Pharaoh's Curse
   - Soul Gem
   flex_slots:
-  - Pharaoh's Curse
-  - Golden Blade
+  - Berserker's Shield
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -235,58 +235,58 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.68
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.88
-    Eros' Bow:
-      total: 0.63
-      efficiency: 0.53
+      fit: 0.79
+    Berserker's Shield:
+      total: 0.58
+      efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.41
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Amanita Charm:
-      total: 0.8
+      total: 0.65
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
-    Pharaoh's Curse:
-      total: 0.61
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
+      fit: 0.65
     Soul Gem:
-      total: 0.79
+      total: 0.67
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.77
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Silverbranch Bow
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Eros' Bow
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -294,17 +294,23 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.73
+      total: 0.71
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.96
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Silverbranch Bow:
       total: 0.63
       efficiency: 0.52
@@ -317,12 +323,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Eros' Bow:
-      total: 0.58
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -334,24 +334,24 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - Riptalon
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Tyrfing
   - Golden Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -364,12 +364,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Toxic Blade:
-      total: 0.65
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.75
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -382,38 +388,32 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Eros' Bow:
-      total: 0.6
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
     Soul Gem:
-      total: 0.79
+      total: 0.69
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - Spear of Desolation
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Eros' Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -423,12 +423,18 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
     Toxic Blade:
-      total: 0.67
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Eros' Bow:
-      total: 0.56
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -467,11 +467,11 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
+  - Bragi's Harp
   - Soul Gem
-  - Triton's Conch
   flex_slots:
-  - Golden Blade
-  - Triton's Conch
+  - Toxic Blade
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -480,8 +480,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -495,11 +495,11 @@ builds:
       pick: 0.0
       fit: 0.76
     Toxic Blade:
-      total: 0.66
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.78
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -512,41 +512,41 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Bragi's Harp:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Soul Gem:
-      total: 0.79
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Triton's Conch:
-      total: 0.58
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
+      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
   - Golden Blade
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
   - Bragi's Harp
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Bragi's Harp
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -560,11 +560,17 @@ builds:
       pick: 0.0
       fit: 0.76
     Toxic Blade:
-      total: 0.69
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 0.84
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Tyrfing:
       total: 0.63
       efficiency: 0.5
@@ -577,18 +583,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Eros' Bow:
-      total: 0.61
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Soul Gem:
-      total: 0.79
+      total: 0.74
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.91
   starter: *id001
 - source: suggested
   archetype: model
@@ -596,22 +596,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Tyrfing
+  - Bragi's Harp
   - Silverbranch Bow
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Silverbranch Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -625,34 +625,34 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.72
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.9
     Tyrfing:
       total: 0.64
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Bragi's Harp:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Silverbranch Bow:
       total: 0.6
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Eros' Bow:
-      total: 0.63
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Soul Gem:
-      total: 0.79
+      total: 0.75
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.92
   starter: *id001
 ---

@@ -2157,6 +2157,44 @@ them. The tier list now admits this; the builds do not, and the builds are the
 product. Either find a source with per-mode outcomes, or disclose it on those
 builds the way the tier list does.
 
+**Anti-heal and auras are team jobs now (2026-11-03, OB47).** The modes' flat
++0.30 paid every god for one job a team does once ("Healing Reduction does not
+stack with other similar effects"). Three parts, evidence beside each:
+
+1. *Static builds* (`team_tags` in `_weights.yaml`). The MODE's bonus for
+   `anti-heal` and `aura` is scaled by a share CALIBRATED so a static core
+   holds the tag about one time in N (team size): Joust 0.65 / 0.15, Arena
+   0.70 / 0.00. A single duplicate value could not do it — at 0.25, 14% of
+   Joust cores and 3% of Arena's held anti-heal. Against main, `core`:
+   Joust 57/101 change, anti-heal 67 → 35 of 101 (1 in 2.9), team aura
+   51 → 34; Arena 67/101 change, anti-heal 30 → 21 (1 in 4.8), team aura
+   58 → 19. "Team aura" is an `aura` item that is not also `sustain`: Amanita
+   Charm and Soul Gem carry the tag for an incidental ally heal, and 74% of
+   cores hold SOME aura-tagged item even with the aura bonus at zero (78 → 76
+   and 78 → 75 here), so that column cannot reach 1/N and is not the target.
+   Conquest has no team-tag mode bonus and moves 0.
+2. *Kit fit* (`pipeline/smite/kit_fit.py`, built once for this and for
+   Lotus Sickle's held tag). A kit's capabilities off its ability text
+   (`ally_support`: 26 of 94; `melee`), an item's needs off its passive text
+   (`ally_support` for "Healed, or Shielded another Allied God" items;
+   `near_allies` for "You and allies within 8.8m"), and a tag-free stat fit at
+   or above the least-fit item already in the god's core. Agni fails Lotus
+   Sickle; Ra passes.
+3. *Draft* (`viewer/src/lib/teamTags.ts`). Teammates' builds replace the
+   static expectation per tag, and EVERY positive anti-heal/aura bonus — the
+   team delta or a healer threat — reaches only kit-fitting items. Your own
+   slot no longer counts as a teammate in `threats.deriveThreats` (it damped
+   threats your own core answered, a second time). Joust boards holding
+   anti-heal, two teammates entered: no enemies 34/94 → 34 (none hold it) or
+   13 (both do); three healers 39 or 34. Before the gate, three healers and no
+   teammate copy put anti-heal on all 94. Arena, five healers: 56 or 20.
+
+Mode comparison after this (87 judged, against the borrowed six, which did not
+move): Joust Ichor better 9 → 13, community better 4 → 4, trade-off 7 → 13,
+level 7 → 7, late 0 → 1, withheld 60 → 49; Arena 11 → 19, 1 → 4, 6 → 10,
+6 → 7, late 1 → 1, withheld 62 → 46. As before, most of the movement is
+COVERAGE — PARTIAL anti-heal items left the builds — not evidence of quality.
+
 ### The feedback loop has a first version, and it is tiny
 Everything else validates against community data, which §1 shows cannot
 adjudicate the model's central claims. `data/_expert_reviews.yaml` +
@@ -2793,7 +2831,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1191 pipeline · 937 viewer |
+| Tests | 1203 pipeline · 945 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -8,6 +8,14 @@ export interface Overlay {
    *  knows that PERCENT penetration rises against a tank while FLAT
    *  penetration falls, because it is measured per item rather than per stat. */
   items?: Record<string, number>;
+  /** Team-level tags: the static build's expected team share replaced by what
+   *  the board's teammates actually hold (`teamTags.ts`). Signed. */
+  team?: Record<string, number>;
+  /** The items a POSITIVE bonus on a team tag may reach (kit fit), from
+   *  either channel — the team delta or a threat. Undefined = no gate. */
+  teamFit?: string[];
+  /** The tags that gate applies to (`team_tags.tags`: anti-heal, aura). */
+  teamGated?: string[];
 }
 export interface AdaptOpts {
   maxBonus: number;
@@ -94,7 +102,25 @@ function pricer(itemsByName: Record<string, Item>, overlay: Overlay, opts: Adapt
     // stat_bonus loop. Measured with stats included as well: 70-79 of 87 cores
     // changed per comp, which is not a targeted correction, it is a different
     // model.
-    for (const tag of it?.effect_tags ?? []) credit(`tag:${tag}`, overlay.tags[tag], tag);
+    // KIT GATE (2026-11-03): a positive bonus on a team tag reaches only an
+    // item this kit uses well (`pipeline/smite/kit_fit.py`), whichever
+    // channel pays it. Without it, three enemy healers pulled anti-heal onto
+    // all 94 Joust boards, kit or not.
+    const gated = (tag: string) => !!overlay.teamFit && (overlay.teamGated ?? []).includes(tag)
+      && !overlay.teamFit.includes(name);
+    for (const tag of it?.effect_tags ?? []) {
+      const w = overlay.tags[tag];
+      if (w && w > 0 && gated(tag)) continue;
+      credit(`tag:${tag}`, w, tag);
+    }
+    // A team job is a job like any other tag: a positive delta is damped when
+    // this build already holds one (your own second copy), a negative one —
+    // a teammate already carries it — is never damped.
+    for (const tag of it?.effect_tags ?? []) {
+      const w = overlay.team?.[tag];
+      if (w && w > 0 && gated(tag)) continue;
+      if (w) credit(`tag:${tag}`, w, w > 0 ? `${tag} (nobody on your team has it)` : `${tag} (a teammate has it)`);
+    }
     for (const stat of Object.keys(it?.stats ?? {})) {
       const w = overlay.stats[stat];
       if (w) { bonus += w; if (w > strongest) strongest = w; why.push(stat); }
@@ -244,7 +270,10 @@ export function adaptFromCore(
   const keysOf = (name: string) => {
     const it = itemsByName[name];
     const out: string[] = [];
-    for (const tag of it?.effect_tags ?? []) if (overlay.tags[tag] > 0) out.push(`tag:${tag}`);
+    for (const tag of it?.effect_tags ?? []) {
+      // Coverage is about what the core HOLDS, kit fit or not.
+      if (overlay.tags[tag] > 0 || (overlay.team?.[tag] ?? 0) > 0) out.push(`tag:${tag}`);
+    }
     return out;
   };
 

@@ -20,11 +20,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -87,11 +87,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -152,8 +152,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -206,22 +206,22 @@ builds:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
+  - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
-  - Erosion
-  - Stampede
   flex_slots:
-  - Briskberry Acorn
-  - Ashwhorl Acorn
+  - Kinetic Cuirass
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Void Stone — magical protection
-    swap_item: Void Stone
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -246,24 +246,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Amanita Charm:
-      total: 0.83
+      total: 0.76
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
-    Erosion:
-      total: 0.68
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
       fit: 0.86
-    Stampede:
-      total: 0.65
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -282,8 +282,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
@@ -350,8 +350,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Toxic Blade:
-      total: 0.72
+      total: 0.68
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.9
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.76
@@ -477,11 +477,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
