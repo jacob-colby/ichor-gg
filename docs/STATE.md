@@ -2126,6 +2126,19 @@ cannot be judged yet", not as a win for Ichor. Simulating the target's
 attack-speed debuff (the enemy's attack cadence is already a clock) is the
 cheapest next step to judge more of them.
 
+**Lifesteal in the fit map (2026-11-03).** The healing verdicts pointed at a
+fit-map gap, not a price: `Lifesteal` had a fit weight only in the Carry,
+Hunter and Sharpshooter maps, so 0 for 19/19 Solo and 18/18 Jungle gods.
+`smite.lifesteal_value` measures a typical item's 7.5% Lifesteal against a
+typical 250 Max Health in `fight_ehp`, per role, at both healing bounds, and
+`role_stats` now gives Solo 0.52 and Support 0.47 (the geometric mean of the
+bounds; Jungle and Mid carry no health weight, so nothing). Coverage 36.6% /
+36.7% → 36.6% / 37.2%; 14 `core` cores change in each mode; Conquest verdict
+totals do not move. None of the seven motivating gods changes verdict, because
+the sustain cap of 1 binds and the community's Solo sixes hold a median of one
+sustain item too — the weight changes WHICH sustain item, not how many. The
+table and both bounds are in that module's docstring.
+
 Left, in order: (1) decide what a movement/CC/ward passive is worth in a
 comparison that has no movement, CC or wards — the honest options are a
 stated zero (and counting it as covered) or leaving those gods withheld, and
@@ -2831,7 +2844,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1203 pipeline · 945 viewer |
+| Tests | 1205 pipeline · 945 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

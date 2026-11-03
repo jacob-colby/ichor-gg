@@ -17,8 +17,8 @@ builds:
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.58
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.64
     Shield Splitter:
-      total: 0.63
+      total: 0.59
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.6
     Freya's Tears:
-      total: 0.56
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.48
     Amanita Charm:
-      total: 0.76
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.82
     Erosion:
-      total: 0.57
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.57
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -99,41 +99,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.62
     Shield Splitter:
-      total: 0.6
+      total: 0.57
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.54
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.64
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.76
     Runeforged Hammer:
-      total: 0.57
+      total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.52
     Amanita Charm:
-      total: 0.78
+      total: 0.75
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.85
     Erosion:
-      total: 0.56
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.55
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Avenging Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.52
     Void Shield:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Void Stone:
-      total: 0.59
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Amanita Charm:
-      total: 0.68
+      total: 0.67
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.68
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -275,8 +275,8 @@ builds:
   - Shield of the Phoenix
   - Freya's Tears
   flex_slots:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -294,41 +294,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Breastplate of Valor:
-      total: 0.56
+      total: 0.54
       efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.44
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.42
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.51
     Shield of the Phoenix:
-      total: 0.69
+      total: 0.67
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.81
     Freya's Tears:
-      total: 0.61
+      total: 0.58
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.59
   starter: *id001
 - source: suggested
   archetype: model
@@ -344,8 +344,8 @@ builds:
   - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Glorious Pridwen — magical protection
     swap_item: Glorious Pridwen
@@ -359,54 +359,54 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.58
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.6
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.64
     Shield Splitter:
-      total: 0.63
+      total: 0.59
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.6
     Freya's Tears:
-      total: 0.56
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.48
     Amanita Charm:
-      total: 0.76
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.82
     Erosion:
-      total: 0.57
+      total: 0.54
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.57
   starter: *id001
 - source: suggested
   archetype: core
   slot_order:
   - Kinetic Cuirass
-  - Shield of the Phoenix
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Sanguine Lash
   flex_slots:
+  - Void Shield
   - Kinetic Cuirass
-  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -415,8 +415,8 @@ builds:
     swap: Doublet of Binding — magical protection
     swap_item: Doublet of Binding
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -424,29 +424,23 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.61
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.71
-    Shield of the Phoenix:
-      total: 0.63
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
+      fit: 0.65
     Void Shield:
-      total: 0.64
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.79
     Void Stone:
-      total: 0.65
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.79
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -454,11 +448,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.71
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.85
+    Sanguine Lash:
+      total: 0.64
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -481,8 +481,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Umbral Link — physical protection
+    swap_item: Umbral Link
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -490,29 +490,29 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.62
     Shield of the Phoenix:
-      total: 0.67
+      total: 0.64
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.76
     Void Shield:
-      total: 0.63
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.76
     Void Stone:
-      total: 0.63
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.76
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -520,11 +520,11 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.69
+      total: 0.66
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.82
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -544,11 +544,11 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -556,41 +556,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Avenging Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.59
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.51
     Void Shield:
       total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.99
     Void Stone:
       total: 0.73
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.99
     Amanita Charm:
-      total: 0.8
+      total: 0.79
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.95
+      fit: 0.92
     Erosion:
-      total: 0.63
+      total: 0.61
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.72
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
@@ -688,55 +688,55 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.55
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.42
     Shield of the Phoenix:
-      total: 0.68
+      total: 0.65
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.79
     Void Shield:
-      total: 0.59
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Void Stone:
-      total: 0.59
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-    Freya's Tears:
       total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Void Stone:
+      total: 0.58
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Freya's Tears:
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Erosion:
-      total: 0.64
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.73
   starter: *id001
   aspect: Aspect of Preservation
 - source: suggested
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Shield of the Phoenix
   - Void Shield
   - Void Stone
   - Amanita Charm
   - Erosion
+  - Sanguine Lash
   flex_slots:
+  - Void Shield
   - Kinetic Cuirass
-  - Shield of the Phoenix
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -745,8 +745,8 @@ builds:
     swap: Doublet of Binding — magical protection
     swap_item: Doublet of Binding
   - vs_tag: physical_heavy
-    swap: Spectral Armor — physical protection
-    swap_item: Spectral Armor
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -754,29 +754,23 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.61
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.71
-    Shield of the Phoenix:
-      total: 0.63
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
+      fit: 0.65
     Void Shield:
-      total: 0.64
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.79
     Void Stone:
-      total: 0.65
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.79
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -784,11 +778,17 @@ builds:
       pick: 0.0
       fit: 1.0
     Erosion:
-      total: 0.71
+      total: 0.68
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.85
+    Sanguine Lash:
+      total: 0.64
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
   aspect: Aspect of Preservation
 ---
