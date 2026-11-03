@@ -8,6 +8,9 @@ export interface Overlay {
    *  knows that PERCENT penetration rises against a tank while FLAT
    *  penetration falls, because it is measured per item rather than per stat. */
   items?: Record<string, number>;
+  /** Team-level tags: the static build's expected team share replaced by what
+   *  the board's teammates actually hold (`teamTags.ts`). Signed. */
+  team?: Record<string, number>;
 }
 export interface AdaptOpts {
   maxBonus: number;
@@ -95,6 +98,13 @@ function pricer(itemsByName: Record<string, Item>, overlay: Overlay, opts: Adapt
     // changed per comp, which is not a targeted correction, it is a different
     // model.
     for (const tag of it?.effect_tags ?? []) credit(`tag:${tag}`, overlay.tags[tag], tag);
+    // A team job is a job like any other tag: a positive delta is damped when
+    // this build already holds one (your own second copy), a negative one —
+    // a teammate already carries it — is never damped.
+    for (const tag of it?.effect_tags ?? []) {
+      const w = overlay.team?.[tag];
+      if (w) credit(`tag:${tag}`, w, w > 0 ? `${tag} (nobody on your team has it)` : `${tag} (a teammate has it)`);
+    }
     for (const stat of Object.keys(it?.stats ?? {})) {
       const w = overlay.stats[stat];
       if (w) { bonus += w; if (w > strongest) strongest = w; why.push(stat); }
@@ -244,7 +254,9 @@ export function adaptFromCore(
   const keysOf = (name: string) => {
     const it = itemsByName[name];
     const out: string[] = [];
-    for (const tag of it?.effect_tags ?? []) if (overlay.tags[tag] > 0) out.push(`tag:${tag}`);
+    for (const tag of it?.effect_tags ?? []) {
+      if (overlay.tags[tag] > 0 || (overlay.team?.[tag] ?? 0) > 0) out.push(`tag:${tag}`);
+    }
     return out;
   };
 

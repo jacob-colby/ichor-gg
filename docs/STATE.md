@@ -2157,6 +2157,42 @@ them. The tier list now admits this; the builds do not, and the builds are the
 product. Either find a source with per-mode outcomes, or disclose it on those
 builds the way the tier list does.
 
+**Anti-heal and auras are team jobs now (2026-11-03, fingerprint
+`3c48d25374f5`).** The modes' flat +0.30 paid every god for one job a team
+does once ("Healing Reduction does not stack with other similar effects").
+`team_tags` in `_weights.yaml` scales the MODE's bonus for `anti-heal` and
+`aura` by the expected share one build should carry, `1/N + (N−1)/N × 0.25`
+(Joust 0.50, Arena 0.40; the 0.25 duplicate value is a judgement, bracketed),
+and the draft replaces that expectation with what the board's teammates hold
+(`viewer/src/lib/teamTags.ts`). Static cores, against the same code with
+`team_tags` removed:
+
+| duplicate value | Joust cores changed | lose anti-heal / aura | cores with anti-heal | Arena cores changed | lose anti-heal / aura | cores with anti-heal |
+|---|---|---|---|---|---|---|
+| 0 | 64/101 | 58 / 30 | 67 → 9 | 70/101 | 28 / 52 | 30 → 2 |
+| **0.25** | **59/101** | **53 / 27** | **67 → 14** | **68/101** | **27 / 51** | **30 → 3** |
+| 0.5 | 51/101 | 44 / 22 | 67 → 32 | 62/101 | 18 / 47 | 30 → 12 |
+
+Conquest moves 0 (it has no team-tag mode bonus), and leakage-free coverage is
+unchanged at both splits. Two things still wrong, measured on the draft
+(`teamTags.test.ts`, no enemies): 14% of Joust cores holding anti-heal is
+BELOW the one-in-three a "one per team" target implies — a per-god threshold
+is not a probability, so the static builds under-hold — and the draft
+over-corrects the other way: with two teammates known to hold none, 93 of 94
+Joust boards bring an anti-heal item in, because +0.15 clears the 0.12 swap
+bar on evidence alone and the swap rule does not ask whether the god can use
+it. Aura is the weaker half of the claim: 78 of 101 Joust cores still hold an
+aura-tagged item after the change, because most aura carriers are bought for
+their stat line, and two DIFFERENT aura items do stack.
+
+What it did to the mode comparison (87 judged; the borrowed Conquest six is
+unchanged, only Ichor's mode build moved): Joust Ichor better 9 → 19,
+community better 4 → 5, trade-off 7 → 12, level 7 → 8, early 0 → 1, withheld
+60 → 42; Arena 11 → 18, 1 → 2, 6 → 11, 6 → 10, early/late 0/1 → 1/1, withheld
+62 → 44. **Most of that is coverage, not quality**: the anti-heal items leaving
+were PARTIAL (Toxic Blade, Stygian Anchor), so 18 more verdicts per mode get
+issued at all. It is not evidence the builds got better.
+
 ### The feedback loop has a first version, and it is tiny
 Everything else validates against community data, which §1 shows cannot
 adjudicate the model's central claims. `data/_expert_reviews.yaml` +
@@ -2793,7 +2829,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1191 pipeline · 792 viewer |
+| Tests | 1196 pipeline · 797 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

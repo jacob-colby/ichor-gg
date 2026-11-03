@@ -21,6 +21,20 @@ SQUISHY_PROTECTION = 70.0
 TANK_PROTECTION = 170.0
 
 
+def team_config(weights):
+    """`{tags, duplicate_value, modes: {Mode: {team_size, share, bonus}}}` —
+    `bonus` is each team tag's UNSCALED mode bonus, `share` the scale the
+    static builds applied (`scoring.team_share`)."""
+    team = weights.get("team_tags") or {}
+    modes = {}
+    for mode in recommend.MODES:
+        prof = scoring.resolve_profile(weights, mode)
+        modes[mode] = {"team_size": ((weights.get("modes") or {}).get(mode.lower()) or {}).get("team_size"),
+                       "share": prof["team_share"], "bonus": prof["team_tag_bonus"]}
+    return {"tags": list(team.get("tags") or []),
+            "duplicate_value": team.get("duplicate_value", 0.0), "modes": modes}
+
+
 def _enrich_gods(gods, weights):
     """Attach the derived ability-leveling order to each god so the viewer's
     Info tab doesn't need the kit-scaling parser client-side. Shape:
@@ -322,7 +336,11 @@ def build_index(repo_root: Path) -> dict:
              # to hand-copy this rule's conditions into TypeScript, where the
              # two could drift silently; shipping the rule keeps one authority.
              "draft": {**weights.get("draft", {}),
-                       "lifesteal_caps": weights.get("lifesteal_caps", [])},
+                       "lifesteal_caps": weights.get("lifesteal_caps", []),
+                       # TEAM-LEVEL TAGS: what the static builds assumed about
+                       # teammates, so the draft can replace the assumption
+                       # with the teammates it can see (`teamTags.ts`).
+                       "team": team_config(weights)},
              # The method page states the model's own weights. Shipping them
              # rather than restating them in TSX means the page cannot describe
              # a blend the pipeline stopped using.

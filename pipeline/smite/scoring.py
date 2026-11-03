@@ -855,6 +855,16 @@ def is_buildable(item, god=None):
     return isinstance(cost, (int, float)) and not isinstance(cost, bool) and cost > 0
 
 
+def team_share(team_size, duplicate_value):
+    """Expected share of a team-level job ONE build should carry when its
+    teammates are unknown: `1/N + (N-1)/N x duplicate_value` (see
+    `team_tags` in data/_weights.yaml). 1.0 when the mode declares no size."""
+    if not team_size:
+        return 1.0
+    n = float(team_size)
+    return 1.0 / n + (n - 1.0) / n * float(duplicate_value)
+
+
 def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
     """Compose a mode profile ⊕ aspect ⊕ flavor into an effective scoring overlay.
     Mode sets signal overrides + tag bonuses; the aspect overlay and flavor each
@@ -874,7 +884,15 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         # Off-class items have no meta data; a neutral 0.5 win rate would only
         # add noise, so fun builds are scored on efficiency + flavor fit alone.
         signals = {**signals, "win": 0.0, "pick": 0.0}
-    tag_bonus = {**(mode_prof.get("tag_bonus") or {}),
+    team = weights.get("team_tags") or {}
+    share = team_share(mode_prof.get("team_size"), team.get("duplicate_value", 0.0))
+    mode_tb = dict(mode_prof.get("tag_bonus") or {})
+    team_raw = {}
+    for t in team.get("tags") or ():
+        if mode_tb.get(t, 0.0) > 0:
+            team_raw[t] = mode_tb[t]
+            mode_tb[t] = mode_tb[t] * share
+    tag_bonus = {**mode_tb,
                  **(asp.get("tag_bonus") or {}),
                  **(fl.get("tag_bonus") or {})}
     stat_overlay = {**(asp.get("stats") or {}), **(fl.get("stats") or {})}
@@ -888,6 +906,10 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         "signals": signals,
         "stat_overlay": stat_overlay,
         "tag_bonus": tag_bonus,
+        # TEAM-LEVEL TAGS: the mode's unscaled bonus per team tag and the
+        # share it was scaled by, for the draft (which knows the teammates).
+        "team_tag_bonus": team_raw,
+        "team_share": share,
         "max_lifesteal": max_ls,
         "max_lifesteal_explicit": ls_explicit,
         "suppress_underrated": signals.get("pick", 1) == 0,

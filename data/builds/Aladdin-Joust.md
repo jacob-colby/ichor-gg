@@ -20,11 +20,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -87,11 +87,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -152,8 +152,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -205,17 +205,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Void Stone
+  - Shield Splitter
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Void Stone
+  - Erosion
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
@@ -240,30 +240,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Void Stone:
-      total: 0.56
-      efficiency: 0.46
+    Shield Splitter:
+      total: 0.54
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.5
     Amanita Charm:
-      total: 0.83
+      total: 0.78
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.9
     Erosion:
-      total: 0.61
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.6
     Soul Gem:
-      total: 0.72
+      total: 0.67
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -350,8 +350,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.68
+      total: 0.61
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.76
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -389,11 +389,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Soul Gem:
-      total: 0.76
+      total: 0.71
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.84
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -477,11 +477,11 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin

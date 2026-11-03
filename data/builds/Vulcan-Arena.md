@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Spear of Desolation
+  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Eros' Bow
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
@@ -37,6 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Doom Orb:
+      total: 0.6
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Obsidian Shard:
       total: 0.67
       efficiency: 0.58
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Eros' Bow:
-      total: 0.65
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -74,24 +74,24 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Bragi's Harp
+  - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
-  - Eros' Bow
-  - Triton's Conch
   flex_slots:
-  - Bancroft's Talon
   - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -104,12 +104,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Doom Orb:
       total: 0.53
       efficiency: 0.54
@@ -122,35 +134,23 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Eros' Bow:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Triton's Conch:
-      total: 0.6
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.82
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
+  - Bragi's Harp
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Eros' Bow
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -163,6 +163,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Spear of Desolation:
       total: 0.65
       efficiency: 0.59
@@ -187,12 +193,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Eros' Bow:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -203,22 +203,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Stone
+  - Kinetic Cuirass
+  - Rod of Tahuti
   - Eros' Bow
   - Amanita Charm
   - Erosion
-  - Stampede
   - Soul Gem
   flex_slots:
-  - Stampede
-  - Void Stone
+  - Eros' Bow
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -228,42 +228,42 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Stone:
-      total: 0.59
-      efficiency: 0.46
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.87
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Eros' Bow:
-      total: 0.64
+      total: 0.55
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.57
     Amanita Charm:
-      total: 0.83
+      total: 0.77
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.88
     Erosion:
-      total: 0.64
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.76
-    Stampede:
-      total: 0.61
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
+      fit: 0.58
     Soul Gem:
-      total: 0.76
+      total: 0.75
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -282,11 +282,11 @@ builds:
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Divine Ruin
   - Nimble Ring
   - Bragi's Harp
+  - Spear of Desolation
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
-  - Divine Ruin
+  - Eros' Bow
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -353,17 +353,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.51
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Nimble Ring:
       total: 0.56
       efficiency: 0.63
@@ -376,6 +370,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Spear of Desolation:
+      total: 0.5
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.87
@@ -383,17 +383,17 @@ builds:
       pick: 0.0
       fit: 0.32
     Eros' Bow:
-      total: 0.6
+      total: 0.51
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.52
     Soul Gem:
-      total: 0.79
+      total: 0.76
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.95
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -412,8 +412,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -464,21 +464,21 @@ builds:
   archetype: model
   slot_order:
   - Spear of Desolation
+  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Eros' Bow
+  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
   - vs_tag: physical_heavy
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
@@ -494,6 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+    Doom Orb:
+      total: 0.6
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Obsidian Shard:
       total: 0.67
       efficiency: 0.58
@@ -512,12 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
-    Eros' Bow:
-      total: 0.65
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.81
     Soul Gem:
       total: 0.76
       efficiency: 0.53

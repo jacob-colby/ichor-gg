@@ -7,21 +7,21 @@ builds:
   archetype: core
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Shield Splitter
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -37,36 +37,36 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shield Splitter:
+      total: 0.55
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Amanita Charm:
-      total: 0.77
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.8
     Triton's Conch:
-      total: 0.58
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.62
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -75,23 +75,23 @@ builds:
   slot_order:
   - Berserker's Shield
   - Kinetic Cuirass
+  - Shield Splitter
+  - Shield of the Phoenix
   - Amanita Charm
   - Erosion
-  - Pharaoh's Curse
-  - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Pharaoh's Curse
+  - Erosion
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -110,43 +110,43 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shield of the Phoenix:
+      total: 0.61
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
     Amanita Charm:
-      total: 0.83
+      total: 0.8
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.94
     Erosion:
-      total: 0.62
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Pharaoh's Curse:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Soul Gem:
-      total: 0.63
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Toxic Blade
   - Jotunn's Revenge
   - Void Shield
   - Void Stone
+  - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
-  - Avenging Blade
+  - Void Shield
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,8 +158,8 @@ builds:
     swap: Stone of Binding — physical protection
     swap_item: Stone of Binding
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    Toxic Blade:
-      total: 0.62
-      efficiency: 0.37
-      win: 0.5
-      pick: 0.0
-      fit: 0.87
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.67
@@ -182,23 +176,29 @@ builds:
       pick: 0.0
       fit: 0.56
     Void Shield:
-      total: 0.64
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.72
     Void Stone:
-      total: 0.64
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.72
+    Titan's Bane:
+      total: 0.58
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
-      total: 0.75
+      total: 0.7
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,22 +206,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Berserker's Shield
+  - Tyrfing
   - Riptalon
   - Amanita Charm
-  - Pharaoh's Curse
   flex_slots:
   - Golden Blade
-  - Pharaoh's Curse
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -235,17 +235,23 @@ builds:
       pick: 0.0
       fit: 0.65
     Toxic Blade:
-      total: 0.67
+      total: 0.6
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.72
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Tyrfing:
+      total: 0.56
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Riptalon:
       total: 0.61
       efficiency: 0.46
@@ -253,17 +259,11 @@ builds:
       pick: 0.0
       fit: 0.77
     Amanita Charm:
-      total: 0.7
+      total: 0.65
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.74
-    Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.64
   starter: *id001
 - source: suggested
   archetype: cooldown
@@ -324,31 +324,31 @@ builds:
       pick: 0.0
       fit: 0.49
     Soul Gem:
-      total: 0.76
+      total: 0.74
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.94
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
   - Berserker's Shield
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Runeforged Hammer
   - Amanita Charm
-  - Erosion
-  - Pharaoh's Curse
-  - Shogun's Ofuda
   - Triton's Conch
   flex_slots:
-  - Pharaoh's Curse
-  - Shogun's Ofuda
+  - Shield Splitter
+  - Triton's Conch
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Erosion — magical protection
+    swap_item: Erosion
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -364,35 +364,35 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shield Splitter:
+      total: 0.55
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Runeforged Hammer:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Amanita Charm:
-      total: 0.77
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.9
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Pharaoh's Curse:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Shogun's Ofuda:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
+      fit: 0.8
     Triton's Conch:
-      total: 0.58
+      total: 0.53
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.62
   starter: *id001
 ---

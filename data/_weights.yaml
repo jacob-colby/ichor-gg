@@ -1556,9 +1556,9 @@ lifesteal_caps:
 #   Lifesteal, Pathfinding — "33% effectiveness" against minions and in combat
 #     respectively. Those are SCALES, not caps, and `combat.py` already holds
 #     both (LIFESTEAL_MINION_SCALE, PATHFINDING_COMBAT_SCALE).
-#   Healing Reduction — DOCUMENTED at "25% from items and it does not stack
-#     with itself", but it is not a `stats` key on any of the 226 items: all
-#     four anti-heal items apply exactly 25% from passive text, so ONE of them
+#   Healing Reduction — DOCUMENTED as not stacking with itself, but it is not
+#     a `stats` key on any item: all four anti-heal items apply exactly 40%
+#     from passive text (Open Beta 46; this note read 25% on OB40), so ONE of them
 #     is already the cap and a second adds nothing. That is a non-stacking
 #     rule rather than an additive budget, so it cannot be expressed here.
 #     The `anti-heal` tag and `draft.self_covered` are where it would live.
@@ -1846,8 +1846,41 @@ aspects:
 #
 # `conquest` is the default and takes no overlay: three lanes, jungle camps,
 # towers and phoenixes, ~30min games, and the meta data we actually have.
+#
+# TEAM-LEVEL TAGS (2026-11-03). A mode's tag_bonus is per GOD, but anti-heal
+# and auras are jobs a TEAM does once. "Healing Reduction does not stack with
+# other similar effects" (Brawler's Beat Stick, Stygian Anchor, OB46 text), so
+# the second anti-heal on a team cuts nothing the first did not, and a second
+# copy of an aura grants the same buff to the same allies. A flat +0.30 paid to
+# every god's build is a bonus to five copies of one job.
+#
+# So the MODE's bonus for each tag in `team_tags.tags` is scaled by the
+# expected share of the team's need ONE build should carry when its teammates
+# are unknown — every seat equally likely to be the carrier:
+#
+#     share = 1/N + (N - 1)/N x duplicate_value
+#
+# N is `team_size` (DOCUMENTED: 5 Conquest and Arena, 3 Joust). The first copy
+# is worth 1; a copy beside one is worth `duplicate_value`. Joust 0.50, Arena
+# 0.40 at the shipped 0.25.
+#
+# `duplicate_value` 0.25 is a JUDGEMENT, not a measurement. Not 0, because a
+# second anti-heal carrier covers the 5s windows the first is not hitting the
+# target, and two DIFFERENT aura items grant different stats; not 0.5, because
+# "does not stack" is the documented rule and duplicate auras of one item give
+# nothing. The core counts are reported at 0 and 0.5 beside it.
+#
+# Only the MODE's bonus is scaled. A flavor or aspect bonus on the same tag (a
+# Support flavor's aura, Chronos's time-field) is a build identity, chosen,
+# not a per-god default that every teammate also receives. The draft page,
+# which knows the teammates, replaces the expectation with what the team
+# actually holds (`viewer/src/lib/teamTags.ts`).
+team_tags:
+  tags: [anti-heal, aura]
+  duplicate_value: 0.25
 modes:
   conquest:
+    team_size: 5
     tag_bonus:
       # The ward economy is not free value. See `ward-economy` in _tags.yaml
       # for the measurement; Arena already drops these items outright because
@@ -1876,6 +1909,7 @@ modes:
   # body next to them, and there is little rotation for mobility to buy. The
   # wave is NOT a chore here -- it is how towers fall (see wave-clear below).
   joust:
+    team_size: 3
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     # Joust HAS wards, so the ward economy is real here and this item's stat
     # discount is no more free than it is in Conquest. It was getting neither
@@ -1976,6 +2010,7 @@ modes:
   # move — so wave-clear keeps a small positive (Joust is neutral).
   # Games are short, so the tag bonuses lean on effects that pay immediately.
   arena:
+    team_size: 5
     signals: {efficiency: 0.5, win: 0.0, pick: 0.0, fit: 0.5}
     tag_bonus:
       aura: 0.3           # five allies permanently inside the radius

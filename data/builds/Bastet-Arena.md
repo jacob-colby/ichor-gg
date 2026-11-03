@@ -90,8 +90,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -203,67 +203,67 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
-  - Void Shield
-  - Void Stone
   - Amanita Charm
   - Erosion
   - Stampede
   flex_slots:
-  - Void Shield
-  - Shield of the Phoenix
+  - Shield Splitter
+  - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Mystical Mail — physical protection
-    swap_item: Mystical Mail
+    swap: Magi's Cloak — physical protection
+    swap_item: Magi's Cloak
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Shield of the Phoenix:
       total: 0.62
       efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Void Shield:
-      total: 0.62
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Void Stone:
-      total: 0.63
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Amanita Charm:
-      total: 0.83
+      total: 0.82
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 1.0
+      fit: 0.98
     Erosion:
-      total: 0.69
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.68
     Stampede:
-      total: 0.65
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.61
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -285,8 +285,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -350,8 +350,8 @@ builds:
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Amanita Charm — physical protection
-    swap_item: Amanita Charm
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -371,11 +371,11 @@ builds:
       pick: 0.0
       fit: 0.68
     Toxic Blade:
-      total: 0.72
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.99
+      fit: 0.81
     Tyrfing:
       total: 0.64
       efficiency: 0.5
