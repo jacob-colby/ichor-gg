@@ -117,48 +117,48 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Shield Splitter,
-    Jotunn''s Revenge, Golden Blade, Breastplate of Valor, Erosion, Eye of Providence,
-    Hydra''s Lament, Draconic Scale, Oni Hunter''s Garb, Tyrfing, Shield of the Phoenix,
-    Stone of Binding, Tekko-Kagi, Midgardian Mail, Magi''s Cloak, Avenging Blade,
-    Titan''s Bane, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow, Wyrmskin Hide,
-    Leviathan''s Hide, Screeching Gargoyle, Runeforged Hammer.'
+    Jotunn''s Revenge, Golden Blade, Breastplate of Valor, Hydra''s Lament, Erosion,
+    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, The Reaper, Tyrfing, Shield
+    of the Phoenix, Stone of Binding, Tekko-Kagi, Midgardian Mail, Titan''s Bane,
+    Magi''s Cloak, Avenging Blade, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow,
+    Screeching Gargoyle, Leviathan''s Hide, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.74
       win: 0.54
       pick: 0.0
-      fit: 0.44
+      fit: 0.4
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.56
       pick: 0.1
-      fit: 0.64
+      fit: 0.59
     Shield Splitter:
-      total: 0.54
+      total: 0.53
       efficiency: 0.59
       win: 0.54
       pick: 0.0
-      fit: 0.6
+      fit: 0.55
     Gladiator's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.39
       win: 0.69
       pick: 0.14
-      fit: 0.55
+      fit: 0.51
     Hide of the Nemean Lion:
       total: 0.55
       efficiency: 0.51
       win: 0.69
       pick: 0.22
-      fit: 0.35
+      fit: 0.31
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
       win: 0.54
       pick: 0.0
-      fit: 0.54
+      fit: 0.49
   community_ordered:
   - Kinetic Cuirass
   - Gladiator's Shield
@@ -171,12 +171,12 @@ builds:
   slot_order:
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shield of the Phoenix
   - Gladiator's Shield
   - Hide of the Nemean Lion
+  - The Reaper
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
+  - The Reaper
   - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -186,55 +186,55 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, Kinetic Cuirass, Shield of the Phoenix,
-    Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather, The Reaper,
-    Yogi''s Necklace, Breastplate of Valor, Hydra''s Lament, Erosion, Oni Hunter''s
-    Garb, Eye of Providence, Chandra''s Grace, Tyrfing, Avenging Blade, Draconic Scale,
-    Tekko-Kagi, Midgardian Mail, Pharaoh''s Curse, Titan''s Bane, Regrowth Striders,
-    Wyrmskin Hide, Lernaean Bow, Leviathan''s Hide, Runeforged Hammer.'
+    this god: Amanita Charm, Berserker''s Shield, Kinetic Cuirass, The Reaper, Shield
+    of the Phoenix, Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather,
+    Yogi''s Necklace, Bloodforge, Breastplate of Valor, Riptalon, Hydra''s Lament,
+    Oni Hunter''s Garb, Chandra''s Grace, Erosion, Tyrfing, Eye of Providence, Avenging
+    Blade, Tekko-Kagi, Draconic Scale, Midgardian Mail, Titan''s Bane, Regrowth Striders,
+    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
       win: 0.54
       pick: 0.0
-      fit: 0.46
+      fit: 0.42
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.56
       pick: 0.1
-      fit: 0.62
-    Shield of the Phoenix:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.0
-      fit: 0.77
+      fit: 0.57
     Gladiator's Shield:
-      total: 0.54
+      total: 0.53
       efficiency: 0.39
       win: 0.69
       pick: 0.14
-      fit: 0.57
+      fit: 0.52
     Hide of the Nemean Lion:
       total: 0.55
       efficiency: 0.51
       win: 0.69
       pick: 0.22
-      fit: 0.36
+      fit: 0.33
+    The Reaper:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.54
+      pick: 0.0
+      fit: 0.64
     Amanita Charm:
       total: 0.59
       efficiency: 0.65
       win: 0.54
       pick: 0.0
-      fit: 0.82
+      fit: 0.77
   community_ordered:
   - Kinetic Cuirass
   - Gladiator's Shield
@@ -257,8 +257,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Gladiator's Shield — physical protection
     swap_item: Gladiator's Shield
@@ -267,48 +267,48 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
-    Stone of Binding, Avenging Blade, Shield Splitter, Screeching Gargoyle, Tekko-Kagi,
-    Titan''s Bane, Void Stone, Void Shield, The Crusher, Breastplate of Valor, Toxic
-    Blade, Heartseeker, Silverbranch Bow, Golden Blade, The Reaper, Hydra''s Lament,
-    Oni Hunter''s Garb, Erosion, Eye of Providence, Tyrfing, Draconic Scale, Shield
-    of the Phoenix, Midgardian Mail, Runeforged Hammer.'
+    Stone of Binding, Avenging Blade, Screeching Gargoyle, The Reaper, Shield Splitter,
+    Titan''s Bane, Tekko-Kagi, Void Stone, Void Shield, Breastplate of Valor, The
+    Crusher, Toxic Blade, Heartseeker, Hydra''s Lament, Silverbranch Bow, Golden Blade,
+    Oni Hunter''s Garb, Erosion, Eye of Providence, Riptalon, Tyrfing, Draconic Scale,
+    Midgardian Mail, Runeforged Hammer.'
   slot_scores:
     Stone of Binding:
       total: 0.52
       efficiency: 0.5
       win: 0.54
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Berserker's Shield:
       total: 0.55
       efficiency: 0.74
       win: 0.54
       pick: 0.0
-      fit: 0.33
+      fit: 0.31
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.54
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
       win: 0.56
       pick: 0.1
-      fit: 0.5
+      fit: 0.47
     Hide of the Nemean Lion:
       total: 0.54
       efficiency: 0.51
       win: 0.69
       pick: 0.22
-      fit: 0.26
+      fit: 0.24
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.54
       pick: 0.0
-      fit: 0.4
+      fit: 0.37
   community_ordered:
   - Kinetic Cuirass
   - Hide of the Nemean Lion
@@ -415,47 +415,47 @@ builds:
     + fit + win/pick). Underrated for this god: Berserker''s Shield, Gladiator''s
     Shield, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Breastplate of Valor,
     Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching Gargoyle,
-    Arondight, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Eye of Providence, Golden
-    Blade, Draconic Scale, Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle
-    Of Discord, Leviathan''s Hide, Pharaoh''s Curse, Regrowth Striders, Chandra''s
-    Grace, Tyrfing, Runeforged Hammer.'
+    Arondight, Oni Hunter''s Garb, Prophetic Cloak, Erosion, Eye of Providence, Golden
+    Blade, Stone of Binding, Draconic Scale, Midgardian Mail, Magi''s Cloak, Leviathan''s
+    Hide, Mantle Of Discord, The Reaper, Pharaoh''s Curse, Tyrfing, Titan''s Bane,
+    Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.74
       win: 0.54
       pick: 0.0
-      fit: 0.34
+      fit: 0.32
     Breastplate of Valor:
       total: 0.53
       efficiency: 0.63
       win: 0.54
       pick: 0.0
-      fit: 0.45
+      fit: 0.41
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
       win: 0.54
       pick: 0.0
-      fit: 0.42
+      fit: 0.39
     Gladiator's Shield:
       total: 0.55
       efficiency: 0.39
       win: 0.69
       pick: 0.14
-      fit: 0.66
+      fit: 0.62
     Hide of the Nemean Lion:
       total: 0.54
       efficiency: 0.51
       win: 0.69
       pick: 0.22
-      fit: 0.27
+      fit: 0.25
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
       win: 0.54
       pick: 0.0
-      fit: 0.42
+      fit: 0.39
   community_ordered:
   - Gladiator's Shield
   - Hide of the Nemean Lion
@@ -470,7 +470,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -487,48 +487,48 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Amanita Charm, Shield Splitter,
-    Kinetic Cuirass, Jotunn''s Revenge, Golden Blade, Runeforged Hammer, Breastplate
-    of Valor, Erosion, Eye of Providence, Hydra''s Lament, Draconic Scale, Oni Hunter''s
-    Garb, Tyrfing, Shield of the Phoenix, Stone of Binding, Tekko-Kagi, Midgardian
-    Mail, Magi''s Cloak, Avenging Blade, Titan''s Bane, Pharaoh''s Curse, Mantle Of
-    Discord, Lernaean Bow, Wyrmskin Hide, Leviathan''s Hide, Screeching Gargoyle.'
+    Jotunn''s Revenge, Kinetic Cuirass, Runeforged Hammer, Golden Blade, Breastplate
+    of Valor, Hydra''s Lament, Erosion, Eye of Providence, Oni Hunter''s Garb, Draconic
+    Scale, The Reaper, Tyrfing, Shield of the Phoenix, Stone of Binding, Tekko-Kagi,
+    Midgardian Mail, Titan''s Bane, Magi''s Cloak, Avenging Blade, Pharaoh''s Curse,
+    Mantle Of Discord, Lernaean Bow, Screeching Gargoyle, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.49
       efficiency: 0.69
       win: 0.45
       pick: 0.15
-      fit: 0.29
+      fit: 0.27
     Berserker's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.74
       win: 0.54
       pick: 0.0
-      fit: 0.44
+      fit: 0.4
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
       win: 0.54
       pick: 0.0
-      fit: 0.37
+      fit: 0.33
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.56
       pick: 0.1
-      fit: 0.64
+      fit: 0.59
     Shield Splitter:
-      total: 0.54
+      total: 0.53
       efficiency: 0.59
       win: 0.54
       pick: 0.0
-      fit: 0.6
+      fit: 0.55
     Amanita Charm:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
       win: 0.54
       pick: 0.0
-      fit: 0.54
+      fit: 0.49
   community_ordered:
   - Genji's Guard
   - Kinetic Cuirass

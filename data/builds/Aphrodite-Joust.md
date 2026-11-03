@@ -10,18 +10,18 @@ builds:
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
   - Freya's Tears
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,55 +32,55 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.56
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.56
     Freya's Tears:
-      total: 0.53
+      total: 0.51
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.45
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.36
-    Amanita Charm:
-      total: 0.72
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
+      fit: 0.33
     Erosion:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
+    Soul Gem:
+      total: 0.75
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Chandra's Grace
+  - Bancroft's Talon
   - Genji's Guard
   - Kinetic Cuirass
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Chandra's Grace
+  - Spear of Desolation
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,42 +98,42 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Chandra's Grace:
-      total: 0.49
-      efficiency: 0.47
+    Bancroft's Talon:
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.55
     Genji's Guard:
       total: 0.48
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.28
+      fit: 0.26
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.49
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.43
     Spear of Desolation:
-      total: 0.5
+      total: 0.48
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.38
     Obsidian Shard:
       total: 0.49
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.39
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.37
+      fit: 0.35
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.5
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.44
     Freya's Tears:
-      total: 0.49
+      total: 0.47
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.37
     Spear of Desolation:
-      total: 0.54
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Obsidian Shard:
-      total: 0.52
+      total: 0.51
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.43
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.33
     Soul Gem:
-      total: 0.7
-      efficiency: 0.53
+      total: 0.74
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -217,8 +217,8 @@ builds:
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -229,41 +229,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.56
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.56
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.33
     Amanita Charm:
-      total: 0.74
+      total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.79
     Erosion:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
     Soul Gem:
-      total: 0.73
-      efficiency: 0.53
+      total: 0.77
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.93
+      fit: 0.97
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -275,7 +275,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Screeching Gargoyle
+  - Spear of Desolation
   - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
@@ -294,41 +294,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Stone of Binding:
-      total: 0.59
+      total: 0.58
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Void Stone:
-      total: 0.58
+      total: 0.57
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Spear of Desolation:
-      total: 0.59
+      total: 0.57
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.55
     Rod of Tahuti:
-      total: 0.67
+      total: 0.65
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.45
     Soul Gem:
-      total: 0.75
-      efficiency: 0.53
+      total: 0.79
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.97
+      fit: 1.0
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
+  - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -423,42 +423,42 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Breastplate of Valor:
-      total: 0.53
+      total: 0.52
       efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Freya's Tears:
-      total: 0.58
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.54
     Spear of Desolation:
-      total: 0.55
+      total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.48
     Soul Gem:
-      total: 0.71
-      efficiency: 0.53
+      total: 0.75
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.93
   starter: *id001
 - source: suggested
   archetype: strength
@@ -468,17 +468,17 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Shield Splitter
-  - Amanita Charm
+  - Soul Gem
   flex_slots:
-  - Berserker's Shield
+  - Golden Blade
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -489,41 +489,41 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.5
     Toxic Blade:
-      total: 0.57
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.63
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.29
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.41
     Shield Splitter:
-      total: 0.52
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.44
-    Amanita Charm:
-      total: 0.64
-      efficiency: 0.65
+      fit: 0.41
+    Soul Gem:
+      total: 0.68
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: str-int
@@ -554,41 +554,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Shield Splitter:
-      total: 0.52
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.42
     Spear of Desolation:
-      total: 0.51
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.41
     Rod of Tahuti:
-      total: 0.6
+      total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.33
+      fit: 0.31
     Soul Gem:
-      total: 0.67
-      efficiency: 0.53
+      total: 0.71
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.85
   starter: *id001
 - source: suggested
   archetype: model
@@ -597,18 +597,18 @@ builds:
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Amanita Charm
   - Erosion
+  - Soul Gem
   flex_slots:
   - Freya's Tears
   - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -619,40 +619,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.56
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.56
     Freya's Tears:
-      total: 0.53
+      total: 0.51
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.45
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.46
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.36
-    Amanita Charm:
-      total: 0.72
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
+      fit: 0.33
     Erosion:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
+    Soul Gem:
+      total: 0.75
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
   starter: *id001
 ---

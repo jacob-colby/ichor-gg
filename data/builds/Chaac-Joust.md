@@ -10,18 +10,18 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Amanita Charm
-  - Erosion
+  - Rod of Tahuti
+  - Soul Gem
   flex_slots:
+  - Shield Splitter
   - Brawler’s Beat Stick
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,63 +32,63 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.5
+      total: 0.48
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.49
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.37
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.51
     Shield Splitter:
-      total: 0.54
+      total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.49
-    Amanita Charm:
+      fit: 0.45
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Soul Gem:
       total: 0.69
-      efficiency: 0.65
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Erosion:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
+      fit: 0.81
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Bancroft's Talon
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Heartseeker
+  - Hydra's Lament
   - Rod of Tahuti
-  - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Heartseeker
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,42 +98,42 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Bancroft's Talon:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.43
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.5
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.44
     Shield Splitter:
-      total: 0.52
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.44
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.43
+      fit: 0.41
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.42
     Rod of Tahuti:
-      total: 0.61
+      total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.36
-    Amanita Charm:
-      total: 0.65
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
+      fit: 0.34
   starter: *id001
 - source: suggested
   archetype: burst
@@ -164,41 +164,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.45
     Kinetic Cuirass:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.46
     Spear of Desolation:
-      total: 0.54
+      total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.45
     Obsidian Shard:
-      total: 0.51
+      total: 0.5
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.42
     Rod of Tahuti:
-      total: 0.6
+      total: 0.59
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.32
     Soul Gem:
-      total: 0.69
-      efficiency: 0.53
+      total: 0.73
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.89
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -229,41 +229,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.38
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.53
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.49
     Shield Splitter:
-      total: 0.51
+      total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.4
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.29
     Amanita Charm:
-      total: 0.71
+      total: 0.69
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.72
     Soul Gem:
-      total: 0.68
-      efficiency: 0.53
+      total: 0.73
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.88
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -294,41 +294,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Stone of Binding:
-      total: 0.59
+      total: 0.58
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.65
     Avenging Blade:
       total: 0.57
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.46
     Void Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Void Stone:
-      total: 0.57
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Soul Gem:
-      total: 0.69
-      efficiency: 0.53
+      total: 0.73
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.89
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -424,41 +424,41 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.4
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.47
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.48
     Freya's Tears:
-      total: 0.58
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.54
     Spear of Desolation:
-      total: 0.55
+      total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.47
     Soul Gem:
-      total: 0.71
-      efficiency: 0.53
+      total: 0.75
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.92
   starter: *id001
 - source: suggested
   archetype: model
@@ -467,18 +467,18 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Amanita Charm
-  - Erosion
+  - Rod of Tahuti
+  - Soul Gem
   flex_slots:
+  - Shield Splitter
   - Brawler’s Beat Stick
-  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -489,40 +489,40 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.5
+      total: 0.48
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.49
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.52
       efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.37
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.54
       efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.51
     Shield Splitter:
-      total: 0.54
+      total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.49
-    Amanita Charm:
+      fit: 0.45
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
+    Soul Gem:
       total: 0.69
-      efficiency: 0.65
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Erosion:
-      total: 0.49
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
+      fit: 0.81
   starter: *id001
 ---
