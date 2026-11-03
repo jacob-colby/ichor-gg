@@ -64,8 +64,10 @@ describe("App — Second Screen chrome", () => {
     render(<App />);
     const main = within(await screen.findByRole("navigation", { name: "Main" }));
     fireEvent.click(main.getByRole("link", { name: "Items" }));
-    await waitFor(() => expect(
-      screen.getByRole("heading", { level: 1, name: /cost less than their stats are worth/i })).toBeInTheDocument());
+    // The redesigned Items page names itself in its h1 (a caption, never a
+    // sentence) and carries the claim in the line under it.
+    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Items" })).toBeInTheDocument());
+    expect(screen.getByTestId("items-claim")).toHaveTextContent(/cost less than their stats are worth/i);
   });
 
   it("keeps the reading routes and the fan-project line under More on a phone", async () => {
@@ -405,6 +407,21 @@ describe("App — the command field on desktop", () => {
     expect(await screen.findByRole("option", { name: /Rage/ })).toBeInTheDocument();
     fireEvent.keyDown(field, { key: "Enter" });
     await waitFor(() => expect(window.location.hash).toBe("#/items/Rage"));
+  });
+
+  /* The open field widens over the reading links and landed on the freshness
+   * stamp at 1280–1500px. index.css hides `.stamp` inside a nav holding an
+   * open field (`nav:has([data-command-open])`); jsdom can't evaluate `:has`,
+   * so this pins the two hooks the rule depends on. */
+  it("marks itself open so the freshness stamp can step aside", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    const field = await barField();
+    const stamp = screen.getByTestId("header-freshness");
+    expect(stamp).toHaveClass("stamp");
+    expect(screen.getByRole("navigation", { name: "Main" }).querySelector("[data-command-open]")).toBeNull();
+    fireEvent.change(field, { target: { value: "chi" } });
+    await waitFor(() => expect(screen.getByRole("navigation", { name: "Main" }).querySelector("[data-command-open]")).not.toBeNull());
   });
 
   it("focuses the field on / and on Ctrl+K or Cmd+K, but not while typing elsewhere", async () => {

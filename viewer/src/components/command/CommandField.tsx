@@ -332,7 +332,7 @@ export function CommandField({
   return (
     // In the top bar the field widens over the reading links while it is
     // open, so a whole matchup's chips fit; it never moves the bar's layout.
-    <div ref={root} data-testid={page ? "command-page" : "command-bar"}
+    <div ref={root} data-testid={page ? "command-page" : "command-bar"} data-command-open={open || undefined}
       className={`relative scroll-mt-3 ${page ? "" : `z-10 transition-[width] duration-150 ease-[var(--ease-standard)] ${
         open ? "w-[640px] max-w-[calc(100vw-420px)]" : "w-full"}`}`}>
       <div onClick={(e) => {

@@ -1,21 +1,21 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
-import { DraftPage } from "./components/DraftPage";
 import { AddGodModal } from "./components/AddGodModal";
-import { ItemsShop } from "./components/ItemsShop";
 import { GodInfo } from "./components/GodInfo";
 import { GodItems } from "./components/GodItems";
 import { GodRanking } from "./components/GodRanking";
 import { Legend } from "./components/Legend";
-import { TierList } from "./components/TierList";
-import { PatchNotes } from "./components/PatchNotes";
-import { Method } from "./components/Method";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { AppNav, Mark, type MoreLink, type NavTab } from "./components/second/AppNav";
 import { GodGrid } from "./components/second/GodGrid";
 import { GodPage } from "./components/second/GodPage";
 import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
 import { GodSubPage } from "./components/second/GodSubPage";
+import { TiersPage } from "./components/second/TiersPage";
+import { ItemsPage } from "./components/second/ItemsPage";
+import { PatchPage } from "./components/second/PatchPage";
+import { MethodPage } from "./components/second/MethodPage";
+import { DraftBoard } from "./components/second/DraftBoard";
 import { useWide } from "./components/second/useWide";
 import { CommandField } from "./components/command/CommandField";
 import { gridFilterText, queryHash, serializeQuery, type ParsedQuery } from "./components/command/query";
@@ -239,18 +239,18 @@ function App() {
             <GodPage key={god.name} god={god} data={data} />
           )
         ) : route.lens === "draft" ? (
-          <DraftPage gods={data.gods} items={data.items} builds={data.builds}
+          <DraftBoard gods={data.gods} items={data.items} builds={data.builds}
               godItemScores={data.god_item_scores} draftConfig={data.draft}
               godItemDamage={data.god_item_damage} initialArchetype={MAIN_ARCHETYPE} />
         ) : route.lens === "items" ? (
-          <ItemsShop items={data.items} openItem={route.item}
-              tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
+          <ItemsPage items={data.items} openItem={route.item}
+              tierItems={(data.tierlist?.conquest ?? data.tierlist)?.items ?? []} goldValues={data.item_gold_values ?? {}} />
         ) : route.lens === "tiers" ? (
-          <TierList tierlist={data.tierlist} communitySource={data.community_source} />
+          <TiersPage tierlist={data.tierlist} communitySource={data.community_source} />
         ) : route.lens === "patch" ? (
-          <PatchNotes periods={data.patch_notes ?? []} />
+          <PatchPage periods={data.patch_notes ?? []} itemNames={data.items.map((i) => i.name)} />
         ) : route.lens === "method" ? (
-          <Method method={data.method} goldValues={data.item_gold_values ?? {}}
+          <MethodPage method={data.method} goldValues={data.item_gold_values ?? {}}
               items={data.items} godCount={data.gods.length} />
         ) : (
           <GodGrid gods={data.gods} lastGod={lastGod} items={data.items} recents={recents}

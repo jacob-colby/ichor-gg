@@ -11,8 +11,10 @@ import { nextEmptySlot } from "../../lib/draft";
 import { Art, CloseGlyph, SearchGlyph } from "./art";
 import { Sheet } from "./Sheet";
 
-export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, onClose }: {
+export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, onClose, side = "enemy" }: {
   gods: God[];
+  /** The team's slots ("" = empty). Named for the god page's use; the draft
+   *  board passes your own team through `side="ally"` too. */
   enemies: string[];
   startIndex: number;
   /** Your god, shown but allowed: mirrors across teams are legal. */
@@ -20,6 +22,8 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
   onPick: (index: number, name: string) => void;
   onRemove: (index: number) => void;
   onClose: () => void;
+  /** Which team the slots belong to. On `ally`, slot 1 is you. */
+  side?: "enemy" | "ally";
 }) {
   const [index, setIndex] = useState(startIndex);
   const [query, setQuery] = useState("");
@@ -41,7 +45,9 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
     const wasEmpty = !enemies[index];
     onPick(index, name);
     const after = enemies.map((n, i) => (i === index ? name : n));
-    const next = nextEmptySlot({ allies: [], enemies: after }, "enemy", index, wasEmpty);
+    const next = side === "ally"
+      ? nextEmptySlot({ allies: after, enemies: [] }, "ally", index, wasEmpty)
+      : nextEmptySlot({ allies: [], enemies: after }, "enemy", index, wasEmpty);
     if (!next) { onClose(); return; }
     setIndex(next.index);
     setQuery("");
@@ -49,9 +55,11 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
   };
 
   const firstFree = matches.find((g) => !taken.has(g.name));
+  const slotWord = (i: number) => (side === "ally" ? (i === 0 ? "You" : `Ally ${i + 1}`) : `Enemy ${i + 1}`);
+  const title = side === "ally" && index === 0 ? "Your god" : `${slotWord(index)} of ${enemies.length}`;
 
   return (
-    <Sheet title={`Enemy ${index + 1} of ${enemies.length}`} onClose={onClose} initialFocus={input} testId="enemy-sheet"
+    <Sheet title={title} onClose={onClose} initialFocus={input} testId="enemy-sheet"
       footer={
         <div className="flex gap-2">
           {enemies[index] && (
@@ -67,14 +75,16 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
         </div>
       }>
       {/* Which slot you are filling, and a way to jump between them. */}
-      <div role="group" aria-label="Enemy slots" className="mb-3 grid gap-2"
+      <div role="group" aria-label={side === "ally" ? "Your team's slots" : "Enemy slots"} className="mb-3 grid gap-2"
         style={{ gridTemplateColumns: `repeat(${enemies.length}, minmax(0, 1fr))` }}>
         {enemies.map((name, i) => (
           <button key={i} type="button" onClick={() => { setIndex(i); input.current?.focus(); }}
-            aria-pressed={i === index} aria-label={name ? `Slot ${i + 1}: ${name}` : `Slot ${i + 1}: empty`}
+            aria-pressed={i === index} aria-label={side === "ally"
+              ? `${slotWord(i)}: ${name || "empty"}`
+              : name ? `Slot ${i + 1}: ${name}` : `Slot ${i + 1}: empty`}
             className={`press flex h-12 items-center justify-center rounded-[10px] ${
               i === index ? "ring-2 ring-accent" : ""}`}>
-            {name ? <Art name={name} kind="head" className="h-11 w-11 rounded-[8px] ring-1 ring-ink" />
+            {name ? <Art name={name} kind="head" className={`h-11 w-11 rounded-[8px] ring-1 ${side === "ally" ? (i === 0 ? "ring-accent" : "ring-line-strong") : "ring-ink"}`} />
               : <span className="flex h-11 w-11 items-center justify-center rounded-[8px] border border-dashed border-quiet font-cond text-[17px] font-bold text-quiet">{i + 1}</span>}
           </button>
         ))}
@@ -101,7 +111,7 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
           return (
             <li key={g.name}>
               <button type="button" disabled={isTaken} onClick={() => pick(g.name)}
-                aria-label={isTaken ? `${g.name} (already on their team)` : g.name}
+                aria-label={isTaken ? `${g.name} (already on ${side === "ally" ? "your" : "their"} team)` : g.name}
                 className="press flex w-full flex-col items-center gap-1 disabled:opacity-35">
                 <Art name={g.name} kind="head" className="aspect-square w-full rounded-[10px]" />
                 <span className={`w-full truncate text-center text-cap ${g.name === self ? "text-accent" : "text-muted"}`}>{g.name}</span>

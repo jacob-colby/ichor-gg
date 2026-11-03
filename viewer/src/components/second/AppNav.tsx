@@ -97,7 +97,7 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
           ))}
           <div className="ml-auto flex items-center gap-3">
             {stamp && (
-              <span data-testid="header-freshness" title={dataUpdated} className="hidden text-cap text-quiet xl:inline">{stamp}</span>
+              <span data-testid="header-freshness" title={dataUpdated} className="stamp hidden whitespace-nowrap text-cap text-quiet xl:inline">{stamp}</span>
             )}
             {devSlot}
             <button type="button" onClick={onHelp} aria-label="Help and credits"

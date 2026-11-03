@@ -169,6 +169,13 @@ html { background: var(--color-ground); }
 }
 .sheet-up { animation: sheet-up 220ms var(--ease-out-expo) both; }
 
+/* The top bar's command field widens over the reading links while it is
+   open (CommandField), and at 1280–1500px its right edge lands on the
+   freshness stamp. The stamp steps out of the way while the field is open —
+   the same "Updated …" line stays one tap away under More and Help. */
+.stamp { transition: opacity 150ms var(--ease-standard); }
+nav:has([data-command-open]) .stamp { opacity: 0; visibility: hidden; }
+
 /* Native <details> disclosure marker off; our own chevron rotates. */
 .disclosure > summary { list-style: none; }
 .disclosure > summary::-webkit-details-marker { display: none; }
