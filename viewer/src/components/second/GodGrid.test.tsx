@@ -28,7 +28,8 @@ describe("GodGrid", () => {
 
   it("puts names that start with the query first", () => {
     render(<GodGrid gods={gods} />);
-    fireEvent.change(screen.getByRole("searchbox", { name: "Search gods" }), { target: { value: "ra" } });
+    // The search box is the command field now; a plain name still filters.
+    fireEvent.change(screen.getByRole("combobox", { name: /^Search gods/ }), { target: { value: "ra" } });
     expect(within(screen.getByTestId("god-grid")).getAllByRole("link").map((a) => a.getAttribute("href")))
       .toEqual(["#/god/Ra", "#/god/Hera"]);
   });

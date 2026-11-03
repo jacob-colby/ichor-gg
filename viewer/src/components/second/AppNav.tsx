@@ -5,7 +5,8 @@
  *    reach, padded for the home indicator. "More" opens a sheet holding the
  *    reading routes, help, and the fan-project line.
  *  - desktop (lg+): a slim top bar carrying everything flat, because a mouse
- *    has no thumb to save.
+ *    has no thumb to save — and the command field between the destinations
+ *    and the reading routes, as the global search (`/` or Ctrl/⌘K).
  *
  * "Build" means YOUR god: the god page you are on, or the last one you
  * opened. With no god yet it lands on the roster, which is where you pick one.
@@ -50,12 +51,14 @@ interface AppNavProps {
   dataPatch?: string;
   /** Dev-only affordances, rendered on desktop only. */
   devSlot?: ReactNode;
+  /** The command field, desktop bar only (the caller renders it from lg up). */
+  search?: ReactNode;
 }
 
 const freshness = (updated?: string, patch?: string) =>
   updated ? `Updated ${relativeDate(updated)}${patch ? ` · ${patch}` : ""}` : null;
 
-export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUpdated, dataPatch, devSlot }: AppNavProps) {
+export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUpdated, dataPatch, devSlot, search }: AppNavProps) {
   const [moreOpen, setMoreOpen] = useState(false);
   const stamp = freshness(dataUpdated, dataPatch);
 
@@ -80,7 +83,11 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
               {label}{key === "build" && buildGod ? <span className="ml-1.5 text-quiet">· {buildGod}</span> : null}
             </a>
           ))}
-          <span aria-hidden="true" className="mx-2 h-5 w-px bg-line" />
+          {search ? (
+            <div role="search" aria-label="Gods, matchups and items" className="mx-3 min-w-[220px] max-w-[440px] flex-1">{search}</div>
+          ) : (
+            <span aria-hidden="true" className="mx-2 h-5 w-px bg-line" />
+          )}
           {MORE_LINKS.map(({ key, label, href }) => (
             <a key={key} href={href} aria-current={activeMore === key ? "page" : undefined}
               className={`press relative flex h-14 items-center px-2.5 text-[15px] font-medium ${
@@ -90,7 +97,7 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
           ))}
           <div className="ml-auto flex items-center gap-3">
             {stamp && (
-              <span data-testid="header-freshness" title={dataUpdated} className="text-cap text-quiet">{stamp}</span>
+              <span data-testid="header-freshness" title={dataUpdated} className="hidden text-cap text-quiet xl:inline">{stamp}</span>
             )}
             {devSlot}
             <button type="button" onClick={onHelp} aria-label="Help and credits"

@@ -1,360 +1,334 @@
 ---
 name: ichor
-description: A math-driven SMITE 2 build recommender — tactical, data-dense, dark.
+description: A SMITE 2 build recommender that shows its working — the phone beside the monitor, mid-draft.
 colors:
-  rail: "#05070a"
-  bg0: "#0b0e13"
-  bg1: "#0e1116"
-  bg2: "#12161d"
-  bg3: "#171c24"
-  line: "#1e2530"
-  line-strong: "#2a3342"
-  ink: "#e8edf4"
-  ink-soft: "#c3cad6"
-  muted: "#8b95a5"
-  faint: "#7a8494"
-  torchlight-gold: "#e3b23c"
-  focus-blue: "#4ea3ff"
-  under: "#63c088"
-  premium: "#c58b8b"
+  ground: "#101114"
+  surface: "#16171b"
+  surface-2: "#1f2026"
+  surface-3: "#292a31"
+  line: "#33353c"
+  line-strong: "#464851"
+  ink: "#ebebee"
+  ink-soft: "#cfd0d6"
+  muted: "#a6a9b2"
+  quiet: "#8b8e97"
+  thermal-violet: "#a998ff"
+  violet-ink: "#14121f"
+  positive: "#6fcf9f"
+  negative: "#f09a9a"
+  aspect-ember: "#ef8034"
+  link-blue: "#8fc2ff"
   role-guardian: "#7f9e97"
   role-warrior: "#b98a6d"
-  role-mid: "#9d8bb3"
+  role-mid: "#8fa3c8"
   role-hunter: "#b6a571"
-  role-assassin: "#ab7a8c"
+  role-assassin: "#b9879a"
   dmg-physical: "#b98a6d"
-  dmg-magical: "#8891b3"
+  dmg-magical: "#8fa3c8"
 typography:
-  display:
-    fontFamily: "Rajdhani, sans-serif"
-    fontWeight: 600
-  body:
-    fontFamily: "Inter, sans-serif"
+  hero:
+    fontFamily: "Sofia Sans Extra Condensed, Sofia Sans, sans-serif"
+    fontSize: "64px"
+    fontWeight: 800
+    lineHeight: 0.88
+  god:
+    fontFamily: "Sofia Sans Extra Condensed, Sofia Sans, sans-serif"
+    fontSize: "46px"
+    fontWeight: 800
+    lineHeight: 0.9
+  head:
+    fontFamily: "Sofia Sans Extra Condensed, Sofia Sans, sans-serif"
+    fontSize: "30px"
+    fontWeight: 800
+    lineHeight: 1
+  row:
+    fontFamily: "Sofia Sans Extra Condensed, Sofia Sans, sans-serif"
+    fontSize: "22px"
+    fontWeight: 700
+    lineHeight: 1
+  say:
+    fontFamily: "Sofia Sans, system-ui, sans-serif"
+    fontSize: "17px"
     fontWeight: 400
-  label:
-    fontFamily: "JetBrains Mono, monospace"
-    fontWeight: 500
+    lineHeight: 1.38
+  copy:
+    fontFamily: "Sofia Sans, system-ui, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.5
+  note:
+    fontFamily: "Sofia Sans, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.4
+  cap:
+    fontFamily: "Sofia Sans, system-ui, sans-serif"
+    fontSize: "12px"
+    fontWeight: 400
+    lineHeight: 1.4
 rounded:
   sm: "6px"
   md: "10px"
+  control: "12px"
   lg: "14px"
+  xl: "18px"
 spacing:
-  sm: "8px"
-  md: "16px"
+  gutter-phone: "16px"
+  gutter-desktop: "24px"
+  row-gap: "6px"
+  tap: "44px"
 components:
   button-primary:
-    backgroundColor: "{colors.torchlight-gold}"
-    textColor: "{colors.bg0}"
+    backgroundColor: "{colors.thermal-violet}"
+    textColor: "{colors.violet-ink}"
     rounded: "{rounded.md}"
-    padding: "6px 16px"
-  chip-active:
-    backgroundColor: "{colors.torchlight-gold}"
-    textColor: "{colors.bg0}"
-    rounded: "9999px"
-    padding: "4px 10px"
-  chip-inactive:
-    backgroundColor: "transparent"
+    height: "44px"
+    padding: "0 20px"
+  item-row:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.control}"
+    height: "64px"
+    padding: "8px 14px 8px 10px"
+  item-row-swapped:
+    backgroundColor: "{colors.surface-2}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.control}"
+  command-field-bar:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.control}"
+    height: "44px"
+  command-field-page:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.control}"
+    height: "56px"
+  chip-you:
+    textColor: "{colors.ink}"
+    rounded: "{rounded.md}"
+    height: "44px"
+  chip-enemy:
+    backgroundColor: "{colors.surface-2}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.md}"
+    height: "44px"
+  segment-active:
+    backgroundColor: "{colors.thermal-violet}"
+    textColor: "{colors.violet-ink}"
+    rounded: "9px"
+    height: "44px"
+  segment-inactive:
     textColor: "{colors.muted}"
-    rounded: "9999px"
-    padding: "4px 10px"
-  card-default:
-    backgroundColor: "{colors.bg2}"
-    rounded: "{rounded.lg}"
-  card-selected:
-    backgroundColor: "{colors.bg3}"
-    rounded: "{rounded.lg}"
+    rounded: "9px"
+    height: "44px"
+  tab-bar:
+    backgroundColor: "{colors.ground}"
+    textColor: "{colors.quiet}"
+    height: "64px"
 ---
 
 # Design System: ichor
 
+> **2026-11-03:** the 2026-11 redesign replaced the "Arena Night" world (torchlight gold, Rajdhani / Inter / JetBrains Mono, the god-picker rail, lens tabs, the floating draft dock) with **Thermal Ink** — direction A, "Second Screen", plus direction C's typed query. Everything below describes what is built. The product-truth rules that outlived the old world are kept in their own section and still bind.
+
 ## Overview
 
-**Creative North Star: "Arena Night"**
+**Creative North Star: "The Second Screen"**
 
-ichor reads like a battlefield after dark: a near-black field (`rail` / `bg0`) with one warm accent — torchlight gold — marking whatever matters right now, and role-tinted banners (guardian, warrior, mid, hunter, assassin) identifying the different lanes at a glance. Nothing about the surface competes with the data; the theme exists to make the model's output legible, not to decorate the app.
+ichor is the phone propped beside the monitor in a draft lobby. A player has a few seconds between picks, one thumb free, and a single question: what do I buy? So every screen gives one answer — who you are playing, the six items in buy order with the gold spent by each, and one sentence comparing that six to what the god's own players buy — and the reasoning sits one tap below it, never in front of it. On a desktop the same answer grows a real second column instead of stretching.
 
-The philosophy is tactical and data-dense: small, precise labels; a lot of information per element (stats, signals, icons) held together by strict alignment; and a confident, instrumented feel closer to a mission console than a game skin. It deliberately avoids the cutesy rounded gradients and RGB-lightshow look common to "gamer" UI — that is the confirmed visual anti-reference. Gold is rare and load-bearing, not a brand color splashed everywhere.
+The look is a broadcast lower-third printed on ink: a flat near-black ground, condensed uppercase names (Sofia Sans Extra Condensed) set like a caster's caption over a humane reading face (Sofia Sans), and exactly one hue that means anything — violet, the model's own voice and the selected state. The enemy side never gets a colour; it is drawn in an ink outline and says "Enemy" in words. The gold a player spends is the only number on the main path; percentages appear only as "N% of Ra players buy this".
+
+What it refuses: the dashboard. No debug decimals (`fit 0.69`), no eyebrow-over-heading stacks, no pill soup, no identical card grids, no second accent. Arena Night's "tactical console" feel is the anti-reference now — this world is a broadcast, not an instrument.
 
 **Key Characteristics:**
-- Near-black surfaces stepped in four tiers (rail → bg0 → bg2 → bg3), each one step "closer" or more elevated.
-- One accent (torchlight gold) reserved for selection, primary action, and the model's own signal.
-- Role/lane colors are semantic, not decorative — they always mean "this is a Solo/Jungle/Mid/Carry/Support thing."
-- Dense, mono-labeled data (font-mono, uppercase, tracked) sits next to display headings and Inter body text without ever feeling cluttered.
-- Flat at rest; lift (shadow, glow) appears only when something is selected, active, or floating above the page.
+- One answer per screen; detail is a disclosure away, never a scroll past.
+- Dark only, flat ground, two lifted surfaces and a hairline.
+- Violet is selection, the primary action and the model talking — nothing else.
+- Condensed uppercase for names, gold and controls; Sofia Sans for anything read as a sentence.
+- One authored motion: the lock-in when an enemy pick changes a row.
+- A bottom tab bar on a phone; a top bar with the command field and a second column from 1024px.
 
 ## Colors
 
-Palette is almost entirely a stepped near-black neutral scale, punctuated by one warm accent and a small set of semantic signal colors — there is no decorative secondary/tertiary hue family.
+A stepped near-black neutral stack, one violet, and a direction pair. No decorative hue family.
 
 ### Primary
-- **Torchlight Gold** (`#e3b23c`): the single accent. Marks the selected god/card (`border-gold` + glow), primary buttons, active filter chips, and the model's own heuristic signal (score, "Suggested" tab). If gold appears, it means "this is chosen" or "this is the model talking."
+- **Thermal Violet** (`#a998ff`): the model's voice and the chosen state. The active segment of the mode switch, the selected god's ring, "you" in the command field, a draft-swapped item row's ring and its reason line, primary buttons ("Go", "Try again", "Choose a god"), the focus ring, the active tab's top rule. 7.8:1 on `ground`.
+- **Violet Ink** (`#14121f`): text set on violet (7.6:1). Never white on violet.
 
-### Secondary
-- **Focus Blue** (`#4ea3ff`): reserved for interactive focus and links — a global `:focus-visible` ring (`2px solid`, `2px` offset) on every focusable, `focus-within:border-blue` on the search/input wrappers that opt out of the ring, and hover-underline on inline links. Never used for selection state; that's gold's job.
-
-### Neutral (surface stack)
-- **Rail** (`#05070a`): the outermost frame — the darkest layer, used for the thin mobile header bar.
-- **Bg0** (`#0b0e13`): the app's base background.
-- **Bg1** (`#0e1116`): modal/panel surfaces (e.g. the Legend dialog).
-- **Bg2** (`#12161d`): resting card, input, and tooltip surfaces.
-- **Bg3** (`#171c24`): selected/elevated card surfaces — one step lighter than Bg2, the visual "lift" for the active state.
-- **Line** (`#1e2530`) / **Line Strong** (`#2a3342`): default and emphasized borders/dividers.
-- **Ink** (`#e8edf4`) / **Ink Soft** (`#c3cad6`) / **Muted** (`#8b95a5`) / **Faint** (`#7a8494`): a four-step text hierarchy from primary content down to the quietest metadata labels.
+### Neutral
+- **Ground** (`#101114`): the page. Flat — Thermal Ink is printed, not lit; there is no radial falloff.
+- **Surface** (`#16171b`) / **Surface 2** (`#1f2026`) / **Surface 3** (`#292a31`): item rows and fields at rest; hover, the active option, a swapped row; the switch track and fallback art.
+- **Line** (`#33353c`) / **Line Strong** (`#464851`): hairlines and dashed empty slots; scrollbars.
+- **Ink** (`#ebebee`, 15.9:1) / **Ink Soft** (`#cfd0d6`) / **Muted** (`#a6a9b2`, 8.0:1) / **Quiet** (`#8b8e97`, 5.8:1 on ground, 5.0:1 on surface-2): the text stack. Quiet is the floor.
 
 ### Semantic
-- **Under** (`#63c088`): the model values this **above** the market — an item priced below the model's fair value, or a god the model rates above the community's meta.
-- **Premium** (`#c58b8b`): the model values this **below** the market — an item priced above fair value, or a god the community's meta rates above the model.
-
-These two are a **direction pair, not a good/bad pair**. They always answer one question — "which way does the model lean against the market?" — whether the market is an item's gold cost or the community's tier list. They are never used for success/failure or for error states; an error is `ink` copy with a primary recovery action, not a red-ish tint.
+- **Positive** (`#6fcf9f`) / **Negative** (`#f09a9a`): the direction of a comparison and nothing else — which way the model leans against the market (an item's price, a god's tier). Never success/failure, never an error colour; an error is ink copy with a recovery action.
+- **Aspect Ember** (`#ef8034`): kept for the kept route bodies' aspect marks. Not used on the new surfaces.
+- **Link Blue** (`#8fc2ff`): inline links inside the kept route bodies.
 
 ### Role & Damage Accents
-- **Guardian** (`#7f9e97`), **Warrior** (`#b98a6d`), **Mid** (`#9d8bb3`), **Hunter** (`#b6a571`), **Assassin** (`#ab7a8c`): one per lane, used as text/border/dot accents on god cards and lane filters.
-- **Physical** (`#b98a6d`, shared with Warrior) / **Magical** (`#8891b3`): damage-type accents on item and build stat displays.
+- **Guardian** `#7f9e97`, **Warrior** `#b98a6d`, **Mid** `#8fa3c8`, **Hunter** `#b6a571`, **Assassin** `#b9879a`; **Physical** `#b98a6d`, **Magical** `#8fa3c8`. Text tints only (the lane under a god card's name, the role in the god header). Every one clears 5.3:1 on ground. Mid moved off lavender to steel blue so a Mid god can never read as "selected" next to violet.
 
 ### Named Rules
-**The Torchlight Rule.** Gold is load-bearing, not decorative: it appears only on the current selection, the primary action, or the model's own signal. If a design use of gold isn't one of those three, it's wrong.
+**The One Hue Rule.** Violet appears only on the current selection, the primary action, or the model's own voice. If a use of violet is none of those three, it is wrong. A measured gap in the verdict sentence is emphasised by **weight**, not violet — the gap is often the community's advantage, and violet would read as the model claiming the win.
 
-**The Semantic Color Rule.** Role and damage colors always carry meaning (a specific lane or damage type); never repurpose them as arbitrary decoration elsewhere in the UI.
+**The Ink-Outline Enemy Rule.** The enemy team has no hue. Enemy portraits carry a 1.5px ink ring and the word "Enemy"; they are never red. Red-for-enemy would collide with `negative`, which means "the model rates this below the market".
 
-**The Readable-Floor Rule.** Every text tier, including the quietest, clears WCAG AA (4.5:1) on every surface it can land on. `faint` is the floor at `#7a8494` — 4.52:1 on `bg3`, the lightest surface, and higher everywhere else. It was `#5b6472`, which measured 2.86–3.37:1 and failed AA in all six places it was used. A separator glyph (`·`, `/`) inherits its parent's tier rather than dropping to `line-strong`; a divider that can't be read is a divider that should have been a border.
+**The Semantic Color Rule.** Role and damage tints always mean that lane or that damage type; never repurpose them as decoration.
+
+**The Readable-Floor Rule.** Every text tier clears WCAG AA (4.5:1) on every surface it can land on, and **nothing is set below 12px** (`text-cap`). Quiet on surface-2 is the tightest pairing at 5.0:1. A separator glyph (`·`) inherits its parent's tier. Kept route bodies may still use the 11px `text-micro` for a numeral inside a dense grid cell; no new surface may.
 
 ## Typography
 
-**Display Font:** Rajdhani (sans-serif fallback)
-**Body Font:** Inter (sans-serif fallback)
-**Measurement Font:** JetBrains Mono (monospace)
+**Display Font:** Sofia Sans Extra Condensed 700/800 (`font-cond`, always uppercase, +0.005em)
+**Body Font:** Sofia Sans 400/500/600 (`font-sans`)
+**Numbers:** the same faces with tabular figures (`.num`) wherever figures read down a column.
 
-**Character:** A tactical, slightly technical pairing — Rajdhani's condensed geometric caps read as "console display" for names and headings, Inter carries all reading-length text cleanly, and JetBrains Mono sets the numbers. The instrument feel comes from figures that line up in a column, not from a typeface applied to everything small.
+**Character:** a broadcast caption over a reading face from the same superfamily — the condensed caps carry names at a size a glance can catch, and Sofia Sans keeps every sentence humane. There is no mono face; the old `font-mono` / `font-display` names point at Sofia Sans so the kept route bodies stopped loading Rajdhani, Inter and JetBrains Mono.
 
-### The scale
-
-Seven steps, defined once in `index.css` as `--text-*` theme tokens and used by name. **Never an arbitrary size.**
-
-| Step | px | Use |
-|---|---|---|
-| `text-micro` | 10 | dense mono numerals inside a grid cell — the floor |
-| `text-label` | 11 | section eyebrows, tags, secondary chrome |
-| `text-small` | 12 | secondary content, chips, captions |
-| `text-body` | 13 | default reading size |
-| `text-lead` | 15 | intro paragraphs, dialog body |
-| `text-title` | 20 | section titles, god/item names in a detail view |
-| `text-display` | 32 | the one page claim per surface |
-
-The app previously ran **sixteen** sizes with nine of them inside a 4px band (9 / 9.5 / 10 / 10.5 / 11 / 11.5 / 12 / 12.5 / 13), and 61–84% of every surface's text at or below 10.5px. That is why it read flat: with no ratio between steps there is no hierarchy to read, only small text. The scale is tight at the bottom because this is a dense data tool and open at the top so a page can make a claim.
-
-**10px is a hard floor.** Nothing below it ships — the god sidebar was running 7px.
+### Hierarchy
+- **Hero** (cond 800, 64px desktop / 52px phone, 0.88–0.9): "Who are you playing?" only.
+- **God** (cond 800, 46px phone / 68px desktop, 0.9): the god's name, the god page's `h1`.
+- **Head** (cond 800, 30px, 1): sheet titles, section names, error headings.
+- **Row** (cond 700, 22px, 1): item names in the six; 19–21px in suggestions, chips and option rows.
+- **Say** (Sofia Sans 400, 17px / 21px desktop, 1.38, ≤46ch / 40ch): the one verdict sentence.
+- **Copy** (400, 15px, 1.5): reading text, ≤60ch.
+- **Note** (400, 13px, 1.4): an item's reason, secondary lines.
+- **Cap** (400–600, 12px, 1.4): captions, provenance, counts, the "Aspect" label. The floor.
 
 ### Named Rules
-**The Measurement Rule.** JetBrains Mono sets **quantities and the codes that align beneath them** — numerals, a unit bound to a numeral (`2500g`, `47% win`), tier letters, `T1`/`T2`/`T3`, score pairs, cumulative gold. Nothing else. The test is: *would it be wrong if these characters didn't line up in a column?* If yes, mono; if no, Inter or Rajdhani.
+**The Caption Rule.** Condensed caps are for **names and controls** — gods, items, modes, tabs, gold figures, buttons. A sentence is never set in condensed caps; a name is never set in the reading face at row size.
 
-The one non-numeric exception is the **section eyebrow** — the `text-label` uppercase tracked line that titles a section or a table column. That is the brief's "small mono labels", and it is a *system*: one per section, never a general-purpose style for secondary text.
+**The No-Eyebrow Rule.** No kicker above a heading. A list is introduced by one quiet cond label that names it (`ICHOR'S SIX · BUY ORDER`), on the same line as its column label (`Gold spent`) — not stacked over a title.
 
-Everything else sets in the reading faces, including the words *around* a number. `mean +0.03 · 4 below · 5 differ` is a mono run containing three English words; it splits, and only the figures stay mono.
-
-This replaces the Mono-Label Rule, which read "any piece of UI that names a category, state, or count sets in JetBrains Mono". In a data tool that is nearly every string: a lane is a category, `no community data` is a state, and the app followed the rule faithfully into **73% of the items shelf, 65% of the tier list and 51% of Home being set in the label face**. The measure of the failure is that mono had stopped meaning anything — when the body face *is* the mono face, a number no longer stands out from the sentence around it. Named, so it is not re-derived: navigation, actions, verdicts, names, states, effect tags, and prose are **never** mono, however small they are.
-
-**The Subject Rule.** The shell's top level is *who you're looking at* — the whole roster, or one god — and the tools are lenses on that subject, not places you go. A god carries its name, its lane and the model-vs-meta verdict in the header of every lens, so "where does Ra rank" and "what items does the model want for Ra" are one click apart instead of unreachable.
-
-It replaces six flat destinations that were never peers: `Builds` was really "a god", and a god could only be examined from that one route. The cost of that shape was measurable — the icon rail plus the 300px god picker took **38% of the first screen** on the busiest route, and it left `god_item_scores` (40 ranked items for each of 87 gods) readable by exactly one surface, the draft board.
-
-Two consequences worth naming. **The whole roster is a first-class subject**, not a lobby: it keeps the divergence board and the page's one claim, and it owns the `h1` there — the roster banner is deliberately not a heading, because the page below it makes the stronger argument. And **the draft board is a roster lens, not a god's**: a draft takes ten gods and only one is your subject, so filing it under one god would misdescribe it.
-
-**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows — filters, sort, mode, subject — lives in the hash query string, not in `useState`. "The disputed Mid gods in Joust" and "the undervalued tier-3 anti-heal" are the things this app exists to produce, and for a year none of them could be sent to anyone. Defaults stay out of the query, so a bare `#/tiers` keeps meaning what it always meant; navigating *within* a filtered view carries the query along (`keepQuery`), because clearing the filters that produced the card someone just clicked is never what they asked for. Writes are debounced `replaceState` — a search box bound straight to the address bar trips Safari's 100-writes-per-30s limit in about three seconds of held backspace, and a Back button that walks a query backwards one character at a time is worse than no history at all.
-
-**The Seam Rule.** Every surface names at least one other surface it hands off to, in the visitor's terms rather than as a route label. A destination reachable only from the nav rail is a destination most visitors never form an intent to reach — the draft board sat unlinked for a year. A seam carries state where state exists: "Draft with Chaac" keeps the comp already entered rather than replacing it, because a link that silently discards saved work is worse than no link.
-
-**The One-Claim Rule.** Every surface states its own claim in `text-display`, once, carrying live numbers. The app chrome never repeats it: the header used to print a per-route count that contradicted the surface's own ("159 items" over a shop reading "30 items"). Chrome carries navigation, freshness and actions — nothing the surface is already responsible for saying.
+**The Plain-Number Rule.** On the main path a number is gold or a share of a god's players, written with its unit in words: `13,400`, "55% of Ra players buy it first", "Tier B on 1,286 Conquest games". Model scores and decimals live in the disclosures and the kept route bodies, always with a label that says what they measure.
 
 ## Layout
 
-Two-pane shell: a fixed god-picker rail (300px on desktop, collapsing to a full-screen modal picker below `md`) beside a flexible detail/build column. Grids default to 4 columns for god cards and `auto-fill, minmax(140–180px)` for item/tier grids, so density adapts to viewport without a manual breakpoint per grid. Sticky, blurred headers (`sticky top-0 backdrop-blur`) keep search/filters visible while the grid below scrolls. Spacing stays tight and consistent with Tailwind's default scale (`gap-1.5–3`, `p-2–5`); nothing airy — density is the point.
+**Phone first (390px).** Single column, 16px gutters, content padded clear of a fixed **bottom tab bar** (64px + the home indicator: `pb-tabbar`). The god page reads header → verdict sentence → starter → the six → disclosures, with the **enemy strip** sticky just above the tab bar the whole way down. God select reads hero → command field → recents → the 3-up card grid, with the **role filter** fixed above the tab bar in thumb reach.
+
+**Desktop (≥1024px, `useWide`).** A sticky 56px **top bar** inside a 1240px container: wordmark · Build · Draft · Gods · **the command field** (flex, 220–440px) · Tiers · Items · Patch notes · Method · freshness stamp (from 1280px) · Help. The god page becomes a real **second column**: `minmax(0,1fr) 380px`, gap 48px — the build column capped at 680px, and a sticky aside holding the enemy-team panel and "Why this build". God select puts the role filter beside the hero and grows the grid to 7-up. One layout is rendered, not two hidden by CSS, so each control has one copy in the accessibility tree.
+
+Spacing is airy by intent: about five item rows per phone screen, 6px between rows, 44px minimum for every tap target. Overlays — the suggestion list, sheets — sit above the page and never push layout.
 
 ## Elevation & Depth
 
-**The Ground Plane Rule.** The page ground is lit, not painted: a radial falloff attached to the *viewport*, lighter at the top as though there were distance behind it, darker toward the foot. It is a lighting condition of the screen rather than a property of the content, so scrolling never drags the light around. Every genuinely raised surface — a card in a grid, a dialog, the subject header — catches that light along its top edge as a 1px inset highlight. Nothing else does: chips, pills and buttons stay flat, because if everything is raised then nothing is.
-
-This replaces "flat at rest", which was true and was also why the world read as half-built. The brief asked for a near-black battlefield at night and what shipped was a spreadsheet in a dark room. Depth still never decorates and still never marks state on its own — selection is gold, and `.plane.is-selected` exists precisely so the highlight can't overwrite the gold ring.
-
-**What the measurement removed.** The sketch for this also washed each panel's face with 2.8% white. It did not survive contact with the Readable-Floor Rule: `faint` clears AA on `bg3` at 4.52:1 with *no margin at all* — the token was set to the exact minimum — so any lift to a panel face drops the quietest tier under the floor (4.21:1 at 2.8%). The wash was also worth about seven levels spread over 25px, which is to say invisible. The edge reads; the face doesn't; a 1px line above the text costs the text nothing. When atmosphere and the readable floor disagree, the floor wins.
+Flat, tonal, and printed. Depth comes from the surface step (ground → surface → surface-2) and a hairline, not from light. Shadow is reserved for things that genuinely float.
 
 ### Shadow Vocabulary
-- **Plane** (`inset 0 1px 0 rgba(255,255,255,0.06)`): a raised surface catching the ground light. Cards in a grid, the subject header.
-- **Card** (`inset highlight + 0 6px 16px rgba(0,0,0,0.35)`): floating surfaces resting just above the page — tooltips, popovers.
-- **Raised** (`inset highlight + 0 10px 28px rgba(0,0,0,0.45)`): modals and dialogs (Legend, pickers) that sit fully above the page.
-- **Glow** (`0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15)`): the selected-state halo on a god card — the one place shadow doubles as the accent color.
+- **Raised** (`inset 0 1px 0 rgba(255,255,255,0.05), 0 10px 28px rgba(0,0,0,0.5)`): the command field's suggestion list, the phone's enemy strip riding over the page.
+- **Sheet** (`0 -18px 48px rgba(0,0,0,0.55)`): bottom sheets (More, the enemy picker).
+- **Card** (`inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 16px rgba(0,0,0,0.35)`): tooltips and popovers in the kept route bodies.
+- **Glow** (`0 0 0 1px rgba(169,152,255,0.45), 0 4px 14px rgba(169,152,255,0.12)`): the selected state where a ring alone is not enough.
 
 ### Named Rules
-**The Ratio Rule.** A surface is flat when its parts have no ratio between them, not when it lacks shadows. Measured on the draft page: the heading naming the build, the sentence explaining why an item was promoted, and the incidental captions were all **11px / weight 400 / `faint`** — the same size, weight *and* colour. Nothing was competing to be read first because nothing could be. The fix is hierarchy, not decoration: the build's item rows step to `lead`/600 on their own surface, the reasoning moves off the quietest tier to `small`/`muted`, and the eyebrow stays an eyebrow. Depth was added only where a surface is genuinely a distinct object (the build card takes `.plane`), per the Ground Plane Rule above.
-
-Contrast was re-measured after, because the Readable-Floor Rule outranks this one: the worst ratio on the reworked draft page is 6.25:1, against a 4.5:1 floor — every change moved contrast up, none down.
-
-**The Spine Rule.** A build's corrections are marked *on the rule the build already hangs off*, never with a coloured left border on the row. The god page's ledger has a cumulative-gold hairline and the draft's core has a purchase spine; a swap or a draft pick puts a 6px `under` square, rotated 45°, centred on that line.
-
-This exists because the first attempt used `border-l-2 border-l-under` on every promoted row — the accent bar every dashboard reaches for, a shape this world uses nowhere else, and a form the craft floor names outright ("a colored border-left above 1px on cards, list items, callouts"). The grammar was already here and better: the tier ladder marks *the model's own verdict* with a rotated square sitting on a rule, precisely so the mark never depends on colour alone. The spine is that rule. Colour still says which way (`under` = the model promoting something); the shape says *this one*, and the row's own `DRAFT PICK` / `SWAP IN` label says it a third time in words.
-
-**The stack has to actually step.** Measured 2026-08-19, the four surface tiers were not tiers: `bg0` → `bg1` was **1.022:1** and the entire `bg0` → `bg3` run **1.130:1**. A panel resting on the page ground was, in luminance, the page ground — which is the Ratio Rule applied to surfaces, and no amount of shadow fixes parts that have no ratio between them.
-
-The light end could not move: `faint` on `bg3` sits at 4.52:1 against a 4.5:1 floor, and a first pass that lifted the whole stack put it at 4.28:1. So the dark end came down — steps are now 1.038 / 1.066 / 1.051 and the run 1.163:1, with every text tier on every surface equal or better (`faint` on `bg0` 4.99 → 5.26). **The headroom really is this small**: near-black pins one end and AA pins the other, so anyone hoping to find depth in the palette should spend it on the plane highlight and the type ratio instead.
-
-**The Flat-Until-It-Matters Rule.** Surfaces are flat at rest. Shadow only appears for a floating layer (tooltip, modal) or a selected state (glow) — never as ambient decoration on a resting card.
+**The Flat-Until-It-Floats Rule.** A resting row, card or field has no shadow. Shadow means "this is above the page" — a list, a sheet, the strip.
 
 ## Shapes
 
-Corners step with surface size: `sm` (6px) on tight controls like icon buttons and small tags, `md` (10px) on the default control/card radius (inputs, buttons, most cards), `lg` (14px) on modals and the primary god-card frame. Filter chips and status dots go fully round (`rounded-full`) to read as discrete tokens rather than panels. Borders are hairline (`border-line`) by default, stepping up to `border-line-strong` on hover/emphasis, and gold on selection.
+Soft, consistent corners stepped by size: 6px on tags and badges, 9–10px on chips, segments and buttons, **12px on controls and item rows** (the default), 14px on panels (the enemy panel, the "Back to" card), 18px on sheet tops. Fully round only for the position badge and switch knobs. Borders are 1px `line` hairlines; an empty enemy slot is a 1.5px dashed `quiet` square; selection is a 2px (or 1.5px on a chip) violet ring, never a coloured left border.
 
 ## Components
 
-Components should feel **tactile and confident**: presses register physically (a quick 0.97 scale-down on active, 120ms), borders and state changes are unambiguous, and nothing waits on hover alone to communicate state.
+Components feel **tactile and quiet**: every tappable thing carries `.press` (scale 0.97, 120ms), state changes are unambiguous, and nothing communicates on hover alone.
 
 ### Buttons
-- **Shape:** `rounded-md` (10px) for standard buttons; `rounded-full` for filter/chip buttons.
-- **Primary:** `bg-torchlight-gold` on `text-bg0`, `px-4 py-1.5`, medium weight — reserved for the one confirming action per view (e.g. Legend's "Got it").
-- **Chip/filter (active):** `bg-torchlight-gold text-bg0 font-semibold`; **(inactive):** transparent with `border-line` and muted or role-tinted text.
-- **Press:** every tappable button/card carries the shared `.press` class (scale 0.97 on `:active`, 120ms, respects `prefers-reduced-motion`).
+- **Primary:** violet on violet-ink, 44px high, 10px radius, cond 18px bold uppercase. One per view ("Go", "Try again", "Choose a god").
+- **Inline action:** cond 18px violet text with a glyph ("⇄ Show theirs" — the SwapGlyph, not a unicode arrow), sized to a 44px hit area inside the sentence.
+- **Quiet:** 1px line border, muted text, 44px ("Clear enemy team", "Help").
 
-### Cards
-- **Corner Style:** `rounded-lg` (14px) for the primary god-card grid; `rounded-md` for smaller item/tier cards.
-- **Background:** `bg-bg2` at rest; `bg-bg3` (or a `bg3→bg2` gradient when pinned-but-unselected) when elevated/selected.
-- **Border:** `border-line` at rest, `border-line-strong` on hover, `border-gold` (+ `shadow-glow`) when selected.
-- **Internal Padding:** tight — `p-1.5`–`p-2.5` depending on card size.
+### Segmented control (ModeSwitch, RoleFilter)
+- `role="group"` + `aria-pressed` buttons, never `role="tab"`. A surface-filled track (12px radius, 4px inset); the active segment is violet with violet-ink text; inactive is muted, ink on hover. Cond 16–18px uppercase.
 
-### Inputs / Fields
-- **Style:** `rounded-md`, `border-line`, `bg-bg2`, muted placeholder text.
-- **Focus:** border shifts to `focus-blue` (`focus-within:border-blue` on the wrapper); no glow or shadow on focus, border color alone carries the state. The inner `<input>` is the one element allowed to keep `focus:outline-none`, because its wrapper already shows the state.
-- **Everything else** takes the global `:focus-visible` ring — `2px solid focus-blue`, `2px` offset. Never remove it without replacing it with an equally visible state.
+### Aspect switch (AspectToggle)
+- `role="switch"` beside the mode switch: a 32×20 track (violet when on) and a two-part label — "Aspect" in 12px quiet over the aspect's short name in cond 16px uppercase ("Thermotherapy", "Passionate Storm": "Aspect of" and a leading "the" dropped). The name **wraps at its spaces to two lines, never truncates**. Its accessible name is the full aspect name plus "(doesn't change the build)" when that is true, and when switched on a line under the header says whether the build moved.
 
-### Dialogs
-- Real dialogs only: `role="dialog"`, `aria-modal="true"`, `aria-labelledby` pointing at the heading. Focus moves to the heading on open, Tab wraps inside the panel, Escape and a visible ✕ both close, and focus returns to the trigger on unmount.
-- **Never open a dialog unprompted.** Reference material (the Legend) is reached from its `?` control; a surface explains itself in its own composition rather than in an interstitial the visitor didn't ask for.
+### ItemRow (the six)
+- 64px minimum, 12px radius, surface (surface-2 on hover); a 48px item icon with its position in a small round badge; the name in cond 22px; the reason in 13px muted below; gold spent in cond 21px tabular figures at the right. The whole row links to the item.
+- **Swapped** (the enemy draft moved it in): surface-2 with a 2px violet ring, the reason in violet semibold ("Swapped in for Spear of the Magus — brings anti-heal"), and the lock-in motion.
+- A running total shows `—` rather than an approximation when any cost is unknown.
 
-### Search (combobox)
-- `role="combobox"` on the input with `aria-expanded`, `aria-controls`, `aria-activedescendant`; `role="listbox"`/`role="option"` on the results.
-- Results **overlay** the page (`absolute`) — they never displace content, because a list that pushes layout makes the page lurch on every keystroke.
-- Arrow Up/Down wrap, Home/End jump, Escape clears, Enter takes the active option. A polite live region announces the match count, and an explicit "no match" row replaces silence.
+### VerdictLine
+- The comparison as one sentence directly under the header, at `say`: the claim in ink with the measured gap in semibold, then the honesty tail in muted ("…Lotus Sickle isn't simulated yet, so the damage gap is partly unmeasured."), then the inline "Show theirs" action when a swap is possible. While measuring it says so, in quiet, with `aria-busy`.
 
-### Segmented controls (not tabs)
-- Mutually-exclusive choices use `role="group"` with an `aria-label` and `aria-pressed` buttons — **not** `role="tab"`. The app ships no `role="tabpanel"`, and a tablist without one announces a keyboard model that doesn't exist.
-- **Never make the model and the community mutually exclusive.** The comparison between them is the product; a control that shows one *instead of* the other is the wrong control. The community is a constant second track, not an option.
+### EnemyStrip / EnemySheet
+- **Strip (phone):** a raised, blurred bar sticky above the tab bar: "ENEMY" + "3 of 5" (and "2 swaps" in violet) beside five 48px slots (three in Joust). Filled slots are portraits with a 1.5px ink ring; empty ones dashed squares with a plus. Every slot opens the sheet on itself.
+- **Panel (desktop):** the same slots in the second column's surface panel with names under them, "N of 5 known", a status line, and "Clear enemy team".
+- **Sheet:** a real dialog ("Enemy 1 of 5") with the slot row, a search field that takes focus, and a 5-up portrait grid. Picking auto-advances to the next empty slot. Picks write the shared draft (you in ally slot 1) and the page URL's `vs=`.
 
-### Build ledger (god detail)
-- Purchases sit on a **cumulative-gold spine**: a right-aligned mono gold figure per row against a continuous `border-r border-line` hairline. Gold spent, never elapsed time — the index carries item costs and no timings, so a time axis would be invented.
-- Each row carries its composite score with a gold bar, its four contributing axes as plain numbers, and what the community does with the same item. None of it is behind a hover; a row expands in place on click, identically at every breakpoint.
-- A running total is `null`, not approximate, when any item's cost is unknown — a total with a hole in it misstates the build.
-- The four axes are shown as **contributions, never a sum**: the weights that produce the composite aren't published, so nothing in the UI may imply they add up.
+### GodGrid ("Who are you playing?")
+- 2:3 card art in a 3-up (phone) to 7-up (desktop) grid, name in cond 21px over a bottom scrim, lane tint under it. With text in the field, the first card — Enter's target, ranked exactly as the parser ranks a word — carries a violet ring and an "Enter" tag. Recents (this browser only) sit in a horizontal row above the grid while the field is empty; otherwise "Back to Ra" offers the last god. The empty result says what was searched: "No god matches "zz" in Mid."
 
-### Value receipt (items shop)
-- The card **leads with the verdict in words** — `Underpriced` / `Fairly priced` / `Overpriced` — then backs it with the arithmetic. This used to be a `PREMIUM` chip in the card's footer: the shop's own private register for a sentence every other surface now makes in plain language.
-- **The verdict comes from the pipeline's bucket, never from the raw residual.** This is the pricing twin of the rule that tier letters own a placement: the continuous residual and the bucket can land on opposite sides of a boundary, and the bucket is what the filters, the sort and the chips are already built on — deriving the word from the residual would let a card read `Fairly priced` while the Premium filter had just selected it.
-- The price bar is **the tier ladder's grammar asked about gold**: a white rule at centre for what the game charges (the baseline you already hold), a gold kite offset to where the model prices it, and a coloured run between. The axis rises rightward, so a kite right of the rule always means "worth more than it costs" — the same *right is better* the ladders read by. **No rungs**: a price is continuous, and drawing it in four discrete steps would claim a precision the number doesn't have.
-- An efficiency verdict is still shown **decomposed, never as a bucket alone**: `3000g · worth 2756g · +244g`. The word alone says which way, never by how much, and the how-much is what decides a purchase.
-- The detail is a **receipt**: each stat at its fitted gold price, subtotalled, against the actual cost. The pipeline ships `item_gold_values` so this is auditable rather than asserted, and `cost - predicted_cost === residual` holds exactly so the arithmetic on screen always closes.
-- Sort on the **continuous residual**, never the bucket — bucketed sorting tied 30 items for first alphabetically and made the most underpriced item unfindable.
-- Filter options are **derived from the data**. A hardcoded list shipped a `Glyph` option matching nothing while the one Relic was unreachable.
-- Where the model declines to score something, **say why**: tier-1 starters buy an ability rather than stats and sit out the fit on purpose. That is a finding, not a blank — never an em dash.
+### CommandField (the typed query)
+- **What it reads:** `ra vs hecate ymir joust aspect`. The first god is you; `vs` (or a second god) starts the enemy side; a mode word sets the mode; `aspect` toggles yours. Parsing is pure and total (`command/query.ts`): anything it can't place stays visible as a struck-through chip whose accessible name is the reason ("zz isn't a god or a mode"; "Only 3 enemies fit in Joust").
+- **Where it lives:** the desktop top bar on every route (44px, the global search, a `/` hint at rest), and the phone's god-select screen (56px, replacing the search box). **Not** on the phone god page — the enemy strip is the enemy UI there; one screen, one control.
+- **Chips:** finished words become chips — you with a violet ring on a 15% violet wash, enemies on surface-2 with an ink-ringed portrait, mode/aspect as hairline chips, each with a remove ✕ (CloseGlyph). Backspace on an empty input pulls the last chip back into text to be fixed.
+- **Suggestions:** an ARIA combobox listbox that **overlays** the page (raised shadow, 16px radius) and never pushes layout. God rows show the portrait, role and which side it would land on ("You" in violet, "Enemy" in muted). On the phone grid the first word gets no list — the grid below is the list — and the list appears once a god is committed. Items appear when the text's first word is no god ("rage" → Rage, opens `#/items/Rage`).
+- **Submit:** Enter (or Go) takes the top suggestion for the unfinished word and goes: a god alone → `#/god/Ra` (the stored draft is left alone); a god vs a team → `#/god/Ra?vs=Hecate,Ymir&mode=joust`, with the team written into the shared draft first; a team with no god → the draft board. The top bar's field empties after a submit.
+- **Keyboard:** `/` (outside a text field) or Ctrl/⌘K focuses it; arrows move the active option; Tab completes; Escape closes and restores.
+- **Phone keyboard:** the field scrolls itself to the top of the screen when opened, and the list's height is measured against `visualViewport`, so it ends above the keys rather than under them.
 
-### Openers (the "Opens with" row)
+### Navigation
+- **Tab bar (phone):** Build · Draft · Gods · More, 64px, drawn glyphs (one 1.75 stroke set) over cond 15px labels; the active tab is ink with a 2px violet rule on top, the rest quiet. "Build" means *your* god — the page you're on or the last one opened. "More" opens a sheet with Tiers, Items, Patch notes, Method, Help, the freshness stamp and the fan-project line.
+- **Top bar (desktop):** the same destinations flat, the command field between them and the reading routes, the active one ink with a 2px violet underline.
 
-- An opener is a **purchase path, not an item**. Leather Cowl and Hunter's Cowl are the same buy at two moments, and the row shows three entries — so listing both spent a third of the answer restating one pick. Measured across the shipped data, **84 of 89 gods** had both halves of one path in that row.
-- Grouping keys on the **item graph** (`builds_from` / `builds_into`), never on the `starters` config in `_weights.yaml`. The config knows five pairs; the graph knows all twelve, and the pair this was reported about is not in the config.
-- **The two rates are shown, never summed.** A player who buys the base and upgrades it is counted in both, so adding them reports an opener held more often than it is. The chip leads with whichever end the community actually holds most (`31%`) and carries the progression beside it (`16→31`) — that pair is the answer to "do people actually upgrade this".
-- Where an opener row is borrowed from another mode, **say so on the row** (`Conquest data, no Joust openers are tracked`), because SmiteBrain publishes Conquest only and a silent fallback would present one mode's habits as another's.
+### Sheets and dialogs
+- Real dialogs only: `role="dialog"`, `aria-modal`, labelled by their heading, focus moved in and returned on close, Escape and a visible close button. Bottom sheets on a phone (grab handle, 18px top radius, sheet shadow), centred panels from 1024px. Never opened unprompted.
 
-### Draft diff (draft board)
-- A re-rank is shown as a **displacement**, never as a lone arrival: `Divine Ruin · replaces Rod of Tahuti · +0.12 · answers anti-heal`. Keep both builds — the un-adapted one reduced to a membership set is why rows could say "swap in" with nothing to swap in for.
-- The magnitude is the model's own bonus, drawn as an `under` bar scaled to the configured clamp. Direction colour is `under` (the model promoting something), never focus-blue.
-- **Signals are denominated by the roster, not by how much the visitor has entered.** One known healer of five slots is a 20% signal. Dividing by entries made a 20%-complete draft drive a maximal overlay that then *weakened* as more enemies were added — the model appearing to change its mind.
-- Always state how much is still unknown (`3 of 5 enemies known · this build will keep moving`), and render threats that measured zero so absence is distinguishable from not-looked-at.
-- **The clamp bounds the stack, not the strongest signal.** It exists to stop many weak channels summing into a rewrite; applied to the sum alone it also vetoed a single well-evidenced one. Because a healer comp is also a CC and tank comp, anti-heal was sharing one fixed budget with penetration and cc-immunity and losing — and 2 healers and 4 healers produced the *identical* build, the bonus doubling and the clamp eating it. The ceiling is now `max(max_bonus, strongest single channel)`: 16 of 31 able gods bought anti-heal against 4 of 5 healers, now 31 of 31, with every other comp unchanged.
-
-### Tier bands (tier list)
-- Bands are always **the model's** tiers. The community is a **ghost on every card** (`meta B · +0.05`, `meta agrees · S`, or `unranked`), never a second view reached by a toggle — a control that shows one ranking *instead of* the other forces the reader to hold one in memory to compare.
-- Tier letters use a neutral ramp (`gold` for S only, then `ink` → `ink-soft` → `muted`). Never borrow `under`/`premium` to mean a tier letter; they mean direction against the market everywhere else.
-- Each band states its own agreement tally (`6 disputed · 1 agreed · 2 unranked`), and the page-level summary describes the **whole filtered set**, not the narrowed view — otherwise "only disputed" would make the agreement count read as zero.
-
-### The tier ladder (divergence)
-
-The board's bars are **positions on the tier ladder**, not a gap meter. Four rungs (`C B A S`, worst to best, left to right) drawn as discrete cells on `bg-bg3` — an axis that improves rightward is the one this audience reads off a scoreboard, even though a tier list itself is drawn S-first.
-
-- **White `ink` rule (2px) is where the meta puts them** — the neutral baseline the reader already holds in their head. **A gold diamond (7px, rotated square) is where we put them.** Two marks distinguished only by colour left it ambiguous which one was the model's verdict, and that has to be readable without consulting the key: gold is this product's mark for the model's own signal, and shape carries it a second time so the pair never depends on colour alone. A translucent `under`/`premium` run joins the two, growing from the community's rung toward ours — the mark says *whose*, the run says *which way*.
-- This is the one place gold repeats per row. It is permitted here for the reason the accent exists — it marks the model's own verdict, and nothing else on the row carries it. The tier list's opposite ruling (`Not gold: 87 gilded scores would make the accent decorative`) still stands there, because on those cards the band letter already carried the verdict and the gold was redundant.
-- **The diamond is drawn on agreement too**, landing on the rule. Two marks in one spot is what agreeing looks like, and it keeps the grammar identical on every row.
-- **The tier letters own the verdict — position, colour, word and sort order all key off them.** The raw scores are *not on a shared scale* (0.53 is S-tier for the model; the community's S starts near 0.64), so drawing both on one score axis compared two different distributions and called the difference a gap. The letters are also what the tier list already colours by, for the older reason that score and letter genuinely disagree near a band boundary.
-- **The row leads with a verdict, not a decimal.** `Underrated` / `Overrated` / `Agreed` — the words the audience argues in. Three decimals per row across thirty rows was the thing that read as a statistics table. The arithmetic is demoted, never deleted: it is spoken in full in the row's accessible name, shown on hover, and printed in full on the god's own page.
-- `BoardKey` teaches the axis once, in place, so no row needs a remembered schema.
-
-### Provenance (the community figures)
-- Anywhere the app compares against the community, it **says which community**: `Community figures: 17,172 Obsidian+ Conquest matches · 14 Jul–27 Jul`. Home carries it under the arguments block, the tier list under its tally — beside the claim it qualifies, never buried in a help page.
-- This exists because "the community" is not one thing. An Obsidian+ win rate and a Deity one describe different populations, and a fortnight's window means something different the week a patch lands. The numbers were being presented as settled fact with none of that attached.
-- **Rendered only when the data supplies it.** An index built before the god-index scrape has no provenance, and an empty provenance line is worse than none.
-- Dates are formatted from the ISO string's own parts, never through `Date` — parsing `2026-07-14` as a date shifts it a day backwards for any reader west of UTC, which would misreport the window.
-
-### The claim (Home's h1)
-- Led by **the half a reader can act on**: `The meta underrates 28 gods.` It read `We disagree with the meta on 53 of 69 ranked gods` — a sentence about the model's aggregate behaviour, true and inert. Nobody opens a build site to learn how often two rankings differ; they open it to find the god the meta is sleeping on. Same numbers, counted the same way, pointed at the reader instead of at the method. The other direction and the agreements follow in the paragraph beneath.
-- The count is **interpolated, so the noun agrees with it** (`1 god`, not `1 gods`), and the claim falls back through overrated → full agreement rather than ever printing `underrates 0`.
-
-### Where we argue hardest (the header's evidence column)
-
-Six **named** arguments — three gods, three items — beside the page's claim. This block twice tried to be a chart of how far each lane leans; both times it was true and unactionable, because "Solo leans −0.05" names nobody. A reader wants to know *which god* and *which item*, so the block names them.
-
-- **No bar here at all.** The movement is the two tier letters and an arrow (`S → C`), with colour only on the destination — the community's placement is the neutral starting point. A second proportional bar competing with the ladders directly below it made `under`/`premium` read as two different encodings on one screen; the colours now mean exactly one thing everywhere on the page.
-- **Gods and items rank separately and are never pooled.** Item score gaps run several times larger than god gaps (a disputed item is routinely 0.47 apart, a disputed god 0.15), so one merged list would be all items every time — not because those arguments are sharper, but because the scales aren't comparable.
-- **Both directions appear whenever both exist**, even though the sharpest arguments in this data all run one way. Three red rows would assert a systematic lean the full set doesn't have (gods split 28 up / 25 down), and a reader generalises from the handful they're shown, so the last slot goes to the strongest argument the other way. Ordering within the list stays biggest-first.
-- Each group states **what its three are a sample of** (`53 of 69 placed differently`), so a short list can't read as the whole disagreement.
-
-### Tooltip
-- `rounded-md`, `border-line`, `bg-bg2`, `shadow-card`, small (`text-xs`) copy. Flips above/below the trigger and shifts horizontally to avoid clipping; opens on a short hover delay but instantly on keyboard focus (`role="tooltip"`).
-
-### App chrome (rail + header)
-- Navigation is **two levels, never one**: a subject header naming the roster or the god, and a lens strip. From `lg` up the strip sits inside the navbar row, which is where the room is; below that it keeps its own row, because five tabs plus a search field starve each other on a narrow screen. Only one of the two is ever in the accessibility tree. There is no rail and no second column — the god picker is a dialog, because the subject is named on every screen and only has to be *changed* occasionally. Chrome fell from 38% of the first screen to 22%.
-- The **footer is gone**. Attribution and the "not affiliated with Hi-Rez" line live in Help, where someone looking for them will look; they were holding 43px of every screen forever for something you read once.
-- **One search field**, in the shell, reaching both nouns the product has. There were four "Search gods…" inputs with four different behaviours.
-- The header carries the brand anchor, freshness and actions. **No page title and no count** — see the One-Claim Rule.
-
-### Draft dock (persistent chrome)
-- The draft is the one surface that *changes* a build, and it used to exist on exactly one route — leave `/draft` and the comp vanished with no trace anywhere else in the shell. The dock makes it a permanent, editable part of the chrome instead: a floating `.plane`, present on every route except the draft page itself (showing a shrunken copy of the board you're already looking at would be a second, redundant instance of the same controls).
-- **It is a plane on its own layer, not a strip claiming a band of chrome.** `position: fixed`, bottom-right, `z-30` — above sticky content (`z-10`), below every real dialog (`z-50`), so opening the god picker or an item detail correctly covers it. Nothing here spends gold except the "you" slot's ring, exactly as `/draft` itself does.
-- **Collapsed by default**, showing only portrait chips and the same headline claim `/draft` makes (`2 of 6 items moved`) — never a second, independently-worded version of it. Expanding reveals the real slots (`Slot`, shared with the full page — editing here *is* editing the draft, not a preview of it), a compact mode toggle, and up to three condensed displacements. The full `ChangeRow` — a bar, a bonus figure, the reason it fired — stays on `/draft`; the dock only identifies the swap and links onward for the rest.
-- **One dock, in every state — there is no separate empty state.** Two earlier passes gave "nothing entered yet" its own card: first a quiet text link, then a card showing a *mock* of the board that linked to `/draft`. The second was a picture of a control sitting beside the real control it was a picture of. The board is small enough to simply be there, so the invitation is the working thing: the collapsed header reads `Start a draft` in `blue`, and expanding it gives real slots on any route.
-- **It carries the build, not a teaser for it.** The panel shows the whole adapted core — six named, linked items with the draft's own picks marked — because otherwise the dock could report that six items moved and never say which, leaving its own claim uncheckable without going to the page this dock exists to save you from. Only the *reasoning* per swap (the bar, the bonus figure, why it fired) stays on `/draft`. The panel caps at `min(70vh, 560px)` and scrolls, so a short viewport never pushes it off-screen.
-- **Every mounted `useDraft()` instance stays in sync.** Before the dock, only `/draft` ever wrote to the draft — every other mount (`Home`'s draft seam, a god page's "Draft with X" link) was read-only, so two live instances never needed to agree while both were mounted. The dock is a second, concurrent writer on the same pages those read-only consumers already render on, so `useDraft` broadcasts every write to every other instance in the tab. A `storage` event does not cover this — it never fires in the tab that made the change.
-
-### Navigation (god sidebar)
-- Desktop: fixed 300px column, `border-r border-line`, sticky blurred search/filter header above a scrolling 4-column grid.
-- Mobile: collapses to a single header trigger button (`bg-bg2`, current god's icon + name) that opens a full-screen modal picker reusing the same grid/filter body.
-
-### Skeletons (loading state)
-- Flat `bg-bg2` bars shaped exactly like the real layout they precede (never a centered spinner or "Loading…" text), animated with a slow `motion-safe:animate-pulse` opacity pulse only — no shadow, no shimmer sweep.
-- **Shaped like the route that's actually coming.** Home gets a claim-block-over-lane-board skeleton; build routes get the sidebar/build-rows one. A skeleton shaped like a different page guarantees the jump it exists to prevent.
+### Skeletons
+- Layout-shaped `surface` bars under the real wordmark, shaped like the route that is coming (the god page or god select), pulsing opacity only.
 
 ## Motion
 
-Motion is rationed. A surface gets **one authored moment** — the thing it does in life — not a scattering of hover effects.
+One authored moment, everything else still.
 
-- **Eases:** `--ease-standard` (`cubic-bezier(0.2, 0.8, 0.2, 1)`) for state and colour transitions, 120–180ms. `--ease-out-expo` (`cubic-bezier(0.16, 1, 0.3, 1)`) for the authored entrance.
-- **Home's moment:** each ladder's coloured run grows from the community's rung toward ours, 440ms, staggered 70ms per lane column (0 → 280ms) — the animation traces the argument in the direction the argument runs. Every name, verdict and mark is already on screen; only the run animates, so the page never fades in from blank.
-- **The press:** the shared `.press` scale-down (0.97, 120ms) on every tappable element.
-- Everything respects `prefers-reduced-motion: reduce`, and reduced motion means *arriving at the final state instantly*, never rendering nothing.
+- **The lock-in.** When an enemy pick changes the six, the swapped row slides up 10px out of a clipped edge (`clip-path: inset(0 0 100% 0)` → `inset(0)`) and settles, 320ms `--ease-out-expo` (`cubic-bezier(0.16, 1, 0.3, 1)`); its reason line follows 160ms later, 260ms. Keyed by item name, so it plays when the item *changes*, not on re-render. Like a broadcast lower-third landing.
+- **Supporting:** sheets rise 24px over 220ms; `.press` scales to 0.97 over 120ms; colour and border transitions run 150ms on `--ease-standard` (`cubic-bezier(0.2, 0.8, 0.2, 1)`).
+- **Reduced motion** means arriving at the final state instantly: the swapped row is simply there, still ringed and still carrying its reason.
+
+## Product-truth rules (kept from the previous world)
+
+These bind every surface regardless of look.
+
+**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows lives in the hash query: the god page's `mode`, `aspect`, `build` and `vs`; god select's `q` and `role`; the shop's filters. Defaults stay out of the query, so a bare `#/god/Ra` keeps meaning what it meant (and leaves the stored draft alone). A typed query lands on a URL that reproduces it; picker edits write `vs=` back. Writes are debounced `replaceState`, and a queued write is flushed before the app navigates so it can never land on the next page.
+
+**The Seam Rule.** Every surface names another it hands off to, in the visitor's terms: the god page links to the god's kit, every item ranked and its ranking; the Build tab returns to your god; recents reopen a matchup in one tap. A seam carries state where state exists — the shared draft is one draft across the god page, the Draft tab and the command field.
+
+**The Honest-Verdict Rule.** The comparison states a verdict a player can act on, near the build, and says what it could not measure in the same sentence — the tail is half the claim, never a footnote. Joust and Arena have no outcome data: they show "No win data in Joust — model only" and an unranked build, never a tier.
+
+**The Unmeasured-Is-Not-Zero Rule.** "Not measured here" and "measured as nothing" are different facts and never render the same way. An unscored signal is said in words, not printed as a neutral default; an unknown cost leaves the running total as `—`; threats that measured zero are distinguishable from threats never looked for.
+
+**The Second-Track Rule.** The community is a constant second track, never an option that replaces the model's answer. Its share is printed on each of Ichor's rows ("35% of Ra players buy it third"), its six is one tap away ("Show theirs"), and the comparison between them is the verdict. No control shows one *instead of* the other as a mode.
+
+**The Provenance Rule.** Wherever the community is cited, say which community and when: "Player percentages: Conquest games on SmiteBrain, refreshed …". Rendered only when the data supplies it; dates formatted from the ISO string's own parts, never through `Date`.
+
+**The Aspect-Honesty Rule.** 72 gods have an aspect and only 7 have a build behind it. The switch shows for all 72 and states plainly, in its accessible name and in a line under the header, when it will not move the build.
+
+**The Readable-Floor Rule** (see Colors): AA on every surface, 12px floor.
+
+**The Structure Rule.** Every route has a skip link ("Skip to content" → `#main`), one `<main>`, and a real `<h1>` stating what the page is ("Who are you playing?", the god's name). The fan-project line — not affiliated with Hi-Rez — stays reachable from Help and More.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** reserve torchlight gold for selection, primary action, or the model's own signal (score/efficiency) — see the Torchlight Rule.
-- **Do** set numbers, units bound to a number, and section eyebrows in JetBrains Mono — and nothing else, per the Measurement Rule. A word that happens to sit beside a figure is not a measurement.
-- **Do** put chosen state in the URL, and carry it across navigation within the same view, per the Linkable-State Rule.
-- **Do** keep loading states as layout-shaped skeletons (pulsing `bg-bg2` bars), never a spinner or centered "Loading…".
-- **Do** use the shared `.press` scale-down for every tappable element, and respect `prefers-reduced-motion`.
-- **Do** give a surface a real `<h1>` that states its claim, with `<main>`, a skip link, and a heading order that starts at level 1.
-- **Do** name what the model and the community each said, in words, wherever a bare score appears — a decimal with no label is a debug print, not a signal.
-- **Do** state coverage gaps as content (`18 of 87 gods have no community data yet`), not as an apology or a silent omission.
-- **Do** read the per-mode data slice when a mode is selected. `tierlist.gods` mirrors Conquest; showing it in Joust asserts community ratings that don't exist for that mode at all.
-- **Do** distinguish an unmeasured signal from a measured zero. A neutral default (`win 0.50`, `pick 0.00`) rendered as a number reads as a finding — say "not measured here" instead.
-- **Do** label a running total for what it actually covers. "16,550g core" when the starter isn't on the spine; never "total".
+- **Do** give each screen one answer and put the reasoning one tap below it.
+- **Do** spend violet only on selection, the primary action, or the model's voice — per the One Hue Rule.
+- **Do** draw the enemy in an ink outline and say "Enemy" in words.
+- **Do** set names, gold and controls in Sofia Sans Extra Condensed uppercase, and sentences in Sofia Sans.
+- **Do** keep every tap target ≥44px and every text ≥12px at AA contrast.
+- **Do** let overlays (suggestions, sheets) sit above the page; never let them push layout.
+- **Do** put chosen state in the URL and flush queued writes before navigating.
+- **Do** say what wasn't measured in the same sentence as what was.
 
 ### Don't:
-- **Don't** add shadow to a resting surface for decoration — shadow means "floating" (tooltip/modal) or "selected" (glow), per the Flat-Until-It-Matters Rule.
-- **Don't** repurpose a role/lane or damage-type color for anything other than that specific lane or damage type.
-- **Don't** introduce rounded gradients, neon glows, or angular esports-style slashes — the confirmed anti-reference for this system.
-- **Don't** add a second accent hue alongside torchlight gold; secondary interactive state is focus-blue's job, not a new color.
-- **Don't** use `under`/`premium` for anything but "which way the model leans against the market" — they are a direction pair, never success/failure and never an error colour.
-- **Don't** open a dialog the visitor didn't ask for, and don't let a surface outsource its explanation to one.
-- **Don't** let a dropdown, disclosure, or result list sit in normal flow where it displaces the page as it opens.
+- **Don't** bring back torchlight gold, Rajdhani, Inter, JetBrains Mono, the god-picker rail, lens tabs, or the floating draft dock.
+- **Don't** add a second accent hue, or colour the enemy red.
+- **Don't** print a bare decimal on the main path (`fit 0.69`, `quality 0.584`); write gold or "N% of players".
+- **Don't** put an eyebrow over a heading, or a coloured border-left on a row.
+- **Don't** add a second command field to a screen that already has one, or a field to the phone god page.
+- **Don't** truncate a name a player needs to read (an aspect, a god, an item); wrap it.
+- **Don't** shadow a resting surface; shadow means it floats.
+- **Don't** rank or tier Joust or Arena.

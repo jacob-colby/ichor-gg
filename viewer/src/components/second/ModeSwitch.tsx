@@ -13,12 +13,12 @@ export function ModeSwitch({ mode, onChange, className = "" }: {
 }) {
   return (
     <div role="group" aria-label="Game mode"
-      className={`grid grid-cols-3 rounded-[12px] bg-surface p-1 ${className}`}>
+      className={`grid grid-cols-[1.3fr_1fr_1fr] rounded-[12px] bg-surface p-1 ${className}`}>
       {MODES.map(({ key, label }) => {
         const on = key === mode;
         return (
           <button key={key} type="button" aria-pressed={on} onClick={() => onChange(key)}
-            className={`press h-11 rounded-[9px] font-cond text-[18px] font-bold uppercase transition-colors duration-150 ${
+            className={`press h-11 min-w-0 rounded-[9px] px-1.5 font-cond text-[18px] font-bold uppercase transition-colors duration-150 ${
               on ? "bg-accent text-accent-ink" : "text-muted hover:text-ink"}`}>
             {label}
           </button>

@@ -60,6 +60,22 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   }, [draft.enemies, mode]);
   const comp = useMemo(() => ({ allies: [god.name, ...draft.allies.slice(1)], enemies }), [god.name, draft.allies, enemies]);
 
+  // A link that names the enemies (`vs=`, which the command field writes) is
+  // applied to the shared draft with you in ally slot 1, so the strip, the
+  // six and the Draft page all agree with the address bar. A bare
+  // `#/god/Ra` names none and leaves the stored draft alone.
+  const vsKey = q.vs?.join(",") ?? null;
+  useEffect(() => {
+    if (!q.vs) return;
+    const known = q.vs.filter((n) => data.gods.some((g) => g.name === n));
+    if (draft.allies[0] !== god.name) setAlly(0, god.name);
+    const n = MODE_TEAM_SIZE[mode];
+    if (draft.enemies.slice(0, n).filter(Boolean).join(",") === known.slice(0, n).join(",")) return;
+    for (let i = 0; i < n; i += 1) setEnemy(i, known[i] ?? "");
+    // Only a new link re-applies; the picker's own edits write `vs` themselves.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [vsKey, god.name]);
+
   const r = useDraftResult(comp, mode, data.gods, data.items, data.builds, data.god_item_scores,
     data.draft, data.god_item_damage, q.aspect, q.build);
 
@@ -128,11 +144,19 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
   // ── Enemy picker ───────────────────────────────────────────────────────
   const [sheetAt, setSheetAt] = useState<number | null>(null);
+  // Picker edits write back to the address bar, so the link reproduces the
+  // team on screen; emptying the team leaves a bare URL again.
+  const writeVs = (next: string[]) => setQ((p) => ({ ...p, vs: next.filter(Boolean) }));
   const pickEnemy = (i: number, name: string) => {
     if (draft.allies[0] !== god.name) setAlly(0, god.name);
     setEnemy(i, name);
+    writeVs(enemies.map((n, j) => (j === i ? name : n)));
   };
-  const clearEnemies = () => enemies.forEach((_, i) => setEnemy(i, ""));
+  const removeEnemy = (i: number) => {
+    setEnemy(i, "");
+    writeVs(enemies.map((n, j) => (j === i ? "" : n)));
+  };
+  const clearEnemies = () => { enemies.forEach((_, i) => setEnemy(i, "")); writeVs([]); };
 
   const buildLabel = (a?: string) => (a === MAIN_ARCHETYPE ? "Ichor's main six" : r.archetypes.find((e) => e.archetype === a)
     ? tabLabel(r.archetypes.find((e) => e.archetype === a)!) : a ?? "");
@@ -160,8 +184,9 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               <p className="mt-1.5 text-note text-muted lg:text-copy">
                 <span className={laneTextClass(lane)}>{god.role}</span>
                 <span className="text-quiet"> · </span>{god.damage_type === "magical" ? "Magical" : "Physical"}
-                <span className="text-quiet"> · </span>
-                <span data-testid="god-record" className={mode === "conquest" && tier?.tier_score ? "text-ink" : ""}>{record}</span>
+                {/* The record is its own line: as a third clause it broke
+                    mid-phrase beside the aspect switch. */}
+                <span data-testid="god-record" className={`block ${mode === "conquest" && tier?.tier_score ? "text-ink" : ""}`}>{record}</span>
               </p>
             </div>
           </div>
@@ -292,7 +317,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
       {sheetAt !== null && (
         <EnemySheet gods={data.gods} enemies={enemies} startIndex={sheetAt} self={god.name}
-          onPick={pickEnemy} onRemove={(i) => setEnemy(i, "")} onClose={() => setSheetAt(null)} />
+          onPick={pickEnemy} onRemove={removeEnemy} onClose={() => setSheetAt(null)} />
       )}
     </div>
   );

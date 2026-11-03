@@ -7,20 +7,24 @@
 export function AspectToggle({ aspect, on, onChange, changesBuild }: {
   aspect: string; on: boolean; onChange: (on: boolean) => void; changesBuild: boolean;
 }) {
-  const short = aspect.replace(/^Aspect of /, "");
+  // "Aspect of the Passionate Storm" → "Passionate Storm": the small "Aspect"
+  // above it already says what kind of name this is. The name wraps at its
+  // spaces (two lines at most) instead of truncating — "Thermoth…" told a
+  // player nothing.
+  const short = aspect.replace(/^Aspect of /, "").replace(/^the /i, "");
   return (
     <button type="button" role="switch" aria-checked={on} onClick={() => onChange(!on)}
       aria-label={`${aspect}${changesBuild ? "" : " (doesn't change the build)"}`}
       title={aspect}
-      className={`press flex h-[52px] shrink-0 items-center gap-2 rounded-[12px] border px-3 transition-colors duration-150 ${
+      className={`press flex min-h-[52px] shrink-0 items-center gap-2 rounded-[12px] border py-1 pl-3 pr-2.5 text-left transition-colors duration-150 ${
         on ? "border-accent bg-accent/12 text-ink" : "border-line text-muted hover:border-quiet hover:text-ink"}`}>
       <span aria-hidden="true"
         className={`relative block h-5 w-8 flex-none rounded-full transition-colors duration-150 ${on ? "bg-accent" : "bg-surface-3"}`}>
         <span className={`absolute left-0 top-0.5 block h-4 w-4 rounded-full bg-ink transition-transform duration-150 ${on ? "translate-x-3.5" : "translate-x-0.5"}`} />
       </span>
-      <span className="flex flex-col items-start leading-none">
-        <span className="font-cond text-[17px] font-bold uppercase">Aspect</span>
-        <span className="max-w-[9ch] truncate text-cap text-quiet">{short}</span>
+      <span className="flex flex-col items-start">
+        <span className="text-cap leading-none text-quiet">Aspect</span>
+        <span className="mt-0.5 line-clamp-2 max-w-[104px] font-cond text-[16px] font-bold uppercase leading-[0.95] [text-wrap:balance]">{short}</span>
       </span>
     </button>
   );

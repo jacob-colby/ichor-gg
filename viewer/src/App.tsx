@@ -16,24 +16,81 @@ import { GodGrid } from "./components/second/GodGrid";
 import { GodPage } from "./components/second/GodPage";
 import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
 import { GodSubPage } from "./components/second/GodSubPage";
+import { useWide } from "./components/second/useWide";
+import { CommandField } from "./components/command/CommandField";
+import { gridFilterText, queryHash, serializeQuery, type ParsedQuery } from "./components/command/query";
+import { clearRecents, pushRecent, readRecents } from "./components/command/recents";
+import { useDraft, MODE_TEAM_SIZE } from "./lib/draft";
+import { flushQuery, hashQuery } from "./lib/urlState";
 import { useHashRoute, toHash } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
 import type { CuratedBuildEntry } from "./types";
 
-/* The Second Screen shell.
+/* The Second Screen shell, with the typed query (direction A + C).
  *
  * The app opens on "Who are you playing?" and every other route sits inside
  * one chrome: a bottom tab bar on a phone (Build · Draft · Gods · More), a slim
  * top bar from `lg` up. The old floating draft dock is gone from this shell —
  * the god page carries the enemy team itself, and Draft is one tab away
- * everywhere else, so the dock would only be a second copy of a control. */
+ * everywhere else, so the dock would only be a second copy of a control.
+ *
+ * One command field — "ra vs hecate ymir joust" — is the search. From `lg` up
+ * it lives in the top bar on every route; on a phone it is the god-select
+ * screen's search box and nowhere else (the god page's enemy strip is the
+ * enemy UI there). `/` or Ctrl/⌘K focuses whichever one is on screen. */
 function App() {
   const { data, error, reload } = useIndexData();
   const route = useHashRoute();
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
+  const [recents, setRecents] = useState<string[]>(readRecents);
+  const wide = useWide();
+  const { setMode: setDraftMode, setEnemy } = useDraft();
   const isDev = import.meta.env.DEV;
+
+  /* Submit a query. A god of your own lands on its page with the enemies as
+   * `vs=` and the mode in the URL; that page writes them into the shared draft
+   * (you in ally slot 1) — one writer, so a page still unmounting can't fight
+   * it over the mode. A god alone lands on a bare god URL and leaves the
+   * stored draft alone. Enemies with no god of your own open the draft board
+   * on them, written here because the board has no `vs=` to read. */
+  const run = useCallback((q: ParsedQuery) => {
+    flushQuery(); // a queued filter write must not land on the page we open
+    if (q.you) {
+      setRecents(pushRecent(serializeQuery(q)));
+      window.location.hash = queryHash({ you: q.you, enemies: q.enemies, mode: q.mode, aspect: q.aspect });
+      return;
+    }
+    const mode = q.mode ?? "conquest";
+    setDraftMode(mode);
+    for (let i = 0; i < MODE_TEAM_SIZE[mode]; i += 1) setEnemy(i, q.enemies[i] ?? "");
+    window.location.hash = toHash.draft();
+  }, [setDraftMode, setEnemy]);
+  const openItem = useCallback((name: string) => { flushQuery(); window.location.hash = toHash.item(name); }, []);
+  const forgetRecents = useCallback(() => { clearRecents(); setRecents([]); }, []);
+
+  /* `/` (outside a text field) or Ctrl/⌘K focuses the command field. */
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      const typing = !!t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+      const combo = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k";
+      if (!combo && (e.key !== "/" || typing || e.altKey || e.ctrlKey || e.metaKey)) return;
+      const field = document.querySelector<HTMLInputElement>("[data-command-input]");
+      if (!field) return;
+      e.preventDefault();
+      field.focus();
+      field.select?.();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  /* From lg up the top bar's field drives the roster grid's filter. */
+  const [boardText, setBoardText] = useState<string | null>(null);
+  const onBarText = useCallback((text: string, q: ParsedQuery) => setBoardText(gridFilterText(text, q)), []);
+  useEffect(() => { if (route.god || route.lens !== "board") setBoardText(null); }, [route.god, route.lens]);
 
   /* Refetching index.json is a pipeline affordance, not a visitor's control,
    * so it is dev-only — and it reports what it did, because a control that
@@ -111,6 +168,15 @@ function App() {
     (b) => b.source === "suggested" && (b as CuratedBuildEntry).archetype === "core" && !(b as CuratedBuildEntry).fun,
   ) as CuratedBuildEntry | undefined)?.slot_order : undefined;
 
+  const onBoard = !route.god && route.lens === "board";
+  const barField = wide ? (
+    <CommandField key={onBoard ? "board" : "bar"} variant="bar" gods={data.gods} items={data.items}
+      onSubmit={run} onItem={openItem} recents={recents} clearOnSubmit
+      seedText={onBoard ? hashQuery(window.location.hash).get("q") ?? "" : ""}
+      onText={onBoard ? onBarText : undefined} autoFocus={onBoard}
+      label="Search a god, a matchup or an item" placeholder="ra vs hecate ymir" />
+  ) : null;
+
   const devSlot = isDev ? (
     <>
       <button type="button" onClick={() => setAddOpen(true)}
@@ -136,7 +202,7 @@ function App() {
       <AppNav active={active} activeMore={activeMore}
         buildHref={buildGod ? toHash.god(buildGod) : toHash.home()} buildGod={buildGod}
         onHelp={() => setLegendOpen(true)} dataUpdated={data.data_updated} dataPatch={data.data_patch}
-        devSlot={devSlot} />
+        devSlot={devSlot} search={barField} />
 
       {isDev && scraping && (
         <p className="border-b border-dashed border-line px-4 py-2 text-center text-cap text-quiet">
@@ -187,7 +253,9 @@ function App() {
           <Method method={data.method} goldValues={data.item_gold_values ?? {}}
               items={data.items} godCount={data.gods.length} />
         ) : (
-          <GodGrid gods={data.gods} lastGod={lastGod} />
+          <GodGrid gods={data.gods} lastGod={lastGod} items={data.items} recents={recents}
+            onRun={run} onItem={openItem} onClearRecents={forgetRecents}
+            fieldInBar={wide} query={boardText} />
         )}
       </main>
 

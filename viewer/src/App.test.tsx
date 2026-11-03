@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, fireEvent, waitFor, within } from "@testing-library/react";
 import App from "./App";
 import { toHash } from "./lib/useHashRoute";
@@ -226,10 +226,13 @@ describe("App — the wordmark", () => {
 });
 
 describe("App — chrome", () => {
+  /* A + typed query: the search box became the command field (a combobox,
+   * not a bare searchbox) — still exactly one field on the screen. */
   it("offers one search field on god select, for gods", async () => {
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    expect(screen.getAllByRole("searchbox")).toHaveLength(1);
+    expect(screen.queryAllByRole("searchbox")).toHaveLength(0);
+    expect(screen.getAllByRole("combobox")).toHaveLength(1);
     expect(screen.getByPlaceholderText(/search 2 gods/i)).toBeInTheDocument();
   });
 
@@ -327,5 +330,174 @@ describe("App — chrome", () => {
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(screen.queryByRole("contentinfo")).not.toBeInTheDocument();
+  });
+});
+
+/* ── A + typed query ──────────────────────────────────────────────────────
+ * Direction C's command field inside direction A's chrome. From lg up it is
+ * the top bar's global search; on a phone it is god select's search box. */
+const desktop = () => {
+  Object.defineProperty(window, "matchMedia", {
+    configurable: true, writable: true,
+    value: (q: string) => ({
+      matches: q.includes("min-width: 1024px"), media: q,
+      addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {},
+    }),
+  });
+};
+const draftStored = () => JSON.parse(localStorage.getItem("smite:draft") ?? "{}");
+
+describe("App — the command field on desktop", () => {
+  beforeEach(desktop);
+  afterEach(() => { delete (window as { matchMedia?: unknown }).matchMedia; });
+
+  const barField = () => screen.findByRole("combobox", { name: "Search a god, a matchup or an item" });
+
+  it("sits in the top bar's search landmark, and god select has no second field", async () => {
+    render(<App />);
+    const field = await barField();
+    expect(within(screen.getByRole("navigation", { name: "Main" })).getByRole("search")).toContainElement(field);
+    expect(screen.getAllByRole("combobox")).toHaveLength(1);
+  });
+
+  it("runs a typed matchup: URL carries the enemies and mode, the shared draft holds them", async () => {
+    atUrl(toHash.god("Ymir"));
+    render(<App />);
+    const field = await barField();
+    fireEvent.change(field, { target: { value: "chiron vs ymir joust" } });
+    expect(document.querySelectorAll("[data-chip='you'], [data-chip='enemy']")).toHaveLength(2);
+    fireEvent.keyDown(field, { key: "Enter" });
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Chiron?mode=joust&vs=Ymir"));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    await waitFor(() => expect(draftStored()).toMatchObject({ mode: "joust" }));
+    await waitFor(() => expect(draftStored().enemies?.[0]).toBe("Ymir"));
+    expect(draftStored().allies?.[0]).toBe("Chiron");
+    // The strip shows the team the URL names, and the field is a search again.
+    expect(await screen.findByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument();
+    expect(await barField()).toHaveValue("");
+    expect(document.querySelector("[data-chip]")).toBeNull();
+  });
+
+  it("opens a single god's page on Enter and leaves the stored draft alone", async () => {
+    localStorage.setItem("smite:draft", JSON.stringify({ mode: "conquest", allies: ["", "", "", "", ""], enemies: ["Ymir", "", "", "", ""] }));
+    render(<App />);
+    const field = await barField();
+    fireEvent.change(field, { target: { value: "chi" } });
+    fireEvent.keyDown(field, { key: "Enter" });
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Chiron"));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    expect(draftStored().enemies?.[0]).toBe("Ymir");
+  });
+
+  it("filters god select from the top bar's field", async () => {
+    render(<App />);
+    const field = await barField();
+    fireEvent.change(field, { target: { value: "ymi" } });
+    await waitFor(() => expect(within(screen.getByTestId("god-grid")).getAllByRole("link").map((a) => a.getAttribute("href")))
+      .toEqual(["#/god/Ymir"]));
+  });
+
+  it("opens an item in the Items shop when the text names an item and no god", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    const field = await barField();
+    fireEvent.change(field, { target: { value: "rag" } });
+    expect(await screen.findByRole("option", { name: /Rage/ })).toBeInTheDocument();
+    fireEvent.keyDown(field, { key: "Enter" });
+    await waitFor(() => expect(window.location.hash).toBe("#/items/Rage"));
+  });
+
+  it("focuses the field on / and on Ctrl+K or Cmd+K, but not while typing elsewhere", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    const field = await barField();
+    expect(field).not.toHaveFocus();
+    fireEvent.keyDown(document.body, { key: "/" });
+    expect(field).toHaveFocus();
+    field.blur();
+    fireEvent.keyDown(document.body, { key: "k", ctrlKey: true });
+    expect(field).toHaveFocus();
+    field.blur();
+    fireEvent.keyDown(document.body, { key: "k", metaKey: true });
+    expect(field).toHaveFocus();
+    field.blur();
+    // A "/" typed into another text field stays there.
+    const other = document.createElement("input");
+    document.body.appendChild(other);
+    other.focus();
+    fireEvent.keyDown(other, { key: "/" });
+    expect(other).toHaveFocus();
+    other.remove();
+  });
+});
+
+describe("App — the command field on a phone", () => {
+  const pageField = () => screen.findByRole("combobox", { name: /^Search gods, or type your god vs/ });
+
+  it("has no field in the chrome or on the god page — the enemy strip is the enemy UI", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
+    expect(screen.getByTestId("enemy-strip")).toBeInTheDocument();
+  });
+
+  it("filters the grid on a plain name, exactly as the search box did", async () => {
+    render(<App />);
+    fireEvent.change(await pageField(), { target: { value: "ymi" } });
+    expect(within(screen.getByTestId("god-grid")).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/god/Ymir"]);
+    await waitFor(() => expect(window.location.hash).toContain("q=ymi"));
+    // No suggestion list over the grid for the first word: the grid is the list.
+    expect(screen.queryByRole("option")).not.toBeInTheDocument();
+  });
+
+  it("opens the grid's first god on Enter for a plain name", async () => {
+    render(<App />);
+    const field = await pageField();
+    fireEvent.change(field, { target: { value: "ymi" } });
+    fireEvent.keyDown(field, { key: "Enter" });
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Ymir"));
+  });
+
+  it("turns Enter into the adapted build once the query says vs", async () => {
+    render(<App />);
+    const field = await pageField();
+    fireEvent.change(field, { target: { value: "chiron vs ym" } });
+    expect(await screen.findByRole("option", { name: /Ymir/ })).toBeInTheDocument();
+    fireEvent.keyDown(field, { key: "Enter" });
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Chiron?vs=Ymir"));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    expect(await screen.findByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument();
+  });
+
+  it("shows recent matchups above the grid while the field is empty", async () => {
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Chiron vs Ymir Joust"]));
+    render(<App />);
+    const recents = await screen.findByTestId("recents");
+    expect(within(recents).getByRole("link", { name: /Chiron.*vs Ymir · Joust/ }))
+      .toHaveAttribute("href", "#/god/Chiron?mode=joust&vs=Ymir");
+    fireEvent.change(await pageField(), { target: { value: "y" } });
+    expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
+  });
+});
+
+describe("App — enemies in the god page's URL", () => {
+  it("applies a linked enemy team to the strip and the shared draft, dropping unknown names", async () => {
+    atUrl(`${toHash.god("Chiron")}?vs=Ymir,Nobody`);
+    render(<App />);
+    expect(await screen.findByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument();
+    await waitFor(() => expect(draftStored().enemies?.[0]).toBe("Ymir"));
+    expect(draftStored().allies?.[0]).toBe("Chiron");
+    expect(draftStored().enemies?.[1]).toBe("");
+  });
+
+  it("writes picker edits back to the address bar", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    const sheet = await screen.findByRole("dialog", { name: /Enemy 1 of 5/ });
+    fireEvent.click(within(sheet).getByRole("button", { name: "Ymir" }));
+    await waitFor(() => expect(window.location.hash).toContain("vs=Ymir"));
   });
 });
