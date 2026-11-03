@@ -14,22 +14,31 @@ import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { AppNav, Mark, type MoreLink, type NavTab } from "./components/second/AppNav";
 import { GodGrid } from "./components/second/GodGrid";
 import { GodPage } from "./components/second/GodPage";
-import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
+import { MAIN_ARCHETYPE } from "./components/second/pageState";
 import { GodSubPage } from "./components/second/GodSubPage";
-import { useHashRoute, toHash } from "./lib/useHashRoute";
+import { MatchPage } from "./components/match/MatchPage";
+import { ROSTER_HASH, isRosterHash } from "./components/match/routes";
+import { useDraft } from "./lib/draft";
+import { useHashRoute } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
 import type { CuratedBuildEntry } from "./types";
 
-/* The Second Screen shell.
+/* The match-first shell.
  *
- * The app opens on "Who are you playing?" and every other route sits inside
- * one chrome: a bottom tab bar on a phone (Build · Draft · Gods · More), a slim
- * top bar from `lg` up. The old floating draft dock is gone from this shell —
- * the god page carries the enemy team itself, and Draft is one tab away
- * everywhere else, so the dock would only be a second copy of a control. */
+ * The app opens on the match: a draft board with your slot and the enemy
+ * team, and the build filling in under it (`#/`). Every other route sits
+ * inside one chrome: a bottom tab bar on a phone (Match · Gods · Tiers ·
+ * More), a slim top bar from `lg` up. The god list is its own tab
+ * (`#/roster`); a god's page (`#/god/<Name>`) is for browsing without a match
+ * and links back into it. The old floating draft dock is gone — the board IS
+ * the draft, and the full draft page sits under More. */
 function App() {
   const { data, error, reload } = useIndexData();
   const route = useHashRoute();
+  // The roster and the match share the router's home lens; the path tells
+  // them apart. Read on every render — a route change always re-renders.
+  const roster = !route.god && route.lens === "board" && isRosterHash(window.location.hash);
+  const { draft } = useDraft();
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
@@ -51,7 +60,7 @@ function App() {
 
   useEffect(() => { document.title = documentTitle(route); }, [route]);
   // A new route starts at the top; the document scrolls, not a panel.
-  useEffect(() => { window.scrollTo?.(0, 0); }, [route.god, route.lens]);
+  useEffect(() => { window.scrollTo?.(0, 0); }, [route.god, route.lens, roster]);
 
   const godsApi = async (action: "add" | "remove", name: string) => {
     setScraping(true);
@@ -97,13 +106,12 @@ function App() {
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
-  const lastGod = readLastGod();
-  const buildGod = god?.name ?? (lastGod && data.gods.some((g) => g.name === lastGod) ? lastGod : undefined);
+  const matchGod = draft.allies[0] && data.gods.some((g) => g.name === draft.allies[0]) ? draft.allies[0] : undefined;
 
-  const active: NavTab = route.god ? "build"
-    : route.lens === "draft" ? "draft"
-      : route.lens === "board" ? "gods" : "more";
-  const activeMore = (["tiers", "items", "patch", "method"] as const).includes(route.lens as MoreLink)
+  const active: NavTab = route.god || roster ? "gods"
+    : route.lens === "board" ? "match"
+      : route.lens === "tiers" ? "tiers" : "more";
+  const activeMore = (["draft", "items", "patch", "method"] as const).includes(route.lens as MoreLink)
     && !route.god ? (route.lens as MoreLink) : undefined;
 
   // The god's own Conquest core, so the per-god items lens reads against it.
@@ -134,7 +142,7 @@ function App() {
       </a>
 
       <AppNav active={active} activeMore={activeMore}
-        buildHref={buildGod ? toHash.god(buildGod) : toHash.home()} buildGod={buildGod}
+        rosterHref={ROSTER_HASH} matchGod={matchGod}
         onHelp={() => setLegendOpen(true)} dataUpdated={data.data_updated} dataPatch={data.data_patch}
         devSlot={devSlot} />
 
@@ -151,7 +159,7 @@ function App() {
             <p className="mt-2 max-w-[60ch] text-copy text-muted">
               Nothing in this index goes by that name. It may have been renamed or dropped since that link was made.
             </p>
-            <a href={toHash.home()}
+            <a href={ROSTER_HASH}
               className="press mt-4 inline-flex h-11 items-center rounded-[10px] bg-accent px-4 font-cond text-[18px] font-bold uppercase text-accent-ink">
               Choose a god
             </a>
@@ -186,8 +194,11 @@ function App() {
         ) : route.lens === "method" ? (
           <Method method={data.method} goldValues={data.item_gold_values ?? {}}
               items={data.items} godCount={data.gods.length} />
+        ) : roster ? (
+          <GodGrid gods={data.gods} title="Every god"
+            lede={`All ${data.gods.length}, by face. Open one for its build without a match, then use it in yours.`} />
         ) : (
-          <GodGrid gods={data.gods} lastGod={lastGod} />
+          <MatchPage data={data} />
         )}
       </main>
 

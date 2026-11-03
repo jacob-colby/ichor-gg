@@ -61,6 +61,14 @@ export const SearchGlyph = (p: GlyphProps) => (
 export const PlusGlyph = (p: GlyphProps) => <Glyph {...p}><path d="M12 6v12M6 12h12" /></Glyph>;
 export const CloseGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m7 7 10 10M17 7 7 17" /></Glyph>;
 export const ChevronGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m9 6 6 6-6 6" /></Glyph>;
+/** Three rows, longest first: the tier list. */
+export const TiersGlyph = (p: GlyphProps) => (
+  <Glyph {...p}><path d="M4 6h16M4 12h11M4 18h6" /></Glyph>
+);
+/** Your slot facing theirs: the match. */
+export const MatchGlyph = (p: GlyphProps) => (
+  <Glyph {...p}><circle cx="7" cy="12" r="3.5" /><path d="M14 7h6M14 12h6M14 17h6" /></Glyph>
+);
 export const SwapGlyph = (p: GlyphProps) => (
   <Glyph {...p}><path d="M7 7h11l-3-3M17 17H6l3 3" /></Glyph>
 );

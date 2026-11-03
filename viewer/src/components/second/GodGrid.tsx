@@ -6,7 +6,8 @@
  * live in the hash query so a filtered roster can be linked. */
 import { useMemo, useRef } from "react";
 import type { God } from "../../types";
-import { LANES, godInLane, godLane, laneTextClass, type Lane } from "../../lib/roleAccent";
+import { LANES, godLane, laneTextClass, type Lane } from "../../lib/roleAccent";
+import { filterGods } from "./filterGods";
 import { useUrlState } from "../../lib/urlState";
 import { toHash } from "../../lib/useHashRoute";
 import { Art, CloseGlyph, SearchGlyph } from "./art";
@@ -39,23 +40,51 @@ export function RoleFilter({ role, onChange, className = "" }: {
   );
 }
 
-export function GodGrid({ gods, lastGod }: { gods: God[]; lastGod?: string | null }) {
+/** The card-art grid. Links to each god's page by default; with `onPick` the
+ *  cards are buttons that hand the name back (the match board's you-slot). */
+export function GodCards({ gods, onPick, current, className = "",
+  cols = "grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:gap-3" }: {
+  gods: God[]; onPick?: (name: string) => void; current?: string; className?: string; cols?: string;
+}) {
+  return (
+    <ul className={`grid gap-2.5 ${cols} ${className}`} data-testid="god-grid">
+      {gods.map((g, i) => {
+        const lane = godLane(g.role);
+        const on = g.name === current;
+        const body = (
+          <>
+            <Art name={g.name} kind="card" eager={i < 12}
+              className="aspect-[2/3] w-full transition-transform duration-300 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]" />
+            <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/45 to-transparent" />
+            <span className="absolute inset-x-0 bottom-0 px-2 pb-2 text-left">
+              <span className="block font-cond text-[21px] font-extrabold uppercase leading-[0.95] text-ink [overflow-wrap:anywhere]">{g.name}</span>
+              <span className={`mt-0.5 block truncate text-cap ${laneTextClass(lane)}`}>{lane ?? g.role}</span>
+            </span>
+          </>
+        );
+        const cls = `press group relative block w-full overflow-hidden rounded-[12px] bg-surface ${on ? "ring-2 ring-accent" : ""}`;
+        return (
+          <li key={g.name}>
+            {onPick ? (
+              <button type="button" onClick={() => onPick(g.name)} aria-pressed={on} className={cls}>{body}</button>
+            ) : (
+              <a href={toHash.god(g.name)} className={cls}>{body}</a>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+export function GodGrid({ gods, lastGod, title = "Who are you playing?",
+  lede = "Pick your god for the build, then add the enemy team as it locks in." }: {
+  gods: God[]; lastGod?: string | null; title?: string; lede?: string;
+}) {
   const [f, setF] = useUrlState(decode, encode);
   const input = useRef<HTMLInputElement>(null);
   const wide = useWide();
-  const shown = useMemo(() => {
-    const q = f.q.trim().toLowerCase();
-    return [...gods]
-      .filter((g) => (!f.role || godInLane(g.role, f.role)) && (!q || g.name.toLowerCase().includes(q)))
-      .sort((a, b) => {
-        if (q) {
-          const as = a.name.toLowerCase().startsWith(q) ? 0 : 1;
-          const bs = b.name.toLowerCase().startsWith(q) ? 0 : 1;
-          if (as !== bs) return as - bs;
-        }
-        return a.name.localeCompare(b.name);
-      });
-  }, [gods, f]);
+  const shown = useMemo(() => filterGods(gods, f.q, f.role), [gods, f]);
   const last = lastGod ? gods.find((g) => g.name === lastGod) : undefined;
 
   return (
@@ -63,11 +92,9 @@ export function GodGrid({ gods, lastGod }: { gods: God[]; lastGod?: string | nul
       <div className="lg:flex lg:items-end lg:justify-between lg:gap-8">
         <div>
           <h1 className="font-cond text-[52px] font-extrabold leading-[0.9] text-ink [text-wrap:balance] lg:text-hero">
-            Who are you playing?
+            {title}
           </h1>
-          <p className="mt-2 text-copy text-muted">
-            Pick your god for the build, then add the enemy team as it locks in.
-          </p>
+          <p className="mt-2 text-copy text-muted">{lede}</p>
         </div>
         <div className="mt-4 flex flex-col gap-3 lg:mt-0 lg:w-[460px]">
           <label className="flex h-12 items-center gap-2 rounded-[12px] border border-line bg-surface px-3 focus-within:border-accent">
@@ -101,24 +128,7 @@ export function GodGrid({ gods, lastGod }: { gods: God[]; lastGod?: string | nul
       )}
 
       <p className="sr-only" aria-live="polite">{shown.length} gods shown</p>
-      <ul className="mt-5 grid grid-cols-3 gap-2.5 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 lg:gap-3" data-testid="god-grid">
-        {shown.map((g, i) => {
-          const lane = godLane(g.role);
-          return (
-            <li key={g.name}>
-              <a href={toHash.god(g.name)} className="press group relative block overflow-hidden rounded-[12px] bg-surface">
-                <Art name={g.name} kind="card" eager={i < 12}
-                  className="aspect-[2/3] w-full transition-transform duration-300 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]" />
-                <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/45 to-transparent" />
-                <span className="absolute inset-x-0 bottom-0 px-2 pb-2">
-                  <span className="block font-cond text-[21px] font-extrabold uppercase leading-[0.95] text-ink [overflow-wrap:anywhere]">{g.name}</span>
-                  <span className={`mt-0.5 block truncate text-cap ${laneTextClass(lane)}`}>{lane ?? g.role}</span>
-                </span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <GodCards gods={shown} className="mt-5" />
       {shown.length === 0 && (
         <p className="py-10 text-center text-copy text-muted">
           No god matches “{f.q}”{f.role ? ` in ${f.role}` : ""}.

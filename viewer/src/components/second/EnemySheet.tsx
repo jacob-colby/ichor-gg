@@ -11,8 +11,10 @@ import { nextEmptySlot } from "../../lib/draft";
 import { Art, CloseGlyph, SearchGlyph } from "./art";
 import { Sheet } from "./Sheet";
 
-export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, onClose }: {
+export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, onClose, side = "Enemy" }: {
   gods: God[];
+  /** Which team the slots belong to; the match board reuses this for allies. */
+  side?: "Enemy" | "Ally";
   enemies: string[];
   startIndex: number;
   /** Your god, shown but allowed: mirrors across teams are legal. */
@@ -51,7 +53,7 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
   const firstFree = matches.find((g) => !taken.has(g.name));
 
   return (
-    <Sheet title={`Enemy ${index + 1} of ${enemies.length}`} onClose={onClose} initialFocus={input} testId="enemy-sheet"
+    <Sheet title={`${side} ${index + 1} of ${enemies.length}`} onClose={onClose} initialFocus={input} testId="enemy-sheet"
       footer={
         <div className="flex gap-2">
           {enemies[index] && (
@@ -67,7 +69,7 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
         </div>
       }>
       {/* Which slot you are filling, and a way to jump between them. */}
-      <div role="group" aria-label="Enemy slots" className="mb-3 grid gap-2"
+      <div role="group" aria-label={`${side} slots`} className="mb-3 grid gap-2"
         style={{ gridTemplateColumns: `repeat(${enemies.length}, minmax(0, 1fr))` }}>
         {enemies.map((name, i) => (
           <button key={i} type="button" onClick={() => { setIndex(i); input.current?.focus(); }}
@@ -101,7 +103,7 @@ export function EnemySheet({ gods, enemies, startIndex, self, onPick, onRemove, 
           return (
             <li key={g.name}>
               <button type="button" disabled={isTaken} onClick={() => pick(g.name)}
-                aria-label={isTaken ? `${g.name} (already on their team)` : g.name}
+                aria-label={isTaken ? `${g.name} (already on ${side === "Enemy" ? "their" : "your"} team)` : g.name}
                 className="press flex w-full flex-col items-center gap-1 disabled:opacity-35">
                 <Art name={g.name} kind="head" className="aspect-square w-full rounded-[10px]" />
                 <span className={`w-full truncate text-center text-cap ${g.name === self ? "text-accent" : "text-muted"}`}>{g.name}</span>

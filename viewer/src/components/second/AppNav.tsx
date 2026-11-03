@@ -1,26 +1,26 @@
-/** Global navigation for the Second Screen chrome.
+/** Global navigation for the match-first chrome.
  *
  * One set of destinations, two shapes:
- *  - phone: a bottom tab bar — Build · Draft · Gods · More — inside thumb
+ *  - phone: a bottom tab bar — Match · Gods · Tiers · More — inside thumb
  *    reach, padded for the home indicator. "More" opens a sheet holding the
- *    reading routes, help, and the fan-project line.
+ *    full draft board, the reading routes, help, and the fan-project line.
  *  - desktop (lg+): a slim top bar carrying everything flat, because a mouse
  *    has no thumb to save.
  *
- * "Build" means YOUR god: the god page you are on, or the last one you
- * opened. With no god yet it lands on the roster, which is where you pick one.
+ * "Match" is home: the board with your god and the enemy team, and the build
+ * under it. "Gods" is browsing — the list and every god's own page.
  */
 import { useState, type ReactNode } from "react";
 import { toHash } from "../../lib/useHashRoute";
 import { relativeDate } from "../../lib/relativeDate";
-import { BuildGlyph, DraftGlyph, GodsGlyph, MoreGlyph } from "./art";
+import { GodsGlyph, MatchGlyph, MoreGlyph, TiersGlyph } from "./art";
 import { Sheet } from "./Sheet";
 
-export type NavTab = "build" | "draft" | "gods" | "more";
-export type MoreLink = "tiers" | "items" | "patch" | "method";
+export type NavTab = "match" | "gods" | "tiers" | "more";
+export type MoreLink = "draft" | "items" | "patch" | "method";
 
 const MORE_LINKS: { key: MoreLink; label: string; href: string; blurb: string }[] = [
-  { key: "tiers", label: "Tiers", href: toHash.tiers(), blurb: "Every god, ranked on real Conquest results" },
+  { key: "draft", label: "Draft board", href: toHash.draft(), blurb: "Both teams in full, with the threat table" },
   { key: "items", label: "Items", href: toHash.items(), blurb: "What each item's stats are worth in gold" },
   { key: "patch", label: "Patch notes", href: toHash.patch(), blurb: "What changed, and what it moved" },
   { key: "method", label: "Method", href: toHash.method(), blurb: "How the model chooses a six" },
@@ -42,9 +42,9 @@ interface AppNavProps {
   active: NavTab;
   /** Sub-destination under More, for the desktop bar's current marker. */
   activeMore?: MoreLink;
-  buildHref: string;
-  /** "Build · Ra" reads better than "Build" once a god is known. */
-  buildGod?: string;
+  rosterHref: string;
+  /** "Match · Ra" on desktop once your slot has a god. */
+  matchGod?: string;
   onHelp: () => void;
   dataUpdated?: string;
   dataPatch?: string;
@@ -55,14 +55,14 @@ interface AppNavProps {
 const freshness = (updated?: string, patch?: string) =>
   updated ? `Updated ${relativeDate(updated)}${patch ? ` · ${patch}` : ""}` : null;
 
-export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUpdated, dataPatch, devSlot }: AppNavProps) {
+export function AppNav({ active, activeMore, rosterHref, matchGod, onHelp, dataUpdated, dataPatch, devSlot }: AppNavProps) {
   const [moreOpen, setMoreOpen] = useState(false);
   const stamp = freshness(dataUpdated, dataPatch);
 
-  const primary: { key: Exclude<NavTab, "more">; label: string; href: string; Glyph: typeof BuildGlyph }[] = [
-    { key: "build", label: "Build", href: buildHref, Glyph: BuildGlyph },
-    { key: "draft", label: "Draft", href: toHash.draft(), Glyph: DraftGlyph },
-    { key: "gods", label: "Gods", href: toHash.home(), Glyph: GodsGlyph },
+  const primary: { key: Exclude<NavTab, "more">; label: string; href: string; Glyph: typeof MatchGlyph }[] = [
+    { key: "match", label: "Match", href: toHash.home(), Glyph: MatchGlyph },
+    { key: "gods", label: "Gods", href: rosterHref, Glyph: GodsGlyph },
+    { key: "tiers", label: "Tiers", href: toHash.tiers(), Glyph: TiersGlyph },
   ];
 
   return (
@@ -70,14 +70,14 @@ export function AppNav({ active, activeMore, buildHref, buildGod, onHelp, dataUp
       {/* Desktop: slim top bar. */}
       <header className="sticky top-0 z-40 hidden border-b border-line bg-ground/95 backdrop-blur-sm lg:block">
         <nav aria-label="Main" className="mx-auto flex h-14 max-w-[1240px] items-center gap-1 px-6">
-          <a href={toHash.home()} aria-label="ichor — home" className="press mr-5 flex h-11 items-center">
+          <a href={toHash.home()} aria-label="ichor — your match" className="press mr-5 flex h-11 items-center">
             <Mark />
           </a>
           {primary.map(({ key, label, href }) => (
             <a key={key} href={href} aria-current={active === key ? "page" : undefined}
               className={`press relative flex h-14 items-center px-3 font-cond text-[19px] font-bold uppercase ${
                 active === key ? "text-ink after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:bg-accent" : "text-muted hover:text-ink"}`}>
-              {label}{key === "build" && buildGod ? <span className="ml-1.5 text-quiet">· {buildGod}</span> : null}
+              {label}{key === "match" && matchGod ? <span className="ml-1.5 text-quiet">· {matchGod}</span> : null}
             </a>
           ))}
           <span aria-hidden="true" className="mx-2 h-5 w-px bg-line" />
