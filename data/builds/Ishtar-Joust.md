@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Bloodforge
-  - Dominance
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Dominance
-  - Bloodforge
+  - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,6 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Lernaean Bow:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Toxic Blade:
       total: 0.57
       efficiency: 0.36
@@ -43,18 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
-    Bloodforge:
-      total: 0.56
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Dominance:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Riptalon:
       total: 0.61
       efficiency: 0.36
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Rage
   - Tyrfing
   - Riptalon
@@ -158,17 +158,17 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
+    Golden Blade:
       total: 0.56
-      efficiency: 0.36
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.65
     Rage:
       total: 0.51
       efficiency: 0.44
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Dominance
   - Qin's Blade
   - Riptalon
-  - Demon Blade
   flex_slots:
-  - Demon Blade
-  - Dominance
+  - Qin's Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,6 +358,18 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Toxic Blade:
       total: 0.58
       efficiency: 0.36
@@ -370,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
-    Dominance:
-      total: 0.51
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Qin's Blade:
       total: 0.54
       efficiency: 0.38
@@ -388,25 +394,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
-    Demon Blade:
-      total: 0.53
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Qin's Blade
   flex_slots:
   - Toxic Blade
-  - Qin's Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.45
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Toxic Blade:
       total: 0.48
       efficiency: 0.36
@@ -453,25 +459,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Qin's Blade:
-      total: 0.44
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Bloodforge
-  - Dominance
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Dominance
-  - Bloodforge
+  - Lernaean Bow
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,6 +488,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.6
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Lernaean Bow:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Toxic Blade:
       total: 0.57
       efficiency: 0.36
@@ -500,18 +512,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
-    Bloodforge:
-      total: 0.56
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Dominance:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Riptalon:
       total: 0.61
       efficiency: 0.36

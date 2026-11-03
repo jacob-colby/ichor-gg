@@ -343,9 +343,9 @@ builds:
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Kinetic Cuirass, Gluttonous
     Grimoire, Genji''s Guard, Ethereal Staff, Freya''s Tears, Phoenix Feather, Blood-Bound
     Book, Breastplate of Valor, Rod of Asclepius, Yogi''s Necklace, Helm of Radiance,
-    Sphere of Negation, Helm of Darkness, Chandra''s Grace, Spear of the Magus, Oni
-    Hunter''s Garb, Erosion, Eye of Providence, Lotus Sickle, Jade Scepter, Draconic
-    Scale, Regrowth Striders, Glorious Pridwen, Midgardian Mail.'
+    Sphere of Negation, Helm of Darkness, Soul Locket, Chandra''s Grace, Spear of
+    the Magus, Oni Hunter''s Garb, Erosion, Eye of Providence, Lotus Sickle, Jade
+    Scepter, Draconic Scale, Regrowth Striders, Glorious Pridwen.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.53
@@ -712,11 +712,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Amanita Charm, Genji''s Guard, Gluttonous Grimoire, Rod of
-    Asclepius, Void Stone, Doublet of Binding, Lifebinder, Chandra''s Grace, Spear
-    of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff, Oni Hunter''s
-    Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros'' Bow, Doom Orb,
-    Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s Idol, Gem of Focus,
-    Erosion, Ancile.'
+    Asclepius, Soul Locket, Void Stone, Doublet of Binding, Lifebinder, Chandra''s
+    Grace, Spear of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff,
+    Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros''
+    Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s
+    Idol, Gem of Focus, Erosion.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -786,12 +786,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Amanita Charm, Rod of Asclepius, Triton''s Conch, Genji''s Guard, Gluttonous
-    Grimoire, Lotus Sickle, Lifebinder, Death Metal, Ancient Signet, Spear of the
-    Magus, Ethereal Staff, Doom Orb, Blood-Bound Book, Void Stone, Yogi''s Necklace,
-    Eros'' Bow, Chronos'' Pendant, Oni Hunter''s Garb, Jade Scepter, Sphere of Negation,
-    Heartwood Charm, Doublet of Binding, Bancroft''s Talon, Chandra''s Grace, Wish-Granting
-    Pearl.'
+    Gem, Amanita Charm, Rod of Asclepius, Triton''s Conch, Genji''s Guard, Soul Locket,
+    Gluttonous Grimoire, Lotus Sickle, Lifebinder, Death Metal, Ancient Signet, Spear
+    of the Magus, Ethereal Staff, Doom Orb, Blood-Bound Book, Void Stone, Yogi''s
+    Necklace, Eros'' Bow, Chronos'' Pendant, Oni Hunter''s Garb, Jade Scepter, Sphere
+    of Negation, Heartwood Charm, Doublet of Binding, Bancroft''s Talon, Chandra''s
+    Grace.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -863,11 +863,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Genji''s Guard, Rod of Asclepius,
-    Triton''s Conch, Spear of the Magus, Lifebinder, Doom Orb, Lotus Sickle, Ethereal
-    Staff, Void Stone, Blood-Bound Book, Chronos'' Pendant, Death Metal, Dreamer''s
-    Idol, Doublet of Binding, Eros'' Bow, Ancient Signet, Chandra''s Grace, Screeching
-    Gargoyle, Yogi''s Necklace, Jade Scepter, Sphere of Negation, Oni Hunter''s Garb,
-    Gem of Focus.'
+    Soul Locket, Triton''s Conch, Spear of the Magus, Lifebinder, Doom Orb, Lotus
+    Sickle, Ethereal Staff, Void Stone, Blood-Bound Book, Chronos'' Pendant, Death
+    Metal, Dreamer''s Idol, Doublet of Binding, Eros'' Bow, Ancient Signet, Chandra''s
+    Grace, Screeching Gargoyle, Yogi''s Necklace, Jade Scepter, Sphere of Negation,
+    Oni Hunter''s Garb.'
   slot_scores:
     Book of Thoth:
       total: 0.44
@@ -939,11 +939,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Erosion, Kinetic Cuirass,
-    Rod of Asclepius, Genji''s Guard, Freya''s Tears, Stampede, Void Stone, Void Shield,
-    Gluttonous Grimoire, Spectral Armor, Lifebinder, Phoenix Feather, Breastplate
-    of Valor, Doublet of Binding, Ethereal Staff, Yogi''s Necklace, Chandra''s Grace,
-    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, Regrowth Striders, Glorious
-    Pridwen, Midgardian Mail, Mystical Mail.'
+    Rod of Asclepius, Genji''s Guard, Soul Locket, Freya''s Tears, Stampede, Void
+    Stone, Void Shield, Gluttonous Grimoire, Spectral Armor, Lifebinder, Phoenix Feather,
+    Breastplate of Valor, Doublet of Binding, Ethereal Staff, Yogi''s Necklace, Chandra''s
+    Grace, Eye of Providence, Oni Hunter''s Garb, Draconic Scale, Regrowth Striders,
+    Glorious Pridwen, Midgardian Mail.'
   slot_scores:
     Spear of Desolation:
       total: 0.54
@@ -1014,11 +1014,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Void Stone, Genji''s
-    Guard, Screeching Gargoyle, Spear of the Magus, Doom Orb, Rod of Asclepius, Dreamer''s
-    Idol, Doublet of Binding, Lifebinder, The Cosmic Horror, Ethereal Staff, Chandra''s
-    Grace, Lotus Sickle, Yogi''s Necklace, Oni Hunter''s Garb, Phoenix Feather, Chronos''
-    Pendant, Blood-Bound Book, Eros'' Bow, Ancient Signet, Jade Scepter, Sphere of
-    Negation, Erosion.'
+    Guard, Screeching Gargoyle, Spear of the Magus, Doom Orb, Rod of Asclepius, Soul
+    Locket, Dreamer''s Idol, Doublet of Binding, Lifebinder, The Cosmic Horror, Ethereal
+    Staff, Chandra''s Grace, Lotus Sickle, Yogi''s Necklace, Oni Hunter''s Garb, Phoenix
+    Feather, Chronos'' Pendant, Blood-Bound Book, Eros'' Bow, Ancient Signet, Jade
+    Scepter, Sphere of Negation.'
   slot_scores:
     Void Stone:
       total: 0.55
@@ -1090,11 +1090,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Amanita Charm, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard,
-    Rod of Asclepius, Blood-Bound Book, Void Stone, Triton''s Conch, Doublet of Binding,
-    Lifebinder, Yogi''s Necklace, Ethereal Staff, Bragi''s Harp, Bancroft''s Talon,
-    Spear of the Magus, Oni Hunter''s Garb, Lotus Sickle, Screeching Gargoyle, Chandra''s
-    Grace, Phoenix Feather, Bracer of The Abyss, Ancient Signet, Chronos'' Pendant,
-    Death Metal, Doom Orb.'
+    Rod of Asclepius, Blood-Bound Book, Soul Locket, Void Stone, Triton''s Conch,
+    Doublet of Binding, Lifebinder, Yogi''s Necklace, Ethereal Staff, Bragi''s Harp,
+    Bancroft''s Talon, Spear of the Magus, Oni Hunter''s Garb, Lotus Sickle, Screeching
+    Gargoyle, Chandra''s Grace, Phoenix Feather, Bracer of The Abyss, Ancient Signet,
+    Chronos'' Pendant, Death Metal.'
   slot_scores:
     Bragi's Harp:
       total: 0.48
@@ -1166,11 +1166,10 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Amanita
     Charm, Lotus Sickle, Rod of Asclepius, Chandra''s Grace, Screeching Gargoyle,
-    Chronos'' Pendant, Gluttonous Grimoire, Void Stone, Gem of Focus, Triton''s Conch,
-    Heartwood Charm, Lifebinder, Ethereal Staff, Doublet of Binding, Spear of the
-    Magus, Eye of Erebus, Shield of the Phoenix, Blood-Bound Book, Yogi''s Necklace,
-    Oni Hunter''s Garb, Freya''s Tears, Eros'' Bow, Damaru, Phoenix Feather, Totem
-    of Death.'
+    Chronos'' Pendant, Soul Locket, Gluttonous Grimoire, Void Stone, Gem of Focus,
+    Triton''s Conch, Heartwood Charm, Lifebinder, Ethereal Staff, Doublet of Binding,
+    Spear of the Magus, Eye of Erebus, Shield of the Phoenix, Blood-Bound Book, Yogi''s
+    Necklace, Oni Hunter''s Garb, Freya''s Tears, Eros'' Bow, Damaru, Phoenix Feather.'
   slot_scores:
     Lotus Sickle:
       total: 0.52
@@ -1241,11 +1240,11 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Soul Gem, Amanita Charm, Genji''s Guard, Gluttonous Grimoire,
-    Rod of Asclepius, Void Stone, Doublet of Binding, Lifebinder, Chandra''s Grace,
-    Spear of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff, Oni Hunter''s
-    Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros'' Bow, Doom Orb,
-    Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s Idol, Gem of Focus,
-    Erosion, Ancile.'
+    Rod of Asclepius, Soul Locket, Void Stone, Doublet of Binding, Lifebinder, Chandra''s
+    Grace, Spear of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff,
+    Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros''
+    Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s
+    Idol, Gem of Focus, Erosion.'
   slot_scores:
     Genji's Guard:
       total: 0.55

@@ -345,9 +345,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Gluttonous Grimoire, Kinetic Cuirass,
     Ethereal Staff, Genji''s Guard, Phoenix Feather, Rod of Asclepius, Freya''s Tears,
     Yogi''s Necklace, Helm of Radiance, Sphere of Negation, Helm of Darkness, Spear
-    of the Magus, Breastplate of Valor, Erosion, Oni Hunter''s Garb, Eye of Providence,
-    Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian Mail, Lotus Sickle,
-    Doom Orb, Ancient Signet.'
+    of the Magus, Soul Locket, Breastplate of Valor, Erosion, Oni Hunter''s Garb,
+    Eye of Providence, Chandra''s Grace, Jade Scepter, Draconic Scale, Midgardian
+    Mail, Lotus Sickle, Doom Orb.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.55

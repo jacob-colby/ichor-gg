@@ -346,9 +346,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Spear of the Magus, Kinetic Cuirass,
     Gluttonous Grimoire, Genji''s Guard, Ethereal Staff, Freya''s Tears, Phoenix Feather,
     Blood-Bound Book, Breastplate of Valor, Rod of Asclepius, Yogi''s Necklace, Helm
-    of Radiance, Sphere of Negation, Helm of Darkness, Chandra''s Grace, Soul Gem,
-    Oni Hunter''s Garb, Erosion, Eye of Providence, Lotus Sickle, Jade Scepter, Draconic
-    Scale, Regrowth Striders, Glorious Pridwen, Midgardian Mail.'
+    of Radiance, Sphere of Negation, Helm of Darkness, Soul Locket, Chandra''s Grace,
+    Soul Gem, Oni Hunter''s Garb, Erosion, Eye of Providence, Lotus Sickle, Jade Scepter,
+    Draconic Scale, Regrowth Striders, Glorious Pridwen.'
   slot_scores:
     Shield of the Phoenix:
       total: 0.54

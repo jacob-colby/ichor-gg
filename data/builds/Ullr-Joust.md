@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
-  - Demon Blade
   flex_slots:
   - Tyrfing
-  - Demon Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Toxic Blade:
       total: 0.6
       efficiency: 0.45
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Demon Blade:
-      total: 0.51
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
   - Riptalon
-  - Demon Blade
   flex_slots:
   - Tyrfing
-  - Demon Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -553,6 +553,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Toxic Blade:
       total: 0.6
       efficiency: 0.45
@@ -583,11 +589,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Demon Blade:
-      total: 0.51
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
   starter: *id001
 ---

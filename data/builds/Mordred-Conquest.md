@@ -352,8 +352,8 @@ builds:
     of Desolation, Erosion, Chandra''s Grace, Shield of the Phoenix, Eye of Providence,
     Obsidian Shard, Avenging Blade, Midgardian Mail, Blood-Bound Book, Regrowth Striders,
     The Crusher, Rod of Asclepius, Leviathan''s Hide, Helm of Radiance, Glorious Pridwen,
-    Wyrmskin Hide, Sphere of Negation, Stone of Binding, Helm of Darkness, Heartseeker,
-    Arondight.'
+    Wyrmskin Hide, Sphere of Negation, Stone of Binding, Helm of Darkness, Soul Locket,
+    Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56

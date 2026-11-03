@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
   flex_slots:
   - Demon Blade
-  - Dominance
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Toxic Blade:
       total: 0.6
       efficiency: 0.45
@@ -43,12 +49,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
   - Qin's Blade
   - The Reaper
   - Riptalon
-  - Silverbranch Bow
   flex_slots:
+  - Golden Blade
   - Qin's Blade
-  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.53
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Toxic Blade:
       total: 0.63
       efficiency: 0.45
@@ -388,25 +394,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
-    Silverbranch Bow:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
   - Tyrfing
   - Hydra's Lament
-  - Dominance
   flex_slots:
   - Tyrfing
-  - Dominance
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.45
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Toxic Blade:
       total: 0.53
       efficiency: 0.45
@@ -453,25 +459,19 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Dominance:
-      total: 0.43
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Dominance
   - The Reaper
   - Riptalon
   - Demon Blade
   flex_slots:
   - Demon Blade
-  - Dominance
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Toxic Blade:
       total: 0.6
       efficiency: 0.45
@@ -500,12 +506,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     The Reaper:
       total: 0.59
       efficiency: 0.56

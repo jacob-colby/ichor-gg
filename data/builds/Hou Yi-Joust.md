@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
   - Death Metal
-  - Qin's Blade
   - Riptalon
   - Soul Gem
   flex_slots:
+  - Golden Blade
   - Death Metal
-  - Qin's Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Toxic Blade:
       total: 0.61
       efficiency: 0.45
@@ -376,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Qin's Blade:
-      total: 0.51
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Riptalon:
       total: 0.63
       efficiency: 0.46

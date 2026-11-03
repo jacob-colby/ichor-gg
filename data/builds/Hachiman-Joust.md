@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - The Reaper
   - Tekko-Kagi
   - Riptalon
-  - Demon Blade
   flex_slots:
   - Tekko-Kagi
-  - Demon Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Toxic Blade:
       total: 0.64
       efficiency: 0.45
@@ -61,12 +67,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Demon Blade:
-      total: 0.54
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
-  - Qin's Blade
   - The Reaper
   - Riptalon
   - Silverbranch Bow
   flex_slots:
   - Silverbranch Bow
-  - Qin's Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Toxic Blade:
       total: 0.67
       efficiency: 0.45
@@ -435,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-    Qin's Blade:
-      total: 0.51
-      efficiency: 0.38
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - The Reaper
   - Tekko-Kagi
   - Riptalon
-  - Demon Blade
   flex_slots:
   - Tekko-Kagi
-  - Demon Blade
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -553,6 +553,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Toxic Blade:
       total: 0.64
       efficiency: 0.45
@@ -583,11 +589,5 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.89
-    Demon Blade:
-      total: 0.54
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
   starter: *id001
 ---

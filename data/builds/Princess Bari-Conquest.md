@@ -351,8 +351,8 @@ builds:
     Tyrfing, Toxic Blade, Shield Splitter, Yogi''s Necklace, Bancroft''s Talon, Tekko-Kagi,
     Eros'' Bow, Phoenix Feather, Silverbranch Bow, Runeforged Hammer, Breastplate
     of Valor, Freya''s Tears, Helm of Radiance, Rod of Asclepius, Bloodforge, Sphere
-    of Negation, Pharaoh''s Curse, Chandra''s Grace, Oni Hunter''s Garb, Hydra''s
-    Lament, Titan''s Bane, Lernaean Bow, Helm of Darkness, Bragi''s Harp.'
+    of Negation, Soul Locket, Pharaoh''s Curse, Chandra''s Grace, Oni Hunter''s Garb,
+    Hydra''s Lament, Titan''s Bane, Lernaean Bow, Helm of Darkness.'
   slot_scores:
     Berserker's Shield:
       total: 0.58

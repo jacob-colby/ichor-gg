@@ -421,8 +421,9 @@ builds:
     Shield Splitter, Spear of Desolation, Bancroft''s Talon, Tekko-Kagi, Runeforged
     Hammer, Golden Blade, Phoenix Feather, Breastplate of Valor, Bloodforge, Eros''
     Bow, Helm of Radiance, Freya''s Tears, Rod of Asclepius, Titan''s Bane, Sphere
-    of Negation, Hydra''s Lament, Chandra''s Grace, Spear of the Magus, Lernaean Bow,
-    Oni Hunter''s Garb, Toxic Blade, Pharaoh''s Curse, Ancient Signet, Tyrfing.'
+    of Negation, Hydra''s Lament, Chandra''s Grace, Spear of the Magus, Soul Locket,
+    Lernaean Bow, Oni Hunter''s Garb, Toxic Blade, Pharaoh''s Curse, Ancient Signet,
+    Tyrfing.'
   slot_scores:
     Berserker's Shield:
       total: 0.62
@@ -790,7 +791,7 @@ builds:
     Bow, Ancient Signet, Yogi''s Necklace, Lernaean Bow, Lotus Sickle, Bragi''s Harp,
     The Crusher, Toxic Blade, Doom Orb, The World Stone, Chronos'' Pendant, Jade Scepter,
     Heartseeker, Rod of Asclepius, Avenging Blade, Arondight, Bracer of The Abyss,
-    Dreamer''s Idol, Chandra''s Grace, Tyrfing.'
+    Soul Locket, Dreamer''s Idol, Tyrfing.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -939,8 +940,8 @@ builds:
     of the Magus, Ethereal Staff, Titan''s Bane, Hydra''s Lament, Lernaean Bow, Bloodforge,
     Toxic Blade, Yogi''s Necklace, Bragi''s Harp, Ancient Signet, Lotus Sickle, Doom
     Orb, Bracer of The Abyss, The Crusher, Chronos'' Pendant, Jade Scepter, The World
-    Stone, Rod of Asclepius, Heartseeker, Avenging Blade, Chandra''s Grace, Dreamer''s
-    Idol, Tyrfing.'
+    Stone, Rod of Asclepius, Heartseeker, Avenging Blade, Soul Locket, Chandra''s
+    Grace, Tyrfing.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -1015,7 +1016,7 @@ builds:
     Crusher, Doom Orb, Toxic Blade, Ancient Signet, Yogi''s Necklace, The World Stone,
     Chronos'' Pendant, Eros'' Bow, Heartseeker, Lernaean Bow, Arondight, Bragi''s
     Harp, Dreamer''s Idol, Chandra''s Grace, Jade Scepter, Rod of Asclepius, Avenging
-    Blade, Bracer of The Abyss, Tyrfing.'
+    Blade, Bracer of The Abyss, Soul Locket, Tyrfing.'
   slot_scores:
     Book of Thoth:
       total: 0.46
@@ -1089,8 +1090,8 @@ builds:
     Necklace, Obsidian Shard, Shield Splitter, Spear of Desolation, Bloodforge, Runeforged
     Hammer, Phoenix Feather, Breastplate of Valor, Tekko-Kagi, Helm of Radiance, Freya''s
     Tears, Golden Blade, Rod of Asclepius, Titan''s Bane, Sphere of Negation, Hydra''s
-    Lament, Chandra''s Grace, Spear of the Magus, Oni Hunter''s Garb, Eros'' Bow,
-    Ancient Signet, Regrowth Striders, Helm of Darkness, Lotus Sickle, Lernaean Bow,
+    Lament, Chandra''s Grace, Spear of the Magus, Soul Locket, Oni Hunter''s Garb,
+    Eros'' Bow, Ancient Signet, Regrowth Striders, Helm of Darkness, Lotus Sickle,
     Tyrfing.'
   slot_scores:
     Berserker's Shield:
@@ -1241,7 +1242,7 @@ builds:
     Lament, Bragi''s Harp, Yogi''s Necklace, Ancient Signet, Lotus Sickle, Bracer
     of The Abyss, Bloodforge, Doom Orb, The Crusher, Chronos'' Pendant, Jade Scepter,
     The World Stone, Rod of Asclepius, Heartseeker, Avenging Blade, Chandra''s Grace,
-    Arondight, Tyrfing.'
+    Soul Locket, Tyrfing.'
   slot_scores:
     Berserker's Shield:
       total: 0.53
@@ -1392,7 +1393,7 @@ builds:
     Tyrfing, Eros'' Bow, Ancient Signet, Yogi''s Necklace, Lernaean Bow, Lotus Sickle,
     Bragi''s Harp, The Crusher, Toxic Blade, Doom Orb, The World Stone, Chronos''
     Pendant, Jade Scepter, Heartseeker, Rod of Asclepius, Avenging Blade, Arondight,
-    Bracer of The Abyss, Dreamer''s Idol, Chandra''s Grace.'
+    Bracer of The Abyss, Soul Locket, Dreamer''s Idol.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55

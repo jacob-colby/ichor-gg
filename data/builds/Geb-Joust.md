@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
   - Toxic Blade
-  - Berserker's Shield
   - Jotunn's Revenge
   - Shield Splitter
   - Amanita Charm
   - Erosion
   flex_slots:
+  - Golden Blade
   - Shield Splitter
-  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -423,18 +423,18 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Toxic Blade:
       total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.8
-    Berserker's Shield:
-      total: 0.54
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67

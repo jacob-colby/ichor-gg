@@ -201,8 +201,8 @@ builds:
     Mail, Glorious Pridwen, Runeforged Hammer, Gluttonous Grimoire, Regrowth Striders,
     Leviathan''s Hide, Helm of Darkness, Rod of Asclepius, Stone of Binding, Helm
     of Radiance, Spear of Desolation, Screeching Gargoyle, Ancile, Magi''s Cloak,
-    Sphere of Negation, Hide of the Nemean Lion, Blood-Bound Book, Void Stone, Mantle
-    Of Discord, Void Shield, The Reaper.'
+    Sphere of Negation, Soul Locket, Hide of the Nemean Lion, Blood-Bound Book, Void
+    Stone, Mantle Of Discord, Void Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58

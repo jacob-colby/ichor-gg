@@ -2752,7 +2752,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1115 pipeline · 787 viewer |
+| Tests | 1167 pipeline · 934 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

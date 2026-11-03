@@ -200,8 +200,8 @@ builds:
     Garb, Chandra''s Grace, Avenging Blade, Gluttonous Grimoire, Midgardian Mail,
     Wyrmskin Hide, Regrowth Striders, Glorious Pridwen, Leviathan''s Hide, Titan''s
     Bane, Rod of Asclepius, Blood-Bound Book, Helm of Radiance, Stone of Binding,
-    Helm of Darkness, Sphere of Negation, Spear of Desolation, Arondight, Magi''s
-    Cloak, Screeching Gargoyle, Ancile.'
+    Helm of Darkness, Sphere of Negation, Spear of Desolation, Soul Locket, Arondight,
+    Magi''s Cloak, Screeching Gargoyle.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.59

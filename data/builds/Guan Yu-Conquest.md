@@ -198,8 +198,8 @@ builds:
     The Reaper, Hydra''s Lament, Gluttonous Grimoire, Oni Hunter''s Garb, Blood-Bound
     Book, Spear of Desolation, Erosion, Eye of Providence, Rod of Asclepius, Tyrfing,
     Regrowth Striders, Helm of Radiance, Avenging Blade, Sphere of Negation, Tekko-Kagi,
-    Midgardian Mail, Glorious Pridwen, Titan''s Bane, Obsidian Shard, Helm of Darkness,
-    Eros'' Bow, Pharaoh''s Curse, Arondight, Screeching Gargoyle, Draconic Scale.'
+    Midgardian Mail, Soul Locket, Glorious Pridwen, Titan''s Bane, Obsidian Shard,
+    Helm of Darkness, Eros'' Bow, Pharaoh''s Curse, Arondight, Draconic Scale.'
   slot_scores:
     Book of Thoth:
       total: 0.46

@@ -345,9 +345,9 @@ builds:
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Gluttonous Grimoire,
     Kinetic Cuirass, Ethereal Staff, Genji''s Guard, Phoenix Feather, Freya''s Tears,
     Blood-Bound Book, Yogi''s Necklace, Rod of Asclepius, Helm of Radiance, Spear
-    of the Magus, Sphere of Negation, Helm of Darkness, Breastplate of Valor, Erosion,
-    Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Draconic Scale, Jade
-    Scepter, Midgardian Mail, Doom Orb, Lotus Sickle.'
+    of the Magus, Sphere of Negation, Helm of Darkness, Breastplate of Valor, Soul
+    Locket, Erosion, Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Draconic
+    Scale, Jade Scepter, Midgardian Mail, Doom Orb, Lotus Sickle.'
   slot_scores:
     Book of Thoth:
       total: 0.49

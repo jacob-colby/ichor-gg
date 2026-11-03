@@ -202,9 +202,9 @@ builds:
     Oni Hunter''s Garb, Chandra''s Grace, Shifter''s Shield, Midgardian Mail, Gluttonous
     Grimoire, Runeforged Hammer, Hide of the Nemean Lion, Glorious Pridwen, Leviathan''s
     Hide, Regrowth Striders, Helm of Darkness, Rod of Asclepius, Stone of Binding,
-    Helm of Radiance, Ancile, Magi''s Cloak, Sphere of Negation, Spear of Desolation,
-    Screeching Gargoyle, Void Stone, Void Shield, Mantle Of Discord, Blood-Bound Book,
-    The Reaper, Stampede.'
+    Helm of Radiance, Ancile, Magi''s Cloak, Soul Locket, Sphere of Negation, Spear
+    of Desolation, Screeching Gargoyle, Void Stone, Void Shield, Mantle Of Discord,
+    Blood-Bound Book, Stampede.'
   slot_scores:
     Genji's Guard:
       total: 0.55

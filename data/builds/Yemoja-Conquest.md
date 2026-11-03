@@ -192,13 +192,13 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Amanita Charm, Obsidian Shard, Shield of the Phoenix,
-    Soul Gem, Kinetic Cuirass, Ethereal Staff, Phoenix Feather, Breastplate of Valor,
-    Erosion, Gluttonous Grimoire, Yogi''s Necklace, Chandra''s Grace, Eye of Providence,
-    Draconic Scale, Oni Hunter''s Garb, Rod of Asclepius, Helm of Darkness, Glorious
-    Pridwen, Helm of Radiance, Regrowth Striders, Sphere of Negation, Blood-Bound
-    Book, Midgardian Mail, Shifter''s Shield, Leviathan''s Hide, Screeching Gargoyle,
-    Genji''s Guard.'
+    this god: Rod of Tahuti, Amanita Charm, Shield of the Phoenix, Soul Gem, Kinetic
+    Cuirass, Ethereal Staff, Phoenix Feather, Breastplate of Valor, Erosion, Gluttonous
+    Grimoire, Yogi''s Necklace, Chandra''s Grace, Eye of Providence, Draconic Scale,
+    Oni Hunter''s Garb, Rod of Asclepius, Helm of Darkness, Glorious Pridwen, Helm
+    of Radiance, Regrowth Striders, Sphere of Negation, Soul Locket, Blood-Bound Book,
+    Midgardian Mail, Shifter''s Shield, Leviathan''s Hide, Screeching Gargoyle, Genji''s
+    Guard.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.54

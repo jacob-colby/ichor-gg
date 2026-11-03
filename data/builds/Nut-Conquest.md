@@ -346,9 +346,9 @@ builds:
     Genji''s Guard, Ethereal Staff, Kinetic Cuirass, Obsidian Shard, Yogi''s Necklace,
     Shield Splitter, Tekko-Kagi, Bancroft''s Talon, Eros'' Bow, Phoenix Feather, Runeforged
     Hammer, Breastplate of Valor, Freya''s Tears, Helm of Radiance, Rod of Asclepius,
-    Bloodforge, Sphere of Negation, Spear of the Magus, Titan''s Bane, Chandra''s
-    Grace, Pharaoh''s Curse, Oni Hunter''s Garb, Hydra''s Lament, Lernaean Bow, Helm
-    of Darkness, Shogun''s Ofuda, Ancient Signet, Regrowth Striders, Jade Scepter.'
+    Bloodforge, Sphere of Negation, Spear of the Magus, Titan''s Bane, Soul Locket,
+    Chandra''s Grace, Pharaoh''s Curse, Oni Hunter''s Garb, Hydra''s Lament, Lernaean
+    Bow, Helm of Darkness, Shogun''s Ofuda, Ancient Signet, Regrowth Striders.'
   slot_scores:
     Berserker's Shield:
       total: 0.58

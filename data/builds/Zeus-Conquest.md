@@ -348,8 +348,8 @@ builds:
     of the Phoenix, Nimble Ring, Breastplate of Valor, Genji''s Guard, Ethereal Staff,
     Kinetic Cuirass, Yogi''s Necklace, Bancroft''s Talon, Phoenix Feather, Eros''
     Bow, Rod of Asclepius, Helm of Radiance, Freya''s Tears, Sphere of Negation, Spear
-    of the Magus, Helm of Darkness, Chandra''s Grace, Oni Hunter''s Garb, Jade Scepter,
-    Erosion, Ancient Signet, Eye of Providence, Lotus Sickle.'
+    of the Magus, Soul Locket, Helm of Darkness, Chandra''s Grace, Oni Hunter''s Garb,
+    Jade Scepter, Erosion, Ancient Signet, Eye of Providence.'
   slot_scores:
     Book of Thoth:
       total: 0.47

@@ -200,9 +200,9 @@ builds:
     Yogi''s Necklace, Breastplate of Valor, Oni Hunter''s Garb, Chandra''s Grace,
     Midgardian Mail, Gluttonous Grimoire, Runeforged Hammer, Glorious Pridwen, Leviathan''s
     Hide, Helm of Darkness, Regrowth Striders, Rod of Asclepius, Stone of Binding,
-    Helm of Radiance, Ancile, Sphere of Negation, Magi''s Cloak, Spear of Desolation,
-    Hide of the Nemean Lion, Screeching Gargoyle, Void Stone, Blood-Bound Book, Void
-    Shield, Mantle Of Discord, Shifter''s Shield, The Reaper.'
+    Helm of Radiance, Soul Locket, Ancile, Sphere of Negation, Magi''s Cloak, Spear
+    of Desolation, Hide of the Nemean Lion, Screeching Gargoyle, Void Stone, Blood-Bound
+    Book, Void Shield, Mantle Of Discord, Shifter''s Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.55

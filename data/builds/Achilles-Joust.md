@@ -268,22 +268,22 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Berserker's Shield
   - Riptalon
   - Amanita Charm
   - Pharaoh's Curse
-  - Shogun's Ofuda
   flex_slots:
+  - Golden Blade
   - Pharaoh's Curse
-  - Shogun's Ofuda
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -293,6 +293,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Toxic Blade:
       total: 0.7
       efficiency: 0.48
@@ -320,12 +326,6 @@ builds:
     Pharaoh's Curse:
       total: 0.57
       efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
