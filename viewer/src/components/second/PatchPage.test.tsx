@@ -27,7 +27,7 @@ describe("PatchPage", () => {
 
   it("titles a period by its patches, dates beside it from the ISO parts", () => {
     render(<PatchPage periods={[period()]} />);
-    expect(screen.getByRole("heading", { level: 2, name: "Open Beta 40 to Open Beta 46" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: "Open Beta 46" })).toBeInTheDocument();
     expect(screen.getByText("29 Aug – 2 Nov")).toBeInTheDocument();
   });
 
