@@ -1,146 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@700;800&family=Sofia+Sans:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Surfaces — evolved "Arena Night" (rail is the darkest frame).
-     WIDENED 2026-08-19, downward only. The stack claimed four tiers "each one
-     step closer or more elevated" and did not deliver them: measured, bg0 -> bg1
-     was 1.022:1 and the whole bg0 -> bg3 run only 1.130:1. A panel on the page
-     ground was not reading as a panel, which is the surface half of the Ratio
-     Rule — parts with no ratio between them read flat however much shadow you
-     add.
-     The light end could not move. `faint` on bg3 sits at 4.52:1 against a
-     4.5:1 floor, so bg3 is pinned exactly where it was; the Readable-Floor Rule
-     outranks atmosphere and a first attempt at lifting the whole stack put it
-     at 4.28:1. So the dark end came down instead: steps are now 1.038 / 1.066 /
-     1.051 and the run is 1.163:1, with every text tier on every surface equal
-     or better than before (faint on bg0: 4.99 -> 5.26). The headroom really is
-     this small — near-black pins one end and AA pins the other. */
-  --color-rail: #05070a;
-  --color-bg0: #070910;
-  --color-bg1: #0c0f16;
-  --color-bg2: #12171f;
-  --color-bg3: #171c24;
-  --color-line: #1e2530;
-  --color-line-strong: #2a3342;
+  /* ── Thermal Ink (dark) — the Second Screen world ─────────────────────────
+     One near-black ground and two lifted surfaces, a neutral ink, and ONE hue
+     that means something: violet is selection, the primary action and the
+     model's own voice (the job gold used to do). The enemy side never gets a
+     hue of its own — it is drawn in ink outline and says "Enemy" in words.
+     Positive / negative only ever mark a comparison's direction.
 
-  /* Text tiers */
-  --color-ink: #e8edf4;
-  --color-ink-soft: #c3cad6;
-  --color-muted: #8b95a5;
-  /* The quietest tier still has to be readable: #5b6472 measured 2.86–3.37:1
-     across the surface stack and failed AA everywhere it was used. This clears
-     4.5:1 on every tier (bg3, the lightest, is 4.52) while staying clearly
-     below `muted` so the four-step hierarchy survives. */
-  --color-faint: #7a8494;
+     Contrast on `ground` (#101114), measured: ink 15.9, muted 8.0, quiet 5.8,
+     accent 7.8, positive 10.0, negative 8.8; every role tint >= 5.3. On
+     surface-2 (the lightest plane) the floor is quiet at 5.0. Text on violet
+     uses accent-ink, 7.6:1. */
+  --color-ground: #101114;
+  --color-surface: #16171b;
+  --color-surface-2: #1f2026;
+  --color-surface-3: #292a31;
+  --color-quiet: #8b8e97;
+  --color-accent: #a998ff;
+  --color-accent-ink: #14121f;
+  --color-positive: #6fcf9f;
+  --color-negative: #f09a9a;
 
-  /* Accent + semantic */
-  --color-gold: #e3b23c;
-  /* Aspect orange. NOT a second app accent — the Torchlight Rule still holds
-     and gold still means selection / primary action / the model talking. This
-     is a GAME-OBJECT marker, the same category as the role tints: SMITE marks
-     a god's aspect with an orange hexagon, and matching the game's own
-     vocabulary is why a player recognises the control without a legend.
-     Pulled well off gold's hue (43° -> 25°) so the two never read as the same
-     state at icon size, where they sit within a few pixels of each other. */
+  /* The pre-redesign names, re-pointed at Thermal Ink so the routes that keep
+     their old bodies (Tiers, Items, Patch notes, Method, the draft board) sit
+     in the new world instead of beside it. `gold` keeps its JOB — selection,
+     primary action, the model talking — so it now draws violet. */
+  --color-rail: #0b0c0e;
+  --color-bg0: #101114;
+  --color-bg1: #16171b;
+  --color-bg2: #1f2026;
+  --color-bg3: #292a31;
+  --color-line: #33353c;
+  --color-line-strong: #464851;
+
+  --color-ink: #ebebee;
+  --color-ink-soft: #cfd0d6;
+  --color-muted: #a6a9b2;
+  --color-faint: #8b8e97;
+
+  --color-gold: #a998ff;
   --color-aspect: #ef8034;
-  --color-blue: #4ea3ff;
-  --color-under: #63c088;
-  --color-premium: #c58b8b;
+  --color-blue: #8fc2ff;
+  --color-under: #6fcf9f;
+  --color-premium: #f09a9a;
 
-  /* Role + damage accents */
+  /* Role tints stay semantic. Mid moved off lavender (#9d8bb3) to a steel
+     blue so a Mid god's name can never read as "selected" next to violet. */
   --color-role-guardian: #7f9e97;
   --color-role-warrior: #b98a6d;
-  --color-role-mid: #9d8bb3;
+  --color-role-mid: #8fa3c8;
   --color-role-hunter: #b6a571;
-  --color-role-assassin: #ab7a8c;
+  --color-role-assassin: #b9879a;
   --color-dmg-physical: #b98a6d;
-  --color-dmg-magical: #8891b3;
+  --color-dmg-magical: #8fa3c8;
 
-  /* Radii */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;
+  --radius-xl: 18px;
 
-  /* Elevation. Every raised surface catches light along its top edge, the way
-     a physical panel would — see `.plane` below and DESIGN.md § Ground Plane. */
-  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 16px rgba(0, 0, 0, 0.35);
-  --shadow-raised: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 28px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 0 1px rgba(227, 178, 60, 0.4), 0 4px 14px rgba(227, 178, 60, 0.15);
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 6px 16px rgba(0, 0, 0, 0.35);
+  --shadow-raised: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 28px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 0 1px rgba(169, 152, 255, 0.45), 0 4px 14px rgba(169, 152, 255, 0.12);
+  --shadow-sheet: 0 -18px 48px rgba(0, 0, 0, 0.55);
 
-  /* Motion */
   --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* ── Faces ──────────────────────────────────────────────────────────────
-     `font-mono` sets measurements: numerals, a unit bound to a numeral
-     (2500g, 47% win), tier letters, T1/T2/T3 — anything that reads down a
-     column. Plus one non-numeric use: the section eyebrow (uppercase, tracked,
-     text-label) that titles a section or a table column.
+  /* ── Faces ────────────────────────────────────────────────────────────
+     `font-cond` is the broadcast voice: Sofia Sans Extra Condensed 700/800,
+     always uppercase — god names, item names, tabs, gold, section names.
+     `font-sans` (Sofia Sans 400/500/600) is everything else. Numbers set
+     tabular wherever they read down a column (`.num`).
+     The old `display` and `mono` names map onto the same superfamily so the
+     kept route bodies stop loading Rajdhani / Inter / JetBrains Mono. */
+  --font-cond: "Sofia Sans Extra Condensed", "Sofia Sans", sans-serif;
+  --font-sans: "Sofia Sans", system-ui, sans-serif;
+  --font-display: "Sofia Sans Extra Condensed", "Sofia Sans", sans-serif;
+  --font-mono: "Sofia Sans", system-ui, sans-serif;
 
-     Nothing else. Navigation, actions, verdicts, names, states, effect tags
-     and prose set in Inter or Rajdhani however small they are. The old rule
-     ("any label, tag, or count") caught nearly every string in a data tool and
-     put 73% of the items shelf in the label face, at which point mono had
-     stopped distinguishing anything. See DESIGN.md § The Measurement Rule.  */
-  --font-display: "Rajdhani", sans-serif;
-  --font-sans: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  /* ── Type scale (new surfaces) ──────────────────────────────────────────
+     12px is the floor. Airy: five items per phone screen, not fifteen.
+     cap     12  captions, provenance, counts
+     note    13  per-item reason, secondary lines
+     copy    15  reading size
+     say     17  the one verdict sentence
+     row     22  item names (cond)
+     head    30  section names (cond)
+     god     46  the god's name (cond)
+     hero    64  "Who are you playing?" (cond)                         */
+  --text-cap: 12px;
+  --text-cap--line-height: 1.4;
+  --text-note: 13px;
+  --text-note--line-height: 1.4;
+  --text-copy: 15px;
+  --text-copy--line-height: 1.5;
+  --text-say: 17px;
+  --text-say--line-height: 1.38;
+  --text-row: 22px;
+  --text-row--line-height: 1;
+  --text-head: 30px;
+  --text-head--line-height: 1;
+  --text-god: 46px;
+  --text-god--line-height: 0.9;
+  --text-hero: 64px;
+  --text-hero--line-height: 0.88;
 
-  /* ── Type scale ────────────────────────────────────────────────────────
-     Seven steps replacing sixteen ad-hoc sizes. The app had nine distinct
-     sizes inside a 4px band (9 / 9.5 / 10 / 10.5 / 11 / 11.5 / 12 / 12.5 / 13)
-     and 61–84% of every surface's text at or below 10.5px — which is why it
-     read flat: with no ratio between steps there is no hierarchy to read.
-
-     Tight at the bottom because this is a dense data tool, open at the top so
-     a page can actually make a claim. 10px is a hard floor; nothing below it
-     ships (the god sidebar was running 7px).
-
-     micro   dense mono numerals inside a grid cell
-     label   mono uppercase micro-labels, tags, counts
-     small   secondary content, chips, captions
-     body    default reading size
-     lead    intro paragraphs, dialog body copy
-     title   section titles, god/item names in a detail view
-     display the one page claim per surface                                */
-  --text-micro: 10px;
+  /* Kept for the route bodies that still use them. */
+  --text-micro: 11px;
   --text-micro--line-height: 1.4;
-  --text-label: 11px;
+  --text-label: 12px;
   --text-label--line-height: 1.45;
-  --text-small: 12px;
+  --text-small: 13px;
   --text-small--line-height: 1.5;
-  --text-body: 13px;
-  --text-body--line-height: 1.6;
-  --text-lead: 15px;
-  --text-lead--line-height: 1.55;
-  --text-title: 20px;
-  --text-title--line-height: 1.25;
-  --text-display: 32px;
-  --text-display--line-height: 1.12;
+  --text-body: 14px;
+  --text-body--line-height: 1.55;
+  --text-lead: 16px;
+  --text-lead--line-height: 1.5;
+  --text-title: 22px;
+  --text-title--line-height: 1.2;
+  --text-display: 34px;
+  --text-display--line-height: 1.05;
 }
 
 :root { color-scheme: dark; }
 
-/* ── Ground plane ────────────────────────────────────────────────────────
-   The page ground is lit rather than painted: a barely-there falloff, lighter
-   at the top as if there were distance behind it, darker toward the foot. It
-   is attached to the viewport, not the document, because this is a lighting
-   condition of the screen and not a property of the content — scrolling should
-   not drag the light around.
-
-   The delta is deliberately small. `faint`, the quietest text tier, measures
-   4.99:1 against the lightest point here (it has 5.11 on the old flat ground),
-   so the whole four-step hierarchy still clears AA. Any more lift and it
-   wouldn't — and the falloff would start to band. */
+/* Flat ground. Thermal Ink is printed, not lit: no falloff, one value. */
 body {
-  background:
-    radial-gradient(140% 95% at 50% -8%, #0d1119 0%, #090c12 46%, #05070b 100%)
-    fixed var(--color-bg0);
+  background: var(--color-ground);
   font-family: var(--font-sans);
   color: var(--color-ink);
 }
 button:not(:disabled) { cursor: pointer; }
+html { background: var(--color-ground); }
+
+/* The old mono face is now Sofia Sans; it still sets measurements, so it
+   keeps tabular figures. */
+.font-mono, .num { font-variant-numeric: tabular-nums; }
+.font-cond { text-transform: uppercase; letter-spacing: 0.005em; }
+
+/* Room for the bottom tab bar (and the home indicator) on phones. */
+.pb-tabbar { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) { .pb-tabbar { padding-bottom: 0; } }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* ── The one authored moment ───────────────────────────────────────────────
+   An enemy pick that changes the build swaps a row, and that row LOCKS IN
+   like a broadcast lower-third: it slides up a few pixels from a clipped
+   edge and settles, expo-out, ~300ms; its reason line follows a beat later.
+   Nothing else on the page animates. Reduced motion: it is simply there,
+   still outlined and still carrying its reason. */
+@keyframes lock-in {
+  from { transform: translateY(10px); clip-path: inset(0 0 100% 0 round 12px); opacity: 0.4; }
+  to { transform: none; clip-path: inset(0 0 0 0 round 12px); opacity: 1; }
+}
+@keyframes reason-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: none; }
+}
+.lock-in { animation: lock-in 320ms var(--ease-out-expo) both; }
+.lock-in .lock-reason { animation: reason-in 260ms var(--ease-out-expo) 160ms both; }
+
+@keyframes sheet-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+.sheet-up { animation: sheet-up 220ms var(--ease-out-expo) both; }
+
+/* Native <details> disclosure marker off; our own chevron rotates. */
+.disclosure > summary { list-style: none; }
+.disclosure > summary::-webkit-details-marker { display: none; }
+.disclosure[open] > summary .chev { transform: rotate(90deg); }
+input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.chev { transition: transform 160ms var(--ease-standard); }
 
 /* A raised surface: the light catching its top edge.
  *
@@ -181,13 +215,16 @@ button:not(:disabled) { cursor: pointer; }
 .dock { box-shadow: var(--shadow-raised), 0 0 0 1px rgba(255, 255, 255, 0.07); }
 .dock.is-live { box-shadow: var(--shadow-raised), var(--shadow-glow); }
 
-/* Keyboard focus. DESIGN.md reserves focus-blue for exactly this, but nothing
-   was drawing it — every focusable fell back to the UA default. Elements that
-   opt out with `focus:outline-none` (search fields inside a bordered wrapper)
-   keep their own focus-within treatment; this covers everything else. */
-:focus-visible {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
+/* Keyboard focus, in Thermal Ink's one hue (violet: selection). Elements that
+   opt out (search fields inside a bordered wrapper) keep their own
+   focus-within treatment; this covers everything else. */
+@layer base {
+  /* Layered so a utility (`focus-visible:outline-none` on a field inside a
+     bordered wrapper that draws its own focus) can still opt out. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 }
 
 /* Tappable affordance — press feedback for cards, pills, tabs (120ms fast) */
@@ -223,6 +260,9 @@ button:not(:disabled) { cursor: pointer; }
 
 @media (prefers-reduced-motion: reduce) {
   .press, .press:active { transition: none; transform: none; }
+  .lock-in, .lock-in .lock-reason, .sheet-up { animation: none; }
+  input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+.chev { transition: none; }
   /* Bars land at full length immediately rather than not rendering at all. */
   .bar-grow { animation: none; }
 }

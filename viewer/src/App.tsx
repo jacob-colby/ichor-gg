@@ -1,49 +1,43 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useIndexData } from "./hooks/useIndexData";
-import { Home } from "./components/Home";
 import { DraftPage } from "./components/DraftPage";
-import { DraftDock } from "./components/DraftDock";
-import { DetailPanel } from "./components/DetailPanel";
 import { AddGodModal } from "./components/AddGodModal";
 import { ItemsShop } from "./components/ItemsShop";
 import { GodInfo } from "./components/GodInfo";
 import { GodItems } from "./components/GodItems";
 import { GodRanking } from "./components/GodRanking";
-import { GodPickerDialog } from "./components/GodPicker";
-import { SubjectFrame, LensTabs } from "./components/SubjectFrame";
-import { SubjectSearch } from "./components/SubjectSearch";
 import { Legend } from "./components/Legend";
 import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
 import { Method } from "./components/Method";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
-import { Wordmark } from "./components/Wordmark";
-import { relativeDate } from "./lib/relativeDate";
-import { useHashRoute, toHash, navigate } from "./lib/useHashRoute";
+import { AppNav, Mark, type MoreLink, type NavTab } from "./components/second/AppNav";
+import { GodGrid } from "./components/second/GodGrid";
+import { GodPage } from "./components/second/GodPage";
+import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
+import { GodSubPage } from "./components/second/GodSubPage";
+import { useHashRoute, toHash } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
-import { buildStandingsBoard } from "./lib/standings";
 import type { CuratedBuildEntry } from "./types";
 
+/* The Second Screen shell.
+ *
+ * The app opens on "Who are you playing?" and every other route sits inside
+ * one chrome: a bottom tab bar on a phone (Build · Draft · Gods · More), a slim
+ * top bar from `lg` up. The old floating draft dock is gone from this shell —
+ * the god page carries the enemy team itself, and Draft is one tab away
+ * everywhere else, so the dock would only be a second copy of a control. */
 function App() {
   const { data, error, reload } = useIndexData();
   const route = useHashRoute();
-  const [mode, setMode] = useState("Conquest");
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
-  const [pickerOpen, setPickerOpen] = useState(false);
-  /* The aspect belongs to the god, not to the build panel that used to own it.
-     Lifted here so the portrait can carry the control (where SMITE puts it)
-     and the build panel can still read it. */
-  const [aspectOn, setAspectOn] = useState(false);
   const isDev = import.meta.env.DEV;
 
-  /* Refetching index.json is a pipeline affordance, not a visitor's control:
-   * the file is static, so pressing it on a deployed site re-reads the same
-   * bytes and changes nothing on screen. It shipped in the public header
-   * anyway, where it read as a broken button — no result, no feedback. It is
-   * dev-only now, and it reports what it did, because a control that runs
-   * silently is indistinguishable from one that is broken. */
+  /* Refetching index.json is a pipeline affordance, not a visitor's control,
+   * so it is dev-only — and it reports what it did, because a control that
+   * runs silently is indistinguishable from one that is broken. */
   const [reloadState, setReloadState] = useState<"idle" | "busy" | "done">("idle");
   const doneTimer = useRef<number | undefined>(undefined);
   const runReload = useCallback(async () => {
@@ -55,16 +49,9 @@ function App() {
   }, [reload]);
   useEffect(() => () => window.clearTimeout(doneTimer.current), []);
 
-  // Per-route tab/history title — these links get pasted into Discord, and a
-  // history full of identical "ichor" entries is useless.
-  useEffect(() => {
-    document.title = documentTitle(route);
-  }, [route]);
-
-  // Changing subject closes the switcher; nothing else should.
-  useEffect(() => { setPickerOpen(false); }, [route.god]);
-  // ...and drops the aspect, which described the god you just left.
-  useEffect(() => { setAspectOn(false); }, [route.god]);
+  useEffect(() => { document.title = documentTitle(route); }, [route]);
+  // A new route starts at the top; the document scrolls, not a panel.
+  useEffect(() => { window.scrollTo?.(0, 0); }, [route.god, route.lens]);
 
   const godsApi = async (action: "add" | "remove", name: string) => {
     setScraping(true);
@@ -74,259 +61,140 @@ function App() {
       body: JSON.stringify({ action, name }),
     }).then((r) => r.json()).catch(() => ({ ok: false }));
     setScraping(false);
-    if (action === "remove" && name === route.god) navigate(toHash.home());
     reload();
     return res;
   };
-  const removeGod = (name: string) => godsApi("remove", name);
-  const addGod = async (name: string) => {
-    setAddOpen(false);
-    await godsApi("add", name);
-  };
+  const addGod = async (name: string) => { setAddOpen(false); await godsApi("add", name); };
 
   if (error) {
     return (
-      <div className="flex h-screen flex-col items-center justify-center gap-4 px-6 text-center text-ink">
-        <Wordmark px={30} />
+      <div className="flex min-h-dvh flex-col items-center justify-center gap-4 px-6 text-center text-ink">
+        <Mark size={30} />
         <div className="max-w-[46ch]">
-          <h1 className="font-display text-title font-bold text-ink">Couldn&rsquo;t load the build data</h1>
-          <p className="mt-2 text-body leading-relaxed text-muted">
+          <h1 className="font-cond text-head font-extrabold text-ink">Couldn&rsquo;t load the build data</h1>
+          <p className="mt-2 text-copy text-muted">
             ichor reads everything from a single data file, and that file didn&rsquo;t come back.
             It&rsquo;s usually a refresh away — if it keeps failing, the site is probably mid-deploy.
           </p>
         </div>
-        <button type="button" onClick={reload} className="press rounded-md bg-gold px-4 py-1.5 text-body font-medium text-bg0">
+        <button type="button" onClick={reload}
+          className="press h-11 rounded-[10px] bg-accent px-5 font-cond text-[18px] font-bold uppercase text-accent-ink">
           Try again
         </button>
-        {/* The technical detail stays available without leading with it. */}
-        <p className="font-mono text-label text-faint">{error}</p>
+        <p className="text-cap text-quiet">{error}</p>
       </div>
     );
   }
 
   if (!data) {
     return (
-      <div className="flex h-screen flex-col text-ink">
-        {/* Same chrome as the loaded shell, so nothing jumps when index.json
-            lands — only the content area is a placeholder. */}
-        <header className="flex items-center gap-3 border-b border-line px-4 py-2.5 sm:px-6">
-          {/* No controls while loading. A Reload button here silently
-              refetched the same file and reported nothing — and the real
-              failure path already has its own Try again. */}
-          <Wordmark />
-        </header>
-        <div className="flex min-h-0 flex-1 overflow-hidden">
-          {route.god
-            ? <AppSkeleton />
-            : <div className="flex-1 overflow-y-auto"><HomeSkeleton /></div>}
-        </div>
+      <div className="min-h-dvh text-ink">
+        <div className="flex h-14 items-center border-b border-line px-4 lg:px-6"><Mark /></div>
+        {route.god ? <AppSkeleton /> : <HomeSkeleton />}
       </div>
     );
   }
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
+  const lastGod = readLastGod();
+  const buildGod = god?.name ?? (lastGod && data.gods.some((g) => g.name === lastGod) ? lastGod : undefined);
 
-  // The frame states what's in the index; Home's claim states what the record
-  // says about it. Both read the same board, so the two can't drift.
-  const board = buildStandingsBoard(data.tierlist?.gods);
-  const roster = { total: data.gods.length, ranked: board.ranked, unranked: board.unmeasured };
+  const active: NavTab = route.god ? "build"
+    : route.lens === "draft" ? "draft"
+      : route.lens === "board" ? "gods" : "more";
+  const activeMore = (["tiers", "items", "patch", "method"] as const).includes(route.lens as MoreLink)
+    && !route.god ? (route.lens as MoreLink) : undefined;
 
-  // Per-mode slice, never the Conquest-mirroring top level: only Conquest has
-  // community ratings, so reading `tierlist.gods` under any other mode would
-  // assert a community score that doesn't exist there. Keyed rather than
-  // branched so a new mode can't silently fall through to Conquest's numbers.
-  const modeSlice = data.tierlist?.[mode.toLowerCase() as "conquest" | "joust" | "arena"]
-    ?? data.tierlist?.conquest ?? data.tierlist;
-  const tierEntry = route.god ? modeSlice?.gods.find((g) => g.name === route.god) : undefined;
+  // The god's own Conquest core, so the per-god items lens reads against it.
+  const godCore = god ? (data.builds.find((b) => b.god === god.name && b.mode === "Conquest")?.builds.find(
+    (b) => b.source === "suggested" && (b as CuratedBuildEntry).archetype === "core" && !(b as CuratedBuildEntry).fun,
+  ) as CuratedBuildEntry | undefined)?.slot_order : undefined;
 
-  // The god's own suggested core, so the items lens can be read against the
-  // build rather than as a free-floating ranking.
-  const godNotes = route.god ? data.builds.filter((b) => b.god === route.god) : [];
-  const godNote = godNotes.find((n) => n.mode === mode) ?? godNotes[0];
-  const godCore = (godNote?.builds.find(
-    (b) => b.source === "suggested"
-      && (b as CuratedBuildEntry).archetype === "core"
-      && !(b as CuratedBuildEntry).fun,
-  ) as CuratedBuildEntry | undefined)?.slot_order as string[] | undefined;
-  // Item scores for the mode being viewed. This lens read the Conquest table
-  // under every mode toggle, exactly as the draft page did — so a god's Joust
-  // item ranking was Conquest's, and `modes.joust.tag_bonus` reached neither
-  // surface. `god_item_scores` now ships one table per mode.
-  const godItemScoresForMode = route.god
-    ? data.god_item_scores?.[route.god]?.[(godNote?.mode ?? mode).toLowerCase()]
-    : undefined;
-
-  /* 72 of 89 gods have an aspect, and only the 7 with a hand-tuned overlay in
-     `_weights.yaml` have a build behind it. The control shows on all of them —
-     the kit text and the community's pick rate are real information — but it
-     says which kind it is rather than silently doing nothing. */
-  const hasAspectBuild = !!godNote?.builds.some(
-    (b) => b.source === "suggested" && !!(b as { aspect?: string }).aspect);
-
-  const patchNotes = data.patch_notes ?? [];
-  const pickGod = (name: string) => { setPickerOpen(false); navigate(toHash.god(name)); };
+  const devSlot = isDev ? (
+    <>
+      <button type="button" onClick={() => setAddOpen(true)}
+        className="press h-10 rounded-full border border-dashed border-line px-3 text-cap text-quiet hover:text-muted">
+        Dev · + Add god
+      </button>
+      <button type="button" onClick={runReload} disabled={reloadState === "busy"}
+        className="press h-10 rounded-full border border-dashed border-line px-3 text-cap text-quiet hover:text-muted disabled:opacity-60">
+        Dev · <span aria-live="polite">
+          {reloadState === "busy" ? "Reloading…" : reloadState === "done" ? "Reloaded" : "Reload"}
+        </span>
+      </button>
+    </>
+  ) : null;
 
   return (
-    <div className="flex h-screen flex-col text-ink">
-      {/* First focusable on the page. */}
+    <div className="min-h-dvh text-ink">
       <a href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-gold focus:px-3 focus:py-2 focus:font-display focus:text-body focus:font-semibold focus:text-bg0">
+        className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[60] focus:rounded-[10px] focus:bg-accent focus:px-4 focus:py-3 focus:font-cond focus:text-[18px] focus:font-bold focus:uppercase focus:text-accent-ink">
         Skip to content
       </a>
 
-      <header className="flex flex-none items-center gap-3 border-b border-line px-4 py-2 sm:px-6 sm:py-2.5">
-        {/* The link supplies its own label, which wins over the wordmark's —
-            so "ichor" isn't announced twice. */}
-        <a href={toHash.home()} aria-label="ichor — home" className="press shrink-0 py-1">
-          <Wordmark />
-        </a>
-        {/* The navbar carries the ROSTER's lenses and only those — they are
-            the site's global destinations, and this is the site's global
-            chrome. A god's lenses used to sit here too, which is precisely why
-            they read as global navigation; they now live under the god in
-            SubjectFrame. On a god's page this strip stays, so Items, Draft and
-            Method are still one click away from Ra rather than two. */}
-        <LensTabs lens={route.god && god ? undefined : route.lens} compact
-          testId="lens-tabs-bar" className="hidden min-w-0 shrink-0 lg:block" />
-        <div className="ml-auto min-w-0 max-w-xs shrink lg:max-w-md">
-          <SubjectSearch gods={data.gods} items={data.items} />
-        </div>
-        <div className="flex shrink-0 items-center gap-2">
-          {data.data_updated && (
-            <span data-testid="header-freshness" title={data.data_updated}
-              className="hidden text-label text-faint lg:inline">
-              Updated {relativeDate(data.data_updated)}{data.data_patch ? ` · ${data.data_patch}` : ""}
-            </span>
-          )}
-          {isDev && (
-            <button type="button" onClick={() => setAddOpen(true)}
-              className="press hidden items-center justify-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted md:flex">
-              <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>+ Add god
-            </button>
-          )}
-          {isDev && (
-            <button type="button" onClick={runReload} disabled={reloadState === "busy"}
-              className="press hidden items-center gap-1.5 rounded-md border border-dashed border-line-strong px-2.5 py-1.5 text-small text-faint hover:text-muted disabled:opacity-60 sm:flex">
-              <span className="rounded-sm border border-line-strong px-1 py-px text-micro font-semibold uppercase tracking-wider">Dev</span>
-              <span aria-live="polite" className="min-w-[5.5ch] text-left">
-                {reloadState === "busy" ? "Reloading…" : reloadState === "done" ? "Reloaded" : "Reload"}
-              </span>
-            </button>
-          )}
-          <button type="button" onClick={() => setLegendOpen(true)} aria-label="Help and credits"
-            className="press rounded-md border border-line bg-bg2 px-2.5 py-1.5 text-small text-muted hover:text-ink">?</button>
-        </div>
-      </header>
+      <AppNav active={active} activeMore={activeMore}
+        buildHref={buildGod ? toHash.god(buildGod) : toHash.home()} buildGod={buildGod}
+        onHelp={() => setLegendOpen(true)} dataUpdated={data.data_updated} dataPatch={data.data_patch}
+        devSlot={devSlot} />
 
-      {/* Dev-only scraping banner — quiet tier, flat fade */}
       {isDev && scraping && (
-        <div className="flex flex-none items-center justify-center gap-2 border-b border-dashed border-line-strong bg-bg1 px-3 py-1.5 text-label text-faint">
-          <span className="rounded-sm border border-line-strong px-1.5 py-px text-micro font-semibold uppercase tracking-wider text-faint">Dev</span>
-          Scraping new data… this can take a minute.
-        </div>
+        <p className="border-b border-dashed border-line px-4 py-2 text-center text-cap text-quiet">
+          Dev · Scraping new data… this can take a minute.
+        </p>
       )}
 
-      {/* `godName` is deliberately not passed: a name this index doesn't have
-          is not a subject. Asserting one gave the frame a portrait, an h1 and
-          four lens tabs leading nowhere, on top of content saying the god
-          doesn't exist — two h1s making opposite claims. */}
-      <SubjectFrame
-        god={god}
-        lens={route.lens}
-        tierEntry={tierEntry}
-        roster={roster}
-        modeLabel={route.god ? (godNote?.mode ?? mode) : "Conquest"}
-        aspectOn={aspectOn}
-        onToggleAspect={() => setAspectOn((v) => !v)}
-        aspectChangesBuild={hasAspectBuild}
-        onPickGod={() => setPickerOpen(true)}
-      />
-
-      <main id="main" tabIndex={-1} className="min-h-0 flex-1 overflow-y-auto focus:outline-none">
+      <main id="main" tabIndex={-1} className="pb-tabbar focus:outline-none">
         {missingGod ? (
-          <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
-            <h1 className="font-display text-title font-bold text-ink">No god called “{route.god}”</h1>
-            <p className="mt-2 max-w-[64ch] text-body leading-relaxed text-muted">
-              Nothing in this index goes by that name. It may have been renamed or dropped since
-              that link was made.
+          <div className="mx-auto w-full max-w-[1240px] px-4 pt-8 lg:px-6">
+            <h1 className="font-cond text-head font-extrabold text-ink">No god called “{route.god}”</h1>
+            <p className="mt-2 max-w-[60ch] text-copy text-muted">
+              Nothing in this index goes by that name. It may have been renamed or dropped since that link was made.
             </p>
-            <button type="button" onClick={() => setPickerOpen(true)}
-              className="press mt-3 rounded-md border border-line bg-bg2 px-3 py-1.5 text-small text-ink-soft hover:border-line-strong">
+            <a href={toHash.home()}
+              className="press mt-4 inline-flex h-11 items-center rounded-[10px] bg-accent px-4 font-cond text-[18px] font-bold uppercase text-accent-ink">
               Choose a god
-            </button>
+            </a>
           </div>
         ) : god ? (
-          <div className="mx-auto w-full max-w-[1440px] p-4 sm:p-6">
-            {route.lens === "kit" ? (
-              <GodInfo god={god} />
-            ) : route.lens === "items" ? (
-              <GodItems god={god.name} scores={godItemScoresForMode}
+          route.lens === "kit" ? (
+            <GodSubPage god={god} title="Kit and abilities"><GodInfo god={god} /></GodSubPage>
+          ) : route.lens === "items" ? (
+            <GodSubPage god={god} title="Every item, ranked for this god">
+              <GodItems god={god.name} scores={data.god_item_scores?.[god.name]?.conquest}
                 items={data.items} core={godCore ?? []} />
-            ) : route.lens === "ranking" ? (
-              <GodRanking god={god.name} role={god.role} entries={modeSlice?.gods}
-                modeLabel={godNote?.mode ?? mode} />
-            ) : (
-              <DetailPanel
-                god={god.name}
-                godData={god}
-                items={data.items}
-                builds={data.builds}
-                mode={mode}
-                onModeChange={setMode}
-                modeOrder={data.modes}
-                starters={data.starters ?? []}
-                aspectOn={aspectOn}
-                onAspectChange={setAspectOn}
-              />
-            )}
-          </div>
+            </GodSubPage>
+          ) : route.lens === "ranking" ? (
+            <GodSubPage god={god} title="Where this god ranks in Conquest">
+              <GodRanking god={god.name} role={god.role} entries={data.tierlist?.conquest?.gods ?? data.tierlist?.gods}
+                modeLabel="Conquest" />
+            </GodSubPage>
+          ) : (
+            <GodPage key={god.name} god={god} data={data} />
+          )
         ) : route.lens === "draft" ? (
           <DraftPage gods={data.gods} items={data.items} builds={data.builds}
-            godItemScores={data.god_item_scores} draftConfig={data.draft}
-            godItemDamage={data.god_item_damage} />
+              godItemScores={data.god_item_scores} draftConfig={data.draft}
+              godItemDamage={data.god_item_damage} initialArchetype={MAIN_ARCHETYPE} />
         ) : route.lens === "items" ? (
           <ItemsShop items={data.items} openItem={route.item}
-            tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
+              tierItems={data.tierlist?.items ?? []} goldValues={data.item_gold_values ?? {}} />
         ) : route.lens === "tiers" ? (
           <TierList tierlist={data.tierlist} communitySource={data.community_source} />
         ) : route.lens === "patch" ? (
-          <PatchNotes periods={patchNotes} />
+          <PatchNotes periods={data.patch_notes ?? []} />
         ) : route.lens === "method" ? (
           <Method method={data.method} goldValues={data.item_gold_values ?? {}}
-            items={data.items} godCount={data.gods.length} />
+              items={data.items} godCount={data.gods.length} />
         ) : (
-          <Home data={data} />
+          <GodGrid gods={data.gods} lastGod={lastGod} />
         )}
       </main>
 
-      {/* Suppressed only on the draft page itself — showing a shrunken copy
-          of the board you're already looking at would be a second, redundant
-          instance of the exact same controls. Everywhere else, the comp you
-          built stays reachable and editable without navigating back to it. */}
-      {route.lens !== "draft" && (
-        <DraftDock gods={data.gods} items={data.items} builds={data.builds}
-          godItemScores={data.god_item_scores} draftConfig={data.draft}
-            godItemDamage={data.god_item_damage} />
-      )}
-
       {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}
-      {pickerOpen && (
-        <GodPickerDialog
-          gods={data.gods}
-          selectedGod={route.god ?? null}
-          onPick={pickGod}
-          onClose={() => setPickerOpen(false)}
-          onRemove={isDev ? removeGod : undefined}
-        />
-      )}
       {isDev && addOpen && (
-        <AddGodModal
-          roster={data.roster ?? []}
-          tracked={data.gods.map((g) => g.name)}
-          onAdd={addGod}
-          onClose={() => setAddOpen(false)}
-        />
+        <AddGodModal roster={data.roster ?? []} tracked={data.gods.map((g) => g.name)}
+          onAdd={addGod} onClose={() => setAddOpen(false)} />
       )}
     </div>
   );

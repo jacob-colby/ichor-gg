@@ -43,141 +43,133 @@ beforeEach(() => {
   vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, json: () => Promise.resolve(data) }));
 });
 
-/* The shell's top level is a subject — the whole roster, or one god — with
- * lenses beneath it. There is no rail and no second navigation. */
-describe("App — roster lenses", () => {
-  it("opens on the roster board", async () => {
+/* The Second Screen shell (direction A). The app opens on god select; one
+ * navigation pattern carries every route — a top bar ("Main") from lg up and
+ * a bottom tab bar ("Tabs") on a phone. jsdom renders both, so each test
+ * names the one it means. These replace the Subject Frame assertions (lens
+ * strip, subject header, picker dialog, draft dock), whose chrome this
+ * direction removes on purpose. */
+describe("App — Second Screen chrome", () => {
+  it("opens on god select", async () => {
     render(<App />);
-    await waitFor(() => expect(screen.getByTestId("subject-header")).toHaveTextContent(/All 2 gods/));
-    // The strip lives in the navbar from md up; the same tabs keep their own
-    // row below it. Only one is ever in the accessibility tree.
-    const nav = within(screen.getByTestId("lens-tabs-bar"));
-    expect(nav.getByRole("link", { name: "Board" })).toHaveAttribute("aria-current", "page");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
+    const main = within(screen.getByRole("navigation", { name: "Main" }));
+    expect(main.getByRole("link", { name: "Gods" })).toHaveAttribute("aria-current", "page");
+    const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
+    expect(tabs.getByRole("link", { name: "Gods" })).toHaveAttribute("aria-current", "page");
+    expect(tabs.getByRole("button", { name: "More" })).toBeInTheDocument();
   });
 
-  it("moves between roster lenses", async () => {
+  it("moves between destinations from the top bar", async () => {
     render(<App />);
-    const nav = within(await screen.findByTestId("lens-tabs-bar"));
-    fireEvent.click(nav.getByRole("link", { name: "Items" }));
+    const main = within(await screen.findByRole("navigation", { name: "Main" }));
+    fireEvent.click(main.getByRole("link", { name: "Items" }));
     await waitFor(() => expect(
       screen.getByRole("heading", { level: 1, name: /cost less than their stats are worth/i })).toBeInTheDocument());
   });
 
-  it("reaches the draft board, which is a roster lens rather than a god's", async () => {
+  it("keeps the reading routes and the fan-project line under More on a phone", async () => {
+    render(<App />);
+    const tabs = within(await screen.findByRole("navigation", { name: "Tabs" }));
+    fireEvent.click(tabs.getByRole("button", { name: "More" }));
+    const sheet = within(await screen.findByRole("dialog", { name: "More" }));
+    for (const name of [/Tiers/, /Items/, /Patch notes/, /Method/]) {
+      expect(sheet.getByRole("link", { name })).toBeInTheDocument();
+    }
+    expect(sheet.getByRole("button", { name: /Help/ })).toBeInTheDocument();
+    expect(sheet.getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
+  });
+
+  it("reaches the draft board inside the same chrome", async () => {
     atUrl(toHash.draft());
     render(<App />);
     // The draft page's ally slot 1 is always labelled "You", filled or not.
     await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
-    const nav = within(screen.getByTestId("lens-tabs-bar"));
-    expect(nav.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
+    const main = within(screen.getByRole("navigation", { name: "Main" }));
+    expect(main.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
   });
 
-  /* The navbar is the site's global chrome, so only genuinely global
-   * destinations belong in it. A god's four lenses sat here too, which is
-   * exactly why they read as global navigation — they are now under the god.
-   * The roster strip stays put on a god's page, so the item shop and the draft
-   * board are still one click from Ra. */
-  it("keeps a god's own lenses out of the global navbar", async () => {
+  it("marks Build current on a god page and points it at that god", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument());
-    const bar = within(screen.getByTestId("lens-tabs-bar"));
-    expect(bar.getByRole("link", { name: "Draft" })).toBeInTheDocument();
-    expect(bar.queryByRole("link", { name: "Kit" })).not.toBeInTheDocument();
-    expect(bar.queryByRole("link", { name: "Ranking" })).not.toBeInTheDocument();
-    // Chiron's lenses are there — under Chiron.
-    const own = within(screen.getByTestId("lens-tabs-strip"));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
+    const build = tabs.getByRole("link", { name: /Build/ });
+    expect(build).toHaveAttribute("aria-current", "page");
+    expect(build).toHaveAttribute("href", toHash.god("Chiron"));
+  });
+
+  it("keeps a god's own views under the god, not in the global bar", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    const main = within(screen.getByRole("navigation", { name: "Main" }));
+    expect(main.queryByRole("link", { name: "Kit" })).not.toBeInTheDocument();
+    const own = within(screen.getByRole("navigation", { name: "More on Chiron" }));
     expect(own.getByRole("link", { name: "Kit" })).toHaveAttribute("href", "#/god/Chiron/kit");
   });
 
-  /* The navbar's "Items" is the item shop; the god's "Items" is that god's
-   * ranking. Both are on screen at once now, so the global one must not claim
-   * to be the page you're on. */
-  it("marks nothing current in the navbar while a god is the subject", async () => {
+  it("does not mark the item shop current on a god's own item ranking", async () => {
     atUrl(toHash.godItems("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument());
-    const bar = within(screen.getByTestId("lens-tabs-bar"));
-    expect(bar.getByRole("link", { name: "Items" })).not.toHaveAttribute("aria-current");
-    const own = within(screen.getByTestId("lens-tabs-strip"));
-    expect(own.getByRole("link", { name: "Items" })).toHaveAttribute("aria-current", "page");
-  });
-
-  it("shows no second navigation — the picker is a control, not a column", async () => {
-    render(<App />);
-    await screen.findByTestId("subject-header");
-    expect(screen.queryByRole("button", { name: "Select Chiron" })).not.toBeInTheDocument();
-    expect(screen.queryByRole("navigation", { name: "Main" })).not.toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    const main = within(screen.getByRole("navigation", { name: "Main" }));
+    expect(main.getByRole("link", { name: "Items" })).not.toHaveAttribute("aria-current");
+    expect(main.getByRole("link", { name: /Build/ })).toHaveAttribute("aria-current", "page");
   });
 });
 
-/* The dock is the one thing meant to be visible on nearly every route — the
- * draft used to vanish the moment you left /draft, with no trace anywhere
- * else in the shell. */
-describe("App — the draft dock", () => {
-  it("is present on the roster board", async () => {
-    render(<App />);
-    await waitFor(() => expect(screen.getByTestId("draft-dock")).toBeInTheDocument());
-  });
-
-  it("is present on a god page", async () => {
+/* The floating dock is gone from this shell: the god page carries the enemy
+ * team itself, and Draft is one tab away everywhere else. These replace the
+ * dock tests and keep their point — the comp you enter is ONE shared draft. */
+describe("App — the enemy team on the god page", () => {
+  it("has no floating draft dock; the god page carries an enemy strip", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByTestId("draft-dock")).toBeInTheDocument());
-  });
-
-  // Showing a shrunken copy of the board you're already looking at would be a
-  // second, redundant instance of the same controls.
-  it("is absent on the draft page itself", async () => {
-    atUrl(toHash.draft());
-    render(<App />);
-    await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
     expect(screen.queryByTestId("draft-dock")).not.toBeInTheDocument();
+    expect(screen.getByTestId("enemy-strip")).toBeInTheDocument();
   });
 
-  /* This is the bug the dock's existence created: Home's own draft seam
-   * (`DraftSeam`) already calls `useDraft()` to show "your draft in
-   * progress" — read-only, until now nothing else on the same page ever
-   * wrote to the same draft while it was mounted. The dock is a second,
-   * concurrent writer on that exact page. Without the cross-instance sync
-   * added to `lib/draft.ts`, editing via the dock would leave the seam
-   * showing stale data until Home remounted. */
-  it("keeps Home's draft seam in sync when you edit from the dock", async () => {
-    // An enemy already entered, so the dock opens in its full (not empty-
-    // invitation) state and its toggle is reachable directly; a different
-    // god is left free to pick for the ally slot.
-    localStorage.setItem("smite:draft", JSON.stringify({
-      mode: "conquest", allies: ["", "", "", "", ""], enemies: ["Ymir", "", "", "", ""],
-    }));
+  it("writes picks from the god page into the shared draft, with you in slot one", async () => {
+    atUrl(toHash.god("Chiron"));
     render(<App />);
-    // An enemy is already seeded, so the seam opens on its "in progress"
-    // copy, not the empty invitation.
-    await waitFor(() => expect(screen.getByTestId("home-draft")).toHaveTextContent(/your draft in progress/i));
-    expect(screen.getByTestId("home-draft")).toHaveTextContent(/0 of \d+ allies/);
-
-    const dockToggle = within(screen.getByTestId("draft-dock")).getByRole("button", { name: /add your god/i });
-    fireEvent.click(dockToggle);
-    fireEvent.click(within(screen.getByTestId("draft-dock")).getByRole("button", { name: "Add you" }));
-    fireEvent.click(screen.getByRole("button", { name: "Chiron" }));
-
-    // No remount of Home occurred — this is the same DraftSeam instance
-    // picking up a write made through a sibling component's own useDraft().
-    await waitFor(() => expect(screen.getByTestId("home-draft")).toHaveTextContent(/1 of \d+ allies/));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    const sheet = await screen.findByRole("dialog", { name: /Enemy 1 of 5/ });
+    // Keyboard up: the search field has focus, not the close button.
+    expect(within(sheet).getByRole("searchbox")).toHaveFocus();
+    fireEvent.click(within(sheet).getByRole("button", { name: "Ymir" }));
+    // Auto-advance to the next empty slot rather than closing.
+    await screen.findByRole("dialog", { name: /Enemy 2 of 5/ });
+    await waitFor(() => {
+      const stored = JSON.parse(localStorage.getItem("smite:draft") ?? "{}");
+      expect(stored.enemies?.[0]).toBe("Ymir");
+      expect(stored.allies?.[0]).toBe("Chiron");
+    });
   });
 });
 
-describe("App — a god and its lenses", () => {
+describe("App — a god and its views", () => {
   it("makes the god the subject, on its own h1", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await waitFor(() => expect(screen.getByRole("heading", { level: 1, name: "Chiron" })).toBeInTheDocument());
   });
 
-  it("carries the verdict on every lens, not just builds", async () => {
-    atUrl(toHash.godKit("Chiron"));
+  it("states the Conquest record in the header, and refuses a tier in Joust", async () => {
+    atUrl(toHash.god("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByTestId("god-verdict")).toBeInTheDocument());
-    expect(within(screen.getByTestId("god-verdict")).getByText("52%")).toBeInTheDocument();
+    await waitFor(() => expect(screen.getByTestId("god-record")).toHaveTextContent("Tier B on 380 Conquest games"));
+    fireEvent.click(screen.getByRole("button", { name: "Joust" }));
+    await waitFor(() => expect(screen.getByTestId("god-record")).toHaveTextContent("No win data in Joust — model only"));
+  });
+
+  it("reads the mode from the address bar so it can be linked", async () => {
+    atUrl(`${toHash.god("Chiron")}?mode=arena`);
+    render(<App />);
+    await waitFor(() => expect(screen.getByRole("button", { name: "Arena" })).toHaveAttribute("aria-pressed", "true"));
+    expect(screen.getByTestId("god-record")).toHaveTextContent("No win data in Arena — model only");
   });
 
   it("opens the per-god item ranking — data no surface used to read", async () => {
@@ -190,7 +182,7 @@ describe("App — a god and its lenses", () => {
   it("opens the per-god ranking, led by the record rather than a comparison", async () => {
     atUrl(toHash.godRanking("Chiron"));
     render(<App />);
-    await waitFor(() => expect(screen.getByRole("heading", { level: 2 }))
+    await waitFor(() => expect(screen.getAllByRole("heading", { level: 2 })[0])
       .toHaveTextContent(/Chiron wins 52% of 380 tracked matches/i));
   });
 
@@ -200,13 +192,10 @@ describe("App — a god and its lenses", () => {
     await waitFor(() => expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(/No god called/i));
   });
 
-  it("switches subject through the picker dialog", async () => {
+  it("switches god from the roster grid", async () => {
     render(<App />);
-    fireEvent.click(await screen.findByRole("button", { name: /choose a god/i }));
-    const dialog = await screen.findByRole("dialog", { name: /choose a god/i });
-    fireEvent.click(within(dialog).getByRole("button", { name: "Select Chiron" }));
-    await waitFor(() => expect(window.location.hash).toBe(toHash.god("Chiron")));
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    const grid = within(await screen.findByTestId("god-grid"));
+    expect(grid.getByRole("link", { name: /Chiron/ })).toHaveAttribute("href", toHash.god("Chiron"));
   });
 });
 
@@ -227,7 +216,7 @@ describe("App — the wordmark", () => {
 
   it("names the header wordmark once, not twice", async () => {
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     // The link carries its own label; the wordmark's `role="img"` name must
     // not leak into it and announce "ichor" a second time.
     const home = screen.getByRole("link", { name: "ichor — home" });
@@ -237,11 +226,11 @@ describe("App — the wordmark", () => {
 });
 
 describe("App — chrome", () => {
-  it("offers one search field, reaching gods and items", async () => {
+  it("offers one search field on god select, for gods", async () => {
     render(<App />);
-    await screen.findByTestId("subject-search");
-    expect(screen.getAllByRole("combobox")).toHaveLength(1);
-    expect(screen.getByPlaceholderText(/search gods and items/i)).toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
+    expect(screen.getAllByRole("searchbox")).toHaveLength(1);
+    expect(screen.getByPlaceholderText(/search 2 gods/i)).toBeInTheDocument();
   });
 
   /* Refetching a static index.json does nothing a visitor can see, so the
@@ -249,7 +238,7 @@ describe("App — chrome", () => {
   it("keeps the data-reload control out of the deployed header", async () => {
     vi.stubEnv("DEV", false);
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(screen.queryByRole("button", { name: /reload/i })).not.toBeInTheDocument();
     // The dev-only god editor goes with it.
     expect(screen.queryByRole("button", { name: /add god/i })).not.toBeInTheDocument();
@@ -261,7 +250,7 @@ describe("App — chrome", () => {
   it("reports what it did when the dev reload runs", async () => {
     vi.stubEnv("DEV", true);
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     const btn = screen.getByRole("button", { name: /reload/i });
     fireEvent.click(btn);
     // A control that runs silently is indistinguishable from a broken one.
@@ -272,7 +261,7 @@ describe("App — chrome", () => {
   it("redirects a retired #/gods URL to the roster board", async () => {
     atUrl("#/gods");
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(window.location.hash).toBe("#/");
   });
 
@@ -288,7 +277,7 @@ describe("App — chrome", () => {
       ok: true, json: () => Promise.resolve({ ...data, data_updated: undefined }),
     }));
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(screen.queryByTestId("header-freshness")).not.toBeInTheDocument();
   });
 
@@ -336,7 +325,7 @@ describe("App — chrome", () => {
   // 43px of every screen, forever, for something you read once.
   it("has no permanent footer", async () => {
     render(<App />);
-    await screen.findByTestId("subject-header");
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(screen.queryByRole("contentinfo")).not.toBeInTheDocument();
   });
 });
