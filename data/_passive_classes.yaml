@@ -631,10 +631,8 @@ items:
     note: "heal 0.5% of max health per second — exactly Health Regen (60 HP5 at the roster-median 2405 health), and TEN TIMES the largest value the column was fitted on (6); the linear price does not reach it"
   # ── Added unattended by smite.new_entities ──
   Lotus Sickle:
-    uncatalogued: true
-    added: '2026-11-02'
-    note: added unattended by smite.new_entities; passive not classified, so the model values this item on its stat line alone
+    classes: [D1, C2]
+    note: "buffing, healing or shielding an ally grants a Lotus stack (max 3); an ally's next attack on an enemy consumes one for 30 (+20% Strength, +10% Intelligence, +20% Attack Damage) bonus magical damage — value lands on an ally, triggered by your ability"
   Soul Locket:
-    uncatalogued: true
-    added: '2026-11-02'
-    note: added unattended by smite.new_entities; passive not classified, so the model values this item on its stat line alone
+    classes: [C5, B4, D1, E1]
+    note: "+10% healing and shielding to allies; buffing allies builds Soul stacks (max 35); the 100s active spends them for 2% damage reduction each, +20% movement speed and Spirit Walk (pass through players and walls) for 2.5s"

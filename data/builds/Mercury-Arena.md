@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Tyrfing:
-      total: 0.62
+      total: 0.61
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -63,7 +63,7 @@ builds:
       fit: 0.77
     Heartseeker:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
   - The Reaper
+  - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Toxic Blade
+  - Titan's Bane
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -93,17 +93,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.67
@@ -128,9 +122,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
+    Titan's Bane:
+      total: 0.54
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -195,7 +195,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.57
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -260,7 +260,7 @@ builds:
       fit: 0.78
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -306,7 +306,7 @@ builds:
       pick: 0.0
       fit: 0.89
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 0.87
     Heartseeker:
       total: 0.7
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.97
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.84
     Tyrfing:
-      total: 0.62
+      total: 0.61
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       fit: 0.77
     Heartseeker:
       total: 0.65
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.87

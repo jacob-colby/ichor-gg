@@ -57,7 +57,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89
@@ -100,7 +100,7 @@ builds:
   slot_scores:
     Book of Thoth:
       total: 0.44
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -112,13 +112,13 @@ builds:
       fit: 0.71
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.63
+      total: 0.62
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -254,7 +254,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -319,7 +319,7 @@ builds:
       fit: 0.89
     Heartseeker:
       total: 0.71
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.99
@@ -334,24 +334,24 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Toxic Blade
   - Tyrfing
   - Riptalon
+  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Golden Blade
-  - Lernaean Bow
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Umbral Link — physical protection
-    swap_item: Umbral Link
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -364,12 +364,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Lernaean Bow:
-      total: 0.57
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Toxic Blade:
       total: 0.68
       efficiency: 0.45
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.95
+    Eros' Bow:
+      total: 0.56
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -514,7 +514,7 @@ builds:
       fit: 0.79
     Heartseeker:
       total: 0.66
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.89

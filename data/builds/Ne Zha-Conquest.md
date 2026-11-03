@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.13
     win_rate: 0.51
   source_url: https://smitebrain.com/gods/ne-zha/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5466666666666666
   god_matches_won: 205
   god_matches_played: 375
@@ -154,7 +154,7 @@ builds:
       fit: 0.88
     Heartseeker:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.98
@@ -231,7 +231,7 @@ builds:
       fit: 0.57
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.77
@@ -306,7 +306,7 @@ builds:
       fit: 0.66
     Heartseeker:
       total: 0.58
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.76
@@ -346,9 +346,9 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Berserker''s
     Shield, Shield Splitter, Freya''s Tears, Genji''s Guard, The Crusher, The Reaper,
     Runeforged Hammer, Phoenix Feather, Yogi''s Necklace, Breastplate of Valor, Erosion,
-    Eye of Providence, Oni Hunter''s Garb, Chandra''s Grace, Draconic Scale, Avenging
-    Blade, Midgardian Mail, Regrowth Striders, Shifter''s Shield, Leviathan''s Hide,
-    Wyrmskin Hide, Glorious Pridwen, Stone of Binding.'
+    Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Draconic Scale, Avenging
+    Blade, Midgardian Mail, Regrowth Striders, Leviathan''s Hide, Shifter''s Shield,
+    Glorious Pridwen, Wyrmskin Hide, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -369,14 +369,14 @@ builds:
       pick: 0.0
       fit: 0.77
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
       win: 0.64
       pick: 0.15
       fit: 0.47
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.57
@@ -455,7 +455,7 @@ builds:
       fit: 0.95
     Heartseeker:
       total: 0.62
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 1.0
@@ -493,9 +493,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Tyrfing, Tekko-Kagi, Silverbranch Bow, Riptalon, The Crusher, Golden
     Blade, Lernaean Bow, The Reaper, Toxic Blade, Dominance, Qin''s Blade, Arondight,
-    Sun Beam Bow, Berserker''s Shield, Transcendence, Bloodforge, Pendulum Blade,
+    Sun Beam Bow, Berserker''s Shield, Bloodforge, Transcendence, Pendulum Blade,
     Runeforged Hammer, Dagger of Frenzy, Avatar''s Parashu, Avenging Blade, Barbed
-    Carver, Vital Amplifier, Shield Splitter, Eye of the Storm, Damaru.'
+    Carver, Vital Amplifier, Shield Splitter, Damaru, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -529,7 +529,7 @@ builds:
       fit: 0.41
     Heartseeker:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.51
@@ -565,11 +565,11 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, The Crusher, Pendulum Blade,
-    Damaru, Genji''s Guard, Breastplate of Valor, The Reaper, Chandra''s Grace, Tekko-Kagi,
-    Transcendence, Freya''s Tears, Avatar''s Parashu, Eye of Erebus, Runeforged Hammer,
-    Screeching Gargoyle, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye
-    of the Storm, Dominance, Bloodforge, Lernaean Bow, Gladiator''s Shield, Prophetic
-    Cloak, Regrowth Striders, Oath-Sworn Spear.'
+    Damaru, Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
+    Freya''s Tears, Transcendence, Avatar''s Parashu, Eye of Erebus, Screeching Gargoyle,
+    Runeforged Hammer, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye
+    of the Storm, Dominance, Bloodforge, Lernaean Bow, Gladiator''s Shield, Regrowth
+    Striders, Prophetic Cloak, Oath-Sworn Spear.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -603,7 +603,7 @@ builds:
       fit: 0.45
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.55
@@ -643,7 +643,7 @@ builds:
     Underrated for this god: The Crusher, The Reaper, Pendulum Blade, Arondight, Tekko-Kagi,
     Avatar''s Parashu, Transcendence, Runeforged Hammer, Avenging Blade, Shield Splitter,
     Eye of the Storm, Dominance, Bloodforge, Lernaean Bow, Oath-Sworn Spear, Damaru,
-    Tyrfing, Barbed Carver, Genji''s Guard, Breastplate of Valor, Rage, Musashi''s
+    Tyrfing, Barbed Carver, Genji''s Guard, Rage, Breastplate of Valor, Musashi''s
     Dual Swords, Chandra''s Grace, Golden Blade, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
@@ -678,7 +678,7 @@ builds:
       fit: 0.88
     Heartseeker:
       total: 0.61
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.68
       pick: 0.18
       fit: 0.98

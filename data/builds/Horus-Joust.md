@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Shield Splitter:
-      total: 0.59
+      total: 0.58
       efficiency: 0.59
       win: 0.5
       pick: 0.0
@@ -176,7 +176,7 @@ builds:
       pick: 0.0
       fit: 0.7
     Jotunn's Revenge:
-      total: 0.64
+      total: 0.63
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.48
     Breastplate of Valor:
-      total: 0.56
+      total: 0.55
       efficiency: 0.63
       win: 0.5
       pick: 0.0

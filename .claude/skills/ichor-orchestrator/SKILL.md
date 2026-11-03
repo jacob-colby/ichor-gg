@@ -251,15 +251,23 @@ fixed. The check is cheap — grep for the symbol the entry names.
 
 ## Process
 
-Sessions should **open a PR and stop**, not self-merge — review before merge is
-cheaper than review after.
+**Sessions may merge their own PRs to `main` once tests pass** (Jacob,
+2026-11-02, confirmed in-session 2026-11-03: a for-fun project, not user
+facing). One PR per slice, and every gate still runs before the merge: the full
+pytest suite, `npm test` and `npm run build`, `calibrate_combat` at 0.0%,
+`expert_review --check`, and `calibrate --control` re-measured before and after
+(CLAUDE.md item 5). A red gate means do not merge — fix it or leave the PR open
+and say why. Stacked PRs merge in order, each rebased onto the `main` the
+previous one produced. This replaced "open a PR and stop" (2026-08-21 to
+2026-11-03); review now happens on the merged PR, which is cheap to revert.
 
 **Say that in the prompt, in words.** It is a rule in this file, which the
 session never reads. `08-21 G` finished its work, ran every gate, and left four
 files uncommitted with no branch history and no PR, closing with "did not
 commit — per the commit-only-when-asked rule." It was right to; nothing had
 asked it to. A worktree cleanup would have destroyed the session. End every
-prompt with an explicit *"commit to your branch and open a PR; do not merge"*.
+prompt with an explicit *"commit to your branch, open a PR, and merge it when
+every gate is green"*.
 
 Ask each session to close with:
 

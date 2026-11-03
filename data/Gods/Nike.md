@@ -95,7 +95,7 @@ abilities:
   - A target hit 2 times loses Protections
   - A target hit 3 times is Disarmed
   - You are Displacement Immune while Channeling
-  - 'Damage: 50 | 80 | 110 | 140 | 170'
+  - 'Damage: 50 | 75 | 100 | 125 | 150'
   - 'Damage Scaling: 40% Strength'
   - 'Protections Reduced: 3 | 6 | 9 | 12 | 15'
   - 'Debuff Duration: 5 seconds'
@@ -244,7 +244,7 @@ aspects:
     grants a Shield; it grants full Laurels, and ability hits do not consume Laurels
     while the buff is active.'
 source_url: https://wiki.smite2.com/w/Nike
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Nike Basic Attack

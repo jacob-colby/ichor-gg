@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.14
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5266106442577031
   god_matches_won: 564
   god_matches_played: 1071
@@ -231,7 +231,7 @@ builds:
       fit: 0.24
     Heartseeker:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.49
       pick: 0.63
       fit: 0.77
@@ -271,7 +271,7 @@ builds:
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Genji''s Guard, Hydra''s Lament, The Reaper, Pendulum Blade, Arondight, Tekko-Kagi,
     Transcendence, Tyrfing, Runeforged Hammer, Damaru, Avenging Blade, Silverbranch
-    Bow, Shield Splitter, Eye of the Storm, Dominance, Toxic Blade, Breastplate of
+    Bow, Shield Splitter, Eye of the Storm, Toxic Blade, Dominance, Breastplate of
     Valor, Bloodforge, Lernaean Bow, Chandra''s Grace, Golden Blade, Riptalon.'
   slot_scores:
     Ashwhorl Acorn:
@@ -300,7 +300,7 @@ builds:
       fit: 0.78
     Heartseeker:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.49
       pick: 0.63
       fit: 0.76
@@ -348,7 +348,8 @@ builds:
     Shield, Shield of the Phoenix, The Reaper, Runeforged Hammer, Phoenix Feather,
     Yogi''s Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s Garb,
     Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Hydra''s
-    Lament, Shifter''s Shield, Wyrmskin Hide, Chandra''s Grace, Leviathan''s Hide.'
+    Lament, Wyrmskin Hide, Shifter''s Shield, Leviathan''s Hide, Chandra''s Grace,
+    Stone of Binding.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.63
@@ -568,8 +569,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Hydra''s Lament, Arondight,
-    Pendulum Blade, Damaru, Breastplate of Valor, The Reaper, Chandra''s Grace, Tekko-Kagi,
-    Transcendence, Tyrfing, Eye of Erebus, Runeforged Hammer, Screeching Gargoyle,
+    Pendulum Blade, Damaru, The Reaper, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
+    Transcendence, Tyrfing, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
     Freya''s Tears, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of
     the Storm, Silverbranch Bow, Dominance, Bloodforge.'
   slot_scores:

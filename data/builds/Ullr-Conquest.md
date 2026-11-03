@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5421686746987951
   god_matches_won: 585
   god_matches_played: 1079
@@ -118,12 +118,12 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Tekko-Kagi, Tyrfing, The Reaper, Lernaean Bow, Silverbranch Bow, Riptalon,
     Dominance, Golden Blade, Arondight, Deathbringer, Toxic Blade, Musashi''s Dual
-    Swords, Demon Blade, Rage, Bloodforge, Qin''s Blade, Runeforged Hammer, Berserker''s
-    Shield, Pendulum Blade, Avatar''s Parashu, Avenging Blade, Barbed Carver, Sun
-    Beam Bow, Shield Splitter.'
+    Swords, Demon Blade, Rage, Bloodforge, Qin''s Blade, Runeforged Hammer, Pendulum
+    Blade, Berserker''s Shield, Avatar''s Parashu, Avenging Blade, Barbed Carver,
+    Sun Beam Bow, Shield Splitter.'
   slot_scores:
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
       win: 0.53
       pick: 0.89
@@ -148,12 +148,12 @@ builds:
       fit: 0.56
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.55
       pick: 1.0
       fit: 0.52
     Titan's Bane:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
       win: 0.55
       pick: 0.71
@@ -200,7 +200,7 @@ builds:
     Guard.'
   slot_scores:
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
       win: 0.53
       pick: 0.89
@@ -218,14 +218,14 @@ builds:
       pick: 0.83
       fit: 0.44
     The Crusher:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
       win: 0.61
       pick: 0.19
       fit: 0.39
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.55
       pick: 1.0
       fit: 0.55
@@ -271,9 +271,9 @@ builds:
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
     this god: Tekko-Kagi, The Reaper, Tyrfing, Lernaean Bow, Silverbranch Bow, Riptalon,
     Dominance, Golden Blade, Deathbringer, Musashi''s Dual Swords, Demon Blade, Arondight,
-    Toxic Blade, Rage, Bloodforge, Qin''s Blade, Berserker''s Shield, Runeforged Hammer,
-    Pendulum Blade, Avatar''s Parashu, Avenging Blade, Barbed Carver, Sun Beam Bow,
-    Shield Splitter.'
+    Toxic Blade, Rage, Bloodforge, Qin''s Blade, Berserker''s Shield, Pendulum Blade,
+    Runeforged Hammer, Avatar''s Parashu, Avenging Blade, Barbed Carver, Sun Beam
+    Bow, Shield Splitter.'
   slot_scores:
     Transcendence:
       total: 0.49
@@ -374,7 +374,7 @@ builds:
       fit: 0.43
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.55
       pick: 1.0
       fit: 0.53
@@ -421,9 +421,9 @@ builds:
     this god: Amanita Charm, Berserker''s Shield, The Reaper, Shield of the Phoenix,
     Genji''s Guard, Riptalon, Kinetic Cuirass, Shield Splitter, Yogi''s Necklace,
     Tekko-Kagi, Golden Blade, Runeforged Hammer, Phoenix Feather, Breastplate of Valor,
-    Bloodforge, Freya''s Tears, Chandra''s Grace, Tyrfing, Lernaean Bow, Pharaoh''s
-    Curse, Oni Hunter''s Garb, Toxic Blade, Shogun''s Ofuda, Regrowth Striders, Erosion,
-    Midgardian Mail, Silverbranch Bow.'
+    Bloodforge, Freya''s Tears, Chandra''s Grace, Tyrfing, Pharaoh''s Curse, Lernaean
+    Bow, Oni Hunter''s Garb, Toxic Blade, Shogun''s Ofuda, Regrowth Striders, Erosion,
+    Silverbranch Bow, Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -483,8 +483,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -494,9 +494,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Tekko-Kagi, The Reaper, Silverbranch Bow, Riptalon, Tyrfing, Lernaean
     Bow, Toxic Blade, Avenging Blade, Dominance, Golden Blade, Pendulum Blade, Avatar''s
-    Parashu, Arondight, Deathbringer, Musashi''s Dual Swords, The Executioner, Oath-Sworn
-    Spear, Demon Blade, Rage, Bloodforge, Runeforged Hammer, Berserker''s Shield,
-    Qin''s Blade, Shield Splitter.'
+    Parashu, Arondight, Deathbringer, Musashi''s Dual Swords, The Executioner, Demon
+    Blade, Oath-Sworn Spear, Rage, Bloodforge, Runeforged Hammer, Berserker''s Shield,
+    Qin''s Blade, Screeching Gargoyle.'
   slot_scores:
     Transcendence:
       total: 0.49
@@ -524,7 +524,7 @@ builds:
       fit: 0.55
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.55
       pick: 1.0
       fit: 0.65
@@ -567,11 +567,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Tyrfing, Tekko-Kagi, Silverbranch Bow, Riptalon, Lernaean Bow, The Reaper,
+    this god: Tekko-Kagi, Tyrfing, Silverbranch Bow, Riptalon, Lernaean Bow, The Reaper,
     Golden Blade, Toxic Blade, Dominance, Qin''s Blade, Arondight, Deathbringer, Musashi''s
     Dual Swords, Demon Blade, Berserker''s Shield, Sun Beam Bow, Rage, Bloodforge,
     Runeforged Hammer, Pendulum Blade, Avatar''s Parashu, Dagger of Frenzy, Avenging
-    Blade, Shield Splitter.'
+    Blade, Damaru.'
   slot_scores:
     Transcendence:
       total: 0.49
@@ -642,9 +642,9 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Tekko-Kagi, Arondight, The Reaper,
     Tyrfing, Lernaean Bow, Silverbranch Bow, Riptalon, Dominance, Pendulum Blade,
-    Damaru, Golden Blade, Genji''s Guard, Toxic Blade, Deathbringer, Musashi''s Dual
-    Swords, Breastplate of Valor, Berserker''s Shield, Qin''s Blade, Bloodforge, Demon
-    Blade, Runeforged Hammer, Rage, Chandra''s Grace, Avatar''s Parashu.'
+    Damaru, Golden Blade, Toxic Blade, Genji''s Guard, Deathbringer, Musashi''s Dual
+    Swords, Breastplate of Valor, Berserker''s Shield, Qin''s Blade, Demon Blade,
+    Bloodforge, Runeforged Hammer, Rage, Chandra''s Grace, Avatar''s Parashu.'
   slot_scores:
     Transcendence:
       total: 0.48
@@ -672,7 +672,7 @@ builds:
       fit: 0.37
     Heartseeker:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.55
       pick: 1.0
       fit: 0.4
@@ -718,7 +718,7 @@ builds:
     Underrated for this god: Tekko-Kagi, Tyrfing, The Reaper, Lernaean Bow, Silverbranch
     Bow, Riptalon, Dominance, Golden Blade, Arondight, Deathbringer, Toxic Blade,
     Musashi''s Dual Swords, Demon Blade, Rage, Bloodforge, Qin''s Blade, Runeforged
-    Hammer, Berserker''s Shield, Pendulum Blade, Avatar''s Parashu, Avenging Blade,
+    Hammer, Pendulum Blade, Berserker''s Shield, Avatar''s Parashu, Avenging Blade,
     Barbed Carver, Sun Beam Bow, Shield Splitter.'
   slot_scores:
     Lernaean Bow:
@@ -752,7 +752,7 @@ builds:
       pick: 0.0
       fit: 0.56
     Titan's Bane:
-      total: 0.53
+      total: 0.54
       efficiency: 0.54
       win: 0.55
       pick: 0.71

@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -247,7 +247,7 @@ builds:
       pick: 0.0
       fit: 0.4
     Riptalon:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0

@@ -50,8 +50,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Rod of Tahuti:
-      total: 0.77
-      efficiency: 0.87
+      total: 0.76
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -124,13 +124,13 @@ builds:
       fit: 0.56
     Doom Orb:
       total: 0.53
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.52
     Rod of Tahuti:
-      total: 0.7
-      efficiency: 0.87
+      total: 0.69
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.52
@@ -188,8 +188,8 @@ builds:
       pick: 0.0
       fit: 0.6
     Rod of Tahuti:
-      total: 0.69
-      efficiency: 0.87
+      total: 0.68
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -236,7 +236,7 @@ builds:
       fit: 0.56
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -301,7 +301,7 @@ builds:
       fit: 0.88
     Doom Orb:
       total: 0.64
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -319,7 +319,7 @@ builds:
       fit: 0.85
     Rod of Tahuti:
       total: 0.81
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -424,13 +424,13 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Lotus Sickle:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.56
     Chronos' Pendant:
-      total: 0.56
+      total: 0.55
       efficiency: 0.55
       win: 0.5
       pick: 0.0
@@ -449,7 +449,7 @@ builds:
       fit: 0.76
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.76
     Rod of Tahuti:
-      total: 0.77
-      efficiency: 0.87
+      total: 0.76
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.66

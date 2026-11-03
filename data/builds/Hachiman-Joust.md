@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Riptalon:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -260,7 +260,7 @@ builds:
       fit: 0.44
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.54
@@ -369,7 +369,7 @@ builds:
       efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Riptalon:
       total: 0.71
       efficiency: 0.46
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.66
+      total: 0.67
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -499,7 +499,7 @@ builds:
       efficiency: 0.43
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 0.54
     Riptalon:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
       win: 0.5
       pick: 0.0

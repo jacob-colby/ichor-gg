@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Toxic Blade
-  - Tyrfing
   - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
+  - The Crusher
   - Titan's Bane
   flex_slots:
   - Titan's Bane
-  - Tyrfing
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -299,12 +299,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.96
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -323,6 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    The Crusher:
+      total: 0.55
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Titan's Bane:
       total: 0.57
       efficiency: 0.54

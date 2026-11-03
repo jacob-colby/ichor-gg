@@ -23,8 +23,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -51,7 +51,7 @@ builds:
       fit: 0.78
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.41
     Freya's Tears:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -480,8 +480,8 @@ builds:
     swap: Void Stone — magical protection
     swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -508,7 +508,7 @@ builds:
       fit: 0.78
     Stampede:
       total: 0.61
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.71

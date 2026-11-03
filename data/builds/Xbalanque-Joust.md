@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.75
     Qin's Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -489,7 +489,7 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.53
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -508,7 +508,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -578,13 +578,13 @@ builds:
       pick: 0.0
       fit: 0.67
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
     Soul Gem:
-      total: 0.75
+      total: 0.74
       efficiency: 0.52
       win: 0.5
       pick: 0.0

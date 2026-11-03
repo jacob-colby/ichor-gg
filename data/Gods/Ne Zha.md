@@ -85,7 +85,7 @@ abilities:
   - 65.0
   - 70.0
   details:
-  - Subsequent hits deal 35% damage and strengthen the Slow
+  - Subsequent hits deal 75% damage and strengthen the Slow
   - Each hit grants a stacking Movement Speed buff
   - The extra throw from catching the ring can Critically Strike
   - The ring can bounce additional times as this ability ranks up
@@ -93,7 +93,7 @@ abilities:
   - 'Initial Damage: 90 | 120 | 150 | 180 | 210'
   - 'Initial Damage Scaling: 60% Strength'
   - 'Bounce Damage: 75 | 100 | 125 | 150 | 175'
-  - 'Bounce Damage Scaling: 20% Strength'
+  - 'Bounce Damage Scaling: 30% Strength'
   - 'Free Ring Damage: 80 | 110 | 140 | 170 | 200'
   - 'Free Ring Damage Scaling: 90% Strength'
   - 'Physical Protection Reduced: 5 | 7 | 9 | 11 | 13%'
@@ -213,8 +213,8 @@ abilities:
   - The Protections Buff refreshes when the combo ends
   - 'Initial Damage: 50 | 105 | 160 | 215 | 270'
   - 'Initial Damage Scaling: 65% Strength'
-  - 'Combo Damage: 23 | 40 | 57 | 74 | 91'
-  - 'Combo Damage Scaling: 45% Strength'
+  - 'Combo Damage: 25 | 45 | 65 | 85 | 105'
+  - 'Combo Damage Scaling: 55% Strength'
   - 'Landing Damage: 50 | 105 | 160 | 215 | 270'
   - 'Landing Damage Scaling: 65% Strength'
   - 'Protections Buff: 30 | 35 | 40 | 45 | 50'
@@ -252,7 +252,7 @@ aspects:
     AoE attack that buffs Ne Zha's Attacks and consumes Righteous Spirit to burst
     heal.
 source_url: https://wiki.smite2.com/w/Ne_Zha
-last_verified: '2026-11-02'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Ne Zha Basic Attack

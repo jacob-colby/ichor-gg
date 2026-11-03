@@ -44,7 +44,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -63,7 +63,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.63
     The Reaper:
-      total: 0.61
+      total: 0.62
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.57
     Heartseeker:
       total: 0.6
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.79
     Jotunn's Revenge:
-      total: 0.73
+      total: 0.72
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Heartseeker:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.59
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -325,7 +325,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -377,7 +377,7 @@ builds:
       pick: 0.0
       fit: 0.79
     The Reaper:
-      total: 0.62
+      total: 0.63
       efficiency: 0.56
       win: 0.5
       pick: 0.0
@@ -501,7 +501,7 @@ builds:
       pick: 0.0
       fit: 0.97
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -520,7 +520,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -560,7 +560,7 @@ builds:
       pick: 0.0
       fit: 1.0
     The Reaper:
-      total: 0.75
+      total: 0.76
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -579,7 +579,7 @@ builds:
       fit: 1.0
     Heartseeker:
       total: 0.72
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 1.0

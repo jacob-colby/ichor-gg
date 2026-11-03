@@ -105,13 +105,13 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.62
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.59
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -208,9 +208,9 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - The Reaper
-  - Tekko-Kagi
+  - Titan's Bane
   flex_slots:
-  - Tekko-Kagi
+  - Titan's Bane
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -258,12 +258,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-    Tekko-Kagi:
+    Titan's Bane:
       total: 0.48
-      efficiency: 0.55
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.43
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -507,7 +507,7 @@ builds:
       pick: 0.0
       fit: 0.53
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0

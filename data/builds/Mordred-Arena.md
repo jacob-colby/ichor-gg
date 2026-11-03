@@ -63,7 +63,7 @@ builds:
       fit: 0.81
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -106,13 +106,13 @@ builds:
       fit: 0.45
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
     Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.87
+      total: 0.61
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -164,7 +164,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -189,7 +189,7 @@ builds:
       fit: 0.68
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -254,7 +254,7 @@ builds:
       fit: 0.8
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -449,7 +449,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -514,7 +514,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -539,8 +539,8 @@ builds:
   - Void Shield
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Sanguine Lash — magical protection
     swap_item: Sanguine Lash
@@ -579,7 +579,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -650,7 +650,7 @@ builds:
       fit: 0.81
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73

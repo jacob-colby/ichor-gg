@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.18
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/hua-mulan/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5374592833876222
   god_matches_won: 165
   god_matches_played: 307
@@ -117,11 +117,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Shield Splitter,
-    Jotunn''s Revenge, Golden Blade, Breastplate of Valor, Erosion, Hydra''s Lament,
-    Eye of Providence, Draconic Scale, Oni Hunter''s Garb, Tyrfing, Shield of the
-    Phoenix, Stone of Binding, Tekko-Kagi, Magi''s Cloak, Midgardian Mail, Avenging
-    Blade, Pharaoh''s Curse, Titan''s Bane, Mantle Of Discord, Lernaean Bow, Wyrmskin
-    Hide, Leviathan''s Hide, Screeching Gargoyle, Runeforged Hammer.'
+    Jotunn''s Revenge, Golden Blade, Breastplate of Valor, Erosion, Eye of Providence,
+    Hydra''s Lament, Draconic Scale, Oni Hunter''s Garb, Tyrfing, Shield of the Phoenix,
+    Stone of Binding, Tekko-Kagi, Midgardian Mail, Magi''s Cloak, Avenging Blade,
+    Titan''s Bane, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow, Wyrmskin Hide,
+    Leviathan''s Hide, Screeching Gargoyle, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -142,7 +142,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Gladiator's Shield:
-      total: 0.53
+      total: 0.54
       efficiency: 0.39
       win: 0.69
       pick: 0.14
@@ -193,11 +193,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Kinetic Cuirass, Shield of the Phoenix,
-    Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather, Yogi''s Necklace,
-    The Reaper, Breastplate of Valor, Hydra''s Lament, Erosion, Eye of Providence,
-    Oni Hunter''s Garb, Chandra''s Grace, Tyrfing, Avenging Blade, Draconic Scale,
-    Tekko-Kagi, Midgardian Mail, Pharaoh''s Curse, Titan''s Bane, Wyrmskin Hide, Regrowth
-    Striders, Lernaean Bow, Runeforged Hammer.'
+    Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather, The Reaper,
+    Yogi''s Necklace, Breastplate of Valor, Hydra''s Lament, Erosion, Oni Hunter''s
+    Garb, Eye of Providence, Chandra''s Grace, Tyrfing, Avenging Blade, Draconic Scale,
+    Tekko-Kagi, Midgardian Mail, Pharaoh''s Curse, Titan''s Bane, Regrowth Striders,
+    Wyrmskin Hide, Lernaean Bow, Leviathan''s Hide, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -269,7 +269,7 @@ builds:
     for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
     Stone of Binding, Avenging Blade, Shield Splitter, Screeching Gargoyle, Tekko-Kagi,
     Titan''s Bane, Void Stone, Void Shield, The Crusher, Breastplate of Valor, Toxic
-    Blade, Heartseeker, Golden Blade, Silverbranch Bow, The Reaper, Hydra''s Lament,
+    Blade, Heartseeker, Silverbranch Bow, Golden Blade, The Reaper, Hydra''s Lament,
     Oni Hunter''s Garb, Erosion, Eye of Providence, Tyrfing, Draconic Scale, Shield
     of the Phoenix, Midgardian Mail, Runeforged Hammer.'
   slot_scores:
@@ -341,10 +341,10 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge,
     Golden Blade, Shield Splitter, Tyrfing, Breastplate of Valor, Tekko-Kagi, Pharaoh''s
-    Curse, Lernaean Bow, Toxic Blade, Shogun''s Ofuda, Oni Hunter''s Garb, Hydra''s
-    Lament, Silverbranch Bow, Erosion, Eye of Providence, Stone of Binding, Draconic
-    Scale, Midgardian Mail, Shield of the Phoenix, Magi''s Cloak, The Reaper, Screeching
-    Gargoyle, Riptalon, Dominance, Runeforged Hammer.'
+    Curse, Lernaean Bow, Toxic Blade, Oni Hunter''s Garb, Shogun''s Ofuda, Silverbranch
+    Bow, Hydra''s Lament, Erosion, Eye of Providence, Stone of Binding, Draconic Scale,
+    Midgardian Mail, Shield of the Phoenix, Magi''s Cloak, The Reaper, Riptalon, Screeching
+    Gargoyle, Titan''s Bane, Runeforged Hammer.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -413,12 +413,12 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Berserker''s Shield, Gladiator''s
-    Shield, Jotunn''s Revenge, Amanita Charm, Breastplate of Valor, Kinetic Cuirass,
+    Shield, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Breastplate of Valor,
     Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching Gargoyle,
     Arondight, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Eye of Providence, Golden
     Blade, Draconic Scale, Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle
-    Of Discord, Leviathan''s Hide, Pharaoh''s Curse, Chandra''s Grace, Tyrfing, Regrowth
-    Striders, Runeforged Hammer.'
+    Of Discord, Leviathan''s Hide, Pharaoh''s Curse, Regrowth Striders, Chandra''s
+    Grace, Tyrfing, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -488,10 +488,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Amanita Charm, Shield Splitter,
     Kinetic Cuirass, Jotunn''s Revenge, Golden Blade, Runeforged Hammer, Breastplate
-    of Valor, Erosion, Hydra''s Lament, Eye of Providence, Draconic Scale, Oni Hunter''s
-    Garb, Tyrfing, Shield of the Phoenix, Stone of Binding, Tekko-Kagi, Magi''s Cloak,
-    Midgardian Mail, Avenging Blade, Pharaoh''s Curse, Titan''s Bane, Mantle Of Discord,
-    Lernaean Bow, Wyrmskin Hide, Leviathan''s Hide, Screeching Gargoyle.'
+    of Valor, Erosion, Eye of Providence, Hydra''s Lament, Draconic Scale, Oni Hunter''s
+    Garb, Tyrfing, Shield of the Phoenix, Stone of Binding, Tekko-Kagi, Midgardian
+    Mail, Magi''s Cloak, Avenging Blade, Titan''s Bane, Pharaoh''s Curse, Mantle Of
+    Discord, Lernaean Bow, Wyrmskin Hide, Leviathan''s Hide, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.49

@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.1
     win_rate: 0.58
   source_url: https://smitebrain.com/gods/ymir/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5784543325526932
   god_matches_won: 741
   god_matches_played: 1281
@@ -116,10 +116,10 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Rod of Tahuti, Hussar''s Wings, Genji''s Guard, Erosion,
+    this god: Amanita Charm, Hussar''s Wings, Genji''s Guard, Rod of Tahuti, Erosion,
     Eye of Providence, Draconic Scale, Breastplate of Valor, Helm of Darkness, Shield
     of the Phoenix, Oni Hunter''s Garb, Stone of Binding, Magi''s Cloak, Midgardian
-    Mail, Helm of Radiance, Mantle Of Discord, Leviathan''s Hide, Screeching Gargoyle,
+    Mail, Mantle Of Discord, Helm of Radiance, Leviathan''s Hide, Screeching Gargoyle,
     Prophetic Cloak, Ancile, Hide of the Nemean Lion, Void Stone, Void Shield, Xibalban
     Effigy, Spectral Armor, Gladiator''s Shield, Shifter''s Shield.'
   slot_scores:
@@ -195,9 +195,10 @@ builds:
     this god: Amanita Charm, Shield of the Phoenix, Rod of Tahuti, Genji''s Guard,
     Phoenix Feather, Erosion, Eye of Providence, Draconic Scale, Ethereal Staff, Yogi''s
     Necklace, Oni Hunter''s Garb, Breastplate of Valor, Chandra''s Grace, Midgardian
-    Mail, Glorious Pridwen, Soul Gem, Helm of Darkness, Leviathan''s Hide, Rod of
-    Asclepius, Stone of Binding, Helm of Radiance, Regrowth Striders, Sphere of Negation,
-    Ancile, Magi''s Cloak, Hide of the Nemean Lion, Shifter''s Shield.'
+    Mail, Glorious Pridwen, Soul Gem, Leviathan''s Hide, Helm of Darkness, Rod of
+    Asclepius, Regrowth Striders, Stone of Binding, Helm of Radiance, Soul Locket,
+    Sphere of Negation, Ancile, Magi''s Cloak, Hide of the Nemean Lion, Shifter''s
+    Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -269,7 +270,7 @@ builds:
     for this god: Rod of Tahuti, Amanita Charm, Stone of Binding, Gluttonous Grimoire,
     Spear of Desolation, Genji''s Guard, Screeching Gargoyle, Obsidian Shard, Soul
     Gem, Void Stone, Void Shield, Spear of the Magus, Breastplate of Valor, Erosion,
-    Eye of Providence, Doom Orb, Oni Hunter''s Garb, Draconic Scale, The World Stone,
+    Eye of Providence, Oni Hunter''s Garb, Doom Orb, Draconic Scale, The World Stone,
     Helm of Radiance, Helm of Darkness, Shield of the Phoenix, Midgardian Mail, Magi''s
     Cloak, Dreamer''s Idol, Mantle Of Discord, Leviathan''s Hide, Shifter''s Shield.'
   slot_scores:
@@ -299,7 +300,7 @@ builds:
       fit: 0.48
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.6
       pick: 0.0
       fit: 0.4
@@ -341,9 +342,9 @@ builds:
     this god: Rod of Tahuti, Amanita Charm, Genji''s Guard, Nimble Ring, Breastplate
     of Valor, Eros'' Bow, Oni Hunter''s Garb, Helm of Radiance, Erosion, Eye of Providence,
     Stone of Binding, Draconic Scale, Helm of Darkness, Midgardian Mail, Shield of
-    the Phoenix, Magi''s Cloak, Soul Gem, Screeching Gargoyle, Bragi''s Harp, Blood-Bound
-    Book, Leviathan''s Hide, Mantle Of Discord, Gluttonous Grimoire, Bracer of The
-    Abyss, Lotus Sickle, Ancile, Jade Scepter, Shifter''s Shield.'
+    the Phoenix, Magi''s Cloak, Soul Gem, Screeching Gargoyle, Bragi''s Harp, Leviathan''s
+    Hide, Mantle Of Discord, Blood-Bound Book, Gluttonous Grimoire, Ancient Signet,
+    Bracer of The Abyss, Ancile, Lotus Sickle, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -414,13 +415,13 @@ builds:
     Charm, Breastplate of Valor, Shield of the Phoenix, Screeching Gargoyle, Lotus
     Sickle, Chronos'' Pendant, Prophetic Cloak, Helm of Radiance, Soul Gem, Erosion,
     Helm of Darkness, Oni Hunter''s Garb, Eye of Providence, Gladiator''s Shield,
-    Draconic Scale, Gem of Focus, Stone of Binding, Spear of Desolation, Heartwood
-    Charm, Midgardian Mail, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Chandra''s
-    Grace, Regrowth Striders, Shifter''s Shield.'
+    Draconic Scale, Stone of Binding, Gem of Focus, Spear of Desolation, Midgardian
+    Mail, Heartwood Charm, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Regrowth
+    Striders, Chandra''s Grace, Shifter''s Shield.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.54
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.6
       pick: 0.0
       fit: 0.58
@@ -485,13 +486,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita
-    Charm, Shield Splitter, Genji''s Guard, Runeforged Hammer, Golden Blade, Tekko-Kagi,
-    Titan''s Bane, Hydra''s Lament, Breastplate of Valor, Gluttonous Grimoire, Tyrfing,
-    Obsidian Shard, Spear of Desolation, The Crusher, Oni Hunter''s Garb, Erosion,
-    Lernaean Bow, Soul Gem, Helm of Radiance, Eye of Providence, Heartseeker, Toxic
-    Blade, Draconic Scale, Stone of Binding, Helm of Darkness, The Reaper, Shield
-    of the Phoenix, Midgardian Mail, Arondight, Silverbranch Bow, Death Metal, Magi''s
-    Cloak, Spear of the Magus, Pharaoh''s Curse, Wyrmskin Hide, Screeching Gargoyle,
+    Charm, Shield Splitter, Genji''s Guard, Runeforged Hammer, Tekko-Kagi, Golden
+    Blade, Titan''s Bane, Hydra''s Lament, Breastplate of Valor, Gluttonous Grimoire,
+    Tyrfing, Obsidian Shard, Spear of Desolation, The Crusher, Oni Hunter''s Garb,
+    Erosion, Lernaean Bow, Soul Gem, Eye of Providence, Helm of Radiance, Heartseeker,
+    Toxic Blade, Draconic Scale, Stone of Binding, The Reaper, Helm of Darkness, Shield
+    of the Phoenix, Midgardian Mail, Arondight, Silverbranch Bow, Magi''s Cloak, Death
+    Metal, Spear of the Magus, Pharaoh''s Curse, Wyrmskin Hide, Screeching Gargoyle,
     Avenging Blade.'
   slot_scores:
     Genji's Guard:
@@ -563,11 +564,11 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
     Amanita Charm, Shield Splitter, Genji''s Guard, Gluttonous Grimoire, Obsidian
     Shard, Spear of Desolation, Soul Gem, Helm of Radiance, Runeforged Hammer, Breastplate
-    of Valor, Helm of Darkness, Titan''s Bane, Spear of the Magus, Hydra''s Lament,
-    Golden Blade, Tekko-Kagi, Death Metal, Oni Hunter''s Garb, Erosion, Eye of Providence,
-    Lotus Sickle, Nimble Ring, The Crusher, Doom Orb, Jade Scepter, Tyrfing, Stone
-    of Binding, Draconic Scale, Eros'' Bow, The World Stone, Midgardian Mail, Shield
-    of the Phoenix, Magi''s Cloak, Heartseeker, Chronos'' Pendant, Bragi''s Harp,
+    of Valor, Titan''s Bane, Helm of Darkness, Spear of the Magus, Tekko-Kagi, Hydra''s
+    Lament, Golden Blade, Death Metal, Oni Hunter''s Garb, Erosion, Ancient Signet,
+    Eye of Providence, Lotus Sickle, The Crusher, Nimble Ring, Tyrfing, Doom Orb,
+    Draconic Scale, Jade Scepter, Stone of Binding, Eros'' Bow, Midgardian Mail, Shield
+    of the Phoenix, The World Stone, Magi''s Cloak, Heartseeker, Chronos'' Pendant,
     Avenging Blade.'
   slot_scores:
     Genji's Guard:
@@ -636,10 +637,10 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Amanita Charm, Rod of Tahuti, Genji''s Guard, Erosion,
+    Underrated for this god: Amanita Charm, Genji''s Guard, Rod of Tahuti, Erosion,
     Eye of Providence, Draconic Scale, Breastplate of Valor, Helm of Darkness, Shifter''s
     Shield, Shield of the Phoenix, Oni Hunter''s Garb, Stone of Binding, Magi''s Cloak,
-    Midgardian Mail, Helm of Radiance, Mantle Of Discord, Leviathan''s Hide, Screeching
+    Midgardian Mail, Mantle Of Discord, Helm of Radiance, Leviathan''s Hide, Screeching
     Gargoyle, Prophetic Cloak, Ancile, Hide of the Nemean Lion, Void Stone, Void Shield,
     Xibalban Effigy, Hussar''s Wings, Spectral Armor, Gladiator''s Shield.'
   slot_scores:
@@ -709,10 +710,10 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Amanita Charm, Rod of Tahuti, Genji''s
-    Guard, Erosion, Eye of Providence, Draconic Scale, Breastplate of Valor, Helm
+    + fit + win/pick). Underrated for this god: Amanita Charm, Genji''s Guard, Rod
+    of Tahuti, Erosion, Eye of Providence, Draconic Scale, Breastplate of Valor, Helm
     of Darkness, Shifter''s Shield, Shield of the Phoenix, Oni Hunter''s Garb, Stone
-    of Binding, Magi''s Cloak, Midgardian Mail, Helm of Radiance, Mantle Of Discord,
+    of Binding, Magi''s Cloak, Midgardian Mail, Mantle Of Discord, Helm of Radiance,
     Leviathan''s Hide, Screeching Gargoyle, Prophetic Cloak, Ancile, Hide of the Nemean
     Lion, Void Stone, Void Shield, Xibalban Effigy, Hussar''s Wings, Spectral Armor,
     Gladiator''s Shield.'

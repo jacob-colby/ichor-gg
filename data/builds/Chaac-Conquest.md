@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.4336283185840708
   god_matches_won: 98
   god_matches_played: 226
@@ -116,19 +116,19 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Shield Splitter, Kinetic
+    this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Shield Splitter, Kinetic
     Cuirass, Berserker''s Shield, Gluttonous Grimoire, Spear of Desolation, Obsidian
     Shard, Soul Gem, Runeforged Hammer, Helm of Radiance, Helm of Darkness, Titan''s
     Bane, Hydra''s Lament, Spear of the Magus, Erosion, Oni Hunter''s Garb, Eye of
-    Providence, Draconic Scale, Death Metal, Stone of Binding, Shield of the Phoenix,
-    Midgardian Mail, Lotus Sickle, The Crusher, Magi''s Cloak, Jade Scepter, Doom
-    Orb, Avenging Blade, Screeching Gargoyle, Mantle Of Discord, Leviathan''s Hide,
-    Heartseeker, The World Stone, Chronos'' Pendant, The Reaper, Arondight, Shifter''s
+    Providence, Draconic Scale, Stone of Binding, Death Metal, Shield of the Phoenix,
+    Midgardian Mail, The Crusher, Magi''s Cloak, Ancient Signet, Lotus Sickle, Jade
+    Scepter, Avenging Blade, Screeching Gargoyle, Doom Orb, Mantle Of Discord, Leviathan''s
+    Hide, Heartseeker, The World Stone, Chronos'' Pendant, The Reaper, Shifter''s
     Shield.'
   slot_scores:
     Book of Thoth:
       total: 0.4
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
       fit: 0.15
@@ -152,7 +152,7 @@ builds:
       fit: 0.17
     Rod of Tahuti:
       total: 0.55
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.3
@@ -195,16 +195,16 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Jotunn''s Revenge, Amanita Charm, Shield Splitter, Berserker''s Shield,
     Spear of Desolation, Kinetic Cuirass, Gluttonous Grimoire, Obsidian Shard, Hydra''s
-    Lament, Soul Gem, Helm of Radiance, Runeforged Hammer, Lotus Sickle, Helm of Darkness,
-    Titan''s Bane, Spear of the Magus, Death Metal, Oni Hunter''s Garb, Doom Orb,
-    The World Stone, Heartseeker, Jade Scepter, Chronos'' Pendant, Erosion, The Crusher,
-    Eye of Providence, Avenging Blade, Shield of the Phoenix, Stone of Binding, Arondight,
-    Wish-Granting Pearl, Screeching Gargoyle, Draconic Scale, Midgardian Mail, Polynomicon,
-    Magi''s Cloak, Ancient Signet, Heartwood Charm.'
+    Lament, Soul Gem, Helm of Radiance, Runeforged Hammer, Lotus Sickle, Ancient Signet,
+    Titan''s Bane, Helm of Darkness, Spear of the Magus, Oni Hunter''s Garb, Death
+    Metal, Doom Orb, The World Stone, Heartseeker, Jade Scepter, Chronos'' Pendant,
+    The Crusher, Erosion, Eye of Providence, Shield of the Phoenix, Avenging Blade,
+    Stone of Binding, Arondight, Screeching Gargoyle, Draconic Scale, Midgardian Mail,
+    Wish-Granting Pearl, Magi''s Cloak, Polynomicon, Triton''s Conch.'
   slot_scores:
     Book of Thoth:
       total: 0.41
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
       fit: 0.25
@@ -234,7 +234,7 @@ builds:
       fit: 0.45
     Rod of Tahuti:
       total: 0.56
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.36
@@ -256,8 +256,8 @@ builds:
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -269,17 +269,17 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Spear of Desolation, Gluttonous
-    Grimoire, Soul Gem, Berserker''s Shield, Obsidian Shard, Shield Splitter, Kinetic
-    Cuirass, Titan''s Bane, Spear of the Magus, Hydra''s Lament, Helm of Radiance,
+    Grimoire, Soul Gem, Berserker''s Shield, Obsidian Shard, Kinetic Cuirass, Shield
+    Splitter, Titan''s Bane, Spear of the Magus, Hydra''s Lament, Helm of Radiance,
     Runeforged Hammer, Helm of Darkness, Lotus Sickle, Shield of the Phoenix, The
-    Crusher, Doom Orb, Oni Hunter''s Garb, Screeching Gargoyle, The World Stone, Erosion,
-    Heartseeker, Eye of Providence, Chronos'' Pendant, Death Metal, Stone of Binding,
-    Draconic Scale, Midgardian Mail, The Reaper, Arondight, Dreamer''s Idol, Jade
-    Scepter, Magi''s Cloak, Avenging Blade, Leviathan''s Hide, Mantle Of Discord.'
+    Crusher, Oni Hunter''s Garb, Doom Orb, Screeching Gargoyle, Erosion, The World
+    Stone, Eye of Providence, Chronos'' Pendant, Heartseeker, Ancient Signet, Stone
+    of Binding, Death Metal, Draconic Scale, The Reaper, Midgardian Mail, Arondight,
+    Magi''s Cloak, Dreamer''s Idol, Jade Scepter, Leviathan''s Hide, Avenging Blade.'
   slot_scores:
     Book of Thoth:
-      total: 0.4
-      efficiency: 0.5
+      total: 0.39
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
       fit: 0.14
@@ -308,8 +308,8 @@ builds:
       pick: 0.33
       fit: 0.41
     Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.87
+      total: 0.55
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.34
@@ -346,16 +346,16 @@ builds:
     this god: Rod of Tahuti, Amanita Charm, Soul Gem, Jotunn''s Revenge, Regrowth
     Striders, Shield of the Phoenix, Berserker''s Shield, Kinetic Cuirass, Gluttonous
     Grimoire, The Reaper, Shield Splitter, Ethereal Staff, Spear of Desolation, Obsidian
-    Shard, Runeforged Hammer, Yogi''s Necklace, Blood-Bound Book, Phoenix Feather,
-    Rod of Asclepius, Helm of Radiance, Titan''s Bane, Sphere of Negation, Hydra''s
-    Lament, Spear of the Magus, Chandra''s Grace, Helm of Darkness, Oni Hunter''s
-    Garb, Erosion, Eye of Providence, Death Metal, Jade Scepter, Avenging Blade, Draconic
-    Scale, Midgardian Mail, The Crusher, Lotus Sickle, Doom Orb, Leviathan''s Hide,
-    Heartseeker.'
+    Shard, Runeforged Hammer, Yogi''s Necklace, Phoenix Feather, Blood-Bound Book,
+    Titan''s Bane, Rod of Asclepius, Helm of Radiance, Sphere of Negation, Hydra''s
+    Lament, Spear of the Magus, Soul Locket, Oni Hunter''s Garb, Chandra''s Grace,
+    Helm of Darkness, Erosion, Eye of Providence, Death Metal, Jade Scepter, Avenging
+    Blade, Draconic Scale, Midgardian Mail, The Crusher, Lotus Sickle, Ancient Signet,
+    Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.4
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
       fit: 0.16
@@ -373,7 +373,7 @@ builds:
       fit: 0.22
     Rod of Tahuti:
       total: 0.55
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.31
@@ -421,15 +421,15 @@ builds:
     for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire,
     Obsidian Shard, Spear of Desolation, Stone of Binding, Screeching Gargoyle, Avenging
     Blade, Soul Gem, Berserker''s Shield, Shield Splitter, Kinetic Cuirass, Titan''s
-    Bane, Spear of the Magus, Void Stone, Void Shield, Runeforged Hammer, The Crusher,
+    Bane, Spear of the Magus, Void Stone, Void Shield, The Crusher, Runeforged Hammer,
     Helm of Radiance, Doom Orb, Heartseeker, The World Stone, Helm of Darkness, Hydra''s
-    Lament, The Reaper, Dreamer''s Idol, Oni Hunter''s Garb, Erosion, Eye of Providence,
-    Death Metal, Draconic Scale, Lotus Sickle, Midgardian Mail, Shield of the Phoenix,
-    Tekko-Kagi, Magi''s Cloak, Jade Scepter, Leviathan''s Hide.'
+    Lament, The Reaper, Oni Hunter''s Garb, Dreamer''s Idol, Erosion, Eye of Providence,
+    Death Metal, Ancient Signet, Draconic Scale, Midgardian Mail, Shield of the Phoenix,
+    Tekko-Kagi, Lotus Sickle, Magi''s Cloak, Jade Scepter.'
   slot_scores:
     Book of Thoth:
       total: 0.39
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
       fit: 0.13
@@ -452,8 +452,8 @@ builds:
       pick: 0.0
       fit: 0.14
     Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.87
+      total: 0.56
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.4
@@ -495,11 +495,11 @@ builds:
     this god: Rod of Tahuti, Berserker''s Shield, Amanita Charm, Gluttonous Grimoire,
     Jotunn''s Revenge, Nimble Ring, Soul Gem, Kinetic Cuirass, Shield Splitter, Golden
     Blade, Obsidian Shard, Spear of Desolation, Tekko-Kagi, Tyrfing, Helm of Radiance,
-    Runeforged Hammer, Eros'' Bow, Silverbranch Bow, Toxic Blade, Spear of the Magus,
-    The Reaper, Titan''s Bane, Hydra''s Lament, Helm of Darkness, Blood-Bound Book,
-    Lernaean Bow, Pharaoh''s Curse, Oni Hunter''s Garb, Bragi''s Harp, Riptalon, Shogun''s
-    Ofuda, Lotus Sickle, Erosion, Stone of Binding, Eye of Providence, Midgardian
-    Mail, Bracer of The Abyss, Jade Scepter, Shield of the Phoenix.'
+    Eros'' Bow, Runeforged Hammer, Silverbranch Bow, Toxic Blade, The Reaper, Spear
+    of the Magus, Titan''s Bane, Pharaoh''s Curse, Hydra''s Lament, Lernaean Bow,
+    Helm of Darkness, Oni Hunter''s Garb, Blood-Bound Book, Ancient Signet, Riptalon,
+    Shogun''s Ofuda, Bragi''s Harp, Erosion, Stone of Binding, Lotus Sickle, Eye of
+    Providence, Midgardian Mail, Bracer of The Abyss, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
       total: 0.45
@@ -571,10 +571,10 @@ builds:
     Shield, Kinetic Cuirass, Hydra''s Lament, Shield of the Phoenix, Shield Splitter,
     Screeching Gargoyle, Lotus Sickle, Gluttonous Grimoire, Obsidian Shard, Chronos''
     Pendant, Arondight, Helm of Radiance, Runeforged Hammer, Prophetic Cloak, Oni
-    Hunter''s Garb, Helm of Darkness, Erosion, Eye of Providence, Titan''s Bane, Spear
-    of the Magus, Stone of Binding, Draconic Scale, Gladiator''s Shield, Midgardian
-    Mail, Heartwood Charm, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Chandra''s
-    Grace, Eye of Erebus, Jade Scepter, Shifter''s Shield.'
+    Hunter''s Garb, Erosion, Helm of Darkness, Titan''s Bane, Eye of Providence, Spear
+    of the Magus, Draconic Scale, Stone of Binding, Gladiator''s Shield, Midgardian
+    Mail, Magi''s Cloak, Heartwood Charm, Mantle Of Discord, Leviathan''s Hide, Ancient
+    Signet, Chandra''s Grace, Eye of Erebus, Shifter''s Shield.'
   slot_scores:
     Breastplate of Valor:
       total: 0.49
@@ -643,15 +643,15 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Rod of Tahuti, Jotunn''s Revenge, Amanita Charm, Shield
+    Underrated for this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Shield
     Splitter, Kinetic Cuirass, Berserker''s Shield, Gluttonous Grimoire, Spear of
     Desolation, Obsidian Shard, Soul Gem, Runeforged Hammer, Helm of Radiance, Helm
     of Darkness, Titan''s Bane, Hydra''s Lament, Spear of the Magus, Erosion, Oni
-    Hunter''s Garb, Eye of Providence, Draconic Scale, Death Metal, Stone of Binding,
-    Shield of the Phoenix, Midgardian Mail, Lotus Sickle, The Crusher, Magi''s Cloak,
-    Jade Scepter, Doom Orb, Avenging Blade, Screeching Gargoyle, Mantle Of Discord,
-    Leviathan''s Hide, Shifter''s Shield, Heartseeker, The World Stone, Chronos''
-    Pendant, The Reaper, Arondight.'
+    Hunter''s Garb, Eye of Providence, Draconic Scale, Stone of Binding, Death Metal,
+    Shield of the Phoenix, Midgardian Mail, The Crusher, Magi''s Cloak, Ancient Signet,
+    Lotus Sickle, Jade Scepter, Avenging Blade, Screeching Gargoyle, Doom Orb, Mantle
+    Of Discord, Leviathan''s Hide, Shifter''s Shield, Heartseeker, The World Stone,
+    Chronos'' Pendant, The Reaper.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.5
@@ -679,7 +679,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.55
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.45
       pick: 0.0
       fit: 0.3

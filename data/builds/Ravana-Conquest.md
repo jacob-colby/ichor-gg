@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.15
     win_rate: 0.38
   source_url: https://smitebrain.com/gods/ravana/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.4779116465863454
   god_matches_won: 476
   god_matches_played: 996
@@ -116,12 +116,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Heartseeker, Amanita Charm, Shield Splitter, Runeforged Hammer, Genji''s
+    this god: Amanita Charm, Heartseeker, Shield Splitter, Runeforged Hammer, Genji''s
     Guard, Titan''s Bane, Hydra''s Lament, Berserker''s Shield, Breastplate of Valor,
-    Avenging Blade, The Crusher, Arondight, Oni Hunter''s Garb, Shield of the Phoenix,
-    The Reaper, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian Mail, Draconic
+    The Crusher, Avenging Blade, Oni Hunter''s Garb, The Reaper, Shield of the Phoenix,
+    Arondight, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian Mail, Draconic
     Scale, Tekko-Kagi, Leviathan''s Hide, Golden Blade, Screeching Gargoyle, Pendulum
-    Blade, Transcendence.'
+    Blade, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.53
@@ -149,7 +149,7 @@ builds:
       fit: 0.27
     Heartseeker:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.59
       pick: 0.11
       fit: 0.65
@@ -196,7 +196,7 @@ builds:
     Genji''s Guard, Amanita Charm, Hydra''s Lament, Runeforged Hammer, Shield Splitter,
     Breastplate of Valor, Titan''s Bane, Berserker''s Shield, Oni Hunter''s Garb,
     The Crusher, Avenging Blade, Arondight, Transcendence, The Reaper, Shield of the
-    Phoenix, Midgardian Mail, Screeching Gargoyle, Yogi''s Necklace, Erosion, Tekko-Kagi,
+    Phoenix, Midgardian Mail, Screeching Gargoyle, Tekko-Kagi, Yogi''s Necklace, Erosion,
     Leviathan''s Hide, Eye of Providence, Wyrmskin Hide, Draconic Scale, Stone of
     Binding, Tyrfing.'
   slot_scores:
@@ -207,7 +207,7 @@ builds:
       pick: 0.0
       fit: 0.25
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.67
       win: 0.45
       pick: 0.19
@@ -226,7 +226,7 @@ builds:
       fit: 0.28
     Heartseeker:
       total: 0.52
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.59
       pick: 0.11
       fit: 0.62
@@ -271,7 +271,7 @@ builds:
     god: Heartseeker, Genji''s Guard, Amanita Charm, Titan''s Bane, Hydra''s Lament,
     Breastplate of Valor, Runeforged Hammer, Shield Splitter, Berserker''s Shield,
     The Crusher, The Reaper, Shield of the Phoenix, Arondight, Oni Hunter''s Garb,
-    Avenging Blade, Screeching Gargoyle, Pendulum Blade, Tekko-Kagi, Midgardian Mail,
+    Screeching Gargoyle, Avenging Blade, Pendulum Blade, Tekko-Kagi, Midgardian Mail,
     Erosion, Eye of Providence, Leviathan''s Hide, Draconic Scale, Avatar''s Parashu,
     Stone of Binding, Magi''s Cloak, Ancile.'
   slot_scores:
@@ -301,7 +301,7 @@ builds:
       fit: 0.16
     Heartseeker:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.59
       pick: 0.11
       fit: 0.6
@@ -343,12 +343,12 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Shield Splitter, Heartseeker,
-    The Reaper, Genji''s Guard, Runeforged Hammer, Berserker''s Shield, Phoenix Feather,
-    Yogi''s Necklace, Titan''s Bane, Breastplate of Valor, Hydra''s Lament, Erosion,
-    Oni Hunter''s Garb, Eye of Providence, Chandra''s Grace, Avenging Blade, Draconic
-    Scale, Midgardian Mail, The Crusher, Wyrmskin Hide, Regrowth Striders, Leviathan''s
-    Hide, Glorious Pridwen, Stone of Binding.'
+    this god: Amanita Charm, Shield of the Phoenix, Shield Splitter, The Reaper, Heartseeker,
+    Genji''s Guard, Runeforged Hammer, Berserker''s Shield, Phoenix Feather, Yogi''s
+    Necklace, Titan''s Bane, Breastplate of Valor, Hydra''s Lament, Erosion, Oni Hunter''s
+    Garb, Eye of Providence, Chandra''s Grace, Avenging Blade, Draconic Scale, Midgardian
+    Mail, The Crusher, Regrowth Striders, Wyrmskin Hide, Leviathan''s Hide, Glorious
+    Pridwen, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.52
@@ -376,7 +376,7 @@ builds:
       fit: 0.76
     Heartseeker:
       total: 0.51
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.59
       pick: 0.11
       fit: 0.58
@@ -418,7 +418,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Heartseeker, Titan''s Bane, Avenging Blade, Amanita Charm, The Crusher,
-    Genji''s Guard, Screeching Gargoyle, Shield Splitter, Runeforged Hammer, The Reaper,
+    Genji''s Guard, Screeching Gargoyle, Runeforged Hammer, Shield Splitter, The Reaper,
     Stone of Binding, Void Stone, Void Shield, Hydra''s Lament, Berserker''s Shield,
     Tekko-Kagi, Breastplate of Valor, Pendulum Blade, Avatar''s Parashu, Oni Hunter''s
     Garb, Arondight, Shield of the Phoenix, Midgardian Mail, Erosion, Eye of Providence,
@@ -456,7 +456,7 @@ builds:
       fit: 0.67
     Heartseeker:
       total: 0.54
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.59
       pick: 0.11
       fit: 0.77
@@ -493,11 +493,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Golden Blade, Amanita Charm, Genji''s Guard, Tekko-Kagi,
-    Tyrfing, Heartseeker, Toxic Blade, Silverbranch Bow, Runeforged Hammer, Shield
-    Splitter, Lernaean Bow, Breastplate of Valor, Riptalon, The Reaper, Hydra''s Lament,
-    Titan''s Bane, Pharaoh''s Curse, Shogun''s Ofuda, Oni Hunter''s Garb, Dominance,
-    Avenging Blade, The Crusher, Shield of the Phoenix, Midgardian Mail, Screeching
-    Gargoyle, Qin''s Blade.'
+    Tyrfing, Toxic Blade, Silverbranch Bow, Runeforged Hammer, Shield Splitter, Lernaean
+    Bow, Riptalon, Breastplate of Valor, The Reaper, Titan''s Bane, Hydra''s Lament,
+    Pharaoh''s Curse, Shogun''s Ofuda, Oni Hunter''s Garb, Dominance, The Crusher,
+    Avenging Blade, Shield of the Phoenix, Midgardian Mail, Screeching Gargoyle, Erosion,
+    Qin''s Blade.'
   slot_scores:
     Golden Blade:
       total: 0.5
@@ -550,7 +550,7 @@ builds:
   - Hydra's Lament
   - Freya's Tears
   flex_slots:
-  - Freya's Tears
+  - Breastplate of Valor
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -567,12 +567,11 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Breastplate of Valor,
-    Hydra''s Lament, Amanita Charm, Shield of the Phoenix, Heartseeker, Screeching
-    Gargoyle, Arondight, Berserker''s Shield, Runeforged Hammer, Shield Splitter,
-    Titan''s Bane, Chandra''s Grace, Gladiator''s Shield, Eye of Erebus, Oni Hunter''s
-    Garb, Prophetic Cloak, Pendulum Blade, Midgardian Mail, Erosion, Avenging Blade,
-    The Crusher, Damaru, Eye of Providence, Regrowth Striders, Leviathan''s Hide,
-    Draconic Scale.'
+    Hydra''s Lament, Amanita Charm, Shield of the Phoenix, Screeching Gargoyle, Heartseeker,
+    Arondight, Berserker''s Shield, Runeforged Hammer, Shield Splitter, Titan''s Bane,
+    Gladiator''s Shield, Chandra''s Grace, Oni Hunter''s Garb, Eye of Erebus, Pendulum
+    Blade, Prophetic Cloak, Midgardian Mail, Erosion, Damaru, The Crusher, Avenging
+    Blade, Regrowth Striders, Eye of Providence, Leviathan''s Hide, Draconic Scale.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -587,7 +586,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.67
       win: 0.45
       pick: 0.19
@@ -643,10 +642,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Shield Splitter, Runeforged Hammer, Berserker''s
     Shield, Genji''s Guard, Titan''s Bane, Hydra''s Lament, Breastplate of Valor,
-    Avenging Blade, The Crusher, Heartseeker, Arondight, Oni Hunter''s Garb, Shield
-    of the Phoenix, The Reaper, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian
+    The Crusher, Avenging Blade, Heartseeker, Oni Hunter''s Garb, The Reaper, Shield
+    of the Phoenix, Arondight, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian
     Mail, Draconic Scale, Tekko-Kagi, Leviathan''s Hide, Golden Blade, Screeching
-    Gargoyle, Pendulum Blade, Transcendence.'
+    Gargoyle, Pendulum Blade, Stone of Binding.'
   slot_scores:
     Genji's Guard:
       total: 0.51
@@ -716,10 +715,10 @@ builds:
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
     + fit + win/pick). Underrated for this god: Amanita Charm, Shield Splitter, Runeforged
     Hammer, Berserker''s Shield, Genji''s Guard, Titan''s Bane, Hydra''s Lament, Breastplate
-    of Valor, Avenging Blade, The Crusher, Heartseeker, Arondight, Oni Hunter''s Garb,
-    Shield of the Phoenix, The Reaper, Erosion, Wyrmskin Hide, Eye of Providence,
-    Midgardian Mail, Draconic Scale, Tekko-Kagi, Leviathan''s Hide, Golden Blade,
-    Screeching Gargoyle, Pendulum Blade, Transcendence.'
+    of Valor, The Crusher, Avenging Blade, Heartseeker, Oni Hunter''s Garb, The Reaper,
+    Shield of the Phoenix, Arondight, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian
+    Mail, Draconic Scale, Tekko-Kagi, Leviathan''s Hide, Golden Blade, Screeching
+    Gargoyle, Pendulum Blade, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.53

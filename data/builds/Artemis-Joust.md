@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -105,7 +105,7 @@ builds:
       pick: 0.0
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.6
     Heartseeker:
       total: 0.49
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -318,14 +318,14 @@ builds:
       pick: 0.0
       fit: 0.58
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.57
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -554,7 +554,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Lernaean Bow:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
