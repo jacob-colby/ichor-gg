@@ -1270,7 +1270,7 @@ REGISTRY.update({
                           on_takedown=_bloodforge_takedown, heals=True),
     "Stygian Anchor": Passive(PARTIAL, "god damage applies 40% healing reduction for 5s",
                               ("the -3% attack speed per Sludge stack on the target is not simulated",
-                               "'5% of their healing echoed to you' is"),
+                               "its '5% of their healing echoed to you' is simulated"),
                               heals=True),
 })
 for _n in ("The Reaper", "Amanita Charm"):

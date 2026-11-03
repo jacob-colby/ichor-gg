@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from "vitest";
-import { render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { SideBySide, SideBySideView, type SideBySideData } from "./SideBySide";
 
 const metrics = { sustained_squishy: 900, sustained_tank: 500, burst_squishy: 300,
@@ -98,5 +98,36 @@ describe("SideBySide aspect matching", () => {
     expect(screen.getByTestId("verdict")).toHaveTextContent("No verdict");
     expect(screen.getByTestId("aspect-not-simulated")).toHaveTextContent("not a fair comparison");
     expect(screen.getByTestId("side-by-side")).not.toHaveTextContent("Ichor’s damage is");
+  });
+
+  it("labels a Joust comparison as against the BORROWED Conquest six", () => {
+    const joust: SideBySideData = { ...data, mode: "Joust", community_borrowed_from: "Conquest",
+      reference: { items: ["A", "B"], same_as_mode_build: false, available: true,
+        mode_over_conquest: [1.03, 0.98], verdict_vs_community: "level" } };
+    render(<SideBySideView d={joust} meta={null} />);
+    expect(screen.getByTestId("side-by-side")).toHaveTextContent("Ichor’s Joust build vs the Conquest community");
+    expect(screen.getByTestId("borrowed")).toHaveTextContent("Joust has no community record of its own");
+    expect(screen.getByText("Community (Conquest)")).toBeInTheDocument();
+    const ref = screen.getByTestId("reference");
+    expect(ref).toHaveTextContent("A · B");
+    expect(ref).toHaveTextContent("+3.0%");
+    expect(ref).toHaveTextContent("Level");
+  });
+
+  it("a Conquest comparison carries no borrowed label", () => {
+    render(<SideBySideView d={data} meta={null} />);
+    expect(screen.queryByTestId("borrowed")).toBeNull();
+    expect(screen.queryByTestId("reference")).toBeNull();
+  });
+
+  it("opens on the page's mode and switches to another mode's folder", async () => {
+    const f = vi.fn(async (url: string) => ({ ok: true,
+      json: async () => (url.endsWith("_meta.json") ? null : { ...data, mode: "Arena" }) }));
+    vi.stubGlobal("fetch", f);
+    render(<SideBySide god="Hou Yi" mode="Arena" />);
+    await waitFor(() => expect(screen.getByTestId("side-by-side")).toBeInTheDocument());
+    expect(f).toHaveBeenCalledWith("/side_by_side/arena/hou-yi.json", expect.anything());
+    fireEvent.click(screen.getByRole("radio", { name: "Joust" }));
+    await waitFor(() => expect(f).toHaveBeenCalledWith("/side_by_side/joust/hou-yi.json", expect.anything()));
   });
 });

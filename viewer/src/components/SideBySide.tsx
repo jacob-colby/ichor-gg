@@ -8,7 +8,7 @@
  * Principle 3 is the shape of the section: a passive the model cannot simulate
  * is NAMED, with its reason, beside the build it sits in — "not simulated" and
  * "worth nothing" must never render the same way. */
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { iconSlug } from "../lib/builds";
 import { ItemIcon } from "./ItemIcon";
 
@@ -49,6 +49,22 @@ export interface SideBySideData {
   verdict_unwithheld?: string;
   /** Damage and survival axes weighted over the 2-, 4- and 6-item points. */
   weighted_axes?: [number, number];
+  /** The mode compared in (2026-11-03). Absent before: Conquest. */
+  mode?: Mode;
+  /** Joust and Arena have no community record: their "community" six is
+   *  Conquest's, and the page must say so every time. */
+  community_borrowed_from?: string | null;
+  /** Joust/Arena: Ichor's Conquest build under the same mode rules. */
+  reference?: Reference | null;
+}
+
+export type Mode = "Conquest" | "Joust" | "Arena";
+export const MODES: Mode[] = ["Conquest", "Joust", "Arena"];
+
+interface Reference {
+  items: string[]; same_as_mode_build: boolean; available: boolean;
+  mode_over_conquest: [number, number];
+  verdict_vs_community: string; verdict_vs_community_unwithheld?: string;
 }
 
 interface Kit { kit: string; aspect: string | null; pick_rate: number | null;
@@ -88,6 +104,7 @@ function KitLine({ kit }: { kit?: Kit }) {
 }
 
 interface Meta { data: string; level: number; window: number; band: number;
+  mode?: Mode; enemies?: number; kill_time?: number; minutes_per_item?: number;
   targets: Record<"squishy" | "tank", { role: string; n: number; max_health: number;
     physical_prot: number; magical_prot: number }> }
 
@@ -107,6 +124,7 @@ function useJson<T>(url: string): Load<T> {
   return out;
 }
 
+const fmtS = (v: number) => `${Number.isInteger(v) ? v : v.toFixed(1)}s`;
 const pct = (r: number) => `${r >= 1 ? "+" : "−"}${Math.abs((r - 1) * 100).toFixed(1)}%`;
 const n0 = (v: number) => Math.round(v).toLocaleString("en-US");
 const secs = (v: number | null) => (v == null ? "—" : `${v.toFixed(1)}s`);
@@ -262,8 +280,37 @@ function DiffItem({ d }: { d: Diff }) {
   );
 }
 
-export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | null }) {
+/** Ichor's Conquest build beside its mode build: what the mode profile
+ *  changed, and whether the change helped against the same borrowed six. */
+function ReferenceBlock({ d, band }: { d: SideBySideData; band: number }) {
+  const r = d.reference;
+  if (!r) return null;
+  const [dmg, surv] = r.mode_over_conquest;
+  return (
+    <div className="mt-4 rounded-md border border-line bg-bg1 p-3 text-small" data-testid="reference">
+      <h3 className="font-display text-body font-semibold text-ink">Second reference: Ichor&rsquo;s Conquest build</h3>
+      <p className="mt-1 text-muted">
+        {r.items.join(" · ")}
+        {r.same_as_mode_build ? " — the same six as the " + d.mode + " build." : "."}
+        {!r.available && " It holds an item " + d.mode + "\u2019s shop does not sell."}
+      </p>
+      {!r.same_as_mode_build && (
+        <p className="mt-1 text-muted">
+          The {d.mode} build against it: damage{" "}
+          <span className={`font-mono ${tone(dmg, band)}`}>{pct(dmg)}</span>, survival{" "}
+          <span className={`font-mono ${tone(surv, band)}`}>{pct(surv)}</span>.
+          {" "}Its own verdict against the same Conquest six:{" "}
+          <span className="text-ink-soft">{VERDICT_LABEL[r.verdict_vs_community] ?? r.verdict_vs_community}</span>.
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function SideBySideView({ d, meta, flush = false }: { d: SideBySideData; meta: Meta | null; flush?: boolean }) {
   const band = meta?.band ?? 0.05;
+  const borrowed = d.community_borrowed_from;
+  const mode = d.mode ?? "Conquest";
   const [dmg, surv] = d.weighted_axes ?? [d.damage_axis, d.survival_axis];
   const shared = new Set(d.shared);
   const gaps = new Map<string, string>();
@@ -273,14 +320,25 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
     }
   }
   return (
-    <section className="mt-7 border-t border-line pt-5" data-testid="side-by-side">
+    <section className={flush ? "mt-3" : "mt-7 border-t border-line pt-5"} data-testid="side-by-side">
       <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-        <h2 className="font-display text-title font-semibold text-ink">Ichor vs the community</h2>
+        <h2 className="font-display text-title font-semibold text-ink">
+          {borrowed ? `Ichor’s ${mode} build vs the ${borrowed} community` : "Ichor vs the community"}
+        </h2>
         <span className={`rounded-full border px-2.5 py-0.5 text-small font-semibold ${VERDICT_TONE[d.verdict] ?? "border-line text-muted"}`}
           data-testid="verdict">
           {VERDICT_LABEL[d.verdict] ?? d.verdict}
         </span>
       </div>
+      {borrowed && (
+        <p className="mt-2 max-w-[70ch] rounded-md border border-dashed border-line-strong bg-bg1 p-3 text-small leading-relaxed text-ink-soft"
+          data-testid="borrowed">
+          {mode} has no community record of its own — the only published builds are {borrowed}&rsquo;s.
+          So this is Ichor&rsquo;s {mode} build against what {borrowed} players build, run under
+          {" "}{mode}&rsquo;s rules{meta?.enemies ? ` (${meta.enemies} enemies, a ${meta.window.toFixed(1)}s fight)` : ""}.
+          It says how the mode profile changes the build, not what {mode} players actually buy.
+        </p>
+      )}
       <KitLine kit={d.kit} />
       <CoverageLine c={d.coverage} />
       {d.verdict === ASPECT_NOT_SIMULATED ? (
@@ -309,7 +367,8 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         <BuildColumn label="Ichor" side={d.ichor} shared={shared} accent />
-        <BuildColumn label="Community" side={d.community} shared={shared} accent={false} />
+        <BuildColumn label={borrowed ? `Community (${borrowed})` : "Community"} side={d.community}
+          shared={shared} accent={false} />
       </div>
       {d.substitutions.some((s) => s.used) && (
         <p className="mt-2 text-label text-faint">
@@ -321,6 +380,7 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
       )}
 
       <MetricTable d={d} band={band} />
+      <ReferenceBlock d={d} band={band} />
 
       {d.diffs.length > 0 && (
         <>
@@ -351,21 +411,58 @@ export function SideBySideView({ d, meta }: { d: SideBySideData; meta: Meta | nu
           ({n0(meta.targets.squishy.max_health)} HP, {n0(meta.targets.squishy.physical_prot)}/{n0(meta.targets.squishy.magical_prot)} prot);
           tank = median {meta.targets.tank.role}
           ({n0(meta.targets.tank.max_health)} HP, {n0(meta.targets.tank.physical_prot)}/{n0(meta.targets.tank.magical_prot)} prot).
-          One kill per 10s fight when the target's health runs out, one assist every 10s; an enemy as lethal as this comparison asks of us hits back; actives pressed on cooldown. Stacking items fill over game time (an item every 5 minutes, full 10 minutes after purchase). Data: {meta.data}.
+          One kill per {fmtS(meta.window)} fight when the target&rsquo;s health runs out, one assist every {fmtS(meta.window)};
+          {" "}an enemy{meta.enemies ? ` team of ${meta.enemies}` : ""} hits back, killing the squishy in {fmtS(meta.kill_time ?? meta.window)};
+          {" "}both sides lifesteal and heal, and anti-heal cuts it; actives pressed on cooldown. Stacking items fill over game time
+          (an item every {(meta.minutes_per_item ?? 5).toFixed(1)} minutes, full 10 minutes after purchase). Data: {meta.data}.
         </p>
       )}
     </section>
   );
 }
 
+/** Where a mode's files live: Conquest at the root (its URLs predate the
+ *  modes), Joust and Arena in their own folder. */
+export function modeDir(mode: Mode) {
+  return mode === "Conquest" ? "/side_by_side" : `/side_by_side/${mode.toLowerCase()}`;
+}
+
+/** The comparison's own mode switch. Starts on the page's mode. */
+function ModeSwitch({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => void }) {
+  return (
+    <div role="radiogroup" aria-label="Comparison mode" className="flex gap-1" data-testid="sbs-mode">
+      {MODES.map((m) => (
+        <button key={m} type="button" role="radio" aria-checked={m === mode} onClick={() => onChange(m)}
+          className={`rounded-full border px-2.5 py-0.5 text-small ${m === mode
+            ? "border-line-strong bg-bg1 font-semibold text-ink" : "border-line text-muted hover:text-ink-soft"}`}>
+          {m}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 /** The section as the god page mounts it. Renders nothing when this god has
- *  no comparison (an empty heading would claim a measurement that is not there). */
-export function SideBySide({ god }: { god: string }) {
-  const one = useJson<SideBySideData>(`/side_by_side/${iconSlug(god)}.json`);
-  const meta = useJson<Meta>("/side_by_side/_meta.json");
+ *  no comparison in any mode (an empty heading would claim a measurement that
+ *  is not there). */
+export function SideBySide({ god, mode: pageMode = "Conquest" }: { god: string; mode?: Mode }) {
+  const [mode, setMode] = useState<Mode>(pageMode);
+  useEffect(() => setMode(pageMode), [pageMode]);
+  const dir = modeDir(mode);
+  const one = useJson<SideBySideData>(`${dir}/${iconSlug(god)}.json`);
+  const meta = useJson<Meta>(`${dir}/_meta.json`);
+  const wrap = (body: ReactNode) => (
+    <div className="mt-7 border-t border-line pt-5">
+      <ModeSwitch mode={mode} onChange={setMode} />
+      {body}
+    </div>
+  );
   if (one.state === "loading") {
-    return <div className="mt-7 h-24 animate-pulse rounded-md bg-bg1" aria-busy="true" aria-label="Loading comparison" />;
+    return wrap(<div className="mt-3 h-24 animate-pulse rounded-md bg-bg1" aria-busy="true" aria-label="Loading comparison" />);
   }
-  if (one.state === "none") return null;
-  return <SideBySideView d={one.value} meta={meta.state === "ready" ? meta.value : null} />;
+  if (one.state === "none") {
+    return mode === pageMode && mode === "Conquest" ? null
+      : wrap(<p className="mt-3 text-small text-muted" data-testid="sbs-none">No {mode} comparison for {god}.</p>);
+  }
+  return wrap(<SideBySideView d={one.value} meta={meta.state === "ready" ? meta.value : null} flush />);
 }

@@ -2105,6 +2105,27 @@ first fight the counts are 11 / 7 / 13 / 10, late 1. Anti-heal moves the
 damage axis ~1%: the reference Mid carries 4.8% mean lifesteal, and only 3 of
 94 community sixes hold an anti-heal item at all.
 
+**Per mode (2026-11-03).** `python -m smite.side_by_side --mode Joust|Arena|all`
+runs Ichor's MODE `model` build against the **borrowed Conquest** six (the
+only community record), with Ichor's Conquest build beside it as a second
+reference, under each mode's settings (`MODE_SETTINGS`, evidence in the MODES
+block): Joust 3 enemies and a 16.7s fight (10s × 5/3 — derived from team
+size), Arena 5 enemies and a 15s fight (a judgement, bracketed 10–20s in the
+report), stack clock from each mode's `economy`. Arena drops its
+`excluded_items` from the borrowed six and refills. Reports
+`data/Analysis/_side_by_side_<mode>.md`, viewer files under
+`viewer/public/side_by_side/<mode>/`; the god page's comparison now has a mode
+switch and says "borrowed" every time. Counts (87 judged): Joust Ichor better
+9, community better 4, trade-off 7, level 7, withheld 60; Arena 11 / 1 / 6 /
+6, late 1, withheld 62. Withholding is HIGHER than Conquest's 45, and the
+Joust not-simulated table says why: Erosion (37 compared builds, no enemy
+shield), Toxic Blade (31) and Stygian Anchor (27) — the last two PARTIAL only
+for their attack-speed debuff on the target, and both pulled in by the
+modes' flat +0.30 anti-heal bonus. Read the mode counts as "most mode builds
+cannot be judged yet", not as a win for Ichor. Simulating the target's
+attack-speed debuff (the enemy's attack cadence is already a clock) is the
+cheapest next step to judge more of them.
+
 Left, in order: (1) decide what a movement/CC/ward passive is worth in a
 comparison that has no movement, CC or wards — the honest options are a
 stated zero (and counting it as covered) or leaving those gods withheld, and

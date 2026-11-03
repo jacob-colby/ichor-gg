@@ -261,6 +261,42 @@ HEALING = True
 #: first fight only), because an effective-health run is a chain of
 #: consecutive 10s fights and lifesteal compounds over the chain.
 HEAL_UNTIL = math.inf
+#
+# ── MODES (2026-11-03) ────────────────────────────────────────────────────
+# The comparison was Conquest's alone. Joust and Arena have NO community
+# record of their own (SmiteBrain publishes Conquest only), so in those modes
+# it is Ichor's mode build against the BORROWED Conquest community six —
+# labelled so on every page — with Ichor's Conquest build as a second
+# reference. The targets and the enemy's cadence are still read off the
+# Conquest record; nothing else exists to read them from.
+#
+# Per mode, set by `use_mode` (module globals, so every Sim reads them):
+#   ENEMIES    how many enemies can be on our god. DOCUMENTED: 5v5 Conquest
+#              and Arena, 3v3 Joust.
+#   KILL_TIME  seconds the enemy needs to kill the reference squishy, i.e.
+#              its lethality. DERIVED for Joust: Conquest's 10s is a 5-enemy
+#              figure, and damage on one target scales with how many enemies
+#              can focus it, so 3 enemies take 10 x 5/3 = 16.7s. Arena is
+#              5v5, so Conquest's 10s.
+#   WINDOW     the fight: the sustained window, one kill and one assist per
+#              WINDOW (assist mid-fight). Joust = its KILL_TIME, 16.7s — a
+#              lane fight lasts as long as it takes the fewer enemies to
+#              threaten a kill. Arena 15s is a JUDGEMENT: the same lethality
+#              as Conquest, but no lane, base or rotation breaks a fight off,
+#              so the engagement a build must last through is longer; the
+#              report brackets it at ARENA_WINDOW_BRACKET.
+#   MINUTES_PER_ITEM  the stack clock, DERIVED from the mode's economy in
+#              _weights.yaml: (mean community six gold - start_gold) /
+#              (6 x gold_per_min). Conquest keeps its documented 5.
+ENEMIES = 5
+KILL_TIME = 10.0
+ARENA_WINDOW_BRACKET = (10.0, 20.0)
+MODE_SETTINGS = {
+    "Conquest": {"ENEMIES": 5, "KILL_TIME": 10.0, "WINDOW": 10.0},
+    "Joust": {"ENEMIES": 3, "KILL_TIME": 10.0 * 5 / 3, "WINDOW": 10.0 * 5 / 3},
+    "Arena": {"ENEMIES": 5, "KILL_TIME": 10.0, "WINDOW": 15.0},
+}
+MODES = tuple(MODE_SETTINGS)
 #: An effective-health run stops here if our god is still alive (it never is
 #: at these DPS; the remainder of the bar is then added statically).
 EHP_RUN_CAP = 600.0
@@ -400,10 +436,10 @@ class Sim:
     carry an `attacker` profile (`reference_targets`); toy targets without one
     get no enemy. `takedowns` turns on kills and assists (off in a burst)."""
 
-    def __init__(self, god, names, items_by_name, target, *, window=WINDOW, level=LEVEL,
+    def __init__(self, god, names, items_by_name, target, *, window=..., level=LEVEL,
                  stacks="full", disabled=(), enemy=None, takedowns=None):
         self.god, self.names, self.level, self.target = god, list(names), level, target
-        self.window = window
+        self.window = WINDOW if window is ... else window   # read now: MODES sets it
         self.stacks = stacks
         self.damage_type = (god.get("damage_type") or "physical").lower()
         self.melee = is_melee(god)
@@ -1173,8 +1209,8 @@ def attacker_profile(gods, builds_by_god, items_by_name, squishy):
     in WINDOW; attacks come at the median community Carry's attack speed and
     ability hits at the median community Mid's casts per second, each on its
     finished six at level 20 (game-clock stacks)."""
-    raw_dps = {"physical": combat.effective_health(squishy["max_health"], squishy["physical_prot"]) / WINDOW,
-               "magical": combat.effective_health(squishy["max_health"], squishy["magical_prot"]) / WINDOW}
+    raw_dps = {"physical": combat.effective_health(squishy["max_health"], squishy["physical_prot"]) / KILL_TIME,
+               "magical": combat.effective_health(squishy["max_health"], squishy["magical_prot"]) / KILL_TIME}
     aps, casts = [], []
     cuts = {}   # role -> [healing reduction of each community six]
     for g in gods:
@@ -1197,23 +1233,28 @@ def attacker_profile(gods, builds_by_god, items_by_name, squishy):
                          "ability": 1.0 / statistics.median(casts)},
             "n": {"attack": len(aps), "ability": len(casts)},
             # HEALING block: the expected healing reduction on our heals.
-            "anti_heal": team_anti_heal(cuts)}
+            "anti_heal": team_anti_heal(cuts, ENEMIES)}
 
 
-def team_anti_heal(cuts_by_role):
+def team_anti_heal(cuts_by_role, team=5):
     """The expected healing reduction on our god from a whole enemy TEAM, one
     god per role: `cut x P(at least one role holds anti-heal)`, each role's
     share read off its community sixes. A team, not one attacker, because
     "Healing Reduction does not stack with other similar effects": whoever
     applies it, our heal is cut once. `cut` is the strongest reduction any
-    holder carries (40% for every item in the pool)."""
+    holder carries (40% for every item in the pool).
+
+    `team` other than 5 (Joust's 3) has no fixed role per seat, so every
+    seat draws from the pooled share: `1 - (1 - share)^team`."""
     miss, cut = 1.0, 0.0
+    allx = [x for xs in cuts_by_role.values() for x in xs]
     for xs in cuts_by_role.values():
-        if not xs:
-            continue
         held = [x for x in xs if x > 0]
-        miss *= 1.0 - len(held) / len(xs)
         cut = max([cut] + held)
+        if xs and team == 5:
+            miss *= 1.0 - len(held) / len(xs)
+    if team != 5 and allx:
+        miss = (1.0 - sum(1 for x in allx if x > 0) / len(allx)) ** team
     return cut * (1.0 - miss)
 
 
@@ -1232,10 +1273,10 @@ class ModelView:
         finally:
             efficiency.restore_pricing_flags(before)
 
-    def rows(self, god, build_note):
+    def rows(self, god, build_note, mode="Conquest"):
         before = efficiency.apply_pricing_flags(self.weights)
         try:
-            profile_ = scoring.resolve_profile(self.weights, "Conquest", None)
+            profile_ = scoring.resolve_profile(self.weights, mode, None)
             rows = scoring.score_god_items(god, self.items, build_note, self.eff,
                                            self.weights, self.tags_map, profile_)
         finally:
@@ -1363,10 +1404,19 @@ def kit_for(build_note):
             "simulated": (not on_aspect) or aspect in SIMULATED_ASPECTS}
 
 
-def compare(god, build_note, items_by_name, targets, model_rows=None):
-    """Everything criterion 2 names for one god, or None (with a reason)."""
-    community, subs = community_six(god, build_note, items_by_name)
-    ours = bq.suggested_core(build_note, ARCHETYPE)
+def compare(god, build_note, items_by_name, targets, model_rows=None, mode_note=None,
+            excluded=frozenset()):
+    """Everything criterion 2 names for one god, or None (with a reason).
+
+    `build_note` is the god's CONQUEST note, the only community record. In
+    Joust or Arena `mode_note` is that mode's note: Ichor's build is read
+    from it, and `excluded` (the mode's `excluded_items`) is dropped from
+    the borrowed community six and refilled by `community_target`'s rule —
+    an item the mode's shop lacks is not a build anyone can play there."""
+    shop = ({n: it for n, it in items_by_name.items() if n not in excluded}
+            if excluded else items_by_name)
+    community, subs = community_six(god, build_note, shop)
+    ours = bq.suggested_core(mode_note if mode_note is not None else build_note, ARCHETYPE)
     if len(community) < 6:
         return None, f"community record makes {len(community)} of 6"
     if len(ours) < 6 or any(n not in items_by_name for n in ours):
@@ -1402,6 +1452,7 @@ def compare(god, build_note, items_by_name, targets, model_rows=None):
                                                p_ours)
             diffs.append(entry)
     out = {
+        "mode": MODE, "community_borrowed_from": None if MODE == "Conquest" else "Conquest",
         "god": god["name"], "role": bq.primary_role(god), "damage_type": god.get("damage_type"),
         "melee": is_melee(god), "level": LEVEL, "window": WINDOW,
         "ichor": p_ours, "community": p_theirs, "community_substitutions": subs,
@@ -1440,21 +1491,98 @@ def best_swap(god, ours, incoming, candidates, items_by_name, targets, base):
 
 # ── The roster ────────────────────────────────────────────────────────────
 
-def run(gods, items, builds_by_god, weights, tags_map, only=None):
+#: The mode `run` is comparing in (set by `use_mode`).
+MODE = "Conquest"
+
+
+class use_mode:
+    """Set the MODES globals for one mode; restore them on exit. The stack
+    clock is derived from the mode's economy (`mode_minutes_per_item`)."""
+
+    def __init__(self, mode, weights=None, builds_by_god=None, items_by_name=None, gods=None):
+        self.mode = mode
+        self.values = dict(MODE_SETTINGS[mode], MODE=mode)
+        self.values["ASSIST_INTERVAL"] = self.values["WINDOW"]
+        self.values["ASSIST_FIRST"] = self.values["WINDOW"] / 2
+        if mode != "Conquest" and weights is not None:
+            mpi = mode_minutes_per_item(mode, weights, builds_by_god or {}, items_by_name or {},
+                                        gods or [])
+            if mpi:
+                self.values["MINUTES_PER_ITEM"] = mpi
+
+    def __enter__(self):
+        g = globals()
+        self.saved = {k: g[k] for k in self.values}
+        g.update(self.values)
+        return self
+
+    def __exit__(self, *exc):
+        globals().update(self.saved)
+
+
+def mode_minutes_per_item(mode, weights, builds_by_god, items_by_name, gods):
+    """(mean community six gold - start_gold) / (6 x gold_per_min), off the
+    mode's `economy` in _weights.yaml; None if the mode declares none."""
+    econ = (((weights.get("modes") or {}).get(mode.lower()) or {}).get("economy") or {})
+    if not econ.get("gold_per_min"):
+        return None
+    golds = []
+    for g in gods:
+        six, _ = community_six(g, builds_by_god.get(g["name"]) or {}, items_by_name)
+        if len(six) == 6:
+            golds.append(sum(float(items_by_name[n].get("cost") or 0) for n in six))
+    if not golds:
+        return None
+    return max(0.0, statistics.fmean(golds) - econ.get("start_gold", 0)) / (6 * econ["gold_per_min"])
+
+
+def run(gods, items, builds_by_god, weights, tags_map, only=None, mode="Conquest"):
     items_by_name = {it["name"]: it for it in items}
+    if mode != "Conquest" and MODE != mode:
+        with use_mode(mode, weights, builds_by_god, items_by_name, gods):
+            return run(gods, items, builds_by_god, weights, tags_map, only, mode)
     targets = reference_targets(gods, builds_by_god, items_by_name)
     view = ModelView(items, weights, tags_map)
+    excluded = frozenset(((weights.get("modes") or {}).get(mode.lower()) or {}).get("excluded_items") or ())
     rows, skipped = [], []
     for g in sorted(gods, key=lambda g: g["name"]):
         if only and g["name"] != only:
             continue
         note = builds_by_god.get(g["name"]) or {}
-        row, why = compare(g, note, items_by_name, targets, view.rows(g, note))
+        if mode == "Conquest":
+            row, why = compare(g, note, items_by_name, targets, view.rows(g, note))
+        else:
+            mode_note = recommend.load_build_note(g["name"], mode) or {}
+            row, why = compare(g, note, items_by_name, targets,
+                               view.rows(g, {"builds": []}, mode), mode_note, excluded)
+            if row:
+                row["reference"] = conquest_reference(g, note, items_by_name, targets, row, excluded)
         if row:
             rows.append(row)
         else:
             skipped.append({"god": g["name"], "reason": why})
     return rows, skipped, targets
+
+
+def conquest_reference(god, conquest_note, items_by_name, targets, row, excluded=frozenset()):
+    """Ichor's CONQUEST build, run under this mode's rules: its items, its
+    axes against Ichor's mode build, and its own verdict against the same
+    borrowed community six. The second reference the mode pages print, so a
+    reader can see what the mode profile changed and whether it helped."""
+    conq = bq.suggested_core(conquest_note, ARCHETYPE)[:6]
+    if len(conq) < 6 or any(n not in items_by_name for n in conq):
+        return None
+    note = {"available": not (set(conq) & set(excluded))}
+    p_conq = profile(god, conq, items_by_name, targets)
+    p_mode, p_comm = row["ichor"], row["community"]
+    vs_mode = breakpoint_axes(p_mode, p_conq)
+    vs_comm = {"breakpoint_axes": breakpoint_axes(p_conq, p_comm), "kit": row["kit"],
+               "coverage": dict(zip(("ok", "reason"), coverage_check(
+                   p_conq["simulated_share"], p_comm["simulated_share"])))}
+    return dict(note, items=conq, same_as_mode_build=conq == row["ichor"]["items"],
+                mode_over_conquest=weighted_axes(vs_mode),
+                verdict_vs_community=judge(vs_comm),
+                verdict_vs_community_unwithheld=judge(vs_comm, withhold=False))
 
 
 def judged(rows):
@@ -1531,7 +1659,8 @@ def god_lines(r):
          f"Kit: {kit_line(r['kit'])}",
          "",
          f"- Ichor ({i['gold']:.0f}g): {' · '.join(i['items'])}",
-         f"- Community ({c['gold']:.0f}g): {' · '.join(c['items'])}",
+         f"- Community ({c['gold']:.0f}g){' — borrowed from Conquest' if r.get('community_borrowed_from') else ''}: "
+         f"{' · '.join(c['items'])}",
          ]
     for s in r["community_substitutions"]:
         L.append(f"  - cleaned: slot {s['slot']} {s['dropped']} ({s['class']}) dropped"
@@ -1540,8 +1669,8 @@ def god_lines(r):
     L += ["", "| | Ichor | Community | Δ |", "|---|---|---|---|",
           f"| gold | {i['gold']:.0f} | {c['gold']:.0f} | {i['gold'] - c['gold']:+.0f} |"]
     for key, label in (("burst_squishy", "burst vs squishy"), ("burst_tank", "burst vs tank"),
-                       ("sustained_squishy", "10s sustained vs squishy"),
-                       ("sustained_tank", "10s sustained vs tank"),
+                       ("sustained_squishy", f"{WINDOW:.3g}s sustained vs squishy"),
+                       ("sustained_tank", f"{WINDOW:.3g}s sustained vs tank"),
                        ("ehp_physical", "EHP vs physical"), ("ehp_magical", "EHP vs magical")):
         L.append(f"| {label} | {i[key]:.0f} | {c[key]:.0f} | {_pct(ratio(i[key], c[key]))} |")
     fmt = lambda v: "—" if v is None else f"{v:.1f}s"
@@ -1551,7 +1680,7 @@ def god_lines(r):
              f"| {c['crit_ev']:.3f} ({c['crit_chance']:.0%} × {c['crit_multiplier']:.2f}) | |")
     for k in BREAKPOINTS:
         a, b = i["breakpoints"][k], c["breakpoints"][k]
-        L.append(f"| {k} items: 10s vs squishy / EHP phys | {a['sustained_squishy']:.0f} / {a['ehp_physical']:.0f} "
+        L.append(f"| {k} items: {WINDOW:.3g}s vs squishy / EHP phys | {a['sustained_squishy']:.0f} / {a['ehp_physical']:.0f} "
                  f"| {b['sustained_squishy']:.0f} / {b['ehp_physical']:.0f} "
                  f"| {_pct(ratio(a['sustained_squishy'], b['sustained_squishy']))} / "
                  f"{_pct(ratio(a['ehp_physical'], b['ehp_physical']))} |")
@@ -1582,6 +1711,14 @@ def god_lines(r):
         L.append("Not (fully) simulated: " + "; ".join(
             sorted({f"{p['item']} ({p['status']}: {'; '.join(p['assumptions']) or p['summary']})"
                     for p in gaps})))
+    ref = r.get("reference")
+    if ref:
+        d, sv = ref["mode_over_conquest"]
+        L += ["", f"Second reference — Ichor's Conquest build: {' · '.join(ref['items'])}"
+              + (" (the same six)" if ref["same_as_mode_build"] else "")
+              + ("" if ref["available"] else " (holds an item this mode's shop lacks)")
+              + f". {r.get('mode')} build over it: damage {_pct(d)}, survival {_pct(sv)}; "
+              f"its own verdict against the borrowed six: {ref['verdict_vs_community']}."]
     L.append("")
     return L
 
@@ -1624,10 +1761,17 @@ def top_swap(r):
 
 
 def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivity=()):
-    L = ["# Ichor vs community, passives simulated", "",
-         f"Data: {data_patch}. Level {LEVEL}, {WINDOW:.0f}s window. Ichor = the `model` build "
-         "(meta off); community = the cleaned six. Generated by `python -m smite.side_by_side`; "
-         "the rules are in that module's docstring.", "",
+    borrowed = MODE != "Conquest"
+    L = [f"# Ichor vs community, passives simulated — {MODE}", "",
+         f"Data: {data_patch}. Level {LEVEL}, {WINDOW:.3g}s fight, {ENEMIES} enemies"
+         + (f", an item every {MINUTES_PER_ITEM:.2f} min (from the mode's economy)" if borrowed else "")
+         + f". Ichor = the {MODE} `model` build (meta off); community = the cleaned six"
+         + (" **BORROWED FROM CONQUEST** — this mode has no community record of its own, so "
+            "this is Ichor's mode build against what Conquest players build, not against what "
+            f"{MODE} players build. Ichor's Conquest build is run beside it as a second reference"
+            if borrowed else "")
+         + ". Generated by `python -m smite.side_by_side"
+         + (f" --mode {MODE}" if borrowed else "") + "`; the rules are in that module's docstring.", "",
          "## Targets (medians of the community's own builds)", "",
          "| | role | n | base HP | item HP | phys prot | mag prot | plating | dampening | lifesteal (mean) |",
          "|---|---|---|---|---|---|---|---|---|---|"]
@@ -1638,12 +1782,12 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivit
     att = targets["squishy"].get("attacker")
     if att:
         L += ["", "## The fight (module FIGHT block)", "",
-              f"- Kill: when our damage in a {WINDOW:.0f}s fight reaches the target's max health; at most "
+              f"- Kill: when our damage in a {WINDOW:.3g}s fight reaches the target's max health; at most "
               "one per fight. None in a burst.",
               f"- Assist: one every {ASSIST_INTERVAL:g}s, first at {ASSIST_FIRST:g}s — the same instants "
               "for both builds.",
               f"- Enemy on our god: raw {att['raw_dps']['physical']:.0f} physical / "
-              f"{att['raw_dps']['magical']:.0f} magical DPS (kills the squishy in {WINDOW:.0f}s); attacks every "
+              f"{att['raw_dps']['magical']:.0f} magical DPS (kills the squishy in {KILL_TIME:.3g}s); attacks every "
               f"{att['interval']['attack']:.2f}s (median of {att['n']['attack']} community Carries), ability hits "
               f"every {att['interval']['ability']:.2f}s (median of {att['n']['ability']} community Mids). "
               f"Sustained window: each type at {ENEMY_SHARE:.0%}. Effective health: one type at full DPS "
@@ -1695,6 +1839,16 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivit
     if no_assists is not None:
         c = totals(verdict_counts(no_assists))
         L += ["", "Assists off (`ASSIST_FIRST` = never; kills unchanged), new rule: "
+              + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER) + "."]
+    if borrowed:
+        refs = [r for r in judged(rows) if r.get("reference")]
+        c = {}
+        for r in refs:
+            v = r["reference"]["verdict_vs_community"]
+            c[v] = c.get(v, 0) + 1
+        same = sum(1 for r in refs if r["reference"]["same_as_mode_build"])
+        L += ["", f"Second reference — Ichor's CONQUEST build against the same borrowed six, under "
+              f"{MODE}'s rules ({len(refs)} gods; {same} where it is the same six as the {MODE} build): "
               + ", ".join(f"{v} {c.get(v, 0)}" for v in VERDICT_ORDER) + "."]
     for label, alt in sensitivity:
         c = totals(verdict_counts(alt))
@@ -1753,31 +1907,35 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivit
     return L
 
 
-def with_overrides(gods, items, builds_by_god, weights, tags_map, **overrides):
+def with_overrides(gods, items, builds_by_god, weights, tags_map, mode="Conquest", **overrides):
     """The roster re-run with module constants overridden, for a sensitivity
     line (`HEALING=False`, `HEAL_UNTIL=WINDOW`)."""
     g = globals()
     saved = {k: g[k] for k in overrides}
     g.update(overrides)
     try:
-        return run(gods, items, builds_by_god, weights, tags_map)[0]
+        return run(gods, items, builds_by_god, weights, tags_map, mode=mode)[0]
     finally:
         g.update(saved)
 
 
-#: The healing sensitivity lines the report prints.
-HEALING_SENSITIVITY = (
-    ("Healing off (HEALING = False: no lifesteal, no heals, target never heals)", {"HEALING": False}),
-    (f"Heals in the first {WINDOW:.0f}s fight only (HEAL_UNTIL = WINDOW)", {"HEAL_UNTIL": WINDOW}),
-)
+def healing_sensitivity():
+    """The sensitivity lines the report prints, for the mode in force."""
+    out = [("Healing off (HEALING = False: no lifesteal, no heals, target never heals)", {"HEALING": False}),
+           (f"Heals in the first {WINDOW:.3g}s fight only (HEAL_UNTIL = WINDOW)", {"HEAL_UNTIL": WINDOW})]
+    if MODE == "Arena":
+        for w in ARENA_WINDOW_BRACKET:
+            out.append((f"Arena fight of {w:g}s (WINDOW is a judgement; shipped {WINDOW:g}s)",
+                        {"WINDOW": w, "ASSIST_INTERVAL": w, "ASSIST_FIRST": w / 2}))
+    return out
 
 
-def without_assists(gods, items, builds_by_god, weights, tags_map):
+def without_assists(gods, items, builds_by_god, weights, tags_map, mode="Conquest"):
     """The roster re-run with no assists, for the report's sensitivity line."""
     global ASSIST_FIRST
     saved, ASSIST_FIRST = ASSIST_FIRST, math.inf
     try:
-        return run(gods, items, builds_by_god, weights, tags_map)[0]
+        return run(gods, items, builds_by_god, weights, tags_map, mode=mode)[0]
     finally:
         ASSIST_FIRST = saved
 
@@ -1807,7 +1965,9 @@ def viewer_god(r):
         out = {k: p[k] for k in keep}
         out["breakpoints"] = p["breakpoints"]
         return out
-    return {"god": r["god"], "role": r["role"], "melee": r["melee"], "kit": r["kit"],
+    return {"mode": r.get("mode", "Conquest"), "community_borrowed_from": r.get("community_borrowed_from"),
+            "reference": r.get("reference"),
+            "god": r["god"], "role": r["role"], "melee": r["melee"], "kit": r["kit"],
             "damage_axis": r["damage_axis"], "survival_axis": r["survival_axis"],
             "verdict": r["verdict"], "verdict_unwithheld": r["verdict_unwithheld"],
             "verdict_six_only": r["verdict_six_only"], "coverage": r["coverage"],
@@ -1829,6 +1989,9 @@ def write_viewer_files(out_dir, rows, skipped, targets, patch):
         (out_dir / f"{slug(r['god'])}.json").write_text(dump(viewer_god(r)), encoding="utf-8")
     (out_dir / "_meta.json").write_text(dump({
         "data": patch, "level": LEVEL, "window": WINDOW, "band": BAND,
+        "mode": MODE, "enemies": ENEMIES, "kill_time": KILL_TIME,
+        "minutes_per_item": MINUTES_PER_ITEM,
+        "community_borrowed_from": None if MODE == "Conquest" else "Conquest",
         "breakpoint_weights": BREAKPOINT_WEIGHTS, "coverage_min": COVERAGE_MIN,
         "coverage_gap": COVERAGE_GAP,
         "verdict_counts_six_only": verdict_counts(rows, rule=judge_six_only),
@@ -1860,10 +2023,37 @@ def main(argv=None):
     ap.add_argument("--god")
     ap.add_argument("--out", type=Path, default=REPORT_PATH)
     ap.add_argument("--json", type=Path, nargs="?", const=JSON_DIR, default=None,
-                    help=f"also write the viewer's per-god files (default dir {JSON_DIR})")
+                    help=f"also write the viewer's per-god files (default dir {JSON_DIR}; "
+                         "Joust and Arena write to <dir>/joust and <dir>/arena)")
+    ap.add_argument("--mode", default="Conquest", choices=list(MODES) + ["all"],
+                    help="Joust and Arena compare against the BORROWED Conquest community six")
     args = ap.parse_args(argv)
+    if args.mode == "all":
+        for m in MODES:
+            rc = main([a for a in (argv if argv is not None else sys.argv[1:]) if a != "all"
+                       and a != "--mode"] + ["--mode", m])
+            if rc:
+                return rc
+        return 0
     items, gods, weights, tags_map, builds = load_inputs()
-    rows, skipped, targets = run(gods, items, builds, weights, tags_map, only=args.god)
+    with use_mode(args.mode, weights, builds, {it["name"]: it for it in items}, gods):
+        return _main_in_mode(args, items, gods, weights, tags_map, builds)
+
+
+def report_path(mode):
+    return REPORT_PATH if mode == "Conquest" else REPORT_PATH.with_name(f"_side_by_side_{mode.lower()}.md")
+
+
+def json_dir(base, mode):
+    return base if mode == "Conquest" else base / mode.lower()
+
+
+def _main_in_mode(args, items, gods, weights, tags_map, builds):
+    if args.out == REPORT_PATH:
+        args.out = report_path(MODE)
+    if args.json:
+        args.json = json_dir(args.json, MODE)
+    rows, skipped, targets = run(gods, items, builds, weights, tags_map, only=args.god, mode=MODE)
     if args.god:
         if not rows:
             print(f"{args.god}: {skipped[0]['reason'] if skipped else 'unknown god'}", file=sys.stderr)
@@ -1871,14 +2061,14 @@ def main(argv=None):
         print("\n".join(god_lines(rows[0])))
         return 0
     patch = data_patch()
-    sens = [(label, with_overrides(gods, items, builds, weights, tags_map, **o))
-            for label, o in HEALING_SENSITIVITY]
+    sens = [(label, with_overrides(gods, items, builds, weights, tags_map, mode=MODE, **o))
+            for label, o in healing_sensitivity()]
     args.out.write_text("\n".join(report_lines(rows, skipped, targets, patch, without_assists(
-        gods, items, builds, weights, tags_map), sensitivity=sens)) + "\n", encoding="utf-8")
+        gods, items, builds, weights, tags_map, mode=MODE), sensitivity=sens)) + "\n", encoding="utf-8")
     if args.json:
         write_viewer_files(args.json, rows, skipped, targets, patch)
     counts = verdict_counts(rows)
-    print(f"{len(rows)} gods compared, {len(judged(rows))} judged, "
+    print(f"[{MODE}] {len(rows)} gods compared, {len(judged(rows))} judged, "
           f"{len(aspect_excluded(rows))} aspect not simulated, {len(skipped)} skipped; wrote {args.out}"
           + (f" and {args.json}" if args.json else ""))
     for role in sorted(counts):
