@@ -1983,6 +1983,28 @@ def slug(name):
     return name.lower().replace(" ", "-").replace("'", "")
 
 
+#: A note the page prints beside a community six holding an item the SCORING
+#: cannot price, keyed by item. Devourer's Gauntlet, measured 2026-11-03 on
+#: OB47 (fingerprint a4b1a66d8c0d): its printed line prices at efficiency 0.33,
+#: rank #80-#120 on the five physical gods whose players buy it, and its value
+#: is in its stacks, which `price_stacks` (shipped off) would count. Leakage-
+#: free coverage, probe / second split: off 36.6% / 37.2%; full stacks 38.6% /
+#: 36.5% (67/101 Conquest cores change); half 35.6% / 36.8% (51); time-
+#: weighted from purchase to minute 30 (fractions 0.78-0.90) 37.5% / 36.5% (60).
+SCORING_GAP_NOTES = {
+    "Devourer's Gauntlet": (
+        "Ichor's scoring does not price Devourer's Gauntlet's stacks, and pricing them "
+        "(full, half or time-weighted) lowered its leakage-free accuracy on at least one "
+        "of its two test splits: 36.6% / 37.2% as shipped, against 38.6% / 36.5% at full "
+        "stacks, 35.6% / 36.8% at half and 37.5% / 36.5% time-weighted."),
+}
+
+
+def scoring_gap_notes(community_items):
+    """The `SCORING_GAP_NOTES` that apply to a community six."""
+    return [SCORING_GAP_NOTES[n] for n in community_items if n in SCORING_GAP_NOTES]
+
+
 def viewer_god(r):
     """One god's comparison, trimmed to what the page draws."""
     def side(p):
@@ -2002,6 +2024,7 @@ def viewer_god(r):
             "shared": r["shared"],
             "substitutions": r["community_substitutions"],
             "ichor": side(r["ichor"]), "community": side(r["community"]),
+            "notes": scoring_gap_notes(r["community"]["items"]),
             "diffs": r["diffs"]}
 
 

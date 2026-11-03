@@ -130,4 +130,14 @@ describe("SideBySide aspect matching", () => {
     fireEvent.click(screen.getByRole("radio", { name: "Joust" }));
     await waitFor(() => expect(f).toHaveBeenCalledWith("/side_by_side/joust/hou-yi.json", expect.anything()));
   });
+
+  it("prints a scoring-gap note beside the community build when there is one", () => {
+    render(<SideBySideView d={{ ...data, notes: ["Ichor's scoring does not price Devourer's Gauntlet's stacks."] }} meta={null} />);
+    expect(screen.getByTestId("scoring-note")).toHaveTextContent("does not price Devourer's Gauntlet's stacks");
+  });
+
+  it("prints no note when there is none", () => {
+    render(<SideBySideView d={data} meta={null} />);
+    expect(screen.queryByTestId("scoring-note")).toBeNull();
+  });
 });
