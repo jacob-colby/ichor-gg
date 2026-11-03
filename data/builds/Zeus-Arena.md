@@ -51,7 +51,7 @@ builds:
       fit: 0.6
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.5
@@ -118,7 +118,7 @@ builds:
       fit: 0.69
     Rod of Tahuti:
       total: 0.65
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -183,7 +183,7 @@ builds:
       fit: 0.52
     Rod of Tahuti:
       total: 0.64
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -254,7 +254,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -306,8 +306,8 @@ builds:
       pick: 0.0
       fit: 0.7
     Rod of Tahuti:
-      total: 0.74
-      efficiency: 0.87
+      total: 0.73
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.6
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -424,7 +424,7 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Lotus Sickle:
-      total: 0.52
+      total: 0.51
       efficiency: 0.57
       win: 0.5
       pick: 0.0
@@ -443,7 +443,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27
@@ -508,7 +508,7 @@ builds:
       fit: 0.6
     Rod of Tahuti:
       total: 0.68
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.5

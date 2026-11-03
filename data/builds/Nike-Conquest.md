@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.48
   source_url: https://smitebrain.com/gods/nike/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.566621803499327
   god_matches_won: 842
   god_matches_played: 1486
@@ -119,7 +119,7 @@ builds:
     this god: Amanita Charm, Shield Splitter, Kinetic Cuirass, Genji''s Guard, Berserker''s
     Shield, Breastplate of Valor, Runeforged Hammer, Hydra''s Lament, Erosion, Freya''s
     Tears, Eye of Providence, Shield of the Phoenix, Draconic Scale, Oni Hunter''s
-    Garb, Stone of Binding, Magi''s Cloak, Screeching Gargoyle, Midgardian Mail, Avenging
+    Garb, Stone of Binding, Screeching Gargoyle, Magi''s Cloak, Midgardian Mail, Avenging
     Blade, Arondight, Mantle Of Discord, Wyrmskin Hide, Leviathan''s Hide, Prophetic
     Cloak, Ancile, Hide of the Nemean Lion, Stampede.'
   slot_scores:
@@ -195,11 +195,11 @@ builds:
     Berserker''s Shield, Genji''s Guard, Runeforged Hammer, Phoenix Feather, Breastplate
     of Valor, Hydra''s Lament, The Reaper, Yogi''s Necklace, Chandra''s Grace, Erosion,
     Eye of Providence, Oni Hunter''s Garb, Draconic Scale, Avenging Blade, Freya''s
-    Tears, Glorious Pridwen, Regrowth Striders, Midgardian Mail, Wyrmskin Hide, Arondight,
+    Tears, Regrowth Striders, Glorious Pridwen, Midgardian Mail, Wyrmskin Hide, Arondight,
     Leviathan''s Hide, Screeching Gargoyle, Stone of Binding.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.67
       win: 0.59
       pick: 0.35
@@ -242,21 +242,21 @@ builds:
   archetype: anti-tank
   slot_order:
   - Stone of Binding
+  - Genji's Guard
   - Jotunn's Revenge
   - Transcendence
-  - Heartseeker
   - Titan's Bane
   - Amanita Charm
   flex_slots:
-  - Heartseeker
+  - Genji's Guard
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
@@ -277,8 +277,14 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.7
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.69
+      win: 0.58
+      pick: 0.0
+      fit: 0.26
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.67
       win: 0.59
       pick: 0.35
@@ -289,12 +295,6 @@ builds:
       win: 0.6
       pick: 0.4
       fit: 0.17
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.58
-      pick: 0.58
-      fit: 0.67
     Titan's Bane:
       total: 0.63
       efficiency: 0.54
@@ -310,7 +310,6 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   - Transcendence
-  - Heartseeker
   - Titan's Bane
   starter: *id001
 - source: suggested
@@ -344,7 +343,7 @@ builds:
     Tekko-Kagi, Pharaoh''s Curse, Hydra''s Lament, Lernaean Bow, Toxic Blade, Oni
     Hunter''s Garb, Shogun''s Ofuda, Silverbranch Bow, Freya''s Tears, Erosion, Shield
     of the Phoenix, Eye of Providence, Stone of Binding, Screeching Gargoyle, Draconic
-    Scale, Midgardian Mail, Magi''s Cloak, The Reaper, Riptalon.'
+    Scale, Midgardian Mail, The Reaper, Magi''s Cloak, Riptalon.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -415,9 +414,9 @@ builds:
     + fit + win/pick). Underrated for this god: Genji''s Guard, Amanita Charm, Breastplate
     of Valor, Kinetic Cuirass, Berserker''s Shield, Freya''s Tears, Shield of the
     Phoenix, Hydra''s Lament, Shield Splitter, Screeching Gargoyle, Arondight, Prophetic
-    Cloak, Runeforged Hammer, Erosion, Eye of Providence, Oni Hunter''s Garb, Gladiator''s
+    Cloak, Runeforged Hammer, Erosion, Oni Hunter''s Garb, Eye of Providence, Gladiator''s
     Shield, Draconic Scale, Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle
-    Of Discord, Leviathan''s Hide, Chandra''s Grace, Regrowth Striders, Eye of Erebus,
+    Of Discord, Leviathan''s Hide, Regrowth Striders, Chandra''s Grace, Eye of Erebus,
     Glorious Pridwen.'
   slot_scores:
     Genji's Guard:
@@ -489,7 +488,7 @@ builds:
     Underrated for this god: Amanita Charm, Shield Splitter, Kinetic Cuirass, Genji''s
     Guard, Berserker''s Shield, Freya''s Tears, Breastplate of Valor, Runeforged Hammer,
     Hydra''s Lament, Erosion, Eye of Providence, Shield of the Phoenix, Draconic Scale,
-    Oni Hunter''s Garb, Stone of Binding, Magi''s Cloak, Screeching Gargoyle, Midgardian
+    Oni Hunter''s Garb, Stone of Binding, Screeching Gargoyle, Magi''s Cloak, Midgardian
     Mail, Avenging Blade, Arondight, Mantle Of Discord, Wyrmskin Hide, Leviathan''s
     Hide, Prophetic Cloak, Ancile, Hide of the Nemean Lion, Stampede.'
   slot_scores:

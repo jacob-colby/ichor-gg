@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.16
     win_rate: 0.43
   source_url: https://smitebrain.com/gods/gilgamesh/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5932584269662922
   god_matches_won: 264
   god_matches_played: 445
@@ -195,8 +195,8 @@ builds:
     Guard, The Crusher, Amanita Charm, Hydra''s Lament, Tekko-Kagi, Runeforged Hammer,
     Breastplate of Valor, Shield Splitter, Golden Blade, Titan''s Bane, Kinetic Cuirass,
     Tyrfing, Freya''s Tears, Lernaean Bow, Oni Hunter''s Garb, Dominance, Avenging
-    Blade, Arondight, Toxic Blade, Silverbranch Bow, Transcendence, Pharaoh''s Curse,
-    Shield of the Phoenix, Screeching Gargoyle, Midgardian Mail, Eye of Providence.'
+    Blade, Arondight, Toxic Blade, Silverbranch Bow, Transcendence, Shield of the
+    Phoenix, Pharaoh''s Curse, Screeching Gargoyle, Midgardian Mail, Eye of Providence.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -224,7 +224,7 @@ builds:
       fit: 0.37
     Heartseeker:
       total: 0.53
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.62
       pick: 0.4
       fit: 0.53
@@ -268,10 +268,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Shield Splitter,
     Golden Blade, Genji''s Guard, Runeforged Hammer, Tekko-Kagi, Yogi''s Necklace,
-    Phoenix Feather, Freya''s Tears, Tyrfing, Titan''s Bane, Breastplate of Valor,
-    Toxic Blade, Lernaean Bow, Oni Hunter''s Garb, Pharaoh''s Curse, Riptalon, Hydra''s
-    Lament, Erosion, Avenging Blade, Eye of Providence, Chandra''s Grace, Shogun''s
-    Ofuda, Midgardian Mail, Silverbranch Bow.'
+    Phoenix Feather, Freya''s Tears, Tyrfing, Titan''s Bane, Toxic Blade, Breastplate
+    of Valor, Oni Hunter''s Garb, Lernaean Bow, Pharaoh''s Curse, Riptalon, Hydra''s
+    Lament, Erosion, Avenging Blade, Eye of Providence, Shogun''s Ofuda, Chandra''s
+    Grace, Midgardian Mail, Silverbranch Bow.'
   slot_scores:
     Berserker's Shield:
       total: 0.61
@@ -342,11 +342,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Tekko-Kagi, Avenging Blade, Titan''s Bane, Amanita
-    Charm, Toxic Blade, Stone of Binding, Golden Blade, Silverbranch Bow, Genji''s
-    Guard, Screeching Gargoyle, Runeforged Hammer, Shield Splitter, Void Stone, Kinetic
-    Cuirass, Void Shield, Tyrfing, Lernaean Bow, Hydra''s Lament, Breastplate of Valor,
-    Freya''s Tears, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance, Avatar''s Parashu,
-    Midgardian Mail.'
+    Charm, Toxic Blade, Stone of Binding, Silverbranch Bow, Golden Blade, Genji''s
+    Guard, Screeching Gargoyle, Runeforged Hammer, Shield Splitter, Kinetic Cuirass,
+    Void Stone, Void Shield, Tyrfing, Lernaean Bow, Hydra''s Lament, Breastplate of
+    Valor, Freya''s Tears, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance, Avatar''s
+    Parashu, Midgardian Mail.'
   slot_scores:
     Avenging Blade:
       total: 0.54
@@ -380,7 +380,7 @@ builds:
       fit: 0.55
     Heartseeker:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.62
       pick: 0.4
       fit: 0.65
@@ -419,7 +419,7 @@ builds:
     this god: Golden Blade, Amanita Charm, The Crusher, Tekko-Kagi, Tyrfing, Genji''s
     Guard, Toxic Blade, Silverbranch Bow, Kinetic Cuirass, Runeforged Hammer, Shield
     Splitter, Lernaean Bow, Riptalon, Titan''s Bane, Breastplate of Valor, Pharaoh''s
-    Curse, Freya''s Tears, Hydra''s Lament, Shogun''s Ofuda, Oni Hunter''s Garb, Dominance,
+    Curse, Freya''s Tears, Hydra''s Lament, Oni Hunter''s Garb, Shogun''s Ofuda, Dominance,
     Avenging Blade, Midgardian Mail, Erosion, Leviathan''s Hide, Eye of Providence.'
   slot_scores:
     Golden Blade:
@@ -435,7 +435,7 @@ builds:
       pick: 0.19
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.6
       pick: 0.28
@@ -453,7 +453,7 @@ builds:
       pick: 0.13
       fit: 0.32
     Amanita Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
       win: 0.6
       pick: 0.0
@@ -566,8 +566,8 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Golden Blade, Tekko-Kagi, Runeforged Hammer,
     Shield Splitter, Genji''s Guard, Kinetic Cuirass, Tyrfing, Titan''s Bane, Lernaean
-    Bow, Toxic Blade, Hydra''s Lament, Silverbranch Bow, Avenging Blade, Breastplate
-    of Valor, The Crusher, Pharaoh''s Curse, Oni Hunter''s Garb, Dominance, Freya''s
+    Bow, Toxic Blade, Hydra''s Lament, Silverbranch Bow, The Crusher, Avenging Blade,
+    Breastplate of Valor, Pharaoh''s Curse, Oni Hunter''s Garb, Dominance, Freya''s
     Tears, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence, Arondight,
     Leviathan''s Hide.'
   slot_scores:

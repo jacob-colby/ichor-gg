@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.09
     win_rate: 0.45
   source_url: https://smitebrain.com/gods/xbalanque/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.5666003976143141
   god_matches_won: 285
   god_matches_played: 503
@@ -118,8 +118,8 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Golden Blade, Lernaean Bow, Demon Blade, Deathbringer, Musashi''s Dual
     Swords, Tekko-Kagi, Qin''s Blade, Rage, Sun Beam Bow, Hydra''s Lament, Bloodforge,
-    Berserker''s Shield, Transcendence, The Reaper, Runeforged Hammer, Jotunn''s Revenge,
-    Toxic Blade, Barbed Carver, Avenging Blade, Shield Splitter, Vital Amplifier,
+    Berserker''s Shield, Transcendence, The Reaper, Runeforged Hammer, Toxic Blade,
+    Jotunn''s Revenge, Barbed Carver, Avenging Blade, Shield Splitter, Vital Amplifier,
     Eye of the Storm, Arondight, Hastened Fatalis, The Crusher.'
   slot_scores:
     Golden Blade:
@@ -172,10 +172,10 @@ builds:
   - Tyrfing
   - Hydra's Lament
   - Dominance
+  - Riptalon
   - Tekko-Kagi
-  - Silverbranch Bow
   flex_slots:
-  - Silverbranch Bow
+  - Riptalon
   - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
@@ -210,7 +210,7 @@ builds:
       pick: 0.41
       fit: 0.53
     Hydra's Lament:
-      total: 0.52
+      total: 0.51
       efficiency: 0.56
       win: 0.57
       pick: 0.0
@@ -221,22 +221,22 @@ builds:
       win: 0.53
       pick: 0.33
       fit: 0.5
+    Riptalon:
+      total: 0.51
+      efficiency: 0.46
+      win: 0.6
+      pick: 0.35
+      fit: 0.43
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.55
       win: 0.57
       pick: 0.0
       fit: 0.45
-    Silverbranch Bow:
-      total: 0.51
-      efficiency: 0.52
-      win: 0.57
-      pick: 0.39
-      fit: 0.37
   community_ordered:
   - Tyrfing
   - Dominance
-  - Silverbranch Bow
+  - Riptalon
   starter: *id001
 - source: suggested
   archetype: crit
@@ -267,7 +267,7 @@ builds:
     this god: Lernaean Bow, Golden Blade, Demon Blade, Deathbringer, Musashi''s Dual
     Swords, Rage, Tekko-Kagi, Qin''s Blade, Hydra''s Lament, Bloodforge, Sun Beam
     Bow, Transcendence, Berserker''s Shield, The Reaper, Runeforged Hammer, Jotunn''s
-    Revenge, Barbed Carver, Avenging Blade, Toxic Blade, Shield Splitter, Eye of the
+    Revenge, Barbed Carver, Toxic Blade, Avenging Blade, Shield Splitter, Eye of the
     Storm, Arondight, Vital Amplifier, The Crusher, Hastened Fatalis.'
   slot_scores:
     Golden Blade:
@@ -277,7 +277,7 @@ builds:
       pick: 0.0
       fit: 0.69
     Lernaean Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.51
       win: 0.57
       pick: 0.0
@@ -339,7 +339,7 @@ builds:
     Splitter, Yogi''s Necklace, Phoenix Feather, Runeforged Hammer, Shield of the
     Phoenix, Pharaoh''s Curse, Bloodforge, Oni Hunter''s Garb, Shogun''s Ofuda, Lernaean
     Bow, The Reaper, Erosion, Eye of Providence, Midgardian Mail, Draconic Scale,
-    Genji''s Guard, Avenging Blade, Leviathan''s Hide, Stone of Binding, Magi''s Cloak,
+    Genji''s Guard, Leviathan''s Hide, Avenging Blade, Stone of Binding, Magi''s Cloak,
     Shifter''s Shield, Ancile, Umbral Link.'
   slot_scores:
     Golden Blade:
@@ -384,7 +384,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Tyrfing
   - Tekko-Kagi
   - Riptalon
@@ -392,7 +392,7 @@ builds:
   - Titan's Bane
   flex_slots:
   - Titan's Bane
-  - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -404,21 +404,21 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Tekko-Kagi, The Reaper, Titan''s Bane, Jotunn''s Revenge, Toxic
-    Blade, The Crusher, Heartseeker, Lernaean Bow, Golden Blade, Avenging Blade, Avatar''s
+    for this god: Tekko-Kagi, The Reaper, Titan''s Bane, Toxic Blade, Jotunn''s Revenge,
+    The Crusher, Heartseeker, Lernaean Bow, Golden Blade, Avenging Blade, Avatar''s
     Parashu, Deathbringer, Musashi''s Dual Swords, Qin''s Blade, Demon Blade, Hydra''s
-    Lament, Oath-Sworn Spear, Transcendence, Rage, Bloodforge, Berserker''s Shield,
-    Runeforged Hammer, Sun Beam Bow, Pendulum Blade, Shield Splitter.'
+    Lament, Rage, Oath-Sworn Spear, Transcendence, Bloodforge, Berserker''s Shield,
+    Runeforged Hammer, Sun Beam Bow, Pendulum Blade, Barbed Carver.'
   slot_scores:
-    Jotunn's Revenge:
+    Toxic Blade:
       total: 0.52
-      efficiency: 0.55
+      efficiency: 0.45
       win: 0.57
       pick: 0.0
-      fit: 0.47
+      fit: 0.69
     Tyrfing:
       total: 0.56
       efficiency: 0.5
@@ -482,7 +482,7 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Golden Blade, Lernaean Bow, Qin''s Blade, Demon Blade, Tekko-Kagi, Deathbringer,
     Musashi''s Dual Swords, Sun Beam Bow, Hydra''s Lament, Rage, Berserker''s Shield,
-    Transcendence, Bloodforge, Runeforged Hammer, The Reaper, Toxic Blade, Jotunn''s
+    Bloodforge, Transcendence, Runeforged Hammer, The Reaper, Toxic Blade, Jotunn''s
     Revenge, Avenging Blade, Barbed Carver, Vital Amplifier, Shield Splitter, Eye
     of the Storm, Hastened Fatalis, Arondight.'
   slot_scores:
@@ -629,11 +629,11 @@ builds:
     + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Soul Gem, Nimble
     Ring, Jotunn''s Revenge, Obsidian Shard, Gluttonous Grimoire, Tekko-Kagi, Spear
     of Desolation, Spear of the Magus, Blood-Bound Book, Lotus Sickle, Bragi''s Harp,
-    The Reaper, Hydra''s Lament, Titan''s Bane, Chronos'' Pendant, Bracer of The Abyss,
-    Doom Orb, Lernaean Bow, The World Stone, Dreamer''s Idol, Eros'' Bow, The Crusher,
-    Gem of Focus, Golden Blade, Heartwood Charm, Toxic Blade, Arondight, Polynomicon,
-    Bancroft''s Talon, Heartseeker, Ancient Signet, The Cosmic Horror, Deathbringer,
-    Soul Reaver, Musashi''s Dual Swords, Typhon’s Heart.'
+    The Reaper, Ancient Signet, Hydra''s Lament, Titan''s Bane, Chronos'' Pendant,
+    Bracer of The Abyss, Doom Orb, Lernaean Bow, The World Stone, Eros'' Bow, Dreamer''s
+    Idol, The Crusher, Golden Blade, Gem of Focus, Toxic Blade, Heartwood Charm, Arondight,
+    Polynomicon, Bancroft''s Talon, Heartseeker, The Cosmic Horror, Deathbringer,
+    Musashi''s Dual Swords, Soul Reaver, Typhon’s Heart.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -661,7 +661,7 @@ builds:
       fit: 0.45
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.57
       pick: 0.0
       fit: 0.35
@@ -703,10 +703,10 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Nimble
     Ring, Tekko-Kagi, Gluttonous Grimoire, Obsidian Shard, Soul Gem, The Reaper, Bragi''s
     Harp, Titan''s Bane, Spear of the Magus, Lernaean Bow, Blood-Bound Book, Jotunn''s
-    Revenge, Golden Blade, Bracer of The Abyss, The Crusher, Doom Orb, The World Stone,
-    Heartseeker, Eros'' Bow, Toxic Blade, Dreamer''s Idol, Deathbringer, Musashi''s
-    Dual Swords, Spear of Desolation, Hydra''s Lament, Bancroft''s Talon, Polynomicon,
-    Ancient Signet, Demon Blade, Transcendence, The Cosmic Horror, Rage, Bloodforge,
+    Revenge, Golden Blade, Ancient Signet, The Crusher, Bracer of The Abyss, Doom
+    Orb, The World Stone, Heartseeker, Toxic Blade, Eros'' Bow, Dreamer''s Idol, Deathbringer,
+    Musashi''s Dual Swords, Spear of Desolation, Hydra''s Lament, Bancroft''s Talon,
+    Polynomicon, Demon Blade, Transcendence, The Cosmic Horror, Rage, Bloodforge,
     Qin''s Blade, Runeforged Hammer, Avatar''s Parashu.'
   slot_scores:
     Tyrfing:
@@ -741,7 +741,7 @@ builds:
       fit: 0.47
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.57
       pick: 0.0
       fit: 0.34
@@ -778,7 +778,7 @@ builds:
     Underrated for this god: Golden Blade, Lernaean Bow, Demon Blade, Deathbringer,
     Musashi''s Dual Swords, Tekko-Kagi, Qin''s Blade, Rage, Sun Beam Bow, Hydra''s
     Lament, Bloodforge, Berserker''s Shield, Transcendence, The Reaper, Runeforged
-    Hammer, Jotunn''s Revenge, Toxic Blade, Barbed Carver, Avenging Blade, Shield
+    Hammer, Toxic Blade, Jotunn''s Revenge, Barbed Carver, Avenging Blade, Shield
     Splitter, Vital Amplifier, Eye of the Storm, Arondight, Hastened Fatalis, The
     Crusher.'
   slot_scores:

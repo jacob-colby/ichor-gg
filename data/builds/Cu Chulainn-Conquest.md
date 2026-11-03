@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.07
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/cu-chulainn/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.4945652173913043
   god_matches_won: 455
   god_matches_played: 920
@@ -100,8 +100,8 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
   - Kinetic Cuirass
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -119,9 +119,9 @@ builds:
     this god: Berserker''s Shield, Jotunn''s Revenge, Amanita Charm, Golden Blade,
     Shield Splitter, Runeforged Hammer, Tekko-Kagi, Genji''s Guard, Tyrfing, Lernaean
     Bow, Hydra''s Lament, Titan''s Bane, Avenging Blade, Pharaoh''s Curse, Dominance,
-    Breastplate of Valor, Oni Hunter''s Garb, Shogun''s Ofuda, Toxic Blade, Midgardian
-    Mail, Erosion, The Crusher, Eye of Providence, Arondight, Wyrmskin Hide, Draconic
-    Scale, Leviathan''s Hide, Silverbranch Bow.'
+    Breastplate of Valor, Oni Hunter''s Garb, Shogun''s Ofuda, Toxic Blade, The Crusher,
+    Midgardian Mail, Erosion, Eye of Providence, Arondight, Wyrmskin Hide, Draconic
+    Scale, Silverbranch Bow, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
       total: 0.5
@@ -194,7 +194,7 @@ builds:
     Jotunn''s Revenge, Golden Blade, Runeforged Hammer, Genji''s Guard, Yogi''s Necklace,
     Phoenix Feather, The Reaper, Tekko-Kagi, Pharaoh''s Curse, Lernaean Bow, Tyrfing,
     Oni Hunter''s Garb, Breastplate of Valor, Erosion, Hydra''s Lament, Eye of Providence,
-    Avenging Blade, Shogun''s Ofuda, Draconic Scale, Midgardian Mail, Titan''s Bane,
+    Avenging Blade, Shogun''s Ofuda, Draconic Scale, Titan''s Bane, Midgardian Mail,
     Chandra''s Grace, Leviathan''s Hide, Dominance.'
   slot_scores:
     Berserker's Shield:
@@ -262,11 +262,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Berserker''s Shield, Tekko-Kagi, Avenging Blade,
+    for this god: Berserker''s Shield, Jotunn''s Revenge, Tekko-Kagi, Avenging Blade,
     Titan''s Bane, Amanita Charm, Stone of Binding, The Crusher, Genji''s Guard, Screeching
-    Gargoyle, Shield Splitter, Toxic Blade, Runeforged Hammer, Heartseeker, Silverbranch
-    Bow, Golden Blade, Void Stone, Void Shield, The Reaper, Lernaean Bow, Tyrfing,
-    Hydra''s Lament, Breastplate of Valor, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance,
+    Gargoyle, Toxic Blade, Shield Splitter, Runeforged Hammer, Silverbranch Bow, Heartseeker,
+    Golden Blade, Void Stone, The Reaper, Void Shield, Lernaean Bow, Tyrfing, Hydra''s
+    Lament, Breastplate of Valor, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance,
     Avatar''s Parashu, Midgardian Mail.'
   slot_scores:
     Avenging Blade:
@@ -282,7 +282,7 @@ builds:
       pick: 0.0
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.67
       win: 0.51
       pick: 0.0
@@ -316,7 +316,7 @@ builds:
   - Tyrfing
   - Amanita Charm
   flex_slots:
-  - Tyrfing
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -332,12 +332,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Golden Blade, Amanita Charm, Jotunn''s Revenge,
-    Tyrfing, Genji''s Guard, Tekko-Kagi, Shield Splitter, Runeforged Hammer, Lernaean
-    Bow, Toxic Blade, Silverbranch Bow, Pharaoh''s Curse, Breastplate of Valor, Riptalon,
-    Hydra''s Lament, Shogun''s Ofuda, The Reaper, Dominance, Oni Hunter''s Garb, Titan''s
-    Bane, Avenging Blade, Midgardian Mail, Qin''s Blade, Erosion, Leviathan''s Hide,
-    Eye of Providence, Stone of Binding.'
+    this god: Berserker''s Shield, Golden Blade, Amanita Charm, Tyrfing, Jotunn''s
+    Revenge, Genji''s Guard, Tekko-Kagi, Shield Splitter, Runeforged Hammer, Toxic
+    Blade, Lernaean Bow, Silverbranch Bow, Pharaoh''s Curse, Breastplate of Valor,
+    Riptalon, Hydra''s Lament, Shogun''s Ofuda, The Reaper, Dominance, Oni Hunter''s
+    Garb, Titan''s Bane, Avenging Blade, Midgardian Mail, Qin''s Blade, Erosion, Leviathan''s
+    Hide, Eye of Providence, Stone of Binding.'
   slot_scores:
     Golden Blade:
       total: 0.5
@@ -395,11 +395,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -407,7 +407,7 @@ builds:
     + fit + win/pick). Underrated for this god: Berserker''s Shield, Jotunn''s Revenge,
     Genji''s Guard, Breastplate of Valor, Hydra''s Lament, Amanita Charm, Shield of
     the Phoenix, Screeching Gargoyle, Arondight, Shield Splitter, Runeforged Hammer,
-    Golden Blade, Tekko-Kagi, Lernaean Bow, Tyrfing, Oni Hunter''s Garb, Pharaoh''s
+    Golden Blade, Tekko-Kagi, Lernaean Bow, Oni Hunter''s Garb, Tyrfing, Pharaoh''s
     Curse, Titan''s Bane, Chandra''s Grace, Eye of Erebus, Gladiator''s Shield, Prophetic
     Cloak, Midgardian Mail, Shogun''s Ofuda, Avenging Blade, Damaru, Erosion, Eye
     of Providence.'
@@ -479,8 +479,8 @@ builds:
     Golden Blade, Shield Splitter, Runeforged Hammer, Tekko-Kagi, Genji''s Guard,
     Tyrfing, Lernaean Bow, Hydra''s Lament, Titan''s Bane, Avenging Blade, Pharaoh''s
     Curse, Dominance, Breastplate of Valor, Oni Hunter''s Garb, Shogun''s Ofuda, Toxic
-    Blade, Midgardian Mail, Erosion, The Crusher, Eye of Providence, Arondight, Wyrmskin
-    Hide, Draconic Scale, Leviathan''s Hide, Silverbranch Bow.'
+    Blade, The Crusher, Midgardian Mail, Erosion, Eye of Providence, Arondight, Wyrmskin
+    Hide, Draconic Scale, Silverbranch Bow, Leviathan''s Hide.'
   slot_scores:
     Golden Blade:
       total: 0.5

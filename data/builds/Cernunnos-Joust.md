@@ -38,13 +38,13 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
     Death Metal:
-      total: 0.57
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -57,7 +57,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -99,7 +99,7 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -189,7 +189,7 @@ builds:
       fit: 0.36
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -254,7 +254,7 @@ builds:
       fit: 0.46
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -384,7 +384,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.63
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -449,7 +449,7 @@ builds:
       fit: 0.77
     Rod of Tahuti:
       total: 0.56
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.25
@@ -470,7 +470,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Rod of Tahuti
   - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
@@ -514,7 +514,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.54
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.21
@@ -560,13 +560,13 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.38
     Death Metal:
-      total: 0.57
+      total: 0.56
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -579,7 +579,7 @@ builds:
       fit: 0.75
     Rod of Tahuti:
       total: 0.58
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.29
@@ -638,7 +638,7 @@ builds:
       fit: 0.58
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27
@@ -710,7 +710,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -823,7 +823,7 @@ builds:
       pick: 0.0
       fit: 0.72
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -836,7 +836,7 @@ builds:
       fit: 0.41
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.31
@@ -859,20 +859,20 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
-  - Rod of Tahuti
   - Eros' Bow
   - Amanita Charm
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Berserker's Shield
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
+    swap: Pharaoh's Curse — magical protection
+    swap_item: Pharaoh's Curse
   - vs_tag: physical_heavy
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
@@ -894,12 +894,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.29
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.87
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Eros' Bow:
       total: 0.52
       efficiency: 0.53
@@ -912,6 +906,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Erosion:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Soul Gem:
       total: 0.77
       efficiency: 0.57
@@ -926,12 +926,12 @@ builds:
   - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
+  - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Avenging Blade
-  - Death Metal
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -966,15 +966,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Death Metal:
-      total: 0.52
-      efficiency: 0.63
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.47
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -996,7 +996,7 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
+  - Rod of Tahuti
   - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1034,7 +1034,7 @@ builds:
       fit: 0.69
     Rod of Tahuti:
       total: 0.55
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.23
@@ -1081,7 +1081,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -1166,7 +1166,7 @@ builds:
       fit: 0.58
     Rod of Tahuti:
       total: 0.57
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27

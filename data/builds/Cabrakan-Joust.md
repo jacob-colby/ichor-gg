@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Amanita Charm:
-      total: 0.74
+      total: 0.73
       efficiency: 0.65
       win: 0.5
       pick: 0.0
@@ -405,7 +405,7 @@ builds:
   - Erosion
   - Triton's Conch
   flex_slots:
-  - Brawler’s Beat Stick
+  - Jotunn's Revenge
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0

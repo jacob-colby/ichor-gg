@@ -51,7 +51,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -118,7 +118,7 @@ builds:
       fit: 0.28
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -177,7 +177,7 @@ builds:
       fit: 0.49
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -318,8 +318,8 @@ builds:
       pick: 0.0
       fit: 0.59
     Rod of Tahuti:
-      total: 0.68
-      efficiency: 0.87
+      total: 0.67
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.48
@@ -372,7 +372,7 @@ builds:
       fit: 0.47
     Rod of Tahuti:
       total: 0.54
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.21
@@ -430,7 +430,7 @@ builds:
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.54
+      total: 0.53
       efficiency: 0.63
       win: 0.5
       pick: 0.0
@@ -508,7 +508,7 @@ builds:
       fit: 0.5
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36

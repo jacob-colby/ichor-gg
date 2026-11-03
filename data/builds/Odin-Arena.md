@@ -63,7 +63,7 @@ builds:
       fit: 0.84
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -112,7 +112,7 @@ builds:
       fit: 0.44
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -130,7 +130,7 @@ builds:
       fit: 0.66
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -195,7 +195,7 @@ builds:
       fit: 0.82
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -390,7 +390,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
@@ -455,7 +455,7 @@ builds:
       fit: 0.84
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75

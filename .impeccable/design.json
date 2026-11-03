@@ -1,41 +1,52 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-26T00:00:00Z",
+  "generatedAt": "2026-11-03T00:00:00Z",
   "title": "Design System: ichor",
   "extensions": {
     "colorMeta": {
-      "torchlight-gold": { "role": "primary", "displayName": "Torchlight Gold", "canonical": "#e3b23c", "tonalRamp": ["#f7eacb", "#eccb7c", "#dcac3a", "#b28b2f", "#886a24", "#614c1a", "#413311", "#271e0a"] },
-      "focus-blue": { "role": "secondary", "displayName": "Focus Blue", "canonical": "#4ea3ff", "tonalRamp": ["#ddedff", "#abd3ff", "#78b9ff", "#4a9af2", "#3876b8", "#285484", "#1b3858", "#102235"] },
-      "under": { "role": "semantic-positive", "displayName": "Under (Underrated)", "canonical": "#63c088", "tonalRamp": ["#def2e6", "#addec1", "#7cca9b", "#58ab79", "#43825c", "#305d42", "#203e2c", "#13251a"] },
-      "premium": { "role": "semantic-negative", "displayName": "Premium (Overrated)", "canonical": "#c58b8b", "tonalRamp": ["#f3e7e7", "#e1c3c3", "#cf9f9f", "#b17d7d", "#875f5f", "#604444", "#402d2d", "#271b1b"] },
-      "role-guardian": { "role": "lane-accent", "displayName": "Guardian", "canonical": "#7f9e97", "tonalRamp": ["#e7edeb", "#c2d1cd", "#9db5b0", "#78968f", "#5c726d", "#42524e", "#2c3634", "#1a211f"] },
-      "role-warrior": { "role": "lane-accent", "displayName": "Warrior", "canonical": "#b98a6d", "tonalRamp": ["#f2e9e3", "#ddc7b9", "#c9a58f", "#ae8267", "#85634e", "#5f4738", "#3f2f25", "#261c16"] },
-      "role-mid": { "role": "lane-accent", "displayName": "Mid", "canonical": "#9d8bb3", "tonalRamp": ["#ece9f0", "#d0c7da", "#b4a6c5", "#9483a9", "#716481", "#51475c", "#36303d", "#201d25"] },
-      "role-hunter": { "role": "lane-accent", "displayName": "Hunter", "canonical": "#b6a571", "tonalRamp": ["#efebdf", "#d6ccaf", "#bdae7f", "#9b8d61", "#776c4a", "#554d35", "#393323", "#221f15"] },
-      "role-assassin": { "role": "lane-accent", "displayName": "Assassin", "canonical": "#ab7a8c", "tonalRamp": ["#f0e8eb", "#dac5cd", "#c4a2ae", "#ac7c8e", "#845e6c", "#5e434d", "#3f2d33", "#261b1f"] },
-      "dmg-magical": { "role": "damage-type-accent", "displayName": "Magical Damage", "canonical": "#8891b3" },
-      "rail": { "role": "neutral-frame", "displayName": "Rail", "canonical": "#05070a" },
-      "bg0": { "role": "neutral-bg", "displayName": "Base", "canonical": "#0b0e13" },
-      "bg1": { "role": "neutral-bg", "displayName": "Panel", "canonical": "#0e1116" },
-      "bg2": { "role": "neutral-bg", "displayName": "Card Rest", "canonical": "#12161d" },
-      "bg3": { "role": "neutral-bg", "displayName": "Card Elevated", "canonical": "#171c24" }
+      "thermal-violet": { "role": "primary", "displayName": "Thermal Violet", "canonical": "#a998ff", "tonalRamp": ["#1b1636", "#2c2458", "#3f3480", "#5747aa", "#7a68d6", "#a998ff", "#c9beff", "#e8e3ff"] },
+      "violet-ink": { "role": "on-primary", "displayName": "Violet Ink", "canonical": "#14121f" },
+      "ground": { "role": "neutral", "displayName": "Ground", "canonical": "#101114", "tonalRamp": ["#101114", "#16171b", "#1f2026", "#292a31", "#33353c", "#464851", "#8b8e97", "#ebebee"] },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#16171b" },
+      "surface-2": { "role": "neutral", "displayName": "Surface 2", "canonical": "#1f2026" },
+      "surface-3": { "role": "neutral", "displayName": "Surface 3", "canonical": "#292a31" },
+      "ink": { "role": "text", "displayName": "Ink", "canonical": "#ebebee" },
+      "muted": { "role": "text", "displayName": "Muted", "canonical": "#a6a9b2" },
+      "quiet": { "role": "text", "displayName": "Quiet (the floor)", "canonical": "#8b8e97" },
+      "positive": { "role": "semantic-direction", "displayName": "Positive (model above market)", "canonical": "#6fcf9f" },
+      "negative": { "role": "semantic-direction", "displayName": "Negative (model below market)", "canonical": "#f09a9a" },
+      "role-guardian": { "role": "lane-accent", "displayName": "Guardian", "canonical": "#7f9e97" },
+      "role-warrior": { "role": "lane-accent", "displayName": "Warrior", "canonical": "#b98a6d" },
+      "role-mid": { "role": "lane-accent", "displayName": "Mid", "canonical": "#8fa3c8" },
+      "role-hunter": { "role": "lane-accent", "displayName": "Hunter", "canonical": "#b6a571" },
+      "role-assassin": { "role": "lane-accent", "displayName": "Assassin", "canonical": "#b9879a" }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display (Rajdhani)", "purpose": "God names, dialog headings — condensed geometric caps for a console-display feel." },
-      "body": { "displayName": "Body (Inter)", "purpose": "Descriptions, list content, tooltip copy." },
-      "label": { "displayName": "Label (JetBrains Mono)", "purpose": "Section eyebrows, counts, status tags — small, uppercase, tracked." }
+      "hero": { "displayName": "Hero", "purpose": "\"Who are you playing?\" only." },
+      "god": { "displayName": "God", "purpose": "The god's name, the god page h1." },
+      "head": { "displayName": "Head", "purpose": "Sheet titles and section names." },
+      "row": { "displayName": "Row", "purpose": "Item names in the six; chips and option rows at 17-21px." },
+      "say": { "displayName": "Say", "purpose": "The one verdict sentence." },
+      "copy": { "displayName": "Copy", "purpose": "Reading text." },
+      "note": { "displayName": "Note", "purpose": "Per-item reason, secondary lines." },
+      "cap": { "displayName": "Cap", "purpose": "Captions, provenance, counts. The 12px floor." }
     },
     "shadows": [
-      { "name": "card", "value": "0 6px 16px rgba(0,0,0,0.35)", "purpose": "Floating surfaces resting just above the page (tooltips, popovers)." },
-      { "name": "raised", "value": "0 10px 28px rgba(0,0,0,0.45)", "purpose": "Modals and dialogs sitting fully above the page." },
-      { "name": "glow", "value": "0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15)", "purpose": "Selected-state halo on a god card; the one place shadow doubles as the accent color." }
+      { "name": "raised", "value": "inset 0 1px 0 rgba(255,255,255,0.05), 0 10px 28px rgba(0,0,0,0.5)", "purpose": "The suggestion list and the phone enemy strip: things above the page." },
+      { "name": "sheet", "value": "0 -18px 48px rgba(0,0,0,0.55)", "purpose": "Bottom sheets." },
+      { "name": "card", "value": "inset 0 1px 0 rgba(255,255,255,0.04), 0 6px 16px rgba(0,0,0,0.35)", "purpose": "Tooltips and popovers in the kept route bodies." },
+      { "name": "glow", "value": "0 0 0 1px rgba(169,152,255,0.45), 0 4px 14px rgba(169,152,255,0.12)", "purpose": "Selected state where a ring alone is not enough." }
     ],
     "motion": [
-      { "name": "ease-standard", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Default easing for state transitions." },
-      { "name": "press", "value": "transform 120ms; scale(0.97) on :active", "purpose": "Tactile press feedback on tappable cards/pills/tabs; disabled under prefers-reduced-motion." }
+      { "name": "lock-in", "value": "320ms cubic-bezier(0.16, 1, 0.3, 1); reason +160ms, 260ms", "purpose": "The one authored moment: a draft-swapped item row lands like a lower-third." },
+      { "name": "ease-standard", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "State and colour transitions, 120-180ms." },
+      { "name": "sheet-up", "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Sheets rising 24px." },
+      { "name": "press", "value": "scale(0.97) 120ms", "purpose": "Every tappable element." }
     ],
     "breakpoints": [
-      { "name": "md", "value": "768px" }
+      { "name": "phone", "value": "390px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
     ]
   },
   "components": [
@@ -43,91 +54,81 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The single confirming action per view (e.g. a dialog's \"Got it\").",
-      "html": "<button class=\"ds-btn-primary\">Got it</button>",
-      "css": ".ds-btn-primary { background: #e3b23c; color: #0b0e13; padding: 6px 16px; border-radius: 10px; border: none; font-weight: 500; font-size: 14px; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-primary:hover { filter: brightness(1.05); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid #4ea3ff; outline-offset: 2px; }"
+      "description": "The one confirming action per view.",
+      "html": "<button class=\"ds-btn-primary\">Go</button>",
+      "css": ".ds-btn-primary { background: #a998ff; color: #14121f; height: 44px; padding: 0 20px; border: none; border-radius: 10px; font-family: 'Sofia Sans Extra Condensed', 'Sofia Sans', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid #a998ff; outline-offset: 2px; }"
     },
     {
-      "name": "Filter Chip (active)",
-      "kind": "chip",
-      "refersTo": "chip-active",
-      "description": "Selected pill filter (e.g. active lane filter).",
-      "html": "<button class=\"ds-chip-active\">Jungle</button>",
-      "css": ".ds-chip-active { background: #e3b23c; color: #0b0e13; font-weight: 600; font-size: 11px; padding: 4px 10px; border-radius: 9999px; border: none; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-chip-active:active { transform: scale(0.97); }"
-    },
-    {
-      "name": "Filter Chip (inactive)",
-      "kind": "chip",
-      "refersTo": "chip-inactive",
-      "description": "Unselected pill filter.",
-      "html": "<button class=\"ds-chip-inactive\">Support</button>",
-      "css": ".ds-chip-inactive { background: transparent; color: #8b95a5; font-size: 11px; padding: 4px 10px; border-radius: 9999px; border: 1px solid #1e2530; transition: transform 120ms cubic-bezier(0.2,0.8,0.2,1); } .ds-chip-inactive:hover { color: #c3cad6; } .ds-chip-inactive:active { transform: scale(0.97); }"
-    },
-    {
-      "name": "God Card (selected)",
-      "kind": "card",
-      "refersTo": "card-selected",
-      "description": "The elevated, gold-bordered selection state for a god card.",
-      "html": "<div class=\"ds-card-selected\"><div class=\"ds-card-name\">Athena</div></div>",
-      "css": ".ds-card-selected { background: #171c24; border: 1px solid #e3b23c; border-radius: 14px; padding: 6px; box-shadow: 0 0 0 1px rgba(227,178,60,0.4), 0 4px 14px rgba(227,178,60,0.15); display: flex; flex-direction: column; align-items: center; gap: 4px; } .ds-card-name { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 10.5px; color: #e8edf4; }"
-    },
-    {
-      "name": "God Card (rest)",
-      "kind": "card",
-      "refersTo": "card-default",
-      "description": "The default, unselected god-card state.",
-      "html": "<div class=\"ds-card-rest\"><div class=\"ds-card-name\">Anubis</div></div>",
-      "css": ".ds-card-rest { background: #12161d; border: 1px solid #1e2530; border-radius: 14px; padding: 6px; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: border-color 180ms cubic-bezier(0.2,0.8,0.2,1), transform 120ms; } .ds-card-rest:hover { border-color: #2a3342; } .ds-card-rest:active { transform: scale(0.97); } .ds-card-name { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 10.5px; color: #e8edf4; }"
-    },
-    {
-      "name": "Search Input",
+      "name": "Command Field",
       "kind": "input",
-      "description": "The god/item search field — focus is communicated by border color alone.",
-      "html": "<input class=\"ds-input\" placeholder=\"Search gods…\" />",
-      "css": ".ds-input { width: 100%; background: transparent; color: #e8edf4; font-size: 12px; border: none; outline: none; } .ds-input::placeholder { color: #8b95a5; } .ds-input-wrap { display: flex; align-items: center; gap: 8px; border-radius: 10px; border: 1px solid #1e2530; background: #12161d; padding: 8px 12px; } .ds-input-wrap:focus-within { border-color: #4ea3ff; }"
+      "refersTo": "command-field-bar",
+      "description": "The typed query: chips for you, vs and the enemies, then the word being typed.",
+      "html": "<div class=\"ds-cmd\"><span class=\"ds-chip ds-chip-you\">RA</span><span class=\"ds-vs\">VS</span><input class=\"ds-cmd-input\" value=\"hec\" aria-label=\"Search a god, a matchup or an item\"></div>",
+      "css": ".ds-cmd { display: flex; align-items: center; gap: 4px; height: 44px; padding: 0 6px 0 12px; background: #16171b; border: 1px solid #33353c; border-radius: 12px; } .ds-cmd:focus-within { border-color: #a998ff; } .ds-chip { display: inline-flex; align-items: center; height: 36px; padding: 0 8px; border-radius: 10px; font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 17px; color: #ebebee; } .ds-chip-you { background: rgba(169,152,255,0.15); box-shadow: 0 0 0 1.5px #a998ff; } .ds-vs { font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 17px; color: #8b8e97; } .ds-cmd-input { flex: 1; min-width: 64px; background: transparent; border: none; color: #ebebee; font: 500 15px 'Sofia Sans', sans-serif; outline: none; }"
     },
     {
-      "name": "Tooltip",
-      "kind": "custom",
-      "description": "Hover/focus tooltip content surface.",
-      "html": "<div class=\"ds-tooltip\" role=\"tooltip\">Efficiency: undervalued by 240g</div>",
-      "css": ".ds-tooltip { border-radius: 10px; border: 1px solid #1e2530; background: #12161d; color: #c3cad6; font-size: 12px; padding: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.35); max-width: 260px; }"
+      "name": "Item Row",
+      "kind": "card",
+      "refersTo": "item-row",
+      "description": "One purchase in the six: icon, name, reason, gold spent.",
+      "html": "<a class=\"ds-row\" href=\"#\"><span class=\"ds-row-icon\"></span><span><span class=\"ds-row-name\">ROD OF TAHUTI</span><span class=\"ds-row-why\">35% of Ra players buy it third</span></span><span class=\"ds-row-gold\">10,500</span></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: 48px minmax(0,1fr) auto; align-items: center; gap: 12px; min-height: 64px; padding: 8px 14px 8px 10px; background: #16171b; border-radius: 12px; text-decoration: none; } .ds-row:hover { background: #1f2026; } .ds-row:focus-visible { outline: 2px solid #a998ff; outline-offset: 2px; } .ds-row-icon { width: 48px; height: 48px; border-radius: 8px; background: #292a31; } .ds-row-name { display: block; font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 22px; line-height: 1; color: #ebebee; } .ds-row-why { display: block; margin-top: 2px; font: 400 13px/1.4 'Sofia Sans', sans-serif; color: #a6a9b2; } .ds-row-gold { font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 21px; color: #a6a9b2; font-variant-numeric: tabular-nums; }"
     },
     {
-      "name": "Label / Eyebrow",
-      "kind": "custom",
-      "description": "The mono, uppercase, tracked label used for section headers and status tags (e.g. \"Pinned\").",
-      "html": "<span class=\"ds-label\">Pinned</span>",
-      "css": ".ds-label { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #e3b23c; }"
+      "name": "Mode Switch",
+      "kind": "chip",
+      "refersTo": "segment-active",
+      "description": "Segmented control: aria-pressed buttons in a surface track.",
+      "html": "<div class=\"ds-seg\" role=\"group\" aria-label=\"Mode\"><button aria-pressed=\"true\">Conquest</button><button aria-pressed=\"false\">Joust</button><button aria-pressed=\"false\">Arena</button></div>",
+      "css": ".ds-seg { display: grid; grid-template-columns: repeat(3, 1fr); padding: 4px; background: #16171b; border-radius: 12px; } .ds-seg button { height: 44px; border: none; border-radius: 9px; background: transparent; color: #a6a9b2; font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; } .ds-seg button:hover { color: #ebebee; } .ds-seg button[aria-pressed=true] { background: #a998ff; color: #14121f; } .ds-seg button:focus-visible { outline: 2px solid #a998ff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tab Bar",
+      "kind": "nav",
+      "refersTo": "tab-bar",
+      "description": "Phone navigation: Build, Draft, Gods, More.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Tabs\"><a aria-current=\"page\">Build</a><a>Draft</a><a>Gods</a><a>More</a></nav>",
+      "css": ".ds-tabs { display: grid; grid-template-columns: repeat(4, 1fr); background: rgba(16,17,20,0.95); border-top: 1px solid #33353c; } .ds-tabs a { position: relative; display: flex; align-items: center; justify-content: center; height: 64px; font-family: 'Sofia Sans Extra Condensed', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; color: #8b8e97; } .ds-tabs a[aria-current=page] { color: #ebebee; } .ds-tabs a[aria-current=page]::before { content: ''; position: absolute; top: 0; left: 24px; right: 24px; height: 2px; background: #a998ff; } .ds-tabs a:focus-visible { outline: 2px solid #a998ff; outline-offset: -2px; }"
     }
   ],
   "narrative": {
-    "northStar": "Arena Night",
-    "overview": "ichor reads like a battlefield after dark: a near-black field (rail / bg0) with one warm accent — torchlight gold — marking whatever matters right now, and role-tinted banners (guardian, warrior, mid, hunter, assassin) identifying the different lanes at a glance. Nothing about the surface competes with the data; the theme exists to make the model's output legible, not to decorate the app.\n\nThe philosophy is tactical and data-dense: small, precise labels; a lot of information per element (stats, signals, icons) held together by strict alignment; and a confident, instrumented feel closer to a mission console than a game skin. It deliberately avoids the cutesy rounded gradients and RGB-lightshow look common to \"gamer\" UI — that is the confirmed visual anti-reference. Gold is rare and load-bearing, not a brand color splashed everywhere.",
+    "northStar": "The Second Screen",
+    "overview": "ichor is the phone propped beside the monitor in a draft lobby: one answer per screen — who you are playing, the six in buy order with gold spent, one sentence comparing it to what the god's players buy — with the reasoning one tap below. A broadcast lower-third printed on ink: flat near-black, condensed uppercase names over Sofia Sans, and one hue (violet) that means the model or the selection.",
     "keyCharacteristics": [
-      "Near-black surfaces stepped in four tiers (rail → bg0 → bg2 → bg3), each one step \"closer\" or more elevated.",
-      "One accent (torchlight gold) reserved for selection, primary action, and the model's own signal.",
-      "Role/lane colors are semantic, not decorative — they always mean \"this is a Solo/Jungle/Mid/Carry/Support thing.\"",
-      "Dense, mono-labeled data sits next to display headings and Inter body text without ever feeling cluttered.",
-      "Flat at rest; lift (shadow, glow) appears only when something is selected, active, or floating above the page."
+      "One answer per screen; detail is a disclosure away, never a scroll past.",
+      "Dark only, flat ground, two lifted surfaces and a hairline.",
+      "Violet is selection, the primary action and the model talking — nothing else.",
+      "Condensed uppercase for names, gold and controls; Sofia Sans for anything read as a sentence.",
+      "One authored motion: the lock-in when an enemy pick changes a row.",
+      "A bottom tab bar on a phone; a top bar with the command field and a second column from 1024px."
     ],
     "rules": [
-      { "name": "The Torchlight Rule", "body": "Gold is load-bearing, not decorative: it appears only on the current selection, the primary action, or the model's own signal. If a design use of gold isn't one of those three, it's wrong.", "section": "colors" },
-      { "name": "The Semantic Color Rule", "body": "Role and damage colors always carry meaning (a specific lane or damage type); never repurpose them as arbitrary decoration elsewhere in the UI.", "section": "colors" },
-      { "name": "The Mono-Label Rule", "body": "Any piece of UI that names a category, state, or count rather than describing content sets in JetBrains Mono, uppercase, tracked — never Inter.", "section": "typography" },
-      { "name": "The Flat-Until-It-Matters Rule", "body": "Surfaces are flat at rest. Shadow only appears for a floating layer (tooltip, modal) or a selected state (glow) — never as ambient decoration on a resting card.", "section": "elevation" }
+      { "name": "The One Hue Rule", "body": "Violet appears only on the current selection, the primary action, or the model's own voice.", "section": "colors" },
+      { "name": "The Ink-Outline Enemy Rule", "body": "The enemy team has no hue: a 1.5px ink ring and the word Enemy, never red.", "section": "colors" },
+      { "name": "The Readable-Floor Rule", "body": "Every text tier clears AA on every surface, and nothing is set below 12px.", "section": "colors" },
+      { "name": "The Caption Rule", "body": "Condensed caps are for names and controls; sentences are set in Sofia Sans.", "section": "typography" },
+      { "name": "The Plain-Number Rule", "body": "On the main path a number is gold or a share of a god's players, with its unit in words.", "section": "typography" },
+      { "name": "The Flat-Until-It-Floats Rule", "body": "A resting row, card or field has no shadow; shadow means above the page.", "section": "elevation" }
     ],
     "dos": [
-      "Do reserve torchlight gold for selection, primary action, or the model's own signal (score/efficiency) — see the Torchlight Rule.",
-      "Do set any label, tag, or count in JetBrains Mono, uppercase and tracked, per the Mono-Label Rule.",
-      "Do keep loading states as layout-shaped skeletons (pulsing bg-bg2 bars), never a spinner or centered \"Loading…\".",
-      "Do use the shared .press scale-down for every tappable element, and respect prefers-reduced-motion."
+      "Do give each screen one answer and put the reasoning one tap below it.",
+      "Do spend violet only on selection, the primary action, or the model's voice — per the One Hue Rule.",
+      "Do draw the enemy in an ink outline and say \"Enemy\" in words.",
+      "Do set names, gold and controls in Sofia Sans Extra Condensed uppercase, and sentences in Sofia Sans.",
+      "Do keep every tap target ≥44px and every text ≥12px at AA contrast.",
+      "Do let overlays (suggestions, sheets) sit above the page; never let them push layout.",
+      "Do put chosen state in the URL and flush queued writes before navigating.",
+      "Do say what wasn't measured in the same sentence as what was."
     ],
     "donts": [
-      "Don't add shadow to a resting surface for decoration — shadow means \"floating\" (tooltip/modal) or \"selected\" (glow), per the Flat-Until-It-Matters Rule.",
-      "Don't repurpose a role/lane or damage-type color for anything other than that specific lane or damage type.",
-      "Don't introduce rounded gradients, neon glows, or angular esports-style slashes — the confirmed anti-reference for this system.",
-      "Don't add a second accent hue alongside torchlight gold; secondary interactive state is focus-blue's job, not a new color."
+      "Don't bring back torchlight gold, Rajdhani, Inter, JetBrains Mono, the god-picker rail, lens tabs, or the floating draft dock.",
+      "Don't add a second accent hue, or colour the enemy red.",
+      "Don't print a bare decimal on the main path (fit 0.69, quality 0.584); write gold or \"N% of players\".",
+      "Don't put an eyebrow over a heading, or a coloured border-left on a row.",
+      "Don't add a second command field to a screen that already has one, or a field to the phone god page.",
+      "Don't truncate a name a player needs to read (an aspect, a god, an item); wrap it.",
+      "Don't shadow a resting surface; shadow means it floats.",
+      "Don't rank or tier Joust or Arena."
     ]
   }
 }

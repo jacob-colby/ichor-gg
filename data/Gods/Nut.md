@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 577.0
     per_level: 94.0
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.33
+    per_level: 0.11
   physical_prot:
     base: 18.76
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 48.12
     per_level: 2.76
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.33
-    per_level: 0.11
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Nut Basic Attack
@@ -45,13 +45,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Flux
   details:
@@ -62,9 +62,6 @@ abilities:
   - 'Attack Speed Per Level: 0.2% Per Stack'
   - 'Bonus Magical Damage: 10%'
   - 'Max Stacks: 10'
-  description: Otherwise, Attacks grant Astral . Abilities consume this for bonus
-    Magical Damage and effects. While Strength exceeds Intelligence, Ability hits
-    grant Stellar which provides Attack Speed
   detail_kinds:
   - null
   - null
@@ -72,6 +69,9 @@ abilities:
   - buff
   - magical
   - mechanic
+  description: Otherwise, Attacks grant Astral . Abilities consume this for bonus
+    Magical Damage and effects. While Strength exceeds Intelligence, Ability hits
+    grant Stellar which provides Attack Speed
 - slot: 1st Ability
   name: Convergence
   cooldown:
@@ -88,9 +88,9 @@ abilities:
   - Start the match with 2 full shots of this ability
   - If you cancel this ability without firing a shot, it goes on a 1 second cooldown
   - This ability passes through and damages all enemies, but stops on walls
-  - 'Inner Damage: 50 | 55 | 60 | 65 | 70% of Basic Attack Damage'
+  - 'Inner Damage: 45 | 50 | 55 | 60 | 65% of Basic Attack Damage'
   - 'Outer Damage: 3 | 6 | 9 | 12 | 15'
-  - 'Outer Damage Scaling: 20% Intelligence + 17.5% Strength'
+  - 'Outer Damage Scaling: 20% Intelligence + 15% Strength'
   - 'Protections Reduced: 15%'
   - 'Max Stacks: 16'
   - 'Range: 8.8 meters'
@@ -98,10 +98,6 @@ abilities:
   - 'Cooldown: 10 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
   - 'Cost Per Additional Shot: 4 Stacks'
-  description: Your Attacks fire two additional projectiles that deal Magical Damage
-    . Nut always shoots at least once, but may fire up to an additional 4 shots by
-    using stacks. Hitting an enemy with an Attack provides 1 stack, hitting an enemy
-    god provides 2
   detail_kinds:
   - null
   - null
@@ -118,6 +114,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Your Attacks fire two additional projectiles that deal Magical Damage
+    . Nut always shoots at least once, but may fire up to an additional 4 shots by
+    using stacks. Hitting an enemy with an Attack provides 1 stack, hitting an enemy
+    god provides 2
 - slot: 2nd Ability
   name: Crashing Comet
   cooldown:
@@ -141,8 +141,6 @@ abilities:
   - 'Outer Radius: 4 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 65 mana'
-  description: Call down a comet that deals Magical Damage where it lands and less
-    Magical Damage in an area around it
   detail_kinds:
   - null
   - debuff
@@ -159,9 +157,15 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Call down a comet that deals Magical Damage where it lands and less
+    Magical Damage in an area around it
 - slot: 3rd Ability
   name: Warp
   cooldown:
+  - 14.0
+  - 13.5
+  - 13.0
+  - 12.5
   - 12.0
   cost:
   - 50.0
@@ -171,7 +175,7 @@ abilities:
   - 60.0
   details:
   - 'Stellar Flux: Resets the Cooldown of Convergence and grants 8 Ammo'
-  - 'Astral Flux: Consumes 4 stacks to fire 2 additional projectiles'
+  - 'Astral Flux: Consumes 4 stacks to fire 1 additional projectile'
   - Projectiles deal increased damage to the first target hit, and reduced damage
     to subsequent hits
   - 'Damage: 40 | 75 | 110 | 145 | 180'
@@ -180,12 +184,8 @@ abilities:
   - 'Slow Duration: 3 seconds'
   - 'Range: 2.4 meters'
   - 'Radius: 7.2 meters'
-  - 'Cooldown: 12 seconds'
+  - 'Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds'
   - 'Cost: 50 | 45 | 50 | 55 | 60 mana'
-  description: Teleport in the direction you are moving and fire homing projectiles
-    at nearby enemies that deal Magical Damage and applies a stacking slow . Subsequent
-    hits deal 33% damage
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -198,6 +198,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Teleport in the direction you are moving and fire homing projectiles
+    at nearby enemies that deal Magical Damage and applies a stacking slow . Subsequent
+    hits deal 33% damage
 - slot: Ultimate
   name: Skyfall
   cooldown:
@@ -220,9 +224,6 @@ abilities:
   - 'Explosion Radius: 6.4 meters'
   - 'Cooldown: 100 seconds'
   - 'Cost: 45 | 50 | 55 | 60 | 65 mana'
-  description: Become CC Immune and ascend into the sky. Fire a massive black hole
-    that deals Magical Damage before detonating for additional Magical Damage and
-    Pulling enemies towards the center
   detail_kinds:
   - null
   - null
@@ -235,6 +236,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Become CC Immune and ascend into the sky. Fire a massive black hole
+    that deals Magical Damage before detonating for additional Magical Damage and
+    Pulling enemies towards the center
 aspects:
 - name: Aspect of the Cosmos
   kit_changes: Flux becomes Cosmic Flux (Mitigation, decays). Decaying past 10 stacks
@@ -242,7 +246,7 @@ aspects:
     of itself to allies on god hit. Crashing Comet Stuns and Slows. Warp grants CC
     immunity to self and 1 nearby ally. -12.5% Basic Attack Damage.
 source_url: https://wiki.smite2.com/w/Nut
-last_verified: '2026-08-01'
+last_verified: '2026-11-03'
 ---
 <!-- WIKI:START -->
 - Nut Basic Attack

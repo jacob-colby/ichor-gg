@@ -17,8 +17,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -51,7 +51,7 @@ builds:
       fit: 0.84
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -80,7 +80,7 @@ builds:
   - Stampede
   - Pharaoh's Curse
   flex_slots:
-  - Pharaoh's Curse
+  - Stampede
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -124,7 +124,7 @@ builds:
       fit: 0.82
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -319,7 +319,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -344,8 +344,8 @@ builds:
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Void Stone — magical protection
     swap_item: Void Stone
@@ -378,7 +378,7 @@ builds:
       fit: 0.84
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75

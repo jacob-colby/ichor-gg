@@ -36,13 +36,13 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Tyrfing:
       total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Death Metal:
       total: 0.58
       efficiency: 0.63
@@ -54,7 +54,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Demon Blade:
       total: 0.55
       efficiency: 0.36
@@ -111,7 +111,7 @@ builds:
       pick: 0.0
       fit: 0.55
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
@@ -130,7 +130,7 @@ builds:
       fit: 0.61
     Rod of Tahuti:
       total: 0.61
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.73
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -424,11 +424,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Divine Ruin
   - Toxic Blade
   - Death Metal
+  - Bragi's Harp
   - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Eros' Bow
-  - Divine Ruin
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -483,17 +483,11 @@ builds:
     swap: Umbral Link — physical protection
     swap_item: Umbral Link
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Divine Ruin:
-      total: 0.52
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Toxic Blade:
       total: 0.57
       efficiency: 0.45
@@ -506,9 +500,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -573,7 +573,7 @@ builds:
       fit: 0.65
     Rod of Tahuti:
       total: 0.6
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.33
@@ -623,13 +623,13 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Tyrfing:
       total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Death Metal:
       total: 0.58
       efficiency: 0.63
@@ -641,7 +641,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.81
     Demon Blade:
       total: 0.55
       efficiency: 0.36

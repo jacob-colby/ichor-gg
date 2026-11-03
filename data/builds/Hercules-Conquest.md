@@ -79,7 +79,7 @@ builds:
     pick_rate: 0.06
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/hercules/
-  last_verified: '2026-11-02'
+  last_verified: '2026-11-03'
   god_win_rate: 0.4838709677419355
   god_matches_won: 150
   god_matches_played: 310
@@ -119,7 +119,7 @@ builds:
     this god: Amanita Charm, Runeforged Hammer, Shield Splitter, Kinetic Cuirass,
     Berserker''s Shield, Erosion, Eye of Providence, Draconic Scale, Hydra''s Lament,
     Oni Hunter''s Garb, Shield of the Phoenix, Stone of Binding, Magi''s Cloak, Midgardian
-    Mail, Avenging Blade, Wyrmskin Hide, Mantle Of Discord, Titan''s Bane, Leviathan''s
+    Mail, Avenging Blade, Wyrmskin Hide, Titan''s Bane, Mantle Of Discord, Leviathan''s
     Hide, Screeching Gargoyle, Arondight, Ancile, Prophetic Cloak, Stampede, Hide
     of the Nemean Lion.'
   slot_scores:
@@ -271,7 +271,7 @@ builds:
     Shield, Void Stone, Void Shield, The Crusher, Heartseeker, The Reaper, Hydra''s
     Lament, Erosion, Oni Hunter''s Garb, Eye of Providence, Tekko-Kagi, Draconic Scale,
     Shield of the Phoenix, Midgardian Mail, Magi''s Cloak, Mantle Of Discord, Leviathan''s
-    Hide.'
+    Hide, Pendulum Blade.'
   slot_scores:
     Stone of Binding:
       total: 0.53
@@ -342,10 +342,10 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Runeforged Hammer, Kinetic Cuirass,
     Golden Blade, Shield Splitter, Tyrfing, Tekko-Kagi, Pharaoh''s Curse, Lernaean
-    Bow, Toxic Blade, Shogun''s Ofuda, Oni Hunter''s Garb, Hydra''s Lament, Silverbranch
-    Bow, Erosion, Eye of Providence, Stone of Binding, Draconic Scale, Midgardian
-    Mail, Shield of the Phoenix, Magi''s Cloak, The Reaper, Screeching Gargoyle, Riptalon,
-    Dominance.'
+    Bow, Toxic Blade, Oni Hunter''s Garb, Shogun''s Ofuda, Silverbranch Bow, Hydra''s
+    Lament, Erosion, Eye of Providence, Stone of Binding, Draconic Scale, Midgardian
+    Mail, Shield of the Phoenix, Magi''s Cloak, The Reaper, Riptalon, Screeching Gargoyle,
+    Titan''s Bane.'
   slot_scores:
     Golden Blade:
       total: 0.51
@@ -416,7 +416,7 @@ builds:
     + fit + win/pick). Underrated for this god: Amanita Charm, Runeforged Hammer,
     Kinetic Cuirass, Berserker''s Shield, Shield of the Phoenix, Hydra''s Lament,
     Shield Splitter, Screeching Gargoyle, Regrowth Striders, Arondight, Prophetic
-    Cloak, Erosion, Eye of Providence, Oni Hunter''s Garb, Gladiator''s Shield, Draconic
+    Cloak, Erosion, Oni Hunter''s Garb, Eye of Providence, Gladiator''s Shield, Draconic
     Scale, Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle Of Discord, Leviathan''s
     Hide, Chandra''s Grace, Eye of Erebus, Glorious Pridwen, Titan''s Bane.'
   slot_scores:
@@ -490,7 +490,7 @@ builds:
     Underrated for this god: Amanita Charm, Shield Splitter, Kinetic Cuirass, Berserker''s
     Shield, Runeforged Hammer, Erosion, Eye of Providence, Draconic Scale, Hydra''s
     Lament, Oni Hunter''s Garb, Shield of the Phoenix, Stone of Binding, Magi''s Cloak,
-    Midgardian Mail, Avenging Blade, Wyrmskin Hide, Mantle Of Discord, Titan''s Bane,
+    Midgardian Mail, Avenging Blade, Wyrmskin Hide, Titan''s Bane, Mantle Of Discord,
     Leviathan''s Hide, Screeching Gargoyle, Arondight, Ancile, Hide of the Nemean
     Lion, Prophetic Cloak, Stampede.'
   slot_scores:
@@ -562,13 +562,13 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Runeforged Hammer, Erosion, Kinetic Cuirass, Berserker''s
     Shield, Shield Splitter, Shield of the Phoenix, Stampede, Void Stone, Void Shield,
-    Spectral Armor, Doublet of Binding, Eye of Providence, Draconic Scale, Oni Hunter''s
-    Garb, Phoenix Feather, Hydra''s Lament, Shogun''s Ofuda, Pharaoh''s Curse, Avenging
+    Spectral Armor, Doublet of Binding, Eye of Providence, Oni Hunter''s Garb, Draconic
+    Scale, Phoenix Feather, Hydra''s Lament, Shogun''s Ofuda, Pharaoh''s Curse, Avenging
     Blade, Midgardian Mail, Yogi''s Necklace, Mystical Mail, Wyrmskin Hide, Leviathan''s
     Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.69
       win: 0.6
       pick: 0.22
@@ -713,7 +713,7 @@ builds:
     for this god: Amanita Charm, Void Stone, Void Shield, Runeforged Hammer, Erosion,
     Avenging Blade, Berserker''s Shield, The Reaper, Kinetic Cuirass, Stone of Binding,
     Titan''s Bane, Shield Splitter, Screeching Gargoyle, Shield of the Phoenix, Stampede,
-    Spectral Armor, Doublet of Binding, The Crusher, Heartseeker, Oni Hunter''s Garb,
+    Spectral Armor, The Crusher, Doublet of Binding, Heartseeker, Oni Hunter''s Garb,
     Hydra''s Lament, Yogi''s Necklace, Phoenix Feather, Eye of Providence, Shogun''s
     Ofuda, Pharaoh''s Curse.'
   slot_scores:
@@ -787,9 +787,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Pharaoh''s Curse, Runeforged Hammer,
     Shogun''s Ofuda, Erosion, Golden Blade, Kinetic Cuirass, Shield of the Phoenix,
-    Stampede, Void Stone, Void Shield, Shield Splitter, Spectral Armor, The Reaper,
+    Stampede, Void Stone, Void Shield, Shield Splitter, The Reaper, Spectral Armor,
     Riptalon, Tyrfing, Doublet of Binding, Umbral Link, Toxic Blade, Sanguine Lash,
-    Yogi''s Necklace, Tekko-Kagi, Oni Hunter''s Garb, Phoenix Feather, Lernaean Bow.'
+    Tekko-Kagi, Yogi''s Necklace, Oni Hunter''s Garb, Phoenix Feather, Lernaean Bow.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -861,7 +861,7 @@ builds:
     + fit + win/pick). Underrated for this god: Amanita Charm, Shield of the Phoenix,
     Erosion, Runeforged Hammer, Regrowth Striders, Berserker''s Shield, Kinetic Cuirass,
     Stampede, Void Stone, Hydra''s Lament, Void Shield, Chandra''s Grace, Spectral
-    Armor, Shield Splitter, Screeching Gargoyle, Doublet of Binding, Glorious Pridwen,
+    Armor, Screeching Gargoyle, Shield Splitter, Doublet of Binding, Glorious Pridwen,
     Oni Hunter''s Garb, Arondight, Phoenix Feather, Yogi''s Necklace, Eye of Providence,
     Gladiator''s Shield, Shogun''s Ofuda, Pharaoh''s Curse, Draconic Scale.'
   slot_scores:
@@ -935,8 +935,8 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Erosion, Kinetic Cuirass, Berserker''s
     Shield, Shield Splitter, Shield of the Phoenix, Stampede, Void Stone, Void Shield,
-    Runeforged Hammer, Spectral Armor, Doublet of Binding, Eye of Providence, Draconic
-    Scale, Oni Hunter''s Garb, Phoenix Feather, Hydra''s Lament, Shogun''s Ofuda,
+    Runeforged Hammer, Spectral Armor, Doublet of Binding, Eye of Providence, Oni
+    Hunter''s Garb, Draconic Scale, Phoenix Feather, Hydra''s Lament, Shogun''s Ofuda,
     Pharaoh''s Curse, Avenging Blade, Midgardian Mail, Yogi''s Necklace, Mystical
     Mail, Wyrmskin Hide, Leviathan''s Hide.'
   slot_scores:

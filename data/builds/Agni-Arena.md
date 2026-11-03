@@ -39,7 +39,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -51,7 +51,7 @@ builds:
       fit: 0.89
     Rod of Tahuti:
       total: 0.83
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -112,13 +112,13 @@ builds:
       fit: 0.61
     Doom Orb:
       total: 0.55
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.57
     Rod of Tahuti:
       total: 0.72
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -129,7 +129,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.63
+      total: 0.62
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -177,7 +177,7 @@ builds:
       fit: 0.66
     Rod of Tahuti:
       total: 0.71
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -254,7 +254,7 @@ builds:
       fit: 0.81
     Stampede:
       total: 0.63
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.75
@@ -301,7 +301,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.69
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -319,7 +319,7 @@ builds:
       fit: 0.95
     Rod of Tahuti:
       total: 0.86
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.85
@@ -359,7 +359,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -378,7 +378,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -449,7 +449,7 @@ builds:
       fit: 0.86
     Rod of Tahuti:
       total: 0.62
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.37
@@ -507,8 +507,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -572,8 +572,8 @@ builds:
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.72
-      efficiency: 0.87
+      total: 0.71
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -584,7 +584,7 @@ builds:
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.65
+      total: 0.64
       efficiency: 0.38
       win: 0.5
       pick: 0.0
@@ -626,7 +626,7 @@ builds:
       fit: 1.0
     Doom Orb:
       total: 0.66
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -638,7 +638,7 @@ builds:
       fit: 0.89
     Rod of Tahuti:
       total: 0.83
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.79
@@ -696,13 +696,13 @@ builds:
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
-      total: 0.78
-      efficiency: 0.87
+      total: 0.77
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.68
     Dreamer's Idol:
-      total: 0.7
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0
@@ -725,7 +725,7 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
-  - Bragi's Harp
+  - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Eros' Bow
@@ -750,26 +750,26 @@ builds:
     data).
   slot_scores:
     Bancroft's Talon:
-      total: 0.54
+      total: 0.53
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Bragi's Harp:
+    Spear of Desolation:
       total: 0.58
-      efficiency: 0.45
+      efficiency: 0.59
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.57
     Doom Orb:
       total: 0.53
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.53
     Rod of Tahuti:
       total: 0.7
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -829,7 +829,7 @@ builds:
       fit: 0.61
     Rod of Tahuti:
       total: 0.69
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -907,7 +907,7 @@ builds:
       fit: 0.77
     Stampede:
       total: 0.62
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.73
@@ -955,7 +955,7 @@ builds:
       fit: 0.9
     Doom Orb:
       total: 0.65
-      efficiency: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -967,7 +967,7 @@ builds:
       fit: 0.87
     Rod of Tahuti:
       total: 0.82
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -1014,7 +1014,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Divine Ruin:
-      total: 0.51
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -1033,7 +1033,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.59
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.32
@@ -1092,7 +1092,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Heartwood Charm:
-      total: 0.54
+      total: 0.53
       efficiency: 0.5
       win: 0.5
       pick: 0.0
@@ -1104,8 +1104,8 @@ builds:
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.87
+      total: 0.6
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
@@ -1164,8 +1164,8 @@ builds:
       pick: 0.0
       fit: 0.77
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.87
+      total: 0.65
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.44
@@ -1193,7 +1193,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1231,7 +1231,7 @@ builds:
       fit: 0.63
     Rod of Tahuti:
       total: 0.69
-      efficiency: 0.87
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -1290,13 +1290,13 @@ builds:
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
-      total: 0.78
-      efficiency: 0.87
+      total: 0.77
+      efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.68
     Dreamer's Idol:
-      total: 0.7
+      total: 0.69
       efficiency: 0.51
       win: 0.5
       pick: 0.0

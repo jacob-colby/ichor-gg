@@ -118,7 +118,7 @@ builds:
       fit: 0.44
     Heartseeker:
       total: 0.5
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Shield of the Phoenix
   - Freya's Tears
   - Erosion
   flex_slots:
   - Erosion
-  - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -364,18 +364,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Shield of the Phoenix:
       total: 0.66
       efficiency: 0.52

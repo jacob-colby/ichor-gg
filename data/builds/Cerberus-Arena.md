@@ -63,7 +63,7 @@ builds:
       fit: 0.93
     Stampede:
       total: 0.66
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.81
@@ -73,22 +73,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Void Stone
+  - Kinetic Cuirass
   - Eros' Bow
   - Amanita Charm
   - Erosion
   - Stampede
   - Soul Gem
   flex_slots:
-  - Void Stone
+  - Kinetic Cuirass
   - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -98,12 +98,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Stone:
+    Kinetic Cuirass:
       total: 0.64
-      efficiency: 0.46
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.71
     Eros' Bow:
       total: 0.63
       efficiency: 0.53
@@ -124,7 +124,7 @@ builds:
       fit: 0.91
     Stampede:
       total: 0.67
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -195,7 +195,7 @@ builds:
       fit: 0.75
     Stampede:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -260,7 +260,7 @@ builds:
       fit: 0.66
     Stampede:
       total: 0.57
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -319,7 +319,7 @@ builds:
       fit: 0.72
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -378,7 +378,7 @@ builds:
       fit: 0.71
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -409,8 +409,8 @@ builds:
   - Stampede
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Pharaoh's Curse — magical protection
     swap_item: Pharaoh's Curse
@@ -449,7 +449,7 @@ builds:
       fit: 0.69
     Stampede:
       total: 0.58
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -520,7 +520,7 @@ builds:
       fit: 0.93
     Stampede:
       total: 0.66
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.81

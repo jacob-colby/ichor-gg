@@ -118,7 +118,7 @@ builds:
       fit: 0.41
     Heartseeker:
       total: 0.48
-      efficiency: 0.44
+      efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.53
@@ -183,7 +183,7 @@ builds:
       fit: 0.7
     Stampede:
       total: 0.59
-      efficiency: 0.51
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.68
@@ -241,7 +241,7 @@ builds:
       pick: 0.0
       fit: 0.92
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.57
       efficiency: 0.67
       win: 0.5
       pick: 0.0

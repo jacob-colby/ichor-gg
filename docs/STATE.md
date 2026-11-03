@@ -2085,7 +2085,7 @@ comparison cannot contain at all — Tekko-Kagi's pathfinding (22 of the 47),
 Stampede, Runeforged Hammer, Eye of Providence, Erosion — and the coverage
 rule is doing its job there; loosening it to get verdicts would be tuning.
 
-**Healing (2026-11-03, fingerprint `8e8f564b83d6`).** `side_by_side`'s
+**Healing (2026-11-03, re-measured on OB47 at fingerprint `2511b1ce28f7` — identical counts).** `side_by_side`'s
 HEALING block gives both sides a healing-received channel: our god lifesteals
 off every damage instance to a LIVE target plus the heal-on-hit items, cut by
 the enemy team's expected anti-heal; the target lifesteals off its hits on
@@ -2793,7 +2793,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 1 — Mercury. The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 130 of 138 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1191 pipeline · 792 viewer |
+| Tests | 1184 pipeline · 934 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
