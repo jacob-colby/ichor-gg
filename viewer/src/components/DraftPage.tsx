@@ -101,9 +101,13 @@ interface DraftPageProps {
    *  index simply leaves the damage term out of the overlay. */
   godItemDamage?: Record<string, Record<string, [number, number]>>;
   draftConfig?: DraftConfig;
+  /** The build the board opens on. The Second Screen chrome passes `model` so
+   *  the board starts on the same six the god page shows; omitted, it keeps
+   *  the historical `core` default. */
+  initialArchetype?: string;
 }
 
-export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, draftConfig }: DraftPageProps) {
+export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, draftConfig, initialArchetype }: DraftPageProps) {
   const eligibleGods = useMemo(
     () => (godItemScores ? gods.filter((g) => godItemScores[g.name]) : []),
     [gods, godItemScores],
@@ -132,7 +136,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
      Which archetypes exist is per god (`scoring.eligible_flavors` refuses a
      flavor a god's scaling can't carry), so the strip is built from what the
      note contains and a god is never offered a tab it has no build for. */
-  const [archetype, setArchetype] = useState<string>(DEFAULT_ARCHETYPE);
+  const [archetype, setArchetype] = useState<string>(initialArchetype ?? DEFAULT_ARCHETYPE);
 
   const {
     meName, itemsByName, taken, takenFor, enemiesKnown, roster, threatCulprits: culprits,
