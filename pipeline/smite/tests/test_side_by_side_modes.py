@@ -71,3 +71,11 @@ def test_the_report_labels_a_borrowed_comparison():
                                  "test")
     head = "\n".join(lines[:3])
     assert "Joust" in head and "BORROWED FROM CONQUEST" in head
+
+
+def test_a_community_six_holding_devourers_gets_the_stack_pricing_note():
+    notes = sbs.scoring_gap_notes(["Riptalon", "Devourer's Gauntlet"])
+    assert len(notes) == 1
+    assert "does not price Devourer's Gauntlet's stacks" in notes[0]
+    assert "36.6% / 37.2%" in notes[0]
+    assert sbs.scoring_gap_notes(["Riptalon"]) == []

@@ -47,6 +47,9 @@ export interface SideBySideData {
   coverage?: { ichor: number; community: number; gap: number; ok: boolean; reason: string | null };
   /** The verdict the rule gives before coverage withholds it. */
   verdict_unwithheld?: string;
+  /** Sentences about items in the community six that Ichor's SCORING cannot
+   *  price (`side_by_side.SCORING_GAP_NOTES`). Absent before 2026-11-03. */
+  notes?: string[];
   /** Damage and survival axes weighted over the 2-, 4- and 6-item points. */
   weighted_axes?: [number, number];
   /** The mode compared in (2026-11-03). Absent before: Conquest. */
@@ -370,6 +373,9 @@ export function SideBySideView({ d, meta, flush = false }: { d: SideBySideData; 
         <BuildColumn label={borrowed ? `Community (${borrowed})` : "Community"} side={d.community}
           shared={shared} accent={false} />
       </div>
+      {(d.notes ?? []).map((n) => (
+        <p key={n} className="mt-2 max-w-[74ch] text-label leading-relaxed text-muted" data-testid="scoring-note">{n}</p>
+      ))}
       {d.substitutions.some((s) => s.used) && (
         <p className="mt-2 text-label text-faint">
           Community six cleaned:{" "}
