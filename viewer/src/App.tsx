@@ -11,29 +11,58 @@ import { TierList } from "./components/TierList";
 import { PatchNotes } from "./components/PatchNotes";
 import { Method } from "./components/Method";
 import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
-import { AppNav, Mark, type MoreLink, type NavTab } from "./components/second/AppNav";
-import { GodGrid } from "./components/second/GodGrid";
-import { GodPage } from "./components/second/GodPage";
+import { Mark } from "./components/second/AppNav";
+import { GodPage, type GodPageSeed } from "./components/second/GodPage";
 import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
 import { GodSubPage } from "./components/second/GodSubPage";
+import { useWide } from "./components/second/useWide";
+import { CommandField } from "./components/command/CommandField";
+import { Dock, MenuButton, MenuSheet, TopBar, type MenuKey } from "./components/command/CommandChrome";
+import { freshness } from "./components/command/stamp";
+import { Landing } from "./components/command/Landing";
+import { queryHash, serializeQuery, type ParsedQuery } from "./components/command/query";
+import { clearRecents, pushRecent, readRecents } from "./components/command/recents";
+import { useDraft, MODE_TEAM_SIZE } from "./lib/draft";
 import { useHashRoute, toHash } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
 import type { CuratedBuildEntry } from "./types";
 
-/* The Second Screen shell.
+/* The "Type it" shell (direction C).
  *
- * The app opens on "Who are you playing?" and every other route sits inside
- * one chrome: a bottom tab bar on a phone (Build · Draft · Gods · More), a slim
- * top bar from `lg` up. The old floating draft dock is gone from this shell —
- * the god page carries the enemy team itself, and Draft is one tab away
- * everywhere else, so the dock would only be a second copy of a control. */
+ * One command field is the navigation: "ra vs hecate ymir joust". It sits in
+ * the top bar on desktop and docks at the bottom of a phone, in thumb reach.
+ * Submitting writes the parsed enemies into the shared draft (so the god
+ * page's six, its enemy chips and the Draft page agree) and lands on the god
+ * page at a URL that reproduces the chips. On the god page the field stays as
+ * the header showing those chips; Menu holds everything else. The visual
+ * system and the god page body are direction A's, reused. */
 function App() {
   const { data, error, reload } = useIndexData();
   const route = useHashRoute();
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [seed, setSeed] = useState<GodPageSeed | null>(null);
+  const [recents, setRecents] = useState<string[]>(readRecents);
+  const wide = useWide();
+  const { setMode: setDraftMode, setAlly, setEnemy } = useDraft();
   const isDev = import.meta.env.DEV;
+
+  /* Submit: the draft first, then the URL, so the page that mounts already
+   * holds this team. A query with no god of your own opens the draft board. */
+  const run = useCallback((q: ParsedQuery) => {
+    const mode = q.mode ?? "conquest";
+    setDraftMode(mode);
+    if (q.you) setAlly(0, q.you);
+    for (let i = 0; i < MODE_TEAM_SIZE[mode]; i += 1) setEnemy(i, q.enemies[i] ?? "");
+    if (q.you) {
+      setRecents(pushRecent(serializeQuery({ ...q, mode: mode === "conquest" ? null : mode })));
+      window.location.hash = queryHash({ you: q.you, enemies: q.enemies, mode, aspect: q.aspect });
+    } else {
+      window.location.hash = toHash.draft();
+    }
+  }, [setDraftMode, setAlly, setEnemy]);
 
   /* Refetching index.json is a pipeline affordance, not a visitor's control,
    * so it is dev-only — and it reports what it did, because a control that
@@ -100,11 +129,23 @@ function App() {
   const lastGod = readLastGod();
   const buildGod = god?.name ?? (lastGod && data.gods.some((g) => g.name === lastGod) ? lastGod : undefined);
 
-  const active: NavTab = route.god ? "build"
-    : route.lens === "draft" ? "draft"
-      : route.lens === "board" ? "gods" : "more";
-  const activeMore = (["tiers", "items", "patch", "method"] as const).includes(route.lens as MoreLink)
-    && !route.god ? (route.lens as MoreLink) : undefined;
+  const current: MenuKey | undefined = route.god ? "build"
+    : route.lens === "board" ? "gods" : (route.lens as MenuKey);
+  const stamp = freshness(data.data_updated, data.data_patch);
+
+  // What the field shows at rest: the god page's own state, or the god a
+  // sub-page is about, or nothing (the landing page's empty field).
+  const onGodPage = !!god && route.lens === "builds";
+  const seedText = onGodPage && seed && seed.god === god!.name
+    ? serializeQuery({ you: seed.god, enemies: seed.enemies, mode: seed.mode, aspect: seed.aspect })
+    : god?.name ?? "";
+  const field = (
+    <CommandField gods={data.gods} seedText={seedText} seedMode={onGodPage && seed ? seed.mode : "conquest"}
+      onSubmit={run} recents={recents} placement={wide ? "bar" : "dock"}
+      autoFocus={wide && !route.god && route.lens === "board"}
+      enemySlots={onGodPage && seed ? seed.enemies : undefined} onEnemy={onGodPage && seed ? seed.openEnemy : undefined}
+      trailing={wide ? undefined : <MenuButton stacked onClick={() => setMenuOpen(true)} />} />
+  );
 
   // The god's own Conquest core, so the per-god items lens reads against it.
   const godCore = god ? (data.builds.find((b) => b.god === god.name && b.mode === "Conquest")?.builds.find(
@@ -133,10 +174,7 @@ function App() {
         Skip to content
       </a>
 
-      <AppNav active={active} activeMore={activeMore}
-        buildHref={buildGod ? toHash.god(buildGod) : toHash.home()} buildGod={buildGod}
-        onHelp={() => setLegendOpen(true)} dataUpdated={data.data_updated} dataPatch={data.data_patch}
-        devSlot={devSlot} />
+      {wide && <TopBar field={field} onMenu={() => setMenuOpen(true)} stamp={stamp} updated={data.data_updated} />}
 
       {isDev && scraping && (
         <p className="border-b border-dashed border-line px-4 py-2 text-center text-cap text-quiet">
@@ -144,7 +182,7 @@ function App() {
         </p>
       )}
 
-      <main id="main" tabIndex={-1} className="pb-tabbar focus:outline-none">
+      <main id="main" tabIndex={-1} className="pb-dock focus:outline-none">
         {missingGod ? (
           <div className="mx-auto w-full max-w-[1240px] px-4 pt-8 lg:px-6">
             <h1 className="font-cond text-head font-extrabold text-ink">No god called “{route.god}”</h1>
@@ -170,7 +208,7 @@ function App() {
                 modeLabel="Conquest" />
             </GodSubPage>
           ) : (
-            <GodPage key={god.name} god={god} data={data} />
+            <GodPage key={god.name} god={god} data={data} phoneStrip={false} onSeed={setSeed} />
           )
         ) : route.lens === "draft" ? (
           <DraftPage gods={data.gods} items={data.items} builds={data.builds}
@@ -187,10 +225,17 @@ function App() {
           <Method method={data.method} goldValues={data.item_gold_values ?? {}}
               items={data.items} godCount={data.gods.length} />
         ) : (
-          <GodGrid gods={data.gods} lastGod={lastGod} />
+          <Landing gods={data.gods} recents={recents} onRun={run} wide={wide}
+            onClearRecents={() => { clearRecents(); setRecents([]); }} stamp={stamp} updated={data.data_updated} />
         )}
       </main>
 
+      {!wide && <Dock>{field}</Dock>}
+
+      {menuOpen && (
+        <MenuSheet onClose={() => setMenuOpen(false)} onHelp={() => setLegendOpen(true)} current={current}
+          buildGod={buildGod} stamp={stamp} devSlot={devSlot} />
+      )}
       {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}
       {isDev && addOpen && (
         <AddGodModal roster={data.roster ?? []} tracked={data.gods.map((g) => g.name)}

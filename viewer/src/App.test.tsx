@@ -43,99 +43,151 @@ beforeEach(() => {
   vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, json: () => Promise.resolve(data) }));
 });
 
-/* The Second Screen shell (direction A). The app opens on god select; one
- * navigation pattern carries every route — a top bar ("Main") from lg up and
- * a bottom tab bar ("Tabs") on a phone. jsdom renders both, so each test
- * names the one it means. These replace the Subject Frame assertions (lens
- * strip, subject header, picker dialog, draft dock), whose chrome this
- * direction removes on purpose. */
-describe("App — Second Screen chrome", () => {
-  it("opens on god select", async () => {
+/* The "Type it" shell (direction C). One command field is the navigation;
+ * Menu holds every other destination. jsdom has no matchMedia, so these run
+ * the phone layout: the field docked at the bottom with Menu beside it. They
+ * replace direction A's tab-bar assertions ("Main" / "Tabs" / More), whose
+ * chrome this direction removes on purpose, and keep their points: every
+ * destination is reachable, the fan-project line is one level down, a god's
+ * own views stay under the god. */
+const field = () => screen.getByRole("combobox", { name: /your god, vs the enemy team/i });
+const openMenu = async () => {
+  fireEvent.click(screen.getByRole("button", { name: "Menu" }));
+  return within(await screen.findByRole("dialog", { name: "Menu" }));
+};
+
+describe("App — the command field is the navigation", () => {
+  it("opens on an empty field, with the roster below as the fallback", async () => {
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    const main = within(screen.getByRole("navigation", { name: "Main" }));
-    expect(main.getByRole("link", { name: "Gods" })).toHaveAttribute("aria-current", "page");
-    const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
-    expect(tabs.getByRole("link", { name: "Gods" })).toHaveAttribute("aria-current", "page");
-    expect(tabs.getByRole("button", { name: "More" })).toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    expect(field()).toHaveValue("");
+    expect(field()).toHaveAttribute("placeholder", "ra vs hecate ymir");
+    expect(within(screen.getByTestId("god-grid")).getByRole("link", { name: /Chiron/ }))
+      .toHaveAttribute("href", toHash.god("Chiron"));
   });
 
-  it("moves between destinations from the top bar", async () => {
+  it("turns typed words into chips and offers gods as tappable rows", async () => {
     render(<App />);
-    const main = within(await screen.findByRole("navigation", { name: "Main" }));
-    fireEvent.click(main.getByRole("link", { name: "Items" }));
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    fireEvent.change(field(), { target: { value: "chi " } });
+    expect(screen.getByRole("img", { name: "You: Chiron" })).toBeInTheDocument();
+    fireEvent.change(field(), { target: { value: "y" } });
+    const list = within(screen.getByRole("listbox", { name: "Suggestions" }));
+    fireEvent.click(list.getByRole("option", { name: /Ymir/ }));
+    expect(screen.getByRole("img", { name: "Enemy: Ymir" })).toBeInTheDocument();
+  });
+
+  it("goes to the god page on Enter, writes the team into the shared draft, and links the chips", async () => {
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    fireEvent.change(field(), { target: { value: "chiron vs ym" } });
+    fireEvent.keyDown(field(), { key: "Enter" });
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    expect(window.location.hash).toBe("#/god/Chiron?vs=Ymir");
+    const stored = JSON.parse(localStorage.getItem("smite:draft") ?? "{}");
+    expect(stored.allies?.[0]).toBe("Chiron");
+    expect(stored.enemies?.[0]).toBe("Ymir");
+    // The field stays as the header, showing the query as chips.
+    await waitFor(() => expect(screen.getByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument());
+    expect(screen.getByRole("img", { name: "You: Chiron" })).toBeInTheDocument();
+    // And the landing page remembers it.
+    expect(JSON.parse(localStorage.getItem("ichor:recent-queries") ?? "[]")).toEqual(["Chiron vs Ymir"]);
+  });
+
+  it("reproduces the chips from a pasted link", async () => {
+    atUrl("#/god/Chiron?mode=joust&vs=Ymir");
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    await waitFor(() => expect(screen.getByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument());
+    expect(screen.getByRole("button", { name: "Joust" })).toHaveAttribute("aria-pressed", "true");
+    expect(document.querySelector("[data-chip='mode']")).toHaveTextContent("Joust");
+    await waitFor(() => expect(JSON.parse(localStorage.getItem("smite:draft") ?? "{}").enemies?.[0]).toBe("Ymir"));
+  });
+
+  it("lists recent queries on the landing page, one tap from the build", async () => {
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Chiron vs Ymir"]));
+    render(<App />);
+    const recents = within(await screen.findByTestId("recents"));
+    const row = recents.getByRole("link", { name: /Chiron/ });
+    expect(row).toHaveAttribute("href", "#/god/Chiron?vs=Ymir");
+  });
+
+  it("keeps every other destination and the fan-project line under Menu", async () => {
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    const menu = await openMenu();
+    for (const name of [/Draft/, /Gods/, /Tiers/, /Items/, /Patch notes/, /Method/]) {
+      expect(menu.getByRole("link", { name })).toBeInTheDocument();
+    }
+    expect(menu.getByRole("button", { name: /Help and credits/ })).toBeInTheDocument();
+    expect(menu.getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
+    expect(menu.getByRole("link", { name: /Gods/ })).toHaveAttribute("aria-current", "page");
+  });
+
+  it("moves between destinations from Menu", async () => {
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    const menu = await openMenu();
+    fireEvent.click(menu.getByRole("link", { name: /Items/ }));
     await waitFor(() => expect(
       screen.getByRole("heading", { level: 1, name: /cost less than their stats are worth/i })).toBeInTheDocument());
-  });
-
-  it("keeps the reading routes and the fan-project line under More on a phone", async () => {
-    render(<App />);
-    const tabs = within(await screen.findByRole("navigation", { name: "Tabs" }));
-    fireEvent.click(tabs.getByRole("button", { name: "More" }));
-    const sheet = within(await screen.findByRole("dialog", { name: "More" }));
-    for (const name of [/Tiers/, /Items/, /Patch notes/, /Method/]) {
-      expect(sheet.getByRole("link", { name })).toBeInTheDocument();
-    }
-    expect(sheet.getByRole("button", { name: /Help/ })).toBeInTheDocument();
-    expect(sheet.getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
   });
 
   it("reaches the draft board inside the same chrome", async () => {
     atUrl(toHash.draft());
     render(<App />);
-    // The draft page's ally slot 1 is always labelled "You", filled or not.
     await waitFor(() => expect(screen.getAllByText("You")[0]).toBeInTheDocument());
-    const main = within(screen.getByRole("navigation", { name: "Main" }));
-    expect(main.getByRole("link", { name: "Draft" })).toHaveAttribute("aria-current", "page");
+    expect(field()).toBeInTheDocument();
+    const menu = await openMenu();
+    expect(menu.getByRole("link", { name: /Draft/ })).toHaveAttribute("aria-current", "page");
   });
 
   it("marks Build current on a god page and points it at that god", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
-    const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
-    const build = tabs.getByRole("link", { name: /Build/ });
+    const build = (await openMenu()).getByRole("link", { name: /Build · Chiron/ });
     expect(build).toHaveAttribute("aria-current", "page");
     expect(build).toHaveAttribute("href", toHash.god("Chiron"));
   });
 
-  it("keeps a god's own views under the god, not in the global bar", async () => {
+  it("keeps a god's own views under the god, not in the menu", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
-    const main = within(screen.getByRole("navigation", { name: "Main" }));
-    expect(main.queryByRole("link", { name: "Kit" })).not.toBeInTheDocument();
     const own = within(screen.getByRole("navigation", { name: "More on Chiron" }));
     expect(own.getByRole("link", { name: "Kit" })).toHaveAttribute("href", "#/god/Chiron/kit");
+    const menu = await openMenu();
+    expect(menu.queryByRole("link", { name: "Kit" })).not.toBeInTheDocument();
   });
 
   it("does not mark the item shop current on a god's own item ranking", async () => {
     atUrl(toHash.godItems("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
-    const main = within(screen.getByRole("navigation", { name: "Main" }));
-    expect(main.getByRole("link", { name: "Items" })).not.toHaveAttribute("aria-current");
-    expect(main.getByRole("link", { name: /Build/ })).toHaveAttribute("aria-current", "page");
+    const menu = await openMenu();
+    expect(menu.getByRole("link", { name: /^Items/ })).not.toHaveAttribute("aria-current");
+    expect(menu.getByRole("link", { name: /Build · Chiron/ })).toHaveAttribute("aria-current", "page");
   });
 });
 
-/* The floating dock is gone from this shell: the god page carries the enemy
- * team itself, and Draft is one tab away everywhere else. These replace the
- * dock tests and keep their point — the comp you enter is ONE shared draft. */
+/* No floating draft dock: on a phone the field's chips ARE the enemy team
+ * (tap one to change it, "+" to add), and they write into the one shared draft. */
 describe("App — the enemy team on the god page", () => {
-  it("has no floating draft dock; the god page carries an enemy strip", async () => {
+  it("has no floating draft dock and no second strip; the field carries the team", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
     expect(screen.queryByTestId("draft-dock")).not.toBeInTheDocument();
-    expect(screen.getByTestId("enemy-strip")).toBeInTheDocument();
+    expect(screen.queryByTestId("enemy-strip")).not.toBeInTheDocument();
+    await waitFor(() => expect(screen.getByRole("button", { name: "Add enemy 1" })).toBeInTheDocument());
   });
 
-  it("writes picks from the god page into the shared draft, with you in slot one", async () => {
+  it("writes picks from the god page into the shared draft and the link, with you in slot one", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
-    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    fireEvent.click(await screen.findByRole("button", { name: "Add enemy 1" }));
     const sheet = await screen.findByRole("dialog", { name: /Enemy 1 of 5/ });
     // Keyboard up: the search field has focus, not the close button.
     expect(within(sheet).getByRole("searchbox")).toHaveFocus();
@@ -147,6 +199,7 @@ describe("App — the enemy team on the god page", () => {
       expect(stored.enemies?.[0]).toBe("Ymir");
       expect(stored.allies?.[0]).toBe("Chiron");
     });
+    await waitFor(() => expect(window.location.hash).toContain("vs=Ymir"));
   });
 });
 
@@ -199,8 +252,8 @@ describe("App — a god and its views", () => {
   });
 });
 
-/* Three surfaces render the brand: the header, the loading skeleton and the
- * data-load failure screen. The failure screen still carried an "S2" square
+/* Three surfaces render the brand: the landing page, the loading skeleton and
+ * the data-load failure screen. The failure screen still carried an "S2" square
  * from a previous identity — the one place the old mark survived, and the one
  * nobody looks at until something is already wrong. */
 describe("App — the wordmark", () => {
@@ -214,44 +267,45 @@ describe("App — the wordmark", () => {
     expect(screen.getByRole("button", { name: /try again/i })).toBeInTheDocument();
   });
 
-  it("names the header wordmark once, not twice", async () => {
+  it("names the wordmark once, not twice", async () => {
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    // The link carries its own label; the wordmark's `role="img"` name must
-    // not leak into it and announce "ichor" a second time.
-    const home = screen.getByRole("link", { name: "ichor — home" });
-    expect(home).toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    // On a phone the wordmark heads the landing page; its `role="img"` name
+    // must announce "ichor" once.
+    expect(screen.getAllByRole("img", { name: "ichor" })).toHaveLength(1);
     expect(screen.queryByRole("link", { name: /ichor ichor/i })).not.toBeInTheDocument();
   });
 });
 
 describe("App — chrome", () => {
-  it("offers one search field on god select, for gods", async () => {
+  it("offers one field for gods — the command field — and no second search box", async () => {
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    expect(screen.getAllByRole("searchbox")).toHaveLength(1);
-    expect(screen.getByPlaceholderText(/search 2 gods/i)).toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    expect(screen.getAllByRole("combobox")).toHaveLength(1);
+    expect(screen.queryByRole("searchbox")).not.toBeInTheDocument();
   });
 
   /* Refetching a static index.json does nothing a visitor can see, so the
    * button read as broken: no result, no feedback. It is a pipeline tool. */
-  it("keeps the data-reload control out of the deployed header", async () => {
+  it("keeps the data-reload control out of the deployed menu", async () => {
     vi.stubEnv("DEV", false);
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    expect(screen.queryByRole("button", { name: /reload/i })).not.toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    const menu = await openMenu();
+    expect(menu.queryByRole("button", { name: /reload/i })).not.toBeInTheDocument();
     // The dev-only god editor goes with it.
-    expect(screen.queryByRole("button", { name: /add god/i })).not.toBeInTheDocument();
+    expect(menu.queryByRole("button", { name: /add god/i })).not.toBeInTheDocument();
     // What survives is the control a visitor actually needs.
-    expect(screen.getByRole("button", { name: /help and credits/i })).toBeInTheDocument();
+    expect(menu.getByRole("button", { name: /help and credits/i })).toBeInTheDocument();
     vi.unstubAllEnvs();
   });
 
   it("reports what it did when the dev reload runs", async () => {
     vi.stubEnv("DEV", true);
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    const btn = screen.getByRole("button", { name: /reload/i });
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    const menu = await openMenu();
+    const btn = menu.getByRole("button", { name: /reload/i });
     fireEvent.click(btn);
     // A control that runs silently is indistinguishable from a broken one.
     await waitFor(() => expect(btn).toHaveTextContent(/reloaded/i));
@@ -261,13 +315,13 @@ describe("App — chrome", () => {
   it("redirects a retired #/gods URL to the roster board", async () => {
     atUrl("#/gods");
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
     expect(window.location.hash).toBe("#/");
   });
 
   it("shows the data-freshness stamp as relative text with the absolute date on hover", async () => {
     render(<App />);
-    const freshness = await screen.findByTestId("header-freshness");
+    const freshness = await screen.findByTestId("freshness");
     expect(freshness.textContent).toMatch(/^Updated /i);
     expect(freshness).toHaveAttribute("title", "2026-07-19");
   });
@@ -277,21 +331,21 @@ describe("App — chrome", () => {
       ok: true, json: () => Promise.resolve({ ...data, data_updated: undefined }),
     }));
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
-    expect(screen.queryByTestId("header-freshness")).not.toBeInTheDocument();
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
+    expect(screen.queryByTestId("freshness")).not.toBeInTheDocument();
   });
 
-  it("appends the current patch label to the header freshness stamp when data_patch is present", async () => {
+  it("appends the current patch label to the freshness stamp when data_patch is present", async () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({
       ok: true, json: () => Promise.resolve({ ...data, data_patch: "Open Beta 39" }),
     }));
-    const freshness = await (render(<App />), screen.findByTestId("header-freshness"));
+    const freshness = await (render(<App />), screen.findByTestId("freshness"));
     expect(freshness.textContent).toMatch(/^Updated .+ · Open Beta 39$/);
   });
 
-  it("omits the patch clause from the header stamp cleanly when data_patch is absent", async () => {
+  it("omits the patch clause from the stamp cleanly when data_patch is absent", async () => {
     render(<App />);
-    const freshness = await screen.findByTestId("header-freshness");
+    const freshness = await screen.findByTestId("freshness");
     expect(freshness.textContent).not.toContain("·");
   });
 
@@ -309,23 +363,23 @@ describe("App — chrome", () => {
 
   it("does not ambush a first-time visitor with the legend", async () => {
     render(<App />);
-    await screen.findByTestId("header-freshness");
+    await screen.findByTestId("freshness");
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
 
   it("opens the legend on demand, carrying the attribution the footer used to hold", async () => {
     render(<App />);
-    await screen.findByTestId("header-freshness");
-    fireEvent.click(screen.getByRole("button", { name: /help and credits/i }));
-    const dialog = await screen.findByRole("dialog");
-    expect(dialog).toHaveAccessibleName(/how this works/i);
+    await screen.findByTestId("freshness");
+    const menu = await openMenu();
+    fireEvent.click(menu.getByRole("button", { name: /help and credits/i }));
+    const dialog = await screen.findByRole("dialog", { name: /how this works/i });
     expect(within(dialog).getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
   });
 
   // 43px of every screen, forever, for something you read once.
   it("has no permanent footer", async () => {
     render(<App />);
-    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
+    await screen.findByRole("heading", { level: 1, name: /type your matchup/i });
     expect(screen.queryByRole("contentinfo")).not.toBeInTheDocument();
   });
 });

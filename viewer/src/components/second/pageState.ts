@@ -7,21 +7,28 @@ import type { Mode } from "./verdict";
  *  `core`, and stays that way). */
 export const MAIN_ARCHETYPE = "model";
 
-export interface PageQuery { mode: Mode; aspect: boolean; build: string }
+export interface PageQuery {
+  mode: Mode; aspect: boolean; build: string;
+  /** Enemies named by the link (`vs=Hecate,Ymir`), or null when the link
+   *  names none — then the page shows whatever the shared draft holds. */
+  vs: string[] | null;
+}
 
-/** `#/god/Ra?mode=joust&aspect=1&build=burst` — defaults leave a clean URL. */
+/** `#/god/Ra?mode=joust&aspect=1&build=burst&vs=Hecate,Ymir` — defaults leave a clean URL. */
 export const decodePageQuery = (p: URLSearchParams): PageQuery => {
   const m = p.get("mode");
   return {
     mode: m === "joust" || m === "arena" ? m : "conquest",
     aspect: p.get("aspect") === "1",
     build: p.get("build") || MAIN_ARCHETYPE,
+    vs: p.get("vs") ? p.get("vs")!.split(",").map((s) => s.trim()).filter(Boolean) : null,
   };
 };
 export const encodePageQuery = (q: PageQuery) => ({
   mode: q.mode === "conquest" ? undefined : q.mode,
   aspect: q.aspect ? "1" : undefined,
   build: q.build === MAIN_ARCHETYPE ? undefined : q.build,
+  vs: q.vs?.length ? q.vs.join(",") : undefined,
 });
 
 const LAST_GOD_KEY = "ichor:last-god";

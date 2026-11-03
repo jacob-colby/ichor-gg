@@ -145,6 +145,9 @@ html { background: var(--color-ground); }
 .pb-tabbar { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
 @media (min-width: 1024px) { .pb-tabbar { padding-bottom: 0; } }
 .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+/* Room for the command dock (direction C) on phones. */
+.pb-dock { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) { .pb-dock { padding-bottom: 0; } }
 
 /* ── The one authored moment ───────────────────────────────────────────────
    An enemy pick that changes the build swaps a row, and that row LOCKS IN

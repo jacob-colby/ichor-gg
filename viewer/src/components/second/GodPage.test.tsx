@@ -149,12 +149,28 @@ describe("God page — controls", () => {
     await waitFor(() => expect(window.location.hash).toContain("build=burst"));
   });
 
+  /* Direction C: on a phone the command field's chips carry the enemy team
+   * (the strip is the desktop column's), so the slot count is read off the
+   * picker the "+" chip opens. */
   it("has five enemy slots in Conquest, three in Joust", async () => {
     render(<App />);
-    const strip = await screen.findByTestId("enemy-strip");
-    expect(within(strip).getAllByRole("button", { name: /Add enemy/ })).toHaveLength(5);
+    fireEvent.click(await screen.findByRole("button", { name: "Add enemy 1" }));
+    expect(within(await screen.findByRole("dialog", { name: "Enemy 1 of 5" })).getAllByRole("button", { name: /^Slot/ })).toHaveLength(5);
+    fireEvent.click(screen.getByRole("button", { name: "Done" }));
     fireEvent.click(screen.getByRole("button", { name: "Joust" }));
-    await waitFor(() => expect(within(screen.getByTestId("enemy-strip")).getAllByRole("button", { name: /Add enemy/ })).toHaveLength(3));
+    await waitFor(() => expect(document.querySelector("[data-chip='mode']")).toHaveTextContent("Joust"));
+    fireEvent.click(screen.getByRole("button", { name: "Add enemy 1" }));
+    expect(within(await screen.findByRole("dialog", { name: "Enemy 1 of 3" })).getAllByRole("button", { name: /^Slot/ })).toHaveLength(3);
     expect(screen.getByTestId("verdict-line")).toHaveTextContent(/^Joust has no community build/);
+  });
+
+  it("applies a linked enemy team to the six and the shared draft", async () => {
+    atUrl(`${toHash.god("Ra")}?vs=Ymir,Nobody`);
+    render(<App />);
+    await waitFor(() => expect(screen.getByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument());
+    await waitFor(() => expect(JSON.parse(localStorage.getItem("smite:draft") ?? "{}").enemies?.[0]).toBe("Ymir"));
+    // Unknown names in a link are dropped rather than producing a broken slot.
+    expect(screen.queryByRole("button", { name: /Nobody/ })).not.toBeInTheDocument();
+    expect(JSON.parse(localStorage.getItem("smite:draft") ?? "{}").enemies?.[1]).toBe("");
   });
 });

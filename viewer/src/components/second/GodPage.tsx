@@ -43,7 +43,23 @@ function noteFor(builds: BuildNote[], god: string, label: string) {
   return builds.find((b) => b.god === god && b.mode === label);
 }
 
-export function GodPage({ god, data }: { god: God; data: IndexData }) {
+/** What the page is showing, published for chrome that mirrors it (the
+ *  command field's chips). `openEnemy` opens the picker on a slot. */
+export interface GodPageSeed {
+  god: string;
+  enemies: string[];
+  mode: "conquest" | "joust" | "arena";
+  aspect: boolean;
+  openEnemy: (index: number) => void;
+}
+
+export function GodPage({ god, data, phoneStrip = true, onSeed }: {
+  god: God; data: IndexData;
+  /** The phone's sticky enemy strip. Off when the chrome carries the enemy
+   *  team itself (the command field's chips), so one screen has one control. */
+  phoneStrip?: boolean;
+  onSeed?: (seed: GodPageSeed | null) => void;
+}) {
   const [q, setQ] = useUrlState(decodePageQuery, encodePageQuery);
   const { mode } = q;
   const modeLabel = MODE_NAME[mode];
@@ -59,6 +75,21 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
     return Array.from({ length: n }, (_, i) => draft.enemies[i] ?? "");
   }, [draft.enemies, mode]);
   const comp = useMemo(() => ({ allies: [god.name, ...draft.allies.slice(1)], enemies }), [god.name, draft.allies, enemies]);
+
+  // A link that names the enemies (`vs=`) is written into the shared draft, so
+  // the strip, the six and the Draft page all agree with the address bar. A
+  // link that names none leaves the draft alone.
+  const vsKey = q.vs?.join(",") ?? null;
+  useEffect(() => {
+    if (!q.vs) return;
+    const known = q.vs.filter((n) => data.gods.some((g) => g.name === n));
+    if (draft.allies[0] !== god.name) setAlly(0, god.name);
+    const n = MODE_TEAM_SIZE[mode];
+    if (draft.enemies.slice(0, n).filter(Boolean).join(",") === known.slice(0, n).join(",")) return;
+    for (let i = 0; i < n; i += 1) setEnemy(i, known[i] ?? "");
+    // Only a new link re-applies; the draft's own edits write `vs` themselves.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [vsKey, god.name]);
 
   const r = useDraftResult(comp, mode, data.gods, data.items, data.builds, data.god_item_scores,
     data.draft, data.god_item_damage, q.aspect, q.build);
@@ -128,11 +159,27 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
   // ── Enemy picker ───────────────────────────────────────────────────────
   const [sheetAt, setSheetAt] = useState<number | null>(null);
+  const writeVs = (next: string[]) => setQ((p) => ({ ...p, vs: next.filter(Boolean) }));
   const pickEnemy = (i: number, name: string) => {
     if (draft.allies[0] !== god.name) setAlly(0, god.name);
     setEnemy(i, name);
+    writeVs(enemies.map((n, j) => (j === i ? name : n)));
   };
-  const clearEnemies = () => enemies.forEach((_, i) => setEnemy(i, ""));
+  const removeEnemy = (i: number) => {
+    setEnemy(i, "");
+    writeVs(enemies.map((n, j) => (j === i ? "" : n)));
+  };
+  const clearEnemies = () => { enemies.forEach((_, i) => setEnemy(i, "")); writeVs([]); };
+
+  // Publish what the page shows to chrome that mirrors it.
+  const seedAspect = q.aspect && !!aspectName;
+  const seedKey = `${god.name}|${enemies.join(",")}|${mode}|${seedAspect}`;
+  useEffect(() => {
+    onSeed?.({ god: god.name, enemies, mode, aspect: seedAspect, openEnemy: setSheetAt });
+    // seedKey carries every field.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seedKey, onSeed]);
+  useEffect(() => () => onSeed?.(null), [onSeed]);
 
   const buildLabel = (a?: string) => (a === MAIN_ARCHETYPE ? "Ichor's main six" : r.archetypes.find((e) => e.archetype === a)
     ? tabLabel(r.archetypes.find((e) => e.archetype === a)!) : a ?? "");
@@ -275,7 +322,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
         )}
 
         {/* Phone: the enemy strip rides above the tab bar. */}
-        {!wide && (
+        {!wide && phoneStrip && (
           <div className="sticky bottom-[calc(72px+env(safe-area-inset-bottom))] z-30 mt-5">{strip("bar")}</div>
         )}
         <div className="h-6 lg:h-16" />
@@ -292,7 +339,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
       {sheetAt !== null && (
         <EnemySheet gods={data.gods} enemies={enemies} startIndex={sheetAt} self={god.name}
-          onPick={pickEnemy} onRemove={(i) => setEnemy(i, "")} onClose={() => setSheetAt(null)} />
+          onPick={pickEnemy} onRemove={removeEnemy} onClose={() => setSheetAt(null)} />
       )}
     </div>
   );
