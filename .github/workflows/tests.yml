@@ -1,0 +1,107 @@
+# Run both test suites on every push to main and every pull request.
+#
+# WHY THIS EXISTS. Until 2026-11-05 nothing re-ran either suite automatically:
+# `.github/workflows/` held the daily refresh, the wiki watcher and four probe
+# jobs, none of them triggered by `push` or `pull_request`, so a PR's only
+# checks were Vercel deploys. A green tick meant the site had built, not that
+# anything passed — and done criterion 5 ("pipeline and viewer suites, npm run
+# build clean") was confirmable only by hand.
+#
+# It is not a hypothetical. The 2026-11-04 refresh committed a one-day
+# SmiteBrain match window that deleted 55 live comparison pages (PR #106), and
+# the only thing that noticed was two unit tests pinning god names — which
+# nothing was running. They were found by a person, a day later.
+#
+# TWO JOBS, DELIBERATELY. The pipeline suite is ~6 minutes and the viewer one
+# ~25 seconds. Run as one job the fast signal would sit behind the slow one;
+# split, a viewer break reports in under a minute. They share no state.
+#
+# NO NEW EXCLUSIONS. `pipeline/smite/tests/pytest.ini` carries
+# `addopts = -m "not live"`, which is why a run reads "1 deselected" — that
+# deselection is intent (those tests hit the real network) and is the only
+# one. Nothing here adds `-k`, `--ignore`, `continue-on-error` or a skip to
+# make a run green. If a test is too slow or flaky for CI, it stays in and the
+# run goes red.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A new push to the same ref makes the previous run's answer stale, so cancel
+# it. Never cancel a run on `main`: its result is the record for that commit.
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    name: Pipeline suite
+    runs-on: ubuntu-latest
+    # Measured 5m43s on 88f9d43d. 20 minutes leaves room for a cold cache and
+    # a slow runner without turning a hang into a 2-hour bill.
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      # Same two lines the refresh job installs. Playwright is in
+      # requirements.txt but its browser binaries are NOT needed here: only
+      # the wiki half of the refresh opens a browser, it imports Playwright
+      # lazily, and every test that touches the real network is marked `live`
+      # and deselected.
+      - name: Install pipeline dependencies
+        working-directory: pipeline
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install "pytest>=8"
+
+      - name: pytest
+        working-directory: pipeline
+        run: python -m pytest smite/tests -q
+
+  viewer:
+    name: Viewer suite and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # Node 24 to match the local environment the suite's counts were
+      # measured in, and what vite 8 and @types/node ^24 expect.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: viewer/package-lock.json
+
+      # `npm ci` and not `npm install`: the lockfile is committed, and a
+      # suite that resolves its own dependency versions is not reproducing
+      # anything. It also matters that this runs at all — `npm test` in a tree
+      # with no `node_modules` exits 0 having run nothing, which reads exactly
+      # like a pass.
+      - name: Install viewer dependencies
+        working-directory: viewer
+        run: npm ci
+
+      - name: vitest
+        working-directory: viewer
+        run: npm run test
+
+      # Named by done criterion 5, and cheap — 5.4s locally, `tsc -b` included
+      # — so it rides this job rather than earning one of its own. It is a
+      # real gate: `tsc -b` catches project-reference errors that
+      # `tsc --noEmit` misses (CLAUDE.md).
+      - name: npm run build
+        working-directory: viewer
+        run: npm run build
