@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Hydra's Lament
   - Toxic Blade
-  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,12 +364,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Rod of Tahuti:
+      total: 0.55
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Soul Gem:
       total: 0.75
       efficiency: 0.53

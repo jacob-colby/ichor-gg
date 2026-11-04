@@ -448,4 +448,14 @@ Soul Locket: [aura, sustain, mitigation, mobility, stacking, active]
 # non-empty tag put it into Agni's Joust core over Doom Orb. Once ally-dependent
 # items only reach gods whose kit can buff/heal/shield an ally, give it real
 # tags (drafted: [aura, burst, stacking]).
+#
+# THE PRECONDITION IS NOW MET (2026-11-04): `smite.ally_kit` gates this item
+# and three others on a derived kit capability, in `score_god_items`, so it can
+# no longer reach Agni or any of the other 62 gods who cannot buff an ally.
+# The tags are STILL held at [], because giving them is a separate decision
+# from building the gate: it would change builds for the 31 gods who DO
+# qualify, and this slice deliberately changed nothing except what the gate
+# implies. Tagging it is the next slice, and the drafted list above is
+# untested. Same for `Soul Locket` above, whose tags predate the gate and were
+# chosen while it could reach everyone.
 Lotus Sickle: []

@@ -10,15 +10,15 @@ builds:
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - Bracer of The Abyss
-  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.53
-      efficiency: 0.49
+    Dreamer's Idol:
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.64
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Magi's Cloak
+  - Mantle Of Discord
   - Rod of Tahuti
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Magi's Cloak
+  - Mantle Of Discord
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,18 +240,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Mantle Of Discord:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.27
-    Eros' Bow:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.67
       efficiency: 0.65
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Chronos' Pendant
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
   - Bragi's Harp
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.3
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.1
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -597,15 +597,15 @@ builds:
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
+  - Dreamer's Idol
   - Soul Gem
   flex_slots:
+  - Obsidian Shard
   - Bracer of The Abyss
-  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
   - vs_tag: magic_heavy
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
@@ -642,12 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.53
-      efficiency: 0.49
+    Dreamer's Idol:
+      total: 0.57
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.64
     Soul Gem:
       total: 0.79
       efficiency: 0.57

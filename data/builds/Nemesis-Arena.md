@@ -334,14 +334,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Lotus Sickle
+  - Chronos' Pendant
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Lotus Sickle
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -364,9 +364,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
+    Chronos' Pendant:
+      total: 0.5
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.45

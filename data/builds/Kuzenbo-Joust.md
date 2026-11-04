@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Brawler’s Beat Stick
   - Kinetic Cuirass
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Eros' Bow
   - Amanita Charm
   flex_slots:
-  - Bragi's Harp
   - Brawler’s Beat Stick
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -240,6 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Bracer of The Abyss:
+      total: 0.38
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Nimble Ring:
       total: 0.47
       efficiency: 0.63
@@ -252,12 +258,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Eros' Bow:
-      total: 0.46
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Amanita Charm:
       total: 0.64
       efficiency: 0.65

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Bracer of The Abyss
   - Spear of Desolation
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,6 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Spear of Desolation:
       total: 0.61
       efficiency: 0.59
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Eros' Bow:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Obsidian Shard
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -234,6 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Obsidian Shard:
       total: 0.49
       efficiency: 0.58
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Eros' Bow:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.69
       efficiency: 0.65
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Nimble Ring:
       total: 0.56
       efficiency: 0.63
@@ -382,12 +388,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.32
-    Eros' Bow:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Soul Gem:
       total: 0.72
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Chronos' Pendant
   - Heartwood Charm
   - Spear of Desolation
+  - Totem of Death
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
   - Heartwood Charm
+  - Totem of Death
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Chronos' Pendant:
       total: 0.51
       efficiency: 0.55
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Totem of Death:
+      total: 0.48
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.86
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Bracer of The Abyss
   - Spear of Desolation
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.51
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Spear of Desolation:
       total: 0.61
       efficiency: 0.59
@@ -512,12 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Eros' Bow:
-      total: 0.52
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Soul Gem:
       total: 0.79
       efficiency: 0.57

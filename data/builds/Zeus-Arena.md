@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Magi's Cloak
+  - Spear of Desolation
   - Rod of Tahuti
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Magi's Cloak
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,18 +240,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Spear of Desolation:
+      total: 0.49
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Eros' Bow:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Amanita Charm:
       total: 0.67
       efficiency: 0.65
@@ -398,14 +398,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Chronos' Pendant
+  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
+  - Heartwood Charm
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Book of Thoth:
       total: 0.3
       efficiency: 0.49
@@ -438,6 +432,12 @@ builds:
     Chronos' Pendant:
       total: 0.51
       efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Heartwood Charm:
+      total: 0.48
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.46

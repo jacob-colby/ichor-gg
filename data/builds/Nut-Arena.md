@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Toxic Blade
-  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
   - Soul Gem
   flex_slots:
   - Hydra's Lament
-  - Lotus Sickle
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,18 +423,18 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Toxic Blade:
       total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Lotus Sickle:
-      total: 0.5
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67

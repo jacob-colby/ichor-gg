@@ -627,12 +627,12 @@ builds:
   rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
     + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Soul Gem, Nimble
     Ring, Jotunn''s Revenge, Obsidian Shard, Gluttonous Grimoire, Tekko-Kagi, Spear
-    of Desolation, Spear of the Magus, Blood-Bound Book, Lotus Sickle, Bragi''s Harp,
-    The Reaper, Ancient Signet, Hydra''s Lament, Titan''s Bane, Chronos'' Pendant,
-    Bracer of The Abyss, Doom Orb, Lernaean Bow, The World Stone, Eros'' Bow, Dreamer''s
-    Idol, The Crusher, Golden Blade, Gem of Focus, Toxic Blade, Heartwood Charm, Arondight,
-    Polynomicon, Bancroft''s Talon, Heartseeker, The Cosmic Horror, Deathbringer,
-    Musashi''s Dual Swords, Soul Reaver, Typhon’s Heart.'
+    of Desolation, Spear of the Magus, Blood-Bound Book, Bragi''s Harp, The Reaper,
+    Ancient Signet, Hydra''s Lament, Titan''s Bane, Chronos'' Pendant, Bracer of The
+    Abyss, Doom Orb, Lernaean Bow, The World Stone, Dreamer''s Idol, The Crusher,
+    Golden Blade, Gem of Focus, Toxic Blade, Heartwood Charm, Arondight, Polynomicon,
+    Bancroft''s Talon, Heartseeker, The Cosmic Horror, Deathbringer, Musashi''s Dual
+    Swords, Soul Reaver, Typhon’s Heart, Qin''s Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -703,7 +703,7 @@ builds:
     Ring, Tekko-Kagi, Gluttonous Grimoire, Obsidian Shard, Soul Gem, The Reaper, Bragi''s
     Harp, Titan''s Bane, Spear of the Magus, Lernaean Bow, Blood-Bound Book, Jotunn''s
     Revenge, Golden Blade, Ancient Signet, The Crusher, Bracer of The Abyss, Doom
-    Orb, The World Stone, Heartseeker, Toxic Blade, Eros'' Bow, Dreamer''s Idol, Deathbringer,
+    Orb, The World Stone, Heartseeker, Toxic Blade, Dreamer''s Idol, Deathbringer,
     Musashi''s Dual Swords, Spear of Desolation, Hydra''s Lament, Bancroft''s Talon,
     Polynomicon, Demon Blade, Transcendence, The Cosmic Horror, Rage, Bloodforge,
     Qin''s Blade, Runeforged Hammer, Avatar''s Parashu.'

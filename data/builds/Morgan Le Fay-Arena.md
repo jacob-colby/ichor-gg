@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
+  - Death Metal
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Doom Orb
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,18 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Book of Thoth:
       total: 0.44
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Death Metal:
+      total: 0.56
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
@@ -398,14 +398,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Chronos' Pendant
+  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
+  - Heartwood Charm
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Book of Thoth:
       total: 0.32
       efficiency: 0.49
@@ -438,6 +432,12 @@ builds:
     Chronos' Pendant:
       total: 0.59
       efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Heartwood Charm:
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -988,15 +988,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Spear of Desolation
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1013,6 +1013,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.41
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Nimble Ring:
       total: 0.5
       efficiency: 0.63
@@ -1037,12 +1043,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.23
-    Eros' Bow:
-      total: 0.48
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Soul Gem:
       total: 0.62
       efficiency: 0.57
@@ -1055,13 +1055,13 @@ builds:
   archetype: cooldown
   slot_order:
   - Screeching Gargoyle
-  - Lotus Sickle
   - Genji's Guard
   - Chronos' Pendant
   - Spear of Desolation
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Screeching Gargoyle
   - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1085,12 +1085,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Lotus Sickle:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Genji's Guard:
       total: 0.56
       efficiency: 0.69
@@ -1109,6 +1103,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Rod of Tahuti:
+      total: 0.57
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Soul Gem:
       total: 0.73
       efficiency: 0.53

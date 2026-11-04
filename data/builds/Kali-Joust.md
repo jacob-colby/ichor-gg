@@ -333,14 +333,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Chronos' Pendant
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Hydra's Lament
   - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
@@ -358,12 +358,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Rod of Tahuti:
+      total: 0.55
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Soul Gem:
       total: 0.75
       efficiency: 0.53

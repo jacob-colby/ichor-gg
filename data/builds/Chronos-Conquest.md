@@ -117,10 +117,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Gluttonous Grimoire, Spear of the Magus, Bracer of The Abyss,
-    Blood-Bound Book, Eros'' Bow, Lotus Sickle, Doom Orb, The World Stone, Ancient
-    Signet, Chronos'' Pendant, Dreamer''s Idol, Bancroft''s Talon, Gem of Focus, Heartwood
-    Charm, The Cosmic Horror, Typhon’s Heart, Soul Reaver, Totem of Death, Divine
-    Ruin, Jade Scepter, Bragi''s Harp, Helm of Radiance, Ethereal Staff.'
+    Blood-Bound Book, Doom Orb, The World Stone, Ancient Signet, Chronos'' Pendant,
+    Dreamer''s Idol, Bancroft''s Talon, Gem of Focus, Heartwood Charm, The Cosmic
+    Horror, Typhon’s Heart, Soul Reaver, Totem of Death, Divine Ruin, Jade Scepter,
+    Bragi''s Harp, Helm of Radiance, Ethereal Staff, Genji''s Guard.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.5
@@ -192,11 +192,11 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Gluttonous Grimoire, Bragi''s Harp, Lotus Sickle, Ancient Signet, Death Metal,
-    Spear of the Magus, Blood-Bound Book, Doom Orb, The World Stone, Bracer of The
-    Abyss, Chronos'' Pendant, Eros'' Bow, Heartwood Charm, Bancroft''s Talon, Dreamer''s
-    Idol, Gem of Focus, Soul Reaver, The Cosmic Horror, Typhon’s Heart, Totem of Death,
-    Divine Ruin, Jade Scepter, Triton''s Conch.'
+    Gem, Gluttonous Grimoire, Bragi''s Harp, Ancient Signet, Death Metal, Spear of
+    the Magus, Blood-Bound Book, Doom Orb, The World Stone, Bracer of The Abyss, Chronos''
+    Pendant, Heartwood Charm, Bancroft''s Talon, Dreamer''s Idol, Gem of Focus, Soul
+    Reaver, The Cosmic Horror, Typhon’s Heart, Totem of Death, Divine Ruin, Jade Scepter,
+    Triton''s Conch, Genji''s Guard.'
   slot_scores:
     Book of Thoth:
       total: 0.46
@@ -268,11 +268,11 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Gluttonous Grimoire, Spear of the Magus, Bragi''s Harp, Lotus Sickle,
-    Doom Orb, The World Stone, Blood-Bound Book, Chronos'' Pendant, Death Metal, Dreamer''s
-    Idol, Ancient Signet, Bracer of The Abyss, Eros'' Bow, Gem of Focus, Heartwood
-    Charm, The Cosmic Horror, Bancroft''s Talon, Totem of Death, Typhon’s Heart, Soul
-    Reaver, Damaru, Divine Ruin, Jade Scepter.'
+    god: Soul Gem, Gluttonous Grimoire, Spear of the Magus, Bragi''s Harp, Doom Orb,
+    The World Stone, Blood-Bound Book, Chronos'' Pendant, Death Metal, Dreamer''s
+    Idol, Ancient Signet, Bracer of The Abyss, Gem of Focus, Heartwood Charm, The
+    Cosmic Horror, Bancroft''s Talon, Totem of Death, Typhon’s Heart, Soul Reaver,
+    Damaru, Divine Ruin, Jade Scepter, Genji''s Guard.'
   slot_scores:
     Spear of Desolation:
       total: 0.54
@@ -343,11 +343,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Blood-Bound Book, Shield
-    of the Phoenix, Genji''s Guard, Kinetic Cuirass, Ethereal Staff, Eros'' Bow, Yogi''s
-    Necklace, Bancroft''s Talon, Phoenix Feather, Rod of Asclepius, Breastplate of
-    Valor, Freya''s Tears, Helm of Radiance, Sphere of Negation, Soul Locket, Spear
-    of the Magus, Oni Hunter''s Garb, Chandra''s Grace, Helm of Darkness, Erosion,
-    Jade Scepter, Eye of Providence, Ancient Signet.'
+    of the Phoenix, Genji''s Guard, Kinetic Cuirass, Ethereal Staff, Yogi''s Necklace,
+    Bancroft''s Talon, Phoenix Feather, Breastplate of Valor, Freya''s Tears, Helm
+    of Radiance, Sphere of Negation, Spear of the Magus, Oni Hunter''s Garb, Chandra''s
+    Grace, Helm of Darkness, Erosion, Jade Scepter, Eye of Providence, Ancient Signet,
+    Midgardian Mail, Regrowth Striders.'
   slot_scores:
     Genji's Guard:
       total: 0.5
@@ -418,10 +418,9 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Gluttonous Grimoire, Spear of the Magus, Doom Orb, The
     World Stone, Dreamer''s Idol, Blood-Bound Book, Bracer of The Abyss, The Cosmic
-    Horror, Lotus Sickle, Ancient Signet, Eros'' Bow, Chronos'' Pendant, Bancroft''s
-    Talon, Gem of Focus, Heartwood Charm, Typhon’s Heart, Soul Reaver, Divine Ruin,
-    Jade Scepter, Totem of Death, Screeching Gargoyle, Helm of Radiance, Bragi''s
-    Harp.'
+    Horror, Ancient Signet, Chronos'' Pendant, Bancroft''s Talon, Gem of Focus, Heartwood
+    Charm, Typhon’s Heart, Soul Reaver, Divine Ruin, Jade Scepter, Totem of Death,
+    Screeching Gargoyle, Helm of Radiance, Bragi''s Harp, Ethereal Staff.'
   slot_scores:
     Spear of Desolation:
       total: 0.56
@@ -492,10 +491,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Soul Gem, Gluttonous Grimoire, Bragi''s Harp, Spear of the Magus, Blood-Bound
-    Book, Bracer of The Abyss, Ancient Signet, Lotus Sickle, Death Metal, Eros'' Bow,
-    Doom Orb, Chronos'' Pendant, The World Stone, Dreamer''s Idol, Bancroft''s Talon,
-    Gem of Focus, Heartwood Charm, The Cosmic Horror, Typhon’s Heart, Soul Reaver,
-    Divine Ruin, Jade Scepter, Totem of Death, Damaru.'
+    Book, Bracer of The Abyss, Ancient Signet, Death Metal, Doom Orb, Chronos'' Pendant,
+    The World Stone, Dreamer''s Idol, Bancroft''s Talon, Gem of Focus, Heartwood Charm,
+    The Cosmic Horror, Typhon’s Heart, Soul Reaver, Divine Ruin, Jade Scepter, Totem
+    of Death, Damaru, Helm of Radiance.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.47
@@ -541,15 +540,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
-  - Spear of Desolation
   - Chronos' Pendant
+  - Spear of Desolation
+  - Gem of Focus
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
   - Chronos' Pendant
+  - Gem of Focus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -564,16 +563,15 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Lotus Sickle, Chronos''
-    Pendant, Gluttonous Grimoire, Gem of Focus, Heartwood Charm, Spear of the Magus,
-    Bragi''s Harp, Blood-Bound Book, Bracer of The Abyss, Ancient Signet, Damaru,
-    Doom Orb, Death Metal, Totem of Death, Eros'' Bow, The World Stone, Genji''s Guard,
-    Dreamer''s Idol, Breastplate of Valor, Bancroft''s Talon, Chandra''s Grace, The
-    Cosmic Horror, Typhon’s Heart, Soul Reaver.'
+    + fit + win/pick). Underrated for this god: Soul Gem, Chronos'' Pendant, Gluttonous
+    Grimoire, Gem of Focus, Heartwood Charm, Spear of the Magus, Bragi''s Harp, Blood-Bound
+    Book, Bracer of The Abyss, Ancient Signet, Damaru, Doom Orb, Death Metal, Totem
+    of Death, The World Stone, Genji''s Guard, Dreamer''s Idol, Breastplate of Valor,
+    Bancroft''s Talon, Chandra''s Grace, The Cosmic Horror, Typhon’s Heart, Soul Reaver.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.5
-      efficiency: 0.57
+    Chronos' Pendant:
+      total: 0.49
+      efficiency: 0.55
       win: 0.52
       pick: 0.0
       fit: 0.45
@@ -583,9 +581,9 @@ builds:
       win: 0.51
       pick: 0.45
       fit: 0.59
-    Chronos' Pendant:
-      total: 0.49
-      efficiency: 0.55
+    Gem of Focus:
+      total: 0.48
+      efficiency: 0.5
       win: 0.52
       pick: 0.0
       fit: 0.45
@@ -641,11 +639,11 @@ builds:
     win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Tekko-Kagi, The
     Reaper, Gluttonous Grimoire, Titan''s Bane, Tyrfing, Hydra''s Lament, Death Metal,
     Bragi''s Harp, The Crusher, Spear of the Magus, Heartseeker, Lernaean Bow, Silverbranch
-    Bow, Golden Blade, Blood-Bound Book, Riptalon, Arondight, Doom Orb, Lotus Sickle,
-    The World Stone, Ancient Signet, Dominance, Chronos'' Pendant, Dreamer''s Idol,
-    Toxic Blade, Pendulum Blade, Bloodforge, Transcendence, Avatar''s Parashu, Bracer
-    of The Abyss, Runeforged Hammer, Bancroft''s Talon, Gem of Focus, The Cosmic Horror,
-    Eros'' Bow.'
+    Bow, Golden Blade, Blood-Bound Book, Riptalon, Arondight, Doom Orb, The World
+    Stone, Ancient Signet, Dominance, Chronos'' Pendant, Dreamer''s Idol, Toxic Blade,
+    Pendulum Blade, Bloodforge, Transcendence, Avatar''s Parashu, Bracer of The Abyss,
+    Runeforged Hammer, Bancroft''s Talon, Gem of Focus, The Cosmic Horror, Heartwood
+    Charm.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.55
@@ -717,11 +715,11 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Tekko-Kagi,
     Gluttonous Grimoire, Tyrfing, Bragi''s Harp, The Reaper, Silverbranch Bow, Titan''s
     Bane, Spear of the Magus, Lernaean Bow, Riptalon, Golden Blade, Hydra''s Lament,
-    Death Metal, Blood-Bound Book, Bracer of The Abyss, The Crusher, Doom Orb, Lotus
-    Sickle, Dominance, Ancient Signet, Toxic Blade, The World Stone, Heartseeker,
-    Eros'' Bow, Chronos'' Pendant, Dreamer''s Idol, Arondight, Bancroft''s Talon,
-    Gem of Focus, Qin''s Blade, The Cosmic Horror, Heartwood Charm, Transcendence,
-    Bloodforge, Pendulum Blade.'
+    Death Metal, Blood-Bound Book, Bracer of The Abyss, The Crusher, Doom Orb, Dominance,
+    Ancient Signet, Toxic Blade, The World Stone, Heartseeker, Chronos'' Pendant,
+    Dreamer''s Idol, Arondight, Bancroft''s Talon, Gem of Focus, Qin''s Blade, The
+    Cosmic Horror, Heartwood Charm, Transcendence, Bloodforge, Pendulum Blade, Avatar''s
+    Parashu.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
@@ -791,11 +789,10 @@ builds:
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Soul Gem, Gluttonous Grimoire, Spear of the Magus, Bracer
-    of The Abyss, Blood-Bound Book, Eros'' Bow, Lotus Sickle, Doom Orb, The World
-    Stone, Ancient Signet, Chronos'' Pendant, Dreamer''s Idol, Bancroft''s Talon,
-    Gem of Focus, Heartwood Charm, The Cosmic Horror, Typhon’s Heart, Soul Reaver,
-    Totem of Death, Divine Ruin, Jade Scepter, Bragi''s Harp, Helm of Radiance, Ethereal
-    Staff.'
+    of The Abyss, Blood-Bound Book, Doom Orb, The World Stone, Ancient Signet, Chronos''
+    Pendant, Dreamer''s Idol, Bancroft''s Talon, Gem of Focus, Heartwood Charm, The
+    Cosmic Horror, Typhon’s Heart, Soul Reaver, Totem of Death, Divine Ruin, Jade
+    Scepter, Bragi''s Harp, Helm of Radiance, Ethereal Staff, Genji''s Guard.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.5
