@@ -104,15 +104,33 @@ def test_split_metrics_partitions_the_gods():
     assert m["heldout"]["gods"] == 2
 
 
-def test_heldout_report_flags_a_lower_heldout_score():
+def test_heldout_report_grades_a_drop_against_the_one_point_tolerance():
+    """Jacob, 2026-11-03: up to 1 point lower on either held-out metric merges
+    if the PR explains it; more blocks. A tuning-half drop is never judged."""
     head = {"tuning": {"gods": 1, "win_weighted": .5, "spearman": .3, "coverage": .5},
             "heldout": {"gods": 1, "win_weighted": .4, "spearman": .3, "coverage": .4}}
     base = copy.deepcopy(head)
-    _, ok = ma.heldout_report(head, base)
-    assert ok
-    base["heldout"]["win_weighted"] = 0.41
-    _, ok = ma.heldout_report(head, base)
-    assert not ok
+    assert ma.heldout_report(head, base)[1] == ma.PASS
+    base["tuning"]["win_weighted"] = 0.6
+    assert ma.heldout_report(head, base)[1] == ma.PASS
+    base["heldout"]["win_weighted"] = 0.41          # exactly one point lower
+    lines, outcome = ma.heldout_report(head, base)
+    assert outcome == ma.EXPLAIN and "within 1 point" in lines[-1]
+    base["heldout"]["win_weighted"] = 0.4101
+    assert ma.heldout_report(head, base)[1] == ma.FAIL
+    base["heldout"]["win_weighted"] = 0.4
+    base["heldout"]["spearman"] = 0.32               # Spearman alone can block
+    assert ma.heldout_report(head, base)[1] == ma.FAIL
+    base["heldout"]["spearman"] = 0.305
+    assert ma.heldout_report(head, base)[1] == ma.EXPLAIN
+    assert ma.heldout_report(head)[1] == ma.PASS    # no base, no delta to judge
+
+
+def test_heldout_outcome_takes_the_worse_metric_and_tolerates_a_missing_spearman():
+    assert ma.heldout_outcome(+0.02, -0.005) == ma.EXPLAIN
+    assert ma.heldout_outcome(-0.005, -0.02) == ma.FAIL
+    assert ma.heldout_outcome(0.0, None) == ma.PASS
+    assert ma.heldout_outcome(-0.011, None) == ma.FAIL
 
 
 # ── 3. Passive firing ────────────────────────────────────────────────────

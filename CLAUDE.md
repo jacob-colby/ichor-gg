@@ -87,9 +87,10 @@ Five things that are easy to get wrong here, all expanded in that file:
    to settle it that way.
 
 **Model PRs report the held-out delta.** Run `cd pipeline && python -m
-smite.model_audit heldout` and paste its table into the PR; a change that lowers
-either held-out metric against `origin/main` does not merge as it stands
-(Jacob, 2026-11-03). If `test_model_audit` says the frozen reference builds
+smite.model_audit heldout` and paste its table into the PR. A PR may lower
+either held-out metric (win-weighted or Spearman) against `origin/main` by up
+to 1 point (0.01) if its description says why; a bigger drop blocks the merge
+(Jacob, 2026-11-03). The command prints PASS, PASS IF EXPLAINED or FAIL. If `test_model_audit` says the frozen reference builds
 moved, run `python -m smite.model_audit reference --write` and explain every
 changed line in the PR. Both are in [`docs/STATE.md` §6](docs/STATE.md).
 
