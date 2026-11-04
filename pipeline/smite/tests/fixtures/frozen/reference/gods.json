@@ -1,0 +1,2676 @@
+{
+ "Agni": {
+  "abilities": [
+   {
+    "damage_type": "magical",
+    "description": "Fire a projectile that deals Magical Damage to the first enemy hit",
+    "detail_kinds": [
+     null,
+     "magical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Projectile stops on first target hit, and does not pass through walls",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 8.8 meters",
+     "Radius: 0.48 meters"
+    ],
+    "name": "Agni Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "damage_type": "magical",
+    "description": "ATTACK TO BURN Hitting an enemy with a Basic Attack provides 1 stack of . Hitting an enemy god provides 2. At 4 stacks Agni's next Flame Wave or Rain Fire will ignite all enemies hit, dealing Magical Damage every 0.5 seconds for 3 seconds. When Agni kills an enemy god, he goes on a Hot Streak. When on a Hot Streak, is fully charged and using Flame Wave or Rain Fire does not consume",
+    "detail_kinds": [
+     "magical",
+     "magical",
+     "debuff",
+     "mechanic"
+    ],
+    "details": [
+     "Damage: 5",
+     "Damage Scaling: 6% Intelligence",
+     "Debuff Duration: 3 seconds",
+     "Hot Streak Duration: 10 seconds"
+    ],
+    "name": "Combustion",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     13.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "damage_type": "magical",
+    "description": "Summon a cloud of noxious fumes which deals Magical Damage every second. Hitting the fumes with any of your other abilities detonates the gas, Stunning and dealing Magical Damage to enemies in the area",
+    "detail_kinds": [
+     "debuff",
+     null,
+     "magical",
+     "magical",
+     "magical",
+     "magical",
+     "stun",
+     "debuff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Reduces enemy Healing",
+     "Fumes last for 10 seconds",
+     "Damage: 10 | 20 | 30 | 40 | 50",
+     "Damage Scaling: 5% Intelligence",
+     "Explode Damage: 20 | 40 | 60 | 80 | 100",
+     "Explode Damage Scaling: 20% Intelligence",
+     "Stun Duration: 0.8 seconds",
+     "Healing Reduction: -40%",
+     "Healing Reduction Duration: 5 seconds",
+     "Range: 8.8 meters",
+     "Radius: 3.2 meters",
+     "Cooldown: 13 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Noxious Fumes",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     15.0,
+     14.5,
+     14.0,
+     13.5,
+     13.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "damage_type": "magical",
+    "description": "Summon a wave of fire, dealing Magical Damage",
+    "detail_kinds": [
+     null,
+     null,
+     null,
+     "magical",
+     "magical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Ignites Noxious Fumes",
+     "Persists for 1 second after reaching max distance",
+     "This ability passes through and damages all enemies, and passes through walls",
+     "Damage: 100 | 155 | 210 | 265 | 320",
+     "Damage Scaling: 65% Intelligence",
+     "Range: 8 meters",
+     "Radius: 2.59 meters",
+     "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Flame Wave",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     16.0
+    ],
+    "cost": [
+     70.0,
+     75.0,
+     80.0,
+     85.0,
+     90.0
+    ],
+    "damage_type": "magical",
+    "description": "Dash forward and leave a trail of fire behind you. Enemies that enter the area take Magical Damage every 0.5 seconds for 2 seconds",
+    "detail_kinds": [
+     null,
+     "mechanic",
+     null,
+     null,
+     "magical",
+     "magical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Ignites Noxious Fumes",
+     "You are Displacement Immune while Dashing",
+     "Flame trail lasts for 3 seconds",
+     "Enemies that are being damaged and touch the area again have their damage duration refreshed",
+     "Damage 20 | 30 | 40 | 50 | 60",
+     "Damage Scaling: 15% Intelligence",
+     "Range: 9.6 meters",
+     "Radius: 0.8 meters",
+     "Cooldown: 16 seconds",
+     "Cost: 70 | 75 | 80 | 85 | 90 mana"
+    ],
+    "name": "Path of Flames",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     20.0
+    ],
+    "cost": [
+     10.0
+    ],
+    "damage_type": "magical",
+    "description": "Summon a meteor, dealing Magical Damage . You can have up to 3 charges of this ability",
+    "detail_kinds": [
+     null,
+     "slow",
+     "magical",
+     "magical",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Ignites Noxious Fumes",
+     "You are Slowed while summoning a meteor",
+     "Damage: 115 | 160 | 205 | 250 | 295",
+     "Damage Scaling: 60% Intelligence",
+     "Self Slow: 50%",
+     "Range: 10.4 meters",
+     "Radius: 3.2 meters",
+     "Cooldown: 20 seconds",
+     "Cost: 10 mana"
+    ],
+    "name": "Rain Fire",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Your Basic Attacks now ignite enemies dealing damage over time and stacking 5 times. Flame Wave and Rain of Fire consume ignites dealing a burst of damage. Rain of Fire deals reduced damage.",
+    "name": "Aspect of Combustion"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 44.4,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.51
+   },
+   "health": {
+    "base": 569.48,
+    "per_level": 86.48
+   },
+   "health_regen": {
+    "base": 1.7,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 27.38,
+    "per_level": 1.38
+   },
+   "mana": {
+    "base": 334.1,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.56,
+    "per_level": 0.12
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 17.48,
+    "per_level": 2.76
+   }
+  },
+  "damage_type": "magical",
+  "last_verified": "2026-11-02",
+  "name": "Agni",
+  "pantheon": "Hindu",
+  "release_date": "January 7, 2025",
+  "role": "Mid",
+  "source_url": "https://wiki.smite2.com/w/Agni",
+  "specializations": [
+   "Nuker",
+   "Burst Damage",
+   "Sniper"
+  ],
+  "type": "smite-god"
+ },
+ "Artemis": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Fire a projectile that deals Physical Damage to the first enemy hit",
+    "detail_kinds": [
+     null,
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Projectile stops on first target hit, and does not pass through walls",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 8.8 meters",
+     "Radius: 0.48 meters"
+    ],
+    "name": "Artemis Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "description": "Artemis deals 15% Increased Attack Damage to gods and 30% to minions that are afflicted by Crowd Control",
+    "details": [
+     "You are able to detect nearby enemy gods in stealth grass"
+    ],
+    "name": "Still Target",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     14.0,
+     13.0,
+     12.0,
+     11.0,
+     10.0
+    ],
+    "cost": [
+     45.0
+    ],
+    "damage_type": "physical",
+    "description": "Place a trap on the ground. Enemy gods that come in contact with it activate it, Rooting , Crippling , and repeatedly dealing Physical Damage over 3 seconds",
+    "detail_kinds": [
+     null,
+     null,
+     "physical",
+     "physical",
+     "debuff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "A max of 4 traps can be placed at the same time",
+     "The trap deals damage every 1 second for 3 seconds",
+     "Damage Per Tick: 26 | 36 | 46 | 56 | 66",
+     "Damage Scaling Per Tick: 30% Strength",
+     "Root Duration: 1.75 seconds",
+     "Cripple Duration: 1.75 seconds",
+     "Range: 6.4 meters",
+     "Radius: 0.8 meters",
+     "Cooldown: 14 | 13 | 12 | 11 | 10 seconds",
+     "Cost: 45 mana"
+    ],
+    "name": "Transgressor's Fate",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     14.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "description": "Greatly increase your Movement Speed and Attack Speed",
+    "detail_kinds": [
+     "slow",
+     null,
+     null,
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "On activation you are cleansed of Slows and become Slow Immune for 0.6 seconds",
+     "While the buff is active, gain a charge each time you hit an enemy god with a Basic Attack",
+     "After reaching 4 charges they are consumed, extending the duration of the buff by 3 seconds",
+     "Movement Speed: 25%",
+     "Attack Speed: 20 | 30 | 40 | 50 | 60%",
+     "Buff Duration: 3 | 3.5 | 4 | 4.5 | 5 seconds",
+     "Cooldown: 14 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Vengeful Assault",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     9.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "damage_type": "physical",
+    "description": "AREA DAMAGE SLOW Fire a volley at a target area dealing Physical Damage and Slowing enemies",
+    "detail_kinds": [
+     "physical",
+     "physical",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Damage: 100 | 150 | 200 | 250 | 300",
+     "Damage Scaling: 65% Strength",
+     "Slow: 20%",
+     "Slow: 2 seconds",
+     "Range: 8.8 meters",
+     "Radius: 2.4 meters",
+     "Cooldown: 9 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Suppress the Insolent",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     100.0
+    ],
+    "cost": [
+     45.0
+    ],
+    "description": "Summon the great that charges the nearest enemy god",
+    "detail_kinds": [
+     "physical",
+     "mechanic",
+     "mechanic",
+     null,
+     "physical",
+     "physical",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Deals Physical Damage and Stuns enemies",
+     "The Boar is Immune until it hits the first god and then continues to charge other gods for its lifetime",
+     "You are CC Immune for 1.5 seconds after activating this ability",
+     "The Boar will Basic Attack minions if there are no nearby gods",
+     "Dash Damage: 150 | 220 | 290 | 360 | 430",
+     "Dash Damage Scaling: 90% Strength",
+     "Stun: 0.9 | 1 | 1.1 | 1.2 | 1.3 seconds",
+     "Boar Health: 350 | 450 | 550 | 650 | 750",
+     "Radius: 9.6 meters",
+     "Cooldown: 100 seconds",
+     "Cost: 45 mana"
+    ],
+    "name": "Calydonian Boar",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Transgressor's Fate no longer roots or cripples gods but can now target minions. Triggered traps now also heal Artemis and deal damage to enemies in a larger area.",
+    "name": "Aspect of the Wild"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 47.95,
+    "per_level": 2.59
+   },
+   "attack_speed": {
+    "base": 1.02,
+    "per_level": 1.51
+   },
+   "health": {
+    "base": 569.48,
+    "per_level": 86.48
+   },
+   "health_regen": {
+    "base": 1.7,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 25.3,
+    "per_level": 1.38
+   },
+   "mana": {
+    "base": 296.0,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.33,
+    "per_level": 0.11
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 18.76,
+    "per_level": 2.76
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-11-02",
+  "name": "Artemis",
+  "pantheon": "Greek",
+  "release_date": "February 21, 2025",
+  "role": "Carry",
+  "source_url": "https://wiki.smite2.com/w/Artemis",
+  "specializations": [
+   "Sharpshooter",
+   "Lockdown"
+  ],
+  "type": "smite-god"
+ },
+ "Atlas": {
+  "abilities": [
+   {
+    "damage_type": "magical",
+    "description": "Deal Magical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     null,
+     "magical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "Has a 3 hit chain. Attacks in order of 1.25, 1.25, 1.25x damage and swing time. The final hit cleaves",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Atlas Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "cost": [
+     20.0
+    ],
+    "description": "You gain Energy in your Astrolabe when you take damage from enemy gods or deal damage with your Attacks or Abilities (minions grant reduced Energy). At enough Energy, you may press your interact key to unleash an Empowered Astrolabe Strike, consuming Energy. This does not trigger automatically from your next Attack",
+    "detail_kinds": [
+     "debuff",
+     null,
+     null,
+     null,
+     "magical",
+     "debuff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Empowered Astrolabe Strikes deal damage in an area, with increased swing time; enemy gods are Trembled and minions are Stunned",
+     "While your Astrolabe is deployed with Unburden, your Empowered Astrolabe Strike resolves at the Astrolabe's location, dealing 3 times Basic Attack Damage to enemies around it",
+     "While you are holding your Astrolabe, Empowered Astrolabe Strikes damage enemies in front of you",
+     "Empowered Astrolabe Strikes are spent even if no enemies are hit",
+     "Empowered Astrolabe Strike Damage: Basic Attack Damage + 8 per level",
+     "Tremble Duration: 2 seconds",
+     "Stun Duration: 2 seconds",
+     "Energy from Gods: 1.25",
+     "Energy from Minions: 0.125",
+     "Max Energy: 30",
+     "Radius: 1.5 meters",
+     "Cost: 20 energy"
+    ],
+    "name": "The Astrolabe",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     14.0,
+     13.0,
+     12.0,
+     11.0,
+     10.0
+    ],
+    "cost": [
+     65.0,
+     70.0,
+     75.0,
+     80.0,
+     85.0
+    ],
+    "description": "Throw your Astrolabe to a target location, dealing Magical Damage and Slowing enemies. While deployed, your Attacks cause explosions at the Astrolabe that deal Magical Damage to enemies and cost Mana per explosion. The Astrolabe returns after 5 seconds or on refire",
+    "detail_kinds": [
+     "buff",
+     null,
+     "magical",
+     "magical",
+     "magical",
+     "magical",
+     "slow",
+     "slow",
+     "buff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "While the Astrolabe is deployed, gain Movement Speed",
+     "Gravity Pull changes based on whether your Astrolabe is deployed or held",
+     "Deploy Damage: 60 | 95 | 130 | 165 | 200",
+     "Deploy Damage Scaling: 40% Intelligence",
+     "Explosion Damage: 23",
+     "Explosion Damage Scaling: 6 per level",
+     "Deploy Slow: 20 | 22.5 | 25 | 27.5 | 30%",
+     "Deploy Slow Duration: 2 seconds",
+     "Movement Speed: 5%",
+     "Range: 8 meters",
+     "Radius: 4 meters",
+     "Cooldown: 14 | 13 | 12 | 11 | 10 seconds",
+     "Cost: 65 | 70 | 75 | 80 | 85 mana",
+     "Cost Per Attack: 5 mana"
+    ],
+    "name": "Unburden",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     16.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "description": "Pull enemies toward your Astrolabe. Enemy gods who are too close are pulled into it. If you are holding your Astrolabe, you become Knock Up Immune , and enemies pulled into the Astrolabe are held in front of you before being Launched in the direction you are facing. If your Astrolabe is deployed, held enemies are Launched toward you from its location",
+    "detail_kinds": [
+     "stun",
+     "stun",
+     "magical",
+     "magical",
+     "magical",
+     "magical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Pull and Launch each deal Magical Damage",
+     "This ability cannot Pull or Launch enemies through walls.",
+     "Pull Damage: 50 | 80 | 110 | 140 | 170",
+     "Pull Damage Scaling: 35% Intelligence",
+     "Launch Damage: 50 | 80 | 110 | 140 | 170",
+     "Launch Damage Scaling: 35% Intelligence",
+     "Deployable Radius: 4 meters",
+     "Range: 5.6 meters",
+     "Cone Angle: 75 degrees",
+     "Cooldown: 16 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Gravity Pull",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     16.0,
+     15.5,
+     15.0,
+     14.5,
+     14.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "damage_type": "magical",
+    "description": "Dash forward, dealing Magical Damage to minions and cleansing yourself of Slows . Each allied god you pass near is cleansed of Slows and gains Movement Speed . While Dashing , you are Slow and Knock Up Immune . Hitting an enemy god stops the Dash and releases an explosion that Slows ; each Slow you cleanse from an ally during the Dash strengthens that explosion's Slow",
+    "detail_kinds": [
+     null,
+     "magical",
+     "magical",
+     "buff",
+     "slow",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "The Dash has a maximum duration of 3 seconds",
+     "Damage: 80 | 130 | 180 | 230 | 280",
+     "Damage Scaling: 40% Intelligence",
+     "Ally Movement Speed: 25 | 27.5 | 30 | 32.5 | 35%",
+     "Slow: 25% + 25% per ally cleansed",
+     "Slow Duration: 2.5 seconds",
+     "Maximum Slow: 75%",
+     "Cleanse Radius: 4 meters",
+     "Explosion Radius: 2.4 meters",
+     "Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Kinetic Charge",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     90.0
+    ],
+    "cost": [
+     65.0,
+     70.0,
+     75.0,
+     80.0,
+     85.0
+    ],
+    "description": "Tear open the sky and call down a . Enemies in the area take Magical Damage over time and gain Radiation stacks that reduce their Protections and Power . After 5 seconds or when you refire, the burst focuses into a traveling beam that deals Magical Damage and applies 3 stacks of Radiation",
+    "detail_kinds": [
+     null,
+     null,
+     null,
+     "magical",
+     "magical",
+     "magical",
+     "magical",
+     "debuff",
+     "debuff",
+     "debuff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Debuff duration refreshes on subsequent ticks",
+     "The radius of this ability shrinks as it travels",
+     "This ability passes through and damages all enemies, and passes through walls",
+     "Radiation Tick Damage: 35 | 45 | 55 | 65 | 75",
+     "Radiation Tick Damage Scaling: 10% Intelligence",
+     "Focused Beam Damage: 120 | 180 | 240 | 300 | 360",
+     "Focused Beam Damage Scaling: 40% Intelligence",
+     "Protection Reduction: 5% per stack",
+     "Power Reduction: 3% per stack",
+     "Debuff Duration: 5 seconds",
+     "Max Radiation Stacks: 5 | 5 | 6 | 6 | 7",
+     "Range: 320 meters",
+     "Starting Radius: 4.8 meters",
+     "Final Radius: 3.2 meters",
+     "Cooldown: 90 seconds",
+     "Cost: 65 | 70 | 75 | 80 | 85 mana"
+    ],
+    "name": "Gamma-Ray Burst",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Your Attack now throws your astrolabe. Unburden is used to reposition the astrolabe. Gravity no longer pulls when the astrolabe is deployed. Kinetic Charge can be used to kick the astrolabe forward. Your passive now reduces the cooldown of Gamma-Ray Burst.",
+    "name": "Aspect of the Unburdened"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 44.0,
+    "per_level": 2.42
+   },
+   "attack_speed": {
+    "base": 0.96,
+    "per_level": 1.4
+   },
+   "health": {
+    "base": 705.3,
+    "per_level": 101.52
+   },
+   "health_regen": {
+    "base": 1.84,
+    "per_level": 0.22
+   },
+   "magical_prot": {
+    "base": 29.7,
+    "per_level": 1.62
+   },
+   "mana": {
+    "base": 299.0,
+    "per_level": 45.37
+   },
+   "mana_regen": {
+    "base": 1.45,
+    "per_level": 0.12
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 20.5,
+    "per_level": 3.24
+   }
+  },
+  "damage_type": "magical",
+  "last_verified": "2026-08-01",
+  "name": "Atlas",
+  "pantheon": "Greek",
+  "release_date": "May 5, 2026",
+  "role": "Support",
+  "source_url": "https://wiki.smite2.com/w/Atlas",
+  "specializations": [
+   "Tank",
+   "Crowd Control",
+   "Area Control"
+  ],
+  "type": "smite-god"
+ },
+ "Bellona": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Bellona remains in her current s until she goes 7 seconds without dealing or taking damage Deal Physical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     null,
+     null,
+     null,
+     "buff",
+     null,
+     "heal",
+     "physical",
+     "heal",
+     "heal",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "You have 4 different weapons to attack with, depending on the most recent ability used",
+     "Bellona remains in her current Basic Attacks until she goes 7 seconds without dealing or taking damage",
+     "Greatsword has a 3 hit chain. Attacks in order of 1, 1, 1.5x damage and swing time, with no special effects",
+     "Sword and Shield has a 3 hit chain, Attacks in order of 0.5, 1, 1.5x damage and swing time and provides 1 Block Stack every enemy god hit. Max 3 stacks",
+     "Hammer has a 3 hit chain. Attacks in order of 1.5, 1, 1.5x damage and 1.5, 1, 1.25x swing time. Hits all enemies in range of each attack",
+     "Scourge has a 3 hit chain. Attacks in order of 1, 0.5, 1x damage and swing time and Heals you on every successful hit",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Scourge Heal Per Hit: 5 | 6 | 7 | 8 | 9",
+     "Scourge Heal Scaling Per Hit: 7% Physical Protection",
+     "Range: 1.92 meters",
+     "Scourge Range: 2.56 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Bellona Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "description": "When you hit or are hit by Basic Attacks, you gain stacks of Movement Speed",
+    "detail_kinds": [
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "buff"
+    ],
+    "details": [
+     "If using Sword and Shield, you also get Physical and Magical Protection stacks",
+     "If using Scourge, you also get Attack Speed stacks",
+     "If using Hammer, you also get Strength stacks",
+     "All Basic Attacks still gain the Movement Speed per stack",
+     "Movement Speed: 1.5 Per Stack",
+     "Physical Protection: 4 Per Stack",
+     "Magical Protection: 4 Per Stack",
+     "Strength: 3% Per Stack",
+     "Attack Speed: 5% Per Stack",
+     "Buff Duration: 7 seconds",
+     "Max Buff Stacks 5"
+    ],
+    "name": "Master Of War",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     14.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "damage_type": "physical",
+    "description": "Every third successful Basic Attack against a god grants a Block Stack , reflecting damage Dash forward with your shield to deal Physical Damage and Slow enemies in front of you",
+    "detail_kinds": [
+     "buff",
+     null,
+     "buff",
+     null,
+     null,
+     "physical",
+     "physical",
+     "physical",
+     "physical",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Gain 1 Block Stack for each enemy god hit",
+     "Change to Sword and Shield Basic Attacks",
+     "Every third successful Basic Attack against a god grants a Block Stack, reflecting damage",
+     "Block absorbs all damage from one god's Basic Attack per stack",
+     "Blocks also reflect back a portion of the blocked damage to enemies around Bellona",
+     "Damage: 75 | 115 | 155 | 195 | 235",
+     "Damage Scaling: 50% Strength + 30% Physical and Magical Protection",
+     "Reflect Damage: 25% of the damage blocked",
+     "Reflect Damage Scaling: 7% Physical and Magical Protection",
+     "Slow: 20%",
+     "Slow Duration: 1.5 seconds",
+     "Dash Range: 2.8 meters",
+     "Bash Range: 4 meters",
+     "Bash Cone Angle: 120 degrees",
+     "Cooldown: 14 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Shield Bash",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     14.0,
+     13.0,
+     12.0,
+     11.0,
+     10.0
+    ],
+    "cost": [
+     40.0,
+     50.0,
+     60.0,
+     70.0,
+     80.0
+    ],
+    "description": "Spin your hammer to deal Physical Damage to enemies around you, then slam to deal Physical Damage to enemies in a line",
+    "detail_kinds": [
+     null,
+     null,
+     null,
+     "physical",
+     "physical",
+     "physical",
+     "physical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Change to Hammer Basic Attacks",
+     "Your Basic Attacks now hit nearby enemies",
+     "Final Slam damage increases by 35% for each enemy god hit by the Spin Attack",
+     "Spin Damage: 55 | 90 | 125 | 165 | 200",
+     "Spin Damage Scaling: 25% Strength",
+     "Slam Damage: 70 | 130 | 190 | 250 | 310",
+     "Slam Damage Scaling: 70% Strength",
+     "Spin Radius: 4 meters",
+     "Slam Range: 4.8 meters",
+     "Slam Radius: 1.92 meters",
+     "Cooldown: 14 | 13 | 12 | 11 | 10 seconds",
+     "Cost: 40 | 50 | 60 | 70 | 80 mana"
+    ],
+    "name": "Bludgeon",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     16.0,
+     15.0,
+     14.0,
+     13.0,
+     12.0
+    ],
+    "cost": [
+     40.0,
+     50.0,
+     60.0,
+     70.0,
+     80.0
+    ],
+    "damage_type": "physical",
+    "description": "Change to Basic Attacks Lash out with your to deal Physical Damage and Disarm enemies",
+    "detail_kinds": [
+     null,
+     "heal",
+     "physical",
+     "physical",
+     "heal",
+     "heal",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Change to Scourge Basic Attacks",
+     "Your Basic Attacks Heal you",
+     "Damage: 80 | 120 | 160 | 200 | 240",
+     "Damage Scaling: 50% Strength",
+     "Heal: 6 | 7 | 8 | 9 | 10",
+     "Heal Scaling: 6% Physical Protection",
+     "Disarmed Duration: 1.25 | 1.4 | 1.55 | 1.7 | 1.85 seconds",
+     "Range: 8.8 meters",
+     "Radius: 1.6 meters",
+     "Cooldown: 16 | 15 | 14 | 13 | 12 seconds",
+     "Cost: 40 | 50 | 60 | 70 | 80 mana"
+    ],
+    "name": "Scourge",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     90.0
+    ],
+    "cost": [
+     100.0
+    ],
+    "damage_type": "physical",
+    "description": "The flag empowers you and allied gods in the area, granting Strength , Intelligence , and Physical and Magical Protection Leap forward and plant your flag to deal Physical Damage and Stun enemies",
+    "detail_kinds": [
+     "buff",
+     "mechanic",
+     "physical",
+     "physical",
+     "stun",
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "The flag empowers you and allied gods in the area, granting Strength, Intelligence, and Physical and Magical Protection",
+     "You are CC Immune while Leaping",
+     "Damage: 300 | 370 | 440 | 510 | 580",
+     "Damage Scaling: 60% Strength",
+     "Stun Duration: 0.75 seconds",
+     "Strength: 8 | 16 | 24 | 32 | 40 + 7.5% Protections",
+     "Intelligence: 22 | 30 | 38 | 46 | 54 + 7.5% Protections",
+     "Protection: 15 | 20 | 25 | 30 | 35 + 7.5% Physical and Magical Protections",
+     "Range: 8.8 meters",
+     "Radius: 2.4 meters",
+     "Cooldown: 90 seconds",
+     "Cost: 100 mana"
+    ],
+    "name": "Eagle's Rally",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Bludgeon no longer deals bonus Final Slam Damage but whenever Bellona gains Block Stacks with Sword and Shield or gains Health from Scourge, nearby allied gods also gain those benefits.",
+    "name": "Aspect of Vindication"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 47.76,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.4
+   },
+   "health": {
+    "base": 661.0,
+    "per_level": 94.0
+   },
+   "health_regen": {
+    "base": 1.82,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 29.58,
+    "per_level": 1.5
+   },
+   "mana": {
+    "base": 272.32,
+    "per_level": 38.64
+   },
+   "mana_regen": {
+    "base": 1.45,
+    "per_level": 0.12
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 20.73,
+    "per_level": 3.45
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-08-01",
+  "name": "Bellona",
+  "pantheon": "Roman",
+  "release_date": "May 2, 2024",
+  "role": "Solo",
+  "source_url": "https://wiki.smite2.com/w/Bellona",
+  "specializations": [
+   "Brawler",
+   "Tank",
+   "Lockdown"
+  ],
+  "type": "smite-god"
+ },
+ "Cernunnos": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Fire a projectile that deals Physical Damage to the first enemy hit",
+    "detail_kinds": [
+     null,
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Projectile stops on first target hit, and does not pass through walls",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 8.8 meters",
+     "Radius: 0.48 meters"
+    ],
+    "name": "Cernunnos Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "damage_type": "physical",
+    "description": "MELEE ATTACKS CLEAVE Basic Attacks deal bonus Physical Damage to enemies in melee range",
+    "detail_kinds": [
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Damage Scaling: 30% Strength + 5% Intelligence + 30% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Heavy Glaive",
+    "slot": "Passive"
+   },
+   {
+    "description": "Activate to toggle between Spring, Summer, Fall, or Winter Basic Attack bonus effects",
+    "detail_kinds": [
+     "heal",
+     "physical",
+     "debuff",
+     "slow",
+     null,
+     "physical",
+     "heal",
+     "heal",
+     "physical",
+     "physical",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "slow",
+     "slow",
+     "slow"
+    ],
+    "details": [
+     "Spring: Self Healing",
+     "Summer: Bonus Damage",
+     "Fall: Protection Reduction",
+     "Winter: Slow",
+     "This effect is always active once ranked",
+     "Summer Season Basic Attacks deal Physical Damage if you have more Strength, or Magical Damage if you have more Intelligence",
+     "Spring Lifesteal: 3 | 3.5 | 4 | 4.5 | 5%",
+     "Spring Heal Scaling: 10% Intelligence",
+     "Summer Damage: 5 | 10 | 15 | 20 | 25",
+     "Summer Damage Scaling: 12 | 15 | 18 | 21 | 24% Strength or Intelligence (whichever is higher)",
+     "Fall Physical Protection Reduced: 5 | 10 | 15 | 20 | 25",
+     "Fall Magical Protection Reduced: 5 | 10 | 15 | 20 | 25",
+     "Debuff Scaling: 5% Intelligence",
+     "Fall Debuff Duration: 10 seconds",
+     "Winter Slow: 10 | 11 | 12 | 13 | 14%",
+     "Winter Slow Scaling: 2.5% Intelligence",
+     "Winter Slow Duration: 2 seconds"
+    ],
+    "name": "Shifter Of Seasons",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     15.0
+    ],
+    "cost": [
+     50.0,
+     60.0,
+     70.0,
+     80.0,
+     90.0
+    ],
+    "damage_type": "physical",
+    "description": "Fire a bramble that explodes on hit or upon reaching max range, dealing Physical Damage in an area",
+    "detail_kinds": [
+     "debuff",
+     "physical",
+     null,
+     null,
+     "physical",
+     "physical",
+     "physical",
+     "physical",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "This Roots and Cripples a directly hit target",
+     "The explosion leaves a bramble area that repeatedly deals Physical Damage",
+     "Bramble area hits 10 times over 5 seconds",
+     "This ability stops and explodes on first enemy hit, on walls, or at max range",
+     "Initial Damage: 65 | 110 | 155 | 200 | 245",
+     "Initial Damage Scaling: 75% Strength + 50% Intelligence",
+     "Damage Per Tick: 8 | 12 | 16 | 20 | 24",
+     "Damage Scaling Per Tick: 6% Strength + 12% Intelligence",
+     "Root Duration: 1 second",
+     "Range: 8.8 meters",
+     "Radius: 3.2 meters",
+     "Cooldown: 15 seconds",
+     "Cost: 50 | 60 | 70 | 80 | 90 mana"
+    ],
+    "name": "Bramble Blast",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     15.0,
+     14.5,
+     14.0,
+     13.5,
+     13.0
+    ],
+    "cost": [
+     70.0,
+     75.0,
+     80.0,
+     85.0,
+     90.0
+    ],
+    "damage_type": "physical",
+    "description": "Dash forward, passing through all types of enemies",
+    "detail_kinds": [
+     "physical",
+     null,
+     null,
+     "physical",
+     "physical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Deals Physical Damage to all enemies hit",
+     "Dash passes through all enemies",
+     "You can cancel this ability at any time",
+     "Damage: 90 | 140 | 190 | 240 | 290",
+     "Damage Scaling: 85% Strength",
+     "Range: 8.8 meters",
+     "Radius: 1.6 meters",
+     "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+     "Cost: 70 | 75 | 80 | 85 | 90 mana"
+    ],
+    "name": "Horn Charge",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     90.0
+    ],
+    "cost": [
+     100.0
+    ],
+    "damage_type": "physical",
+    "description": "Polymorphed Enemies are Silenced , Disarmed , Slowed , and transformed to look like harmless animals Polymorph enemy gods into wild boars and start",
+    "detail_kinds": [
+     "physical",
+     null,
+     "debuff",
+     "physical",
+     "physical",
+     "debuff",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Deals Physical Damage to all enemies in the area",
+     "Applies Shifter of Season effects",
+     "Polymorphed Enemies are Silenced, Disarmed, Slowed, and transformed to look like harmless animals",
+     "Damage: 240 | 320 | 400 | 480 | 540",
+     "Damage Scaling: 80% Strength + 100% Intelligence",
+     "Polymorph Duration: 1.5 seconds",
+     "Slow: 20%",
+     "Slow Duration: 1.5 seconds",
+     "Range: 8.8 meters",
+     "Radius: 4 meters",
+     "Cooldown: 90 seconds",
+     "Cost: 100 mana"
+    ],
+    "name": "The Wild Hunt",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Your Basic Attacks are now melee and deal increased damage, cleave, and apply stronger Shifter of Seasons effects to all enemies hit. In addition, Horn Charge's cooldown is reduced when hitting a god or Jungle Monster and applies Shifter of Seasons.",
+    "name": "Aspect of Strife"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 48.12,
+    "per_level": 2.76
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.4
+   },
+   "health": {
+    "base": 569.48,
+    "per_level": 86.48
+   },
+   "health_regen": {
+    "base": 1.7,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 25.3,
+    "per_level": 1.38
+   },
+   "mana": {
+    "base": 296.0,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.33,
+    "per_level": 0.11
+   },
+   "move_speed": {
+    "base": 375.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 18.76,
+    "per_level": 2.76
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-11-03",
+  "name": "Cernunnos",
+  "pantheon": "Celtic",
+  "release_date": "May 2, 2024",
+  "role": "Carry Jungle",
+  "source_url": "https://wiki.smite2.com/w/Cernunnos",
+  "specializations": [
+   "Nuker",
+   "Sharpshooter",
+   "Lockdown"
+  ],
+  "type": "smite-god"
+ },
+ "Chaac": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Deal Physical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     null,
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "Has a 3 hit chain. Attacks in order of 1, 0.5, 1.5x damage and swing time",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Chaac Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "description": "FREE CAST AFTER HITS After 5 successful Basic Attacks, the next ability you use costs 0 mana, has Lower Cooldown , and Heals you",
+    "detail_kinds": [
+     "buff",
+     "heal",
+     "heal",
+     "heal"
+    ],
+    "details": [
+     "Cooldown -2 seconds",
+     "Heal: 10",
+     "Heal Scaling: 20% Intelligence",
+     "Heal Amount Per Level: 1"
+    ],
+    "name": "Overflow",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     10.0
+    ],
+    "cost": [
+     45.0,
+     50.0,
+     55.0,
+     60.0,
+     65.0
+    ],
+    "damage_type": "physical",
+    "description": "Throw your Axe forward, dealing Physical Damage to enemies in the area where it lands",
+    "detail_kinds": [
+     null,
+     null,
+     "physical",
+     "physical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "The Axe remains deployed to empower Torrent or Rain Dance",
+     "Reactivate to destroy the Axe early",
+     "Damage: 100 | 160 | 220 | 280 | 340",
+     "Damage Scaling: 75% Strength + 60% Intelligence",
+     "Axe Duration: 5 seconds",
+     "Range: 9.6 meters",
+     "Radius: 3.2 meters",
+     "Cooldown: 10 seconds",
+     "Cost: 45 | 50 | 55 | 60 | 65 mana"
+    ],
+    "name": "Thunder Strike",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     10.0,
+     9.5,
+     9.0,
+     8.5,
+     8.0
+    ],
+    "cost": [
+     50.0,
+     60.0,
+     70.0,
+     80.0,
+     90.0
+    ],
+    "damage_type": "physical",
+    "description": "If you Dash , you will still do the area attack upon reaching the Axe Swing your Axe around you, dealing Physical Damage to enemies and gaining Protections for each enemy hit",
+    "detail_kinds": [
+     null,
+     null,
+     null,
+     null,
+     "physical",
+     "physical",
+     "physical",
+     "physical",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If the Axe is deployed, first Dash to it and deal Physical Damage to enemies that you pass through",
+     "This Dash passes through walls",
+     "If you Dash, you will still do the area attack upon reaching the Axe",
+     "Minions provide 1 stack, gods provide 2 stacks",
+     "Damage: 100 | 160 | 220 | 280 | 340",
+     "Damage Scaling: 70% Strength",
+     "Dash Damage: 35 | 57.5 | 80 | 102.5 | 125",
+     "Dash Damage Scaling: 30% Strength",
+     "Protections: 5 | 7 | 9 | 11 | 13 Per Stack",
+     "Protection Buff Scaling: 6% Intelligence",
+     "Buff Duration: 6 seconds",
+     "Max Buff Stacks: 4",
+     "Attack Radius: 3.2 meters",
+     "Dash Radius: 1.28 meters",
+     "Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds",
+     "Cost: 50 | 60 | 70 | 80 | 90 mana"
+    ],
+    "name": "Torrent",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     13.0
+    ],
+    "cost": [
+     55.0,
+     65.0,
+     75.0,
+     85.0,
+     95.0
+    ],
+    "description": "Create a rainstorm that Heals you over time and provides Dampening Attack Speed",
+    "detail_kinds": [
+     "slow",
+     "heal",
+     null,
+     "slow",
+     null,
+     "heal",
+     "heal",
+     "buff",
+     "slow",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Enemies caught in the rain are Slowed and have Reduced Attack Speed",
+     "Heals 8 times over 6 seconds",
+     "If the Axe is deployed, create a Rain Storm at the Axe's location as well",
+     "Enemies in both Rain Storms are Slowed and Debuffed for twice as much",
+     "Grants a stack of Overflow every 1.5s",
+     "Heal Per Tick: 8 | 11 | 14 | 17 | 20",
+     "Heal Scaling Per Tick: 5% Intelligence",
+     "Dampening: 9 | 10.5 | 12 | 13.5 | 15",
+     "Slow: 15 | 17.5 | 20 | 22.5 | 25%",
+     "Attack Speed Slow: 15 | 17.5 | 20 | 22.5 | 25%",
+     "Radius: 6.4 meters",
+     "Axe Radius: 9.6 meters",
+     "Cooldown: 13 seconds",
+     "Cost: 55 | 65 | 75 | 85 | 95 mana"
+    ],
+    "name": "Rain Dance",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     75.0
+    ],
+    "cost": [
+     80.0,
+     90.0,
+     100.0,
+     110.0,
+     120.0
+    ],
+    "damage_type": "physical",
+    "description": "Charge up your Lightning Axe, then unleash a blast dealing Physical Damage , Knocking Up , and Silencing in an area around you",
+    "detail_kinds": [
+     "mechanic",
+     "stun",
+     "physical",
+     "physical",
+     "buff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You are CC Immune and gain Damage Mitigation while Channeling",
+     "Enemies are knocked straight up",
+     "Damage: 300 | 360 | 420 | 480 | 540",
+     "Damage Scaling: 120% Strength + 100% Intelligence",
+     "Damage Mitigation: 50 | 55 | 60 | 65 | 70%",
+     "Silence Duration: 1.5 seconds",
+     "Radius: 5.6 meters",
+     "Cooldown: 75 seconds",
+     "Cost: 80 | 90 | 100 | 110 | 120 mana"
+    ],
+    "name": "Storm Call",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Rain Dance no longer heals but damages enemies in the area instead.",
+    "name": "Aspect of Fulmination"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 47.76,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.4
+   },
+   "health": {
+    "base": 661.0,
+    "per_level": 94.0
+   },
+   "health_regen": {
+    "base": 1.7,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 29.58,
+    "per_level": 1.5
+   },
+   "mana": {
+    "base": 299.36,
+    "per_level": 45.36
+   },
+   "mana_regen": {
+    "base": 1.47,
+    "per_level": 0.14
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 20.28,
+    "per_level": 3.0
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-11-02",
+  "name": "Chaac",
+  "pantheon": "Maya",
+  "release_date": "May 2, 2024",
+  "role": "Solo",
+  "source_url": "https://wiki.smite2.com/w/Chaac",
+  "specializations": [
+   "Nuker",
+   "Tank",
+   "Lockdown"
+  ],
+  "type": "smite-god"
+ },
+ "Fenrir": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Deal Physical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Fenrir Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "description": "Your Runes are activated by successful Basic Attacks, or by activating abilities. You activate 5 Runes on killing an enemy god.",
+    "details": [
+     "At 5 Runes your next cast of Unchained or Brutalize becomes Empowered and gains an additional effect"
+    ],
+    "name": "Unbound Runes",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     15.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "damage_type": "physical",
+    "description": "Savagely Leap forward, dealing Physical Damage when you land",
+    "detail_kinds": [
+     "stun",
+     null,
+     null,
+     "physical",
+     "physical",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "When Empowered, Stun all enemies in the area, then remove all Runes",
+     "If not Empowered, gain 3 Runes",
+     "Hitting an enemy god reduces the cooldown of this ability by 30%",
+     "Damage: 85 | 145 | 205 | 265 | 325",
+     "Damage Scaling: 85% Strength + 30% Physical and Magical Protection",
+     "Stun Duration: 0.75 seconds",
+     "Range: 8.8 meters",
+     "Radius: 2.4 meters",
+     "Cooldown: 15 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Unchained",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     13.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "description": "Unleash a howl, gaining increased Strength , Attack Speed , and Lifesteal",
+    "detail_kinds": [
+     null,
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Gain 2 Runes",
+     "Strength: 15 | 20 | 25 | 30 | 35",
+     "Attack Speed: 20 | 22.5 | 25 | 27.5 | 30%",
+     "Lifesteal: 8 | 8,5 | 9 | 9,5 | 10%",
+     "Buff Duration: 6 seconds",
+     "Cooldown: 13 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Seething Howl",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     12.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "damage_type": "physical",
+    "description": "Gain Protections , Leap forward, and grab onto an enemy, dealing Physical Damage repeatedly to all nearby enemies",
+    "detail_kinds": [
+     "mechanic",
+     "debuff",
+     "physical",
+     null,
+     null,
+     "buff",
+     null,
+     null,
+     "debuff",
+     null,
+     "physical",
+     "physical",
+     "physical",
+     "buff",
+     "debuff",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You are Displacement Immune while Channeling",
+     "Reduces enemy Healing",
+     "When Empowered, deal increased Physical Damage repeatedly instead, then all Runes are consumed",
+     "If not Empowered, gain 1 Rune per successful hit",
+     "This ability hits 4 times over 1.08 seconds",
+     "Gain Physical and Magical Protections while Channeling",
+     "This ability can Critically Strike",
+     "This ability can trigger both ability and basic attack item effects",
+     "Your target is Revealed while you are Channeling",
+     "You can cancel this ability at any time",
+     "Damage: 50 | 75 | 100 | 125 | 150",
+     "Damage Scaling: 40% Strength",
+     "Increased Damage Scaling: 55% Strength",
+     "Protections: 5 + 2 Per Level",
+     "Healing Reduction: -40%",
+     "Healing Reduction Duration: 5 seconds",
+     "Range: 4.8 meters",
+     "Radius: 1.6 meters",
+     "Cooldown: 12 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Brutalize",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     110.0
+    ],
+    "cost": [
+     100.0
+    ],
+    "damage_type": "physical",
+    "description": "Gain increased Movement Speed , Protections , and become CC Immune while massive Grow massive in size, and your next Basic Attack deals Physical Damage and can Pick Up an enemy god and carry them to any position",
+    "detail_kinds": [
+     "buff",
+     null,
+     null,
+     null,
+     "physical",
+     "physical",
+     "buff",
+     "buff",
+     "buff",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Gain increased Movement Speed, Protections, and become CC Immune while massive",
+     "If Empowered, remove all Runes for no benefit",
+     "If not Empowered, gain 5 Runes",
+     "You can cancel this ability at any time",
+     "Damage: 200 | 275 | 350 | 425 | 500",
+     "Damage Scaling: 115% Strength",
+     "Movement Speed: 75%",
+     "Protections: 20 | 25 | 30 | 35 | 40 + 15%",
+     "Buff Duration: 4 seconds",
+     "Grab Duration: 1.75 seconds",
+     "Cone Angle: 120 degrees",
+     "Cooldown: 110 seconds",
+     "Cost: 100 mana"
+    ],
+    "name": "Ragnarok",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Brutalize deals less damage but applies a stacking Slow, provides increased Protections, and Protections persist afterwards. Seething Howl's Strength is decreased, but applies to all allies in an area around him and their Lifesteal heals Fenrir.",
+    "name": "Aspect of Loyalty"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 47.76,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.51
+   },
+   "health": {
+    "base": 668.52,
+    "per_level": 101.52
+   },
+   "health_regen": {
+    "base": 1.93,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 27.5,
+    "per_level": 1.5
+   },
+   "mana": {
+    "base": 296.0,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.46,
+    "per_level": 0.13
+   },
+   "move_speed": {
+    "base": 380.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 19.0,
+    "per_level": 3.0
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-11-02",
+  "name": "Fenrir",
+  "pantheon": "Norse",
+  "release_date": "May 2, 2024",
+  "role": "Jungle",
+  "source_url": "https://wiki.smite2.com/w/Fenrir",
+  "specializations": [
+   "Slayer",
+   "Lockdown",
+   "Mobile"
+  ],
+  "type": "smite-god"
+ },
+ "Thanatos": {
+  "abilities": [
+   {
+    "damage_type": "physical",
+    "description": "Deal Physical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     null,
+     "physical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "Has a 3 hit chain. Attacks in order of 1, 0.75, 1.5x damage and swing time. The final hit cleaves",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Thanatos Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "description": "You revel in the deaths of your foes",
+    "detail_kinds": [
+     null,
+     "heal",
+     "buff",
+     null,
+     null,
+     "heal",
+     "heal",
+     "buff"
+    ],
+    "details": [
+     "Enemy gods at low health are revealed to you",
+     "Killing an enemy Heals you",
+     "Killing a god reduces your Cooldowns",
+     "Your abilities cost Health instead of Mana",
+     "The Health threshold is determined by the rank of Hovering Death, using the first rank value when Hovering Death is unranked",
+     "God Kill Heal: 15% of their Max Health",
+     "NPC Kill Heal: 10% of their Max Health",
+     "Cooldown Reduction: -5 seconds"
+    ],
+    "name": "Harvester of Souls",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     11.0
+    ],
+    "cost": [
+     4.0
+    ],
+    "damage_type": "physical",
+    "description": "Fling a scythe projectile that deals Physical Damage and Slows the first target hit",
+    "detail_kinds": [
+     "heal",
+     "physical",
+     null,
+     "physical",
+     "physical",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You Heal for 50% of the total damage done",
+     "Gods take 12.5% of their Max Health as bonus Physical Damage",
+     "This ability stops on first target hit, and does not pass through walls",
+     "Damage: 95 | 165 | 235 | 305 | 375",
+     "Damage Scaling: 85% Strength",
+     "Slow: 20%",
+     "Range: 11.2 meters",
+     "Radius: 0.48 meters",
+     "Cooldown: 11 seconds",
+     "Cost: 4% Health"
+    ],
+    "name": "Death Scythe",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     13.0
+    ],
+    "cost": [
+     4.0
+    ],
+    "description": "Sense death, becoming Slow Immune and gaining Movement Speed and Penetration",
+    "detail_kinds": [
+     "physical",
+     null,
+     "physical",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You deal bonus damage to and gain bonus Movement Speed when moving towards enemies at low health",
+     "Bonus Movement Speed scales from 0% effectiveness to 100% effectiveness. 0% when the target's health is at Execute Threshold and 100% when the target is at 1 health",
+     "Bonus Damage: 15%",
+     "Movement Speed: 8 | 12 | 16 | 20 | 24%",
+     "Bonus Movement Speed: Up to 8 | 12 | 16 | 20 | 24%",
+     "Penetration: 8 | 12 | 16 | 20 | 24",
+     "Buff Duration: 6 seconds",
+     "Cooldown: 13 seconds",
+     "Cost: 4% Health"
+    ],
+    "name": "Scent of Death",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     14.0,
+     13.5,
+     13.0,
+     12.5,
+     12.0
+    ],
+    "cost": [
+     4.0
+    ],
+    "damage_type": "physical",
+    "description": "CONE SILENCE DAMAGE Swing your scythe, dealing Physical Damage and Silencing enemies in front of you",
+    "detail_kinds": [
+     "physical",
+     "physical",
+     "debuff",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Damage: 100 | 150 | 200 | 250 | 300",
+     "Damage Scaling: 80% Strength",
+     "Silence Duration: 1 second",
+     "Radius: 5.6 meters",
+     "Cone Angle: 110 degrees",
+     "Cooldown: 14 | 13.5 | 13 | 12.5 | 12 seconds",
+     "Cost: 4% Health"
+    ],
+    "name": "Soul Reap",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     90.0
+    ],
+    "cost": [
+     6.0
+    ],
+    "damage_type": "physical",
+    "description": "Fly into the sky, then dive to a location dealing Physical Damage and Stunning enemies hit",
+    "detail_kinds": [
+     "physical",
+     "buff",
+     "physical",
+     null,
+     "mechanic",
+     "physical",
+     "physical",
+     "physical",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Enemies at low health are Executed",
+     "You gain 125% Movement Speed while flying",
+     "Execute kills enemies even if their death would normally be prevented by other god abilities",
+     "If Thanatos is aiming at an invalid location when the ultimate expires, he will land on the last valid aimed location",
+     "You are CC Immune while using this ability",
+     "Damage: 110 | 145 | 180 | 215 | 250",
+     "Damage Scaling: 80% Strength",
+     "Execute Health %: 24 | 28 | 32 | 36 | 40%",
+     "Stun Duration: 1 second",
+     "Radius: 2.4 meters",
+     "Cooldown: 90 seconds",
+     "Cost: 6% Health"
+    ],
+    "name": "Hovering Death",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [
+   {
+    "kit_changes": "Harvester of Souls no longer Heals Thanatos but provides permanent Max Health. Additionally Soul Reap deals bonus damage and Heals Thanatos based on his Max Health.",
+    "name": "Aspect of Reaping"
+   }
+  ],
+  "base_stats": {
+   "attack_power": {
+    "base": 47.76,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 0.98,
+    "per_level": 1.4
+   },
+   "health": {
+    "base": 591.1,
+    "per_level": 108.1
+   },
+   "health_regen": {
+    "base": 1.7,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 27.5,
+    "per_level": 1.5
+   },
+   "move_speed": {
+    "base": 380.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 19.0,
+    "per_level": 3.0
+   }
+  },
+  "damage_type": "physical",
+  "last_verified": "2026-08-01",
+  "name": "Thanatos",
+  "pantheon": "Greek",
+  "release_date": "June 27, 2024",
+  "role": "Jungle",
+  "source_url": "https://wiki.smite2.com/w/Thanatos",
+  "specializations": [
+   "Slayer",
+   "Execute",
+   "Global"
+  ],
+  "type": "smite-god"
+ },
+ "Ymir": {
+  "abilities": [
+   {
+    "damage_type": "magical",
+    "description": "Deal Magical Damage to an enemy in front of you",
+    "detail_kinds": [
+     null,
+     "magical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "If multiple enemies are in the area, the enemy closest to the center of the area will be hit",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 1.92 meters",
+     "Cone Angle: 120 degrees"
+    ],
+    "name": "Ymir Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "damage_type": "magical",
+    "description": "Frostbitten enemies take more Attack damage from you, deal less damage to you , and have decreased Attack Speed 's effect stacks with Critical Strikes Your abilities apply when they damage or CC enemies",
+    "detail_kinds": [
+     "magical",
+     null,
+     "magical",
+     "debuff",
+     "debuff"
+    ],
+    "details": [
+     "Frostbitten enemies take more Attack damage from you, deal less damage to you, and have decreased Attack Speed",
+     "Frostbite's effect stacks with Critical Strikes",
+     "Damage Scaling: 175% Basic Attack Damage",
+     "Reduced Damage Dealt: 15%",
+     "Attack Speed Slow: 10%"
+    ],
+    "name": "Frostbite",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     15.0,
+     14.5,
+     14.0,
+     13.5,
+     13.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "description": "Create a Wall that Knocks Back enemies on creation",
+    "detail_kinds": [
+     null,
+     null,
+     "stun",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Reactivate to destroy the Wall early",
+     "The Wall impedes all characters",
+     "Create the Wall at your feet to Displace yourself up and forward",
+     "Displaces enemies up and away from the Wall",
+     "Wall Duration: 2.5 | 3 | 3.5 | 4 | 4.5 seconds",
+     "Range: 11.2 meters",
+     "Radius: 3.25 meters",
+     "Cooldown: 15 | 14.5 | 14 | 13.5 | 13 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Ice Wall",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     8.0,
+     7.5,
+     7.0,
+     6.5,
+     6.0
+    ],
+    "cost": [
+     45.0,
+     50.0,
+     55.0,
+     60.0,
+     65.0
+    ],
+    "damage_type": "magical",
+    "description": "Smash your club into the ground, creating a field of ice that deals Magical Damage and Slows",
+    "detail_kinds": [
+     null,
+     "slow",
+     "magical",
+     "magical",
+     "slow",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Damaging area starts at Ymir and moves away over time",
+     "You are Slowed during activation",
+     "Damage: 90 | 150 | 210 | 270 | 330",
+     "Damage Scaling: 70% Intelligence + 45% Strength",
+     "Slow: 25%",
+     "Slow Duration: 2 seconds",
+     "Self Slow: 42.5%",
+     "Range: 6 meters",
+     "Radius: 3.6 meters",
+     "Cooldown: 8 | 7.5 | 7 | 6.5 | 6 seconds",
+     "Cost: 45 | 50 | 55 | 60 | 65 mana"
+    ],
+    "name": "Glacial Strike",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     14.0
+    ],
+    "cost": [
+     40.0,
+     50.0,
+     60.0,
+     70.0,
+     80.0
+    ],
+    "damage_type": "magical",
+    "description": "Unleash your freezing breath, Stunning enemies in front of you and dealing Magical Damage",
+    "detail_kinds": [
+     "debuff",
+     "magical",
+     "magical",
+     "stun",
+     "stun",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You are Rooted during activation",
+     "Damage: 65 | 100 | 135 | 170 | 205",
+     "Damage Scaling: 55% Intelligence",
+     "Stun Duration: 1 | 1.1 | 1.2 | 1.3 | 1.4 seconds",
+     "Stun Duration Scaling: 0.2 seconds per 100 Item Protections, stacking up to 2 times",
+     "Range: 5.6 meters",
+     "Cone Angle: 90 degrees",
+     "Cooldown: 14 seconds",
+     "Cost: 40 | 50 | 60 | 70 | 80 mana"
+    ],
+    "name": "Frost Breath",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     70.0
+    ],
+    "cost": [
+     80.0,
+     90.0,
+     100.0,
+     110.0,
+     120.0
+    ],
+    "damage_type": "magical",
+    "description": "Freeze the air around you, Slowing enemies as you Channel. After 3 seconds, erupt with a burst of Magical Damage to all enemies in range",
+    "detail_kinds": [
+     null,
+     "mechanic",
+     null,
+     null,
+     "debuff",
+     "magical",
+     "magical",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You may cancel this ability early, dealing less damage",
+     "You are CC Immune while using this ability",
+     "Damage scales linearly from 50% to 100% based on Channel time",
+     "Max Channel time of 3 seconds",
+     "You are Rooted while Channeling",
+     "Damage: 550 | 750 | 950 | 1,150 | 1,350",
+     "Damage Scaling: 160% Intelligence + 45% Protections",
+     "Slow: 40%",
+     "Radius: 5.6 meters",
+     "Cooldown: 70 seconds",
+     "Cost: 80 | 90 | 100 | 110 | 120 mana"
+    ],
+    "name": "Shards of Ice",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [],
+  "base_stats": {
+   "attack_power": {
+    "base": 44.59,
+    "per_level": 2.59
+   },
+   "attack_speed": {
+    "base": 0.98,
+    "per_level": 1.51
+   },
+   "health": {
+    "base": 675.1,
+    "per_level": 108.1
+   },
+   "health_regen": {
+    "base": 1.84,
+    "per_level": 0.22
+   },
+   "magical_prot": {
+    "base": 29.7,
+    "per_level": 1.62
+   },
+   "mana": {
+    "base": 296.0,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.45,
+    "per_level": 0.12
+   },
+   "move_speed": {
+    "base": 370.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 20.52,
+    "per_level": 3.24
+   }
+  },
+  "damage_type": "magical",
+  "last_verified": "2026-08-01",
+  "name": "Ymir",
+  "pantheon": "Norse",
+  "release_date": "May 2, 2024",
+  "role": "Support",
+  "source_url": "https://wiki.smite2.com/w/Ymir",
+  "specializations": [
+   "Brawler",
+   "Tank",
+   "Lockdown"
+  ],
+  "type": "smite-god"
+ },
+ "Zeus": {
+  "abilities": [
+   {
+    "damage_type": "magical",
+    "description": "Fire a projectile that deals Magical Damage to the first enemy hit",
+    "detail_kinds": [
+     null,
+     null,
+     "magical",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Projectile stops on first target hit, and does not pass through walls",
+     "Attacks apply Charges",
+     "Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage",
+     "Range: 8.8 meters",
+     "Radius: 0.48 meters"
+    ],
+    "name": "Zeus Basic Attack",
+    "slot": "Basic Attack"
+   },
+   {
+    "damage_type": "magical",
+    "description": "'s effect stacks with Critical Strikes Deal damage to apply Charges",
+    "detail_kinds": [
+     "magical",
+     null,
+     null,
+     "magical",
+     "debuff",
+     "debuff"
+    ],
+    "details": [
+     "Enemies take increased Attack damage from you for each Charge they have",
+     "Non-god enemies immediately take 3 stacks",
+     "Overcharge's effect stacks with Critical Strikes",
+     "Damage Increase: 15% Per Stack",
+     "Debuff Duration: 5 seconds",
+     "Max Debuff Stacks: 3"
+    ],
+    "name": "Overcharge",
+    "slot": "Passive"
+   },
+   {
+    "cooldown": [
+     12.0,
+     11.5,
+     11.0,
+     10.5,
+     10.0
+    ],
+    "cost": [
+     50.0,
+     55.0,
+     60.0,
+     65.0,
+     70.0
+    ],
+    "damage_type": "magical",
+    "description": "Hurl a bolt of lightning that arcs between enemies, dealing Magical Damage and Slowing",
+    "detail_kinds": [
+     null,
+     "magical",
+     "magical",
+     "slow",
+     "slow",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "This ability stops on first target hit, and does not pass through walls",
+     "Damage: 70 | 115 | 160 | 205 | 250",
+     "Damage Scaling: 60% Intelligence",
+     "Slow: 20%",
+     "Slow Duration: 2 seconds",
+     "Bounces: 5 | 5 | 5 | 6 | 6",
+     "Range: 8.8 meters",
+     "Radius: 0.56 meters",
+     "Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds",
+     "Cost: 50 | 55 | 60 | 65 | 70 mana"
+    ],
+    "name": "Chain Lightning",
+    "slot": "1st Ability"
+   },
+   {
+    "cooldown": [
+     12.0
+    ],
+    "cost": [
+     60.0,
+     65.0,
+     70.0,
+     75.0,
+     80.0
+    ],
+    "damage_type": "magical",
+    "description": "You also gain increased Attack Speed , Movement Speed , and Haste Call down lightning, dealing Magical Damage to nearby enemies",
+    "detail_kinds": [
+     "buff",
+     "magical",
+     "magical",
+     "buff",
+     "buff",
+     "buff",
+     "buff",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "You also gain increased Attack Speed, Movement Speed, and Haste",
+     "Damage: 70 | 120 | 170 | 220 | 270",
+     "Damage Scaling: 75% Intelligence",
+     "Attack Speed: 30%",
+     "Movement Speed: 20 | 22.5 | 25 | 27.5 | 30%",
+     "Haste: 10 | 11.25 | 12.5 | 13.75 | 15%",
+     "Buff Duration: 4 seconds",
+     "Radius: 3.2 meters",
+     "Cooldown: 12 seconds",
+     "Cost: 60 | 65 | 70 | 75 | 80 mana"
+    ],
+    "name": "Thunderclap",
+    "slot": "2nd Ability"
+   },
+   {
+    "cooldown": [
+     12.0,
+     11.5,
+     11.0,
+     10.5,
+     10.0
+    ],
+    "cost": [
+     70.0,
+     75.0,
+     80.0,
+     85.0,
+     90.0
+    ],
+    "damage_type": "magical",
+    "description": "Detonate the Charges on all enemies, dealing Magical Damage for each Charge",
+    "detail_kinds": [
+     "stun",
+     null,
+     null,
+     "magical",
+     "magical",
+     "stun",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "Enemies at Max Charges are Stunned",
+     "This ability cannot be activated unless an enemy has a Charge",
+     "Damage is multiplied by 1, 1.7, 2.4x based on the number of Charges",
+     "Damage: 40 | 65 | 90 | 115 | 140",
+     "Damage Scaling: 30% Intelligence",
+     "Stun Duration: 0.5 seconds",
+     "Cooldown: 12 | 11.5 | 11 | 10.5 | 10 seconds",
+     "Cost: 70 | 75 | 80 | 85 | 90 mana"
+    ],
+    "name": "Detonate Charge",
+    "slot": "3rd Ability"
+   },
+   {
+    "cooldown": [
+     90.0,
+     85.0,
+     80.0,
+     75.0,
+     70.0
+    ],
+    "cost": [
+     100.0
+    ],
+    "damage_type": "magical",
+    "description": "Conjure a lightning storm that deals Magical Damage repeatedly in an area",
+    "detail_kinds": [
+     null,
+     "magical",
+     "magical",
+     "mechanic",
+     "mechanic",
+     "mechanic",
+     "mechanic"
+    ],
+    "details": [
+     "This ability hits 5 times over 4.5 seconds",
+     "Damage: 120 | 150 | 180 | 210 | 240",
+     "Damage Scaling: 75% Intelligence",
+     "Range: 8.8 meters",
+     "Radius: 4.8 meters",
+     "Cooldown: 90 | 85 | 80 | 75 | 70 seconds",
+     "Cost: 100 mana"
+    ],
+    "name": "Lightning Storm",
+    "slot": "Ultimate"
+   }
+  ],
+  "aspects": [],
+  "base_stats": {
+   "attack_power": {
+    "base": 44.4,
+    "per_level": 2.4
+   },
+   "attack_speed": {
+    "base": 1.0,
+    "per_level": 1.61
+   },
+   "health": {
+    "base": 569.48,
+    "per_level": 86.48
+   },
+   "health_regen": {
+    "base": 1.82,
+    "per_level": 0.2
+   },
+   "magical_prot": {
+    "base": 27.5,
+    "per_level": 1.5
+   },
+   "mana": {
+    "base": 316.32,
+    "per_level": 42.0
+   },
+   "mana_regen": {
+    "base": 1.56,
+    "per_level": 0.12
+   },
+   "move_speed": {
+    "base": 375.0,
+    "per_level": 0.0
+   },
+   "physical_prot": {
+    "base": 19.0,
+    "per_level": 3.0
+   }
+  },
+  "damage_type": "magical",
+  "last_verified": "2026-08-01",
+  "name": "Zeus",
+  "pantheon": "Greek",
+  "release_date": "May 2, 2024",
+  "role": "Mid",
+  "source_url": "https://wiki.smite2.com/w/Zeus",
+  "specializations": [
+   "Sharpshooter",
+   "Nuker"
+  ],
+  "type": "smite-god"
+ }
+}

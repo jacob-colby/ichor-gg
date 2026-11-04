@@ -1,0 +1,69 @@
+{
+ "aspects": {
+  "simulated": 0,
+  "total": 77,
+  "tuned": 7,
+  "tuned_gods": [
+   "Agni",
+   "Cernunnos",
+   "Chiron",
+   "Chronos",
+   "Hercules",
+   "Morgan Le Fay",
+   "Ra"
+  ]
+ },
+ "data_patch": "items/gods Open Beta 47, community window Open Beta 47",
+ "generated_by": "python -m smite.model_audit coverage",
+ "gods": {
+  "no_damage_rotation": [
+   "Ares"
+  ],
+  "self_heal_gods": [
+   "Achilles",
+   "Amaterasu",
+   "Aphrodite",
+   "Artio",
+   "Bacchus",
+   "Baron Samedi",
+   "Bellona",
+   "Cabrakan",
+   "Chaac",
+   "Chronos",
+   "Cupid",
+   "Danzaburou",
+   "Eset",
+   "Guan Yu",
+   "Hades",
+   "Hel",
+   "Horus",
+   "Hua Mulan",
+   "Ix Chel",
+   "Kali",
+   "Merlin",
+   "Mordred",
+   "Morgan Le Fay",
+   "Ne Zha",
+   "Neith",
+   "Nemesis",
+   "Ra",
+   "Ravana",
+   "Sobek",
+   "Sol",
+   "Sun Wukong",
+   "Sylvanus",
+   "Yemoja"
+  ],
+  "self_heals_simulated": 33,
+  "tracked": 94,
+  "whole_rotation_simulated": 84
+ },
+ "items": {
+  "buildable": 140,
+  "not_simulated": 73,
+  "partial": 4,
+  "simulated": 62,
+  "simulated_share": 0.4748201438848921,
+  "with_passive": 139
+ }
+}

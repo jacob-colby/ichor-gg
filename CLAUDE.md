@@ -86,6 +86,13 @@ Five things that are easy to get wrong here, all expanded in that file:
    data. `calibrate.exact_random_core_baseline` is the closed form if you need
    to settle it that way.
 
+**Model PRs report the held-out delta.** Run `cd pipeline && python -m
+smite.model_audit heldout` and paste its table into the PR; a change that lowers
+either held-out metric against `origin/main` does not merge as it stands
+(Jacob, 2026-11-03). If `test_model_audit` says the frozen reference builds
+moved, run `python -m smite.model_audit reference --write` and explain every
+changed line in the PR. Both are in [`docs/STATE.md` §6](docs/STATE.md).
+
 **Merging.** Sessions may merge their own PRs to `main` once every gate is
 green (Jacob, 2026-11-02). One PR per slice; the gates and the control re-run
 above are unchanged, and a red gate means leave the PR open and say why.

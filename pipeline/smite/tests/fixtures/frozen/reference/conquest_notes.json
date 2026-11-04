@@ -1,0 +1,1442 @@
+{
+ "Agni": {
+  "builds": [
+   {
+    "aspect": "Aspect of Combustion",
+    "aspect_pick_rate": 0.05,
+    "aspect_win_rate": 0.36,
+    "community_starters": [
+     {
+      "name": "Bluestone Brooch",
+      "pick_rate": 0.26,
+      "win_rate": 0.56
+     },
+     {
+      "name": "Archmage's Gem",
+      "pick_rate": 0.22,
+      "win_rate": 0.56
+     },
+     {
+      "name": "Conduit Gem",
+      "pick_rate": 0.19,
+      "win_rate": 0.44
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 1038,
+    "god_matches_won": 521,
+    "god_win_rate": 0.5019267822736031,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Chronos' Pendant",
+        "pick_rate": 0.24,
+        "win_rate": 0.51
+       },
+       {
+        "name": "Book of Thoth",
+        "pick_rate": 0.16,
+        "win_rate": 0.51
+       }
+      ],
+      "name": "Spear of Desolation",
+      "pick_rate": 0.44,
+      "win_rate": 0.5
+     },
+     {
+      "alternates": [
+       {
+        "name": "Spear of Desolation",
+        "pick_rate": 0.17,
+        "win_rate": 0.52
+       },
+       {
+        "name": "Book of Thoth",
+        "pick_rate": 0.1,
+        "win_rate": 0.51
+       }
+      ],
+      "name": "The World Stone",
+      "pick_rate": 0.3,
+      "win_rate": 0.52
+     },
+     {
+      "alternates": [
+       {
+        "name": "Soul Gem",
+        "pick_rate": 0.15,
+        "win_rate": 0.46
+       },
+       {
+        "name": "The World Stone",
+        "pick_rate": 0.14,
+        "win_rate": 0.44
+       }
+      ],
+      "name": "Rod of Tahuti",
+      "pick_rate": 0.2,
+      "win_rate": 0.58
+     },
+     {
+      "alternates": [
+       {
+        "name": "Rod of Tahuti",
+        "pick_rate": 0.34,
+        "win_rate": 0.51
+       },
+       {
+        "name": "Soul Reaver",
+        "pick_rate": 0.06,
+        "win_rate": 0.51
+       }
+      ],
+      "name": "Obsidian Shard",
+      "pick_rate": 0.17,
+      "win_rate": 0.52
+     },
+     {
+      "alternates": [
+       {
+        "name": "Obsidian Shard",
+        "pick_rate": 0.19,
+        "win_rate": 0.56
+       },
+       {
+        "name": "Rod of Tahuti",
+        "pick_rate": 0.15,
+        "win_rate": 0.56
+       }
+      ],
+      "name": "Evil Eye",
+      "pick_rate": 0.11,
+      "win_rate": 0.37
+     },
+     {
+      "alternates": [
+       {
+        "name": "Evil Eye",
+        "pick_rate": 0.11,
+        "win_rate": 0.5
+       },
+       {
+        "name": "Obsidian Shard",
+        "pick_rate": 0.09,
+        "win_rate": 0.7
+       }
+      ],
+      "name": "Soul Reaver",
+      "pick_rate": 0.08,
+      "win_rate": 0.58
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/agni/",
+    "starter": {
+     "base": "Conduit Gem",
+     "upgrade": "Archmage's Gem"
+    }
+   }
+  ]
+ },
+ "Artemis": {
+  "builds": [
+   {
+    "aspect": "Aspect of the Wild",
+    "aspect_pick_rate": 0.13,
+    "aspect_win_rate": 0.52,
+    "community_starters": [
+     {
+      "name": "Sharpshooter's Arrow",
+      "pick_rate": 0.27,
+      "win_rate": 0.59
+     },
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.25,
+      "win_rate": 0.62
+     },
+     {
+      "name": "Leather Cowl",
+      "pick_rate": 0.15,
+      "win_rate": 0.46
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 763,
+    "god_matches_won": 426,
+    "god_win_rate": 0.5583224115334207,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Tyrfing",
+        "pick_rate": 0.33,
+        "win_rate": 0.57
+       },
+       {
+        "name": "Avenging Blade",
+        "pick_rate": 0.03,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Devourer's Gauntlet",
+      "pick_rate": 0.57,
+      "win_rate": 0.54
+     },
+     {
+      "alternates": [
+       {
+        "name": "Odysseus' Bow",
+        "pick_rate": 0.23,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Tyrfing",
+        "pick_rate": 0.08,
+        "win_rate": 0.56
+       }
+      ],
+      "name": "Dagger of Frenzy",
+      "pick_rate": 0.35,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "The Executioner",
+        "pick_rate": 0.13,
+        "win_rate": 0.61
+       },
+       {
+        "name": "Odysseus' Bow",
+        "pick_rate": 0.12,
+        "win_rate": 0.6
+       }
+      ],
+      "name": "Dominance",
+      "pick_rate": 0.19,
+      "win_rate": 0.55
+     },
+     {
+      "alternates": [
+       {
+        "name": "Silverbranch Bow",
+        "pick_rate": 0.19,
+        "win_rate": 0.59
+       },
+       {
+        "name": "Riptalon",
+        "pick_rate": 0.15,
+        "win_rate": 0.69
+       }
+      ],
+      "name": "The Executioner",
+      "pick_rate": 0.2,
+      "win_rate": 0.54
+     },
+     {
+      "alternates": [
+       {
+        "name": "Riptalon",
+        "pick_rate": 0.15,
+        "win_rate": 0.57
+       },
+       {
+        "name": "The Executioner",
+        "pick_rate": 0.1,
+        "win_rate": 0.49
+       }
+      ],
+      "name": "Silverbranch Bow",
+      "pick_rate": 0.16,
+      "win_rate": 0.71
+     },
+     {
+      "alternates": [
+       {
+        "name": "Manchu Bow",
+        "pick_rate": 0.08,
+        "win_rate": 0.44
+       },
+       {
+        "name": "Silverbranch Bow",
+        "pick_rate": 0.08,
+        "win_rate": 0.6
+       }
+      ],
+      "name": "Hunter's Bow",
+      "pick_rate": 0.1,
+      "win_rate": 0.51
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/artemis/",
+    "starter": {
+     "base": "Gilded Arrow",
+     "upgrade": "Sharpshooter's Arrow"
+    }
+   }
+  ]
+ },
+ "Atlas": {
+  "builds": [
+   {
+    "aspect": "Aspect of the Unburdened",
+    "aspect_pick_rate": 0.06,
+    "aspect_win_rate": 0.33,
+    "community_starters": [
+     {
+      "name": "Bumba's Hammer",
+      "pick_rate": 0.2,
+      "win_rate": 0.54
+     },
+     {
+      "name": "Bluestone Brooch",
+      "pick_rate": 0.17,
+      "win_rate": 0.47
+     },
+     {
+      "name": "Bumba's Cudgel",
+      "pick_rate": 0.17,
+      "win_rate": 0.44
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 453,
+    "god_matches_won": 202,
+    "god_win_rate": 0.445916114790287,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Gauntlet of Thebes",
+        "pick_rate": 0.18,
+        "win_rate": 0.53
+       },
+       {
+        "name": "Leviathan's Hide",
+        "pick_rate": 0.11,
+        "win_rate": 0.42
+       }
+      ],
+      "name": "Stampede",
+      "pick_rate": 0.23,
+      "win_rate": 0.42
+     },
+     {
+      "alternates": [
+       {
+        "name": "Stampede",
+        "pick_rate": 0.15,
+        "win_rate": 0.47
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.05,
+        "win_rate": 0.5
+       }
+      ],
+      "name": "Genji's Guard",
+      "pick_rate": 0.12,
+      "win_rate": 0.41
+     },
+     {
+      "alternates": [
+       {
+        "name": "Genji's Guard",
+        "pick_rate": 0.09,
+        "win_rate": 0.38
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.08,
+        "win_rate": 0.57
+       }
+      ],
+      "name": "Shell of Rebuke",
+      "pick_rate": 0.11,
+      "win_rate": 0.47
+     },
+     {
+      "alternates": [
+       {
+        "name": "Shell of Rebuke",
+        "pick_rate": 0.08,
+        "win_rate": 0.46
+       },
+       {
+        "name": "Genji's Guard",
+        "pick_rate": 0.07,
+        "win_rate": 0.43
+       }
+      ],
+      "name": "Freya's Tears",
+      "pick_rate": 0.15,
+      "win_rate": 0.48
+     },
+     {
+      "alternates": [
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.11,
+        "win_rate": 0.57
+       },
+       {
+        "name": "Shell of Rebuke",
+        "pick_rate": 0.06,
+        "win_rate": 0.48
+       }
+      ],
+      "name": "Sage's Ring",
+      "pick_rate": 0.04,
+      "win_rate": 0.25
+     },
+     {
+      "alternates": [
+       {
+        "name": "Sage's Ring",
+        "pick_rate": 0.04,
+        "win_rate": 0.45
+       },
+       {
+        "name": "Shell of Rebuke",
+        "pick_rate": 0.03,
+        "win_rate": 0.38
+       }
+      ],
+      "name": "Medal of Defense",
+      "pick_rate": 0.07,
+      "win_rate": 0.59
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/atlas/",
+    "starter": {
+     "base": "Warrior's Axe",
+     "upgrade": "Sundering Axe"
+    }
+   }
+  ]
+ },
+ "Bellona": {
+  "builds": [
+   {
+    "aspect": "Aspect of Vindication",
+    "aspect_pick_rate": 0.06,
+    "aspect_win_rate": 0.55,
+    "community_starters": [
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.38,
+      "win_rate": 0.64
+     },
+     {
+      "name": "Death's Embrace",
+      "pick_rate": 0.23,
+      "win_rate": 0.6
+     },
+     {
+      "name": "Leather Cowl",
+      "pick_rate": 0.18,
+      "win_rate": 0.44
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 655,
+    "god_matches_won": 354,
+    "god_win_rate": 0.5404580152671755,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Vital Amplifier",
+        "pick_rate": 0.07,
+        "win_rate": 0.49
+       },
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.05,
+        "win_rate": 0.44
+       }
+      ],
+      "name": "Devourer's Gauntlet",
+      "pick_rate": 0.74,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "Sanguine Lash",
+        "pick_rate": 0.21,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Shogun's Ofuda",
+        "pick_rate": 0.08,
+        "win_rate": 0.44
+       }
+      ],
+      "name": "Berserker's Shield",
+      "pick_rate": 0.48,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.21,
+        "win_rate": 0.57
+       },
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.13,
+        "win_rate": 0.47
+       }
+      ],
+      "name": "Sanguine Lash",
+      "pick_rate": 0.15,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "Shogun's Ofuda",
+        "pick_rate": 0.1,
+        "win_rate": 0.54
+       },
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.08,
+        "win_rate": 0.53
+       }
+      ],
+      "name": "Kinetic Cuirass",
+      "pick_rate": 0.21,
+      "win_rate": 0.53
+     },
+     {
+      "alternates": [
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.13,
+        "win_rate": 0.59
+       },
+       {
+        "name": "Shogun's Ofuda",
+        "pick_rate": 0.05,
+        "win_rate": 0.52
+       }
+      ],
+      "name": "Hussar's Wings",
+      "pick_rate": 0.07,
+      "win_rate": 0.77
+     },
+     {
+      "alternates": [
+       {
+        "name": "Hide of the Nemean Lion",
+        "pick_rate": 0.06,
+        "win_rate": 0.6
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.06,
+        "win_rate": 0.67
+       }
+      ],
+      "name": "Medal of Defense",
+      "pick_rate": 0.09,
+      "win_rate": 0.51
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/bellona/",
+    "starter": {
+     "base": "Warrior's Axe",
+     "upgrade": "Sundering Axe"
+    }
+   }
+  ]
+ },
+ "Cernunnos": {
+  "builds": [
+   {
+    "aspect": "Aspect of Strife",
+    "aspect_pick_rate": 0.53,
+    "aspect_win_rate": 0.61,
+    "community_starters": [
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.44,
+      "win_rate": 0.67
+     },
+     {
+      "name": "Leather Cowl",
+      "pick_rate": 0.23,
+      "win_rate": 0.5
+     },
+     {
+      "name": "Sharpshooter's Arrow",
+      "pick_rate": 0.15,
+      "win_rate": 0.57
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 1005,
+    "god_matches_won": 583,
+    "god_win_rate": 0.5800995024875621,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Tyrfing",
+        "pick_rate": 0.06,
+        "win_rate": 0.56
+       },
+       {
+        "name": "Transcendence",
+        "pick_rate": 0.01,
+        "win_rate": 0.64
+       }
+      ],
+      "name": "Devourer's Gauntlet",
+      "pick_rate": 0.86,
+      "win_rate": 0.59
+     },
+     {
+      "alternates": [
+       {
+        "name": "Vital Amplifier",
+        "pick_rate": 0.18,
+        "win_rate": 0.62
+       },
+       {
+        "name": "Tyrfing",
+        "pick_rate": 0.07,
+        "win_rate": 0.48
+       }
+      ],
+      "name": "Dagger of Frenzy",
+      "pick_rate": 0.38,
+      "win_rate": 0.59
+     },
+     {
+      "alternates": [
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.13,
+        "win_rate": 0.66
+       },
+       {
+        "name": "The Executioner",
+        "pick_rate": 0.12,
+        "win_rate": 0.55
+       }
+      ],
+      "name": "Riptalon",
+      "pick_rate": 0.17,
+      "win_rate": 0.6
+     },
+     {
+      "alternates": [
+       {
+        "name": "Riptalon",
+        "pick_rate": 0.26,
+        "win_rate": 0.59
+       },
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.08,
+        "win_rate": 0.64
+       }
+      ],
+      "name": "Dominance",
+      "pick_rate": 0.1,
+      "win_rate": 0.58
+     },
+     {
+      "alternates": [
+       {
+        "name": "Riptalon",
+        "pick_rate": 0.15,
+        "win_rate": 0.66
+       },
+       {
+        "name": "The Executioner",
+        "pick_rate": 0.07,
+        "win_rate": 0.63
+       }
+      ],
+      "name": "Silverbranch Bow",
+      "pick_rate": 0.07,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "Deathbringer",
+        "pick_rate": 0.06,
+        "win_rate": 0.64
+       },
+       {
+        "name": "Manchu Bow",
+        "pick_rate": 0.06,
+        "win_rate": 0.53
+       }
+      ],
+      "name": "Hunter's Bow",
+      "pick_rate": 0.07,
+      "win_rate": 0.55
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/cernunnos/",
+    "starter": {
+     "base": "Gilded Arrow",
+     "upgrade": "Sharpshooter's Arrow"
+    }
+   }
+  ]
+ },
+ "Chaac": {
+  "builds": [
+   {
+    "aspect": "Aspect of Fulmination",
+    "aspect_pick_rate": 0.21,
+    "aspect_win_rate": 0.35,
+    "community_starters": [
+     {
+      "name": "Bluestone Brooch",
+      "pick_rate": 0.44,
+      "win_rate": 0.48
+     },
+     {
+      "name": "Bluestone Pendant",
+      "pick_rate": 0.3,
+      "win_rate": 0.3
+     },
+     {
+      "name": "Bumba's Cudgel",
+      "pick_rate": 0.09,
+      "win_rate": 0.5
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 226,
+    "god_matches_won": 98,
+    "god_win_rate": 0.4336283185840708,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Devourer's Gauntlet",
+        "pick_rate": 0.17,
+        "win_rate": 0.36
+       },
+       {
+        "name": "Regrowth Striders",
+        "pick_rate": 0.07,
+        "win_rate": 0.56
+       }
+      ],
+      "name": "Bancroft's Talon",
+      "pick_rate": 0.21,
+      "win_rate": 0.44
+     },
+     {
+      "alternates": [
+       {
+        "name": "Genji's Guard",
+        "pick_rate": 0.11,
+        "win_rate": 0.4
+       },
+       {
+        "name": "Shifter's Shield",
+        "pick_rate": 0.09,
+        "win_rate": 0.35
+       }
+      ],
+      "name": "Breastplate of Valor",
+      "pick_rate": 0.19,
+      "win_rate": 0.43
+     },
+     {
+      "alternates": [
+       {
+        "name": "Genji's Guard",
+        "pick_rate": 0.16,
+        "win_rate": 0.44
+       },
+       {
+        "name": "Breastplate of Valor",
+        "pick_rate": 0.05,
+        "win_rate": 0.42
+       }
+      ],
+      "name": "Freya's Tears",
+      "pick_rate": 0.21,
+      "win_rate": 0.46
+     },
+     {
+      "alternates": [
+       {
+        "name": "Gem of Focus",
+        "pick_rate": 0.1,
+        "win_rate": 0.45
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.1,
+        "win_rate": 0.4
+       }
+      ],
+      "name": "Genji's Guard",
+      "pick_rate": 0.1,
+      "win_rate": 0.57
+     },
+     {
+      "alternates": [
+       {
+        "name": "Genji's Guard",
+        "pick_rate": 0.11,
+        "win_rate": 0.52
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.07,
+        "win_rate": 0.5
+       }
+      ],
+      "name": "Shell of Rebuke",
+      "pick_rate": 0.04,
+      "win_rate": 0.71
+     },
+     {
+      "alternates": [
+       {
+        "name": "Sundering Echo",
+        "pick_rate": 0.05,
+        "win_rate": 0.43
+       },
+       {
+        "name": "Engraved Guard",
+        "pick_rate": 0.05,
+        "win_rate": 0.43
+       }
+      ],
+      "name": "Soul Reaver",
+      "pick_rate": 0.07,
+      "win_rate": 0.6
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/chaac/",
+    "starter": {
+     "base": "Warrior's Axe",
+     "upgrade": "Sundering Axe"
+    }
+   }
+  ]
+ },
+ "Fenrir": {
+  "builds": [
+   {
+    "aspect": "Aspect of Loyalty",
+    "aspect_pick_rate": 0.07,
+    "aspect_win_rate": 0.58,
+    "community_starters": [
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.24,
+      "win_rate": 0.61
+     },
+     {
+      "name": "Bumba's Hammer",
+      "pick_rate": 0.19,
+      "win_rate": 0.56
+     },
+     {
+      "name": "Death's Embrace",
+      "pick_rate": 0.14,
+      "win_rate": 0.65
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 523,
+    "god_matches_won": 281,
+    "god_win_rate": 0.5372848948374761,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Tyrfing",
+        "pick_rate": 0.21,
+        "win_rate": 0.51
+       },
+       {
+        "name": "Devourer's Gauntlet",
+        "pick_rate": 0.19,
+        "win_rate": 0.49
+       }
+      ],
+      "name": "Jotunn's Revenge",
+      "pick_rate": 0.33,
+      "win_rate": 0.54
+     },
+     {
+      "alternates": [
+       {
+        "name": "Shifter's Shield",
+        "pick_rate": 0.1,
+        "win_rate": 0.6
+       },
+       {
+        "name": "Hydra's Lament",
+        "pick_rate": 0.09,
+        "win_rate": 0.42
+       }
+      ],
+      "name": "Bragi's Harp",
+      "pick_rate": 0.16,
+      "win_rate": 0.56
+     },
+     {
+      "alternates": [
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.1,
+        "win_rate": 0.56
+       },
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.06,
+        "win_rate": 0.58
+       }
+      ],
+      "name": "Berserker's Shield",
+      "pick_rate": 0.11,
+      "win_rate": 0.52
+     },
+     {
+      "alternates": [
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.08,
+        "win_rate": 0.56
+       },
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.07,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Sundering Echo",
+      "pick_rate": 0.11,
+      "win_rate": 0.53
+     },
+     {
+      "alternates": [
+       {
+        "name": "Hide of the Nemean Lion",
+        "pick_rate": 0.07,
+        "win_rate": 0.77
+       },
+       {
+        "name": "Sundering Echo",
+        "pick_rate": 0.06,
+        "win_rate": 0.61
+       }
+      ],
+      "name": "Brawler\u2019s Beat Stick",
+      "pick_rate": 0.07,
+      "win_rate": 0.58
+     },
+     {
+      "alternates": [
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.05,
+        "win_rate": 0.65
+       },
+       {
+        "name": "Brawler\u2019s Beat Stick",
+        "pick_rate": 0.05,
+        "win_rate": 0.88
+       }
+      ],
+      "name": "Hide of the Nemean Lion",
+      "pick_rate": 0.06,
+      "win_rate": 0.65
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/fenrir/",
+    "starter": {
+     "base": "Bumba's Golden Dagger",
+     "upgrade": "Bumba's Spear"
+    }
+   }
+  ]
+ },
+ "Thanatos": {
+  "builds": [
+   {
+    "aspect": "Aspect of Reaping",
+    "aspect_pick_rate": 0.25,
+    "aspect_win_rate": 0.64,
+    "community_starters": [
+     {
+      "name": "Bumba's Hammer",
+      "pick_rate": 0.36,
+      "win_rate": 0.6
+     },
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.22,
+      "win_rate": 0.6
+     },
+     {
+      "name": "Bumba's Cudgel",
+      "pick_rate": 0.18,
+      "win_rate": 0.49
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 941,
+    "god_matches_won": 523,
+    "god_win_rate": 0.5557917109458024,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Hydra's Lament",
+        "pick_rate": 0.18,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Devourer's Gauntlet",
+        "pick_rate": 0.06,
+        "win_rate": 0.52
+       }
+      ],
+      "name": "Jotunn's Revenge",
+      "pick_rate": 0.63,
+      "win_rate": 0.56
+     },
+     {
+      "alternates": [
+       {
+        "name": "Jotunn's Revenge",
+        "pick_rate": 0.17,
+        "win_rate": 0.53
+       },
+       {
+        "name": "The Reaper",
+        "pick_rate": 0.15,
+        "win_rate": 0.67
+       }
+      ],
+      "name": "Hydra's Lament",
+      "pick_rate": 0.43,
+      "win_rate": 0.53
+     },
+     {
+      "alternates": [
+       {
+        "name": "Hydra's Lament",
+        "pick_rate": 0.12,
+        "win_rate": 0.64
+       },
+       {
+        "name": "The Crusher",
+        "pick_rate": 0.06,
+        "win_rate": 0.52
+       }
+      ],
+      "name": "The Reaper",
+      "pick_rate": 0.36,
+      "win_rate": 0.55
+     },
+     {
+      "alternates": [
+       {
+        "name": "Blinking Abyss",
+        "pick_rate": 0.08,
+        "win_rate": 0.52
+       },
+       {
+        "name": "The Reaper",
+        "pick_rate": 0.07,
+        "win_rate": 0.54
+       }
+      ],
+      "name": "Heartseeker",
+      "pick_rate": 0.31,
+      "win_rate": 0.56
+     },
+     {
+      "alternates": [
+       {
+        "name": "Heartseeker",
+        "pick_rate": 0.15,
+        "win_rate": 0.55
+       },
+       {
+        "name": "Blinking Abyss",
+        "pick_rate": 0.08,
+        "win_rate": 0.53
+       }
+      ],
+      "name": "Titan's Bane",
+      "pick_rate": 0.11,
+      "win_rate": 0.7
+     },
+     {
+      "alternates": [
+       {
+        "name": "Avatar's Parashu",
+        "pick_rate": 0.09,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Blinking Abyss",
+        "pick_rate": 0.08,
+        "win_rate": 0.65
+       }
+      ],
+      "name": "Skeggox",
+      "pick_rate": 0.11,
+      "win_rate": 0.61
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/thanatos/",
+    "starter": {
+     "base": "Bumba's Golden Dagger",
+     "upgrade": "Bumba's Spear"
+    }
+   }
+  ]
+ },
+ "Ymir": {
+  "builds": [
+   {
+    "aspect": null,
+    "aspect_pick_rate": null,
+    "aspect_win_rate": null,
+    "community_starters": [
+     {
+      "name": "Hunter's Cowl",
+      "pick_rate": 0.26,
+      "win_rate": 0.66
+     },
+     {
+      "name": "Leather Cowl",
+      "pick_rate": 0.25,
+      "win_rate": 0.49
+     },
+     {
+      "name": "Warrior's Axe",
+      "pick_rate": 0.1,
+      "win_rate": 0.58
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 1281,
+    "god_matches_won": 741,
+    "god_win_rate": 0.5784543325526932,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Devourer's Gauntlet",
+        "pick_rate": 0.17,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Avenging Blade",
+        "pick_rate": 0.12,
+        "win_rate": 0.52
+       }
+      ],
+      "name": "Gauntlet of Thebes",
+      "pick_rate": 0.18,
+      "win_rate": 0.61
+     },
+     {
+      "alternates": [
+       {
+        "name": "Stampede",
+        "pick_rate": 0.15,
+        "win_rate": 0.6
+       },
+       {
+        "name": "Shifter's Shield",
+        "pick_rate": 0.08,
+        "win_rate": 0.51
+       }
+      ],
+      "name": "Berserker's Shield",
+      "pick_rate": 0.22,
+      "win_rate": 0.6
+     },
+     {
+      "alternates": [
+       {
+        "name": "Shell of Rebuke",
+        "pick_rate": 0.09,
+        "win_rate": 0.6
+       },
+       {
+        "name": "Berserker's Shield",
+        "pick_rate": 0.09,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Kinetic Cuirass",
+      "pick_rate": 0.1,
+      "win_rate": 0.59
+     },
+     {
+      "alternates": [
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.1,
+        "win_rate": 0.67
+       },
+       {
+        "name": "Shell of Rebuke",
+        "pick_rate": 0.08,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Freya's Tears",
+      "pick_rate": 0.12,
+      "win_rate": 0.6
+     },
+     {
+      "alternates": [
+       {
+        "name": "Freya's Tears",
+        "pick_rate": 0.09,
+        "win_rate": 0.63
+       },
+       {
+        "name": "Kinetic Cuirass",
+        "pick_rate": 0.05,
+        "win_rate": 0.6
+       }
+      ],
+      "name": "Hussar's Wings",
+      "pick_rate": 0.05,
+      "win_rate": 0.72
+     },
+     {
+      "alternates": [
+       {
+        "name": "Sage's Ring",
+        "pick_rate": 0.06,
+        "win_rate": 0.67
+       },
+       {
+        "name": "Veve Charm",
+        "pick_rate": 0.06,
+        "win_rate": 0.71
+       }
+      ],
+      "name": "Medal of Defense",
+      "pick_rate": 0.08,
+      "win_rate": 0.61
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/ymir/",
+    "starter": {
+     "base": "Warrior's Axe",
+     "upgrade": "Sundering Axe"
+    }
+   }
+  ]
+ },
+ "Zeus": {
+  "builds": [
+   {
+    "aspect": null,
+    "aspect_pick_rate": null,
+    "aspect_win_rate": null,
+    "community_starters": [
+     {
+      "name": "Pendulum of the Ages",
+      "pick_rate": 0.24,
+      "win_rate": 0.56
+     },
+     {
+      "name": "Archmage's Gem",
+      "pick_rate": 0.18,
+      "win_rate": 0.66
+     },
+     {
+      "name": "Sands Of Time",
+      "pick_rate": 0.1,
+      "win_rate": 0.45
+     }
+    ],
+    "god_division": "obsidian",
+    "god_matches_analyzed": 14484,
+    "god_matches_played": 633,
+    "god_matches_won": 356,
+    "god_win_rate": 0.5624012638230648,
+    "god_window_end": "2026-11-02",
+    "god_window_start": "2026-10-20",
+    "last_verified": "2026-11-03",
+    "slot_order": [
+     {
+      "alternates": [
+       {
+        "name": "Bancroft's Talon",
+        "pick_rate": 0.14,
+        "win_rate": 0.56
+       },
+       {
+        "name": "Book of Thoth",
+        "pick_rate": 0.12,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Spear of Desolation",
+      "pick_rate": 0.34,
+      "win_rate": 0.55
+     },
+     {
+      "alternates": [
+       {
+        "name": "Spear of Desolation",
+        "pick_rate": 0.11,
+        "win_rate": 0.54
+       },
+       {
+        "name": "Gem of Focus",
+        "pick_rate": 0.06,
+        "win_rate": 0.58
+       }
+      ],
+      "name": "The World Stone",
+      "pick_rate": 0.11,
+      "win_rate": 0.59
+     },
+     {
+      "alternates": [
+       {
+        "name": "Soul Gem",
+        "pick_rate": 0.07,
+        "win_rate": 0.63
+       },
+       {
+        "name": "Breastplate of Valor",
+        "pick_rate": 0.06,
+        "win_rate": 0.62
+       }
+      ],
+      "name": "Rod of Tahuti",
+      "pick_rate": 0.19,
+      "win_rate": 0.55
+     },
+     {
+      "alternates": [
+       {
+        "name": "Rod of Tahuti",
+        "pick_rate": 0.22,
+        "win_rate": 0.58
+       },
+       {
+        "name": "Blinking Abyss",
+        "pick_rate": 0.07,
+        "win_rate": 0.51
+       }
+      ],
+      "name": "Obsidian Shard",
+      "pick_rate": 0.1,
+      "win_rate": 0.5
+     },
+     {
+      "alternates": [
+       {
+        "name": "Rod of Tahuti",
+        "pick_rate": 0.16,
+        "win_rate": 0.63
+       },
+       {
+        "name": "Obsidian Shard",
+        "pick_rate": 0.13,
+        "win_rate": 0.59
+       }
+      ],
+      "name": "Evil Eye",
+      "pick_rate": 0.05,
+      "win_rate": 0.52
+     },
+     {
+      "alternates": [
+       {
+        "name": "Obsidian Shard",
+        "pick_rate": 0.06,
+        "win_rate": 0.76
+       },
+       {
+        "name": "Evil Eye",
+        "pick_rate": 0.06,
+        "win_rate": 0.48
+       }
+      ],
+      "name": "Blinking Abyss",
+      "pick_rate": 0.06,
+      "win_rate": 0.65
+     }
+    ],
+    "source": "community",
+    "source_url": "https://smitebrain.com/gods/zeus/",
+    "starter": {
+     "base": "Conduit Gem",
+     "upgrade": "Archmage's Gem"
+    }
+   }
+  ]
+ }
+}
