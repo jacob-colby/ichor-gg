@@ -31,11 +31,16 @@
       "kind": "item",
       "date": "2026-11-02",
       "passive": "uncatalogued"
+    },
+    {
+      "name": "Nox",
+      "kind": "god",
+      "date": "2026-11-04"
     }
   ],
   "last_run": {
-    "date": "2026-11-03",
-    "status": "nothing-new",
+    "date": "2026-11-04",
+    "status": "added",
     "excluded": [],
     "skipped": [
       {
@@ -47,11 +52,6 @@
         "name": "Heimdallr",
         "kind": "god",
         "why": "no page yet (HTTP 404)"
-      },
-      {
-        "name": "Nox",
-        "kind": "god",
-        "why": "incomplete: base stats read as zero (a placeholder page): ['health', 'attack_speed', 'attack_power', 'move_speed']"
       },
       {
         "name": "Maman Brigitte",

@@ -74,6 +74,7 @@
     "Neith": 0.584412,
     "Nemesis": 0.240173,
     "Nike": 0.698486,
+    "Nox": 0.782532,
     "Nu Wa": null,
     "Nut": 0.305176,
     "Odin": 0.627014,
@@ -105,7 +106,7 @@
     "Zeus": 0.750305
    },
    "holding": 34,
-   "seats": 101,
+   "seats": 102,
    "share": 0.589233,
    "target": 34,
    "team_size": 3
