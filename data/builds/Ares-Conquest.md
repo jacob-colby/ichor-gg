@@ -267,8 +267,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Rod of Tahuti, Gluttonous Grimoire, Jotunn''s Revenge, Soul Gem,
     Amanita Charm, Stone of Binding, Screeching Gargoyle, Kinetic Cuirass, Berserker''s
@@ -278,7 +278,7 @@ builds:
     Crusher, Doom Orb, Helm of Radiance, Shield of the Phoenix, Runeforged Hammer,
     The World Stone, Helm of Darkness, Heartseeker, Midgardian Mail, Magi''s Cloak,
     Mantle Of Discord, Leviathan''s Hide, Hydra''s Lament, Dreamer''s Idol, Shifter''s
-    Shield, Blood-Bound Book, Ancile.'
+    Shield, Blood-Bound Book, Toxic Blade.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.55
@@ -466,6 +466,81 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.59
+  community_ordered:
+  - Genji's Guard
+  starter: *id001
+- source: suggested
+  archetype: strength
+  slot_order:
+  - Genji's Guard
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Amanita Charm
+  flex_slots:
+  - Shield Splitter
+  - Kinetic Cuirass
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
+    win/pick). Underrated for this god: Rod of Tahuti, Berserker''s Shield, Jotunn''s
+    Revenge, Amanita Charm, Shield Splitter, Gluttonous Grimoire, Kinetic Cuirass,
+    Soul Gem, Runeforged Hammer, The Reaper, Tekko-Kagi, Golden Blade, Titan''s Bane,
+    Breastplate of Valor, Hydra''s Lament, Draconic Scale, Nimble Ring, Spear of Desolation,
+    Tyrfing, Obsidian Shard, The Crusher, Oni Hunter''s Garb, Lernaean Bow, Erosion,
+    Avenging Blade, Helm of Radiance, Eye of Providence, Heartseeker, Stone of Binding,
+    Shield of the Phoenix, Arondight, Toxic Blade, Midgardian Mail, Helm of Darkness,
+    Magi''s Cloak, Screeching Gargoyle, Silverbranch Bow, Spear of the Magus, Death
+    Metal, Pharaoh''s Curse.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.69
+      win: 0.61
+      pick: 0.2
+      fit: 0.22
+    Berserker's Shield:
+      total: 0.59
+      efficiency: 0.74
+      win: 0.61
+      pick: 0.0
+      fit: 0.33
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.67
+      win: 0.61
+      pick: 0.0
+      fit: 0.43
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.61
+      pick: 0.0
+      fit: 0.49
+    Shield Splitter:
+      total: 0.56
+      efficiency: 0.59
+      win: 0.61
+      pick: 0.0
+      fit: 0.48
+    Amanita Charm:
+      total: 0.56
+      efficiency: 0.65
+      win: 0.61
+      pick: 0.0
+      fit: 0.39
   community_ordered:
   - Genji's Guard
   starter: *id001

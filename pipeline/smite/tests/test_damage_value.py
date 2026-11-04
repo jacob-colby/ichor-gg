@@ -57,6 +57,58 @@ def test_only_abilities_with_both_a_rank_and_a_scaling_line_count():
     assert [c["name"] for c in parsed] == ["both"]
 
 
+_LABELLED_KIT = {"abilities": [
+    {"slot": "1st Ability", "name": "chain",
+     "details": ["Initial Damage: 40 | 140", "Initial Damage Scaling: 25% Strength",
+                 "Damage Per Tick: 20 | 100", "Damage Scaling Per Tick: 15% Intelligence"]},
+    {"slot": "3rd Ability", "name": "channel",
+     "details": ["Damage Per Tick: 20 | 40", "Damage Scaling Per Tick: 7% Intelligence",
+                 "Bonus Damage Scaling: 1 | 3% Enemy Max Health",
+                 "Minion Damage Per Tick: 20 | 40",
+                 "Minion Damage Scaling Per Tick: 7% Intelligence"]},
+    {"slot": "Ultimate", "name": "ult",
+     "details": ["Initial Damage: 80 | 200",
+                 "Initial Damage Scaling: 20% Intelligence + 30% Strength",
+                 "Final Damage: 250 | 550",
+                 "Final Damage Scaling: 50% Intelligence + 55% Strength"]},
+    {"slot": "2nd Ability", "name": "unpaired",
+     "details": ["Slam Damage: 100", "Dash Damage Scaling: 50% Strength"]},
+]}
+
+
+def test_a_kit_with_only_labelled_lines_reads_each_rank_with_its_own_scaling():
+    """Ares's shape (model audit finding 5): no line reads `Damage Scaling:`,
+    so the strict rule found nothing and every ability-hit passive was dead.
+    The fallback pairs by LABEL — never position — and takes the first pair."""
+    parsed = {c["name"]: c for c in dv.ability_damage_components(_LABELLED_KIT)}
+    assert set(parsed) == {"chain", "channel", "ult"}   # "unpaired" has no matching label
+    assert parsed["chain"]["ranks"] == [40.0, 140.0]
+    assert parsed["chain"]["scaling"] == {"Strength": 0.25}
+    assert parsed["channel"]["scaling"] == {"Intelligence": 0.07}
+    assert parsed["ult"]["ranks"][-1] == 200.0
+    assert parsed["ult"]["is_ultimate"]
+
+
+def test_the_label_fallback_never_touches_a_kit_the_strict_rule_reads():
+    """One strict ability is enough to switch the fallback off for the whole
+    kit, so the 48 gods that parse SOMETHING are exactly as they were — that
+    wider change is its own model change (STATE.md §5)."""
+    kit_ = {"abilities": _LABELLED_KIT["abilities"] + [
+        {"slot": "Passive", "name": "strict",
+         "details": ["Damage: 10 | 20", "Damage Scaling: 10% Strength"]}]}
+    assert [c["name"] for c in dv.ability_damage_components(kit_)] == ["strict"]
+
+
+def test_no_god_on_the_live_roster_parses_zero_damaging_abilities():
+    """Ares was the one (PR #96 coverage: `no_damage_rotation`). A new kit
+    the fallback cannot read either is news, and fails here."""
+    from smite.manage_gods import GODS_ROOT
+    gods = [notes.read_note(p)[0] for p in sorted(GODS_ROOT.glob("*.md"))]
+    empty = [g["name"] for g in gods
+             if g.get("abilities") and not dv.ability_damage_components(g)]
+    assert empty == []
+
+
 def test_the_basic_attack_is_counted_at_the_chains_mean_swing():
     """The chain multipliers apply to swing TIME as well as damage, so the mean
     is the honest per-swing figure — taking the first hit would undercount a

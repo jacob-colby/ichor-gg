@@ -99,6 +99,25 @@ def ability_damage_components(god):
     with no scaling would look like a flat nuke no stat improves, which would
     drag the god's valuation toward zero for reasons that are an artefact of
     the scrape rather than the kit.
+
+    THE STRICT RULE, AND THE ONE FALLBACK. The scaling line must read
+    `Damage Scaling:` exactly. A kit whose every damage line is LABELLED —
+    `Initial Damage Scaling:`, `Damage Scaling Per Tick:`, `Final Damage
+    Scaling:` — parses to nothing at all, and every ability-hit passive on that
+    god is then dead in the clock. Ares was that god (model audit, PR #96,
+    finding 5): 0 abilities, 3 recommended items whose passive never fired, all
+    3 side-by-sides on basic attacks alone. So when the strict rule finds
+    NOTHING, `_label_paired_components` reads each labelled rank line with its
+    own labelled scaling line instead. It fires on zero-component kits only —
+    on the 2026-11-04 roster that is Ares and no one else — and changes no
+    ability the strict rule already reads.
+
+    Why not everywhere: the same label rule drops 70 more abilities on 48 gods
+    that DO parse something (Medusa's Viper Shot, `Damage Scaling Per Tick:`,
+    is the worked example `build_quality` was hand-computed against). Reading
+    them moves `stat_weights` on all 48 and `requires_scaling` flavor
+    eligibility on 8, and re-adjudicates that pinned example. That is a model
+    change with its own measurement, recorded in STATE.md §5, not a parse fix.
     """
     out = []
     for ability in god.get("abilities") or []:
@@ -119,6 +138,47 @@ def ability_damage_components(god):
                         "scaling": scaling,
                         "damage_type": ability.get("damage_type"),
                         "is_ultimate": "Ultimate" in slot})
+    return out or _label_paired_components(god)
+
+
+def _label_paired_components(god):
+    """The fallback for a kit the strict rule reads nothing from: each ability's
+    FIRST labelled rank line (`Initial Damage: ...`, `Damage Per Tick: ...`)
+    paired with the scaling line carrying the same label (`Initial Damage
+    Scaling:`, `Damage Scaling Per Tick:`). Pairing by label, never by
+    position, so a `Minion Damage Scaling` or `% Enemy Max Health` line can
+    never be read as the god's ratio. First line, as the strict rule takes the
+    first: on Ares's ultimate that is the 200 initial hit and not the 550
+    final one, an undercount in the same direction as the rule's DoT limit."""
+    out = []
+    for ability in god.get("abilities") or []:
+        slot = ability.get("slot") or ""
+        if "Basic Attack" in slot:
+            continue
+        details = [line.strip() for line in ability.get("details") or []]
+        scalings = {}
+        for line in details:
+            label, _, rest = line.partition(":")
+            if label.endswith("Scaling") or "Scaling Per" in label:
+                found = {stat: float(pct) / 100 for pct, stat in _SCALING.findall(rest)}
+                if found:
+                    scalings.setdefault(label.strip(), found)
+        for line in details:
+            match = _RANKS.match(line)
+            label = line.partition(":")[0].strip()
+            if not match or "Scaling" in label:
+                continue
+            wanted = [label + " Scaling"]
+            if label.endswith(" Per Tick"):
+                wanted.append(label[:-len(" Per Tick")] + " Scaling Per Tick")
+            scaling = next((scalings[w] for w in wanted if w in scalings), None)
+            if scaling:
+                out.append({"name": ability.get("name"),
+                            "ranks": [float(x) for x in match.group(1).split("|")],
+                            "scaling": scaling,
+                            "damage_type": ability.get("damage_type"),
+                            "is_ultimate": "Ultimate" in slot})
+                break
     return out
 
 
