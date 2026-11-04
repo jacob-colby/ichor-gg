@@ -464,14 +464,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lernaean Bow
-  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Pendulum Blade
   flex_slots:
   - Pendulum Blade
-  - Toxic Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -483,8 +483,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Toxic Blade:
-      total: 0.42
-      efficiency: 0.34
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Chandra's Grace:
       total: 0.48
       efficiency: 0.43
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Transcendence:
+      total: 0.31
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.08
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56

@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - Tyrfing
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -110,12 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.49
-      efficiency: 0.5
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.24
     Hydra's Lament:
       total: 0.49
       efficiency: 0.56
@@ -1058,12 +1058,12 @@ builds:
   - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Pendulum Blade
-  - Titan's Bane
   flex_slots:
   - Toxic Blade
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1098,6 +1098,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Transcendence:
+      total: 0.31
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.1
     Hydra's Lament:
       total: 0.54
       efficiency: 0.56
@@ -1110,12 +1116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Titan's Bane:
-      total: 0.44
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
   starter: *id001
   aspect: Aspect of the Heroic Tutor
 - source: suggested

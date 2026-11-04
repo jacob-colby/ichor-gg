@@ -104,15 +104,33 @@ def test_split_metrics_partitions_the_gods():
     assert m["heldout"]["gods"] == 2
 
 
-def test_heldout_report_flags_a_lower_heldout_score():
+def test_heldout_report_grades_a_drop_against_the_one_point_tolerance():
+    """Jacob, 2026-11-03: up to 1 point lower on either held-out metric merges
+    if the PR explains it; more blocks. A tuning-half drop is never judged."""
     head = {"tuning": {"gods": 1, "win_weighted": .5, "spearman": .3, "coverage": .5},
             "heldout": {"gods": 1, "win_weighted": .4, "spearman": .3, "coverage": .4}}
     base = copy.deepcopy(head)
-    _, ok = ma.heldout_report(head, base)
-    assert ok
-    base["heldout"]["win_weighted"] = 0.41
-    _, ok = ma.heldout_report(head, base)
-    assert not ok
+    assert ma.heldout_report(head, base)[1] == ma.PASS
+    base["tuning"]["win_weighted"] = 0.6
+    assert ma.heldout_report(head, base)[1] == ma.PASS
+    base["heldout"]["win_weighted"] = 0.41          # exactly one point lower
+    lines, outcome = ma.heldout_report(head, base)
+    assert outcome == ma.EXPLAIN and "within 1 point" in lines[-1]
+    base["heldout"]["win_weighted"] = 0.4101
+    assert ma.heldout_report(head, base)[1] == ma.FAIL
+    base["heldout"]["win_weighted"] = 0.4
+    base["heldout"]["spearman"] = 0.32               # Spearman alone can block
+    assert ma.heldout_report(head, base)[1] == ma.FAIL
+    base["heldout"]["spearman"] = 0.305
+    assert ma.heldout_report(head, base)[1] == ma.EXPLAIN
+    assert ma.heldout_report(head)[1] == ma.PASS    # no base, no delta to judge
+
+
+def test_heldout_outcome_takes_the_worse_metric_and_tolerates_a_missing_spearman():
+    assert ma.heldout_outcome(+0.02, -0.005) == ma.EXPLAIN
+    assert ma.heldout_outcome(-0.005, -0.02) == ma.FAIL
+    assert ma.heldout_outcome(0.0, None) == ma.PASS
+    assert ma.heldout_outcome(-0.011, None) == ma.FAIL
 
 
 # ── 3. Passive firing ────────────────────────────────────────────────────
@@ -309,6 +327,31 @@ def test_modes_differ_only_through_mode_rules(frozen, weights, tags_map):
                                                              stripped, tags_map, m)
                         for m in ma.MODES}
         assert per_mode["Conquest"] == per_mode["Joust"] == per_mode["Arena"], god
+
+
+def test_a_mode_that_sets_every_signal_ignores_the_base_signals(frozen, weights, tags_map):
+    """Joust and Arena override all four signals, so the base `signals` block
+    (Conquest's) must not reach them by ANY path. The strip-modes test above
+    cannot see a leak from the base weights — it deletes the modes, not the
+    base — and one shipped: `assemble.conversion_args` / `overflow_args` read
+    base efficiency (0.35) in place of the mode's 0.5 (PR #96, finding 4).
+    Perturbing the base must leave those modes' builds exactly as they were."""
+    full = {m for m in ("joust", "arena")
+            if set((weights["modes"][m] or {}).get("signals") or {}) >= set(weights["signals"])}
+    assert full == {"joust", "arena"}, "the premise moved: a mode no longer sets every signal"
+    moved = copy.deepcopy(weights)
+    moved["signals"] = {k: (v * 3.0 if k == "efficiency" else v * 0.5)
+                        for k, v in weights["signals"].items()}
+    for god in ma.reference_names():
+        g = frozen["gods"][god]
+        for mode in ("Joust", "Arena"):
+            with ma.pricing(weights):
+                a = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                      weights, tags_map, mode)
+            with ma.pricing(moved):
+                b = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                      moved, tags_map, mode)
+            assert a == b, (god, mode)
 
 
 def test_the_mode_rules_do_change_builds(snapshot):

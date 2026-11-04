@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
   - Obsidian Shard
-  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Heartseeker
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -553,6 +553,12 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Jotunn's Revenge:
       total: 0.68
       efficiency: 0.67
@@ -571,12 +577,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86

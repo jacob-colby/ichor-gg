@@ -110,8 +110,8 @@ def _model_and_core(god, items, god_build, weights, tags_map, mode, eff, items_b
         stat_caps=weights.get("stat_caps"),
         economy=profile.get("economy"),
         **assemble.coherence_args(items, weights),
-        **assemble.conversion_args(weights, eff, gold_values),
-        **assemble.overflow_args(weights, eff, gold_values))
+        **assemble.conversion_args(weights, eff, gold_values, signals=profile["signals"]),
+        **assemble.overflow_args(weights, eff, gold_values, signals=profile["signals"]))
     core, _ = assemble.assemble_core_converged(rows, items_by_name, **shared)
     model_rows = sorted(rows, key=lambda r: (-r["quality"], r["item"]))
     model, _ = assemble.assemble_core_converged(model_rows, items_by_name,

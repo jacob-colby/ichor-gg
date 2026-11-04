@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
@@ -14,7 +14,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -31,12 +31,12 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.63
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.41
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
-  - Death Metal
+  - Book of Thoth
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Doom Orb
   - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Death Metal:
-      total: 0.56
-      efficiency: 0.54
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.39
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
@@ -463,7 +463,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
@@ -471,7 +471,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -488,12 +488,12 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.63
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.41
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
@@ -595,14 +595,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
+  - Book of Thoth
   - Doom Orb
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Lotus Sickle
   - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -625,6 +625,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Book of Thoth:
+      total: 0.41
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.32
     Doom Orb:
       total: 0.5
       efficiency: 0.53
@@ -637,12 +643,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Eros' Bow:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Soul Gem:
       total: 0.76
       efficiency: 0.53

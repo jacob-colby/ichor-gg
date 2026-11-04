@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Dominance
   - The Reaper
   - Heartseeker
   flex_slots:
   - Dominance
-  - Lernaean Bow
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.47
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Hydra's Lament:
       total: 0.49
       efficiency: 0.56
@@ -401,12 +401,12 @@ builds:
   - Lernaean Bow
   - Chandra's Grace
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Dominance
-  - Demon Blade
   flex_slots:
   - Dominance
-  - Demon Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -441,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Transcendence:
+      total: 0.31
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.09
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
@@ -453,12 +459,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Demon Blade:
-      total: 0.43
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
   starter: *id001
 - source: suggested
   archetype: model

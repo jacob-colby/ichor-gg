@@ -16,9 +16,7 @@
  "data_patch": "items/gods Open Beta 47, community window Open Beta 47",
  "generated_by": "python -m smite.model_audit coverage",
  "gods": {
-  "no_damage_rotation": [
-   "Ares"
-  ],
+  "no_damage_rotation": [],
   "self_heal_gods": [
    "Achilles",
    "Amaterasu",
@@ -56,7 +54,7 @@
   ],
   "self_heals_simulated": 33,
   "tracked": 94,
-  "whole_rotation_simulated": 84
+  "whole_rotation_simulated": 85
  },
  "items": {
   "buildable": 140,

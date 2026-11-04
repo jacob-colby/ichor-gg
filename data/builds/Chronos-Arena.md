@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Bancroft's Talon
+  - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Obsidian Shard
   - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -110,6 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Book of Thoth:
+      total: 0.39
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -122,12 +128,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Obsidian Shard:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
@@ -1054,14 +1054,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Screeching Gargoyle
   - Lotus Sickle
   - Genji's Guard
   - Spear of Desolation
-  - Rod of Tahuti
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Genji's Guard
+  - Screeching Gargoyle
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1079,6 +1079,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Lotus Sickle:
       total: 0.48
       efficiency: 0.57
@@ -1097,12 +1103,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Eros' Bow:
       total: 0.59
       efficiency: 0.53

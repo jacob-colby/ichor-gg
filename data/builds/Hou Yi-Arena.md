@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Hydra's Lament
   - Death Metal
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Rod of Tahuti
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,6 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Lernaean Bow:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Rod of Tahuti:
-      total: 0.5
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.13
     Soul Gem:
       total: 0.72
       efficiency: 0.57

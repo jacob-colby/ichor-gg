@@ -467,11 +467,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Bragi's Harp
-  - Rod of Tahuti
+  - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Toxic Blade
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -512,12 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+    Titan's Bane:
+      total: 0.57
+      efficiency: 0.54
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.59
     Soul Gem:
       total: 0.77
       efficiency: 0.57

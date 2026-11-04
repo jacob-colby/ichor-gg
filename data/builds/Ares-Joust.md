@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Stone of Binding
-  - Jotunn's Revenge
+  - Toxic Blade
   - Void Shield
   - Void Stone
   - Soul Gem
   flex_slots:
   - Screeching Gargoyle
-  - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -175,12 +175,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.67
+    Toxic Blade:
+      total: 0.57
+      efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.73
     Void Shield:
       total: 0.59
       efficiency: 0.46
@@ -329,6 +329,71 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+  starter: *id001
+- source: suggested
+  archetype: strength
+  slot_order:
+  - Toxic Blade
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Amanita Charm
+  flex_slots:
+  - Berserker's Shield
+  - Kinetic Cuirass
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
+    — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Berserker's Shield:
+      total: 0.54
+      efficiency: 0.74
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Shield Splitter:
+      total: 0.54
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Amanita Charm:
+      total: 0.66
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: model

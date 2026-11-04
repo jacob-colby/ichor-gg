@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Magi's Cloak
   - Shield Splitter
+  - Transcendence
   - Rod of Tahuti
   flex_slots:
-  - Kinetic Cuirass
-  - Magi's Cloak
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,30 +104,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Book of Thoth:
+      total: 0.36
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.23
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Magi's Cloak:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Shield Splitter:
       total: 0.5
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.41
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.23
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -141,12 +141,12 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Magi's Cloak
+  - Shield Splitter
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Magi's Cloak
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Shield Splitter:
+      total: 0.49
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Spear of Desolation:
       total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
     Soul Gem:
       total: 0.72
       efficiency: 0.57

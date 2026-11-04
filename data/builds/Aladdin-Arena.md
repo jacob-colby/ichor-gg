@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Pendulum Blade
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -37,18 +37,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Pendulum Blade:
       total: 0.65
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.9
-    The Crusher:
-      total: 0.64
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Titan's Bane:
       total: 0.66
       efficiency: 0.54
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
-  - Spear of Desolation
+  - Transcendence
   - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Hydra's Lament
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,24 +98,24 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Hydra's Lament:
-      total: 0.59
-      efficiency: 0.56
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.63
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
+      fit: 0.39
     Heartseeker:
       total: 0.6
       efficiency: 0.43
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Pendulum Blade
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   - Soul Gem
   flex_slots:
   - Pendulum Blade
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -494,18 +494,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Pendulum Blade:
       total: 0.65
       efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.9
-    The Crusher:
-      total: 0.64
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Titan's Bane:
       total: 0.66
       efficiency: 0.54

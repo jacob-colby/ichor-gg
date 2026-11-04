@@ -1857,8 +1857,8 @@ def rebuild_core(god, items, god_build, weights, tags_map, mode, eff_scores,
         require=None, stat_caps=weights.get("stat_caps"),
         economy=profile_.get("economy"),
         **assemble.coherence_args(items, weights),
-        **assemble.conversion_args(weights, eff_scores, gold_values),
-        **assemble.overflow_args(weights, eff_scores, gold_values))
+        **assemble.conversion_args(weights, eff_scores, gold_values, signals=profile_["signals"]),
+        **assemble.overflow_args(weights, eff_scores, gold_values, signals=profile_["signals"]))
     return list(core)
 
 

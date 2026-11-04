@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Pendulum Blade
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.22
     The Reaper:
       total: 0.66
       efficiency: 0.51
@@ -181,12 +187,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    The Crusher:
-      total: 0.57
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Titan's Bane:
       total: 0.6
       efficiency: 0.54

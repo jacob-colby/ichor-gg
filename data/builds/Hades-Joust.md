@@ -467,10 +467,10 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Rod of Tahuti
+  - Bragi's Harp
   - Soul Gem
   flex_slots:
-  - Golden Blade
+  - Bragi's Harp
   - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
@@ -512,12 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
+    Bragi's Harp:
+      total: 0.5
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.3
+      fit: 0.56
     Soul Gem:
       total: 0.7
       efficiency: 0.57
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
-  - Obsidian Shard
-  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
-  - Heartseeker
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -553,30 +553,30 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.34
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.36
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Spear of Desolation:
       total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Obsidian Shard:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
-    Heartseeker:
-      total: 0.5
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86

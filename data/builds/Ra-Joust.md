@@ -928,10 +928,10 @@ builds:
   - Lotus Sickle
   - Genji's Guard
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
+  - Triton's Conch
   flex_slots:
-  - Screeching Gargoyle
+  - Triton's Conch
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -973,18 +973,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.27
     Soul Gem:
       total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
+    Triton's Conch:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested

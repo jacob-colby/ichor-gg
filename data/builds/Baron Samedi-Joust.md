@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Breastplate of Valor
+  - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
   - Breastplate of Valor
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -435,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Freya's Tears:
       total: 0.55
       efficiency: 0.58
@@ -447,12 +453,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.76
       efficiency: 0.57

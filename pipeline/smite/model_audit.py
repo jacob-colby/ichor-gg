@@ -39,7 +39,10 @@ THE FIVE PARTS, and what each one does and does not claim:
    delta is the code and config, not the daily refresh. Read with STATE.md
    §1 in mind: both metrics have a model INPUT as their target, so the held-out
    half guards against fitting a change to the gods it was looked at on — it
-   is not a leakage-free measure; `calibrate` is that.
+   is not a leakage-free measure; `calibrate` is that. The rule it enforces
+   (`HELDOUT_TOLERANCE`, Jacob 2026-11-03): a PR may lower either held-out
+   metric by up to 1 point if its description says why; more blocks the merge,
+   and `--check` exits 1 on exactly that.
 
 3. PASSIVE FIRING (`passive_firing`). Every recommended build in every mode,
    from the shipped build notes, run through `side_by_side.power` with each
@@ -341,11 +344,38 @@ def base_per_god(ref="origin/main", overlay=True):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+#: How far a model PR may lower EITHER held-out metric (win-weighted coverage
+#: or pooled Spearman) and still merge, provided its description says why.
+#: "1 point" (Jacob, 2026-11-03), read as 0.01 on both: the metrics print as
+#: fractions, and 0.01 is one percentage point of win-weighted coverage. A
+#: bigger drop on either metric blocks the merge. It replaced "must not lower
+#: held-out at all", which sat against STATE.md §1 — a change that makes the
+#: model more informative can rightly lower a metric whose target is a model
+#: input — and against the split's own noise.
+HELDOUT_TOLERANCE = 0.01
+
+#: `heldout_report` outcomes, worst last.
+PASS, EXPLAIN, FAIL = "pass", "explain", "fail"
+
+
+def heldout_outcome(dw, ds, tolerance=HELDOUT_TOLERANCE):
+    """PASS when neither held-out delta is negative; EXPLAIN when the larger
+    drop is within `tolerance` (merges if the PR says why); FAIL past it.
+    The 1e-9 keeps a drop of exactly one point on the merging side of the
+    line despite float subtraction."""
+    drop = max(-dw, -(ds if ds is not None else 0.0), 0.0)
+    if drop <= 0.0:
+        return PASS
+    return EXPLAIN if drop <= tolerance + 1e-9 else FAIL
+
+
 def heldout_report(head, base=None, base_label="origin/main"):
+    """`(lines, outcome)`. Without a base there is no delta to judge, and the
+    outcome is PASS."""
     fmt = lambda v: "n/a" if v is None else f"{v:.4f}"
     lines = [f"{'split':<8} {'gods':>4}  {'win-weighted':>12}  {'spearman':>8}  {'coverage':>8}"
              + ("   delta vs " + base_label + " (win-weighted / spearman)" if base else "")]
-    ok = True
+    outcome = PASS
     for part in ("tuning", "heldout"):
         h = head[part]
         line = (f"{part:<8} {h['gods']:>4}  {fmt(h['win_weighted']):>12}  {fmt(h['spearman']):>8}  "
@@ -356,11 +386,20 @@ def heldout_report(head, base=None, base_label="origin/main"):
             ds = (None if h["spearman"] is None or b["spearman"] is None
                   else h["spearman"] - b["spearman"])
             line += f"   {dw:+.4f} / " + ("n/a" if ds is None else f"{ds:+.4f}")
-            if part == "heldout" and (dw < 0 or (ds is not None and ds < 0)):
-                ok = False
-                line += "   <- LOWER"
+            if part == "heldout":
+                outcome = heldout_outcome(dw, ds)
+                line += {PASS: "", EXPLAIN: "   <- lower, within 1 point",
+                         FAIL: "   <- LOWER by more than 1 point"}[outcome]
         lines.append(line)
-    return lines, ok
+    return lines, outcome
+
+
+HELDOUT_VERDICT = {
+    PASS: "held-out not lowered - PASS",
+    EXPLAIN: ("held-out lowered by at most 1 point - PASS IF EXPLAINED: the PR description "
+              "must say why"),
+    FAIL: "held-out lowered by more than 1 point - FAIL: this blocks the merge",
+}
 
 
 # ── 3. Passive firing ─────────────────────────────────────────────────────
@@ -846,13 +885,13 @@ def _cmd_heldout(args):
     base = None
     if args.base != "none":
         base = split_metrics(base_per_god(args.base, overlay=not args.base_data))
-    lines, ok = heldout_report(head, base, args.base)
+    lines, outcome = heldout_report(head, base, args.base)
     print("\n".join(lines))
     held = sorted(n for n in per_god if split_of(n) == "heldout")
     print(f"held-out gods ({len(held)}): {', '.join(held)}")
     if base is not None:
-        print("held-out " + ("not lowered - PASS" if ok else "LOWERED - a model PR must not do this"))
-    return 0 if ok or not args.check else 1
+        print(HELDOUT_VERDICT[outcome])
+    return 1 if outcome == FAIL and args.check else 0
 
 
 def _cmd_passives(args):
@@ -896,7 +935,7 @@ def main(argv=None):
     h.add_argument("--base", default="origin/main", help="git ref to compare against, or 'none'")
     h.add_argument("--base-data", action="store_true",
                    help="use the base ref's own data instead of overlaying this tree's")
-    h.add_argument("--check", action="store_true", help="exit 1 if the held-out split is lowered")
+    h.add_argument("--check", action="store_true", help="exit 1 if either held-out metric drops by more than 1 point")
     sub.add_parser("passives")
     sub.add_parser("coverage")
     sub.add_parser("sensitivity")

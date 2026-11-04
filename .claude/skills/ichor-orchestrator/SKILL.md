@@ -257,7 +257,8 @@ facing). One PR per slice, and every gate still runs before the merge: the full
 pytest suite, `npm test` and `npm run build`, `calibrate_combat` at 0.0%,
 `expert_review --check`, and `calibrate --control` re-measured before and after
 (CLAUDE.md item 5). A MODEL PR also pastes `model_audit heldout` (tuning and
-held-out, delta vs `origin/main`) and must not lower the held-out half; a moved
+held-out, delta vs `origin/main`); it may lower either held-out metric by up to
+1 point (0.01) if the PR says why, and a bigger drop blocks the merge; a moved
 reference snapshot (`test_model_audit`) is explained line by line (2026-11-03). A red gate means do not merge — fix it or leave the PR open
 and say why. Stacked PRs merge in order, each rebased onto the `main` the
 previous one produced. This replaced "open a PR and stop" (2026-08-21 to

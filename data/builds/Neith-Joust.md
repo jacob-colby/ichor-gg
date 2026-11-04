@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
   - Death Metal
   - Bragi's Harp
   - Rod of Tahuti
   flex_slots:
   - Bragi's Harp
-  - Hydra's Lament
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,18 +104,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -139,10 +139,10 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Demon Blade
   - Deathbringer
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -187,12 +193,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
     Soul Gem:
       total: 0.71
       efficiency: 0.57
@@ -466,12 +466,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
+  - Death Metal
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
   - Toxic Blade
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -506,18 +506,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Death Metal:
+      total: 0.49
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.76
       efficiency: 0.57

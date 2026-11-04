@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Titan's Bane
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.59
       efficiency: 0.56
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-    The Crusher:
-      total: 0.53
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Titan's Bane:
       total: 0.55
       efficiency: 0.54

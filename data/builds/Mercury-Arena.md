@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - The Reaper
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - The Crusher
   - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -37,6 +37,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Tyrfing:
       total: 0.61
       efficiency: 0.5
@@ -49,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
-    The Crusher:
-      total: 0.63
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Titan's Bane:
       total: 0.65
       efficiency: 0.54
@@ -138,15 +138,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Pendulum Blade
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Pendulum Blade
-  - Toxic Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,23 +158,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.71
+    Transcendence:
+      total: 0.37
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     The Reaper:
       total: 0.63
       efficiency: 0.51
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Arondight
   - Pendulum Blade
   flex_slots:
   - Arondight
-  - Toxic Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -418,17 +418,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.5
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Chandra's Grace:
       total: 0.56
       efficiency: 0.43
@@ -441,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Transcendence:
+      total: 0.33
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.14
     Hydra's Lament:
       total: 0.62
       efficiency: 0.56
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - The Reaper
-  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - The Crusher
   - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -494,6 +494,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.84
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Tyrfing:
       total: 0.61
       efficiency: 0.5
@@ -506,12 +512,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.92
-    The Crusher:
-      total: 0.63
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
     Titan's Bane:
       total: 0.65
       efficiency: 0.54

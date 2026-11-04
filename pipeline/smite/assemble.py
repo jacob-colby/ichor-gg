@@ -654,13 +654,21 @@ def situational_swaps(rows, items_by_name, tags_map, core=None):
             table.append({"vs_tag": vs_tag, "swap": f"(no {label} available in pool)", "swap_item": None})
     return table
 
-def conversion_args(weights, eff_scores, gold_values):
+def conversion_args(weights, eff_scores, gold_values, *, signals):
     """The `conversion` context for `assemble_core`, or {} when off.
 
     Built in one place so every caller values a converter identically. The
     weight is the EFFICIENCY signal's own weight: this adjusts an item's
     efficiency score, so it enters the blended total exactly as efficiency
-    does, rather than as a free-floating bonus with its own scale."""
+    does, rather than as a free-floating bonus with its own scale.
+
+    `signals` is the RESOLVED profile's (`scoring.resolve_profile(...)
+    ["signals"]`), required and keyword-only. Until 2026-11-04 this read
+    `weights["signals"]` — the base, i.e. Conquest's 0.35 — so Joust and Arena,
+    whose modes set efficiency to 0.5, priced conversions and cap overflow at
+    Conquest's scale. The model audit's sensitivity sweep found it (PR #96,
+    finding 4): 11 base-kit builds, 4 verdicts. Nothing defaults, so a caller
+    that forgets the profile fails instead of leaking."""
     w = weights or {}
     if not (w.get("price_conversions") and w.get("conversion_passes", 1) > 1):
         return {}
@@ -671,18 +679,19 @@ def conversion_args(weights, eff_scores, gold_values):
         "reference": dict(w.get("conversion_reference") or {}),
         "gold_values": gold_values,
         "span": span,
-        "weight": (w.get("signals") or {}).get("efficiency", 0.35),
+        "weight": float(signals["efficiency"]),
     }}
 
 
-def overflow_args(weights, eff_scores, gold_values):
+def overflow_args(weights, eff_scores, gold_values, *, signals):
     """The `cap_overflow` context for `assemble_core`, or {} when off.
 
     Mirrors `conversion_args` deliberately, including the weight: this marks an
     item's EFFICIENCY down for stats it cannot use, so it enters the blended
     total exactly as efficiency does rather than as a free-floating penalty
     with its own scale. `cap_overflow` in _weights.yaml is then a 0-1 strength
-    on top of that, and 0 is a true no-op.
+    on top of that, and 0 is a true no-op. `signals` is the resolved mode
+    profile's, for the reason `conversion_args` gives.
 
     Returns {} when the pool produced no `span`, so the charge is never divided
     by a guess."""
@@ -696,7 +705,7 @@ def overflow_args(weights, eff_scores, gold_values):
     return {"cap_overflow": {
         "gold_values": gold_values,
         "span": span,
-        "weight": strength * (w.get("signals") or {}).get("efficiency", 0.35),
+        "weight": strength * float(signals["efficiency"]),
     }}
 
 

@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
   - Death Metal
   - Bragi's Harp
   - Rod of Tahuti
   flex_slots:
   - Bragi's Harp
-  - Hydra's Lament
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,18 +104,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.57
       efficiency: 0.63
