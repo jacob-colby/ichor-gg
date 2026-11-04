@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
-  - Death Metal
+  - Book of Thoth
   - Spear of Desolation
   - Doom Orb
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Doom Orb
   - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Death Metal:
-      total: 0.56
-      efficiency: 0.54
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.39
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lotus Sickle
+  - Book of Thoth
   - Chronos' Pendant
-  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
-  - Heartwood Charm
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,15 +429,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+    Book of Thoth:
+      total: 0.32
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.14
     Chronos' Pendant:
       total: 0.59
       efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Heartwood Charm:
-      total: 0.56
-      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -528,19 +528,19 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Dreamer's Idol
-  - Obsidian Shard
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
@@ -553,36 +553,36 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Jotunn's Revenge:
       total: 0.69
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Transcendence:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
     Spear of Desolation:
       total: 0.65
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Obsidian Shard:
-      total: 0.62
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Rod of Tahuti:
       total: 0.71
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Dreamer's Idol:
-      total: 0.63
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Soul Gem:
       total: 0.76
       efficiency: 0.53

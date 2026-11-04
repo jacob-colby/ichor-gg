@@ -337,11 +337,11 @@ builds:
   - Tyrfing
   - Bragi's Harp
   - Riptalon
-  - Rod of Tahuti
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Tyrfing
   - Bragi's Harp
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -382,12 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.54
     Soul Gem:
       total: 0.71
       efficiency: 0.57
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
   - Bragi's Harp
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Bragi's Harp
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,6 +488,12 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Toxic Blade:
       total: 0.61
       efficiency: 0.45
@@ -512,12 +518,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Soul Gem:
       total: 0.77
       efficiency: 0.57
@@ -532,11 +532,11 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Bragi's Harp
-  - Rod of Tahuti
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
   - Jotunn's Revenge
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -577,12 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
+    Silverbranch Bow:
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.63
     Soul Gem:
       total: 0.76
       efficiency: 0.57

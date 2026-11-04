@@ -464,14 +464,14 @@ builds:
   archetype: intelligence
   slot_order:
   - Toxic Blade
-  - Jotunn's Revenge
   - Death Metal
   - Bragi's Harp
+  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Bragi's Harp
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.36
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86

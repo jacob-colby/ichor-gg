@@ -68,8 +68,8 @@ def god_metrics(god, items, build_note, weights, tags_map, eff_scores, items_by_
         max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
         stat_caps=weights.get("stat_caps"), economy=profile.get("economy"),
         **assemble.coherence_args(items, weights),
-        **assemble.conversion_args(weights, eff_scores, gold_values),
-        **assemble.overflow_args(weights, eff_scores, gold_values))
+        **assemble.conversion_args(weights, eff_scores, gold_values, signals=profile["signals"]),
+        **assemble.overflow_args(weights, eff_scores, gold_values, signals=profile["signals"]))
     # The target is the community's SCORED slots (`community_target`): an
     # unfinished component or a statless relic/Mod is never a disagreement.
     # `in score` already excluded both, implicitly, since `score_god_items`

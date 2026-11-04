@@ -76,11 +76,11 @@ builds:
   - Bancroft's Talon
   - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Bragi's Harp
   - Rod of Tahuti
   flex_slots:
-  - Hydra's Lament
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.56
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.28
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -337,11 +337,11 @@ builds:
   - Tyrfing
   - Bragi's Harp
   - Riptalon
-  - Rod of Tahuti
+  - Silverbranch Bow
   - Soul Gem
   flex_slots:
-  - Tyrfing
   - Bragi's Harp
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -382,12 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.31
+      fit: 0.55
     Soul Gem:
       total: 0.71
       efficiency: 0.57
@@ -402,10 +402,10 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Rod of Tahuti
+  - Pendulum Blade
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
+  - Pendulum Blade
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -447,12 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
+    Pendulum Blade:
+      total: 0.5
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
-      fit: 0.26
+      fit: 0.6
     Soul Gem:
       total: 0.79
       efficiency: 0.57

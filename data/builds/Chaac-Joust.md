@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Rod of Tahuti
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Shield Splitter
   - Brawler’s Beat Stick
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
+    Erosion:
+      total: 0.48
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.28
+      fit: 0.44
     Soul Gem:
       total: 0.69
       efficiency: 0.57
@@ -206,12 +206,12 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Rod of Tahuti
+  - Runeforged Hammer
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Shield Splitter
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -246,12 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
+    Runeforged Hammer:
+      total: 0.49
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.29
+      fit: 0.41
     Amanita Charm:
       total: 0.69
       efficiency: 0.65
@@ -467,11 +467,11 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Rod of Tahuti
+  - Erosion
   - Soul Gem
   flex_slots:
-  - Shield Splitter
   - Brawler’s Beat Stick
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -512,12 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
+    Erosion:
+      total: 0.48
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.28
+      fit: 0.44
     Soul Gem:
       total: 0.69
       efficiency: 0.57

@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
-  - Tyrfing
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -110,12 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Tyrfing:
-      total: 0.49
-      efficiency: 0.5
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.24
     Hydra's Lament:
       total: 0.49
       efficiency: 0.56

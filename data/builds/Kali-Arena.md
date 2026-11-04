@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Death Metal
-  - Bragi's Harp
+  - Transcendence
   - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
-  - Heartseeker
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,24 +98,24 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Book of Thoth:
+      total: 0.39
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Death Metal:
-      total: 0.58
-      efficiency: 0.63
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
-    Bragi's Harp:
-      total: 0.56
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
+      fit: 0.28
     Heartseeker:
       total: 0.53
       efficiency: 0.43

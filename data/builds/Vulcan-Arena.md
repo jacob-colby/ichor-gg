@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -31,18 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.71
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Doom Orb:
-      total: 0.6
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Obsidian Shard:
       total: 0.67
       efficiency: 0.58
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lotus Sickle
+  - Book of Thoth
   - Chronos' Pendant
-  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
-  - Heartwood Charm
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,15 +429,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Book of Thoth:
+      total: 0.31
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.13
     Chronos' Pendant:
       total: 0.55
       efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
-    Heartwood Charm:
-      total: 0.53
-      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -488,18 +488,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.71
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Doom Orb:
-      total: 0.6
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Obsidian Shard:
       total: 0.67
       efficiency: 0.58

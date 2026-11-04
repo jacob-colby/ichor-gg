@@ -333,14 +333,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Toxic Blade
   - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Hydra's Lament
+  - Toxic Blade
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -353,11 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Lotus Sickle:
       total: 0.51
       efficiency: 0.57
@@ -382,12 +388,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.24
     Soul Gem:
       total: 0.75
       efficiency: 0.53

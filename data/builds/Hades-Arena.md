@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
@@ -146,7 +146,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -163,12 +163,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.45
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.32
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.22
+      fit: 0.15
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
@@ -528,19 +528,19 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
-  - Dreamer's Idol
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Spear of Desolation
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -553,36 +553,36 @@ builds:
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Book of Thoth:
+      total: 0.34
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.36
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
     Spear of Desolation:
       total: 0.52
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Obsidian Shard:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Dreamer's Idol:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Soul Gem:
       total: 0.73
       efficiency: 0.57

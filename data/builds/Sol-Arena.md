@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Bancroft's Talon
+  - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Obsidian Shard
   - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -110,6 +110,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Book of Thoth:
+      total: 0.39
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -122,12 +128,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
-    Obsidian Shard:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86

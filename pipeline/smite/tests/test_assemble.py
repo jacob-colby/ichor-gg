@@ -697,12 +697,30 @@ def test_overflow_args_is_off_by_default_and_scales_like_efficiency():
     from smite import scoring, recommend
     eff = {"X": {"span": 2500.0}}
     gold = {"Penetration %": 50.0}
-    assert assemble.overflow_args({}, eff, gold) == {}
-    assert assemble.overflow_args({"cap_overflow": 0.0}, eff, gold) == {}
+    sig = {"efficiency": 0.35}
+    assert assemble.overflow_args({}, eff, gold, signals=sig) == {}
+    assert assemble.overflow_args({"cap_overflow": 0.0}, eff, gold, signals=sig) == {}
     args = assemble.overflow_args(
-        {"cap_overflow": 1.0, "signals": {"efficiency": 0.35}}, eff, gold)
+        {"cap_overflow": 1.0, "signals": {"efficiency": 0.35}}, eff, gold, signals=sig)
     assert args["cap_overflow"]["weight"] == pytest.approx(0.35)
     assert args["cap_overflow"]["span"] == 2500.0
     # A span the pool never produced leaves the mechanism off rather than
     # dividing by a guess.
-    assert assemble.overflow_args({"cap_overflow": 1.0}, {"X": {}}, gold) == {}
+    assert assemble.overflow_args({"cap_overflow": 1.0}, {"X": {}}, gold, signals=sig) == {}
+
+
+def test_efficiency_adjustments_take_the_passed_signals_not_the_base():
+    """The weight is the RESOLVED mode's efficiency, never `weights["signals"]`.
+    Both helpers read the base block until 2026-11-04, so Joust and Arena
+    (efficiency 0.5) priced conversions and overflow at Conquest's 0.35."""
+    eff = {"X": {"span": 2500.0}}
+    gold = {"Penetration %": 50.0}
+    base = {"cap_overflow": 1.0, "price_conversions": True, "conversion_passes": 3,
+            "signals": {"efficiency": 0.35}}
+    mode = {"efficiency": 0.5}
+    assert assemble.overflow_args(base, eff, gold, signals=mode)["cap_overflow"]["weight"] \
+        == pytest.approx(0.5)
+    assert assemble.conversion_args(base, eff, gold, signals=mode)["conversion"]["weight"] \
+        == pytest.approx(0.5)
+    with pytest.raises(TypeError):
+        assemble.overflow_args(base, eff, gold)  # no silent fallback to the base

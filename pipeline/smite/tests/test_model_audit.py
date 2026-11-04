@@ -311,6 +311,31 @@ def test_modes_differ_only_through_mode_rules(frozen, weights, tags_map):
         assert per_mode["Conquest"] == per_mode["Joust"] == per_mode["Arena"], god
 
 
+def test_a_mode_that_sets_every_signal_ignores_the_base_signals(frozen, weights, tags_map):
+    """Joust and Arena override all four signals, so the base `signals` block
+    (Conquest's) must not reach them by ANY path. The strip-modes test above
+    cannot see a leak from the base weights — it deletes the modes, not the
+    base — and one shipped: `assemble.conversion_args` / `overflow_args` read
+    base efficiency (0.35) in place of the mode's 0.5 (PR #96, finding 4).
+    Perturbing the base must leave those modes' builds exactly as they were."""
+    full = {m for m in ("joust", "arena")
+            if set((weights["modes"][m] or {}).get("signals") or {}) >= set(weights["signals"])}
+    assert full == {"joust", "arena"}, "the premise moved: a mode no longer sets every signal"
+    moved = copy.deepcopy(weights)
+    moved["signals"] = {k: (v * 3.0 if k == "efficiency" else v * 0.5)
+                        for k, v in weights["signals"].items()}
+    for god in ma.reference_names():
+        g = frozen["gods"][god]
+        for mode in ("Joust", "Arena"):
+            with ma.pricing(weights):
+                a = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                      weights, tags_map, mode)
+            with ma.pricing(moved):
+                b = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                      moved, tags_map, mode)
+            assert a == b, (god, mode)
+
+
 def test_the_mode_rules_do_change_builds(snapshot):
     """The control for the test above: with the rules in, modes differ."""
     moved = sum(snapshot[g]["Conquest"]["builds"]["core"] != snapshot[g]["Joust"]["builds"]["core"]

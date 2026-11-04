@@ -10,11 +10,11 @@ builds:
   - Jotunn's Revenge
   - Bragi's Harp
   - Spear of Desolation
-  - Rod of Tahuti
+  - Tekko-Kagi
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Spear of Desolation
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
+    Tekko-Kagi:
+      total: 0.53
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.5
     Soul Gem:
       total: 0.75
       efficiency: 0.57
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
   - Bancroft's Talon
   - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Bragi's Harp
   - Rod of Tahuti
   flex_slots:
-  - Lernaean Bow
+  - Transcendence
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Bancroft's Talon:
       total: 0.56
       efficiency: 0.51
@@ -122,6 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -142,7 +142,7 @@ builds:
   - Jotunn's Revenge
   - Bragi's Harp
   - Spear of Desolation
-  - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Lernaean Bow
@@ -187,12 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.5
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -467,11 +467,11 @@ builds:
   - Jotunn's Revenge
   - Bragi's Harp
   - Spear of Desolation
-  - Rod of Tahuti
+  - Tekko-Kagi
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Spear of Desolation
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -512,12 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
+    Tekko-Kagi:
+      total: 0.53
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.5
     Soul Gem:
       total: 0.75
       efficiency: 0.57

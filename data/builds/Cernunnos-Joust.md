@@ -139,10 +139,10 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Demon Blade
   - Deathbringer
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -169,6 +169,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -187,12 +193,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
     Soul Gem:
       total: 0.7
       efficiency: 0.57
@@ -466,12 +466,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
+  - Death Metal
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Hydra's Lament
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -506,18 +506,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Death Metal:
+      total: 0.49
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Rod of Tahuti:
-      total: 0.54
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Soul Gem:
       total: 0.76
       efficiency: 0.57
@@ -726,10 +726,10 @@ builds:
   archetype: crit
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Demon Blade
   - Deathbringer
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Demon Blade
@@ -756,6 +756,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Jotunn's Revenge:
+      total: 0.49
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Death Metal:
       total: 0.54
       efficiency: 0.63
@@ -774,12 +780,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.26
     Soul Gem:
       total: 0.67
       efficiency: 0.57
@@ -1058,12 +1058,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
+  - Death Metal
   - Spear of Desolation
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Hydra's Lament
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1098,18 +1098,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Death Metal:
+      total: 0.48
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
     Spear of Desolation:
       total: 0.53
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.86
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
     Soul Gem:
       total: 0.74
       efficiency: 0.57

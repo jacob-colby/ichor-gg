@@ -65,8 +65,8 @@
       "Soul Gem"
      ],
      "burst @ Aspect of Combustion": [
+      "Book of Thoth",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti",
       "Dreamer's Idol",
@@ -74,16 +74,16 @@
      ],
      "cooldown": [
       "Lotus Sickle",
+      "Book of Thoth",
       "Chronos' Pendant",
-      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown @ Aspect of Combustion": [
       "Lotus Sickle",
+      "Book of Thoth",
       "Chronos' Pendant",
-      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
@@ -97,8 +97,8 @@
       "Soul Gem"
      ],
      "core @ Aspect of Combustion": [
+      "Book of Thoth",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti",
       "Dreamer's Idol",
@@ -106,7 +106,7 @@
      ],
      "mana-stack": [
       "Lotus Sickle",
-      "Death Metal",
+      "Book of Thoth",
       "Spear of Desolation",
       "Doom Orb",
       "Rod of Tahuti",
@@ -129,8 +129,8 @@
       "Soul Gem"
      ],
      "model @ Aspect of Combustion": [
+      "Book of Thoth",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti",
       "Dreamer's Idol",
@@ -139,8 +139,8 @@
      "str-int": [
       "Book of Thoth",
       "Jotunn's Revenge",
+      "Transcendence",
       "Spear of Desolation",
-      "Obsidian Shard",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -469,10 +469,10 @@
       "Soul Gem"
      ],
      "str-int": [
+      "Book of Thoth",
       "Jotunn's Revenge",
       "Spear of Desolation",
       "Obsidian Shard",
-      "Heartseeker",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -693,9 +693,9 @@
       "Lernaean Bow",
       "Chandra's Grace",
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
-      "Dominance",
-      "Demon Blade"
+      "Dominance"
      ],
      "core": [
       "Lernaean Bow",
@@ -722,8 +722,8 @@
       "Demon Blade"
      ],
      "mana-stack": [
-      "Lernaean Bow",
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
       "Dominance",
       "The Reaper",
@@ -1105,7 +1105,7 @@
       "Jotunn's Revenge",
       "Death Metal",
       "Spear of Desolation",
-      "Rod of Tahuti",
+      "Obsidian Shard",
       "Soul Gem"
      ],
      "anti-tank @ Aspect of Strife": [
@@ -1113,7 +1113,7 @@
       "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
-      "Rod of Tahuti",
+      "Obsidian Shard",
       "Soul Gem"
      ],
      "attack-speed": [
@@ -1149,19 +1149,19 @@
       "Soul Gem"
      ],
      "burst": [
+      "Lernaean Bow",
       "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
       "Spear of Desolation",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "burst @ Aspect of Strife": [
+      "Golden Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
       "Spear of Desolation",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown": [
@@ -1221,10 +1221,10 @@
       "Rod of Tahuti"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Golden Blade",
-      "Toxic Blade",
       "Bancroft's Talon",
+      "Book of Thoth",
       "Jotunn's Revenge",
+      "Transcendence",
       "Death Metal",
       "Rod of Tahuti"
      ],
@@ -1468,16 +1468,16 @@
       "Toxic Blade",
       "Jotunn's Revenge",
       "Hydra's Lament",
+      "Death Metal",
       "Spear of Desolation",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown @ Aspect of Strife": [
       "Toxic Blade",
       "Jotunn's Revenge",
       "Hydra's Lament",
+      "Death Metal",
       "Spear of Desolation",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "core": [
@@ -1498,18 +1498,18 @@
      ],
      "crit": [
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Death Metal",
       "Demon Blade",
       "Deathbringer",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "crit @ Aspect of Strife": [
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Death Metal",
       "Demon Blade",
       "Deathbringer",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "mana-stack": [
@@ -1581,8 +1581,8 @@
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Magi's Cloak",
+      "Shield Splitter",
       "Spear of Desolation",
-      "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown": [
@@ -1603,10 +1603,10 @@
      ],
      "mana-stack": [
       "Bancroft's Talon",
+      "Book of Thoth",
       "Jotunn's Revenge",
-      "Kinetic Cuirass",
-      "Magi's Cloak",
       "Shield Splitter",
+      "Transcendence",
       "Rod of Tahuti"
      ],
      "model": [
@@ -1713,7 +1713,7 @@
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Rod of Tahuti",
+      "Runeforged Hammer",
       "Amanita Charm",
       "Soul Gem"
      ],
@@ -1738,7 +1738,7 @@
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Rod of Tahuti",
+      "Erosion",
       "Soul Gem"
      ],
      "mana-stack": [
@@ -1754,11 +1754,11 @@
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Rod of Tahuti",
+      "Erosion",
       "Soul Gem"
      ]
     },
-    "verdict": "trade-off",
+    "verdict": "not enough simulated",
     "verdict_unwithheld": "trade-off"
    },
    "role": "Solo"
@@ -1792,17 +1792,17 @@
      ],
      "burst": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Pendulum Blade",
-      "The Crusher",
       "Titan's Bane",
       "Heartseeker"
      ],
      "cooldown": [
       "Chandra's Grace",
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
-      "Damaru",
       "Arondight",
       "Pendulum Blade"
      ],
@@ -1956,9 +1956,9 @@
      ],
      "mana-stack": [
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
       "The Reaper",
-      "The Crusher",
       "Titan's Bane",
       "Heartseeker"
      ],
@@ -2005,17 +2005,17 @@
      ],
      "burst": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Pendulum Blade",
-      "The Crusher",
       "Titan's Bane",
       "Heartseeker"
      ],
      "cooldown": [
       "Chandra's Grace",
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
-      "Damaru",
       "Arondight",
       "Pendulum Blade"
      ],
@@ -2169,9 +2169,9 @@
      ],
      "mana-stack": [
       "Jotunn's Revenge",
+      "Transcendence",
       "Hydra's Lament",
       "The Reaper",
-      "The Crusher",
       "Titan's Bane",
       "Heartseeker"
      ],
@@ -2463,15 +2463,15 @@
      ],
      "cooldown": [
       "Lotus Sickle",
+      "Book of Thoth",
       "Chronos' Pendant",
-      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "core": [
+      "Book of Thoth",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti",
       "Dreamer's Idol",
@@ -2480,14 +2480,14 @@
      "mana-stack": [
       "Lotus Sickle",
       "Bancroft's Talon",
+      "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
-      "Obsidian Shard",
       "Rod of Tahuti"
      ],
      "model": [
+      "Book of Thoth",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti",
       "Dreamer's Idol",
