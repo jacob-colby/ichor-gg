@@ -1,0 +1,184 @@
+{
+ "data_patch": "items/gods Open Beta 47, community window Open Beta 47",
+ "frozen_on": "2026-11-04",
+ "minutes_per_item": {
+  "Arena": 2.6918833727344365,
+  "Joust": 3.511152225305787
+ },
+ "targets": {
+  "Arena": {
+   "squishy": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.06198830409356724,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 339.8553600000001,
+      "physical": 375.96499200000005
+     }
+    },
+    "base_health": 2212.6000000000004,
+    "dampening": 0.0,
+    "item_health": 0.0,
+    "lifesteal": 4.782608695652174,
+    "magical_prot": 53.599999999999994,
+    "max_health": 2212.6000000000004,
+    "n": 23,
+    "physical_prot": 69.92,
+    "plating": 0.0,
+    "role": "Mid"
+   },
+   "tank": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.06198830409356724,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 339.8553600000001,
+      "physical": 375.96499200000005
+     }
+    },
+    "base_health": 2597.3999999999996,
+    "dampening": 0.0,
+    "item_health": 750.0,
+    "lifesteal": 0.6666666666666666,
+    "magical_prot": 165.48000000000002,
+    "max_health": 3347.3999999999996,
+    "n": 15,
+    "physical_prot": 192.07999999999998,
+    "plating": 0.0,
+    "role": "Support"
+   }
+  },
+  "Conquest": {
+   "squishy": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.06198830409356724,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 339.8553600000001,
+      "physical": 375.96499200000005
+     }
+    },
+    "base_health": 2212.6000000000004,
+    "dampening": 0.0,
+    "item_health": 0.0,
+    "lifesteal": 4.782608695652174,
+    "magical_prot": 53.599999999999994,
+    "max_health": 2212.6000000000004,
+    "n": 23,
+    "physical_prot": 69.92,
+    "plating": 0.0,
+    "role": "Mid"
+   },
+   "tank": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.06198830409356724,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 339.8553600000001,
+      "physical": 375.96499200000005
+     }
+    },
+    "base_health": 2597.3999999999996,
+    "dampening": 0.0,
+    "item_health": 750.0,
+    "lifesteal": 0.6666666666666666,
+    "magical_prot": 165.48000000000002,
+    "max_health": 3347.3999999999996,
+    "n": 15,
+    "physical_prot": 192.07999999999998,
+    "plating": 0.0,
+    "role": "Support"
+   }
+  },
+  "Joust": {
+   "squishy": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.0370886027180875,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 203.91321600000003,
+      "physical": 225.57899520000004
+     }
+    },
+    "base_health": 2212.6000000000004,
+    "dampening": 0.0,
+    "item_health": 0.0,
+    "lifesteal": 4.782608695652174,
+    "magical_prot": 53.599999999999994,
+    "max_health": 2212.6000000000004,
+    "n": 23,
+    "physical_prot": 69.92,
+    "plating": 0.0,
+    "role": "Mid"
+   },
+   "tank": {
+    "anti_heal": 0.0,
+    "attacker": {
+     "anti_heal": 0.0370886027180875,
+     "interval": {
+      "ability": 3.4482758620689657,
+      "attack": 0.4317006415071533
+     },
+     "n": {
+      "ability": 23,
+      "attack": 19
+     },
+     "raw_dps": {
+      "magical": 203.91321600000003,
+      "physical": 225.57899520000004
+     }
+    },
+    "base_health": 2597.3999999999996,
+    "dampening": 0.0,
+    "item_health": 750.0,
+    "lifesteal": 0.6666666666666666,
+    "magical_prot": 165.48000000000002,
+    "max_health": 3347.3999999999996,
+    "n": 15,
+    "physical_prot": 192.07999999999998,
+    "plating": 0.0,
+    "role": "Support"
+   }
+  }
+ }
+}

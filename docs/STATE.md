@@ -2563,7 +2563,46 @@ python -m smite.side_by_side --god Medusa    # one god's side-by-side, item diff
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split
 python -m smite.order_agreement --god Medusa   # one god, heuristic order beside the shipped one
+python -m smite.model_audit reference    # 10 frozen reference gods: builds + verdicts, exit 1 on change (~15s)
+python -m smite.model_audit reference --write  # accept a reference change ON PURPOSE; explain it in the PR
+python -m smite.model_audit heldout      # validate metrics on tuning vs held-out gods, delta vs origin/main (~20s)
+python -m smite.model_audit passives     # recommended items whose simulated passive never fires (~45s)
+python -m smite.model_audit coverage     # what the model simulates -> viewer/public/model_coverage.json
+python -m smite.model_audit sensitivity  # SLOW (~15 min): each major weight x0.8 / x1.2, fragile verdicts
 ```
+
+**The model audit (2026-11-03, `smite.model_audit`).** Checks the model as a
+whole system rather than one god at a time; the method and what each part does
+NOT claim are in the module docstring. It writes reports and changes nothing.
+
+  * **Every model PR reports the held-out delta and must not lower it**
+    (Jacob, 2026-11-03). Run `python -m smite.model_audit heldout` and paste
+    its table into the PR: win-weighted coverage and pooled Spearman on the
+    tuning and held-out gods, and the delta of each against `origin/main` run
+    on THIS tree's data, so the delta is the code and config alone. A negative
+    held-out delta on either metric means the change does not merge as it
+    stands (`--check` exits 1 on it). The split is a hash of the god's name
+    (30% held out) and is never re-drawn. **Read deltas only, never the
+    held-out LEVEL against the tuning level:** on 2026-11-03 the held-out
+    25 sit at the 2nd percentile of random 25-god draws on win-weighted (0.40
+    vs 0.54) and the 94th on Spearman (0.40 vs 0.22), so the halves differ by
+    draw, not by tuning. Both metrics still have a model input as their target
+    (§1), so this guards against fitting a change to the gods it was looked at
+    on; it does not replace `calibrate`, and §1's point — a model change can
+    rightly lower the headline — now needs the held-out half to agree.
+  * **Ten reference gods are frozen** (two per role,
+    `tests/fixtures/frozen/reference/`): every suggested build and the
+    side-by-side verdict, all three modes, recomputed on frozen Open Beta 47
+    inputs with the live code and `_weights.yaml`. `test_model_audit.py` fails
+    when any of them changes; the PR that changes one runs `reference --write`
+    and explains each line of the diff. The inputs are frozen so a data refresh
+    never moves it (the test gate above would otherwise reject every patch).
+    `reference --refreeze` re-captures them and is a deliberate act.
+  * The sanity invariants are tests on the same frozen inputs: an item never
+    lowers a stat it grants; power rises 2 -> 4 -> 6 (each figure, against a
+    reviewed list of twelve known drops, and the composite with none); nothing
+    NaN, and a zero score only where fit is zero; with the `modes` block
+    removed all three modes give identical builds.
 
 `doc_audit` gates the derivable figures in §7 below, and the few `PRODUCT.md`
 and `CLAUDE.md` repeat. It **only reads.** The prose in those rows is worth
@@ -2737,7 +2776,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1213) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1234) ·
 `cd viewer && npm test -- --run` (947).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2857,7 +2896,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1213 pipeline · 947 viewer |
+| Tests | 1234 pipeline · 947 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
