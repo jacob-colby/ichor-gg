@@ -2292,12 +2292,91 @@ def load_inputs():
     return items, gods, weights, tags_map, builds
 
 
+#: SmiteBrain's window ids, as its own range selector spells them: `ob47` is
+#: Open Beta 47. `refresh.choose_community_window` records the one a run read
+#: in `_community_items.json`.
+OB_WINDOW_RE = re.compile(r"^ob(\d+)$", re.I)
+
+COMMUNITY_ITEMS_PATH = REPO_ROOT / "data" / "_community_items.json"
+
+
+def community_match_count(table: dict):
+    """How many matches the community table was built from, or None.
+
+    DERIVED, and that is the better fix rather than a shortcut. SmiteBrain's
+    `/items/__data.json` rows carry `display_name`, `win_rate`,
+    `matches_played`, `use_rate` and no more — **no `matches_analyzed`, no
+    `start_time`, no `end_time`** (measured against the live response,
+    2026-11-05). So `_community_items.json`'s three fields of those names have
+    been structurally dead since they were written, and "populate it at scrape
+    time" would be this same arithmetic moved somewhere it only applies from
+    the next refresh forward, leaving every commit already on record
+    unlabelled.
+
+    `use_rate` is the share of matches an item appeared in, so
+    `matches_played / use_rate` is the denominator the source itself used. It
+    is exact, not an estimate: on the 2026-11-05 table all 238 items agree on
+    67,532 to the unit, which is also the figure PR #106 measured independently
+    off the god index. Read off the item with the most matches, where the
+    rounding in `use_rate` has the least room to move the answer.
+
+    An explicit `matches_analyzed` still wins if a future scrape ever sets
+    one, so this needs no second edit when upstream grows the field.
+    """
+    stated = table.get("matches_analyzed")
+    if stated:
+        return int(stated)
+    best = None
+    for row in (table.get("items") or {}).values():
+        played, use = row.get("matches_played"), row.get("use_rate")
+        if not played or not use:
+            continue
+        if best is None or played > best[0]:
+            best = (played, round(played / use))
+    return best[1] if best else None
+
+
+def community_window_label(path=None):
+    """The community match window a run actually READ, and how big it was.
+
+    WHY THIS IS NOT THE CURRENT PATCH (2026-11-05). This label used to read
+    both halves off `data/_patch.json`, which records the current GAME patch —
+    so the community half asserted something it had never checked. It said
+    "community window Open Beta 47" at every commit through the 2026-11-04
+    incident: before it, during it with 166 items and ~194 matches behind the
+    numbers, and after PR #106 restored an Open Beta 46 window of 67,532. The
+    same string for a healthy window, a catastrophic one and a correct one in
+    the wrong patch — which is precisely the thing a person reading the page
+    would have caught the incident with, and the fourth blind spot that
+    incident turned up (the other three: `validate`'s window-aware floor
+    relaxing on a young window, `data_audit` going quieter when a scrape
+    returns less, and no guard at all on the community write).
+
+    It is read from the data now, so a thin window is visible at a glance: an
+    Open Beta 47 window on its first day reads "Open Beta 47, 529 matches"
+    rather than borrowing the healthy label.
+    """
+    try:
+        table = json.loads((path or COMMUNITY_ITEMS_PATH).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return "unknown window"
+    window = table.get("window")
+    m = OB_WINDOW_RE.match(str(window or ""))
+    name = f"Open Beta {m.group(1)}" if m else (str(window) if window else "unknown window")
+    count = community_match_count(table)
+    return f"{name}, {count:,} matches" if count else name
+
+
 def data_patch():
+    """What the comparison was run against: the patch the ITEM and GOD stats
+    carry, which does track the current patch (the wiki is re-scraped on patch
+    day), and separately the community window actually read, which does not."""
     try:
         p = json.loads((REPO_ROOT / "data" / "_patch.json").read_text(encoding="utf-8"))
-        return f"items/gods {p.get('data_patch')}, community window {p.get('patch')}"
+        items_gods = p.get("data_patch")
     except (OSError, ValueError):
-        return "unknown patch"
+        items_gods = "unknown patch"
+    return f"items/gods {items_gods}, community window {community_window_label()}"
 
 
 def main(argv=None):

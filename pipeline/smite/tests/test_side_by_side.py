@@ -469,3 +469,93 @@ def test_coverage_withholds_before_any_win_or_loss_and_aspect_comes_first():
     assert sbs.judge(_row(bp, cov_ok=False)) == sbs.NOT_ENOUGH_SIMULATED
     assert sbs.judge(_row(bp, cov_ok=False), withhold=False) == "Ichor better"
     assert sbs.judge(_row(bp, cov_ok=False, simulated=False)) == sbs.ASPECT_NOT_SIMULATED
+
+
+# ── The community window the page is labelled with (2026-11-05) ──────────
+#
+# `_meta.json`'s `data` string used to read BOTH halves off `data/_patch.json`,
+# which records the current GAME patch — so its community half asserted
+# something nothing had checked. It read "community window Open Beta 47"
+# identically at 5e960b76 (a healthy Open Beta 46 window), at 6158066f (the
+# one-day window that deleted 55 comparison pages, 166 items behind it) and at
+# dc03ded4 (restored, 67,532 matches). A reader could not tell the three apart,
+# and that is the one blind spot of the four a person would have caught the
+# incident with.
+
+
+def _items_table(window, played_use):
+    return {"division": "obsidian", "window": window, "matches_analyzed": None,
+            "window_start": "", "window_end": "",
+            "items": {n: {"matches_played": p, "use_rate": u, "win_rate": 0.5,
+                          "matches_won": p // 2}
+                      for n, (p, u) in played_use.items()}}
+
+
+def test_the_label_names_the_window_that_was_read_not_the_current_patch(tmp_path):
+    """The regression this exists for: an Open Beta 46 table must not be
+    labelled Open Beta 47 just because that is the live patch."""
+    p = tmp_path / "_community_items.json"
+    p.write_text(json.dumps(_items_table("ob46", {"Adroit Ring": (399, 0.005908310134454777)})),
+                 encoding="utf-8")
+    assert sbs.community_window_label(p) == "Open Beta 46, 67,532 matches"
+
+
+def test_a_thin_window_is_visible_in_the_label(tmp_path):
+    """The one-day Open Beta 47 window, as the 2026-11-04 refresh read it: the
+    count is what makes it obvious, so it has to be in the string."""
+    p = tmp_path / "_community_items.json"
+    p.write_text(json.dumps(_items_table("ob47", {"Adroit Ring": (1, 0.005154639175257732)})),
+                 encoding="utf-8")
+    label = sbs.community_window_label(p)
+    assert label == "Open Beta 47, 194 matches"
+    assert label != sbs.community_window_label.__doc__   # not a constant
+
+
+def test_the_match_count_is_derived_and_every_item_agrees():
+    """`matches_played / use_rate` is the source's own denominator, not an
+    estimate: on the live table all 238 items give the same integer. The item
+    with the most matches is the one read, where `use_rate`'s rounding has the
+    least room to move the answer."""
+    table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
+    derived = {round(r["matches_played"] / r["use_rate"])
+               for r in table["items"].values() if r.get("use_rate")}
+    assert len(derived) == 1, sorted(derived)
+    assert sbs.community_match_count(table) == derived.pop()
+
+
+def test_an_explicit_match_count_wins_over_the_derivation():
+    """So a future scrape that grows a real `matches_analyzed` needs no second
+    edit here. SmiteBrain's item rows carry none today — measured 2026-11-05,
+    which is why the field has always been null."""
+    table = _items_table("ob46", {"Adroit Ring": (399, 0.005908310134454777)})
+    table["matches_analyzed"] = 12345
+    assert sbs.community_match_count(table) == 12345
+
+
+def test_the_label_degrades_rather_than_lying(tmp_path):
+    missing = tmp_path / "nope.json"
+    assert sbs.community_window_label(missing) == "unknown window"
+    no_window = tmp_path / "no_window.json"
+    no_window.write_text(json.dumps({"items": {}}), encoding="utf-8")
+    assert sbs.community_window_label(no_window) == "unknown window"
+    odd = tmp_path / "odd.json"
+    odd.write_text(json.dumps(_items_table("1m", {"X": (10, 0.5)})), encoding="utf-8")
+    assert sbs.community_window_label(odd) == "1m, 20 matches"
+
+
+def test_the_items_and_gods_half_still_tracks_the_current_patch():
+    """Only the community half was wrong. The wiki IS re-scraped on patch day,
+    so `data_patch`'s first half reads `_patch.json` as it always did."""
+    patch = json.loads((sbs.REPO_ROOT / "data" / "_patch.json").read_text(encoding="utf-8"))
+    label = sbs.data_patch()
+    assert label.startswith(f"items/gods {patch['data_patch']},")
+    assert f"community window {sbs.community_window_label()}" in label
+
+
+def test_the_shipped_label_names_open_beta_46_and_its_real_size():
+    """The live assertion, which is what fails against the old code: it read
+    `_patch.json` for both halves and so said "community window Open Beta 47"
+    over an Open Beta 46 table."""
+    label = sbs.data_patch()
+    assert "community window Open Beta 46, 67,532 matches" in label, label
+    assert "community window Open Beta 47" not in label
