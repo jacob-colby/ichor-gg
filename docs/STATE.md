@@ -2504,39 +2504,70 @@ because "On Use" appears later in the text and `is_conditional` reads the
 whole passive rather than the clause (`stat_conversions` already splits by
 sentence for exactly this reason).
 
-### Four findings from the audit quick-fix session (2026-11-04), not fixed
+### ~~Four findings from the audit quick-fix session (2026-11-04)~~ — all four closed 2026-11-04
 
-Recorded rather than fixed because each is wider than the finding it surfaced
-under. Numbers are on fingerprint `a4b1a66d8c0d`.
+Recorded by PR #97 on fingerprint `a4b1a66d8c0d`; closed by the parse-and-leak
+PR the same day. Each fix's evidence is in the docstring next to it.
 
-- **The `Damage Scaling:` label rule drops 70 abilities on 48 gods.** Ares
-  parsed nothing and is fixed (`damage_value._label_paired_components`, a
-  fallback that fires only on a kit the strict rule reads nothing from). The
-  same rule skips any ability whose scaling line is labelled — `Damage Scaling
-  Per Tick:` (23), `Initial Damage Scaling:` (12), `Dash Damage Scaling:` (8),
-  ... — on gods that parse something else. Reading them all, label-paired,
-  moves `damage_value.stat_weights` on 48 gods and `requires_scaling` flavor
-  eligibility on 8 (Discordia and Hades LOSE `strength`/`str-int`; Anubis,
-  Atlas, Cupid, Nut, The Morrigan gain), and re-adjudicates the pinned Medusa
-  worked example in `build_quality` (Viper Shot). A model change for
-  `calibrate`, the held-out check and `side_by_side`, not a parse fix.
-- **Most `mana-stack` builds hold neither converter.** The flavor's
-  `requires_item` gates the god's POOL, not the core, so 109 of 219 builds
-  (Conquest 39/73, Joust 54/73, Arena 16/73) ship without Transcendence or Book
-  of Thoth — the item that defines the build. It was 161 before the mode-weight
-  fix, which is how the 15 Arena Death Metal builds happened: with the
-  conversion bonus under-weighted, Death Metal's raw Strength + Intelligence
-  out-scored the converter. Same family as the audit's "kit check in assembly".
-- **The held-out check cannot see Joust or Arena.** `model_audit heldout` is
-  built on `validate`, which scores Conquest's `core` only, so a PR that moves
-  only those modes' builds reads +0.0000 by construction. The mode-weight fix
-  moved 11 Joust/Arena cores and 163 flavor builds and read exactly that.
-- **The Conquest `model` build under-weights the conversion and overflow
-  terms by half.** `model` ranks by `quality` = (eff·e + fit·f)/(eff + fit),
-  where efficiency carries 0.35/0.50 = 0.70, but both adjustments are added at
-  `signals.efficiency` (0.35). In Joust and Arena eff + fit = 1.0 so the two
-  agree; in Conquest they do not. The mode-weight fix's leak, one archetype
-  over.
+- ~~**The `Damage Scaling:` label rule drops 70 abilities on 48 gods.**~~
+  Fixed: the label rule runs per ability (`damage_value.ability_damage_components`),
+  and the strict rule still wins wherever it reads anything. Exactly 70 on 48
+  (271 -> 341 of 497 read), counting Aladdin's `Landing Damage:` / `Landing
+  Scaling:` grammar; no god is left without stat weights (10 were). Eligibility
+  moved on the 8 predicted (Discordia and Hades lose `strength`/`str-int`;
+  Aladdin, Anubis, Atlas, Nut, The Morrigan gain both, Cupid gains
+  `intelligence`/`str-int`). The Medusa example was re-derived by hand with
+  Viper Shot in (`build_quality` docstring): ability DPS 35.9/23.7/72.4/45.1 ->
+  37.9/25.1/77.0/47.9, basic unchanged, community still ahead.
+- ~~**Most `mana-stack` builds hold neither converter.**~~ A rule gap, not a
+  property of the gods: all 111 (on the day's tree) had a converter in their
+  scored pool, and only Transcendence and Book of Thoth convert mana.
+  `require.any_item` seeds one into the core: 111 -> 0.
+- ~~**The held-out check cannot see Joust or Arena.**~~ Confirmed (Joust and
+  Arena carry 0 of 94 community entries; `validate` resolves Conquest only) and
+  not scorable, so no metric was invented: `heldout` now counts the reference
+  lines a change moves per mode against the base's snapshot and says NOT
+  SCORED / PARTLY SCORED in words. CLAUDE.md names the reference builds as the
+  guard there. It is WIDER than recorded — see below.
+- ~~**The Conquest `model` build under-weights the conversion and overflow
+  terms by half.**~~ Fixed: `assemble.quality_signals` hands the model path
+  efficiency at eff/(eff + fit) (0.70 in Conquest). 28 model builds + 2
+  hybrids, Conquest only.
+
+### Five findings from the parse-and-leak session (2026-11-04), not fixed
+
+- **The held-out check cannot see the Conquest `model`, hybrid, flavor or
+  aspect builds either.** `validate` assembles ONE build, the blended base-kit
+  `core`; its Spearman reads Conquest item scores. So the model-leak fix (28
+  model builds, 6 shown verdicts) and the converter fix (146 mana-stack builds)
+  both read exactly +0.0000 / +0.0000 — every non-zero held-out delta in that
+  PR is the parse fix's. `heldout` now says so (the SCORED bucket is Conquest
+  `core` alone), but the instrument still has nothing to score those builds
+  with; the side-by-side verdicts are the only evaluation they get.
+- **The Joust anti-heal share sits on a cliff.** Re-swept 0.65 -> 0.60 to keep
+  `test_mode_profiles`' 1/N band after the parse fix (44/101 -> 34/101):
+  19 -> 34 -> 44 cores across 0.55 / 0.60 / 0.65. The calibrated point is a
+  handful of Toxic Blade / Divine Ruin tie-breaks, so any change to Strength or
+  Intelligence fit can move it ten cores. A smoother objective (a soft count,
+  or calibrating on the share of anti-heal SCORE rather than of cores) would
+  fix the instrument; re-sweeping each time only re-finds the edge.
+- **Rank lists with a thousands separator do not parse.** `_RANKS` is
+  `[\d.]+`, so Ymir's Shards of Ice (`550 | 750 | 950 | 1,150 | 1,350`) is
+  dropped, as are three non-ability lines (Eset, Xbalanque). One damaging
+  ability today; its scaling also carries `45% Protections`, which `_SCALING`
+  does not read.
+- **About ten damaging abilities use a grammar neither rule reads**, none of
+  them prefix-shaped: a rank line with no colon (Agni's Path of Flames,
+  `Damage 20 | 30 ...`), a scaling line with no rank line (Athena's Reach,
+  Cernunnos's Heavy Glaive), per-rank scaling (Janus's Threshold, `25 | 30
+  ...% Intelligence`), `% of current health` damage (Nemesis), and prose-only
+  scaling (Sun Wukong's Magic Cudgel and Master's Will). Each needs its own
+  rule; the per-ability structure makes each a local addition.
+- **Viper Shot is in, at one tick per cast.** The DoT limit (`damage_value`
+  docstring) now applies to every labelled `Damage Per Tick:` ability the
+  per-ability rule reads — 23 of the 70 — so those are counted, and
+  undercounted, where before they were absent. A tick-count reading would
+  change the Medusa example again.
 
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
@@ -2620,7 +2651,13 @@ NOT claim are in the module docstring. It writes reports and changes nothing.
     and `--check` exits 1 on `FAIL` only (`model_audit.HELDOUT_TOLERANCE`).
     The first version said "must not lower" at all, which sat against §1 — a
     change can rightly lower a metric whose target is a model input. The split is a hash of the god's name
-    (30% held out) and is never re-drawn. **Read deltas only, never the
+    (30% held out) and is never re-drawn. **It scores Conquest's base-kit
+    `core` only** (coverage) and Conquest item scores (Spearman): Joust and
+    Arena have no community record, and `validate` assembles no other build.
+    So `heldout` also prints how many frozen reference lines the change moves
+    in that scored bucket and outside it, and says NOT SCORED / PARTLY SCORED
+    when it moves what the delta cannot see; there the reference builds are
+    the guard (2026-11-04). **Read deltas only, never the
     held-out LEVEL against the tuning level:** on 2026-11-03 the held-out
     25 sit at the 2nd percentile of random 25-god draws on win-weighted (0.40
     vs 0.54) and the 94th on Spearman (0.40 vs 0.22), so the halves differ by
@@ -2814,7 +2851,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1240) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1249) ·
 `cd viewer && npm test -- --run` (947).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2926,15 +2963,15 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Joust / Arena gods placed | 0 / 94 — no outcome data exists |
 | Items placed | <!--now-->216 / 228<!--/now--> (2026-11-03). Earlier, 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
 | Community sample | 14,484 Obsidian+ Conquest matches, 20 Oct – 2 Nov (2026-11-03, OB47). The rest of this row is the 25 Aug – 7 Sep window's history (16,223 matches then) — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
-| Headline gate | coverage 49.1%, win-weighted 50.2% (2026-11-03, OB47, after #82–#91; NOT a tuning target, §1). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
-| **Leakage-free** | **36.6% probe · 37.2% at eff 0.45, vs 5.8% chance = 6.3–6.4×** (2026-11-03, OB47, fingerprint `a4b1a66d8c0d`; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
+| Headline gate | coverage 49.7%, win-weighted 50.9% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
+| **Leakage-free** | **37.0% probe · 37.6% at eff 0.45, vs 5.7% chance = 6.4–6.5×** (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 4 of 2553 builds over the penetration cap (2026-11-04, OB47; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
+| Cap overflow | 47 -> 4 of 2577 builds over the penetration cap (2026-11-04, OB47; 2553 -> 2577 is the per-ability damage parse moving flavor eligibility, +8 tabs net per mode, none of them over; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1240 pipeline · 947 viewer |
+| Tests | 1249 pipeline · 947 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

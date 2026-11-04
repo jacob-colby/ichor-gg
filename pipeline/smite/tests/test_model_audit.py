@@ -433,3 +433,35 @@ def test_every_mana_stack_build_holds_a_converter(snapshot):
                     seen += 1
                     assert converters & set(six), (god, mode, name, six)
     assert seen > 10
+
+
+def test_the_heldout_check_says_plainly_when_it_cannot_score_a_change():
+    """Joust and Arena have no community outcome data, and `validate` assembles
+    Conquest's base-kit `core` alone, so the held-out delta is zero by
+    construction for a change that moves anything else (PR #97's mode-weight
+    fix read +0.0000 that way). The command must say so in words rather than
+    print a PASS that reads like a measurement."""
+    none = {ma.SCORED: 4, "Conquest": 0, "Joust": 0, "Arena": 0}
+    assert ma.blind_spot_note(none) is None
+    only = ma.blind_spot_note({ma.SCORED: 0, "Conquest": 0, "Joust": 3, "Arena": 2})
+    assert only.startswith("NOT SCORED") and "3 Joust, 2 Arena" in only
+    assert "reference" in only and "no community record" in only
+    model_only = ma.blind_spot_note({ma.SCORED: 0, "Conquest": 5, "Joust": 0, "Arena": 0})
+    assert model_only.startswith("NOT SCORED") and "5 Conquest" in model_only
+    both = ma.blind_spot_note({ma.SCORED: 1, "Conquest": 0, "Joust": 3, "Arena": 0})
+    assert both.startswith("PARTLY SCORED") and "core part only" in both
+
+
+def test_reference_changes_are_counted_per_mode(snapshot):
+    """Only Conquest's `core` is in the scored bucket; a Conquest model line,
+    a Joust core line and an Arena verdict are all unscored."""
+    moved = copy.deepcopy(snapshot)
+    god = ma.reference_names()[0]
+    moved[god]["Joust"]["builds"]["core"] = list(reversed(moved[god]["Joust"]["builds"]["core"]))
+    moved[god]["Arena"]["verdict"] = "something else"
+    moved[god]["Conquest"]["builds"]["model"] = ["X"] + moved[god]["Conquest"]["builds"]["model"][1:]
+    zero = {ma.SCORED: 0, **{m: 0 for m in ma.MODES}}
+    assert ma.reference_changes_by_mode(snapshot, snapshot) == zero
+    assert ma.reference_changes_by_mode(snapshot, moved) == dict(zero, Conquest=1, Joust=1, Arena=1)
+    moved[god]["Conquest"]["builds"]["core"] = ["X"] + moved[god]["Conquest"]["builds"]["core"][1:]
+    assert ma.reference_changes_by_mode(snapshot, moved)[ma.SCORED] == 1
