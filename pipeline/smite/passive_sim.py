@@ -98,6 +98,15 @@ class Passive:
     # Healing (2026-11-03): True if the item heals our god in a fight, so a
     # build holding it gets the fight run rather than the static integral.
     heals: bool = False
+    # The coverage pass (2026-11-05, PR #104): three events the clock already
+    # had but no hook exposed.
+    on_tick: Optional[Callable] = None         # (sim, t) on each whole second
+    on_self_heal: Optional[Callable] = None    # (sim, ability name) our ability healed us
+    #: A debuff on the target that holds for the whole window, because the
+    #: clock's target is in range for the whole window. `{dtype: fraction}`
+    #: for a percentage reduction of that protection; `aura_flat_shred` is
+    #: the same in flat points. Constant, so it reads the same in the burst.
+    aura_shred: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -1303,3 +1312,798 @@ def _clip(text, limit=110):
     if len(text) <= limit:
         return text
     return text[:limit].rsplit(" ", 1)[0].rstrip(" .,:;") + "…"
+
+
+# ── THE COVERAGE PASS (2026-11-05, PR #104's precondition) ─────────────────────────────────
+# Everything above was written because `side_by_side`'s 90 comparisons needed
+# it. That left 84 of `efficiency_pool`'s 193 scored items carrying a passive
+# and absent from this table, reading `NOT_SIMULATED` with "no simulator
+# written yet" — a GAP, not a decision. PR #104 measured why that blocks
+# pricing passives inside `efficiency`: an absent item is zeroed by absence,
+# which LOWERS its predicted cost and makes it look MORE premium, so pricing
+# from a 67-of-193 table replaces §4.31's asymmetry with a bigger one.
+#
+# All 84 are decided below: 33 SIMULATED, 8 PARTIAL, 43 NOT_SIMULATED. The
+# split is not a target — it is where the rule at the top of this file lands,
+# item by item. Three refusal reasons are new and each is a MEASURED property
+# of this clock rather than a shrug:
+#
+#   * "the enemy's attack speed is not a quantity here" — `attacker_profile`
+#     derives the enemy's raw DPS from the reference squishy's effective
+#     health over KILL_TIME, and `_enemy_schedule` then sets each hit to
+#     `raw_dps x share x step`. Halve `step` and each hit halves. So a debuff
+#     on the enemy's ATTACK SPEED, or on its Strength, provably changes no
+#     damage in this comparison: the cadence is a schedule, not a source.
+#     Midgardian Mail and Pharaoh's Curse are refused on that proof.
+#   * "the enemy deals no critical strikes" — `crit_chance` is OUR god's
+#     only; nothing on the attacker profile crits. Spectral Armor's whole
+#     passive reads that.
+#   * "Echo is an expected multiplier here, not an instance" —
+#     `combat.echo_multiplier` carries Echo as `1 + chance x share`, linear
+#     and deliberately so ("linear is what a build comparison wants"). Five
+#     items trigger on "Each time you Echo", which has no countable instance
+#     in that design. It is also a two-god mechanic (Ix Chel, Nut) and in
+#     neither god's scraped rotation.
+#
+# And one refusal is a refusal to count HALF of something: Xibalban Effigy
+# halves incoming damage for 4s and then deals the mitigated damage back to
+# our god. `reduce_hit` would simulate the halving in two lines; the clock
+# has no channel for our god damaging itself, so that would book the upside
+# alone. An item refused whole is honest; an item credited with its good half
+# is the PR #104 failure mode pointing the other way.
+#
+# WHAT THE CALLER MUST KNOW. Nine of the 33 simulate to a small number
+# because their payload needs a SECOND enemy and this comparison has one
+# target (the splash items), or needs a distance it does not fix. That is a
+# decision with a reason, which absence was not — but it is not a claim about
+# the item in a real game, and whoever prices from this table should read
+# `assumptions` and not only the number.
+
+
+def _pct_item_stats(pct):
+    """"+X% of all Stats from Items", `_shell`'s clause at another rate.
+    Applied to the PRINTED item totals only, so it cannot compound with
+    another item's passive grant."""
+    def converts(ctx):
+        return {k: pct * v for k, v in ctx.items.items() if v}
+    return converts
+
+
+def _every(cooldown, fn, key=None):
+    """"Damage a God: ... Cooldown: Ns" — one hook for the attack and ability
+    channels together, firing at most once per `cooldown`. The two share one
+    timer, because the text gives the item one."""
+    def hook(sim, ev):
+        st = sim.item_state(key or sim._current_item, ready=0.0)
+        if ev.t >= st["ready"]:
+            st["ready"] = ev.t + cooldown
+            fn(sim, ev)
+    return hook
+
+
+def _adaptive_sum(strength, intelligence):
+    """Two adaptive clauses on one item, added before the choice is made:
+    the text says "based on highest item stat" for each, and the item totals
+    they read are the same, so both clauses always pick the same side."""
+    return _adaptive(strength, intelligence)
+
+
+# ── Ability-hit damage ────────────────────────────────────────────────────
+
+def _ancient_signet(sim, ev):
+    # "Ability Hit: +20 (+12 per Level) bonus Magical Damage ... Cooldown: 15s"
+    sim.proc(20.0 + 12.0 * sim.level, "magical", ev)
+
+
+def _archmage(sim, ev):
+    # "Ability Hit a God: Deal bonus Magical Damage. Damage = 40% of your
+    # Intelligence & 50% of your Strength Cooldown: 20s". "&", so both terms.
+    sim.proc(0.40 * sim.stat("Intelligence") + 0.50 * sim.stat("Strength"), "magical", ev)
+
+
+def _bluestone(sim, ev):
+    # "Ability Hit: +100 Physical Damage over 2s Gods take additional damage =
+    # 7.5% of their current Health Subsequent hits on the same target: 50%
+    # bonus damage for 3s". "Current Health" is the target's health left in
+    # this fight (`Sim.target_hp`), not its max. "Subsequent ... for 3s" is
+    # read as The Crusher's clause is: a hit within 3s of the previous one.
+    st = sim.item_state("Bluestone Brooch", last=-1e18)
+    mult = 1.50 if ev.t - st["last"] <= 3.0 else 1.0
+    st["last"] = ev.t
+    sim.proc(mult * (100.0 + 0.075 * sim.target_hp()), "physical", ev)
+
+
+def _gladiator(sim, ev):
+    # "Abilities deal bonus Physical Damage. Damage = +10 + 40% of your Item
+    # Protections Triggers once per Ability Cast, per God" — item protections
+    # as `_golden_blade` reads them, and one target, so once per cast.
+    prot = sim.stats.get("Physical Protection", 0.0) + sim.stats.get("Magical Protection", 0.0)
+    sim.proc(10.0 + 0.40 * prot, "physical", ev)
+
+
+def _shroud_heal(sim, ev):
+    # "Ability Hit: +1% Max Health Heal +1% Max Mana Recovery". Mana is not
+    # modelled here (`_phoenix`, and §4.16 on why mana carries no weight).
+    sim.heal(0.01 * sim.max_health)
+
+
+def _oath_sworn(sim, ev):
+    # "Ability Hit: Target's Physical Protection is reduced by 5 for 4s. On
+    # God Kill or Assist: This effect increases by 1 Physical Protection.
+    # This effect caps at 20 total." Flat, so `add_flat_shred`; the growth is
+    # the per-takedown counter below, and 20 is the cap on the whole effect.
+    st = sim.item_state("Oath-Sworn Spear", points=5.0)
+    sim.after(lambda: sim.add_flat_shred("Oath-Sworn Spear", "physical",
+                                         st["points"], 1, 4.0, ev.t))
+
+
+def _oath_sworn_takedown(sim, kind):
+    st = sim.item_state("Oath-Sworn Spear", points=5.0)
+    st["points"] = min(20.0, st["points"] + 1.0)
+
+
+# ── Attack-hit effects ────────────────────────────────────────────────────
+
+def _deaths_embrace(sim, ev):
+    # "Attack Hit: +1% Max Health Heal +2% Max Mana Restore -0.33s Non
+    # Ultimate Cooldowns". Mana is not modelled.
+    sim.heal(0.01 * sim.max_health)
+    sim.refund(0.33, 0.0)
+
+
+def _contagion_taken(sim, hit):
+    # "Damaged by an Attack or Ability: Apply +1 Stack of Contagion (1 per
+    # hit)". The lifesteal clause ("If an enemy Lifesteals 100 Health from
+    # you: +5 Stacks") reads the TARGET's lifesteal healing, which the HEALING
+    # block does carry (`target_healed`), counted in whole 100s.
+    st = sim.item_state("Contagion", stacks=0, seen=0.0)
+    st["stacks"] += 1
+    steps = int((sim.target_healed - st["seen"]) // 100.0)
+    if steps:
+        st["stacks"] += 5 * steps
+        st["seen"] += 100.0 * steps
+
+
+def _contagion_attack(sim, ev):
+    # "Attack or Hard Crowd Control an afflicted enemy: Deal Magical Damage =
+    # 1% Max Health per stack in a 4m radius Remove the Stacks". "Max Health"
+    # with no owner reads as OUR max health, as Kinetic Cuirass's does.
+    st = sim.item_state("Contagion", stacks=0, seen=0.0)
+    if st["stacks"]:
+        sim.proc(0.01 * sim.max_health * st["stacks"], "magical", ev)
+        st["stacks"] = 0
+
+
+# ── "Damage a God" procs (attack and ability share one timer) ─────────────
+
+def _sundering_axe_hit(sim, ev):
+    # "Damage a God: +150 (+10% of your Item Protections) Bonus True Damage
+    # +125 Heal Hits only one God per activation ... Cooldown: 8s"
+    prot = sim.stats.get("Physical Protection", 0.0) + sim.stats.get("Magical Protection", 0.0)
+    sim.proc(150.0 + 0.10 * prot, "true", ev)
+    sim.heal(125.0)
+
+
+def _prophetic_hit(sim, ev):
+    # "Damage a God: +1 Protection Stack against the damage type they deal.
+    # Cooldown: 5s." The enemy deals physical as attacks and magical as
+    # abilities (the FIGHT block's attacker), so a stack of each.
+    st = sim.item_state("Prophetic Cloak", stacks=0.0)
+    st["stacks"] = min(15.0, st["stacks"] + 1.0)
+
+
+def _prophetic_prot(sim, dtype):
+    st = sim.state.get("Prophetic Cloak")
+    n = st["stacks"] if st else 0.0
+    return n + (10.0 if n >= 15.0 else 0.0)
+
+
+def _prophetic_reduce(sim, hit):
+    # "At +15 of each Protection Stack, item evolves: ... +6% Damage
+    # Mitigation (or +12% if total Protections > 300)". Read at the moment of
+    # the hit, protections as the two pools our god carries now.
+    st = sim.state.get("Prophetic Cloak")
+    if not st or st["stacks"] < 15.0:
+        return 1.0
+    total = sim.prot_now("physical") + sim.prot_now("magical")
+    return 1.0 - (0.12 if total > 300.0 else 0.06)
+
+
+def _prophetic_stacks(ctx):
+    # The evolution is permanent once reached, so a finished build reads it on
+    # the stack clock like any other persistent stack.
+    return {}
+
+
+# ── Auras and per-second effects ──────────────────────────────────────────
+
+def _mystical_mail(sim, t):
+    # "Enemies within 4m: 15 (+1 per Level) Magical Damage and lose 25% of
+    # Health Shield per 1s. Range Scaling Damage: +50% at Close Range -50% at
+    # Maximum Range". The comparison fixes no distance between the gods, so
+    # the stated number is taken with neither modifier. No enemy shield, so
+    # the shield clause does nothing (`Erosion`'s reason).
+    sim.active_damage(15.0 + 1.0 * sim.level, "magical", item="Mystical Mail")
+
+
+def _yogi(sim, t):
+    # "Heal +0.5% of your Max Health per second."
+    sim.heal(0.005 * sim.max_health, item="Yogi's Necklace")
+
+
+def _sphere(sim, t):
+    # "Gain +2% Max Health Magical Shield every 3s, up to a maximum of +14%
+    # Max Health." The shield is not consumed by time, so it holds until a hit
+    # spends it; it is re-granted at the running total every 3s.
+    if t <= 0 or int(round(t)) % 3:
+        return
+    st = sim.item_state("Sphere of Negation", granted=0.0)
+    if st["granted"] >= 0.14 - 1e-9:
+        return
+    st["granted"] = min(0.14, st["granted"] + 0.02)
+    held = sim.shields.get("Sphere of Negation", (0.0, -1.0))[0]
+    sim.add_shield("Sphere of Negation", held + 0.02 * sim.max_health, 1e18)
+
+
+def _odigba_takedown(sim, kind):
+    # "God Kill or Assist: Heal +5% Max Health over 6s." Paid out by the
+    # second, so a takedown late in the window heals only what fits in it.
+    sim.item_state("Odigba", until=-1.0)["until"] = sim.t + 6.0
+
+
+def _odigba_tick(sim, t):
+    st = sim.state.get("Odigba")
+    if st and t <= st["until"]:
+        sim.heal(0.05 * sim.max_health / 6.0, item="Odigba")
+
+
+def _pridwen_tick(sim, t):
+    # "When the Shield expires or breaks: Explode again: Deal Magic Damage
+    # (70% of your Protections)." The shield is granted for 5s at the press;
+    # the second explosion lands when it ends.
+    st = sim.state.get("Glorious Pridwen")
+    if st and not st.get("second") and st.get("until", 1e18) <= t:
+        st["second"] = True
+        sim.active_damage(0.70 * st["prot"], "magical", item="Glorious Pridwen")
+
+
+# ── Standing stat grants (the self half of a self-and-ally aura) ──────────
+
+def _conch(ctx):
+    # "You and allies within 8.8m: +5 (+0.5 per Level) Strength +5 (+1 per
+    # Level) Intelligence" — our own half. Separate from the item's printed
+    # 25 Strength / 40 Intelligence, which the stat block already carries.
+    return {"Strength": 5.0 + 0.5 * ctx.level, "Intelligence": 5.0 + 1.0 * ctx.level}
+
+
+def _ofuda(ctx):
+    # "+20% Attack Speed for you and allies within 8.8m" — our own half,
+    # separate from the printed 15%.
+    return {"Attack Speed %": 20.0}
+
+
+def _hunters_cowl(ctx):
+    # "Within 8.8m of a God: +30% Attack Speed, +5% Lifesteal, and +15%
+    # Movement Speed. Alone: ...". The clock's target is a god in range for
+    # the whole window, so the first branch holds. Movement speed is not a
+    # quantity here.
+    out = _adaptive(55.0, 80.0)(ctx)
+    out.update({"Attack Speed %": 30.0, "Lifesteal %": 5.0})
+    return out
+
+
+def _pendulum_ages(ctx):
+    # "+3 Strength or +7 Intelligence (based on highest item stat) per 10% of
+    # available Mana" — ten steps at full mana, which is where the fight
+    # opens and the only mana state this comparison has. Added to the item's
+    # own adaptive clause, which picks the same side.
+    return _adaptive(45.0 + 30.0, 70.0 + 70.0)(ctx)
+
+
+def _dwarven(ctx):
+    # "+15 Physical Protections +35 Magical Protections" — on top of the
+    # printed 35/35. The On Use swap is the half this item does not simulate.
+    return {"Physical Protection": 15.0, "Magical Protection": 35.0}
+
+
+def _oni_reduce(sim, hit):
+    # "For each enemy god within 8.8m: +4% Damage Mitigation Max 3 stacks" —
+    # one enemy god is in range, so one stack.
+    return 1.0 - 0.04
+
+
+def _adamantine(sim, key, v):
+    # "While Below 50% Health: +10 Strength." Read off the fight's health bar,
+    # exactly as Bancroft's Talon reads its own.
+    return v + 10.0 if sim.hp < 0.50 * sim.max_health else v
+
+
+# ── Hits taken ────────────────────────────────────────────────────────────
+
+HELM_RADIANCE_PER, HELM_RADIANCE_MAX, HELM_RADIANCE_DURATION = 7.0, 4, 6.0
+
+
+def _helm_radiance_taken(sim, hit):
+    # "Take Physical Damage: +7 Physical Protection for 6s. Stacks up to 4
+    # times." Physical only; `Draconic Scale`'s shape with one pool.
+    if hit["dtype"] != "physical":
+        return
+    st = sim.item_state("Helm of Radiance", stacks=0, expires=0.0)
+    timed_stacks(st, sim.t, HELM_RADIANCE_DURATION)
+    st["stacks"] = min(HELM_RADIANCE_MAX, st["stacks"] + 1)
+    st["expires"] = sim.t + HELM_RADIANCE_DURATION
+
+
+def _helm_radiance_prot(sim, dtype):
+    st = sim.state.get("Helm of Radiance")
+    if not st or dtype != "physical":
+        return 0.0
+    return HELM_RADIANCE_PER * timed_stacks(st, sim.t, HELM_RADIANCE_DURATION)
+
+
+def _leviathan_taken(sim, hit):
+    # "Damaged by Enemy God: -0.5s once per Ability Cast or Attack. Cooldown:
+    # 10s." The half this item does not simulate is above it: "that God is
+    # -10% Strength & Attack Damage", which the enemy's derived DPS cannot
+    # read, and "+8 Max Health Permanently", which the text never caps.
+    st = sim.item_state("Leviathan's Hide", ready=0.0)
+    if sim.t >= st["ready"]:
+        st["ready"] = sim.t + 10.0
+        sim.refund(0.5, 0.5)
+
+
+# ── Takedowns ─────────────────────────────────────────────────────────────
+
+def _necronomicon(sim, kind):
+    # "God Kill or Assist: +1 Stack of: +30 Intelligence Stacks up to 6
+    # times. On Death: Lose 4 Stacks." Our god does not die in the window.
+    st = sim.item_state("Necronomicon", stacks=0)
+    st["stacks"] = min(6, st["stacks"] + 1)
+
+
+def _necronomicon_bonus(sim, key, v):
+    st = sim.state.get("Necronomicon")
+    return v + 30.0 * st["stacks"] if st else v
+
+
+# ── Our own ability healed us (`ability_heals`) ───────────────────────────
+
+def _daybreak_heal(sim, ability):
+    # "Healed yourself with a Healing Ability: +1 Stack (max 3)"
+    st = sim.item_state("Daybreak Gavel", stacks=0, buff=0, until=-1.0)
+    st["stacks"] = min(3, st["stacks"] + 1)
+
+
+def _daybreak_ability(sim, ev):
+    # "Non-Healing Ability Use: Consume all Stacks, +10 Strength or +15
+    # Intelligence (based on highest item stat) for 8s per Stack (max 3)
+    # Cooldown: 4s". A cast that heals is not a non-healing ability.
+    if ev.name in sim.self_heals:
+        return
+    st = sim.item_state("Daybreak Gavel", stacks=0, buff=0, until=-1.0, ready=0.0)
+    if not st["stacks"] or ev.t < st.get("ready", 0.0):
+        return
+    st["buff"], st["until"], st["ready"] = st["stacks"], ev.t + 8.0, ev.t + 4.0
+    st["stacks"] = 0
+
+
+def _daybreak_bonus(sim, key, v):
+    st = sim.state.get("Daybreak Gavel")
+    if not st or not st.get("buff") or sim.t > st["until"]:
+        return v
+    per = 10.0 if key == "Strength" else 15.0
+    return v + per * st["buff"]
+
+
+def _vital_heal(sim, ability):
+    # "Heal yourself with an Ability: +7.5% Attack Speed +5% Attack Damage
+    # (Ranged) +10% Attack Damage (Melee) Buff lasts 6s, Stacks up to 3x"
+    st = sim.item_state("Vital Amplifier", stacks=0, expires=0.0)
+    timed_stacks(st, sim.t, 6.0)
+    st["stacks"] = min(3, st["stacks"] + 1)
+    st["expires"] = sim.t + 6.0
+
+
+def _vital_bonus(sim, key, v):
+    st = sim.state.get("Vital Amplifier")
+    n = timed_stacks(st, sim.t, 6.0) if st else 0
+    if not n:
+        return v
+    if key == "Attack Speed %":
+        return v + 7.5 * n
+    return v * (1.0 + (0.10 if sim.melee else 0.05) * n)
+
+
+def _regrowth_heal(sim, ability):
+    # "Heal yourself with an Ability: +25% Movement Speed (decays to 0%) for
+    # 4s Cooldown: 10s Gain any Movement Speed buff: +5% Health Heal over
+    # 10s". The movement speed is not a quantity here, but the SECOND clause
+    # fires off the first, so the heal is fully determined: an ability self-
+    # heal grants a movement buff, which grants 5% of max health over 10s.
+    st = sim.item_state("Regrowth Striders", ready=0.0, until=-1.0)
+    if sim.t >= st["ready"]:
+        st["ready"], st["until"] = sim.t + 10.0, sim.t + 10.0
+
+
+def _regrowth_tick(sim, t):
+    st = sim.state.get("Regrowth Striders")
+    if st and t <= st["until"]:
+        sim.heal(0.05 * sim.max_health / 10.0, item="Regrowth Striders")
+
+
+# ── Actives ───────────────────────────────────────────────────────────────
+
+def _arondight(sim):
+    # "Reveal enemy Gods within 17.6m for 6s ... First time you damage a
+    # revealed God: +50 (+50% Strength) Physical Damage". The reveal lands on
+    # the one target, which is in range. The +25% movement speed is not a
+    # quantity here.
+    sim.item_state("Arondight", until=-1.0, used=False)
+    sim.state["Arondight"].update(until=sim.t + 6.0, used=False)
+    return True
+
+
+def _arondight_hit(sim, ev):
+    st = sim.state.get("Arondight")
+    if st and not st["used"] and ev.t <= st["until"]:
+        st["used"] = True
+        sim.proc(50.0 + 0.50 * sim.stat("Strength"), "physical", ev)
+
+
+def _pridwen(sim):
+    # "Explode (4.8m radius): Deal Magical Damage (40% of Protections) Gain a
+    # Shield (125% of Protections) for 5s." "Protections" with no qualifier is
+    # read as the two pools our god carries, base and items — the reading
+    # `_brawler_prot` takes for the same word.
+    prot = sim.prot_now("physical") + sim.prot_now("magical")
+    sim.item_state("Glorious Pridwen", prot=0.0, until=-1.0, second=False)
+    sim.state["Glorious Pridwen"].update(prot=prot, until=sim.t + 5.0, second=False)
+    sim.active_damage(0.40 * prot, "magical")
+    sim.add_shield("Glorious Pridwen", 1.25 * prot, sim.t + 5.0)
+    return True
+
+
+def _phoenix_feather(sim):
+    # "Fire 3 Pulses that Heal you and True Damage enemies within 3.2m. Heal =
+    # +75 Health +7.5 Missing Health True Damage = +3% Max Health from Items".
+    # The text gives no interval for the pulses and no unit on "+7.5 Missing
+    # Health": the LITERAL reading is taken for both — all three pulses at the
+    # press, and 7.5 flat health, not 7.5% of what is missing.
+    for _ in range(3):
+        sim.heal(75.0 + 7.5)
+        sim.active_damage(0.03 * sim.item_totals.get("Max Health", 0.0), "true")
+    return True
+
+
+def _myrddin(sim):
+    # "Next non-Ultimate Ability used will have no cooldown."
+    if not sim.any_on_cooldown():
+        return False
+    sim._free_cast = True
+    return True
+
+
+def _gargoyle(sim):
+    # "Enemies in front of you: Silenced for 1s -10% Protections for 4s". The
+    # silence is crowd control and is not in the comparison; the shred is.
+    # Moonlight Phase is off (`The Reaper`).
+    sim.add_shred("Screeching Gargoyle", 0.10, 1, 4.0, sim.t)
+    return True
+
+
+def _lifebinder(sim):
+    # "Fire a projectile that deals 60 (+8 per Level) Magic Damage." The mark,
+    # and the heal and shield the first ALLY to damage it receives, are the
+    # half this item does not simulate.
+    sim.active_damage(60.0 + 8.0 * sim.level, "magical")
+    return True
+
+
+REGISTRY.update({
+    # ── Ability and attack procs ──
+    "Ancient Signet": Passive(SIMULATED, "ability hit: +20 (+12/level) magical, every 15s",
+                              ("no minions in the duel: the -2s minion clause never fires",),
+                              on_ability=_every(15.0, _ancient_signet, "Ancient Signet")),
+    "Archmage's Gem": Passive(SIMULATED, "adaptive +60 Str / +90 Int; ability hit: 40% Int + 50% Str magical, every 20s",
+                              ("\"&\" reads as both terms, not a choice",),
+                              grants=_adaptive(60.0, 90.0),
+                              on_ability=_every(20.0, _archmage, "Archmage's Gem")),
+    "Bluestone Brooch": Passive(SIMULATED, "adaptive +30 Str / +50 Int; ability hit: 100 + 7.5% of the target's current health, x1.5 within 3s",
+                                ("\"their current Health\" is the target's health left in this fight",
+                                 "\"subsequent ... for 3s\" read as The Crusher's clause is"),
+                                grants=_adaptive(30.0, 50.0), on_ability=_bluestone),
+    "Blood-soaked Shroud": Passive(SIMULATED, "adaptive +40 Str / +70 Int; ability hit: heal 1% of max health",
+                                   ("the mana recovery is not modelled",),
+                                   grants=_adaptive(40.0, 70.0), on_ability=_shroud_heal, heals=True),
+    "Death's Embrace": Passive(SIMULATED, "adaptive +40 Str / +70 Int; attack hit: heal 1% of max health, -0.33s non-ultimate cooldowns",
+                               ("the mana restore is not modelled",),
+                               grants=_adaptive(40.0, 70.0), on_attack=_deaths_embrace, heals=True),
+    "Gladiator's Shield": Passive(SIMULATED, "ability: +10 + 40% of item protections, physical",
+                                  ("one target, so once per cast",), on_ability=_gladiator),
+    "Oath-Sworn Spear": Passive(SIMULATED, "ability hit: -5 physical protection for 4s, +1 per takedown to a cap of 20",
+                                ("flat protection reduction, not a percentage shred",),
+                                on_ability=_oath_sworn, on_takedown=_oath_sworn_takedown),
+    "Sundering Axe": Passive(SIMULATED, "adaptive +30 Str / +50 Int; damage a god: 150 + 10% of item protections true, +125 heal, every 8s",
+                             ("one timer across the attack and ability channels",),
+                             grants=_adaptive(30.0, 50.0),
+                             on_attack=_every(8.0, _sundering_axe_hit, "Sundering Axe"),
+                             on_ability=_every(8.0, _sundering_axe_hit, "Sundering Axe"), heals=True),
+
+    # ── Standing grants ──
+    "Triton's Conch": Passive(SIMULATED, "+15 Strength, +25 Intelligence at level 20 (our own half of the aura)",
+                              ("the allies' half is not in the comparison",), grants=_conch),
+    "Shogun's Ofuda": Passive(SIMULATED, "+20% attack speed (our own half of the aura)",
+                              ("the allies' half is not in the comparison",
+                               "separate from the item's printed 15%"), grants=_ofuda),
+    "Hunter's Cowl": Passive(SIMULATED, "adaptive +55 Str / +80 Int; near a god: +30% attack speed, +5% lifesteal",
+                             ("the target is a god in range for the whole window: the \"Alone\" branch never holds",
+                              "the movement speed is not a quantity here"), grants=_hunters_cowl),
+    "Pendulum of the Ages": Passive(SIMULATED, "adaptive +75 Str / +140 Int at full mana",
+                                    ("the fight opens at full mana, the only mana state the comparison has",
+                                     "the +4 mana per second is not modelled"),
+                                    grants=_pendulum_ages),
+    "Adamantine Sickle": Passive(SIMULATED, "+10 Strength below half health, read off the fight's health bar",
+                                 ("exact in the fight run; a burst opens at full health (+0)",),
+                                 stat_bonus=_adamantine, bonus_keys=("Strength",)),
+    "Oni Hunter's Garb": Passive(SIMULATED, "+4% damage mitigation (one enemy god in range, one stack of three)",
+                                 ("one target: the second and third stacks need enemies the comparison lacks",),
+                                 reduce_hit=_oni_reduce),
+    "Talisman of Purification": Passive(SIMULATED, "+7.5% of all item stats",
+                                        ("the cleanse is crowd control and is not in the comparison",),
+                                        converts=_pct_item_stats(0.075)),
+
+    # ── Auras and per-second ──
+    "Mystical Mail": Passive(SIMULATED, "aura: 15 (+1/level) magical per second",
+                             ("target inside 4m for the whole window",
+                              "no distance is fixed: the stated damage, neither the +50% nor the -50%",
+                              "no enemy shield, so the shield strip does nothing"),
+                             on_tick=_mystical_mail),
+    "Void Shield": Passive(SIMULATED, "aura: the target's physical protection -10%",
+                           ("target in range for the whole window",
+                            "no distance is fixed: the stated 10%, neither extreme"),
+                           aura_shred={"physical": 0.10}),
+    "Void Stone": Passive(SIMULATED, "aura: the target's magical protection -10%",
+                          ("target in range for the whole window",
+                           "no distance is fixed: the stated 10%, neither extreme"),
+                          aura_shred={"magical": 0.10}),
+    "Yogi's Necklace": Passive(SIMULATED, "heal 0.5% of max health per second",
+                               on_tick=_yogi, heals=True),
+    "Sphere of Negation": Passive(SIMULATED, "+2% max health magical shield every 3s, to 14%",
+                                  ("the shield has no stated duration: it holds until a hit spends it",),
+                                  on_tick=_sphere),
+
+    # ── Hits taken ──
+    "Helm of Radiance": Passive(SIMULATED, "physical hit taken: +7 physical protection for 6s (4 stacks)",
+                                on_hit_taken=_helm_radiance_taken, prot_bonus=_helm_radiance_prot),
+    "Contagion": Passive(SIMULATED, "hits taken stack; an attack spends them for 1% of our max health each, magical",
+                         ("\"Max Health\" with no owner reads as ours, as Kinetic Cuirass's does",
+                          "the hard-CC trigger is not in the comparison; the attack trigger is",
+                          "the enemy's lifesteal clause reads the target's healing, in whole 100s"),
+                         on_hit_taken=_contagion_taken, on_attack=_contagion_attack),
+
+    # ── Takedowns ──
+    "Necronomicon": Passive(SIMULATED, "kill/assist: +30 Intelligence per stack (6)",
+                            ("our god does not die in the window, so no stack is lost",),
+                            on_takedown=_necronomicon, stat_bonus=_necronomicon_bonus,
+                            bonus_keys=("Intelligence",)),
+    "Odigba": Passive(SIMULATED, "kill/assist: heal 5% of max health over 6s",
+                      ("paid by the second: a late takedown heals only what fits in the window",),
+                      on_takedown=_odigba_takedown, on_tick=_odigba_tick, heals=True),
+
+    # ── Our own ability healed us ──
+    "Daybreak Gavel": Passive(SIMULATED, "adaptive +40 Str / +60 Int; a healing ability stacks (3), a non-healing one spends them for +10 Str / +15 Int each, 8s",
+                              ("the healing ability is the god's own (`ability_heals`)",),
+                              grants=_adaptive(40.0, 60.0), on_self_heal=_daybreak_heal,
+                              on_ability=_daybreak_ability, stat_bonus=_daybreak_bonus,
+                              bonus_keys=("Strength", "Intelligence")),
+    "Vital Amplifier": Passive(SIMULATED, "adaptive +30 Str / +45 Int; a healing ability: +7.5% attack speed and +5%/+10% attack damage, 6s (3 stacks)",
+                               ("the healing ability is the god's own (`ability_heals`)",
+                                "melee reads the +10% branch, ranged the +5%"),
+                               grants=_adaptive(30.0, 45.0), on_self_heal=_vital_heal,
+                               stat_bonus=_vital_bonus,
+                               bonus_keys=("Attack Speed %", "Attack Damage")),
+    "Regrowth Striders": Passive(SIMULATED, "a healing ability grants a movement buff, which heals 5% of max health over 10s (10s)",
+                                 ("the movement speed itself is not a quantity here; the heal it triggers is",),
+                                 on_self_heal=_regrowth_heal, on_tick=_regrowth_tick, heals=True),
+
+    # ── Damage dealt ──
+    "Prophetic Cloak": Passive(SIMULATED, "damage a god (5s): +1 protection stack; at 15, +10/+10 and 6% (12% over 300) damage mitigation",
+                               ("the enemy deals both types, so a stack of each accrues",
+                                "the evolution is permanent once reached",),
+                               on_attack=_every(5.0, _prophetic_hit, "Prophetic Cloak:cd"),
+                               on_ability=_every(5.0, _prophetic_hit, "Prophetic Cloak:cd"),
+                               prot_bonus=_prophetic_prot, reduce_hit=_prophetic_reduce,
+                               stacking=True),
+
+    # ── Actives ──
+    "Arondight": Passive(SIMULATED, "active: reveal; the first damage on a revealed god +50 +50% Strength physical (60s)",
+                         ("pressed at the fight's start; the one target is in range",
+                          "the movement speed is not a quantity here"),
+                         active=_arondight, active_cooldown=60.0,
+                         on_attack=_arondight_hit, on_ability=_arondight_hit),
+    "Glorious Pridwen": Passive(SIMULATED, "active: 40% of protections magical, a shield of 125%, then 70% again when it ends (45s)",
+                                ("pressed at the fight's start",
+                                 "\"Protections\" read as both pools our god carries, base and items"),
+                                active=_pridwen, active_cooldown=45.0, on_tick=_pridwen_tick),
+    "Phoenix Feather": Passive(SIMULATED, "active: 3 pulses, each heal 82.5 and 3% of item max health as true damage (120s)",
+                               ("pressed at the fight's start",
+                                "no interval is given for the pulses: all three at the press",
+                                "\"+7.5 Missing Health\" carries no unit: read as 7.5 flat health"),
+                               active=_phoenix_feather, active_cooldown=120.0, heals=True),
+    "Staff of Myrddin": Passive(SIMULATED, "active: the next non-ultimate ability costs no cooldown (80s)",
+                                ("pressed as soon as an ability is on cooldown",),
+                                active=_myrddin, active_cooldown=80.0, active_trigger="after_casts"),
+    "Screeching Gargoyle": Passive(SIMULATED, "active: the target's protections -10% for 4s (90s)",
+                                   ("pressed at the fight's start",
+                                    "the silence is crowd control and is not in the comparison",
+                                    "Moonlight Phase off"),
+                                   active=_gargoyle, active_cooldown=90.0),
+
+    # ── PARTIAL: one half is simulated and the other cannot be ──
+    "Agility Greaves": Passive(PARTIAL, "+7.5% of all item stats; the dash and the projectile-speed clauses are movement",
+                               ("applied to printed item stats only",),
+                               converts=_pct_item_stats(0.075)),
+    "Time-lock Aegis": Passive(PARTIAL, "+6% of all item stats; the self-stasis active is not simulated",
+                               ("the clock has no channel for our god being unable to act,"
+                                " so neither the damage it dodges nor the output it costs can be read",),
+                               converts=_pct_item_stats(0.06)),
+    "Dwarven Plate": Passive(PARTIAL, "+15 physical / +35 magical protection; the On Use swap is not simulated",
+                             ("which protection to raise is a read of the enemy's damage type,"
+                              " and the sustained enemy deals both at an even split",),
+                             grants=_dwarven),
+    "Mercury's Talaria": Passive(PARTIAL, "adaptive +40 Str / +70 Int; the stored-energy clause needs out-of-combat movement",
+                                 ("the energy is stored by MOVING while out of combat, and the"
+                                  " clock has neither movement nor an out-of-combat phase",),
+                                 grants=_adaptive(40.0, 70.0)),
+    "Bumba's Spear": Passive(PARTIAL, "adaptive +35 Str / +60 Int; the on-hit damage lands on enemies AROUND the target, not on it",
+                             ("one target: the comparison has no second enemy for the cleave",),
+                             grants=_adaptive(35.0, 60.0)),
+    "Bumba's Hammer": Passive(PARTIAL, "adaptive +35 Str / +60 Int, -0.66s cooldowns and +60 heal on the charged attack; the splash damage is not simulated",
+                              ("one target: the +60 true damage lands on enemies around it",),
+                              grants=_adaptive(35.0, 60.0),
+                              on_ability=lambda sim, ev: sim.item_state("Bumba's Hammer", armed=False)
+                              .__setitem__("armed", True),
+                              on_attack=lambda sim, ev: _bumba_attack(sim, ev)),
+    "Leviathan's Hide": Passive(PARTIAL, "damaged by a god: -0.5s cooldowns, every 10s",
+                                ("the -10% Strength on the enemy cannot be read: its DPS is derived"
+                                 " from the reference squishy, not built from its stats",
+                                 "the +8 max health \"Permanently\" is not counted: the text gives no cap"),
+                                on_hit_taken=_leviathan_taken),
+    "Lifebinder": Passive(PARTIAL, "active: 60 (+8/level) magical damage; the ally heal and shield are not simulated",
+                          ("pressed at the fight's start",),
+                          active=_lifebinder, active_cooldown=20.0),
+
+    # ── REFUSED: movement and distance ──
+    "Gem of Focus": Passive(NOT_SIMULATED, "pathfinding on ability use", ("no movement",)),
+    "Kopesh": Passive(NOT_SIMULATED, "movement speed on a crit", ("no movement",)),
+    "Damaru": Passive(NOT_SIMULATED, "movement speed per Rhythm stack, then Harmonized",
+                      ("no movement",)),
+    "Helm of Darkness": Passive(NOT_SIMULATED, "active: stealth, passing through walls",
+                                ("no movement, no stealth", "Moonlight Phase off")),
+    "Ragnarok's Wake": Passive(NOT_SIMULATED, "active: fly 30m, then 600 magical and a knock-up",
+                               ("the active displaces our god for 4.5s: no movement",
+                                "the knock-up is crowd control")),
+    "Circe's Hexstone": Passive(NOT_SIMULATED, "active: a dash that knocks up and damages",
+                                ("no movement, so whether the dash connects cannot be read",
+                                 "the text gives no duration for its +60 protections")),
+    "Sharpshooter's Arrow": Passive(NOT_SIMULATED, "attack damage rising with distance, +10% at 6m",
+                                    ("the comparison fixes no distance between the gods, and the"
+                                     " clause has no value at zero distance to fall back on",
+                                     "the +5% gold is economy, not a fight")),
+    # ── REFUSED: crowd control ──
+    "Ancile": Passive(NOT_SIMULATED, "active: the next ability silences", ("no crowd control",)),
+    "Caestus": Passive(NOT_SIMULATED, "protections when hard crowd controlled", ("no crowd control",)),
+    "Jade Scepter": Passive(NOT_SIMULATED, "active: knocks gods away", ("no crowd control",)),
+    "Resolute Mantle": Passive(NOT_SIMULATED, "health regen and tenacity when hard crowd controlled",
+                               ("no crowd control",)),
+    "Ring of Dispel": Passive(NOT_SIMULATED, "hard crowd control lowers the target's Strength and Intelligence",
+                              ("no crowd control",
+                               "and the enemy's Strength is not a quantity here: its DPS is derived")),
+    "Scepter of Dominion": Passive(NOT_SIMULATED, "active: a stasis zone", ("no crowd control",)),
+    "Shroud of Vengeance": Passive(NOT_SIMULATED, "a shockwave when hard crowd controlled",
+                                   ("no crowd control",)),
+    "Spirit Robe": Passive(NOT_SIMULATED, "protections and a heal when hit by hard crowd control",
+                           ("no crowd control",)),
+    "Stone of Binding": Passive(NOT_SIMULATED, "hard crowd control shreds protections",
+                                ("no crowd control",)),
+    "Mantle Of Discord": Passive(NOT_SIMULATED, "a stun and +15 Dampening when damaged below 40% health",
+                                 ("no crowd control",
+                                  "and our own Dampening is worth exactly 0 to every number here (§4.19)")),
+    # ── REFUSED: no ally ──
+    "Chandra's Grace": Passive(NOT_SIMULATED, "regen and cooldowns to the lowest-health ally",
+                               ("the comparison contains no ally", "Moonlight Phase off")),
+    "Eros' Bow": Passive(NOT_SIMULATED, "a Beloved ally receives Strength and Intelligence",
+                         ("the comparison contains no ally",)),
+    "Heartwood Charm": Passive(NOT_SIMULATED, "active: stored healing to allies",
+                               ("the comparison contains no ally",)),
+    "Lotus Sickle": Passive(NOT_SIMULATED, "an ally's attack spends a Lotus stack",
+                            ("the comparison contains no ally",)),
+    "Radiant Bulwark": Passive(NOT_SIMULATED, "active: a wall that protects allies behind it",
+                               ("the comparison contains no ally",)),
+    "Rod of Asclepius": Passive(NOT_SIMULATED, "healing an ally raises our healing",
+                                ("the comparison contains no ally",)),
+    "Soul Locket": Passive(NOT_SIMULATED, "stacks from buffing an ally, spent for damage reduction",
+                           ("the comparison contains no ally",)),
+    "Umbral Link": Passive(NOT_SIMULATED, "lifesteal healing split with allies",
+                           ("the comparison contains no ally",)),
+    "Heroism": Passive(NOT_SIMULATED, "a shield to an ally hit by hard crowd control",
+                       ("the comparison contains no ally", "no crowd control",
+                        "the +1 gold per second is economy, not a fight")),
+    # ── REFUSED: mana (§4.16) ──
+    "Infused Axe": Passive(NOT_SIMULATED, "mana on a takedown",
+                           ("mana is not modelled here, and carries no fit weight (§4.16)",)),
+    "Oracle Staff": Passive(NOT_SIMULATED, "mana on a takedown",
+                            ("mana is not modelled here, and carries no fit weight (§4.16)",)),
+    # ── REFUSED: Echo is an expectation here, not an instance ──
+    "Eye of the Storm": Passive(NOT_SIMULATED, "a storm at 10 Echo stacks",
+                                ("`combat.echo_multiplier` carries Echo as an expected"
+                                 " multiplier, so \"each time you Echo\" has no instance to count",
+                                 "and Echo is a two-god mechanic (Ix Chel, Nut), in neither rotation")),
+    "Omen Drum": Passive(NOT_SIMULATED, "Echo damage per Dark Resonance stack",
+                         ("`combat.echo_multiplier` carries Echo as an expected multiplier,"
+                          " so \"each time you Echo\" has no instance to count",)),
+    "The Cosmic Horror": Passive(NOT_SIMULATED, "a tentacle every 3 Echoes",
+                                 ("`combat.echo_multiplier` carries Echo as an expected"
+                                  " multiplier, so \"each time you Echo\" has no instance to count",)),
+    "Totem of Death": Passive(NOT_SIMULATED, "8% of missing health on each Echo",
+                              ("`combat.echo_multiplier` carries Echo as an expected"
+                               " multiplier, so \"each time you Echo\" has no instance to count",)),
+    # ── REFUSED: a quantity the enemy profile does not carry ──
+    "Midgardian Mail": Passive(NOT_SIMULATED, "the attacker's attack speed -10% per stack (4)",
+                               ("the enemy's attack speed is not a quantity here: `attacker_profile`"
+                                " derives its raw DPS from the reference squishy and"
+                                " `_enemy_schedule` sets each hit to dps x share x step, so halving"
+                                " the cadence halves each hit and changes no damage",)),
+    "Pharaoh's Curse": Passive(NOT_SIMULATED, "active: -50% shields, -20% movement, -40% attack speed",
+                               ("no enemy shield in the comparison", "no movement",
+                                "the enemy's attack speed is not a quantity here (Midgardian Mail)")),
+    "Spectral Armor": Passive(NOT_SIMULATED, "-30% damage from critical strikes",
+                              ("the enemy deals no critical strikes: `crit_chance` is our god's only",
+                               "our own Plating is worth exactly 0 to every number here (§4.19)",
+                               "the comparison contains no ally")),
+    "Wyrmskin Hide": Passive(NOT_SIMULATED, "a Dampening stack per god hit",
+                             ("our own Dampening is worth exactly 0 to every number here (§4.19):"
+                              " `build_quality.TARGET_SIDE_ONLY`",)),
+    # ── REFUSED: no minions, no summons ──
+    "Typhon\u2019s Heart": Passive(NOT_SIMULATED, "summons a monster at 30 stacks",
+                                   ("the comparison contains no summons, and its stacks come"
+                                    " from minion and jungle kills the duel does not have",)),
+    "War Banner": Passive(NOT_SIMULATED, "a minion takedown buffs you and nearby allies",
+                          ("no minions in the duel", "the comparison contains no ally")),
+    "Alchemist Coat": Passive(NOT_SIMULATED, "Dampening on using a consumable, and a free potion",
+                              ("the comparison contains no consumables and no inventory economy"
+                               " (`Eye of Providence`'s reason)",
+                               "and our own Dampening is worth exactly 0 here (§4.19)")),
+    # ── REFUSED: the passive rewrites a god's own ability ──
+    "Ashwhorl Acorn": Passive(NOT_SIMULATED, "rewrites Ratatoskr's Flurry",
+                              ("the clock runs items against a scraped ability rotation and has no"
+                               " hook for an item changing an ability's shape",
+                               "the stat lines in the text are the item's printed stats, already counted")),
+    "Briskberry Acorn": Passive(NOT_SIMULATED, "rewrites Ratatoskr's Dart",
+                                ("the clock runs items against a scraped ability rotation and has no"
+                                 " hook for an item changing an ability's shape",
+                                 "the stat lines in the text are the item's printed stats, already counted")),
+    "Thistlethorn Acorn": Passive(NOT_SIMULATED, "rewrites Ratatoskr's Acorn Blast",
+                                  ("the clock runs items against a scraped ability rotation and has no"
+                                   " hook for an item changing an ability's shape",
+                                   "the stat lines in the text are the item's printed stats, already counted")),
+    # ── REFUSED: simulating it would count the good half only ──
+    "Xibalban Effigy": Passive(NOT_SIMULATED, "active: take 50% damage for 4s, then take the mitigated damage back",
+                               ("the clock has no channel for our god damaging itself, and"
+                                " `reduce_hit` alone would book the halving without the payback",
+                                "Moonlight Phase off")),
+})
+
+
+def _bumba_attack(sim, ev):
+    # "Hit this Attack: -0.66s Cooldowns, +60 Heal" — fires on the charged
+    # attack landing. The +60 true damage it also deals goes to "enemies
+    # within 1.92m of the target", which the comparison does not contain.
+    st = sim.item_state("Bumba's Hammer", armed=False)
+    if st["armed"]:
+        st["armed"] = False
+        sim.refund(0.66, 0.66)
+        sim.heal(60.0)
+
+
+REGISTRY["Bumba's Hammer"].heals = True
