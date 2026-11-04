@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Rage:
       total: 0.43
       efficiency: 0.44
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -359,11 +359,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.73
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
@@ -751,11 +751,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Rage:
       total: 0.43
       efficiency: 0.44
@@ -887,7 +887,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
@@ -1081,11 +1081,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.45
+      total: 0.44
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.43
     Chandra's Grace:
       total: 0.5
       efficiency: 0.43

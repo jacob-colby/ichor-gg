@@ -229,7 +229,7 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -304,7 +304,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.74
     Tyrfing:
       total: 0.58
       efficiency: 0.5

@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0

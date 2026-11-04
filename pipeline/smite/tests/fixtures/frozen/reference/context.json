@@ -180,5 +180,10 @@
     "role": "Support"
    }
   }
+ },
+ "team_shares": {
+  "joust": {
+   "anti-heal": 0.589233
+  }
  }
 }

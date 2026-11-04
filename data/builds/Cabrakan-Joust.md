@@ -32,7 +32,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.56
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -489,7 +489,7 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
       win: 0.5
       pick: 0.0

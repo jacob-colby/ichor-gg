@@ -96,6 +96,7 @@ health-regen sustain, allies, waves, objectives, and every passive
 reason.
 """
 import argparse
+import copy
 import json
 import math
 import re
@@ -264,6 +265,82 @@ ABILITY_HEALS = True
 #: first fight only), because an effective-health run is a chain of
 #: consecutive 10s fights and lifesteal compounds over the chain.
 HEAL_UNTIL = math.inf
+#
+# ── THE SURVIVAL BLOCK (2026-11-04) ───────────────────────────────────────
+# THE DEFECT. In the effective-health run our lifesteal landed only on a
+# LIVE target and a kill-heal at the instant of the kill, so damage bought
+# survival only until the target died: more damage killed the squishy
+# sooner, stole for less of the fight, and landed the kill-heal on a full
+# bar. Offence LOWERED effective health. Thanatos's frozen core read 6704 ->
+# 5457 physical EHP from 4 to 6 items (-19%) with static EHP flat at 4655;
+# on 2026-11-04 data 96 of 282 god-mode comparisons had a survival figure
+# fall between breakpoints, 49 of them under a shown verdict (audit PR #96
+# counted 79 of 261 and 39 on its day's data).
+#
+# THE RULE. The survival run (`fight_ehp`) separates survival from kill
+# speed, and counts a kill only as a benefit. Within it:
+#   * LIFESTEAL. The target does not die inside a fight for lifesteal's
+#     purposes, but each fight still holds ONE god's health to steal from
+#     (KILL_RULE's one target per fight). The build steals at a constant
+#     rate, min(D, H) / WINDOW a second, where D is its damage over one
+#     sustained window against the squishy (the damage axis's own run, so
+#     kills, refunds and stacks are all in it) and H the squishy's max
+#     health; credited at each enemy hit for the time since the last, through
+#     the live Lifesteal stat (`_steal`).
+#   * TAKEDOWNS. Kills happen when they happen (net damage reaching H, one a
+#     fight), and a kill is split in two (`_takedown`):
+#       - its HEALS are taken at the kill and HELD, spent when the bar reaches
+#         zero (`heal`, `_release`): never wasted on a full bar, never crowding
+#         out a lifesteal drip, and — the bar's protection being uniform —
+#         worth the same effective health as an instant heal that lands in
+#         full, so the kill's timing cannot change what they are worth;
+#       - everything else it does (cooldown refunds, stacks: Jotunn's,
+#         Desolation, Frenzy, Blood-Bound Book, Bloodforge, Rage, Doom Orb)
+#         is applied at the END of its fight (`_kill_effects`), an instant
+#         our damage does not move. A refund at the kill's own instant is how
+#         kill speed reached a self-heal scaled on missing health (Bellona's
+#         Scourge, through Jotunn's, moved 0.3%); dropping the refunds
+#         instead cost Hel's Joust Ichor six 22% of its EHP, so they are kept.
+#     Assists are untouched: they come on a schedule our damage does not move.
+# What survives of our damage is min(D, H), WHICH fights hold a kill, and
+# the held heals: all non-decreasing in damage, and nothing in the run moves
+# with when the kill lands. So more damage, everything else held equal,
+# never lowers fight EHP through the kill: it raises it until the build
+# out-damages the target and is neutral after. The one path left is a kill
+# that HAPPENS (vs not) adding a refund whose recast lands a missing-health
+# heal smaller — possible in principle, not seen: `test_survival` checks the
+# property on every frozen reference build in all three modes (the old rule
+# fails it), and the whole roster was checked once (the PR has the count).
+# The damage axis keeps KILL_RULE and every takedown hook as they were.
+#
+# WHY NOT THE SIMPLER FIXES. Each was built and measured first.
+#   * A sponge — steal on ALL damage, the target never dies. Monotone, and
+#     it is the corpse defect the live-target gate was written to stop: a
+#     carry's 3-5 target-healths a fight become 3-5x the healing: 120 of the
+#     1128 six-item figures (49 of 282 comparisons) went past 50,000, i.e.
+#     into the 600s run cap (Medusa's community six: 3593 -> 205,543 magical).
+#   * Spreading the same min(D, H) pool over the fight IN PROPORTION TO OUR
+#     DAMAGE. Bounded, but still not monotone: a build whose damage lands in
+#     the t = 0 opener spends the pool while the bar is full. Thanatos 4 -> 6
+#     items read 6087 -> 6083. Only a rate that ignores WHEN the damage
+#     landed removes the dependence, so the drip above is constant.
+#   * Crediting the whole kill (heals included) at the END of its fight.
+#     Monotone on the reference builds, but in this run our god often dies
+#     before the fight ends, so a real kill-heal was never paid: Susano's Ichor
+#     six read 5242 -> 4231 magical. Hence the split above.
+#
+# WHAT IT MOVES (2026-11-04 data). Falling-survival comparisons 96 -> 1 of
+# 282; the one left, Sol / Conquest (2 -> 4 items, 4609 -> 4501), is a
+# different cause — Spear of Desolation's Cooldown Rate moves Radiance's
+# recast from 10.0s to 7.6s and Radiance's heal scales with missing health
+# (STATE.md §5). Six-item fight EHP, new / old over all 1128 figures: median
+# 1.000, range 0.91-1.71. The top is the defect at its plainest: Pele's
+# community six (26.75% Lifesteal) killed in the t = 0 opener and read ZERO
+# lifesteal, 4060 = its static EHP; now 6960. Thanatos's frozen core reads
+# 6784 at both 4 and 6 items (was 6704 -> 5457). 13 shown verdicts move; the
+# PR lists them. Roster-wide, damage x1 / 1.5 / 3 / 10 on every god, mode and
+# build at 2/4/6 items: 5,076 checks, 0 falls.
+SURVIVAL = True
 #
 # ── MODES (2026-11-03) ────────────────────────────────────────────────────
 # The comparison was Conquest's alone. Joust and Arena have NO community
@@ -440,7 +517,7 @@ class Sim:
     get no enemy. `takedowns` turns on kills and assists (off in a burst)."""
 
     def __init__(self, god, names, items_by_name, target, *, window=..., level=LEVEL,
-                 stacks="full", disabled=(), enemy=None, takedowns=None):
+                 stacks="full", disabled=(), enemy=None, takedowns=None, survival=None):
         self.god, self.names, self.level, self.target = god, list(names), level, target
         self.window = WINDOW if window is ... else window   # read now: MODES sets it
         self.stacks = stacks
@@ -480,6 +557,9 @@ class Sim:
         self.takedowns = (window is not None) if takedowns is None else takedowns
         self.dealt, self.kills, self.assists = 0.0, 0, 0
         self._fight, self._fight_start, self._fight_killed = 0, 0.0, False
+        self.survival, self._steal_t = survival, 0.0
+        self._in_takedown, self._stored = False, {}   # SURVIVAL: takedown heals held
+        self._takedown_heals, self._effects_due = True, None
         self.casts, self.kill_times = [], []   # (t, ability) and t, for tests and the page
         base = god.get("base_stats") or {}
         self.max_health = bq.level_value(base.get("health"), level) + self.base_stats.get("Max Health", 0.0)
@@ -639,14 +719,30 @@ class Sim:
         # there is no god left to steal from; without this a 10s fight's
         # lifesteal ran on a corpse and a 30% lifesteal build out-healed the
         # enemy forever (Ishtar's community six read 8x its static EHP).
-        ls = self.stat("Lifesteal %")
+        # The SURVIVAL run does not steal here: it drips (`_steal`).
+        if self.survival is not None:
+            return
         alive = self.target["max_health"] - (
             (self.dealt - amount - self._fight_start) - (self.target_healed - self._fight_heal_start))
-        if ls > 0 and alive > 0:
-            nominal = combat.lifesteal_healing(min(amount, alive), ls)
+        if alive > 0:
+            self._lifesteal(min(amount, alive))
+
+    def _lifesteal(self, eligible):
+        ls = self.stat("Lifesteal %")
+        if ls > 0 and eligible > 0:
+            nominal = combat.lifesteal_healing(eligible, ls)
             if self.gluttonous:
                 passive_sim._gluttonous_store(self, nominal)
             self.heal(nominal, item="Lifesteal")
+
+    def _steal(self, t):
+        """The SURVIVAL run's lifesteal (`fight_ehp`, SURVIVAL block): the
+        damage it may steal from arrives at a constant `self.survival` per
+        second, credited for the time since the last credit."""
+        if self.survival is None or not HEALING:
+            return
+        dt, self._steal_t = t - self._steal_t, t
+        self._lifesteal(self.survival * dt)
 
     def _check_kills(self):
         """At most one kill per fight of WINDOW seconds: when our damage
@@ -657,15 +753,41 @@ class Sim:
         net = (self.dealt - self._fight_start) - (self.target_healed - self._fight_heal_start)
         if not self._fight_killed and net >= self.target["max_health"]:
             self._fight_killed = True
-            self.kills += 1
             self.kill_times.append(self.t)
+            self.kills += 1
             self._takedown("kill")
 
     def _takedown(self, kind):
-        for name, p in self.passives:
-            if p.on_takedown:
+        """Fire every item's takedown hook. In the SURVIVAL run a KILL is
+        split (SURVIVAL block): its heals are taken now and HELD (`heal`), and
+        everything else it does — cooldown refunds, stacks — is put back and
+        applied at the END of its fight (`_kill_effects`), an instant our
+        damage does not move. An assist keeps everything, now: it comes on a
+        schedule our damage does not move either."""
+        hooks = [(n, p) for n, p in self.passives if p.on_takedown]
+        if not hooks:
+            return
+        split = self.survival is not None and kind == "kill"
+        if split:
+            kept = copy.deepcopy((self.nxt, self.active_ready, self.state, self.dynamic, self.shreds))
+        self._fire(hooks, kind)
+        if split:
+            self.nxt, self.active_ready, self.state, self.dynamic, self.shreds = kept
+            self._effects_due = (self._fight + 1) * WINDOW
+
+    def _fire(self, hooks, kind, heals=True):
+        self._in_takedown, self._takedown_heals = True, heals
+        try:
+            for name, p in hooks:
                 self._current_item = name
                 p.on_takedown(self, kind)
+        finally:
+            self._in_takedown, self._takedown_heals = False, True
+
+    def _kill_effects(self, t):
+        """The deferred non-heal part of this fight's kill (SURVIVAL block)."""
+        self.t, self._effects_due = t, None
+        self._fire([(n, p) for n, p in self.passives if p.on_takedown], "kill", heals=False)
 
     def active_damage(self, amount, dtype, item=None):
         """Damage from an active (or a reflect): mitigated as a proc, booked
@@ -711,11 +833,31 @@ class Sim:
         if self.t >= HEAL_UNTIL:
             return
         amount = combat.healing_received(amount, (self.heal_cut,))
+        name = item or self._current_item or "?"
+        if self._in_takedown and not self._takedown_heals:
+            return                       # a deferred kill's effects: its heal is already held
+        if self.survival is not None and self._in_takedown:
+            # SURVIVAL block: a takedown's heal is HELD and spent when the bar
+            # reaches zero, so it is never wasted on a full bar and never
+            # crowds out a lifesteal drip; with the bar's protection uniform
+            # a heal that lands in full is worth the same EHP whenever it lands.
+            self._stored[name] = self._stored.get(name, 0.0) + amount
+            return
+        self._land(amount, name)
+
+    def _land(self, amount, name):
         landed = max(0.0, min(self.max_health - self.hp, amount))
         self.hp += landed
         self.healed += landed
-        name = item or self._current_item or "?"
         self.heal_by_item[name] = self.heal_by_item.get(name, 0.0) + landed
+        return landed
+
+    def _release(self):
+        """Spend the held takedown heals (the bar is at zero)."""
+        if self.t >= HEAL_UNTIL:
+            return
+        for name in list(self._stored):
+            self._land(self._stored.pop(name), name)
 
     def target_cut(self):
         """The healing reduction live on the TARGET now (ours)."""
@@ -804,6 +946,8 @@ class Sim:
                 self.absorbed += left
                 self.health_lost += d
                 left = 0.0
+            if self.hp <= 1e-9 and self._stored:
+                self._release()
         if HEALING:
             taken = (self.health_lost - lost_before) + max(
                 0.0, shield_before - sum(a for a, _ in self.shields.values()))
@@ -823,7 +967,7 @@ class Sim:
     def remaining_ehp(self, dtype):
         """Raw damage the rest of the bar (and any live shield) would take,
         statically, at the protection each slice carries now."""
-        out, hp = 0.0, self.hp
+        out, hp = 0.0, min(self.max_health, self.hp + sum(self._stored.values()))
         for amt, until in self.shields.values():
             if self.t < until:
                 out += amt * (1.0 + self.prot_now(dtype) / 100.0)
@@ -926,6 +1070,8 @@ class Sim:
                 options.append((aura, 2, "aura", None))
             if assist < self.window:
                 options.append((assist, 3, "assist", None))
+            if self._effects_due is not None and self._effects_due < self.window:
+                options.append((self._effects_due, -2, "kill_effects", None))
             for j, f in enumerate(foes):
                 if f[0] < self.window:
                     options.append((f[0], 4 + j, "enemy", j))
@@ -959,6 +1105,8 @@ class Sim:
                 st = self.state.get("Sanguine Lash")
                 if st and st.get("until", -1.0) > t:
                     aura = min(aura, t + SANGUINE_FAST)
+            elif kind == "kill_effects":
+                self._kill_effects(t)
             elif kind == "assist":
                 self.t = t
                 self.assists += 1
@@ -967,6 +1115,7 @@ class Sim:
             else:
                 self.t = t
                 f = foes[i]
+                self._steal(t)
                 self.take_hit(f[2], f[3], f[4])
                 f[0] = t + f[1]
         if until_dead:
@@ -1050,10 +1199,16 @@ def fight_ehp(god, names, items_by_name, targets, stacks="full", disabled=()):
     sq = targets.get("squishy") or {}
     if not sq.get("attacker") or not moves_in_a_fight(names, items_by_name, disabled, god):
         return static
+    steal = None
+    if SURVIVAL:
+        pre = Sim(god, names, items_by_name, sq, stacks=stacks, disabled=disabled, enemy="both")
+        pre.run_window()
+        dealt = pre.total()
+        steal = min(dealt, sq["max_health"]) / WINDOW
     out = []
     for dtype in ("physical", "magical"):
         s = Sim(god, names, items_by_name, sq, window=EHP_RUN_CAP, stacks=stacks,
-                disabled=disabled, enemy=dtype, takedowns=True)
+                disabled=disabled, enemy=dtype, takedowns=True, survival=steal)
         out.append(s.run_window(until_dead=True))
     return out[0], out[1], static[2]
 

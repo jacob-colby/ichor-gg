@@ -145,8 +145,8 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Toxic Blade
   - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -369,7 +369,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.79
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74

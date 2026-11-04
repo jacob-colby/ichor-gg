@@ -36,7 +36,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56

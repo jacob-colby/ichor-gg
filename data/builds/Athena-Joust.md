@@ -36,7 +36,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56
@@ -359,7 +359,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56

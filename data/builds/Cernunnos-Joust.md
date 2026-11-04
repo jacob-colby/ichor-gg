@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -424,11 +424,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Tyrfing:
       total: 0.52
       efficiency: 0.5
@@ -821,7 +821,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.58
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -887,7 +887,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.52
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
@@ -955,7 +955,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -1025,7 +1025,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Death Metal:
       total: 0.5
       efficiency: 0.63
@@ -1081,7 +1081,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
       win: 0.5
       pick: 0.0

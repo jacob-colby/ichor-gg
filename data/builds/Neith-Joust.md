@@ -36,7 +36,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.58
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
@@ -168,7 +168,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
@@ -424,11 +424,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Tyrfing:
       total: 0.52
       efficiency: 0.5
@@ -489,11 +489,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -619,11 +619,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -688,7 +688,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.58
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67

@@ -42,7 +42,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -80,8 +80,8 @@ builds:
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Kinetic Cuirass
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Toxic Blade
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
   - Hydra's Lament
+  - Freya's Tears
   flex_slots:
   - Hydra's Lament
-  - Toxic Blade
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -288,17 +288,11 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.49
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Genji's Guard:
       total: 0.51
       efficiency: 0.69
@@ -329,6 +323,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Freya's Tears:
+      total: 0.49
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
   starter: *id001
 - source: suggested
   archetype: model
@@ -369,7 +369,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

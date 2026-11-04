@@ -239,7 +239,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -298,7 +298,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.78
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -434,7 +434,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.48
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43

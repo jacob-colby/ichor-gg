@@ -103,7 +103,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -298,7 +298,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.86
     Tyrfing:
       total: 0.54
       efficiency: 0.5
@@ -558,7 +558,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Tyrfing:
       total: 0.55
       efficiency: 0.5

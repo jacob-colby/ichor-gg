@@ -1909,7 +1909,7 @@ aspects:
 # aura bonus at ZERO, and no share can bring that column near 1/N.
 #
 #   mode   tag        share   cores holding   target
-#   Joust  anti-heal  0.60    34/101          1 in 3   (re-swept 2026-11-04)
+#   Joust  anti-heal  DERIVED (below, since 2026-11-04)  1 in 3
 #   Joust  team aura  0.15    34/101          1 in 3
 #   Arena  anti-heal  0.70    21/101          1 in 5
 #   Arena  team aura  0.00    19/101          1 in 5   (already there with no bonus)
@@ -1934,11 +1934,24 @@ aspects:
 # tie-breaks happen to fall, and any model change that nudges Strength or
 # Intelligence fit can move it by ten cores. Arena's 0.70 was not touched
 # (27/101, inside the band).
+#
+# DERIVED, NOT SWEPT (2026-11-04). The cliff is not a near-tie in assembly:
+# in Joust an item's score has no god-specific term (win and pick are zero),
+# so every god of a ROLE sees the same gap between its best anti-heal item
+# and its weakest core item, and any flat bonus moves the count a role at a
+# time (nine cores between 0.58 and 0.59: six Carries to Toxic Blade, three
+# Solos). So `derive` replaces the number with its target: the share is the
+# least share at which the round(seats/N)-th cheapest seat's core holds the
+# tag, recomputed by `recommend --all` into data/_team_shares.json, and the
+# count is the target on every refresh. Evidence and the sweep are in
+# `recommend.py` ("Team-tag shares derived from their target").
 team_tags:
   tags: [anti-heal, aura]
   duplicate_value: 0.25
+  derive:
+    joust: [anti-heal]
   share:
-    joust: {anti-heal: 0.60, aura: 0.15}
+    joust: {aura: 0.15}
     arena: {anti-heal: 0.70, aura: 0.0}
 modes:
   conquest:

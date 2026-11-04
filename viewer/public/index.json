@@ -53202,7 +53202,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Kinetic Cuirass": {
               "total": 0.59,
@@ -53811,7 +53811,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Kinetic Cuirass": {
               "total": 0.59,
@@ -55988,11 +55988,11 @@
               "fit": 0.6
             },
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Tyrfing": {
               "total": 0.6,
@@ -64215,7 +64215,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -64295,7 +64295,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.79
+              "fit": 0.78
             },
             "Jotunn's Revenge": {
               "total": 0.59,
@@ -64385,11 +64385,11 @@
               "fit": 0.6
             },
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Tyrfing": {
               "total": 0.6,
@@ -64476,7 +64476,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.49
+              "fit": 0.48
             },
             "Chandra's Grace": {
               "total": 0.49,
@@ -69006,7 +69006,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -69086,7 +69086,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.79
+              "fit": 0.78
             },
             "Jotunn's Revenge": {
               "total": 0.59,
@@ -69176,11 +69176,11 @@
               "fit": 0.6
             },
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Tyrfing": {
               "total": 0.6,
@@ -69267,7 +69267,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.49
+              "fit": 0.48
             },
             "Chandra's Grace": {
               "total": 0.49,
@@ -71439,7 +71439,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.66
+              "fit": 0.65
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -71602,7 +71602,7 @@
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.53,
+              "total": 0.52,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -73494,7 +73494,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Kinetic Cuirass": {
               "total": 0.64,
@@ -73925,7 +73925,7 @@
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -74103,7 +74103,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Kinetic Cuirass": {
               "total": 0.64,
@@ -76248,7 +76248,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.63
+              "fit": 0.62
             },
             "Berserker's Shield": {
               "total": 0.54,
@@ -80713,7 +80713,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Kinetic Cuirass": {
               "total": 0.64,
@@ -81322,7 +81322,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Kinetic Cuirass": {
               "total": 0.64,
@@ -89968,7 +89968,7 @@
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Brawler\u2019s Beat Stick": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -90407,7 +90407,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.57
+              "fit": 0.56
             },
             "Berserker's Shield": {
               "total": 0.54,
@@ -90577,7 +90577,7 @@
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Brawler\u2019s Beat Stick": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -92308,7 +92308,7 @@
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Stygian Anchor": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
@@ -92917,7 +92917,7 @@
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Stygian Anchor": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
@@ -96693,11 +96693,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.53,
+              "total": 0.52,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.6
+              "fit": 0.59
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -96954,11 +96954,11 @@
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.64
+              "fit": 0.63
             },
             "Tyrfing": {
               "total": 0.52,
@@ -97483,7 +97483,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.59
+              "fit": 0.58
             },
             "Jotunn's Revenge": {
               "total": 0.55,
@@ -97571,7 +97571,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.53
+              "fit": 0.52
             },
             "Berserker's Shield": {
               "total": 0.52,
@@ -97662,7 +97662,7 @@
               "fit": 0.6
             },
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -97754,7 +97754,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Death Metal": {
               "total": 0.5,
@@ -97831,7 +97831,7 @@
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.51,
+              "total": 0.5,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -99621,8 +99621,8 @@
             "Soul Gem"
           ],
           "flex_slots": [
-            "Brawler\u2019s Beat Stick",
-            "Erosion"
+            "Erosion",
+            "Brawler\u2019s Beat Stick"
           ],
           "situational_swaps": [
             {
@@ -100091,7 +100091,7 @@
               "fit": 0.45
             },
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -100230,8 +100230,8 @@
             "Soul Gem"
           ],
           "flex_slots": [
-            "Brawler\u2019s Beat Stick",
-            "Erosion"
+            "Erosion",
+            "Brawler\u2019s Beat Stick"
           ],
           "situational_swaps": [
             {
@@ -106316,11 +106316,11 @@
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.64
+              "fit": 0.63
             },
             "Rage": {
               "total": 0.43,
@@ -106403,11 +106403,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.53,
+              "total": 0.52,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.6
+              "fit": 0.59
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -106577,11 +106577,11 @@
           "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.6,
+              "total": 0.59,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.74
+              "fit": 0.73
             },
             "Jotunn's Revenge": {
               "total": 0.6,
@@ -107101,11 +107101,11 @@
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.64
+              "fit": 0.63
             },
             "Rage": {
               "total": 0.43,
@@ -107281,7 +107281,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Berserker's Shield": {
               "total": 0.52,
@@ -107541,11 +107541,11 @@
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.45,
+              "total": 0.44,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.44
+              "fit": 0.43
             },
             "Chandra's Grace": {
               "total": 0.5,
@@ -114601,8 +114601,8 @@
             "Amanita Charm"
           ],
           "flex_slots": [
-            "Toxic Blade",
-            "Golden Blade"
+            "Golden Blade",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -114640,7 +114640,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.56
+              "fit": 0.55
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -114723,7 +114723,7 @@
               "fit": 0.65
             },
             "Toxic Blade": {
-              "total": 0.6,
+              "total": 0.59,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -114810,7 +114810,7 @@
               "fit": 0.6
             },
             "Toxic Blade": {
-              "total": 0.59,
+              "total": 0.58,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -117407,11 +117407,11 @@
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.58
+              "fit": 0.57
             },
             "Jotunn's Revenge": {
               "total": 0.53,
@@ -117668,11 +117668,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.53,
+              "total": 0.52,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.6
+              "fit": 0.59
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -118277,11 +118277,11 @@
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.52,
+              "total": 0.51,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.58
+              "fit": 0.57
             },
             "Jotunn's Revenge": {
               "total": 0.53,
@@ -123561,7 +123561,7 @@
               "fit": 0.45
             },
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -123953,8 +123953,8 @@
           "source": "suggested",
           "archetype": "str-int",
           "slot_order": [
-            "Toxic Blade",
             "Jotunn's Revenge",
+            "Tyrfing",
             "Death Metal",
             "Bragi's Harp",
             "Rod of Tahuti",
@@ -123962,7 +123962,7 @@
           ],
           "flex_slots": [
             "Jotunn's Revenge",
-            "Toxic Blade"
+            "Tyrfing"
           ],
           "situational_swaps": [
             {
@@ -123982,25 +123982,25 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Divine Ruin \u2014 anti-heal",
-              "swap_item": "Divine Ruin"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Hybrid Strength + Intelligence \u2014 this kit scales on both (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.51,
-              "efficiency": 0.45,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.57
-            },
             "Jotunn's Revenge": {
               "total": 0.51,
               "efficiency": 0.67,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.36
+            },
+            "Tyrfing": {
+              "total": 0.51,
+              "efficiency": 0.5,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.52
             },
             "Death Metal": {
               "total": 0.59,
@@ -133760,7 +133760,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.44
+              "fit": 0.43
             },
             "Kinetic Cuirass": {
               "total": 0.51,
@@ -136622,7 +136622,7 @@
               "fit": 0.52
             },
             "Toxic Blade": {
-              "total": 0.58,
+              "total": 0.57,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -138278,7 +138278,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.67
+              "fit": 0.66
             },
             "Berserker's Shield": {
               "total": 0.56,
@@ -138358,7 +138358,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.53
+              "fit": 0.52
             },
             "Berserker's Shield": {
               "total": 0.5,
@@ -138626,7 +138626,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.74
+              "fit": 0.73
             },
             "Berserker's Shield": {
               "total": 0.56,
@@ -138800,7 +138800,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.67
+              "fit": 0.66
             },
             "Berserker's Shield": {
               "total": 0.56,
@@ -140219,15 +140219,15 @@
           "archetype": "bruiser",
           "slot_order": [
             "Golden Blade",
-            "Toxic Blade",
             "Berserker's Shield",
             "Kinetic Cuirass",
+            "Shield Splitter",
             "Amanita Charm",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Toxic Blade",
-            "Golden Blade"
+            "Golden Blade",
+            "Shield Splitter"
           ],
           "situational_swaps": [
             {
@@ -140247,8 +140247,8 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Lifesteal bruiser skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
@@ -140259,13 +140259,6 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.51
-            },
-            "Toxic Blade": {
-              "total": 0.52,
-              "efficiency": 0.48,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.55
             },
             "Berserker's Shield": {
               "total": 0.56,
@@ -140280,6 +140273,13 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.52
+            },
+            "Shield Splitter": {
+              "total": 0.51,
+              "efficiency": 0.59,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.43
             },
             "Amanita Charm": {
               "total": 0.7,
@@ -140366,7 +140366,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.67
+              "fit": 0.66
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -142688,11 +142688,11 @@
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Rage": {
               "total": 0.46,
@@ -142775,11 +142775,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.53,
+              "total": 0.52,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.6
+              "fit": 0.59
             },
             "Jotunn's Revenge": {
               "total": 0.58,
@@ -143043,11 +143043,11 @@
               "fit": 0.58
             },
             "Toxic Blade": {
-              "total": 0.61,
+              "total": 0.6,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.76
+              "fit": 0.75
             },
             "Tyrfing": {
               "total": 0.59,
@@ -157551,7 +157551,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.63
+              "fit": 0.62
             },
             "Tyrfing": {
               "total": 0.59,
@@ -157819,7 +157819,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -158334,7 +158334,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.63
+              "fit": 0.62
             },
             "Tyrfing": {
               "total": 0.59,
@@ -176792,7 +176792,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.54
+              "fit": 0.53
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -177220,7 +177220,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Berserker's Shield": {
               "total": 0.54,
@@ -177307,7 +177307,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Berserker's Shield": {
               "total": 0.54,
@@ -177401,7 +177401,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.54
+              "fit": 0.53
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -179125,7 +179125,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.66
+              "fit": 0.65
             },
             "Berserker's Shield": {
               "total": 0.58,
@@ -179299,7 +179299,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.75
+              "fit": 0.74
             },
             "Tyrfing": {
               "total": 0.58,
@@ -179339,8 +179339,8 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
-            "Toxic Blade",
             "Lotus Sickle",
+            "Chronos' Pendant",
             "Jotunn's Revenge",
             "Hydra's Lament",
             "Spear of Desolation",
@@ -179348,7 +179348,7 @@
           ],
           "flex_slots": [
             "Lotus Sickle",
-            "Toxic Blade"
+            "Chronos' Pendant"
           ],
           "situational_swaps": [
             {
@@ -179368,22 +179368,22 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Divine Ruin \u2014 anti-heal",
-              "swap_item": "Divine Ruin"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.5,
-              "efficiency": 0.45,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.55
-            },
             "Lotus Sickle": {
               "total": 0.51,
               "efficiency": 0.57,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.45
+            },
+            "Chronos' Pendant": {
+              "total": 0.5,
+              "efficiency": 0.55,
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.45
@@ -181455,7 +181455,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.44
+              "fit": 0.43
             },
             "Kinetic Cuirass": {
               "total": 0.51,
@@ -191824,7 +191824,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Jotunn's Revenge": {
               "total": 0.53,
@@ -191879,8 +191879,8 @@
             "Soul Gem"
           ],
           "flex_slots": [
-            "Toxic Blade",
-            "Spear of Desolation"
+            "Spear of Desolation",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -192001,7 +192001,7 @@
               "fit": 0.43
             },
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -194524,7 +194524,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.65
+              "fit": 0.64
             },
             "Berserker's Shield": {
               "total": 0.56,
@@ -210352,7 +210352,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.59
+              "fit": 0.58
             },
             "Jotunn's Revenge": {
               "total": 0.51,
@@ -210526,7 +210526,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.57
+              "fit": 0.56
             },
             "Jotunn's Revenge": {
               "total": 0.51,
@@ -210870,11 +210870,11 @@
           "rationale": "Basic-attack DPS skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.64
+              "fit": 0.63
             },
             "Tyrfing": {
               "total": 0.52,
@@ -210957,11 +210957,11 @@
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.5,
+              "total": 0.49,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.54
+              "fit": 0.53
             },
             "Jotunn's Revenge": {
               "total": 0.58,
@@ -211131,11 +211131,11 @@
           "rationale": "Hybrid Strength + Intelligence \u2014 this kit scales on both (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.51,
+              "total": 0.5,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.56
+              "fit": 0.55
             },
             "Jotunn's Revenge": {
               "total": 0.53,
@@ -211222,7 +211222,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.59
+              "fit": 0.58
             },
             "Jotunn's Revenge": {
               "total": 0.51,
@@ -213033,7 +213033,7 @@
           "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.66,
+              "total": 0.65,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
@@ -213131,7 +213131,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.75
+              "fit": 0.74
             },
             "Tyrfing": {
               "total": 0.58,
@@ -214935,7 +214935,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.65
+              "fit": 0.64
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -220260,11 +220260,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.58,
+              "total": 0.57,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.7
+              "fit": 0.69
             },
             "Jotunn's Revenge": {
               "total": 0.61,
@@ -222799,7 +222799,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.7
+              "fit": 0.69
             },
             "Berserker's Shield": {
               "total": 0.58,
@@ -224351,7 +224351,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Berserker's Shield": {
               "total": 0.57,
@@ -224399,8 +224399,8 @@
             "Amanita Charm"
           ],
           "flex_slots": [
-            "Golden Blade",
-            "Kinetic Cuirass"
+            "Kinetic Cuirass",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -224652,16 +224652,16 @@
           "source": "suggested",
           "archetype": "cooldown",
           "slot_order": [
-            "Toxic Blade",
             "Genji's Guard",
             "Berserker's Shield",
             "Jotunn's Revenge",
             "Shield of the Phoenix",
-            "Hydra's Lament"
+            "Hydra's Lament",
+            "Freya's Tears"
           ],
           "flex_slots": [
             "Hydra's Lament",
-            "Toxic Blade"
+            "Freya's Tears"
           ],
           "situational_swaps": [
             {
@@ -224681,19 +224681,12 @@
             },
             {
               "vs_tag": "sustain",
-              "swap": "Brawler\u2019s Beat Stick \u2014 anti-heal",
-              "swap_item": "Brawler\u2019s Beat Stick"
+              "swap": "Toxic Blade \u2014 anti-heal",
+              "swap_item": "Toxic Blade"
             }
           ],
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
-            "Toxic Blade": {
-              "total": 0.49,
-              "efficiency": 0.48,
-              "win": 0.5,
-              "pick": 0.0,
-              "fit": 0.5
-            },
             "Genji's Guard": {
               "total": 0.51,
               "efficiency": 0.69,
@@ -224728,6 +224721,13 @@
               "win": 0.5,
               "pick": 0.0,
               "fit": 0.44
+            },
+            "Freya's Tears": {
+              "total": 0.49,
+              "efficiency": 0.58,
+              "win": 0.5,
+              "pick": 0.0,
+              "fit": 0.4
             }
           },
           "starter": {
@@ -224786,7 +224786,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.61
+              "fit": 0.6
             },
             "Berserker's Shield": {
               "total": 0.57,
@@ -232093,11 +232093,11 @@
           "rationale": "Top weighted-score core (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.63,
+              "total": 0.62,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.8
+              "fit": 0.79
             },
             "Jotunn's Revenge": {
               "total": 0.55,
@@ -232365,7 +232365,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.72
+              "fit": 0.71
             },
             "Berserker's Shield": {
               "total": 0.58,
@@ -232619,7 +232619,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.71
+              "fit": 0.7
             },
             "Jotunn's Revenge": {
               "total": 0.63,
@@ -232702,11 +232702,11 @@
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.57,
+              "total": 0.56,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.68
+              "fit": 0.67
             },
             "Jotunn's Revenge": {
               "total": 0.63,
@@ -232793,7 +232793,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.75
+              "fit": 0.74
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -232876,11 +232876,11 @@
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.63,
+              "total": 0.62,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.8
+              "fit": 0.79
             },
             "Jotunn's Revenge": {
               "total": 0.55,
@@ -239649,7 +239649,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.69
+              "fit": 0.68
             },
             "Rage": {
               "total": 0.45,
@@ -239732,11 +239732,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.54,
+              "total": 0.53,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Jotunn's Revenge": {
               "total": 0.57,
@@ -239830,7 +239830,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.66
+              "fit": 0.65
             },
             "Berserker's Shield": {
               "total": 0.57,
@@ -239906,11 +239906,11 @@
           "rationale": "Full-penetration anti-tank skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.63,
+              "total": 0.62,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.8
+              "fit": 0.79
             },
             "Jotunn's Revenge": {
               "total": 0.59,
@@ -244903,7 +244903,7 @@
               "fit": 0.59
             },
             "Toxic Blade": {
-              "total": 0.63,
+              "total": 0.62,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -253967,7 +253967,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.77
+              "fit": 0.76
             },
             "Jotunn's Revenge": {
               "total": 0.59,
@@ -254054,7 +254054,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.75
+              "fit": 0.74
             },
             "Berserker's Shield": {
               "total": 0.59,
@@ -258734,7 +258734,7 @@
           "rationale": "Off-type Strength build \u2014 this kit scales on it (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -266025,8 +266025,8 @@
             "Heartseeker"
           ],
           "flex_slots": [
-            "Toxic Blade",
-            "The Crusher"
+            "The Crusher",
+            "Toxic Blade"
           ],
           "situational_swaps": [
             {
@@ -266325,7 +266325,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.8
+              "fit": 0.79
             },
             "Berserker's Shield": {
               "total": 0.58,
@@ -268946,11 +268946,11 @@
           "rationale": "Ability / burst skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.64
+              "fit": 0.63
             },
             "Jotunn's Revenge": {
               "total": 0.61,
@@ -269124,7 +269124,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.83
+              "fit": 0.82
             },
             "Jotunn's Revenge": {
               "total": 0.64,
@@ -269294,11 +269294,11 @@
           "rationale": "Ability-uptime skew \u2014 Cooldown Rate is a rate, not a reduction (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.51,
+              "total": 0.5,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.56
+              "fit": 0.55
             },
             "Lotus Sickle": {
               "total": 0.51,
@@ -271736,11 +271736,11 @@
           "rationale": "Crit / auto-attack skew (efficiency + fit). Joust \u2014 math + mode profile (no meta win/pick data).",
           "slot_scores": {
             "Toxic Blade": {
-              "total": 0.54,
+              "total": 0.53,
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.62
+              "fit": 0.61
             },
             "Rage": {
               "total": 0.44,
@@ -271917,7 +271917,7 @@
               "fit": 0.45
             },
             "Toxic Blade": {
-              "total": 0.55,
+              "total": 0.54,
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
@@ -276834,7 +276834,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.55
+              "fit": 0.54
             },
             "Jotunn's Revenge": {
               "total": 0.55,
@@ -277095,7 +277095,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.87
+              "fit": 0.86
             },
             "Tyrfing": {
               "total": 0.54,
@@ -277443,7 +277443,7 @@
               "efficiency": 0.45,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.65
+              "fit": 0.64
             },
             "Tyrfing": {
               "total": 0.55,
@@ -282239,7 +282239,7 @@
               "efficiency": 0.48,
               "win": 0.5,
               "pick": 0.0,
-              "fit": 0.56
+              "fit": 0.55
             },
             "Berserker's Shield": {
               "total": 0.53,
@@ -287632,7 +287632,7 @@
         "Yogi's Necklace": 0.5049,
         "Chandra's Grace": 0.5008,
         "Wyrmskin Hide": 0.4921,
-        "Toxic Blade": 0.491,
+        "Toxic Blade": 0.4894,
         "Umbral Link": 0.4845,
         "The Crusher": 0.4831,
         "Hydra's Lament": 0.4826,
@@ -287650,10 +287650,10 @@
         "Genji's Guard": 0.4341,
         "Tyrfing": 0.4262,
         "Midgardian Mail": 0.4215,
-        "Contagion": 0.4178,
         "Leviathan's Hide": 0.4177,
         "Gladiator's Shield": 0.4166,
         "Spectral Armor": 0.4163,
+        "Contagion": 0.4162,
         "Shifter's Shield": 0.4135
       },
       "arena": {
@@ -287803,7 +287803,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -287845,7 +287845,7 @@
         "Eros' Bow": 0.5436,
         "Heartwood Charm": 0.5381,
         "Rod of Asclepius": 0.535,
-        "Divine Ruin": 0.5325,
+        "Divine Ruin": 0.5309,
         "Totem of Death": 0.5252,
         "Ancient Signet": 0.5246,
         "Bracer of The Abyss": 0.5214,
@@ -288015,7 +288015,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -288146,8 +288146,8 @@
         "Spear of the Magus": 0.4887,
         "Bragi's Harp": 0.4853,
         "Chandra's Grace": 0.4705,
-        "Toxic Blade": 0.4588,
         "Doom Orb": 0.4574,
+        "Toxic Blade": 0.4572,
         "Runeforged Hammer": 0.4565,
         "The World Stone": 0.4565,
         "Devourer's Gauntlet": 0.4565,
@@ -288278,7 +288278,7 @@
         "Berserker's Shield": 0.4853,
         "Jotunn's Revenge": 0.4847,
         "Hydra's Lament": 0.4838,
-        "Stygian Anchor": 0.4817,
+        "Stygian Anchor": 0.4801,
         "Bancroft's Talon": 0.478,
         "Wyrmskin Hide": 0.4766,
         "Rod of Asclepius": 0.4756,
@@ -288389,7 +288389,7 @@
         "Dominance": 0.5496,
         "Bloodforge": 0.5349,
         "Golden Blade": 0.5337,
-        "Toxic Blade": 0.5217,
+        "Toxic Blade": 0.5201,
         "Tekko-Kagi": 0.4903,
         "Silverbranch Bow": 0.4851,
         "Qin's Blade": 0.4793,
@@ -288527,7 +288527,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -288664,12 +288664,12 @@
         "Gladiator's Shield": 0.4647,
         "Breastplate of Valor": 0.459,
         "Helm of Radiance": 0.4577,
-        "Stygian Anchor": 0.4576,
         "Regrowth Striders": 0.4566,
+        "Stygian Anchor": 0.456,
         "Lotus Sickle": 0.455,
-        "Divine Ruin": 0.4451,
         "Spear of the Magus": 0.4447,
         "Helm of Darkness": 0.4443,
+        "Divine Ruin": 0.4435,
         "Screeching Gargoyle": 0.4426,
         "Spirit Robe": 0.4411,
         "Void Shield": 0.4404,
@@ -288773,7 +288773,7 @@
         "Dominance": 0.5496,
         "Golden Blade": 0.5379,
         "Bloodforge": 0.5349,
-        "Toxic Blade": 0.5259,
+        "Toxic Blade": 0.5243,
         "Tekko-Kagi": 0.4903,
         "Silverbranch Bow": 0.4892,
         "Qin's Blade": 0.4834,
@@ -288911,7 +288911,7 @@
         "Oni Hunter's Garb": 0.5188,
         "Blood-Bound Book": 0.5162,
         "Berserker's Shield": 0.5143,
-        "Stygian Anchor": 0.514,
+        "Stygian Anchor": 0.5123,
         "Shifter's Shield": 0.5114,
         "Gladiator's Shield": 0.5076,
         "The Reaper": 0.5056,
@@ -289029,7 +289029,7 @@
         "Dominance": 0.5496,
         "Golden Blade": 0.5379,
         "Bloodforge": 0.5349,
-        "Toxic Blade": 0.5259,
+        "Toxic Blade": 0.5243,
         "Tekko-Kagi": 0.4903,
         "Silverbranch Bow": 0.4892,
         "Qin's Blade": 0.4834,
@@ -289177,8 +289177,8 @@
         "Wyrmskin Hide": 0.4817,
         "Bancroft's Talon": 0.4805,
         "Rod of Asclepius": 0.4794,
-        "Stygian Anchor": 0.472,
         "Lifebinder": 0.4704,
+        "Stygian Anchor": 0.4704,
         "Avenging Blade": 0.4649,
         "Gladiator's Shield": 0.464,
         "Shifter's Shield": 0.4603,
@@ -289295,8 +289295,8 @@
         "Oni Hunter's Garb": 0.5217,
         "Blood-Bound Book": 0.5201,
         "Berserker's Shield": 0.5173,
-        "Stygian Anchor": 0.5172,
         "Shifter's Shield": 0.516,
+        "Stygian Anchor": 0.5156,
         "The Reaper": 0.5046,
         "Gladiator's Shield": 0.5039,
         "Yogi's Necklace": 0.502,
@@ -289422,7 +289422,7 @@
         "Genji's Guard": 0.5312,
         "Oni Hunter's Garb": 0.5298,
         "Shifter's Shield": 0.5285,
-        "Stygian Anchor": 0.5262,
+        "Stygian Anchor": 0.5246,
         "Gladiator's Shield": 0.5143,
         "Spirit Robe": 0.5097,
         "Rod of Asclepius": 0.5087,
@@ -289547,9 +289547,9 @@
         "Riptalon": 0.5697,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
-        "Toxic Blade": 0.5263,
         "Dominance": 0.5256,
         "Golden Blade": 0.5255,
+        "Toxic Blade": 0.5247,
         "Avenging Blade": 0.517,
         "Arondight": 0.5081,
         "Lernaean Bow": 0.5052,
@@ -289679,8 +289679,8 @@
         "Oni Hunter's Garb": 0.5217,
         "Blood-Bound Book": 0.5184,
         "Berserker's Shield": 0.5173,
-        "Stygian Anchor": 0.5172,
         "Shifter's Shield": 0.516,
+        "Stygian Anchor": 0.5156,
         "The Reaper": 0.5062,
         "Gladiator's Shield": 0.5039,
         "Yogi's Necklace": 0.502,
@@ -289815,12 +289815,12 @@
         "Draconic Scale": 0.4701,
         "Gladiator's Shield": 0.4596,
         "Breastplate of Valor": 0.4556,
-        "Stygian Anchor": 0.4538,
         "Helm of Radiance": 0.4535,
         "Regrowth Striders": 0.4532,
         "Spear of the Magus": 0.4528,
+        "Stygian Anchor": 0.4522,
         "Lotus Sickle": 0.4512,
-        "Divine Ruin": 0.4428,
+        "Divine Ruin": 0.4412,
         "Screeching Gargoyle": 0.4391,
         "Helm of Darkness": 0.4382,
         "Spirit Robe": 0.4373,
@@ -289929,7 +289929,7 @@
         "Tyrfing": 0.5971,
         "Bloodforge": 0.596,
         "Riptalon": 0.5772,
-        "Toxic Blade": 0.5339,
+        "Toxic Blade": 0.5323,
         "Golden Blade": 0.5291,
         "Runeforged Hammer": 0.5253,
         "Devourer's Gauntlet": 0.5253,
@@ -290067,7 +290067,7 @@
         "Hydra's Lament": 0.4937,
         "Berserker's Shield": 0.4932,
         "Yogi's Necklace": 0.4912,
-        "Stygian Anchor": 0.4905,
+        "Stygian Anchor": 0.4889,
         "Shifter's Shield": 0.4785,
         "Spirit Robe": 0.474,
         "Gladiator's Shield": 0.4728,
@@ -290196,8 +290196,8 @@
         "Oni Hunter's Garb": 0.4919,
         "Yogi's Necklace": 0.4887,
         "Berserker's Shield": 0.4874,
-        "Stygian Anchor": 0.4841,
         "Jotunn's Revenge": 0.4828,
+        "Stygian Anchor": 0.4825,
         "Wyrmskin Hide": 0.4824,
         "Hydra's Lament": 0.4817,
         "Bancroft's Talon": 0.4765,
@@ -290317,7 +290317,7 @@
         "Umbral Link": 0.5229,
         "Genji's Guard": 0.5119,
         "Oni Hunter's Garb": 0.507,
-        "Stygian Anchor": 0.5009,
+        "Stygian Anchor": 0.4993,
         "Yogi's Necklace": 0.4954,
         "Rod of Asclepius": 0.4941,
         "Bancroft's Talon": 0.4938,
@@ -290480,7 +290480,7 @@
         "Bancroft's Talon": 0.5162,
         "Bragi's Harp": 0.5154,
         "Jotunn's Revenge": 0.5028,
-        "Toxic Blade": 0.5006,
+        "Toxic Blade": 0.4989,
         "Bloodforge": 0.4895,
         "Lernaean Bow": 0.489,
         "Tyrfing": 0.4854,
@@ -290500,7 +290500,7 @@
         "Golden Blade": 0.4399,
         "Rod of Asclepius": 0.427,
         "Spear of the Magus": 0.4258,
-        "Divine Ruin": 0.4244,
+        "Divine Ruin": 0.4228,
         "Ancient Signet": 0.4165,
         "The Crusher": 0.4137,
         "Qin's Blade": 0.4129,
@@ -290519,7 +290519,7 @@
         "Riptalon": 0.5655,
         "Blood-Bound Book": 0.5385,
         "Death Metal": 0.5381,
-        "Toxic Blade": 0.5112,
+        "Toxic Blade": 0.5096,
         "Bancroft's Talon": 0.5063,
         "Ethereal Staff": 0.4946,
         "Jotunn's Revenge": 0.4922,
@@ -290541,8 +290541,8 @@
         "Soul Locket": 0.4341,
         "Yogi's Necklace": 0.433,
         "Dominance": 0.4297,
-        "Divine Ruin": 0.4201,
         "Nimble Ring": 0.4198,
+        "Divine Ruin": 0.4185,
         "Triton's Conch": 0.4182,
         "Spear of the Magus": 0.4172,
         "Silverbranch Bow": 0.416,
@@ -290718,7 +290718,7 @@
         "Heartseeker": 0.4529,
         "Draconic Scale": 0.4522,
         "Hydra's Lament": 0.4516,
-        "Stygian Anchor": 0.446,
+        "Stygian Anchor": 0.4443,
         "Triton's Conch": 0.4407,
         "Spirit Robe": 0.4294,
         "Helm of Radiance": 0.4283,
@@ -290828,7 +290828,7 @@
         "Genji's Guard": 0.5312,
         "Oni Hunter's Garb": 0.5298,
         "Shifter's Shield": 0.5285,
-        "Stygian Anchor": 0.5262,
+        "Stygian Anchor": 0.5246,
         "Gladiator's Shield": 0.5143,
         "Spirit Robe": 0.5097,
         "Rod of Asclepius": 0.5087,
@@ -290983,7 +290983,7 @@
       "joust": {
         "Riptalon": 0.6631,
         "The Reaper": 0.6146,
-        "Toxic Blade": 0.5375,
+        "Toxic Blade": 0.5359,
         "Jotunn's Revenge": 0.5314,
         "Tyrfing": 0.5166,
         "Lernaean Bow": 0.5152,
@@ -291030,7 +291030,7 @@
         "Titan's Bane": 0.5199,
         "Heartseeker": 0.513,
         "Hydra's Lament": 0.4962,
-        "Toxic Blade": 0.4788,
+        "Toxic Blade": 0.4772,
         "The Crusher": 0.4724,
         "Pendulum Blade": 0.4658,
         "Demon Blade": 0.4616,
@@ -291249,7 +291249,7 @@
         "Bragi's Harp": 0.4796,
         "Lotus Sickle": 0.4792,
         "Rod of Asclepius": 0.4761,
-        "Divine Ruin": 0.4736,
+        "Divine Ruin": 0.4719,
         "Doom Orb": 0.469,
         "The World Stone": 0.468,
         "Ancient Signet": 0.4657,
@@ -291306,8 +291306,8 @@
         "Triton's Conch": 0.425,
         "Screeching Gargoyle": 0.423,
         "Chronos' Pendant": 0.4193,
-        "Divine Ruin": 0.4141,
         "Heartwood Charm": 0.4126,
+        "Divine Ruin": 0.4125,
         "Oni Hunter's Garb": 0.4086,
         "Spectral Armor": 0.4075,
         "Ancient Signet": 0.4062,
@@ -291454,7 +291454,7 @@
         "Golden Blade": 0.5382,
         "Bloodforge": 0.5231,
         "Shield of the Phoenix": 0.5112,
-        "Toxic Blade": 0.5077,
+        "Toxic Blade": 0.5061,
         "Lernaean Bow": 0.5042,
         "Dominance": 0.4908,
         "Tyrfing": 0.4904,
@@ -291584,7 +291584,7 @@
         "Bancroft's Talon": 0.5157,
         "Jotunn's Revenge": 0.5053,
         "Bragi's Harp": 0.5021,
-        "Toxic Blade": 0.4999,
+        "Toxic Blade": 0.4983,
         "Obsidian Shard": 0.4818,
         "Bloodforge": 0.4769,
         "Lernaean Bow": 0.4758,
@@ -291605,8 +291605,8 @@
         "Rod of Asclepius": 0.4269,
         "Lotus Sickle": 0.4253,
         "Spear of the Magus": 0.425,
-        "Divine Ruin": 0.4244,
         "Chandra's Grace": 0.4236,
+        "Divine Ruin": 0.4228,
         "Ancient Signet": 0.4165,
         "Qin's Blade": 0.4131,
         "Lifebinder": 0.4104,
@@ -291716,7 +291716,7 @@
         "Tekko-Kagi": 0.5573,
         "Riptalon": 0.5432,
         "Arondight": 0.5368,
-        "Toxic Blade": 0.4999,
+        "Toxic Blade": 0.4982,
         "Golden Blade": 0.4897,
         "Runeforged Hammer": 0.4894,
         "Devourer's Gauntlet": 0.4894,
@@ -291835,7 +291835,7 @@
         "Soul Gem": 0.6526,
         "The Reaper": 0.6126,
         "Death Metal": 0.5421,
-        "Toxic Blade": 0.5279,
+        "Toxic Blade": 0.5263,
         "Lernaean Bow": 0.5259,
         "Tyrfing": 0.5243,
         "Demon Blade": 0.516,
@@ -291868,8 +291868,8 @@
         "Pendulum Blade": 0.3825,
         "Spear of the Magus": 0.3818,
         "Rod of Asclepius": 0.38,
-        "Divine Ruin": 0.3775,
         "Deathbringer": 0.3774,
+        "Divine Ruin": 0.3758,
         "Ancient Signet": 0.3696
       },
       "arena": {
@@ -291977,7 +291977,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -292105,7 +292105,7 @@
         "Totem of Death": 0.5731,
         "Bancroft's Talon": 0.5722,
         "Rod of Asclepius": 0.558,
-        "Divine Ruin": 0.5554,
+        "Divine Ruin": 0.5538,
         "Ancient Signet": 0.5475,
         "Lifebinder": 0.5414,
         "Soul Locket": 0.5207,
@@ -292227,10 +292227,10 @@
         "Bloodforge": 0.5982,
         "Tyrfing": 0.5957,
         "Riptalon": 0.5719,
-        "Toxic Blade": 0.5285,
         "Golden Blade": 0.5276,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
+        "Toxic Blade": 0.5269,
         "Dominance": 0.5256,
         "Avenging Blade": 0.517,
         "Arondight": 0.5081,
@@ -292360,7 +292360,7 @@
         "Blood-Bound Book": 0.53,
         "Oni Hunter's Garb": 0.5266,
         "Shifter's Shield": 0.5235,
-        "Stygian Anchor": 0.5226,
+        "Stygian Anchor": 0.521,
         "Gladiator's Shield": 0.518,
         "Rod of Asclepius": 0.5067,
         "Spirit Robe": 0.5061,
@@ -292483,7 +292483,7 @@
         "Umbral Link": 0.5164,
         "Genji's Guard": 0.5044,
         "Oni Hunter's Garb": 0.5017,
-        "Stygian Anchor": 0.495,
+        "Stygian Anchor": 0.4934,
         "Yogi's Necklace": 0.4931,
         "Shifter's Shield": 0.4848,
         "Soul Gem": 0.4845,
@@ -292508,8 +292508,8 @@
         "Xibalban Effigy": 0.4288,
         "Doublet of Binding": 0.4276,
         "Hide of the Nemean Lion": 0.4212,
-        "Contagion": 0.4059,
         "Mystical Mail": 0.4056,
+        "Contagion": 0.4043,
         "Ethereal Staff": 0.404
       },
       "arena": {
@@ -292602,7 +292602,7 @@
         "Riptalon": 0.6022,
         "Amanita Charm": 0.5967,
         "The Reaper": 0.5963,
-        "Toxic Blade": 0.5598,
+        "Toxic Blade": 0.5582,
         "Berserker's Shield": 0.5504,
         "Golden Blade": 0.5369,
         "Bloodforge": 0.5074,
@@ -292638,7 +292638,7 @@
         "Qin's Blade": 0.4008,
         "Void Shield": 0.3948,
         "Void Stone": 0.3918,
-        "Contagion": 0.3917
+        "Draconic Scale": 0.3908
       },
       "arena": {
         "Riptalon": 0.6022,
@@ -292745,7 +292745,7 @@
         "Bloodforge": 0.5036,
         "Genji's Guard": 0.4898,
         "Bancroft's Talon": 0.4887,
-        "Toxic Blade": 0.4865,
+        "Toxic Blade": 0.4849,
         "Umbral Link": 0.484,
         "Rod of Asclepius": 0.4833,
         "Freya's Tears": 0.4816,
@@ -292766,7 +292766,7 @@
         "Breastplate of Valor": 0.4469,
         "Gladiator's Shield": 0.4467,
         "Regrowth Striders": 0.4445,
-        "Stygian Anchor": 0.4443
+        "Stygian Anchor": 0.4427
       },
       "arena": {
         "Amanita Charm": 0.6473,
@@ -292857,7 +292857,7 @@
       "joust": {
         "Riptalon": 0.6959,
         "The Reaper": 0.6463,
-        "Toxic Blade": 0.5604,
+        "Toxic Blade": 0.5588,
         "Tyrfing": 0.5546,
         "Lernaean Bow": 0.5436,
         "Demon Blade": 0.5366,
@@ -293005,7 +293005,7 @@
         "Glorious Pridwen": 0.4671,
         "Genji's Guard": 0.4658,
         "Lotus Sickle": 0.4637,
-        "Divine Ruin": 0.4632,
+        "Divine Ruin": 0.4616,
         "Doom Orb": 0.46,
         "The World Stone": 0.459,
         "Jade Scepter": 0.4568,
@@ -293129,7 +293129,7 @@
         "Totem of Death": 0.5731,
         "Bancroft's Talon": 0.5722,
         "Rod of Asclepius": 0.558,
-        "Divine Ruin": 0.5554,
+        "Divine Ruin": 0.5538,
         "Ancient Signet": 0.5475,
         "Lifebinder": 0.5414,
         "Soul Locket": 0.5207,
@@ -293265,12 +293265,12 @@
         "Draconic Scale": 0.4701,
         "Gladiator's Shield": 0.4596,
         "Breastplate of Valor": 0.4556,
-        "Stygian Anchor": 0.4538,
         "Helm of Radiance": 0.4535,
         "Regrowth Striders": 0.4532,
         "Spear of the Magus": 0.4528,
+        "Stygian Anchor": 0.4522,
         "Lotus Sickle": 0.4512,
-        "Divine Ruin": 0.4428,
+        "Divine Ruin": 0.4412,
         "Screeching Gargoyle": 0.4391,
         "Helm of Darkness": 0.4382,
         "Spirit Robe": 0.4373,
@@ -293431,7 +293431,7 @@
         "Hydra's Lament": 0.4937,
         "Berserker's Shield": 0.4932,
         "Yogi's Necklace": 0.4912,
-        "Stygian Anchor": 0.4905,
+        "Stygian Anchor": 0.4889,
         "Shifter's Shield": 0.4785,
         "Spirit Robe": 0.474,
         "Gladiator's Shield": 0.4728,
@@ -293486,8 +293486,8 @@
         "Shifter's Shield": 0.4871,
         "Golden Blade": 0.4699,
         "Midgardian Mail": 0.4685,
-        "Stygian Anchor": 0.465,
         "Leviathan's Hide": 0.4647,
+        "Stygian Anchor": 0.4633,
         "Hussar's Wings": 0.4631,
         "Eye of Providence": 0.4586,
         "Ancile": 0.4511
@@ -293646,7 +293646,7 @@
         "Gladiator's Shield": 0.4828,
         "Avenging Blade": 0.4721,
         "Breastplate of Valor": 0.4712,
-        "Stygian Anchor": 0.471,
+        "Stygian Anchor": 0.4694,
         "Regrowth Striders": 0.4688,
         "Shifter's Shield": 0.4589,
         "Prophetic Cloak": 0.4557,
@@ -293759,7 +293759,7 @@
         "Dominance": 0.5314,
         "Bragi's Harp": 0.5263,
         "Golden Blade": 0.5258,
-        "Toxic Blade": 0.5252,
+        "Toxic Blade": 0.5236,
         "Bloodforge": 0.5202,
         "Blood-Bound Book": 0.5192,
         "Silverbranch Bow": 0.4885,
@@ -293787,7 +293787,7 @@
         "The Crusher": 0.3824,
         "Rod of Asclepius": 0.382,
         "Berserker's Shield": 0.3795,
-        "Divine Ruin": 0.3795,
+        "Divine Ruin": 0.3779,
         "Ancient Signet": 0.3716
       },
       "arena": {
@@ -293896,14 +293896,14 @@
         "Genji's Guard": 0.4911,
         "Draconic Scale": 0.4911,
         "Runeforged Hammer": 0.4895,
-        "Toxic Blade": 0.4887,
+        "Toxic Blade": 0.487,
         "Yogi's Necklace": 0.4845,
         "Pharaoh's Curse": 0.4829,
         "Oni Hunter's Garb": 0.4826,
         "Hydra's Lament": 0.4798,
         "Jotunn's Revenge": 0.4798,
         "Wyrmskin Hide": 0.474,
-        "Stygian Anchor": 0.4737,
+        "Stygian Anchor": 0.4721,
         "Shogun's Ofuda": 0.4638,
         "Tyrfing": 0.4622,
         "Spirit Robe": 0.4572,
@@ -294017,8 +294017,8 @@
         "Tyrfing": 0.6058,
         "Bloodforge": 0.5982,
         "Riptalon": 0.5821,
-        "Toxic Blade": 0.5387,
         "Golden Blade": 0.5378,
+        "Toxic Blade": 0.5371,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
         "Dominance": 0.5256,
@@ -294143,7 +294143,7 @@
         "The Reaper": 0.55,
         "Qin's Blade": 0.5054,
         "Rage": 0.49,
-        "Toxic Blade": 0.4829,
+        "Toxic Blade": 0.4813,
         "Devourer's Gauntlet": 0.4803,
         "Tekko-Kagi": 0.4551,
         "Musashi's Dual Swords": 0.4516,
@@ -294288,12 +294288,12 @@
         "Gladiator's Shield": 0.4647,
         "Breastplate of Valor": 0.459,
         "Helm of Radiance": 0.4577,
-        "Stygian Anchor": 0.4576,
         "Regrowth Striders": 0.4566,
+        "Stygian Anchor": 0.456,
         "Lotus Sickle": 0.455,
-        "Divine Ruin": 0.4451,
         "Spear of the Magus": 0.4447,
         "Helm of Darkness": 0.4443,
+        "Divine Ruin": 0.4435,
         "Screeching Gargoyle": 0.4426,
         "Spirit Robe": 0.4411,
         "Void Shield": 0.4404,
@@ -294392,8 +294392,8 @@
         "Soul Gem": 0.6761,
         "Riptalon": 0.6471,
         "The Reaper": 0.5937,
-        "Toxic Blade": 0.5219,
         "Death Metal": 0.5204,
+        "Toxic Blade": 0.5203,
         "Jotunn's Revenge": 0.5105,
         "Lernaean Bow": 0.5071,
         "Tyrfing": 0.507,
@@ -294425,7 +294425,7 @@
         "Barbed Carver": 0.3784,
         "Rod of Asclepius": 0.3771,
         "Spear of the Magus": 0.376,
-        "Divine Ruin": 0.3745,
+        "Divine Ruin": 0.3729,
         "Musashi's Dual Swords": 0.3698,
         "Lotus Sickle": 0.3672,
         "Ancient Signet": 0.3666
@@ -294535,7 +294535,7 @@
         "Bancroft's Talon": 0.5901,
         "Totem of Death": 0.5865,
         "Rod of Asclepius": 0.5759,
-        "Divine Ruin": 0.5734,
+        "Divine Ruin": 0.5717,
         "Ancient Signet": 0.5655,
         "Lifebinder": 0.5594,
         "Soul Locket": 0.5386,
@@ -294654,7 +294654,7 @@
         "Bloodforge": 0.5416,
         "The Reaper": 0.5284,
         "Qin's Blade": 0.5079,
-        "Toxic Blade": 0.4853,
+        "Toxic Blade": 0.4837,
         "Rage": 0.4834,
         "Devourer's Gauntlet": 0.4587,
         "Musashi's Dual Swords": 0.445,
@@ -294789,7 +294789,7 @@
         "Blood-Bound Book": 0.4985,
         "Bloodforge": 0.4972,
         "Chandra's Grace": 0.4941,
-        "Toxic Blade": 0.494,
+        "Toxic Blade": 0.4924,
         "Ethereal Staff": 0.4909,
         "Erosion": 0.4903,
         "Umbral Link": 0.4881,
@@ -294809,7 +294809,7 @@
         "Dominance": 0.4594,
         "Hydra's Lament": 0.4578,
         "Jotunn's Revenge": 0.4555,
-        "Stygian Anchor": 0.4552,
+        "Stygian Anchor": 0.4535,
         "Lifebinder": 0.4512,
         "Bragi's Harp": 0.447,
         "Wyrmskin Hide": 0.4401
@@ -294905,7 +294905,7 @@
         "Soul Gem": 0.604,
         "The Reaper": 0.5857,
         "Tyrfing": 0.5729,
-        "Toxic Blade": 0.5685,
+        "Toxic Blade": 0.5668,
         "Lernaean Bow": 0.5605,
         "Tekko-Kagi": 0.5602,
         "Jotunn's Revenge": 0.5587,
@@ -294939,7 +294939,7 @@
         "Chandra's Grace": 0.3898,
         "Deathbringer": 0.3871,
         "Rod of Asclepius": 0.3853,
-        "Divine Ruin": 0.3827,
+        "Divine Ruin": 0.3811,
         "Avenging Blade": 0.3803
       },
       "arena": {
@@ -295046,7 +295046,7 @@
         "Blood-Bound Book": 0.53,
         "Oni Hunter's Garb": 0.5266,
         "Shifter's Shield": 0.5235,
-        "Stygian Anchor": 0.5226,
+        "Stygian Anchor": 0.521,
         "Gladiator's Shield": 0.518,
         "Rod of Asclepius": 0.5067,
         "Spirit Robe": 0.5061,
@@ -295175,7 +295175,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -295304,7 +295304,7 @@
         "Shifter's Shield": 0.5199,
         "Gladiator's Shield": 0.5151,
         "Rod of Asclepius": 0.515,
-        "Stygian Anchor": 0.5132,
+        "Stygian Anchor": 0.5116,
         "Yogi's Necklace": 0.5099,
         "Lifebinder": 0.5061,
         "Bancroft's Talon": 0.5037,
@@ -295425,8 +295425,8 @@
         "Tekko-Kagi": 0.6241,
         "Riptalon": 0.6142,
         "Bloodforge": 0.5982,
-        "Toxic Blade": 0.5709,
         "Golden Blade": 0.57,
+        "Toxic Blade": 0.5693,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
         "Dominance": 0.5256,
@@ -295544,7 +295544,7 @@
         "Soul Gem": 0.6772,
         "Riptalon": 0.652,
         "The Reaper": 0.5926,
-        "Toxic Blade": 0.5268,
+        "Toxic Blade": 0.5252,
         "Death Metal": 0.5204,
         "Tyrfing": 0.5107,
         "Jotunn's Revenge": 0.5093,
@@ -295577,7 +295577,7 @@
         "Rod of Asclepius": 0.3782,
         "Barbed Carver": 0.3773,
         "Spear of the Magus": 0.3771,
-        "Divine Ruin": 0.3757,
+        "Divine Ruin": 0.374,
         "Musashi's Dual Swords": 0.3687,
         "Lotus Sickle": 0.3683,
         "Ancient Signet": 0.3678
@@ -295679,7 +295679,7 @@
         "Tyrfing": 0.5994,
         "The Crusher": 0.598,
         "Tekko-Kagi": 0.5876,
-        "Toxic Blade": 0.572,
+        "Toxic Blade": 0.5704,
         "Golden Blade": 0.5539,
         "Lernaean Bow": 0.5443,
         "Silverbranch Bow": 0.5353,
@@ -295815,7 +295815,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -295953,8 +295953,8 @@
         "Bancroft's Talon": 0.47,
         "Titan's Bane": 0.4684,
         "Hydra's Lament": 0.4676,
-        "Stygian Anchor": 0.4667,
         "Rod of Asclepius": 0.4655,
+        "Stygian Anchor": 0.4651,
         "Heartseeker": 0.4615,
         "Wyrmskin Hide": 0.4573,
         "Lifebinder": 0.4565,
@@ -296113,7 +296113,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -296167,8 +296167,8 @@
         "The Cosmic Horror": 0.4718,
         "Gem of Isolation": 0.4717,
         "Dreamer's Idol": 0.4687,
-        "Contagion": 0.4637,
-        "Divine Ruin": 0.4606,
+        "Contagion": 0.4621,
+        "Divine Ruin": 0.459,
         "Chronos' Pendant": 0.4547,
         "Ancient Signet": 0.4527,
         "Bancroft's Talon": 0.4523,
@@ -296320,7 +296320,7 @@
         "Tekko-Kagi": 0.5573,
         "Riptalon": 0.5533,
         "Arondight": 0.5368,
-        "Toxic Blade": 0.5099,
+        "Toxic Blade": 0.5083,
         "Golden Blade": 0.4997,
         "Runeforged Hammer": 0.4894,
         "Devourer's Gauntlet": 0.4894,
@@ -296443,7 +296443,7 @@
         "Gluttonous Grimoire": 0.5373,
         "Bancroft's Talon": 0.5211,
         "Bragi's Harp": 0.5099,
-        "Toxic Blade": 0.5045,
+        "Toxic Blade": 0.5029,
         "Jotunn's Revenge": 0.4935,
         "Obsidian Shard": 0.4883,
         "Lernaean Bow": 0.4794,
@@ -296464,7 +296464,7 @@
         "Spear of the Magus": 0.4314,
         "Rod of Asclepius": 0.431,
         "Golden Blade": 0.4305,
-        "Divine Ruin": 0.4285,
+        "Divine Ruin": 0.4269,
         "Ancient Signet": 0.4206,
         "Qin's Blade": 0.4153,
         "Lotus Sickle": 0.4148,
@@ -296566,7 +296566,7 @@
         "Riptalon": 0.6356,
         "Soul Gem": 0.6047,
         "Tyrfing": 0.5961,
-        "Toxic Blade": 0.5922,
+        "Toxic Blade": 0.5906,
         "The Reaper": 0.5851,
         "Lernaean Bow": 0.5599,
         "Tekko-Kagi": 0.5596,
@@ -296601,7 +296601,7 @@
         "Chandra's Grace": 0.3898,
         "Deathbringer": 0.3865,
         "Rod of Asclepius": 0.3859,
-        "Divine Ruin": 0.3834,
+        "Divine Ruin": 0.3817,
         "Doom Orb": 0.3807
       },
       "arena": {
@@ -296714,7 +296714,7 @@
         "Wyrmskin Hide": 0.4873,
         "Berserker's Shield": 0.4867,
         "Gladiator's Shield": 0.4838,
-        "Stygian Anchor": 0.4833,
+        "Stygian Anchor": 0.4817,
         "Breastplate of Valor": 0.4748,
         "Regrowth Striders": 0.4725,
         "Shifter's Shield": 0.4685,
@@ -296837,7 +296837,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -296953,7 +296953,7 @@
         "Gluttonous Grimoire": 0.5866,
         "Blood-Bound Book": 0.5837,
         "Bragi's Harp": 0.5723,
-        "Toxic Blade": 0.567,
+        "Toxic Blade": 0.5654,
         "Bancroft's Talon": 0.5515,
         "Jotunn's Revenge": 0.539,
         "Tyrfing": 0.5354,
@@ -296975,7 +296975,7 @@
         "Ethereal Staff": 0.467,
         "Qin's Blade": 0.4588,
         "Rod of Asclepius": 0.4514,
-        "Divine Ruin": 0.4488,
+        "Divine Ruin": 0.4472,
         "Lotus Sickle": 0.4458,
         "Ancient Signet": 0.4409,
         "Doom Orb": 0.4394,
@@ -297098,7 +297098,7 @@
         "Berserker's Shield": 0.478,
         "Titan's Bane": 0.4766,
         "Hydra's Lament": 0.475,
-        "Stygian Anchor": 0.4735,
+        "Stygian Anchor": 0.4719,
         "Heartseeker": 0.4697,
         "Wyrmskin Hide": 0.469,
         "Spirit Robe": 0.457,
@@ -297106,7 +297106,7 @@
         "Stone of Binding": 0.4536,
         "Gladiator's Shield": 0.453,
         "Avenging Blade": 0.4514,
-        "Toxic Blade": 0.4506,
+        "Toxic Blade": 0.449,
         "Breastplate of Valor": 0.448,
         "Void Shield": 0.4476,
         "Regrowth Striders": 0.4456,
@@ -297208,7 +297208,7 @@
         "Berserker's Shield": 0.5687,
         "The Reaper": 0.5664,
         "Golden Blade": 0.5585,
-        "Toxic Blade": 0.5294,
+        "Toxic Blade": 0.5278,
         "Bloodforge": 0.5205,
         "Shield of the Phoenix": 0.5178,
         "Tyrfing": 0.503,
@@ -297344,7 +297344,7 @@
         "Tyrfing": 0.5564,
         "Riptalon": 0.5419,
         "Arondight": 0.5368,
-        "Toxic Blade": 0.4986,
+        "Toxic Blade": 0.4969,
         "Runeforged Hammer": 0.4894,
         "Devourer's Gauntlet": 0.4894,
         "Golden Blade": 0.4884,
@@ -297477,7 +297477,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -297590,7 +297590,7 @@
         "Soul Gem": 0.7732,
         "Riptalon": 0.7407,
         "The Reaper": 0.6141,
-        "Toxic Blade": 0.61,
+        "Toxic Blade": 0.6083,
         "Tyrfing": 0.5923,
         "Blood-Bound Book": 0.5878,
         "Bragi's Harp": 0.5809,
@@ -297615,8 +297615,8 @@
         "Heartseeker": 0.4696,
         "Spear of the Magus": 0.4618,
         "Rod of Asclepius": 0.4541,
-        "Divine Ruin": 0.4516,
         "Lotus Sickle": 0.45,
+        "Divine Ruin": 0.4499,
         "Ancient Signet": 0.4437,
         "Death Metal": 0.4413,
         "Lifebinder": 0.4376,
@@ -297775,7 +297775,7 @@
         "Bancroft's Talon": 0.5722,
         "Rod of Tahuti": 0.5706,
         "Rod of Asclepius": 0.558,
-        "Divine Ruin": 0.5554,
+        "Divine Ruin": 0.5538,
         "Ancient Signet": 0.5475,
         "Gem of Focus": 0.5431,
         "Lifebinder": 0.5414,
@@ -297838,7 +297838,7 @@
         "Freya's Tears": 0.4281,
         "Gladiator's Shield": 0.4271,
         "Dreamer's Idol": 0.4252,
-        "Contagion": 0.4243
+        "Contagion": 0.4226
       },
       "arena": {
         "Spear of Desolation": 0.7751,
@@ -297971,7 +297971,7 @@
       "joust": {
         "Riptalon": 0.6931,
         "The Reaper": 0.6217,
-        "Toxic Blade": 0.5631,
+        "Toxic Blade": 0.5615,
         "Tyrfing": 0.556,
         "Lernaean Bow": 0.535,
         "Demon Blade": 0.533,
@@ -298115,9 +298115,9 @@
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
         "Dominance": 0.5256,
-        "Toxic Blade": 0.5178,
         "Avenging Blade": 0.517,
         "Golden Blade": 0.5169,
+        "Toxic Blade": 0.5162,
         "Arondight": 0.5081,
         "Lernaean Bow": 0.5052,
         "Eye of the Storm": 0.5007,
@@ -298243,7 +298243,7 @@
         "The Crusher": 0.4918,
         "Pendulum Blade": 0.4884,
         "Glorious Pridwen": 0.4857,
-        "Toxic Blade": 0.4848,
+        "Toxic Blade": 0.4832,
         "Erosion": 0.4828,
         "Genji's Guard": 0.4783,
         "Oni Hunter's Garb": 0.4778,
@@ -298262,7 +298262,7 @@
         "Leviathan's Hide": 0.4236,
         "Spectral Armor": 0.4221,
         "Shifter's Shield": 0.4216,
-        "Contagion": 0.4214,
+        "Contagion": 0.4198,
         "Riptalon": 0.4191,
         "Screeching Gargoyle": 0.4189
       },
@@ -298371,7 +298371,7 @@
         "Bancroft's Talon": 0.5778,
         "Totem of Death": 0.5681,
         "Rod of Asclepius": 0.5636,
-        "Divine Ruin": 0.5611,
+        "Divine Ruin": 0.5595,
         "Ancient Signet": 0.5532,
         "Lifebinder": 0.5471,
         "Soul Locket": 0.5263,
@@ -298498,7 +298498,7 @@
         "Genji's Guard": 0.5312,
         "Oni Hunter's Garb": 0.5298,
         "Shifter's Shield": 0.5285,
-        "Stygian Anchor": 0.5262,
+        "Stygian Anchor": 0.5246,
         "Gladiator's Shield": 0.5143,
         "Spirit Robe": 0.5097,
         "Rod of Asclepius": 0.5087,
@@ -298624,8 +298624,8 @@
         "The World Stone": 0.4763,
         "Lotus Sickle": 0.4762,
         "Rod of Asclepius": 0.4721,
-        "Divine Ruin": 0.4696,
         "Bragi's Harp": 0.4689,
+        "Divine Ruin": 0.468,
         "The Cosmic Horror": 0.4625,
         "Ancient Signet": 0.4617,
         "Dreamer's Idol": 0.4595,
@@ -298746,7 +298746,7 @@
         "Berserker's Shield": 0.5636,
         "Shield of the Phoenix": 0.55,
         "Bloodforge": 0.5496,
-        "Toxic Blade": 0.5307,
+        "Toxic Blade": 0.5291,
         "Kinetic Cuirass": 0.5278,
         "Runeforged Hammer": 0.5262,
         "Ethereal Staff": 0.5221,
@@ -298877,10 +298877,10 @@
         "Bloodforge": 0.5982,
         "Tyrfing": 0.5957,
         "Riptalon": 0.5719,
-        "Toxic Blade": 0.5285,
         "Golden Blade": 0.5276,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
+        "Toxic Blade": 0.5269,
         "Dominance": 0.5256,
         "Avenging Blade": 0.517,
         "Arondight": 0.5081,
@@ -299014,7 +299014,7 @@
         "Gladiator's Shield": 0.5093,
         "Oni Hunter's Garb": 0.5093,
         "Sphere of Negation": 0.5045,
-        "Stygian Anchor": 0.5034,
+        "Stygian Anchor": 0.5018,
         "Shifter's Shield": 0.4966,
         "Yogi's Necklace": 0.4964,
         "Soul Locket": 0.4945,
@@ -299133,8 +299133,8 @@
         "Tyrfing": 0.5989,
         "Bloodforge": 0.5982,
         "Riptalon": 0.5751,
-        "Toxic Blade": 0.5318,
         "Golden Blade": 0.5309,
+        "Toxic Blade": 0.5301,
         "Runeforged Hammer": 0.5274,
         "Devourer's Gauntlet": 0.5274,
         "Dominance": 0.5256,
@@ -299267,7 +299267,7 @@
         "Heartwood Charm": 0.5668,
         "Rod of Asclepius": 0.5541,
         "Totem of Death": 0.5539,
-        "Divine Ruin": 0.5516,
+        "Divine Ruin": 0.55,
         "Ancient Signet": 0.5437,
         "Lifebinder": 0.5376,
         "Soul Locket": 0.5169,
@@ -299394,9 +299394,9 @@
         "Yogi's Necklace": 0.4955,
         "Chandra's Grace": 0.4918,
         "The Crusher": 0.4882,
-        "Toxic Blade": 0.4879,
         "Umbral Link": 0.4871,
         "Wyrmskin Hide": 0.4869,
+        "Toxic Blade": 0.4863,
         "Hydra's Lament": 0.486,
         "Devourer's Gauntlet": 0.4825,
         "Golden Blade": 0.4766,
@@ -299411,8 +299411,8 @@
         "Tyrfing": 0.4334,
         "Void Shield": 0.429,
         "Void Stone": 0.4261,
-        "Stygian Anchor": 0.4144,
         "Midgardian Mail": 0.4133,
+        "Stygian Anchor": 0.4128,
         "Freya's Tears": 0.4127,
         "Leviathan's Hide": 0.4096,
         "Avatar's Parashu": 0.4091,
@@ -299509,7 +299509,7 @@
         "Soul Gem": 0.606,
         "The Reaper": 0.5838,
         "Tyrfing": 0.5749,
-        "Toxic Blade": 0.5723,
+        "Toxic Blade": 0.5707,
         "Lernaean Bow": 0.5586,
         "Tekko-Kagi": 0.5583,
         "Death Metal": 0.5571,
@@ -299543,7 +299543,7 @@
         "Devourer's Gauntlet": 0.3888,
         "Rod of Asclepius": 0.3872,
         "Deathbringer": 0.3852,
-        "Divine Ruin": 0.3846,
+        "Divine Ruin": 0.383,
         "Doom Orb": 0.382
       },
       "arena": {
@@ -299635,7 +299635,7 @@
       "joust": {
         "Riptalon": 0.6544,
         "The Reaper": 0.6072,
-        "Toxic Blade": 0.5277,
+        "Toxic Blade": 0.5261,
         "Jotunn's Revenge": 0.524,
         "Lernaean Bow": 0.5205,
         "Tyrfing": 0.5198,
@@ -299780,7 +299780,7 @@
         "Bracer of The Abyss": 0.5297,
         "Heartwood Charm": 0.5292,
         "Rod of Asclepius": 0.5291,
-        "Divine Ruin": 0.5265,
+        "Divine Ruin": 0.5249,
         "Ancient Signet": 0.5186,
         "Totem of Death": 0.5163,
         "Lifebinder": 0.5125,
@@ -299898,7 +299898,7 @@
         "Qin's Blade": 0.5475,
         "Bloodforge": 0.5416,
         "The Reaper": 0.5284,
-        "Toxic Blade": 0.525,
+        "Toxic Blade": 0.5234,
         "Rage": 0.4834,
         "Silverbranch Bow": 0.4747,
         "Devourer's Gauntlet": 0.4587,
@@ -300034,7 +300034,7 @@
         "Genji's Guard": 0.5293,
         "Oni Hunter's Garb": 0.5275,
         "Shifter's Shield": 0.5249,
-        "Stygian Anchor": 0.5236,
+        "Stygian Anchor": 0.522,
         "Gladiator's Shield": 0.5114,
         "Rod of Asclepius": 0.5073,
         "Spirit Robe": 0.5071,
@@ -300166,7 +300166,7 @@
         "Gladiator's Shield": 0.5093,
         "Oni Hunter's Garb": 0.5093,
         "Sphere of Negation": 0.5045,
-        "Stygian Anchor": 0.5034,
+        "Stygian Anchor": 0.5018,
         "Shifter's Shield": 0.4966,
         "Yogi's Necklace": 0.4964,
         "Soul Locket": 0.4945,
@@ -300289,7 +300289,7 @@
         "Shifter's Shield": 0.5315,
         "Blood-Bound Book": 0.5295,
         "Genji's Guard": 0.5294,
-        "Stygian Anchor": 0.5283,
+        "Stygian Anchor": 0.5267,
         "Gladiator's Shield": 0.5134,
         "Spirit Robe": 0.5118,
         "Stone of Binding": 0.5084,
@@ -300416,8 +300416,8 @@
         "The World Stone": 0.4966,
         "Lotus Sickle": 0.4936,
         "Rod of Asclepius": 0.4856,
-        "Divine Ruin": 0.4831,
         "The Cosmic Horror": 0.4828,
+        "Divine Ruin": 0.4815,
         "Dreamer's Idol": 0.4798,
         "Ancient Signet": 0.4752,
         "Chronos' Pendant": 0.4707,
@@ -315792,7 +315792,7 @@
           "team_size": 3,
           "share": 0.5,
           "shares": {
-            "anti-heal": 0.6,
+            "anti-heal": 0.589233,
             "aura": 0.15
           },
           "bonus": {

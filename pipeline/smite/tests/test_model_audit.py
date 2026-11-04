@@ -231,25 +231,19 @@ def test_adding_an_item_never_lowers_a_stat_it_grants(frozen, ibn, snapshot):
 
 
 #: Breakpoints where a figure FALLS from 2 to 4 or 4 to 6 items, on the frozen
-#: inputs. Reviewed 2026-11-03, NOT fixed (the audit session changes no model);
-#: each is a finding in the PR. Two causes:
-#:   * ehp_*: the fight run's lifesteal and kill-heals only land on a LIVE
-#:     target, and one kill per 10s fight is the rule, so more damage kills the
-#:     squishy sooner and heals less: offence lowers fight EHP (Thanatos 6704
-#:     -> 5457 physical from 4 to 6 items while static EHP is flat).
+#: inputs. Reviewed 2026-11-03, NOT fixed by the audit session; each was a
+#: finding in its PR. A NEW entry fails the test; one that stops occurring is
+#: reported stale.
 #:   * Bellona sustained_*: Berserker's Shield reads the fight's health bar, so
 #:     Hussar's Wings' 500 health keeps her above its threshold longer.
-#: A NEW entry fails the test; one that stops occurring is reported stale.
-#: Fenrir's `model` pair stopped occurring on 2026-11-04 because the build
-#: changed, not because the cause was fixed: the Conquest model now prices its
-#: conversion bonus at `quality`'s scale and takes Transcendence over
-#: Heartseeker, and that six's 4 -> 6 step no longer trades fight EHP away.
+#: Gone 2026-11-04, the cause fixed (`side_by_side` SURVIVAL block): eight
+#: ehp_* entries on Thanatos and Zeus (core and model), where the fight run's
+#: lifesteal and kill-heals landed only on a LIVE target, so more damage
+#: killed the squishy sooner and healed less — Thanatos's core read 6704 ->
+#: 5457 physical from 4 to 6 items, now 6784 -> 6784. Fenrir's `model` pair
+#: had stopped occurring on 2026-11-04 for an unrelated reason (its six changed).
 KNOWN_POWER_DROPS = {
-    ("Zeus", "core", "ehp_physical"), ("Zeus", "core", "ehp_magical"),
-    ("Zeus", "model", "ehp_physical"), ("Zeus", "model", "ehp_magical"),
     ("Bellona", "core", "sustained_squishy"), ("Bellona", "core", "sustained_tank"),
-    ("Thanatos", "core", "ehp_physical"), ("Thanatos", "core", "ehp_magical"),
-    ("Thanatos", "model", "ehp_physical"), ("Thanatos", "model", "ehp_magical"),
 }
 
 

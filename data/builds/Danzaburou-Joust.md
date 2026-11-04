@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
   - Bragi's Harp
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Toxic Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -613,23 +613,23 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Death Metal:
       total: 0.59
       efficiency: 0.63
