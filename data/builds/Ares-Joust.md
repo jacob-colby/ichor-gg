@@ -460,4 +460,79 @@ builds:
       pick: 0.0
       fit: 0.63
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Gauntlet of Thebes
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Shell of Rebuke
+  - Gauntlet of Thebes
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Gauntlet of Thebes:
+      total: 0.2
+      efficiency: 0.23
+      win: 0.5
+      pick: 0.0
+      fit: 0.17
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shell of Rebuke:
+      total: 0.36
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Amanita Charm:
+      total: 0.77
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Erosion:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+  swaps:
+  - added: Gauntlet of Thebes
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 63% win over 171 matches (vs 55% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  - added: Shell of Rebuke
+    removed: Draconic Scale
+    reason: Conquest community 66% win over 76 matches (vs 55% on this god), taking
+      the model's weakest slot from Draconic Scale
+  borrowed_from: Conquest
+  starter: *id001
 ---

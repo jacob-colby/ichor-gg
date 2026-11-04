@@ -525,4 +525,75 @@ builds:
       pick: 0.0
       fit: 0.62
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shell of Rebuke
+  - Freya's Tears
+  - Mantle Of Discord
+  - Amanita Charm
+  flex_slots:
+  - Freya's Tears
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.64
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Magi's Cloak:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shell of Rebuke:
+      total: 0.36
+      efficiency: 0.29
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Mantle Of Discord:
+      total: 0.58
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Amanita Charm:
+      total: 0.76
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+  swaps:
+  - added: Shell of Rebuke
+    removed: Erosion
+    reason: Conquest community 69% win over 73 matches (vs 44% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
+  starter: *id001
 ---

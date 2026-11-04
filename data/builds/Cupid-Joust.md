@@ -720,4 +720,75 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Jotunn's Revenge
+  - Death Metal
+  - Riptalon
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Jotunn's Revenge
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.32
+      efficiency: 0.35
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
+    Death Metal:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Riptalon:
+      total: 0.59
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Rod of Tahuti:
+      total: 0.58
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: The Executioner
+    removed: Toxic Blade
+    reason: Conquest community 68% win over 210 matches (vs 58% on this god), taking
+      the model's weakest slot from Toxic Blade
+  borrowed_from: Conquest
+  starter: *id001
 ---

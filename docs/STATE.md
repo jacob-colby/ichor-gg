@@ -173,6 +173,9 @@ Each of these has its evidence in the named module.
 | `unknown_win_rate` stays at 0.5 | `scoring.UNKNOWN_WIN_RATE` | It is *not* neutral (observed mean 0.556) but the only metric that responds to changing it is the circular one |
 | Draft blocks duplicates per **team**, not per board | `useDraftResult.takenFor` | Only ranked Conquest drafts globally-unique picks; Joust and Arena are not draft modes |
 | A draft bonus is damped when the core already covers that **tag** | `draftBuild.adaptedCore` | Same judgement `ally_covered` makes about a teammate; tags only, because a stat is a quantity not a job |
+| The community scrape reads ONE patch window, chosen per run | `refresh.choose_community_window` | SmiteBrain defaults to the newest patch, whose window opens the hour the patch lands; the 2026-11-04 run read a one-day window and committed it |
+| Rolling ranges (`1w`/`2w`/`1m`) are refused as community windows | `smitebrain_parser.patch_windows` | They straddle balance patches, and `validate`'s Spearman floor is calibrated on the window RESETTING at each one |
+| A roster-wide loss of complete community records fails the daily job | `refresh._refuse_community_collapse` | 11 of 11 refreshes on record were 100% complete; the enforced gate (`validate --check`) cannot see this and passed on the run that lost 47 |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
 | An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
 | That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
@@ -2768,6 +2771,76 @@ block) and derived the Joust anti-heal share; fingerprint `9c673795e8c8`.
   nudge were partly the cliff and will read lower on the next run; that is
   the fix, not a loss of coverage.
 
+### The 2026-11-04 refresh deleted 55 comparison pages — cause found and fixed 2026-11-05
+
+**The refresh read a one-day match window and committed it, deleting 55 live
+comparison pages.** Not test rot, and not the new god: a source default that
+rotates on patch day, with nothing in the pipeline standing in its way.
+
+**The cause.** Open Beta 47 landed 2026-11-03 at 11:33Z. SmiteBrain's per-god
+pages and both `__data.json` indexes default to the NEWEST patch, and that
+window opens the hour the patch lands, so the 2026-11-04 17:30Z run read a
+window **one day old**. Measured 2026-11-05 against the live source:
+
+    window            gods   matches   span
+    default (= ob47)    86       529   2026-11-03 .. 11-04   (~6 matches a god)
+    ob46                94    67,532   2026-10-20 .. 11-03
+    1m (refused)        95   152,375   2026-10-05 .. 11-04
+
+At six matches a god SmiteBrain publishes no Core section at all, so
+`parse_build_page` returned `{"items": [], "aspects": [], "starters": []}`,
+and `notes.merge_build_note` REPLACES the community entry — so the commit
+overwrote the only copy of a complete record. 24 of 94 gods were left with
+`slot_order: []`, 24 more with 2-5 slots, and `_community_items.json` fell from
+238 items to 166. `side_by_side` skips a god who does not make 6 of 6, so the
+run **deleted 55 of the 95 comparison pages** the live site serves.
+
+**The record says this was unprecedented.** Complete 6-of-6 community records
+on every refresh commit on file:
+
+    10-22 .. 11-02   91 of 91      (window 2026-10-20 .. , growing daily)
+    11-03            95 of 95      (ran 09:15Z, before the patch landed)
+    11-04            48 of 96      (the one-day window)
+
+**Nothing in the pipeline could see it, and that is the interesting part.** The
+daily job's one ENFORCED gate is `validate --check`, and it passed — its
+Spearman floor is window-aware by design (`SPEARMAN_LATE_FROM_DAY`), so it
+relaxed to 0.30 for exactly the young window that caused the damage, and
+win-weighted stayed above its floor on the 40 gods that survived. `data_audit`
+is structurally blind too: its community check looks for items the community
+builds that we have no note for, so a scrape returning LESS can only make it
+quieter. `_refuse_god_collapse` guards the wiki side per note, at the write;
+the community side had no guard at all. What actually noticed was two unit
+tests pinning god names — after the commit was pushed and the site rebuilt.
+
+**The fix, in two parts.** `choose_community_window` probes the newest two
+patch windows and takes the one covering more of the roster, **a tie going to
+the newer** — so nothing is tuned, nothing goes stale, and the run moves to a
+new patch by itself the day its window is ready. One window for the whole run,
+because a god read on this patch and a god read on the last one are not
+comparable, and comparability is what these records are for. The window now
+rides every URL the run touches and is recorded in `_community_items.json`.
+Then `_refuse_community_collapse` fails the job rather than committing when
+more than one god loses a complete record — read before write, the shape
+`refresh_god` already used, with `--allow-shrink` for a genuine roster change.
+
+**Restored.** 94 complete community records (from 47), 238 items in
+`_community_items.json` (from 166), and **94 gods compared in every mode** —
+285 per-god comparison pages against 230, with 87 judged and 1 skipped. Every
+one of the 94 reads the same 14-day window, so `validate --check` is back in
+its LATE regime (`spearman 0.27, floor 0.2, late window, day 14`, n=459 against
+308) rather than the relaxed early-window one that let the damage through.
+Conquest readable verdicts: **11 of 32 judged -> 45 of 87**. The control's
+leakage-free splits come back from 26.5% / 24.3% to **36.8% / 37.6%**, against
+a 5.8% random core.
+
+**One god legitimately has no page, and it is Nox.** He released in Open Beta
+47, so Open Beta 46's window holds no matches for him. What the damaged run
+wrote for him was six slots whose win rate was **0.0 on every one** — two
+matches dressed as a community record, fed into a model whose `win` term is an
+input as well as a target (§1). Losing that is the fix working, and it is the
+one god of slack `COMMUNITY_COMPLETE_SLACK` exists for.
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -3050,7 +3123,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1280) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1292) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3154,23 +3227,23 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 
 | | |
 |---|---|
-| Gods tracked | 94 of 98 on the roster (2026-11-03; 99 on 2026-11-02 — the roster count fell by one upstream). Ravana was added by hand 2026-08-29; Nike, Hachiman, Kuzenbo and Hel were the first added unattended, by `smite.new_entities` on a runner. The other five are on the grid without a usable page: Kumbhakarna, Heimdallr and Maman Brigitte 404, and Nox's pre-release page reads every base stat as 0.0, so it is refused until it fills in. The grid leads the wiki's own content, so this row reads N of N+k by design. `data/_new_entities.json` says which are waiting and why |
+| Gods tracked | 95 of 98 on the roster (2026-11-03; 99 on 2026-11-02 — the roster count fell by one upstream). Ravana was added by hand 2026-08-29; Nike, Hachiman, Kuzenbo and Hel were the first added unattended, by `smite.new_entities` on a runner. The other five are on the grid without a usable page: Kumbhakarna, Heimdallr and Maman Brigitte 404, and Nox's pre-release page reads every base stat as 0.0, so it is refused until it fills in. The grid leads the wiki's own content, so this row reads N of N+k by design. `data/_new_entities.json` says which are waiting and why |
 | Items | 228 |
-| Build groups | 282 (94 gods × 3 modes) |
+| Build groups | 285 (95 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
-| Conquest gods placed | 94 / 94 |
-| Joust / Arena gods placed | 0 / 94 — no outcome data exists |
+| Conquest gods placed | 94 / 95 |
+| Joust / Arena gods placed | 0 / 95 — no outcome data exists |
 | Items placed | <!--now-->216 / 228<!--/now--> (2026-11-03). Earlier, 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
-| Community sample | 14,484 Obsidian+ Conquest matches, 20 Oct – 2 Nov (2026-11-03, OB47). The rest of this row is the 25 Aug – 7 Sep window's history (16,223 matches then) — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
-| Headline gate | coverage 49.7%, win-weighted 50.9% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
-| **Leakage-free** | **37.0% probe · 37.6% at eff 0.45, vs 5.8% chance = 6.4–6.5×** (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Re-checked 2026-11-04 at input fingerprint `db3f6bb49ee5` with the ally gate in (both splits still 37.0% / 37.6%), where the SAMPLER printed 5.8% and the exact form reads **5.7498%** — so 5.7% still stands. The exact figure did move, from **5.6744%** with the gate off, and for once that is not the wobble: the gate SHRINKS each non-qualifying god's candidate pool by up to four items, and chance is pool-ratio, so a smaller pool really is likelier to hit a community item. It is the one kind of change that legitimately moves this number, which is why the closed form and not the sampler was used to decide the digit did not change. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
+| Community sample | 14,667 Obsidian+ Conquest matches, 20 Oct – 3 Nov (2026-11-03, OB47). The rest of this row is the 25 Aug – 7 Sep window's history (16,223 matches then) — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
+| Headline gate | coverage 49.5%, win-weighted 50.6% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
+| **Leakage-free** | **36.8% probe · 37.6% at eff 0.45, vs 5.8% chance = 6.3–6.5×** (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Re-checked 2026-11-04 at input fingerprint `db3f6bb49ee5` with the ally gate in (both splits still 37.0% / 37.6%), where the SAMPLER printed 5.8% and the exact form reads **5.7498%** — so 5.7% still stands. The exact figure did move, from **5.6744%** with the gate off, and for once that is not the wobble: the gate SHRINKS each non-qualifying god's candidate pool by up to four items, and chance is pool-ratio, so a smaller pool really is likelier to hit a community item. It is the one kind of change that legitimately moves this number, which is why the closed form and not the sampler was used to decide the digit did not change. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 4 of 2577 builds over the penetration cap (2026-11-04, OB47; 2553 -> 2577 is the per-ability damage parse moving flavor eligibility, +8 tabs net per mode, none of them over; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
+| Cap overflow | 47 -> 4 of 2599 builds over the penetration cap (2026-11-04, OB47; 2553 -> 2577 is the per-ability damage parse moving flavor eligibility, +8 tabs net per mode, none of them over; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
 | Combat model | 0.0% worst case over 12 observations |
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1280 pipeline · 958 viewer |
+| Tests | 1292 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -372,7 +372,151 @@ GOD_INDEX_URL = "https://smitebrain.com/gods/__data.json"
 GOD_INDEX_DIVISION = "obsidian"
 
 
-def refresh_god_index(community_fetcher, force: bool = False) -> dict:
+#: SmiteBrain's match window, as a query parameter on the per-god pages and
+#: on both `__data.json` indexes (`?time=ob46`). Measured 2026-11-05: `time`
+#: is the only name that works — `range`, `patch`, `window`, `timeRange`,
+#: `version`, `t` and `tr` are all ignored and return the default.
+COMMUNITY_WINDOW_PARAM = "time"
+
+#: How many patch windows to probe before picking one. Two: the collapse this
+#: exists to stop happens in the hours and days after a patch lands, and by
+#: then the PREVIOUS patch's window is closed and complete. If both of the
+#: newest two are thin, that is not a window problem and
+#: `_refuse_community_collapse` is the backstop.
+WINDOW_CANDIDATES = 2
+
+
+def _god_index_rows(community_fetcher, window=None, force: bool = False) -> list:
+    """The god index's god-level rows for one window (`None` = site default).
+    Aspect-split rows would collide on god name; the default response is
+    already god-level, but guard rather than trust the query string."""
+    url = f"{GOD_INDEX_URL}?division={GOD_INDEX_DIVISION}"
+    if window:
+        url += f"&{COMMUNITY_WINDOW_PARAM}={window}"
+    payload = json.loads(community_fetcher.fetch(url, force=force))
+    return [r for r in smitebrain_parser.parse_god_index(payload)
+            if r.get("aspect") in (None, "None")]
+
+
+def choose_community_window(community_fetcher, probe_god: str, force: bool = False):
+    """Which match window this run should read. `(window id, gods covered)`.
+
+    WHY THIS EXISTS, and it is the whole reason (2026-11-05). SmiteBrain's
+    per-god pages and both indexes default to the NEWEST patch, and that
+    window opens the hour the patch lands. Open Beta 47 landed 2026-11-03
+    11:33Z; the 2026-11-04 17:30Z refresh therefore read a window **one day
+    old** — 529 matches across 86 gods, about six matches each — where Open
+    Beta 46's closed window holds 67,532 across 94. At six matches a god,
+    SmiteBrain publishes no Core section at all, so `parse_build_page` read
+    nothing and the day's commit wrote `slot_order: []` for 24 gods and a
+    short list for 24 more. `side_by_side` then skipped every god that no
+    longer makes 6 of 6 and DELETED 55 live comparison pages. Every one of the
+    eleven refreshes on record before it had a 100% complete record
+    (91/91 then 95/95); that day read 48 of 96.
+
+    THE RULE, and it deliberately carries no threshold: probe the newest
+    `WINDOW_CANDIDATES` patch windows and take the one covering the most gods,
+    a tie going to the NEWER. Nothing is tuned and nothing goes stale — the
+    moment a new patch's window covers as much as the one before it, it wins
+    on the tie and the run moves on by itself. The alternative, a rolling
+    `1m` range, is refused in `smitebrain_parser.patch_windows`.
+
+    One window for the WHOLE run, because a god read on this patch and a god
+    read on the last one are not comparable, and the comparison target is
+    exactly what these records are for.
+    """
+    try:
+        windows = smitebrain_parser.patch_windows(
+            community_fetcher.fetch(community_url(probe_god), force=force))
+    except Exception as exc:
+        print(f"  [window] could not read the range selector: {exc} — site default")
+        return None, None
+    if not windows:
+        print("  [window] no patch windows offered — site default")
+        return None, None
+
+    best, best_n = None, -1
+    for window in windows[:WINDOW_CANDIDATES]:        # newest first
+        try:
+            n = len(_god_index_rows(community_fetcher, window, force=force))
+        except Exception as exc:
+            print(f"  [window] {window}: {exc}")
+            continue
+        print(f"  window {window}: {n} gods with a record")
+        if n > best_n:              # strict, so a tie keeps the NEWER window
+            best, best_n = window, n
+    if best is None:
+        print("  [window] every candidate failed — site default")
+        return None, None
+    print(f"  window chosen: {best} ({best_n} gods)"
+          + ("" if best == windows[0] else f" — {windows[0]} is too young to carry the roster"))
+    return best, best_n
+
+
+#: A community record is COMPLETE when SmiteBrain gives the god all six
+#: slots. Everything downstream reads six: `community_target.comparison_six`
+#: fills to six, `side_by_side` skips a god who does not make 6 of 6, and the
+#: viewer's comparison page is written per god that does.
+COMMUNITY_COMPLETE_SLOTS = 6
+
+#: How many complete records a run may LOSE before it is a collapse rather
+#: than churn. One, and that is generous: on the eleven refreshes on record
+#: before 2026-11-04 every god with a record had a complete one — 91 of 91
+#: from 10-22 to 11-02, then 95 of 95 on 11-03 — and the count only ever grew,
+#: by gods being added. The slack covers a god genuinely disabled or reworked
+#: out of the meta overnight. The run that this guard exists for lost 47.
+COMMUNITY_COMPLETE_SLACK = 1
+
+
+def complete_community_records(builds_root=None) -> dict:
+    """`{god: slots}` for every Conquest build note carrying a community
+    record, counting only gods whose record is COMPLETE. Read off the notes on
+    disk, so it reads the same before a run and after it."""
+    out = {}
+    for path in sorted((builds_root or BUILDS_ROOT).glob("*-Conquest.md")):
+        frontmatter, _ = notes.read_note(path)
+        god = (frontmatter or {}).get("god")
+        if not god:
+            continue
+        entry = next((b for b in frontmatter.get("builds") or []
+                      if b.get("source") == "community"), None)
+        if entry is None:
+            continue
+        slots = len(entry.get("slot_order") or [])
+        if slots >= COMMUNITY_COMPLETE_SLOTS:
+            out[god] = slots
+    return out
+
+
+def _refuse_community_collapse(before: dict, after: dict) -> None:
+    """Raise unless the run kept the complete records it started with.
+
+    `_refuse_god_collapse` does this per god note for the WIKI side, at the
+    write, where the old value is still in hand. The community side had no
+    such guard, which is how 2026-11-04 committed a one-day match window: the
+    one enforced gate on the daily job is `validate --check`, and it PASSED —
+    its Spearman floor is window-aware by design (`SPEARMAN_LATE_FROM_DAY`)
+    and so relaxes to 0.30 for exactly the young window that caused the
+    damage. The thing that actually noticed was two unit tests pinning god
+    names, after the commit was already pushed and the site rebuilt.
+
+    This is a ROSTER-wide rule, not a per-god one, because a thin window hits
+    every god at once and no single god's note looks alarming on its own.
+    """
+    lost = sorted(set(before) - set(after))
+    if len(lost) <= COMMUNITY_COMPLETE_SLACK:
+        return
+    raise ParseCollapse(
+        f"community records: {len(before)} complete -> {len(after)}. "
+        f"{len(lost)} god(s) lost a complete {COMMUNITY_COMPLETE_SLOTS}-slot record "
+        f"({', '.join(lost[:8])}{', ...' if len(lost) > 8 else ''}). "
+        f"A whole roster thinning at once is a WINDOW or a source problem, not a "
+        f"meta shift — check `choose_community_window`'s log above for which match "
+        f"window this run read. Nothing has been recomputed or committed. If the "
+        f"loss is real, re-run with --allow-shrink.")
+
+
+def refresh_god_index(community_fetcher, force: bool = False, window=None) -> dict:
     """Pull every god's win/loss record from the index, keyed by god name.
 
     One request for all of them, rather than a page each: the index is also
@@ -382,12 +526,7 @@ def refresh_god_index(community_fetcher, force: bool = False) -> dict:
 
     Conquest only, like the rest of the community signal (see COMMUNITY_MODES).
     """
-    url = f"{GOD_INDEX_URL}?division={GOD_INDEX_DIVISION}"
-    payload = json.loads(community_fetcher.fetch(url, force=force))
-    rows = smitebrain_parser.parse_god_index(payload)
-    # Aspect-split rows would collide on god name; the default response is
-    # already god-level, but guard rather than trust the query string.
-    return {r["god"]: r for r in rows if r.get("aspect") in (None, "None")}
+    return {r["god"]: r for r in _god_index_rows(community_fetcher, window, force=force)}
 
 
 def god_index_entry(row: dict) -> dict:
@@ -417,7 +556,8 @@ ITEM_INDEX_URL = "https://smitebrain.com/items/__data.json"
 COMMUNITY_ITEMS_FILE = "_community_items.json"
 
 
-def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) -> int:
+def refresh_item_index(community_fetcher, data_root: Path, force: bool = False,
+                       window=None) -> int:
     """Pull every item's win rate and match count, and store the table.
 
     The previous item signal was the *mean of per-god win rates* over the gods
@@ -427,6 +567,8 @@ def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) 
     record against a real denominator.
     """
     url = f"{ITEM_INDEX_URL}?division={GOD_INDEX_DIVISION}"
+    if window:
+        url += f"&{COMMUNITY_WINDOW_PARAM}={window}"
     payload = json.loads(community_fetcher.fetch(url, force=force))
     rows = smitebrain_parser.parse_item_index(payload)
     table = {
@@ -440,6 +582,9 @@ def refresh_item_index(community_fetcher, data_root: Path, force: bool = False) 
     }
     out = {
         "division": GOD_INDEX_DIVISION,
+        # Which window produced this table, so a reader can tell a thin patch
+        # window from a thin meta without re-scraping.
+        "window": window,
         "window_start": (rows[0].get("start_time") or "")[:10] if rows else None,
         "window_end": (rows[0].get("end_time") or "")[:10] if rows else None,
         "matches_analyzed": rows[0].get("matches_analyzed") if rows else None,
@@ -466,8 +611,7 @@ def community_build_entry(god: str, html: str, index_row: dict | None = None) ->
     """The `source: community` entry for one god's SmiteBrain build page.
     Split from `refresh_god_builds` so `new_entities` can build it before the
     god's note exists and write it only if the god passes the gate."""
-    slug = god.lower().replace(" ", "-").replace("'", "")
-    url = f"{SMITEBRAIN_BASE}{slug}/"
+    url = community_url(god)
     parsed = smitebrain_parser.parse_build_page(html)
 
     aspect = parsed["aspects"][0] if parsed["aspects"] else None
@@ -496,18 +640,22 @@ def community_build_entry(god: str, html: str, index_row: dict | None = None) ->
     return community_entry
 
 
-def community_url(god: str) -> str:
-    return f"{SMITEBRAIN_BASE}{god.lower().replace(' ', '-').replace(chr(39), '')}/"
+def community_url(god: str, window=None) -> str:
+    url = f"{SMITEBRAIN_BASE}{god.lower().replace(' ', '-').replace(chr(39), '')}/"
+    return f"{url}?{COMMUNITY_WINDOW_PARAM}={window}" if window else url
 
 
 def refresh_god_builds(god: str, mode: str, community_fetcher, force: bool = False,
-                       index_row: dict | None = None) -> None:
+                       index_row: dict | None = None, window=None) -> None:
     """`index_row` is this god's row from `refresh_god_index`, when the caller
     has already pulled it. Absent, the note keeps only the aspect figures and
-    the tier list falls back to scoring by those — degraded, not broken."""
+    the tier list falls back to scoring by those — degraded, not broken.
+
+    `window` is the match window `choose_community_window` picked for the run;
+    it MUST be the same for every god, or the records are not comparable."""
     if mode.lower() not in COMMUNITY_MODES:
         return
-    html = community_fetcher.fetch(community_url(god), force=force)
+    html = community_fetcher.fetch(community_url(god, window), force=force)
     notes.merge_build_note(BUILDS_ROOT / f"{god}-{mode}.md", god, mode,
                            community_build_entry(god, html, index_row))
 
@@ -523,7 +671,7 @@ def _not_published_yet(exc: Exception, build_frontmatter: dict) -> bool:
     return status == 404 and not had
 
 
-def refresh_community(force: bool = True) -> int:
+def refresh_community(force: bool = True, allow_shrink: bool = False) -> int:
     """Re-pull everything that changes daily, and nothing that doesn't.
 
     This is the half of `refresh_all` that can run unattended anywhere. The
@@ -548,22 +696,32 @@ def refresh_community(force: bool = True) -> int:
     community_fetcher = CachedFetcher(DATA_ROOT / "_cache" / "smitebrain")
     failures = []
 
+    # Read BEFORE anything is written, so the collapse refusal at the end can
+    # quote both sides — the same read-before-write shape `refresh_god` uses.
+    before = complete_community_records()
+
+    build_paths = list(BUILDS_ROOT.glob("*.md"))
+    probe_god = next((fm.get("god") for fm in
+                      (notes.read_note(p)[0] or {} for p in sorted(build_paths))
+                      if fm.get("god")), None)
+    window, _ = (choose_community_window(community_fetcher, probe_god, force=force)
+                 if probe_god else (None, None))
+
     god_index = {}
     try:
-        god_index = refresh_god_index(community_fetcher, force=force)
+        god_index = refresh_god_index(community_fetcher, force=force, window=window)
         print(f"  god index: {len(god_index)} gods with win/loss records")
     except Exception as exc:
         print(f"  [FAILED] god index: {exc} — falling back to aspect figures")
         failures.append(f"god index: {exc}")
 
     try:
-        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force)
+        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force, window=window)
         print(f"  item index: {n_items} items with win/loss records")
     except Exception as exc:
         print(f"  [FAILED] item index: {exc} — item stats keep their last values")
         failures.append(f"item index: {exc}")
 
-    build_paths = list(BUILDS_ROOT.glob("*.md"))
     for build_path in build_paths:
         frontmatter, _ = notes.read_note(build_path)
         god, mode = frontmatter.get("god"), frontmatter.get("mode")
@@ -571,7 +729,7 @@ def refresh_community(force: bool = True) -> int:
             continue
         try:
             refresh_god_builds(god, mode, community_fetcher, force=force,
-                               index_row=god_index.get(god))
+                               index_row=god_index.get(god), window=window)
         except Exception as exc:
             if _not_published_yet(exc, frontmatter):
                 print(f"  [not yet on SmiteBrain] {god}: no community page; model builds only")
@@ -583,6 +741,11 @@ def refresh_community(force: bool = True) -> int:
           f"build notes updated, {len(failures)} failure(s)")
     for f in failures:
         print(f"  - {f}")
+
+    after = complete_community_records()
+    print(f"  complete community records: {len(before)} -> {len(after)}")
+    if not allow_shrink:
+        _refuse_community_collapse(before, after)
     return len(failures)
 
 
@@ -807,8 +970,16 @@ def main(argv=None) -> int:
 
     if args.community:
         # Non-zero on any failure so a scheduled run fails loudly rather than
-        # committing a half-refreshed dataset.
-        return 1 if refresh_community(force=True) else 0
+        # committing a half-refreshed dataset. A ParseCollapse is the same
+        # contract, louder: the roster's community records thinned, so the
+        # step fails HERE and the job never reaches its recompute or its
+        # commit (`_refuse_community_collapse`).
+        try:
+            return 1 if refresh_community(force=True,
+                                          allow_shrink=args.allow_shrink) else 0
+        except ParseCollapse as exc:
+            print(f"::error::{exc}")
+            return 1
 
     if args.all:
         # Non-zero on any failure, same contract as --community. This used to

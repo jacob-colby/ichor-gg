@@ -591,3 +591,101 @@ def test_refresh_all_exit_code_is_the_failure_count(monkeypatch, tmp_path):
     monkeypatch.setattr(refresh, "refresh_god", boom)
 
     assert refresh.refresh_all() == 1
+
+
+# ── The community window and the collapse it can cause (2026-11-05) ──────
+#
+# `_refuse_god_collapse` above guards the WIKI side, per note, at the write.
+# The community side had no guard at all, which is how a one-day match window
+# reached a commit: the daily job's one enforced gate is `validate --check`,
+# and it PASSED, because its Spearman floor is window-aware by design and so
+# relaxes to 0.30 for exactly the young window that did the damage.
+
+
+def _window_fetcher(by_window, page_html=""):
+    """A fetcher whose god-index response depends on the `time=` parameter."""
+    def fetch(url, force=False):
+        if "__data.json" not in url:
+            return page_html
+        window = next((p.split("=")[1] for p in url.split("&") if p.startswith("time=")), None)
+        rows = by_window[window]
+        return json.dumps({"nodes": [{"type": "data", "data": rows}]})
+    f = Mock()
+    f.fetch.side_effect = fetch
+    return f
+
+
+def _index_rows(n, start):
+    """`n` god-level index rows in the shape `parse_god_index` reads."""
+    return [{"god": f"God{i}", "win_rate": 0.5, "matches_played": 100,
+             "matches_won": 50, "aspect": None, "start_time": start,
+             "end_time": "2026-11-04T17:32:46.170Z"} for i in range(n)]
+
+
+def test_the_window_chooser_steps_back_when_the_newest_patch_is_too_young(monkeypatch):
+    """The 2026-11-05 measurement, as the rule sees it: ob47 covered 86 gods
+    on a one-day window where ob46's closed window covered 94."""
+    html = (FIXTURES / "achilles_smitebrain_thin_window.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_god_index",
+                        lambda payload: payload["nodes"][0]["data"])
+    fetcher = _window_fetcher({"ob47": _index_rows(86, "2026-11-03T11:33:33.847Z"),
+                               "ob46": _index_rows(94, "2026-10-20T11:48:48.610Z")}, html)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob46", 94)
+
+
+def test_a_tie_keeps_the_newer_window_so_the_rule_never_goes_stale(monkeypatch):
+    """The reason this needs no threshold and no maintenance: the day a new
+    patch's window covers as much as the one before it, it wins on the tie."""
+    html = (FIXTURES / "achilles_smitebrain_thin_window.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_god_index",
+                        lambda payload: payload["nodes"][0]["data"])
+    fetcher = _window_fetcher({"ob47": _index_rows(94, "2026-11-03T11:33:33.847Z"),
+                               "ob46": _index_rows(94, "2026-10-20T11:48:48.610Z")}, html)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob47", 94)
+
+
+def test_the_window_chooser_falls_back_to_the_site_default_if_it_cannot_read():
+    fetcher = Mock()
+    fetcher.fetch.side_effect = RuntimeError("502")
+    assert refresh.choose_community_window(fetcher, "Achilles") == (None, None)
+
+
+def test_the_window_rides_every_url_the_run_touches():
+    assert refresh.community_url("Cu Chulainn") == "https://smitebrain.com/gods/cu-chulainn/"
+    assert refresh.community_url("Cu Chulainn", "ob46") == \
+        "https://smitebrain.com/gods/cu-chulainn/?time=ob46"
+
+
+def test_a_roster_wide_loss_of_complete_records_is_refused():
+    before = {f"God{i}": 6 for i in range(94)}
+    after = {f"God{i}": 6 for i in range(47)}
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_community_collapse(before, after)
+    assert "94 complete -> 47" in str(exc.value)
+    assert "47 god(s) lost" in str(exc.value)
+    assert "--allow-shrink" in str(exc.value)
+    assert "choose_community_window" in str(exc.value)
+
+
+def test_one_god_falling_out_is_churn_not_a_collapse():
+    """The slack, and why it is one: on the eleven refreshes on record before
+    2026-11-04 every god with a record had a complete one, and the count only
+    ever grew. One god covers a genuine disable or rework."""
+    before = {f"God{i}": 6 for i in range(94)}
+    refresh._refuse_community_collapse(before, {k: v for k, v in list(before.items())[:93]})
+
+
+def test_gaining_records_is_never_a_collapse():
+    before = {f"God{i}": 6 for i in range(47)}
+    refresh._refuse_community_collapse(before, {f"God{i}": 6 for i in range(94)})
+
+
+def test_an_incomplete_record_does_not_count_as_complete(tmp_path, monkeypatch):
+    """Six is the number everything downstream reads: `comparison_six` fills
+    to six and `side_by_side` skips a god who does not make 6 of 6. A god
+    truncated to five is therefore a LOST record, not a shorter one."""
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path)
+    for god, slots in (("Full", 6), ("Short", 5), ("Empty", 0)):
+        notes.merge_build_note(tmp_path / f"{god}-Conquest.md", god, "Conquest",
+                               {"slot_order": [{"name": f"Item{i}"} for i in range(slots)]})
+    assert set(refresh.complete_community_records()) == {"Full"}

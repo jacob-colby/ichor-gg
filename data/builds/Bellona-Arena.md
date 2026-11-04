@@ -395,4 +395,75 @@ builds:
       pick: 0.0
       fit: 0.79
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shield Splitter
+  - Mantle Of Discord
+  - Hussar's Wings
+  - Amanita Charm
+  flex_slots:
+  - Hussar's Wings
+  - Mantle Of Discord
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Magi's Cloak:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Shield Splitter:
+      total: 0.59
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Mantle Of Discord:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Hussar's Wings:
+      total: 0.56
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+  swaps:
+  - added: Hussar's Wings
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 78% win over 46 matches (vs 54% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  borrowed_from: Conquest
+  starter: *id001
 ---

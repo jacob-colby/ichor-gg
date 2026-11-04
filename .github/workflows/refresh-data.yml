@@ -67,6 +67,23 @@ jobs:
           pip install -r requirements.txt
           pip install "pytest>=8"
 
+      # Reads ONE match window for the whole run, chosen by
+      # `refresh.choose_community_window`: the newest patch window that covers
+      # as much of the roster as the one before it, a tie going to the newer.
+      # SmiteBrain's pages default to the newest patch and that window opens
+      # the hour the patch lands, so the default is unusable for a day or two
+      # after one — on 2026-11-04 it was 529 matches over 86 gods against Open
+      # Beta 46's 67,532 over 94, and the run committed it.
+      #
+      # THE STEP NOW FAILS instead of committing a roster-wide thinning
+      # (`refresh._refuse_community_collapse`): more than one god losing a
+      # complete six-slot community record stops the job HERE, before the
+      # recompute and before the commit, with the day's notes left as they
+      # were. That is the gap the 2026-11-04 run went through — the one
+      # enforced gate below is `validate --check`, and it PASSED, because its
+      # Spearman floor is window-aware by design and relaxes to 0.30 for
+      # exactly the young window that caused the damage. A genuine roster
+      # change is `--allow-shrink`, by hand.
       - name: Pull community data
         working-directory: pipeline
         run: python -m smite.refresh --community

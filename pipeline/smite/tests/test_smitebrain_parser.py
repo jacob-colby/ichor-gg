@@ -251,3 +251,49 @@ def test_starters_dedupe_a_tile_nested_in_its_own_wrapper():
 def test_starters_absent_section_is_empty_not_an_error():
     html = '<div><div class="flex items-center justify-between"><h2>Core</h2></div></div>'
     assert smitebrain_parser.parse_build_page(html)["starters"] == []
+
+
+# ── The match window (2026-11-05) ────────────────────────────────────────
+#
+# SmiteBrain's pages default to the NEWEST patch, and that window opens the
+# hour the patch lands. The 2026-11-04 refresh read a one-day Open Beta 47
+# window — 529 matches over 86 gods — and committed it: 24 of 94 gods lost
+# their community record outright, 24 more were truncated, and `side_by_side`
+# deleted 55 live comparison pages. `refresh.choose_community_window` picks the
+# window now; this is the reading it depends on.
+
+
+def _thin_window_html():
+    """Achilles' live page on the default window, frozen 2026-11-05. Open
+    Beta 47 was one day old; SmiteBrain publishes no Core section at all at
+    that sample size, which is the whole mechanism."""
+    return (FIXTURES / "achilles_smitebrain_thin_window.html").read_text(encoding="utf-8")
+
+
+def test_patch_windows_are_read_off_the_page_newest_first():
+    windows = smitebrain_parser.patch_windows(_thin_window_html())
+    assert windows[:3] == ["ob47", "ob46", "ob45"]
+    assert windows == sorted(windows, key=lambda v: int(v[2:]), reverse=True)
+    assert len(set(windows)) == len(windows)
+
+
+def test_the_rolling_ranges_are_left_out_on_purpose():
+    """`1w`, `2w` and `1m` are offered beside the patch ids and must not be
+    returned: they straddle patches, and `validate`'s Spearman floor is
+    calibrated on the window resetting at each one."""
+    html = _thin_window_html()
+    assert 'value="1m"' in html and 'value="2w"' in html      # the page does offer them
+    assert not {"1w", "2w", "1m"} & set(smitebrain_parser.patch_windows(html))
+
+
+def test_patch_windows_is_empty_when_the_page_offers_no_selector():
+    assert smitebrain_parser.patch_windows("<html><body>nothing</body></html>") == []
+
+
+def test_a_one_day_window_parses_to_nothing_at_all():
+    """Why a thin window is not a small error. The page is 36 KB with no Core
+    section, so items, aspects and starters all read empty — and
+    `notes.merge_build_note` REPLACES the community entry, so committing this
+    overwrites the only copy of a complete record."""
+    parsed = smitebrain_parser.parse_build_page(_thin_window_html())
+    assert parsed == {"items": [], "aspects": [], "starters": []}
