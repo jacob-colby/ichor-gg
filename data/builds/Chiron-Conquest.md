@@ -172,12 +172,12 @@ builds:
   slot_order:
   - Transcendence
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Tekko-Kagi
   - Heartseeker
   - Avatar's Parashu
   - Titan's Bane
   flex_slots:
-  - Hydra's Lament
+  - Tekko-Kagi
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -211,12 +211,12 @@ builds:
       win: 0.49
       pick: 0.87
       fit: 0.44
-    Hydra's Lament:
+    Tekko-Kagi:
       total: 0.49
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.51
       pick: 0.0
-      fit: 0.42
+      fit: 0.45
     Heartseeker:
       total: 0.51
       efficiency: 0.43

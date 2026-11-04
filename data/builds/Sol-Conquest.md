@@ -171,11 +171,11 @@ builds:
   - Lotus Sickle
   - Book of Thoth
   - Nimble Ring
-  - Ancient Signet
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Ancient Signet
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -216,18 +216,18 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.48
-    Ancient Signet:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.57
-      pick: 0.0
-      fit: 0.38
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
       win: 0.58
       pick: 0.12
       fit: 0.45
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.58
+      win: 0.57
+      pick: 0.0
+      fit: 0.44
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86

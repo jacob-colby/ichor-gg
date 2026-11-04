@@ -175,21 +175,21 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Genji's Guard
+  - Transcendence
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -223,12 +223,12 @@ builds:
       win: 0.5
       pick: 0.48
       fit: 0.71
-    Genji's Guard:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.68
-      pick: 0.11
-      fit: 0.24
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Heartseeker:
       total: 0.52
       efficiency: 0.43
@@ -240,7 +240,6 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Genji's Guard
   - Heartseeker
   starter: *id001
 - source: suggested

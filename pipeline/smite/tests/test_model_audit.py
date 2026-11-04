@@ -418,3 +418,18 @@ def test_the_conquest_model_build_depends_only_on_the_eff_fit_ratio(frozen, weig
                                                   moved, tags_map, "Conquest")
         pick = lambda es: [e["slot_order"] for e in es if e["archetype"] == "model"]
         assert pick(a) == pick(b), god
+
+
+def test_every_mana_stack_build_holds_a_converter(snapshot):
+    """The flavor's defining item is in the CORE, not only in the pool
+    (`require.any_item`, 2026-11-04). On the shipped data 111 of 219
+    mana-stack builds held neither converter just before it, and 9 of these 27."""
+    converters = {"Transcendence", "Book of Thoth"}
+    seen = 0
+    for god in ma.reference_names():
+        for mode in ma.MODES:
+            for name, six in snapshot[god][mode]["builds"].items():
+                if name.startswith("mana-stack"):
+                    seen += 1
+                    assert converters & set(six), (god, mode, name, six)
+    assert seen > 10

@@ -170,14 +170,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Hydra's Lament
   - Death Metal
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -207,18 +207,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.61
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
       total: 0.54
       efficiency: 0.5
       win: 0.62
       pick: 0.27
       fit: 0.48
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.61
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.57
       efficiency: 0.63

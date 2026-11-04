@@ -170,14 +170,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
+  - Bragi's Harp
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Bragi's Harp
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -199,18 +199,18 @@ builds:
     Idol, Gem of Focus, Book of Thoth, Eros'' Bow, Soul Reaver, The Cosmic Horror,
     Typhon’s Heart, Totem of Death, Divine Ruin, Jade Scepter, Triton''s Conch.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.58
-      pick: 0.0
-      fit: 0.41
     Book of Thoth:
       total: 0.49
       efficiency: 0.49
       win: 0.59
       pick: 0.12
       fit: 0.3
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.58
+      pick: 0.0
+      fit: 0.69
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59

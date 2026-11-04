@@ -168,7 +168,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Breastplate of Valor
+  - Book of Thoth
   - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
@@ -176,7 +176,7 @@ builds:
   - Rod of Tahuti
   flex_slots:
   - Kinetic Cuirass
-  - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -185,8 +185,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -198,12 +198,12 @@ builds:
     World Stone, Jade Scepter, Chronos'' Pendant, Bracer of The Abyss, Erosion, Stone
     of Binding, Screeching Gargoyle, Shield of the Phoenix.'
   slot_scores:
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.63
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
       win: 0.62
       pick: 0.0
-      fit: 0.23
+      fit: 0.2
     Genji's Guard:
       total: 0.56
       efficiency: 0.69

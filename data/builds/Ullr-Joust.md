@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Hydra's Lament
-  - Dominance
   - The Reaper
   - Heartseeker
   flex_slots:
   - Tyrfing
-  - Dominance
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
       total: 0.49
       efficiency: 0.5
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Dominance:
-      total: 0.48
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     The Reaper:
       total: 0.58
       efficiency: 0.56

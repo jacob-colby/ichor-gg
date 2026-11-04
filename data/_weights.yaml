@@ -1737,7 +1737,14 @@ flavors:
       Penetration: 0.9
       Cooldown Rate: 0.7
       Max Mana: 0.5
-    require: {stat: Max Mana, min: 3}
+    # `any_item` makes the converter part of the CORE, not just of the pool
+    # `requires_item` checks (2026-11-04). Without it 111 of 219 mana-stack
+    # builds held neither converter (Conquest 40, Joust 54, Arena 17): the gold model under-prices stacking
+    # items (STATE.md §5, "Transcendence and the other stacking items don't
+    # price"), so the converter lost every slot on score and the tab shipped
+    # a mana pile that converts into nothing. Same list as `requires_item`,
+    # so a god offered the tab can always seed one.
+    require: {stat: Max Mana, min: 3, any_item: [Transcendence, Book of Thoth]}
     max_lifesteal: 1
   crit:
     damage_types: [physical]

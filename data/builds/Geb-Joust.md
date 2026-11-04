@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
-  - Genji's Guard
+  - Book of Thoth
   - Kinetic Cuirass
   - Bragi's Harp
   - Rod of Tahuti
   - Eros' Bow
   flex_slots:
   - Eros' Bow
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Genji's Guard:
-      total: 0.46
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.35
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.23
+      fit: 0.2
     Kinetic Cuirass:
       total: 0.48
       efficiency: 0.56

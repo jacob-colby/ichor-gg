@@ -170,11 +170,11 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Hydra's Lament
+  - The Reaper
   - Tekko-Kagi
   - Deathbringer
-  - Heartseeker
   flex_slots:
-  - Heartseeker
+  - The Reaper
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -214,6 +214,12 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.44
+    The Reaper:
+      total: 0.49
+      efficiency: 0.56
+      win: 0.53
+      pick: 0.0
+      fit: 0.36
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.55
@@ -226,12 +232,6 @@ builds:
       win: 0.71
       pick: 0.28
       fit: 0.33
-    Heartseeker:
-      total: 0.47
-      efficiency: 0.43
-      win: 0.53
-      pick: 0.0
-      fit: 0.56
   community_ordered:
   - Deathbringer
   starter: *id001

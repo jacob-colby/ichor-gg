@@ -199,12 +199,12 @@ builds:
   - Lotus Sickle
   - Book of Thoth
   - Spear of Desolation
-  - Nimble Ring
+  - Chronos' Pendant
   - Rod of Tahuti
-  - Ancient Signet
+  - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Book of Thoth
-  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -243,27 +243,28 @@ builds:
       win: 0.63
       pick: 0.37
       fit: 0.56
-    Nimble Ring:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.56
-      pick: 0.0
-      fit: 0.35
+    Chronos' Pendant:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.6
+      pick: 0.06
+      fit: 0.39
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.57
       pick: 0.36
       fit: 0.52
-    Ancient Signet:
-      total: 0.52
-      efficiency: 0.56
+    Soul Gem:
+      total: 0.53
+      efficiency: 0.53
       win: 0.56
       pick: 0.0
-      fit: 0.45
+      fit: 0.66
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
+  - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
 - source: suggested

@@ -172,13 +172,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - Transcendence
   - Bragi's Harp
-  - Hydra's Lament
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -213,18 +213,18 @@ builds:
       win: 0.6
       pick: 0.49
       fit: 0.57
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.0
+      fit: 0.28
     Bragi's Harp:
       total: 0.56
       efficiency: 0.45
       win: 0.6
       pick: 0.61
       fit: 0.71
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.58
-      pick: 0.0
-      fit: 0.49
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86

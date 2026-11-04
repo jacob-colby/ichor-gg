@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Death Metal
   - Bragi's Harp
-  - Heartseeker
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Bragi's Harp
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Death Metal:
       total: 0.58
       efficiency: 0.63
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86

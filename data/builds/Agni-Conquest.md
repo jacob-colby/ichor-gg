@@ -171,14 +171,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Soul Gem
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -200,12 +200,6 @@ builds:
     Totem of Death, Divine Ruin, Jade Scepter, Genji''s Guard, Helm of Radiance, Ethereal
     Staff, Wish-Granting Pearl.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.51
-      pick: 0.0
-      fit: 0.53
     Book of Thoth:
       total: 0.47
       efficiency: 0.49
@@ -236,12 +230,19 @@ builds:
       win: 0.52
       pick: 0.28
       fit: 0.57
+    Soul Gem:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.46
+      pick: 0.23
+      fit: 0.71
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   starter: *id001
 - source: suggested
   archetype: burst
@@ -923,12 +924,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
+  - Nimble Ring
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Reaver
   flex_slots:
-  - Soul Reaver
+  - Nimble Ring
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -962,6 +963,12 @@ builds:
       win: 0.5
       pick: 0.44
       fit: 0.57
+    Nimble Ring:
+      total: 0.48
+      efficiency: 0.58
+      win: 0.51
+      pick: 0.0
+      fit: 0.34
     The World Stone:
       total: 0.52
       efficiency: 0.52
@@ -980,19 +987,12 @@ builds:
       win: 0.52
       pick: 0.28
       fit: 0.53
-    Soul Reaver:
-      total: 0.5
-      efficiency: 0.42
-      win: 0.58
-      pick: 0.25
-      fit: 0.56
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Reaver
   starter: *id001
   aspect: Aspect of Combustion
 - source: suggested

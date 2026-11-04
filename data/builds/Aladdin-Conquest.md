@@ -171,15 +171,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
   - Polynomicon
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
   - Polynomicon
-  - Soul Gem
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -202,6 +202,12 @@ builds:
     Talon, Triton''s Conch, Totem of Death, Dominance, Avenging Blade, Divine Ruin,
     Jade Scepter, Shield Splitter.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.47
+      pick: 0.33
+      fit: 0.39
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -232,13 +238,8 @@ builds:
       win: 0.62
       pick: 0.62
       fit: 0.57
-    Soul Gem:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.0
-      fit: 0.71
   community_ordered:
+  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
   - Polynomicon

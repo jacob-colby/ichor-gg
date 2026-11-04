@@ -169,7 +169,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Polynomicon
   - Spear of Desolation
   - Rod of Tahuti
@@ -177,7 +177,7 @@ builds:
   - Obsidian Shard
   flex_slots:
   - Polynomicon
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -198,12 +198,12 @@ builds:
     Idol, Gem of Focus, Soul Reaver, The Cosmic Horror, Typhon’s Heart, Totem of Death,
     Divine Ruin, Jade Scepter, Triton''s Conch.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.49
-      efficiency: 0.57
-      win: 0.52
-      pick: 0.0
-      fit: 0.39
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.29
+      fit: 0.28
     Polynomicon:
       total: 0.5
       efficiency: 0.5
@@ -235,6 +235,7 @@ builds:
       pick: 0.41
       fit: 0.44
   community_ordered:
+  - Book of Thoth
   - Polynomicon
   - Spear of Desolation
   - Rod of Tahuti
@@ -916,15 +917,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Polynomicon
   - Rod of Tahuti
   - Obsidian Shard
   - Eros' Bow
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Polynomicon
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -945,18 +946,18 @@ builds:
     Soul Locket, Bracer of The Abyss, Chronos'' Pendant, Oni Hunter''s Garb, Doublet
     of Binding, Jade Scepter, Bancroft''s Talon, Heartwood Charm, Dreamer''s Idol.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.29
+      fit: 0.25
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
       win: 0.52
       pick: 0.0
       fit: 0.21
-    Polynomicon:
-      total: 0.49
-      efficiency: 0.5
-      win: 0.52
-      pick: 0.6
-      fit: 0.35
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -982,7 +983,7 @@ builds:
       pick: 0.0
       fit: 0.87
   community_ordered:
-  - Polynomicon
+  - Book of Thoth
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001

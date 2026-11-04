@@ -170,15 +170,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Death Metal
-  - Nimble Ring
   - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
-  - Hydra's Lament
-  - Nimble Ring
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -202,30 +202,30 @@ builds:
     of Thoth, Deathbringer, Toxic Blade, Musashi''s Dual Swords, Runeforged Hammer,
     The Cosmic Horror.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.58
+      pick: 0.0
+      fit: 0.28
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
       win: 0.57
       pick: 0.26
       fit: 0.52
-    Hydra's Lament:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.56
-      pick: 0.33
-      fit: 0.49
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.0
+      fit: 0.28
     Death Metal:
       total: 0.56
       efficiency: 0.63
       win: 0.58
       pick: 0.0
       fit: 0.54
-    Nimble Ring:
-      total: 0.52
-      efficiency: 0.58
-      win: 0.58
-      pick: 0.0
-      fit: 0.36
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
@@ -240,7 +240,6 @@ builds:
       fit: 0.42
   community_ordered:
   - Jotunn's Revenge
-  - Hydra's Lament
   starter: *id001
 - source: suggested
   archetype: bruiser

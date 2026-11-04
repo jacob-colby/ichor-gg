@@ -170,14 +170,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - The Reaper
   - Titan's Bane
-  - Heartseeker
   - Avatar's Parashu
   flex_slots:
   - Titan's Bane
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -203,6 +203,12 @@ builds:
       win: 0.5
       pick: 0.24
       fit: 0.71
+    Transcendence:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.39
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
@@ -221,12 +227,6 @@ builds:
       win: 0.6
       pick: 0.17
       fit: 0.57
-    Heartseeker:
-      total: 0.54
-      efficiency: 0.43
-      win: 0.55
-      pick: 0.43
-      fit: 0.77
     Avatar's Parashu:
       total: 0.56
       efficiency: 0.44
@@ -237,7 +237,6 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - Titan's Bane
-  - Heartseeker
   - Avatar's Parashu
   starter: *id001
 - source: suggested

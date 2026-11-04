@@ -73,7 +73,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - Doom Orb
   - Obsidian Shard
@@ -81,7 +81,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Doom Orb
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.55
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.39
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
@@ -724,7 +724,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Chandra's Grace
   - Spear of Desolation
   - Obsidian Shard
@@ -732,7 +732,7 @@ builds:
   - Triton's Conch
   flex_slots:
   - Chandra's Grace
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -749,12 +749,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.49
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.3
     Chandra's Grace:
       total: 0.51
       efficiency: 0.47

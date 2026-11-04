@@ -596,12 +596,12 @@ builds:
   slot_order:
   - Lotus Sickle
   - Book of Thoth
-  - Doom Orb
   - Rod of Tahuti
+  - Eros' Bow
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Doom Orb
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -631,18 +631,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.32
-    Doom Orb:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Eros' Bow:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.76
       efficiency: 0.53

@@ -724,14 +724,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Lotus Sickle
   - Bancroft's Talon
   - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
-  - Doom Orb
   - Rod of Tahuti
   flex_slots:
-  - Doom Orb
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -749,6 +749,12 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.46
@@ -773,12 +779,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Doom Orb:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.86

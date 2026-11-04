@@ -169,7 +169,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
@@ -177,7 +177,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Soul Gem
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -198,12 +198,12 @@ builds:
     Bancroft''s Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade Scepter,
     Genji''s Guard, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 0.53
+    Book of Thoth:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.26
+      fit: 0.39
     Spear of Desolation:
       total: 0.57
       efficiency: 0.59
@@ -235,6 +235,7 @@ builds:
       pick: 0.0
       fit: 0.71
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
@@ -763,15 +764,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Spear of Desolation
-  - The World Stone
+  - Genji's Guard
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - The World Stone
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -793,24 +794,24 @@ builds:
     of Negation, Heartwood Charm, Doublet of Binding, Bancroft''s Talon, Chandra''s
     Grace.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.55
-      pick: 0.0
-      fit: 0.28
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.26
+      fit: 0.32
     Spear of Desolation:
       total: 0.55
       efficiency: 0.59
       win: 0.54
       pick: 0.55
       fit: 0.5
-    The World Stone:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.53
-      fit: 0.47
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.69
+      win: 0.55
+      pick: 0.0
+      fit: 0.28
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
@@ -830,8 +831,8 @@ builds:
       pick: 0.0
       fit: 1.0
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001

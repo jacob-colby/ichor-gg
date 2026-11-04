@@ -76,12 +76,12 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Heartseeker
   - Amanita Charm
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Hydra's Lament:
-      total: 0.47
-      efficiency: 0.56
+    Transcendence:
+      total: 0.37
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.21
     Heartseeker:
       total: 0.47
       efficiency: 0.43

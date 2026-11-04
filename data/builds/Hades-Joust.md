@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Bancroft's Talon
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
   - Triton's Conch
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.47
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Bancroft's Talon:
       total: 0.55
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Book of Thoth:
+      total: 0.38
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
     Spear of Desolation:
       total: 0.51
       efficiency: 0.59

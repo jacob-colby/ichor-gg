@@ -170,14 +170,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Dominance
-  - The Reaper
   - Tekko-Kagi
   - Silverbranch Bow
   flex_slots:
   - Dominance
-  - The Reaper
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -204,6 +204,12 @@ builds:
       win: 0.49
       pick: 0.11
       fit: 0.46
+    Transcendence:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.49
+      pick: 0.0
+      fit: 0.25
     Hydra's Lament:
       total: 0.48
       efficiency: 0.56
@@ -216,12 +222,6 @@ builds:
       win: 0.47
       pick: 0.5
       fit: 0.5
-    The Reaper:
-      total: 0.47
-      efficiency: 0.56
-      win: 0.49
-      pick: 0.0
-      fit: 0.36
     Tekko-Kagi:
       total: 0.48
       efficiency: 0.55

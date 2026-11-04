@@ -172,15 +172,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Spear of Desolation
   - Doom Orb
   - The World Stone
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Obsidian Shard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -202,6 +202,12 @@ builds:
     Ruin, Jade Scepter, Genji''s Guard, Helm of Radiance, Ethereal Staff, Wish-Granting
     Pearl.'
   slot_scores:
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.49
+      win: 0.57
+      pick: 0.16
+      fit: 0.39
     Spear of Desolation:
       total: 0.58
       efficiency: 0.59
@@ -226,12 +232,6 @@ builds:
       win: 0.57
       pick: 0.34
       fit: 0.57
-    Obsidian Shard:
-      total: 0.56
-      efficiency: 0.58
-      win: 0.58
-      pick: 0.27
-      fit: 0.57
     Soul Gem:
       total: 0.6
       efficiency: 0.53
@@ -239,11 +239,11 @@ builds:
       pick: 0.12
       fit: 0.71
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Doom Orb
   - The World Stone
   - Rod of Tahuti
-  - Obsidian Shard
   - Soul Gem
   starter: *id001
 - source: suggested

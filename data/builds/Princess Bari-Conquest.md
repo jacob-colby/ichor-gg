@@ -172,13 +172,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Spear of Desolation
-  - Hydra's Lament
+  - Transcendence
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -213,12 +213,12 @@ builds:
       win: 0.55
       pick: 0.53
       fit: 0.45
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.56
+    Transcendence:
+      total: 0.48
+      efficiency: 0.53
       win: 0.57
       pick: 0.0
-      fit: 0.49
+      fit: 0.28
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86

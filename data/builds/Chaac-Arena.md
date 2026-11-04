@@ -73,12 +73,12 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Bancroft's Talon
   - Book of Thoth
   - Jotunn's Revenge
   - Shield Splitter
   - Transcendence
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - Transcendence
   - Book of Thoth
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Bancroft's Talon:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Book of Thoth:
       total: 0.36
       efficiency: 0.49
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Soul Gem:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
   starter: *id001
 - source: suggested
   archetype: burst

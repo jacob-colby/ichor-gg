@@ -170,25 +170,25 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Transcendence
   - Gluttonous Grimoire
   - Draconic Scale
   - Rod of Tahuti
   flex_slots:
   - Gluttonous Grimoire
-  - Genji's Guard
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — physical protection
+    swap_item: Amanita Charm
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -202,12 +202,6 @@ builds:
     Avenging Blade, Eye of Providence, Stone of Binding, Arondight, Screeching Gargoyle,
     Midgardian Mail, Magi''s Cloak, Polynomicon, Shield of the Phoenix.'
   slot_scores:
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.69
-      win: 0.58
-      pick: 0.0
-      fit: 0.27
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -220,6 +214,12 @@ builds:
       win: 0.63
       pick: 0.1
       fit: 0.44
+    Transcendence:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.0
+      fit: 0.23
     Gluttonous Grimoire:
       total: 0.55
       efficiency: 0.59

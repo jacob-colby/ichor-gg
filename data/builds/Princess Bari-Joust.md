@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
-  - Bancroft's Talon
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Bragi's Harp
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Bancroft's Talon
-  - Toxic Blade
+  - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -93,29 +93,23 @@ builds:
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Bancroft's Talon:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Soul Gem:
+      total: 0.74
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
   starter: *id001
 - source: suggested
   archetype: burst

@@ -76,7 +76,7 @@ builds:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Heartseeker
+  - Hydra's Lament
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Heartseeker:
-      total: 0.6
-      efficiency: 0.43
+    Hydra's Lament:
+      total: 0.59
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.63
     Rod of Tahuti:
       total: 0.72
       efficiency: 0.86

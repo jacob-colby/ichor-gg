@@ -170,15 +170,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
   - Breastplate of Valor
   - Freya's Tears
   - Gluttonous Grimoire
-  - Spear of Desolation
   - Rod of Tahuti
   flex_slots:
   - Freya's Tears
-  - Spear of Desolation
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -200,6 +200,12 @@ builds:
     Gargoyle, Midgardian Mail, Wish-Granting Pearl, Stone of Binding, Polynomicon,
     Chronos'' Pendant.'
   slot_scores:
+    Book of Thoth:
+      total: 0.47
+      efficiency: 0.49
+      win: 0.58
+      pick: 0.0
+      fit: 0.24
     Genji's Guard:
       total: 0.55
       efficiency: 0.69
@@ -224,12 +230,6 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.55
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.58
-      pick: 0.0
-      fit: 0.38
     Rod of Tahuti:
       total: 0.67
       efficiency: 0.86

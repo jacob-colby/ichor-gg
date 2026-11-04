@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Runeforged Hammer
-  - Titan's Bane
   - Heartseeker
   - Amanita Charm
   flex_slots:
   - Runeforged Hammer
-  - Titan's Bane
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Titan's Bane:
-      total: 0.49
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Heartseeker:
       total: 0.53
       efficiency: 0.43

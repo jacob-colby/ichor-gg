@@ -172,13 +172,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Spear of Desolation
-  - Doom Orb
+  - Book of Thoth
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem
   flex_slots:
   - Lotus Sickle
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -211,12 +211,12 @@ builds:
       win: 0.53
       pick: 0.49
       fit: 0.61
-    Doom Orb:
-      total: 0.51
-      efficiency: 0.53
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
       win: 0.53
-      pick: 0.0
-      fit: 0.57
+      pick: 0.13
+      fit: 0.39
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
@@ -237,6 +237,7 @@ builds:
       fit: 0.71
   community_ordered:
   - Spear of Desolation
+  - Book of Thoth
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem

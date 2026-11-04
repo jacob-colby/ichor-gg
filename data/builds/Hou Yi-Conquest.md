@@ -173,14 +173,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Death Metal
-  - Dominance
   - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Silverbranch Bow
-  - Dominance
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -210,18 +210,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.0
+      fit: 0.24
     Death Metal:
       total: 0.54
       efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.51
-    Dominance:
-      total: 0.51
-      efficiency: 0.47
-      win: 0.54
-      pick: 0.59
-      fit: 0.5
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.52
@@ -241,7 +241,6 @@ builds:
       pick: 0.0
       fit: 0.54
   community_ordered:
-  - Dominance
   - Silverbranch Bow
   starter: *id001
 - source: suggested

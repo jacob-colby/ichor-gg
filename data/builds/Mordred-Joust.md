@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Bancroft's Talon
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Hydra's Lament
+  - Transcendence
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Bancroft's Talon:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -122,18 +116,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.23
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Soul Gem:
+      total: 0.69
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: burst

@@ -171,12 +171,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
-  - Breastplate of Valor
-  - Rod of Tahuti
+  - Spear of Desolation
   - Gluttonous Grimoire
+  - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
-  - Breastplate of Valor
+  - Spear of Desolation
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -211,24 +211,24 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.26
-    Breastplate of Valor:
+    Spear of Desolation:
       total: 0.54
-      efficiency: 0.63
-      win: 0.62
-      pick: 0.0
-      fit: 0.26
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.62
-      pick: 0.45
-      fit: 0.35
+      efficiency: 0.59
+      win: 0.58
+      pick: 0.3
+      fit: 0.38
     Gluttonous Grimoire:
       total: 0.57
       efficiency: 0.59
       win: 0.62
       pick: 0.0
       fit: 0.55
+    Rod of Tahuti:
+      total: 0.66
+      efficiency: 0.86
+      win: 0.62
+      pick: 0.45
+      fit: 0.35
     Obsidian Shard:
       total: 0.56
       efficiency: 0.58
@@ -237,6 +237,7 @@ builds:
       fit: 0.39
   community_ordered:
   - Book of Thoth
+  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001

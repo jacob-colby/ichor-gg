@@ -169,15 +169,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
   - Death Metal
+  - Spear of Desolation
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Transcendence
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -200,12 +200,6 @@ builds:
     Talon, Heartwood Charm, Golden Blade, Eros'' Bow, Dreamer''s Idol, Gem of Focus,
     Musashi''s Dual Swords, Soul Reaver, Book of Thoth, Runeforged Hammer, Tyrfing.'
   slot_scores:
-    Book of Thoth:
-      total: 0.47
-      efficiency: 0.49
-      win: 0.59
-      pick: 0.0
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -218,24 +212,30 @@ builds:
       win: 0.64
       pick: 0.01
       fit: 0.24
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.59
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.56
       efficiency: 0.63
       win: 0.59
       pick: 0.0
       fit: 0.51
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.59
+      win: 0.59
+      pick: 0.0
+      fit: 0.38
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.59
       pick: 0.0
       fit: 0.35
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.59
+      pick: 0.0
+      fit: 0.54
   community_ordered:
   - Transcendence
   starter: *id001
@@ -835,12 +835,12 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Bancroft's Talon
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Death Metal
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - Transcendence
   - Book of Thoth
@@ -867,12 +867,6 @@ builds:
     Chandra''s Grace, Avenging Blade, Polynomicon, Bracer of The Abyss, Heartwood
     Charm, Soul Locket, Tyrfing.'
   slot_scores:
-    Bancroft's Talon:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.59
-      pick: 0.0
-      fit: 0.52
     Book of Thoth:
       total: 0.47
       efficiency: 0.49
@@ -903,6 +897,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.33
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.59
+      pick: 0.0
+      fit: 0.75
   community_ordered:
   - Transcendence
   starter: *id001

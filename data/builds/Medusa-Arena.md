@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lernaean Bow
-  - Bancroft's Talon
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Death Metal
-  - Bragi's Harp
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Bragi's Harp
-  - Lernaean Bow
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,42 +98,42 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.52
-      efficiency: 0.51
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.54
-    Bancroft's Talon:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Death Metal:
       total: 0.57
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Soul Gem:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
   starter: *id001
 - source: suggested
   archetype: crit

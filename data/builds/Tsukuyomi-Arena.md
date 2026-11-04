@@ -76,7 +76,7 @@ builds:
   - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
-  - Heartseeker
+  - Death Metal
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.28
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.43
+    Death Metal:
+      total: 0.58
+      efficiency: 0.63
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.54
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86

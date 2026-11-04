@@ -171,12 +171,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - The Crusher
-  - Heartseeker
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -215,18 +215,18 @@ builds:
       win: 0.6
       pick: 0.28
       fit: 0.39
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.21
     The Crusher:
       total: 0.53
       efficiency: 0.49
       win: 0.67
       pick: 0.13
       fit: 0.35
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.62
-      pick: 0.4
-      fit: 0.51
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -237,7 +237,6 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - The Crusher
-  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser

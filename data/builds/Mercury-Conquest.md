@@ -168,14 +168,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Hydra's Lament
   - Silverbranch Bow
   - Titan's Bane
-  - Heartseeker
   flex_slots:
   - Hydra's Lament
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -201,6 +201,12 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.66
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 0.36
     Tyrfing:
       total: 0.53
       efficiency: 0.5
@@ -225,12 +231,6 @@ builds:
       win: 0.55
       pick: 0.19
       fit: 0.53
-    Heartseeker:
-      total: 0.51
-      efficiency: 0.43
-      win: 0.55
-      pick: 0.0
-      fit: 0.72
   community_ordered:
   - Tyrfing
   - Hydra's Lament

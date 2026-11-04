@@ -113,11 +113,11 @@
       "Soul Gem"
      ],
      "mana-stack @ Aspect of Combustion": [
+      "Lotus Sickle",
       "Bancroft's Talon",
       "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
-      "Doom Orb",
       "Rod of Tahuti"
      ],
      "model": [
@@ -271,20 +271,20 @@
       "Obsidian Shard"
      ],
      "mana-stack": [
-      "Lotus Sickle",
-      "Book of Thoth",
-      "Spear of Desolation",
-      "The World Stone",
-      "Rod of Tahuti",
-      "Obsidian Shard"
-     ],
-     "mana-stack @ Aspect of Combustion": [
       "Book of Thoth",
       "Spear of Desolation",
       "The World Stone",
       "Rod of Tahuti",
       "Obsidian Shard",
-      "Soul Reaver"
+      "Soul Gem"
+     ],
+     "mana-stack @ Aspect of Combustion": [
+      "Book of Thoth",
+      "Spear of Desolation",
+      "Nimble Ring",
+      "The World Stone",
+      "Rod of Tahuti",
+      "Obsidian Shard"
      ],
      "model": [
       "Spear of Desolation",
@@ -437,7 +437,7 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
+      "Book of Thoth",
       "Spear of Desolation",
       "Doom Orb",
       "Obsidian Shard",
@@ -446,9 +446,9 @@
      ],
      "mana-stack @ Aspect of Combustion": [
       "Bancroft's Talon",
+      "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti"
      ],
@@ -568,8 +568,8 @@
      "mana-stack": [
       "Lernaean Bow",
       "Jotunn's Revenge",
+      "Transcendence",
       "Tyrfing",
-      "Hydra's Lament",
       "The Reaper",
       "Heartseeker"
      ],
@@ -645,9 +645,9 @@
      ],
      "mana-stack": [
       "Jotunn's Revenge",
+      "Transcendence",
       "Tyrfing",
       "Hydra's Lament",
-      "Dominance",
       "Tekko-Kagi",
       "Silverbranch Bow"
      ],
@@ -723,9 +723,9 @@
      ],
      "mana-stack": [
       "Jotunn's Revenge",
+      "Transcendence",
       "Tyrfing",
       "Hydra's Lament",
-      "Dominance",
       "The Reaper",
       "Heartseeker"
      ],
@@ -1261,20 +1261,20 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lernaean Bow",
-      "Bancroft's Talon",
-      "Jotunn's Revenge",
-      "Death Metal",
-      "Bragi's Harp",
-      "Rod of Tahuti"
-     ],
-     "mana-stack @ Aspect of Strife": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
       "Death Metal",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
+     ],
+     "mana-stack @ Aspect of Strife": [
+      "Book of Thoth",
+      "Jotunn's Revenge",
+      "Transcendence",
+      "Death Metal",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Lernaean Bow",
@@ -1411,20 +1411,20 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
-      "Hydra's Lament",
       "Death Metal",
-      "Rod of Tahuti"
+      "Spear of Desolation",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
       "Death Metal",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Jotunn's Revenge",
@@ -1561,20 +1561,20 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
-      "Book of Thoth",
       "Jotunn's Revenge",
+      "Transcendence",
       "Death Metal",
       "Bragi's Harp",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Toxic Blade",
-      "Bancroft's Talon",
       "Jotunn's Revenge",
+      "Transcendence",
       "Death Metal",
       "Bragi's Harp",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Jotunn's Revenge",
@@ -1650,12 +1650,12 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Shield Splitter",
       "Transcendence",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Jotunn's Revenge",
@@ -1790,12 +1790,12 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Hydra's Lament",
-      "Rod of Tahuti"
+      "Transcendence",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Brawler\u2019s Beat Stick",
@@ -2526,11 +2526,11 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Bancroft's Talon",
       "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
+      "Obsidian Shard",
       "Rod of Tahuti"
      ],
      "model": [
@@ -2596,8 +2596,8 @@
       "The World Stone"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Book of Thoth",
+      "Bragi's Harp",
       "Spear of Desolation",
       "The World Stone",
       "Rod of Tahuti",
@@ -2666,8 +2666,8 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Bancroft's Talon",
+      "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
       "Obsidian Shard",

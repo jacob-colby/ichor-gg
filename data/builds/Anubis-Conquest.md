@@ -171,14 +171,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
-  - Doom Orb
+  - Book of Thoth
   - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   - Dreamer's Idol
   flex_slots:
   - Lotus Sickle
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -205,12 +205,12 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.53
-    Doom Orb:
-      total: 0.53
-      efficiency: 0.53
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.49
       win: 0.58
       pick: 0.0
-      fit: 0.57
+      fit: 0.39
     Obsidian Shard:
       total: 0.57
       efficiency: 0.58

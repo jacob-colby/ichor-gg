@@ -170,14 +170,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
+  - Book of Thoth
   - Death Metal
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Death Metal
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -205,15 +205,15 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.53
+    Book of Thoth:
+      total: 0.44
+      efficiency: 0.49
+      win: 0.46
+      pick: 0.12
+      fit: 0.39
     Death Metal:
       total: 0.51
       efficiency: 0.54
-      win: 0.53
-      pick: 0.0
-      fit: 0.57
-    Doom Orb:
-      total: 0.51
-      efficiency: 0.53
       win: 0.53
       pick: 0.0
       fit: 0.57
@@ -236,6 +236,7 @@ builds:
       pick: 0.0
       fit: 0.71
   community_ordered:
+  - Book of Thoth
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001

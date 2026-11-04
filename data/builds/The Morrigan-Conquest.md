@@ -170,14 +170,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -199,12 +199,6 @@ builds:
     Conch, Totem of Death, Divine Ruin, Jade Scepter, Genji''s Guard, Helm of Radiance,
     Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.53
     Book of Thoth:
       total: 0.52
       efficiency: 0.49
@@ -229,6 +223,12 @@ builds:
       win: 0.53
       pick: 0.43
       fit: 0.57
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.58
+      win: 0.52
+      pick: 0.35
+      fit: 0.57
     Soul Gem:
       total: 0.54
       efficiency: 0.53
@@ -240,6 +240,7 @@ builds:
   - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: burst

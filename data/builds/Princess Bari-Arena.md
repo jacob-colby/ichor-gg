@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Golden Blade
-  - Bancroft's Talon
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Bragi's Harp
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Bancroft's Talon
-  - Golden Blade
+  - Tyrfing
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,24 +98,18 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Golden Blade:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Bancroft's Talon:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.28
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
   starter: *id001
 - source: suggested
   archetype: burst

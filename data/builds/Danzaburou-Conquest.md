@@ -170,7 +170,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Hydra's Lament
+  - Book of Thoth
   - Death Metal
   - Silverbranch Bow
   - Heartseeker
@@ -178,7 +178,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -201,12 +201,12 @@ builds:
     Idol, Riptalon, Deathbringer, Gem of Focus, Musashi''s Dual Swords, Soul Reaver,
     Runeforged Hammer, Book of Thoth, Polynomicon.'
   slot_scores:
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.6
-      pick: 0.0
-      fit: 0.42
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.54
+      pick: 0.14
+      fit: 0.24
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -238,6 +238,7 @@ builds:
       pick: 0.0
       fit: 0.54
   community_ordered:
+  - Book of Thoth
   - Silverbranch Bow
   - Heartseeker
   - Rod of Tahuti

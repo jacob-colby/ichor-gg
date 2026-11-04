@@ -76,12 +76,12 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Hydra's Lament
+  - Transcendence
   - Heartseeker
   - Amanita Charm
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.23
     Heartseeker:
       total: 0.49
       efficiency: 0.43
