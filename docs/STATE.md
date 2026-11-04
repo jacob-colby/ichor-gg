@@ -176,6 +176,9 @@ Each of these has its evidence in the named module.
 | The community scrape reads ONE patch window, chosen per run | `refresh.choose_community_window` | SmiteBrain defaults to the newest patch, whose window opens the hour the patch lands; the 2026-11-04 run read a one-day window and committed it |
 | Rolling ranges (`1w`/`2w`/`1m`) are refused as community windows | `smitebrain_parser.patch_windows` | They straddle balance patches, and `validate`'s Spearman floor is calibrated on the window RESETTING at each one |
 | A roster-wide loss of complete community records fails the daily job | `refresh._refuse_community_collapse` | 11 of 11 refreshes on record were 100% complete; the enforced gate (`validate --check`) cannot see this and passed on the run that lost 47 |
+| Every scored item's passive is DECIDED — simulated, partial or refused | `passive_sim.REGISTRY` | Absence is not a decision: an absent passive is zeroed by accident, which lowers predicted cost and makes the item look more premium. 193 of 193 decided (2026-11-05) |
+| A debuff on the enemy's attack speed or Strength is worth exactly 0 here | `side_by_side.attacker_profile` | Its raw DPS is derived from the reference squishy over KILL_TIME and each hit is `dps x share x step`, so the cadence sets WHEN, never how much |
+| An item is refused WHOLE rather than credited with its good half | `passive_sim` (Xibalban Effigy) | `reduce_hit` would simulate its 50% cut in two lines and the clock has no channel for the payback, so the item would be booked with its upside alone |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
 | An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
 | That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
@@ -2841,6 +2844,88 @@ matches dressed as a community record, fed into a model whose `win` term is an
 input as well as a target (§1). Losing that is the fix working, and it is the
 one god of slack `COMMUNITY_COMPLETE_SLACK` exists for.
 
+### The passive-coverage pass closed the gap and bought no verdicts (2026-11-05)
+
+All 84 scored items that carried a passive and no simulator are decided: **33
+simulated, 8 partial, 43 refused**, so 193 of 193 items in `efficiency_pool`
+carry a decision and nothing reads "no simulator written yet". Every reading is
+in `passive_sim.py`'s COVERAGE PASS section beside the clause it reads, with
+the item text frozen in `tests/fixtures/frozen/passive_coverage/`. This is the
+precondition PR #104 named for pricing passives inside `efficiency`; it does
+not build that.
+
+**It did not buy readable verdicts, and that is the honest headline.** Measured
+on the restored 94-god set (the first measurement was taken on the damaged
+40-god one and said +1/+1/+3, which was an artefact):
+
+    mode       judged   readable before   after   delta
+    Conquest       87                45      44      -1
+    Joust          87                43      44      +1
+    Arena          87                40      39      -1
+
+Net **-1 of 261** judged god-modes. Nine god-modes moved: four gained
+(Ganesha in Conquest and Joust, Ares and Amaterasu in Joust) and five lost
+(Cu Chulainn in all three modes, Kuzenbo in Conquest and Joust).
+
+**What it DID buy is the thing worth knowing, and it is measurable: coverage
+work on this comparison is finished.** Across all three modes, the number of
+blockers still absent from `passive_sim` is **zero**. Every remaining withheld
+verdict is blocked by an explicit REFUSAL or a PARTIAL:
+
+    Conquest (43 withheld)   Tekko-Kagi 22 · Runeforged Hammer 5 · Stampede 4 · Erosion 3
+    Joust    (43 withheld)   Toxic Blade 20 · Erosion 12 · Runeforged Hammer 5 · Tekko-Kagi 5
+    Arena    (48 withheld)   Magi's Cloak 25 · Mantle Of Discord 22 · Toxic Blade 14 · Erosion 13
+
+So §4.30's conclusion — reached there for Carry, on 18 gods — now holds for the
+whole comparison, in every mode, as a counted fact rather than an inference.
+**No amount of further simulation work can move these verdicts.** The only
+levers left are the four §4.30 named (give the comparison a movement
+dimension, compare the shipped `core` instead of `model`, accept a sample that
+is not role-balanced, or accept a wider gap), and all four are Jacob's.
+
+**Why the sign is negative, exactly.** Ichor's own coverage barely moves — its
+builds were already full of simulated items — so the pass almost entirely
+lifts the COMMUNITY's side. That helps when it lifts the community toward
+Ichor and hurts when it lifts the community PAST Ichor to 100%:
+
+    gained   Ganesha   Support   community 0.6678 -> 0.8339   against Ichor 0.8345   gap 0.1667 -> 0.0006
+    lost     Kuzenbo   Support   community 0.8356 -> 1.0      against Ichor 0.8345   gap 0.0011 -> 0.1655
+    lost     Cu Chulainn Solo    community 0.8339 -> 1.0      against Ichor 0.8247   gap 0.0091 -> 0.1753
+
+Both losses are one refused item on Ichor's side against a community six with
+none: **Cu Chulainn holds `Runeforged Hammer`** (refused, crowd control) and
+**Kuzenbo holds `Erosion`** (refused, no enemy shield). Ganesha gains because
+BOTH sides end up holding exactly one refusal — his `Erosion` against the
+community's `Stampede`. A verdict is now readable precisely when the two sides
+hold comparable REFUSED gold, which is a sharper and more honest statement of
+what this comparison can read than the old mixture of refusals and absences.
+
+**PR #102's fragile trio is unaffected, and this time that is tested.** Kali,
+Susano and Nemesis read identical verdicts and identical coverage gaps before
+and after, in all three modes. The earlier claim that they were safe was made
+when none of the three was even in the damaged comparison set.
+
+**Two things recorded for whoever builds option (a).**
+
+- **Nine of the 33 simulate to a small number because the comparison has one
+  target.** `Bumba's Spear`'s whole on-hit payload lands on enemies AROUND the
+  target; `Oni Hunter's Garb` reads one of its three stacks; `Mystical Mail`'s
+  and `Void Shield`'s range scaling has no distance to read. Each is a
+  DECISION with its reason written beside it, which absence was not — but none
+  is a claim about the item in a real game. Pricing a cleave from here will
+  under-credit it exactly as the old table over-credited the absent, so read
+  `assumptions`, never the number alone.
+- **PR #104's supersede rule is recorded and NOT applied, as that PR asked.**
+  Eight pool items are priced by a shipped `efficiency` flag *and* simulated
+  here (Book of Thoth, Brawler's Beat Stick, Eye of Erebus, Nimble Ring, Rod
+  of Tahuti, Sun Beam Bow, Transcendence, The Executioner), and this pass adds
+  more of the same shape — every `_adaptive` grant it introduces is an item
+  whose adaptive stat `price_adaptive` already carries. There is no double
+  count today, because `efficiency` does not read `passive_sim` at all
+  (§4.31's Q2: the importers are `model_audit` and `side_by_side`, both
+  diagnostics). Option (a) must make a simulated value SUPERSEDE the
+  flag-derived grants for that item, or every adaptive item is counted twice.
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -3123,7 +3208,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1292) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1393) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3243,7 +3328,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1292 pipeline · 958 viewer |
+| Tests | 1393 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
