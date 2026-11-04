@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.56
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.56
@@ -622,11 +622,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Berserker's Shield:
       total: 0.61
       efficiency: 0.74

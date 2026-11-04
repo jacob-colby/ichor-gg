@@ -114,8 +114,13 @@ def _model_and_core(god, items, god_build, weights, tags_map, mode, eff, items_b
         **assemble.overflow_args(weights, eff, gold_values, signals=profile["signals"]))
     core, _ = assemble.assemble_core_converged(rows, items_by_name, **shared)
     model_rows = sorted(rows, key=lambda r: (-r["quality"], r["item"]))
+    q = assemble.quality_signals(profile["signals"])
+    model_shared = dict(
+        shared,
+        **assemble.conversion_args(weights, eff, gold_values, signals=q),
+        **assemble.overflow_args(weights, eff, gold_values, signals=q))
     model, _ = assemble.assemble_core_converged(model_rows, items_by_name,
-                                                score_key="quality", **shared)
+                                                score_key="quality", **model_shared)
     return core, model
 
 

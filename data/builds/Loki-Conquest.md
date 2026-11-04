@@ -116,11 +116,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum Blade, Arondight, Golden Blade,
-    Transcendence, Runeforged Hammer, Silverbranch Bow, Avenging Blade, Toxic Blade,
-    Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow, Riptalon,
-    Oath-Sworn Spear, Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sun Beam
-    Bow.'
+    this god: The Reaper, Tekko-Kagi, Pendulum Blade, Tyrfing, Arondight, Transcendence,
+    Runeforged Hammer, Golden Blade, Avenging Blade, Shield Splitter, Eye of the Storm,
+    Silverbranch Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade, Oath-Sworn
+    Spear, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine
+    Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -193,10 +193,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Arondight,
-    The Reaper, Transcendence, Tyrfing, Tekko-Kagi, Pendulum Blade, Runeforged Hammer,
+    The Reaper, Transcendence, Tekko-Kagi, Pendulum Blade, Tyrfing, Runeforged Hammer,
     Dominance, Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard,
-    Golden Blade, Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Silverbranch
-    Bow, Chandra''s Grace, Oath-Sworn Spear, Toxic Blade, Yogi''s Necklace, Riptalon.'
+    Bloodforge, Lernaean Bow, Golden Blade, Damaru, Breastplate of Valor, Chandra''s
+    Grace, Oath-Sworn Spear, Silverbranch Bow, Yogi''s Necklace, Toxic Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -268,10 +268,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: The Reaper, Pendulum Blade, Arondight, Tekko-Kagi, Tyrfing, Transcendence,
-    Silverbranch Bow, Runeforged Hammer, Toxic Blade, Damaru, Avenging Blade, Genji''s
-    Guard, Shield Splitter, Eye of the Storm, Golden Blade, Dominance, Riptalon, Breastplate
-    of Valor, Bloodforge, Lernaean Bow, Chandra''s Grace, Oath-Sworn Spear, Eye of
-    Erebus.'
+    Runeforged Hammer, Silverbranch Bow, Damaru, Avenging Blade, Genji''s Guard, Toxic
+    Blade, Shield Splitter, Eye of the Storm, Dominance, Breastplate of Valor, Golden
+    Blade, Bloodforge, Lernaean Bow, Chandra''s Grace, Riptalon, Oath-Sworn Spear,
+    Eye of Erebus.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.61
@@ -339,15 +339,15 @@ builds:
     swap: Erosion — physical protection
     swap_item: Erosion
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Kinetic Cuirass, Shield Splitter, Berserker''s Shield,
     Shield of the Phoenix, The Reaper, Runeforged Hammer, Genji''s Guard, Phoenix
     Feather, Yogi''s Necklace, Erosion, Eye of Providence, Freya''s Tears, Oni Hunter''s
     Garb, Draconic Scale, Avenging Blade, Breastplate of Valor, Midgardian Mail, Wyrmskin
-    Hide, Shifter''s Shield, Leviathan''s Hide, Chandra''s Grace, Golden Blade, Stone
-    of Binding, Magi''s Cloak.'
+    Hide, Shifter''s Shield, Leviathan''s Hide, Chandra''s Grace, Stone of Binding,
+    Magi''s Cloak, Golden Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.55
@@ -414,9 +414,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Silverbranch Bow, Avenging
-    Blade, Toxic Blade, Tyrfing, Arondight, Riptalon, Oath-Sworn Spear, Transcendence,
-    Runeforged Hammer, Golden Blade, Shield Splitter, Eye of the Storm, Dominance,
+    for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Avenging Blade, Silverbranch
+    Bow, Toxic Blade, Tyrfing, Arondight, Oath-Sworn Spear, Transcendence, Riptalon,
+    Runeforged Hammer, Shield Splitter, Eye of the Storm, Golden Blade, Dominance,
     Bloodforge, Lernaean Bow, Screeching Gargoyle, Damaru, Genji''s Guard, Rage, Musashi''s
     Dual Swords.'
   slot_scores:
@@ -562,10 +562,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Arondight, Pendulum Blade, Damaru,
-    Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tyrfing, Tekko-Kagi,
-    Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer, Silverbranch
-    Bow, Freya''s Tears, Avenging Blade, Toxic Blade, Shield Splitter, Golden Blade,
-    Shield of the Phoenix, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow.'
+    Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
+    Tyrfing, Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
+    Freya''s Tears, Avenging Blade, Silverbranch Bow, Shield Splitter, Shield of the
+    Phoenix, Eye of the Storm, Toxic Blade, Dominance, Golden Blade, Bloodforge, Lernaean
+    Bow.'
   slot_scores:
     Hydra's Lament:
       total: 0.59
@@ -613,14 +614,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
+  - Transcendence
   - The Reaper
   - Tekko-Kagi
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Tyrfing
   - Tekko-Kagi
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -635,11 +636,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum Blade, Arondight,
-    Golden Blade, Transcendence, Runeforged Hammer, Silverbranch Bow, Avenging Blade,
-    Toxic Blade, Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean
-    Bow, Riptalon, Oath-Sworn Spear, Rage, Musashi''s Dual Swords, Deathbringer, Damaru,
-    Sun Beam Bow.'
+    Underrated for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Tyrfing, Arondight,
+    Transcendence, Runeforged Hammer, Golden Blade, Avenging Blade, Shield Splitter,
+    Eye of the Storm, Silverbranch Bow, Dominance, Bloodforge, Lernaean Bow, Toxic
+    Blade, Oath-Sworn Spear, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer,
+    Damaru, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -647,12 +648,12 @@ builds:
       win: 0.54
       pick: 0.27
       fit: 1.0
-    Tyrfing:
-      total: 0.57
-      efficiency: 0.46
+    Transcendence:
+      total: 0.53
+      efficiency: 0.53
       win: 0.58
       pick: 0.0
-      fit: 0.97
+      fit: 0.52
     The Reaper:
       total: 0.58
       efficiency: 0.51
@@ -686,13 +687,13 @@ builds:
   archetype: hybrid
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - The Reaper
+  - Tekko-Kagi
   - The Crusher
   - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Tyrfing
+  - Tekko-Kagi
   - Avatar's Parashu
   situational_swaps:
   - vs_tag: heavy_cc
@@ -708,11 +709,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: The Reaper, Tyrfing, Tekko-Kagi, Pendulum
-    Blade, Arondight, Golden Blade, Transcendence, Runeforged Hammer, Silverbranch
-    Bow, Avenging Blade, Toxic Blade, Shield Splitter, Eye of the Storm, Dominance,
-    Bloodforge, Lernaean Bow, Riptalon, Oath-Sworn Spear, Rage, Musashi''s Dual Swords,
-    Deathbringer, Damaru, Sun Beam Bow.'
+    + fit + win/pick). Underrated for this god: The Reaper, Tekko-Kagi, Pendulum Blade,
+    Tyrfing, Arondight, Transcendence, Runeforged Hammer, Golden Blade, Avenging Blade,
+    Shield Splitter, Eye of the Storm, Silverbranch Bow, Dominance, Bloodforge, Lernaean
+    Bow, Toxic Blade, Oath-Sworn Spear, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer,
+    Damaru, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -720,15 +721,15 @@ builds:
       win: 0.54
       pick: 0.27
       fit: 1.0
-    Tyrfing:
-      total: 0.57
-      efficiency: 0.46
-      win: 0.58
-      pick: 0.0
-      fit: 0.97
     The Reaper:
       total: 0.58
       efficiency: 0.51
+      win: 0.58
+      pick: 0.0
+      fit: 0.91
+    Tekko-Kagi:
+      total: 0.57
+      efficiency: 0.48
       win: 0.58
       pick: 0.0
       fit: 0.91
@@ -757,8 +758,8 @@ builds:
   - Avatar's Parashu
   swaps:
   - added: Avatar's Parashu
-    removed: Tekko-Kagi
+    removed: Transcendence
     reason: community 69% win over 168 matches (vs 57% on this god), taking the model's
-      weakest slot from Tekko-Kagi
+      weakest slot from Transcendence
   starter: *id001
 ---

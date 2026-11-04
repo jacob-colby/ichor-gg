@@ -166,14 +166,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Genji's Guard
-  - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Freya's Tears
-  - Berserker's Shield
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -182,8 +182,8 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -201,18 +201,18 @@ builds:
       win: 0.52
       pick: 0.0
       fit: 0.24
-    Berserker's Shield:
-      total: 0.49
-      efficiency: 0.67
-      win: 0.52
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
       win: 0.52
       pick: 0.0
       fit: 0.48
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.52
+      pick: 0.0
+      fit: 0.26
     Hydra's Lament:
       total: 0.5
       efficiency: 0.56

@@ -724,14 +724,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Chandra's Grace
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   - Triton's Conch
   flex_slots:
-  - Lotus Sickle
+  - Chandra's Grace
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -749,12 +749,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.49
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Book of Thoth:
       total: 0.4
       efficiency: 0.49
@@ -773,6 +767,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Obsidian Shard:
+      total: 0.52
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86

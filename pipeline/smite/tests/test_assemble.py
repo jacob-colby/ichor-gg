@@ -724,3 +724,38 @@ def test_efficiency_adjustments_take_the_passed_signals_not_the_base():
         == pytest.approx(0.5)
     with pytest.raises(TypeError):
         assemble.overflow_args(base, eff, gold)  # no silent fallback to the base
+
+
+def test_quality_signals_is_the_identity_where_eff_and_fit_sum_to_one():
+    """Joust and Arena (0.5 / 0.5) need no rescale; Conquest (0.35 / 0.15)
+    puts efficiency at 0.70 of `quality`, and win and pick at nothing."""
+    j = assemble.quality_signals({"efficiency": 0.5, "win": 0.0, "pick": 0.0, "fit": 0.5})
+    assert j == {"efficiency": 0.5, "win": 0.0, "pick": 0.0, "fit": 0.5}
+    c = assemble.quality_signals({"efficiency": 0.35, "win": 0.45, "pick": 0.05, "fit": 0.15})
+    assert c["efficiency"] == pytest.approx(0.70)
+    assert c["fit"] == pytest.approx(0.30)
+    assert c["win"] == c["pick"] == 0.0
+
+
+def test_require_any_item_seeds_the_best_ranked_one_and_counts_toward_the_stat():
+    """A mana-stack core holds its converter (2026-11-04): `any_item` seeds the
+    best-RANKED one the god can buy, even below everything else on score, and
+    a converter carrying the required stat counts toward `min`."""
+    items = {
+        "conv_a": {"name": "conv_a", "cost": 2000, "stats": {"Max Mana": "250"}},
+        "conv_b": {"name": "conv_b", "cost": 2000, "stats": {"Max Mana": "350"}},
+        "mana1": {"name": "mana1", "cost": 2000, "stats": {"Max Mana": "200"}},
+        "mana2": {"name": "mana2", "cost": 2000, "stats": {"Max Mana": "200"}},
+        "mana3": {"name": "mana3", "cost": 2000, "stats": {"Max Mana": "200"}},
+        **{f"p{i}": {"name": f"p{i}", "cost": 2000, "stats": {"Strength": "40"}} for i in range(6)},
+    }
+    order = [f"p{i}" for i in range(6)] + ["mana1", "mana2", "mana3", "conv_b", "conv_a"]
+    rows = [{"item": n, "total": 1.0 - i / 100, "tags": []} for i, n in enumerate(order)]
+    stat_only = assemble.assemble_core(rows, items, n=6, require={"stat": "Max Mana", "min": 3})
+    assert not {"conv_a", "conv_b"} & set(stat_only)          # the gap: no converter
+    core = assemble.assemble_core(rows, items, n=6, require={
+        "stat": "Max Mana", "min": 3, "any_item": ["conv_a", "conv_b"]})
+    assert core[0] == "conv_b"                                 # best-ranked of the two
+    assert "conv_a" not in core                                # exactly one
+    assert core[1:3] == ["mana1", "mana2"]                     # 2 more, not 3: it counts
+    assert core[3:] == ["p0", "p1", "p2"]

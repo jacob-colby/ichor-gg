@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
@@ -44,11 +44,11 @@ builds:
       pick: 0.0
       fit: 0.7
     Tyrfing:
-      total: 0.6
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.8
     Demon Blade:
       total: 0.58
       efficiency: 0.36
@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Lernaean Bow
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -110,18 +110,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
-      total: 0.5
+      total: 0.49
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.5
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
+      fit: 0.49
     The Reaper:
       total: 0.58
       efficiency: 0.56
@@ -176,17 +176,17 @@ builds:
       pick: 0.0
       fit: 0.52
     Tyrfing:
-      total: 0.58
+      total: 0.57
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Riptalon:
-      total: 0.63
+      total: 0.62
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.78
     Demon Blade:
       total: 0.58
       efficiency: 0.36
@@ -233,13 +233,13 @@ builds:
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Toxic Blade:
       total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.81
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -312,17 +312,17 @@ builds:
       pick: 0.0
       fit: 0.58
     Riptalon:
-      total: 0.7
+      total: 0.69
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.94
+      fit: 0.93
     Silverbranch Bow:
       total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Titan's Bane:
       total: 0.56
       efficiency: 0.54
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Toxic Blade:
-      total: 0.49
+      total: 0.48
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.51
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
@@ -448,11 +448,11 @@ builds:
       pick: 0.0
       fit: 0.43
     Tyrfing:
-      total: 0.48
+      total: 0.47
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.45
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
@@ -489,11 +489,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
@@ -501,11 +501,11 @@ builds:
       pick: 0.0
       fit: 0.7
     Tyrfing:
-      total: 0.6
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -513,11 +513,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.8
     Demon Blade:
       total: 0.58
       efficiency: 0.36

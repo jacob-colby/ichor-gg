@@ -91,8 +91,9 @@ seen the community's data, which is the honest counterpart to the community's
 own. The blended `core` (the viewer's Balanced tab) is reported alongside it
 because it is what ships; in Joust and Arena the two are byte-identical.
 
-THE WORKED EXAMPLE IT REPRODUCES. Medusa, computed by hand on 2026-08-21 and
-reproduced here to 0.1 on every figure (`test_build_quality`):
+THE WORKED EXAMPLE IT REPRODUCES. Medusa, computed by hand on 2026-08-21,
+re-derived by hand on 2026-11-04, and reproduced here to 0.1 on every figure
+(`test_build_quality`):
 
     community 13,750g   Tyrfing · Odysseus' Bow · Silverbranch Bow · Riptalon ·
                         The Executioner · Manchu Bow
@@ -100,16 +101,32 @@ reproduced here to 0.1 on every figure (`test_build_quality`):
                         Death Metal · Rod of Tahuti · Soul Gem
 
                               basic DPS   ability DPS     TOTAL
-      COMMUNITY vs 70 prot       352.8    +    35.9  =   388.6
-                vs 170 prot      233.2    +    23.7  =   256.9
-      OURS      vs 70 prot       242.4    +    72.4  =   314.8
-                vs 170 prot      150.8    +    45.1  =   195.9
+      COMMUNITY vs 70 prot       352.8    +    37.9  =   390.7
+                vs 170 prot      233.2    +    25.1  =   258.3
+      OURS      vs 70 prot       242.4    +    77.0  =   319.4
+                vs 170 prot      150.8    +    47.9  =   198.7
 
-Viper Shot contributes nothing to either line, and not by special case: its
-scaling line reads `Damage Scaling Per Tick:` and
-`damage_value.ability_damage_components` accepts `Damage Scaling:` only, so
-the ability has a rank list and no scaling and is skipped — the same rule the
-damage model applies everywhere. The hand computation excluded it too.
+The 2026-08-21 figures (ability 35.9 / 23.7 / 72.4 / 45.1) excluded Viper
+Shot, because its scaling line reads `Damage Scaling Per Tick:` and the shared
+parser then accepted `Damage Scaling:` only. Since 2026-11-04 it reads
+labelled lines per ability (`damage_value.ability_damage_components`), so
+Viper Shot enters — by the shared rule, not a special case — at its last rank:
+30 + 8% Strength + 8% Intelligence, 10 s cooldown, counted ONCE per cast
+(the parser's DoT limit; the ability really fires a stream of ticks, so this
+undercounts it). The hand re-derivation, OB40 frozen inputs:
+
+    community  Str 25, Int 0, 20% pen, no CDR      raw 30 + 2.0        = 32.0
+      vs  70   70 x 0.80 = 56.0  -> x 100/156.0 = 20.513 / 10 s   = +2.051
+      vs 170  170 x 0.80 = 136.0 -> x 100/236.0 = 13.559 / 10 s   = +1.356
+    ours       Str 70, Int 215, 5% + 10 pen, 35 CDR  raw 30+5.6+17.2 = 52.8
+               cooldown 10 x 100/135 = 7.407 s
+      vs  70   70 x 0.95 - 10 = 56.5  -> x 100/156.5 = 33.738 / 7.407 = +4.555
+      vs 170  170 x 0.95 - 10 = 151.5 -> x 100/251.5 = 20.994 / 7.407 = +2.834
+
+Added to the old ability columns: 35.879 + 2.051 = 37.930, 23.717 + 1.356 =
+25.073, 72.430 + 4.555 = 76.985, 45.071 + 2.834 = 47.905. The basic column
+does not move. Neither does the verdict's direction: the community still leads
+by 71.3 and 59.5 DPS (was 73.8 and 61.0).
 
 FOUR PLACES THE ARITHMETIC IS EASY TO GET WRONG, each pinned by a test:
 

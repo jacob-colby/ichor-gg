@@ -100,8 +100,8 @@ builds:
   - The Crusher
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Tekko-Kagi
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -116,9 +116,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Crusher, Amanita Charm, Golden Blade, Tekko-Kagi, Runeforged Hammer,
-    Shield Splitter, Genji''s Guard, Kinetic Cuirass, Tyrfing, Titan''s Bane, Lernaean
-    Bow, Toxic Blade, Hydra''s Lament, Freya''s Tears, Breastplate of Valor, Silverbranch
+    this god: The Crusher, Amanita Charm, Tekko-Kagi, Golden Blade, Runeforged Hammer,
+    Shield Splitter, Genji''s Guard, Kinetic Cuirass, Titan''s Bane, Tyrfing, Lernaean
+    Bow, Hydra''s Lament, Toxic Blade, Freya''s Tears, Breastplate of Valor, Silverbranch
     Bow, Avenging Blade, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance, Riptalon,
     Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence, Arondight.'
   slot_scores:
@@ -127,7 +127,7 @@ builds:
       efficiency: 0.52
       win: 0.6
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Berserker's Shield:
       total: 0.6
       efficiency: 0.74
@@ -171,12 +171,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
+  - Transcendence
   - The Crusher
-  - Heartseeker
   - Amanita Charm
   flex_slots:
   - Amanita Charm
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -215,18 +215,18 @@ builds:
       win: 0.6
       pick: 0.28
       fit: 0.39
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.21
     The Crusher:
       total: 0.53
       efficiency: 0.49
       win: 0.67
       pick: 0.13
       fit: 0.35
-    Heartseeker:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.62
-      pick: 0.4
-      fit: 0.51
     Amanita Charm:
       total: 0.53
       efficiency: 0.65
@@ -237,7 +237,6 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - The Crusher
-  - Heartseeker
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -265,11 +264,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Riptalon, Shield
-    Splitter, Genji''s Guard, Golden Blade, Runeforged Hammer, Tekko-Kagi, Yogi''s
+    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Shield Splitter,
+    Riptalon, Genji''s Guard, Golden Blade, Runeforged Hammer, Tekko-Kagi, Yogi''s
     Necklace, Phoenix Feather, Bloodforge, Freya''s Tears, Titan''s Bane, Tyrfing,
-    Breastplate of Valor, Oni Hunter''s Garb, Lernaean Bow, Toxic Blade, Hydra''s
-    Lament, Pharaoh''s Curse, Erosion, Avenging Blade, Chandra''s Grace, Eye of Providence,
+    Breastplate of Valor, Oni Hunter''s Garb, Lernaean Bow, Hydra''s Lament, Toxic
+    Blade, Pharaoh''s Curse, Erosion, Avenging Blade, Chandra''s Grace, Eye of Providence,
     Midgardian Mail, Shogun''s Ofuda.'
   slot_scores:
     Berserker's Shield:
@@ -341,8 +340,8 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Crusher, Tekko-Kagi, Avenging Blade, Titan''s Bane, Amanita
-    Charm, Stone of Binding, Toxic Blade, Genji''s Guard, Screeching Gargoyle, Silverbranch
-    Bow, Golden Blade, Runeforged Hammer, Shield Splitter, Void Stone, Void Shield,
+    Charm, Stone of Binding, Genji''s Guard, Screeching Gargoyle, Toxic Blade, Runeforged
+    Hammer, Silverbranch Bow, Golden Blade, Shield Splitter, Void Stone, Void Shield,
     Kinetic Cuirass, Riptalon, Tyrfing, Lernaean Bow, Hydra''s Lament, Breastplate
     of Valor, Freya''s Tears, Oni Hunter''s Garb, Pharaoh''s Curse, Dominance, Midgardian
     Mail.'
@@ -493,7 +492,7 @@ builds:
     Freya''s Tears, Amanita Charm, Hydra''s Lament, The Crusher, Kinetic Cuirass,
     Shield of the Phoenix, Screeching Gargoyle, Runeforged Hammer, Tekko-Kagi, Arondight,
     Shield Splitter, Golden Blade, Titan''s Bane, Tyrfing, Oni Hunter''s Garb, Toxic
-    Blade, Silverbranch Bow, Lernaean Bow, Pharaoh''s Curse, Midgardian Mail, Chandra''s
+    Blade, Lernaean Bow, Silverbranch Bow, Pharaoh''s Curse, Midgardian Mail, Chandra''s
     Grace, Eye of Providence, Eye of Erebus, Avenging Blade, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
@@ -547,7 +546,7 @@ builds:
   - Tekko-Kagi
   - Amanita Charm
   flex_slots:
-  - Tekko-Kagi
+  - Golden Blade
   - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
@@ -563,9 +562,9 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Amanita Charm, Golden Blade, Tekko-Kagi, Runeforged Hammer,
-    Shield Splitter, Genji''s Guard, Kinetic Cuirass, Tyrfing, Titan''s Bane, Lernaean
-    Bow, Toxic Blade, Hydra''s Lament, Breastplate of Valor, Silverbranch Bow, The
+    Underrated for this god: Amanita Charm, Tekko-Kagi, Golden Blade, Runeforged Hammer,
+    Shield Splitter, Genji''s Guard, Kinetic Cuirass, Titan''s Bane, Tyrfing, Lernaean
+    Bow, Hydra''s Lament, Toxic Blade, Breastplate of Valor, Silverbranch Bow, The
     Crusher, Avenging Blade, Oni Hunter''s Garb, Pharaoh''s Curse, Freya''s Tears,
     Dominance, Riptalon, Shogun''s Ofuda, Midgardian Mail, Erosion, Eye of Providence,
     Arondight.'
@@ -575,7 +574,7 @@ builds:
       efficiency: 0.52
       win: 0.6
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Berserker's Shield:
       total: 0.6
       efficiency: 0.74

@@ -494,8 +494,8 @@ builds:
     Shard, Spear of Desolation, Tyrfing, The Crusher, Oni Hunter''s Garb, Helm of
     Radiance, Lernaean Bow, Erosion, Avenging Blade, Eye of Providence, Heartseeker,
     Stone of Binding, Helm of Darkness, Shield of the Phoenix, Midgardian Mail, Arondight,
-    Spear of the Magus, Toxic Blade, Death Metal, Magi''s Cloak, Pharaoh''s Curse,
-    Silverbranch Bow, Screeching Gargoyle.'
+    Spear of the Magus, Death Metal, Magi''s Cloak, Toxic Blade, Pharaoh''s Curse,
+    Blood-Bound Book, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -620,21 +620,21 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Freya's Tears
   - Breastplate of Valor
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Eye of Providence — physical protection
+    swap: Eye of Providence — magical protection
     swap_item: Eye of Providence
+  - vs_tag: physical_heavy
+    swap: Draconic Scale — physical protection
+    swap_item: Draconic Scale
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -670,15 +670,15 @@ builds:
       win: 0.49
       pick: 0.35
       fit: 0.51
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.0
-      fit: 0.12
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
+      win: 0.55
+      pick: 0.0
+      fit: 0.57
+    Erosion:
+      total: 0.51
+      efficiency: 0.51
       win: 0.55
       pick: 0.0
       fit: 0.57

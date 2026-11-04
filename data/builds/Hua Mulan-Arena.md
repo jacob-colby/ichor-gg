@@ -13,7 +13,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
+  - Golden Blade
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -99,11 +99,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.65
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -182,11 +182,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -288,8 +288,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -340,7 +340,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
+  - Golden Blade
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
@@ -353,17 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

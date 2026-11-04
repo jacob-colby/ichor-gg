@@ -171,14 +171,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
-  - Spear of Desolation
   - Book of Thoth
+  - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - The World Stone
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -200,24 +200,18 @@ builds:
     Bancroft''s Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade Scepter,
     Genji''s Guard, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.59
-      pick: 0.0
-      fit: 0.53
-    Spear of Desolation:
-      total: 0.59
-      efficiency: 0.59
-      win: 0.6
-      pick: 0.48
-      fit: 0.61
     Book of Thoth:
       total: 0.51
       efficiency: 0.49
       win: 0.59
       pick: 0.19
       fit: 0.39
+    Spear of Desolation:
+      total: 0.59
+      efficiency: 0.59
+      win: 0.6
+      pick: 0.48
+      fit: 0.61
     The World Stone:
       total: 0.56
       efficiency: 0.52
@@ -236,9 +230,15 @@ builds:
       win: 0.63
       pick: 0.37
       fit: 0.57
+    Soul Gem:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.59
+      pick: 0.0
+      fit: 0.71
   community_ordered:
-  - Spear of Desolation
   - Book of Thoth
+  - Spear of Desolation
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
@@ -642,13 +642,13 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane,
-    Soul Gem, Tyrfing, Hydra''s Lament, Death Metal, Bragi''s Harp, The Crusher, Spear
-    of the Magus, Heartseeker, Lernaean Bow, The Reaper, Silverbranch Bow, Golden
-    Blade, Gluttonous Grimoire, Arondight, Lotus Sickle, Ancient Signet, Dominance,
-    Chronos'' Pendant, Dreamer''s Idol, Doom Orb, Pendulum Blade, Avatar''s Parashu,
-    Toxic Blade, Bracer of The Abyss, Transcendence, Runeforged Hammer, Gem of Focus,
-    The Cosmic Horror, Eros'' Bow, Heartwood Charm, Blood-Bound Book, Polynomicon,
-    Riptalon, Avenging Blade.'
+    Soul Gem, Hydra''s Lament, Tyrfing, Death Metal, Bragi''s Harp, The Crusher, Spear
+    of the Magus, Heartseeker, Lernaean Bow, The Reaper, Gluttonous Grimoire, Arondight,
+    Silverbranch Bow, Golden Blade, Lotus Sickle, Ancient Signet, Dominance, Chronos''
+    Pendant, Dreamer''s Idol, Doom Orb, Pendulum Blade, Avatar''s Parashu, Bracer
+    of The Abyss, Transcendence, Runeforged Hammer, Toxic Blade, Gem of Focus, The
+    Cosmic Horror, Eros'' Bow, Heartwood Charm, Blood-Bound Book, Polynomicon, Avenging
+    Blade, Triton''s Conch.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -720,11 +720,11 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Titan''s
     Bane, Spear of the Magus, Death Metal, Hydra''s Lament, Gluttonous Grimoire, The
     Crusher, Heartseeker, Lotus Sickle, The Reaper, Dreamer''s Idol, Doom Orb, Chronos''
-    Pendant, Ancient Signet, Arondight, Tekko-Kagi, Tyrfing, Bragi''s Harp, Pendulum
-    Blade, The Cosmic Horror, Gem of Focus, Heartwood Charm, Avatar''s Parashu, Blood-Bound
-    Book, Polynomicon, Transcendence, Runeforged Hammer, Triton''s Conch, Soul Reaver,
-    Totem of Death, Avenging Blade, Divine Ruin, Jade Scepter, Golden Blade, Shield
-    Splitter, Eye of the Storm.'
+    Pendant, Ancient Signet, Arondight, Tekko-Kagi, Bragi''s Harp, Pendulum Blade,
+    The Cosmic Horror, Tyrfing, Gem of Focus, Heartwood Charm, Avatar''s Parashu,
+    Blood-Bound Book, Polynomicon, Transcendence, Runeforged Hammer, Triton''s Conch,
+    Soul Reaver, Totem of Death, Avenging Blade, Divine Ruin, Jade Scepter, Shield
+    Splitter, Eye of the Storm, Bancroft''s Talon.'
   slot_scores:
     Book of Thoth:
       total: 0.49

@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Golden Blade
   - Kinetic Cuirass
+  - Magi's Cloak
   - Shield Splitter
   - Shield of the Phoenix
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
   - Runeforged Hammer
-  - Golden Blade
+  - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -98,18 +98,18 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Magi's Cloak:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Shield Splitter:
       total: 0.57
       efficiency: 0.59

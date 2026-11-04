@@ -158,8 +158,8 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74

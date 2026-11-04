@@ -173,14 +173,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Death Metal
-  - Dominance
   - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Silverbranch Bow
-  - Dominance
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -210,18 +210,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.54
+      pick: 0.0
+      fit: 0.24
     Death Metal:
       total: 0.54
       efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.51
-    Dominance:
-      total: 0.51
-      efficiency: 0.47
-      win: 0.54
-      pick: 0.59
-      fit: 0.5
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.52
@@ -241,7 +241,6 @@ builds:
       pick: 0.0
       fit: 0.54
   community_ordered:
-  - Dominance
   - Silverbranch Bow
   starter: *id001
 - source: suggested
@@ -773,15 +772,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
-  - Nimble Ring
   - Tekko-Kagi
-  - Rod of Tahuti
+  - Soul Gem
   flex_slots:
-  - Tyrfing
-  - Tekko-Kagi
+  - Lernaean Bow
+  - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -805,6 +804,12 @@ builds:
     Berserker''s Shield, Runeforged Hammer, Chronos'' Pendant, Sun Beam Bow, Doom
     Orb, Bancroft''s Talon.'
   slot_scores:
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.54
+      pick: 0.0
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -823,24 +828,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.52
-    Nimble Ring:
-      total: 0.53
-      efficiency: 0.63
-      win: 0.54
-      pick: 0.0
-      fit: 0.45
     Tekko-Kagi:
       total: 0.51
       efficiency: 0.55
       win: 0.54
       pick: 0.0
       fit: 0.52
-    Rod of Tahuti:
-      total: 0.56
-      efficiency: 0.86
+    Soul Gem:
+      total: 0.5
+      efficiency: 0.57
       win: 0.54
       pick: 0.0
-      fit: 0.11
+      fit: 0.35
   community_ordered:
   - Tyrfing
   starter: *id001

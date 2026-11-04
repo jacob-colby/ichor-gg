@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.55
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -340,7 +340,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
+  - Toxic Blade
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74

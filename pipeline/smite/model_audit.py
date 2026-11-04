@@ -42,7 +42,13 @@ THE FIVE PARTS, and what each one does and does not claim:
    is not a leakage-free measure; `calibrate` is that. The rule it enforces
    (`HELDOUT_TOLERANCE`, Jacob 2026-11-03): a PR may lower either held-out
    metric by up to 1 point if its description says why; more blocks the merge,
-   and `--check` exits 1 on exactly that.
+   and `--check` exits 1 on exactly that. It SCORES CONQUEST'S BASE-KIT `core`
+   ONLY — Joust and Arena have no community outcome data, and `validate`
+   assembles no other build — so it also counts the reference lines (part 1)
+   this tree changes against the base's snapshot, split into that scored build
+   and each mode's remainder, and says NOT SCORED / PARTLY SCORED in words
+   when a change reaches what it cannot see (`blind_spot_note`). The frozen
+   reference builds are the guard there.
 
 3. PASSIVE FIRING (`passive_firing`). Every recommended build in every mode,
    from the shipped build notes, run through `side_by_side.power` with each
@@ -400,6 +406,82 @@ HELDOUT_VERDICT = {
               "must say why"),
     FAIL: "held-out lowered by more than 1 point - FAIL: this blocks the merge",
 }
+
+
+# What the held-out check cannot see. `validate.compute` resolves the CONQUEST
+# profile and scores it against the community record, and Joust and Arena
+# carry no community entry at all (0 of 94 notes each, 2026-11-04) — there is
+# no outcome data to score them with, so no held-out metric exists there and
+# none is invented. A change that moves only those modes reads +0.0000 by
+# construction; PR #97's mode-weight fix moved 11 Joust/Arena cores and 163
+# flavor builds and read exactly that. So `heldout` says so in words, from the
+# one instrument that does see those modes: the frozen reference builds,
+# recomputed with this tree's code and compared with the base ref's
+# committed snapshot. The reference is ten gods, so "0 changes" there means
+# "none on the ten", not "none anywhere"; a non-zero count is a fact.
+
+def reference_changes_by_mode(old, new):
+    """`{scope: number of reference build/verdict lines that differ}`, where
+    the scopes are `SCORED` (Conquest's base-kit `core`, the only build
+    `validate.compute` assembles) and each mode's unscored remainder."""
+    def sub(snap, mode, scored):
+        out = {}
+        for g, m in snap.items():
+            rec = (m or {}).get(mode) or {}
+            builds = rec.get("builds") or {}
+            if scored:
+                out[g] = {mode: {"builds": {"core": builds.get("core")}}}
+            else:
+                rest = {k: v for k, v in builds.items() if mode != "Conquest" or k != "core"}
+                out[g] = {mode: dict(rec, builds=rest)}
+        return out
+    counts = {SCORED: len(diff_reference(sub(old, "Conquest", True), sub(new, "Conquest", True)))}
+    for mode in MODES:
+        counts[mode] = len(diff_reference(sub(old, mode, False), sub(new, mode, False)))
+    return counts
+
+
+SCORED = "Conquest core"
+
+
+def base_snapshot(ref):
+    """The reference snapshot committed at `ref`, or None if it has none or was
+    frozen on different inputs (then a diff would be the inputs, not the code)."""
+    rel = SNAPSHOT_PATH.relative_to(REPO_ROOT).as_posix()
+    res = subprocess.run(["git", "show", f"{ref}:{rel}"], cwd=REPO_ROOT,
+                         capture_output=True, text=True)
+    if res.returncode != 0:
+        return None
+    doc = json.loads(res.stdout)
+    here = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    return doc["gods"] if doc.get("_inputs") == here.get("_inputs") else None
+
+
+def blind_spot_note(by_mode):
+    """A plain sentence for a change the held-out delta cannot score, or None.
+
+    `by_mode` is `reference_changes_by_mode`'s: SCORED counts Conquest `core`
+    lines, the only build the held-out metrics read; the mode keys count every
+    other line, verdicts included."""
+    scored = by_mode.get(SCORED, 0)
+    unscored = {m: by_mode.get(m, 0) for m in MODES}
+    if not any(unscored.values()):
+        return None
+    moved = ", ".join(f"{n} {m}" for m, n in unscored.items() if n)
+    why = ("The held-out check scores Conquest only, against the community record: its "
+           "coverage reads the base-kit `core` (the one build `validate.compute` assembles) "
+           "and its Spearman the Conquest item scores. Joust and Arena have no community "
+           "record at all, so there is no outcome data to score them with, and no model, "
+           "hybrid, flavor or aspect build is assembled. For all of that the frozen reference "
+           "builds are the guard - `python -m smite.model_audit reference`, every changed "
+           "line explained in the PR.")
+    if not scored:
+        return (f"NOT SCORED: this change moves reference lines it cannot see ({moved}) and no "
+                f"Conquest core, so the held-out delta above is zero by construction and says "
+                f"nothing about it. {why}")
+    return (f"PARTLY SCORED: besides {scored} Conquest core line(s), this change moves "
+            f"reference lines it cannot see ({moved}). The held-out delta covers the Conquest "
+            f"core part only. {why}")
 
 
 # ── 3. Passive firing ─────────────────────────────────────────────────────
@@ -889,8 +971,25 @@ def _cmd_heldout(args):
     print("\n".join(lines))
     held = sorted(n for n in per_god if split_of(n) == "heldout")
     print(f"held-out gods ({len(held)}): {', '.join(held)}")
+    note = None
     if base is not None:
-        print(HELDOUT_VERDICT[outcome])
+        old = base_snapshot(args.base)
+        if old is None:
+            print(f"scope: {args.base} has no comparable reference snapshot, so whether this "
+                  "change reaches Joust or Arena - which the held-out check cannot score - is "
+                  "not known here")
+        else:
+            by_mode = reference_changes_by_mode(old, compute_reference())
+            print("reference lines changed vs " + args.base + ": "
+                  + ", ".join(f"{m} {n}" for m, n in by_mode.items())
+                  + f"  (only '{SCORED}' is scored above)")
+            note = blind_spot_note(by_mode)
+        verdict = HELDOUT_VERDICT[outcome]
+        if note and note.startswith("NOT SCORED") and outcome == PASS:
+            verdict = "held-out not lowered - PASS, but this change is NOT SCORED by it (below)"
+        print(verdict)
+        if note:
+            print(note)
     return 1 if outcome == FAIL and args.check else 0
 
 

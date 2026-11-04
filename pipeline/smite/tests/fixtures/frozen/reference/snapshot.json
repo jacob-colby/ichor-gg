@@ -113,11 +113,11 @@
       "Soul Gem"
      ],
      "mana-stack @ Aspect of Combustion": [
+      "Lotus Sickle",
       "Bancroft's Talon",
       "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
-      "Doom Orb",
       "Rod of Tahuti"
      ],
      "model": [
@@ -271,20 +271,20 @@
       "Obsidian Shard"
      ],
      "mana-stack": [
-      "Lotus Sickle",
-      "Book of Thoth",
-      "Spear of Desolation",
-      "The World Stone",
-      "Rod of Tahuti",
-      "Obsidian Shard"
-     ],
-     "mana-stack @ Aspect of Combustion": [
       "Book of Thoth",
       "Spear of Desolation",
       "The World Stone",
       "Rod of Tahuti",
       "Obsidian Shard",
-      "Soul Reaver"
+      "Soul Gem"
+     ],
+     "mana-stack @ Aspect of Combustion": [
+      "Book of Thoth",
+      "Spear of Desolation",
+      "Nimble Ring",
+      "The World Stone",
+      "Rod of Tahuti",
+      "Obsidian Shard"
      ],
      "model": [
       "Spear of Desolation",
@@ -295,12 +295,12 @@
       "Soul Gem"
      ],
      "model @ Aspect of Combustion": [
+      "Nimble Ring",
       "Spear of Desolation",
       "Doom Orb",
       "Spear of the Magus",
       "Rod of Tahuti",
-      "Obsidian Shard",
-      "Soul Gem"
+      "Obsidian Shard"
      ],
      "str-int": [
       "Book of Thoth",
@@ -437,7 +437,7 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
+      "Book of Thoth",
       "Spear of Desolation",
       "Doom Orb",
       "Obsidian Shard",
@@ -446,9 +446,9 @@
      ],
      "mana-stack @ Aspect of Combustion": [
       "Bancroft's Talon",
+      "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
-      "Doom Orb",
       "Obsidian Shard",
       "Rod of Tahuti"
      ],
@@ -510,11 +510,11 @@
    "Arena": {
     "builds": {
      "anti-tank": [
-      "Lernaean Bow",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "The Reaper",
       "Tekko-Kagi",
+      "Riptalon",
+      "Silverbranch Bow",
       "Titan's Bane"
      ],
      "attack-speed": [
@@ -527,7 +527,7 @@
      ],
      "bruiser": [
       "Golden Blade",
-      "Lernaean Bow",
+      "Toxic Blade",
       "Berserker's Shield",
       "Kinetic Cuirass",
       "Shield of the Phoenix",
@@ -535,64 +535,64 @@
      ],
      "cooldown": [
       "Lernaean Bow",
+      "Toxic Blade",
       "Chandra's Grace",
       "Jotunn's Revenge",
-      "Transcendence",
-      "Hydra's Lament",
-      "Dominance"
+      "Tyrfing",
+      "Hydra's Lament"
      ],
      "core": [
+      "Golden Blade",
       "Lernaean Bow",
-      "Dominance",
+      "Tyrfing",
       "The Reaper",
-      "Tekko-Kagi",
       "Riptalon",
       "Demon Blade"
      ],
      "crit": [
       "Lernaean Bow",
       "Rage",
-      "Dominance",
-      "The Reaper",
+      "Tyrfing",
+      "Riptalon",
       "Demon Blade",
       "Deathbringer"
      ],
      "hybrid": [
+      "Golden Blade",
       "Lernaean Bow",
-      "Dominance",
+      "Tyrfing",
       "The Reaper",
       "Riptalon",
-      "Silverbranch Bow",
-      "Demon Blade"
+      "Silverbranch Bow"
      ],
      "mana-stack": [
       "Lernaean Bow",
       "Jotunn's Revenge",
       "Transcendence",
-      "Hydra's Lament",
+      "Tyrfing",
       "The Reaper",
       "Heartseeker"
      ],
      "model": [
+      "Golden Blade",
       "Lernaean Bow",
-      "Dominance",
+      "Tyrfing",
       "The Reaper",
-      "Tekko-Kagi",
       "Riptalon",
       "Demon Blade"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "Ichor better",
     "verdict_unwithheld": "Ichor better"
    },
    "Conquest": {
     "builds": {
      "anti-tank": [
       "Jotunn's Revenge",
-      "The Reaper",
+      "Tyrfing",
       "Tekko-Kagi",
+      "Riptalon",
       "Silverbranch Bow",
-      "The Crusher",
       "Titan's Bane"
      ],
      "attack-speed": [
@@ -604,16 +604,16 @@
       "Silverbranch Bow"
      ],
      "bruiser": [
-      "Genji's Guard",
       "Berserker's Shield",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "The Reaper",
+      "Silverbranch Bow",
       "Amanita Charm"
      ],
      "cooldown": [
-      "Lernaean Bow",
       "Jotunn's Revenge",
+      "Tyrfing",
       "Hydra's Lament",
       "Arondight",
       "Tekko-Kagi",
@@ -622,41 +622,41 @@
      "core": [
       "Lernaean Bow",
       "Jotunn's Revenge",
-      "Transcendence",
-      "Dominance",
+      "Tyrfing",
       "Tekko-Kagi",
+      "Riptalon",
       "Silverbranch Bow"
      ],
      "crit": [
       "Jotunn's Revenge",
+      "Tyrfing",
       "Musashi's Dual Swords",
-      "Tekko-Kagi",
       "Silverbranch Bow",
       "Demon Blade",
       "Deathbringer"
      ],
      "hybrid": [
+      "Golden Blade",
       "Lernaean Bow",
+      "Tyrfing",
       "Jotunn's Revenge",
-      "Dominance",
-      "The Reaper",
       "Tekko-Kagi",
       "Silverbranch Bow"
      ],
      "mana-stack": [
       "Jotunn's Revenge",
       "Transcendence",
+      "Tyrfing",
       "Hydra's Lament",
-      "Dominance",
       "Tekko-Kagi",
       "Silverbranch Bow"
      ],
      "model": [
+      "Golden Blade",
       "Lernaean Bow",
+      "Tyrfing",
       "Jotunn's Revenge",
-      "Hydra's Lament",
       "Dominance",
-      "The Reaper",
       "Tekko-Kagi"
      ]
     },
@@ -668,10 +668,10 @@
      "anti-tank": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "The Reaper",
       "Tekko-Kagi",
-      "Titan's Bane",
-      "Heartseeker"
+      "Riptalon",
+      "Silverbranch Bow",
+      "Titan's Bane"
      ],
      "attack-speed": [
       "Golden Blade",
@@ -682,40 +682,40 @@
       "Riptalon"
      ],
      "bruiser": [
+      "Golden Blade",
+      "Toxic Blade",
       "Berserker's Shield",
       "Kinetic Cuirass",
-      "Shield of the Phoenix",
-      "Amanita Charm",
-      "Pharaoh's Curse",
-      "Shogun's Ofuda"
+      "Riptalon",
+      "Amanita Charm"
      ],
      "cooldown": [
       "Lernaean Bow",
+      "Toxic Blade",
       "Chandra's Grace",
       "Jotunn's Revenge",
-      "Transcendence",
-      "Hydra's Lament",
-      "Dominance"
+      "Tyrfing",
+      "Hydra's Lament"
      ],
      "core": [
       "Lernaean Bow",
-      "Dominance",
+      "Toxic Blade",
+      "Tyrfing",
       "The Reaper",
-      "Tekko-Kagi",
       "Riptalon",
       "Demon Blade"
      ],
      "crit": [
       "Lernaean Bow",
       "Rage",
-      "Dominance",
-      "The Reaper",
+      "Tyrfing",
+      "Riptalon",
       "Demon Blade",
       "Deathbringer"
      ],
      "hybrid": [
       "Lernaean Bow",
-      "Dominance",
+      "Tyrfing",
       "The Reaper",
       "Riptalon",
       "Silverbranch Bow",
@@ -724,16 +724,16 @@
      "mana-stack": [
       "Jotunn's Revenge",
       "Transcendence",
+      "Tyrfing",
       "Hydra's Lament",
-      "Dominance",
       "The Reaper",
       "Heartseeker"
      ],
      "model": [
       "Lernaean Bow",
-      "Dominance",
+      "Toxic Blade",
+      "Tyrfing",
       "The Reaper",
-      "Tekko-Kagi",
       "Riptalon",
       "Demon Blade"
      ]
@@ -793,6 +793,22 @@
       "Mantle Of Discord",
       "Amanita Charm",
       "Erosion"
+     ],
+     "str-int": [
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Magi's Cloak",
+      "Shield Splitter",
+      "Mantle Of Discord",
+      "Soul Gem"
+     ],
+     "strength": [
+      "Golden Blade",
+      "Toxic Blade",
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "Shield Splitter",
+      "Amanita Charm"
      ]
     },
     "verdict": "not enough simulated",
@@ -847,6 +863,22 @@
       "Freya's Tears",
       "Amanita Charm",
       "Erosion"
+     ],
+     "str-int": [
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Shield Splitter",
+      "Freya's Tears",
+      "Gluttonous Grimoire"
+     ],
+     "strength": [
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Shield Splitter",
+      "Freya's Tears",
+      "Amanita Charm"
      ]
     },
     "verdict": "not enough simulated",
@@ -901,6 +933,22 @@
       "Shifter's Shield",
       "Amanita Charm",
       "Erosion"
+     ],
+     "str-int": [
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Shield Splitter",
+      "Obsidian Shard",
+      "Rod of Tahuti",
+      "Soul Gem"
+     ],
+     "strength": [
+      "Toxic Blade",
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Shield Splitter",
+      "Amanita Charm"
      ]
     },
     "verdict": "not enough simulated",
@@ -928,8 +976,8 @@
       "Amanita Charm"
      ],
      "bruiser": [
-      "Golden Blade",
       "Kinetic Cuirass",
+      "Magi's Cloak",
       "Shield Splitter",
       "Shield of the Phoenix",
       "Runeforged Hammer",
@@ -1185,12 +1233,12 @@
       "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
-      "Riptalon",
+      "The Reaper",
       "Soul Gem"
      ],
      "core @ Aspect of Strife": [
-      "Golden Blade",
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Death Metal",
       "Gluttonous Grimoire",
       "Rod of Tahuti",
@@ -1213,32 +1261,32 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lernaean Bow",
-      "Bancroft's Talon",
-      "Jotunn's Revenge",
-      "Death Metal",
-      "Bragi's Harp",
-      "Rod of Tahuti"
-     ],
-     "mana-stack @ Aspect of Strife": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
       "Death Metal",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
+     ],
+     "mana-stack @ Aspect of Strife": [
+      "Book of Thoth",
+      "Jotunn's Revenge",
+      "Transcendence",
+      "Death Metal",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Lernaean Bow",
       "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
-      "Riptalon",
+      "The Reaper",
       "Soul Gem"
      ],
      "model @ Aspect of Strife": [
-      "Golden Blade",
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Death Metal",
       "Gluttonous Grimoire",
       "Rod of Tahuti",
@@ -1363,34 +1411,34 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
-      "Hydra's Lament",
       "Death Metal",
-      "Rod of Tahuti"
+      "Spear of Desolation",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Transcendence",
       "Death Metal",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Jotunn's Revenge",
       "Death Metal",
-      "Nimble Ring",
+      "Spear of Desolation",
       "Tekko-Kagi",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "model @ Aspect of Strife": [
+      "Book of Thoth",
       "Jotunn's Revenge",
       "Death Metal",
       "Nimble Ring",
-      "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
      ]
@@ -1481,10 +1529,10 @@
       "Soul Gem"
      ],
      "core": [
-      "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
-      "Riptalon",
+      "Bragi's Harp",
+      "The Reaper",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -1513,26 +1561,26 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
       "Jotunn's Revenge",
-      "Tyrfing",
+      "Transcendence",
       "Death Metal",
       "Bragi's Harp",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Toxic Blade",
-      "Bancroft's Talon",
+      "Jotunn's Revenge",
+      "Transcendence",
+      "Death Metal",
+      "Bragi's Harp",
+      "Rod of Tahuti",
+      "Soul Gem"
+     ],
+     "model": [
       "Jotunn's Revenge",
       "Death Metal",
       "Bragi's Harp",
-      "Rod of Tahuti"
-     ],
-     "model": [
-      "Toxic Blade",
-      "Jotunn's Revenge",
-      "Death Metal",
-      "Riptalon",
+      "The Reaper",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -1602,12 +1650,12 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
       "Book of Thoth",
       "Jotunn's Revenge",
       "Shield Splitter",
       "Transcendence",
-      "Rod of Tahuti"
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Jotunn's Revenge",
@@ -1680,16 +1728,16 @@
       "Rod of Tahuti"
      ],
      "model": [
-      "Berserker's Shield",
+      "Book of Thoth",
       "Jotunn's Revenge",
       "Genji's Guard",
-      "Shield Splitter",
+      "Transcendence",
       "Gluttonous Grimoire",
       "Rod of Tahuti"
      ]
     },
-    "verdict": "early-game build",
-    "verdict_unwithheld": "early-game build"
+    "verdict": "trade-off",
+    "verdict_unwithheld": "trade-off"
    },
    "Joust": {
     "builds": {
@@ -1742,12 +1790,12 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Bancroft's Talon",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Hydra's Lament",
-      "Rod of Tahuti"
+      "Transcendence",
+      "Rod of Tahuti",
+      "Soul Gem"
      ],
      "model": [
       "Brawler\u2019s Beat Stick",
@@ -1894,11 +1942,11 @@
      ],
      "model": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Tekko-Kagi",
       "The Crusher",
-      "Titan's Bane",
-      "Heartseeker"
+      "Titan's Bane"
      ]
     },
     "verdict": "not enough simulated",
@@ -2107,15 +2155,15 @@
      ],
      "model": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Tekko-Kagi",
       "The Crusher",
-      "Heartseeker",
       "Titan's Bane"
      ]
     },
     "verdict": "not enough simulated",
-    "verdict_unwithheld": "Ichor better"
+    "verdict_unwithheld": "trade-off"
    },
    "Joust": {
     "builds": {
@@ -2478,11 +2526,11 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Bancroft's Talon",
       "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
+      "Obsidian Shard",
       "Rod of Tahuti"
      ],
      "model": [
@@ -2548,24 +2596,24 @@
       "The World Stone"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Book of Thoth",
+      "Bragi's Harp",
       "Spear of Desolation",
       "The World Stone",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "model": [
+      "Book of Thoth",
       "Nimble Ring",
       "Spear of Desolation",
-      "Doom Orb",
       "Spear of the Magus",
       "Rod of Tahuti",
       "Obsidian Shard"
      ]
     },
-    "verdict": "Ichor better",
-    "verdict_unwithheld": "Ichor better"
+    "verdict": "late-game build",
+    "verdict_unwithheld": "late-game build"
    },
    "Joust": {
     "builds": {
@@ -2618,8 +2666,8 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Bancroft's Talon",
+      "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
       "Obsidian Shard",

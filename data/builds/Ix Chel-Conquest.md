@@ -170,15 +170,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Breastplate of Valor
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Spear of the Magus
   - Dreamer's Idol
   flex_slots:
   - Genji's Guard
-  - Breastplate of Valor
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -200,15 +200,15 @@ builds:
     Screeching Gargoyle, Midgardian Mail, Wish-Granting Pearl, Stone of Binding, Polynomicon,
     Soul Gem.'
   slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.48
+      pick: 0.18
+      fit: 0.24
     Genji's Guard:
       total: 0.52
       efficiency: 0.69
-      win: 0.54
-      pick: 0.0
-      fit: 0.26
-    Breastplate of Valor:
-      total: 0.5
-      efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.26
@@ -237,6 +237,7 @@ builds:
       pick: 0.22
       fit: 0.29
   community_ordered:
+  - Book of Thoth
   - Rod of Tahuti
   - Spear of the Magus
   - Dreamer's Idol

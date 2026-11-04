@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Toxic Blade
   - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -93,23 +93,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.49
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
       total: 0.49
       efficiency: 0.5
@@ -138,7 +138,7 @@ builds:
 - source: suggested
   archetype: crit
   slot_order:
-  - Toxic Blade
+  - Lernaean Bow
   - Rage
   - Tyrfing
   - Riptalon
@@ -158,17 +158,17 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.45
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.55
     Rage:
       total: 0.48
       efficiency: 0.44
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.52
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -369,7 +369,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Tyrfing:
       total: 0.6
       efficiency: 0.5
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.39
     Toxic Blade:
-      total: 0.48
+      total: 0.47
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.49
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
@@ -495,11 +495,11 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Tyrfing:
       total: 0.6
       efficiency: 0.5

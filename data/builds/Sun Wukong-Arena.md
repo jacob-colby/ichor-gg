@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Golden Blade
-  - Lernaean Bow
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Lernaean Bow
-  - Golden Blade
+  - Runeforged Hammer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,23 +26,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.53
-      efficiency: 0.43
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
+      fit: 0.71
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.64
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
   - The Reaper
   - Amanita Charm
   flex_slots:
+  - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     The Reaper:
       total: 0.6
       efficiency: 0.56
@@ -145,8 +145,8 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
+  - Titan's Bane
   - Heartseeker
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.7
     Toxic Blade:
-      total: 0.55
-      efficiency: 0.37
+      total: 0.64
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -288,8 +288,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -334,14 +334,14 @@ builds:
   archetype: model
   slot_order:
   - Golden Blade
-  - Lernaean Bow
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Lernaean Bow
-  - Golden Blade
+  - Runeforged Hammer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -353,23 +353,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.53
-      efficiency: 0.43
+      total: 0.62
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
+      fit: 0.71
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.64
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

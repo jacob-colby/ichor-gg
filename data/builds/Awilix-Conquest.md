@@ -616,14 +616,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - The Reaper
   - Tekko-Kagi
   - The Crusher
-  - Heartseeker
   - Titan's Bane
   flex_slots:
   - Tekko-Kagi
-  - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -650,6 +650,12 @@ builds:
       win: 0.53
       pick: 0.34
       fit: 1.0
+    Transcendence:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 0.52
     The Reaper:
       total: 0.57
       efficiency: 0.51
@@ -668,12 +674,6 @@ builds:
       win: 0.47
       pick: 0.17
       fit: 1.0
-    Heartseeker:
-      total: 0.59
-      efficiency: 0.43
-      win: 0.58
-      pick: 0.57
-      fit: 1.0
     Titan's Bane:
       total: 0.62
       efficiency: 0.54
@@ -684,7 +684,6 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
-  - Heartseeker
   - Titan's Bane
   starter: *id001
 ---

@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
   - Bancroft's Talon
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.6
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
     Bragi's Harp:
       total: 0.58
       efficiency: 0.45
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Doom Orb:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Obsidian Shard:
       total: 0.55
       efficiency: 0.58

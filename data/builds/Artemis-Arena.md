@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Lernaean Bow
-  - Dominance
+  - Tyrfing
   - The Reaper
-  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Dominance
-  - Tekko-Kagi
+  - Golden Blade
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -31,36 +31,36 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
-      total: 0.53
-      efficiency: 0.47
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.7
     The Reaper:
       total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Tekko-Kagi:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.81
     Demon Blade:
       total: 0.58
       efficiency: 0.36
@@ -76,11 +76,11 @@ builds:
   - Lernaean Bow
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
+  - Tyrfing
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Hydra's Lament
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.24
-    Hydra's Lament:
+    Tyrfing:
       total: 0.49
-      efficiency: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.49
     The Reaper:
       total: 0.58
       efficiency: 0.56
@@ -140,8 +140,8 @@ builds:
   slot_order:
   - Lernaean Bow
   - Rage
-  - Dominance
-  - The Reaper
+  - Tyrfing
+  - Riptalon
   - Demon Blade
   - Deathbringer
   flex_slots:
@@ -175,18 +175,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Dominance:
-      total: 0.51
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    The Reaper:
+    Tyrfing:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.66
+    Riptalon:
+      total: 0.63
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Demon Blade:
       total: 0.58
       efficiency: 0.36
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Golden Blade
-  - Lernaean Bow
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Lernaean Bow
-  - Golden Blade
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -223,23 +223,23 @@ builds:
     swap: Mantle Of Discord — physical protection
     swap_item: Mantle Of Discord
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.49
-      efficiency: 0.43
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.56
-    Lernaean Bow:
-      total: 0.51
-      efficiency: 0.51
+      fit: 0.62
+    Toxic Blade:
+      total: 0.56
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.64
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
   - Jotunn's Revenge
-  - The Reaper
   - Tekko-Kagi
+  - Riptalon
+  - Silverbranch Bow
   - Titan's Bane
   flex_slots:
-  - Toxic Blade
-  - Lernaean Bow
+  - Silverbranch Bow
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,36 +293,36 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Toxic Blade:
-      total: 0.54
-      efficiency: 0.34
+      total: 0.64
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.82
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.5
-    The Reaper:
-      total: 0.68
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.8
     Tekko-Kagi:
       total: 0.57
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.58
+    Riptalon:
+      total: 0.7
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.94
+    Silverbranch Bow:
+      total: 0.56
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Titan's Bane:
       total: 0.56
       efficiency: 0.54
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Lernaean Bow
+  - Toxic Blade
   - Chandra's Grace
   - Jotunn's Revenge
-  - Transcendence
+  - Tyrfing
   - Hydra's Lament
-  - Dominance
   flex_slots:
-  - Dominance
-  - Transcendence
+  - Toxic Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -418,8 +418,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -429,6 +429,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Toxic Blade:
+      total: 0.49
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
@@ -441,37 +447,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Transcendence:
-      total: 0.31
-      efficiency: 0.53
+    Tyrfing:
+      total: 0.48
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.09
+      fit: 0.46
     Hydra's Lament:
       total: 0.53
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Dominance:
-      total: 0.43
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
   starter: *id001
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Lernaean Bow
-  - Dominance
+  - Tyrfing
   - The Reaper
-  - Tekko-Kagi
   - Riptalon
   - Demon Blade
   flex_slots:
-  - Dominance
-  - Tekko-Kagi
+  - Golden Blade
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -488,36 +488,36 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
-      total: 0.53
-      efficiency: 0.47
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.7
     The Reaper:
       total: 0.59
       efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.62
-    Tekko-Kagi:
-      total: 0.5
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.81
     Demon Blade:
       total: 0.58
       efficiency: 0.36
@@ -528,14 +528,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Golden Blade
   - Lernaean Bow
-  - Dominance
+  - Tyrfing
   - The Reaper
   - Riptalon
   - Silverbranch Bow
-  - Demon Blade
   flex_slots:
-  - Dominance
+  - Golden Blade
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -553,18 +553,24 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.7
-    Dominance:
-      total: 0.53
-      efficiency: 0.47
+    Tyrfing:
+      total: 0.6
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.7
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -572,28 +578,22 @@ builds:
       pick: 0.0
       fit: 0.62
     Riptalon:
-      total: 0.55
-      efficiency: 0.39
+      total: 0.64
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.81
     Silverbranch Bow:
-      total: 0.38
-      efficiency: 0.41
+      total: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.35
-    Demon Blade:
-      total: 0.58
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
+      fit: 0.45
   swaps:
   - added: Silverbranch Bow
-    removed: Tekko-Kagi
+    removed: Demon Blade
     reason: Conquest community 71% win over 122 matches (vs 56% on this god), taking
-      the model's weakest slot from Tekko-Kagi
+      the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
 ---

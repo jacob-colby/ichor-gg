@@ -173,13 +173,13 @@ builds:
   slot_order:
   - Avenging Blade
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Dominance
   - Riptalon
   - Musashi's Dual Swords
   flex_slots:
   - Dominance
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -212,12 +212,12 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
+    Transcendence:
+      total: 0.45
+      efficiency: 0.53
       win: 0.51
       pick: 0.0
-      fit: 0.42
+      fit: 0.24
     Dominance:
       total: 0.5
       efficiency: 0.47

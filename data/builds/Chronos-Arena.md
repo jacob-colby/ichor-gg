@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Bancroft's Talon
   - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Lotus Sickle
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.48
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Bancroft's Talon:
       total: 0.56
       efficiency: 0.51
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Obsidian Shard:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
@@ -725,14 +725,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
+  - Book of Thoth
   - Bragi's Harp
-  - Ancient Signet
   - Rod of Tahuti
   - Eros' Bow
   - Triton's Conch
   flex_slots:
   - Bancroft's Talon
-  - Ancient Signet
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -755,18 +755,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Bragi's Harp:
       total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Ancient Signet:
-      total: 0.46
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86

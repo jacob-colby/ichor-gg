@@ -90,7 +90,13 @@ Five things that are easy to get wrong here, all expanded in that file:
 smite.model_audit heldout` and paste its table into the PR. A PR may lower
 either held-out metric (win-weighted or Spearman) against `origin/main` by up
 to 1 point (0.01) if its description says why; a bigger drop blocks the merge
-(Jacob, 2026-11-03). The command prints PASS, PASS IF EXPLAINED or FAIL. If `test_model_audit` says the frozen reference builds
+(Jacob, 2026-11-03). The command prints PASS, PASS IF EXPLAINED or FAIL.
+**It scores Conquest's base-kit `core` only** — Joust and Arena have no
+community outcome data, and no model, hybrid, flavor or aspect build is
+assembled — so a PR that moves only those reads +0.0000 by construction. The
+command says NOT SCORED / PARTLY SCORED when that happens; **for those modes
+and builds the frozen reference builds are the guard**, and every changed
+reference line needs its reason in the PR. If `test_model_audit` says the frozen reference builds
 moved, run `python -m smite.model_audit reference --write` and explain every
 changed line in the PR. Both are in [`docs/STATE.md` §6](docs/STATE.md).
 

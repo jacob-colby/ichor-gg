@@ -172,14 +172,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
   flex_slots:
   - Lotus Sickle
-  - The World Stone
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -206,18 +206,18 @@ builds:
       win: 0.53
       pick: 0.0
       fit: 0.53
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.27
+      fit: 0.39
     Spear of Desolation:
       total: 0.55
       efficiency: 0.59
       win: 0.53
       pick: 0.3
       fit: 0.61
-    The World Stone:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.51
-      pick: 0.35
-      fit: 0.57
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
@@ -237,8 +237,8 @@ builds:
       pick: 0.27
       fit: 0.57
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
@@ -645,11 +645,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane,
-    Tyrfing, Hydra''s Lament, Death Metal, Bragi''s Harp, The Crusher, Spear of the
+    Hydra''s Lament, Tyrfing, Death Metal, Bragi''s Harp, The Crusher, Spear of the
     Magus, Heartseeker, Lernaean Bow, The Reaper, Nimble Ring, Gluttonous Grimoire,
     Arondight, Doom Orb, Silverbranch Bow, Golden Blade, Lotus Sickle, Ancient Signet,
     Dominance, Pendulum Blade, Avatar''s Parashu, Bracer of The Abyss, Transcendence,
-    Toxic Blade, Runeforged Hammer, Gem of Focus, The Cosmic Horror, Eros'' Bow, Heartwood
+    Runeforged Hammer, Toxic Blade, Gem of Focus, The Cosmic Horror, Eros'' Bow, Heartwood
     Charm, Blood-Bound Book, Polynomicon, Avenging Blade, Triton''s Conch.'
   slot_scores:
     Jotunn's Revenge:
@@ -726,7 +726,7 @@ builds:
     Bragi''s Harp, Pendulum Blade, The Cosmic Horror, Tyrfing, Gem of Focus, Heartwood
     Charm, Avatar''s Parashu, Blood-Bound Book, Polynomicon, Transcendence, Runeforged
     Hammer, Triton''s Conch, Soul Reaver, Totem of Death, Avenging Blade, Jade Scepter,
-    Shield Splitter, Eye of the Storm, Golden Blade, Divine Ruin.'
+    Shield Splitter, Eye of the Storm, Bancroft''s Talon, Divine Ruin.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58

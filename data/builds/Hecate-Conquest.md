@@ -172,13 +172,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Spear of Desolation
-  - Chronos' Pendant
+  - Book of Thoth
   - The World Stone
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Lotus Sickle
-  - Chronos' Pendant
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -211,12 +211,12 @@ builds:
       win: 0.59
       pick: 0.52
       fit: 0.61
-    Chronos' Pendant:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.62
-      pick: 0.15
-      fit: 0.43
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.54
+      pick: 0.23
+      fit: 0.39
     The World Stone:
       total: 0.56
       efficiency: 0.52
@@ -237,7 +237,7 @@ builds:
       fit: 0.71
   community_ordered:
   - Spear of Desolation
-  - Chronos' Pendant
+  - Book of Thoth
   - The World Stone
   - Rod of Tahuti
   - Soul Gem

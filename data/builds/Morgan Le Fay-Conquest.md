@@ -172,7 +172,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
@@ -180,7 +180,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -201,12 +201,12 @@ builds:
     of Thoth, Bancroft''s Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade
     Scepter, Helm of Radiance, Wish-Granting Pearl, Genji''s Guard.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
       win: 0.51
       pick: 0.0
-      fit: 0.53
+      fit: 0.39
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
@@ -932,7 +932,7 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
@@ -940,7 +940,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -961,12 +961,12 @@ builds:
     Pearl, Soul Locket, Bancroft''s Talon, Heartwood Charm, Sphere of Negation, Polynomicon,
     Phoenix Feather, Dreamer''s Idol, Chronos'' Pendant, The World Stone.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.49
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.45
+      efficiency: 0.49
       win: 0.51
       pick: 0.0
-      fit: 0.41
+      fit: 0.3
     Spear of Desolation:
       total: 0.52
       efficiency: 0.59

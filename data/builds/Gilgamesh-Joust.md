@@ -13,8 +13,8 @@ builds:
   - Tyrfing
   - Amanita Charm
   flex_slots:
-  - Tyrfing
   - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,17 +32,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Toxic Blade:
-      total: 0.59
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 0.34
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.51
     Amanita Charm:
       total: 0.61
       efficiency: 0.65
@@ -76,12 +76,12 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Heartseeker
   - Amanita Charm
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Berserker's Shield:
       total: 0.5
       efficiency: 0.74
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Hydra's Lament:
-      total: 0.47
-      efficiency: 0.56
+    Transcendence:
+      total: 0.37
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.21
     Heartseeker:
       total: 0.47
       efficiency: 0.43
@@ -145,8 +145,8 @@ builds:
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Kinetic Cuirass
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -164,17 +164,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.51
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.63
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.74
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.55
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
@@ -405,8 +405,8 @@ builds:
   - Tyrfing
   - Amanita Charm
   flex_slots:
-  - Tyrfing
   - Jotunn's Revenge
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,17 +424,17 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Toxic Blade:
-      total: 0.59
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -448,11 +448,11 @@ builds:
       pick: 0.0
       fit: 0.34
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.51
     Amanita Charm:
       total: 0.61
       efficiency: 0.65

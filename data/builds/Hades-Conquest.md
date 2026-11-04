@@ -614,169 +614,17 @@ builds:
   - Obsidian Shard
   starter: *id001
 - source: suggested
-  archetype: strength
-  slot_order:
-  - Book of Thoth
-  - Berserker's Shield
-  - Jotunn's Revenge
-  - Transcendence
-  - Rod of Tahuti
-  - Gluttonous Grimoire
-  flex_slots:
-  - Book of Thoth
-  - Transcendence
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Jotunn''s Revenge, Berserker''s Shield, Gluttonous
-    Grimoire, Soul Gem, Nimble Ring, Amanita Charm, Genji''s Guard, The Reaper, Shield
-    Splitter, Tekko-Kagi, Runeforged Hammer, Titan''s Bane, Golden Blade, Hydra''s
-    Lament, Kinetic Cuirass, Tyrfing, Spear of the Magus, Death Metal, Helm of Radiance,
-    Breastplate of Valor, The Crusher, Blood-Bound Book, Bragi''s Harp, Lernaean Bow,
-    Heartseeker, Eros'' Bow, Avenging Blade, Freya''s Tears, Ancient Signet, Lotus
-    Sickle, Arondight, Doom Orb, Toxic Blade, Jade Scepter, Silverbranch Bow, Oni
-    Hunter''s Garb, Helm of Darkness, Chronos'' Pendant.'
-  slot_scores:
-    Book of Thoth:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.68
-      pick: 0.12
-      fit: 0.15
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.74
-      win: 0.55
-      pick: 0.0
-      fit: 0.26
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.67
-      win: 0.55
-      pick: 0.0
-      fit: 0.44
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.0
-      fit: 0.22
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
-      win: 0.58
-      pick: 0.33
-      fit: 0.3
-    Gluttonous Grimoire:
-      total: 0.54
-      efficiency: 0.59
-      win: 0.55
-      pick: 0.0
-      fit: 0.57
-  community_ordered:
-  - Book of Thoth
-  - Rod of Tahuti
-  starter: *id001
-- source: suggested
-  archetype: str-int
-  slot_order:
-  - Book of Thoth
-  - Jotunn's Revenge
-  - Transcendence
-  - Gluttonous Grimoire
-  - Rod of Tahuti
-  - Obsidian Shard
-  flex_slots:
-  - Book of Thoth
-  - Transcendence
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
-    + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Jotunn''s Revenge,
-    Soul Gem, Amanita Charm, Genji''s Guard, The Reaper, Berserker''s Shield, Shield
-    Splitter, Runeforged Hammer, Titan''s Bane, Spear of the Magus, Kinetic Cuirass,
-    Hydra''s Lament, Helm of Radiance, Death Metal, Blood-Bound Book, Breastplate
-    of Valor, The Crusher, Ancient Signet, Lotus Sickle, Doom Orb, Freya''s Tears,
-    Jade Scepter, Helm of Darkness, Heartseeker, Avenging Blade, Oni Hunter''s Garb,
-    Dreamer''s Idol, Arondight, Triton''s Conch, Ethereal Staff, Shield of the Phoenix,
-    Midgardian Mail, Tekko-Kagi, Screeching Gargoyle, Wish-Granting Pearl, Bancroft''s
-    Talon, Chronos'' Pendant.'
-  slot_scores:
-    Book of Thoth:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.68
-      pick: 0.12
-      fit: 0.2
-    Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.67
-      win: 0.55
-      pick: 0.0
-      fit: 0.44
-    Transcendence:
-      total: 0.46
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.0
-      fit: 0.2
-    Gluttonous Grimoire:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.55
-      pick: 0.0
-      fit: 0.66
-    Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
-      win: 0.58
-      pick: 0.33
-      fit: 0.36
-    Obsidian Shard:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.59
-      pick: 0.19
-      fit: 0.46
-  community_ordered:
-  - Book of Thoth
-  - Rod of Tahuti
-  - Obsidian Shard
-  starter: *id001
-- source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Kinetic Cuirass
   - Spear of Desolation
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -785,8 +633,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -798,18 +646,18 @@ builds:
     Garb, Shield of the Phoenix, Ethereal Staff, Erosion, Midgardian Mail, Eye of
     Providence, Wish-Granting Pearl, Bancroft''s Talon, Screeching Gargoyle.'
   slot_scores:
+    Book of Thoth:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.68
+      pick: 0.12
+      fit: 0.22
     Genji's Guard:
       total: 0.52
       efficiency: 0.69
       win: 0.55
       pick: 0.0
       fit: 0.22
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.55
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.51
       efficiency: 0.59
@@ -835,6 +683,7 @@ builds:
       pick: 0.19
       fit: 0.52
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard

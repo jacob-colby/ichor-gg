@@ -76,11 +76,11 @@ builds:
   - Lernaean Bow
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
+  - Tyrfing
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Hydra's Lament
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,12 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.24
-    Hydra's Lament:
+    Tyrfing:
       total: 0.49
-      efficiency: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.49
     The Reaper:
       total: 0.58
       efficiency: 0.56

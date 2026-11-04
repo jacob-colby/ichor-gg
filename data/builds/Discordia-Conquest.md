@@ -172,13 +172,13 @@ builds:
   slot_order:
   - Lotus Sickle
   - Spear of Desolation
-  - Doom Orb
+  - Book of Thoth
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem
   flex_slots:
   - Lotus Sickle
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -211,12 +211,12 @@ builds:
       win: 0.53
       pick: 0.49
       fit: 0.61
-    Doom Orb:
-      total: 0.51
-      efficiency: 0.53
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
       win: 0.53
-      pick: 0.0
-      fit: 0.57
+      pick: 0.13
+      fit: 0.39
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
@@ -237,6 +237,7 @@ builds:
       fit: 0.71
   community_ordered:
   - Spear of Desolation
+  - Book of Thoth
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem
@@ -611,159 +612,6 @@ builds:
   community_ordered:
   - Spear of Desolation
   - Chronos' Pendant
-  - Rod of Tahuti
-  - Spear of the Magus
-  - Soul Gem
-  starter: *id001
-- source: suggested
-  archetype: strength
-  slot_order:
-  - Jotunn's Revenge
-  - Transcendence
-  - Spear of Desolation
-  - Nimble Ring
-  - Rod of Tahuti
-  - Spear of the Magus
-  flex_slots:
-  - Nimble Ring
-  - Transcendence
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane,
-    Tyrfing, Hydra''s Lament, Death Metal, Bragi''s Harp, The Crusher, Heartseeker,
-    Lernaean Bow, The Reaper, Nimble Ring, Gluttonous Grimoire, Silverbranch Bow,
-    Golden Blade, Arondight, Doom Orb, Lotus Sickle, The World Stone, Ancient Signet,
-    Dominance, Dreamer''s Idol, Pendulum Blade, Avatar''s Parashu, Bracer of The Abyss,
-    Transcendence, Toxic Blade, Runeforged Hammer, Gem of Focus, The Cosmic Horror,
-    Eros'' Bow, Heartwood Charm, Blood-Bound Book, Polynomicon, Avenging Blade, Riptalon.'
-  slot_scores:
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.67
-      win: 0.53
-      pick: 0.0
-      fit: 0.65
-    Transcendence:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.53
-      pick: 0.0
-      fit: 0.32
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.53
-      pick: 0.49
-      fit: 0.55
-    Nimble Ring:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.53
-      pick: 0.0
-      fit: 0.35
-    Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.48
-      fit: 0.44
-    Spear of the Magus:
-      total: 0.61
-      efficiency: 0.58
-      win: 0.75
-      pick: 0.18
-      fit: 0.44
-  community_ordered:
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Spear of the Magus
-  starter: *id001
-- source: suggested
-  archetype: str-int
-  slot_order:
-  - Book of Thoth
-  - Spear of Desolation
-  - Jotunn's Revenge
-  - Rod of Tahuti
-  - Spear of the Magus
-  - Soul Gem
-  flex_slots:
-  - Soul Gem
-  - Book of Thoth
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
-    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Titan''s Bane,
-    Death Metal, Hydra''s Lament, Gluttonous Grimoire, The Crusher, Doom Orb, The
-    World Stone, Heartseeker, Lotus Sickle, The Reaper, Dreamer''s Idol, Ancient Signet,
-    Arondight, Tekko-Kagi, Bragi''s Harp, Pendulum Blade, Tyrfing, The Cosmic Horror,
-    Gem of Focus, Heartwood Charm, Avatar''s Parashu, Blood-Bound Book, Polynomicon,
-    Transcendence, Runeforged Hammer, Book of Thoth, Triton''s Conch, Soul Reaver,
-    Totem of Death, Avenging Blade, Jade Scepter, Shield Splitter, Golden Blade, Eye
-    of the Storm.'
-  slot_scores:
-    Book of Thoth:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.53
-      pick: 0.13
-      fit: 0.31
-    Spear of Desolation:
-      total: 0.57
-      efficiency: 0.59
-      win: 0.53
-      pick: 0.49
-      fit: 0.69
-    Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.67
-      win: 0.53
-      pick: 0.0
-      fit: 0.69
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.48
-      fit: 0.56
-    Spear of the Magus:
-      total: 0.63
-      efficiency: 0.58
-      win: 0.75
-      pick: 0.18
-      fit: 0.56
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.58
-      pick: 0.18
-      fit: 0.79
-  community_ordered:
-  - Book of Thoth
-  - Spear of Desolation
   - Rod of Tahuti
   - Spear of the Magus
   - Soul Gem

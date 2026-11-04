@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Brawler’s Beat Stick
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
+  - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Erosion
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -26,17 +26,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.51
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
@@ -55,6 +49,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Freya's Tears:
+      total: 0.5
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Amanita Charm:
       total: 0.7
       efficiency: 0.65
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Bancroft's Talon
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
-  - Hydra's Lament
+  - Transcendence
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Bancroft's Talon:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -122,18 +116,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.23
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Soul Gem:
+      total: 0.69
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
   starter: *id001
 - source: suggested
   archetype: burst
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.5
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Brawler’s Beat Stick
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
+  - Freya's Tears
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Erosion
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -613,17 +613,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.51
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
@@ -642,6 +636,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Freya's Tears:
+      total: 0.5
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Amanita Charm:
       total: 0.7
       efficiency: 0.65

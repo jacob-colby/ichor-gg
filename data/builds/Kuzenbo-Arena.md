@@ -359,17 +359,17 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.59
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.63
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74

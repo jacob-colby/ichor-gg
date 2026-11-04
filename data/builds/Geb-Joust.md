@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.56
@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
-  - Genji's Guard
+  - Book of Thoth
   - Kinetic Cuirass
   - Bragi's Harp
   - Rod of Tahuti
   - Eros' Bow
   flex_slots:
   - Eros' Bow
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Genji's Guard:
-      total: 0.46
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.35
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.23
+      fit: 0.2
     Kinetic Cuirass:
       total: 0.48
       efficiency: 0.56
@@ -294,11 +294,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.48
+      total: 0.47
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.46
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.56
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -499,7 +499,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Berserker's Shield:
       total: 0.55
       efficiency: 0.74
@@ -554,11 +554,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Stygian Anchor:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.56

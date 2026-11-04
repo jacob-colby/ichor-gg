@@ -36,7 +36,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.58
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.56
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.47
+      total: 0.46
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
@@ -340,7 +340,7 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
+  - Toxic Blade
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -359,11 +359,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.58
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -424,11 +424,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.54
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.58
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.56

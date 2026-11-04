@@ -75,13 +75,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -99,29 +99,29 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.38
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Tyrfing:
       total: 0.51
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Hydra's Lament:
-      total: 0.49
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     The Reaper:
       total: 0.58
       efficiency: 0.56
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Golden Blade
-  - Toxic Blade
   - Phoenix Feather
   - Berserker's Shield
   - Kinetic Cuirass
+  - Tyrfing
   - Amanita Charm
   flex_slots:
   - Phoenix Feather
-  - Toxic Blade
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -223,8 +223,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -234,12 +234,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.39
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Phoenix Feather:
       total: 0.53
       efficiency: 0.48
@@ -258,6 +252,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Amanita Charm:
       total: 0.69
       efficiency: 0.65
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.87
     Tyrfing:
       total: 0.54
       efficiency: 0.5
@@ -489,11 +489,11 @@ builds:
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -535,7 +535,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Toxic Blade
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -554,11 +554,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Tyrfing:
       total: 0.55
       efficiency: 0.5

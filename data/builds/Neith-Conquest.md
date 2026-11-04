@@ -171,14 +171,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Death Metal
   - Nimble Ring
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Nimble Ring
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -207,12 +207,12 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.44
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.56
+    Transcendence:
+      total: 0.48
+      efficiency: 0.53
       win: 0.58
       pick: 0.0
-      fit: 0.42
+      fit: 0.24
     Death Metal:
       total: 0.56
       efficiency: 0.63
@@ -847,13 +847,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Death Metal
-  - Nimble Ring
+  - Spear of Desolation
   - Tekko-Kagi
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - Tekko-Kagi
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -888,12 +888,12 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.49
-    Nimble Ring:
+    Spear of Desolation:
       total: 0.55
-      efficiency: 0.63
-      win: 0.58
-      pick: 0.0
-      fit: 0.44
+      efficiency: 0.59
+      win: 0.61
+      pick: 0.22
+      fit: 0.38
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.55
@@ -913,6 +913,7 @@ builds:
       pick: 0.0
       fit: 0.56
   community_ordered:
+  - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
 ---

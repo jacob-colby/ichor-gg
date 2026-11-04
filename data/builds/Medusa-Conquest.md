@@ -171,14 +171,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
-  - Hydra's Lament
   - Death Metal
   - Silverbranch Bow
   - Rod of Tahuti
   flex_slots:
   - Tyrfing
-  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -197,8 +197,8 @@ builds:
     Obsidian Shard, Tekko-Kagi, Gluttonous Grimoire, Hydra''s Lament, The Reaper,
     Bragi''s Harp, Lotus Sickle, Ancient Signet, Titan''s Bane, Spear of the Magus,
     Lernaean Bow, Blood-Bound Book, Doom Orb, The World Stone, Heartseeker, Chronos''
-    Pendant, Bracer of The Abyss, The Crusher, Arondight, Polynomicon, Golden Blade,
-    Bancroft''s Talon, Heartwood Charm, Eros'' Bow, Dreamer''s Idol, Deathbringer,
+    Pendant, Bracer of The Abyss, The Crusher, Arondight, Polynomicon, Bancroft''s
+    Talon, Golden Blade, Heartwood Charm, Eros'' Bow, Dreamer''s Idol, Deathbringer,
     Gem of Focus, Musashi''s Dual Swords, Transcendence, Soul Reaver, Book of Thoth,
     Toxic Blade.'
   slot_scores:
@@ -208,18 +208,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.44
+    Transcendence:
+      total: 0.46
+      efficiency: 0.53
+      win: 0.51
+      pick: 0.09
+      fit: 0.24
     Tyrfing:
       total: 0.53
       efficiency: 0.5
       win: 0.6
       pick: 0.18
       fit: 0.49
-    Hydra's Lament:
-      total: 0.5
-      efficiency: 0.56
-      win: 0.54
-      pick: 0.0
-      fit: 0.42
     Death Metal:
       total: 0.54
       efficiency: 0.63
@@ -231,7 +231,7 @@ builds:
       efficiency: 0.52
       win: 0.65
       pick: 0.22
-      fit: 0.33
+      fit: 0.32
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
@@ -239,6 +239,7 @@ builds:
       pick: 0.0
       fit: 0.35
   community_ordered:
+  - Transcendence
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
@@ -362,7 +363,7 @@ builds:
       efficiency: 0.5
       win: 0.6
       pick: 0.18
-      fit: 0.46
+      fit: 0.45
     Death Metal:
       total: 0.53
       efficiency: 0.63
@@ -420,7 +421,7 @@ builds:
     this god: Rod of Tahuti, Amanita Charm, Berserker''s Shield, Soul Gem, The Reaper,
     Jotunn''s Revenge, Shield of the Phoenix, Gluttonous Grimoire, Blood-Bound Book,
     Death Metal, Genji''s Guard, Nimble Ring, Kinetic Cuirass, Yogi''s Necklace, Shield
-    Splitter, Golden Blade, Tekko-Kagi, Phoenix Feather, Ethereal Staff, Runeforged
+    Splitter, Tekko-Kagi, Golden Blade, Phoenix Feather, Ethereal Staff, Runeforged
     Hammer, Breastplate of Valor, Freya''s Tears, Bloodforge, Obsidian Shard, Bancroft''s
     Talon, Spear of Desolation, Chandra''s Grace, Hydra''s Lament, Oni Hunter''s Garb,
     Titan''s Bane, Pharaoh''s Curse, Lernaean Bow, Toxic Blade, Eros'' Bow, Helm of

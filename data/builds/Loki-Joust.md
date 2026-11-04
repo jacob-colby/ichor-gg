@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - The Reaper
+  - Pendulum Blade
   - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -37,15 +37,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Tyrfing:
-      total: 0.71
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.97
     The Reaper:
       total: 0.76
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -223,17 +223,11 @@ builds:
     swap: Erosion — physical protection
     swap_item: Erosion
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.57
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.74
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -258,6 +252,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Runeforged Hammer:
+      total: 0.55
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.67
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.87
     Tyrfing:
       total: 0.64
       efficiency: 0.5
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - The Reaper
+  - Pendulum Blade
   - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -494,15 +494,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Tyrfing:
-      total: 0.71
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.97
     The Reaper:
       total: 0.76
       efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Pendulum Blade:
+      total: 0.71
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -591,9 +591,9 @@ builds:
       fit: 0.91
   swaps:
   - added: Avatar's Parashu
-    removed: Tyrfing
+    removed: Pendulum Blade
     reason: Conquest community 69% win over 168 matches (vs 57% on this god), taking
-      the model's weakest slot from Tyrfing
+      the model's weakest slot from Pendulum Blade
   borrowed_from: Conquest
   starter: *id001
 ---

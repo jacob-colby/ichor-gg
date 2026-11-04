@@ -210,8 +210,8 @@ builds:
   - Eros' Bow
   - Amanita Charm
   flex_slots:
-  - Eros' Bow
   - Bragi's Harp
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.46
+      total: 0.45
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.43
+      fit: 0.42
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
@@ -333,22 +333,22 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Berserker's Shield
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   flex_slots:
   - Shield Splitter
-  - Golden Blade
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,18 +358,12 @@ builds:
   rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Joust
     — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Toxic Blade:
-      total: 0.56
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.6
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -382,6 +376,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Kinetic Cuirass:
+      total: 0.51
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Shield Splitter:
       total: 0.53
       efficiency: 0.59

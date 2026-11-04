@@ -44,11 +44,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -105,11 +105,11 @@ builds:
       pick: 0.0
       fit: 0.51
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.56
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -174,7 +174,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -239,7 +239,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -371,11 +371,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

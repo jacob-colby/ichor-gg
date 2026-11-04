@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
   - Shield Splitter
-  - Toxic Blade
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -223,17 +223,11 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -258,6 +252,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Runeforged Hammer:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Amanita Charm:
       total: 0.75
       efficiency: 0.65
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.64
     Toxic Blade:
-      total: 0.65
+      total: 0.64
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.82
     Tyrfing:
       total: 0.62
       efficiency: 0.5

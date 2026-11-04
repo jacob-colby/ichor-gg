@@ -6,37 +6,43 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Avenging Blade
+  - Golden Blade
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shield Splitter
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
-  - Avenging Blade
+  - Runeforged Hammer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.5
-      efficiency: 0.49
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.61
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -49,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Shield Splitter:
-      total: 0.52
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Runeforged Hammer:
       total: 0.54
       efficiency: 0.56
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield Splitter
-  - Runeforged Hammer
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Shield Splitter
-  - Runeforged Hammer
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -93,11 +93,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.54
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -116,12 +122,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Amanita Charm:
       total: 0.73
       efficiency: 0.65
@@ -139,14 +139,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
+  - Toxic Blade
   - Jotunn's Revenge
-  - Void Stone
   - Titan's Bane
   - Heartseeker
   - Soul Gem
   flex_slots:
+  - Titan's Bane
   - Heartseeker
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -158,8 +158,8 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -169,18 +169,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Void Stone:
-      total: 0.55
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Titan's Bane:
       total: 0.56
       efficiency: 0.54
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Toxic Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.75
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -288,8 +288,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -333,37 +333,43 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Avenging Blade
+  - Golden Blade
+  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shield Splitter
   - Runeforged Hammer
   - Amanita Charm
   flex_slots:
-  - Shield Splitter
-  - Avenging Blade
+  - Runeforged Hammer
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Avenging Blade:
-      total: 0.5
-      efficiency: 0.49
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.61
+    Toxic Blade:
+      total: 0.54
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -376,12 +382,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Shield Splitter:
-      total: 0.52
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Runeforged Hammer:
       total: 0.54
       efficiency: 0.56

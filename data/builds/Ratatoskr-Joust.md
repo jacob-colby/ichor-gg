@@ -359,11 +359,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.87
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.76

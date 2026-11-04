@@ -173,21 +173,21 @@ builds:
   - Breastplate of Valor
   - Genji's Guard
   - Kinetic Cuirass
+  - Transcendence
   - Freya's Tears
-  - Amanita Charm
   flex_slots:
   - Breastplate of Valor
-  - Amanita Charm
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -222,23 +222,24 @@ builds:
       win: 0.7
       pick: 0.15
       fit: 0.44
+    Transcendence:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.64
+      pick: 0.19
+      fit: 0.23
     Freya's Tears:
       total: 0.58
       efficiency: 0.58
       win: 0.7
       pick: 0.2
       fit: 0.33
-    Amanita Charm:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.64
-      pick: 0.0
-      fit: 0.34
   community_ordered:
   - Jotunn's Revenge
   - Breastplate of Valor
   - Genji's Guard
   - Kinetic Cuirass
+  - Transcendence
   - Freya's Tears
   starter: *id001
 - source: suggested

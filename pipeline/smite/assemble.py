@@ -271,6 +271,8 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
     pre-sorted by -total (score_god_items already does). When `require`
     {stat, min} is given, the core is seeded with the top-scored items carrying
     that stat (up to `min`, honoring the same rules) before filling by score.
+    `require.any_item` [names] seeds the top-scored ONE of those items first,
+    and it counts toward `min` if it carries `stat`.
 
     `stat_caps` {stat: cap} refuses an item whose only contribution is a stat
     the core has already capped out. Keys carry the same unit-aware identity as
@@ -387,9 +389,25 @@ def assemble_core(rows, items_by_name, n=6, max_lifesteal=1, require=None,
         used.add(name)
         return True
 
-    if require:
+    if require and require.get("any_item"):
+        # The flavor's DEFINING item: a mana-stack build is a converter plus the
+        # mana it converts, and without one it is a pile of mana that turns
+        # into nothing. `scoring.eligible_flavors`' `requires_item` only gates
+        # the god's POOL, so until 2026-11-04 111 of 219 mana-stack builds
+        # shipped holding neither Transcendence nor Book of Thoth (STATE.md §5
+        # recorded 109 before this PR's other two changes)
+        # — the gold model under-prices stacking items, so the converter lost
+        # on score. Seed the best-ranked one the god can buy, first.
+        wanted = set(require["any_item"])
+        for r in rows:
+            if r["item"] in wanted and _try_add(r["item"]):
+                break
+
+    if require and require.get("stat"):
         stat, need = require.get("stat"), require.get("min", 0)
-        seeded = 0
+        # An item already seeded above counts toward the stat's minimum.
+        seeded = sum(1 for name in core
+                     if stat in (items_by_name.get(name, {}).get("stats") or {}))
         for r in rows:
             if seeded >= need:
                 break
@@ -681,6 +699,26 @@ def conversion_args(weights, eff_scores, gold_values, *, signals):
         "span": span,
         "weight": float(signals["efficiency"]),
     }}
+
+
+def quality_signals(signals):
+    """The signal weights `quality` actually applies, for the `model` path.
+
+    `scoring.signal_score` computes `quality` as (eff·e + fit·f)/(eff + fit),
+    so efficiency enters the model's ranking at eff/(eff + fit), not at eff.
+    `conversion_args` and `overflow_args` add an adjustment ON THE EFFICIENCY
+    SCALE, so the model path must hand them THIS, or the adjustment enters at
+    the wrong scale against everything it competes with.
+
+    In Joust and Arena eff + fit = 1.0 and this is the identity. In Conquest
+    (0.35 / 0.15) efficiency enters `quality` at 0.70, and until 2026-11-04 the
+    model build's conversion bonus and cap-overflow charge were weighted 0.35:
+    half. The same leak PR #97 fixed for Joust and Arena (`signals=` on those
+    two helpers), one archetype over — STATE.md §5."""
+    eff, fit = float(signals["efficiency"]), float(signals["fit"])
+    total = (eff + fit) or 1.0
+    return {**signals, "efficiency": eff / total, "fit": fit / total,
+            "win": 0.0, "pick": 0.0}
 
 
 def overflow_args(weights, eff_scores, gold_values, *, signals):

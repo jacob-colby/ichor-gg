@@ -6,14 +6,14 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Runeforged Hammer
   - The Reaper
+  - Titan's Bane
   flex_slots:
-  - Golden Blade
+  - Shield Splitter
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -67,6 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Titan's Bane:
+      total: 0.54
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -145,7 +145,7 @@ builds:
   - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Heartseeker
+  - Toxic Blade
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -168,7 +168,7 @@ builds:
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
@@ -304,7 +304,7 @@ builds:
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.77
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -463,14 +463,14 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Runeforged Hammer
   - The Reaper
+  - Titan's Bane
   flex_slots:
-  - Golden Blade
+  - Shield Splitter
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -488,12 +488,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.53
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.62
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -524,5 +518,11 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.82
+    Titan's Bane:
+      total: 0.54
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
   starter: *id001
 ---

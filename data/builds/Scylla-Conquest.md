@@ -170,15 +170,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Book of Thoth
   - Spear of Desolation
-  - Polynomicon
   - Doom Orb
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Doom Orb
-  - Polynomicon
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -199,18 +199,18 @@ builds:
     Bancroft''s Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade Scepter,
     Genji''s Guard, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.52
+      pick: 0.29
+      fit: 0.39
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
       win: 0.54
       pick: 0.41
       fit: 0.61
-    Polynomicon:
-      total: 0.53
-      efficiency: 0.5
-      win: 0.57
-      pick: 0.44
-      fit: 0.49
     Doom Orb:
       total: 0.53
       efficiency: 0.53
@@ -236,8 +236,8 @@ builds:
       pick: 0.0
       fit: 0.71
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
-  - Polynomicon
   - Doom Orb
   - Rod of Tahuti
   - Obsidian Shard

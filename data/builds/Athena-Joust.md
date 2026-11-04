@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.56
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56
@@ -176,11 +176,11 @@ builds:
       pick: 0.0
       fit: 0.72
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.73
     Void Shield:
       total: 0.59
       efficiency: 0.46
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -470,8 +470,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -489,11 +489,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.56
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56

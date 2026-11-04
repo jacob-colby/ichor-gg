@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.48
+    Golden Blade:
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.48
     Berserker's Shield:
       total: 0.55
       efficiency: 0.74
@@ -109,7 +109,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -182,11 +182,11 @@ builds:
       pick: 0.0
       fit: 0.64
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.52
     Toxic Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Toxic Blade
+  - Golden Blade
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -353,17 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.51
-      efficiency: 0.48
+    Golden Blade:
+      total: 0.5
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.48
     Berserker's Shield:
       total: 0.55
       efficiency: 0.74

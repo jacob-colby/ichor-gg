@@ -240,11 +240,14 @@ def test_adding_an_item_never_lowers_a_stat_it_grants(frozen, ibn, snapshot):
 #:   * Bellona sustained_*: Berserker's Shield reads the fight's health bar, so
 #:     Hussar's Wings' 500 health keeps her above its threshold longer.
 #: A NEW entry fails the test; one that stops occurring is reported stale.
+#: Fenrir's `model` pair stopped occurring on 2026-11-04 because the build
+#: changed, not because the cause was fixed: the Conquest model now prices its
+#: conversion bonus at `quality`'s scale and takes Transcendence over
+#: Heartseeker, and that six's 4 -> 6 step no longer trades fight EHP away.
 KNOWN_POWER_DROPS = {
     ("Zeus", "core", "ehp_physical"), ("Zeus", "core", "ehp_magical"),
     ("Zeus", "model", "ehp_physical"), ("Zeus", "model", "ehp_magical"),
     ("Bellona", "core", "sustained_squishy"), ("Bellona", "core", "sustained_tank"),
-    ("Fenrir", "model", "ehp_physical"), ("Fenrir", "model", "ehp_magical"),
     ("Thanatos", "core", "ehp_physical"), ("Thanatos", "core", "ehp_magical"),
     ("Thanatos", "model", "ehp_physical"), ("Thanatos", "model", "ehp_magical"),
 }
@@ -359,3 +362,106 @@ def test_the_mode_rules_do_change_builds(snapshot):
     moved = sum(snapshot[g]["Conquest"]["builds"]["core"] != snapshot[g]["Joust"]["builds"]["core"]
                 for g in snapshot)
     assert moved >= 3
+
+
+def test_the_conquest_model_build_prices_adjustments_at_qualitys_scale(frozen, weights, tags_map,
+                                                                        monkeypatch):
+    """`model` ranks by `quality` = (eff·e + fit·f)/(eff + fit), so efficiency
+    enters it at eff/(eff + fit) — 0.70 in Conquest — and the conversion bonus
+    and cap-overflow charge, both on the efficiency scale, must enter at that
+    weight too. Until 2026-11-04 both were weighted at the blended total's 0.35
+    in Conquest: half (STATE.md §5, the PR #97 leak one archetype over). In
+    Joust and Arena eff + fit = 1.0, so the two scales agree."""
+    from smite import assemble
+    seen = []
+    real = assemble.assemble_core_converged
+
+    def spy(rows, items_by_name, **kw):
+        if kw.get("score_key") == "quality":
+            seen.append(kw)
+        return real(rows, items_by_name, **kw)
+
+    monkeypatch.setattr(assemble, "assemble_core_converged", spy)
+    god = frozen["gods"][ma.reference_names()[0]]
+    for mode in ("Conquest", "Joust", "Arena"):
+        seen.clear()
+        with ma.pricing(weights):
+            recommend.build_suggested_entries(god, frozen["items"], {"builds": []},
+                                              weights, tags_map, mode)
+        sig = scoring.resolve_profile(weights, mode, None)["signals"]
+        expect = sig["efficiency"] / (sig["efficiency"] + sig["fit"])
+        assert seen, mode
+        for kw in seen:
+            assert kw["conversion"]["weight"] == pytest.approx(expect), mode
+            assert kw["cap_overflow"]["weight"] == pytest.approx(
+                float(weights["cap_overflow"]) * expect), mode
+    assert weights["signals"]["efficiency"] / (
+        weights["signals"]["efficiency"] + weights["signals"]["fit"]) == pytest.approx(0.70)
+
+
+def test_the_conquest_model_build_depends_only_on_the_eff_fit_ratio(frozen, weights, tags_map):
+    """`quality` is invariant to scaling efficiency and fit together, so the
+    `model` build must be too. With the adjustments at the blended total's
+    scale it was not: doubling both doubled the converter's pull and nothing
+    else's."""
+    moved = copy.deepcopy(weights)
+    moved["signals"] = dict(weights["signals"],
+                            efficiency=weights["signals"]["efficiency"] * 2,
+                            fit=weights["signals"]["fit"] * 2)
+    for god in ma.reference_names():
+        g = frozen["gods"][god]
+        with ma.pricing(weights):
+            a = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                  weights, tags_map, "Conquest")
+        with ma.pricing(moved):
+            b = recommend.build_suggested_entries(g, frozen["items"], {"builds": []},
+                                                  moved, tags_map, "Conquest")
+        pick = lambda es: [e["slot_order"] for e in es if e["archetype"] == "model"]
+        assert pick(a) == pick(b), god
+
+
+def test_every_mana_stack_build_holds_a_converter(snapshot):
+    """The flavor's defining item is in the CORE, not only in the pool
+    (`require.any_item`, 2026-11-04). On the shipped data 111 of 219
+    mana-stack builds held neither converter just before it, and 9 of these 27."""
+    converters = {"Transcendence", "Book of Thoth"}
+    seen = 0
+    for god in ma.reference_names():
+        for mode in ma.MODES:
+            for name, six in snapshot[god][mode]["builds"].items():
+                if name.startswith("mana-stack"):
+                    seen += 1
+                    assert converters & set(six), (god, mode, name, six)
+    assert seen > 10
+
+
+def test_the_heldout_check_says_plainly_when_it_cannot_score_a_change():
+    """Joust and Arena have no community outcome data, and `validate` assembles
+    Conquest's base-kit `core` alone, so the held-out delta is zero by
+    construction for a change that moves anything else (PR #97's mode-weight
+    fix read +0.0000 that way). The command must say so in words rather than
+    print a PASS that reads like a measurement."""
+    none = {ma.SCORED: 4, "Conquest": 0, "Joust": 0, "Arena": 0}
+    assert ma.blind_spot_note(none) is None
+    only = ma.blind_spot_note({ma.SCORED: 0, "Conquest": 0, "Joust": 3, "Arena": 2})
+    assert only.startswith("NOT SCORED") and "3 Joust, 2 Arena" in only
+    assert "reference" in only and "no community record" in only
+    model_only = ma.blind_spot_note({ma.SCORED: 0, "Conquest": 5, "Joust": 0, "Arena": 0})
+    assert model_only.startswith("NOT SCORED") and "5 Conquest" in model_only
+    both = ma.blind_spot_note({ma.SCORED: 1, "Conquest": 0, "Joust": 3, "Arena": 0})
+    assert both.startswith("PARTLY SCORED") and "core part only" in both
+
+
+def test_reference_changes_are_counted_per_mode(snapshot):
+    """Only Conquest's `core` is in the scored bucket; a Conquest model line,
+    a Joust core line and an Arena verdict are all unscored."""
+    moved = copy.deepcopy(snapshot)
+    god = ma.reference_names()[0]
+    moved[god]["Joust"]["builds"]["core"] = list(reversed(moved[god]["Joust"]["builds"]["core"]))
+    moved[god]["Arena"]["verdict"] = "something else"
+    moved[god]["Conquest"]["builds"]["model"] = ["X"] + moved[god]["Conquest"]["builds"]["model"][1:]
+    zero = {ma.SCORED: 0, **{m: 0 for m in ma.MODES}}
+    assert ma.reference_changes_by_mode(snapshot, snapshot) == zero
+    assert ma.reference_changes_by_mode(snapshot, moved) == dict(zero, Conquest=1, Joust=1, Arena=1)
+    moved[god]["Conquest"]["builds"]["core"] = ["X"] + moved[god]["Conquest"]["builds"]["core"][1:]
+    assert ma.reference_changes_by_mode(snapshot, moved)[ma.SCORED] == 1

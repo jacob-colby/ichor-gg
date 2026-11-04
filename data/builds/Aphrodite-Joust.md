@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Bancroft's Talon
-  - Genji's Guard
+  - Book of Thoth
   - Kinetic Cuirass
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
   - Spear of Desolation
-  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -104,12 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Genji's Guard:
-      total: 0.48
-      efficiency: 0.69
+    Book of Thoth:
+      total: 0.37
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.26
+      fit: 0.24
     Kinetic Cuirass:
       total: 0.49
       efficiency: 0.56
@@ -499,7 +499,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74

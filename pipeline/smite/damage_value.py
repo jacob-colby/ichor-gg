@@ -70,7 +70,8 @@ KNOWN LIMITS, all inherited and all disclosed on the method page:
     register entry 12
   * item passives are prose we extract nothing from, so a passive-heavy item is
     valued at its stat line alone
-  * 240 of 513 abilities carry both a rank list and a scaling line; the rest
+  * 341 of 497 non-basic abilities carry both a rank list and a scaling line
+    the parser reads (2026-11-04; 271 before the per-ability label rule); the rest
     contribute nothing here, and a god with fewer than `min_abilities` usable
     ones falls back to the role table entirely
   * damage-over-time tick counts and durations exist only as prose, so a DoT is
@@ -100,86 +101,91 @@ def ability_damage_components(god):
     drag the god's valuation toward zero for reasons that are an artefact of
     the scrape rather than the kit.
 
-    THE STRICT RULE, AND THE ONE FALLBACK. The scaling line must read
-    `Damage Scaling:` exactly. A kit whose every damage line is LABELLED —
-    `Initial Damage Scaling:`, `Damage Scaling Per Tick:`, `Final Damage
-    Scaling:` — parses to nothing at all, and every ability-hit passive on that
-    god is then dead in the clock. Ares was that god (model audit, PR #96,
-    finding 5): 0 abilities, 3 recommended items whose passive never fired, all
-    3 side-by-sides on basic attacks alone. So when the strict rule finds
-    NOTHING, `_label_paired_components` reads each labelled rank line with its
-    own labelled scaling line instead. It fires on zero-component kits only —
-    on the 2026-11-04 roster that is Ares and no one else — and changes no
-    ability the strict rule already reads.
+    TWO RULES, PER ABILITY. The strict rule reads the first rank line with a
+    scaling line that reads `Damage Scaling:` exactly. An ability the strict
+    rule reads nothing from is then read LABEL-PAIRED (`_label_paired_component`):
+    its first labelled rank line (`Damage Per Tick:`, `Initial Damage:`) with
+    the scaling line carrying the same label (`Damage Scaling Per Tick:`,
+    `Initial Damage Scaling:`). The strict rule wins wherever it reads
+    anything, so no ability it read before changes.
 
-    Why not everywhere: the same label rule drops 70 more abilities on 48 gods
-    that DO parse something (Medusa's Viper Shot, `Damage Scaling Per Tick:`,
-    is the worked example `build_quality` was hand-computed against). Reading
-    them moves `stat_weights` on all 48 and `requires_scaling` flavor
-    eligibility on 8, and re-adjudicates that pinned example. That is a model
-    change with its own measurement, recorded in STATE.md §5, not a parse fix.
+    History. Until 2026-11-04 the label rule was a whole-kit fallback that
+    fired only when the strict rule read NOTHING on the kit — Ares, and no one
+    else (model audit, PR #96, finding 5; fixed in PR #97). That left 70
+    labelled abilities unread on 48 gods that parse something else, Medusa's
+    Viper Shot (`Damage Scaling Per Tick:`) among them, and `build_quality`'s
+    pinned Medusa example was hand-computed without it. Reading them per
+    ability is the change STATE.md §5 recorded; the Medusa example was
+    re-derived by hand with Viper Shot in it (`build_quality` docstring).
+
+    A labelled DoT is still counted as its listed damage ONCE — the module's
+    standing DoT limit below — so Viper Shot's 10-30 per tick enters as one
+    tick per cast. An undercount, in the direction the limit already states.
     """
     out = []
     for ability in god.get("abilities") or []:
-        slot = ability.get("slot") or ""
-        if "Basic Attack" in slot:
+        if "Basic Attack" in (ability.get("slot") or ""):
             continue
-        ranks = scaling = None
-        for line in ability.get("details") or []:
-            line = line.strip()
-            match = _RANKS.match(line)
-            if match and ranks is None:
-                ranks = [float(x) for x in match.group(1).split("|")]
-            elif line.startswith("Damage Scaling:"):
-                scaling = {stat: float(pct) / 100
-                           for pct, stat in _SCALING.findall(line)}
-        if ranks and scaling:
-            out.append({"name": ability.get("name"), "ranks": ranks,
-                        "scaling": scaling,
-                        "damage_type": ability.get("damage_type"),
-                        "is_ultimate": "Ultimate" in slot})
-    return out or _label_paired_components(god)
-
-
-def _label_paired_components(god):
-    """The fallback for a kit the strict rule reads nothing from: each ability's
-    FIRST labelled rank line (`Initial Damage: ...`, `Damage Per Tick: ...`)
-    paired with the scaling line carrying the same label (`Initial Damage
-    Scaling:`, `Damage Scaling Per Tick:`). Pairing by label, never by
-    position, so a `Minion Damage Scaling` or `% Enemy Max Health` line can
-    never be read as the god's ratio. First line, as the strict rule takes the
-    first: on Ares's ultimate that is the 200 initial hit and not the 550
-    final one, an undercount in the same direction as the rule's DoT limit."""
-    out = []
-    for ability in god.get("abilities") or []:
-        slot = ability.get("slot") or ""
-        if "Basic Attack" in slot:
-            continue
-        details = [line.strip() for line in ability.get("details") or []]
-        scalings = {}
-        for line in details:
-            label, _, rest = line.partition(":")
-            if label.endswith("Scaling") or "Scaling Per" in label:
-                found = {stat: float(pct) / 100 for pct, stat in _SCALING.findall(rest)}
-                if found:
-                    scalings.setdefault(label.strip(), found)
-        for line in details:
-            match = _RANKS.match(line)
-            label = line.partition(":")[0].strip()
-            if not match or "Scaling" in label:
-                continue
-            wanted = [label + " Scaling"]
-            if label.endswith(" Per Tick"):
-                wanted.append(label[:-len(" Per Tick")] + " Scaling Per Tick")
-            scaling = next((scalings[w] for w in wanted if w in scalings), None)
-            if scaling:
-                out.append({"name": ability.get("name"),
-                            "ranks": [float(x) for x in match.group(1).split("|")],
-                            "scaling": scaling,
-                            "damage_type": ability.get("damage_type"),
-                            "is_ultimate": "Ultimate" in slot})
-                break
+        component = _strict_component(ability) or _label_paired_component(ability)
+        if component:
+            out.append(component)
     return out
+
+
+def _component(ability, ranks, scaling):
+    return {"name": ability.get("name"), "ranks": ranks, "scaling": scaling,
+            "damage_type": ability.get("damage_type"),
+            "is_ultimate": "Ultimate" in (ability.get("slot") or "")}
+
+
+def _strict_component(ability):
+    """The first rank line, with the line that reads `Damage Scaling:`."""
+    ranks = scaling = None
+    for line in ability.get("details") or []:
+        line = line.strip()
+        match = _RANKS.match(line)
+        if match and ranks is None:
+            ranks = [float(x) for x in match.group(1).split("|")]
+        elif line.startswith("Damage Scaling:"):
+            scaling = {stat: float(pct) / 100
+                       for pct, stat in _SCALING.findall(line)}
+    return _component(ability, ranks, scaling) if ranks and scaling else None
+
+
+def _label_paired_component(ability):
+    """An ability's FIRST labelled rank line (`Initial Damage: ...`, `Damage
+    Per Tick: ...`) paired with the scaling line carrying the same label
+    (`Initial Damage Scaling:`, `Damage Scaling Per Tick:`, and Aladdin's
+    `Landing Damage:` / `Landing Scaling:`). Pairing by label,
+    never by position, so a `Minion Damage Scaling` or `% Enemy Max Health`
+    line can never be read as the god's ratio. First line, as the strict rule
+    takes the first: on Ares's ultimate that is the 200 initial hit and not
+    the 550 final one, an undercount in the same direction as the rule's DoT
+    limit."""
+    details = [line.strip() for line in ability.get("details") or []]
+    scalings = {}
+    for line in details:
+        label, _, rest = line.partition(":")
+        if label.endswith("Scaling") or "Scaling Per" in label:
+            found = {stat: float(pct) / 100 for pct, stat in _SCALING.findall(rest)}
+            if found:
+                scalings.setdefault(label.strip(), found)
+    for line in details:
+        match = _RANKS.match(line)
+        label = line.partition(":")[0].strip()
+        if not match or "Scaling" in label:
+            continue
+        wanted = [label + " Scaling"]
+        if label.endswith(" Per Tick"):
+            wanted.append(label[:-len(" Per Tick")] + " Scaling Per Tick")
+        if label.endswith(" Damage") and label != "Damage":
+            # Aladdin's grammar: `Landing Damage:` with `Landing Scaling:`.
+            wanted.append(label[:-len(" Damage")] + " Scaling")
+        scaling = next((scalings[w] for w in wanted if w in scalings), None)
+        if scaling:
+            return _component(ability, [float(x) for x in match.group(1).split("|")],
+                              scaling)
+    return None
 
 
 def marginal_damage_per_stat(god, rank=1):
@@ -229,9 +235,11 @@ def stat_weights(god, min_abilities=2):
     """Per-god offensive stat weights in [0,1], normalised to the largest.
 
     Returns `{}` when the god's kit did not parse well enough to support a
-    valuation — 13 of 87 gods, mostly stance gods whose second form scrapes
-    as a separate page we never fetch. An empty dict means "use the role
-    table", which is an honest fallback rather than a fabricated profile.
+    valuation. That was 13 of 87 gods, then 10 (labelled kits — Anubis,
+    Artemis, Atlas, Horus, Ne Zha, Nut, Rama, Sun Wukong, The Morrigan,
+    Aladdin) until the label rule went per-ability on 2026-11-04; it is none
+    on that day's roster. An empty dict means "use the role table", which is
+    an honest fallback rather than a fabricated profile.
     """
     if usable_ability_count(god) < min_abilities:
         return {}

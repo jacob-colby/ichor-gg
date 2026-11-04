@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Golden Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
+  - Runeforged Hammer
   - Amanita Charm
   flex_slots:
   - Shield Splitter
-  - Golden Blade
+  - Runeforged Hammer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -228,12 +228,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.54
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -258,6 +252,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Runeforged Hammer:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Amanita Charm:
       total: 0.74
       efficiency: 0.65

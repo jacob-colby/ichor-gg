@@ -74,14 +74,14 @@ builds:
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Runeforged Hammer
   - The Reaper
-  - Titan's Bane
   - Heartseeker
   flex_slots:
-  - Titan's Bane
   - Runeforged Hammer
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -104,6 +104,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Transcendence:
+      total: 0.4
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.27
     Hydra's Lament:
       total: 0.51
       efficiency: 0.56
@@ -122,12 +128,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
-    Titan's Bane:
-      total: 0.48
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Heartseeker:
       total: 0.51
       efficiency: 0.43
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.48
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
@@ -269,14 +269,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
+  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Toxic Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -288,8 +288,8 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -299,12 +299,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-    Toxic Blade:
-      total: 0.58
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -317,6 +311,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.91
+    The Crusher:
+      total: 0.58
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Titan's Bane:
       total: 0.6
       efficiency: 0.54
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.65
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.8
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74

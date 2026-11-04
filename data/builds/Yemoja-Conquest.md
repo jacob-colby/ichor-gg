@@ -626,21 +626,21 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Freya's Tears
   - Breastplate of Valor
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Helm of Darkness — physical protection
+    swap: Helm of Darkness — magical protection
     swap_item: Helm of Darkness
+  - vs_tag: physical_heavy
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -677,34 +677,33 @@ builds:
       win: 0.46
       pick: 0.17
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
-      win: 0.6
-      pick: 0.13
-      fit: 0.18
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
       win: 0.54
       pick: 0.0
       fit: 0.57
+    Erosion:
+      total: 0.5
+      efficiency: 0.51
+      win: 0.54
+      pick: 0.0
+      fit: 0.57
   community_ordered:
   - Genji's Guard
   - Freya's Tears
-  - Rod of Tahuti
   starter: *id001
 - source: suggested
   archetype: hybrid
   slot_order:
   - Genji's Guard
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Shell of Rebuke
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Breastplate of Valor
   - Shell of Rebuke
   situational_swaps:
   - vs_tag: heavy_cc
@@ -714,8 +713,8 @@ builds:
     swap: Erosion — magical protection
     swap_item: Erosion
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Helm of Darkness — physical protection
+    swap_item: Helm of Darkness
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -733,6 +732,12 @@ builds:
       efficiency: 0.69
       win: 0.29
       pick: 0.12
+      fit: 0.36
+    Breastplate of Valor:
+      total: 0.51
+      efficiency: 0.63
+      win: 0.54
+      pick: 0.0
       fit: 0.36
     Kinetic Cuirass:
       total: 0.54
@@ -752,12 +757,6 @@ builds:
       win: 0.46
       pick: 0.17
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
-      win: 0.6
-      pick: 0.13
-      fit: 0.18
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
@@ -768,11 +767,10 @@ builds:
   - Genji's Guard
   - Shell of Rebuke
   - Freya's Tears
-  - Rod of Tahuti
   swaps:
   - added: Shell of Rebuke
-    removed: Breastplate of Valor
+    removed: Erosion
     reason: community 66% win over 37 matches (vs 49% on this god), taking the model's
-      weakest slot from Breastplate of Valor
+      weakest slot from Erosion
   starter: *id001
 ---

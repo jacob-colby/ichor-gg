@@ -1737,7 +1737,14 @@ flavors:
       Penetration: 0.9
       Cooldown Rate: 0.7
       Max Mana: 0.5
-    require: {stat: Max Mana, min: 3}
+    # `any_item` makes the converter part of the CORE, not just of the pool
+    # `requires_item` checks (2026-11-04). Without it 111 of 219 mana-stack
+    # builds held neither converter (Conquest 40, Joust 54, Arena 17): the gold model under-prices stacking
+    # items (STATE.md §5, "Transcendence and the other stacking items don't
+    # price"), so the converter lost every slot on score and the tab shipped
+    # a mana pile that converts into nothing. Same list as `requires_item`,
+    # so a god offered the tab can always seed one.
+    require: {stat: Max Mana, min: 3, any_item: [Transcendence, Book of Thoth]}
     max_lifesteal: 1
   crit:
     damage_types: [physical]
@@ -1902,7 +1909,7 @@ aspects:
 # aura bonus at ZERO, and no share can bring that column near 1/N.
 #
 #   mode   tag        share   cores holding   target
-#   Joust  anti-heal  0.65    35/101          1 in 3
+#   Joust  anti-heal  0.60    34/101          1 in 3   (re-swept 2026-11-04)
 #   Joust  team aura  0.15    34/101          1 in 3
 #   Arena  anti-heal  0.70    21/101          1 in 5
 #   Arena  team aura  0.00    19/101          1 in 5   (already there with no bonus)
@@ -1911,11 +1918,27 @@ aspects:
 # anti-heal and NEGATIVE for aura: the aura bonus over-promoted even a team's
 # first copy. `duplicate_value` below is now only the DRAFT's value for your
 # copy beside a teammate's (`teamTags.ts`).
+#
+# RE-SWEPT 2026-11-04, Joust anti-heal only. 0.65 had drifted to 40/101 on the
+# daily refreshes, and the per-ability damage parse (STATE.md §5: 70 labelled
+# abilities on 48 gods) gave four gods that had NO stat weights before —
+# Artemis, Nut, Rama, Sun Wukong — a Strength-heavy kit, which lifts Toxic
+# Blade into their cores: 44/101, outside the test's 1/N +- 0.08. Same sweep,
+# same target, on fingerprint-a4b1a66d8c0d data plus that parse:
+#
+#   share   0.45   0.50   0.55   0.60   0.65
+#   cores    16     18     19     34     44     (of 101; target 33.7)
+#
+# THE CURVE IS A CLIFF, not a slope: 19 -> 34 -> 44 across 0.10 of share. So
+# the calibrated point is wherever a handful of Toxic Blade / Divine Ruin
+# tie-breaks happen to fall, and any model change that nudges Strength or
+# Intelligence fit can move it by ten cores. Arena's 0.70 was not touched
+# (27/101, inside the band).
 team_tags:
   tags: [anti-heal, aura]
   duplicate_value: 0.25
   share:
-    joust: {anti-heal: 0.65, aura: 0.15}
+    joust: {anti-heal: 0.60, aura: 0.15}
     arena: {anti-heal: 0.70, aura: 0.0}
 modes:
   conquest:

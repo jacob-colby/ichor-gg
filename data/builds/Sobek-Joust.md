@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.47
+      total: 0.46
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
