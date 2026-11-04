@@ -2504,7 +2504,7 @@ because "On Use" appears later in the text and `is_conditional` reads the
 whole passive rather than the clause (`stat_conversions` already splits by
 sentence for exactly this reason).
 
-### Three findings from the audit quick-fix session (2026-11-04), not fixed
+### Four findings from the audit quick-fix session (2026-11-04), not fixed
 
 Recorded rather than fixed because each is wider than the finding it surfaced
 under. Numbers are on fingerprint `a4b1a66d8c0d`.
@@ -2527,6 +2527,10 @@ under. Numbers are on fingerprint `a4b1a66d8c0d`.
   fix, which is how the 15 Arena Death Metal builds happened: with the
   conversion bonus under-weighted, Death Metal's raw Strength + Intelligence
   out-scored the converter. Same family as the audit's "kit check in assembly".
+- **The held-out check cannot see Joust or Arena.** `model_audit heldout` is
+  built on `validate`, which scores Conquest's `core` only, so a PR that moves
+  only those modes' builds reads +0.0000 by construction. The mode-weight fix
+  moved 11 Joust/Arena cores and 163 flavor builds and read exactly that.
 - **The Conquest `model` build under-weights the conversion and overflow
   terms by half.** `model` ranks by `quality` = (eff·e + fit·f)/(eff + fit),
   where efficiency carries 0.35/0.50 = 0.70, but both adjustments are added at
