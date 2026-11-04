@@ -2544,13 +2544,14 @@ PR the same day. Each fix's evidence is in the docstring next to it.
   PR is the parse fix's. `heldout` now says so (the SCORED bucket is Conquest
   `core` alone), but the instrument still has nothing to score those builds
   with; the side-by-side verdicts are the only evaluation they get.
-- **The Joust anti-heal share sits on a cliff.** Re-swept 0.65 -> 0.60 to keep
-  `test_mode_profiles`' 1/N band after the parse fix (44/101 -> 34/101):
-  19 -> 34 -> 44 cores across 0.55 / 0.60 / 0.65. The calibrated point is a
-  handful of Toxic Blade / Divine Ruin tie-breaks, so any change to Strength or
-  Intelligence fit can move it ten cores. A smoother objective (a soft count,
-  or calibrating on the share of anti-heal SCORE rather than of cores) would
-  fix the instrument; re-sweeping each time only re-finds the edge.
+- ~~**The Joust anti-heal share sits on a cliff.**~~ — fixed 2026-11-04 by
+  the fight-survival PR. Not tie-breaks in assembly: in Joust the score has no
+  god-specific term, so every god of a role sees the same gap to anti-heal and
+  any flat share moves the count a role at a time. The share is now DERIVED
+  from its 1-in-N target on every `recommend --all`
+  (`recommend.derive_team_share`, `data/_team_shares.json`): 34/101, and
+  34-36 under every single ±20% weight nudge where the old fixed 0.60 read
+  17-52. Evidence in `recommend.py`.
 - **Rank lists with a thousands separator do not parse.** `_RANKS` is
   `[\d.]+`, so Ymir's Shards of Ice (`550 | 750 | 950 | 1,150 | 1,350`) is
   dropped, as are three non-ability lines (Eset, Xbalanque). One damaging
@@ -2568,6 +2569,53 @@ PR the same day. Each fix's evidence is in the docstring next to it.
   per-ability rule reads — 23 of the 70 — so those are counted, and
   undercounted, where before they were absent. A tick-count reading would
   change the Medusa example again.
+
+### Six findings from the fight-survival session (2026-11-04), not fixed
+
+Recorded by the PR that fixed the survival measure (`side_by_side` SURVIVAL
+block) and derived the Joust anti-heal share; fingerprint `9c673795e8c8`.
+
+- **A self-heal scaled on missing health makes survival depend on WHEN it is
+  cast, so a Cooldown Rate change can lower fight EHP.** Sol / Conquest, our
+  core 2 -> 4 items: Spear of Desolation's 10 Cooldown Rate moves Radiance's
+  recast from 10.0s to 7.6s, earlier in the bar's fall, and the heal lands
+  smaller (311 -> 255): 4609 -> 4501 physical. The one falling-survival
+  comparison left of 282 (96 before), and it is a cooldown, not damage — the
+  survival fix holds damage equal and this does not. Baron Samedi's Consign
+  Spirits is the same shape. Fixing it is the self-heal model's question
+  (cast-when-hurt, or a heal-per-second average), not the kill rule's.
+- **`lifesteal_value`'s shipped constants were measured on the old survival
+  rule.** `role_stats` Lifesteal for Solo (0.52) and Support (0.47) are the
+  geometric mean of its two bounds. Re-run on the new rule (`python -m
+  smite.lifesteal_value`): one fight 0.569 / 0.347, chained 2.564 / 2.534,
+  geomean **1.208 / 0.938** — about double, because lifesteal no longer stops
+  at the kill. Not re-tuned: it is a model weight with its own blast radius
+  and needs `calibrate`, and the module's own docstring records that the
+  `max_lifesteal` sustain cap, not this weight, bound the gods that motivated it.
+- **One path from damage to survival is left, and it is a kill HAPPENING, not
+  its timing.** A kill's refunds land at the end of its fight; a build that
+  kills in a fight the other does not gets a refund whose recast could, in
+  principle, land a missing-health self-heal smaller (the first finding's
+  shape). Not seen: 0 violations in 5,076 roster-wide checks (every god, mode,
+  both builds, 2/4/6 items, damage x1 / 1.5 / 3 / 10). `test_survival`
+  checks the frozen reference builds on every run; the roster check was
+  one-off and is not in CI (~6 min).
+- **Arena anti-heal and both auras still use swept shares.** Arena's 0.70 reads
+  27/101 against a 1-in-5 target of 20; its curve near the target is gentler
+  (1-2 cores per 0.01) but has the same role-block structure. Adding
+  `arena: [anti-heal]` to `team_tags.derive` would hold it at 20 and move
+  about seven Arena cores; out of this PR's scope. Auras cannot be derived
+  this way: 74% of cores hold an aura-tagged item at a share of zero.
+- **Within a role, some seats tie EXACTLY.** Apollo and Artemis share a Joust
+  anti-heal cost (0.589233), as do Bellona and Hercules (0.580322): identical
+  role map, kit blend too small to separate them. So the derived count is
+  the target plus any seat tied with the target seat (34 today, 35-36 under two
+  nudges). Only a god-specific term in Joust's score would separate them.
+- **`model_audit sensitivity` now re-derives the share per nudge**, as the
+  pipeline would, so `modes.joust.tag_bonus` no longer moves the Joust
+  anti-heal COUNT (only which seats hold it). PR #96's 16 Joust flips under that
+  nudge were partly the cliff and will read lower on the next run; that is
+  the fix, not a loss of coverage.
 
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
@@ -2851,7 +2899,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1249) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1264) ·
 `cd viewer && npm test -- --run` (947).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2971,7 +3019,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1249 pipeline · 947 viewer |
+| Tests | 1264 pipeline · 947 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
