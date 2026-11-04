@@ -2060,6 +2060,74 @@ shipped **off**. Numbers are in the named module.
     it. An item whose only passive is unpriced looking cheap to the gold model
     is the §4.5 family, and that is a scoring question, not a coverage one.
 
+31. **Ichor over-buys Tekko-Kagi, and the hypothesis for why was wrong in
+    its direction (2026-11-04).** §4.30's closing lead was that an item whose
+    only passive is unpriced should look CHEAP to a gold-value model. It does
+    not. It looks CORRECT, and every rival looks expensive.
+
+    **The proposed mechanism is dead.** `passive_sim` is imported by exactly
+    two modules, `model_audit` and `side_by_side` — both diagnostics.
+    `scoring`, `efficiency`, `assemble` and `recommend` never import it, so a
+    `NOT_SIMULATED` verdict cannot reach the code that decides what enters a
+    core. "Refused" is not being read as "no information" anywhere in scoring,
+    because scoring cannot see the refusal at all.
+
+    **The decomposition, on the 10 Carry gods whose Conquest `core` holds it.**
+    Tekko-Kagi reads efficiency **0.553** on every one (the signal is
+    god-agnostic), fit 0.53-0.64, pick **0.000**, total 0.509-0.550. It wins on
+    EFFICIENCY, and it wins it while paying a real pick penalty.
+
+    **Its residual is -4.3 and its tier is `fair`.** 2650 gold buys 2650 gold
+    of stats; the weak passive makes it look like nothing in particular. What
+    is anomalous is the field it beats, priced against Medusa's community core:
+
+        Tekko-Kagi             -4.3   fair          passive NOT simulated
+        Silverbranch Bow      -10.5   fair          passive simulated
+        Riptalon              +34.4   fair          passive simulated
+        Dominance             +69.2   fair          passive simulated
+        Dagger of Frenzy     +404.9   premium       passive simulated
+        Devourer's Gauntlet  +513.9   premium       passive simulated
+        Deathbringer         +527.3   premium       passive simulated
+        The Executioner     +1021.8   premium       passive simulated
+
+    **So the asymmetry runs the other way: the community's items are marked up
+    400-1000 gold for passives `efficiency` cannot price, and Tekko-Kagi wins
+    by being the one item with nothing to mark up.** That is §4.5 and the
+    Berserker's Shield story (§4.15-§4.16) arriving on Carry.
+
+    **And the two instruments have opposite blindnesses.** `efficiency`
+    CHOOSES the items and prices stats only. `passive_sim` JUDGES the build and
+    simulates all of it — Executioner's 7% shred, Deathbringer's +35% crit
+    damage, Devourer's 75 stacks, Dagger of Frenzy's active, Riptalon,
+    Silverbranch, Dominance are every one `simulated`, and Tekko-Kagi's is the
+    only one that is not. The chooser is blind to exactly what the judge can
+    see, which is the whole shape of Carry losing 12 of 18.
+
+    **It is an error, not a disagreement — measured.** Excluding Tekko-Kagi
+    from Conquest moves `validate --check` win-weighted 0.51 -> 0.52 and
+    `model_audit heldout` **+0.0107 tuning / +0.0082 held-out**, better on the
+    leakage-free split it cannot game, and the freed slots fill with
+    Jotunn's Revenge, Tyrfing, Silverbranch Bow, Dominance, Riptalon and
+    Deathbringer — all passive-simulated, several of them the community's own
+    picks. The model is better off without it and moves toward the community.
+
+    **NOTHING WAS SHIPPED, and the obvious fix is refused.** `excluded_items`
+    means "the item is not in this mode's shop"; Tekko-Kagi is in Conquest's
+    shop, so using that field to drop it would encode a false statement to buy
+    a better number. It also treats the symptom: the same markup promotes
+    whichever correctly-priced passive-less item is next. Note too that the
+    exclusion perturbs the efficiency scale itself (Jotunn's -275.8 -> -363.0,
+    Deathbringer +527.3 -> +204.6), which is §4.25.
+
+    **Costed options, all Jacob's call.** (a) Feed `passive_sim`'s per-item
+    simulated values into `efficiency` — the principled fix, and NOT what
+    §4.20 refuses, since that entry refuses pricing passives by CLASS and this
+    is per-item arithmetic the project already computes. Large: it re-bases
+    every residual and therefore every §4 delta (§4.25). (b) Give movement a
+    value, which makes Tekko-Kagi's 2650 legitimate rather than removing it —
+    one of the four Carry levers from §4.30 and still unpicked. (c) Accept the
+    disagreement and leave it.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
