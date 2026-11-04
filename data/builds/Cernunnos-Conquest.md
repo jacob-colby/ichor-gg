@@ -1022,7 +1022,7 @@ builds:
       efficiency: 0.49
       win: 0.59
       pick: 0.0
-      fit: 0.12
+      fit: 0.13
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -1034,7 +1034,7 @@ builds:
       efficiency: 0.53
       win: 0.64
       pick: 0.01
-      fit: 0.12
+      fit: 0.13
     Death Metal:
       total: 0.55
       efficiency: 0.63
