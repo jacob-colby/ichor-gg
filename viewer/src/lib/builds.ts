@@ -1,6 +1,7 @@
 import type {
   BuildEntry,
   CommunityBuildEntry,
+  CuratedBuildEntry,
   SlotEntry,
 } from "../types";
 
@@ -44,32 +45,121 @@ export function tabLabel(entry: BuildEntry): string {
   return entry.source;
 }
 
+/** The entry that answers to `archetype`, following a collapse.
+ *
+ * `dedupeIdenticalBuilds` can remove the entry literally named `core` when the
+ * pipeline computed it as the same build as `hybrid` or `model`, so a lookup by
+ * name has to accept the survivor that absorbed it — otherwise selecting
+ * `core` falls through to whatever sorted first, which is a DIFFERENT build.
+ * The alias is that same item sequence by construction, so this resolves to the
+ * build the caller asked for rather than merely to something nearby. */
+export function findByArchetype(
+  entries: BuildEntry[], archetype: string | undefined,
+): BuildEntry | undefined {
+  if (!archetype) return undefined;
+  const arche = (e: BuildEntry) => (e.source === "suggested" ? e.archetype : undefined);
+  return entries.find((e) => arche(e) === archetype)
+    ?? entries.find((e) => e.source === "suggested" && (e.aliases ?? []).includes(archetype));
+}
+
+/** "also the Balanced pick", or null when this build has only one name.
+ *
+ * `dedupeIdenticalBuilds` collapses archetypes the pipeline computed as the
+ * same build, and a reader who came looking for the cooldown build is entitled
+ * to learn that it IS this one rather than find the tab missing. That is the
+ * whole reason the duplicate is collapsed in the strip instead of dropped from
+ * the data. */
+export function aliasNote(entry: BuildEntry): string | null {
+  if (entry.source !== "suggested") return null;
+  const aliases = entry.aliases ?? [];
+  if (!aliases.length) return null;
+  const labels = aliases.map((a) => ARCHETYPE_LABEL[a] ?? a);
+  const list = labels.length === 1
+    ? labels[0]
+    : `${labels.slice(0, -1).join(", ")} and ${labels[labels.length - 1]}`;
+  return `also the ${list} pick`;
+}
+
 /** Model, Hybrid, Community, then everything else in its existing order.
  *  `core` stays available — three other systems read it by name — but it is no
  *  longer the answer a visitor meets first. */
-/** Drop a `core` ("Balanced") entry that is the same six items as `model`.
+/** Which archetype survives when several are the same build, best first.
+ *  Anything not named here ranks after all of them, in the note's own order.
  *
- * `core` is the four-signal blend and `model` is that blend with the meta
- * switched off — genuinely different builds in Conquest, where they diverge on
- * 80 of 89 gods. Joust and Arena zero the `win` and `pick` weights, so the
- * blend IS the model build and the two tabs were byte-identical on 89 of 89
- * gods in each. Two tabs showing one build is bad enough; the duplicate was
- * also the one labelled "Balanced", claiming a community blend that had not
- * happened.
+ *  `model` and `hybrid` lead because they lead the strip. `core` follows them
+ *  and precedes the flavors: it is the entry three other systems read by name,
+ *  so when it is the survivor the strip and those systems agree about which
+ *  build is being talked about. */
+const SURVIVOR_PRECEDENCE = ["model", "hybrid", "core"] as const;
+
+/** Collapse suggested builds that are the SAME BUILD under different archetype
+ * names, keeping one entry and recording the rest as its `aliases`.
  *
- * Dropped from the STRIP only. `core` stays in the data because the tier list,
- * the draft's baseline and the data audit all read it by name. */
-export function dedupeCoreAgainstModel(suggested: BuildEntry[]): BuildEntry[] {
+ * WHY THIS IS NOT COSMETIC. Measured on the shipped notes 2026-11-04: 2,577
+ * suggested archetype slots are emitted across every god, mode and aspect, and
+ * 423 of them (16.4%) are a byte-identical item sequence to another archetype
+ * on the same god and mode — 274 of 303 god/mode/aspect groups affected.
+ * `Ymir-Conquest` offered `core` and `hybrid` as the same six items; the worst
+ * was `Neith-Conquest`, 11 tabs for 7 distinct builds. A strip of eleven tabs
+ * that answers seven ways reads as padding, and it hides that the model has a
+ * genuinely different answer in the four cases where it does.
+ *
+ * This generalises an earlier `core`-against-`model` rule. That one fired only
+ * on that one pair, which is why Ymir's `core`/`hybrid` duplicate survived it.
+ *
+ * ORDER STILL COUNTS AS DIFFERENCE. The comparison is the item SEQUENCE, not
+ * the set, because the same items bought in a different order is a different
+ * build. That distinction costs nothing today — on the shipped notes the two
+ * readings give the identical 423 — so nothing is being collapsed on the
+ * strength of it.
+ *
+ * COLLAPSED FROM THE STRIP ONLY. Every archetype stays in the note on disk:
+ * `build_index` selects `archetype == "core"`, `build_quality` has a
+ * `DEFAULT_ARCHETYPE`, and the side-by-side comparison reads `model`. Nothing
+ * here changes a build's items — it changes how many headings they appear
+ * under. */
+export function dedupeIdenticalBuilds(suggested: BuildEntry[]): BuildEntry[] {
   const arche = (e: BuildEntry) => (e.source === "suggested" ? e.archetype : undefined);
-  const names = (e: BuildEntry) => e.slot_order.map(slotItemName);
-  const model = suggested.find((e) => arche(e) === "model");
-  if (!model) return suggested;
-  const m = names(model);
-  const same = (e: BuildEntry) => {
-    const n = names(e);
-    return n.length === m.length && n.every((x, i) => x === m[i]);
+  const rank = (e: BuildEntry) => {
+    const i = SURVIVOR_PRECEDENCE.indexOf(arche(e) as typeof SURVIVOR_PRECEDENCE[number]);
+    return i >= 0 ? i : SURVIVOR_PRECEDENCE.length;
   };
-  return suggested.filter((e) => !(arche(e) === "core" && same(e)));
+  const key = (e: BuildEntry) => JSON.stringify(e.slot_order.map(slotItemName));
+
+  // Group by build, keeping each group's first-seen position so the strip's
+  // existing order survives: `orderBuilds` sorts headlines to the front and
+  // leaves everything else where it was.
+  const kept: { at: number; entry: BuildEntry }[] = [];
+  const groups = new Map<string, { at: number; entries: CuratedBuildEntry[] }>();
+  suggested.forEach((e, at) => {
+    // Only suggested builds collapse into each other. A community entry is
+    // what the model's answer is being COMPARED against, so it is never a
+    // duplicate of the thing it is evidence for — and a `mine` build is the
+    // reader's own and is not ours to merge away.
+    if (e.source !== "suggested") {
+      kept.push({ at, entry: e });
+      return;
+    }
+    const k = key(e);
+    const g = groups.get(k);
+    if (g) g.entries.push(e);
+    else groups.set(k, { at, entries: [e] });
+  });
+
+  for (const { at, entries } of groups.values()) {
+    if (entries.length === 1) {
+      kept.push({ at, entry: entries[0] });
+      continue;
+    }
+    // Best rank wins; ties go to whichever the note listed first.
+    const survivor = entries.reduce((best, e) => (rank(e) < rank(best) ? e : best), entries[0]);
+    const aliases = entries
+      .filter((e) => e !== survivor)
+      .map((e) => e.archetype)
+      .filter((a): a is string => !!a);
+    kept.push({ at, entry: aliases.length ? { ...survivor, aliases } : survivor });
+  }
+  return kept.sort((a, b) => a.at - b.at).map(({ entry }) => entry);
 }
 
 export function orderBuilds(suggested: BuildEntry[], community?: BuildEntry): BuildEntry[] {

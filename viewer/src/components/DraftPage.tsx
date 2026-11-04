@@ -374,7 +374,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
           {/* ── Which build ────────────────────────────────────────────
               The god page's own strip, minus the community and `mine` entries
               the draft has nothing to adapt: same `tabLabel`, same
-              `orderBuilds`/`dedupeCoreAgainstModel` (in `archetypeEntries`), so
+              `orderBuilds`/`dedupeIdenticalBuilds` (in `archetypeEntries`), so
               the two surfaces cannot name or order these differently. */}
           {archetypes.length > 1 && (
             <div role="group" aria-label="Build" data-testid="draft-archetypes"

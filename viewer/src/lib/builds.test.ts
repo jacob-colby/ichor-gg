@@ -6,7 +6,9 @@ import {
   iconSlug,
   applySwap,
   tabLabel,
-  dedupeCoreAgainstModel,
+  dedupeIdenticalBuilds,
+  aliasNote,
+  findByArchetype,
   communityRecordedItems,
   splitRationale,
 } from "./builds";
@@ -153,18 +155,24 @@ describe("orderBuilds", () => {
  * the two tabs were byte-identical on 89 of 89 gods in each — with the
  * duplicate being the one labelled "Balanced", claiming a community blend that
  * had not happened. */
-describe("dedupeCoreAgainstModel", () => {
+describe("dedupeIdenticalBuilds", () => {
   const b = (archetype: string, items: string[]) =>
     ({ source: "suggested", archetype, slot_order: items } as unknown as BuildEntry);
 
   it("drops a Balanced tab that is the same six items as Model", () => {
     const six = ["A", "B", "C", "D", "E", "F"];
-    const out = dedupeCoreAgainstModel([b("model", six), b("core", six), b("crit", six)]);
+    // `crit` is given its own build here. It used to carry the same six as
+    // well and was asserted to SURVIVE, because the old rule only compared
+    // core against model — three tabs, one build, which is the defect.
+    const out = dedupeIdenticalBuilds([
+      b("model", six), b("core", six), b("crit", ["A", "B", "C", "D", "E", "Z"]),
+    ]);
     expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["model", "crit"]);
+    expect((out[0] as { aliases?: string[] }).aliases).toEqual(["core"]);
   });
 
   it("keeps Balanced when it genuinely differs, even by one item", () => {
-    const out = dedupeCoreAgainstModel([
+    const out = dedupeIdenticalBuilds([
       b("model", ["A", "B", "C", "D", "E", "F"]),
       b("core", ["A", "B", "C", "D", "E", "Z"]),
     ]);
@@ -173,23 +181,117 @@ describe("dedupeCoreAgainstModel", () => {
 
   it("keeps Balanced when the two differ only in ORDER", () => {
     // Same items bought in a different order is a different build.
-    const out = dedupeCoreAgainstModel([
+    const out = dedupeIdenticalBuilds([
       b("model", ["A", "B", "C"]),
       b("core", ["C", "B", "A"]),
     ]);
     expect(out).toHaveLength(2);
   });
 
-  it("never drops any other archetype", () => {
+  /* These two used to assert the opposite, because the rule only ever compared
+   * `core` against `model`: three identical tabs survived as long as none of
+   * them was that pair, and a group with no `model` in it was left untouched.
+   * That is what let `Ymir-Conquest` ship `core` and `hybrid` as the same six
+   * items. Both now collapse. */
+  it("collapses every archetype that is the same build, not just core/model", () => {
     const six = ["A", "B", "C", "D", "E", "F"];
-    const out = dedupeCoreAgainstModel([b("model", six), b("hybrid", six), b("burst", six)]);
-    expect(out).toHaveLength(3);
+    const out = dedupeIdenticalBuilds([b("model", six), b("hybrid", six), b("burst", six)]);
+    expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["model"]);
+    expect((out[0] as { aliases?: string[] }).aliases).toEqual(["hybrid", "burst"]);
   });
 
-  it("is a no-op when there is no model build to compare against", () => {
+  it("collapses a duplicate group with no model build in it", () => {
     const six = ["A", "B", "C", "D", "E", "F"];
-    const input = [b("core", six), b("crit", six)];
-    expect(dedupeCoreAgainstModel(input)).toEqual(input);
+    const out = dedupeIdenticalBuilds([b("core", six), b("crit", six)]);
+    expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["core"]);
+    expect((out[0] as { aliases?: string[] }).aliases).toEqual(["crit"]);
+  });
+
+  it("is Ymir's case: core and hybrid are one build, model is its own", () => {
+    const shared = ["Genji's Guard", "Kinetic Cuirass", "Freya's Tears",
+                    "Hussar's Wings", "Amanita Charm", "Erosion"];
+    const model = ["Eye of Providence", "Genji's Guard", "Kinetic Cuirass",
+                   "Freya's Tears", "Amanita Charm", "Erosion"];
+    const out = dedupeIdenticalBuilds([
+      b("core", shared), b("hybrid", shared), b("model", model),
+    ]);
+    // hybrid outranks core as the survivor, and model is untouched.
+    expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["hybrid", "model"]);
+    expect((out[0] as { aliases?: string[] }).aliases).toEqual(["core"]);
+  });
+
+  it("keeps the note's own position for the groups it keeps", () => {
+    const out = dedupeIdenticalBuilds([
+      b("bruiser", ["A"]), b("crit", ["B"]), b("cooldown", ["A"]),
+    ]);
+    // The duplicate collapses onto the FIRST occurrence's slot, not the last.
+    expect(out.map((e) => (e as { archetype: string }).archetype)).toEqual(["bruiser", "crit"]);
+    expect((out[0] as { aliases?: string[] }).aliases).toEqual(["cooldown"]);
+  });
+
+  it("leaves a group of one alone, with no aliases key", () => {
+    const input = [b("core", ["A"]), b("crit", ["B"])];
+    expect(dedupeIdenticalBuilds(input)).toEqual(input);
+  });
+
+  it("does not collapse a community entry into a suggested one", () => {
+    const six = ["A", "B", "C", "D", "E", "F"];
+    const community = ({ source: "community", slot_order: six } as unknown as BuildEntry);
+    const out = dedupeIdenticalBuilds([b("model", six), community]);
+    // Community is what the model is being COMPARED against; it is never a
+    // duplicate of the thing it is evidence for.
+    expect(out).toHaveLength(2);
+  });
+});
+
+describe("findByArchetype", () => {
+  const b = (archetype: string, items: string[], aliases?: string[]) =>
+    ({ source: "suggested", archetype, slot_order: items, aliases } as unknown as BuildEntry);
+
+  it("finds an entry by its own archetype", () => {
+    const out = findByArchetype([b("model", ["A"]), b("crit", ["B"])], "crit");
+    expect((out as { archetype?: string })?.archetype).toBe("crit");
+  });
+
+  it("finds the survivor that absorbed a collapsed name", () => {
+    // This is the case that matters: `core` is gone from the strip because it
+    // was the same build as `hybrid`, and selecting `core` must land there and
+    // not fall through to `model`, which is a different build.
+    const entries = [b("model", ["Z"]), b("hybrid", ["A"], ["core"])];
+    const out = findByArchetype(entries, "core");
+    expect((out as { archetype?: string })?.archetype).toBe("hybrid");
+  });
+
+  it("prefers a real archetype over an alias of the same name", () => {
+    const entries = [b("hybrid", ["A"], ["core"]), b("core", ["B"])];
+    expect((findByArchetype(entries, "core") as { slot_order: string[] }).slot_order)
+      .toEqual(["B"]);
+  });
+
+  it("is undefined for a name nothing answers to, and for no name", () => {
+    expect(findByArchetype([b("model", ["A"])], "crit")).toBeUndefined();
+    expect(findByArchetype([b("model", ["A"])], undefined)).toBeUndefined();
+  });
+});
+
+describe("aliasNote", () => {
+  const withAliases = (aliases?: string[]) =>
+    ({ source: "suggested", archetype: "hybrid", slot_order: [], aliases } as unknown as BuildEntry);
+
+  it("is null when the build has only one name", () => {
+    expect(aliasNote(withAliases(undefined))).toBeNull();
+    expect(aliasNote(withAliases([]))).toBeNull();
+  });
+
+  it("names one collapsed archetype by its label", () => {
+    expect(aliasNote(withAliases(["core"]))).toBe("also the Balanced pick");
+  });
+
+  it("joins several", () => {
+    expect(aliasNote(withAliases(["core", "cooldown"])))
+      .toBe("also the Balanced and Cooldown pick");
+    expect(aliasNote(withAliases(["core", "cooldown", "bruiser"])))
+      .toBe("also the Balanced, Cooldown and Bruiser pick");
   });
 });
 

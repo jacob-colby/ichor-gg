@@ -167,6 +167,12 @@ export interface CuratedBuildEntry {
   starter?: { base: string; upgrade: string };
   /** Off-class for-fun build — win/pick signals zeroed, not meta-scored. */
   fun?: boolean;
+  /** Other archetypes the pipeline computed as this EXACT same build, collapsed
+   *  into this entry for presentation by `dedupeIdenticalBuilds`. Set by the
+   *  viewer and never by the pipeline: the note on disk still carries each one
+   *  separately, because `build_index`, `build_quality` and the side-by-side
+   *  comparison all read `core` and `model` by name. */
+  aliases?: string[];
   slot_scores?: Record<string, SlotScore>;
   /** Hybrid builds only: where the community's record overrode the model, and
    *  the evidence that earned it. A correction that can't say why it fired is

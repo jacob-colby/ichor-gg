@@ -18,8 +18,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type {
   BuildEntry, BuildNote, CuratedBuildEntry, God, Item, SlotScore,
 } from "../types";
-import { isCommunityEntry, slotItemName, applySwap, tabLabel, orderBuilds,
-  dedupeCoreAgainstModel, communityRecordedItems, splitRationale } from "../lib/builds";
+import { isCommunityEntry, slotItemName, applySwap, tabLabel, orderBuilds, aliasNote, findByArchetype,
+  dedupeIdenticalBuilds, communityRecordedItems, splitRationale } from "../lib/builds";
 import { toHash } from "../lib/useHashRoute";
 import { tierLabel } from "../lib/itemFilters";
 import { buildLedger, goldText, ordinal, type LedgerRow } from "../lib/ledger";
@@ -585,7 +585,7 @@ export function DetailPanel({
     return useAspect ? !!a : !a;
   });
   const selectable: BuildEntry[] = [
-    ...orderBuilds(dedupeCoreAgainstModel(suggested), communityEntry), ...mineEntries,
+    ...orderBuilds(dedupeIdenticalBuilds(suggested), communityEntry), ...mineEntries,
   ];
   // Nothing to select at all still has to render something.
   const primaryIsCommunity = selectable.length === 0;
@@ -619,11 +619,12 @@ export function DetailPanel({
     // Index into the ORDERED list, which is what the tab strip renders.
     // Searching the raw filtered list silently pointed at a different build
     // once community joined the strip and the order stopped matching.
-    const nextSelectable = [...orderBuilds(dedupeCoreAgainstModel(nextSuggested), communityEntry), ...mineEntries];
-    const i = curArch
-      ? nextSelectable.findIndex(
-          (e) => e.source === "suggested" && (e as CuratedBuildEntry).archetype === curArch)
-      : -1;
+    const nextSelectable = [...orderBuilds(dedupeIdenticalBuilds(nextSuggested), communityEntry), ...mineEntries];
+    // Alias-aware: the archetype being viewed may be collapsed into another
+    // entry on the other side of the aspect flip, and landing on the build
+    // that absorbed it beats resetting the reader to the default tab.
+    const match = curArch ? findByArchetype(nextSelectable, curArch) : undefined;
+    const i = match ? nextSelectable.indexOf(match) : -1;
     setActiveIndex(i >= 0 ? i : null);
     setSelectedTag(null);
     // Depends only on the aspect flip; re-running on every selection change
@@ -698,7 +699,7 @@ export function DetailPanel({
           // Offset by the ordered suggested-plus-community group, not by
           // `suggested.length` — community sits inside that group now.
           const idx = name ? getMine(god, note.mode).findIndex((b) => b.name === name) : -1;
-          const before = orderBuilds(dedupeCoreAgainstModel(suggested), communityEntry).length;
+          const before = orderBuilds(dedupeIdenticalBuilds(suggested), communityEntry).length;
           setActiveIndex(idx >= 0 ? before + idx : null);
         }}
       />
@@ -740,7 +741,8 @@ export function DetailPanel({
           <div role="group" aria-label="Build flavor" className="flex flex-wrap gap-0.5 rounded-md border border-line bg-bg1 p-1">
             {selectable.map((entry, i) => (
               <button key={`${tabLabel(entry)}-${i}`} type="button" aria-pressed={i === (activeIndex ?? defaultIndex)}
-                onClick={() => setActiveIndex(i)} className={segBtn(i === (activeIndex ?? defaultIndex))}>
+                onClick={() => setActiveIndex(i)} className={segBtn(i === (activeIndex ?? defaultIndex))}
+                title={aliasNote(entry) ?? undefined}>
                 {tabLabel(entry)}{(entry as { fun?: boolean }).fun ? " 🎲" : ""}
               </button>
             ))}
@@ -762,6 +764,13 @@ export function DetailPanel({
             </button>
           )}
         </div>
+      )}
+
+      {/* The pipeline computed another archetype as this exact build. Said in
+          words rather than left as a missing tab, because a reader who came
+          for the cooldown build should learn it IS this one. */}
+      {aliasNote(active) && (
+        <p className="mt-2 text-small text-muted">{aliasNote(active)}.</p>
       )}
 
       {isFun && (
