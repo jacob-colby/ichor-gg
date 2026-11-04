@@ -489,13 +489,13 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Genji''s Guard, Rod of Tahuti, Berserker''s
     Shield, Jotunn''s Revenge, Amanita Charm, Shield Splitter, Gluttonous Grimoire,
-    Kinetic Cuirass, Soul Gem, Runeforged Hammer, Golden Blade, The Reaper, Tekko-Kagi,
-    Titan''s Bane, Breastplate of Valor, Hydra''s Lament, Nimble Ring, Tyrfing, Spear
-    of Desolation, Obsidian Shard, The Crusher, Oni Hunter''s Garb, Helm of Radiance,
-    Lernaean Bow, Erosion, Avenging Blade, Toxic Blade, Eye of Providence, Heartseeker,
-    Stone of Binding, Silverbranch Bow, Shield of the Phoenix, Arondight, Draconic
-    Scale, Helm of Darkness, Midgardian Mail, Spear of the Magus, Death Metal, Magi''s
-    Cloak, Screeching Gargoyle, Pharaoh''s Curse.'
+    Kinetic Cuirass, Soul Gem, Runeforged Hammer, The Reaper, Tekko-Kagi, Titan''s
+    Bane, Golden Blade, Breastplate of Valor, Hydra''s Lament, Nimble Ring, Spear
+    of Desolation, Obsidian Shard, Tyrfing, The Crusher, Oni Hunter''s Garb, Helm
+    of Radiance, Lernaean Bow, Erosion, Avenging Blade, Eye of Providence, Heartseeker,
+    Stone of Binding, Shield of the Phoenix, Arondight, Draconic Scale, Helm of Darkness,
+    Midgardian Mail, Spear of the Magus, Death Metal, Toxic Blade, Magi''s Cloak,
+    Screeching Gargoyle, Pharaoh''s Curse, Silverbranch Bow.'
   slot_scores:
     Genji's Guard:
       total: 0.61

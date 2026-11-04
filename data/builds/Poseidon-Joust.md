@@ -470,8 +470,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Tyrfing
   - Titan's Bane
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -495,11 +495,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.61
+      total: 0.58
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.67
     Bragi's Harp:
       total: 0.61
       efficiency: 0.45

@@ -36,7 +36,7 @@ builds:
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Lernaean Bow:
       total: 0.59
       efficiency: 0.51
@@ -44,17 +44,17 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.73
     Tyrfing:
-      total: 0.58
+      total: 0.57
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     The Reaper:
       total: 0.65
       efficiency: 0.56
@@ -62,11 +62,11 @@ builds:
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.68
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.88
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.71
     Rage:
       total: 0.46
       efficiency: 0.44
@@ -182,11 +182,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Riptalon:
-      total: 0.66
+      total: 0.65
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.85
     Demon Blade:
       total: 0.55
       efficiency: 0.36
@@ -247,11 +247,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Tyrfing:
-      total: 0.48
+      total: 0.47
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.45
     The Reaper:
       total: 0.61
       efficiency: 0.56
@@ -294,7 +294,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.52
       win: 0.5
       pick: 0.0
@@ -304,7 +304,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -334,14 +334,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Toxic Blade
+  - The Reaper
   - Tekko-Kagi
-  - Riptalon
   - Silverbranch Bow
-  - The Crusher
   - Titan's Bane
+  - Heartseeker
   flex_slots:
+  - Heartseeker
   - Silverbranch Bow
-  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -359,41 +359,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.65
+      total: 0.64
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.83
+    The Reaper:
+      total: 0.71
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.85
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Riptalon:
-      total: 0.71
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.97
     Silverbranch Bow:
       total: 0.57
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
-    The Crusher:
-      total: 0.55
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Titan's Bane:
       total: 0.58
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.61
+    Heartseeker:
+      total: 0.57
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -495,11 +495,11 @@ builds:
       pick: 0.0
       fit: 0.46
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
@@ -513,11 +513,11 @@ builds:
       pick: 0.0
       fit: 0.5
     Tyrfing:
-      total: 0.46
+      total: 0.45
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.41
     Hydra's Lament:
       total: 0.52
       efficiency: 0.56
@@ -558,7 +558,7 @@ builds:
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Lernaean Bow:
       total: 0.59
       efficiency: 0.51
@@ -566,17 +566,17 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.73
     Tyrfing:
-      total: 0.58
+      total: 0.57
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     The Reaper:
       total: 0.65
       efficiency: 0.56
@@ -584,10 +584,10 @@ builds:
       pick: 0.0
       fit: 0.74
     Riptalon:
-      total: 0.68
+      total: 0.67
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.89
+      fit: 0.88
   starter: *id001
 ---

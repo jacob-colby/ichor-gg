@@ -369,7 +369,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -428,13 +428,13 @@ builds:
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.49
     Toxic Blade:
       total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.57
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74

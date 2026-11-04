@@ -119,8 +119,8 @@ builds:
     this god: Amanita Charm, The Reaper, Shield Splitter, Runeforged Hammer, Berserker''s
     Shield, Kinetic Cuirass, Genji''s Guard, Avenging Blade, Breastplate of Valor,
     Oni Hunter''s Garb, Erosion, Wyrmskin Hide, Eye of Providence, Midgardian Mail,
-    Golden Blade, Tekko-Kagi, Arondight, Draconic Scale, Sanguine Lash, Shield of
-    the Phoenix, Leviathan''s Hide, Tyrfing, Bloodforge, Stone of Binding.'
+    Tekko-Kagi, Arondight, Draconic Scale, Golden Blade, Sanguine Lash, Shield of
+    the Phoenix, Leviathan''s Hide, Bloodforge, Tyrfing, Stone of Binding.'
   slot_scores:
     Berserker's Shield:
       total: 0.54
@@ -193,8 +193,8 @@ builds:
     Guard, Amanita Charm, Berserker''s Shield, Shield Splitter, Runeforged Hammer,
     Breastplate of Valor, The Reaper, Kinetic Cuirass, Oni Hunter''s Garb, Transcendence,
     Arondight, Avenging Blade, Shield of the Phoenix, Screeching Gargoyle, Midgardian
-    Mail, Tekko-Kagi, Yogi''s Necklace, Eye of Providence, Erosion, Tyrfing, Leviathan''s
-    Hide, Bloodforge, Stone of Binding, Wyrmskin Hide.'
+    Mail, Tekko-Kagi, Yogi''s Necklace, Eye of Providence, Erosion, Leviathan''s Hide,
+    Tyrfing, Bloodforge, Stone of Binding, Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -412,7 +412,7 @@ builds:
     for this god: The Reaper, Avenging Blade, Amanita Charm, Berserker''s Shield,
     Shield Splitter, Stone of Binding, Runeforged Hammer, Genji''s Guard, Screeching
     Gargoyle, Kinetic Cuirass, Void Stone, Void Shield, Tekko-Kagi, Breastplate of
-    Valor, Pendulum Blade, Oni Hunter''s Garb, Toxic Blade, Midgardian Mail, Erosion,
+    Valor, Pendulum Blade, Oni Hunter''s Garb, Midgardian Mail, Toxic Blade, Erosion,
     Arondight, Eye of Providence, Leviathan''s Hide, Draconic Scale.'
   slot_scores:
     Avenging Blade:
@@ -632,8 +632,8 @@ builds:
     Underrated for this god: Amanita Charm, The Reaper, Shield Splitter, Runeforged
     Hammer, Berserker''s Shield, Kinetic Cuirass, Genji''s Guard, Avenging Blade,
     Breastplate of Valor, Oni Hunter''s Garb, Erosion, Wyrmskin Hide, Eye of Providence,
-    Midgardian Mail, Golden Blade, Tekko-Kagi, Arondight, Draconic Scale, Sanguine
-    Lash, Shield of the Phoenix, Leviathan''s Hide, Tyrfing, Bloodforge, Stone of
+    Midgardian Mail, Tekko-Kagi, Arondight, Draconic Scale, Golden Blade, Sanguine
+    Lash, Shield of the Phoenix, Leviathan''s Hide, Bloodforge, Tyrfing, Stone of
     Binding.'
   slot_scores:
     Berserker's Shield:

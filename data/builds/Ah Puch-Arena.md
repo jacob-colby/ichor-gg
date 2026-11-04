@@ -470,8 +470,8 @@ builds:
   - Bragi's Harp
   - Soul Gem
   flex_slots:
+  - Golden Blade
   - Toxic Blade
-  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -489,17 +489,17 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.62
+      total: 0.6
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.73
     Toxic Blade:
-      total: 0.62
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.73
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.67
@@ -507,11 +507,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.63
+      total: 0.61
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.73
     Bragi's Harp:
       total: 0.61
       efficiency: 0.45

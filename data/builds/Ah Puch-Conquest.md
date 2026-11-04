@@ -619,7 +619,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Titan's Bane
+  - Tyrfing
   - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
@@ -635,14 +635,14 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Tyrfing, Titan''s
-    Bane, Soul Gem, Hydra''s Lament, Death Metal, Bragi''s Harp, The Crusher, Spear
-    of the Magus, Silverbranch Bow, Golden Blade, Heartseeker, Lernaean Bow, The Reaper,
+    win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane,
+    Tyrfing, Soul Gem, Hydra''s Lament, Death Metal, Bragi''s Harp, The Crusher, Spear
+    of the Magus, Heartseeker, Lernaean Bow, Silverbranch Bow, Golden Blade, The Reaper,
     Nimble Ring, Gluttonous Grimoire, Arondight, Doom Orb, Lotus Sickle, Ancient Signet,
-    Dominance, Toxic Blade, Chronos'' Pendant, Dreamer''s Idol, Pendulum Blade, Avatar''s
-    Parashu, Bracer of The Abyss, Transcendence, Runeforged Hammer, Riptalon, Gem
-    of Focus, The Cosmic Horror, Eros'' Bow, Heartwood Charm, Spear of Desolation,
-    Blood-Bound Book, Polynomicon, Avenging Blade.'
+    Dominance, Chronos'' Pendant, Dreamer''s Idol, Pendulum Blade, Toxic Blade, Avatar''s
+    Parashu, Bracer of The Abyss, Transcendence, Runeforged Hammer, Gem of Focus,
+    The Cosmic Horror, Eros'' Bow, Heartwood Charm, Spear of Desolation, Blood-Bound
+    Book, Polynomicon, Riptalon, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.57
@@ -651,11 +651,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.53
+      total: 0.52
       efficiency: 0.5
       win: 0.53
       pick: 0.0
-      fit: 0.77
+      fit: 0.73
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.55
@@ -711,12 +711,12 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Titan''s
     Bane, Spear of the Magus, Death Metal, Hydra''s Lament, Gluttonous Grimoire, The
-    Crusher, Doom Orb, Heartseeker, Lotus Sickle, The Reaper, Tyrfing, Dreamer''s
-    Idol, Chronos'' Pendant, Ancient Signet, Arondight, Tekko-Kagi, Bragi''s Harp,
-    Pendulum Blade, Spear of Desolation, The Cosmic Horror, Gem of Focus, Heartwood
-    Charm, Avatar''s Parashu, Blood-Bound Book, Polynomicon, Transcendence, Runeforged
-    Hammer, Golden Blade, Triton''s Conch, Silverbranch Bow, Totem of Death, Avenging
-    Blade, Divine Ruin, Jade Scepter, Toxic Blade, Book of Thoth, Soul Reaver.'
+    Crusher, Doom Orb, Heartseeker, Lotus Sickle, The Reaper, Dreamer''s Idol, Chronos''
+    Pendant, Ancient Signet, Arondight, Tyrfing, Tekko-Kagi, Bragi''s Harp, Pendulum
+    Blade, Spear of Desolation, The Cosmic Horror, Gem of Focus, Heartwood Charm,
+    Avatar''s Parashu, Blood-Bound Book, Polynomicon, Transcendence, Runeforged Hammer,
+    Triton''s Conch, Totem of Death, Golden Blade, Avenging Blade, Divine Ruin, Jade
+    Scepter, Silverbranch Bow, Shield Splitter, Book of Thoth, Soul Reaver.'
   slot_scores:
     Book of Thoth:
       total: 0.43

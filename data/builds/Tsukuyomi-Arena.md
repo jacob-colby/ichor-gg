@@ -11,7 +11,7 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
+  - The Reaper
   flex_slots:
   - Golden Blade
   - Jotunn's Revenge
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
@@ -44,11 +44,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.62
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -56,17 +56,17 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
+      fit: 0.69
+    The Reaper:
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.69
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -229,17 +229,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tekko-Kagi
-  - Silverbranch Bow
   - Titan's Bane
+  - Heartseeker
   - Soul Gem
   flex_slots:
   - Titan's Bane
-  - Silverbranch Bow
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.66
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.88
+      fit: 0.86
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.67
@@ -311,18 +311,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Silverbranch Bow:
-      total: 0.6
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Titan's Bane:
       total: 0.6
       efficiency: 0.54
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Heartseeker:
+      total: 0.6
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
     Soul Gem:
       total: 0.67
       efficiency: 0.53
@@ -424,11 +424,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.59
     Lotus Sickle:
       total: 0.51
       efficiency: 0.57
@@ -535,8 +535,8 @@ builds:
   - Bragi's Harp
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
   - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -560,11 +560,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.57
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -598,7 +598,7 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Riptalon
+  - The Reaper
   flex_slots:
   - Golden Blade
   - Jotunn's Revenge
@@ -619,11 +619,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
@@ -631,11 +631,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.62
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -643,17 +643,17 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
+      fit: 0.69
+    The Reaper:
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -662,7 +662,7 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Tyrfing
-  - Riptalon
+  - The Reaper
   - Heartseeker
   flex_slots:
   - Golden Blade
@@ -684,11 +684,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.6
+      total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Lernaean Bow:
       total: 0.6
       efficiency: 0.51
@@ -696,23 +696,23 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.62
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.75
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
+      fit: 0.69
+    The Reaper:
+      total: 0.6
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.69
     Heartseeker:
       total: 0.54
       efficiency: 0.43

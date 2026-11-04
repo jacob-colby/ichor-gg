@@ -67,11 +67,16 @@ def test_medusa_reproduces_the_hand_computation(frozen_items):
                                   "Strength": 25.0, "Penetration %": 20.0,
                                   "Lifesteal %": 7.5}
 
+    # Re-derived by hand on 2026-11-04 with Viper Shot in the rotation (the
+    # per-ability label rule reads its `Damage Scaling Per Tick:` line): the
+    # basic column is unchanged and each ability column gains exactly
+    # (30 + 0.08 Str + 0.08 Int) x mitigation / cooldown. Derivation in the
+    # module docstring.
     expect = [
-        (community, 70, 352.8, 35.9, 388.6),
-        (community, 170, 233.2, 23.7, 256.9),
-        (ours, 70, 242.4, 72.4, 314.8),
-        (ours, 170, 150.8, 45.1, 195.9),
+        (community, 70, 352.8, 37.9, 390.7),
+        (community, 170, 233.2, 25.1, 258.3),
+        (ours, 70, 242.4, 77.0, 319.4),
+        (ours, 170, 150.8, 47.9, 198.7),
     ]
     for prof, prot, basic, ability, total in expect:
         assert prof["basic_dps"][prot] == pytest.approx(basic, abs=0.05)
@@ -79,13 +84,16 @@ def test_medusa_reproduces_the_hand_computation(frozen_items):
         assert prof["total_dps"][prot] == pytest.approx(total, abs=0.1)
 
 
-def test_medusa_viper_shot_is_skipped_by_the_shared_parser_not_by_special_case():
-    """The hand computation excluded Viper Shot. So does the module — because
-    its scaling line reads `Damage Scaling Per Tick:`, which
-    `damage_value.ability_damage_components` does not accept, and an ability
-    with ranks and no scaling is skipped everywhere. No Medusa-shaped rule."""
+def test_medusa_viper_shot_is_read_by_the_shared_parser_not_by_special_case():
+    """The 2026-08-21 hand computation excluded Viper Shot because the shared
+    parser skipped its `Damage Scaling Per Tick:` line. Since 2026-11-04 the
+    label rule reads it, everywhere — still no Medusa-shaped rule — as one
+    tick per cast (`damage_value`'s DoT limit)."""
     counted, dropped = bq.ability_rotation(_frozen_god("Medusa"))
-    assert [a["name"] for a in counted] == ["Acid Spray", "Lacerate", "Petrify"]
+    assert [a["name"] for a in counted] == ["Viper Shot", "Acid Spray", "Lacerate", "Petrify"]
+    viper = counted[0]
+    assert (viper["base"], viper["scaling"], viper["cooldown"]) == (
+        30.0, {"Strength": 0.08, "Intelligence": 0.08}, 10.0)
     assert dropped == []
     code = inspect.getsource(bq).split('"""', 2)[2]   # past the module docstring
     assert "Viper" not in code
@@ -93,7 +101,7 @@ def test_medusa_viper_shot_is_skipped_by_the_shared_parser_not_by_special_case()
 
 def test_medusa_per_1000g_divides_by_the_builds_own_gold(frozen_items):
     ours = bq.profile(_frozen_god("Medusa"), MEDUSA_OURS, frozen_items)
-    assert ours["per_1000g"]["total_dps"][70] == pytest.approx(314.8 / 15.4, abs=0.05)
+    assert ours["per_1000g"]["total_dps"][70] == pytest.approx(319.4 / 15.4, abs=0.05)
     assert ours["per_1000g"]["ehp_physical"] == pytest.approx(ours["ehp_physical"] / 15.4)
 
 

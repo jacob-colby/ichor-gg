@@ -461,6 +461,136 @@ builds:
       fit: 1.0
   starter: *id001
 - source: suggested
+  archetype: strength
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - Tyrfing
+  - Bragi's Harp
+  - Soul Gem
+  flex_slots:
+  - Lernaean Bow
+  - Golden Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
+    — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Lernaean Bow:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Jotunn's Revenge:
+      total: 0.66
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Tyrfing:
+      total: 0.58
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Bragi's Harp:
+      total: 0.61
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Soul Gem:
+      total: 0.71
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.9
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Transcendence
+  - Book of Thoth
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.68
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Transcendence:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Spear of Desolation:
+      total: 0.64
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Rod of Tahuti:
+      total: 0.71
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Spear of Desolation

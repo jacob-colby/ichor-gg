@@ -612,6 +612,158 @@ builds:
   - Rod of Tahuti
   starter: *id001
 - source: suggested
+  archetype: strength
+  slot_order:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Spear of Desolation
+  - Transcendence
+  - Rod of Tahuti
+  - Tekko-Kagi
+  flex_slots:
+  - Book of Thoth
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
+    win/pick). Underrated for this god: Jotunn''s Revenge, Tekko-Kagi, Titan''s Bane,
+    Soul Gem, Tyrfing, Hydra''s Lament, Bragi''s Harp, Death Metal, The Crusher, Spear
+    of the Magus, Heartseeker, Lernaean Bow, The Reaper, Nimble Ring, Gluttonous Grimoire,
+    Arondight, Silverbranch Bow, Golden Blade, Doom Orb, Lotus Sickle, Dominance,
+    Ancient Signet, Dreamer''s Idol, Pendulum Blade, Chronos'' Pendant, Avatar''s
+    Parashu, Transcendence, Bracer of The Abyss, Toxic Blade, Runeforged Hammer, The
+    Cosmic Horror, Eros'' Bow, Heartwood Charm, Blood-Bound Book, Avenging Blade,
+    Riptalon.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.49
+      win: 0.61
+      pick: 0.25
+      fit: 0.22
+    Jotunn's Revenge:
+      total: 0.58
+      efficiency: 0.67
+      win: 0.56
+      pick: 0.0
+      fit: 0.65
+    Spear of Desolation:
+      total: 0.56
+      efficiency: 0.59
+      win: 0.57
+      pick: 0.21
+      fit: 0.54
+    Transcendence:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.33
+    Rod of Tahuti:
+      total: 0.63
+      efficiency: 0.86
+      win: 0.53
+      pick: 0.43
+      fit: 0.43
+    Tekko-Kagi:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.56
+      pick: 0.0
+      fit: 0.67
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Spear of Desolation
+  - Transcendence
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Book of Thoth
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Soul Gem, Titan''s
+    Bane, Spear of the Magus, Death Metal, Hydra''s Lament, Gluttonous Grimoire, The
+    Crusher, Doom Orb, Heartseeker, Lotus Sickle, The Reaper, Dreamer''s Idol, Ancient
+    Signet, Chronos'' Pendant, Arondight, Tekko-Kagi, Bragi''s Harp, Pendulum Blade,
+    The Cosmic Horror, Tyrfing, Avatar''s Parashu, Heartwood Charm, Blood-Bound Book,
+    Transcendence, Runeforged Hammer, Triton''s Conch, Soul Reaver, Totem of Death,
+    Avenging Blade, Divine Ruin, Jade Scepter, Shield Splitter, Eye of the Storm,
+    Golden Blade.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.61
+      pick: 0.25
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.59
+      efficiency: 0.67
+      win: 0.56
+      pick: 0.0
+      fit: 0.69
+    Spear of Desolation:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.57
+      pick: 0.21
+      fit: 0.69
+    Transcendence:
+      total: 0.48
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.31
+    Rod of Tahuti:
+      total: 0.65
+      efficiency: 0.86
+      win: 0.53
+      pick: 0.43
+      fit: 0.56
+    Soul Gem:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.79
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Spear of Desolation

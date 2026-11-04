@@ -339,13 +339,18 @@ def test_frozen_medusa_reproduces_the_worked_example():
     # toy target carries no enemy, and no other item here reacts to a takedown).
     assert s.stat("Strength") == pytest.approx(145.0)
     assert s.attacks_per_second() == pytest.approx(2.6586, abs=1e-4)
-    assert round(s.total()) == 8854
+    # 8854 until 2026-11-04, when the per-ability label rule put Viper Shot
+    # (`Damage Scaling Per Tick:`) into the rotation. Re-derived by hand: one
+    # cast in the 10s window, raw 30 + 8% x 145 Strength = 41.6, through
+    # 70 x (1 - 0.20) - 5 = 51 protection -> x 100/151 = 27.55. The ability
+    # channel moves by exactly that; attack and proc are unchanged to the digit.
+    assert round(s.total()) == 8882
     # The active on (2026-11-02): pressed at t=0, +90 Attack Damage and +40%
     # attack speed for 6 attacks, 15s cooldown, refreshed by the one kill.
     on = sbs.Sim(god, six, items, t)
     on.run_window()
     assert on.kills == 1 and on.assists == 1
-    assert round(on.total()) == 10445
+    assert round(on.total()) == 10473          # 10445 + the same 27.55
 
 
 # ── Invariants over the live data ─────────────────────────────────────────

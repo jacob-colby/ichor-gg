@@ -26,8 +26,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -223,8 +223,8 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -461,6 +461,136 @@ builds:
       fit: 1.0
   starter: *id001
 - source: suggested
+  archetype: strength
+  slot_order:
+  - Lernaean Bow
+  - Jotunn's Revenge
+  - The Reaper
+  - Tekko-Kagi
+  - Titan's Bane
+  - Heartseeker
+  flex_slots:
+  - Lernaean Bow
+  - Tekko-Kagi
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: Off-type Strength build — this kit scales on it (efficiency + fit). Arena
+    — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.62
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Jotunn's Revenge:
+      total: 0.72
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    The Reaper:
+      total: 0.7
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Tekko-Kagi:
+      total: 0.62
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Titan's Bane:
+      total: 0.64
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Heartseeker:
+      total: 0.64
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.84
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Book of Thoth
+  - Jotunn's Revenge
+  - Transcendence
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Transcendence
+  - Book of Thoth
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Book of Thoth:
+      total: 0.4
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.68
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Transcendence:
+      total: 0.42
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
+    Spear of Desolation:
+      total: 0.64
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Rod of Tahuti:
+      total: 0.71
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  starter: *id001
+- source: suggested
   archetype: model
   slot_order:
   - Jotunn's Revenge
@@ -483,8 +613,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:

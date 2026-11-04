@@ -10,11 +10,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Berserker's Shield
-  - Tyrfing
+  - Jotunn's Revenge
   - The Reaper
   flex_slots:
   - Lernaean Bow
-  - Tyrfing
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Lernaean Bow:
       total: 0.53
       efficiency: 0.51
@@ -48,19 +48,19 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.7
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.37
-    Tyrfing:
-      total: 0.51
-      efficiency: 0.5
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.34
     The Reaper:
       total: 0.6
       efficiency: 0.56
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.5
     Toxic Blade:
       total: 0.52
       efficiency: 0.48
@@ -164,17 +164,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Toxic Blade:
       total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Avenging Blade:
       total: 0.58
       efficiency: 0.49
@@ -245,7 +245,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.78
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Golden Blade
   - Toxic Blade
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
   - Shield of the Phoenix
+  - Hydra's Lament
   flex_slots:
   - Genji's Guard
-  - Golden Blade
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -358,18 +358,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.49
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.58
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.66
+    Hydra's Lament:
+      total: 0.49
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
   starter: *id001
 - source: suggested
   archetype: model
@@ -402,11 +402,11 @@ builds:
   - Lernaean Bow
   - Toxic Blade
   - Berserker's Shield
-  - Tyrfing
+  - Jotunn's Revenge
   - The Reaper
   flex_slots:
   - Lernaean Bow
-  - Tyrfing
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -424,11 +424,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Lernaean Bow:
       total: 0.53
       efficiency: 0.51
@@ -440,19 +440,19 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.7
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
       win: 0.5
       pick: 0.0
       fit: 0.37
-    Tyrfing:
-      total: 0.51
-      efficiency: 0.5
+    Jotunn's Revenge:
+      total: 0.5
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.34
     The Reaper:
       total: 0.6
       efficiency: 0.56

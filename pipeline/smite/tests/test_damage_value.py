@@ -34,11 +34,15 @@ def test_a_mage_and_an_assassin_value_opposite_stats():
 
 
 def test_a_god_whose_kit_did_not_parse_gets_no_fabricated_profile():
-    """14 of 87 gods, mostly stance gods whose second form is a page we never
-    fetch. An empty dict means "use the role table" — inventing a profile from
-    one ability would be worse than admitting the gap."""
+    """An empty dict means "use the role table" — inventing a profile from
+    one ability would be worse than admitting the gap. Once 14 of 87 gods; 10
+    since the label rule went per-ability (2026-11-04) and none on the live
+    roster since then, so the shape is pinned on a synthetic one-ability kit."""
     assert dv.stat_weights({"abilities": []}) == {}
-    assert dv.stat_weights(_god("Anubis")) == {}          # 0 usable abilities
+    one = {"abilities": [{"slot": "1st Ability", "name": "only",
+                          "details": ["Damage: 10", "Damage Scaling: 50% Strength"]}]}
+    assert dv.usable_ability_count(one) == 1
+    assert dv.stat_weights(one) == {}                    # below min_abilities
     assert dv.blend_stat_values({"abilities": []}, {"Strength": 1.0}, 1.0) == {"Strength": 1.0}
 
 
@@ -89,14 +93,49 @@ def test_a_kit_with_only_labelled_lines_reads_each_rank_with_its_own_scaling():
     assert parsed["ult"]["is_ultimate"]
 
 
-def test_the_label_fallback_never_touches_a_kit_the_strict_rule_reads():
-    """One strict ability is enough to switch the fallback off for the whole
-    kit, so the 48 gods that parse SOMETHING are exactly as they were — that
-    wider change is its own model change (STATE.md §5)."""
+def test_labelled_abilities_read_beside_strict_ones_and_strict_wins_per_ability():
+    """The label rule is per ABILITY, not a whole-kit fallback (STATE.md §5,
+    2026-11-04): a kit with one strict ability still reads its labelled ones.
+    On the old whole-kit fallback this kit read `strict` alone — 70 abilities
+    on 48 gods, Medusa's Viper Shot among them, were dropped that way. Within
+    one ability the strict line wins, so nothing the strict rule read moves."""
     kit_ = {"abilities": _LABELLED_KIT["abilities"] + [
         {"slot": "Passive", "name": "strict",
-         "details": ["Damage: 10 | 20", "Damage Scaling: 10% Strength"]}]}
-    assert [c["name"] for c in dv.ability_damage_components(kit_)] == ["strict"]
+         "details": ["Damage: 10 | 20", "Damage Scaling: 10% Strength"]},
+        {"slot": "4th Ability", "name": "both",
+         "details": ["Initial Damage: 5", "Initial Damage Scaling: 99% Strength",
+                     "Damage: 7", "Damage Scaling: 30% Intelligence"]}]}
+    parsed = {c["name"]: c for c in dv.ability_damage_components(kit_)}
+    assert set(parsed) == {"chain", "channel", "ult", "strict", "both"}
+    assert parsed["strict"]["scaling"] == {"Strength": 0.10}
+    assert parsed["both"]["ranks"] == [5.0]                    # strict: first rank line
+    assert parsed["both"]["scaling"] == {"Intelligence": 0.30}  # strict: `Damage Scaling:`
+
+
+def test_a_prefix_that_drops_damage_from_its_scaling_label_pairs_too():
+    """Aladdin's grammar: `Landing Damage:` with `Landing Scaling:` (and the
+    wiki's stray `Dash Scaling::`). A bare `Damage:` never pairs with a bare
+    `Scaling:` this way — only a prefixed label does."""
+    kit_ = {"abilities": [
+        {"slot": "1st Ability", "name": "land",
+         "details": ["Landing Damage: 60 | 115", "Landing Scaling: 70% Intelligence + 50% Strength",
+                     "Genie Scaling: 20% Intelligence"]},
+        {"slot": "2nd Ability", "name": "dash",
+         "details": ["Dash Damage: 70", "Dash Scaling:: 55% Intelligence"]},
+        {"slot": "3rd Ability", "name": "bare",
+         "details": ["Damage: 10", "Scaling: 50% Strength"]}]}
+    parsed = {c["name"]: c for c in dv.ability_damage_components(kit_)}
+    assert set(parsed) == {"land", "dash"}
+    assert parsed["land"]["scaling"] == {"Intelligence": 0.70, "Strength": 0.50}
+    assert parsed["dash"]["scaling"] == {"Intelligence": 0.55}
+
+
+def test_medusa_reads_viper_shot_on_the_live_roster():
+    """The worked example STATE.md §5 named. Its scaling line is `Damage
+    Scaling Per Tick:`; it is read as one tick per cast (the DoT limit)."""
+    parsed = {c["name"]: c for c in dv.ability_damage_components(_god("Medusa"))}
+    assert "Viper Shot" in parsed
+    assert parsed["Viper Shot"]["scaling"] == {"Strength": 0.08, "Intelligence": 0.08}
 
 
 def test_no_god_on_the_live_roster_parses_zero_damaging_abilities():

@@ -10,7 +10,7 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Riptalon
+  - The Reaper
   - Soul Gem
   flex_slots:
   - Lernaean Bow
@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.55
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Riptalon:
-      total: 0.6
-      efficiency: 0.46
+    The Reaper:
+      total: 0.59
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.62
     Soul Gem:
       total: 0.69
       efficiency: 0.57
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.5
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -294,17 +294,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.5
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -489,11 +489,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -532,7 +532,7 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
-  - Riptalon
+  - The Reaper
   - Soul Gem
   flex_slots:
   - Lernaean Bow
@@ -560,11 +560,11 @@ builds:
       pick: 0.0
       fit: 0.55
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -577,12 +577,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Riptalon:
-      total: 0.6
-      efficiency: 0.46
+    The Reaper:
+      total: 0.59
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.62
     Soul Gem:
       total: 0.69
       efficiency: 0.57
@@ -593,15 +593,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Golden Blade
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Golden Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -618,18 +618,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Death Metal:
       total: 0.55
       efficiency: 0.63
@@ -751,17 +751,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.5
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.63
     Death Metal:
       total: 0.54
       efficiency: 0.63
@@ -817,17 +817,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.48
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.44
     Toxic Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -883,17 +883,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.47
+      fit: 0.45
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.56
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
@@ -955,11 +955,11 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -1081,11 +1081,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -1121,15 +1121,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Golden Blade
   - Toxic Blade
+  - Jotunn's Revenge
   - Death Metal
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Golden Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1146,18 +1146,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Golden Blade:
-      total: 0.52
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
     Death Metal:
       total: 0.55
       efficiency: 0.63

@@ -494,8 +494,8 @@ builds:
     Shard, Spear of Desolation, Tyrfing, The Crusher, Oni Hunter''s Garb, Helm of
     Radiance, Lernaean Bow, Erosion, Avenging Blade, Eye of Providence, Heartseeker,
     Stone of Binding, Helm of Darkness, Shield of the Phoenix, Midgardian Mail, Arondight,
-    Spear of the Magus, Toxic Blade, Death Metal, Magi''s Cloak, Pharaoh''s Curse,
-    Silverbranch Bow, Screeching Gargoyle.'
+    Spear of the Magus, Death Metal, Magi''s Cloak, Toxic Blade, Pharaoh''s Curse,
+    Blood-Bound Book, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.53

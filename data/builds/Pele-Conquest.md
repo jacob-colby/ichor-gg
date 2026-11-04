@@ -117,9 +117,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Hydra''s Lament, Pendulum Blade, Arondight, Tekko-Kagi, Tyrfing, Transcendence,
-    Runeforged Hammer, Golden Blade, Avenging Blade, Silverbranch Bow, Shield Splitter,
-    Eye of the Storm, Dominance, Toxic Blade, Bloodforge, Lernaean Bow, Oath-Sworn
-    Spear, Riptalon, Damaru, Genji''s Guard, Rage, Breastplate of Valor, Musashi''s
+    Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade,
+    Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Damaru,
+    Toxic Blade, Genji''s Guard, Riptalon, Rage, Breastplate of Valor, Musashi''s
     Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
@@ -192,10 +192,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Hydra''s
-    Lament, Arondight, Transcendence, Tyrfing, Tekko-Kagi, Pendulum Blade, Runeforged
+    Lament, Arondight, Transcendence, Tekko-Kagi, Pendulum Blade, Tyrfing, Runeforged
     Hammer, Dominance, Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s
-    Guard, Golden Blade, Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Silverbranch
-    Bow, Chandra''s Grace, Oath-Sworn Spear, Toxic Blade, Yogi''s Necklace, Rage.'
+    Guard, Bloodforge, Lernaean Bow, Damaru, Breastplate of Valor, Golden Blade, Chandra''s
+    Grace, Oath-Sworn Spear, Silverbranch Bow, Yogi''s Necklace, Toxic Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.58
@@ -267,10 +267,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Hydra''s Lament, Pendulum Blade, Arondight, Tekko-Kagi, Tyrfing, Transcendence,
-    Runeforged Hammer, Silverbranch Bow, Damaru, Toxic Blade, Avenging Blade, Genji''s
-    Guard, Shield Splitter, Eye of the Storm, Golden Blade, Dominance, Breastplate
-    of Valor, Riptalon, Bloodforge, Lernaean Bow, Chandra''s Grace, Oath-Sworn Spear,
-    Eye of Erebus.'
+    Runeforged Hammer, Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield
+    Splitter, Eye of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge,
+    Lernaean Bow, Golden Blade, Chandra''s Grace, Riptalon, Oath-Sworn Spear, Eye
+    of Erebus.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.59
@@ -413,10 +413,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Tekko-Kagi, Pendulum Blade, Hydra''s Lament, Avenging Blade, Arondight,
-    Silverbranch Bow, Tyrfing, Toxic Blade, Oath-Sworn Spear, Transcendence, Riptalon,
-    Runeforged Hammer, Golden Blade, Shield Splitter, Eye of the Storm, Dominance,
-    Bloodforge, Lernaean Bow, Screeching Gargoyle, Damaru, Genji''s Guard, Breastplate
-    of Valor, Chandra''s Grace.'
+    Silverbranch Bow, Tyrfing, Toxic Blade, Oath-Sworn Spear, Transcendence, Runeforged
+    Hammer, Riptalon, Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean
+    Bow, Golden Blade, Screeching Gargoyle, Damaru, Genji''s Guard, Breastplate of
+    Valor, Chandra''s Grace.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62
@@ -560,11 +560,11 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Arondight, Pendulum
-    Blade, Damaru, Genji''s Guard, Breastplate of Valor, Chandra''s Grace, Tyrfing,
-    Tekko-Kagi, Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
-    Silverbranch Bow, Freya''s Tears, Avenging Blade, Shield Splitter, Shield of the
-    Phoenix, Toxic Blade, Eye of the Storm, Golden Blade, Dominance, Bloodforge, Lernaean
-    Bow.'
+    Blade, Damaru, Genji''s Guard, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
+    Tyrfing, Transcendence, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer,
+    Freya''s Tears, Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of
+    the Storm, Silverbranch Bow, Dominance, Bloodforge, Toxic Blade, Lernaean Bow,
+    Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.6
@@ -634,10 +634,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Hydra''s Lament, Pendulum Blade, Arondight, Tekko-Kagi,
-    Tyrfing, Transcendence, Runeforged Hammer, Golden Blade, Avenging Blade, Silverbranch
-    Bow, Shield Splitter, Eye of the Storm, Dominance, Toxic Blade, Bloodforge, Lernaean
-    Bow, Oath-Sworn Spear, Riptalon, Damaru, Genji''s Guard, Rage, Breastplate of
-    Valor, Musashi''s Dual Swords.'
+    Tyrfing, Transcendence, Runeforged Hammer, Avenging Blade, Shield Splitter, Eye
+    of the Storm, Golden Blade, Dominance, Bloodforge, Lernaean Bow, Silverbranch
+    Bow, Oath-Sworn Spear, Damaru, Toxic Blade, Genji''s Guard, Riptalon, Rage, Breastplate
+    of Valor, Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.62

@@ -298,7 +298,7 @@ builds:
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.43
     Toxic Blade:
       total: 0.55
       efficiency: 0.48
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67

@@ -11,7 +11,7 @@ builds:
   - Tyrfing
   - Death Metal
   - Tekko-Kagi
-  - Riptalon
+  - Soul Gem
   flex_slots:
   - Tekko-Kagi
   - Death Metal
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -44,11 +44,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -61,12 +61,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
+    Soul Gem:
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.69
   starter: &id001
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -229,17 +229,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.51
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.68
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
+      total: 0.65
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.84
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.67
@@ -424,11 +424,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Lotus Sickle:
       total: 0.51
       efficiency: 0.57
@@ -535,8 +535,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -554,11 +554,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.55
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -598,7 +598,7 @@ builds:
   - Tyrfing
   - Death Metal
   - Tekko-Kagi
-  - Riptalon
+  - Soul Gem
   flex_slots:
   - Tekko-Kagi
   - Death Metal
@@ -619,11 +619,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -631,11 +631,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Death Metal:
       total: 0.57
       efficiency: 0.63
@@ -648,12 +648,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
+    Soul Gem:
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.69
   starter: *id001
 - source: suggested
   archetype: hybrid
@@ -662,8 +662,8 @@ builds:
   - Jotunn's Revenge
   - Tyrfing
   - Tekko-Kagi
-  - Riptalon
   - Heartseeker
+  - Soul Gem
   flex_slots:
   - Tekko-Kagi
   - Heartseeker
@@ -684,11 +684,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.6
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -696,29 +696,29 @@ builds:
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.61
+      total: 0.59
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.69
     Tekko-Kagi:
       total: 0.57
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Riptalon:
-      total: 0.62
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.83
     Heartseeker:
       total: 0.54
       efficiency: 0.43
       win: 0.5
       pick: 0.0
       fit: 0.64
+    Soul Gem:
+      total: 0.61
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
   swaps:
   - added: Heartseeker
     removed: Death Metal

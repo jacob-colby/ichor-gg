@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -56,11 +56,11 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.72
     Soul Gem:
       total: 0.7
       efficiency: 0.57
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.5
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -294,17 +294,17 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.48
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.69
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -489,11 +489,11 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -524,6 +524,136 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.91
+  starter: *id001
+- source: suggested
+  archetype: intelligence
+  slot_order:
+  - Jotunn's Revenge
+  - Death Metal
+  - Bragi's Harp
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Spear of Desolation
+  - Jotunn's Revenge
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
+    Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+    Death Metal:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Spear of Desolation:
+      total: 0.52
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Rod of Tahuti:
+      total: 0.6
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+  starter: *id001
+- source: suggested
+  archetype: str-int
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Death Metal
+  - Bragi's Harp
+  - Soul Gem
+  flex_slots:
+  - Lernaean Bow
+  - Toxic Blade
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Jotunn's Revenge:
+      total: 0.54
+      efficiency: 0.67
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Death Metal:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Bragi's Harp:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
   starter: *id001
 - source: suggested
   archetype: model
@@ -560,11 +690,11 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -578,11 +708,11 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.72
     Soul Gem:
       total: 0.7
       efficiency: 0.57
@@ -625,11 +755,11 @@ builds:
       pick: 0.0
       fit: 0.3
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.61
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -643,11 +773,11 @@ builds:
       pick: 0.0
       fit: 0.47
     Riptalon:
-      total: 0.6
+      total: 0.59
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.72
     Soul Gem:
       total: 0.7
       efficiency: 0.57

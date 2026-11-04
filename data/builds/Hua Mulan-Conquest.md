@@ -117,9 +117,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Shield Splitter,
-    Jotunn''s Revenge, Golden Blade, Breastplate of Valor, Hydra''s Lament, Erosion,
-    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, The Reaper, Tyrfing, Shield
-    of the Phoenix, Stone of Binding, Tekko-Kagi, Midgardian Mail, Titan''s Bane,
+    Jotunn''s Revenge, Breastplate of Valor, Golden Blade, Hydra''s Lament, Erosion,
+    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, The Reaper, Shield of the
+    Phoenix, Stone of Binding, Tekko-Kagi, Tyrfing, Midgardian Mail, Titan''s Bane,
     Magi''s Cloak, Avenging Blade, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow,
     Screeching Gargoyle, Leviathan''s Hide, Runeforged Hammer.'
   slot_scores:
@@ -194,10 +194,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Kinetic Cuirass, The Reaper, Shield
     of the Phoenix, Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather,
-    Yogi''s Necklace, Bloodforge, Breastplate of Valor, Riptalon, Hydra''s Lament,
-    Oni Hunter''s Garb, Chandra''s Grace, Erosion, Tyrfing, Eye of Providence, Avenging
-    Blade, Tekko-Kagi, Draconic Scale, Midgardian Mail, Titan''s Bane, Regrowth Striders,
-    Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer.'
+    Yogi''s Necklace, Bloodforge, Breastplate of Valor, Hydra''s Lament, Riptalon,
+    Oni Hunter''s Garb, Chandra''s Grace, Erosion, Eye of Providence, Avenging Blade,
+    Tekko-Kagi, Tyrfing, Draconic Scale, Midgardian Mail, Titan''s Bane, Regrowth
+    Striders, Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
       total: 0.57
@@ -269,8 +269,8 @@ builds:
     for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
     Stone of Binding, Avenging Blade, Screeching Gargoyle, The Reaper, Shield Splitter,
     Titan''s Bane, Tekko-Kagi, Void Stone, Void Shield, Breastplate of Valor, The
-    Crusher, Toxic Blade, Heartseeker, Hydra''s Lament, Silverbranch Bow, Golden Blade,
-    Oni Hunter''s Garb, Erosion, Eye of Providence, Riptalon, Tyrfing, Draconic Scale,
+    Crusher, Heartseeker, Toxic Blade, Hydra''s Lament, Silverbranch Bow, Golden Blade,
+    Oni Hunter''s Garb, Erosion, Eye of Providence, Riptalon, Draconic Scale, Tyrfing,
     Midgardian Mail, Runeforged Hammer.'
   slot_scores:
     Stone of Binding:
@@ -415,9 +415,9 @@ builds:
     + fit + win/pick). Underrated for this god: Berserker''s Shield, Gladiator''s
     Shield, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Breastplate of Valor,
     Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching Gargoyle,
-    Arondight, Oni Hunter''s Garb, Prophetic Cloak, Erosion, Eye of Providence, Golden
-    Blade, Stone of Binding, Draconic Scale, Midgardian Mail, Magi''s Cloak, Leviathan''s
-    Hide, Mantle Of Discord, The Reaper, Pharaoh''s Curse, Tyrfing, Titan''s Bane,
+    Arondight, Oni Hunter''s Garb, Prophetic Cloak, Erosion, Eye of Providence, Stone
+    of Binding, Draconic Scale, Golden Blade, Midgardian Mail, Magi''s Cloak, Leviathan''s
+    Hide, Mantle Of Discord, The Reaper, Pharaoh''s Curse, Titan''s Bane, Tekko-Kagi,
     Runeforged Hammer.'
   slot_scores:
     Berserker's Shield:
@@ -483,13 +483,13 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Amanita Charm, Shield Splitter,
-    Jotunn''s Revenge, Kinetic Cuirass, Runeforged Hammer, Golden Blade, Breastplate
-    of Valor, Hydra''s Lament, Erosion, Eye of Providence, Oni Hunter''s Garb, Draconic
-    Scale, The Reaper, Tyrfing, Shield of the Phoenix, Stone of Binding, Tekko-Kagi,
+    Jotunn''s Revenge, Kinetic Cuirass, Runeforged Hammer, Breastplate of Valor, Golden
+    Blade, Hydra''s Lament, Erosion, Eye of Providence, Oni Hunter''s Garb, Draconic
+    Scale, The Reaper, Shield of the Phoenix, Stone of Binding, Tekko-Kagi, Tyrfing,
     Midgardian Mail, Titan''s Bane, Magi''s Cloak, Avenging Blade, Pharaoh''s Curse,
     Mantle Of Discord, Lernaean Bow, Screeching Gargoyle, Leviathan''s Hide.'
   slot_scores:

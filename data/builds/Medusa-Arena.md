@@ -298,7 +298,7 @@ builds:
       efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Toxic Blade:
       total: 0.56
       efficiency: 0.48

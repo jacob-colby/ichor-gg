@@ -488,12 +488,12 @@ builds:
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
     win/pick). Underrated for this god: Rod of Tahuti, Berserker''s Shield, Jotunn''s
     Revenge, Amanita Charm, Shield Splitter, Gluttonous Grimoire, Kinetic Cuirass,
-    Soul Gem, Runeforged Hammer, The Reaper, Tekko-Kagi, Golden Blade, Titan''s Bane,
+    Soul Gem, Runeforged Hammer, The Reaper, Tekko-Kagi, Titan''s Bane, Golden Blade,
     Nimble Ring, Hydra''s Lament, Obsidian Shard, Spear of Desolation, Tyrfing, The
     Crusher, Oni Hunter''s Garb, Helm of Radiance, Lernaean Bow, Erosion, Avenging
-    Blade, Eye of Providence, Heartseeker, Stone of Binding, Toxic Blade, Draconic
-    Scale, Helm of Darkness, Shield of the Phoenix, Midgardian Mail, Arondight, Spear
-    of the Magus, Death Metal, Silverbranch Bow, Magi''s Cloak, Screeching Gargoyle,
+    Blade, Eye of Providence, Heartseeker, Stone of Binding, Draconic Scale, Helm
+    of Darkness, Shield of the Phoenix, Midgardian Mail, Arondight, Spear of the Magus,
+    Toxic Blade, Death Metal, Magi''s Cloak, Screeching Gargoyle, Silverbranch Bow,
     Pharaoh''s Curse, Breastplate of Valor.'
   slot_scores:
     Berserker's Shield:

@@ -495,11 +495,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.59
+      total: 0.58
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Bragi's Harp:
       total: 0.61
       efficiency: 0.45

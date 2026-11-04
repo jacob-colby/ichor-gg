@@ -489,11 +489,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.61
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.67
@@ -501,11 +501,11 @@ builds:
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.63
+      total: 0.61
       efficiency: 0.5
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.73
     Bragi's Harp:
       total: 0.61
       efficiency: 0.45

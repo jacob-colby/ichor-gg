@@ -116,10 +116,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Tekko-Kagi, Hydra''s Lament, Tyrfing, Arondight, Runeforged
-    Hammer, Avenging Blade, Golden Blade, Shield Splitter, Eye of the Storm, Dominance,
-    Silverbranch Bow, Bloodforge, Lernaean Bow, Toxic Blade, Oath-Sworn Spear, Riptalon,
-    Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine Lash.'
+    this god: The Reaper, Tekko-Kagi, Hydra''s Lament, Arondight, Tyrfing, Runeforged
+    Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade, Dominance,
+    Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic Blade, Rage,
+    Riptalon, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine Lash.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
@@ -195,7 +195,7 @@ builds:
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Hydra''s
     Lament, Arondight, The Reaper, Tekko-Kagi, Tyrfing, Runeforged Hammer, Dominance,
     Avenging Blade, Shield Splitter, Eye of the Storm, Genji''s Guard, Bloodforge,
-    Lernaean Bow, Damaru, Golden Blade, Breastplate of Valor, Chandra''s Grace, Oath-Sworn
+    Lernaean Bow, Damaru, Breastplate of Valor, Golden Blade, Chandra''s Grace, Oath-Sworn
     Spear, Silverbranch Bow, Yogi''s Necklace, Toxic Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
@@ -268,9 +268,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Hydra''s Lament, The Reaper, Arondight, Tekko-Kagi, Tyrfing, Runeforged Hammer,
-    Damaru, Silverbranch Bow, Avenging Blade, Genji''s Guard, Shield Splitter, Eye
+    Damaru, Avenging Blade, Silverbranch Bow, Genji''s Guard, Shield Splitter, Eye
     of the Storm, Toxic Blade, Dominance, Breastplate of Valor, Bloodforge, Lernaean
-    Bow, Golden Blade, Chandra''s Grace, Riptalon, Oath-Sworn Spear, Eye of Erebus.'
+    Bow, Chandra''s Grace, Golden Blade, Riptalon, Oath-Sworn Spear, Eye of Erebus.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.64
@@ -415,9 +415,9 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: The Reaper, Tekko-Kagi, Hydra''s Lament, Avenging Blade, Silverbranch
-    Bow, Toxic Blade, Arondight, Tyrfing, Oath-Sworn Spear, Riptalon, Runeforged Hammer,
-    Shield Splitter, Eye of the Storm, Dominance, Golden Blade, Bloodforge, Lernaean
-    Bow, Screeching Gargoyle, Damaru, Genji''s Guard, Rage, Musashi''s Dual Swords.'
+    Bow, Arondight, Toxic Blade, Tyrfing, Oath-Sworn Spear, Riptalon, Runeforged Hammer,
+    Shield Splitter, Eye of the Storm, Dominance, Bloodforge, Lernaean Bow, Golden
+    Blade, Screeching Gargoyle, Damaru, Genji''s Guard, Rage, Musashi''s Dual Swords.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.67
@@ -563,8 +563,8 @@ builds:
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Arondight, Damaru,
     Genji''s Guard, The Reaper, Breastplate of Valor, Chandra''s Grace, Tekko-Kagi,
     Tyrfing, Eye of Erebus, Screeching Gargoyle, Runeforged Hammer, Freya''s Tears,
-    Avenging Blade, Shield Splitter, Shield of the Phoenix, Silverbranch Bow, Eye
-    of the Storm, Dominance, Toxic Blade, Golden Blade, Bloodforge, Lernaean Bow.'
+    Avenging Blade, Shield Splitter, Shield of the Phoenix, Eye of the Storm, Silverbranch
+    Bow, Dominance, Bloodforge, Lernaean Bow, Toxic Blade, Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.65
@@ -634,10 +634,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Reaper, Tekko-Kagi, Hydra''s Lament, Tyrfing, Arondight,
-    Runeforged Hammer, Avenging Blade, Golden Blade, Shield Splitter, Eye of the Storm,
-    Dominance, Silverbranch Bow, Bloodforge, Lernaean Bow, Toxic Blade, Oath-Sworn
-    Spear, Riptalon, Rage, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine
+    Underrated for this god: The Reaper, Tekko-Kagi, Hydra''s Lament, Arondight, Tyrfing,
+    Runeforged Hammer, Avenging Blade, Shield Splitter, Eye of the Storm, Golden Blade,
+    Dominance, Bloodforge, Lernaean Bow, Silverbranch Bow, Oath-Sworn Spear, Toxic
+    Blade, Rage, Riptalon, Musashi''s Dual Swords, Deathbringer, Damaru, Sanguine
     Lash.'
   slot_scores:
     Jotunn's Revenge:
