@@ -1,0 +1,900 @@
+[
+ {
+  "name": "Adamantine Sickle",
+  "cost": 1200,
+  "tier": 2,
+  "stats": {
+   "Strength": "10",
+   "Lifesteal": "4%"
+  },
+  "passive": "While Below 50% Health: +10 Strength."
+ },
+ {
+  "name": "Agility Greaves",
+  "cost": 2500,
+  "tier": "Relic",
+  "stats": {
+   "Movement Speed": "5"
+  },
+  "passive": "+7.5% of all Stats from Items. Ranged Gods: +40% Attack projectile speed. Melee Gods: -15% Attack movement penalty. On Use: Dash in the direction you are currently moving Ranged Gods: +80% Attack projectile speed for 3s after using this active. Melee Gods: -30% Attack movement penalty for 3s after using this active. Cooldown: 20s"
+ },
+ {
+  "name": "Alchemist Coat",
+  "cost": 2350,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "40",
+   "Dampening": "15",
+   "Max Health": "250",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Use a Consumable: Gain 10 Dampening for 8s. Open inventory slot: Gain a Multi Potion once every 45s"
+ },
+ {
+  "name": "Ancient Signet",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "90",
+   "Max Mana": "250",
+   "Mana Regen": "5"
+  },
+  "passive": "Ability Hit: +20 (+12 per Level) bonus Magical Damage Kill or Assist a Minion: -2s Cooldown Cooldown: 15s"
+ },
+ {
+  "name": "Ancile",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "55",
+   "Max Health": "300"
+  },
+  "passive": "On Use: Your next Ability that damages a god Silences them for 1.5s Cooldown: 70s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Archmage's Gem",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Max Mana": "150",
+   "Mana Regen": "4"
+  },
+  "passive": "Adaptive Stat: +60 Strength or +90 Intelligence (based on highest item stat). Ability Hit a God: Deal bonus Magical Damage. Damage = 40% of your Intelligence & 50% of your Strength Cooldown: 20s Requires Level 20."
+ },
+ {
+  "name": "Arondight",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Strength": "55",
+   "Cooldown Rate": "15"
+  },
+  "passive": "On Use: Reveal enemy Gods within 17.6m for 6s. Reveal persists through Stealth If any God is revealed, +25% Movement Speed for 6s First time you damage a revealed God: +50 (+50% Strength) Physical Damage Cooldown: 60s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Ashwhorl Acorn",
+  "cost": 2000,
+  "tier": "God Specific",
+  "stats": {
+   "Strength": "45",
+   "Attack Speed": "15%",
+   "Max Health": "400",
+   "Tenacity": "15"
+  },
+  "passive": "Non-Aspect: Flurry fires out multiple Acorn projectiles that return back at max range, dealing Physical Damage. Each enemy god hit provides Attack Speed Aspect: Flurry has 2 charges, hitting enemy gods Heals and provides Physical Protections"
+ },
+ {
+  "name": "Blood-soaked Shroud",
+  "cost": 2100,
+  "tier": 2,
+  "stats": {
+   "Max Health": "350",
+   "Lifesteal": "8%"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). Ability Hit: +1% Max Health Heal +1% Max Mana Recovery Requires Level 20."
+ },
+ {
+  "name": "Bluestone Brooch",
+  "cost": 2100,
+  "tier": 2,
+  "stats": {
+   "Max Health": "200",
+   "Health Regen": "4",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +50 Intelligence (based on highest item stat). Ability Hit:+100 Physical Damage over 2s Gods take additional damage = 7.5% of their current Health Subsequent hits on the same target: 50% bonus damage for 3s Requires Level 20."
+ },
+ {
+  "name": "Briskberry Acorn",
+  "cost": 2000,
+  "tier": "God Specific",
+  "stats": {
+   "Strength": "45",
+   "Pathfinding": "8",
+   "Max Health": "400",
+   "Health Regen": "4",
+   "Mana Regen": "2"
+  },
+  "passive": "Non-Aspect: 45 Strength 8 Pathfinding Aspect: 400 Max Health 4 Health Regen 2 Mana Regen Non-Aspect: Dart is shorter, wider, and now passes through enemy gods. The first enemy god hit becomes marked; hitting a non-marked god resets Dart's Cooldown. It cannot be reset more than twice Dart no longer benefits from the Cooldown Reduction from ability hits Aspect: After hitting an enemy god with Dart, they are Knocked Back and explode after a delay"
+ },
+ {
+  "name": "Bumba's Hammer",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Max Health": "200",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +60 Intelligence (based on highest item stat). Ability Used: Next Attack deals +60 True Damage to enemies within 1.92m of the target Hit this Attack: -0.66s Cooldowns, +60 Heal Requires Level 20."
+ },
+ {
+  "name": "Bumba's Spear",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Max Health": "200",
+   "Attack Speed": "30%"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +60 Intelligence (based on highest item stat). On Attack Hit: 25% bonus Physical Damage to Enemies within 1.92m of the target Requires Level 20."
+ },
+ {
+  "name": "Caestus",
+  "cost": 1000,
+  "tier": 2,
+  "stats": {
+   "Strength": "10",
+   "Cooldown Rate": "10"
+  },
+  "passive": "When Hard Crowd Controlled: +15 Physical and Magical Protection for 4s."
+ },
+ {
+  "name": "Chandra's Grace",
+  "cost": 2300,
+  "tier": 3,
+  "stats": {
+   "Max Health": "150",
+   "Max Mana": "300",
+   "Mana Regen": "5",
+   "Cooldown Rate": "20"
+  },
+  "passive": "+15% Increased Healing and Shielding Every 15s: Lowest Health ally within 8.8m gain: +20 Health Regen +20 Mana Regen 0.1s off Cooldowns, every 0.2s for 3s Buff lasts 3s. During Moonlight Phase: On trigger: You also gain the Buff"
+ },
+ {
+  "name": "Circe's Hexstone",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Max Health": "250",
+   "Health Regen": "4",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: Become Polymorphed Dash Forward, dealing 50 Physical Damage +CC Immune +60 Physical and Magical Protection On Enemy God Hit: Knock Up Bonus Damage equal to 10% of Current Health -40s Cooldown Cooldown: 120s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Contagion",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Max Health": "425",
+   "Health Regen": "6"
+  },
+  "passive": "Damaged by an Attack or Ability: Apply +1 Stack of Contagion (1 per hit) If an enemy Lifesteals 100 Health from you: Apply +5 Stacks Attack or Hard Crowd Control an afflicted enemy: Deal Magical Damage = 1% Max Health per stack in a 4m radius Remove the Stacks"
+ },
+ {
+  "name": "Damaru",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Mana Regen": "5",
+   "Echo": "20",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Adaptive Stat: +35 Strength or +50 Intelligence (based on highest item stat). Each time you Echo hitting a God or Jungle Boss: Gain +1 Stack of Rhythm Each Stack of Rhythm gives +2% Movement Speed for 5s up to 5 stacks. At 5 Stacks of Rhythm: Remove all stacks and gain Harmonized Harmonized gives +15% Movement Speed for 10s. While Harmonized you cannot gain Rhythm"
+ },
+ {
+  "name": "Daybreak Gavel",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Max Health": "300"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +60 Intelligence (based on highest item stat). Healed yourself with a Healing Ability: +1 Stack (max 3) Non-Healing Ability Use: Consume all Stacks, +10 Strength or +15 Intelligence (based on highest item stat) for 8s per Stack (max 3) Cooldown: 4s"
+ },
+ {
+  "name": "Death's Embrace",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Max Health": "150",
+   "Lifesteal": "5%"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). Attack Hit: +1% Max Health Heal +2% Max Mana Restore -0.33s Non Ultimate Cooldowns Requires Level 20."
+ },
+ {
+  "name": "Dwarven Plate",
+  "cost": 2800,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35"
+  },
+  "passive": "+15 Physical Protections +35 Magical Protections On Use: Switch which Protection is increased more. Cooldown: 30s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Eros' Bow",
+  "cost": 2300,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "35",
+   "Max Health": "150",
+   "Attack Speed": "25%",
+   "Mana Regen": "2.5"
+  },
+  "passive": "On Use: Mark an ally god as your Beloved Only one ally may be Marked at a time Mark breaks if ally is more than 20m away On Attack Hit: Grant yourself 1 stack of Devotion (max 10) Ability Buffed, Healed, or Shielded your Beloved: Consume your Devotion Grant your Beloved Passion, Increasing their Strength by 5 and Intelligence by 7.5 per stack consumed. You can own up to 3 active items at once"
+ },
+ {
+  "name": "Eye of the Storm",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Strength": "40",
+   "Health Regen": "4",
+   "Echo": "30"
+  },
+  "passive": "Each time you Echo: Gain +1 Stack At 10 Stacks Next time you Echo: Open a storm within 4.8m, dealing Physical Damage every .5s for 3s. Damage = 10 + 20% of your Strength Storm will only spawn when hitting a god or Jungle Boss"
+ },
+ {
+  "name": "Gem of Focus",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "65",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Ability Used: Gain a stack of Momentum. Momentum grants +7% Pathfinding for 8s. Stacks up to 3 times."
+ },
+ {
+  "name": "Gladiator's Shield",
+  "cost": 2450,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "25",
+   "Max Health": "200",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Abilities deal bonus Physical Damage. Damage = +10 + 40% of your Item Protections Triggers once per Ability Cast, per God"
+ },
+ {
+  "name": "Glorious Pridwen",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Cooldown Rate": "12"
+  },
+  "passive": "On Use: Explode (4.8m radius): Deal Magical Damage (40% of Protections) Gain a Shield (125% of Protections) for 5s. When the Shield expires or breaks: Explode again: Deal Magic Damage (70% of your Protections). Cooldown: 45s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Heartwood Charm",
+  "cost": 2650,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "45",
+   "Max Mana": "250",
+   "Mana Regen": "5",
+   "Cooldown Rate": "20"
+  },
+  "passive": "+10% Increased Healing and Shielding Passive: When you heal with abilities, store 20% of that healing. On Use: Heal all allies within 6.4m for the amount of healing stored. Cooldown: 90s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Helm of Darkness",
+  "cost": 2700,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "45",
+   "Physical Protection": "25",
+   "Magical Protection": "25"
+  },
+  "passive": "On Use: Become Stealthed and pass through players and walls for 7s. Cannot use while Casting Cooldown: 90s. During Moonlight Phase: While Stealthed: +15% Movement Speed Pass through an enemy god: Physical Damage equal to 15% of your Max Health You can own up to 3 active items at once"
+ },
+ {
+  "name": "Helm of Radiance",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "65",
+   "Physical Protection": "35"
+  },
+  "passive": "Take Physical Damage: +7 Physical Protection for 6s. Stacks up to 4 times."
+ },
+ {
+  "name": "Heroism",
+  "cost": 1800,
+  "tier": 2,
+  "stats": {
+   "Physical Protection": "45",
+   "Magical Protection": "45",
+   "Max Health": "250"
+  },
+  "passive": "+1 Gold per second. When an ally within 8.8m is hit by Hard Crowd Control: Give them a Shield equal to 50 +10% of your Max Health Cooldown: 15s Requires Level 20"
+ },
+ {
+  "name": "Hunter's Cowl",
+  "cost": 2100,
+  "tier": 2,
+  "stats": {
+   "Lifesteal": "5%",
+   "Mana Regen": "2.5"
+  },
+  "passive": "Adaptive Stat: +55 Strength or +80 Intelligence (based on highest item stat). Within 8.8m of a God: +30% Attack Speed, +5% Lifesteal, and +15% Movement Speed. Alone: +10% Movement Speed, +15% Attack Speed, and +2.5% Lifesteal. Requires Level 20."
+ },
+ {
+  "name": "Infused Axe",
+  "cost": 1050,
+  "tier": 2,
+  "stats": {
+   "Strength": "15",
+   "Max Mana": "150",
+   "Mana Regen": "1"
+  },
+  "passive": "Kill or Assist a God: +25% Mana"
+ },
+ {
+  "name": "Jade Scepter",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "100",
+   "Max Health": "250"
+  },
+  "passive": "On Use: Place a jade current at a target location. After 1s it erupts, knocking away all gods. Enemies are knocked towards the caster. Cooldown: 60s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Kopesh",
+  "cost": 1250,
+  "tier": 2,
+  "stats": {
+   "Strength": "10",
+   "Critical Chance": "10%"
+  },
+  "passive": "Critically Strike a God: +5% Movement Speed for 4s."
+ },
+ {
+  "name": "Leviathan's Hide",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "45",
+   "Plating": "5",
+   "Max Health": "300"
+  },
+  "passive": "Damaged by God Attack: That God is -10% Strength & Attack Damage for 4s. Attack an Enemy God: +8 Max Health Permanently. Damaged by Enemy God: -0.5s once per Ability Cast or Attack. Cooldown: 10s."
+ },
+ {
+  "name": "Lifebinder",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "40",
+   "Max Health": "200",
+   "Mana Regen": "4"
+  },
+  "passive": "+8% Increased Healing and Shielding On Use: Fire a projectile that deals 60 (+8 per Level) Magic Damage. Marks enemy Gods for 6s First ally to damage a Marked target: +70 (+7 per Level) Heal +70 (+7 per Level) Shield Healing and Shielding from this effect are increase by your Healing and Shielding Strength at 150% effectiveness. Consumes the Mark Cooldown: 20s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Lotus Sickle",
+  "cost": 2150,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "40",
+   "Max Mana": "250",
+   "Mana Regen": "3",
+   "Cooldown Rate": "15"
+  },
+  "passive": "Ability Buffed, Healed, or Shielded another Allied God: Grant a Lotus stack (Max 3 Stacks). When an ally hits an enemy with an Attack, a stack is consumed to deal 30 ( +20% Strength, +10% Intelligence, and +20% Attack Damage) bonus Magical Damage. Applies one stack per target per ability use."
+ },
+ {
+  "name": "Mantle Of Discord",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35",
+   "Tenacity": "15"
+  },
+  "passive": "Damaged while below 40% Health: Stuns enemies within 3.2m for 1s +Crowd Control Immunity for 1s +15 Dampening for 6s Cooldown: 110s"
+ },
+ {
+  "name": "Mercury's Talaria",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Pathfinding": "12"
+  },
+  "passive": "Adaptive Stat: +40 Strength or +70 Intelligence (based on highest item stat). While out of combat: Store energy as you move. Your next non-Ultimate Ability deals up to 8% more Damage based on stored energy. Movement Ability deals up to 10% more Damage instead"
+ },
+ {
+  "name": "Midgardian Mail",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "50",
+   "Plating": "5",
+   "Max Health": "250"
+  },
+  "passive": "Hit by a basic attack: the enemy has their Attack Speed reduced by 10% for 3s. Stacks up to 4 times."
+ },
+ {
+  "name": "Mystical Mail",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "40",
+   "Max Health": "300"
+  },
+  "passive": "Enemies within 4m: 15 (+1 per Level) Magical Damage and lose 25% of Health Shield per 1s. Range Scaling Damage: +50% at Close Range -50% at Maximum Range"
+ },
+ {
+  "name": "Necronomicon",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "50",
+   "Max Mana": "300",
+   "Mana Regen": "5"
+  },
+  "passive": "God Kill or Assist: +1 Stack of: +30 Intelligence Stacks up to 6 times. On Death: Lose 4 Stacks."
+ },
+ {
+  "name": "Oath-Sworn Spear",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Strength": "50"
+  },
+  "passive": "Ability Hit: Target's Physical Protection is reduced by 5 for 4s. On God Kill or Assist: This effect increases by 1 Physical Protection. This effect caps at 20 total Physical Protection reduction."
+ },
+ {
+  "name": "Odigba",
+  "cost": 800,
+  "tier": 2,
+  "stats": {
+   "Max Health": "125",
+   "Max Mana": "150"
+  },
+  "passive": "God Kill or Assist: Heal +5% Max Health over 6s."
+ },
+ {
+  "name": "Omen Drum",
+  "cost": 2800,
+  "tier": 3,
+  "stats": {
+   "Echo": "30"
+  },
+  "passive": "Adaptive Stat: +50 Strength or +75 Intelligence (based on highest item stat). Each time you Echo: Gain +1 Stack of Dark Resonance Each Stack of Dark Resonance grants +10% Echo Damage up to 30 stacks. Stacks last 6 seconds and stacks are halved when duration ends. While Damaru is Harmonized: Gain +100% Echo Damage"
+ },
+ {
+  "name": "Oni Hunter's Garb",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "50",
+   "Max Health": "150",
+   "Max Mana": "200",
+   "Mana Regen": "8"
+  },
+  "passive": "For each enemy god within 8.8m: +4% Damage Mitigation Max 3 stacks"
+ },
+ {
+  "name": "Oracle Staff",
+  "cost": 950,
+  "tier": 2,
+  "stats": {
+   "Intelligence": "20",
+   "Max Mana": "150",
+   "Mana Regen": "1"
+  },
+  "passive": "Kill or Assist a God: +25% Mana"
+ },
+ {
+  "name": "Pendulum of the Ages",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Mana Regen": "4",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Adaptive Stat: +45 Strength or +70 Intelligence (based on highest item stat). +4 Mana per second per 10% of missing Mana. +3 Strength or +7 Intelligence (based on highest item stat) per 10% of available Mana. Requires Level 20."
+ },
+ {
+  "name": "Pharaoh's Curse",
+  "cost": 2450,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "30",
+   "Plating": "5",
+   "Max Health": "250",
+   "Attack Speed": "20%"
+  },
+  "passive": "On Use: Enemies within 5.6m: -50% Shields -20% Movement Speed -40% Attack Speed Debuff lasts 4s. Cooldown: 45s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Phoenix Feather",
+  "cost": 2350,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "40",
+   "Dampening": "5",
+   "Max Health": "300"
+  },
+  "passive": "On Use: Fire 3 Pulses that Heal you and True Damage enemies within 3.2m. Heal = +75 Health +7.5 Missing Health True Damage = +3% Max Health from Items Cooldown: 120s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Prophetic Cloak",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "22",
+   "Magical Protection": "22",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Damage a God: +1 Protection Stack against the damage type they deal. Cooldown: 5s. At +15 of each Protection Stack, item evolves: +10 Physical Protection and Magical Protection +6% Damage Mitigation (or +12% if total Protections > 300)"
+ },
+ {
+  "name": "Radiant Bulwark",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Plating": "15"
+  },
+  "passive": "On Use: Create a wall of light that protects allies behind you for 6s. Grants them all your Plating, Dampening, and half of your Protections from enemies on the other side and yourself 20% Damage Mitigation. You are Silenced, Disarmed, and cannot turn while channeling Cooldown: 100s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Ragnarok's Wake",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "45",
+   "Max Health": "250"
+  },
+  "passive": "On Use: Buildup for 2s before flying for 2.5s to your target location as a meteor of Ragnarok. Can travel up to 30m. Enemies near where you land take 600 Magical Damage and are knocked straight up. Cooldown: 140s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Regrowth Striders",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "45",
+   "Mana Regen": "3",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Heal yourself with an Ability: +25% Movement Speed (decays to 0%) for 4s Cooldown: 10s Gain any Movement Speed buff: +5% Health Heal over 10s"
+ },
+ {
+  "name": "Resolute Mantle",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Max Health": "550",
+   "Tenacity": "10"
+  },
+  "passive": "When Hard Crowd Controlled by an Ability: +25 Health Regen and +5 Tenacity for 4s This effect can stack When stacks fall off, gain 0.5 Health Regen and 1 Tenacity permanently Stacks up to 20 times"
+ },
+ {
+  "name": "Ring of Dispel",
+  "cost": 950,
+  "tier": 2,
+  "stats": {
+   "Intelligence": "20",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Hard Crowd Control a God: Target has -10 Strength and -16 Intelligence for 4s."
+ },
+ {
+  "name": "Rod of Asclepius",
+  "cost": 2350,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "45",
+   "Max Health": "150",
+   "Health Regen": "2.5",
+   "Mana Regen": "2.5"
+  },
+  "passive": "+10% Increased Healing and Shielding Ability Healed an Ally: Your Healing is increased by 0.5% per 1% of your target's missing Health"
+ },
+ {
+  "name": "Scepter of Dominion",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "30",
+   "Max Health": "150",
+   "Max Mana": "200",
+   "Mana Regen": "3"
+  },
+  "passive": "On Use: Create a zone that puts gods into Stasis. The Zone appears after 1s The Stasis lasts 2s Cooldown: 90s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Screeching Gargoyle",
+  "cost": 2400,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "50",
+   "Cooldown Rate": "15"
+  },
+  "passive": "On Use: Enemies in front of you: Silenced for 1s -10% Protections for 4s Cooldown: 90s During Moonlight Phase: Hits enemies around you Silence lasts 1.5s -15% Protections You can own up to 3 active items at once"
+ },
+ {
+  "name": "Sharpshooter's Arrow",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Attack Damage": "60",
+   "Attack Speed": "25%",
+   "Critical Chance": "15%"
+  },
+  "passive": "+5% Gold Gain from Kills and AssistsIncreased Attack Damage against enemy Gods farther away, capping at +10% at 6m. Requires Level 20."
+ },
+ {
+  "name": "Shogun's Ofuda",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "40",
+   "Dampening": "5",
+   "Max Health": "200",
+   "Attack Speed": "15%"
+  },
+  "passive": "+20% Attack Speed for you and allies within 8.8m."
+ },
+ {
+  "name": "Shroud of Vengeance",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Tenacity": "15"
+  },
+  "passive": "When Hard Crowd Controlled: Release a shockwave around yourself, dealing 50 (+40% of your Protections, up to 650) Physical Damage."
+ },
+ {
+  "name": "Soul Locket",
+  "cost": 2450,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "50",
+   "Max Health": "200",
+   "Mana Regen": "5"
+  },
+  "passive": "+10% Increased Healing and Shielding Ability Buffed, Healed, or Shielded another Allied God: Gain a Soul stack (Max 35). On Use: Gain Spirit Walk for 2.5s, consuming your Soul stacks and granting you 2% Damage Reduction for each stack consumed and +20% Movement Speed. Can pass through players and player-made walls Cooldown: 100s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Spectral Armor",
+  "cost": 2300,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "20",
+   "Plating": "10",
+   "Max Health": "450"
+  },
+  "passive": "You take -30% Damage from Critical Strikes. Ability Critical Strikes are mitigated by your Plating. Allies within 8.8m: Take -15% Damage from Critical Strikes."
+ },
+ {
+  "name": "Sphere of Negation",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "40",
+   "Magical Protection": "50"
+  },
+  "passive": "Gain +2% Max Health Magical Shield every 3s, up to a maximum of +14% Max Health."
+ },
+ {
+  "name": "Spirit Robe",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "20",
+   "Magical Protection": "20",
+   "Tenacity": "15"
+  },
+  "passive": "Hit by Hard Crowd Control: +40 Physical Protection +40 Magical Protection +4% Health Heal over time Buff lasts 6s."
+ },
+ {
+  "name": "Staff of Myrddin",
+  "cost": 2900,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "75",
+   "Cooldown Rate": "10"
+  },
+  "passive": "On Use: Next non-Ultimate Ability used will have no cooldown. Cooldown: 80s You can own up to 3 active items at once"
+ },
+ {
+  "name": "Stone of Binding",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "35",
+   "Magical Protection": "35",
+   "Dampening": "5"
+  },
+  "passive": "Hard Crowd Control an Enemy: Apply -10 Physical and Magical Protections for 6s. Stacks up to 3 times. Stacks fall off one at a time."
+ },
+ {
+  "name": "Sundering Axe",
+  "cost": 2150,
+  "tier": 2,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +50 Intelligence (based on highest item stat). Damage a God: +150 (+10% of your Item Protections) Bonus True Damage +125 Heal Hits only one God per activation Requires Level 20 Cooldown: 8s"
+ },
+ {
+  "name": "Talisman of Purification",
+  "cost": 2500,
+  "tier": "Relic",
+  "stats": {
+   "Cooldown Rate": "20"
+  },
+  "passive": "+7.5% of all Stats from Items. On Use: You and Allies within 6.4m: Are Cleansed of all Crowd Control Gain Crowd Control Immunity for 1s Cooldown: 140s"
+ },
+ {
+  "name": "The Cosmic Horror",
+  "cost": 2650,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "55",
+   "Penetration": "10",
+   "Echo": "20"
+  },
+  "passive": "Each time you Echo: +1 Stack. At 3 Stacks: Next time you Echo: Spawn a tentacle that deals deals Bonus Magical Damage (45% Intelligence over 1.5s) Stacks are removed when a tentacle spawns. Tentacles can spawn once every second. Tentacles will only spawn when hitting a God or Jungle Boss"
+ },
+ {
+  "name": "Thistlethorn Acorn",
+  "cost": 2000,
+  "tier": "God Specific",
+  "stats": {
+   "Strength": "45",
+   "Lifesteal": "5%",
+   "Max Health": "400",
+   "Cooldown Rate": "10"
+  },
+  "passive": "Non-Aspect: Acorn Blast attaches to enemy gods, or stops at max range, and explodes after a delay Aspect: Acorn Blast fires 5 projectiles and debuffs enemies hit, causing them to take more damage from you"
+ },
+ {
+  "name": "Time-lock Aegis",
+  "cost": 2500,
+  "tier": "Relic",
+  "stats": {
+   "Physical Protection": "15",
+   "Magical Protection": "15"
+  },
+  "passive": "+6% of all Stats from Items. On Use: Become time-locked, unable to move and act. You are Immune (to damage and healing) for 2.25s. While Time-Locked, rapidly restore 15s worth of Regen and 7.5s of Cooldowns. Reactivate to exit early. Cooldown: 140s"
+ },
+ {
+  "name": "Totem of Death",
+  "cost": 2800,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "55",
+   "Echo": "10",
+   "Cooldown Rate": "20"
+  },
+  "passive": "Each time you Echo: Deals Bonus Magical Damage equal to 8% of target's Missing Health Can only affect Gods. Can only occur once every second."
+ },
+ {
+  "name": "Triton's Conch",
+  "cost": 2700,
+  "tier": 3,
+  "stats": {
+   "Strength": "25",
+   "Intelligence": "40",
+   "Max Health": "250"
+  },
+  "passive": "You and allies within 8.8m: +5 (+0.5 per Level) Strength +5 (+1 per Level) Intelligence"
+ },
+ {
+  "name": "Typhon’s Heart",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Intelligence": "80",
+   "Lifesteal": "7.5%"
+  },
+  "passive": "On Minion or Jungle Kill: +1 StackOn God Kill: +30 StacksOn Assist: +15 Stacks At 30 Stacks: Summon a Monster of Typhon Health = 200 (+55 per Level) Damage = 300% of your Lifesteal and 30% of your Intelligence Your Lifesteal heals the monster If another would be summoned: Fully Heal current monster Buff it with +25% Health, Attack Speed, and Movement Speed (Stacks up to 5x)"
+ },
+ {
+  "name": "Umbral Link",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "40",
+   "Lifesteal": "10%"
+  },
+  "passive": "Above 50% Health: Split your Lifesteal Healing with allies within 11.2m. +10 Physical and Magical Protections for 8s per unique ally Healed"
+ },
+ {
+  "name": "Vital Amplifier",
+  "cost": 2500,
+  "tier": 3,
+  "stats": {
+   "Max Health": "200",
+   "Health Regen": "3",
+   "Attack Speed": "10%"
+  },
+  "passive": "Adaptive Stat: +30 Strength or +45 Intelligence (based on highest item stat). Heal yourself with an Ability: +7.5% Attack Speed +5% Attack Damage (Ranged) +10% Attack Damage (Melee) Buff lasts 6s, Stacks up to 3x"
+ },
+ {
+  "name": "Void Shield",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "55",
+   "Max Health": "150"
+  },
+  "passive": "Enemies within 8.8m: -10% Physical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range"
+ },
+ {
+  "name": "Void Stone",
+  "cost": 2550,
+  "tier": 3,
+  "stats": {
+   "Magical Protection": "60",
+   "Max Health": "150"
+  },
+  "passive": "Enemies Within 8.8m: -10% Magical Protection. Range Scaling Debuff: +50% at Close Range -50% at Maximum Range"
+ },
+ {
+  "name": "War Banner",
+  "cost": 1850,
+  "tier": 2,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Attack Speed": "30%"
+  },
+  "passive": "Kill or Assist Minion or Jungle Monster: You and allies within 8.8m gain: +1% Health Heal +1.25% Mana Restore +3.5% Movement Speed +6.5% Attack Speed Movement and Attack Speed Buff lasts 10s, Stacks up to 6 times Requires Level 20 to upgrade."
+ },
+ {
+  "name": "Wyrmskin Hide",
+  "cost": 2600,
+  "tier": 3,
+  "stats": {
+   "Strength": "20",
+   "Magical Protection": "25",
+   "Dampening": "5",
+   "Max Health": "300"
+  },
+  "passive": "Hit a God (once every 8s): Gain 1 Dampening per level against them."
+ },
+ {
+  "name": "Xibalban Effigy",
+  "cost": 2750,
+  "tier": 3,
+  "stats": {
+   "Physical Protection": "30",
+   "Magical Protection": "30",
+   "Max Mana": "300",
+   "Mana Regen": "4"
+  },
+  "passive": "On Use: Take 50% Damage for 4s. After: Take Physical Damage equal to mitigated Damage Cannot drop below 5% Health Cooldown: 90s During Moonlight Phase: Only 50% of the mitigated Damage is dealt back You can own up to 3 active items at once"
+ },
+ {
+  "name": "Yogi's Necklace",
+  "cost": 2250,
+  "tier": 3,
+  "stats": {
+   "Max Health": "325",
+   "Max Mana": "250",
+   "Health Regen": "6",
+   "Mana Regen": "6"
+  },
+  "passive": "Heal +0.5% of your Max Health per second."
+ }
+]

@@ -173,6 +173,9 @@ Each of these has its evidence in the named module.
 | `unknown_win_rate` stays at 0.5 | `scoring.UNKNOWN_WIN_RATE` | It is *not* neutral (observed mean 0.556) but the only metric that responds to changing it is the circular one |
 | Draft blocks duplicates per **team**, not per board | `useDraftResult.takenFor` | Only ranked Conquest drafts globally-unique picks; Joust and Arena are not draft modes |
 | A draft bonus is damped when the core already covers that **tag** | `draftBuild.adaptedCore` | Same judgement `ally_covered` makes about a teammate; tags only, because a stat is a quantity not a job |
+| Every scored item's passive is DECIDED — simulated, partial or refused | `passive_sim.REGISTRY` | Absence is not a decision: an absent passive is zeroed by accident, which lowers predicted cost and makes the item look more premium. 193 of 193 decided (2026-11-05) |
+| A debuff on the enemy's attack speed or Strength is worth exactly 0 here | `side_by_side.attacker_profile` | Its raw DPS is derived from the reference squishy over KILL_TIME and each hit is `dps x share x step`, so the cadence sets WHEN, never how much |
+| An item is refused WHOLE rather than credited with its good half | `passive_sim` (Xibalban Effigy) | `reduce_hit` would simulate its 50% cut in two lines and the clock has no channel for the payback, so the item would be booked with its upside alone |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
 | An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
 | That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
@@ -2768,6 +2771,75 @@ block) and derived the Joust anti-heal share; fingerprint `9c673795e8c8`.
   nudge were partly the cliff and will read lower on the next run; that is
   the fix, not a loss of coverage.
 
+### Three findings from the passive-coverage session (2026-11-05), not fixed
+
+Recorded by the PR that closed `passive_sim`'s coverage gap — all 84 scored
+items that carried a passive and no simulator are now decided (33 simulated,
+8 partial, 43 refused; the evidence and every reading is in `passive_sim.py`'s
+COVERAGE PASS section, and the frozen item text is in
+`tests/fixtures/frozen/passive_coverage/`). The pass is the precondition PR
+#104 named for pricing passives inside `efficiency`; it does not build that.
+
+- **Cu Chulainn's Solo verdict went from readable to withheld, and that is
+  the honest state rather than a regression.** Before: Ichor 82.5% of its gold
+  simulated against the community's 83.8%, a 1.3% gap — readable only because
+  both sides were equally ignorant, which is the fragile condition PR #102
+  measured on Kali, Susano and Nemesis. The pass took the community's six to
+  **100%** (its one blocker was `Oni Hunter's Garb`, now simulated) and left
+  Ichor's side **unmoved at 82.5%**, because Ichor's only blocker is
+  `Runeforged Hammer` — refused for "no crowd control" since long before this
+  pass. Gap 17.5% against a `COVERAGE_GAP` of 0.14, so the verdict is
+  withheld in all three modes. **This is not the one-sided-simulation hazard**:
+  the set is complete, and what remains is a REFUSAL meeting a fully covered
+  community six. It is §4.30's conclusion arriving on Solo — the comparison
+  cannot read that god as designed — and the only levers are §4.30's four,
+  all of them Jacob's call. Net across the modes the pass still reads
+  **+1 / +1 / +3** readable verdicts (Conquest 11->12, Joust 11->12,
+  Arena 9->12), with that one loss in each of Conquest and Joust.
+- **Nine of the 33 simulate to a small number because the comparison has one
+  target, and whoever prices from this table must read `assumptions` and not
+  only the value.** `Bumba's Spear`'s whole on-hit payload lands on enemies
+  AROUND the target; `Oni Hunter's Garb` reads one of its three stacks;
+  `Mystical Mail`'s and `Void Shield`'s range scaling has no distance to read.
+  Each is a DECISION with its reason written beside it, which absence was not
+  — but none is a claim about the item in a real game. An item whose value is
+  a cleave is worth more than this clock can see, and pricing it from here
+  will under-credit it exactly as the old table over-credited the absent.
+- **PR #104's supersede rule is recorded and NOT applied, as that PR asked.**
+  Eight pool items are priced by a shipped `efficiency` flag *and* simulated
+  here (Book of Thoth, Brawler's Beat Stick, Eye of Erebus, Nimble Ring, Rod
+  of Tahuti, Sun Beam Bow, Transcendence, The Executioner), and the pass adds
+  more of the same shape — every `_adaptive` grant below is also an item whose
+  adaptive stat `price_adaptive` already carries. There is no double count
+  today, because `efficiency` does not read `passive_sim` at all (§4.31's Q2:
+  the importers are `model_audit` and `side_by_side`, both diagnostics).
+  Whoever builds option (a) must make a simulated value SUPERSEDE the
+  flag-derived grants for that item, or every adaptive item is counted twice.
+
+### The 2026-11-04 daily refresh left two suites red and thirteen doc rows stale
+
+Not this session's work and not fixed here; measured at `6158066f` in a clean
+checkout so the attribution is not guesswork (CLAUDE.md item 5).
+
+- `chore(data): daily community refresh` thinned the community record hard:
+  **55 of the 95 gods now make fewer than 6 of 6** and are skipped by
+  `side_by_side`, against 7 before. The comparison is down from 87 gods to 40,
+  `validate --check`'s sample from n=459 to n=308, and the leakage-free
+  headline from 37.0% to **26.5%** against a 5.6% random core. The control
+  fingerprint is `a48bae8bbbfb`; `data/Analysis/_calibration.md` still stamps
+  `047109f54fd7` and every number in it describes different inputs.
+- **Six pipeline tests and one viewer test are red on `origin/main`.** The
+  pipeline six are in `test_build_quality.py` and pin specific gods' community
+  records (Achilles's first entry no longer carries an aspect; Medusa is "not
+  compared"). The viewer one is `archetypeParity.test.ts`, which asserts
+  `5-healer swaps x 2 > idx.gods.length` — 46 x 2 = 92 against a roster that
+  grew to 95 with Nox. All seven are data-driven and none is a model defect.
+- Thirteen `doc_audit --check` rows drifted for the same reason (roster 94->95,
+  the leakage-free figures, the community sample). They are left alone here
+  deliberately: editing them inside another slice is what makes a delta
+  unattributable, and `doc_audit` never rewrites a doc precisely so that
+  deciding whether a number SHOULD have moved stays a person's job.
+
 ### Smaller, well-defined
 - **Penetration caps (40% / 50)** — the only unverified combat constant. Needs
   a leveled practice target; `calibrate_combat --plan` will generate the setup.
@@ -3050,7 +3122,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1280) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1381) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3170,7 +3242,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1280 pipeline · 958 viewer |
+| Tests | 1381 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -528,6 +528,21 @@ class Sim:
         self.passives = passives_for(names, items_by_name, disabled)
         self.active = {n for n, _ in self.passives}
         self.dynamic, self.state, self.shreds = {}, {}, {}
+        # Flat protection reduction on the target, and the standing aura
+        # debuffs (PR #104's coverage pass). Both are empty for every build
+        # that holds none of those items, so `mitigated` reads exactly what
+        # it read before.
+        self.flat_shreds = {}
+        self.aura_shred = {}
+        for _, p in self.passives:
+            for dtype, pct in (p.aura_shred or {}).items():
+                self.aura_shred[dtype] = self.aura_shred.get(dtype, 0.0) + pct
+        self._tickers = [(n, p) for n, p in self.passives if p.on_tick]
+        #: Set by Staff of Myrddin's active ("Next non-Ultimate Ability used
+        #: will have no cooldown"). Consumed in `run_window` rather than in
+        #: the hook because `_ability`'s caller writes the cooldown AFTER the
+        #: hooks run, so a hook cannot clear it.
+        self._free_cast = False
         self.t = 0.0
         self._current_item = None
         self._after = []
@@ -667,6 +682,21 @@ class Sim:
         return sum(stacks * pct for stacks, start, until, pct in self.shreds.values()
                    if start <= t <= until)
 
+    def add_flat_shred(self, item, dtype, points, max_stacks, duration, t):
+        """A FLAT protection reduction on the target, in points, against one
+        damage type (the coverage pass: Oath-Sworn Spear's "-5 Physical Protection"). Kept
+        apart from `add_shred` because the two are not interchangeable — a
+        percentage scales with the target's protection and a flat point does
+        not — and apart from our own Penetration because `FLAT_PEN_CAP` caps
+        that and no text caps this. Refreshes like `add_shred`."""
+        stacks, _, until, _ = self.flat_shreds.get((item, dtype), (0, 0.0, -1.0, points))
+        stacks = stacks + 1 if t <= until else 1
+        self.flat_shreds[(item, dtype)] = (min(stacks, max_stacks), t, t + duration, points)
+
+    def flat_shred_at(self, t, dtype):
+        return sum(stacks * pts for (_, d), (stacks, start, until, pts) in self.flat_shreds.items()
+                   if d == dtype and start <= t <= until)
+
     def after(self, fn):
         """Run `fn` once the current hit and its procs have been dealt."""
         self._after.append(fn)
@@ -685,7 +715,12 @@ class Sim:
         prot = self.target["physical_prot" if dtype == "physical" else "magical_prot"]
         flat = min(self.stat("Penetration"), combat.FLAT_PEN_CAP)
         pct = min(min(self.stat("Penetration %") / 100.0, combat.PCT_PEN_CAP) + uncapped, 1.0)
-        eff = max(0.0, prot * (1.0 - self.shred_at(t)) * (1.0 - pct) - flat)
+        # Order (the coverage pass): the target's protection is reduced by every DEBUFF
+        # first — percentage shreds, the standing auras, then flat points —
+        # and our Penetration reads what is left. Both new terms are 0 for a
+        # build holding none of those items, so this is the old expression.
+        shred = self.shred_at(t) + self.aura_shred.get(dtype, 0.0)
+        eff = max(0.0, (prot * (1.0 - shred) - self.flat_shred_at(t, dtype)) * (1.0 - pct) - flat)
         out = raw * combat.mitigation(eff) * self.amplification(t)
         if kind == "attack":
             out *= combat.flat_reduction_multiplier(self.target.get("plating", 0.0), combat.PLATING_CAP)
@@ -769,10 +804,12 @@ class Sim:
             return
         split = self.survival is not None and kind == "kill"
         if split:
-            kept = copy.deepcopy((self.nxt, self.active_ready, self.state, self.dynamic, self.shreds))
+            kept = copy.deepcopy((self.nxt, self.active_ready, self.state, self.dynamic,
+                                  self.shreds, self.flat_shreds))
         self._fire(hooks, kind)
         if split:
-            self.nxt, self.active_ready, self.state, self.dynamic, self.shreds = kept
+            (self.nxt, self.active_ready, self.state, self.dynamic,
+             self.shreds, self.flat_shreds) = kept
             self._effects_due = (self._fight + 1) * WINDOW
 
     def _fire(self, hooks, kind, heals=True):
@@ -959,6 +996,7 @@ class Sim:
                                                    protections=prot, stats=self.stats),
                               item=f"ability: {name}")
                     c["ready"] = self.t + c["cooldown"]
+                    self.self_heal_landed(name)
         for name, p in self.passives:
             if p.on_hit_taken:
                 self._current_item = name
@@ -1017,6 +1055,7 @@ class Sim:
             self.heal(ability_heals.amount(h, max_health=self.max_health, hp=self.hp,
                                            protections=prot, stats=self.stats),
                       item=f"ability: {a['name']}")
+            self.self_heal_landed(a["name"])
 
     def _aura(self, t):
         if "Sanguine Lash" in self.active:
@@ -1024,6 +1063,34 @@ class Sim:
             d = self.mitigated(passive_sim._sanguine(self, t), "physical", t, kind="proc")
             self._deal(d, "proc", "Sanguine Lash")
             self._check_kills()
+
+    def _tick(self, t):
+        """Per-second hooks (the coverage pass). A SLOT OF ITS OWN rather than
+        a share of the aura's, because Sanguine Lash's active moves that slot
+        to every 0.33s and an item whose text says "per 1s" must neither tick
+        three times in a second nor lose the seconds the fast cadence steps
+        over."""
+        self.t = t
+        for name, p in self._tickers:
+            self._current_item = name
+            p.on_tick(self, t)
+
+    def self_heal_landed(self, ability):
+        """Our own ABILITY healed us (`ability_heals`). Three items read this
+        event and nothing else did, so it is fired here rather than inside
+        `heal`, which lifesteal and item heals also reach."""
+        for name, p in self.passives:
+            if p.on_self_heal:
+                self._current_item = name
+                p.on_self_heal(self, ability)
+
+    def target_hp(self):
+        """The target's health left in THIS fight — its max, less the net
+        damage our god has dealt since the fight began. The same arithmetic
+        `_deal` uses for `alive`; "their current Health" in an item's text
+        (Bluestone Brooch) reads this."""
+        net = (self.dealt - self._fight_start) - (self.target_healed - self._fight_heal_start)
+        return max(0.0, self.target["max_health"] - net)
 
     def _enemy_schedule(self):
         """`[(next_t, interval, raw_per_hit, dtype, kind)]` for the enemy."""
@@ -1041,13 +1108,16 @@ class Sim:
 
     def run_window(self, until_dead=False):
         """Event order at one instant: "start" actives, abilities (rotation
-        order), "after_casts" actives, the swing, the aura, an assist, then
-        the enemy's hits. Aura ticks at whole seconds up to and including the
-        window's end. With `until_dead`, runs until the enemy has taken our
-        god's whole bar (or the window ends) and returns raw damage taken."""
+        order), "after_casts" actives, the swing, the aura, the per-second
+        tick, an assist, then the enemy's hits. Aura and tick run at whole
+        seconds up to and including the window's end; Sanguine Lash's active
+        moves the AURA to every 0.33s and leaves the tick alone (the coverage
+        pass). With `until_dead`, runs until the enemy has taken our god's
+        whole bar (or the window ends) and returns raw damage taken."""
         self.nxt = {i: 0.0 for i in range(len(self.rotation))}
         next_attack, index = 0.0, 0
         aura = 1.0 if "Sanguine Lash" in self.active else math.inf
+        tick = 1.0 if self._tickers else math.inf
         assist = ASSIST_FIRST if self.takedowns else math.inf
         foes = self._enemy_schedule()
         while True:
@@ -1068,6 +1138,8 @@ class Sim:
                 options.append((next_attack, 1, "attack", None))
             if aura <= self.window:
                 options.append((aura, 2, "aura", None))
+            if tick <= self.window:
+                options.append((tick, 2.5, "tick", None))
             if assist < self.window:
                 options.append((assist, 3, "assist", None))
             if self._effects_due is not None and self._effects_due < self.window:
@@ -1081,6 +1153,8 @@ class Sim:
             if kind == "ability":
                 self._ability(t, self.rotation[i])
                 self.nxt[i] = t + self.rotation[i]["effective_cooldown"]
+                if self._free_cast and not self.rotation[i]["is_ultimate"]:
+                    self.nxt[i], self._free_cast = t, False
             elif kind == "attack":
                 self._attack(t, index)
                 index += 1
@@ -1095,6 +1169,9 @@ class Sim:
                     aura = t + SANGUINE_FAST
                 else:
                     aura = float(math.floor(t + 1e-9) + 1)
+            elif kind == "tick":
+                self._tick(t)
+                tick = t + 1.0
             elif kind in ("start", "after_casts"):
                 self.t = t
                 before = dict(self.active_ready)
