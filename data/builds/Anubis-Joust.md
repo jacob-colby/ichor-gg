@@ -655,4 +655,75 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Spear of Desolation
+  - Spear of the Magus
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Dreamer's Idol
+  - Soul Gem
+  flex_slots:
+  - Spear of the Magus
+  - Dreamer's Idol
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Spear of Desolation:
+      total: 0.8
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Spear of the Magus:
+      total: 0.68
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Obsidian Shard:
+      total: 0.74
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Rod of Tahuti:
+      total: 0.83
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Dreamer's Idol:
+      total: 0.65
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.76
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Dreamer's Idol
+    removed: Doom Orb
+    reason: Conquest community 71% win over 61 matches (vs 53% on this god), taking
+      the model's weakest slot from Doom Orb
+  borrowed_from: Conquest
+  starter: *id001
 ---

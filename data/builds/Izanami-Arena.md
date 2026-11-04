@@ -590,4 +590,75 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Death Metal
+  - Riptalon
+  - Deathbringer
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Death Metal:
+      total: 0.53
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Riptalon:
+      total: 0.62
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
+    Deathbringer:
+      total: 0.43
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
+    Soul Gem:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+  swaps:
+  - added: Deathbringer
+    removed: Jotunn's Revenge
+    reason: Conquest community 66% win over 128 matches (vs 57% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
+  starter: *id001
 ---

@@ -7,83 +7,162 @@ builds:
   aspect: null
   aspect_pick_rate: null
   aspect_win_rate: null
-  slot_order: []
-  community_starters: []
+  slot_order:
+  - name: Devourer's Gauntlet
+    pick_rate: 0.32
+    win_rate: 0.48
+    alternates:
+    - name: Shifter's Shield
+      pick_rate: 0.28
+      win_rate: 0.59
+    - name: Runeforged Hammer
+      pick_rate: 0.05
+      win_rate: 0.38
+  - name: Genji's Guard
+    pick_rate: 0.11
+    win_rate: 0.45
+    alternates:
+    - name: Brawler’s Beat Stick
+      pick_rate: 0.11
+      win_rate: 0.42
+    - name: Sanguine Lash
+      pick_rate: 0.11
+      win_rate: 0.61
+  - name: Freya's Tears
+    pick_rate: 0.16
+    win_rate: 0.46
+    alternates:
+    - name: Genji's Guard
+      pick_rate: 0.09
+      win_rate: 0.42
+    - name: Gladiator's Shield
+      pick_rate: 0.09
+      win_rate: 0.69
+  - name: Kinetic Cuirass
+    pick_rate: 0.06
+    win_rate: 0.56
+    alternates:
+    - name: Freya's Tears
+      pick_rate: 0.18
+      win_rate: 0.61
+    - name: Genji's Guard
+      pick_rate: 0.07
+      win_rate: 0.67
+  - name: Shell of Rebuke
+    pick_rate: 0.06
+    win_rate: 0.81
+    alternates:
+    - name: Freya's Tears
+      pick_rate: 0.13
+      win_rate: 0.52
+    - name: Kinetic Cuirass
+      pick_rate: 0.06
+      win_rate: 0.53
+  - name: Medal of Defense
+    pick_rate: 0.08
+    win_rate: 0.5
+    alternates:
+    - name: Veve Charm
+      pick_rate: 0.07
+      win_rate: 0.54
+    - name: Hide of the Nemean Lion
+      pick_rate: 0.07
+      win_rate: 0.69
+  community_starters:
+  - name: Bluestone Brooch
+    pick_rate: 0.35
+    win_rate: 0.59
+  - name: Bluestone Pendant
+    pick_rate: 0.26
+    win_rate: 0.46
+  - name: Sundering Axe
+    pick_rate: 0.17
+    win_rate: 0.57
   source_url: https://smitebrain.com/gods/hua-mulan/
   last_verified: '2026-11-04'
+  god_win_rate: 0.540453074433657
+  god_matches_won: 167
+  god_matches_played: 309
+  god_division: obsidian
+  god_window_start: '2026-10-20'
+  god_window_end: '2026-11-03'
+  god_matches_analyzed: 14667
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
-  - Genji's Guard
+  - Shield Splitter
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shifter's Shield — physical protection
+    swap_item: Shifter's Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Amanita Charm, Shield Splitter, Jotunn''s Revenge,
-    Kinetic Cuirass, Genji''s Guard, Freya''s Tears, Runeforged Hammer, Breastplate
-    of Valor, Golden Blade, Hydra''s Lament, Erosion, Eye of Providence, Oni Hunter''s
-    Garb, Draconic Scale, The Reaper, Shield of the Phoenix, Stone of Binding, Tekko-Kagi,
-    Tyrfing, Midgardian Mail, Titan''s Bane, Magi''s Cloak, Avenging Blade, Shifter''s
-    Shield, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow, Screeching Gargoyle,
-    Leviathan''s Hide.'
+    this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Shield Splitter,
+    Jotunn''s Revenge, Breastplate of Valor, Golden Blade, Hydra''s Lament, Erosion,
+    Eye of Providence, Oni Hunter''s Garb, Draconic Scale, The Reaper, Shield of the
+    Phoenix, Stone of Binding, Tekko-Kagi, Tyrfing, Midgardian Mail, Titan''s Bane,
+    Magi''s Cloak, Avenging Blade, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow,
+    Screeching Gargoyle, Leviathan''s Hide, Runeforged Hammer.'
   slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.27
     Berserker's Shield:
-      total: 0.54
+      total: 0.56
       efficiency: 0.74
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.4
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.54
       efficiency: 0.56
-      win: 0.5
-      pick: 0.0
+      win: 0.56
+      pick: 0.1
       fit: 0.59
     Shield Splitter:
-      total: 0.51
+      total: 0.53
       efficiency: 0.59
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.55
-    Amanita Charm:
+    Gladiator's Shield:
       total: 0.53
+      efficiency: 0.39
+      win: 0.69
+      pick: 0.14
+      fit: 0.51
+    Hide of the Nemean Lion:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.22
+      fit: 0.31
+    Amanita Charm:
+      total: 0.54
       efficiency: 0.65
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Kinetic Cuirass
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -91,155 +170,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
-  - Jotunn's Revenge
   - Kinetic Cuirass
-  - Shield Splitter
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
-  - Shield Splitter
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, The Reaper, Shield of the Phoenix,
-    Jotunn''s Revenge, Kinetic Cuirass, Shield Splitter, Genji''s Guard, Runeforged
-    Hammer, Golden Blade, Phoenix Feather, Yogi''s Necklace, Bloodforge, Freya''s
-    Tears, Breastplate of Valor, Hydra''s Lament, Riptalon, Oni Hunter''s Garb, Chandra''s
-    Grace, Erosion, Eye of Providence, Avenging Blade, Tekko-Kagi, Tyrfing, Draconic
-    Scale, Midgardian Mail, Titan''s Bane, Regrowth Striders, Pharaoh''s Curse, Lernaean
-    Bow.'
-  slot_scores:
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
-    Jotunn's Revenge:
-      total: 0.51
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Shield Splitter:
-      total: 0.51
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    The Reaper:
-      total: 0.52
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Amanita Charm:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-  starter: *id001
-- source: suggested
-  archetype: anti-tank
-  slot_order:
-  - Stone of Binding
-  - Avenging Blade
-  - Genji's Guard
-  - Berserker's Shield
-  - Jotunn's Revenge
-  - Amanita Charm
-  flex_slots:
-  - Avenging Blade
-  - Genji's Guard
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Stone of
-    Binding, Avenging Blade, Genji''s Guard, Screeching Gargoyle, The Reaper, Shield
-    Splitter, Kinetic Cuirass, Titan''s Bane, Tekko-Kagi, Void Stone, Void Shield,
-    Freya''s Tears, Breastplate of Valor, Runeforged Hammer, The Crusher, Heartseeker,
-    Toxic Blade, Hydra''s Lament, Silverbranch Bow, Golden Blade, Oni Hunter''s Garb,
-    Erosion, Eye of Providence, Riptalon, Draconic Scale, Tyrfing, Midgardian Mail.'
-  slot_scores:
-    Stone of Binding:
-      total: 0.5
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Avenging Blade:
-      total: 0.5
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.2
-    Berserker's Shield:
-      total: 0.53
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.31
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Amanita Charm:
-      total: 0.51
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
-  starter: *id001
-- source: suggested
-  archetype: attack-speed
-  slot_order:
-  - Golden Blade
-  - Genji's Guard
-  - Berserker's Shield
-  - Kinetic Cuirass
-  - Tyrfing
-  - Amanita Charm
-  flex_slots:
-  - Golden Blade
-  - Tyrfing
+  - The Reaper
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -248,68 +186,217 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, Berserker''s Shield, Kinetic Cuirass, The Reaper, Shield
+    of the Phoenix, Jotunn''s Revenge, Shield Splitter, Golden Blade, Phoenix Feather,
+    Yogi''s Necklace, Bloodforge, Breastplate of Valor, Hydra''s Lament, Riptalon,
+    Oni Hunter''s Garb, Chandra''s Grace, Erosion, Eye of Providence, Avenging Blade,
+    Tekko-Kagi, Tyrfing, Draconic Scale, Midgardian Mail, Titan''s Bane, Regrowth
+    Striders, Pharaoh''s Curse, Lernaean Bow, Runeforged Hammer.'
+  slot_scores:
+    Berserker's Shield:
+      total: 0.57
+      efficiency: 0.74
+      win: 0.54
+      pick: 0.0
+      fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.56
+      pick: 0.1
+      fit: 0.57
+    Gladiator's Shield:
+      total: 0.53
+      efficiency: 0.39
+      win: 0.69
+      pick: 0.14
+      fit: 0.52
+    Hide of the Nemean Lion:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.22
+      fit: 0.33
+    The Reaper:
+      total: 0.54
+      efficiency: 0.56
+      win: 0.54
+      pick: 0.0
+      fit: 0.64
+    Amanita Charm:
+      total: 0.59
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.0
+      fit: 0.77
+  community_ordered:
+  - Kinetic Cuirass
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
+  starter: *id001
+- source: suggested
+  archetype: anti-tank
+  slot_order:
+  - Stone of Binding
+  - Berserker's Shield
+  - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  - Amanita Charm
+  flex_slots:
+  - Kinetic Cuirass
+  - Stone of Binding
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
+  - vs_tag: physical_heavy
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
+    for this god: Jotunn''s Revenge, Berserker''s Shield, Amanita Charm, Kinetic Cuirass,
+    Stone of Binding, Avenging Blade, Screeching Gargoyle, The Reaper, Shield Splitter,
+    Titan''s Bane, Tekko-Kagi, Void Stone, Void Shield, Breastplate of Valor, The
+    Crusher, Heartseeker, Toxic Blade, Hydra''s Lament, Silverbranch Bow, Golden Blade,
+    Oni Hunter''s Garb, Erosion, Eye of Providence, Riptalon, Draconic Scale, Tyrfing,
+    Midgardian Mail, Runeforged Hammer.'
+  slot_scores:
+    Stone of Binding:
+      total: 0.52
+      efficiency: 0.5
+      win: 0.54
+      pick: 0.0
+      fit: 0.67
+    Berserker's Shield:
+      total: 0.55
+      efficiency: 0.74
+      win: 0.54
+      pick: 0.0
+      fit: 0.31
+    Jotunn's Revenge:
+      total: 0.55
+      efficiency: 0.67
+      win: 0.54
+      pick: 0.0
+      fit: 0.49
+    Kinetic Cuirass:
+      total: 0.52
+      efficiency: 0.56
+      win: 0.56
+      pick: 0.1
+      fit: 0.47
+    Hide of the Nemean Lion:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.22
+      fit: 0.24
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.0
+      fit: 0.37
+  community_ordered:
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
+  starter: *id001
+- source: suggested
+  archetype: attack-speed
+  slot_order:
+  - Golden Blade
+  - Berserker's Shield
+  - Kinetic Cuirass
+  - Tyrfing
+  - Hide of the Nemean Lion
+  - Amanita Charm
+  flex_slots:
+  - Golden Blade
+  - Tyrfing
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Shell of Rebuke — magical protection
+    swap_item: Shell of Rebuke
+  - vs_tag: physical_heavy
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Berserker''s Shield, Amanita Charm, Genji''s Guard, Kinetic Cuirass,
-    Jotunn''s Revenge, Golden Blade, Shield Splitter, Tyrfing, Freya''s Tears, Breastplate
-    of Valor, Tekko-Kagi, Runeforged Hammer, Pharaoh''s Curse, Lernaean Bow, Toxic
-    Blade, Oni Hunter''s Garb, Shogun''s Ofuda, Silverbranch Bow, Hydra''s Lament,
-    Erosion, Eye of Providence, Stone of Binding, Draconic Scale, Midgardian Mail,
-    Shield of the Phoenix, Magi''s Cloak, The Reaper, Riptalon, Screeching Gargoyle,
-    Titan''s Bane.'
+    this god: Berserker''s Shield, Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge,
+    Golden Blade, Shield Splitter, Tyrfing, Breastplate of Valor, Tekko-Kagi, Pharaoh''s
+    Curse, Lernaean Bow, Toxic Blade, Oni Hunter''s Garb, Shogun''s Ofuda, Silverbranch
+    Bow, Hydra''s Lament, Erosion, Eye of Providence, Stone of Binding, Draconic Scale,
+    Midgardian Mail, Shield of the Phoenix, Magi''s Cloak, The Reaper, Riptalon, Screeching
+    Gargoyle, Titan''s Bane, Runeforged Hammer.'
   slot_scores:
     Golden Blade:
-      total: 0.49
+      total: 0.51
       efficiency: 0.52
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.56
-    Genji's Guard:
-      total: 0.5
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.21
     Berserker's Shield:
-      total: 0.55
+      total: 0.57
       efficiency: 0.74
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.45
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.52
       efficiency: 0.56
-      win: 0.5
-      pick: 0.0
+      win: 0.56
+      pick: 0.1
       fit: 0.48
     Tyrfing:
-      total: 0.48
+      total: 0.5
       efficiency: 0.5
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.55
+    Hide of the Nemean Lion:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.22
+      fit: 0.24
     Amanita Charm:
-      total: 0.51
+      total: 0.53
       efficiency: 0.65
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.38
+  community_ordered:
+  - Kinetic Cuirass
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Berserker's Shield
   - Breastplate of Valor
   - Jotunn's Revenge
-  - Freya's Tears
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Amanita Charm
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -319,56 +406,59 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Shell of Rebuke — physical protection
+    swap_item: Shell of Rebuke
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Berserker''s Shield, Genji''s Guard,
-    Jotunn''s Revenge, Amanita Charm, Freya''s Tears, Breastplate of Valor, Kinetic
-    Cuirass, Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching Gargoyle,
-    Arondight, Runeforged Hammer, Oni Hunter''s Garb, Prophetic Cloak, Erosion, Eye
-    of Providence, Stone of Binding, Draconic Scale, Golden Blade, Midgardian Mail,
-    Gladiator''s Shield, Magi''s Cloak, Leviathan''s Hide, Mantle Of Discord, The
-    Reaper, Pharaoh''s Curse, Shifter''s Shield, Titan''s Bane, Tekko-Kagi.'
+    + fit + win/pick). Underrated for this god: Berserker''s Shield, Gladiator''s
+    Shield, Jotunn''s Revenge, Amanita Charm, Kinetic Cuirass, Breastplate of Valor,
+    Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching Gargoyle,
+    Arondight, Oni Hunter''s Garb, Prophetic Cloak, Erosion, Eye of Providence, Stone
+    of Binding, Draconic Scale, Golden Blade, Midgardian Mail, Magi''s Cloak, Leviathan''s
+    Hide, Mantle Of Discord, The Reaper, Pharaoh''s Curse, Titan''s Bane, Tekko-Kagi,
+    Runeforged Hammer.'
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Berserker's Shield:
-      total: 0.53
+      total: 0.55
       efficiency: 0.74
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.32
     Breastplate of Valor:
-      total: 0.51
+      total: 0.53
       efficiency: 0.63
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.41
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.54
       efficiency: 0.67
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.39
-    Freya's Tears:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
+    Gladiator's Shield:
+      total: 0.55
+      efficiency: 0.39
+      win: 0.69
+      pick: 0.14
+      fit: 0.62
+    Hide of the Nemean Lion:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.69
+      pick: 0.22
+      fit: 0.25
     Amanita Charm:
-      total: 0.51
+      total: 0.53
       efficiency: 0.65
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.39
+  community_ordered:
+  - Gladiator's Shield
+  - Hide of the Nemean Lion
   starter: *id001
 - source: suggested
   archetype: model
@@ -397,48 +487,50 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Berserker''s Shield, Amanita Charm, Shield Splitter,
-    Jotunn''s Revenge, Kinetic Cuirass, Genji''s Guard, Freya''s Tears, Runeforged
-    Hammer, Breastplate of Valor, Golden Blade, Hydra''s Lament, Erosion, Eye of Providence,
-    Oni Hunter''s Garb, Draconic Scale, The Reaper, Shield of the Phoenix, Stone of
-    Binding, Tekko-Kagi, Tyrfing, Midgardian Mail, Titan''s Bane, Magi''s Cloak, Avenging
-    Blade, Shifter''s Shield, Pharaoh''s Curse, Mantle Of Discord, Lernaean Bow, Screeching
-    Gargoyle, Leviathan''s Hide.'
+    Jotunn''s Revenge, Kinetic Cuirass, Runeforged Hammer, Breastplate of Valor, Golden
+    Blade, Hydra''s Lament, Erosion, Eye of Providence, Oni Hunter''s Garb, Draconic
+    Scale, The Reaper, Shield of the Phoenix, Stone of Binding, Tekko-Kagi, Tyrfing,
+    Midgardian Mail, Titan''s Bane, Magi''s Cloak, Avenging Blade, Pharaoh''s Curse,
+    Mantle Of Discord, Lernaean Bow, Screeching Gargoyle, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.51
+      total: 0.49
       efficiency: 0.69
-      win: 0.5
-      pick: 0.0
+      win: 0.45
+      pick: 0.15
       fit: 0.27
     Berserker's Shield:
-      total: 0.54
+      total: 0.56
       efficiency: 0.74
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.4
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.53
       efficiency: 0.67
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.33
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.54
       efficiency: 0.56
-      win: 0.5
-      pick: 0.0
+      win: 0.56
+      pick: 0.1
       fit: 0.59
     Shield Splitter:
-      total: 0.51
+      total: 0.53
       efficiency: 0.59
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
-      win: 0.5
+      win: 0.54
       pick: 0.0
       fit: 0.49
+  community_ordered:
+  - Genji's Guard
+  - Kinetic Cuirass
   starter: *id001
 ---
