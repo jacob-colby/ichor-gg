@@ -197,7 +197,17 @@ def refreeze(root=FROZEN):
     dump("gods.json", {n: by_name[n] for n in names})
     dump("conquest_notes.json", {n: community_only(builds.get(n)) for n in names})
     dump("context.json", {"targets": targets, "minutes_per_item": mpi, "data_patch": sbs.data_patch(),
+                          "team_shares": frozen_team_shares(gods, items, weights, tags_map),
                           "frozen_on": date.today().isoformat()})
+
+
+def frozen_team_shares(gods, items, weights, tags_map):
+    """`{mode: {tag: share}}` — the DERIVED team-tag shares
+    (`recommend.derive_team_shares`). A roster quantity, like the targets, so
+    it is frozen with them: ten gods cannot derive a 1-in-N share."""
+    with pricing(weights):
+        derived = recommend.derive_team_shares(gods, items, weights, tags_map)
+    return {m: {t: d["share"] for t, d in tags.items()} for m, tags in derived.items()}
 
 
 def _finite(x):
@@ -232,6 +242,11 @@ def compute_reference(frozen=None, weights=None, tags_map=None):
     def borrowed(name, mode="Conquest"):
         return copy.deepcopy(notes.get(name)) if mode == "Conquest" else {"builds": []}
 
+    # The derived team-tag shares are frozen inputs (`frozen_team_shares`):
+    # the live data/_team_shares.json moves with a refresh, these must not.
+    weights = copy.deepcopy(weights)
+    weights.setdefault("team_tags", {}).pop("derived", None)
+    scoring.attach_team_shares(weights, frozen["context"].get("team_shares") or {})
     out = {}
     with pricing(weights), mock.patch.object(recommend, "load_build_note", borrowed):
         view = sbs.ModelView(items, weights, tags_map)
@@ -837,6 +852,10 @@ def sensitivity(gods, items, builds, weights, tags_map, nudges=NUDGES, factors=F
             w = copy.deepcopy(weights)
             if not apply(w, f):
                 continue
+            # The pipeline re-derives the team-tag shares on every run, so a
+            # nudge is measured with its own (`recommend.derive_team_shares`).
+            with pricing(w):
+                scoring.attach_team_shares(w, recommend.derive_team_shares(gods, items, w, tags_map))
             for mode in modes:
                 base = baseline[mode]
                 bb = base_builds(gods, items, builds, w, tags_map, mode)

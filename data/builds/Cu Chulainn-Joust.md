@@ -80,8 +80,8 @@ builds:
   - The Reaper
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - Golden Blade
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -109,7 +109,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -170,7 +170,7 @@ builds:
       pick: 0.0
       fit: 0.65
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -235,7 +235,7 @@ builds:
       pick: 0.0
       fit: 0.6
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0

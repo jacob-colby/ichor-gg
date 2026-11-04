@@ -79,7 +79,28 @@ def load_weights(path):
     if not path.exists():
         return copy.deepcopy(DEFAULT_WEIGHTS)
     override = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    return _deep_merge(DEFAULT_WEIGHTS, override)
+    weights = _deep_merge(DEFAULT_WEIGHTS, override)
+    # The DERIVED team-tag shares (`recommend.derive_team_shares`), written
+    # beside the weights by `recommend --all` with the builds they made.
+    shares = path.parent / TEAM_SHARES_FILE
+    if shares.exists():
+        import json
+        attach_team_shares(weights, json.loads(shares.read_text(encoding="utf-8")))
+    return weights
+
+
+TEAM_SHARES_FILE = "_team_shares.json"
+
+
+def attach_team_shares(weights, derived):
+    """Put `{mode: {tag: {"share": s, ...} | s}}` where `resolve_profile`
+    reads a derived share (`team_tags.derived.<mode>.<tag>`)."""
+    team = weights.setdefault("team_tags", {})
+    out = team.setdefault("derived", {})
+    for mode, tags in (derived or {}).items():
+        for tag, d in tags.items():
+            out.setdefault(mode, {})[tag] = float(d["share"] if isinstance(d, dict) else d)
+    return weights
 
 
 def load_tags(path):
@@ -887,12 +908,25 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
     team = weights.get("team_tags") or {}
     share = team_share(mode_prof.get("team_size"), team.get("duplicate_value", 0.0))
     calibrated = ((team.get("share") or {}).get(mode.lower()) or {})
+    derive = set(((team.get("derive") or {}).get(mode.lower())) or ())
+    derived = ((team.get("derived") or {}).get(mode.lower()) or {})
     mode_tb = dict(mode_prof.get("tag_bonus") or {})
     team_raw, shares = {}, {}
     for t in team.get("tags") or ():
         if mode_tb.get(t, 0.0) > 0:
             team_raw[t] = mode_tb[t]
-            shares[t] = float(calibrated.get(t, share))
+            if t in derive:
+                # Derived from its 1-in-N target, never set by hand
+                # (`recommend.derive_team_share`). Missing means the derivation
+                # has not run on these weights: refuse rather than fall back to
+                # a number the builds were not made with.
+                if t not in derived:
+                    raise KeyError(f"team_tags.derive names {mode}/{t} but no derived share is "
+                                   f"attached: run `python -m smite.recommend --all` (writes "
+                                   f"data/{TEAM_SHARES_FILE}) or `scoring.attach_team_shares`")
+                shares[t] = float(derived[t])
+            else:
+                shares[t] = float(calibrated.get(t, share))
             mode_tb[t] = mode_tb[t] * shares[t]
     tag_bonus = {**mode_tb,
                  **(asp.get("tag_bonus") or {}),

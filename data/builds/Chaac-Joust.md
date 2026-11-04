@@ -13,8 +13,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Brawler’s Beat Stick
   - Erosion
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -365,7 +365,7 @@ builds:
       pick: 0.0
       fit: 0.45
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
@@ -470,8 +470,8 @@ builds:
   - Erosion
   - Soul Gem
   flex_slots:
-  - Brawler’s Beat Stick
   - Erosion
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse

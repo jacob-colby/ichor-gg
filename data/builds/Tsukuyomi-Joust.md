@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.63
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -298,7 +298,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.82
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.67
@@ -424,11 +424,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Lotus Sickle:
       total: 0.51
       efficiency: 0.57

@@ -92,6 +92,10 @@ def main(argv=None):
         # Where _patch.json is derived from, and where `data_from` is set.
         # Omitted, the next run re-derives the label from a stale history.
         "data/_patch_history.json",
+        # The team-tag shares `recommend --all` derives and every build above
+        # was made with (`recommend.derive_team_shares`). Omitted, the repo
+        # keeps the previous run's share beside this run's builds.
+        "data/_team_shares.json",
         # Art for items the patch introduced. Omitted, a brand-new item renders
         # as a fallback initial — the most visible possible symptom, on exactly
         # the items people came to look at.

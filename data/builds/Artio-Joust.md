@@ -239,7 +239,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -359,7 +359,7 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0

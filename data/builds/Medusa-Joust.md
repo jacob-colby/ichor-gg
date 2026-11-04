@@ -168,7 +168,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -210,8 +210,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Spear of Desolation
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -300,7 +300,7 @@ builds:
       pick: 0.0
       fit: 0.43
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0

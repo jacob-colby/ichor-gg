@@ -42,7 +42,7 @@ def test_the_modes_anti_heal_and_aura_bonus_is_scaled_by_the_team_share():
     w = scoring.load_weights(recommend.WEIGHTS_PATH)
     raw = w["modes"]["joust"]["tag_bonus"]
     p = scoring.resolve_profile(w, "Joust")
-    cal = w["team_tags"]["share"]["joust"]
+    cal = {**w["team_tags"]["share"]["joust"], **w["team_tags"]["derived"]["joust"]}
     assert p["team_shares"] == {"anti-heal": cal["anti-heal"], "aura": cal["aura"]}
     assert p["tag_bonus"]["anti-heal"] == pytest.approx(raw["anti-heal"] * cal["anti-heal"])
     assert p["tag_bonus"]["aura"] == pytest.approx(raw["aura"] * cal["aura"])
@@ -93,3 +93,59 @@ def test_the_calibrated_shares_put_static_cores_near_one_in_n():
                     n += 1
                     held += any("anti-heal" in (tags.get(x) or []) for x in e["slot_order"])
         assert abs(held / n - 1 / n_team) < 0.08, (mode, held, n)
+
+
+# ── Derived team-tag shares (2026-11-04) ──────────────────────────────────
+# Joust's anti-heal share is derived from its 1-in-N target, not swept
+# (`recommend`, "Team-tag shares derived from their target").
+
+def test_a_derived_share_is_refused_rather_than_guessed_when_missing():
+    w = scoring.load_weights(recommend.WEIGHTS_PATH)
+    w["team_tags"].pop("derived")
+    with pytest.raises(KeyError, match="recommend --all"):
+        scoring.resolve_profile(w, "Joust")
+    scoring.resolve_profile(w, "Arena")          # not derived: its swept share stands
+
+
+@pytest.fixture(scope="module")
+def fresh_derivation():
+    from smite import efficiency
+    w = scoring.load_weights(recommend.WEIGHTS_PATH)
+    efficiency.apply_pricing_flags(w)
+    return recommend.derive_team_shares(recommend.load_gods(), recommend.load_items(), w,
+                                        scoring.load_tags(recommend.TAGS_PATH))
+
+
+def test_the_shipped_derived_share_is_not_stale(fresh_derivation):
+    """data/_team_shares.json is what `recommend --all` derived on THIS data
+    and THIS model. Stale means the builds were made with another share."""
+    import json
+    shipped = json.loads(recommend.TEAM_SHARES_PATH.read_text(encoding="utf-8"))
+    for mode, tags in fresh_derivation.items():
+        for tag, d in tags.items():
+            assert shipped[mode][tag]["share"] == pytest.approx(d["share"], abs=1e-9), \
+                "stale: run `python -m smite.recommend --all`"
+            assert shipped[mode][tag]["holding"] == d["holding"]
+
+
+def _ties_at(costs, share):
+    return sum(1 for c in costs.values() if c is not None and c == share)
+
+
+def test_the_derived_share_holds_the_target_count(fresh_derivation):
+    d = fresh_derivation["joust"]["anti-heal"]
+    assert d["target"] == round(d["seats"] / 3)
+    # Exactly the target, plus any seat tied with the target seat's cost.
+    assert d["target"] <= d["holding"] < d["target"] + _ties_at(d["costs"], d["share"])
+    assert d["holding"] == sum(1 for c in d["costs"].values() if c is not None and c <= d["share"])
+
+
+def test_the_count_moves_one_seat_per_step_of_the_target(fresh_derivation):
+    """The cliff, gone: as the target k moves, the count the derived share
+    gives is k (k + its exact ties), never a role-sized block."""
+    costs = fresh_derivation["joust"]["anti-heal"]["costs"]
+    ranked = sorted(c for c in costs.values() if c is not None)
+    for k in range(1, len(ranked) + 1):
+        share = ranked[k - 1]
+        count = sum(1 for c in ranked if c <= share)
+        assert k <= count < k + _ties_at(costs, share), (k, count)

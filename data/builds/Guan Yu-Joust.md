@@ -74,14 +74,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Golden Blade
-  - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
+  - Shield Splitter
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Golden Blade
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -93,8 +93,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -104,12 +104,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
-    Toxic Blade:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -122,6 +116,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.52
+    Shield Splitter:
+      total: 0.51
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Amanita Charm:
       total: 0.7
       efficiency: 0.65
@@ -186,7 +186,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67

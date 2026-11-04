@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -239,7 +239,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.71
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -428,7 +428,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.7
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -489,11 +489,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -558,7 +558,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.74
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -619,11 +619,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67

@@ -158,6 +158,26 @@ def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
     }
 
 
+def assemble_flavor_core(god, items, god_build, weights, tags_map, mode, eff_scores,
+                         items_by_name, gold_values=None, flavor=None, aspect_overlay=None):
+    """`(core, rows, profile)` for one flavor (None = the blended `core`) of
+    one god in one mode — the one assembly `_build_entry_set` ships and
+    `derive_team_shares` measures."""
+    cfg = ((weights.get("flavors") or {}).get(flavor) or {}) if flavor else {}
+    profile = scoring.resolve_profile(weights, mode, flavor, aspect_overlay=aspect_overlay)
+    rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
+    core, _ = assemble.assemble_core_converged(
+        rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
+        max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
+        require=cfg.get("require") if flavor else None,
+        stat_caps=weights.get("stat_caps"),
+        economy=profile.get("economy"),
+        **assemble.coherence_args(items, weights),
+        **assemble.conversion_args(weights, eff_scores, gold_values, signals=profile["signals"]),
+        **assemble.overflow_args(weights, eff_scores, gold_values, signals=profile["signals"]))
+    return core, rows, profile
+
+
 def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      items_by_name, starter, flex_count, aspect_overlay, aspect_name,
                      gold_values=None):
@@ -184,18 +204,9 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         if cfg.get("fun") and (aspect_overlay is not None
                                or cfg.get("redundant_with") in eligible):
             continue  # fun builds: base kit only, and never beside a serious twin
-        profile = scoring.resolve_profile(weights, mode, flavor, aspect_overlay=aspect_overlay)
-        rows = scoring.score_god_items(god, items, god_build, eff_scores, weights, tags_map, profile)
-        require = cfg.get("require") if flavor else None
-        core, _ = assemble.assemble_core_converged(
-            rows, items_by_name, passes=weights.get("conversion_passes", 1), n=6,
-            max_lifesteal=scoring.god_max_lifesteal(god, weights, profile),
-            require=require,
-            stat_caps=weights.get("stat_caps"),
-            economy=profile.get("economy"),
-            **assemble.coherence_args(items, weights),
-            **assemble.conversion_args(weights, eff_scores, gold_values, signals=profile["signals"]),
-            **assemble.overflow_args(weights, eff_scores, gold_values, signals=profile["signals"]))
+        core, rows, profile = assemble_flavor_core(god, items, god_build, weights, tags_map, mode,
+                                                   eff_scores, items_by_name, gold_values,
+                                                   flavor, aspect_overlay)
         archetype = flavor or "core"
         if flavor is None:
             core_rows, core_profile = rows, profile
@@ -277,6 +288,117 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
     return entries
 
 
+# ── Team-tag shares derived from their target (2026-11-04) ────────────────
+#
+# THE CLIFF. Joust's anti-heal share was a swept constant, and the number of
+# `core` cores holding an anti-heal item was a cliff in it (2026-11-04 data,
+# 101 cores, 0.01 steps): 19 at 0.56, 22, 25, then 34 at 0.59; 39 at 0.64,
+# 44 at 0.65, 50 at 0.66. Nine cores flip between 0.58 and 0.59.
+#
+# WHY. A core takes its best anti-heal item once the tag bonus closes the
+# score gap to the core's weakest item, and in Joust that gap has no
+# god-specific term: `win` and `pick` are zeroed, so an item's score is
+# efficiency (god-agnostic) plus fit, and fit is the ROLE's stat map plus a
+# small kit blend. Every god of a role sees nearly the same gap. The nine at
+# 0.59 are six Carries taking Toxic Blade (Toxic Blade 0.448-0.452 against
+# their weakest kept item, Golden Blade, at 0.533-0.537) and three Solos
+# taking Brawler's Beat Stick or Stygian Anchor; at 0.65-0.66 it is the
+# Supports' turn with Stygian Anchor. No threshold or near-tie in assembly is
+# involved — holding is monotone in the share for all 101 seats — the gaps
+# themselves come in role-sized blocks, so ANY flat bonus moves the count a
+# role at a time, and any change to role fit (the per-ability parse moved
+# four gods into the Carry block) moves the calibrated point by a block.
+#
+# THE REDESIGN. The share is no longer a number anyone sets. The target is
+# (1/N of cores, N = `team_size`, DOCUMENTED); each seat's COST is the least
+# share at which its `core` holds the tag (bisection, `TEAM_SHARE_TOL`); the
+# share is the cost of the round(seats/N)-th cheapest seat. Then exactly that
+# many cores hold the tag — more only on an exact tie — on every refresh and
+# after every model change, and the count moves with the TARGET one core per
+# 1/seats. The block structure is still there (it is a fact about the
+# scores) but it now decides only WHICH seats carry, by their own small
+# differences, not HOW MANY. Derived by `python -m smite.recommend --all`
+# into `data/_team_shares.json`, which `scoring.load_weights` reads, so every
+# reader of the profile sees the same value as the builds; `test_mode_profiles`
+# re-derives it and fails if the file is stale.
+#
+# Scope: `team_tags.derive` names the (mode, tag) pairs derived this way —
+# Joust anti-heal. Arena anti-heal and both auras keep their swept shares
+# (STATE.md §5).
+TEAM_SHARES_PATH = DATA_ROOT / "_team_shares.json"
+TEAM_SHARE_TOL = 1e-4
+
+
+def _team_seats(gods, weights):
+    """`[(seat, god, aspect_overlay)]` — every `core` a mode ships: each god's
+    base kit and, where one is tuned, its aspect."""
+    aspects = weights.get("aspects") or {}
+    out = []
+    for g in sorted(gods, key=lambda g: g["name"]):
+        out.append((g["name"], g, None))
+        ov = aspects.get(g["name"])
+        if ov and g.get("aspects"):
+            out.append((f"{g['name']} @ {g['aspects'][0].get('name')}", g, ov))
+    return out
+
+
+def _with_share(weights, mode, tag, share):
+    team = dict(weights.get("team_tags") or {})
+    derived = {m: dict(v) for m, v in (team.get("derived") or {}).items()}
+    derived.setdefault(mode.lower(), {})[tag] = share
+    team["derived"] = derived
+    return {**weights, "team_tags": team}
+
+
+def derive_team_share(gods, items, weights, tags_map, mode, tag, tol=TEAM_SHARE_TOL):
+    """`{share, target, seats, holding, costs: {seat: cost | None}}` for one
+    (mode, tag) — see the block above. `weights` must already carry the
+    pricing flags the builds are made with."""
+    eff, gv = efficiency.efficiency_scores(items)
+    ibn = {it["name"]: it for it in items}
+    seats = _team_seats(gods, weights)
+
+    def holds(god, overlay, share):
+        core, _, _ = assemble_flavor_core(god, items, {"builds": []}, _with_share(weights, mode, tag, share),
+                                          tags_map, mode, eff, ibn, gv, None, overlay)
+        return any(tag in (tags_map.get(x) or []) for x in core)
+
+    costs = {}
+    for seat, god, overlay in seats:
+        if not holds(god, overlay, 1.0):
+            costs[seat] = None
+            continue
+        lo, hi = 0.0, 1.0
+        if holds(god, overlay, 0.0):
+            hi = 0.0
+        while hi - lo > tol:
+            mid = (lo + hi) / 2
+            lo, hi = (lo, mid) if holds(god, overlay, mid) else (mid, hi)
+        costs[seat] = round(hi, 6)
+    n_team = ((weights.get("modes") or {}).get(mode.lower()) or {}).get("team_size")
+    target = round(len(seats) / float(n_team))
+    ranked = sorted(c for c in costs.values() if c is not None)
+    share = ranked[target - 1] if 0 < target <= len(ranked) else 1.0
+    holding = sum(1 for seat, god, ov in seats if holds(god, ov, share))
+    return {"share": share, "target": target, "seats": len(seats), "holding": holding,
+            "team_size": n_team, "costs": costs}
+
+
+def derive_team_shares(gods, items, weights, tags_map):
+    """`{mode: {tag: derive_team_share(...)}}` for every pair `team_tags.derive` names."""
+    out = {}
+    for mode, tags in sorted(((weights.get("team_tags") or {}).get("derive") or {}).items()):
+        mode_name = next(m for m in MODES if m.lower() == mode)
+        for tag in tags:
+            out.setdefault(mode, {})[tag] = derive_team_share(gods, items, weights, tags_map, mode_name, tag)
+    return out
+
+
+def write_team_shares(derived, path=TEAM_SHARES_PATH):
+    import json
+    path.write_text(json.dumps(derived, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+
 def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conquest"):
     eff_scores, gold_values = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
@@ -309,6 +431,15 @@ def main(argv=None):
         weights = scoring.load_weights(WEIGHTS_PATH)
         efficiency.apply_pricing_flags(weights)
         tags_map = scoring.load_tags(TAGS_PATH)
+        if not args.report_only:
+            # Derive the team-tag shares first: every Joust build below reads them.
+            derived = derive_team_shares(load_gods(), items, weights, tags_map)
+            write_team_shares(derived)
+            scoring.attach_team_shares(weights, derived)
+            for mode, tags in derived.items():
+                for tag, d in tags.items():
+                    print(f"[team share] {mode} {tag}: {d['share']:.4f} -> "
+                          f"{d['holding']}/{d['seats']} cores (target {d['target']})")
         # Only buildable items need effect tags — a component is never in a
         # build, so listing all 49 of them turns a useful warning into noise
         # nobody reads.
