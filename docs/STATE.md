@@ -179,6 +179,7 @@ Each of these has its evidence in the named module.
 | Every scored item's passive is DECIDED — simulated, partial or refused | `passive_sim.REGISTRY` | Absence is not a decision: an absent passive is zeroed by accident, which lowers predicted cost and makes the item look more premium. 193 of 193 decided (2026-11-05) |
 | A debuff on the enemy's attack speed or Strength is worth exactly 0 here | `side_by_side.attacker_profile` | Its raw DPS is derived from the reference squishy over KILL_TIME and each hit is `dps x share x step`, so the cadence sets WHEN, never how much |
 | An item is refused WHOLE rather than credited with its good half | `passive_sim` (Xibalban Effigy) | `reduce_hit` would simulate its 50% cut in two lines and the clock has no channel for the payback, so the item would be booked with its upside alone |
+| The comparison page's window label is DERIVED from the data, not the patch | `side_by_side.community_window_label` | Read off `_patch.json` it said "community window Open Beta 47" through a healthy window, a catastrophic one and a restored one alike; the match count is what makes a thin window visible |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
 | An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
 | That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
@@ -2816,6 +2817,28 @@ quieter. `_refuse_god_collapse` guards the wiki side per note, at the write;
 the community side had no guard at all. What actually noticed was two unit
 tests pinning god names — after the commit was pushed and the site rebuilt.
 
+**There was a fourth blind spot, and it is the one a PERSON would have caught
+it with (closed 2026-11-05).** `_meta.json`'s `data` string — the line the god
+page shows above the comparison — read BOTH halves off `data/_patch.json`,
+which records the current GAME patch. So its community half asserted something
+nothing had checked, and read `community window Open Beta 47` identically at
+`5e960b76` (a healthy Open Beta 46 window), at `6158066f` (the one-day window,
+166 items and ~194 matches behind the figures) and at `dc03ded4` (restored,
+67,532 matches). Three different states, one string, and wrong even when the
+data was right. It is derived from the data now
+(`side_by_side.community_window_label`), so a thin window is visible at a
+glance: `Open Beta 46, 67,532 matches` against what that day would have shown,
+`Open Beta 47, 529 matches`. The items/gods half still reads `_patch.json`,
+because the wiki IS re-scraped on patch day and that half was never wrong.
+
+**And the suites now run in CI (closed 2026-11-05).** `.github/workflows/`
+held the daily refresh, the wiki watcher and four probe jobs, none triggered by
+`push` or `pull_request` — so nothing re-ran either suite and every PR's checks
+were Vercel deploys. `tests.yml` runs both on push to `main` and on every pull
+request (pipeline ~6m56s, viewer ~1m1s, `npm run build` included at 0.5s).
+That is why the god-name tests went unnoticed for a day: nothing was running
+them.
+
 **The fix, in two parts.** `choose_community_window` probes the newest two
 patch windows and takes the one covering more of the roster, **a tie going to
 the newer** — so nothing is tuned, nothing goes stale, and the run moves to a
@@ -3208,7 +3231,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1393) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1400) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3328,7 +3351,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1393 pipeline · 958 viewer |
+| Tests | 1400 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
