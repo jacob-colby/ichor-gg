@@ -139,6 +139,33 @@ def _parse_core_recommended_build(soup) -> list:
     return chosen
 
 
+#: The range selector on every god page: `1w`, `2w`, `1m`, then one id per
+#: patch, newest first (`ob47`, `ob46`, ...). It is page chrome, present even
+#: on a god whose window holds no build at all, which is what makes it safe to
+#: read off any god.
+PATCH_WINDOW_RE = re.compile(r"^ob(\d+)$")
+
+
+def patch_windows(html: str) -> list:
+    """Every PATCH window id the page offers, newest first.
+
+    Read rather than hardcoded, so a patch landing adds its own id without a
+    code change. The rolling ranges (`1w`, `2w`, `1m`) are deliberately left
+    out: they straddle patches, and `validate`'s Spearman floor is calibrated
+    on the window RESETTING every patch (`SPEARMAN_LATE_FROM_DAY`), so mixing
+    two balance patches into one community record would quietly break the one
+    constant that depends on the window's shape.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    ids = []
+    for sel in soup.find_all("select"):
+        for option in sel.find_all("option"):
+            value = (option.get("value") or "").strip()
+            if PATCH_WINDOW_RE.match(value) and value not in ids:
+                ids.append(value)
+    return sorted(ids, key=lambda v: int(PATCH_WINDOW_RE.match(v).group(1)), reverse=True)
+
+
 def _parse_aspects(soup) -> list:
     """Aspects are identified by name prefix ("Aspect of"), same as before
     this fix — this part of the page was already correct. Anchored off the
