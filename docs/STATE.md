@@ -2128,6 +2128,84 @@ shipped **off**. Numbers are in the named module.
     one of the four Carry levers from §4.30 and still unpicked. (c) Accept the
     disagreement and leave it.
 
+32. **Option (a) — pricing passives inside `efficiency` from `passive_sim` —
+    is blocked on `passive_sim`'s COVERAGE, not on its arithmetic
+    (2026-11-04).** Jacob picked (a) from §4.31. The design is sound and the
+    right shape was found; it cannot be built honestly yet, for a reason that
+    is a counted fact rather than a judgement.
+
+    **THE DESIGN THAT WOULD BE RIGHT.** `item_stat_values` is "the single place
+    raw stat dicts are turned into regression columns", and four shipped flags
+    already extend it (`price_adaptive`, `price_conversions`,
+    `price_crit_multipliers`, `price_passives`). So a passive belongs in the
+    fit as EXTRA COLUMNS — simulated passive damage and simulated passive
+    effective health — and NNLS then LEARNS their gold price. Nothing is
+    invented; the conversion rate is fitted the way every stat price already
+    is, and non-negativity falls out of NNLS. `side_by_side.passive_contribution`
+    already returns the per-item numbers, as the build with that one passive
+    switched off and its printed stats kept.
+
+    **THE BLOCKER: 84 of 193 scored items have a passive and are ABSENT from
+    `passive_sim`'s table.** Of `efficiency_pool`'s 193 items:
+
+        simulated or partial, would get a value      67
+        explicitly REFUSED, an honest zero           11
+        no passive text at all, a true zero          31
+        HAS a passive, absent from the table         84
+
+    `passive_sim` covers 67 because it only ever needed the items that appear
+    in `side_by_side`'s 90 comparisons, not the whole scored pool. Pricing from
+    it today would relieve those 67 and ZERO the 84 by absence rather than by
+    decision — and the direction matters: no passive value means a lower
+    predicted cost, a higher residual, and a more premium-looking item. So the
+    change would not close §4.31's asymmetry, it would REPLACE it with a
+    larger one, 84 items marked up against 67 relieved instead of all of them
+    marked up together. That is precisely the "silently defaults favourable"
+    failure this work was asked to avoid, pointing the other way.
+
+    **And `Agility Greaves` is one of the 84**, which §4.25 names as `hi`, the
+    item that sets the efficiency scale. Pricing passives moves `hi` and
+    therefore rescales the signal for every god, so the arm is not separable
+    from a §4.25 reweight.
+
+    **A SECOND, SMALLER FINDING: THE DOUBLE COUNT IS REAL AND LANDS ON THE
+    HEADLINE ITEM.** Eight pool items have their passive priced BOTH by a
+    shipped flag and simulated by `passive_sim`: Book of Thoth, Brawler's Beat
+    Stick, Eye of Erebus, Nimble Ring, Rod of Tahuti, Sun Beam Bow,
+    Transcendence, and **The Executioner** — whose adaptive +30 Strength is
+    already in its stat columns via `price_adaptive` while `passive_sim`
+    simulates the adaptive grant AND the 7% shred together. Any implementation
+    must net the flag-priced half out; the clean rule is that where
+    `passive_sim` simulates an item, its simulated value SUPERSEDES the
+    flag-derived grants for that item.
+
+    **THE CONTEXT ASSUMPTION, MEASURED (§4.31's point 4).** A
+    `passive_contribution` is build- and target-dependent while a residual is
+    context-free. Taken across every shipped Conquest `core` that holds the
+    item, against the median-Mid and median-Support reference targets,
+    `sustained_squishy` spreads:
+
+        Riptalon          n=7    616 median   582-667    1.1x
+        Dominance         n=7    630 median   558-723    1.3x
+        Silverbranch Bow  n=11   866 median   573-973    1.7x
+        Deathbringer      n=5    850 median   400-1204   3.0x
+
+    A single reference number is defensible for the first three and wrong by
+    up to 3x for Deathbringer, whose value tracks the build's crit chance.
+    Reporting a per-item spread alongside the value would be the honest form.
+    Note also that The Executioner is in NO shipped core, so the items most in
+    need of pricing are the ones our own builds give no context for; the
+    community's builds have to supply it.
+
+    **PRECONDITION, so this is actionable rather than a dead end.** Simulate
+    the 84. That is §4.30's "14 absent items" at six times the scale, it needs
+    no decision from anyone, and it is the only thing standing between this
+    design and a measurement. Until then (a) cannot be measured honestly, and
+    §4.31's options (b) give movement a value, or (c) accept the disagreement,
+    are the ones on the table.
+
+    Nothing was shipped. No weight moved, no flag added, `heldout` +0.0000.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
