@@ -1529,15 +1529,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Nimble Ring
   - Spear of Desolation
   - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Doom Orb
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1558,6 +1558,12 @@ builds:
     Totem of Death, Divine Ruin, Jade Scepter, Bancroft''s Talon, Helm of Radiance,
     Ethereal Staff, Typhon’s Heart, Rod of Asclepius.'
   slot_scores:
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.51
+      pick: 0.0
+      fit: 0.5
     Spear of Desolation:
       total: 0.58
       efficiency: 0.59
@@ -1588,17 +1594,10 @@ builds:
       win: 0.52
       pick: 0.28
       fit: 0.78
-    Soul Gem:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.46
-      pick: 0.23
-      fit: 0.96
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
   starter: *id001
   aspect: Aspect of Combustion
 ---

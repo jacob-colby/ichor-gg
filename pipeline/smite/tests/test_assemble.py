@@ -724,3 +724,14 @@ def test_efficiency_adjustments_take_the_passed_signals_not_the_base():
         == pytest.approx(0.5)
     with pytest.raises(TypeError):
         assemble.overflow_args(base, eff, gold)  # no silent fallback to the base
+
+
+def test_quality_signals_is_the_identity_where_eff_and_fit_sum_to_one():
+    """Joust and Arena (0.5 / 0.5) need no rescale; Conquest (0.35 / 0.15)
+    puts efficiency at 0.70 of `quality`, and win and pick at nothing."""
+    j = assemble.quality_signals({"efficiency": 0.5, "win": 0.0, "pick": 0.0, "fit": 0.5})
+    assert j == {"efficiency": 0.5, "win": 0.0, "pick": 0.0, "fit": 0.5}
+    c = assemble.quality_signals({"efficiency": 0.35, "win": 0.45, "pick": 0.05, "fit": 0.15})
+    assert c["efficiency"] == pytest.approx(0.70)
+    assert c["fit"] == pytest.approx(0.30)
+    assert c["win"] == c["pick"] == 0.0

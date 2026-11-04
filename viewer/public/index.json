@@ -43913,16 +43913,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Nimble Ring",
             "Spear of Desolation",
             "Doom Orb",
             "Spear of the Magus",
             "Rod of Tahuti",
-            "Obsidian Shard",
-            "Soul Gem"
+            "Obsidian Shard"
           ],
           "flex_slots": [
-            "Spear of the Magus",
-            "Doom Orb"
+            "Doom Orb",
+            "Nimble Ring"
           ],
           "situational_swaps": [
             {
@@ -43948,6 +43948,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Spear of the Magus, Gluttonous Grimoire, Doom Orb, Lotus Sickle, Dreamer's Idol, Nimble Ring, Ancient Signet, The Cosmic Horror, Gem of Focus, Bracer of The Abyss, Heartwood Charm, Eros' Bow, Blood-Bound Book, Polynomicon, Totem of Death, Divine Ruin, Jade Scepter, Bancroft's Talon, Helm of Radiance, Ethereal Staff, Typhon\u2019s Heart, Rod of Asclepius.",
           "slot_scores": {
+            "Nimble Ring": {
+              "total": 0.51,
+              "efficiency": 0.58,
+              "win": 0.51,
+              "pick": 0.0,
+              "fit": 0.5
+            },
             "Spear of Desolation": {
               "total": 0.58,
               "efficiency": 0.59,
@@ -43982,20 +43989,12 @@
               "win": 0.52,
               "pick": 0.28,
               "fit": 0.78
-            },
-            "Soul Gem": {
-              "total": 0.55,
-              "efficiency": 0.53,
-              "win": 0.46,
-              "pick": 0.23,
-              "fit": 0.96
             }
           },
           "community_ordered": [
             "Spear of Desolation",
             "Rod of Tahuti",
-            "Obsidian Shard",
-            "Soul Gem"
+            "Obsidian Shard"
           ],
           "starter": {
             "base": "Conduit Gem",
@@ -50557,16 +50556,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Book of Thoth",
             "Jotunn's Revenge",
-            "Hydra's Lament",
+            "Transcendence",
             "Spear of Desolation",
-            "Titan's Bane",
             "Rod of Tahuti",
-            "Soul Gem"
+            "Titan's Bane"
           ],
           "flex_slots": [
-            "Hydra's Lament",
-            "Soul Gem"
+            "Transcendence",
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
@@ -50592,6 +50591,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Titan's Bane, Hydra's Lament, Soul Gem, The Crusher, The Reaper, Pendulum Blade, Arondight, Tekko-Kagi, Spear of the Magus, Death Metal, Avatar's Parashu, Gluttonous Grimoire, Doom Orb, The World Stone, Tyrfing, Lotus Sickle, Dreamer's Idol, Chronos' Pendant, Runeforged Hammer, Bragi's Harp, Ancient Signet, Avenging Blade, The Cosmic Horror, Gem of Focus, Shield Splitter, Eye of the Storm, Heartwood Charm, Dominance, Bloodforge, Lernaean Bow, Golden Blade, Blood-Bound Book, Triton's Conch, Damaru, Silverbranch Bow.",
           "slot_scores": {
+            "Book of Thoth": {
+              "total": 0.42,
+              "efficiency": 0.49,
+              "win": 0.47,
+              "pick": 0.33,
+              "fit": 0.1
+            },
             "Jotunn's Revenge": {
               "total": 0.62,
               "efficiency": 0.67,
@@ -50599,12 +50605,12 @@
               "pick": 0.22,
               "fit": 0.9
             },
-            "Hydra's Lament": {
-              "total": 0.54,
-              "efficiency": 0.56,
-              "win": 0.53,
-              "pick": 0.0,
-              "fit": 0.68
+            "Transcendence": {
+              "total": 0.44,
+              "efficiency": 0.53,
+              "win": 0.41,
+              "pick": 0.23,
+              "fit": 0.38
             },
             "Spear of Desolation": {
               "total": 0.58,
@@ -50613,13 +50619,6 @@
               "pick": 0.44,
               "fit": 0.62
             },
-            "Titan's Bane": {
-              "total": 0.55,
-              "efficiency": 0.54,
-              "win": 0.53,
-              "pick": 0.0,
-              "fit": 0.79
-            },
             "Rod of Tahuti": {
               "total": 0.65,
               "efficiency": 0.86,
@@ -50627,16 +50626,18 @@
               "pick": 0.65,
               "fit": 0.42
             },
-            "Soul Gem": {
-              "total": 0.53,
-              "efficiency": 0.53,
+            "Titan's Bane": {
+              "total": 0.55,
+              "efficiency": 0.54,
               "win": 0.53,
               "pick": 0.0,
-              "fit": 0.72
+              "fit": 0.79
             }
           },
           "community_ordered": [
+            "Book of Thoth",
             "Jotunn's Revenge",
+            "Transcendence",
             "Spear of Desolation",
             "Rod of Tahuti"
           ],
@@ -78021,15 +78022,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -78062,6 +78063,13 @@
               "pick": 0.34,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.51,
+              "efficiency": 0.53,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.57,
               "efficiency": 0.51,
@@ -78083,13 +78091,6 @@
               "pick": 0.17,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.59,
-              "efficiency": 0.43,
-              "win": 0.58,
-              "pick": 0.57,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.62,
               "efficiency": 0.54,
@@ -78102,7 +78103,6 @@
             "Jotunn's Revenge",
             "The Reaper",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -85389,15 +85389,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -85430,6 +85430,13 @@
               "pick": 0.67,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.53,
+              "efficiency": 0.53,
+              "win": 0.56,
+              "pick": 0.22,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.57,
               "efficiency": 0.51,
@@ -85451,13 +85458,6 @@
               "pick": 0.33,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.6,
-              "efficiency": 0.43,
-              "win": 0.59,
-              "pick": 0.57,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.6,
               "efficiency": 0.54,
@@ -85468,8 +85468,8 @@
           },
           "community_ordered": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -92176,12 +92176,12 @@
             "Breastplate of Valor",
             "Kinetic Cuirass",
             "Freya's Tears",
-            "Rod of Tahuti",
-            "Amanita Charm"
+            "Amanita Charm",
+            "Erosion"
           ],
           "flex_slots": [
-            "Freya's Tears",
-            "Breastplate of Valor"
+            "Breastplate of Valor",
+            "Erosion"
           ],
           "situational_swaps": [
             {
@@ -92191,13 +92191,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Eye of Providence \u2014 magical protection",
+              "swap_item": "Eye of Providence"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Eye of Providence \u2014 physical protection",
-              "swap_item": "Eye of Providence"
+              "swap": "Draconic Scale \u2014 physical protection",
+              "swap_item": "Draconic Scale"
             },
             {
               "vs_tag": "sustain",
@@ -92235,16 +92235,16 @@
               "pick": 0.35,
               "fit": 0.51
             },
-            "Rod of Tahuti": {
-              "total": 0.57,
-              "efficiency": 0.86,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 0.12
-            },
             "Amanita Charm": {
               "total": 0.56,
               "efficiency": 0.65,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.57
+            },
+            "Erosion": {
+              "total": 0.51,
+              "efficiency": 0.51,
               "win": 0.55,
               "pick": 0.0,
               "fit": 0.57
@@ -95485,14 +95485,14 @@
           "slot_order": [
             "Jotunn's Revenge",
             "Death Metal",
-            "Nimble Ring",
+            "Spear of Desolation",
             "Tekko-Kagi",
             "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Soul Gem",
-            "Tekko-Kagi"
+            "Tekko-Kagi",
+            "Spear of Desolation"
           ],
           "situational_swaps": [
             {
@@ -95532,12 +95532,12 @@
               "pick": 0.0,
               "fit": 0.5
             },
-            "Nimble Ring": {
-              "total": 0.55,
-              "efficiency": 0.63,
+            "Spear of Desolation": {
+              "total": 0.53,
+              "efficiency": 0.59,
               "win": 0.59,
               "pick": 0.0,
-              "fit": 0.42
+              "fit": 0.37
             },
             "Tekko-Kagi": {
               "total": 0.53,
@@ -96299,16 +96299,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Book of Thoth",
             "Jotunn's Revenge",
             "Death Metal",
             "Nimble Ring",
-            "Spear of Desolation",
             "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
             "Nimble Ring",
-            "Spear of Desolation"
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
@@ -96334,6 +96334,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Gluttonous Grimoire, Death Metal, Jotunn's Revenge, The Reaper, Nimble Ring, Blood-Bound Book, Spear of Desolation, Obsidian Shard, Tekko-Kagi, Runeforged Hammer, Titan's Bane, Bancroft's Talon, Hydra's Lament, Spear of the Magus, Golden Blade, Ethereal Staff, Bloodforge, Eros' Bow, Tyrfing, Ancient Signet, Yogi's Necklace, Lernaean Bow, Lotus Sickle, Bragi's Harp, The Crusher, Doom Orb, Toxic Blade, The World Stone, Chronos' Pendant, Jade Scepter, Heartseeker, Rod of Asclepius, Avenging Blade, Arondight, Bracer of The Abyss, Soul Locket, Dreamer's Idol.",
           "slot_scores": {
+            "Book of Thoth": {
+              "total": 0.46,
+              "efficiency": 0.49,
+              "win": 0.59,
+              "pick": 0.0,
+              "fit": 0.14
+            },
             "Jotunn's Revenge": {
               "total": 0.55,
               "efficiency": 0.67,
@@ -96354,13 +96361,6 @@
               "win": 0.59,
               "pick": 0.0,
               "fit": 0.37
-            },
-            "Spear of Desolation": {
-              "total": 0.53,
-              "efficiency": 0.59,
-              "win": 0.59,
-              "pick": 0.0,
-              "fit": 0.35
             },
             "Rod of Tahuti": {
               "total": 0.61,
@@ -99514,16 +99514,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
-            "Berserker's Shield",
+            "Book of Thoth",
             "Jotunn's Revenge",
             "Genji's Guard",
-            "Shield Splitter",
+            "Transcendence",
             "Gluttonous Grimoire",
             "Rod of Tahuti"
           ],
           "flex_slots": [
-            "Shield Splitter",
-            "Berserker's Shield"
+            "Transcendence",
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
@@ -99538,8 +99538,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Kinetic Cuirass \u2014 physical protection",
-              "swap_item": "Kinetic Cuirass"
+              "swap": "Shield Splitter \u2014 physical protection",
+              "swap_item": "Shield Splitter"
             },
             {
               "vs_tag": "sustain",
@@ -99549,12 +99549,12 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Rod of Tahuti, Gluttonous Grimoire, Jotunn's Revenge, Amanita Charm, Soul Gem, Shield Splitter, Berserker's Shield, Kinetic Cuirass, Spear of Desolation, Obsidian Shard, Runeforged Hammer, Helm of Radiance, The Reaper, Titan's Bane, Helm of Darkness, Hydra's Lament, Spear of the Magus, Oni Hunter's Garb, Erosion, Blood-Bound Book, Eye of Providence, Draconic Scale, Stone of Binding, Death Metal, Shield of the Phoenix, Ancient Signet, Midgardian Mail, The Crusher, Lotus Sickle, Magi's Cloak, Jade Scepter, Screeching Gargoyle, Avenging Blade, Doom Orb, Mantle Of Discord, Leviathan's Hide, Heartseeker, Shifter's Shield, The World Stone.",
           "slot_scores": {
-            "Berserker's Shield": {
-              "total": 0.47,
-              "efficiency": 0.67,
+            "Book of Thoth": {
+              "total": 0.39,
+              "efficiency": 0.49,
               "win": 0.45,
               "pick": 0.0,
-              "fit": 0.26
+              "fit": 0.14
             },
             "Jotunn's Revenge": {
               "total": 0.49,
@@ -99570,12 +99570,12 @@
               "pick": 0.17,
               "fit": 0.23
             },
-            "Shield Splitter": {
-              "total": 0.47,
-              "efficiency": 0.59,
+            "Transcendence": {
+              "total": 0.41,
+              "efficiency": 0.53,
               "win": 0.45,
               "pick": 0.0,
-              "fit": 0.45
+              "fit": 0.16
             },
             "Gluttonous Grimoire": {
               "total": 0.49,
@@ -106004,16 +106004,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Transcendence",
             "Jotunn's Revenge",
             "Hydra's Lament",
             "The Reaper",
-            "The Crusher",
             "Tekko-Kagi",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Hydra's Lament",
-            "The Crusher"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -106039,6 +106039,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: The Reaper, Tekko-Kagi, Hydra's Lament, Tyrfing, Deathbringer, Musashi's Dual Swords, Arondight, Silverbranch Bow, Lernaean Bow, Riptalon, Rage, Pendulum Blade, Bloodforge, Dominance, Golden Blade, Toxic Blade, Runeforged Hammer, Demon Blade, Avenging Blade, Barbed Carver, Shield Splitter, Eye of the Storm, Damaru, Genji's Guard.",
           "slot_scores": {
+            "Transcendence": {
+              "total": 0.47,
+              "efficiency": 0.53,
+              "win": 0.49,
+              "pick": 0.71,
+              "fit": 0.2
+            },
             "Jotunn's Revenge": {
               "total": 0.58,
               "efficiency": 0.67,
@@ -106060,13 +106067,6 @@
               "pick": 0.0,
               "fit": 0.53
             },
-            "The Crusher": {
-              "total": 0.51,
-              "efficiency": 0.49,
-              "win": 0.52,
-              "pick": 0.44,
-              "fit": 0.51
-            },
             "Tekko-Kagi": {
               "total": 0.5,
               "efficiency": 0.55,
@@ -106083,8 +106083,8 @@
             }
           },
           "community_ordered": [
+            "Transcendence",
             "Jotunn's Revenge",
-            "The Crusher",
             "Titan's Bane"
           ],
           "starter": {
@@ -122964,15 +122964,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Tyrfing",
             "Death Metal",
-            "Nimble Ring",
             "Tekko-Kagi",
             "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Nimble Ring",
-            "Soul Gem"
+            "Soul Gem",
+            "Tyrfing"
           ],
           "situational_swaps": [
             {
@@ -123005,19 +123005,19 @@
               "pick": 0.16,
               "fit": 0.37
             },
+            "Tyrfing": {
+              "total": 0.53,
+              "efficiency": 0.5,
+              "win": 0.6,
+              "pick": 0.0,
+              "fit": 0.58
+            },
             "Death Metal": {
               "total": 0.56,
               "efficiency": 0.63,
               "win": 0.6,
               "pick": 0.0,
               "fit": 0.48
-            },
-            "Nimble Ring": {
-              "total": 0.55,
-              "efficiency": 0.63,
-              "win": 0.6,
-              "pick": 0.0,
-              "fit": 0.39
             },
             "Tekko-Kagi": {
               "total": 0.55,
@@ -123141,13 +123141,13 @@
           "swaps": [
             {
               "added": "Silverbranch Bow",
-              "removed": "Soul Gem",
-              "reason": "community 74% win over 45 matches (vs 53% on this god), taking the model's weakest slot from Soul Gem"
+              "removed": "Tyrfing",
+              "reason": "community 74% win over 45 matches (vs 53% on this god), taking the model's weakest slot from Tyrfing"
             },
             {
               "added": "Devourer's Gauntlet",
-              "removed": "Nimble Ring",
-              "reason": "community 62% win over 165 matches (vs 53% on this god), taking the model's weakest slot from Nimble Ring"
+              "removed": "Soul Gem",
+              "reason": "community 62% win over 165 matches (vs 53% on this god), taking the model's weakest slot from Soul Gem"
             }
           ],
           "starter": {
@@ -131031,15 +131031,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Titan's Bane",
-            "Heartseeker"
+            "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -131072,6 +131072,13 @@
               "pick": 0.33,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.51,
+              "efficiency": 0.53,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.56,
               "efficiency": 0.51,
@@ -131096,13 +131103,6 @@
             "Titan's Bane": {
               "total": 0.59,
               "efficiency": 0.54,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 1.0
-            },
-            "Heartseeker": {
-              "total": 0.55,
-              "efficiency": 0.43,
               "win": 0.55,
               "pick": 0.0,
               "fit": 1.0
@@ -144796,8 +144796,8 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Book of Thoth",
             "Genji's Guard",
-            "Kinetic Cuirass",
             "Spear of Desolation",
             "Gluttonous Grimoire",
             "Rod of Tahuti",
@@ -144805,7 +144805,7 @@
           ],
           "flex_slots": [
             "Genji's Guard",
-            "Kinetic Cuirass"
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
@@ -144820,8 +144820,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Helm of Radiance \u2014 physical protection",
-              "swap_item": "Helm of Radiance"
+              "swap": "Kinetic Cuirass \u2014 physical protection",
+              "swap_item": "Kinetic Cuirass"
             },
             {
               "vs_tag": "sustain",
@@ -144831,19 +144831,19 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji's Guard, Spear of the Magus, Kinetic Cuirass, Helm of Radiance, Blood-Bound Book, Breastplate of Valor, Freya's Tears, Doom Orb, Lotus Sickle, Helm of Darkness, Jade Scepter, Ancient Signet, Chronos' Pendant, Dreamer's Idol, Oni Hunter's Garb, Shield of the Phoenix, Ethereal Staff, Erosion, Midgardian Mail, Eye of Providence, Wish-Granting Pearl, Bancroft's Talon, Screeching Gargoyle.",
           "slot_scores": {
+            "Book of Thoth": {
+              "total": 0.52,
+              "efficiency": 0.49,
+              "win": 0.68,
+              "pick": 0.12,
+              "fit": 0.22
+            },
             "Genji's Guard": {
               "total": 0.52,
               "efficiency": 0.69,
               "win": 0.55,
               "pick": 0.0,
               "fit": 0.22
-            },
-            "Kinetic Cuirass": {
-              "total": 0.51,
-              "efficiency": 0.56,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 0.46
             },
             "Spear of Desolation": {
               "total": 0.51,
@@ -144875,6 +144875,7 @@
             }
           },
           "community_ordered": [
+            "Book of Thoth",
             "Spear of Desolation",
             "Rod of Tahuti",
             "Obsidian Shard"
@@ -157409,16 +157410,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Jotunn's Revenge",
             "Tyrfing",
             "Death Metal",
-            "Nimble Ring",
             "Tekko-Kagi",
-            "Rod of Tahuti"
+            "Soul Gem"
           ],
           "flex_slots": [
-            "Tyrfing",
-            "Tekko-Kagi"
+            "Lernaean Bow",
+            "Soul Gem"
           ],
           "situational_swaps": [
             {
@@ -157444,6 +157445,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Nimble Ring, Jotunn's Revenge, Tyrfing, Tekko-Kagi, Lernaean Bow, Soul Gem, Golden Blade, Bragi's Harp, The Reaper, Hydra's Lament, Gluttonous Grimoire, Titan's Bane, Demon Blade, Obsidian Shard, Musashi's Dual Swords, Blood-Bound Book, Bracer of The Abyss, Spear of Desolation, Toxic Blade, The Crusher, Rage, Qin's Blade, Eros' Bow, Arondight, Ancient Signet, Spear of the Magus, Heartseeker, Bloodforge, Lotus Sickle, Transcendence, Berserker's Shield, Runeforged Hammer, Chronos' Pendant, Sun Beam Bow, Doom Orb, Bancroft's Talon.",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.51,
+              "efficiency": 0.51,
+              "win": 0.54,
+              "pick": 0.0,
+              "fit": 0.56
+            },
             "Jotunn's Revenge": {
               "total": 0.52,
               "efficiency": 0.67,
@@ -157465,13 +157473,6 @@
               "pick": 0.0,
               "fit": 0.52
             },
-            "Nimble Ring": {
-              "total": 0.53,
-              "efficiency": 0.63,
-              "win": 0.54,
-              "pick": 0.0,
-              "fit": 0.45
-            },
             "Tekko-Kagi": {
               "total": 0.51,
               "efficiency": 0.55,
@@ -157479,12 +157480,12 @@
               "pick": 0.0,
               "fit": 0.52
             },
-            "Rod of Tahuti": {
-              "total": 0.56,
-              "efficiency": 0.86,
+            "Soul Gem": {
+              "total": 0.5,
+              "efficiency": 0.57,
               "win": 0.54,
               "pick": 0.0,
-              "fit": 0.11
+              "fit": 0.35
             }
           },
           "community_ordered": [
@@ -161748,15 +161749,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -161789,6 +161790,13 @@
               "pick": 0.51,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.54,
+              "efficiency": 0.53,
+              "win": 0.59,
+              "pick": 0.15,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.57,
               "efficiency": 0.51,
@@ -161810,13 +161818,6 @@
               "pick": 0.39,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.58,
-              "efficiency": 0.43,
-              "win": 0.53,
-              "pick": 0.77,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.62,
               "efficiency": 0.54,
@@ -161827,8 +161828,8 @@
           },
           "community_ordered": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -178800,16 +178801,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Jotunn's Revenge",
             "Tyrfing",
             "Death Metal",
             "Tekko-Kagi",
-            "Titan's Bane",
-            "Rod of Tahuti"
+            "Titan's Bane"
           ],
           "flex_slots": [
-            "Tyrfing",
-            "Titan's Bane"
+            "Titan's Bane",
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -178835,6 +178836,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn's Revenge, Tekko-Kagi, Death Metal, Titan's Bane, Lernaean Bow, Obsidian Shard, The Crusher, Bragi's Harp, Spear of Desolation, Hydra's Lament, Golden Blade, Dominance, Nimble Ring, Heartseeker, The Reaper, Soul Gem, Spear of the Magus, Toxic Blade, Deathbringer, Arondight, Demon Blade, Musashi's Dual Swords, Gluttonous Grimoire, Bracer of The Abyss, Doom Orb, Riptalon, The World Stone, Transcendence, Avatar's Parashu, Ancient Signet, Rage, Runeforged Hammer, Eros' Bow, Pendulum Blade, Dreamer's Idol, Lotus Sickle, Qin's Blade, Chronos' Pendant, Berserker's Shield.",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.52,
+              "efficiency": 0.51,
+              "win": 0.56,
+              "pick": 0.0,
+              "fit": 0.59
+            },
             "Jotunn's Revenge": {
               "total": 0.56,
               "efficiency": 0.67,
@@ -178869,18 +178877,10 @@
               "win": 0.56,
               "pick": 0.0,
               "fit": 0.55
-            },
-            "Rod of Tahuti": {
-              "total": 0.57,
-              "efficiency": 0.86,
-              "win": 0.5,
-              "pick": 0.13,
-              "fit": 0.26
             }
           },
           "community_ordered": [
-            "Tyrfing",
-            "Rod of Tahuti"
+            "Tyrfing"
           ],
           "starter": {
             "base": "Bumba's Golden Dagger",
@@ -188443,15 +188443,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -188484,6 +188484,13 @@
               "pick": 0.27,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.53,
+              "efficiency": 0.53,
+              "win": 0.58,
+              "pick": 0.0,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.58,
               "efficiency": 0.51,
@@ -188505,13 +188512,6 @@
               "pick": 0.22,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.59,
-              "efficiency": 0.43,
-              "win": 0.58,
-              "pick": 0.63,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.62,
               "efficiency": 0.54,
@@ -188523,7 +188523,6 @@
           "community_ordered": [
             "Jotunn's Revenge",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -188622,8 +188621,8 @@
           "swaps": [
             {
               "added": "Avatar's Parashu",
-              "removed": "Heartseeker",
-              "reason": "community 69% win over 168 matches (vs 57% on this god), taking the model's weakest slot from Heartseeker"
+              "removed": "Transcendence",
+              "reason": "community 69% win over 168 matches (vs 57% on this god), taking the model's weakest slot from Transcendence"
             }
           ],
           "starter": {
@@ -194120,7 +194119,7 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
-            "Tyrfing",
+            "Transcendence",
             "Hydra's Lament",
             "Tekko-Kagi",
             "The Crusher",
@@ -194128,7 +194127,7 @@
           ],
           "flex_slots": [
             "The Crusher",
-            "Tyrfing"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -194161,12 +194160,12 @@
               "pick": 0.0,
               "fit": 0.84
             },
-            "Tyrfing": {
-              "total": 0.57,
-              "efficiency": 0.5,
-              "win": 0.61,
-              "pick": 0.23,
-              "fit": 0.73
+            "Transcendence": {
+              "total": 0.49,
+              "efficiency": 0.53,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.38
             },
             "Hydra's Lament": {
               "total": 0.53,
@@ -194198,7 +194197,6 @@
             }
           },
           "community_ordered": [
-            "Tyrfing",
             "Hydra's Lament",
             "Titan's Bane"
           ],
@@ -210210,14 +210208,14 @@
           "slot_order": [
             "Jotunn's Revenge",
             "Death Metal",
-            "Nimble Ring",
+            "Spear of Desolation",
             "Tekko-Kagi",
             "Rod of Tahuti",
             "Soul Gem"
           ],
           "flex_slots": [
-            "Soul Gem",
-            "Tekko-Kagi"
+            "Tekko-Kagi",
+            "Spear of Desolation"
           ],
           "situational_swaps": [
             {
@@ -210257,12 +210255,12 @@
               "pick": 0.0,
               "fit": 0.49
             },
-            "Nimble Ring": {
+            "Spear of Desolation": {
               "total": 0.55,
-              "efficiency": 0.63,
-              "win": 0.58,
-              "pick": 0.0,
-              "fit": 0.44
+              "efficiency": 0.59,
+              "win": 0.61,
+              "pick": 0.22,
+              "fit": 0.38
             },
             "Tekko-Kagi": {
               "total": 0.53,
@@ -210287,6 +210285,7 @@
             }
           },
           "community_ordered": [
+            "Spear of Desolation",
             "Rod of Tahuti"
           ],
           "starter": {
@@ -212636,12 +212635,12 @@
             "Tyrfing",
             "Death Metal",
             "Tekko-Kagi",
-            "Titan's Bane",
-            "Rod of Tahuti"
+            "Silverbranch Bow",
+            "Titan's Bane"
           ],
           "flex_slots": [
-            "Tyrfing",
-            "Titan's Bane"
+            "Titan's Bane",
+            "Silverbranch Bow"
           ],
           "situational_swaps": [
             {
@@ -212695,19 +212694,19 @@
               "pick": 0.0,
               "fit": 0.69
             },
+            "Silverbranch Bow": {
+              "total": 0.53,
+              "efficiency": 0.52,
+              "win": 0.58,
+              "pick": 0.0,
+              "fit": 0.58
+            },
             "Titan's Bane": {
               "total": 0.53,
               "efficiency": 0.54,
               "win": 0.57,
               "pick": 0.1,
               "fit": 0.54
-            },
-            "Rod of Tahuti": {
-              "total": 0.61,
-              "efficiency": 0.86,
-              "win": 0.58,
-              "pick": 0.0,
-              "fit": 0.26
             }
           },
           "community_ordered": [
@@ -219947,11 +219946,11 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
-            "Nimble Ring",
             "Spear of Desolation",
             "Tekko-Kagi",
             "Obsidian Shard",
-            "Rod of Tahuti"
+            "Rod of Tahuti",
+            "Soul Gem"
           ],
           "flex_slots": [
             "Spear of Desolation",
@@ -219988,13 +219987,6 @@
               "pick": 0.0,
               "fit": 0.45
             },
-            "Nimble Ring": {
-              "total": 0.56,
-              "efficiency": 0.63,
-              "win": 0.58,
-              "pick": 0.0,
-              "fit": 0.55
-            },
             "Spear of Desolation": {
               "total": 0.52,
               "efficiency": 0.59,
@@ -220022,6 +220014,13 @@
               "win": 0.57,
               "pick": 0.18,
               "fit": 0.38
+            },
+            "Soul Gem": {
+              "total": 0.56,
+              "efficiency": 0.57,
+              "win": 0.58,
+              "pick": 0.0,
+              "fit": 0.68
             }
           },
           "community_ordered": [
@@ -231955,9 +231954,9 @@
             "Jotunn's Revenge",
             "Spear of Desolation",
             "Tyrfing",
-            "Nimble Ring",
             "Rod of Tahuti",
-            "Tekko-Kagi"
+            "Tekko-Kagi",
+            "Soul Gem"
           ],
           "flex_slots": [
             "Tyrfing",
@@ -232008,13 +232007,6 @@
               "pick": 0.0,
               "fit": 0.72
             },
-            "Nimble Ring": {
-              "total": 0.56,
-              "efficiency": 0.63,
-              "win": 0.57,
-              "pick": 0.0,
-              "fit": 0.57
-            },
             "Rod of Tahuti": {
               "total": 0.62,
               "efficiency": 0.86,
@@ -232028,11 +232020,19 @@
               "win": 0.57,
               "pick": 0.0,
               "fit": 0.59
+            },
+            "Soul Gem": {
+              "total": 0.58,
+              "efficiency": 0.57,
+              "win": 0.59,
+              "pick": 0.23,
+              "fit": 0.67
             }
           },
           "community_ordered": [
             "Spear of Desolation",
-            "Rod of Tahuti"
+            "Rod of Tahuti",
+            "Soul Gem"
           ],
           "starter": {
             "base": "Conduit Gem",
@@ -255808,15 +255808,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -255849,6 +255849,13 @@
               "pick": 0.17,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.49,
+              "efficiency": 0.53,
+              "win": 0.51,
+              "pick": 0.0,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.55,
               "efficiency": 0.51,
@@ -255870,13 +255877,6 @@
               "pick": 0.16,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.56,
-              "efficiency": 0.43,
-              "win": 0.52,
-              "pick": 0.52,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.63,
               "efficiency": 0.54,
@@ -255888,7 +255888,6 @@
           "community_ordered": [
             "Jotunn's Revenge",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -258163,12 +258162,12 @@
             "Breastplate of Valor",
             "Kinetic Cuirass",
             "Freya's Tears",
-            "Rod of Tahuti",
-            "Amanita Charm"
+            "Amanita Charm",
+            "Erosion"
           ],
           "flex_slots": [
-            "Freya's Tears",
-            "Breastplate of Valor"
+            "Breastplate of Valor",
+            "Erosion"
           ],
           "situational_swaps": [
             {
@@ -258178,13 +258177,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Helm of Darkness \u2014 magical protection",
+              "swap_item": "Helm of Darkness"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Helm of Darkness \u2014 physical protection",
-              "swap_item": "Helm of Darkness"
+              "swap": "Eye of Providence \u2014 physical protection",
+              "swap_item": "Eye of Providence"
             },
             {
               "vs_tag": "sustain",
@@ -258222,16 +258221,16 @@
               "pick": 0.28,
               "fit": 0.56
             },
-            "Rod of Tahuti": {
-              "total": 0.58,
-              "efficiency": 0.86,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 0.18
-            },
             "Amanita Charm": {
               "total": 0.56,
               "efficiency": 0.65,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.57
+            },
+            "Erosion": {
+              "total": 0.51,
+              "efficiency": 0.51,
               "win": 0.55,
               "pick": 0.0,
               "fit": 0.57
@@ -260510,15 +260509,15 @@
           "archetype": "model",
           "slot_order": [
             "Jotunn's Revenge",
+            "Transcendence",
             "The Reaper",
             "Tekko-Kagi",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "flex_slots": [
             "Tekko-Kagi",
-            "Heartseeker"
+            "Transcendence"
           ],
           "situational_swaps": [
             {
@@ -260551,6 +260550,13 @@
               "pick": 0.63,
               "fit": 1.0
             },
+            "Transcendence": {
+              "total": 0.52,
+              "efficiency": 0.53,
+              "win": 0.56,
+              "pick": 0.0,
+              "fit": 0.52
+            },
             "The Reaper": {
               "total": 0.59,
               "efficiency": 0.51,
@@ -260572,13 +260578,6 @@
               "pick": 0.09,
               "fit": 1.0
             },
-            "Heartseeker": {
-              "total": 0.58,
-              "efficiency": 0.43,
-              "win": 0.56,
-              "pick": 0.52,
-              "fit": 1.0
-            },
             "Titan's Bane": {
               "total": 0.67,
               "efficiency": 0.54,
@@ -260591,7 +260590,6 @@
             "Jotunn's Revenge",
             "The Reaper",
             "The Crusher",
-            "Heartseeker",
             "Titan's Bane"
           ],
           "starter": {
@@ -268533,16 +268531,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Lernaean Bow",
             "Jotunn's Revenge",
             "Tyrfing",
             "Death Metal",
             "Tekko-Kagi",
-            "Titan's Bane",
-            "Rod of Tahuti"
+            "Titan's Bane"
           ],
           "flex_slots": [
-            "Tyrfing",
-            "Titan's Bane"
+            "Titan's Bane",
+            "Lernaean Bow"
           ],
           "situational_swaps": [
             {
@@ -268568,6 +268566,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Rod of Tahuti, Death Metal, Tekko-Kagi, Tyrfing, Lernaean Bow, Silverbranch Bow, Obsidian Shard, Bragi's Harp, The Crusher, Spear of Desolation, Golden Blade, Dominance, Nimble Ring, Soul Gem, The Reaper, Spear of the Magus, Toxic Blade, Deathbringer, Arondight, Demon Blade, Musashi's Dual Swords, Gluttonous Grimoire, Bracer of The Abyss, Doom Orb, Riptalon, The World Stone, Ancient Signet, Rage, Eros' Bow, Runeforged Hammer, Pendulum Blade, Dreamer's Idol, Lotus Sickle, Qin's Blade, Chronos' Pendant, Berserker's Shield.",
           "slot_scores": {
+            "Lernaean Bow": {
+              "total": 0.51,
+              "efficiency": 0.51,
+              "win": 0.55,
+              "pick": 0.0,
+              "fit": 0.59
+            },
             "Jotunn's Revenge": {
               "total": 0.57,
               "efficiency": 0.67,
@@ -268602,13 +268607,6 @@
               "win": 0.53,
               "pick": 0.26,
               "fit": 0.54
-            },
-            "Rod of Tahuti": {
-              "total": 0.59,
-              "efficiency": 0.86,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 0.27
             }
           },
           "community_ordered": [
@@ -268629,10 +268627,10 @@
             "Death Metal",
             "Tekko-Kagi",
             "Heartseeker",
-            "Rod of Tahuti"
+            "Titan's Bane"
           ],
           "flex_slots": [
-            "Tyrfing",
+            "Titan's Bane",
             "Heartseeker"
           ],
           "situational_swaps": [
@@ -268694,23 +268692,24 @@
               "pick": 0.22,
               "fit": 0.64
             },
-            "Rod of Tahuti": {
-              "total": 0.59,
-              "efficiency": 0.86,
-              "win": 0.55,
-              "pick": 0.0,
-              "fit": 0.27
+            "Titan's Bane": {
+              "total": 0.52,
+              "efficiency": 0.54,
+              "win": 0.53,
+              "pick": 0.26,
+              "fit": 0.54
             }
           },
           "community_ordered": [
             "Jotunn's Revenge",
-            "Heartseeker"
+            "Heartseeker",
+            "Titan's Bane"
           ],
           "swaps": [
             {
               "added": "Heartseeker",
-              "removed": "Titan's Bane",
-              "reason": "community 63% win over 133 matches (vs 55% on this god), taking the model's weakest slot from Titan's Bane"
+              "removed": "Lernaean Bow",
+              "reason": "community 63% win over 133 matches (vs 55% on this god), taking the model's weakest slot from Lernaean Bow"
             }
           ],
           "starter": {
@@ -273906,16 +273905,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Nimble Ring",
             "Spear of Desolation",
             "Doom Orb",
-            "Spear of the Magus",
             "Rod of Tahuti",
-            "Obsidian Shard",
-            "Soul Gem"
+            "Spear of the Magus",
+            "Obsidian Shard"
           ],
           "flex_slots": [
-            "Spear of the Magus",
-            "Doom Orb"
+            "Doom Orb",
+            "Nimble Ring"
           ],
           "situational_swaps": [
             {
@@ -273941,6 +273940,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Nimble Ring, Lotus Sickle, Dreamer's Idol, Chronos' Pendant, Ancient Signet, The Cosmic Horror, Bracer of The Abyss, Heartwood Charm, Eros' Bow, Blood-Bound Book, Polynomicon, Totem of Death, Soul Reaver, Divine Ruin, Jade Scepter, Bancroft's Talon, Helm of Radiance, Ethereal Staff, Typhon\u2019s Heart, Rod of Asclepius.",
           "slot_scores": {
+            "Nimble Ring": {
+              "total": 0.53,
+              "efficiency": 0.58,
+              "win": 0.56,
+              "pick": 0.0,
+              "fit": 0.51
+            },
             "Spear of Desolation": {
               "total": 0.63,
               "efficiency": 0.59,
@@ -273955,18 +273961,18 @@
               "pick": 0.0,
               "fit": 0.66
             },
-            "Spear of the Magus": {
-              "total": 0.55,
-              "efficiency": 0.58,
-              "win": 0.56,
-              "pick": 0.0,
-              "fit": 0.66
-            },
             "Rod of Tahuti": {
               "total": 0.68,
               "efficiency": 0.86,
               "win": 0.57,
               "pick": 0.36,
+              "fit": 0.66
+            },
+            "Spear of the Magus": {
+              "total": 0.55,
+              "efficiency": 0.58,
+              "win": 0.56,
+              "pick": 0.0,
               "fit": 0.66
             },
             "Obsidian Shard": {
@@ -273975,13 +273981,6 @@
               "win": 0.5,
               "pick": 0.28,
               "fit": 0.76
-            },
-            "Soul Gem": {
-              "total": 0.58,
-              "efficiency": 0.53,
-              "win": 0.56,
-              "pick": 0.0,
-              "fit": 0.93
             }
           },
           "community_ordered": [
@@ -281564,12 +281563,12 @@
             "Breastplate of Valor",
             "Kinetic Cuirass",
             "Freya's Tears",
-            "Rod of Tahuti",
-            "Amanita Charm"
+            "Amanita Charm",
+            "Erosion"
           ],
           "flex_slots": [
-            "Freya's Tears",
-            "Breastplate of Valor"
+            "Breastplate of Valor",
+            "Erosion"
           ],
           "situational_swaps": [
             {
@@ -281579,13 +281578,13 @@
             },
             {
               "vs_tag": "magic_heavy",
-              "swap": "Erosion \u2014 magical protection",
-              "swap_item": "Erosion"
+              "swap": "Helm of Darkness \u2014 magical protection",
+              "swap_item": "Helm of Darkness"
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Helm of Darkness \u2014 physical protection",
-              "swap_item": "Helm of Darkness"
+              "swap": "Eye of Providence \u2014 physical protection",
+              "swap_item": "Eye of Providence"
             },
             {
               "vs_tag": "sustain",
@@ -281623,16 +281622,16 @@
               "pick": 0.17,
               "fit": 0.56
             },
-            "Rod of Tahuti": {
-              "total": 0.61,
-              "efficiency": 0.86,
-              "win": 0.6,
-              "pick": 0.13,
-              "fit": 0.18
-            },
             "Amanita Charm": {
               "total": 0.56,
               "efficiency": 0.65,
+              "win": 0.54,
+              "pick": 0.0,
+              "fit": 0.57
+            },
+            "Erosion": {
+              "total": 0.5,
+              "efficiency": 0.51,
               "win": 0.54,
               "pick": 0.0,
               "fit": 0.57
@@ -281640,8 +281639,7 @@
           },
           "community_ordered": [
             "Genji's Guard",
-            "Freya's Tears",
-            "Rod of Tahuti"
+            "Freya's Tears"
           ],
           "starter": {
             "base": "Warrior's Axe",
@@ -281653,14 +281651,14 @@
           "archetype": "hybrid",
           "slot_order": [
             "Genji's Guard",
+            "Breastplate of Valor",
             "Kinetic Cuirass",
             "Shell of Rebuke",
             "Freya's Tears",
-            "Rod of Tahuti",
             "Amanita Charm"
           ],
           "flex_slots": [
-            "Freya's Tears",
+            "Breastplate of Valor",
             "Shell of Rebuke"
           ],
           "situational_swaps": [
@@ -281676,8 +281674,8 @@
             },
             {
               "vs_tag": "physical_heavy",
-              "swap": "Breastplate of Valor \u2014 physical protection",
-              "swap_item": "Breastplate of Valor"
+              "swap": "Helm of Darkness \u2014 physical protection",
+              "swap_item": "Helm of Darkness"
             },
             {
               "vs_tag": "sustain",
@@ -281692,6 +281690,13 @@
               "efficiency": 0.69,
               "win": 0.29,
               "pick": 0.12,
+              "fit": 0.36
+            },
+            "Breastplate of Valor": {
+              "total": 0.51,
+              "efficiency": 0.63,
+              "win": 0.54,
+              "pick": 0.0,
               "fit": 0.36
             },
             "Kinetic Cuirass": {
@@ -281715,13 +281720,6 @@
               "pick": 0.17,
               "fit": 0.56
             },
-            "Rod of Tahuti": {
-              "total": 0.61,
-              "efficiency": 0.86,
-              "win": 0.6,
-              "pick": 0.13,
-              "fit": 0.18
-            },
             "Amanita Charm": {
               "total": 0.56,
               "efficiency": 0.65,
@@ -281733,14 +281731,13 @@
           "community_ordered": [
             "Genji's Guard",
             "Shell of Rebuke",
-            "Freya's Tears",
-            "Rod of Tahuti"
+            "Freya's Tears"
           ],
           "swaps": [
             {
               "added": "Shell of Rebuke",
-              "removed": "Breastplate of Valor",
-              "reason": "community 66% win over 37 matches (vs 49% on this god), taking the model's weakest slot from Breastplate of Valor"
+              "removed": "Erosion",
+              "reason": "community 66% win over 37 matches (vs 49% on this god), taking the model's weakest slot from Erosion"
             }
           ],
           "starter": {
@@ -286747,16 +286744,16 @@
           "source": "suggested",
           "archetype": "model",
           "slot_order": [
+            "Book of Thoth",
             "Nimble Ring",
             "Spear of Desolation",
-            "Doom Orb",
             "Spear of the Magus",
             "Rod of Tahuti",
             "Obsidian Shard"
           ],
           "flex_slots": [
             "Spear of the Magus",
-            "Doom Orb"
+            "Book of Thoth"
           ],
           "situational_swaps": [
             {
@@ -286782,6 +286779,13 @@
           ],
           "rationale": "The model's own answer \u2014 no meta signal (efficiency + fit + win/pick). Underrated for this god: Soul Gem, Nimble Ring, Gluttonous Grimoire, Spear of the Magus, Blood-Bound Book, Doom Orb, Lotus Sickle, Bracer of The Abyss, Ancient Signet, Chronos' Pendant, Dreamer's Idol, Eros' Bow, Bancroft's Talon, The Cosmic Horror, Gem of Focus, Heartwood Charm, Polynomicon, Typhon\u2019s Heart, Soul Reaver, Totem of Death, Book of Thoth, Divine Ruin, Jade Scepter, Helm of Radiance, Bragi's Harp, Ethereal Staff.",
           "slot_scores": {
+            "Book of Thoth": {
+              "total": 0.48,
+              "efficiency": 0.49,
+              "win": 0.59,
+              "pick": 0.12,
+              "fit": 0.26
+            },
             "Nimble Ring": {
               "total": 0.58,
               "efficiency": 0.63,
@@ -286795,13 +286799,6 @@
               "win": 0.55,
               "pick": 0.34,
               "fit": 0.63
-            },
-            "Doom Orb": {
-              "total": 0.52,
-              "efficiency": 0.53,
-              "win": 0.58,
-              "pick": 0.0,
-              "fit": 0.5
             },
             "Spear of the Magus": {
               "total": 0.54,
@@ -286826,6 +286823,7 @@
             }
           },
           "community_ordered": [
+            "Book of Thoth",
             "Spear of Desolation",
             "Rod of Tahuti",
             "Obsidian Shard"

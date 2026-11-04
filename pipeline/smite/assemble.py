@@ -683,6 +683,26 @@ def conversion_args(weights, eff_scores, gold_values, *, signals):
     }}
 
 
+def quality_signals(signals):
+    """The signal weights `quality` actually applies, for the `model` path.
+
+    `scoring.signal_score` computes `quality` as (eff·e + fit·f)/(eff + fit),
+    so efficiency enters the model's ranking at eff/(eff + fit), not at eff.
+    `conversion_args` and `overflow_args` add an adjustment ON THE EFFICIENCY
+    SCALE, so the model path must hand them THIS, or the adjustment enters at
+    the wrong scale against everything it competes with.
+
+    In Joust and Arena eff + fit = 1.0 and this is the identity. In Conquest
+    (0.35 / 0.15) efficiency enters `quality` at 0.70, and until 2026-11-04 the
+    model build's conversion bonus and cap-overflow charge were weighted 0.35:
+    half. The same leak PR #97 fixed for Joust and Arena (`signals=` on those
+    two helpers), one archetype over — STATE.md §5."""
+    eff, fit = float(signals["efficiency"]), float(signals["fit"])
+    total = (eff + fit) or 1.0
+    return {**signals, "efficiency": eff / total, "fit": fit / total,
+            "win": 0.0, "pick": 0.0}
+
+
 def overflow_args(weights, eff_scores, gold_values, *, signals):
     """The `cap_overflow` context for `assemble_core`, or {} when off.
 

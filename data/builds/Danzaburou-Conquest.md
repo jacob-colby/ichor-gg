@@ -844,14 +844,14 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
-  - Nimble Ring
   - Tekko-Kagi
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Nimble Ring
   - Soul Gem
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -880,18 +880,18 @@ builds:
       win: 0.45
       pick: 0.16
       fit: 0.37
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.5
+      win: 0.6
+      pick: 0.0
+      fit: 0.58
     Death Metal:
       total: 0.56
       efficiency: 0.63
       win: 0.6
       pick: 0.0
       fit: 0.48
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.6
-      pick: 0.0
-      fit: 0.39
     Tekko-Kagi:
       total: 0.55
       efficiency: 0.55
@@ -992,12 +992,12 @@ builds:
   - Rod of Tahuti
   swaps:
   - added: Silverbranch Bow
-    removed: Soul Gem
+    removed: Tyrfing
     reason: community 74% win over 45 matches (vs 53% on this god), taking the model's
-      weakest slot from Soul Gem
+      weakest slot from Tyrfing
   - added: Devourer's Gauntlet
-    removed: Nimble Ring
+    removed: Soul Gem
     reason: community 62% win over 165 matches (vs 53% on this god), taking the model's
-      weakest slot from Nimble Ring
+      weakest slot from Soul Gem
   starter: *id001
 ---

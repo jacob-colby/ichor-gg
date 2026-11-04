@@ -782,15 +782,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
-  - Hydra's Lament
+  - Transcendence
   - Spear of Desolation
-  - Titan's Bane
   - Rod of Tahuti
-  - Soul Gem
+  - Titan's Bane
   flex_slots:
-  - Hydra's Lament
-  - Soul Gem
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -813,44 +813,46 @@ builds:
     Eye of the Storm, Heartwood Charm, Dominance, Bloodforge, Lernaean Bow, Golden
     Blade, Blood-Bound Book, Triton''s Conch, Damaru, Silverbranch Bow.'
   slot_scores:
+    Book of Thoth:
+      total: 0.42
+      efficiency: 0.49
+      win: 0.47
+      pick: 0.33
+      fit: 0.1
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.67
       win: 0.53
       pick: 0.22
       fit: 0.9
-    Hydra's Lament:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.53
-      pick: 0.0
-      fit: 0.68
+    Transcendence:
+      total: 0.44
+      efficiency: 0.53
+      win: 0.41
+      pick: 0.23
+      fit: 0.38
     Spear of Desolation:
       total: 0.58
       efficiency: 0.59
       win: 0.57
       pick: 0.44
       fit: 0.62
-    Titan's Bane:
-      total: 0.55
-      efficiency: 0.54
-      win: 0.53
-      pick: 0.0
-      fit: 0.79
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.57
       pick: 0.65
       fit: 0.42
-    Soul Gem:
-      total: 0.53
-      efficiency: 0.53
+    Titan's Bane:
+      total: 0.55
+      efficiency: 0.54
       win: 0.53
       pick: 0.0
-      fit: 0.72
+      fit: 0.79
   community_ordered:
+  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001

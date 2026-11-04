@@ -616,15 +616,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Genji's Guard
-  - Kinetic Cuirass
   - Spear of Desolation
   - Gluttonous Grimoire
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -633,8 +633,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -646,18 +646,18 @@ builds:
     Garb, Shield of the Phoenix, Ethereal Staff, Erosion, Midgardian Mail, Eye of
     Providence, Wish-Granting Pearl, Bancroft''s Talon, Screeching Gargoyle.'
   slot_scores:
+    Book of Thoth:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.68
+      pick: 0.12
+      fit: 0.22
     Genji's Guard:
       total: 0.52
       efficiency: 0.69
       win: 0.55
       pick: 0.0
       fit: 0.22
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.55
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.51
       efficiency: 0.59
@@ -683,6 +683,7 @@ builds:
       pick: 0.19
       fit: 0.52
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard

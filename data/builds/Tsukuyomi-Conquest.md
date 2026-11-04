@@ -774,15 +774,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
   - Death Metal
   - Tekko-Kagi
   - Titan's Bane
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - Titan's Bane
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -805,6 +805,12 @@ builds:
     Rage, Eros'' Bow, Runeforged Hammer, Pendulum Blade, Dreamer''s Idol, Lotus Sickle,
     Qin''s Blade, Chronos'' Pendant, Berserker''s Shield.'
   slot_scores:
+    Lernaean Bow:
+      total: 0.51
+      efficiency: 0.51
+      win: 0.55
+      pick: 0.0
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -835,12 +841,6 @@ builds:
       win: 0.53
       pick: 0.26
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.0
-      fit: 0.27
   community_ordered:
   - Jotunn's Revenge
   - Titan's Bane
@@ -853,9 +853,9 @@ builds:
   - Death Metal
   - Tekko-Kagi
   - Heartseeker
-  - Rod of Tahuti
+  - Titan's Bane
   flex_slots:
-  - Tyrfing
+  - Titan's Bane
   - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
@@ -909,19 +909,20 @@ builds:
       win: 0.63
       pick: 0.22
       fit: 0.64
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.0
-      fit: 0.27
+    Titan's Bane:
+      total: 0.52
+      efficiency: 0.54
+      win: 0.53
+      pick: 0.26
+      fit: 0.54
   community_ordered:
   - Jotunn's Revenge
   - Heartseeker
+  - Titan's Bane
   swaps:
   - added: Heartseeker
-    removed: Titan's Bane
+    removed: Lernaean Bow
     reason: community 63% win over 133 matches (vs 55% on this god), taking the model's
-      weakest slot from Titan's Bane
+      weakest slot from Lernaean Bow
   starter: *id001
 ---

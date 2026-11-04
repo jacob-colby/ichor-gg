@@ -773,11 +773,11 @@ builds:
   archetype: model
   slot_order:
   - Jotunn's Revenge
-  - Nimble Ring
   - Spear of Desolation
   - Tekko-Kagi
   - Obsidian Shard
   - Rod of Tahuti
+  - Soul Gem
   flex_slots:
   - Spear of Desolation
   - Obsidian Shard
@@ -810,12 +810,6 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.45
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.58
-      pick: 0.0
-      fit: 0.55
     Spear of Desolation:
       total: 0.52
       efficiency: 0.59
@@ -840,6 +834,12 @@ builds:
       win: 0.57
       pick: 0.18
       fit: 0.38
+    Soul Gem:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.58
+      pick: 0.0
+      fit: 0.68
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti

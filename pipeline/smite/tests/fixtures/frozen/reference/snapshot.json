@@ -295,12 +295,12 @@
       "Soul Gem"
      ],
      "model @ Aspect of Combustion": [
+      "Nimble Ring",
       "Spear of Desolation",
       "Doom Orb",
       "Spear of the Magus",
       "Rod of Tahuti",
-      "Obsidian Shard",
-      "Soul Gem"
+      "Obsidian Shard"
      ],
      "str-int": [
       "Book of Thoth",
@@ -1429,16 +1429,16 @@
      "model": [
       "Jotunn's Revenge",
       "Death Metal",
-      "Nimble Ring",
+      "Spear of Desolation",
       "Tekko-Kagi",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "model @ Aspect of Strife": [
+      "Book of Thoth",
       "Jotunn's Revenge",
       "Death Metal",
       "Nimble Ring",
-      "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
      ]
@@ -1728,16 +1728,16 @@
       "Rod of Tahuti"
      ],
      "model": [
-      "Berserker's Shield",
+      "Book of Thoth",
       "Jotunn's Revenge",
       "Genji's Guard",
-      "Shield Splitter",
+      "Transcendence",
       "Gluttonous Grimoire",
       "Rod of Tahuti"
      ]
     },
-    "verdict": "early-game build",
-    "verdict_unwithheld": "early-game build"
+    "verdict": "trade-off",
+    "verdict_unwithheld": "trade-off"
    },
    "Joust": {
     "builds": {
@@ -1942,11 +1942,11 @@
      ],
      "model": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Tekko-Kagi",
       "The Crusher",
-      "Titan's Bane",
-      "Heartseeker"
+      "Titan's Bane"
      ]
     },
     "verdict": "not enough simulated",
@@ -2155,15 +2155,15 @@
      ],
      "model": [
       "Jotunn's Revenge",
+      "Transcendence",
       "The Reaper",
       "Tekko-Kagi",
       "The Crusher",
-      "Heartseeker",
       "Titan's Bane"
      ]
     },
     "verdict": "not enough simulated",
-    "verdict_unwithheld": "Ichor better"
+    "verdict_unwithheld": "trade-off"
    },
    "Joust": {
     "builds": {
@@ -2604,16 +2604,16 @@
       "Soul Gem"
      ],
      "model": [
+      "Book of Thoth",
       "Nimble Ring",
       "Spear of Desolation",
-      "Doom Orb",
       "Spear of the Magus",
       "Rod of Tahuti",
       "Obsidian Shard"
      ]
     },
-    "verdict": "Ichor better",
-    "verdict_unwithheld": "Ichor better"
+    "verdict": "late-game build",
+    "verdict_unwithheld": "late-game build"
    },
    "Joust": {
     "builds": {

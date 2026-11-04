@@ -621,15 +621,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Nimble Ring
   - Spear of Desolation
-  - Doom Orb
   - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
   - Spear of the Magus
-  - Doom Orb
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -651,6 +651,12 @@ builds:
     Reaver, Totem of Death, Book of Thoth, Divine Ruin, Jade Scepter, Helm of Radiance,
     Bragi''s Harp, Ethereal Staff.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.59
+      pick: 0.12
+      fit: 0.26
     Nimble Ring:
       total: 0.58
       efficiency: 0.63
@@ -663,12 +669,6 @@ builds:
       win: 0.55
       pick: 0.34
       fit: 0.63
-    Doom Orb:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.58
-      pick: 0.0
-      fit: 0.5
     Spear of the Magus:
       total: 0.54
       efficiency: 0.58
@@ -688,6 +688,7 @@ builds:
       pick: 0.17
       fit: 0.6
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard

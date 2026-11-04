@@ -622,21 +622,21 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
   - Amanita Charm
+  - Erosion
   flex_slots:
-  - Freya's Tears
   - Breastplate of Valor
+  - Erosion
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Erosion — magical protection
-    swap_item: Erosion
-  - vs_tag: physical_heavy
-    swap: Helm of Darkness — physical protection
+    swap: Helm of Darkness — magical protection
     swap_item: Helm of Darkness
+  - vs_tag: physical_heavy
+    swap: Eye of Providence — physical protection
+    swap_item: Eye of Providence
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -673,15 +673,15 @@ builds:
       win: 0.54
       pick: 0.28
       fit: 0.56
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
-      win: 0.55
-      pick: 0.0
-      fit: 0.18
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
+      win: 0.55
+      pick: 0.0
+      fit: 0.57
+    Erosion:
+      total: 0.51
+      efficiency: 0.51
       win: 0.55
       pick: 0.0
       fit: 0.57

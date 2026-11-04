@@ -1361,15 +1361,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Transcendence
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
-  - The Crusher
   - Tekko-Kagi
   - Titan's Bane
   flex_slots:
   - Hydra's Lament
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -1390,6 +1390,12 @@ builds:
     Demon Blade, Avenging Blade, Barbed Carver, Shield Splitter, Eye of the Storm,
     Damaru, Genji''s Guard.'
   slot_scores:
+    Transcendence:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.49
+      pick: 0.71
+      fit: 0.2
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -1408,12 +1414,6 @@ builds:
       win: 0.51
       pick: 0.0
       fit: 0.53
-    The Crusher:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.52
-      pick: 0.44
-      fit: 0.51
     Tekko-Kagi:
       total: 0.5
       efficiency: 0.55
@@ -1427,8 +1427,8 @@ builds:
       pick: 0.41
       fit: 0.51
   community_ordered:
+  - Transcendence
   - Jotunn's Revenge
-  - The Crusher
   - Titan's Bane
   starter: *id001
   aspect: Aspect of the Heroic Tutor

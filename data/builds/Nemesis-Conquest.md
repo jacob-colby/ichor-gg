@@ -548,11 +548,11 @@ builds:
   - Tyrfing
   - Death Metal
   - Tekko-Kagi
+  - Silverbranch Bow
   - Titan's Bane
-  - Rod of Tahuti
   flex_slots:
-  - Tyrfing
   - Titan's Bane
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -600,18 +600,18 @@ builds:
       win: 0.58
       pick: 0.0
       fit: 0.69
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.58
+      pick: 0.0
+      fit: 0.58
     Titan's Bane:
       total: 0.53
       efficiency: 0.54
       win: 0.57
       pick: 0.1
       fit: 0.54
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
-      win: 0.58
-      pick: 0.0
-      fit: 0.26
   community_ordered:
   - Jotunn's Revenge
   - Titan's Bane

@@ -690,13 +690,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Death Metal
-  - Nimble Ring
+  - Spear of Desolation
   - Tekko-Kagi
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
   - Tekko-Kagi
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -732,12 +732,12 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.5
-    Nimble Ring:
-      total: 0.55
-      efficiency: 0.63
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.59
       win: 0.59
       pick: 0.0
-      fit: 0.42
+      fit: 0.37
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.55
@@ -1362,15 +1362,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Book of Thoth
   - Jotunn's Revenge
   - Death Metal
   - Nimble Ring
-  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Nimble Ring
-  - Spear of Desolation
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1394,6 +1394,12 @@ builds:
     Pendant, Jade Scepter, Heartseeker, Rod of Asclepius, Avenging Blade, Arondight,
     Bracer of The Abyss, Soul Locket, Dreamer''s Idol.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.59
+      pick: 0.0
+      fit: 0.14
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -1412,12 +1418,6 @@ builds:
       win: 0.59
       pick: 0.0
       fit: 0.37
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.59
-      win: 0.59
-      pick: 0.0
-      fit: 0.35
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86

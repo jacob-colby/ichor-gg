@@ -782,9 +782,9 @@ builds:
   - Jotunn's Revenge
   - Spear of Desolation
   - Tyrfing
-  - Nimble Ring
   - Rod of Tahuti
   - Tekko-Kagi
+  - Soul Gem
   flex_slots:
   - Tyrfing
   - Spear of Desolation
@@ -828,12 +828,6 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.72
-    Nimble Ring:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.57
-      pick: 0.0
-      fit: 0.57
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -846,8 +840,15 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.59
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.59
+      pick: 0.23
+      fit: 0.67
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
+  - Soul Gem
   starter: *id001
 ---

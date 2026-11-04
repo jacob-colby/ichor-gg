@@ -2638,7 +2638,7 @@ NOT claim are in the module docstring. It writes reports and changes nothing.
     `reference --refreeze` re-captures them and is a deliberate act.
   * The sanity invariants are tests on the same frozen inputs: an item never
     lowers a stat it grants; power rises 2 -> 4 -> 6 (each figure, against a
-    reviewed list of twelve known drops, and the composite with none); nothing
+    reviewed list of ten known drops (twelve until 2026-11-04), and the composite with none); nothing
     NaN, and a zero score only where fit is zero; with the `modes` block
     removed all three modes give identical builds.
 

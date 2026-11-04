@@ -617,15 +617,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Berserker's Shield
+  - Book of Thoth
   - Jotunn's Revenge
   - Genji's Guard
-  - Shield Splitter
+  - Transcendence
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
-  - Shield Splitter
-  - Berserker's Shield
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -634,8 +634,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -650,12 +650,12 @@ builds:
     Avenging Blade, Doom Orb, Mantle Of Discord, Leviathan''s Hide, Heartseeker, Shifter''s
     Shield, The World Stone.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.47
-      efficiency: 0.67
+    Book of Thoth:
+      total: 0.39
+      efficiency: 0.49
       win: 0.45
       pick: 0.0
-      fit: 0.26
+      fit: 0.14
     Jotunn's Revenge:
       total: 0.49
       efficiency: 0.67
@@ -668,12 +668,12 @@ builds:
       win: 0.57
       pick: 0.17
       fit: 0.23
-    Shield Splitter:
-      total: 0.47
-      efficiency: 0.59
+    Transcendence:
+      total: 0.41
+      efficiency: 0.53
       win: 0.45
       pick: 0.0
-      fit: 0.45
+      fit: 0.16
     Gluttonous Grimoire:
       total: 0.49
       efficiency: 0.59
