@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Stygian Anchor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -14,7 +14,7 @@ builds:
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Stygian Anchor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.53
-      efficiency: 0.45
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.36
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.56
@@ -203,14 +203,14 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Nimble Ring
   - Bragi's Harp
+  - Freya's Tears
   - Eros' Bow
   - Amanita Charm
   flex_slots:
-  - Eros' Bow
+  - Freya's Tears
   - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
@@ -223,17 +223,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.46
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.56
@@ -252,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Freya's Tears:
+      total: 0.46
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
     Eros' Bow:
       total: 0.46
       efficiency: 0.53
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -463,7 +463,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Stygian Anchor
+  - Genji's Guard
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -471,7 +471,7 @@ builds:
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Stygian Anchor
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -483,17 +483,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.53
-      efficiency: 0.45
+    Genji's Guard:
+      total: 0.52
+      efficiency: 0.69
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.36
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.56

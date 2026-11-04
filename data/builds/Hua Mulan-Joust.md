@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Brawler’s Beat Stick
+  - Golden Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield Splitter
@@ -14,7 +14,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Brawler’s Beat Stick
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
+    Golden Blade:
       total: 0.51
-      efficiency: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.5
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -176,11 +176,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -333,7 +333,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Brawler’s Beat Stick
+  - Golden Blade
   - Berserker's Shield
   - Kinetic Cuirass
   - Shield Splitter
@@ -341,7 +341,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Brawler’s Beat Stick
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -353,17 +353,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
+    Golden Blade:
       total: 0.51
-      efficiency: 0.48
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.5
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

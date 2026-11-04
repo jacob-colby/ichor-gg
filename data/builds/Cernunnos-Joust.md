@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
+  - Bragi's Harp
   - The Reaper
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -26,17 +26,11 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -49,6 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.51
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
@@ -210,8 +210,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Spear of Desolation
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -298,7 +298,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.57
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -428,7 +428,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Tyrfing:
       total: 0.52
       efficiency: 0.5
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.54
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
+  - Bragi's Harp
   - The Reaper
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,17 +548,11 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.52
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.67
@@ -571,6 +565,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     The Reaper:
       total: 0.59
       efficiency: 0.56
@@ -619,11 +619,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67
@@ -685,11 +685,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.5
     Bancroft's Talon:
       total: 0.52
       efficiency: 0.51
@@ -751,11 +751,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.49
       efficiency: 0.67
@@ -817,11 +817,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -883,11 +883,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74
@@ -959,7 +959,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.65
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -1021,11 +1021,11 @@ builds:
       pick: 0.0
       fit: 0.48
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Death Metal:
       total: 0.5
       efficiency: 0.63
@@ -1085,7 +1085,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.53
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -1147,11 +1147,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.67

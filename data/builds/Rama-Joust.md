@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -80,8 +80,8 @@ builds:
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Heartseeker
   - Hydra's Lament
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -103,7 +103,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.52
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.69
     Rage:
       total: 0.45
       efficiency: 0.44
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.67
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.66
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.8
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.67
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.6
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.72
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -489,11 +489,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.55
     Chandra's Grace:
       total: 0.48
       efficiency: 0.43
@@ -560,11 +560,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.59
+      total: 0.58
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.7
     Tyrfing:
       total: 0.57
       efficiency: 0.5

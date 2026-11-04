@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Stygian Anchor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,17 +26,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56
@@ -52,6 +46,12 @@ builds:
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -229,11 +229,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.47
+      total: 0.46
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.44
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.56
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Berserker's Shield:
       total: 0.53
       efficiency: 0.74
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Shield Splitter
+  - Obsidian Shard
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Shield Splitter
-  - Toxic Blade
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -418,17 +418,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Toxic Blade:
-      total: 0.49
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.67
@@ -447,6 +441,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Obsidian Shard:
+      total: 0.49
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.86
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
+  - Shifter's Shield
   - Amanita Charm
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Stygian Anchor
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -483,17 +483,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Stygian Anchor:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.56
@@ -509,6 +503,12 @@ builds:
     Draconic Scale:
       total: 0.56
       efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Shifter's Shield:
+      total: 0.55
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.63

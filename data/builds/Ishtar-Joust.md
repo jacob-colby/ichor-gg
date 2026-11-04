@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
   - Tyrfing
-  - Toxic Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -93,23 +93,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.49
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Transcendence:
+      total: 0.39
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Tyrfing:
       total: 0.49
       efficiency: 0.5
@@ -294,11 +294,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.63
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.81
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -335,13 +335,13 @@ builds:
   slot_order:
   - Golden Blade
   - Lernaean Bow
-  - Toxic Blade
   - Tyrfing
   - Qin's Blade
   - Riptalon
+  - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Toxic Blade
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -353,8 +353,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -370,12 +370,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Toxic Blade:
-      total: 0.53
-      efficiency: 0.36
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Tyrfing:
       total: 0.63
       efficiency: 0.5
@@ -394,6 +388,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Demon Blade:
+      total: 0.53
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
   starter: *id001
 - source: suggested
   archetype: cooldown

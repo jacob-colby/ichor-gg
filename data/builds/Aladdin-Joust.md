@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.63
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.79
     Tyrfing:
       total: 0.6
       efficiency: 0.5

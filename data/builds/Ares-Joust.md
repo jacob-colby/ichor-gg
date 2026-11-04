@@ -13,8 +13,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -32,11 +32,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
@@ -140,13 +140,13 @@ builds:
   slot_order:
   - Screeching Gargoyle
   - Stone of Binding
-  - Toxic Blade
+  - Jotunn's Revenge
   - Void Shield
   - Void Stone
   - Soul Gem
   flex_slots:
   - Screeching Gargoyle
-  - Toxic Blade
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -158,8 +158,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -175,12 +175,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
-    Toxic Blade:
-      total: 0.57
-      efficiency: 0.4
+    Jotunn's Revenge:
+      total: 0.56
+      efficiency: 0.67
       win: 0.5
       pick: 0.0
-      fit: 0.73
+      fit: 0.45
     Void Shield:
       total: 0.59
       efficiency: 0.46
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.53
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -359,11 +359,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.6
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -405,8 +405,8 @@ builds:
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
   - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -424,11 +424,11 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Brawler’s Beat Stick:
-      total: 0.55
+      total: 0.54
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.56
@@ -463,14 +463,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Brawler’s Beat Stick
   - Gauntlet of Thebes
   - Kinetic Cuirass
   - Freya's Tears
+  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
-  - Brawler’s Beat Stick
+  - Draconic Scale
   - Gauntlet of Thebes
   situational_swaps:
   - vs_tag: heavy_cc
@@ -483,17 +483,11 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Brawler’s Beat Stick:
-      total: 0.55
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Gauntlet of Thebes:
       total: 0.2
       efficiency: 0.23
@@ -512,6 +506,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Draconic Scale:
+      total: 0.55
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
     Amanita Charm:
       total: 0.77
       efficiency: 0.65
@@ -526,9 +526,9 @@ builds:
       fit: 0.63
   swaps:
   - added: Gauntlet of Thebes
-    removed: Draconic Scale
+    removed: Brawler’s Beat Stick
     reason: Conquest community 63% win over 170 matches (vs 55% on this god), taking
-      the model's weakest slot from Draconic Scale
+      the model's weakest slot from Brawler’s Beat Stick
   borrowed_from: Conquest
   starter: *id001
 ---

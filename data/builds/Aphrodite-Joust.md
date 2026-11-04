@@ -499,7 +499,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.61
     Berserker's Shield:
       total: 0.52
       efficiency: 0.74

@@ -42,7 +42,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.7
     Tyrfing:
       total: 0.57
       efficiency: 0.5
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Toxic Blade
   - Jotunn's Revenge
+  - Transcendence
   - Tyrfing
   - Hydra's Lament
   - The Reaper
   - Heartseeker
   flex_slots:
   - Tyrfing
-  - Toxic Blade
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -93,23 +93,23 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Toxic Blade:
-      total: 0.48
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Transcendence:
+      total: 0.39
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.25
     Tyrfing:
       total: 0.49
       efficiency: 0.5
@@ -168,7 +168,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.68
     Rage:
       total: 0.46
       efficiency: 0.44
@@ -233,7 +233,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.6
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.67
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.49
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.65
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.8
     Tekko-Kagi:
       total: 0.58
       efficiency: 0.55
@@ -434,7 +434,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.76
     Tyrfing:
       total: 0.59
       efficiency: 0.5
@@ -489,11 +489,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.52
     Chandra's Grace:
       total: 0.49
       efficiency: 0.43
@@ -564,7 +564,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.7
     Tyrfing:
       total: 0.57
       efficiency: 0.5

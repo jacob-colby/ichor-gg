@@ -145,8 +145,8 @@ builds:
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - The Crusher
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.5
+      total: 0.49
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.58
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.67
@@ -369,7 +369,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.79
+      fit: 0.77
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74

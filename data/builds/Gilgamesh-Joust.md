@@ -38,11 +38,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -99,11 +99,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.5
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.53
     Berserker's Shield:
       total: 0.5
       efficiency: 0.74
@@ -170,11 +170,11 @@ builds:
       pick: 0.0
       fit: 0.51
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Berserker's Shield:
       total: 0.57
       efficiency: 0.74
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.67
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.56
     Toxic Blade:
-      total: 0.62
+      total: 0.61
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.74
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74
@@ -363,7 +363,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
     Genji's Guard:
       total: 0.5
       efficiency: 0.69
@@ -430,11 +430,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.58
+      total: 0.57
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.67
     Berserker's Shield:
       total: 0.56
       efficiency: 0.74

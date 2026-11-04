@@ -706,7 +706,7 @@
       "Demon Blade"
      ],
      "crit": [
-      "Toxic Blade",
+      "Lernaean Bow",
       "Rage",
       "Tyrfing",
       "Riptalon",
@@ -722,10 +722,10 @@
       "Demon Blade"
      ],
      "mana-stack": [
-      "Toxic Blade",
       "Jotunn's Revenge",
       "Tyrfing",
       "Hydra's Lament",
+      "Dominance",
       "The Reaper",
       "Heartseeker"
      ],
@@ -1529,9 +1529,9 @@
       "Soul Gem"
      ],
      "core": [
-      "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
+      "Bragi's Harp",
       "The Reaper",
       "Rod of Tahuti",
       "Soul Gem"
@@ -1577,9 +1577,9 @@
       "Rod of Tahuti"
      ],
      "model": [
-      "Toxic Blade",
       "Jotunn's Revenge",
       "Death Metal",
+      "Bragi's Harp",
       "The Reaper",
       "Rod of Tahuti",
       "Soul Gem"

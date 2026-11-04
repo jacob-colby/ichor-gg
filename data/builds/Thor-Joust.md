@@ -164,11 +164,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.49
+      total: 0.48
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.67
@@ -365,11 +365,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.65
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.8
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74

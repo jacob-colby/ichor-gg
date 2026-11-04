@@ -36,7 +36,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56
@@ -235,11 +235,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Berserker's Shield:
       total: 0.59
       efficiency: 0.74
@@ -340,8 +340,8 @@ builds:
   - Shield Splitter
   - Amanita Charm
   flex_slots:
-  - Toxic Blade
   - Kinetic Cuirass
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -359,11 +359,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.52
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.57
     Berserker's Shield:
       total: 0.54
       efficiency: 0.74
@@ -493,7 +493,7 @@ builds:
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
     Kinetic Cuirass:
       total: 0.59
       efficiency: 0.56

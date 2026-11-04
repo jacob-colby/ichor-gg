@@ -204,14 +204,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Avenging Blade
-  - Toxic Blade
   - Jotunn's Revenge
   - The Reaper
+  - The Crusher
   - Titan's Bane
   - Heartseeker
   flex_slots:
   - Heartseeker
-  - Toxic Blade
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -223,8 +223,8 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
@@ -234,12 +234,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Toxic Blade:
-      total: 0.58
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -252,6 +246,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
+    The Crusher:
+      total: 0.58
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Titan's Bane:
       total: 0.6
       efficiency: 0.54
@@ -300,11 +300,11 @@ builds:
       pick: 0.0
       fit: 0.62
     Toxic Blade:
-      total: 0.65
+      total: 0.64
       efficiency: 0.48
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.8
     Berserker's Shield:
       total: 0.58
       efficiency: 0.74
