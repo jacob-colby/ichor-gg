@@ -203,15 +203,15 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Eros' Bow
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -228,6 +228,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.49
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Toxic Blade:
       total: 0.57
       efficiency: 0.48
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Amanita Charm:
       total: 0.66
       efficiency: 0.65
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Lotus Sickle
   - Jotunn's Revenge
   - Hydra's Lament
   - Spear of Desolation
+  - Pendulum Blade
   - Soul Gem
   flex_slots:
   - Toxic Blade
-  - Lotus Sickle
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -429,12 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Lotus Sickle:
-      total: 0.5
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.67
@@ -450,6 +444,12 @@ builds:
     Spear of Desolation:
       total: 0.59
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Pendulum Blade:
+      total: 0.5
+      efficiency: 0.41
       win: 0.5
       pick: 0.0
       fit: 0.6

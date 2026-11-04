@@ -8,13 +8,13 @@ builds:
   slot_order:
   - Bracer of The Abyss
   - Spear of Desolation
+  - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Bracer of The Abyss
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -43,6 +43,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Spear of the Magus:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Obsidian Shard:
       total: 0.56
       efficiency: 0.58
@@ -55,12 +61,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -204,14 +204,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Kinetic Cuirass
+  - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
   - Obsidian Shard
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -234,6 +234,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Spear of Desolation:
+      total: 0.47
+      efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
     Obsidian Shard:
       total: 0.48
       efficiency: 0.58
@@ -246,12 +252,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.27
-    Eros' Bow:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
     Amanita Charm:
       total: 0.69
       efficiency: 0.65
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -358,6 +358,12 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Nimble Ring:
       total: 0.56
       efficiency: 0.63
@@ -382,12 +388,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.3
-    Eros' Bow:
-      total: 0.47
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Soul Gem:
       total: 0.71
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Chronos' Pendant
   - Bragi's Harp
+  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
   - Bragi's Harp
+  - Heartwood Charm
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
     Chronos' Pendant:
       total: 0.5
       efficiency: 0.55
@@ -441,6 +435,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
+    Heartwood Charm:
+      total: 0.47
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Spear of Desolation:
       total: 0.59
       efficiency: 0.59
@@ -595,13 +595,13 @@ builds:
   slot_order:
   - Bracer of The Abyss
   - Spear of Desolation
+  - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Bracer of The Abyss
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -630,6 +630,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Spear of the Magus:
+      total: 0.51
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Obsidian Shard:
       total: 0.56
       efficiency: 0.58
@@ -642,12 +648,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.54
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Soul Gem:
       total: 0.79
       efficiency: 0.57

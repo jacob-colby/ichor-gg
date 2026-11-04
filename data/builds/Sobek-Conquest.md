@@ -121,7 +121,7 @@ builds:
     Darkness, Oni Hunter''s Garb, Shield of the Phoenix, Shifter''s Shield, Stone
     of Binding, Magi''s Cloak, Helm of Radiance, Midgardian Mail, Mantle Of Discord,
     Leviathan''s Hide, Screeching Gargoyle, Spear of Desolation, Ancile, Prophetic
-    Cloak, Hide of the Nemean Lion, Obsidian Shard, Void Stone, Void Shield.'
+    Cloak, Hide of the Nemean Lion, Obsidian Shard, Void Stone.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.56
@@ -196,9 +196,9 @@ builds:
     Phoenix, Kinetic Cuirass, Gluttonous Grimoire, Blood-Bound Book, Phoenix Feather,
     Ethereal Staff, Erosion, Eye of Providence, Breastplate of Valor, Oni Hunter''s
     Garb, Chandra''s Grace, Midgardian Mail, Shifter''s Shield, Glorious Pridwen,
-    Rod of Asclepius, Bancroft''s Talon, Leviathan''s Hide, Helm of Darkness, Regrowth
-    Striders, Helm of Radiance, Sphere of Negation, Soul Locket, Stone of Binding,
-    Yogi''s Necklace.'
+    Bancroft''s Talon, Leviathan''s Hide, Helm of Darkness, Regrowth Striders, Helm
+    of Radiance, Sphere of Negation, Stone of Binding, Spear of Desolation, Yogi''s
+    Necklace.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.56
@@ -272,7 +272,7 @@ builds:
     Obsidian Shard, Void Stone, Void Shield, Spear of the Magus, Breastplate of Valor,
     Erosion, Oni Hunter''s Garb, Eye of Providence, Doom Orb, Helm of Radiance, The
     World Stone, Helm of Darkness, Shield of the Phoenix, Midgardian Mail, Magi''s
-    Cloak, Dreamer''s Idol, Mantle Of Discord, Shifter''s Shield, Leviathan''s Hide.'
+    Cloak, Dreamer''s Idol, Mantle Of Discord, Shifter''s Shield.'
   slot_scores:
     Stone of Binding:
       total: 0.54
@@ -317,15 +317,15 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Freya's Tears
   - Draconic Scale
-  - Eros' Bow
   - Amanita Charm
   flex_slots:
-  - Eros' Bow
   - Bragi's Harp
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -341,12 +341,18 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Draconic Scale, Amanita Charm, Nimble Ring, Kinetic Cuirass,
-    Gluttonous Grimoire, Breastplate of Valor, Soul Gem, Eros'' Bow, Oni Hunter''s
-    Garb, Helm of Radiance, Erosion, Eye of Providence, Obsidian Shard, Stone of Binding,
-    Spear of Desolation, Helm of Darkness, Midgardian Mail, Shield of the Phoenix,
-    Magi''s Cloak, Screeching Gargoyle, Blood-Bound Book, Leviathan''s Hide, Bragi''s
-    Harp, Mantle Of Discord, Ancient Signet, Shifter''s Shield, Bracer of The Abyss.'
+    Gluttonous Grimoire, Breastplate of Valor, Soul Gem, Oni Hunter''s Garb, Helm
+    of Radiance, Erosion, Eye of Providence, Obsidian Shard, Stone of Binding, Spear
+    of Desolation, Helm of Darkness, Midgardian Mail, Shield of the Phoenix, Magi''s
+    Cloak, Screeching Gargoyle, Blood-Bound Book, Leviathan''s Hide, Bragi''s Harp,
+    Mantle Of Discord, Ancient Signet, Shifter''s Shield, Bracer of The Abyss.'
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.47
+      efficiency: 0.52
+      win: 0.57
+      pick: 0.0
+      fit: 0.24
     Nimble Ring:
       total: 0.52
       efficiency: 0.63
@@ -371,12 +377,6 @@ builds:
       win: 0.73
       pick: 0.11
       fit: 0.36
-    Eros' Bow:
-      total: 0.49
-      efficiency: 0.53
-      win: 0.57
-      pick: 0.0
-      fit: 0.34
     Amanita Charm:
       total: 0.54
       efficiency: 0.65
@@ -415,11 +415,11 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Draconic Scale, Amanita
     Charm, Soul Gem, Breastplate of Valor, Kinetic Cuirass, Spear of Desolation, Gluttonous
-    Grimoire, Shield of the Phoenix, Screeching Gargoyle, Lotus Sickle, Chronos''
-    Pendant, Helm of Radiance, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Helm
-    of Darkness, Eye of Providence, Obsidian Shard, Stone of Binding, Gladiator''s
-    Shield, Gem of Focus, Midgardian Mail, Heartwood Charm, Magi''s Cloak, Blood-Bound
-    Book, Mantle Of Discord, Leviathan''s Hide.'
+    Grimoire, Shield of the Phoenix, Screeching Gargoyle, Chronos'' Pendant, Helm
+    of Radiance, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Helm of Darkness, Eye
+    of Providence, Obsidian Shard, Stone of Binding, Gladiator''s Shield, Gem of Focus,
+    Midgardian Mail, Heartwood Charm, Magi''s Cloak, Blood-Bound Book, Mantle Of Discord,
+    Leviathan''s Hide.'
   slot_scores:
     Breastplate of Valor:
       total: 0.54
@@ -493,7 +493,7 @@ builds:
     Scale, Helm of Darkness, Oni Hunter''s Garb, Shield of the Phoenix, Shifter''s
     Shield, Stone of Binding, Magi''s Cloak, Helm of Radiance, Midgardian Mail, Mantle
     Of Discord, Leviathan''s Hide, Screeching Gargoyle, Spear of Desolation, Ancile,
-    Prophetic Cloak, Hide of the Nemean Lion, Obsidian Shard, Void Stone, Void Shield.'
+    Prophetic Cloak, Hide of the Nemean Lion, Obsidian Shard, Void Stone.'
   slot_scores:
     Breastplate of Valor:
       total: 0.53
@@ -567,7 +567,7 @@ builds:
     Phoenix, Shifter''s Shield, Stone of Binding, Magi''s Cloak, Helm of Radiance,
     Midgardian Mail, Mantle Of Discord, Leviathan''s Hide, Screeching Gargoyle, Spear
     of Desolation, Ancile, Prophetic Cloak, Hide of the Nemean Lion, Obsidian Shard,
-    Void Stone, Void Shield.'
+    Void Stone.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.56

@@ -120,10 +120,10 @@ builds:
     Shield Splitter, Golden Blade, Runeforged Hammer, Kinetic Cuirass, Nimble Ring,
     Genji''s Guard, Soul Gem, The Crusher, Tyrfing, Tekko-Kagi, Hydra''s Lament, Avenging
     Blade, Titan''s Bane, Lernaean Bow, Oni Hunter''s Garb, Breastplate of Valor,
-    Erosion, Pharaoh''s Curse, Eye of Providence, Midgardian Mail, Eros'' Bow, Obsidian
-    Shard, Death Metal, Wyrmskin Hide, Helm of Radiance, Draconic Scale, Toxic Blade,
-    Blood-Bound Book, Shield of the Phoenix, Leviathan''s Hide, Bragi''s Harp, Shogun''s
-    Ofuda, Dominance, Arondight, Spear of Desolation.'
+    Erosion, Pharaoh''s Curse, Eye of Providence, Midgardian Mail, Obsidian Shard,
+    Death Metal, Wyrmskin Hide, Helm of Radiance, Draconic Scale, Toxic Blade, Blood-Bound
+    Book, Shield of the Phoenix, Leviathan''s Hide, Bragi''s Harp, Shogun''s Ofuda,
+    Dominance, Arondight, Spear of Desolation.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -199,8 +199,8 @@ builds:
     Necklace, Bloodforge, Ethereal Staff, Nimble Ring, Riptalon, Oni Hunter''s Garb,
     Erosion, Eye of Providence, Breastplate of Valor, Draconic Scale, Avenging Blade,
     Hydra''s Lament, Bancroft''s Talon, Tekko-Kagi, Tyrfing, Midgardian Mail, Pharaoh''s
-    Curse, Chandra''s Grace, Titan''s Bane, Rod of Asclepius, Leviathan''s Hide, Helm
-    of Radiance, Lernaean Bow, Sphere of Negation, Wyrmskin Hide, Shifter''s Shield.'
+    Curse, Chandra''s Grace, Titan''s Bane, Leviathan''s Hide, Helm of Radiance, Lernaean
+    Bow, Sphere of Negation, Wyrmskin Hide, Shifter''s Shield.'
   slot_scores:
     Berserker's Shield:
       total: 0.58
@@ -275,7 +275,7 @@ builds:
     Kinetic Cuirass, Void Stone, Void Shield, Nimble Ring, Silverbranch Bow, Golden
     Blade, Riptalon, Doom Orb, Hydra''s Lament, The World Stone, Breastplate of Valor,
     Tyrfing, Oni Hunter''s Garb, Lernaean Bow, Dreamer''s Idol, Avatar''s Parashu,
-    Helm of Radiance, Blood-Bound Book, Midgardian Mail, Death Metal.'
+    Helm of Radiance, Blood-Bound Book, Midgardian Mail.'
   slot_scores:
     Berserker's Shield:
       total: 0.56
@@ -347,11 +347,11 @@ builds:
     this god: Berserker''s Shield, Rod of Tahuti, Golden Blade, Nimble Ring, Amanita
     Charm, Jotunn''s Revenge, Tyrfing, Genji''s Guard, Tekko-Kagi, Kinetic Cuirass,
     Toxic Blade, Runeforged Hammer, Shield Splitter, Lernaean Bow, Silverbranch Bow,
-    Eros'' Bow, Soul Gem, Pharaoh''s Curse, Riptalon, Shogun''s Ofuda, Breastplate
-    of Valor, Hydra''s Lament, Dominance, Oni Hunter''s Garb, Bragi''s Harp, Obsidian
-    Shard, Titan''s Bane, Helm of Radiance, Avenging Blade, Blood-Bound Book, Midgardian
-    Mail, Spear of Desolation, Qin''s Blade, Bracer of The Abyss, Erosion, Eye of
-    Providence, Leviathan''s Hide, Vital Amplifier, Ancient Signet.'
+    Soul Gem, Pharaoh''s Curse, Riptalon, Shogun''s Ofuda, Breastplate of Valor, Hydra''s
+    Lament, Dominance, Oni Hunter''s Garb, Bragi''s Harp, Obsidian Shard, Titan''s
+    Bane, Helm of Radiance, Avenging Blade, Blood-Bound Book, Midgardian Mail, Spear
+    of Desolation, Qin''s Blade, Bracer of The Abyss, Erosion, Eye of Providence,
+    Leviathan''s Hide, Vital Amplifier, Ancient Signet.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -421,13 +421,13 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
     Berserker''s Shield, Genji''s Guard, Soul Gem, Breastplate of Valor, Spear of
-    Desolation, Hydra''s Lament, Amanita Charm, Lotus Sickle, Shield of the Phoenix,
-    Nimble Ring, Screeching Gargoyle, Chronos'' Pendant, Kinetic Cuirass, Arondight,
-    Runeforged Hammer, Shield Splitter, Obsidian Shard, Gem of Focus, Golden Blade,
-    Heartwood Charm, Helm of Radiance, Blood-Bound Book, Oni Hunter''s Garb, Eros''
-    Bow, Chandra''s Grace, Eye of Erebus, Gladiator''s Shield, Ancient Signet, Prophetic
-    Cloak, Tekko-Kagi, Tyrfing, Jade Scepter, Midgardian Mail, Titan''s Bane, Spear
-    of the Magus, Avenging Blade, Erosion.'
+    Desolation, Hydra''s Lament, Amanita Charm, Shield of the Phoenix, Nimble Ring,
+    Screeching Gargoyle, Chronos'' Pendant, Kinetic Cuirass, Arondight, Runeforged
+    Hammer, Shield Splitter, Obsidian Shard, Gem of Focus, Golden Blade, Heartwood
+    Charm, Helm of Radiance, Blood-Bound Book, Oni Hunter''s Garb, Chandra''s Grace,
+    Eye of Erebus, Gladiator''s Shield, Ancient Signet, Prophetic Cloak, Tekko-Kagi,
+    Tyrfing, Jade Scepter, Midgardian Mail, Titan''s Bane, Spear of the Magus, Avenging
+    Blade, Erosion, Damaru.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -499,10 +499,10 @@ builds:
     Revenge, Shield Splitter, Golden Blade, Runeforged Hammer, Kinetic Cuirass, Nimble
     Ring, Genji''s Guard, Soul Gem, Tyrfing, Tekko-Kagi, Hydra''s Lament, Avenging
     Blade, Titan''s Bane, Lernaean Bow, Oni Hunter''s Garb, Breastplate of Valor,
-    Erosion, Pharaoh''s Curse, Eye of Providence, Midgardian Mail, Eros'' Bow, Obsidian
-    Shard, Death Metal, Wyrmskin Hide, Helm of Radiance, Draconic Scale, Toxic Blade,
-    Blood-Bound Book, The Crusher, Shield of the Phoenix, Leviathan''s Hide, Bragi''s
-    Harp, Shogun''s Ofuda, Dominance, Arondight, Spear of Desolation.'
+    Erosion, Pharaoh''s Curse, Eye of Providence, Midgardian Mail, Obsidian Shard,
+    Death Metal, Wyrmskin Hide, Helm of Radiance, Draconic Scale, Toxic Blade, Blood-Bound
+    Book, The Crusher, Shield of the Phoenix, Leviathan''s Hide, Bragi''s Harp, Shogun''s
+    Ofuda, Dominance, Arondight, Spear of Desolation.'
   slot_scores:
     Golden Blade:
       total: 0.53

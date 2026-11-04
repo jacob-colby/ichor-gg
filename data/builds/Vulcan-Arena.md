@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Bancroft's Talon
   - Book of Thoth
   - Bragi's Harp
   - Spear of Desolation
+  - Obsidian Shard
   - Rod of Tahuti
   flex_slots:
-  - Lotus Sickle
+  - Bancroft's Talon
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Bancroft's Talon:
       total: 0.53
       efficiency: 0.46
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.86
@@ -398,14 +398,14 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Chronos' Pendant
+  - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
+  - Heartwood Charm
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.56
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Book of Thoth:
       total: 0.31
       efficiency: 0.49
@@ -438,6 +432,12 @@ builds:
     Chronos' Pendant:
       total: 0.55
       efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Heartwood Charm:
+      total: 0.53
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.56

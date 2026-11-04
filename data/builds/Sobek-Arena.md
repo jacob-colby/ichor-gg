@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Magi's Cloak
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Eros' Bow
   - Amanita Charm
   flex_slots:
   - Bragi's Harp
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Mantle Of Discord — CC-immunity / cleanse
@@ -240,6 +240,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
+    Bracer of The Abyss:
+      total: 0.38
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
     Nimble Ring:
       total: 0.47
       efficiency: 0.63
@@ -252,12 +258,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Eros' Bow:
-      total: 0.44
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
     Amanita Charm:
       total: 0.63
       efficiency: 0.65

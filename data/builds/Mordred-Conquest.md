@@ -123,7 +123,7 @@ builds:
     Shard, Stone of Binding, Helm of Radiance, Helm of Darkness, Midgardian Mail,
     Magi''s Cloak, The Crusher, Avenging Blade, Mantle Of Discord, Screeching Gargoyle,
     Leviathan''s Hide, Heartseeker, Spear of the Magus, Arondight, Wyrmskin Hide,
-    Blood-Bound Book, Ancile, Death Metal, Stampede, Shield of the Phoenix.'
+    Blood-Bound Book, Ancile, Death Metal, Shield of the Phoenix.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -196,11 +196,11 @@ builds:
     Revenge, Draconic Scale, Kinetic Cuirass, Gluttonous Grimoire, Genji''s Guard,
     Soul Gem, Amanita Charm, Shield Splitter, Berserker''s Shield, Spear of Desolation,
     Obsidian Shard, Breastplate of Valor, Hydra''s Lament, Helm of Radiance, Runeforged
-    Hammer, The Reaper, Ancient Signet, Lotus Sickle, Titan''s Bane, Helm of Darkness,
-    Spear of the Magus, Oni Hunter''s Garb, Blood-Bound Book, Death Metal, Doom Orb,
-    The World Stone, Heartseeker, Jade Scepter, Chronos'' Pendant, The Crusher, Erosion,
-    Avenging Blade, Eye of Providence, Stone of Binding, Arondight, Screeching Gargoyle,
-    Midgardian Mail, Magi''s Cloak, Polynomicon, Shield of the Phoenix.'
+    Hammer, The Reaper, Ancient Signet, Titan''s Bane, Helm of Darkness, Spear of
+    the Magus, Oni Hunter''s Garb, Blood-Bound Book, Death Metal, Doom Orb, The World
+    Stone, Heartseeker, Jade Scepter, Chronos'' Pendant, The Crusher, Erosion, Avenging
+    Blade, Eye of Providence, Stone of Binding, Arondight, Screeching Gargoyle, Midgardian
+    Mail, Magi''s Cloak, Polynomicon, Shield of the Phoenix.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -273,11 +273,11 @@ builds:
     Cuirass, Amanita Charm, Genji''s Guard, Spear of Desolation, Berserker''s Shield,
     Obsidian Shard, Shield Splitter, Breastplate of Valor, The Reaper, Titan''s Bane,
     Spear of the Magus, Hydra''s Lament, Helm of Radiance, Runeforged Hammer, Helm
-    of Darkness, Lotus Sickle, Blood-Bound Book, The Crusher, Oni Hunter''s Garb,
-    Doom Orb, Screeching Gargoyle, Erosion, The World Stone, Ancient Signet, Chronos''
-    Pendant, Eye of Providence, Heartseeker, Stone of Binding, Death Metal, Midgardian
-    Mail, Arondight, Magi''s Cloak, Jade Scepter, Dreamer''s Idol, Leviathan''s Hide,
-    Shield of the Phoenix.'
+    of Darkness, Blood-Bound Book, The Crusher, Oni Hunter''s Garb, Doom Orb, Screeching
+    Gargoyle, Erosion, The World Stone, Ancient Signet, Chronos'' Pendant, Eye of
+    Providence, Heartseeker, Stone of Binding, Death Metal, Midgardian Mail, Arondight,
+    Magi''s Cloak, Jade Scepter, Dreamer''s Idol, Leviathan''s Hide, Shield of the
+    Phoenix.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -352,9 +352,9 @@ builds:
     Necklace, Bloodforge, Ethereal Staff, Breastplate of Valor, Titan''s Bane, Hydra''s
     Lament, Spear of Desolation, Oni Hunter''s Garb, Chandra''s Grace, Obsidian Shard,
     Erosion, Shield of the Phoenix, Eye of Providence, Bancroft''s Talon, Avenging
-    Blade, Midgardian Mail, Regrowth Striders, Rod of Asclepius, Helm of Radiance,
-    The Crusher, Leviathan''s Hide, Sphere of Negation, Glorious Pridwen, Stone of
-    Binding, Soul Locket, Helm of Darkness.'
+    Blade, Midgardian Mail, Regrowth Striders, Helm of Radiance, The Crusher, Leviathan''s
+    Hide, Sphere of Negation, Glorious Pridwen, Stone of Binding, Helm of Darkness,
+    Heartseeker.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
@@ -504,10 +504,9 @@ builds:
     Blade, Soul Gem, Tekko-Kagi, Tyrfing, Breastplate of Valor, Toxic Blade, Silverbranch
     Bow, Runeforged Hammer, Obsidian Shard, Pharaoh''s Curse, Spear of Desolation,
     Lernaean Bow, The Reaper, Oni Hunter''s Garb, Hydra''s Lament, Titan''s Bane,
-    Helm of Radiance, Eros'' Bow, Shogun''s Ofuda, Riptalon, Erosion, Eye of Providence,
-    Stone of Binding, Midgardian Mail, Magi''s Cloak, Helm of Darkness, Screeching
-    Gargoyle, Leviathan''s Hide, Spear of the Magus, Blood-Bound Book, Shield of the
-    Phoenix.'
+    Helm of Radiance, Shogun''s Ofuda, Riptalon, Erosion, Eye of Providence, Stone
+    of Binding, Midgardian Mail, Magi''s Cloak, Helm of Darkness, Screeching Gargoyle,
+    Leviathan''s Hide, Spear of the Magus, Blood-Bound Book, Shield of the Phoenix.'
   slot_scores:
     Golden Blade:
       total: 0.52
@@ -579,12 +578,12 @@ builds:
     + fit + win/pick). Underrated for this god: Jotunn''s Revenge, Genji''s Guard,
     Draconic Scale, Soul Gem, Kinetic Cuirass, Amanita Charm, Breastplate of Valor,
     Spear of Desolation, Gluttonous Grimoire, Berserker''s Shield, Hydra''s Lament,
-    Shield Splitter, Screeching Gargoyle, Lotus Sickle, Obsidian Shard, Chronos''
-    Pendant, Helm of Radiance, Arondight, Runeforged Hammer, Oni Hunter''s Garb, Prophetic
-    Cloak, The Reaper, Helm of Darkness, Erosion, Eye of Providence, Titan''s Bane,
-    Stone of Binding, Spear of the Magus, Midgardian Mail, Blood-Bound Book, Gem of
-    Focus, Magi''s Cloak, Gladiator''s Shield, Heartwood Charm, Leviathan''s Hide,
-    Mantle Of Discord, Ancient Signet, Regrowth Striders, Shield of the Phoenix.'
+    Shield Splitter, Screeching Gargoyle, Obsidian Shard, Chronos'' Pendant, Helm
+    of Radiance, Arondight, Runeforged Hammer, Oni Hunter''s Garb, Prophetic Cloak,
+    The Reaper, Helm of Darkness, Erosion, Eye of Providence, Titan''s Bane, Stone
+    of Binding, Spear of the Magus, Midgardian Mail, Blood-Bound Book, Gem of Focus,
+    Magi''s Cloak, Gladiator''s Shield, Heartwood Charm, Leviathan''s Hide, Mantle
+    Of Discord, Ancient Signet, Regrowth Striders, Shield of the Phoenix.'
   slot_scores:
     Genji's Guard:
       total: 0.56
@@ -657,11 +656,11 @@ builds:
     Cuirass, Soul Gem, Jotunn''s Revenge, Amanita Charm, Genji''s Guard, Spear of
     Desolation, Berserker''s Shield, Obsidian Shard, Shield Splitter, Helm of Radiance,
     Breastplate of Valor, Helm of Darkness, Spear of the Magus, Runeforged Hammer,
-    The Reaper, Blood-Bound Book, Hydra''s Lament, Titan''s Bane, Lotus Sickle, Ancient
-    Signet, Death Metal, Chronos'' Pendant, Oni Hunter''s Garb, Jade Scepter, Doom
-    Orb, Erosion, The World Stone, Eye of Providence, Screeching Gargoyle, Stone of
-    Binding, Midgardian Mail, The Crusher, Magi''s Cloak, Dreamer''s Idol, Arondight,
-    Avenging Blade, Ethereal Staff, Shield of the Phoenix.'
+    The Reaper, Blood-Bound Book, Hydra''s Lament, Titan''s Bane, Ancient Signet,
+    Death Metal, Chronos'' Pendant, Oni Hunter''s Garb, Jade Scepter, Doom Orb, Erosion,
+    The World Stone, Eye of Providence, Screeching Gargoyle, Stone of Binding, Midgardian
+    Mail, The Crusher, Magi''s Cloak, Dreamer''s Idol, Arondight, Avenging Blade,
+    Ethereal Staff, Shield of the Phoenix.'
   slot_scores:
     Book of Thoth:
       total: 0.46
@@ -735,10 +734,10 @@ builds:
     Guard, Berserker''s Shield, Obsidian Shard, Spear of Desolation, Helm of Radiance,
     Runeforged Hammer, The Reaper, Breastplate of Valor, Titan''s Bane, Helm of Darkness,
     Spear of the Magus, Hydra''s Lament, Blood-Bound Book, Death Metal, Oni Hunter''s
-    Garb, Ancient Signet, Erosion, Lotus Sickle, Eye of Providence, The Crusher, Jade
-    Scepter, Doom Orb, Stone of Binding, Midgardian Mail, Avenging Blade, The World
-    Stone, Magi''s Cloak, Chronos'' Pendant, Heartseeker, Screeching Gargoyle, Leviathan''s
-    Hide, Mantle Of Discord, Shield of the Phoenix.'
+    Garb, Ancient Signet, Erosion, Eye of Providence, The Crusher, Jade Scepter, Doom
+    Orb, Stone of Binding, Midgardian Mail, Avenging Blade, The World Stone, Magi''s
+    Cloak, Chronos'' Pendant, Heartseeker, Screeching Gargoyle, Leviathan''s Hide,
+    Mantle Of Discord, Shield of the Phoenix.'
   slot_scores:
     Book of Thoth:
       total: 0.46
@@ -814,7 +813,7 @@ builds:
     Scale, Stone of Binding, Shield of the Phoenix, Helm of Radiance, Helm of Darkness,
     Midgardian Mail, Magi''s Cloak, The Crusher, Avenging Blade, Mantle Of Discord,
     Screeching Gargoyle, Leviathan''s Hide, Heartseeker, Spear of the Magus, Arondight,
-    Wyrmskin Hide, Blood-Bound Book, Ancile, Death Metal, Stampede.'
+    Wyrmskin Hide, Blood-Bound Book, Ancile, Death Metal.'
   slot_scores:
     Genji's Guard:
       total: 0.54

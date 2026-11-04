@@ -73,17 +73,17 @@
       "Soul Gem"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Book of Thoth",
       "Chronos' Pendant",
+      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown @ Aspect of Combustion": [
-      "Lotus Sickle",
       "Book of Thoth",
       "Chronos' Pendant",
+      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
@@ -105,19 +105,19 @@
       "Soul Gem"
      ],
      "mana-stack": [
-      "Lotus Sickle",
       "Book of Thoth",
+      "Death Metal",
       "Spear of Desolation",
       "Doom Orb",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "mana-stack @ Aspect of Combustion": [
-      "Lotus Sickle",
       "Bancroft's Talon",
       "Book of Thoth",
       "Bragi's Harp",
       "Spear of Desolation",
+      "Obsidian Shard",
       "Rod of Tahuti"
      ],
      "model": [
@@ -239,17 +239,17 @@
       "Obsidian Shard"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Chronos' Pendant",
       "Spear of Desolation",
+      "Gem of Focus",
       "Rod of Tahuti",
       "Obsidian Shard",
       "Soul Gem"
      ],
      "cooldown @ Aspect of Combustion": [
-      "Lotus Sickle",
       "Chronos' Pendant",
       "Spear of Desolation",
+      "Gem of Focus",
       "Rod of Tahuti",
       "Obsidian Shard",
       "Soul Gem"
@@ -357,19 +357,19 @@
       "Soul Gem"
      ],
      "attack-speed": [
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
       "Spear of Desolation",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Soul Gem"
      ],
      "attack-speed @ Aspect of Combustion": [
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
       "Spear of Desolation",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Soul Gem"
      ],
      "bruiser": [
@@ -405,18 +405,18 @@
       "Soul Gem"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Chronos' Pendant",
       "Heartwood Charm",
       "Spear of Desolation",
+      "Totem of Death",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "cooldown @ Aspect of Combustion": [
-      "Lotus Sickle",
       "Chronos' Pendant",
       "Heartwood Charm",
       "Spear of Desolation",
+      "Totem of Death",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -2251,9 +2251,9 @@
      "attack-speed": [
       "Kinetic Cuirass",
       "Magi's Cloak",
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
-      "Eros' Bow",
       "Amanita Charm"
      ],
      "bruiser": [
@@ -2329,9 +2329,9 @@
      "attack-speed": [
       "Genji's Guard",
       "Kinetic Cuirass",
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
-      "Eros' Bow",
       "Amanita Charm"
      ],
      "bruiser": [
@@ -2407,9 +2407,9 @@
      "attack-speed": [
       "Brawler\u2019s Beat Stick",
       "Kinetic Cuirass",
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
-      "Eros' Bow",
       "Amanita Charm"
      ],
      "bruiser": [
@@ -2496,8 +2496,8 @@
      "bruiser": [
       "Kinetic Cuirass",
       "Magi's Cloak",
+      "Spear of Desolation",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Amanita Charm",
       "Soul Gem"
      ],
@@ -2510,9 +2510,9 @@
       "Soul Gem"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Book of Thoth",
       "Chronos' Pendant",
+      "Heartwood Charm",
       "Spear of Desolation",
       "Rod of Tahuti",
       "Soul Gem"
@@ -2580,10 +2580,10 @@
       "Soul Gem"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Book of Thoth",
-      "Spear of Desolation",
       "Chronos' Pendant",
+      "Spear of Desolation",
+      "Gem of Focus",
       "Rod of Tahuti",
       "Soul Gem"
      ],
@@ -2626,18 +2626,18 @@
       "Soul Gem"
      ],
      "attack-speed": [
+      "Bracer of The Abyss",
       "Nimble Ring",
       "Bragi's Harp",
       "Spear of Desolation",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Soul Gem"
      ],
      "bruiser": [
       "Kinetic Cuirass",
+      "Spear of Desolation",
       "Obsidian Shard",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Amanita Charm",
       "Soul Gem"
      ],
@@ -2650,19 +2650,19 @@
       "Soul Gem"
      ],
      "cooldown": [
-      "Lotus Sickle",
       "Chronos' Pendant",
       "Heartwood Charm",
       "Spear of Desolation",
+      "Totem of Death",
       "Rod of Tahuti",
       "Soul Gem"
      ],
      "core": [
+      "Bracer of The Abyss",
       "Spear of Desolation",
       "Spear of the Magus",
       "Obsidian Shard",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Soul Gem"
      ],
      "mana-stack": [
@@ -2674,15 +2674,15 @@
       "Rod of Tahuti"
      ],
      "model": [
+      "Bracer of The Abyss",
       "Spear of Desolation",
       "Spear of the Magus",
       "Obsidian Shard",
       "Rod of Tahuti",
-      "Eros' Bow",
       "Soul Gem"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "Ichor better",
     "verdict_unwithheld": "Ichor better"
    },
    "role": "Mid"

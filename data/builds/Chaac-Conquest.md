@@ -121,9 +121,9 @@ builds:
     Obsidian Shard, Runeforged Hammer, Helm of Radiance, The Reaper, Titan''s Bane,
     Helm of Darkness, Hydra''s Lament, Spear of the Magus, Oni Hunter''s Garb, Erosion,
     Blood-Bound Book, Eye of Providence, Draconic Scale, Stone of Binding, Death Metal,
-    Shield of the Phoenix, Ancient Signet, Midgardian Mail, The Crusher, Lotus Sickle,
-    Magi''s Cloak, Jade Scepter, Screeching Gargoyle, Avenging Blade, Doom Orb, Mantle
-    Of Discord, Leviathan''s Hide, Heartseeker, The World Stone, Shifter''s Shield.'
+    Shield of the Phoenix, Ancient Signet, Midgardian Mail, The Crusher, Magi''s Cloak,
+    Jade Scepter, Screeching Gargoyle, Avenging Blade, Doom Orb, Mantle Of Discord,
+    Leviathan''s Hide, Heartseeker, The World Stone, Shifter''s Shield.'
   slot_scores:
     Book of Thoth:
       total: 0.39
@@ -195,11 +195,11 @@ builds:
     of Tahuti, Jotunn''s Revenge, Gluttonous Grimoire, Soul Gem, Amanita Charm, Shield
     Splitter, Berserker''s Shield, Spear of Desolation, Kinetic Cuirass, Obsidian
     Shard, Hydra''s Lament, Helm of Radiance, Runeforged Hammer, The Reaper, Ancient
-    Signet, Lotus Sickle, Titan''s Bane, Helm of Darkness, Spear of the Magus, Oni
-    Hunter''s Garb, Blood-Bound Book, Death Metal, Doom Orb, The World Stone, Heartseeker,
-    Jade Scepter, Chronos'' Pendant, The Crusher, Erosion, Avenging Blade, Eye of
-    Providence, Shield of the Phoenix, Stone of Binding, Arondight, Screeching Gargoyle,
-    Midgardian Mail, Draconic Scale, Magi''s Cloak, Polynomicon.'
+    Signet, Titan''s Bane, Helm of Darkness, Spear of the Magus, Oni Hunter''s Garb,
+    Blood-Bound Book, Death Metal, Doom Orb, The World Stone, Heartseeker, Jade Scepter,
+    Chronos'' Pendant, The Crusher, Erosion, Avenging Blade, Eye of Providence, Shield
+    of the Phoenix, Stone of Binding, Arondight, Screeching Gargoyle, Midgardian Mail,
+    Draconic Scale, Magi''s Cloak, Polynomicon.'
   slot_scores:
     Book of Thoth:
       total: 0.41
@@ -270,11 +270,11 @@ builds:
     god: Rod of Tahuti, Jotunn''s Revenge, Gluttonous Grimoire, Soul Gem, Amanita
     Charm, Spear of Desolation, Berserker''s Shield, Obsidian Shard, Kinetic Cuirass,
     Shield Splitter, The Reaper, Titan''s Bane, Spear of the Magus, Hydra''s Lament,
-    Helm of Radiance, Runeforged Hammer, Helm of Darkness, Lotus Sickle, Blood-Bound
-    Book, The Crusher, Shield of the Phoenix, Oni Hunter''s Garb, Doom Orb, Screeching
-    Gargoyle, Erosion, The World Stone, Ancient Signet, Chronos'' Pendant, Eye of
-    Providence, Heartseeker, Stone of Binding, Death Metal, Midgardian Mail, Draconic
-    Scale, Arondight, Magi''s Cloak, Jade Scepter, Dreamer''s Idol, Leviathan''s Hide.'
+    Helm of Radiance, Runeforged Hammer, Helm of Darkness, Blood-Bound Book, The Crusher,
+    Shield of the Phoenix, Oni Hunter''s Garb, Doom Orb, Screeching Gargoyle, Erosion,
+    The World Stone, Ancient Signet, Chronos'' Pendant, Eye of Providence, Heartseeker,
+    Stone of Binding, Death Metal, Midgardian Mail, Draconic Scale, Arondight, Magi''s
+    Cloak, Jade Scepter, Dreamer''s Idol, Leviathan''s Hide.'
   slot_scores:
     Book of Thoth:
       total: 0.39
@@ -345,10 +345,10 @@ builds:
     Jotunn''s Revenge, Regrowth Striders, Blood-Bound Book, Shield of the Phoenix,
     Berserker''s Shield, Kinetic Cuirass, Ethereal Staff, Shield Splitter, Spear of
     Desolation, Obsidian Shard, Runeforged Hammer, Yogi''s Necklace, Phoenix Feather,
-    Bloodforge, Titan''s Bane, Rod of Asclepius, Helm of Radiance, Sphere of Negation,
-    Hydra''s Lament, Spear of the Magus, Soul Locket, Chandra''s Grace, Oni Hunter''s
-    Garb, Helm of Darkness, Erosion, Death Metal, Eye of Providence, Jade Scepter,
-    Avenging Blade, Midgardian Mail, Ancient Signet, The Crusher, Lotus Sickle.'
+    Bloodforge, Titan''s Bane, Helm of Radiance, Sphere of Negation, Hydra''s Lament,
+    Spear of the Magus, Chandra''s Grace, Oni Hunter''s Garb, Helm of Darkness, Erosion,
+    Death Metal, Eye of Providence, Jade Scepter, Avenging Blade, Midgardian Mail,
+    Ancient Signet, The Crusher, Draconic Scale, Doom Orb.'
   slot_scores:
     Book of Thoth:
       total: 0.39
@@ -422,7 +422,7 @@ builds:
     Hammer, The Crusher, Helm of Radiance, Doom Orb, Heartseeker, The World Stone,
     Hydra''s Lament, Helm of Darkness, Oni Hunter''s Garb, Blood-Bound Book, Dreamer''s
     Idol, Erosion, Ancient Signet, Eye of Providence, Death Metal, Midgardian Mail,
-    Lotus Sickle, Draconic Scale, Shield of the Phoenix, Tekko-Kagi, Magi''s Cloak.'
+    Draconic Scale, Shield of the Phoenix, Tekko-Kagi, Magi''s Cloak.'
   slot_scores:
     Book of Thoth:
       total: 0.39
@@ -492,11 +492,11 @@ builds:
     this god: Rod of Tahuti, Berserker''s Shield, Amanita Charm, Gluttonous Grimoire,
     Jotunn''s Revenge, Nimble Ring, Soul Gem, Kinetic Cuirass, Shield Splitter, Golden
     Blade, Obsidian Shard, Spear of Desolation, Tekko-Kagi, Tyrfing, Helm of Radiance,
-    Eros'' Bow, Runeforged Hammer, Silverbranch Bow, Toxic Blade, The Reaper, Spear
-    of the Magus, Titan''s Bane, Pharaoh''s Curse, Hydra''s Lament, Lernaean Bow,
-    Helm of Darkness, Oni Hunter''s Garb, Blood-Bound Book, Ancient Signet, Riptalon,
-    Shogun''s Ofuda, Bragi''s Harp, Erosion, Stone of Binding, Lotus Sickle, Eye of
-    Providence, Midgardian Mail, Bracer of The Abyss, Shield of the Phoenix.'
+    Runeforged Hammer, Silverbranch Bow, Toxic Blade, The Reaper, Spear of the Magus,
+    Titan''s Bane, Pharaoh''s Curse, Hydra''s Lament, Lernaean Bow, Helm of Darkness,
+    Oni Hunter''s Garb, Blood-Bound Book, Ancient Signet, Riptalon, Shogun''s Ofuda,
+    Bragi''s Harp, Erosion, Stone of Binding, Eye of Providence, Midgardian Mail,
+    Bracer of The Abyss, Shield of the Phoenix, Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
       total: 0.45
@@ -566,12 +566,12 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
     Soul Gem, Amanita Charm, Spear of Desolation, Gluttonous Grimoire, Berserker''s
     Shield, Kinetic Cuirass, Hydra''s Lament, Shield Splitter, Shield of the Phoenix,
-    Screeching Gargoyle, Lotus Sickle, Obsidian Shard, Chronos'' Pendant, Helm of
-    Radiance, Arondight, Runeforged Hammer, The Reaper, Oni Hunter''s Garb, Titan''s
-    Bane, Prophetic Cloak, Helm of Darkness, Erosion, Eye of Providence, Spear of
-    the Magus, Stone of Binding, Draconic Scale, Blood-Bound Book, Midgardian Mail,
-    Magi''s Cloak, Gladiator''s Shield, Heartwood Charm, Leviathan''s Hide, Ancient
-    Signet, Mantle Of Discord, Chandra''s Grace, Shifter''s Shield.'
+    Screeching Gargoyle, Obsidian Shard, Chronos'' Pendant, Helm of Radiance, Arondight,
+    Runeforged Hammer, The Reaper, Oni Hunter''s Garb, Titan''s Bane, Prophetic Cloak,
+    Helm of Darkness, Erosion, Eye of Providence, Spear of the Magus, Stone of Binding,
+    Draconic Scale, Blood-Bound Book, Midgardian Mail, Magi''s Cloak, Gladiator''s
+    Shield, Heartwood Charm, Leviathan''s Hide, Ancient Signet, Mantle Of Discord,
+    Chandra''s Grace, Shifter''s Shield.'
   slot_scores:
     Breastplate of Valor:
       total: 0.49
@@ -646,8 +646,8 @@ builds:
     Reaper, Titan''s Bane, Helm of Darkness, Hydra''s Lament, Spear of the Magus,
     Oni Hunter''s Garb, Erosion, Blood-Bound Book, Eye of Providence, Draconic Scale,
     Stone of Binding, Death Metal, Shield of the Phoenix, Ancient Signet, Midgardian
-    Mail, The Crusher, Lotus Sickle, Magi''s Cloak, Jade Scepter, Screeching Gargoyle,
-    Avenging Blade, Doom Orb, Mantle Of Discord, Leviathan''s Hide, Heartseeker, Shifter''s
+    Mail, The Crusher, Magi''s Cloak, Jade Scepter, Screeching Gargoyle, Avenging
+    Blade, Doom Orb, Mantle Of Discord, Leviathan''s Hide, Heartseeker, Shifter''s
     Shield, The World Stone.'
   slot_scores:
     Book of Thoth:

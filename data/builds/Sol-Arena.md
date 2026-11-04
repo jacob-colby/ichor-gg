@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Magi's Cloak
+  - Mantle Of Discord
   - Rod of Tahuti
-  - Eros' Bow
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Eros' Bow
   - Magi's Cloak
+  - Mantle Of Discord
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,18 +240,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.43
+    Mantle Of Discord:
+      total: 0.48
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.28
-    Eros' Bow:
-      total: 0.5
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Amanita Charm:
       total: 0.67
       efficiency: 0.65
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Chronos' Pendant
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
   - Bragi's Harp
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,12 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.5
-      efficiency: 0.57
+    Book of Thoth:
+      total: 0.3
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.1
     Chronos' Pendant:
       total: 0.49
       efficiency: 0.55

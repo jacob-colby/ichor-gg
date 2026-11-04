@@ -30,7 +30,7 @@
     "Charon": 0.652039,
     "Chiron": 0.305298,
     "Chiron @ Aspect of the Heroic Tutor": 0.65625,
-    "Chronos": 0.980042,
+    "Chronos": 0.750671,
     "Chronos @ Aspect of Relativity": 0.993286,
     "Cu Chulainn": 0.442993,
     "Cupid": 0.562805,
@@ -88,7 +88,7 @@
     "Ravana": 0.857361,
     "Scylla": null,
     "Sobek": 0.652039,
-    "Sol": 0.935608,
+    "Sol": 0.832092,
     "Sun Wukong": 0.481201,
     "Susano": null,
     "Sylvanus": 0.635437,
@@ -102,7 +102,7 @@
     "Xing Tian": 0.645386,
     "Yemoja": 0.635437,
     "Ymir": 0.657593,
-    "Zeus": 0.779541
+    "Zeus": 0.750305
    },
    "holding": 34,
    "seats": 101,

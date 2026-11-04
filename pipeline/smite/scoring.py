@@ -7,7 +7,7 @@ import statistics
 
 import yaml
 
-from smite import damage_value, efficiency, kit
+from smite import ally_kit, damage_value, efficiency, kit
 from smite.efficiency import parse_stat_value
 
 DEFAULT_WEIGHTS = {
@@ -956,6 +956,10 @@ def resolve_profile(weights, mode="Conquest", flavor=None, aspect_overlay=None):
         # way it bypasses the damage filter: an item that isn't in the shop is
         # not a daring pick, it's a build the player cannot actually assemble.
         "excluded_items": frozenset(mode_prof.get("excluded_items") or ()),
+        # Whether this profile describes an ASPECT build. The aspect rewrites
+        # the kit, so `score_god_items` asks `ally_kit` about the kit this
+        # variant actually has rather than the base one.
+        "aspect_variant": aspect_overlay is not None,
         # The mode's economy and how its objective accrues, for
         # `assemble.time_value_multiplier`. Absent for a mode that has no entry,
         # which switches the weighting off rather than guessing at it.
@@ -1143,7 +1147,19 @@ def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_
     # keeps an excluded item out of the core, the flex slots, the situational
     # swaps and the underrated list at once — none of those can reintroduce a
     # name that never entered `rows`.
-    excluded = profile.get("excluded_items") or frozenset()
+    #
+    # THE ALLY GATE RIDES THE SAME SEAM, for the same reason and with the same
+    # reach: `Lotus Sickle` and `Eros' Bow` pay out only when YOUR ability
+    # buffed, healed or shielded an allied god, and on a god whose kit cannot
+    # do that the passive is dead text. That is the mode-exclusion case exactly
+    # — "not a daring pick, a build the player cannot actually assemble" — so a
+    # flavor must not be able to bypass it either, and routing it through
+    # `excluded` is what guarantees that. `ally_kit` derives both halves from
+    # live text (which items demand an ally, which kits can supply one), so a
+    # refresh cannot leave the gate describing last week's items.
+    excluded = frozenset(profile.get("excluded_items") or frozenset()) | \
+        ally_kit.excluded_for(god, items,
+                              include_aspects=bool(profile.get("aspect_variant")))
 
     rows = []
     for item in items:
