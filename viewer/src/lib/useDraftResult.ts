@@ -14,7 +14,7 @@ import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type Threa
 import { adaptFromCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
 import { groupStarters, type StarterPath } from "./starters";
-import { dedupeCoreAgainstModel, orderBuilds } from "./builds";
+import { dedupeIdenticalBuilds, orderBuilds, findByArchetype } from "./builds";
 
 const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
 
@@ -24,7 +24,7 @@ const MODE_LABEL: Record<DraftMode, string> = { conquest: "Conquest", joust: "Jo
 export const DEFAULT_ARCHETYPE = "core";
 
 /** The suggested builds this god can actually satisfy in this mode, in the
- *  god page's own order (`orderBuilds` / `dedupeCoreAgainstModel` — one
+ *  god page's own order (`orderBuilds` / `dedupeIdenticalBuilds` — one
  *  authority for what the strip contains and what it is called, so the two
  *  surfaces cannot offer different tabs for the same god).
  *
@@ -39,7 +39,7 @@ export function archetypeEntries(
   const suggested = (note?.builds ?? []).filter(
     (b) => b.source === "suggested" && !!(b as CuratedBuildEntry).aspect === aspect,
   );
-  return orderBuilds(dedupeCoreAgainstModel(suggested)) as CuratedBuildEntry[];
+  return orderBuilds(dedupeIdenticalBuilds(suggested)) as CuratedBuildEntry[];
 }
 
 /** Applies the shipped `lifesteal_caps` rules — the same data `god_max_lifesteal`
@@ -232,10 +232,14 @@ export function useDraftResult(
     () => archetypeEntries(builds, meName, mode, aspectOn && !!byMode?.[`${mode}:aspect`]),
     [builds, meName, mode, aspectOn, byMode],
   );
+  // `findByArchetype`, not a bare `.find`: a name the strip collapsed still has
+  // to resolve to the build that absorbed it. Otherwise asking for `core` on a
+  // god whose `core` equalled its `hybrid` falls through to whatever sorted
+  // first, which is a different build.
   const activeEntry = useMemo(
-    () => archetypes.find((e) => e.archetype === archetype)
-      ?? archetypes.find((e) => e.archetype === DEFAULT_ARCHETYPE)
-      ?? archetypes[0],
+    () => (findByArchetype(archetypes, archetype)
+      ?? findByArchetype(archetypes, DEFAULT_ARCHETYPE)
+      ?? archetypes[0]) as CuratedBuildEntry | undefined,
     [archetypes, archetype],
   );
 

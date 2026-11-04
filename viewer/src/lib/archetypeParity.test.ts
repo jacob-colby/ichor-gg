@@ -102,7 +102,15 @@ describe("draft vs god page: archetype parity", () => {
     // lookups silently returned nothing, every parity figure below would read
     // as a perfect score over an empty set.
     const boards = everyBoard();
-    expect(boards.length).toBeGreaterThan(2000);
+    // 1996 on the shipped index 2026-11-04. The floor was 2000 and moved down
+    // when `dedupeIdenticalBuilds` began collapsing archetypes the pipeline
+    // computed as the same build — the strip stopped offering 423 duplicate
+    // tabs, so there are fewer boards to compare and that is the point of the
+    // change rather than a regression. This figure is now a function of the
+    // dedup as well as the community window; what it is here to prove is only
+    // that the sweep is non-empty and broad, which the two floors below carry
+    // more precisely.
+    expect(boards.length).toBeGreaterThan(1900);
     expect(new Set(boards.map((b) => b.god.name)).size).toBeGreaterThan(80);
     expect(new Set(boards.map((b) => b.entry.archetype)).size).toBeGreaterThan(8);
     for (const b of boards) {
