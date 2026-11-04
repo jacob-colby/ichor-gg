@@ -6,7 +6,7 @@
     python -m smite.model_audit heldout              # validate metrics, tuning vs held-out, delta vs main
     python -m smite.model_audit passives             # which recommended passives never fire (~1 min)
     python -m smite.model_audit coverage             # what the model simulates, as a committed file
-    python -m smite.model_audit sensitivity          # SLOW (~10 min): +/-20% on each major weight
+    python -m smite.model_audit sensitivity          # SLOW (~12 min): +/-20% on each major weight
     python -m smite.model_audit all [--slow]         # every report; --slow adds sensitivity
 
 WHY (2026-11-03, Jacob). The fixes of that day — the Joust wave-clear

@@ -2776,7 +2776,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1213) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1234) ·
 `cd viewer && npm test -- --run` (947).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -2896,7 +2896,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1213 pipeline · 947 viewer |
+| Tests | 1234 pipeline · 947 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
