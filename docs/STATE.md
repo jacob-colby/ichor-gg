@@ -2135,6 +2135,97 @@ shipped **off**. Numbers are in the named module.
     one of the four Carry levers from §4.30 and still unpicked. (c) Accept the
     disagreement and leave it.
 
+32. **Option (a) built: pricing passives in `efficiency` fixes the ranking and
+    does not move a single verdict. SHIPS OFF (2026-11-05).**
+
+    §4.31 diagnosed it: `efficiency` chooses on stats alone while `passive_sim`
+    judges the finished build, so the chooser is blind to what the judge sees.
+    §4.32 blocked the fix on coverage; #107 closed coverage, so it is built
+    here. `price_passive_sim` in `_weights.yaml`, shipped **false**.
+
+    **THE DESIGN INVENTS NOTHING.** Three columns are added to
+    `item_stat_values` — Passive Damage (the four DAMAGE_KEYS averaged) and the
+    two effective-health channels KEPT APART, because §4.17 refuses to collapse
+    them. NNLS then learns their gold price the way it learns every stat price:
+
+        Passive Damage          1.2004 gold per point
+        Passive EHP Physical    0.1687
+        Passive EHP Magical     0.0000   (NNLS drove it to zero: no signal)
+        intercept               932.48 -> 894.86
+
+    `side_by_side` still FEEDS NOTHING (§4.4): the simulator exports to
+    `data/_passive_values.yaml` and `efficiency` reads the data, so no scoring
+    module imports the diagnostic. Regenerate with
+    `python -m smite.scripts.passive_values --write`.
+
+    **IT CORRECTS EXACTLY WHAT §4.31 SAID IT WOULD.**
+
+        Devourer's Gauntlet   +629.9 -> +76.8    premium -> fair
+        Deathbringer          +204.6 -> +34.0    fair    -> fair
+        Jotunn's Revenge      -363.0 -> -274.6   undervalued (stays)
+        The Executioner       +566.1 -> +551.3   premium (supersede offsets it)
+        **Tekko-Kagi           -25.3 -> +312.1    fair -> PREMIUM**
+
+    The item that won by having nothing to mark up now reads premium, and it
+    leaves **20 Conquest `model` cores**. That is §4.31's prediction landing.
+
+    **AND IT IS NOT A §4.25 RESCALE.** The five-arm decomposition
+    (`refit_decomposition.py --flag price_passive_sim`, generalised here):
+
+        arm      Conquest  Joust  Arena      what it isolates
+        ON             80     46     39
+        REFIT          81     39     38      the refitted gold table
+        LOCAL          23     14     20      the priced items' own lines
+        **NORM          0      3      0**      pure min-max rescale
+    
+    `price_stat_multipliers` moved 36/28/54 through NORM alone. This moves
+    0/3/0. The effect is the pricing, not the scale.
+
+    **THE RESULT, AND IT IS TWO-SIDED.**
+
+        split     win-weighted      spearman
+        tuning      -0.0033          +0.0869
+        held-out    -0.0014          +0.0567
+
+    Spearman — how closely the model's item RANKING tracks the community's —
+    improves substantially on both splits. Win-weighted coverage falls
+    marginally, inside the 1-point tolerance. §4.31's benchmark was that
+    excluding Tekko-Kagi outright measured +0.0107/+0.0082 on win-weighted;
+    **this does not beat that on win-weighted**, and per the brief that is said
+    rather than retuned away.
+
+    **THE NULL THAT DECIDES IT: ZERO VERDICTS MOVE.** Readable verdicts are
+    byte-identical with the flag on and off — Solo 11/19, Support 7/15, Mid
+    5/23, Jungle 5/18, Carry 3/19 — and Carry's readable split is 1 Ichor
+    better / 1 trade-off / 1 community better both ways. So the flag moves 80
+    Conquest cores, corrects 400-630 gold of markup on the community's own
+    picks, improves held-out Spearman by 0.057, and the comparison does not
+    notice. That is #107's null again from the other side: closing coverage
+    changed no verdicts, and now correcting the pricing changes no verdicts
+    either. **The verdict rule is insensitive to the thing both arms moved**,
+    which is a fact about the comparison rather than about either change, and
+    it is the most useful thing in this entry.
+
+    **THE ASSUMPTION, MEASURED.** A per-item value is the MEDIAN over up to 30
+    builds holding the item (ours and the community's, all modes) against the
+    median-Mid and median-Support reference targets. Of 76 valued items, 33 sit
+    inside 1.5x, 17 at 1.5-2x, 5 at 2-3x, 4 at 3-5x and **12 exceed 5x** —
+    Chronos' Pendant 22.5x, Shell of Rebuke 11.8x. Nine measured NEGATIVE in
+    some build, a timing interaction rather than a refund, so the column is
+    clamped at zero rather than becoming a credit. A wider sample tightened the
+    worst case §4.32 reported: Deathbringer 3.0x over 5 shipped cores became
+    1.6x over 87 builds. Statuses written: 72 simulated, 4 partial, 54 refused
+    (explicit zero, with the reason), 31 no passive text, and **32
+    `no-context`** — simulated but in no build to measure in, zeroed and
+    labelled rather than guessed.
+
+    **WHY IT SHIPS OFF.** It trades a small win-weighted loss for a large
+    Spearman gain and moves no verdict, so there is no measurement here that
+    says turning it on makes the product better — only one that says it makes
+    the ranking more community-like. That is a judgement about what the model
+    is FOR, and it is Jacob's. The flag, the data file, the generator and the
+    decomposition are all in place to turn it on in one line.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -3231,7 +3322,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1400) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1408) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3351,7 +3442,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1400 pipeline · 958 viewer |
+| Tests | 1408 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

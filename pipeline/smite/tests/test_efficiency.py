@@ -370,7 +370,11 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
                          "PRICE_CONVERSIONS": False, "CONVERSION_REFERENCE": {},
                          "PRICE_ADAPTIVE": False, "ADAPTIVE_BRANCH": "strength",
                          "PRICE_STAT_MULTIPLIERS": False,
-                         "MULTIPLIER_REFERENCE": {}, "PRICE_ON_HIT": False}
+                         "MULTIPLIER_REFERENCE": {}, "PRICE_ON_HIT": False,
+                         # Added 2026-11-05 with `price_passive_sim` (§4.32).
+                         # This assertion is the restore contract frozen, so a
+                         # new switch is MEANT to fail here until it is listed.
+                         "PRICE_PASSIVE_SIM": False}
     finally:
         efficiency.restore_pricing_flags(before)
 

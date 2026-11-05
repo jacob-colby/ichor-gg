@@ -33,6 +33,17 @@ price moving at all. NORM isolates that.
 `--passes N` overrides `conversion_passes` so the convergence loop's own
 contribution can be held out (N=1 is one pass, no re-pricing against the core).
 """
+#: Which pricing flag this run decomposes. A module global so the two fit
+#: helpers below cannot disagree about it; set from --flag in main().
+FLAG_UNDER_TEST = "price_stat_multipliers"
+
+
+def FLAG_UNDER_TEST_set(name):
+    """Set the decomposed flag. A setter, not a `global` inside `main`, because
+    `main` already names the constant in its own argparse default."""
+    global FLAG_UNDER_TEST
+    FLAG_UNDER_TEST = name
+
 import argparse
 import copy
 import json
@@ -51,7 +62,7 @@ def fit_table(items, weights, flag_on):
     """The NNLS gold table with `price_stat_multipliers` forced on or off, every
     other pricing flag left exactly as _weights.yaml ships it."""
     w = copy.deepcopy(weights)
-    w["price_stat_multipliers"] = bool(flag_on)
+    w[FLAG_UNDER_TEST] = bool(flag_on)
     before = efficiency.apply_pricing_flags(w)
     try:
         gold, names = efficiency.fit_gold_values(items)
@@ -68,7 +79,7 @@ def scores_for(items, weights, *, flag_on, gold, renorm_from=None):
     another arm's, so the same residuals can be re-expressed on another pool's
     scale. That is the only way to see channel (3) on its own."""
     w = copy.deepcopy(weights)
-    w["price_stat_multipliers"] = bool(flag_on)
+    w[FLAG_UNDER_TEST] = bool(flag_on)
     before = efficiency.apply_pricing_flags(w)
     real_fit = efficiency.fit_gold_values
     efficiency.fit_gold_values = lambda _items: (dict(gold), None)
@@ -216,8 +227,11 @@ def main(argv=None):
                     help="override conversion_passes (1 disables the convergence loop)")
     ap.add_argument("--aspects", action="store_true",
                     help="include the seven aspect-overlay build groups too")
+    ap.add_argument("--flag", default=FLAG_UNDER_TEST,
+                    help="pricing flag to decompose (default price_stat_multipliers)")
     ap.add_argument("--json", action="store_true", help="machine-readable dump")
     args = ap.parse_args(argv)
+    FLAG_UNDER_TEST_set(args.flag)
 
     items = recommend.load_items()
     gods = recommend.load_gods()

@@ -1203,6 +1203,31 @@ multiplier_reference:
 # zero, and the items land where the community does not buy them.
 price_on_hit: false
 
+# ── Pricing an item's PASSIVE from its simulated value (option (a), §4.31) ──
+#
+# THE DEFECT THIS ADDRESSES. §4.31: `efficiency` chooses items on stats alone
+# while `passive_sim` judges the finished build on simulated passives, so the
+# chooser is blind to exactly what the judge can see. The community's Carry
+# picks carry +400 to +1021 gold of markup for passives this model cannot
+# price, and Tekko-Kagi wins at residual -4.3 by being the one item with
+# nothing to mark up.
+#
+# WHAT IT DOES. Adds three fitted columns from `data/_passive_values.yaml`:
+# Passive Damage, Passive EHP Physical and Passive EHP Magical. The GOLD PRICE
+# IS FITTED, not written here — NNLS learns it the way it learns every stat
+# price, so no constant is invented. Measured on this data: 1.2004 gold per
+# point of simulated damage, 0.1687 for physical effective health, and 0.0000
+# for magical, which NNLS drove to zero as carrying no explanatory power.
+#
+# Two things to read before touching it. The per-item value is a MEDIAN over up
+# to 30 builds that hold the item, and the spread is wide for some: of 76
+# valued items, 33 sit inside 1.5x, 17 at 1.5-2x, and 12 exceed 5x. And for the
+# eight items priced by BOTH a flag above and `passive_sim`, the simulated
+# value SUPERSEDES the flag's grant (`efficiency.PASSIVE_SIM_SUPERSEDES`) —
+# `passive_contribution` switches the whole passive off, so its number already
+# contains the adaptive or converted stats, and keeping both counts them twice.
+price_passive_sim: false
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #

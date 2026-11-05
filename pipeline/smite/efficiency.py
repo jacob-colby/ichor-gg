@@ -171,6 +171,7 @@ MULTIPLIER_REFERENCE = {}
 # the same hit — catalogue class B1's unconditional members, three items. See
 # `passives.on_hit_grants`. Flipped by `price_on_hit` in _weights.yaml.
 PRICE_ON_HIT = False
+PRICE_PASSIVE_SIM = False
 
 
 #: Every module global `apply_pricing_flags` owns. The list the save/restore
@@ -178,7 +179,8 @@ PRICE_ON_HIT = False
 PRICING_FLAGS = ("PRICE_PASSIVES", "PRICE_STACKS", "STACK_FRACTION",
                  "PRICE_CRIT_MULTIPLIERS", "PRICE_CONVERSIONS",
                  "CONVERSION_REFERENCE", "PRICE_ADAPTIVE", "ADAPTIVE_BRANCH",
-                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE", "PRICE_ON_HIT")
+                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE", "PRICE_ON_HIT",
+                 "PRICE_PASSIVE_SIM")
 
 
 def apply_pricing_flags(weights):
@@ -202,6 +204,7 @@ def apply_pricing_flags(weights):
     global PRICE_CONVERSIONS, CONVERSION_REFERENCE, STACK_FRACTION
     global PRICE_ADAPTIVE, ADAPTIVE_BRANCH
     global PRICE_STAT_MULTIPLIERS, MULTIPLIER_REFERENCE, PRICE_ON_HIT
+    global PRICE_PASSIVE_SIM
     before = {k: globals()[k] for k in PRICING_FLAGS}
     before["CONVERSION_REFERENCE"] = dict(CONVERSION_REFERENCE)
     before["MULTIPLIER_REFERENCE"] = dict(MULTIPLIER_REFERENCE)
@@ -217,6 +220,7 @@ def apply_pricing_flags(weights):
     PRICE_STAT_MULTIPLIERS = bool(w.get("price_stat_multipliers"))
     MULTIPLIER_REFERENCE = dict(w.get("multiplier_reference") or {})
     PRICE_ON_HIT = bool(w.get("price_on_hit"))
+    PRICE_PASSIVE_SIM = bool(w.get("price_passive_sim"))
     return before
 
 
@@ -270,6 +274,86 @@ def item_stat_values(item):
         from smite import passives
         for key, amount in passives.on_hit_grants(item).items():
             out[key] = out.get(key, 0.0) + amount
+    if PRICE_PASSIVE_SIM:
+        out = _with_passive_sim_columns(item, out)
+    return out
+
+
+#: Columns added by `PRICE_PASSIVE_SIM`. Three and not one: damage is damage and
+#: the four `DAMAGE_KEYS` are averaged into it, but the two effective-health
+#: channels stay apart because register §4.17 refuses to collapse them and says
+#: what the pair bounds instead. Averaging them here would be that refusal
+#: ignored in a place nobody would look for it.
+PASSIVE_SIM_COLUMNS = ("Passive Damage", "Passive EHP Physical", "Passive EHP Magical")
+
+#: Items whose passive is priced BOTH by one of the flags above and by
+#: `passive_sim`. Measured 2026-11-05. For these the simulated value SUPERSEDES
+#: the flag-derived grant, because `passive_contribution` runs the build with
+#: the whole passive switched off — so its number already contains the adaptive
+#: or converted stats the flag adds, and keeping both counts them twice. The
+#: Executioner is the one that matters: its adaptive +30 Strength is in its stat
+#: columns via `price_adaptive` while `passive_sim` simulates that grant AND the
+#: 7% protection shred together, and it is the item register §4.31 is about.
+PASSIVE_SIM_SUPERSEDES = frozenset({
+    "Book of Thoth", "Brawler’s Beat Stick", "Eye of Erebus", "Nimble Ring",
+    "Rod of Tahuti", "Sun Beam Bow", "The Executioner", "Transcendence",
+})
+
+_PASSIVE_VALUES = None
+
+
+def passive_sim_values():
+    """`{item name: {column: float}}` read from `data/_passive_values.yaml`.
+
+    WHY A FILE. `side_by_side`'s own docstring states the rule: it "IS A
+    DIAGNOSTIC AND FEEDS NOTHING ... Nothing in `scoring`, `assemble`,
+    `recommend` or `build_index` imports this module" (register §4.4). So the
+    simulator EXPORTS and this module READS DATA — nothing in the scoring path
+    imports it, the numbers are auditable in the repo, and a fit does not run a
+    fight per call. Regenerate with
+    `python -m smite.scripts.passive_values --write`, whose docstring carries
+    the reference context and the spread.
+
+    A MISSING KEY IS A BUG, NOT A ZERO. The generator writes every item in
+    `efficiency_pool`, with `status` saying why a zero is a zero: `refused`
+    (the effect needs something the comparison has not got), `none` (no passive
+    text at all), or `no-context` (simulated, but in no build to measure it
+    in). This returns zeros for those, and `KeyError` is never swallowed — an
+    item absent from the file is a stale file and should fail loudly.
+    """
+    global _PASSIVE_VALUES
+    if _PASSIVE_VALUES is None:
+        import yaml
+        path = DATA_ROOT / "_passive_values.yaml" if "DATA_ROOT" in globals() else None
+        if path is None or not path.exists():
+            from pathlib import Path
+            path = Path(__file__).resolve().parents[2] / "data" / "_passive_values.yaml"
+        raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        _PASSIVE_VALUES = raw.get("items") or {}
+    return _PASSIVE_VALUES
+
+
+def _with_passive_sim_columns(item, out):
+    row = passive_sim_values().get(item.get("name"))
+    if row is None:
+        return out
+    if item.get("name") in PASSIVE_SIM_SUPERSEDES:
+        # The flag-derived grant is already inside the simulated number. Drop
+        # what the flags added for THIS item by re-reading its printed stats
+        # alone, so the simulated value is counted once.
+        out = {}
+        for name, raw in (item.get("stats") or {}).items():
+            val = parse_stat_value(raw)
+            if val is not None:
+                out[stat_key(name, raw)] = val
+    for col, key in zip(PASSIVE_SIM_COLUMNS,
+                        ("passive_damage", "passive_ehp_physical", "passive_ehp_magical")):
+        val = float(row.get(key) or 0.0)
+        # A passive measured NEGATIVE in a build is a timing interaction, not a
+        # cost the buyer is refunded for: clamped at zero rather than becoming a
+        # credit the regression would read as "this item should cost less".
+        if val > 0:
+            out[col] = out.get(col, 0.0) + val
     return out
 
 
