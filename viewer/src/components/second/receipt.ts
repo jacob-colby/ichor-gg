@@ -10,6 +10,14 @@
  * explain, the difference is printed as its own line rather than hidden inside
  * a row.
  *
+ * PASSIVE ROWS. The fit prices some passives as columns: an Adaptive Stat as
+ * the Strength it offers, a conversion as the Intelligence it gives, a
+ * simulated passive as the damage or effective health it adds. None of that
+ * is on the stat line, so until 2026-11-05 — when the index first shipped the
+ * fit the builds are chosen with — a receipt of printed stats alone left 87
+ * of 193 items short by up to 1,194g. `efficiency.priced_passive` carries
+ * those amounts and each becomes its own row, marked as the passive's.
+ *
  * Pure. Tested in receipt.test.ts. */
 import type { Item } from "../../types";
 import { basePrice, statValueLines } from "../../lib/itemFilters";
@@ -21,7 +29,25 @@ export interface ReceiptLine {
   gold: number;
 }
 
+/** The simulated columns are not stats, so they get words rather than a key. */
+export const PASSIVE_LABEL: Record<string, string> = {
+  "Passive Damage": "Passive: damage it adds",
+  "Passive EHP Physical": "Passive: effective health vs physical",
+  "Passive EHP Magical": "Passive: effective health vs magical",
+};
+
+export function passiveLabel(column: string): string {
+  return PASSIVE_LABEL[column] ?? `Passive: ${column.replace(/ %$/, "")}`;
+}
+
+function amountText(column: string, amount: number): string {
+  const n = Number(amount.toFixed(Math.abs(amount) >= 100 ? 0 : 1)).toLocaleString("en-US");
+  return column.endsWith(" %") ? `${n}%` : n;
+}
+
 export interface Receipt {
+  /** True when some of the worth is the passive's (`priced_passive`). */
+  passive: boolean;
   lines: ReceiptLine[];
   /** Stats on the item the fit never priced — named, never counted as zero. */
   unpriced: string[];
@@ -38,11 +64,19 @@ export function buildReceipt(item: Item, goldValues: Record<string, number>): Re
   const eff = item.efficiency;
   if (!eff) return null;
   const stat = statValueLines(item, goldValues);
+  const passive = Object.entries(eff.priced_passive ?? {})
+    .filter(([col]) => goldValues[col] != null)
+    .map(([col, amount]) => ({
+      label: passiveLabel(col),
+      detail: `${amountText(col, amount)} × ${goldValues[col].toFixed(2)}g a point`,
+      value: amount * goldValues[col],
+    }));
   const raw = [
     { label: "Base price", detail: "what the fit charges every item", value: basePrice(goldValues) },
     ...stat.filter((l) => l.subtotal != null).map((l) => ({
       label: l.stat, detail: `${l.raw} × ${l.goldPerUnit!.toFixed(2)}g a point`, value: l.subtotal!,
     })),
+    ...passive,
   ];
   const target = eff.predicted_cost;
   const floors = raw.map((r) => Math.floor(r.value));
@@ -60,6 +94,7 @@ export function buildReceipt(item: Item, goldValues: Record<string, number>): Re
     if (rest !== 0) lines.push({ label: "Not itemised", detail: "the fit's total, less the rows above", gold: rest });
   }
   return {
+    passive: passive.length > 0,
     lines,
     unpriced: stat.filter((l) => l.subtotal == null).map((l) => l.stat),
     worth: target,

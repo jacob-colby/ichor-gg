@@ -20,8 +20,23 @@ import { useMemo, type ReactNode } from "react";
 import type { Item, MethodData } from "../../types";
 import { statKey, INTERCEPT_KEY } from "../../lib/itemFilters";
 import { PageHead, Em } from "./PageParts";
+import { PASSIVE_LABEL } from "./receipt";
 
 const THIN_EVIDENCE = 3;
+
+/** What each shipped `price_*` switch prices, in the order the page lists them.
+ *  Read against `method.pricing`, so the page names exactly the classes the fit
+ *  prices — it used to restate them here and named two while four were on. */
+const PRICED_CLASSES: [string, string][] = [
+  ["price_crit_multipliers", "a crit multiplier as the critical chance it is worth"],
+  ["price_conversions", "a stat conversion against a typical build"],
+  ["price_adaptive", "an Adaptive Stat grant as one of the two stats it offers"],
+  ["price_stacks", "a stack that reaches its cap and keeps it"],
+  ["price_stat_multipliers", "a percent-of-all-stats bonus against a typical five items"],
+  ["price_on_hit", "flat on-hit damage as attack damage"],
+  ["price_passive_sim", "a passive the fight simulation can run, at what it adds there"],
+];
+const COUNT_WORD = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven"];
 
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
@@ -44,14 +59,21 @@ export function MethodPage({ method, goldValues, items, godCount }: {
   const s = method?.signals;
   const counts = useMemo(() => {
     const c: Record<string, number> = {};
-    for (const it of items) for (const [stat, raw] of Object.entries(it.stats ?? {})) {
-      const k = statKey(stat, String(raw));
-      c[k] = (c[k] ?? 0) + 1;
+    for (const it of items) {
+      // An item counts once per column, whether it carries the stat on its
+      // stat line or the fit credits it through the passive (`priced_passive`).
+      const cols = new Set(Object.entries(it.stats ?? {}).map(([stat, raw]) => statKey(stat, String(raw))));
+      for (const k of Object.keys(it.efficiency?.priced_passive ?? {})) cols.add(k);
+      for (const k of cols) c[k] = (c[k] ?? 0) + 1;
     }
     return c;
   }, [items]);
   const priced = useMemo(() => Object.entries(goldValues).filter(([k]) => k !== INTERCEPT_KEY).sort((a, b) => b[1] - a[1]), [goldValues]);
   const base = goldValues[INTERCEPT_KEY];
+  const simulated = priced.filter(([k]) => k in PASSIVE_LABEL);
+  const pricedClasses = method?.pricing ? PRICED_CLASSES.filter(([k]) => method.pricing![k]).map(([, words]) => words) : null;
+  const scored = items.filter((it) => it.efficiency).length;
+  const passivePriced = items.filter((it) => it.efficiency?.priced_passive).length;
   const ours = s ? s.efficiency + s.fit : 0;
   const theirs = s ? s.win + s.pick : 0;
   const qEff = ours ? s!.efficiency / ours : 0;
@@ -123,8 +145,8 @@ export function MethodPage({ method, goldValues, items, godCount }: {
               Nothing in the game says what a point of Strength costs, so Ichor works it out: it fits every item&rsquo;s
               price against the stats it carries, across all <N>{items.length}</N> items at once, and reads off the
               marginal gold value of each stat. An item&rsquo;s <Em>efficiency</Em> is the gap between what it costs and
-              what that fit says its stats are worth: cheaper than its stats is <Em>underpriced</Em>, dearer is{" "}
-              <Em>overpriced</Em>.
+              what that fit says its stats are worth &mdash; and, where the fit can put a number on it, its passive:
+              cheaper is <Em>underpriced</Em>, dearer is <Em>overpriced</Em>.
             </p>
             {base != null && (
               <p>
@@ -151,7 +173,7 @@ export function MethodPage({ method, goldValues, items, godCount }: {
                       const thin = n > 0 && n < THIN_EVIDENCE;
                       return (
                         <tr key={stat} className="border-b border-line">
-                          <th scope="row" className="py-2 text-left font-normal text-ink-soft">{stat}</th>
+                          <th scope="row" className="py-2 text-left font-normal text-ink-soft">{PASSIVE_LABEL[stat] ?? stat}</th>
                           <td className="num py-2 text-right font-semibold text-ink">{value.toFixed(2)}g</td>
                           <td className="num py-2 text-right text-muted">
                             {n}{thin && <span className="ml-1.5 text-cap font-semibold text-ink-soft">thin</span>}
@@ -162,6 +184,15 @@ export function MethodPage({ method, goldValues, items, godCount }: {
                   </tbody>
                 </table>
               </div>
+            )}
+            {simulated.length > 0 && (
+              <p data-testid="passive-rows">
+                The <Em>Passive</Em> rows are not stats. They price what an item&rsquo;s passive adds in a simulated
+                fight, measured across the shipped builds that hold the item: the damage it adds, and the effective health
+                it adds against each damage type. Ichor prices <N>{passivePriced}</N> of its <N>{scored}</N> priced items
+                partly on their passive, and every receipt on the Items page lists those rows.
+                {simulated.some(([, v]) => v === 0) && <> A row at <N>0.00g</N> is one the fit found nothing to pay for.</>}
+              </p>
             )}
             <p>
               Read the last column before trusting a price: a stat carried by one or two items has a coefficient the data
@@ -235,10 +266,13 @@ export function MethodPage({ method, goldValues, items, godCount }: {
                 Trust &ldquo;these six are sensible&rdquo; more than &ldquo;this order is right&rdquo;.
               </li>
               <li>
-                <Em>Most item passives are still unpriced.</Em> Two classes are: a crit multiplier is converted to the
-                critical chance it is worth, and a stat conversion is priced against a typical build. Everything else is
-                prose with no numbers extracted, priced as if it were free &mdash; so passive-heavy items read overpriced
-                more often than they should. Pricing the whole class was tried, measured, and made the model worse.
+                <Em>Most item passives are still unpriced.</Em>{" "}
+                {pricedClasses && pricedClasses.length > 0 && (
+                  <>{pricedClasses.length === 1 ? "One class is" : `${COUNT_WORD[pricedClasses.length] ?? pricedClasses.length} classes are`}: {pricedClasses.join("; ")}. </>
+                )}
+                {pricedClasses?.length ? "Everything else is" : "They are"} prose with no numbers extracted, priced as if it were free &mdash; so passive-heavy
+                items read overpriced more often than they should.
+                {!method?.pricing?.price_passives && <> Pricing every unconditional stat grant at once was tried, measured, and made the model worse.</>}
               </li>
               <li>
                 <Em>The damage model is exact, and only the draft uses it.</Em> Damage through a given amount of

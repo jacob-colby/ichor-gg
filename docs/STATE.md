@@ -2314,7 +2314,7 @@ just reproduce the old answer.
 
 Roughly in the order I would do them.
 
-### The shipped index is built with every pricing flag off
+### ~~The shipped index is built with every pricing flag off~~ — fixed 2026-11-05
 Found 2026-11-05. `recommend` and `validate` call
 `efficiency.apply_pricing_flags`; `build_index` never does, and `load_weights`
 does not set them. So `items[*].efficiency`, `efficiency_tier`,
@@ -2326,6 +2326,21 @@ tier shown differs from the tier used on 42 of 190 items (Rod of Tahuti shows
 model's working, and #110's repricing will not show on the items page. Not fixed
 here: it moves every displayed figure and the draft's scores, so it wants its own
 measurement. This is register §4.10's failure mode.
+
+_Fixed the same day._ `build_index.build_index` applies the flags for the whole
+build and restores them; re-measured at 4130ed90 first, the gap had widened to
+193 of 193 residuals and 59 tiers (Rod of Tahuti +267 shown, -734 used). What
+moved, including the draft under 44 enemy comps, is in that docstring: an empty
+board cannot change, and a drafted one changes its six on ~15% of Conquest and
+~7% of Joust `core` boards, `god_item_scores` doing most of it. Two
+things the fix needed that the defect hid: the receipt could not close on
+printed stats once the fit priced passives (87 of 193 items short, up to
+1,194g), so each item now ships `efficiency.priced_passive`
+(`efficiency.passive_columns`) and the receipt lists it; and the method page's
+"what is still unpriced" paragraph named two priced classes while four were on,
+so the switches ship as `method.pricing` and the page reads them.
+`test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
+gold prices, the draft tables' flag state, the restore, and the receipt.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
@@ -3431,8 +3446,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1419) ·
-`cd viewer && npm test -- --run` (958).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1421) ·
+`cd viewer && npm test -- --run` (963).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
@@ -3551,7 +3566,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 4 — Cernunnos, Cupid, Guan Yu, Mercury. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1419 pipeline · 958 viewer |
+| Tests | 1421 pipeline · 963 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -229,17 +229,24 @@ def restore_pricing_flags(before):
     globals().update(before)
 
 
+def printed_columns(item):
+    """`{column name: float}` for the stats printed on the item and nothing
+    else — `item_stat_values` with every pricing flag off."""
+    out = {}
+    for name, raw in (item.get("stats") or {}).items():
+        val = parse_stat_value(raw)
+        if val is not None:
+            out[stat_key(name, raw)] = val
+    return out
+
+
 def item_stat_values(item):
     """`{column name: float}` for one item — the canonical read of its stats.
 
     The single place raw stat dicts are turned into regression columns, so the
     matrix, the prediction and the shipped gold table cannot disagree about
     what a column means."""
-    out = {}
-    for name, raw in (item.get("stats") or {}).items():
-        val = parse_stat_value(raw)
-        if val is not None:
-            out[stat_key(name, raw)] = val
+    out = printed_columns(item)
     if PRICE_PASSIVES:
         from smite import passives
         out = passives.effective_stats(item, out)
@@ -303,6 +310,27 @@ def regression_columns(item):
     out = item_stat_values(item)
     if PRICE_PASSIVE_SIM:
         out = _with_passive_sim_columns(item, out)
+    return out
+
+
+def passive_columns(item):
+    """`{column: amount}` the fit credits this item with BEYOND its printed
+    stats — the pricing flags' grants and the simulated passive columns.
+
+    `predicted_cost` is the intercept plus `regression_columns` at the fitted
+    prices, so a receipt that itemises only the printed stats stops closing the
+    moment a flag is on. Measured 2026-11-05, the day `build_index` first
+    shipped the flags-on fit: 87 of 193 receipts fell short, by up to 1,194g
+    (Archmage's Gem), and these amounts close every one of them exactly. Never
+    negative today — no flag removes a printed stat — and a negative amount
+    would still be the fit's arithmetic, so it is not clamped here."""
+    printed = printed_columns(item)
+    cols = regression_columns(item)
+    out = {}
+    for key in set(cols) | set(printed):
+        delta = cols.get(key, 0.0) - printed.get(key, 0.0)
+        if abs(delta) > 1e-9:
+            out[key] = delta
     return out
 
 
@@ -396,11 +424,7 @@ def _with_passive_sim_columns(item, out):
         # "sim": the flag-derived grant is already inside the simulated
         # number. Drop what the flags added for THIS item by re-reading its
         # printed stats alone, so the simulated value is counted once.
-        out = {}
-        for name, raw in (item.get("stats") or {}).items():
-            val = parse_stat_value(raw)
-            if val is not None:
-                out[stat_key(name, raw)] = val
+        out = printed_columns(item)
     for col, key in zip(PASSIVE_SIM_COLUMNS,
                         ("passive_damage", "passive_ehp_physical", "passive_ehp_magical")):
         val = float(row.get(key) or 0.0)
