@@ -571,6 +571,22 @@ shipped **off**. Numbers are in the named module.
     **What did ship, unconditionally, is the basic attack itself** — see §3.
     That half needed no clock and is a hole rather than a modelling choice.
 
+    **Re-opened 2026-11-05; the roster-wide verdict stands.** Same measure, now
+    committed as `smite.scripts.clock_measure`, whose definition reproduces all
+    twelve figures above at the commit that recorded them: on today's data the
+    clock still fails criterion 2 (Carry 0.370 -> 0.302, Mid 0.315 -> 0.474, ALL
+    0.451 -> 0.484). No cast-time source was found. The fight model's `interval`
+    pair looks like one and is not: it is the median community Carry's attack
+    rate and the median community Mid's cast rate, two populations, community
+    input, rates and not durations, and `side_by_side`'s own docstring says "There
+    are NO cast times". Both literal readings of it fail criterion 2. So does a
+    per-god charge from the god's own kit at every value tried. One
+    narrower thing is proposed, `damage_per_second_roles: [Carry]`: criterion 2 passes by
+    construction and is not evidence; held-out Carries 0.383 -> 0.304 are. It
+    reaches the draft overlay only and moves no core and no residual, so it
+    cannot close §4.32's Executioner gap. Numbers under
+    `damage_per_second_roles` in `_weights.yaml`.
+
 13. **Threshold-and-maximand scoring in `build_quality` (2026-08-21)** — the
     THRESHOLD half only. The maximand half shipped and is in §3; this entry is
     about the two thresholds that came with it and why they carry no verdict.
@@ -3251,7 +3267,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1408) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1410) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3371,7 +3387,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1408 pipeline · 958 viewer |
+| Tests | 1410 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

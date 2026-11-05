@@ -302,15 +302,21 @@ def _god_item_damage(gods, items, weights) -> dict:
     the overlay simply doesn't fire for them.
     """
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
-    # Per rotation or per second — see `damage_per_second` in _weights.yaml.
-    # This is the only caller of `item_damage_gain`, so the switch is a
-    # parameter rather than a module global: there is no path by which a gate
-    # could measure one setting while the shipped table used the other.
-    per_second = bool(weights.get("damage_per_second"))
+    # Per rotation or per second — see `damage_per_second` and
+    # `damage_per_second_roles` in _weights.yaml. This is the only caller of
+    # `item_damage_gain`, so the switch is a parameter rather than a module
+    # global: there is no path by which a gate could measure one setting while
+    # the shipped table used the other.
+    everyone = bool(weights.get("damage_per_second"))
+    clock_roles = frozenset(weights.get("damage_per_second_roles") or ())
     out = {}
     for god in gods:
         if not damage_value.ability_damage_components(god):
             continue
+        # First word of the roster's label, as `build_quality.primary_role`
+        # reads it. Not imported: the model does not import the diagnostic.
+        role = (str(god.get("role") or "").split() or [""])[0]
+        per_second = everyone or role in clock_roles
         pairs = {}
         for item in items:
             if not scoring.is_buildable(item, god):
