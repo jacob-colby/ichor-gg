@@ -556,8 +556,36 @@ ITEM_INDEX_URL = "https://smitebrain.com/items/__data.json"
 COMMUNITY_ITEMS_FILE = "_community_items.json"
 
 
+#: The three provenance fields SmiteBrain publishes about a window, and where.
+#: Measured 2026-11-05 against both cached `__data.json` payloads: the GOD
+#: index carries all three, identical on every row (`start_time`, `end_time`,
+#: `matches_analyzed`); the ITEM index carries NONE of them — its rows are
+#: `display_name`, `win_rate`, `matches_played`, `use_rate` and presentation
+#: fields only. So `_community_items.json`'s three fields of those names could
+#: never be filled from the response that builds it, which is why they had been
+#: null and empty since the file was written.
+#:
+#: They are filled from the god index instead. That is the same window: one run
+#: picks one window (`choose_community_window`) and both indexes are fetched
+#: with the same `time=` parameter and the same division, so the two describe
+#: the same match set. Cross-source, and written down rather than assumed.
+WINDOW_PROVENANCE = ("start_time", "end_time", "matches_analyzed")
+
+
+def window_provenance(rows) -> dict:
+    """`{window_start, window_end, matches_analyzed}` off index rows that
+    carry them, or `{}`. Read from the FIRST row and only the first: the
+    fields describe the window, not the god, and are identical on all 94."""
+    row = next(iter(rows or []), None)
+    if not row or not any(row.get(f) for f in WINDOW_PROVENANCE):
+        return {}
+    return {"window_start": (row.get("start_time") or "")[:10],
+            "window_end": (row.get("end_time") or "")[:10],
+            "matches_analyzed": row.get("matches_analyzed")}
+
+
 def refresh_item_index(community_fetcher, data_root: Path, force: bool = False,
-                       window=None) -> int:
+                       window=None, provenance=None) -> int:
     """Pull every item's win rate and match count, and store the table.
 
     The previous item signal was the *mean of per-god win rates* over the gods
@@ -585,9 +613,13 @@ def refresh_item_index(community_fetcher, data_root: Path, force: bool = False,
         # Which window produced this table, so a reader can tell a thin patch
         # window from a thin meta without re-scraping.
         "window": window,
-        "window_start": (rows[0].get("start_time") or "")[:10] if rows else None,
-        "window_end": (rows[0].get("end_time") or "")[:10] if rows else None,
-        "matches_analyzed": rows[0].get("matches_analyzed") if rows else None,
+        # The window's own provenance, from the god index (`window_provenance`):
+        # the item rows carry none of it. `matches_analyzed` is the MATCH count
+        # — not the number of builds observed, which is the denominator
+        # `use_rate` is a share of and is ~4.6x larger (67,532 builds against
+        # 14,667 matches on the 2026-11-05 table).
+        **{"window_start": None, "window_end": None, "matches_analyzed": None},
+        **(provenance or {}),
         "items": table,
     }
     (data_root / COMMUNITY_ITEMS_FILE).write_text(
@@ -716,7 +748,8 @@ def refresh_community(force: bool = True, allow_shrink: bool = False) -> int:
         failures.append(f"god index: {exc}")
 
     try:
-        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force, window=window)
+        n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force, window=window,
+                                     provenance=window_provenance(god_index.values()))
         print(f"  item index: {n_items} items with win/loss records")
     except Exception as exc:
         print(f"  [FAILED] item index: {exc} — item stats keep their last values")

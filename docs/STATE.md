@@ -180,6 +180,7 @@ Each of these has its evidence in the named module.
 | A debuff on the enemy's attack speed or Strength is worth exactly 0 here | `side_by_side.attacker_profile` | Its raw DPS is derived from the reference squishy over KILL_TIME and each hit is `dps x share x step`, so the cadence sets WHEN, never how much |
 | An item is refused WHOLE rather than credited with its good half | `passive_sim` (Xibalban Effigy) | `reduce_hit` would simulate its 50% cut in two lines and the clock has no channel for the payback, so the item would be booked with its upside alone |
 | The comparison page's window label is DERIVED from the data, not the patch | `side_by_side.community_window_label` | Read off `_patch.json` it said "community window Open Beta 47" through a healthy window, a catastrophic one and a restored one alike; the match count is what makes a thin window visible |
+| `use_rate`'s denominator is BUILDS, not matches | `side_by_side.community_sample` | 67,532 god-builds against 14,667 matches in the same window, 4.6x apart because the god index records ~4.6 of a match's ten seats; PR #109 labelled the derived figure "matches" |
 | Stat conversions are priced against a **typical** build | `passives.conversion_grants` | One pass, no fixed point; prices the deterministic case right and the self-referential one conservatively |
 | An **Adaptive Stat** grant is priced, as **Strength** | `passives.adaptive_grants` | Eight buildable items carry their whole power in passive text and all eight read `premium`; the branch is chosen from the item's own text so there is no fixed point, and it is the conservative one on 6 of the 8 |
 | That flag's gain is a **pool-wide** reprice, not those eight items | `passives.adaptive_grants` | None of the eight reaches a core either way. 29 items were parking ~1000g each in the intercept, which under-priced every stat for every item: 1111 -> 934, Strength +17% |
@@ -2827,9 +2828,28 @@ nothing had checked, and read `community window Open Beta 47` identically at
 67,532 matches). Three different states, one string, and wrong even when the
 data was right. It is derived from the data now
 (`side_by_side.community_window_label`), so a thin window is visible at a
-glance: `Open Beta 46, 67,532 matches` against what that day would have shown,
-`Open Beta 47, 529 matches`. The items/gods half still reads `_patch.json`,
-because the wiki IS re-scraped on patch day and that half was never wrong.
+glance: `Open Beta 46, 14,667 matches` against what that day would have shown,
+a window one day old. The items/gods half still reads `_patch.json`, because
+the wiki IS re-scraped on patch day and that half was never wrong.
+
+**The count took one more fix, and it is a unit error worth remembering
+(2026-11-05).** PR #109 derived the figure as `matches_played / use_rate` and
+called it "matches". It is exact and unanimous across all 238 items, but
+`use_rate` is an item's share of BUILDS, so that denominator is god-builds
+observed — **67,532**, against **14,667** matches in the same window, 4.6x
+apart because the god index records about 4.6 of a match's ten seats. §7's
+"Community sample" row had said 14,667 all along, so the repo contradicted its
+own page; a test now cross-checks the two.
+
+The three provenance fields are populated at the source as well
+(`refresh.window_provenance`). They had been null and empty since the file was
+written for a reason worth recording: the ITEM index response carries none of
+`start_time`, `end_time` or `matches_analyzed`, while the GOD index carries all
+three, identical on every row. One run picks one window and fetches both
+indexes with the same `time=` parameter, so the god index is where the item
+table's provenance comes from — cross-source, and written down rather than
+assumed. #109's derivation stays as the fallback for the files already on
+record, relabelled "builds", which is the unit it can actually support.
 
 **And the suites now run in CI (closed 2026-11-05).** `.github/workflows/`
 held the daily refresh, the wiki watcher and four probe jobs, none triggered by
@@ -3231,7 +3251,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1400) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1408) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3351,7 +3371,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1400 pipeline · 958 viewer |
+| Tests | 1408 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.
