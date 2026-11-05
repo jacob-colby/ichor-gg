@@ -611,6 +611,37 @@ shipped **off**. Numbers are in the named module.
     measurement that can change and not a constant. Numbers and the probe in
     `build_quality.threshold_probe`.
 
+    **Re-measured 2026-11-05, against `main` 6fc363b2 and #110's builds.** The
+    probe itself still prints 0 of 38 and 82 of 82, and it could not have moved:
+    `build_quality` does not read `passive_sim` and has no window, so #107 and
+    #110 reach it only through the builds. So the same two thresholds were read
+    on the fight layer instead (`smite.scripts.threshold_fight`: passives
+    simulated, one basic attack in the combo, same `WINDOW`, no new constant):
+
+        threshold, attacker at zero protection        main      #110 builds
+        Carry floor, roster's largest burst (4,331)   fails 36/38   fails 31/38
+        Carry floor, roster's median burst (~1,800)   fails  0/38   fails  0/38
+        Carry floor, any WINDOW-second run            fails 38/38   fails 38/38
+        kill threshold on burst, passes               1/83          1/83
+        kill threshold on WINDOW, passes              80/83         80/83
+
+    **Still not usable, for a different reason.** The scale problem is gone:
+    burst now reaches the health bar. But the floor runs from failing nobody to
+    failing nearly everybody depending on which attacker it names, and the only
+    attacker it binds against is one god (Scylla, on the community's build). No
+    source says which attacker a Carry must survive, and choosing one is the
+    unsourced constant this entry refused. It stays out of the verdict.
+
+    **The premise that sent this back here is false: our Carries do not over-buy
+    damage.** Ours over community, median of 19 Carries at the reference targets:
+
+        main             burst      sustained vs squishy  vs tank   EHP phys / mag
+        ours/community   1.21       0.89                  0.76      0.97 / 0.98
+        #110 builds      1.15       0.89                  0.76      1.03 / 1.01
+
+    Ours sustain more against a tank on **1 of 19**, on either tree. That is the
+    measured shape of Carry's deficit, and #110 does not close it.
+
 14. **`defense_affinity` / `archetype_scaled_stats` as the cause of Carry
     over-defence (2026-08-21)** — excluded mechanically, so nobody re-derives
     it. The symptom is real and is §3's row: our `model` core is tankier than
@@ -2068,6 +2099,24 @@ shipped **off**. Numbers are in the named module.
     it. An item whose only passive is unpriced looking cheap to the gold model
     is the §4.5 family, and that is a scoring question, not a coverage one.
 
+    **What is left of the movement lever, measured 2026-11-05**
+    (`smite.scripts.movement_bound`). #110 does most of what it would have done:
+
+        Tekko-Kagi in Conquest builds     main     #110
+        `model`, Carry                   15/19     8/19
+        `model`, all roles                  27       11
+        `core`, Carry                    11/19     1/19
+        `core`, all roles                   17        3
+        community, all roles                 0        0
+
+    As an UPPER BOUND on #110's pages, if every movement refusal counted as
+    simulated: about 24 coverage gates open and 4 close (approximate: 3 of ~188
+    builds read 0.15+ off the page's own share), Carry 9 opened of which 6 read
+    (2 Ichor better, 4 trade-off, 3 level). That bound values movement at nothing;
+    it only stops the rule withholding, which is a loosening of the measurement
+    rather than a movement dimension. A real dimension still needs a value no
+    source here supplies. Not built.
+
 31. **Ichor over-buys Tekko-Kagi, and the hypothesis for why was wrong in
     its direction (2026-11-04).** §4.30's closing lead was that an item whose
     only passive is unpriced should look CHEAP to a gold-value model. It does
@@ -2084,6 +2133,22 @@ shipped **off**. Numbers are in the named module.
     Tekko-Kagi reads efficiency **0.553** on every one (the signal is
     god-agnostic), fit 0.53-0.64, pick **0.000**, total 0.509-0.550. It wins on
     EFFICIENCY, and it wins it while paying a real pick penalty.
+
+    **CORRECTION 2026-11-05: THE RESIDUALS BELOW ARE FROM THE WRONG FIT.** They
+    were read from a bare `efficiency_scores` call with every pricing flag off,
+    not the fit that builds the cores. With the flags on, as shipped:
+
+        Tekko-Kagi -25.3 fair        Silverbranch Bow +75.2 fair
+        Deathbringer +204.6 fair     Dominance +226.8 premium
+        Riptalon +246.1 premium      Dagger of Frenzy +490.2 premium
+        The Executioner +566.1 premium    Devourer's Gauntlet +629.9 premium
+
+    The conclusion survives: Tekko-Kagi is fair and what it beats is marked up.
+    The scale does not: read about +75 to +630, not "400-1000". The later claim
+    that excluding Tekko-Kagi perturbs the scale (Jotunn's -275.8 -> -363.0,
+    Deathbringer +527.3 -> +204.6) is **withdrawn**: that difference is flags off
+    against flags on, and has nothing to do with the exclusion or with §4.25.
+    The held-out measurements in this entry ran with the flags on and stand.
 
     **Its residual is -4.3 and its tier is `fair`.** 2650 gold buys 2650 gold
     of stats; the weak passive makes it look like nothing in particular. What
@@ -2248,6 +2313,19 @@ just reproduce the old answer.
 ## 5. What is actually left
 
 Roughly in the order I would do them.
+
+### The shipped index is built with every pricing flag off
+Found 2026-11-05. `recommend` and `validate` call
+`efficiency.apply_pricing_flags`; `build_index` never does, and `load_weights`
+does not set them. So `items[*].efficiency`, `efficiency_tier`,
+`item_gold_values`, `god_item_scores` and `god_item_damage` come from a different
+fit than the one that chooses the builds. Measured at `main` 6fc363b2: all 190
+index residuals match the flags-off fit and none match the flags-on one, and the
+tier shown differs from the tier used on 42 of 190 items (Rod of Tahuti shows
++267 where the model uses -922). The method page's working is therefore not the
+model's working, and #110's repricing will not show on the items page. Not fixed
+here: it moves every displayed figure and the draft's scores, so it wants its own
+measurement. This is register §4.10's failure mode.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
