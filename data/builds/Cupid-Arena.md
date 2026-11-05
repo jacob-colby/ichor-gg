@@ -466,12 +466,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Hydra's Lament
-  - Death Metal
   - Spear of Desolation
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Toxic Blade
   - Hydra's Lament
-  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -506,18 +506,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.49
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Soul Gem:
       total: 0.74
       efficiency: 0.57

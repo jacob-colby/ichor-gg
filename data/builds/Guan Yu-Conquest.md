@@ -118,12 +118,12 @@ builds:
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Shield Splitter, Kinetic
     Cuirass, Gluttonous Grimoire, Soul Gem, Breastplate of Valor, Nimble Ring, Runeforged
-    Hammer, Golden Blade, Hydra''s Lament, Spear of Desolation, Helm of Radiance,
-    Oni Hunter''s Garb, Shield of the Phoenix, Erosion, The Reaper, Tyrfing, Eye of
-    Providence, Helm of Darkness, Tekko-Kagi, Obsidian Shard, Titan''s Bane, Screeching
-    Gargoyle, Stone of Binding, Midgardian Mail, Avenging Blade, Blood-Bound Book,
-    Arondight, Lernaean Bow, Magi''s Cloak, Pharaoh''s Curse, Lotus Sickle, Leviathan''s
-    Hide, Death Metal, Eros'' Bow, Mantle Of Discord, Draconic Scale.'
+    Hammer, Golden Blade, Hydra''s Lament, Lotus Sickle, Spear of Desolation, Helm
+    of Radiance, Oni Hunter''s Garb, Shield of the Phoenix, Erosion, The Reaper, Tyrfing,
+    Eye of Providence, Helm of Darkness, Tekko-Kagi, Obsidian Shard, Titan''s Bane,
+    Screeching Gargoyle, Stone of Binding, Midgardian Mail, Avenging Blade, Blood-Bound
+    Book, Arondight, Lernaean Bow, Magi''s Cloak, Pharaoh''s Curse, Leviathan''s Hide,
+    Death Metal, Eros'' Bow, Mantle Of Discord, Draconic Scale.'
   slot_scores:
     Berserker's Shield:
       total: 0.62
@@ -196,10 +196,10 @@ builds:
     the Phoenix, The Reaper, Jotunn''s Revenge, Blood-Bound Book, Gluttonous Grimoire,
     Kinetic Cuirass, Shield Splitter, Runeforged Hammer, Ethereal Staff, Nimble Ring,
     Golden Blade, Yogi''s Necklace, Breastplate of Valor, Phoenix Feather, Bloodforge,
-    Hydra''s Lament, Riptalon, Bancroft''s Talon, Oni Hunter''s Garb, Spear of Desolation,
-    Rod of Asclepius, Erosion, Regrowth Striders, Helm of Radiance, Tyrfing, Eye of
-    Providence, Sphere of Negation, Avenging Blade, Tekko-Kagi, Obsidian Shard, Midgardian
-    Mail, Soul Locket, Titan''s Bane, Glorious Pridwen, Draconic Scale.'
+    Hydra''s Lament, Riptalon, Bancroft''s Talon, Oni Hunter''s Garb, Lotus Sickle,
+    Spear of Desolation, Rod of Asclepius, Erosion, Regrowth Striders, Helm of Radiance,
+    Tyrfing, Eye of Providence, Sphere of Negation, Avenging Blade, Tekko-Kagi, Obsidian
+    Shard, Midgardian Mail, Soul Locket, Titan''s Bane, Draconic Scale.'
   slot_scores:
     Berserker's Shield:
       total: 0.62
@@ -271,9 +271,9 @@ builds:
     Blade, Obsidian Shard, The Reaper, Titan''s Bane, Tekko-Kagi, Shield Splitter,
     Kinetic Cuirass, Void Stone, Void Shield, Breastplate of Valor, Nimble Ring, Spear
     of the Magus, Runeforged Hammer, The Crusher, Hydra''s Lament, Toxic Blade, Heartseeker,
-    Silverbranch Bow, Golden Blade, Helm of Radiance, Doom Orb, Oni Hunter''s Garb,
-    The World Stone, Tyrfing, Riptalon, Shield of the Phoenix, Erosion, Blood-Bound
-    Book, Helm of Darkness, Eye of Providence, Midgardian Mail.'
+    Silverbranch Bow, Golden Blade, Lotus Sickle, Helm of Radiance, Doom Orb, Oni
+    Hunter''s Garb, The World Stone, Tyrfing, Riptalon, Shield of the Phoenix, Erosion,
+    Blood-Bound Book, Helm of Darkness, Eye of Providence.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.54
@@ -343,11 +343,11 @@ builds:
     this god: Rod of Tahuti, Amanita Charm, Nimble Ring, Jotunn''s Revenge, Golden
     Blade, Kinetic Cuirass, Gluttonous Grimoire, Shield Splitter, Soul Gem, Breastplate
     of Valor, Tyrfing, Runeforged Hammer, Tekko-Kagi, Hydra''s Lament, Eros'' Bow,
-    Pharaoh''s Curse, Lernaean Bow, Helm of Radiance, Spear of Desolation, Toxic Blade,
-    Oni Hunter''s Garb, Silverbranch Bow, Obsidian Shard, Shogun''s Ofuda, Shield
-    of the Phoenix, Erosion, Screeching Gargoyle, Helm of Darkness, Blood-Bound Book,
-    Eye of Providence, The Reaper, Midgardian Mail, Stone of Binding, Bragi''s Harp,
-    Titan''s Bane, Lotus Sickle, Riptalon, Ancient Signet, Draconic Scale.'
+    Lotus Sickle, Pharaoh''s Curse, Lernaean Bow, Helm of Radiance, Spear of Desolation,
+    Toxic Blade, Oni Hunter''s Garb, Silverbranch Bow, Obsidian Shard, Shogun''s Ofuda,
+    Shield of the Phoenix, Erosion, Screeching Gargoyle, Helm of Darkness, Blood-Bound
+    Book, Eye of Providence, The Reaper, Midgardian Mail, Stone of Binding, Bragi''s
+    Harp, Titan''s Bane, Riptalon, Ancient Signet, Draconic Scale.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -395,10 +395,10 @@ builds:
   - Breastplate of Valor
   - Jotunn's Revenge
   - Spear of Desolation
-  - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
+  - Lotus Sickle
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -415,9 +415,9 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Soul Gem, Amanita Charm, Breastplate of Valor, Spear of Desolation, Gluttonous
-    Grimoire, Kinetic Cuirass, Hydra''s Lament, Shield of the Phoenix, Shield Splitter,
-    Screeching Gargoyle, Nimble Ring, Lotus Sickle, Chronos'' Pendant, Arondight,
+    Soul Gem, Amanita Charm, Breastplate of Valor, Lotus Sickle, Spear of Desolation,
+    Gluttonous Grimoire, Kinetic Cuirass, Hydra''s Lament, Shield of the Phoenix,
+    Shield Splitter, Screeching Gargoyle, Nimble Ring, Chronos'' Pendant, Arondight,
     Runeforged Hammer, Helm of Radiance, Oni Hunter''s Garb, Obsidian Shard, Prophetic
     Cloak, Golden Blade, Erosion, Helm of Darkness, Eye of Providence, Gem of Focus,
     Blood-Bound Book, Midgardian Mail, Heartwood Charm, Stone of Binding, Gladiator''s
@@ -448,12 +448,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.4
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.86
+    Lotus Sickle:
+      total: 0.54
+      efficiency: 0.57
       win: 0.6
       pick: 0.0
-      fit: 0.12
+      fit: 0.47
     Soul Gem:
       total: 0.56
       efficiency: 0.57
@@ -491,12 +491,12 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Rod of Tahuti, Amanita Charm, Jotunn''s Revenge, Shield
     Splitter, Kinetic Cuirass, Gluttonous Grimoire, Soul Gem, Breastplate of Valor,
-    Nimble Ring, Runeforged Hammer, Golden Blade, Hydra''s Lament, Spear of Desolation,
-    Helm of Radiance, Oni Hunter''s Garb, Shield of the Phoenix, Erosion, The Reaper,
-    Tyrfing, Eye of Providence, Helm of Darkness, Tekko-Kagi, Obsidian Shard, Draconic
-    Scale, Titan''s Bane, Screeching Gargoyle, Stone of Binding, Midgardian Mail,
-    Avenging Blade, Blood-Bound Book, Arondight, Lernaean Bow, Magi''s Cloak, Pharaoh''s
-    Curse, Lotus Sickle, Leviathan''s Hide, Death Metal, Eros'' Bow, Mantle Of Discord.'
+    Nimble Ring, Runeforged Hammer, Golden Blade, Hydra''s Lament, Lotus Sickle, Spear
+    of Desolation, Helm of Radiance, Oni Hunter''s Garb, Shield of the Phoenix, Erosion,
+    The Reaper, Tyrfing, Eye of Providence, Helm of Darkness, Tekko-Kagi, Obsidian
+    Shard, Draconic Scale, Titan''s Bane, Screeching Gargoyle, Stone of Binding, Midgardian
+    Mail, Avenging Blade, Blood-Bound Book, Arondight, Lernaean Bow, Magi''s Cloak,
+    Pharaoh''s Curse, Leviathan''s Hide, Death Metal, Eros'' Bow, Mantle Of Discord.'
   slot_scores:
     Berserker's Shield:
       total: 0.62

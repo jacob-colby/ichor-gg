@@ -400,13 +400,13 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Tyrfing
   - Hydra's Lament
   - Spear of Desolation
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Hydra's Lament
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -435,12 +435,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Tyrfing:
-      total: 0.54
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
     Hydra's Lament:
       total: 0.55
       efficiency: 0.56
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Soul Gem:
       total: 0.79
       efficiency: 0.57

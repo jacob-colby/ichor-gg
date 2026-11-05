@@ -78,9 +78,9 @@ builds:
   - Kinetic Cuirass
   - Bragi's Harp
   - Rod of Tahuti
-  - Eros' Bow
+  - Lotus Sickle
   flex_slots:
-  - Eros' Bow
+  - Kinetic Cuirass
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -128,9 +128,9 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.29
-    Eros' Bow:
-      total: 0.46
-      efficiency: 0.53
+    Lotus Sickle:
+      total: 0.49
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.4
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Kinetic Cuirass
   - Breastplate of Valor
-  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Soul Gem:
       total: 0.65
       efficiency: 0.53

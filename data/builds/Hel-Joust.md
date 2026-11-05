@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Freya's Tears
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Spear of Desolation:
       total: 0.53
       efficiency: 0.59
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Soul Gem:
       total: 0.75
       efficiency: 0.57
@@ -77,8 +77,8 @@ builds:
   - Book of Thoth
   - Kinetic Cuirass
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   flex_slots:
   - Spear of Desolation
   - Book of Thoth
@@ -122,31 +122,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
-    Obsidian Shard:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Freya's Tears
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Freya's Tears:
-      total: 0.47
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Spear of Desolation:
       total: 0.53
       efficiency: 0.59
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
+    Lotus Sickle:
+      total: 0.48
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.74
       efficiency: 0.57
@@ -205,13 +205,13 @@ builds:
   slot_order:
   - Kinetic Cuirass
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Obsidian Shard
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -240,18 +240,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
-    Obsidian Shard:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
+  - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - Kinetic Cuirass
+  - Rod of Tahuti
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -429,18 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Freya's Tears:
       total: 0.55
       efficiency: 0.58
@@ -450,6 +438,18 @@ builds:
     Spear of Desolation:
       total: 0.54
       efficiency: 0.59
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Rod of Tahuti:
+      total: 0.54
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.21
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.49
@@ -464,14 +464,14 @@ builds:
   archetype: model
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Freya's Tears
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -494,12 +494,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Freya's Tears:
-      total: 0.51
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Spear of Desolation:
       total: 0.53
       efficiency: 0.59
@@ -518,6 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.34
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
     Soul Gem:
       total: 0.75
       efficiency: 0.57

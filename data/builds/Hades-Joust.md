@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Kinetic Cuirass
+  - Book of Thoth
   - Spear of Desolation
-  - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Spear of the Magus
+  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,24 +31,18 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
+    Book of Thoth:
+      total: 0.36
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.22
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Spear of the Magus:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Obsidian Shard:
       total: 0.55
       efficiency: 0.58
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -78,9 +78,9 @@ builds:
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  - Triton's Conch
+  - Lotus Sickle
   flex_slots:
-  - Triton's Conch
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -128,25 +128,25 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Triton's Conch:
-      total: 0.48
-      efficiency: 0.44
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.5
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
-  - Kinetic Cuirass
+  - Book of Thoth
   - Spear of Desolation
-  - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
-  - Kinetic Cuirass
+  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -163,24 +163,18 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.46
-      efficiency: 0.56
+    Book of Thoth:
+      total: 0.32
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.15
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.52
-    Spear of the Magus:
-      total: 0.47
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Obsidian Shard:
       total: 0.53
       efficiency: 0.58
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.37
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Freya's Tears
   - Spear of Desolation
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Freya's Tears
   - Breastplate of Valor
-  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Lotus Sickle:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Soul Gem:
       total: 0.79
       efficiency: 0.57
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Kinetic Cuirass
+  - Book of Thoth
   - Spear of Desolation
-  - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Kinetic Cuirass
-  - Spear of the Magus
+  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -488,24 +488,18 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
+    Book of Thoth:
+      total: 0.36
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.22
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.53
-    Spear of the Magus:
-      total: 0.5
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Obsidian Shard:
       total: 0.55
       efficiency: 0.58
@@ -518,6 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Soul Gem:
       total: 0.79
       efficiency: 0.57
