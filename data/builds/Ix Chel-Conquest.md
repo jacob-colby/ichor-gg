@@ -117,11 +117,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Gluttonous Grimoire, Amanita Charm, Spear of the Magus, Genji''s Guard,
-    Kinetic Cuirass, Freya''s Tears, Breastplate of Valor, Helm of Radiance, Helm
-    of Darkness, Blood-Bound Book, Erosion, Shield of the Phoenix, Lotus Sickle, Oni
-    Hunter''s Garb, Eye of Providence, Draconic Scale, Ancient Signet, Jade Scepter,
-    Chronos'' Pendant, Screeching Gargoyle, Stone of Binding, Midgardian Mail, Soul
-    Gem, Doom Orb, Magi''s Cloak, Leviathan''s Hide.'
+    Kinetic Cuirass, Freya''s Tears, Breastplate of Valor, Lotus Sickle, Helm of Radiance,
+    Helm of Darkness, Blood-Bound Book, Erosion, Shield of the Phoenix, Oni Hunter''s
+    Garb, Eye of Providence, Draconic Scale, Ancient Signet, Jade Scepter, Chronos''
+    Pendant, Screeching Gargoyle, Stone of Binding, Midgardian Mail, Soul Gem, Doom
+    Orb, Magi''s Cloak, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -193,8 +193,8 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Spear
-    of the Magus, Gluttonous Grimoire, Genji''s Guard, Amanita Charm, Kinetic Cuirass,
-    Breastplate of Valor, Helm of Radiance, Freya''s Tears, Lotus Sickle, Ancient
+    of the Magus, Gluttonous Grimoire, Genji''s Guard, Amanita Charm, Lotus Sickle,
+    Kinetic Cuirass, Breastplate of Valor, Helm of Radiance, Freya''s Tears, Ancient
     Signet, Death Metal, Oni Hunter''s Garb, Helm of Darkness, Blood-Bound Book, Doom
     Orb, Jade Scepter, Chronos'' Pendant, Shield of the Phoenix, Erosion, Eye of Providence,
     Screeching Gargoyle, Midgardian Mail, Wish-Granting Pearl, Stone of Binding, Polynomicon,
@@ -269,7 +269,7 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Spear of the Magus, Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Kinetic
-    Cuirass, Breastplate of Valor, Freya''s Tears, Helm of Radiance, Lotus Sickle,
+    Cuirass, Breastplate of Valor, Freya''s Tears, Lotus Sickle, Helm of Radiance,
     Helm of Darkness, Doom Orb, Blood-Bound Book, Shield of the Phoenix, Oni Hunter''s
     Garb, Soul Gem, Screeching Gargoyle, Chronos'' Pendant, Ancient Signet, Death
     Metal, Erosion, Eye of Providence, Midgardian Mail, Jade Scepter, Stone of Binding,
@@ -345,10 +345,10 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Gluttonous Grimoire, Spear of the Magus, Shield of the
     Phoenix, Blood-Bound Book, Soul Gem, Genji''s Guard, Kinetic Cuirass, Ethereal
-    Staff, Freya''s Tears, Bancroft''s Talon, Phoenix Feather, Breastplate of Valor,
-    Yogi''s Necklace, Rod of Asclepius, Helm of Radiance, Sphere of Negation, Soul
-    Locket, Chandra''s Grace, Helm of Darkness, Oni Hunter''s Garb, Erosion, Lotus
-    Sickle, Eye of Providence, Jade Scepter, Regrowth Striders, Draconic Scale.'
+    Staff, Freya''s Tears, Bancroft''s Talon, Lotus Sickle, Phoenix Feather, Breastplate
+    of Valor, Yogi''s Necklace, Rod of Asclepius, Helm of Radiance, Sphere of Negation,
+    Soul Locket, Chandra''s Grace, Helm of Darkness, Oni Hunter''s Garb, Erosion,
+    Eye of Providence, Jade Scepter, Regrowth Striders, Draconic Scale.'
   slot_scores:
     Gluttonous Grimoire:
       total: 0.55
@@ -420,8 +420,8 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Gluttonous Grimoire, Spear of the Magus, Amanita Charm, Genji''s
     Guard, Screeching Gargoyle, Stone of Binding, Kinetic Cuirass, Void Stone, Void
-    Shield, Freya''s Tears, Breastplate of Valor, Doom Orb, Helm of Radiance, Soul
-    Gem, Helm of Darkness, Blood-Bound Book, Oni Hunter''s Garb, Lotus Sickle, Shield
+    Shield, Freya''s Tears, Breastplate of Valor, Doom Orb, Lotus Sickle, Helm of
+    Radiance, Soul Gem, Helm of Darkness, Blood-Bound Book, Oni Hunter''s Garb, Shield
     of the Phoenix, Ancient Signet, Erosion, Eye of Providence, Chronos'' Pendant,
     Jade Scepter, Draconic Scale.'
   slot_scores:
@@ -494,11 +494,11 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Spear of the Magus, Gluttonous Grimoire, Nimble Ring, Amanita Charm,
-    Genji''s Guard, Kinetic Cuirass, Breastplate of Valor, Freya''s Tears, Helm of
-    Radiance, Eros'' Bow, Blood-Bound Book, Helm of Darkness, Ancient Signet, Oni
-    Hunter''s Garb, Lotus Sickle, Bragi''s Harp, Bracer of The Abyss, Shield of the
-    Phoenix, Screeching Gargoyle, Chronos'' Pendant, Jade Scepter, Erosion, Death
-    Metal, Midgardian Mail, Stone of Binding, Eye of Providence, Soul Gem.'
+    Genji''s Guard, Kinetic Cuirass, Breastplate of Valor, Freya''s Tears, Lotus Sickle,
+    Helm of Radiance, Eros'' Bow, Blood-Bound Book, Helm of Darkness, Ancient Signet,
+    Oni Hunter''s Garb, Bragi''s Harp, Bracer of The Abyss, Shield of the Phoenix,
+    Screeching Gargoyle, Chronos'' Pendant, Jade Scepter, Erosion, Death Metal, Midgardian
+    Mail, Stone of Binding, Eye of Providence, Soul Gem.'
   slot_scores:
     Nimble Ring:
       total: 0.52
@@ -568,8 +568,8 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Amanita Charm, Freya''s
-    Tears, Breastplate of Valor, Gluttonous Grimoire, Spear of the Magus, Kinetic
-    Cuirass, Shield of the Phoenix, Screeching Gargoyle, Lotus Sickle, Chronos'' Pendant,
+    Tears, Breastplate of Valor, Gluttonous Grimoire, Spear of the Magus, Lotus Sickle,
+    Kinetic Cuirass, Shield of the Phoenix, Screeching Gargoyle, Chronos'' Pendant,
     Helm of Radiance, Oni Hunter''s Garb, Soul Gem, Prophetic Cloak, Erosion, Helm
     of Darkness, Eye of Providence, Gem of Focus, Blood-Bound Book, Midgardian Mail,
     Heartwood Charm, Stone of Binding, Draconic Scale, Gladiator''s Shield, Magi''s
@@ -642,9 +642,9 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s
-    Guard, Kinetic Cuirass, Freya''s Tears, Breastplate of Valor, Helm of Radiance,
-    Helm of Darkness, Spear of the Magus, Blood-Bound Book, Erosion, Shield of the
-    Phoenix, Lotus Sickle, Oni Hunter''s Garb, Eye of Providence, Draconic Scale,
+    Guard, Kinetic Cuirass, Freya''s Tears, Breastplate of Valor, Lotus Sickle, Helm
+    of Radiance, Helm of Darkness, Spear of the Magus, Blood-Bound Book, Erosion,
+    Shield of the Phoenix, Oni Hunter''s Garb, Eye of Providence, Draconic Scale,
     Ancient Signet, Jade Scepter, Chronos'' Pendant, Screeching Gargoyle, Stone of
     Binding, Midgardian Mail, Doom Orb, Magi''s Cloak, Leviathan''s Hide.'
   slot_scores:

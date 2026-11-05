@@ -120,8 +120,8 @@ builds:
     Breastplate of Valor, Soul Gem, Erosion, Eye of Providence, Draconic Scale, Shield
     of the Phoenix, Oni Hunter''s Garb, Helm of Darkness, Stone of Binding, Shifter''s
     Shield, Helm of Radiance, Magi''s Cloak, Midgardian Mail, Mantle Of Discord, Screeching
-    Gargoyle, Leviathan''s Hide, Spear of Desolation, Prophetic Cloak, Ancile, Obsidian
-    Shard, Hide of the Nemean Lion, Void Stone, Void Shield.'
+    Gargoyle, Leviathan''s Hide, Spear of Desolation, Lotus Sickle, Prophetic Cloak,
+    Ancile, Obsidian Shard, Hide of the Nemean Lion, Void Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -196,8 +196,8 @@ builds:
     Yogi''s Necklace, Erosion, Breastplate of Valor, Eye of Providence, Draconic Scale,
     Oni Hunter''s Garb, Chandra''s Grace, Midgardian Mail, Shifter''s Shield, Glorious
     Pridwen, Regrowth Striders, Rod of Asclepius, Bancroft''s Talon, Leviathan''s
-    Hide, Helm of Darkness, Helm of Radiance, Spear of Desolation, Sphere of Negation,
-    Soul Locket.'
+    Hide, Helm of Darkness, Helm of Radiance, Spear of Desolation, Lotus Sickle, Sphere
+    of Negation.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -269,8 +269,8 @@ builds:
     of Binding, Screeching Gargoyle, Spear of Desolation, Kinetic Cuirass, Obsidian
     Shard, Void Stone, Void Shield, Breastplate of Valor, Spear of the Magus, Erosion,
     Oni Hunter''s Garb, Eye of Providence, Doom Orb, Helm of Radiance, Draconic Scale,
-    The World Stone, Shield of the Phoenix, Helm of Darkness, Midgardian Mail, Magi''s
-    Cloak, Dreamer''s Idol, Mantle Of Discord, Leviathan''s Hide, Shifter''s Shield.'
+    The World Stone, Shield of the Phoenix, Helm of Darkness, Lotus Sickle, Midgardian
+    Mail, Magi''s Cloak, Dreamer''s Idol, Mantle Of Discord, Leviathan''s Hide.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.58
@@ -340,10 +340,10 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Amanita Charm, Nimble Ring, Kinetic Cuirass, Gluttonous
     Grimoire, Breastplate of Valor, Soul Gem, Oni Hunter''s Garb, Eros'' Bow, Helm
-    of Radiance, Erosion, Eye of Providence, Spear of Desolation, Obsidian Shard,
-    Stone of Binding, Shield of the Phoenix, Midgardian Mail, Helm of Darkness, Draconic
-    Scale, Screeching Gargoyle, Magi''s Cloak, Blood-Bound Book, Leviathan''s Hide,
-    Bragi''s Harp, Mantle Of Discord, Ancient Signet, Shifter''s Shield, Lotus Sickle.'
+    of Radiance, Lotus Sickle, Erosion, Eye of Providence, Spear of Desolation, Obsidian
+    Shard, Stone of Binding, Shield of the Phoenix, Midgardian Mail, Helm of Darkness,
+    Draconic Scale, Screeching Gargoyle, Magi''s Cloak, Blood-Bound Book, Leviathan''s
+    Hide, Bragi''s Harp, Mantle Of Discord, Ancient Signet, Shifter''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -392,11 +392,11 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
-  - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
   - Kinetic Cuirass
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -412,10 +412,10 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Amanita Charm, Soul
-    Gem, Breastplate of Valor, Kinetic Cuirass, Spear of Desolation, Gluttonous Grimoire,
-    Shield of the Phoenix, Screeching Gargoyle, Lotus Sickle, Chronos'' Pendant, Helm
-    of Radiance, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Helm of Darkness, Eye
-    of Providence, Obsidian Shard, Draconic Scale, Stone of Binding, Gladiator''s
+    Gem, Breastplate of Valor, Kinetic Cuirass, Lotus Sickle, Spear of Desolation,
+    Gluttonous Grimoire, Shield of the Phoenix, Screeching Gargoyle, Chronos'' Pendant,
+    Helm of Radiance, Prophetic Cloak, Oni Hunter''s Garb, Erosion, Helm of Darkness,
+    Eye of Providence, Obsidian Shard, Draconic Scale, Stone of Binding, Gladiator''s
     Shield, Gem of Focus, Midgardian Mail, Heartwood Charm, Magi''s Cloak, Blood-Bound
     Book, Mantle Of Discord, Leviathan''s Hide.'
   slot_scores:
@@ -443,12 +443,12 @@ builds:
       win: 0.67
       pick: 0.19
       fit: 0.6
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.86
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
       win: 0.66
       pick: 0.0
-      fit: 0.13
+      fit: 0.49
     Soul Gem:
       total: 0.59
       efficiency: 0.57
@@ -490,10 +490,10 @@ builds:
     Soul Gem, Golden Blade, Runeforged Hammer, The Reaper, Tekko-Kagi, Titan''s Bane,
     Breastplate of Valor, Hydra''s Lament, Tyrfing, Nimble Ring, Spear of Desolation,
     Obsidian Shard, The Crusher, Oni Hunter''s Garb, Toxic Blade, Helm of Radiance,
-    Lernaean Bow, Erosion, Avenging Blade, Silverbranch Bow, Eye of Providence, Heartseeker,
-    Stone of Binding, Shield of the Phoenix, Arondight, Draconic Scale, Helm of Darkness,
-    Midgardian Mail, Spear of the Magus, Death Metal, Magi''s Cloak, Screeching Gargoyle,
-    Pharaoh''s Curse.'
+    Lernaean Bow, Erosion, Avenging Blade, Silverbranch Bow, Eye of Providence, Lotus
+    Sickle, Heartseeker, Stone of Binding, Shield of the Phoenix, Arondight, Draconic
+    Scale, Helm of Darkness, Midgardian Mail, Spear of the Magus, Death Metal, Magi''s
+    Cloak, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -564,10 +564,10 @@ builds:
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Gluttonous Grimoire,
     Jotunn''s Revenge, Amanita Charm, Soul Gem, Shield Splitter, Berserker''s Shield,
     Kinetic Cuirass, Spear of Desolation, Obsidian Shard, Helm of Radiance, Runeforged
-    Hammer, Breastplate of Valor, The Reaper, Titan''s Bane, Helm of Darkness, Spear
-    of the Magus, Hydra''s Lament, Blood-Bound Book, Death Metal, Oni Hunter''s Garb,
-    Ancient Signet, Lotus Sickle, Erosion, Eye of Providence, The Crusher, Jade Scepter,
-    Doom Orb, Stone of Binding, Shield of the Phoenix, Draconic Scale, Midgardian
+    Hammer, Breastplate of Valor, The Reaper, Lotus Sickle, Titan''s Bane, Helm of
+    Darkness, Spear of the Magus, Hydra''s Lament, Blood-Bound Book, Death Metal,
+    Oni Hunter''s Garb, Ancient Signet, Erosion, Eye of Providence, The Crusher, Jade
+    Scepter, Doom Orb, Stone of Binding, Shield of the Phoenix, Draconic Scale, Midgardian
     Mail, Chronos'' Pendant, Avenging Blade, The World Stone, Magi''s Cloak, Screeching
     Gargoyle, Heartseeker, Arondight, Leviathan''s Hide.'
   slot_scores:
@@ -640,8 +640,8 @@ builds:
     Grimoire, Breastplate of Valor, Soul Gem, Erosion, Eye of Providence, Draconic
     Scale, Shield of the Phoenix, Oni Hunter''s Garb, Helm of Darkness, Stone of Binding,
     Shifter''s Shield, Helm of Radiance, Magi''s Cloak, Midgardian Mail, Mantle Of
-    Discord, Screeching Gargoyle, Leviathan''s Hide, Spear of Desolation, Prophetic
-    Cloak, Ancile, Obsidian Shard, Hide of the Nemean Lion, Void Stone, Void Shield.'
+    Discord, Screeching Gargoyle, Leviathan''s Hide, Spear of Desolation, Lotus Sickle,
+    Prophetic Cloak, Ancile, Obsidian Shard, Hide of the Nemean Lion, Void Stone.'
   slot_scores:
     Genji's Guard:
       total: 0.6

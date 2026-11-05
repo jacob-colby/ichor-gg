@@ -76,11 +76,11 @@ builds:
   - Bancroft's Talon
   - Book of Thoth
   - Kinetic Cuirass
-  - Magi's Cloak
   - Bragi's Harp
   - Rod of Tahuti
+  - Lotus Sickle
   flex_slots:
-  - Magi's Cloak
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -116,12 +116,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Magi's Cloak:
-      total: 0.47
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Bragi's Harp:
       total: 0.49
       efficiency: 0.45
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.29
+    Lotus Sickle:
+      total: 0.47
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
   starter: *id001
 - source: suggested
   archetype: bruiser
@@ -333,15 +333,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Kinetic Cuirass
   - Freya's Tears
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Breastplate of Valor
-  - Screeching Gargoyle
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -358,12 +358,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -388,6 +382,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Soul Gem:
       total: 0.64
       efficiency: 0.53

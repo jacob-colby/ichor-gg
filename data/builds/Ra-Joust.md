@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Lotus Sickle
   - Spear of Desolation
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Lotus Sickle
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.63
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Lotus Sickle:
+      total: 0.7
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -75,12 +75,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Doom Orb
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -110,12 +110,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Doom Orb:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Obsidian Shard:
       total: 0.58
       efficiency: 0.58
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Lotus Sickle:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Spear of the Magus
-  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Doom Orb:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Spear of the Magus:
       total: 0.57
       efficiency: 0.58
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -206,12 +206,12 @@ builds:
   - Kinetic Cuirass
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Amanita Charm
-  - Erosion
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Erosion
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -246,18 +246,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.36
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Amanita Charm:
       total: 0.74
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.83
-    Erosion:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Soul Gem:
       total: 0.73
       efficiency: 0.53
@@ -398,11 +398,11 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Chronos' Pendant
   - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.61
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Chronos' Pendant:
       total: 0.6
       efficiency: 0.55
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Lotus Sickle:
+      total: 0.67
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.78
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lotus Sickle
   - Spear of Desolation
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Lotus Sickle
+  - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -488,12 +488,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.63
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Spear of Desolation:
       total: 0.8
       efficiency: 0.59
@@ -518,6 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+    Lotus Sickle:
+      total: 0.7
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   - Doublet of Binding
   flex_slots:
+  - Void Stone
   - Doublet of Binding
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -553,12 +553,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Void Stone:
       total: 0.61
       efficiency: 0.46
@@ -577,6 +571,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Lotus Sickle:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -594,14 +594,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Lotus Sickle
+  - Spear of Desolation
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -619,12 +619,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.5
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Book of Thoth:
       total: 0.41
       efficiency: 0.49
@@ -643,6 +637,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.47
+    Lotus Sickle:
+      total: 0.7
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -660,15 +660,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Void Stone
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Triton's Conch
   - Obsidian Shard
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -685,12 +685,6 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Void Stone:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
     Spear of Desolation:
       total: 0.61
       efficiency: 0.59
@@ -709,6 +703,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.45
+    Lotus Sickle:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -726,22 +726,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Kinetic Cuirass
   - Void Shield
   - Void Stone
+  - Lotus Sickle
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
   - Void Shield
-  - Kinetic Cuirass
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -751,12 +751,6 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.61
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
     Void Shield:
       total: 0.63
       efficiency: 0.46
@@ -769,6 +763,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Lotus Sickle:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Amanita Charm:
       total: 0.83
       efficiency: 0.65
@@ -792,15 +792,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
   - Void Stone
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Obsidian Shard
-  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -817,12 +817,6 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.61
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
     Void Stone:
       total: 0.71
       efficiency: 0.46
@@ -847,6 +841,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Lotus Sickle:
+      total: 0.62
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -860,8 +860,8 @@ builds:
   slot_order:
   - Nimble Ring
   - Bragi's Harp
-  - Void Stone
   - Rod of Tahuti
+  - Lotus Sickle
   - Eros' Bow
   - Soul Gem
   flex_slots:
@@ -895,18 +895,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Void Stone:
-      total: 0.51
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Rod of Tahuti:
       total: 0.52
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.17
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Eros' Bow:
       total: 0.6
       efficiency: 0.53
@@ -925,14 +925,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Screeching Gargoyle
-  - Lotus Sickle
   - Genji's Guard
   - Spear of Desolation
+  - Lotus Sickle
   - Soul Gem
   - Triton's Conch
   flex_slots:
+  - Screeching Gargoyle
   - Triton's Conch
-  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -955,12 +955,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Lotus Sickle:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
     Genji's Guard:
       total: 0.59
       efficiency: 0.69
@@ -973,6 +967,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.67
+    Lotus Sickle:
+      total: 0.74
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -990,15 +990,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   - Doublet of Binding
   flex_slots:
+  - Void Stone
   - Doublet of Binding
-  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1015,12 +1015,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
     Void Stone:
       total: 0.61
       efficiency: 0.46
@@ -1039,6 +1033,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Lotus Sickle:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -1060,10 +1060,10 @@ builds:
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
-  - Doublet of Binding
   flex_slots:
-  - Doublet of Binding
+  - Void Stone
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1105,23 +1105,23 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Lotus Sickle:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
     Soul Gem:
       total: 0.76
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doublet of Binding:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   swaps:
   - added: Obsidian Shard
-    removed: Genji's Guard
+    removed: Doublet of Binding
     reason: Conquest community 60% win over 271 matches (vs 53% on this god), taking
-      the model's weakest slot from Genji's Guard
+      the model's weakest slot from Doublet of Binding
   borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Thermotherapy

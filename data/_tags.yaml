@@ -449,13 +449,27 @@ Soul Locket: [aura, sustain, mitigation, mobility, stacking, active]
 # items only reach gods whose kit can buff/heal/shield an ally, give it real
 # tags (drafted: [aura, burst, stacking]).
 #
-# THE PRECONDITION IS NOW MET (2026-11-04): `smite.ally_kit` gates this item
-# and three others on a derived kit capability, in `score_god_items`, so it can
-# no longer reach Agni or any of the other 62 gods who cannot buff an ally.
-# The tags are STILL held at [], because giving them is a separate decision
-# from building the gate: it would change builds for the 31 gods who DO
-# qualify, and this slice deliberately changed nothing except what the gate
-# implies. Tagging it is the next slice, and the drafted list above is
-# untested. Same for `Soul Locket` above, whose tags predate the gate and were
-# chosen while it could reach everyone.
-Lotus Sickle: []
+# THE PRECONDITION WAS MET 2026-11-04: `smite.ally_kit` gates this item and
+# three others on a derived kit capability, in `score_god_items`, so it cannot
+# reach Agni or any of the other 62 gods whose kit cannot buff an ally.
+#
+# RESTORED 2026-11-05 (Jacob), to the list drafted above. The holding measure
+# existed for one case — "any non-empty tag put it into Agni's Joust core over
+# Doom Orb" — and that case is now impossible for a reason stronger than a
+# score: `ally_kit.buffs_allied_god(Agni)` is False on the base kit AND with
+# his aspect, so the item is in `excluded_items` for every Agni build and no
+# tag can promote what is not in the candidate set. Verified by regenerating:
+# Agni's Joust core is unchanged and holds no ally-dependent item.
+#
+# Of the three, only `burst` reaches the score — `scoring.offense_tags` carries
+# it at 0.1, once rather than summed (`offense_tags_additive: False`). `aura`
+# and `stacking` are in the vocabulary and in neither `offense_tags` nor
+# `tag_bonus`, so they are inert to scoring and are recorded for the viewer and
+# the audit. `aura` draws a `tag-without-evidence` row from
+# `validate.tag_audit`, whose keywords want "aura"/"allies within" and this
+# text says "another Allied God" — the same row Soul Locket, Eros' Bow and Rod
+# of Asclepius already carry, i.e. the whole ally-dependent class.
+#
+# `Soul Locket` above is still tagged from the pre-gate world and was not
+# re-examined here.
+Lotus Sickle: [aura, burst, stacking]

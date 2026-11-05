@@ -120,10 +120,10 @@ builds:
     Shield, Gluttonous Grimoire, Soul Gem, Erosion, Eye of Providence, Hydra''s Lament,
     Oni Hunter''s Garb, Shield of the Phoenix, The Reaper, Stone of Binding, Helm
     of Darkness, Helm of Radiance, Midgardian Mail, Magi''s Cloak, Titan''s Bane,
-    Avenging Blade, Mantle Of Discord, Leviathan''s Hide, Screeching Gargoyle, Spear
-    of Desolation, Wyrmskin Hide, Obsidian Shard, Arondight, Ancile, Blood-Bound Book,
-    Hide of the Nemean Lion, Sanguine Lash, Death Metal, Stampede, Void Stone, Void
-    Shield.'
+    Avenging Blade, Mantle Of Discord, Leviathan''s Hide, Screeching Gargoyle, Lotus
+    Sickle, Spear of Desolation, Wyrmskin Hide, Obsidian Shard, Arondight, Ancile,
+    Blood-Bound Book, Hide of the Nemean Lion, Sanguine Lash, Death Metal, Stampede,
+    Void Stone.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.58
@@ -201,8 +201,8 @@ builds:
     Hydra''s Lament, Oni Hunter''s Garb, Erosion, Chandra''s Grace, Eye of Providence,
     Avenging Blade, Bancroft''s Talon, Midgardian Mail, Regrowth Striders, Titan''s
     Bane, Rod of Asclepius, Leviathan''s Hide, Helm of Radiance, Glorious Pridwen,
-    Wyrmskin Hide, Sphere of Negation, Stone of Binding, Spear of Desolation, Helm
-    of Darkness, Soul Locket, Arondight.'
+    Wyrmskin Hide, Sphere of Negation, Stone of Binding, Spear of Desolation, Lotus
+    Sickle, Helm of Darkness, Soul Locket.'
   slot_scores:
     Kinetic Cuirass:
       total: 0.58
@@ -277,8 +277,9 @@ builds:
     Shield, Shield Splitter, Titan''s Bane, Obsidian Shard, Spear of Desolation, Void
     Stone, Void Shield, The Crusher, Spear of the Magus, Heartseeker, Hydra''s Lament,
     Oni Hunter''s Garb, Erosion, Eye of Providence, Helm of Radiance, Doom Orb, Tekko-Kagi,
-    Shield of the Phoenix, The World Stone, Midgardian Mail, Helm of Darkness, Magi''s
-    Cloak, Leviathan''s Hide, Mantle Of Discord, Dreamer''s Idol, Blood-Bound Book.'
+    Shield of the Phoenix, The World Stone, Midgardian Mail, Lotus Sickle, Helm of
+    Darkness, Magi''s Cloak, Leviathan''s Hide, Mantle Of Discord, Dreamer''s Idol,
+    Blood-Bound Book.'
   slot_scores:
     Stone of Binding:
       total: 0.56
@@ -351,10 +352,9 @@ builds:
     Revenge, Golden Blade, Shield Splitter, Gluttonous Grimoire, Tyrfing, Soul Gem,
     Tekko-Kagi, Pharaoh''s Curse, Lernaean Bow, Toxic Blade, Oni Hunter''s Garb, Hydra''s
     Lament, Shogun''s Ofuda, Silverbranch Bow, Eros'' Bow, Helm of Radiance, Erosion,
-    Eye of Providence, Stone of Binding, Midgardian Mail, Obsidian Shard, Shield of
-    the Phoenix, Spear of Desolation, The Reaper, Helm of Darkness, Magi''s Cloak,
-    Screeching Gargoyle, Titan''s Bane, Riptalon, Leviathan''s Hide, Dominance, Mantle
-    Of Discord.'
+    Eye of Providence, Stone of Binding, Lotus Sickle, Midgardian Mail, Obsidian Shard,
+    Shield of the Phoenix, Spear of Desolation, The Reaper, Helm of Darkness, Magi''s
+    Cloak, Screeching Gargoyle, Titan''s Bane, Riptalon, Leviathan''s Hide, Dominance.'
   slot_scores:
     Golden Blade:
       total: 0.55
@@ -423,9 +423,9 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
-    Soul Gem, Amanita Charm, Berserker''s Shield, Spear of Desolation, Gluttonous
-    Grimoire, Hydra''s Lament, Shield of the Phoenix, Shield Splitter, Screeching
-    Gargoyle, Lotus Sickle, Chronos'' Pendant, Arondight, Helm of Radiance, Prophetic
+    Soul Gem, Amanita Charm, Berserker''s Shield, Lotus Sickle, Spear of Desolation,
+    Gluttonous Grimoire, Hydra''s Lament, Shield of the Phoenix, Shield Splitter,
+    Screeching Gargoyle, Chronos'' Pendant, Arondight, Helm of Radiance, Prophetic
     Cloak, Oni Hunter''s Garb, Erosion, Helm of Darkness, Eye of Providence, Obsidian
     Shard, Stone of Binding, Gladiator''s Shield, Gem of Focus, Midgardian Mail, Blood-Bound
     Book, Magi''s Cloak, Heartwood Charm, Mantle Of Discord, Leviathan''s Hide, The
@@ -504,9 +504,9 @@ builds:
     Tekko-Kagi, Titan''s Bane, Hydra''s Lament, Golden Blade, Nimble Ring, Obsidian
     Shard, Spear of Desolation, Tyrfing, The Crusher, Oni Hunter''s Garb, Lernaean
     Bow, Erosion, Avenging Blade, Eye of Providence, Helm of Radiance, Heartseeker,
-    Stone of Binding, Shield of the Phoenix, Midgardian Mail, Arondight, Helm of Darkness,
-    Magi''s Cloak, Spear of the Magus, Screeching Gargoyle, Death Metal, Pharaoh''s
-    Curse, Toxic Blade, Leviathan''s Hide.'
+    Stone of Binding, Shield of the Phoenix, Midgardian Mail, Arondight, Lotus Sickle,
+    Helm of Darkness, Magi''s Cloak, Spear of the Magus, Screeching Gargoyle, Death
+    Metal, Pharaoh''s Curse, Toxic Blade.'
   slot_scores:
     Berserker's Shield:
       total: 0.59
@@ -576,9 +576,9 @@ builds:
   rationale: 'Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Gluttonous Grimoire,
     Jotunn''s Revenge, Amanita Charm, Soul Gem, Shield Splitter, Berserker''s Shield,
-    Obsidian Shard, Spear of Desolation, Helm of Radiance, The Reaper, Titan''s Bane,
-    Helm of Darkness, Spear of the Magus, Hydra''s Lament, Blood-Bound Book, Death
-    Metal, Oni Hunter''s Garb, Ancient Signet, Erosion, Lotus Sickle, Eye of Providence,
+    Obsidian Shard, Spear of Desolation, Helm of Radiance, The Reaper, Lotus Sickle,
+    Titan''s Bane, Helm of Darkness, Spear of the Magus, Hydra''s Lament, Blood-Bound
+    Book, Death Metal, Oni Hunter''s Garb, Ancient Signet, Erosion, Eye of Providence,
     The Crusher, Jade Scepter, Doom Orb, Stone of Binding, Shield of the Phoenix,
     Midgardian Mail, Avenging Blade, The World Stone, Magi''s Cloak, Chronos'' Pendant,
     Heartseeker, Screeching Gargoyle, Leviathan''s Hide, Mantle Of Discord.'
@@ -656,9 +656,9 @@ builds:
     Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix, The Reaper, Stone
     of Binding, Helm of Darkness, Helm of Radiance, Midgardian Mail, Magi''s Cloak,
     Titan''s Bane, Avenging Blade, Mantle Of Discord, Leviathan''s Hide, Screeching
-    Gargoyle, Spear of Desolation, Wyrmskin Hide, Obsidian Shard, Arondight, Ancile,
-    Blood-Bound Book, Hide of the Nemean Lion, Sanguine Lash, Death Metal, Stampede,
-    Void Stone, Void Shield.'
+    Gargoyle, Lotus Sickle, Spear of Desolation, Wyrmskin Hide, Obsidian Shard, Arondight,
+    Ancile, Blood-Bound Book, Hide of the Nemean Lion, Sanguine Lash, Death Metal,
+    Stampede, Void Stone.'
   slot_scores:
     Berserker's Shield:
       total: 0.57

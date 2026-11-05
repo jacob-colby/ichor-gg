@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Kinetic Cuirass
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Kinetic Cuirass
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -31,12 +31,6 @@ builds:
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Bancroft's Talon
   - Book of Thoth
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
-  flex_slots:
   - Lotus Sickle
+  flex_slots:
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,12 +98,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.47
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Bancroft's Talon:
       total: 0.55
       efficiency: 0.51
@@ -134,6 +128,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
   starter: *id001
 - source: suggested
   archetype: burst
@@ -398,15 +398,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Breastplate of Valor
   - Freya's Tears
   - Spear of Desolation
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Freya's Tears
   - Breastplate of Valor
-  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.5
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Genji's Guard:
       total: 0.54
       efficiency: 0.69
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Lotus Sickle:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Soul Gem:
       total: 0.78
       efficiency: 0.57
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Kinetic Cuirass
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Kinetic Cuirass
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -488,12 +488,6 @@ builds:
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Spear of Desolation:
       total: 0.56
       efficiency: 0.59
@@ -518,6 +512,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+    Lotus Sickle:
+      total: 0.5
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
     Soul Gem:
       total: 0.78
       efficiency: 0.57
