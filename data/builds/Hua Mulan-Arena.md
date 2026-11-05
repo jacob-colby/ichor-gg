@@ -17,35 +17,35 @@ builds:
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Mantle Of Discord — magical protection
+    swap_item: Mantle Of Discord
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Top weighted-score core (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.74
+      total: 0.56
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -56,14 +56,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.57
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.7
-      efficiency: 0.65
+      total: 0.71
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.74
@@ -80,7 +80,7 @@ builds:
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
+  - Berserker's Shield
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
@@ -99,38 +99,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.74
+      total: 0.57
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.59
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.57
     Shield Splitter:
       total: 0.54
-      efficiency: 0.59
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.49
     Shield of the Phoenix:
-      total: 0.62
-      efficiency: 0.52
+      total: 0.65
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.72
     Amanita Charm:
-      total: 0.71
-      efficiency: 0.65
+      total: 0.73
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -143,20 +143,20 @@ builds:
   - Avenging Blade
   - Toxic Blade
   - Jotunn's Revenge
-  - The Reaper
+  - Amanita Charm
   flex_slots:
-  - Avenging Blade
   - Screeching Gargoyle
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Void Stone — magical protection
+    swap_item: Void Stone
   - vs_tag: physical_heavy
-    swap: Void Shield — physical protection
-    swap_item: Void Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -164,41 +164,41 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.6
     Stone of Binding:
       total: 0.58
-      efficiency: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.67
     Avenging Blade:
-      total: 0.58
-      efficiency: 0.49
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.66
     Toxic Blade:
       total: 0.59
-      efficiency: 0.48
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.71
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.67
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
-    The Reaper:
+    Amanita Charm:
       total: 0.65
-      efficiency: 0.56
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.62
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -206,22 +206,22 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Berserker's Shield
-  - Tyrfing
-  - Riptalon
+  - Kinetic Cuirass
+  - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Riptalon
-  - Tyrfing
+  - Shield of the Phoenix
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Mantle Of Discord — physical protection
+    swap_item: Mantle Of Discord
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -229,38 +229,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Berserker's Shield:
-      total: 0.59
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Tyrfing:
-      total: 0.52
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Riptalon:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.69
+    Berserker's Shield:
+      total: 0.58
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    Kinetic Cuirass:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Shield of the Phoenix:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Amanita Charm:
-      total: 0.64
-      efficiency: 0.65
+      total: 0.66
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.63
@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Berserker's Shield
-  - Jotunn's Revenge
+  - Breastplate of Valor
   - Kinetic Cuirass
   - Shield of the Phoenix
+  - Gladiator's Shield
   - Freya's Tears
   flex_slots:
-  - Berserker's Shield
-  - Kinetic Cuirass
+  - Gladiator's Shield
+  - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -288,44 +288,44 @@ builds:
     swap: Glorious Pridwen — physical protection
     swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Genji's Guard:
-      total: 0.55
-      efficiency: 0.69
+      total: 0.56
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Berserker's Shield:
-      total: 0.53
-      efficiency: 0.74
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.67
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
-    Kinetic Cuirass:
+    Breastplate of Valor:
       total: 0.52
-      efficiency: 0.56
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.49
     Shield of the Phoenix:
-      total: 0.65
-      efficiency: 0.52
+      total: 0.67
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.77
+    Gladiator's Shield:
+      total: 0.53
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Freya's Tears:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.58
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -344,35 +344,35 @@ builds:
   - Magi's Cloak
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Mantle Of Discord — CC-immunity / cleanse
-    swap_item: Mantle Of Discord
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Mantle Of Discord — magical protection
+    swap_item: Mantle Of Discord
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: The model's own answer — no meta signal (efficiency + fit). Arena — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.55
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.6
     Berserker's Shield:
-      total: 0.57
-      efficiency: 0.74
+      total: 0.56
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -383,14 +383,14 @@ builds:
       pick: 0.0
       fit: 0.55
     Shield Splitter:
-      total: 0.57
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.55
     Amanita Charm:
-      total: 0.7
-      efficiency: 0.65
+      total: 0.71
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.74

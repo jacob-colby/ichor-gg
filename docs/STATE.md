@@ -2135,156 +2135,104 @@ shipped **off**. Numbers are in the named module.
     one of the four Carry levers from §4.30 and still unpicked. (c) Accept the
     disagreement and leave it.
 
-32. **Option (a) built: pricing passives in `efficiency` fixes the ranking,
-    makes Carry judgeable and Support mostly not. SHIPS OFF (2026-11-05).**
+32. **Option (a) built: pricing passives in `efficiency`. ON in PR #110,
+    which is held unmerged for review (2026-11-05).**
 
     §4.31 diagnosed it: `efficiency` chooses on stats alone while `passive_sim`
     judges the finished build, so the chooser is blind to what the judge sees.
-    §4.32 blocked the fix on coverage; #107 closed coverage, so it is built
-    here. `price_passive_sim` in `_weights.yaml`, shipped **false**.
+    #107 closed coverage (193 of 193 scored items decided), so it is built
+    here as `price_passive_sim`. Baseline for every figure: `main` 6c34a58d.
 
-    **THE DESIGN INVENTS NOTHING.** Three columns are added to
-    `item_stat_values` — Passive Damage (the four DAMAGE_KEYS averaged) and the
-    two effective-health channels KEPT APART, because §4.17 refuses to collapse
-    them. NNLS then learns their gold price the way it learns every stat price:
-
-        Passive Damage          1.2004 gold per point
-        Passive EHP Physical    0.1687
-        Passive EHP Magical     0.0000   (NNLS drove it to zero: no signal)
-        intercept               932.48 -> 894.86
-
+    **THE DESIGN INVENTS NOTHING.** Three columns join the regression:
+    Passive Damage (the four DAMAGE_KEYS averaged) and the two effective-health
+    channels KEPT APART, because §4.17 refuses to collapse them. NNLS learns
+    their gold price the way it learns every stat price: **0.9697 gold per
+    point of simulated damage, 0.1597 for physical effective health, 0.0000
+    for magical** (driven to zero: no signal). Intercept 932.5 -> 891.0.
     `side_by_side` still FEEDS NOTHING (§4.4): the simulator exports to
-    `data/_passive_values.yaml` and `efficiency` reads the data, so no scoring
-    module imports the diagnostic. Regenerate with
-    `python -m smite.scripts.passive_values --write`.
+    `data/_passive_values.yaml` (`python -m smite.scripts.passive_values
+    --write`) and `efficiency` reads the data.
 
-    **IT CORRECTS EXACTLY WHAT §4.31 SAID IT WOULD.**
+    **THE REFERENCE CONTEXT.** A per-item value is the MEDIAN over up to 30
+    builds holding the item (ours and the community's, all modes, sampled
+    evenly and deterministically) against the median-Mid and median-Support
+    reference targets, and the spread is written beside it. Of 76 valued
+    items, 33 sit inside 1.5x, 17 at 1.5-2x, 5 at 2-3x, 4 at 3-5x and 12 above
+    5x (Chronos' Pendant 22.5x). Deathbringer is 1.6x over 87 builds, not the
+    3.0x it read over 5 shipped cores. Nine measured negative in some build and
+    are clamped at zero. 54 items are `refused` (explicit zero, reason kept),
+    31 have no passive, 32 are `no-context`.
 
-        Devourer's Gauntlet   +629.9 -> +76.8    premium -> fair
-        Deathbringer          +204.6 -> +34.0    fair    -> fair
-        Jotunn's Revenge      -363.0 -> -274.6   undervalued (stays)
-        The Executioner       +566.1 -> +551.3   premium (supersede offsets it)
-        **Tekko-Kagi           -25.3 -> +312.1    fair -> PREMIUM**
+    **WHAT IT CORRECTS.** Tekko-Kagi -25.3 -> **+205.3**, fair -> premium, and
+    it falls from 27 Conquest `model` builds to 11. Devourer's Gauntlet +629.9
+    -> +152.7 (premium -> fair), Deathbringer +204.6 -> +56.1. Not a §4.25
+    rescale: the decomposition's NORM arm moved 0/3/0 cores.
 
-    The item that won by having nothing to mark up now reads premium, and it
-    leaves **20 Conquest `model` cores**. That is §4.31's prediction landing.
+    **THE DUAL-PRICED ITEMS: THE FLAG WINS, WHICH REVERSES THE FIRST RULE.**
+    Eight items are priced by a shipped flag AND simulated. Letting the
+    simulated value supersede the flag (the rule first proposed) swapped an
+    exact, on-map stat grant for a median that lands in a column no role map
+    names, which `offmap_efficiency` then charges back at 55%. It evicted the
+    conversion staples from Conquest `model` builds: Rod of Tahuti 35 -> 25,
+    Transcendence 13 -> 5, Book of Thoth 6 -> 0, Nimble Ring 7 -> 1. With the
+    flag's grant standing they hold (34, 14, 2, 9), and both gates prefer it:
 
-    **AND IT IS NOT A §4.25 RESCALE.** The five-arm decomposition
-    (`refit_decomposition.py --flag price_passive_sim`, generalised here):
+        rule          leakage-free     held-out ww / spearman
+        OFF           36.8% / 37.6%          --
+        sim wins      39.9% / 38.5%     -0.0014 / +0.0567
+        flag wins     41.3% / 38.4%     +0.0167 / +0.0566    <- shipped
 
-        arm      Conquest  Joust  Arena      what it isolates
-        ON             80     46     39
-        REFIT          81     39     38      the refitted gold table
-        LOCAL          23     14     20      the priced items' own lines
-        **NORM          0      3      0**      pure min-max rescale
-    
-    `price_stat_multipliers` moved 36/28/54 through NORM alone. This moves
-    0/3/0. The effect is the pricing, not the scale.
+    What it gives up is The Executioner: its 7% shred exists only in the
+    simulated number, so it stays unpriced and the item reads +739.9. The
+    passive columns themselves ARE charged as off-map; they fail the exemption
+    rule's test (ii), since `passive_sim` is an instrument that prices them.
 
-    **THE RESULT, AND IT IS TWO-SIDED.**
+    **THE RESULT.** Leakage-free 36.8/37.6 -> **41.3/38.4**. Held-out **+0.0167
+    win-weighted / +0.0566 spearman**, a clean PASS and twice §4.31's +0.0082
+    benchmark; tuning -0.0036 / +0.0413. Gods at 0% coverage 7 -> 4. Reference
+    lines moved: Conquest core 10, Conquest 77, Joust 55, Arena 58.
 
-        split     win-weighted      spearman
-        tuning      -0.0033          +0.0869
-        held-out    -0.0014          +0.0567
+    **WHAT IT DOES TO THE COMPARISON PAGES** (46 of 282 shown verdicts change:
+    Conquest 30, Joust 7, Arena 9):
 
-    Spearman — how closely the model's item RANKING tracks the community's —
-    improves substantially on both splits. Win-weighted coverage falls
-    marginally, inside the 1-point tolerance. §4.31's benchmark was that
-    excluding Tekko-Kagi outright measured +0.0107/+0.0082 on win-weighted;
-    **this does not beat that on win-weighted**, and per the brief that is said
-    rather than retuned away.
+        readable verdicts    Solo   Support  Mid    Jungle  Carry   total   I / T / C
+        Conquest  before    11/19    7/15    6/23    5/18    3/19   32/94    7/17/8
+        Conquest  after     10/19    3/15    6/23   12/18    6/19   37/94    8/16/13
+        Joust     before     6/19    8/15   12/23    8/18    2/19   36/94   20/13/3
+        Joust     after      7/19    8/15   12/23   10/18    2/19   39/94   22/14/3
+        Arena     before     3/19    0/15   11/23   12/18    6/19   32/94   22/8/2
+        Arena     after      6/19    1/15   13/23   10/18    6/19   36/94   21/12/3
 
-    **CORRECTION, 2026-11-05: THIS ENTRY FIRST CLAIMED "ZERO VERDICTS MOVE"
-    AND THAT WAS NEVER MEASURED.** `python -m smite.side_by_side` writes the
-    per-god pages only with `--json`; without it the run exits 0 and rewrites
-    nothing. Both "flag ON" verdict readings behind the original claim compared
-    `main`'s pages against themselves, and so did the follow-up reading that
-    "Tekko-Kagi still blocks 15 Carry gods with the flag on". Found when
-    Artemis's `model` build read The Reaper in `data/builds` and Tekko-Kagi on
-    its comparison page. The claim, the "#107's null from the other side"
-    reading built on it, and the conclusion that the verdict rule was the
-    constraint are all withdrawn. What follows is measured with the pages
-    regenerated, against `origin/main` 1ec81c29.
+    Conquest Carry goes 3 -> 6 readable, and the six read 0 Ichor better / 1
+    trade-off / 5 community better. Support's fall is §4.30's equal-ignorance
+    artifact in reverse: Ganesha, Geb, Sylvanus and Yemoja read ours 100% /
+    theirs 83-84% with Stampede on the community's side.
 
-    **WHAT THE FLAG ACTUALLY DOES TO THE COMPARISON: 35 SHOWN VERDICTS CHANGE.**
+    **CORRECTION: THIS ENTRY FIRST CLAIMED "ZERO VERDICTS MOVE".** That was
+    never measured. `side_by_side` rewrites the per-god pages only with
+    `--json`; without it the run exits 0 and writes nothing, so the readings
+    compared `main`'s pages with themselves. The claim, and the conclusion
+    built on it that the verdict rule was the binding constraint, are
+    withdrawn. A second defect was found the same day: the columns first lived
+    in `item_stat_values`, which `build_quality` and `damage_value` read as
+    EFFECTIVE STATS, so at ON a build lost The Executioner's real +30 Strength.
+    They now live in `efficiency.regression_columns`. Both were invisible at
+    OFF, which is why green gates at OFF were not evidence the flag worked.
 
-        readable Conquest verdicts      main -> ON
-        Solo                              11 -> 10   of 19
-        Support                            7 ->  2   of 15
-        Mid                                5 ->  5   of 23
-        Jungle                             5 -> 12   of 18
-        Carry                              3 -> 10   of 19
-        total                             31 -> 39   of 94
+    **THE COMPARISON-SCOPE QUESTION (`model` or `core`), MEASURED AND LEFT.**
+    Judging `core` instead of `model` does not unblock Carry by itself: at
+    baseline Carry reads 2/19 against 3/19. With pricing on it reads 12/19
+    against 6/19 (total 41 against 37). It is left on `model` because that
+    gain is largely `core` being built partly from the community's own win and
+    pick signals, so both sides hold the same simulated items and the
+    comparison is measuring itself (§1); and because stacking a scope change on
+    a re-basing of every residual would make neither attributable.
 
-        by direction, readable only     main -> ON
-        Ichor better                       7 ->  9
-        trade-off                         17 -> 15
-        community better                   7 -> 15
-
-    **Carry reaches 10 readable — the target §4.30 said could not be reached by
-    simulating passives — because the flag removes Tekko-Kagi from the builds
-    the comparison judges.** §4.30's diagnosis stands (the passive is a correct
-    refusal); what it missed is that the item need not be IN the build. Carry's
-    readable split is 3 Ichor better / 1 trade-off / 6 community better.
-
-    **Support's fall from 7 to 2 is the equal-ignorance artifact of §4.30
-    running the other way, not worse builds.** Ganesha, Geb, Sylvanus and
-    Yemoja all read ours 100% / theirs 83-84%, blocked by **Stampede on the
-    community's side**: our builds shed their refused item, theirs did not, and
-    a gap that was ~0 while both sides were equally unsimulated opened past
-    0.14. Stampede is now the single largest blocker (9 gods), then Tekko-Kagi
-    (5), Hussar's Wings (3), Erosion (3).
-
-    **THE DEFECT THE FLAG SHIPPED WITH FOR ONE DAY.** The first version added
-    its columns inside `item_stat_values`, which `build_quality`,
-    `damage_value` and `new_entities` read as an item's EFFECTIVE STATS. Green
-    at OFF; at ON it handed damage arithmetic a "stat" called Passive Damage and
-    let the supersede rule delete The Executioner's real adaptive +30 Strength
-    from a build's totals. `test_priced_run_restores_the_pricing_flags` caught
-    it the first time the flag was turned on. The columns now live in
-    `efficiency.regression_columns`, which only the matrix, the prediction and
-    `stat_gold` call; the fit is bit-identical (same three prices, Tekko-Kagi
-    still +312.1). This is why "ships OFF, gates green" was not evidence the
-    flag worked, and why it was not merged on that basis.
-
-    **THE OFF-MAP CHARGE APPLIES TO THE NEW COLUMNS, AND BOTH ARMS ARE
-    MEASURED.** No role map names Passive Damage, so `offmap_efficiency` (0.55)
-    charges 55% of every item's fitted passive gold back. That is the exemption
-    rule applied rather than an accident: its test (ii) asks whether any
-    instrument here can price the stat, and `passive_sim` is that instrument.
-    The two gates disagree about which arm is better:
-
-        arm                         leakage-free control    held-out ww / spearman
-        OFF                            36.8% / 37.6%              --
-        ON, columns CHARGED (rule)     39.7% / 38.5%        -0.0014 / +0.0567
-        ON, columns EXEMPT             37.0% / 37.0%        +0.0150 / +0.1012
-
-    The charged arm is the one the rule prescribes, the one every figure in
-    this entry describes, and the better one on the gate CLAUDE.md rule 1 names
-    as the judge. The exempt arm beats §4.31's +0.0082 benchmark on held-out
-    and would need an exemption the rule says is not earned. Recorded as a
-    two-gate disagreement, the shape §4.15 had before it was resolved.
-
-    **THE ASSUMPTION, MEASURED.** A per-item value is the MEDIAN over up to 30
-    builds holding the item (ours and the community's, all modes) against the
-    median-Mid and median-Support reference targets. Of 76 valued items, 33 sit
-    inside 1.5x, 17 at 1.5-2x, 5 at 2-3x, 4 at 3-5x and **12 exceed 5x** —
-    Chronos' Pendant 22.5x, Shell of Rebuke 11.8x. Nine measured NEGATIVE in
-    some build, a timing interaction rather than a refund, so the column is
-    clamped at zero rather than becoming a credit. A wider sample tightened the
-    worst case §4.32 reported: Deathbringer 3.0x over 5 shipped cores became
-    1.6x over 87 builds. Statuses written: 72 simulated, 4 partial, 54 refused
-    (explicit zero, with the reason), 31 no passive text, and **32
-    `no-context`** — simulated but in no build to measure in, zeroed and
-    labelled rather than guessed.
-
-    **WHY IT STILL SHIPS OFF IN THIS COMMIT.** Turning it on is no longer a
-    quiet change: it flips 35 shown verdicts on the live comparison pages,
-    doubles the readable "community better" count, makes Carry judgeable and
-    makes Support mostly unjudgeable. It was approved on the withdrawn claim
-    that it moved none of that, so the decision goes back to Jacob with the
-    numbers above. The flag, the data file, the generator and the decomposition
-    are all in place to turn it on in one line.
+    **COSTS, STATED.** The penetration-split ratio on the current patch falls
+    1.104 -> 1.057, above the 1.0 floor but at the bottom of its old
+    leave-one-out range. Support is mostly unjudgeable in Conquest. Readable
+    "community better" rises 8 -> 13 in Conquest, because more verdicts are
+    readable and the community wins most of the new ones.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -3382,7 +3330,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1410) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1411) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3494,15 +3442,15 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Joust / Arena gods placed | 0 / 95 — no outcome data exists |
 | Items placed | <!--now-->216 / 228<!--/now--> (2026-11-03). Earlier, 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
 | Community sample | 14,667 Obsidian+ Conquest matches, 20 Oct – 3 Nov (2026-11-03, OB47). The rest of this row is the 25 Aug – 7 Sep window's history (16,223 matches then) — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
-| Headline gate | coverage 49.1%, win-weighted 50.3% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
-| **Leakage-free** | **36.8% probe · 37.6% at eff 0.45, vs 5.8% chance = 6.3–6.5×** (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Re-checked 2026-11-04 at input fingerprint `db3f6bb49ee5` with the ally gate in (both splits still 37.0% / 37.6%), where the SAMPLER printed 5.8% and the exact form reads **5.7498%** — so 5.7% still stands. The exact figure did move, from **5.6744%** with the gate off, and for once that is not the wobble: the gate SHRINKS each non-qualifying god's candidate pool by up to four items, and chance is pool-ratio, so a smaller pool really is likelier to hit a community item. It is the one kind of change that legitimately moves this number, which is why the closed form and not the sampler was used to decide the digit did not change. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
+| Headline gate | coverage 49.0%, win-weighted 50.4% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
+| **Leakage-free** | **41.3% probe · 38.4% at eff 0.45, vs 5.8% chance = 6.6–7.1×** (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second, so the multiple is nearer 6.7× at the left-hand corner. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Re-checked 2026-11-04 at input fingerprint `db3f6bb49ee5` with the ally gate in (both splits still 37.0% / 37.6%), where the SAMPLER printed 5.8% and the exact form reads **5.7498%** — so 5.7% still stands. The exact figure did move, from **5.6744%** with the gate off, and for once that is not the wobble: the gate SHRINKS each non-qualifying god's candidate pool by up to four items, and chance is pool-ratio, so a smaller pool really is likelier to hit a community item. It is the one kind of change that legitimately moves this number, which is why the closed form and not the sampler was used to decide the digit did not change. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
 | Adaptive pricing | 8 buildable items repriced, 4 of 8 stop reading `premium`, and **83 of 89 Conquest cores change** — none of them by gaining one of the eight. See `price_adaptive` |
-| Cap overflow | 47 -> 3 of 2600 builds over the penetration cap (2026-11-04, OB47; 2553 -> 2577 is the per-ability damage parse moving flavor eligibility, +8 tabs net per mode, none of them over; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
+| Cap overflow | 47 -> 2 of 2601 builds over the penetration cap (2026-11-04, OB47; 2553 -> 2577 is the per-ability damage parse moving flavor eligibility, +8 tabs net per mode, none of them over; 2550 -> 2553 is Ares gaining the `strength` flavor in three modes when his kit first parsed; the 3 new ones were not investigated in this pass — §4.28's defect accounted for the 1 below). **THE 1 IS A DEFECT AND IT IS LEFT READING 1 ON PURPOSE — §4.28 has it.** History first: `cap_overflow` took the original 47 to 29; `price_adaptive` reshaped enough cores to clear the rest — measured, not designed — `offmap_efficiency` at 0.55 put three back (3 of 2390, 2026-08-29), and the post-reset window took it to 0 of 2433. The one build now over is Morgan Le Fay / Conquest / `hybrid` / Aspect of the Cursed Crown, at 45% percentage penetration against a cap of 40. It is over because **the `hybrid` archetype is the one build the charge has never been wired into**: `recommend._build_entry_set` passes `overflow_args` for `core`, all eleven flavors and `model`, and does so for the bare and the aspect entry set alike, but `hybrid.hybrid_core` re-assembles through `assemble.assemble_core` with `stat_caps` and coherence only. Aspect builds DO consult the cap; this archetype does not, and has not since the flag shipped (2026-08-21) one day after that call last moved. **This also retires the standing puzzle this row used to carry** — "the count fell while the sample grew, and this file has no mechanism for it". There is one: non-hybrid suggested entries are exactly 2,406 at every commit checked from 2026-08-29 to today, so the whole denominator is 2,406 plus however many hybrid swaps fire, and that tracks how deep the community window is. 2,433 -> 2,479 is 27 -> 73 hybrids and nothing else. See `cap_overflow` and §4.28 |
 | Combat model | 0.0% worst case over 12 observations |
-| Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
+| Gods at 0% coverage | 4 — Cernunnos, Cupid, Guan Yu, Mercury. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1410 pipeline · 958 viewer |
+| Tests | 1411 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

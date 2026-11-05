@@ -1214,38 +1214,30 @@ price_on_hit: false
 #
 # WHAT IT DOES. Adds three fitted columns from `data/_passive_values.yaml`:
 # Passive Damage, Passive EHP Physical and Passive EHP Magical. The GOLD PRICE
-# IS FITTED, not written here — NNLS learns it the way it learns every stat
-# price, so no constant is invented. Measured on this data: 1.2004 gold per
-# point of simulated damage, 0.1687 for physical effective health, and 0.0000
+# IS FITTED, not written here. NNLS learns it the way it learns every stat
+# price, so no constant is invented. Measured on this data: 0.9697 gold per
+# point of simulated damage, 0.1597 for physical effective health, and 0.0000
 # for magical, which NNLS drove to zero as carrying no explanatory power.
 #
-# Two things to read before touching it. The per-item value is a MEDIAN over up
-# to 30 builds that hold the item, and the spread is wide for some: of 76
-# valued items, 33 sit inside 1.5x, 17 at 1.5-2x, and 12 exceed 5x. And for the
-# eight items priced by BOTH a flag above and `passive_sim`, the simulated
-# value SUPERSEDES the flag's grant (`efficiency.PASSIVE_SIM_SUPERSEDES`) —
-# `passive_contribution` switches the whole passive off, so its number already
-# contains the adaptive or converted stats, and keeping both counts them twice.
+# THREE THINGS TO READ BEFORE TOUCHING IT (all in register §4.32).
+#   * The per-item value is a MEDIAN over up to 30 builds holding the item,
+#     and the spread is wide for some: of 76 valued items, 33 sit inside 1.5x,
+#     17 at 1.5-2x, and 12 exceed 5x.
+#   * For the eight items priced by BOTH a flag above and `passive_sim`, the
+#     FLAG's grant stands and the simulated value is not added
+#     (`efficiency.PASSIVE_SIM_DUAL = "flag"`). The other way round evicted
+#     Rod of Tahuti, Transcendence, Book of Thoth and Nimble Ring from mage
+#     builds and scored worse on both gates.
+#   * The new columns are charged by `offmap_efficiency` and are NOT in
+#     `offmap_exempt`: that list's test (ii) asks whether any instrument here
+#     can price the stat, and `passive_sim` is that instrument.
 #
-# THE OFF-MAP CHARGE APPLIES TO THESE COLUMNS, and both arms are measured
-# (2026-11-05, against OFF at 36.8% / 37.6% leakage-free):
-#
-#     arm                          leakage-free     held-out ww / spearman
-#     columns CHARGED (the rule)   39.7% / 38.5%     -0.0014 / +0.0567
-#     columns EXEMPT               37.0% / 37.0%     +0.0150 / +0.1012
-#
-# No role map names them, so `offmap_efficiency` charges 55% of the fitted
-# passive gold back. They are NOT added to `offmap_exempt`: that list's test
-# (ii) asks whether any instrument here can price the stat, and `passive_sim`
-# is the instrument that produced them. The gates disagree about the arms;
-# the charged one is what the rule prescribes and what ships if this is on.
-#
-# WHAT TURNING IT ON DOES TO THE COMPARISON PAGES — measure with
-# `side_by_side --json`, because without `--json` no page is rewritten and the
-# reading comes back identical for the wrong reason: readable Conquest verdicts
-# 31 -> 39 (Carry 3 -> 10, Jungle 5 -> 12, Support 7 -> 2), 35 shown verdicts
-# change, readable "community better" 7 -> 15. Register §4.32.
-price_passive_sim: false
+# MEASURED 2026-11-05 against `main` 6c34a58d: leakage-free 36.8% / 37.6% ->
+# 41.3% / 38.4%, held-out +0.0167 win-weighted / +0.0566 spearman. It moves 46
+# of 282 shown comparison verdicts. Measure that with `side_by_side --json`:
+# without `--json` no page is rewritten and the reading comes back identical
+# for the wrong reason.
+price_passive_sim: true
 
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.

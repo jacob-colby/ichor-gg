@@ -96,25 +96,41 @@ def test_every_scored_item_is_in_the_file(items):
     assert not missing, f"regenerate data/_passive_values.yaml; missing: {missing[:8]}"
 
 
-def test_simulated_value_supersedes_the_flag_derived_grant(by_name):
+def test_a_dual_priced_item_is_counted_once_and_the_flag_wins(by_name):
     """THE DOUBLE COUNT, and the one correctness risk §4.32 named.
 
-    The Executioner's adaptive +30 Strength is already in its stat columns via
-    `price_adaptive`, while `passive_contribution` switches the WHOLE passive
-    off — so its simulated number already contains that grant. With both flags
-    on, the adaptive grant must be gone from the stat columns."""
+    The Executioner's adaptive +30 Strength is in its stat columns via
+    `price_adaptive`, and `passive_contribution` switches the WHOLE passive
+    off, so its simulated number contains that grant too. One side has to
+    stand down. It is the simulated one: the flag states the passive as the
+    stat it is, on the fit map of the god who wants it, where the simulated
+    column is off every map and is charged back. `efficiency`'s comment on
+    `PASSIVE_SIM_SUPERSEDES` has both arms measured."""
+    assert efficiency.PASSIVE_SIM_DUAL == "flag"
     item = by_name["The Executioner"]
     adaptive_only = _stats(item, price_adaptive=True)
     both = _stats(item, price_adaptive=True, price_passive_sim=True)
+    assert adaptive_only != _stats(item), "fixture drifted: price_adaptive adds nothing here"
+    assert both == adaptive_only, "the flag's grant must stand, with nothing stacked on it"
+    assert not any(c in both for c in efficiency.PASSIVE_SIM_COLUMNS)
+
+
+def test_the_other_arm_still_counts_once(by_name):
+    """`PASSIVE_SIM_DUAL = "sim"` is kept because it is the measured
+    counterfactual. If someone flips it, the grant must leave as the column
+    arrives — never both."""
+    item = by_name["The Executioner"]
     printed = _stats(item)
-    # `price_adaptive` adds something on its own...
-    assert adaptive_only != printed
-    # ...and that something is not also present once the simulated value is.
-    for key, val in adaptive_only.items():
-        if key in printed:
-            continue
-        assert key not in both, f"{key} double counted on The Executioner"
+    prior = efficiency.PASSIVE_SIM_DUAL
+    efficiency.PASSIVE_SIM_DUAL = "sim"
+    try:
+        both = _stats(item, price_adaptive=True, price_passive_sim=True)
+    finally:
+        efficiency.PASSIVE_SIM_DUAL = prior
     assert "Passive Damage" in both
+    for key in _stats(item, price_adaptive=True):
+        if key not in printed:
+            assert key not in both, f"{key} double counted on The Executioner"
 
 
 def test_supersede_set_only_names_items_that_are_both(by_name):

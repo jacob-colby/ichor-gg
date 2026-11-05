@@ -314,17 +314,41 @@ def regression_columns(item):
 PASSIVE_SIM_COLUMNS = ("Passive Damage", "Passive EHP Physical", "Passive EHP Magical")
 
 #: Items whose passive is priced BOTH by one of the flags above and by
-#: `passive_sim`. Measured 2026-11-05. For these the simulated value SUPERSEDES
-#: the flag-derived grant, because `passive_contribution` runs the build with
-#: the whole passive switched off — so its number already contains the adaptive
-#: or converted stats the flag adds, and keeping both counts them twice. The
-#: Executioner is the one that matters: its adaptive +30 Strength is in its stat
-#: columns via `price_adaptive` while `passive_sim` simulates that grant AND the
-#: 7% protection shred together, and it is the item register §4.31 is about.
+#: `passive_sim`. Measured 2026-11-05. Counting both would count the passive
+#: twice — `passive_contribution` switches the WHOLE passive off, so its number
+#: already contains the adaptive or converted stats the flag adds — so one side
+#: has to stand down, and `PASSIVE_SIM_DUAL` says which.
+#:
+#: THE FLAG WINS, and that reverses the rule this was first written with. For
+#: these items the passive IS a stat grant or conversion, and the flag states
+#: it as the stat it is: exact, priced at the fitted stat price, and ON the fit
+#: map of the god who wants it. The simulated value is a median over builds,
+#: and it lands in a column no role map names, so `offmap_efficiency` charges
+#: 55% of it back. Under "sim" that asymmetry evicted the conversion staples
+#: from Conquest `model` builds — Rod of Tahuti 35 -> 25, Transcendence 13 -> 5,
+#: Book of Thoth 6 -> 0, Nimble Ring 7 -> 1 — which is the double-count fix
+#: turning into a penalty on exactly the items the model already priced well.
+#: Under "flag" they hold (34, 14, 2, 9) and Tekko-Kagi still falls 27 -> 11.
+#: On the gates, against OFF at the same baseline:
+#:
+#:     rule     leakage-free     held-out ww / spearman    tuning ww / spearman
+#:     sim      39.9% / 38.5%     -0.0014 / +0.0567         -0.0005 / +0.0869
+#:     flag     41.3% / 38.4%     +0.0167 / +0.0566         -0.0036 / +0.0413
+#:
+#: WHAT "flag" GIVES UP: The Executioner. Its flag prices the adaptive +30
+#: Strength; its 7% protection shred exists only in the simulated number, and
+#: separating the two needs a hook-level switch `Sim` does not have. So the
+#: shred stays unpriced, and the item register §4.31 is about is the one this
+#: rule serves worst. Said here rather than left to be rediscovered.
 PASSIVE_SIM_SUPERSEDES = frozenset({
     "Book of Thoth", "Brawler’s Beat Stick", "Eye of Erebus", "Nimble Ring",
     "Rod of Tahuti", "Sun Beam Bow", "The Executioner", "Transcendence",
 })
+
+#: Which side wins for the dual-priced items: "flag" (shipped) or "sim". Both
+#: count the passive once; they differ in WHERE the value lands. The comment on
+#: `PASSIVE_SIM_SUPERSEDES` above carries both arms' measurements.
+PASSIVE_SIM_DUAL = "flag"
 
 _PASSIVE_VALUES = None
 
@@ -365,9 +389,13 @@ def _with_passive_sim_columns(item, out):
     if row is None:
         return out
     if item.get("name") in PASSIVE_SIM_SUPERSEDES:
-        # The flag-derived grant is already inside the simulated number. Drop
-        # what the flags added for THIS item by re-reading its printed stats
-        # alone, so the simulated value is counted once.
+        if PASSIVE_SIM_DUAL == "flag":
+            # The flag's grant stands and the simulated value is not added:
+            # counted once, as the stat it is.
+            return out
+        # "sim": the flag-derived grant is already inside the simulated
+        # number. Drop what the flags added for THIS item by re-reading its
+        # printed stats alone, so the simulated value is counted once.
         out = {}
         for name, raw in (item.get("stats") or {}).items():
             val = parse_stat_value(raw)
@@ -1063,15 +1091,14 @@ def offmap_adjusted_score(eff_row, role_map, strength, exempt=()):
 #     Open Beta 40    1.258  [1.18, 1.38]         1.92
 #     Open Beta 46    1.104  [1.05, 1.20]         1.39
 #
-# 1.0 is not tuned between those, it is where the fit stops making sense:
-# at or below it a point of percentage penetration is priced no dearer than a
-# point of flat, which is wrong against any target above 100 protections —
-# every god by the mid game (10% is 30 flat against 300). Everything above it
-# is a property of the patch's item set, not a defect: PR #68 pinned both
-# columns on Open Beta 46 back to Open Beta 40's shipped prices and 0 of 90
-# Conquest cores changed, so 1.10 -> 1.26 moves no build. 1.0 also sits under
-# Open Beta 46's whole leave-one-out range, so no single item's removal on the
-# current data can cross it — a firing is a pool-wide shift, not one reprice.
+# With `price_passive_sim` on (2026-11-05, register §4.32) the shipped ratios
+# read 1.248 on Open Beta 40 and 1.057 on Open Beta 46: the passive columns
+# take gold the stat columns used to absorb, and percent penetration cheapens
+# more than flat. Open Beta 46 is now at the bottom of its own leave-one-out
+# range above (which was measured before the flag and was not re-run), so one
+# item's removal could plausibly cross the floor where it could not before.
+# The check has not fired; its margin has thinned, and that is a cost of the
+# flag worth knowing about rather than a pin to restamp and forget.
 PENETRATION_SPLIT_FLOOR = 1.0
 
 
