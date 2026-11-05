@@ -93,15 +93,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Book of Thoth
   - Spear of Desolation
-  - Spear of the Magus
-  - The World Stone
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - The World Stone
-  - Spear of the Magus
+  - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -116,36 +116,36 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Spear of the Magus, Lotus Sickle, Gluttonous Grimoire, Chronos''
+    this god: Soul Gem, Lotus Sickle, Spear of the Magus, Gluttonous Grimoire, Chronos''
     Pendant, Doom Orb, Dreamer''s Idol, Gem of Focus, Heartwood Charm, Ancient Signet,
     The Cosmic Horror, Totem of Death, Blood-Bound Book, Polynomicon, Soul Reaver,
     Divine Ruin, Jade Scepter, Staff of Myrddin, Bancroft''s Talon, Helm of Radiance,
     Ethereal Staff, Genji''s Guard, Typhon’s Heart, Rod of Asclepius, Alchemist Coat.'
   slot_scores:
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.26
+      fit: 0.41
     Spear of Desolation:
       total: 0.63
       efficiency: 0.59
       win: 0.54
       pick: 0.55
       fit: 1.0
-    Spear of the Magus:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.55
-      pick: 0.0
-      fit: 0.72
-    The World Stone:
-      total: 0.56
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.53
-      fit: 0.72
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.72
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.79
     Obsidian Shard:
       total: 0.62
       efficiency: 0.58
@@ -159,8 +159,8 @@ builds:
       pick: 0.0
       fit: 1.0
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   starter: &id001
@@ -174,9 +174,9 @@ builds:
   - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
-  - Soul Gem
+  - Lotus Sickle
   flex_slots:
-  - Soul Gem
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -191,12 +191,12 @@ builds:
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Lotus Sickle, Death Metal, Doom Orb, Spear of the Magus, Ancient Signet,
-    Gluttonous Grimoire, Chronos'' Pendant, Heartwood Charm, Dreamer''s Idol, Polynomicon,
-    Bragi''s Harp, Gem of Focus, Soul Reaver, Blood-Bound Book, The Cosmic Horror,
-    Bancroft''s Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade Scepter,
-    Genji''s Guard, Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Lotus
+    Sickle, Soul Gem, Death Metal, Doom Orb, Spear of the Magus, Ancient Signet, Gluttonous
+    Grimoire, Chronos'' Pendant, Heartwood Charm, Dreamer''s Idol, Polynomicon, Bragi''s
+    Harp, Gem of Focus, Soul Reaver, Blood-Bound Book, The Cosmic Horror, Bancroft''s
+    Talon, Triton''s Conch, Totem of Death, Divine Ruin, Jade Scepter, Genji''s Guard,
+    Helm of Radiance, Ethereal Staff, Wish-Granting Pearl.'
   slot_scores:
     Book of Thoth:
       total: 0.47
@@ -228,12 +228,12 @@ builds:
       win: 0.6
       pick: 0.45
       fit: 0.57
-    Soul Gem:
+    Lotus Sickle:
       total: 0.54
-      efficiency: 0.53
+      efficiency: 0.57
       win: 0.55
       pick: 0.0
-      fit: 0.71
+      fit: 0.63
   community_ordered:
   - Book of Thoth
   - Spear of Desolation
@@ -267,7 +267,7 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Lotus Sickle,
+    god: Soul Gem, Spear of the Magus, Lotus Sickle, Gluttonous Grimoire, Doom Orb,
     Dreamer''s Idol, Chronos'' Pendant, Death Metal, Ancient Signet, The Cosmic Horror,
     Gem of Focus, Heartwood Charm, Bragi''s Harp, Blood-Bound Book, Polynomicon, Totem
     of Death, Soul Reaver, Damaru, Divine Ruin, Jade Scepter, Genji''s Guard, Triton''s
@@ -342,10 +342,10 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Kinetic Cuirass, Gluttonous
-    Grimoire, Genji''s Guard, Ethereal Staff, Freya''s Tears, Phoenix Feather, Blood-Bound
-    Book, Breastplate of Valor, Rod of Asclepius, Yogi''s Necklace, Helm of Radiance,
-    Sphere of Negation, Helm of Darkness, Soul Locket, Chandra''s Grace, Spear of
-    the Magus, Oni Hunter''s Garb, Erosion, Eye of Providence, Lotus Sickle, Jade
+    Grimoire, Genji''s Guard, Ethereal Staff, Freya''s Tears, Lotus Sickle, Phoenix
+    Feather, Blood-Bound Book, Breastplate of Valor, Rod of Asclepius, Yogi''s Necklace,
+    Helm of Radiance, Sphere of Negation, Helm of Darkness, Soul Locket, Chandra''s
+    Grace, Spear of the Magus, Oni Hunter''s Garb, Erosion, Eye of Providence, Jade
     Scepter, Draconic Scale, Regrowth Striders, Glorious Pridwen.'
   slot_scores:
     Kinetic Cuirass:
@@ -416,7 +416,7 @@ builds:
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Soul Gem, Spear of the Magus, Gluttonous Grimoire, Doom Orb, Dreamer''s
-    Idol, The Cosmic Horror, Lotus Sickle, Chronos'' Pendant, Ancient Signet, Gem
+    Idol, Lotus Sickle, The Cosmic Horror, Chronos'' Pendant, Ancient Signet, Gem
     of Focus, Heartwood Charm, Blood-Bound Book, Polynomicon, Totem of Death, Soul
     Reaver, Divine Ruin, Jade Scepter, Screeching Gargoyle, Bancroft''s Talon, Helm
     of Radiance, Ethereal Staff, Genji''s Guard, Staff of Myrddin, Typhon’s Heart,
@@ -490,11 +490,11 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Gluttonous Grimoire, Bragi''s Harp, Spear of the Magus, Blood-Bound
-    Book, Lotus Sickle, Bracer of The Abyss, Ancient Signet, Chronos'' Pendant, Death
-    Metal, Eros'' Bow, Doom Orb, Dreamer''s Idol, Gem of Focus, Heartwood Charm, Bancroft''s
-    Talon, Polynomicon, The Cosmic Horror, Typhon’s Heart, Soul Reaver, Totem of Death,
-    Divine Ruin, Jade Scepter, Damaru.'
+    this god: Soul Gem, Gluttonous Grimoire, Lotus Sickle, Bragi''s Harp, Spear of
+    the Magus, Blood-Bound Book, Bracer of The Abyss, Ancient Signet, Chronos'' Pendant,
+    Death Metal, Eros'' Bow, Doom Orb, Dreamer''s Idol, Gem of Focus, Heartwood Charm,
+    Bancroft''s Talon, Polynomicon, The Cosmic Horror, Typhon’s Heart, Soul Reaver,
+    Totem of Death, Divine Ruin, Jade Scepter, Damaru.'
   slot_scores:
     Bracer of The Abyss:
       total: 0.49
@@ -541,10 +541,10 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
-  - Spear of Desolation
   - Chronos' Pendant
+  - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
@@ -571,9 +571,9 @@ builds:
     Blood-Bound Book, Polynomicon, Eye of Erebus, Screeching Gargoyle, Bragi''s Harp,
     Soul Reaver, Freya''s Tears.'
   slot_scores:
-    Lotus Sickle:
+    Chronos' Pendant:
       total: 0.54
-      efficiency: 0.57
+      efficiency: 0.55
       win: 0.55
       pick: 0.0
       fit: 0.65
@@ -583,18 +583,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.85
-    Chronos' Pendant:
-      total: 0.54
-      efficiency: 0.55
-      win: 0.55
-      pick: 0.0
-      fit: 0.65
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.35
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.75
     Obsidian Shard:
       total: 0.56
       efficiency: 0.58
@@ -615,15 +615,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Lotus Sickle
+  - Book of Thoth
   - Spear of Desolation
-  - Spear of the Magus
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of the Magus
   - Lotus Sickle
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -638,37 +638,37 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Soul Gem, Spear of the Magus, Lotus Sickle, Gluttonous
+    Underrated for this god: Soul Gem, Lotus Sickle, Spear of the Magus, Gluttonous
     Grimoire, Chronos'' Pendant, Doom Orb, Dreamer''s Idol, Gem of Focus, Heartwood
     Charm, Ancient Signet, The Cosmic Horror, Totem of Death, Blood-Bound Book, Polynomicon,
     Soul Reaver, Divine Ruin, Jade Scepter, Staff of Myrddin, Bancroft''s Talon, Helm
     of Radiance, Ethereal Staff, Genji''s Guard, Typhon’s Heart, Rod of Asclepius,
     Alchemist Coat.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 0.69
+    Book of Thoth:
+      total: 0.48
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.26
+      fit: 0.41
     Spear of Desolation:
       total: 0.63
       efficiency: 0.59
       win: 0.54
       pick: 0.55
       fit: 1.0
-    Spear of the Magus:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.55
-      pick: 0.0
-      fit: 0.72
     Rod of Tahuti:
       total: 0.68
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.72
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.79
     Obsidian Shard:
       total: 0.62
       efficiency: 0.58
@@ -682,6 +682,7 @@ builds:
       pick: 0.0
       fit: 1.0
   community_ordered:
+  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -691,13 +692,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Spear of Desolation
-  - Void Stone
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Genji's Guard
-  - Void Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -712,12 +713,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Amanita Charm, Genji''s Guard, Gluttonous Grimoire, Rod of
-    Asclepius, Soul Locket, Void Stone, Doublet of Binding, Lifebinder, Chandra''s
-    Grace, Spear of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff,
-    Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros''
-    Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s
-    Idol, Gem of Focus, Erosion.'
+    this god: Soul Gem, Amanita Charm, Lotus Sickle, Genji''s Guard, Gluttonous Grimoire,
+    Rod of Asclepius, Soul Locket, Void Stone, Doublet of Binding, Lifebinder, Chandra''s
+    Grace, Spear of the Magus, Screeching Gargoyle, Ethereal Staff, Oni Hunter''s
+    Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros'' Bow, Doom Orb,
+    Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s Idol, Gem of Focus,
+    Erosion.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -731,18 +732,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.65
-    Void Stone:
-      total: 0.52
-      efficiency: 0.46
-      win: 0.55
-      pick: 0.0
-      fit: 0.75
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.39
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.79
     Obsidian Shard:
       total: 0.57
       efficiency: 0.58
@@ -766,12 +767,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
-  - Genji's Guard
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Genji's Guard
+  - Spear of Desolation
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -787,9 +788,9 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Soul
-    Gem, Amanita Charm, Rod of Asclepius, Triton''s Conch, Genji''s Guard, Soul Locket,
-    Gluttonous Grimoire, Lotus Sickle, Lifebinder, Death Metal, Ancient Signet, Spear
-    of the Magus, Ethereal Staff, Doom Orb, Blood-Bound Book, Void Stone, Yogi''s
+    Gem, Lotus Sickle, Amanita Charm, Rod of Asclepius, Triton''s Conch, Genji''s
+    Guard, Soul Locket, Gluttonous Grimoire, Lifebinder, Death Metal, Ancient Signet,
+    Spear of the Magus, Ethereal Staff, Doom Orb, Blood-Bound Book, Void Stone, Yogi''s
     Necklace, Eros'' Bow, Chronos'' Pendant, Oni Hunter''s Garb, Jade Scepter, Sphere
     of Negation, Heartwood Charm, Doublet of Binding, Bancroft''s Talon, Chandra''s
     Grace.'
@@ -806,18 +807,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.5
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.55
-      pick: 0.0
-      fit: 0.28
     Rod of Tahuti:
       total: 0.65
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.47
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.83
     Obsidian Shard:
       total: 0.57
       efficiency: 0.58
@@ -842,12 +843,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
-  - Genji's Guard
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Genji's Guard
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -863,9 +864,9 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Genji''s Guard, Rod of Asclepius,
-    Soul Locket, Triton''s Conch, Spear of the Magus, Lifebinder, Doom Orb, Lotus
-    Sickle, Ethereal Staff, Void Stone, Blood-Bound Book, Chronos'' Pendant, Death
+    god: Soul Gem, Lotus Sickle, Amanita Charm, Gluttonous Grimoire, Genji''s Guard,
+    Rod of Asclepius, Soul Locket, Triton''s Conch, Spear of the Magus, Lifebinder,
+    Doom Orb, Ethereal Staff, Void Stone, Blood-Bound Book, Chronos'' Pendant, Death
     Metal, Dreamer''s Idol, Doublet of Binding, Eros'' Bow, Ancient Signet, Chandra''s
     Grace, Screeching Gargoyle, Yogi''s Necklace, Jade Scepter, Sphere of Negation,
     Oni Hunter''s Garb.'
@@ -882,18 +883,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.62
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.69
-      win: 0.55
-      pick: 0.0
-      fit: 0.27
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.45
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.76
     Obsidian Shard:
       total: 0.58
       efficiency: 0.58
@@ -916,7 +917,7 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Spear of Desolation
+  - Lotus Sickle
   - Rod of Tahuti
   - Amanita Charm
   - Erosion
@@ -924,7 +925,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Spear of Desolation
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -939,19 +940,19 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Erosion, Kinetic Cuirass,
-    Rod of Asclepius, Genji''s Guard, Soul Locket, Freya''s Tears, Stampede, Void
-    Stone, Void Shield, Gluttonous Grimoire, Spectral Armor, Lifebinder, Phoenix Feather,
-    Breastplate of Valor, Doublet of Binding, Ethereal Staff, Yogi''s Necklace, Chandra''s
-    Grace, Eye of Providence, Oni Hunter''s Garb, Draconic Scale, Regrowth Striders,
-    Glorious Pridwen, Midgardian Mail.'
+    this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Erosion, Lotus Sickle,
+    Kinetic Cuirass, Rod of Asclepius, Genji''s Guard, Soul Locket, Freya''s Tears,
+    Stampede, Void Stone, Void Shield, Gluttonous Grimoire, Spectral Armor, Lifebinder,
+    Phoenix Feather, Breastplate of Valor, Doublet of Binding, Ethereal Staff, Yogi''s
+    Necklace, Chandra''s Grace, Eye of Providence, Oni Hunter''s Garb, Draconic Scale,
+    Regrowth Striders, Glorious Pridwen.'
   slot_scores:
-    Spear of Desolation:
+    Lotus Sickle:
       total: 0.54
-      efficiency: 0.59
-      win: 0.54
-      pick: 0.55
-      fit: 0.43
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.66
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
@@ -983,7 +984,6 @@ builds:
       pick: 0.0
       fit: 1.0
   community_ordered:
-  - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
@@ -993,13 +993,13 @@ builds:
   slot_order:
   - Void Stone
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Void Stone
-  - The World Stone
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1014,12 +1014,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Void Stone, Genji''s
-    Guard, Screeching Gargoyle, Spear of the Magus, Doom Orb, Rod of Asclepius, Soul
-    Locket, Dreamer''s Idol, Doublet of Binding, Lifebinder, The Cosmic Horror, Ethereal
-    Staff, Chandra''s Grace, Lotus Sickle, Yogi''s Necklace, Oni Hunter''s Garb, Phoenix
-    Feather, Chronos'' Pendant, Blood-Bound Book, Eros'' Bow, Ancient Signet, Jade
-    Scepter, Sphere of Negation.'
+    for this god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Void Stone, Lotus
+    Sickle, Genji''s Guard, Screeching Gargoyle, Spear of the Magus, Doom Orb, Rod
+    of Asclepius, Soul Locket, Dreamer''s Idol, Doublet of Binding, Lifebinder, The
+    Cosmic Horror, Ethereal Staff, Chandra''s Grace, Yogi''s Necklace, Oni Hunter''s
+    Garb, Phoenix Feather, Chronos'' Pendant, Blood-Bound Book, Eros'' Bow, Ancient
+    Signet, Jade Scepter, Sphere of Negation.'
   slot_scores:
     Void Stone:
       total: 0.55
@@ -1033,18 +1033,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.74
-    The World Stone:
-      total: 0.54
-      efficiency: 0.52
-      win: 0.54
-      pick: 0.53
-      fit: 0.56
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.56
+    Lotus Sickle:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.68
     Obsidian Shard:
       total: 0.6
       efficiency: 0.58
@@ -1059,7 +1059,6 @@ builds:
       fit: 1.0
   community_ordered:
   - Spear of Desolation
-  - The World Stone
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
@@ -1090,12 +1089,12 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Amanita Charm, Eros'' Bow, Gluttonous Grimoire, Genji''s Guard,
-    Rod of Asclepius, Blood-Bound Book, Soul Locket, Void Stone, Triton''s Conch,
-    Doublet of Binding, Lifebinder, Yogi''s Necklace, Ethereal Staff, Bragi''s Harp,
-    Bancroft''s Talon, Spear of the Magus, Oni Hunter''s Garb, Lotus Sickle, Screeching
-    Gargoyle, Chandra''s Grace, Phoenix Feather, Bracer of The Abyss, Ancient Signet,
-    Chronos'' Pendant, Death Metal.'
+    this god: Soul Gem, Amanita Charm, Lotus Sickle, Eros'' Bow, Gluttonous Grimoire,
+    Genji''s Guard, Rod of Asclepius, Blood-Bound Book, Soul Locket, Void Stone, Triton''s
+    Conch, Doublet of Binding, Lifebinder, Yogi''s Necklace, Ethereal Staff, Bragi''s
+    Harp, Bancroft''s Talon, Spear of the Magus, Oni Hunter''s Garb, Screeching Gargoyle,
+    Chandra''s Grace, Phoenix Feather, Bracer of The Abyss, Ancient Signet, Chronos''
+    Pendant, Death Metal.'
   slot_scores:
     Bragi's Harp:
       total: 0.48
@@ -1142,15 +1141,15 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
-  - Spear of Desolation
   - Genji's Guard
+  - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Obsidian Shard
   - Soul Gem
   flex_slots:
+  - Genji's Guard
   - Obsidian Shard
-  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1165,37 +1164,37 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Genji''s Guard, Amanita
-    Charm, Lotus Sickle, Rod of Asclepius, Chandra''s Grace, Screeching Gargoyle,
-    Chronos'' Pendant, Soul Locket, Gluttonous Grimoire, Void Stone, Gem of Focus,
-    Triton''s Conch, Heartwood Charm, Lifebinder, Ethereal Staff, Doublet of Binding,
-    Spear of the Magus, Eye of Erebus, Shield of the Phoenix, Blood-Bound Book, Yogi''s
+    + fit + win/pick). Underrated for this god: Lotus Sickle, Soul Gem, Genji''s Guard,
+    Amanita Charm, Rod of Asclepius, Chandra''s Grace, Screeching Gargoyle, Chronos''
+    Pendant, Soul Locket, Gluttonous Grimoire, Void Stone, Gem of Focus, Triton''s
+    Conch, Heartwood Charm, Lifebinder, Ethereal Staff, Doublet of Binding, Spear
+    of the Magus, Eye of Erebus, Shield of the Phoenix, Blood-Bound Book, Yogi''s
     Necklace, Oni Hunter''s Garb, Freya''s Tears, Eros'' Bow, Damaru, Phoenix Feather.'
   slot_scores:
-    Lotus Sickle:
-      total: 0.52
-      efficiency: 0.57
-      win: 0.55
-      pick: 0.0
-      fit: 0.51
-    Spear of Desolation:
-      total: 0.58
-      efficiency: 0.59
-      win: 0.54
-      pick: 0.55
-      fit: 0.67
     Genji's Guard:
       total: 0.56
       efficiency: 0.69
       win: 0.55
       pick: 0.0
       fit: 0.49
+    Spear of Desolation:
+      total: 0.58
+      efficiency: 0.59
+      win: 0.54
+      pick: 0.55
+      fit: 0.67
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.27
+    Lotus Sickle:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.91
     Obsidian Shard:
       total: 0.55
       efficiency: 0.58
@@ -1217,15 +1216,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
+  - Book of Thoth
   - Spear of Desolation
-  - Void Stone
+  - Genji's Guard
   - Rod of Tahuti
-  - Obsidian Shard
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Void Stone
+  - Genji's Guard
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1240,12 +1239,87 @@ builds:
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Soul Gem, Amanita Charm, Genji''s Guard, Gluttonous Grimoire,
-    Rod of Asclepius, Soul Locket, Void Stone, Doublet of Binding, Lifebinder, Chandra''s
-    Grace, Spear of the Magus, Screeching Gargoyle, Lotus Sickle, Ethereal Staff,
-    Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace, Eros''
-    Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s
+    Underrated for this god: Soul Gem, Amanita Charm, Lotus Sickle, Genji''s Guard,
+    Gluttonous Grimoire, Rod of Asclepius, Soul Locket, Void Stone, Doublet of Binding,
+    Lifebinder, Chandra''s Grace, Spear of the Magus, Screeching Gargoyle, Ethereal
+    Staff, Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant, Yogi''s Necklace,
+    Eros'' Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere of Negation, Dreamer''s
     Idol, Gem of Focus, Erosion.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.43
+      efficiency: 0.49
+      win: 0.51
+      pick: 0.26
+      fit: 0.13
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.59
+      win: 0.54
+      pick: 0.55
+      fit: 0.65
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.69
+      win: 0.55
+      pick: 0.0
+      fit: 0.42
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.86
+      win: 0.55
+      pick: 0.55
+      fit: 0.39
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.55
+      pick: 0.0
+      fit: 1.0
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  starter: *id001
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Genji's Guard
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Lotus Sickle
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Genji's Guard
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Erosion — physical protection
+    swap_item: Erosion
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Soul Gem, Amanita Charm, Lotus Sickle,
+    Genji''s Guard, Gluttonous Grimoire, Rod of Asclepius, Soul Locket, Void Stone,
+    Doublet of Binding, Lifebinder, Chandra''s Grace, Spear of the Magus, Screeching
+    Gargoyle, Ethereal Staff, Oni Hunter''s Garb, Phoenix Feather, Chronos'' Pendant,
+    Yogi''s Necklace, Eros'' Bow, Doom Orb, Jade Scepter, Blood-Bound Book, Sphere
+    of Negation, Dreamer''s Idol, Gem of Focus, Erosion.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -1259,18 +1333,18 @@ builds:
       win: 0.54
       pick: 0.55
       fit: 0.65
-    Void Stone:
-      total: 0.52
-      efficiency: 0.46
-      win: 0.55
-      pick: 0.0
-      fit: 0.75
     Rod of Tahuti:
       total: 0.64
       efficiency: 0.86
       win: 0.55
       pick: 0.55
       fit: 0.39
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.79
     Obsidian Shard:
       total: 0.57
       efficiency: 0.58
@@ -1287,6 +1361,11 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
+  swaps:
+  - added: Obsidian Shard
+    removed: Book of Thoth
+    reason: community 60% win over 271 matches (vs 53% on this god), taking the model's
+      weakest slot from Book of Thoth
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---

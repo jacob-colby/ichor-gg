@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.66
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Spear of the Magus:
       total: 0.68
       efficiency: 0.58
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Lotus Sickle:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -75,12 +75,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Doom Orb
+  - Obsidian Shard
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -110,12 +110,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Doom Orb:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Obsidian Shard:
       total: 0.58
       efficiency: 0.58
@@ -128,6 +122,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Lotus Sickle:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
+  - Lotus Sickle
   - Spear of the Magus
-  - Doom Orb
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Doom Orb:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Spear of the Magus:
       total: 0.57
       efficiency: 0.58
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.56
+    Lotus Sickle:
+      total: 0.57
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -398,11 +398,11 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Chronos' Pendant
   - Heartwood Charm
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Chronos' Pendant:
       total: 0.59
       efficiency: 0.55
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.37
+    Lotus Sickle:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -594,14 +594,14 @@ builds:
   archetype: model
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Spear of the Magus
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Spear of the Magus
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -624,12 +624,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.66
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Spear of the Magus:
       total: 0.68
       efficiency: 0.58
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.79
+    Lotus Sickle:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
     Soul Gem:
       total: 0.76
       efficiency: 0.53

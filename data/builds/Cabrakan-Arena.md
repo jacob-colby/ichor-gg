@@ -269,14 +269,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Freya's Tears
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Breastplate of Valor
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -299,12 +299,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Breastplate of Valor:
-      total: 0.54
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.67
@@ -323,6 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Soul Gem:
       total: 0.71
       efficiency: 0.57

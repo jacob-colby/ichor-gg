@@ -7,14 +7,14 @@ builds:
   archetype: core
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -37,12 +37,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.66
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Obsidian Shard:
       total: 0.74
       efficiency: 0.58
@@ -61,6 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+    Lotus Sickle:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -73,14 +73,14 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
+  - Death Metal
   - Spear of Desolation
-  - Doom Orb
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Death Metal
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -98,36 +98,36 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
     Book of Thoth:
       total: 0.44
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.39
+    Death Metal:
+      total: 0.56
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
     Spear of Desolation:
       total: 0.6
       efficiency: 0.59
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Doom Orb:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
     Rod of Tahuti:
       total: 0.72
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Lotus Sickle:
+      total: 0.6
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
     Soul Gem:
       total: 0.74
       efficiency: 0.53
@@ -139,14 +139,14 @@ builds:
   archetype: burst
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.78
-    Doom Orb:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Obsidian Shard:
       total: 0.62
       efficiency: 0.58
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -398,11 +398,11 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Lotus Sickle
   - Book of Thoth
   - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Chronos' Pendant
@@ -423,12 +423,6 @@ builds:
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lotus Sickle:
-      total: 0.6
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
     Book of Thoth:
       total: 0.32
       efficiency: 0.49
@@ -453,6 +447,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.37
+    Lotus Sickle:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Soul Gem:
       total: 0.76
       efficiency: 0.53
@@ -594,14 +594,14 @@ builds:
   archetype: model
   slot_order:
   - Spear of Desolation
-  - Doom Orb
   - Obsidian Shard
   - Rod of Tahuti
   - Dreamer's Idol
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Obsidian Shard
-  - Doom Orb
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
@@ -624,12 +624,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doom Orb:
-      total: 0.66
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
     Obsidian Shard:
       total: 0.74
       efficiency: 0.58
@@ -648,6 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.99
+    Lotus Sickle:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
     Soul Gem:
       total: 0.76
       efficiency: 0.53

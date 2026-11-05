@@ -121,10 +121,10 @@ builds:
     Revenge, Erosion, Eye of Providence, Soul Gem, Shield of the Phoenix, Oni Hunter''s
     Garb, Helm of Darkness, Stone of Binding, Shifter''s Shield, Magi''s Cloak, Midgardian
     Mail, Helm of Radiance, Mantle Of Discord, Screeching Gargoyle, Runeforged Hammer,
-    Leviathan''s Hide, Spear of Desolation, Ancile, Hydra''s Lament, Hide of the Nemean
-    Lion, Obsidian Shard, Void Stone, Void Shield, Brawler’s Beat Stick, Blood-Bound
-    Book, Prophetic Cloak, Xibalban Effigy, The Reaper, Spectral Armor, Gladiator''s
-    Shield, Lotus Sickle.'
+    Leviathan''s Hide, Spear of Desolation, Lotus Sickle, Ancile, Hydra''s Lament,
+    Hide of the Nemean Lion, Obsidian Shard, Void Stone, Void Shield, Brawler’s Beat
+    Stick, Blood-Bound Book, Prophetic Cloak, Xibalban Effigy, The Reaper, Spectral
+    Armor, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -201,8 +201,8 @@ builds:
     Hunter''s Garb, Chandra''s Grace, Runeforged Hammer, Midgardian Mail, Glorious
     Pridwen, Shifter''s Shield, Regrowth Striders, Leviathan''s Hide, Bancroft''s
     Talon, Rod of Asclepius, Helm of Darkness, Helm of Radiance, Stone of Binding,
-    Spear of Desolation, Sphere of Negation, Screeching Gargoyle, Soul Locket, Bloodforge,
-    Magi''s Cloak, Ancile, Hydra''s Lament, Hide of the Nemean Lion.'
+    Spear of Desolation, Lotus Sickle, Sphere of Negation, Screeching Gargoyle, Soul
+    Locket, Bloodforge, Magi''s Cloak, Ancile, Hydra''s Lament.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -276,9 +276,9 @@ builds:
     Scale, The Reaper, Shield Splitter, Avenging Blade, Breastplate of Valor, Titan''s
     Bane, Spear of the Magus, Erosion, Oni Hunter''s Garb, Eye of Providence, The
     Crusher, Doom Orb, Helm of Radiance, Shield of the Phoenix, Runeforged Hammer,
-    The World Stone, Helm of Darkness, Heartseeker, Midgardian Mail, Magi''s Cloak,
-    Mantle Of Discord, Leviathan''s Hide, Hydra''s Lament, Dreamer''s Idol, Shifter''s
-    Shield, Blood-Bound Book, Toxic Blade.'
+    The World Stone, Helm of Darkness, Heartseeker, Midgardian Mail, Lotus Sickle,
+    Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Hydra''s Lament, Dreamer''s
+    Idol, Shifter''s Shield, Blood-Bound Book.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.55
@@ -350,9 +350,9 @@ builds:
     Tyrfing, Draconic Scale, Breastplate of Valor, Soul Gem, Runeforged Hammer, Tekko-Kagi,
     Pharaoh''s Curse, Lernaean Bow, Toxic Blade, Hydra''s Lament, Oni Hunter''s Garb,
     Shogun''s Ofuda, Eros'' Bow, Silverbranch Bow, Helm of Radiance, Erosion, Eye
-    of Providence, Stone of Binding, Shield of the Phoenix, Spear of Desolation, Obsidian
-    Shard, Midgardian Mail, Screeching Gargoyle, Helm of Darkness, The Reaper, Magi''s
-    Cloak, Titan''s Bane, Riptalon, Leviathan''s Hide, Dominance, Mantle Of Discord.'
+    of Providence, Lotus Sickle, Stone of Binding, Shield of the Phoenix, Spear of
+    Desolation, Obsidian Shard, Midgardian Mail, Screeching Gargoyle, Helm of Darkness,
+    The Reaper, Magi''s Cloak, Titan''s Bane, Riptalon, Leviathan''s Hide, Dominance.'
   slot_scores:
     Golden Blade:
       total: 0.54
@@ -421,8 +421,8 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Jotunn''s Revenge,
     Amanita Charm, Soul Gem, Breastplate of Valor, Kinetic Cuirass, Berserker''s Shield,
-    Spear of Desolation, Gluttonous Grimoire, Hydra''s Lament, Shield of the Phoenix,
-    Shield Splitter, Screeching Gargoyle, Draconic Scale, Lotus Sickle, Chronos''
+    Lotus Sickle, Spear of Desolation, Gluttonous Grimoire, Hydra''s Lament, Shield
+    of the Phoenix, Shield Splitter, Screeching Gargoyle, Draconic Scale, Chronos''
     Pendant, Arondight, Helm of Radiance, Runeforged Hammer, Oni Hunter''s Garb, Erosion,
     Helm of Darkness, Eye of Providence, Obsidian Shard, Stone of Binding, Gladiator''s
     Shield, Prophetic Cloak, Gem of Focus, Midgardian Mail, Heartwood Charm, Magi''s
@@ -500,9 +500,9 @@ builds:
     Draconic Scale, Breastplate of Valor, Hydra''s Lament, Nimble Ring, Spear of Desolation,
     Tyrfing, Obsidian Shard, The Crusher, Oni Hunter''s Garb, Lernaean Bow, Erosion,
     Avenging Blade, Helm of Radiance, Eye of Providence, Heartseeker, Stone of Binding,
-    Shield of the Phoenix, Arondight, Toxic Blade, Midgardian Mail, Helm of Darkness,
-    Magi''s Cloak, Screeching Gargoyle, Silverbranch Bow, Spear of the Magus, Death
-    Metal, Pharaoh''s Curse.'
+    Lotus Sickle, Shield of the Phoenix, Arondight, Toxic Blade, Midgardian Mail,
+    Helm of Darkness, Magi''s Cloak, Screeching Gargoyle, Silverbranch Bow, Spear
+    of the Magus, Death Metal.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -574,10 +574,10 @@ builds:
     Revenge, Erosion, Eye of Providence, Soul Gem, Draconic Scale, Shield of the Phoenix,
     Oni Hunter''s Garb, Helm of Darkness, Stone of Binding, Shifter''s Shield, Magi''s
     Cloak, Midgardian Mail, Helm of Radiance, Mantle Of Discord, Screeching Gargoyle,
-    Runeforged Hammer, Leviathan''s Hide, Spear of Desolation, Prophetic Cloak, Ancile,
-    Hydra''s Lament, Hide of the Nemean Lion, Obsidian Shard, Void Stone, Void Shield,
-    Brawler’s Beat Stick, Blood-Bound Book, Xibalban Effigy, The Reaper, Spectral
-    Armor, Gladiator''s Shield, Lotus Sickle.'
+    Runeforged Hammer, Leviathan''s Hide, Spear of Desolation, Lotus Sickle, Prophetic
+    Cloak, Ancile, Hydra''s Lament, Hide of the Nemean Lion, Obsidian Shard, Void
+    Stone, Void Shield, Brawler’s Beat Stick, Blood-Bound Book, Xibalban Effigy, The
+    Reaper, Spectral Armor, Gladiator''s Shield.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -651,9 +651,9 @@ builds:
     Shield of the Phoenix, Oni Hunter''s Garb, Helm of Darkness, Stone of Binding,
     Shifter''s Shield, Magi''s Cloak, Midgardian Mail, Helm of Radiance, Mantle Of
     Discord, Screeching Gargoyle, Runeforged Hammer, Leviathan''s Hide, Spear of Desolation,
-    Prophetic Cloak, Ancile, Hydra''s Lament, Hide of the Nemean Lion, Obsidian Shard,
-    Void Stone, Void Shield, Brawler’s Beat Stick, Blood-Bound Book, Xibalban Effigy,
-    The Reaper, Spectral Armor, Gladiator''s Shield, Lotus Sickle.'
+    Lotus Sickle, Prophetic Cloak, Ancile, Hydra''s Lament, Hide of the Nemean Lion,
+    Obsidian Shard, Void Stone, Void Shield, Brawler’s Beat Stick, Blood-Bound Book,
+    Xibalban Effigy, The Reaper, Spectral Armor, Gladiator''s Shield.'
   slot_scores:
     Gauntlet of Thebes:
       total: 0.4

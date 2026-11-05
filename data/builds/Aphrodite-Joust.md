@@ -10,11 +10,11 @@ builds:
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Erosion
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Freya's Tears
-  - Erosion
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -55,12 +55,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
-    Erosion:
-      total: 0.5
-      efficiency: 0.51
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.45
     Soul Gem:
       total: 0.75
       efficiency: 0.57
@@ -77,8 +77,8 @@ builds:
   - Book of Thoth
   - Kinetic Cuirass
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   flex_slots:
   - Spear of Desolation
   - Book of Thoth
@@ -122,31 +122,31 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
-    Obsidian Shard:
-      total: 0.49
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.86
       win: 0.5
       pick: 0.0
       fit: 0.35
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
   starter: *id001
 - source: suggested
   archetype: burst
   slot_order:
   - Kinetic Cuirass
-  - Freya's Tears
   - Spear of Desolation
   - Obsidian Shard
   - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Freya's Tears
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -169,12 +169,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Freya's Tears:
-      total: 0.47
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.37
     Spear of Desolation:
       total: 0.53
       efficiency: 0.59
@@ -193,6 +187,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
+    Lotus Sickle:
+      total: 0.48
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.39
     Soul Gem:
       total: 0.74
       efficiency: 0.57
@@ -206,12 +206,12 @@ builds:
   - Kinetic Cuirass
   - Spear of Desolation
   - Rod of Tahuti
+  - Lotus Sickle
   - Amanita Charm
-  - Erosion
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Erosion
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -246,18 +246,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
     Amanita Charm:
       total: 0.72
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Erosion:
-      total: 0.5
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
     Soul Gem:
       total: 0.77
       efficiency: 0.57
@@ -399,14 +399,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Genji's Guard
-  - Breastplate of Valor
-  - Kinetic Cuirass
   - Freya's Tears
   - Spear of Desolation
+  - Rod of Tahuti
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Breastplate of Valor
-  - Kinetic Cuirass
+  - Lotus Sickle
+  - Rod of Tahuti
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -429,18 +429,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.41
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
-    Kinetic Cuirass:
-      total: 0.51
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.47
     Freya's Tears:
       total: 0.56
       efficiency: 0.58
@@ -453,6 +441,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Rod of Tahuti:
+      total: 0.53
+      efficiency: 0.86
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
+    Lotus Sickle:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
     Soul Gem:
       total: 0.75
       efficiency: 0.57
@@ -597,11 +597,11 @@ builds:
   - Freya's Tears
   - Spear of Desolation
   - Rod of Tahuti
-  - Erosion
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Freya's Tears
-  - Erosion
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -642,12 +642,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.33
-    Erosion:
-      total: 0.5
-      efficiency: 0.51
+    Lotus Sickle:
+      total: 0.51
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.45
     Soul Gem:
       total: 0.75
       efficiency: 0.57

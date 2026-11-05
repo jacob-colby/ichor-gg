@@ -270,13 +270,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Breastplate of Valor
   - Jotunn's Revenge
   - Freya's Tears
+  - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Berserker's Shield
-  - Breastplate of Valor
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -305,12 +305,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.31
-    Breastplate of Valor:
-      total: 0.52
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.67
@@ -323,6 +317,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Lotus Sickle:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Soul Gem:
       total: 0.7
       efficiency: 0.57

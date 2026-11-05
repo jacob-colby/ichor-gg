@@ -170,12 +170,12 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
-  - Kinetic Cuirass
   - Freya's Tears
   - Gluttonous Grimoire
   - Rod of Tahuti
+  - Lotus Sickle
   flex_slots:
-  - Kinetic Cuirass
+  - Lotus Sickle
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -185,15 +185,15 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
-    of Tahuti, Gluttonous Grimoire, Amanita Charm, Nimble Ring, Soul Gem, Kinetic
-    Cuirass, Breastplate of Valor, Obsidian Shard, Spear of Desolation, Helm of Radiance,
-    Ancient Signet, Lotus Sickle, Eros'' Bow, Spear of the Magus, Oni Hunter''s Garb,
+    of Tahuti, Gluttonous Grimoire, Amanita Charm, Nimble Ring, Soul Gem, Lotus Sickle,
+    Kinetic Cuirass, Breastplate of Valor, Obsidian Shard, Spear of Desolation, Helm
+    of Radiance, Ancient Signet, Eros'' Bow, Spear of the Magus, Oni Hunter''s Garb,
     Blood-Bound Book, Helm of Darkness, Bragi''s Harp, Death Metal, Doom Orb, The
     World Stone, Jade Scepter, Chronos'' Pendant, Bracer of The Abyss, Erosion, Stone
     of Binding, Screeching Gargoyle, Shield of the Phoenix.'
@@ -210,12 +210,6 @@ builds:
       win: 0.61
       pick: 0.26
       fit: 0.23
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.0
-      fit: 0.39
     Freya's Tears:
       total: 0.58
       efficiency: 0.58
@@ -234,6 +228,12 @@ builds:
       win: 0.62
       pick: 0.0
       fit: 0.29
+    Lotus Sickle:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.0
+      fit: 0.37
   community_ordered:
   - Genji's Guard
   - Freya's Tears
@@ -460,22 +460,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Screeching Gargoyle
-  - Genji's Guard
   - Breastplate of Valor
-  - Freya's Tears
+  - Genji's Guard
   - Kinetic Cuirass
+  - Freya's Tears
+  - Lotus Sickle
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Screeching Gargoyle
+  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Oni Hunter's Garb — magical protection
-    swap_item: Oni Hunter's Garb
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -484,43 +484,43 @@ builds:
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Amanita Charm, Breastplate
-    of Valor, Nimble Ring, Kinetic Cuirass, Soul Gem, Shield of the Phoenix, Screeching
-    Gargoyle, Lotus Sickle, Chronos'' Pendant, Helm of Radiance, Eros'' Bow, Oni Hunter''s
-    Garb, Helm of Darkness, Erosion, Prophetic Cloak, Eye of Providence, Stone of
-    Binding, Blood-Bound Book, Midgardian Mail, Draconic Scale, Gem of Focus, Spear
-    of Desolation, Magi''s Cloak, Heartwood Charm, Ancient Signet, Gladiator''s Shield,
-    Gluttonous Grimoire.'
+    of Valor, Nimble Ring, Kinetic Cuirass, Lotus Sickle, Soul Gem, Shield of the
+    Phoenix, Screeching Gargoyle, Chronos'' Pendant, Helm of Radiance, Eros'' Bow,
+    Oni Hunter''s Garb, Helm of Darkness, Erosion, Prophetic Cloak, Eye of Providence,
+    Stone of Binding, Blood-Bound Book, Midgardian Mail, Draconic Scale, Gem of Focus,
+    Spear of Desolation, Magi''s Cloak, Heartwood Charm, Ancient Signet, Gladiator''s
+    Shield, Gluttonous Grimoire.'
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.53
-      efficiency: 0.52
-      win: 0.62
-      pick: 0.0
-      fit: 0.48
-    Genji's Guard:
-      total: 0.59
-      efficiency: 0.69
-      win: 0.61
-      pick: 0.26
-      fit: 0.38
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.63
       win: 0.62
       pick: 0.0
       fit: 0.38
-    Freya's Tears:
-      total: 0.62
-      efficiency: 0.58
-      win: 0.71
-      pick: 0.35
-      fit: 0.51
+    Genji's Guard:
+      total: 0.59
+      efficiency: 0.69
+      win: 0.61
+      pick: 0.26
+      fit: 0.38
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.56
       win: 0.62
       pick: 0.0
       fit: 0.46
+    Freya's Tears:
+      total: 0.62
+      efficiency: 0.58
+      win: 0.71
+      pick: 0.35
+      fit: 0.51
+    Lotus Sickle:
+      total: 0.55
+      efficiency: 0.57
+      win: 0.62
+      pick: 0.0
+      fit: 0.43
     Amanita Charm:
       total: 0.56
       efficiency: 0.65
@@ -637,11 +637,11 @@ builds:
     Gluttonous Grimoire, Jotunn''s Revenge, Amanita Charm, Nimble Ring, Soul Gem,
     Shield Splitter, Kinetic Cuirass, Golden Blade, Obsidian Shard, Tekko-Kagi, Spear
     of Desolation, Tyrfing, Helm of Radiance, Runeforged Hammer, Breastplate of Valor,
-    The Reaper, Eros'' Bow, Titan''s Bane, Toxic Blade, Silverbranch Bow, Spear of
-    the Magus, Hydra''s Lament, Helm of Darkness, Lernaean Bow, Blood-Bound Book,
-    Bragi''s Harp, Ancient Signet, Oni Hunter''s Garb, Death Metal, Pharaoh''s Curse,
-    Riptalon, Lotus Sickle, Erosion, The Crusher, Eye of Providence, Jade Scepter,
-    Stone of Binding, Doom Orb.'
+    Lotus Sickle, The Reaper, Eros'' Bow, Titan''s Bane, Toxic Blade, Silverbranch
+    Bow, Spear of the Magus, Hydra''s Lament, Helm of Darkness, Lernaean Bow, Blood-Bound
+    Book, Bragi''s Harp, Ancient Signet, Oni Hunter''s Garb, Death Metal, Pharaoh''s
+    Curse, Riptalon, Erosion, The Crusher, Eye of Providence, Jade Scepter, Stone
+    of Binding, Doom Orb.'
   slot_scores:
     Berserker's Shield:
       total: 0.6
