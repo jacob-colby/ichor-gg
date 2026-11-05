@@ -242,9 +242,12 @@ def test_adding_an_item_never_lowers_a_stat_it_grants(frozen, ibn, snapshot):
 #: killed the squishy sooner and healed less — Thanatos's core read 6704 ->
 #: 5457 physical from 4 to 6 items, now 6784 -> 6784. Fenrir's `model` pair
 #: had stopped occurring on 2026-11-04 for an unrelated reason (its six changed).
-KNOWN_POWER_DROPS = {
-    ("Bellona", "core", "sustained_squishy"), ("Bellona", "core", "sustained_tank"),
-}
+#: Gone 2026-11-05 with `price_passive_sim` (register §4.32): Bellona's `core`
+#: six changed, the Berserker's Shield / Hussar's Wings pairing above no longer
+#: occurs in it, and both sustained_* entries stopped. Her build moved; the
+#: mechanism in `side_by_side` is untouched and will reappear on any build
+#: that pairs the two.
+KNOWN_POWER_DROPS = set()
 
 
 @pytest.fixture(scope="module")

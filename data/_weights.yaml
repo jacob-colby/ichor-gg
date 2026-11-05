@@ -1237,6 +1237,42 @@ multiplier_reference:
 # zero, and the items land where the community does not buy them.
 price_on_hit: false
 
+# ── Pricing an item's PASSIVE from its simulated value (option (a), §4.31) ──
+#
+# THE DEFECT THIS ADDRESSES. §4.31: `efficiency` chooses items on stats alone
+# while `passive_sim` judges the finished build on simulated passives, so the
+# chooser is blind to exactly what the judge can see. The community's Carry
+# picks carry +400 to +1021 gold of markup for passives this model cannot
+# price, and Tekko-Kagi wins at residual -4.3 by being the one item with
+# nothing to mark up.
+#
+# WHAT IT DOES. Adds three fitted columns from `data/_passive_values.yaml`:
+# Passive Damage, Passive EHP Physical and Passive EHP Magical. The GOLD PRICE
+# IS FITTED, not written here. NNLS learns it the way it learns every stat
+# price, so no constant is invented. Measured on this data: 0.9697 gold per
+# point of simulated damage, 0.1597 for physical effective health, and 0.0000
+# for magical, which NNLS drove to zero as carrying no explanatory power.
+#
+# THREE THINGS TO READ BEFORE TOUCHING IT (all in register §4.32).
+#   * The per-item value is a MEDIAN over up to 30 builds holding the item,
+#     and the spread is wide for some: of 76 valued items, 33 sit inside 1.5x,
+#     17 at 1.5-2x, and 12 exceed 5x.
+#   * For the eight items priced by BOTH a flag above and `passive_sim`, the
+#     FLAG's grant stands and the simulated value is not added
+#     (`efficiency.PASSIVE_SIM_DUAL = "flag"`). The other way round evicted
+#     Rod of Tahuti, Transcendence, Book of Thoth and Nimble Ring from mage
+#     builds and scored worse on both gates.
+#   * The new columns are charged by `offmap_efficiency` and are NOT in
+#     `offmap_exempt`: that list's test (ii) asks whether any instrument here
+#     can price the stat, and `passive_sim` is that instrument.
+#
+# MEASURED 2026-11-05 against `main` 6c34a58d: leakage-free 36.8% / 37.6% ->
+# 41.3% / 38.4%, held-out +0.0167 win-weighted / +0.0566 spearman. It moves 46
+# of 282 shown comparison verdicts. Measure that with `side_by_side --json`:
+# without `--json` no page is rewritten and the reading comes back identical
+# for the wrong reason.
+price_passive_sim: true
+
 # What an item with no community record scores on `win` -- the god's own median
 # measured rate, not a global constant. SHIPPED ON.
 #

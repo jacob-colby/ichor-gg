@@ -32,25 +32,25 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.74
     Tyrfing:
-      total: 0.62
-      efficiency: 0.5
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
       win: 0.5
       pick: 0.0
@@ -87,8 +87,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -99,38 +99,38 @@ builds:
     data).
   slot_scores:
     Lernaean Bow:
-      total: 0.52
-      efficiency: 0.51
+      total: 0.51
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.54
     Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.67
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
     Transcendence:
-      total: 0.38
-      efficiency: 0.53
+      total: 0.37
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.24
     Tyrfing:
-      total: 0.49
-      efficiency: 0.5
+      total: 0.51
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.49
     The Reaper:
       total: 0.58
-      efficiency: 0.56
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
     Heartseeker:
-      total: 0.49
-      efficiency: 0.43
+      total: 0.5
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.55
@@ -145,8 +145,8 @@ builds:
   - Demon Blade
   - Deathbringer
   flex_slots:
-  - Deathbringer
   - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -164,26 +164,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.59
-      efficiency: 0.47
+      total: 0.58
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.71
     Lernaean Bow:
-      total: 0.6
-      efficiency: 0.51
+      total: 0.59
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.7
     Rage:
-      total: 0.51
-      efficiency: 0.44
+      total: 0.52
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.57
     Tyrfing:
-      total: 0.6
-      efficiency: 0.5
+      total: 0.62
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.71
@@ -194,8 +194,8 @@ builds:
       pick: 0.0
       fit: 0.88
     Deathbringer:
-      total: 0.52
-      efficiency: 0.47
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -204,24 +204,24 @@ builds:
   archetype: bruiser
   slot_order:
   - Golden Blade
-  - Lernaean Bow
-  - Phoenix Feather
   - Berserker's Shield
   - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Tyrfing
   - Amanita Charm
   flex_slots:
-  - Phoenix Feather
-  - Lernaean Bow
+  - Shield of the Phoenix
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Pharaoh's Curse — magical protection
-    swap_item: Pharaoh's Curse
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Magi's Cloak — physical protection
+    swap_item: Magi's Cloak
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -229,38 +229,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.58
-      efficiency: 0.52
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-    Lernaean Bow:
-      total: 0.52
+      total: 0.57
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.52
-    Phoenix Feather:
-      total: 0.53
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
+      fit: 0.64
     Berserker's Shield:
-      total: 0.61
-      efficiency: 0.74
+      total: 0.6
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.48
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.5
+    Shield of the Phoenix:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
     Amanita Charm:
-      total: 0.68
-      efficiency: 0.65
+      total: 0.69
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.7
@@ -268,15 +268,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Lernaean Bow
   - Toxic Blade
+  - Tyrfing
   - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
-  - Titan's Bane
+  - Heartseeker
   flex_slots:
-  - Titan's Bane
-  - Lernaean Bow
+  - Tekko-Kagi
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -293,42 +293,42 @@ builds:
   rationale: Full-penetration anti-tank skew (efficiency + fit). Arena — math + mode
     profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.56
     Toxic Blade:
-      total: 0.65
-      efficiency: 0.45
+      total: 0.64
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.84
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Tekko-Kagi:
-      total: 0.57
-      efficiency: 0.55
+      total: 0.54
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.59
     Riptalon:
       total: 0.71
-      efficiency: 0.46
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.97
     Silverbranch Bow:
-      total: 0.58
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.63
-    Titan's Bane:
+    Heartseeker:
       total: 0.56
-      efficiency: 0.54
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.67
   starter: *id001
 - source: suggested
   archetype: attack-speed
@@ -347,8 +347,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -359,26 +359,26 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.58
-      efficiency: 0.51
+      total: 0.56
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.65
     Tyrfing:
-      total: 0.62
-      efficiency: 0.5
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
     Qin's Blade:
-      total: 0.53
-      efficiency: 0.38
+      total: 0.54
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -405,7 +405,7 @@ builds:
   - Tyrfing
   - Hydra's Lament
   flex_slots:
-  - Tyrfing
+  - Lernaean Bow
   - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,38 +424,38 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.47
-      efficiency: 0.47
+      total: 0.46
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.47
     Lernaean Bow:
-      total: 0.51
-      efficiency: 0.51
+      total: 0.49
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.5
     Chandra's Grace:
-      total: 0.5
-      efficiency: 0.43
+      total: 0.51
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.57
     Jotunn's Revenge:
-      total: 0.52
-      efficiency: 0.63
+      total: 0.51
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.41
     Tyrfing:
-      total: 0.48
-      efficiency: 0.5
+      total: 0.5
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.47
     Hydra's Lament:
       total: 0.53
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.51
@@ -489,25 +489,25 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.61
-      efficiency: 0.47
+      total: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.75
     Lernaean Bow:
-      total: 0.62
-      efficiency: 0.51
+      total: 0.61
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.74
     Tyrfing:
-      total: 0.62
-      efficiency: 0.5
+      total: 0.64
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.75
     Dominance:
-      total: 0.55
+      total: 0.56
       efficiency: 0.47
       win: 0.5
       pick: 0.0

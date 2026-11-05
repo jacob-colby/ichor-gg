@@ -95,160 +95,10 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
-  - Kinetic Cuirass
-  - Rod of Tahuti
-  - Gluttonous Grimoire
-  - Obsidian Shard
-  flex_slots:
-  - Kinetic Cuirass
-  - Book of Thoth
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s Guard, Kinetic
-    Cuirass, Breastplate of Valor, Lotus Sickle, Helm of Radiance, Helm of Darkness,
-    Spear of the Magus, Chronos'' Pendant, Blood-Bound Book, Erosion, Shield of the
-    Phoenix, Oni Hunter''s Garb, Eye of Providence, Draconic Scale, Ancient Signet,
-    Jade Scepter, Doom Orb, Screeching Gargoyle, Stone of Binding, Midgardian Mail,
-    The World Stone, Magi''s Cloak, Leviathan''s Hide, Freya''s Tears.'
-  slot_scores:
-    Book of Thoth:
-      total: 0.5
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.5
-      fit: 0.18
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.69
-      win: 0.62
-      pick: 0.0
-      fit: 0.28
-    Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.56
-      win: 0.62
-      pick: 0.0
-      fit: 0.55
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.62
-      pick: 0.45
-      fit: 0.34
-    Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.66
-    Obsidian Shard:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.64
-      pick: 0.27
-      fit: 0.44
-  community_ordered:
-  - Book of Thoth
-  - Rod of Tahuti
-  - Obsidian Shard
-  starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
-- source: suggested
-  archetype: mana-stack
-  slot_order:
-  - Book of Thoth
-  - Genji's Guard
-  - Gluttonous Grimoire
-  - Rod of Tahuti
-  - Obsidian Shard
-  - Lotus Sickle
-  flex_slots:
-  - Lotus Sickle
-  - Book of Thoth
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Gluttonous
-    Grimoire, Soul Gem, Genji''s Guard, Amanita Charm, Lotus Sickle, Kinetic Cuirass,
-    Breastplate of Valor, Helm of Radiance, Ancient Signet, Spear of the Magus, Death
-    Metal, Chronos'' Pendant, Oni Hunter''s Garb, Helm of Darkness, Blood-Bound Book,
-    Doom Orb, The World Stone, Jade Scepter, Shield of the Phoenix, Erosion, Eye of
-    Providence, Screeching Gargoyle, Midgardian Mail, Wish-Granting Pearl, Stone of
-    Binding, Polynomicon, Freya''s Tears.'
-  slot_scores:
-    Book of Thoth:
-      total: 0.51
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.5
-      fit: 0.24
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.69
-      win: 0.62
-      pick: 0.0
-      fit: 0.26
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.55
-    Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
-      win: 0.62
-      pick: 0.45
-      fit: 0.35
-    Obsidian Shard:
-      total: 0.56
-      efficiency: 0.58
-      win: 0.64
-      pick: 0.27
-      fit: 0.39
-    Lotus Sickle:
-      total: 0.54
-      efficiency: 0.57
-      win: 0.62
-      pick: 0.0
-      fit: 0.43
-  community_ordered:
-  - Book of Thoth
-  - Rod of Tahuti
-  - Obsidian Shard
-  starter: *id001
-- source: suggested
-  archetype: burst
-  slot_order:
-  - Book of Thoth
-  - Genji's Guard
   - Spear of Desolation
-  - Gluttonous Grimoire
+  - Kinetic Cuirass
   - Rod of Tahuti
-  - Obsidian Shard
+  - Amanita Charm
   flex_slots:
   - Spear of Desolation
   - Book of Thoth
@@ -257,60 +107,209 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
+    this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Kinetic Cuirass, Genji''s
+    Guard, Breastplate of Valor, Shield of the Phoenix, Lotus Sickle, Chronos'' Pendant,
+    Helm of Radiance, Blood-Bound Book, Draconic Scale, Helm of Darkness, Oni Hunter''s
+    Garb, Spear of the Magus, Erosion, Eye of Providence, Ancient Signet, Screeching
+    Gargoyle, Shifter''s Shield, Freya''s Tears, Dreamer''s Idol, Midgardian Mail,
+    Polynomicon, Jade Scepter, Stone of Binding, Leviathan''s Hide.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.49
+      efficiency: 0.48
+      win: 0.61
+      pick: 0.5
+      fit: 0.18
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.62
+      pick: 0.0
+      fit: 0.28
+    Spear of Desolation:
+      total: 0.56
+      efficiency: 0.6
+      win: 0.58
+      pick: 0.3
+      fit: 0.47
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.55
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.82
+      win: 0.62
+      pick: 0.45
+      fit: 0.34
+    Amanita Charm:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.45
+  community_ordered:
+  - Book of Thoth
+  - Spear of Desolation
+  - Rod of Tahuti
+  starter: &id001
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+- source: suggested
+  archetype: mana-stack
+  slot_order:
+  - Book of Thoth
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Amanita Charm
+  flex_slots:
+  - Obsidian Shard
+  - Book of Thoth
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Oni Hunter's Garb — magical protection
+    swap_item: Oni Hunter's Garb
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Genji''s
+    Guard, Amanita Charm, Soul Gem, Gluttonous Grimoire, Kinetic Cuirass, Lotus Sickle,
+    Breastplate of Valor, Ancient Signet, Death Metal, Blood-Bound Book, Oni Hunter''s
+    Garb, Chronos'' Pendant, Helm of Radiance, Polynomicon, Shield of the Phoenix,
+    Spear of the Magus, Helm of Darkness, Draconic Scale, Dreamer''s Idol, Doom Orb,
+    Screeching Gargoyle, Jade Scepter, Erosion, Bancroft''s Talon, Eye of Providence,
+    Triton''s Conch, Freya''s Tears.'
+  slot_scores:
+    Book of Thoth:
+      total: 0.5
+      efficiency: 0.48
+      win: 0.61
+      pick: 0.5
+      fit: 0.24
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.62
+      pick: 0.0
+      fit: 0.26
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.43
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.82
+      win: 0.62
+      pick: 0.45
+      fit: 0.35
+    Obsidian Shard:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.64
+      pick: 0.27
+      fit: 0.39
+    Amanita Charm:
+      total: 0.57
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.33
+  community_ordered:
+  - Book of Thoth
+  - Rod of Tahuti
+  - Obsidian Shard
+  starter: *id001
+- source: suggested
+  archetype: burst
+  slot_order:
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Spear of Desolation
+  - Rod of Tahuti
+  - Obsidian Shard
+  - Soul Gem
+  flex_slots:
+  - Spear of Desolation
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s Guard, Kinetic Cuirass,
-    Breastplate of Valor, Lotus Sickle, Spear of the Magus, Helm of Radiance, Chronos''
-    Pendant, Helm of Darkness, Doom Orb, Blood-Bound Book, Shield of the Phoenix,
-    Oni Hunter''s Garb, The World Stone, Screeching Gargoyle, Ancient Signet, Death
-    Metal, Erosion, Eye of Providence, Midgardian Mail, Jade Scepter, Stone of Binding,
-    Dreamer''s Idol, Draconic Scale, Freya''s Tears.'
+    god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Kinetic Cuirass,
+    Breastplate of Valor, Lotus Sickle, Shield of the Phoenix, Chronos'' Pendant,
+    Spear of the Magus, Blood-Bound Book, Helm of Radiance, Oni Hunter''s Garb, Dreamer''s
+    Idol, Draconic Scale, Screeching Gargoyle, Death Metal, Ancient Signet, Helm of
+    Darkness, Freya''s Tears, Erosion, Polynomicon, Eye of Providence, Doom Orb, Midgardian
+    Mail, Shifter''s Shield, Leviathan''s Hide.'
   slot_scores:
-    Book of Thoth:
-      total: 0.49
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.5
-      fit: 0.13
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.71
       win: 0.62
       pick: 0.0
       fit: 0.25
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
     Spear of Desolation:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.6
       win: 0.58
       pick: 0.3
       fit: 0.46
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.6
     Rod of Tahuti:
-      total: 0.65
-      efficiency: 0.86
+      total: 0.64
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.33
     Obsidian Shard:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.55
+      efficiency: 0.53
       win: 0.64
       pick: 0.27
       fit: 0.43
+    Soul Gem:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.62
+      pick: 0.0
+      fit: 0.62
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -320,8 +319,8 @@ builds:
   slot_order:
   - Book of Thoth
   - Genji's Guard
+  - Kinetic Cuirass
   - Rod of Tahuti
-  - Obsidian Shard
   - Amanita Charm
   - Soul Gem
   flex_slots:
@@ -329,11 +328,11 @@ builds:
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -341,66 +340,65 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Soul Gem, Amanita Charm, Gluttonous Grimoire, Shield of the Phoenix,
-    Blood-Bound Book, Genji''s Guard, Kinetic Cuirass, Ethereal Staff, Bancroft''s
-    Talon, Lotus Sickle, Phoenix Feather, Yogi''s Necklace, Breastplate of Valor,
-    Rod of Asclepius, Helm of Radiance, Chandra''s Grace, Sphere of Negation, Spear
-    of the Magus, Soul Locket, Helm of Darkness, Oni Hunter''s Garb, Erosion, Jade
-    Scepter, Eye of Providence, Regrowth Striders, Draconic Scale, Freya''s Tears.'
+    this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Gluttonous Grimoire,
+    Blood-Bound Book, Kinetic Cuirass, Genji''s Guard, Ethereal Staff, Phoenix Feather,
+    Bancroft''s Talon, Yogi''s Necklace, Chandra''s Grace, Breastplate of Valor, Lotus
+    Sickle, Rod of Asclepius, Soul Locket, Chronos'' Pendant, Oni Hunter''s Garb,
+    Draconic Scale, Helm of Radiance, Sphere of Negation, Regrowth Striders, Spear
+    of the Magus, Erosion, Helm of Darkness, Eye of Providence, Freya''s Tears.'
   slot_scores:
     Book of Thoth:
-      total: 0.5
-      efficiency: 0.49
+      total: 0.49
+      efficiency: 0.48
       win: 0.61
       pick: 0.5
       fit: 0.18
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.71
       win: 0.62
       pick: 0.0
       fit: 0.27
+    Kinetic Cuirass:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.55
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
+      total: 0.64
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.34
-    Obsidian Shard:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.64
-      pick: 0.27
-      fit: 0.44
     Amanita Charm:
-      total: 0.62
-      efficiency: 0.65
+      total: 0.63
+      efficiency: 0.68
       win: 0.62
       pick: 0.0
       fit: 0.75
     Soul Gem:
-      total: 0.62
-      efficiency: 0.57
+      total: 0.63
+      efficiency: 0.58
       win: 0.62
       pick: 0.0
       fit: 0.95
   community_ordered:
   - Book of Thoth
   - Rod of Tahuti
-  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Book of Thoth
   - Genji's Guard
+  - Kinetic Cuirass
   - Spear of Desolation
-  - Gluttonous Grimoire
   - Rod of Tahuti
   - Obsidian Shard
+  - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Book of Thoth
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -415,51 +413,50 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s Guard, Screeching
-    Gargoyle, Stone of Binding, Spear of the Magus, Kinetic Cuirass, Void Stone, Void
-    Shield, Breastplate of Valor, Doom Orb, Lotus Sickle, Helm of Radiance, The World
-    Stone, Helm of Darkness, Dreamer''s Idol, Chronos'' Pendant, Blood-Bound Book,
-    Oni Hunter''s Garb, Shield of the Phoenix, Ancient Signet, Erosion, Eye of Providence,
-    Jade Scepter, Draconic Scale, Freya''s Tears.'
+    for this god: Soul Gem, Gluttonous Grimoire, Amanita Charm, Genji''s Guard, Kinetic
+    Cuirass, Screeching Gargoyle, Stone of Binding, Spear of the Magus, Void Stone,
+    Void Shield, Breastplate of Valor, Dreamer''s Idol, Lotus Sickle, Shield of the
+    Phoenix, Chronos'' Pendant, Blood-Bound Book, Helm of Radiance, Doom Orb, Oni
+    Hunter''s Garb, Draconic Scale, The World Stone, Helm of Darkness, Ancient Signet,
+    Erosion, Eye of Providence, Polynomicon, Freya''s Tears.'
   slot_scores:
-    Book of Thoth:
-      total: 0.5
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.5
-      fit: 0.15
     Genji's Guard:
       total: 0.56
-      efficiency: 0.69
+      efficiency: 0.71
       win: 0.62
       pick: 0.0
       fit: 0.24
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.48
     Spear of Desolation:
       total: 0.57
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.58
       pick: 0.3
       fit: 0.55
-    Gluttonous Grimoire:
-      total: 0.59
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.73
     Rod of Tahuti:
-      total: 0.67
-      efficiency: 0.86
+      total: 0.65
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.45
     Obsidian Shard:
-      total: 0.59
-      efficiency: 0.58
+      total: 0.57
+      efficiency: 0.53
       win: 0.64
       pick: 0.27
       fit: 0.55
+    Soul Gem:
+      total: 0.59
+      efficiency: 0.58
+      win: 0.62
+      pick: 0.0
+      fit: 0.72
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -467,88 +464,87 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Genji's Guard
   - Nimble Ring
   - Bragi's Harp
-  - Gluttonous Grimoire
   - Rod of Tahuti
-  - Obsidian Shard
   - Eros' Bow
+  - Amanita Charm
   flex_slots:
-  - Eros' Bow
   - Bragi's Harp
+  - Eros' Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
+    swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Gluttonous Grimoire, Nimble Ring, Amanita Charm, Soul Gem, Genji''s
-    Guard, Kinetic Cuirass, Breastplate of Valor, Lotus Sickle, Helm of Radiance,
-    Eros'' Bow, Spear of the Magus, Chronos'' Pendant, Blood-Bound Book, Ancient Signet,
-    Helm of Darkness, Oni Hunter''s Garb, Bragi''s Harp, Bracer of The Abyss, Shield
-    of the Phoenix, Screeching Gargoyle, Jade Scepter, Death Metal, Midgardian Mail,
-    Erosion, Stone of Binding, Doom Orb, Freya''s Tears.'
+    this god: Amanita Charm, Genji''s Guard, Soul Gem, Kinetic Cuirass, Gluttonous
+    Grimoire, Breastplate of Valor, Nimble Ring, Lotus Sickle, Shield of the Phoenix,
+    Blood-Bound Book, Chronos'' Pendant, Bragi''s Harp, Helm of Radiance, Oni Hunter''s
+    Garb, Ancient Signet, Eros'' Bow, Draconic Scale, Spear of the Magus, Death Metal,
+    Polynomicon, Screeching Gargoyle, Bracer of The Abyss, Helm of Darkness, Erosion,
+    Midgardian Mail, Dreamer''s Idol, Freya''s Tears.'
   slot_scores:
+    Genji's Guard:
+      total: 0.56
+      efficiency: 0.71
+      win: 0.62
+      pick: 0.0
+      fit: 0.18
     Nimble Ring:
-      total: 0.55
-      efficiency: 0.63
+      total: 0.53
+      efficiency: 0.57
       win: 0.62
       pick: 0.0
       fit: 0.33
     Bragi's Harp:
       total: 0.51
-      efficiency: 0.45
+      efficiency: 0.47
       win: 0.62
       pick: 0.0
       fit: 0.47
-    Gluttonous Grimoire:
-      total: 0.55
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.46
     Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
+      total: 0.62
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.22
-    Obsidian Shard:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.64
-      pick: 0.27
-      fit: 0.32
     Eros' Bow:
-      total: 0.52
-      efficiency: 0.53
+      total: 0.51
+      efficiency: 0.5
       win: 0.62
       pick: 0.0
       fit: 0.37
+    Amanita Charm:
+      total: 0.56
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.28
   community_ordered:
   - Rod of Tahuti
-  - Obsidian Shard
   starter: *id001
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Book of Thoth
   - Genji's Guard
-  - Spear of Desolation
   - Breastplate of Valor
+  - Spear of Desolation
+  - Kinetic Cuirass
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Breastplate of Valor
   - Spear of Desolation
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -557,58 +553,57 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Genji''s Guard, Soul Gem, Amanita
-    Charm, Breastplate of Valor, Gluttonous Grimoire, Lotus Sickle, Kinetic Cuirass,
-    Shield of the Phoenix, Chronos'' Pendant, Screeching Gargoyle, Freya''s Tears,
-    Helm of Radiance, Oni Hunter''s Garb, Spear of the Magus, Prophetic Cloak, Erosion,
-    Helm of Darkness, Eye of Providence, Gem of Focus, Blood-Bound Book, Midgardian
-    Mail, Stone of Binding, Heartwood Charm, Draconic Scale, Gladiator''s Shield,
-    Magi''s Cloak, Ancient Signet.'
+    Charm, Kinetic Cuirass, Breastplate of Valor, Shield of the Phoenix, Gluttonous
+    Grimoire, Lotus Sickle, Chronos'' Pendant, Screeching Gargoyle, Freya''s Tears,
+    Oni Hunter''s Garb, Gladiator''s Shield, Draconic Scale, Blood-Bound Book, Prophetic
+    Cloak, Helm of Radiance, Erosion, Chandra''s Grace, Eye of Providence, Gem of
+    Focus, Heartwood Charm, Midgardian Mail, Shifter''s Shield, Ancient Signet, Spear
+    of the Magus, Helm of Darkness.'
   slot_scores:
-    Book of Thoth:
-      total: 0.49
-      efficiency: 0.49
-      win: 0.61
-      pick: 0.5
-      fit: 0.08
     Genji's Guard:
-      total: 0.58
-      efficiency: 0.69
+      total: 0.59
+      efficiency: 0.71
       win: 0.62
       pick: 0.0
       fit: 0.4
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.59
-      win: 0.58
-      pick: 0.3
-      fit: 0.49
     Breastplate of Valor:
       total: 0.56
       efficiency: 0.63
       win: 0.62
       pick: 0.0
       fit: 0.4
+    Spear of Desolation:
+      total: 0.56
+      efficiency: 0.6
+      win: 0.58
+      pick: 0.3
+      fit: 0.49
+    Kinetic Cuirass:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.0
+      fit: 0.46
     Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
+      total: 0.62
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.21
     Soul Gem:
       total: 0.58
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.62
       pick: 0.0
       fit: 0.66
   community_ordered:
-  - Book of Thoth
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
@@ -618,73 +613,72 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   - Spear of Desolation
-  - Gluttonous Grimoire
+  - Freya's Tears
   - Rod of Tahuti
-  - Obsidian Shard
+  - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
-  - Obsidian Shard
+  - Spear of Desolation
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Gluttonous Grimoire, Soul Gem, Amanita Charm, Genji''s
-    Guard, Kinetic Cuirass, Freya''s Tears, Breastplate of Valor, Lotus Sickle, Helm
-    of Radiance, Helm of Darkness, Spear of the Magus, Blood-Bound Book, Erosion,
-    Shield of the Phoenix, Oni Hunter''s Garb, Eye of Providence, Draconic Scale,
-    Ancient Signet, Jade Scepter, Chronos'' Pendant, Doom Orb, Screeching Gargoyle,
-    Stone of Binding, Midgardian Mail, The World Stone, Magi''s Cloak, Leviathan''s
-    Hide.'
+    Underrated for this god: Amanita Charm, Soul Gem, Gluttonous Grimoire, Kinetic
+    Cuirass, Genji''s Guard, Freya''s Tears, Breastplate of Valor, Shield of the Phoenix,
+    Lotus Sickle, Helm of Radiance, Blood-Bound Book, Draconic Scale, Helm of Darkness,
+    Oni Hunter''s Garb, Spear of the Magus, Erosion, Eye of Providence, Chronos''
+    Pendant, Ancient Signet, Screeching Gargoyle, Shifter''s Shield, Dreamer''s Idol,
+    Midgardian Mail, Polynomicon, Jade Scepter, Stone of Binding, Leviathan''s Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
-      efficiency: 0.69
+      total: 0.57
+      efficiency: 0.71
       win: 0.62
       pick: 0.0
       fit: 0.28
     Kinetic Cuirass:
-      total: 0.56
-      efficiency: 0.56
+      total: 0.57
+      efficiency: 0.61
       win: 0.62
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.55
-      efficiency: 0.59
+      total: 0.56
+      efficiency: 0.6
       win: 0.58
       pick: 0.3
       fit: 0.47
-    Gluttonous Grimoire:
-      total: 0.58
-      efficiency: 0.59
-      win: 0.62
-      pick: 0.0
-      fit: 0.66
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.53
+      pick: 0.08
+      fit: 0.44
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
+      total: 0.64
+      efficiency: 0.82
       win: 0.62
       pick: 0.45
       fit: 0.34
-    Obsidian Shard:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.64
-      pick: 0.27
-      fit: 0.44
+    Amanita Charm:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.62
+      pick: 0.0
+      fit: 0.45
   community_ordered:
   - Spear of Desolation
+  - Freya's Tears
   - Rod of Tahuti
-  - Obsidian Shard
   starter: *id001
 ---

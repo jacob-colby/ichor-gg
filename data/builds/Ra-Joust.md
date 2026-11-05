@@ -13,7 +13,7 @@ builds:
   - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Obsidian Shard
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
@@ -23,8 +23,8 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -33,25 +33,25 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.8
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 1.0
     Spear of the Magus:
-      total: 0.65
-      efficiency: 0.58
+      total: 0.64
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.72
     Obsidian Shard:
-      total: 0.7
-      efficiency: 0.58
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.82
     Rod of Tahuti:
-      total: 0.79
-      efficiency: 0.86
+      total: 0.77
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -62,7 +62,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -74,13 +74,13 @@ builds:
   archetype: mana-stack
   slot_order:
   - Book of Thoth
+  - Death Metal
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
   - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
+  - Death Metal
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -90,8 +90,8 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -99,26 +99,26 @@ builds:
     data).
   slot_scores:
     Book of Thoth:
-      total: 0.44
-      efficiency: 0.49
+      total: 0.43
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.39
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.59
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Obsidian Shard:
-      total: 0.58
-      efficiency: 0.58
+    Death Metal:
+      total: 0.57
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.57
+    Spear of Desolation:
+      total: 0.61
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Rod of Tahuti:
-      total: 0.72
-      efficiency: 0.86
+      total: 0.69
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.57
@@ -165,25 +165,25 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.69
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.78
     Spear of the Magus:
-      total: 0.57
-      efficiency: 0.58
+      total: 0.56
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.56
     Obsidian Shard:
-      total: 0.62
-      efficiency: 0.58
+      total: 0.59
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.86
+      total: 0.69
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -194,7 +194,7 @@ builds:
       pick: 0.0
       fit: 0.57
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -214,11 +214,11 @@ builds:
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Glorious Pridwen — magical protection
-    swap_item: Glorious Pridwen
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -229,20 +229,20 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Kinetic Cuirass:
-      total: 0.58
-      efficiency: 0.56
+      total: 0.6
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.6
     Spear of Desolation:
       total: 0.55
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
+      total: 0.59
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.36
@@ -253,8 +253,8 @@ builds:
       pick: 0.0
       fit: 0.48
     Amanita Charm:
-      total: 0.74
-      efficiency: 0.65
+      total: 0.76
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.83
@@ -295,36 +295,36 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.8
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 1.0
     Doom Orb:
-      total: 0.67
-      efficiency: 0.53
+      total: 0.66
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.81
     Spear of the Magus:
-      total: 0.69
-      efficiency: 0.58
+      total: 0.68
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.81
     Obsidian Shard:
-      total: 0.74
-      efficiency: 0.58
+      total: 0.72
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.91
     Rod of Tahuti:
-      total: 0.83
-      efficiency: 0.86
+      total: 0.81
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -333,22 +333,22 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
-  - Eros' Bow
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Eros' Bow
+  - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -358,39 +358,39 @@ builds:
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Bracer of The Abyss:
+      total: 0.46
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
     Nimble Ring:
-      total: 0.56
-      efficiency: 0.63
+      total: 0.52
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.54
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.63
     Spear of Desolation:
-      total: 0.5
-      efficiency: 0.59
+      total: 0.51
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.41
     Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.86
+      total: 0.55
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.29
-    Eros' Bow:
-      total: 0.46
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
     Soul Gem:
       total: 0.72
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.86
@@ -405,7 +405,7 @@ builds:
   - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Chronos' Pendant
+  - Rod of Tahuti
   - Heartwood Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -424,26 +424,26 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Chronos' Pendant:
-      total: 0.6
-      efficiency: 0.55
+      total: 0.61
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.65
     Heartwood Charm:
-      total: 0.57
-      efficiency: 0.5
+      total: 0.58
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.65
     Spear of Desolation:
-      total: 0.72
-      efficiency: 0.59
+      total: 0.73
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.86
+      total: 0.58
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.35
@@ -454,7 +454,7 @@ builds:
       pick: 0.0
       fit: 0.78
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -470,7 +470,7 @@ builds:
   - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Lotus Sickle
+  - Obsidian Shard
   - Spear of the Magus
   situational_swaps:
   - vs_tag: heavy_cc
@@ -480,8 +480,8 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -490,25 +490,25 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.8
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 1.0
     Spear of the Magus:
-      total: 0.65
-      efficiency: 0.58
+      total: 0.64
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.72
     Obsidian Shard:
-      total: 0.7
-      efficiency: 0.58
+      total: 0.67
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.82
     Rod of Tahuti:
-      total: 0.79
-      efficiency: 0.86
+      total: 0.77
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.72
@@ -519,7 +519,7 @@ builds:
       pick: 0.0
       fit: 0.82
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Rod of Tahuti
   - Lotus Sickle
   - Soul Gem
-  - Doublet of Binding
   flex_slots:
-  - Void Stone
-  - Doublet of Binding
+  - Rod of Tahuti
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -545,29 +545,35 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Void Stone:
       total: 0.61
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
       total: 0.62
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.65
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+      total: 0.6
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -578,17 +584,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doublet of Binding:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -620,20 +620,20 @@ builds:
     data).
   slot_scores:
     Book of Thoth:
-      total: 0.41
-      efficiency: 0.49
+      total: 0.4
+      efficiency: 0.48
       win: 0.5
       pick: 0.0
       fit: 0.32
     Spear of Desolation:
       total: 0.55
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.5
     Rod of Tahuti:
-      total: 0.67
-      efficiency: 0.86
+      total: 0.64
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.47
@@ -644,14 +644,14 @@ builds:
       pick: 0.0
       fit: 0.83
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.65
-      efficiency: 0.44
+      total: 0.66
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.87
@@ -677,8 +677,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Divine Ruin — anti-heal
     swap_item: Divine Ruin
@@ -687,19 +687,19 @@ builds:
   slot_scores:
     Spear of Desolation:
       total: 0.61
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.62
     Obsidian Shard:
-      total: 0.56
-      efficiency: 0.58
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.55
     Rod of Tahuti:
-      total: 0.66
-      efficiency: 0.86
+      total: 0.63
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.45
@@ -710,14 +710,14 @@ builds:
       pick: 0.0
       fit: 0.76
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
-      total: 0.6
-      efficiency: 0.44
+      total: 0.61
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.76
@@ -726,22 +726,22 @@ builds:
 - source: suggested
   archetype: bruiser
   slot_order:
+  - Kinetic Cuirass
   - Void Shield
   - Void Stone
-  - Lotus Sickle
   - Amanita Charm
   - Erosion
   - Soul Gem
   flex_slots:
+  - Void Stone
   - Void Shield
-  - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -751,6 +751,12 @@ builds:
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Kinetic Cuirass:
+      total: 0.64
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Void Shield:
       total: 0.63
       efficiency: 0.46
@@ -759,19 +765,13 @@ builds:
       fit: 0.79
     Void Stone:
       total: 0.63
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.79
-    Lotus Sickle:
-      total: 0.61
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Amanita Charm:
-      total: 0.83
-      efficiency: 0.65
+      total: 0.84
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 1.0
@@ -782,7 +782,7 @@ builds:
       pick: 0.0
       fit: 0.87
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -792,15 +792,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Screeching Gargoyle
   - Void Stone
   - Spear of Desolation
-  - Obsidian Shard
   - Rod of Tahuti
   - Lotus Sickle
   - Soul Gem
   flex_slots:
   - Lotus Sickle
-  - Obsidian Shard
+  - Screeching Gargoyle
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -812,32 +812,32 @@ builds:
     swap: Void Shield — physical protection
     swap_item: Void Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
+    Screeching Gargoyle:
+      total: 0.62
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
     Void Stone:
       total: 0.71
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.96
     Spear of Desolation:
       total: 0.67
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Obsidian Shard:
-      total: 0.62
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     Rod of Tahuti:
-      total: 0.71
-      efficiency: 0.86
+      total: 0.69
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -848,7 +848,7 @@ builds:
       pick: 0.0
       fit: 0.68
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
@@ -865,8 +865,8 @@ builds:
   - Eros' Bow
   - Soul Gem
   flex_slots:
-  - Nimble Ring
   - Bragi's Harp
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -878,26 +878,26 @@ builds:
     swap: Erosion — physical protection
     swap_item: Erosion
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Nimble Ring:
-      total: 0.49
-      efficiency: 0.63
+      total: 0.46
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.35
     Bragi's Harp:
-      total: 0.47
-      efficiency: 0.45
+      total: 0.48
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.52
-      efficiency: 0.86
+      total: 0.49
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.17
@@ -908,14 +908,14 @@ builds:
       pick: 0.0
       fit: 0.57
     Eros' Bow:
-      total: 0.6
-      efficiency: 0.53
+      total: 0.58
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.66
     Soul Gem:
       total: 0.77
-      efficiency: 0.57
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.96
@@ -950,20 +950,20 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Screeching Gargoyle:
-      total: 0.55
-      efficiency: 0.52
+      total: 0.56
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.59
     Genji's Guard:
-      total: 0.59
-      efficiency: 0.69
+      total: 0.6
+      efficiency: 0.71
       win: 0.5
       pick: 0.0
       fit: 0.49
     Spear of Desolation:
-      total: 0.63
-      efficiency: 0.59
+      total: 0.64
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.67
@@ -974,14 +974,14 @@ builds:
       pick: 0.0
       fit: 0.91
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
     Triton's Conch:
       total: 0.55
-      efficiency: 0.44
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -990,15 +990,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Genji's Guard
   - Void Stone
   - Spear of Desolation
   - Rod of Tahuti
   - Lotus Sickle
   - Soul Gem
-  - Doublet of Binding
   flex_slots:
-  - Void Stone
-  - Doublet of Binding
+  - Rod of Tahuti
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -1007,29 +1007,35 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.42
     Void Stone:
       total: 0.61
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
       total: 0.62
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.65
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+      total: 0.6
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -1040,17 +1046,11 @@ builds:
       pick: 0.0
       fit: 0.79
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
-    Doublet of Binding:
-      total: 0.56
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
   starter: *id001
   aspect: Aspect of Thermotherapy
 - source: suggested
@@ -1063,7 +1063,7 @@ builds:
   - Lotus Sickle
   - Soul Gem
   flex_slots:
-  - Void Stone
+  - Rod of Tahuti
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1073,8 +1073,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Erosion — physical protection
-    swap_item: Erosion
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Contagion — anti-heal
     swap_item: Contagion
@@ -1083,25 +1083,25 @@ builds:
   slot_scores:
     Void Stone:
       total: 0.61
-      efficiency: 0.46
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.75
     Spear of Desolation:
       total: 0.62
-      efficiency: 0.59
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.65
     Obsidian Shard:
-      total: 0.53
-      efficiency: 0.58
+      total: 0.51
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.49
     Rod of Tahuti:
-      total: 0.63
-      efficiency: 0.86
+      total: 0.6
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.39
@@ -1112,16 +1112,16 @@ builds:
       pick: 0.0
       fit: 0.79
     Soul Gem:
-      total: 0.76
+      total: 0.77
       efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 1.0
   swaps:
   - added: Obsidian Shard
-    removed: Doublet of Binding
+    removed: Genji's Guard
     reason: Conquest community 60% win over 271 matches (vs 53% on this god), taking
-      the model's weakest slot from Doublet of Binding
+      the model's weakest slot from Genji's Guard
   borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Thermotherapy
