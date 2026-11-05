@@ -22,6 +22,17 @@ def _flags_off():
 
 
 def _stats(item, **flags):
+    """The FIT's view of one item under these flags."""
+    before = efficiency.apply_pricing_flags(flags)
+    try:
+        return efficiency.regression_columns(item)
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
+def _effective(item, **flags):
+    """An item's EFFECTIVE STATS under these flags — what `build_quality` and
+    `damage_value` feed to damage arithmetic."""
     before = efficiency.apply_pricing_flags(flags)
     try:
         return efficiency.item_stat_values(item)
@@ -135,8 +146,48 @@ def test_a_negative_measured_passive_is_clamped_not_credited():
         efficiency._PASSIVE_VALUES["__probe__"] = {
             "status": "simulated", "n": 3, "passive_damage": -50.0,
             "passive_ehp_physical": 0.0, "passive_ehp_magical": 0.0}
-        out = efficiency.item_stat_values(fake)
+        out = efficiency.regression_columns(fake)
         assert "Passive Damage" not in out
     finally:
         efficiency.restore_pricing_flags(before)
         efficiency._PASSIVE_VALUES = None
+
+
+def test_effective_stats_never_see_the_flag(by_name):
+    """THE DEFECT THIS FLAG SHIPPED WITH FOR ONE DAY, pinned.
+
+    `item_stat_values` is read two ways: the regression wants columns, and
+    `build_quality`, `damage_value` and `new_entities` read it as an item's
+    effective stats. The first version of this flag added its columns there,
+    which (a) handed damage arithmetic a "stat" called Passive Damage and (b)
+    let the supersede rule delete The Executioner's real adaptive +30 Strength
+    from a build's totals. Green at OFF, wrong at ON, and found only when the
+    flag was first turned on — by `test_priced_run_restores_the_pricing_flags`.
+    """
+    for name in ("The Executioner", "Deathbringer", "Tekko-Kagi"):
+        item = by_name[name]
+        off = _effective(item, price_adaptive=True)
+        on = _effective(item, price_adaptive=True, price_passive_sim=True)
+        assert on == off, f"{name}: effective stats moved with price_passive_sim"
+        assert not any(c in on for c in efficiency.PASSIVE_SIM_COLUMNS)
+
+
+def test_passive_columns_are_charged_as_off_map_and_that_is_the_rule(by_name, items):
+    """`offmap_efficiency` charges gold spent on columns no role map names, and
+    no map names the passive columns — so they are charged. That is the
+    exemption rule applied, not an accident: test (ii) asks whether any
+    instrument here can price the stat, and `passive_sim` is that instrument.
+    If someone exempts them, this fails and sends them to the two measured
+    arms under `price_passive_sim` in _weights.yaml."""
+    before = efficiency.apply_pricing_flags({"price_passive_sim": True})
+    try:
+        eff, _ = efficiency.efficiency_scores(items)
+        row = eff["Deathbringer"]
+        assert row["stat_gold"].get("Passive Damage", 0.0) > 0
+        role_map = {"Strength": 1.0}
+        with_passive = efficiency.offmap_gold(row, role_map)
+        stripped = dict(row, stat_gold={k: v for k, v in row["stat_gold"].items()
+                                        if k not in efficiency.PASSIVE_SIM_COLUMNS})
+        assert with_passive > efficiency.offmap_gold(stripped, role_map)
+    finally:
+        efficiency.restore_pricing_flags(before)

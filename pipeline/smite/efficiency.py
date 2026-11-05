@@ -274,6 +274,33 @@ def item_stat_values(item):
         from smite import passives
         for key, amount in passives.on_hit_grants(item).items():
             out[key] = out.get(key, 0.0) + amount
+    return out
+
+
+# ── What the FIT sees, as opposed to what an item's stats ARE ─────────────
+#
+# `item_stat_values` has two kinds of caller and they need different things.
+# The regression wants COLUMNS. `build_quality`, `damage_value` and
+# `new_entities` read it as an item's EFFECTIVE STATS and feed them to damage
+# arithmetic. The shipped pricing flags can serve both because what they add
+# is a real stat — an adaptive +30 Strength is Strength.
+#
+# "Passive Damage" is not a stat. It is a simulated outcome, and a damage
+# calculator that summed it into a build's totals would be adding the answer
+# to the question. Worse, the supersede rule below DROPS the flag-derived
+# grant for the dual-priced items, which is right for the fit (count once)
+# and wrong for a build's stats: the first version of `PRICE_PASSIVE_SIM`
+# lived inside `item_stat_values` and deleted The Executioner's real +30
+# Strength from `build_quality`'s priced run. Green at OFF, wrong at ON, and
+# caught by `test_priced_run_restores_the_pricing_flags` on the day the flag
+# was first turned on (2026-11-05, register §4.32). So the columns live in
+# `regression_columns`, and only the matrix, the prediction and `stat_gold`
+# call it. `test_effective_stats_never_see_the_flag` pins the seam.
+def regression_columns(item):
+    """`item_stat_values`, plus the simulated passive columns when
+    `PRICE_PASSIVE_SIM` is on. The fit's view of one item, and nothing else's —
+    see the comment block above for why the two are kept apart."""
+    out = item_stat_values(item)
     if PRICE_PASSIVE_SIM:
         out = _with_passive_sim_columns(item, out)
     return out
@@ -385,7 +412,7 @@ def collect_stat_names(items):
     MIN_STAT_CARRIERS items, sorted for deterministic column order."""
     counts = {}
     for item in items:
-        for key in item_stat_values(item):
+        for key in regression_columns(item):
             counts[key] = counts.get(key, 0) + 1
     return sorted(k for k, n in counts.items() if n >= MIN_STAT_CARRIERS)
 
@@ -395,7 +422,7 @@ def _stat_matrix(items, stat_names):
     column. Absent/non-numeric stats are 0."""
     rows, costs = [], []
     for item in items:
-        values = item_stat_values(item)
+        values = regression_columns(item)
         row = [values.get(s, 0.0) for s in stat_names]
         row.append(1.0)  # intercept
         rows.append(row)
@@ -510,7 +537,7 @@ def fit_gold_values(items):
 
 def predicted_cost(item, gold_values):
     total = gold_values.get(INTERCEPT_KEY, 0.0)
-    for key, val in item_stat_values(item).items():
+    for key, val in regression_columns(item).items():
         total += val * gold_values.get(key, 0.0)
     return total
 
@@ -569,8 +596,17 @@ def efficiency_scores(items):
     # not one of them threads `gold` through to `scoring` — a flag that needed
     # threading would have been a silent no-op in `calibrate`, `validate` and
     # `build_index`, which is register §4.10's failure mode exactly.
+    # `regression_columns`, so this stays "what each column contributed to the
+    # prediction" when `PRICE_PASSIVE_SIM` adds columns. It also means the
+    # simulated passive columns ARE charged by `offmap_adjusted_score` — no
+    # role map names them — and that is deliberate, not an accident of naming:
+    # the exemption rule above is two mechanical tests, and the passive
+    # columns FAIL test (ii), "no instrument in this repo can price it",
+    # because `passive_sim` is the instrument that produced them. "The honest
+    # move is to check it rather than to exempt it" — both arms are measured
+    # under `price_passive_sim` in _weights.yaml.
     stat_gold = {it["name"]: {k: v * gold.get(k, 0.0)
-                              for k, v in item_stat_values(it).items()}
+                              for k, v in regression_columns(it).items()}
                  for it in scored_items}
     vals = np.array(list(residuals.values()), dtype=float)
     mean = float(vals.mean())

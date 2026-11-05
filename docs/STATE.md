@@ -2135,8 +2135,8 @@ shipped **off**. Numbers are in the named module.
     one of the four Carry levers from §4.30 and still unpicked. (c) Accept the
     disagreement and leave it.
 
-32. **Option (a) built: pricing passives in `efficiency` fixes the ranking and
-    does not move a single verdict. SHIPS OFF (2026-11-05).**
+32. **Option (a) built: pricing passives in `efficiency` fixes the ranking,
+    makes Carry judgeable and Support mostly not. SHIPS OFF (2026-11-05).**
 
     §4.31 diagnosed it: `efficiency` chooses on stats alone while `passive_sim`
     judges the finished build, so the chooser is blind to what the judge sees.
@@ -2194,17 +2194,76 @@ shipped **off**. Numbers are in the named module.
     **this does not beat that on win-weighted**, and per the brief that is said
     rather than retuned away.
 
-    **THE NULL THAT DECIDES IT: ZERO VERDICTS MOVE.** Readable verdicts are
-    byte-identical with the flag on and off — Solo 11/19, Support 7/15, Mid
-    5/23, Jungle 5/18, Carry 3/19 — and Carry's readable split is 1 Ichor
-    better / 1 trade-off / 1 community better both ways. So the flag moves 80
-    Conquest cores, corrects 400-630 gold of markup on the community's own
-    picks, improves held-out Spearman by 0.057, and the comparison does not
-    notice. That is #107's null again from the other side: closing coverage
-    changed no verdicts, and now correcting the pricing changes no verdicts
-    either. **The verdict rule is insensitive to the thing both arms moved**,
-    which is a fact about the comparison rather than about either change, and
-    it is the most useful thing in this entry.
+    **CORRECTION, 2026-11-05: THIS ENTRY FIRST CLAIMED "ZERO VERDICTS MOVE"
+    AND THAT WAS NEVER MEASURED.** `python -m smite.side_by_side` writes the
+    per-god pages only with `--json`; without it the run exits 0 and rewrites
+    nothing. Both "flag ON" verdict readings behind the original claim compared
+    `main`'s pages against themselves, and so did the follow-up reading that
+    "Tekko-Kagi still blocks 15 Carry gods with the flag on". Found when
+    Artemis's `model` build read The Reaper in `data/builds` and Tekko-Kagi on
+    its comparison page. The claim, the "#107's null from the other side"
+    reading built on it, and the conclusion that the verdict rule was the
+    constraint are all withdrawn. What follows is measured with the pages
+    regenerated, against `origin/main` 1ec81c29.
+
+    **WHAT THE FLAG ACTUALLY DOES TO THE COMPARISON: 35 SHOWN VERDICTS CHANGE.**
+
+        readable Conquest verdicts      main -> ON
+        Solo                              11 -> 10   of 19
+        Support                            7 ->  2   of 15
+        Mid                                5 ->  5   of 23
+        Jungle                             5 -> 12   of 18
+        Carry                              3 -> 10   of 19
+        total                             31 -> 39   of 94
+
+        by direction, readable only     main -> ON
+        Ichor better                       7 ->  9
+        trade-off                         17 -> 15
+        community better                   7 -> 15
+
+    **Carry reaches 10 readable — the target §4.30 said could not be reached by
+    simulating passives — because the flag removes Tekko-Kagi from the builds
+    the comparison judges.** §4.30's diagnosis stands (the passive is a correct
+    refusal); what it missed is that the item need not be IN the build. Carry's
+    readable split is 3 Ichor better / 1 trade-off / 6 community better.
+
+    **Support's fall from 7 to 2 is the equal-ignorance artifact of §4.30
+    running the other way, not worse builds.** Ganesha, Geb, Sylvanus and
+    Yemoja all read ours 100% / theirs 83-84%, blocked by **Stampede on the
+    community's side**: our builds shed their refused item, theirs did not, and
+    a gap that was ~0 while both sides were equally unsimulated opened past
+    0.14. Stampede is now the single largest blocker (9 gods), then Tekko-Kagi
+    (5), Hussar's Wings (3), Erosion (3).
+
+    **THE DEFECT THE FLAG SHIPPED WITH FOR ONE DAY.** The first version added
+    its columns inside `item_stat_values`, which `build_quality`,
+    `damage_value` and `new_entities` read as an item's EFFECTIVE STATS. Green
+    at OFF; at ON it handed damage arithmetic a "stat" called Passive Damage and
+    let the supersede rule delete The Executioner's real adaptive +30 Strength
+    from a build's totals. `test_priced_run_restores_the_pricing_flags` caught
+    it the first time the flag was turned on. The columns now live in
+    `efficiency.regression_columns`, which only the matrix, the prediction and
+    `stat_gold` call; the fit is bit-identical (same three prices, Tekko-Kagi
+    still +312.1). This is why "ships OFF, gates green" was not evidence the
+    flag worked, and why it was not merged on that basis.
+
+    **THE OFF-MAP CHARGE APPLIES TO THE NEW COLUMNS, AND BOTH ARMS ARE
+    MEASURED.** No role map names Passive Damage, so `offmap_efficiency` (0.55)
+    charges 55% of every item's fitted passive gold back. That is the exemption
+    rule applied rather than an accident: its test (ii) asks whether any
+    instrument here can price the stat, and `passive_sim` is that instrument.
+    The two gates disagree about which arm is better:
+
+        arm                         leakage-free control    held-out ww / spearman
+        OFF                            36.8% / 37.6%              --
+        ON, columns CHARGED (rule)     39.7% / 38.5%        -0.0014 / +0.0567
+        ON, columns EXEMPT             37.0% / 37.0%        +0.0150 / +0.1012
+
+    The charged arm is the one the rule prescribes, the one every figure in
+    this entry describes, and the better one on the gate CLAUDE.md rule 1 names
+    as the judge. The exempt arm beats §4.31's +0.0082 benchmark on held-out
+    and would need an exemption the rule says is not earned. Recorded as a
+    two-gate disagreement, the shape §4.15 had before it was resolved.
 
     **THE ASSUMPTION, MEASURED.** A per-item value is the MEDIAN over up to 30
     builds holding the item (ours and the community's, all modes) against the
@@ -2219,12 +2278,13 @@ shipped **off**. Numbers are in the named module.
     `no-context`** — simulated but in no build to measure in, zeroed and
     labelled rather than guessed.
 
-    **WHY IT SHIPS OFF.** It trades a small win-weighted loss for a large
-    Spearman gain and moves no verdict, so there is no measurement here that
-    says turning it on makes the product better — only one that says it makes
-    the ranking more community-like. That is a judgement about what the model
-    is FOR, and it is Jacob's. The flag, the data file, the generator and the
-    decomposition are all in place to turn it on in one line.
+    **WHY IT STILL SHIPS OFF IN THIS COMMIT.** Turning it on is no longer a
+    quiet change: it flips 35 shown verdicts on the live comparison pages,
+    doubles the readable "community better" count, makes Carry judgeable and
+    makes Support mostly unjudgeable. It was approved on the withdrawn claim
+    that it moved none of that, so the decision goes back to Jacob with the
+    numbers above. The flag, the data file, the generator and the decomposition
+    are all in place to turn it on in one line.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -3322,7 +3382,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1408) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1410) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3442,7 +3502,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 7 — Achilles, Cernunnos, Guan Yu, Horus, Ishtar, Mercury, Mordred. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 131 of 140 buildable tagged · 9 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1408 pipeline · 958 viewer |
+| Tests | 1410 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

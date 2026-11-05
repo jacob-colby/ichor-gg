@@ -1226,6 +1226,25 @@ price_on_hit: false
 # value SUPERSEDES the flag's grant (`efficiency.PASSIVE_SIM_SUPERSEDES`) —
 # `passive_contribution` switches the whole passive off, so its number already
 # contains the adaptive or converted stats, and keeping both counts them twice.
+#
+# THE OFF-MAP CHARGE APPLIES TO THESE COLUMNS, and both arms are measured
+# (2026-11-05, against OFF at 36.8% / 37.6% leakage-free):
+#
+#     arm                          leakage-free     held-out ww / spearman
+#     columns CHARGED (the rule)   39.7% / 38.5%     -0.0014 / +0.0567
+#     columns EXEMPT               37.0% / 37.0%     +0.0150 / +0.1012
+#
+# No role map names them, so `offmap_efficiency` charges 55% of the fitted
+# passive gold back. They are NOT added to `offmap_exempt`: that list's test
+# (ii) asks whether any instrument here can price the stat, and `passive_sim`
+# is the instrument that produced them. The gates disagree about the arms;
+# the charged one is what the rule prescribes and what ships if this is on.
+#
+# WHAT TURNING IT ON DOES TO THE COMPARISON PAGES — measure with
+# `side_by_side --json`, because without `--json` no page is rewritten and the
+# reading comes back identical for the wrong reason: readable Conquest verdicts
+# 31 -> 39 (Carry 3 -> 10, Jungle 5 -> 12, Support 7 -> 2), 35 shown verdicts
+# change, readable "community better" 7 -> 15. Register §4.32.
 price_passive_sim: false
 
 # What an item with no community record scores on `win` -- the god's own median
