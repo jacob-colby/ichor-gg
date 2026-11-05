@@ -50,6 +50,9 @@ whatever they score, because neither was chosen on the principle above:
 The decision, also committed first: entry 12's three criteria unmoved, and if the
 rule scores worse for Carry than `damage_per_second_roles: [Carry]` did, the clock
 stays OFF for everyone rather than keeping the role list.
+
+THE OUTCOME, measured after that commit: Carry 0.370 against the list's 0.307, so
+the clock stayed off. Register 4.12 has the rest.
 """
 import statistics
 import sys

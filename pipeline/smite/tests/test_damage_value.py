@@ -305,35 +305,18 @@ def test_the_clock_ships_off():
     assert weights.get("damage_per_second") is False
 
 
-def test_the_clock_reaches_carries_and_nobody_else():
-    """Register 4.12's role gate, read off the table the draft actually gets.
-    Medusa's ordering must match the clock and Scylla's must match the rotation,
-    which is the god the everyone-arm got wrong."""
-    from smite import build_index
-    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
-    assert weights.get("damage_per_second_roles") == ["Carry"]
-    items, gods = recommend.load_items(), recommend.load_gods()
-    pick = [g for g in gods if g["name"] in ("Medusa", "Scylla")]
-    assert {g["name"]: g["role"].split()[0] for g in pick} == {"Medusa": "Carry", "Scylla": "Mid"}
-    shipped = build_index._god_item_damage(pick, items, weights)
-    rotation = build_index._god_item_damage(
-        pick, items, {**weights, "damage_per_second_roles": []})
-    clock = build_index._god_item_damage(
-        pick, items, {**weights, "damage_per_second": True})
-    assert shipped["Medusa"] == clock["Medusa"] != rotation["Medusa"]
-    assert shipped["Scylla"] == rotation["Scylla"] != clock["Scylla"]
-
-
-def test_a_missing_role_list_means_no_clock():
-    """An absent key is the rotation for everyone, so an older weights file or a
-    test fixture cannot switch the clock on by accident."""
-    from smite import build_index
-    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
-    items, gods = recommend.load_items(), recommend.load_gods()
-    medusa = [g for g in gods if g["name"] == "Medusa"]
-    without = {k: v for k, v in weights.items() if k != "damage_per_second_roles"}
-    assert (build_index._god_item_damage(medusa, items, without)
-            == build_index._god_item_damage(medusa, items, {**weights, "damage_per_second_roles": []}))
+def test_basic_attack_share_separates_the_two_readings():
+    """Register 4.12's discriminator. The per-second reading assumes full uptime
+    on both channels, so it must read above the rotation one for every god, which
+    is why it cannot be used to decide who gets the clock. An unparsed kit gets no
+    figure rather than a fabricated one."""
+    gods = {g["name"]: g for g in recommend.load_gods()}
+    medusa = dv.basic_attack_shares(gods["Medusa"])
+    scylla = dv.basic_attack_shares(gods["Scylla"])
+    for share in (medusa, scylla):
+        assert 0 < share["rotation"] < share["per_second"] < 1
+    assert medusa["rotation"] > scylla["rotation"]
+    assert dv.basic_attack_shares({"name": "Nobody", "abilities": []}) is None
 
 
 # ── The negative result, pinned ───────────────────────────────────────────

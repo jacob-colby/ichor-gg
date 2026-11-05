@@ -27,8 +27,15 @@ and defend it, this measures the families a charge could belong to:
          full rate, with the item's own Cooldown Rate raising the charge.
          No community input, and T is swept rather than asserted.
     role the clock on for one role and off for the rest.
+    share the clock on where `damage_value.basic_attack_shares` is over a
+         threshold. The threshold is committed in `smite.scripts.attack_share`,
+         ahead of this measurement, and is not swept here.
 
-Run from `pipeline/`: `python -m smite.scripts.clock_measure [--flags]`.
+Reads under the shipped fit by default: the pricing flags applied as
+`_weights.yaml` sets them. `--flags-off` is the state entry 12 was recorded in,
+and also what `build_index` runs today (STATE.md section 5), so both are reported.
+
+Run from `pipeline/`: `python -m smite.scripts.clock_measure [--flags-off]`.
 """
 import argparse
 import statistics
@@ -133,7 +140,8 @@ def load(items, gods):
                 continue
             table[it["name"]] = ((parts(god, it, LOW), dv.item_damage_gain(god, it, LOW)),
                                  (parts(god, it, HIGH), dv.item_damage_gain(god, it, HIGH)))
-        rows.append({"god": god["name"], "role": bq.primary_role(god), "names": names, "table": table})
+        rows.append({"god": god["name"], "role": bq.primary_role(god), "names": names, "table": table,
+                     "share": dv.basic_attack_shares(god)})
     return rows
 
 
@@ -150,11 +158,11 @@ def god_ranks(row, arm):
 
 
 def summarise(rows, arm_for):
-    """`arm_for(role)` picks the arm per role, so a role gate is the same call."""
+    """`arm_for(row)` picks the arm per god, so any gate is the same call."""
     acc, unscored = defaultdict(list), 0
     per_god = {}
     for row in rows:
-        vals, miss = god_ranks(row, arm_for(row["role"]))
+        vals, miss = god_ranks(row, arm_for(row))
         acc[row["role"]] += vals
         per_god[row["god"]] = statistics.fmean(vals)
         unscored += miss
@@ -175,18 +183,19 @@ def line(label, s, base=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("--flags", action="store_true", help="apply the shipped pricing flags (build_index does not)")
+    ap.add_argument("--flags-off", action="store_true",
+                    help="every pricing flag off: entry 12's state, and what build_index runs today")
     args = ap.parse_args(argv)
 
     items, gods = recommend.load_items(), recommend.load_gods()
     weights = scoring.load_weights(recommend.WEIGHTS_PATH)
-    prior = efficiency.apply_pricing_flags(weights if args.flags else {})
+    prior = efficiency.apply_pricing_flags({} if args.flags_off else weights)
     try:
         check_parts(gods, items)
         rows = load(items, gods)
-        print(f"flags {'ON (per _weights.yaml)' if args.flags else 'OFF (what build_index ships today)'}"
+        print(f"flags {'OFF (what build_index ships today)' if args.flags_off else 'ON (the shipped fit)'}"
               f" | gods {len(rows)} | community slots {sum(len(r['names']) for r in rows)}")
-        same = lambda arm: (lambda role: arm)
+        same = lambda arm: (lambda row: arm)
         base, u0, _ = summarise(rows, same(rotation))
         print(line("rotation (shipped)", base), f" unscored {u0}")
         ps, u1, _ = summarise(rows, same(k_arm(1.0)))
@@ -208,8 +217,23 @@ def main(argv=None):
             print(line(f"T={t}", s, base))
         print("-- role gate: the clock on for one role, rotation for the rest")
         for role in ROLES:
-            s, _, _ = summarise(rows, lambda r, role=role: k_arm(1.0) if r == role else rotation)
+            s, _, _ = summarise(rows, lambda row, role=role: k_arm(1.0) if row["role"] == role else rotation)
             print(line(f"{role} only", s, base))
+        print("-- share gate: threshold committed in smite.scripts.attack_share, not swept")
+        for label, key, cut, status in (("rotation > 0.50", "rotation", 0.50, "THE RULE"),
+                                        ("per second > 0.50", "per_second", 0.50, "ineligible"),
+                                        ("rotation > 0.226", "rotation", 0.226, "ineligible")):
+            picked = lambda row, key=key, cut=cut: bool(row["share"]) and row["share"][key] > cut
+            s, u, _ = summarise(rows, lambda row, picked=picked: k_arm(1.0) if picked(row) else rotation)
+            on = [r for r in rows if picked(r)]
+            print(line(f"{label}", s, base), f" [{status}] unscored {u}")
+            print("     selects " + str(len(on)) + ": " + ", ".join(f"{r_} {sum(x['role'] == r_ for x in on)}" for r_ in ROLES)
+                  + (" = " + ", ".join(x["god"] for x in on) if len(on) <= 6 else ""))
+            if key == "rotation" and cut == 0.50:
+                _, _, g0 = summarise(rows, same(rotation))
+                _, _, g1 = summarise(rows, lambda row, picked=picked: k_arm(1.0) if picked(row) else rotation)
+                for x in on:
+                    print(f"       {x['god']:12} {x['role']:7} {g0[x['god']]:.3f} -> {g1[x['god']]:.3f}  {g1[x['god']] - g0[x['god']]:+.3f}")
 
         # The Carry gate on its own terms, since it passes criterion 2 by
         # construction: does it hold per god and out of sample?
