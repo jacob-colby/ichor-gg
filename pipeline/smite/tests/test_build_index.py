@@ -309,15 +309,24 @@ def test_build_index_emits_capped_god_item_scores():
 def test_only_gods_with_a_tuned_overlay_get_an_aspect_table():
     """72 gods have an aspect and 7 have a scoring overlay. The viewer keys the
     "does this toggle move the build" message off the table's existence, so an
-    empty-but-present table would be a lie rather than a no-op."""
+    empty-but-present table would be a lie rather than a no-op.
+
+    Since 2026-11-05 a DERIVED overlay (`scoring.aspect_overlay`) also earns
+    the table, but only where its god's Conquest note shipped an aspect
+    family — which `recommend` does only if the family moves a build. Today
+    that adds no one: Tsukuyomi's derived Mangetsu moves no six (§4.33)."""
     from smite import build_index, scoring, recommend
     from pathlib import Path
     repo = Path(__file__).resolve().parents[3]
     weights = scoring.load_weights(repo / "data" / "_weights.yaml")
     tuned = set(weights.get("aspects") or {})
-    scores = build_index.build_index(repo)["god_item_scores"]
+    index = build_index.build_index(repo)
+    shipped = {b["god"] for b in index["builds"] if b.get("mode") == "Conquest"
+               and any(e.get("aspect") and e.get("source") == "suggested"
+                       for e in b.get("builds") or [])}
+    scores = index["god_item_scores"]
     with_table = {g for g, m in scores.items() if "conquest:aspect" in m}
-    assert with_table == tuned & set(scores), (with_table, tuned)
+    assert with_table == (tuned | shipped) & set(scores), (with_table, tuned, shipped)
 
 
 def test_god_item_scores_apply_the_mode_profile():

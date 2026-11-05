@@ -250,21 +250,32 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     a `<mode>:aspect` table, so the draft's aspect toggle moves the build the
     same way the god page's does. Only the 7 gods with an overlay get one —
     the other 65 with an aspect have nothing to score differently, and
-    emitting an identical copy would tell the viewer they did."""
+    emitting an identical copy would tell the viewer they did.
+
+    A DERIVED overlay (`scoring.aspect_overlay`, `aspect_derive`) gets the
+    table in a mode only where that mode's build note shipped an aspect
+    family — `recommend.build_suggested_entries` emits one only if it moves a
+    build, and the draft must not offer a toggle the god page withholds."""
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
     by_god_mode = {}
     for b in builds:
         key = (b.get("god"), b.get("mode"))
         if key not in by_god_mode:
             by_god_mode[key] = b
-    aspects = weights.get("aspects") or {}
     out = {}
     for god in gods:
         per_mode = {}
-        overlay = aspects.get(god["name"])
+        overlay = scoring.aspect_overlay(god, items, weights)
         for mode in recommend.MODES:
+            note = by_god_mode.get((god["name"], mode), {})
+            # Suggested entries only: a community entry carries the aspect its
+            # players picked, which says nothing about what we shipped.
+            shipped = any(e.get("aspect") and e.get("source") == "suggested"
+                          for e in note.get("builds") or [])
             for suffix, asp in (("", None), (":aspect", overlay)):
                 if suffix and not asp:
+                    continue
+                if suffix and asp.get("derived") and not shipped:
                     continue
                 profile = scoring.resolve_profile(weights, mode, None,
                                                   aspect_overlay=asp)

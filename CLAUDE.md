@@ -13,10 +13,13 @@ Five things that are easy to get wrong here, all expanded in that file:
    (leakage-free coverage against a random-core baseline). Headline coverage
    moving the *other* way is expected and is not by itself a reason to revert.
 
-2. **Check the negative-results register (§4) first.** Thirty-two
+2. **Check the negative-results register (§4) first.** Thirty-three
    correct-looking improvements have been implemented and measured, and all
-   but one shipped off. Re-running them against the old metric will just
-   reproduce the old answer. Thirteen of the thirty-two are *not* "we measured this
+   but two shipped off. Re-running them against the old metric will just
+   reproduce the old answer. **§4.33 is the newest:** an aspect overlay
+   DERIVED from the god's own note ships ON and moves no build. Read it
+   before typing an eighth overlay under `aspects:` in `_weights.yaml`.
+   Fourteen of the thirty-three are *not* "we measured this
    and it is false", and each says on its own line what it is instead. §4.13
    and §4.14 are the first two. **§4.15 is no longer a null at all — `offmap_efficiency` SHIPS
    ON at 0.55 as of 2026-08-22**, and the entry is kept in place as the
