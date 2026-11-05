@@ -493,11 +493,25 @@ def _items_table(window, played_use):
 
 def test_the_label_names_the_window_that_was_read_not_the_current_patch(tmp_path):
     """The regression this exists for: an Open Beta 46 table must not be
-    labelled Open Beta 47 just because that is the live patch."""
+    labelled Open Beta 47 just because that is the live patch. This fixture
+    has `matches_analyzed` null, as every file written before 2026-11-05 does,
+    so the label falls back to the derivation and says BUILDS."""
     p = tmp_path / "_community_items.json"
     p.write_text(json.dumps(_items_table("ob46", {"Adroit Ring": (399, 0.005908310134454777)})),
                  encoding="utf-8")
-    assert sbs.community_window_label(p) == "Open Beta 46, 67,532 matches"
+    assert sbs.community_window_label(p) == "Open Beta 46, 67,532 builds"
+
+
+def test_the_label_says_matches_once_the_file_carries_the_match_count(tmp_path):
+    """And the same table with the field populated, which is what
+    `refresh.window_provenance` writes from 2026-11-05: 14,667 MATCHES, the
+    figure STATE.md section 7's "Community sample" row has always carried,
+    against 67,532 builds in the same window."""
+    table = _items_table("ob46", {"Adroit Ring": (399, 0.005908310134454777)})
+    table["matches_analyzed"] = 14667
+    p = tmp_path / "_community_items.json"
+    p.write_text(json.dumps(table), encoding="utf-8")
+    assert sbs.community_window_label(p) == "Open Beta 46, 14,667 matches"
 
 
 def test_a_thin_window_is_visible_in_the_label(tmp_path):
@@ -507,29 +521,35 @@ def test_a_thin_window_is_visible_in_the_label(tmp_path):
     p.write_text(json.dumps(_items_table("ob47", {"Adroit Ring": (1, 0.005154639175257732)})),
                  encoding="utf-8")
     label = sbs.community_window_label(p)
-    assert label == "Open Beta 47, 194 matches"
+    assert label == "Open Beta 47, 194 builds"
     assert label != sbs.community_window_label.__doc__   # not a constant
 
 
-def test_the_match_count_is_derived_and_every_item_agrees():
-    """`matches_played / use_rate` is the source's own denominator, not an
-    estimate: on the live table all 238 items give the same integer. The item
-    with the most matches is the one read, where `use_rate`'s rounding has the
-    least room to move the answer."""
+def test_the_derivation_counts_builds_and_every_item_agrees():
+    """`matches_played / use_rate` is the source's own denominator and is
+    exact — all 238 items give the same integer — but it is a share of BUILDS,
+    so the denominator is god-builds observed and NOT the match count. PR #109
+    labelled it "matches"; it is ~4.6x the real figure, because the god index
+    records about 4.6 of a match's ten seats."""
     table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
     derived = {round(r["matches_played"] / r["use_rate"])
                for r in table["items"].values() if r.get("use_rate")}
     assert len(derived) == 1, sorted(derived)
-    assert sbs.community_match_count(table) == derived.pop()
+    builds = derived.pop()
+    assert sbs.community_sample(dict(table, matches_analyzed=None)) == (builds, "builds")
+    # And the two really are different quantities on the shipped table.
+    matches, unit = sbs.community_sample(table)
+    assert unit == "matches" and matches < builds
+    assert round(builds / matches, 1) == 4.6
 
 
-def test_an_explicit_match_count_wins_over_the_derivation():
-    """So a future scrape that grows a real `matches_analyzed` needs no second
-    edit here. SmiteBrain's item rows carry none today — measured 2026-11-05,
-    which is why the field has always been null."""
+def test_the_stated_match_count_wins_over_the_derivation():
+    """The file's own figure is authoritative when it has one; the derivation
+    is the fallback for the files that do not (everything before 2026-11-05)."""
     table = _items_table("ob46", {"Adroit Ring": (399, 0.005908310134454777)})
     table["matches_analyzed"] = 12345
-    assert sbs.community_match_count(table) == 12345
+    assert sbs.community_sample(table) == (12345, "matches")
+    assert sbs.community_sample(dict(table, matches_analyzed=None))[1] == "builds"
 
 
 def test_the_label_degrades_rather_than_lying(tmp_path):
@@ -540,7 +560,7 @@ def test_the_label_degrades_rather_than_lying(tmp_path):
     assert sbs.community_window_label(no_window) == "unknown window"
     odd = tmp_path / "odd.json"
     odd.write_text(json.dumps(_items_table("1m", {"X": (10, 0.5)})), encoding="utf-8")
-    assert sbs.community_window_label(odd) == "1m, 20 matches"
+    assert sbs.community_window_label(odd) == "1m, 20 builds"
 
 
 def test_the_items_and_gods_half_still_tracks_the_current_patch():
@@ -553,9 +573,23 @@ def test_the_items_and_gods_half_still_tracks_the_current_patch():
 
 
 def test_the_shipped_label_names_open_beta_46_and_its_real_size():
-    """The live assertion, which is what fails against the old code: it read
-    `_patch.json` for both halves and so said "community window Open Beta 47"
-    over an Open Beta 46 table."""
+    """The live assertion. It failed against the pre-#109 code, which read
+    `_patch.json` for both halves and said "community window Open Beta 47"
+    over an Open Beta 46 table; the count was then corrected from 67,532
+    builds to the window's 14,667 MATCHES (2026-11-05)."""
     label = sbs.data_patch()
-    assert "community window Open Beta 46, 67,532 matches" in label, label
+    assert "community window Open Beta 46, 14,667 matches" in label, label
     assert "community window Open Beta 47" not in label
+    assert "67,532" not in label
+
+
+def test_the_shipped_match_count_agrees_with_the_documented_community_sample():
+    """The cross-check that would have caught #109's unit error: STATE.md
+    section 7 has carried the match count all along."""
+    import re
+    state = (sbs.REPO_ROOT / "docs" / "STATE.md").read_text(encoding="utf-8")
+    row = re.search(r"\|\s*Community sample\s*\|([^|]*)\|", state).group(1)
+    count, unit = sbs.community_sample(
+        json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8")))
+    assert unit == "matches"
+    assert f"{count:,}" in row, (count, row[:120])

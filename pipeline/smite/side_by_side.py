@@ -2300,32 +2300,33 @@ OB_WINDOW_RE = re.compile(r"^ob(\d+)$", re.I)
 COMMUNITY_ITEMS_PATH = REPO_ROOT / "data" / "_community_items.json"
 
 
-def community_match_count(table: dict):
-    """How many matches the community table was built from, or None.
+def community_sample(table: dict):
+    """`(count, unit)` for how much data the community table rests on.
 
-    DERIVED, and that is the better fix rather than a shortcut. SmiteBrain's
-    `/items/__data.json` rows carry `display_name`, `win_rate`,
-    `matches_played`, `use_rate` and no more — **no `matches_analyzed`, no
-    `start_time`, no `end_time`** (measured against the live response,
-    2026-11-05). So `_community_items.json`'s three fields of those names have
-    been structurally dead since they were written, and "populate it at scrape
-    time" would be this same arithmetic moved somewhere it only applies from
-    the next refresh forward, leaving every commit already on record
-    unlabelled.
+    TWO DIFFERENT DENOMINATORS, and PR #109 conflated them (fixed 2026-11-05).
 
-    `use_rate` is the share of matches an item appeared in, so
-    `matches_played / use_rate` is the denominator the source itself used. It
-    is exact, not an estimate: on the 2026-11-05 table all 238 items agree on
-    67,532 to the unit, which is also the figure PR #106 measured independently
-    off the god index. Read off the item with the most matches, where the
-    rounding in `use_rate` has the least room to move the answer.
+    `matches_analyzed` is the MATCH count SmiteBrain publishes for the window,
+    and `refresh.window_provenance` now carries it into the file off the god
+    index — the item rows have never had it. 14,667 on the 2026-11-05 table,
+    which is also what STATE.md section 7's "Community sample" row has always
+    said.
 
-    An explicit `matches_analyzed` still wins if a future scrape ever sets
-    one, so this needs no second edit when upstream grows the field.
+    The derivation `matches_played / use_rate` gives something else:
+    `use_rate` is an item's share of BUILDS, so its denominator is the number
+    of god-builds observed — 67,532 on that same table, 4.6x the match count,
+    because the god index records about 4.6 of a match's ten seats. Exact and
+    unanimous across all 238 items, but it is not a match count, and #109's
+    label called it one.
+
+    So: report `matches_analyzed` as "matches" when the file has it, and the
+    derivation as "builds" when it does not. The derivation STAYS, because
+    every `_community_items.json` already on record has the field null and
+    only a re-scrape would fill it — an old file still gets a true label,
+    in the unit it can actually support.
     """
     stated = table.get("matches_analyzed")
     if stated:
-        return int(stated)
+        return int(stated), "matches"
     best = None
     for row in (table.get("items") or {}).values():
         played, use = row.get("matches_played"), row.get("use_rate")
@@ -2333,7 +2334,7 @@ def community_match_count(table: dict):
             continue
         if best is None or played > best[0]:
             best = (played, round(played / use))
-    return best[1] if best else None
+    return (best[1], "builds") if best else (None, None)
 
 
 def community_window_label(path=None):
@@ -2363,8 +2364,8 @@ def community_window_label(path=None):
     window = table.get("window")
     m = OB_WINDOW_RE.match(str(window or ""))
     name = f"Open Beta {m.group(1)}" if m else (str(window) if window else "unknown window")
-    count = community_match_count(table)
-    return f"{name}, {count:,} matches" if count else name
+    count, unit = community_sample(table)
+    return f"{name}, {count:,} {unit}" if count else name
 
 
 def data_patch():

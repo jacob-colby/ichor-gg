@@ -7,7 +7,7 @@ from unittest.mock import Mock
 import pytest
 import requests
 
-from smite import notes, refresh
+from smite import notes, refresh, smitebrain_parser
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -689,3 +689,83 @@ def test_an_incomplete_record_does_not_count_as_complete(tmp_path, monkeypatch):
         notes.merge_build_note(tmp_path / f"{god}-Conquest.md", god, "Conquest",
                                {"slot_order": [{"name": f"Item{i}"} for i in range(slots)]})
     assert set(refresh.complete_community_records()) == {"Full"}
+
+
+# ── The window's provenance, carried from the god index (2026-11-05) ─────
+#
+# `_community_items.json`'s `matches_analyzed`, `window_start` and `window_end`
+# were null and empty from the day the file was written, because the ITEM index
+# response carries none of them. The GOD index carries all three. Both are
+# fetched with the same `time=` window in the same run, so the god index is
+# where the item table's provenance comes from.
+
+
+def test_the_item_index_response_carries_no_provenance_at_all():
+    """The measured fact the fix rests on. Reading it off the parser's own
+    required fields rather than the live site, so it cannot flake."""
+    assert smitebrain_parser._ITEM_INDEX_REQUIRED == ("display_name", "win_rate",
+                                                      "matches_played")
+    for field in refresh.WINDOW_PROVENANCE:
+        assert field not in smitebrain_parser._ITEM_INDEX_REQUIRED
+
+
+def test_window_provenance_reads_the_three_fields_off_the_god_index():
+    rows = [{"god": "A", "start_time": "2026-10-20T11:48:48.610Z",
+             "end_time": "2026-11-03T11:09:17.233Z", "matches_analyzed": 14667},
+            {"god": "B", "start_time": "2026-10-20T11:48:48.610Z",
+             "end_time": "2026-11-03T11:09:17.233Z", "matches_analyzed": 14667}]
+    assert refresh.window_provenance(rows) == {
+        "window_start": "2026-10-20", "window_end": "2026-11-03",
+        "matches_analyzed": 14667}
+
+
+def test_window_provenance_is_empty_rather_than_half_filled():
+    """An item-index row, which has none of the three: the result must be
+    empty so the writer leaves the fields null instead of writing `""`."""
+    assert refresh.window_provenance([]) == {}
+    assert refresh.window_provenance([{"display_name": "Adroit Ring", "win_rate": 0.5,
+                                       "matches_played": 399}]) == {}
+
+
+def test_the_item_index_writes_the_provenance_it_is_handed(tmp_path, monkeypatch):
+    payload = {"nodes": [{"type": "data", "data": [
+        {"display_name": "Adroit Ring", "win_rate": 0.486, "matches_played": 399,
+         "matches_won": 194, "use_rate": 0.005908310134454777}]}]}
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_item_index",
+                        lambda p: p["nodes"][0]["data"])
+    fetcher = Mock()
+    fetcher.fetch.return_value = json.dumps(payload)
+    refresh.refresh_item_index(fetcher, tmp_path, window="ob46", provenance={
+        "window_start": "2026-10-20", "window_end": "2026-11-03",
+        "matches_analyzed": 14667})
+    out = json.loads((tmp_path / refresh.COMMUNITY_ITEMS_FILE).read_text(encoding="utf-8"))
+    assert out["window"] == "ob46"
+    assert out["window_start"] == "2026-10-20"
+    assert out["window_end"] == "2026-11-03"
+    assert out["matches_analyzed"] == 14667
+    assert "time=ob46" in fetcher.fetch.call_args[0][0]
+
+
+def test_the_item_index_leaves_the_fields_null_without_provenance(tmp_path, monkeypatch):
+    """No provenance must mean NULL, not an empty string or a zero — an old
+    file has to stay distinguishable from one that was handed real values."""
+    payload = {"nodes": [{"type": "data", "data": [
+        {"display_name": "Adroit Ring", "win_rate": 0.486, "matches_played": 399,
+         "matches_won": 194, "use_rate": 0.0059}]}]}
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_item_index",
+                        lambda p: p["nodes"][0]["data"])
+    fetcher = Mock()
+    fetcher.fetch.return_value = json.dumps(payload)
+    refresh.refresh_item_index(fetcher, tmp_path, window="ob46")
+    out = json.loads((tmp_path / refresh.COMMUNITY_ITEMS_FILE).read_text(encoding="utf-8"))
+    assert out["matches_analyzed"] is None
+    assert out["window_start"] is None and out["window_end"] is None
+
+
+def test_the_shipped_file_now_carries_all_three():
+    table = json.loads((refresh.DATA_ROOT / refresh.COMMUNITY_ITEMS_FILE)
+                       .read_text(encoding="utf-8"))
+    assert table["window"] == "ob46"
+    assert table["matches_analyzed"] == 14667
+    assert table["window_start"] == "2026-10-20"
+    assert table["window_end"] == "2026-11-03"
