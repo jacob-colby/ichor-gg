@@ -193,8 +193,12 @@ def test_the_derived_mangetsu_family_moves_no_build():
     update §4.33 rather than this assertion's direction."""
     god, w = _gods()["Tsukuyomi"], _weights()
     from smite import efficiency
-    efficiency.apply_pricing_flags(w)
-    entries = recommend.build_suggested_entries(god, recommend.load_items(),
-                                                recommend.load_build_note("Tsukuyomi"), w,
-                                                scoring.load_tags(recommend.TAGS_PATH), "Conquest")
+    # Module globals: restore them, or every later test inherits the flags.
+    prior = efficiency.apply_pricing_flags(w)
+    try:
+        entries = recommend.build_suggested_entries(
+            god, recommend.load_items(), recommend.load_build_note("Tsukuyomi"), w,
+            scoring.load_tags(recommend.TAGS_PATH), "Conquest")
+    finally:
+        efficiency.restore_pricing_flags(prior)
     assert entries and not any(e.get("aspect") for e in entries)
