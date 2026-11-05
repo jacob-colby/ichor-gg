@@ -171,6 +171,7 @@ MULTIPLIER_REFERENCE = {}
 # the same hit — catalogue class B1's unconditional members, three items. See
 # `passives.on_hit_grants`. Flipped by `price_on_hit` in _weights.yaml.
 PRICE_ON_HIT = False
+PRICE_PASSIVE_SIM = False
 
 
 #: Every module global `apply_pricing_flags` owns. The list the save/restore
@@ -178,7 +179,8 @@ PRICE_ON_HIT = False
 PRICING_FLAGS = ("PRICE_PASSIVES", "PRICE_STACKS", "STACK_FRACTION",
                  "PRICE_CRIT_MULTIPLIERS", "PRICE_CONVERSIONS",
                  "CONVERSION_REFERENCE", "PRICE_ADAPTIVE", "ADAPTIVE_BRANCH",
-                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE", "PRICE_ON_HIT")
+                 "PRICE_STAT_MULTIPLIERS", "MULTIPLIER_REFERENCE", "PRICE_ON_HIT",
+                 "PRICE_PASSIVE_SIM")
 
 
 def apply_pricing_flags(weights):
@@ -202,6 +204,7 @@ def apply_pricing_flags(weights):
     global PRICE_CONVERSIONS, CONVERSION_REFERENCE, STACK_FRACTION
     global PRICE_ADAPTIVE, ADAPTIVE_BRANCH
     global PRICE_STAT_MULTIPLIERS, MULTIPLIER_REFERENCE, PRICE_ON_HIT
+    global PRICE_PASSIVE_SIM
     before = {k: globals()[k] for k in PRICING_FLAGS}
     before["CONVERSION_REFERENCE"] = dict(CONVERSION_REFERENCE)
     before["MULTIPLIER_REFERENCE"] = dict(MULTIPLIER_REFERENCE)
@@ -217,6 +220,7 @@ def apply_pricing_flags(weights):
     PRICE_STAT_MULTIPLIERS = bool(w.get("price_stat_multipliers"))
     MULTIPLIER_REFERENCE = dict(w.get("multiplier_reference") or {})
     PRICE_ON_HIT = bool(w.get("price_on_hit"))
+    PRICE_PASSIVE_SIM = bool(w.get("price_passive_sim"))
     return before
 
 
@@ -273,6 +277,141 @@ def item_stat_values(item):
     return out
 
 
+# ── What the FIT sees, as opposed to what an item's stats ARE ─────────────
+#
+# `item_stat_values` has two kinds of caller and they need different things.
+# The regression wants COLUMNS. `build_quality`, `damage_value` and
+# `new_entities` read it as an item's EFFECTIVE STATS and feed them to damage
+# arithmetic. The shipped pricing flags can serve both because what they add
+# is a real stat — an adaptive +30 Strength is Strength.
+#
+# "Passive Damage" is not a stat. It is a simulated outcome, and a damage
+# calculator that summed it into a build's totals would be adding the answer
+# to the question. Worse, the supersede rule below DROPS the flag-derived
+# grant for the dual-priced items, which is right for the fit (count once)
+# and wrong for a build's stats: the first version of `PRICE_PASSIVE_SIM`
+# lived inside `item_stat_values` and deleted The Executioner's real +30
+# Strength from `build_quality`'s priced run. Green at OFF, wrong at ON, and
+# caught by `test_priced_run_restores_the_pricing_flags` on the day the flag
+# was first turned on (2026-11-05, register §4.32). So the columns live in
+# `regression_columns`, and only the matrix, the prediction and `stat_gold`
+# call it. `test_effective_stats_never_see_the_flag` pins the seam.
+def regression_columns(item):
+    """`item_stat_values`, plus the simulated passive columns when
+    `PRICE_PASSIVE_SIM` is on. The fit's view of one item, and nothing else's —
+    see the comment block above for why the two are kept apart."""
+    out = item_stat_values(item)
+    if PRICE_PASSIVE_SIM:
+        out = _with_passive_sim_columns(item, out)
+    return out
+
+
+#: Columns added by `PRICE_PASSIVE_SIM`. Three and not one: damage is damage and
+#: the four `DAMAGE_KEYS` are averaged into it, but the two effective-health
+#: channels stay apart because register §4.17 refuses to collapse them and says
+#: what the pair bounds instead. Averaging them here would be that refusal
+#: ignored in a place nobody would look for it.
+PASSIVE_SIM_COLUMNS = ("Passive Damage", "Passive EHP Physical", "Passive EHP Magical")
+
+#: Items whose passive is priced BOTH by one of the flags above and by
+#: `passive_sim`. Measured 2026-11-05. Counting both would count the passive
+#: twice — `passive_contribution` switches the WHOLE passive off, so its number
+#: already contains the adaptive or converted stats the flag adds — so one side
+#: has to stand down, and `PASSIVE_SIM_DUAL` says which.
+#:
+#: THE FLAG WINS, and that reverses the rule this was first written with. For
+#: these items the passive IS a stat grant or conversion, and the flag states
+#: it as the stat it is: exact, priced at the fitted stat price, and ON the fit
+#: map of the god who wants it. The simulated value is a median over builds,
+#: and it lands in a column no role map names, so `offmap_efficiency` charges
+#: 55% of it back. Under "sim" that asymmetry evicted the conversion staples
+#: from Conquest `model` builds — Rod of Tahuti 35 -> 25, Transcendence 13 -> 5,
+#: Book of Thoth 6 -> 0, Nimble Ring 7 -> 1 — which is the double-count fix
+#: turning into a penalty on exactly the items the model already priced well.
+#: Under "flag" they hold (34, 14, 2, 9) and Tekko-Kagi still falls 27 -> 11.
+#: On the gates, against OFF at the same baseline:
+#:
+#:     rule     leakage-free     held-out ww / spearman    tuning ww / spearman
+#:     sim      39.9% / 38.5%     -0.0014 / +0.0567         -0.0005 / +0.0869
+#:     flag     41.3% / 38.4%     +0.0167 / +0.0566         -0.0036 / +0.0413
+#:
+#: WHAT "flag" GIVES UP: The Executioner. Its flag prices the adaptive +30
+#: Strength; its 7% protection shred exists only in the simulated number, and
+#: separating the two needs a hook-level switch `Sim` does not have. So the
+#: shred stays unpriced, and the item register §4.31 is about is the one this
+#: rule serves worst. Said here rather than left to be rediscovered.
+PASSIVE_SIM_SUPERSEDES = frozenset({
+    "Book of Thoth", "Brawler’s Beat Stick", "Eye of Erebus", "Nimble Ring",
+    "Rod of Tahuti", "Sun Beam Bow", "The Executioner", "Transcendence",
+})
+
+#: Which side wins for the dual-priced items: "flag" (shipped) or "sim". Both
+#: count the passive once; they differ in WHERE the value lands. The comment on
+#: `PASSIVE_SIM_SUPERSEDES` above carries both arms' measurements.
+PASSIVE_SIM_DUAL = "flag"
+
+_PASSIVE_VALUES = None
+
+
+def passive_sim_values():
+    """`{item name: {column: float}}` read from `data/_passive_values.yaml`.
+
+    WHY A FILE. `side_by_side`'s own docstring states the rule: it "IS A
+    DIAGNOSTIC AND FEEDS NOTHING ... Nothing in `scoring`, `assemble`,
+    `recommend` or `build_index` imports this module" (register §4.4). So the
+    simulator EXPORTS and this module READS DATA — nothing in the scoring path
+    imports it, the numbers are auditable in the repo, and a fit does not run a
+    fight per call. Regenerate with
+    `python -m smite.scripts.passive_values --write`, whose docstring carries
+    the reference context and the spread.
+
+    A MISSING KEY IS A BUG, NOT A ZERO. The generator writes every item in
+    `efficiency_pool`, with `status` saying why a zero is a zero: `refused`
+    (the effect needs something the comparison has not got), `none` (no passive
+    text at all), or `no-context` (simulated, but in no build to measure it
+    in). This returns zeros for those, and `KeyError` is never swallowed — an
+    item absent from the file is a stale file and should fail loudly.
+    """
+    global _PASSIVE_VALUES
+    if _PASSIVE_VALUES is None:
+        import yaml
+        path = DATA_ROOT / "_passive_values.yaml" if "DATA_ROOT" in globals() else None
+        if path is None or not path.exists():
+            from pathlib import Path
+            path = Path(__file__).resolve().parents[2] / "data" / "_passive_values.yaml"
+        raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        _PASSIVE_VALUES = raw.get("items") or {}
+    return _PASSIVE_VALUES
+
+
+def _with_passive_sim_columns(item, out):
+    row = passive_sim_values().get(item.get("name"))
+    if row is None:
+        return out
+    if item.get("name") in PASSIVE_SIM_SUPERSEDES:
+        if PASSIVE_SIM_DUAL == "flag":
+            # The flag's grant stands and the simulated value is not added:
+            # counted once, as the stat it is.
+            return out
+        # "sim": the flag-derived grant is already inside the simulated
+        # number. Drop what the flags added for THIS item by re-reading its
+        # printed stats alone, so the simulated value is counted once.
+        out = {}
+        for name, raw in (item.get("stats") or {}).items():
+            val = parse_stat_value(raw)
+            if val is not None:
+                out[stat_key(name, raw)] = val
+    for col, key in zip(PASSIVE_SIM_COLUMNS,
+                        ("passive_damage", "passive_ehp_physical", "passive_ehp_magical")):
+        val = float(row.get(key) or 0.0)
+        # A passive measured NEGATIVE in a build is a timing interaction, not a
+        # cost the buyer is refunded for: clamped at zero rather than becoming a
+        # credit the regression would read as "this item should cost less".
+        if val > 0:
+            out[col] = out.get(col, 0.0) + val
+    return out
+
+
 # Fewest items that must carry a stat before it earns a regression column.
 #
 # A column carried by ONE item is exactly determined: NNLS can always choose
@@ -301,7 +440,7 @@ def collect_stat_names(items):
     MIN_STAT_CARRIERS items, sorted for deterministic column order."""
     counts = {}
     for item in items:
-        for key in item_stat_values(item):
+        for key in regression_columns(item):
             counts[key] = counts.get(key, 0) + 1
     return sorted(k for k, n in counts.items() if n >= MIN_STAT_CARRIERS)
 
@@ -311,7 +450,7 @@ def _stat_matrix(items, stat_names):
     column. Absent/non-numeric stats are 0."""
     rows, costs = [], []
     for item in items:
-        values = item_stat_values(item)
+        values = regression_columns(item)
         row = [values.get(s, 0.0) for s in stat_names]
         row.append(1.0)  # intercept
         rows.append(row)
@@ -426,7 +565,7 @@ def fit_gold_values(items):
 
 def predicted_cost(item, gold_values):
     total = gold_values.get(INTERCEPT_KEY, 0.0)
-    for key, val in item_stat_values(item).items():
+    for key, val in regression_columns(item).items():
         total += val * gold_values.get(key, 0.0)
     return total
 
@@ -485,8 +624,17 @@ def efficiency_scores(items):
     # not one of them threads `gold` through to `scoring` — a flag that needed
     # threading would have been a silent no-op in `calibrate`, `validate` and
     # `build_index`, which is register §4.10's failure mode exactly.
+    # `regression_columns`, so this stays "what each column contributed to the
+    # prediction" when `PRICE_PASSIVE_SIM` adds columns. It also means the
+    # simulated passive columns ARE charged by `offmap_adjusted_score` — no
+    # role map names them — and that is deliberate, not an accident of naming:
+    # the exemption rule above is two mechanical tests, and the passive
+    # columns FAIL test (ii), "no instrument in this repo can price it",
+    # because `passive_sim` is the instrument that produced them. "The honest
+    # move is to check it rather than to exempt it" — both arms are measured
+    # under `price_passive_sim` in _weights.yaml.
     stat_gold = {it["name"]: {k: v * gold.get(k, 0.0)
-                              for k, v in item_stat_values(it).items()}
+                              for k, v in regression_columns(it).items()}
                  for it in scored_items}
     vals = np.array(list(residuals.values()), dtype=float)
     mean = float(vals.mean())
@@ -943,15 +1091,14 @@ def offmap_adjusted_score(eff_row, role_map, strength, exempt=()):
 #     Open Beta 40    1.258  [1.18, 1.38]         1.92
 #     Open Beta 46    1.104  [1.05, 1.20]         1.39
 #
-# 1.0 is not tuned between those, it is where the fit stops making sense:
-# at or below it a point of percentage penetration is priced no dearer than a
-# point of flat, which is wrong against any target above 100 protections —
-# every god by the mid game (10% is 30 flat against 300). Everything above it
-# is a property of the patch's item set, not a defect: PR #68 pinned both
-# columns on Open Beta 46 back to Open Beta 40's shipped prices and 0 of 90
-# Conquest cores changed, so 1.10 -> 1.26 moves no build. 1.0 also sits under
-# Open Beta 46's whole leave-one-out range, so no single item's removal on the
-# current data can cross it — a firing is a pool-wide shift, not one reprice.
+# With `price_passive_sim` on (2026-11-05, register §4.32) the shipped ratios
+# read 1.248 on Open Beta 40 and 1.057 on Open Beta 46: the passive columns
+# take gold the stat columns used to absorb, and percent penetration cheapens
+# more than flat. Open Beta 46 is now at the bottom of its own leave-one-out
+# range above (which was measured before the flag and was not re-run), so one
+# item's removal could plausibly cross the floor where it could not before.
+# The check has not fired; its margin has thinned, and that is a cost of the
+# flag worth knowing about rather than a pin to restamp and forget.
 PENETRATION_SPLIT_FLOOR = 1.0
 
 

@@ -13,8 +13,8 @@ builds:
   - Tyrfing
   - The Reaper
   flex_slots:
-  - Golden Blade
   - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -32,38 +32,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Lernaean Bow:
       total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Lernaean Bow:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.67
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.59
-      efficiency: 0.5
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     The Reaper:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -73,15 +73,15 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
   - Transcendence
   - Death Metal
+  - Bragi's Harp
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Bragi's Harp
   - Transcendence
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -90,29 +90,23 @@ builds:
     swap: Sphere of Negation — magical protection
     swap_item: Sphere of Negation
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Book of Thoth:
-      total: 0.39
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.28
     Jotunn's Revenge:
-      total: 0.6
-      efficiency: 0.67
+      total: 0.59
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.52
     Transcendence:
-      total: 0.41
-      efficiency: 0.53
+      total: 0.39
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.28
@@ -122,9 +116,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Bragi's Harp:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
+      total: 0.62
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.42
@@ -141,12 +141,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Death Metal
+  - Bragi's Harp
   - Spear of Desolation
-  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
   - Death Metal
+  - Bragi's Harp
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -164,14 +164,14 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
-      efficiency: 0.45
+      total: 0.55
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.67
     Jotunn's Revenge:
-      total: 0.61
-      efficiency: 0.67
+      total: 0.6
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.56
@@ -181,18 +181,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Spear of Desolation:
-      total: 0.57
-      efficiency: 0.59
+      total: 0.58
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.56
-    Obsidian Shard:
-      total: 0.54
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Soul Gem:
       total: 0.72
       efficiency: 0.53
@@ -210,18 +210,18 @@ builds:
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
-  - Shield of the Phoenix
+  - Golden Blade
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
+    swap: Magi's Cloak — physical protection
+    swap_item: Magi's Cloak
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -230,37 +230,37 @@ builds:
   slot_scores:
     Golden Blade:
       total: 0.56
-      efficiency: 0.52
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.61
     Toxic Blade:
-      total: 0.59
-      efficiency: 0.48
+      total: 0.58
+      efficiency: 0.46
       win: 0.5
       pick: 0.0
       fit: 0.69
     Berserker's Shield:
-      total: 0.58
-      efficiency: 0.74
+      total: 0.57
+      efficiency: 0.72
       win: 0.5
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
-      total: 0.53
-      efficiency: 0.56
+      total: 0.55
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.49
     Shield of the Phoenix:
-      total: 0.56
-      efficiency: 0.52
+      total: 0.58
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.6
     Amanita Charm:
-      total: 0.67
-      efficiency: 0.65
+      total: 0.69
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
       fit: 0.69
@@ -271,12 +271,12 @@ builds:
   - Toxic Blade
   - Jotunn's Revenge
   - Tekko-Kagi
-  - Titan's Bane
+  - The Crusher
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Titan's Bane
-  - Heartseeker
+  - The Crusher
+  - Tekko-Kagi
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -294,32 +294,32 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.66
-      efficiency: 0.45
+      total: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.86
     Jotunn's Revenge:
-      total: 0.64
-      efficiency: 0.67
+      total: 0.63
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.6
     Tekko-Kagi:
-      total: 0.61
-      efficiency: 0.55
+      total: 0.58
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.66
-    Titan's Bane:
-      total: 0.6
-      efficiency: 0.54
+    The Crusher:
+      total: 0.59
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.67
     Heartseeker:
-      total: 0.6
-      efficiency: 0.43
+      total: 0.61
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -359,38 +359,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.57
-      efficiency: 0.47
+      total: 0.56
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.66
     Lernaean Bow:
-      total: 0.55
-      efficiency: 0.51
+      total: 0.53
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.59
     Toxic Blade:
       total: 0.61
-      efficiency: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.77
     Tyrfing:
-      total: 0.58
-      efficiency: 0.5
+      total: 0.6
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.66
     Riptalon:
-      total: 0.68
-      efficiency: 0.46
+      total: 0.67
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
       fit: 0.9
     Soul Gem:
-      total: 0.61
-      efficiency: 0.57
+      total: 0.62
+      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.65
@@ -424,32 +424,32 @@ builds:
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
-      efficiency: 0.45
+      total: 0.51
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.59
     Chronos' Pendant:
-      total: 0.5
-      efficiency: 0.55
+      total: 0.51
+      efficiency: 0.56
       win: 0.5
       pick: 0.0
       fit: 0.45
     Jotunn's Revenge:
-      total: 0.63
-      efficiency: 0.67
+      total: 0.62
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.59
     Hydra's Lament:
       total: 0.55
-      efficiency: 0.56
+      efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.55
     Spear of Desolation:
-      total: 0.59
-      efficiency: 0.59
+      total: 0.6
+      efficiency: 0.6
       win: 0.5
       pick: 0.0
       fit: 0.59
@@ -463,15 +463,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
   - Death Metal
+  - Bragi's Harp
+  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Book of Thoth
-  - Transcendence
+  - Bragi's Harp
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -488,33 +488,33 @@ builds:
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Book of Thoth:
-      total: 0.37
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.25
     Jotunn's Revenge:
       total: 0.56
-      efficiency: 0.67
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Transcendence:
-      total: 0.35
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.16
     Death Metal:
-      total: 0.59
+      total: 0.58
       efficiency: 0.63
       win: 0.5
       pick: 0.0
       fit: 0.54
+    Bragi's Harp:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Spear of Desolation:
+      total: 0.57
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
     Rod of Tahuti:
-      total: 0.64
-      efficiency: 0.86
+      total: 0.61
+      efficiency: 0.82
       win: 0.5
       pick: 0.0
       fit: 0.41
@@ -528,15 +528,15 @@ builds:
 - source: suggested
   archetype: str-int
   slot_order:
-  - Lernaean Bow
-  - Toxic Blade
   - Jotunn's Revenge
+  - Tyrfing
   - Death Metal
   - Bragi's Harp
+  - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Tyrfing
   - Jotunn's Revenge
-  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -548,29 +548,23 @@ builds:
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: Hybrid Strength + Intelligence — this kit scales on both (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Toxic Blade:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.67
+      total: 0.55
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Tyrfing:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
     Death Metal:
       total: 0.61
       efficiency: 0.63
@@ -578,11 +572,17 @@ builds:
       pick: 0.0
       fit: 0.59
     Bragi's Harp:
-      total: 0.59
-      efficiency: 0.45
+      total: 0.6
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.73
+    Rod of Tahuti:
+      total: 0.61
+      efficiency: 0.82
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Soul Gem:
       total: 0.66
       efficiency: 0.53
@@ -600,8 +600,8 @@ builds:
   - Tyrfing
   - The Reaper
   flex_slots:
-  - Golden Blade
   - Jotunn's Revenge
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -619,38 +619,38 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Golden Blade:
+      total: 0.57
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Lernaean Bow:
       total: 0.58
       efficiency: 0.47
       win: 0.5
       pick: 0.0
       fit: 0.69
-    Lernaean Bow:
-      total: 0.6
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
     Toxic Blade:
-      total: 0.6
-      efficiency: 0.45
+      total: 0.59
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
       fit: 0.75
     Jotunn's Revenge:
-      total: 0.58
-      efficiency: 0.67
+      total: 0.57
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
     Tyrfing:
-      total: 0.59
-      efficiency: 0.5
+      total: 0.61
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.69
     The Reaper:
       total: 0.6
-      efficiency: 0.51
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.69

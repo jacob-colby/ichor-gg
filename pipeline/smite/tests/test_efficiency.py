@@ -254,8 +254,14 @@ def test_penetration_split_reads_the_shipped_pricing_config():
 
 
 @pytest.mark.parametrize("patch, loader, shipped_ratio", [
-    ("Open Beta 40", "items", 1.258),
-    ("Open Beta 46", "ob46_items", 1.104),
+    # Restamped 2026-11-05 when `price_passive_sim` went on (register §4.32),
+    # from 1.258 and 1.104. The passive columns take gold the stat columns used
+    # to absorb, and percent penetration cheapens more than flat. Open Beta 46
+    # at 1.057 is the one to watch: still above the 1.0 floor, so the check
+    # does not fire, but it is the bottom of that patch's old leave-one-out
+    # range [1.05, 1.20] and the margin is now thin.
+    ("Open Beta 40", "items", 1.248),
+    ("Open Beta 46", "ob46_items", 1.057),
 ])
 def test_penetration_split_does_not_fire_on_the_patches_it_was_calibrated_on(
         patch, loader, shipped_ratio):
@@ -370,7 +376,11 @@ def test_pricing_flags_come_from_the_weights_the_gate_is_measuring():
                          "PRICE_CONVERSIONS": False, "CONVERSION_REFERENCE": {},
                          "PRICE_ADAPTIVE": False, "ADAPTIVE_BRANCH": "strength",
                          "PRICE_STAT_MULTIPLIERS": False,
-                         "MULTIPLIER_REFERENCE": {}, "PRICE_ON_HIT": False}
+                         "MULTIPLIER_REFERENCE": {}, "PRICE_ON_HIT": False,
+                         # Added 2026-11-05 with `price_passive_sim` (§4.32).
+                         # This assertion is the restore contract frozen, so a
+                         # new switch is MEANT to fail here until it is listed.
+                         "PRICE_PASSIVE_SIM": False}
     finally:
         efficiency.restore_pricing_flags(before)
 
