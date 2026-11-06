@@ -1887,6 +1887,17 @@ flavors:
 # light where the aspect barely changes the build. Stat keys match item stats
 # (Strength / Intelligence / Attack Speed / Max Health / Cooldown Rate /
 # Lifesteal / Physical Protection / Magical Protection / …).
+#
+# DO NOT ADD AN EIGHTH. Every other aspect is DERIVED (`aspect_derive`, below;
+# `smite.aspect_kit`): its kit_changes are read sentence by sentence, the
+# abilities each one changes come from the text, every number comes from the
+# god's own note, and the overlay is `fit_map` on that kit minus `fit_map` on
+# the base kit. A derived family ships only if it moves a build. 2026-11-05,
+# all 78 aspects: 235 sentences, 1 derived (Tsukuyomi), 151 unpriced (the
+# note has no number for the aspect version), 83 mechanics only — and the one
+# that derives moves Intelligence fit 0.2655 -> 0.2694 and no core. STATE.md
+# §4.33. These seven stay as they are; derivation does not re-adjudicate them.
+aspect_derive: true
 aspects:
   Cernunnos:      # Strife — basics become melee cleave autos
     stats: {Strength: 1.0, Attack Speed: 0.8, Lifesteal: 0.8, Max Health: 0.6}

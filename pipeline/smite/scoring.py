@@ -1106,6 +1106,63 @@ def fit_map(god, items, weights, profile=None):
     return base_map, denom_exclude
 
 
+def derived_aspect_overlay(god, items, weights):
+    """`{stats, edits, refused}` — the god's first aspect as a stat overlay,
+    DERIVED: `fit_map` on the aspect kit (`aspect_kit.apply`) minus `fit_map`
+    on the base kit, keeping only the columns that moved. Merged over the base
+    map the way `god_fit_score` merges any aspect overlay, it reproduces the
+    aspect kit's own map exactly, so no number in it was chosen here.
+
+    `refused` names why the overlay is empty when it is. Two refusals are
+    about the SEAM rather than the kit, because an overlay can only carry
+    stat weights:
+      * the aspect flips `is_hybrid_scaler` — that also changes which items
+        pass the damage filter, which an overlay cannot say;
+      * the aspect moves the Attack Damage column — `fit_map` credits that
+        column without charging it only when no overlay names it, so a
+        derived value there would silently change how it is normalised.
+    Neither fires on any aspect today. Evidence in `aspect_kit`'s docstring."""
+    from smite import aspect_kit
+    aspects = god.get("aspects") or []
+    if not aspects:
+        return {"stats": {}, "edits": [], "refused": "no aspect"}
+    variant, edits = aspect_kit.apply(god, aspects[0])
+    out = {"stats": {}, "edits": edits, "refused": None}
+    if not any(e["verdict"] == aspect_kit.DERIVED for e in edits):
+        return {**out, "refused": "no sentence derives"}
+    if is_hybrid_scaler(variant, weights) != is_hybrid_scaler(god, weights):
+        return {**out, "refused": "aspect changes the damage filter (hybrid scaling)"}
+    base, _ = fit_map(god, items, weights)
+    asp, _ = fit_map(variant, items, weights)
+    stats = {s: round(asp.get(s, 0.0), 6) for s in sorted(set(base) | set(asp))
+             if abs(asp.get(s, 0.0) - base.get(s, 0.0)) > 1e-9}
+    if damage_value.ATTACK_DAMAGE_KEY in stats:
+        return {**out, "refused": "aspect moves the Attack Damage column"}
+    if not stats:
+        return {**out, "refused": "derived edits leave the fit map unchanged"}
+    return {**out, "stats": stats}
+
+
+def aspect_overlay(god, items, weights):
+    """The overlay an aspect build of this god is scored with, or None.
+
+    A hand-authored entry under `aspects:` in `_weights.yaml` wins, unchanged
+    — those seven predate derivation and are not re-adjudicated here. Every
+    other god gets `derived_aspect_overlay` when `aspect_derive` is on, marked
+    `derived: True` so emission can hold a derived family to a stricter bar
+    (`recommend.build_suggested_entries`: it ships only if it moves a build)."""
+    hand = (weights.get("aspects") or {}).get(god["name"])
+    if hand:
+        return hand
+    if not weights.get("aspect_derive"):
+        return None
+    d = derived_aspect_overlay(god, items, weights)
+    if not d["stats"]:
+        return None
+    return {"stats": d["stats"], "derived": True,
+            "edits": [e for e in d["edits"] if e["verdict"] == "derived"]}
+
+
 def score_god_items(god, items, god_build, efficiency_scores_map, weights, tags_map, profile=None):
     """Score every buildable, damage-filter-passing item for one god, ranked by
     total descending. An optional profile (from resolve_profile) applies mode
