@@ -572,6 +572,56 @@ shipped **off**. Numbers are in the named module.
     **What did ship, unconditionally, is the basic attack itself** — see §3.
     That half needed no clock and is a hole rather than a modelling choice.
 
+    **Re-opened 2026-11-05 and still off.** The measure is now committed as
+    `smite.scripts.clock_measure`, whose definition reproduces all twelve figures
+    above at the commit that recorded them. Under the shipped fit, against `main`
+    4130ed90 (flags-off figures, which are what `build_index` runs today, in the
+    PR):
+
+        arm                     Carry  Jungle  Mid    Solo  Support  ALL
+        rotation (shipped)      0.382  0.299  0.311  0.633  0.764   0.460
+        clock, everyone         0.307  0.325  0.467  0.633  0.772   0.490
+        Carry only (withdrawn)  0.307  0.299  0.311  0.633  0.764   0.444
+        share over 0.50 (rule)  0.370  0.301  0.311  0.632  0.764   0.457
+
+    **No cast-time source was found.** The fight model's `interval` pair looks
+    like one and is not: it is the median community Carry's attack rate and the
+    median community Mid's cast rate, so two populations, community input, and
+    rates rather than durations, and `side_by_side`'s own docstring says "There
+    are NO cast times". Both literal readings fail criterion 2, and so does a
+    per-god charge from the god's own kit at every value tried.
+
+    **The share does not isolate Carry.** Per second it reads over half on 86 of
+    95 gods, 16 of 24 Mids among them, and Jungle (90.4) and Solo (89.9) sit above
+    Carry (88.8). It assumes the full uptime it would be judging, so it was
+    rejected as circular. Per rotation it runs Carry 30.5, Jungle 33.3, Solo 31.8,
+    Support 14.7, Mid 9.4, and mostly restates physical against magical.
+
+    **The rule, chosen from the distribution and committed before it was
+    measured (bc51077e): per-rotation share over 0.50**, where "over half" and the
+    largest gap in the roster (7.2 points, Loki 45.7 to Guan Yu 52.9) coincide. It
+    was not blind, since the role table was already known. It selects Xbalanque,
+    Nemesis and Guan Yu and passes all three criteria, criterion 2 not by
+    construction, since other roles move. But Carry's gain is one god (Xbalanque
+    0.565 -> 0.335), Nemesis gets worse (0.335 -> 0.371), and three gods cannot
+    carry a claim. It scores worse for Carry than the role list, so by the decision
+    committed with it the clock stays off for everyone.
+
+    **`[Carry]` was withdrawn, not refuted.** It scored better (0.307, held-out
+    Carries 0.398 -> 0.310), but it was chosen after seeing the table and its
+    criterion 2 passed by construction, so it has no warrant. Nothing here says the
+    clock is wrong for Carries; it says this repo cannot yet say who gets it.
+
+    **Two other cut-offs were declared up front, measured once and were ineligible.**
+    Per second over 0.50: 85 of the 94 measured gods, ALL 0.475, fails. Rotation
+    over 0.226, the largest gap in the body of the distribution: Carry 0.306, ALL
+    0.445, passes. It is not a missed winner: it selects 47 physical gods plus Ares
+    and leaves out only 2 physical gods, so it is "physical gods" under another
+    name, Jungle worsens to 0.313, and of the 16 held-out gods it moves only 6
+    improve.
+
+    The clock reaches the draft overlay and nothing else: no core, no residual.
+
 13. **Threshold-and-maximand scoring in `build_quality` (2026-08-21)** — the
     THRESHOLD half only. The maximand half shipped and is in §3; this entry is
     about the two thresholds that came with it and why they carry no verdict.
@@ -3523,7 +3573,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1434) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1435) ·
 `cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
@@ -3643,7 +3693,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 4 — Cernunnos, Cupid, Guan Yu, Mercury. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1434 pipeline · 958 viewer |
+| Tests | 1435 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

@@ -305,6 +305,20 @@ def test_the_clock_ships_off():
     assert weights.get("damage_per_second") is False
 
 
+def test_basic_attack_share_separates_the_two_readings():
+    """Register 4.12's discriminator. The per-second reading assumes full uptime
+    on both channels, so it must read above the rotation one for every god, which
+    is why it cannot be used to decide who gets the clock. An unparsed kit gets no
+    figure rather than a fabricated one."""
+    gods = {g["name"]: g for g in recommend.load_gods()}
+    medusa = dv.basic_attack_shares(gods["Medusa"])
+    scylla = dv.basic_attack_shares(gods["Scylla"])
+    for share in (medusa, scylla):
+        assert 0 < share["rotation"] < share["per_second"] < 1
+    assert medusa["rotation"] > scylla["rotation"]
+    assert dv.basic_attack_shares({"name": "Nobody", "abilities": []}) is None
+
+
 # ── The negative result, pinned ───────────────────────────────────────────
 
 def test_both_b4_halves_ship_off():
