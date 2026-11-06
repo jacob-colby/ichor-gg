@@ -198,6 +198,7 @@ Each of these has its evidence in the named module.
 | The **Balanced** tab is hidden when it equals Model | `builds.dedupeCoreAgainstModel` | Joust and Arena zero `win` and `pick`, so the blend IS the model build — byte-identical on 89/89, with the duplicate claiming a blend that never happened |
 | The aspect control is an **orange hexagon on the portrait** | `AspectBadge.tsx` | Where SMITE draws it, so it is self-describing; orange rather than gold keeps the Torchlight Rule intact |
 | An aspect with no overlay **falls back** to the base build | `DetailPanel.aspectFamily` | 72 gods have an aspect, 7 have a scoring overlay; filtering strictly blanked the model side for the other 65 |
+| An aspect overlay is **derived** from the note, never typed, and ships **only if it moves a build** | `aspect_kit`, `recommend._family_moves` | Abilities from the `kit_changes` text, numbers from the note, overlay = `fit_map` on the aspect kit minus `fit_map` on the base. A family identical to the base tells the toggle's reader their build changes when it does not. 1 of 78 aspects derives today and moves nothing (§4.33) |
 | The draft offers **one** archetype, not the god page's eleven | `archetypeParity.test.ts` | The draft's own build already disagrees with the god page's on 73 of 89 gods (16/89 exact, 79.8% item overlap) with NO overlay applied — `adaptedCore` fills greedily in one pass, `assemble_core_converged` re-prices as it fills. Adding flavor tabs on top would ship ten more disagreements; a sweep of 21 overlay settings closes none of it |
 | Effect-tags name two things: the **job** and **when the value arrives** | `data/_tags.yaml` | The original 11 were all jobs, and 55 of 138 buildable items went untagged because what they do is conditional, not a role |
 | `penetration` is **its own tag**, not folded into `protection-shred` | `data/_tags.yaml` | Shred debuffs the target and helps the whole team; penetration only helps you. Merging them would make the two permanently indistinguishable |
@@ -2303,6 +2304,97 @@ shipped **off**. Numbers are in the named module.
     "community better" rises 8 -> 13 in Conquest, because more verdicts are
     readable and the community wins most of the new ones.
 
+33. **An aspect overlay DERIVED from the god's own note (2026-11-05)** —
+    shipped ON (`aspect_derive: true`) and INERT: the machinery is live, and
+    the one aspect it can derive moves no build. A negative result for the
+    build, stated rather than nudged. Code and numbers in `aspect_kit`'s
+    docstring; the overlay is `scoring.derived_aspect_overlay`.
+
+    **WHAT WAS DERIVED.** `aspect_kit.apply` reads an aspect's `kit_changes`
+    sentence by sentence. WHICH abilities change comes from the text; every
+    NUMBER comes from a line already in the note. One rule prices a sentence:
+    "<A x> become(s) <B x> instead", where the B term's lines are defined
+    exactly once by an ability that grants B. The overlay is `fit_map` on the
+    edited kit minus `fit_map` on the base kit, so nothing in it is a chosen
+    weight. No god name appears in the code; a test parses the module's AST
+    to hold that. Tsukuyomi's Mangetsu derives one sentence of three (Dark
+    Moon Shuriken takes Silver Moon Caltrops' `Mangetsu Bonus Damage Scaling:
+    30% Strength + 65% Intelligence`). The kit's Intelligence share moves
+    0.475 → 0.496, and merged fit moves Intelligence 0.2655 → 0.2694 and
+    Strength 0.9745 → 0.9706.
+
+    **WHAT IT MOVED: NOTHING.** No six changes, in any archetype or mode. A
+    derived family ships only if it moves a build
+    (`recommend._family_moves`), so Tsukuyomi has no aspect family in
+    `viewer/public/index.json` and the toggle still falls back to the base
+    build. `recommend --all` + `build_index` rewrote no file. Measured
+    before → after on fingerprint `4f63ded0872c` (→ `fb0eaf0f2496`; the new
+    YAML key is the whole difference):
+
+        held-out win-weighted / Spearman    +0.0000 / +0.0000   PASS
+        tuning   win-weighted / Spearman    +0.0000 / +0.0000
+        control  0.70:0.30 / 0.45:0.55      41.3% / 38.4% -> 41.3% / 38.4%
+        Conquest readable verdicts          54 of 87 -> 54 of 87 (report byte-identical)
+        reference builds                    unchanged, 10 gods x 3 modes
+        gods other than Tsukuyomi moved     0
+
+    **WHY: two reasons, measured separately.** (1) The derived change is
+    SMALL: one 30/65 line joins kit lines that already sum to about
+    450% Strength and 410% Intelligence. The brief's passive line
+    (15/30) gives 0.2673 and also moves nothing. (2) The channel is NARROW:
+    the role table holds 0.7 of every offensive column (`kit_blend` 0.3), and
+    the Jungle table names no Intelligence. An upper bound that rewrites his
+    whole kit to 1:2 reaches only Intelligence 0.3006. So **the derived mix
+    does not look like a magical build, and through this channel no aspect
+    text could make a physical Jungler's build magical.**
+
+    **REFUSED, and why.**
+      * *Retuning `kit_blend` for aspects.* Its evidence is a 2026-07-22
+        sweep against `validate.compute` (`_weights.yaml`), the gate §1 says
+        cannot choose parameters. That is a reason to re-measure it
+        leakage-free for every god, not to raise it for one aspect. Raising it
+        would not help anyway: swept 0.3–1.0 as a diagnostic, the derived
+        family moves a build at exactly one setting (0.7, one item in `core`,
+        a near-tie) and at none of the seven others.
+      * *Applying the overlay unblended* (merging the kit's own Intelligence
+        0.898 over the map, as the seven hand overlays merge their typed
+        weights). That gives aspect evidence a weight of 1.0 where base-kit
+        evidence gets 0.3. It is the eighth hand-tuned overlay by another
+        route.
+      * *Pricing Piercing Moonlight's "major damage".* The note carries no
+        number for the aspect version, so the sentence is `unpriced` and the
+        base lines stay.
+      * *`SIMULATED_ASPECTS`.* It stays empty. `combat.py` cannot play a kit
+        whose ultimate has no aspect numbers. It would also change nothing:
+        Mangetsu's 3% pick keeps `side_by_side.kit_for` on the base kit.
+      * *Joust team seats.* A derived overlay takes no seat in
+        `recommend._team_seats`, so deriving one god's aspect cannot move
+        another god's Joust build through the anti-heal share.
+      * *Re-adjudicating the seven hand overlays.* Hand overlays still win.
+        None of the seven has a sentence that derives, so derivation would
+        have nothing to replace them with.
+
+    **THE ROSTER, AND WHAT THE FOLLOW-ONS COST.** 2026-11-05, all 78 aspects:
+    235 sentences, **1 derived, 151 unpriced, 83 mechanics only**. The scrape
+    carries aspect TEXT and almost never aspect NUMBERS. For the seven gods
+    whose aspect is the majority pick, the parser derives nothing:
+    Aphrodite's note has `aspects: []`, so there is no text at all; Khepri,
+    Nike and Bacchus name a stat with no ratio ("constant Attack Damage",
+    "scaling with Strength"); Baron Samedi, Gilgamesh and Cernunnos describe
+    mechanics. Each needs a SOURCE for the aspect's numbers (the wiki's
+    aspect tooltip, an in-game reading into `_combat_observations.yaml`), not
+    more code here. The cheapest second RULE is a removal, "<ability> no
+    longer has <Stat> Scaling". The note can price that, and it fires on Pele
+    alone today.
+
+    **REVISIT IF** either test in `test_aspect_kit.py` turns red:
+    `test_only_tsukuyomi_has_a_derivable_aspect_sentence` (a refresh adds
+    aspect numbers, or a new rule lands: more aspects become derivable) or
+    `test_the_derived_mangetsu_family_moves_no_build` (the family starts
+    moving a build and ships on its own, so confirm it in `index.json`).
+    Revisit too if `kit_blend` is re-measured leakage-free at a value other
+    than 0.3.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
@@ -3446,8 +3538,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1421) ·
-`cd viewer && npm test -- --run` (963).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1434) ·
+`cd viewer && npm test -- --run` (958).
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
@@ -3566,7 +3658,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 4 — Cernunnos, Cupid, Guan Yu, Mercury. (2026-11-03, OB47; not investigated in this pass. On the 25 Aug – 7 Sep window it was 1, Mercury:) The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1421 pipeline · 963 viewer |
+| Tests | 1434 pipeline · 958 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

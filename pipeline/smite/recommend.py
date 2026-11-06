@@ -331,7 +331,13 @@ TEAM_SHARE_TOL = 1e-4
 
 def _team_seats(gods, weights):
     """`[(seat, god, aspect_overlay)]` — every `core` a mode ships: each god's
-    base kit and, where one is tuned, its aspect."""
+    base kit and, where one is tuned, its aspect.
+
+    HAND-TUNED aspects only. A derived overlay (`scoring.aspect_overlay`)
+    takes no seat, so deriving an aspect can never move ANOTHER god's Joust
+    build through the anti-heal share. Revisit when a derived family ships in
+    Joust: until then its core is the base core and a seat would count it
+    twice."""
     aspects = weights.get("aspects") or {}
     out = []
     for g in sorted(gods, key=lambda g: g["name"]):
@@ -406,14 +412,30 @@ def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conq
     flex_count = (weights.get("build_order") or {}).get("flex_count", 2)
     entries = _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                                items_by_name, starter, flex_count, None, None, gold_values)
-    aspect_overlay = (weights.get("aspects") or {}).get(god["name"])
+    aspect_overlay = scoring.aspect_overlay(god, items, weights)
     god_aspects = god.get("aspects") or []
     if aspect_overlay and god_aspects:
         aspect_name = god_aspects[0].get("name")
-        entries += _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
-                                    items_by_name, starter, flex_count, aspect_overlay,
-                                    aspect_name, gold_values)
+        aspect_entries = _build_entry_set(god, items, god_build, weights, tags_map, mode,
+                                          eff_scores, items_by_name, starter, flex_count,
+                                          aspect_overlay, aspect_name, gold_values)
+        # A DERIVED overlay ships only if it moves a build. Its weights are
+        # real, but a family whose every six matches the base family's tells
+        # the toggle's reader the aspect changes their build when it does not
+        # (`build_index._god_item_scores` makes the same argument). Tsukuyomi's
+        # Mangetsu is that case on 2026-11-05: STATE.md §4.33.
+        if not aspect_overlay.get("derived") or _family_moves(entries, aspect_entries):
+            entries += aspect_entries
     return entries
+
+
+def _family_moves(base_entries, aspect_entries):
+    """Whether an aspect family differs from its base family anywhere — an
+    archetype present on one side only, or any `slot_order` (membership or
+    order) that is not identical."""
+    base = {e["archetype"]: e["slot_order"] for e in base_entries}
+    asp = {e["archetype"]: e["slot_order"] for e in aspect_entries}
+    return base != asp
 
 
 def main(argv=None):
