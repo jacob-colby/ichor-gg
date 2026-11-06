@@ -2473,7 +2473,7 @@ _Fixed the same day._ `build_index.build_index` applies the flags for the whole
 build and restores them; re-measured at 4130ed90 first, the gap had widened to
 193 of 193 residuals and 59 tiers (Rod of Tahuti +267 shown, -734 used). What
 moved, including the draft under 44 enemy comps, is in that docstring: an empty
-board cannot change, and a drafted one changes its six on 14-15% of Conquest and
+board cannot change, and a drafted one changes its six on 14-16% of Conquest and
 15-23% of Joust `core` boards depending on the comps, `god_item_scores` doing
 most of it. (The Joust figure first went out as ~7%, from a harness that
 padded Joust boards to five slots and so diluted every threat; re-measured

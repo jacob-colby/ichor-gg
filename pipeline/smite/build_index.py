@@ -411,7 +411,19 @@ def build_index(repo_root: Path) -> dict:
     fingerprint `fb0eaf0f2496`, coverage unchanged), where #116 moved nothing
     in the index: main's committed index is a fresh flags-off rebuild, byte for
     byte, and the flags-on index is byte-identical to 414e4b18's, so every
-    non-draft figure above reproduces exactly."""
+    non-draft figure above reproduces exactly.
+
+    RE-TAKEN 2026-11-06 ON d1c6f091, after #117 moved the community window to
+    Open Beta 47 (2,859 matches; control `564aa7a9d6a9`, 39.2% / 36.4%), with
+    the same harness sized per mode and the same four seeds. Every item-level
+    figure above is unchanged, because the efficiency fit reads only the item
+    notes and #117 changed none. The draft moves a little, because its scores
+    read the window: capped membership changes on 294 tables, not 292, and
+    Conquest `core` boards change on 566-666 of 4,180 (666 on the first seed;
+    scores alone 500, damage alone 242). Joust is 648-953 again, seed for
+    seed, because Joust has no community outcome data to move. Magi's Cloak
+    arrives 131-155 fewer times, Avatar's Parashu 104-158 more, and Dreamer's
+    Idol -55 to +69."""
     weights = scoring.load_weights(repo_root / "data" / "_weights.yaml")
     before = efficiency.apply_pricing_flags(weights)
     try:
