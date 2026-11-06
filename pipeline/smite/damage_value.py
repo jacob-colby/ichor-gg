@@ -475,6 +475,35 @@ def item_damage_gain(god, item, target_protection, level=1, rank_index=0,
     return after - before
 
 
+def basic_attack_shares(god, rank_index=0):
+    """`{"rotation": share, "per_second": share}` of a point of the god's own
+    damage stat landing in the basic attack, or None for an unparsed kit.
+
+    Register 4.12's discriminator. Item-free coefficient arithmetic, so no
+    pricing flag reaches it. Both readings carry an assumption and they point
+    opposite ways: "rotation" counts one swing per full rotation, and
+    "per_second" gives both channels full uptime at once, which is the very
+    assumption the clock is accused of.
+    """
+    components = ability_damage_components(god)
+    if not components:
+        return None
+    stat = "Strength" if str(god.get("damage_type", "")).lower().startswith("phys") else "Intelligence"
+    chain = combat.attack_chain_multipliers(god)
+    swing = sum(chain) / len(chain) if chain else 1.0
+    basic = _basic_attack_scaling(god).get(stat, 0.0) * swing
+    per_rotation = sum(c["scaling"].get(stat, 0.0) for c in components)
+    per_second = 0.0
+    for component in components:
+        cooldown = _base_cooldown(god, component, rank_index)
+        if cooldown:
+            per_second += component["scaling"].get(stat, 0.0) * combat.casts_per_second(cooldown)
+    swings = basic * _base_attack_speed(god)
+    if not (basic + per_rotation) or not (swings + per_second):
+        return None
+    return {"rotation": basic / (basic + per_rotation), "per_second": swings / (swings + per_second)}
+
+
 def _base_cooldown(god, component, rank_index=0):
     """The scraped cooldown of the ability a component came from, or None.
 

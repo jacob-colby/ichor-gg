@@ -637,6 +637,30 @@ offmap_exempt: [Max Mana, Mana Regen, Health Regen]
 # uptime on both channels at once, which puts a median 61% of a Mid's marginal
 # power in their basic attack. Disclosed, not patched — the correction needs a
 # cast-time source this repo does not have.
+#
+# RE-MEASURED 2026-11-05 under the shipped fit, against `main` 4130ed90, with
+# `python -m smite.scripts.clock_measure`, whose metric reproduces the table above
+# to the digit at the commit that recorded it. STILL OFF.
+#
+#                            Carry  Jungle   Mid    Solo  Support   ALL
+#     rotation (shipped)     0.382  0.299  0.311  0.633  0.764   0.460
+#     clock, everyone        0.307  0.325  0.467  0.633  0.772   0.490   fails
+#     share over 0.50        0.370  0.301  0.311  0.632  0.764   0.457   the rule
+#
+# NO CAST-TIME SOURCE WAS FOUND. The fight model's `interval` pair is the median
+# community Carry's attack rate and the median community Mid's cast rate: two
+# populations, community input, and rates rather than durations. Both literal
+# readings of it fail criterion 2, and so does a per-god charge of T seconds per
+# cast from the god's own kit at every T from 0.25 to 3.0.
+#
+# A SELECTION RULE WAS TRIED AND IS NOT WORTH SHIPPING. Where basic attacks are
+# over half of marginal power, per rotation, chosen from the distribution and
+# committed before it was measured (`smite.scripts.attack_share`). It selects
+# Xbalanque, Nemesis and Guan Yu. It passes all three criteria, and its Carry gain
+# is one god: Xbalanque 0.565 -> 0.335, Nemesis 0.335 -> 0.371, Guan Yu 0.814 ->
+# 0.807. A hand-picked Carry list scored 0.307 / 0.444 and was withdrawn: it was
+# chosen after seeing the table and criterion 2 passed by construction. Numbers
+# and the two ineligible cut-offs are in register 4.12.
 damage_per_second: false
 # Fit credit for a stat the god's pool can CONVERT into one they want, scaled
 # by what the god thinks of the target stat (see scoring.converter_stat_weights).
