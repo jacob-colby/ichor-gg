@@ -392,24 +392,26 @@ def build_index(repo_root: Path) -> dict:
     The draft starts from the shipped core and may only swap
     (viewer `adaptFromCore`), so an EMPTY board is unchanged by construction.
     Under 44 enemy comps (four structured, forty seeded-random, half with
-    allies) the adapted six changed membership on 622 of 4,180 Conquest `core`
-    boards and 301 of 4,180 Joust ones. Swapping one table at a time:
-    `god_item_scores` alone moves 432 and 256, `god_item_damage` alone 254
-    and 60. Biggest shifts in what arrives: Magi's Cloak -124 and Dreamer's
-    Idol +117 across both modes, because Dreamer's Idol, Mantle of Discord and
-    Avatar's Parashu entered far more capped pools and now out-rank it among
-    the candidates that clear the swap bar.
+    allies) the adapted six changes membership on 569-622 of 4,180 Conquest
+    `core` boards across four seeds (622 on the first; `god_item_scores` alone
+    432 of them, `god_item_damage` alone 254), and on 648-953 of 4,180 Joust
+    ones. Magi's Cloak arrives ~120 fewer times across both modes and Avatar's
+    Parashu 70-160 more, on every seed: Dreamer's Idol, Mantle of Discord and
+    Avatar's Parashu entered far more capped pools (Parashu 22 -> 33 gods,
+    Rod of Tahuti 25 -> 60) and now out-rank it among the candidates that
+    clear the swap bar. Dreamer's Idol's own net arrivals are -102 to +49
+    depending on the comps, so no direction is claimed for it.
 
-    RE-MEASURED 2026-11-06 on 4fc06e3f (#116 merged; control fingerprint
-    `fb0eaf0f2496`, coverage unchanged). #116 moved nothing in the index:
-    main's committed index is a fresh flags-off rebuild, byte for byte, and the
-    flags-on index is byte-identical to the one measured above, so every
-    figure above reproduces exactly. One caution on the draft figures: a
-    second, independently written harness (same denominators, its own comp
-    sample) put Conquest at 648-672 changed boards across four seeds but Joust
-    at 547-754 and Dreamer's Idol's net arrivals at -73 to +19. The Conquest
-    figure and the direction of Magi's Cloak (down) and Avatar's Parashu (up)
-    hold; the Joust count and the Dreamer's Idol shift depend on the comps."""
+    THE JOUST FIGURE WAS FIRST PUBLISHED AS 301 (7%), AND THAT WAS WRONG. The
+    harness padded Joust boards to five slots, and `deriveThreats` takes the
+    roster size from the slot count, so every Joust threat was diluted to
+    3/5 of what the viewer's three-slot board computes. Same harness, same
+    seed, sized like the viewer: 671. Dreamer's Idol's +117 needed the same
+    padding. Found 2026-11-06 re-measuring on 4fc06e3f (#116 merged, control
+    fingerprint `fb0eaf0f2496`, coverage unchanged), where #116 moved nothing
+    in the index: main's committed index is a fresh flags-off rebuild, byte for
+    byte, and the flags-on index is byte-identical to 414e4b18's, so every
+    non-draft figure above reproduces exactly."""
     weights = scoring.load_weights(repo_root / "data" / "_weights.yaml")
     before = efficiency.apply_pricing_flags(weights)
     try:
