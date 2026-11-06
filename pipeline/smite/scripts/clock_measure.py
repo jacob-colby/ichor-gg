@@ -33,7 +33,8 @@ and defend it, this measures the families a charge could belong to:
 
 Reads under the shipped fit by default: the pricing flags applied as
 `_weights.yaml` sets them. `--flags-off` is the state entry 12 was recorded in,
-and also what `build_index` runs today (STATE.md section 5), so both are reported.
+and also what `build_index` shipped before #115 applied the flags (STATE.md
+section 5), so both are reported.
 
 Run from `pipeline/`: `python -m smite.scripts.clock_measure [--flags-off]`.
 """
@@ -184,7 +185,7 @@ def line(label, s, base=None):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--flags-off", action="store_true",
-                    help="every pricing flag off: entry 12's state, and what build_index runs today")
+                    help="every pricing flag off: entry 12's state, and what build_index shipped before #115")
     args = ap.parse_args(argv)
 
     items, gods = recommend.load_items(), recommend.load_gods()
@@ -193,7 +194,7 @@ def main(argv=None):
     try:
         check_parts(gods, items)
         rows = load(items, gods)
-        print(f"flags {'OFF (what build_index ships today)' if args.flags_off else 'ON (the shipped fit)'}"
+        print(f"flags {'OFF (what build_index shipped before #115)' if args.flags_off else 'ON (the shipped fit)'}"
               f" | gods {len(rows)} | community slots {sum(len(r['names']) for r in rows)}")
         same = lambda arm: (lambda row: arm)
         base, u0, _ = summarise(rows, same(rotation))
