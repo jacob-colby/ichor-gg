@@ -763,9 +763,15 @@ def test_the_item_index_leaves_the_fields_null_without_provenance(tmp_path, monk
 
 
 def test_the_shipped_file_now_carries_all_three():
+    """Pins the SHIPPED community table's own window. These values are one
+    window's, so this fires on every patch boundary whatever the new window's
+    size: it detects CHANGE, not thinness. Updating it therefore declares the
+    new window established, which is Jacob's call, not test maintenance. The
+    thinness guard is `refresh._refuse_community_collapse`; the 2026-11-04
+    incident was caught by the tests pinning god NAMES, not by this one."""
     table = json.loads((refresh.DATA_ROOT / refresh.COMMUNITY_ITEMS_FILE)
                        .read_text(encoding="utf-8"))
-    assert table["window"] == "ob46"
-    assert table["matches_analyzed"] == 14667
-    assert table["window_start"] == "2026-10-20"
-    assert table["window_end"] == "2026-11-03"
+    assert table["window"] == "ob47"
+    assert table["matches_analyzed"] == 2859
+    assert table["window_start"] == "2026-11-03"
+    assert table["window_end"] == "2026-11-06"

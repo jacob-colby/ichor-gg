@@ -375,7 +375,7 @@ builds:
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Spear of Desolation:
       total: 0.51
       efficiency: 0.6
