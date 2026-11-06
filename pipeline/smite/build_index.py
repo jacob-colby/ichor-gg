@@ -398,7 +398,18 @@ def build_index(repo_root: Path) -> dict:
     and 60. Biggest shifts in what arrives: Magi's Cloak -124 and Dreamer's
     Idol +117 across both modes, because Dreamer's Idol, Mantle of Discord and
     Avatar's Parashu entered far more capped pools and now out-rank it among
-    the candidates that clear the swap bar."""
+    the candidates that clear the swap bar.
+
+    RE-MEASURED 2026-11-06 on 4fc06e3f (#116 merged; control fingerprint
+    `fb0eaf0f2496`, coverage unchanged). #116 moved nothing in the index:
+    main's committed index is a fresh flags-off rebuild, byte for byte, and the
+    flags-on index is byte-identical to the one measured above, so every
+    figure above reproduces exactly. One caution on the draft figures: a
+    second, independently written harness (same denominators, its own comp
+    sample) put Conquest at 648-672 changed boards across four seeds but Joust
+    at 547-754 and Dreamer's Idol's net arrivals at -73 to +19. The Conquest
+    figure and the direction of Magi's Cloak (down) and Avatar's Parashu (up)
+    hold; the Joust count and the Dreamer's Idol shift depend on the comps."""
     weights = scoring.load_weights(repo_root / "data" / "_weights.yaml")
     before = efficiency.apply_pricing_flags(weights)
     try:
