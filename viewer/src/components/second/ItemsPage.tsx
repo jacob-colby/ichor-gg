@@ -90,7 +90,7 @@ function ItemLine({ item, wide }: { item: Item; wide: boolean }) {
   const win = item.meta ? `${Math.round(item.meta.win_avg * 100)}%` : null;
   const games = typeof item.meta?.matches === "number" ? `${item.meta.matches.toLocaleString("en-US")} games` : null;
   const spoken = eff
-    ? `${item.name}${item.god ? `, ${item.god} only` : ""}: ${verdict}. Costs ${gold(item.cost)}, stats worth ${gold(eff.predicted_cost)}, ${signedGold(eff.residual)}`
+    ? `${item.name}${item.god ? `, ${item.god} only` : ""}: ${verdict}. Costs ${gold(item.cost)}, worth ${gold(eff.predicted_cost)}, ${signedGold(eff.residual)}`
     : `${item.name}${item.god ? `, ${item.god} only` : ""}: not priced by the gold model. Costs ${gold(item.cost)}`;
   return (
     <li className="border-b border-line">
@@ -240,7 +240,7 @@ function ItemDetail({ item, byName, goldValues, record, onClose }: {
       </div>
 
       <section aria-labelledby="receipt-h" className="mt-4" data-testid="receipt">
-        <h3 id="receipt-h" className={sub}>What its stats are worth</h3>
+        <h3 id="receipt-h" className={sub}>{r?.passive ? "What its stats and passive are worth" : "What its stats are worth"}</h3>
         {r ? (
           <>
             <p className="mt-1 text-say text-muted">
@@ -275,7 +275,7 @@ function ItemDetail({ item, byName, goldValues, record, onClose }: {
                 </tr>
                 <tr className="border-t border-line align-baseline">
                   <th scope="row" className="py-2 text-left text-copy font-semibold text-ink">
-                    {r.gap > 0 ? "Costs more than its stats" : r.gap < 0 ? "Costs less than its stats" : "Priced exactly"}
+                    {r.gap > 0 ? `Costs more than ${r.passive ? "it is worth" : "its stats"}` : r.gap < 0 ? `Costs less than ${r.passive ? "it is worth" : "its stats"}` : "Priced exactly"}
                   </th>
                   <td className="num py-2 text-right font-cond text-[21px] font-extrabold text-ink"><Fig text={signedGold(r.gap)} /></td>
                 </tr>
@@ -287,7 +287,9 @@ function ItemDetail({ item, byName, goldValues, record, onClose }: {
               </p>
             )}
             <p className="mt-2 text-note text-quiet">
-              Stats only. A passive can be worth paying over the odds for — that judgement is yours, and this is the number to make it against.
+              {r.passive
+                ? "Stats, plus the part of its passive the fit can price — the Passive rows. Anything else the passive does is not counted: that judgement is yours, and this is the number to make it against."
+                : "Stats only. A passive can be worth paying over the odds for — that judgement is yours, and this is the number to make it against."}
             </p>
           </>
         ) : (
