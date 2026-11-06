@@ -592,7 +592,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Golden Blade
-    reason: Conquest community 71% win over 122 matches (vs 56% on this god), taking
+    reason: Conquest community 74% win over 45 matches (vs 57% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

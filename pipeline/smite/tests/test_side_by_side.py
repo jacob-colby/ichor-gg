@@ -527,10 +527,15 @@ def test_a_thin_window_is_visible_in_the_label(tmp_path):
 
 def test_the_derivation_counts_builds_and_every_item_agrees():
     """`matches_played / use_rate` is the source's own denominator and is
-    exact — all 238 items give the same integer — but it is a share of BUILDS,
+    exact — every item gives the same integer — but it is a share of BUILDS,
     so the denominator is god-builds observed and NOT the match count. PR #109
-    labelled it "matches"; it is ~4.6x the real figure, because the god index
-    records about 4.6 of a match's ten seats."""
+    labelled it "matches"; it is ~4.5x the real figure, because the god index
+    records about 4.5 of a match's ten seats.
+
+    The ratio is pinned to one window and drifts a little with each, so this
+    fires on a patch boundary too. What it really asserts is that builds and
+    matches are DIFFERENT quantities about four and a half times apart, not
+    that the figure is exactly 4.5."""
     table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
     derived = {round(r["matches_played"] / r["use_rate"])
                for r in table["items"].values() if r.get("use_rate")}
@@ -540,7 +545,7 @@ def test_the_derivation_counts_builds_and_every_item_agrees():
     # And the two really are different quantities on the shipped table.
     matches, unit = sbs.community_sample(table)
     assert unit == "matches" and matches < builds
-    assert round(builds / matches, 1) == 4.6
+    assert round(builds / matches, 1) == 4.5
 
 
 def test_the_stated_match_count_wins_over_the_derivation():
@@ -572,15 +577,24 @@ def test_the_items_and_gods_half_still_tracks_the_current_patch():
     assert f"community window {sbs.community_window_label()}" in label
 
 
-def test_the_shipped_label_names_open_beta_46_and_its_real_size():
-    """The live assertion. It failed against the pre-#109 code, which read
-    `_patch.json` for both halves and said "community window Open Beta 47"
-    over an Open Beta 46 table; the count was then corrected from 67,532
-    builds to the window's 14,667 MATCHES (2026-11-05)."""
+def test_the_shipped_label_names_the_community_window_and_its_real_size():
+    """The live assertion, pinned to the shipped window: Open Beta 47, 2,859
+    matches since 2026-11-06. It fires on every patch boundary, so updating it
+    declares the new window established rather than tidying a test.
+
+    It failed against the pre-#109 code, which read `_patch.json` for both
+    halves and said "community window Open Beta 47" over an Open Beta 46
+    table; the count was then corrected from that window's 67,532 builds to
+    its 14,667 MATCHES (2026-11-05).
+
+    NOTE: both halves now read Open Beta 47, so this test can no longer catch
+    the community half copying the item patch by itself. That structural
+    check lives in `test_the_items_and_gods_half_still_tracks_the_current_patch`,
+    which derives both halves instead of pinning them. The unit half of #109
+    is still caught here, by refusing the derived builds figure."""
     label = sbs.data_patch()
-    assert "community window Open Beta 46, 14,667 matches" in label, label
-    assert "community window Open Beta 47" not in label
-    assert "67,532" not in label
+    assert "community window Open Beta 47, 2,859 matches" in label, label
+    assert "12,774" not in label
 
 
 def test_the_shipped_match_count_agrees_with_the_documented_community_sample():
