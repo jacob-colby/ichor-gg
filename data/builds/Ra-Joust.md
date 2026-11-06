@@ -375,7 +375,7 @@ builds:
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.62
     Spear of Desolation:
       total: 0.51
       efficiency: 0.6
@@ -1051,78 +1051,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-  starter: *id001
-  aspect: Aspect of Thermotherapy
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Void Stone
-  - Spear of Desolation
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Lotus Sickle
-  - Soul Gem
-  flex_slots:
-  - Rod of Tahuti
-  - Obsidian Shard
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Void Stone:
-      total: 0.61
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Spear of Desolation:
-      total: 0.62
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Obsidian Shard:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
-    Lotus Sickle:
-      total: 0.68
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Soul Gem:
-      total: 0.77
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  swaps:
-  - added: Obsidian Shard
-    removed: Genji's Guard
-    reason: Conquest community 60% win over 271 matches (vs 53% on this god), taking
-      the model's weakest slot from Genji's Guard
-  borrowed_from: Conquest
   starter: *id001
   aspect: Aspect of Thermotherapy
 ---
