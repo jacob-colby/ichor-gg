@@ -20,6 +20,12 @@ from smite import (abilities, damage_value, efficiency, notes, recommend, threat
 SQUISHY_PROTECTION = 70.0
 TANK_PROTECTION = 170.0
 
+#: The `_weights.yaml` switches `efficiency.apply_pricing_flags` reads, shipped
+#: as `method.pricing` so the method page can say which passives are priced.
+PRICING_SWITCHES = ("price_passives", "price_stacks", "price_crit_multipliers",
+                    "price_conversions", "price_adaptive", "price_stat_multipliers",
+                    "price_on_hit", "price_passive_sim")
+
 
 def team_config(weights):
     """`{tags, duplicate_value, modes: {Mode: {team_size, share, bonus}}}` —
@@ -171,6 +177,12 @@ def _enrich_items(items, tags, eff=None):
     it, so `cost - predicted_cost == residual` holds exactly on screen — a
     surface that shows the arithmetic can't have it fail to add up.
 
+    `priced_passive` is what the fit credits BEYOND the printed stats — the
+    pricing flags' grants and the simulated passive columns
+    (`efficiency.passive_columns`), absent when there is none. The receipt
+    needs it to close: with the flags on, 87 of 193 items are priced partly on
+    something their stat line does not show.
+
     Items outside the scored pool (non-numeric cost, tier-1 starters, and
     statless items, none of which the regression can price — see
     `efficiency.efficiency_pool`) get `None` for both, never a fabricated zero.
@@ -198,6 +210,10 @@ def _enrich_items(items, tags, eff=None):
                 "score": round(scored["score"], 4),
                 "comparable": not it.get("god"),
             }
+            passive = efficiency.passive_columns(it)
+            if passive:
+                it["efficiency"]["priced_passive"] = {
+                    k: round(v, 3) for k, v in sorted(passive.items())}
         else:
             it["efficiency"] = None
     return items
@@ -343,6 +359,80 @@ def _god_item_damage(gods, items, weights) -> dict:
 
 
 def build_index(repo_root: Path) -> dict:
+    """The whole index, priced with `_weights.yaml`'s pricing flags ON.
+
+    THIS USED TO SET NONE OF THEM. `efficiency`'s pricing switches are module
+    globals, `scoring.load_weights` does not set them, and `recommend` and the
+    gates call `efficiency.apply_pricing_flags` themselves — so every figure
+    here came from the flags-off fit while the builds came from the flags-on
+    one. Measured 2026-11-05 at 4130ed90: all 193 shipped residuals matched
+    flags-off and none matched flags-on; the tier shown differed from the tier
+    the model uses on 59 of 193 items (Rod of Tahuti +267 on screen, -734 in
+    the model); `item_gold_values` lacked the three `PASSIVE_SIM_COLUMNS`; and
+    `god_item_scores` / `god_item_damage`, which the draft re-ranks with, read
+    the same flags-off state. Register §4.10's failure mode.
+
+    The flags are applied for the whole build, not just the first fit:
+    `team_fit_items`, the tier list and both draft tables all read the module
+    state. They are put back afterwards, because tests call this in-process
+    and a leaked switch changes whatever runs next.
+    `test_the_index_ships_the_fit_that_chooses_the_builds` pins both.
+
+    WHAT TURNING THEM ON MOVED, against a flags-off rebuild of the same data
+    (control fingerprint `4f63ded0872c`). `builds` and every key not listed
+    here are unchanged. These moved:
+      items        all 193 residuals (median |delta| 152g, max 1,001g); tier
+                   on 59 (premium<->fair 36, fair<->undervalued 19, premium
+                   -> undervalued 4)
+      gold values  all 20 stat prices, the intercept 1,087 -> 891, and the three
+                   `PASSIVE_SIM_COLUMNS` added
+      draft        `god_item_scores` on all 306 tables (capped membership on
+                   292); `god_item_damage` on all 95 gods; the tier list's
+                   item entries (191 of 228)
+    The draft starts from the shipped core and may only swap
+    (viewer `adaptFromCore`), so an EMPTY board is unchanged by construction.
+    Under 44 enemy comps (four structured, forty seeded-random, half with
+    allies) the adapted six changes membership on 569-622 of 4,180 Conquest
+    `core` boards across four seeds (622 on the first; `god_item_scores` alone
+    432 of them, `god_item_damage` alone 254), and on 648-953 of 4,180 Joust
+    ones. Magi's Cloak arrives ~120 fewer times across both modes and Avatar's
+    Parashu 70-160 more, on every seed: Dreamer's Idol, Mantle of Discord and
+    Avatar's Parashu entered far more capped pools (Parashu 22 -> 33 gods,
+    Rod of Tahuti 25 -> 60) and now out-rank it among the candidates that
+    clear the swap bar. Dreamer's Idol's own net arrivals are -102 to +49
+    depending on the comps, so no direction is claimed for it.
+
+    THE JOUST FIGURE WAS FIRST PUBLISHED AS 301 (7%), AND THAT WAS WRONG. The
+    harness padded Joust boards to five slots, and `deriveThreats` takes the
+    roster size from the slot count, so every Joust threat was diluted to
+    3/5 of what the viewer's three-slot board computes. Same harness, same
+    seed, sized like the viewer: 671. Dreamer's Idol's +117 needed the same
+    padding. Found 2026-11-06 re-measuring on 4fc06e3f (#116 merged, control
+    fingerprint `fb0eaf0f2496`, coverage unchanged), where #116 moved nothing
+    in the index: main's committed index is a fresh flags-off rebuild, byte for
+    byte, and the flags-on index is byte-identical to 414e4b18's, so every
+    non-draft figure above reproduces exactly.
+
+    RE-TAKEN 2026-11-06 ON d1c6f091, after #117 moved the community window to
+    Open Beta 47 (2,859 matches; control `564aa7a9d6a9`, 39.2% / 36.4%), with
+    the same harness sized per mode and the same four seeds. Every item-level
+    figure above is unchanged, because the efficiency fit reads only the item
+    notes and #117 changed none. The draft moves a little, because its scores
+    read the window: capped membership changes on 294 tables, not 292, and
+    Conquest `core` boards change on 566-666 of 4,180 (666 on the first seed;
+    scores alone 500, damage alone 242). Joust is 648-953 again, seed for
+    seed, because Joust has no community outcome data to move. Magi's Cloak
+    arrives 131-155 fewer times, Avatar's Parashu 104-158 more, and Dreamer's
+    Idol -55 to +69."""
+    weights = scoring.load_weights(repo_root / "data" / "_weights.yaml")
+    before = efficiency.apply_pricing_flags(weights)
+    try:
+        return _build_index(repo_root, weights)
+    finally:
+        efficiency.restore_pricing_flags(before)
+
+
+def _build_index(repo_root: Path, weights: dict) -> dict:
     data_root = repo_root / "data"
     gods_dir = data_root / "Gods"
     items_dir = data_root / "Items"
@@ -362,7 +452,6 @@ def build_index(repo_root: Path) -> dict:
     if efficiency.numeric_cost_items(raw_items):
         eff, gold_values = efficiency.efficiency_scores(raw_items)
     items = _enrich_items(raw_items, tags_map, eff)
-    weights = scoring.load_weights(data_root / "_weights.yaml")
     builds = _all(builds_dir)
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
@@ -395,7 +484,12 @@ def build_index(repo_root: Path) -> dict:
              # a blend the pipeline stopped using.
              "method": {"signals": weights.get("signals", {}),
                         "kit_blend": weights.get("kit_blend", 0.5),
-                        "underrated": weights.get("underrated", {})},
+                        "underrated": weights.get("underrated", {}),
+                        # Which passive classes the fit prices. The page used
+                        # to restate this in TSX and named two while four were
+                        # on — unnoticed, because until this index shipped the
+                        # flags-on fit the page showed a fit that priced none.
+                        "pricing": {k: bool(weights.get(k)) for k in PRICING_SWITCHES}},
              # Mode order, so the viewer presents Conquest first rather than
              # whatever order the build filenames happened to sort in — which
              # put Arena at the head the moment it was added.

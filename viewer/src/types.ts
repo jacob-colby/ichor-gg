@@ -90,6 +90,12 @@ export interface Item {
      *  False for god-specific items: the number is real, but only one god can
      *  act on it, so it sorts with its own kind rather than heading the board. */
     comparable?: boolean;
+    /** `{column: amount}` the fit credits BEYOND the printed stats — an
+     *  Adaptive Stat's Strength, a conversion's Intelligence, Deathbringer's
+     *  crit as chance, a simulated passive's damage or effective health
+     *  (`efficiency.passive_columns`). Priced at the same `item_gold_values`,
+     *  so the receipt closes only if it lists these too. Absent when none. */
+    priced_passive?: Record<string, number>;
   } | null;
   /** Community record. `matches` is the item's own denominator from the god
    *  index; `gods` is the legacy fallback (a count of builds listing it, not
@@ -370,6 +376,10 @@ export interface MethodData {
   signals: { efficiency: number; win: number; pick: number; fit: number };
   kit_blend: number;
   underrated: { max_pick?: number; top_quality_frac?: number };
+  /** Which passive classes the gold fit prices — the `price_*` switches in
+   *  `_weights.yaml`, as `build_index.PRICING_SWITCHES`. Absent on an older
+   *  index. */
+  pricing?: Record<string, boolean>;
 }
 
 export interface TierListModeData {

@@ -72,7 +72,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      # defaults, so this is never the empty dict.
                      "method": {"signals": _defaults["signals"],
                                 "kit_blend": _defaults.get("kit_blend", 0.5),
-                                "underrated": _defaults["underrated"]},
+                                "underrated": _defaults["underrated"],
+                                # No _weights.yaml, so every pricing switch is off.
+                                "pricing": {k: False for k in build_index.PRICING_SWITCHES}},
                      # The draft config carries the `lifesteal_caps` rule so
                      # the viewer applies the pipeline's cap rather than a
                      # hand-copy of it — empty here, never absent.
@@ -533,6 +535,112 @@ def test_build_index_ships_the_fitted_gold_price_of_each_stat(tmp_path):
     assert "Strength" in gold
     assert gold["Strength"] > 0
     assert all(round(v, 2) == v for v in gold.values())
+
+
+def test_the_index_ships_the_fit_that_chooses_the_builds(monkeypatch):
+    """`recommend` and the gates price items with `_weights.yaml`'s pricing
+    flags on; `build_index` used to call neither `apply_pricing_flags` nor
+    anything that does, so every price the site showed came from the
+    flags-off fit. Measured 2026-11-05: all 193 residuals matched flags-off
+    and none matched flags-on, and the tier shown differed from the tier the
+    model used on 59 items (Rod of Tahuti +267 on screen, -734 in the model).
+    Register §4.10's failure mode, on the surface players read.
+
+    Real data, because the defect only shows where the two fits differ — and
+    the last assertion checks they still do, so this cannot pass vacuously."""
+    from pathlib import Path
+    from smite import scoring
+    repo = Path(__file__).resolve().parents[3]
+    items = [notes.read_note(p)[0] for p in sorted((repo / "data" / "Items").glob("*.md"))]
+    weights = scoring.load_weights(repo / "data" / "_weights.yaml")
+
+    def fit(w):
+        before = efficiency.apply_pricing_flags(w)
+        try:
+            return efficiency.efficiency_scores(items)
+        finally:
+            efficiency.restore_pricing_flags(before)
+
+    def snapshot():
+        return {k: getattr(efficiency, k) for k in efficiency.PRICING_FLAGS}
+
+    def flags_for(w):
+        # `apply_pricing_flags` returns the PREVIOUS values, so read them back.
+        before = efficiency.apply_pricing_flags(w)
+        try:
+            return snapshot()
+        finally:
+            efficiency.restore_pricing_flags(before)
+
+    on, on_gold = fit(weights)
+    off, _ = fit({})
+    on_flags, off_flags = flags_for(weights), flags_for({})
+    assert on_flags != off_flags
+
+    # The draft's tables are module-state readers too; record what they saw.
+    seen = {}
+    for name in ("_god_item_scores", "_god_item_damage"):
+        real = getattr(build_index, name)
+
+        def spy(*a, _real=real, _name=name, **kw):
+            seen[_name] = snapshot()
+            return _real(*a, **kw)
+        monkeypatch.setattr(build_index, name, spy)
+
+    # Start from a state that is NOT the shipped one, so "restored" means something.
+    prior = efficiency.apply_pricing_flags({})
+    try:
+        index = build_index.build_index(repo)
+        after = snapshot()
+    finally:
+        efficiency.restore_pricing_flags(prior)
+    assert after == off_flags, "build_index must put the pricing flags back"
+
+    shipped = {it["name"]: it for it in index["items"] if it["efficiency"]}
+    assert set(shipped) == set(on)
+    assert {n: it["efficiency"]["residual"] for n, it in shipped.items()} == \
+        {n: round(on[n]["residual"]) for n in shipped}
+    assert {n: it["efficiency_tier"] for n, it in shipped.items()} == \
+        {n: on[n]["tier"] for n in shipped}
+    assert index["item_gold_values"] == {k: round(v, 2) for k, v in sorted(on_gold.items())}
+
+    assert seen == {"_god_item_scores": on_flags, "_god_item_damage": on_flags}
+
+    differ = [n for n in shipped if round(on[n]["residual"]) != round(off[n]["residual"])]
+    assert len(differ) > 50, "the two fits no longer differ; this test proves nothing"
+
+    # And the receipt still closes. Printed stats alone fell short on 87 items
+    # once the flags were on; `priced_passive` is what makes up the difference.
+    # The bound is what the shipped rounding can explain and no more: prices
+    # are 2dp, so each point carries up to 0.005g, and the passive EHP columns
+    # run to thousands of points (Shell of Rebuke's rows land 1.8g off).
+    gold = index["item_gold_values"]
+    passive = 0
+    for name, it in shipped.items():
+        extra = it["efficiency"].get("priced_passive") or {}
+        passive += bool(extra)
+        rows, points = gold[efficiency.INTERCEPT_KEY], 1.0
+        for stat, raw in (it.get("stats") or {}).items():
+            val = efficiency.parse_stat_value(raw)
+            if val is not None:
+                rows += val * gold.get(efficiency.stat_key(stat, raw), 0.0)
+                points += abs(val)
+        rows += sum(v * gold.get(k, 0.0) for k, v in extra.items())
+        points += sum(abs(v) for v in extra.values())
+        assert abs(rows - it["efficiency"]["predicted_cost"]) <= 0.5 + 0.005 * points, (
+            f"{name}: receipt rows {rows:.1f} vs predicted {it['efficiency']['predicted_cost']}")
+    assert passive > 50, "no item carries a priced passive; the receipt check proves nothing"
+    assert index["method"]["pricing"]["price_passive_sim"] is bool(weights.get("price_passive_sim"))
+
+
+def test_method_pricing_ships_every_switch_the_fit_reads():
+    """`method.pricing` is how the method page says which passives are priced.
+    A switch `apply_pricing_flags` reads and this list omits would be priced by
+    the fit and missing from the page."""
+    import inspect
+    import re
+    read = set(re.findall(r'w\.get\("(price_[a-z_]+)"', inspect.getsource(efficiency.apply_pricing_flags)))
+    assert read == set(build_index.PRICING_SWITCHES)
 
 
 def test_receipt_rows_reconcile_to_predicted_cost(tmp_path):

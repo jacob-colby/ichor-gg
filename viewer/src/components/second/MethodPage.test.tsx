@@ -53,6 +53,42 @@ describe("MethodPage", () => {
     expect(within(screen.getByTestId("limits")).getByText(/It is a filter, not a ranker/)).toBeInTheDocument();
   });
 
+  it("names exactly the passive classes the shipped fit prices, read from the index", () => {
+    const pricing = { price_passives: false, price_crit_multipliers: true, price_conversions: true,
+      price_adaptive: true, price_passive_sim: true, price_stacks: false };
+    render(<MethodPage method={{ ...method, pricing }} goldValues={gold} items={items} godCount={89} />);
+    const limits = within(screen.getByTestId("limits")).getByText(/Most item passives are still unpriced/).closest("li")!;
+    expect(limits).toHaveTextContent("Four classes are: a crit multiplier");
+    expect(limits).toHaveTextContent("an Adaptive Stat grant");
+    expect(limits).toHaveTextContent("a passive the fight simulation can run");
+    expect(limits).not.toHaveTextContent("a stack that reaches its cap");
+    expect(limits).toHaveTextContent("Pricing every unconditional stat grant at once was tried");
+  });
+
+  it("labels the simulated passive rows and counts the items the fit credits through them", () => {
+    const withPassive = [
+      ...items,
+      { name: "D", stats: { Strength: "10" }, efficiency: { predicted_cost: 2000, residual: 0, score: 0.5,
+        priced_passive: { "Passive Damage": 400 } } },
+      { name: "E", stats: { Strength: "10" }, efficiency: { predicted_cost: 2000, residual: 0, score: 0.5,
+        priced_passive: { "Passive Damage": 300, Strength: 30 } } },
+      { name: "F", stats: {}, efficiency: { predicted_cost: 2000, residual: 0, score: 0.5,
+        priced_passive: { "Passive Damage": 200 } } },
+    ] as unknown as Item[];
+    render(<MethodPage method={method} goldValues={{ ...gold, "Passive Damage": 0.97, "Passive EHP Magical": 0 }}
+      items={withPassive} godCount={89} />);
+    const table = within(screen.getByTestId("gold-table"));
+    const dmg = table.getByRole("rowheader", { name: "Passive: damage it adds" }).closest("tr")!;
+    // Three items carry it, none on its stat line, so it is not thin.
+    expect(dmg).toHaveTextContent("0.97g");
+    expect(dmg).toHaveTextContent("3");
+    expect(dmg).not.toHaveTextContent("thin");
+    // E prints Strength AND is credited more through its passive: one item, not two.
+    expect(table.getByRole("rowheader", { name: "Strength" }).closest("tr")).toHaveTextContent(/5$/);
+    expect(screen.getByTestId("passive-rows")).toHaveTextContent("3 of its 3 priced items");
+    expect(screen.getByTestId("passive-rows")).toHaveTextContent("A row at 0.00g");
+  });
+
   it("renders without weights instead of inventing them", () => {
     render(<MethodPage goldValues={{}} items={items} godCount={89} />);
     expect(screen.queryByTestId("blend")).not.toBeInTheDocument();

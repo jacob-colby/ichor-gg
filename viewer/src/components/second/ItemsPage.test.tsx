@@ -127,6 +127,22 @@ describe("ItemsPage — the receipt", () => {
     expect(receipt.getByText(/2,300g · worth 2,400g ·/)).toBeInTheDocument();
   });
 
+  it("itemises a priced passive as its own row and stops calling the worth 'stats only'", () => {
+    // 1100 + 40 × 15.29 + 500 × 0.97 = 2196.6 → the pipeline's 2,197.
+    const edge = { name: "Edge", tier: 3, cost: 2000, stats: { Intelligence: "40" }, passive: "Hits harder.",
+      builds_from: [], builds_into: [], effect_tags: [], efficiency_tier: "undervalued",
+      efficiency: { predicted_cost: 2197, residual: -197, score: 0.7, priced_passive: { "Passive Damage": 500 } } };
+    render(<ItemsPage items={[...items, edge] as typeof items} goldValues={{ ...GOLD, "Passive Damage": 0.97 }} openItem="Edge" />);
+    const receipt = within(within(screen.getByRole("dialog", { name: "Edge" })).getByTestId("receipt"));
+    expect(receipt.getByRole("heading", { name: "What its stats and passive are worth" })).toBeInTheDocument();
+    expect(receipt.getByText("Passive: damage it adds")).toBeInTheDocument();
+    expect(receipt.getByText("500 × 0.97g a point")).toBeInTheDocument();
+    expect(receipt.queryByText("Not itemised")).not.toBeInTheDocument();
+    expect(receipt.queryByText(/^Stats only/)).not.toBeInTheDocument();
+    const cells = receipt.getAllByRole("cell").map((c) => c.textContent);
+    expect(cells).toEqual(["1,100g", "612g", "485g", "2,197g", "2,000g", "−197g"]);
+  });
+
   it("explains why a tier-1 starter has no verdict rather than printing a dash", () => {
     render(page({ openItem: "Pendant" }));
     expect(within(screen.getByRole("dialog")).getByTestId("not-scored"))

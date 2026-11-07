@@ -39,6 +39,29 @@ describe("buildReceipt — the receipt closes exactly", () => {
     expect(r.unpriced).toEqual(["Mystery"]);
   });
 
+  it("itemises the part of the passive the fit priced, so a passive-priced item still closes", () => {
+    // Deathbringer's shape on the 2026-11-05 index: the crit multiplier priced
+    // as chance and a simulated passive's damage, neither on the stat line.
+    // Without these rows the receipt fell 731g short and printed "Not itemised".
+    const gold = { _intercept: 891.03, Strength: 19.91, "Critical Chance %": 16.3, "Passive Damage": 0.97 };
+    const r = buildReceipt(item({ cost: 2900, stats: { Strength: "45", "Critical Chance": "20%" },
+      efficiency: { predicted_cost: 2844, residual: 56, score: 0.54,
+        priced_passive: { "Critical Chance %": 14, "Passive Damage": 518.709 } } }), gold)!;
+    expect(r.passive).toBe(true);
+    expect(sum(r)).toBe(2844);
+    expect(r.lines.map((l) => l.label)).toEqual([
+      "Base price", "Strength", "Critical Chance", "Passive: Critical Chance", "Passive: damage it adds"]);
+    expect(r.lines.some((l) => l.label === "Not itemised")).toBe(false);
+    expect(r.lines.at(-1)?.detail).toBe("519 × 0.97g a point");
+    expect(r.lines.at(-2)?.detail).toBe("14% × 16.30g a point");
+  });
+
+  it("has no passive rows for an item priced on its stat line alone", () => {
+    const r = buildReceipt(item({ stats: { Intelligence: "85" },
+      efficiency: { predicted_cost: 2241, residual: 259, score: 0.4 } }), { _intercept: 1086.64, Intelligence: 13.58 })!;
+    expect(r.passive).toBe(false);
+  });
+
   it("returns nothing for an item the model does not price", () => {
     expect(buildReceipt(item({ tier: 1, efficiency: null }), {})).toBeNull();
   });
