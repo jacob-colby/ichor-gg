@@ -45,6 +45,9 @@ concurrency:
 
 permissions:
   contents: write
+  # The run opens a pull request instead of pushing to main; see the last
+  # commit step for why.
+  pull-requests: write
 
 jobs:
   refresh:
@@ -190,8 +193,44 @@ jobs:
         working-directory: pipeline
         run: python -m smite.calibrate_combat
 
-      - name: Commit if anything moved
+      # OPENS A PULL REQUEST. IT DOES NOT PUSH TO MAIN, AND IT MUST NOT.
+      #
+      # This step used to end in a bare `git push` to main, and that stopped
+      # working the moment a branch ruleset went on main. The run then failed
+      # every day, silently as far as the data was concerned: a red cross on a
+      # scheduled workflow nobody was watching, while the community window sat
+      # frozen wherever it last landed. 2026-11-05 through 2026-11-07, three
+      # days, with the only data to arrive in that span coming through a
+      # hand-made PR (#117). The error is worth quoting, because its shape is
+      # what to look for if this ever regresses:
+      #
+      #   remote: error: GH013: Repository rule violations found for
+      #   refs/heads/main ... 2 of 2 required status checks are expected
+      #   ! [remote rejected] main -> main
+      #
+      # A bypass actor on the ruleset would also have fixed it. A pull request
+      # is better and not merely equivalent: `tests.yml` runs on
+      # `pull_request`, so the day's data now faces the full suite before it
+      # lands, which a direct push to main never did. The gates in this job
+      # run on the data; the suite runs on the result.
+      #
+      # ONE BRANCH PER DAY, and a re-run lands on top of the one it already
+      # made, so the PR updates in place and NOTHING is ever force-pushed.
+      # `git reset --soft` is what makes that work: it moves HEAD to the
+      # branch tip and leaves the staged data exactly where it is, so the new
+      # commit is an ordinary child and an ordinary push takes it.
+      #
+      # Auto-merge is ARMED, NOT ASSUMED. If the repository does not allow it,
+      # the PR stays open and the run says so as a warning rather than
+      # pretending the data landed. A rejected stats refresh or a left-out
+      # entity still fails the run at the steps below, exactly as before, and
+      # still does not cost the day's community numbers: they are in the PR.
+      - name: Open a pull request if anything moved
+        id: data_pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # The HTML cache is a fetch artifact, not data — committing it would
@@ -200,15 +239,63 @@ jobs:
           git reset -q -- data/_cache
           if git diff --cached --quiet; then
             echo "No change — SmiteBrain's window hasn't moved."
+            echo "No change: SmiteBrain's window had not moved." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          git commit -m "chore(data): daily community refresh
+
+          BRANCH="data-refresh-$(date -u +%Y-%m-%d)"
+          # stderr is dropped because "couldn't find remote ref" is the normal
+          # first-run-of-the-day case, not a problem worth a line in the log.
+          if git fetch -q origin "$BRANCH" 2>/dev/null; then
+            git reset -q --soft FETCH_HEAD
+            if git diff --cached --quiet; then
+              echo "Today's branch already carries this data."
+            else
+              git commit -q -F- <<'MSG'
+          chore(data): daily community refresh
 
           Automated. SmiteBrain win/pick rates, community builds and starters,
           wiki item and god stats when a patch landed (smite.stats_refresh),
           new gods and items from the wiki (smite.new_entities), then a
-          recompute and reindex."
-          git push
+          recompute and reindex.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          MSG
+            fi
+          else
+            git commit -q -F- <<'MSG'
+          chore(data): daily community refresh
+
+          Automated. SmiteBrain win/pick rates, community builds and starters,
+          wiki item and god stats when a patch landed (smite.stats_refresh),
+          new gods and items from the wiki (smite.new_entities), then a
+          recompute and reindex.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          MSG
+          fi
+          git push -q origin "HEAD:$BRANCH"
+
+          if ! NUM=$(gh pr view "$BRANCH" --json number --jq .number 2>/dev/null); then
+            gh pr create --base main --head "$BRANCH" \
+              --title "chore(data): daily community refresh $(date -u +%Y-%m-%d)" \
+              --body "Automated by \`Refresh community data\` ([run](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})). SmiteBrain win/pick rates, community builds and starters, wiki item and god stats if a patch landed, new gods and items, then a recompute and reindex.
+
+          This is a pull request rather than a push to \`main\` because the branch ruleset refuses a direct push. The suite runs on it before it lands, which a direct push never allowed.
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+            NUM=$(gh pr view "$BRANCH" --json number --jq .number)
+          fi
+          echo "number=$NUM" >> "$GITHUB_OUTPUT"
+
+          if gh pr merge "$NUM" --auto --squash >/dev/null 2>&1; then
+            echo "Auto-merge armed on #$NUM; it lands when the suite passes." \
+              >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::warning::Auto-merge could not be armed on #$NUM. The day's data is in that PR and is NOT on main until someone merges it."
+            echo "#$NUM is open and needs a merge: auto-merge could not be armed." \
+              >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       # Last, so the community data above is committed first. A rejected
       # stats refresh fails the run here, with the failing tests already
