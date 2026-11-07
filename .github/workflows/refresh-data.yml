@@ -225,6 +225,15 @@ jobs:
       # pretending the data landed. A rejected stats refresh or a left-out
       # entity still fails the run at the steps below, exactly as before, and
       # still does not cost the day's community numbers: they are in the PR.
+      #
+      # AND TODAY IT DOES NOT LAND BY ITSELF. `allow_auto_merge` is FALSE on
+      # this repository, checked 2026-11-07, so the arm below fails every run
+      # and the warning fires every run: a PR a day, each needing a click.
+      # That is deliberate rather than hidden, and it is strictly better than
+      # the silent failure it replaces, but it is not automation yet. Turning
+      # on "Allow auto-merge" in the repository settings is the whole fix and
+      # needs no change here: the day's data then lands as soon as the suite
+      # passes, which is the gate a direct push to main never had.
       - name: Open a pull request if anything moved
         id: data_pr
         env:
