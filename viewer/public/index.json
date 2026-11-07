@@ -287689,7 +287689,9 @@
         "Stampede": 0.4202,
         "Stone of Binding": 0.42,
         "Void Shield": 0.4185,
-        "Spectral Armor": 0.4172
+        "Spectral Armor": 0.4172,
+        "Toxic Blade": 0.4045,
+        "Dominance": 0.401
       },
       "joust": {
         "The Reaper": 0.686,
@@ -287731,7 +287733,12 @@
         "Barbed Carver": 0.4416,
         "Freya's Tears": 0.4367,
         "Pendulum Blade": 0.4351,
-        "Genji's Guard": 0.4329
+        "Genji's Guard": 0.4329,
+        "Spectral Armor": 0.412,
+        "Ancile": 0.4067,
+        "Hussar's Wings": 0.3993,
+        "Dominance": 0.3915,
+        "Screeching Gargoyle": 0.3907
       },
       "arena": {
         "The Reaper": 0.686,
@@ -287773,7 +287780,11 @@
         "Oni Hunter's Garb": 0.4425,
         "Barbed Carver": 0.4416,
         "Stygian Anchor": 0.4388,
-        "Freya's Tears": 0.4367
+        "Freya's Tears": 0.4367,
+        "Void Stone": 0.4312,
+        "Ancile": 0.4067,
+        "Spectral Armor": 0.397,
+        "Dominance": 0.3915
       }
     },
     "Agni": {
@@ -287817,7 +287828,11 @@
         "Nimble Ring": 0.4105,
         "Helm of Darkness": 0.3975,
         "Scepter of Dominion": 0.3954,
-        "Screeching Gargoyle": 0.3914
+        "Screeching Gargoyle": 0.3914,
+        "Contagion": 0.3405,
+        "Stampede": 0.3371,
+        "Spectral Armor": 0.329,
+        "Stone of Binding": 0.3185
       },
       "conquest:aspect": {
         "Spear of the Magus": 0.6836,
@@ -287859,7 +287874,11 @@
         "Lifebinder": 0.4025,
         "Yogi's Necklace": 0.3892,
         "Helm of Darkness": 0.3889,
-        "Screeching Gargoyle": 0.3871
+        "Screeching Gargoyle": 0.3871,
+        "Contagion": 0.3405,
+        "Stampede": 0.3371,
+        "Spectral Armor": 0.329,
+        "Stone of Binding": 0.3185
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -287901,7 +287920,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "Soul Gem": 0.7654,
@@ -287943,7 +287967,12 @@
         "Necronomicon": 0.3685,
         "Wish-Granting Pearl": 0.3629,
         "Yogi's Necklace": 0.3595,
-        "Genji's Guard": 0.3447
+        "Genji's Guard": 0.3447,
+        "Screeching Gargoyle": 0.3118,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.1903,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -287985,7 +288014,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "Soul Gem": 0.7654,
@@ -288027,7 +288061,12 @@
         "Necronomicon": 0.3685,
         "Wish-Granting Pearl": 0.3629,
         "Yogi's Necklace": 0.3595,
-        "Genji's Guard": 0.3447
+        "Genji's Guard": 0.3447,
+        "Screeching Gargoyle": 0.3118,
+        "Contagion": 0.2985,
+        "Talisman of Purification": 0.2903,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Ah Puch": {
@@ -288071,7 +288110,13 @@
         "Lifebinder": 0.4403,
         "Bragi's Harp": 0.44,
         "Nimble Ring": 0.4398,
-        "The World Stone": 0.4277
+        "The World Stone": 0.4277,
+        "Scepter of Dominion": 0.4247,
+        "Screeching Gargoyle": 0.4206,
+        "Contagion": 0.3697,
+        "Stampede": 0.3663,
+        "Spectral Armor": 0.3582,
+        "Stone of Binding": 0.3478
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -288113,7 +288158,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -288155,7 +288205,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Aladdin": {
@@ -288199,7 +288254,12 @@
         "Genji's Guard": 0.5081,
         "Triton's Conch": 0.5066,
         "Golden Blade": 0.5063,
-        "Soul Reaver": 0.5051
+        "Soul Reaver": 0.5051,
+        "Toxic Blade": 0.491,
+        "Oath-Sworn Spear": 0.4861,
+        "Jade Scepter": 0.479,
+        "Divine Ruin": 0.4786,
+        "Spectral Armor": 0.4032
       },
       "joust": {
         "Jotunn's Revenge": 0.7744,
@@ -288241,7 +288301,11 @@
         "Golden Blade": 0.4307,
         "Lernaean Bow": 0.4301,
         "Divine Ruin": 0.4244,
-        "Shield Splitter": 0.4202
+        "Shield Splitter": 0.4202,
+        "Eye of the Storm": 0.4193,
+        "Oath-Sworn Spear": 0.4034,
+        "Screeching Gargoyle": 0.3245,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.7744,
@@ -288283,7 +288347,11 @@
         "The Cosmic Horror": 0.433,
         "Ethereal Staff": 0.4313,
         "Shield Splitter": 0.4202,
-        "Divine Ruin": 0.4197
+        "Divine Ruin": 0.4197,
+        "Eye of the Storm": 0.4193,
+        "Oath-Sworn Spear": 0.4034,
+        "Screeching Gargoyle": 0.3245,
+        "Spectral Armor": 0.1485
       }
     },
     "Amaterasu": {
@@ -288327,7 +288395,14 @@
         "Gladiator's Shield": 0.5551,
         "Avenging Blade": 0.5542,
         "Arondight": 0.5533,
-        "Void Stone": 0.5525
+        "Void Stone": 0.5525,
+        "Spectral Armor": 0.5486,
+        "Sanguine Lash": 0.5482,
+        "Heartseeker": 0.5475,
+        "Titan's Bane": 0.5412,
+        "Obsidian Shard": 0.5402,
+        "Brawler\u2019s Beat Stick": 0.5374,
+        "Stygian Anchor": 0.5335
       },
       "joust": {
         "Amanita Charm": 0.7365,
@@ -288369,7 +288444,13 @@
         "Oni Hunter's Garb": 0.4603,
         "Screeching Gargoyle": 0.4602,
         "Void Shield": 0.4602,
-        "Bancroft's Talon": 0.4597
+        "Bancroft's Talon": 0.4597,
+        "Hussar's Wings": 0.4521,
+        "Magi's Cloak": 0.4459,
+        "Mantle Of Discord": 0.4459,
+        "Spectral Armor": 0.4298,
+        "Titan's Bane": 0.4053,
+        "Obsidian Shard": 0.3645
       },
       "arena": {
         "Amanita Charm": 0.7215,
@@ -288411,7 +288492,11 @@
         "Sphere of Negation": 0.4668,
         "Devourer's Gauntlet": 0.4651,
         "Breastplate of Valor": 0.4633,
-        "Prophetic Cloak": 0.4616
+        "Prophetic Cloak": 0.4616,
+        "Screeching Gargoyle": 0.4602,
+        "Spectral Armor": 0.4148,
+        "Titan's Bane": 0.4053,
+        "Obsidian Shard": 0.3645
       }
     },
     "Anhur": {
@@ -288455,7 +288540,12 @@
         "Breastplate of Valor": 0.3987,
         "Yogi's Necklace": 0.3982,
         "Sanguine Lash": 0.3974,
-        "Chandra's Grace": 0.3961
+        "Chandra's Grace": 0.3961,
+        "Oath-Sworn Spear": 0.3953,
+        "Screeching Gargoyle": 0.375,
+        "Brawler\u2019s Beat Stick": 0.3521,
+        "Stampede": 0.3461,
+        "Spectral Armor": 0.338
       },
       "joust": {
         "Riptalon": 0.6246,
@@ -288497,7 +288587,11 @@
         "Vital Amplifier": 0.34,
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
-        "Eye of the Storm": 0.334
+        "Eye of the Storm": 0.334,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2416,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6246,
@@ -288539,7 +288633,11 @@
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
         "Eye of the Storm": 0.334,
-        "Shield of the Phoenix": 0.3292
+        "Shield of the Phoenix": 0.3292,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2416,
+        "Spectral Armor": 0.1485
       }
     },
     "Anubis": {
@@ -288583,7 +288681,13 @@
         "Bragi's Harp": 0.3793,
         "Nimble Ring": 0.379,
         "Helm of Darkness": 0.366,
-        "Scepter of Dominion": 0.3639
+        "Scepter of Dominion": 0.3639,
+        "Screeching Gargoyle": 0.3599,
+        "Obsidian Shard": 0.3275,
+        "Contagion": 0.309,
+        "Stampede": 0.3056,
+        "Spectral Armor": 0.2975,
+        "Stone of Binding": 0.287
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -288625,7 +288729,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -288667,7 +288776,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Aphrodite": {
@@ -288711,7 +288825,11 @@
         "Gem of Focus": 0.4996,
         "Heartwood Charm": 0.4994,
         "Void Stone": 0.4986,
-        "Prophetic Cloak": 0.4984
+        "Prophetic Cloak": 0.4984,
+        "Spectral Armor": 0.4947,
+        "Soul Reaver": 0.4927,
+        "Stygian Anchor": 0.4768,
+        "Divine Ruin": 0.4662
       },
       "joust": {
         "Soul Gem": 0.7525,
@@ -288753,7 +288871,12 @@
         "Void Stone": 0.4494,
         "Prophetic Cloak": 0.4479,
         "Oni Hunter's Garb": 0.4457,
-        "Void Shield": 0.4456
+        "Void Shield": 0.4456,
+        "Dreamer's Idol": 0.4333,
+        "Jade Scepter": 0.4326,
+        "Hussar's Wings": 0.4254,
+        "Soul Reaver": 0.4222,
+        "Spectral Armor": 0.4152
       },
       "arena": {
         "Soul Gem": 0.7375,
@@ -288795,7 +288918,9 @@
         "Stone of Binding": 0.4561,
         "Umbral Link": 0.4559,
         "Helm of Darkness": 0.4553,
-        "Stampede": 0.4545
+        "Stampede": 0.4545,
+        "Soul Reaver": 0.4222,
+        "Spectral Armor": 0.4002
       }
     },
     "Apollo": {
@@ -288839,7 +288964,11 @@
         "Avenging Blade": 0.3874,
         "Breastplate of Valor": 0.383,
         "Yogi's Necklace": 0.3824,
-        "Sanguine Lash": 0.3816
+        "Sanguine Lash": 0.3816,
+        "Screeching Gargoyle": 0.3593,
+        "Brawler\u2019s Beat Stick": 0.3363,
+        "Stampede": 0.3303,
+        "Spectral Armor": 0.3222
       },
       "joust": {
         "Riptalon": 0.6287,
@@ -288881,7 +289010,11 @@
         "Vital Amplifier": 0.34,
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
-        "Eye of the Storm": 0.334
+        "Eye of the Storm": 0.334,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2416,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6287,
@@ -288923,7 +289056,11 @@
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
         "Eye of the Storm": 0.334,
-        "Shield of the Phoenix": 0.3292
+        "Shield of the Phoenix": 0.3292,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2416,
+        "Spectral Armor": 0.1485
       }
     },
     "Ares": {
@@ -288967,7 +289104,13 @@
         "Void Shield": 0.518,
         "Spectral Armor": 0.5168,
         "The Reaper": 0.5144,
-        "Doublet of Binding": 0.5121
+        "Doublet of Binding": 0.5121,
+        "Brawler\u2019s Beat Stick": 0.5066,
+        "Stygian Anchor": 0.5027,
+        "Obsidian Shard": 0.5017,
+        "Ethereal Staff": 0.4996,
+        "Sanguine Lash": 0.4941,
+        "Titan's Bane": 0.4825
       },
       "joust": {
         "Amanita Charm": 0.7816,
@@ -289009,7 +289152,11 @@
         "Regrowth Striders": 0.4798,
         "Magi's Cloak": 0.4782,
         "Mantle Of Discord": 0.4781,
-        "Midgardian Mail": 0.471
+        "Midgardian Mail": 0.471,
+        "Spectral Armor": 0.4588,
+        "Sanguine Lash": 0.4516,
+        "Obsidian Shard": 0.3714,
+        "Titan's Bane": 0.3445
       },
       "arena": {
         "Amanita Charm": 0.7666,
@@ -289051,7 +289198,11 @@
         "Void Stone": 0.478,
         "Void Shield": 0.4742,
         "Midgardian Mail": 0.471,
-        "Rod of Asclepius": 0.4708
+        "Rod of Asclepius": 0.4708,
+        "Spectral Armor": 0.4438,
+        "Sanguine Lash": 0.4366,
+        "Obsidian Shard": 0.3714,
+        "Titan's Bane": 0.3445
       }
     },
     "Artemis": {
@@ -289095,7 +289246,12 @@
         "Breastplate of Valor": 0.437,
         "Yogi's Necklace": 0.4364,
         "Sanguine Lash": 0.4356,
-        "Chandra's Grace": 0.4343
+        "Chandra's Grace": 0.4343,
+        "Oath-Sworn Spear": 0.4335,
+        "Screeching Gargoyle": 0.4133,
+        "Brawler\u2019s Beat Stick": 0.3903,
+        "Stampede": 0.3843,
+        "Spectral Armor": 0.3762
       },
       "joust": {
         "Riptalon": 0.6287,
@@ -289137,7 +289293,11 @@
         "Vital Amplifier": 0.34,
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
-        "Eye of the Storm": 0.334
+        "Eye of the Storm": 0.334,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2416,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6287,
@@ -289179,7 +289339,11 @@
         "Arondight": 0.3376,
         "Shield Splitter": 0.3349,
         "Eye of the Storm": 0.334,
-        "Shield of the Phoenix": 0.3292
+        "Shield of the Phoenix": 0.3292,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2416,
+        "Spectral Armor": 0.1485
       }
     },
     "Artio": {
@@ -289223,7 +289387,13 @@
         "Avenging Blade": 0.5347,
         "Tyrfing": 0.5333,
         "Ancile": 0.5325,
-        "Arondight": 0.5315
+        "Arondight": 0.5315,
+        "Heartseeker": 0.5272,
+        "Sanguine Lash": 0.5269,
+        "Spectral Armor": 0.5257,
+        "Titan's Bane": 0.5209,
+        "Obsidian Shard": 0.518,
+        "Brawler\u2019s Beat Stick": 0.512
       },
       "joust": {
         "Amanita Charm": 0.7305,
@@ -289265,7 +289435,14 @@
         "Sphere of Negation": 0.462,
         "Oni Hunter's Garb": 0.4592,
         "Void Shield": 0.4591,
-        "Rod of Tahuti": 0.4564
+        "Rod of Tahuti": 0.4564,
+        "Screeching Gargoyle": 0.4515,
+        "Hussar's Wings": 0.4462,
+        "Magi's Cloak": 0.4362,
+        "Mantle Of Discord": 0.4361,
+        "Spectral Armor": 0.4288,
+        "Titan's Bane": 0.4126,
+        "Obsidian Shard": 0.3657
       },
       "arena": {
         "Amanita Charm": 0.7155,
@@ -289307,7 +289484,11 @@
         "Stampede": 0.468,
         "Avenging Blade": 0.4631,
         "Bancroft's Talon": 0.4622,
-        "Sphere of Negation": 0.462
+        "Sphere of Negation": 0.462,
+        "Screeching Gargoyle": 0.4515,
+        "Spectral Armor": 0.4138,
+        "Titan's Bane": 0.4126,
+        "Obsidian Shard": 0.3657
       }
     },
     "Athena": {
@@ -289351,7 +289532,13 @@
         "Void Stone": 0.4946,
         "Phoenix Feather": 0.4941,
         "Void Shield": 0.4919,
-        "Spectral Armor": 0.4907
+        "Spectral Armor": 0.4907,
+        "Brawler\u2019s Beat Stick": 0.4806,
+        "Stygian Anchor": 0.4766,
+        "Obsidian Shard": 0.4758,
+        "Ethereal Staff": 0.4739,
+        "Sanguine Lash": 0.4671,
+        "Titan's Bane": 0.4549
       },
       "joust": {
         "Amanita Charm": 0.7862,
@@ -289393,7 +289580,11 @@
         "Mantle Of Discord": 0.4814,
         "Screeching Gargoyle": 0.481,
         "Regrowth Striders": 0.4748,
-        "Midgardian Mail": 0.4739
+        "Midgardian Mail": 0.4739,
+        "Spectral Armor": 0.4618,
+        "Sanguine Lash": 0.4518,
+        "Obsidian Shard": 0.3749,
+        "Titan's Bane": 0.3427
       },
       "arena": {
         "Amanita Charm": 0.7712,
@@ -289435,7 +289626,11 @@
         "Void Shield": 0.4772,
         "Rod of Asclepius": 0.4752,
         "Regrowth Striders": 0.4748,
-        "Midgardian Mail": 0.4739
+        "Midgardian Mail": 0.4739,
+        "Spectral Armor": 0.4468,
+        "Sanguine Lash": 0.4368,
+        "Obsidian Shard": 0.3749,
+        "Titan's Bane": 0.3427
       }
     },
     "Atlas": {
@@ -289479,7 +289674,10 @@
         "Xibalban Effigy": 0.5302,
         "Ancient Signet": 0.5293,
         "Jade Scepter": 0.5291,
-        "Chronos' Pendant": 0.529
+        "Chronos' Pendant": 0.529,
+        "Stygian Anchor": 0.5243,
+        "Obsidian Shard": 0.5239,
+        "Contagion": 0.485
       },
       "joust": {
         "Amanita Charm": 0.7987,
@@ -289521,7 +289719,10 @@
         "Bancroft's Talon": 0.481,
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
-        "Lifebinder": 0.4753
+        "Lifebinder": 0.4753,
+        "Spectral Armor": 0.4698,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       },
       "arena": {
         "Amanita Charm": 0.7837,
@@ -289563,7 +289764,10 @@
         "Bancroft's Talon": 0.481,
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
-        "Mystical Mail": 0.4734
+        "Mystical Mail": 0.4734,
+        "Spectral Armor": 0.4548,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       }
     },
     "Awilix": {
@@ -289607,7 +289811,10 @@
         "Yogi's Necklace": 0.4139,
         "Qin's Blade": 0.4127,
         "Eye of Erebus": 0.4023,
-        "Screeching Gargoyle": 0.3979
+        "Screeching Gargoyle": 0.3979,
+        "Brawler\u2019s Beat Stick": 0.3678,
+        "Stampede": 0.3618,
+        "Spectral Armor": 0.3537
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -289649,7 +289856,10 @@
         "Qin's Blade": 0.3323,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -289691,7 +289901,10 @@
         "Amanita Charm": 0.3279,
         "Damaru": 0.2986,
         "Contagion": 0.2985,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Bacchus": {
@@ -289735,7 +289948,13 @@
         "Hydra's Lament": 0.4901,
         "The Reaper": 0.4876,
         "Doublet of Binding": 0.486,
-        "Xibalban Effigy": 0.4826
+        "Xibalban Effigy": 0.4826,
+        "Brawler\u2019s Beat Stick": 0.4806,
+        "Stygian Anchor": 0.4766,
+        "Obsidian Shard": 0.4753,
+        "Ethereal Staff": 0.4734,
+        "Sanguine Lash": 0.4676,
+        "Titan's Bane": 0.4554
       },
       "joust": {
         "Amanita Charm": 0.7862,
@@ -289777,7 +289996,11 @@
         "Screeching Gargoyle": 0.481,
         "Regrowth Striders": 0.4748,
         "Midgardian Mail": 0.4739,
-        "Leviathan's Hide": 0.4681
+        "Leviathan's Hide": 0.4681,
+        "Spectral Armor": 0.4618,
+        "Sanguine Lash": 0.4535,
+        "Obsidian Shard": 0.3732,
+        "Titan's Bane": 0.3443
       },
       "arena": {
         "Amanita Charm": 0.7712,
@@ -289819,7 +290042,11 @@
         "Void Shield": 0.4772,
         "Regrowth Striders": 0.4748,
         "Midgardian Mail": 0.4739,
-        "Leviathan's Hide": 0.4681
+        "Leviathan's Hide": 0.4681,
+        "Spectral Armor": 0.4468,
+        "Sanguine Lash": 0.4385,
+        "Obsidian Shard": 0.3732,
+        "Titan's Bane": 0.3443
       }
     },
     "Baron Samedi": {
@@ -289863,7 +290090,11 @@
         "Ancile": 0.4509,
         "The World Stone": 0.4498,
         "Gem of Focus": 0.449,
-        "Heartwood Charm": 0.4487
+        "Heartwood Charm": 0.4487,
+        "Spectral Armor": 0.4441,
+        "Soul Reaver": 0.4425,
+        "Stygian Anchor": 0.4261,
+        "Divine Ruin": 0.416
       },
       "joust": {
         "Soul Gem": 0.758,
@@ -289905,7 +290136,12 @@
         "Regrowth Striders": 0.4489,
         "Void Stone": 0.4457,
         "Prophetic Cloak": 0.4425,
-        "Oni Hunter's Garb": 0.442
+        "Oni Hunter's Garb": 0.442,
+        "Dreamer's Idol": 0.4414,
+        "Jade Scepter": 0.4287,
+        "Soul Reaver": 0.42,
+        "Hussar's Wings": 0.4199,
+        "Spectral Armor": 0.4116
       },
       "arena": {
         "Soul Gem": 0.743,
@@ -289947,7 +290183,9 @@
         "Umbral Link": 0.453,
         "Stone of Binding": 0.4522,
         "Spear of the Magus": 0.4512,
-        "Stampede": 0.4509
+        "Stampede": 0.4509,
+        "Soul Reaver": 0.42,
+        "Spectral Armor": 0.3966
       }
     },
     "Bastet": {
@@ -289991,7 +290229,11 @@
         "Chandra's Grace": 0.4078,
         "Qin's Blade": 0.4032,
         "Yogi's Necklace": 0.4027,
-        "Eye of Erebus": 0.3911
+        "Eye of Erebus": 0.3911,
+        "Screeching Gargoyle": 0.3868,
+        "Brawler\u2019s Beat Stick": 0.3566,
+        "Stampede": 0.3506,
+        "Spectral Armor": 0.3425
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -290033,7 +290275,10 @@
         "Qin's Blade": 0.3381,
         "Contagion": 0.3032,
         "Damaru": 0.299,
-        "Genji's Guard": 0.2987
+        "Genji's Guard": 0.2987,
+        "Screeching Gargoyle": 0.2659,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -290075,7 +290320,11 @@
         "Amanita Charm": 0.3279,
         "Sun Beam Bow": 0.3003,
         "Damaru": 0.299,
-        "Genji's Guard": 0.2987
+        "Genji's Guard": 0.2987,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2659,
+        "Spectral Armor": 0.1485
       }
     },
     "Bellona": {
@@ -290119,7 +290368,12 @@
         "Stampede": 0.5134,
         "Prophetic Cloak": 0.5129,
         "Void Shield": 0.5117,
-        "Heartseeker": 0.5115
+        "Heartseeker": 0.5115,
+        "Spectral Armor": 0.5104,
+        "Titan's Bane": 0.5053,
+        "Brawler\u2019s Beat Stick": 0.4996,
+        "Stygian Anchor": 0.4956,
+        "Dominance": 0.4807
       },
       "joust": {
         "Amanita Charm": 0.7487,
@@ -290161,7 +290415,10 @@
         "Heartseeker": 0.4578,
         "Magi's Cloak": 0.4547,
         "Mantle Of Discord": 0.4546,
-        "Regrowth Striders": 0.4543
+        "Regrowth Striders": 0.4543,
+        "Spectral Armor": 0.4377,
+        "Titan's Bane": 0.4203,
+        "Dominance": 0.3722
       },
       "arena": {
         "Amanita Charm": 0.7337,
@@ -290203,7 +290460,10 @@
         "Breastplate of Valor": 0.4636,
         "Avatar's Parashu": 0.4608,
         "Screeching Gargoyle": 0.4605,
-        "Heartseeker": 0.4578
+        "Heartseeker": 0.4578,
+        "Spectral Armor": 0.4227,
+        "Titan's Bane": 0.4203,
+        "Dominance": 0.3722
       }
     },
     "Cabrakan": {
@@ -290247,7 +290507,14 @@
         "Avenging Blade": 0.3801,
         "Gladiator's Shield": 0.3785,
         "Void Stone": 0.3776,
-        "The Crusher": 0.3774
+        "The Crusher": 0.3774,
+        "Sanguine Lash": 0.3744,
+        "Spectral Armor": 0.3737,
+        "Heartseeker": 0.3731,
+        "Titan's Bane": 0.3669,
+        "Obsidian Shard": 0.3642,
+        "Brawler\u2019s Beat Stick": 0.3627,
+        "Stygian Anchor": 0.3587
       },
       "joust": {
         "Amanita Charm": 0.7398,
@@ -290289,7 +290556,14 @@
         "Void Shield": 0.4623,
         "Breastplate of Valor": 0.4587,
         "Bancroft's Talon": 0.4582,
-        "Prophetic Cloak": 0.4582
+        "Prophetic Cloak": 0.4582,
+        "Screeching Gargoyle": 0.4557,
+        "Hussar's Wings": 0.4554,
+        "Magi's Cloak": 0.4483,
+        "Mantle Of Discord": 0.4482,
+        "Spectral Armor": 0.432,
+        "Titan's Bane": 0.4092,
+        "Obsidian Shard": 0.3627
       },
       "arena": {
         "Amanita Charm": 0.7248,
@@ -290331,7 +290605,12 @@
         "Devourer's Gauntlet": 0.4694,
         "Sphere of Negation": 0.4659,
         "Oni Hunter's Garb": 0.4624,
-        "Breastplate of Valor": 0.4587
+        "Breastplate of Valor": 0.4587,
+        "Avenging Blade": 0.4577,
+        "Screeching Gargoyle": 0.4557,
+        "Spectral Armor": 0.417,
+        "Titan's Bane": 0.4092,
+        "Obsidian Shard": 0.3627
       }
     },
     "Cerberus": {
@@ -290375,7 +290654,12 @@
         "Chronos' Pendant": 0.4694,
         "Jade Scepter": 0.4684,
         "Hussar's Wings": 0.4674,
-        "Xibalban Effigy": 0.4664
+        "Xibalban Effigy": 0.4664,
+        "Obsidian Shard": 0.4654,
+        "Ethereal Staff": 0.4622,
+        "Stygian Anchor": 0.4605,
+        "Soul Reaver": 0.4463,
+        "Contagion": 0.4257
       },
       "joust": {
         "Amanita Charm": 0.7634,
@@ -290417,7 +290701,10 @@
         "Lifebinder": 0.4606,
         "Midgardian Mail": 0.4592,
         "Leviathan's Hide": 0.4534,
-        "Hide of the Nemean Lion": 0.4502
+        "Hide of the Nemean Lion": 0.4502,
+        "Spectral Armor": 0.4471,
+        "Obsidian Shard": 0.3777,
+        "Soul Reaver": 0.3651
       },
       "arena": {
         "Amanita Charm": 0.7484,
@@ -290459,7 +290746,10 @@
         "Midgardian Mail": 0.4592,
         "Leviathan's Hide": 0.4534,
         "Mystical Mail": 0.4507,
-        "Hide of the Nemean Lion": 0.4502
+        "Hide of the Nemean Lion": 0.4502,
+        "Spectral Armor": 0.4321,
+        "Obsidian Shard": 0.3777,
+        "Soul Reaver": 0.3651
       }
     },
     "Cernunnos": {
@@ -290503,7 +290793,13 @@
         "Soul Reaver": 0.4955,
         "Gem of Focus": 0.4951,
         "Heartwood Charm": 0.4948,
-        "Devourer's Gauntlet": 0.4937
+        "Devourer's Gauntlet": 0.4937,
+        "Avatar's Parashu": 0.4887,
+        "Jade Scepter": 0.4694,
+        "Divine Ruin": 0.469,
+        "Eye of the Storm": 0.4676,
+        "The Executioner": 0.4633,
+        "Spectral Armor": 0.3875
       },
       "conquest:aspect": {
         "Avenging Blade": 0.6657,
@@ -290545,7 +290841,12 @@
         "Bracer of The Abyss": 0.505,
         "Toxic Blade": 0.5041,
         "Vital Amplifier": 0.5037,
-        "Lernaean Bow": 0.5037
+        "Lernaean Bow": 0.5037,
+        "Avatar's Parashu": 0.4862,
+        "Gem of Isolation": 0.4785,
+        "Divine Ruin": 0.4677,
+        "The Executioner": 0.4506,
+        "Spectral Armor": 0.4436
       },
       "joust": {
         "Soul Gem": 0.7059,
@@ -290587,7 +290888,13 @@
         "Polynomicon": 0.4014,
         "Doom Orb": 0.4004,
         "Deathbringer": 0.3981,
-        "Chronos' Pendant": 0.3953
+        "Chronos' Pendant": 0.3953,
+        "Avatar's Parashu": 0.3779,
+        "Avenging Blade": 0.3345,
+        "Jade Scepter": 0.3072,
+        "Eye of the Storm": 0.3066,
+        "The Executioner": 0.3011,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "Soul Gem": 0.6894,
@@ -290629,7 +290936,12 @@
         "Amanita Charm": 0.4024,
         "Avenging Blade": 0.4014,
         "Rage": 0.3979,
-        "Soul Reaver": 0.3973
+        "Soul Reaver": 0.3973,
+        "Jade Scepter": 0.3805,
+        "Avatar's Parashu": 0.3697,
+        "Gem of Isolation": 0.3426,
+        "Oath-Sworn Spear": 0.2868,
+        "Spectral Armor": 0.2685
       },
       "arena": {
         "Soul Gem": 0.6909,
@@ -290671,7 +290983,12 @@
         "Soul Reaver": 0.4016,
         "Polynomicon": 0.4014,
         "Doom Orb": 0.4004,
-        "Deathbringer": 0.3981
+        "Deathbringer": 0.3981,
+        "Avenging Blade": 0.3345,
+        "Jade Scepter": 0.3072,
+        "Eye of the Storm": 0.3066,
+        "The Executioner": 0.3011,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "Soul Gem": 0.6744,
@@ -290713,7 +291030,11 @@
         "Avenging Blade": 0.4014,
         "Contagion": 0.4001,
         "Rage": 0.3979,
-        "Soul Reaver": 0.3973
+        "Soul Reaver": 0.3973,
+        "Jade Scepter": 0.3805,
+        "Gem of Isolation": 0.3426,
+        "Oath-Sworn Spear": 0.2868,
+        "Spectral Armor": 0.2535
       }
     },
     "Chaac": {
@@ -290757,7 +291078,12 @@
         "Leviathan's Hide": 0.4098,
         "Magi's Cloak": 0.4083,
         "Mantle Of Discord": 0.4083,
-        "Hide of the Nemean Lion": 0.4076
+        "Hide of the Nemean Lion": 0.4076,
+        "Titan's Bane": 0.4065,
+        "Ethereal Staff": 0.4004,
+        "Spectral Armor": 0.3949,
+        "Brawler\u2019s Beat Stick": 0.3827,
+        "Stygian Anchor": 0.3788
       },
       "joust": {
         "Soul Gem": 0.698,
@@ -290799,7 +291125,13 @@
         "Spirit Robe": 0.4472,
         "Riptalon": 0.4455,
         "Stone of Binding": 0.4444,
-        "Divine Ruin": 0.442
+        "Divine Ruin": 0.442,
+        "Titan's Bane": 0.4361,
+        "Void Stone": 0.4318,
+        "Screeching Gargoyle": 0.4265,
+        "Magi's Cloak": 0.4102,
+        "Mantle Of Discord": 0.4101,
+        "Spectral Armor": 0.3977
       },
       "arena": {
         "Soul Gem": 0.683,
@@ -290841,7 +291173,11 @@
         "Toxic Blade": 0.455,
         "The Crusher": 0.4511,
         "Spirit Robe": 0.4472,
-        "Umbral Link": 0.4468
+        "Umbral Link": 0.4468,
+        "Stone of Binding": 0.4444,
+        "Titan's Bane": 0.4361,
+        "Screeching Gargoyle": 0.4265,
+        "Spectral Armor": 0.3827
       }
     },
     "Charon": {
@@ -290885,7 +291221,12 @@
         "Xibalban Effigy": 0.4087,
         "Ancient Signet": 0.4078,
         "Jade Scepter": 0.4076,
-        "Chronos' Pendant": 0.4075
+        "Chronos' Pendant": 0.4075,
+        "Stygian Anchor": 0.4028,
+        "Obsidian Shard": 0.4024,
+        "Soul Reaver": 0.3824,
+        "Ethereal Staff": 0.3785,
+        "Contagion": 0.3635
       },
       "joust": {
         "Amanita Charm": 0.7987,
@@ -290927,7 +291268,10 @@
         "Bancroft's Talon": 0.481,
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
-        "Lifebinder": 0.4753
+        "Lifebinder": 0.4753,
+        "Spectral Armor": 0.4698,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       },
       "arena": {
         "Amanita Charm": 0.7837,
@@ -290969,7 +291313,10 @@
         "Bancroft's Talon": 0.481,
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
-        "Mystical Mail": 0.4734
+        "Mystical Mail": 0.4734,
+        "Spectral Armor": 0.4548,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       }
     },
     "Chiron": {
@@ -291013,7 +291360,12 @@
         "Vital Amplifier": 0.423,
         "Dagger of Frenzy": 0.4229,
         "Chandra's Grace": 0.4225,
-        "Yogi's Necklace": 0.4162
+        "Yogi's Necklace": 0.4162,
+        "The Executioner": 0.4084,
+        "Screeching Gargoyle": 0.4014,
+        "Brawler\u2019s Beat Stick": 0.3701,
+        "Stampede": 0.3641,
+        "Spectral Armor": 0.356
       },
       "conquest:aspect": {
         "Titan's Bane": 0.6242,
@@ -291055,7 +291407,11 @@
         "Yogi's Necklace": 0.4162,
         "Oath-Sworn Spear": 0.4129,
         "Odysseus' Bow": 0.4092,
-        "Amanita Charm": 0.409
+        "Amanita Charm": 0.409,
+        "Screeching Gargoyle": 0.4046,
+        "Stampede": 0.3791,
+        "Spectral Armor": 0.371,
+        "Brawler\u2019s Beat Stick": 0.3701
       },
       "joust": {
         "Riptalon": 0.6296,
@@ -291097,7 +291453,12 @@
         "Transcendence": 0.3324,
         "The Executioner": 0.3197,
         "Umbral Link": 0.3153,
-        "Shield Splitter": 0.3151
+        "Shield Splitter": 0.3151,
+        "Eye of the Storm": 0.3142,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2696,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "The Reaper": 0.6723,
@@ -291139,7 +291500,10 @@
         "Oath-Sworn Spear": 0.317,
         "Damaru": 0.3135,
         "Genji's Guard": 0.3132,
-        "Contagion": 0.3032
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2804,
+        "Spectral Armor": 0.1985,
+        "Resolute Mantle": 0.1663
       },
       "arena": {
         "Riptalon": 0.6296,
@@ -291181,7 +291545,11 @@
         "Sanguine Lash": 0.3227,
         "The Executioner": 0.3197,
         "Shield Splitter": 0.3151,
-        "Eye of the Storm": 0.3142
+        "Eye of the Storm": 0.3142,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2696,
+        "Resolute Mantle": 0.2663,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "The Reaper": 0.6723,
@@ -291223,7 +291591,11 @@
         "Odysseus' Bow": 0.3223,
         "Oath-Sworn Spear": 0.317,
         "Damaru": 0.3135,
-        "Genji's Guard": 0.3132
+        "Genji's Guard": 0.3132,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2804,
+        "Resolute Mantle": 0.2663,
+        "Spectral Armor": 0.1985
       }
     },
     "Chronos": {
@@ -291267,7 +291639,11 @@
         "Yogi's Necklace": 0.4319,
         "Wish-Granting Pearl": 0.4317,
         "Lifebinder": 0.4276,
-        "Screeching Gargoyle": 0.421
+        "Screeching Gargoyle": 0.421,
+        "Contagion": 0.3832,
+        "Stampede": 0.3798,
+        "Spectral Armor": 0.3717,
+        "Stone of Binding": 0.3613
       },
       "conquest:aspect": {
         "Rod of Tahuti": 0.6303,
@@ -291309,7 +291685,10 @@
         "Erosion": 0.4752,
         "Ancile": 0.4748,
         "Spectral Armor": 0.4723,
-        "Phoenix Feather": 0.4714
+        "Phoenix Feather": 0.4714,
+        "Stampede": 0.4613,
+        "Divine Ruin": 0.4502,
+        "Contagion": 0.4365
       },
       "joust": {
         "Soul Gem": 0.7918,
@@ -291351,7 +291730,12 @@
         "Umbral Link": 0.3307,
         "Alchemist Coat": 0.3297,
         "Gem of Isolation": 0.3184,
-        "Genji's Guard": 0.3152
+        "Genji's Guard": 0.3152,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2823,
+        "Void Stone": 0.1677,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "Soul Gem": 0.7918,
@@ -291393,7 +291777,9 @@
         "Doom Orb": 0.4012,
         "Totem of Death": 0.3999,
         "Heartwood Charm": 0.399,
-        "Ancient Signet": 0.399
+        "Ancient Signet": 0.399,
+        "Jade Scepter": 0.3728,
+        "Stampede": 0.336
       },
       "arena": {
         "Soul Gem": 0.7918,
@@ -291435,7 +291821,12 @@
         "Amanita Charm": 0.3279,
         "Gem of Isolation": 0.3184,
         "Umbral Link": 0.3157,
-        "Genji's Guard": 0.3152
+        "Genji's Guard": 0.3152,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2823,
+        "Resolute Mantle": 0.2663,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "Soul Gem": 0.7918,
@@ -291477,7 +291868,9 @@
         "Doom Orb": 0.4012,
         "Totem of Death": 0.3999,
         "Heartwood Charm": 0.399,
-        "Ancient Signet": 0.399
+        "Ancient Signet": 0.399,
+        "Contagion": 0.3984,
+        "Jade Scepter": 0.3728
       }
     },
     "Cu Chulainn": {
@@ -291521,7 +291914,11 @@
         "Ancile": 0.4528,
         "Yogi's Necklace": 0.4527,
         "Rage": 0.4526,
-        "Sanguine Lash": 0.4507
+        "Sanguine Lash": 0.4507,
+        "Magi's Cloak": 0.4496,
+        "Mantle Of Discord": 0.4496,
+        "Spectral Armor": 0.446,
+        "Brawler\u2019s Beat Stick": 0.424
       },
       "joust": {
         "Amanita Charm": 0.6331,
@@ -291563,7 +291960,12 @@
         "Titan's Bane": 0.4121,
         "Freya's Tears": 0.4094,
         "Void Stone": 0.4072,
-        "Tekko-Kagi": 0.4071
+        "Tekko-Kagi": 0.4071,
+        "Screeching Gargoyle": 0.375,
+        "Spectral Armor": 0.373,
+        "Ancile": 0.3677,
+        "Magi's Cloak": 0.3529,
+        "Mantle Of Discord": 0.3528
       },
       "arena": {
         "Amanita Charm": 0.6181,
@@ -291605,7 +292007,11 @@
         "Draconic Scale": 0.4184,
         "Genji's Guard": 0.4172,
         "Stygian Anchor": 0.4157,
-        "Stampede": 0.4123
+        "Stampede": 0.4123,
+        "Titan's Bane": 0.4121,
+        "Void Stone": 0.3922,
+        "Screeching Gargoyle": 0.375,
+        "Spectral Armor": 0.358
       }
     },
     "Cupid": {
@@ -291649,7 +292055,14 @@
         "Eros' Bow": 0.4567,
         "Toxic Blade": 0.4552,
         "Soul Reaver": 0.455,
-        "Rage": 0.454
+        "Rage": 0.454,
+        "Avatar's Parashu": 0.4443,
+        "Jade Scepter": 0.4289,
+        "Divine Ruin": 0.4285,
+        "Eye of the Storm": 0.4235,
+        "The Executioner": 0.4024,
+        "Screeching Gargoyle": 0.3948,
+        "Spectral Armor": 0.347
       },
       "joust": {
         "Soul Gem": 0.7202,
@@ -291691,7 +292104,13 @@
         "Chronos' Pendant": 0.4107,
         "Ancient Signet": 0.4093,
         "Chandra's Grace": 0.4041,
-        "Soul Reaver": 0.4016
+        "Soul Reaver": 0.4016,
+        "Avatar's Parashu": 0.3649,
+        "Avenging Blade": 0.3224,
+        "Jade Scepter": 0.3072,
+        "The Executioner": 0.3001,
+        "Eye of the Storm": 0.2944,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7052,
@@ -291733,7 +292152,12 @@
         "Ancient Signet": 0.4093,
         "Rod of Asclepius": 0.4085,
         "Chandra's Grace": 0.4041,
-        "Eros' Bow": 0.4034
+        "Eros' Bow": 0.4034,
+        "Avenging Blade": 0.3224,
+        "Jade Scepter": 0.3072,
+        "The Executioner": 0.3001,
+        "Eye of the Storm": 0.2944,
+        "Spectral Armor": 0.1485
       }
     },
     "Da Ji": {
@@ -291777,7 +292201,10 @@
         "Yogi's Necklace": 0.3892,
         "Qin's Blade": 0.3886,
         "Eye of Erebus": 0.3883,
-        "Shield of the Phoenix": 0.387
+        "Shield of the Phoenix": 0.387,
+        "Brawler\u2019s Beat Stick": 0.3431,
+        "Stampede": 0.3371,
+        "Spectral Armor": 0.329
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -291819,7 +292246,11 @@
         "Glorious Pridwen": 0.3503,
         "Amanita Charm": 0.3429,
         "Breastplate of Valor": 0.3375,
-        "Qin's Blade": 0.3346
+        "Qin's Blade": 0.3346,
+        "Screeching Gargoyle": 0.3322,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2107,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -291861,7 +292292,10 @@
         "Glorious Pridwen": 0.3503,
         "Breastplate of Valor": 0.3375,
         "Qin's Blade": 0.3346,
-        "Screeching Gargoyle": 0.3322
+        "Screeching Gargoyle": 0.3322,
+        "Talisman of Purification": 0.3107,
+        "Contagion": 0.2985,
+        "Spectral Armor": 0.1485
       }
     },
     "Danzaburou": {
@@ -291905,7 +292339,13 @@
         "Chronos' Pendant": 0.408,
         "Doom Orb": 0.4071,
         "Bancroft's Talon": 0.403,
-        "The World Stone": 0.4015
+        "The World Stone": 0.4015,
+        "Eye of the Storm": 0.3865,
+        "Avenging Blade": 0.3861,
+        "Jade Scepter": 0.3698,
+        "Divine Ruin": 0.3694,
+        "The Executioner": 0.3555,
+        "Spectral Armor": 0.302
       },
       "joust": {
         "Soul Gem": 0.6467,
@@ -291947,7 +292387,12 @@
         "Pendulum Blade": 0.3797,
         "Dreamer's Idol": 0.3703,
         "Runeforged Hammer": 0.3664,
-        "Chandra's Grace": 0.3647
+        "Chandra's Grace": 0.3647,
+        "Avenging Blade": 0.3491,
+        "The Executioner": 0.3235,
+        "Eye of the Storm": 0.3211,
+        "Jade Scepter": 0.2602,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.6317,
@@ -291989,7 +292434,12 @@
         "Barbed Carver": 0.3931,
         "Sun Beam Bow": 0.3873,
         "Spear of the Magus": 0.3801,
-        "Pendulum Blade": 0.3797
+        "Pendulum Blade": 0.3797,
+        "Avenging Blade": 0.3491,
+        "The Executioner": 0.3235,
+        "Eye of the Storm": 0.3211,
+        "Jade Scepter": 0.2602,
+        "Spectral Armor": 0.1485
       }
     },
     "Discordia": {
@@ -292033,7 +292483,12 @@
         "Bragi's Harp": 0.4423,
         "Nimble Ring": 0.442,
         "Helm of Darkness": 0.429,
-        "Scepter of Dominion": 0.4269
+        "Scepter of Dominion": 0.4269,
+        "Screeching Gargoyle": 0.4229,
+        "Contagion": 0.372,
+        "Stampede": 0.3686,
+        "Spectral Armor": 0.3605,
+        "Stone of Binding": 0.35
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -292075,7 +292530,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -292117,7 +292577,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Eset": {
@@ -292161,7 +292626,12 @@
         "Chandra's Grace": 0.4921,
         "Wish-Granting Pearl": 0.4901,
         "Lifebinder": 0.4859,
-        "Bragi's Harp": 0.4856
+        "Bragi's Harp": 0.4856,
+        "Screeching Gargoyle": 0.4711,
+        "Contagion": 0.417,
+        "Time-lock Aegis": 0.4162,
+        "Spectral Armor": 0.4055,
+        "Stone of Binding": 0.395
       },
       "joust": {
         "Spear of Desolation": 0.8022,
@@ -292203,7 +292673,12 @@
         "Bragi's Harp": 0.408,
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
-        "Necronomicon": 0.3914
+        "Necronomicon": 0.3914,
+        "Screeching Gargoyle": 0.3367,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2152,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Spear of Desolation": 0.8022,
@@ -292245,7 +292720,12 @@
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
         "Eros' Bow": 0.3971,
-        "Necronomicon": 0.3914
+        "Necronomicon": 0.3914,
+        "Screeching Gargoyle": 0.3367,
+        "Talisman of Purification": 0.3152,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Fenrir": {
@@ -292289,7 +292769,11 @@
         "Yogi's Necklace": 0.3802,
         "Qin's Blade": 0.3796,
         "Freya's Tears": 0.3774,
-        "Eye of Erebus": 0.3686
+        "Eye of Erebus": 0.3686,
+        "Screeching Gargoyle": 0.3642,
+        "Brawler\u2019s Beat Stick": 0.3341,
+        "Stampede": 0.3281,
+        "Spectral Armor": 0.32
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -292331,7 +292815,10 @@
         "Qin's Blade": 0.3345,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -292373,7 +292860,10 @@
         "Amanita Charm": 0.3279,
         "Damaru": 0.2986,
         "Contagion": 0.2985,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Ganesha": {
@@ -292417,7 +292907,12 @@
         "Chronos' Pendant": 0.4814,
         "Xibalban Effigy": 0.4797,
         "Ancient Signet": 0.4796,
-        "Jade Scepter": 0.4789
+        "Jade Scepter": 0.4789,
+        "Obsidian Shard": 0.4741,
+        "Stygian Anchor": 0.4738,
+        "Ethereal Staff": 0.4727,
+        "Soul Reaver": 0.4542,
+        "Contagion": 0.4351
       },
       "joust": {
         "Amanita Charm": 0.7937,
@@ -292459,7 +292954,10 @@
         "Midgardian Mail": 0.4787,
         "Rod of Tahuti": 0.4749,
         "Lifebinder": 0.4732,
-        "Leviathan's Hide": 0.4729
+        "Leviathan's Hide": 0.4729,
+        "Spectral Armor": 0.4666,
+        "Obsidian Shard": 0.3842,
+        "Soul Reaver": 0.369
       },
       "arena": {
         "Amanita Charm": 0.7787,
@@ -292501,7 +292999,10 @@
         "Midgardian Mail": 0.4787,
         "Rod of Tahuti": 0.4749,
         "Leviathan's Hide": 0.4729,
-        "Mystical Mail": 0.4702
+        "Mystical Mail": 0.4702,
+        "Spectral Armor": 0.4516,
+        "Obsidian Shard": 0.3842,
+        "Soul Reaver": 0.369
       }
     },
     "Geb": {
@@ -292545,7 +293046,11 @@
         "Regrowth Striders": 0.495,
         "Mystical Mail": 0.4941,
         "Eros' Bow": 0.4927,
-        "Shroud of Vengeance": 0.4844
+        "Shroud of Vengeance": 0.4844,
+        "Contagion": 0.4677,
+        "Eye of Erebus": 0.4432,
+        "Ethereal Staff": 0.4356,
+        "Obsidian Shard": 0.3616
       },
       "joust": {
         "Amanita Charm": 0.755,
@@ -292587,7 +293092,10 @@
         "Doublet of Binding": 0.4351,
         "Xibalban Effigy": 0.4254,
         "Eros' Bow": 0.4251,
-        "Shroud of Vengeance": 0.4212
+        "Shroud of Vengeance": 0.4212,
+        "Ethereal Staff": 0.4092,
+        "Eye of Erebus": 0.2517,
+        "Obsidian Shard": 0.1337
       },
       "arena": {
         "Amanita Charm": 0.74,
@@ -292629,7 +293137,10 @@
         "Spectral Armor": 0.4268,
         "Xibalban Effigy": 0.4254,
         "Shroud of Vengeance": 0.4212,
-        "Doublet of Binding": 0.4201
+        "Doublet of Binding": 0.4201,
+        "Ethereal Staff": 0.4092,
+        "Totem of Death": 0.2275,
+        "Obsidian Shard": 0.1337
       }
     },
     "Gilgamesh": {
@@ -292673,7 +293184,11 @@
         "Arondight": 0.5086,
         "Yogi's Necklace": 0.5071,
         "Wyrmskin Hide": 0.5058,
-        "Ancile": 0.5058
+        "Ancile": 0.5058,
+        "Stampede": 0.502,
+        "Magi's Cloak": 0.5008,
+        "Spectral Armor": 0.499,
+        "Qin's Blade": 0.4947
       },
       "joust": {
         "Amanita Charm": 0.625,
@@ -292715,7 +293230,13 @@
         "Glorious Pridwen": 0.4113,
         "Stygian Anchor": 0.4108,
         "Genji's Guard": 0.4107,
-        "Draconic Scale": 0.4103
+        "Draconic Scale": 0.4103,
+        "Void Stone": 0.4038,
+        "Avatar's Parashu": 0.3844,
+        "Spectral Armor": 0.3696,
+        "Screeching Gargoyle": 0.3686,
+        "Ancile": 0.3643,
+        "Magi's Cloak": 0.3434
       },
       "arena": {
         "Amanita Charm": 0.61,
@@ -292757,7 +293278,10 @@
         "Wyrmskin Hide": 0.4162,
         "Brawler\u2019s Beat Stick": 0.4118,
         "Qin's Blade": 0.4118,
-        "Glorious Pridwen": 0.4113
+        "Glorious Pridwen": 0.4113,
+        "Void Stone": 0.3888,
+        "Screeching Gargoyle": 0.3686,
+        "Spectral Armor": 0.3546
       }
     },
     "Guan Yu": {
@@ -292801,7 +293325,14 @@
         "Magi's Cloak": 0.5293,
         "Mantle Of Discord": 0.5293,
         "Chronos' Pendant": 0.5292,
-        "Avenging Blade": 0.5269
+        "Avenging Blade": 0.5269,
+        "Heartseeker": 0.5219,
+        "Obsidian Shard": 0.5218,
+        "Dominance": 0.5206,
+        "Spectral Armor": 0.5179,
+        "Sanguine Lash": 0.5162,
+        "Toxic Blade": 0.5147,
+        "Stygian Anchor": 0.4998
       },
       "joust": {
         "Amanita Charm": 0.6906,
@@ -292843,7 +293374,14 @@
         "Bragi's Harp": 0.4551,
         "Devourer's Gauntlet": 0.452,
         "Lotus Sickle": 0.4512,
-        "Lifebinder": 0.4498
+        "Lifebinder": 0.4498,
+        "Screeching Gargoyle": 0.4465,
+        "Stone of Binding": 0.4427,
+        "Dominance": 0.4141,
+        "Magi's Cloak": 0.4085,
+        "Mantle Of Discord": 0.4085,
+        "Spectral Armor": 0.4026,
+        "Titan's Bane": 0.3952
       },
       "arena": {
         "Amanita Charm": 0.6756,
@@ -292885,7 +293423,13 @@
         "Gladiator's Shield": 0.4618,
         "Shifter's Shield": 0.4598,
         "Bragi's Harp": 0.4551,
-        "Devourer's Gauntlet": 0.452
+        "Devourer's Gauntlet": 0.452,
+        "Sanguine Lash": 0.4504,
+        "Screeching Gargoyle": 0.4465,
+        "Stone of Binding": 0.4427,
+        "Dominance": 0.4141,
+        "Titan's Bane": 0.3952,
+        "Spectral Armor": 0.3876
       }
     },
     "Hachiman": {
@@ -292929,7 +293473,11 @@
         "Sanguine Lash": 0.3697,
         "Oath-Sworn Spear": 0.3678,
         "Damaru": 0.3659,
-        "Genji's Guard": 0.3561
+        "Genji's Guard": 0.3561,
+        "Brawler\u2019s Beat Stick": 0.3251,
+        "Stampede": 0.3191,
+        "Screeching Gargoyle": 0.3131,
+        "Spectral Armor": 0.311
       },
       "joust": {
         "Riptalon": 0.6625,
@@ -292971,7 +293519,11 @@
         "The Executioner": 0.3296,
         "Umbral Link": 0.3253,
         "Vital Amplifier": 0.322,
-        "Oath-Sworn Spear": 0.3167
+        "Oath-Sworn Spear": 0.3167,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.1802,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6625,
@@ -293013,7 +293565,11 @@
         "Amanita Charm": 0.3279,
         "Vital Amplifier": 0.322,
         "Oath-Sworn Spear": 0.3167,
-        "Umbral Link": 0.3103
+        "Umbral Link": 0.3103,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Mantle Of Discord": 0.2279,
+        "Spectral Armor": 0.1485
       }
     },
     "Hades": {
@@ -293057,7 +293613,13 @@
         "Soul Reaver": 0.4486,
         "The Cosmic Horror": 0.4457,
         "Gladiator's Shield": 0.4449,
-        "Ancile": 0.4449
+        "Ancile": 0.4449,
+        "Stone of Binding": 0.4447,
+        "Stampede": 0.4411,
+        "Spectral Armor": 0.4381,
+        "Divine Ruin": 0.4221,
+        "Stygian Anchor": 0.4112,
+        "Obsidian Shard": 0.367
       },
       "joust": {
         "Soul Gem": 0.7918,
@@ -293099,7 +293661,11 @@
         "Polynomicon": 0.4402,
         "Stygian Anchor": 0.4359,
         "The Cosmic Horror": 0.4356,
-        "Contagion": 0.4351
+        "Contagion": 0.4351,
+        "Void Stone": 0.4258,
+        "Screeching Gargoyle": 0.4224,
+        "Spectral Armor": 0.3916,
+        "Hussar's Wings": 0.3751
       },
       "arena": {
         "Soul Gem": 0.7878,
@@ -293141,7 +293707,11 @@
         "Umbral Link": 0.4424,
         "Soul Reaver": 0.4403,
         "Polynomicon": 0.4402,
-        "The Cosmic Horror": 0.4356
+        "The Cosmic Horror": 0.4356,
+        "Stygian Anchor": 0.4312,
+        "Screeching Gargoyle": 0.4224,
+        "Void Stone": 0.4108,
+        "Spectral Armor": 0.3766
       }
     },
     "Hecate": {
@@ -293185,7 +293755,12 @@
         "Necronomicon": 0.386,
         "Chandra's Grace": 0.3841,
         "Wish-Granting Pearl": 0.3821,
-        "Lifebinder": 0.3779
+        "Lifebinder": 0.3779,
+        "Screeching Gargoyle": 0.3631,
+        "Contagion": 0.309,
+        "Stampede": 0.3056,
+        "Spectral Armor": 0.2975,
+        "Stone of Binding": 0.287
       },
       "joust": {
         "Spear of Desolation": 0.8022,
@@ -293227,7 +293802,12 @@
         "Bragi's Harp": 0.408,
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
-        "Necronomicon": 0.3914
+        "Necronomicon": 0.3914,
+        "Screeching Gargoyle": 0.3367,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2152,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Spear of Desolation": 0.8022,
@@ -293269,7 +293849,12 @@
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
         "Eros' Bow": 0.3971,
-        "Necronomicon": 0.3914
+        "Necronomicon": 0.3914,
+        "Screeching Gargoyle": 0.3367,
+        "Talisman of Purification": 0.3152,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Hel": {
@@ -293313,7 +293898,11 @@
         "Doom Orb": 0.4734,
         "Ethereal Staff": 0.4728,
         "Gladiator's Shield": 0.4713,
-        "Ancile": 0.4689
+        "Ancile": 0.4689,
+        "Spectral Armor": 0.4621,
+        "Soul Reaver": 0.4605,
+        "Stygian Anchor": 0.4441,
+        "Divine Ruin": 0.434
       },
       "joust": {
         "Soul Gem": 0.758,
@@ -293355,7 +293944,12 @@
         "Regrowth Striders": 0.4489,
         "Void Stone": 0.4457,
         "Prophetic Cloak": 0.4425,
-        "Oni Hunter's Garb": 0.442
+        "Oni Hunter's Garb": 0.442,
+        "Dreamer's Idol": 0.4414,
+        "Jade Scepter": 0.4287,
+        "Soul Reaver": 0.42,
+        "Hussar's Wings": 0.4199,
+        "Spectral Armor": 0.4116
       },
       "arena": {
         "Soul Gem": 0.743,
@@ -293397,7 +293991,9 @@
         "Umbral Link": 0.453,
         "Stone of Binding": 0.4522,
         "Spear of the Magus": 0.4512,
-        "Stampede": 0.4509
+        "Stampede": 0.4509,
+        "Soul Reaver": 0.42,
+        "Spectral Armor": 0.3966
       }
     },
     "Hercules": {
@@ -293441,7 +294037,11 @@
         "Prophetic Cloak": 0.4544,
         "Void Shield": 0.4532,
         "Heartseeker": 0.453,
-        "Spectral Armor": 0.4519
+        "Spectral Armor": 0.4519,
+        "Titan's Bane": 0.4468,
+        "Brawler\u2019s Beat Stick": 0.4411,
+        "Stygian Anchor": 0.4371,
+        "Dominance": 0.4222
       },
       "conquest:aspect": {
         "Hussar's Wings": 0.6826,
@@ -293483,7 +294083,12 @@
         "Ancile": 0.4651,
         "Screeching Gargoyle": 0.4644,
         "Gladiator's Shield": 0.4631,
-        "Stone of Binding": 0.463
+        "Stone of Binding": 0.463,
+        "Heartseeker": 0.4515,
+        "Titan's Bane": 0.4453,
+        "Brawler\u2019s Beat Stick": 0.4334,
+        "Stygian Anchor": 0.4295,
+        "Dominance": 0.421
       },
       "joust": {
         "Amanita Charm": 0.7487,
@@ -293525,7 +294130,10 @@
         "Heartseeker": 0.4578,
         "Magi's Cloak": 0.4547,
         "Mantle Of Discord": 0.4546,
-        "Regrowth Striders": 0.4543
+        "Regrowth Striders": 0.4543,
+        "Spectral Armor": 0.4377,
+        "Titan's Bane": 0.4203,
+        "Dominance": 0.3722
       },
       "joust:aspect": {
         "Amanita Charm": 0.8405,
@@ -293567,7 +294175,12 @@
         "Hussar's Wings": 0.4729,
         "Contagion": 0.4721,
         "Midgardian Mail": 0.4711,
-        "Golden Blade": 0.4702
+        "Golden Blade": 0.4702,
+        "Ancile": 0.4537,
+        "Heartseeker": 0.453,
+        "Screeching Gargoyle": 0.4459,
+        "Titan's Bane": 0.4155,
+        "Dominance": 0.3682
       },
       "arena": {
         "Amanita Charm": 0.7337,
@@ -293609,7 +294222,10 @@
         "Breastplate of Valor": 0.4636,
         "Avatar's Parashu": 0.4608,
         "Screeching Gargoyle": 0.4605,
-        "Heartseeker": 0.4578
+        "Heartseeker": 0.4578,
+        "Spectral Armor": 0.4227,
+        "Titan's Bane": 0.4203,
+        "Dominance": 0.3722
       },
       "arena:aspect": {
         "Amanita Charm": 0.8405,
@@ -293651,7 +294267,11 @@
         "Genji's Guard": 0.4881,
         "Bloodforge": 0.4821,
         "Hydra's Lament": 0.4781,
-        "Toxic Blade": 0.4718
+        "Toxic Blade": 0.4718,
+        "Ancile": 0.4537,
+        "Heartseeker": 0.453,
+        "Titan's Bane": 0.4155,
+        "Dominance": 0.3682
       }
     },
     "Horus": {
@@ -293695,7 +294315,11 @@
         "Phoenix Feather": 0.4929,
         "Void Shield": 0.4907,
         "Spectral Armor": 0.4895,
-        "Golden Blade": 0.4877
+        "Golden Blade": 0.4877,
+        "Titan's Bane": 0.4872,
+        "Brawler\u2019s Beat Stick": 0.4757,
+        "Stygian Anchor": 0.4718,
+        "Dominance": 0.4627
       },
       "joust": {
         "Amanita Charm": 0.7291,
@@ -293737,7 +294361,12 @@
         "Heartseeker": 0.4576,
         "Tyrfing": 0.448,
         "Toxic Blade": 0.4478,
-        "Hussar's Wings": 0.4447
+        "Hussar's Wings": 0.4447,
+        "Magi's Cloak": 0.4352,
+        "Mantle Of Discord": 0.4351,
+        "Spectral Armor": 0.4278,
+        "Titan's Bane": 0.4201,
+        "Dominance": 0.372
       },
       "arena": {
         "Amanita Charm": 0.7141,
@@ -293779,7 +294408,11 @@
         "Prophetic Cloak": 0.4667,
         "Regrowth Striders": 0.4645,
         "Avatar's Parashu": 0.4605,
-        "Oni Hunter's Garb": 0.4583
+        "Oni Hunter's Garb": 0.4583,
+        "Heartseeker": 0.4576,
+        "Titan's Bane": 0.4201,
+        "Spectral Armor": 0.4128,
+        "Dominance": 0.372
       }
     },
     "Hou Yi": {
@@ -293823,7 +294456,14 @@
         "Devourer's Gauntlet": 0.4764,
         "Berserker's Shield": 0.4748,
         "Dreamer's Idol": 0.4747,
-        "Bloodforge": 0.4745
+        "Bloodforge": 0.4745,
+        "The Executioner": 0.4731,
+        "Avatar's Parashu": 0.4658,
+        "Eye of the Storm": 0.4586,
+        "Jade Scepter": 0.4424,
+        "Divine Ruin": 0.442,
+        "Avenging Blade": 0.4377,
+        "Spectral Armor": 0.374
       },
       "joust": {
         "Riptalon": 0.6258,
@@ -293865,7 +294505,14 @@
         "Berserker's Shield": 0.3729,
         "Obsidian Shard": 0.3709,
         "Musashi's Dual Swords": 0.3708,
-        "Chandra's Grace": 0.3673
+        "Chandra's Grace": 0.3673,
+        "Avenging Blade": 0.3495,
+        "Avatar's Parashu": 0.3467,
+        "The Executioner": 0.342,
+        "Dreamer's Idol": 0.3232,
+        "Eye of the Storm": 0.3216,
+        "Jade Scepter": 0.2622,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6258,
@@ -293907,7 +294554,12 @@
         "Divine Ruin": 0.3953,
         "Spear of Desolation": 0.3755,
         "Berserker's Shield": 0.3729,
-        "Obsidian Shard": 0.3709
+        "Obsidian Shard": 0.3709,
+        "Avenging Blade": 0.3495,
+        "The Executioner": 0.342,
+        "Eye of the Storm": 0.3216,
+        "Jade Scepter": 0.2622,
+        "Spectral Armor": 0.1485
       }
     },
     "Hua Mulan": {
@@ -293951,7 +294603,12 @@
         "Phoenix Feather": 0.4058,
         "Stampede": 0.4054,
         "Heartseeker": 0.4046,
-        "Lernaean Bow": 0.4039
+        "Lernaean Bow": 0.4039,
+        "Sanguine Lash": 0.4038,
+        "Dominance": 0.4037,
+        "Spectral Armor": 0.4024,
+        "Titan's Bane": 0.3983,
+        "Toxic Blade": 0.3938
       },
       "joust": {
         "Amanita Charm": 0.7253,
@@ -293993,7 +294650,14 @@
         "Oni Hunter's Garb": 0.4531,
         "Void Shield": 0.453,
         "Breastplate of Valor": 0.4507,
-        "Screeching Gargoyle": 0.4477
+        "Screeching Gargoyle": 0.4477,
+        "Heartseeker": 0.4464,
+        "Hussar's Wings": 0.4409,
+        "Magi's Cloak": 0.4379,
+        "Mantle Of Discord": 0.4379,
+        "Dominance": 0.4296,
+        "Spectral Armor": 0.4226,
+        "Titan's Bane": 0.4089
       },
       "arena": {
         "Amanita Charm": 0.7103,
@@ -294035,7 +294699,12 @@
         "Stampede": 0.4619,
         "Avenging Blade": 0.4545,
         "Oni Hunter's Garb": 0.4531,
-        "Breastplate of Valor": 0.4507
+        "Breastplate of Valor": 0.4507,
+        "Screeching Gargoyle": 0.4477,
+        "Heartseeker": 0.4464,
+        "Dominance": 0.4296,
+        "Titan's Bane": 0.4089,
+        "Spectral Armor": 0.4076
       }
     },
     "Hun Batz": {
@@ -294079,7 +294748,10 @@
         "Yogi's Necklace": 0.3779,
         "Eye of Erebus": 0.3663,
         "Screeching Gargoyle": 0.3619,
-        "Dagger of Frenzy": 0.3614
+        "Dagger of Frenzy": 0.3614,
+        "Brawler\u2019s Beat Stick": 0.3318,
+        "Stampede": 0.3258,
+        "Spectral Armor": 0.3177
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -294121,7 +294793,10 @@
         "Amanita Charm": 0.3429,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -294163,7 +294838,10 @@
         "Amanita Charm": 0.3279,
         "Sun Beam Bow": 0.3069,
         "Damaru": 0.2986,
-        "Contagion": 0.2985
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Ishtar": {
@@ -294207,7 +294885,11 @@
         "Damaru": 0.4312,
         "Hastened Fatalis": 0.431,
         "Titan's Bane": 0.4302,
-        "Pharaoh's Curse": 0.427
+        "Pharaoh's Curse": 0.427,
+        "Brawler\u2019s Beat Stick": 0.3903,
+        "Stampede": 0.3843,
+        "Screeching Gargoyle": 0.3784,
+        "Spectral Armor": 0.3762
       },
       "joust": {
         "Tyrfing": 0.6592,
@@ -294249,7 +294931,12 @@
         "Umbral Link": 0.336,
         "Pharaoh's Curse": 0.3263,
         "Titan's Bane": 0.3239,
-        "Shogun's Ofuda": 0.3154
+        "Shogun's Ofuda": 0.3154,
+        "Avatar's Parashu": 0.3079,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.1802,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6592,
@@ -294291,7 +294978,11 @@
         "Amanita Charm": 0.3279,
         "Titan's Bane": 0.3239,
         "Umbral Link": 0.321,
-        "Pharaoh's Curse": 0.3113
+        "Pharaoh's Curse": 0.3113,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Mantle Of Discord": 0.2279,
+        "Spectral Armor": 0.1485
       }
     },
     "Ix Chel": {
@@ -294335,7 +295026,11 @@
         "Ancile": 0.497,
         "Gem of Focus": 0.4951,
         "Heartwood Charm": 0.4949,
-        "Void Stone": 0.4941
+        "Void Stone": 0.4941,
+        "Spectral Armor": 0.4902,
+        "Soul Reaver": 0.4882,
+        "Stygian Anchor": 0.4723,
+        "Divine Ruin": 0.4617
       },
       "joust": {
         "Soul Gem": 0.7525,
@@ -294377,7 +295072,12 @@
         "Void Stone": 0.4494,
         "Prophetic Cloak": 0.4479,
         "Oni Hunter's Garb": 0.4457,
-        "Void Shield": 0.4456
+        "Void Shield": 0.4456,
+        "Dreamer's Idol": 0.4333,
+        "Jade Scepter": 0.4326,
+        "Hussar's Wings": 0.4254,
+        "Soul Reaver": 0.4222,
+        "Spectral Armor": 0.4152
       },
       "arena": {
         "Soul Gem": 0.7375,
@@ -294419,7 +295119,9 @@
         "Stone of Binding": 0.4561,
         "Umbral Link": 0.4559,
         "Helm of Darkness": 0.4553,
-        "Stampede": 0.4545
+        "Stampede": 0.4545,
+        "Soul Reaver": 0.4222,
+        "Spectral Armor": 0.4002
       }
     },
     "Izanami": {
@@ -294463,7 +295165,13 @@
         "Bancroft's Talon": 0.5051,
         "The World Stone": 0.5032,
         "Gem of Focus": 0.5002,
-        "Heartwood Charm": 0.5
+        "Heartwood Charm": 0.5,
+        "Eye of the Storm": 0.4857,
+        "Avenging Blade": 0.4853,
+        "Jade Scepter": 0.4724,
+        "Divine Ruin": 0.472,
+        "The Executioner": 0.4577,
+        "Spectral Armor": 0.4055
       },
       "joust": {
         "Soul Gem": 0.6702,
@@ -294505,7 +295213,12 @@
         "Barbed Carver": 0.3771,
         "Spear of the Magus": 0.3744,
         "Dreamer's Idol": 0.3646,
-        "Dagger of Frenzy": 0.3608
+        "Dagger of Frenzy": 0.3608,
+        "Avenging Blade": 0.3349,
+        "The Executioner": 0.3188,
+        "Eye of the Storm": 0.3069,
+        "Screeching Gargoyle": 0.2693,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.6552,
@@ -294547,7 +295260,12 @@
         "Pendulum Blade": 0.3937,
         "Divine Ruin": 0.3903,
         "Sun Beam Bow": 0.3841,
-        "Barbed Carver": 0.3771
+        "Barbed Carver": 0.3771,
+        "Avenging Blade": 0.3349,
+        "The Executioner": 0.3188,
+        "Eye of the Storm": 0.3069,
+        "Screeching Gargoyle": 0.2693,
+        "Spectral Armor": 0.1485
       }
     },
     "Janus": {
@@ -294591,7 +295309,12 @@
         "Wish-Granting Pearl": 0.4279,
         "Breastplate of Valor": 0.4259,
         "Lifebinder": 0.4238,
-        "Bragi's Harp": 0.4235
+        "Bragi's Harp": 0.4235,
+        "Screeching Gargoyle": 0.4022,
+        "Contagion": 0.3495,
+        "Stampede": 0.3461,
+        "Spectral Armor": 0.338,
+        "Stone of Binding": 0.3275
       },
       "joust": {
         "Spear of Desolation": 0.8022,
@@ -294633,7 +295356,12 @@
         "Typhon\u2019s Heart": 0.4258,
         "Shield of the Phoenix": 0.4198,
         "Gem of Isolation": 0.4182,
-        "Necronomicon": 0.4093
+        "Necronomicon": 0.4093,
+        "Screeching Gargoyle": 0.3322,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2107,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Spear of Desolation": 0.8022,
@@ -294675,7 +295403,12 @@
         "Shield of the Phoenix": 0.4198,
         "Gem of Isolation": 0.4182,
         "Eros' Bow": 0.415,
-        "Necronomicon": 0.4093
+        "Necronomicon": 0.4093,
+        "Screeching Gargoyle": 0.3322,
+        "Talisman of Purification": 0.3107,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Jing Wei": {
@@ -294719,7 +295452,11 @@
         "Hastened Fatalis": 0.3845,
         "Damaru": 0.3839,
         "Pharaoh's Curse": 0.3824,
-        "Titan's Bane": 0.3771
+        "Titan's Bane": 0.3771,
+        "Brawler\u2019s Beat Stick": 0.3431,
+        "Stampede": 0.3371,
+        "Screeching Gargoyle": 0.3311,
+        "Spectral Armor": 0.329
       },
       "joust": {
         "Tyrfing": 0.6422,
@@ -294761,7 +295498,13 @@
         "Eye of the Storm": 0.333,
         "Shogun's Ofuda": 0.3242,
         "Oath-Sworn Spear": 0.3171,
-        "Hastened Fatalis": 0.3048
+        "Hastened Fatalis": 0.3048,
+        "Titan's Bane": 0.3045,
+        "Contagion": 0.3032,
+        "Avatar's Parashu": 0.2885,
+        "Screeching Gargoyle": 0.1802,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6422,
@@ -294803,7 +295546,12 @@
         "Pharaoh's Curse": 0.3201,
         "Umbral Link": 0.3188,
         "Oath-Sworn Spear": 0.3171,
-        "Shogun's Ofuda": 0.3092
+        "Shogun's Ofuda": 0.3092,
+        "Titan's Bane": 0.3045,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Mantle Of Discord": 0.2279,
+        "Spectral Armor": 0.1485
       }
     },
     "Jormungandr": {
@@ -294847,7 +295595,11 @@
         "Mantle Of Discord": 0.429,
         "Helm of Darkness": 0.4283,
         "Glorious Pridwen": 0.4277,
-        "Lernaean Bow": 0.4271
+        "Lernaean Bow": 0.4271,
+        "Dominance": 0.4269,
+        "Spectral Armor": 0.4154,
+        "Toxic Blade": 0.4134,
+        "Obsidian Shard": 0.4118
       },
       "joust": {
         "Amanita Charm": 0.6993,
@@ -294889,7 +295641,14 @@
         "Hydra's Lament": 0.4481,
         "Bancroft's Talon": 0.448,
         "Rod of Tahuti": 0.4472,
-        "Lernaean Bow": 0.4472
+        "Lernaean Bow": 0.4472,
+        "Dominance": 0.4469,
+        "Void Stone": 0.4401,
+        "Screeching Gargoyle": 0.4335,
+        "Magi's Cloak": 0.4194,
+        "Mantle Of Discord": 0.4193,
+        "Spectral Armor": 0.4059,
+        "Titan's Bane": 0.3895
       },
       "arena": {
         "Amanita Charm": 0.6843,
@@ -294931,7 +295690,11 @@
         "Umbral Link": 0.4538,
         "Stone of Binding": 0.4536,
         "Sanguine Lash": 0.4494,
-        "Sphere of Negation": 0.4487
+        "Sphere of Negation": 0.4487,
+        "Dominance": 0.4469,
+        "Screeching Gargoyle": 0.4335,
+        "Spectral Armor": 0.3909,
+        "Titan's Bane": 0.3895
       }
     },
     "Kali": {
@@ -294975,7 +295738,13 @@
         "Blood-Bound Book": 0.4657,
         "Bragi's Harp": 0.463,
         "Berserker's Shield": 0.4609,
-        "Soul Reaver": 0.4605
+        "Soul Reaver": 0.4605,
+        "Eye of the Storm": 0.4592,
+        "Avenging Blade": 0.4588,
+        "The Executioner": 0.4451,
+        "Jade Scepter": 0.4344,
+        "Divine Ruin": 0.434,
+        "Spectral Armor": 0.365
       },
       "joust": {
         "Tyrfing": 0.6084,
@@ -295017,7 +295786,11 @@
         "Runeforged Hammer": 0.3988,
         "Bancroft's Talon": 0.3914,
         "Doom Orb": 0.386,
-        "Avenging Blade": 0.3815
+        "Avenging Blade": 0.3815,
+        "Eye of the Storm": 0.3535,
+        "Oath-Sworn Spear": 0.3376,
+        "Jade Scepter": 0.2655,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6084,
@@ -295059,7 +295832,12 @@
         "Sun Beam Bow": 0.4035,
         "Runeforged Hammer": 0.3988,
         "Divine Ruin": 0.3985,
-        "Bancroft's Talon": 0.3914
+        "Bancroft's Talon": 0.3914,
+        "Avenging Blade": 0.3815,
+        "Eye of the Storm": 0.3535,
+        "Oath-Sworn Spear": 0.3376,
+        "Jade Scepter": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Khepri": {
@@ -295103,7 +295881,12 @@
         "Doublet of Binding": 0.5392,
         "Chronos' Pendant": 0.5377,
         "Xibalban Effigy": 0.5359,
-        "Ancient Signet": 0.5359
+        "Ancient Signet": 0.5359,
+        "Obsidian Shard": 0.5303,
+        "Stygian Anchor": 0.53,
+        "Ethereal Staff": 0.5289,
+        "Soul Reaver": 0.5105,
+        "Contagion": 0.4913
       },
       "joust": {
         "Amanita Charm": 0.7937,
@@ -295145,7 +295928,10 @@
         "Midgardian Mail": 0.4787,
         "Rod of Tahuti": 0.4749,
         "Lifebinder": 0.4732,
-        "Leviathan's Hide": 0.4729
+        "Leviathan's Hide": 0.4729,
+        "Spectral Armor": 0.4666,
+        "Obsidian Shard": 0.3842,
+        "Soul Reaver": 0.369
       },
       "arena": {
         "Amanita Charm": 0.7787,
@@ -295187,7 +295973,10 @@
         "Midgardian Mail": 0.4787,
         "Rod of Tahuti": 0.4749,
         "Leviathan's Hide": 0.4729,
-        "Mystical Mail": 0.4702
+        "Mystical Mail": 0.4702,
+        "Spectral Armor": 0.4516,
+        "Obsidian Shard": 0.3842,
+        "Soul Reaver": 0.369
       }
     },
     "Kukulkan": {
@@ -295231,7 +296020,12 @@
         "Bragi's Harp": 0.4468,
         "Nimble Ring": 0.4465,
         "Helm of Darkness": 0.4335,
-        "Scepter of Dominion": 0.4314
+        "Scepter of Dominion": 0.4314,
+        "Screeching Gargoyle": 0.4274,
+        "Contagion": 0.3765,
+        "Stampede": 0.3731,
+        "Spectral Armor": 0.365,
+        "Stone of Binding": 0.3545
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -295273,7 +296067,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -295315,7 +296114,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Kuzenbo": {
@@ -295359,7 +296163,12 @@
         "Chronos' Pendant": 0.481,
         "Ancient Signet": 0.4804,
         "Xibalban Effigy": 0.4768,
-        "Yogi's Necklace": 0.4759
+        "Yogi's Necklace": 0.4759,
+        "Obsidian Shard": 0.4754,
+        "Ethereal Staff": 0.4752,
+        "Stygian Anchor": 0.4709,
+        "Soul Reaver": 0.455,
+        "Divine Ruin": 0.4285
       },
       "joust": {
         "Amanita Charm": 0.7901,
@@ -295401,7 +296210,10 @@
         "Magi's Cloak": 0.4774,
         "Mantle Of Discord": 0.4773,
         "Leviathan's Hide": 0.474,
-        "Hide of the Nemean Lion": 0.4708
+        "Hide of the Nemean Lion": 0.4708,
+        "Spectral Armor": 0.4677,
+        "Obsidian Shard": 0.3885,
+        "Soul Reaver": 0.3716
       },
       "arena": {
         "Amanita Charm": 0.7751,
@@ -295443,7 +296255,10 @@
         "Regrowth Striders": 0.478,
         "Leviathan's Hide": 0.474,
         "Mystical Mail": 0.4713,
-        "Hide of the Nemean Lion": 0.4708
+        "Hide of the Nemean Lion": 0.4708,
+        "Spectral Armor": 0.4527,
+        "Obsidian Shard": 0.3885,
+        "Soul Reaver": 0.3716
       }
     },
     "Loki": {
@@ -295487,7 +296302,11 @@
         "Chandra's Grace": 0.4392,
         "Yogi's Necklace": 0.4342,
         "Dagger of Frenzy": 0.4273,
-        "Sun Beam Bow": 0.4248
+        "Sun Beam Bow": 0.4248,
+        "Screeching Gargoyle": 0.4182,
+        "Brawler\u2019s Beat Stick": 0.3881,
+        "Stampede": 0.3821,
+        "Spectral Armor": 0.374
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -295529,7 +296348,10 @@
         "Amanita Charm": 0.3429,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -295571,7 +296393,10 @@
         "Sun Beam Bow": 0.339,
         "Amanita Charm": 0.3279,
         "Damaru": 0.2986,
-        "Contagion": 0.2985
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Medusa": {
@@ -295615,7 +296440,12 @@
         "Qin's Blade": 0.4432,
         "Doom Orb": 0.4372,
         "Avatar's Parashu": 0.4345,
-        "Bancroft's Talon": 0.4334
+        "Bancroft's Talon": 0.4334,
+        "Eye of the Storm": 0.4134,
+        "The Executioner": 0.4095,
+        "Jade Scepter": 0.4008,
+        "Divine Ruin": 0.4004,
+        "Spectral Armor": 0.3335
       },
       "joust": {
         "Soul Gem": 0.6713,
@@ -295657,7 +296487,12 @@
         "Barbed Carver": 0.376,
         "Spear of the Magus": 0.3755,
         "Dreamer's Idol": 0.3657,
-        "Dagger of Frenzy": 0.3657
+        "Dagger of Frenzy": 0.3657,
+        "Avenging Blade": 0.3338,
+        "The Executioner": 0.3188,
+        "Eye of the Storm": 0.3058,
+        "Screeching Gargoyle": 0.2693,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.6563,
@@ -295699,7 +296534,12 @@
         "Pendulum Blade": 0.3926,
         "Divine Ruin": 0.3914,
         "Sun Beam Bow": 0.389,
-        "Barbed Carver": 0.376
+        "Barbed Carver": 0.376,
+        "Avenging Blade": 0.3338,
+        "The Executioner": 0.3188,
+        "Eye of the Storm": 0.3058,
+        "Screeching Gargoyle": 0.2693,
+        "Spectral Armor": 0.1485
       }
     },
     "Mercury": {
@@ -295743,7 +296583,10 @@
         "Berserker's Shield": 0.4203,
         "Sun Beam Bow": 0.4136,
         "Yogi's Necklace": 0.4094,
-        "Screeching Gargoyle": 0.407
+        "Screeching Gargoyle": 0.407,
+        "Brawler\u2019s Beat Stick": 0.3633,
+        "Stampede": 0.3573,
+        "Spectral Armor": 0.3492
       },
       "joust": {
         "Jotunn's Revenge": 0.7488,
@@ -295785,7 +296628,11 @@
         "Genji's Guard": 0.3437,
         "Amanita Charm": 0.3429,
         "Dagger of Frenzy": 0.3401,
-        "Glorious Pridwen": 0.3288
+        "Glorious Pridwen": 0.3288,
+        "Screeching Gargoyle": 0.3108,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.1893,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.7488,
@@ -295827,7 +296674,11 @@
         "Damaru": 0.3439,
         "Genji's Guard": 0.3437,
         "Dagger of Frenzy": 0.3401,
-        "Odysseus' Bow": 0.3305
+        "Odysseus' Bow": 0.3305,
+        "Screeching Gargoyle": 0.3108,
+        "Contagion": 0.2985,
+        "Talisman of Purification": 0.2893,
+        "Spectral Armor": 0.1485
       }
     },
     "Merlin": {
@@ -295871,7 +296722,12 @@
         "Bragi's Harp": 0.4198,
         "Nimble Ring": 0.4195,
         "Helm of Darkness": 0.4065,
-        "Scepter of Dominion": 0.4044
+        "Scepter of Dominion": 0.4044,
+        "Screeching Gargoyle": 0.4004,
+        "Contagion": 0.3495,
+        "Stampede": 0.3461,
+        "Spectral Armor": 0.338,
+        "Stone of Binding": 0.3275
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -295913,7 +296769,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -295955,7 +296816,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Mordred": {
@@ -295999,7 +296865,11 @@
         "Obsidian Shard": 0.5075,
         "Ancile": 0.5063,
         "Avenging Blade": 0.5057,
-        "Wyrmskin Hide": 0.5057
+        "Wyrmskin Hide": 0.5057,
+        "Spectral Armor": 0.4995,
+        "Ethereal Staff": 0.4873,
+        "Stygian Anchor": 0.484,
+        "Brawler\u2019s Beat Stick": 0.4785
       },
       "joust": {
         "Amanita Charm": 0.7154,
@@ -296041,7 +296911,14 @@
         "Sphere of Negation": 0.4552,
         "Riptalon": 0.4521,
         "Bancroft's Talon": 0.4517,
-        "Void Stone": 0.4505
+        "Void Stone": 0.4505,
+        "Titan's Bane": 0.4447,
+        "Screeching Gargoyle": 0.4424,
+        "Hussar's Wings": 0.4311,
+        "Magi's Cloak": 0.4309,
+        "Mantle Of Discord": 0.4308,
+        "Spectral Armor": 0.4163,
+        "Obsidian Shard": 0.4056
       },
       "arena": {
         "Amanita Charm": 0.7004,
@@ -296083,7 +296960,11 @@
         "Gladiator's Shield": 0.4602,
         "The Crusher": 0.4597,
         "Hydra's Lament": 0.4579,
-        "Dreamer's Idol": 0.4579
+        "Dreamer's Idol": 0.4579,
+        "Titan's Bane": 0.4447,
+        "Screeching Gargoyle": 0.4424,
+        "Obsidian Shard": 0.4056,
+        "Spectral Armor": 0.4013
       }
     },
     "Morgan Le Fay": {
@@ -296127,7 +297008,12 @@
         "Bragi's Harp": 0.4333,
         "Nimble Ring": 0.433,
         "Freya's Tears": 0.4203,
-        "Helm of Darkness": 0.42
+        "Helm of Darkness": 0.42,
+        "Screeching Gargoyle": 0.4139,
+        "Contagion": 0.363,
+        "Stampede": 0.3596,
+        "Spectral Armor": 0.3515,
+        "Stone of Binding": 0.341
       },
       "conquest:aspect": {
         "Wish-Granting Pearl": 0.7025,
@@ -296169,7 +297055,10 @@
         "Bancroft's Talon": 0.4749,
         "Soul Reaver": 0.4703,
         "Freya's Tears": 0.4658,
-        "Totem of Death": 0.4597
+        "Totem of Death": 0.4597,
+        "Contagion": 0.4446,
+        "Spectral Armor": 0.4355,
+        "Stampede": 0.4244
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -296211,7 +297100,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "Soul Gem": 0.7396,
@@ -296253,7 +297147,9 @@
         "Soul Reaver": 0.4378,
         "Polynomicon": 0.4376,
         "Totem of Death": 0.4352,
-        "Heartwood Charm": 0.4344
+        "Heartwood Charm": 0.4344,
+        "Spectral Armor": 0.3614,
+        "Resolute Mantle": 0.3529
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -296295,7 +297191,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "Soul Gem": 0.7246,
@@ -296337,7 +297238,8 @@
         "Polynomicon": 0.4376,
         "Totem of Death": 0.4352,
         "Heartwood Charm": 0.4344,
-        "Doublet of Binding": 0.4343
+        "Doublet of Binding": 0.4343,
+        "Spectral Armor": 0.3464
       }
     },
     "Ne Zha": {
@@ -296381,7 +297283,10 @@
         "Qin's Blade": 0.3781,
         "Musashi's Dual Swords": 0.3775,
         "Yogi's Necklace": 0.3757,
-        "Eye of Erebus": 0.3748
+        "Eye of Erebus": 0.3748,
+        "Brawler\u2019s Beat Stick": 0.3296,
+        "Stampede": 0.3236,
+        "Spectral Armor": 0.3155
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -296423,7 +297328,11 @@
         "Glorious Pridwen": 0.3503,
         "Qin's Blade": 0.3446,
         "Amanita Charm": 0.3429,
-        "Breastplate of Valor": 0.3375
+        "Breastplate of Valor": 0.3375,
+        "Screeching Gargoyle": 0.3322,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2107,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -296465,7 +297374,10 @@
         "Glorious Pridwen": 0.3503,
         "Qin's Blade": 0.3446,
         "Breastplate of Valor": 0.3375,
-        "Screeching Gargoyle": 0.3322
+        "Screeching Gargoyle": 0.3322,
+        "Talisman of Purification": 0.3107,
+        "Contagion": 0.2985,
+        "Spectral Armor": 0.1485
       }
     },
     "Neith": {
@@ -296509,7 +297421,14 @@
         "Rage": 0.4821,
         "Demon Blade": 0.478,
         "Qin's Blade": 0.4765,
-        "Deathbringer": 0.4754
+        "Deathbringer": 0.4754,
+        "Avatar's Parashu": 0.4721,
+        "Jade Scepter": 0.4571,
+        "Divine Ruin": 0.4567,
+        "Eye of the Storm": 0.4506,
+        "Avenging Blade": 0.4502,
+        "The Executioner": 0.4215,
+        "Spectral Armor": 0.374
       },
       "joust": {
         "Soul Gem": 0.7133,
@@ -296551,7 +297470,13 @@
         "Polynomicon": 0.4055,
         "Chronos' Pendant": 0.4002,
         "The World Stone": 0.3981,
-        "Rage": 0.398
+        "Rage": 0.398,
+        "Avatar's Parashu": 0.3677,
+        "Avenging Blade": 0.3228,
+        "Jade Scepter": 0.3113,
+        "The Executioner": 0.3033,
+        "Eye of the Storm": 0.2948,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.6983,
@@ -296593,7 +297518,12 @@
         "Soul Reaver": 0.4057,
         "Polynomicon": 0.4055,
         "Chronos' Pendant": 0.4002,
-        "The World Stone": 0.3981
+        "The World Stone": 0.3981,
+        "Avenging Blade": 0.3228,
+        "Jade Scepter": 0.3113,
+        "The Executioner": 0.3033,
+        "Eye of the Storm": 0.2948,
+        "Spectral Armor": 0.1485
       }
     },
     "Nemesis": {
@@ -296637,7 +297567,13 @@
         "Chronos' Pendant": 0.4384,
         "The World Stone": 0.4375,
         "Pendulum Blade": 0.4361,
-        "Transcendence": 0.4358
+        "Transcendence": 0.4358,
+        "Eye of the Storm": 0.423,
+        "Avenging Blade": 0.4226,
+        "Jade Scepter": 0.3986,
+        "Divine Ruin": 0.3982,
+        "Oath-Sworn Spear": 0.3919,
+        "Spectral Armor": 0.329
       },
       "joust": {
         "Tyrfing": 0.6315,
@@ -296679,7 +297615,12 @@
         "Dreamer's Idol": 0.4005,
         "Runeforged Hammer": 0.3981,
         "Bancroft's Talon": 0.392,
-        "Doom Orb": 0.3866
+        "Doom Orb": 0.3866,
+        "Avenging Blade": 0.3809,
+        "Eye of the Storm": 0.3529,
+        "Oath-Sworn Spear": 0.337,
+        "Jade Scepter": 0.2661,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6315,
@@ -296721,7 +297662,12 @@
         "Spear of the Magus": 0.4103,
         "Dagger of Frenzy": 0.4039,
         "Divine Ruin": 0.3991,
-        "Runeforged Hammer": 0.3981
+        "Runeforged Hammer": 0.3981,
+        "Avenging Blade": 0.3809,
+        "Eye of the Storm": 0.3529,
+        "Oath-Sworn Spear": 0.337,
+        "Jade Scepter": 0.2661,
+        "Spectral Armor": 0.1485
       }
     },
     "Nike": {
@@ -296765,7 +297711,11 @@
         "Sanguine Lash": 0.4749,
         "Void Shield": 0.4737,
         "Spectral Armor": 0.4725,
-        "Transcendence": 0.4683
+        "Transcendence": 0.4683,
+        "Titan's Bane": 0.4676,
+        "Brawler\u2019s Beat Stick": 0.4614,
+        "Stygian Anchor": 0.4575,
+        "Dominance": 0.4433
       },
       "joust": {
         "Amanita Charm": 0.7387,
@@ -296807,7 +297757,10 @@
         "Hussar's Wings": 0.4543,
         "Heartseeker": 0.4523,
         "Magi's Cloak": 0.4475,
-        "Mantle Of Discord": 0.4475
+        "Mantle Of Discord": 0.4475,
+        "Spectral Armor": 0.4313,
+        "Titan's Bane": 0.4148,
+        "Dominance": 0.3675
       },
       "arena": {
         "Amanita Charm": 0.7237,
@@ -296849,7 +297802,11 @@
         "Regrowth Striders": 0.4682,
         "Avenging Blade": 0.4631,
         "Oni Hunter's Garb": 0.4617,
-        "Avatar's Parashu": 0.4552
+        "Avatar's Parashu": 0.4552,
+        "Heartseeker": 0.4523,
+        "Spectral Armor": 0.4163,
+        "Titan's Bane": 0.4148,
+        "Dominance": 0.3675
       }
     },
     "Nox": {
@@ -296893,7 +297850,11 @@
         "Void Stone": 0.4261,
         "Phoenix Feather": 0.4256,
         "Bancroft's Talon": 0.4254,
-        "Stampede": 0.4252
+        "Stampede": 0.4252,
+        "Spectral Armor": 0.4222,
+        "Soul Reaver": 0.4195,
+        "Stygian Anchor": 0.4043,
+        "Divine Ruin": 0.393
       },
       "joust": {
         "Soul Gem": 0.7437,
@@ -296935,7 +297896,10 @@
         "Dreamer's Idol": 0.4396,
         "Jade Scepter": 0.4389,
         "Regrowth Striders": 0.4387,
-        "Prophetic Cloak": 0.4373
+        "Prophetic Cloak": 0.4373,
+        "Hussar's Wings": 0.4343,
+        "Soul Reaver": 0.4258,
+        "Spectral Armor": 0.421
       },
       "arena": {
         "Soul Gem": 0.7287,
@@ -296977,7 +297941,9 @@
         "Spear of the Magus": 0.4494,
         "Breastplate of Valor": 0.448,
         "Screeching Gargoyle": 0.4449,
-        "Void Stone": 0.4401
+        "Void Stone": 0.4401,
+        "Soul Reaver": 0.4258,
+        "Spectral Armor": 0.406
       }
     },
     "Nu Wa": {
@@ -297021,7 +297987,12 @@
         "Breastplate of Valor": 0.4151,
         "Chandra's Grace": 0.4124,
         "Lifebinder": 0.4111,
-        "Bragi's Harp": 0.4108
+        "Bragi's Harp": 0.4108,
+        "Screeching Gargoyle": 0.3914,
+        "Contagion": 0.3405,
+        "Stampede": 0.3371,
+        "Spectral Armor": 0.329,
+        "Stone of Binding": 0.3185
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -297063,7 +298034,12 @@
         "Shield of the Phoenix": 0.4136,
         "Typhon\u2019s Heart": 0.4136,
         "Gem of Isolation": 0.4059,
-        "Necronomicon": 0.3971
+        "Necronomicon": 0.3971,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -297105,7 +298081,12 @@
         "Typhon\u2019s Heart": 0.4136,
         "Gem of Isolation": 0.4059,
         "Eros' Bow": 0.4028,
-        "Necronomicon": 0.3971
+        "Necronomicon": 0.3971,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Nut": {
@@ -297149,7 +298130,13 @@
         "Soul Reaver": 0.4758,
         "The Cosmic Horror": 0.471,
         "Avatar's Parashu": 0.4691,
-        "Devourer's Gauntlet": 0.4682
+        "Devourer's Gauntlet": 0.4682,
+        "The Executioner": 0.4584,
+        "Avenging Blade": 0.4522,
+        "Jade Scepter": 0.4497,
+        "Divine Ruin": 0.4493,
+        "Eye of the Storm": 0.4419,
+        "Spectral Armor": 0.3605
       },
       "joust": {
         "Soul Gem": 0.7733,
@@ -297191,7 +298178,13 @@
         "Soul Reaver": 0.426,
         "Polynomicon": 0.4258,
         "Pendulum Blade": 0.4222,
-        "The Cosmic Horror": 0.415
+        "The Cosmic Horror": 0.415,
+        "Avatar's Parashu": 0.4025,
+        "Avenging Blade": 0.3387,
+        "Jade Scepter": 0.3316,
+        "The Executioner": 0.3295,
+        "Eye of the Storm": 0.3107,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7583,
@@ -297233,7 +298226,12 @@
         "Chronos' Pendant": 0.4312,
         "Soul Reaver": 0.426,
         "Polynomicon": 0.4258,
-        "Pendulum Blade": 0.4222
+        "Pendulum Blade": 0.4222,
+        "Avenging Blade": 0.3387,
+        "Jade Scepter": 0.3316,
+        "The Executioner": 0.3295,
+        "Eye of the Storm": 0.3107,
+        "Spectral Armor": 0.1485
       }
     },
     "Odin": {
@@ -297277,7 +298275,11 @@
         "Stampede": 0.4684,
         "Void Shield": 0.4666,
         "Prophetic Cloak": 0.466,
-        "Spectral Armor": 0.4654
+        "Spectral Armor": 0.4654,
+        "Sanguine Lash": 0.4653,
+        "Brawler\u2019s Beat Stick": 0.454,
+        "Stygian Anchor": 0.45,
+        "Dominance": 0.436
       },
       "joust": {
         "Amanita Charm": 0.725,
@@ -297319,7 +298321,12 @@
         "Breastplate of Valor": 0.4506,
         "Avenging Blade": 0.4496,
         "Screeching Gargoyle": 0.4476,
-        "Prophetic Cloak": 0.4448
+        "Prophetic Cloak": 0.4448,
+        "Hussar's Wings": 0.4407,
+        "Magi's Cloak": 0.4377,
+        "Mantle Of Discord": 0.4377,
+        "Spectral Armor": 0.4225,
+        "Dominance": 0.3579
       },
       "arena": {
         "Amanita Charm": 0.71,
@@ -297361,7 +298368,11 @@
         "Devourer's Gauntlet": 0.4627,
         "Stampede": 0.4618,
         "Titan's Bane": 0.4529,
-        "Oni Hunter's Garb": 0.4529
+        "Oni Hunter's Garb": 0.4529,
+        "Avenging Blade": 0.4496,
+        "Screeching Gargoyle": 0.4476,
+        "Spectral Armor": 0.4075,
+        "Dominance": 0.3579
       }
     },
     "Osiris": {
@@ -297405,7 +298416,11 @@
         "Screeching Gargoyle": 0.3663,
         "Yogi's Necklace": 0.365,
         "Ancile": 0.3649,
-        "Stone of Binding": 0.3631
+        "Stone of Binding": 0.3631,
+        "Stampede": 0.3611,
+        "Sanguine Lash": 0.3597,
+        "Magi's Cloak": 0.3591,
+        "Spectral Armor": 0.3581
       },
       "joust": {
         "Amanita Charm": 0.6393,
@@ -297447,7 +298462,13 @@
         "Genji's Guard": 0.4161,
         "Void Stone": 0.4141,
         "Oni Hunter's Garb": 0.4104,
-        "Void Shield": 0.4103
+        "Void Shield": 0.4103,
+        "Titan's Bane": 0.4099,
+        "Spectral Armor": 0.3799,
+        "Ancile": 0.3747,
+        "Screeching Gargoyle": 0.374,
+        "Hussar's Wings": 0.3549,
+        "Magi's Cloak": 0.3513
       },
       "arena": {
         "Amanita Charm": 0.6243,
@@ -297489,7 +298510,11 @@
         "Brawler\u2019s Beat Stick": 0.4197,
         "Stampede": 0.4192,
         "Qin's Blade": 0.418,
-        "Genji's Guard": 0.4161
+        "Genji's Guard": 0.4161,
+        "Titan's Bane": 0.4099,
+        "Void Stone": 0.3991,
+        "Ancile": 0.3747,
+        "Spectral Armor": 0.3649
       }
     },
     "Pele": {
@@ -297533,7 +298558,11 @@
         "Yogi's Necklace": 0.4162,
         "Eye of Erebus": 0.4153,
         "Qin's Blade": 0.4152,
-        "Shield of the Phoenix": 0.414
+        "Shield of the Phoenix": 0.414,
+        "Titan's Bane": 0.403,
+        "Magi's Cloak": 0.3734,
+        "Brawler\u2019s Beat Stick": 0.3701,
+        "Spectral Armor": 0.356
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -297575,7 +298604,11 @@
         "Glorious Pridwen": 0.3503,
         "Amanita Charm": 0.3429,
         "Breastplate of Valor": 0.3375,
-        "Qin's Blade": 0.3333
+        "Qin's Blade": 0.3333,
+        "Screeching Gargoyle": 0.3322,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2107,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -297617,7 +298650,10 @@
         "Glorious Pridwen": 0.3503,
         "Breastplate of Valor": 0.3375,
         "Qin's Blade": 0.3333,
-        "Screeching Gargoyle": 0.3322
+        "Screeching Gargoyle": 0.3322,
+        "Talisman of Purification": 0.3107,
+        "Contagion": 0.2985,
+        "Spectral Armor": 0.1485
       }
     },
     "Poseidon": {
@@ -297661,7 +298697,12 @@
         "Lifebinder": 0.4336,
         "Bragi's Harp": 0.4333,
         "Helm of Darkness": 0.42,
-        "Scepter of Dominion": 0.4179
+        "Scepter of Dominion": 0.4179,
+        "Screeching Gargoyle": 0.4139,
+        "Contagion": 0.363,
+        "Stampede": 0.3596,
+        "Spectral Armor": 0.3515,
+        "Stone of Binding": 0.341
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -297703,7 +298744,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -297745,7 +298791,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Princess Bari": {
@@ -297789,7 +298840,14 @@
         "Heartwood Charm": 0.4101,
         "Soul Reaver": 0.4069,
         "Spear of the Magus": 0.404,
-        "Dagger of Frenzy": 0.4037
+        "Dagger of Frenzy": 0.4037,
+        "Avatar's Parashu": 0.3965,
+        "Jade Scepter": 0.3808,
+        "Divine Ruin": 0.3804,
+        "Eye of the Storm": 0.3728,
+        "Avenging Blade": 0.3724,
+        "The Executioner": 0.3472,
+        "Spectral Armor": 0.2907
       },
       "joust": {
         "Soul Gem": 0.7673,
@@ -297831,7 +298889,13 @@
         "Doom Orb": 0.4365,
         "Ancient Signet": 0.4364,
         "Chronos' Pendant": 0.4354,
-        "Soul Reaver": 0.4287
+        "Soul Reaver": 0.4287,
+        "Avatar's Parashu": 0.3933,
+        "Avenging Blade": 0.341,
+        "Jade Scepter": 0.3343,
+        "The Executioner": 0.3331,
+        "Eye of the Storm": 0.313,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7523,
@@ -297873,7 +298937,12 @@
         "Dagger of Frenzy": 0.44,
         "Doom Orb": 0.4365,
         "Ancient Signet": 0.4364,
-        "Rod of Asclepius": 0.4357
+        "Rod of Asclepius": 0.4357,
+        "Avenging Blade": 0.341,
+        "Jade Scepter": 0.3343,
+        "The Executioner": 0.3331,
+        "Eye of the Storm": 0.313,
+        "Spectral Armor": 0.1485
       }
     },
     "Ra": {
@@ -297917,7 +298986,12 @@
         "Eros' Bow": 0.435,
         "Book of Thoth": 0.4323,
         "Necronomicon": 0.431,
-        "Wish-Granting Pearl": 0.4271
+        "Wish-Granting Pearl": 0.4271,
+        "Screeching Gargoyle": 0.4161,
+        "Contagion": 0.354,
+        "Talisman of Purification": 0.3511,
+        "Spectral Armor": 0.3425,
+        "Stone of Binding": 0.332
       },
       "conquest:aspect": {
         "Rod of Tahuti": 0.5926,
@@ -297959,7 +299033,11 @@
         "Spectral Armor": 0.4596,
         "Triton's Conch": 0.4575,
         "Alchemist Coat": 0.4563,
-        "Wish-Granting Pearl": 0.455
+        "Wish-Granting Pearl": 0.455,
+        "Totem of Death": 0.4544,
+        "Stampede": 0.4486,
+        "Contagion": 0.4237,
+        "Divine Ruin": 0.4215
       },
       "joust": {
         "Spear of Desolation": 0.8022,
@@ -298001,7 +299079,12 @@
         "Bragi's Harp": 0.408,
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
-        "Genji's Guard": 0.3965
+        "Genji's Guard": 0.3965,
+        "Screeching Gargoyle": 0.3637,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2422,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "joust:aspect": {
         "Soul Gem": 0.7654,
@@ -298043,7 +299126,8 @@
         "The World Stone": 0.4409,
         "Gladiator's Shield": 0.4403,
         "Ancile": 0.4374,
-        "Divine Ruin": 0.4366
+        "Divine Ruin": 0.4366,
+        "Stampede": 0.3911
       },
       "arena": {
         "Spear of Desolation": 0.8022,
@@ -298085,7 +299169,12 @@
         "Typhon\u2019s Heart": 0.4079,
         "Gem of Isolation": 0.4003,
         "Eros' Bow": 0.3971,
-        "Genji's Guard": 0.3965
+        "Genji's Guard": 0.3965,
+        "Screeching Gargoyle": 0.3637,
+        "Talisman of Purification": 0.3422,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       },
       "arena:aspect": {
         "Soul Gem": 0.7654,
@@ -298127,7 +299216,8 @@
         "Blood-Bound Book": 0.4436,
         "The World Stone": 0.4409,
         "Gladiator's Shield": 0.4403,
-        "Ancile": 0.4374
+        "Ancile": 0.4374,
+        "Divine Ruin": 0.4319
       }
     },
     "Rama": {
@@ -298171,7 +299261,11 @@
         "Genji's Guard": 0.4376,
         "Vital Amplifier": 0.4288,
         "Yogi's Necklace": 0.4184,
-        "Breastplate of Valor": 0.4183
+        "Breastplate of Valor": 0.4183,
+        "Screeching Gargoyle": 0.3946,
+        "Brawler\u2019s Beat Stick": 0.3723,
+        "Stampede": 0.3663,
+        "Spectral Armor": 0.3582
       },
       "joust": {
         "Riptalon": 0.6596,
@@ -298213,7 +299307,12 @@
         "Shield of the Phoenix": 0.3269,
         "Arondight": 0.3237,
         "Vital Amplifier": 0.3236,
-        "Shield Splitter": 0.3233
+        "Shield Splitter": 0.3233,
+        "Eye of the Storm": 0.3224,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2393,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.6596,
@@ -298255,7 +299354,12 @@
         "Shield of the Phoenix": 0.3269,
         "Arondight": 0.3237,
         "Vital Amplifier": 0.3236,
-        "Shield Splitter": 0.3233
+        "Shield Splitter": 0.3233,
+        "Eye of the Storm": 0.3224,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2393,
+        "Spectral Armor": 0.1485
       }
     },
     "Ratatoskr": {
@@ -298299,7 +299403,11 @@
         "Demon Blade": 0.4293,
         "Breastplate of Valor": 0.4284,
         "Wyrmskin Hide": 0.4281,
-        "Chandra's Grace": 0.4257
+        "Chandra's Grace": 0.4257,
+        "Screeching Gargoyle": 0.4047,
+        "Brawler\u2019s Beat Stick": 0.3746,
+        "Stampede": 0.3686,
+        "Spectral Armor": 0.3605
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -298341,7 +299449,11 @@
         "Shield of the Phoenix": 0.353,
         "Musashi's Dual Swords": 0.352,
         "Amanita Charm": 0.3429,
-        "Qin's Blade": 0.3238
+        "Qin's Blade": 0.3238,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -298383,7 +299495,11 @@
         "Shield of the Phoenix": 0.353,
         "Musashi's Dual Swords": 0.352,
         "Amanita Charm": 0.3279,
-        "Qin's Blade": 0.3238
+        "Qin's Blade": 0.3238,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Ravana": {
@@ -298427,7 +299543,11 @@
         "Void Shield": 0.4832,
         "Spectral Armor": 0.482,
         "Magi's Cloak": 0.4804,
-        "Mantle Of Discord": 0.4804
+        "Mantle Of Discord": 0.4804,
+        "Eye of Erebus": 0.4715,
+        "Toxic Blade": 0.4656,
+        "Dominance": 0.4656,
+        "Brawler\u2019s Beat Stick": 0.4548
       },
       "joust": {
         "Amanita Charm": 0.6918,
@@ -298469,7 +299589,11 @@
         "Devourer's Gauntlet": 0.4384,
         "Breastplate of Valor": 0.4379,
         "Sanguine Lash": 0.4377,
-        "Screeching Gargoyle": 0.4349
+        "Screeching Gargoyle": 0.4349,
+        "Spectral Armor": 0.4179,
+        "Ancile": 0.4126,
+        "Hussar's Wings": 0.4074,
+        "Dominance": 0.3966
       },
       "arena": {
         "Amanita Charm": 0.6768,
@@ -298511,7 +299635,12 @@
         "Oni Hunter's Garb": 0.4483,
         "Stygian Anchor": 0.4433,
         "Devourer's Gauntlet": 0.4384,
-        "Breastplate of Valor": 0.4379
+        "Breastplate of Valor": 0.4379,
+        "Void Stone": 0.437,
+        "Screeching Gargoyle": 0.4349,
+        "Sanguine Lash": 0.4227,
+        "Spectral Armor": 0.4029,
+        "Dominance": 0.3966
       }
     },
     "Scylla": {
@@ -298555,7 +299684,12 @@
         "Bragi's Harp": 0.4333,
         "Nimble Ring": 0.433,
         "Helm of Darkness": 0.42,
-        "Scepter of Dominion": 0.4179
+        "Scepter of Dominion": 0.4179,
+        "Screeching Gargoyle": 0.4139,
+        "Contagion": 0.363,
+        "Stampede": 0.3596,
+        "Spectral Armor": 0.3515,
+        "Stone of Binding": 0.341
       },
       "joust": {
         "Rod of Tahuti": 0.803,
@@ -298597,7 +299731,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Triton's Conch": 0.3696,
-        "Scepter of Dominion": 0.3632
+        "Scepter of Dominion": 0.3632,
+        "Screeching Gargoyle": 0.3261,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.2046,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.803,
@@ -298639,7 +299778,12 @@
         "Wish-Granting Pearl": 0.3915,
         "Nimble Ring": 0.3847,
         "Scepter of Dominion": 0.3632,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3261,
+        "Talisman of Purification": 0.3046,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Sobek": {
@@ -298683,7 +299827,11 @@
         "Jade Scepter": 0.4571,
         "Chronos' Pendant": 0.457,
         "Stygian Anchor": 0.4523,
-        "Ragnarok's Wake": 0.4523
+        "Ragnarok's Wake": 0.4523,
+        "Obsidian Shard": 0.4519,
+        "Ethereal Staff": 0.4508,
+        "Soul Reaver": 0.4319,
+        "Contagion": 0.413
       },
       "joust": {
         "Amanita Charm": 0.7987,
@@ -298725,7 +299873,10 @@
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
         "Lifebinder": 0.4753,
-        "Hide of the Nemean Lion": 0.4729
+        "Hide of the Nemean Lion": 0.4729,
+        "Spectral Armor": 0.4698,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       },
       "arena": {
         "Amanita Charm": 0.7837,
@@ -298767,7 +299918,10 @@
         "Leviathan's Hide": 0.4762,
         "Rod of Tahuti": 0.4759,
         "Mystical Mail": 0.4734,
-        "Hide of the Nemean Lion": 0.4729
+        "Hide of the Nemean Lion": 0.4729,
+        "Spectral Armor": 0.4548,
+        "Obsidian Shard": 0.3853,
+        "Soul Reaver": 0.3697
       }
     },
     "Sol": {
@@ -298811,7 +299965,11 @@
         "Yogi's Necklace": 0.4117,
         "Wish-Granting Pearl": 0.4103,
         "Lifebinder": 0.4061,
-        "Screeching Gargoyle": 0.401
+        "Screeching Gargoyle": 0.401,
+        "Contagion": 0.363,
+        "Stampede": 0.3596,
+        "Spectral Armor": 0.3515,
+        "Stone of Binding": 0.341
       },
       "joust": {
         "Soul Gem": 0.7918,
@@ -298853,7 +300011,12 @@
         "Umbral Link": 0.3282,
         "Alchemist Coat": 0.3258,
         "Genji's Guard": 0.3161,
-        "Gem of Isolation": 0.3144
+        "Gem of Isolation": 0.3144,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2833,
+        "Void Stone": 0.1677,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7918,
@@ -298895,7 +300058,12 @@
         "Alchemist Coat": 0.3258,
         "Genji's Guard": 0.3161,
         "Gem of Isolation": 0.3144,
-        "Umbral Link": 0.3132
+        "Umbral Link": 0.3132,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2833,
+        "Resolute Mantle": 0.2663,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Sun Wukong": {
@@ -298939,7 +300107,16 @@
         "Tekko-Kagi": 0.4669,
         "Shogun's Ofuda": 0.4664,
         "Pharaoh's Curse": 0.4659,
-        "Triton's Conch": 0.4647
+        "Triton's Conch": 0.4647,
+        "Toxic Blade": 0.4627,
+        "Titan's Bane": 0.4618,
+        "Ancile": 0.4611,
+        "Jade Scepter": 0.4586,
+        "Screeching Gargoyle": 0.4585,
+        "Stampede": 0.4573,
+        "Spectral Armor": 0.4543,
+        "Magi's Cloak": 0.4534,
+        "Brawler\u2019s Beat Stick": 0.4278
       },
       "joust": {
         "Amanita Charm": 0.6783,
@@ -298981,7 +300158,14 @@
         "Shogun's Ofuda": 0.4568,
         "Pharaoh's Curse": 0.4561,
         "Contagion": 0.4493,
-        "The Crusher": 0.448
+        "The Crusher": 0.448,
+        "Void Stone": 0.4423,
+        "Titan's Bane": 0.433,
+        "Spectral Armor": 0.4082,
+        "Ancile": 0.4029,
+        "Hussar's Wings": 0.394,
+        "Screeching Gargoyle": 0.3887,
+        "Avatar's Parashu": 0.3734
       },
       "arena": {
         "Amanita Charm": 0.6633,
@@ -299023,7 +300207,12 @@
         "Triton's Conch": 0.4589,
         "Erosion": 0.4544,
         "The Crusher": 0.448,
-        "Shifter's Shield": 0.4476
+        "Shifter's Shield": 0.4476,
+        "Contagion": 0.4446,
+        "Titan's Bane": 0.433,
+        "Void Stone": 0.4273,
+        "Ancile": 0.4029,
+        "Spectral Armor": 0.3932
       }
     },
     "Susano": {
@@ -299067,7 +300256,10 @@
         "Yogi's Necklace": 0.4409,
         "Qin's Blade": 0.4403,
         "Eye of Erebus": 0.4293,
-        "Screeching Gargoyle": 0.4249
+        "Screeching Gargoyle": 0.4249,
+        "Magi's Cloak": 0.4199,
+        "Brawler\u2019s Beat Stick": 0.3948,
+        "Spectral Armor": 0.3807
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -299109,7 +300301,10 @@
         "Qin's Blade": 0.3345,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -299151,7 +300346,10 @@
         "Amanita Charm": 0.3279,
         "Damaru": 0.2986,
         "Contagion": 0.2985,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "Sylvanus": {
@@ -299195,7 +300393,10 @@
         "Spectral Armor": 0.5319,
         "Polynomicon": 0.5312,
         "Obsidian Shard": 0.5304,
-        "Ethereal Staff": 0.5274
+        "Ethereal Staff": 0.5274,
+        "Stygian Anchor": 0.5175,
+        "Soul Reaver": 0.5113,
+        "Divine Ruin": 0.4848
       },
       "joust": {
         "Amanita Charm": 0.7668,
@@ -299237,7 +300438,11 @@
         "Helm of Darkness": 0.4731,
         "Eye of Providence": 0.469,
         "Spear of Desolation": 0.4678,
-        "Magi's Cloak": 0.4676
+        "Magi's Cloak": 0.4676,
+        "Mantle Of Discord": 0.4676,
+        "Spectral Armor": 0.4493,
+        "Obsidian Shard": 0.4071,
+        "Totem of Death": 0.3951
       },
       "arena": {
         "Amanita Charm": 0.7518,
@@ -299279,7 +300484,10 @@
         "Helm of Darkness": 0.4731,
         "Brawler\u2019s Beat Stick": 0.4694,
         "Void Stone": 0.4685,
-        "Spear of Desolation": 0.4678
+        "Spear of Desolation": 0.4678,
+        "Spectral Armor": 0.4343,
+        "Obsidian Shard": 0.4071,
+        "Totem of Death": 0.3951
       }
     },
     "Thanatos": {
@@ -299323,7 +300531,10 @@
         "Qin's Blade": 0.4301,
         "Yogi's Necklace": 0.4297,
         "Eye of Erebus": 0.4181,
-        "Screeching Gargoyle": 0.4137
+        "Screeching Gargoyle": 0.4137,
+        "Brawler\u2019s Beat Stick": 0.3836,
+        "Stampede": 0.3776,
+        "Spectral Armor": 0.3695
       },
       "joust": {
         "Jotunn's Revenge": 0.8267,
@@ -299365,7 +300576,10 @@
         "Qin's Blade": 0.3378,
         "Contagion": 0.3032,
         "Damaru": 0.2986,
-        "Genji's Guard": 0.2983
+        "Genji's Guard": 0.2983,
+        "Screeching Gargoyle": 0.2655,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Jotunn's Revenge": 0.8267,
@@ -299407,7 +300621,10 @@
         "Amanita Charm": 0.3279,
         "Sun Beam Bow": 0.2999,
         "Damaru": 0.2986,
-        "Contagion": 0.2985
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Screeching Gargoyle": 0.2655,
+        "Spectral Armor": 0.1485
       }
     },
     "The Morrigan": {
@@ -299451,7 +300668,11 @@
         "Nimble Ring": 0.4077,
         "Helm of Darkness": 0.3946,
         "Scepter of Dominion": 0.3926,
-        "Screeching Gargoyle": 0.3899
+        "Screeching Gargoyle": 0.3899,
+        "Contagion": 0.3405,
+        "Stampede": 0.3371,
+        "Spectral Armor": 0.329,
+        "Stone of Binding": 0.3185
       },
       "joust": {
         "Rod of Tahuti": 0.8078,
@@ -299493,7 +300714,12 @@
         "Wish-Granting Pearl": 0.382,
         "Nimble Ring": 0.3753,
         "Triton's Conch": 0.3601,
-        "Yogi's Necklace": 0.3595
+        "Yogi's Necklace": 0.3595,
+        "Screeching Gargoyle": 0.3213,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.1999,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Rod of Tahuti": 0.8078,
@@ -299535,7 +300761,12 @@
         "Wish-Granting Pearl": 0.382,
         "Nimble Ring": 0.3753,
         "Yogi's Necklace": 0.3595,
-        "Genji's Guard": 0.3542
+        "Genji's Guard": 0.3542,
+        "Screeching Gargoyle": 0.3213,
+        "Talisman of Purification": 0.2999,
+        "Contagion": 0.2985,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Thor": {
@@ -299579,7 +300810,11 @@
         "Phoenix Feather": 0.4474,
         "Stampede": 0.447,
         "Yogi's Necklace": 0.4468,
-        "Mantle Of Discord": 0.446
+        "Mantle Of Discord": 0.446,
+        "Spectral Armor": 0.444,
+        "Toxic Blade": 0.4328,
+        "Dominance": 0.4312,
+        "Brawler\u2019s Beat Stick": 0.4205
       },
       "joust": {
         "The Reaper": 0.6924,
@@ -299621,7 +300856,12 @@
         "Void Stone": 0.438,
         "Genji's Guard": 0.4347,
         "Oni Hunter's Garb": 0.4343,
-        "Void Shield": 0.4342
+        "Void Shield": 0.4342,
+        "Spectral Armor": 0.4039,
+        "Ancile": 0.3986,
+        "Dominance": 0.3945,
+        "Screeching Gargoyle": 0.3925,
+        "Hussar's Wings": 0.3925
       },
       "arena": {
         "The Reaper": 0.6924,
@@ -299663,7 +300903,11 @@
         "Stygian Anchor": 0.4414,
         "Pendulum Blade": 0.4406,
         "Freya's Tears": 0.4398,
-        "Contagion": 0.4376
+        "Contagion": 0.4376,
+        "Void Stone": 0.423,
+        "Ancile": 0.3986,
+        "Dominance": 0.3945,
+        "Spectral Armor": 0.3889
       }
     },
     "Tsukuyomi": {
@@ -299707,7 +300951,13 @@
         "Chronos' Pendant": 0.4703,
         "The World Stone": 0.4694,
         "Pendulum Blade": 0.4673,
-        "Runeforged Hammer": 0.4658
+        "Runeforged Hammer": 0.4658,
+        "Eye of the Storm": 0.4541,
+        "Avenging Blade": 0.4537,
+        "Jade Scepter": 0.4305,
+        "Divine Ruin": 0.4301,
+        "Oath-Sworn Spear": 0.423,
+        "Spectral Armor": 0.3605
       },
       "joust": {
         "Tyrfing": 0.6104,
@@ -299749,7 +300999,12 @@
         "Runeforged Hammer": 0.3969,
         "Bancroft's Talon": 0.3933,
         "Doom Orb": 0.3879,
-        "Dagger of Frenzy": 0.384
+        "Dagger of Frenzy": 0.384,
+        "Avenging Blade": 0.3796,
+        "Eye of the Storm": 0.3516,
+        "Oath-Sworn Spear": 0.3357,
+        "Jade Scepter": 0.2674,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6104,
@@ -299791,7 +301046,12 @@
         "Sun Beam Bow": 0.4074,
         "Divine Ruin": 0.4004,
         "Runeforged Hammer": 0.3969,
-        "Bancroft's Talon": 0.3933
+        "Bancroft's Talon": 0.3933,
+        "Avenging Blade": 0.3796,
+        "Eye of the Storm": 0.3516,
+        "Oath-Sworn Spear": 0.3357,
+        "Jade Scepter": 0.2674,
+        "Spectral Armor": 0.1485
       }
     },
     "Ullr": {
@@ -299835,7 +301095,12 @@
         "Breastplate of Valor": 0.4323,
         "Vital Amplifier": 0.4307,
         "Chandra's Grace": 0.4296,
-        "Yogi's Necklace": 0.4229
+        "Yogi's Necklace": 0.4229,
+        "The Executioner": 0.4161,
+        "Screeching Gargoyle": 0.4086,
+        "Brawler\u2019s Beat Stick": 0.3768,
+        "Stampede": 0.3708,
+        "Spectral Armor": 0.3627
       },
       "joust": {
         "Riptalon": 0.621,
@@ -299877,7 +301142,12 @@
         "Transcendence": 0.3346,
         "The Executioner": 0.3228,
         "Shield Splitter": 0.3173,
-        "Umbral Link": 0.3165
+        "Umbral Link": 0.3165,
+        "Eye of the Storm": 0.3164,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2709,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Riptalon": 0.621,
@@ -299919,7 +301189,11 @@
         "Sanguine Lash": 0.3261,
         "The Executioner": 0.3228,
         "Shield Splitter": 0.3173,
-        "Eye of the Storm": 0.3164
+        "Eye of the Storm": 0.3164,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2709,
+        "Resolute Mantle": 0.2663,
+        "Spectral Armor": 0.1485
       }
     },
     "Vulcan": {
@@ -299963,7 +301237,12 @@
         "Wish-Granting Pearl": 0.4364,
         "Lifebinder": 0.4322,
         "Yogi's Necklace": 0.4207,
-        "Helm of Darkness": 0.4186
+        "Helm of Darkness": 0.4186,
+        "Screeching Gargoyle": 0.4177,
+        "Contagion": 0.372,
+        "Stampede": 0.3686,
+        "Spectral Armor": 0.3605,
+        "Stone of Binding": 0.35
       },
       "joust": {
         "Soul Gem": 0.7654,
@@ -300005,7 +301284,12 @@
         "Necronomicon": 0.3625,
         "Yogi's Necklace": 0.3595,
         "Wish-Granting Pearl": 0.3569,
-        "Amanita Charm": 0.3429
+        "Amanita Charm": 0.3429,
+        "Screeching Gargoyle": 0.3088,
+        "Contagion": 0.3032,
+        "Talisman of Purification": 0.1873,
+        "Void Stone": 0.1677,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7654,
@@ -300047,7 +301331,12 @@
         "Necronomicon": 0.3625,
         "Yogi's Necklace": 0.3595,
         "Wish-Granting Pearl": 0.3569,
-        "Genji's Guard": 0.3417
+        "Genji's Guard": 0.3417,
+        "Screeching Gargoyle": 0.3088,
+        "Contagion": 0.2985,
+        "Talisman of Purification": 0.2873,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     },
     "Xbalanque": {
@@ -300091,7 +301380,12 @@
         "Avatar's Parashu": 0.4129,
         "The Executioner": 0.4118,
         "Damaru": 0.4109,
-        "Pharaoh's Curse": 0.4094
+        "Pharaoh's Curse": 0.4094,
+        "Titan's Bane": 0.4041,
+        "Brawler\u2019s Beat Stick": 0.3701,
+        "Stampede": 0.3641,
+        "Screeching Gargoyle": 0.3581,
+        "Spectral Armor": 0.356
       },
       "joust": {
         "Tyrfing": 0.6819,
@@ -300133,7 +301427,13 @@
         "Umbral Link": 0.3338,
         "Eye of the Storm": 0.333,
         "Shogun's Ofuda": 0.3242,
-        "Oath-Sworn Spear": 0.3171
+        "Oath-Sworn Spear": 0.3171,
+        "Titan's Bane": 0.3045,
+        "Contagion": 0.3032,
+        "Avatar's Parashu": 0.2885,
+        "Screeching Gargoyle": 0.1802,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Tyrfing": 0.6819,
@@ -300175,7 +301475,12 @@
         "Amanita Charm": 0.3279,
         "Pharaoh's Curse": 0.3201,
         "Umbral Link": 0.3188,
-        "Oath-Sworn Spear": 0.3171
+        "Oath-Sworn Spear": 0.3171,
+        "Titan's Bane": 0.3045,
+        "Contagion": 0.2985,
+        "Resolute Mantle": 0.2663,
+        "Mantle Of Discord": 0.2279,
+        "Spectral Armor": 0.1485
       }
     },
     "Xing Tian": {
@@ -300219,7 +301524,12 @@
         "Ancient Signet": 0.4977,
         "Chronos' Pendant": 0.4972,
         "Jade Scepter": 0.4971,
-        "Yogi's Necklace": 0.4923
+        "Yogi's Necklace": 0.4923,
+        "Obsidian Shard": 0.4922,
+        "Stygian Anchor": 0.4921,
+        "Ethereal Staff": 0.4909,
+        "Soul Reaver": 0.4723,
+        "Contagion": 0.4532
       },
       "joust": {
         "Amanita Charm": 0.7951,
@@ -300261,7 +301571,10 @@
         "Rod of Tahuti": 0.4752,
         "Leviathan's Hide": 0.4739,
         "Lifebinder": 0.4738,
-        "Hide of the Nemean Lion": 0.4706
+        "Hide of the Nemean Lion": 0.4706,
+        "Spectral Armor": 0.4675,
+        "Obsidian Shard": 0.3845,
+        "Soul Reaver": 0.3692
       },
       "arena": {
         "Amanita Charm": 0.7801,
@@ -300303,7 +301616,10 @@
         "Rod of Tahuti": 0.4752,
         "Leviathan's Hide": 0.4739,
         "Mystical Mail": 0.4711,
-        "Hide of the Nemean Lion": 0.4706
+        "Hide of the Nemean Lion": 0.4706,
+        "Spectral Armor": 0.4525,
+        "Obsidian Shard": 0.3845,
+        "Soul Reaver": 0.3692
       }
     },
     "Yemoja": {
@@ -300347,7 +301663,11 @@
         "Polynomicon": 0.4997,
         "Obsidian Shard": 0.4989,
         "Ethereal Staff": 0.4959,
-        "Doublet of Binding": 0.4957
+        "Doublet of Binding": 0.4957,
+        "Stygian Anchor": 0.486,
+        "Soul Reaver": 0.4798,
+        "Spectral Armor": 0.4673,
+        "Divine Ruin": 0.4533
       },
       "joust": {
         "Amanita Charm": 0.7668,
@@ -300389,7 +301709,11 @@
         "Helm of Darkness": 0.4731,
         "Eye of Providence": 0.469,
         "Spear of Desolation": 0.4678,
-        "Magi's Cloak": 0.4676
+        "Magi's Cloak": 0.4676,
+        "Mantle Of Discord": 0.4676,
+        "Spectral Armor": 0.4493,
+        "Obsidian Shard": 0.4071,
+        "Totem of Death": 0.3951
       },
       "arena": {
         "Amanita Charm": 0.7518,
@@ -300431,7 +301755,10 @@
         "Helm of Darkness": 0.4731,
         "Brawler\u2019s Beat Stick": 0.4694,
         "Void Stone": 0.4685,
-        "Spear of Desolation": 0.4678
+        "Spear of Desolation": 0.4678,
+        "Spectral Armor": 0.4343,
+        "Obsidian Shard": 0.4071,
+        "Totem of Death": 0.3951
       }
     },
     "Ymir": {
@@ -300475,7 +301802,11 @@
         "Ancient Signet": 0.4971,
         "Chronos' Pendant": 0.4959,
         "Stygian Anchor": 0.4935,
-        "Ragnarok's Wake": 0.4933
+        "Ragnarok's Wake": 0.4933,
+        "Ethereal Staff": 0.4908,
+        "Soul Reaver": 0.4717,
+        "Contagion": 0.4537,
+        "Obsidian Shard": 0.4225
       },
       "joust": {
         "Amanita Charm": 0.8017,
@@ -300517,7 +301848,9 @@
         "Leviathan's Hide": 0.4781,
         "Hide of the Nemean Lion": 0.4748,
         "Lifebinder": 0.4737,
-        "Spectral Armor": 0.4717
+        "Spectral Armor": 0.4717,
+        "Soul Reaver": 0.3672,
+        "Obsidian Shard": 0.2684
       },
       "arena": {
         "Amanita Charm": 0.7867,
@@ -300559,7 +301892,10 @@
         "Leviathan's Hide": 0.4781,
         "Mystical Mail": 0.4753,
         "Hide of the Nemean Lion": 0.4748,
-        "Helm of Darkness": 0.471
+        "Helm of Darkness": 0.471,
+        "Spectral Armor": 0.4567,
+        "Soul Reaver": 0.3672,
+        "Obsidian Shard": 0.2684
       }
     },
     "Zeus": {
@@ -300603,7 +301939,11 @@
         "Wish-Granting Pearl": 0.4504,
         "Yogi's Necklace": 0.4477,
         "Lifebinder": 0.4462,
-        "Screeching Gargoyle": 0.4382
+        "Screeching Gargoyle": 0.4382,
+        "Contagion": 0.399,
+        "Stampede": 0.3956,
+        "Spectral Armor": 0.3875,
+        "Stone of Binding": 0.377
       },
       "joust": {
         "Soul Gem": 0.7918,
@@ -300645,7 +301985,12 @@
         "Alchemist Coat": 0.3393,
         "Umbral Link": 0.3318,
         "Gem of Isolation": 0.3279,
-        "Genji's Guard": 0.32
+        "Genji's Guard": 0.32,
+        "Contagion": 0.3032,
+        "Screeching Gargoyle": 0.2871,
+        "Void Stone": 0.1677,
+        "Resolute Mantle": 0.1663,
+        "Spectral Armor": 0.1635
       },
       "arena": {
         "Soul Gem": 0.7918,
@@ -300687,7 +302032,12 @@
         "Gem of Isolation": 0.3279,
         "Amanita Charm": 0.3279,
         "Genji's Guard": 0.32,
-        "Necronomicon": 0.3191
+        "Necronomicon": 0.3191,
+        "Contagion": 0.2985,
+        "Screeching Gargoyle": 0.2871,
+        "Resolute Mantle": 0.2663,
+        "Stone of Binding": 0.1622,
+        "Spectral Armor": 0.1485
       }
     }
   },
@@ -316085,6 +317435,7 @@
   },
   "draft": {
     "score_cap": 40,
+    "answer_keep": 2,
     "max_bonus": 0.12,
     "per_share": 0.1,
     "tag_bonus": {

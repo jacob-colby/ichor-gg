@@ -1407,6 +1407,28 @@ abilities:
 # three, never rewrites the build into full defense.
 draft:
   score_cap: 40          # items shipped per god (a god's #60 item can't win a slot)
+  # How many items carrying each `tag_bonus` effect tag are shipped REGARDLESS
+  # of rank. The cap above is a sound bound on what can win a slot and was a
+  # silent veto on what can be CONSIDERED, because this table is the draft
+  # overlay's entire candidate pool.
+  #
+  # MEASURED at fc59d374, before this existed. The best answering item sat
+  # outside the top 40 for anti-crit on 77 of 95 gods, penetration 40,
+  # anti-heal 36, protection-shred 26, cc-immunity 20, percent-health 17, peel
+  # 13 — and in every one of those cases it was the cap rather than
+  # eligibility, since no god in any channel lacks a legal answer. So the 2.0
+  # weight on anti-heal, set because it "starts far down the base ranking",
+  # was being applied to 63 gods and vetoed on the other 32.
+  #
+  # 2 rather than 1 because an answer can be illegal for a reason the table
+  # cannot see: `assemble_core`'s one-boots rule and `maxLifesteal` restrict
+  # the VICTIM, so an arrival whose only candidate is also the god's only
+  # boots has nowhere to land. A second option costs 840 entries across all
+  # three modes and removes that dead end.
+  #
+  # Cost of the whole guarantee: +1,399 entries, +35 KB on a 10,047 KB index,
+  # which is +0.4%. `score_cap: 80` reaches fewer channels for +288 KB.
+  answer_keep: 2
   # Clamp on the bonus any one item can receive. The CEILING IS RAISED TO THE
   # STRONGEST SINGLE CHANNEL (see draftBuild.adaptedCore): this bounds many weak
   # channels stacking into a rewrite, which is what the clamp is for, without

@@ -233,6 +233,101 @@ def _flag_uncatalogued_passives(items, data_root: Path) -> None:
             it["passive_uncatalogued"] = True
 
 
+def draft_answer_tags(weights) -> set:
+    """Every effect tag the draft overlay can promote an item for.
+
+    Read off `draft.tag_bonus`, so adding a threat channel to the weights
+    protects its answer automatically rather than needing a second edit here.
+    `draft.stat_bonus` is deliberately not included: a stat bonus moves items
+    the table already ranks on those stats, and there is no single answering
+    item for `Magical Protection` to protect.
+    """
+    tags = set()
+    for mapping in ((weights.get("draft") or {}).get("tag_bonus") or {}).values():
+        tags.update(mapping or {})
+    return tags
+
+
+def _capped_with_answers(rows, cap, answer_tags, tags_map, keep):
+    """The top `cap` scored items, plus the best `keep` carrying each answering
+    tag wherever the cap cut them off.
+
+    WHY THIS EXISTS. `score_cap` was set to bound the index, and as a bound on
+    what can win a slot it is sound: a bounded bonus cannot promote a god's #60
+    item. But this table is also the draft overlay's ENTIRE candidate pool,
+    since `adaptFromCore` takes it as `base`. An answer ranked below the cap is
+    therefore not merely unlikely to win a slot, it is invisible, and the draft
+    cannot respond to that threat on that god at all.
+
+    MEASURED on the shipped index at fc59d374, before this fix. The best
+    answering item sat outside the top 40 for: anti-crit 77 of 95 gods,
+    penetration 40, anti-heal 36, protection-shred 26, cc-immunity 20,
+    percent-health 17, peel 13. Netting out the gods already holding the
+    answer in their core, the cap alone accounted for 75 / 25 / 32 / 24 / 4 /
+    16 / 13 of those. Not one god in any channel lacked an answer for an
+    eligibility reason, so every remaining case was the cap and nothing else.
+
+    `_weights.yaml` weights `anti-heal` at 2.0 and calls it "the highest-
+    leverage counter-buy in the game", noting it "starts far down the base
+    ranking (Divine Ruin is Agni's #20)". For 32 gods it started past #40,
+    where no bonus of any size could reach it.
+
+    AND NOTHING WOULD HAVE CAUGHT IT. `archetypeParity.test.ts` checks that an
+    undrafted board equals the god page and that the draft can still introduce
+    an item the base core never held. Both passed throughout. Nothing measured
+    whether an answer was AVAILABLE, so a board the draft could not respond to
+    was indistinguishable from one it correctly left alone.
+    `draftAnswerable.test.ts` is that gate.
+
+    THE OVERLAY'S PRICES ARE NOT THE PROBLEM and were not touched. Median gap
+    from the weakest core slot to the best answering item is +0.031 to +0.053,
+    against 0.04 available at a 2-of-5 comp and 0.08 for anti-heal: a
+    calibrated knife edge that fires on a real threat and not an incidental
+    one. The candidates were missing, not the prices.
+
+    WHAT IT MOVED. Unanswerable (god, mode, channel) combinations go to zero:
+    anti-heal 36 gods -> 0, anti-crit 77 -> 2, penetration 40 -> 12,
+    protection-shred 26 -> 0, percent-health 17 -> 0, cc-immunity 20 -> 0,
+    peel 13 -> 0. Every remaining case is a god already holding the only
+    answer in their own core, which needs no alternative. Tables go from
+    exactly 40 entries to 42-49, modal 44, and the index from 10,047 KB to
+    10,093 KB: +46 KB, or +0.46%, against a +35 KB estimate.
+
+    Driving the real viewer path (`deriveThreats`, `threatOverlay`,
+    `adaptFromCore`) over 44 enemy comps, four structured and forty
+    seeded-random with half carrying allies, across four seeds and 4,180
+    boards per mode, the share of boards where the draft changes the shipped
+    six rises from 32.5-37.6% to 36.5-43.9% on Conquest and from 23.0-28.5%
+    to 28.5-32.3% on Joust. Arrivals move where the measurement predicted:
+    Screeching Gargoyle enters the top eight on Conquest seed 1 (58 arrivals
+    from outside it), Toxic Blade climbs 443 -> 466 and Divine Ruin 136 -> 143.
+
+    NOT TO BE CONFUSED with the 14-16% in STATE.md section 5, which is a
+    different measurement: that is how much turning the passive-pricing flags
+    ON moves the draft's six, not how often the draft changes anything.
+
+    Cost, measured: +1,399 entries and +35 KB on a 10,047 KB index, so +0.4%.
+    Raising `score_cap` to 80 instead costs +288 KB and still leaves the tail
+    of every channel unprotected, because the cap is not where the answers are.
+    """
+    out = {r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+    if not answer_tags or keep <= 0:
+        return out
+    for row in rows[cap:]:
+        tags = set(tags_map.get(row["item"]) or ()) & answer_tags
+        if not tags:
+            continue
+        # Rows arrive ranked, so the first ones past the cap carrying a tag are
+        # that channel's best. An item answering two channels is kept once and
+        # counts toward `keep` for both, which is exactly what the draft sees.
+        for tag in tags:
+            held = sum(1 for n in out if tag in (tags_map.get(n) or ()))
+            if held < keep:
+                out[row["item"]] = round(float(row["total"]), 4)
+                break
+    return out
+
+
 def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     """`{god: {mode: {item: score}}}` — base item scores for the viewer's
     draft-aware re-rank, one table per mode.
@@ -240,7 +335,10 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     The viewer is static, so it can't re-run scoring when a comp is entered; it
     instead applies a threat overlay to these shipped totals. Capped at the top
     `draft.score_cap` items per god — a bounded bonus can't promote a god's #60
-    item, so shipping the whole matrix would just bloat the index.
+    item, so shipping the whole matrix would just bloat the index. The cap is
+    then re-opened for the items that ANSWER a drafted threat, which the cap was
+    silently hiding from the overlay on most of the roster: see
+    `_capped_with_answers`, which carries the measurement.
 
     THIS USED TO BE CONQUEST-ONLY, under a draft page that has offered a Joust
     toggle the whole time. The toggle switched which build NOTE was displayed
@@ -273,6 +371,8 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
     family — `recommend.build_suggested_entries` emits one only if it moves a
     build, and the draft must not offer a toggle the god page withholds."""
     cap = int((weights.get("draft") or {}).get("score_cap", 40))
+    keep = int((weights.get("draft") or {}).get("answer_keep", 2))
+    answer_tags = draft_answer_tags(weights)
     by_god_mode = {}
     for b in builds:
         key = (b.get("god"), b.get("mode"))
@@ -298,8 +398,8 @@ def _god_item_scores(gods, builds, items, eff, weights, tags_map) -> dict:
                 rows = scoring.score_god_items(
                     god, items, by_god_mode.get((god["name"], mode), {}), eff,
                     weights, tags_map, profile)
-                per_mode[mode.lower() + suffix] = {
-                    r["item"]: round(float(r["total"]), 4) for r in rows[:cap]}
+                per_mode[mode.lower() + suffix] = _capped_with_answers(
+                    rows, cap, answer_tags, tags_map, keep)
         out[god["name"]] = per_mode
     return out
 

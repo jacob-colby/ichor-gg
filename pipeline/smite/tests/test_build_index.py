@@ -290,9 +290,14 @@ def test_build_index_emits_ability_order_for_every_god():
 
 
 def test_build_index_emits_capped_god_item_scores():
-    from smite import build_index
+    from smite import build_index, scoring
     from pathlib import Path
-    r = build_index.build_index(Path(__file__).resolve().parents[3])
+    repo = Path(__file__).resolve().parents[3]
+    r = build_index.build_index(repo)
+    weights = scoring.load_weights(repo / "data" / "_weights.yaml")
+    tags_map = scoring.load_tags(repo / "data" / "_tags.yaml")
+    answer_tags = build_index.draft_answer_tags(weights)
+    keep = int((weights.get("draft") or {}).get("answer_keep", 2))
     scores = r["god_item_scores"]
     assert set(scores) == {g["name"] for g in r["gods"]}
     for god, per_mode in scores.items():
@@ -304,7 +309,20 @@ def test_build_index_emits_capped_god_item_scores():
         extra = set(per_mode) - {"conquest", "joust", "arena"}
         assert extra in (set(), {"conquest:aspect", "joust:aspect", "arena:aspect"}), (god, extra)
         for mode, table in per_mode.items():
-            assert 0 < len(table) <= 40, f"{god}/{mode} has {len(table)} entries"
+            # The cap is 40 scored items PLUS the answers the cap would have
+            # hidden from the draft overlay (`_capped_with_answers`). Every
+            # entry past the 40th has to be one of those, so this still bounds
+            # the table rather than conceding the bound: the overflow is
+            # exactly the tagged items and never a general loosening.
+            assert len(table) > 0, f"{god}/{mode} is empty"
+            over = len(table) - 40
+            assert over <= len(answer_tags) * keep, (
+                f"{god}/{mode} has {len(table)} entries, {over} past the cap")
+            untagged = [n for n in list(table)[40:]
+                        if not set(tags_map.get(n) or ()) & answer_tags]
+            assert untagged == [], (
+                f"{god}/{mode} ships {untagged} past the cap with no "
+                "answering tag")
             assert all(isinstance(v, float) for v in table.values())
 
 
@@ -731,3 +749,117 @@ def test_penetration_is_not_archetype_scaled():
     scaled = (weights.get("draft") or {}).get("archetype_scaled_stats") or []
     assert "Penetration" not in scaled
     assert "Magical Protection" in scaled and "Physical Protection" in scaled
+
+
+# ── The draft's candidate horizon ─────────────────────────────────────────
+# `score_cap` bounds what can win a slot, which is sound, and bounded what the
+# draft overlay can CONSIDER, which silently vetoed the overlay on most of the
+# roster: see `build_index._capped_with_answers` for the measurement. These
+# cover the packing rule itself; the shipped-index invariant it exists to hold
+# is `viewer/src/lib/draftAnswerable.test.ts`.
+
+def _rows(*pairs):
+    return [{"item": n, "total": t} for n, t in pairs]
+
+
+def test_draft_answer_tags_reads_every_channel():
+    weights = {"draft": {"tag_bonus": {"healers": {"anti-heal": 2.0},
+                                       "tanks": {"penetration": 1.0,
+                                                 "percent-health": 1.0}}}}
+    assert build_index.draft_answer_tags(weights) == {
+        "anti-heal", "penetration", "percent-health"}
+
+
+def test_draft_answer_tags_ignores_stat_bonus():
+    # A stat bonus moves items the table already ranks on those stats; there is
+    # no single answering item for `Magical Protection` to protect.
+    weights = {"draft": {"tag_bonus": {"crit": {"anti-crit": 1.0}},
+                         "stat_bonus": {"magical": {"Magical Protection": 1.0}}}}
+    assert build_index.draft_answer_tags(weights) == {"anti-crit"}
+
+
+def test_capped_with_answers_keeps_the_cap_when_nothing_is_tagged():
+    rows = _rows(("A", 0.9), ("B", 0.8), ("C", 0.7))
+    out = build_index._capped_with_answers(rows, 2, {"anti-heal"}, {}, 2)
+    assert list(out) == ["A", "B"]
+
+
+def test_capped_with_answers_promotes_an_answer_past_the_cap():
+    rows = _rows(("A", 0.9), ("B", 0.8), ("Divine Ruin", 0.3))
+    tags = {"Divine Ruin": ["anti-heal"]}
+    out = build_index._capped_with_answers(rows, 2, {"anti-heal"}, tags, 2)
+    assert list(out) == ["A", "B", "Divine Ruin"]
+    # The promoted item keeps its own score. The overlay adds the bonus; this
+    # only puts the item where the overlay can see it.
+    assert out["Divine Ruin"] == 0.3
+
+
+def test_capped_with_answers_stops_at_keep():
+    rows = _rows(("A", 0.9), ("R1", 0.5), ("R2", 0.4), ("R3", 0.3))
+    tags = {n: ["anti-heal"] for n in ("R1", "R2", "R3")}
+    out = build_index._capped_with_answers(rows, 1, {"anti-heal"}, tags, 2)
+    # Ranked order means the two kept are the channel's best two, not any two.
+    assert list(out) == ["A", "R1", "R2"]
+
+
+def test_capped_with_answers_counts_items_already_inside_the_cap():
+    # An answer that already made the cap needs no help, and must not cause a
+    # second one to be added as though the channel were unanswered.
+    rows = _rows(("Divine Ruin", 0.9), ("A", 0.8), ("Brawler's Beat Stick", 0.2))
+    tags = {"Divine Ruin": ["anti-heal"], "Brawler's Beat Stick": ["anti-heal"]}
+    out = build_index._capped_with_answers(rows, 2, {"anti-heal"}, tags, 1)
+    assert list(out) == ["Divine Ruin", "A"]
+
+
+def test_capped_with_answers_keeps_a_multi_tag_item_once():
+    rows = _rows(("A", 0.9), ("Soul Reaver", 0.2))
+    tags = {"Soul Reaver": ["anti-heal", "percent-health"]}
+    out = build_index._capped_with_answers(
+        rows, 1, {"anti-heal", "percent-health"}, tags, 1)
+    assert list(out) == ["A", "Soul Reaver"]
+
+
+def test_capped_with_answers_is_a_noop_without_channels():
+    rows = _rows(("A", 0.9), ("B", 0.2))
+    assert list(build_index._capped_with_answers(rows, 1, set(), {}, 2)) == ["A"]
+    assert list(build_index._capped_with_answers(rows, 1, {"x"}, {"B": ["x"]}, 0)) == ["A"]
+
+
+def test_every_god_can_answer_every_threat_channel():
+    """The shipped invariant, from the pipeline side.
+
+    `viewer/src/lib/draftAnswerable.test.ts` asserts the same property against
+    the COMMITTED index; this one asserts it against a fresh in-process
+    rebuild, so a regression in the packing rule fails here before anyone
+    regenerates the index. Both are worth having: they catch different halves.
+
+    HOW MANY options a channel should offer is deliberately NOT asserted. It
+    depends on a filter neither test can cheaply reproduce: `score_god_items`
+    applies a damage-type filter on top of `is_buildable`, so a magical god's
+    rows contain only Obsidian Shard of the three `penetration` items
+    (Dominance and Titan's Bane carry Strength), and `answer_keep: 2` is
+    unreachable for them by design rather than by failure. The helper's own
+    `min(keep, what is available)` behaviour is covered directly by
+    `test_capped_with_answers_stops_at_keep`.
+    """
+    from smite import build_index, scoring
+    from pathlib import Path
+    repo = Path(__file__).resolve().parents[3]
+    r = build_index.build_index(repo)
+    weights = scoring.load_weights(repo / "data" / "_weights.yaml")
+    tags_map = scoring.load_tags(repo / "data" / "_tags.yaml")
+    answer_tags = build_index.draft_answer_tags(weights)
+    assert answer_tags, "no draft threat channels to check"
+    for tag in answer_tags:
+        assert any(tag in (tags_map.get(it["name"]) or ()) for it in r["items"]), (
+            f"draft.tag_bonus names {tag!r} and no item carries it")
+
+    short = []
+    for god, per_mode in r["god_item_scores"].items():
+        for mode, table in per_mode.items():
+            for tag in answer_tags:
+                if not any(tag in (tags_map.get(n) or ()) for n in table):
+                    short.append(f"{god}/{mode} {tag}")
+    assert short == [], (
+        f"{len(short)} (god, mode, channel) combinations the draft cannot "
+        f"answer at all: {short[:12]}")
