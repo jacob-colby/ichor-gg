@@ -398,7 +398,7 @@ jobs:
       # stats refresh fails the run here, with the failing tests already
       # printed as ::error:: annotations by the gate step.
       - name: Fail the run if the stats refresh was rejected
-        if: steps.stats_gate.outputs.rejected == 'true'
+        if: ${{ !cancelled() && steps.stats_gate.outputs.rejected == 'true' }}
         run: |
           echo "::error::The wiki stats refresh was rejected by the test gate; the old stats are still live. See the 'Test gate' step."
           exit 1
@@ -406,7 +406,7 @@ jobs:
       # Same contract for a new god or item the gate left out: the rest of the
       # day's data is committed above, the run goes red here.
       - name: Fail the run if a new god or item was left out
-        if: steps.new_entities.outputs.rejected == 'true'
+        if: ${{ !cancelled() && steps.new_entities.outputs.rejected == 'true' }}
         run: |
           echo "::error::A new god or item was left out by the gate; see the 'Add new gods and items' step and data/_new_entities.json."
           exit 1
@@ -421,7 +421,7 @@ jobs:
       # This step does nothing on a day when nothing moved: that path sets no
       # `landed` output at all.
       - name: Fail the run if today's data is stuck in a PR
-        if: steps.data_pr.outputs.landed == 'stuck'
+        if: ${{ !cancelled() && steps.data_pr.outputs.landed == 'stuck' }}
         # Through `env` rather than interpolated into the script. The value is
         # one of two literals this workflow writes, so nothing can be injected
         # today, but a step output is data and data does not belong in the

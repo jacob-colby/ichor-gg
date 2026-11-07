@@ -164,17 +164,35 @@ def test_the_gate_is_not_allowed_to_fail_open():
 
 def test_a_rejection_fails_the_run_after_the_commit():
     """Last, so the community data still lands; present, so a rejection is a
-    red run and not a line in a green log."""
+    red run and not a line in a green log.
+
+    THREE of these reporters now, not two. The third fires when the day's data
+    is stuck in a pull request nobody can merge, and it arrived with the
+    reroute off `git push` to main. It holds the same contract as the other
+    two: it comes after the data is safe, and it turns a quiet problem into a
+    red run.
+
+    AND EACH REPORTS INDEPENDENTLY. A step runs by default only if every step
+    before it succeeded, so three terminal reporters in a row meant the first
+    `exit 1` suppressed the others' messages. That was a latent bug in the
+    original PAIR rather than something the third step introduced: a run with
+    both a rejected stats refresh and a left-out entity only ever told you
+    about the first. `!cancelled()` on each condition is the fix, pinned here
+    so the suppression cannot come back."""
     steps = _steps("refresh-data.yml")
     runs = [s.get("run", "") for s in steps]
-    fails = [next(i for i, s in enumerate(steps)
-                  if f"steps.{gate}.outputs.rejected" in str(s.get("if", "")))
-             for gate in ("stats_gate", "new_entities")]
-    # Both gates' fail steps are the run's last steps, after the commit.
-    assert sorted(fails) == [len(steps) - 2, len(steps) - 1]
+    conds = ["steps.stats_gate.outputs.rejected",
+             "steps.new_entities.outputs.rejected",
+             "steps.data_pr.outputs.landed"]
+    fails = [next(i for i, s in enumerate(steps) if cond in str(s.get("if", "")))
+             for cond in conds]
+    # The reporters are the run's last steps, after the data is safe.
+    assert sorted(fails) == [len(steps) - 3, len(steps) - 2, len(steps) - 1]
     for fail in fails:
         assert "exit 1" in runs[fail]
         assert _index(runs, "git commit") < fail
+        # Independent of whether an earlier reporter already failed.
+        assert "!cancelled()" in str(steps[fail].get("if", ""))
 
 
 def test_new_entities_run_after_the_stats_gate_and_before_the_recompute():
