@@ -46,6 +46,21 @@
 #                keep last patch's stats live. Added 2026-11-02, when Open Beta
 #                46 put Eye of Providence back into 4 of 36 support cores.
 #
+#   verdict_window the community window the baseline was checked on, exactly
+#                as `side_by_side.community_window_label()` printed it that
+#                day, e.g. "Open Beta 47, 4,089 matches". Required beside a
+#                `verdict_patch` that is the CURRENT patch. The same argument
+#                one level down: the core blends the community's own win and
+#                pick signals, so a daily refresh moves verdicts with no model
+#                change — `item-overweighted` flipped three times inside Open
+#                Beta 40 on refreshes alone (08-29, 09-01, 09-07; STATE.md
+#                §4.29). `test_expert_review` asserts a baseline only on the
+#                patch AND window it names, so it never blocks a day's data;
+#                `--check` stays the regression gate on every model PR. Added
+#                2026-11-07, when the daily data became a pull request that
+#                must pass the suite. Never restamp it without re-reading the
+#                verdict on that day's data.
+#
 #                IT IS A BASELINE, NOT A TARGET. Lowering it to match a build
 #                you just broke turns this gate into a rubber stamp. Raise it
 #                when a fix lands; change it downward only as a recorded

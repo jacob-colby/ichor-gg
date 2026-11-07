@@ -3594,6 +3594,8 @@ project reference build catches.
 Tests: `cd pipeline && python -m pytest smite/tests -q` (1446) ·
 `cd viewer && npm test -- --run` (967).
 
+**A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
+
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex, commits) and
 `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`, `contents: read`, commits

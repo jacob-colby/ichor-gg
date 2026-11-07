@@ -171,6 +171,11 @@ def _data_patch():
     return json.loads((recommend.DATA_ROOT / "_patch.json").read_text(encoding="utf-8")).get("data_patch")
 
 
+def _community_window():
+    from smite import side_by_side
+    return side_by_side.community_window_label()
+
+
 def test_the_shipped_register_baselines_match_what_the_checker_says_today():
     """A baseline is only worth having if it is true when committed. This
     fails if someone lowers one to paper over a build they just broke, or
@@ -179,31 +184,55 @@ def test_the_shipped_register_baselines_match_what_the_checker_says_today():
     On the data it was checked on. A baseline recorded on one patch's item
     stats is not falsified by the next patch's — the claim moved because the
     GAME did — and the daily job must not keep stale stats live to protect it.
-    Off its patch the row is reported, not asserted; `expert_review --check`
-    is printed as a warning by the daily job either way."""
+
+    THE SAME IS TRUE ONE LEVEL DOWN, of the community window (2026-11-07).
+    The core this reads blends the community's own win and pick signals, so a
+    daily refresh moves verdicts with no model or stats change at all — and it
+    has, in both directions, three times inside Open Beta 40: `item-overweighted`
+    went partial -> clear (08-29), clear -> partial (09-01) and partial -> clear
+    (09-07, STATE.md §4.29), each one turning `main` red after a refresh. With
+    the daily data arriving as a pull request, an assertion that held across
+    the whole patch would have blocked those days' data. So a baseline also
+    names the window it was checked on (`verdict_window`, the
+    `side_by_side.community_window_label()` of that day), and is held to the
+    checker only on that data. Off it, the row is reported, not asserted;
+    `expert_review --check` is printed as a warning by the daily job either
+    way, and is a gate on every model PR. `live_window.py` has the convention."""
     import warnings
     reviews = expert_review.load_reviews()
     index = expert_review.load_index()
-    patch = _data_patch()
+    patch, window = _data_patch(), _community_window()
     for r in reviews:
         if not r.get("last_verdict"):
             continue
         subject = f"{r.get('god') or 'whole model'} · {r.get('claim')}"
         verdict = expert_review.check(r, index)[0]
-        if r.get("verdict_patch") != patch:
+        checked_on = (r.get("verdict_patch"), r.get("verdict_window"))
+        if checked_on != (patch, window):
             if verdict != r["last_verdict"]:
                 warnings.warn(f"{subject}: baseline {r['last_verdict']!r} was checked on "
-                              f"{r.get('verdict_patch')}, data is {patch} and it reads {verdict!r} "
+                              f"{checked_on[0]} / {checked_on[1] or 'an unrecorded window'}, "
+                              f"data is {patch} / {window} and it reads {verdict!r} "
                               "— re-baseline with a note")
             continue
         assert verdict == r["last_verdict"], subject
 
 
 def test_every_baseline_names_the_patch_it_was_checked_on():
+    """And, from 2026-11-07, the community window: a baseline recorded on
+    the CURRENT patch must say which window, or the test above could never hold
+    it to anything. The two baselines on file predate the field and sit on
+    earlier patches, and what window they were read on was never written down;
+    they are reported, not asserted, until someone re-baselines them."""
+    patch = _data_patch()
     for r in expert_review.load_reviews():
         if r.get("last_verdict"):
+            subject = f"{r.get('god') or 'whole model'} · {r.get('claim')}"
             assert str(r.get("verdict_patch") or "").startswith("Open Beta "), (
-                f"{r.get('god') or 'whole model'} · {r.get('claim')} has no verdict_patch")
+                f"{subject} has no verdict_patch")
+            if r.get("verdict_patch") == patch:
+                assert str(r.get("verdict_window") or "").startswith("Open Beta "), (
+                    f"{subject} was checked on {patch} and names no verdict_window")
 
 
 def test_the_report_refuses_to_present_itself_as_a_score():

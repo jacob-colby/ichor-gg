@@ -8,6 +8,7 @@ import pytest
 import requests
 
 from smite import notes, refresh, smitebrain_parser
+from smite.tests import live_window
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -762,16 +763,45 @@ def test_the_item_index_leaves_the_fields_null_without_provenance(tmp_path, monk
     assert out["window_start"] is None and out["window_end"] is None
 
 
+# Floors recorded when Open Beta 47 was declared established (589e9a4e,
+# 2026-11-06): the shipped table's own count and end date that day. The window
+# is cumulative, so every later refresh inside it reads at least these. They
+# move ONLY with the two pins below, by hand, as part of the next declaration.
+DECLARED_MATCHES_FLOOR = 2859
+DECLARED_WINDOW_END_FLOOR = "2026-11-06"
+
+
 def test_the_shipped_file_now_carries_all_three():
-    """Pins the SHIPPED community table's own window. These values are one
-    window's, so this fires on every patch boundary whatever the new window's
-    size: it detects CHANGE, not thinness. Updating it therefore declares the
-    new window established, which is Jacob's call, not test maintenance. The
-    thinness guard is `refresh._refuse_community_collapse`; the 2026-11-04
-    incident was caught by the tests pinning god NAMES, not by this one."""
+    """Pins the SHIPPED community table's own window. `window` and
+    `window_start` are one window's, so they fire on every patch boundary
+    whatever the new window's size: they detect CHANGE, not thinness. Updating
+    them therefore declares the new window established, which is Jacob's call,
+    not test maintenance. The thinness guard is
+    `refresh._refuse_community_collapse`; the 2026-11-04 incident was caught by
+    the tests pinning god NAMES, not by this one.
+
+    `matches_analyzed` and `window_end` were pinned here too until 2026-11-07,
+    and those two move on EVERY refresh — 2,859 and 11-06 on the 11-06 table,
+    4,089 and 11-07 on the 11-07 one, same window — so with the daily data
+    arriving as a pull request they would have blocked every day's data, not
+    just the boundary's. They are invariants now (`live_window.py` has the
+    convention and the evidence). What the pins caught and these still catch:
+    a null or empty field (the god index failed and nothing carried the
+    provenance), a count or end date from an older read of the window, an end
+    before the start, an end in the future. What no single-file test can
+    catch, a fall between two consecutive refreshes that stays above the
+    declared floor, belongs at the write next to the collapse refusal."""
     table = json.loads((refresh.DATA_ROOT / refresh.COMMUNITY_ITEMS_FILE)
                        .read_text(encoding="utf-8"))
     assert table["window"] == "ob47"
-    assert table["matches_analyzed"] == 2859
     assert table["window_start"] == "2026-11-03"
-    assert table["window_end"] == "2026-11-06"
+    # DAILY: invariants, not values.
+    matches, end = table["matches_analyzed"], table["window_end"]
+    assert isinstance(matches, int) and not isinstance(matches, bool), matches
+    assert matches >= DECLARED_MATCHES_FLOOR, (
+        f"{matches} matches is below the {DECLARED_MATCHES_FLOOR} this window "
+        "already had when it was declared; the window only grows")
+    assert isinstance(end, str) and len(end) == 10 and date.fromisoformat(end), end
+    assert table["window_start"] <= end, (table["window_start"], end)
+    assert end >= DECLARED_WINDOW_END_FLOOR, (end, DECLARED_WINDOW_END_FLOOR)
+    assert end <= live_window.latest_plausible_day(), end
