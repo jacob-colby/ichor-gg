@@ -282,11 +282,14 @@ describe("App — chrome", () => {
     expect(window.location.hash).toBe("#/");
   });
 
-  it("shows the data-freshness stamp as relative text with the absolute date on hover", async () => {
+  // Exact text against a pinned clock is in AppNav.test; this is the wiring.
+  it("shows the data-freshness stamp compactly, with the sentence and the absolute date on hover", async () => {
     render(<App />);
     const freshness = await screen.findByTestId("header-freshness");
-    expect(freshness.textContent).toMatch(/^Updated /i);
-    expect(freshness).toHaveAttribute("title", "2026-07-19");
+    const [shown, spoken] = Array.from(freshness.children);
+    expect(shown.textContent).toMatch(/^Updated (today|\d+(d|w|mo))$/);
+    expect(spoken.textContent).toMatch(/^Updated /);
+    expect(freshness.getAttribute("title")).toMatch(/^Updated .+ \(2026-07-19\)$/);
   });
 
   it("omits the freshness stamp entirely when data_updated is missing", async () => {
@@ -303,13 +306,17 @@ describe("App — chrome", () => {
       ok: true, json: () => Promise.resolve({ ...data, data_patch: "Open Beta 39" }),
     }));
     const freshness = await (render(<App />), screen.findByTestId("header-freshness"));
-    expect(freshness.textContent).toMatch(/^Updated .+ · Open Beta 39$/);
+    const [shown, spoken] = Array.from(freshness.children);
+    expect(shown.textContent).toMatch(/^OB39 · (today|\d+(d|w|mo))$/);
+    expect(spoken.textContent).toMatch(/^Updated .+ · Open Beta 39$/);
+    expect(freshness.getAttribute("title")).toMatch(/ · Open Beta 39$/);
   });
 
   it("omits the patch clause from the header stamp cleanly when data_patch is absent", async () => {
     render(<App />);
     const freshness = await screen.findByTestId("header-freshness");
     expect(freshness.textContent).not.toContain("·");
+    expect(freshness.getAttribute("title")).not.toContain("·");
   });
 
   it("shows a layout-shaped skeleton (not a bare Loading… string) before data arrives", () => {
@@ -337,6 +344,8 @@ describe("App — chrome", () => {
     const dialog = await screen.findByRole("dialog");
     expect(dialog).toHaveAccessibleName(/how this works/i);
     expect(within(dialog).getByText(/not affiliated with Hi-Rez/i)).toBeInTheDocument();
+    // The bar shows only "OB47 · 1d"; the sentence must not be hover-only.
+    expect(within(dialog).getByTestId("legend-freshness").textContent).toMatch(/^Updated .+ \(2026-07-19\)\. $/);
   });
 
   // 43px of every screen, forever, for something you read once.
@@ -421,19 +430,36 @@ describe("App — the command field on desktop", () => {
     await waitFor(() => expect(window.location.hash).toBe("#/items/Rage"));
   });
 
-  /* The open field widens over the reading links and landed on the freshness
-   * stamp at 1280–1500px. index.css hides `.stamp` inside a nav holding an
-   * open field (`nav:has([data-command-open])`); jsdom can't evaluate `:has`,
-   * so this pins the two hooks the rule depends on. */
-  it("marks itself open so the freshness stamp can step aside", async () => {
+  /* The open field covers the whole middle of the bar — search, reading links
+   * and stamp — and everything else in it steps aside. A fixed 640px open
+   * width (until 2026-11-07) ended part-way across the links: Patch notes'
+   * tail and Method showed beside Go at 1280–1920px, and at 1024px on a long
+   * god name it ran onto Help. jsdom has no layout and can't evaluate the
+   * `:has` rule in index.css, so this pins the contract the geometry rests on
+   * (the geometry itself was measured in a browser, numbers in the PR):
+   * the field opens to `100cqw` of the middle, which is the size container,
+   * and every other control in the middle carries `under-field`. */
+  it("opens over the whole middle of the bar, and everything else in it steps aside", async () => {
     atUrl(toHash.god("Chiron"));
     render(<App />);
     const field = await barField();
-    const stamp = screen.getByTestId("header-freshness");
-    expect(stamp).toHaveClass("stamp");
-    expect(screen.getByRole("navigation", { name: "Main" }).querySelector("[data-command-open]")).toBeNull();
+    const nav = screen.getByRole("navigation", { name: "Main" });
+    const middle = within(nav).getByTestId("nav-middle");
+    const root = within(nav).getByTestId("command-bar");
+    expect(middle).toHaveClass("@container/bar");
+    expect(middle).toContainElement(root);
+    expect(root).toHaveClass("w-full");
+    expect(root).not.toHaveAttribute("data-command-open");
+    const others = Array.from(middle.querySelectorAll("a, button, [data-testid='header-freshness']"))
+      .filter((e) => !root.contains(e));
+    expect(others.length).toBeGreaterThanOrEqual(5); // four reading links and the stamp
+    others.forEach((e) => expect(e).toHaveClass("under-field"));
+    expect(middle).not.toContainElement(within(nav).getByRole("button", { name: "Help and credits" }));
+
     fireEvent.change(field, { target: { value: "chi" } });
-    await waitFor(() => expect(screen.getByRole("navigation", { name: "Main" }).querySelector("[data-command-open]")).not.toBeNull());
+    await waitFor(() => expect(root).toHaveAttribute("data-command-open"));
+    expect(root).toHaveClass("w-[100cqw]");
+    expect(root).not.toHaveClass("w-full");
   });
 
   it("focuses the field on / and on Ctrl+K or Cmd+K, but not while typing elsewhere", async () => {

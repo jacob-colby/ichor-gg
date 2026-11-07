@@ -22,6 +22,7 @@ import { gridFilterText, queryHash, serializeQuery, type ParsedQuery } from "./c
 import { clearRecents, pushRecent, readRecents } from "./components/command/recents";
 import { useDraft, MODE_TEAM_SIZE } from "./lib/draft";
 import { flushQuery, hashQuery } from "./lib/urlState";
+import { freshness } from "./lib/freshness";
 import { useHashRoute, toHash } from "./lib/useHashRoute";
 import { documentTitle } from "./lib/documentTitle";
 import type { CuratedBuildEntry } from "./types";
@@ -257,7 +258,8 @@ function App() {
         )}
       </main>
 
-      {legendOpen && <Legend onClose={() => setLegendOpen(false)} />}
+      {legendOpen && <Legend onClose={() => setLegendOpen(false)}
+        freshness={freshness(data.data_updated, data.data_patch)?.title} />}
       {isDev && addOpen && (
         <AddGodModal roster={data.roster ?? []} tracked={data.gods.map((g) => g.name)}
           onAdd={addGod} onClose={() => setAddOpen(false)} />

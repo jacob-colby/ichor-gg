@@ -13,7 +13,13 @@ function Swatch({ className }: { className: string }) {
  * real dialog now: focus moves in, Tab is trapped, Escape and the backdrop
  * close it, and focus returns to whatever opened it.
  */
-export function Legend({ onClose }: { onClose: () => void }) {
+export function Legend({ onClose, freshness }: {
+  onClose: () => void;
+  /** The data-freshness sentence ("Updated yesterday (2026-11-06) · Open
+   *  Beta 47"). The desktop bar shows only "OB47 · 1d"; the whole sentence is
+   *  here so it is never hover-only. */
+  freshness?: string;
+}) {
   const panelRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -116,6 +122,7 @@ export function Legend({ onClose }: { onClose: () => void }) {
             permanent chrome for a disclaimer you read once. It lives here now,
             where someone actually looking for it will look. */}
         <p className="mt-4 border-t border-line pt-3 text-small leading-relaxed text-faint">
+          {freshness && <span data-testid="legend-freshness">{freshness}. </span>}
           Build data derived from{" "}
           <a href="https://wiki.smite2.com" target="_blank" rel="noreferrer"
             className="underline decoration-line-strong underline-offset-2 hover:text-muted">wiki.smite2.com</a>
