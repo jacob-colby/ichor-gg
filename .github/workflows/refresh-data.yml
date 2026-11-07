@@ -57,7 +57,22 @@ jobs:
     # candidate if one of them turns a check red.
     timeout-minutes: 120
     steps:
+      # `persist-credentials: false` so NO push credential is left in
+      # .git/config for the rest of the job. The alternative is handing
+      # checkout the PAT, which is the conventional shape and works, but it
+      # leaves a long-lived token readable by everything that runs afterwards
+      # — and what runs afterwards is `pip install -r requirements.txt` plus
+      # up to two hours of third-party fetching. The capability is not the
+      # worry, since this job's GITHUB_TOKEN already carries contents and
+      # pull-requests write; the LIFETIME is. A leaked GITHUB_TOKEN dies with
+      # the run, a leaked PAT lives until someone revokes it. So the PAT is
+      # used at the one point that needs it, the push, and nowhere else.
+      #
+      # The later `git fetch origin "$BRANCH"` still works unauthenticated
+      # because this repository is public.
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-python@v5
         with:
@@ -245,11 +260,20 @@ jobs:
       #      checks either. This is the wall the nightly-refresh work already
       #      hit, and a hand-dispatched run does not satisfy the ruleset.
       #
-      # THE FIX IS A TOKEN, and it is Jacob's to make: a fine-grained PAT or a
-      # GitHub App token scoped to this repository with contents and
-      # pull-requests write, stored as a secret and used here for BOTH the
-      # push and `gh pr create`. There are no repository secrets configured at
-      # all today, so there is nothing to swap in yet. Plus "Allow auto-merge".
+      # THE FIX IS A TOKEN, and this file is now wired for it: `REFRESH_PAT`,
+      # a fine-grained PAT scoped to this repository alone with Contents and
+      # Pull requests at read/write and no Workflows permission, since the
+      # refresh never edits a workflow file. It is used for BOTH the push and
+      # `gh`, because `opened` and `synchronize` are both `pull_request`
+      # events and GITHUB_TOKEN suppresses the run for either. "Allow
+      # auto-merge" has to be on as well.
+      #
+      # WITHOUT THE SECRET THIS STILL RUNS. The step falls back to
+      # GITHUB_TOKEN, pushes, opens the PR anyway so the day's data is not
+      # thrown away, skips arming auto-merge because a checkless PR can never
+      # satisfy it, and the last step fails the run saying which of the two
+      # things is missing. As of 2026-11-07 the repository had no secrets at
+      # all, so that is the live path until `REFRESH_PAT` exists.
       #
       # UNTIL THEN THIS RUN STILL GOES RED, deliberately: the last step fails
       # the run whenever the day's data did not reach main. A warning alone
@@ -267,7 +291,11 @@ jobs:
       - name: Open a pull request if anything moved
         id: data_pr
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Both, so the step can tell whether the PAT exists and degrade
+          # gracefully rather than dying on an empty credential. GitHub masks
+          # either value if it reaches the log.
+          REFRESH_PAT: ${{ secrets.REFRESH_PAT }}
+          FALLBACK_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
@@ -313,7 +341,28 @@ jobs:
           Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
           MSG
           fi
-          git push -q origin "HEAD:$BRANCH"
+          # WHICH TOKEN PUSHES DECIDES WHETHER THE PR GETS CHECKS AT ALL.
+          # The `pull_request` events that start `tests.yml` are `opened`,
+          # from `gh pr create`, and `synchronize`, from this push on a
+          # same-day re-run. GitHub starts no workflow run for either when
+          # GITHUB_TOKEN caused it, so both have to be the PAT.
+          #
+          # With no PAT we still push and still open the PR, with
+          # GITHUB_TOKEN, because the day's data surviving on a branch beats
+          # losing it. That PR just gets no checks and so cannot be merged,
+          # which the last step reports as a failure.
+          if [ -n "${REFRESH_PAT:-}" ]; then
+            TOKEN="$REFRESH_PAT"
+            echo "token=pat" >> "$GITHUB_OUTPUT"
+          else
+            TOKEN="$FALLBACK_TOKEN"
+            echo "token=github_token" >> "$GITHUB_OUTPUT"
+            echo "::warning::REFRESH_PAT is not set, so this PR will get no checks and cannot be merged. Pushing with GITHUB_TOKEN anyway so the day's data is not lost."
+          fi
+          export GH_TOKEN="$TOKEN"
+          git push -q \
+            "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "HEAD:$BRANCH"
 
           if ! NUM=$(gh pr view "$BRANCH" --json number --jq .number 2>/dev/null); then
             gh pr create --base main --head "$BRANCH" \
@@ -330,7 +379,12 @@ jobs:
           # `--merge` and not `--squash`: every merge on main in this
           # repository is a merge commit, and a data PR should read the same
           # as the ones a person opens.
-          if gh pr merge "$NUM" --auto --merge >/dev/null 2>&1; then
+          if [ -z "${REFRESH_PAT:-}" ]; then
+            # No point arming auto-merge on a PR that can never get a check.
+            echo "landed=stuck" >> "$GITHUB_OUTPUT"
+            echo "#$NUM holds today's data and has no checks, because REFRESH_PAT is not set. See the last step." \
+              >> "$GITHUB_STEP_SUMMARY"
+          elif gh pr merge "$NUM" --auto --merge >/dev/null 2>&1; then
             echo "landed=armed" >> "$GITHUB_OUTPUT"
             echo "Auto-merge armed on #$NUM; it lands when the suite passes." \
               >> "$GITHUB_STEP_SUMMARY"
@@ -368,6 +422,16 @@ jobs:
       # `landed` output at all.
       - name: Fail the run if today's data is stuck in a PR
         if: steps.data_pr.outputs.landed == 'stuck'
+        # Through `env` rather than interpolated into the script. The value is
+        # one of two literals this workflow writes, so nothing can be injected
+        # today, but a step output is data and data does not belong in the
+        # middle of a shell command.
+        env:
+          TOKEN_KIND: ${{ steps.data_pr.outputs.token }}
         run: |
-          echo "::error::Today's data is in a pull request that cannot be merged. Two things are needed, both outside this repository's code: a fine-grained PAT or GitHub App token with contents and pull-requests write, stored as a secret and used by the 'Open a pull request' step for the push and for gh pr create (GITHUB_TOKEN cannot trigger the required checks, so the PR never gets any); and 'Allow auto-merge' turned on. See that step's comment."
+          if [ "$TOKEN_KIND" = "github_token" ]; then
+            echo "::error::Today's data is in a pull request with NO checks, so nobody can merge it. The REFRESH_PAT secret is not set. Create a fine-grained PAT scoped to this repository with Contents and Pull requests at read/write, store it as REFRESH_PAT, and this workflow will use it for both the push and gh. GITHUB_TOKEN cannot trigger the required checks, which is why the fallback cannot land data."
+          else
+            echo "::error::Today's data is in a pull request that could not be set to auto-merge. REFRESH_PAT is set, so the likely cause is that 'Allow auto-merge' is off in the repository settings. Turn it on and the next run lands by itself; this PR can be merged by hand once its checks pass."
+          fi
           exit 1
