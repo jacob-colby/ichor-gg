@@ -226,14 +226,44 @@ jobs:
       # entity still fails the run at the steps below, exactly as before, and
       # still does not cost the day's community numbers: they are in the PR.
       #
-      # AND TODAY IT DOES NOT LAND BY ITSELF. `allow_auto_merge` is FALSE on
-      # this repository, checked 2026-11-07, so the arm below fails every run
-      # and the warning fires every run: a PR a day, each needing a click.
-      # That is deliberate rather than hidden, and it is strictly better than
-      # the silent failure it replaces, but it is not automation yet. Turning
-      # on "Allow auto-merge" in the repository settings is the whole fix and
-      # needs no change here: the day's data then lands as soon as the suite
-      # passes, which is the gate a direct push to main never had.
+      # AND TODAY IT CANNOT LAND AT ALL. TWO THINGS BLOCK IT, BOTH OUTSIDE
+      # THIS FILE, AND THE SECOND IS THE ONE THAT BITES.
+      #
+      #   1. `allow_auto_merge` is FALSE on this repository (checked through
+      #      the API, 2026-11-07), so the arm below fails on every run.
+      #
+      #   2. GITHUB_TOKEN CANNOT TRIGGER THE CHECKS THE RULESET DEMANDS.
+      #      GitHub does not start workflow runs for events caused by
+      #      `secrets.GITHUB_TOKEN`; `workflow_dispatch` and
+      #      `repository_dispatch` are the only exceptions. So the PR this
+      #      step opens gets no `pull_request` run, "Pipeline suite" and
+      #      "Viewer suite and build" stay expected rather than passing, and
+      #      the `main` ruleset has ZERO bypass actors — so that PR is
+      #      unmergeable by auto-merge AND by hand, by anyone, Jacob
+      #      included. A same-day re-run does not help: its push is a
+      #      `synchronize` event from the same token, so the new head gets no
+      #      checks either. This is the wall the nightly-refresh work already
+      #      hit, and a hand-dispatched run does not satisfy the ruleset.
+      #
+      # THE FIX IS A TOKEN, and it is Jacob's to make: a fine-grained PAT or a
+      # GitHub App token scoped to this repository with contents and
+      # pull-requests write, stored as a secret and used here for BOTH the
+      # push and `gh pr create`. There are no repository secrets configured at
+      # all today, so there is nothing to swap in yet. Plus "Allow auto-merge".
+      #
+      # UNTIL THEN THIS RUN STILL GOES RED, deliberately: the last step fails
+      # the run whenever the day's data did not reach main. A warning alone
+      # would have turned a loud daily failure into a green run with a note,
+      # which is how the direct-push failure went unnoticed for three days in
+      # the first place. What this change buys before the token exists is that
+      # the day's data survives on a branch and in a PR instead of being
+      # thrown away, and that the run says exactly why it is red.
+      #
+      # ONE MORE THING WILL SURFACE ONCE THE TOKEN LANDS. Every refresh PR
+      # will then face the full suite, so any test pinning a window-dependent
+      # value (the four OB46 pins #117 had to move, and the viewer counts)
+      # will block the day's data at each window reset. That is the next
+      # blocker after the token, not a reason to delay the token.
       - name: Open a pull request if anything moved
         id: data_pr
         env:
@@ -297,12 +327,16 @@ jobs:
           fi
           echo "number=$NUM" >> "$GITHUB_OUTPUT"
 
-          if gh pr merge "$NUM" --auto --squash >/dev/null 2>&1; then
+          # `--merge` and not `--squash`: every merge on main in this
+          # repository is a merge commit, and a data PR should read the same
+          # as the ones a person opens.
+          if gh pr merge "$NUM" --auto --merge >/dev/null 2>&1; then
+            echo "landed=armed" >> "$GITHUB_OUTPUT"
             echo "Auto-merge armed on #$NUM; it lands when the suite passes." \
               >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "::warning::Auto-merge could not be armed on #$NUM. The day's data is in that PR and is NOT on main until someone merges it."
-            echo "#$NUM is open and needs a merge: auto-merge could not be armed." \
+            echo "landed=stuck" >> "$GITHUB_OUTPUT"
+            echo "#$NUM holds today's data and CANNOT be merged yet. See the last step." \
               >> "$GITHUB_STEP_SUMMARY"
           fi
 
@@ -321,4 +355,19 @@ jobs:
         if: steps.new_entities.outputs.rejected == 'true'
         run: |
           echo "::error::A new god or item was left out by the gate; see the 'Add new gods and items' step and data/_new_entities.json."
+          exit 1
+
+      # THE RUN IS RED WHENEVER THE DAY'S DATA DID NOT REACH MAIN, and that is
+      # the point. The direct push this replaced failed loudly and was still
+      # missed for three days; a green run with a warning attached would be
+      # easier to miss, not harder. So the data being stuck is a failure, with
+      # the two causes named, and the PR number is in the job summary so the
+      # day's work is one click away rather than lost.
+      #
+      # This step does nothing on a day when nothing moved: that path sets no
+      # `landed` output at all.
+      - name: Fail the run if today's data is stuck in a PR
+        if: steps.data_pr.outputs.landed == 'stuck'
+        run: |
+          echo "::error::Today's data is in a pull request that cannot be merged. Two things are needed, both outside this repository's code: a fine-grained PAT or GitHub App token with contents and pull-requests write, stored as a secret and used by the 'Open a pull request' step for the push and for gh pr create (GITHUB_TOKEN cannot trigger the required checks, so the PR never gets any); and 'Allow auto-merge' turned on. See that step's comment."
           exit 1
