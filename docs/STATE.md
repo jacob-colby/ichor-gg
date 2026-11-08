@@ -2435,7 +2435,10 @@ shipped **off**. Numbers are in the named module.
     aspect tooltip, an in-game reading into `_combat_observations.yaml`), not
     more code here. The cheapest second RULE is a removal, "<ability> no
     longer has <Stat> Scaling". The note can price that, and it fires on Pele
-    alone today.
+    alone today. **2026-11-08: a second SOURCE exists, and it needs no
+    numbers.** What aspect PLAYERS buy, and which role they take the aspect
+    into, is now recorded per match (§5, "The per-aspect community record").
+    It changes nothing in this entry: no overlay reads it.
 
     **REVISIT IF** either test in `test_aspect_kit.py` turns red:
     `test_only_tsukuyomi_has_a_derivable_aspect_sentence` (a refresh adds
@@ -2486,6 +2489,42 @@ printed stats once the fit priced passives (87 of 193 items short, up to
 so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
+
+### The per-aspect community record exists; no aspect build reads it yet (2026-11-08)
+What aspect players BUY, from SmiteBrain's per-match feed (the tRPC call
+behind "More Builds", which paginates; the `__data.json` page never does).
+Verified first: placement 1 is the win (mirror test 14/14, the site's own
+colouring, and feed shares tracking `matches_won` on both sides of 50%); the
+feed holds ~85% of the aggregate's matches; retention is ~45 days. The store is
+`data/Analysis/aspect_matches/` — append-only, in git, no player names, the
+match GUID hashed — backfilled for OB46 and OB47 (15,699 matches, 86 feeds;
+the full 45 days was over the session's time limit, `complete_from` records
+the cutoff), and the daily job adds ~217 requests to keep it. Each Conquest
+note gains `community_aspects`: newest window, else the last closed, under the
+tier list's own 30-match floor; a role shift named on a Wilson bound. It is
+kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
+
+**65 of 86 aspects clear the floor, and 32 of those 65 are played in a
+different role from the god's base role** — Bacchus' Revelry 87% Solo on a
+Support, Izanami's Sickle 70% Mid on a Carry. **Tsukuyomi's Mangetsu does not
+clear it** (OB47 6, OB46 21; pooled over 45 days, 73 matches, 56% Mid, 28
+players of whom one played 30%), so his entry is a stated `below minimum`.
+Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role shifts.
+
+**Next, and it is a MODEL change:** an aspect build cannot change role through
+today's seam. An overlay carries only stat weights; `fit_map` reads the role
+from the god note, and §4.33 measured how narrow that channel is. A variant god
+whose `role` comes from the entry's `role_shift` is the smallest seam that
+could carry it; for a god that is not a hybrid scaler the damage filter must
+move too. `model_audit heldout` cannot see any aspect build, so the frozen
+reference builds are the only gate. Numbers, the full depth table and the
+proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
+`aspect_matches`' docstring.
+
+**A lead for the draft feature, not built on:** every stored match carries its
+five enemy gods and the outcome — 78,495 god-vs-god outcome pairs on
+2026-11-08, ~8,000 more a day, skewed to aspect players. SmiteBrain also has a
+`/gods/[godSlug]/matchups` route, not probed.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
@@ -3573,6 +3612,15 @@ Links come from the Steam post (`official_url` on the row) and
 session that wrote `patch_feed` could not reach Steam; its fixture is
 constructed. Gods are still not snapshotted. The rules and reasons are in the
 `snapshots.py` and `patch_feed.py` docstrings.
+
+**The per-aspect match store is append-only and lives in git**
+(`data/Analysis/aspect_matches/`, 2026-11-08). `python -m smite.aspect_matches
+refresh` is the daily job's step: it validates every page before writing
+anything (`FeedCollapse`), and a refusal sets the step's `rejected` output and
+turns the run red at the end, without costing the day's other data — the next
+run walks back over the gap. `derive` rewrites the Conquest notes'
+`community_aspects` from the store; `depth` prints gods × windows. Rules and
+evidence are in the module docstring.
 
 **The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
 buildable item with passive text, classes per clause, `priced` per clause;
