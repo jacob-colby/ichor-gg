@@ -1,0 +1,536 @@
+{
+ "aspects": {
+  "achilles": [
+   {
+    "name": "Aspect of Prowess",
+    "value": "aspect-of-prowess"
+   }
+  ],
+  "agni": [
+   {
+    "name": "Aspect of Combustion",
+    "value": "aspect-of-combustion"
+   }
+  ],
+  "ah-puch": [
+   {
+    "name": "Aspect of the Death March",
+    "value": "aspect-of-the-death-march"
+   }
+  ],
+  "aladdin": [],
+  "amaterasu": [
+   {
+    "name": "Aspect Of Valor",
+    "value": "aspect-of-valor"
+   }
+  ],
+  "anhur": [
+   {
+    "name": "Aspect of Pride",
+    "value": "aspect-of-pride"
+   }
+  ],
+  "anubis": [],
+  "aphrodite": [
+   {
+    "name": "Aspect of Heartbreak",
+    "value": "aspect-of-heartbreak"
+   }
+  ],
+  "apollo": [
+   {
+    "name": "Aspect of Harmony",
+    "value": "aspect-of-harmony"
+   }
+  ],
+  "ares": [
+   {
+    "name": "Aspect of Reverberation",
+    "value": "aspect-of-reverberation"
+   }
+  ],
+  "artemis": [
+   {
+    "name": "Aspect of the Wild",
+    "value": "aspect-of-the-wild"
+   }
+  ],
+  "artio": [
+   {
+    "name": "Aspect of the Denmother",
+    "value": "aspect-of-the-denmother"
+   }
+  ],
+  "athena": [
+   {
+    "name": "Aspect of War",
+    "value": "aspect-of-war"
+   }
+  ],
+  "atlas": [
+   {
+    "name": "Aspect of the Unburdened",
+    "value": "aspect-of-the-unburdened"
+   }
+  ],
+  "awilix": [],
+  "bacchus": [
+   {
+    "name": "Aspect of Revelry",
+    "value": "aspect-of-revelry"
+   }
+  ],
+  "baron-samedi": [
+   {
+    "name": "Aspect of Hysteria",
+    "value": "aspect-of-hysteria"
+   }
+  ],
+  "bastet": [
+   {
+    "name": "Aspect of the Watchful Pride",
+    "value": "aspect-of-the-watchful-pride"
+   }
+  ],
+  "bellona": [
+   {
+    "name": "Aspect of Vindication",
+    "value": "aspect-of-vindication"
+   }
+  ],
+  "cabrakan": [
+   {
+    "name": "Aspect of the Rotund Jotunn",
+    "value": "aspect-of-the-rotund-jotunn"
+   }
+  ],
+  "cerberus": [
+   {
+    "name": "Aspect of Souls",
+    "value": "aspect-of-souls"
+   }
+  ],
+  "cernunnos": [
+   {
+    "name": "Aspect of Strife",
+    "value": "aspect-of-strife"
+   }
+  ],
+  "chaac": [
+   {
+    "name": "Aspect of Fulmination",
+    "value": "aspect-of-fulmination"
+   }
+  ],
+  "charon": [
+   {
+    "name": "Aspect of the Tollkeeper",
+    "value": "aspect-of-the-tollkeeper"
+   }
+  ],
+  "chiron": [
+   {
+    "name": "Aspect of the Heroic Tutor",
+    "value": "aspect-of-the-heroic-tutor"
+   }
+  ],
+  "chronos": [
+   {
+    "name": "Aspect of Relativity",
+    "value": "aspect-of-relativity"
+   }
+  ],
+  "cu-chulainn": [
+   {
+    "name": "Aspect of the Warped",
+    "value": "aspect-of-the-warped"
+   }
+  ],
+  "cupid": [
+   {
+    "name": "Aspect of Love",
+    "value": "aspect-of-love"
+   }
+  ],
+  "da-ji": [
+   {
+    "name": "Aspect of Ferocity",
+    "value": "aspect-of-ferocity"
+   }
+  ],
+  "danzaburou": [
+   {
+    "name": "Aspect of Fellowship",
+    "value": "aspect-of-fellowship"
+   }
+  ],
+  "discordia": [
+   {
+    "name": "Aspect of the Gilded Victor",
+    "value": "aspect-of-the-gilded-victor"
+   }
+  ],
+  "eset": [
+   {
+    "name": "Aspect of the Lifewarden",
+    "value": "aspect-of-the-lifewarden"
+   }
+  ],
+  "fenrir": [
+   {
+    "name": "Aspect of Loyalty",
+    "value": "aspect-of-loyalty"
+   }
+  ],
+  "ganesha": [
+   {
+    "name": "Aspect of the Triumphant",
+    "value": "aspect-of-the-triumphant"
+   }
+  ],
+  "geb": [
+   {
+    "name": "Aspect of Calamity",
+    "value": "aspect-of-calamity"
+   }
+  ],
+  "gilgamesh": [
+   {
+    "name": "Aspect of Shamash",
+    "value": "aspect-of-shamash"
+   }
+  ],
+  "guan-yu": [
+   {
+    "name": "Aspect of the General",
+    "value": "aspect-of-the-general"
+   }
+  ],
+  "hachiman": [
+   {
+    "name": "Aspect of the Steel Wind",
+    "value": "aspect-of-the-steel-wind"
+   }
+  ],
+  "hades": [],
+  "hecate": [
+   {
+    "name": "Aspect of Ruin",
+    "value": "aspect-of-ruin"
+   }
+  ],
+  "hel": [
+   {
+    "name": "Aspect of Divergence",
+    "value": "aspect-of-divergence"
+   }
+  ],
+  "hercules": [
+   {
+    "name": "Aspect of Preservation",
+    "value": "aspect-of-preservation"
+   }
+  ],
+  "horus": [
+   {
+    "name": "Aspect of the Falcon",
+    "value": "aspect-of-the-falcon"
+   }
+  ],
+  "hou-yi": [
+   {
+    "name": "Aspect of the Mark",
+    "value": "aspect-of-the-mark"
+   }
+  ],
+  "hua-mulan": [],
+  "hun-batz": [
+   {
+    "name": "Aspect of Disruption",
+    "value": "aspect-of-disruption"
+   }
+  ],
+  "ishtar": [
+   {
+    "name": "Aspect of the Passionate Storm",
+    "value": "aspect-of-the-passionate-storm"
+   }
+  ],
+  "ix-chel": [
+   {
+    "name": "Aspect of the Mother's Light",
+    "value": "aspect-of-the-mothers-light"
+   }
+  ],
+  "izanami": [
+   {
+    "name": "Aspect of the Sickle",
+    "value": "aspect-of-the-sickle"
+   }
+  ],
+  "janus": [],
+  "jing-wei": [],
+  "jormungandr": [
+   {
+    "name": "Aspect of the Unyielding",
+    "value": "aspect-of-the-unyielding"
+   }
+  ],
+  "kali": [
+   {
+    "name": "Aspect of Unbound Destruction",
+    "value": "aspect-of-unbound-destruction"
+   }
+  ],
+  "khepri": [
+   {
+    "name": "Aspect of Laceration",
+    "value": "aspect-of-laceration"
+   }
+  ],
+  "kukulkan": [
+   {
+    "name": "Aspect of the Squall",
+    "value": "aspect-of-the-squall"
+   }
+  ],
+  "kuzenbo": [
+   {
+    "name": "Aspect of Spirits",
+    "value": "aspect-of-spirits"
+   }
+  ],
+  "loki": [
+   {
+    "name": "Aspect of Agony",
+    "value": "aspect-of-agony"
+   }
+  ],
+  "medusa": [],
+  "mercury": [],
+  "merlin": [
+   {
+    "name": "Aspect of Pandemonium",
+    "value": "aspect-of-pandemonium"
+   }
+  ],
+  "mordred": [
+   {
+    "name": "Aspect of Rage",
+    "value": "aspect-of-rage"
+   }
+  ],
+  "morgan-le-fay": [
+   {
+    "name": "Aspect of the Cursed Crown",
+    "value": "aspect-of-the-cursed-crown"
+   }
+  ],
+  "ne-zha": [
+   {
+    "name": "Aspect of Righteous Flame",
+    "value": "aspect-of-righteous-flame"
+   }
+  ],
+  "neith": [
+   {
+    "name": "Aspect of Wind",
+    "value": "aspect-of-wind"
+   }
+  ],
+  "nemesis": [
+   {
+    "name": "Aspect of Justice",
+    "value": "aspect-of-justice"
+   }
+  ],
+  "nike": [
+   {
+    "name": "Aspect of Victorious Conquest",
+    "value": "aspect-of-victorious-conquest"
+   }
+  ],
+  "nox": [
+   {
+    "name": "Aspect of Silent Night",
+    "value": "aspect-of-silent-night"
+   }
+  ],
+  "nu-wa": [
+   {
+    "name": "Aspect of Shining Mist",
+    "value": "aspect-of-shining-mist"
+   }
+  ],
+  "nut": [
+   {
+    "name": "Aspect of the Cosmos",
+    "value": "aspect-of-the-cosmos"
+   }
+  ],
+  "odin": [],
+  "osiris": [
+   {
+    "name": "Aspect of the Fragmented",
+    "value": "aspect-of-the-fragmented"
+   }
+  ],
+  "pele": [
+   {
+    "name": "Aspect of Obsidian",
+    "value": "aspect-of-obsidian"
+   }
+  ],
+  "poseidon": [
+   {
+    "name": "Aspect of the Trident",
+    "value": "aspect-of-the-trident"
+   }
+  ],
+  "princess-bari": [],
+  "ra": [
+   {
+    "name": "Aspect of Thermotherapy",
+    "value": "aspect-of-thermotherapy"
+   }
+  ],
+  "rama": [
+   {
+    "name": "Aspect of Precision",
+    "value": "aspect-of-precision"
+   }
+  ],
+  "ratatoskr": [
+   {
+    "name": "Aspect of the Thickbark",
+    "value": "aspect-of-the-thickbark"
+   }
+  ],
+  "ravana": [
+   {
+    "name": "Aspect of the Rakshasa King",
+    "value": "aspect-of-the-rakshasa-king"
+   }
+  ],
+  "scylla": [
+   {
+    "name": "Aspect of the Devourer",
+    "value": "aspect-of-the-devourer"
+   }
+  ],
+  "sobek": [
+   {
+    "name": "Aspect of Prey",
+    "value": "aspect-of-prey"
+   }
+  ],
+  "sol": [
+   {
+    "name": "Aspect of Conflagration",
+    "value": "aspect-of-conflagration"
+   }
+  ],
+  "sun-wukong": [
+   {
+    "name": "Aspect of Transformation",
+    "value": "aspect-of-transformation"
+   }
+  ],
+  "susano": [
+   {
+    "name": "Aspect of the Storm Front",
+    "value": "aspect-of-the-storm-front"
+   }
+  ],
+  "sylvanus": [
+   {
+    "name": "Aspect of Grover's Wrath",
+    "value": "aspect-of-grovers-wrath"
+   }
+  ],
+  "thanatos": [
+   {
+    "name": "Aspect of Reaping",
+    "value": "aspect-of-reaping"
+   }
+  ],
+  "the-morrigan": [
+   {
+    "name": "Aspect of Agony",
+    "value": "aspect-of-agony"
+   },
+   {
+    "name": "Aspect of Laceration",
+    "value": "aspect-of-laceration"
+   },
+   {
+    "name": "Aspect of Mischief",
+    "value": "aspect-of-mischief"
+   },
+   {
+    "name": "Aspect of Spirits",
+    "value": "aspect-of-spirits"
+   },
+   {
+    "name": "Aspect of Thunderstruck",
+    "value": "aspect-of-thunderstruck"
+   },
+   {
+    "name": "Aspect of Victorious Conquest",
+    "value": "aspect-of-victorious-conquest"
+   }
+  ],
+  "thor": [
+   {
+    "name": "Aspect of Thunderstruck",
+    "value": "aspect-of-thunderstruck"
+   }
+  ],
+  "tsukuyomi": [
+   {
+    "name": "Aspect of Mangetsu",
+    "value": "aspect-of-mangetsu"
+   }
+  ],
+  "ullr": [],
+  "vulcan": [
+   {
+    "name": "Aspect of Fortification",
+    "value": "aspect-of-fortification"
+   }
+  ],
+  "xbalanque": [
+   {
+    "name": "Aspect of the Nightstalker",
+    "value": "aspect-of-the-nightstalker"
+   }
+  ],
+  "xing-tian": [
+   {
+    "name": "Aspect of Relentless Spite",
+    "value": "aspect-of-relentless-spite"
+   }
+  ],
+  "yemoja": [
+   {
+    "name": "Aspect of Downpour",
+    "value": "aspect-of-downpour"
+   }
+  ],
+  "ymir": [],
+  "zeus": []
+ },
+ "complete_from": "2026-10-20T11:48:48.610Z",
+ "division": "obsidian",
+ "windows": {
+  "ob46": {
+   "end": "2026-11-03T11:28:02.357Z",
+   "start": "2026-10-20T11:48:48.610Z"
+  },
+  "ob47": {
+   "end": "2026-11-08T20:22:04.330Z",
+   "start": "2026-11-03T11:30:13.083Z"
+  }
+ }
+}
