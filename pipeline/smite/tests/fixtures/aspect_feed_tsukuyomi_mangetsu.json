@@ -1,0 +1,784 @@
+{
+ "result": {
+  "data": {
+   "builds": [
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-07T05:44:58.700Z",
+     "hz_match_guid": "491a8e18-8141-4125-a7c1-8dffc96e66fe",
+     "played_role": "Mid",
+     "player_finishing_rank": 5333,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Ancient Signet",
+       "detail_href": "/items/ancient-signet",
+       "icon_hash": "b770b63e"
+      },
+      "2": {
+       "item_name": "Chronos' Pendant",
+       "detail_href": "/items/chronos-pendant",
+       "icon_hash": "6e496a2a"
+      },
+      "3": {
+       "item_name": "Divine Ruin",
+       "detail_href": "/items/divine-ruin",
+       "icon_hash": "c15250d7"
+      },
+      "4": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "5": {
+       "item_name": "Spear Of The Magus",
+       "detail_href": "/items/spear-of-the-magus",
+       "icon_hash": "6374156f"
+      },
+      "6": {
+       "item_name": "Evil Eye",
+       "detail_href": "/items/evil-eye",
+       "icon_hash": "90dd8566"
+      }
+     },
+     "starter": {
+      "item_name": "Pendulum of The Ages",
+      "detail_href": "/items/pendulum-of-the-ages",
+      "icon_hash": "c3767ff2"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Xbalanque",
+       "slug": "xbalanque"
+      },
+      {
+       "display_name": "Nemesis",
+       "slug": "nemesis"
+      },
+      {
+       "display_name": "Ra",
+       "slug": "ra"
+      },
+      {
+       "display_name": "Athena",
+       "slug": "athena"
+      },
+      {
+       "display_name": "Ne Zha",
+       "slug": "ne-zha"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-07T05:03:05.243Z",
+     "hz_match_guid": "b6264a3c-0d1f-4a84-9a42-8929cd3d4649",
+     "played_role": "Mid",
+     "player_finishing_rank": 5280,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Ancient Signet",
+       "detail_href": "/items/ancient-signet",
+       "icon_hash": "b770b63e"
+      },
+      "2": {
+       "item_name": "Chronos' Pendant",
+       "detail_href": "/items/chronos-pendant",
+       "icon_hash": "6e496a2a"
+      },
+      "3": {
+       "item_name": "Divine Ruin",
+       "detail_href": "/items/divine-ruin",
+       "icon_hash": "c15250d7"
+      },
+      "4": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "5": {
+       "item_name": "Spear Of The Magus",
+       "detail_href": "/items/spear-of-the-magus",
+       "icon_hash": "6374156f"
+      },
+      "6": {
+       "item_name": "Soul Reaver",
+       "detail_href": "/items/soul-reaver",
+       "icon_hash": "c2935a97"
+      }
+     },
+     "starter": {
+      "item_name": "Pendulum of The Ages",
+      "detail_href": "/items/pendulum-of-the-ages",
+      "icon_hash": "c3767ff2"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Apollo",
+       "slug": "apollo"
+      },
+      {
+       "display_name": "Izanami",
+       "slug": "izanami"
+      },
+      {
+       "display_name": "Jormungandr",
+       "slug": "jormungandr"
+      },
+      {
+       "display_name": "Geb",
+       "slug": "geb"
+      },
+      {
+       "display_name": "Baron Samedi",
+       "slug": "baron-samedi"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-07T01:39:30.033Z",
+     "hz_match_guid": "63051885-e4c2-4180-a18c-d2023114f8c9",
+     "played_role": "Jungle",
+     "player_finishing_rank": 4595,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Ancient Signet",
+       "detail_href": "/items/ancient-signet",
+       "icon_hash": "b770b63e"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "The World Stone",
+       "detail_href": "/items/the-world-stone",
+       "icon_hash": "10b4c068"
+      },
+      "4": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "5": {
+       "item_name": "Spear of Desolation",
+       "detail_href": "/items/spear-of-desolation",
+       "icon_hash": "7847f392"
+      },
+      "6": {
+       "item_name": "Dreamer's Idol",
+       "detail_href": "/items/dreamers-idol",
+       "icon_hash": "6381e2fc"
+      }
+     },
+     "starter": {
+      "item_name": "Archmage's Gem",
+      "detail_href": "/items/archmages-gem",
+      "icon_hash": "7ef3fff0"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Hachiman",
+       "slug": "hachiman"
+      },
+      {
+       "display_name": "Amaterasu",
+       "slug": "amaterasu"
+      },
+      {
+       "display_name": "Nu Wa",
+       "slug": "nu-wa"
+      },
+      {
+       "display_name": "Sol",
+       "slug": "sol"
+      },
+      {
+       "display_name": "Ymir",
+       "slug": "ymir"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-05T10:30:50.150Z",
+     "hz_match_guid": "0a6236d0-e613-48e3-9f65-d3b7437d60bb",
+     "played_role": "Mid",
+     "player_finishing_rank": 5150,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Ancient Signet",
+       "detail_href": "/items/ancient-signet",
+       "icon_hash": "b770b63e"
+      },
+      "2": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "3": {
+       "item_name": "Spear of Desolation",
+       "detail_href": "/items/spear-of-desolation",
+       "icon_hash": "7847f392"
+      },
+      "4": {
+       "item_name": "Spear Of The Magus",
+       "detail_href": "/items/spear-of-the-magus",
+       "icon_hash": "6374156f"
+      },
+      "5": {
+       "item_name": "Polynomicon",
+       "detail_href": "/items/polynomicon",
+       "icon_hash": "5ce91973"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Pendulum of The Ages",
+      "detail_href": "/items/pendulum-of-the-ages",
+      "icon_hash": "c3767ff2"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Nut",
+       "slug": "nut"
+      },
+      {
+       "display_name": "Xing Tian",
+       "slug": "xing-tian"
+      },
+      {
+       "display_name": "Sun Wukong",
+       "slug": "sun-wukong"
+      },
+      {
+       "display_name": "Medusa",
+       "slug": "medusa"
+      },
+      {
+       "display_name": "Ratatoskr",
+       "slug": "ratatoskr"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-04T02:07:53.710Z",
+     "hz_match_guid": "9d646f10-95bb-41d2-877c-13386df41815",
+     "played_role": "Jungle",
+     "player_finishing_rank": 4531,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Hydra's Lament",
+       "detail_href": "/items/hydras-lament",
+       "icon_hash": "a35fc33e"
+      },
+      "3": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "4": {
+       "item_name": "Jotunn's Revenge",
+       "detail_href": "/items/jotunns-revenge",
+       "icon_hash": "e55d37f7"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Gem",
+       "detail_href": "/items/gem",
+       "icon_hash": "370c4608"
+      }
+     },
+     "starter": {
+      "item_name": "Pendulum of The Ages",
+      "detail_href": "/items/pendulum-of-the-ages",
+      "icon_hash": "c3767ff2"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Ne Zha",
+       "slug": "ne-zha"
+      },
+      {
+       "display_name": "Sol",
+       "slug": "sol"
+      },
+      {
+       "display_name": "Xing Tian",
+       "slug": "xing-tian"
+      },
+      {
+       "display_name": "Nike",
+       "slug": "nike"
+      },
+      {
+       "display_name": "Horus",
+       "slug": "horus"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-02T02:45:27.330Z",
+     "hz_match_guid": "dfcf525a-26df-44bd-8747-b68c54c04839",
+     "played_role": "Mid",
+     "player_finishing_rank": 4486,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "2": {
+       "item_name": "Chronos' Pendant",
+       "detail_href": "/items/chronos-pendant",
+       "icon_hash": "6e496a2a"
+      },
+      "3": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "4": {
+       "item_name": "Obsidian Shard",
+       "detail_href": "/items/obsidian-shard",
+       "icon_hash": "e0738bcc"
+      },
+      "5": {
+       "item_name": "Killing Stone",
+       "detail_href": "/items/killing-stone",
+       "icon_hash": "9ea865f1"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Sands of Time",
+      "detail_href": "/items/sands-of-time",
+      "icon_hash": "5c12188b"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Cabrakan",
+       "slug": "cabrakan"
+      },
+      {
+       "display_name": "Ravana",
+       "slug": "ravana"
+      },
+      {
+       "display_name": "Agni",
+       "slug": "agni"
+      },
+      {
+       "display_name": "Bacchus",
+       "slug": "bacchus"
+      },
+      {
+       "display_name": "Artemis",
+       "slug": "artemis"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-10-31T03:36:51.557Z",
+     "hz_match_guid": "c8a84832-0728-4dd1-9792-890c42e2b645",
+     "played_role": "Mid",
+     "player_finishing_rank": 6083,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Spear of Desolation",
+       "detail_href": "/items/spear-of-desolation",
+       "icon_hash": "7847f392"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "4": {
+       "item_name": "Spear Of The Magus",
+       "detail_href": "/items/spear-of-the-magus",
+       "icon_hash": "6374156f"
+      },
+      "5": {
+       "item_name": "The World Stone",
+       "detail_href": "/items/the-world-stone",
+       "icon_hash": "10b4c068"
+      },
+      "6": {
+       "item_name": "Dreamer's Idol",
+       "detail_href": "/items/dreamers-idol",
+       "icon_hash": "6381e2fc"
+      }
+     },
+     "starter": {
+      "item_name": "Archmage's Gem",
+      "detail_href": "/items/archmages-gem",
+      "icon_hash": "7ef3fff0"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Atlas",
+       "slug": "atlas"
+      },
+      {
+       "display_name": "Anubis",
+       "slug": "anubis"
+      },
+      {
+       "display_name": "Geb",
+       "slug": "geb"
+      },
+      {
+       "display_name": "Aladdin",
+       "slug": "aladdin"
+      },
+      {
+       "display_name": "Medusa",
+       "slug": "medusa"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-10-31T02:41:59.970Z",
+     "hz_match_guid": "0b8117d6-ec4b-4385-a34d-097331d46530",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5000,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Polynomicon",
+       "detail_href": "/items/polynomicon",
+       "icon_hash": "5ce91973"
+      },
+      "4": {
+       "item_name": "Hydra's Lament",
+       "detail_href": "/items/hydras-lament",
+       "icon_hash": "a35fc33e"
+      },
+      "5": {
+       "item_name": "Chronos' Pendant",
+       "detail_href": "/items/chronos-pendant",
+       "icon_hash": "6e496a2a"
+      },
+      "6": {
+       "item_name": "Obsidian Shard",
+       "detail_href": "/items/obsidian-shard",
+       "icon_hash": "e0738bcc"
+      }
+     },
+     "starter": {
+      "item_name": "Archmage's Gem",
+      "detail_href": "/items/archmages-gem",
+      "icon_hash": "7ef3fff0"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Poseidon",
+       "slug": "poseidon"
+      },
+      {
+       "display_name": "Aphrodite",
+       "slug": "aphrodite"
+      },
+      {
+       "display_name": "Geb",
+       "slug": "geb"
+      },
+      {
+       "display_name": "Atlas",
+       "slug": "atlas"
+      },
+      {
+       "display_name": "Chiron",
+       "slug": "chiron"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-10-31T01:01:46.173Z",
+     "hz_match_guid": "ef8ef4a4-feb1-431c-873e-c27390f4e9f6",
+     "played_role": "Support",
+     "player_finishing_rank": 4459,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Shifter's Shield",
+       "detail_href": "/items/shifters-shield",
+       "icon_hash": "fc64ca34"
+      },
+      "2": {
+       "item_name": "Freya's Tears",
+       "detail_href": "/items/freyas-tears",
+       "icon_hash": "45cda571"
+      },
+      "3": {
+       "item_name": "Brawler's Ruin",
+       "detail_href": null,
+       "icon_hash": null
+      },
+      "4": {
+       "item_name": "The World Stone",
+       "detail_href": "/items/the-world-stone",
+       "icon_hash": "10b4c068"
+      },
+      "5": {
+       "item_name": "Obsidian Shard",
+       "detail_href": "/items/obsidian-shard",
+       "icon_hash": "e0738bcc"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Archmage's Gem",
+      "detail_href": "/items/archmages-gem",
+      "icon_hash": "7ef3fff0"
+     },
+     "relic": {
+      "item_name": "Phantom Shell",
+      "detail_href": "/items/phantom-shell",
+      "icon_hash": "faf89694"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Anubis",
+       "slug": "anubis"
+      },
+      {
+       "display_name": "Ravana",
+       "slug": "ravana"
+      },
+      {
+       "display_name": "Anhur",
+       "slug": "anhur"
+      },
+      {
+       "display_name": "Guan Yu",
+       "slug": "guan-yu"
+      },
+      {
+       "display_name": "Nut",
+       "slug": "nut"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-10-30T02:40:00.660Z",
+     "hz_match_guid": "e07f5273-68d5-4dfd-a7e3-967d7b748e14",
+     "played_role": "Mid",
+     "player_finishing_rank": 6262,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "2": {
+       "item_name": "Spear of Desolation",
+       "detail_href": "/items/spear-of-desolation",
+       "icon_hash": "7847f392"
+      },
+      "3": {
+       "item_name": "Rod of Tahuti",
+       "detail_href": "/items/rod-of-tahuti",
+       "icon_hash": "97c02b31"
+      },
+      "4": {
+       "item_name": "The World Stone",
+       "detail_href": "/items/the-world-stone",
+       "icon_hash": "10b4c068"
+      },
+      "5": {
+       "item_name": "Killing Stone",
+       "detail_href": "/items/killing-stone",
+       "icon_hash": "9ea865f1"
+      },
+      "6": {
+       "item_name": "Killing Stone",
+       "detail_href": "/items/killing-stone",
+       "icon_hash": "9ea865f1"
+      }
+     },
+     "starter": {
+      "item_name": "Archmage's Gem",
+      "detail_href": "/items/archmages-gem",
+      "icon_hash": "7ef3fff0"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "aspect": {
+      "item_name": "Aspect of Mangetsu",
+      "detail_href": null,
+      "icon_hash": "dfff8b5d"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Apollo",
+       "slug": "apollo"
+      },
+      {
+       "display_name": "Ganesha",
+       "slug": "ganesha"
+      },
+      {
+       "display_name": "Merlin",
+       "slug": "merlin"
+      },
+      {
+       "display_name": "Ratatoskr",
+       "slug": "ratatoskr"
+      },
+      {
+       "display_name": "Poseidon",
+       "slug": "poseidon"
+      }
+     ]
+    }
+   ],
+   "availableAspects": [
+    {
+     "name": "Aspect of Mangetsu",
+     "value": "aspect-of-mangetsu"
+    }
+   ]
+  }
+ }
+}
