@@ -10,8 +10,9 @@ const COST: Record<string, number> = {
   "Obsidian Shard": 2900, "Soul Gem": 2500, "The World Stone": 2800, "Nimble Ring": 2600, "Book of Thoth": 2700,
   "Conduit Gem": 600, "Archmage's Gem": 1200,
 };
+const TAGS: Record<string, string[]> = { "Book of Thoth": ["stacking"] };
 const item = (name: string) => ({ name, tier: 3, cost: COST[name], stats: {}, passive: "", builds_from: [], builds_into: [],
-  effect_tags: [], efficiency_tier: name === "Soul Gem" ? "undervalued" : "fair" });
+  effect_tags: TAGS[name] ?? [], efficiency_tier: name === "Soul Gem" ? "undervalued" : "fair" });
 
 const index = {
   gods: [
@@ -34,7 +35,15 @@ const index = {
     { source: "suggested", archetype: "model", slot_order: SIX, starter: { base: "Conduit Gem", upgrade: "Archmage's Gem" },
       slot_scores: { "Lotus Sickle": { total: 0.55, efficiency: 0.57, win: 0.55, pick: 0, fit: 0.69 } } },
     { source: "suggested", archetype: "burst", slot_order: [...SIX.slice(0, 5), "Book of Thoth"] },
+    // Identical to the main six: the strip still offers it, and says so.
+    { source: "suggested", archetype: "cooldown", slot_order: SIX },
+  ] }, { type: "build", god: "Ra", mode: "Arena", builds: [
+    { source: "suggested", archetype: "model", slot_order: SIX, starter: { base: "Conduit Gem", upgrade: "Archmage's Gem" } },
   ] }],
+  community_transfer: {
+    Joust: { from: "Conquest", reject_tags: ["mobility"], excluded_items: [] },
+    Arena: { from: "Conquest", reject_tags: ["stacking", "mobility"], excluded_items: ["Eye of Providence", "Eye of Erebus"] },
+  },
   tierlist: { gods: [], items: [],
     conquest: { gods: [{ name: "Ra", score: 0.5, win_rate: 0.53, matches: 1286, tier_score: "B" }], items: [] } },
 };
@@ -139,14 +148,42 @@ describe("God page — controls", () => {
     await waitFor(() => expect(window.location.hash).toContain("aspect=1"));
   });
 
-  it("puts other builds behind a disclosure and swaps the six in place", async () => {
+  it("adjusts the one six with a focus: the swapped slot is marked and the swap is named", async () => {
     render(<App />);
-    const other = await screen.findByTestId("other-builds");
-    fireEvent.click(within(other).getByRole("button", { name: /Burst/ }));
+    const strip = await screen.findByRole("group", { name: "Adjust the build" });
+    expect(screen.queryByTestId("other-builds")).not.toBeInTheDocument();
+    expect(within(strip).getByRole("button", { name: "Ichor's six" })).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(within(strip).getByRole("button", { name: "Burst" }));
     await waitFor(() => expect(rowNames()[5]).toBe("Book of Thoth"));
+    expect(within(strip).getByRole("button", { name: "Burst" })).toHaveAttribute("aria-pressed", "true");
+    const line = screen.getByTestId("swap-line");
+    expect(line).toHaveTextContent("Burst Swaps 1 of 6:");
+    // The arrow is drawn; a screen reader hears "replaced by" instead.
+    expect(within(line).getByRole("listitem")).toHaveTextContent("Soul Gem → replaced by Book of Thoth");
+    const rows = screen.getAllByTestId("item-row");
+    expect(rows[5]).toHaveAttribute("data-adjusted", "true");
+    expect(rows[5]).toHaveTextContent("In for Soul Gem");
+    expect(rows.filter((r) => r.hasAttribute("data-adjusted"))).toHaveLength(1);
     // The comparison is for the main six only, and the sentence says so.
     expect(screen.getByTestId("verdict-line")).toHaveTextContent(/measured for Ichor's main six/);
     await waitFor(() => expect(window.location.hash).toContain("build=burst"));
+  });
+
+  it("says a focus that changes nothing is the same build, rather than showing a duplicate", async () => {
+    render(<App />);
+    const strip = await screen.findByRole("group", { name: "Adjust the build" });
+    fireEvent.click(within(strip).getByRole("button", { name: "Cooldown" }));
+    await waitFor(() => expect(screen.getByTestId("swap-line")).toHaveTextContent("Same as Ichor's six for Ra."));
+    expect(screen.queryByTestId("swap-list")).not.toBeInTheDocument();
+    expect(screen.getAllByTestId("item-row").some((r) => r.hasAttribute("data-adjusted"))).toBe(false);
+  });
+
+  it("keeps the aspect switch in the same strip as the focuses", async () => {
+    render(<App />);
+    const strip = await screen.findByTestId("focus-strip");
+    expect(strip).toHaveAttribute("role", "group");
+    expect(within(strip).getByRole("switch", { name: /Aspect of Thermotherapy/ })).toBeInTheDocument();
+    expect(within(strip).getByRole("button", { name: "Burst" })).toBeInTheDocument();
   });
 
   it("has five enemy slots in Conquest, three in Joust", async () => {
@@ -156,5 +193,79 @@ describe("God page — controls", () => {
     fireEvent.click(screen.getByRole("button", { name: "Joust" }));
     await waitFor(() => expect(within(screen.getByTestId("enemy-strip")).getAllByRole("button", { name: /Add enemy/ })).toHaveLength(3));
     expect(screen.getByTestId("verdict-line")).toHaveTextContent(/^Joust has no community build/);
+  });
+});
+
+describe("God page — the starter and the relic", () => {
+  it("puts the starter in the build as a tile, base and upgrade together", async () => {
+    render(<App />);
+    const tile = await screen.findByTestId("starter");
+    expect(tile).toHaveTextContent("Start");
+    expect(tile).toHaveTextContent("Conduit Gem → Archmage's Gem");
+    // The tile sits in the build's own section, ahead of the six.
+    const section = tile.closest("section")!;
+    expect(within(section).getByTestId("six")).toBeInTheDocument();
+  });
+
+  it("renders no relic tile while the index carries no relic record", async () => {
+    render(<App />);
+    await screen.findByTestId("starter");
+    expect(screen.queryByTestId("relic")).not.toBeInTheDocument();
+  });
+
+  it("renders the community's relic, with the alternatives by share of players", async () => {
+    const community = index.builds[0].builds[0] as Record<string, unknown>;
+    community.community_relics = [
+      { name: "Purification Beads", pick_rate: 0.22, win_rate: 0.5 },
+      { name: "Blink Rune", pick_rate: 0.41, win_rate: 0.52 },
+      { name: "Aegis Amulet", pick_rate: 0.18, win_rate: 0.49 },
+      { name: "Sundering Spear", pick_rate: 0.05, win_rate: 0.47 },
+    ];
+    try {
+      render(<App />);
+      const tile = await screen.findByTestId("relic");
+      expect(tile).toHaveTextContent("Blink Rune");
+      expect(tile).toHaveTextContent("41% of Ra players take it");
+      const alts = within(tile).getByRole("list");
+      expect(within(alts).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
+        "Purification Beads22% of players", "Aegis Amulet18% of players"]);
+    } finally {
+      delete community.community_relics;
+    }
+  });
+});
+
+describe("God page — most picked", () => {
+  const openPicked = async () => {
+    const d = await screen.findByTestId("picked-disclosure");
+    (d as HTMLDetailsElement).open = true;
+    return within(d).getByTestId("most-picked");
+  };
+
+  it("ranks the god's own players' items and ticks the ones in this build", async () => {
+    render(<App />);
+    const list = await openPicked();
+    const rows = within(list).getAllByTestId("picked-row");
+    expect(rows[0]).toHaveTextContent("Spear of Desolation");
+    expect(rows[0]).toHaveTextContent("55% buy it first");
+    expect(rows[0]).toHaveAttribute("data-in-build", "true");
+    expect(rows[0]).toHaveTextContent("In this build");
+    const nimble = rows.find((r) => r.textContent?.includes("Nimble Ring"))!;
+    expect(nimble).not.toHaveAttribute("data-in-build");
+    expect(screen.getByTestId("picked-disclosure")).toHaveTextContent("3 of Ra's top 6 are in this build");
+    expect(within(list).queryByTestId("picked-notes")).not.toBeInTheDocument();
+  });
+
+  it("shows Conquest's list on Arena, labelled, with an asterisk and a reason where it doesn't transfer", async () => {
+    atUrl(`${toHash.god("Ra")}?mode=arena`);
+    render(<App />);
+    const list = await openPicked();
+    expect(list).toHaveTextContent("Arena has no record of its own, so this is Conquest data");
+    const thoth = within(list).getAllByTestId("picked-row").find((r) => r.textContent?.includes("Book of Thoth"))!;
+    expect(thoth).toHaveAttribute("data-flagged", "true");
+    const notes = within(list).getByTestId("picked-notes");
+    expect(notes).toHaveTextContent("Book of Thoth — Stacking items. Conquest's record is for a finished stack");
+    // Only the tagged item is marked.
+    expect(within(list).getAllByTestId("picked-row").filter((r) => r.hasAttribute("data-flagged"))).toHaveLength(1);
   });
 });

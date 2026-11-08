@@ -26,9 +26,10 @@ import { listWords, type Mode } from "./verdict";
 
 export interface ItemReason {
   text: string;
-  /** swap: the draft put it here. community: the community buys it.
-   *  offmeta: Ichor's own pick. plain: no signal either way. */
-  tone: "swap" | "community" | "offmeta" | "plain";
+  /** swap: the draft put it here. adjust: the reader's focus (or aspect) put
+   *  it here. community: the community buys it. offmeta: Ichor's own pick.
+   *  plain: no signal either way. */
+  tone: "swap" | "adjust" | "community" | "offmeta" | "plain";
 }
 
 export interface ReasonContext {

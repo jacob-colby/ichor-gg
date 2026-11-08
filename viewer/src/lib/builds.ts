@@ -28,6 +28,9 @@ const ARCHETYPE_LABEL: Record<string, string> = {
   "anti-tank": "Anti-tank",
   "attack-speed": "Attack speed",
   cooldown: "Cooldown",
+  // Shipped on 68 gods per mode and missing here until 2026-11-08, so its tab
+  // read as the raw key "mana-stack" on every one of them.
+  "mana-stack": "Mana-stack",
   // Off-type power builds, offered only where the god's own scaling supports
   // them — see `requires_scaling` in _weights.yaml.
   strength: "Strength",
