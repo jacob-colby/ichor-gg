@@ -16,7 +16,7 @@
  */
 import { useState, type ReactNode } from "react";
 import { toHash } from "../../lib/useHashRoute";
-import { relativeDate } from "../../lib/relativeDate";
+import { freshness } from "../../lib/freshness";
 import { DraftGlyph, GodsGlyph, MoreGlyph } from "./art";
 import { Sheet } from "./Sheet";
 
@@ -57,9 +57,6 @@ interface AppNavProps {
   search?: ReactNode;
 }
 
-const freshness = (updated?: string, patch?: string) =>
-  updated ? `Updated ${relativeDate(updated)}${patch ? ` · ${patch}` : ""}` : null;
-
 export function AppNav({ active, activeMore, currentGod, onHelp, dataUpdated, dataPatch, devSlot, search }: AppNavProps) {
   const [moreOpen, setMoreOpen] = useState(false);
   const stamp = freshness(dataUpdated, dataPatch);
@@ -84,22 +81,38 @@ export function AppNav({ active, activeMore, currentGod, onHelp, dataUpdated, da
               {label}{key === "gods" && currentGod ? <>{" "}<span className="ml-1 text-quiet">· {currentGod}</span></> : null}
             </a>
           ))}
-          {search ? (
-            <div role="search" aria-label="Gods, matchups and items" className="mx-3 min-w-[220px] max-w-[440px] flex-1">{search}</div>
-          ) : (
-            <span aria-hidden="true" className="mx-2 h-5 w-px bg-line" />
-          )}
-          {MORE_LINKS.map(({ key, label, href }) => (
-            <a key={key} href={href} aria-current={activeMore === key ? "page" : undefined}
-              className={`press relative flex h-14 items-center px-2.5 text-[15px] font-medium ${
-                activeMore === key ? "text-ink after:absolute after:inset-x-2.5 after:bottom-0 after:h-0.5 after:bg-accent" : "text-muted hover:text-ink"}`}>
-              {label}
-            </a>
-          ))}
-          <div className="ml-auto flex items-center gap-3">
-            {stamp && (
-              <span data-testid="header-freshness" title={dataUpdated} className="stamp hidden whitespace-nowrap text-cap text-quiet xl:inline">{stamp}</span>
+          {/* The middle of the bar: the search, the reading routes and the
+              stamp, in one size container (`bar`). The open field widens to
+              the whole of it (CommandField: `100cqw`) and everything else in
+              it steps aside (`.under-field`, index.css), so a control is
+              either fully there or fully gone — never half under the field.
+              Measured 2026-11-07: a fixed 640px open width left Patch notes'
+              tail and Method showing beside Go at 1280–1920px, and at 1024px
+              on a long god name it ran onto Help. */}
+          <div data-testid="nav-middle" className="@container/bar mx-3 flex min-w-0 flex-1 items-center gap-1">
+            {search ? (
+              <div role="search" aria-label="Gods, matchups and items" className="mr-3 min-w-[220px] max-w-[440px] flex-1">{search}</div>
+            ) : (
+              <span aria-hidden="true" className="mr-1 h-5 w-px bg-line" />
             )}
+            {MORE_LINKS.map(({ key, label, href }) => (
+              <a key={key} href={href} aria-current={activeMore === key ? "page" : undefined}
+                className={`under-field press relative flex h-14 flex-none items-center px-2.5 text-[15px] font-medium ${
+                  activeMore === key ? "text-ink after:absolute after:inset-x-2.5 after:bottom-0 after:h-0.5 after:bg-accent" : "text-muted hover:text-ink"}`}>
+                {label}
+              </a>
+            ))}
+            {stamp && (
+              // The sentence is the stamp's text for a screen reader; the bar
+              // shows the few characters of it that fit (lib/freshness.ts).
+              <span data-testid="header-freshness" title={stamp.title}
+                className="under-field stamp ml-auto flex-none whitespace-nowrap pl-2 text-cap text-quiet">
+                <span aria-hidden="true">{stamp.short}</span>
+                <span className="sr-only">{stamp.full}</span>
+              </span>
+            )}
+          </div>
+          <div className="flex items-center gap-3">
             {devSlot}
             <button type="button" onClick={onHelp} aria-label="Help and credits"
               className="press flex h-10 items-center rounded-full border border-line px-3.5 text-note font-semibold text-muted hover:border-quiet hover:text-ink">
@@ -153,7 +166,7 @@ export function AppNav({ active, activeMore, currentGod, onHelp, dataUpdated, da
             </li>
           </ul>
           <p className="mt-4 text-cap text-quiet">
-            {stamp && <>{stamp}. </>}A fan project — not affiliated with Hi-Rez.
+            {stamp && <>{stamp.full}. </>}A fan project — not affiliated with Hi-Rez.
           </p>
         </Sheet>
       )}

@@ -169,12 +169,31 @@ html { background: var(--color-ground); }
 }
 .sheet-up { animation: sheet-up 220ms var(--ease-out-expo) both; }
 
-/* The top bar's command field widens over the reading links while it is
-   open (CommandField), and at 1280–1500px its right edge lands on the
-   freshness stamp. The stamp steps out of the way while the field is open —
-   the same "Updated …" line stays one tap away under More and Help. */
-.stamp { transition: opacity 150ms var(--ease-standard); }
-nav:has([data-command-open]) .stamp { opacity: 0; visibility: hidden; }
+/* The top bar's middle (AppNav: the search, the reading links, the stamp) is
+   one size container, `bar`. While the command field is open it widens to the
+   whole container (`100cqw`), and everything else in it steps aside — fully,
+   so nothing is ever half under the field or showing beside it. Leaving is
+   quick, before the field arrives; coming back waits for the field's 150ms
+   shrink, so a link never shows through it on the way back either. Hidden
+   with `visibility`, so a covered link also leaves the tab order. (`nav` in
+   the selector outranks `.press`, defined later, whose transform is kept.) */
+nav .under-field {
+  transition: transform 120ms var(--ease-standard),
+    opacity 120ms var(--ease-standard) 150ms, visibility 0s linear 150ms;
+}
+nav:has([data-command-open]) .under-field {
+  opacity: 0; visibility: hidden;
+  transition: transform 120ms var(--ease-standard),
+    opacity 100ms var(--ease-standard), visibility 0s linear 100ms;
+}
+
+/* The freshness stamp ("OB47 · 1d") shows whenever the middle of the bar has
+   room for it beside the field's 220px minimum and the four reading links
+   (~590px all told, measured 2026-11-07), from 1024px up. On a narrow bar with
+   a long "Gods · Morgan Le Fay" it bows out rather than being clipped; the
+   whole sentence is in Help either way. */
+.stamp { display: none; }
+@container bar (min-width: 620px) { .stamp { display: inline; } }
 
 /* Native <details> disclosure marker off; our own chevron rotates. */
 .disclosure > summary { list-style: none; }
@@ -268,6 +287,7 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
 @media (prefers-reduced-motion: reduce) {
   .press, .press:active { transition: none; transform: none; }
   .lock-in, .lock-in .lock-reason, .sheet-up { animation: none; }
+  nav .under-field, nav:has([data-command-open]) .under-field { transition: none; }
   input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
 .chev { transition: none; }
   /* Bars land at full length immediately rather than not rendering at all. */

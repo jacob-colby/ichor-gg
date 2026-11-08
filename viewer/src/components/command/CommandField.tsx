@@ -301,7 +301,11 @@ export function CommandField({
 
   const showHint = !options.length && !hasText && !page;
   const panel = open && (options.length > 0 || notes.length > 0 || showHint) ? (
-    <div className="absolute inset-x-0 top-full z-50 mt-2 overflow-hidden rounded-[16px] border border-line bg-surface shadow-[var(--shadow-raised)]"
+    // The list keeps the 640px it had in the bar: the open field is now as
+    // wide as the bar's middle, and suggestion rows stretched across all of
+    // it put "You"/"Enemy" a long way from the name they label.
+    <div className={`absolute inset-x-0 top-full z-50 mt-2 overflow-hidden rounded-[16px] border border-line bg-surface shadow-[var(--shadow-raised)] ${
+      page ? "" : "max-w-[640px]"}`}
       data-testid="command-panel">
       <ul id={listId} role="listbox" aria-label="Suggestions"
         style={room ? { maxHeight: Math.min(room, 460) } : undefined}
@@ -330,11 +334,15 @@ export function CommandField({
   ) : null;
 
   return (
-    // In the top bar the field widens over the reading links while it is
-    // open, so a whole matchup's chips fit; it never moves the bar's layout.
+    // In the top bar the field widens while it is open, so a whole matchup's
+    // chips fit; it never moves the bar's layout. It widens to exactly the
+    // container its host marks (`100cqw`: AppNav's middle of the bar, which
+    // hides everything else in it while the field is open), not to a fixed
+    // width — a fixed 640px ended part-way across the reading links, leaving
+    // one half under the field and the next one showing beside it.
     <div ref={root} data-testid={page ? "command-page" : "command-bar"} data-command-open={open || undefined}
       className={`relative scroll-mt-3 ${page ? "" : `z-10 transition-[width] duration-150 ease-[var(--ease-standard)] ${
-        open ? "w-[640px] max-w-[calc(100vw-420px)]" : "w-full"}`}`}>
+        open ? "w-[100cqw]" : "w-full"}`}`}>
       <div onClick={(e) => {
         // Anywhere on the field that isn't its own button starts typing.
         if (!(e.target as HTMLElement).closest("button")) { input.current?.focus(); setOpen(true); }
