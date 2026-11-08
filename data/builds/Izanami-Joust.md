@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.39
+    win_rate: 0.66
+    matches: 290
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.64
+    matches: 483
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.75
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.91
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.69
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.69
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -590,4 +609,5 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
 ---

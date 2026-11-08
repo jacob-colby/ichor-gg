@@ -71,13 +71,85 @@ builds:
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.18
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.17
     win_rate: 0.49
   - name: Sands Of Time
     pick_rate: 0.16
     win_rate: 0.18
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.33
+    win_rate: 0.45
+  - name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.26
+    win_rate: 0.4
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.18
+    win_rate: 0.57
+  - name: Archmage's Gem
+    pick_rate: 0.17
+    win_rate: 0.49
+  - name: Sands Of Time
+    pick_rate: 0.16
+    win_rate: 0.18
+  - name: Conduit Gem
+    pick_rate: 0.13
+    win_rate: 0.31
+  - name: Selflessness
+    pick_rate: 0.09
+    win_rate: 0.44
+  - name: Heroism
+    pick_rate: 0.07
+    win_rate: 0.67
+  - name: War Flag
+    pick_rate: 0.07
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.04
+    win_rate: 0.52
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.45
+  - name: War Banner
+    pick_rate: 0.04
+    win_rate: 0.52
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.003
+    win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.003
+    win_rate: 0.5
+  - name: Death's Embrace
+    pick_rate: 0.001
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.001
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.001
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.33
+    win_rate: 0.45
+  - name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.26
+    win_rate: 0.4
+  - name: Blink Rune
+    pick_rate: 0.05
+    win_rate: 0.36
+  - name: Sundering Arc
+    pick_rate: 0.03
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/nox/
   last_verified: '2026-11-08'
   god_win_rate: 0.43291839557399725
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.34
+    win_rate: 0.3865
+    matches: 246
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.33
+    win_rate: 0.45
+    matches: 239
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +247,18 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.34
+    win_rate: 0.3865
+    matches: 246
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.33
+    win_rate: 0.45
+    matches: 239
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +333,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +409,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -390,6 +484,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -465,6 +560,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -538,6 +634,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -614,6 +711,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -689,4 +787,5 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

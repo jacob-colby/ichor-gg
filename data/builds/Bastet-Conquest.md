@@ -70,14 +70,74 @@ builds:
       win_rate: 0.46
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.4
-    win_rate: 0.59
+    pick_rate: 0.41
+    win_rate: 0.6
   - name: Bluestone Pendant
     pick_rate: 0.27
-    win_rate: 0.49
+    win_rate: 0.51
   - name: Archmage's Gem
     pick_rate: 0.09
+    win_rate: 0.52
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.63
+    win_rate: 0.57
+  - name: Aegis of Acceleration
+    pick_rate: 0.23
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.05
     win_rate: 0.5
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.41
+    win_rate: 0.6
+  - name: Bluestone Pendant
+    pick_rate: 0.27
+    win_rate: 0.51
+  - name: Archmage's Gem
+    pick_rate: 0.09
+    win_rate: 0.52
+  - name: Bumba's Hammer
+    pick_rate: 0.07
+    win_rate: 0.55
+  - name: Bumba's Cudgel
+    pick_rate: 0.05
+    win_rate: 0.67
+  - name: Conduit Gem
+    pick_rate: 0.03
+    win_rate: 0.45
+  - name: Pendulum of the Ages
+    pick_rate: 0.03
+    win_rate: 0.56
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Leather Cowl
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.2
+  - name: Warrior's Axe
+    pick_rate: 0.006
+    win_rate: 0.5
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.63
+    win_rate: 0.57
+  - name: Aegis of Acceleration
+    pick_rate: 0.23
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Phantom Shell
+    pick_rate: 0.05
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.05
+    win_rate: 0.53
   source_url: https://smitebrain.com/gods/bastet/
   last_verified: '2026-11-08'
   god_win_rate: 0.5440251572327044
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.68
+    win_rate: 0.5643
+    matches: 216
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.63
+    win_rate: 0.57
+    matches: 200
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +235,18 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.68
+    win_rate: 0.5643
+    matches: 216
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.63
+    win_rate: 0.57
+    matches: 200
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +322,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +398,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -390,6 +472,7 @@ builds:
   - Jotunn's Revenge
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -465,6 +548,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -537,6 +621,7 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -612,6 +697,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -687,4 +773,5 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 ---

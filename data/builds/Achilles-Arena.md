@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.32
+    win_rate: 0.5731
+    matches: 42
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.33
+    matches: 35
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.59
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.52
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.47
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -460,4 +477,5 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+  relic: *id002
 ---

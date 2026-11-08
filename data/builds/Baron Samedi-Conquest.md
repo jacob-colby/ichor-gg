@@ -71,13 +71,85 @@ builds:
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.18
-    win_rate: 0.52
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.14
+    win_rate: 0.81
+  - name: Bluestone Brooch
+    pick_rate: 0.14
+    win_rate: 0.62
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.35
+    win_rate: 0.6
+  - name: Aegis of Acceleration
+    pick_rate: 0.31
+    win_rate: 0.55
+  - name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.45
+  starter_sightings:
+  - name: Bluestone Pendant
+    pick_rate: 0.18
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.14
+    win_rate: 0.81
+  - name: Bluestone Brooch
+    pick_rate: 0.14
+    win_rate: 0.62
   - name: Conduit Gem
     pick_rate: 0.14
     win_rate: 0.44
-  - name: Archmage's Gem
+  - name: Pendulum of the Ages
     pick_rate: 0.13
-    win_rate: 0.79
+    win_rate: 0.42
+  - name: Sands Of Time
+    pick_rate: 0.1
+    win_rate: 0.53
+  - name: Selflessness
+    pick_rate: 0.06
+    win_rate: 0.64
+  - name: Heroism
+    pick_rate: 0.05
+    win_rate: 0.56
+  - name: War Banner
+    pick_rate: 0.03
+    win_rate: 0.6
+  - name: Bumba's Cudgel
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Bumba's Hammer
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Blood-soaked Shroud
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.35
+    win_rate: 0.6
+  - name: Aegis of Acceleration
+    pick_rate: 0.31
+    win_rate: 0.55
+  - name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.45
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Sundering Arc
+    pick_rate: 0.03
+    win_rate: 0.4
+  - name: Agility Relic
+    pick_rate: 0.005
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/baron-samedi/
   last_verified: '2026-11-08'
   god_win_rate: 0.5401069518716578
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.32
+    win_rate: 0.5525
+    matches: 60
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.35
+    win_rate: 0.6
+    matches: 65
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +247,18 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.32
+    win_rate: 0.5525
+    matches: 60
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.35
+    win_rate: 0.6
+    matches: 65
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +333,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +409,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -390,6 +484,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -465,6 +560,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -539,6 +635,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -614,6 +711,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -688,4 +786,5 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

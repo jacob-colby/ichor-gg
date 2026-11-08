@@ -71,13 +71,64 @@ builds:
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.46
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Conduit Gem
-    pick_rate: 0.22
+    pick_rate: 0.21
     win_rate: 0.28
   - name: Bluestone Brooch
     pick_rate: 0.14
     win_rate: 0.25
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.53
+    win_rate: 0.4
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.4
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.46
+    win_rate: 0.46
+  - name: Conduit Gem
+    pick_rate: 0.21
+    win_rate: 0.28
+  - name: Bluestone Brooch
+    pick_rate: 0.14
+    win_rate: 0.25
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.05
+    win_rate: 0.25
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.33
+  - name: Gilded Arrow
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.53
+    win_rate: 0.4
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/princess-bari/
   last_verified: '2026-11-08'
   god_win_rate: 0.39759036144578314
@@ -90,6 +141,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.67
+    win_rate: 0.4036
+    matches: 56
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.53
+    win_rate: 0.4
+    matches: 44
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -168,6 +229,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.67
+    win_rate: 0.4036
+    matches: 56
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.53
+    win_rate: 0.4
+    matches: 44
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +313,7 @@ builds:
   - Rod of Tahuti
   - The World Stone
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -318,6 +390,7 @@ builds:
   - The World Stone
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -395,6 +468,7 @@ builds:
   - Rod of Tahuti
   - The World Stone
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -471,6 +545,7 @@ builds:
   - The World Stone
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -546,6 +621,7 @@ builds:
   - Rod of Tahuti
   - The World Stone
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -622,6 +698,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -697,6 +774,7 @@ builds:
   - Rod of Tahuti
   - The World Stone
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -773,6 +851,7 @@ builds:
   - The World Stone
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -848,4 +927,5 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 ---

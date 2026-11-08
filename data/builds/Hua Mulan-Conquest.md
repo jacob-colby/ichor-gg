@@ -78,6 +78,66 @@ builds:
   - name: Warrior's Axe
     pick_rate: 0.12
     win_rate: 0.17
+  community_relics:
+  - name: Sundering Arc
+    pick_rate: 0.37
+    win_rate: 0.5
+  - name: Phantom Shell
+    pick_rate: 0.33
+    win_rate: 0.47
+  - name: Aegis of Acceleration
+    pick_rate: 0.14
+    win_rate: 0.29
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.42
+    win_rate: 0.51
+  - name: Bluestone Pendant
+    pick_rate: 0.25
+    win_rate: 0.46
+  - name: Warrior's Axe
+    pick_rate: 0.12
+    win_rate: 0.17
+  - name: Sundering Axe
+    pick_rate: 0.1
+    win_rate: 0.7
+  - name: Bumba's Hammer
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Bumba's Cudgel
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Selflessness
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Sundering Arc
+    pick_rate: 0.37
+    win_rate: 0.5
+  - name: Phantom Shell
+    pick_rate: 0.33
+    win_rate: 0.47
+  - name: Aegis of Acceleration
+    pick_rate: 0.14
+    win_rate: 0.29
+  - name: Purification Beads
+    pick_rate: 0.09
+    win_rate: 0.67
+  - name: Blink Rune
+    pick_rate: 0.05
+    win_rate: 0.4
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/hua-mulan/
   last_verified: '2026-11-08'
   god_win_rate: 0.4742268041237113
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.67
+    win_rate: 0.4913
+    matches: 65
+    basis: community
+  relic:
+    name: Sundering Arc
+    pick_rate: 0.37
+    win_rate: 0.5
+    matches: 36
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +234,18 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.67
+    win_rate: 0.4913
+    matches: 65
+    basis: community
+  relic: &id002
+    name: Sundering Arc
+    pick_rate: 0.37
+    win_rate: 0.5
+    matches: 36
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -238,6 +318,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -310,6 +391,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -383,6 +465,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -457,6 +540,7 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -530,4 +614,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

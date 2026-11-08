@@ -76,8 +76,68 @@ builds:
     pick_rate: 0.16
     win_rate: 0.36
   - name: Archmage's Gem
-    pick_rate: 0.14
+    pick_rate: 0.15
     win_rate: 0.58
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.47
+    win_rate: 0.53
+  - name: Phantom Shell
+    pick_rate: 0.3
+    win_rate: 0.54
+  - name: Sundering Arc
+    pick_rate: 0.12
+    win_rate: 0.52
+  starter_sightings:
+  - name: Conduit Gem
+    pick_rate: 0.31
+    win_rate: 0.57
+  - name: Bluestone Pendant
+    pick_rate: 0.16
+    win_rate: 0.36
+  - name: Archmage's Gem
+    pick_rate: 0.15
+    win_rate: 0.58
+  - name: Bluestone Brooch
+    pick_rate: 0.11
+    win_rate: 0.68
+  - name: Heroism
+    pick_rate: 0.11
+    win_rate: 0.68
+  - name: Selflessness
+    pick_rate: 0.08
+    win_rate: 0.29
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.75
+  - name: War Banner
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Sands Of Time
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.006
+    win_rate: 1.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.47
+    win_rate: 0.53
+  - name: Phantom Shell
+    pick_rate: 0.3
+    win_rate: 0.54
+  - name: Sundering Arc
+    pick_rate: 0.12
+    win_rate: 0.52
+  - name: Purification Beads
+    pick_rate: 0.06
+    win_rate: 0.8
+  - name: Aegis of Acceleration
+    pick_rate: 0.04
+    win_rate: 0.57
   source_url: https://smitebrain.com/gods/cerberus/
   last_verified: '2026-11-08'
   god_win_rate: 0.5470588235294118
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.46
+    win_rate: 0.5733
+    matches: 78
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.47
+    win_rate: 0.53
+    matches: 80
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +233,18 @@ builds:
   - Genji's Guard
   - Shifter's Shield
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.46
+    win_rate: 0.5733
+    matches: 78
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.47
+    win_rate: 0.53
+    matches: 80
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -239,6 +319,7 @@ builds:
   - Genji's Guard
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -312,6 +393,7 @@ builds:
   - Genji's Guard
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -384,6 +466,7 @@ builds:
   community_ordered:
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -459,6 +542,7 @@ builds:
   - Freya's Tears
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -535,6 +619,7 @@ builds:
   - Genji's Guard
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -611,6 +696,7 @@ builds:
   - Genji's Guard
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -685,4 +771,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

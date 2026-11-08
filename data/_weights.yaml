@@ -2303,10 +2303,22 @@ build_order:
     mobility: 0
 
 # ── Starters ──────────────────────────────────────────────────────────────
-# The recommender stamps one starter per god: the highest-priority entry whose
-# damage_types (null = any) include the god's damage type AND whose match_any
-# (null = any) intersects the god's tokenized role+specs. Base -> level-20
-# upgrade pairs verified from the wiki. Death's Toll is the priority-1 default.
+# THE FALLBACK, since 2026-11-08 — not the recommendation. Every build is
+# stamped with the community's MOST-PICKED starter path (base + its upgrade,
+# the two ends summed) and its most-picked base relic, read off SmiteBrain's
+# Conquest record and borrowed by Joust and Arena (`scoring.pick_starter`,
+# `scoring.pick_relic`, which carry the evidence). This table answers only for
+# a god with no community record — 0 of 95 that day; it is for a god added
+# before SmiteBrain publishes him. It agreed with the community's #1 path on
+# 23 of 95 gods (Carry 10/19, Mid 11/24, Jungle 1/18, Solo 1/19, Support 0/15),
+# which is why it stopped being the answer. It is left as it was rather than
+# re-fitted to the community, because a fallback tuned to the data it falls
+# back from would be a second copy of that data.
+#
+# The rule: the highest-priority entry whose damage_types (null = any) include
+# the god's damage type AND whose match_any (null = any) intersects the god's
+# tokenized role+specs. Base -> level-20 upgrade pairs verified from the wiki.
+# Death's Toll is the priority-1 default.
 starters:
   - {base: Gilded Arrow,          upgrade: Sharpshooter's Arrow, damage_types: [physical], match_any: [Carry, Sharpshooter, Hunter], priority: 10}
   - {base: Conduit Gem,           upgrade: Archmage's Gem,       damage_types: [magical],  match_any: [Mid, Nuker, Mage, Sniper, Carry, Burst], priority: 10}

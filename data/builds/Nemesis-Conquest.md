@@ -78,6 +78,102 @@ builds:
   - name: Bumba's Cudgel
     pick_rate: 0.14
     win_rate: 0.42
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.47
+    win_rate: 0.46
+  - name: Blink Rune
+    pick_rate: 0.17
+    win_rate: 0.48
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.47
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.22
+    win_rate: 0.47
+  - name: Hunter's Cowl
+    pick_rate: 0.22
+    win_rate: 0.6
+  - name: Bumba's Cudgel
+    pick_rate: 0.14
+    win_rate: 0.42
+  - name: Leather Cowl
+    pick_rate: 0.14
+    win_rate: 0.4
+  - name: Sundering Axe
+    pick_rate: 0.08
+    win_rate: 0.64
+  - name: Bumba's Spear
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Death's Toll
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.007
+    win_rate: 1.0
+  - name: Heroism
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Sands Of Time
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Selflessness
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.007
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.007
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.007
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.47
+    win_rate: 0.46
+  - name: Blink Rune
+    pick_rate: 0.17
+    win_rate: 0.48
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.47
+  - name: Aegis of Acceleration
+    pick_rate: 0.11
+    win_rate: 0.6
+  - name: Phantom Shell
+    pick_rate: 0.09
+    win_rate: 0.42
+  - name: Agility Relic
+    pick_rate: 0.03
+    win_rate: 0.25
   source_url: https://smitebrain.com/gods/nemesis/
   last_verified: '2026-11-08'
   god_win_rate: 0.47794117647058826
@@ -88,8 +184,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.36
+    win_rate: 0.4506
+    matches: 49
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.47
+    win_rate: 0.46
+    matches: 64
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +271,18 @@ builds:
   - Hydra's Lament
   - Heartseeker
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.36
+    win_rate: 0.4506
+    matches: 49
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.47
+    win_rate: 0.46
+    matches: 64
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +357,7 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -317,6 +434,7 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -391,6 +509,7 @@ builds:
   - Jotunn's Revenge
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -464,6 +583,7 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -539,6 +659,7 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -613,4 +734,5 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   starter: *id001
+  relic: *id002
 ---

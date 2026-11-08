@@ -71,13 +71,85 @@ builds:
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.3
-    win_rate: 0.67
+    win_rate: 0.66
   - name: Pendulum of the Ages
     pick_rate: 0.25
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Conduit Gem
     pick_rate: 0.09
+    win_rate: 0.66
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.64
+  - name: Aegis of Acceleration
+    pick_rate: 0.34
+    win_rate: 0.61
+  - name: Agility Relic
+    pick_rate: 0.003
+    win_rate: 0.5
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.3
+    win_rate: 0.66
+  - name: Pendulum of the Ages
+    pick_rate: 0.25
+    win_rate: 0.61
+  - name: Conduit Gem
+    pick_rate: 0.09
+    win_rate: 0.66
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.09
     win_rate: 0.67
+  - name: Sands Of Time
+    pick_rate: 0.07
+    win_rate: 0.55
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.64
+  - name: Hunter's Cowl
+    pick_rate: 0.05
+    win_rate: 0.68
+  - name: Gilded Arrow
+    pick_rate: 0.04
+    win_rate: 0.55
+  - name: Leather Cowl
+    pick_rate: 0.03
+    win_rate: 0.68
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.64
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 0.22
+  - name: Death's Toll
+    pick_rate: 0.004
+    win_rate: 0.33
+  - name: Bumba's Cudgel
+    pick_rate: 0.001
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.001
+    win_rate: 0.0
+  - name: Bumba's Hammer
+    pick_rate: 0.001
+    win_rate: 1.0
+  - name: Bumba's Spear
+    pick_rate: 0.001
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.64
+  - name: Aegis of Acceleration
+    pick_rate: 0.34
+    win_rate: 0.61
+  - name: Agility Relic
+    pick_rate: 0.003
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.001
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/izanami/
   last_verified: '2026-11-08'
   god_win_rate: 0.6352624495289367
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.39
+    win_rate: 0.66
+    matches: 290
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.64
+    matches: 483
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +246,18 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.39
+    win_rate: 0.66
+    matches: 290
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.64
+    matches: 483
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -239,6 +331,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -313,6 +406,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -388,6 +482,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -463,6 +558,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -539,6 +635,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -613,6 +710,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -689,6 +787,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -762,4 +861,5 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

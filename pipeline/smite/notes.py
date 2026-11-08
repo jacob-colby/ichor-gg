@@ -172,7 +172,8 @@ def canonicalise_community_items(community_entry: dict, known_names) -> int:
         fix(slot)
         for alt in slot.get("alternates") or []:
             fix(alt)
-    for key in ("community_starters", "popular_items"):
+    for key in ("community_starters", "community_relics", "starter_sightings",
+                "relic_sightings", "popular_items"):
         for entry in community_entry.get(key) or []:
             if isinstance(entry, dict):
                 fix(entry)

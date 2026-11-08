@@ -78,6 +78,78 @@ builds:
   - name: Bluestone Brooch
     pick_rate: 0.11
     win_rate: 0.45
+  community_relics:
+  - name: Sundering Arc
+    pick_rate: 0.3
+    win_rate: 0.57
+  - name: Phantom Shell
+    pick_rate: 0.28
+    win_rate: 0.43
+  - name: Purification Beads
+    pick_rate: 0.21
+    win_rate: 0.33
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.34
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.2
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.11
+    win_rate: 0.45
+  - name: Bluestone Pendant
+    pick_rate: 0.11
+    win_rate: 0.64
+  - name: Sundering Axe
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: War Banner
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.03
+    win_rate: 0.33
+  - name: Selflessness
+    pick_rate: 0.03
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.03
+    win_rate: 0.0
+  - name: Warrior's Axe
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Heroism
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Sundering Arc
+    pick_rate: 0.3
+    win_rate: 0.57
+  - name: Phantom Shell
+    pick_rate: 0.28
+    win_rate: 0.43
+  - name: Purification Beads
+    pick_rate: 0.21
+    win_rate: 0.33
+  - name: Blink Rune
+    pick_rate: 0.16
+    win_rate: 0.38
+  - name: Aegis of Acceleration
+    pick_rate: 0.05
+    win_rate: 0.8
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/cabrakan/
   last_verified: '2026-11-08'
   god_win_rate: 0.45544554455445546
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.54
+    win_rate: 0.463
+    matches: 55
+    basis: community
+  relic:
+    name: Sundering Arc
+    pick_rate: 0.3
+    win_rate: 0.57
+    matches: 30
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,8 +249,18 @@ builds:
   - Shifter's Shield
   - Draconic Scale
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.54
+    win_rate: 0.463
+    matches: 55
+    basis: community
+  relic: &id002
+    name: Sundering Arc
+    pick_rate: 0.3
+    win_rate: 0.57
+    matches: 30
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -245,6 +337,7 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -321,6 +414,7 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -396,6 +490,7 @@ builds:
   - Breastplate of Valor
   - Runeforged Hammer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -473,6 +568,7 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -548,6 +644,7 @@ builds:
   - Breastplate of Valor
   - Runeforged Hammer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -624,6 +721,7 @@ builds:
   - Runeforged Hammer
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -699,4 +797,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

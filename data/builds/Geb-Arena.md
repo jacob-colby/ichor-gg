@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.75
+    win_rate: 0.6255
+    matches: 202
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.47
+    win_rate: 0.57
+    matches: 127
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.37
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.53
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.43
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -590,4 +609,5 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 ---

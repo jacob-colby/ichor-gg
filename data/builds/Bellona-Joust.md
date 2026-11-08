@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.52
+    win_rate: 0.5704
+    matches: 90
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.57
+    matches: 88
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.68
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.59
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -395,4 +411,5 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 ---

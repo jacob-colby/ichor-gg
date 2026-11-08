@@ -180,6 +180,23 @@ def test_build_index_exports_starters(tmp_path, monkeypatch):
     assert isinstance(result["starters"], list)
 
 
+def test_starter_options_are_the_table_then_every_stamped_pair():
+    """The build editor pre-selects a build's starter from this list by `base`;
+    a stamped community path missing from it opened the editor on "No
+    starter" and saved the build without one."""
+    table = [{"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow", "priority": 10}]
+    builds = [{"builds": [
+        {"starter": {"base": "Sands Of Time", "upgrade": "Pendulum of the Ages", "basis": "community"}},
+        {"starter": {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow", "basis": "community"}},
+        {"starter": {"base": "Bluestone Pendant", "upgrade": "Bluestone Brooch"}},
+        {"starter": {"base": "Bluestone Pendant"}},          # a half pair is not an option
+        {"slot_order": []}]},
+        {"builds": [{"starter": {"base": "Sands Of Time", "upgrade": "Pendulum of the Ages"}}]}]
+    assert build_index.starter_options({"starters": table}, builds) == table + [
+        {"base": "Bluestone Pendant", "upgrade": "Bluestone Brooch"},
+        {"base": "Sands Of Time", "upgrade": "Pendulum of the Ages"}]
+
+
 def test_build_index_adds_per_item_meta():
     from smite import build_index
     from pathlib import Path

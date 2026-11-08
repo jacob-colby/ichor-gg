@@ -70,14 +70,71 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.57
-    win_rate: 0.58
+    pick_rate: 0.58
+    win_rate: 0.57
   - name: Bumba's Cudgel
-    pick_rate: 0.28
+    pick_rate: 0.29
     win_rate: 0.36
-  - name: Archmage's Gem
-    pick_rate: 0.07
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.03
+    win_rate: 0.75
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.12
+    win_rate: 0.5
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.58
+    win_rate: 0.57
+  - name: Bumba's Cudgel
+    pick_rate: 0.29
+    win_rate: 0.36
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.03
+    win_rate: 0.75
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.75
+  - name: Bumba's Spear
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Conduit Gem
+    pick_rate: 0.01
     win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Heroism
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Archmage's Gem
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Leather Cowl
+    pick_rate: 0.007
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.12
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.03
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/hun-batz/
   last_verified: '2026-11-08'
   god_win_rate: 0.5135135135135135
@@ -88,8 +145,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.87
+    win_rate: 0.5
+    matches: 129
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.5
+    matches: 68
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +231,18 @@ builds:
   - The Crusher
   - Heartseeker
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.87
+    win_rate: 0.5
+    matches: 129
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.5
+    matches: 68
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +318,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -315,6 +393,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -388,6 +467,7 @@ builds:
   - Jotunn's Revenge
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -461,6 +541,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -533,6 +614,7 @@ builds:
   - Jotunn's Revenge
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -608,6 +690,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -682,4 +765,5 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 ---

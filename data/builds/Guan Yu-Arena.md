@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.67
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.37
+    win_rate: 0.6297
+    matches: 36
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Sundering Arc
+    pick_rate: 0.38
+    win_rate: 0.64
+    matches: 36
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.83
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.83
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -395,4 +411,5 @@ builds:
       pick: 0.0
       fit: 0.67
   starter: *id001
+  relic: *id002
 ---

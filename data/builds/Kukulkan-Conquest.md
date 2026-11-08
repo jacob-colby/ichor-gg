@@ -77,7 +77,52 @@ builds:
     win_rate: 0.43
   - name: Pendulum of the Ages
     pick_rate: 0.17
-    win_rate: 0.58
+    win_rate: 0.57
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.54
+  - name: Blink Rune
+    pick_rate: 0.009
+    win_rate: 0.33
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.5
+    win_rate: 0.6
+  - name: Conduit Gem
+    pick_rate: 0.28
+    win_rate: 0.43
+  - name: Pendulum of the Ages
+    pick_rate: 0.17
+    win_rate: 0.57
+  - name: Sands Of Time
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Bluestone Pendant
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.54
+  - name: Blink Rune
+    pick_rate: 0.009
+    win_rate: 0.33
+  - name: Phantom Shell
+    pick_rate: 0.006
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.003
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/kukulkan/
   last_verified: '2026-11-08'
   god_win_rate: 0.5448717948717948
@@ -90,6 +135,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.78
+    win_rate: 0.539
+    matches: 243
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.54
+    matches: 159
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +222,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.78
+    win_rate: 0.539
+    matches: 243
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.54
+    matches: 159
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +307,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +383,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -391,6 +458,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -465,6 +533,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -537,6 +606,7 @@ builds:
   - Ancient Signet
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -612,6 +682,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -685,4 +756,5 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 ---

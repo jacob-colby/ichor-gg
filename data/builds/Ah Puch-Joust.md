@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.7
+    win_rate: 0.547
+    matches: 76
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.37
+    matches: 50
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.92
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -590,6 +609,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -655,4 +675,5 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 ---

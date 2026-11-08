@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.58
+    win_rate: 0.5095
+    matches: 240
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.46
+    matches: 215
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.99
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -590,6 +609,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: mana-stack
@@ -656,6 +676,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: burst
@@ -722,6 +743,7 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: bruiser
@@ -788,6 +810,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: anti-tank
@@ -854,6 +877,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: attack-speed
@@ -920,6 +944,7 @@ builds:
       pick: 0.0
       fit: 0.96
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: cooldown
@@ -986,6 +1011,7 @@ builds:
       pick: 0.0
       fit: 0.65
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: model
@@ -1052,5 +1078,6 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 ---

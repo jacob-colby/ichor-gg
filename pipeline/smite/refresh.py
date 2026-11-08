@@ -200,7 +200,9 @@ def item_note_content(name: str, parsed: dict, url: str, today: str = None) -> d
         "name": name,
         "tier": parsed.get("tier"),
         "cost": parsed.get("cost"),
-        "stats": parsed.get("stats", {}),
+        # `or {}`, not a default: a statless page (a free relic) parses to
+        # None, and the record on disk has always said `{}` (Blink Rune).
+        "stats": parsed.get("stats") or {},
         "passive": parsed.get("passive"),
         "builds_from": parsed.get("builds_from", []),
         "builds_into": [],
@@ -599,8 +601,11 @@ def refresh_item_index(community_fetcher, data_root: Path, force: bool = False,
         url += f"&{COMMUNITY_WINDOW_PARAM}={window}"
     payload = json.loads(community_fetcher.fetch(url, force=force))
     rows = smitebrain_parser.parse_item_index(payload)
+    # Stripped: the source names one item "Aegis of Acceleration " with a
+    # trailing space (2026-11-08), which no record can join on. The god page's
+    # tile alt text carries the same space and `_tile_entry` strips it there.
     table = {
-        r["display_name"]: {
+        r["display_name"].strip(): {
             "win_rate": r["win_rate"],
             "matches_won": r["matches_won"],
             "matches_played": r["matches_played"],
@@ -656,7 +661,17 @@ def community_build_entry(god: str, html: str, index_row: dict | None = None) ->
         # app previously showed a starter chosen by a role rule in
         # _weights.yaml, so every Carry got the same opener no matter what
         # Carry players bought.
-        "community_starters": parsed["starters"],
+        "community_starters": [dict(s) for s in parsed["starters"]],
+        # Which BASE relic they take into the free relic slot, top 3 by pick
+        # rate, same shape as `community_starters`. Filled below, once the
+        # names are canonical (`free_relic_sightings`).
+        "community_relics": [],
+        # Every tile of each section, which is what the starter and relic
+        # recommendation reads (`scoring.pick_starter`, `scoring.pick_relic`);
+        # the two lists above are their top 3, for display. Copies, never the
+        # same dicts: YAML would write a shared object as an anchor and alias.
+        "starter_sightings": [dict(s) for s in parsed["starter_sightings"]],
+        "relic_sightings": [dict(s) for s in parsed["relics"]],
         "source_url": url,
         "last_verified": date.today().isoformat(),
     }
@@ -669,7 +684,43 @@ def community_build_entry(god: str, html: str, index_row: dict | None = None) ->
     drift = notes.canonicalise_community_items(community_entry, _known_item_names())
     if drift:
         print(f"  {god}: renamed {drift} community item(s) to our spelling")
+    relics = free_relic_sightings(community_entry["relic_sightings"])
+    community_entry["relic_sightings"] = relics
+    community_entry["community_relics"] = [dict(r) for r in relics[:smitebrain_parser.RELICS_SHOWN]]
     return community_entry
+
+
+def free_relic_sightings(sightings: list) -> list:
+    """The Relics section's tiles, minus every one our item records say is NOT
+    a free base relic, in the section's own order (pick rate descending). The
+    entry's `community_relics` is the first `RELICS_SHOWN` of these.
+
+    SmiteBrain's Relics section carries a junk tail under half a percent —
+    Gauntlet of Thebes, Yogi's Necklace, Devourer's Gauntlet, even the paid
+    UPGRADE Time-lock Aegis, which is bought into the six and never sits in the
+    free slot (`scoring.is_buildable`). None reached a top 3 on 2026-11-08, but
+    a god with two real relics in play would show one as his third. A name with
+    NO record is kept, not dropped: that is a new relic the wiki has and we do
+    not, and it should surface as unresolved rather than vanish."""
+    known, free = set(_known_item_names()), _free_relic_names()
+    return [s for s in sightings or [] if s.get("name") not in known or s.get("name") in free]
+
+
+def _free_relic_names() -> set:
+    """Items whose record is a relic at cost 0 — the game's free slot. Cached
+    like `_known_item_names`: `refresh_community` asks once per god."""
+    global _FREE_RELIC_NAMES
+    if _FREE_RELIC_NAMES is None:
+        out = set()
+        for p in (DATA_ROOT / "Items").glob("*.md"):
+            fm, _ = notes.read_note(p)
+            if fm.get("tier") == "Relic" and fm.get("cost") == 0:
+                out.add(fm.get("name") or p.stem)
+        _FREE_RELIC_NAMES = out
+    return _FREE_RELIC_NAMES
+
+
+_FREE_RELIC_NAMES = None
 
 
 def community_url(god: str, window=None) -> str:

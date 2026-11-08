@@ -70,14 +70,68 @@ builds:
       win_rate: 0.0
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.5
-    win_rate: 0.53
+    pick_rate: 0.51
+    win_rate: 0.51
   - name: Bluestone Pendant
     pick_rate: 0.28
     win_rate: 0.32
   - name: Pendulum of the Ages
     pick_rate: 0.09
     win_rate: 0.83
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.23
+    win_rate: 0.5
+  - name: Purification Beads
+    pick_rate: 0.22
+    win_rate: 0.47
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.51
+    win_rate: 0.51
+  - name: Bluestone Pendant
+    pick_rate: 0.28
+    win_rate: 0.32
+  - name: Pendulum of the Ages
+    pick_rate: 0.09
+    win_rate: 0.83
+  - name: Archmage's Gem
+    pick_rate: 0.03
+    win_rate: 1.0
+  - name: Blood-soaked Shroud
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.23
+    win_rate: 0.5
+  - name: Purification Beads
+    pick_rate: 0.22
+    win_rate: 0.47
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.42
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.56
   source_url: https://smitebrain.com/gods/chaac/
   last_verified: '2026-11-08'
   god_win_rate: 0.5
@@ -88,8 +142,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.79
+    win_rate: 0.4427
+    matches: 54
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+    matches: 17
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +229,18 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.79
+    win_rate: 0.4427
+    matches: 54
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+    matches: 17
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +315,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -315,6 +390,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -389,6 +465,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -463,6 +540,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -537,6 +615,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -614,6 +693,7 @@ builds:
   - Genji's Guard
   - Gem of Focus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -689,4 +769,5 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 ---

@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 
 import pytest
+from bs4 import BeautifulSoup
 
 from smite import smitebrain_parser
 
@@ -253,6 +254,71 @@ def test_starters_absent_section_is_empty_not_an_error():
     assert smitebrain_parser.parse_build_page(html)["starters"] == []
 
 
+# ── Relics, and rates under 1% (2026-11-08) ─────────────────────────────
+#
+# The Relics section was skipped like Starters once was, so the app could not
+# say which relic a god's players take. And every tile under 1% was read ten
+# times too high: "0.7% pick" matched as "7%".
+
+
+def _ra_relics_and_starters():
+    """Ra's live page at ob47, 2026-11-08: the Relics and Starters section
+    containers verbatim. Real markup, unlike the Chiron fixture, whose h2s are
+    siblings under <body> and so cannot show that a section is scoped."""
+    return (FIXTURES / "ra_smitebrain_relics_starters.html").read_text(encoding="utf-8")
+
+
+def test_relics_are_read_from_their_own_section_on_the_live_markup():
+    out = smitebrain_parser.parse_build_page(_ra_relics_and_starters())["relics"]
+    # "Aegis of Acceleration " carries a trailing space in its alt text.
+    assert out == [
+        {"name": "Purification Beads", "pick_rate": 0.52, "win_rate": 0.46},
+        {"name": "Aegis of Acceleration", "pick_rate": 0.46, "win_rate": 0.54},
+        {"name": "Phantom Shell", "pick_rate": 0.02, "win_rate": 0.88},
+        {"name": "Blink Rune", "pick_rate": 0.002, "win_rate": 1.0},
+    ]
+
+
+def test_starters_on_the_live_markup_stay_out_of_the_relics_section():
+    parsed = smitebrain_parser.parse_build_page(_ra_relics_and_starters())
+    assert [s["name"] for s in parsed["starters"]] == [
+        "Pendulum of The Ages", "Archmage's Gem", "Sands of Time"]
+    assert not {s["name"] for s in parsed["relics"]} & {"Pendulum of The Ages", "Conduit Gem"}
+
+
+def test_a_rate_under_one_percent_keeps_its_decimal():
+    """The old pattern matched "0.7% pick" as "7%": it cannot match at the "0",
+    so the search slid one character. Measured over 95 gods: the wrong third
+    starter on 10 (Cu Chulainn's "Sundering Axe 7%" is 0.7%)."""
+    html = _page(_tile("Bluestone Brooch", 58, 57) + _tile("Bluestone Pendant", 30, 42)
+                 + _tile("Sundering Axe", "0.7", 50) + _tile("Death's Embrace", 3, 63))
+    out = smitebrain_parser.parse_build_page(html)["starters"]
+    assert [s["name"] for s in out] == ["Bluestone Brooch", "Bluestone Pendant", "Death's Embrace"]
+    tile = '<div class="flex"><img alt="X"><div class="text-xs">0.7% pick 100% win</div></div>'
+    entry = smitebrain_parser._tile_entry(BeautifulSoup(tile, "html.parser").div)
+    assert entry["pick_rate"] == 0.007 and entry["win_rate"] == 1.0
+
+
+def test_integer_rates_store_exactly_as_before():
+    tile = '<div class="flex"><img alt="X"><div class="text-xs">41% pick 53% win</div></div>'
+    entry = smitebrain_parser._tile_entry(BeautifulSoup(tile, "html.parser").div)
+    assert (entry["pick_rate"], entry["win_rate"]) == (0.41, 0.53)
+
+
+def test_relics_are_uncapped_for_the_caller_to_filter():
+    tiles = "".join(_tile(n, p, 50) for n, p in [
+        ("Purification Beads", 60), ("Aegis of Acceleration", 38), ("Gauntlet of Thebes", "0.4"),
+        ("Blink Rune", "0.3")])
+    html = ('<div class="flex"><h2>Relics</h2>' + tiles + '</div>' + _page(_tile("Conduit Gem", 50, 50)))
+    out = smitebrain_parser.parse_build_page(html)["relics"]
+    assert [r["name"] for r in out] == ["Purification Beads", "Aegis of Acceleration",
+                                        "Gauntlet of Thebes", "Blink Rune"]
+
+
+def test_relics_absent_section_is_empty_not_an_error():
+    assert smitebrain_parser.parse_build_page(_page(_tile("Conduit Gem", 25, 50)))["relics"] == []
+
+
 # ── The match window (2026-11-05) ────────────────────────────────────────
 #
 # SmiteBrain's pages default to the NEWEST patch, and that window opens the
@@ -292,8 +358,9 @@ def test_patch_windows_is_empty_when_the_page_offers_no_selector():
 
 def test_a_one_day_window_parses_to_nothing_at_all():
     """Why a thin window is not a small error. The page is 36 KB with no Core
-    section, so items, aspects and starters all read empty — and
+    section, so items, aspects, starters and relics all read empty — and
     `notes.merge_build_note` REPLACES the community entry, so committing this
     overwrites the only copy of a complete record."""
     parsed = smitebrain_parser.parse_build_page(_thin_window_html())
-    assert parsed == {"items": [], "aspects": [], "starters": []}
+    assert parsed == {"items": [], "aspects": [], "starters": [], "starter_sightings": [],
+                      "relics": []}

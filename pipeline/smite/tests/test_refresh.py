@@ -82,6 +82,67 @@ def test_refresh_god_builds_writes_community_entry(tmp_path, monkeypatch):
     assert community["last_verified"] == date.today().isoformat()
 
 
+def _relic_items(root):
+    """A tiny item pool: two free base relics, a paid upgrade, a tier-3 item."""
+    for name, tier, cost in [("Purification Beads", "Relic", 0), ("Aegis of Acceleration", "Relic", 0),
+                             ("Time-lock Aegis", "Relic", 2500), ("Gauntlet of Thebes", 3, 2350)]:
+        notes.write_note(root / "Items" / f"{name}.md", {"name": name, "tier": tier, "cost": cost}, "")
+
+
+def test_community_entry_carries_the_relics_section(tmp_path, monkeypatch):
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "_KNOWN_ITEM_NAMES", None)
+    monkeypatch.setattr(refresh, "_FREE_RELIC_NAMES", None)
+    _relic_items(tmp_path)
+    html = (FIXTURES / "ra_smitebrain_relics_starters.html").read_text(encoding="utf-8")
+    entry = refresh.community_build_entry("Ra", html)
+    # Phantom Shell and Blink Rune have no record in this pool: kept, not
+    # dropped, because an unknown name is a relic we lack, not junk.
+    assert entry["community_relics"] == [
+        {"name": "Purification Beads", "pick_rate": 0.52, "win_rate": 0.46},
+        {"name": "Aegis of Acceleration", "pick_rate": 0.46, "win_rate": 0.54},
+        {"name": "Phantom Shell", "pick_rate": 0.02, "win_rate": 0.88},
+    ]
+    assert [s["name"] for s in entry["community_starters"]][0] == "Pendulum of The Ages"
+    # The recommendation reads every tile; the display lists are the top 3.
+    assert len(entry["starter_sightings"]) == 7 and entry["starter_sightings"][:3] == entry["community_starters"]
+    assert [r["name"] for r in entry["relic_sightings"]] == [
+        "Purification Beads", "Aegis of Acceleration", "Phantom Shell", "Blink Rune"]
+
+
+def test_the_community_entry_writes_no_yaml_aliases(tmp_path, monkeypatch):
+    """The display lists repeat the head of the sighting lists. Shared dicts
+    would be written as `&id001` anchors and `*id001` aliases."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "_KNOWN_ITEM_NAMES", None)
+    monkeypatch.setattr(refresh, "_FREE_RELIC_NAMES", None)
+    _relic_items(tmp_path)
+    html = (FIXTURES / "ra_smitebrain_relics_starters.html").read_text(encoding="utf-8")
+    path = tmp_path / "Ra-Conquest.md"
+    notes.merge_build_note(path, "Ra", "Conquest", refresh.community_build_entry("Ra", html))
+    text = path.read_text(encoding="utf-8")
+    assert "&id" not in text and "*id" not in text
+
+
+def test_community_relics_drop_items_our_records_say_are_not_free_relics(tmp_path, monkeypatch):
+    """The Relics section's junk tail: a tier-3 item and a PAID upgrade, which
+    is bought into the six and never sits in the free slot."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "_KNOWN_ITEM_NAMES", None)
+    monkeypatch.setattr(refresh, "_FREE_RELIC_NAMES", None)
+    _relic_items(tmp_path)
+    out = refresh.free_relic_sightings([
+        {"name": "Purification Beads", "pick_rate": 0.6, "win_rate": 0.5},
+        {"name": "Gauntlet of Thebes", "pick_rate": 0.2, "win_rate": 0.5},
+        {"name": "Time-lock Aegis", "pick_rate": 0.1, "win_rate": 0.5},
+        {"name": "Aegis of Acceleration", "pick_rate": 0.05, "win_rate": 0.5},
+        {"name": "A Relic We Lack", "pick_rate": 0.03, "win_rate": 0.5},
+        {"name": "Blink Rune", "pick_rate": 0.01, "win_rate": 0.5},
+    ])
+    assert [r["name"] for r in out] == ["Purification Beads", "Aegis of Acceleration",
+                                        "A Relic We Lack", "Blink Rune"]
+
+
 def test_refresh_all_reruns_every_tracked_god_item_and_build(tmp_path, monkeypatch):
     monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
     monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "Builds")
@@ -745,6 +806,21 @@ def test_the_item_index_writes_the_provenance_it_is_handed(tmp_path, monkeypatch
     assert out["window_end"] == "2026-11-03"
     assert out["matches_analyzed"] == 14667
     assert "time=ob46" in fetcher.fetch.call_args[0][0]
+
+
+def test_the_item_index_strips_a_display_name_the_source_pads(tmp_path, monkeypatch):
+    """SmiteBrain names one item "Aegis of Acceleration " (2026-11-08); keyed
+    as served, the item record and the tier list could never join it."""
+    payload = {"nodes": [{"type": "data", "data": [
+        {"display_name": "Aegis of Acceleration ", "win_rate": 0.5456, "matches_played": 6448,
+         "matches_won": 3518, "use_rate": 0.27}]}]}
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_item_index",
+                        lambda p: p["nodes"][0]["data"])
+    fetcher = Mock()
+    fetcher.fetch.return_value = json.dumps(payload)
+    refresh.refresh_item_index(fetcher, tmp_path, window="ob47")
+    out = json.loads((tmp_path / refresh.COMMUNITY_ITEMS_FILE).read_text(encoding="utf-8"))
+    assert list(out["items"]) == ["Aegis of Acceleration"]
 
 
 def test_the_item_index_leaves_the_fields_null_without_provenance(tmp_path, monkeypatch):
