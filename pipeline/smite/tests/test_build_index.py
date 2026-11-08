@@ -66,6 +66,9 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      # Mode display order, so the viewer's strip leads with
                      # Conquest rather than whatever the filenames sorted to.
                      "modes": list(recommend.MODES),
+                     # No _weights.yaml, so no mode borrows another's
+                     # community record and nothing is marked.
+                     "community_transfer": {},
                      # The method page reads the model's weights from here so
                      # it can't describe a blend the pipeline stopped using.
                      # A vault with no _weights.yaml still gets the built-in
@@ -863,3 +866,32 @@ def test_every_god_can_answer_every_threat_channel():
     assert short == [], (
         f"{len(short)} (god, mode, channel) combinations the draft cannot "
         f"answer at all: {short[:12]}")
+
+
+def test_community_transfer_ships_the_borrow_rules_verbatim():
+    """The god page marks, in Conquest's most-picked list, the items whose
+    Conquest record does not describe them in Joust or Arena. That set is the
+    one `_weights.yaml` already decided for the Hybrid, so it has to arrive
+    unchanged — a hand-copy could drift from the rule it restates."""
+    from smite import scoring
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    shipped = build_index.community_transfer(weights)
+    for mode in recommend.MODES:
+        cfg = (weights.get("modes") or {}).get(mode.lower()) or {}
+        borrow = cfg.get("borrow_community")
+        if not borrow:
+            assert mode not in shipped, f"{mode} borrows nothing, so nothing to mark"
+            continue
+        assert shipped[mode] == {"from": borrow.get("from", "Conquest"),
+                                 "reject_tags": list(borrow.get("reject_tags") or []),
+                                 "excluded_items": list(cfg.get("excluded_items") or [])}
+    # Conquest IS the record; it borrows from nobody.
+    assert "Conquest" not in shipped
+
+
+def test_community_transfer_without_a_borrow_block_is_empty():
+    assert build_index.community_transfer({}) == {}
+    assert build_index.community_transfer({"modes": {"arena": {"excluded_items": ["X"]}}}) == {}
+    assert build_index.community_transfer(
+        {"modes": {"joust": {"borrow_community": {"reject_tags": ["mobility"]}}}}) == {
+        "Joust": {"from": "Conquest", "reject_tags": ["mobility"], "excluded_items": []}}

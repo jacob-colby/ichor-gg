@@ -42,6 +42,36 @@ def team_config(weights):
             "duplicate_value": team.get("duplicate_value", 0.0), "modes": modes}
 
 
+def community_transfer(weights):
+    """`{Mode: {from, reject_tags, excluded_items}}` for every mode that
+    borrows another mode's community record (`modes.<mode>.borrow_community`).
+
+    Joust and Arena have no community record of their own, so the god page
+    shows them Conquest's most-picked list, labelled as Conquest's. Which of
+    those items Conquest's record does NOT describe there is already decided,
+    with reasons, in `_weights.yaml`: the tags the Hybrid refuses to borrow,
+    and the items the mode's shop does not sell. This ships those two lists
+    verbatim so the page marks the same items the pipeline set aside, instead
+    of a hand-copy of the YAML living in TypeScript. The reasons themselves are
+    comments there and words in `viewer/src/lib/mostPicked.ts`; a viewer test
+    fails if a tag shipped here has no sentence.
+
+    A mode without `borrow_community` is absent, not empty: it borrows nothing,
+    so there is nothing to mark. `excluded_items` ships only beside a borrow —
+    it is the one other list that says "Conquest's record does not apply here".
+    """
+    out = {}
+    for mode in recommend.MODES:
+        cfg = (weights.get("modes") or {}).get(mode.lower()) or {}
+        borrow = cfg.get("borrow_community")
+        if not borrow:
+            continue
+        out[mode] = {"from": borrow.get("from", "Conquest"),
+                     "reject_tags": list(borrow.get("reject_tags") or []),
+                     "excluded_items": list(cfg.get("excluded_items") or [])}
+    return out
+
+
 def team_fit_items(gods, builds, items, weights, tags_map):
     """`{god: {mode: [item]}}` — the team-tag items whose kit fit passes
     `kit_fit.fits` against that mode's shipped core. The draft pays the "you
@@ -594,6 +624,10 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
              # whatever order the build filenames happened to sort in — which
              # put Arena at the head the moment it was added.
              "modes": list(recommend.MODES),
+             # What Joust and Arena may borrow from Conquest's community
+             # record, and what they may not: the god page marks the same
+             # items in Conquest's most-picked list that the Hybrid refuses.
+             "community_transfer": community_transfer(weights),
              "starters": weights.get("starters", []),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),

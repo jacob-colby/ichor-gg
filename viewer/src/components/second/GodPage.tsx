@@ -12,14 +12,24 @@
  * because that is the build `/side_by_side` measures; the enemy strip adapts
  * THAT six (archetype passed into useDraftResult explicitly), and the Draft
  * tab opens the board on it too.
+ *
+ * ONE SIX, ADJUSTED (2026-11-08). Every other build is an adjustment of that
+ * six, chosen in one strip beside the aspect switch (`FocusStrip`): the six
+ * changes in place, the slots that moved are marked, and a line names the
+ * swaps. The starter and the relic are tiles at the head of the buy order,
+ * and a most-picked list (the second column; a disclosure on a phone) ticks
+ * which of the god's most-bought items the six on screen holds, on every
+ * mode. Why `model` stays the main six and where Balanced and Hybrid sit:
+ * `lib/focus.ts`.
  */
 import { useEffect, useMemo, useState } from "react";
-import type { BuildNote, CommunityBuildEntry, CuratedBuildEntry, God, IndexData } from "../../types";
+import type { BuildNote, CommunityBuildEntry, CuratedBuildEntry, God, IndexData, PopularItem } from "../../types";
 import { useDraft, MODE_TEAM_SIZE } from "../../lib/draft";
-import { useDraftResult } from "../../lib/useDraftResult";
+import { archetypeEntries, useDraftResult } from "../../lib/useDraftResult";
 import { useUrlState } from "../../lib/urlState";
-import { tabLabel } from "../../lib/builds";
 import { toHash } from "../../lib/useHashRoute";
+import { diffSix, focusOptions, hybridEvidence, swapLead, MAIN_LABEL, type SlotSwap } from "../../lib/focus";
+import { mostPicked, transferFlags } from "../../lib/mostPicked";
 import { godLane, laneTextClass } from "../../lib/roleAccent";
 import { useComparison } from "./useComparison";
 import { verdictSentence, MODE_NAME } from "./verdict";
@@ -27,6 +37,9 @@ import { itemReason } from "./itemReason";
 import { Art, ChevronGlyph, SwapGlyph } from "./art";
 import { ModeSwitch } from "./ModeSwitch";
 import { AspectToggle } from "./AspectToggle";
+import { FocusStrip } from "./FocusStrip";
+import { KitTile, type KitAlternative } from "./KitTile";
+import { MostPicked } from "./MostPicked";
 import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, writeLastGod, aspectNote } from "./pageState";
 import { VerdictLine } from "./VerdictLine";
 import { ItemRow } from "./ItemRow";
@@ -42,6 +55,12 @@ const sameOrder = (a: string[] = [], b: string[] = []) => a.length === b.length 
 function noteFor(builds: BuildNote[], god: string, label: string) {
   return builds.find((b) => b.god === god && b.mode === label);
 }
+
+/** How many of the god's most-bought items the list shows. */
+const MOST_PICKED = 10;
+
+const pctOf = (r: number) => `${Math.round(r * 100)}%`;
+const shortAspect = (a: string) => a.replace(/^Aspect of /, "").replace(/^the /i, "");
 
 export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const [q, setQ] = useUrlState(decodePageQuery, encodePageQuery);
@@ -83,14 +102,29 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const note = noteFor(data.builds, god.name, modeLabel);
   const community = noteFor(data.builds, god.name, "Conquest")?.builds
     .find((b) => b.source === "community") as CommunityBuildEntry | undefined;
+  // The strip's options: the main six first, every other build measured
+  // against it. `r.archetypes` is the deduped list for THIS kit (aspect or
+  // base), so a focus the dedupe folded away comes back as its own chip here.
+  const options = useMemo(() => focusOptions(r.archetypes, MAIN_ARCHETYPE), [r.archetypes]);
+  const mainOpt = options[0];
+  const selected = options.find((o) => o.archetype === q.build) ?? mainOpt;
+  // The entry `useDraftResult` is adapting — the survivor when `build=` names
+  // a collapsed alias, so this can read `core` while the chip reads Burst.
   const archetype = r.activeEntry?.archetype ?? q.build;
-  const isMain = archetype === MAIN_ARCHETYPE;
+  const isMain = !selected || selected.kind === "main";
   const aspectName = god.aspects?.[0]?.name ?? null;
   const suggested = (note?.builds ?? []).filter((b) => b.source === "suggested") as CuratedBuildEntry[];
-  const baseOfArch = suggested.find((b) => b.archetype === archetype && !b.aspect);
-  const aspectOfArch = suggested.find((b) => b.archetype === archetype && !!b.aspect);
+  // The raw note, by the CHIP's name: every archetype is stored there, aliases
+  // included, so "does the aspect move this build" is asked of the right one.
+  const chipArch = selected?.archetype ?? archetype;
+  const baseOfArch = suggested.find((b) => b.archetype === chipArch && !b.aspect);
+  const aspectOfArch = suggested.find((b) => b.archetype === chipArch && !!b.aspect);
   const aspectChangesBuild = !!aspectOfArch && !sameOrder(aspectOfArch.slot_order, baseOfArch?.slot_order);
   const aspectOnBuild = q.aspect && r.aspectScored && aspectChangesBuild;
+  // The base kit's main six: what the aspect is measured against.
+  const baseMainSix = useMemo(
+    () => focusOptions(archetypeEntries(data.builds, god.name, mode, false), MAIN_ARCHETYPE)[0]?.six ?? [],
+    [data.builds, god.name, mode]);
 
   // ── Comparison + verdict ───────────────────────────────────────────────
   const cmp = useComparison(god.name);
@@ -104,6 +138,14 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const showTheirs = theirs && canSwap;
   useEffect(() => { setTheirs(false); }, [god.name]);
 
+  // ── What the reader's choices changed ──────────────────────────────────
+  // A focus is marked against the main six of the same kit; with no focus,
+  // the aspect is marked against the base kit's main six. One level at a
+  // time, so a mark always means "your last choice put this here".
+  const aspectSwaps: SlotSwap[] = q.aspect && r.aspectScored && isMain ? diffSix(baseMainSix, mainOpt?.six ?? []) : [];
+  const marks: SlotSwap[] = showTheirs ? [] : !isMain ? selected.swaps : aspectSwaps;
+  const markedFor = new Map(marks.filter((m) => m.added).map((m) => [m.added!, m]));
+
   // ── The six on screen ──────────────────────────────────────────────────
   const swaps = new Map((r.result?.diff.changes ?? []).map((c) => [c.added, c]));
   const six = showTheirs ? cmp.data!.community.items : (r.result?.adapted.core ?? shipped);
@@ -114,14 +156,36 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
     if (item?.cost == null) unknownCost = true;
     running += item?.cost ?? 0;
     const swap = showTheirs ? undefined : swaps.get(name);
-    return {
-      name, position: i + 1, cumulative: unknownCost ? null : running,
-      reason: itemReason(name, { god: god.name, mode, community, item, swap }), swapped: !!swap,
-    };
+    const mark = swap ? undefined : markedFor.get(name);
+    const base = itemReason(name, { god: god.name, mode, community, item, swap });
+    const reason = mark
+      ? { tone: "adjust" as const, text: [mark.removed ? `In for ${mark.removed}` : "Added", base.text].filter(Boolean).join(" · ") }
+      : base;
+    return { name, position: i + 1, cumulative: unknownCost ? null : running, reason, swapped: !!swap, adjusted: !!mark };
   });
 
   const starter = showTheirs ? community?.starter : (r.activeEntry?.starter ?? community?.starter);
   const starterPath = starter ? r.starters.find((p) => p.rootName === starter.base) : undefined;
+  const inConquest = r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : "";
+  // Each other opener by the item its players actually hold (the path's
+  // lead, whose share is the one printed) — the full "base → upgrade" label
+  // stays on the starter tile itself, where the pairing is the point; here it
+  // doubled the line and wrapped it on a phone.
+  const starterAlts: KitAlternative[] = r.starters
+    .filter((p) => p.rootName !== starter?.base)
+    .slice(0, 2)
+    .map((p) => ({ name: p.lead.name, icon: p.lead.name, share: p.lead.pick_rate }));
+
+  // The relic: the community's own record, when the index carries one. Same
+  // fallback as the starters — Joust and Arena read Conquest's, and say so.
+  // Absent from the index, the tile is absent: nothing stands in for it.
+  const relicsOf = (label: string) => (noteFor(data.builds, god.name, label)?.builds
+    .find((b) => b.source === "community") as CommunityBuildEntry | undefined)?.community_relics;
+  const ownRelics = relicsOf(modeLabel);
+  const relicRecord: PopularItem[] = [...((ownRelics?.length ? ownRelics : relicsOf("Conquest")) ?? [])]
+    .sort((a, b) => b.pick_rate - a.pick_rate || a.name.localeCompare(b.name));
+  const relicsAreConquest = mode !== "conquest" && !ownRelics?.length;
+  const topRelic = relicRecord[0];
 
   // ── Header facts ───────────────────────────────────────────────────────
   // Conquest's slice, or the top level on an index that predates per-mode
@@ -158,12 +222,54 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   };
   const clearEnemies = () => { enemies.forEach((_, i) => setEnemy(i, "")); writeVs([]); };
 
-  const buildLabel = (a?: string) => (a === MAIN_ARCHETYPE ? "Ichor's main six" : r.archetypes.find((e) => e.archetype === a)
-    ? tabLabel(r.archetypes.find((e) => e.archetype === a)!) : a ?? "");
-  const listLabel = showTheirs ? "The community's six" : isMain ? "Ichor's six" : `${buildLabel(archetype)} build`;
+  const buildLabel = isMain ? "Ichor's main six" : selected.label;
+  const listLabel = showTheirs ? "The community's six" : isMain ? MAIN_LABEL : `${selected.label} build`;
+
+  // ── The line under the strip: what the choice changed, in words ────────
+  const of = mainOpt?.six.length ?? 6;
+  const hybridSwaps = selected?.kind === "answer" && selected.archetype === "hybrid" ? selected.entry.swaps ?? [] : [];
+  const evidenceFor = (s: SlotSwap) => hybridEvidence(
+    hybridSwaps.find((h) => h.added === s.added && h.removed === s.removed), god.name, selected?.entry.borrowed_from);
+  const adjustNote = isMain || !selected ? null
+    : selected.archetype === "core"
+      ? `Balanced weighs ${god.name} players' win and pick rates beside gold value and kit fit; ${MAIN_LABEL} leaves them out.`
+      : selected.archetype === "hybrid"
+        ? `Hybrid keeps the model's strongest picks and lets a strong ${selected.entry.borrowed_from ? `${selected.entry.borrowed_from} ` : ""}player record take a weaker slot.`
+        : mode === "conquest"
+          ? `In Conquest every focus is a lean on Balanced, which weighs players' win and pick rates; ${MAIN_LABEL} leaves them out.`
+          : null;
+  const swapList = (list: SlotSwap[], evidence?: (s: SlotSwap) => string | null) => (
+    <ul className="mt-1 space-y-0.5" data-testid="swap-list">
+      {list.map((s, i) => {
+        const why = evidence?.(s);
+        return (
+          <li key={`${s.removed}-${s.added}-${i}`} className="text-note text-muted">
+            {s.removed && <span>{s.removed}</span>}
+            {s.removed && s.added && <span aria-hidden="true"> → </span>}
+            {s.removed && s.added && <span className="sr-only"> replaced by </span>}
+            {!s.removed && <span>Adds </span>}
+            {s.added ? <span className="font-semibold text-ink">{s.added}</span> : <span> leaves</span>}
+            {why && <span className="text-quiet"> · {why}</span>}
+          </li>
+        );
+      })}
+    </ul>
+  );
+
+  // ── Most picked ─────────────────────────────────────────────────────────
+  const picked = useMemo(() => mostPicked(community), [community]);
+  const topPicked = picked.slice(0, MOST_PICKED);
+  const pickFlags = transferFlags(topPicked.map((p) => p.name), modeLabel,
+    data.community_transfer?.[modeLabel], r.itemsByName);
+  const inBuild = new Set(six);
+  const pickedHave = topPicked.filter((p) => inBuild.has(p.name)).length;
+  const mostPickedPanel = (bare: boolean) => (
+    <MostPicked god={god.name} mode={mode} items={topPicked} total={picked.length} inBuild={inBuild}
+      flags={pickFlags} bare={bare} />
+  );
 
   const why = (
-    <WhyPanel god={god.name} mode={mode} isModel={isMain} buildLabel={buildLabel(archetype)}
+    <WhyPanel god={god.name} mode={mode} isModel={isMain} buildLabel={buildLabel}
       changes={r.result?.diff.changes ?? []} culprits={r.threatCulprits} enemiesKnown={r.enemiesKnown}
       comparison={cmp.data} meta={cmp.meta} kitLine={kitLine} />
   );
@@ -171,6 +277,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
     <EnemyStrip enemies={enemies} onOpen={setSheetAt} changeCount={r.changeCount} variant={variant}
       onClear={clearEnemies} />
   );
+
+  const choose = (a: string) => { setQ((p) => ({ ...p, build: a })); setTheirs(false); };
+  const aspectLine = q.aspect && aspectName ? (
+    isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
+  ) : null;
 
   return (
     <div className="mx-auto w-full max-w-[1240px] px-4 lg:grid lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-12 lg:px-6 lg:pt-8">
@@ -190,22 +301,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               </p>
             </div>
           </div>
-          <div className="mt-3 flex gap-2 lg:mt-5">
-            <ModeSwitch mode={mode} onChange={(m) => setQ((p) => ({ ...p, mode: m }))} className="min-w-0 flex-1 lg:max-w-[420px]" />
-            {aspectName && (
-              <AspectToggle aspect={aspectName} on={q.aspect} changesBuild={aspectChangesBuild}
-                onChange={(on) => setQ((p) => ({ ...p, aspect: on }))} />
-            )}
-          </div>
-          {q.aspect && aspectName && (
-            <p className="mt-2 text-note text-muted" data-testid="aspect-note">
-              {aspectNote(aspectName, aspectChangesBuild, god.name)}
-            </p>
-          )}
+          <ModeSwitch mode={mode} onChange={(m) => setQ((p) => ({ ...p, mode: m }))} className="mt-3 lg:mt-5 lg:max-w-[420px]" />
         </header>
 
         {/* ── The answer ── */}
-        <section aria-labelledby="six-h" className="mt-4 lg:mt-7">
+        <section aria-labelledby="six-h" className="mt-4 lg:mt-6">
           <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} action={canSwap ? (
             <button type="button" onClick={() => setTheirs((v) => !v)} aria-pressed={showTheirs}
               className="press -my-2.5 inline-flex h-11 items-center gap-1 whitespace-nowrap px-0.5 align-middle font-cond text-[18px] font-bold uppercase text-accent hover:text-ink">
@@ -213,34 +313,67 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </button>
           ) : undefined} />
 
-          {starter && (
-            <div className="mt-3 flex min-h-11 items-center gap-3" data-testid="starter">
-              <span className="flex -space-x-2">
-                <Art name={starter.base} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />
-                <Art name={starter.upgrade} kind="item" className="h-8 w-8 rounded-[7px] ring-2 ring-ground" />
-              </span>
-              <p className="min-w-0 text-note leading-snug text-muted">
-                <span className="font-cond text-[16px] font-bold uppercase text-ink">Start</span>{" "}
-                {starter.base} → {starter.upgrade}
-                {starterPath && (
-                  <span className="block text-quiet">
-                    {r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : ""}
-                    {Math.round(starterPath.lead.pick_rate * 100)}% of {god.name} players open this way
-                  </span>
+          {/* ── Adjust it: the aspect, then a focus ── */}
+          <div className="mt-4">
+            <FocusStrip options={options} selected={selected?.archetype ?? MAIN_ARCHETYPE} onSelect={choose}
+              aspect={aspectName ? (
+                <AspectToggle aspect={aspectName} on={q.aspect} changesBuild={aspectChangesBuild}
+                  onChange={(on) => setQ((p) => ({ ...p, aspect: on }))} />
+              ) : undefined} />
+            {(aspectLine || !isMain) && !showTheirs && (
+              <div className="mt-2 space-y-2" data-testid="adjust-line" aria-live="polite">
+                {aspectLine && (
+                  <div>
+                    <p className="text-note text-muted" data-testid="aspect-note">
+                      {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
+                    </p>
+                    {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
+                  </div>
                 )}
-              </p>
-            </div>
-          )}
+                {!isMain && selected && (
+                  <div data-testid="swap-line" data-swaps={selected.swaps.length}>
+                    <p className="text-copy text-ink-soft">
+                      <span className="font-cond text-[17px] font-bold uppercase text-ink">{selected.label}</span>{" "}
+                      {swapLead(selected, god.name, of)}
+                    </p>
+                    {selected.swaps.length > 0 && swapList(selected.swaps, hybridSwaps.length ? evidenceFor : undefined)}
+                    {/* The note explains where swaps came from; over "Same as Ichor's six" it explains nothing. */}
+                    {adjustNote && selected.swaps.length > 0 && <p className="mt-1 text-cap text-quiet">{adjustNote}</p>}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
-          <div className="mt-2.5 flex items-baseline justify-between px-1 text-cap text-quiet">
+          <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">{listLabel} · buy order</h2>
             <span aria-hidden="true">Gold spent</span>
           </div>
+
+          {/* The starter and the relic open the buy order, as tiles. */}
+          {(starter || topRelic) && (
+            <div className={`mt-1.5 grid gap-1.5 ${starter && topRelic ? "sm:grid-cols-2" : ""}`} data-testid="kit-tiles">
+              {starter && (
+                <KitTile kind="Start" testId="starter" icon={starter.base} inset={starter.upgrade}
+                  name={`${starter.base} → ${starter.upgrade}`}
+                  reason={starterPath ? `${inConquest}${pctOf(starterPath.lead.pick_rate)} of ${god.name} players open this way` : undefined}
+                  alternatives={starterAlts}
+                  altLabel={`Others${inConquest ? " in Conquest" : ""}`} />
+              )}
+              {topRelic && (
+                <KitTile kind="Relic" testId="relic" icon={topRelic.name} name={topRelic.name}
+                  reason={`${relicsAreConquest ? "In Conquest, " : ""}${pctOf(topRelic.pick_rate)} of ${god.name} players take it`}
+                  alternatives={relicRecord.slice(1, 3).map((x) => ({ name: x.name, icon: x.name, share: x.pick_rate }))}
+                  altLabel={`Others${relicsAreConquest ? " in Conquest" : ""}`} />
+              )}
+            </div>
+          )}
+
           {rows.length > 0 ? (
             <ol className="mt-1.5 space-y-1.5" data-testid="six">
               {rows.map((row) => (
                 <ItemRow key={`${showTheirs ? "t" : "i"}-${row.name}`} position={row.position} name={row.name}
-                  cumulativeGold={row.cumulative} reason={row.reason} swapped={row.swapped} />
+                  cumulativeGold={row.cumulative} reason={row.reason} swapped={row.swapped} adjusted={row.adjusted} />
               ))}
             </ol>
           ) : (
@@ -252,26 +385,12 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
         {/* ── One tap away ── */}
         <div className="mt-6 divide-y divide-line border-y border-line">
-          {r.archetypes.length > 1 && (
-            <Disclosure title="Other builds" hint={`${r.archetypes.length - 1} more for ${god.name}`} testId="other-builds">
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {r.archetypes.map((e) => {
-                  const on = e.archetype === archetype;
-                  return (
-                    <li key={e.archetype}>
-                      <button type="button" aria-pressed={on}
-                        onClick={() => { setQ((p) => ({ ...p, build: e.archetype ?? MAIN_ARCHETYPE })); setTheirs(false); }}
-                        className={`press flex min-h-14 w-full items-center gap-3 rounded-[12px] px-3 py-2 text-left ${
-                          on ? "bg-surface-2 ring-2 ring-accent" : "bg-surface hover:bg-surface-2"}`}>
-                        <span className="min-w-0 flex-1 font-cond text-[19px] font-bold uppercase text-ink">{buildLabel(e.archetype)}</span>
-                        <span className="flex gap-0.5" aria-hidden="true">
-                          {(e.slot_order as string[]).map((n) => <Art key={n} name={n} kind="item" className="h-6 w-6 rounded-[4px]" />)}
-                        </span>
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
+          {!wide && (
+            <Disclosure title="Most picked" testId="picked-disclosure"
+              hint={topPicked.length
+                ? `${pickedHave} of ${god.name}'s top ${topPicked.length} ${mode === "conquest" ? "are" : "Conquest picks are"} in this build`
+                : `No Conquest record for ${god.name} yet`}>
+              {mostPickedPanel(true)}
             </Disclosure>
           )}
           {!wide && <Disclosure title="Why this build" testId="why-disclosure">{why}</Disclosure>}
@@ -307,11 +426,13 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
       </div>
 
       {wide && (
-        <aside aria-label="Enemy team and reasoning" className="min-w-0">
-          <div className="sticky top-[88px] space-y-6">
-            {strip("panel")}
-            <div className="rounded-[14px] border border-line p-4">{why}</div>
-          </div>
+        // Not sticky: with the most-picked list in it the column is taller
+        // than a laptop screen, and a sticky column that tall hides its own
+        // bottom until the page ends.
+        <aside aria-label="Enemy team, most picked and reasoning" className="min-w-0 space-y-6">
+          {strip("panel")}
+          <div className="rounded-[14px] border border-line p-4">{mostPickedPanel(false)}</div>
+          <div className="rounded-[14px] border border-line p-4">{why}</div>
         </aside>
       )}
 
