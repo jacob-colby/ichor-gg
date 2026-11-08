@@ -58,8 +58,9 @@ public tracker.gg page that names all ten players, and the hash still dedupes
 and still joins the same game across gods' files. `_meta.json` holds the
 window registry (SmiteBrain's own start/end per patch window), each god's
 aspect list, and `complete_from`: the instant from which EVERY aspect feed is
-in the store whole. Nothing older was fetched, so a window starting before it
-is not in the registry at all, rather than present and silently short.
+in the store whole. A window that starts before it is either absent from the
+registry or carries `partial_from` equal to it — the source's retention cut
+its start — and the note entry names it, so no window is silently short.
 `_aggregate.json` holds the split index's aspect / no-aspect rows per window.
 Records are assigned to the newest window whose start is not after them.
 
@@ -515,7 +516,8 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
         split = parse_split_index(fetch(index_url(w)))
         if split["window"] not in (None, w):
             raise FeedCollapse(f"asked for window {w}, the index answered {split['window']}")
-        meta["windows"][w] = {"start": split["start"], "end": split["end"]}
+        meta["windows"][w] = {**meta["windows"].get(w, {}),
+                              "start": split["start"], "end": split["end"]}
         aggregate[w] = {"start": split["start"], "end": split["end"], "rows": split["rows"]}
     newest_start = meta["windows"][ordered_windows(meta)[0]]["start"]
 
@@ -667,9 +669,13 @@ def note_block(god: str, base_role: str, root: Path, meta: dict, aggregate: dict
     if not aspects:
         return None
     by_window = load_god(root, god_slug(god))
+    partial = {w: span["partial_from"][:10] for w, span in (meta.get("windows") or {}).items()
+               if span.get("partial_from")}
     return {
         "source": f"SmiteBrain per-match feed, {meta.get('division', DIVISION)}+ "
                   f"(data/Analysis/aspect_matches)",
+        **({"complete_from": meta["complete_from"][:10]} if meta.get("complete_from") else {}),
+        **({"partial_windows": dict(sorted(partial.items()))} if partial else {}),
         "minimum_matches": MIN_MATCHES,
         "window_rule": "the newest patch window, or the last closed one when the newest "
                        "holds fewer than minimum_matches of the aspect's matches",
