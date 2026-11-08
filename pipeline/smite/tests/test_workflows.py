@@ -7,8 +7,15 @@ that the only code path calling `write_snapshot` was `refresh_and_deploy`, a
 manual patch-day command, and the daily job did not invoke it. A unit test
 cannot see that. Reading the YAML can.
 """
+import json
+import os
 import pathlib
+import re
+import shutil
+import subprocess
+import sys
 
+import pytest
 import yaml
 
 WORKFLOWS = pathlib.Path(__file__).resolve().parents[3] / ".github" / "workflows"
@@ -219,3 +226,567 @@ def test_the_new_entity_probe_never_commits_fixtures():
     assert spec["permissions"] == {"contents": "read"}
     text = _run_text("probe-new-entities.yml")
     assert "git commit" not in text and "git push" not in text
+
+
+# -- the data pull request, run for real -------------------------------------
+#
+# Everything above reads the YAML. The step that opens the day's pull request
+# is a decision table written in shell, and reading it was not enough: on a
+# second run the same UTC day, after that day's PR had MERGED, it pushed onto
+# the merged branch, looked the PR up by branch name and got the merged one
+# back (`gh pr view data-refresh-2026-11-06` prints `117 MERGED`, checked
+# 2026-11-08), so it opened nothing, could not arm a merged PR, and reported
+# that auto-merge was probably off. The afternoon's data then sat on a branch
+# with no open PR.
+#
+# So these tests RUN the step's own script, extracted from the workflow and
+# not copied, against a local bare repository standing in for origin and a
+# fake `gh` that keeps a list of pull requests. Nothing reaches GitHub: the
+# authenticated push URL is rewritten to the local origin, every protocol
+# but `file` is refused (`GIT_ALLOW_PROTOCOL`), `gh` resolves to the fake,
+# and the real one would find no login in the empty `GH_CONFIG_DIR`.
+
+_DAY = "2026-11-08"
+_DAY_BRANCH = f"data-refresh-{_DAY}"
+_REPO = "test-owner/ichor-gg"
+_PAT = "pat-test-0000"
+_FALLBACK = "ghs-test-0000"
+_RUN_NUMBER, _RUN_ATTEMPT = "57", "1"
+_RERUN_BRANCH = f"{_DAY_BRANCH}-run{_RUN_NUMBER}-{_RUN_ATTEMPT}"
+
+# A stand-in for `gh`. It models the calls the refresh step makes and nothing
+# else: anything it does not recognise exits 97, so a change to the step that
+# this fake does not model fails a test instead of passing against a guess.
+_FAKE_GH = r'''
+import json, os, subprocess, sys
+
+STATE = os.environ["FAKE_GH_STATE"]
+with open(STATE, encoding="utf-8") as fh:
+    state = json.load(fh)
+args = sys.argv[1:]
+state["calls"].append({"args": args, "token": os.environ.get("GH_TOKEN", "")})
+
+
+def finish(out="", code=0, err=""):
+    with open(STATE, "w", encoding="utf-8") as fh:
+        json.dump(state, fh, indent=1)
+    if out:
+        sys.stdout.write(out + "\n")
+    if err:
+        sys.stderr.write(err + "\n")
+    sys.exit(code)
+
+
+def opt(name, default=None):
+    return args[args.index(name) + 1] if name in args else default
+
+
+def tip(branch):
+    out = subprocess.run(
+        ["git", "--git-dir", os.environ["FAKE_GH_ORIGIN"], "rev-parse", "--verify",
+         "--quiet", "refs/heads/" + branch], capture_output=True, text=True)
+    return out.stdout.strip() or None
+
+
+def as_json(pr):
+    # A PR that is still open has its branch's tip as head; one that merged
+    # or closed keeps the head it had then.
+    return {"number": pr["number"], "headRefName": pr["head"],
+            "isCrossRepository": pr.get("cross", False), "state": pr["state"],
+            "headRefOid": pr.get("head_oid") or tip(pr["head"]),
+            "autoMergeRequest": {"mergeMethod": pr["armed"]} if pr.get("armed") else None}
+
+
+def happens(event, pr):
+    """Someone else merges or closes the PR mid-run: `on_view` before the
+    step reads it, `on_arm` while it arms. `head_oid` null means it went with
+    the branch as it stands, i.e. with this run's commit in it."""
+    change = state.get(event, {}).pop(str(pr["number"]), None)
+    if change:
+        pr["head_oid"] = change.get("head_oid") or tip(pr["head"])
+        pr["state"] = change["state"]
+
+
+# The --jq expressions the step uses, evaluated by hand. Both were run against
+# the real repository with gh 2.96.0 on 2026-11-08 and printed what these
+# lambdas print: `94 claude/god-passive-classes-draft`, and `MERGED true
+# ed094a35...` for #124, `OPEN false 421dce77...` for #94.
+JQ = {
+    r'map(select(.isCrossRepository | not)) | sort_by(.number) | .[] | "\(.number) \(.headRefName)"':
+        lambda rows: "\n".join(f"{r['number']} {r['headRefName']}"
+                               for r in sorted(rows, key=lambda r: r["number"])
+                               if not r["isCrossRepository"]),
+    r'"\(.state) \(.autoMergeRequest != null) \(.headRefOid)"':
+        lambda pr: (f"{pr['state']} {'true' if pr['autoMergeRequest'] else 'false'} "
+                    f"{pr['headRefOid']}"),
+}
+
+
+def jq(value):
+    expr = opt("--jq")
+    if expr not in JQ:
+        finish(code=97, err=f"fake gh: unmodelled --jq {expr!r}")
+    return JQ[expr](value)
+
+
+def find(number):
+    return next((p for p in state["prs"] if p["number"] == number), None)
+
+
+cmd = args[:2]
+if cmd == ["pr", "list"]:
+    want = opt("--state", "open").upper()
+    rows = [as_json(p) for p in state["prs"]
+            if want in ("ALL", p["state"])
+            and opt("--base") in (None, "main")
+            and opt("--head") in (None, p["head"])]
+    finish(jq(rows))
+elif cmd == ["pr", "view"]:
+    # By number only. By branch name gh returns the newest PR with that head
+    # in ANY state, which is the trap the step fell into; it no longer asks.
+    if not args[2].isdigit():
+        finish(code=97, err=f"fake gh: pr view by branch is not modelled: {args!r}")
+    pr = find(int(args[2]))
+    if pr is None:
+        finish(code=1, err=f"no pull request #{args[2]}")
+    happens("on_view", pr)
+    finish(jq(as_json(pr)))
+elif cmd == ["pr", "create"]:
+    head = opt("--head")
+    if opt("--base") != "main" or not head:
+        finish(code=97, err="fake gh: pr create without --base main --head <branch>")
+    if not tip(head):
+        finish(code=1, err=f"pull request create failed: {head!r} is not on origin")
+    if any(p["head"] == head and p["state"] == "OPEN" and not p.get("cross")
+           for p in state["prs"]):
+        finish(code=1, err=f'a pull request for branch "{head}" into branch "main" already exists')
+    number = max([p["number"] for p in state["prs"]] + [state.get("floor", 0)]) + 1
+    state["prs"].append({"number": number, "head": head, "state": "OPEN",
+                         "title": opt("--title"), "body": opt("--body")})
+    finish(f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/pull/{number}")
+elif cmd == ["pr", "merge"]:
+    if args[3:] != ["--auto", "--merge"]:
+        finish(code=97, err=f"fake gh: only `pr merge N --auto --merge` is modelled, got {args!r}")
+    pr = find(int(args[2]))
+    happens("on_arm", pr)
+    if pr["state"] == "MERGED":
+        # EXIT 0, arming nothing. Observed: run 42497271128 (2026-11-08) ran
+        # this on #124, merged an hour earlier, and its stuck reporter was
+        # skipped, so the step had recorded `landed=armed`.
+        finish(err=f"! Pull request #{pr['number']} was already merged")
+    if pr["state"] != "OPEN":
+        finish(code=1, err=f"Pull request #{pr['number']} is closed")
+    if not state.get("auto_merge_allowed", True):
+        finish(code=1, err="GraphQL: Auto merge is not allowed for this repository "
+                           "(enablePullRequestAutoMerge)")
+    pr["armed"] = "MERGE"
+    finish()
+else:
+    finish(code=97, err=f"fake gh: unmodelled command {args!r}")
+'''
+
+# `date -u +%Y-%m-%d` is the only form the step uses; pinning it keeps a test
+# from straddling UTC midnight. Anything else goes to the real `date`.
+_FAKE_DATE = """#!/usr/bin/env bash
+if [ "$*" = "-u +%Y-%m-%d" ]; then echo "$FAKE_DAY"; else exec /usr/bin/date "$@"; fi
+"""
+
+_FAKE_GH_SHIM = """#!/usr/bin/env bash
+exec "$FAKE_PYTHON" "$FAKE_GH" "$@"
+"""
+
+
+def _bash():
+    """A POSIX bash; on Windows, specifically Git for Windows' one.
+
+    `shutil.which("bash")` on Windows resolves to System32's WSL launcher
+    first, and that bash cannot run this harness against Windows paths."""
+    if os.name != "nt":
+        return shutil.which("bash")
+    git = shutil.which("git")
+    for parent in pathlib.Path(git).resolve().parents if git else ():
+        for candidate in (parent / "bin" / "bash.exe", parent / "usr" / "bin" / "bash.exe"):
+            if candidate.is_file():
+                return str(candidate)
+    return None
+
+
+def _write(path: pathlib.Path, text: str):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
+
+
+def _step_by(predicate):
+    return next(s for s in _steps("refresh-data.yml") if predicate(s))
+
+
+def _pr_step():
+    return _step_by(lambda s: s.get("id") == "data_pr")
+
+
+def _stuck_reporter():
+    return _step_by(lambda s: "steps.data_pr.outputs.landed" in str(s.get("if", "")))
+
+
+def _read_outputs(path: pathlib.Path) -> dict:
+    if not path.exists():
+        return {}
+    return dict(line.split("=", 1) for line in path.read_text(encoding="utf-8").splitlines()
+                if "=" in line)
+
+
+class _Run:
+    def __init__(self, proc, outputs, summary, state):
+        self.returncode = proc.returncode
+        self.log = proc.stdout + proc.stderr
+        self.outputs = outputs
+        self.summary = summary
+        self.state = state
+
+    def calls(self, *prefix):
+        return [c for c in self.state["calls"] if c["args"][:len(prefix)] == list(prefix)]
+
+    def pr(self, number):
+        return next(p for p in self.state["prs"] if p["number"] == int(number))
+
+
+class _Origin:
+    """A throwaway origin with a `main`, the day's branches, and the PR list."""
+
+    def __init__(self, tmp: pathlib.Path):
+        self.bash = _bash()
+        assert self.bash, ("these tests run the workflow's shell and need bash "
+                           "(on Windows, Git for Windows' bash.exe)")
+        self.tmp = tmp
+        self.origin = tmp / "origin.git"
+        self.seed = tmp / "seed"
+        self.checkout = tmp / "checkout"
+        self.prs = []
+        self.knobs = {}
+        gitconfig = tmp / "gitconfig"
+        text = ("[user]\n\tname = Seed\n\temail = seed@example.invalid\n"
+                "[init]\n\tdefaultBranch = main\n")
+        # The step pushes to an authenticated github.com URL. Point both tokens'
+        # spellings of it at the local origin.
+        for token in (_PAT, _FALLBACK):
+            text += (f'[url "{self.origin.as_posix()}"]\n'
+                     f"\tinsteadOf = https://x-access-token:{token}@github.com/{_REPO}.git\n")
+        _write(gitconfig, text)
+        self.env = {k: v for k, v in os.environ.items()
+                    if not k.startswith(("GIT_", "GH_", "GITHUB_"))}
+        self.env.update(GIT_CONFIG_GLOBAL=str(gitconfig), GIT_CONFIG_NOSYSTEM="1",
+                        GIT_ALLOW_PROTOCOL="file", GIT_TERMINAL_PROMPT="0",
+                        GH_CONFIG_DIR=str(tmp / "gh-config"), GITHUB_REPOSITORY=_REPO)
+        self.git(tmp, "init", "-q", "--bare", str(self.origin))
+        self.git(tmp, "init", "-q", str(self.seed))
+        self.scrape(self.seed, "v0")
+        self.commit(self.seed, "M0")
+        self.git(self.seed, "remote", "add", "origin", str(self.origin))
+        self.git(self.seed, "push", "-q", "origin", "main")
+
+    # -- building the day ----------------------------------------------------
+
+    def git(self, cwd, *args):
+        return subprocess.run(["git", *args], cwd=cwd, env=self.env, check=True,
+                              capture_output=True, text=True).stdout.strip()
+
+    def scrape(self, root: pathlib.Path, value: str):
+        """What the job's earlier steps leave in the tree: data, the index, the
+        side-by-side pages, and an HTML cache that must never be committed."""
+        for rel in ("data/community.json", "viewer/public/index.json",
+                    "viewer/public/side_by_side/thor.json"):
+            _write(root / rel, value + "\n")
+        _write(root / "data" / "_cache" / f"{value}.html", "<html/>\n")
+
+    def commit(self, root, message):
+        self.git(root, "add", "data", "viewer")
+        self.git(root, "reset", "-q", "--", "data/_cache")
+        self.git(root, "commit", "-q", "-m", message)
+
+    def day_branch(self, branch, value, cut_from="main"):
+        self.git(self.seed, "checkout", "-q", "-b", branch, cut_from)
+        self.scrape(self.seed, value)
+        self.commit(self.seed, f"{branch}: {value}")
+        self.git(self.seed, "push", "-q", "origin", branch)
+        self.git(self.seed, "checkout", "-q", "main")
+
+    def merge(self, branch, number):
+        """Merged the way `gh pr merge --merge` merges: a merge commit on main."""
+        self.git(self.seed, "merge", "-q", "--no-ff", branch,
+                 "-m", f"Merge pull request #{number} from {_REPO.split('/')[0]}/{branch}")
+        self.git(self.seed, "push", "-q", "origin", "main")
+
+    def pr(self, number, head, state, **extra):
+        self.prs.append({"number": number, "head": head, "state": state, **extra})
+
+    # -- reading origin back -------------------------------------------------
+
+    def tip(self, branch):
+        out = subprocess.run(["git", "--git-dir", str(self.origin), "rev-parse", "--verify",
+                              "--quiet", f"refs/heads/{branch}"],
+                             env=self.env, capture_output=True, text=True)
+        return out.stdout.strip() or None
+
+    def parent(self, ref):
+        return self.git(self.tmp, "--git-dir", str(self.origin), "rev-parse", f"{ref}^")
+
+    def value(self, ref):
+        return self.git(self.tmp, "--git-dir", str(self.origin), "show",
+                        f"{ref}:data/community.json")
+
+    def files(self, ref):
+        return self.git(self.tmp, "--git-dir", str(self.origin), "ls-tree", "-r",
+                        "--name-only", ref).splitlines()
+
+    def branches(self):
+        return sorted(self.git(self.tmp, "--git-dir", str(self.origin), "for-each-ref",
+                               "--format=%(refname:short)", "refs/heads").splitlines())
+
+    # -- the run -------------------------------------------------------------
+
+    def run(self, value, pat=_PAT):
+        """Check out main as actions/checkout would, leave `value` as the day's
+        scrape, and run the step's script the way Actions runs a `run:`."""
+        tmp = self.tmp
+        self.git(tmp, "clone", "-q", str(self.origin), str(self.checkout))
+        self.scrape(self.checkout, value)
+        bin_dir = tmp / "bin"
+        _write(bin_dir / "gh", _FAKE_GH_SHIM)
+        _write(bin_dir / "date", _FAKE_DATE)
+        _write(tmp / "fake_gh.py", _FAKE_GH)
+        for shim in ("gh", "date"):
+            (bin_dir / shim).chmod(0o755)
+        state_file = tmp / "gh-state.json"
+        state_file.write_text(json.dumps({"prs": self.prs, "calls": [], **self.knobs}),
+                              encoding="utf-8")
+        script = tmp / "data_pr.sh"
+        _write(script, _pr_step()["run"])
+        outputs, summary = tmp / "github_output", tmp / "step_summary"
+        env = dict(self.env,
+                   PATH=str(bin_dir) + os.pathsep + self.env.get("PATH", ""),
+                   REFRESH_PAT=pat, FALLBACK_TOKEN=_FALLBACK,
+                   GITHUB_OUTPUT=outputs.as_posix(), GITHUB_STEP_SUMMARY=summary.as_posix(),
+                   GITHUB_SERVER_URL="https://github.com", GITHUB_RUN_ID="4242",
+                   GITHUB_RUN_NUMBER=_RUN_NUMBER, GITHUB_RUN_ATTEMPT=_RUN_ATTEMPT,
+                   FAKE_DAY=_DAY, FAKE_GH_STATE=state_file.as_posix(),
+                   FAKE_GH_ORIGIN=self.origin.as_posix(),
+                   FAKE_PYTHON=pathlib.Path(sys.executable).as_posix(),
+                   FAKE_GH=(tmp / "fake_gh.py").as_posix(),
+                   # Git for Windows rewrites arguments that look like paths on
+                   # their way to a native program, `--jq` expressions included.
+                   MSYS_NO_PATHCONV="1", MSYS2_ARG_CONV_EXCL="*")
+        proc = subprocess.run([self.bash, "--noprofile", "--norc", "-eo", "pipefail",
+                               script.as_posix()],
+                              cwd=self.checkout, env=env, capture_output=True, text=True,
+                              timeout=120)
+        return _Run(proc, _read_outputs(outputs),
+                    summary.read_text(encoding="utf-8") if summary.exists() else "",
+                    json.loads(state_file.read_text(encoding="utf-8")))
+
+    def report(self, outputs):
+        """Run the stuck-PR reporter with the env its YAML maps from the PR
+        step's outputs, so what the reporter reads is what the step wrote."""
+        step = _stuck_reporter()
+        env = dict(self.env)
+        for var, expr in step.get("env", {}).items():
+            m = re.fullmatch(r"\$\{\{ steps\.data_pr\.outputs\.(\w+) \}\}", expr)
+            assert m, f"the reporter's {var} is not read from the PR step: {expr}"
+            env[var] = outputs.get(m.group(1), "")
+        script = self.tmp / "reporter.sh"
+        _write(script, step["run"])
+        proc = subprocess.run([self.bash, "--noprofile", "--norc", "-eo", "pipefail",
+                               script.as_posix()],
+                              env=env, capture_output=True, text=True, timeout=60)
+        return proc.returncode, proc.stdout + proc.stderr
+
+
+@pytest.fixture
+def origin(tmp_path):
+    return _Origin(tmp_path)
+
+
+def test_the_first_run_of_the_day_opens_the_day_pr_and_arms_it(origin):
+    main = origin.tip("main")
+    run = origin.run("morning")
+    assert run.returncode == 0, run.log
+    assert run.outputs["branch"] == _DAY_BRANCH
+    assert run.outputs["landed"] == "armed" and run.outputs["token"] == "pat"
+    assert origin.parent(_DAY_BRANCH) == main
+    assert origin.value(_DAY_BRANCH) == "morning"
+    assert not any("_cache" in f for f in origin.files(_DAY_BRANCH))
+    pr = run.pr(run.outputs["number"])
+    assert (pr["head"], pr["state"], pr["armed"]) == (_DAY_BRANCH, "OPEN", "MERGE")
+    # The PAT does everything that has to start a check, and never lands in
+    # git config (9d1b693a): it is in the push URL and in gh's env only.
+    assert {c["token"] for c in run.state["calls"]} == {_PAT}
+    assert _PAT not in (origin.checkout / ".git" / "config").read_text(encoding="utf-8")
+
+
+def test_a_rerun_while_the_day_pr_is_open_stacks_onto_it(origin):
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.pr(124, _DAY_BRANCH, "OPEN")
+    before = origin.tip(_DAY_BRANCH)
+    run = origin.run("afternoon")
+    assert run.returncode == 0, run.log
+    assert (run.outputs["branch"], run.outputs["number"]) == (_DAY_BRANCH, "124")
+    assert origin.parent(_DAY_BRANCH) == before      # an ordinary child, no force
+    assert origin.value(_DAY_BRANCH) == "afternoon"
+    assert not run.calls("pr", "create")
+    assert run.outputs["landed"] == "armed" and run.pr(124)["armed"] == "MERGE"
+
+
+@pytest.mark.parametrize("how", ["merged", "closed"])
+def test_a_rerun_after_the_day_pr_merged_or_closed_opens_a_new_pr_from_main(origin, how):
+    """THE 2026-11-08 DEFECT. The morning PR is gone, so the afternoon's data
+    needs a PR of its own, from a branch cut from main. It must not be pushed
+    onto the dead branch and reported as an auto-merge problem."""
+    origin.day_branch(_DAY_BRANCH, "morning")
+    if how == "merged":
+        origin.merge(_DAY_BRANCH, 124)
+    origin.pr(124, _DAY_BRANCH, how.upper(), **({"armed": "MERGE"} if how == "merged" else {}))
+    dead, main = origin.tip(_DAY_BRANCH), origin.tip("main")
+    run = origin.run("afternoon")
+    assert run.returncode == 0, run.log
+    assert origin.tip(_DAY_BRANCH) == dead            # the dead branch is left alone
+    assert run.outputs["branch"] == _RERUN_BRANCH
+    assert origin.parent(_RERUN_BRANCH) == main
+    assert origin.value(_RERUN_BRANCH) == "afternoon"
+    pr = run.pr(run.outputs["number"])
+    assert pr["number"] == 125
+    assert (pr["head"], pr["state"], pr["armed"]) == (_RERUN_BRANCH, "OPEN", "MERGE")
+    assert run.outputs["landed"] == "armed"
+    assert not run.calls("pr", "merge", "124")
+
+
+def test_a_third_run_stacks_onto_the_afternoon_pr_rather_than_opening_another(origin):
+    """One open data PR per day. A fourth branch from main would conflict with
+    the third on every data file the moment either merged."""
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.merge(_DAY_BRANCH, 124)
+    origin.pr(124, _DAY_BRANCH, "MERGED", armed="MERGE")
+    afternoon = f"{_DAY_BRANCH}-run56-1"
+    origin.day_branch(afternoon, "afternoon")
+    origin.pr(125, afternoon, "OPEN", armed="MERGE")
+    before = origin.tip(afternoon)
+    run = origin.run("evening")
+    assert run.returncode == 0, run.log
+    assert (run.outputs["branch"], run.outputs["number"]) == (afternoon, "125")
+    assert origin.parent(afternoon) == before
+    assert origin.value(afternoon) == "evening"
+    assert not run.calls("pr", "create")
+    assert origin.branches() == sorted(["main", _DAY_BRANCH, afternoon])
+
+
+def test_a_pr_that_is_already_armed_is_not_armed_again(origin):
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.pr(124, _DAY_BRANCH, "OPEN", armed="MERGE")
+    run = origin.run("afternoon")
+    assert run.returncode == 0, run.log
+    assert run.outputs["landed"] == "armed"
+    assert not run.calls("pr", "merge")
+
+
+def test_a_rerun_with_nothing_new_for_the_open_pr_pushes_nothing_and_still_arms(origin):
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.pr(124, _DAY_BRANCH, "OPEN")
+    before = origin.tip(_DAY_BRANCH)
+    run = origin.run("morning")
+    assert run.returncode == 0, run.log
+    assert origin.tip(_DAY_BRANCH) == before
+    assert run.outputs["landed"] == "armed" and run.pr(124)["armed"] == "MERGE"
+
+
+@pytest.mark.parametrize("head, cross", [(_DAY_BRANCH, True), (f"{_DAY_BRANCH}-fix", False)])
+def test_a_pr_that_only_looks_like_the_days_is_never_touched(origin, head, cross):
+    """The repository is public, so anyone can open a PR from a fork branch
+    called data-refresh-<today>; and a person's own data-refresh-<today>-fix
+    is not this workflow's either. The PAT must not stack onto or arm them."""
+    origin.pr(130, head, "OPEN", cross=cross)
+    run = origin.run("morning")
+    assert run.returncode == 0, run.log
+    assert run.outputs["branch"] == _DAY_BRANCH and run.outputs["number"] == "131"
+    assert not run.calls("pr", "merge", "130")
+    assert "armed" not in run.pr(130)
+
+
+def test_no_change_against_main_touches_nothing(origin):
+    run = origin.run("v0")
+    assert run.returncode == 0, run.log
+    assert "No change" in run.summary
+    assert run.state["calls"] == [] and "landed" not in run.outputs
+    assert origin.branches() == ["main"]
+
+
+def test_without_the_pat_the_data_is_still_pushed_and_the_cause_is_named(origin):
+    run = origin.run("morning", pat="")
+    assert run.returncode == 0, run.log
+    assert run.outputs["token"] == "github_token"
+    assert origin.value(_DAY_BRANCH) == "morning"
+    assert run.pr(run.outputs["number"])["head"] == _DAY_BRANCH
+    assert {c["token"] for c in run.state["calls"]} == {_FALLBACK}
+    assert not run.calls("pr", "merge")     # a checkless PR can never satisfy it
+    assert (run.outputs["landed"], run.outputs["stuck"]) == ("stuck", "no_pat")
+    code, said = origin.report(run.outputs)
+    assert code == 1 and "REFRESH_PAT secret is not set" in said
+    assert "Allow auto-merge" not in said
+
+
+def test_auto_merge_refused_on_an_open_pr_is_reported_as_exactly_that(origin):
+    origin.knobs["auto_merge_allowed"] = False
+    run = origin.run("morning")
+    assert run.returncode == 0, run.log
+    assert (run.outputs["landed"], run.outputs["stuck"]) == ("stuck", "arm_refused")
+    assert run.outputs["pr_state"] == "OPEN"
+    assert "Auto merge is not allowed" in run.outputs["arm_error"]
+    code, said = origin.report(run.outputs)
+    assert code == 1
+    assert f"#{run.outputs['number']}" in said and "Auto merge is not allowed" in said
+    assert "Allow auto-merge" in said and "mergeable" in said
+
+
+@pytest.mark.parametrize("event, became", [("on_view", "CLOSED"), ("on_arm", "CLOSED"),
+                                           ("on_view", "MERGED"), ("on_arm", "MERGED")])
+def test_a_pr_that_stopped_being_open_without_this_runs_data_is_not_blamed_on_auto_merge(
+        origin, event, became):
+    """Merged or closed by someone, from the head it had before this run's
+    push, while the run was arming it. There is no open PR to arm, and saying
+    auto-merge is off would send a person to the wrong place.
+
+    `on_arm` + MERGED is the 2026-11-08 shape: gh exits 0 having armed
+    nothing, and the step used to take that for `landed=armed` and go green."""
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.pr(124, _DAY_BRANCH, "OPEN")
+    origin.knobs[event] = {"124": {"state": became, "head_oid": origin.tip(_DAY_BRANCH)}}
+    run = origin.run("afternoon")
+    assert run.returncode == 0, run.log
+    assert (run.outputs["landed"], run.outputs["stuck"]) == ("stuck", "not_open")
+    assert run.outputs["pr_state"] == became
+    code, said = origin.report(run.outputs)
+    assert code == 1 and f"#124 is {became}" in said and "no open pull request" in said
+    assert "Allow auto-merge" not in said and "likely" not in said
+
+
+@pytest.mark.parametrize("event", ["on_view", "on_arm"])
+def test_a_pr_that_merged_with_this_runs_commit_in_it_has_landed(origin, event):
+    """Not a failure: the data is on main. Read off the PR's head commit."""
+    origin.day_branch(_DAY_BRANCH, "morning")
+    origin.pr(124, _DAY_BRANCH, "OPEN")
+    origin.knobs[event] = {"124": {"state": "MERGED", "head_oid": None}}
+    run = origin.run("afternoon")
+    assert run.returncode == 0, run.log
+    assert run.outputs["landed"] == "merged" and "stuck" not in run.outputs
+
+
+def test_the_stuck_reporter_does_not_guess_a_cause_it_was_not_given(origin):
+    code, said = origin.report({"landed": "stuck"})
+    assert code == 1 and "::error::" in said
+    assert "Allow auto-merge" not in said and "REFRESH_PAT secret is not set" not in said
+
+
+def test_the_checkout_leaves_no_credential_in_git_config():
+    """9d1b693a: the PAT is used at the push and nowhere else."""
+    checkout = _step_by(lambda s: str(s.get("uses", "")).startswith("actions/checkout"))
+    assert checkout["with"]["persist-credentials"] is False
+    run = _pr_step()["run"]
+    assert "extraheader" not in run and "remote set-url" not in run

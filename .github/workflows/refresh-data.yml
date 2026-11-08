@@ -68,8 +68,8 @@ jobs:
       # the run, a leaked PAT lives until someone revokes it. So the PAT is
       # used at the one point that needs it, the push, and nowhere else.
       #
-      # The later `git fetch origin "$BRANCH"` still works unauthenticated
-      # because this repository is public.
+      # The later `git fetch origin "$BRANCH"` and `git ls-remote origin`
+      # still work unauthenticated because this repository is public.
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
@@ -229,65 +229,69 @@ jobs:
       # lands, which a direct push to main never did. The gates in this job
       # run on the data; the suite runs on the result.
       #
-      # ONE BRANCH PER DAY, and a re-run lands on top of the one it already
-      # made, so the PR updates in place and NOTHING is ever force-pushed.
-      # `git reset --soft` is what makes that work: it moves HEAD to the
-      # branch tip and leaves the staged data exactly where it is, so the new
-      # commit is an ordinary child and an ordinary push takes it.
+      # ONE OPEN DATA PR PER DAY, AND A RE-RUN STACKS ONTO IT ONLY WHILE IT
+      # IS OPEN. The cron says 09:15 but GitHub has run it 6-7 hours late
+      # (11-06 at 16:43Z, 11-07 at 15:38Z, 11-08 at 15:55Z), so a hand
+      # dispatch and the scheduled run landing on one UTC day is an ordinary
+      # day. What a run does is decided by the day's OPEN pull request from a
+      # branch of THIS repository (it is public, and a fork can name a branch
+      # data-refresh-<day> too):
       #
-      # Auto-merge is ARMED, NOT ASSUMED. If the repository does not allow it,
-      # the PR stays open and the run says so as a warning rather than
-      # pretending the data landed. A rejected stats refresh or a left-out
-      # entity still fails the run at the steps below, exactly as before, and
-      # still does not cost the day's community numbers: they are in the PR.
+      #   an open PR from data-refresh-<day>, or from one of its re-run
+      #   branches data-refresh-<day>-run<N>-<attempt>
+      #       stack onto the newest: fetch its branch, `git reset --soft`,
+      #       commit, push. `reset --soft` moves HEAD to the branch tip and
+      #       leaves the staged data where it is, so the new commit is an
+      #       ordinary child, an ordinary push takes it, NOTHING is ever
+      #       force-pushed, and the PR updates in place.
+      #   no open PR, and no data-refresh-<day> on origin
+      #       the day's first run: push that branch, open its PR.
+      #   no open PR, but data-refresh-<day> exists (its PR merged or closed)
+      #       a NEW branch, data-refresh-<day>-run<N>-<attempt>, cut from the
+      #       main this job checked out, and a new PR from it.
       #
-      # AND TODAY IT CANNOT LAND AT ALL. TWO THINGS BLOCK IT, BOTH OUTSIDE
-      # THIS FILE, AND THE SECOND IS THE ONE THAT BITES.
+      # THE THIRD ROW USED TO BE WRONG, and it fired on 2026-11-08. The lookup
+      # was `gh pr view <branch>`, which finds a PR by head name IN ANY STATE
+      # (`gh pr view data-refresh-2026-11-06` prints `117 MERGED`). Run
+      # 42497271128 therefore pushed the afternoon's data onto the branch #124
+      # had already merged from (9b8ca711, in no PR), opened nothing, and
+      # called `gh pr merge 124 --auto --merge` — which EXITS 0 on a merged
+      # PR. So the run went GREEN saying auto-merge was armed. Deleting merged
+      # branches would not have fixed it, since the lookup went by name; with
+      # that setting on, the branch is gone and the second row applies.
+      # Every row is run, not just read, in `test_workflows.py`.
       #
-      #   1. `allow_auto_merge` is FALSE on this repository (checked through
-      #      the API, 2026-11-07), so the arm below fails on every run.
+      # AUTO-MERGE IS ARMED, NOT ASSUMED, AND `gh`'s EXIT CODE IS NOT THE
+      # VERDICT — the PR's state read back afterwards is. A PR that is not
+      # armed afterwards stays open and the last step fails the run, naming
+      # which of three things happened: no PAT; GitHub refused to arm an OPEN
+      # PR (with what gh said); or the PR stopped being open before it could
+      # be armed. A PR that merged with this run's commit in it has landed and
+      # is not a failure. A rejected stats refresh or a left-out entity still
+      # fails the run at the steps below and still does not cost the day's
+      # community numbers: they are in the PR.
       #
-      #   2. GITHUB_TOKEN CANNOT TRIGGER THE CHECKS THE RULESET DEMANDS.
-      #      GitHub does not start workflow runs for events caused by
-      #      `secrets.GITHUB_TOKEN`; `workflow_dispatch` and
-      #      `repository_dispatch` are the only exceptions. So the PR this
-      #      step opens gets no `pull_request` run, "Pipeline suite" and
-      #      "Viewer suite and build" stay expected rather than passing, and
-      #      the `main` ruleset has ZERO bypass actors — so that PR is
-      #      unmergeable by auto-merge AND by hand, by anyone, Jacob
-      #      included. A same-day re-run does not help: its push is a
-      #      `synchronize` event from the same token, so the new head gets no
-      #      checks either. This is the wall the nightly-refresh work already
-      #      hit, and a hand-dispatched run does not satisfy the ruleset.
-      #
-      # THE FIX IS A TOKEN, and this file is now wired for it: `REFRESH_PAT`,
-      # a fine-grained PAT scoped to this repository alone with Contents and
-      # Pull requests at read/write and no Workflows permission, since the
-      # refresh never edits a workflow file. It is used for BOTH the push and
-      # `gh`, because `opened` and `synchronize` are both `pull_request`
-      # events and GITHUB_TOKEN suppresses the run for either. "Allow
-      # auto-merge" has to be on as well.
+      # WHICH TOKEN. GitHub starts no workflow run for an event caused by
+      # `secrets.GITHUB_TOKEN` (`workflow_dispatch` and `repository_dispatch`
+      # aside), so a PR opened or pushed with it gets no `pull_request` run,
+      # "Pipeline suite" and "Viewer suite and build" stay expected, and the
+      # `main` ruleset, which has ZERO bypass actors, can never be satisfied
+      # — by auto-merge or by hand, by anyone. Hence `REFRESH_PAT`: a
+      # fine-grained PAT scoped to this repository alone, Contents and Pull
+      # requests at read/write, no Workflows permission (the refresh never
+      # edits a workflow file), used for BOTH the push and `gh`, because
+      # `opened` and `synchronize` are both `pull_request` events. It exists,
+      # and "Allow auto-merge" is on, since 2026-11-08: the first run with
+      # both (42491434574) opened #124 with checks and auto-merge armed.
       #
       # WITHOUT THE SECRET THIS STILL RUNS. The step falls back to
       # GITHUB_TOKEN, pushes, opens the PR anyway so the day's data is not
-      # thrown away, skips arming auto-merge because a checkless PR can never
-      # satisfy it, and the last step fails the run saying which of the two
-      # things is missing. As of 2026-11-07 the repository had no secrets at
-      # all, so that is the live path until `REFRESH_PAT` exists.
+      # thrown away, skips arming because a checkless PR can never satisfy
+      # it, and the last step fails the run saying the PAT is missing.
       #
-      # UNTIL THEN THIS RUN STILL GOES RED, deliberately: the last step fails
-      # the run whenever the day's data did not reach main. A warning alone
-      # would have turned a loud daily failure into a green run with a note,
-      # which is how the direct-push failure went unnoticed for three days in
-      # the first place. What this change buys before the token exists is that
-      # the day's data survives on a branch and in a PR instead of being
-      # thrown away, and that the run says exactly why it is red.
-      #
-      # ONE MORE THING WILL SURFACE ONCE THE TOKEN LANDS. Every refresh PR
-      # will then face the full suite, so any test pinning a window-dependent
-      # value (the four OB46 pins #117 had to move, and the viewer counts)
-      # will block the day's data at each window reset. That is the next
-      # blocker after the token, not a reason to delay the token.
+      # Every refresh PR faces the full suite, so a test pinning a
+      # window-dependent value (the four OB46 pins #117 had to move, and the
+      # viewer counts) blocks the day's data at each window reset.
       - name: Open a pull request if anything moved
         id: data_pr
         env:
@@ -310,37 +314,11 @@ jobs:
             exit 0
           fi
 
-          BRANCH="data-refresh-$(date -u +%Y-%m-%d)"
-          # stderr is dropped because "couldn't find remote ref" is the normal
-          # first-run-of-the-day case, not a problem worth a line in the log.
-          if git fetch -q origin "$BRANCH" 2>/dev/null; then
-            git reset -q --soft FETCH_HEAD
-            if git diff --cached --quiet; then
-              echo "Today's branch already carries this data."
-            else
-              git commit -q -F- <<'MSG'
-          chore(data): daily community refresh
+          # Read once, so a run that straddles UTC midnight cannot push to one
+          # day's branch and title the PR with the next.
+          DAY=$(date -u +%Y-%m-%d)
+          DAY_BRANCH="data-refresh-$DAY"
 
-          Automated. SmiteBrain win/pick rates, community builds and starters,
-          wiki item and god stats when a patch landed (smite.stats_refresh),
-          new gods and items from the wiki (smite.new_entities), then a
-          recompute and reindex.
-
-          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-          MSG
-            fi
-          else
-            git commit -q -F- <<'MSG'
-          chore(data): daily community refresh
-
-          Automated. SmiteBrain win/pick rates, community builds and starters,
-          wiki item and god stats when a patch landed (smite.stats_refresh),
-          new gods and items from the wiki (smite.new_entities), then a
-          recompute and reindex.
-
-          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-          MSG
-          fi
           # WHICH TOKEN PUSHES DECIDES WHETHER THE PR GETS CHECKS AT ALL.
           # The `pull_request` events that start `tests.yml` are `opened`,
           # from `gh pr create`, and `synchronize`, from this push on a
@@ -360,38 +338,147 @@ jobs:
             echo "::warning::REFRESH_PAT is not set, so this PR will get no checks and cannot be merged. Pushing with GITHUB_TOKEN anyway so the day's data is not lost."
           fi
           export GH_TOKEN="$TOKEN"
+
+          # Every OPEN pull request into main from a branch of THIS
+          # repository, oldest first, one "<number> <branch>" per line. OPEN,
+          # because a merged or closed PR cannot take more data. THIS
+          # repository, because it is public and a fork's PR can come from a
+          # branch of the same name, which must never be stacked onto or armed
+          # with the PAT. A failed lookup stops the step (`set -e`) rather than
+          # being read as "no PR", which is how a duplicate would get opened.
+          open_prs() {
+            gh pr list --state open --base main --limit 100 \
+              --json number,headRefName,isCrossRepository \
+              --jq 'map(select(.isCrossRepository | not)) | sort_by(.number) | .[] | "\(.number) \(.headRefName)"'
+          }
+
+          # The table in the comment above, row by row. `-run*` and not `-*`:
+          # only branches this workflow makes, never a person's
+          # data-refresh-<day>-something.
+          OPEN=$(open_prs)
+          STACK_ON=""
+          while read -r _ head; do
+            case "$head" in
+              "$DAY_BRANCH"|"$DAY_BRANCH"-run*) STACK_ON="$head" ;;
+            esac
+          done <<< "$OPEN"
+          if [ -n "$STACK_ON" ]; then
+            BRANCH="$STACK_ON"
+            echo "Stacking onto $BRANCH: its pull request is still open."
+            git fetch -q origin "$BRANCH"
+            git reset -q --soft FETCH_HEAD
+          else
+            DAY_ON_ORIGIN=$(git ls-remote --heads origin "refs/heads/$DAY_BRANCH")
+            if [ -z "$DAY_ON_ORIGIN" ]; then
+              BRANCH="$DAY_BRANCH"
+            else
+              BRANCH="$DAY_BRANCH-run${GITHUB_RUN_NUMBER}-${GITHUB_RUN_ATTEMPT}"
+              echo "::notice::$DAY_BRANCH is on origin with no open pull request (its PR merged or closed), so this run's data goes to $BRANCH, cut from main, in a pull request of its own."
+            fi
+          fi
+
+          if git diff --cached --quiet; then
+            echo "$BRANCH already carries this data."
+          else
+            git commit -q -F- <<'MSG'
+          chore(data): daily community refresh
+
+          Automated. SmiteBrain win/pick rates, community builds and starters,
+          wiki item and god stats when a patch landed (smite.stats_refresh),
+          new gods and items from the wiki (smite.new_entities), then a
+          recompute and reindex.
+
+          Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+          MSG
+          fi
           git push -q \
             "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
-            "HEAD:$BRANCH"
+            "HEAD:refs/heads/$BRANCH"
+          PUSHED=$(git rev-parse HEAD)
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 
-          if ! NUM=$(gh pr view "$BRANCH" --json number --jq .number 2>/dev/null); then
-            gh pr create --base main --head "$BRANCH" \
-              --title "chore(data): daily community refresh $(date -u +%Y-%m-%d)" \
-              --body "Automated by \`Refresh community data\` ([run](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})). SmiteBrain win/pick rates, community builds and starters, wiki item and god stats if a patch landed, new gods and items, then a recompute and reindex.
+          # Looked up again AFTER the push, by exact branch: the PR stacked
+          # onto can merge or close while this run works, and then the branch
+          # needs a new one. `gh pr create` prints the new PR's URL.
+          NUM=""
+          OPEN=$(open_prs)
+          while read -r n head; do
+            if [ "$head" = "$BRANCH" ]; then NUM="$n"; fi
+          done <<< "$OPEN"
+          if [ -z "$NUM" ]; then
+            TITLE="chore(data): daily community refresh $DAY"
+            BODY="Automated by \`Refresh community data\` ([run](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID})). SmiteBrain win/pick rates, community builds and starters, wiki item and god stats if a patch landed, new gods and items, then a recompute and reindex.
 
-          This is a pull request rather than a push to \`main\` because the branch ruleset refuses a direct push. The suite runs on it before it lands, which a direct push never allowed.
+          This is a pull request rather than a push to \`main\` because the branch ruleset refuses a direct push. The suite runs on it before it lands, which a direct push never allowed."
+            if [ "$BRANCH" != "$DAY_BRANCH" ]; then
+              TITLE="$TITLE (run $GITHUB_RUN_NUMBER)"
+              BODY="$BODY
+
+          Today's first data PR, from \`$DAY_BRANCH\`, was no longer open when this run finished, so this run's data comes in a second one, from a branch cut from \`main\`."
+            fi
+            BODY="$BODY
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)"
-            NUM=$(gh pr view "$BRANCH" --json number --jq .number)
+            URL=$(gh pr create --base main --head "$BRANCH" --title "$TITLE" --body "$BODY")
+            NUM="${URL##*/}"
           fi
+          case "$NUM" in
+            ''|*[!0-9]*)
+              echo "::error::No pull request number for $BRANCH (gh printed '${URL:-}')."
+              exit 1 ;;
+          esac
           echo "number=$NUM" >> "$GITHUB_OUTPUT"
 
-          # `--merge` and not `--squash`: every merge on main in this
+          # ARMED, NOT ASSUMED, AND READ BACK. `gh pr merge --auto` EXITS 0 ON
+          # A MERGED PR (run 42497271128, 2026-11-08, armed nothing and went
+          # green), so its exit code is not the verdict: the state read after
+          # it is. `--merge` and not `--squash`: every merge on main in this
           # repository is a merge commit, and a data PR should read the same
           # as the ones a person opens.
+          #
+          # A stuck PR carries WHICH cause in `stuck`, for the last step:
+          #   no_pat       REFRESH_PAT is unset, so the PR has no checks
+          #   arm_refused  the PR is OPEN and GitHub would not arm it;
+          #                `arm_error` is what gh said
+          #   not_open     the PR merged without this run's commit, or closed,
+          #                before it could be armed: not an auto-merge problem
+          pr_now() {
+            gh pr view "$NUM" --json state,autoMergeRequest,headRefOid \
+              --jq '"\(.state) \(.autoMergeRequest != null) \(.headRefOid)"'
+          }
+          stuck() {
+            echo "landed=stuck" >> "$GITHUB_OUTPUT"
+            echo "stuck=$1" >> "$GITHUB_OUTPUT"
+            echo "$2 See the last step." >> "$GITHUB_STEP_SUMMARY"
+          }
           if [ -z "${REFRESH_PAT:-}" ]; then
             # No point arming auto-merge on a PR that can never get a check.
-            echo "landed=stuck" >> "$GITHUB_OUTPUT"
-            echo "#$NUM holds today's data and has no checks, because REFRESH_PAT is not set. See the last step." \
-              >> "$GITHUB_STEP_SUMMARY"
-          elif gh pr merge "$NUM" --auto --merge >/dev/null 2>&1; then
-            echo "landed=armed" >> "$GITHUB_OUTPUT"
-            echo "Auto-merge armed on #$NUM; it lands when the suite passes." \
-              >> "$GITHUB_STEP_SUMMARY"
+            stuck no_pat "#$NUM holds today's data and has no checks, because REFRESH_PAT is not set."
           else
-            echo "landed=stuck" >> "$GITHUB_OUTPUT"
-            echo "#$NUM holds today's data and CANNOT be merged yet. See the last step." \
-              >> "$GITHUB_STEP_SUMMARY"
+            NOW=$(pr_now)
+            read -r STATE ARMED HEAD_OID <<< "$NOW"
+            ARM_SAID=""
+            if [ "$STATE" = OPEN ] && [ "$ARMED" != true ]; then
+              if ARM_OUT=$(gh pr merge "$NUM" --auto --merge 2>&1); then ARM_RC=0; else ARM_RC=$?; fi
+              ARM_SAID="gh pr merge exited $ARM_RC: $(printf '%s' "$ARM_OUT" | tr '\r\n' '  ')"
+              NOW=$(pr_now)
+              read -r STATE ARMED HEAD_OID <<< "$NOW"
+            fi
+            echo "pr_state=$STATE" >> "$GITHUB_OUTPUT"
+            if [ "$STATE" = OPEN ] && [ "$ARMED" = true ]; then
+              echo "landed=armed" >> "$GITHUB_OUTPUT"
+              echo "Auto-merge is armed on #$NUM ($BRANCH); it lands when the suite passes." \
+                >> "$GITHUB_STEP_SUMMARY"
+            elif [ "$STATE" = MERGED ] && [ "$HEAD_OID" = "$PUSHED" ]; then
+              echo "landed=merged" >> "$GITHUB_OUTPUT"
+              echo "#$NUM ($BRANCH) merged with this run's data in it." >> "$GITHUB_STEP_SUMMARY"
+            elif [ "$STATE" = OPEN ]; then
+              echo "arm_error=$ARM_SAID" >> "$GITHUB_OUTPUT"
+              echo "::warning::#$NUM is open but auto-merge is not armed on it. $ARM_SAID"
+              stuck arm_refused "#$NUM holds today's data and is open, but GitHub would not arm auto-merge on it."
+            else
+              stuck not_open "Today's data is on $BRANCH, but #$NUM is $STATE without this run's commit, so there was no open pull request to arm."
+            fi
           fi
 
       # Last, so the community data above is committed first. A rejected
@@ -415,23 +502,36 @@ jobs:
       # the point. The direct push this replaced failed loudly and was still
       # missed for three days; a green run with a warning attached would be
       # easier to miss, not harder. So the data being stuck is a failure, with
-      # the two causes named, and the PR number is in the job summary so the
-      # day's work is one click away rather than lost.
+      # its cause named, and the PR number is in the job summary so the day's
+      # work is one click away rather than lost.
       #
-      # This step does nothing on a day when nothing moved: that path sets no
-      # `landed` output at all.
+      # IT SAYS ONLY THE CAUSE IT WAS GIVEN. It used to infer one from which
+      # token was used, so any failure with the PAT present read "auto-merge
+      # is likely off", including a PR that had simply stopped being open.
+      # A cause it does not recognise is reported as unrecognised, not guessed.
+      #
+      # This step does nothing on a day when nothing moved, nor when the data
+      # is armed or already merged: only a stuck PR sets `landed=stuck`.
       - name: Fail the run if today's data is stuck in a PR
         if: ${{ !cancelled() && steps.data_pr.outputs.landed == 'stuck' }}
-        # Through `env` rather than interpolated into the script. The value is
-        # one of two literals this workflow writes, so nothing can be injected
-        # today, but a step output is data and data does not belong in the
-        # middle of a shell command.
+        # Through `env` rather than interpolated into the script: a step
+        # output is data, `arm_error` is text gh printed, and data does not
+        # belong in the middle of a shell command.
         env:
-          TOKEN_KIND: ${{ steps.data_pr.outputs.token }}
+          STUCK: ${{ steps.data_pr.outputs.stuck }}
+          NUM: ${{ steps.data_pr.outputs.number }}
+          BRANCH: ${{ steps.data_pr.outputs.branch }}
+          PR_STATE: ${{ steps.data_pr.outputs.pr_state }}
+          ARM_ERROR: ${{ steps.data_pr.outputs.arm_error }}
         run: |
-          if [ "$TOKEN_KIND" = "github_token" ]; then
-            echo "::error::Today's data is in a pull request with NO checks, so nobody can merge it. The REFRESH_PAT secret is not set. Create a fine-grained PAT scoped to this repository with Contents and Pull requests at read/write, store it as REFRESH_PAT, and this workflow will use it for both the push and gh. GITHUB_TOKEN cannot trigger the required checks, which is why the fallback cannot land data."
-          else
-            echo "::error::Today's data is in a pull request that could not be set to auto-merge. REFRESH_PAT is set, so the likely cause is that 'Allow auto-merge' is off in the repository settings. Turn it on and the next run lands by itself; this PR can be merged by hand once its checks pass."
-          fi
+          case "$STUCK" in
+            no_pat)
+              echo "::error::Today's data is in #$NUM with NO checks, so nobody can merge it. The REFRESH_PAT secret is not set. Create a fine-grained PAT scoped to this repository with Contents and Pull requests at read/write, store it as REFRESH_PAT, and this workflow will use it for both the push and gh. GITHUB_TOKEN cannot trigger the required checks, which is why the fallback cannot land data." ;;
+            arm_refused)
+              echo "::error::Today's data is in #$NUM, which is open, but auto-merge could not be armed on it. $ARM_ERROR. REFRESH_PAT is set, so the refusal is about the repository or the PR: 'Allow auto-merge' is off in the repository settings, or #$NUM is not in a mergeable state (a conflict with main, for one); gh's words above say which. Fix that, then merge #$NUM by hand once its checks pass." ;;
+            not_open)
+              echo "::error::Today's data was pushed to $BRANCH, but #$NUM is $PR_STATE without this run's commit, so there was no open pull request to arm. This is not an auto-merge problem. Open a pull request from $BRANCH into main by hand, or re-run this workflow: with no open pull request for today it opens a new one." ;;
+            *)
+              echo "::error::Today's data did not reach main, for a cause this step was not told (stuck='$STUCK'). See the log and the job summary of 'Open a pull request if anything moved'." ;;
+          esac
           exit 1
