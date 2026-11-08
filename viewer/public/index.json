@@ -319781,6 +319781,26 @@
     "Joust",
     "Arena"
   ],
+  "community_transfer": {
+    "Joust": {
+      "from": "Conquest",
+      "reject_tags": [
+        "mobility"
+      ],
+      "excluded_items": []
+    },
+    "Arena": {
+      "from": "Conquest",
+      "reject_tags": [
+        "stacking",
+        "mobility"
+      ],
+      "excluded_items": [
+        "Eye of Providence",
+        "Eye of Erebus"
+      ]
+    }
+  },
   "starters": [
     {
       "base": "Gilded Arrow",

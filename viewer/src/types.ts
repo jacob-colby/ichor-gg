@@ -139,6 +139,10 @@ export interface CommunityBuildEntry {
    *  from `starter`, which is a role RULE from _weights.yaml and so gives every
    *  Carry the same opener regardless of what Carry players bought. */
   community_starters?: PopularItem[];
+  /** What this god's players take as their relic, same shape and source as
+   *  `community_starters`. Absent until the pipeline ships it; the god page
+   *  renders the relic tile only when it is present, never a stand-in. */
+  community_relics?: PopularItem[];
   source_url: string;
   last_verified?: string;
   starter?: { base: string; upgrade: string };
@@ -408,6 +412,19 @@ export interface CommunitySource {
   matches_analyzed?: number | null;
 }
 
+/** How much of another mode's community record a mode may lean on, from
+ *  `modes.<mode>.borrow_community` and `modes.<mode>.excluded_items` in
+ *  `_weights.yaml` (`build_index.community_transfer`). Joust and Arena have
+ *  no record of their own; these say which parts of Conquest's do not
+ *  describe what an item does there. */
+export interface CommunityTransfer {
+  from?: string;
+  /** Effect tags whose Conquest record does not transfer. */
+  reject_tags?: string[];
+  /** Items this mode's shop does not sell at all. */
+  excluded_items?: string[];
+}
+
 export interface IndexData {
   gods: God[];
   items: Item[];
@@ -437,4 +454,8 @@ export interface IndexData {
   /** Mode display order from the pipeline. Absent on an older index. */
   modes?: string[];
   draft?: DraftConfig;
+  /** Mode label -> what that mode may borrow from another's community
+   *  record. Absent on an older index; the most-picked list then marks
+   *  nothing rather than guessing. */
+  community_transfer?: Record<string, CommunityTransfer>;
 }

@@ -293,3 +293,14 @@ input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; a
   /* Bars land at full length immediately rather than not rendering at all. */
   .bar-grow { animation: none; }
 }
+
+/* The focus strip scrolls sideways on a phone. Its right edge fades so the
+   next chip visibly continues past the screen; the strip's own right padding
+   is wider than the fade, so the last chip scrolls fully clear of it. */
+@media (max-width: 1023.98px) {
+  .focus-strip {
+    scrollbar-width: thin;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  }
+}

@@ -56,6 +56,8 @@ export const SearchGlyph = (p: GlyphProps) => (
 export const PlusGlyph = (p: GlyphProps) => <Glyph {...p}><path d="M12 6v12M6 12h12" /></Glyph>;
 export const CloseGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m7 7 10 10M17 7 7 17" /></Glyph>;
 export const ChevronGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m9 6 6 6-6 6" /></Glyph>;
+/** A tick: "this one is in the build on screen". */
+export const CheckGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m5 12.5 4.5 4.5L19 7.5" /></Glyph>;
 export const SwapGlyph = (p: GlyphProps) => (
   <Glyph {...p}><path d="M7 7h11l-3-3M17 17H6l3 3" /></Glyph>
 );
