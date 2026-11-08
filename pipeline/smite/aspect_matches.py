@@ -458,11 +458,14 @@ def _record_line(r: dict) -> str:
 
 
 def _write_text(path: Path, text: str) -> bool:
-    if path.exists() and path.read_text(encoding="utf-8") == text:
+    """LF on every platform, so a store written on Windows is byte-identical
+    to one the Linux runner writes."""
+    data = text.encode("utf-8")
+    if path.exists() and path.read_bytes() == data:
         return False
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(text, encoding="utf-8")
+    tmp.write_bytes(data)
     tmp.replace(path)
     return True
 
