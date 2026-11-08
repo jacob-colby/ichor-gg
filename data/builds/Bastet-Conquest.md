@@ -5,7 +5,7 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Watchful Pride
-  aspect_pick_rate: 0.19
+  aspect_pick_rate: 0.18
   aspect_win_rate: 0.66
   slot_order:
   - name: Jotunn's Revenge
@@ -20,7 +20,7 @@ builds:
       win_rate: 0.56
   - name: Pendulum Blade
     pick_rate: 0.27
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Transcendence
       pick_rate: 0.2
@@ -34,7 +34,7 @@ builds:
     alternates:
     - name: Barbed Carver
       pick_rate: 0.21
-      win_rate: 0.46
+      win_rate: 0.45
     - name: Pendulum Blade
       pick_rate: 0.12
       win_rate: 0.46
@@ -44,7 +44,7 @@ builds:
     alternates:
     - name: The Crusher
       pick_rate: 0.14
-      win_rate: 0.43
+      win_rate: 0.42
     - name: Avatar's Parashu
       pick_rate: 0.06
       win_rate: 0.53
@@ -53,8 +53,8 @@ builds:
     win_rate: 0.56
     alternates:
     - name: Heartseeker
-      pick_rate: 0.18
-      win_rate: 0.49
+      pick_rate: 0.19
+      win_rate: 0.48
     - name: Lucerne Hammer
       pick_rate: 0.07
       win_rate: 0.58
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/bastet/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5440251572327044
+  god_win_rate: 0.542319749216301
   god_matches_won: 173
-  god_matches_played: 318
+  god_matches_played: 319
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -135,9 +135,9 @@ builds:
       pick: 0.0
       fit: 0.91
     Pendulum Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
-      win: 0.58
+      win: 0.57
       pick: 0.37
       fit: 1.0
     The Crusher:
@@ -289,7 +289,7 @@ builds:
     Pendulum Blade:
       total: 0.53
       efficiency: 0.39
-      win: 0.58
+      win: 0.57
       pick: 0.37
       fit: 0.78
     The Crusher:
@@ -435,9 +435,9 @@ builds:
       pick: 0.0
       fit: 0.94
     Pendulum Blade:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
-      win: 0.58
+      win: 0.57
       pick: 0.37
       fit: 1.0
     The Crusher:
@@ -591,7 +591,7 @@ builds:
     Pendulum Blade:
       total: 0.54
       efficiency: 0.39
-      win: 0.58
+      win: 0.57
       pick: 0.37
       fit: 0.85
     The Crusher:

@@ -13,7 +13,7 @@ builds:
     win_rate: 0.45
     alternates:
     - name: Tyrfing
-      pick_rate: 0.1
+      pick_rate: 0.09
       win_rate: 0.48
     - name: Jotunn's Revenge
       pick_rate: 0.09
@@ -47,7 +47,7 @@ builds:
       win_rate: 0.43
     - name: Dominance
       pick_rate: 0.11
-      win_rate: 0.48
+      win_rate: 0.49
   - name: Deathbringer
     pick_rate: 0.13
     win_rate: 0.51
@@ -64,7 +64,7 @@ builds:
     alternates:
     - name: Deathbringer
       pick_rate: 0.11
-      win_rate: 0.5
+      win_rate: 0.52
     - name: Skeggox
       pick_rate: 0.07
       win_rate: 0.62
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.49
   source_url: https://smitebrain.com/gods/hachiman/
   last_verified: '2026-11-08'
-  god_win_rate: 0.46487603305785125
-  god_matches_won: 225
-  god_matches_played: 484
+  god_win_rate: 0.465979381443299
+  god_matches_won: 226
+  god_matches_played: 485
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -123,10 +123,10 @@ builds:
     Eye of the Storm, Avenging Blade, Arondight.'
   slot_scores:
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.65
     Dominance:
       total: 0.49
@@ -214,7 +214,7 @@ builds:
       total: 0.48
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.48
     Dominance:
       total: 0.48
@@ -282,7 +282,7 @@ builds:
       total: 0.5
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.6
     Dominance:
       total: 0.48
@@ -359,10 +359,10 @@ builds:
       pick: 0.0
       fit: 0.14
     Tyrfing:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.45
     Dominance:
       total: 0.46
@@ -414,8 +414,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, The Reaper, Kinetic Cuirass, Tyrfing,
-    Shield of the Phoenix, Phoenix Feather, Yogi''s Necklace, Shield Splitter, Golden
+    this god: Amanita Charm, Berserker''s Shield, The Reaper, Kinetic Cuirass, Shield
+    of the Phoenix, Tyrfing, Phoenix Feather, Yogi''s Necklace, Shield Splitter, Golden
     Blade, Runeforged Hammer, Oni Hunter''s Garb, Draconic Scale, Genji''s Guard,
     Bloodforge, Erosion, Shogun''s Ofuda, Eye of Providence, Pharaoh''s Curse, Toxic
     Blade, Midgardian Mail, Tekko-Kagi, Shifter''s Shield, The Crusher, Leviathan''s
@@ -434,10 +434,10 @@ builds:
       pick: 0.0
       fit: 0.47
     Tyrfing:
-      total: 0.48
+      total: 0.47
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.45
     The Reaper:
       total: 0.5
@@ -497,7 +497,7 @@ builds:
       total: 0.49
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.53
     The Reaper:
       total: 0.5
@@ -569,7 +569,7 @@ builds:
       total: 0.51
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.68
     Dominance:
       total: 0.48
@@ -650,7 +650,7 @@ builds:
       total: 0.47
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.41
     Hydra's Lament:
       total: 0.48
@@ -721,10 +721,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Tyrfing:
-      total: 0.51
+      total: 0.5
       efficiency: 0.53
       win: 0.48
-      pick: 0.1
+      pick: 0.09
       fit: 0.65
     The Reaper:
       total: 0.48

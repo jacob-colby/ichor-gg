@@ -20,7 +20,7 @@ builds:
       win_rate: 0.5
   - name: Soul Gem
     pick_rate: 0.15
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.18
@@ -40,7 +40,7 @@ builds:
       win_rate: 0.64
   - name: Obsidian Shard
     pick_rate: 0.18
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.31
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.55
   source_url: https://smitebrain.com/gods/merlin/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5468277945619335
+  god_win_rate: 0.5451807228915663
   god_matches_won: 181
-  god_matches_played: 331
+  god_matches_played: 332
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -149,13 +149,13 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 1.0
     Obsidian Shard:
       total: 0.6
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.89
   community_ordered:
@@ -225,15 +225,15 @@ builds:
       pick: 0.42
       fit: 0.57
     Soul Gem:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 0.71
     Obsidian Shard:
       total: 0.55
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.57
   community_ordered:
@@ -302,13 +302,13 @@ builds:
     Soul Gem:
       total: 0.55
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 0.88
     Obsidian Shard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.66
   community_ordered:
@@ -328,8 +328,8 @@ builds:
   - Soul Gem
   - Amanita Charm
   flex_slots:
-  - Obsidian Shard
   - Kinetic Cuirass
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -366,7 +366,7 @@ builds:
     Obsidian Shard:
       total: 0.54
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.49
     Rod of Tahuti:
@@ -378,7 +378,7 @@ builds:
     Soul Gem:
       total: 0.55
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 0.89
     Amanita Charm:
@@ -452,13 +452,13 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 1.0
     Obsidian Shard:
       total: 0.61
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.95
   community_ordered:
@@ -533,7 +533,7 @@ builds:
     Obsidian Shard:
       total: 0.53
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.42
   community_ordered:
@@ -601,13 +601,13 @@ builds:
     Soul Gem:
       total: 0.56
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 0.96
     Obsidian Shard:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.47
   community_ordered:
@@ -675,13 +675,13 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.53
-      win: 0.5
+      win: 0.49
       pick: 0.2
       fit: 1.0
     Obsidian Shard:
       total: 0.6
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.3
       fit: 0.89
   community_ordered:

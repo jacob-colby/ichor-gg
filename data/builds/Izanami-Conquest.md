@@ -36,7 +36,7 @@ builds:
       pick_rate: 0.1
       win_rate: 0.59
     - name: Damaru
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.58
   - name: Omen Drum
     pick_rate: 0.09
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/izanami/
   last_verified: '2026-11-08'
-  god_win_rate: 0.6352624495289367
-  god_matches_won: 472
-  god_matches_played: 743
+  god_win_rate: 0.635752688172043
+  god_matches_won: 473
+  god_matches_played: 744
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow

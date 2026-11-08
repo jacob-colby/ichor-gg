@@ -33,7 +33,7 @@ builds:
     win_rate: 0.4
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.07
+      pick_rate: 0.08
       win_rate: 0.43
     - name: Genji's Guard
       pick_rate: 0.07
@@ -43,7 +43,7 @@ builds:
     win_rate: 0.49
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.21
+      pick_rate: 0.2
       win_rate: 0.39
     - name: Obsidian Shard
       pick_rate: 0.08
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.18
   source_url: https://smitebrain.com/gods/nox/
   last_verified: '2026-11-08'
-  god_win_rate: 0.43291839557399725
+  god_win_rate: 0.43232044198895025
   god_matches_won: 313
-  god_matches_played: 723
+  god_matches_played: 724
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem

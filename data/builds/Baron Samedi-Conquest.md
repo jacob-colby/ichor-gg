@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Hysteria
   aspect_pick_rate: 0.73
-  aspect_win_rate: 0.53
+  aspect_win_rate: 0.52
   slot_order:
   - name: Spear of Desolation
     pick_rate: 0.16
@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Alchemist Coat
       pick_rate: 0.15
-      win_rate: 0.46
+      win_rate: 0.45
     - name: Chronos' Pendant
       pick_rate: 0.11
       win_rate: 0.57
@@ -23,8 +23,8 @@ builds:
     win_rate: 0.62
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.53
+      pick_rate: 0.11
+      win_rate: 0.5
     - name: Spear of Desolation
       pick_rate: 0.1
       win_rate: 0.79
@@ -34,7 +34,7 @@ builds:
     alternates:
     - name: Prophetic Cloak
       pick_rate: 0.09
-      win_rate: 0.38
+      win_rate: 0.35
     - name: Rod of Tahuti
       pick_rate: 0.08
       win_rate: 0.5
@@ -49,7 +49,7 @@ builds:
       pick_rate: 0.07
       win_rate: 0.67
   - name: Obsidian Shard
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.92
     alternates:
     - name: Doublet of Binding
@@ -62,16 +62,16 @@ builds:
     pick_rate: 0.06
     win_rate: 0.33
     alternates:
+    - name: Veve Charm
+      pick_rate: 0.05
+      win_rate: 0.6
     - name: Xibalban Effigy
       pick_rate: 0.05
       win_rate: 0.4
-    - name: Veve Charm
-      pick_rate: 0.04
-      win_rate: 0.75
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.18
-    win_rate: 0.52
+    win_rate: 0.5
   - name: Conduit Gem
     pick_rate: 0.14
     win_rate: 0.44
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.79
   source_url: https://smitebrain.com/gods/baron-samedi/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5401069518716578
+  god_win_rate: 0.5372340425531915
   god_matches_won: 101
-  god_matches_played: 187
+  god_matches_played: 188
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -145,7 +145,7 @@ builds:
       total: 0.68
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.44
     Rod of Tahuti:
       total: 0.66
@@ -227,7 +227,7 @@ builds:
       total: 0.67
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.39
     Rod of Tahuti:
       total: 0.66
@@ -296,7 +296,7 @@ builds:
       total: 0.67
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.43
     Rod of Tahuti:
       total: 0.66
@@ -365,7 +365,7 @@ builds:
       total: 0.68
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.44
     Rod of Tahuti:
       total: 0.66
@@ -445,7 +445,7 @@ builds:
       total: 0.69
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.55
     Rod of Tahuti:
       total: 0.68
@@ -520,7 +520,7 @@ builds:
       total: 0.66
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.32
     Rod of Tahuti:
       total: 0.64
@@ -594,7 +594,7 @@ builds:
       total: 0.66
       efficiency: 0.53
       win: 0.92
-      pick: 0.17
+      pick: 0.15
       fit: 0.31
     Rod of Tahuti:
       total: 0.64

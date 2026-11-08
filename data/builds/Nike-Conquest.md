@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.18
-      win_rate: 0.49
+      win_rate: 0.48
     - name: Devourer's Gauntlet
       pick_rate: 0.11
       win_rate: 0.38
@@ -37,7 +37,7 @@ builds:
       win_rate: 0.59
     - name: Freya's Tears
       pick_rate: 0.11
-      win_rate: 0.63
+      win_rate: 0.62
   - name: Heartseeker
     pick_rate: 0.31
     win_rate: 0.57
@@ -70,7 +70,7 @@ builds:
       win_rate: 0.71
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.32
+    pick_rate: 0.33
     win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.28
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.42
   source_url: https://smitebrain.com/gods/nike/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5213675213675214
+  god_win_rate: 0.5198863636363636
   god_matches_won: 183
-  god_matches_played: 351
+  god_matches_played: 352
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -150,7 +150,7 @@ builds:
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.63
+      win: 0.62
       pick: 0.17
       fit: 0.51
     Amanita Charm:
@@ -175,8 +175,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Jotunn's Revenge
   - Genji's Guard
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -225,7 +225,7 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.63
+      win: 0.62
       pick: 0.17
       fit: 0.45
     Amanita Charm:
@@ -248,8 +248,8 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
   - Screeching Gargoyle
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -298,7 +298,7 @@ builds:
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.63
+      win: 0.62
       pick: 0.17
       fit: 0.38
     Amanita Charm:
@@ -442,7 +442,7 @@ builds:
     Freya's Tears:
       total: 0.59
       efficiency: 0.61
-      win: 0.63
+      win: 0.62
       pick: 0.17
       fit: 0.59
     Amanita Charm:
@@ -516,7 +516,7 @@ builds:
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.63
+      win: 0.62
       pick: 0.17
       fit: 0.51
     Amanita Charm:
@@ -528,5 +528,84 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   - Freya's Tears
+  starter: *id001
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Transcendence
+  - Freya's Tears
+  - Amanita Charm
+  flex_slots:
+  - Freya's Tears
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Draconic Scale — magical protection
+    swap_item: Draconic Scale
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
+    + fit + win/pick). Underrated for this god: Amanita Charm, Kinetic Cuirass, Genji''s
+    Guard, Shield Splitter, Berserker''s Shield, Breastplate of Valor, Shield of the
+    Phoenix, Draconic Scale, Runeforged Hammer, Hydra''s Lament, Erosion, Oni Hunter''s
+    Garb, Eye of Providence, The Reaper, Screeching Gargoyle, Midgardian Mail, Stone
+    of Binding, Leviathan''s Hide, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean
+    Lion, Arondight, Wyrmskin Hide, Gladiator''s Shield, Tyrfing, Avenging Blade,
+    Prophetic Cloak.'
+  slot_scores:
+    Genji's Guard:
+      total: 0.57
+      efficiency: 0.71
+      win: 0.61
+      pick: 0.0
+      fit: 0.32
+    Kinetic Cuirass:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.0
+      fit: 0.62
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.61
+      pick: 0.0
+      fit: 0.58
+    Transcendence:
+      total: 0.5
+      efficiency: 0.5
+      win: 0.62
+      pick: 0.37
+      fit: 0.21
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.62
+      pick: 0.17
+      fit: 0.51
+    Amanita Charm:
+      total: 0.59
+      efficiency: 0.68
+      win: 0.61
+      pick: 0.0
+      fit: 0.52
+  community_ordered:
+  - Transcendence
+  - Freya's Tears
+  swaps:
+  - added: Transcendence
+    removed: Jotunn's Revenge
+    reason: community 62% win over 95 matches (vs 52% on this god), taking the model's
+      weakest slot from Jotunn's Revenge
   starter: *id001
 ---

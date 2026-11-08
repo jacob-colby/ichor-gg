@@ -9,11 +9,11 @@ builds:
   aspect_win_rate: 0.52
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.82
+    pick_rate: 0.83
     win_rate: 0.54
     alternates:
     - name: Tyrfing
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.44
     - name: Avenging Blade
       pick_rate: 0.04
@@ -33,14 +33,14 @@ builds:
     win_rate: 0.56
     alternates:
     - name: The Executioner
-      pick_rate: 0.26
+      pick_rate: 0.27
       win_rate: 0.49
     - name: Riptalon
       pick_rate: 0.12
       win_rate: 0.51
   - name: Silverbranch Bow
     pick_rate: 0.2
-    win_rate: 0.58
+    win_rate: 0.59
     alternates:
     - name: The Executioner
       pick_rate: 0.19
@@ -67,26 +67,26 @@ builds:
       win_rate: 0.64
     - name: Riptalon
       pick_rate: 0.07
-      win_rate: 0.62
+      win_rate: 0.64
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.54
-    win_rate: 0.6
+    win_rate: 0.61
   - name: Gilded Arrow
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.37
   - name: Hunter's Cowl
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.52
   source_url: https://smitebrain.com/gods/hou-yi/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5251641137855579
-  god_matches_won: 240
-  god_matches_played: 457
+  god_win_rate: 0.5262008733624454
+  god_matches_won: 241
+  god_matches_played: 458
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -151,7 +151,7 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.49
-      win: 0.58
+      win: 0.59
       pick: 0.33
       fit: 0.45
     Deathbringer:
@@ -288,9 +288,9 @@ builds:
       pick: 0.51
       fit: 0.53
     Silverbranch Bow:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
-      win: 0.58
+      win: 0.59
       pick: 0.33
       fit: 0.42
     Riptalon:
@@ -441,7 +441,7 @@ builds:
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.49
-      win: 0.58
+      win: 0.59
       pick: 0.33
       fit: 0.6
     Riptalon:
@@ -528,7 +528,7 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.49
-      win: 0.58
+      win: 0.59
       pick: 0.33
       fit: 0.47
     Deathbringer:
@@ -622,12 +622,12 @@ builds:
   - Jotunn's Revenge
   - Death Metal
   - Spear of Desolation
+  - Silverbranch Bow
   - Rod of Tahuti
-  - Deathbringer
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Deathbringer
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -669,18 +669,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.46
+    Silverbranch Bow:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.59
+      pick: 0.33
+      fit: 0.39
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.82
       win: 0.54
       pick: 0.0
       fit: 0.35
-    Deathbringer:
-      total: 0.51
-      efficiency: 0.44
-      win: 0.65
-      pick: 0.37
-      fit: 0.3
     Soul Gem:
       total: 0.54
       efficiency: 0.58
@@ -688,20 +688,20 @@ builds:
       pick: 0.0
       fit: 0.62
   community_ordered:
-  - Deathbringer
+  - Silverbranch Bow
   starter: *id001
 - source: suggested
   archetype: str-int
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
   - Death Metal
+  - Silverbranch Bow
   - Rod of Tahuti
+  - Deathbringer
   - Soul Gem
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Deathbringer
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -725,42 +725,45 @@ builds:
     Reaver, Toxic Blade, Arondight, Demon Blade, Avatar''s Parashu, Qin''s Blade,
     Gem of Focus, Heartwood Charm.'
   slot_scores:
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.48
-      win: 0.54
-      pick: 0.0
-      fit: 0.18
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.65
       win: 0.54
       pick: 0.0
       fit: 0.36
-    Transcendence:
-      total: 0.44
-      efficiency: 0.5
-      win: 0.54
-      pick: 0.0
-      fit: 0.18
     Death Metal:
       total: 0.55
       efficiency: 0.63
       win: 0.54
       pick: 0.0
       fit: 0.55
+    Silverbranch Bow:
+      total: 0.52
+      efficiency: 0.49
+      win: 0.59
+      pick: 0.33
+      fit: 0.42
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.82
       win: 0.54
       pick: 0.0
       fit: 0.33
+    Deathbringer:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.65
+      pick: 0.37
+      fit: 0.37
     Soul Gem:
       total: 0.53
       efficiency: 0.58
       win: 0.54
       pick: 0.0
       fit: 0.53
+  community_ordered:
+  - Silverbranch Bow
+  - Deathbringer
   starter: *id001
 - source: suggested
   archetype: model
@@ -806,7 +809,7 @@ builds:
       total: 0.49
       efficiency: 0.53
       win: 0.44
-      pick: 0.11
+      pick: 0.1
       fit: 0.68
     Death Metal:
       total: 0.54
@@ -880,7 +883,7 @@ builds:
       total: 0.49
       efficiency: 0.53
       win: 0.44
-      pick: 0.11
+      pick: 0.1
       fit: 0.68
     Death Metal:
       total: 0.54

@@ -5,12 +5,12 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Conflagration
-  aspect_pick_rate: 0.48
+  aspect_pick_rate: 0.47
   aspect_win_rate: 0.6
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.35
-    win_rate: 0.62
+    win_rate: 0.63
     alternates:
     - name: Book of Thoth
       pick_rate: 0.23
@@ -20,7 +20,7 @@ builds:
       win_rate: 0.75
   - name: Dagger of Frenzy
     pick_rate: 0.15
-    win_rate: 0.47
+    win_rate: 0.48
     alternates:
     - name: Tyrfing
       pick_rate: 0.12
@@ -43,7 +43,7 @@ builds:
     win_rate: 0.65
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.57
     - name: Riptalon
       pick_rate: 0.11
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.65
   - name: Sharpshooter's Arrow
     pick_rate: 0.15
-    win_rate: 0.43
+    win_rate: 0.45
   - name: Gilded Arrow
     pick_rate: 0.14
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/sol/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5931372549019608
-  god_matches_won: 121
-  god_matches_played: 204
+  god_win_rate: 0.5951219512195122
+  god_matches_won: 122
+  god_matches_played: 205
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -123,7 +123,7 @@ builds:
     Jade Scepter, Divine Ruin, Genji''s Guard, Ethereal Staff, Helm of Radiance.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
       win: 0.6
       pick: 0.0
@@ -141,7 +141,7 @@ builds:
       pick: 0.16
       fit: 0.58
     Spear of the Magus:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
       win: 0.6
       pick: 0.0
@@ -272,7 +272,7 @@ builds:
     Genji''s Guard, Typhon’s Heart, Jade Scepter, Divine Ruin.'
   slot_scores:
     Nimble Ring:
-      total: 0.53
+      total: 0.54
       efficiency: 0.57
       win: 0.6
       pick: 0.0
@@ -290,7 +290,7 @@ builds:
       pick: 0.16
       fit: 0.56
     Spear of the Magus:
-      total: 0.52
+      total: 0.53
       efficiency: 0.56
       win: 0.6
       pick: 0.0
@@ -352,7 +352,7 @@ builds:
       pick: 0.0
       fit: 0.19
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.61
       win: 0.6
       pick: 0.0
@@ -388,15 +388,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Gluttonous Grimoire
+  - Nimble Ring
   - Spear of Desolation
   - Doom Orb
-  - The World Stone
+  - Spear of the Magus
   - Rod of Tahuti
   - Obsidian Shard
   flex_slots:
+  - Nimble Ring
   - Doom Orb
-  - The World Stone
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -418,12 +418,12 @@ builds:
     Harp, Screeching Gargoyle, Genji''s Guard, Jade Scepter, Divine Ruin, Ethereal
     Staff.'
   slot_scores:
-    Gluttonous Grimoire:
-      total: 0.57
-      efficiency: 0.54
+    Nimble Ring:
+      total: 0.55
+      efficiency: 0.57
       win: 0.6
       pick: 0.0
-      fit: 0.76
+      fit: 0.53
     Spear of Desolation:
       total: 0.58
       efficiency: 0.6
@@ -431,14 +431,14 @@ builds:
       pick: 0.16
       fit: 0.66
     Doom Orb:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
       win: 0.6
       pick: 0.0
       fit: 0.56
-    The World Stone:
-      total: 0.53
-      efficiency: 0.49
+    Spear of the Magus:
+      total: 0.55
+      efficiency: 0.56
       win: 0.6
       pick: 0.0
       fit: 0.56
@@ -492,7 +492,7 @@ builds:
     Totem of Death, Damaru, Genji''s Guard, Jade Scepter, Divine Ruin.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
       win: 0.6
       pick: 0.0
@@ -566,13 +566,13 @@ builds:
     Horror, Typhon’s Heart, Screeching Gargoyle.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
       win: 0.6
       pick: 0.0
       fit: 0.44
     Bragi's Harp:
-      total: 0.51
+      total: 0.52
       efficiency: 0.47
       win: 0.6
       pick: 0.0
@@ -793,7 +793,7 @@ builds:
     of Radiance.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.53
+      total: 0.54
       efficiency: 0.52
       win: 0.6
       pick: 0.0
@@ -811,7 +811,7 @@ builds:
       pick: 0.16
       fit: 0.58
     Spear of the Magus:
-      total: 0.53
+      total: 0.54
       efficiency: 0.56
       win: 0.6
       pick: 0.0

@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.23
-      win_rate: 0.49
+      win_rate: 0.5
     - name: Daybreak Gavel
       pick_rate: 0.08
       win_rate: 0.56
@@ -24,13 +24,13 @@ builds:
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.22
-      win_rate: 0.55
+      win_rate: 0.56
     - name: The Reaper
       pick_rate: 0.15
       win_rate: 0.5
   - name: The Reaper
-    pick_rate: 0.32
-    win_rate: 0.56
+    pick_rate: 0.33
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.11
@@ -70,7 +70,7 @@ builds:
       win_rate: 0.38
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.42
+    pick_rate: 0.41
     win_rate: 0.65
   - name: Bumba's Cudgel
     pick_rate: 0.2
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.59
   source_url: https://smitebrain.com/gods/thanatos/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5688073394495413
-  god_matches_won: 186
-  god_matches_played: 327
+  god_win_rate: 0.5701219512195121
+  god_matches_won: 187
+  god_matches_played: 328
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -135,10 +135,10 @@ builds:
       pick: 0.44
       fit: 0.71
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.91
     The Crusher:
       total: 0.64
@@ -207,7 +207,7 @@ builds:
       pick: 0.54
       fit: 0.71
     Transcendence:
-      total: 0.48
+      total: 0.49
       efficiency: 0.5
       win: 0.56
       pick: 0.0
@@ -221,8 +221,8 @@ builds:
     The Reaper:
       total: 0.53
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.47
     The Crusher:
       total: 0.57
@@ -288,10 +288,10 @@ builds:
       pick: 0.44
       fit: 0.54
     The Reaper:
-      total: 0.54
+      total: 0.55
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.56
     The Crusher:
       total: 0.58
@@ -329,7 +329,7 @@ builds:
   - Avatar's Parashu
   - Amanita Charm
   flex_slots:
-  - The Reaper
+  - Kinetic Cuirass
   - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
@@ -345,7 +345,7 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Kinetic Cuirass, The Crusher, Shield of the Phoenix,
+    this god: Amanita Charm, Kinetic Cuirass, Shield of the Phoenix, The Crusher,
     Berserker''s Shield, Shield Splitter, Phoenix Feather, Genji''s Guard, Runeforged
     Hammer, Yogi''s Necklace, Draconic Scale, Freya''s Tears, Oni Hunter''s Garb,
     Erosion, Eye of Providence, Shifter''s Shield, Breastplate of Valor, Chandra''s
@@ -359,16 +359,16 @@ builds:
       pick: 0.54
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.57
       efficiency: 0.61
       win: 0.56
       pick: 0.0
       fit: 0.66
     The Reaper:
-      total: 0.56
+      total: 0.57
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.7
     The Crusher:
       total: 0.56
@@ -435,8 +435,8 @@ builds:
     The Reaper:
       total: 0.6
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.94
     The Crusher:
       total: 0.64
@@ -589,7 +589,7 @@ builds:
       pick: 0.44
       fit: 0.75
     Arondight:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.56
       pick: 0.0
@@ -657,16 +657,16 @@ builds:
       pick: 0.54
       fit: 1.0
     Transcendence:
-      total: 0.5
+      total: 0.51
       efficiency: 0.5
       win: 0.56
       pick: 0.0
       fit: 0.52
     The Reaper:
-      total: 0.59
+      total: 0.6
       efficiency: 0.52
-      win: 0.56
-      pick: 0.5
+      win: 0.57
+      pick: 0.51
       fit: 0.91
     The Crusher:
       total: 0.64

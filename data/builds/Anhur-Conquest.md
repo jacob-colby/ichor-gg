@@ -30,7 +30,7 @@ builds:
       win_rate: 0.55
   - name: Dominance
     pick_rate: 0.34
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: The Executioner
       pick_rate: 0.23
@@ -43,7 +43,7 @@ builds:
     win_rate: 0.49
     alternates:
     - name: Riptalon
-      pick_rate: 0.23
+      pick_rate: 0.22
       win_rate: 0.58
     - name: Silverbranch Bow
       pick_rate: 0.14
@@ -56,8 +56,8 @@ builds:
       pick_rate: 0.18
       win_rate: 0.55
     - name: Deathbringer
-      pick_rate: 0.1
-      win_rate: 0.67
+      pick_rate: 0.11
+      win_rate: 0.65
   - name: Deathbringer
     pick_rate: 0.13
     win_rate: 0.63
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.35
   source_url: https://smitebrain.com/gods/anhur/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5089514066496164
+  god_win_rate: 0.5076530612244898
   god_matches_won: 199
-  god_matches_played: 391
+  god_matches_played: 392
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -135,9 +135,9 @@ builds:
       pick: 0.15
       fit: 0.69
     Dominance:
-      total: 0.52
+      total: 0.51
       efficiency: 0.47
-      win: 0.52
+      win: 0.51
       pick: 0.53
       fit: 0.6
     Riptalon:
@@ -220,7 +220,7 @@ builds:
     Dominance:
       total: 0.5
       efficiency: 0.47
-      win: 0.52
+      win: 0.51
       pick: 0.53
       fit: 0.5
     Hydra's Lament:
@@ -246,7 +246,7 @@ builds:
   - Rage
   - Jotunn's Revenge
   - Tyrfing
-  - Dominance
+  - Silverbranch Bow
   - Demon Blade
   - Deathbringer
   flex_slots:
@@ -290,12 +290,12 @@ builds:
       win: 0.57
       pick: 0.15
       fit: 0.65
-    Dominance:
+    Silverbranch Bow:
       total: 0.51
-      efficiency: 0.47
-      win: 0.52
-      pick: 0.53
-      fit: 0.55
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.41
+      fit: 0.42
     Demon Blade:
       total: 0.48
       efficiency: 0.36
@@ -310,7 +310,7 @@ builds:
       fit: 0.52
   community_ordered:
   - Tyrfing
-  - Dominance
+  - Silverbranch Bow
   - Deathbringer
   starter: *id001
 - source: suggested
@@ -469,8 +469,8 @@ builds:
   - Silverbranch Bow
   - Deathbringer
   flex_slots:
-  - Dominance
   - Jotunn's Revenge
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -506,7 +506,7 @@ builds:
     Dominance:
       total: 0.5
       efficiency: 0.47
-      win: 0.52
+      win: 0.51
       pick: 0.53
       fit: 0.52
     Riptalon:
@@ -658,9 +658,9 @@ builds:
       pick: 0.15
       fit: 0.69
     Dominance:
-      total: 0.52
+      total: 0.51
       efficiency: 0.47
-      win: 0.52
+      win: 0.51
       pick: 0.53
       fit: 0.6
     The Reaper:

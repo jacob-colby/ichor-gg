@@ -20,7 +20,7 @@ builds:
       win_rate: 0.43
   - name: Dagger of Frenzy
     pick_rate: 0.43
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.18
@@ -29,7 +29,7 @@ builds:
       pick_rate: 0.08
       win_rate: 0.64
   - name: Dominance
-    pick_rate: 0.23
+    pick_rate: 0.22
     win_rate: 0.55
     alternates:
     - name: The Executioner
@@ -42,18 +42,18 @@ builds:
     pick_rate: 0.31
     win_rate: 0.65
     alternates:
+    - name: The Executioner
+      pick_rate: 0.17
+      win_rate: 0.56
     - name: Riptalon
       pick_rate: 0.17
       win_rate: 0.57
-    - name: The Executioner
-      pick_rate: 0.17
-      win_rate: 0.55
   - name: Riptalon
     pick_rate: 0.19
     win_rate: 0.76
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.63
     - name: The Executioner
       pick_rate: 0.11
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.75
   source_url: https://smitebrain.com/gods/artemis/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5637065637065637
-  god_matches_won: 146
-  god_matches_played: 259
+  god_win_rate: 0.5653846153846154
+  god_matches_won: 147
+  god_matches_played: 260
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -467,8 +467,8 @@ builds:
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Golden Blade
   - Dagger of Frenzy
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -510,7 +510,7 @@ builds:
     Dagger of Frenzy:
       total: 0.52
       efficiency: 0.42
-      win: 0.6
+      win: 0.61
       pick: 0.59
       fit: 0.45
     Riptalon:
@@ -658,7 +658,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.55
-      pick: 0.36
+      pick: 0.34
       fit: 0.6
     The Reaper:
       total: 0.53
@@ -731,7 +731,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.55
-      pick: 0.36
+      pick: 0.34
       fit: 0.6
     Riptalon:
       total: 0.6
@@ -752,7 +752,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Tekko-Kagi
-    reason: community 76% win over 49 matches (vs 56% on this god), taking the model's
+    reason: community 76% win over 49 matches (vs 57% on this god), taking the model's
       weakest slot from Tekko-Kagi
   starter: *id001
 ---

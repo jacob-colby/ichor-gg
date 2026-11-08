@@ -16,8 +16,8 @@ builds:
       pick_rate: 0.24
       win_rate: 0.56
     - name: Devourer's Gauntlet
-      pick_rate: 0.15
-      win_rate: 0.56
+      pick_rate: 0.16
+      win_rate: 0.58
   - name: Soul Gem
     pick_rate: 0.14
     win_rate: 0.67
@@ -29,12 +29,12 @@ builds:
       pick_rate: 0.07
       win_rate: 0.6
   - name: Rod of Tahuti
-    pick_rate: 0.16
+    pick_rate: 0.15
     win_rate: 0.5
     alternates:
     - name: Riptalon
-      pick_rate: 0.12
-      win_rate: 0.68
+      pick_rate: 0.13
+      win_rate: 0.69
     - name: Shield of the Phoenix
       pick_rate: 0.1
       win_rate: 0.67
@@ -75,18 +75,18 @@ builds:
   - name: Blood-soaked Shroud
     pick_rate: 0.16
     win_rate: 0.79
-  - name: Pendulum of the Ages
+  - name: Hunter's Cowl
     pick_rate: 0.13
-    win_rate: 0.71
+    win_rate: 0.7
   source_url: https://smitebrain.com/gods/zeus/
   last_verified: '2026-11-08'
-  god_win_rate: 0.580952380952381
-  god_matches_won: 122
-  god_matches_played: 210
+  god_win_rate: 0.5829383886255924
+  god_matches_won: 123
+  god_matches_played: 211
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -144,7 +144,7 @@ builds:
       total: 0.6
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.5
     Obsidian Shard:
       total: 0.6
@@ -220,7 +220,7 @@ builds:
       total: 0.59
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.44
     Obsidian Shard:
       total: 0.58
@@ -290,10 +290,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Rod of Tahuti:
-      total: 0.59
+      total: 0.58
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.42
     Obsidian Shard:
       total: 0.58
@@ -367,7 +367,7 @@ builds:
       total: 0.57
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.3
     Amanita Charm:
       total: 0.63
@@ -441,7 +441,7 @@ builds:
       total: 0.61
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.6
     Obsidian Shard:
       total: 0.61
@@ -515,7 +515,7 @@ builds:
       total: 0.57
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.32
     Obsidian Shard:
       total: 0.57
@@ -588,7 +588,7 @@ builds:
       total: 0.56
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.27
     Obsidian Shard:
       total: 0.56
@@ -669,7 +669,7 @@ builds:
       total: 0.6
       efficiency: 0.82
       win: 0.5
-      pick: 0.25
+      pick: 0.23
       fit: 0.5
     Obsidian Shard:
       total: 0.6

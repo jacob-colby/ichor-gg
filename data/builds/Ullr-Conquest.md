@@ -10,7 +10,7 @@ builds:
   slot_order:
   - name: Transcendence
     pick_rate: 0.88
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.07
@@ -19,7 +19,7 @@ builds:
       pick_rate: 0.03
       win_rate: 0.67
   - name: Hydra's Lament
-    pick_rate: 0.66
+    pick_rate: 0.67
     win_rate: 0.54
     alternates:
     - name: Jotunn's Revenge
@@ -30,7 +30,7 @@ builds:
       win_rate: 0.66
   - name: Jotunn's Revenge
     pick_rate: 0.56
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.22
@@ -47,14 +47,14 @@ builds:
       win_rate: 0.62
     - name: Titan's Bane
       pick_rate: 0.09
-      win_rate: 0.57
+      win_rate: 0.55
   - name: Titan's Bane
     pick_rate: 0.28
     win_rate: 0.58
     alternates:
     - name: Heartseeker
       pick_rate: 0.19
-      win_rate: 0.7
+      win_rate: 0.68
     - name: The Crusher
       pick_rate: 0.08
       win_rate: 0.56
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/ullr/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5845272206303725
+  god_win_rate: 0.5828571428571429
   god_matches_won: 204
-  god_matches_played: 349
+  god_matches_played: 350
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -125,25 +125,25 @@ builds:
     Transcendence:
       total: 0.5
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.17
     Hydra's Lament:
       total: 0.54
       efficiency: 0.55
       win: 0.54
-      pick: 0.9
+      pick: 0.91
       fit: 0.37
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.42
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.58
     Heartseeker:
@@ -201,25 +201,25 @@ builds:
     Transcendence:
       total: 0.51
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.24
     Hydra's Lament:
       total: 0.54
       efficiency: 0.55
       win: 0.54
-      pick: 0.9
+      pick: 0.91
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.44
     Tyrfing:
       total: 0.52
       efficiency: 0.53
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.48
     Heartseeker:
@@ -276,25 +276,25 @@ builds:
     Rage:
       total: 0.49
       efficiency: 0.46
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.43
     Transcendence:
       total: 0.5
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.15
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.4
     Demon Blade:
-      total: 0.49
+      total: 0.48
       efficiency: 0.36
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.66
     Heartseeker:
@@ -306,7 +306,7 @@ builds:
     Deathbringer:
       total: 0.48
       efficiency: 0.44
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.43
   community_ordered:
@@ -347,21 +347,21 @@ builds:
     the Storm.'
   slot_scores:
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.13
     Hydra's Lament:
       total: 0.54
       efficiency: 0.55
       win: 0.54
-      pick: 0.9
+      pick: 0.91
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.58
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.46
     The Crusher:
@@ -394,21 +394,21 @@ builds:
   archetype: bruiser
   slot_order:
   - Berserker's Shield
+  - Transcendence
   - Jotunn's Revenge
-  - Kinetic Cuirass
   - Shield of the Phoenix
   - Heartseeker
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
   - Heartseeker
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Freya's Tears — physical protection
     swap_item: Freya's Tears
@@ -426,25 +426,25 @@ builds:
     Berserker's Shield:
       total: 0.57
       efficiency: 0.72
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.39
+    Transcendence:
+      total: 0.49
+      efficiency: 0.5
+      win: 0.57
+      pick: 0.88
+      fit: 0.12
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.28
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.58
-      pick: 0.0
-      fit: 0.43
     Shield of the Phoenix:
       total: 0.55
       efficiency: 0.57
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.59
     Heartseeker:
@@ -456,10 +456,11 @@ builds:
     Amanita Charm:
       total: 0.59
       efficiency: 0.68
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.63
   community_ordered:
+  - Transcendence
   - Jotunn's Revenge
   - Heartseeker
   starter: *id001
@@ -498,19 +499,19 @@ builds:
     Transcendence:
       total: 0.5
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.14
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.53
     The Reaper:
       total: 0.54
       efficiency: 0.57
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.52
     The Crusher:
@@ -571,27 +572,27 @@ builds:
     Bow, Pendulum Blade.'
   slot_scores:
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.12
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.33
     Tyrfing:
       total: 0.54
       efficiency: 0.53
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.61
     Riptalon:
-      total: 0.51
+      total: 0.5
       efficiency: 0.45
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.59
     Heartseeker:
@@ -603,7 +604,7 @@ builds:
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.49
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.51
   community_ordered:
@@ -646,25 +647,25 @@ builds:
     Transcendence:
       total: 0.49
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.08
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
       win: 0.54
-      pick: 0.9
+      pick: 0.91
       fit: 0.47
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.48
     Arondight:
       total: 0.5
       efficiency: 0.53
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.37
     Heartseeker:
@@ -721,37 +722,37 @@ builds:
     Transcendence:
       total: 0.5
       efficiency: 0.5
-      win: 0.58
+      win: 0.57
       pick: 0.88
       fit: 0.17
     Hydra's Lament:
       total: 0.54
       efficiency: 0.55
       win: 0.54
-      pick: 0.9
+      pick: 0.91
       fit: 0.37
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.55
+      win: 0.54
       pick: 0.87
       fit: 0.42
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.58
     The Reaper:
       total: 0.52
       efficiency: 0.57
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.41
     Tekko-Kagi:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.58
+      win: 0.57
       pick: 0.0
       fit: 0.56
   community_ordered:

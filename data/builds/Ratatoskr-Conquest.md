@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the Thickbark
   aspect_pick_rate: 0.42
-  aspect_win_rate: 0.65
+  aspect_win_rate: 0.64
   slot_order:
   - name: Briskberry Acorn
     pick_rate: 0.44
@@ -27,7 +27,7 @@ builds:
       win_rate: 0.64
     - name: Ashwhorl Acorn
       pick_rate: 0.12
-      win_rate: 0.69
+      win_rate: 0.68
   - name: Jotunn's Revenge
     pick_rate: 0.28
     win_rate: 0.6
@@ -37,7 +37,7 @@ builds:
       win_rate: 0.64
     - name: Briskberry Acorn
       pick_rate: 0.12
-      win_rate: 0.55
+      win_rate: 0.54
   - name: Heartseeker
     pick_rate: 0.14
     win_rate: 0.49
@@ -57,7 +57,7 @@ builds:
       win_rate: 0.63
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.78
+      win_rate: 0.76
   - name: Titan's Bane
     pick_rate: 0.07
     win_rate: 0.66
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/ratatoskr/
   last_verified: '2026-11-08'
-  god_win_rate: 0.604887983706721
+  god_win_rate: 0.6036585365853658
   god_matches_won: 297
-  god_matches_played: 491
+  god_matches_played: 492
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -373,9 +373,9 @@ builds:
       pick: 0.44
       fit: 0.44
     Freya's Tears:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
-      win: 0.78
+      win: 0.76
       pick: 0.17
       fit: 0.38
     Amanita Charm:
@@ -542,22 +542,22 @@ builds:
 - source: suggested
   archetype: cooldown
   slot_order:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Hydra's Lament
-  - Freya's Tears
   - Avatar's Parashu
   flex_slots:
   - Briskberry Acorn
-  - Freya's Tears
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Talisman of Purification — CC-immunity / cleanse
     swap_item: Talisman of Purification
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -571,6 +571,12 @@ builds:
     Transcendence, Runeforged Hammer, Dominance, Gladiator''s Shield, Shield Splitter,
     Eye of the Storm, Avenging Blade, Silverbranch Bow.'
   slot_scores:
+    Ashwhorl Acorn:
+      total: 0.56
+      efficiency: 0.68
+      win: 0.63
+      pick: 0.32
+      fit: 0.15
     Briskberry Acorn:
       total: 0.57
       efficiency: 0.73
@@ -595,12 +601,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.75
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.38
-      win: 0.78
-      pick: 0.17
-      fit: 0.5
     Avatar's Parashu:
       total: 0.57
       efficiency: 0.46
@@ -608,10 +608,10 @@ builds:
       pick: 0.22
       fit: 0.35
   community_ordered:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Freya's Tears
   - Avatar's Parashu
   starter: *id001
 - source: suggested

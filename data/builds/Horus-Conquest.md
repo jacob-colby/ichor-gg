@@ -86,7 +86,7 @@ builds:
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe

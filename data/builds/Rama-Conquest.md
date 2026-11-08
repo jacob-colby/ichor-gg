@@ -10,7 +10,7 @@ builds:
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.74
-    win_rate: 0.54
+    win_rate: 0.55
     alternates:
     - name: Tyrfing
       pick_rate: 0.19
@@ -26,10 +26,10 @@ builds:
       pick_rate: 0.14
       win_rate: 0.58
     - name: Tyrfing
-      pick_rate: 0.08
-      win_rate: 0.53
+      pick_rate: 0.09
+      win_rate: 0.55
   - name: Dominance
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.57
     alternates:
     - name: Riptalon
@@ -53,8 +53,8 @@ builds:
     win_rate: 0.66
     alternates:
     - name: Riptalon
-      pick_rate: 0.13
-      win_rate: 0.56
+      pick_rate: 0.14
+      win_rate: 0.57
     - name: The Executioner
       pick_rate: 0.12
       win_rate: 0.42
@@ -70,8 +70,8 @@ builds:
       win_rate: 0.64
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.45
-    win_rate: 0.61
+    pick_rate: 0.46
+    win_rate: 0.62
   - name: Gilded Arrow
     pick_rate: 0.24
     win_rate: 0.53
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.41
   source_url: https://smitebrain.com/gods/rama/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5364806866952789
-  god_matches_won: 125
-  god_matches_played: 233
+  god_win_rate: 0.5384615384615384
+  god_matches_won: 126
+  god_matches_played: 234
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -138,7 +138,7 @@ builds:
       total: 0.53
       efficiency: 0.47
       win: 0.57
-      pick: 0.53
+      pick: 0.51
       fit: 0.54
     The Reaper:
       total: 0.52
@@ -220,7 +220,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.57
-      pick: 0.53
+      pick: 0.51
       fit: 0.5
     Silverbranch Bow:
       total: 0.54
@@ -360,7 +360,7 @@ builds:
       total: 0.51
       efficiency: 0.47
       win: 0.57
-      pick: 0.53
+      pick: 0.51
       fit: 0.4
     The Reaper:
       total: 0.52
@@ -586,7 +586,7 @@ builds:
       total: 0.52
       efficiency: 0.47
       win: 0.57
-      pick: 0.53
+      pick: 0.51
       fit: 0.48
     Silverbranch Bow:
       total: 0.57

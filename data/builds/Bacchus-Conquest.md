@@ -24,7 +24,7 @@ builds:
     alternates:
     - name: Shogun's Ofuda
       pick_rate: 0.15
-      win_rate: 0.62
+      win_rate: 0.63
     - name: Stampede
       pick_rate: 0.05
       win_rate: 0.42
@@ -59,8 +59,8 @@ builds:
       pick_rate: 0.07
       win_rate: 0.56
   - name: Medal of Defense
-    pick_rate: 0.12
-    win_rate: 0.65
+    pick_rate: 0.13
+    win_rate: 0.66
     alternates:
     - name: Hussar's Wings
       pick_rate: 0.06
@@ -71,7 +71,7 @@ builds:
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.41
-    win_rate: 0.63
+    win_rate: 0.64
   - name: Leather Cowl
     pick_rate: 0.26
     win_rate: 0.62
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.4
   source_url: https://smitebrain.com/gods/bacchus/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5935727788279773
-  god_matches_won: 314
-  god_matches_played: 529
+  god_win_rate: 0.5943396226415094
+  god_matches_won: 315
+  god_matches_played: 530
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,7 +100,7 @@ builds:
   - Draconic Scale
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Freya's Tears
   - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
@@ -128,7 +128,7 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
@@ -150,15 +150,15 @@ builds:
       pick: 0.22
       fit: 0.55
     Draconic Scale:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.61
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.61
   community_ordered:
@@ -207,7 +207,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.3
     Berserker's Shield:
@@ -225,7 +225,7 @@ builds:
     Shield of the Phoenix:
       total: 0.6
       efficiency: 0.57
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.83
     Freya's Tears:
@@ -237,7 +237,7 @@ builds:
     Amanita Charm:
       total: 0.65
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.89
   community_ordered:
@@ -283,13 +283,13 @@ builds:
     Screeching Gargoyle:
       total: 0.56
       efficiency: 0.53
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.64
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.24
     Berserker's Shield:
@@ -307,13 +307,13 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.44
     Amanita Charm:
       total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.44
   community_ordered:
@@ -356,15 +356,15 @@ builds:
     Of Discord, Hide of the Nemean Lion, Helm of Darkness.'
   slot_scores:
     Golden Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.51
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.54
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.2
     Berserker's Shield:
@@ -380,15 +380,15 @@ builds:
       pick: 0.37
       fit: 0.47
     Tyrfing:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.53
     Amanita Charm:
       total: 0.57
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.37
   community_ordered:
@@ -432,9 +432,9 @@ builds:
     Discord, The Reaper, Hide of the Nemean Lion, Eye of Erebus.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.6
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.45
     Berserker's Shield:
@@ -446,7 +446,7 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
@@ -464,7 +464,7 @@ builds:
     Soul Gem:
       total: 0.57
       efficiency: 0.58
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.59
   community_ordered:
@@ -511,7 +511,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.21
     Berserker's Shield:
@@ -523,7 +523,7 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
@@ -535,13 +535,13 @@ builds:
     Shield Splitter:
       total: 0.55
       efficiency: 0.58
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.39
   community_ordered:
@@ -555,18 +555,18 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Freya's Tears
+  - Shield Splitter
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Freya's Tears
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -587,7 +587,7 @@ builds:
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.21
     Berserker's Shield:
@@ -599,7 +599,7 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
@@ -608,22 +608,21 @@ builds:
       win: 0.65
       pick: 0.37
       fit: 0.49
-    Freya's Tears:
+    Shield Splitter:
       total: 0.55
-      efficiency: 0.61
-      win: 0.6
-      pick: 0.22
-      fit: 0.35
+      efficiency: 0.58
+      win: 0.62
+      pick: 0.0
+      fit: 0.44
     Amanita Charm:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.39
   community_ordered:
   - Berserker's Shield
   - Kinetic Cuirass
-  - Freya's Tears
   starter: *id001
 - source: suggested
   archetype: model
@@ -664,7 +663,7 @@ builds:
     Genji's Guard:
       total: 0.58
       efficiency: 0.71
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
@@ -686,15 +685,15 @@ builds:
       pick: 0.22
       fit: 0.55
     Draconic Scale:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.61
       efficiency: 0.68
-      win: 0.61
+      win: 0.62
       pick: 0.0
       fit: 0.61
   community_ordered:

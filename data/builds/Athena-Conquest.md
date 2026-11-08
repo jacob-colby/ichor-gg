@@ -10,7 +10,7 @@ builds:
   slot_order:
   - name: Gauntlet of Thebes
     pick_rate: 0.35
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Stampede
       pick_rate: 0.14
@@ -40,7 +40,7 @@ builds:
       win_rate: 0.64
   - name: Shell of Rebuke
     pick_rate: 0.16
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: Freya's Tears
       pick_rate: 0.13
@@ -60,7 +60,7 @@ builds:
       win_rate: 0.66
   - name: Engraved Guard
     pick_rate: 0.06
-    win_rate: 0.64
+    win_rate: 0.67
     alternates:
     - name: Polynomicon
       pick_rate: 0.05
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.45
   source_url: https://smitebrain.com/gods/athena/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5725593667546174
-  god_matches_won: 217
-  god_matches_played: 379
+  god_win_rate: 0.5736842105263158
+  god_matches_won: 218
+  god_matches_played: 380
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe

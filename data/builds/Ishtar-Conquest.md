@@ -5,8 +5,8 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Passionate Storm
-  aspect_pick_rate: 0.29
-  aspect_win_rate: 0.62
+  aspect_pick_rate: 0.3
+  aspect_win_rate: 0.61
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.73
@@ -14,7 +14,7 @@ builds:
     alternates:
     - name: Tyrfing
       pick_rate: 0.16
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Avenging Blade
       pick_rate: 0.06
       win_rate: 0.5
@@ -26,11 +26,11 @@ builds:
       pick_rate: 0.13
       win_rate: 0.59
     - name: Odysseus' Bow
-      pick_rate: 0.08
-      win_rate: 0.57
+      pick_rate: 0.09
+      win_rate: 0.55
   - name: Dominance
-    pick_rate: 0.2
-    win_rate: 0.6
+    pick_rate: 0.21
+    win_rate: 0.59
     alternates:
     - name: The Executioner
       pick_rate: 0.2
@@ -46,8 +46,8 @@ builds:
       pick_rate: 0.17
       win_rate: 0.6
     - name: The Executioner
-      pick_rate: 0.13
-      win_rate: 0.44
+      pick_rate: 0.14
+      win_rate: 0.42
   - name: Deathbringer
     pick_rate: 0.15
     win_rate: 0.62
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.42
   source_url: https://smitebrain.com/gods/ishtar/
   last_verified: '2026-11-08'
-  god_win_rate: 0.592741935483871
+  god_win_rate: 0.5903614457831325
   god_matches_won: 147
-  god_matches_played: 248
+  god_matches_played: 249
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -137,14 +137,14 @@ builds:
     Tyrfing:
       total: 0.56
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.16
       fit: 0.78
     Dominance:
       total: 0.55
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.66
     Demon Blade:
       total: 0.53
@@ -170,12 +170,12 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Tyrfing
   - Hydra's Lament
   - Dominance
   - The Reaper
+  - Heartseeker
   flex_slots:
-  - Tyrfing
+  - Heartseeker
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -209,12 +209,6 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.25
-    Tyrfing:
-      total: 0.52
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.16
-      fit: 0.49
     Hydra's Lament:
       total: 0.53
       efficiency: 0.55
@@ -222,10 +216,10 @@ builds:
       pick: 0.0
       fit: 0.44
     Dominance:
-      total: 0.53
+      total: 0.52
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.5
     The Reaper:
       total: 0.52
@@ -233,8 +227,13 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.36
+    Heartseeker:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.6
+      pick: 0.0
+      fit: 0.56
   community_ordered:
-  - Tyrfing
   - Dominance
   starter: *id001
 - source: suggested
@@ -284,14 +283,14 @@ builds:
     Tyrfing:
       total: 0.55
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.16
       fit: 0.72
     Dominance:
       total: 0.54
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.6
     Demon Blade:
       total: 0.53
@@ -482,8 +481,8 @@ builds:
     this god: Golden Blade, Lernaean Bow, Qin''s Blade, Demon Blade, Rage, Hydra''s
     Lament, Tekko-Kagi, The Reaper, Sun Beam Bow, Bloodforge, Toxic Blade, Transcendence,
     Barbed Carver, Runeforged Hammer, Musashi''s Dual Swords, Jotunn''s Revenge, The
-    Crusher, Shield Splitter, Eye of the Storm, Odysseus'' Bow, Heartseeker, Vital
-    Amplifier, Avenging Blade.'
+    Crusher, Shield Splitter, Eye of the Storm, Heartseeker, Vital Amplifier, Odysseus''
+    Bow, Avenging Blade.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -504,16 +503,16 @@ builds:
       pick: 0.71
       fit: 0.5
     Tyrfing:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.16
       fit: 0.77
     Dominance:
-      total: 0.54
+      total: 0.53
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.56
     Qin's Blade:
       total: 0.51
@@ -567,7 +566,7 @@ builds:
     Tyrfing:
       total: 0.51
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.16
       fit: 0.47
     Hydra's Lament:
@@ -591,8 +590,8 @@ builds:
     Dominance:
       total: 0.51
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.4
   community_ordered:
   - Tyrfing
@@ -651,14 +650,14 @@ builds:
     Tyrfing:
       total: 0.56
       efficiency: 0.53
-      win: 0.55
+      win: 0.54
       pick: 0.16
       fit: 0.78
     Dominance:
       total: 0.55
       efficiency: 0.47
-      win: 0.6
-      pick: 0.31
+      win: 0.59
+      pick: 0.33
       fit: 0.66
     Demon Blade:
       total: 0.53

@@ -39,12 +39,12 @@ builds:
       pick_rate: 0.1
       win_rate: 0.44
   - name: Obsidian Shard
-    pick_rate: 0.19
+    pick_rate: 0.18
     win_rate: 0.62
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.21
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Blinking Abyss
       pick_rate: 0.05
       win_rate: 0.42
@@ -63,15 +63,15 @@ builds:
     win_rate: 1.0
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.17
-      win_rate: 0.9
+      pick_rate: 0.18
+      win_rate: 0.86
     - name: Helm of Darkness
       pick_rate: 0.06
       win_rate: 0.71
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.32
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Sands Of Time
     pick_rate: 0.21
     win_rate: 0.59
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.71
   source_url: https://smitebrain.com/gods/aphrodite/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5680933852140078
+  god_win_rate: 0.5658914728682171
   god_matches_won: 146
-  god_matches_played: 257
+  god_matches_played: 258
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -300,7 +300,7 @@ builds:
       total: 0.55
       efficiency: 0.53
       win: 0.62
-      pick: 0.32
+      pick: 0.3
       fit: 0.43
     Soul Gem:
       total: 0.57
@@ -447,7 +447,7 @@ builds:
       total: 0.56
       efficiency: 0.53
       win: 0.62
-      pick: 0.32
+      pick: 0.3
       fit: 0.55
     Soul Gem:
       total: 0.58
@@ -741,7 +741,7 @@ builds:
       total: 0.54
       efficiency: 0.53
       win: 0.62
-      pick: 0.32
+      pick: 0.3
       fit: 0.41
     Amanita Charm:
       total: 0.56

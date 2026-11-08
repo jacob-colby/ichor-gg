@@ -9,18 +9,18 @@ builds:
   aspect_win_rate: 0.33
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.53
+    pick_rate: 0.52
     win_rate: 0.56
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.16
       win_rate: 0.63
     - name: Shogun's Ofuda
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.31
   - name: Berserker's Shield
-    pick_rate: 0.31
-    win_rate: 0.52
+    pick_rate: 0.32
+    win_rate: 0.51
     alternates:
     - name: Shogun's Ofuda
       pick_rate: 0.16
@@ -44,9 +44,9 @@ builds:
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.26
-      win_rate: 0.5
+      win_rate: 0.49
     - name: Shifter's Shield
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.79
   - name: Hussar's Wings
     pick_rate: 0.09
@@ -59,19 +59,19 @@ builds:
       pick_rate: 0.09
       win_rate: 0.79
   - name: Medal of Defense
-    pick_rate: 0.07
+    pick_rate: 0.06
     win_rate: 0.29
     alternates:
     - name: Hussar's Wings
-      pick_rate: 0.09
-      win_rate: 0.6
+      pick_rate: 0.1
+      win_rate: 0.55
     - name: Kinetic Cuirass
       pick_rate: 0.07
       win_rate: 0.75
   community_starters:
   - name: Death's Embrace
     pick_rate: 0.36
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Hunter's Cowl
     pick_rate: 0.31
     win_rate: 0.57
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.53
   source_url: https://smitebrain.com/gods/bellona/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5549132947976878
+  god_win_rate: 0.5517241379310345
   god_matches_won: 96
-  god_matches_played: 173
+  god_matches_played: 174
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -116,12 +116,12 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Genji''s Guard, Shield Splitter, Freya''s Tears, Jotunn''s
-    Revenge, Draconic Scale, Shield of the Phoenix, Breastplate of Valor, Runeforged
-    Hammer, Erosion, Oni Hunter''s Garb, Eye of Providence, Hydra''s Lament, The Reaper,
-    Midgardian Mail, Stone of Binding, Screeching Gargoyle, Leviathan''s Hide, Magi''s
-    Cloak, Mantle Of Discord, Hide of the Nemean Lion, Wyrmskin Hide, Tyrfing, Avenging
-    Blade, Ancile, Arondight, The Crusher.'
+    this god: Shifter''s Shield, Amanita Charm, Genji''s Guard, Shield Splitter, Freya''s
+    Tears, Jotunn''s Revenge, Draconic Scale, Shield of the Phoenix, Breastplate of
+    Valor, Runeforged Hammer, Erosion, Oni Hunter''s Garb, Eye of Providence, Hydra''s
+    Lament, The Reaper, Midgardian Mail, Stone of Binding, Screeching Gargoyle, Leviathan''s
+    Hide, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion, Wyrmskin Hide,
+    Tyrfing, Avenging Blade, Ancile, Arondight, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.58
@@ -139,7 +139,7 @@ builds:
       total: 0.62
       efficiency: 0.5
       win: 0.79
-      pick: 0.15
+      pick: 0.13
       fit: 0.54
     Kinetic Cuirass:
       total: 0.6
@@ -192,12 +192,13 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, The Reaper, Genji''s Guard, Jotunn''s
-    Revenge, Shield Splitter, Phoenix Feather, Freya''s Tears, Yogi''s Necklace, Runeforged
-    Hammer, Draconic Scale, Breastplate of Valor, Chandra''s Grace, Oni Hunter''s
-    Garb, Erosion, Hydra''s Lament, Eye of Providence, Bloodforge, Midgardian Mail,
-    Regrowth Striders, Leviathan''s Hide, Avenging Blade, Glorious Pridwen, Wyrmskin
-    Hide, Hide of the Nemean Lion, Screeching Gargoyle, Tyrfing.'
+    this god: Amanita Charm, Shifter''s Shield, Shield of the Phoenix, The Reaper,
+    Genji''s Guard, Jotunn''s Revenge, Shield Splitter, Phoenix Feather, Freya''s
+    Tears, Yogi''s Necklace, Runeforged Hammer, Draconic Scale, Breastplate of Valor,
+    Chandra''s Grace, Oni Hunter''s Garb, Erosion, Hydra''s Lament, Eye of Providence,
+    Bloodforge, Midgardian Mail, Regrowth Striders, Leviathan''s Hide, Avenging Blade,
+    Glorious Pridwen, Wyrmskin Hide, Hide of the Nemean Lion, Screeching Gargoyle,
+    Tyrfing.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -212,10 +213,10 @@ builds:
       pick: 0.0
       fit: 0.76
     Shifter's Shield:
-      total: 0.62
+      total: 0.61
       efficiency: 0.5
       win: 0.79
-      pick: 0.15
+      pick: 0.13
       fit: 0.52
     Kinetic Cuirass:
       total: 0.6
@@ -266,12 +267,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Jotunn''s Revenge, Amanita Charm, Genji''s Guard, Screeching Gargoyle,
-    The Reaper, Stone of Binding, Shield Splitter, Freya''s Tears, Avenging Blade,
-    Void Stone, The Crusher, Void Shield, Heartseeker, Breastplate of Valor, Titan''s
-    Bane, Shield of the Phoenix, Runeforged Hammer, Draconic Scale, Oni Hunter''s
-    Garb, Hydra''s Lament, Erosion, Eye of Providence, Midgardian Mail, Leviathan''s
-    Hide, Avatar''s Parashu, Magi''s Cloak, Mantle Of Discord.'
+    for this god: Shifter''s Shield, Jotunn''s Revenge, Amanita Charm, Genji''s Guard,
+    Screeching Gargoyle, The Reaper, Stone of Binding, Shield Splitter, Freya''s Tears,
+    Avenging Blade, Void Stone, The Crusher, Void Shield, Heartseeker, Breastplate
+    of Valor, Titan''s Bane, Shield of the Phoenix, Runeforged Hammer, Draconic Scale,
+    Oni Hunter''s Garb, Hydra''s Lament, Erosion, Eye of Providence, Midgardian Mail,
+    Leviathan''s Hide, Avatar''s Parashu, Magi''s Cloak, Mantle Of Discord.'
   slot_scores:
     Screeching Gargoyle:
       total: 0.56
@@ -301,7 +302,7 @@ builds:
       total: 0.6
       efficiency: 0.5
       win: 0.79
-      pick: 0.15
+      pick: 0.13
       fit: 0.4
     Amanita Charm:
       total: 0.58
@@ -339,12 +340,12 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Genji''s Guard, Tyrfing, Freya''s Tears, Jotunn''s Revenge,
-    Shield Splitter, Breastplate of Valor, Shield of the Phoenix, Oni Hunter''s Garb,
-    Draconic Scale, Runeforged Hammer, Pharaoh''s Curse, Erosion, Eye of Providence,
-    Hydra''s Lament, Toxic Blade, Screeching Gargoyle, Midgardian Mail, The Reaper,
-    Stone of Binding, Lernaean Bow, Dominance, Leviathan''s Hide, Silverbranch Bow,
-    Magi''s Cloak.'
+    this god: Shifter''s Shield, Amanita Charm, Genji''s Guard, Tyrfing, Freya''s
+    Tears, Jotunn''s Revenge, Shield Splitter, Breastplate of Valor, Shield of the
+    Phoenix, Oni Hunter''s Garb, Draconic Scale, Runeforged Hammer, Pharaoh''s Curse,
+    Erosion, Eye of Providence, Hydra''s Lament, Toxic Blade, Screeching Gargoyle,
+    Midgardian Mail, The Reaper, Stone of Binding, Lernaean Bow, Dominance, Leviathan''s
+    Hide, Silverbranch Bow, Magi''s Cloak.'
   slot_scores:
     Golden Blade:
       total: 0.58
@@ -355,8 +356,8 @@ builds:
     Berserker's Shield:
       total: 0.57
       efficiency: 0.72
-      win: 0.52
-      pick: 0.42
+      win: 0.51
+      pick: 0.44
       fit: 0.45
     Tyrfing:
       total: 0.55
@@ -374,7 +375,7 @@ builds:
       total: 0.59
       efficiency: 0.5
       win: 0.79
-      pick: 0.15
+      pick: 0.13
       fit: 0.38
     Amanita Charm:
       total: 0.58
@@ -414,13 +415,13 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, Freya''s Tears, Amanita
-    Charm, Jotunn''s Revenge, Breastplate of Valor, Shield of the Phoenix, Screeching
-    Gargoyle, Hydra''s Lament, Shield Splitter, Gladiator''s Shield, Draconic Scale,
-    Oni Hunter''s Garb, Prophetic Cloak, Arondight, Erosion, Eye of Providence, Runeforged
-    Hammer, Midgardian Mail, Stone of Binding, Chandra''s Grace, Leviathan''s Hide,
-    Regrowth Striders, The Reaper, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean
-    Lion, Eye of Erebus.'
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Shifter''s Shield,
+    Freya''s Tears, Amanita Charm, Jotunn''s Revenge, Breastplate of Valor, Shield
+    of the Phoenix, Screeching Gargoyle, Hydra''s Lament, Shield Splitter, Gladiator''s
+    Shield, Draconic Scale, Oni Hunter''s Garb, Prophetic Cloak, Arondight, Erosion,
+    Eye of Providence, Runeforged Hammer, Midgardian Mail, Stone of Binding, Chandra''s
+    Grace, Leviathan''s Hide, Regrowth Striders, The Reaper, Magi''s Cloak, Mantle
+    Of Discord, Hide of the Nemean Lion, Eye of Erebus.'
   slot_scores:
     Genji's Guard:
       total: 0.6
@@ -450,7 +451,7 @@ builds:
       total: 0.6
       efficiency: 0.5
       win: 0.79
-      pick: 0.15
+      pick: 0.13
       fit: 0.41
     Amanita Charm:
       total: 0.58
@@ -490,10 +491,10 @@ builds:
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Genji''s Guard, Shield Splitter, Freya''s
     Tears, Jotunn''s Revenge, Draconic Scale, Shield of the Phoenix, Breastplate of
-    Valor, Runeforged Hammer, Erosion, Oni Hunter''s Garb, Eye of Providence, Hydra''s
-    Lament, The Reaper, Midgardian Mail, Stone of Binding, Screeching Gargoyle, Leviathan''s
-    Hide, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion, Wyrmskin Hide,
-    Tyrfing, Avenging Blade, Ancile, Arondight, The Crusher.'
+    Valor, Runeforged Hammer, Erosion, Oni Hunter''s Garb, Eye of Providence, Shifter''s
+    Shield, Hydra''s Lament, The Reaper, Midgardian Mail, Stone of Binding, Screeching
+    Gargoyle, Leviathan''s Hide, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean
+    Lion, Wyrmskin Hide, Tyrfing, Avenging Blade, Ancile, Arondight, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.58

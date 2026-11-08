@@ -34,7 +34,7 @@ builds:
     alternates:
     - name: Nimble Ring
       pick_rate: 0.23
-      win_rate: 0.4
+      win_rate: 0.41
     - name: Polynomicon
       pick_rate: 0.11
       win_rate: 0.55
@@ -43,8 +43,8 @@ builds:
     win_rate: 0.6
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.23
-      win_rate: 0.35
+      pick_rate: 0.24
+      win_rate: 0.36
     - name: Obsidian Shard
       pick_rate: 0.06
       win_rate: 0.55
@@ -53,24 +53,24 @@ builds:
     win_rate: 0.48
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.13
-      win_rate: 0.43
+      pick_rate: 0.14
+      win_rate: 0.45
     - name: Nimble Ring
       pick_rate: 0.09
       win_rate: 0.27
   - name: Blinking Abyss
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.62
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.11
-      win_rate: 0.36
+      pick_rate: 0.12
+      win_rate: 0.42
     - name: Killing Stone
       pick_rate: 0.1
       win_rate: 0.6
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.48
+    pick_rate: 0.49
     win_rate: 0.53
   - name: Sands Of Time
     pick_rate: 0.21
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.36
   source_url: https://smitebrain.com/gods/chronos/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5208333333333334
-  god_matches_won: 100
-  god_matches_played: 192
+  god_win_rate: 0.5233160621761658
+  god_matches_won: 101
+  god_matches_played: 193
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem

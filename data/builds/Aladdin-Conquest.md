@@ -33,18 +33,18 @@ builds:
     win_rate: 0.76
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.61
     - name: Book of Thoth
-      pick_rate: 0.14
-      win_rate: 0.52
+      pick_rate: 0.15
+      win_rate: 0.53
   - name: Rod of Tahuti
     pick_rate: 0.21
     win_rate: 0.62
     alternates:
     - name: Polynomicon
-      pick_rate: 0.13
-      win_rate: 0.5
+      pick_rate: 0.14
+      win_rate: 0.52
     - name: Soul Gem
       pick_rate: 0.11
       win_rate: 0.79
@@ -53,17 +53,17 @@ builds:
     win_rate: 0.64
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.33
+      pick_rate: 0.34
       win_rate: 0.68
     - name: Obsidian Shard
       pick_rate: 0.13
       win_rate: 0.69
   - name: Obsidian Shard
-    pick_rate: 0.2
-    win_rate: 0.72
+    pick_rate: 0.21
+    win_rate: 0.73
     alternates:
     - name: Evil Eye
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.69
     - name: Heartseeker
       pick_rate: 0.06
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.56
   source_url: https://smitebrain.com/gods/aladdin/
   last_verified: '2026-11-08'
-  god_win_rate: 0.6228813559322034
-  god_matches_won: 147
-  god_matches_played: 236
+  god_win_rate: 0.6244725738396625
+  god_matches_won: 148
+  god_matches_played: 237
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -149,10 +149,10 @@ builds:
       pick: 0.35
       fit: 0.42
     Obsidian Shard:
-      total: 0.62
+      total: 0.63
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.52
     Soul Gem:
       total: 0.66
@@ -230,8 +230,8 @@ builds:
     Obsidian Shard:
       total: 0.63
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.57
     Soul Gem:
       total: 0.66
@@ -305,10 +305,10 @@ builds:
       pick: 0.35
       fit: 0.56
     Obsidian Shard:
-      total: 0.64
+      total: 0.65
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.66
     Soul Gem:
       total: 0.68
@@ -334,8 +334,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Obsidian Shard
+  - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -386,8 +386,8 @@ builds:
     Obsidian Shard:
       total: 0.59
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.31
     Soul Gem:
       total: 0.66
@@ -462,8 +462,8 @@ builds:
     Obsidian Shard:
       total: 0.65
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.7
     Soul Gem:
       total: 0.68
@@ -614,10 +614,10 @@ builds:
       pick: 0.35
       fit: 0.35
     Obsidian Shard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.45
     Soul Gem:
       total: 0.69
@@ -693,8 +693,8 @@ builds:
     Obsidian Shard:
       total: 0.61
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.43
     Soul Gem:
       total: 0.63
@@ -768,10 +768,10 @@ builds:
       pick: 0.35
       fit: 0.56
     Obsidian Shard:
-      total: 0.64
+      total: 0.65
       efficiency: 0.53
-      win: 0.72
-      pick: 0.62
+      win: 0.73
+      pick: 0.65
       fit: 0.66
     Soul Gem:
       total: 0.67
@@ -822,10 +822,10 @@ builds:
     Conch, Golden Blade, Soul Reaver, Lernaean Bow.'
   slot_scores:
     Book of Thoth:
-      total: 0.46
+      total: 0.43
       efficiency: 0.48
-      win: 0.59
-      pick: 0.22
+      win: 0.53
+      pick: 0.23
       fit: 0.1
     Jotunn's Revenge:
       total: 0.64

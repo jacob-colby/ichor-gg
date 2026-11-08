@@ -29,7 +29,7 @@ builds:
       pick_rate: 0.06
       win_rate: 0.62
   - name: Deathbringer
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.45
     alternates:
     - name: Heartseeker
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.38
   - name: Bluestone Brooch
     pick_rate: 0.11
-    win_rate: 0.61
+    win_rate: 0.62
   source_url: https://smitebrain.com/gods/ne-zha/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5089285714285714
-  god_matches_won: 171
-  god_matches_played: 336
+  god_win_rate: 0.5103857566765578
+  god_matches_won: 172
+  god_matches_played: 337
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear

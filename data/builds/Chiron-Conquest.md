@@ -34,7 +34,7 @@ builds:
     alternates:
     - name: Heartseeker
       pick_rate: 0.17
-      win_rate: 0.57
+      win_rate: 0.58
     - name: Avatar's Parashu
       pick_rate: 0.13
       win_rate: 0.59
@@ -47,7 +47,7 @@ builds:
       win_rate: 0.56
     - name: Avatar's Parashu
       pick_rate: 0.11
-      win_rate: 0.48
+      win_rate: 0.5
   - name: Titan's Bane
     pick_rate: 0.17
     win_rate: 0.68
@@ -55,16 +55,16 @@ builds:
     - name: Heartseeker
       pick_rate: 0.12
       win_rate: 0.45
-    - name: Avatar's Parashu
+    - name: The Crusher
       pick_rate: 0.1
-      win_rate: 0.72
+      win_rate: 0.68
   - name: Skeggox
     pick_rate: 0.14
     win_rate: 0.43
     alternates:
     - name: Titan's Bane
-      pick_rate: 0.11
-      win_rate: 0.61
+      pick_rate: 0.12
+      win_rate: 0.63
     - name: Avatar's Parashu
       pick_rate: 0.1
       win_rate: 0.69
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.49
   source_url: https://smitebrain.com/gods/chiron/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5492957746478874
-  god_matches_won: 156
-  god_matches_played: 284
+  god_win_rate: 0.5508771929824562
+  god_matches_won: 157
+  god_matches_played: 285
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
@@ -247,8 +247,8 @@ builds:
   - Rage
   - Jotunn's Revenge
   - Demon Blade
-  - Avatar's Parashu
   - Deathbringer
+  - Avatar's Parashu
   - Titan's Bane
   flex_slots:
   - Demon Blade
@@ -291,18 +291,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.64
-    Avatar's Parashu:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.69
-      pick: 0.31
-      fit: 0.32
     Deathbringer:
       total: 0.47
       efficiency: 0.44
       win: 0.56
       pick: 0.0
       fit: 0.42
+    Avatar's Parashu:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.69
+      pick: 0.31
+      fit: 0.32
     Titan's Bane:
       total: 0.55
       efficiency: 0.48
@@ -912,8 +912,8 @@ builds:
   - Rage
   - Jotunn's Revenge
   - Demon Blade
-  - Avatar's Parashu
   - Deathbringer
+  - Avatar's Parashu
   - Titan's Bane
   flex_slots:
   - Demon Blade
@@ -956,18 +956,18 @@ builds:
       win: 0.56
       pick: 0.0
       fit: 0.64
-    Avatar's Parashu:
-      total: 0.53
-      efficiency: 0.46
-      win: 0.69
-      pick: 0.31
-      fit: 0.32
     Deathbringer:
       total: 0.47
       efficiency: 0.44
       win: 0.56
       pick: 0.0
       fit: 0.42
+    Avatar's Parashu:
+      total: 0.53
+      efficiency: 0.46
+      win: 0.69
+      pick: 0.31
+      fit: 0.32
     Titan's Bane:
       total: 0.55
       efficiency: 0.48

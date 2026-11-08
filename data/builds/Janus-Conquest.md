@@ -33,7 +33,7 @@ builds:
     win_rate: 0.53
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.21
+      pick_rate: 0.2
       win_rate: 0.48
     - name: Spear of Desolation
       pick_rate: 0.18
@@ -50,7 +50,7 @@ builds:
       win_rate: 0.45
   - name: Obsidian Shard
     pick_rate: 0.36
-    win_rate: 0.62
+    win_rate: 0.61
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.14
@@ -64,7 +64,7 @@ builds:
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.12
-      win_rate: 0.66
+      win_rate: 0.64
     - name: Killing Stone
       pick_rate: 0.11
       win_rate: 0.57
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.48
   - name: Pendulum of the Ages
     pick_rate: 0.1
-    win_rate: 0.53
+    win_rate: 0.52
   source_url: https://smitebrain.com/gods/janus/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5357873210633947
+  god_win_rate: 0.5346938775510204
   god_matches_won: 262
-  god_matches_played: 489
+  god_matches_played: 490
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -141,9 +141,9 @@ builds:
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
-      total: 0.64
+      total: 0.63
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.88
     Lotus Sickle:
@@ -220,7 +220,7 @@ builds:
     Obsidian Shard:
       total: 0.59
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.57
     Dreamer's Idol:
@@ -295,7 +295,7 @@ builds:
     Obsidian Shard:
       total: 0.6
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.66
     Lotus Sickle:
@@ -327,7 +327,7 @@ builds:
   - Amanita Charm
   - Dreamer's Idol
   flex_slots:
-  - Soul Gem
+  - Obsidian Shard
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -369,9 +369,9 @@ builds:
       pick: 0.37
       fit: 0.88
     Obsidian Shard:
-      total: 0.58
+      total: 0.57
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.47
     Amanita Charm:
@@ -449,9 +449,9 @@ builds:
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
-      total: 0.65
+      total: 0.64
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.95
     Dreamer's Idol:
@@ -526,7 +526,7 @@ builds:
     Obsidian Shard:
       total: 0.56
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.4
     Dreamer's Idol:
@@ -594,7 +594,7 @@ builds:
     Obsidian Shard:
       total: 0.57
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.45
     Lotus Sickle:
@@ -673,9 +673,9 @@ builds:
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
-      total: 0.64
+      total: 0.63
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.88
     Lotus Sickle:
@@ -742,9 +742,9 @@ builds:
       pick: 0.37
       fit: 1.0
     Obsidian Shard:
-      total: 0.64
+      total: 0.63
       efficiency: 0.53
-      win: 0.62
+      win: 0.61
       pick: 0.78
       fit: 0.88
     Lotus Sickle:
@@ -768,7 +768,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Spear of the Magus
-    reason: community 69% win over 83 matches (vs 54% on this god), taking the model's
+    reason: community 69% win over 83 matches (vs 53% on this god), taking the model's
       weakest slot from Spear of the Magus
   starter: *id001
 ---

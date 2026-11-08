@@ -401,12 +401,12 @@ builds:
   - Golden Blade
   - Toxic Blade
   - Berserker's Shield
-  - Kinetic Cuirass
   - Devourer's Gauntlet
   - Runeforged Hammer
+  - Freya's Tears
   flex_slots:
-  - Runeforged Hammer
   - Devourer's Gauntlet
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -441,12 +441,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
     Devourer's Gauntlet:
       total: 0.5
       efficiency: 0.4
@@ -459,11 +453,21 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.51
+    Freya's Tears:
+      total: 0.43
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.26
   swaps:
-  - added: Devourer's Gauntlet
+  - added: Freya's Tears
     removed: Tyrfing
-    reason: Conquest community 66% win over 97 matches (vs 55% on this god), taking
+    reason: Conquest community 70% win over 51 matches (vs 55% on this god), taking
       the model's weakest slot from Tyrfing
+  - added: Devourer's Gauntlet
+    removed: Kinetic Cuirass
+    reason: Conquest community 66% win over 95 matches (vs 55% on this god), taking
+      the model's weakest slot from Kinetic Cuirass
   borrowed_from: Conquest
   starter: *id001
 ---

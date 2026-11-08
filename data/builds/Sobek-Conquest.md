@@ -9,8 +9,8 @@ builds:
   aspect_win_rate: 0.4
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.5
-    win_rate: 0.54
+    pick_rate: 0.51
+    win_rate: 0.53
     alternates:
     - name: Stampede
       pick_rate: 0.22
@@ -20,13 +20,13 @@ builds:
       win_rate: 0.73
   - name: Stampede
     pick_rate: 0.23
-    win_rate: 0.42
+    win_rate: 0.41
     alternates:
     - name: Genji's Guard
       pick_rate: 0.16
       win_rate: 0.4
     - name: Freya's Tears
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.68
   - name: Shell of Rebuke
     pick_rate: 0.17
@@ -44,7 +44,7 @@ builds:
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.16
-      win_rate: 0.48
+      win_rate: 0.46
     - name: Genji's Guard
       pick_rate: 0.06
       win_rate: 0.56
@@ -62,31 +62,31 @@ builds:
     pick_rate: 0.07
     win_rate: 0.56
     alternates:
+    - name: Medal of Defense
+      pick_rate: 0.06
+      win_rate: 0.38
     - name: Shell of Rebuke
       pick_rate: 0.05
       win_rate: 0.57
-    - name: Medal of Defense
-      pick_rate: 0.05
-      win_rate: 0.43
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.37
     win_rate: 0.49
   - name: Bluestone Brooch
     pick_rate: 0.24
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Selflessness
     pick_rate: 0.14
     win_rate: 0.49
   source_url: https://smitebrain.com/gods/sobek/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5413533834586466
+  god_win_rate: 0.5393258426966292
   god_matches_won: 144
-  god_matches_played: 266
+  god_matches_played: 267
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -225,7 +225,7 @@ builds:
       pick: 0.27
       fit: 0.51
     Draconic Scale:
-      total: 0.53
+      total: 0.52
       efficiency: 0.53
       win: 0.55
       pick: 0.0
@@ -362,7 +362,7 @@ builds:
       pick: 0.13
       fit: 0.2
     Bracer of The Abyss:
-      total: 0.47
+      total: 0.46
       efficiency: 0.52
       win: 0.55
       pick: 0.0
@@ -425,7 +425,7 @@ builds:
     Stone of Binding, Leviathan''s Hide, Regrowth Striders.'
   slot_scores:
     Breastplate of Valor:
-      total: 0.54
+      total: 0.53
       efficiency: 0.63
       win: 0.55
       pick: 0.0

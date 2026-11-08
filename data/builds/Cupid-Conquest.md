@@ -16,11 +16,11 @@ builds:
       pick_rate: 0.24
       win_rate: 0.58
     - name: Avenging Blade
-      pick_rate: 0.02
-      win_rate: 0.2
+      pick_rate: 0.03
+      win_rate: 0.33
   - name: Dagger of Frenzy
-    pick_rate: 0.46
-    win_rate: 0.58
+    pick_rate: 0.47
+    win_rate: 0.59
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.13
@@ -29,12 +29,12 @@ builds:
       pick_rate: 0.11
       win_rate: 0.54
   - name: The Executioner
-    pick_rate: 0.2
-    win_rate: 0.57
+    pick_rate: 0.21
+    win_rate: 0.58
     alternates:
     - name: Dominance
       pick_rate: 0.2
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Odysseus' Bow
       pick_rate: 0.17
       win_rate: 0.55
@@ -47,14 +47,14 @@ builds:
       win_rate: 0.52
     - name: Riptalon
       pick_rate: 0.2
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Riptalon
     pick_rate: 0.14
     win_rate: 0.55
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.22
-      win_rate: 0.62
+      pick_rate: 0.23
+      win_rate: 0.64
     - name: The Executioner
       pick_rate: 0.13
       win_rate: 0.69
@@ -73,20 +73,20 @@ builds:
     pick_rate: 0.31
     win_rate: 0.62
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.7
+    pick_rate: 0.28
+    win_rate: 0.71
   - name: Leather Cowl
     pick_rate: 0.13
     win_rate: 0.47
   source_url: https://smitebrain.com/gods/cupid/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5555555555555556
-  god_matches_won: 130
-  god_matches_played: 234
+  god_win_rate: 0.559322033898305
+  god_matches_won: 132
+  god_matches_played: 236
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow

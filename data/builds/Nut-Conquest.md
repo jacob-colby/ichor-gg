@@ -30,7 +30,7 @@ builds:
       win_rate: 0.6
   - name: Barbed Carver
     pick_rate: 0.36
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: The Executioner
       pick_rate: 0.1
@@ -49,17 +49,17 @@ builds:
       pick_rate: 0.12
       win_rate: 0.49
   - name: Riptalon
-    pick_rate: 0.11
-    win_rate: 0.44
+    pick_rate: 0.12
+    win_rate: 0.46
     alternates:
     - name: The Executioner
-      pick_rate: 0.16
+      pick_rate: 0.15
       win_rate: 0.57
     - name: Silverbranch Bow
       pick_rate: 0.11
       win_rate: 0.59
   - name: Hunter's Bow
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.5
     alternates:
     - name: Riptalon
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.61
   source_url: https://smitebrain.com/gods/nut/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5179640718562875
-  god_matches_won: 173
-  god_matches_played: 334
+  god_win_rate: 0.5194029850746269
+  god_matches_won: 174
+  god_matches_played: 335
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -278,7 +278,7 @@ builds:
     Cosmic Horror, Soul Reaver, Qin''s Blade, Totem of Death.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
       win: 0.54
       pick: 0.0
@@ -323,14 +323,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Genji's Guard
-  - Tyrfing
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
   - Amanita Charm
   - Soul Gem
   flex_slots:
   - Genji's Guard
-  - Tyrfing
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -360,18 +360,18 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.17
-    Tyrfing:
-      total: 0.51
-      efficiency: 0.53
-      win: 0.52
-      pick: 0.57
-      fit: 0.44
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
       win: 0.54
       pick: 0.0
       fit: 0.4
+    Jotunn's Revenge:
+      total: 0.52
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.0
+      fit: 0.3
     Kinetic Cuirass:
       total: 0.52
       efficiency: 0.61
@@ -379,19 +379,17 @@ builds:
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
       win: 0.54
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
       win: 0.54
       pick: 0.0
       fit: 0.79
-  community_ordered:
-  - Tyrfing
   starter: *id001
 - source: suggested
   archetype: anti-tank
@@ -504,7 +502,7 @@ builds:
     The Cosmic Horror, Avatar''s Parashu, Berserker''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
       win: 0.54
       pick: 0.0
@@ -555,8 +553,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Silverbranch Bow
   - Hydra's Lament
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -593,7 +591,7 @@ builds:
       pick: 0.57
       fit: 0.5
     Hydra's Lament:
-      total: 0.51
+      total: 0.52
       efficiency: 0.55
       win: 0.54
       pick: 0.0
@@ -762,7 +760,7 @@ builds:
       pick: 0.2
       fit: 0.38
     Soul Gem:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
       win: 0.54
       pick: 0.0

@@ -33,14 +33,14 @@ builds:
     win_rate: 0.58
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.22
-      win_rate: 0.53
+      pick_rate: 0.23
+      win_rate: 0.54
     - name: Jotunn's Revenge
       pick_rate: 0.1
       win_rate: 0.38
   - name: Heartseeker
     pick_rate: 0.42
-    win_rate: 0.51
+    win_rate: 0.52
     alternates:
     - name: The Crusher
       pick_rate: 0.07
@@ -50,7 +50,7 @@ builds:
       win_rate: 0.79
   - name: Titan's Bane
     pick_rate: 0.18
-    win_rate: 0.67
+    win_rate: 0.68
     alternates:
     - name: Heartseeker
       pick_rate: 0.15
@@ -59,7 +59,7 @@ builds:
       pick_rate: 0.08
       win_rate: 0.5
   - name: Skeggox
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.45
     alternates:
     - name: Titan's Bane
@@ -70,7 +70,7 @@ builds:
       win_rate: 0.68
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.51
+    pick_rate: 0.52
     win_rate: 0.6
   - name: Bumba's Cudgel
     pick_rate: 0.26
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/tsukuyomi/
   last_verified: '2026-11-08'
-  god_win_rate: 0.5256064690026954
-  god_matches_won: 195
-  god_matches_played: 371
+  god_win_rate: 0.5268817204301075
+  god_matches_won: 196
+  god_matches_played: 372
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Bumba's Golden Dagger
     upgrade: Bumba's Spear
@@ -95,13 +95,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Hydra's Lament
   - Death Metal
   - The Crusher
+  - Heartseeker
   - Titan's Bane
   flex_slots:
   - Tyrfing
-  - Hydra's Lament
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -136,12 +136,6 @@ builds:
       win: 0.54
       pick: 0.0
       fit: 0.69
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.58
-      pick: 0.19
-      fit: 0.39
     Death Metal:
       total: 0.54
       efficiency: 0.63
@@ -154,16 +148,22 @@ builds:
       win: 0.72
       pick: 0.12
       fit: 0.54
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.52
+      pick: 0.7
+      fit: 0.64
     Titan's Bane:
       total: 0.57
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.54
   community_ordered:
   - Jotunn's Revenge
-  - Hydra's Lament
   - The Crusher
+  - Heartseeker
   - Titan's Bane
   starter: &id001
     base: Bumba's Golden Dagger
@@ -227,9 +227,9 @@ builds:
       pick: 0.12
       fit: 0.44
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.44
     Rod of Tahuti:
@@ -303,9 +303,9 @@ builds:
       pick: 0.12
       fit: 0.5
     Titan's Bane:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.5
     Rod of Tahuti:
@@ -379,9 +379,9 @@ builds:
       pick: 0.12
       fit: 0.37
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.37
     Amanita Charm:
@@ -456,13 +456,13 @@ builds:
     Heartseeker:
       total: 0.54
       efficiency: 0.45
-      win: 0.51
+      win: 0.52
       pick: 0.7
       fit: 0.77
     Titan's Bane:
       total: 0.59
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.67
   community_ordered:
@@ -536,9 +536,9 @@ builds:
       pick: 0.12
       fit: 0.37
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.37
   community_ordered:
@@ -556,7 +556,7 @@ builds:
   - Titan's Bane
   - Soul Gem
   flex_slots:
-  - Titan's Bane
+  - Spear of Desolation
   - Soul Gem
   situational_swaps:
   - vs_tag: heavy_cc
@@ -608,7 +608,7 @@ builds:
     Titan's Bane:
       total: 0.54
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.34
     Soul Gem:
@@ -682,9 +682,9 @@ builds:
       pick: 0.12
       fit: 0.43
     Titan's Bane:
-      total: 0.55
+      total: 0.56
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.43
     Rod of Tahuti:
@@ -757,9 +757,9 @@ builds:
       pick: 0.12
       fit: 0.51
     Titan's Bane:
-      total: 0.56
+      total: 0.57
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.51
     Rod of Tahuti:
@@ -915,7 +915,7 @@ builds:
     Titan's Bane:
       total: 0.57
       efficiency: 0.48
-      win: 0.67
+      win: 0.68
       pick: 0.39
       fit: 0.54
   community_ordered:
@@ -924,7 +924,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: The Crusher
-    reason: community 67% win over 67 matches (vs 53% on this god), taking the model's
+    reason: community 68% win over 67 matches (vs 53% on this god), taking the model's
       weakest slot from The Crusher
   starter: *id001
 ---

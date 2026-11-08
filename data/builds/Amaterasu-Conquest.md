@@ -9,27 +9,27 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Shifter's Shield
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.55
     alternates:
     - name: Golden Blade
       pick_rate: 0.27
-      win_rate: 0.62
+      win_rate: 0.6
     - name: Berserker's Shield
-      pick_rate: 0.16
-      win_rate: 0.72
+      pick_rate: 0.17
+      win_rate: 0.73
   - name: Golden Blade
     pick_rate: 0.45
     win_rate: 0.66
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.25
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Shogun's Ofuda
-      pick_rate: 0.08
-      win_rate: 0.56
+      pick_rate: 0.09
+      win_rate: 0.53
   - name: Berserker's Shield
-    pick_rate: 0.31
+    pick_rate: 0.32
     win_rate: 0.66
     alternates:
     - name: Kinetic Cuirass
@@ -37,24 +37,24 @@ builds:
       win_rate: 0.6
     - name: Shogun's Ofuda
       pick_rate: 0.12
-      win_rate: 0.59
+      win_rate: 0.61
   - name: Kinetic Cuirass
     pick_rate: 0.25
-    win_rate: 0.61
+    win_rate: 0.6
     alternates:
     - name: Shogun's Ofuda
       pick_rate: 0.17
       win_rate: 0.68
     - name: Hussar's Wings
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.63
   - name: Hussar's Wings
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.85
     alternates:
     - name: Kinetic Cuirass
-      pick_rate: 0.13
-      win_rate: 0.83
+      pick_rate: 0.14
+      win_rate: 0.79
     - name: Freya's Tears
       pick_rate: 0.1
       win_rate: 0.67
@@ -77,16 +77,16 @@ builds:
     win_rate: 0.7
   - name: Leather Cowl
     pick_rate: 0.22
-    win_rate: 0.53
+    win_rate: 0.52
   source_url: https://smitebrain.com/gods/amaterasu/
   last_verified: '2026-11-08'
-  god_win_rate: 0.6288659793814433
-  god_matches_won: 122
-  god_matches_played: 194
+  god_win_rate: 0.6262626262626263
+  god_matches_won: 124
+  god_matches_played: 198
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -100,7 +100,7 @@ builds:
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Kinetic Cuirass
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -135,7 +135,7 @@ builds:
       total: 0.6
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.33
     Freya's Tears:
       total: 0.6
@@ -146,14 +146,14 @@ builds:
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.61
-      win: 0.61
+      win: 0.6
       pick: 0.42
       fit: 0.61
     Hussar's Wings:
       total: 0.61
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.51
     Amanita Charm:
       total: 0.61
@@ -214,7 +214,7 @@ builds:
       total: 0.6
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.34
     Shield of the Phoenix:
       total: 0.61
@@ -223,16 +223,16 @@ builds:
       pick: 0.0
       fit: 0.76
     Kinetic Cuirass:
-      total: 0.6
+      total: 0.59
       efficiency: 0.61
-      win: 0.61
+      win: 0.6
       pick: 0.42
       fit: 0.59
     Hussar's Wings:
       total: 0.61
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.49
     Amanita Charm:
       total: 0.66
@@ -251,22 +251,22 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Freya's Tears
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -290,7 +290,7 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.25
     Jotunn's Revenge:
       total: 0.6
@@ -298,17 +298,17 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.5
-    Kinetic Cuirass:
+    Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.61
-      pick: 0.42
-      fit: 0.49
+      win: 0.67
+      pick: 0.22
+      fit: 0.36
     Hussar's Wings:
       total: 0.59
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.39
     Amanita Charm:
       total: 0.6
@@ -318,7 +318,7 @@ builds:
       fit: 0.39
   community_ordered:
   - Berserker's Shield
-  - Kinetic Cuirass
+  - Freya's Tears
   - Hussar's Wings
   starter: *id001
 - source: suggested
@@ -338,11 +338,11 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
-  - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
+    swap: Freya's Tears — magical protection
     swap_item: Freya's Tears
+  - vs_tag: physical_heavy
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -372,7 +372,7 @@ builds:
       total: 0.64
       efficiency: 0.72
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.43
     Tyrfing:
       total: 0.57
@@ -384,7 +384,7 @@ builds:
       total: 0.59
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.36
     Amanita Charm:
       total: 0.59
@@ -443,7 +443,7 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.27
     Jotunn's Revenge:
       total: 0.59
@@ -461,7 +461,7 @@ builds:
       total: 0.59
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.41
     Soul Gem:
       total: 0.59
@@ -519,7 +519,7 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.24
     Jotunn's Revenge:
       total: 0.58
@@ -537,7 +537,7 @@ builds:
       total: 0.59
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.37
     Soul Gem:
       total: 0.59
@@ -555,19 +555,19 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Kinetic Cuirass
+  - Freya's Tears
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Kinetic Cuirass
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield Splitter — physical protection
     swap_item: Shield Splitter
@@ -594,7 +594,7 @@ builds:
       total: 0.59
       efficiency: 0.66
       win: 0.66
-      pick: 0.48
+      pick: 0.5
       fit: 0.25
     Jotunn's Revenge:
       total: 0.59
@@ -602,17 +602,17 @@ builds:
       win: 0.67
       pick: 0.0
       fit: 0.38
-    Kinetic Cuirass:
+    Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.61
-      pick: 0.42
-      fit: 0.48
+      win: 0.67
+      pick: 0.22
+      fit: 0.36
     Hussar's Wings:
       total: 0.59
       efficiency: 0.39
       win: 0.85
-      pick: 0.26
+      pick: 0.24
       fit: 0.38
     Amanita Charm:
       total: 0.6
@@ -622,7 +622,7 @@ builds:
       fit: 0.38
   community_ordered:
   - Berserker's Shield
-  - Kinetic Cuirass
+  - Freya's Tears
   - Hussar's Wings
   starter: *id001
 - source: suggested
@@ -681,7 +681,7 @@ builds:
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.61
-      win: 0.61
+      win: 0.6
       pick: 0.42
       fit: 0.61
     Freya's Tears:

@@ -20,7 +20,7 @@ builds:
       win_rate: 0.61
   - name: Berserker's Shield
     pick_rate: 0.31
-    win_rate: 0.64
+    win_rate: 0.63
     alternates:
     - name: Stampede
       pick_rate: 0.14
@@ -37,17 +37,17 @@ builds:
       win_rate: 0.73
     - name: Berserker's Shield
       pick_rate: 0.1
-      win_rate: 0.48
+      win_rate: 0.49
   - name: Freya's Tears
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.57
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.14
       win_rate: 0.63
     - name: Hussar's Wings
-      pick_rate: 0.08
-      win_rate: 0.49
+      pick_rate: 0.09
+      win_rate: 0.47
   - name: Hussar's Wings
     pick_rate: 0.08
     win_rate: 0.57
@@ -59,8 +59,8 @@ builds:
       pick_rate: 0.05
       win_rate: 0.56
   - name: Medal of Defense
-    pick_rate: 0.09
-    win_rate: 0.52
+    pick_rate: 0.1
+    win_rate: 0.54
     alternates:
     - name: Olmec Blue
       pick_rate: 0.06
@@ -74,19 +74,19 @@ builds:
     win_rate: 0.62
   - name: Leather Cowl
     pick_rate: 0.25
-    win_rate: 0.48
+    win_rate: 0.47
   - name: War Banner
     pick_rate: 0.1
     win_rate: 0.65
   source_url: https://smitebrain.com/gods/ymir/
   last_verified: '2026-11-08'
-  god_win_rate: 0.563169164882227
-  god_matches_won: 263
-  god_matches_played: 467
+  god_win_rate: 0.5626326963906582
+  god_matches_won: 265
+  god_matches_played: 471
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Warrior's Axe
     upgrade: Sundering Axe
@@ -139,7 +139,7 @@ builds:
       total: 0.56
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.57
     Draconic Scale:
       total: 0.54
@@ -220,7 +220,7 @@ builds:
       total: 0.55
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.5
     Draconic Scale:
       total: 0.54
@@ -369,7 +369,7 @@ builds:
       total: 0.53
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.34
     Amanita Charm:
       total: 0.55
@@ -442,7 +442,7 @@ builds:
       total: 0.57
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.59
     Amanita Charm:
       total: 0.56
@@ -498,7 +498,7 @@ builds:
     Berserker's Shield:
       total: 0.61
       efficiency: 0.72
-      win: 0.64
+      win: 0.63
       pick: 0.42
       fit: 0.33
     Jotunn's Revenge:
@@ -574,7 +574,7 @@ builds:
     Berserker's Shield:
       total: 0.6
       efficiency: 0.72
-      win: 0.64
+      win: 0.63
       pick: 0.42
       fit: 0.28
     Jotunn's Revenge:
@@ -587,7 +587,7 @@ builds:
       total: 0.53
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.34
     Shogun's Ofuda:
       total: 0.55
@@ -655,7 +655,7 @@ builds:
       total: 0.56
       efficiency: 0.61
       win: 0.57
-      pick: 0.18
+      pick: 0.17
       fit: 0.57
     Draconic Scale:
       total: 0.54

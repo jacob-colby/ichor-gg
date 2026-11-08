@@ -5,11 +5,11 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Ruin
-  aspect_pick_rate: 0.12
-  aspect_win_rate: 0.57
+  aspect_pick_rate: 0.13
+  aspect_win_rate: 0.6
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.5
+    pick_rate: 0.49
     win_rate: 0.44
     alternates:
     - name: Book of Thoth
@@ -43,7 +43,7 @@ builds:
     win_rate: 0.43
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.39
+      pick_rate: 0.38
       win_rate: 0.42
     - name: Chronos' Pendant
       pick_rate: 0.08
@@ -80,13 +80,13 @@ builds:
     win_rate: 0.77
   source_url: https://smitebrain.com/gods/hecate/
   last_verified: '2026-11-08'
-  god_win_rate: 0.4789915966386555
-  god_matches_won: 57
-  god_matches_played: 119
+  god_win_rate: 0.48333333333333334
+  god_matches_won: 58
+  god_matches_played: 120
   god_division: obsidian
   god_window_start: '2026-11-03'
   god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_matches_analyzed: 5134
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -132,7 +132,7 @@ builds:
       total: 0.58
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 1.0
     Spear of the Magus:
       total: 0.51
@@ -209,7 +209,7 @@ builds:
       total: 0.53
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 0.61
     Chronos' Pendant:
       total: 0.57
@@ -284,7 +284,7 @@ builds:
       total: 0.55
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 0.78
     Obsidian Shard:
       total: 0.49
@@ -360,7 +360,7 @@ builds:
       total: 0.51
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 0.5
     Kinetic Cuirass:
       total: 0.5
@@ -434,7 +434,7 @@ builds:
       total: 0.58
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 1.0
     Spear of the Magus:
       total: 0.52
@@ -583,7 +583,7 @@ builds:
       total: 0.56
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 0.86
     Gem of Focus:
       total: 0.47
@@ -652,7 +652,7 @@ builds:
       total: 0.58
       efficiency: 0.6
       win: 0.44
-      pick: 0.5
+      pick: 0.49
       fit: 1.0
     Spear of the Magus:
       total: 0.51
