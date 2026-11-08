@@ -9,6 +9,7 @@ live data.
 import ast
 import json
 import math
+from datetime import date, datetime
 from pathlib import Path
 
 import pytest
@@ -532,10 +533,16 @@ def test_the_derivation_counts_builds_and_every_item_agrees():
     labelled it "matches"; it is ~4.5x the real figure, because the god index
     records about 4.5 of a match's ten seats.
 
-    The ratio is pinned to one window and drifts a little with each, so this
-    fires on a patch boundary too. What it really asserts is that builds and
-    matches are DIFFERENT quantities about four and a half times apart, not
-    that the figure is exactly 4.5."""
+    What it asserts is that builds and matches are DIFFERENT quantities, and
+    that the gap between them is one the game allows — NOT a figure to one
+    decimal. It pinned `round(builds / matches, 1) == 4.5` until 2026-11-07,
+    and that ratio moves every day, not just at a boundary: 4.468 on the 11-06
+    table and 4.533 on 11-07, inside one window, against 4.604 for the whole
+    of Open Beta 46. 11-06 sat 0.018 from rounding to 4.4. The bounds that
+    replace it are physical, not fitted: above 1, because #109's conflation
+    makes the two the same number; at most 10, because a Conquest match has
+    ten seats, so more builds than that per match means one of the counts is
+    not what it says. `live_window.py` has the convention."""
     table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
     derived = {round(r["matches_played"] / r["use_rate"])
                for r in table["items"].values() if r.get("use_rate")}
@@ -545,7 +552,7 @@ def test_the_derivation_counts_builds_and_every_item_agrees():
     # And the two really are different quantities on the shipped table.
     matches, unit = sbs.community_sample(table)
     assert unit == "matches" and matches < builds
-    assert round(builds / matches, 1) == 4.5
+    assert 1 < builds / matches <= 10, (builds, matches, round(builds / matches, 3))
 
 
 def test_the_stated_match_count_wins_over_the_derivation():
@@ -578,9 +585,17 @@ def test_the_items_and_gods_half_still_tracks_the_current_patch():
 
 
 def test_the_shipped_label_names_the_community_window_and_its_real_size():
-    """The live assertion, pinned to the shipped window: Open Beta 47, 2,859
-    matches since 2026-11-06. It fires on every patch boundary, so updating it
-    declares the new window established rather than tidying a test.
+    """The live assertion, pinned to the shipped WINDOW: Open Beta 47. That
+    half fires on every patch boundary, so updating it declares the new window
+    established rather than tidying a test.
+
+    The SIZE half is derived, not pinned. It read "2,859 matches" and refused
+    "12,774" until 2026-11-07, and both of those are one day's figures: the
+    11-07 table is 4,089 matches over 18,535 builds in the same window, so the
+    pins would have blocked every day's data. What they caught still fails
+    here, on any day: the label must carry the table's own MATCH count, and
+    must not carry its derived BUILDS count. `live_window.py` has the
+    convention.
 
     It failed against the pre-#109 code, which read `_patch.json` for both
     halves and said "community window Open Beta 47" over an Open Beta 46
@@ -592,18 +607,54 @@ def test_the_shipped_label_names_the_community_window_and_its_real_size():
     check lives in `test_the_items_and_gods_half_still_tracks_the_current_patch`,
     which derives both halves instead of pinning them. The unit half of #109
     is still caught here, by refusing the derived builds figure."""
+    table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
+    matches, unit = sbs.community_sample(table)
+    builds, builds_unit = sbs.community_sample(dict(table, matches_analyzed=None))
+    assert (unit, builds_unit) == ("matches", "builds") and matches != builds
     label = sbs.data_patch()
-    assert "community window Open Beta 47, 2,859 matches" in label, label
-    assert "12,774" not in label
+    assert "community window Open Beta 47, " in label, label
+    assert f"community window Open Beta 47, {matches:,} matches" in label, label
+    assert f"{builds:,}" not in label, (builds, label)
 
 
 def test_the_shipped_match_count_agrees_with_the_documented_community_sample():
     """The cross-check that would have caught #109's unit error: STATE.md
-    section 7 has carried the match count all along."""
+    section 7 has carried the match count all along.
+
+    Until 2026-11-07 it asserted the row held the shipped count EXACTLY. The
+    row is written by hand and the nightly refresh never touches docs, so that
+    went red on the first refresh after every edit to the row (2,859 written
+    on 11-06, 4,089 shipped on 11-07) — with the data arriving as a pull
+    request, it would have blocked every day's data. `doc_audit` reports that
+    drift for a human to read, which is the job it was built for.
+
+    What is asserted now holds on every day of a healthy window. PATCH-BOUNDARY:
+    the row describes the shipped window, by its start date, so this still
+    fires at a boundary until the row is updated as part of declaring the new
+    window. DAILY, as invariants: the row's figure is a match count of this
+    window recorded on some earlier day, so it can be no larger than the
+    shipped count and its end no later than the shipped end. #109's own
+    failure, a builds count reported as matches, is caught on any day by
+    `test_the_derivation_counts_builds_and_every_item_agrees` and the label
+    test above. `live_window.py` has the convention."""
     import re
+    from smite import doc_audit
     state = (sbs.REPO_ROOT / "docs" / "STATE.md").read_text(encoding="utf-8")
     row = re.search(r"\|\s*Community sample\s*\|([^|]*)\|", state).group(1)
-    count, unit = sbs.community_sample(
-        json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8")))
+    table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
+    count, unit = sbs.community_sample(table)
     assert unit == "matches"
-    assert f"{count:,}" in row, (count, row[:120])
+    doc = re.search(r"([\d,]+) (\w+)\+ Conquest matches, (\d+ \w+) – (\d+ \w+)", row)
+    assert doc, row[:120]
+    doc_count, _, doc_start, doc_end = doc.groups()
+    assert doc_start == doc_audit._day(table["window_start"]), (
+        f"STATE.md's Community sample row starts {doc_start}, the shipped window "
+        f"{table['window_start']}: declare the new window and update the row")
+    assert int(doc_count.replace(",", "")) <= count, (doc_count, count)
+    # The row names day and month only. Read it in the window's own year,
+    # rolling into the next for a window that crosses New Year.
+    start = date.fromisoformat(table["window_start"])
+    end = datetime.strptime(f"{doc_end} {start.year}", "%d %b %Y").date()
+    if end < start:
+        end = end.replace(year=start.year + 1)
+    assert start <= end <= date.fromisoformat(table["window_end"]), (doc_end, table["window_end"])
