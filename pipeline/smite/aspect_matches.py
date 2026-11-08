@@ -53,13 +53,21 @@ WHAT IS STORED, and what is not. `data/Analysis/aspect_matches/<window>/
 (slug or null), `role`, `rank`, `placement`, `items` (one slug per inventory
 slot, null for an empty one — six slots, except Vulcan's Aspect of
 Fortification, which returns 7 or 8), `starter`, `relic`, `enemies` (god
-slugs). NOT stored: the
-player's name, and the raw GUID — it is a link to a public tracker.gg page that
-names all ten players, and the hash still dedupes and still joins the same game
-across gods' files. `_meta.json` holds the window registry (SmiteBrain's own
-start/end per patch window) and each god's aspect list; `_aggregate.json` the
-split index's aspect / no-aspect rows per window. Records are assigned to the
-newest window whose start is not after them.
+slugs). NOT stored: the player's name, and the raw GUID — it is a link to a
+public tracker.gg page that names all ten players, and the hash still dedupes
+and still joins the same game across gods' files. `_meta.json` holds the
+window registry (SmiteBrain's own start/end per patch window), each god's
+aspect list, and `complete_from`: the instant from which EVERY aspect feed is
+in the store whole. Nothing older was fetched, so a window starting before it
+is not in the registry at all, rather than present and silently short.
+`_aggregate.json` holds the split index's aspect / no-aspect rows per window.
+Records are assigned to the newest window whose start is not after them.
+
+THE BACKFILL (2026-11-08) went back to OB46's start for all 86 aspect feeds,
+not to the end of retention. The full 45 days measured at ~4,770 requests,
+about 3.9 h at the 2.5 s floor plus latency; the session's limit was 2.5 h, so
+the cutoff is OB46 and `complete_from` says so. From mid-OB44 the source's
+older matches age out a day at a time and cannot be fetched again.
 
 WHAT ONE RUN FETCHES (`refresh`), about 217 requests at 2.5 s (~9 min) for
 2026-11-08's volumes, on top of the ~100 the community refresh already sends:
