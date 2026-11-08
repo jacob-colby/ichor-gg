@@ -488,6 +488,14 @@ def _god_item_damage(gods, items, weights) -> dict:
     return out
 
 
+#: Build-note keys the viewer does not read and the index does not carry.
+#: `community_aspects` (`smite.aspect_matches`, 2026-11-08) is evidence for a
+#: later session's aspect builds; ~1 KB per god in an index every visitor
+#: downloads, with no page that reads it yet. The session that gives it a
+#: page removes it from here.
+NOT_SHIPPED_BUILD_KEYS = ("community_aspects",)
+
+
 def build_index(repo_root: Path) -> dict:
     """The whole index, priced with `_weights.yaml`'s pricing flags ON.
 
@@ -582,7 +590,8 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
     if efficiency.numeric_cost_items(raw_items):
         eff, gold_values = efficiency.efficiency_scores(raw_items)
     items = _enrich_items(raw_items, tags_map, eff)
-    builds = _all(builds_dir)
+    builds = [{k: v for k, v in note.items() if k not in NOT_SHIPPED_BUILD_KEYS}
+              for note in _all(builds_dir)]
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)
     _attach_item_meta(items, builds, _load_community_items(data_root))
