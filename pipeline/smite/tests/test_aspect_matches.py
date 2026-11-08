@@ -350,6 +350,20 @@ def test_no_role_shift_when_the_base_role_leads():
     assert _entry({"Jungle": 12, "Mid": 9, "Solo": 9})["role_shift"] is None
 
 
+def test_a_two_role_god_is_not_shifted_into_one_of_his_own_roles():
+    """Achilles is "Solo Jungle"; his Prowess players are 94% Jungle."""
+    entry = _entry({"Jungle": 29, "Mid": 1}, base_role="Solo Jungle")
+    assert entry["role_shift"] is None
+    assert entry["base_role_share"] == 0.97
+
+
+def test_a_two_role_god_shifted_out_of_both_is_named():
+    entry = _entry({"Mid": 24, "Solo": 3, "Support": 3}, base_role="Solo Support")
+    assert entry["base_role_share"] == 0.2
+    assert entry["role_shift"]["role"] == "Mid"
+    assert "do not play Solo/Support" in entry["role_shift"]["says"]
+
+
 def test_entry_items_are_shares_of_matches_with_our_spellings():
     entry = _entry({"Mid": 30})
     assert entry["items"] == [{"name": "Book of Thoth", "share": 1.0},

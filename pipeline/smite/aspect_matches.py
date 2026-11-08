@@ -610,14 +610,19 @@ def aspect_entry(god: str, base_role: str, aspect: dict, by_window: dict,
     decided = [r for r in recs if r["placement"] in (1, 2)]
     wins = sum(r["placement"] == 1 for r in decided)
     roles = Counter(r["role"] for r in recs)
-    base_share = roles.get(base_role, 0) / n
-    _, base_hi = _wilson(roles.get(base_role, 0), n)
+    # A note's role can name two ("Solo Jungle"); `scoring.fit_map` reads
+    # each token as a role, so the base is the SET and its share is summed.
+    base_roles = str(base_role or "").split()
+    in_base = sum(roles.get(r, 0) for r in base_roles)
+    base_share = in_base / n
+    _, base_hi = _wilson(in_base, n)
     top_role, top_n = sorted(roles.items(), key=lambda kv: (-kv[1], kv[0]))[0]
     shift = None
-    if base_role and top_role != base_role and base_hi < 0.5:
+    if base_roles and top_role not in base_roles and base_hi < 0.5:
+        named = "/".join(base_roles)
         shift = {"role": top_role, "share": round(top_n / n, 2),
-                 "says": f"most {aspect['name']} players do not play {base_role}: "
-                         f"{top_role} {top_n / n:.0%}, {base_role} {base_share:.0%}"}
+                 "says": f"most {aspect['name']} players do not play {named}: "
+                         f"{top_role} {top_n / n:.0%}, {named} {base_share:.0%}"}
     items = Counter(s for r in recs for s in set(r["items"]) if s)
     starters = Counter(r["starter"] for r in recs if r["starter"])
     relics = Counter(r["relic"] for r in recs if r["relic"])
