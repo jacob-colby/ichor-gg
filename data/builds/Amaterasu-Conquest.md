@@ -700,4 +700,16 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect Of Valor
+    status: below minimum
+    matches_by_window:
+      ob47: 4
+      ob46: 18
 ---

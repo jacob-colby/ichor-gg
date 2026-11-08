@@ -676,4 +676,79 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Thunderstruck
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 163
+    wins: 88
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 193
+      aspect_win_rate: 0.544
+      no_aspect_matches: 400
+      no_aspect_win_rate: 0.568
+    roles:
+    - role: Solo
+      matches: 115
+      share: 0.71
+    - role: Jungle
+      matches: 28
+      share: 0.17
+    - role: Support
+      matches: 20
+      share: 0.12
+    base_role: Jungle Solo
+    base_role_share: 0.88
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.62
+    - name: Shifter's Shield
+      share: 0.55
+    - name: Genji's Guard
+      share: 0.46
+    - name: brawlers-ruin
+      share: 0.33
+    - name: Breastplate of Valor
+      share: 0.25
+    - name: Kinetic Cuirass
+      share: 0.25
+    - name: Devourer's Gauntlet
+      share: 0.23
+    - name: Jotunn's Revenge
+      share: 0.21
+    starters:
+    - name: Bluestone Brooch
+      share: 0.48
+    - name: Bluestone Pendant
+      share: 0.17
+    - name: Bumba's Hammer
+      share: 0.15
+    relics:
+    - name: purification-beads
+      share: 0.39
+    - name: sundering-arc
+      share: 0.21
+    - name: phantom-shell
+      share: 0.2
+    matches_by_window:
+      ob47: 163
+      ob46: 654
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

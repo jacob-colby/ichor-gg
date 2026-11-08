@@ -683,4 +683,83 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Grover's Wrath
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 42
+    wins: 19
+    win_share: 0.45
+    aggregate:
+      aspect_matches: 46
+      aspect_win_rate: 0.478
+      no_aspect_matches: 216
+      no_aspect_win_rate: 0.574
+    roles:
+    - role: Solo
+      matches: 39
+      share: 0.93
+    - role: Carry
+      matches: 2
+      share: 0.05
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Support
+    base_role_share: 0.0
+    role_shift:
+      role: Solo
+      share: 0.93
+      says: 'most Aspect of Grover''s Wrath players do not play Support: Solo 93%,
+        Support 0%'
+    items:
+    - name: Tyrfing
+      share: 0.88
+    - name: Berserker's Shield
+      share: 0.86
+    - name: Bragi's Harp
+      share: 0.67
+    - name: Shogun's Ofuda
+      share: 0.5
+    - name: Shifter's Shield
+      share: 0.19
+    - name: Freya's Tears
+      share: 0.17
+    - name: Circe's Hexstone
+      share: 0.14
+    - name: Phoenix Feather
+      share: 0.14
+    starters:
+    - name: Death's Embrace
+      share: 0.48
+    - name: Death's Toll
+      share: 0.38
+    - name: Leather Cowl
+      share: 0.05
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.45
+    - name: phantom-shell
+      share: 0.33
+    - name: purification-beads
+      share: 0.14
+    matches_by_window:
+      ob47: 42
+      ob46: 188
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

@@ -691,4 +691,81 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Triumphant
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 59
+    wins: 29
+    win_share: 0.49
+    aggregate:
+      aspect_matches: 70
+      aspect_win_rate: 0.457
+      no_aspect_matches: 428
+      no_aspect_win_rate: 0.563
+    roles:
+    - role: Support
+      matches: 31
+      share: 0.53
+    - role: Solo
+      matches: 14
+      share: 0.24
+    - role: Jungle
+      matches: 8
+      share: 0.14
+    - role: Mid
+      matches: 6
+      share: 0.1
+    base_role: Support
+    base_role_share: 0.53
+    role_shift: null
+    items:
+    - name: Gauntlet of Thebes
+      share: 0.32
+    - name: Spear of Desolation
+      share: 0.32
+    - name: The Cosmic Horror
+      share: 0.27
+    - name: Totem of Death
+      share: 0.25
+    - name: Freya's Tears
+      share: 0.24
+    - name: Helm of Darkness
+      share: 0.22
+    - name: Rod of Tahuti
+      share: 0.22
+    - name: The World Stone
+      share: 0.22
+    starters:
+    - name: Archmage's Gem
+      share: 0.39
+    - name: Conduit Gem
+      share: 0.29
+    - name: Bluestone Pendant
+      share: 0.12
+    relics:
+    - name: phantom-shell
+      share: 0.31
+    - name: sundering-arc
+      share: 0.31
+    - name: purification-beads
+      share: 0.2
+    matches_by_window:
+      ob47: 24
+      ob46: 59
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

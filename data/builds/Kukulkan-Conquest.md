@@ -685,4 +685,84 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Squall
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 50
+    wins: 28
+    win_share: 0.56
+    aggregate:
+      aspect_matches: 55
+      aspect_win_rate: 0.564
+      no_aspect_matches: 277
+      no_aspect_win_rate: 0.527
+    roles:
+    - role: Solo
+      matches: 31
+      share: 0.62
+    - role: Mid
+      matches: 12
+      share: 0.24
+    - role: Jungle
+      matches: 6
+      share: 0.12
+    - role: Support
+      matches: 1
+      share: 0.02
+    base_role: Mid
+    base_role_share: 0.24
+    role_shift:
+      role: Solo
+      share: 0.62
+      says: 'most Aspect of the Squall players do not play Mid: Solo 62%, Mid 24%'
+    items:
+    - name: Book of Thoth
+      share: 0.88
+    - name: Genji's Guard
+      share: 0.74
+    - name: Breastplate of Valor
+      share: 0.7
+    - name: Rod of Tahuti
+      share: 0.56
+    - name: Blinking Abyss
+      share: 0.46
+    - name: Yogi's Necklace
+      share: 0.26
+    - name: Ancient Signet
+      share: 0.22
+    - name: Spear of Desolation
+      share: 0.18
+    starters:
+    - name: Archmage's Gem
+      share: 0.62
+    - name: Conduit Gem
+      share: 0.26
+    - name: Pendulum of the Ages
+      share: 0.08
+    relics:
+    - name: purification-beads
+      share: 0.48
+    - name: aegis-of-acceleration
+      share: 0.42
+    - name: Blink Rune
+      share: 0.06
+    matches_by_window:
+      ob47: 50
+      ob46: 144
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

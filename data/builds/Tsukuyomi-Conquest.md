@@ -927,4 +927,16 @@ builds:
     reason: community 67% win over 67 matches (vs 53% on this god), taking the model's
       weakest slot from The Crusher
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Mangetsu
+    status: below minimum
+    matches_by_window:
+      ob47: 6
+      ob46: 21
 ---

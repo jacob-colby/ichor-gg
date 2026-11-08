@@ -849,4 +849,81 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Cosmos
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 37
+    wins: 22
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 43
+      aspect_win_rate: 0.581
+      no_aspect_matches: 1124
+      no_aspect_win_rate: 0.565
+    roles:
+    - role: Support
+      matches: 20
+      share: 0.54
+    - role: Carry
+      matches: 10
+      share: 0.27
+    - role: Solo
+      matches: 4
+      share: 0.11
+    - role: Mid
+      matches: 3
+      share: 0.08
+    base_role: Carry Mid
+    base_role_share: 0.35
+    role_shift: null
+    items:
+    - name: Barbed Carver
+      share: 0.41
+    - name: Shell of Rebuke
+      share: 0.41
+    - name: Tyrfing
+      share: 0.38
+    - name: Bragi's Harp
+      share: 0.35
+    - name: Freya's Tears
+      share: 0.3
+    - name: Lotus Sickle
+      share: 0.27
+    - name: Stampede
+      share: 0.27
+    - name: The Executioner
+      share: 0.27
+    starters:
+    - name: Bluestone Brooch
+      share: 0.27
+    - name: Death's Embrace
+      share: 0.24
+    - name: Bluestone Pendant
+      share: 0.16
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.41
+    - name: purification-beads
+      share: 0.41
+    - name: phantom-shell
+      share: 0.16
+    matches_by_window:
+      ob47: 6
+      ob46: 37
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

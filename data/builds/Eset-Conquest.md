@@ -844,4 +844,82 @@ builds:
   - Soul Gem
   - Rod of Tahuti
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Lifewarden
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 82
+    wins: 43
+    win_share: 0.52
+    aggregate:
+      aspect_matches: 105
+      aspect_win_rate: 0.495
+      no_aspect_matches: 369
+      no_aspect_win_rate: 0.566
+    roles:
+    - role: Support
+      matches: 63
+      share: 0.77
+    - role: Solo
+      matches: 18
+      share: 0.22
+    - role: Mid
+      matches: 1
+      share: 0.01
+    base_role: Mid
+    base_role_share: 0.01
+    role_shift:
+      role: Support
+      share: 0.77
+      says: 'most Aspect of the Lifewarden players do not play Mid: Support 77%, Mid
+        1%'
+    items:
+    - name: Freya's Tears
+      share: 0.63
+    - name: Shell of Rebuke
+      share: 0.44
+    - name: Stampede
+      share: 0.37
+    - name: Gauntlet of Thebes
+      share: 0.29
+    - name: Genji's Guard
+      share: 0.29
+    - name: Chandra's Grace
+      share: 0.26
+    - name: Prophetic Cloak
+      share: 0.22
+    - name: Breastplate of Valor
+      share: 0.2
+    starters:
+    - name: Bumba's Hammer
+      share: 0.18
+    - name: Selflessness
+      share: 0.18
+    - name: Bumba's Cudgel
+      share: 0.13
+    relics:
+    - name: phantom-shell
+      share: 0.4
+    - name: aegis-of-acceleration
+      share: 0.28
+    - name: purification-beads
+      share: 0.26
+    matches_by_window:
+      ob47: 19
+      ob46: 82
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

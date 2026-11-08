@@ -1605,4 +1605,85 @@ builds:
   - Soul Gem
   starter: *id001
   aspect: Aspect of Combustion
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Combustion
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 48
+    wins: 19
+    win_share: 0.4
+    aggregate:
+      aspect_matches: 57
+      aspect_win_rate: 0.351
+      no_aspect_matches: 1082
+      no_aspect_win_rate: 0.511
+    roles:
+    - role: Carry
+      matches: 38
+      share: 0.79
+    - role: Solo
+      matches: 6
+      share: 0.12
+    - role: Mid
+      matches: 2
+      share: 0.04
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    - role: Support
+      matches: 1
+      share: 0.02
+    base_role: Mid
+    base_role_share: 0.04
+    role_shift:
+      role: Carry
+      share: 0.79
+      says: 'most Aspect of Combustion players do not play Mid: Carry 79%, Mid 4%'
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.65
+    - name: Dominance
+      share: 0.48
+    - name: Odysseus' Bow
+      share: 0.44
+    - name: Dagger of Frenzy
+      share: 0.42
+    - name: Riptalon
+      share: 0.4
+    - name: Tyrfing
+      share: 0.38
+    - name: The Executioner
+      share: 0.33
+    - name: Silverbranch Bow
+      share: 0.29
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.31
+    - name: Hunter's Cowl
+      share: 0.25
+    - name: Death's Embrace
+      share: 0.12
+    relics:
+    - name: purification-beads
+      share: 0.65
+    - name: aegis-of-acceleration
+      share: 0.33
+    - name: agility-relic
+      share: 0.02
+    matches_by_window:
+      ob47: 16
+      ob46: 48
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - purification-beads
 ---

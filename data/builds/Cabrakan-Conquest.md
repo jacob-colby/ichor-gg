@@ -699,4 +699,76 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Rotund Jotunn
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 31
+    wins: 10
+    win_share: 0.32
+    aggregate:
+      aspect_matches: 40
+      aspect_win_rate: 0.275
+      no_aspect_matches: 376
+      no_aspect_win_rate: 0.598
+    roles:
+    - role: Mid
+      matches: 17
+      share: 0.55
+    - role: Solo
+      matches: 11
+      share: 0.35
+    - role: Jungle
+      matches: 3
+      share: 0.1
+    base_role: Solo Support
+    base_role_share: 0.35
+    role_shift: null
+    items:
+    - name: Rod of Tahuti
+      share: 0.58
+    - name: Chronos' Pendant
+      share: 0.48
+    - name: The Cosmic Horror
+      share: 0.48
+    - name: Totem of Death
+      share: 0.42
+    - name: Ancient Signet
+      share: 0.29
+    - name: Spear of Desolation
+      share: 0.26
+    - name: Spear of the Magus
+      share: 0.26
+    - name: Damaru
+      share: 0.23
+    starters:
+    - name: Archmage's Gem
+      share: 0.39
+    - name: Bluestone Brooch
+      share: 0.29
+    - name: Bluestone Pendant
+      share: 0.16
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.52
+    - name: purification-beads
+      share: 0.32
+    - name: sundering-arc
+      share: 0.16
+    matches_by_window:
+      ob47: 10
+      ob46: 31
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - purification-beads
+    - sundering-arc
 ---

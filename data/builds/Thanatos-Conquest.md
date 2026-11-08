@@ -693,4 +693,79 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Reaping
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 85
+    wins: 50
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 100
+      aspect_win_rate: 0.62
+      no_aspect_matches: 239
+      no_aspect_win_rate: 0.552
+    roles:
+    - role: Jungle
+      matches: 49
+      share: 0.58
+    - role: Solo
+      matches: 34
+      share: 0.4
+    - role: Support
+      matches: 2
+      share: 0.02
+    base_role: Jungle
+    base_role_share: 0.58
+    role_shift: null
+    items:
+    - name: Shifter's Shield
+      share: 0.48
+    - name: Jotunn's Revenge
+      share: 0.45
+    - name: Daybreak Gavel
+      share: 0.42
+    - name: The Reaper
+      share: 0.41
+    - name: Heartseeker
+      share: 0.33
+    - name: Hydra's Lament
+      share: 0.31
+    - name: Kinetic Cuirass
+      share: 0.27
+    - name: Freya's Tears
+      share: 0.22
+    starters:
+    - name: Bumba's Hammer
+      share: 0.48
+    - name: Sundering Axe
+      share: 0.15
+    - name: Bumba's Cudgel
+      share: 0.09
+    relics:
+    - name: Blink Rune
+      share: 0.32
+    - name: purification-beads
+      share: 0.31
+    - name: aegis-of-acceleration
+      share: 0.15
+    matches_by_window:
+      ob47: 85
+      ob46: 231
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

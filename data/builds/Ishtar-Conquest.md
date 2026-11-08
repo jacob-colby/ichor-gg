@@ -670,4 +670,85 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Passionate Storm
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 69
+    wins: 42
+    win_share: 0.61
+    aggregate:
+      aspect_matches: 76
+      aspect_win_rate: 0.605
+      no_aspect_matches: 189
+      no_aspect_win_rate: 0.582
+    roles:
+    - role: Solo
+      matches: 29
+      share: 0.42
+    - role: Jungle
+      matches: 24
+      share: 0.35
+    - role: Carry
+      matches: 14
+      share: 0.2
+    - role: Mid
+      matches: 2
+      share: 0.03
+    base_role: Carry
+    base_role_share: 0.2
+    role_shift:
+      role: Solo
+      share: 0.42
+      says: 'most Aspect of the Passionate Storm players do not play Carry: Solo 42%,
+        Carry 20%'
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.78
+    - name: Berserker's Shield
+      share: 0.51
+    - name: Riptalon
+      share: 0.48
+    - name: Hastened Fatalis
+      share: 0.45
+    - name: Deathbringer
+      share: 0.33
+    - name: Silverbranch Bow
+      share: 0.29
+    - name: Musashi's Dual Swords
+      share: 0.25
+    - name: Shogun's Ofuda
+      share: 0.23
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.3
+    - name: Hunter's Cowl
+      share: 0.2
+    - name: Death's Embrace
+      share: 0.16
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.41
+    - name: purification-beads
+      share: 0.33
+    - name: agility-relic
+      share: 0.25
+    matches_by_window:
+      ob47: 69
+      ob46: 259
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
 ---

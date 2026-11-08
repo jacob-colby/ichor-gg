@@ -623,4 +623,80 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Unbound Destruction
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 104
+    wins: 61
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 115
+      aspect_win_rate: 0.591
+      no_aspect_matches: 280
+      no_aspect_win_rate: 0.507
+    roles:
+    - role: Carry
+      matches: 95
+      share: 0.91
+    - role: Solo
+      matches: 7
+      share: 0.07
+    - role: Jungle
+      matches: 2
+      share: 0.02
+    base_role: Jungle
+    base_role_share: 0.02
+    role_shift:
+      role: Carry
+      share: 0.91
+      says: 'most Aspect of Unbound Destruction players do not play Jungle: Carry
+        91%, Jungle 2%'
+    items:
+    - name: Tyrfing
+      share: 0.78
+    - name: Silverbranch Bow
+      share: 0.76
+    - name: Odysseus' Bow
+      share: 0.75
+    - name: Hastened Fatalis
+      share: 0.51
+    - name: The Executioner
+      share: 0.5
+    - name: Riptalon
+      share: 0.35
+    - name: Berserker's Shield
+      share: 0.32
+    - name: Devourer's Gauntlet
+      share: 0.31
+    starters:
+    - name: Death's Embrace
+      share: 0.38
+    - name: Hunter's Cowl
+      share: 0.28
+    - name: Death's Toll
+      share: 0.1
+    relics:
+    - name: purification-beads
+      share: 0.43
+    - name: agility-relic
+      share: 0.4
+    - name: aegis-of-acceleration
+      share: 0.16
+    matches_by_window:
+      ob47: 24
+      ob46: 104
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - purification-beads
 ---

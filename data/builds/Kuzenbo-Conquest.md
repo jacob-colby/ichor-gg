@@ -684,4 +684,89 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Spirits
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 140
+    wins: 67
+    win_share: 0.48
+    aggregate:
+      aspect_matches: 162
+      aspect_win_rate: 0.469
+      no_aspect_matches: 191
+      no_aspect_win_rate: 0.513
+    roles:
+    - role: Solo
+      matches: 99
+      share: 0.71
+    - role: Support
+      matches: 27
+      share: 0.19
+    - role: Jungle
+      matches: 8
+      share: 0.06
+    - role: Mid
+      matches: 5
+      share: 0.04
+    - role: Carry
+      matches: 1
+      share: 0.01
+    base_role: Support
+    base_role_share: 0.19
+    role_shift:
+      role: Solo
+      share: 0.71
+      says: 'most Aspect of Spirits players do not play Support: Solo 71%, Support
+        19%'
+    items:
+    - name: Freya's Tears
+      share: 0.59
+    - name: Genji's Guard
+      share: 0.41
+    - name: Shifter's Shield
+      share: 0.34
+    - name: Mystical Mail
+      share: 0.31
+    - name: Prophetic Cloak
+      share: 0.26
+    - name: Ethereal Staff
+      share: 0.21
+    - name: Gladiator's Shield
+      share: 0.19
+    - name: Breastplate of Valor
+      share: 0.16
+    starters:
+    - name: Bluestone Brooch
+      share: 0.3
+    - name: Bluestone Pendant
+      share: 0.19
+    - name: Sundering Axe
+      share: 0.15
+    relics:
+    - name: sundering-arc
+      share: 0.37
+    - name: phantom-shell
+      share: 0.23
+    - name: purification-beads
+      share: 0.17
+    matches_by_window:
+      ob47: 140
+      ob46: 207
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

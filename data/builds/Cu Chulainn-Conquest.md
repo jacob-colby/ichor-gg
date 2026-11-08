@@ -531,4 +531,79 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Warped
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 37
+    wins: 17
+    win_share: 0.46
+    aggregate:
+      aspect_matches: 49
+      aspect_win_rate: 0.449
+      no_aspect_matches: 258
+      no_aspect_win_rate: 0.531
+    roles:
+    - role: Solo
+      matches: 31
+      share: 0.84
+    - role: Jungle
+      matches: 3
+      share: 0.08
+    - role: Support
+      matches: 3
+      share: 0.08
+    base_role: Solo
+    base_role_share: 0.84
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.54
+    - name: Berserker's Shield
+      share: 0.51
+    - name: Kinetic Cuirass
+      share: 0.46
+    - name: Riptalon
+      share: 0.43
+    - name: Freya's Tears
+      share: 0.32
+    - name: Mystical Mail
+      share: 0.24
+    - name: Shifter's Shield
+      share: 0.22
+    - name: Contagion
+      share: 0.16
+    starters:
+    - name: Bluestone Brooch
+      share: 0.22
+    - name: Death's Embrace
+      share: 0.22
+    - name: Bluestone Pendant
+      share: 0.19
+    relics:
+    - name: agility-relic
+      share: 0.3
+    - name: purification-beads
+      share: 0.27
+    - name: sundering-arc
+      share: 0.19
+    matches_by_window:
+      ob47: 37
+      ob46: 112
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

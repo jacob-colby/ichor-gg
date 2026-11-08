@@ -920,4 +920,80 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Fellowship
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 47
+    wins: 25
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 48
+      aspect_win_rate: 0.542
+      no_aspect_matches: 510
+      no_aspect_win_rate: 0.531
+    roles:
+    - role: Carry
+      matches: 32
+      share: 0.68
+    - role: Solo
+      matches: 13
+      share: 0.28
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    - role: Mid
+      matches: 1
+      share: 0.02
+    base_role: Carry
+    base_role_share: 0.68
+    role_shift: null
+    items:
+    - name: The Executioner
+      share: 0.51
+    - name: Nimble Ring
+      share: 0.49
+    - name: Bracer of The Abyss
+      share: 0.43
+    - name: Odysseus' Bow
+      share: 0.36
+    - name: Rod of Tahuti
+      share: 0.36
+    - name: Devourer's Gauntlet
+      share: 0.32
+    - name: Bancroft's Talon
+      share: 0.3
+    - name: Dagger of Frenzy
+      share: 0.3
+    starters:
+    - name: Hunter's Cowl
+      share: 0.34
+    - name: Pendulum of the Ages
+      share: 0.21
+    - name: Death's Embrace
+      share: 0.11
+    relics:
+    - name: purification-beads
+      share: 0.85
+    - name: aegis-of-acceleration
+      share: 0.11
+    - name: agility-relic
+      share: 0.04
+    matches_by_window:
+      ob47: 9
+      ob46: 47
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - purification-beads
 ---

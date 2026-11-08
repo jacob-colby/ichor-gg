@@ -691,4 +691,89 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Downpour
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 75
+    wins: 41
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 96
+      aspect_win_rate: 0.51
+      no_aspect_matches: 268
+      no_aspect_win_rate: 0.463
+    roles:
+    - role: Mid
+      matches: 53
+      share: 0.71
+    - role: Solo
+      matches: 8
+      share: 0.11
+    - role: Support
+      matches: 7
+      share: 0.09
+    - role: Jungle
+      matches: 5
+      share: 0.07
+    - role: Carry
+      matches: 2
+      share: 0.03
+    base_role: Support
+    base_role_share: 0.09
+    role_shift:
+      role: Mid
+      share: 0.71
+      says: 'most Aspect of Downpour players do not play Support: Mid 71%, Support
+        9%'
+    items:
+    - name: Spear of Desolation
+      share: 0.96
+    - name: Rod of Tahuti
+      share: 0.76
+    - name: Soul Gem
+      share: 0.57
+    - name: Obsidian Shard
+      share: 0.52
+    - name: The World Stone
+      share: 0.43
+    - name: Divine Ruin
+      share: 0.28
+    - name: Spear of the Magus
+      share: 0.27
+    - name: Chronos' Pendant
+      share: 0.17
+    starters:
+    - name: Bluestone Brooch
+      share: 0.45
+    - name: Archmage's Gem
+      share: 0.15
+    - name: Bluestone Pendant
+      share: 0.15
+    relics:
+    - name: purification-beads
+      share: 0.53
+    - name: aegis-of-acceleration
+      share: 0.39
+    - name: sundering-arc
+      share: 0.04
+    matches_by_window:
+      ob47: 5
+      ob46: 75
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

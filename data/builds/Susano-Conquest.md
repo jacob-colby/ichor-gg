@@ -685,4 +685,82 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Storm Front
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 48
+    wins: 23
+    win_share: 0.48
+    aggregate:
+      aspect_matches: 63
+      aspect_win_rate: 0.429
+      no_aspect_matches: 268
+      no_aspect_win_rate: 0.575
+    roles:
+    - role: Support
+      matches: 44
+      share: 0.92
+    - role: Solo
+      matches: 3
+      share: 0.06
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Jungle
+    base_role_share: 0.02
+    role_shift:
+      role: Support
+      share: 0.92
+      says: 'most Aspect of the Storm Front players do not play Jungle: Support 92%,
+        Jungle 2%'
+    items:
+    - name: Runeforged Hammer
+      share: 0.71
+    - name: Stone of Binding
+      share: 0.6
+    - name: Freya's Tears
+      share: 0.56
+    - name: Breastplate of Valor
+      share: 0.4
+    - name: Genji's Guard
+      share: 0.4
+    - name: brawlers-ruin
+      share: 0.29
+    - name: Shell of Rebuke
+      share: 0.27
+    - name: Stampede
+      share: 0.23
+    starters:
+    - name: Bluestone Brooch
+      share: 0.25
+    - name: Bluestone Pendant
+      share: 0.25
+    - name: Bumba's Cudgel
+      share: 0.23
+    relics:
+    - name: phantom-shell
+      share: 0.42
+    - name: Blink Rune
+      share: 0.23
+    - name: purification-beads
+      share: 0.19
+    matches_by_window:
+      ob47: 48
+      ob46: 272
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

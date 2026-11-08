@@ -680,4 +680,81 @@ builds:
   - Titan's Bane
   - Heartseeker
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Loyalty
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 31
+    wins: 23
+    win_share: 0.74
+    aggregate:
+      aspect_matches: 50
+      aspect_win_rate: 0.66
+      no_aspect_matches: 535
+      no_aspect_win_rate: 0.533
+    roles:
+    - role: Support
+      matches: 24
+      share: 0.77
+    - role: Jungle
+      matches: 4
+      share: 0.13
+    - role: Solo
+      matches: 3
+      share: 0.1
+    base_role: Jungle
+    base_role_share: 0.13
+    role_shift:
+      role: Support
+      share: 0.77
+      says: 'most Aspect of Loyalty players do not play Jungle: Support 77%, Jungle
+        13%'
+    items:
+    - name: Freya's Tears
+      share: 0.39
+    - name: Genji's Guard
+      share: 0.29
+    - name: Shell of Rebuke
+      share: 0.29
+    - name: Shogun's Ofuda
+      share: 0.29
+    - name: Stampede
+      share: 0.29
+    - name: Breastplate of Valor
+      share: 0.26
+    - name: Gauntlet of Thebes
+      share: 0.26
+    - name: brawlers-ruin
+      share: 0.19
+    starters:
+    - name: Hunter's Cowl
+      share: 0.19
+    - name: War Flag
+      share: 0.19
+    - name: Sundering Axe
+      share: 0.13
+    relics:
+    - name: phantom-shell
+      share: 0.45
+    - name: purification-beads
+      share: 0.29
+    - name: Blink Rune
+      share: 0.13
+    matches_by_window:
+      ob47: 11
+      ob46: 31
+    unmapped_slugs:
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

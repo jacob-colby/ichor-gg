@@ -614,4 +614,81 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Shamash
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 88
+    wins: 51
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 93
+      aspect_win_rate: 0.57
+      no_aspect_matches: 52
+      no_aspect_win_rate: 0.596
+    roles:
+    - role: Jungle
+      matches: 54
+      share: 0.61
+    - role: Solo
+      matches: 32
+      share: 0.36
+    - role: Mid
+      matches: 1
+      share: 0.01
+    - role: Support
+      matches: 1
+      share: 0.01
+    base_role: Solo Jungle
+    base_role_share: 0.98
+    role_shift: null
+    items:
+    - name: Barbed Carver
+      share: 0.56
+    - name: Devourer's Gauntlet
+      share: 0.48
+    - name: Jotunn's Revenge
+      share: 0.38
+    - name: Heartseeker
+      share: 0.34
+    - name: The Reaper
+      share: 0.34
+    - name: Freya's Tears
+      share: 0.33
+    - name: Sanguine Lash
+      share: 0.32
+    - name: The Crusher
+      share: 0.26
+    starters:
+    - name: Hunter's Cowl
+      share: 0.45
+    - name: Bluestone Brooch
+      share: 0.23
+    - name: Leather Cowl
+      share: 0.1
+    relics:
+    - name: Blink Rune
+      share: 0.38
+    - name: purification-beads
+      share: 0.27
+    - name: aegis-of-acceleration
+      share: 0.2
+    matches_by_window:
+      ob47: 88
+      ob46: 247
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
 ---

@@ -689,4 +689,82 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Fulmination
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 44
+    wins: 16
+    win_share: 0.36
+    aggregate:
+      aspect_matches: 53
+      aspect_win_rate: 0.377
+      no_aspect_matches: 201
+      no_aspect_win_rate: 0.473
+    roles:
+    - role: Solo
+      matches: 30
+      share: 0.68
+    - role: Mid
+      matches: 8
+      share: 0.18
+    - role: Jungle
+      matches: 4
+      share: 0.09
+    - role: Support
+      matches: 2
+      share: 0.05
+    base_role: Solo
+    base_role_share: 0.68
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.43
+    - name: Shifter's Shield
+      share: 0.39
+    - name: Sanguine Lash
+      share: 0.3
+    - name: Eye of the Storm
+      share: 0.27
+    - name: Heartseeker
+      share: 0.27
+    - name: Freya's Tears
+      share: 0.25
+    - name: Jotunn's Revenge
+      share: 0.25
+    - name: The Crusher
+      share: 0.23
+    starters:
+    - name: Bluestone Brooch
+      share: 0.5
+    - name: Bluestone Pendant
+      share: 0.36
+    - name: Blood-soaked Shroud
+      share: 0.05
+    relics:
+    - name: sundering-arc
+      share: 0.34
+    - name: Blink Rune
+      share: 0.25
+    - name: purification-beads
+      share: 0.16
+    matches_by_window:
+      ob47: 13
+      ob46: 44
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

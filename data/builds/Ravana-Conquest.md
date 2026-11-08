@@ -772,4 +772,74 @@ builds:
     reason: community 74% win over 35 matches (vs 51% on this god), taking the model's
       weakest slot from Berserker's Shield
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Rakshasa King
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 35
+    wins: 17
+    win_share: 0.49
+    aggregate:
+      aspect_matches: 43
+      aspect_win_rate: 0.488
+      no_aspect_matches: 1042
+      no_aspect_win_rate: 0.488
+    roles:
+    - role: Solo
+      matches: 23
+      share: 0.66
+    - role: Jungle
+      matches: 12
+      share: 0.34
+    base_role: Jungle
+    base_role_share: 0.34
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.74
+    - name: Devourer's Gauntlet
+      share: 0.49
+    - name: brawlers-ruin
+      share: 0.43
+    - name: Kinetic Cuirass
+      share: 0.43
+    - name: Jotunn's Revenge
+      share: 0.37
+    - name: Shifter's Shield
+      share: 0.37
+    - name: Sundering Echo
+      share: 0.34
+    - name: Hide of the Nemean Lion
+      share: 0.26
+    starters:
+    - name: Bumba's Hammer
+      share: 0.34
+    - name: Bluestone Brooch
+      share: 0.2
+    - name: Hunter's Cowl
+      share: 0.14
+    relics:
+    - name: Blink Rune
+      share: 0.6
+    - name: aegis-of-acceleration
+      share: 0.23
+    - name: phantom-shell
+      share: 0.09
+    matches_by_window:
+      ob47: 17
+      ob46: 35
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - sundering-arc
 ---

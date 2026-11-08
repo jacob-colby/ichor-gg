@@ -838,4 +838,106 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Agony
+    status: below minimum
+    matches_by_window:
+      ob46: 1
+  - aspect: Aspect of Laceration
+    status: below minimum
+    matches_by_window: {}
+  - aspect: Aspect of Mischief
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 123
+    wins: 72
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 140
+      aspect_win_rate: 0.571
+      no_aspect_matches: 488
+      no_aspect_win_rate: 0.574
+    roles:
+    - role: Carry
+      matches: 50
+      share: 0.41
+    - role: Solo
+      matches: 44
+      share: 0.36
+    - role: Jungle
+      matches: 16
+      share: 0.13
+    - role: Support
+      matches: 9
+      share: 0.07
+    - role: Mid
+      matches: 4
+      share: 0.03
+    base_role: Mid
+    base_role_share: 0.03
+    role_shift:
+      role: Carry
+      share: 0.41
+      says: 'most Aspect of Mischief players do not play Mid: Carry 41%, Mid 3%'
+    items:
+    - name: The World Stone
+      share: 0.46
+    - name: Odysseus' Bow
+      share: 0.44
+    - name: Hastened Fatalis
+      share: 0.41
+    - name: Bragi's Harp
+      share: 0.38
+    - name: Silverbranch Bow
+      share: 0.38
+    - name: The Executioner
+      share: 0.36
+    - name: Breastplate of Valor
+      share: 0.27
+    - name: Genji's Guard
+      share: 0.27
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.29
+    - name: Sundering Axe
+      share: 0.2
+    - name: Conduit Gem
+      share: 0.15
+    relics:
+    - name: purification-beads
+      share: 0.46
+    - name: aegis-of-acceleration
+      share: 0.45
+    - name: phantom-shell
+      share: 0.05
+    matches_by_window:
+      ob47: 24
+      ob46: 123
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
+  - aspect: Aspect of Spirits
+    status: below minimum
+    matches_by_window:
+      ob47: 1
+  - aspect: Aspect of Thunderstruck
+    status: below minimum
+    matches_by_window: {}
+  - aspect: Aspect of Victorious Conquest
+    status: below minimum
+    matches_by_window:
+      ob47: 1
 ---

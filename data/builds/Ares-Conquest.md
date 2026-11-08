@@ -710,4 +710,78 @@ builds:
     reason: community 71% win over 35 matches (vs 54% on this god), taking the model's
       weakest slot from Draconic Scale
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Reverberation
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 51
+    wins: 28
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 63
+      aspect_win_rate: 0.476
+      no_aspect_matches: 181
+      no_aspect_win_rate: 0.569
+    roles:
+    - role: Support
+      matches: 23
+      share: 0.45
+    - role: Solo
+      matches: 18
+      share: 0.35
+    - role: Jungle
+      matches: 10
+      share: 0.2
+    base_role: Support
+    base_role_share: 0.45
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.51
+    - name: Gauntlet of Thebes
+      share: 0.35
+    - name: Shifter's Shield
+      share: 0.35
+    - name: Genji's Guard
+      share: 0.31
+    - name: Kinetic Cuirass
+      share: 0.29
+    - name: Berserker's Shield
+      share: 0.22
+    - name: Devourer's Gauntlet
+      share: 0.2
+    - name: Mystical Mail
+      share: 0.2
+    starters:
+    - name: Hunter's Cowl
+      share: 0.14
+    - name: Bluestone Brooch
+      share: 0.12
+    - name: Heroism
+      share: 0.12
+    relics:
+    - name: Blink Rune
+      share: 0.53
+    - name: phantom-shell
+      share: 0.22
+    - name: sundering-arc
+      share: 0.12
+    matches_by_window:
+      ob47: 51
+      ob46: 160
+    unmapped_slugs:
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

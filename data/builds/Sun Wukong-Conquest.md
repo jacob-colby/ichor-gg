@@ -628,4 +628,82 @@ builds:
     reason: community 66% win over 97 matches (vs 55% on this god), taking the model's
       weakest slot from Shield Splitter
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Transformation
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 50
+    wins: 28
+    win_share: 0.56
+    aggregate:
+      aspect_matches: 56
+      aspect_win_rate: 0.536
+      no_aspect_matches: 850
+      no_aspect_win_rate: 0.534
+    roles:
+    - role: Solo
+      matches: 41
+      share: 0.82
+    - role: Mid
+      matches: 6
+      share: 0.12
+    - role: Support
+      matches: 2
+      share: 0.04
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Solo
+    base_role_share: 0.82
+    role_shift: null
+    items:
+    - name: Rod of Tahuti
+      share: 0.32
+    - name: Chronos' Pendant
+      share: 0.3
+    - name: Freya's Tears
+      share: 0.28
+    - name: Book of Thoth
+      share: 0.24
+    - name: brawlers-ruin
+      share: 0.24
+    - name: Devourer's Gauntlet
+      share: 0.22
+    - name: Spear of Desolation
+      share: 0.22
+    - name: Ancient Signet
+      share: 0.18
+    starters:
+    - name: Archmage's Gem
+      share: 0.32
+    - name: Bluestone Brooch
+      share: 0.32
+    - name: Conduit Gem
+      share: 0.12
+    relics:
+    - name: purification-beads
+      share: 0.34
+    - name: aegis-of-acceleration
+      share: 0.3
+    - name: phantom-shell
+      share: 0.2
+    matches_by_window:
+      ob47: 26
+      ob46: 50
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

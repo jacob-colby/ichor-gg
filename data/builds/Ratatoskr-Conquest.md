@@ -690,4 +690,85 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Thickbark
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 211
+    wins: 135
+    win_share: 0.64
+    aggregate:
+      aspect_matches: 224
+      aspect_win_rate: 0.634
+      no_aspect_matches: 301
+      no_aspect_win_rate: 0.561
+    roles:
+    - role: Solo
+      matches: 138
+      share: 0.65
+    - role: Support
+      matches: 44
+      share: 0.21
+    - role: Jungle
+      matches: 29
+      share: 0.14
+    base_role: Jungle
+    base_role_share: 0.14
+    role_shift:
+      role: Solo
+      share: 0.65
+      says: 'most Aspect of the Thickbark players do not play Jungle: Solo 65%, Jungle
+        14%'
+    items:
+    - name: Ashwhorl Acorn
+      share: 1.0
+    - name: Briskberry Acorn
+      share: 1.0
+    - name: Thistlethorn Acorn
+      share: 0.87
+    - name: Genji's Guard
+      share: 0.5
+    - name: Shield of the Phoenix
+      share: 0.48
+    - name: Freya's Tears
+      share: 0.31
+    - name: Breastplate of Valor
+      share: 0.26
+    - name: Jotunn's Revenge
+      share: 0.11
+    starters:
+    - name: Bluestone Brooch
+      share: 0.64
+    - name: Bluestone Pendant
+      share: 0.26
+    - name: Vampiric Shroud
+      share: 0.02
+    relics:
+    - name: sundering-arc
+      share: 0.35
+    - name: purification-beads
+      share: 0.3
+    - name: phantom-shell
+      share: 0.2
+    matches_by_window:
+      ob47: 211
+      ob46: 372
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - lively-acorn
+    - magic-acorn
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

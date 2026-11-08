@@ -717,4 +717,85 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-10-20'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of War
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 101
+    wins: 65
+    win_share: 0.64
+    aggregate:
+      aspect_matches: 114
+      aspect_win_rate: 0.623
+      no_aspect_matches: 288
+      no_aspect_win_rate: 0.566
+    roles:
+    - role: Jungle
+      matches: 77
+      share: 0.76
+    - role: Solo
+      matches: 14
+      share: 0.14
+    - role: Support
+      matches: 8
+      share: 0.08
+    - role: Mid
+      matches: 2
+      share: 0.02
+    base_role: Support
+    base_role_share: 0.08
+    role_shift:
+      role: Jungle
+      share: 0.76
+      says: 'most Aspect of War players do not play Support: Jungle 76%, Support 8%'
+    items:
+    - name: Hydra's Lament
+      share: 0.53
+    - name: Jotunn's Revenge
+      share: 0.43
+    - name: Transcendence
+      share: 0.32
+    - name: Book of Thoth
+      share: 0.29
+    - name: Shifter's Shield
+      share: 0.27
+    - name: Kinetic Cuirass
+      share: 0.25
+    - name: Polynomicon
+      share: 0.24
+    - name: Freya's Tears
+      share: 0.21
+    starters:
+    - name: Bumba's Hammer
+      share: 0.6
+    - name: Bumba's Cudgel
+      share: 0.18
+    - name: Sharpshooter's Arrow
+      share: 0.08
+    relics:
+    - name: purification-beads
+      share: 0.53
+    - name: Blink Rune
+      share: 0.16
+    - name: aegis-of-acceleration
+      share: 0.14
+    matches_by_window:
+      ob47: 101
+      ob46: 208
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---
