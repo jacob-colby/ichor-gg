@@ -990,7 +990,9 @@ builds:
   aspect: Aspect of Preservation
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
-  complete_from: '2026-10-20'
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
   minimum_matches: 30
   window_rule: the newest patch window, or the last closed one when the newest holds
     fewer than minimum_matches of the aspect's matches
@@ -1000,4 +1002,5 @@ community_aspects:
     matches_by_window:
       ob47: 2
       ob46: 9
+      ob45: 6
 ---

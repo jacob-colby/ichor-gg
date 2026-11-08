@@ -840,7 +840,9 @@ builds:
   starter: *id001
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
-  complete_from: '2026-10-20'
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
   minimum_matches: 30
   window_rule: the newest patch window, or the last closed one when the newest holds
     fewer than minimum_matches of the aspect's matches
@@ -851,7 +853,8 @@ community_aspects:
       ob46: 1
   - aspect: Aspect of Laceration
     status: below minimum
-    matches_by_window: {}
+    matches_by_window:
+      ob45: 1
   - aspect: Aspect of Mischief
     status: shown
     window: ob46
@@ -922,6 +925,8 @@ community_aspects:
     matches_by_window:
       ob47: 24
       ob46: 123
+      ob45: 81
+      ob44: 112
     unmapped_slugs:
     - aegis-of-acceleration
     - agility-relic
@@ -935,9 +940,11 @@ community_aspects:
       ob47: 1
   - aspect: Aspect of Thunderstruck
     status: below minimum
-    matches_by_window: {}
+    matches_by_window:
+      ob45: 1
   - aspect: Aspect of Victorious Conquest
     status: below minimum
     matches_by_window:
       ob47: 1
+      ob45: 1
 ---
