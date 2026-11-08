@@ -51,6 +51,7 @@ def test_tsukuyomi_mangetsu_is_on_record_and_says_why_it_is_or_is_not_shown():
     entry = next(a for a in fm["community_aspects"]["aspects"] if a["aspect"] == "Aspect of Mangetsu")
     counts = entry["matches_by_window"]
     assert counts.get("ob46", 0) >= 21           # OB46 is closed and backfilled whole
+    assert counts.get("ob45", 0) >= 30           # so is OB45; the rule does not reach it
     window, rule = am.choose_window(counts, am.ordered_windows(am.load_meta()))
     assert entry["status"] == ("shown" if window else "below minimum")
     if window:

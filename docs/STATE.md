@@ -2495,11 +2495,12 @@ What aspect players BUY, from SmiteBrain's per-match feed (the tRPC call
 behind "More Builds", which paginates; the `__data.json` page never does).
 Verified first: placement 1 is the win (mirror test 14/14, the site's own
 colouring, and feed shares tracking `matches_won` on both sides of 50%); the
-feed holds ~85% of the aggregate's matches; retention is ~45 days. The store is
-`data/Analysis/aspect_matches/` — append-only, in git, no player names, the
-match GUID hashed — backfilled for OB46 and OB47 (15,699 matches, 86 feeds;
-the full 45 days was over the session's time limit, `complete_from` records
-the cutoff), and the daily job adds ~217 requests to keep it. Each Conquest
+feed holds ~85% of the aggregate's matches; retention is a rolling 45 days. The
+store is `data/Analysis/aspect_matches/` — append-only, in git, no player
+names, the match GUID hashed — backfilled to the end of retention (36,947
+matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
+and OB44 is marked `partial_from` because its first 2.5 days had already aged
+out), and the daily job adds ~217 requests to keep it. Each Conquest
 note gains `community_aspects`: newest window, else the last closed, under the
 tier list's own 30-match floor; a role shift named on a Wilson bound. It is
 kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
@@ -2507,9 +2508,13 @@ kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
 **65 of 86 aspects clear the floor, and 32 of those 65 are played in a
 different role from the god's base role** — Bacchus' Revelry 87% Solo on a
 Support, Izanami's Sickle 70% Mid on a Carry. **Tsukuyomi's Mangetsu does not
-clear it** (OB47 6, OB46 21; pooled over 45 days, 73 matches, 56% Mid, 28
-players of whom one played 30%), so his entry is a stated `below minimum`.
-Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role shifts.
+clear it** (OB47 6, OB46 21; OB45 holds exactly 30, but the rule reaches back
+one window only; pooled over the store, 74 matches, 57% Mid, and of the 73 the
+probe could attribute, 28 players, one of whom played 30%), so his entry is a
+stated `below minimum`. Nine of the 21 below-minimum aspects reach 30 in OB45
+or OB44, and 13 pooled: whether to pool is the first decision the next session
+owns. Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role
+shifts.
 
 **Next, and it is a MODEL change:** an aspect build cannot change role through
 today's seam. An overlay carries only stat weights; `fit_map` reads the role
@@ -2522,8 +2527,9 @@ proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
 `aspect_matches`' docstring.
 
 **A lead for the draft feature, not built on:** every stored match carries its
-five enemy gods and the outcome — 78,495 god-vs-god outcome pairs on
-2026-11-08, ~8,000 more a day, skewed to aspect players. SmiteBrain also has a
+five enemy gods and the outcome — 184,735 god-vs-god outcome pairs from 24,032
+distinct matches on 2026-11-08, ~8,000 more a day, skewed to aspect players.
+SmiteBrain also has a
 `/gods/[godSlug]/matchups` route, not probed.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not

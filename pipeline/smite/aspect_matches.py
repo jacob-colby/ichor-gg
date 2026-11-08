@@ -33,9 +33,11 @@ THE SOURCE, every claim measured 2026-11-08 by hand before this was written:
     and not equal to it, so the aspect-vs-no-aspect WIN RATES are taken from
     the aggregate (`splitByAspect=true`, one request for every god), and the
     feed is used for what only it has: items, starter, relic, role.
-  * Retention is about 45 days: no record anywhere predates 2026-09-24
-    17:09Z, 45.0 days before the probe and two days INTO OB44's window, so it
-    is not a patch boundary. One reading; if it is rolling, anything not in
+  * Retention is a ROLLING 45 days. Two readings, six hours apart: no record
+    predated 2026-09-24 17:09Z at the first probe, and none predated
+    2026-09-24 23:09Z at 23:24Z after the backfill (a busy feed walked to a
+    short page). Each is 45.0 days before its reading, and both sit two days
+    INTO OB44's window, so the floor is not a patch boundary. Anything not in
     this store is gone after 45 days, which is why the store is in git.
   * `division` is nested (`obsidian` ⊇ `master` ⊇ `deity`: master's 72
     Mangetsu matches are all among obsidian's 73). `role=` is a strict subset
@@ -64,11 +66,18 @@ its start — and the note entry names it, so no window is silently short.
 `_aggregate.json` holds the split index's aspect / no-aspect rows per window.
 Records are assigned to the newest window whose start is not after them.
 
-THE BACKFILL (2026-11-08) went back to OB46's start for all 86 aspect feeds,
-not to the end of retention. The full 45 days measured at ~4,770 requests,
-about 3.9 h at the 2.5 s floor plus latency; the session's limit was 2.5 h, so
-the cutoff is OB46 and `complete_from` says so. From mid-OB44 the source's
-older matches age out a day at a time and cannot be fetched again.
+THE BACKFILL (2026-11-08) walked all 86 aspect feeds to the end of retention,
+in two passes: OB46 and OB47 first (1,636 requests), then OB45 and the
+retained part of OB44 (2,130 more; 3,766 in all, no retries). Every feed
+ended on a short page. The retention floor was measured AFTER the last feed
+was walked, and the floor only moves forward, so every feed walked earlier
+saw at least that far back. `complete_from` is that floor, 2026-09-24
+23:09:08Z; the 69 older records that the earliest feeds still reached were
+dropped, so every feed is cut at the same instant. OB44 therefore carries
+`partial_from`: its first 2.5 days are gone at the source and cannot be
+fetched again. 36,947 matches: OB44 9,336 (71% of the aggregate's aspect
+matches, the 2.5 missing days), OB45 11,912 (85%), OB46 10,711 (85%), OB47
+4,178 plus the 810-match no-aspect sample (85%).
 
 WHAT ONE RUN FETCHES (`refresh`), about 217 requests at 2.5 s (~9 min) for
 2026-11-08's volumes, on top of the ~100 the community refresh already sends:
@@ -110,14 +119,17 @@ THE BUILD-NOTE ENTRY (`community_aspects:` in each Conquest note), per aspect:
     which it does not, so the entry's `matches` is all it can claim, and a
     reader of a thin aspect's item shares should assume a few people.
 
-TSUKUYOMI, the acceptance case (2026-11-08, Obsidian+): Mangetsu holds 5
+TSUKUYOMI, the acceptance case (2026-11-08, Obsidian+): Mangetsu holds 6
 matches in OB47 and 21 in OB46, both under 30, so his entry is a stated
 `below minimum` with the per-window counts (OB44 17, OB45 30, OB46 21, OB47
-5). Pooled over the 45 retained days it is 73 matches, 56% Mid and 27% Jungle,
-buying Rod of Tahuti 81%, Book of Thoth 74%, Chronos' Pendant 58%. At about
-1.1 matches a day he cannot reach 30 inside one 14-day patch, so whether to
-pool closed windows is the next session's decision, and the store keeps them
-apart so it can be made.
+6). OB45 reaches the floor exactly, and the rule does not read it: it falls
+back ONE window, to the last closed, and no further, since any patch can move
+the kit or the items. Nine of the 21 below-minimum aspects, him included, reach
+30 in OB45 or OB44, and 13 reach it pooled. Pooled across the store's four windows
+he has 74 matches, 57% Mid and 27% Jungle, buying Rod of Tahuti 81%, Book of
+Thoth 73%, Chronos' Pendant 58%. At about 1.6 matches a day he cannot count on
+30 inside one 14-day patch, so whether to pool windows is the next session's
+decision, and the store keeps them apart so it can be made.
 
     python -m smite.aspect_matches refresh    # the daily job's step
     python -m smite.aspect_matches derive     # rewrite the notes from the store

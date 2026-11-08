@@ -22,8 +22,8 @@ cursor is the last record's `hz_match_start_timestamp`, and it is exclusive. The
 | Question | Answer | How it was measured |
 |---|---|---|
 | Is `player_placement` the win? | **Yes: 1 is a win, 2 a loss.** | **Mirror test:** 14 of 14 enemy records found for six Tsukuyomi matches carry the opposite placement and list Tsukuyomi as an enemy. Within a team all five agree, and two matches mirrored 5 of 5. **The site's own rendering:** it paints `===1` green and anything else red. **Against the aggregate's `matches_won`:** see the next table. |
-| How much of the aggregate is in the feed? | 81–96% per god, 85% of aspect matches in both OB46 and OB47 | Feed walked to each window's start, compared with the split index |
-| How deep does it go? | About 45 days. Nothing anywhere predates 2026-09-24 17:09Z. | Cursor jumps on Izanami. That date is 45.0 days before the probe and two days into OB44, so it is not a patch boundary. One reading. |
+| How much of the aggregate is in the feed? | 81–96% per god; 85% of aspect matches in each of OB45, OB46 and OB47, and 71% in OB44, whose first 2.5 days had aged out | Every aspect feed walked to the end of retention, compared with the split index |
+| How deep does it go? | A rolling 45 days. Nothing predated 2026-09-24 17:09Z at the first probe, and nothing predated 23:09Z the same day at 23:24Z on 11-08, after the backfill. | Cursor jumps on Izanami, then a walk to a short page. Each floor is 45.0 days before its reading, and both are two days into OB44, so the floor is not a patch boundary. |
 | Does `role=` multiply it? | No. It is a strict subset. | `role=mid` returned exactly 40 of Mangetsu's 72 Master+ matches |
 | Is `division` nested? | Yes: `obsidian` ⊇ `master` ⊇ `deity` | Master's 72 Mangetsu matches are all among Obsidian's 73 |
 | Does "More Builds" paginate? | Yes, with the cursor above | 319 distinct Tsukuyomi OB47 matches, no duplicate at a page edge |
@@ -52,8 +52,9 @@ gods' aspects besides her own, because she copies gods. 27% of records hold an
   no-aspect page per god, and every aspect feed walked back to the newest stored
   match. That is about 9 minutes at the 2.5 s floor, on top of the ~100 requests
   the community refresh already sends.
-- **Backfill:** 1,636 requests plus 95 discovery pages, at about 2.95 s each
-  once latency is included.
+- **Backfill:** 3,766 requests plus 95 discovery pages, at about 2.95 s each
+  once latency is included, with no retries. It ran in two passes: 1,636 for
+  OB46 and OB47, then 2,130 for OB45 and OB44.
 
 ## 2. What was built
 
@@ -65,12 +66,18 @@ gods' aspects besides her own, because she copies gods. 27% of records hold an
     all ten players.
   - `_meta.json` holds the window registry, the aspect list per god, and
     `complete_from`. `_aggregate.json` holds the split index per window.
-* **The backfill:** OB46 and OB47, complete for all 86 aspect feeds of 81 gods.
-  - That is 15,699 matches: 14,889 aspect matches and an 810-match no-aspect
-    sample.
-  - The full 45 days measured at about 4,770 requests, about 3.9 h. The
-    session's limit was 2.5 h, so the cutoff is OB46's start, recorded as
-    `complete_from`.
+* **The backfill:** all 86 aspect feeds of 81 gods walked to the end of
+  retention, so OB44 (in part), OB45, OB46 and OB47.
+  - That is 36,947 matches: 36,137 aspect matches and an 810-match no-aspect
+    sample. 13.0 MB on disk.
+  - Every feed ended on a short page. The floor was measured after the last
+    feed was walked, at 2026-09-24 23:09:08Z, and recorded as `complete_from`.
+    The 69 older records that the earliest-walked feeds still reached were
+    dropped, so every feed is cut at the same instant.
+  - OB44 carries `partial_from`, because its first 2.5 days had aged out at
+    the source. The note header names it.
+  - The first pass (OB46 and OB47) fit the 2.5 h limit. The second pass ran
+    while the PR waited on #127, and landed as its own data commit.
 * **`community_aspects:` in every Conquest note** that has an aspect.
   - **Window rule:** the newest patch window, unless it holds fewer than 30 of
     the aspect's matches; then the last closed window; otherwise a stated
@@ -88,17 +95,20 @@ gods' aspects besides her own, because she copies gods. 27% of records hold an
 ## 3. Tsukuyomi, the acceptance case
 
 **His entry is a stated `below minimum`:** OB47 has 6 Mangetsu matches, OB46 21.
-At about 1.1 matches a day he cannot reach 30 inside one 14-day patch.
+OB45 holds exactly 30, and OB44 17. The rule reaches back one window only,
+to the last closed, so OB45 is not read. At about 1.6 matches a day he cannot
+count on 30 inside one 14-day patch.
 
-**Pooled over the 45 retained days** (from the probe; only OB46 and OB47 are
-in the store) it is 73 matches. They are 56% Mid and 27% Jungle, and buy:
-- Rod of Tahuti 81%, Book of Thoth 74%, Chronos' Pendant 58% and Obsidian Shard 58%;
+**Pooled over the store's four windows** it is 74 matches. They are 57% Mid
+and 27% Jungle, and buy:
+- Rod of Tahuti 81%, Book of Thoth 73%, Chronos' Pendant 58% and Obsidian Shard 57%;
 - starter: Bluestone Brooch 34%, Archmage's Gem 27%;
-- relic: Purification Beads 60%.
+- relic: Purification Beads 61%, Aegis of Acceleration 35%.
 
-**Those 73 matches are 28 players.** One of them played 22 (30%), and the top
-three played 49%. His no-aspect OB47 matches are 89% Jungle, on Transcendence,
-Heartseeker and Bumba's Hammer.
+**The 73 matches the probe could attribute are 28 players** (counted once,
+before names were dropped; the store cannot count them). One of them
+played 22 (30%), and the top three played 49%. His no-aspect OB47 matches
+are 89% Jungle, on Transcendence, Heartseeker and Bumba's Hammer.
 
 The record says what Jacob said, Mid on a magical build. Under the repo's own
 floor, it does not say it for any single patch.
@@ -109,94 +119,100 @@ floor, it does not say it for any single patch.
 from the last closed one. 21 feeds are below the minimum, and 5 of those are
 The Morrigan's copied aspects. **32 of the 65 shown entries are a role shift.**
 
-| God | Aspect | OB47 | OB46 | Entry | Role shift |
-|---|---|--:|--:|---|---|
-| Nike | Aspect of Victorious Conquest | 202 | 900 | ob47 (newest) | Solo → Jungle |
-| Bacchus | Aspect of Revelry | 386 | 659 | ob47 (newest) | Support → Solo |
-| Thor | Aspect of Thunderstruck | 163 | 654 | ob47 (newest) | — |
-| Aphrodite | Aspect of Heartbreak | 163 | 518 | ob47 (newest) | — |
-| Ratatoskr | Aspect of the Thickbark | 211 | 372 | ob47 (newest) | Jungle → Solo |
-| Cernunnos | Aspect of Strife | 64 | 515 | ob47 (newest) | — |
-| Izanami | Aspect of the Sickle | 543 | 0 | ob47 (newest) | Carry → Mid |
-| Hel | Aspect of Divergence | 82 | 332 | ob47 (newest) | — |
-| Baron Samedi | Aspect of Hysteria | 124 | 240 | ob47 (newest) | — |
-| Kuzenbo | Aspect of Spirits | 140 | 207 | ob47 (newest) | Support → Solo |
-| Gilgamesh | Aspect of Shamash | 88 | 247 | ob47 (newest) | — |
-| Ishtar | Aspect of the Passionate Storm | 69 | 259 | ob47 (newest) | Carry → Solo |
-| Susano | Aspect of the Storm Front | 48 | 272 | ob47 (newest) | Jungle → Support |
-| Thanatos | Aspect of Reaping | 85 | 231 | ob47 (newest) | — |
-| Athena | Aspect of War | 101 | 208 | ob47 (newest) | Support → Jungle |
-| Loki | Aspect of Agony | 63 | 235 | ob47 (newest) | Jungle → Solo |
-| Neith | Aspect of Wind | 58 | 217 | ob47 (newest) | — |
-| Artio | Aspect of the Denmother | 52 | 215 | ob47 (newest) | — |
-| Sol | Aspect of Conflagration | 84 | 178 | ob47 (newest) | — |
-| Khepri | Aspect of Laceration | 59 | 191 | ob47 (newest) | — |
-| Hachiman | Aspect of the Steel Wind | 84 | 154 | ob47 (newest) | Carry → Jungle |
-| Sylvanus | Aspect of Grover's Wrath | 42 | 188 | ob47 (newest) | Support → Solo |
-| Morgan Le Fay | Aspect of the Cursed Crown | 69 | 158 | ob47 (newest) | Mid → Solo |
-| Ne Zha | Aspect of Righteous Flame | 78 | 146 | ob47 (newest) | Jungle → Support |
-| Hou Yi | Aspect of the Mark | 19 | 200 | ob46 (last closed) | — |
-| Ares | Aspect of Reverberation | 51 | 160 | ob47 (newest) | — |
-| Kukulkan | Aspect of the Squall | 50 | 144 | ob47 (newest) | Mid → Solo |
-| Anhur | Aspect of Pride | 51 | 132 | ob47 (newest) | — |
-| Ah Puch | Aspect of the Death March | 36 | 144 | ob47 (newest) | Mid → Solo |
-| Scylla | Aspect of the Devourer | 49 | 123 | ob47 (newest) | Mid → Support |
-| Bastet | Aspect of the Watchful Pride | 47 | 121 | ob47 (newest) | Jungle → Support |
-| Nemesis | Aspect of Justice | 40 | 125 | ob47 (newest) | Jungle → Solo |
-| Xing Tian | Aspect of Relentless Spite | 29 | 129 | ob46 (last closed) | — |
-| Cu Chulainn | Aspect of the Warped | 37 | 112 | ob47 (newest) | — |
-| The Morrigan | Aspect of Mischief | 24 | 123 | ob46 (last closed) | Mid → Carry |
-| Vulcan | Aspect of Fortification | 37 | 94 | ob47 (newest) | Mid → Solo |
-| Kali | Aspect of Unbound Destruction | 24 | 104 | ob46 (last closed) | Jungle → Carry |
-| Nox | Aspect of Silent Night | 126 | 0 | ob47 (newest) | — |
-| Artemis | Aspect of the Wild | 14 | 96 | ob46 (last closed) | — |
-| Eset | Aspect of the Lifewarden | 19 | 82 | ob46 (last closed) | Mid → Support |
-| Poseidon | Aspect of the Trident | 44 | 56 | ob47 (newest) | Mid → Carry |
-| Xbalanque | Aspect of the Nightstalker | 25 | 71 | ob46 (last closed) | Carry → Mid |
-| Guan Yu | Aspect of the General | 14 | 76 | ob46 (last closed) | — |
-| Ganesha | Aspect of the Triumphant | 24 | 59 | ob46 (last closed) | — |
-| Yemoja | Aspect of Downpour | 5 | 75 | ob46 (last closed) | Support → Mid |
-| Sun Wukong | Aspect of Transformation | 26 | 50 | ob46 (last closed) | — |
-| Achilles | Aspect of Prowess | 26 | 48 | ob46 (last closed) | — |
-| Charon | Aspect of the Tollkeeper | 12 | 60 | ob46 (last closed) | Support → Mid |
-| Chiron | Aspect of the Heroic Tutor | 9 | 58 | ob46 (last closed) | — |
-| Agni | Aspect of Combustion | 16 | 48 | ob46 (last closed) | Mid → Carry |
-| Discordia | Aspect of the Gilded Victor | 15 | 49 | ob46 (last closed) | Mid → Carry |
-| Hun Batz | Aspect of Disruption | 18 | 46 | ob46 (last closed) | — |
-| Osiris | Aspect of the Fragmented | 18 | 45 | ob46 (last closed) | — |
-| Pele | Aspect of Obsidian | 15 | 46 | ob46 (last closed) | Jungle → Solo |
-| Merlin | Aspect of Pandemonium | 9 | 51 | ob46 (last closed) | — |
-| Chaac | Aspect of Fulmination | 13 | 44 | ob46 (last closed) | — |
-| Danzaburou | Aspect of Fellowship | 9 | 47 | ob46 (last closed) | — |
-| Ra | Aspect of Thermotherapy | 11 | 44 | ob46 (last closed) | Mid → Support |
-| Hecate | Aspect of Ruin | 14 | 39 | ob46 (last closed) | — |
-| Ravana | Aspect of the Rakshasa King | 17 | 35 | ob46 (last closed) | — |
-| Bellona | Aspect of Vindication | 4 | 40 | ob46 (last closed) | — |
-| Apollo | Aspect of Harmony | 17 | 26 | below minimum | |
-| Nut | Aspect of the Cosmos | 6 | 37 | ob46 (last closed) | — |
-| Fenrir | Aspect of Loyalty | 11 | 31 | ob46 (last closed) | Jungle → Support |
-| Sobek | Aspect of Prey | 4 | 38 | ob46 (last closed) | Support → Solo |
-| Cabrakan | Aspect of the Rotund Jotunn | 10 | 31 | ob46 (last closed) | — |
-| Chronos | Aspect of Relativity | 7 | 28 | below minimum | |
-| Cerberus | Aspect of Souls | 6 | 28 | below minimum | |
-| Ix Chel | Aspect of the Mother's Light | 10 | 24 | below minimum | |
-| Jormungandr | Aspect of the Unyielding | 10 | 24 | below minimum | |
-| Mordred | Aspect of Rage | 6 | 23 | below minimum | |
-| Nu Wa | Aspect of Shining Mist | 6 | 23 | below minimum | |
-| Atlas | Aspect of the Unburdened | 2 | 25 | below minimum | |
-| Tsukuyomi | Aspect of Mangetsu | 6 | 21 | below minimum | |
-| Amaterasu | Aspect Of Valor | 4 | 18 | below minimum | |
-| Cupid | Aspect of Love | 3 | 15 | below minimum | |
-| Geb | Aspect of Calamity | 4 | 13 | below minimum | |
-| Da Ji | Aspect of Ferocity | 3 | 8 | below minimum | |
-| Hercules | Aspect of Preservation | 2 | 9 | below minimum | |
-| Horus | Aspect of the Falcon | 1 | 9 | below minimum | |
-| Rama | Aspect of Precision | 3 | 7 | below minimum | |
-| The Morrigan | Aspect of Agony | 0 | 1 | below minimum | |
-| The Morrigan | Aspect of Spirits | 1 | 0 | below minimum | |
-| The Morrigan | Aspect of Victorious Conquest | 1 | 0 | below minimum | |
-| The Morrigan | Aspect of Laceration | 0 | 0 | below minimum | |
-| The Morrigan | Aspect of Thunderstruck | 0 | 0 | below minimum | |
+Adding OB45 and OB44 changed no entry, because the rule reads only the newest
+window and the last closed one. **9 of the 21 below-minimum aspects reach 30
+in OB45 or OB44, and 13 reach it pooled.** Several were played far more two
+patches ago: Jormungandr 104 in OB45 against 24 in OB46, Chronos 84 against
+28. Sorted by the four-window total.
+
+| God | Aspect | OB47 | OB46 | OB45 | OB44 | Entry | Role shift |
+|---|---|--:|--:|--:|--:|---|---|
+| Thor | Aspect of Thunderstruck | 163 | 654 | 1004 | 714 | ob47 (newest) | — |
+| Hel | Aspect of Divergence | 82 | 332 | 963 | 788 | ob47 (newest) | — |
+| Cernunnos | Aspect of Strife | 64 | 515 | 671 | 741 | ob47 (newest) | — |
+| Bacchus | Aspect of Revelry | 386 | 659 | 521 | 221 | ob47 (newest) | Support → Solo |
+| Nike | Aspect of Victorious Conquest | 202 | 900 | 614 | 0 | ob47 (newest) | Solo → Jungle |
+| Aphrodite | Aspect of Heartbreak | 163 | 518 | 577 | 0 | ob47 (newest) | — |
+| Gilgamesh | Aspect of Shamash | 88 | 247 | 383 | 284 | ob47 (newest) | — |
+| Ratatoskr | Aspect of the Thickbark | 211 | 372 | 221 | 169 | ob47 (newest) | Jungle → Solo |
+| Thanatos | Aspect of Reaping | 85 | 231 | 269 | 372 | ob47 (newest) | — |
+| Baron Samedi | Aspect of Hysteria | 124 | 240 | 244 | 234 | ob47 (newest) | — |
+| Athena | Aspect of War | 101 | 208 | 328 | 201 | ob47 (newest) | Support → Jungle |
+| Hou Yi | Aspect of the Mark | 19 | 200 | 382 | 207 | ob46 (last closed) | — |
+| Ishtar | Aspect of the Passionate Storm | 69 | 259 | 245 | 235 | ob47 (newest) | Carry → Solo |
+| Artio | Aspect of the Denmother | 52 | 215 | 287 | 218 | ob47 (newest) | — |
+| Ares | Aspect of Reverberation | 51 | 160 | 210 | 347 | ob47 (newest) | — |
+| Khepri | Aspect of Laceration | 59 | 191 | 235 | 229 | ob47 (newest) | — |
+| Loki | Aspect of Agony | 63 | 235 | 217 | 197 | ob47 (newest) | Jungle → Solo |
+| Sol | Aspect of Conflagration | 84 | 178 | 210 | 216 | ob47 (newest) | — |
+| Susano | Aspect of the Storm Front | 48 | 272 | 355 | 0 | ob47 (newest) | Jungle → Support |
+| Izanami | Aspect of the Sickle | 543 | 0 | 0 | 0 | ob47 (newest) | Carry → Mid |
+| Neith | Aspect of Wind | 58 | 217 | 145 | 122 | ob47 (newest) | — |
+| Sylvanus | Aspect of Grover's Wrath | 42 | 188 | 199 | 107 | ob47 (newest) | Support → Solo |
+| Morgan Le Fay | Aspect of the Cursed Crown | 69 | 158 | 141 | 158 | ob47 (newest) | Mid → Solo |
+| Ne Zha | Aspect of Righteous Flame | 78 | 146 | 140 | 139 | ob47 (newest) | Jungle → Support |
+| Anhur | Aspect of Pride | 51 | 132 | 145 | 166 | ob47 (newest) | — |
+| Xing Tian | Aspect of Relentless Spite | 29 | 129 | 129 | 191 | ob46 (last closed) | — |
+| Kukulkan | Aspect of the Squall | 50 | 144 | 124 | 152 | ob47 (newest) | Mid → Solo |
+| Hachiman | Aspect of the Steel Wind | 84 | 154 | 120 | 111 | ob47 (newest) | Carry → Jungle |
+| Scylla | Aspect of the Devourer | 49 | 123 | 108 | 121 | ob47 (newest) | Mid → Support |
+| Kali | Aspect of Unbound Destruction | 24 | 104 | 135 | 137 | ob46 (last closed) | Jungle → Carry |
+| Nemesis | Aspect of Justice | 40 | 125 | 144 | 63 | ob47 (newest) | Jungle → Solo |
+| Kuzenbo | Aspect of Spirits | 140 | 207 | 0 | 0 | ob47 (newest) | Support → Solo |
+| The Morrigan | Aspect of Mischief | 24 | 123 | 81 | 112 | ob46 (last closed) | Mid → Carry |
+| Ah Puch | Aspect of the Death March | 36 | 144 | 60 | 95 | ob47 (newest) | Mid → Solo |
+| Charon | Aspect of the Tollkeeper | 12 | 60 | 97 | 136 | ob46 (last closed) | Support → Mid |
+| Artemis | Aspect of the Wild | 14 | 96 | 91 | 95 | ob46 (last closed) | — |
+| Cu Chulainn | Aspect of the Warped | 37 | 112 | 55 | 90 | ob47 (newest) | — |
+| Bastet | Aspect of the Watchful Pride | 47 | 121 | 66 | 48 | ob47 (newest) | Jungle → Support |
+| Eset | Aspect of the Lifewarden | 19 | 82 | 97 | 76 | ob46 (last closed) | Mid → Support |
+| Vulcan | Aspect of Fortification | 37 | 94 | 78 | 48 | ob47 (newest) | Mid → Solo |
+| Guan Yu | Aspect of the General | 14 | 76 | 62 | 86 | ob46 (last closed) | — |
+| Sun Wukong | Aspect of Transformation | 26 | 50 | 73 | 84 | ob46 (last closed) | — |
+| Agni | Aspect of Combustion | 16 | 48 | 85 | 83 | ob46 (last closed) | Mid → Carry |
+| Pele | Aspect of Obsidian | 15 | 46 | 89 | 77 | ob46 (last closed) | Jungle → Solo |
+| Chaac | Aspect of Fulmination | 13 | 44 | 74 | 87 | ob46 (last closed) | — |
+| Poseidon | Aspect of the Trident | 44 | 56 | 54 | 62 | ob47 (newest) | Mid → Carry |
+| Yemoja | Aspect of Downpour | 5 | 75 | 78 | 56 | ob46 (last closed) | Support → Mid |
+| Achilles | Aspect of Prowess | 26 | 48 | 67 | 70 | ob46 (last closed) | — |
+| Xbalanque | Aspect of the Nightstalker | 25 | 71 | 52 | 62 | ob46 (last closed) | Carry → Mid |
+| Bellona | Aspect of Vindication | 4 | 40 | 79 | 79 | ob46 (last closed) | — |
+| Ganesha | Aspect of the Triumphant | 24 | 59 | 74 | 40 | ob46 (last closed) | — |
+| Osiris | Aspect of the Fragmented | 18 | 45 | 43 | 72 | ob46 (last closed) | — |
+| Ra | Aspect of Thermotherapy | 11 | 44 | 52 | 65 | ob46 (last closed) | Mid → Support |
+| Merlin | Aspect of Pandemonium | 9 | 51 | 41 | 64 | ob46 (last closed) | — |
+| Discordia | Aspect of the Gilded Victor | 15 | 49 | 60 | 39 | ob46 (last closed) | Mid → Carry |
+| Cabrakan | Aspect of the Rotund Jotunn | 10 | 31 | 53 | 61 | ob46 (last closed) | — |
+| Fenrir | Aspect of Loyalty | 11 | 31 | 52 | 57 | ob46 (last closed) | Jungle → Support |
+| Hun Batz | Aspect of Disruption | 18 | 46 | 38 | 48 | ob46 (last closed) | — |
+| Chiron | Aspect of the Heroic Tutor | 9 | 58 | 31 | 44 | ob46 (last closed) | — |
+| Nox | Aspect of Silent Night | 126 | 0 | 0 | 0 | ob47 (newest) | — |
+| Nut | Aspect of the Cosmos | 6 | 37 | 39 | 43 | ob46 (last closed) | — |
+| Hecate | Aspect of Ruin | 14 | 39 | 33 | 35 | ob46 (last closed) | — |
+| Sobek | Aspect of Prey | 4 | 38 | 32 | 21 | ob46 (last closed) | Support → Solo |
+| Ravana | Aspect of the Rakshasa King | 17 | 35 | 20 | 21 | ob46 (last closed) | — |
+| Danzaburou | Aspect of Fellowship | 9 | 47 | 14 | 20 | ob46 (last closed) | — |
+| Jormungandr | Aspect of the Unyielding | 10 | 24 | 104 | 53 | below minimum |  |
+| Ix Chel | Aspect of the Mother's Light | 10 | 24 | 54 | 68 | below minimum |  |
+| Chronos | Aspect of Relativity | 7 | 28 | 84 | 26 | below minimum |  |
+| Mordred | Aspect of Rage | 6 | 23 | 45 | 53 | below minimum |  |
+| Nu Wa | Aspect of Shining Mist | 6 | 23 | 46 | 37 | below minimum |  |
+| Atlas | Aspect of the Unburdened | 2 | 25 | 37 | 28 | below minimum |  |
+| Apollo | Aspect of Harmony | 17 | 26 | 14 | 32 | below minimum |  |
+| Cerberus | Aspect of Souls | 6 | 28 | 24 | 27 | below minimum |  |
+| Tsukuyomi | Aspect of Mangetsu | 6 | 21 | 30 | 17 | below minimum |  |
+| Amaterasu | Aspect Of Valor | 4 | 18 | 14 | 33 | below minimum |  |
+| Cupid | Aspect of Love | 3 | 15 | 27 | 7 | below minimum |  |
+| Da Ji | Aspect of Ferocity | 3 | 8 | 13 | 14 | below minimum |  |
+| Horus | Aspect of the Falcon | 1 | 9 | 10 | 16 | below minimum |  |
+| Geb | Aspect of Calamity | 4 | 13 | 6 | 5 | below minimum |  |
+| Rama | Aspect of Precision | 3 | 7 | 9 | 4 | below minimum |  |
+| Hercules | Aspect of Preservation | 2 | 9 | 6 | 0 | below minimum |  |
+| The Morrigan | Aspect of Victorious Conquest | 1 | 0 | 1 | 0 | below minimum |  |
+| The Morrigan | Aspect of Agony | 0 | 1 | 0 | 0 | below minimum |  |
+| The Morrigan | Aspect of Laceration | 0 | 0 | 1 | 0 | below minimum |  |
+| The Morrigan | Aspect of Spirits | 1 | 0 | 0 | 0 | below minimum |  |
+| The Morrigan | Aspect of Thunderstruck | 0 | 0 | 1 | 0 | below minimum |  |
 
 `python -m smite.aspect_matches depth` prints the current table.
 
@@ -247,8 +263,10 @@ Conquest `core`, so any aspect build reads `+0.0000` there by construction, and
 the frozen reference builds are the only gate.
 
 **What the record cannot tell you.**
-- **It counts matches, not players.** Mangetsu's 73 matches are 28 people, and
-  one of them played 30%.
+- **It counts matches, not players.** The 73 Mangetsu matches the probe could
+  attribute are 28 people, and one of them played 30%.
+- **Whether to pool windows is the first decision.** Pooling would give 13
+  more aspects an entry, Tsukuyomi among them, at the cost of mixing patches.
 - **It is Obsidian+ only.** `rank` is stored, so Master+ (rank ≥ 4400) is
   recoverable.
 - **Slots are inventory slots, not purchase order.**
@@ -256,9 +274,9 @@ the frozen reference builds are the only gate.
 ## 6. A lead for the draft feature: per-match matchups
 
 Every stored record carries the five enemy gods and the outcome.
-- **Now:** 15,699 records, which is 78,495 god-vs-god outcome pairs, in 9,967
-  distinct matches. 3,789 of those matches are seen from two or more gods, and
-  they join on the hashed `m`.
+- **Now:** 36,947 records, which is 184,735 god-vs-god outcome pairs, in
+  24,032 distinct matches. 8,969 of those matches are seen from two or more
+  gods, and they join on the hashed `m`.
 - **Accumulation:** about 800 aspect matches a day plus the 810-match
   no-aspect sample, so about 8,000 pairs a day.
 - **Bias:** it is skewed to aspect players, so it is not the population.
