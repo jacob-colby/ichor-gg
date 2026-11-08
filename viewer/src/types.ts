@@ -129,6 +129,27 @@ export interface PopularItem {
   win_rate: number;
 }
 
+/** The starter stamped on a build: a purchase PATH, base and its one upgrade.
+ *
+ *  `basis: "community"` is the most-picked path in this god's record
+ *  (`scoring.pick_starter`), and carries the WHOLE path's record: `pick_rate`
+ *  is the two ends summed — each player is counted once, holding one end — and
+ *  `win_rate` their pick-weighted mean. `basis: "rule"` is the role table's
+ *  fallback and carries no rates. A pair saved from the build editor, or one
+ *  from an index older than the stamp, carries only `base` and `upgrade`; read
+ *  the share through `lib/starters.starterShare`, which covers all three. */
+export interface StarterStamp {
+  base: string;
+  upgrade: string;
+  basis?: "community" | "rule";
+  pick_rate?: number;
+  win_rate?: number;
+  /** `pick_rate x god_matches_played`, an estimate; null without a match count. */
+  matches?: number | null;
+  /** The mode whose record this is, when it is not this note's (Joust, Arena). */
+  borrowed_from?: string;
+}
+
 export interface CommunityBuildEntry {
   source: "community";
   aspect: string | null;
@@ -139,13 +160,17 @@ export interface CommunityBuildEntry {
    *  from `starter`, which is a role RULE from _weights.yaml and so gives every
    *  Carry the same opener regardless of what Carry players bought. */
   community_starters?: PopularItem[];
+  /** EVERY starter tile in the record, not the top 3: what a path's share is
+   *  summed from, since a path whose two ends sit 3rd and 4th is invisible in
+   *  a top 3. Absent on an index built before the pipeline shipped it. */
+  starter_sightings?: PopularItem[];
   /** What this god's players take as their relic, same shape and source as
    *  `community_starters`. Absent until the pipeline ships it; the god page
    *  renders the relic tile only when it is present, never a stand-in. */
   community_relics?: PopularItem[];
   source_url: string;
   last_verified?: string;
-  starter?: { base: string; upgrade: string };
+  starter?: StarterStamp;
   popular_items?: PopularItem[];
 }
 
@@ -174,7 +199,7 @@ export interface CuratedBuildEntry {
   flex_slots?: string[];
   situational_swaps?: SituationalSwap[];
   notes?: string;
-  starter?: { base: string; upgrade: string };
+  starter?: StarterStamp;
   /** Off-class for-fun build — win/pick signals zeroed, not meta-scored. */
   fun?: boolean;
   /** Other archetypes the pipeline computed as this EXACT same build, collapsed

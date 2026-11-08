@@ -236,9 +236,36 @@ describe("useDraftResult — what your god opens with", () => {
     const [path] = r.starters;
     expect(path.base?.name).toBe("Conduit Gem");
     expect(path.upgrade?.name).toBe("Archmage's Gem");
-    // The lead is the end the community actually holds most often, never a sum
-    // — a player who buys the base and upgrades is counted in both rates.
-    expect(path.lead.pick_rate).toBe(0.25);
+    // The path's share is both ends summed: SmiteBrain counts each player once,
+    // holding the base OR its upgrade (lib/starters.ts has the evidence).
+    expect(path.pick_rate).toBeCloseTo(0.47, 10);
+  });
+
+  it("sums from every sighting, not the top 3, when the index carries them", () => {
+    // Ra's shape: the second path's base is the 4th tile. Read from the top 3
+    // that path is one end at 24%; read from every tile it is 39%.
+    const everyTile = [{
+      god: "TestGod", mode: "Conquest", type: "smite-build",
+      builds: [suggested("core", CORE6), {
+        source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [], source_url: "",
+        community_starters: [
+          { name: "Other Opener", pick_rate: 0.41, win_rate: 0.53 },
+          { name: "Archmage's Gem", pick_rate: 0.24, win_rate: 0.54 },
+          { name: "Third Opener", pick_rate: 0.17, win_rate: 0.46 },
+        ],
+        starter_sightings: [
+          { name: "Other Opener", pick_rate: 0.41, win_rate: 0.53 },
+          { name: "Archmage's Gem", pick_rate: 0.24, win_rate: 0.54 },
+          { name: "Third Opener", pick_rate: 0.17, win_rate: 0.46 },
+          { name: "Conduit Gem", pick_rate: 0.15, win_rate: 0.39 },
+        ],
+      }],
+    }] as unknown as BuildNote[];
+    const r = run(["TestGod", "", "", "", ""], ["", "", "", "", ""], { builds: everyTile });
+    const gem = r.starters.find((p) => p.rootName === "Conduit Gem")!;
+    expect(gem.base?.name).toBe("Conduit Gem");
+    expect(gem.pick_rate).toBeCloseTo(0.39, 10);
   });
 
   it("is empty when the god has no community starters rather than guessing one", () => {
@@ -336,13 +363,13 @@ describe("useDraftResult — openers fall back to Conquest, and say so", () => {
 
   it("shows Conquest's openers in Joust, flagged as borrowed", () => {
     const r = at("joust");
-    expect(r.starters.map((p) => p.lead.name)).toEqual(["Archmage's Gem"]);
+    expect(r.starters.map((p) => p.rootName)).toEqual(["Conduit Gem"]);
     expect(r.startersAreConquest).toBe(true);
   });
 
   it("does not flag Conquest's own openers as borrowed", () => {
     const r = at("conquest");
-    expect(r.starters.map((p) => p.lead.name)).toEqual(["Archmage's Gem"]);
+    expect(r.starters.map((p) => p.rootName)).toEqual(["Conduit Gem"]);
     expect(r.startersAreConquest).toBe(false);
   });
 });
