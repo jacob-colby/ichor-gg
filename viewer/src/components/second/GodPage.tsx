@@ -41,6 +41,7 @@ import { AspectToggle } from "./AspectToggle";
 import { FocusStrip } from "./FocusStrip";
 import { KitTile, type KitAlternative } from "./KitTile";
 import { MostPicked } from "./MostPicked";
+import { AspectCommunity, aspectEntry } from "./AspectCommunity";
 import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, writeLastGod, aspectNote } from "./pageState";
 import { VerdictLine } from "./VerdictLine";
 import { ItemRow } from "./ItemRow";
@@ -283,9 +284,13 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   );
 
   const choose = (a: string) => { setQ((p) => ({ ...p, build: a })); setTheirs(false); };
-  const aspectLine = q.aspect && aspectName ? (
-    isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
-  ) : null;
+  // What the aspect's own players buy: Conquest's record, under the six.
+  const aspectRecord = noteFor(data.builds, god.name, "Conquest")?.community_aspects;
+  const aspectShown = mode === "conquest" && !!aspectName && aspectEntry(aspectRecord, aspectName)?.status === "shown";
+  const aspectLine = q.aspect && aspectName ? [
+    isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name),
+    aspectShown ? "What its players buy is under the six." : null,
+  ].filter(Boolean).join(" ") : null;
 
   return (
     <div className="mx-auto w-full max-w-[1240px] px-4 lg:grid lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-12 lg:px-6 lg:pt-8">
@@ -386,6 +391,12 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </p>
           )}
         </section>
+
+        {/* ── What the aspect's players buy: community, not the model ── */}
+        {q.aspect && aspectName && (
+          <AspectCommunity aspect={aspectName} mode={mode} record={aspectRecord}
+            itemsByName={r.itemsByName} />
+        )}
 
         {/* ── One tap away ── */}
         <div className="mt-6 divide-y divide-line border-y border-line">

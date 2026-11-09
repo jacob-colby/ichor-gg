@@ -331,3 +331,150 @@ describe("God page — most picked", () => {
     expect(within(list).getAllByTestId("picked-row").filter((r) => r.hasAttribute("data-flagged"))).toHaveLength(1);
   });
 });
+
+describe("God page — what the aspect's players buy", () => {
+  // Ra's record shaped like Tsukuyomi's Mangetsu on 2026-11-09: a pool of
+  // three patches, a role shift, a starter path split over two ends, and
+  // items whose stats moved after the oldest window read.
+  const RECORD = {
+    source: "SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)",
+    minimum_matches: 30, complete_from: "2026-09-24", partial_windows: { ob44: "2026-09-24" },
+    aspects: [{
+      aspect: "Aspect of Thermotherapy", status: "shown",
+      matches_by_window: { ob47: 6, ob46: 21, ob45: 30, ob44: 17 },
+      windows: ["ob45", "ob46", "ob47"], patches: "OB45–OB47", window_rule: "pooled back", matches: 57,
+      roles: [{ role: "Support", matches: 32, share: 0.56 }, { role: "Mid", matches: 15, share: 0.26 }],
+      base_role: "Mid", base_role_share: 0.26,
+      role_shift: { role: "Support", share: 0.56, says: "" },
+      items: [
+        { name: "Rod of Tahuti", share: 0.86, changed: { patch: "OB41–OB46", exact: false, older_matches: 27, matches: 49,
+          says: "its stats moved between Ichor's OB40 and OB46 item data, at a patch not recorded; up to 27 of the 49 matches that bought it are older" } },
+        { name: "Book of Thoth", share: 0.79 },
+        { name: "Spear of the Magus", share: 0.72 },
+        { name: "Obsidian Shard", share: 0.63 },
+        { name: "Soul Gem", share: 0.33 },
+        { name: "Spear of Desolation", share: 0.23 },
+        { name: "The World Stone", share: 0.21 },
+      ],
+      starters: [
+        { name: "Archmage's Gem", share: 0.42 }, { name: "Bluestone Pendant", share: 0.25 },
+        { name: "Conduit Gem", share: 0.11 }, { name: "Bluestone Brooch", share: 0.05 },
+      ],
+      relics: [
+        { name: "Purification Beads", share: 0.6, changed: { patch: "OB47", exact: true, older_matches: 20, matches: 34,
+          says: "changed in OB47; 20 of the 34 matches that bought it are older" } },
+        { name: "Aegis of Acceleration", share: 0.39 }, { name: "Phantom Shell", share: 0.02 },
+      ],
+    }],
+  };
+  const PATHS = [
+    { ...item("Conduit Gem"), tier: 1, builds_into: ["Archmage's Gem"] },
+    { ...item("Archmage's Gem"), tier: 2, builds_from: ["Conduit Gem"] },
+    { ...item("Bluestone Pendant"), tier: 1, builds_into: ["Bluestone Brooch"] },
+    { ...item("Bluestone Brooch"), tier: 2, builds_from: ["Bluestone Pendant"] },
+  ];
+  const conquestNote = index.builds[0] as Record<string, unknown>;
+  // The fixture's items are typed with empty build paths; these four have one.
+  const shop = index as unknown as { items: { name: string }[] };
+  const withRecord = async (record: unknown, hash: string, check: () => Promise<void>) => {
+    const items = shop.items;
+    conquestNote.community_aspects = record;
+    shop.items = [...items.filter((i) => !PATHS.some((p) => p.name === i.name)), ...PATHS];
+    atUrl(hash);
+    try {
+      render(<App />);
+      await check();
+    } finally {
+      delete conquestNote.community_aspects;
+      shop.items = items;
+    }
+  };
+  const on = `${toHash.god("Ra")}?aspect=1`;
+
+  it("shows nothing until the aspect is switched on", async () => {
+    await withRecord(RECORD, toHash.god("Ra"), async () => {
+      await screen.findByRole("switch", { name: /Aspect of Thermotherapy/ });
+      expect(screen.queryByTestId("aspect-community")).not.toBeInTheDocument();
+    });
+  });
+
+  it("labels it community, not Ichor’s model, with the games and the patches it pools", async () => {
+    await withRecord(RECORD, on, async () => {
+      const box = await screen.findByTestId("aspect-community");
+      expect(within(box).getByRole("heading", { name: /Thermotherapy players.* build/ })).toBeInTheDocument();
+      expect(within(box).getByTestId("aspect-community-span")).toHaveTextContent("57 games · OB45–OB47");
+      expect(within(box).getByTestId("aspect-community-note")).toHaveTextContent(
+        "Community, not Ichor’s model: what Conquest games with Aspect of Thermotherapy ended holding — pooled: no recent patch alone has 30 games.");
+      expect(within(box).getByTestId("aspect-community-source")).toHaveTextContent("not a buy order");
+      // A pointer from the line under the strip, so a phone reader knows to scroll.
+      expect(screen.getByTestId("aspect-note")).toHaveTextContent("What its players buy is under the six.");
+    });
+  });
+
+  it("says when its players take the god into another role, and that Ichor's six cannot follow", async () => {
+    await withRecord(RECORD, on, async () => {
+      const shift = await screen.findByTestId("aspect-role-shift");
+      expect(shift).toHaveTextContent("Most play it Support (56%), not Mid (26%).");
+      expect(shift).toHaveTextContent("Ichor’s six above is built for Mid: the model can’t move a god’s role for an aspect yet.");
+    });
+  });
+
+  it("puts the starter and relic in as tiles, the starter as a path with both ends summed", async () => {
+    await withRecord(RECORD, on, async () => {
+      const starter = await screen.findByTestId("aspect-starter");
+      expect(starter).toHaveTextContent("Conduit Gem → Archmage's Gem");
+      expect(starter).toHaveTextContent("53% of these games open this way");
+      expect(within(starter).getByRole("list")).toHaveTextContent("Bluestone Pendant30% of players");
+      const relic = screen.getByTestId("aspect-relic");
+      expect(relic).toHaveTextContent("Purification Beads");
+      expect(relic).toHaveTextContent("60% of these games take it · changed OB47*");
+      expect(within(relic).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
+        "Aegis of Acceleration39% of players", "Phantom Shell2% of players"]);
+    });
+  });
+
+  it("lists the six most held, by share of games, with a changed item asterisked and explained", async () => {
+    await withRecord(RECORD, on, async () => {
+      const six = await screen.findByTestId("aspect-six");
+      const rows = within(six).getAllByTestId("aspect-item");
+      expect(rows.map((r) => within(r).getByTestId("aspect-item-name").textContent)).toEqual([
+        "Rod of Tahuti", "Book of Thoth", "Spear of the Magus", "Obsidian Shard", "Soul Gem", "Spear of Desolation"]);
+      expect(rows[0]).toHaveTextContent("In 86% of these games · changed OB41–OB46*");
+      expect(rows[0]).toHaveAttribute("data-changed", "true");
+      expect(rows[1]).not.toHaveAttribute("data-changed");
+      const notes = screen.getByTestId("aspect-changed-notes");
+      expect(notes).toHaveTextContent("Rod of Tahuti: its stats moved between Ichor's OB40 and OB46 item data, at a patch not recorded; up to 27 of the 49 matches that bought it are older.");
+      expect(notes).toHaveTextContent("Purification Beads: changed in OB47; 20 of the 34 matches that bought it are older.");
+      expect(notes).toHaveTextContent("a passive change is not flagged");
+      // No gold column: this is not Ichor's buy order.
+      expect(six).not.toHaveTextContent(/gold/i);
+    });
+  });
+
+  it("says how few games there are when the record is below the minimum", async () => {
+    const thin = { ...RECORD, aspects: [{ aspect: "Aspect Of Thermotherapy", status: "below minimum",
+      matches_by_window: { ob47: 4, ob46: 13, ob45: 6, ob44: 5 } }] };
+    await withRecord(thin, on, async () => {
+      const box = await screen.findByTestId("aspect-community");
+      expect(box).toHaveTextContent("Too few games to show: 28 Conquest games across OB44–OB47, and this needs 30.");
+      expect(within(box).queryByTestId("aspect-six")).not.toBeInTheDocument();
+      expect(screen.getByTestId("aspect-note")).not.toHaveTextContent("What its players buy");
+    });
+  });
+
+  it("says Joust has no aspect record instead of showing Conquest's", async () => {
+    await withRecord(RECORD, `${toHash.god("Ra")}?mode=joust&aspect=1`, async () => {
+      const box = await screen.findByTestId("aspect-community");
+      expect(box).toHaveTextContent("Only Conquest records what aspect players buy. Joust has no per-aspect record, so none is shown here.");
+      expect(within(box).queryByTestId("aspect-six")).not.toBeInTheDocument();
+      expect(within(box).queryByTestId("aspect-starter")).not.toBeInTheDocument();
+    });
+  });
+
+  it("says so when the god's record holds nothing for this aspect", async () => {
+    await withRecord(undefined, on, async () => {
+      const box = await screen.findByTestId("aspect-community");
+      expect(box).toHaveTextContent("No record yet of what Aspect of Thermotherapy players buy.");
+    });
+  });
+});
