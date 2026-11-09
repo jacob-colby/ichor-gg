@@ -57,6 +57,10 @@ export interface VerdictInput {
   /** Items the enemy draft swapped into the six on screen. The file measured
    *  the six BEFORE them, and the sentence must say so. */
   draftSwaps?: number;
+  /** Whose six is on screen. On the community's side the sentence is the one
+   *  Ichor's main six reads (the measurement has both sixes in it); only off
+   *  Conquest does it change, to say whose record the borrowed six is. */
+  side?: "ichor" | "community";
 }
 
 export const MODE_NAME: Record<Mode, string> = { conquest: "Conquest", joust: "Joust", arena: "Arena" };
@@ -85,8 +89,9 @@ export function verdictSentence(input: VerdictInput): Verdict {
   const band = input.band ?? 0.05;
 
   if (mode !== "conquest") {
-    return { kind: "none", parts: [{
-      text: `${MODE_NAME[mode]} has no community build to measure against, so this is the model's six on its own.` }] };
+    return { kind: "none", parts: [{ text: input.side === "community"
+      ? `${MODE_NAME[mode]} has no community record of its own, so this is the six ${god}'s Conquest players buy.`
+      : `${MODE_NAME[mode]} has no community build to measure against, so this is the model's six on its own.` }] };
   }
   if (archetype !== "model") {
     return { kind: "none", parts: [{

@@ -21,6 +21,15 @@
  * which of the god's most-bought items the six on screen holds, on every
  * mode. Why `model` stays the main six and where Balanced and Hybrid sit:
  * `lib/focus.ts`.
+ *
+ * WHOSE BUILD (2026-11-09, Jacob). Above the focus strip, "Ichor's |
+ * Community" chooses whose six the page shows before anything adjusts it
+ * (`WhoseSwitch`). Ichor's side is the page above. The community has one six
+ * and nothing to adjust, so its side drops the focus chips and keeps only the
+ * aspect switch. In Joust and Arena it shows Conquest's six with the
+ * most-picked list's asterisks. What the six is: `communityBuild.ts`. With
+ * the aspect on, one slot owns the Community side's whole build area for the
+ * per-aspect community build (see "THE ASPECT SLOT" below).
  */
 import { useEffect, useMemo, useState } from "react";
 import type { BuildNote, CommunityBuildEntry, CuratedBuildEntry, God, IndexData, PopularItem } from "../../types";
@@ -35,12 +44,14 @@ import { godLane, laneTextClass } from "../../lib/roleAccent";
 import { useComparison } from "./useComparison";
 import { verdictSentence, MODE_NAME } from "./verdict";
 import { itemReason } from "./itemReason";
-import { Art, ChevronGlyph, SwapGlyph } from "./art";
+import { Art, ChevronGlyph } from "./art";
 import { ModeSwitch } from "./ModeSwitch";
+import { WhoseSwitch } from "./WhoseSwitch";
 import { AspectToggle } from "./AspectToggle";
 import { FocusStrip } from "./FocusStrip";
 import { KitTile, type KitAlternative } from "./KitTile";
-import { MostPicked } from "./MostPicked";
+import { MostPicked, TransferNotes } from "./MostPicked";
+import { communityLines, communitySix, noAspectBuildLine } from "./communityBuild";
 import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, writeLastGod, aspectNote } from "./pageState";
 import { VerdictLine } from "./VerdictLine";
 import { ItemRow } from "./ItemRow";
@@ -122,6 +133,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const aspectOfArch = suggested.find((b) => b.archetype === chipArch && !!b.aspect);
   const aspectChangesBuild = !!aspectOfArch && !sameOrder(aspectOfArch.slot_order, baseOfArch?.slot_order);
   const aspectOnBuild = q.aspect && r.aspectScored && aspectChangesBuild;
+  // The same question of the main six, which is what the Community side's
+  // verdict speaks for whatever focus Ichor's side was left on.
+  const baseOfMain = suggested.find((b) => b.archetype === MAIN_ARCHETYPE && !b.aspect);
+  const aspectOfMain = suggested.find((b) => b.archetype === MAIN_ARCHETYPE && !!b.aspect);
+  const aspectOnMain = q.aspect && r.aspectScored && !!aspectOfMain && !sameOrder(aspectOfMain.slot_order, baseOfMain?.slot_order);
   // The base kit's main six: what the aspect is measured against.
   const baseMainSix = useMemo(
     () => focusOptions(archetypeEntries(data.builds, god.name, mode, false), MAIN_ARCHETYPE)[0]?.six ?? [],
@@ -130,42 +146,69 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   // ── Comparison + verdict ───────────────────────────────────────────────
   const cmp = useComparison(god.name);
   const shipped = (r.activeEntry?.slot_order as string[] | undefined) ?? [];
+
+  // ── Whose build ────────────────────────────────────────────────────────
+  // Offered whenever the god has a Conquest community record (95 of 95 gods
+  // on 2026-11-09), in every mode: Joust and Arena borrow Conquest's.
+  const hasCommunity = !!community;
+  const onCommunity = hasCommunity && q.whose === "community";
+  // Community with the aspect on: the base six is every player on any aspect,
+  // so it is not shown as the aspect's. The whole build area goes to the
+  // aspect slot below instead (communityBuild.ts, THE ASPECT).
+  const aspectSlot = onCommunity && q.aspect && !!aspectName;
+  const theirSix = communitySix({ comparison: cmp.data, mode });
+
   const verdict = cmp.loading && mode === "conquest" ? null : verdictSentence({
-    d: cmp.data, god: god.name, mode, archetype, shownSix: shipped,
-    aspectBuild: aspectOnBuild ? aspectName : null, band: cmp.meta?.band, draftSwaps: r.changeCount,
+    d: cmp.data, god: god.name, mode,
+    // The Community side reads the sentence Ichor's main six reads: the
+    // measurement holds both sixes, and the community has no focuses.
+    archetype: onCommunity ? MAIN_ARCHETYPE : archetype,
+    shownSix: onCommunity ? mainOpt?.six ?? [] : shipped,
+    aspectBuild: (onCommunity ? aspectOnMain : aspectOnBuild) ? aspectName : null,
+    band: cmp.meta?.band, draftSwaps: onCommunity ? 0 : r.changeCount,
+    side: onCommunity ? "community" : "ichor",
   });
-  const canSwap = mode === "conquest" && isMain && !aspectOnBuild && !!cmp.data;
-  const [theirs, setTheirs] = useState(false);
-  const showTheirs = theirs && canSwap;
-  useEffect(() => { setTheirs(false); }, [god.name]);
 
   // ── What the reader's choices changed ──────────────────────────────────
   // A focus is marked against the main six of the same kit; with no focus,
   // the aspect is marked against the base kit's main six. One level at a
   // time, so a mark always means "your last choice put this here".
   const aspectSwaps: SlotSwap[] = q.aspect && r.aspectScored && isMain ? diffSix(baseMainSix, mainOpt?.six ?? []) : [];
-  const marks: SlotSwap[] = showTheirs ? [] : !isMain ? selected.swaps : aspectSwaps;
+  const marks: SlotSwap[] = onCommunity ? [] : !isMain ? selected.swaps : aspectSwaps;
   const markedFor = new Map(marks.filter((m) => m.added).map((m) => [m.added!, m]));
 
   // ── The six on screen ──────────────────────────────────────────────────
+  // The community's six is never adapted to the enemy team: it is a record
+  // of what players bought, not an answer the model re-ranks.
   const swaps = new Map((r.result?.diff.changes ?? []).map((c) => [c.added, c]));
-  const six = showTheirs ? cmp.data!.community.items : (r.result?.adapted.core ?? shipped);
+  // Empty in the aspect slot: the slot owns its own six.
+  const six = aspectSlot ? [] : onCommunity ? theirSix?.items ?? [] : (r.result?.adapted.core ?? shipped);
+  // Joust and Arena borrow Conquest's six; an item whose Conquest record
+  // doesn't describe it there is marked, by the most-picked list's rule.
+  const sixFlags = onCommunity
+    ? transferFlags(six, modeLabel, data.community_transfer?.[modeLabel], r.itemsByName) : [];
   let running = 0;
   let unknownCost = false;
   const rows = six.map((name, i) => {
     const item = r.itemsByName[name];
     if (item?.cost == null) unknownCost = true;
     running += item?.cost ?? 0;
-    const swap = showTheirs ? undefined : swaps.get(name);
+    const swap = onCommunity ? undefined : swaps.get(name);
     const mark = swap ? undefined : markedFor.get(name);
     const base = itemReason(name, { god: god.name, mode, community, item, swap });
     const reason = mark
       ? { tone: "adjust" as const, text: [mark.removed ? `In for ${mark.removed}` : "Added", base.text].filter(Boolean).join(" · ") }
       : base;
-    return { name, position: i + 1, cumulative: unknownCost ? null : running, reason, swapped: !!swap, adjusted: !!mark };
+    const flags = sixFlags.filter((f) => f.items.includes(name)).map((f) => f.note);
+    return { name, position: i + 1, cumulative: unknownCost ? null : running, reason, swapped: !!swap, adjusted: !!mark, flags };
   });
 
-  const starter = showTheirs ? community?.starter : (r.activeEntry?.starter ?? community?.starter);
+  // Ichor's side opens with its build's own starter stamp; the community's
+  // with the community record's. Today the pipeline stamps every build with
+  // the community's most-taken path (basis "community", 95 of 95 gods), so
+  // the two agree; a build stamped by the role rule would differ here. The
+  // relic is the community's most-taken on both sides: no build carries one.
+  const starter = onCommunity ? community?.starter : (r.activeEntry?.starter ?? community?.starter);
   // The whole path's share (base + upgrade), the same number the draft board
   // prints for the same opener — see lib/starters.starterShare.
   const starterPct = starterShare(starter, r.starters);
@@ -227,7 +270,8 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const clearEnemies = () => { enemies.forEach((_, i) => setEnemy(i, "")); writeVs([]); };
 
   const buildLabel = isMain ? "Ichor's main six" : selected.label;
-  const listLabel = showTheirs ? "The community's six" : isMain ? MAIN_LABEL : `${selected.label} build`;
+  const listLabel = onCommunity ? (mode === "conquest" ? "The community's six" : "Conquest's community six")
+    : isMain ? MAIN_LABEL : `${selected.label} build`;
 
   // ── The line under the strip: what the choice changed, in words ────────
   const of = mainOpt?.six.length ?? 6;
@@ -277,12 +321,18 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
       changes={r.result?.diff.changes ?? []} culprits={r.threatCulprits} enemiesKnown={r.enemiesKnown}
       comparison={cmp.data} meta={cmp.meta} kitLine={kitLine} />
   );
+  // The count is of swaps in the six ON SCREEN, so the community's side,
+  // which the team never moves, reads none.
   const strip = (variant: "bar" | "panel") => (
-    <EnemyStrip enemies={enemies} onOpen={setSheetAt} changeCount={r.changeCount} variant={variant}
+    <EnemyStrip enemies={enemies} onOpen={setSheetAt} changeCount={onCommunity ? 0 : r.changeCount} variant={variant}
       onClear={clearEnemies} />
   );
 
-  const choose = (a: string) => { setQ((p) => ({ ...p, build: a })); setTheirs(false); };
+  const choose = (a: string) => setQ((p) => ({ ...p, build: a }));
+  const aspectSwitch = (changesBuild: boolean) => aspectName ? (
+    <AspectToggle aspect={aspectName} on={q.aspect} changesBuild={changesBuild}
+      onChange={(on) => setQ((p) => ({ ...p, aspect: on }))} />
+  ) : undefined;
   const aspectLine = q.aspect && aspectName ? (
     isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
   ) : null;
@@ -310,80 +360,121 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
         {/* ── The answer ── */}
         <section aria-labelledby="six-h" className="mt-4 lg:mt-6">
-          <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} action={canSwap ? (
-            <button type="button" onClick={() => setTheirs((v) => !v)} aria-pressed={showTheirs}
-              className="press -my-2.5 inline-flex h-11 items-center gap-1 whitespace-nowrap px-0.5 align-middle font-cond text-[18px] font-bold uppercase text-accent hover:text-ink">
-              <SwapGlyph size={18} />{showTheirs ? "Show Ichor's" : "Show theirs"}
-            </button>
-          ) : undefined} />
+          <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} />
 
-          {/* ── Adjust it: the aspect, then a focus ── */}
-          <div className="mt-4">
-            <FocusStrip options={options} selected={selected?.archetype ?? MAIN_ARCHETYPE} onSelect={choose}
-              aspect={aspectName ? (
-                <AspectToggle aspect={aspectName} on={q.aspect} changesBuild={aspectChangesBuild}
-                  onChange={(on) => setQ((p) => ({ ...p, aspect: on }))} />
-              ) : undefined} />
-            {(aspectLine || !isMain) && !showTheirs && (
-              <div className="mt-2 space-y-2" data-testid="adjust-line" aria-live="polite">
-                {aspectLine && (
-                  <div>
-                    <p className="text-note text-muted" data-testid="aspect-note">
-                      {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
-                    </p>
-                    {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
-                  </div>
-                )}
-                {!isMain && selected && (
-                  <div data-testid="swap-line" data-swaps={selected.swaps.length}>
-                    <p className="text-copy text-ink-soft">
-                      <span className="font-cond text-[17px] font-bold uppercase text-ink">{selected.label}</span>{" "}
-                      {swapLead(selected, god.name, of)}
-                    </p>
-                    {selected.swaps.length > 0 && swapList(selected.swaps, hybridSwaps.length ? evidenceFor : undefined)}
-                    {/* The note explains where swaps came from; over "Same as Ichor's six" it explains nothing. */}
-                    {adjustNote && selected.swaps.length > 0 && <p className="mt-1 text-cap text-quiet">{adjustNote}</p>}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+          {/* ── Whose build, before anything adjusts it ── */}
+          {hasCommunity && (
+            <WhoseSwitch whose={onCommunity ? "community" : "ichor"} className="mt-4 lg:max-w-[420px]"
+              onChange={(w) => setQ((p) => ({ ...p, whose: w }))} />
+          )}
 
-          <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
-            <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">{listLabel} · buy order</h2>
-            <span aria-hidden="true">Gold spent</span>
-          </div>
-
-          {/* The starter and the relic open the buy order, as tiles. */}
-          {(starter || topRelic) && (
-            <div className={`mt-1.5 grid gap-1.5 ${starter && topRelic ? "sm:grid-cols-2" : ""}`} data-testid="kit-tiles">
-              {starter && (
-                <KitTile kind="Start" testId="starter" icon={starter.base} inset={starter.upgrade}
-                  name={`${starter.base} → ${starter.upgrade}`}
-                  reason={starterPct != null ? `${inConquest}${pctOf(starterPct)} of ${god.name} players open this way` : undefined}
-                  alternatives={starterAlts}
-                  altLabel={`Others${inConquest ? " in Conquest" : ""}`} />
+          {/* ── Adjust it: the aspect, then a focus. The community has one six
+              and no focuses, so its side keeps the aspect switch alone. ── */}
+          {onCommunity ? (
+            <div className="mt-4">
+              {/* On the community's side the aspect always changes what is
+                  shown: the any-aspect six gives way to the aspect slot. */}
+              {aspectSwitch(true)}
+              {theirSix && !aspectSlot && (
+                <div className={`space-y-1 ${aspectName ? "mt-2" : ""}`} data-testid="community-line" aria-live="polite">
+                  {communityLines(theirSix, god.name).map((l) => <p key={l} className="text-note text-muted">{l}</p>)}
+                </div>
               )}
-              {topRelic && (
-                <KitTile kind="Relic" testId="relic" icon={topRelic.name} name={topRelic.name}
-                  reason={`${relicsAreConquest ? "In Conquest, " : ""}${pctOf(topRelic.pick_rate)} of ${god.name} players take it`}
-                  alternatives={relicRecord.slice(1, 3).map((x) => ({ name: x.name, icon: x.name, share: x.pick_rate }))}
-                  altLabel={`Others${relicsAreConquest ? " in Conquest" : ""}`} />
+            </div>
+          ) : (
+            <div className="mt-4">
+              <FocusStrip options={options} selected={selected?.archetype ?? MAIN_ARCHETYPE} onSelect={choose}
+                aspect={aspectSwitch(aspectChangesBuild)} />
+              {(aspectLine || !isMain) && (
+                <div className="mt-2 space-y-2" data-testid="adjust-line" aria-live="polite">
+                  {aspectLine && (
+                    <div>
+                      <p className="text-note text-muted" data-testid="aspect-note">
+                        {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
+                      </p>
+                      {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
+                    </div>
+                  )}
+                  {!isMain && selected && (
+                    <div data-testid="swap-line" data-swaps={selected.swaps.length}>
+                      <p className="text-copy text-ink-soft">
+                        <span className="font-cond text-[17px] font-bold uppercase text-ink">{selected.label}</span>{" "}
+                        {swapLead(selected, god.name, of)}
+                      </p>
+                      {selected.swaps.length > 0 && swapList(selected.swaps, hybridSwaps.length ? evidenceFor : undefined)}
+                      {/* The note explains where swaps came from; over "Same as Ichor's six" it explains nothing. */}
+                      {adjustNote && selected.swaps.length > 0 && <p className="mt-1 text-cap text-quiet">{adjustNote}</p>}
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           )}
 
-          {rows.length > 0 ? (
-            <ol className="mt-1.5 space-y-1.5" data-testid="six">
-              {rows.map((row) => (
-                <ItemRow key={`${showTheirs ? "t" : "i"}-${row.name}`} position={row.position} name={row.name}
-                  cumulativeGold={row.cumulative} reason={row.reason} swapped={row.swapped} adjusted={row.adjusted} />
-              ))}
-            </ol>
+          <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
+            <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">
+              {aspectSlot ? `The community's ${shortAspect(aspectName!)} build` : `${listLabel} · buy order`}
+            </h2>
+            {!aspectSlot && <span aria-hidden="true">Gold spent</span>}
+          </div>
+
+          {aspectSlot ? (
+            /* THE ASPECT SLOT — a contract with the per-aspect community
+               session. On Community with the aspect on, this one block owns
+               the whole build area: starter, relic and six. Nothing else
+               renders beside it (no KitTile, no ItemRow list, no asterisk
+               notes). That session replaces its contents with
+               <AspectCommunity aspect={aspectName} mode={mode}
+                 communityAspects={<the Conquest note's community_aspects>}
+                 itemsByName={r.itemsByName} />.
+               Until then it says there is no per-aspect community build. */
+            <div className="mt-1.5" data-testid="community-aspect-slot">
+              <p className="rounded-[12px] border border-dashed border-line p-4 text-copy text-muted">
+                {noAspectBuildLine(shortAspect(aspectName!), god.name)}
+              </p>
+            </div>
           ) : (
-            <p className="mt-3 rounded-[12px] border border-dashed border-line p-4 text-copy text-muted">
-              No {modeLabel} build has been made for {god.name} yet.
-            </p>
+            <>
+              {/* The starter and the relic open the buy order, as tiles. */}
+              {(starter || topRelic) && (
+                <div className={`mt-1.5 grid gap-1.5 ${starter && topRelic ? "sm:grid-cols-2" : ""}`} data-testid="kit-tiles">
+                  {starter && (
+                    <KitTile kind="Start" testId="starter" icon={starter.base} inset={starter.upgrade}
+                      name={`${starter.base} → ${starter.upgrade}`}
+                      reason={starterPct != null ? `${inConquest}${pctOf(starterPct)} of ${god.name} players open this way` : undefined}
+                      alternatives={starterAlts}
+                      altLabel={`Others${inConquest ? " in Conquest" : ""}`} />
+                  )}
+                  {topRelic && (
+                    <KitTile kind="Relic" testId="relic" icon={topRelic.name} name={topRelic.name}
+                      reason={`${relicsAreConquest ? "In Conquest, " : ""}${pctOf(topRelic.pick_rate)} of ${god.name} players take it`}
+                      alternatives={relicRecord.slice(1, 3).map((x) => ({ name: x.name, icon: x.name, share: x.pick_rate }))}
+                      altLabel={`Others${relicsAreConquest ? " in Conquest" : ""}`} />
+                  )}
+                </div>
+              )}
+
+              {rows.length > 0 ? (
+                <ol className="mt-1.5 space-y-1.5" data-testid="six">
+                  {rows.map((row) => (
+                    <ItemRow key={`${onCommunity ? "c" : "i"}-${row.name}`} position={row.position} name={row.name}
+                      cumulativeGold={row.cumulative} reason={row.reason} swapped={row.swapped} adjusted={row.adjusted}
+                      flags={row.flags} />
+                  ))}
+                </ol>
+              ) : onCommunity ? (
+                // No stand-in: the raw record isn't six finished items (communityBuild.ts).
+                <p className="mt-3 rounded-[12px] border border-dashed border-line p-4 text-copy text-muted"
+                  data-testid="community-empty" aria-busy={cmp.loading || undefined}>
+                  {cmp.loading ? "Loading the community's six…" : `There's no measured community six for ${god.name} yet.`}
+                </p>
+              ) : (
+                <p className="mt-3 rounded-[12px] border border-dashed border-line p-4 text-copy text-muted">
+                  No {modeLabel} build has been made for {god.name} yet.
+                </p>
+              )}
+              <TransferNotes flags={sixFlags} testId="six-notes" className="mt-2 px-1" />
+            </>
           )}
         </section>
 
@@ -391,13 +482,15 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
         <div className="mt-6 divide-y divide-line border-y border-line">
           {!wide && (
             <Disclosure title="Most picked" testId="picked-disclosure"
-              hint={topPicked.length
-                ? `${pickedHave} of ${god.name}'s top ${topPicked.length} ${mode === "conquest" ? "are" : "Conquest picks are"} in this build`
-                : `No Conquest record for ${god.name} yet`}>
+              hint={!topPicked.length ? `No Conquest record for ${god.name} yet`
+                // The aspect slot draws its own six, which this page can't tick.
+                : aspectSlot ? `${god.name}'s top ${topPicked.length} Conquest picks, any aspect`
+                  : `${pickedHave} of ${god.name}'s top ${topPicked.length} ${mode === "conquest" ? "are" : "Conquest picks are"} in this build`}>
               {mostPickedPanel(true)}
             </Disclosure>
           )}
-          {!wide && <Disclosure title="Why this build" testId="why-disclosure">{why}</Disclosure>}
+          {/* The reasoning is Ichor's; on the community's side it says whose. */}
+          {!wide && <Disclosure title={onCommunity ? "Why Ichor's build" : "Why this build"} testId="why-disclosure">{why}</Disclosure>}
           {mode === "conquest" && cmp.data && (
             <Disclosure title="The comparison in detail" hint="Fight by fight, and what isn't measured" testId="compare-disclosure">
               <CompareDetail d={cmp.data} meta={cmp.meta} god={god.name} community={community} />

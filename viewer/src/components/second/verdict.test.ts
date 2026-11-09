@@ -109,6 +109,20 @@ describe("verdictSentence", () => {
   });
 });
 
+describe("verdictSentence on the community's side", () => {
+  it("reads the same measured sentence in Conquest: the measurement holds both sixes", () => {
+    const ichor = verdictSentence(input(file({}, ["Lotus Sickle"])));
+    const theirs = verdictSentence(input(file({}, ["Lotus Sickle"]), { side: "community" }));
+    expect(verdictText(theirs)).toBe(verdictText(ichor));
+  });
+
+  it("says off Conquest whose record the borrowed six is, not that it is the model's", () => {
+    const v = verdictSentence(input(file(), { mode: "arena", side: "community" }));
+    expect(v.kind).toBe("none");
+    expect(verdictText(v)).toBe("Arena has no community record of its own, so this is the six Ra's Conquest players buy.");
+  });
+});
+
 describe("verdictSentence and the draft", () => {
   it("says the measurement predates the enemy team's swaps", () => {
     const v = verdictSentence({ ...input(file({ weighted_axes: [1.12, 1.09] })), draftSwaps: 1 });

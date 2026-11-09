@@ -74,16 +74,25 @@ export function MostPicked({ god, mode, items, total, inBuild, flags, bare = fal
         <CheckGlyph size={14} className="text-ink" /> In the build on screen
         <span className="text-quiet">· {[...inBuild].filter((n) => items.some((p) => p.name === n)).length} of {items.length}</span>
       </p>
-      {flags.length > 0 && (
-        <div className="mt-3 space-y-1.5 text-cap text-muted" data-testid="picked-notes">
-          {flags.map((f) => (
-            <p key={f.reason}>
-              <span aria-hidden="true" className="text-ink">* </span>
-              <span className="text-ink-soft">{f.items.join(", ")}</span> — {f.note}
-            </p>
-          ))}
-        </div>
-      )}
+      <TransferNotes flags={flags} testId="picked-notes" className="mt-3" />
     </section>
+  );
+}
+
+/** The asterisks' reasons, printed: one line per reason, naming its items.
+ *  Shared by the most-picked list and the community's borrowed six. */
+export function TransferNotes({ flags, testId, className = "" }: {
+  flags: TransferFlag[]; testId: string; className?: string;
+}) {
+  if (!flags.length) return null;
+  return (
+    <div className={`space-y-1.5 text-cap text-muted ${className}`} data-testid={testId}>
+      {flags.map((f) => (
+        <p key={f.reason}>
+          <span aria-hidden="true" className="text-ink">* </span>
+          <span className="text-ink-soft">{f.items.join(", ")}</span> — {f.note}
+        </p>
+      ))}
+    </div>
   );
 }
