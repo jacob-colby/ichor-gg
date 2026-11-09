@@ -3792,7 +3792,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 project reference build catches.
 
 Tests: `cd pipeline && python -m pytest smite/tests -q` (1606) ·
-`cd viewer && npm test -- --run` (1045).
+`cd viewer && npm test -- --run` (1056).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
 
@@ -3914,7 +3914,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 3 — Cernunnos, Cupid, Mercury. (2026-11-08, the #124 refresh alone, which touched only `data/` and `viewer/public/`; recorded, not investigated.) Cernunnos is on it for the third reading running, 6 pairs and none matching. Cupid and Mercury are back, at 5 pairs each, after reading 20% on 2026-11-06 — the same two that were on it on 2026-11-03. Ah Puch, Athena, Atlas, Gilgamesh and Mordred now read 60%, 20%, 40%, 33% and 33%. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1606 pipeline · 1045 viewer |
+| Tests | 1606 pipeline · 1056 viewer |
 
 A row that opens **Live in [CURRENT.md](CURRENT.md).** is DAILY: its live figure
 is generated into [`docs/CURRENT.md`](CURRENT.md) by `python -m smite.doc_figures
