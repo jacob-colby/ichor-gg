@@ -779,4 +779,83 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Tollkeeper
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 60
+    wins: 35
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 74
+      aspect_win_rate: 0.5
+      no_aspect_matches: 388
+      no_aspect_win_rate: 0.567
+    roles:
+    - role: Mid
+      matches: 37
+      share: 0.62
+    - role: Solo
+      matches: 17
+      share: 0.28
+    - role: Support
+      matches: 5
+      share: 0.08
+    - role: Carry
+      matches: 1
+      share: 0.02
+    base_role: Support
+    base_role_share: 0.08
+    role_shift:
+      role: Mid
+      share: 0.62
+      says: 'most Aspect of the Tollkeeper players do not play Support: Mid 62%, Support
+        8%'
+    items:
+    - name: The Cosmic Horror
+      share: 0.63
+    - name: Totem of Death
+      share: 0.53
+    - name: Rod of Tahuti
+      share: 0.42
+    - name: Spear of Desolation
+      share: 0.4
+    - name: Chronos' Pendant
+      share: 0.35
+    - name: Damaru
+      share: 0.35
+    - name: Omen Drum
+      share: 0.28
+    - name: Soul Reaver
+      share: 0.28
+    starters:
+    - name: Bluestone Brooch
+      share: 0.47
+    - name: Archmage's Gem
+      share: 0.17
+    - name: Bluestone Pendant
+      share: 0.12
+    relics:
+    - name: Purification Beads
+      share: 0.45
+    - name: Aegis of Acceleration
+      share: 0.37
+    - name: Phantom Shell
+      share: 0.08
+    matches_by_window:
+      ob47: 12
+      ob46: 60
+      ob45: 97
+      ob44: 136
 ---

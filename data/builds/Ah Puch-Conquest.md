@@ -903,4 +903,82 @@ builds:
   - Rod of Tahuti
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Death March
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 36
+    wins: 26
+    win_share: 0.72
+    aggregate:
+      aspect_matches: 42
+      aspect_win_rate: 0.643
+      no_aspect_matches: 72
+      no_aspect_win_rate: 0.472
+    roles:
+    - role: Solo
+      matches: 33
+      share: 0.92
+    - role: Support
+      matches: 2
+      share: 0.06
+    - role: Mid
+      matches: 1
+      share: 0.03
+    base_role: Mid
+    base_role_share: 0.03
+    role_shift:
+      role: Solo
+      share: 0.92
+      says: 'most Aspect of the Death March players do not play Mid: Solo 92%, Mid
+        3%'
+    items:
+    - name: Shield of the Phoenix
+      share: 0.78
+    - name: Gem of Isolation
+      share: 0.61
+    - name: Freya's Tears
+      share: 0.5
+    - name: Genji's Guard
+      share: 0.42
+    - name: Ancile
+      share: 0.33
+    - name: Breastplate of Valor
+      share: 0.28
+    - name: Prophetic Cloak
+      share: 0.22
+    - name: Soul Reaver
+      share: 0.22
+    starters:
+    - name: Bluestone Brooch
+      share: 0.67
+    - name: Bluestone Pendant
+      share: 0.25
+    - name: Blood-soaked Shroud
+      share: 0.06
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.42
+    - name: Phantom Shell
+      share: 0.33
+    - name: Purification Beads
+      share: 0.22
+    matches_by_window:
+      ob47: 36
+      ob46: 144
+      ob45: 60
+      ob44: 95
+    unmapped_slugs:
+    - brawlers-ruin
 ---

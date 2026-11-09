@@ -695,4 +695,75 @@ builds:
   - Kinetic Cuirass
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Prowess
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 48
+    wins: 31
+    win_share: 0.65
+    aggregate:
+      aspect_matches: 61
+      aspect_win_rate: 0.574
+      no_aspect_matches: 401
+      no_aspect_win_rate: 0.509
+    roles:
+    - role: Jungle
+      matches: 45
+      share: 0.94
+    - role: Solo
+      matches: 3
+      share: 0.06
+    base_role: Solo Jungle
+    base_role_share: 1.0
+    role_shift: null
+    items:
+    - name: Hydra's Lament
+      share: 0.75
+    - name: Jotunn's Revenge
+      share: 0.6
+    - name: Heartseeker
+      share: 0.56
+    - name: The Reaper
+      share: 0.31
+    - name: Shifter's Shield
+      share: 0.29
+    - name: Blinking Abyss
+      share: 0.25
+    - name: brawlers-ruin
+      share: 0.25
+    - name: Avenging Blade
+      share: 0.23
+    starters:
+    - name: Bumba's Hammer
+      share: 0.46
+    - name: Hunter's Cowl
+      share: 0.31
+    - name: Bumba's Cudgel
+      share: 0.08
+    relics:
+    - name: Purification Beads
+      share: 0.42
+    - name: Blink Rune
+      share: 0.4
+    - name: Aegis of Acceleration
+      share: 0.12
+    matches_by_window:
+      ob47: 26
+      ob46: 48
+      ob45: 67
+      ob44: 70
+    unmapped_slugs:
+    - brawlers-ruin
 ---

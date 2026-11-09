@@ -623,4 +623,87 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Prey
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 38
+    wins: 20
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 45
+      aspect_win_rate: 0.489
+      no_aspect_matches: 1019
+      no_aspect_win_rate: 0.582
+    roles:
+    - role: Solo
+      matches: 21
+      share: 0.55
+    - role: Support
+      matches: 9
+      share: 0.24
+    - role: Jungle
+      matches: 5
+      share: 0.13
+    - role: Mid
+      matches: 2
+      share: 0.05
+    - role: Carry
+      matches: 1
+      share: 0.03
+    base_role: Support
+    base_role_share: 0.24
+    role_shift:
+      role: Solo
+      share: 0.55
+      says: 'most Aspect of Prey players do not play Support: Solo 55%, Support 24%'
+    items:
+    - name: Mystical Mail
+      share: 0.66
+    - name: Genji's Guard
+      share: 0.47
+    - name: Freya's Tears
+      share: 0.45
+    - name: Kinetic Cuirass
+      share: 0.37
+    - name: Prophetic Cloak
+      share: 0.37
+    - name: Contagion
+      share: 0.34
+    - name: Gladiator's Shield
+      share: 0.29
+    - name: Sundering Echo
+      share: 0.24
+    starters:
+    - name: Sundering Axe
+      share: 0.29
+    - name: Bluestone Brooch
+      share: 0.26
+    - name: Bluestone Pendant
+      share: 0.16
+    relics:
+    - name: Sundering Arc
+      share: 0.53
+    - name: Phantom Shell
+      share: 0.24
+    - name: Purification Beads
+      share: 0.11
+    matches_by_window:
+      ob47: 4
+      ob46: 38
+      ob45: 32
+      ob44: 21
+    unmapped_slugs:
+    - brawlers-ruin
 ---

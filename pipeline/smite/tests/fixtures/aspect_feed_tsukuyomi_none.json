@@ -1,0 +1,734 @@
+{
+ "result": {
+  "data": {
+   "builds": [
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T15:23:51.483Z",
+     "hz_match_guid": "49a26900-8282-43ec-9e8b-79c7b194fafb",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5807,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Avatar's Parashu",
+       "detail_href": "/items/avatars-parashu",
+       "icon_hash": "364203fa"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Axe",
+       "detail_href": "/items/axe",
+       "icon_hash": "99e3b76b"
+      },
+      "6": {
+       "item_name": "Skeggox",
+       "detail_href": "/items/skeggox",
+       "icon_hash": "01989034"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Nemesis",
+       "slug": "nemesis"
+      },
+      {
+       "display_name": "Mercury",
+       "slug": "mercury"
+      },
+      {
+       "display_name": "Ra",
+       "slug": "ra"
+      },
+      {
+       "display_name": "Kuzenbo",
+       "slug": "kuzenbo"
+      },
+      {
+       "display_name": "Ullr",
+       "slug": "ullr"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T15:22:01.283Z",
+     "hz_match_guid": "dd2c991d-a381-4144-94d7-ae1280b3bede",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5595,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "4": {
+       "item_name": "The Crusher",
+       "detail_href": "/items/the-crusher",
+       "icon_hash": "d26c7751"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Jotunn's Revenge",
+       "detail_href": "/items/jotunns-revenge",
+       "icon_hash": "e55d37f7"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Janus",
+       "slug": "janus"
+      },
+      {
+       "display_name": "Medusa",
+       "slug": "medusa"
+      },
+      {
+       "display_name": "Cupid",
+       "slug": "cupid"
+      },
+      {
+       "display_name": "Thor",
+       "slug": "thor"
+      },
+      {
+       "display_name": "Mercury",
+       "slug": "mercury"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T13:49:52.317Z",
+     "hz_match_guid": "1d869e05-d056-4c14-aaea-e76f5bcd9599",
+     "played_role": "Jungle",
+     "player_finishing_rank": 6154,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Hydra's Lament",
+       "detail_href": "/items/hydras-lament",
+       "icon_hash": "a35fc33e"
+      },
+      "3": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Blinking Abyss",
+       "detail_href": "/items/blinking-abyss",
+       "icon_hash": "384278c3"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Osiris",
+       "slug": "osiris"
+      },
+      {
+       "display_name": "Janus",
+       "slug": "janus"
+      },
+      {
+       "display_name": "Anhur",
+       "slug": "anhur"
+      },
+      {
+       "display_name": "Cerberus",
+       "slug": "cerberus"
+      },
+      {
+       "display_name": "Bastet",
+       "slug": "bastet"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T13:14:40.720Z",
+     "hz_match_guid": "a13fce27-e152-4a35-ba31-c2d02eb8928c",
+     "played_role": "Jungle",
+     "player_finishing_rank": 4536,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Hydra's Lament",
+       "detail_href": "/items/hydras-lament",
+       "icon_hash": "a35fc33e"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Axe",
+       "detail_href": "/items/axe",
+       "icon_hash": "99e3b76b"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Xbalanque",
+       "slug": "xbalanque"
+      },
+      {
+       "display_name": "Osiris",
+       "slug": "osiris"
+      },
+      {
+       "display_name": "Khepri",
+       "slug": "khepri"
+      },
+      {
+       "display_name": "Baron Samedi",
+       "slug": "baron-samedi"
+      },
+      {
+       "display_name": "Ravana",
+       "slug": "ravana"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T12:35:34.540Z",
+     "hz_match_guid": "37683724-a394-4379-b30b-0cb7d192658f",
+     "played_role": "Jungle",
+     "player_finishing_rank": 4630,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Jotunn's Revenge",
+       "detail_href": "/items/jotunns-revenge",
+       "icon_hash": "e55d37f7"
+      },
+      "2": {
+       "item_name": "The Reaper",
+       "detail_href": "/items/the-reaper",
+       "icon_hash": "f16953f7"
+      },
+      "3": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "4": {
+       "item_name": "Barbed Carver",
+       "detail_href": "/items/barbed-carver",
+       "icon_hash": "08adc392"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Chronos",
+       "slug": "chronos"
+      },
+      {
+       "display_name": "Ares",
+       "slug": "ares"
+      },
+      {
+       "display_name": "Ra",
+       "slug": "ra"
+      },
+      {
+       "display_name": "Hou Yi",
+       "slug": "hou-yi"
+      },
+      {
+       "display_name": "Hachiman",
+       "slug": "hachiman"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T10:11:01.393Z",
+     "hz_match_guid": "a8497eb5-ccba-4aa4-934d-6dfb014443cf",
+     "played_role": "Jungle",
+     "player_finishing_rank": 4736,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Jotunn's Revenge",
+       "detail_href": "/items/jotunns-revenge",
+       "icon_hash": "e55d37f7"
+      },
+      "2": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "3": {
+       "item_name": "Hydra's Lament",
+       "detail_href": "/items/hydras-lament",
+       "icon_hash": "a35fc33e"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Blinking Abyss",
+       "detail_href": "/items/blinking-abyss",
+       "icon_hash": "384278c3"
+      },
+      "6": {
+       "item_name": "Avatar's Parashu",
+       "detail_href": "/items/avatars-parashu",
+       "icon_hash": "364203fa"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Hou Yi",
+       "slug": "hou-yi"
+      },
+      {
+       "display_name": "Nike",
+       "slug": "nike"
+      },
+      {
+       "display_name": "Kukulkan",
+       "slug": "kukulkan"
+      },
+      {
+       "display_name": "Atlas",
+       "slug": "atlas"
+      },
+      {
+       "display_name": "Aladdin",
+       "slug": "aladdin"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T09:44:48.493Z",
+     "hz_match_guid": "2a4f0453-76c7-437e-96b5-6f6b1df05879",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5396,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "4": {
+       "item_name": "Brawler's Ruin",
+       "detail_href": null,
+       "icon_hash": null
+      },
+      "5": {
+       "item_name": "Axe",
+       "detail_href": "/items/axe",
+       "icon_hash": "99e3b76b"
+      },
+      "6": {
+       "item_name": "Skeggox",
+       "detail_href": "/items/skeggox",
+       "icon_hash": "01989034"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Cudgel",
+      "detail_href": "/items/bumbas-cudgel",
+      "icon_hash": "c02f3de5"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Aladdin",
+       "slug": "aladdin"
+      },
+      {
+       "display_name": "Medusa",
+       "slug": "medusa"
+      },
+      {
+       "display_name": "Geb",
+       "slug": "geb"
+      },
+      {
+       "display_name": "Hades",
+       "slug": "hades"
+      },
+      {
+       "display_name": "Hel",
+       "slug": "hel"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T09:04:14.457Z",
+     "hz_match_guid": "f9346672-d8b6-48a7-a4bd-e62ef3d81fdc",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5404,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Avatar's Parashu",
+       "detail_href": "/items/avatars-parashu",
+       "icon_hash": "364203fa"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Magi's Cloak",
+       "detail_href": "/items/magis-cloak",
+       "icon_hash": "a3401e03"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Geb",
+       "slug": "geb"
+      },
+      {
+       "display_name": "Thor",
+       "slug": "thor"
+      },
+      {
+       "display_name": "Ratatoskr",
+       "slug": "ratatoskr"
+      },
+      {
+       "display_name": "Aphrodite",
+       "slug": "aphrodite"
+      },
+      {
+       "display_name": "Chiron",
+       "slug": "chiron"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T08:19:52.737Z",
+     "hz_match_guid": "0d766329-86d2-4ea1-8d14-22e462e546d6",
+     "played_role": "Jungle",
+     "player_finishing_rank": 6486,
+     "player_placement": 2,
+     "items": {
+      "1": {
+       "item_name": "Transcendence",
+       "detail_href": "/items/transcendence",
+       "icon_hash": "12ea3aa3"
+      },
+      "2": {
+       "item_name": "Book of Thoth",
+       "detail_href": "/items/book-of-thoth",
+       "icon_hash": "b86bd3c1"
+      },
+      "3": {
+       "item_name": "Avatar's Parashu",
+       "detail_href": "/items/avatars-parashu",
+       "icon_hash": "364203fa"
+      },
+      "4": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "5": {
+       "item_name": "Titan's Bane",
+       "detail_href": "/items/titans-bane",
+       "icon_hash": "0183df81"
+      },
+      "6": {
+       "item_name": "Empty",
+       "detail_href": null,
+       "icon_hash": null
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Aegis of Acceleration ",
+      "detail_href": "/items/aegis-of-acceleration",
+      "icon_hash": "ee5a9153"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Ratatoskr",
+       "slug": "ratatoskr"
+      },
+      {
+       "display_name": "Cerberus",
+       "slug": "cerberus"
+      },
+      {
+       "display_name": "The Morrigan",
+       "slug": "the-morrigan"
+      },
+      {
+       "display_name": "Baron Samedi",
+       "slug": "baron-samedi"
+      },
+      {
+       "display_name": "Danzaburou",
+       "slug": "danzaburou"
+      }
+     ]
+    },
+    {
+     "character_choice": "Tsukuyomi",
+     "hz_match_start_timestamp": "2026-11-08T08:04:35.397Z",
+     "hz_match_guid": "318c0152-2c52-41b0-aa03-a87de922a5bb",
+     "played_role": "Jungle",
+     "player_finishing_rank": 5367,
+     "player_placement": 1,
+     "items": {
+      "1": {
+       "item_name": "Jotunn's Revenge",
+       "detail_href": "/items/jotunns-revenge",
+       "icon_hash": "e55d37f7"
+      },
+      "2": {
+       "item_name": "Barbed Carver",
+       "detail_href": "/items/barbed-carver",
+       "icon_hash": "08adc392"
+      },
+      "3": {
+       "item_name": "The Reaper",
+       "detail_href": "/items/the-reaper",
+       "icon_hash": "f16953f7"
+      },
+      "4": {
+       "item_name": "The Crusher",
+       "detail_href": "/items/the-crusher",
+       "icon_hash": "d26c7751"
+      },
+      "5": {
+       "item_name": "Heartseeker",
+       "detail_href": "/items/heartseeker",
+       "icon_hash": "fecd45e7"
+      },
+      "6": {
+       "item_name": "Skeggox",
+       "detail_href": "/items/skeggox",
+       "icon_hash": "01989034"
+      }
+     },
+     "starter": {
+      "item_name": "Bumba's Hammer",
+      "detail_href": "/items/bumbas-hammer",
+      "icon_hash": "89fd8396"
+     },
+     "relic": {
+      "item_name": "Purification Beads",
+      "detail_href": "/items/purification-beads",
+      "icon_hash": "f7b6becb"
+     },
+     "enemy_gods": [
+      {
+       "display_name": "Hachiman",
+       "slug": "hachiman"
+      },
+      {
+       "display_name": "Aladdin",
+       "slug": "aladdin"
+      },
+      {
+       "display_name": "Bastet",
+       "slug": "bastet"
+      },
+      {
+       "display_name": "Sylvanus",
+       "slug": "sylvanus"
+      },
+      {
+       "display_name": "Izanami",
+       "slug": "izanami"
+      }
+     ]
+    }
+   ],
+   "availableAspects": [
+    {
+     "name": "Aspect of Mangetsu",
+     "value": "aspect-of-mangetsu"
+    }
+   ]
+  }
+ }
+}

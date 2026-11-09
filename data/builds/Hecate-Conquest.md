@@ -753,4 +753,78 @@ builds:
   - Soul Gem
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Ruin
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 39
+    wins: 18
+    win_share: 0.46
+    aggregate:
+      aspect_matches: 48
+      aspect_win_rate: 0.479
+      no_aspect_matches: 372
+      no_aspect_win_rate: 0.589
+    roles:
+    - role: Mid
+      matches: 32
+      share: 0.82
+    - role: Support
+      matches: 6
+      share: 0.15
+    - role: Solo
+      matches: 1
+      share: 0.03
+    base_role: Mid
+    base_role_share: 0.82
+    role_shift: null
+    items:
+    - name: Chronos' Pendant
+      share: 0.49
+    - name: Soul Reaver
+      share: 0.41
+    - name: Spear of Desolation
+      share: 0.41
+    - name: Divine Ruin
+      share: 0.36
+    - name: Gem of Focus
+      share: 0.36
+    - name: Soul Gem
+      share: 0.31
+    - name: The World Stone
+      share: 0.31
+    - name: Rod of Tahuti
+      share: 0.23
+    starters:
+    - name: Bluestone Brooch
+      share: 0.51
+    - name: Bluestone Pendant
+      share: 0.38
+    - name: Archmage's Gem
+      share: 0.05
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.49
+    - name: Purification Beads
+      share: 0.41
+    - name: Phantom Shell
+      share: 0.08
+    matches_by_window:
+      ob47: 14
+      ob46: 39
+      ob45: 33
+      ob44: 35
+    unmapped_slugs:
+    - brawlers-ruin
 ---

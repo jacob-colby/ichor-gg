@@ -768,4 +768,85 @@ builds:
   - Obsidian Shard
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Devourer
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 49
+    wins: 28
+    win_share: 0.57
+    aggregate:
+      aspect_matches: 60
+      aspect_win_rate: 0.55
+      no_aspect_matches: 302
+      no_aspect_win_rate: 0.523
+    roles:
+    - role: Support
+      matches: 40
+      share: 0.82
+    - role: Solo
+      matches: 5
+      share: 0.1
+    - role: Mid
+      matches: 3
+      share: 0.06
+    - role: Carry
+      matches: 1
+      share: 0.02
+    base_role: Mid
+    base_role_share: 0.06
+    role_shift:
+      role: Support
+      share: 0.82
+      says: 'most Aspect of the Devourer players do not play Mid: Support 82%, Mid
+        6%'
+    items:
+    - name: Yogi's Necklace
+      share: 0.71
+    - name: Freya's Tears
+      share: 0.47
+    - name: Genji's Guard
+      share: 0.47
+    - name: Prophetic Cloak
+      share: 0.43
+    - name: Breastplate of Valor
+      share: 0.41
+    - name: Dwarven Plate
+      share: 0.35
+    - name: Shell of Rebuke
+      share: 0.33
+    - name: Book of Thoth
+      share: 0.16
+    starters:
+    - name: Conduit Gem
+      share: 0.49
+    - name: Archmage's Gem
+      share: 0.27
+    - name: Bluestone Brooch
+      share: 0.04
+    relics:
+    - name: Sundering Arc
+      share: 0.39
+    - name: Aegis of Acceleration
+      share: 0.18
+    - name: Phantom Shell
+      share: 0.18
+    matches_by_window:
+      ob47: 49
+      ob46: 123
+      ob45: 108
+      ob44: 121
+    unmapped_slugs:
+    - brawlers-ruin
 ---

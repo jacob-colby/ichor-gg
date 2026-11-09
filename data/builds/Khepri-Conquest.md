@@ -765,4 +765,79 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Laceration
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 59
+    wins: 43
+    win_share: 0.73
+    aggregate:
+      aspect_matches: 75
+      aspect_win_rate: 0.667
+      no_aspect_matches: 38
+      no_aspect_win_rate: 0.605
+    roles:
+    - role: Support
+      matches: 45
+      share: 0.76
+    - role: Mid
+      matches: 7
+      share: 0.12
+    - role: Solo
+      matches: 6
+      share: 0.1
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Support
+    base_role_share: 0.76
+    role_shift: null
+    items:
+    - name: Gauntlet of Thebes
+      share: 0.49
+    - name: Freya's Tears
+      share: 0.34
+    - name: Stampede
+      share: 0.34
+    - name: The Cosmic Horror
+      share: 0.32
+    - name: Totem of Death
+      share: 0.32
+    - name: Genji's Guard
+      share: 0.31
+    - name: Shell of Rebuke
+      share: 0.31
+    - name: Damaru
+      share: 0.24
+    starters:
+    - name: Bluestone Pendant
+      share: 0.22
+    - name: Selflessness
+      share: 0.22
+    - name: Heroism
+      share: 0.19
+    relics:
+    - name: Phantom Shell
+      share: 0.41
+    - name: Purification Beads
+      share: 0.29
+    - name: Aegis of Acceleration
+      share: 0.19
+    matches_by_window:
+      ob47: 59
+      ob46: 191
+      ob45: 235
+      ob44: 229
 ---

@@ -862,4 +862,20 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Calamity
+    status: below minimum
+    matches_by_window:
+      ob47: 4
+      ob46: 13
+      ob45: 6
+      ob44: 5
 ---

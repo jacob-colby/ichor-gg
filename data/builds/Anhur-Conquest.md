@@ -769,4 +769,79 @@ builds:
   - Dominance
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Pride
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 51
+    wins: 28
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 62
+      aspect_win_rate: 0.5
+      no_aspect_matches: 347
+      no_aspect_win_rate: 0.507
+    roles:
+    - role: Carry
+      matches: 44
+      share: 0.86
+    - role: Solo
+      matches: 5
+      share: 0.1
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    - role: Support
+      matches: 1
+      share: 0.02
+    base_role: Carry
+    base_role_share: 0.86
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.75
+    - name: The Executioner
+      share: 0.57
+    - name: Riptalon
+      share: 0.55
+    - name: Silverbranch Bow
+      share: 0.53
+    - name: Dagger of Frenzy
+      share: 0.49
+    - name: Dominance
+      share: 0.49
+    - name: Odysseus' Bow
+      share: 0.43
+    - name: Tyrfing
+      share: 0.43
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.33
+    - name: Hunter's Cowl
+      share: 0.29
+    - name: Leather Cowl
+      share: 0.22
+    relics:
+    - name: Purification Beads
+      share: 0.61
+    - name: Aegis of Acceleration
+      share: 0.37
+    - name: Agility Relic
+      share: 0.02
+    matches_by_window:
+      ob47: 51
+      ob46: 132
+      ob45: 145
+      ob44: 166
 ---
