@@ -186,12 +186,18 @@ def test_a_rejection_fails_the_run_after_the_commit():
     original PAIR rather than something the third step introduced: a run with
     both a rejected stats refresh and a left-out entity only ever told you
     about the first. `!cancelled()` on each condition is the fix, pinned here
-    so the suppression cannot come back."""
+    so the suppression cannot come back.
+
+    FIVE since 2026-11-09: a run whose figures step failed has committed
+    yesterday's docs/CURRENT.md, which turns `doc_audit` red on main for every
+    session, so it is a red run too — reported last, like the others, so the
+    data it did not block still lands."""
     steps = _steps("refresh-data.yml")
     runs = [s.get("run", "") for s in steps]
     conds = ["steps.stats_gate.outputs.rejected",
              "steps.new_entities.outputs.rejected",
              "steps.aspect_feed.outputs.rejected",
+             "steps.figures.outcome",
              "steps.data_pr.outputs.landed"]
     fails = [next(i for i, s in enumerate(steps) if cond in str(s.get("if", "")))
              for cond in conds]
@@ -238,6 +244,35 @@ def test_new_entities_run_after_the_stats_gate_and_before_the_recompute():
     add = _index(runs, "smite.new_entities")
     assert _index(runs, "smite.stats_gate check") < add < _index(runs, "smite.snapshots")
     assert add < _index(runs, "smite.recommend --all")
+
+
+def test_the_daily_job_regenerates_the_current_figures_from_its_own_output():
+    """After the recompute, because `doc_figures` reads the index and builds it
+    writes; before the commit, because the commit must carry the figures. In
+    any other order the data PR lands yesterday's figures and `doc_audit` is
+    red on main for every session — the failure this step exists to end."""
+    steps = _steps("refresh-data.yml")
+    runs = [s.get("run", "") for s in steps]
+    figures = _index(runs, "smite.doc_figures --write")
+    assert _index(runs, "smite.build_index") < figures
+    assert _index(runs, "smite.side_by_side --json") <= figures
+    assert figures < _index(runs, "git commit")
+
+
+def test_a_figures_failure_never_blocks_the_days_data():
+    """`live_window.py`'s rule, applied to the job: nothing may stop a day's
+    community data landing unless the data is wrong, and a generator crash is
+    not that. The failure is reported at the end instead (see the reporter
+    test above)."""
+    step = next(s for s in _steps("refresh-data.yml")
+                if "smite.doc_figures" in s.get("run", ""))
+    assert step.get("id") == "figures"
+    assert step.get("continue-on-error") is True
+
+
+def test_the_daily_job_commits_the_current_figures():
+    """docs/ is not under `data/`, so it is staged by name."""
+    assert "docs/CURRENT.md" in _pr_step()["run"].split("git reset")[0]
 
 
 def test_the_job_installs_pytest():
@@ -524,12 +559,12 @@ class _Origin:
         """What the job's earlier steps leave in the tree: data, the index, the
         side-by-side pages, and an HTML cache that must never be committed."""
         for rel in ("data/community.json", "viewer/public/index.json",
-                    "viewer/public/side_by_side/thor.json"):
+                    "viewer/public/side_by_side/thor.json", "docs/CURRENT.md"):
             _write(root / rel, value + "\n")
         _write(root / "data" / "_cache" / f"{value}.html", "<html/>\n")
 
     def commit(self, root, message):
-        self.git(root, "add", "data", "viewer")
+        self.git(root, "add", "data", "viewer", "docs")
         self.git(root, "reset", "-q", "--", "data/_cache")
         self.git(root, "commit", "-q", "-m", message)
 
@@ -560,9 +595,9 @@ class _Origin:
     def parent(self, ref):
         return self.git(self.tmp, "--git-dir", str(self.origin), "rev-parse", f"{ref}^")
 
-    def value(self, ref):
+    def value(self, ref, path="data/community.json"):
         return self.git(self.tmp, "--git-dir", str(self.origin), "show",
-                        f"{ref}:data/community.json")
+                        f"{ref}:{path}")
 
     def files(self, ref):
         return self.git(self.tmp, "--git-dir", str(self.origin), "ls-tree", "-r",
@@ -643,6 +678,8 @@ def test_the_first_run_of_the_day_opens_the_day_pr_and_arms_it(origin):
     assert run.outputs["landed"] == "armed" and run.outputs["token"] == "pat"
     assert origin.parent(_DAY_BRANCH) == main
     assert origin.value(_DAY_BRANCH) == "morning"
+    # The day's figures travel with the day's data, in the same commit.
+    assert origin.value(_DAY_BRANCH, "docs/CURRENT.md") == "morning"
     assert not any("_cache" in f for f in origin.files(_DAY_BRANCH))
     pr = run.pr(run.outputs["number"])
     assert (pr["head"], pr["state"], pr["armed"]) == (_DAY_BRANCH, "OPEN", "MERGE")
