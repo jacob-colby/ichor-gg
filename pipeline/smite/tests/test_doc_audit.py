@@ -604,3 +604,85 @@ def test_a_row_no_generated_figure_writes_is_uncovered():
     results, _ = _run_current([_figure(lambda f, d: ("coverage 51.2%",), tier="cheap")],
                               current=typed)
     assert _statuses(results)["Typed by hand"] == "uncovered"
+
+
+# ── the Community sample row's window (2026-11-09) ────────────────────────
+#
+# A new window lands by itself (Jacob, 2026-11-08), so the hand-written row
+# can be a window behind the data. That warns; it never fails.
+
+ROW = ("**Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. "
+       "5,119 Obsidian+ Conquest matches, 3 Nov – 8 Nov (2026-11-08, OB47). "
+       "Before that, 2,859 matches, 3 Nov – 6 Nov (2026-11-06, OB47).")
+
+
+def _window_check():
+    return next(c for c in doc_audit.CHECKS
+                if c.row == "Community sample" and c.compute is doc_audit._community_window)
+
+
+def _run_window(row, window, start):
+    import types
+    facts = types.SimpleNamespace(community_table={"window": window, "window_start": start})
+    return doc_audit.run(checks=[_window_check()], facts=facts,
+                         texts={"state": _state([("Community sample", row)])}, ungated={})
+
+
+def test_the_row_in_the_shipped_window_is_ok():
+    (result,), _ = _run_window(ROW, "ob47", "2026-11-03")
+    assert result["status"] == "ok"
+
+
+def test_the_row_a_window_behind_the_data_warns_and_does_not_fail():
+    """The first OB48 refresh, seen from §7: the row still reads OB47."""
+    (result,), _ = _run_window(ROW, "ob48", "2026-11-17")
+    assert result["status"] == "warning"
+    assert "warning" not in doc_audit.FAILING
+    assert "3 Nov" in result["note"] and "`ob48` started 17 Nov" in result["note"]
+    assert "CURRENT.md" in result["note"]
+
+
+def test_the_row_a_window_ahead_of_the_data_is_drift():
+    """The doc claims a window the tree does not have."""
+    (result,), _ = _run_window(ROW, "ob46", "2026-10-20")
+    assert result["status"] == "drift"
+    assert result["computed"].endswith("20 Oct – 8 Nov")
+    assert "starts AFTER the shipped one" in result["note"]
+
+
+def test_the_newest_reading_is_the_first_after_the_link():
+    """A human prepends the new window's first reading in the same words as
+    the old one. Searched for, the pattern would match twice and the gate
+    would call the row ambiguous; anchored on the link, it reads the new one."""
+    row = ROW.replace("newest first. ", "newest first. 529 Obsidian+ Conquest matches, "
+                      "17 Nov – 18 Nov (2026-11-18, OB48). Before that, ")
+    assert doc_audit.community_reading(row) == ("529", "Obsidian", "17 Nov", "18 Nov")
+    (result,), _ = _run_window(row, "ob48", "2026-11-17")
+    assert result["status"] == "ok"
+
+
+def test_the_shipped_row_has_a_reading_the_check_can_find():
+    rows = doc_audit.state_rows(doc_audit.STATE_PATH.read_text(encoding="utf-8"))
+    assert doc_audit.community_reading(rows["Community sample"])
+
+
+@pytest.mark.parametrize("day, anchor, expected", [
+    ("3 Nov", "2026-11-03", "2026-11-03"),
+    ("29 Dec", "2027-01-05", "2026-12-29"),     # a window that crosses New Year
+    ("2 Jan", "2026-12-29", "2027-01-02"),
+])
+def test_a_day_without_a_year_is_read_in_the_nearest_year(day, anchor, expected):
+    import datetime as dt
+    assert doc_audit.day_near(day, dt.date.fromisoformat(anchor)).isoformat() == expected
+
+
+def test_check_prints_a_warning_and_still_exits_zero(monkeypatch, capsys):
+    """`--check` is a merge gate: a warning must be seen and must not fail it."""
+    warning = {"check": _window_check(), "status": "warning", "doc": "5,119 …",
+               "computed": None, "note": "not drift: the newest reading is …"}
+    monkeypatch.setattr(doc_audit, "run", lambda **kw: ([warning], []))
+    assert doc_audit.main(["--check"]) == 0
+    out = capsys.readouterr().out
+    assert "WARNING  STATE.md §7 · Community sample" in out
+    assert "computed:" not in out
+    assert "1 warning(s)" in out

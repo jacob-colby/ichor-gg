@@ -839,45 +839,248 @@ def test_the_item_index_leaves_the_fields_null_without_provenance(tmp_path, monk
     assert out["window_start"] is None and out["window_end"] is None
 
 
-# Floors recorded when Open Beta 47 was declared established (589e9a4e,
-# 2026-11-06): the shipped table's own count and end date that day. The window
-# is cumulative, so every later refresh inside it reads at least these. They
-# move ONLY with the two pins below, by hand, as part of the next declaration.
-DECLARED_MATCHES_FLOOR = 2859
-DECLARED_WINDOW_END_FLOOR = "2026-11-06"
+# Values recorded for a window: its start, and the count and end date its
+# table already carried on the day they were written down. A window is
+# cumulative, so every later read of THAT window carries at least these. They
+# apply only while the shipped table IS that window (`live_window.
+# window_problems`): a new window starts small, and a floor carried across a
+# boundary would stop it landing. Recording one for a new window is optional
+# and never required; without one the window-agnostic rules still apply.
+WINDOW_FLOORS = {
+    # b7e4fde3 (2026-11-05), the first table with provenance: the OB46 close.
+    "ob46": {"window_start": "2026-10-20", "matches": 14667, "window_end": "2026-11-03"},
+    # de642c55 (2026-11-06), the table 589e9a4e declared Open Beta 47 on.
+    "ob47": {"window_start": "2026-11-03", "matches": 2859, "window_end": "2026-11-06"},
+}
 
 
 def test_the_shipped_file_now_carries_all_three():
-    """Pins the SHIPPED community table's own window. `window` and
-    `window_start` are one window's, so they fire on every patch boundary
-    whatever the new window's size: they detect CHANGE, not thinness. Updating
-    them therefore declares the new window established, which is Jacob's call,
-    not test maintenance. The thinness guard is
-    `refresh._refuse_community_collapse`; the 2026-11-04 incident was caught by
-    the tests pinning god NAMES, not by this one.
+    """The SHIPPED community table's window, provenance and floors, as rules
+    that hold at every boundary (`live_window.window_problems`).
 
-    `matches_analyzed` and `window_end` were pinned here too until 2026-11-07,
-    and those two move on EVERY refresh — 2,859 and 11-06 on the 11-06 table,
-    4,089 and 11-07 on the 11-07 one, same window — so with the daily data
-    arriving as a pull request they would have blocked every day's data, not
-    just the boundary's. They are invariants now (`live_window.py` has the
-    convention and the evidence). What the pins caught and these still catch:
-    a null or empty field (the god index failed and nothing carried the
-    provenance), a count or end date from an older read of the window, an end
-    before the start, an end in the future. What no single-file test can
-    catch, a fall between two consecutive refreshes that stays above the
-    declared floor, belongs at the write next to the collapse refusal."""
-    table = json.loads((refresh.DATA_ROOT / refresh.COMMUNITY_ITEMS_FILE)
-                       .read_text(encoding="utf-8"))
-    assert table["window"] == "ob47"
-    assert table["window_start"] == "2026-11-03"
-    # DAILY: invariants, not values.
-    matches, end = table["matches_analyzed"], table["window_end"]
-    assert isinstance(matches, int) and not isinstance(matches, bool), matches
-    assert matches >= DECLARED_MATCHES_FLOOR, (
-        f"{matches} matches is below the {DECLARED_MATCHES_FLOOR} this window "
-        "already had when it was declared; the window only grows")
-    assert isinstance(end, str) and len(end) == 10 and date.fromisoformat(end), end
-    assert table["window_start"] <= end, (table["window_start"], end)
-    assert end >= DECLARED_WINDOW_END_FLOOR, (end, DECLARED_WINDOW_END_FLOOR)
-    assert end <= live_window.latest_plausible_day(), end
+    Until 2026-11-09 this pinned `window == "ob47"` and `window_start ==
+    "2026-11-03"`, and held every table to OB47's floors, on purpose: a pin
+    that fires at every boundary detects CHANGE, so moving it declared the new
+    window established. Jacob decided on 2026-11-08 that a new window lands by
+    itself, so the first OB48 refresh would have failed here on all four and
+    blocked every daily pull request until someone moved them. (`matches` and
+    `window_end` had already become invariants on 2026-11-07, when they were
+    found to block every day, not just the boundary's.)
+
+    What the pins caught still fails here: no window, or a window that is not
+    a patch window (the chooser fell back to the site default, which is how
+    2026-11-04 read a one-day window); a window far from the patch the data
+    is on; a null or zero count (the god index failed); an end before the
+    start or in the future; and, while the table is a window a floor was
+    recorded for, a count, end or start below what that window already had.
+    What no single-file test can see, a fall between two consecutive
+    refreshes, is refused at the write (`refresh._refuse_window_regression`)."""
+    problems = live_window.window_problems(live_window.shipped_community_table(),
+                                           live_window.shipped_patch(),
+                                           floors=WINDOW_FLOORS)
+    assert not problems, problems
+
+
+def _window_table(window="ob47", start="2026-11-03", end="2026-11-08", matches=5119):
+    return {"division": "obsidian", "window": window, "window_start": start,
+            "window_end": end, "matches_analyzed": matches, "items": {}}
+
+
+def _patch(n, data=None):
+    return {"patch": f"Open Beta {n}", "data_patch": f"Open Beta {data or n}"}
+
+
+@pytest.mark.parametrize("table, patch", [
+    # main on 2026-11-08.
+    (_window_table(), _patch(47)),
+    # The OB46 close (b7e4fde3) on OB47 data: the chooser keeping the last
+    # closed window while the new one fills. The boundary, read in reverse.
+    (_window_table("ob46", "2026-10-20", "2026-11-03", 14667), _patch(47)),
+    # A new window's first day, on its own patch's data, and on data the stats
+    # refresh has not moved yet (rejected by the stats gate, or the wiki late).
+    (_window_table("ob48", "2026-11-17", "2026-11-18", 529), _patch(48)),
+    (_window_table("ob48", "2026-11-17", "2026-11-18", 529), _patch(48, 47)),
+])
+def test_every_boundary_state_passes(table, patch):
+    """Each state a healthy boundary passes through. OB47's floors are not
+    applied to ob48: 529 matches is below 2,859 and must not matter."""
+    assert live_window.window_problems(table, patch, latest="2026-11-20",
+                                       floors=WINDOW_FLOORS) == []
+
+
+@pytest.mark.parametrize("table, words", [
+    (_window_table(window=None), "not a patch window"),
+    (_window_table(window="1m"), "not a patch window"),
+    (_window_table(window="ob49"), "+2 patches"),
+    (_window_table(window="ob45"), "-2 patches"),
+    (_window_table(matches=None), "not a positive count"),
+    (_window_table(matches=0), "not a positive count"),
+    (_window_table(start="", end=""), "not ISO dates"),
+    (_window_table(start="2026-11-09", end="2026-11-08"), "before it starts"),
+    (_window_table(end="2026-11-21"), "after 2026-11-20"),
+    (_window_table(matches=2000), "below the 2,859"),
+    (_window_table(end="2026-11-05"), "before the 2026-11-06"),
+    (_window_table(start="2026-11-04"), "recorded starting 2026-11-03"),
+])
+def test_what_the_pins_caught_still_fails(table, words):
+    problems = live_window.window_problems(table, _patch(47), latest="2026-11-20",
+                                           floors=WINDOW_FLOORS)
+    assert any(words in p for p in problems), problems
+
+
+# ── Never backwards, at the write (2026-11-09) ───────────────────────────
+#
+# A new patch's window lands by itself (Jacob, 2026-11-08), so no test pins
+# the window any more. What a pin also caught, a table that is not the window
+# it should be, is refused where the previous table is still in hand.
+
+SHIPPED = _window_table()
+
+
+def _provenance(window, start, end, matches):
+    return {"window": window, "window_start": start, "window_end": end,
+            "matches_analyzed": matches}
+
+
+def test_the_same_window_with_fewer_matches_is_refused():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_window_regression(
+            SHIPPED, _provenance("ob47", "2026-11-03", "2026-11-09", 4089))
+    assert "5,119 -> 4,089 matches" in str(exc.value)
+    assert "--allow-shrink" in str(exc.value)
+
+
+def test_the_same_window_ending_earlier_is_refused():
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_window_regression(
+            SHIPPED, _provenance("ob47", "2026-11-03", "2026-11-07", 5119))
+    assert "end 2026-11-08 -> 2026-11-07" in str(exc.value)
+
+
+@pytest.mark.parametrize("end, matches", [
+    ("2026-11-09", 6302),      # the live read of 2026-11-09: a day on, grown
+    ("2026-11-08", 5119),      # unchanged: a window read twice in a day
+])
+def test_the_same_window_grown_or_unchanged_is_accepted(end, matches):
+    refresh._refuse_window_regression(SHIPPED, _provenance("ob47", "2026-11-03", end, matches))
+
+
+def test_a_closed_window_that_kept_growing_is_accepted():
+    """Measured: ob46 read 14,667 matches on 2026-11-05 and 16,195 on
+    2026-11-09, its end 2026-11-03 both times. Closed is not frozen."""
+    closed = _window_table("ob46", "2026-10-20", "2026-11-03", 14667)
+    refresh._refuse_window_regression(
+        closed, _provenance("ob46", "2026-10-20", "2026-11-03", 16195))
+
+
+def test_an_older_window_is_refused_whatever_its_size():
+    """The OB46 close against the shipped ob47 table: larger on every count,
+    and still the wrong window to go back to."""
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh._refuse_window_regression(
+            SHIPPED, _provenance("ob46", "2026-10-20", "2026-11-03", 16195))
+    assert "BACKWARDS" in str(exc.value)
+    assert "ob47 2026-11-03..2026-11-08, 5,119 matches" in str(exc.value)
+    assert "--allow-shrink" in str(exc.value)
+
+
+def test_windows_are_ordered_by_number_not_by_string():
+    assert refresh.community_window_number("ob9") == 9
+    assert refresh.community_window_number("ob10") == 10
+    assert refresh.community_window_number("1m") is None
+    refresh._refuse_window_regression(_window_table("ob9", "2025-01-01", "2025-01-14", 9000),
+                                      _provenance("ob10", "2025-01-14", "2025-01-15", 500))
+    with pytest.raises(refresh.ParseCollapse):
+        refresh._refuse_window_regression(
+            _window_table("ob10", "2025-01-14", "2025-01-15", 500),
+            _provenance("ob9", "2025-01-01", "2025-01-14", 9000))
+
+
+def _boundary_fetcher(monkeypatch, newest_gods):
+    """ob48 just opened, covering `newest_gods`; ob47 closed, covering 95."""
+    html = (FIXTURES / "achilles_smitebrain_thin_window.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(refresh.smitebrain_parser, "patch_windows", lambda _html: ["ob48", "ob47"])
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_god_index",
+                        lambda payload: payload["nodes"][0]["data"])
+    return _window_fetcher({"ob48": _index_rows(newest_gods, "2026-11-17T11:30:00.000Z"),
+                            "ob47": _index_rows(95, "2026-11-03T11:30:13.083Z")}, html)
+
+
+def test_a_newer_window_the_coverage_rule_chose_is_accepted(monkeypatch):
+    """The boundary end to end through the two guards Jacob named: the chooser
+    takes ob48 the first day it covers as many gods as ob47, and the write
+    accepts it at a tenth of ob47's size. How deep it is is not this check's
+    business; `choose_community_window`'s docstring has that measurement."""
+    window, gods = refresh.choose_community_window(_boundary_fetcher(monkeypatch, 95), "Achilles")
+    assert (window, gods) == ("ob48", 95)
+    refresh._refuse_window_regression(
+        SHIPPED, _provenance(window, "2026-11-17", "2026-11-18", 529))
+
+
+def test_the_chooser_keeping_the_last_window_is_accepted_at_the_boundary(monkeypatch):
+    """The day before: ob48 covers fewer gods, so the chooser keeps ob47 and
+    the write sees the same window again, a little bigger."""
+    window, _ = refresh.choose_community_window(_boundary_fetcher(monkeypatch, 86), "Achilles")
+    assert window == "ob47"
+    refresh._refuse_window_regression(
+        SHIPPED, _provenance(window, "2026-11-03", "2026-11-17", 7400))
+
+
+@pytest.mark.parametrize("before", [
+    None,                                        # no previous file
+    {"division": "obsidian", "items": {}},       # a file from before b7e4fde3
+    _window_table(None, "", "", None),           # a run that named no window
+])
+def test_nothing_to_order_against_is_accepted(before):
+    refresh._refuse_window_regression(
+        before, _provenance("ob47", "2026-11-03", "2026-11-08", 5119))
+
+
+def test_a_run_that_could_not_name_its_window_is_left_to_the_shipped_table_test():
+    """Unorderable, so not this check's to refuse. The shipped-table test
+    requires a patch window and fails it in CI (`test_what_the_pins_caught_still_fails`)."""
+    refresh._refuse_window_regression(
+        SHIPPED, _provenance(None, "2026-11-04", "2026-11-04", 529))
+
+
+def test_the_refusal_comes_before_anything_is_written(tmp_path, monkeypatch):
+    """`refresh_community` end to end: refused, the committed table and the
+    notes are byte-for-byte as they were, and `--allow-shrink` overrides."""
+    monkeypatch.setattr(refresh, "DATA_ROOT", tmp_path)
+    monkeypatch.setattr(refresh, "BUILDS_ROOT", tmp_path / "builds")
+    (tmp_path / "builds").mkdir()
+    note = tmp_path / "builds" / "Achilles-Conquest.md"
+    notes.merge_build_note(note, "Achilles", "Conquest",
+                           {"slot_order": [{"name": f"Item{i}"} for i in range(6)]})
+    shipped = json.dumps(SHIPPED, indent=2, sort_keys=True)
+    (tmp_path / refresh.COMMUNITY_ITEMS_FILE).write_text(shipped, encoding="utf-8")
+    note_before = note.read_bytes()
+
+    monkeypatch.setattr(refresh, "CachedFetcher", lambda *a, **k: object())
+    monkeypatch.setattr(refresh, "choose_community_window", lambda *a, **k: ("ob46", 94))
+    row = {"god": "Achilles", "start_time": "2026-10-20T11:48:48.610Z",
+           "end_time": "2026-11-03T11:28:02.357Z", "matches_analyzed": 16195}
+    monkeypatch.setattr(refresh, "refresh_god_index", lambda *a, **k: {"Achilles": row})
+    wrote = []
+    monkeypatch.setattr(refresh, "refresh_item_index", lambda *a, **k: wrote.append("items") or 1)
+    monkeypatch.setattr(refresh, "refresh_god_builds", lambda *a, **k: wrote.append("builds"))
+
+    with pytest.raises(refresh.ParseCollapse) as exc:
+        refresh.refresh_community()
+    assert "BACKWARDS" in str(exc.value)
+    assert wrote == []
+    assert (tmp_path / refresh.COMMUNITY_ITEMS_FILE).read_text(encoding="utf-8") == shipped
+    assert note.read_bytes() == note_before
+
+    assert refresh.refresh_community(allow_shrink=True) == 0
+    assert wrote == ["items", "builds"]
+
+
+def test_the_cli_step_fails_on_the_refusal(monkeypatch, capsys):
+    """The daily job's contract: a refusal fails `refresh --community` loudly,
+    before the recompute and the commit, exactly as a collapse does."""
+    def refused(**_kw):
+        raise refresh.ParseCollapse("community window went BACKWARDS: ob47 -> ob46")
+    monkeypatch.setattr(refresh, "refresh_community", refused)
+    assert refresh.main(["--community"]) == 1
+    assert "::error::community window went BACKWARDS" in capsys.readouterr().out

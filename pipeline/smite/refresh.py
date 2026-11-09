@@ -426,6 +426,45 @@ def choose_community_window(community_fetcher, probe_god: str, force: bool = Fal
     One window for the WHOLE run, because a god read on this patch and a god
     read on the last one are not comparable, and the comparison target is
     exactly what these records are for.
+
+    A NEW WINDOW IS TAKEN WITHOUT ANYONE DECLARING IT (Jacob, 2026-11-08):
+    this rule and `_refuse_community_collapse` are the guards, and
+    `_refuse_window_regression` refuses only a table that goes backwards.
+
+    WHAT IT SWITCHES ON (measured 2026-11-09; reported, NOT acted on). The
+    rule has no minimum depth, so it moves to a new window on the first run
+    whose god index covers as many gods as the last window's. Read off the git
+    snapshot series (the daily `_community_items.json` and the Conquest notes'
+    god-index fields since 08-01; tracked gods stand in for the index's rows),
+    the first run it would have switched on, per boundary:
+
+        window  switch run    builds*  ~matches  gods <30  min  median
+        08-11   08-13 day 2†    8,389    ~1,860         4   15      81
+        08-25   08-26 day 1     4,190      ~930        27    3      40
+        09-08   09-09 day 1     4,143      ~920        35    2      36
+        09-22   09-23 day 1     4,608    ~1,020        23    5      47
+        10-06   10-08 day 2‡    6,752    ~1,500        13   19      61
+        10-20   10-21 day 1     3,728      ~830        39    4      35
+        11-03   11-05 day 2§        -  529-2,859        -    -       -
+
+    * `matches_played / use_rate`; matches at the 4.47-4.60 builds a match
+      measured on OB46-47. "gods <30": tracked gods with fewer than
+      `tierlist.MIN_MATCHES` matches of their own in the new window; min and
+      median are the same per-god counts. The closed window it replaced had
+      none under 30 at any boundary (its per-god minimum was 129-257).
+      † No 08-12 snapshot exists. ‡ 10-07 covered 89 of 90 tracked gods, so
+      the rule would have kept the old window that day. § The rule's own
+      first run, 95 gods against 94; 11-04's one-day window covered 86 and is
+      the incident above. 11-05's count was never committed (GH013); 11-04's
+      529 and 11-06's 2,859 bound it.
+
+    Every tracked god had a COMPLETE six-slot record on each of those runs, so
+    `_refuse_community_collapse` would not have fired either. On four of the
+    seven boundaries the rule takes a window one day old, with 23 to 39 of
+    ~90 gods under 30 matches. That is no change from before either guard
+    existed: the site default is the newest window, and every boundary from
+    08-25 to 10-20 shipped its window's first day (08-26, 09-09, 09-23, 10-07,
+    10-21). Whether a minimum depth belongs here is Jacob's call; none is set.
     """
     try:
         windows = smitebrain_parser.patch_windows(
@@ -516,6 +555,105 @@ def _refuse_community_collapse(before: dict, after: dict) -> None:
         f"meta shift — check `choose_community_window`'s log above for which match "
         f"window this run read. Nothing has been recomputed or committed. If the "
         f"loss is real, re-run with --allow-shrink.")
+
+
+def community_window_number(window):
+    """N of a SmiteBrain patch window id (`ob47` -> 47), or None when the id
+    is not a patch window (None, the site default, or a rolling `1m`). Windows
+    order by N, never by string ("ob9" > "ob10" as strings)."""
+    match = smitebrain_parser.PATCH_WINDOW_RE.match(str(window or ""))
+    return int(match.group(1)) if match else None
+
+
+def read_community_table(data_root: Path = None):
+    """`_community_items.json` as the last committed refresh left it, or None.
+    On the daily job that is `main`'s: the runner checks main out fresh."""
+    try:
+        return json.loads(((data_root or DATA_ROOT) / COMMUNITY_ITEMS_FILE)
+                          .read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def _refuse_window_regression(before, after: dict) -> None:
+    """Raise unless the new community table is the window it replaces grown,
+    or a newer window. `before` is the table on disk before the run (None if
+    there is none); `after` is the new one's `window`, `window_start`,
+    `window_end` and `matches_analyzed`.
+
+    WHY IT IS HERE (2026-11-09). A new patch's window lands with the daily
+    refresh and nobody declares it (Jacob, 2026-11-08), so the tests no longer
+    pin `window == "ob47"`. Those pins stopped every boundary; they also
+    caught a table that is not the window it should be, and the one fact that
+    shows that is the PREVIOUS table, which a test on the CI checkout cannot
+    see. Here it is still on disk, as `_refuse_god_collapse` has the old note
+    in hand. PR #123 named this the missing piece.
+
+    THE RULE, against the snapshot history (`tests/live_window.py`):
+      * SAME window: `matches_analyzed` and `window_end` never fall. Equal is
+        accepted, because a closed window read again while the chooser keeps
+        it is the ordinary case at a boundary. A window is cumulative: over
+        the 83 refreshes on record from 08-01 to 11-08 (82 consecutive
+        pairs) the builds denominator never fell inside a window; ob47 went
+        2,859 -> 4,089 -> 5,119 -> 6,302 matches over 11-06..11-09; and a
+        CLOSED window keeps its end and still grows (ob46: 14,667 read
+        2026-11-05, 16,195 read 2026-11-09, end 2026-11-03 both times).
+      * OLDER window: refused, whatever its size. The chooser reads only the
+        newest two windows, so going back means the newest one covers fewer
+        gods today than the one before it, after covering at least as many
+        the day it was taken, or the source no longer offers it. No window on
+        record has lost a tracked god from one refresh to the next.
+      * NEWER window: accepted. `choose_community_window` returns a newer
+        window only once it covers as many gods as the one before it, and
+        `_refuse_community_collapse` still runs on the records written. Those
+        are the two guards Jacob named; this adds none against a new window,
+        and nothing here judges how DEEP it is.
+      * Nothing to order (no previous file, a file from before b7e4fde3 gave
+        it provenance, or a window that is not `obNN`): accepted. A run that
+        could not name its window fails the shipped-table test instead.
+
+    Replayed over those 82 pairs (the window identified by the notes'
+    `god_window_start` before the tables named it): 75 inside a window, 7
+    across a boundary, 0 refused.
+
+    It runs BEFORE anything is written, so a refused run leaves the committed
+    table and every note as they were, and the CLI step fails like a collapse.
+    The override is the collapse guard's, `--allow-shrink`.
+    """
+    before = before or {}
+    old_n = community_window_number(before.get("window"))
+    new_n = community_window_number(after.get("window"))
+    if old_n is None or new_n is None or new_n > old_n:
+        return
+
+    def describe(t):
+        matches = t.get("matches_analyzed")
+        return (f"{t.get('window')} {t.get('window_start')}..{t.get('window_end')}, "
+                f"{matches:,} matches" if isinstance(matches, int) else
+                f"{t.get('window')} {t.get('window_start')}..{t.get('window_end')}")
+
+    if new_n < old_n:
+        raise ParseCollapse(
+            f"community window went BACKWARDS: {describe(before)} -> {describe(after)}. "
+            f"The chooser reads only the newest two windows, so either the newest "
+            f"covers fewer gods today than the one before it, after covering at "
+            f"least as many the day it was taken, or the source no longer offers "
+            f"it; `choose_community_window`'s log above says which. Nothing has "
+            f"been written. If the source really restarted, re-run with "
+            f"--allow-shrink.")
+    problems = []
+    was, now = before.get("matches_analyzed"), after.get("matches_analyzed")
+    if isinstance(was, int) and isinstance(now, int) and now < was:
+        problems.append(f"{was:,} -> {now:,} matches")
+    was_end, now_end = before.get("window_end"), after.get("window_end")
+    if was_end and now_end and now_end < was_end:
+        problems.append(f"end {was_end} -> {now_end}")
+    if problems:
+        raise ParseCollapse(
+            f"community window {after.get('window')} SHRANK: {'; '.join(problems)} "
+            f"({describe(before)} -> {describe(after)}). A window only grows, closed "
+            f"or not, so this read is not the window it claims to be. Nothing has "
+            f"been written. If the loss is real, re-run with --allow-shrink.")
 
 
 def refresh_god_index(community_fetcher, force: bool = False, window=None) -> dict:
@@ -782,6 +920,7 @@ def refresh_community(force: bool = True, allow_shrink: bool = False) -> int:
     # Read BEFORE anything is written, so the collapse refusal at the end can
     # quote both sides — the same read-before-write shape `refresh_god` uses.
     before = complete_community_records()
+    before_table = read_community_table()
 
     build_paths = list(BUILDS_ROOT.glob("*.md"))
     probe_god = next((fm.get("god") for fm in
@@ -798,9 +937,15 @@ def refresh_community(force: bool = True, allow_shrink: bool = False) -> int:
         print(f"  [FAILED] god index: {exc} — falling back to aspect figures")
         failures.append(f"god index: {exc}")
 
+    # Never backwards, refused before the first write: the god index is where
+    # the new table's provenance comes from, and nothing has been written yet.
+    provenance = window_provenance(god_index.values())
+    if not allow_shrink:
+        _refuse_window_regression(before_table, {"window": window, **provenance})
+
     try:
         n_items = refresh_item_index(community_fetcher, DATA_ROOT, force=force, window=window,
-                                     provenance=window_provenance(god_index.values()))
+                                     provenance=provenance)
         print(f"  item index: {n_items} items with win/loss records")
     except Exception as exc:
         print(f"  [FAILED] item index: {exc} — item stats keep their last values")
@@ -1055,9 +1200,10 @@ def main(argv=None) -> int:
     if args.community:
         # Non-zero on any failure so a scheduled run fails loudly rather than
         # committing a half-refreshed dataset. A ParseCollapse is the same
-        # contract, louder: the roster's community records thinned, so the
-        # step fails HERE and the job never reaches its recompute or its
-        # commit (`_refuse_community_collapse`).
+        # contract, louder: the roster's community records thinned
+        # (`_refuse_community_collapse`) or the table would go backwards
+        # (`_refuse_window_regression`), so the step fails HERE and the job
+        # never reaches its recompute or its commit.
         try:
             return 1 if refresh_community(force=True,
                                           allow_shrink=args.allow_shrink) else 0
