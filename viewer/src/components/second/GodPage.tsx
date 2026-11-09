@@ -364,10 +364,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const aspectRecord = noteFor(data.builds, god.name, "Conquest")?.community_aspects;
   const aspectShown = mode === "conquest" && !!aspectName && hasCommunity
     && aspectEntry(aspectRecord, aspectName)?.status === "shown";
-  const aspectLine = q.aspect && aspectName ? [
-    isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name),
-    aspectShown ? "What its players buy is on the Community side." : null,
-  ].filter(Boolean).join(" ") : null;
+  const aspectMoved = isMain && aspectSwaps.length > 0;
+  const aspectLine = q.aspect && aspectName ? (
+    aspectMoved ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
+  ) : null;
+  const aspectPointer = aspectShown ? "What its players buy is on the Community side." : null;
   const slotCount = aspectSlot ? aspectCount(aspectRecord, aspectName!, mode) : null;
 
   return (
@@ -420,12 +421,24 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
                 aspect={aspectSwitch(aspectChangesBuild)} />
               {(aspectLine || !isMain) && (
                 <div className="mt-1 space-y-2 lg:mt-2" data-testid="adjust-line" aria-live="polite">
+                  {/* The aspect's swaps fold away on a phone the way a focus's
+                      do (#138's swapDetail): one summary line, the list one
+                      tap away, so the six starts on the first screen. With no
+                      swap there is nothing to fold, and it stays one line. */}
                   {aspectLine && (
-                    <div>
-                      <p className="text-note text-muted" data-testid="aspect-note">
-                        {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
-                      </p>
-                      {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
+                    <div data-testid="aspect-line">
+                      {swapDetail(
+                        <span data-testid="aspect-note">
+                          {aspectLine}
+                          {aspectMoved
+                            ? <> {noColon(swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of))}</>
+                            : aspectPointer && <> {aspectPointer}</>}
+                        </span>,
+                        aspectMoved && <>
+                          {swapList(aspectSwaps)}
+                          {aspectPointer && <p className="mt-1 text-cap text-quiet">{aspectPointer}</p>}
+                        </>,
+                        "text-note text-muted")}
                     </div>
                   )}
                   {!isMain && selected && (
@@ -446,7 +459,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </div>
           )}
 
-          <div className="mt-2 flex items-baseline justify-between px-1 text-cap text-quiet lg:mt-3">
+          <div className="mt-2 flex items-baseline justify-between gap-3 px-1 text-cap text-quiet lg:mt-3">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">
               {aspectSlot ? `The community's ${shortAspect(aspectName!)} build` : `${listLabel} · buy order`}
             </h2>

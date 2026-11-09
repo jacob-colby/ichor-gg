@@ -626,6 +626,30 @@ describe("God page — what the aspect's players buy", () => {
     });
   });
 
+  it("folds the aspect's swaps to one line on a phone, the pointer behind it", async () => {
+    // An aspect build that moves the six: one swap, Soul Gem -> Book of Thoth.
+    const note = index.builds[0] as unknown as { builds: unknown[] };
+    const builds = note.builds;
+    const scored = index as unknown as { god_item_scores?: unknown };
+    note.builds = [...builds, { source: "suggested", archetype: "model", aspect: "Aspect of Thermotherapy",
+      slot_order: [...SIX.slice(0, 5), "Book of Thoth"] }];
+    scored.god_item_scores = { Ra: { "conquest:aspect": { "Book of Thoth": 0.6 } } };
+    try {
+      await withRecord(RECORD, `${toHash.god("Ra")}?aspect=1`, async () => {
+        const line = await screen.findByTestId("aspect-line");
+        const summary = line.querySelector("summary")!;
+        expect(summary).toHaveTextContent(/^Built for Thermotherapy\. Swaps 1 of 6$/);
+        expect(line.querySelector("details")!.open).toBe(false);
+        // Behind the tap: the swap, then where its players' build is.
+        expect(within(line).getByRole("listitem")).toHaveTextContent("Soul Gem → replaced by Book of Thoth");
+        expect(line).toHaveTextContent("What its players buy is on the Community side.");
+      });
+    } finally {
+      note.builds = builds;
+      delete scored.god_item_scores;
+    }
+  });
+
   it("says how few games there are when the record is below the minimum", async () => {
     const thin = { ...RECORD, aspects: [{ aspect: "Aspect Of Thermotherapy", status: "below minimum",
       matches_by_window: { ob47: 4, ob46: 13, ob45: 6, ob44: 5 } }] };
