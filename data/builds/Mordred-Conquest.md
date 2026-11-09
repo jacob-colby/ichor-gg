@@ -950,14 +950,94 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Rage
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 74
+    wins: 34
+    win_share: 0.46
+    aggregate:
+      aspect_matches: 87
+      aspect_win_rate: 0.471
+      no_aspect_matches: 1557
+      no_aspect_win_rate: 0.562
+    roles:
+    - role: Solo
+      matches: 43
+      share: 0.58
+    - role: Jungle
+      matches: 27
+      share: 0.36
+    - role: Support
+      matches: 4
+      share: 0.05
+    base_role: Solo Jungle
+    base_role_share: 0.95
+    role_shift: null
+    items:
+    - name: Sanguine Lash
+      share: 0.55
+    - name: Devourer's Gauntlet
+      share: 0.39
+    - name: Shifter's Shield
+      share: 0.39
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 21
+        matches: 29
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 21 of the 29 matches that bought it are older
+    - name: Barbed Carver
+      share: 0.35
+    - name: Umbral Link
+      share: 0.28
+    - name: Freya's Tears
+      share: 0.27
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 14
+        matches: 20
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 14 of the 20 matches that bought it are older
+    - name: Shield of the Phoenix
+      share: 0.22
+    - name: Bancroft's Talon
+      share: 0.16
+    starters:
+    - name: Bluestone Brooch
+      share: 0.22
+    - name: Bluestone Pendant
+      share: 0.2
+    - name: Blood-soaked Shroud
+      share: 0.14
+    relics:
+    - name: Sundering Arc
+      share: 0.27
+    - name: Phantom Shell
+      share: 0.23
+    - name: Aegis of Acceleration
+      share: 0.22
     matches_by_window:
       ob47: 6
       ob46: 23
       ob45: 45
       ob44: 53
+    unmapped_slugs:
+    - brawlers-ruin
 ---

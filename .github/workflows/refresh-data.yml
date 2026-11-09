@@ -185,6 +185,12 @@ jobs:
       - name: Recompute builds and rebuild the index
         working-directory: pipeline
         run: |
+          # The aspect entries flag an item whose stats moved after the windows
+          # they read, from the snapshot store, and name items from the item
+          # notes; both can move AFTER the aspect step above (a stats refresh,
+          # a new item, a snapshot), so re-derive them from the store here.
+          # No request: `derive` reads only what is on disk.
+          python -m smite.aspect_matches derive
           python -m smite.recommend --all
           python -m smite.build_index
           # Criterion 2's side-by-side, per god, for the god page. A diagnostic:

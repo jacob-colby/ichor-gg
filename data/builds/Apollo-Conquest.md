@@ -782,14 +782,95 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Harmony
-    status: below minimum
+    status: shown
+    windows:
+    - ob46
+    - ob47
+    patches: OB46–OB47
+    window_rule: pooled back
+    window_start: '2026-10-20'
+    window_end: '2026-11-08'
+    matches: 43
+    wins: 24
+    win_share: 0.56
+    aggregate:
+      aspect_matches: 49
+      aspect_win_rate: 0.51
+      no_aspect_matches: 1306
+      no_aspect_win_rate: 0.544
+    roles:
+    - role: Support
+      matches: 21
+      share: 0.49
+    - role: Solo
+      matches: 17
+      share: 0.4
+    - role: Carry
+      matches: 5
+      share: 0.12
+    base_role: Carry
+    base_role_share: 0.12
+    role_shift:
+      role: Support
+      share: 0.49
+      says: 'most Aspect of Harmony players do not play Carry: Support 49%, Carry
+        12%'
+    items:
+    - name: Berserker's Shield
+      share: 0.53
+    - name: Shogun's Ofuda
+      share: 0.4
+    - name: Gauntlet of Thebes
+      share: 0.28
+    - name: Golden Blade
+      share: 0.28
+    - name: The Executioner
+      share: 0.26
+    - name: Tyrfing
+      share: 0.21
+    - name: Yogi's Necklace
+      share: 0.21
+    - name: Contagion
+      share: 0.16
+    starters:
+    - name: Death's Embrace
+      share: 0.21
+    - name: Selflessness
+      share: 0.14
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 4
+        matches: 6
+        says: changed in OB47; 4 of the 6 matches that bought it are older
+    - name: War Flag
+      share: 0.14
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 4
+        matches: 6
+        says: changed in OB47; 4 of the 6 matches that bought it are older
+    relics:
+    - name: Phantom Shell
+      share: 0.26
+    - name: Blink Rune
+      share: 0.21
+    - name: Purification Beads
+      share: 0.21
     matches_by_window:
       ob47: 17
       ob46: 26
       ob45: 14
       ob44: 32
+    unmapped_slugs:
+    - brawlers-ruin
 ---

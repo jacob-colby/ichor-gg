@@ -229,6 +229,21 @@ def test_the_aspect_feed_runs_after_the_community_pull_and_cannot_cost_the_day()
     assert at < _index(runs, "smite.recommend --all")
 
 
+def test_the_aspect_entries_are_rederived_after_every_step_that_feeds_them():
+    """An entry flags an item whose stats moved after the windows it reads
+    (the snapshot store) and names items from the item notes. The stats
+    refresh, the new-entity step and the snapshot all run AFTER the aspect
+    feed, so on a patch day the feed step's notes would be stale against the
+    day's own snapshot, and `test_the_conquest_notes_say_what_the_store_says`
+    would fail the data PR. `derive` reads only the disk."""
+    runs = [s.get("run", "") for s in _steps("refresh-data.yml")]
+    derive = _index(runs, "smite.aspect_matches derive")
+    for feeder in ("smite.aspect_matches refresh", "smite.stats_refresh",
+                   "smite.new_entities", "python -m smite.snapshots"):
+        assert _index(runs, feeder) <= derive, feeder
+    assert derive <= _index(runs, "smite.recommend --all") < _index(runs, "git commit")
+
+
 def test_the_aspect_store_is_not_ignored_by_git():
     """`git add data` stages it only if no ignore rule swallows it."""
     root = WORKFLOWS.parents[1]
