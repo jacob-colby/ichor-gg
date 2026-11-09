@@ -173,11 +173,12 @@ def test_a_rejection_fails_the_run_after_the_commit():
     """Last, so the community data still lands; present, so a rejection is a
     red run and not a line in a green log.
 
-    THREE of these reporters now, not two. The third fires when the day's data
-    is stuck in a pull request nobody can merge, and it arrived with the
-    reroute off `git push` to main. It holds the same contract as the other
-    two: it comes after the data is safe, and it turns a quiet problem into a
-    red run.
+    FOUR of these reporters now. The third fires when the day's data is stuck
+    in a pull request nobody can merge, and it arrived with the reroute off
+    `git push` to main; the fourth when the per-aspect match feed was refused
+    (`smite.aspect_matches`). Each holds the same contract as the first two:
+    it comes after the data is safe, and it turns a quiet problem into a red
+    run.
 
     AND EACH REPORTS INDEPENDENTLY. A step runs by default only if every step
     before it succeeded, so three terminal reporters in a row meant the first
@@ -187,7 +188,7 @@ def test_a_rejection_fails_the_run_after_the_commit():
     about the first. `!cancelled()` on each condition is the fix, pinned here
     so the suppression cannot come back.
 
-    FOUR since 2026-11-09: a run whose figures step failed has committed
+    FIVE since 2026-11-09: a run whose figures step failed has committed
     yesterday's docs/CURRENT.md, which turns `doc_audit` red on main for every
     session, so it is a red run too — reported last, like the others, so the
     data it did not block still lands."""
@@ -195,18 +196,45 @@ def test_a_rejection_fails_the_run_after_the_commit():
     runs = [s.get("run", "") for s in steps]
     conds = ["steps.stats_gate.outputs.rejected",
              "steps.new_entities.outputs.rejected",
+             "steps.aspect_feed.outputs.rejected",
              "steps.figures.outcome",
              "steps.data_pr.outputs.landed"]
     fails = [next(i for i, s in enumerate(steps) if cond in str(s.get("if", "")))
              for cond in conds]
     # The reporters are the run's last steps, after the data is safe.
-    assert sorted(fails) == [len(steps) - 4, len(steps) - 3, len(steps) - 2,
-                             len(steps) - 1]
+    assert sorted(fails) == list(range(len(steps) - len(conds), len(steps)))
     for fail in fails:
         assert "exit 1" in runs[fail]
         assert _index(runs, "git commit") < fail
         # Independent of whether an earlier reporter already failed.
         assert "!cancelled()" in str(steps[fail].get("if", ""))
+
+
+def test_the_aspect_feed_runs_after_the_community_pull_and_cannot_cost_the_day():
+    """`smite.aspect_matches refresh` is all or nothing and exits 1 on a
+    refusal. The step must turn that into an output, not a failed step: a
+    failed step skips everything after it, including the commit, and a refused
+    aspect feed has already left its store untouched. Its reporter is checked
+    with the others in `test_a_rejection_fails_the_run_after_the_commit`."""
+    steps = _steps("refresh-data.yml")
+    runs = [s.get("run", "") for s in steps]
+    feed = next(s for s in steps if "smite.aspect_matches refresh" in s.get("run", ""))
+    at = steps.index(feed)
+    assert feed.get("id") == "aspect_feed"
+    assert not feed.get("continue-on-error")
+    assert "rejected=true" in feed["run"] and "GITHUB_OUTPUT" in feed["run"]
+    assert feed["run"].strip().startswith("if ! python -m smite.aspect_matches refresh")
+    assert _index(runs, "smite.refresh --community") < at < _index(runs, "git commit")
+    # Before the recompute and the index, so the day's notes and index see it.
+    assert at < _index(runs, "smite.recommend --all")
+
+
+def test_the_aspect_store_is_not_ignored_by_git():
+    """`git add data` stages it only if no ignore rule swallows it."""
+    root = WORKFLOWS.parents[1]
+    probe = "data/Analysis/aspect_matches/ob99/some-god.jsonl"
+    proc = subprocess.run(["git", "check-ignore", "-q", probe], cwd=root)
+    assert proc.returncode == 1, f"{probe} is git-ignored"
 
 
 def test_new_entities_run_after_the_stats_gate_and_before_the_recompute():

@@ -788,4 +788,75 @@ builds:
   - Rod of Tahuti
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Silent Night
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 126
+    wins: 55
+    win_share: 0.44
+    aggregate:
+      aspect_matches: 167
+      aspect_win_rate: 0.419
+      no_aspect_matches: 595
+      no_aspect_win_rate: 0.434
+    roles:
+    - role: Support
+      matches: 123
+      share: 0.98
+    - role: Carry
+      matches: 2
+      share: 0.02
+    - role: Solo
+      matches: 1
+      share: 0.01
+    base_role: Mid Support
+    base_role_share: 0.98
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.63
+    - name: Genji's Guard
+      share: 0.55
+    - name: Gauntlet of Thebes
+      share: 0.44
+    - name: Shell of Rebuke
+      share: 0.44
+    - name: Breastplate of Valor
+      share: 0.37
+    - name: Stampede
+      share: 0.37
+    - name: Chandra's Grace
+      share: 0.21
+    - name: Stone of Binding
+      share: 0.2
+    starters:
+    - name: Heroism
+      share: 0.25
+    - name: Selflessness
+      share: 0.19
+    - name: War Flag
+      share: 0.19
+    relics:
+    - name: Phantom Shell
+      share: 0.53
+    - name: Purification Beads
+      share: 0.16
+    - name: Aegis of Acceleration
+      share: 0.14
+    matches_by_window:
+      ob47: 126
+    unmapped_slugs:
+    - brawlers-ruin
 ---

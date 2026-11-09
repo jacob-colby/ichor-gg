@@ -1525,4 +1525,78 @@ builds:
   starter: *id001
   relic: *id002
   aspect: Aspect of the Heroic Tutor
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Heroic Tutor
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 58
+    wins: 30
+    win_share: 0.52
+    aggregate:
+      aspect_matches: 67
+      aspect_win_rate: 0.463
+      no_aspect_matches: 808
+      no_aspect_win_rate: 0.504
+    roles:
+    - role: Carry
+      matches: 34
+      share: 0.59
+    - role: Support
+      matches: 18
+      share: 0.31
+    - role: Solo
+      matches: 6
+      share: 0.1
+    base_role: Carry
+    base_role_share: 0.59
+    role_shift: null
+    items:
+    - name: Dominance
+      share: 0.52
+    - name: Devourer's Gauntlet
+      share: 0.5
+    - name: Dagger of Frenzy
+      share: 0.48
+    - name: Riptalon
+      share: 0.41
+    - name: Deathbringer
+      share: 0.36
+    - name: Shell of Rebuke
+      share: 0.26
+    - name: Avenging Blade
+      share: 0.22
+    - name: Amanita Charm
+      share: 0.19
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.41
+    - name: War Banner
+      share: 0.14
+    - name: War Flag
+      share: 0.1
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.45
+    - name: Purification Beads
+      share: 0.41
+    - name: Phantom Shell
+      share: 0.1
+    matches_by_window:
+      ob47: 9
+      ob46: 58
+      ob45: 31
+      ob44: 44
+    unmapped_slugs:
+    - brawlers-ruin
 ---

@@ -207,6 +207,68 @@ describe("God page — the starter and the relic", () => {
     expect(within(section).getByTestId("six")).toBeInTheDocument();
   });
 
+  /* Ra's real record, 2026-11-08 (ob47). The tile said 41% — Pendulum of the
+   * Ages, the larger end — for a path 58% of Ra players open with: SmiteBrain
+   * counts each player once, holding the base OR the upgrade, so the path's
+   * share is the two ends summed. */
+  const RA_SIGHTINGS = [
+    { name: "Pendulum of the Ages", pick_rate: 0.41, win_rate: 0.53 },
+    { name: "Archmage's Gem", pick_rate: 0.24, win_rate: 0.54 },
+    { name: "Sands Of Time", pick_rate: 0.17, win_rate: 0.46 },
+    { name: "Conduit Gem", pick_rate: 0.15, win_rate: 0.39 },
+    { name: "Selflessness", pick_rate: 0.01, win_rate: 0.6 },
+  ];
+  const withRaStarters = async (stamp: Record<string, unknown>, check: () => Promise<void>) => {
+    const community = index.builds[0].builds[0] as Record<string, unknown>;
+    const model = index.builds[0].builds[1] as Record<string, unknown>;
+    const items = index.items as Record<string, unknown>[];
+    const gem = items.find((i) => i.name === "Archmage's Gem")!;
+    const was = { model: model.starter, gemFrom: gem.builds_from, items: items.length };
+    community.starter_sightings = RA_SIGHTINGS;
+    model.starter = { base: "Sands Of Time", upgrade: "Pendulum of the Ages", ...stamp };
+    gem.builds_from = ["Conduit Gem"];
+    items.push(
+      { ...item("Conduit Gem"), name: "Sands Of Time", builds_into: ["Pendulum of the Ages"] },
+      { ...item("Archmage's Gem"), name: "Pendulum of the Ages", builds_from: ["Sands Of Time"] });
+    try {
+      await check();
+    } finally {
+      delete community.starter_sightings;
+      model.starter = was.model;
+      gem.builds_from = was.gemFrom;
+      items.length = was.items;
+    }
+  };
+
+  it("states the whole path's share, base and upgrade summed", async () => {
+    // No rate on the stamp (a saved or older build): summed from the sightings.
+    await withRaStarters({}, async () => {
+      render(<App />);
+      const tile = await screen.findByTestId("starter");
+      expect(tile).toHaveTextContent("Sands Of Time → Pendulum of the Ages");
+      expect(tile).toHaveTextContent("58% of Ra players open this way");
+      expect(tile).not.toHaveTextContent("41%");
+    });
+  });
+
+  it("reads the pipeline's stamped share when the build carries one", async () => {
+    await withRaStarters({ basis: "community", pick_rate: 0.6, win_rate: 0.51, matches: 248 }, async () => {
+      render(<App />);
+      expect(await screen.findByTestId("starter")).toHaveTextContent("60% of Ra players open this way");
+    });
+  });
+
+  it("names each other opener by its base, beside that path's summed share", async () => {
+    // Every Archmage's Gem holder opened with Conduit Gem, so "Conduit Gem 39%"
+    // is true; "Archmage's Gem 39%" would claim 15 points of players it lacks.
+    await withRaStarters({}, async () => {
+      render(<App />);
+      const alts = within(await screen.findByTestId("starter")).getByRole("list");
+      expect(within(alts).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
+        "Conduit Gem39% of players", "Selflessness1% of players"]);
+    });
+  });
+
   it("renders no relic tile while the index carries no relic record", async () => {
     render(<App />);
     await screen.findByTestId("starter");

@@ -1510,4 +1510,79 @@ builds:
   starter: *id001
   relic: *id002
   aspect: Aspect of Strife
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Strife
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 64
+    wins: 35
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 75
+      aspect_win_rate: 0.52
+      no_aspect_matches: 164
+      no_aspect_win_rate: 0.573
+    roles:
+    - role: Jungle
+      matches: 37
+      share: 0.58
+    - role: Solo
+      matches: 23
+      share: 0.36
+    - role: Carry
+      matches: 3
+      share: 0.05
+    - role: Support
+      matches: 1
+      share: 0.02
+    base_role: Carry Jungle
+    base_role_share: 0.62
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.88
+    - name: Riptalon
+      share: 0.66
+    - name: Vital Amplifier
+      share: 0.61
+    - name: Dagger of Frenzy
+      share: 0.58
+    - name: Berserker's Shield
+      share: 0.47
+    - name: Dominance
+      share: 0.31
+    - name: Shogun's Ofuda
+      share: 0.17
+    - name: The Reaper
+      share: 0.14
+    starters:
+    - name: Hunter's Cowl
+      share: 0.64
+    - name: Leather Cowl
+      share: 0.17
+    - name: Bumba's Cudgel
+      share: 0.03
+    relics:
+    - name: Purification Beads
+      share: 0.5
+    - name: Agility Relic
+      share: 0.22
+    - name: Aegis of Acceleration
+      share: 0.11
+    matches_by_window:
+      ob47: 64
+      ob46: 515
+      ob45: 671
+      ob44: 741
 ---

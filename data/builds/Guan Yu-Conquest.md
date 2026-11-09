@@ -640,4 +640,75 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the General
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 76
+    wins: 44
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 93
+      aspect_win_rate: 0.538
+      no_aspect_matches: 108
+      no_aspect_win_rate: 0.528
+    roles:
+    - role: Support
+      matches: 60
+      share: 0.79
+    - role: Solo
+      matches: 16
+      share: 0.21
+    base_role: Solo Support
+    base_role_share: 1.0
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.57
+    - name: Genji's Guard
+      share: 0.51
+    - name: Chandra's Grace
+      share: 0.42
+    - name: Gauntlet of Thebes
+      share: 0.3
+    - name: Stampede
+      share: 0.28
+    - name: Rod of Asclepius
+      share: 0.25
+    - name: Heartwood Charm
+      share: 0.24
+    - name: Breastplate of Valor
+      share: 0.21
+    starters:
+    - name: Heroism
+      share: 0.18
+    - name: Sands Of Time
+      share: 0.17
+    - name: Bluestone Brooch
+      share: 0.14
+    relics:
+    - name: Phantom Shell
+      share: 0.63
+    - name: Purification Beads
+      share: 0.14
+    - name: Sundering Arc
+      share: 0.12
+    matches_by_window:
+      ob47: 14
+      ob46: 76
+      ob45: 62
+      ob44: 86
+    unmapped_slugs:
+    - brawlers-ruin
 ---

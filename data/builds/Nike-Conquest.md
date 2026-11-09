@@ -632,4 +632,87 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Victorious Conquest
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 202
+    wins: 118
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 236
+      aspect_win_rate: 0.559
+      no_aspect_matches: 144
+      no_aspect_win_rate: 0.451
+    roles:
+    - role: Jungle
+      matches: 114
+      share: 0.56
+    - role: Mid
+      matches: 56
+      share: 0.28
+    - role: Solo
+      matches: 28
+      share: 0.14
+    - role: Carry
+      matches: 3
+      share: 0.01
+    - role: Support
+      matches: 1
+      share: 0.0
+    base_role: Solo
+    base_role_share: 0.14
+    role_shift:
+      role: Jungle
+      share: 0.56
+      says: 'most Aspect of Victorious Conquest players do not play Solo: Jungle 56%,
+        Solo 14%'
+    items:
+    - name: Jotunn's Revenge
+      share: 0.89
+    - name: Heartseeker
+      share: 0.86
+    - name: The Crusher
+      share: 0.68
+    - name: Transcendence
+      share: 0.63
+    - name: Blinking Abyss
+      share: 0.31
+    - name: Avatar's Parashu
+      share: 0.27
+    - name: Titan's Bane
+      share: 0.17
+    - name: brawlers-ruin
+      share: 0.14
+    starters:
+    - name: Archmage's Gem
+      share: 0.5
+    - name: Bluestone Brooch
+      share: 0.21
+    - name: Conduit Gem
+      share: 0.14
+    relics:
+    - name: Purification Beads
+      share: 0.46
+    - name: Aegis of Acceleration
+      share: 0.34
+    - name: Blink Rune
+      share: 0.16
+    matches_by_window:
+      ob47: 202
+      ob46: 900
+      ob45: 614
+    unmapped_slugs:
+    - brawlers-ruin
 ---

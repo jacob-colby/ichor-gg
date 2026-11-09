@@ -2438,7 +2438,10 @@ shipped **off**. Numbers are in the named module.
     aspect tooltip, an in-game reading into `_combat_observations.yaml`), not
     more code here. The cheapest second RULE is a removal, "<ability> no
     longer has <Stat> Scaling". The note can price that, and it fires on Pele
-    alone today.
+    alone today. **2026-11-08: a second SOURCE exists, and it needs no
+    numbers.** What aspect PLAYERS buy, and which role they take the aspect
+    into, is now recorded per match (§5, "The per-aspect community record").
+    It changes nothing in this entry: no overlay reads it.
 
     **REVISIT IF** either test in `test_aspect_kit.py` turns red:
     `test_only_tsukuyomi_has_a_derivable_aspect_sentence` (a refresh adds
@@ -2447,6 +2450,108 @@ shipped **off**. Numbers are in the named module.
     moving a build and ships on its own, so confirm it in `index.json`).
     Revisit too if `kit_blend` is re-measured leakage-free at a value other
     than 0.3.
+
+34. **Closing the scaling-line gap between `fit_map` and the Sim (2026-11-06)** —
+    a REFUSAL in §4.16's shape, and NOT a null: nothing was built or
+    measured against a gate. It records how far apart the two halves' readings
+    of a kit are, and why the obvious closures are refused. Diagnosis only, measured
+    2026-11-06 on fingerprint `fb0eaf0f2496` and re-measured 2026-11-09 on
+    `e59634f66c16`; every kit figure below is identical on both. 95 god notes.
+
+    **WHO READS WHAT.** Three readers, two halves.
+      * `kit.scaling_profile` (fit side: the kit overlay at `kit_blend` 0.3
+        and the `is_hybrid_scaler` gate). It reads EVERY non-basic detail line
+        with "scaling" in it and an `N% Strength/Intelligence/(Basic) Attack
+        Damage` term, whatever the label, passive slot included, and sums them.
+      * `damage_value.ability_damage_components` (the Sim's damage, through
+        `bq.ability_rotation`; ALSO the fit side's Attack Damage column,
+        through `stat_weights` → `attack_damage_fit`, ON at 1.0; and
+        `basic_attack_shares`, §4.12's discriminator, read by scripts only). ONE line per
+        ability: the `Damage Scaling:` line, else the first label-paired line
+        (`X Damage` with `X Damage Scaling`). It needs a rank line, and the
+        rotation needs a cooldown.
+      * `ability_heals.god_self_heals` (the Sim's heals): `Heal Scaling` lines
+        on non-passive abilities.
+    The basic attack is read by the Sim and by `attack_damage_fit` (both
+    through `damage_value`) and deliberately excluded from `scaling_profile`.
+
+    **THE GAP RUNS ONE WAY.** No non-basic line is read by the Sim and missed
+    by the fit side. **72 of 95 gods have scaling the fit side reads and the
+    Sim does not: 178 lines.** Summed Str+Int percentages: 29,403 on the fit
+    side, 21,515 in the Sim's damage (73.2%). By what the line is:
+
+        lines  gods  class
+          88    52   damage: a second hit or variant on an ability the Sim reads
+                     (Initial/Final, Explode, Slam, Dash, Close/Far Range, Ox/Tiger)
+          18    15   damage: per tick (the Sim's reader takes one line; ticks are prose)
+          12    12   damage: bonus / conditional (`Bonus Damage Scaling`)
+          12    12   damage: passive slot (Athena's Reach, 125% Str + 70% Int)
+          12     8   damage: ability with no rank line the reader accepts
+           7     5   damage: component with no cooldown, dropped from the rotation
+          23    14   NOT damage: heal, CDR, attack speed, mana, protections stolen,
+                     damage reduction, debuff, stat buffs
+           5     5   minion-only rates
+           1     1   prose ("+20% Intelligence Scaling" in Tsukuyomi's Kusarigama)
+    68 gods carry fit-only DAMAGE lines; 4 carry only the last three classes.
+    15 gods' heal lines are read by both halves with different meanings (fit:
+    damage orientation; Sim: a heal).
+
+    **WHAT IT DOES TO A DECISION.** The Intelligence share the Sim's damage
+    lines imply differs from `scaling_profile`'s by more than 0.05 on 11 gods
+    and more than 0.10 on 8 (Sun Wukong 0.337 vs 0.000, Nemesis 0.419 vs
+    0.227, Jormungandr 0.471 vs 0.630). Read off the Sim's lines, the hybrid
+    gate would flip for 4: Athena, Guan Yu, Nemesis, Sun Wukong.
+
+    **ASPECTS ARE THE SAME MECHANISM, AND THE SMALLEST CASE OF IT.** The one
+    derived aspect edit (Tsukuyomi, §4.33) adds `Mangetsu Bonus Damage: 5` and
+    its scaling line to Dark Moon Shuriken, an ability the Sim already reads by
+    its own `Damage Scaling:` line. That is one more row of the 88-line class.
+    `ability_damage_components` returns the same result on the variant as on
+    the base kit. And nothing the Sim shows can move: `kit_for` plays the base
+    kit for 88 of 95 gods. For the other 7 (majority aspects on
+    2026-11-09: Aphrodite, Bacchus, Baron Samedi, Gilgamesh, Izanami, Khepri,
+    Nike; Izanami replaced Cernunnos between the two measurements) it
+    withholds the verdict, because `SIMULATED_ASPECTS` is empty. None of those
+    7 derives a sentence. Tsukuyomi's aspect is a 2% pick, so it is never played.
+
+    **REFUSED, and what each closure costs.**
+      * *Widen the shared reader to every damage line.* That is a MODEL
+        change, not a Sim change: summing the six damage classes moves
+        `stat_weights` on 61 gods and the Attack Damage column on 58 (Morgan
+        Le Fay 0.645 → 0.312, Aphrodite 1.000 → 0.667). Summing is also wrong
+        for some lines and only some: Close/Far Range, Ox/Tiger and
+        Large/Small are alternatives, not hits that add. Per-tick lines need
+        tick counts that exist only as prose. Bonus lines need a trigger rate,
+        and passive and cooldownless lines need a cadence. The note supplies
+        none of these, so each is a typed constant per ability. That is the
+        hand table §4 exists to prevent.
+      * *Give the Sim a private, wider reader.* It keeps the model still, but
+        it has the same semantics problem. It moves every `build_quality`
+        figure and side-by-side verdict, and it leaves a third reading of the
+        same kit.
+      * *Narrow the fit side to the Sim's lines.* That is a model change on 72
+        gods with 4 hybrid flips. It also discards real evidence: Sun Wukong's
+        far-range Cudgel is 70% Int.
+      * *Close it for aspects only.* It changes no displayed result today
+        (above). The Mangetsu bonus is a per-ranged-attack rider whose cadence
+        the note does not give.
+
+    **ONE PIECE IS A SEPARATE QUESTION, NOT THIS GAP.** The 29 non-damage,
+    minion and prose lines are fit-side noise, and the Sim is right to ignore
+    them. Without them, `int_share` moves on 18 gods (Odin 0.299 → 0.221,
+    Artio 0.474 → 0.409), and **two gods' hybrid status rests on them**.
+    Amaterasu reaches the 3-ability floor only through Divine Presence's stat
+    buff lines (`Strength Scaling: 5% Intelligence`). Guan Yu's 0.316 off
+    share is 0.262 without his heal and CDR lines. Correcting that is a model
+    change with a held-out delta, and it belongs in its own PR.
+
+    **REVISIT IF** `SIMULATED_ASPECTS` gains a member, `aspect_kit` derives a
+    sentence for a majority-pick aspect, a source for tick counts or for
+    alternative-versus-additive labels lands, or `ability_damage_components`
+    changes its one-line-per-ability rule. The counting scripts were
+    session-local and are not committed. Each count is the three readers
+    above run over `data/Gods`. The cost row patches
+    `ability_damage_components` in memory to sum every damage-labelled line.
 
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
@@ -2489,6 +2594,48 @@ printed stats once the fit priced passives (87 of 193 items short, up to
 so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
+
+### The per-aspect community record exists; no aspect build reads it yet (2026-11-08)
+What aspect players BUY, from SmiteBrain's per-match feed (the tRPC call
+behind "More Builds", which paginates; the `__data.json` page never does).
+Verified first: placement 1 is the win (mirror test 14/14, the site's own
+colouring, and feed shares tracking `matches_won` on both sides of 50%); the
+feed holds ~85% of the aggregate's matches; retention is a rolling 45 days. The
+store is `data/Analysis/aspect_matches/` — append-only, in git, no player
+names, the match GUID hashed — backfilled to the end of retention (36,947
+matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
+and OB44 is marked `partial_from` because its first 2.5 days had already aged
+out), and the daily job adds ~217 requests to keep it. Each Conquest
+note gains `community_aspects`: newest window, else the last closed, under the
+tier list's own 30-match floor; a role shift named on a Wilson bound. It is
+kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
+
+**65 of 86 aspects clear the floor, and 32 of those 65 are played in a
+different role from the god's base role** — Bacchus' Revelry 87% Solo on a
+Support, Izanami's Sickle 70% Mid on a Carry. **Tsukuyomi's Mangetsu does not
+clear it** (OB47 6, OB46 21; OB45 holds exactly 30, but the rule reaches back
+one window only; pooled over the store, 74 matches, 57% Mid, and of the 73 the
+probe could attribute, 28 players, one of whom played 30%), so his entry is a
+stated `below minimum`. Nine of the 21 below-minimum aspects reach 30 in OB45
+or OB44, and 13 pooled: whether to pool is the first decision the next session
+owns. Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role
+shifts.
+
+**Next, and it is a MODEL change:** an aspect build cannot change role through
+today's seam. An overlay carries only stat weights; `fit_map` reads the role
+from the god note, and §4.33 measured how narrow that channel is. A variant god
+whose `role` comes from the entry's `role_shift` is the smallest seam that
+could carry it; for a god that is not a hybrid scaler the damage filter must
+move too. `model_audit heldout` cannot see any aspect build, so the frozen
+reference builds are the only gate. Numbers, the full depth table and the
+proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
+`aspect_matches`' docstring.
+
+**A lead for the draft feature, not built on:** every stored match carries its
+five enemy gods and the outcome — 184,735 god-vs-god outcome pairs from 24,032
+distinct matches on 2026-11-08, ~8,000 more a day, skewed to aspect players.
+SmiteBrain also has a
+`/gods/[godSlug]/matchups` route, not probed.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
@@ -3577,6 +3724,15 @@ session that wrote `patch_feed` could not reach Steam; its fixture is
 constructed. Gods are still not snapshotted. The rules and reasons are in the
 `snapshots.py` and `patch_feed.py` docstrings.
 
+**The per-aspect match store is append-only and lives in git**
+(`data/Analysis/aspect_matches/`, 2026-11-08). `python -m smite.aspect_matches
+refresh` is the daily job's step: it validates every page before writing
+anything (`FeedCollapse`), and a refusal sets the step's `rejected` output and
+turns the run red at the end, without costing the day's other data — the next
+run walks back over the gap. `derive` rewrites the Conquest notes'
+`community_aspects` from the store; `depth` prints gods × windows. Rules and
+evidence are in the module docstring.
+
 **The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
 buildable item with passive text, classes per clause, `priced` per clause;
 `test_passive_catalogue.py` fails if the pool and the file disagree or if a
@@ -3594,7 +3750,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1490) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1545) ·
 `cd viewer && npm test -- --run` (1016).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
@@ -3702,12 +3858,12 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | | |
 |---|---|
 | Gods tracked | 95 of 98 on the roster (2026-11-03; 99 on 2026-11-02 — the roster count fell by one upstream). Ravana was added by hand 2026-08-29; Nike, Hachiman, Kuzenbo and Hel were the first added unattended, by `smite.new_entities` on a runner. The other five are on the grid without a usable page: Kumbhakarna, Heimdallr and Maman Brigitte 404, and Nox's pre-release page reads every base stat as 0.0, so it is refused until it fills in. The grid leads the wiki's own content, so this row reads N of N+k by design. `data/_new_entities.json` says which are waiting and why |
-| Items | 233 (2026-11-08: the five base relics the wiki path had never read — Purification Beads, Aegis of Acceleration, Phantom Shell, Sundering Arc, Agility Relic — added by `smite.new_entities` once it read `Relic_` index icons; none is buildable, and no core moved. Was 228) |
+| Items | <!--now-->233<!--/now--> (2026-11-08: the five base relics the wiki path had never read — Purification Beads, Aegis of Acceleration, Phantom Shell, Sundering Arc, Agility Relic — added by `smite.new_entities` once it read `Relic_` index icons; none is buildable, and no core moved. Was 228) |
 | Build groups | 285 (95 gods × 3 modes) |
 | Build flavors | **Live in [CURRENT.md](CURRENT.md).** All thirteen were emitted on 2026-11-08: core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack. The set is the DATA as well as the code: `hybrid` is emitted only when a hybrid swap fires, so it drops out on the first day after every window reset and is back within one to three days. It is the only flavor to have moved on a refresh, 12 times in the 85 from 2026-07-27 to 2026-11-08 |
 | Conquest gods placed | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 95 / 95 (2026-11-06, the #117 refresh to the OB47 window, which changed no code, weights or tags). Was 94 / 95: Nox had no community matches in the OB46 window and has 406 in this one, enough for a band (C). Tracks the DATA |
 | Joust / Arena gods placed | 0 / 95 — no outcome data exists |
-| Items placed | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 208 / 233 (2026-11-09, `d15f3786`: #127 alone, on the #124 data. Its five base relics are not buildable, and each carries a tier band. This row counts every banded item, buildable or not: `tierlist.item_rankings` bands any item with community win data and has no `is_buildable` filter, and 77 unbuildable items were already counted that way at `a3975ab9`, before #127. Whether an unbuildable item should count as placed is an open question, not a known defect; recorded here, not changed). 203 / 228 (2026-11-08, the #124 refresh alone — `ed094a35` touched only `data/` and `viewer/public/`, and #126, merged after it, moves no figure in this table: `doc_audit` reads every one identically at `ed094a35` and at `d010f625`, and reads none of them as drift at `2ffb00dc`, the commit before the refresh). The OB47 window did not reset; it is two days deeper, 5,119 matches against 2,859 (see Community sample), and 25 items carry no tier band where 39 did. Was 189 / 228 (2026-11-06, the #117 refresh alone — it changed no code, weights or tags). The window reset at the Open Beta 47 boundary and is three days deep, 2,859 matches against the 14,667 the OB46 window closed on (see Community sample), and 39 items carry no tier band where 12 did. Was 216 / 228 (2026-11-03). Earlier, 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
+| Items placed | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 208 / 233 (2026-11-09, #127 alone: the five base relics it added are all placed, and none of the other 228 items gained or lost a band. None of the five is buildable. This row counts every banded item, buildable or not: `tierlist.item_rankings` bands any item with community win data and has no `is_buildable` filter, and 77 unbuildable items were already counted that way at `a3975ab9`, before #127. Whether an unbuildable item should count as placed is an open question, not a known defect; recorded here, not changed). Was 203 / 228 (2026-11-08, the #124 refresh alone — `ed094a35` touched only `data/` and `viewer/public/`, and #126, merged after it, moves no figure in this table: `doc_audit` reads every one identically at `ed094a35` and at `d010f625`, and reads none of them as drift at `2ffb00dc`, the commit before the refresh). The OB47 window did not reset; it is two days deeper, 5,119 matches against 2,859 (see Community sample), and 25 items carry no tier band where 39 did. Was 189 / 228 (2026-11-06, the #117 refresh alone — it changed no code, weights or tags). The window reset at the Open Beta 47 boundary and is three days deep, 2,859 matches against the 14,667 the OB46 window closed on (see Community sample), and 39 items carry no tier band where 12 did. Was 216 / 228 (2026-11-03). Earlier, 210 / 226 — the community window kept rebuilding (see Community sample): 888 → 2,301 → 3,498 → 8,200 → 16,223 matches, and 2 more items crossed into enough sightings to earn a tier band since the 8,200 reading. Still below the 226 the pre-reset thirteen-day window placed, and now only 16 short of it on roughly the same depth of sample. Tracks the DATA, not the model |
 | Community sample | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 5,119 Obsidian+ Conquest matches, 3 Nov – 8 Nov (2026-11-08, OB47, the #124 refresh — `ed094a35`, which touched only `data/` and `viewer/public/`). The same window as the reading below, NOT reset: 2,260 matches more over two more days, about 1,130 a day against the 950 a day it opened at. `data/_patch.json` is unmoved at Open Beta 47. Before that, 2,859 matches, 3 Nov – 6 Nov (2026-11-06, OB47). The window RESET at the Open Beta 47 boundary; the OB46 window it replaced closed at 14,667 matches over 20 Oct – 3 Nov, so this one is running at a comparable rate (about 950 a day against about 1,050) and is simply three days deep. The rest of this row is the 25 Aug – 7 Sep window's history (16,223 matches then) — the upstream window is still the one that RESET on 25 Aug (§7's previous entries), now fourteen days deep against a peak of 18,716 on thirteen, so it has very nearly rebuilt. Four more `chore(data): daily community refresh` commits (68744e5, 0e5d8f1, f8e4174, d5ead22) landed since the 8,200/seven-day reading, alongside the 09-03 E and F merges. **THE ATTRIBUTION IS NOT THE USUAL `touches only data/` CHECK THIS TIME, BECAUSE THIS TIME IT WOULD BE FALSE** — E and F moved `scoring.py`, `_weights.yaml`, `doc_audit.py` and `build_quality.py`. It was done directly instead: rebuilding every suggested entry at HEAD from `data/` reproduces **all 2,479 of them, byte-identical to `viewer/public/index.json`**, so no figure below this row moved on a model change. The single live weights key E added, `unknown_win_shrink: 0.0`, is short-circuited inside `scoring.god_unknown_win_rate` before it reads anything; it still moves the input fingerprint, which hashes the parsed weights, so a fingerprint change across this window is not by itself evidence the data moved. No patch boundary — `data/_patch.json` is unmoved at Open Beta 40 |
 | Headline gate | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. Coverage 51.2%, win-weighted 54.4% (2026-11-08, the #124 refresh alone — `ed094a35` touched only `data/` and `viewer/public/`, and `doc_audit` reads these two figures identically before and after #126 merged; the same OB47 window two days deeper; coverage +3.6pp and win-weighted +2.8pp, the same direction this time; NOT a tuning target, §1). Before that, 47.6% / 51.6% (2026-11-06, the #117 refresh to the OB47 window and nothing else — #117 changed no code, weights or tags; coverage −1.4pp and win-weighted +1.2pp, opposite directions on one data move; NOT a tuning target, §1). Before that, 49.0% / 50.4% (2026-11-04, OB47, after the parse-and-leak PR — all of it the per-ability damage parse, since `validate` scores only the blended Conquest `core`; NOT a tuning target, §1). Before that, 49.1% / 50.2% (2026-11-03, after #82–#91). Before that, 51.9% / 53.4% — down −1.1pp/−1.5pp off the 53.0%/54.9% this row carried at fingerprint `047109f54fd7`, on the data move above and nothing else (the rebuild check in Community sample is what says "and nothing else"). It moved the other way on the previous refresh and the same sentence applied then: both targets are model inputs (§1), so neither direction is a verdict on the model |
 | **Leakage-free** | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. The same four figures at input fingerprint `e59634f66c16` (2026-11-09, `d15f3786`: #127's five base relics entered the item set, which moves the fingerprint and none of the figures). **Every fingerprint quoted below is a Windows reading.** Until #127's `recommend.note_paths` fixed the load order, the fingerprint hashed the item list in each platform's own file order, so the Linux runner reads different values for the same data: `6466106fe1a2` where this row says `713cb427c4da` (`2ffb00dc`), and `098693b78905` where it says `b48168f6c4d5` (`ed094a35`). From `d15f3786` the two agree. The figures themselves agree at every digit shown, on all 15 trees measured (2026-11-09, `smite.doc_figures`). 41.7% probe · 38.3% at eff 0.45, vs 5.8% chance = 6.6–7.2× (2026-11-08, input fingerprint `b48168f6c4d5` — moved from `713cb427c4da` by the #124 refresh alone, `ed094a35`, which touched only `data/` and `viewer/public/` and leaves `_weights.yaml`, the tags, the items and the gods unmoved: +2.5pp at the probe and +1.9pp at eff 0.45, the two splits moving the same way again, on the same OB47 window two days deeper. #126, merged after it, changed `build_index.py` and the viewer; it moves neither the fingerprint nor any figure here, which read identically at `ed094a35` and `d010f625`. `exact_random_core_baseline` is unchanged at **5.7565%** off the same pool of 95 gods and 228 items; the sampler reads 5.78% where it read 5.82%, the wobble §1 describes. Split by `model_audit.split_of` on these inputs, the probe reads 44.3% on the 69 gods (vs 5.7%, 7.8×) and 34.8% on the other 26 (vs 6.0%, 5.8×). The gap is 9.5pp, 1.69 sd on the same 20,000-shuffle test, two-sided p 0.088, against 17.7pp and p 0.003 on the first look below; Danzaburou and Medusa are still at 0% probe coverage and Sun Wukong is not. That is quoted beside the first look and not in its place, and the shipped blend's split was not re-taken.) Before that, 39.2% / 36.4% vs 5.8% = 6.3–6.7× (2026-11-06, input fingerprint `564aa7a9d6a9` — moved by the #117 refresh to the OB47 window alone, which changed no code, weights or tags: −2.1pp at the probe and −2.0pp at eff 0.45, the two splits moving the same way this time. The 5.8% now holds at the digit in closed form too: `exact_random_core_baseline` reads **5.7565%** off a pool of 95 gods and 228 items. Re-measured 2026-11-07 at `713cb427c4da` after #119, which added `draft.answer_keep` to `_weights.yaml` — a key the fingerprint covers and this probe never reads — and every figure in this row, the split below included, is identical to the digit.) **OB47 FIRST LOOK — a label for provenance, not a claim of quality:** the 2026-11-06 figures, and the split that follows, are the first measurement of the shipped model on the OB47 window, taken 2026-11-06 before any decision was judged on it. Split by `model_audit.split_of`, the probe reads 44.1% on 69 gods (vs 5.7% chance, 7.7×) and 26.4% on the other 26 (vs 6.1%, 4.4×); the chance figures are the 200-draw sampler's. **The two halves are a hash split by name, not a generalisation test.** `split_of` arrived on 2026-11-04 (`d0c1d590`), and the efficiency and fit constants that set this probe's score were judged on every god in the pool before then, so neither half was held out from them and the gap cannot be overfitting. (This row first called the halves "tuning" and "held-out", which invites that reading.) Nor is the gap noise. Shuffling the labels 20,000 times at fixed group sizes puts 17.7pp at 2.97 sd from zero (two-sided p 0.003), and it held on OB46's closed window, five times deeper, at 13.3pp (44.8% vs 31.5%; 25 gods because Nox had no matches; p 0.028). Danzaburou, Medusa and Sun Wukong sit at 0% probe coverage in both windows. What the gap records is WHERE the community-free model's six persistently disagrees with the community's, not which side is right there: no data here has build-level outcomes to settle that. The shipped blend shows 7.8pp (p 0.15) on OB47 and 9.2pp (p 0.11) on OB46, because win and pick lift agreement evenly across gods. `model_audit heldout` is unaffected: it compares each half against `origin/main` on the same split, so which gods the hash drew cancels. A figure taken on this window after a decision has been judged on it is a different measurement, to quote beside this one and never in its place. Before that, 41.3% / 38.4% vs 5.8% = 6.6–7.1× (2026-11-04, OB47, fingerprint `949b3b576a90` — moved from `a4b1a66d8c0d` by `_weights.yaml` edits alone, the data is the same; +0.4pp on both splits, all of it the per-ability damage parse, as the model-leak, converter and Joust-share changes read 0.0 here; before that 36.6% / 37.2% vs 5.8%; 41.3% / 37.1% on the 25 Aug – 7 Sep window) — **this level is not fully leakage-free and §4.23 says by how much**: a shipped pricing flag reads a constant measured off the community record, worth about −2.6pp of the first figure and −0.6pp of the second as measured on the 2026-11-04 inputs, which put the multiple nearer 6.7× at the left-hand corner then (41.3%); not re-taken on the OB47 window. It moves the level, not any verdict. — **re-measure with `python -m smite.calibrate --control` (~7s) before comparing anything to this row; if it prints a different input fingerprint, this row describes different inputs — including because someone edited `_weights.yaml`, which the fingerprint also covers.** Re-measured 2026-09-07 at input fingerprint `339839d1a880`, moved from `047109f54fd7` by four `chore(data): daily community refresh` commits AND by `unknown_win_shrink: 0.0` landing in `_weights.yaml` — the fingerprint cannot tell those apart, and the second is a no-op the flag short-circuits (§4.26), so the −2.6pp read here would have been misattributed by a fingerprint change alone. The two splits moved in OPPOSITE directions on the same data, 40.9% → 41.3% at the probe and 37.6% → 37.1% at eff 0.45, which is why this row states both and not their average. Previously measured 2026-09-02 at `9f722a7ad5c8`, reading 40.9% / 37.6%. The random-core baseline is unchanged at the digit: `exact_random_core_baseline` is **5.7391%**, off a pool of 90 gods and 226 items, so the 5.7% printed is real agreement and not the ±0.15pp wobble §1 warns about needing to check for. Re-checked 2026-11-04 at input fingerprint `db3f6bb49ee5` with the ally gate in (both splits still 37.0% / 37.6%), where the SAMPLER printed 5.8% and the exact form reads **5.7498%** — so 5.7% still stands. The exact figure did move, from **5.6744%** with the gate off, and for once that is not the wobble: the gate SHRINKS each non-qualifying god's candidate pool by up to four items, and chance is pool-ratio, so a smaller pool really is likelier to hit a community item. It is the one kind of change that legitimately moves this number, which is why the closed form and not the sampler was used to decide the digit did not change. Coverage and this probe again moved in opposite directions on the same data move (headline gate down, this row's probe up), which is what §1 says a metric with the community's own build as a target will do and is not a reason to prefer either reading |
@@ -3717,7 +3873,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 3 — Cernunnos, Cupid, Mercury. (2026-11-08, the #124 refresh alone, which touched only `data/` and `viewer/public/`; recorded, not investigated.) Cernunnos is on it for the third reading running, 6 pairs and none matching. Cupid and Mercury are back, at 5 pairs each, after reading 20% on 2026-11-06 — the same two that were on it on 2026-11-03. Ah Puch, Athena, Atlas, Gilgamesh and Mordred now read 60%, 20%, 40%, 33% and 33%. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1490 pipeline · 1016 viewer |
+| Tests | 1545 pipeline · 1016 viewer |
 
 A row that opens **Live in [CURRENT.md](CURRENT.md).** is DAILY: its live figure
 is generated into [`docs/CURRENT.md`](CURRENT.md) by `python -m smite.doc_figures

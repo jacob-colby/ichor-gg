@@ -816,4 +816,88 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Revelry
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 386
+    wins: 240
+    win_share: 0.62
+    aggregate:
+      aspect_matches: 439
+      aspect_win_rate: 0.615
+      no_aspect_matches: 111
+      no_aspect_win_rate: 0.505
+    roles:
+    - role: Solo
+      matches: 335
+      share: 0.87
+    - role: Support
+      matches: 35
+      share: 0.09
+    - role: Jungle
+      matches: 13
+      share: 0.03
+    - role: Mid
+      matches: 2
+      share: 0.01
+    - role: Carry
+      matches: 1
+      share: 0.0
+    base_role: Support
+    base_role_share: 0.09
+    role_shift:
+      role: Solo
+      share: 0.87
+      says: 'most Aspect of Revelry players do not play Support: Solo 87%, Support
+        9%'
+    items:
+    - name: Berserker's Shield
+      share: 0.89
+    - name: Devourer's Gauntlet
+      share: 0.81
+    - name: Kinetic Cuirass
+      share: 0.69
+    - name: Shogun's Ofuda
+      share: 0.52
+    - name: Freya's Tears
+      share: 0.38
+    - name: Hussar's Wings
+      share: 0.28
+    - name: Shifter's Shield
+      share: 0.13
+    - name: Medal of Defense
+      share: 0.12
+    starters:
+    - name: Hunter's Cowl
+      share: 0.58
+    - name: Leather Cowl
+      share: 0.25
+    - name: Death's Embrace
+      share: 0.05
+    relics:
+    - name: Agility Relic
+      share: 0.62
+    - name: Purification Beads
+      share: 0.15
+    - name: Sundering Arc
+      share: 0.1
+    matches_by_window:
+      ob47: 386
+      ob46: 659
+      ob45: 521
+      ob44: 221
+    unmapped_slugs:
+    - brawlers-ruin
 ---

@@ -1005,4 +1005,74 @@ builds:
   - Rod of Tahuti
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Wind
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 58
+    wins: 32
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 68
+      aspect_win_rate: 0.544
+      no_aspect_matches: 110
+      no_aspect_win_rate: 0.536
+    roles:
+    - role: Carry
+      matches: 53
+      share: 0.91
+    - role: Mid
+      matches: 4
+      share: 0.07
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Carry Mid
+    base_role_share: 0.98
+    role_shift: null
+    items:
+    - name: Silverbranch Bow
+      share: 0.66
+    - name: Devourer's Gauntlet
+      share: 0.48
+    - name: Odysseus' Bow
+      share: 0.48
+    - name: Riptalon
+      share: 0.48
+    - name: The Executioner
+      share: 0.48
+    - name: Tyrfing
+      share: 0.47
+    - name: Dominance
+      share: 0.38
+    - name: Dagger of Frenzy
+      share: 0.34
+    starters:
+    - name: Death's Embrace
+      share: 0.24
+    - name: Sharpshooter's Arrow
+      share: 0.19
+    - name: Hunter's Cowl
+      share: 0.17
+    relics:
+    - name: Purification Beads
+      share: 0.64
+    - name: Aegis of Acceleration
+      share: 0.36
+    matches_by_window:
+      ob47: 58
+      ob46: 217
+      ob45: 145
+      ob44: 122
 ---

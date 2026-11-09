@@ -47,6 +47,18 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     assert index["builds"] == [{"type": "smite-build", "god": "Chiron"}]
 
 
+def test_the_per_aspect_community_record_is_not_shipped(tmp_path):
+    """`community_aspects` stays in the note; no viewer page reads it yet."""
+    repo = _make_repo(tmp_path)
+    notes.write_note(repo / "data" / "builds" / "Tsukuyomi-Conquest.md",
+                     {"type": "smite-build", "god": "Tsukuyomi", "builds": [],
+                      "community_aspects": {"aspects": [{"aspect": "Aspect of Mangetsu"}]}}, "")
+    index = build_index.build_index(repo)
+    assert index["builds"] == [{"type": "smite-build", "god": "Tsukuyomi", "builds": []}]
+    fm, _ = notes.read_note(repo / "data" / "builds" / "Tsukuyomi-Conquest.md")
+    assert "community_aspects" in fm
+
+
 def test_build_index_empty_folders_return_empty_lists(tmp_path):
     from smite import scoring
     _defaults = scoring.load_weights_default()

@@ -865,4 +865,82 @@ builds:
       weakest slot from Transcendence
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Obsidian
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 46
+    wins: 27
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 53
+      aspect_win_rate: 0.566
+      no_aspect_matches: 592
+      no_aspect_win_rate: 0.574
+    roles:
+    - role: Solo
+      matches: 41
+      share: 0.89
+    - role: Support
+      matches: 3
+      share: 0.07
+    - role: Jungle
+      matches: 2
+      share: 0.04
+    base_role: Jungle
+    base_role_share: 0.04
+    role_shift:
+      role: Solo
+      share: 0.89
+      says: 'most Aspect of Obsidian players do not play Jungle: Solo 89%, Jungle
+        4%'
+    items:
+    - name: Sanguine Lash
+      share: 0.41
+    - name: Devourer's Gauntlet
+      share: 0.39
+    - name: Shifter's Shield
+      share: 0.39
+    - name: brawlers-ruin
+      share: 0.37
+    - name: Kinetic Cuirass
+      share: 0.33
+    - name: Spirit Robe
+      share: 0.24
+    - name: Freya's Tears
+      share: 0.22
+    - name: Contagion
+      share: 0.17
+    starters:
+    - name: Bluestone Brooch
+      share: 0.52
+    - name: Bluestone Pendant
+      share: 0.17
+    - name: Leather Cowl
+      share: 0.15
+    relics:
+    - name: Phantom Shell
+      share: 0.37
+    - name: Purification Beads
+      share: 0.24
+    - name: Sundering Arc
+      share: 0.2
+    matches_by_window:
+      ob47: 15
+      ob46: 46
+      ob45: 89
+      ob44: 77
+    unmapped_slugs:
+    - brawlers-ruin
 ---

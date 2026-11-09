@@ -774,4 +774,82 @@ builds:
   - Titan's Bane
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Watchful Pride
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 47
+    wins: 32
+    win_share: 0.68
+    aggregate:
+      aspect_matches: 61
+      aspect_win_rate: 0.656
+      no_aspect_matches: 274
+      no_aspect_win_rate: 0.529
+    roles:
+    - role: Support
+      matches: 43
+      share: 0.91
+    - role: Solo
+      matches: 3
+      share: 0.06
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Jungle
+    base_role_share: 0.02
+    role_shift:
+      role: Support
+      share: 0.91
+      says: 'most Aspect of the Watchful Pride players do not play Jungle: Support
+        91%, Jungle 2%'
+    items:
+    - name: Freya's Tears
+      share: 0.72
+    - name: Shell of Rebuke
+      share: 0.51
+    - name: Genji's Guard
+      share: 0.45
+    - name: Shifter's Shield
+      share: 0.4
+    - name: Sundering Echo
+      share: 0.38
+    - name: Breastplate of Valor
+      share: 0.36
+    - name: Gauntlet of Thebes
+      share: 0.34
+    - name: Stone of Binding
+      share: 0.34
+    starters:
+    - name: Bluestone Brooch
+      share: 0.49
+    - name: Bluestone Pendant
+      share: 0.38
+    - name: Bumba's Hammer
+      share: 0.04
+    relics:
+    - name: Purification Beads
+      share: 0.34
+    - name: Aegis of Acceleration
+      share: 0.21
+    - name: Phantom Shell
+      share: 0.21
+    matches_by_window:
+      ob47: 47
+      ob46: 121
+      ob45: 66
+      ob44: 48
+    unmapped_slugs:
+    - brawlers-ruin
 ---

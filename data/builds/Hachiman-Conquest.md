@@ -860,4 +860,88 @@ builds:
   - Riptalon
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Steel Wind
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 84
+    wins: 45
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 110
+      aspect_win_rate: 0.518
+      no_aspect_matches: 396
+      no_aspect_win_rate: 0.467
+    roles:
+    - role: Jungle
+      matches: 49
+      share: 0.58
+    - role: Carry
+      matches: 22
+      share: 0.26
+    - role: Solo
+      matches: 7
+      share: 0.08
+    - role: Mid
+      matches: 5
+      share: 0.06
+    - role: Support
+      matches: 1
+      share: 0.01
+    base_role: Carry
+    base_role_share: 0.26
+    role_shift:
+      role: Jungle
+      share: 0.58
+      says: 'most Aspect of the Steel Wind players do not play Carry: Jungle 58%,
+        Carry 26%'
+    items:
+    - name: Jotunn's Revenge
+      share: 0.83
+    - name: Heartseeker
+      share: 0.7
+    - name: The Crusher
+      share: 0.67
+    - name: Hydra's Lament
+      share: 0.48
+    - name: Titan's Bane
+      share: 0.4
+    - name: Pendulum Blade
+      share: 0.32
+    - name: Transcendence
+      share: 0.29
+    - name: Barbed Carver
+      share: 0.15
+    starters:
+    - name: Archmage's Gem
+      share: 0.29
+    - name: Bumba's Hammer
+      share: 0.27
+    - name: Bumba's Cudgel
+      share: 0.13
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.49
+    - name: Purification Beads
+      share: 0.49
+    - name: Agility Relic
+      share: 0.01
+    matches_by_window:
+      ob47: 84
+      ob46: 154
+      ob45: 120
+      ob44: 111
+    unmapped_slugs:
+    - brawlers-ruin
 ---

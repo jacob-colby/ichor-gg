@@ -787,4 +787,81 @@ builds:
   - Freya's Tears
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Relentless Spite
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 129
+    wins: 65
+    win_share: 0.5
+    aggregate:
+      aspect_matches: 150
+      aspect_win_rate: 0.5
+      no_aspect_matches: 1007
+      no_aspect_win_rate: 0.521
+    roles:
+    - role: Solo
+      matches: 117
+      share: 0.91
+    - role: Support
+      matches: 6
+      share: 0.05
+    - role: Jungle
+      matches: 5
+      share: 0.04
+    - role: Mid
+      matches: 1
+      share: 0.01
+    base_role: Support Solo
+    base_role_share: 0.95
+    role_shift: null
+    items:
+    - name: Shifter's Shield
+      share: 0.54
+    - name: Freya's Tears
+      share: 0.38
+    - name: Ethereal Staff
+      share: 0.37
+    - name: Genji's Guard
+      share: 0.37
+    - name: brawlers-ruin
+      share: 0.29
+    - name: Hide of the Nemean Lion
+      share: 0.24
+    - name: Breastplate of Valor
+      share: 0.23
+    - name: Sphere of Negation
+      share: 0.21
+    starters:
+    - name: Bluestone Brooch
+      share: 0.47
+    - name: Bluestone Pendant
+      share: 0.32
+    - name: Sundering Axe
+      share: 0.09
+    relics:
+    - name: Sundering Arc
+      share: 0.43
+    - name: Phantom Shell
+      share: 0.24
+    - name: Purification Beads
+      share: 0.16
+    matches_by_window:
+      ob47: 29
+      ob46: 129
+      ob45: 129
+      ob44: 191
+    unmapped_slugs:
+    - brawlers-ruin
 ---

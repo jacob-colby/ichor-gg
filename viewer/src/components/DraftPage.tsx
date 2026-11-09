@@ -435,21 +435,23 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                       Hunter's Cowl are the same opener at two moments, and 84
                       of 89 gods had both halves inside this three-slot row —
                       so a third of the answer was spent restating one pick.
-                      The two rates are shown, never summed: a player who buys
-                      the base and upgrades it is counted in both, so adding
-                      them would invent a number bigger than the truth. */}
+                      The chip's share is the PATH's, the two ends summed: each
+                      player is counted once, holding the base or its upgrade
+                      (lib/starters.ts has the evidence). The split beside it is
+                      where along the path they ended up. Three paths at most:
+                      the record carries every sighting, and the tail is 1%. */}
                   <ul className="mt-1.5 flex flex-wrap gap-1.5">
-                    {starters.map((p) => {
+                    {starters.slice(0, 3).map((p) => {
                       const end = p.upgrade ?? p.base!;
                       const both = !!(p.base && p.upgrade);
                       return (
                         <li key={p.rootName}>
                           <a href={toHash.item(end.name)}
                             title={both
-                              ? `${Math.round(p.base!.pick_rate * 100)}% open with ${p.base!.name}; ${Math.round(p.upgrade!.pick_rate * 100)}% are holding ${p.upgrade!.name}`
+                              ? `${Math.round(p.pick_rate * 100)}% open with ${p.base!.name}: ${Math.round(p.base!.pick_rate * 100)}% still hold it, ${Math.round(p.upgrade!.pick_rate * 100)}% upgrade to ${p.upgrade!.name}`
                               : `${Math.round(end.pick_rate * 100)}% open with ${end.name}, winning ${Math.round(end.win_rate * 100)}%`}
                             aria-label={both
-                              ? `${p.base!.name} into ${p.upgrade!.name} — ${Math.round(p.base!.pick_rate * 100)}% of ${meName} players open with it, ${Math.round(p.upgrade!.pick_rate * 100)}% are holding the upgrade`
+                              ? `${p.base!.name} into ${p.upgrade!.name} — ${Math.round(p.pick_rate * 100)}% of ${meName} players open with it: ${Math.round(p.base!.pick_rate * 100)}% still hold it, ${Math.round(p.upgrade!.pick_rate * 100)}% upgrade`
                               : `${end.name} — opened with by ${Math.round(end.pick_rate * 100)}% of ${meName} players, winning ${Math.round(end.win_rate * 100)}%`}
                             className="press flex items-center gap-1.5 rounded-md border border-line bg-bg2 py-1 pl-1 pr-2 transition-colors duration-150 ease-standard hover:border-line-strong">
                             {p.base && <Icon name={p.base.name} item className="h-6 w-6" />}
@@ -461,7 +463,7 @@ export function DraftPage({ gods, items, builds, godItemScores, godItemDamage, d
                             {p.upgrade && <Icon name={p.upgrade.name} item className="h-6 w-6" />}
                             <span className="max-w-[13ch] truncate text-small text-ink">{end.name}</span>
                             <span aria-hidden="true" className="font-mono text-label text-gold">
-                              {Math.round(p.lead.pick_rate * 100)}%
+                              {Math.round(p.pick_rate * 100)}%
                             </span>
                             {both && (
                               // Where along the path people actually end up.

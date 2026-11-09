@@ -27,6 +27,7 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { BuildNote, CommunityBuildEntry, DraftConfig, God, Item } from "../../types";
 import { useDraft, MODE_TEAM_SIZE, encodeDraftHash } from "../../lib/draft";
 import { useDraftResult } from "../../lib/useDraftResult";
+import { starterShare } from "../../lib/starters";
 import { threatAnswer } from "../../lib/threats";
 import { toHash } from "../../lib/useHashRoute";
 import { queryHash } from "../command/query";
@@ -148,7 +149,8 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
      Pendulum of the Ages while the god page said Conduit Gem: the mismatch the
      audit found between the two surfaces, one row up from the six. */
   const starter = r.activeEntry?.starter ?? community?.starter;
-  const starterPath = starter ? r.starters.find((p) => p.rootName === starter.base) : undefined;
+  // The whole path's share, base + upgrade — the god page's number for it.
+  const starterPct = starterShare(starter, r.starters);
 
   const unknownLine = known < roster
     ? `${roster - known} still unknown, so this six will keep moving`
@@ -250,8 +252,8 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
             <span className="font-cond text-[16px] font-bold uppercase text-ink">Start</span>{" "}
             {starter.base} → {starter.upgrade}
             <span className="block text-quiet">
-              {starterPath
-                ? <>{r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : ""}{Math.round(starterPath.lead.pick_rate * 100)}% of {me} players open this way · </>
+              {starterPct != null
+                ? <>{r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : ""}{Math.round(starterPct * 100)}% of {me} players open this way · </>
                 : <>{me}&rsquo;s players don&rsquo;t open this way · </>}
               the draft doesn&rsquo;t move it
             </span>

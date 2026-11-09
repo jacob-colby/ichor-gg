@@ -619,4 +619,78 @@ builds:
   - Kinetic Cuirass
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Vindication
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 40
+    wins: 23
+    win_share: 0.57
+    aggregate:
+      aspect_matches: 46
+      aspect_win_rate: 0.565
+      no_aspect_matches: 675
+      no_aspect_win_rate: 0.541
+    roles:
+    - role: Solo
+      matches: 35
+      share: 0.88
+    - role: Support
+      matches: 4
+      share: 0.1
+    - role: Carry
+      matches: 1
+      share: 0.03
+    base_role: Solo
+    base_role_share: 0.88
+    role_shift: null
+    items:
+    - name: Berserker's Shield
+      share: 0.9
+    - name: Devourer's Gauntlet
+      share: 0.62
+    - name: Shogun's Ofuda
+      share: 0.62
+    - name: Kinetic Cuirass
+      share: 0.4
+    - name: Shifter's Shield
+      share: 0.33
+    - name: Sanguine Lash
+      share: 0.3
+    - name: Vital Amplifier
+      share: 0.25
+    - name: Hussar's Wings
+      share: 0.23
+    starters:
+    - name: Death's Embrace
+      share: 0.28
+    - name: Hunter's Cowl
+      share: 0.28
+    - name: Leather Cowl
+      share: 0.23
+    relics:
+    - name: Agility Relic
+      share: 0.53
+    - name: Phantom Shell
+      share: 0.28
+    - name: Purification Beads
+      share: 0.1
+    matches_by_window:
+      ob47: 4
+      ob46: 40
+      ob45: 79
+      ob44: 79
+    unmapped_slugs:
+    - brawlers-ruin
 ---

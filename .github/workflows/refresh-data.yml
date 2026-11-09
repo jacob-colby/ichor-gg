@@ -106,6 +106,22 @@ jobs:
         working-directory: pipeline
         run: python -m smite.refresh --community
 
+      # What aspect PLAYERS buy, per match, into data/Analysis/aspect_matches
+      # and each Conquest note's `community_aspects`. ~217 requests at a 2.5s
+      # floor, ~9 min (measured 2026-11-08): the newest two windows' split
+      # index, one no-aspect page per god, and every aspect feed walked back to
+      # the newest match already stored. All or nothing: a page it does not
+      # trust writes nothing, and the walk recovers the day on the next run, so
+      # a refusal must not cost the rest of the day's data. It sets `rejected`
+      # and the last step turns the run red. See smite/aspect_matches.py.
+      - name: Pull per-aspect match records
+        id: aspect_feed
+        working-directory: pipeline
+        run: |
+          if ! python -m smite.aspect_matches refresh; then
+            echo "rejected=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # The game's patch label, from Steam's announcement feed — read from
       # the title, the official notes link or the body, since Hi-Rez stopped
       # titling posts with it (measured on a recorded response, 2026-11-02).
@@ -516,6 +532,14 @@ jobs:
         if: ${{ !cancelled() && steps.new_entities.outputs.rejected == 'true' }}
         run: |
           echo "::error::A new god or item was left out by the gate; see the 'Add new gods and items' step and data/_new_entities.json."
+          exit 1
+
+      # Same contract for the per-aspect feed: the store is untouched, the rest
+      # of the day's data is committed above, and the run goes red here.
+      - name: Fail the run if the aspect feed was refused
+        if: ${{ !cancelled() && steps.aspect_feed.outputs.rejected == 'true' }}
+        run: |
+          echo "::error::The per-aspect match feed was refused and the aspect match store is unchanged; see the 'Pull per-aspect match records' step. The next run walks back over the missed day."
           exit 1
 
       # A data PR that carries yesterday's figures turns `doc_audit` red on

@@ -862,4 +862,81 @@ builds:
   - Rod of Tahuti
   starter: *id001
   relic: *id002
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Sickle
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 543
+    wins: 350
+    win_share: 0.64
+    aggregate:
+      aspect_matches: 641
+      aspect_win_rate: 0.638
+      no_aspect_matches: 136
+      no_aspect_win_rate: 0.596
+    roles:
+    - role: Mid
+      matches: 380
+      share: 0.7
+    - role: Carry
+      matches: 83
+      share: 0.15
+    - role: Jungle
+      matches: 53
+      share: 0.1
+    - role: Solo
+      matches: 27
+      share: 0.05
+    base_role: Carry
+    base_role_share: 0.15
+    role_shift:
+      role: Mid
+      share: 0.7
+      says: 'most Aspect of the Sickle players do not play Carry: Mid 70%, Carry 15%'
+    items:
+    - name: Rod of Tahuti
+      share: 0.87
+    - name: Spear of Desolation
+      share: 0.57
+    - name: Obsidian Shard
+      share: 0.43
+    - name: Chronos' Pendant
+      share: 0.41
+    - name: Ancient Signet
+      share: 0.37
+    - name: Spear of the Magus
+      share: 0.32
+    - name: The Cosmic Horror
+      share: 0.23
+    - name: Totem of Death
+      share: 0.22
+    starters:
+    - name: Archmage's Gem
+      share: 0.4
+    - name: Pendulum of the Ages
+      share: 0.33
+    - name: Conduit Gem
+      share: 0.08
+    relics:
+    - name: Purification Beads
+      share: 0.63
+    - name: Aegis of Acceleration
+      share: 0.37
+    - name: Agility Relic
+      share: 0.0
+    matches_by_window:
+      ob47: 543
+    unmapped_slugs:
+    - brawlers-ruin
 ---
