@@ -1,4 +1,6 @@
-/** What the aspect's own PLAYERS buy, under the six, when the aspect is on.
+/** What the aspect's own PLAYERS buy: the god page's Community side with the
+ * aspect on (`community-aspect-slot` in GodPage, the Ichor's | Community
+ * switch's contract), where it owns the whole build area.
  *
  * Community data, not the model, and it says so first: Ichor's six above is
  * built for the god's base role, and an aspect overlay cannot move a god's
@@ -44,6 +46,15 @@ export function aspectEntry(record: CommunityAspects | undefined, aspect: string
   return record?.aspects.find((a) => fold(a.aspect) === fold(aspect));
 }
 
+/** "57 games · OB45–OB47" for a shown entry in Conquest, else null: what
+ *  the page prints on the build header's right, where Ichor's side prints
+ *  "Gold spent". */
+export function aspectCount(record: CommunityAspects | undefined, aspect: string, mode: Mode): string | null {
+  const entry = mode === "conquest" ? aspectEntry(record, aspect) : undefined;
+  if (!entry || entry.status !== "shown" || !entry.items) return null;
+  return `${(entry.matches ?? 0).toLocaleString("en-US")} games · ${entry.patches ?? ""}`;
+}
+
 /** "OB44–OB47" over the windows an entry has any games in. */
 function spanOf(byWindow: Record<string, number>): string {
   const ws = Object.keys(byWindow).filter((w) => byWindow[w] > 0)
@@ -60,12 +71,15 @@ function windowWhy(entry: AspectCommunityEntry, minimum: number): string | null 
   return null;
 }
 
-export function AspectCommunity({ aspect, mode, communityAspects: record, itemsByName }: {
+export function AspectCommunity({ aspect, mode, communityAspects: record, itemsByName, bare = false }: {
   aspect: string;
   mode: Mode;
   /** The god's Conquest note's `community_aspects`, or undefined when there is none. */
   communityAspects: CommunityAspects | undefined;
   itemsByName: Record<string, Item>;
+  /** The page names the build and prints the count on its own header line
+   *  (`aspectCount`), so the block draws neither. */
+  bare?: boolean;
 }) {
   const short = shortAspect(aspect);
   const heading = (right?: string) => (
@@ -76,7 +90,9 @@ export function AspectCommunity({ aspect, mode, communityAspects: record, itemsB
       {right && <span className="num whitespace-nowrap" data-testid="aspect-community-span">{right}</span>}
     </div>
   );
-  const frame = (body: ReactNode, right?: string) => (
+  const frame = (body: ReactNode, right?: string) => bare ? (
+    <div data-testid="aspect-community">{body}</div>
+  ) : (
     <section aria-labelledby="aspect-community-h" data-testid="aspect-community" className="mt-6">
       {heading(right)}
       {body}
