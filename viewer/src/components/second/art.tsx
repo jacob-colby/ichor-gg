@@ -28,6 +28,17 @@ export function Art({ name, kind, className = "", eager = false }: {
   );
 }
 
+/** A team slot's keyboard focus, drawn on its portrait tile rather than on
+ *  the button around it. The button is the whole column (tile, and the name
+ *  under it on the panel and the draft board) with square corners, so the
+ *  global `:focus-visible` outline came out as a square box around a rounded
+ *  tile — a different shape from the slot it marked. `SLOT_BUTTON` goes on
+ *  the button, `SLOT_TILE_FOCUS` on the tile (filled or empty). Same 2px
+ *  violet at a 2px offset as everywhere else; only where it is drawn moves. */
+export const SLOT_BUTTON = "group focus-visible:outline-none";
+export const SLOT_TILE_FOCUS =
+  "group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-solid group-focus-visible:outline-accent";
+
 type GlyphProps = SVGProps<SVGSVGElement> & { size?: number };
 function Glyph({ size = 24, children, ...rest }: GlyphProps) {
   return (
