@@ -70,13 +70,76 @@ builds:
       win_rate: 0.68
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.51
-    win_rate: 0.6
+    pick_rate: 0.52
+    win_rate: 0.61
   - name: Bumba's Cudgel
     pick_rate: 0.26
-    win_rate: 0.41
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.07
+    win_rate: 0.56
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.31
+    win_rate: 0.52
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.67
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.52
+    win_rate: 0.61
+  - name: Bumba's Cudgel
+    pick_rate: 0.26
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.07
+    win_rate: 0.56
+  - name: Archmage's Gem
+    pick_rate: 0.04
+    win_rate: 0.71
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.33
+  - name: Pendulum of the Ages
+    pick_rate: 0.04
+    win_rate: 0.43
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 0.43
   - name: Leather Cowl
-    pick_rate: 0.08
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: Death's Toll
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.31
+    win_rate: 0.52
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.67
+  - name: Blink Rune
+    pick_rate: 0.01
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.008
+    win_rate: 0.33
+  - name: Agility Relic
+    pick_rate: 0.003
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/tsukuyomi/
   last_verified: '2026-11-08'
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.78
+    win_rate: 0.54
+    matches: 289
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+    matches: 245
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +239,18 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.78
+    win_rate: 0.54
+    matches: 289
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+    matches: 245
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -244,6 +327,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -319,6 +403,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -395,6 +480,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -471,6 +557,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -546,6 +633,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -623,6 +711,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -698,6 +787,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -774,6 +864,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -848,6 +939,7 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -927,6 +1019,7 @@ builds:
     reason: community 67% win over 67 matches (vs 53% on this god), taking the model's
       weakest slot from The Crusher
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

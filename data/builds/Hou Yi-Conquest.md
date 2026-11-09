@@ -71,13 +71,61 @@ builds:
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.54
-    win_rate: 0.6
+    win_rate: 0.61
   - name: Gilded Arrow
     pick_rate: 0.25
     win_rate: 0.37
   - name: Hunter's Cowl
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.52
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.69
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.009
+    win_rate: 0.75
+  starter_sightings:
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.54
+    win_rate: 0.61
+  - name: Gilded Arrow
+    pick_rate: 0.25
+    win_rate: 0.37
+  - name: Hunter's Cowl
+    pick_rate: 0.1
+    win_rate: 0.52
+  - name: Leather Cowl
+    pick_rate: 0.06
+    win_rate: 0.41
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 0.64
+  - name: Death's Toll
+    pick_rate: 0.009
+    win_rate: 0.25
+  - name: Bumba's Cudgel
+    pick_rate: 0.002
+    win_rate: 1.0
+  - name: Bumba's Spear
+    pick_rate: 0.002
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.69
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.009
+    win_rate: 0.75
+  - name: Phantom Shell
+    pick_rate: 0.002
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/hou-yi/
   last_verified: '2026-11-08'
   god_win_rate: 0.5251641137855579
@@ -90,6 +138,16 @@ builds:
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.79
+    win_rate: 0.5341
+    matches: 361
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.69
+    win_rate: 0.54
+    matches: 315
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -168,6 +226,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.79
+    win_rate: 0.5341
+    matches: 361
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.69
+    win_rate: 0.54
+    matches: 315
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +309,7 @@ builds:
   community_ordered:
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -317,6 +386,7 @@ builds:
   - Riptalon
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +462,7 @@ builds:
   community_ordered:
   - Riptalon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +538,7 @@ builds:
   - Riptalon
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -544,6 +616,7 @@ builds:
   - Silverbranch Bow
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -616,6 +689,7 @@ builds:
       pick: 0.0
       fit: 0.61
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -690,6 +764,7 @@ builds:
   community_ordered:
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -762,6 +837,7 @@ builds:
       pick: 0.0
       fit: 0.53
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -835,6 +911,7 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -915,6 +992,7 @@ builds:
     reason: community 65% win over 78 matches (vs 53% on this god), taking the model's
       weakest slot from Bragi's Harp
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -979,19 +1057,15 @@ community_aspects:
     - name: Hunter's Cowl
       share: 0.14
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.55
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.43
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.01
     matches_by_window:
       ob47: 19
       ob46: 200
       ob45: 382
       ob44: 207
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
-    - purification-beads
 ---

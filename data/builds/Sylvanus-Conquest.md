@@ -70,14 +70,92 @@ builds:
       win_rate: 0.71
   community_starters:
   - name: Selflessness
-    pick_rate: 0.22
-    win_rate: 0.53
-  - name: Heroism
-    pick_rate: 0.15
-    win_rate: 0.67
+    pick_rate: 0.23
+    win_rate: 0.51
   - name: War Flag
     pick_rate: 0.15
-    win_rate: 0.54
+    win_rate: 0.51
+  - name: Heroism
+    pick_rate: 0.14
+    win_rate: 0.67
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.44
+    win_rate: 0.52
+  - name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.16
+    win_rate: 0.61
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.23
+    win_rate: 0.51
+  - name: War Flag
+    pick_rate: 0.15
+    win_rate: 0.51
+  - name: Heroism
+    pick_rate: 0.14
+    win_rate: 0.67
+  - name: War Banner
+    pick_rate: 0.11
+    win_rate: 0.71
+  - name: Death's Embrace
+    pick_rate: 0.08
+    win_rate: 0.4
+  - name: Death's Toll
+    pick_rate: 0.08
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.46
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.55
+  - name: Bumba's Cudgel
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.67
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.67
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Warrior's Axe
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Hunter's Cowl
+    pick_rate: 0.004
+    win_rate: 0.0
+  - name: Sands Of Time
+    pick_rate: 0.004
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.44
+    win_rate: 0.52
+  - name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.16
+    win_rate: 0.61
+  - name: Purification Beads
+    pick_rate: 0.06
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.06
+    win_rate: 0.71
+  - name: Agility Relic
+    pick_rate: 0.03
+    win_rate: 0.86
   source_url: https://smitebrain.com/gods/sylvanus/
   last_verified: '2026-11-08'
   god_win_rate: 0.5650406504065041
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.37
+    win_rate: 0.5705
+    matches: 91
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.44
+    win_rate: 0.52
+    matches: 108
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +252,18 @@ builds:
   - Freya's Tears
   - Shifter's Shield
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.37
+    win_rate: 0.5705
+    matches: 91
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.44
+    win_rate: 0.52
+    matches: 108
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +338,7 @@ builds:
   - Freya's Tears
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -313,6 +412,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -386,6 +486,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -459,6 +560,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -534,6 +636,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -609,6 +712,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -683,6 +787,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -748,11 +853,11 @@ community_aspects:
     - name: Leather Cowl
       share: 0.05
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.45
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.33
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.14
     matches_by_window:
       ob47: 42
@@ -760,10 +865,5 @@ community_aspects:
       ob45: 199
       ob44: 107
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

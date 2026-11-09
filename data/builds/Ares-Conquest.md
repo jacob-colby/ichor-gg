@@ -73,11 +73,89 @@ builds:
     pick_rate: 0.29
     win_rate: 0.51
   - name: Heroism
-    pick_rate: 0.18
-    win_rate: 0.65
+    pick_rate: 0.19
+    win_rate: 0.67
   - name: Bluestone Pendant
     pick_rate: 0.09
-    win_rate: 0.35
+    win_rate: 0.33
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.53
+    win_rate: 0.59
+  - name: Phantom Shell
+    pick_rate: 0.31
+    win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.11
+    win_rate: 0.44
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.29
+    win_rate: 0.51
+  - name: Heroism
+    pick_rate: 0.19
+    win_rate: 0.67
+  - name: Bluestone Pendant
+    pick_rate: 0.09
+    win_rate: 0.33
+  - name: War Banner
+    pick_rate: 0.09
+    win_rate: 0.82
+  - name: War Flag
+    pick_rate: 0.09
+    win_rate: 0.45
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.45
+  - name: Warrior's Axe
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.71
+  - name: Leather Cowl
+    pick_rate: 0.03
+    win_rate: 0.14
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.86
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Bumba's Hammer
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Bumba's Spear
+    pick_rate: 0.008
+    win_rate: 0.5
+  - name: Blood-soaked Shroud
+    pick_rate: 0.004
+    win_rate: 0.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.53
+    win_rate: 0.59
+  - name: Phantom Shell
+    pick_rate: 0.31
+    win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.11
+    win_rate: 0.44
+  - name: Purification Beads
+    pick_rate: 0.03
+    win_rate: 0.43
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Aegis of Acceleration
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ares/
   last_verified: '2026-11-08'
   god_win_rate: 0.5407725321888412
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.48
+    win_rate: 0.5733
+    matches: 112
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.53
+    win_rate: 0.59
+    matches: 123
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,8 +255,18 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.48
+    win_rate: 0.5733
+    matches: 112
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.53
+    win_rate: 0.59
+    matches: 123
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -246,6 +344,7 @@ builds:
   - Kinetic Cuirass
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -322,6 +421,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -397,6 +497,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -474,6 +575,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -549,6 +651,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -627,6 +730,7 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -710,6 +814,7 @@ builds:
     reason: community 71% win over 35 matches (vs 54% on this god), taking the model's
       weakest slot from Draconic Scale
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -773,9 +878,9 @@ community_aspects:
     relics:
     - name: Blink Rune
       share: 0.53
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.22
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.12
     matches_by_window:
       ob47: 51
@@ -783,9 +888,5 @@ community_aspects:
       ob45: 210
       ob44: 347
     unmapped_slugs:
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

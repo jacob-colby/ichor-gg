@@ -70,14 +70,74 @@ builds:
       win_rate: 0.46
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.57
-    win_rate: 0.56
+    pick_rate: 0.58
+    win_rate: 0.57
   - name: Bluestone Pendant
-    pick_rate: 0.31
+    pick_rate: 0.3
     win_rate: 0.42
-  - name: Sundering Axe
-    pick_rate: 0.07
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 0.63
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.49
+  - name: Sundering Arc
+    pick_rate: 0.19
+    win_rate: 0.53
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.58
+    win_rate: 0.57
+  - name: Bluestone Pendant
+    pick_rate: 0.3
+    win_rate: 0.42
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 0.63
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.56
+  - name: Leather Cowl
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Death's Toll
+    pick_rate: 0.01
     win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Blood-soaked Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.25
+    win_rate: 0.53
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.49
+  - name: Sundering Arc
+    pick_rate: 0.19
+    win_rate: 0.53
+  - name: Purification Beads
+    pick_rate: 0.14
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.56
+  - name: Agility Relic
+    pick_rate: 0.05
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/cu-chulainn/
   last_verified: '2026-11-08'
   god_win_rate: 0.5085910652920962
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.88
+    win_rate: 0.5189
+    matches: 256
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.25
+    win_rate: 0.53
+    matches: 73
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +233,18 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.88
+    win_rate: 0.5189
+    matches: 256
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.25
+    win_rate: 0.53
+    matches: 73
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -238,6 +318,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -311,6 +392,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -384,6 +466,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -458,6 +541,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -531,6 +615,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -592,11 +677,11 @@ community_aspects:
     - name: Bluestone Pendant
       share: 0.19
     relics:
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.3
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.27
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.19
     matches_by_window:
       ob47: 37
@@ -604,10 +689,5 @@ community_aspects:
       ob45: 55
       ob44: 90
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

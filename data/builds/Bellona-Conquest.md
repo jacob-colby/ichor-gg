@@ -70,14 +70,74 @@ builds:
       win_rate: 0.75
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.36
-    win_rate: 0.6
+    pick_rate: 0.35
+    win_rate: 0.59
   - name: Hunter's Cowl
     pick_rate: 0.31
-    win_rate: 0.57
+    win_rate: 0.59
   - name: Death's Toll
     pick_rate: 0.17
     win_rate: 0.53
+  community_relics:
+  - name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.57
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.55
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.43
+  starter_sightings:
+  - name: Death's Embrace
+    pick_rate: 0.35
+    win_rate: 0.59
+  - name: Hunter's Cowl
+    pick_rate: 0.31
+    win_rate: 0.59
+  - name: Death's Toll
+    pick_rate: 0.17
+    win_rate: 0.53
+  - name: Leather Cowl
+    pick_rate: 0.12
+    win_rate: 0.36
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: Heroism
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: Selflessness
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.006
+    win_rate: 1.0
+  relic_sightings:
+  - name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.57
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.55
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.43
+  - name: Aegis of Acceleration
+    pick_rate: 0.1
+    win_rate: 0.59
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.59
+  - name: Blink Rune
+    pick_rate: 0.01
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/bellona/
   last_verified: '2026-11-08'
   god_win_rate: 0.5549132947976878
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.52
+    win_rate: 0.5704
+    matches: 90
+    basis: community
+  relic:
+    name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.57
+    matches: 88
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +234,18 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.52
+    win_rate: 0.5704
+    matches: 90
+    basis: community
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.57
+    matches: 88
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +320,7 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -313,6 +394,7 @@ builds:
   - Kinetic Cuirass
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -388,6 +470,7 @@ builds:
   - Kinetic Cuirass
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -462,6 +545,7 @@ builds:
   - Kinetic Cuirass
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -534,6 +618,7 @@ builds:
   community_ordered:
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -595,11 +680,11 @@ community_aspects:
     - name: Leather Cowl
       share: 0.23
     relics:
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.53
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.28
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.1
     matches_by_window:
       ob47: 4
@@ -607,10 +692,5 @@ community_aspects:
       ob45: 79
       ob44: 79
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

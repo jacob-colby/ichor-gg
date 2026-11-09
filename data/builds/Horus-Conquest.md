@@ -78,6 +78,72 @@ builds:
   - name: War Flag
     pick_rate: 0.1
     win_rate: 0.42
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.27
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.52
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.34
+    win_rate: 0.53
+  - name: Heroism
+    pick_rate: 0.16
+    win_rate: 0.63
+  - name: War Flag
+    pick_rate: 0.1
+    win_rate: 0.42
+  - name: Warrior's Axe
+    pick_rate: 0.1
+    win_rate: 0.54
+  - name: Bluestone Pendant
+    pick_rate: 0.06
+    win_rate: 0.53
+  - name: Sundering Axe
+    pick_rate: 0.05
+    win_rate: 0.43
+  - name: War Banner
+    pick_rate: 0.05
+    win_rate: 0.71
+  - name: Conduit Gem
+    pick_rate: 0.04
+    win_rate: 0.18
+  - name: Bluestone Brooch
+    pick_rate: 0.03
+    win_rate: 0.56
+  - name: Bumba's Cudgel
+    pick_rate: 0.03
+    win_rate: 0.44
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.4
+  - name: Archmage's Gem
+    pick_rate: 0.004
+    win_rate: 1.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.27
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.52
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.44
+  - name: Aegis of Acceleration
+    pick_rate: 0.08
+    win_rate: 0.43
+  - name: Agility Relic
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/horus/
   last_verified: '2026-11-08'
   god_win_rate: 0.5247148288973384
@@ -88,8 +154,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.5
+    win_rate: 0.562
+    matches: 132
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.49
+    matches: 113
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +239,18 @@ builds:
   - Stone of Binding
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.5
+    win_rate: 0.562
+    matches: 132
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.49
+    matches: 113
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -238,6 +324,7 @@ builds:
   - Stone of Binding
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -311,6 +398,7 @@ builds:
   - Stone of Binding
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -383,6 +471,7 @@ builds:
   community_ordered:
   - Stone of Binding
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -458,6 +547,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -531,6 +621,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

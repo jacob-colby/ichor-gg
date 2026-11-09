@@ -1315,11 +1315,160 @@ def eligible_flavors(god, weights, items=None):
     return out
 
 
-def pick_starter(god, weights):
-    """The role-appropriate starter for a god: highest-priority entry in the
+# ── Starter and relic: what this god's players take (2026-11-08) ─────────
+#
+# THE RULE IS MOST-PICKED, FOR BOTH. The starter is the purchase PATH (base +
+# its one upgrade) with the largest share of this god's matches; the relic is
+# the free base relic with the largest share. Jacob's call, 2026-11-08, on the
+# diagnosis in docs/plans/2026-11-08-starter-relic-diagnosis.md (ob47, 95
+# gods). The role table under `starters:` in _weights.yaml is now only the
+# FALLBACK for a god with no community record (0 of 95 that day; it is for a
+# god added before SmiteBrain publishes him). A relic has no fallback: no
+# record, no relic, rather than a guess.
+#
+# WHY A PATH AND NOT AN ITEM. SmiteBrain counts each player once, holding
+# EITHER the base or its upgrade: starter rates sum to 98-103% of a god's
+# matches on every god, relics to 98-101%. So a path's share is the SUM of its
+# two ends, and its win rate their pick-weighted mean. Item by item, a win rate
+# is survivorship — Nox's Sands of Time won 18% and Pendulum of the Ages 57%,
+# Artemis's Gilded Arrow 38% and Sharpshooter's Arrow 61% — because only a
+# game that went long or well reaches the upgrade.
+#
+# WHY NOT BEST EVIDENCE. Ranking on a Wilson lower bound changed 23 of 95
+# starters and 32 of 95 relics; "most-picked unless another clears its win
+# rate" fired on 6 and 12. The starter swaps were mostly ROLE swaps, because
+# SmiteBrain pools every role a god is played in: Artemis -> Hunter's Cowl
+# (jungle), Kuzenbo -> Warrior's Axe (solo), Nox -> Selflessness (support). A
+# Wilson bound answers sample size, not that confound. Relics showed no item
+# effect to chase: Aegis of Acceleration 54.5% against Purification Beads
+# 53.5% pooled, ahead on 51 of 95 gods — and a relic is picked against the
+# enemy's comp, which no static page can see.
+#
+# WHAT IT COSTS. The pick is a coin flip on some gods: the top two paths were
+# within 5pp on 11 of 95, the top two relics on 24, so those can change from
+# one daily refresh to the next. The runner-ups' rates ship beside it
+# (`community_starters`, `community_relics`) rather than being hidden.
+#
+# THE RECORD READ IS EVERY TILE, not the top 3 the page shows
+# (`starter_sightings`, `relic_sightings`): a path whose two ends sit 3rd and
+# 4th is invisible in a top 3, and truncating changed the answer on Cupid,
+# Discordia and Nemesis. `matches` is `pick_rate x god_matches_played`, the
+# same estimate `hybrid.community_records` makes — SmiteBrain publishes no
+# per-item denominator.
+#
+# NONE OF THIS ENTERS A CALCULATION. Tier-1 starters sit out `efficiency`,
+# free relics are not `is_buildable`, and the six-item assembly, `combat`,
+# `build_quality` and `damage_value` never read either.
+
+
+def _numeric(x):
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def starter_pair(name, items_by_name):
+    """`(base, upgrade)` for one starter sighting, from the item graph, or
+    `(None, None)` when the item is not one end of a starter path.
+
+    A path is a base with no components that builds into exactly one item,
+    which builds from that base alone — all twelve starter paths in the data
+    have that shape. Keyed on the graph, never on the `starters:` table, which
+    knew five of the twelve (`viewer/src/lib/starters.ts` makes the same
+    choice for the same reason)."""
+    item = (items_by_name or {}).get(name)
+    if not item:
+        return None, None
+    frm = item.get("builds_from") or []
+    if not frm:
+        into = item.get("builds_into") or []
+        up = (items_by_name.get(into[0]) or {}) if len(into) == 1 else {}
+        return (name, into[0]) if (up.get("builds_from") or []) == [name] else (None, None)
+    if len(frm) == 1:
+        base = items_by_name.get(frm[0]) or {}
+        if not (base.get("builds_from") or []) and (base.get("builds_into") or []) == [name]:
+            return frm[0], name
+    return None, None
+
+
+def _matches(pick, community_entry):
+    played = (community_entry or {}).get("god_matches_played")
+    return int(round(pick * played)) if _numeric(played) and played > 0 else None
+
+
+def starter_paths(community_entry, items_by_name, excluded=()):
+    """Every starter path in a community record, most-picked first:
+    `[{base, upgrade, pick_rate, win_rate, matches}]`.
+
+    A sighting that is not one end of a path, or a path with an end in
+    `excluded` (the mode's `excluded_items`), is skipped. Ties break on the
+    larger match count, then the base's name, so the order is stable."""
+    paths = {}
+    for s in (community_entry or {}).get("starter_sightings") or []:
+        name, pick, win = s.get("name"), s.get("pick_rate"), s.get("win_rate")
+        if not name or not _numeric(pick) or not _numeric(win):
+            continue
+        base, upgrade = starter_pair(name, items_by_name)
+        if base is None or base in excluded or upgrade in excluded:
+            continue
+        p = paths.setdefault(base, {"base": base, "upgrade": upgrade, "pick": 0.0, "won": 0.0})
+        p["pick"] += pick
+        p["won"] += pick * win
+    out = [{"base": p["base"], "upgrade": p["upgrade"],
+            "pick_rate": round(p["pick"], 4),
+            "win_rate": round(p["won"] / p["pick"], 4) if p["pick"] > 0 else None,
+            "matches": _matches(p["pick"], community_entry)}
+           for p in paths.values()]
+    return sorted(out, key=lambda p: (-p["pick_rate"], -(p["matches"] or 0), p["base"]))
+
+
+def relic_choices(community_entry, items_by_name, excluded=()):
+    """Every free base relic in a community record, most-picked first:
+    `[{name, pick_rate, win_rate, matches}]`. Only names that resolve to a
+    record at tier "Relic" and cost 0 — ingest keeps an unknown name for
+    display (`refresh.community_relics`), but a recommendation the page cannot
+    draw or link is not one."""
+    out = []
+    for s in (community_entry or {}).get("relic_sightings") or []:
+        name, pick, win = s.get("name"), s.get("pick_rate"), s.get("win_rate")
+        item = (items_by_name or {}).get(name) or {}
+        if (item.get("tier") != "Relic" or item.get("cost") != 0 or name in excluded
+                or not _numeric(pick) or not _numeric(win)):
+            continue
+        out.append({"name": name, "pick_rate": pick, "win_rate": win,
+                    "matches": _matches(pick, community_entry)})
+    return sorted(out, key=lambda r: (-r["pick_rate"], -(r["matches"] or 0), r["name"]))
+
+
+def pick_relic(community_entry, items_by_name, excluded=(), borrowed_from=None):
+    """The most-picked free base relic, with its record, or None when there is
+    no record to read. `borrowed_from` names the mode whose record it is."""
+    choices = relic_choices(community_entry, items_by_name, excluded)
+    if not choices:
+        return None
+    return {**choices[0], "basis": "community",
+            **({"borrowed_from": borrowed_from} if borrowed_from else {})}
+
+
+def pick_starter(god, weights, community_entry=None, items_by_name=None, excluded=(),
+                 borrowed_from=None):
+    """The starter for a god: the community's most-picked PATH when a record
+    exists, else the role table (see the block comment above).
+
+    Community: `{base, upgrade, basis: "community", pick_rate, win_rate,
+    matches}`, plus `borrowed_from` when the record is another mode's. Table:
+    `{base, upgrade, basis: "rule"}` — the highest-priority entry in the
     `starters` config whose damage_types (or null=any) include the god's damage
-    type and whose match_any (or null=any) intersects the god's tokens. Returns
-    {base, upgrade} or None if no starters are configured."""
+    type and whose match_any (or null=any) intersects the god's tokens. None if
+    neither has an answer."""
+    paths = starter_paths(community_entry, items_by_name, excluded)
+    if paths:
+        top = paths[0]
+        return {**top, "basis": "community",
+                **({"borrowed_from": borrowed_from} if borrowed_from else {})}
+    return rule_starter(god, weights)
+
+
+def rule_starter(god, weights):
+    """The role table's answer alone: `{base, upgrade, basis: "rule"}`."""
     tokens = _god_tokens(god)
     dt = god.get("damage_type")
     best = None
@@ -1334,4 +1483,4 @@ def pick_starter(god, weights):
             best = s
     if best is None:
         return None
-    return {"base": best["base"], "upgrade": best["upgrade"]}
+    return {"base": best["base"], "upgrade": best["upgrade"], "basis": "rule"}

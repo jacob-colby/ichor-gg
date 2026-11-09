@@ -72,12 +72,75 @@ builds:
   - name: Bumba's Hammer
     pick_rate: 0.18
     win_rate: 0.63
-  - name: Sundering Axe
-    pick_rate: 0.15
-    win_rate: 0.47
   - name: Bluestone Brooch
     pick_rate: 0.14
     win_rate: 0.44
+  - name: Bumba's Cudgel
+    pick_rate: 0.14
+    win_rate: 0.5
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.33
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.67
+  - name: Sundering Arc
+    pick_rate: 0.18
+    win_rate: 0.46
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.18
+    win_rate: 0.63
+  - name: Bluestone Brooch
+    pick_rate: 0.14
+    win_rate: 0.44
+  - name: Bumba's Cudgel
+    pick_rate: 0.14
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.14
+    win_rate: 0.47
+  - name: Bluestone Pendant
+    pick_rate: 0.1
+    win_rate: 0.77
+  - name: Hunter's Cowl
+    pick_rate: 0.1
+    win_rate: 0.62
+  - name: Warrior's Axe
+    pick_rate: 0.09
+    win_rate: 0.25
+  - name: Leather Cowl
+    pick_rate: 0.08
+    win_rate: 0.36
+  - name: War Banner
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Death's Embrace
+    pick_rate: 0.008
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.33
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.67
+  - name: Sundering Arc
+    pick_rate: 0.18
+    win_rate: 0.46
+  - name: Blink Rune
+    pick_rate: 0.17
+    win_rate: 0.77
+  - name: Aegis of Acceleration
+    pick_rate: 0.15
+    win_rate: 0.5
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/achilles/
   last_verified: '2026-11-08'
   god_win_rate: 0.5114503816793893
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.32
+    win_rate: 0.5731
+    matches: 42
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.33
+    matches: 35
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +237,18 @@ builds:
   - Hydra's Lament
   - Freya's Tears
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.32
+    win_rate: 0.5731
+    matches: 42
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.27
+    win_rate: 0.33
+    matches: 35
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -239,6 +322,7 @@ builds:
   - Brawler’s Beat Stick
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -313,6 +397,7 @@ builds:
   - Hydra's Lament
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -387,6 +472,7 @@ builds:
   - Avenging Blade
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -460,6 +546,7 @@ builds:
   - Brawler’s Beat Stick
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -534,6 +621,7 @@ builds:
   - Hydra's Lament
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -606,6 +694,7 @@ builds:
   community_ordered:
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -664,11 +753,11 @@ community_aspects:
     - name: Bumba's Cudgel
       share: 0.08
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.42
     - name: Blink Rune
       share: 0.4
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.12
     matches_by_window:
       ob47: 26
@@ -676,9 +765,5 @@ community_aspects:
       ob45: 67
       ob44: 70
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

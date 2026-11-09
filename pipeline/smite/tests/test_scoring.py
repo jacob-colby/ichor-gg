@@ -323,6 +323,82 @@ def test_pick_starter_matches_role_and_damage_type():
     assert scoring.pick_starter(mag_carry, weights)["base"] == "Conduit Gem"
     assert scoring.pick_starter(jungler, weights)["base"] == "Bumba's Golden Dagger"
     assert scoring.pick_starter(oddball, weights)["base"] == "Death's Toll"
+    # With no community record, that table IS the answer, and says so.
+    assert scoring.pick_starter(oddball, weights)["basis"] == "rule"
+
+
+# ── Starter path and relic: most-picked (2026-11-08) ───────────────────────
+
+def _graph():
+    """Two starter paths, a component with two upgrades (not a path), relics."""
+    items = [
+        {"name": "Leather Cowl", "tier": 1, "builds_from": [], "builds_into": ["Hunter's Cowl"]},
+        {"name": "Hunter's Cowl", "tier": 2, "builds_from": ["Leather Cowl"], "builds_into": []},
+        {"name": "Gilded Arrow", "tier": 1, "builds_from": [], "builds_into": ["Sharpshooter's Arrow"]},
+        {"name": "Sharpshooter's Arrow", "tier": 2, "builds_from": ["Gilded Arrow"], "builds_into": []},
+        {"name": "Ring", "tier": 1, "builds_from": [], "builds_into": ["Adroit Ring", "Sage's Ring"]},
+        {"name": "Purification Beads", "tier": "Relic", "cost": 0, "stats": {}},
+        {"name": "Blink Rune", "tier": "Relic", "cost": 0, "stats": {}},
+        {"name": "Shell of Rebuke", "tier": "Relic", "cost": 2500, "stats": {"Magical Protection": "20"}},
+    ]
+    return {it["name"]: it for it in items}
+
+
+def _record(starters=(), relics=(), played=200):
+    s = lambda rows: [{"name": n, "pick_rate": p, "win_rate": w} for n, p, w in rows]
+    return {"source": "community", "god_matches_played": played,
+            "starter_sightings": s(starters), "relic_sightings": s(relics)}
+
+
+def test_starter_pair_reads_the_item_graph_from_either_end():
+    g = _graph()
+    assert scoring.starter_pair("Leather Cowl", g) == ("Leather Cowl", "Hunter's Cowl")
+    assert scoring.starter_pair("Hunter's Cowl", g) == ("Leather Cowl", "Hunter's Cowl")
+    assert scoring.starter_pair("Ring", g) == (None, None)       # two upgrades: not a path
+    assert scoring.starter_pair("Nobody's Item", g) == (None, None)
+
+
+def test_a_paths_share_is_the_sum_of_its_two_ends():
+    """Each player holds the base OR the upgrade, so the ends add. The single
+    most-held item here is Sharpshooter's Arrow; the most-held PATH is the
+    cowl, whose two ends sit 2nd and 3rd — the shape that a top-3 read would
+    have hidden had they been 3rd and 4th (Cupid, Discordia, Nemesis)."""
+    rec = _record(starters=[("Sharpshooter's Arrow", 0.34, 0.60), ("Hunter's Cowl", 0.30, 0.70),
+                            ("Leather Cowl", 0.26, 0.40), ("Gilded Arrow", 0.10, 0.30)])
+    paths = scoring.starter_paths(rec, _graph())
+    assert [p["base"] for p in paths] == ["Leather Cowl", "Gilded Arrow"]
+    top = paths[0]
+    assert (top["upgrade"], top["pick_rate"], top["matches"]) == ("Hunter's Cowl", 0.56, 112)
+    assert top["win_rate"] == round((0.30 * 0.70 + 0.26 * 0.40) / 0.56, 4)
+
+
+def test_pick_starter_is_the_most_picked_path_with_its_record():
+    weights = {"starters": [{"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow",
+                             "damage_types": None, "match_any": None, "priority": 1}]}
+    god = {"damage_type": "physical", "role": "Carry", "specializations": []}
+    rec = _record(starters=[("Hunter's Cowl", 0.5, 0.6), ("Sharpshooter's Arrow", 0.4, 0.5)])
+    got = scoring.pick_starter(god, weights, rec, _graph())
+    assert got == {"base": "Leather Cowl", "upgrade": "Hunter's Cowl", "basis": "community",
+                   "pick_rate": 0.5, "win_rate": 0.6, "matches": 100}
+    # Borrowed, it says whose record it is; an excluded end drops that path.
+    assert scoring.pick_starter(god, weights, rec, _graph(), borrowed_from="Conquest")[
+        "borrowed_from"] == "Conquest"
+    assert scoring.pick_starter(god, weights, rec, _graph(), excluded={"Hunter's Cowl"})[
+        "base"] == "Gilded Arrow"
+    # No record: the table, labelled as the table.
+    assert scoring.pick_starter(god, weights, None, _graph()) == {
+        "base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow", "basis": "rule"}
+
+
+def test_pick_relic_is_the_most_picked_free_relic_that_resolves():
+    """A paid upgrade is bought into the six, and a name with no record cannot
+    be drawn or linked: neither is the relic recommendation."""
+    rec = _record(relics=[("Shell of Rebuke", 0.5, 0.5), ("A Relic We Lack", 0.3, 0.5),
+                          ("Blink Rune", 0.12, 0.55), ("Purification Beads", 0.08, 0.6)])
+    assert scoring.pick_relic(rec, _graph()) == {
+        "name": "Blink Rune", "pick_rate": 0.12, "win_rate": 0.55, "matches": 24, "basis": "community"}
+    assert scoring.pick_relic(None, _graph()) is None
+    assert scoring.pick_relic(_record(), _graph()) is None
 
 
 def test_resolve_profile_composes_aspect_overlay():

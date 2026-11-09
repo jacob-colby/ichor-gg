@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.8
+    win_rate: 0.4621
+    matches: 70
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.67
+    matches: 21
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.68
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.59
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: bruiser
@@ -526,6 +544,7 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: anti-tank
@@ -592,6 +611,7 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: attack-speed
@@ -658,6 +678,7 @@ builds:
       pick: 0.0
       fit: 0.78
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: cooldown
@@ -724,6 +745,7 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: model
@@ -790,5 +812,6 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 ---

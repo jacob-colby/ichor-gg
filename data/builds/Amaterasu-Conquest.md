@@ -73,11 +73,83 @@ builds:
     pick_rate: 0.35
     win_rate: 0.72
   - name: Death's Embrace
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.7
   - name: Leather Cowl
     pick_rate: 0.22
+    win_rate: 0.52
+  community_relics:
+  - name: Agility Relic
+    pick_rate: 0.53
+    win_rate: 0.6
+  - name: Phantom Shell
+    pick_rate: 0.15
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.15
+    win_rate: 0.63
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.35
+    win_rate: 0.72
+  - name: Death's Embrace
+    pick_rate: 0.23
+    win_rate: 0.7
+  - name: Leather Cowl
+    pick_rate: 0.22
+    win_rate: 0.52
+  - name: Death's Toll
+    pick_rate: 0.09
+    win_rate: 0.39
+  - name: War Banner
+    pick_rate: 0.03
+    win_rate: 0.57
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.67
+  - name: War Flag
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Bumba's Hammer
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Conduit Gem
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Heroism
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.005
+    win_rate: 1.0
+  relic_sightings:
+  - name: Agility Relic
+    pick_rate: 0.53
+    win_rate: 0.6
+  - name: Phantom Shell
+    pick_rate: 0.15
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.15
+    win_rate: 0.63
+  - name: Aegis of Acceleration
+    pick_rate: 0.08
     win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.07
+    win_rate: 0.71
+  - name: Blink Rune
+    pick_rate: 0.02
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/amaterasu/
   last_verified: '2026-11-08'
   god_win_rate: 0.6288659793814433
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.57
+    win_rate: 0.6428
+    matches: 111
+    basis: community
+  relic:
+    name: Agility Relic
+    pick_rate: 0.53
+    win_rate: 0.6
+    matches: 103
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,8 +249,18 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.57
+    win_rate: 0.6428
+    matches: 111
+    basis: community
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.53
+    win_rate: 0.6
+    matches: 103
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -245,6 +337,7 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -321,6 +414,7 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -397,6 +491,7 @@ builds:
   - Berserker's Shield
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -474,6 +569,7 @@ builds:
   - Freya's Tears
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -549,6 +645,7 @@ builds:
   - Berserker's Shield
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -625,6 +722,7 @@ builds:
   - Kinetic Cuirass
   - Hussar's Wings
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -700,6 +798,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

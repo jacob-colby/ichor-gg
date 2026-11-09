@@ -70,14 +70,95 @@ builds:
       win_rate: 0.58
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.28
-    win_rate: 0.71
+    pick_rate: 0.29
+    win_rate: 0.7
   - name: Bumba's Hammer
     pick_rate: 0.27
     win_rate: 0.63
   - name: Bluestone Pendant
     pick_rate: 0.15
+    win_rate: 0.49
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.62
+  - name: Aegis of Acceleration
+    pick_rate: 0.19
+    win_rate: 0.59
+  - name: Sundering Arc
+    pick_rate: 0.16
+    win_rate: 0.59
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.29
+    win_rate: 0.7
+  - name: Bumba's Hammer
+    pick_rate: 0.27
+    win_rate: 0.63
+  - name: Bluestone Pendant
+    pick_rate: 0.15
+    win_rate: 0.49
+  - name: Bumba's Cudgel
+    pick_rate: 0.1
+    win_rate: 0.46
+  - name: Archmage's Gem
+    pick_rate: 0.06
+    win_rate: 0.69
+  - name: Pendulum of the Ages
+    pick_rate: 0.04
+    win_rate: 0.55
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.73
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 0.3
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.8
+  - name: Vampiric Shroud
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: Warrior's Axe
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: Sands Of Time
+    pick_rate: 0.006
+    win_rate: 0.33
+  - name: Death's Toll
+    pick_rate: 0.004
     win_rate: 0.5
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.002
+    win_rate: 1.0
+  - name: Gilded Arrow
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.002
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.62
+  - name: Aegis of Acceleration
+    pick_rate: 0.19
+    win_rate: 0.59
+  - name: Sundering Arc
+    pick_rate: 0.16
+    win_rate: 0.59
+  - name: Phantom Shell
+    pick_rate: 0.1
+    win_rate: 0.58
+  - name: Blink Rune
+    pick_rate: 0.04
+    win_rate: 0.41
+  - name: Agility Relic
+    pick_rate: 0.002
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ratatoskr/
   last_verified: '2026-11-08'
   god_win_rate: 0.604887983706721
@@ -88,8 +169,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.44
+    win_rate: 0.6284
+    matches: 216
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.62
+    matches: 250
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +256,18 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.44
+    win_rate: 0.6284
+    matches: 216
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.62
+    matches: 250
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -240,6 +341,7 @@ builds:
   - Jotunn's Revenge
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -315,6 +417,7 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -391,6 +494,7 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -466,6 +570,7 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -539,6 +644,7 @@ builds:
   - Thistlethorn Acorn
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -614,6 +720,7 @@ builds:
   - Freya's Tears
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -690,6 +797,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -755,11 +863,11 @@ community_aspects:
     - name: Vampiric Shroud
       share: 0.02
     relics:
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.35
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.3
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.2
     matches_by_window:
       ob47: 211
@@ -767,12 +875,7 @@ community_aspects:
       ob45: 221
       ob44: 169
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
     - lively-acorn
     - magic-acorn
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

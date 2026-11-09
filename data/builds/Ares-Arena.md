@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.48
+    win_rate: 0.5733
+    matches: 112
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.53
+    win_rate: 0.59
+    matches: 123
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.58
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.56
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -531,4 +549,5 @@ builds:
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001
+  relic: *id002
 ---

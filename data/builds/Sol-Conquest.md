@@ -70,14 +70,80 @@ builds:
       win_rate: 0.83
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.24
-    win_rate: 0.65
+    pick_rate: 0.25
+    win_rate: 0.62
   - name: Sharpshooter's Arrow
     pick_rate: 0.15
-    win_rate: 0.43
+    win_rate: 0.47
+  - name: Conduit Gem
+    pick_rate: 0.13
+    win_rate: 0.44
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.62
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.53
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.5
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.25
+    win_rate: 0.62
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.15
+    win_rate: 0.47
+  - name: Conduit Gem
+    pick_rate: 0.13
+    win_rate: 0.44
   - name: Gilded Arrow
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.57
+  - name: Hunter's Cowl
+    pick_rate: 0.11
+    win_rate: 0.61
+  - name: Leather Cowl
+    pick_rate: 0.07
+    win_rate: 0.79
+  - name: Death's Toll
+    pick_rate: 0.06
+    win_rate: 0.75
+  - name: Death's Embrace
+    pick_rate: 0.05
+    win_rate: 0.7
+  - name: Pendulum of the Ages
+    pick_rate: 0.03
+    win_rate: 0.57
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.75
+  - name: Blood-soaked Shroud
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.62
+    win_rate: 0.63
+  - name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.53
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Phantom Shell
+    pick_rate: 0.005
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/sol/
   last_verified: '2026-11-08'
   god_win_rate: 0.5931372549019608
@@ -90,6 +156,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.38
+    win_rate: 0.5584
+    matches: 78
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.62
+    win_rate: 0.63
+    matches: 126
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,6 +241,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.38
+    win_rate: 0.5584
+    matches: 78
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.62
+    win_rate: 0.63
+    matches: 126
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -239,6 +325,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -312,6 +399,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -385,6 +473,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -459,6 +548,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -532,6 +622,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -607,6 +698,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -683,6 +775,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -759,6 +852,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -833,6 +927,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -897,9 +992,9 @@ community_aspects:
     - name: Hunter's Cowl
       share: 0.1
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.83
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.14
     - name: Blink Rune
       share: 0.02
@@ -908,7 +1003,4 @@ community_aspects:
       ob46: 178
       ob45: 210
       ob44: 216
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - purification-beads
 ---

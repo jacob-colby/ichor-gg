@@ -71,13 +71,88 @@ builds:
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.35
-    win_rate: 0.57
-  - name: Bluestone Brooch
-    pick_rate: 0.22
-    win_rate: 0.63
-  - name: Bumba's Cudgel
-    pick_rate: 0.18
     win_rate: 0.56
+  - name: Bluestone Brooch
+    pick_rate: 0.23
+    win_rate: 0.62
+  - name: Bumba's Cudgel
+    pick_rate: 0.17
+    win_rate: 0.56
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.54
+    win_rate: 0.58
+  - name: Aegis of Acceleration
+    pick_rate: 0.27
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.48
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.35
+    win_rate: 0.56
+  - name: Bluestone Brooch
+    pick_rate: 0.23
+    win_rate: 0.62
+  - name: Bumba's Cudgel
+    pick_rate: 0.17
+    win_rate: 0.56
+  - name: Bluestone Pendant
+    pick_rate: 0.13
+    win_rate: 0.38
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.55
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Leather Cowl
+    pick_rate: 0.02
+    win_rate: 0.54
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.67
+  - name: Conduit Gem
+    pick_rate: 0.007
+    win_rate: 0.75
+  - name: Pendulum of the Ages
+    pick_rate: 0.005
+    win_rate: 0.67
+  - name: War Flag
+    pick_rate: 0.005
+    win_rate: 0.33
+  - name: Selflessness
+    pick_rate: 0.004
+    win_rate: 0.5
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.002
+    win_rate: 1.0
+  - name: Bumba's Spear
+    pick_rate: 0.002
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.54
+    win_rate: 0.58
+  - name: Aegis of Acceleration
+    pick_rate: 0.27
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.48
+  - name: Phantom Shell
+    pick_rate: 0.08
+    win_rate: 0.52
+  - name: Agility Relic
+    pick_rate: 0.009
+    win_rate: 1.0
+  - name: Blink Rune
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/thor/
   last_verified: '2026-11-08'
   god_win_rate: 0.5500910746812386
@@ -88,8 +163,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.52
+    win_rate: 0.56
+    matches: 285
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.54
+    win_rate: 0.58
+    matches: 296
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +248,18 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.52
+    win_rate: 0.56
+    matches: 285
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.54
+    win_rate: 0.58
+    matches: 296
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +333,7 @@ builds:
   - Hydra's Lament
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -312,6 +408,7 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -385,6 +482,7 @@ builds:
   - Freya's Tears
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -459,6 +557,7 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -530,6 +629,7 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -604,6 +704,7 @@ builds:
   - Hydra's Lament
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -676,6 +777,7 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -737,11 +839,11 @@ community_aspects:
     - name: Bumba's Hammer
       share: 0.15
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.39
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.21
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.2
     matches_by_window:
       ob47: 163
@@ -749,10 +851,5 @@ community_aspects:
       ob45: 1004
       ob44: 714
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

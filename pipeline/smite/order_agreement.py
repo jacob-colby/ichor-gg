@@ -84,7 +84,7 @@ CAVEAT = (
 
 def groups(modes=MODES):
     """`(god, mode, note)` for every build note, in a stable order."""
-    for path in sorted(recommend.BUILDS_ROOT.glob("*.md")):
+    for path in recommend.note_paths(recommend.BUILDS_ROOT):
         fm, _ = notes.read_note(path)
         if not fm or fm.get("mode") not in modes:
             continue

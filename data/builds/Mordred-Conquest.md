@@ -74,10 +74,70 @@ builds:
     win_rate: 0.7
   - name: Hunter's Cowl
     pick_rate: 0.26
-    win_rate: 0.65
+    win_rate: 0.66
   - name: Bluestone Pendant
     pick_rate: 0.19
-    win_rate: 0.53
+    win_rate: 0.54
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.66
+  - name: Phantom Shell
+    pick_rate: 0.21
+    win_rate: 0.57
+  - name: Sundering Arc
+    pick_rate: 0.15
+    win_rate: 0.74
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.32
+    win_rate: 0.7
+  - name: Hunter's Cowl
+    pick_rate: 0.26
+    win_rate: 0.66
+  - name: Bluestone Pendant
+    pick_rate: 0.19
+    win_rate: 0.54
+  - name: Leather Cowl
+    pick_rate: 0.14
+    win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.04
+    win_rate: 0.75
+  - name: Bumba's Cudgel
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Blood-soaked Shroud
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Conduit Gem
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.66
+  - name: Phantom Shell
+    pick_rate: 0.21
+    win_rate: 0.57
+  - name: Sundering Arc
+    pick_rate: 0.15
+    win_rate: 0.74
+  - name: Agility Relic
+    pick_rate: 0.13
+    win_rate: 0.63
+  - name: Aegis of Acceleration
+    pick_rate: 0.11
+    win_rate: 0.39
+  - name: Blink Rune
+    pick_rate: 0.01
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/mordred/
   last_verified: '2026-11-08'
   god_win_rate: 0.6180904522613065
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.51
+    win_rate: 0.6404
+    matches: 101
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.66
+    matches: 76
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +236,18 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.51
+    win_rate: 0.6404
+    matches: 101
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.66
+    matches: 76
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -244,6 +324,7 @@ builds:
   - Kinetic Cuirass
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -320,6 +401,7 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -396,6 +478,7 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -472,6 +555,7 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -547,6 +631,7 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -624,6 +709,7 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -702,6 +788,7 @@ builds:
   - Shell of Rebuke
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -779,6 +866,7 @@ builds:
   - Kinetic Cuirass
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -855,6 +943,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

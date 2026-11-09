@@ -182,6 +182,28 @@ def popular_items(build_entry: dict) -> list:
     return sorted(best.values(), key=lambda i: (-i["pick_rate"], i["name"]))
 
 
+def starter_options(weights, builds):
+    """Every starter pair a build can carry: the `starters:` table's rows as
+    they always shipped, then each other pair stamped on any build, by base.
+
+    The build editor offers exactly this list and pre-selects the build's own
+    starter by `base`. Once the starter became the community's most-picked
+    path (`scoring.pick_starter`, 2026-11-08), most stamped pairs — Bluestone
+    Pendant, Bumba's Cudgel, Selflessness, Sands of Time — were not table rows,
+    so the editor would have opened on "No starter" and saved the build
+    without one."""
+    rows = list(weights.get("starters") or [])
+    seen = {(r.get("base"), r.get("upgrade")) for r in rows}
+    extra = set()
+    for note in builds:
+        for b in (note or {}).get("builds") or []:
+            s = b.get("starter") or {}
+            pair = (s.get("base"), s.get("upgrade"))
+            if all(pair) and pair not in seen:
+                extra.add(pair)
+    return rows + [{"base": b, "upgrade": u} for b, u in sorted(extra)]
+
+
 def _attach_popular_items(builds):
     """Attach `popular_items` (see above) to every community build entry so
     the viewer's god page can show the playerbase's most-picked items without
@@ -579,7 +601,7 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
     def _all(dir_path: Path) -> list:
         if not dir_path.exists():
             return []
-        return [notes.read_note(p)[0] for p in sorted(dir_path.glob("*.md"))]
+        return [notes.read_note(p)[0] for p in recommend.note_paths(dir_path)]
 
     tags_map = scoring.load_tags(data_root / "_tags.yaml")
     # One fit, reused: the tier list's "ours" item score has to be the same
@@ -637,7 +659,7 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
              # record, and what they may not: the god page marks the same
              # items in Conquest's most-picked list that the Hybrid refuses.
              "community_transfer": community_transfer(weights),
-             "starters": weights.get("starters", []),
+             "starters": starter_options(weights, builds),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),
              "tierlist": tierlist.build_tierlist(gods, builds, items, eff),

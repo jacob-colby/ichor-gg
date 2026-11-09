@@ -71,13 +71,64 @@ builds:
   community_starters:
   - name: Selflessness
     pick_rate: 0.38
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Bluestone Pendant
     pick_rate: 0.23
     win_rate: 0.56
   - name: Heroism
     pick_rate: 0.15
     win_rate: 0.75
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.56
+    win_rate: 0.53
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.77
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.93
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.38
+    win_rate: 0.55
+  - name: Bluestone Pendant
+    pick_rate: 0.23
+    win_rate: 0.56
+  - name: Heroism
+    pick_rate: 0.15
+    win_rate: 0.75
+  - name: Bluestone Brooch
+    pick_rate: 0.12
+    win_rate: 0.77
+  - name: Conduit Gem
+    pick_rate: 0.05
+    win_rate: 0.6
+  - name: Pendulum of the Ages
+    pick_rate: 0.05
+    win_rate: 1.0
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.009
+    win_rate: 1.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.56
+    win_rate: 0.53
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.77
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.93
+  - name: Blink Rune
+    pick_rate: 0.05
+    win_rate: 0.67
+  - name: Sundering Arc
+    pick_rate: 0.05
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/khepri/
   last_verified: '2026-11-08'
   god_win_rate: 0.6513761467889908
@@ -88,8 +139,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.53
+    win_rate: 0.6066
+    matches: 58
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.56
+    win_rate: 0.53
+    matches: 61
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +225,18 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.53
+    win_rate: 0.6066
+    matches: 58
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.56
+    win_rate: 0.53
+    matches: 61
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +311,7 @@ builds:
   - Hide of the Nemean Lion
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -313,6 +385,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -387,6 +460,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -462,6 +536,7 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -538,6 +613,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -614,6 +690,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -687,6 +764,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -751,20 +829,15 @@ community_aspects:
     - name: Heroism
       share: 0.19
     relics:
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.41
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.29
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.19
     matches_by_window:
       ob47: 59
       ob46: 191
       ob45: 235
       ob44: 229
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

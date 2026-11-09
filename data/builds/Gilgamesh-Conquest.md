@@ -78,6 +78,75 @@ builds:
   - name: Leather Cowl
     pick_rate: 0.11
     win_rate: 0.33
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.56
+  - name: Blink Rune
+    pick_rate: 0.29
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.15
+    win_rate: 0.62
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.34
+    win_rate: 0.66
+  - name: Bluestone Brooch
+    pick_rate: 0.24
+    win_rate: 0.61
+  - name: Leather Cowl
+    pick_rate: 0.11
+    win_rate: 0.33
+  - name: Bumba's Hammer
+    pick_rate: 0.09
+    win_rate: 0.83
+  - name: Bluestone Pendant
+    pick_rate: 0.07
+    win_rate: 0.7
+  - name: Archmage's Gem
+    pick_rate: 0.05
+    win_rate: 0.43
+  - name: Bumba's Cudgel
+    pick_rate: 0.04
+    win_rate: 0.33
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Death's Embrace
+    pick_rate: 0.007
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.56
+  - name: Blink Rune
+    pick_rate: 0.29
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.15
+    win_rate: 0.62
+  - name: Agility Relic
+    pick_rate: 0.14
+    win_rate: 0.74
+  - name: Phantom Shell
+    pick_rate: 0.06
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.05
+    win_rate: 0.43
   source_url: https://smitebrain.com/gods/gilgamesh/
   last_verified: '2026-11-08'
   god_win_rate: 0.5857142857142857
@@ -88,8 +157,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.45
+    win_rate: 0.5793
+    matches: 63
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.56
+    matches: 43
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +244,18 @@ builds:
   - Kinetic Cuirass
   - Shifter's Shield
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.45
+    win_rate: 0.5793
+    matches: 63
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.56
+    matches: 43
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +330,7 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -316,6 +406,7 @@ builds:
   - Kinetic Cuirass
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -392,6 +483,7 @@ builds:
   - The Reaper
   - Shifter's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -465,6 +557,7 @@ builds:
   - Brawler’s Beat Stick
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -541,6 +634,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -614,6 +708,7 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -680,9 +775,9 @@ community_aspects:
     relics:
     - name: Blink Rune
       share: 0.38
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.27
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.2
     matches_by_window:
       ob47: 88
@@ -690,9 +785,5 @@ community_aspects:
       ob45: 383
       ob44: 284
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
 ---

@@ -71,13 +71,88 @@ builds:
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.27
-    win_rate: 0.59
+    win_rate: 0.61
   - name: Archmage's Gem
     pick_rate: 0.17
-    win_rate: 0.6
+    win_rate: 0.62
   - name: Death's Embrace
     pick_rate: 0.13
     win_rate: 0.56
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.44
+  - name: Purification Beads
+    pick_rate: 0.36
+    win_rate: 0.57
+  - name: Agility Relic
+    pick_rate: 0.12
+    win_rate: 0.53
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.27
+    win_rate: 0.61
+  - name: Archmage's Gem
+    pick_rate: 0.17
+    win_rate: 0.62
+  - name: Death's Embrace
+    pick_rate: 0.13
+    win_rate: 0.56
+  - name: Leather Cowl
+    pick_rate: 0.13
+    win_rate: 0.38
+  - name: Conduit Gem
+    pick_rate: 0.11
+    win_rate: 0.46
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.03
+    win_rate: 0.25
+  - name: Bluestone Brooch
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.67
+  - name: Bumba's Spear
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Death's Toll
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Bluestone Pendant
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: Bumba's Cudgel
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.008
+    win_rate: 1.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.44
+  - name: Purification Beads
+    pick_rate: 0.36
+    win_rate: 0.57
+  - name: Agility Relic
+    pick_rate: 0.12
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.11
+    win_rate: 0.62
+  - name: Sundering Arc
+    pick_rate: 0.008
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/kali/
   last_verified: '2026-11-08'
   god_win_rate: 0.5042016806722689
@@ -88,8 +163,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.4
+    win_rate: 0.5353
+    matches: 48
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.44
+    matches: 48
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +251,18 @@ builds:
   - Silverbranch Bow
   - Qin's Blade
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.4
+    win_rate: 0.5353
+    matches: 48
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.4
+    win_rate: 0.44
+    matches: 48
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -244,6 +339,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -320,6 +416,7 @@ builds:
   - Silverbranch Bow
   - Qin's Blade
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -396,6 +493,7 @@ builds:
   - Qin's Blade
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -473,6 +571,7 @@ builds:
   - Silverbranch Bow
   - Riptalon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -550,6 +649,7 @@ builds:
   - Spear of Desolation
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -623,6 +723,7 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -688,19 +789,15 @@ community_aspects:
     - name: Death's Toll
       share: 0.1
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.43
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.4
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.16
     matches_by_window:
       ob47: 24
       ob46: 104
       ob45: 135
       ob44: 137
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
-    - purification-beads
 ---

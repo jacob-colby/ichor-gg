@@ -70,14 +70,77 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.55
   - name: Leather Cowl
-    pick_rate: 0.24
-    win_rate: 0.4
+    pick_rate: 0.25
+    win_rate: 0.43
   - name: Bumba's Hammer
     pick_rate: 0.14
     win_rate: 0.57
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.51
+  - name: Blink Rune
+    pick_rate: 0.33
+    win_rate: 0.42
+  - name: Aegis of Acceleration
+    pick_rate: 0.17
+    win_rate: 0.59
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.38
+    win_rate: 0.55
+  - name: Leather Cowl
+    pick_rate: 0.25
+    win_rate: 0.43
+  - name: Bumba's Hammer
+    pick_rate: 0.14
+    win_rate: 0.57
+  - name: Bumba's Cudgel
+    pick_rate: 0.08
+    win_rate: 0.43
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.04
+    win_rate: 0.67
+  - name: Bumba's Spear
+    pick_rate: 0.03
+    win_rate: 0.6
+  - name: Gilded Arrow
+    pick_rate: 0.03
+    win_rate: 0.2
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Conduit Gem
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: Selflessness
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: Sundering Axe
+    pick_rate: 0.006
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.51
+  - name: Blink Rune
+    pick_rate: 0.33
+    win_rate: 0.42
+  - name: Aegis of Acceleration
+    pick_rate: 0.17
+    win_rate: 0.59
+  - name: Sundering Arc
+    pick_rate: 0.03
+    win_rate: 0.8
   source_url: https://smitebrain.com/gods/awilix/
   last_verified: '2026-11-08'
   god_win_rate: 0.5
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.63
+    win_rate: 0.5024
+    matches: 105
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.51
+    matches: 76
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +238,18 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.63
+    win_rate: 0.5024
+    matches: 105
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.46
+    win_rate: 0.51
+    matches: 76
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +325,7 @@ builds:
   - Heartseeker
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +401,7 @@ builds:
   - Heartseeker
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -391,6 +476,7 @@ builds:
   - The Reaper
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -466,6 +552,7 @@ builds:
   - Titan's Bane
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -539,6 +626,7 @@ builds:
   - The Reaper
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -614,6 +702,7 @@ builds:
   - The Reaper
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -689,4 +778,5 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 ---

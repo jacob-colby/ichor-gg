@@ -70,14 +70,59 @@ builds:
       win_rate: 0.63
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.31
-    win_rate: 0.62
+    pick_rate: 0.32
+    win_rate: 0.63
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.7
+    pick_rate: 0.28
+    win_rate: 0.71
   - name: Leather Cowl
     pick_rate: 0.13
     win_rate: 0.47
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.73
+    win_rate: 0.57
+  - name: Aegis of Acceleration
+    pick_rate: 0.26
+    win_rate: 0.54
+  - name: Phantom Shell
+    pick_rate: 0.008
+    win_rate: 0.5
+  starter_sightings:
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.32
+    win_rate: 0.63
+  - name: Hunter's Cowl
+    pick_rate: 0.28
+    win_rate: 0.71
+  - name: Leather Cowl
+    pick_rate: 0.13
+    win_rate: 0.47
+  - name: Death's Embrace
+    pick_rate: 0.11
+    win_rate: 0.38
+  - name: Gilded Arrow
+    pick_rate: 0.1
+    win_rate: 0.52
+  - name: Death's Toll
+    pick_rate: 0.06
+    win_rate: 0.2
+  - name: War Banner
+    pick_rate: 0.008
+    win_rate: 0.5
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.73
+    win_rate: 0.57
+  - name: Aegis of Acceleration
+    pick_rate: 0.26
+    win_rate: 0.54
+  - name: Phantom Shell
+    pick_rate: 0.008
+    win_rate: 0.5
+  - name: Sundering Arc
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/cupid/
   last_verified: '2026-11-08'
   god_win_rate: 0.5555555555555556
@@ -90,6 +135,16 @@ builds:
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.42
+    win_rate: 0.6038
+    matches: 98
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.73
+    win_rate: 0.57
+    matches: 171
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,6 +220,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.42
+    win_rate: 0.6038
+    matches: 98
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.73
+    win_rate: 0.57
+    matches: 171
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +303,7 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -309,6 +375,7 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -382,6 +449,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -455,6 +523,7 @@ builds:
       pick: 0.0
       fit: 0.74
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -529,6 +598,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -603,6 +673,7 @@ builds:
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -675,6 +746,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -749,6 +821,7 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -823,6 +896,7 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -895,6 +969,7 @@ builds:
       pick: 0.0
       fit: 0.58
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

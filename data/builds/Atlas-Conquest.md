@@ -78,6 +78,87 @@ builds:
   - name: Bluestone Brooch
     pick_rate: 0.15
     win_rate: 0.4
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.41
+    win_rate: 0.54
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.37
+  - name: Sundering Arc
+    pick_rate: 0.16
+    win_rate: 0.32
+  starter_sightings:
+  - name: Bluestone Pendant
+    pick_rate: 0.22
+    win_rate: 0.3
+  - name: Bumba's Hammer
+    pick_rate: 0.16
+    win_rate: 0.64
+  - name: Bluestone Brooch
+    pick_rate: 0.15
+    win_rate: 0.4
+  - name: Bumba's Cudgel
+    pick_rate: 0.13
+    win_rate: 0.5
+  - name: War Flag
+    pick_rate: 0.07
+    win_rate: 0.56
+  - name: Death's Embrace
+    pick_rate: 0.05
+    win_rate: 0.86
+  - name: Conduit Gem
+    pick_rate: 0.04
+    win_rate: 0.4
+  - name: Selflessness
+    pick_rate: 0.04
+    win_rate: 0.33
+  - name: Heroism
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: War Banner
+    pick_rate: 0.03
+    win_rate: 0.75
+  - name: Warrior's Axe
+    pick_rate: 0.03
+    win_rate: 0.0
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Bumba's Spear
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.007
+    win_rate: 1.0
+  - name: Hunter's Cowl
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.007
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.41
+    win_rate: 0.54
+  - name: Purification Beads
+    pick_rate: 0.2
+    win_rate: 0.37
+  - name: Sundering Arc
+    pick_rate: 0.16
+    win_rate: 0.32
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.72
+  - name: Blink Rune
+    pick_rate: 0.06
+    win_rate: 0.0
+  - name: Agility Relic
+    pick_rate: 0.04
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/atlas/
   last_verified: '2026-11-08'
   god_win_rate: 0.45588235294117646
@@ -88,8 +169,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.37
+    win_rate: 0.3405
+    matches: 50
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.41
+    win_rate: 0.54
+    matches: 56
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +255,18 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.37
+    win_rate: 0.3405
+    matches: 50
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.41
+    win_rate: 0.54
+    matches: 56
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +341,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -314,6 +416,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -388,6 +491,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -462,6 +566,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -539,6 +644,7 @@ builds:
   - Tyrfing
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -616,6 +722,7 @@ builds:
   - Tyrfing
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -690,6 +797,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

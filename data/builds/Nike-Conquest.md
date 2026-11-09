@@ -70,14 +70,92 @@ builds:
       win_rate: 0.71
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.32
+    pick_rate: 0.33
     win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.28
     win_rate: 0.63
-  - name: Conduit Gem
+  - name: Bluestone Pendant
+    pick_rate: 0.13
+    win_rate: 0.36
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.5
+  - name: Aegis of Acceleration
+    pick_rate: 0.28
+    win_rate: 0.57
+  - name: Blink Rune
     pick_rate: 0.14
+    win_rate: 0.59
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.33
+    win_rate: 0.57
+  - name: Archmage's Gem
+    pick_rate: 0.28
+    win_rate: 0.63
+  - name: Bluestone Pendant
+    pick_rate: 0.13
+    win_rate: 0.36
+  - name: Conduit Gem
+    pick_rate: 0.13
     win_rate: 0.42
+  - name: Pendulum of the Ages
+    pick_rate: 0.04
+    win_rate: 0.67
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.56
+  - name: Heroism
+    pick_rate: 0.01
+    win_rate: 0.25
+  - name: Sands Of Time
+    pick_rate: 0.01
+    win_rate: 0.2
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Selflessness
+    pick_rate: 0.008
+    win_rate: 0.67
+  - name: Bumba's Cudgel
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Bumba's Hammer
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Hunter's Cowl
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.5
+  - name: Aegis of Acceleration
+    pick_rate: 0.28
+    win_rate: 0.57
+  - name: Blink Rune
+    pick_rate: 0.14
+    win_rate: 0.59
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.47
+  - name: Phantom Shell
+    pick_rate: 0.1
+    win_rate: 0.46
+  - name: Agility Relic
+    pick_rate: 0.003
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/nike/
   last_verified: '2026-11-08'
   god_win_rate: 0.5213675213675214
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.46
+    win_rate: 0.5107
+    matches: 161
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.5
+    matches: 119
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +251,18 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.46
+    win_rate: 0.5107
+    matches: 161
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.34
+    win_rate: 0.5
+    matches: 119
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -238,6 +336,7 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -311,6 +410,7 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -381,6 +481,7 @@ builds:
       pick: 0.0
       fit: 0.37
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -455,6 +556,7 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -529,6 +631,7 @@ builds:
   - Jotunn's Revenge
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -600,9 +703,9 @@ community_aspects:
     - name: Conduit Gem
       share: 0.14
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.46
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.34
     - name: Blink Rune
       share: 0.16
@@ -611,9 +714,5 @@ community_aspects:
       ob46: 900
       ob45: 614
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

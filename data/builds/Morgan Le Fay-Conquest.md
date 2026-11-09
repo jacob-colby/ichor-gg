@@ -70,14 +70,77 @@ builds:
       win_rate: 0.8
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.25
     win_rate: 0.27
   - name: Archmage's Gem
     pick_rate: 0.16
+    win_rate: 0.62
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.32
+    win_rate: 0.49
+  - name: Purification Beads
+    pick_rate: 0.32
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.16
     win_rate: 0.61
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.31
+    win_rate: 0.64
+  - name: Bluestone Pendant
+    pick_rate: 0.25
+    win_rate: 0.27
+  - name: Archmage's Gem
+    pick_rate: 0.16
+    win_rate: 0.62
+  - name: Conduit Gem
+    pick_rate: 0.09
+    win_rate: 0.38
+  - name: Pendulum of the Ages
+    pick_rate: 0.06
+    win_rate: 0.6
+  - name: Sands Of Time
+    pick_rate: 0.04
+    win_rate: 0.14
+  - name: Warrior's Axe
+    pick_rate: 0.04
+    win_rate: 0.57
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Hunter's Cowl
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.006
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.32
+    win_rate: 0.49
+  - name: Purification Beads
+    pick_rate: 0.32
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.16
+    win_rate: 0.61
+  - name: Sundering Arc
+    pick_rate: 0.13
+    win_rate: 0.54
+  - name: Phantom Shell
+    pick_rate: 0.07
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/morgan-le-fay/
   last_verified: '2026-11-08'
   god_win_rate: 0.5113636363636364
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.56
+    win_rate: 0.4748
+    matches: 99
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.32
+    win_rate: 0.49
+    matches: 56
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +239,18 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.56
+    win_rate: 0.4748
+    matches: 99
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.32
+    win_rate: 0.49
+    matches: 56
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +325,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +401,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +477,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +553,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -540,6 +627,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -616,6 +704,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -693,6 +782,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -770,6 +860,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -846,6 +937,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -921,6 +1013,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: mana-stack
@@ -996,6 +1089,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: burst
@@ -1072,6 +1166,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: bruiser
@@ -1148,6 +1243,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: anti-tank
@@ -1223,6 +1319,7 @@ builds:
   - Spear of the Magus
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: attack-speed
@@ -1298,6 +1395,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: cooldown
@@ -1375,6 +1473,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: strength
@@ -1453,6 +1552,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: str-int
@@ -1531,6 +1631,7 @@ builds:
   - Rod of Tahuti
   - Spear of the Magus
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: model
@@ -1607,6 +1708,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
@@ -1670,11 +1772,11 @@ community_aspects:
     - name: Warrior's Axe
       share: 0.09
     relics:
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.3
     - name: Blink Rune
       share: 0.23
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.19
     matches_by_window:
       ob47: 69
@@ -1682,9 +1784,5 @@ community_aspects:
       ob45: 141
       ob44: 158
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

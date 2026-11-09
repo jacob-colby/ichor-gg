@@ -70,14 +70,98 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.27
+    pick_rate: 0.26
     win_rate: 0.58
   - name: Hunter's Cowl
     pick_rate: 0.24
-    win_rate: 0.52
+    win_rate: 0.54
   - name: Leather Cowl
     pick_rate: 0.15
     win_rate: 0.44
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.31
+    win_rate: 0.51
+  - name: Purification Beads
+    pick_rate: 0.19
+    win_rate: 0.48
+  - name: Aegis of Acceleration
+    pick_rate: 0.15
+    win_rate: 0.67
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.26
+    win_rate: 0.58
+  - name: Hunter's Cowl
+    pick_rate: 0.24
+    win_rate: 0.54
+  - name: Leather Cowl
+    pick_rate: 0.15
+    win_rate: 0.44
+  - name: Bumba's Cudgel
+    pick_rate: 0.11
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.06
+    win_rate: 0.41
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.3
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 0.43
+  - name: Bumba's Spear
+    pick_rate: 0.02
+    win_rate: 0.8
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.01
+    win_rate: 0.67
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Archmage's Gem
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: War Flag
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Sands Of Time
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Vampiric Shroud
+    pick_rate: 0.004
+    win_rate: 0.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.31
+    win_rate: 0.51
+  - name: Purification Beads
+    pick_rate: 0.19
+    win_rate: 0.48
+  - name: Aegis of Acceleration
+    pick_rate: 0.15
+    win_rate: 0.67
+  - name: Phantom Shell
+    pick_rate: 0.15
+    win_rate: 0.43
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.54
+  - name: Agility Relic
+    pick_rate: 0.04
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/ravana/
   last_verified: '2026-11-08'
   god_win_rate: 0.5074626865671642
@@ -88,8 +172,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.39
+    win_rate: 0.5015
+    matches: 105
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.31
+    win_rate: 0.51
+    matches: 83
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +260,18 @@ builds:
   - The Crusher
   - Heartseeker
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.39
+    win_rate: 0.5015
+    matches: 105
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.31
+    win_rate: 0.51
+    matches: 83
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -243,6 +347,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -319,6 +424,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -394,6 +500,7 @@ builds:
   - Hydra's Lament
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -470,6 +577,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -544,6 +652,7 @@ builds:
   - Hydra's Lament
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -619,6 +728,7 @@ builds:
   - Hydra's Lament
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -693,6 +803,7 @@ builds:
   - Jotunn's Revenge
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -772,6 +883,7 @@ builds:
     reason: community 74% win over 35 matches (vs 51% on this god), taking the model's
       weakest slot from Berserker's Shield
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -832,9 +944,9 @@ community_aspects:
     relics:
     - name: Blink Rune
       share: 0.6
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.23
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.09
     matches_by_window:
       ob47: 17
@@ -842,8 +954,5 @@ community_aspects:
       ob45: 20
       ob44: 21
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - sundering-arc
 ---

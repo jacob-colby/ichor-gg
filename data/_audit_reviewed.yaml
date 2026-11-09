@@ -19,6 +19,46 @@ reviewed:
       cost (STATE.md §2: paid relics take one of the six, free ones do not) and
       it appears in zero community six-item builds.
     reviewed: '2026-11-02'
+  # The other five base relics, recorded 2026-11-08 when they got records at
+  # all (`new_entities` had never read their `Relic_` index icons). Same fact
+  # as Blink Rune: the game gives the base relic its own free slot, and its
+  # upgrade (base + Mote of Chaos, 2500g) is the paid item that takes one of
+  # the six. Verified on each item's wiki page, cost 0, no stat line.
+  - item: Aegis of Acceleration
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      Free base relic (upgrades to Time-lock Aegis). Refused by
+      `scoring.is_buildable` on cost and on its empty stat line.
+    reviewed: '2026-11-08'
+  - item: Agility Relic
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      Free base relic (upgrades to Agility Greaves). Refused by
+      `scoring.is_buildable` on cost and on its empty stat line.
+    reviewed: '2026-11-08'
+  - item: Phantom Shell
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      Free base relic (upgrades to Shell of Rebuke). Refused by
+      `scoring.is_buildable` on cost and on its empty stat line.
+    reviewed: '2026-11-08'
+  - item: Purification Beads
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      Free base relic (upgrades to Talisman of Purification). Refused by
+      `scoring.is_buildable` on cost and on its empty stat line.
+    reviewed: '2026-11-08'
+  - item: Sundering Arc
+    issue: blank-cost
+    detail: cost is 0
+    reason: >-
+      Free base relic (upgrades to Sundering Echo). Refused by
+      `scoring.is_buildable` on cost and on its empty stat line.
+    reviewed: '2026-11-08'
   - item: Genie's Lamp
     issue: blank-cost
     detail: cost is None

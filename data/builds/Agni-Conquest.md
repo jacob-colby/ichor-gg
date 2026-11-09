@@ -70,14 +70,65 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.25
-    win_rate: 0.59
+    pick_rate: 0.26
+    win_rate: 0.57
   - name: Archmage's Gem
     pick_rate: 0.24
-    win_rate: 0.53
+    win_rate: 0.54
   - name: Conduit Gem
     pick_rate: 0.17
     win_rate: 0.5
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.35
+    win_rate: 0.6
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.26
+    win_rate: 0.57
+  - name: Archmage's Gem
+    pick_rate: 0.24
+    win_rate: 0.54
+  - name: Conduit Gem
+    pick_rate: 0.17
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.14
+    win_rate: 0.4
+  - name: Pendulum of the Ages
+    pick_rate: 0.07
+    win_rate: 0.62
+  - name: Sands Of Time
+    pick_rate: 0.06
+    win_rate: 0.26
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.02
+    win_rate: 0.71
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Blood-soaked Shroud
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Gilded Arrow
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.003
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.35
+    win_rate: 0.6
   source_url: https://smitebrain.com/gods/agni/
   last_verified: '2026-11-08'
   god_win_rate: 0.511864406779661
@@ -90,6 +141,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.41
+    win_rate: 0.5234
+    matches: 121
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.46
+    matches: 192
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +228,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.41
+    win_rate: 0.5234
+    matches: 121
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.65
+    win_rate: 0.46
+    matches: 192
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +313,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +389,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +465,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +541,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -540,6 +615,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -616,6 +692,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -692,6 +769,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -769,6 +847,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -843,6 +922,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -918,6 +998,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: mana-stack
@@ -994,6 +1075,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: burst
@@ -1070,6 +1152,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: bruiser
@@ -1146,6 +1229,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: anti-tank
@@ -1222,6 +1306,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: attack-speed
@@ -1296,6 +1381,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: cooldown
@@ -1373,6 +1459,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: strength
@@ -1450,6 +1537,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: str-int
@@ -1529,6 +1617,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 - source: suggested
   archetype: model
@@ -1604,6 +1693,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
   aspect: Aspect of Combustion
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
@@ -1675,19 +1765,15 @@ community_aspects:
     - name: Death's Embrace
       share: 0.12
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.65
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.33
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.02
     matches_by_window:
       ob47: 16
       ob46: 48
       ob45: 85
       ob44: 83
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
-    - purification-beads
 ---

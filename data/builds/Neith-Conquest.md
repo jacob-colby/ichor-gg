@@ -78,6 +78,66 @@ builds:
   - name: Death's Embrace
     pick_rate: 0.09
     win_rate: 0.73
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+  - name: Aegis of Acceleration
+    pick_rate: 0.42
+    win_rate: 0.52
+  - name: Phantom Shell
+    pick_rate: 0.006
+    win_rate: 0.0
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.26
+    win_rate: 0.66
+  - name: Conduit Gem
+    pick_rate: 0.19
+    win_rate: 0.33
+  - name: Death's Embrace
+    pick_rate: 0.09
+    win_rate: 0.73
+  - name: Pendulum of the Ages
+    pick_rate: 0.08
+    win_rate: 0.71
+  - name: Death's Toll
+    pick_rate: 0.06
+    win_rate: 0.6
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.06
+    win_rate: 0.45
+  - name: Gilded Arrow
+    pick_rate: 0.05
+    win_rate: 0.44
+  - name: Hunter's Cowl
+    pick_rate: 0.05
+    win_rate: 0.44
+  - name: Leather Cowl
+    pick_rate: 0.05
+    win_rate: 0.44
+  - name: Sands Of Time
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.04
+    win_rate: 0.43
+  - name: Bumba's Spear
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: War Flag
+    pick_rate: 0.006
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+  - name: Aegis of Acceleration
+    pick_rate: 0.42
+    win_rate: 0.52
+  - name: Phantom Shell
+    pick_rate: 0.006
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/neith/
   last_verified: '2026-11-08'
   god_win_rate: 0.5348837209302325
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.45
+    win_rate: 0.5207
+    matches: 77
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+    matches: 98
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +234,18 @@ builds:
   - Silverbranch Bow
   - Rod of Tahuti
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.45
+    win_rate: 0.5207
+    matches: 77
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+    matches: 98
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -240,6 +320,7 @@ builds:
   - Rod of Tahuti
   - Riptalon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -313,6 +394,7 @@ builds:
   - Riptalon
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -389,6 +471,7 @@ builds:
   - Rod of Tahuti
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -464,6 +547,7 @@ builds:
   - Rod of Tahuti
   - Riptalon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -540,6 +624,7 @@ builds:
   - Rod of Tahuti
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -614,6 +699,7 @@ builds:
   - Silverbranch Bow
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -689,6 +775,7 @@ builds:
   - Silverbranch Bow
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -765,6 +852,7 @@ builds:
   - Rod of Tahuti
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -841,6 +929,7 @@ builds:
   - Rod of Tahuti
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -915,6 +1004,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -976,16 +1066,13 @@ community_aspects:
     - name: Hunter's Cowl
       share: 0.17
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.64
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.36
     matches_by_window:
       ob47: 58
       ob46: 217
       ob45: 145
       ob44: 122
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - purification-beads
 ---

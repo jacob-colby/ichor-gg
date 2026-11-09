@@ -71,13 +71,49 @@ builds:
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.71
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Gilded Arrow
     pick_rate: 0.23
-    win_rate: 0.21
+    win_rate: 0.2
+  - name: Hunter's Cowl
+    pick_rate: 0.05
+    win_rate: 0.67
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.37
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.33
+  starter_sightings:
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.71
+    win_rate: 0.52
+  - name: Gilded Arrow
+    pick_rate: 0.23
+    win_rate: 0.2
+  - name: Hunter's Cowl
+    pick_rate: 0.05
+    win_rate: 0.67
   - name: Death's Embrace
-    pick_rate: 0.08
+    pick_rate: 0.008
     win_rate: 0.0
+  - name: Leather Cowl
+    pick_rate: 0.008
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.37
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/jing-wei/
   last_verified: '2026-11-08'
   god_win_rate: 0.4523809523809524
@@ -90,6 +126,16 @@ builds:
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.94
+    win_rate: 0.4417
+    matches: 118
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.52
+    matches: 63
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,6 +211,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.94
+    win_rate: 0.4417
+    matches: 118
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.52
+    matches: 63
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -237,6 +293,7 @@ builds:
   - Silverbranch Bow
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -310,6 +367,7 @@ builds:
   - Rage
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -383,6 +441,7 @@ builds:
   - Berserker's Shield
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -456,6 +515,7 @@ builds:
   - Riptalon
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -530,6 +590,7 @@ builds:
   - Riptalon
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -602,6 +663,7 @@ builds:
   - Dagger of Frenzy
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -675,4 +737,5 @@ builds:
   - Dominance
   - Tyrfing
   starter: *id001
+  relic: *id002
 ---

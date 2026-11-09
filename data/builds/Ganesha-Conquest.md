@@ -78,6 +78,72 @@ builds:
   - name: War Flag
     pick_rate: 0.12
     win_rate: 0.53
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.58
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.12
+    win_rate: 0.67
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.33
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.32
+    win_rate: 0.33
+  - name: Heroism
+    pick_rate: 0.24
+    win_rate: 0.65
+  - name: War Flag
+    pick_rate: 0.12
+    win_rate: 0.53
+  - name: Archmage's Gem
+    pick_rate: 0.09
+    win_rate: 0.58
+  - name: Conduit Gem
+    pick_rate: 0.05
+    win_rate: 0.29
+  - name: War Banner
+    pick_rate: 0.05
+    win_rate: 0.67
+  - name: Bluestone Brooch
+    pick_rate: 0.04
+    win_rate: 0.6
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.8
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Bumba's Cudgel
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.008
+    win_rate: 1.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.58
+    win_rate: 0.49
+  - name: Blink Rune
+    pick_rate: 0.12
+    win_rate: 0.67
+  - name: Purification Beads
+    pick_rate: 0.12
+    win_rate: 0.33
+  - name: Aegis of Acceleration
+    pick_rate: 0.11
+    win_rate: 0.43
+  - name: Sundering Arc
+    pick_rate: 0.06
+    win_rate: 0.63
+  - name: Agility Relic
+    pick_rate: 0.008
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ganesha/
   last_verified: '2026-11-08'
   god_win_rate: 0.5
@@ -88,8 +154,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.56
+    win_rate: 0.4671
+    matches: 73
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.58
+    win_rate: 0.49
+    matches: 75
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +241,18 @@ builds:
   - Prophetic Cloak
   - Draconic Scale
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.56
+    win_rate: 0.4671
+    matches: 73
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.58
+    win_rate: 0.49
+    matches: 75
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -242,6 +328,7 @@ builds:
   - Prophetic Cloak
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -315,6 +402,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -388,6 +476,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -463,6 +552,7 @@ builds:
   - Prophetic Cloak
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -539,6 +629,7 @@ builds:
   - Genji's Guard
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -616,6 +707,7 @@ builds:
   - Prophetic Cloak
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -691,6 +783,7 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -755,11 +848,11 @@ community_aspects:
     - name: Bluestone Pendant
       share: 0.12
     relics:
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.31
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.31
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.2
     matches_by_window:
       ob47: 24
@@ -767,9 +860,5 @@ community_aspects:
       ob45: 74
       ob44: 40
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

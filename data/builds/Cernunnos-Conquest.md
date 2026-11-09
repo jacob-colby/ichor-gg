@@ -70,14 +70,74 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.37
-    win_rate: 0.58
+    pick_rate: 0.38
+    win_rate: 0.6
   - name: Sharpshooter's Arrow
     pick_rate: 0.22
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Leather Cowl
     pick_rate: 0.18
     win_rate: 0.54
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.19
+    win_rate: 0.57
+  - name: Agility Relic
+    pick_rate: 0.07
+    win_rate: 0.69
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.38
+    win_rate: 0.6
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.22
+    win_rate: 0.54
+  - name: Leather Cowl
+    pick_rate: 0.18
+    win_rate: 0.54
+  - name: Gilded Arrow
+    pick_rate: 0.1
+    win_rate: 0.36
+  - name: Death's Embrace
+    pick_rate: 0.07
+    win_rate: 0.5
+  - name: Death's Toll
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Bumba's Cudgel
+    pick_rate: 0.009
+    win_rate: 0.0
+  - name: Archmage's Gem
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bluestone Brooch
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bluestone Pendant
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bumba's Spear
+    pick_rate: 0.004
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.19
+    win_rate: 0.57
+  - name: Agility Relic
+    pick_rate: 0.07
+    win_rate: 0.69
+  - name: Blink Rune
+    pick_rate: 0.04
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.04
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/cernunnos/
   last_verified: '2026-11-08'
   god_win_rate: 0.545045045045045
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.56
+    win_rate: 0.5807
+    matches: 124
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+    matches: 147
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +233,18 @@ builds:
   community_ordered:
   - Bragi's Harp
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.56
+    win_rate: 0.5807
+    matches: 124
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+    matches: 147
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +318,7 @@ builds:
   community_ordered:
   - Bragi's Harp
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -309,6 +390,7 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -382,6 +464,7 @@ builds:
   community_ordered:
   - Bragi's Harp
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -455,6 +538,7 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -528,6 +612,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -603,6 +688,7 @@ builds:
   - Bragi's Harp
   - Riptalon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -675,6 +761,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -747,6 +834,7 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -821,6 +909,7 @@ builds:
   community_ordered:
   - Riptalon
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: mana-stack
@@ -894,6 +983,7 @@ builds:
       pick: 0.0
       fit: 0.75
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: crit
@@ -967,6 +1057,7 @@ builds:
       pick: 0.0
       fit: 0.74
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: burst
@@ -1042,6 +1133,7 @@ builds:
   community_ordered:
   - Bragi's Harp
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: bruiser
@@ -1116,6 +1208,7 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: anti-tank
@@ -1189,6 +1282,7 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: attack-speed
@@ -1266,6 +1360,7 @@ builds:
   - Bragi's Harp
   - Riptalon
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: cooldown
@@ -1339,6 +1434,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: model
@@ -1412,6 +1508,7 @@ builds:
       pick: 0.0
       fit: 0.77
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
@@ -1477,20 +1574,15 @@ community_aspects:
     - name: Bumba's Cudgel
       share: 0.03
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.5
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.22
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.11
     matches_by_window:
       ob47: 64
       ob46: 515
       ob45: 671
       ob44: 741
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
-    - phantom-shell
-    - purification-beads
 ---

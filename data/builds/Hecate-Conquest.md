@@ -70,14 +70,50 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.39
-    win_rate: 0.43
+    pick_rate: 0.4
+    win_rate: 0.42
   - name: Conduit Gem
-    pick_rate: 0.32
+    pick_rate: 0.31
     win_rate: 0.47
   - name: Bluestone Brooch
     pick_rate: 0.11
     win_rate: 0.77
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.4
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.4
+    win_rate: 0.42
+  - name: Conduit Gem
+    pick_rate: 0.31
+    win_rate: 0.47
+  - name: Bluestone Brooch
+    pick_rate: 0.11
+    win_rate: 0.77
+  - name: Sands Of Time
+    pick_rate: 0.07
+    win_rate: 0.38
+  - name: Pendulum of the Ages
+    pick_rate: 0.06
+    win_rate: 0.43
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.4
+  - name: Selflessness
+    pick_rate: 0.02
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/hecate/
   last_verified: '2026-11-08'
   god_win_rate: 0.4789915966386555
@@ -90,6 +126,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.71
+    win_rate: 0.4418
+    matches: 84
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.56
+    matches: 62
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +213,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.71
+    win_rate: 0.4418
+    matches: 84
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.56
+    matches: 62
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +298,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +374,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +450,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +526,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -540,6 +600,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -615,6 +676,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -690,6 +752,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -751,11 +814,11 @@ community_aspects:
     - name: Archmage's Gem
       share: 0.05
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.49
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.41
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.08
     matches_by_window:
       ob47: 14
@@ -763,9 +826,5 @@ community_aspects:
       ob45: 33
       ob44: 35
     unmapped_slugs:
-    - aegis-of-acceleration
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

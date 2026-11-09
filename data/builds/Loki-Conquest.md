@@ -78,6 +78,84 @@ builds:
   - name: Bluestone Brooch
     pick_rate: 0.11
     win_rate: 0.58
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.23
+    win_rate: 0.58
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.58
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.46
+    win_rate: 0.59
+  - name: Bumba's Cudgel
+    pick_rate: 0.26
+    win_rate: 0.41
+  - name: Bluestone Brooch
+    pick_rate: 0.11
+    win_rate: 0.58
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.58
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.53
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.82
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.17
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.57
+  - name: War Banner
+    pick_rate: 0.008
+    win_rate: 0.5
+  - name: Bumba's Spear
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: Conduit Gem
+    pick_rate: 0.006
+    win_rate: 0.67
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Heroism
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.002
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.002
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.23
+    win_rate: 0.58
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.58
+  - name: Blink Rune
+    pick_rate: 0.07
+    win_rate: 0.37
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 0.43
+  - name: Phantom Shell
+    pick_rate: 0.01
+    win_rate: 0.71
   source_url: https://smitebrain.com/gods/loki/
   last_verified: '2026-11-08'
   god_win_rate: 0.5363825363825364
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.72
+    win_rate: 0.525
+    matches: 346
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+    matches: 274
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +253,18 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.72
+    win_rate: 0.525
+    matches: 346
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+    matches: 274
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +340,7 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +415,7 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -388,6 +488,7 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -463,6 +564,7 @@ builds:
   - The Crusher
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -535,6 +637,7 @@ builds:
   - Jotunn's Revenge
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -609,6 +712,7 @@ builds:
   - Heartseeker
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -683,6 +787,7 @@ builds:
   - The Crusher
   - Titan's Bane
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -750,11 +855,11 @@ community_aspects:
     - name: Bluestone Pendant
       share: 0.14
     relics:
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.35
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.22
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.21
     matches_by_window:
       ob47: 63
@@ -762,10 +867,5 @@ community_aspects:
       ob45: 217
       ob44: 197
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

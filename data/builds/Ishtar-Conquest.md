@@ -70,14 +70,77 @@ builds:
       win_rate: 0.6
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.42
-    win_rate: 0.63
+    pick_rate: 0.43
+    win_rate: 0.62
   - name: Hunter's Cowl
     pick_rate: 0.16
     win_rate: 0.68
   - name: Gilded Arrow
     pick_rate: 0.15
-    win_rate: 0.42
+    win_rate: 0.44
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.63
+  - name: Agility Relic
+    pick_rate: 0.08
+    win_rate: 0.63
+  starter_sightings:
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.43
+    win_rate: 0.62
+  - name: Hunter's Cowl
+    pick_rate: 0.16
+    win_rate: 0.68
+  - name: Gilded Arrow
+    pick_rate: 0.15
+    win_rate: 0.44
+  - name: Death's Embrace
+    pick_rate: 0.09
+    win_rate: 0.55
+  - name: Leather Cowl
+    pick_rate: 0.09
+    win_rate: 0.55
+  - name: Death's Toll
+    pick_rate: 0.05
+    win_rate: 0.62
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Bumba's Spear
+    pick_rate: 0.008
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bluestone Brooch
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bluestone Pendant
+    pick_rate: 0.004
+    win_rate: 0.0
+  - name: Warrior's Axe
+    pick_rate: 0.004
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.63
+  - name: Agility Relic
+    pick_rate: 0.08
+    win_rate: 0.63
+  - name: Phantom Shell
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Blink Rune
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ishtar/
   last_verified: '2026-11-08'
   god_win_rate: 0.592741935483871
@@ -90,6 +153,16 @@ builds:
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.58
+    win_rate: 0.5734
+    matches: 144
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.54
+    matches: 124
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,6 +238,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
+    pick_rate: 0.58
+    win_rate: 0.5734
+    matches: 144
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.54
+    matches: 124
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -237,6 +320,7 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -310,6 +394,7 @@ builds:
   - Dominance
   - Deathbringer
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -382,6 +467,7 @@ builds:
   community_ordered:
   - Berserker's Shield
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -453,6 +539,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -526,6 +613,7 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -598,6 +686,7 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -670,6 +759,7 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -738,11 +828,11 @@ community_aspects:
     - name: Death's Embrace
       share: 0.16
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.41
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.33
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.25
     matches_by_window:
       ob47: 69
@@ -750,9 +840,5 @@ community_aspects:
       ob45: 245
       ob44: 235
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
 ---

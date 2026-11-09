@@ -70,14 +70,74 @@ builds:
       win_rate: 0.6
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.38
-    win_rate: 0.55
+    pick_rate: 0.4
+    win_rate: 0.57
   - name: Conduit Gem
     pick_rate: 0.24
-    win_rate: 0.42
+    win_rate: 0.41
   - name: Pendulum of the Ages
     pick_rate: 0.14
     win_rate: 0.61
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.59
+    win_rate: 0.54
+  - name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.5
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.4
+    win_rate: 0.57
+  - name: Conduit Gem
+    pick_rate: 0.24
+    win_rate: 0.41
+  - name: Pendulum of the Ages
+    pick_rate: 0.14
+    win_rate: 0.61
+  - name: Sands Of Time
+    pick_rate: 0.09
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.86
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Death's Embrace
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Death's Toll
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.008
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.59
+    win_rate: 0.54
+  - name: Purification Beads
+    pick_rate: 0.38
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Phantom Shell
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Sundering Arc
+    pick_rate: 0.008
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/nu-wa/
   last_verified: '2026-11-08'
   god_win_rate: 0.5234375
@@ -90,6 +150,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.64
+    win_rate: 0.51
+    matches: 82
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.59
+    win_rate: 0.54
+    matches: 76
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +237,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.64
+    win_rate: 0.51
+    matches: 82
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.59
+    win_rate: 0.54
+    matches: 76
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -243,6 +323,7 @@ builds:
   - Soul Reaver
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -318,6 +399,7 @@ builds:
   - Soul Reaver
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +474,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -466,6 +549,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -539,6 +623,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -615,6 +700,7 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -691,6 +777,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -767,6 +854,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -841,6 +929,7 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'

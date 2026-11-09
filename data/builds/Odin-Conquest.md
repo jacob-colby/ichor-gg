@@ -73,11 +73,68 @@ builds:
     pick_rate: 0.32
     win_rate: 0.73
   - name: Bumba's Cudgel
-    pick_rate: 0.23
-    win_rate: 0.41
+    pick_rate: 0.24
+    win_rate: 0.43
   - name: Bluestone Brooch
     pick_rate: 0.18
     win_rate: 0.38
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.36
+    win_rate: 0.6
+  - name: Purification Beads
+    pick_rate: 0.28
+    win_rate: 0.58
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.6
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.32
+    win_rate: 0.73
+  - name: Bumba's Cudgel
+    pick_rate: 0.24
+    win_rate: 0.43
+  - name: Bluestone Brooch
+    pick_rate: 0.18
+    win_rate: 0.38
+  - name: Bluestone Pendant
+    pick_rate: 0.11
+    win_rate: 0.46
+  - name: Warrior's Axe
+    pick_rate: 0.08
+    win_rate: 0.67
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Pendulum of the Ages
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.009
+    win_rate: 1.0
+  relic_sightings:
+  - name: Blink Rune
+    pick_rate: 0.36
+    win_rate: 0.6
+  - name: Purification Beads
+    pick_rate: 0.28
+    win_rate: 0.58
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.6
+  - name: Aegis of Acceleration
+    pick_rate: 0.09
+    win_rate: 0.4
+  - name: Sundering Arc
+    pick_rate: 0.09
+    win_rate: 0.3
+  - name: Agility Relic
+    pick_rate: 0.009
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/odin/
   last_verified: '2026-11-08'
   god_win_rate: 0.5478260869565217
@@ -88,8 +145,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.56
+    win_rate: 0.6014
+    matches: 64
+    basis: community
+  relic:
+    name: Blink Rune
+    pick_rate: 0.36
+    win_rate: 0.6
+    matches: 41
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +232,18 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.56
+    win_rate: 0.6014
+    matches: 64
+    basis: community
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.36
+    win_rate: 0.6
+    matches: 41
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +318,7 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -315,6 +393,7 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -391,6 +470,7 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -464,6 +544,7 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -540,6 +621,7 @@ builds:
   - Hide of the Nemean Lion
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -614,4 +696,5 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

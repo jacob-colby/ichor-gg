@@ -71,13 +71,73 @@ builds:
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.36
-    win_rate: 0.65
+    win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.15
     win_rate: 0.57
   - name: Pendulum of the Ages
     pick_rate: 0.14
     win_rate: 0.49
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.58
+  - name: Phantom Shell
+    pick_rate: 0.003
+    win_rate: 1.0
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.36
+    win_rate: 0.64
+  - name: Bluestone Pendant
+    pick_rate: 0.15
+    win_rate: 0.57
+  - name: Pendulum of the Ages
+    pick_rate: 0.14
+    win_rate: 0.49
+  - name: Hunter's Cowl
+    pick_rate: 0.11
+    win_rate: 0.61
+  - name: Sands Of Time
+    pick_rate: 0.08
+    win_rate: 0.36
+  - name: Conduit Gem
+    pick_rate: 0.05
+    win_rate: 0.21
+  - name: Leather Cowl
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.04
+    win_rate: 0.55
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Gilded Arrow
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Bumba's Hammer
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Death's Embrace
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.003
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.58
+  - name: Phantom Shell
+    pick_rate: 0.003
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/chiron/
   last_verified: '2026-11-08'
   god_win_rate: 0.5492957746478874
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.51
+    win_rate: 0.6194
+    matches: 145
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.52
+    matches: 148
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +235,18 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.51
+    win_rate: 0.6194
+    matches: 145
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.52
+    matches: 148
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +321,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -314,6 +395,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -389,6 +471,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -462,6 +545,7 @@ builds:
   - Jotunn's Revenge
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -537,6 +621,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -609,6 +694,7 @@ builds:
   - Jotunn's Revenge
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -683,6 +769,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -755,6 +842,7 @@ builds:
   - Transcendence
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -830,6 +918,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: mana-stack
@@ -905,6 +994,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: crit
@@ -979,6 +1069,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: burst
@@ -1055,6 +1146,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: bruiser
@@ -1129,6 +1221,7 @@ builds:
   - Jotunn's Revenge
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: anti-tank
@@ -1205,6 +1298,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: attack-speed
@@ -1278,6 +1372,7 @@ builds:
   - Jotunn's Revenge
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: cooldown
@@ -1353,6 +1448,7 @@ builds:
   - Avatar's Parashu
   - Titan's Bane
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 - source: suggested
   archetype: model
@@ -1427,6 +1523,7 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Heroic Tutor
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
@@ -1489,11 +1586,11 @@ community_aspects:
     - name: War Flag
       share: 0.1
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.45
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.41
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.1
     matches_by_window:
       ob47: 9
@@ -1501,10 +1598,5 @@ community_aspects:
       ob45: 31
       ob44: 44
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

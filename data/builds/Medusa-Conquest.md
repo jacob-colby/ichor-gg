@@ -70,14 +70,80 @@ builds:
       win_rate: 0.4
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.3
+    pick_rate: 0.29
     win_rate: 0.61
   - name: Sharpshooter's Arrow
-    pick_rate: 0.23
+    pick_rate: 0.24
     win_rate: 0.62
   - name: Leather Cowl
-    pick_rate: 0.16
+    pick_rate: 0.15
     win_rate: 0.35
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.53
+    win_rate: 0.61
+  - name: Purification Beads
+    pick_rate: 0.45
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 0.0
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.29
+    win_rate: 0.61
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.24
+    win_rate: 0.62
+  - name: Leather Cowl
+    pick_rate: 0.15
+    win_rate: 0.35
+  - name: Gilded Arrow
+    pick_rate: 0.13
+    win_rate: 0.42
+  - name: Bluestone Brooch
+    pick_rate: 0.06
+    win_rate: 0.75
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Death's Embrace
+    pick_rate: 0.02
+    win_rate: 0.75
+  - name: Death's Toll
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Bluestone Pendant
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Bumba's Spear
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Heroism
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.53
+    win_rate: 0.61
+  - name: Purification Beads
+    pick_rate: 0.45
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Blink Rune
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Phantom Shell
+    pick_rate: 0.005
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/medusa/
   last_verified: '2026-11-08'
   god_win_rate: 0.542713567839196
@@ -88,8 +154,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.44
+    win_rate: 0.5214
+    matches: 88
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.53
+    win_rate: 0.61
+    matches: 105
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +241,18 @@ builds:
   - Dominance
   - Silverbranch Bow
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.44
+    win_rate: 0.5214
+    matches: 88
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.53
+    win_rate: 0.61
+    matches: 105
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +327,7 @@ builds:
   - Transcendence
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -315,6 +402,7 @@ builds:
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -388,6 +476,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -463,6 +552,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -537,6 +627,7 @@ builds:
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -612,6 +703,7 @@ builds:
   - Dominance
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -686,6 +778,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -760,6 +853,7 @@ builds:
   community_ordered:
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -835,6 +929,7 @@ builds:
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -908,4 +1003,5 @@ builds:
   community_ordered:
   - Tyrfing
   starter: *id001
+  relic: *id002
 ---

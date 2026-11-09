@@ -70,14 +70,71 @@ builds:
       win_rate: 0.86
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.33
+    pick_rate: 0.32
     win_rate: 0.57
   - name: Sharpshooter's Arrow
-    pick_rate: 0.22
-    win_rate: 0.55
+    pick_rate: 0.23
+    win_rate: 0.56
   - name: Leather Cowl
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.33
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.62
+    win_rate: 0.47
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.47
+  - name: Agility Relic
+    pick_rate: 0.04
+    win_rate: 0.71
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.32
+    win_rate: 0.57
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.23
+    win_rate: 0.56
+  - name: Leather Cowl
+    pick_rate: 0.2
+    win_rate: 0.33
+  - name: Gilded Arrow
+    pick_rate: 0.1
+    win_rate: 0.28
+  - name: Bumba's Spear
+    pick_rate: 0.08
+    win_rate: 0.71
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Death's Embrace
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.006
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.006
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.62
+    win_rate: 0.47
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.47
+  - name: Agility Relic
+    pick_rate: 0.04
+    win_rate: 0.71
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.01
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/mercury/
   last_verified: '2026-11-08'
   god_win_rate: 0.4823529411764706
@@ -88,8 +145,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.52
+    win_rate: 0.4777
+    matches: 88
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.62
+    win_rate: 0.47
+    matches: 105
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +230,18 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.52
+    win_rate: 0.4777
+    matches: 88
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.62
+    win_rate: 0.47
+    matches: 105
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +315,7 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -311,6 +389,7 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -385,6 +464,7 @@ builds:
   - Lernaean Bow
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -458,6 +538,7 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -531,6 +612,7 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -604,6 +686,7 @@ builds:
   - Dominance
   - Avatar's Parashu
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -675,4 +758,5 @@ builds:
   community_ordered:
   - Hydra's Lament
   starter: *id001
+  relic: *id002
 ---

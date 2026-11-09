@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.68
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.74
+    win_rate: 0.5654
+    matches: 171
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Sundering Arc
+    pick_rate: 0.31
+    win_rate: 0.6
+    matches: 72
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.92
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.68
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -466,4 +483,5 @@ builds:
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001
+  relic: *id002
 ---

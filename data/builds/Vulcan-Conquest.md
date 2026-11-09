@@ -98,13 +98,61 @@ builds:
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.31
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Archmage's Gem
     pick_rate: 0.26
-    win_rate: 0.66
+    win_rate: 0.65
   - name: Sands Of Time
     pick_rate: 0.21
-    win_rate: 0.42
+    win_rate: 0.43
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.53
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.57
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.31
+    win_rate: 0.55
+  - name: Archmage's Gem
+    pick_rate: 0.26
+    win_rate: 0.65
+  - name: Sands Of Time
+    pick_rate: 0.21
+    win_rate: 0.43
+  - name: Conduit Gem
+    pick_rate: 0.18
+    win_rate: 0.46
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.57
+  - name: Bluestone Brooch
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: War Banner
+    pick_rate: 0.005
+    win_rate: 0.5
+  - name: Vampiric Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.53
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.57
+  - name: Agility Relic
+    pick_rate: 0.003
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/vulcan/
   last_verified: '2026-11-08'
   god_win_rate: 0.532033426183844
@@ -115,8 +163,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.52
+    win_rate: 0.5015
+    matches: 187
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+    matches: 205
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -193,8 +251,18 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.52
+    win_rate: 0.5015
+    matches: 187
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.53
+    matches: 205
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -271,6 +339,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -347,6 +416,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -421,6 +491,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -497,6 +568,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -570,6 +642,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -646,6 +719,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -720,6 +794,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -787,11 +862,11 @@ community_aspects:
     - name: Pendulum of the Ages
       share: 0.19
     relics:
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.43
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.38
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.16
     matches_by_window:
       ob47: 37
@@ -799,10 +874,6 @@ community_aspects:
       ob45: 78
       ob44: 48
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
     - resonator-mod
 ---

@@ -74,10 +74,70 @@ builds:
     win_rate: 0.49
   - name: Bluestone Brooch
     pick_rate: 0.24
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Selflessness
     pick_rate: 0.14
     win_rate: 0.49
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.39
+    win_rate: 0.58
+  - name: Blink Rune
+    pick_rate: 0.33
+    win_rate: 0.55
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.54
+  starter_sightings:
+  - name: Bluestone Pendant
+    pick_rate: 0.37
+    win_rate: 0.49
+  - name: Bluestone Brooch
+    pick_rate: 0.24
+    win_rate: 0.59
+  - name: Selflessness
+    pick_rate: 0.14
+    win_rate: 0.49
+  - name: Heroism
+    pick_rate: 0.09
+    win_rate: 0.57
+  - name: War Flag
+    pick_rate: 0.05
+    win_rate: 0.54
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.44
+  - name: War Banner
+    pick_rate: 0.03
+    win_rate: 0.86
+  - name: Warrior's Axe
+    pick_rate: 0.03
+    win_rate: 0.78
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.25
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 0.67
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.39
+    win_rate: 0.58
+  - name: Blink Rune
+    pick_rate: 0.33
+    win_rate: 0.55
+  - name: Sundering Arc
+    pick_rate: 0.14
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.07
+    win_rate: 0.4
+  - name: Purification Beads
+    pick_rate: 0.06
+    win_rate: 0.4
+  - name: Agility Relic
+    pick_rate: 0.004
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/sobek/
   last_verified: '2026-11-08'
   god_win_rate: 0.5413533834586466
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.61
+    win_rate: 0.5293
+    matches: 162
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.39
+    win_rate: 0.58
+    matches: 104
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +234,18 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.61
+    win_rate: 0.5293
+    matches: 162
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.39
+    win_rate: 0.58
+    matches: 104
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -241,6 +321,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -315,6 +396,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -390,6 +472,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -464,6 +547,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -538,6 +622,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -608,11 +693,11 @@ community_aspects:
     - name: Bluestone Pendant
       share: 0.16
     relics:
-    - name: sundering-arc
+    - name: Sundering Arc
       share: 0.53
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.24
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.11
     matches_by_window:
       ob47: 4
@@ -620,10 +705,5 @@ community_aspects:
       ob45: 32
       ob44: 21
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

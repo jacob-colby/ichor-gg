@@ -73,11 +73,74 @@ builds:
     pick_rate: 0.55
     win_rate: 0.63
   - name: Conduit Gem
-    pick_rate: 0.26
-    win_rate: 0.41
+    pick_rate: 0.27
+    win_rate: 0.39
   - name: Bumba's Hammer
     pick_rate: 0.04
     win_rate: 0.75
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.59
+  - name: Aegis of Acceleration
+    pick_rate: 0.25
+    win_rate: 0.65
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.33
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.55
+    win_rate: 0.63
+  - name: Conduit Gem
+    pick_rate: 0.27
+    win_rate: 0.39
+  - name: Bumba's Hammer
+    pick_rate: 0.04
+    win_rate: 0.75
+  - name: Blood-soaked Shroud
+    pick_rate: 0.03
+    win_rate: 0.0
+  - name: Bluestone Brooch
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Vampiric Shroud
+    pick_rate: 0.01
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.59
+  - name: Aegis of Acceleration
+    pick_rate: 0.25
+    win_rate: 0.65
+  - name: Phantom Shell
+    pick_rate: 0.17
+    win_rate: 0.33
+  - name: Blink Rune
+    pick_rate: 0.15
+    win_rate: 0.63
+  - name: Sundering Arc
+    pick_rate: 0.1
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/hades/
   last_verified: '2026-11-08'
   god_win_rate: 0.5490196078431373
@@ -90,6 +153,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.82
+    win_rate: 0.551
+    matches: 84
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.59
+    matches: 34
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,6 +239,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.82
+    win_rate: 0.551
+    matches: 84
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.33
+    win_rate: 0.59
+    matches: 34
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -239,6 +322,7 @@ builds:
   - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -313,6 +397,7 @@ builds:
   - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -386,6 +471,7 @@ builds:
   - The World Stone
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -460,6 +546,7 @@ builds:
   - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -533,6 +620,7 @@ builds:
   - The World Stone
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -606,6 +694,7 @@ builds:
   - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -679,4 +768,5 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

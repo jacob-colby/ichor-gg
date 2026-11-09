@@ -78,6 +78,93 @@ builds:
   - name: Selflessness
     pick_rate: 0.18
     win_rate: 0.45
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.55
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.58
+  - name: Purification Beads
+    pick_rate: 0.21
+    win_rate: 0.63
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.25
+    win_rate: 0.68
+  - name: Bumba's Cudgel
+    pick_rate: 0.21
+    win_rate: 0.46
+  - name: Selflessness
+    pick_rate: 0.18
+    win_rate: 0.45
+  - name: Heroism
+    pick_rate: 0.12
+    win_rate: 0.72
+  - name: War Flag
+    pick_rate: 0.05
+    win_rate: 0.58
+  - name: War Banner
+    pick_rate: 0.04
+    win_rate: 0.73
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.6
+  - name: Warrior's Axe
+    pick_rate: 0.03
+    win_rate: 0.4
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.02
+    win_rate: 0.75
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: Bluestone Pendant
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Gilded Arrow
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: Sands Of Time
+    pick_rate: 0.01
+    win_rate: 0.25
+  - name: Pendulum of the Ages
+    pick_rate: 0.008
+    win_rate: 1.0
+  - name: Bluestone Brooch
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.003
+    win_rate: 1.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.55
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.58
+  - name: Purification Beads
+    pick_rate: 0.21
+    win_rate: 0.63
+  - name: Aegis of Acceleration
+    pick_rate: 0.09
+    win_rate: 0.63
+  - name: Sundering Arc
+    pick_rate: 0.08
+    win_rate: 0.56
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.29
   source_url: https://smitebrain.com/gods/athena/
   last_verified: '2026-11-08'
   god_win_rate: 0.5725593667546174
@@ -88,8 +175,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.46
+    win_rate: 0.5796
+    matches: 174
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.55
+    matches: 133
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -169,8 +266,18 @@ builds:
   - Freya's Tears
   - Polynomicon
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.46
+    win_rate: 0.5796
+    matches: 174
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.55
+    matches: 133
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -249,6 +356,7 @@ builds:
   - Kinetic Cuirass
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -327,6 +435,7 @@ builds:
   - Kinetic Cuirass
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -404,6 +513,7 @@ builds:
   - Kinetic Cuirass
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -484,6 +594,7 @@ builds:
   - Freya's Tears
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -562,6 +673,7 @@ builds:
   - Kinetic Cuirass
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -640,6 +752,7 @@ builds:
   - Kinetic Cuirass
   - Polynomicon
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -717,6 +830,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -784,11 +898,11 @@ community_aspects:
     - name: Sharpshooter's Arrow
       share: 0.08
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.53
     - name: Blink Rune
       share: 0.16
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.14
     matches_by_window:
       ob47: 101
@@ -796,10 +910,5 @@ community_aspects:
       ob45: 328
       ob44: 201
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - phantom-shell
-    - purification-beads
-    - sundering-arc
 ---

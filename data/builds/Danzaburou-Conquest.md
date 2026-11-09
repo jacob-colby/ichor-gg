@@ -70,7 +70,7 @@ builds:
       win_rate: 0.6
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.21
+    pick_rate: 0.22
     win_rate: 0.56
   - name: Conduit Gem
     pick_rate: 0.16
@@ -78,6 +78,78 @@ builds:
   - name: Hunter's Cowl
     pick_rate: 0.15
     win_rate: 0.57
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.45
+  - name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.56
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 0.5
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.22
+    win_rate: 0.56
+  - name: Conduit Gem
+    pick_rate: 0.16
+    win_rate: 0.64
+  - name: Hunter's Cowl
+    pick_rate: 0.15
+    win_rate: 0.57
+  - name: Leather Cowl
+    pick_rate: 0.12
+    win_rate: 0.42
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.08
+    win_rate: 0.38
+  - name: Death's Embrace
+    pick_rate: 0.05
+    win_rate: 0.86
+  - name: Gilded Arrow
+    pick_rate: 0.05
+    win_rate: 0.25
+  - name: Pendulum of the Ages
+    pick_rate: 0.05
+    win_rate: 0.25
+  - name: Bumba's Hammer
+    pick_rate: 0.03
+    win_rate: 0.4
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.67
+  - name: Bluestone Brooch
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Sands Of Time
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.006
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.45
+  - name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.56
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.33
   source_url: https://smitebrain.com/gods/danzaburou/
   last_verified: '2026-11-08'
   god_win_rate: 0.49673202614379086
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.38
+    win_rate: 0.5937
+    matches: 58
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.45
+    matches: 76
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +247,18 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.38
+    win_rate: 0.5937
+    matches: 58
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.5
+    win_rate: 0.45
+    matches: 76
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +334,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -317,6 +410,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -394,6 +488,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -468,6 +563,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -545,6 +641,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -620,6 +717,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -694,6 +792,7 @@ builds:
   - Jotunn's Revenge
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -770,6 +869,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -847,6 +947,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -920,6 +1021,7 @@ builds:
   community_ordered:
   - Jotunn's Revenge
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -984,11 +1086,11 @@ community_aspects:
     - name: Death's Embrace
       share: 0.11
     relics:
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.85
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.11
-    - name: agility-relic
+    - name: Agility Relic
       share: 0.04
     matches_by_window:
       ob47: 9
@@ -996,8 +1098,5 @@ community_aspects:
       ob45: 14
       ob44: 20
     unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
     - brawlers-ruin
-    - purification-beads
 ---

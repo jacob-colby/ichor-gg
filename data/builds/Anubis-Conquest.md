@@ -71,13 +71,67 @@ builds:
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.38
-    win_rate: 0.56
+    win_rate: 0.59
   - name: Conduit Gem
-    pick_rate: 0.38
+    pick_rate: 0.36
     win_rate: 0.44
   - name: Pendulum of the Ages
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.5
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.38
+  - name: Purification Beads
+    pick_rate: 0.27
+    win_rate: 0.66
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.54
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.38
+    win_rate: 0.59
+  - name: Conduit Gem
+    pick_rate: 0.36
+    win_rate: 0.44
+  - name: Pendulum of the Ages
+    pick_rate: 0.09
+    win_rate: 0.5
+  - name: Sands Of Time
+    pick_rate: 0.08
+    win_rate: 0.44
+  - name: Blood-soaked Shroud
+    pick_rate: 0.03
+    win_rate: 0.33
+  - name: Vampiric Shroud
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.009
+    win_rate: 1.0
+  - name: Bluestone Pendant
+    pick_rate: 0.009
+    win_rate: 0.0
+  - name: Hunter's Cowl
+    pick_rate: 0.009
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.38
+  - name: Purification Beads
+    pick_rate: 0.27
+    win_rate: 0.66
+  - name: Blink Rune
+    pick_rate: 0.24
+    win_rate: 0.54
+  - name: Agility Relic
+    pick_rate: 0.009
+    win_rate: 1.0
+  - name: Sundering Arc
+    pick_rate: 0.009
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/anubis/
   last_verified: '2026-11-08'
   god_win_rate: 0.5
@@ -90,6 +144,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.74
+    win_rate: 0.517
+    matches: 77
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.38
+    matches: 49
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +231,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.74
+    win_rate: 0.517
+    matches: 77
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.38
+    matches: 49
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +315,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +391,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -390,6 +466,7 @@ builds:
   - Dreamer's Idol
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -465,6 +542,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -538,6 +616,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -613,6 +692,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -689,6 +769,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -764,6 +845,7 @@ builds:
   - Soul Gem
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -839,4 +921,5 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 ---

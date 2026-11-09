@@ -70,7 +70,7 @@ builds:
       win_rate: 0.67
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.34
+    pick_rate: 0.35
     win_rate: 0.55
   - name: Sands Of Time
     pick_rate: 0.28
@@ -78,6 +78,78 @@ builds:
   - name: Archmage's Gem
     pick_rate: 0.16
     win_rate: 0.68
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.56
+  - name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.2
+    win_rate: 0.49
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.35
+    win_rate: 0.55
+  - name: Sands Of Time
+    pick_rate: 0.28
+    win_rate: 0.46
+  - name: Archmage's Gem
+    pick_rate: 0.16
+    win_rate: 0.68
+  - name: Conduit Gem
+    pick_rate: 0.11
+    win_rate: 0.46
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.43
+  - name: Selflessness
+    pick_rate: 0.02
+    win_rate: 0.17
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 0.14
+  - name: Bumba's Cudgel
+    pick_rate: 0.01
+    win_rate: 0.25
+  - name: Heroism
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: War Banner
+    pick_rate: 0.009
+    win_rate: 0.67
+  - name: Gilded Arrow
+    pick_rate: 0.006
+    win_rate: 0.0
+  - name: Bluestone Brooch
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Bluestone Pendant
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Hunter's Cowl
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.56
+  - name: Purification Beads
+    pick_rate: 0.31
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.2
+    win_rate: 0.49
+  - name: Agility Relic
+    pick_rate: 0.006
+    win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.006
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/hel/
   last_verified: '2026-11-08'
   god_win_rate: 0.5072463768115942
@@ -88,8 +160,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.63
+    win_rate: 0.51
+    matches: 217
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.56
+    matches: 166
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +246,18 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.63
+    win_rate: 0.51
+    matches: 217
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.56
+    matches: 166
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +333,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -315,6 +408,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -389,6 +483,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -463,6 +558,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -535,6 +631,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -609,6 +706,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -683,6 +781,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -744,20 +843,15 @@ community_aspects:
     - name: Archmage's Gem
       share: 0.15
     relics:
-    - name: phantom-shell
+    - name: Phantom Shell
       share: 0.39
-    - name: aegis-of-acceleration
+    - name: Aegis of Acceleration
       share: 0.34
-    - name: purification-beads
+    - name: Purification Beads
       share: 0.24
     matches_by_window:
       ob47: 82
       ob46: 332
       ob45: 963
       ob44: 788
-    unmapped_slugs:
-    - aegis-of-acceleration
-    - agility-relic
-    - phantom-shell
-    - purification-beads
 ---

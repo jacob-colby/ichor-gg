@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.57
+    win_rate: 0.6428
+    matches: 111
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.53
+    win_rate: 0.6
+    matches: 103
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.79
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.56
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,4 +543,5 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
 ---
