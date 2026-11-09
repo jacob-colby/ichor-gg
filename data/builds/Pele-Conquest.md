@@ -73,11 +73,86 @@ builds:
     pick_rate: 0.45
     win_rate: 0.58
   - name: Leather Cowl
-    pick_rate: 0.21
+    pick_rate: 0.2
     win_rate: 0.45
   - name: Bluestone Brooch
     pick_rate: 0.09
     win_rate: 0.47
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+  - name: Blink Rune
+    pick_rate: 0.22
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.21
+    win_rate: 0.44
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.45
+    win_rate: 0.58
+  - name: Leather Cowl
+    pick_rate: 0.2
+    win_rate: 0.45
+  - name: Bluestone Brooch
+    pick_rate: 0.09
+    win_rate: 0.47
+  - name: Bumba's Hammer
+    pick_rate: 0.06
+    win_rate: 0.55
+  - name: Bluestone Pendant
+    pick_rate: 0.05
+    win_rate: 0.44
+  - name: Bumba's Cudgel
+    pick_rate: 0.04
+    win_rate: 0.63
+  - name: Bumba's Spear
+    pick_rate: 0.03
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.67
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.25
+  - name: Blood-soaked Shroud
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Conduit Gem
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Heroism
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Pendulum of the Ages
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.005
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+  - name: Blink Rune
+    pick_rate: 0.22
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.21
+    win_rate: 0.44
+  - name: Phantom Shell
+    pick_rate: 0.09
+    win_rate: 0.47
+  - name: Sundering Arc
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/pele/
   last_verified: '2026-11-08'
   god_win_rate: 0.5297297297297298
@@ -88,8 +163,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.65
+    win_rate: 0.54
+    matches: 120
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+    matches: 78
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +249,18 @@ builds:
   - The Crusher
   - Heartseeker
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.65
+    win_rate: 0.54
+    matches: 120
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+    matches: 78
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -240,6 +335,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -314,6 +410,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -388,6 +485,7 @@ builds:
   - The Reaper
   - Magi's Cloak
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -462,6 +560,7 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -534,6 +633,7 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -608,6 +708,7 @@ builds:
   - The Reaper
   - The Crusher
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -682,6 +783,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -762,4 +864,5 @@ builds:
     reason: community 68% win over 41 matches (vs 53% on this god), taking the model's
       weakest slot from Transcendence
   starter: *id001
+  relic: *id002
 ---

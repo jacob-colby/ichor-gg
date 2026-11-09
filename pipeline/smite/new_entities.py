@@ -97,13 +97,21 @@ ICONS = Path("_assets") / "icons"
 
 # -- discovery ----------------------------------------------------------------
 
-_ICON_SRC_RE = re.compile(r"/T(\d)_[^/]*\.png")
+_ICON_SRC_RE = re.compile(r"/(?:T(\d)|(Relic))_[^/]*\.png")
 
 
 def parse_item_index(html: str) -> dict:
     """{page title: tier} for every item the wiki's Items index links with a
     tier icon. The title, not the icon filename, is the page name: the icon
-    drops spaces and punctuation the title keeps."""
+    drops spaces and punctuation the title keeps.
+
+    A BASE relic's icon is `Relic_<Name>.png`, not `T<n>_`, so until
+    2026-11-08 this read none of the six and discovery never offered them:
+    Purification Beads, Aegis of Acceleration, Phantom Shell, Sundering Arc
+    and Agility Relic had no record while every community build named one.
+    Their tier is the string "Relic", which is what `wiki_parser` reads off the
+    item's own infobox. The upgrades (Shell of Rebuke and its five siblings)
+    carry `T3_` icons and were always read."""
     from bs4 import BeautifulSoup
 
     out = {}
@@ -112,7 +120,7 @@ def parse_item_index(html: str) -> dict:
         img = a.find("img")
         m = _ICON_SRC_RE.search((img.get("src") or "") if img else "")
         if m and a["title"] not in out:
-            out[a["title"]] = int(m.group(1))
+            out[a["title"]] = int(m.group(1)) if m.group(1) else m.group(2)
     return out
 
 
@@ -181,6 +189,15 @@ def _positive_base(row) -> bool:
     return n is not None and n > 0
 
 
+def is_free_relic(parsed: dict) -> bool:
+    """The game's free-slot relic: tier "Relic" at cost 0. It has no stat line
+    by design — its whole value is an active (Blink Rune's teleport, Phantom
+    Shell's shield) — so "no stats" is not a sign that it failed to parse.
+    `scoring.is_buildable` refuses it on cost and on the empty stat line, so it
+    never competes for one of the six."""
+    return parsed.get("tier") == "Relic" and parsed.get("cost") == 0
+
+
 def item_problems(parsed: dict) -> list:
     problems = []
     if parsed.get("tier") in (None, ""):
@@ -188,6 +205,12 @@ def item_problems(parsed: dict) -> list:
     if parsed.get("cost") is None or not _numeric(parsed.get("cost")):
         problems.append(f"no numeric cost ({parsed.get('cost')!r})")
     stats = parsed.get("stats") or {}
+    if not stats and is_free_relic(parsed):
+        # Whole without stats, but NOT without its active: a relic page that
+        # lost its text is the empty parse this gate exists to refuse.
+        if not (parsed.get("passive") or "").strip():
+            problems.append("free relic with no active text")
+        return problems
     if not stats:
         problems.append("no stats")
     for stat, value in stats.items():
@@ -336,6 +359,29 @@ def link_components(data_root: Path, new_items: list) -> None:
             if c["name"] not in into:
                 fm["builds_into"] = sorted(into + [c["name"]])
                 notes.write_note(path, fm, body)
+    _link_upgrades(data_root, new_items)
+
+
+def _link_upgrades(data_root: Path, new_items: list) -> None:
+    """The other direction: a new item's OWN `builds_into`, from tracked items
+    that already list it as a component. Normally empty — a new item is newer
+    than anything built from it — but not for a base relic discovered late:
+    Shell of Rebuke has named Phantom Shell in its `builds_from` since
+    2026-08-05, and Phantom Shell got no record until 2026-11-08. Without this
+    the new note says it builds into nothing."""
+    names = {c["name"] for c in new_items}
+    ups = {}
+    for p in sorted((data_root / "Items").glob("*.md")):
+        fm, _ = notes.read_note(p)
+        for comp in fm.get("builds_from") or []:
+            if comp in names and fm.get("name"):
+                ups.setdefault(comp, []).append(fm["name"])
+    for name, into in ups.items():
+        path = data_root / "Items" / f"{name}.md"
+        fm, body = notes.read_note(path)
+        if fm.get("name") and sorted(set(fm.get("builds_into") or []) | set(into)) != fm.get("builds_into"):
+            fm["builds_into"] = sorted(set(fm.get("builds_into") or []) | set(into))
+            notes.write_note(path, fm, body)
 
 
 def apply(data_root: Path, cands: list, today: str) -> None:

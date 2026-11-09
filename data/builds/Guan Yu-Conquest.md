@@ -78,6 +78,75 @@ builds:
   - name: Pendulum of the Ages
     pick_rate: 0.16
     win_rate: 0.8
+  community_relics:
+  - name: Sundering Arc
+    pick_rate: 0.38
+    win_rate: 0.64
+  - name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.5
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.23
+    win_rate: 0.59
+  - name: Sands Of Time
+    pick_rate: 0.21
+    win_rate: 0.5
+  - name: Pendulum of the Ages
+    pick_rate: 0.16
+    win_rate: 0.8
+  - name: Leather Cowl
+    pick_rate: 0.1
+    win_rate: 0.6
+  - name: Selflessness
+    pick_rate: 0.05
+    win_rate: 0.6
+  - name: Sundering Axe
+    pick_rate: 0.05
+    win_rate: 0.8
+  - name: Bluestone Brooch
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.04
+    win_rate: 0.25
+  - name: Warrior's Axe
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Heroism
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Sundering Arc
+    pick_rate: 0.38
+    win_rate: 0.64
+  - name: Phantom Shell
+    pick_rate: 0.35
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.13
+    win_rate: 0.5
+  - name: Purification Beads
+    pick_rate: 0.11
+    win_rate: 0.64
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/guan-yu/
   last_verified: '2026-11-08'
   god_win_rate: 0.6041666666666666
@@ -88,8 +157,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.37
+    win_rate: 0.6297
+    matches: 36
+    basis: community
+  relic:
+    name: Sundering Arc
+    pick_rate: 0.38
+    win_rate: 0.64
+    matches: 36
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +245,18 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.37
+    win_rate: 0.6297
+    matches: 36
+    basis: community
+  relic: &id002
+    name: Sundering Arc
+    pick_rate: 0.38
+    win_rate: 0.64
+    matches: 36
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -243,6 +332,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -318,6 +408,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +486,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -470,6 +562,7 @@ builds:
   - Genji's Guard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -546,4 +639,5 @@ builds:
   - Berserker's Shield
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

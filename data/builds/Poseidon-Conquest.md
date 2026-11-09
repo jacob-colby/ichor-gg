@@ -73,11 +73,77 @@ builds:
     pick_rate: 0.3
     win_rate: 0.55
   - name: Archmage's Gem
-    pick_rate: 0.2
-    win_rate: 0.59
+    pick_rate: 0.21
+    win_rate: 0.58
   - name: Sands Of Time
     pick_rate: 0.13
     win_rate: 0.46
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.58
+    win_rate: 0.48
+  - name: Aegis of Acceleration
+    pick_rate: 0.42
+    win_rate: 0.59
+  - name: Agility Relic
+    pick_rate: 0.004
+    win_rate: 0.0
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.3
+    win_rate: 0.55
+  - name: Archmage's Gem
+    pick_rate: 0.21
+    win_rate: 0.58
+  - name: Sands Of Time
+    pick_rate: 0.13
+    win_rate: 0.46
+  - name: Conduit Gem
+    pick_rate: 0.09
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.09
+    win_rate: 0.58
+  - name: Leather Cowl
+    pick_rate: 0.05
+    win_rate: 0.54
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.05
+    win_rate: 0.46
+  - name: Bumba's Hammer
+    pick_rate: 0.03
+    win_rate: 0.29
+  - name: Bumba's Cudgel
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Bumba's Spear
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.25
+  - name: Gilded Arrow
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Blood-soaked Shroud
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Bluestone Brooch
+    pick_rate: 0.004
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.58
+    win_rate: 0.48
+  - name: Aegis of Acceleration
+    pick_rate: 0.42
+    win_rate: 0.59
+  - name: Agility Relic
+    pick_rate: 0.004
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/poseidon/
   last_verified: '2026-11-08'
   god_win_rate: 0.5289855072463768
@@ -88,8 +154,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.43
+    win_rate: 0.5228
+    matches: 119
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.58
+    win_rate: 0.48
+    matches: 160
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +240,18 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.43
+    win_rate: 0.5228
+    matches: 119
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.58
+    win_rate: 0.48
+    matches: 160
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -240,6 +326,7 @@ builds:
   - The World Stone
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -314,6 +401,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -387,6 +475,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -461,6 +550,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -534,6 +624,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -607,6 +698,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -683,6 +775,7 @@ builds:
   - Nimble Ring
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -759,6 +852,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -833,4 +927,5 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 ---

@@ -307,6 +307,49 @@ def test_an_item_page_without_stats_is_left_out(root):
     assert "Soul Locket" not in _catalogue(root)["items"]
 
 
+# -- base relics (2026-11-08) --------------------------------------------------
+#
+# A base relic's index icon is `Relic_<Name>.png`, not `T<n>_`, and its page has
+# no stat line by design. Either was enough to keep all six out: five of them
+# had no record while every community build named one.
+
+BASE_RELICS = ["Aegis of Acceleration", "Agility Relic", "Blink Rune", "Phantom Shell",
+               "Purification Beads", "Sundering Arc"]
+
+
+def test_the_recorded_items_index_reads_the_six_base_relics():
+    index = ne.parse_item_index(_page("Items"))
+    assert sorted(n for n, t in index.items() if t == "Relic") == BASE_RELICS
+    # Their upgrades are bought into the six and carry ordinary T3 icons.
+    assert index["Shell of Rebuke"] == 3 and index["Blinking Abyss"] == 3
+
+
+def test_a_free_relic_is_whole_with_its_active_and_no_stat_line():
+    active = "On Use: Teleport up to 5.6m. Cooldown: 170s"
+    assert ne.item_problems({"tier": "Relic", "cost": 0, "stats": None, "passive": active}) == []
+    assert ne.item_problems({"tier": "Relic", "cost": 0, "stats": None, "passive": " "}) == [
+        "free relic with no active text"]
+    # A PAID relic with no stats is still refused — Blinking Abyss's shape.
+    assert "no stats" in ne.item_problems({"tier": "Relic", "cost": 2600, "stats": {}, "passive": active})
+
+
+def test_a_base_relic_is_added_whole_and_linked_to_its_upgrade(root):
+    """Phantom Shell's page as the wiki served it on 2026-11-08. Shell of
+    Rebuke has listed it in `builds_from` since 2026-08-05, so the new note
+    must say what it builds into — the reverse link no other add needs."""
+    _forget_items(root, ["Phantom Shell"])
+    html = (REC / "page_phantom_shell.html").read_text(encoding="utf-8")
+    result = _run(root, fetcher=Fetcher({"Phantom Shell": html}))
+    assert "Phantom Shell" in [c["name"] for c in result["kept"]]
+    fm, _ = ne.notes.read_note(root / "Items" / "Phantom Shell.md")
+    assert (fm["tier"], fm["cost"], fm["stats"]) == ("Relic", 0, {})
+    assert fm["passive"].startswith("On Use: +100 (+10 per Level) Shield")
+    assert fm["builds_from"] == [] and fm["builds_into"] == ["Shell of Rebuke"]
+    # Never one of the six, and nothing for the passive catalogue to classify.
+    assert not scoring.is_buildable(fm)
+    assert "Phantom Shell" not in _catalogue(root)["items"]
+
+
 def test_an_unreachable_wiki_adds_nothing(root):
     class Down:
         def fetch(self, page):

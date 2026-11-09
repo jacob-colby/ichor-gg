@@ -71,13 +71,70 @@ builds:
   community_starters:
   - name: Pendulum of the Ages
     pick_rate: 0.31
-    win_rate: 0.62
+    win_rate: 0.63
   - name: Archmage's Gem
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.61
   - name: Conduit Gem
     pick_rate: 0.14
     win_rate: 0.39
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.49
+    win_rate: 0.48
+  - name: Purification Beads
+    pick_rate: 0.49
+    win_rate: 0.62
+  - name: Agility Relic
+    pick_rate: 0.005
+    win_rate: 1.0
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.31
+    win_rate: 0.63
+  - name: Archmage's Gem
+    pick_rate: 0.25
+    win_rate: 0.61
+  - name: Conduit Gem
+    pick_rate: 0.14
+    win_rate: 0.39
+  - name: Sands Of Time
+    pick_rate: 0.12
+    win_rate: 0.63
+  - name: Bluestone Brooch
+    pick_rate: 0.08
+    win_rate: 0.47
+  - name: Bluestone Pendant
+    pick_rate: 0.05
+    win_rate: 0.36
+  - name: Leather Cowl
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Death's Embrace
+    pick_rate: 0.01
+    win_rate: 0.67
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.49
+    win_rate: 0.48
+  - name: Purification Beads
+    pick_rate: 0.49
+    win_rate: 0.62
+  - name: Agility Relic
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Phantom Shell
+    pick_rate: 0.005
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/discordia/
   last_verified: '2026-11-08'
   god_win_rate: 0.5544554455445545
@@ -88,8 +145,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.43
+    win_rate: 0.63
+    matches: 87
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.49
+    win_rate: 0.48
+    matches: 99
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +232,18 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.43
+    win_rate: 0.63
+    matches: 87
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.49
+    win_rate: 0.48
+    matches: 99
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +318,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +394,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -390,6 +469,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -464,6 +544,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -537,6 +618,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -612,6 +694,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -687,4 +770,5 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 ---

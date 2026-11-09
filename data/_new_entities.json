@@ -36,11 +36,36 @@
       "name": "Nox",
       "kind": "god",
       "date": "2026-11-04"
+    },
+    {
+      "name": "Purification Beads",
+      "kind": "item",
+      "date": "2026-11-08"
+    },
+    {
+      "name": "Agility Relic",
+      "kind": "item",
+      "date": "2026-11-08"
+    },
+    {
+      "name": "Aegis of Acceleration",
+      "kind": "item",
+      "date": "2026-11-08"
+    },
+    {
+      "name": "Sundering Arc",
+      "kind": "item",
+      "date": "2026-11-08"
+    },
+    {
+      "name": "Phantom Shell",
+      "kind": "item",
+      "date": "2026-11-08"
     }
   ],
   "last_run": {
     "date": "2026-11-08",
-    "status": "nothing-new",
+    "status": "added",
     "excluded": [],
     "skipped": [
       {

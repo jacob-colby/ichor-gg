@@ -78,6 +78,69 @@ builds:
   - name: Pendulum of the Ages
     pick_rate: 0.06
     win_rate: 0.44
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.61
+    win_rate: 0.58
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.59
+  - name: Agility Relic
+    pick_rate: 0.09
+    win_rate: 0.45
+  starter_sightings:
+  - name: Death's Embrace
+    pick_rate: 0.6
+    win_rate: 0.63
+  - name: Death's Toll
+    pick_rate: 0.18
+    win_rate: 0.52
+  - name: Pendulum of the Ages
+    pick_rate: 0.06
+    win_rate: 0.44
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.05
+    win_rate: 0.33
+  - name: Gilded Arrow
+    pick_rate: 0.03
+    win_rate: 0.38
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.75
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Hunter's Cowl
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.004
+    win_rate: 1.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.61
+    win_rate: 0.58
+  - name: Aegis of Acceleration
+    pick_rate: 0.3
+    win_rate: 0.59
+  - name: Agility Relic
+    pick_rate: 0.09
+    win_rate: 0.45
+  - name: Blink Rune
+    pick_rate: 0.004
+    win_rate: 1.0
+  - name: Phantom Shell
+    pick_rate: 0.004
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/xbalanque/
   last_verified: '2026-11-08'
   god_win_rate: 0.576
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.78
+    win_rate: 0.6046
+    matches: 195
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.61
+    win_rate: 0.58
+    matches: 152
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +236,18 @@ builds:
   - Silverbranch Bow
   - Dominance
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.78
+    win_rate: 0.6046
+    matches: 195
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.61
+    win_rate: 0.58
+    matches: 152
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +321,7 @@ builds:
   - Silverbranch Bow
   - Dagger of Frenzy
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -310,6 +394,7 @@ builds:
   - Dagger of Frenzy
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -383,6 +468,7 @@ builds:
   - Berserker's Shield
   - Tyrfing
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -456,6 +542,7 @@ builds:
   - Dagger of Frenzy
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -530,6 +617,7 @@ builds:
   - Silverbranch Bow
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -603,6 +691,7 @@ builds:
   - Dagger of Frenzy
   - Dominance
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: intelligence
   slot_order:
@@ -678,6 +767,7 @@ builds:
   - Tyrfing
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -754,6 +844,7 @@ builds:
   - Dagger of Frenzy
   - Silverbranch Bow
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -826,4 +917,5 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+  relic: *id002
 ---

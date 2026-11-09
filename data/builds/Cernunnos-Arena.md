@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.56
+    win_rate: 0.5807
+    matches: 124
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.66
+    win_rate: 0.53
+    matches: 147
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.79
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: crit
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.74
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 0.91
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -590,6 +609,7 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -655,6 +675,7 @@ builds:
       pick: 0.0
       fit: 0.77
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: mana-stack
@@ -721,6 +742,7 @@ builds:
       pick: 0.0
       fit: 0.75
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: crit
@@ -787,6 +809,7 @@ builds:
       pick: 0.0
       fit: 0.74
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: burst
@@ -853,6 +876,7 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: bruiser
@@ -919,6 +943,7 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: anti-tank
@@ -985,6 +1010,7 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: attack-speed
@@ -1051,6 +1077,7 @@ builds:
       pick: 0.0
       fit: 0.66
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: cooldown
@@ -1117,6 +1144,7 @@ builds:
       pick: 0.0
       fit: 0.87
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 - source: suggested
   archetype: model
@@ -1183,5 +1211,6 @@ builds:
       pick: 0.0
       fit: 0.77
   starter: *id001
+  relic: *id002
   aspect: Aspect of Strife
 ---

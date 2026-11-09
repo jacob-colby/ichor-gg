@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.37
+    win_rate: 0.5705
+    matches: 91
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.44
+    win_rate: 0.52
+    matches: 108
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.59
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,4 +543,5 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 ---

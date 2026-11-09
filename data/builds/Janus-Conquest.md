@@ -76,8 +76,50 @@ builds:
     pick_rate: 0.25
     win_rate: 0.48
   - name: Pendulum of the Ages
-    pick_rate: 0.1
+    pick_rate: 0.11
     win_rate: 0.53
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.53
+  - name: Blink Rune
+    pick_rate: 0.02
+    win_rate: 0.27
+  starter_sightings:
+  - name: Archmage's Gem
+    pick_rate: 0.59
+    win_rate: 0.57
+  - name: Conduit Gem
+    pick_rate: 0.25
+    win_rate: 0.48
+  - name: Pendulum of the Ages
+    pick_rate: 0.11
+    win_rate: 0.53
+  - name: Sands Of Time
+    pick_rate: 0.05
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.004
+    win_rate: 0.5
+  - name: Heroism
+    pick_rate: 0.002
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+  - name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.53
+  - name: Blink Rune
+    pick_rate: 0.02
+    win_rate: 0.27
+  - name: Phantom Shell
+    pick_rate: 0.002
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/janus/
   last_verified: '2026-11-08'
   god_win_rate: 0.5357873210633947
@@ -90,6 +132,16 @@ builds:
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.84
+    win_rate: 0.5432
+    matches: 411
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+    matches: 279
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,6 +219,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.84
+    win_rate: 0.5432
+    matches: 411
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+    matches: 279
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +304,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +380,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -392,6 +456,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +532,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -540,6 +606,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -616,6 +683,7 @@ builds:
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -690,6 +758,7 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: hybrid
   slot_order:
@@ -771,4 +840,5 @@ builds:
     reason: community 69% win over 83 matches (vs 54% on this god), taking the model's
       weakest slot from Spear of the Magus
   starter: *id001
+  relic: *id002
 ---

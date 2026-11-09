@@ -9,27 +9,49 @@ Core. Only Core represents an actual build order — it groups items by
 numbered slot (1-6), each slot showing several alternative picks sorted
 by pick_rate descending. The recommended build is the top (first) tile
 in each slot. Relics and Starters are alternatives, not a build order,
-and are intentionally excluded from `items` — the design spec's Build
-schema has no field for them. (This module previously scanned the whole
-document for every stat-tile it could find, silently mixing Relics,
-Starters, and every Core-slot alternative into one list — confirmed via
-a live fetch to be real, garbage data: ~170 entries on Chiron's page
-alone. This rewrite scopes extraction to just the Core section's
-top-pick-per-slot.)
+and are intentionally excluded from `items` — they come back under their
+own keys (`relics`, `starters`), parsed by `_flat_section`. (This module
+previously scanned the whole document for every stat-tile it could find,
+silently mixing Relics, Starters, and every Core-slot alternative into one
+list — confirmed via a live fetch to be real, garbage data: ~170 entries
+on Chiron's page alone. This rewrite scopes extraction to just the Core
+section's top-pick-per-slot.)
+
+RATES UNDER 1% CARRY A DECIMAL, AND WERE READ TEN TIMES TOO HIGH UNTIL
+2026-11-08. The page prints "0.7% pick" for a thin tile, and the old
+pattern `(\\d+)%` cannot match "0.7%" at the "0", so the search slid one
+character and matched "7%". Measured over all 95 gods at the ob47 window:
+the top-3 `community_starters` had the wrong third entry on 10 gods (Cu
+Chulainn's "Sundering Axe 7%" is 0.7%), top-3 relics would have had it on
+12, and the first aspect's pick rate was 10x on 3 (Da Ji, Horus, The
+Morrigan). The Core section is unaffected on all 95 — no kept Core tile
+(top pick or its two alternates) is under 1% — so no core moves.
 """
 import re
 
 from bs4 import BeautifulSoup
 
-PICK_WIN_RE = re.compile(r"(\d+)%\s*pick.*?(\d+)%\s*win", re.DOTALL)
+PICK_WIN_RE = re.compile(r"(\d+(?:\.\d+)?)%\s*pick.*?(\d+(?:\.\d+)?)%\s*win", re.DOTALL)
+
+
+def _rates(m) -> tuple:
+    """(pick_rate, win_rate) as fractions from a PICK_WIN_RE match. Rounded
+    to 4dp so "0.7%" stores as 0.007 rather than 0.006999999999999999, and
+    so an integer rate stores exactly as it always has (41% -> 0.41)."""
+    return round(float(m.group(1)) / 100, 4), round(float(m.group(2)) / 100, 4)
 
 
 def parse_build_page(html: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
+    starter_sightings = _flat_section(soup, "Starters")
     return {
         "items": _parse_core_recommended_build(soup),
         "aspects": _parse_aspects(soup),
-        "starters": _parse_starters(soup),
+        "starters": starter_sightings[:STARTERS_SHOWN],
+        # Every tile, for `scoring.starter_paths`: a path whose two ends sit
+        # 3rd and 4th is invisible in a top 3.
+        "starter_sightings": starter_sightings,
+        "relics": _parse_relics(soup),
     }
 
 
@@ -37,6 +59,9 @@ def parse_build_page(html: str) -> dict:
 #: third the rates are usually low single digits, which is noise dressed as a
 #: choice.
 STARTERS_SHOWN = 3
+#: The same cap for relics, applied by the caller AFTER it drops the
+#: section's non-relic junk tail (`refresh.community_relics`).
+RELICS_SHOWN = 3
 
 
 def _parse_starters(soup) -> list:
@@ -50,32 +75,58 @@ def _parse_starters(soup) -> list:
     players actually bought.
 
     Unlike Core these are not slotted, so there is no numbered-slot structure to
-    walk — the section is a flat list of tiles already sorted by pick rate.
-    Deduped by name because the markup nests a tile inside its own wrapper and
-    a naive walk sees each one twice; the higher rate wins, which is the same
-    rule `build_index.popular_items` uses.
+    walk — the section is a flat list of tiles already sorted by pick rate
+    (`_flat_section`).
+
+    Like relics, the rates sum to 98-103% on every god (2026-11-08, ob47): each
+    player is counted ONCE, holding either the base or its upgrade, so the two
+    ends of one purchase path are exclusive sightings and the path's share is
+    their SUM. Ra: Pendulum of the Ages 41% + Sands of Time 17% is a 58% path.
     """
-    heading = soup.find("h2", string=re.compile(r"^\s*Starters?\s*$"))
+    return _flat_section(soup, "Starters")[:STARTERS_SHOWN]
+
+
+def _parse_relics(soup) -> list:
+    """The Relics section: which BASE relic this god's players take into the
+    game's free relic slot, every tile, ranked by pick rate. Uncapped here,
+    unlike starters: the section carries a junk tail of non-relic items at
+    under half a percent (Gauntlet of Thebes on 6 of 95 gods, Yogi's Necklace
+    on 3, one-offs like Time-lock Aegis — an UPGRADE, which is bought into the
+    six), and only the caller has the item records to drop it before taking a
+    top 3 (`refresh.community_build_entry`).
+
+    The rates are shares of the god's matches and sum to 98-101% on every god
+    (measured 2026-11-08, ob47): one relic per player, so each tile is an
+    exclusive choice, not an overlapping one. Ra: Purification Beads 52%,
+    Aegis of Acceleration 46%, Phantom Shell 2%, Blink Rune 0.2%."""
+    return _flat_section(soup, "Relics")
+
+
+def _flat_section(soup, title: str) -> list:
+    """Every tile in one unslotted section (Starters, Relics), deduped by
+    name, ranked by pick rate descending then name.
+
+    Scoped to the heading's own section container, NOT a forward walk.
+    `find_all_next()` from the heading runs into the Core section and happily
+    reports Tyrfing and Jotunn's Revenge as starters — the `break` on the next
+    `h2` never fires, because Core's heading sits inside a different wrapper
+    than this one's rather than downstream of it.
+
+    Deduped because the markup nests a tile inside its own wrapper and a naive
+    walk sees each one twice; the higher rate wins, which is the same rule
+    `build_index.popular_items` uses."""
+    heading = soup.find("h2", string=re.compile(r"^\s*" + title + r"?\s*$"))
     if heading is None:
         return []
-
-    # Scope to the heading's own section container, NOT a forward walk.
-    # `find_all_next()` from the heading runs into the Core section and
-    # happily reports Tyrfing and Jotunn's Revenge as starters — the
-    # `break` on the next `h2` never fires, because Core's heading sits
-    # inside a different wrapper than this one's rather than downstream of it.
-    section = heading.parent
     best = {}
-    for el in section.find_all("div", class_="flex"):
+    for el in heading.parent.find_all("div", class_="flex"):
         entry = _tile_entry(el)
         if entry is None:
             continue
         seen = best.get(entry["name"])
         if seen is None or entry["pick_rate"] > seen["pick_rate"]:
             best[entry["name"]] = entry
-
-    ranked = sorted(best.values(), key=lambda e: (-e["pick_rate"], e["name"]))
-    return ranked[:STARTERS_SHOWN]
+    return sorted(best.values(), key=lambda e: (-e["pick_rate"], e["name"]))
 
 
 def _tile_entry(container) -> dict:
@@ -93,7 +144,8 @@ def _tile_entry(container) -> dict:
     m = PICK_WIN_RE.search(stat_div.get_text())
     if not m:
         return None
-    return {"name": name, "pick_rate": int(m.group(1)) / 100, "win_rate": int(m.group(2)) / 100}
+    pick, win = _rates(m)
+    return {"name": name, "pick_rate": pick, "win_rate": win}
 
 
 def _parse_core_recommended_build(soup) -> list:
@@ -192,7 +244,8 @@ def _parse_aspects(soup) -> list:
         m = PICK_WIN_RE.search(stat_div.get_text())
         if not m:
             continue
-        aspects.append({"name": name, "pick_rate": int(m.group(1)) / 100, "win_rate": int(m.group(2)) / 100})
+        pick, win = _rates(m)
+        aspects.append({"name": name, "pick_rate": pick, "win_rate": win})
     return aspects
 
 

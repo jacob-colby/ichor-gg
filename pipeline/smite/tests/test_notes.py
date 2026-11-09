@@ -339,6 +339,12 @@ def test_canonicalise_rewrites_slots_alternates_and_starters():
     assert entry["popular_items"][0]["name"] == "Mantle Of Discord"
 
 
+def test_canonicalise_rewrites_community_relics_too():
+    entry = {"community_relics": [{"name": "Brawler's Beat Stick"}, {"name": "Rage"}]}
+    assert notes.canonicalise_community_items(entry, KNOWN) == 1
+    assert entry["community_relics"][0]["name"] == "Brawler’s Beat Stick"
+
+
 def test_canonicalise_reports_zero_when_nothing_drifts():
     entry = {"slot_order": [{"name": "Rage"}]}
     assert notes.canonicalise_community_items(entry, KNOWN) == 0

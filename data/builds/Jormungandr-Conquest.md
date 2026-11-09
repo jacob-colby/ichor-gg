@@ -70,14 +70,77 @@ builds:
       win_rate: 0.67
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.51
-    win_rate: 0.55
+    pick_rate: 0.52
+    win_rate: 0.53
   - name: Bluestone Pendant
     pick_rate: 0.2
     win_rate: 0.47
   - name: Sundering Axe
     pick_rate: 0.09
     win_rate: 0.25
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.45
+  - name: Phantom Shell
+    pick_rate: 0.32
+    win_rate: 0.64
+  - name: Sundering Arc
+    pick_rate: 0.23
+    win_rate: 0.45
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.52
+    win_rate: 0.53
+  - name: Bluestone Pendant
+    pick_rate: 0.2
+    win_rate: 0.47
+  - name: Sundering Axe
+    pick_rate: 0.09
+    win_rate: 0.25
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 1.0
+  - name: War Flag
+    pick_rate: 0.03
+    win_rate: 0.33
+  - name: Warrior's Axe
+    pick_rate: 0.03
+    win_rate: 0.33
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Selflessness
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.01
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.45
+  - name: Phantom Shell
+    pick_rate: 0.32
+    win_rate: 0.64
+  - name: Sundering Arc
+    pick_rate: 0.23
+    win_rate: 0.45
+  - name: Blink Rune
+    pick_rate: 0.03
+    win_rate: 0.67
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Purification Beads
+    pick_rate: 0.02
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/jormungandr/
   last_verified: '2026-11-08'
   god_win_rate: 0.5116279069767442
@@ -88,8 +151,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.72
+    win_rate: 0.5133
+    matches: 62
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.45
+    matches: 31
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -167,8 +240,18 @@ builds:
   - Freya's Tears
   - Shell of Rebuke
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.72
+    win_rate: 0.5133
+    matches: 62
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.45
+    matches: 31
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -245,6 +328,7 @@ builds:
   - Genji's Guard
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -321,6 +405,7 @@ builds:
   - Freya's Tears
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -397,6 +482,7 @@ builds:
   - Genji's Guard
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -474,6 +560,7 @@ builds:
   - Freya's Tears
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -550,6 +637,7 @@ builds:
   - Genji's Guard
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -627,6 +715,7 @@ builds:
   - Freya's Tears
   - Shell of Rebuke
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -703,4 +792,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

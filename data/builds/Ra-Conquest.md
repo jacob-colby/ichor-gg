@@ -73,11 +73,56 @@ builds:
     pick_rate: 0.41
     win_rate: 0.53
   - name: Archmage's Gem
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.54
   - name: Sands Of Time
     pick_rate: 0.17
     win_rate: 0.46
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.54
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.88
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.41
+    win_rate: 0.53
+  - name: Archmage's Gem
+    pick_rate: 0.24
+    win_rate: 0.54
+  - name: Sands Of Time
+    pick_rate: 0.17
+    win_rate: 0.46
+  - name: Conduit Gem
+    pick_rate: 0.15
+    win_rate: 0.39
+  - name: Selflessness
+    pick_rate: 0.01
+    win_rate: 0.6
+  - name: Hunter's Cowl
+    pick_rate: 0.007
+    win_rate: 1.0
+  - name: Leather Cowl
+    pick_rate: 0.005
+    win_rate: 0.5
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.46
+  - name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.54
+  - name: Phantom Shell
+    pick_rate: 0.02
+    win_rate: 0.88
+  - name: Blink Rune
+    pick_rate: 0.002
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ra/
   last_verified: '2026-11-08'
   god_win_rate: 0.5036319612590799
@@ -88,8 +133,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.58
+    win_rate: 0.5095
+    matches: 240
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.46
+    matches: 215
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +220,18 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.58
+    win_rate: 0.5095
+    matches: 240
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.52
+    win_rate: 0.46
+    matches: 215
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +307,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -317,6 +383,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -391,6 +458,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -467,6 +535,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -541,6 +610,7 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -615,6 +685,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -689,6 +760,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -764,6 +836,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: mana-stack
@@ -839,6 +912,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: burst
@@ -915,6 +989,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: bruiser
@@ -989,6 +1064,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: anti-tank
@@ -1064,6 +1140,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: attack-speed
@@ -1139,6 +1216,7 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: cooldown
@@ -1214,6 +1292,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 - source: suggested
   archetype: model
@@ -1289,5 +1368,6 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Thermotherapy
 ---

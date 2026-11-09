@@ -75,8 +75,86 @@ builds:
   - name: Heroism
     pick_rate: 0.32
     win_rate: 0.7
+  - name: Pendulum of the Ages
+    pick_rate: 0.06
+    win_rate: 0.6
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.47
+    win_rate: 0.57
+  - name: Blink Rune
+    pick_rate: 0.42
+    win_rate: 0.67
+  - name: Purification Beads
+    pick_rate: 0.06
+    win_rate: 0.56
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.43
+    win_rate: 0.57
+  - name: Heroism
+    pick_rate: 0.32
+    win_rate: 0.7
+  - name: Pendulum of the Ages
+    pick_rate: 0.06
+    win_rate: 0.6
+  - name: Sands Of Time
+    pick_rate: 0.05
+    win_rate: 0.64
+  - name: War Flag
+    pick_rate: 0.03
+    win_rate: 0.44
+  - name: Bumba's Hammer
+    pick_rate: 0.02
+    win_rate: 0.8
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.01
+    win_rate: 0.75
+  - name: Warrior's Axe
+    pick_rate: 0.01
+    win_rate: 0.75
   - name: Archmage's Gem
-    pick_rate: 0.07
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.007
+    win_rate: 0.0
+  - name: War Banner
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Death's Embrace
+    pick_rate: 0.004
+    win_rate: 0.0
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.004
+    win_rate: 1.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.47
+    win_rate: 0.57
+  - name: Blink Rune
+    pick_rate: 0.42
+    win_rate: 0.67
+  - name: Purification Beads
+    pick_rate: 0.06
+    win_rate: 0.56
+  - name: Aegis of Acceleration
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Agility Relic
+    pick_rate: 0.007
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/geb/
   last_verified: '2026-11-08'
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.75
+    win_rate: 0.6255
+    matches: 202
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.47
+    win_rate: 0.57
+    matches: 127
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +251,18 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Selflessness
+    upgrade: Heroism
+    pick_rate: 0.75
+    win_rate: 0.6255
+    matches: 202
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.47
+    win_rate: 0.57
+    matches: 127
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +336,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -311,6 +410,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -384,6 +484,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -456,6 +557,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -530,6 +632,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -606,6 +709,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -682,6 +786,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -756,4 +861,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

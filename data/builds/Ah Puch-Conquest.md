@@ -74,10 +74,61 @@ builds:
     win_rate: 0.57
   - name: Bluestone Pendant
     pick_rate: 0.23
-    win_rate: 0.52
-  - name: Archmage's Gem
+    win_rate: 0.5
+  - name: Pendulum of the Ages
     pick_rate: 0.09
+    win_rate: 0.6
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.37
+  - name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+  - name: Phantom Shell
+    pick_rate: 0.11
+    win_rate: 0.92
+  starter_sightings:
+  - name: Bluestone Brooch
+    pick_rate: 0.47
+    win_rate: 0.57
+  - name: Bluestone Pendant
+    pick_rate: 0.23
+    win_rate: 0.5
+  - name: Pendulum of the Ages
+    pick_rate: 0.09
+    win_rate: 0.6
+  - name: Sands Of Time
+    pick_rate: 0.06
+    win_rate: 0.43
+  - name: Blood-soaked Shroud
+    pick_rate: 0.04
+    win_rate: 0.2
+  - name: Conduit Gem
+    pick_rate: 0.04
+    win_rate: 0.6
+  - name: Vampiric Shroud
+    pick_rate: 0.04
+    win_rate: 0.75
+  - name: Archmage's Gem
+    pick_rate: 0.009
     win_rate: 0.0
+  - name: Bumba's Cudgel
+    pick_rate: 0.009
+    win_rate: 1.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.37
+  - name: Purification Beads
+    pick_rate: 0.42
+    win_rate: 0.62
+  - name: Phantom Shell
+    pick_rate: 0.11
+    win_rate: 0.92
+  - name: Sundering Arc
+    pick_rate: 0.009
+    win_rate: 1.0
   source_url: https://smitebrain.com/gods/ah-puch/
   last_verified: '2026-11-08'
   god_win_rate: 0.5462962962962963
@@ -88,8 +139,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.7
+    win_rate: 0.547
+    matches: 76
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.37
+    matches: 50
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +225,18 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.7
+    win_rate: 0.547
+    matches: 76
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.46
+    win_rate: 0.37
+    matches: 50
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -238,6 +309,7 @@ builds:
   - Book of Thoth
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -311,6 +383,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -385,6 +458,7 @@ builds:
   - Ancile
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -458,6 +532,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -529,6 +604,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -602,6 +678,7 @@ builds:
   - Chronos' Pendant
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -676,6 +753,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -750,6 +828,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -823,4 +902,5 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

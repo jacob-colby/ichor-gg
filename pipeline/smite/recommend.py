@@ -50,10 +50,25 @@ def _rationale(archetype, rows, profile):
     return text
 
 
+def note_paths(directory):
+    """`*.md` under `directory` in BYTE order of the file name, the same on
+    every platform.
+
+    `sorted()` on the paths themselves is not: `WindowsPath` compares
+    case-insensitively and `PosixPath` does not, so on Windows "Shield of the
+    Phoenix" sorted before "Shield Splitter" and on the Linux runner after it.
+    The item pool's order is the summation order of the gold fit, so the two
+    platforms' outputs differed in the last ulp, and that was enough to flip a
+    2dp `fit` on 10 committed notes and reorder `index.json` (measured
+    2026-11-08 by recomputing an untouched main on Windows). On Linux this is
+    exactly the order it always produced."""
+    return sorted(Path(directory).glob("*.md"), key=lambda p: p.name)
+
+
 def load_items():
     items_dir = DATA_ROOT / "Items"
     out = []
-    for path in sorted(items_dir.glob("*.md")):
+    for path in note_paths(items_dir):
         frontmatter, _ = notes.read_note(path)
         if frontmatter.get("name"):
             out.append(frontmatter)
@@ -73,7 +88,7 @@ def efficiency_report(items):
 
 def load_gods():
     out = []
-    for path in sorted((DATA_ROOT / "Gods").glob("*.md")):
+    for path in note_paths(DATA_ROOT / "Gods"):
         fm, _ = notes.read_note(path)
         if fm.get("name"):
             out.append(fm)
@@ -85,19 +100,56 @@ def load_build_note(god_name, mode="Conquest"):
     return fm or {"builds": []}
 
 
-def _stamp_community_starter(path, starter):
-    """Set `starter` on the community entry of a Build note (role-based, so the
-    community build shows the same recommended starter as the suggested ones)."""
-    if not starter:
-        return
+def community_record(god, god_build, mode, weights):
+    """`(community entry, borrowed_from)` for one god in one mode.
+
+    The mode's own entry when it has one. Otherwise, if the mode declares
+    `borrow_community`, the source mode's entry and that mode's name — Joust
+    and Arena have no community data (SmiteBrain is ranked Conquest only), so
+    both the Hybrid and the starter/relic pick read Conquest's and say so.
+    `(None, None)` when there is nothing to read."""
+    entry = next((b for b in (god_build or {}).get("builds", []) if b.get("source") == "community"),
+                 None)
+    borrow = ((weights.get("modes") or {}).get(mode.lower(), {}) or {}).get("borrow_community")
+    if entry or not borrow:
+        return entry, None
+    source_mode = borrow.get("from", "Conquest")
+    source = load_build_note(god["name"], source_mode)
+    entry = next((b for b in (source or {}).get("builds", []) if b.get("source") == "community"),
+                 None)
+    return entry, (source_mode if entry else None)
+
+
+def opening_choices(god, god_build, weights, mode, items_by_name):
+    """`(starter, relic)` stamped on every build of one god in one mode — the
+    community's most-picked starter path and base relic (`scoring.pick_starter`
+    has the rule and its evidence), borrowed from Conquest where the mode has no
+    record, and never an item the mode's shop lacks."""
+    entry, borrowed_from = community_record(god, god_build, mode, weights)
+    excluded = set(scoring.resolve_profile(weights, mode).get("excluded_items") or ())
+    starter = scoring.pick_starter(god, weights, entry, items_by_name, excluded, borrowed_from)
+    relic = scoring.pick_relic(entry, items_by_name, excluded, borrowed_from)
+    return starter, relic
+
+
+def _stamp_community_choices(path, starter, relic):
+    """Set `starter` and `relic` on the community entry of a Build note, so the
+    community build shows the same opening as the suggested ones. A `relic`
+    left over from an earlier stamp is removed when there is none now."""
     fm, body = notes.read_note(path)
     if not fm:
         return
     changed = False
     for b in fm.get("builds", []):
-        if b.get("source") == "community":
-            b["starter"] = starter
-            changed = True
+        if b.get("source") != "community":
+            continue
+        for key, value in (("starter", starter), ("relic", relic)):
+            if value and b.get(key) != value:
+                b[key] = value
+                changed = True
+            elif not value and key in b:
+                del b[key]
+                changed = True
     if changed:
         notes.write_note(path, fm, body)
 
@@ -118,7 +170,8 @@ def god_report(god, items, god_build, weights, tags_map):
 
 
 def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
-           flex_count, starter, aspect_name, fun=False, extra=None, positions=None):
+           flex_count, starter, aspect_name, fun=False, extra=None, positions=None,
+           relic=None):
     """One suggested build entry from an already-assembled core.
 
     Extracted so every archetype is packaged identically — `model` differs from
@@ -154,6 +207,7 @@ def _entry(archetype, core, rows, items_by_name, tags_map, weights, profile,
         **(extra or {}),
         **({"fun": True} if fun else {}),
         **({"starter": starter} if starter else {}),
+        **({"relic": relic} if relic else {}),
         **({"aspect": aspect_name} if aspect_name else {}),
     }
 
@@ -180,7 +234,7 @@ def assemble_flavor_core(god, items, god_build, weights, tags_map, mode, eff_sco
 
 def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                      items_by_name, starter, flex_count, aspect_overlay, aspect_name,
-                     gold_values=None):
+                     gold_values=None, relic=None):
     entries = []
     core_rows = core_profile = None
     # Buy order reads THIS mode's own community record and nothing else.
@@ -212,7 +266,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             core_rows, core_profile = rows, profile
         entries.append(_entry(archetype, core, rows, items_by_name, tags_map,
                               weights, profile, flex_count, starter, aspect_name,
-                              fun=bool(cfg.get("fun")), positions=positions))
+                              fun=bool(cfg.get("fun")), positions=positions, relic=relic))
 
     # The model's own answer, with the meta switched off.
     #
@@ -240,17 +294,13 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
                                      signals=assemble.quality_signals(core_profile["signals"])))
         entries.append(_entry("model", model_core, model_rows, items_by_name,
                               tags_map, weights, core_profile, flex_count,
-                              starter, aspect_name, positions=positions))
+                              starter, aspect_name, positions=positions, relic=relic))
 
         # And the hybrid: that same core, corrected only where the model is
         # near-indifferent and the community's record is strong enough to
         # override it. `hybrid_core` returns the model core unchanged when
         # there is nothing to correct with — a duplicate build, so it isn't
         # emitted.
-        community_entry = next(
-            (b for b in (god_build or {}).get("builds", []) if b.get("source") == "community"),
-            None)
-
         # A mode with no community data of its own may BORROW another's. Joust
         # and Arena had none, so this build simply did not exist there — 89 of
         # 89 gods in each got the model core back and nothing was emitted.
@@ -258,20 +308,10 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
         # just evidence about a different game, so the parts that do not
         # transfer are rejected by tag (see `borrow_community` in
         # _weights.yaml) and the result is labelled as borrowed rather than
-        # passed off as this mode's own.
+        # passed off as this mode's own (`community_record`).
+        community_entry, borrowed_from = community_record(god, god_build, mode, weights)
         borrow = ((weights.get("modes") or {}).get(mode.lower(), {}) or {}).get("borrow_community")
-        borrowed_from = None
-        if not community_entry and borrow:
-            source_mode = borrow.get("from", "Conquest")
-            source = load_build_note(god["name"], source_mode)
-            community_entry = next(
-                (b for b in (source or {}).get("builds", []) if b.get("source") == "community"),
-                None)
-            if community_entry:
-                borrowed_from = source_mode
-            reject_tags = borrow.get("reject_tags") or []
-        else:
-            reject_tags = []
+        reject_tags = (borrow.get("reject_tags") or []) if borrowed_from else []
 
         hy_core, swaps = hybrid.hybrid_core(model_core, model_rows, community_entry,
                                             items_by_name, weights, max_lifesteal=max_ls,
@@ -284,7 +324,7 @@ def _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
             entries.append(_entry("hybrid", hy_core, model_rows, items_by_name,
                                   tags_map, weights, core_profile, flex_count,
                                   starter, aspect_name, extra=extra,
-                                  positions=positions))
+                                  positions=positions, relic=relic))
     return entries
 
 
@@ -408,17 +448,19 @@ def write_team_shares(derived, path=TEAM_SHARES_PATH):
 def build_suggested_entries(god, items, god_build, weights, tags_map, mode="Conquest"):
     eff_scores, gold_values = efficiency.efficiency_scores(items)
     items_by_name = {it["name"]: it for it in items}
-    starter = scoring.pick_starter(god, weights)
+    starter, relic = opening_choices(god, god_build, weights, mode, items_by_name)
     flex_count = (weights.get("build_order") or {}).get("flex_count", 2)
     entries = _build_entry_set(god, items, god_build, weights, tags_map, mode, eff_scores,
-                               items_by_name, starter, flex_count, None, None, gold_values)
+                               items_by_name, starter, flex_count, None, None, gold_values,
+                               relic=relic)
     aspect_overlay = scoring.aspect_overlay(god, items, weights)
     god_aspects = god.get("aspects") or []
     if aspect_overlay and god_aspects:
         aspect_name = god_aspects[0].get("name")
         aspect_entries = _build_entry_set(god, items, god_build, weights, tags_map, mode,
                                           eff_scores, items_by_name, starter, flex_count,
-                                          aspect_overlay, aspect_name, gold_values)
+                                          aspect_overlay, aspect_name, gold_values,
+                                          relic=relic)
         # A DERIVED overlay ships only if it moves a build. Its weights are
         # real, but a family whose every six matches the base family's tells
         # the toggle's reader the aspect changes their build when it does not
@@ -496,9 +538,10 @@ def main(argv=None):
                     notes.merge_suggested_entries(
                         BUILDS_ROOT / f"{god['name']}-{mode}.md", god["name"], mode, entries)
                 # Conquest has the community build note; stamp the same
-                # role-based starter onto its community entry.
-                _stamp_community_starter(BUILDS_ROOT / f"{god['name']}-Conquest.md",
-                                         scoring.pick_starter(god, weights))
+                # starter and relic onto its community entry.
+                _stamp_community_choices(BUILDS_ROOT / f"{god['name']}-Conquest.md",
+                                         *opening_choices(god, build, weights, "Conquest",
+                                                          {it["name"]: it for it in items}))
         print("Wrote per-god scoring reports")
         from smite import validate
         per_god, agg = validate.compute(items=items, weights=weights, tags_map=tags_map)

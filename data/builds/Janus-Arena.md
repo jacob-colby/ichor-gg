@@ -70,6 +70,18 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
+    pick_rate: 0.84
+    win_rate: 0.5432
+    matches: 411
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.55
+    matches: 279
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.96
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.82
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,4 +543,5 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 ---

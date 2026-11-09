@@ -195,6 +195,9 @@ Each of these has its evidence in the named module.
 | The draft clamp bounds the **stack**, not the strongest channel | `draftBuild.adaptedCore` | Clamping the sum made 2 healers and 4 healers produce the identical build; anti-heal adoption 16/31 → 31/31 with every other comp unchanged |
 | A relic answer is called out **on its own line** | `draft.relics` in `_weights.yaml` | It does take one of the six, but the model can't price a `+7.5% of all Stats` multiplier, so it never wins a slot on score and has to be named explicitly |
 | Joust/Arena **borrow** Conquest's community record for the Hybrid | `modes.<mode>.borrow_community` | No record of their own meant no Hybrid at all (89/89 gods returned the model core). Borrowed minus `stacking` and `ward-economy`, and disclosed as borrowed |
+| The starter is the community's **most-picked PATH**, and the role table is only the fallback | `scoring.pick_starter` | The five-row table matched the community's #1 path on 23 of 95 gods (Jungle 1/18, Solo 1/19, Support 0/15). A path, not an item: each player holds the base OR its upgrade, so the ends sum and an item's own win rate is survivorship (Nox's Sands of Time 18%, its upgrade 57%). Most-picked, not best-evidence: the Wilson-ranked alternatives were mostly ROLE swaps, because the record pools every role a god is played in (Jacob, 2026-11-08) |
+| The relic is the community's **most-picked free base relic**, with no fallback | `scoring.pick_relic` | There was no rule to fall back to, and a guessed relic would read as a recommendation. Win-rate gaps between relics showed no item effect (Aegis 54.5% vs Beads 53.5% pooled, ahead on 51 of 95). Joust and Arena borrow Conquest's starter and relic like the Hybrid does, and the stamp says `borrowed_from` |
+| None of the opening enters a calculation | `scoring.pick_starter` | Tier-1 starters sit out `efficiency`, free relics are not `is_buildable`, and assembly, `combat`, `build_quality` and `damage_value` read neither. Counting the starter's stats would credit both sides of a comparison with the same item, since the community build gets the same most-picked path |
 | The **Balanced** tab is hidden when it equals Model | `builds.dedupeCoreAgainstModel` | Joust and Arena zero `win` and `pick`, so the blend IS the model build — byte-identical on 89/89, with the duplicate claiming a blend that never happened |
 | The aspect control is an **orange hexagon on the portrait** | `AspectBadge.tsx` | Where SMITE draws it, so it is self-describing; orange rather than gold keeps the Torchlight Rule intact |
 | An aspect with no overlay **falls back** to the base build | `DetailPanel.aspectFamily` | 72 gods have an aspect, 7 have a scoring overlay; filtering strictly blanked the model side for the other 65 |
@@ -3591,7 +3594,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1468) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1490) ·
 `cd viewer && npm test -- --run` (1016).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
@@ -3699,7 +3702,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | | |
 |---|---|
 | Gods tracked | 95 of 98 on the roster (2026-11-03; 99 on 2026-11-02 — the roster count fell by one upstream). Ravana was added by hand 2026-08-29; Nike, Hachiman, Kuzenbo and Hel were the first added unattended, by `smite.new_entities` on a runner. The other five are on the grid without a usable page: Kumbhakarna, Heimdallr and Maman Brigitte 404, and Nox's pre-release page reads every base stat as 0.0, so it is refused until it fills in. The grid leads the wiki's own content, so this row reads N of N+k by design. `data/_new_entities.json` says which are waiting and why |
-| Items | 228 |
+| Items | 233 (2026-11-08: the five base relics the wiki path had never read — Purification Beads, Aegis of Acceleration, Phantom Shell, Sundering Arc, Agility Relic — added by `smite.new_entities` once it read `Relic_` index icons; none is buildable, and no core moved. Was 228) |
 | Build groups | 285 (95 gods × 3 modes) |
 | Build flavors | core, model, hybrid, burst, bruiser, anti-tank, attack-speed, cooldown, crit, strength, intelligence, str-int, mana-stack |
 | Conquest gods placed | <!--now-->95 / 95<!--/now--> (2026-11-06, the #117 refresh to the OB47 window, which changed no code, weights or tags). Was 94 / 95: Nox had no community matches in the OB46 window and has 406 in this one, enough for a band (C). Tracks the DATA |
@@ -3714,7 +3717,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred. (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1468 pipeline · 1016 viewer |
+| Tests | 1490 pipeline · 1016 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

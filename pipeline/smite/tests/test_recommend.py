@@ -112,15 +112,97 @@ def test_build_suggested_entries_stamps_starter():
     assert all("starter" in e for e in entries)
 
 
-def test_stamp_community_starter_sets_starter_on_community(tmp_path):
+def test_build_suggested_entries_without_a_record_falls_back_to_the_table():
+    god = {"name": "Chiron", "damage_type": "physical", "role": "Carry",
+           "specializations": ["Sharpshooter"]}
+    items = [{"name": f"I{i}", "tier": 3, "cost": 2500, "stats": {"Strength": "50"}} for i in range(7)]
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(god, items, {"builds": []}, weights, {}, "Conquest")
+    assert entries[0]["starter"]["basis"] == "rule"
+    assert not any("relic" in e for e in entries)  # no record, no relic: never a guess
+
+
+def test_stamp_community_choices_sets_starter_and_relic_on_community(tmp_path):
     from smite import recommend, notes
     path = tmp_path / "Chiron-Conquest.md"
     notes.write_note(path, {"type": "smite-build", "god": "Chiron", "mode": "Conquest",
         "builds": [{"source": "community", "slot_order": [{"name": "X", "pick_rate": 0.5, "win_rate": 0.5}]}]}, "")
-    recommend._stamp_community_starter(path, {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow"})
+    starter = {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow", "basis": "community"}
+    relic = {"name": "Purification Beads", "basis": "community"}
+    recommend._stamp_community_choices(path, starter, relic)
     fm, _ = notes.read_note(path)
     comm = next(b for b in fm["builds"] if b["source"] == "community")
-    assert comm["starter"] == {"base": "Gilded Arrow", "upgrade": "Sharpshooter's Arrow"}
+    assert comm["starter"] == starter and comm["relic"] == relic
+    # A relic from an earlier stamp does not outlive the record behind it.
+    recommend._stamp_community_choices(path, starter, None)
+    comm = next(b for b in notes.read_note(path)[0]["builds"] if b["source"] == "community")
+    assert "relic" not in comm
+
+
+# ── The opening: most-picked starter path and relic (2026-11-08) ─────────
+
+def _opening_pool():
+    """Seven tier-3 items to assemble from, two starter paths, two free base
+    relics and one paid upgrade."""
+    items = [{"name": f"I{i}", "tier": 3, "cost": 2500, "stats": {"Intelligence": "70"}} for i in range(7)]
+    items += [
+        {"name": "Sands Of Time", "tier": 1, "cost": 700, "stats": {"Mana": "100"},
+         "builds_from": [], "builds_into": ["Pendulum of the Ages"]},
+        {"name": "Pendulum of the Ages", "tier": 2, "cost": 1500, "stats": {"Mana": "200"},
+         "builds_from": ["Sands Of Time"], "builds_into": []},
+        {"name": "Conduit Gem", "tier": 1, "cost": 700, "stats": {"Intelligence": "10"},
+         "builds_from": [], "builds_into": ["Archmage's Gem"]},
+        {"name": "Archmage's Gem", "tier": 2, "cost": 1500, "stats": {"Intelligence": "30"},
+         "builds_from": ["Conduit Gem"], "builds_into": []},
+        {"name": "Purification Beads", "tier": "Relic", "cost": 0, "stats": {}},
+        {"name": "Aegis of Acceleration", "tier": "Relic", "cost": 0, "stats": {}},
+        {"name": "Time-lock Aegis", "tier": "Relic", "cost": 2500, "stats": {"Physical Protection": "15"}},
+    ]
+    return items
+
+
+def _ra_record():
+    """Ra's shape at ob47: the most-held ITEM is Pendulum (41%), the most-held
+    PATH is Sands -> Pendulum (41% + 17%)."""
+    return {"source": "community", "god_matches_played": 400, "god_win_rate": 0.5,
+            "starter_sightings": [
+                {"name": "Pendulum of the Ages", "pick_rate": 0.41, "win_rate": 0.53},
+                {"name": "Archmage's Gem", "pick_rate": 0.24, "win_rate": 0.54},
+                {"name": "Sands Of Time", "pick_rate": 0.17, "win_rate": 0.46},
+                {"name": "Conduit Gem", "pick_rate": 0.15, "win_rate": 0.39}],
+            "relic_sightings": [
+                {"name": "Purification Beads", "pick_rate": 0.52, "win_rate": 0.46},
+                {"name": "Aegis of Acceleration", "pick_rate": 0.46, "win_rate": 0.54}]}
+
+
+RA = {"name": "Ra", "damage_type": "magical", "role": "Mid", "specializations": ["Sniper"]}
+RA_STARTER = {"base": "Sands Of Time", "upgrade": "Pendulum of the Ages", "basis": "community",
+              "pick_rate": 0.58, "win_rate": round((0.41 * 0.53 + 0.17 * 0.46) / 0.58, 4),
+              "matches": 232}
+RA_RELIC = {"name": "Purification Beads", "pick_rate": 0.52, "win_rate": 0.46, "matches": 208,
+            "basis": "community"}
+
+
+def test_every_archetype_carries_the_communitys_most_picked_path_and_relic():
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    entries = recommend.build_suggested_entries(RA, _opening_pool(), {"builds": [_ra_record()]},
+                                                weights, {}, "Conquest")
+    assert len(entries) > 1
+    for e in entries:
+        assert e["starter"] == RA_STARTER and e["relic"] == RA_RELIC
+
+
+def test_joust_and_arena_borrow_conquests_opening_and_say_so(monkeypatch):
+    monkeypatch.setattr(recommend, "load_build_note",
+                        lambda name, mode="Conquest": {"builds": [_ra_record()]} if mode == "Conquest"
+                        else {"builds": []})
+    weights = scoring.load_weights(recommend.WEIGHTS_PATH)
+    for mode in ("Joust", "Arena"):
+        entries = recommend.build_suggested_entries(RA, _opening_pool(), {"builds": []},
+                                                    weights, {}, mode)
+        for e in entries:
+            assert e["starter"] == {**RA_STARTER, "borrowed_from": "Conquest"}
+            assert e["relic"] == {**RA_RELIC, "borrowed_from": "Conquest"}
 
 
 def test_suggested_entries_have_buy_order_flex_and_crit_core():

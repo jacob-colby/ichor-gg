@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.98
   starter: &id001
-    base: Bumba's Golden Dagger
-    upgrade: Bumba's Spear
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.4
+    win_rate: 0.4905
+    matches: 134
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.43
+    win_rate: 0.48
+    matches: 144
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.77
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.76
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.55
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.64
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.85
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,4 +543,5 @@ builds:
       pick: 0.0
       fit: 0.98
   starter: *id001
+  relic: *id002
 ---

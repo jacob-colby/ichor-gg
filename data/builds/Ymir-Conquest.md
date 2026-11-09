@@ -70,14 +70,101 @@ builds:
       win_rate: 0.57
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.31
-    win_rate: 0.62
+    pick_rate: 0.32
+    win_rate: 0.63
   - name: Leather Cowl
     pick_rate: 0.25
     win_rate: 0.48
   - name: War Banner
     pick_rate: 0.1
     win_rate: 0.65
+  community_relics:
+  - name: Agility Relic
+    pick_rate: 0.55
+    win_rate: 0.56
+  - name: Phantom Shell
+    pick_rate: 0.18
+    win_rate: 0.61
+  - name: Blink Rune
+    pick_rate: 0.15
+    win_rate: 0.61
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.32
+    win_rate: 0.63
+  - name: Leather Cowl
+    pick_rate: 0.25
+    win_rate: 0.48
+  - name: War Banner
+    pick_rate: 0.1
+    win_rate: 0.65
+  - name: War Flag
+    pick_rate: 0.1
+    win_rate: 0.57
+  - name: Selflessness
+    pick_rate: 0.05
+    win_rate: 0.44
+  - name: Heroism
+    pick_rate: 0.04
+    win_rate: 0.78
+  - name: Death's Embrace
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Gilded Arrow
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.63
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.45
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.008
+    win_rate: 0.5
+  - name: Bluestone Pendant
+    pick_rate: 0.008
+    win_rate: 0.0
+  - name: Bumba's Hammer
+    pick_rate: 0.008
+    win_rate: 0.75
+  - name: Bumba's Cudgel
+    pick_rate: 0.006
+    win_rate: 0.67
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.006
+    win_rate: 0.33
+  - name: Archmage's Gem
+    pick_rate: 0.004
+    win_rate: 0.5
+  - name: Pendulum of the Ages
+    pick_rate: 0.002
+    win_rate: 1.0
+  relic_sightings:
+  - name: Agility Relic
+    pick_rate: 0.55
+    win_rate: 0.56
+  - name: Phantom Shell
+    pick_rate: 0.18
+    win_rate: 0.61
+  - name: Blink Rune
+    pick_rate: 0.15
+    win_rate: 0.61
+  - name: Purification Beads
+    pick_rate: 0.04
+    win_rate: 0.24
+  - name: Sundering Arc
+    pick_rate: 0.04
+    win_rate: 0.65
+  - name: Aegis of Acceleration
+    pick_rate: 0.03
+    win_rate: 0.38
   source_url: https://smitebrain.com/gods/ymir/
   last_verified: '2026-11-08'
   god_win_rate: 0.563169164882227
@@ -88,8 +175,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.57
+    win_rate: 0.5642
+    matches: 266
+    basis: community
+  relic:
+    name: Agility Relic
+    pick_rate: 0.55
+    win_rate: 0.56
+    matches: 257
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -163,8 +260,18 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.57
+    win_rate: 0.5642
+    matches: 266
+    basis: community
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.55
+    win_rate: 0.56
+    matches: 257
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -238,6 +345,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -308,6 +416,7 @@ builds:
       pick: 0.0
       fit: 0.44
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -380,6 +489,7 @@ builds:
   community_ordered:
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -454,6 +564,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -529,6 +640,7 @@ builds:
   - Berserker's Shield
   - Shogun's Ofuda
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -606,6 +718,7 @@ builds:
   - Freya's Tears
   - Shogun's Ofuda
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -679,4 +792,5 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

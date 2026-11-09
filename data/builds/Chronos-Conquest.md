@@ -70,14 +70,92 @@ builds:
       win_rate: 0.6
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.48
-    win_rate: 0.53
+    pick_rate: 0.49
+    win_rate: 0.54
   - name: Sands Of Time
     pick_rate: 0.21
     win_rate: 0.53
   - name: Archmage's Gem
     pick_rate: 0.06
     win_rate: 0.36
+  community_relics:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.47
+  - name: Phantom Shell
+    pick_rate: 0.04
+    win_rate: 0.71
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.49
+    win_rate: 0.54
+  - name: Sands Of Time
+    pick_rate: 0.21
+    win_rate: 0.53
+  - name: Archmage's Gem
+    pick_rate: 0.06
+    win_rate: 0.36
+  - name: Conduit Gem
+    pick_rate: 0.06
+    win_rate: 0.42
+  - name: Death's Embrace
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.03
+    win_rate: 0.6
+  - name: Hunter's Cowl
+    pick_rate: 0.03
+    win_rate: 0.8
+  - name: Bumba's Cudgel
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Leather Cowl
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: War Banner
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Bluestone Brooch
+    pick_rate: 0.005
+    win_rate: 1.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: Sundering Axe
+    pick_rate: 0.005
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.005
+    win_rate: 0.0
+  relic_sightings:
+  - name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.36
+    win_rate: 0.47
+  - name: Phantom Shell
+    pick_rate: 0.04
+    win_rate: 0.71
+  - name: Agility Relic
+    pick_rate: 0.02
+    win_rate: 1.0
+  - name: Blink Rune
+    pick_rate: 0.02
+    win_rate: 0.75
   source_url: https://smitebrain.com/gods/chronos/
   last_verified: '2026-11-08'
   god_win_rate: 0.5208333333333334
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.7
+    win_rate: 0.537
+    matches: 134
+    basis: community
+  relic:
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.52
+    matches: 109
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +253,18 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.7
+    win_rate: 0.537
+    matches: 134
+    basis: community
+  relic: &id002
+    name: Purification Beads
+    pick_rate: 0.57
+    win_rate: 0.52
+    matches: 109
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -242,6 +340,7 @@ builds:
   - Rod of Tahuti
   - Nimble Ring
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -316,6 +415,7 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -388,6 +488,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -462,6 +563,7 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -535,6 +637,7 @@ builds:
   - Rod of Tahuti
   - Nimble Ring
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -608,6 +711,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -683,6 +787,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -759,6 +864,7 @@ builds:
   - Rod of Tahuti
   - Nimble Ring
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -833,6 +939,7 @@ builds:
   - Nimble Ring
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -906,6 +1013,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: mana-stack
@@ -979,6 +1087,7 @@ builds:
   - Book of Thoth
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: burst
@@ -1054,6 +1163,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: bruiser
@@ -1127,6 +1237,7 @@ builds:
   community_ordered:
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: anti-tank
@@ -1201,6 +1312,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: attack-speed
@@ -1274,6 +1386,7 @@ builds:
   - Rod of Tahuti
   - Nimble Ring
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: cooldown
@@ -1348,6 +1461,7 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: strength
@@ -1424,6 +1538,7 @@ builds:
   - Book of Thoth
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: str-int
@@ -1500,6 +1615,7 @@ builds:
   - Book of Thoth
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 - source: suggested
   archetype: model
@@ -1574,5 +1690,6 @@ builds:
   - Book of Thoth
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
   aspect: Aspect of Relativity
 ---

@@ -71,13 +71,88 @@ builds:
   community_starters:
   - name: Bluestone Pendant
     pick_rate: 0.4
-    win_rate: 0.46
+    win_rate: 0.45
   - name: Bluestone Brooch
     pick_rate: 0.3
-    win_rate: 0.7
+    win_rate: 0.71
   - name: Heroism
     pick_rate: 0.08
     win_rate: 0.46
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.52
+  - name: Blink Rune
+    pick_rate: 0.29
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.17
+    win_rate: 0.54
+  starter_sightings:
+  - name: Bluestone Pendant
+    pick_rate: 0.4
+    win_rate: 0.45
+  - name: Bluestone Brooch
+    pick_rate: 0.3
+    win_rate: 0.71
+  - name: Heroism
+    pick_rate: 0.08
+    win_rate: 0.46
+  - name: Selflessness
+    pick_rate: 0.08
+    win_rate: 0.54
+  - name: Archmage's Gem
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Conduit Gem
+    pick_rate: 0.02
+    win_rate: 0.4
+  - name: War Banner
+    pick_rate: 0.02
+    win_rate: 0.83
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 0.33
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.29
+  - name: Blood-soaked Shroud
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.5
+  - name: Pendulum of the Ages
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Vampiric Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.52
+  - name: Blink Rune
+    pick_rate: 0.29
+    win_rate: 0.6
+  - name: Sundering Arc
+    pick_rate: 0.17
+    win_rate: 0.54
+  - name: Purification Beads
+    pick_rate: 0.07
+    win_rate: 0.38
+  - name: Aegis of Acceleration
+    pick_rate: 0.04
+    win_rate: 0.67
+  - name: Agility Relic
+    pick_rate: 0.003
+    win_rate: 0.0
   source_url: https://smitebrain.com/gods/xing-tian/
   last_verified: '2026-11-08'
   god_win_rate: 0.54
@@ -88,8 +163,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.7
+    win_rate: 0.5614
+    matches: 210
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.52
+    matches: 129
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +249,18 @@ builds:
   - Freya's Tears
   - Shifter's Shield
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.7
+    win_rate: 0.5614
+    matches: 210
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.43
+    win_rate: 0.52
+    matches: 129
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +335,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -313,6 +409,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -385,6 +482,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -459,6 +557,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -535,6 +634,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -611,6 +711,7 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -685,4 +786,5 @@ builds:
   - Genji's Guard
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

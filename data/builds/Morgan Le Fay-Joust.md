@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.56
+    win_rate: 0.4748
+    matches: 99
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.32
+    win_rate: 0.49
+    matches: 56
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.92
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -525,6 +543,7 @@ builds:
       pick: 0.0
       fit: 0.93
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -590,6 +609,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -655,6 +675,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -720,6 +741,7 @@ builds:
       pick: 0.0
       fit: 0.95
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: mana-stack
@@ -786,6 +808,7 @@ builds:
       pick: 0.0
       fit: 0.63
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: burst
@@ -852,6 +875,7 @@ builds:
       pick: 0.0
       fit: 0.54
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: bruiser
@@ -918,6 +942,7 @@ builds:
       pick: 0.0
       fit: 0.9
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: anti-tank
@@ -984,6 +1009,7 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: attack-speed
@@ -1050,6 +1076,7 @@ builds:
       pick: 0.0
       fit: 0.7
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: cooldown
@@ -1116,6 +1143,7 @@ builds:
       pick: 0.0
       fit: 0.97
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: strength
@@ -1182,6 +1210,7 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: str-int
@@ -1248,6 +1277,7 @@ builds:
       pick: 0.0
       fit: 0.67
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 - source: suggested
   archetype: model
@@ -1314,5 +1344,6 @@ builds:
       pick: 0.0
       fit: 0.95
   starter: *id001
+  relic: *id002
   aspect: Aspect of the Cursed Crown
 ---

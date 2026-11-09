@@ -78,6 +78,66 @@ builds:
   - name: Bluestone Pendant
     pick_rate: 0.06
     win_rate: 0.4
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.67
+  - name: Blink Rune
+    pick_rate: 0.18
+    win_rate: 0.38
+  - name: Sundering Arc
+    pick_rate: 0.18
+    win_rate: 0.31
+  starter_sightings:
+  - name: Bumba's Hammer
+    pick_rate: 0.47
+    win_rate: 0.59
+  - name: Bumba's Cudgel
+    pick_rate: 0.33
+    win_rate: 0.28
+  - name: Bluestone Pendant
+    pick_rate: 0.06
+    win_rate: 0.4
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Sundering Axe
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: War Banner
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: Hunter's Cowl
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Sands Of Time
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Selflessness
+    pick_rate: 0.01
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.67
+  - name: Blink Rune
+    pick_rate: 0.18
+    win_rate: 0.38
+  - name: Sundering Arc
+    pick_rate: 0.18
+    win_rate: 0.31
+  - name: Agility Relic
+    pick_rate: 0.15
+    win_rate: 0.54
+  - name: Aegis of Acceleration
+    pick_rate: 0.14
+    win_rate: 0.42
+  - name: Purification Beads
+    pick_rate: 0.11
+    win_rate: 0.3
   source_url: https://smitebrain.com/gods/hercules/
   last_verified: '2026-11-08'
   god_win_rate: 0.45454545454545453
@@ -88,8 +148,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.8
+    win_rate: 0.4621
+    matches: 70
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.67
+    matches: 21
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -164,8 +234,18 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.8
+    win_rate: 0.4621
+    matches: 70
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.67
+    matches: 21
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -240,6 +320,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -315,6 +396,7 @@ builds:
   - Freya's Tears
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -388,6 +470,7 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -464,6 +547,7 @@ builds:
   - Freya's Tears
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -539,6 +623,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: core
   slot_order:
@@ -613,6 +698,7 @@ builds:
   - Breastplate of Valor
   - Freya's Tears
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: bruiser
@@ -688,6 +774,7 @@ builds:
   - Breastplate of Valor
   - Freya's Tears
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: anti-tank
@@ -762,6 +849,7 @@ builds:
   - Kinetic Cuirass
   - Breastplate of Valor
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: attack-speed
@@ -836,6 +924,7 @@ builds:
   - Breastplate of Valor
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: cooldown
@@ -913,6 +1002,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 - source: suggested
   archetype: model
@@ -987,5 +1077,6 @@ builds:
   - Genji's Guard
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
   aspect: Aspect of Preservation
 ---

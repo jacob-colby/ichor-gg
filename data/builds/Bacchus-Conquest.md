@@ -75,9 +75,96 @@ builds:
   - name: Leather Cowl
     pick_rate: 0.26
     win_rate: 0.62
+  - name: Bluestone Pendant
+    pick_rate: 0.07
+    win_rate: 0.47
+  community_relics:
+  - name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.64
+  - name: Phantom Shell
+    pick_rate: 0.14
+    win_rate: 0.52
+  - name: Purification Beads
+    pick_rate: 0.14
+    win_rate: 0.53
+  starter_sightings:
+  - name: Hunter's Cowl
+    pick_rate: 0.41
+    win_rate: 0.63
+  - name: Leather Cowl
+    pick_rate: 0.26
+    win_rate: 0.62
+  - name: Bluestone Pendant
+    pick_rate: 0.07
+    win_rate: 0.47
+  - name: Death's Embrace
+    pick_rate: 0.04
+    win_rate: 0.5
+  - name: War Banner
+    pick_rate: 0.04
+    win_rate: 0.74
+  - name: War Flag
+    pick_rate: 0.04
+    win_rate: 0.35
+  - name: Bluestone Brooch
+    pick_rate: 0.03
+    win_rate: 0.56
+  - name: Heroism
+    pick_rate: 0.02
+    win_rate: 0.77
+  - name: Selflessness
+    pick_rate: 0.02
+    win_rate: 0.42
+  - name: Warrior's Axe
+    pick_rate: 0.02
+    win_rate: 0.6
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.43
   - name: Bumba's Cudgel
-    pick_rate: 0.09
+    pick_rate: 0.009
     win_rate: 0.4
+  - name: Bumba's Hammer
+    pick_rate: 0.007
+    win_rate: 0.5
+  - name: Conduit Gem
+    pick_rate: 0.007
+    win_rate: 0.75
+  - name: Death's Toll
+    pick_rate: 0.007
+    win_rate: 0.75
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Gilded Arrow
+    pick_rate: 0.002
+    win_rate: 0.0
+  - name: Sharpshooter's Arrow
+    pick_rate: 0.002
+    win_rate: 0.0
+  relic_sightings:
+  - name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.64
+  - name: Phantom Shell
+    pick_rate: 0.14
+    win_rate: 0.52
+  - name: Purification Beads
+    pick_rate: 0.14
+    win_rate: 0.53
+  - name: Sundering Arc
+    pick_rate: 0.11
+    win_rate: 0.62
+  - name: Aegis of Acceleration
+    pick_rate: 0.06
+    win_rate: 0.47
+  - name: Blink Rune
+    pick_rate: 0.04
+    win_rate: 0.63
   source_url: https://smitebrain.com/gods/bacchus/
   last_verified: '2026-11-08'
   god_win_rate: 0.5935727788279773
@@ -88,8 +175,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.67
+    win_rate: 0.6261
+    matches: 354
+    basis: community
+  relic:
+    name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.64
+    matches: 270
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -166,8 +263,18 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.67
+    win_rate: 0.6261
+    matches: 354
+    basis: community
+  relic: &id002
+    name: Agility Relic
+    pick_rate: 0.51
+    win_rate: 0.64
+    matches: 270
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -245,6 +352,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -320,6 +428,7 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +504,7 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -472,6 +582,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -548,6 +659,7 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -625,6 +737,7 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -702,4 +815,5 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+  relic: *id002
 ---

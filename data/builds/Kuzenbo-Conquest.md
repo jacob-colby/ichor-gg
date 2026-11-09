@@ -70,14 +70,92 @@ builds:
       win_rate: 0.5
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.21
-    win_rate: 0.32
+    pick_rate: 0.22
+    win_rate: 0.33
   - name: Bluestone Brooch
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.51
   - name: Selflessness
     pick_rate: 0.11
     win_rate: 0.39
+  community_relics:
+  - name: Phantom Shell
+    pick_rate: 0.38
+    win_rate: 0.43
+  - name: Sundering Arc
+    pick_rate: 0.29
+    win_rate: 0.59
+  - name: Blink Rune
+    pick_rate: 0.12
+    win_rate: 0.5
+  starter_sightings:
+  - name: Bluestone Pendant
+    pick_rate: 0.22
+    win_rate: 0.33
+  - name: Bluestone Brooch
+    pick_rate: 0.17
+    win_rate: 0.51
+  - name: Selflessness
+    pick_rate: 0.11
+    win_rate: 0.39
+  - name: Sundering Axe
+    pick_rate: 0.09
+    win_rate: 0.84
+  - name: Warrior's Axe
+    pick_rate: 0.09
+    win_rate: 0.53
+  - name: Heroism
+    pick_rate: 0.07
+    win_rate: 0.71
+  - name: War Flag
+    pick_rate: 0.06
+    win_rate: 0.53
+  - name: Archmage's Gem
+    pick_rate: 0.05
+    win_rate: 0.41
+  - name: War Banner
+    pick_rate: 0.05
+    win_rate: 0.56
+  - name: Conduit Gem
+    pick_rate: 0.04
+    win_rate: 0.46
+  - name: Pendulum of the Ages
+    pick_rate: 0.03
+    win_rate: 0.78
+  - name: Bumba's Cudgel
+    pick_rate: 0.01
+    win_rate: 0.0
+  - name: Blood-soaked Shroud
+    pick_rate: 0.009
+    win_rate: 0.67
+  - name: Sands Of Time
+    pick_rate: 0.006
+    win_rate: 0.5
+  - name: Hunter's Cowl
+    pick_rate: 0.003
+    win_rate: 1.0
+  - name: Vampiric Shroud
+    pick_rate: 0.003
+    win_rate: 0.0
+  relic_sightings:
+  - name: Phantom Shell
+    pick_rate: 0.38
+    win_rate: 0.43
+  - name: Sundering Arc
+    pick_rate: 0.29
+    win_rate: 0.59
+  - name: Blink Rune
+    pick_rate: 0.12
+    win_rate: 0.5
+  - name: Aegis of Acceleration
+    pick_rate: 0.11
+    win_rate: 0.51
+  - name: Purification Beads
+    pick_rate: 0.09
+    win_rate: 0.52
+  - name: Agility Relic
+    pick_rate: 0.006
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/kuzenbo/
   last_verified: '2026-11-08'
   god_win_rate: 0.5014925373134328
@@ -88,8 +166,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.39
+    win_rate: 0.4085
+    matches: 131
+    basis: community
+  relic:
+    name: Phantom Shell
+    pick_rate: 0.38
+    win_rate: 0.43
+    matches: 127
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +253,18 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.39
+    win_rate: 0.4085
+    matches: 131
+    basis: community
+  relic: &id002
+    name: Phantom Shell
+    pick_rate: 0.38
+    win_rate: 0.43
+    matches: 127
+    basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -241,6 +339,7 @@ builds:
   - Hide of the Nemean Lion
   - Draconic Scale
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -313,6 +412,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -385,6 +485,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +561,7 @@ builds:
   - Prophetic Cloak
   - Freya's Tears
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: strength
   slot_order:
@@ -535,6 +637,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: str-int
   slot_order:
@@ -610,6 +713,7 @@ builds:
   community_ordered:
   - Genji's Guard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -684,4 +788,5 @@ builds:
   - Freya's Tears
   - Draconic Scale
   starter: *id001
+  relic: *id002
 ---

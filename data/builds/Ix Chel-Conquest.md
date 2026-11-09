@@ -70,7 +70,7 @@ builds:
       win_rate: 1.0
   community_starters:
   - name: Pendulum of the Ages
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.68
   - name: Sands Of Time
     pick_rate: 0.25
@@ -78,6 +78,57 @@ builds:
   - name: Conduit Gem
     pick_rate: 0.14
     win_rate: 0.56
+  community_relics:
+  - name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.57
+  - name: Purification Beads
+    pick_rate: 0.41
+    win_rate: 0.61
+  - name: Phantom Shell
+    pick_rate: 0.13
+    win_rate: 0.4
+  starter_sightings:
+  - name: Pendulum of the Ages
+    pick_rate: 0.35
+    win_rate: 0.68
+  - name: Sands Of Time
+    pick_rate: 0.25
+    win_rate: 0.46
+  - name: Conduit Gem
+    pick_rate: 0.14
+    win_rate: 0.56
+  - name: Bluestone Pendant
+    pick_rate: 0.07
+    win_rate: 0.63
+  - name: Archmage's Gem
+    pick_rate: 0.06
+    win_rate: 0.71
+  - name: Bluestone Brooch
+    pick_rate: 0.05
+    win_rate: 0.5
+  - name: Selflessness
+    pick_rate: 0.03
+    win_rate: 0.0
+  - name: Heroism
+    pick_rate: 0.02
+    win_rate: 0.0
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 0.5
+  - name: War Banner
+    pick_rate: 0.009
+    win_rate: 0.0
+  relic_sightings:
+  - name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.57
+  - name: Purification Beads
+    pick_rate: 0.41
+    win_rate: 0.61
+  - name: Phantom Shell
+    pick_rate: 0.13
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/ix-chel/
   last_verified: '2026-11-08'
   god_win_rate: 0.5625
@@ -88,8 +139,18 @@ builds:
   god_window_end: '2026-11-08'
   god_matches_analyzed: 5119
   starter:
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.6
+    win_rate: 0.5883
+    matches: 67
+    basis: community
+  relic:
+    name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.57
+    matches: 50
+    basis: community
 - source: suggested
   archetype: core
   slot_order:
@@ -165,8 +226,18 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Sands Of Time
+    upgrade: Pendulum of the Ages
+    pick_rate: 0.6
+    win_rate: 0.5883
+    matches: 67
+    basis: community
+  relic: &id002
+    name: Aegis of Acceleration
+    pick_rate: 0.45
+    win_rate: 0.57
+    matches: 50
+    basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -241,6 +312,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -315,6 +387,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -389,6 +462,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -463,6 +537,7 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -536,6 +611,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -611,6 +687,7 @@ builds:
   - Obsidian Shard
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -685,4 +762,5 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+  relic: *id002
 ---

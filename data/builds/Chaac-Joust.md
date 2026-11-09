@@ -68,8 +68,20 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: &id001
-    base: Warrior's Axe
-    upgrade: Sundering Axe
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.79
+    win_rate: 0.4427
+    matches: 54
+    basis: community
+    borrowed_from: Conquest
+  relic: &id002
+    name: Blink Rune
+    pick_rate: 0.25
+    win_rate: 0.53
+    matches: 17
+    basis: community
+    borrowed_from: Conquest
 - source: suggested
   archetype: mana-stack
   slot_order:
@@ -135,6 +147,7 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
@@ -200,6 +213,7 @@ builds:
       pick: 0.0
       fit: 0.89
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: bruiser
   slot_order:
@@ -265,6 +279,7 @@ builds:
       pick: 0.0
       fit: 0.88
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
@@ -330,6 +345,7 @@ builds:
       pick: 0.0
       fit: 0.89
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
@@ -395,6 +411,7 @@ builds:
       pick: 0.0
       fit: 0.7
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
@@ -460,6 +477,7 @@ builds:
       pick: 0.0
       fit: 0.92
   starter: *id001
+  relic: *id002
 - source: suggested
   archetype: model
   slot_order:
@@ -525,4 +543,5 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: *id001
+  relic: *id002
 ---
