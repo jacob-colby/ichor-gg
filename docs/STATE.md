@@ -2435,7 +2435,10 @@ shipped **off**. Numbers are in the named module.
     aspect tooltip, an in-game reading into `_combat_observations.yaml`), not
     more code here. The cheapest second RULE is a removal, "<ability> no
     longer has <Stat> Scaling". The note can price that, and it fires on Pele
-    alone today.
+    alone today. **2026-11-08: a second SOURCE exists, and it needs no
+    numbers.** What aspect PLAYERS buy, and which role they take the aspect
+    into, is now recorded per match (§5, "The per-aspect community record").
+    It changes nothing in this entry: no overlay reads it.
 
     **REVISIT IF** either test in `test_aspect_kit.py` turns red:
     `test_only_tsukuyomi_has_a_derivable_aspect_sentence` (a refresh adds
@@ -2486,6 +2489,48 @@ printed stats once the fit priced passives (87 of 193 items short, up to
 so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
+
+### The per-aspect community record exists; no aspect build reads it yet (2026-11-08)
+What aspect players BUY, from SmiteBrain's per-match feed (the tRPC call
+behind "More Builds", which paginates; the `__data.json` page never does).
+Verified first: placement 1 is the win (mirror test 14/14, the site's own
+colouring, and feed shares tracking `matches_won` on both sides of 50%); the
+feed holds ~85% of the aggregate's matches; retention is a rolling 45 days. The
+store is `data/Analysis/aspect_matches/` — append-only, in git, no player
+names, the match GUID hashed — backfilled to the end of retention (36,947
+matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
+and OB44 is marked `partial_from` because its first 2.5 days had already aged
+out), and the daily job adds ~217 requests to keep it. Each Conquest
+note gains `community_aspects`: newest window, else the last closed, under the
+tier list's own 30-match floor; a role shift named on a Wilson bound. It is
+kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
+
+**65 of 86 aspects clear the floor, and 32 of those 65 are played in a
+different role from the god's base role** — Bacchus' Revelry 87% Solo on a
+Support, Izanami's Sickle 70% Mid on a Carry. **Tsukuyomi's Mangetsu does not
+clear it** (OB47 6, OB46 21; OB45 holds exactly 30, but the rule reaches back
+one window only; pooled over the store, 74 matches, 57% Mid, and of the 73 the
+probe could attribute, 28 players, one of whom played 30%), so his entry is a
+stated `below minimum`. Nine of the 21 below-minimum aspects reach 30 in OB45
+or OB44, and 13 pooled: whether to pool is the first decision the next session
+owns. Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role
+shifts.
+
+**Next, and it is a MODEL change:** an aspect build cannot change role through
+today's seam. An overlay carries only stat weights; `fit_map` reads the role
+from the god note, and §4.33 measured how narrow that channel is. A variant god
+whose `role` comes from the entry's `role_shift` is the smallest seam that
+could carry it; for a god that is not a hybrid scaler the damage filter must
+move too. `model_audit heldout` cannot see any aspect build, so the frozen
+reference builds are the only gate. Numbers, the full depth table and the
+proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
+`aspect_matches`' docstring.
+
+**A lead for the draft feature, not built on:** every stored match carries its
+five enemy gods and the outcome — 184,735 god-vs-god outcome pairs from 24,032
+distinct matches on 2026-11-08, ~8,000 more a day, skewed to aspect players.
+SmiteBrain also has a
+`/gods/[godSlug]/matchups` route, not probed.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
@@ -3574,6 +3619,15 @@ session that wrote `patch_feed` could not reach Steam; its fixture is
 constructed. Gods are still not snapshotted. The rules and reasons are in the
 `snapshots.py` and `patch_feed.py` docstrings.
 
+**The per-aspect match store is append-only and lives in git**
+(`data/Analysis/aspect_matches/`, 2026-11-08). `python -m smite.aspect_matches
+refresh` is the daily job's step: it validates every page before writing
+anything (`FeedCollapse`), and a refusal sets the step's `rejected` output and
+turns the run red at the end, without costing the day's other data — the next
+run walks back over the gap. `derive` rewrites the Conquest notes'
+`community_aspects` from the store; `depth` prints gods × windows. Rules and
+evidence are in the module docstring.
+
 **The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
 buildable item with passive text, classes per clause, `priced` per clause;
 `test_passive_catalogue.py` fails if the pool and the file disagree or if a
@@ -3591,7 +3645,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1468) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1523) ·
 `cd viewer && npm test -- --run` (1016).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
@@ -3714,7 +3768,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred. (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1468 pipeline · 1016 viewer |
+| Tests | 1523 pipeline · 1016 viewer |
 
 Regenerate the first two blocks with `validate.compute` and `smite.calibrate`;
 do not hand-edit them.

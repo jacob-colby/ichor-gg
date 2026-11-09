@@ -720,4 +720,89 @@ builds:
   - Obsidian Shard
   - Soul Gem
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Fortification
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 37
+    wins: 20
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 41
+      aspect_win_rate: 0.537
+      no_aspect_matches: 338
+      no_aspect_win_rate: 0.53
+    roles:
+    - role: Solo
+      matches: 28
+      share: 0.76
+    - role: Mid
+      matches: 4
+      share: 0.11
+    - role: Support
+      matches: 3
+      share: 0.08
+    - role: Carry
+      matches: 2
+      share: 0.05
+    base_role: Mid
+    base_role_share: 0.11
+    role_shift:
+      role: Solo
+      share: 0.76
+      says: 'most Aspect of Fortification players do not play Mid: Solo 76%, Mid 11%'
+    items:
+    - name: Shrapnel Mod
+      share: 0.84
+    - name: Book of Thoth
+      share: 0.51
+    - name: Genji's Guard
+      share: 0.49
+    - name: Masterwork Mod
+      share: 0.49
+    - name: Surplus Mod
+      share: 0.49
+    - name: Breastplate of Valor
+      share: 0.46
+    - name: The World Stone
+      share: 0.35
+    - name: Ethereal Staff
+      share: 0.27
+    starters:
+    - name: Archmage's Gem
+      share: 0.24
+    - name: Sands Of Time
+      share: 0.24
+    - name: Pendulum of the Ages
+      share: 0.19
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.43
+    - name: purification-beads
+      share: 0.38
+    - name: phantom-shell
+      share: 0.16
+    matches_by_window:
+      ob47: 37
+      ob46: 94
+      ob45: 78
+      ob44: 48
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - resonator-mod
 ---

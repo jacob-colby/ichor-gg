@@ -682,4 +682,82 @@ builds:
   - The Crusher
   - Heartseeker
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Disruption
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 46
+    wins: 30
+    win_share: 0.65
+    aggregate:
+      aspect_matches: 55
+      aspect_win_rate: 0.636
+      no_aspect_matches: 553
+      no_aspect_win_rate: 0.561
+    roles:
+    - role: Jungle
+      matches: 38
+      share: 0.83
+    - role: Support
+      matches: 6
+      share: 0.13
+    - role: Solo
+      matches: 2
+      share: 0.04
+    base_role: Jungle
+    base_role_share: 0.83
+    role_shift: null
+    items:
+    - name: Hydra's Lament
+      share: 0.54
+    - name: Jotunn's Revenge
+      share: 0.48
+    - name: Heartseeker
+      share: 0.37
+    - name: Dagger of Frenzy
+      share: 0.28
+    - name: The Crusher
+      share: 0.28
+    - name: Rage
+      share: 0.24
+    - name: Riptalon
+      share: 0.24
+    - name: Tyrfing
+      share: 0.24
+    starters:
+    - name: Bumba's Hammer
+      share: 0.35
+    - name: Bumba's Cudgel
+      share: 0.2
+    - name: Sharpshooter's Arrow
+      share: 0.15
+    relics:
+    - name: purification-beads
+      share: 0.61
+    - name: Blink Rune
+      share: 0.28
+    - name: phantom-shell
+      share: 0.07
+    matches_by_window:
+      ob47: 18
+      ob46: 46
+      ob45: 38
+      ob44: 48
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

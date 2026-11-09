@@ -1608,4 +1608,83 @@ builds:
   - Soul Gem
   starter: *id001
   aspect: Aspect of the Cursed Crown
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Cursed Crown
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 69
+    wins: 37
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 79
+      aspect_win_rate: 0.506
+      no_aspect_matches: 107
+      no_aspect_win_rate: 0.505
+    roles:
+    - role: Solo
+      matches: 57
+      share: 0.83
+    - role: Support
+      matches: 12
+      share: 0.17
+    base_role: Mid
+    base_role_share: 0.0
+    role_shift:
+      role: Solo
+      share: 0.83
+      says: 'most Aspect of the Cursed Crown players do not play Mid: Solo 83%, Mid
+        0%'
+    items:
+    - name: Freya's Tears
+      share: 0.59
+    - name: Ethereal Staff
+      share: 0.46
+    - name: Shield of the Phoenix
+      share: 0.36
+    - name: Genji's Guard
+      share: 0.35
+    - name: Hussar's Wings
+      share: 0.3
+    - name: Shifter's Shield
+      share: 0.28
+    - name: Breastplate of Valor
+      share: 0.2
+    - name: Eye of Erebus
+      share: 0.17
+    starters:
+    - name: Bluestone Brooch
+      share: 0.48
+    - name: Bluestone Pendant
+      share: 0.3
+    - name: Warrior's Axe
+      share: 0.09
+    relics:
+    - name: sundering-arc
+      share: 0.3
+    - name: Blink Rune
+      share: 0.23
+    - name: purification-beads
+      share: 0.19
+    matches_by_window:
+      ob47: 69
+      ob46: 158
+      ob45: 141
+      ob44: 158
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

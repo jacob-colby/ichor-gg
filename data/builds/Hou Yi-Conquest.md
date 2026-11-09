@@ -915,4 +915,83 @@ builds:
     reason: community 65% win over 78 matches (vs 53% on this god), taking the model's
       weakest slot from Bragi's Harp
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Mark
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 200
+    wins: 116
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 225
+      aspect_win_rate: 0.56
+      no_aspect_matches: 1666
+      no_aspect_win_rate: 0.52
+    roles:
+    - role: Carry
+      matches: 192
+      share: 0.96
+    - role: Solo
+      matches: 6
+      share: 0.03
+    - role: Jungle
+      matches: 1
+      share: 0.01
+    - role: Mid
+      matches: 1
+      share: 0.01
+    base_role: Carry
+    base_role_share: 0.96
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.92
+    - name: Dagger of Frenzy
+      share: 0.75
+    - name: Riptalon
+      share: 0.66
+    - name: Dominance
+      share: 0.62
+    - name: Deathbringer
+      share: 0.58
+    - name: The Executioner
+      share: 0.36
+    - name: Silverbranch Bow
+      share: 0.27
+    - name: Musashi's Dual Swords
+      share: 0.23
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.62
+    - name: Gilded Arrow
+      share: 0.16
+    - name: Hunter's Cowl
+      share: 0.14
+    relics:
+    - name: purification-beads
+      share: 0.55
+    - name: aegis-of-acceleration
+      share: 0.43
+    - name: agility-relic
+      share: 0.01
+    matches_by_window:
+      ob47: 19
+      ob46: 200
+      ob45: 382
+      ob44: 207
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - purification-beads
 ---

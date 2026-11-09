@@ -895,4 +895,20 @@ builds:
       pick: 0.0
       fit: 0.58
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Love
+    status: below minimum
+    matches_by_window:
+      ob47: 3
+      ob46: 15
+      ob45: 27
+      ob44: 7
 ---

@@ -613,4 +613,89 @@ builds:
   - Jotunn's Revenge
   - The Crusher
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Justice
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 40
+    wins: 21
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 49
+      aspect_win_rate: 0.449
+      no_aspect_matches: 93
+      no_aspect_win_rate: 0.484
+    roles:
+    - role: Solo
+      matches: 33
+      share: 0.82
+    - role: Support
+      matches: 4
+      share: 0.1
+    - role: Mid
+      matches: 2
+      share: 0.05
+    - role: Jungle
+      matches: 1
+      share: 0.03
+    base_role: Jungle
+    base_role_share: 0.03
+    role_shift:
+      role: Solo
+      share: 0.82
+      says: 'most Aspect of Justice players do not play Jungle: Solo 82%, Jungle 2%'
+    items:
+    - name: Berserker's Shield
+      share: 0.7
+    - name: Devourer's Gauntlet
+      share: 0.6
+    - name: Kinetic Cuirass
+      share: 0.6
+    - name: Sundering Echo
+      share: 0.4
+    - name: Freya's Tears
+      share: 0.35
+    - name: Avenging Blade
+      share: 0.25
+    - name: Hussar's Wings
+      share: 0.17
+    - name: Daybreak Gavel
+      share: 0.15
+    starters:
+    - name: Hunter's Cowl
+      share: 0.45
+    - name: Leather Cowl
+      share: 0.23
+    - name: Sundering Axe
+      share: 0.17
+    relics:
+    - name: purification-beads
+      share: 0.33
+    - name: sundering-arc
+      share: 0.28
+    - name: phantom-shell
+      share: 0.17
+    matches_by_window:
+      ob47: 40
+      ob46: 125
+      ob45: 144
+      ob44: 63
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

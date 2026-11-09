@@ -826,4 +826,83 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Heartbreak
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 163
+    wins: 95
+    win_share: 0.58
+    aggregate:
+      aspect_matches: 201
+      aspect_win_rate: 0.552
+      no_aspect_matches: 68
+      no_aspect_win_rate: 0.603
+    roles:
+    - role: Mid
+      matches: 127
+      share: 0.78
+    - role: Solo
+      matches: 33
+      share: 0.2
+    - role: Carry
+      matches: 2
+      share: 0.01
+    - role: Jungle
+      matches: 1
+      share: 0.01
+    base_role: Mid Support
+    base_role_share: 0.78
+    role_shift: null
+    items:
+    - name: Rod of Tahuti
+      share: 0.82
+    - name: Spear of Desolation
+      share: 0.75
+    - name: Blinking Abyss
+      share: 0.46
+    - name: Obsidian Shard
+      share: 0.37
+    - name: Book of Thoth
+      share: 0.34
+    - name: Spear of the Magus
+      share: 0.29
+    - name: Chronos' Pendant
+      share: 0.28
+    - name: Staff of Myrddin
+      share: 0.18
+    starters:
+    - name: Pendulum of the Ages
+      share: 0.4
+    - name: Archmage's Gem
+      share: 0.26
+    - name: Conduit Gem
+      share: 0.13
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.49
+    - name: purification-beads
+      share: 0.47
+    - name: Blink Rune
+      share: 0.03
+    matches_by_window:
+      ob47: 163
+      ob46: 518
+      ob45: 577
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
 ---

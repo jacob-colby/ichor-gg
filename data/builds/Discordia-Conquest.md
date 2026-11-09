@@ -687,4 +687,78 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Gilded Victor
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 49
+    wins: 25
+    win_share: 0.51
+    aggregate:
+      aspect_matches: 53
+      aspect_win_rate: 0.472
+      no_aspect_matches: 734
+      no_aspect_win_rate: 0.527
+    roles:
+    - role: Carry
+      matches: 36
+      share: 0.73
+    - role: Mid
+      matches: 13
+      share: 0.27
+    base_role: Mid
+    base_role_share: 0.27
+    role_shift:
+      role: Carry
+      share: 0.73
+      says: 'most Aspect of the Gilded Victor players do not play Mid: Carry 73%,
+        Mid 27%'
+    items:
+    - name: Tyrfing
+      share: 0.67
+    - name: Bragi's Harp
+      share: 0.65
+    - name: The Executioner
+      share: 0.45
+    - name: Odysseus' Bow
+      share: 0.43
+    - name: Riptalon
+      share: 0.35
+    - name: Silverbranch Bow
+      share: 0.33
+    - name: Dominance
+      share: 0.31
+    - name: Dagger of Frenzy
+      share: 0.22
+    starters:
+    - name: Death's Embrace
+      share: 0.24
+    - name: Sharpshooter's Arrow
+      share: 0.24
+    - name: Hunter's Cowl
+      share: 0.14
+    relics:
+    - name: purification-beads
+      share: 0.63
+    - name: aegis-of-acceleration
+      share: 0.37
+    matches_by_window:
+      ob47: 15
+      ob46: 49
+      ob45: 60
+      ob44: 39
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - purification-beads
 ---

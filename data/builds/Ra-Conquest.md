@@ -1290,4 +1290,87 @@ builds:
   - Rod of Tahuti
   starter: *id001
   aspect: Aspect of Thermotherapy
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Thermotherapy
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 44
+    wins: 27
+    win_share: 0.61
+    aggregate:
+      aspect_matches: 51
+      aspect_win_rate: 0.569
+      no_aspect_matches: 1380
+      no_aspect_win_rate: 0.525
+    roles:
+    - role: Support
+      matches: 37
+      share: 0.84
+    - role: Solo
+      matches: 6
+      share: 0.14
+    - role: Mid
+      matches: 1
+      share: 0.02
+    base_role: Mid
+    base_role_share: 0.02
+    role_shift:
+      role: Support
+      share: 0.84
+      says: 'most Aspect of Thermotherapy players do not play Mid: Support 84%, Mid
+        2%'
+    items:
+    - name: Rod of Asclepius
+      share: 0.82
+    - name: Chandra's Grace
+      share: 0.75
+    - name: Freya's Tears
+      share: 0.57
+    - name: Heartwood Charm
+      share: 0.41
+    - name: Shell of Rebuke
+      share: 0.23
+    - name: Breastplate of Valor
+      share: 0.2
+    - name: Stampede
+      share: 0.18
+    - name: Genji's Guard
+      share: 0.16
+    starters:
+    - name: Sands Of Time
+      share: 0.36
+    - name: Pendulum of the Ages
+      share: 0.23
+    - name: Heroism
+      share: 0.11
+    relics:
+    - name: phantom-shell
+      share: 0.57
+    - name: purification-beads
+      share: 0.27
+    - name: aegis-of-acceleration
+      share: 0.11
+    matches_by_window:
+      ob47: 11
+      ob46: 44
+      ob45: 52
+      ob44: 65
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

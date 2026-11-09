@@ -539,4 +539,85 @@ builds:
   - Berserker's Shield
   - Kinetic Cuirass
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Fragmented
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 45
+    wins: 27
+    win_share: 0.6
+    aggregate:
+      aspect_matches: 53
+      aspect_win_rate: 0.528
+      no_aspect_matches: 212
+      no_aspect_win_rate: 0.505
+    roles:
+    - role: Solo
+      matches: 19
+      share: 0.42
+    - role: Jungle
+      matches: 13
+      share: 0.29
+    - role: Mid
+      matches: 8
+      share: 0.18
+    - role: Support
+      matches: 5
+      share: 0.11
+    base_role: Solo
+    base_role_share: 0.42
+    role_shift: null
+    items:
+    - name: Rod of Tahuti
+      share: 0.38
+    - name: Spear of Desolation
+      share: 0.31
+    - name: Ancient Signet
+      share: 0.24
+    - name: Soul Gem
+      share: 0.24
+    - name: brawlers-ruin
+      share: 0.22
+    - name: Ethereal Staff
+      share: 0.22
+    - name: Shifter's Shield
+      share: 0.22
+    - name: Sphere of Negation
+      share: 0.22
+    starters:
+    - name: Bluestone Brooch
+      share: 0.33
+    - name: Archmage's Gem
+      share: 0.22
+    - name: Sundering Axe
+      share: 0.13
+    relics:
+    - name: purification-beads
+      share: 0.38
+    - name: sundering-arc
+      share: 0.24
+    - name: aegis-of-acceleration
+      share: 0.18
+    matches_by_window:
+      ob47: 18
+      ob46: 45
+      ob45: 43
+      ob44: 72
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

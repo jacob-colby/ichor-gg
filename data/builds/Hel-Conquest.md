@@ -683,4 +683,81 @@ builds:
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Divergence
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 82
+    wins: 44
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 108
+      aspect_win_rate: 0.5
+      no_aspect_matches: 254
+      no_aspect_win_rate: 0.516
+    roles:
+    - role: Support
+      matches: 53
+      share: 0.65
+    - role: Mid
+      matches: 27
+      share: 0.33
+    - role: Carry
+      matches: 2
+      share: 0.02
+    base_role: Mid Support
+    base_role_share: 0.98
+    role_shift: null
+    items:
+    - name: Chandra's Grace
+      share: 0.52
+    - name: Rod of Asclepius
+      share: 0.38
+    - name: Freya's Tears
+      share: 0.3
+    - name: Rod of Tahuti
+      share: 0.3
+    - name: Spear of Desolation
+      share: 0.26
+    - name: Book of Thoth
+      share: 0.23
+    - name: Genji's Guard
+      share: 0.23
+    - name: Shell of Rebuke
+      share: 0.22
+    starters:
+    - name: Pendulum of the Ages
+      share: 0.29
+    - name: Sands Of Time
+      share: 0.28
+    - name: Archmage's Gem
+      share: 0.15
+    relics:
+    - name: phantom-shell
+      share: 0.39
+    - name: aegis-of-acceleration
+      share: 0.34
+    - name: purification-beads
+      share: 0.24
+    matches_by_window:
+      ob47: 82
+      ob46: 332
+      ob45: 963
+      ob44: 788
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - phantom-shell
+    - purification-beads
 ---

@@ -826,4 +826,84 @@ builds:
   - Tyrfing
   - Dominance
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Nightstalker
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 71
+    wins: 38
+    win_share: 0.54
+    aggregate:
+      aspect_matches: 87
+      aspect_win_rate: 0.517
+      no_aspect_matches: 505
+      no_aspect_win_rate: 0.584
+    roles:
+    - role: Mid
+      matches: 36
+      share: 0.51
+    - role: Solo
+      matches: 22
+      share: 0.31
+    - role: Carry
+      matches: 9
+      share: 0.13
+    - role: Jungle
+      matches: 4
+      share: 0.06
+    base_role: Carry
+    base_role_share: 0.13
+    role_shift:
+      role: Mid
+      share: 0.51
+      says: 'most Aspect of the Nightstalker players do not play Carry: Mid 51%, Carry
+        13%'
+    items:
+    - name: Rod of Tahuti
+      share: 0.92
+    - name: Spear of Desolation
+      share: 0.89
+    - name: Obsidian Shard
+      share: 0.66
+    - name: Blinking Abyss
+      share: 0.55
+    - name: Gem of Focus
+      share: 0.49
+    - name: Dreamer's Idol
+      share: 0.31
+    - name: Chronos' Pendant
+      share: 0.25
+    - name: Book of Thoth
+      share: 0.17
+    starters:
+    - name: Pendulum of the Ages
+      share: 0.59
+    - name: Archmage's Gem
+      share: 0.23
+    - name: Bluestone Brooch
+      share: 0.07
+    relics:
+    - name: purification-beads
+      share: 0.76
+    - name: aegis-of-acceleration
+      share: 0.24
+    matches_by_window:
+      ob47: 25
+      ob46: 71
+      ob45: 52
+      ob44: 62
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - purification-beads
 ---

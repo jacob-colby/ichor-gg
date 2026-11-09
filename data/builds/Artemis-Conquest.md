@@ -755,4 +755,87 @@ builds:
     reason: community 76% win over 49 matches (vs 56% on this god), taking the model's
       weakest slot from Tekko-Kagi
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Wild
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 96
+    wins: 48
+    win_share: 0.5
+    aggregate:
+      aspect_matches: 104
+      aspect_win_rate: 0.5
+      no_aspect_matches: 750
+      no_aspect_win_rate: 0.56
+    roles:
+    - role: Carry
+      matches: 74
+      share: 0.77
+    - role: Solo
+      matches: 13
+      share: 0.14
+    - role: Jungle
+      matches: 4
+      share: 0.04
+    - role: Support
+      matches: 4
+      share: 0.04
+    - role: Mid
+      matches: 1
+      share: 0.01
+    base_role: Carry
+    base_role_share: 0.77
+    role_shift: null
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.73
+    - name: Dominance
+      share: 0.53
+    - name: Sun Beam Bow
+      share: 0.53
+    - name: Xibalban Effigy
+      share: 0.48
+    - name: Transcendence
+      share: 0.34
+    - name: Riptalon
+      share: 0.28
+    - name: Dagger of Frenzy
+      share: 0.23
+    - name: The Executioner
+      share: 0.23
+    starters:
+    - name: Hunter's Cowl
+      share: 0.47
+    - name: Leather Cowl
+      share: 0.16
+    - name: Death's Embrace
+      share: 0.14
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.67
+    - name: purification-beads
+      share: 0.29
+    - name: phantom-shell
+      share: 0.02
+    matches_by_window:
+      ob47: 14
+      ob46: 96
+      ob45: 91
+      ob44: 95
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - phantom-shell
+    - purification-beads
 ---

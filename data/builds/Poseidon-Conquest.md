@@ -833,4 +833,86 @@ builds:
   - Rod of Tahuti
   - Obsidian Shard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Trident
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 44
+    wins: 19
+    win_share: 0.43
+    aggregate:
+      aspect_matches: 48
+      aspect_win_rate: 0.458
+      no_aspect_matches: 238
+      no_aspect_win_rate: 0.529
+    roles:
+    - role: Carry
+      matches: 23
+      share: 0.52
+    - role: Mid
+      matches: 11
+      share: 0.25
+    - role: Jungle
+      matches: 5
+      share: 0.11
+    - role: Solo
+      matches: 5
+      share: 0.11
+    base_role: Mid
+    base_role_share: 0.25
+    role_shift:
+      role: Carry
+      share: 0.52
+      says: 'most Aspect of the Trident players do not play Mid: Carry 52%, Mid 25%'
+    items:
+    - name: Devourer's Gauntlet
+      share: 0.75
+    - name: Silverbranch Bow
+      share: 0.68
+    - name: Riptalon
+      share: 0.5
+    - name: Odysseus' Bow
+      share: 0.43
+    - name: The Executioner
+      share: 0.43
+    - name: Dagger of Frenzy
+      share: 0.34
+    - name: Hastened Fatalis
+      share: 0.32
+    - name: Dominance
+      share: 0.23
+    starters:
+    - name: Hunter's Cowl
+      share: 0.32
+    - name: Sharpshooter's Arrow
+      share: 0.27
+    - name: Leather Cowl
+      share: 0.14
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.61
+    - name: purification-beads
+      share: 0.36
+    - name: agility-relic
+      share: 0.02
+    matches_by_window:
+      ob47: 44
+      ob46: 56
+      ob45: 54
+      ob44: 62
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - purification-beads
 ---

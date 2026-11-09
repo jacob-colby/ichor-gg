@@ -691,4 +691,77 @@ builds:
   - Soul Gem
   - Obsidian Shard
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Pandemonium
+    status: shown
+    window: ob46
+    window_rule: last closed
+    window_start: '2026-10-20'
+    window_end: '2026-11-03'
+    matches: 51
+    wins: 29
+    win_share: 0.57
+    aggregate:
+      aspect_matches: 58
+      aspect_win_rate: 0.5
+      no_aspect_matches: 1201
+      no_aspect_win_rate: 0.505
+    roles:
+    - role: Mid
+      matches: 44
+      share: 0.86
+    - role: Solo
+      matches: 7
+      share: 0.14
+    base_role: Mid
+    base_role_share: 0.86
+    role_shift: null
+    items:
+    - name: Spear of Desolation
+      share: 0.67
+    - name: Rod of Tahuti
+      share: 0.61
+    - name: Soul Gem
+      share: 0.45
+    - name: Obsidian Shard
+      share: 0.43
+    - name: Book of Thoth
+      share: 0.41
+    - name: Chronos' Pendant
+      share: 0.39
+    - name: Soul Reaver
+      share: 0.39
+    - name: The World Stone
+      share: 0.37
+    starters:
+    - name: Bluestone Brooch
+      share: 0.33
+    - name: Pendulum of the Ages
+      share: 0.24
+    - name: Archmage's Gem
+      share: 0.18
+    relics:
+    - name: purification-beads
+      share: 0.75
+    - name: aegis-of-acceleration
+      share: 0.22
+    - name: Blink Rune
+      share: 0.02
+    matches_by_window:
+      ob47: 9
+      ob46: 51
+      ob45: 41
+      ob44: 64
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - phantom-shell
+    - purification-beads
 ---

@@ -708,4 +708,85 @@ builds:
   - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of the Denmother
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 52
+    wins: 35
+    win_share: 0.67
+    aggregate:
+      aspect_matches: 68
+      aspect_win_rate: 0.618
+      no_aspect_matches: 157
+      no_aspect_win_rate: 0.529
+    roles:
+    - role: Support
+      matches: 30
+      share: 0.58
+    - role: Mid
+      matches: 12
+      share: 0.23
+    - role: Solo
+      matches: 9
+      share: 0.17
+    - role: Jungle
+      matches: 1
+      share: 0.02
+    base_role: Solo Support
+    base_role_share: 0.75
+    role_shift: null
+    items:
+    - name: Rod of Asclepius
+      share: 0.48
+    - name: Freya's Tears
+      share: 0.46
+    - name: Chandra's Grace
+      share: 0.44
+    - name: Shell of Rebuke
+      share: 0.37
+    - name: Stampede
+      share: 0.27
+    - name: Chronos' Pendant
+      share: 0.21
+    - name: Rod of Tahuti
+      share: 0.21
+    - name: Genji's Guard
+      share: 0.15
+    starters:
+    - name: Bluestone Brooch
+      share: 0.35
+    - name: Selflessness
+      share: 0.21
+    - name: Archmage's Gem
+      share: 0.1
+    relics:
+    - name: aegis-of-acceleration
+      share: 0.31
+    - name: phantom-shell
+      share: 0.27
+    - name: purification-beads
+      share: 0.25
+    matches_by_window:
+      ob47: 52
+      ob46: 215
+      ob45: 287
+      ob44: 218
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

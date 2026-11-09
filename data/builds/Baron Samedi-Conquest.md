@@ -688,4 +688,86 @@ builds:
   - Freya's Tears
   - Rod of Tahuti
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Hysteria
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 124
+    wins: 68
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 143
+      aspect_win_rate: 0.524
+      no_aspect_matches: 50
+      no_aspect_win_rate: 0.58
+    roles:
+    - role: Mid
+      matches: 49
+      share: 0.4
+    - role: Solo
+      matches: 44
+      share: 0.35
+    - role: Support
+      matches: 30
+      share: 0.24
+    - role: Jungle
+      matches: 1
+      share: 0.01
+    base_role: Mid Support
+    base_role_share: 0.64
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.44
+    - name: Rod of Tahuti
+      share: 0.36
+    - name: Spear of Desolation
+      share: 0.35
+    - name: Breastplate of Valor
+      share: 0.3
+    - name: Chronos' Pendant
+      share: 0.26
+    - name: Alchemist Coat
+      share: 0.24
+    - name: Genji's Guard
+      share: 0.19
+    - name: Prophetic Cloak
+      share: 0.16
+    starters:
+    - name: Bluestone Pendant
+      share: 0.22
+    - name: Archmage's Gem
+      share: 0.19
+    - name: Bluestone Brooch
+      share: 0.17
+    relics:
+    - name: purification-beads
+      share: 0.37
+    - name: aegis-of-acceleration
+      share: 0.33
+    - name: phantom-shell
+      share: 0.23
+    matches_by_window:
+      ob47: 124
+      ob46: 240
+      ob45: 244
+      ob44: 234
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---

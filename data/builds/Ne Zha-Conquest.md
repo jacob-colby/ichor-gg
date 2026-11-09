@@ -684,4 +684,93 @@ builds:
   - Titan's Bane
   - Heartseeker
   starter: *id001
+community_aspects:
+  source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
+  complete_from: '2026-09-24'
+  partial_windows:
+    ob44: '2026-09-24'
+  minimum_matches: 30
+  window_rule: the newest patch window, or the last closed one when the newest holds
+    fewer than minimum_matches of the aspect's matches
+  aspects:
+  - aspect: Aspect of Righteous Flame
+    status: shown
+    window: ob47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-08'
+    matches: 78
+    wins: 46
+    win_share: 0.59
+    aggregate:
+      aspect_matches: 85
+      aspect_win_rate: 0.588
+      no_aspect_matches: 271
+      no_aspect_win_rate: 0.491
+    roles:
+    - role: Support
+      matches: 36
+      share: 0.46
+    - role: Solo
+      matches: 27
+      share: 0.35
+    - role: Jungle
+      matches: 13
+      share: 0.17
+    - role: Carry
+      matches: 1
+      share: 0.01
+    - role: Mid
+      matches: 1
+      share: 0.01
+    base_role: Jungle
+    base_role_share: 0.17
+    role_shift:
+      role: Support
+      share: 0.46
+      says: 'most Aspect of Righteous Flame players do not play Jungle: Support 46%,
+        Jungle 17%'
+    items:
+    - name: Freya's Tears
+      share: 0.4
+    - name: Shifter's Shield
+      share: 0.38
+    - name: Genji's Guard
+      share: 0.36
+    - name: Gauntlet of Thebes
+      share: 0.24
+    - name: Kinetic Cuirass
+      share: 0.24
+    - name: Shell of Rebuke
+      share: 0.23
+    - name: Breastplate of Valor
+      share: 0.19
+    - name: brawlers-ruin
+      share: 0.18
+    starters:
+    - name: Bluestone Brooch
+      share: 0.27
+    - name: Bluestone Pendant
+      share: 0.22
+    - name: War Flag
+      share: 0.12
+    relics:
+    - name: phantom-shell
+      share: 0.28
+    - name: purification-beads
+      share: 0.19
+    - name: sundering-arc
+      share: 0.19
+    matches_by_window:
+      ob47: 78
+      ob46: 146
+      ob45: 140
+      ob44: 139
+    unmapped_slugs:
+    - aegis-of-acceleration
+    - agility-relic
+    - brawlers-ruin
+    - phantom-shell
+    - purification-beads
+    - sundering-arc
 ---
