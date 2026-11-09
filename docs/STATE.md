@@ -3509,6 +3509,8 @@ python -m smite.expert_review            # replay recorded expert judgements
 python -m smite.expert_review --check    # non-zero exit if a resolved claim regressed
 python -m smite.doc_audit                # §7's numbers, doc value beside computed
 python -m smite.doc_audit --check        # non-zero exit if a §7 figure has drifted
+python -m smite.doc_figures --write      # regenerate docs/CURRENT.md, the DAILY figures (~12s)
+python -m smite.doc_figures --check      # re-derive every DAILY figure, exit 1 if the file differs
 python -m smite.build_quality            # combat.py pointed at whole builds, ours vs community (~4s)
 python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
@@ -3576,10 +3578,28 @@ expected is a human's job, so it prints the row, the doc's value and the
 computed value, and stops. Rows it deliberately leaves alone —
 counterfactuals, judgements, history — are in its `UNGATED` map with a reason
 each, and a §7 row that no check claims is itself a finding, so a new row
-cannot arrive unchecked. `--skip-model` drops the three rows needing a model
-run, taking it from ~23s to ~4s, and names them as unchecked rather than
-passing quietly. The Tests row counts tests, so a commit that adds tests must
+cannot arrive unchecked. The Tests row counts tests, so a commit that adds tests must
 move that row in the same commit.
+
+**The figures a daily refresh moves are generated (2026-11-09).** Every check
+carries a class. DAILY figures (Community sample, Items placed, Conquest gods
+placed, Build flavors, Cap overflow, the Headline gate, Gods at 0% coverage,
+Leakage-free) move on an ordinary refresh, so `smite.doc_figures` writes them
+into [`docs/CURRENT.md`](CURRENT.md) and the daily job runs it in its own data
+PR; each such §7 row opens by linking there, and what follows the link is dated
+history. PATCH figures (Gods tracked, Items, Build groups, Joust / Arena, tag
+coverage) move at a patch boundary or when a god or item is added, and CODE
+figures (the test counts, the register, expert claims, the combat model) move
+only when a commit changes code or a hand-kept file. Both stay hand-kept and
+are checked exactly; no CODE figure may be generated, and a test pins that. If
+`doc_audit` says a CURRENT.md figure moved on your branch, your code or
+weights moved it: regenerate, and say why in the pull request. The file is
+stamped with the input fingerprint, a code hash and a shipped-outputs hash,
+and its model figures are re-derived only when the stamp no longer matches the
+tree. A file the Linux runner wrote therefore checks on Windows without
+recomputing anything. The classification, its evidence and the Linux-vs-Windows
+measurement are in the `doc_figures` docstring. `--skip-model` skips only the
+model figures the stamp cannot vouch for, and names them.
 
 Scraping needs Playwright (`python -m playwright install chromium`).
 
@@ -3750,14 +3770,14 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1545) ·
-`cd viewer && npm test -- --run` (1016).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1585) ·
+`cd viewer && npm test -- --run` (1030).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
-patch feed + wiki stats when due + snapshot + reindex, then one open data PR
-a day that auto-merges once the suite passes) and
+patch feed + wiki stats when due + snapshot + reindex + `docs/CURRENT.md`,
+then one open data PR a day that auto-merges once the suite passes) and
 `watch-wiki.yml` (09:45 UTC, `smite.wiki_watch`, `contents: read`, commits
 nothing). `probe-stat-sources.yml` is dispatch-only and re-checks which stat
 sources a runner can reach. New gods and items are added by the daily job too
@@ -3873,7 +3893,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 3 — Cernunnos, Cupid, Mercury. (2026-11-08, the #124 refresh alone, which touched only `data/` and `viewer/public/`; recorded, not investigated.) Cernunnos is on it for the third reading running, 6 pairs and none matching. Cupid and Mercury are back, at 5 pairs each, after reading 20% on 2026-11-06 — the same two that were on it on 2026-11-03. Ah Puch, Athena, Atlas, Gilgamesh and Mordred now read 60%, 20%, 40%, 33% and 33%. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1545 pipeline · 1016 viewer |
+| Tests | 1585 pipeline · 1030 viewer |
 
 A row that opens **Live in [CURRENT.md](CURRENT.md).** is DAILY: its live figure
 is generated into [`docs/CURRENT.md`](CURRENT.md) by `python -m smite.doc_figures
