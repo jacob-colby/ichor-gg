@@ -136,13 +136,13 @@ export function AspectCommunity({ aspect, mode, record, itemsByName }: {
               name={starterPathLabel(top)}
               reason={[`${pct(top.pick_rate)} of these games open this way`, starterMark].filter(Boolean).join(" · ")}
               alternatives={paths.slice(1, 3).map((p) => ({ name: p.rootName, icon: p.rootName, share: p.pick_rate }))}
-              altLabel="Others" />
+              altLabel="Others" altUnit="of these games" />
           )}
           {relic && (
             <KitTile kind="Relic" testId="aspect-relic" icon={relic.name} name={relic.name}
               reason={[`${pct(relic.share)} of these games take it`, mark(relic)].filter(Boolean).join(" · ")}
               alternatives={(entry.relics ?? []).slice(1, 3).map((x) => ({ name: x.name, icon: x.name, share: x.share }))}
-              altLabel="Others" />
+              altLabel="Others" altUnit="of these games" />
           )}
         </div>
       )}

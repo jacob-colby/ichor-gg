@@ -947,6 +947,20 @@ community_aspects:
       share: 0.2
     - name: Hunter's Cowl
       share: 0.14
+    - name: Bluestone Pendant
+      share: 0.11
+    - name: Bumba's Cudgel
+      share: 0.06
+    - name: Archmage's Gem
+      share: 0.03
+    - name: Death's Embrace
+      share: 0.03
+    - name: Leather Cowl
+      share: 0.03
+    - name: Pendulum of the Ages
+      share: 0.03
+    - name: Warrior's Axe
+      share: 0.03
     relics:
     - name: Blink Rune
       share: 0.6

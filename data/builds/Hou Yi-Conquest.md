@@ -1062,6 +1062,14 @@ community_aspects:
       share: 0.16
     - name: Hunter's Cowl
       share: 0.14
+    - name: Death's Embrace
+      share: 0.04
+    - name: Leather Cowl
+      share: 0.03
+    - name: Death's Toll
+      share: 0.01
+    - name: Bumba's Hammer
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.55

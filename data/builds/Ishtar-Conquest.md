@@ -833,6 +833,22 @@ community_aspects:
       share: 0.2
     - name: Death's Embrace
       share: 0.16
+    - name: Leather Cowl
+      share: 0.1
+    - name: Death's Toll
+      share: 0.09
+    - name: Gilded Arrow
+      share: 0.04
+    - name: Sundering Axe
+      share: 0.04
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Bluestone Brooch
+      share: 0.01
+    - name: Bluestone Pendant
+      share: 0.01
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.41

@@ -424,12 +424,12 @@ describe("God page — what the aspect's players buy", () => {
       const starter = await screen.findByTestId("aspect-starter");
       expect(starter).toHaveTextContent("Conduit Gem → Archmage's Gem");
       expect(starter).toHaveTextContent("53% of these games open this way");
-      expect(within(starter).getByRole("list")).toHaveTextContent("Bluestone Pendant30% of players");
+      expect(within(starter).getByRole("list")).toHaveTextContent("Bluestone Pendant30% of these games");
       const relic = screen.getByTestId("aspect-relic");
       expect(relic).toHaveTextContent("Purification Beads");
       expect(relic).toHaveTextContent("60% of these games take it · changed OB47*");
       expect(within(relic).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
-        "Aegis of Acceleration39% of players", "Phantom Shell2% of players"]);
+        "Aegis of Acceleration39% of these games", "Phantom Shell2% of these games"]);
     });
   });
 

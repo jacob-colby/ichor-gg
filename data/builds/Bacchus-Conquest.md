@@ -892,6 +892,32 @@ community_aspects:
       share: 0.25
     - name: Death's Embrace
       share: 0.05
+    - name: War Banner
+      share: 0.03
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: War Flag
+      share: 0.02
+    - name: Death's Toll
+      share: 0.01
+    - name: Sundering Axe
+      share: 0.01
+    - name: Heroism
+      share: 0.01
+    - name: Bumba's Cudgel
+      share: 0.0
+    - name: Bumba's Hammer
+      share: 0.0
+    - name: Bumba's Spear
+      share: 0.0
+    - name: Gilded Arrow
+      share: 0.0
+    - name: Sharpshooter's Arrow
+      share: 0.0
+    - name: Warrior's Axe
+      share: 0.0
     relics:
     - name: Agility Relic
       share: 0.62

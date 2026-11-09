@@ -856,6 +856,22 @@ community_aspects:
       share: 0.32
     - name: Sundering Axe
       share: 0.09
+    - name: Archmage's Gem
+      share: 0.04
+    - name: Conduit Gem
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Warrior's Axe
+      share: 0.02
+    - name: Blood-soaked Shroud
+      share: 0.01
+    - name: Bumba's Hammer
+      share: 0.01
+    - name: Hunter's Cowl
+      share: 0.01
+    - name: Vampiric Shroud
+      share: 0.01
     relics:
     - name: Sundering Arc
       share: 0.43

@@ -867,6 +867,16 @@ community_aspects:
       share: 0.24
     - name: Pendulum of the Ages
       share: 0.19
+    - name: Bluestone Pendant
+      share: 0.14
+    - name: Bluestone Brooch
+      share: 0.05
+    - name: Conduit Gem
+      share: 0.05
+    - name: War Banner
+      share: 0.05
+    - name: Vampiric Shroud
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.43

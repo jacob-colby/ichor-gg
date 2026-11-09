@@ -1000,6 +1000,16 @@ community_aspects:
       share: 0.27
     - name: Leather Cowl
       share: 0.14
+    - name: Gilded Arrow
+      share: 0.09
+    - name: Death's Embrace
+      share: 0.07
+    - name: Death's Toll
+      share: 0.07
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
     relics:
     - name: Aegis of Acceleration
       share: 0.61

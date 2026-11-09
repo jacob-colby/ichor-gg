@@ -778,6 +778,14 @@ community_aspects:
       share: 0.23
     - name: Leather Cowl
       share: 0.1
+    - name: Archmage's Gem
+      share: 0.08
+    - name: Bumba's Hammer
+      share: 0.08
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Death's Toll
+      share: 0.01
     relics:
     - name: Blink Rune
       share: 0.38

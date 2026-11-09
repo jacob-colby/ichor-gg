@@ -832,6 +832,18 @@ community_aspects:
       share: 0.2
     - name: Sharpshooter's Arrow
       share: 0.15
+    - name: Gilded Arrow
+      share: 0.11
+    - name: Archmage's Gem
+      share: 0.09
+    - name: Heroism
+      share: 0.04
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: Sundering Axe
+      share: 0.02
+    - name: War Banner
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.61

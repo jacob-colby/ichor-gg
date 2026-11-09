@@ -863,6 +863,26 @@ community_aspects:
         says: changed in OB47; 4 of the 6 matches that bought it are older
     - name: Bluestone Pendant
       share: 0.15
+    - name: War Flag
+      share: 0.12
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 4
+        says: changed in OB47; 1 of the 4 matches that bought it are older
+    - name: Heroism
+      share: 0.09
+    - name: Sundering Axe
+      share: 0.09
+    - name: Bluestone Brooch
+      share: 0.06
+    - name: Death's Toll
+      share: 0.03
+    - name: War Banner
+      share: 0.03
+    - name: Warrior's Axe
+      share: 0.03
     relics:
     - name: Phantom Shell
       share: 0.32

@@ -860,6 +860,18 @@ community_aspects:
       share: 0.19
     - name: Bluestone Pendant
       share: 0.14
+    - name: War Banner
+      share: 0.06
+    - name: Warrior's Axe
+      share: 0.06
+    - name: Bumba's Cudgel
+      share: 0.02
+    - name: Bumba's Hammer
+      share: 0.02
+    - name: Heroism
+      share: 0.02
+    - name: War Flag
+      share: 0.02
     relics:
     - name: Sundering Arc
       share: 0.35

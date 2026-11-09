@@ -997,6 +997,16 @@ community_aspects:
       share: 0.15
     - name: Hunter's Cowl
       share: 0.1
+    - name: Pendulum of the Ages
+      share: 0.06
+    - name: Sands Of Time
+      share: 0.04
+    - name: Blood-soaked Shroud
+      share: 0.01
+    - name: Leather Cowl
+      share: 0.01
+    - name: War Banner
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.83

@@ -1777,6 +1777,16 @@ community_aspects:
       share: 0.3
     - name: Warrior's Axe
       share: 0.09
+    - name: Sundering Axe
+      share: 0.06
+    - name: War Flag
+      share: 0.03
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Hunter's Cowl
+      share: 0.01
+    - name: War Banner
+      share: 0.01
     relics:
     - name: Sundering Arc
       share: 0.3

@@ -973,6 +973,8 @@ community_aspects:
       share: 0.25
     - name: Blood-soaked Shroud
       share: 0.06
+    - name: Bumba's Cudgel
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.42

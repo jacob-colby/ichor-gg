@@ -909,6 +909,20 @@ community_aspects:
       share: 0.16
     - name: Death's Embrace
       share: 0.14
+    - name: Sharpshooter's Arrow
+      share: 0.12
+    - name: Bluestone Brooch
+      share: 0.04
+    - name: Death's Toll
+      share: 0.03
+    - name: Bluestone Pendant
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.01
+    - name: Gilded Arrow
+      share: 0.01
+    - name: Vampiric Shroud
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.67

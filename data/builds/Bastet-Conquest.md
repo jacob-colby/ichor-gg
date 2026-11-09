@@ -844,6 +844,12 @@ community_aspects:
       share: 0.38
     - name: Bumba's Hammer
       share: 0.04
+    - name: Warrior's Axe
+      share: 0.04
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Heroism
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.34

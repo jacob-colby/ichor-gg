@@ -991,6 +991,12 @@ community_aspects:
       share: 0.23
     - name: Bluestone Brooch
       share: 0.07
+    - name: Sands Of Time
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.03
+    - name: Hunter's Cowl
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.76

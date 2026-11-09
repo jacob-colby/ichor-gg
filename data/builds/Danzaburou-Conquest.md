@@ -1091,6 +1091,18 @@ community_aspects:
       share: 0.21
     - name: Death's Embrace
       share: 0.11
+    - name: Leather Cowl
+      share: 0.11
+    - name: Conduit Gem
+      share: 0.09
+    - name: Sands Of Time
+      share: 0.06
+    - name: Sharpshooter's Arrow
+      share: 0.04
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Death's Toll
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.85

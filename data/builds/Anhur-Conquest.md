@@ -838,6 +838,18 @@ community_aspects:
       share: 0.29
     - name: Leather Cowl
       share: 0.22
+    - name: Death's Embrace
+      share: 0.04
+    - name: Gilded Arrow
+      share: 0.04
+    - name: Bumba's Golden Dagger
+      share: 0.02
+    - name: Bumba's Spear
+      share: 0.02
+    - name: Death's Toll
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.61

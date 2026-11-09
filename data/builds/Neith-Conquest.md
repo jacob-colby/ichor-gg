@@ -1071,6 +1071,18 @@ community_aspects:
       share: 0.19
     - name: Hunter's Cowl
       share: 0.17
+    - name: Death's Toll
+      share: 0.12
+    - name: Gilded Arrow
+      share: 0.12
+    - name: Leather Cowl
+      share: 0.09
+    - name: Bumba's Spear
+      share: 0.03
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Sands Of Time
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.64

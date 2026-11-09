@@ -682,6 +682,14 @@ community_aspects:
       share: 0.22
     - name: Bluestone Pendant
       share: 0.19
+    - name: Hunter's Cowl
+      share: 0.19
+    - name: Leather Cowl
+      share: 0.11
+    - name: Death's Toll
+      share: 0.05
+    - name: Blood-soaked Shroud
+      share: 0.03
     relics:
     - name: Agility Relic
       share: 0.3

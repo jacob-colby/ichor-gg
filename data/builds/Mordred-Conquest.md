@@ -1026,6 +1026,22 @@ community_aspects:
       share: 0.2
     - name: Blood-soaked Shroud
       share: 0.14
+    - name: Hunter's Cowl
+      share: 0.11
+    - name: Bumba's Hammer
+      share: 0.09
+    - name: Bumba's Cudgel
+      share: 0.07
+    - name: Leather Cowl
+      share: 0.07
+    - name: Vampiric Shroud
+      share: 0.05
+    - name: Sundering Axe
+      share: 0.03
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.01
     relics:
     - name: Sundering Arc
       share: 0.27

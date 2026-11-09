@@ -1440,6 +1440,26 @@ community_aspects:
       share: 0.23
     - name: Heroism
       share: 0.11
+    - name: Selflessness
+      share: 0.09
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 4
+        matches: 4
+        says: changed in OB47; 4 of the 4 matches that bought it are older
+    - name: Conduit Gem
+      share: 0.07
+    - name: Archmage's Gem
+      share: 0.05
+    - name: Blood-soaked Shroud
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Hunter's Cowl
+      share: 0.02
+    - name: War Banner
+      share: 0.02
     relics:
     - name: Phantom Shell
       share: 0.57

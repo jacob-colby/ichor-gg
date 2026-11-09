@@ -703,6 +703,38 @@ community_aspects:
       share: 0.17
     - name: Bluestone Brooch
       share: 0.14
+    - name: Selflessness
+      share: 0.12
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 9
+        matches: 9
+        says: changed in OB47; 9 of the 9 matches that bought it are older
+    - name: War Flag
+      share: 0.11
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 8
+        matches: 8
+        says: changed in OB47; 8 of the 8 matches that bought it are older
+    - name: Pendulum of the Ages
+      share: 0.09
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Hunter's Cowl
+      share: 0.05
+    - name: War Banner
+      share: 0.03
+    - name: Conduit Gem
+      share: 0.01
+    - name: Leather Cowl
+      share: 0.01
+    - name: Sundering Axe
+      share: 0.01
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.63

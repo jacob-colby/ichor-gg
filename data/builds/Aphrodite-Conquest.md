@@ -987,6 +987,18 @@ community_aspects:
       share: 0.26
     - name: Conduit Gem
       share: 0.13
+    - name: Sands Of Time
+      share: 0.1
+    - name: Bluestone Brooch
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Bumba's Hammer
+      share: 0.01
+    - name: Blood-soaked Shroud
+      share: 0.01
+    - name: Bumba's Cudgel
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.49

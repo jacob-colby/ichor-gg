@@ -848,6 +848,22 @@ community_aspects:
       share: 0.28
     - name: Archmage's Gem
       share: 0.15
+    - name: War Flag
+      share: 0.06
+    - name: Heroism
+      share: 0.05
+    - name: Selflessness
+      share: 0.05
+    - name: War Banner
+      share: 0.05
+    - name: Conduit Gem
+      share: 0.04
+    - name: Gilded Arrow
+      share: 0.01
+    - name: Hunter's Cowl
+      share: 0.01
+    - name: Vampiric Shroud
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.39

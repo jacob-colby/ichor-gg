@@ -19,7 +19,7 @@ export interface KitAlternative { name: string; icon: string; share: number }
 
 const pct = (r: number) => `${Math.round(r * 100)}%`;
 
-export function KitTile({ kind, icon, inset, name, reason, alternatives, altLabel, testId }: {
+export function KitTile({ kind, icon, inset, name, reason, alternatives, altLabel, testId, altUnit = "of players" }: {
   kind: "Start" | "Relic";
   /** The tile's main icon (the starter's base, or the relic). */
   icon: string;
@@ -31,6 +31,9 @@ export function KitTile({ kind, icon, inset, name, reason, alternatives, altLabe
   /** "Others" — names the list for the reader and for a screen reader. */
   altLabel: string;
   testId: string;
+  /** What an alternative's share is OF, for a screen reader: players on the
+   *  main build's record, games on an aspect's (`AspectCommunity`). */
+  altUnit?: string;
 }) {
   return (
     <div data-testid={testId} className="rounded-[12px] bg-surface">
@@ -59,7 +62,7 @@ export function KitTile({ kind, icon, inset, name, reason, alternatives, altLabe
               <li key={a.name} className="inline-flex min-w-0 items-center gap-1.5 text-ink-soft">
                 <Art name={a.icon} kind="item" className="h-5 w-5 rounded-[4px]" />
                 <span className="[overflow-wrap:anywhere]">{a.name}</span>
-                <span className="num text-quiet">{pct(a.share)}<span className="sr-only"> of players</span></span>
+                <span className="num text-quiet">{pct(a.share)}<span className="sr-only"> {altUnit}</span></span>
               </li>
             ))}
           </ul>

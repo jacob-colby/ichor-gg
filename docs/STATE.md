@@ -2595,7 +2595,7 @@ so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
 
-### The per-aspect community record reaches back to 30 and flags changed items; no aspect build reads it (2026-11-08, rule 2026-11-09)
+### The per-aspect community record reaches back to 30, flags changed items, and the god page shows it; no aspect build reads it (2026-11-08, rule and page 2026-11-09)
 What aspect PLAYERS buy, from SmiteBrain's per-match feed (the tRPC call
 behind "More Builds", which paginates; the `__data.json` page never does).
 Verified first: placement 1 is the win (mirror test 14/14, the site's own
@@ -2607,8 +2607,14 @@ matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
 and OB44 is marked `partial_from` because its first 2.5 days had already aged
 out), and the daily job adds ~217 requests to keep it. Each Conquest
 note gains `community_aspects`, under the tier list's own 30-match floor; a
-role shift named on a Wilson bound. It is kept out of `index.json`
-(`build_index.NOT_SHIPPED_BUILD_KEYS`).
+role shift named on a Wilson bound. **The god page shows it (2026-11-09)**:
+with the aspect switch on, under Ichor's six, labelled community and not the
+model — the starter path, the relic and the six most held, by share of games,
+with the games and the patches pooled, the role shift said in words, and each
+changed item asterisked and explained. Joust and Arena say they have no
+per-aspect record. `index.json` carries a slim view
+(`build_index.shipped_community_aspects`: no win rates, the six, every
+starter); the note keeps the whole entry.
 
 **The window rule reaches back (2026-11-09).** #129's rule read the newest
 window, else the last closed one, and left 21 of 86 aspects below the floor,

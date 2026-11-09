@@ -1021,6 +1021,20 @@ community_aspects:
       share: 0.23
     - name: Death's Toll
       share: 0.12
+    - name: Gilded Arrow
+      share: 0.08
+    - name: Hunter's Cowl
+      share: 0.08
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Bumba's Golden Dagger
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.01
+    - name: Leather Cowl
+      share: 0.01
+    - name: War Banner
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.35

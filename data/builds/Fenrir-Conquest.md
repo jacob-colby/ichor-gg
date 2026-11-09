@@ -858,6 +858,26 @@ community_aspects:
         says: changed in OB47; 6 of the 6 matches that bought it are older
     - name: Sundering Axe
       share: 0.13
+    - name: Bluestone Brooch
+      share: 0.1
+    - name: Bumba's Cudgel
+      share: 0.1
+    - name: War Banner
+      share: 0.1
+    - name: Bumba's Hammer
+      share: 0.06
+    - name: Warrior's Axe
+      share: 0.06
+    - name: Death's Embrace
+      share: 0.03
+    - name: Selflessness
+      share: 0.03
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
     relics:
     - name: Phantom Shell
       share: 0.45

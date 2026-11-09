@@ -708,6 +708,16 @@ community_aspects:
       share: 0.21
     - name: Conduit Gem
       share: 0.14
+    - name: Pendulum of the Ages
+      share: 0.08
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Sands Of Time
+      share: 0.01
+    - name: Bumba's Cudgel
+      share: 0.0
+    - name: Sundering Axe
+      share: 0.0
     relics:
     - name: Purification Beads
       share: 0.46

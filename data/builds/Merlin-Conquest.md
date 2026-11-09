@@ -829,6 +829,12 @@ community_aspects:
       share: 0.24
     - name: Archmage's Gem
       share: 0.18
+    - name: Bluestone Pendant
+      share: 0.14
+    - name: Sands Of Time
+      share: 0.1
+    - name: Blood-soaked Shroud
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.75

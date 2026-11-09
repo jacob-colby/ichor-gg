@@ -936,6 +936,20 @@ community_aspects:
       share: 0.27
     - name: Bumba's Cudgel
       share: 0.13
+    - name: Bluestone Brooch
+      share: 0.12
+    - name: Conduit Gem
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.04
+    - name: Hunter's Cowl
+      share: 0.04
+    - name: Sharpshooter's Arrow
+      share: 0.02
+    - name: Leather Cowl
+      share: 0.01
+    - name: Selflessness
+      share: 0.01
     relics:
     - name: Aegis of Acceleration
       share: 0.49

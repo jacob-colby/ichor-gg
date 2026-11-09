@@ -900,6 +900,26 @@ community_aspects:
       share: 0.2
     - name: Sands Of Time
       share: 0.11
+    - name: Bluestone Brooch
+      share: 0.09
+    - name: Archmage's Gem
+      share: 0.03
+    - name: Warrior's Axe
+      share: 0.03
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Conduit Gem
+      share: 0.02
+    - name: Heroism
+      share: 0.02
+    - name: Selflessness
+      share: 0.02
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
     relics:
     - name: Aegis of Acceleration
       share: 0.38

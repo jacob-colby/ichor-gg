@@ -47,16 +47,54 @@ def test_build_index_collects_gods_items_builds(tmp_path):
     assert index["builds"] == [{"type": "smite-build", "god": "Chiron"}]
 
 
-def test_the_per_aspect_community_record_is_not_shipped(tmp_path):
-    """`community_aspects` stays in the note; no viewer page reads it yet."""
+def test_the_per_aspect_community_record_ships_as_the_slim_view_the_god_page_reads(tmp_path):
+    """`community_aspects` stays whole in the note and ships slim: no win
+    rates or window dates, the six the page lists, every starter (the page
+    sums a path's two ends), and a stub entry as it is."""
     repo = _make_repo(tmp_path)
+    entry = {"aspect": "Aspect of Mangetsu", "status": "shown", "windows": ["ob45", "ob46", "ob47"],
+             "patches": "OB45–OB47", "window_rule": "pooled back", "window_start": "2026-10-06",
+             "window_end": "2026-11-08", "matches": 57, "wins": 32, "win_share": 0.56,
+             "aggregate": {"aspect_matches": 71, "aspect_win_rate": 0.479},
+             "roles": [{"role": "Mid", "matches": 32, "share": 0.56}], "base_role": "Jungle",
+             "base_role_share": 0.26, "role_shift": {"role": "Mid", "share": 0.56, "says": "..."},
+             "items": [{"name": f"Item {i}", "share": 0.9 - i / 10} for i in range(8)],
+             "starters": [{"name": f"Starter {i}", "share": 0.4 - i / 20} for i in range(5)],
+             "relics": [{"name": "Purification Beads", "share": 0.6}],
+             "matches_by_window": {"ob47": 6, "ob46": 21, "ob45": 30, "ob44": 17},
+             "unmapped_slugs": ["brawlers-ruin"]}
+    stub = {"aspect": "Aspect of Calamity", "status": "below minimum", "matches_by_window": {"ob47": 4}}
+    block = {"source": "SmiteBrain", "complete_from": "2026-09-24", "partial_windows": {"ob44": "2026-09-24"},
+             "minimum_matches": 30, "window_rule": "the newest patch window; ...",
+             "item_changes": "an item is flagged when ...", "aspects": [entry, stub]}
     notes.write_note(repo / "data" / "builds" / "Tsukuyomi-Conquest.md",
-                     {"type": "smite-build", "god": "Tsukuyomi", "builds": [],
-                      "community_aspects": {"aspects": [{"aspect": "Aspect of Mangetsu"}]}}, "")
+                     {"type": "smite-build", "god": "Tsukuyomi", "builds": [], "community_aspects": block}, "")
     index = build_index.build_index(repo)
-    assert index["builds"] == [{"type": "smite-build", "god": "Tsukuyomi", "builds": []}]
+    (shipped,) = [b["community_aspects"] for b in index["builds"]]
+    assert set(shipped) == {"source", "complete_from", "partial_windows", "minimum_matches",
+                            "item_changes", "aspects"}
+    slim, shipped_stub = shipped["aspects"]
+    assert shipped_stub == stub
+    for gone in ("wins", "win_share", "aggregate", "window_start", "window_end", "unmapped_slugs"):
+        assert gone not in slim, gone
+    assert [i["name"] for i in slim["items"]] == [f"Item {i}" for i in range(6)]
+    assert len(slim["starters"]) == 5 and slim["relics"] == entry["relics"]
+    assert (slim["patches"], slim["matches"], slim["role_shift"]["role"]) == ("OB45–OB47", 57, "Mid")
     fm, _ = notes.read_note(repo / "data" / "builds" / "Tsukuyomi-Conquest.md")
-    assert "community_aspects" in fm
+    assert fm["community_aspects"] == block                 # the note keeps the whole entry
+
+
+def test_every_shipped_aspect_key_is_one_the_note_writes():
+    """A renamed key in `aspect_matches` must not silently empty the page."""
+    from smite import aspect_matches as am
+    for path in sorted(am.BUILDS_ROOT.glob("*-Conquest.md")):
+        fm, _ = notes.read_note(path)
+        for entry in (fm.get("community_aspects") or {}).get("aspects", []):
+            if entry["status"] == "shown":
+                missing = set(build_index.SHIPPED_ASPECT_KEYS) - set(entry)
+                assert not missing, (path.name, missing)
+                return
+    raise AssertionError("no shown aspect entry in any Conquest note")
 
 
 def test_build_index_empty_folders_return_empty_lists(tmp_path):

@@ -859,6 +859,26 @@ community_aspects:
         older_matches: 4
         matches: 6
         says: changed in OB47; 4 of the 6 matches that bought it are older
+    - name: Death's Toll
+      share: 0.09
+    - name: Heroism
+      share: 0.09
+    - name: Bumba's Hammer
+      share: 0.07
+    - name: War Banner
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Sundering Axe
+      share: 0.05
+    - name: Blood-soaked Shroud
+      share: 0.02
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: Hunter's Cowl
+      share: 0.02
+    - name: Sharpshooter's Arrow
+      share: 0.02
     relics:
     - name: Phantom Shell
       share: 0.26

@@ -873,6 +873,22 @@ community_aspects:
       share: 0.21
     - name: Archmage's Gem
       share: 0.1
+    - name: Bluestone Pendant
+      share: 0.1
+    - name: Conduit Gem
+      share: 0.1
+    - name: Heroism
+      share: 0.06
+    - name: Bumba's Cudgel
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Sundering Axe
+      share: 0.02
+    - name: War Banner
+      share: 0.02
+    - name: War Flag
+      share: 0.02
     relics:
     - name: Aegis of Acceleration
       share: 0.31

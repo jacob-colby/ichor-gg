@@ -829,6 +829,10 @@ community_aspects:
       share: 0.26
     - name: Pendulum of the Ages
       share: 0.08
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Sands Of Time
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.48

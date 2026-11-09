@@ -1025,6 +1025,32 @@ community_aspects:
       share: 0.2
     - name: Conduit Gem
       share: 0.15
+    - name: Gilded Arrow
+      share: 0.13
+    - name: Warrior's Axe
+      share: 0.09
+    - name: Archmage's Gem
+      share: 0.03
+    - name: Bumba's Hammer
+      share: 0.02
+    - name: Death's Embrace
+      share: 0.02
+    - name: Leather Cowl
+      share: 0.02
+    - name: Sands Of Time
+      share: 0.02
+    - name: Selflessness
+      share: 0.02
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 2
+        matches: 2
+        says: changed in OB47; 2 of the 2 matches that bought it are older
+    - name: Hunter's Cowl
+      share: 0.01
+    - name: Pendulum of the Ages
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.46
