@@ -8,12 +8,13 @@ the specific regression this module was written around: the real leakage-free
 row is checked against the real patterns, with all seven of its numbers in
 place, to prove the anchors cannot pick up a retired one.
 """
+import dataclasses
 import re
 import subprocess
 
 import pytest
 
-from smite import doc_audit
+from smite import doc_audit, doc_figures
 
 
 # ── fixtures ──────────────────────────────────────────────────────────────
@@ -95,6 +96,14 @@ REAL_LEAKAGE_FREE_ROW = (
 )
 
 
+#: The label-anchored pattern the Leakage-free row was checked with until its
+#: figure moved to CURRENT.md (2026-11-09). Kept here because the mechanism it
+#: proves — anchor on the figure's own words, never on "the number in this row"
+#: — is still what every hand-kept row relies on.
+LEAKAGE_FREE_PATTERN = (r"(\d+\.\d+)% probe · (\d+\.\d+)% at eff (\d\.\d+), vs "
+                        r"(\d+\.\d+)% chance = (\d+\.\d+)–(\d+\.\d+)×")
+
+
 def test_superseded_figures_do_not_match():
     """The row holds 35.5, 36.7, 5.8, 34.8 and 37.5 as history. None may win.
 
@@ -102,9 +111,8 @@ def test_superseded_figures_do_not_match():
     "the number in this row": a naive matcher finds 35.5 here and fails a
     document that is perfectly correct.
     """
-    leakage = next(c for c in doc_audit.CHECKS if c.row == "Leakage-free")
     results, _ = _run([("Leakage-free", REAL_LEAKAGE_FREE_ROW)],
-                      [_check("Leakage-free", leakage.pattern,
+                      [_check("Leakage-free", LEAKAGE_FREE_PATTERN,
                               lambda f, d: ("37.7", "38.4", None, "5.7", "6.6", "6.7"))])
     assert results[0]["status"] == "ok"
     assert results[0]["doc"].startswith("37.7% probe")
@@ -443,3 +451,156 @@ def test_the_tests_row_says_why_it_moved():
 
 def test_the_tests_note_is_silent_when_the_pipeline_count_held():
     assert doc_audit._tests_note(("652", "660"), ("652", "655")) == ""
+
+
+# ── classes: DAILY is generated, PATCH and CODE are hand-kept (2026-11-09) ─
+
+def _shipped(row, source="state"):
+    return next(c for c in doc_audit.CHECKS if c.row == row and c.source == source)
+
+
+def test_every_shipped_check_carries_a_class():
+    assert {c.cls for c in doc_audit.CHECKS} <= set(doc_audit.CLASSES)
+    assert all(c.cls for c in doc_audit.CHECKS)
+
+
+def test_no_code_figure_is_ever_generated():
+    """CODE rows are the ones sessions most often forget. A generator that
+    wrote one would make forgetting it free, so none may be generated: every
+    CURRENT.md figure is DAILY, and no CODE row's label is a generated one."""
+    generated = {f.label for f in doc_figures.FIGURES}
+    code = {c.row for c in doc_audit.CHECKS if c.cls == "code"}
+    assert code and not code & generated
+    assert {"Tests", "Expert claims", "Combat model"} <= code
+    for check in doc_audit.CHECKS:
+        if check.source == "current":
+            assert check.cls == "daily", check.row
+        if check.cls in ("code", "patch"):
+            assert check.source != "current" and check.vouch is None, check.row
+
+
+def test_a_code_row_still_fails_loudly():
+    tests = dataclasses.replace(_shipped("Tests"), compute=lambda f, d: ("1491", "1016"))
+    results, _ = _run([("Tests", "1490 pipeline · 1016 viewer")], [tests])
+    (result,) = results
+    assert result["status"] == "drift"
+    assert "same commit" in result["note"]
+    assert result["status"] in doc_audit.FAILING
+
+
+def test_a_drift_without_its_own_note_says_its_class():
+    claims = dataclasses.replace(_shipped("Expert claims"),
+                                 compute=lambda f, d: ("5", "3", "2"))
+    results, _ = _run([("Expert claims", "4 recorded · 3 resolved · 1 open")], [claims])
+    assert results[0]["status"] == "drift"
+    assert results[0]["note"] == doc_audit.CLASS_NOTES["code"]
+
+
+def test_every_generated_figure_is_a_daily_row_that_links_to_it():
+    """Both halves, for every figure: §7 has the row and it links here, and
+    CURRENT.md is checked for the value. Either alone could rot."""
+    rows = doc_audit.state_rows(doc_audit.STATE_PATH.read_text(encoding="utf-8"))
+    for figure in doc_figures.FIGURES:
+        link = _shipped(figure.label)
+        assert link.cls == "daily" and link.pattern == doc_audit.LIVE_LEAD
+        assert len(re.findall(link.pattern, rows[figure.label])) == 1, figure.label
+        value = _shipped(figure.label, source="current")
+        assert value.tier == figure.tier
+        assert (value.vouch is not None) == (figure.tier == "model")
+
+
+def test_a_daily_row_that_loses_its_link_is_unlocatable():
+    link = _shipped("Items placed")
+    results, _ = _run([("Items placed", "208 / 233 (2026-11-09)")], [link])
+    assert results[0]["status"] == "unlocatable"
+    assert "CURRENT.md" in results[0]["note"]
+
+
+def test_the_items_row_survives_a_note_after_its_figure():
+    """#127 wrote "233 (2026-11-08: the five base relics …, Was 228)", and
+    `^(\\d+)$` then matched nothing."""
+    items = dataclasses.replace(_shipped("Items"), compute=lambda f, d: ("233",))
+    cell = "233 (2026-11-08: the five base relics … none is buildable. Was 228)"
+    results, _ = _run([("Items", cell)], [items])
+    assert results[0]["status"] == "ok" and results[0]["doc"] == "233"
+
+
+def test_the_product_md_sentence_links_to_the_live_figure():
+    check = _shipped("leakage-free measure", source="product")
+    text = doc_audit.PRODUCT_PATH.read_text(encoding="utf-8")
+    assert check.cls == "daily"
+    assert len(re.findall(check.pattern, text, re.M)) == 1
+
+
+# ── CURRENT.md, and the stamp that vouches for it ─────────────────────────
+
+CURRENT = "| Figure | Value |\n|---|---|\n| Headline gate | coverage 51.2% |\n"
+
+
+def _figure(compute, vouch=None, tier="model", row="Headline gate"):
+    return _check(row, r"^(.+)$", compute, source="current", tier=tier,
+                  cls="daily", vouch=vouch)
+
+
+def _run_current(checks, current=CURRENT, **kw):
+    return doc_audit.run(checks=checks, facts=object(), ungated={},
+                         texts={"state": _state([]), "current": current}, **kw)
+
+
+def test_a_matching_stamp_vouches_without_re_deriving():
+    def compute(_f, _d):
+        raise AssertionError("re-derived a figure the stamp vouched for")
+
+    results, _ = _run_current([_figure(compute, vouch=lambda f, t: None)])
+    (result,) = results
+    assert (result["status"], result["note"]) == ("ok", "current by stamp")
+
+
+def test_a_stale_stamp_re_derives_and_says_why():
+    results, _ = _run_current([_figure(lambda f, d: ("coverage 50.0%",),
+                                       vouch=lambda f, t: "the pipeline code differs")])
+    (result,) = results
+    assert result["status"] == "drift"
+    assert result["computed"] == "coverage 50.0%"
+    assert "Re-derived because the pipeline code differs" in result["note"]
+    assert result["note"].startswith("DAILY")
+
+
+def test_a_stale_stamp_whose_figures_held_is_ok():
+    results, _ = _run_current([_figure(lambda f, d: ("coverage 51.2%",),
+                                       vouch=lambda f, t: "the pipeline code differs")])
+    assert results[0]["status"] == "ok"
+
+
+def test_a_stamp_that_cannot_be_verified_vouches_for_nothing():
+    def vouch(_f, _t):
+        raise OSError("index.json is unreadable")
+
+    results, _ = _run_current([_figure(lambda f, d: ("coverage 50.0%",), vouch=vouch)])
+    assert results[0]["status"] == "drift"
+    assert "could not be verified" in results[0]["note"]
+
+
+def test_skip_model_still_reports_what_the_stamp_vouches_for():
+    vouched = _figure(lambda f, d: ("x",), vouch=lambda f, t: None)
+    results, skipped = _run_current([vouched], skip_model=True)
+    assert skipped == [] and results[0]["status"] == "ok"
+
+
+def test_skip_model_skips_a_figure_the_stamp_cannot_vouch_for():
+    stale = _figure(lambda f, d: ("x",), vouch=lambda f, t: "the code differs")
+    results, skipped = _run_current([stale], skip_model=True)
+    assert [c.row for c in skipped] == ["Headline gate"] and results == []
+
+
+def test_a_missing_current_file_is_a_finding_not_a_crash():
+    results, _ = _run_current([_figure(lambda f, d: ("x",), tier="cheap")], current=None)
+    assert results[0]["status"] == "unlocatable"
+    assert "does not exist" in results[0]["note"]
+
+
+def test_a_row_no_generated_figure_writes_is_uncovered():
+    typed = CURRENT + "| Typed by hand | 7 |\n"
+    results, _ = _run_current([_figure(lambda f, d: ("coverage 51.2%",), tier="cheap")],
+                              current=typed)
+    assert _statuses(results)["Typed by hand"] == "uncovered"

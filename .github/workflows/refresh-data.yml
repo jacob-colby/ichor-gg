@@ -175,6 +175,26 @@ jobs:
           # it reads the builds just written and feeds nothing back.
           python -m smite.side_by_side --json
 
+      # THE FIGURES THIS REFRESH MOVES, WRITTEN BY THE REFRESH. docs/STATE.md
+      # section 7 carried every figure a community refresh moves as hand-kept
+      # prose, so once this job landed on main by itself (2026-11-08)
+      # `doc_audit --check` went red on main every morning and every session
+      # inherited the rows. Those figures now live in docs/CURRENT.md, which
+      # this step regenerates from the index and builds just written, so the
+      # data PR carries its own figures and main stays green. Why these
+      # figures and no others is in `pipeline/smite/doc_figures.py`.
+      #
+      # After the recompute, because it reads its output; before the commit,
+      # because the commit carries it. It never blocks the data: a failure
+      # here leaves yesterday's file in place, the data still lands, and the
+      # run goes red at its last step, the same contract as a rejected stats
+      # refresh.
+      - name: Regenerate the current figures
+        id: figures
+        working-directory: pipeline
+        continue-on-error: true
+        run: python -m smite.doc_figures --write
+
       # The gates. `data_audit` exits non-zero on any open finding; reviewed
       # source-data facts live in data/_audit_reviewed.yaml, so it exits 0 as of
       # 2026-11-02. Still reported, not enforced, until it has stayed green
@@ -306,7 +326,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # The HTML cache is a fetch artifact, not data — committing it would
           # add tens of MB a day for nothing.
-          git add data viewer/public/index.json viewer/public/side_by_side
+          git add data viewer/public/index.json viewer/public/side_by_side docs/CURRENT.md
           git reset -q -- data/_cache
           if git diff --cached --quiet; then
             echo "No change — SmiteBrain's window hasn't moved."
@@ -496,6 +516,15 @@ jobs:
         if: ${{ !cancelled() && steps.new_entities.outputs.rejected == 'true' }}
         run: |
           echo "::error::A new god or item was left out by the gate; see the 'Add new gods and items' step and data/_new_entities.json."
+          exit 1
+
+      # A data PR that carries yesterday's figures turns `doc_audit` red on
+      # main for every session, which is the failure the figures step exists
+      # to end, so a failure there is a red run and not a line in a green log.
+      - name: Fail the run if the current figures could not be regenerated
+        if: ${{ !cancelled() && steps.figures.outcome == 'failure' }}
+        run: |
+          echo "::error::docs/CURRENT.md could not be regenerated, so today's data PR carries yesterday's figures and doc_audit --check will be red on main. See the 'Regenerate the current figures' step; run 'python -m smite.doc_figures --write' on the data PR's branch once the cause is fixed."
           exit 1
 
       # THE RUN IS RED WHENEVER THE DAY'S DATA DID NOT REACH MAIN, and that is
