@@ -257,6 +257,37 @@ describe("DraftDock — the build, in place", () => {
     expect(starters.getAllByRole("link")).toHaveLength(2);
   });
 
+  /* A path's chip carries both ends summed (each player holds one end), read
+   * from every sighting — and the row stays three chips, because every
+   * sighting now includes a tail of 1% openers. */
+  it("gives a path its summed share and keeps the row to three paths", () => {
+    const everyTile = [{
+      ...BUILDS[0],
+      builds: [SUGGESTED, {
+        source: "community", aspect: null, aspect_pick_rate: null, aspect_win_rate: null,
+        slot_order: [], source_url: "",
+        starter_sightings: [
+          { name: "Sharpshooter's Arrow", pick_rate: 0.41, win_rate: 0.53 },
+          { name: "Bumba's Golden Dagger", pick_rate: 0.24, win_rate: 0.49 },
+          { name: "Gilded Arrow", pick_rate: 0.17, win_rate: 0.46 },
+          { name: "Conduit Gem", pick_rate: 0.1, win_rate: 0.5 },
+          { name: "Leather Cowl", pick_rate: 0.05, win_rate: 0.5 },
+        ],
+      }],
+    }, ...CORES.slice(1)] as unknown as BuildNote[];
+    const items = [...ITEMS,
+      { ...item("Gilded Arrow"), tier: 1, builds_into: ["Sharpshooter's Arrow"] } as Item,
+      { ...item("Sharpshooter's Arrow"), tier: 2, builds_from: ["Gilded Arrow"] } as Item];
+    seed(["", "", "", "", ""]);
+    render(<DraftDock gods={GODS} items={items} builds={everyTile} godItemScores={GOD_ITEM_SCORES} draftConfig={DRAFT_CFG} />);
+    fireEvent.click(screen.getByRole("button", { name: /god page.s build/i }));
+    const starters = within(screen.getByTestId("dock-starters"));
+    expect(starters.getByRole("link", { name: /Gilded Arrow into Sharpshooter's Arrow — 58% of TestGod players/i }))
+      .toBeInTheDocument();
+    expect(starters.getAllByRole("link")).toHaveLength(3);
+    expect(starters.queryByRole("link", { name: /Leather Cowl/ })).not.toBeInTheDocument();
+  });
+
   it("says nothing about openers for a god with no community data", () => {
     seed(["", "", "", "", ""]);
     render(dock());

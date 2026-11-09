@@ -9,7 +9,7 @@
  */
 import { teamFitItems, teamOverlay } from "./teamTags";
 import { useCallback, useMemo } from "react";
-import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
+import type { BuildNote, CommunityBuildEntry, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
 import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptFromCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
@@ -172,13 +172,18 @@ export function useDraftResult(
    *  Conquest's openers are a real answer for the other modes (a Warrior's Axe
    *  opener is a Warrior's Axe opener), just not a measured one, so they are
    *  shown WITH the fallback flagged rather than dropped or passed off as
-   *  native. Same judgement the build pages already make about Joust. */
+   *  native. Same judgement the build pages already make about Joust.
+   *
+   *  Grouped from every sighting when the index carries them: a path's share
+   *  is the sum of its two ends, and the top 3 can hold one end of a path
+   *  without the other. The top 3 is the fallback for an older index. */
   const { starters, startersAreConquest } = useMemo(() => {
     const openersFor = (label: string) => {
       const note = builds.find((b) => b.god === meName && b.mode === label);
-      const community = note?.builds.find((b) => b.source === "community");
-      return (community as { community_starters?: { name: string; pick_rate: number; win_rate: number }[] })
-        ?.community_starters ?? [];
+      const community = note?.builds.find((b) => b.source === "community") as CommunityBuildEntry | undefined;
+      return community?.starter_sightings?.length
+        ? community.starter_sightings
+        : community?.community_starters ?? [];
     };
     const own = openersFor(MODE_LABEL[mode]);
     if (own.length > 0 || MODE_LABEL[mode] === "Conquest") {

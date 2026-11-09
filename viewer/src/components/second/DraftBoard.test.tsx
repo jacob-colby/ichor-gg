@@ -48,6 +48,40 @@ describe("DraftBoard — the board", () => {
     expect(row).not.toHaveTextContent("Pebble");
   });
 
+  /* Each player is counted once, holding the base OR its upgrade, so a path's
+   * share is the two ends summed — the god page's number for the same opener.
+   * The larger end alone (41% here) is what the row used to say. */
+  const pathBoard = (starter: Record<string, unknown>) => {
+    const builds = ["Conquest", "Joust", "Arena"].map((m) => ({
+      type: "smite-build", god: "TestGod", mode: m,
+      builds: [
+        { source: "suggested", archetype: "model", slot_order: CORE6, flex_slots: [], starter },
+        { source: "community", slot_order: [], starter_sightings: [
+          { name: "Tree", pick_rate: 0.41, win_rate: 0.53 },
+          { name: "Pebble", pick_rate: 0.24, win_rate: 0.5 },
+          { name: "Seed", pick_rate: 0.17, win_rate: 0.46 },
+        ] },
+      ],
+    })) as unknown as BuildNote[];
+    const seed = { ...item("Seed"), tier: 1, builds_into: ["Tree"] } as Item;
+    const tree = { ...item("Tree"), tier: 2, builds_from: ["Seed"] } as Item;
+    localStorage.setItem("smite:draft", JSON.stringify({ mode: "conquest", allies: ["TestGod", "", "", "", ""], enemies: ["", "", "", "", ""] }));
+    render(<DraftBoard gods={GODS} items={[...ITEMS, seed, tree, item("Pebble")]} builds={builds}
+      godItemScores={GOD_ITEM_SCORES} draftConfig={CFG} />);
+    return screen.getByTestId("draft-starter");
+  };
+
+  it("states the starter path's share as its two ends summed", () => {
+    const row = pathBoard({ base: "Seed", upgrade: "Tree" });
+    expect(row).toHaveTextContent("58% of TestGod players open this way");
+    expect(row).not.toHaveTextContent("41%");
+  });
+
+  it("reads the pipeline's stamped share when the build carries one", () => {
+    const row = pathBoard({ base: "Seed", upgrade: "Tree", basis: "community", pick_rate: 0.6, win_rate: 0.5, matches: 600 });
+    expect(row).toHaveTextContent("60% of TestGod players open this way");
+  });
+
   it("names itself and teaches the empty board, with you in the violet slot", () => {
     render(board());
     expect(screen.getByRole("heading", { level: 1, name: "Draft" })).toBeInTheDocument();

@@ -231,22 +231,24 @@ export function DraftDock({ gods, items, builds, godItemScores, godItemDamage, d
                   Opens with{startersAreConquest && ` · ${MODE_LABEL.conquest} data`}
                 </div>
                 {/* One chip per purchase PATH — see lib/starters.ts. The dock
-                    is 420px, so it shows the path's end and its lead rate and
-                    leaves the base/upgrade split to the full page. */}
+                    is 420px, so it shows the path's end and the path's share
+                    (both ends summed) and leaves the base/upgrade split to the
+                    full page. Three paths at most: the record now carries every
+                    sighting, and the tail is 1% openers. */}
                 <ul className="mt-1 flex flex-wrap gap-1">
-                  {starters.map((p) => {
+                  {starters.slice(0, 3).map((p) => {
                     const end = p.upgrade ?? p.base!;
                     return (
                       <li key={p.rootName}>
                         <a href={toHash.item(end.name)}
                           aria-label={p.base && p.upgrade
-                            ? `${p.base.name} into ${p.upgrade.name} — ${Math.round(p.lead.pick_rate * 100)}% of ${meName} players`
+                            ? `${p.base.name} into ${p.upgrade.name} — ${Math.round(p.pick_rate * 100)}% of ${meName} players`
                             : `${end.name} — opened with by ${Math.round(end.pick_rate * 100)}% of ${meName} players, winning ${Math.round(end.win_rate * 100)}%`}
                           className="press flex items-center gap-1 rounded-md border border-line bg-bg2 py-0.5 pl-0.5 pr-1.5 transition-colors duration-150 ease-standard hover:border-line-strong">
                           <Icon name={end.name} item className="h-5 w-5" />
                           <span className="max-w-[10ch] truncate text-label text-ink">{end.name}</span>
                           <span aria-hidden="true" className="font-mono text-micro text-gold">
-                            {Math.round(p.lead.pick_rate * 100)}%
+                            {Math.round(p.pick_rate * 100)}%
                           </span>
                         </a>
                       </li>

@@ -30,6 +30,7 @@ import { useUrlState } from "../../lib/urlState";
 import { toHash } from "../../lib/useHashRoute";
 import { diffSix, focusOptions, hybridEvidence, swapLead, MAIN_LABEL, type SlotSwap } from "../../lib/focus";
 import { mostPicked, transferFlags } from "../../lib/mostPicked";
+import { starterShare } from "../../lib/starters";
 import { godLane, laneTextClass } from "../../lib/roleAccent";
 import { useComparison } from "./useComparison";
 import { verdictSentence, MODE_NAME } from "./verdict";
@@ -165,16 +166,19 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   });
 
   const starter = showTheirs ? community?.starter : (r.activeEntry?.starter ?? community?.starter);
-  const starterPath = starter ? r.starters.find((p) => p.rootName === starter.base) : undefined;
+  // The whole path's share (base + upgrade), the same number the draft board
+  // prints for the same opener — see lib/starters.starterShare.
+  const starterPct = starterShare(starter, r.starters);
   const inConquest = r.startersAreConquest || mode !== "conquest" ? "In Conquest, " : "";
-  // Each other opener by the item its players actually hold (the path's
-  // lead, whose share is the one printed) — the full "base → upgrade" label
-  // stays on the starter tile itself, where the pairing is the point; here it
-  // doubled the line and wrapped it on a phone.
+  // Each other opener by its base, with the path's share: every player on the
+  // path opened with the base, so "Conduit Gem 39%" is true where the upgrade's
+  // name would claim its holders were all of them. The full "base → upgrade"
+  // label stays on the starter tile itself, where the pairing is the point;
+  // here it doubled the line and wrapped it on a phone.
   const starterAlts: KitAlternative[] = r.starters
     .filter((p) => p.rootName !== starter?.base)
     .slice(0, 2)
-    .map((p) => ({ name: p.lead.name, icon: p.lead.name, share: p.lead.pick_rate }));
+    .map((p) => ({ name: p.rootName, icon: p.rootName, share: p.pick_rate }));
 
   // The relic: the community's own record, when the index carries one. Same
   // fallback as the starters — Joust and Arena read Conquest's, and say so.
@@ -356,7 +360,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               {starter && (
                 <KitTile kind="Start" testId="starter" icon={starter.base} inset={starter.upgrade}
                   name={`${starter.base} → ${starter.upgrade}`}
-                  reason={starterPath ? `${inConquest}${pctOf(starterPath.lead.pick_rate)} of ${god.name} players open this way` : undefined}
+                  reason={starterPct != null ? `${inConquest}${pctOf(starterPct)} of ${god.name} players open this way` : undefined}
                   alternatives={starterAlts}
                   altLabel={`Others${inConquest ? " in Conquest" : ""}`} />
               )}
