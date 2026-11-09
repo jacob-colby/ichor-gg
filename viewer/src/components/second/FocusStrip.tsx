@@ -11,7 +11,7 @@
  * took a column of its own and the chips wrapped to three rows in what was
  * left, pushing the six's first row to the bottom of a 768px screen.)
  *
- * Phone: one row that scrolls sideways, bled to the screen edge, its right
+ * Phone: the aspect switch stays put and the chips beside it scroll sideways, bled to the screen edge, their right
  * edge faded so the next chip visibly continues past it; the chosen chip is
  * scrolled into view on load, so a shared `build=` link never opens on a
  * selection the reader can't see. From 1024px it wraps instead — the column
@@ -56,15 +56,24 @@ export function FocusStrip({ options, selected, onSelect, aspect }: {
   };
 
   return (
-    <div ref={scroller} data-testid="focus-strip" role="group" aria-label="Adjust the build"
-      className="focus-strip -mx-4 flex snap-x items-center gap-2 overflow-x-auto px-4 py-1 pr-10 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 lg:pr-0">
-      {aspect}
-      {options.length > 1 && focuses.map(chip)}
-      {options.length > 1 && answers.length > 0 && (
-        <>
-          <span aria-hidden="true" className="mx-1 h-7 w-px flex-none bg-line-strong" />
-          {answers.map(chip)}
-        </>
+    <div data-testid="focus-strip" role="group" aria-label="Adjust the build"
+      className="flex items-center gap-2 lg:flex-wrap">
+      {/* The switch sits OUTSIDE the scroller. Inside it, the strip's snap
+          points were the chips, so the switch was not one: a drag that ended
+          within reach of the first chip snapped to it and left the switch
+          off-screen to the left, unreachable. */}
+      {aspect && <div className="flex-none">{aspect}</div>}
+      {options.length > 1 && (
+        <div ref={scroller} data-testid="focus-chips"
+          className="focus-strip -mr-4 flex min-w-0 flex-1 snap-x items-center gap-2 overflow-x-auto py-1 pr-10 lg:mr-0 lg:flex-none lg:flex-wrap lg:overflow-visible lg:pr-0">
+          {focuses.map(chip)}
+          {answers.length > 0 && (
+            <>
+              <span aria-hidden="true" className="mx-1 h-7 w-px flex-none bg-line-strong" />
+              {answers.map(chip)}
+            </>
+          )}
+        </div>
       )}
     </div>
   );
