@@ -9,7 +9,7 @@ live data.
 import ast
 import json
 import math
-from datetime import date, datetime
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -585,76 +585,79 @@ def test_the_items_and_gods_half_still_tracks_the_current_patch():
 
 
 def test_the_shipped_label_names_the_community_window_and_its_real_size():
-    """The live assertion, pinned to the shipped WINDOW: Open Beta 47. That
-    half fires on every patch boundary, so updating it declares the new window
-    established rather than tidying a test.
+    """The live assertion: the label names the shipped table's OWN window,
+    derived here from the table's `window` field, and the table's own size.
 
-    The SIZE half is derived, not pinned. It read "2,859 matches" and refused
-    "12,774" until 2026-11-07, and both of those are one day's figures: the
-    11-07 table is 4,089 matches over 18,535 builds in the same window, so the
-    pins would have blocked every day's data. What they caught still fails
-    here, on any day: the label must carry the table's own MATCH count, and
-    must not carry its derived BUILDS count. `live_window.py` has the
-    convention.
+    Until 2026-11-09 the window half was pinned, `"community window Open Beta
+    47, "`, so that moving it declared a new window established. Jacob decided
+    on 2026-11-08 that a new window lands by itself, and the first OB48
+    refresh would have failed here and blocked the day's pull request. Derived,
+    it catches more than the pin did: the pre-#109 code read `_patch.json` for
+    both halves and said "community window Open Beta 47" over an Open Beta 46
+    table, which the pin could see only on a day the patch and the window
+    differed. Here it fails on any day the label names anything but the
+    table's window. (The same regression, on a fixture that always differs,
+    is `test_the_label_names_the_window_that_was_read_not_the_current_patch`.)
 
-    It failed against the pre-#109 code, which read `_patch.json` for both
-    halves and said "community window Open Beta 47" over an Open Beta 46
-    table; the count was then corrected from that window's 67,532 builds to
-    its 14,667 MATCHES (2026-11-05).
-
-    NOTE: both halves now read Open Beta 47, so this test can no longer catch
-    the community half copying the item patch by itself. That structural
-    check lives in `test_the_items_and_gods_half_still_tracks_the_current_patch`,
-    which derives both halves instead of pinning them. The unit half of #109
-    is still caught here, by refusing the derived builds figure."""
+    The SIZE half has been derived since 2026-11-07, when "2,859 matches" and
+    "not 12,774" were found to be one day's figures (4,089 over 18,535 the
+    next day, same window). What they caught still fails, on any day: the
+    label carries the table's MATCH count, and not its derived BUILDS count —
+    #109's unit error. `live_window.py` has the convention."""
+    import re
     table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
     matches, unit = sbs.community_sample(table)
     builds, builds_unit = sbs.community_sample(dict(table, matches_analyzed=None))
     assert (unit, builds_unit) == ("matches", "builds") and matches != builds
+    window = re.fullmatch(r"ob(\d+)", str(table.get("window")))
+    assert window, table.get("window")      # well-formedness is test_refresh's too
+    name = f"Open Beta {window.group(1)}"
     label = sbs.data_patch()
-    assert "community window Open Beta 47, " in label, label
-    assert f"community window Open Beta 47, {matches:,} matches" in label, label
+    assert f"community window {name}, {matches:,} matches" in label, label
     assert f"{builds:,}" not in label, (builds, label)
 
 
 def test_the_shipped_match_count_agrees_with_the_documented_community_sample():
     """The cross-check that would have caught #109's unit error: STATE.md
-    section 7 has carried the match count all along.
+    section 7 has carried the match count all along. Its newest dated reading
+    is the first figure after the row's link to CURRENT.md
+    (`doc_audit.community_reading`).
 
-    Until 2026-11-07 it asserted the row held the shipped count EXACTLY. The
-    row is written by hand and the nightly refresh never touches docs, so that
-    went red on the first refresh after every edit to the row (2,859 written
-    on 11-06, 4,089 shipped on 11-07) — with the data arriving as a pull
-    request, it would have blocked every day's data. `doc_audit` reports that
-    drift for a human to read, which is the job it was built for.
+    WHILE THE ROW DESCRIBES THE SHIPPED WINDOW (its start day is the table's),
+    #123's consistency checks hold on every day of a healthy window: the row's
+    figure is a match count of this window recorded on some earlier day, so it
+    can be no larger than the shipped count, and its end falls inside the
+    shipped window. Until 2026-11-07 the row had to hold the shipped count
+    EXACTLY, and that blocked every day's data, since the row is written by
+    hand and the refresh never edits it.
 
-    What is asserted now holds on every day of a healthy window. PATCH-BOUNDARY:
-    the row describes the shipped window, by its start date, so this still
-    fires at a boundary until the row is updated as part of declaring the new
-    window. DAILY, as invariants: the row's figure is a match count of this
-    window recorded on some earlier day, so it can be no larger than the
-    shipped count and its end no later than the shipped end. #109's own
-    failure, a builds count reported as matches, is caught on any day by
+    IN ANY OTHER WINDOW the row is history, and this skips. Until 2026-11-09 a
+    start day different from the table's failed here, "declare the new window
+    and update the row", and the first OB48 refresh would have stopped on it.
+    A new window lands by itself now (Jacob, 2026-11-08), and the live figure
+    is generated into CURRENT.md in the same pull request, so a row whose
+    newest reading is a window behind is not wrong, only not yet extended.
+    `doc_audit` says so as a WARNING, and as a finding if the row describes a
+    window NEWER than the data. #109's own failure, a builds count reported as
+    matches, is caught on every day by
     `test_the_derivation_counts_builds_and_every_item_agrees` and the label
     test above. `live_window.py` has the convention."""
-    import re
     from smite import doc_audit
     state = (sbs.REPO_ROOT / "docs" / "STATE.md").read_text(encoding="utf-8")
-    row = re.search(r"\|\s*Community sample\s*\|([^|]*)\|", state).group(1)
+    row = doc_audit.state_rows(state)["Community sample"]
+    reading = doc_audit.community_reading(row)
+    assert reading, row[:160]
+    doc_count, _, doc_start, doc_end = reading
     table = json.loads(sbs.COMMUNITY_ITEMS_PATH.read_text(encoding="utf-8"))
     count, unit = sbs.community_sample(table)
     assert unit == "matches"
-    doc = re.search(r"([\d,]+) (\w+)\+ Conquest matches, (\d+ \w+) – (\d+ \w+)", row)
-    assert doc, row[:120]
-    doc_count, _, doc_start, doc_end = doc.groups()
-    assert doc_start == doc_audit._day(table["window_start"]), (
-        f"STATE.md's Community sample row starts {doc_start}, the shipped window "
-        f"{table['window_start']}: declare the new window and update the row")
-    assert int(doc_count.replace(",", "")) <= count, (doc_count, count)
-    # The row names day and month only. Read it in the window's own year,
-    # rolling into the next for a window that crosses New Year.
     start = date.fromisoformat(table["window_start"])
-    end = datetime.strptime(f"{doc_end} {start.year}", "%d %b %Y").date()
-    if end < start:
-        end = end.replace(year=start.year + 1)
+    if doc_audit.day_near(doc_start, start) != start:
+        pytest.skip(f"STATE.md's newest Community sample reading starts {doc_start}, "
+                    f"another window than the shipped `{table['window']}` "
+                    f"({doc_audit._day(table['window_start'])}). doc_audit reports "
+                    f"it, as a warning when the row is behind the data and a "
+                    f"finding when it is ahead; CI does not")
+    assert int(doc_count.replace(",", "")) <= count, (doc_count, count)
+    end = doc_audit.day_near(doc_end, start)
     assert start <= end <= date.fromisoformat(table["window_end"]), (doc_end, table["window_end"])

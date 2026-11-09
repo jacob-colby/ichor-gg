@@ -19,7 +19,8 @@ falls into one of three classes, measured rather than assumed:
   DAILY   moves on an ordinary community refresh. GENERATED HERE.
   PATCH   moves at a patch boundary, a stats refresh, or when `new_entities`
           adds a god or item. Hand-kept and checked; moving one is a
-          declaration, as `live_window.py`'s patch-boundary pins are.
+          declaration, as `live_window.py`'s patch-boundary pins were until a
+          new community window began landing by itself (2026-11-09).
   CODE    moves only when a commit changes code or a hand-kept file (test
           counts, the §4 register, expert claims). Hand-kept and checked, and
           it FAILS LOUDLY: those are the rows sessions most often forget.

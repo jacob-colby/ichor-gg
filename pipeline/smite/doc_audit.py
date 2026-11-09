@@ -98,6 +98,19 @@ rediscovered that independently. `static_viewer_test_count` survives only as
 the fallback for a worktree with no `node_modules`, keeping its refusals;
 `vitest_test_count` goes first wherever it can run.
 
+ONE DATED READING IS READ, FOR ITS WINDOW ONLY, AND IT CAN ONLY WARN
+(2026-11-09). A new patch's community window lands with the daily refresh and
+nobody declares it (Jacob, 2026-11-08), so §7's hand-written Community sample
+row can be a window behind the data for as long as nobody writes the new
+window's first reading. That is not drift: the live figure is in CURRENT.md,
+in the same pull request as the data. So the check on the row's NEWEST reading
+(the first figure after its link) asks only which window it describes. The
+shipped one is `ok`, and its consistency with the table is `test_side_by_side`'s,
+which keeps #123's checks for exactly that case. An OLDER one is a `warning`,
+printed by `--check` and never failing it. A NEWER one is drift, because the
+doc then claims data the tree does not have. A `warning` is the only status
+that does not fail, and only a check raising `Advisory` produces one.
+
 WHAT IS DELIBERATELY NOT GATED is in `UNGATED`, with a reason each. The short
 version: counterfactuals that cannot be re-derived without flipping a weight
 and re-running (the `47 ->` arm of Cap overflow), judgements rather than
@@ -108,10 +121,11 @@ chance" is a rounded claim, not a figure, and is not gated; the sentence is
 required to link to the live figure instead.
 
     python -m smite.doc_audit               # every row: doc value beside computed value
-    python -m smite.doc_audit --check       # failures only, non-zero exit on drift
+    python -m smite.doc_audit --check       # failures and warnings; non-zero exit on drift only
     python -m smite.doc_audit --skip-model  # cheap rows only; skipped rows named, never silent
 """
 import argparse
+import datetime as dt
 import functools
 import json
 import re
@@ -159,6 +173,29 @@ CLASS_NOTES = {
 
 #: What a DAILY §7 row must open with: a link to where its live figure lives.
 LIVE_LEAD = r"\*\*Live in \[CURRENT\.md\]\(CURRENT\.md\)\.\*\*"
+
+#: §7's Community sample row, its NEWEST dated reading: the first figure after
+#: the live lead, because the row's readings run newest first. Anchored there,
+#: not searched for, so the older readings behind it, written in the same
+#: words, can never make it ambiguous.
+COMMUNITY_READING = (LIVE_LEAD + r"[^0-9|]*?([\d,]+) (\w+)\+ Conquest matches, "
+                     r"(\d+ \w+) – (\d+ \w+)")
+
+
+def community_reading(cell: str):
+    """`(count, division, start, end)` of the Community sample row's newest
+    reading as written, e.g. `('5,119', 'Obsidian', '3 Nov', '8 Nov')`, or None."""
+    match = re.search(COMMUNITY_READING, cell or "")
+    return match.groups() if match else None
+
+
+def day_near(day_month: str, anchor: dt.date) -> dt.date:
+    """A `d Mon` a row writes without a year, in the year that puts it nearest
+    `anchor`. Patch windows are 14 days long, so the choice is never close,
+    and a window that crosses New Year reads right."""
+    candidates = [dt.datetime.strptime(f"{day_month} {year}", "%d %b %Y").date()
+                  for year in (anchor.year - 1, anchor.year, anchor.year + 1)]
+    return min(candidates, key=lambda d: abs((d - anchor).days))
 
 #: Narrows a row's search scope. Absent from every row today; see the module
 #: docstring for when to add one.
@@ -218,6 +255,12 @@ UNGATED = {
 #: which fails `--check` exactly like a mismatch does. One class shared with
 #: `doc_figures`, so a figure computed there is refused here the same way.
 Uncomputable = doc_figures.Uncomputable
+
+
+class Advisory(Exception):
+    """Raised by a `compute` for what a reader should know that is not drift:
+    the doc is not wrong, only behind. `run` makes it a `warning`, which
+    `--check` prints and never fails on. See "ONE DATED READING" above."""
 
 
 # ── the tree's own numbers ────────────────────────────────────────────────
@@ -506,6 +549,27 @@ def _live_lead(label: str) -> "Check":
                        "the row must open with `**Live in [CURRENT.md](CURRENT.md).**`"))
 
 
+def _community_window(facts: Facts, doc: tuple) -> tuple:
+    """PATCH. Which window §7's newest Community sample reading describes,
+    against the window the shipped table is: the same is `ok`, an older one a
+    warning (`Advisory`), a newer one drift. See "ONE DATED READING" in the
+    module docstring."""
+    _count, _division, start, _end = doc
+    table = facts.community_table
+    shipped = dt.date.fromisoformat(table["window_start"])
+    row = day_near(start, shipped)
+    if row == shipped:
+        return (None, None, None, None)
+    if row < shipped:
+        raise Advisory(
+            f"not drift: the newest reading is the window that started {start}; "
+            f"the shipped window `{table.get('window')}` started "
+            f"{_day(table['window_start'])}. The live figure is in CURRENT.md and "
+            f"is current. A new window lands by itself (Jacob, 2026-11-08); give "
+            f"this row a dated reading of it when you next touch the row.")
+    return (None, None, _day(table["window_start"]), None)
+
+
 def _generated(figure: doc_figures.Figure) -> "Check":
     """One CURRENT.md figure, re-derived exactly as `doc_figures` derives it.
 
@@ -559,6 +623,14 @@ CHECKS = [
     # ── DAILY: §7 links to the live figure; CURRENT.md holds it ──────────
     *[_live_lead(figure.label) for figure in doc_figures.FIGURES],
     *[_generated(figure) for figure in doc_figures.FIGURES],
+    # After the DAILY block, so the row's first check is still its live lead.
+    Check("Community sample", COMMUNITY_READING, _community_window, cls="patch",
+          note=lambda doc, got: (
+              "the newest reading describes a window that starts AFTER the shipped "
+              "one: the doc claims data the tree does not have. A window behind "
+              "would only warn; this one is a finding."),
+          hint=("the row's newest reading must follow its link, as "
+                "`N Obsidian+ Conquest matches, d Mon – d Mon`")),
 
     # ── the same facts, where the docs repeat them outside §7 ────────────
     # §6 states the pipeline count a second time, in the command that produces
@@ -757,6 +829,10 @@ def run(checks=None, facts=None, skip_model=False, texts=None, ungated=None) -> 
         try:
             expected = check.compute(facts, doc)
             ok = _compare(check, doc, expected)
+        except Advisory as exc:
+            results.append({"check": check, "status": "warning", "doc": match.group(0),
+                            "computed": None, "note": str(exc)})
+            continue
         except Uncomputable as exc:
             results.append({"check": check, "status": "uncomputable", "doc": None,
                             "computed": None, "note": str(exc)})
@@ -837,7 +913,8 @@ def format_failure(result: dict) -> list:
     lines = [f"{result['status'].upper()}  {check.where} · {check.row}"]
     if result["doc"] is not None:
         lines.append(f"        doc:      {result['doc']}")
-        lines.append(f"        computed: {result['computed']}")
+        if result["computed"] is not None:       # a warning computes nothing
+            lines.append(f"        computed: {result['computed']}")
     if result["note"]:
         lines.append(f"        {result['note']}")
     return lines
@@ -866,6 +943,7 @@ def main(argv=None) -> int:
 
     results, skipped = run(skip_model=args.skip_model)
     failures = [r for r in results if r["status"] in FAILING]
+    warnings = [r for r in results if r["status"] == "warning"]
 
     if not args.check:
         for result in results:
@@ -876,7 +954,7 @@ def main(argv=None) -> int:
             else:
                 print("\n".join(format_failure(result)))
     else:
-        for result in failures:
+        for result in failures + warnings:
             print("\n".join(format_failure(result)))
 
     if skipped:
@@ -893,7 +971,8 @@ def main(argv=None) -> int:
             print("A CURRENT.md figure is generated: run `python -m smite.doc_figures "
                   "--write`, and say in the pull request why your change moved it.")
         return 1 if args.check else 0
-    print(f"\n{len(results)} figure(s) checked, no drift.")
+    said = f" ({len(warnings)} warning(s), above; they never fail)" if warnings else ""
+    print(f"\n{len(results)} figure(s) checked, no drift{said}.")
     return 0
 
 
