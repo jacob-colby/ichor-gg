@@ -9,7 +9,8 @@
  *  - "vs" (or v / versus / against) starts the enemy side — and so does a
  *    second god typed straight after you, because "ra hecate" can only mean
  *    one thing in a draft;
- *  - "conquest" / "joust" / "arena" set the mode (last one wins);
+ *  - "conquest" / "joust" / "arena" set the mode (last one wins; the field
+ *    drops the earlier word when a later one is committed — `keepLastMode`);
  *  - "aspect" toggles your god's aspect;
  *  - "and", "playing", "as" … are filler and read as nothing.
  *
@@ -342,6 +343,23 @@ export function splitTail(text: string): { committed: string; tail: string } {
 /** Remove one token's span from the text, tidying the whitespace it leaves. */
 export function removeSpan(text: string, start: number, end: number): string {
   return (text.slice(0, start) + text.slice(end)).replace(/\s{2,}/g, " ").replace(/^\s+/, "");
+}
+
+/** A second mode REPLACES the first: every mode word but the last leaves the
+ *  text. The parser already reads the last mode as the mode; this makes the
+ *  text agree, so the field shows one mode chip — the one the query runs in —
+ *  rather than "Joust Arena" and a note saying Arena won. The field applies
+ *  it whenever words are committed (typed, picked or Tab-completed) and to a
+ *  linked `?q=`. Covers a keyword prefix ("jou") too, since that parses as a
+ *  mode token. Not applied to "aspect": that word TOGGLES, so a second one
+ *  means off, and keeping only the last would turn it back on. */
+export function keepLastMode(text: string, gods: GodLike[], defaultMode: Mode = "conquest"): string {
+  let out = text;
+  for (;;) {
+    const modes = parseQuery(out, gods, defaultMode).tokens.filter((t) => t.kind === "mode");
+    if (modes.length < 2) return out;
+    out = removeSpan(out, modes[0].start, modes[0].end);
+  }
 }
 
 /* ── Items ──────────────────────────────────────────────────────────────── */
