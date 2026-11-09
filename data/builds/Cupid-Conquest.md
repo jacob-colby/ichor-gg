@@ -976,14 +976,97 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Love
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 45
+    wins: 24
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 55
+      aspect_win_rate: 0.473
+      no_aspect_matches: 2116
+      no_aspect_win_rate: 0.581
+    roles:
+    - role: Solo
+      matches: 23
+      share: 0.51
+    - role: Carry
+      matches: 11
+      share: 0.24
+    - role: Support
+      matches: 11
+      share: 0.24
+    base_role: Carry
+    base_role_share: 0.24
+    role_shift:
+      role: Solo
+      share: 0.51
+      says: 'most Aspect of Love players do not play Carry: Solo 51%, Carry 24%'
+    items:
+    - name: Odysseus' Bow
+      share: 0.51
+    - name: Berserker's Shield
+      share: 0.49
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 16
+        matches: 22
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 16 of the 22 matches that bought it are older
+    - name: Tyrfing
+      share: 0.44
+    - name: Hastened Fatalis
+      share: 0.38
+    - name: Silverbranch Bow
+      share: 0.38
+    - name: Devourer's Gauntlet
+      share: 0.33
+    - name: Riptalon
+      share: 0.24
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 7
+        matches: 11
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 7 of the 11 matches that bought it are older
+    - name: The Executioner
+      share: 0.2
+    starters:
+    - name: Sharpshooter's Arrow
+      share: 0.38
+    - name: Gilded Arrow
+      share: 0.13
+    - name: Death's Embrace
+      share: 0.11
+    relics:
+    - name: Phantom Shell
+      share: 0.42
+    - name: Purification Beads
+      share: 0.24
+    - name: Aegis of Acceleration
+      share: 0.2
     matches_by_window:
       ob47: 3
       ob46: 15
       ob45: 27
       ob44: 7
+    unmapped_slugs:
+    - brawlers-ruin
 ---
