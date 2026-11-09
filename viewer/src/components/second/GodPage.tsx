@@ -31,7 +31,7 @@
  * the aspect on, one slot owns the Community side's whole build area for the
  * per-aspect community build (see "THE ASPECT SLOT" below).
  */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import type { BuildNote, CommunityBuildEntry, CuratedBuildEntry, God, IndexData, PopularItem } from "../../types";
 import { useDraft, MODE_TEAM_SIZE } from "../../lib/draft";
 import { archetypeEntries, useDraftResult } from "../../lib/useDraftResult";
@@ -303,6 +303,31 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
       })}
     </ul>
   );
+  // On a phone the swap detail is one line, and the list behind it is one tap
+  // away: the six's own rows already carry every swap ("In for Soul Gem"), and
+  // the open list pushed all six of them under the enemy bar (2026-11-09,
+  // Ullr Cooldown at 375×812: 125px of swap detail, the first row at y=747
+  // against the bar at 683). The desktop column has the room, so it stays open
+  // there. With nothing behind it, the line is plain text, not a control.
+  // `head` is the lead without its closing colon; the colon only introduces
+  // a list that is open under it.
+  const swapDetail = (head: ReactNode, body: ReactNode, headClass: string) => !body ? (
+    <p className={headClass}>{head}</p>
+  ) : wide ? (
+    <>
+      <p className={headClass}>{head}:</p>
+      {body}
+    </>
+  ) : (
+    <details className="disclosure">
+      <summary className={`press -mx-1 flex min-h-11 cursor-pointer items-center gap-1 rounded-[10px] px-1 ${headClass}`}>
+        <span className="min-w-0 flex-1">{head}</span>
+        <ChevronGlyph size={18} className="chev flex-none text-muted" />
+      </summary>
+      <div className="pb-1">{body}</div>
+    </details>
+  );
+  const noColon = (s: string) => s.replace(/:$/, "");
 
   // ── Most picked ─────────────────────────────────────────────────────────
   const picked = useMemo(() => mostPicked(community), [community]);
@@ -359,19 +384,19 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
         </header>
 
         {/* ── The answer ── */}
-        <section aria-labelledby="six-h" className="mt-4 lg:mt-6">
+        <section aria-labelledby="six-h" className="mt-3 lg:mt-6">
           <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} />
 
           {/* ── Whose build, before anything adjusts it ── */}
           {hasCommunity && (
-            <WhoseSwitch whose={onCommunity ? "community" : "ichor"} className="mt-4 lg:max-w-[420px]"
+            <WhoseSwitch whose={onCommunity ? "community" : "ichor"} className="mt-3 lg:mt-4 lg:max-w-[420px]"
               onChange={(w) => setQ((p) => ({ ...p, whose: w }))} />
           )}
 
           {/* ── Adjust it: the aspect, then a focus. The community has one six
               and no focuses, so its side keeps the aspect switch alone. ── */}
           {onCommunity ? (
-            <div className="mt-4">
+            <div className="mt-2 lg:mt-3">
               {/* On the community's side the aspect always changes what is
                   shown: the any-aspect six gives way to the aspect slot. */}
               {aspectSwitch(true)}
@@ -382,28 +407,30 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               )}
             </div>
           ) : (
-            <div className="mt-4">
+            <div className="mt-2 lg:mt-3">
               <FocusStrip options={options} selected={selected?.archetype ?? MAIN_ARCHETYPE} onSelect={choose}
                 aspect={aspectSwitch(aspectChangesBuild)} />
               {(aspectLine || !isMain) && (
-                <div className="mt-2 space-y-2" data-testid="adjust-line" aria-live="polite">
+                <div className="mt-1 space-y-2 lg:mt-2" data-testid="adjust-line" aria-live="polite">
                   {aspectLine && (
-                    <div>
-                      <p className="text-note text-muted" data-testid="aspect-note">
-                        {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
-                      </p>
-                      {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
+                    <div data-testid="aspect-note">
+                      {isMain && aspectSwaps.length > 0
+                        ? swapDetail(<>{aspectLine} {noColon(swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of))}</>,
+                          swapList(aspectSwaps), "text-note text-muted")
+                        : <p className="text-note text-muted">{aspectLine}</p>}
                     </div>
                   )}
                   {!isMain && selected && (
                     <div data-testid="swap-line" data-swaps={selected.swaps.length}>
-                      <p className="text-copy text-ink-soft">
-                        <span className="font-cond text-[17px] font-bold uppercase text-ink">{selected.label}</span>{" "}
-                        {swapLead(selected, god.name, of)}
-                      </p>
-                      {selected.swaps.length > 0 && swapList(selected.swaps, hybridSwaps.length ? evidenceFor : undefined)}
-                      {/* The note explains where swaps came from; over "Same as Ichor's six" it explains nothing. */}
-                      {adjustNote && selected.swaps.length > 0 && <p className="mt-1 text-cap text-quiet">{adjustNote}</p>}
+                      {swapDetail(
+                        <><span className="font-cond text-[17px] font-bold uppercase text-ink">{selected.label}</span>{" "}
+                          {noColon(swapLead(selected, god.name, of))}</>,
+                        selected.swaps.length > 0 && <>
+                          {swapList(selected.swaps, hybridSwaps.length ? evidenceFor : undefined)}
+                          {/* The note explains where swaps came from; over "Same as Ichor's six" it explains nothing. */}
+                          {adjustNote && <p className="mt-1 text-cap text-quiet">{adjustNote}</p>}
+                        </>,
+                        "text-copy text-ink-soft")}
                     </div>
                   )}
                 </div>
@@ -411,7 +438,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </div>
           )}
 
-          <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
+          <div className="mt-2 flex items-baseline justify-between px-1 text-cap text-quiet lg:mt-3">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">
               {aspectSlot ? `The community's ${shortAspect(aspectName!)} build` : `${listLabel} · buy order`}
             </h2>
@@ -435,9 +462,13 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </div>
           ) : (
             <>
-              {/* The starter and the relic open the buy order, as tiles. */}
+              {/* The starter and the relic open the buy order, as tiles. Side by
+                  side wherever half the column still holds a starter's name in
+                  two lines. Stacked at 1024–1279, where the aside narrows the
+                  column to ~550px: there a half-width starter tile measured
+                  121px against a row's 64. */}
               {(starter || topRelic) && (
-                <div className={`mt-1.5 grid gap-1.5 ${starter && topRelic ? "sm:grid-cols-2" : ""}`} data-testid="kit-tiles">
+                <div className={`mt-1.5 grid gap-1.5 ${starter && topRelic ? "sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" : ""}`} data-testid="kit-tiles">
                   {starter && (
                     <KitTile kind="Start" testId="starter" icon={starter.base} inset={starter.upgrade}
                       name={`${starter.base} → ${starter.upgrade}`}
