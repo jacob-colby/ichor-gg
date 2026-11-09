@@ -2608,7 +2608,8 @@ and OB44 is marked `partial_from` because its first 2.5 days had already aged
 out), and the daily job adds ~217 requests to keep it. Each Conquest
 note gains `community_aspects`, under the tier list's own 30-match floor; a
 role shift named on a Wilson bound. **The god page shows it (2026-11-09)**:
-with the aspect switch on, under Ichor's six, labelled community and not the
+on the Community side of the whose-build switch with the aspect on, as the
+whole build area (`community-aspect-slot`), labelled community and not the
 model — the starter path, the relic and the six most held, by share of games,
 with the games and the patches pooled, the role shift said in words, and each
 changed item asterisked and explained. Joust and Arena say they have no
