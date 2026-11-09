@@ -2448,6 +2448,108 @@ shipped **off**. Numbers are in the named module.
     Revisit too if `kit_blend` is re-measured leakage-free at a value other
     than 0.3.
 
+34. **Closing the scaling-line gap between `fit_map` and the Sim (2026-11-06)** —
+    a REFUSAL in §4.16's shape, and NOT a null: nothing was built or
+    measured against a gate. It records how far apart the two halves' readings
+    of a kit are, and why the obvious closures are refused. Diagnosis only, measured
+    2026-11-06 on fingerprint `fb0eaf0f2496` and re-measured 2026-11-09 on
+    `e59634f66c16`; every kit figure below is identical on both. 95 god notes.
+
+    **WHO READS WHAT.** Three readers, two halves.
+      * `kit.scaling_profile` (fit side: the kit overlay at `kit_blend` 0.3
+        and the `is_hybrid_scaler` gate). It reads EVERY non-basic detail line
+        with "scaling" in it and an `N% Strength/Intelligence/(Basic) Attack
+        Damage` term, whatever the label, passive slot included, and sums them.
+      * `damage_value.ability_damage_components` (the Sim's damage, through
+        `bq.ability_rotation`; ALSO the fit side's Attack Damage column,
+        through `stat_weights` → `attack_damage_fit`, ON at 1.0; and
+        `basic_attack_shares`, §4.12's discriminator, read by scripts only). ONE line per
+        ability: the `Damage Scaling:` line, else the first label-paired line
+        (`X Damage` with `X Damage Scaling`). It needs a rank line, and the
+        rotation needs a cooldown.
+      * `ability_heals.god_self_heals` (the Sim's heals): `Heal Scaling` lines
+        on non-passive abilities.
+    The basic attack is read by the Sim and by `attack_damage_fit` (both
+    through `damage_value`) and deliberately excluded from `scaling_profile`.
+
+    **THE GAP RUNS ONE WAY.** No non-basic line is read by the Sim and missed
+    by the fit side. **72 of 95 gods have scaling the fit side reads and the
+    Sim does not: 178 lines.** Summed Str+Int percentages: 29,403 on the fit
+    side, 21,515 in the Sim's damage (73.2%). By what the line is:
+
+        lines  gods  class
+          88    52   damage: a second hit or variant on an ability the Sim reads
+                     (Initial/Final, Explode, Slam, Dash, Close/Far Range, Ox/Tiger)
+          18    15   damage: per tick (the Sim's reader takes one line; ticks are prose)
+          12    12   damage: bonus / conditional (`Bonus Damage Scaling`)
+          12    12   damage: passive slot (Athena's Reach, 125% Str + 70% Int)
+          12     8   damage: ability with no rank line the reader accepts
+           7     5   damage: component with no cooldown, dropped from the rotation
+          23    14   NOT damage: heal, CDR, attack speed, mana, protections stolen,
+                     damage reduction, debuff, stat buffs
+           5     5   minion-only rates
+           1     1   prose ("+20% Intelligence Scaling" in Tsukuyomi's Kusarigama)
+    68 gods carry fit-only DAMAGE lines; 4 carry only the last three classes.
+    15 gods' heal lines are read by both halves with different meanings (fit:
+    damage orientation; Sim: a heal).
+
+    **WHAT IT DOES TO A DECISION.** The Intelligence share the Sim's damage
+    lines imply differs from `scaling_profile`'s by more than 0.05 on 11 gods
+    and more than 0.10 on 8 (Sun Wukong 0.337 vs 0.000, Nemesis 0.419 vs
+    0.227, Jormungandr 0.471 vs 0.630). Read off the Sim's lines, the hybrid
+    gate would flip for 4: Athena, Guan Yu, Nemesis, Sun Wukong.
+
+    **ASPECTS ARE THE SAME MECHANISM, AND THE SMALLEST CASE OF IT.** The one
+    derived aspect edit (Tsukuyomi, §4.33) adds `Mangetsu Bonus Damage: 5` and
+    its scaling line to Dark Moon Shuriken, an ability the Sim already reads by
+    its own `Damage Scaling:` line. That is one more row of the 88-line class.
+    `ability_damage_components` returns the same result on the variant as on
+    the base kit. And nothing the Sim shows can move: `kit_for` plays the base
+    kit for 88 of 95 gods. For the other 7 (majority aspects on
+    2026-11-09: Aphrodite, Bacchus, Baron Samedi, Gilgamesh, Izanami, Khepri,
+    Nike; Izanami replaced Cernunnos between the two measurements) it
+    withholds the verdict, because `SIMULATED_ASPECTS` is empty. None of those
+    7 derives a sentence. Tsukuyomi's aspect is a 2% pick, so it is never played.
+
+    **REFUSED, and what each closure costs.**
+      * *Widen the shared reader to every damage line.* That is a MODEL
+        change, not a Sim change: summing the six damage classes moves
+        `stat_weights` on 61 gods and the Attack Damage column on 58 (Morgan
+        Le Fay 0.645 → 0.312, Aphrodite 1.000 → 0.667). Summing is also wrong
+        for some lines and only some: Close/Far Range, Ox/Tiger and
+        Large/Small are alternatives, not hits that add. Per-tick lines need
+        tick counts that exist only as prose. Bonus lines need a trigger rate,
+        and passive and cooldownless lines need a cadence. The note supplies
+        none of these, so each is a typed constant per ability. That is the
+        hand table §4 exists to prevent.
+      * *Give the Sim a private, wider reader.* It keeps the model still, but
+        it has the same semantics problem. It moves every `build_quality`
+        figure and side-by-side verdict, and it leaves a third reading of the
+        same kit.
+      * *Narrow the fit side to the Sim's lines.* That is a model change on 72
+        gods with 4 hybrid flips. It also discards real evidence: Sun Wukong's
+        far-range Cudgel is 70% Int.
+      * *Close it for aspects only.* It changes no displayed result today
+        (above). The Mangetsu bonus is a per-ranged-attack rider whose cadence
+        the note does not give.
+
+    **ONE PIECE IS A SEPARATE QUESTION, NOT THIS GAP.** The 29 non-damage,
+    minion and prose lines are fit-side noise, and the Sim is right to ignore
+    them. Without them, `int_share` moves on 18 gods (Odin 0.299 → 0.221,
+    Artio 0.474 → 0.409), and **two gods' hybrid status rests on them**.
+    Amaterasu reaches the 3-ability floor only through Divine Presence's stat
+    buff lines (`Strength Scaling: 5% Intelligence`). Guan Yu's 0.316 off
+    share is 0.262 without his heal and CDR lines. Correcting that is a model
+    change with a held-out delta, and it belongs in its own PR.
+
+    **REVISIT IF** `SIMULATED_ASPECTS` gains a member, `aspect_kit` derives a
+    sentence for a majority-pick aspect, a source for tick counts or for
+    alternative-versus-additive labels lands, or `ability_damage_components`
+    changes its one-line-per-ability rule. The counting scripts were
+    session-local and are not committed. Each count is the three readers
+    above run over `data/Gods`. The cost row patches
+    `ability_damage_components` in memory to sum every damage-labelled line.
+
 Reading 1–5 through §1: each made `efficiency` more informative but less like
 the community's data, which the gate punishes by construction. That is a
 hypothesis, not a proof — but re-running them against the *old* metric will
