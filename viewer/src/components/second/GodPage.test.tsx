@@ -106,17 +106,19 @@ describe("God page — the answer", () => {
 
   it("swaps to the community's six in place, and back", async () => {
     render(<App />);
-    const show = await screen.findByRole("button", { name: /Show theirs/ });
+    const show = await screen.findByRole("button", { name: "Community" });
+    expect(show).toHaveAttribute("aria-pressed", "false");
     fireEvent.click(show);
+    expect(show).toHaveAttribute("aria-pressed", "true");
     expect(rowNames()).toEqual(THEIRS);
     expect(screen.getByRole("heading", { name: /The community's six/ })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /Show Ichor's/ }));
+    fireEvent.click(screen.getByRole("button", { name: "Ichor" }));
     expect(rowNames()).toEqual(SIX);
   });
 
   it("prints no 0-1 score anywhere on the page, even in the opened detail", async () => {
     render(<App />);
-    await screen.findByRole("button", { name: /Show theirs/ });
+    await screen.findByRole("button", { name: "Community" });
     for (const d of document.querySelectorAll("details")) d.open = true;
     expect(screen.getByTestId("compare-detail")).toBeInTheDocument();
     expect(document.querySelector("main")!.textContent).not.toMatch(/\b0\.\d+/);
@@ -134,7 +136,7 @@ describe("God page — the answer", () => {
     serve(null);
     render(<App />);
     await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveTextContent("There's no measured comparison for Ra yet."));
-    expect(screen.queryByRole("button", { name: /Show theirs/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Community" })).not.toBeInTheDocument();
   });
 });
 

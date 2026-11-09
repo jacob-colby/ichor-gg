@@ -268,7 +268,7 @@ Components feel **tactile and quiet**: every tappable thing carries `.press` (sc
 - A running total shows `—` rather than an approximation when any cost is unknown.
 
 ### VerdictLine
-- The comparison as one sentence directly under the header, at `say`: the claim in ink with the measured gap in semibold, then the honesty tail in muted ("…Lotus Sickle isn't simulated yet, so the damage gap is partly unmeasured."), then the inline "Show theirs" action when a swap is possible. While measuring it says so, in quiet, with `aria-busy`.
+- The comparison as one sentence directly under the header, at `say`: the claim in ink with the measured gap in semibold, then the honesty tail in muted ("…Lotus Sickle isn't simulated yet, so the damage gap is partly unmeasured."), then, below the adjusters, the Ichor / Community segmented control when the community's six can be shown. While measuring it says so, in quiet, with `aria-busy`.
 
 ### EnemyStrip / EnemySheet
 - **Strip (phone):** a raised, blurred bar sticky above the tab bar: "ENEMY" + "3 of 5" (and "2 swaps" in violet) beside five 48px slots (three in Joust). Filled slots are portraits with a 1.5px ink ring; empty ones dashed squares with a plus. Every slot opens the sheet on itself.
@@ -326,7 +326,7 @@ These bind every surface regardless of look.
 
 **The Unmeasured-Is-Not-Zero Rule.** "Not measured here" and "measured as nothing" are different facts and never render the same way. An unscored signal is said in words, not printed as a neutral default; an unknown cost leaves the running total as `—`; threats that measured zero are distinguishable from threats never looked for.
 
-**The Second-Track Rule.** The community is a constant second track, never an option that replaces the model's answer. Its share is printed on each of Ichor's rows ("35% of Ra players buy it third"), its six is one tap away ("Show theirs"), and the comparison between them is the verdict. No control shows one *instead of* the other as a mode.
+**The Second-Track Rule.** The community is a constant second track, never an option that replaces the model's answer. Its share is printed on each of Ichor's rows ("35% of Ra players buy it third"), its six is one tap away (the "Community" segment beside "Ichor"), and the comparison between them is the verdict. No control shows one *instead of* the other as a mode.
 
 **The Provenance Rule.** Wherever the community is cited, say which community and when: "Player percentages: Conquest games on SmiteBrain, refreshed …". Rendered only when the data supplies it; dates formatted from the ISO string's own parts, never through `Date`.
 

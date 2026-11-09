@@ -34,9 +34,10 @@ import { godLane, laneTextClass } from "../../lib/roleAccent";
 import { useComparison } from "./useComparison";
 import { verdictSentence, MODE_NAME } from "./verdict";
 import { itemReason } from "./itemReason";
-import { Art, ChevronGlyph, SwapGlyph } from "./art";
+import { Art, ChevronGlyph } from "./art";
 import { ModeSwitch } from "./ModeSwitch";
 import { AspectToggle } from "./AspectToggle";
+import { SourceSwitch } from "./SourceSwitch";
 import { FocusStrip } from "./FocusStrip";
 import { KitTile, type KitAlternative } from "./KitTile";
 import { MostPicked } from "./MostPicked";
@@ -306,12 +307,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
         {/* ── The answer ── */}
         <section aria-labelledby="six-h" className="mt-4 lg:mt-6">
-          <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} action={canSwap ? (
-            <button type="button" onClick={() => setTheirs((v) => !v)} aria-pressed={showTheirs}
-              className="press -my-2.5 inline-flex h-11 items-center gap-1 whitespace-nowrap px-0.5 align-middle font-cond text-[18px] font-bold uppercase text-accent hover:text-ink">
-              <SwapGlyph size={18} />{showTheirs ? "Show Ichor's" : "Show theirs"}
-            </button>
-          ) : undefined} />
+          <VerdictLine verdict={verdict} loading={mode === "conquest" && cmp.loading} />
 
           {/* ── Adjust it: the aspect, then a focus ── */}
           <div className="mt-4">
@@ -344,6 +340,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               </div>
             )}
           </div>
+
+          {canSwap && (
+            <SourceSwitch source={showTheirs ? "community" : "ichor"} className="mt-4 lg:max-w-[420px]"
+              onChange={(src) => setTheirs(src === "community")} />
+          )}
 
           <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">{listLabel} · buy order</h2>

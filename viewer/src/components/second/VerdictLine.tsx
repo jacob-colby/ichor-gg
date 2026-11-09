@@ -10,7 +10,7 @@ import type { Verdict } from "./verdict";
 
 export function VerdictLine({ verdict, loading = false, className = "", action }: {
   verdict: Verdict | null; loading?: boolean; className?: string;
-  /** Inline control after the sentence ("Show theirs"). */
+  /** Inline control after the sentence (none now; kept for callers that want one). */
   action?: ReactNode;
 }) {
   if (loading || !verdict) {
