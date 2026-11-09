@@ -38,6 +38,7 @@ import { Art, ChevronGlyph } from "./art";
 import { ModeSwitch } from "./ModeSwitch";
 import { AspectToggle } from "./AspectToggle";
 import { SourceSwitch } from "./SourceSwitch";
+import { RecentBuilds, useRecent } from "./RecentBuilds";
 import { FocusStrip } from "./FocusStrip";
 import { KitTile, type KitAlternative } from "./KitTile";
 import { MostPicked } from "./MostPicked";
@@ -137,6 +138,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const canSwap = mode === "conquest" && isMain && !aspectOnBuild && !!cmp.data;
   const [theirs, setTheirs] = useState(false);
   const showTheirs = theirs && canSwap;
+  // The Community segment opens for either reason: the six can be compared, or
+  // there are recent player builds to read. With only the second, the page
+  // shows the recent builds in place of the six.
+  const recent = useRecent(god.name);
+  const communityView = theirs && (canSwap || !!recent);
   useEffect(() => { setTheirs(false); }, [god.name]);
 
   // ── What the reader's choices changed ──────────────────────────────────
@@ -341,11 +347,13 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             )}
           </div>
 
-          {canSwap && (
-            <SourceSwitch source={showTheirs ? "community" : "ichor"} className="mt-4 lg:max-w-[420px]"
+          {(canSwap || !!recent) && (
+            <SourceSwitch source={communityView ? "community" : "ichor"} className="mt-4 lg:max-w-[420px]"
               onChange={(src) => setTheirs(src === "community")} />
           )}
 
+          {(!communityView || showTheirs) && (
+            <>
           <div className="mt-4 flex items-baseline justify-between px-1 text-cap text-quiet">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">{listLabel} · buy order</h2>
             <span aria-hidden="true">Gold spent</span>
@@ -382,6 +390,9 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               No {modeLabel} build has been made for {god.name} yet.
             </p>
           )}
+            </>
+          )}
+          {communityView && recent && <RecentBuilds god={god.name} file={recent} />}
         </section>
 
         {/* ── One tap away ── */}

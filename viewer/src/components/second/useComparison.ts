@@ -15,7 +15,7 @@ export interface ComparisonMeta {
 
 export type Load<T> = { state: "loading" } | { state: "none" } | { state: "ready"; value: T };
 
-function useJson<T>(url: string | null): Load<T> {
+export function useJson<T>(url: string | null): Load<T> {
   const [out, setOut] = useState<Load<T>>({ state: url ? "loading" : "none" });
   useEffect(() => {
     if (!url) { setOut({ state: "none" }); return; }

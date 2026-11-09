@@ -522,9 +522,10 @@ class _Origin:
 
     def scrape(self, root: pathlib.Path, value: str):
         """What the job's earlier steps leave in the tree: data, the index, the
-        side-by-side pages, and an HTML cache that must never be committed."""
+        side-by-side and recent-builds pages, and an HTML cache that must never be committed."""
         for rel in ("data/community.json", "viewer/public/index.json",
-                    "viewer/public/side_by_side/thor.json"):
+                    "viewer/public/side_by_side/thor.json",
+                    "viewer/public/recent/thor.json"):
             _write(root / rel, value + "\n")
         _write(root / "data" / "_cache" / f"{value}.html", "<html/>\n")
 
