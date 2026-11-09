@@ -2595,8 +2595,8 @@ so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
 
-### The per-aspect community record exists; no aspect build reads it yet (2026-11-08)
-What aspect players BUY, from SmiteBrain's per-match feed (the tRPC call
+### The per-aspect community record reaches back to 30 and flags changed items; no aspect build reads it (2026-11-08, rule 2026-11-09)
+What aspect PLAYERS buy, from SmiteBrain's per-match feed (the tRPC call
 behind "More Builds", which paginates; the `__data.json` page never does).
 Verified first: placement 1 is the win (mirror test 14/14, the site's own
 colouring, and feed shares tracking `matches_won` on both sides of 50%); the
@@ -2606,20 +2606,39 @@ names, the match GUID hashed — backfilled to the end of retention (36,947
 matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
 and OB44 is marked `partial_from` because its first 2.5 days had already aged
 out), and the daily job adds ~217 requests to keep it. Each Conquest
-note gains `community_aspects`: newest window, else the last closed, under the
-tier list's own 30-match floor; a role shift named on a Wilson bound. It is
-kept out of `index.json` (`build_index.NOT_SHIPPED_BUILD_KEYS`).
+note gains `community_aspects`, under the tier list's own 30-match floor; a
+role shift named on a Wilson bound. It is kept out of `index.json`
+(`build_index.NOT_SHIPPED_BUILD_KEYS`).
 
-**65 of 86 aspects clear the floor, and 32 of those 65 are played in a
-different role from the god's base role** — Bacchus' Revelry 87% Solo on a
-Support, Izanami's Sickle 70% Mid on a Carry. **Tsukuyomi's Mangetsu does not
-clear it** (OB47 6, OB46 21; OB45 holds exactly 30, but the rule reaches back
-one window only; pooled over the store, 74 matches, 57% Mid, and of the 73 the
-probe could attribute, 28 players, one of whom played 30%), so his entry is a
-stated `below minimum`. Nine of the 21 below-minimum aspects reach 30 in OB45
-or OB44, and 13 pooled: whether to pool is the first decision the next session
-owns. Three of the seven hand overlays (Agni, Ra, Morgan Le Fay) are role
-shifts.
+**The window rule reaches back (2026-11-09).** #129's rule read the newest
+window, else the last closed one, and left 21 of 86 aspects below the floor,
+Tsukuyomi's Mangetsu among them (OB47 6, OB46 21; OB45 alone holds 30). Now,
+when both are short, the newest windows are POOLED, one closed window at a time,
+until they hold 30, and the entry names them ("OB45–OB47, 57 matches"). **78 of
+86 aspects are shown (was 65); the 65 read exactly what they read before.**
+Tsukuyomi reads 57 matches, 56% Mid, Rod of Tahuti 86%, Book of Thoth 79%,
+Chronos' Pendant 72%. The floor is not lowered. Every listed item whose stats
+moved after the oldest window read is FLAGGED, never a reason to stop pooling
+(a stop rule hid Tsukuyomi on one unplaceable +5 Intelligence), and that
+includes #129's single-window reads: Cabrakan's and Osiris' OB46 builds held
+Ancient Signet, changed in OB47, unflagged. **The change source is the
+snapshot store, which is blind in two measured ways:** no item data exists
+between OB40 and OB46, so a change there carries the whole span (four of
+Tsukuyomi's listed items do, two of which the wiki dates to OB44, before his
+pool); and a snapshot holds no passive text, so a passive change is never
+flagged. A god's own balance change is not guarded at all (5 of the 78 read a
+window older than one). **The walk has no depth limit: it reaches as far back
+as the store holds, so the undecided retention policy is also its reach-back
+limit** — dropping OB44 and OB45 would hide 8 of the 13 it adds, Tsukuyomi
+among them. Options measured, the wiki cross-check and the numbers:
+`aspect_matches`' docstring; the Tsukuyomi read is pinned on a frozen copy of
+his store (`tests/fixtures/aspect_store_tsukuyomi`).
+
+**38 of the 78 shown are played in a different role from the god's base
+role** — 32 of #129's 65 (Bacchus' Revelry 87% Solo on a Support, Izanami's
+Sickle 70% Mid on a Carry) and 6 of the 13 pooled (Tsukuyomi Jungle → Mid,
+Apollo, Atlas, Chronos, Cupid, Nu Wa). Three of the seven hand overlays (Agni,
+Ra, Morgan Le Fay) are role shifts.
 
 **Next, and it is a MODEL change:** an aspect build cannot change role through
 today's seam. An overlay carries only stat weights; `fit_map` reads the role
@@ -3750,8 +3769,10 @@ refresh` is the daily job's step: it validates every page before writing
 anything (`FeedCollapse`), and a refusal sets the step's `rejected` output and
 turns the run red at the end, without costing the day's other data — the next
 run walks back over the gap. `derive` rewrites the Conquest notes'
-`community_aspects` from the store; `depth` prints gods × windows. Rules and
-evidence are in the module docstring.
+`community_aspects` from the store, and the job runs it again just before the
+recompute, because the entries' changed-item flags read the snapshot store and
+the item notes, which later steps move; `depth` prints gods × windows and the
+windows each entry pools. Rules and evidence are in the module docstring.
 
 **The passive catalogue lives in `data/_passive_classes.yaml`** — one entry per
 buildable item with passive text, classes per clause, `priced` per clause;
@@ -3770,7 +3791,7 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1585) ·
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1606) ·
 `cd viewer && npm test -- --run` (1030).
 
 **A test that reads the live community window never pins a value the window moves daily** (2026-11-07): counts, `window_end`, ratios and verdicts are asserted as invariants, and only what moves at a patch boundary (`window`, `window_start`) is pinned, so moving one declares a new window established — the rule, the evidence and the declaration checklist are in `pipeline/smite/tests/live_window.py`.
@@ -3893,7 +3914,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 3 — Cernunnos, Cupid, Mercury. (2026-11-08, the #124 refresh alone, which touched only `data/` and `viewer/public/`; recorded, not investigated.) Cernunnos is on it for the third reading running, 6 pairs and none matching. Cupid and Mercury are back, at 5 pairs each, after reading 20% on 2026-11-06 — the same two that were on it on 2026-11-03. Ah Puch, Athena, Atlas, Gilgamesh and Mordred now read 60%, 20%, 40%, 33% and 33%. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1585 pipeline · 1030 viewer |
+| Tests | 1606 pipeline · 1030 viewer |
 
 A row that opens **Live in [CURRENT.md](CURRENT.md).** is DAILY: its live figure
 is generated into [`docs/CURRENT.md`](CURRENT.md) by `python -m smite.doc_figures

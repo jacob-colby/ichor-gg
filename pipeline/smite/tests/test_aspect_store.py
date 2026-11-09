@@ -37,26 +37,42 @@ def test_every_committed_record_sits_in_its_own_window():
 
 def test_the_conquest_notes_say_what_the_store_says():
     meta, aggregate = am.load_meta(), am.load_aggregate()
-    names = am.item_name_lookup()
+    names, changes = am.item_name_lookup(), am.item_changes()
     for path in sorted(am.BUILDS_ROOT.glob("*-Conquest.md")):
         fm, _ = notes.read_note(path)
         block = am.note_block(fm["god"], am.base_role_of(fm["god"]), am.STORE_ROOT,
-                              meta, aggregate, names)
+                              meta, aggregate, names, changes)
         assert fm.get("community_aspects") == block, f"{path.name}: run aspect_matches derive"
 
 
-def test_tsukuyomi_mangetsu_is_on_record_and_says_why_it_is_or_is_not_shown():
-    """The acceptance case. The backfill's closed windows can only grow."""
+def test_tsukuyomi_mangetsu_is_shown_from_the_committed_store():
+    """The acceptance case, on the live store. Its closed windows can only
+    grow, and OB45 alone holds 30, so whatever the newer windows add the walk
+    never needs OB44 and the entry never goes back to `below minimum` — unless
+    a retention policy drops OB45, which should turn this red on purpose. The
+    exact read is pinned on a frozen copy in `test_aspect_matches.py`."""
     fm, _ = notes.read_note(am.BUILDS_ROOT / "Tsukuyomi-Conquest.md")
     entry = next(a for a in fm["community_aspects"]["aspects"] if a["aspect"] == "Aspect of Mangetsu")
     counts = entry["matches_by_window"]
-    assert counts.get("ob46", 0) >= 21           # OB46 is closed and backfilled whole
-    assert counts.get("ob45", 0) >= 30           # so is OB45; the rule does not reach it
-    window, rule = am.choose_window(counts, am.ordered_windows(am.load_meta()))
-    assert entry["status"] == ("shown" if window else "below minimum")
-    if window:
-        assert entry["window"] == window and entry["window_rule"] == rule
-        assert entry["base_role"] == "Jungle"
+    assert counts.get("ob46", 0) >= 21 and counts.get("ob45", 0) >= 30
+    assert entry["status"] == "shown" and entry["matches"] >= am.MIN_MATCHES
+    assert "ob44" not in entry["windows"]
+    assert entry["base_role"] == "Jungle"
+
+
+def test_every_shown_entry_names_the_patches_it_pools():
+    meta = am.load_meta()
+    for path in sorted(am.BUILDS_ROOT.glob("*-Conquest.md")):
+        fm, _ = notes.read_note(path)
+        for a in (fm.get("community_aspects") or {}).get("aspects", []):
+            if a["status"] != "shown":
+                assert set(a) == {"aspect", "status", "matches_by_window"}, path.name
+                continue
+            pool = a["windows"]
+            assert a["patches"] == am.patch_label(pool), path.name
+            assert a["matches"] == sum(a["matches_by_window"].get(w, 0) for w in pool), path.name
+            assert (len(pool) > 1) == (a["window_rule"] == "pooled back"), path.name
+            assert all(w in meta["windows"] for w in pool), path.name
 
 
 def test_a_window_the_backfill_did_not_reach_whole_says_so():

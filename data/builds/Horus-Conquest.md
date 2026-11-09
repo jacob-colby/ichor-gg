@@ -628,14 +628,105 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of the Falcon
-    status: below minimum
+    status: shown
+    windows:
+    - ob44
+    - ob45
+    - ob46
+    - ob47
+    patches: OB44–OB47
+    window_rule: pooled back
+    window_start: '2026-09-22'
+    window_end: '2026-11-08'
+    matches: 36
+    wins: 18
+    win_share: 0.5
+    aggregate:
+      aspect_matches: 49
+      aspect_win_rate: 0.408
+      no_aspect_matches: 3004
+      no_aspect_win_rate: 0.555
+    roles:
+    - role: Solo
+      matches: 17
+      share: 0.47
+    - role: Jungle
+      matches: 12
+      share: 0.33
+    - role: Mid
+      matches: 6
+      share: 0.17
+    - role: Support
+      matches: 1
+      share: 0.03
+    base_role: Support Solo
+    base_role_share: 0.5
+    role_shift: null
+    items:
+    - name: Jotunn's Revenge
+      share: 0.53
+    - name: Heartseeker
+      share: 0.42
+    - name: Hydra's Lament
+      share: 0.42
+    - name: Titan's Bane
+      share: 0.28
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 7
+        matches: 10
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 7 of the 10 matches that bought it are older
+    - name: Freya's Tears
+      share: 0.25
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 7
+        matches: 9
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 7 of the 9 matches that bought it are older
+    - name: Genji's Guard
+      share: 0.22
+    - name: Shifter's Shield
+      share: 0.22
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 4
+        matches: 8
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 4 of the 8 matches that bought it are older
+    - name: Devourer's Gauntlet
+      share: 0.19
+    starters:
+    - name: Bumba's Hammer
+      share: 0.25
+    - name: Bluestone Brooch
+      share: 0.17
+    - name: Bluestone Pendant
+      share: 0.14
+    relics:
+    - name: Blink Rune
+      share: 0.44
+    - name: Purification Beads
+      share: 0.28
+    - name: Phantom Shell
+      share: 0.14
     matches_by_window:
       ob47: 1
       ob46: 9
       ob45: 10
       ob44: 16
+    unmapped_slugs:
+    - brawlers-ruin
 ---

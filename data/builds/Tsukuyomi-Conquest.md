@@ -1026,14 +1026,117 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Mangetsu
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 57
+    wins: 32
+    win_share: 0.56
+    aggregate:
+      aspect_matches: 71
+      aspect_win_rate: 0.479
+      no_aspect_matches: 2620
+      no_aspect_win_rate: 0.55
+    roles:
+    - role: Mid
+      matches: 32
+      share: 0.56
+    - role: Jungle
+      matches: 15
+      share: 0.26
+    - role: Carry
+      matches: 6
+      share: 0.11
+    - role: Solo
+      matches: 3
+      share: 0.05
+    - role: Support
+      matches: 1
+      share: 0.02
+    base_role: Jungle
+    base_role_share: 0.26
+    role_shift:
+      role: Mid
+      share: 0.56
+      says: 'most Aspect of Mangetsu players do not play Jungle: Mid 56%, Jungle 26%'
+    items:
+    - name: Rod of Tahuti
+      share: 0.86
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 27
+        matches: 49
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 27 of the 49 matches that bought it are older
+    - name: Book of Thoth
+      share: 0.79
+    - name: Chronos' Pendant
+      share: 0.72
+    - name: Obsidian Shard
+      share: 0.63
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 20
+        matches: 36
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 20 of the 36 matches that bought it are older
+    - name: Polynomicon
+      share: 0.33
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 11
+        matches: 19
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 11 of the 19 matches that bought it are older
+    - name: Spear of Desolation
+      share: 0.23
+    - name: The Cosmic Horror
+      share: 0.21
+    - name: Spear of the Magus
+      share: 0.18
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 2
+        matches: 10
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 2 of the 10 matches that bought it are older
+    starters:
+    - name: Bluestone Brooch
+      share: 0.42
+    - name: Archmage's Gem
+      share: 0.25
+    - name: Bluestone Pendant
+      share: 0.11
+    relics:
+    - name: Purification Beads
+      share: 0.6
+    - name: Aegis of Acceleration
+      share: 0.39
+    - name: Phantom Shell
+      share: 0.02
     matches_by_window:
       ob47: 6
       ob46: 21
       ob45: 30
       ob44: 17
+    unmapped_slugs:
+    - brawlers-ruin
 ---

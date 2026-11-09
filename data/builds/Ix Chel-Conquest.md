@@ -769,11 +769,71 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of the Mother's Light
-    status: below minimum
+    status: shown
+    windows:
+    - ob46
+    - ob47
+    patches: OB46–OB47
+    window_rule: pooled back
+    window_start: '2026-10-20'
+    window_end: '2026-11-08'
+    matches: 34
+    wins: 18
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 54
+      aspect_win_rate: 0.407
+      no_aspect_matches: 515
+      no_aspect_win_rate: 0.52
+    roles:
+    - role: Support
+      matches: 32
+      share: 0.94
+    - role: Mid
+      matches: 2
+      share: 0.06
+    base_role: Mid Support
+    base_role_share: 1.0
+    role_shift: null
+    items:
+    - name: Chandra's Grace
+      share: 0.76
+    - name: Rod of Asclepius
+      share: 0.56
+    - name: Heartwood Charm
+      share: 0.47
+    - name: Shell of Rebuke
+      share: 0.44
+    - name: Freya's Tears
+      share: 0.32
+    - name: Stampede
+      share: 0.26
+    - name: The World Stone
+      share: 0.24
+    - name: Breastplate of Valor
+      share: 0.21
+    starters:
+    - name: Sands Of Time
+      share: 0.47
+    - name: Pendulum of the Ages
+      share: 0.18
+    - name: Heroism
+      share: 0.15
+    relics:
+    - name: Phantom Shell
+      share: 0.53
+    - name: Aegis of Acceleration
+      share: 0.35
+    - name: Purification Beads
+      share: 0.12
     matches_by_window:
       ob47: 10
       ob46: 24

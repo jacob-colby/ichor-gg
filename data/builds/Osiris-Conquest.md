@@ -636,12 +636,18 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of the Fragmented
     status: shown
-    window: ob46
+    windows:
+    - ob46
+    patches: OB46
     window_rule: last closed
     window_start: '2026-10-20'
     window_end: '2026-11-03'
@@ -676,6 +682,12 @@ community_aspects:
       share: 0.31
     - name: Ancient Signet
       share: 0.24
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 11
+        matches: 11
+        says: changed in OB47; 11 of the 11 matches that bought it are older
     - name: Soul Gem
       share: 0.24
     - name: brawlers-ruin

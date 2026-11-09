@@ -1698,11 +1698,87 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Relativity
-    status: below minimum
+    status: shown
+    windows:
+    - ob46
+    - ob47
+    patches: OB46–OB47
+    window_rule: pooled back
+    window_start: '2026-10-20'
+    window_end: '2026-11-08'
+    matches: 35
+    wins: 20
+    win_share: 0.57
+    aggregate:
+      aspect_matches: 44
+      aspect_win_rate: 0.523
+      no_aspect_matches: 938
+      no_aspect_win_rate: 0.507
+    roles:
+    - role: Support
+      matches: 28
+      share: 0.8
+    - role: Solo
+      matches: 5
+      share: 0.14
+    - role: Jungle
+      matches: 1
+      share: 0.03
+    - role: Mid
+      matches: 1
+      share: 0.03
+    base_role: Mid Carry
+    base_role_share: 0.03
+    role_shift:
+      role: Support
+      share: 0.8
+      says: 'most Aspect of Relativity players do not play Mid/Carry: Support 80%,
+        Mid/Carry 3%'
+    items:
+    - name: Chandra's Grace
+      share: 0.63
+    - name: Gauntlet of Thebes
+      share: 0.43
+    - name: Freya's Tears
+      share: 0.4
+    - name: Lotus Sickle
+      share: 0.31
+    - name: Prophetic Cloak
+      share: 0.23
+    - name: Regrowth Striders
+      share: 0.23
+    - name: Breastplate of Valor
+      share: 0.17
+    - name: Genji's Guard
+      share: 0.17
+    starters:
+    - name: War Flag
+      share: 0.2
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 6
+        matches: 7
+        says: changed in OB47; 6 of the 7 matches that bought it are older
+    - name: Bumba's Cudgel
+      share: 0.14
+    - name: Bumba's Hammer
+      share: 0.14
+    relics:
+    - name: Phantom Shell
+      share: 0.71
+    - name: Aegis of Acceleration
+      share: 0.14
+    - name: Purification Beads
+      share: 0.11
     matches_by_window:
       ob47: 7
       ob46: 28

@@ -778,14 +778,76 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Souls
-    status: below minimum
+    status: shown
+    windows:
+    - ob46
+    - ob47
+    patches: OB46–OB47
+    window_rule: pooled back
+    window_start: '2026-10-20'
+    window_end: '2026-11-08'
+    matches: 34
+    wins: 14
+    win_share: 0.41
+    aggregate:
+      aspect_matches: 37
+      aspect_win_rate: 0.459
+      no_aspect_matches: 765
+      no_aspect_win_rate: 0.549
+    roles:
+    - role: Solo
+      matches: 28
+      share: 0.82
+    - role: Support
+      matches: 6
+      share: 0.18
+    base_role: Solo Support
+    base_role_share: 1.0
+    role_shift: null
+    items:
+    - name: Shifter's Shield
+      share: 0.44
+    - name: Genji's Guard
+      share: 0.38
+    - name: Freya's Tears
+      share: 0.35
+    - name: Breastplate of Valor
+      share: 0.29
+    - name: Contagion
+      share: 0.26
+    - name: Bancroft's Talon
+      share: 0.24
+    - name: Prophetic Cloak
+      share: 0.24
+    - name: Yogi's Necklace
+      share: 0.21
+    starters:
+    - name: Bluestone Brooch
+      share: 0.32
+    - name: Blood-soaked Shroud
+      share: 0.12
+    - name: Conduit Gem
+      share: 0.12
+    relics:
+    - name: Sundering Arc
+      share: 0.32
+    - name: Purification Beads
+      share: 0.24
+    - name: Aegis of Acceleration
+      share: 0.21
     matches_by_window:
       ob47: 6
       ob46: 28
       ob45: 24
       ob44: 27
+    unmapped_slugs:
+    - brawlers-ruin
 ---
