@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.67
   starter: &id001
-    base: Leather Cowl
-    upgrade: Hunter's Cowl
-    pick_rate: 0.39
-    win_rate: 0.5015
-    matches: 105
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.4
+    win_rate: 0.538
+    matches: 133
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.31
-    win_rate: 0.51
-    matches: 83
+    pick_rate: 0.33
+    win_rate: 0.49
+    matches: 110
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Hydra's Lament
     removed: Shield Splitter
-    reason: Conquest community 74% win over 35 matches (vs 51% on this god), taking
+    reason: Conquest community 69% win over 43 matches (vs 50% on this god), taking
       the model's weakest slot from Shield Splitter
   borrowed_from: Conquest
   starter: *id001

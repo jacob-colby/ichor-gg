@@ -8,83 +8,83 @@ builds:
   aspect_pick_rate: null
   aspect_win_rate: null
   slot_order:
-  - name: Book of Thoth
-    pick_rate: 0.33
-    win_rate: 0.55
-    alternates:
-    - name: Spear of Desolation
-      pick_rate: 0.32
-      win_rate: 0.5
-    - name: Chronos' Pendant
-      pick_rate: 0.18
-      win_rate: 0.56
   - name: Spear of Desolation
-    pick_rate: 0.25
-    win_rate: 0.57
+    pick_rate: 0.32
+    win_rate: 0.51
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.2
-      win_rate: 0.55
+      pick_rate: 0.32
+      win_rate: 0.53
+    - name: Chronos' Pendant
+      pick_rate: 0.18
+      win_rate: 0.53
+  - name: Book of Thoth
+    pick_rate: 0.2
+    win_rate: 0.5
+    alternates:
+    - name: Spear of Desolation
+      pick_rate: 0.26
+      win_rate: 0.59
     - name: Chronos' Pendant
       pick_rate: 0.15
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Soul Gem
-    pick_rate: 0.24
-    win_rate: 0.53
+    pick_rate: 0.25
+    win_rate: 0.55
     alternates:
-    - name: Rod of Tahuti
-      pick_rate: 0.21
-      win_rate: 0.48
     - name: Spear of Desolation
-      pick_rate: 0.18
-      win_rate: 0.56
+      pick_rate: 0.2
+      win_rate: 0.54
+    - name: Rod of Tahuti
+      pick_rate: 0.2
+      win_rate: 0.5
   - name: Rod of Tahuti
     pick_rate: 0.51
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.2
-      win_rate: 0.55
+      win_rate: 0.56
     - name: Soul Gem
-      pick_rate: 0.09
-      win_rate: 0.45
+      pick_rate: 0.1
+      win_rate: 0.54
   - name: Obsidian Shard
-    pick_rate: 0.36
-    win_rate: 0.62
+    pick_rate: 0.37
+    win_rate: 0.63
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.14
       win_rate: 0.55
     - name: Evil Eye
       pick_rate: 0.09
-      win_rate: 0.47
+      win_rate: 0.48
   - name: Dreamer's Idol
-    pick_rate: 0.17
-    win_rate: 0.69
+    pick_rate: 0.16
+    win_rate: 0.68
     alternates:
-    - name: Blinking Abyss
-      pick_rate: 0.12
-      win_rate: 0.66
     - name: Killing Stone
-      pick_rate: 0.11
+      pick_rate: 0.12
       win_rate: 0.57
+    - name: Blinking Abyss
+      pick_rate: 0.11
+      win_rate: 0.63
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.59
     win_rate: 0.57
   - name: Conduit Gem
     pick_rate: 0.25
-    win_rate: 0.48
+    win_rate: 0.44
   - name: Pendulum of the Ages
     pick_rate: 0.11
-    win_rate: 0.53
+    win_rate: 0.6
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.55
+    pick_rate: 0.58
+    win_rate: 0.54
   - name: Aegis of Acceleration
-    pick_rate: 0.41
-    win_rate: 0.53
+    pick_rate: 0.39
+    win_rate: 0.54
   - name: Blink Rune
     pick_rate: 0.02
     win_rate: 0.27
@@ -94,26 +94,29 @@ builds:
     win_rate: 0.57
   - name: Conduit Gem
     pick_rate: 0.25
-    win_rate: 0.48
+    win_rate: 0.44
   - name: Pendulum of the Ages
     pick_rate: 0.11
-    win_rate: 0.53
+    win_rate: 0.6
   - name: Sands Of Time
     pick_rate: 0.05
-    win_rate: 0.4
+    win_rate: 0.38
   - name: Bluestone Brooch
-    pick_rate: 0.004
+    pick_rate: 0.003
     win_rate: 0.5
+  - name: Bumba's Hammer
+    pick_rate: 0.003
+    win_rate: 1.0
   - name: Heroism
     pick_rate: 0.002
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.55
+    pick_rate: 0.58
+    win_rate: 0.54
   - name: Aegis of Acceleration
-    pick_rate: 0.41
-    win_rate: 0.53
+    pick_rate: 0.39
+    win_rate: 0.54
   - name: Blink Rune
     pick_rate: 0.02
     win_rate: 0.27
@@ -121,26 +124,26 @@ builds:
     pick_rate: 0.002
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/janus/
-  last_verified: '2026-11-08'
-  god_win_rate: 0.5357873210633947
-  god_matches_won: 262
-  god_matches_played: 489
+  last_verified: '2026-11-09'
+  god_win_rate: 0.5301587301587302
+  god_matches_won: 334
+  god_matches_played: 630
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-08'
-  god_matches_analyzed: 5119
+  god_window_end: '2026-11-09'
+  god_matches_analyzed: 6470
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.84
-    win_rate: 0.5432
-    matches: 411
+    win_rate: 0.5313
+    matches: 529
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.55
-    matches: 279
+    pick_rate: 0.58
+    win_rate: 0.54
+    matches: 365
     basis: community
 - source: suggested
   archetype: core
@@ -149,8 +152,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
-  - Lotus Sickle
   - Dreamer's Idol
+  - Lotus Sickle
   flex_slots:
   - Soul Gem
   - Lotus Sickle
@@ -175,41 +178,41 @@ builds:
     of Myrddin, Death Metal, Rod of Asclepius, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.64
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 1.0
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 1.0
     Obsidian Shard:
       total: 0.64
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.88
-    Lotus Sickle:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.77
     Dreamer's Idol:
       total: 0.64
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.78
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.77
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
@@ -220,21 +223,21 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.84
-    win_rate: 0.5432
-    matches: 411
+    win_rate: 0.5313
+    matches: 529
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.55
-    matches: 279
+    pick_rate: 0.58
+    win_rate: 0.54
+    matches: 365
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Book of Thoth
-  - Spear of Desolation
   - Rod of Tahuti
+  - Soul Gem
   - Obsidian Shard
   - Dreamer's Idol
   - Lotus Sickle
@@ -262,45 +265,45 @@ builds:
     Damaru, Helm of Radiance.'
   slot_scores:
     Book of Thoth:
-      total: 0.49
+      total: 0.46
       efficiency: 0.48
-      win: 0.55
-      pick: 0.33
+      win: 0.5
+      pick: 0.27
       fit: 0.39
-    Spear of Desolation:
-      total: 0.58
-      efficiency: 0.6
-      win: 0.57
-      pick: 0.34
-      fit: 0.61
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.57
-    Obsidian Shard:
-      total: 0.59
+    Soul Gem:
+      total: 0.56
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.55
+      pick: 0.39
+      fit: 0.71
+    Obsidian Shard:
+      total: 0.6
+      efficiency: 0.53
+      win: 0.63
+      pick: 0.8
       fit: 0.57
     Dreamer's Idol:
-      total: 0.6
+      total: 0.59
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.47
     Lotus Sickle:
-      total: 0.55
+      total: 0.54
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.63
   community_ordered:
   - Book of Thoth
-  - Spear of Desolation
   - Rod of Tahuti
+  - Soul Gem
   - Obsidian Shard
   - Dreamer's Idol
   starter: *id001
@@ -312,10 +315,10 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
-  - Lotus Sickle
   - Dreamer's Idol
+  - Lotus Sickle
   flex_slots:
-  - Soul Gem
+  - Spear of Desolation
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -338,41 +341,41 @@ builds:
     Ruin, Breastplate of Valor, Ethereal Staff.'
   slot_scores:
     Spear of Desolation:
-      total: 0.6
+      total: 0.57
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 0.78
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.56
     Soul Gem:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 0.88
     Obsidian Shard:
-      total: 0.6
+      total: 0.61
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.66
+    Dreamer's Idol:
+      total: 0.6
+      efficiency: 0.54
+      win: 0.68
+      pick: 0.49
+      fit: 0.56
     Lotus Sickle:
       total: 0.53
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.54
-    Dreamer's Idol:
-      total: 0.61
-      efficiency: 0.54
-      win: 0.69
-      pick: 0.52
-      fit: 0.56
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
@@ -388,10 +391,10 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
-  - Amanita Charm
   - Dreamer's Idol
+  - Amanita Charm
   flex_slots:
-  - Soul Gem
+  - Dreamer's Idol
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -415,41 +418,41 @@ builds:
     Spear of the Magus, Jade Scepter, Lifebinder.'
   slot_scores:
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.62
     Rod of Tahuti:
       total: 0.63
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.37
     Soul Gem:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 0.88
     Obsidian Shard:
       total: 0.58
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.47
-    Amanita Charm:
-      total: 0.61
-      efficiency: 0.68
-      win: 0.56
-      pick: 0.0
-      fit: 0.82
     Dreamer's Idol:
       total: 0.58
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.37
+    Amanita Charm:
+      total: 0.61
+      efficiency: 0.68
+      win: 0.55
+      pick: 0.0
+      fit: 0.82
   community_ordered:
   - Rod of Tahuti
   - Soul Gem
@@ -490,40 +493,40 @@ builds:
     of Radiance, Bracer of The Abyss, Death Metal, Rod of Asclepius.'
   slot_scores:
     Spear of Desolation:
-      total: 0.64
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 1.0
     Doom Orb:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
       total: 0.7
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.85
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 1.0
     Obsidian Shard:
       total: 0.65
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.95
     Dreamer's Idol:
       total: 0.65
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.85
   community_ordered:
   - Spear of Desolation
@@ -566,40 +569,40 @@ builds:
     Guard, Jade Scepter.'
   slot_scores:
     Bracer of The Abyss:
-      total: 0.5
+      total: 0.49
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.41
     Nimble Ring:
       total: 0.52
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.49
     Bragi's Harp:
       total: 0.51
       efficiency: 0.47
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.3
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.4
     Dreamer's Idol:
-      total: 0.57
+      total: 0.56
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.3
   community_ordered:
   - Rod of Tahuti
@@ -614,10 +617,10 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
-  - Lotus Sickle
   - Dreamer's Idol
+  - Lotus Sickle
   flex_slots:
-  - Obsidian Shard
+  - Dreamer's Idol
   - Lotus Sickle
   situational_swaps:
   - vs_tag: heavy_cc
@@ -641,41 +644,41 @@ builds:
     of Erebus, Shield of the Phoenix.'
   slot_scores:
     Spear of Desolation:
-      total: 0.61
+      total: 0.58
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 0.85
     Rod of Tahuti:
-      total: 0.63
+      total: 0.62
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.35
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 0.95
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.45
+    Dreamer's Idol:
+      total: 0.57
+      efficiency: 0.54
+      win: 0.68
+      pick: 0.49
+      fit: 0.35
     Lotus Sickle:
       total: 0.56
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.75
-    Dreamer's Idol:
-      total: 0.58
-      efficiency: 0.54
-      win: 0.69
-      pick: 0.52
-      fit: 0.35
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
@@ -717,39 +720,39 @@ builds:
     The Abyss, Staff of Myrddin, Death Metal, Rod of Asclepius, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.64
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 1.0
     Spear of the Magus:
       total: 0.56
       efficiency: 0.56
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.78
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 1.0
     Obsidian Shard:
       total: 0.64
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.88
     Lotus Sickle:
-      total: 0.57
+      total: 0.56
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.77
   community_ordered:
@@ -766,8 +769,8 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   - Obsidian Shard
-  - Lotus Sickle
   - Dreamer's Idol
+  - Lotus Sickle
   flex_slots:
   - Lotus Sickle
   - Dreamer's Idol
@@ -793,41 +796,41 @@ builds:
     Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.64
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
-      pick: 0.34
+      win: 0.51
+      pick: 0.32
       fit: 1.0
     Rod of Tahuti:
       total: 0.69
       efficiency: 0.82
-      win: 0.55
+      win: 0.54
       pick: 0.85
       fit: 0.78
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.53
-      pick: 0.37
+      win: 0.55
+      pick: 0.39
       fit: 1.0
     Obsidian Shard:
       total: 0.64
       efficiency: 0.53
-      win: 0.62
-      pick: 0.78
+      win: 0.63
+      pick: 0.8
       fit: 0.88
-    Lotus Sickle:
-      total: 0.57
-      efficiency: 0.57
-      win: 0.56
-      pick: 0.0
-      fit: 0.77
     Dreamer's Idol:
       total: 0.64
       efficiency: 0.54
-      win: 0.69
-      pick: 0.52
+      win: 0.68
+      pick: 0.49
       fit: 0.78
+    Lotus Sickle:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.55
+      pick: 0.0
+      fit: 0.77
   community_ordered:
   - Spear of Desolation
   - Rod of Tahuti
@@ -837,7 +840,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Spear of the Magus
-    reason: community 69% win over 83 matches (vs 54% on this god), taking the model's
+    reason: community 68% win over 101 matches (vs 53% on this god), taking the model's
       weakest slot from Spear of the Magus
   starter: *id001
   relic: *id002

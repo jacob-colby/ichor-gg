@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.44
-    win_rate: 0.5214
-    matches: 88
+    pick_rate: 0.43
+    win_rate: 0.5563
+    matches: 114
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.53
-    win_rate: 0.61
-    matches: 105
+    pick_rate: 0.5
+    win_rate: 0.6
+    matches: 132
     basis: community
     borrowed_from: Conquest
 - source: suggested

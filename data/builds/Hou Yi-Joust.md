@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.79
-    win_rate: 0.5341
-    matches: 361
+    win_rate: 0.5304
+    matches: 437
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.69
+    pick_rate: 0.7
     win_rate: 0.54
-    matches: 315
+    matches: 387
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -743,7 +743,7 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Toxic Blade
-    reason: Conquest community 65% win over 78 matches (vs 53% on this god), taking
+    reason: Conquest community 64% win over 94 matches (vs 53% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001
