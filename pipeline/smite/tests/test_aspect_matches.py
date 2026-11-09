@@ -306,14 +306,39 @@ def test_the_cli_exits_non_zero_on_a_refusal(monkeypatch, capsys):
 
 # -- the build-note entry ------------------------------------------------------
 
+WINDOWS4 = ["ob47", "ob46", "ob45", "ob44"]
+
+
 @pytest.mark.parametrize("counts, expected", [
-    ({"ob47": 30, "ob46": 99}, ("ob47", "newest")),
-    ({"ob47": 29, "ob46": 30}, ("ob46", "last closed")),
-    ({"ob47": 5, "ob46": 29}, (None, "below minimum")),
-    ({"ob47": 5, "ob46": 21, "ob45": 30}, (None, "below minimum")),   # Tsukuyomi: one step only
+    # The two branches #129 shipped, unchanged: one window, never pooled.
+    ({"ob47": 30, "ob46": 99}, (["ob47"], "newest")),
+    ({"ob47": 29, "ob46": 30}, (["ob46"], "last closed")),
+    ({"ob47": 19, "ob46": 200, "ob45": 382}, (["ob46"], "last closed")),   # Hou Yi: not pooled
+    # Below both: the newest and the last closed together first...
+    ({"ob47": 5, "ob46": 25}, (["ob47", "ob46"], "pooled back")),
+    # ...then one closed window at a time, and no further than needed.
+    ({"ob47": 6, "ob46": 21, "ob45": 30, "ob44": 17},
+     (["ob47", "ob46", "ob45"], "pooled back")),                            # Tsukuyomi, 57
+    ({"ob47": 3, "ob46": 8, "ob45": 13, "ob44": 14},
+     (["ob47", "ob46", "ob45", "ob44"], "pooled back")),                    # Da Ji, 38
+    ({"ob47": 10, "ob46": 24, "ob45": 104}, (["ob47", "ob46"], "pooled back")),  # Jormungandr
+    # Every stored window together still short: a stated stub.
+    ({"ob47": 4, "ob46": 13, "ob45": 6, "ob44": 5}, ([], "below minimum")),       # Geb, 28
+    ({}, ([], "below minimum")),
 ])
 def test_the_window_rule(counts, expected):
-    assert am.choose_window(counts, ["ob47", "ob46", "ob45"]) == expected
+    assert am.choose_windows(counts, WINDOWS4) == expected
+
+
+def test_a_store_of_one_window_never_pools():
+    assert am.choose_windows({"ob47": 29}, ["ob47"]) == ([], "below minimum")
+    assert am.choose_windows({"ob47": 30}, ["ob47"]) == (["ob47"], "newest")
+
+
+def test_a_pool_is_labelled_by_the_patches_it_reads():
+    assert am.patch_label(["ob47"]) == "OB47"
+    assert am.patch_label(["ob45", "ob46", "ob47"]) == "OB45–OB47"
+    assert am.window_patch("ob47") == 47 and am.window_patch("all") is None
 
 
 def test_the_minimum_is_the_tier_lists_floor():
@@ -335,7 +360,8 @@ def _entry(roles, base_role="Jungle", n_items=None):
 
 def test_a_role_shift_is_named_when_the_base_role_is_a_clear_minority():
     entry = _entry({"Mid": 18, "Jungle": 6, "Solo": 6})
-    assert entry["status"] == "shown" and entry["window"] == "ob47"
+    assert entry["status"] == "shown" and entry["windows"] == ["ob47"]
+    assert entry["patches"] == "OB47" and entry["window_rule"] == "newest"
     assert entry["base_role_share"] == 0.2
     assert entry["role_shift"]["role"] == "Mid"
     assert "do not play Jungle" in entry["role_shift"]["says"]
@@ -383,3 +409,210 @@ def test_item_slugs_map_to_our_note_spellings():
     assert names["spear-of-the-magus"] == "Spear of the Magus"
     assert names["chronos-pendant"] == "Chronos' Pendant"
     assert names["brawlers-beat-stick"] == "Brawler’s Beat Stick"     # curly in our note
+
+
+# -- reaching back, and the items that changed since ----------------------------
+
+META4 = {"division": "obsidian", "aspects": {},
+         "windows": {"ob44": {"start": "2026-09-22T11:33:41.157Z", "end": "2026-10-06T10:55:52.910Z"},
+                     "ob45": {"start": "2026-10-06T12:26:45.817Z", "end": "2026-10-20T10:57:38.887Z"},
+                     "ob46": {"start": "2026-10-20T11:48:48.610Z", "end": "2026-11-03T11:28:02.357Z"},
+                     "ob47": {"start": "2026-11-03T11:30:13.083Z", "end": "2026-11-08T20:22:04.330Z"}}}
+NAMES = {"rod-of-tahuti": "Rod of Tahuti", "book-of-thoth": "Book of Thoth",
+         "war-flag": "War Flag", "archmages-gem": "Archmage's Gem",
+         "purification-beads": "Purification Beads"}
+
+
+def _pooled(counts, changes, starter="archmages-gem", relic="purification-beads"):
+    by_window = {w: [_rec(f"{w}-{i}", starter=starter, relic=relic) for i in range(k)]
+                 for w, k in counts.items()}
+    return am.aspect_entry("Tsukuyomi", "Mid", MANGETSU, by_window, META4, {}, NAMES, changes)
+
+
+def _change(slug, after, through):
+    return {"slug": slug, "name": slug, "after": after, "through": through}
+
+
+def _flag(entry, name, field="items"):
+    return next(i for i in entry[field] if i["name"] == name).get("changed")
+
+
+def test_an_item_changed_between_pooled_windows_is_flagged_with_how_many_buys_are_older():
+    entry = _pooled({"ob47": 10, "ob46": 25}, [_change("rod-of-tahuti", 46, 47)])
+    assert entry["windows"] == ["ob46", "ob47"] and entry["patches"] == "OB46–OB47"
+    assert entry["window_rule"] == "pooled back" and entry["matches"] == 35
+    assert _flag(entry, "Rod of Tahuti") == {
+        "patch": "OB47", "exact": True, "older_matches": 25, "matches": 35,
+        "says": "changed in OB47; 25 of the 35 matches that bought it are older"}
+    assert _flag(entry, "Book of Thoth") is None
+
+
+def test_a_change_at_or_before_the_oldest_window_read_is_not_flagged():
+    """OB46's records already bought the OB46 version: no pooled match is older."""
+    entry = _pooled({"ob47": 10, "ob46": 25},
+                    [_change("rod-of-tahuti", 45, 46), _change("book-of-thoth", 40, 46)])
+    assert _flag(entry, "Rod of Tahuti") is None and _flag(entry, "Book of Thoth") is None
+
+
+def test_a_change_the_snapshots_cannot_place_carries_its_whole_span():
+    """No item data was scraped between OB40 and OB46: the change is at one of
+    OB41-OB46, so the older share is an upper bound and the flag says so."""
+    entry = _pooled({"ob47": 6, "ob46": 21, "ob45": 30}, [_change("rod-of-tahuti", 40, 46)])
+    flag = _flag(entry, "Rod of Tahuti")
+    assert flag["patch"] == "OB41–OB46" and flag["exact"] is False
+    assert (flag["older_matches"], flag["matches"]) == (30, 57)
+    assert "at a patch not recorded; up to 30 of the 57" in flag["says"]
+
+
+def test_a_change_inside_one_patch_is_a_lower_bound():
+    entry = _pooled({"ob47": 10, "ob46": 25}, [_change("rod-of-tahuti", 47, 47)])
+    flag = _flag(entry, "Rod of Tahuti")
+    assert flag["patch"] == "OB47" and flag["exact"] is False
+    assert flag["says"] == ("its stats moved during OB47; at least 25 of the 35 matches "
+                            "that bought it are older")
+
+
+def test_a_last_closed_entry_is_flagged_too():
+    """Cabrakan and Osiris on 2026-11-09: one window, no pooling, and Ancient
+    Signet changed after it. The flag is not a pooling rule."""
+    entry = _pooled({"ob47": 5, "ob46": 40}, [_change("rod-of-tahuti", 46, 47)])
+    assert entry["windows"] == ["ob46"] and entry["window_rule"] == "last closed"
+    assert _flag(entry, "Rod of Tahuti")["says"] == (
+        "changed in OB47; 40 of the 40 matches that bought it are older")
+
+
+def test_the_newest_window_is_not_flagged_by_a_change_it_already_saw():
+    entry = _pooled({"ob47": 30, "ob46": 99}, [_change("rod-of-tahuti", 46, 47)])
+    assert _flag(entry, "Rod of Tahuti") is None
+
+
+def test_a_changed_item_never_stops_the_walk():
+    """Flag, don't stop (agreed 2026-11-09): a stop rule made visibility hinge
+    on the quality of the change data, and hid Chronos' 35 matches over the
+    7 that bought War Flag."""
+    entry = _pooled({"ob47": 6, "ob46": 21, "ob45": 30, "ob44": 17},
+                    [_change("rod-of-tahuti", 45, 46), _change("book-of-thoth", 46, 47)])
+    assert entry["status"] == "shown" and entry["windows"] == ["ob45", "ob46", "ob47"]
+    assert _flag(entry, "Rod of Tahuti")["older_matches"] == 30
+    assert _flag(entry, "Book of Thoth")["older_matches"] == 51
+
+
+def test_the_latest_change_after_the_pool_is_the_one_named():
+    entry = _pooled({"ob47": 6, "ob46": 21, "ob45": 30},
+                    [_change("rod-of-tahuti", 45, 46), _change("rod-of-tahuti", 46, 47)])
+    flag = _flag(entry, "Rod of Tahuti")
+    assert flag["patch"] == "OB47" and flag["older_matches"] == 51
+
+
+def test_a_starter_and_a_relic_are_flagged_on_their_own_field():
+    entry = _pooled({"ob47": 10, "ob46": 25},
+                    [_change("war-flag", 46, 47), _change("purification-beads", 46, 47)],
+                    starter="war-flag")
+    assert _flag(entry, "War Flag", "starters")["older_matches"] == 25
+    assert _flag(entry, "Purification Beads", "relics")["matches"] == 35
+    assert _flag(entry, "Rod of Tahuti") is None
+
+
+def _snapshot(d, day, items):
+    (d / f"{day}.json").write_text(json.dumps(
+        {name: {"cost": cost, "tier": 3, "stats": stats} for name, (cost, stats) in items.items()}),
+        encoding="utf-8")
+
+
+def test_item_changes_attributes_each_snapshot_period_by_item_data(tmp_path):
+    snaps = tmp_path / "snapshots"
+    snaps.mkdir()
+    base = {"Rod of Tahuti": (2800, {"Intelligence": "80"}),
+            "Chronos' Pendant": (2700, {"Intelligence": "60"}),
+            "Brawler’s Beat Stick": (2550, {"Strength": "30"})}
+    pendant = {"Chronos' Pendant": (2650, {"Intelligence": "60"})}
+    _snapshot(snaps, "2026-08-01", base)
+    _snapshot(snaps, "2026-08-29", {**base, **pendant, "Ancient Signet": (2600, {})})
+    _snapshot(snaps, "2026-11-02", {**base, **pendant, "Ancient Signet": (2600, {}),
+                                    "Rod of Tahuti": (2800, {"Intelligence": "85"})})
+    _snapshot(snaps, "2026-11-03", {**base, **pendant,
+                                    "Ancient Signet": (2600, {"Mana Regen": "5"}),
+                                    "Rod of Tahuti": (2800, {"Intelligence": "85"}),
+                                    "Brawler’s Beat Stick": (2500, {"Strength": "30"})})
+    history = tmp_path / "_patch_history.json"
+    history.write_text(json.dumps(
+        [{"patch": "Open Beta 40", "first_seen": "2026-08-01", "data_from": "2026-08-01"}]
+        + [{"patch": f"Open Beta {n}", "first_seen": f"2026-{d}", "source": "manual"}
+           for n, d in ((41, "08-11"), (42, "08-25"), (43, "09-08"), (44, "09-22"), (45, "10-06"))]
+        + [{"patch": "Open Beta 46", "first_seen": "2026-10-20", "source": "manual",
+            "data_from": "2026-11-02"},
+           {"patch": "Open Beta 47", "first_seen": "2026-11-03", "data_from": "2026-11-03",
+            "source": "wiki"}]), encoding="utf-8")
+    rows = am.item_changes(snaps, history)
+    # A correction inside OB40 is "during" it; OB40 -> OB46 is one span with
+    # five patches inside it; an ADDED item (Ancient Signet on 08-29) is not a
+    # change; names are slugged the way the store slugs them.
+    assert rows == [
+        {"slug": "chronos-pendant", "name": "Chronos' Pendant", "after": 40, "through": 40},
+        {"slug": "rod-of-tahuti", "name": "Rod of Tahuti", "after": 40, "through": 46},
+        {"slug": "ancient-signet", "name": "Ancient Signet", "after": 46, "through": 47},
+        {"slug": "brawlers-beat-stick", "name": "Brawler’s Beat Stick", "after": 46, "through": 47},
+    ]
+
+
+# -- Tsukuyomi, the acceptance case, on a frozen copy of his store --------------
+
+TSUKUYOMI_STORE = FIXTURES / "aspect_store_tsukuyomi"
+
+
+def _committed_changes_through_ob47(tmp_path):
+    """The item changes the committed snapshots record up to OB47. Copied
+    out so a later patch's snapshot cannot move this test: these three files
+    are history and are never rewritten."""
+    import shutil
+    from smite import snapshots
+    snaps = tmp_path / "snapshots"
+    snaps.mkdir()
+    for day in ("2026-08-29", "2026-11-02", "2026-11-03"):
+        shutil.copy(snapshots.SNAPSHOTS_DIR / f"{day}.json", snaps)
+    return am.item_changes(snaps, snapshots.PATCH_HISTORY_PATH)
+
+
+def _tsukuyomi_entry(tmp_path):
+    block = am.note_block("Tsukuyomi", "Jungle", TSUKUYOMI_STORE, am.load_meta(TSUKUYOMI_STORE),
+                          am.load_aggregate(TSUKUYOMI_STORE), am.item_name_lookup(),
+                          _committed_changes_through_ob47(tmp_path))
+    (entry,) = block["aspects"]
+    return entry
+
+
+def test_tsukuyomi_mangetsu_pools_ob45_to_ob47_and_reads_as_a_mid_mage(tmp_path):
+    """His store as it stood on 2026-11-09 (`fixtures/aspect_store_tsukuyomi`):
+    OB47 6, OB46 21, OB45 30, OB44 17. Below 30 on the two-window read (27),
+    so the rule reaches back to OB45 and stops there, at 57."""
+    entry = _tsukuyomi_entry(tmp_path)
+    assert entry["matches_by_window"] == {"ob47": 6, "ob46": 21, "ob45": 30, "ob44": 17}
+    assert entry["status"] == "shown" and entry["window_rule"] == "pooled back"
+    assert entry["windows"] == ["ob45", "ob46", "ob47"] and entry["patches"] == "OB45–OB47"
+    assert (entry["window_start"], entry["matches"], entry["wins"]) == ("2026-10-06", 57, 32)
+    assert entry["roles"][:2] == [{"role": "Mid", "matches": 32, "share": 0.56},
+                                  {"role": "Jungle", "matches": 15, "share": 0.26}]
+    assert entry["base_role"] == "Jungle" and entry["role_shift"]["role"] == "Mid"
+    assert [(i["name"], i["share"]) for i in entry["items"][:6]] == [
+        ("Rod of Tahuti", 0.86), ("Book of Thoth", 0.79), ("Chronos' Pendant", 0.72),
+        ("Obsidian Shard", 0.63), ("Polynomicon", 0.33), ("Spear of Desolation", 0.23)]
+    assert entry["starters"][0] == {"name": "Bluestone Brooch", "share": 0.42}
+    assert entry["relics"][0] == {"name": "Purification Beads", "share": 0.6}
+    # The split index summed over the same three windows, not one of them.
+    assert entry["aggregate"]["aspect_matches"] == 71
+
+
+def test_tsukuyomi_mangetsu_flags_what_the_snapshots_cannot_place(tmp_path):
+    """Four listed items moved between Ichor's OB40 and OB46 item data, and
+    nothing in the repo says at which patch. The wiki's patch notes date two
+    of them (Obsidian Shard, Polynomicon) to OB44, before this pool, and name
+    Rod of Tahuti's +5 Intelligence nowhere; the rule does not read the wiki,
+    so all four carry the span. Nothing OB47 changed is in his build."""
+    entry = _tsukuyomi_entry(tmp_path)
+    flags = {i["name"]: i["changed"] for i in entry["items"] if "changed" in i}
+    assert sorted(flags) == ["Obsidian Shard", "Polynomicon", "Rod of Tahuti", "Spear of the Magus"]
+    assert flags["Rod of Tahuti"] == {
+        "patch": "OB41–OB46", "exact": False, "older_matches": 27, "matches": 49,
+        "says": "its stats moved between Ichor's OB40 and OB46 item data, at a patch not "
+                "recorded; up to 27 of the 49 matches that bought it are older"}
+    assert not any("changed" in i for i in entry["starters"] + entry["relics"])
