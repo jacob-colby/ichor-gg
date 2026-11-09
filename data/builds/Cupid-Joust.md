@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.42
-    win_rate: 0.6038
-    matches: 98
+    pick_rate: 0.41
+    win_rate: 0.6029
+    matches: 124
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.73
-    win_rate: 0.57
-    matches: 171
+    pick_rate: 0.7
+    win_rate: 0.59
+    matches: 211
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -740,6 +740,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.86
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Toxic Blade
+  - Death Metal
+  - Riptalon
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Toxic Blade
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.3
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Toxic Blade:
+      total: 0.53
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Death Metal:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Riptalon:
+      total: 0.58
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Rod of Tahuti:
+      total: 0.55
+      efficiency: 0.82
+      win: 0.5
+      pick: 0.0
+      fit: 0.29
+    Soul Gem:
+      total: 0.72
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: The Executioner
+    removed: Bragi's Harp
+    reason: Conquest community 72% win over 45 matches (vs 57% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

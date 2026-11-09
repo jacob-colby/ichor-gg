@@ -71,15 +71,15 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.38
-    win_rate: 0.5937
-    matches: 58
+    win_rate: 0.5605
+    matches: 76
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.5
-    win_rate: 0.45
-    matches: 76
+    name: Aegis of Acceleration
+    pick_rate: 0.48
+    win_rate: 0.59
+    matches: 96
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -740,6 +740,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.71
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Tyrfing
+  - Dagger of Frenzy
+  - Death Metal
+  - The Reaper
+  - Soul Gem
+  flex_slots:
+  - Death Metal
+  - Dagger of Frenzy
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
+    Tyrfing:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Dagger of Frenzy:
+      total: 0.36
+      efficiency: 0.42
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Death Metal:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    The Reaper:
+      total: 0.62
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.68
+    Soul Gem:
+      total: 0.65
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+  swaps:
+  - added: Dagger of Frenzy
+    removed: Bragi's Harp
+    reason: Conquest community 69% win over 32 matches (vs 51% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---
