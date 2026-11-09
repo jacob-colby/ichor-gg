@@ -7,7 +7,7 @@
  * Two layouts of the same control: `bar` is the phone's sticky strip above
  * the tab bar; `panel` is the desktop second column's, with names under the
  * portraits. Same props, same behaviour. */
-import { Art, PlusGlyph } from "./art";
+import { Art, PlusGlyph, SLOT_BUTTON, SLOT_TILE_FOCUS } from "./art";
 
 export function EnemyStrip({ enemies, onOpen, changeCount, variant = "bar", onClear }: {
   enemies: string[];
@@ -31,12 +31,12 @@ export function EnemyStrip({ enemies, onOpen, changeCount, variant = "bar", onCl
         <li key={i} className="min-w-0">
           <button type="button" onClick={() => onOpen(i)}
             aria-label={name ? `Enemy ${i + 1}: ${name}. Change` : `Add enemy ${i + 1}`}
-            className={`press flex w-full flex-col items-center gap-1 ${variant === "bar" ? "" : "py-0.5"}`}>
+            className={`press ${SLOT_BUTTON} flex w-full flex-col items-center gap-1 ${variant === "bar" ? "" : "py-0.5"}`}>
             {name ? (
               <Art name={name} kind="head"
-                className={`aspect-square w-full rounded-[10px] ring-[1.5px] ring-ink ${variant === "bar" ? "max-w-12" : ""}`} />
+                className={`aspect-square w-full rounded-[10px] ring-[1.5px] ring-ink ${SLOT_TILE_FOCUS} ${variant === "bar" ? "max-w-12" : ""}`} />
             ) : (
-              <span className={`flex aspect-square w-full items-center justify-center rounded-[10px] border-[1.5px] border-dashed border-quiet text-muted ${variant === "bar" ? "max-w-12" : ""}`}>
+              <span className={`flex aspect-square w-full items-center justify-center rounded-[10px] border-[1.5px] border-dashed border-quiet text-muted ${SLOT_TILE_FOCUS} ${variant === "bar" ? "max-w-12" : ""}`}>
                 <PlusGlyph size={20} />
               </span>
             )}

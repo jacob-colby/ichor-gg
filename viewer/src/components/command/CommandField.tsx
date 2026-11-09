@@ -13,7 +13,9 @@
  *
  * Each finished word becomes a chip (you ringed in violet, enemies ringed in
  * ink, mode and aspect as plain chips; anything not understood stays visible,
- * struck through, with the reason as its name). The word being typed drives a
+ * struck through, with the reason as its name). There is one mode chip at
+ * most: a second mode word, typed or picked, replaces the first in the text
+ * (`keepLastMode`) instead of standing beside it. The word being typed drives a
  * suggestion list that overlays the page — it never pushes layout. Tapping a
  * suggestion is the same as typing it. Enter takes the top suggestion for the
  * unfinished word and goes.
@@ -26,7 +28,7 @@ import type { God, Item } from "../../types";
 import type { Mode } from "../second/verdict";
 import { Art, CloseGlyph, SearchGlyph } from "../second/art";
 import {
-  itemMatches, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
+  itemMatches, keepLastMode, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
 } from "./query";
 import { useKeyboardInset } from "./useKeyboardInset";
 
@@ -69,7 +71,11 @@ export function CommandField({
   gods, items, seedText = "", seedMode = "conquest", onSubmit, onItem, onText, recents = [], variant,
   label, placeholder, autoFocus, clearOnSubmit, gridBelow,
 }: CommandFieldProps) {
-  const [committed, setCommitted] = useState(seedText ? `${seedText} ` : "");
+  // Every commit goes through `keepLastMode`: a second mode word replaces the
+  // first in the text, so there is only ever one mode chip.
+  const seeded = () => (seedText ? keepLastMode(`${seedText} `, gods, seedMode) : "");
+  const commit = (text: string) => keepLastMode(text, gods, seedMode);
+  const [committed, setCommitted] = useState(seeded);
   const [tail, setTail] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
@@ -167,17 +173,17 @@ export function CommandField({
     if (lastSep < 0) { setTail(value); return; }
     const done = value.slice(0, lastSep + 1);
     // Space finishes a word as the top suggestion would — "hec " is Hecate.
-    setCommitted((c) => `${c}${done.replace(/,/g, " ")}`.replace(/\s{2,}/g, " "));
+    setCommitted((c) => commit(`${c}${done.replace(/,/g, " ")}`.replace(/\s{2,}/g, " ")));
     setTail(value.slice(lastSep + 1));
   };
 
   const take = (s: Suggestion) => {
-    setCommitted((c) => `${c}${c && !/\s$/.test(c) ? " " : ""}${s.insert} `);
+    setCommitted((c) => commit(`${c}${c && !/\s$/.test(c) ? " " : ""}${s.insert} `));
     setTail("");
     input.current?.focus();
   };
 
-  const reset = () => { setCommitted(seedText ? `${seedText} ` : ""); setTail(""); };
+  const reset = () => { setCommitted(seeded()); setTail(""); };
 
   const finish = () => {
     setOpen(false);
