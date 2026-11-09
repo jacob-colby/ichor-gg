@@ -60,11 +60,11 @@ function windowWhy(entry: AspectCommunityEntry, minimum: number): string | null 
   return null;
 }
 
-export function AspectCommunity({ aspect, mode, record, itemsByName }: {
+export function AspectCommunity({ aspect, mode, communityAspects: record, itemsByName }: {
   aspect: string;
   mode: Mode;
-  /** The god's Conquest `community_aspects`, or undefined when there is none. */
-  record: CommunityAspects | undefined;
+  /** The god's Conquest note's `community_aspects`, or undefined when there is none. */
+  communityAspects: CommunityAspects | undefined;
   itemsByName: Record<string, Item>;
 }) {
   const short = shortAspect(aspect);

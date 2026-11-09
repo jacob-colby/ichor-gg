@@ -394,7 +394,7 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
 
         {/* ── What the aspect's players buy: community, not the model ── */}
         {q.aspect && aspectName && (
-          <AspectCommunity aspect={aspectName} mode={mode} record={aspectRecord}
+          <AspectCommunity aspect={aspectName} mode={mode} communityAspects={aspectRecord}
             itemsByName={r.itemsByName} />
         )}
 
