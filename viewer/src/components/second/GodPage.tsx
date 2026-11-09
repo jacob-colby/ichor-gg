@@ -413,11 +413,11 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
               {(aspectLine || !isMain) && (
                 <div className="mt-1 space-y-2 lg:mt-2" data-testid="adjust-line" aria-live="polite">
                   {aspectLine && (
-                    <div data-testid="aspect-note">
-                      {isMain && aspectSwaps.length > 0
-                        ? swapDetail(<>{aspectLine} {noColon(swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of))}</>,
-                          swapList(aspectSwaps), "text-note text-muted")
-                        : <p className="text-note text-muted">{aspectLine}</p>}
+                    <div>
+                      <p className="text-note text-muted" data-testid="aspect-note">
+                        {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
+                      </p>
+                      {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
                     </div>
                   )}
                   {!isMain && selected && (
