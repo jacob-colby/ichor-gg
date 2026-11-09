@@ -319863,6 +319863,866 @@
       "priority": 1
     }
   ],
+  "enemy_aspects": {
+    "Achilles": {
+      "Aspect of Prowess": {
+        "matches": 211,
+        "kind": "physical",
+        "physical": 0.84,
+        "magical": 0.0,
+        "tank": 0.16,
+        "role": "Jungle",
+        "role_share": 0.93
+      }
+    },
+    "Agni": {
+      "Aspect of Combustion": {
+        "matches": 232,
+        "kind": "physical",
+        "physical": 0.94,
+        "magical": 0.02,
+        "tank": 0.03,
+        "role": "Carry",
+        "role_share": 0.76
+      }
+    },
+    "Ah Puch": {
+      "Aspect of the Death March": {
+        "matches": 335,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.19,
+        "tank": 0.81,
+        "role": "Solo",
+        "role_share": 0.79
+      }
+    },
+    "Amaterasu": {
+      "Aspect Of Valor": {
+        "matches": 69,
+        "kind": "physical",
+        "physical": 0.81,
+        "magical": 0.0,
+        "tank": 0.19,
+        "role": "Jungle",
+        "role_share": 0.59
+      }
+    },
+    "Anhur": {
+      "Aspect of Pride": {
+        "matches": 494,
+        "kind": "physical",
+        "physical": 1.0,
+        "magical": 0.0,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.91
+      }
+    },
+    "Aphrodite": {
+      "Aspect of Heartbreak": {
+        "matches": 1258,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.95,
+        "tank": 0.05,
+        "role": "Mid",
+        "role_share": 0.82
+      }
+    },
+    "Apollo": {
+      "Aspect of Harmony": {
+        "matches": 89,
+        "kind": "mixed",
+        "physical": 0.54,
+        "magical": 0.0,
+        "tank": 0.46,
+        "role": "Support",
+        "role_share": 0.52
+      }
+    },
+    "Ares": {
+      "Aspect of Reverberation": {
+        "matches": 768,
+        "kind": "tank",
+        "physical": 0.12,
+        "magical": 0.04,
+        "tank": 0.84,
+        "role": "Support",
+        "role_share": 0.42
+      }
+    },
+    "Artemis": {
+      "Aspect of the Wild": {
+        "matches": 296,
+        "kind": "physical",
+        "physical": 0.96,
+        "magical": 0.0,
+        "tank": 0.04,
+        "role": "Carry",
+        "role_share": 0.69
+      }
+    },
+    "Artio": {
+      "Aspect of the Denmother": {
+        "matches": 772,
+        "kind": "tank",
+        "physical": 0.2,
+        "magical": 0.15,
+        "tank": 0.64,
+        "role": "Support",
+        "role_share": 0.45
+      }
+    },
+    "Athena": {
+      "Aspect of War": {
+        "matches": 838,
+        "kind": "mixed",
+        "physical": 0.52,
+        "magical": 0.21,
+        "tank": 0.26,
+        "role": "Jungle",
+        "role_share": 0.71
+      }
+    },
+    "Atlas": {
+      "Aspect of the Unburdened": {
+        "matches": 92,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.73,
+        "tank": 0.27,
+        "role": "Mid",
+        "role_share": 0.71
+      }
+    },
+    "Bacchus": {
+      "Aspect of Revelry": {
+        "matches": 1787,
+        "kind": "mixed",
+        "physical": 0.53,
+        "magical": 0.0,
+        "tank": 0.47,
+        "role": "Solo",
+        "role_share": 0.76
+      }
+    },
+    "Baron Samedi": {
+      "Aspect of Hysteria": {
+        "matches": 842,
+        "kind": "mixed",
+        "physical": 0.0,
+        "magical": 0.43,
+        "tank": 0.57,
+        "role": "Support",
+        "role_share": 0.4
+      }
+    },
+    "Bastet": {
+      "Aspect of the Watchful Pride": {
+        "matches": 282,
+        "kind": "tank",
+        "physical": 0.02,
+        "magical": 0.0,
+        "tank": 0.98,
+        "role": "Support",
+        "role_share": 0.89
+      }
+    },
+    "Bellona": {
+      "Aspect of Vindication": {
+        "matches": 202,
+        "kind": "physical",
+        "physical": 0.83,
+        "magical": 0.0,
+        "tank": 0.17,
+        "role": "Solo",
+        "role_share": 0.85
+      }
+    },
+    "Cabrakan": {
+      "Aspect of the Rotund Jotunn": {
+        "matches": 155,
+        "kind": "magical",
+        "physical": 0.26,
+        "magical": 0.66,
+        "tank": 0.06,
+        "role": "Mid",
+        "role_share": 0.48
+      }
+    },
+    "Cerberus": {
+      "Aspect of Souls": {
+        "matches": 85,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.13,
+        "tank": 0.87,
+        "role": "Solo",
+        "role_share": 0.76
+      }
+    },
+    "Cernunnos": {
+      "Aspect of Strife": {
+        "matches": 1991,
+        "kind": "physical",
+        "physical": 0.98,
+        "magical": 0.0,
+        "tank": 0.02,
+        "role": "Jungle",
+        "role_share": 0.53
+      }
+    },
+    "Chaac": {
+      "Aspect of Fulmination": {
+        "matches": 218,
+        "kind": "tank",
+        "physical": 0.25,
+        "magical": 0.06,
+        "tank": 0.67,
+        "role": "Solo",
+        "role_share": 0.85
+      }
+    },
+    "Charon": {
+      "Aspect of the Tollkeeper": {
+        "matches": 305,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.88,
+        "tank": 0.11,
+        "role": "Mid",
+        "role_share": 0.63
+      }
+    },
+    "Chiron": {
+      "Aspect of the Heroic Tutor": {
+        "matches": 142,
+        "kind": "physical",
+        "physical": 0.75,
+        "magical": 0.01,
+        "tank": 0.21,
+        "role": "Carry",
+        "role_share": 0.6
+      }
+    },
+    "Chronos": {
+      "Aspect of Relativity": {
+        "matches": 145,
+        "kind": "tank",
+        "physical": 0.02,
+        "magical": 0.05,
+        "tank": 0.93,
+        "role": "Support",
+        "role_share": 0.91
+      }
+    },
+    "Cu Chulainn": {
+      "Aspect of the Warped": {
+        "matches": 294,
+        "kind": "mixed",
+        "physical": 0.56,
+        "magical": 0.0,
+        "tank": 0.44,
+        "role": "Solo",
+        "role_share": 0.85
+      }
+    },
+    "Cupid": {
+      "Aspect of Love": {
+        "matches": 52,
+        "kind": "physical",
+        "physical": 0.83,
+        "magical": 0.08,
+        "tank": 0.1,
+        "role": "Solo",
+        "role_share": 0.5
+      }
+    },
+    "Da Ji": {
+      "Aspect of Ferocity": {
+        "matches": 38,
+        "kind": "physical",
+        "physical": 0.97,
+        "magical": 0.0,
+        "tank": 0.03,
+        "role": "Jungle",
+        "role_share": 0.61
+      }
+    },
+    "Danzaburou": {
+      "Aspect of Fellowship": {
+        "matches": 90,
+        "kind": "mixed",
+        "physical": 0.42,
+        "magical": 0.47,
+        "tank": 0.01,
+        "role": "Carry",
+        "role_share": 0.62
+      }
+    },
+    "Discordia": {
+      "Aspect of the Gilded Victor": {
+        "matches": 163,
+        "kind": "physical",
+        "physical": 0.88,
+        "magical": 0.11,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.79
+      }
+    },
+    "Eset": {
+      "Aspect of the Lifewarden": {
+        "matches": 274,
+        "kind": "tank",
+        "physical": 0.01,
+        "magical": 0.03,
+        "tank": 0.96,
+        "role": "Support",
+        "role_share": 0.76
+      }
+    },
+    "Fenrir": {
+      "Aspect of Loyalty": {
+        "matches": 151,
+        "kind": "tank",
+        "physical": 0.23,
+        "magical": 0.0,
+        "tank": 0.77,
+        "role": "Support",
+        "role_share": 0.62
+      }
+    },
+    "Ganesha": {
+      "Aspect of the Triumphant": {
+        "matches": 197,
+        "kind": "mixed",
+        "physical": 0.01,
+        "magical": 0.55,
+        "tank": 0.44,
+        "role": "Support",
+        "role_share": 0.55
+      }
+    },
+    "Gilgamesh": {
+      "Aspect of Shamash": {
+        "matches": 1002,
+        "kind": "physical",
+        "physical": 0.86,
+        "magical": 0.0,
+        "tank": 0.14,
+        "role": "Jungle",
+        "role_share": 0.59
+      }
+    },
+    "Guan Yu": {
+      "Aspect of the General": {
+        "matches": 238,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.11,
+        "tank": 0.88,
+        "role": "Support",
+        "role_share": 0.73
+      }
+    },
+    "Hachiman": {
+      "Aspect of the Steel Wind": {
+        "matches": 469,
+        "kind": "physical",
+        "physical": 0.96,
+        "magical": 0.0,
+        "tank": 0.04,
+        "role": "Jungle",
+        "role_share": 0.51
+      }
+    },
+    "Hecate": {
+      "Aspect of Ruin": {
+        "matches": 121,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.8,
+        "tank": 0.2,
+        "role": "Mid",
+        "role_share": 0.74
+      }
+    },
+    "Hel": {
+      "Aspect of Divergence": {
+        "matches": 2165,
+        "kind": "magical",
+        "physical": 0.03,
+        "magical": 0.71,
+        "tank": 0.26,
+        "role": "Mid",
+        "role_share": 0.58
+      }
+    },
+    "Horus": {
+      "Aspect of the Falcon": {
+        "matches": 36,
+        "kind": "mixed",
+        "physical": 0.53,
+        "magical": 0.0,
+        "tank": 0.47,
+        "role": "Solo",
+        "role_share": 0.47
+      }
+    },
+    "Hou Yi": {
+      "Aspect of the Mark": {
+        "matches": 808,
+        "kind": "physical",
+        "physical": 1.0,
+        "magical": 0.0,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.97
+      }
+    },
+    "Hun Batz": {
+      "Aspect of Disruption": {
+        "matches": 150,
+        "kind": "physical",
+        "physical": 0.78,
+        "magical": 0.0,
+        "tank": 0.22,
+        "role": "Jungle",
+        "role_share": 0.77
+      }
+    },
+    "Ishtar": {
+      "Aspect of the Passionate Storm": {
+        "matches": 808,
+        "kind": "physical",
+        "physical": 1.0,
+        "magical": 0.0,
+        "tank": 0.0,
+        "role": "Jungle",
+        "role_share": 0.45
+      }
+    },
+    "Ix Chel": {
+      "Aspect of the Mother's Light": {
+        "matches": 156,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.33,
+        "tank": 0.67,
+        "role": "Support",
+        "role_share": 0.97
+      }
+    },
+    "Izanami": {
+      "Aspect of the Sickle": {
+        "matches": 543,
+        "kind": "magical",
+        "physical": 0.04,
+        "magical": 0.95,
+        "tank": 0.01,
+        "role": "Mid",
+        "role_share": 0.7
+      }
+    },
+    "Jormungandr": {
+      "Aspect of the Unyielding": {
+        "matches": 191,
+        "kind": "tank",
+        "physical": 0.38,
+        "magical": 0.0,
+        "tank": 0.62,
+        "role": "Solo",
+        "role_share": 0.65
+      }
+    },
+    "Kali": {
+      "Aspect of Unbound Destruction": {
+        "matches": 400,
+        "kind": "physical",
+        "physical": 1.0,
+        "magical": 0.0,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.8
+      }
+    },
+    "Khepri": {
+      "Aspect of Laceration": {
+        "matches": 714,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.28,
+        "tank": 0.72,
+        "role": "Support",
+        "role_share": 0.75
+      }
+    },
+    "Kukulkan": {
+      "Aspect of the Squall": {
+        "matches": 470,
+        "kind": "mixed",
+        "physical": 0.0,
+        "magical": 0.52,
+        "tank": 0.48,
+        "role": "Solo",
+        "role_share": 0.68
+      }
+    },
+    "Kuzenbo": {
+      "Aspect of Spirits": {
+        "matches": 347,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.18,
+        "tank": 0.82,
+        "role": "Solo",
+        "role_share": 0.67
+      }
+    },
+    "Loki": {
+      "Aspect of Agony": {
+        "matches": 712,
+        "kind": "tank",
+        "physical": 0.08,
+        "magical": 0.0,
+        "tank": 0.92,
+        "role": "Solo",
+        "role_share": 0.8
+      }
+    },
+    "Merlin": {
+      "Aspect of Pandemonium": {
+        "matches": 165,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.99,
+        "tank": 0.01,
+        "role": "Mid",
+        "role_share": 0.9
+      }
+    },
+    "Mordred": {
+      "Aspect of Rage": {
+        "matches": 127,
+        "kind": "mixed",
+        "physical": 0.35,
+        "magical": 0.1,
+        "tank": 0.51,
+        "role": "Solo",
+        "role_share": 0.61
+      }
+    },
+    "Morgan Le Fay": {
+      "Aspect of the Cursed Crown": {
+        "matches": 526,
+        "kind": "tank",
+        "physical": 0.01,
+        "magical": 0.23,
+        "tank": 0.76,
+        "role": "Solo",
+        "role_share": 0.77
+      }
+    },
+    "Ne Zha": {
+      "Aspect of Righteous Flame": {
+        "matches": 503,
+        "kind": "tank",
+        "physical": 0.12,
+        "magical": 0.0,
+        "tank": 0.88,
+        "role": "Support",
+        "role_share": 0.56
+      }
+    },
+    "Neith": {
+      "Aspect of Wind": {
+        "matches": 542,
+        "kind": "physical",
+        "physical": 0.99,
+        "magical": 0.01,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.94
+      }
+    },
+    "Nemesis": {
+      "Aspect of Justice": {
+        "matches": 372,
+        "kind": "mixed",
+        "physical": 0.58,
+        "magical": 0.0,
+        "tank": 0.42,
+        "role": "Solo",
+        "role_share": 0.81
+      }
+    },
+    "Nike": {
+      "Aspect of Victorious Conquest": {
+        "matches": 1716,
+        "kind": "physical",
+        "physical": 0.94,
+        "magical": 0.0,
+        "tank": 0.06,
+        "role": "Jungle",
+        "role_share": 0.41
+      }
+    },
+    "Nox": {
+      "Aspect of Silent Night": {
+        "matches": 126,
+        "kind": "tank",
+        "physical": 0.02,
+        "magical": 0.0,
+        "tank": 0.98,
+        "role": "Support",
+        "role_share": 0.98
+      }
+    },
+    "Nu Wa": {
+      "Aspect of Shining Mist": {
+        "matches": 112,
+        "kind": "physical",
+        "physical": 0.97,
+        "magical": 0.03,
+        "tank": 0.0,
+        "role": "Carry",
+        "role_share": 0.46
+      }
+    },
+    "Nut": {
+      "Aspect of the Cosmos": {
+        "matches": 125,
+        "kind": "mixed",
+        "physical": 0.38,
+        "magical": 0.1,
+        "tank": 0.53,
+        "role": "Support",
+        "role_share": 0.58
+      }
+    },
+    "Osiris": {
+      "Aspect of the Fragmented": {
+        "matches": 178,
+        "kind": "mixed",
+        "physical": 0.0,
+        "magical": 0.51,
+        "tank": 0.49,
+        "role": "Solo",
+        "role_share": 0.66
+      }
+    },
+    "Pele": {
+      "Aspect of Obsidian": {
+        "matches": 227,
+        "kind": "tank",
+        "physical": 0.18,
+        "magical": 0.0,
+        "tank": 0.82,
+        "role": "Solo",
+        "role_share": 0.9
+      }
+    },
+    "Poseidon": {
+      "Aspect of the Trident": {
+        "matches": 216,
+        "kind": "physical",
+        "physical": 0.85,
+        "magical": 0.13,
+        "tank": 0.01,
+        "role": "Carry",
+        "role_share": 0.49
+      }
+    },
+    "Ra": {
+      "Aspect of Thermotherapy": {
+        "matches": 172,
+        "kind": "mixed",
+        "physical": 0.0,
+        "magical": 0.41,
+        "tank": 0.59,
+        "role": "Support",
+        "role_share": 0.83
+      }
+    },
+    "Ratatoskr": {
+      "Aspect of the Thickbark": {
+        "matches": 973,
+        "kind": "physical",
+        "physical": 0.78,
+        "magical": 0.0,
+        "tank": 0.22,
+        "role": "Solo",
+        "role_share": 0.65
+      }
+    },
+    "Ravana": {
+      "Aspect of the Rakshasa King": {
+        "matches": 93,
+        "kind": "mixed",
+        "physical": 0.39,
+        "magical": 0.02,
+        "tank": 0.59,
+        "role": "Solo",
+        "role_share": 0.59
+      }
+    },
+    "Scylla": {
+      "Aspect of the Devourer": {
+        "matches": 401,
+        "kind": "tank",
+        "physical": 0.03,
+        "magical": 0.09,
+        "tank": 0.88,
+        "role": "Support",
+        "role_share": 0.6
+      }
+    },
+    "Sobek": {
+      "Aspect of Prey": {
+        "matches": 95,
+        "kind": "tank",
+        "physical": 0.14,
+        "magical": 0.2,
+        "tank": 0.65,
+        "role": "Solo",
+        "role_share": 0.61
+      }
+    },
+    "Sol": {
+      "Aspect of Conflagration": {
+        "matches": 688,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.99,
+        "tank": 0.01,
+        "role": "Mid",
+        "role_share": 0.81
+      }
+    },
+    "Sun Wukong": {
+      "Aspect of Transformation": {
+        "matches": 233,
+        "kind": "mixed",
+        "physical": 0.08,
+        "magical": 0.42,
+        "tank": 0.51,
+        "role": "Solo",
+        "role_share": 0.69
+      }
+    },
+    "Susano": {
+      "Aspect of the Storm Front": {
+        "matches": 675,
+        "kind": "tank",
+        "physical": 0.02,
+        "magical": 0.0,
+        "tank": 0.98,
+        "role": "Support",
+        "role_share": 0.92
+      }
+    },
+    "Sylvanus": {
+      "Aspect of Grover's Wrath": {
+        "matches": 536,
+        "kind": "physical",
+        "physical": 0.91,
+        "magical": 0.01,
+        "tank": 0.08,
+        "role": "Solo",
+        "role_share": 0.85
+      }
+    },
+    "Thanatos": {
+      "Aspect of Reaping": {
+        "matches": 957,
+        "kind": "physical",
+        "physical": 0.68,
+        "magical": 0.0,
+        "tank": 0.32,
+        "role": "Jungle",
+        "role_share": 0.65
+      }
+    },
+    "The Morrigan": {
+      "Aspect of Mischief": {
+        "matches": 340,
+        "kind": "mixed",
+        "physical": 0.25,
+        "magical": 0.53,
+        "tank": 0.22,
+        "role": "Solo",
+        "role_share": 0.43
+      }
+    },
+    "Thor": {
+      "Aspect of Thunderstruck": {
+        "matches": 2535,
+        "kind": "tank",
+        "physical": 0.32,
+        "magical": 0.0,
+        "tank": 0.68,
+        "role": "Solo",
+        "role_share": 0.58
+      }
+    },
+    "Tsukuyomi": {
+      "Aspect of Mangetsu": {
+        "matches": 74,
+        "kind": "magical",
+        "physical": 0.08,
+        "magical": 0.86,
+        "tank": 0.03,
+        "role": "Mid",
+        "role_share": 0.57
+      }
+    },
+    "Vulcan": {
+      "Aspect of Fortification": {
+        "matches": 257,
+        "kind": "mixed",
+        "physical": 0.0,
+        "magical": 0.51,
+        "tank": 0.49,
+        "role": "Solo",
+        "role_share": 0.6
+      }
+    },
+    "Xbalanque": {
+      "Aspect of the Nightstalker": {
+        "matches": 210,
+        "kind": "magical",
+        "physical": 0.02,
+        "magical": 0.97,
+        "tank": 0.01,
+        "role": "Mid",
+        "role_share": 0.4
+      }
+    },
+    "Xing Tian": {
+      "Aspect of Relentless Spite": {
+        "matches": 478,
+        "kind": "tank",
+        "physical": 0.0,
+        "magical": 0.15,
+        "tank": 0.85,
+        "role": "Solo",
+        "role_share": 0.78
+      }
+    },
+    "Yemoja": {
+      "Aspect of Downpour": {
+        "matches": 214,
+        "kind": "magical",
+        "physical": 0.0,
+        "magical": 0.95,
+        "tank": 0.05,
+        "role": "Mid",
+        "role_share": 0.8
+      }
+    }
+  },
   "roster": [
     {
       "name": "Achilles",

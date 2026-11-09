@@ -349,3 +349,32 @@ describe("useDraft — shared links arriving without a remount", () => {
     expect(result.current.draft.allies[0]).toBe("");
   });
 });
+
+describe("enemy aspect switches in the link", () => {
+  const draft = { allies: ["Ra", "", "", "", ""], enemies: ["Tsukuyomi", "Ares", "", "", ""] };
+
+  it("round-trips by god name and omits the param when none are on", () => {
+    expect(encodeDraftHash("conquest", draft)).not.toContain("ea=");
+    const hash = encodeDraftHash("conquest", { ...draft, enemyAspects: ["Tsukuyomi"] });
+    expect(hash).toContain("ea=Tsukuyomi");
+    expect(decodeDraftHash(hash)?.enemyAspects).toEqual(["Tsukuyomi"]);
+  });
+
+  it("drops a switch for a god who is not on the enemy row", () => {
+    expect(decodeDraftHash("#/draft?m=conquest&e=Ares&ea=Tsukuyomi")?.enemyAspects ?? []).toEqual([]);
+  });
+
+  it("a switch goes with its god: replacing or removing the god takes it away", () => {
+    window.history.replaceState(null, "", "/#/draft?m=conquest&me=Ra&e=Tsukuyomi,Ares&ea=Tsukuyomi");
+    const { result } = renderHook(() => useDraft({ syncUrl: true }));
+    expect(result.current.draft.enemyAspects).toEqual(["Tsukuyomi"]);
+    act(() => result.current.setEnemy(0, "Ares2"));
+    expect(result.current.draft.enemyAspects).toEqual([]);
+    act(() => result.current.setEnemy(0, "Tsukuyomi"));
+    expect(result.current.draft.enemyAspects).toEqual([]); // not resurrected
+    act(() => result.current.setEnemyAspect("Tsukuyomi", true));
+    expect(result.current.draft.enemyAspects).toEqual(["Tsukuyomi"]);
+    act(() => result.current.setEnemyAspect("Tsukuyomi", false));
+    expect(result.current.draft.enemyAspects).toEqual([]);
+  });
+});

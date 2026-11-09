@@ -139,3 +139,41 @@ describe("DraftBoard — the board", () => {
     expect(screen.getByRole("status")).toHaveTextContent("Nobody has no scored build here");
   });
 });
+
+describe("DraftBoard — an enemy's aspect", () => {
+  const SHAPER = god("Shaper", { damage_type: "physical", aspects: [{ name: "Aspect of Dusk" }] as never });
+  const TABLE = { Shaper: { "Aspect of Dusk": { matches: 74, kind: "magical", physical: 0.08, magical: 0.86, tank: 0.03, role: "Mid", role_share: 0.57 } } } as never;
+  const withShaper = () => (
+    <DraftBoard gods={[...GODS, SHAPER]} items={ITEMS} builds={BUILDS}
+      godItemScores={{ ...GOD_ITEM_SCORES, Shaper: perMode({ Alpha: 0.4 }) }} draftConfig={CFG} enemyAspects={TABLE} />
+  );
+
+  it("offers a switch only for an enemy who has a measured aspect, and says what it did", () => {
+    atUrl("#/draft?m=conquest&me=TestGod&e=Shaper,EnemyHealer");
+    render(withShaper());
+    const rows = within(screen.getByTestId("enemy-aspects"));
+    const sw = rows.getByRole("switch");
+    expect(sw).toHaveAttribute("aria-checked", "false");
+    expect(screen.queryByTestId("enemy-aspect-note")).toBeNull();
+    fireEvent.click(sw);
+    expect(sw).toHaveAttribute("aria-checked", "true");
+    expect(screen.getByTestId("enemy-aspect-note")).toHaveTextContent(/builds magical in 86% of 74 Obsidian\+ games, usually Mid\. Counted as magical, not physical/);
+    expect(window.location.hash).toContain("ea=Shaper");
+  });
+
+  it("moves the threat count: a physical god becomes a magical threat", () => {
+    atUrl("#/draft?m=conquest&me=TestGod&e=Shaper");
+    render(withShaper());
+    expect(screen.getByTestId("threat-physical")).toHaveTextContent(/^1 of 5Physical damage — Shaper/);
+    expect(screen.getByTestId("threat-magical")).toHaveTextContent(/^0 of 5/);
+    fireEvent.click(within(screen.getByTestId("enemy-aspects")).getByRole("switch"));
+    expect(screen.getByTestId("threat-physical")).toHaveTextContent(/^0 of 5/);
+    expect(screen.getByTestId("threat-magical")).toHaveTextContent(/^1 of 5Magical damage — Shaper/);
+  });
+
+  it("shows no switch for an enemy without a measured aspect", () => {
+    atUrl("#/draft?m=conquest&me=TestGod&e=EnemyHealer");
+    render(withShaper());
+    expect(screen.queryByTestId("enemy-aspects")).toBeNull();
+  });
+});

@@ -313,7 +313,24 @@ export interface PatchPeriod {
 export interface DraftComp {
   allies: string[];
   enemies: string[];
+  /** Names of enemies whose aspect the reader switched on. By god name, not
+   *  slot, so reordering the row never moves a switch to another god. */
+  enemyAspects?: string[];
 }
+
+/** What players of one aspect build, pooled over patches
+ *  (`pipeline/smite/enemy_aspects.py`). `kind` is the class holding at least
+ *  60% of the matches; `mixed` means no class did and nothing is overridden. */
+export interface EnemyAspect {
+  matches: number;
+  kind: "physical" | "magical" | "tank" | "mixed";
+  physical: number;
+  magical: number;
+  tank: number;
+  role: string;
+  role_share: number;
+}
+export type EnemyAspects = Record<string, Record<string, EnemyAspect>>;
 
 export interface ThreatModel {
   magical: number;
@@ -458,4 +475,6 @@ export interface IndexData {
    *  record. Absent on an older index; the most-picked list then marks
    *  nothing rather than guessing. */
   community_transfer?: Record<string, CommunityTransfer>;
+  /** God -> aspect -> what that aspect's players build. Absent on an older index. */
+  enemy_aspects?: EnemyAspects;
 }

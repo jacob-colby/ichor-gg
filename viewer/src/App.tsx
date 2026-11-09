@@ -240,7 +240,8 @@ function App() {
         ) : route.lens === "draft" ? (
           <DraftBoard gods={data.gods} items={data.items} builds={data.builds}
               godItemScores={data.god_item_scores} draftConfig={data.draft}
-              godItemDamage={data.god_item_damage} initialArchetype={MAIN_ARCHETYPE} />
+              godItemDamage={data.god_item_damage} enemyAspects={data.enemy_aspects}
+              initialArchetype={MAIN_ARCHETYPE} />
         ) : route.lens === "items" ? (
           <ItemsPage items={data.items} openItem={route.item}
               tierItems={(data.tierlist?.conquest ?? data.tierlist)?.items ?? []} goldValues={data.item_gold_values ?? {}} />

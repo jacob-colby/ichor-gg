@@ -1,4 +1,4 @@
-import type { God, DraftComp, ThreatModel, DraftConfig } from "../types";
+import type { God, DraftComp, ThreatModel, DraftConfig, EnemyAspects } from "../types";
 import type { Overlay } from "./draftBuild";
 
 const HEAL = ["Healing", "Sustain"];
@@ -36,14 +36,43 @@ const locksDown = (g: God | undefined) =>
   hasSpec(g, LOCK) || (g?.threat_kit?.hard_cc ?? 0) >= CC_ABILITIES;
 const makesWalls = (g: God | undefined) => (g?.threat_kit?.wall ?? 0) > 0;
 
+/** The enemies as the reader says they are playing them.
+ *
+ *  An enemy whose aspect is switched on, and whose aspect players decisively
+ *  build one way, is counted that way: `physical` / `magical` replaces the
+ *  god's own damage type (Tsukuyomi's Aspect of Mangetsu is a magical Mid
+ *  build on a physical god), and `tank` adds the Tank label, keeping the damage
+ *  type — a tank build still deals its kit's damage. `mixed`, an aspect with
+ *  no entry, and every enemy whose switch is off are returned untouched, so a
+ *  board with no switches on is exactly what it was. Allies are never changed.
+ *
+ *  Returns only the patched enemies, keyed by god name. */
+export function enemyAspectGods(
+  comp: DraftComp, godsByName: Record<string, God>, table: EnemyAspects | undefined,
+): Record<string, God> {
+  const out: Record<string, God> = {};
+  for (const name of comp.enemyAspects ?? []) {
+    const g = godsByName[name];
+    const e = g && comp.enemies.includes(name) ? table?.[name]?.[g.aspects?.[0]?.name ?? ""] : undefined;
+    if (!g || !e) continue;
+    if (e.kind === "physical" || e.kind === "magical") out[name] = { ...g, damage_type: e.kind };
+    else if (e.kind === "tank") {
+      const specs = g.specializations ?? [];
+      out[name] = specs.includes("Tank") ? g : { ...g, specializations: [...specs, "Tank"] };
+    }
+  }
+  return out;
+}
+
 /** Comps -> a graded threat model. `allyCores` maps an ally god name to the
  *  effect_tags its own suggested core brings (what that teammate likely covers). */
 export function deriveThreats(
   comp: DraftComp,
   godsByName: Record<string, God>,
   allyCores: Record<string, string[]>,
+  enemyOverrides: Record<string, God> = {},
 ): ThreatModel {
-  const enemies = comp.enemies.map((n) => godsByName[n]).filter(Boolean);
+  const enemies = comp.enemies.map((n) => enemyOverrides[n] ?? godsByName[n]).filter(Boolean);
   const allies = comp.allies.map((n) => godsByName[n]).filter(Boolean);
   // TEAMMATES only. Slot 0 is you — the build being adapted — and counting
   // its own core as "an ally covers this" damped every threat your own core
@@ -83,8 +112,9 @@ export type ThreatKey = "magical" | "physical" | "healers" | "lockdown" | "crit"
 export function threatCulprits(
   comp: DraftComp,
   godsByName: Record<string, God>,
+  enemyOverrides: Record<string, God> = {},
 ): Record<ThreatKey, string[]> {
-  const enemies = comp.enemies.map((n) => godsByName[n]).filter(Boolean);
+  const enemies = comp.enemies.map((n) => enemyOverrides[n] ?? godsByName[n]).filter(Boolean);
   const named = (pred: (g: God) => boolean) => enemies.filter(pred).map((g) => g.name);
   return {
     magical: named((g) => g.damage_type === "magical"),

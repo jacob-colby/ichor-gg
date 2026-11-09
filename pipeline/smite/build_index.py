@@ -8,7 +8,7 @@ from pathlib import Path
 
 import yaml
 
-from smite import (abilities, damage_value, efficiency, notes, recommend, threat_kit,
+from smite import (abilities, damage_value, efficiency, enemy_aspects, notes, recommend, threat_kit,
                    scoring, snapshots, tierlist)
 
 
@@ -638,6 +638,10 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
              # items in Conquest's most-picked list that the Hybrid refuses.
              "community_transfer": community_transfer(weights),
              "starters": weights.get("starters", []),
+             # What an enemy playing an aspect builds, for the draft's
+             # per-enemy aspect switch. Data, never a weight: see the module.
+             "enemy_aspects": enemy_aspects.build(
+                 gods, items, data_root / "Analysis" / "aspect_matches"),
              "roster": _load_roster(data_root),
              "data_updated": _data_updated(gods, builds),
              "tierlist": tierlist.build_tierlist(gods, builds, items, eff),

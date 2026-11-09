@@ -24,7 +24,7 @@
  *    the board, and the board's state is the link (`#/draft?m=…&me=…&e=…`).
  */
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import type { BuildNote, CommunityBuildEntry, DraftConfig, God, Item } from "../../types";
+import type { BuildNote, CommunityBuildEntry, DraftConfig, EnemyAspects, God, Item } from "../../types";
 import { useDraft, MODE_TEAM_SIZE, encodeDraftHash } from "../../lib/draft";
 import { useDraftResult } from "../../lib/useDraftResult";
 import { threatAnswer } from "../../lib/threats";
@@ -86,6 +86,20 @@ function TeamRow({ title, side, slots, onOpen, meta }: {
   );
 }
 
+/** One line on what switching an enemy's aspect on does to the count. Says what
+ *  was measured and how many games it rests on, and says plainly when nothing
+ *  will change. */
+export function enemyAspectLine(god: God, aspect: string, e: EnemyAspects[string][string]): string {
+  const games = `${e.matches} Obsidian+ games`;
+  const who = `${god.name} with ${aspect.replace(/^Aspect of /i, "")}`;
+  if (e.kind === "mixed") return `Players split on how to build it (${games}), so ${god.name} is counted as usual.`;
+  const pct = Math.round(e[e.kind] * 100);
+  if (e.kind === "tank") return `${who} is a tank build in ${pct}% of ${games}, usually ${e.role}. Counted as a tank.`;
+  const same = god.damage_type === e.kind;
+  return `${who} builds ${e.kind} in ${pct}% of ${games}, usually ${e.role}. ${
+    same ? "That is how it is already counted." : `Counted as ${e.kind}, not ${god.damage_type}.`}`;
+}
+
 interface DraftBoardProps {
   gods: God[];
   items: Item[];
@@ -93,21 +107,23 @@ interface DraftBoardProps {
   godItemScores?: Record<string, Record<string, Record<string, number>>>;
   godItemDamage?: Record<string, Record<string, [number, number]>>;
   draftConfig?: DraftConfig;
+  /** What each aspect's players build, for the per-enemy aspect switch. */
+  enemyAspects?: EnemyAspects;
   /** The build the board adapts — the god page's own six. */
   initialArchetype?: string;
 }
 
-export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, draftConfig, initialArchetype = MAIN_ARCHETYPE }: DraftBoardProps) {
+export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, draftConfig, enemyAspects, initialArchetype = MAIN_ARCHETYPE }: DraftBoardProps) {
   const wide = useWide();
   const eligible = useMemo(() => (godItemScores ? gods.filter((g) => godItemScores[g.name]) : []), [gods, godItemScores]);
   const isKnownGod = useMemo(() => {
     const names = new Set(eligible.map((g) => g.name));
     return (n: string) => names.has(n);
   }, [eligible]);
-  const { draft, mode, setMode, setAlly, setEnemy, clear, dropped, dismissDropped } = useDraft({ syncUrl: true, isKnownGod });
+  const { draft, mode, setMode, setAlly, setEnemy, setEnemyAspect, clear, dropped, dismissDropped } = useDraft({ syncUrl: true, isKnownGod });
 
   const [aspectOn, setAspectOn] = useState(false);
-  const r = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage, aspectOn, initialArchetype);
+  const r = useDraftResult(draft, mode, gods, items, builds, godItemScores, draftConfig, godItemDamage, aspectOn, initialArchetype, enemyAspects);
   const me = r.meName;
   useEffect(() => { setAspectOn(false); }, [me]);
   const meAspect = r.meGod?.aspects?.[0]?.name;
@@ -118,11 +134,20 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
   const copyLink = () => {
     if (!navigator.clipboard?.writeText) return;
     // Encoded from state, not read off the address bar — those could disagree.
-    const hash = encodeDraftHash(mode, { allies: draft.allies, enemies: draft.enemies });
+    const hash = encodeDraftHash(mode, draft);
     navigator.clipboard.writeText(window.location.origin + window.location.pathname + window.location.search + hash)
       .then(() => { setCopied(true); window.setTimeout(() => setCopied(false), 1500); })
       .catch(() => { /* permission denied: the button stays as it was */ });
   };
+
+  const godByName = useMemo(() => new Map(gods.map((g) => [g.name, g])), [gods]);
+  /** Enemies on the board who have an aspect with a measured build. */
+  const aspectEnemies = draft.enemies.flatMap((n) => {
+    const god = n ? godByName.get(n) : undefined;
+    const aspect = god?.aspects?.[0]?.name;
+    const entry = aspect ? enemyAspects?.[n]?.[aspect] : undefined;
+    return god && aspect && entry ? [{ god, aspect, entry }] : [];
+  });
 
   const roster = r.roster;
   const known = r.enemiesKnown;
@@ -203,6 +228,20 @@ export function DraftBoard({ gods, items, builds, godItemScores, godItemDamage, 
       <TeamRow title="Enemy" side="enemy" slots={draft.enemies} onOpen={(i) => setSheet({ side: "enemy", index: i })}
         meta={<span className="num text-cap text-muted" data-testid="enemies-known">{known} of {roster} enemies known</span>} />
       {me && known > 0 && <p className="-mt-3 text-cap text-quiet" data-testid="unknown-line">{unknownLine}.</p>}
+      {aspectEnemies.length > 0 && (
+        <div className="-mt-2 space-y-3" data-testid="enemy-aspects">
+          {aspectEnemies.map(({ god, aspect, entry }) => (
+            <div key={god.name}>
+              <p className="mb-1 px-1 text-cap text-quiet">Enemy {god.name}</p>
+              <AspectToggle aspect={aspect} on={(draft.enemyAspects ?? []).includes(god.name)}
+                changesBuild onChange={(on) => setEnemyAspect(god.name, on)} />
+              {(draft.enemyAspects ?? []).includes(god.name) && (
+                <p className="mt-1.5 text-note text-muted" data-testid="enemy-aspect-note">{enemyAspectLine(god, aspect, entry)}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="-mt-1 flex items-center gap-2">
         <button type="button" onClick={copyLink}

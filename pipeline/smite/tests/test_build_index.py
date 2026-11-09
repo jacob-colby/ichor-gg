@@ -81,6 +81,8 @@ def test_build_index_empty_folders_return_empty_lists(tmp_path):
                      # No _weights.yaml, so no mode borrows another's
                      # community record and nothing is marked.
                      "community_transfer": {},
+                     # What an enemy playing an aspect builds; none without a store.
+                     "enemy_aspects": {},
                      # The method page reads the model's weights from here so
                      # it can't describe a blend the pipeline stopped using.
                      # A vault with no _weights.yaml still gets the built-in

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { deriveThreats, threatOverlay, damageOverlay, threatAnswer } from "./threats";
+import { deriveThreats, enemyAspectGods, threatCulprits, threatOverlay, damageOverlay, threatAnswer } from "./threats";
 import type { God, DraftConfig, ThreatModel } from "../types";
 
 const god = (name: string, damage_type: string, specs: string[] = []): God =>
@@ -348,5 +348,46 @@ describe("threatAnswer", () => {
 
   it("ignores a core name the item table doesn't have", () => {
     expect(threatAnswer("healers", ["Nonexistent"], items, cfg)).toEqual({ kind: "weighed" });
+  });
+});
+
+describe("enemyAspectGods — an enemy played as the reader says", () => {
+  const withAspect = (name: string, dmg: string, aspect: string, specs: string[] = []): God =>
+    ({ ...god(name, dmg, specs), aspects: [{ name: aspect }] } as unknown as God);
+  const tsu = withAspect("Tsukuyomi", "physical", "Aspect of Mangetsu");
+  const ares = withAspect("Ares", "magical", "Aspect of Fury");
+  const by = { Tsukuyomi: tsu, Ares: ares, Ra: god("Ra", "magical") };
+  const entry = (kind: string) => ({ matches: 74, kind, physical: 0, magical: 0, tank: 0, role: "Mid", role_share: 0.6 });
+  const table = { Tsukuyomi: { "Aspect of Mangetsu": entry("magical") }, Ares: { "Aspect of Fury": entry("tank") } } as never;
+  const comp = (over = {}) => ({ allies: ["Ra", "", "", "", ""], enemies: ["Tsukuyomi", "Ares", "", "", ""], ...over });
+
+  it("changes nothing while every switch is off", () => {
+    expect(enemyAspectGods(comp(), by, table)).toEqual({});
+    expect(deriveThreats(comp(), by, {}, enemyAspectGods(comp(), by, table)))
+      .toEqual(deriveThreats(comp(), by, {}));
+  });
+
+  it("counts Tsukuyomi's Mangetsu as magical, which moves one threat from physical to magical", () => {
+    const c = comp({ enemyAspects: ["Tsukuyomi"] });
+    const t = deriveThreats(c, by, {}, enemyAspectGods(c, by, table));
+    const base = deriveThreats(c, by, {});
+    expect(base.physical).toBe(1);
+    expect(t.physical).toBe(0);
+    expect(t.magical).toBe(base.magical + 1);
+    expect(threatCulprits(c, by, enemyAspectGods(c, by, table)).magical).toContain("Tsukuyomi");
+  });
+
+  it("a tank build keeps the damage type and adds the Tank label", () => {
+    const c = comp({ enemyAspects: ["Ares"] });
+    const t = deriveThreats(c, by, {}, enemyAspectGods(c, by, table));
+    expect(t.magical).toBe(deriveThreats(c, by, {}).magical);
+    expect(t.tanks).toBe(1);
+  });
+
+  it("ignores a mixed aspect, a missing entry, and a god who is not on the enemy row", () => {
+    const mixed = { Tsukuyomi: { "Aspect of Mangetsu": entry("mixed") } } as never;
+    expect(enemyAspectGods(comp({ enemyAspects: ["Tsukuyomi"] }), by, mixed)).toEqual({});
+    expect(enemyAspectGods(comp({ enemyAspects: ["Tsukuyomi"] }), by, undefined)).toEqual({});
+    expect(enemyAspectGods(comp({ enemies: ["Ares", "", "", "", ""], enemyAspects: ["Tsukuyomi"] }), by, table)).toEqual({});
   });
 });

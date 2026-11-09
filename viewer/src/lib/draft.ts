@@ -18,6 +18,9 @@ interface StoredDraft {
   mode: DraftMode;
   allies: string[];
   enemies: string[];
+  /** Enemy god names whose aspect is switched on. Optional so a draft saved
+   *  before the switch existed still loads. */
+  enemyAspects?: string[];
 }
 
 /** A draft decoded from a URL, plus the names that URL carried and this build
@@ -41,13 +44,20 @@ function resize(arr: string[], n: number): string[] {
   return Array.from({ length: n }, (_, i) => arr[i] ?? "");
 }
 
+/** The switched-on names that are still on the enemy row, in row order. */
+function keepPresent(on: unknown, enemies: string[]): string[] {
+  const set = new Set(Array.isArray(on) ? on.filter((x): x is string => typeof x === "string") : []);
+  return enemies.filter((n, i) => n && set.has(n) && enemies.indexOf(n) === i);
+}
+
 function emptyDraft(mode: DraftMode): StoredDraft {
   const n = MODE_TEAM_SIZE[mode];
   return { mode, allies: Array(n).fill(""), enemies: Array(n).fill("") };
 }
 
 function sameDraft(a: StoredDraft, b: StoredDraft): boolean {
-  return a.mode === b.mode && a.allies.join() === b.allies.join() && a.enemies.join() === b.enemies.join();
+  return a.mode === b.mode && a.allies.join() === b.allies.join() && a.enemies.join() === b.enemies.join()
+    && (a.enemyAspects ?? []).join() === (b.enemyAspects ?? []).join();
 }
 
 /** In-tab pub/sub so every mounted `useDraft()` instance sees every other
@@ -74,7 +84,8 @@ function loadLocal(): StoredDraft {
     const n = MODE_TEAM_SIZE[mode];
     const allies = Array.isArray(parsed.allies) ? parsed.allies : [];
     const enemies = Array.isArray(parsed.enemies) ? parsed.enemies : [];
-    return { mode, allies: resize(allies, n), enemies: resize(enemies, n) };
+    const en = resize(enemies, n);
+    return { mode, allies: resize(allies, n), enemies: en, enemyAspects: keepPresent(parsed.enemyAspects, en) };
   } catch {
     return emptyDraft(DEFAULT_MODE);
   }
@@ -122,7 +133,9 @@ export function decodeDraftHash(
   const me = names(params.get("me"))[0] ?? "";
   const rest = names(params.get("a"));
   const enemies = names(params.get("e"));
-  return { mode, allies: resize([me, ...rest], n), enemies: resize(enemies, n), dropped };
+  const row = resize(enemies, n);
+  const on = keepPresent(names(params.get("ea")), row);
+  return { mode, allies: resize([me, ...rest], n), enemies: row, ...(on.length ? { enemyAspects: on } : {}), dropped };
 }
 
 /** How the picker names the slot it is filling. Ally 1 is "you" everywhere
@@ -177,6 +190,8 @@ export function encodeDraftHash(mode: DraftMode, draft: DraftComp): string {
   if (a.length) params.set("a", a.join(","));
   const e = draft.enemies.filter(Boolean);
   if (e.length) params.set("e", e.join(","));
+  const ea = keepPresent(draft.enemyAspects, draft.enemies);
+  if (ea.length) params.set("ea", ea.join(","));
   return `#/draft?${params.toString()}`;
 }
 
@@ -242,7 +257,7 @@ export function useDraft(options: UseDraftOptions = {}) {
 
   useEffect(() => {
     if (!syncUrl || typeof window === "undefined") return;
-    const hash = encodeDraftHash(state.mode, { allies: state.allies, enemies: state.enemies });
+    const hash = encodeDraftHash(state.mode, { allies: state.allies, enemies: state.enemies, enemyAspects: state.enemyAspects });
     window.history.replaceState(null, "", window.location.pathname + window.location.search + hash);
   }, [syncUrl, state]);
 
@@ -282,7 +297,8 @@ export function useDraft(options: UseDraftOptions = {}) {
           allies: prev.allies.slice(n),
           enemies: prev.enemies.slice(n),
         };
-        return { mode, allies: resize(prev.allies, n), enemies: resize(prev.enemies, n) };
+        const enemies = resize(prev.enemies, n);
+        return { mode, allies: resize(prev.allies, n), enemies, enemyAspects: keepPresent(prev.enemyAspects, enemies) };
       }
       // Growing back: refill the tail from whatever the last shrink stashed.
       const restore = (cur: string[], stashed: string[]) => {
@@ -294,6 +310,7 @@ export function useDraft(options: UseDraftOptions = {}) {
         mode,
         allies: restore(prev.allies, overflow.current.allies),
         enemies: restore(prev.enemies, overflow.current.enemies),
+        enemyAspects: prev.enemyAspects,
       };
     });
   }, []);
@@ -315,7 +332,16 @@ export function useDraft(options: UseDraftOptions = {}) {
     setState((prev) => {
       const enemies = [...prev.enemies];
       enemies[i] = name;
-      return { ...prev, enemies };
+      // A switch belongs to the god it was set on: replacing or removing that
+      // god takes it away, it never lands on whoever takes the slot.
+      return { ...prev, enemies, enemyAspects: keepPresent(prev.enemyAspects, enemies) };
+    });
+  }, []);
+
+  const setEnemyAspect = useCallback((name: string, on: boolean) => {
+    setState((prev) => {
+      const rest = (prev.enemyAspects ?? []).filter((n) => n !== name);
+      return { ...prev, enemyAspects: keepPresent(on ? [...rest, name] : rest, prev.enemies) };
     });
   }, []);
 
@@ -328,9 +354,9 @@ export function useDraft(options: UseDraftOptions = {}) {
   }, []);
 
   const draft: DraftComp = useMemo(
-    () => ({ allies: state.allies, enemies: state.enemies }),
-    [state.allies, state.enemies],
+    () => ({ allies: state.allies, enemies: state.enemies, enemyAspects: state.enemyAspects ?? [] }),
+    [state.allies, state.enemies, state.enemyAspects],
   );
 
-  return { draft, mode: state.mode, setMode, setAlly, setEnemy, clear, dropped, dismissDropped };
+  return { draft, mode: state.mode, setMode, setAlly, setEnemy, setEnemyAspect, clear, dropped, dismissDropped };
 }

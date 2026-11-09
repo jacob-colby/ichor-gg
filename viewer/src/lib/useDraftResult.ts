@@ -9,8 +9,8 @@
  */
 import { teamFitItems, teamOverlay } from "./teamTags";
 import { useCallback, useMemo } from "react";
-import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, God, Item, LifestealCap } from "../types";
-import { deriveThreats, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
+import type { BuildNote, CuratedBuildEntry, DraftComp, DraftConfig, EnemyAspects, God, Item, LifestealCap } from "../types";
+import { deriveThreats, enemyAspectGods, threatOverlay, damageOverlay, threatCulprits, type ThreatKey } from "./threats";
 import { adaptFromCore, diffCore, type AdaptedCore, type CoreDiff } from "./draftBuild";
 import type { DraftMode } from "./draft";
 import { groupStarters, type StarterPath } from "./starters";
@@ -148,6 +148,8 @@ export function useDraftResult(
   aspectOn = false,
   /** Which of the god page's builds the board is adapting. */
   archetype: string = DEFAULT_ARCHETYPE,
+  /** `index.enemy_aspects`. Read only for enemies the reader switched on. */
+  enemyAspectTable?: EnemyAspects,
 ): DraftResult {
   const godsByName = useMemo(() => {
     const m: Record<string, God> = {};
@@ -199,7 +201,10 @@ export function useDraftResult(
     return out;
   }, [draft.allies, builds, itemsByName, mode]);
 
-  const threats = useMemo(() => deriveThreats(draft, godsByName, allyCores), [draft, godsByName, allyCores]);
+  const enemyOverrides = useMemo(
+    () => enemyAspectGods(draft, godsByName, enemyAspectTable), [draft, godsByName, enemyAspectTable]);
+  const threats = useMemo(
+    () => deriveThreats(draft, godsByName, allyCores, enemyOverrides), [draft, godsByName, allyCores, enemyOverrides]);
 
   /** A comp can call for a relic the build itself can never contain. Walls are
    *  the case that forced this: four gods create one, no role label describes
@@ -213,7 +218,7 @@ export function useDraftResult(
       .filter((r) => r.count > 0)
       .sort((a, b) => b.count - a.count || a.item.localeCompare(b.item));
   }, [draftConfig, threats]);
-  const culprits = useMemo(() => threatCulprits(draft, godsByName), [draft, godsByName]);
+  const culprits = useMemo(() => threatCulprits(draft, godsByName, enemyOverrides), [draft, godsByName, enemyOverrides]);
 
   // Scored items for THIS mode, and this god's aspect if they have one.
   // Conquest's table used to be the only one, so the Joust toggle changed the
