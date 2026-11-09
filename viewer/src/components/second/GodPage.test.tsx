@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { render, screen, fireEvent, waitFor, within } from "@testing-library/react";
 import App from "../../App";
 import { toHash } from "../../lib/useHashRoute";
@@ -273,7 +273,10 @@ describe("God page — controls", () => {
     await waitFor(() => expect(rowNames()[5]).toBe("Book of Thoth"));
     expect(within(strip).getByRole("button", { name: "Burst" })).toHaveAttribute("aria-pressed", "true");
     const line = screen.getByTestId("swap-line");
-    expect(line).toHaveTextContent("Burst Swaps 1 of 6:");
+    // On a phone the swaps are one line, and the list is one tap away.
+    const summary = line.querySelector("summary")!;
+    expect(summary).toHaveTextContent(/^Burst Swaps 1 of 6$/);
+    expect(line.querySelector("details")!.open).toBe(false);
     // The arrow is drawn; a screen reader hears "replaced by" instead.
     expect(within(line).getByRole("listitem")).toHaveTextContent("Soul Gem → replaced by Book of Thoth");
     const rows = screen.getAllByTestId("item-row");
@@ -291,7 +294,30 @@ describe("God page — controls", () => {
     fireEvent.click(within(strip).getByRole("button", { name: "Cooldown" }));
     await waitFor(() => expect(screen.getByTestId("swap-line")).toHaveTextContent("Same as Ichor's six for Ra."));
     expect(screen.queryByTestId("swap-list")).not.toBeInTheDocument();
+    // Nothing behind it, so it is a line of text, not a control.
+    expect(screen.getByTestId("swap-line").querySelector("details")).toBeNull();
     expect(screen.getAllByTestId("item-row").some((r) => r.hasAttribute("data-adjusted"))).toBe(false);
+  });
+
+  describe("on a desktop", () => {
+    beforeEach(() => {
+      Object.defineProperty(window, "matchMedia", {
+        configurable: true, writable: true,
+        value: (q: string) => ({ matches: q.includes("min-width: 1024px"), media: q,
+          addEventListener() {}, removeEventListener() {}, addListener() {}, removeListener() {} }),
+      });
+    });
+    afterEach(() => { delete (window as { matchMedia?: unknown }).matchMedia; });
+
+    it("keeps the swap list open under its lead: the column has the room", async () => {
+      render(<App />);
+      const strip = await screen.findByRole("group", { name: "Adjust the build" });
+      fireEvent.click(within(strip).getByRole("button", { name: "Burst" }));
+      await waitFor(() => expect(rowNames()[5]).toBe("Book of Thoth"));
+      const line = screen.getByTestId("swap-line");
+      expect(line.querySelector("details")).toBeNull();
+      expect(line).toHaveTextContent(/^Burst Swaps 1 of 6:Soul Gem/);
+    });
   });
 
   it("keeps the aspect switch in the same strip as the focuses", async () => {
@@ -383,6 +409,27 @@ describe("God page — the starter and the relic", () => {
       expect(within(alts).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
         "Conduit Gem39% of players", "Selflessness1% of players"]);
     });
+  });
+
+  it("keeps each tile to an item row: the other picks are one tap away, behind the tile itself", async () => {
+    await withRaStarters({}, async () => {
+      render(<App />);
+      const tile = await screen.findByTestId("starter");
+      expect(tile.tagName).toBe("DETAILS");
+      expect((tile as HTMLDetailsElement).open).toBe(false);
+      const summary = tile.querySelector("summary")!;
+      // "Start" is the badge where a row prints its position; the name has the line.
+      expect(summary).toHaveTextContent("Start: Sands Of Time → Pendulum of the Ages");
+      expect(within(summary).getByTestId("starter-others-count")).toHaveTextContent("+2 others");
+      expect(within(summary).queryByRole("list")).not.toBeInTheDocument();
+    });
+  });
+
+  it("is a plain tile, not a control, when the record has no other picks", async () => {
+    render(<App />);
+    const tile = await screen.findByTestId("starter");
+    expect(tile.tagName).toBe("DIV");
+    expect(tile.querySelector("summary")).toBeNull();
   });
 
   it("renders no relic tile while the index carries no relic record", async () => {
