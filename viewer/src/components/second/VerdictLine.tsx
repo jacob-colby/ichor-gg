@@ -4,14 +4,13 @@
  * alone. Not violet: the gap is often the community's advantage, and violet is
  * the model's own voice, so colouring it read as the model claiming the win.
  * The honesty tail follows in muted, never dropped: a gap the model can't fully
- * see is half the sentence. */
-import type { ReactNode } from "react";
+ * see is half the sentence. It carried an inline "Show theirs" action until
+ * 2026-11-09; whose six is on screen is now the switch under it
+ * (`WhoseSwitch`). */
 import type { Verdict } from "./verdict";
 
-export function VerdictLine({ verdict, loading = false, className = "", action }: {
+export function VerdictLine({ verdict, loading = false, className = "" }: {
   verdict: Verdict | null; loading?: boolean; className?: string;
-  /** Inline control after the sentence ("Show theirs"). */
-  action?: ReactNode;
 }) {
   if (loading || !verdict) {
     return (
@@ -26,7 +25,6 @@ export function VerdictLine({ verdict, loading = false, className = "", action }
       {verdict.parts.map((p, i) =>
         p.em ? <strong key={i} className="font-semibold text-ink">{p.text}</strong> : <span key={i}>{p.text}</span>)}
       {verdict.tail && <span className="text-muted"> {verdict.tail}</span>}
-      {action && <> {action}</>}
     </p>
   );
 }

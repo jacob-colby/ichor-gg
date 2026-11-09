@@ -12,8 +12,8 @@
  *
  * WHICH SIX IS THE MAIN ONE. `model` — the build the head-to-head measures
  * (`/side_by_side/*.json` reads `model` and nothing else; `side_by_side.py`,
- * `ARCHETYPE = "model"`), the one the verdict sentence speaks for, the one
- * "Show theirs" swaps against and the one the enemy strip adapts. In Joust
+ * `ARCHETYPE = "model"`), the one the verdict sentence speaks for on both
+ * sides of the whose-build switch, and the one the enemy strip adapts. In Joust
  * and Arena it IS `core` (95 of 95 gods each: both modes zero `win` and
  * `pick`, so the blend and the model rank identically). In Conquest it is not
  * (12 of 95 identical), and moving the default to `core` there would leave
