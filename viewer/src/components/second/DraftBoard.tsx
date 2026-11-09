@@ -31,7 +31,7 @@ import { starterShare } from "../../lib/starters";
 import { threatAnswer } from "../../lib/threats";
 import { toHash } from "../../lib/useHashRoute";
 import { queryHash } from "../command/query";
-import { Art, CloseGlyph, PlusGlyph } from "./art";
+import { Art, CloseGlyph, PlusGlyph, SLOT_BUTTON, SLOT_TILE_FOCUS } from "./art";
 import { ModeSwitch } from "./ModeSwitch";
 import { AspectToggle } from "./AspectToggle";
 import { ItemRow } from "./ItemRow";
@@ -53,11 +53,11 @@ function Slot({ name, index, side, onOpen }: { name: string; index: number; side
     <li className="min-w-0">
       <button type="button" onClick={onOpen} data-slot={`${side}-${index}`}
         aria-label={name ? `${word}: ${name}. Change` : `Add ${you ? "your god" : word.toLowerCase()}`}
-        className="press flex w-full flex-col items-center gap-1.5">
+        className={`press ${SLOT_BUTTON} flex w-full flex-col items-center gap-1.5`}>
         {name ? (
-          <Art name={name} kind="head" className={`aspect-square w-full max-w-[72px] rounded-[10px] ${ring}`} />
+          <Art name={name} kind="head" className={`aspect-square w-full max-w-[72px] rounded-[10px] ${ring} ${SLOT_TILE_FOCUS}`} />
         ) : (
-          <span className={`flex aspect-square w-full max-w-[72px] items-center justify-center rounded-[10px] border-[1.5px] border-dashed ${
+          <span className={`flex aspect-square w-full max-w-[72px] items-center justify-center rounded-[10px] border-[1.5px] border-dashed ${SLOT_TILE_FOCUS} ${
             you ? "border-accent text-accent" : "border-quiet text-muted"}`}>
             <PlusGlyph size={20} />
           </span>

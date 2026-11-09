@@ -6,8 +6,8 @@
  * (`model.text`: "quality 0.584 ... 0.024 short") are deliberately not
  * rendered here; they live on the Method page's terms, not the player's.
  *
- * The community's six is NOT listed again: the "Show theirs" swap already
- * shows it in place. What this adds is per-scenario percentages, the items
+ * The community's six is NOT listed again: the whose-build switch's
+ * Community side already shows it in place. What this adds is per-scenario percentages, the items
  * that differ and what each one does, and what the model can't see. */
 import type { SideBySideData } from "../SideBySide";
 import type { CommunityBuildEntry } from "../../types";

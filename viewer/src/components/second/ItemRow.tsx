@@ -12,14 +12,20 @@
  * replaced ("In for Book of Thoth"). Not violet — violet is the model's voice
  * and the draft's swaps speak in it; a focus swap is the reader's own choice
  * playing out, so it is marked in words and a neutral ring, never in colour
- * alone. When both apply, the draft's mark wins: it is the newer change. */
+ * alone. When both apply, the draft's mark wins: it is the newer change.
+ *
+ * A row of a BORROWED six (the community's Conquest six shown in Joust or
+ * Arena) whose Conquest record doesn't describe it in this mode carries
+ * `flags`: an asterisk after the name and the reason read out to a screen
+ * reader. The reason is printed under the six for everyone, by the
+ * most-picked list's rule. */
 import { toHash } from "../../lib/useHashRoute";
 import type { ItemReason } from "./itemReason";
 import { Art } from "./art";
 
 const gold = (n: number) => n.toLocaleString("en-US");
 
-export function ItemRow({ position, name, cumulativeGold, reason, swapped = false, adjusted = false }: {
+export function ItemRow({ position, name, cumulativeGold, reason, swapped = false, adjusted = false, flags }: {
   position: number;
   name: string;
   /** Gold spent once this item is complete; null when a cost is unknown. */
@@ -28,10 +34,13 @@ export function ItemRow({ position, name, cumulativeGold, reason, swapped = fals
   swapped?: boolean;
   /** The reader's focus or aspect moved this item in. */
   adjusted?: boolean;
+  /** Why Conquest's record doesn't describe this item in this mode. */
+  flags?: string[];
 }) {
   const adjust = adjusted && !swapped;
   return (
     <li data-testid="item-row" data-swapped={swapped || undefined} data-adjusted={adjust || undefined}
+      data-flagged={flags?.length ? true : undefined}
       className={`relative ${swapped ? "lock-in" : ""}`}>
       <a href={toHash.item(name)}
         className={`press grid min-h-[64px] grid-cols-[48px_minmax(0,1fr)_auto] items-center gap-3 rounded-[12px] py-2 pl-2.5 pr-3.5 ${
@@ -47,6 +56,8 @@ export function ItemRow({ position, name, cumulativeGold, reason, swapped = fals
         <span className="min-w-0">
           <span data-testid="item-name" className="block font-cond text-row font-bold text-ink [overflow-wrap:anywhere]">
             <span className="sr-only">{position}. </span>{name}
+            {flags?.length ? <><span aria-hidden="true" className="ml-0.5 text-muted">*</span>
+              <span className="sr-only"> — {flags.join(" ")}</span></> : null}
           </span>
           {reason.text && (
             <span className={`lock-reason mt-0.5 block text-note ${

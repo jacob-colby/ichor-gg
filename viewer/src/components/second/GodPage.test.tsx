@@ -81,7 +81,8 @@ beforeEach(() => {
 });
 
 const rowNames = () => within(screen.getByTestId("six")).getAllByTestId("item-row")
-  .map((r) => within(r).getByTestId("item-name").textContent?.replace(/^\d+\.\s*/, ""));
+  // The name alone: no position prefix, and no asterisk with its read-out reason.
+  .map((r) => within(r).getByTestId("item-name").textContent?.replace(/^\d+\.\s*/, "").replace(/\*.*$/, ""));
 
 describe("God page — the answer", () => {
   it("says the comparison in one honest sentence under the header", async () => {
@@ -106,17 +107,18 @@ describe("God page — the answer", () => {
 
   it("swaps to the community's six in place, and back", async () => {
     render(<App />);
-    const show = await screen.findByRole("button", { name: /Show theirs/ });
-    fireEvent.click(show);
+    const whose = await screen.findByRole("group", { name: "Whose build" });
+    await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveAttribute("data-kind", "measured"));
+    fireEvent.click(within(whose).getByRole("button", { name: "Community" }));
     expect(rowNames()).toEqual(THEIRS);
     expect(screen.getByRole("heading", { name: /The community's six/ })).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /Show Ichor's/ }));
+    fireEvent.click(within(whose).getByRole("button", { name: "Ichor's" }));
     expect(rowNames()).toEqual(SIX);
   });
 
   it("prints no 0-1 score anywhere on the page, even in the opened detail", async () => {
     render(<App />);
-    await screen.findByRole("button", { name: /Show theirs/ });
+    await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveAttribute("data-kind", "measured"));
     for (const d of document.querySelectorAll("details")) d.open = true;
     expect(screen.getByTestId("compare-detail")).toBeInTheDocument();
     expect(document.querySelector("main")!.textContent).not.toMatch(/\b0\.\d+/);
@@ -130,11 +132,125 @@ describe("God page — the answer", () => {
     expect(screen.getByTestId("verdict-line")).not.toHaveTextContent(/%/);
   });
 
-  it("says when a god has no comparison at all", async () => {
+  it("says when a god has no comparison at all, on both sides", async () => {
     serve(null);
     render(<App />);
     await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveTextContent("There's no measured comparison for Ra yet."));
-    expect(screen.queryByRole("button", { name: /Show theirs/ })).not.toBeInTheDocument();
+    fireEvent.click(within(screen.getByRole("group", { name: "Whose build" })).getByRole("button", { name: "Community" }));
+    // No stand-in from the raw record: it isn't six finished items.
+    expect(screen.queryByTestId("six")).not.toBeInTheDocument();
+    expect(screen.getByTestId("community-empty")).toHaveTextContent("There's no measured community six for Ra yet.");
+  });
+});
+
+describe("God page — whose build", () => {
+  const whoseGroup = () => screen.findByRole("group", { name: "Whose build" });
+  const pick = async (label: "Ichor's" | "Community") => {
+    fireEvent.click(within(await whoseGroup()).getByRole("button", { name: label }));
+  };
+  const measured = () => waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveAttribute("data-kind", "measured"));
+
+  it("is a two-button segmented control above every build option, on Ichor's to start", async () => {
+    render(<App />);
+    const whose = await whoseGroup();
+    const buttons = within(whose).getAllByRole("button");
+    expect(buttons.map((b) => b.textContent)).toEqual(["Ichor's", "Community"]);
+    expect(buttons.map((b) => b.getAttribute("aria-pressed"))).toEqual(["true", "false"]);
+    // Real buttons, so Tab reaches each and Enter or Space picks it.
+    for (const b of buttons) expect(b.tagName).toBe("BUTTON");
+    // Above the focus strip: you choose whose build before what adjusts it.
+    const strip = screen.getByRole("group", { name: "Adjust the build" });
+    expect(whose.compareDocumentPosition(strip) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it("shows the community's measured six with nothing to adjust, and the same verdict", async () => {
+    render(<App />);
+    await measured();
+    const before = screen.getByTestId("verdict-line").textContent;
+    await pick("Community");
+    expect(rowNames()).toEqual(THEIRS);
+    expect(within(await whoseGroup()).getByRole("button", { name: "Community" })).toHaveAttribute("aria-pressed", "true");
+    // One six and no focuses: no chips at all, not dead ones.
+    expect(screen.queryByRole("group", { name: "Adjust the build" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Burst" })).not.toBeInTheDocument();
+    expect(screen.getByRole("switch", { name: /Aspect of Thermotherapy/ })).toBeInTheDocument();
+    expect(screen.getByTestId("community-line")).toHaveTextContent("What Ra's Conquest players buy most in each slot.");
+    expect(screen.getByTestId("verdict-line").textContent).toBe(before);
+    // The record's rows read as records, never as the model's or the draft's.
+    expect(screen.getAllByTestId("item-row").some((r) => r.hasAttribute("data-adjusted") || r.hasAttribute("data-swapped"))).toBe(false);
+    expect(screen.getByTestId("starter")).toHaveTextContent("Conduit Gem → Archmage's Gem");
+    await waitFor(() => expect(window.location.hash).toContain("whose=community"));
+  });
+
+  it("leaves a chosen focus behind on Ichor's side, and finds it there again", async () => {
+    render(<App />);
+    await measured();
+    fireEvent.click(within(screen.getByRole("group", { name: "Adjust the build" })).getByRole("button", { name: "Burst" }));
+    await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveTextContent(/measured for Ichor's main six/));
+    await pick("Community");
+    // The head-to-head holds the community's six, so it is quoted here, not refused.
+    expect(screen.getByTestId("verdict-line")).toHaveAttribute("data-kind", "measured");
+    expect(screen.queryByTestId("swap-line")).not.toBeInTheDocument();
+    await pick("Ichor's");
+    expect(within(screen.getByRole("group", { name: "Adjust the build" })).getByRole("button", { name: "Burst" }))
+      .toHaveAttribute("aria-pressed", "true");
+    expect(rowNames()[5]).toBe("Book of Thoth");
+  });
+
+  it("keeps the choice across a mode switch; off Conquest it is Conquest's six, asterisked", async () => {
+    atUrl(`${toHash.god("Ra")}?whose=community`);
+    render(<App />);
+    await waitFor(() => expect(rowNames()).toEqual(THEIRS));
+    fireEvent.click(screen.getByRole("button", { name: "Arena" }));
+    await waitFor(() => expect(screen.getByTestId("verdict-line"))
+      .toHaveTextContent("Arena has no community record of its own, so this is the six Ra's Conquest players buy."));
+    expect(within(await whoseGroup()).getByRole("button", { name: "Community" })).toHaveAttribute("aria-pressed", "true");
+    expect(rowNames()).toEqual(THEIRS);
+    expect(screen.getByRole("heading", { name: /Conquest's community six/ })).toBeInTheDocument();
+    const rows = screen.getAllByTestId("item-row");
+    const flagged = rows.filter((r) => r.hasAttribute("data-flagged"));
+    expect(flagged).toHaveLength(1);
+    // The asterisk is drawn; a screen reader hears the reason in its place.
+    expect(within(flagged[0]).getByTestId("item-name")).toHaveTextContent("Book of Thoth* — Stacking items.");
+    expect(screen.getByTestId("six-notes")).toHaveTextContent("Book of Thoth — Stacking items. Conquest's record is for a finished stack");
+    expect(rows[0]).toHaveTextContent("In Conquest, 55% of Ra players buy it first");
+  });
+
+  it("hands the whole build area to the aspect slot with the aspect on, never the any-aspect six", async () => {
+    atUrl(`${toHash.god("Ra")}?whose=community`);
+    render(<App />);
+    await waitFor(() => expect(rowNames()).toEqual(THEIRS));
+    const sw = screen.getByRole("switch", { name: "Aspect of Thermotherapy" });
+    fireEvent.click(sw);
+    expect(sw).toHaveAttribute("aria-checked", "true");
+    const slot = screen.getByTestId("community-aspect-slot");
+    expect(slot).toHaveTextContent("There's no community build for Thermotherapy yet.");
+    // The slot owns starter, relic and six: nothing of the base six beside it.
+    for (const id of ["six", "kit-tiles", "starter", "relic", "community-line", "six-notes"]) {
+      expect(screen.queryByTestId(id)).not.toBeInTheDocument();
+    }
+    expect(screen.getByRole("heading", { name: "The community's Thermotherapy build" })).toBeInTheDocument();
+    // Ichor's side is untouched by it.
+    fireEvent.click(within(screen.getByRole("group", { name: "Whose build" })).getByRole("button", { name: "Ichor's" }));
+    expect(screen.queryByTestId("community-aspect-slot")).not.toBeInTheDocument();
+    expect(rowNames()).toEqual(SIX);
+  });
+
+  it("opens on Ichor's from a bare god link, as it opens on Conquest", async () => {
+    atUrl(`${toHash.god("Ra")}?whose=community&mode=joust`);
+    render(<App />);
+    await waitFor(() => expect(rowNames()).toEqual(THEIRS));
+    window.location.hash = toHash.god("Ra");
+    await waitFor(() => expect(within(screen.getByRole("group", { name: "Whose build" }))
+      .getByRole("button", { name: "Ichor's" })).toHaveAttribute("aria-pressed", "true"));
+    expect(screen.getByRole("button", { name: "Conquest" })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("isn't offered for a god with no community record", async () => {
+    atUrl(toHash.god("Ymir"));
+    render(<App />);
+    await screen.findByTestId("god-header");
+    expect(screen.queryByRole("group", { name: "Whose build" })).not.toBeInTheDocument();
   });
 });
 

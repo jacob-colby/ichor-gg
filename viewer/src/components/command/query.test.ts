@@ -1,5 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches } from "./query";
+import {
+  parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches, keepLastMode,
+} from "./query";
 import { readRecents, pushRecent, MAX_RECENTS } from "./recents";
 import { decodePageQuery } from "../second/pageState";
 
@@ -177,6 +179,45 @@ describe("field text helpers", () => {
     const hec = q.tokens[2];
     expect(removeSpan(text, hec.start, hec.end)).toBe("ra vs ymir");
     expect(removeSpan(text, q.tokens[0].start, q.tokens[0].end)).toBe("vs hecate ymir");
+  });
+});
+
+describe("keepLastMode — a second mode replaces the first", () => {
+  const k = (s: string, mode?: "conquest" | "joust" | "arena") => keepLastMode(s, gods, mode);
+
+  it("drops every mode word but the last, wherever they sit", () => {
+    expect(k("ra joust arena ")).toBe("ra arena ");
+    expect(k("joust ra vs ymir arena ")).toBe("ra vs ymir arena ");
+    expect(k("ra conquest joust arena ")).toBe("ra arena ");
+    expect(k("ra vs hecate joust ymir conquest ")).toBe("ra vs hecate ymir conquest ");
+  });
+
+  it("counts a keyword prefix as the mode word it stands for", () => {
+    expect(k("ra arena jou ")).toBe("ra jou ");
+    expect(p(k("ra arena jou ")).mode).toBe("joust");
+  });
+
+  it("leaves one mode, no mode, and the same mode said twice's last copy", () => {
+    expect(k("ra vs ymir joust ")).toBe("ra vs ymir joust ");
+    expect(k("ra vs ymir ")).toBe("ra vs ymir ");
+    expect(k("")).toBe("");
+    expect(k("ra joust joust ")).toBe("ra joust ");
+  });
+
+  it("re-sizes the team with the mode that is left", () => {
+    // Joust keeps three; replacing it with Arena brings the fourth back.
+    expect(p("ra vs hecate ymir hel zeus joust").enemies).toHaveLength(3);
+    expect(p(k("ra vs hecate ymir hel zeus joust arena ")).enemies).toEqual(["Hecate", "Ymir", "Hel", "Zeus"]);
+  });
+
+  it("leaves no note behind once the text has one mode", () => {
+    expect(p("ra joust arena").notes).toContain("Two modes typed — using Arena");
+    expect(p(k("ra joust arena ")).notes).toEqual([]);
+  });
+
+  it("does not touch aspect words: those toggle, they do not replace", () => {
+    expect(k("ra aspect aspect ")).toBe("ra aspect aspect ");
+    expect(k("ra aspect joust arena ")).toBe("ra aspect arena ");
   });
 });
 

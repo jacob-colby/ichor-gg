@@ -237,17 +237,23 @@ Components feel **tactile and quiet**: every tappable thing carries `.press` (sc
 
 ### Buttons
 - **Primary:** violet on violet-ink, 44px high, 10px radius, cond 18px bold uppercase. One per view ("Go", "Try again", "Choose a god").
-- **Inline action:** cond 18px violet text with a glyph ("⇄ Show theirs" — the SwapGlyph, not a unicode arrow), sized to a 44px hit area inside the sentence.
+- **Inline action:** cond 18px violet text with a drawn glyph (never a unicode arrow), sized to a 44px hit area inside the sentence. The god page's "⇄ Show theirs" was one until 2026-11-09; it is now the whose-build switch.
 - **Quiet:** 1px line border, muted text, 44px ("Clear enemy team", "Help").
 
-### Segmented control (ModeSwitch, RoleFilter)
+### Segmented control (ModeSwitch, WhoseSwitch, RoleFilter)
 - `role="group"` + `aria-pressed` buttons, never `role="tab"`. A surface-filled track (12px radius, 4px inset); the active segment is violet with violet-ink text; inactive is muted, ink on hover. Cond 16–18px uppercase.
+
+### Whose build (WhoseSwitch)
+- **Ichor's | Community**, two equal 44px segments in the segmented grammar (`role="group"` "Whose build"), between the verdict and the focus strip: you choose whose six first, and what adjusts it sits under it (Jacob, 2026-11-09). It is offered for every god with a Conquest community record, in every mode, and it is in the link (`whose=community`). Switching mode keeps it; a bare god link opens on Ichor's, as it opens on Conquest.
+- **Ichor's** is the page as it was: the focus strip, the line, the six.
+- **Community** is the six the head-to-head measured: the Conquest record cleaned of components, statless relics and duplicates (`communityBuild.ts`), with no stand-in when a god has no comparison file. It has nothing to adjust, so the focus chips go and only the aspect switch stays. Under it, one `note` line per fact: what the six is ("What Ra's Conquest players buy most in each slot.") and what the cleaning refilled ("Blinking Abyss → The Crusher"). That six is every player on any aspect, so it is never shown as an aspect's: with the aspect on, one slot (`community-aspect-slot`) owns the whole build area, starter, relic and six, for the per-aspect community build to fill, and until it exists it says so ("There's no community build for Thermotherapy yet."). Its rows carry no adjusted or swapped marks, since the enemy team never moves a record. Off Conquest it is Conquest's six, headed "Conquest's community six", with the most-picked list's asterisks on its rows and the reasons printed under it.
+- The starter tile reads the build's own stamp on Ichor's side and the community record's on the community's. The relic is the community's most-taken on both, because no build carries one.
 
 ### Focus strip (FocusStrip) — one six, adjusted
 - The page shows **one** six — Ichor's six, the `model` build the head-to-head measures — and every other build as an **adjustment** of it. One `role="group"` ("Adjust the build") holds the aspect switch, then the focus chips (cooldown, attack speed, anti-tank, bruiser, burst, mana-stack, then the god's own crit / strength / intelligence / str + int), then, after a hairline, the two other *answers*: **Balanced** (the blend with players' win and pick rates) and **Hybrid** (the model corrected where a player record is strong). An answer chip shows only when it gives a different six — Balanced equals Ichor's six in Joust and Arena by construction. A focus chip always shows; when it changes nothing the line says so ("Same as Ichor's six for Ah Puch", "Same as Balanced for Ra").
 - Chips: 44px, 10px radius, cond 17px uppercase, `aria-pressed`; selected is violet with violet-ink text (selection), the rest surface with a hairline ring. Phone: one row that scrolls sideways, bled to the screen edge with a 28px fade on the right, the chosen chip scrolled into view; from 1024px it wraps.
 - Choosing one changes the six **in place**. The line under the strip names the change: the chip's name in cond, then "Swaps 2 of 6:" over one swap per line ("Spear of the Magus → Chronos' Pendant"; a screen reader hears "replaced by"), then a `cap` note on where it came from. It reads the same at one swap and at six. With no focus chosen, switching the aspect on gets the same treatment ("Built for Thermotherapy. Swaps 2 of 6:").
-- Order in the column: verdict → strip → line → the buy order, so the line sits directly over the slots it marks. The verdict still speaks only for Ichor's six and says so when a focus is chosen.
+- Order in the column: verdict → whose switch → strip → line → the buy order, so the line sits directly over the slots it marks. The verdict still speaks only for Ichor's main six and says so when a focus is chosen. On the community's side it reads the main six's sentence whatever focus Ichor's side was left on, because that measurement is the two of them.
 
 ### Aspect switch (AspectToggle)
 - `role="switch"` first in the focus strip: a 32×20 track (violet when on) and a two-part label — "Aspect" in 12px quiet over the aspect's short name in cond 16px uppercase ("Thermotherapy", "Passionate Storm": "Aspect of" and a leading "the" dropped). The name **wraps at its spaces to two lines, never truncates**. Its accessible name is the full aspect name plus "(doesn't change the build)" when that is true, and when switched on the line under the strip says whether the build moved.
@@ -256,6 +262,7 @@ Components feel **tactile and quiet**: every tappable thing carries `.press` (sc
 - 64px minimum, 12px radius, surface (surface-2 on hover); a 48px item icon with its position in a small round badge; the name in cond 22px; the reason in 13px muted below; gold spent in cond 21px tabular figures at the right. The whole row links to the item.
 - **Swapped** (the enemy draft moved it in): surface-2 with a 2px violet ring, the reason in violet semibold ("Swapped in for Spear of the Magus — brings anti-heal"), and the lock-in motion.
 - **Adjusted** (the reader's focus or aspect moved it in): surface-2 with a 2px `line-strong` ring and the reason led by what it replaced, in ink-soft semibold ("In for Book of Thoth · 26% of Ra players build it"). Neutral, not violet: it is the reader's own choice playing out, not the model's voice. When both apply the draft's mark wins.
+- **Flagged** (a borrowed Conquest six off Conquest): an asterisk after the name, its reason read to a screen reader in place, and printed under the six by the most-picked list's rule.
 
 ### Starter and relic tiles (KitTile)
 - The starter and the relic open the buy order with the six's own treatment: 64px minimum, surface, a 48px icon, the name in cond 22px led by a quiet "Start" / "Relic", one reason line ("25% of Ra players open this way"; "In Conquest, …" off Conquest). The starter keeps its pairing: the base's icon carries the upgrade's as a 28px inset, and the name reads "Conduit Gem → Archmage's Gem". Under a hairline, one flowing line of what else the god's players take, by share ("Others · Pendulum of the Ages 41%"). No gold: the column is the six's running total.
@@ -268,7 +275,7 @@ Components feel **tactile and quiet**: every tappable thing carries `.press` (sc
 - A running total shows `—` rather than an approximation when any cost is unknown.
 
 ### VerdictLine
-- The comparison as one sentence directly under the header, at `say`: the claim in ink with the measured gap in semibold, then the honesty tail in muted ("…Lotus Sickle isn't simulated yet, so the damage gap is partly unmeasured."), then the inline "Show theirs" action when a swap is possible. While measuring it says so, in quiet, with `aria-busy`.
+- The comparison as one sentence directly under the header, at `say`: the claim in ink with the measured gap in semibold, then the honesty tail in muted ("…Lotus Sickle isn't simulated yet, so the damage gap is partly unmeasured."). While measuring it says so, in quiet, with `aria-busy`. Off Conquest on the community's side it says whose record the borrowed six is ("Arena has no community record of its own, so this is the six Ra's Conquest players buy.").
 
 ### EnemyStrip / EnemySheet
 - **Strip (phone):** a raised, blurred bar sticky above the tab bar: "ENEMY" + "3 of 5" (and "2 swaps" in violet) beside five 48px slots (three in Joust). Filled slots are portraits with a 1.5px ink ring; empty ones dashed squares with a plus. Every slot opens the sheet on itself.
@@ -318,7 +325,7 @@ One authored moment, everything else still.
 
 These bind every surface regardless of look.
 
-**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows lives in the hash query: the god page's `mode`, `aspect`, `build` and `vs`; god select's `q` and `role`; the shop's filters. Defaults stay out of the query, so a bare `#/god/Ra` keeps meaning what it meant (and leaves the stored draft alone). A typed query lands on a URL that reproduces it; picker edits write `vs=` back. Writes are debounced `replaceState`, and a queued write is flushed before the app navigates so it can never land on the next page.
+**The Linkable-State Rule.** Anything the visitor chose that changes what a surface shows lives in the hash query: the god page's `mode`, `aspect`, `build`, `whose` and `vs`; god select's `q` and `role`; the shop's filters. Defaults stay out of the query, so a bare `#/god/Ra` keeps meaning what it meant (and leaves the stored draft alone). A typed query lands on a URL that reproduces it; picker edits write `vs=` back. Writes are debounced `replaceState`, and a queued write is flushed before the app navigates so it can never land on the next page.
 
 **The Seam Rule.** Every surface names another it hands off to, in the visitor's terms: the god page links to the god's kit, every item ranked and its ranking; the roster's "Back to <god>" card returns to your last build; recents reopen a matchup in one tap. A seam carries state where state exists — the shared draft is one draft across the god page, the Draft tab and the command field.
 
@@ -326,7 +333,7 @@ These bind every surface regardless of look.
 
 **The Unmeasured-Is-Not-Zero Rule.** "Not measured here" and "measured as nothing" are different facts and never render the same way. An unscored signal is said in words, not printed as a neutral default; an unknown cost leaves the running total as `—`; threats that measured zero are distinguishable from threats never looked for.
 
-**The Second-Track Rule.** The community is a constant second track, never an option that replaces the model's answer. Its share is printed on each of Ichor's rows ("35% of Ra players buy it third"), its six is one tap away ("Show theirs"), and the comparison between them is the verdict. No control shows one *instead of* the other as a mode.
+**The Second-Track Rule.** The community is a constant second track. Its share is printed on each of Ichor's rows ("35% of Ra players buy it third"), its six is one tap away, and the comparison between them is the verdict, which reads the same on both sides. Amended 2026-11-09 (Jacob): the god page's whose-build switch does show one six *instead of* the other, which this rule used to forbid. What still holds: Ichor's is the default and the side a bare link opens on, and the community's side never borrows the model's marks (no adjusted or swapped rows).
 
 **The Provenance Rule.** Wherever the community is cited, say which community and when: "Player percentages: Conquest games on SmiteBrain, refreshed …". Rendered only when the data supplies it; dates formatted from the ISO string's own parts, never through `Date`.
 
