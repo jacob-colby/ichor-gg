@@ -799,14 +799,82 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of the Unyielding
-    status: below minimum
+    status: shown
+    windows:
+    - ob46
+    - ob47
+    patches: OB46–OB47
+    window_rule: pooled back
+    window_start: '2026-10-20'
+    window_end: '2026-11-08'
+    matches: 34
+    wins: 18
+    win_share: 0.53
+    aggregate:
+      aspect_matches: 38
+      aspect_win_rate: 0.5
+      no_aspect_matches: 372
+      no_aspect_win_rate: 0.554
+    roles:
+    - role: Support
+      matches: 23
+      share: 0.68
+    - role: Solo
+      matches: 11
+      share: 0.32
+    base_role: Solo Support
+    base_role_share: 1.0
+    role_shift: null
+    items:
+    - name: Freya's Tears
+      share: 0.41
+    - name: Gauntlet of Thebes
+      share: 0.38
+    - name: brawlers-ruin
+      share: 0.26
+    - name: Shell of Rebuke
+      share: 0.26
+    - name: Eye of Erebus
+      share: 0.24
+    - name: Prophetic Cloak
+      share: 0.24
+    - name: Stampede
+      share: 0.24
+    - name: Eros' Bow
+      share: 0.21
+    starters:
+    - name: Death's Embrace
+      share: 0.24
+    - name: Selflessness
+      share: 0.18
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 4
+        matches: 6
+        says: changed in OB47; 4 of the 6 matches that bought it are older
+    - name: Bluestone Pendant
+      share: 0.15
+    relics:
+    - name: Phantom Shell
+      share: 0.32
+    - name: Blink Rune
+      share: 0.26
+    - name: Aegis of Acceleration
+      share: 0.18
     matches_by_window:
       ob47: 10
       ob46: 24
       ob45: 104
       ob44: 53
+    unmapped_slugs:
+    - brawlers-ruin
 ---

@@ -804,14 +804,114 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of the Unburdened
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 64
+    wins: 32
+    win_share: 0.5
+    aggregate:
+      aspect_matches: 87
+      aspect_win_rate: 0.425
+      no_aspect_matches: 1136
+      no_aspect_win_rate: 0.481
+    roles:
+    - role: Mid
+      matches: 47
+      share: 0.73
+    - role: Solo
+      matches: 8
+      share: 0.12
+    - role: Support
+      matches: 7
+      share: 0.11
+    - role: Carry
+      matches: 2
+      share: 0.03
+    base_role: Support
+    base_role_share: 0.11
+    role_shift:
+      role: Mid
+      share: 0.73
+      says: 'most Aspect of the Unburdened players do not play Support: Mid 73%, Support
+        11%'
+    items:
+    - name: Rod of Tahuti
+      share: 0.66
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 28
+        matches: 42
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 28 of the 42 matches that bought it are older
+    - name: Book of Thoth
+      share: 0.34
+    - name: Spear of Desolation
+      share: 0.33
+    - name: Obsidian Shard
+      share: 0.31
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 14
+        matches: 20
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 14 of the 20 matches that bought it are older
+    - name: Ancient Signet
+      share: 0.27
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 16
+        matches: 17
+        says: changed in OB47; 16 of the 17 matches that bought it are older
+    - name: Soul Gem
+      share: 0.27
+    - name: Genji's Guard
+      share: 0.23
+    - name: Shifter's Shield
+      share: 0.23
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 4
+        matches: 15
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 4 of the 15 matches that bought it are older
+    starters:
+    - name: Pendulum of the Ages
+      share: 0.47
+    - name: Sundering Axe
+      share: 0.2
+    - name: Sands Of Time
+      share: 0.11
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.38
+    - name: Purification Beads
+      share: 0.25
+    - name: Agility Relic
+      share: 0.23
     matches_by_window:
       ob47: 2
       ob46: 25
       ob45: 37
       ob44: 28
+    unmapped_slugs:
+    - brawlers-ruin
 ---

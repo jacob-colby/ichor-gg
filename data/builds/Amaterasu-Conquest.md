@@ -805,14 +805,94 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect Of Valor
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 36
+    wins: 22
+    win_share: 0.61
+    aggregate:
+      aspect_matches: 39
+      aspect_win_rate: 0.615
+      no_aspect_matches: 1538
+      no_aspect_win_rate: 0.614
+    roles:
+    - role: Jungle
+      matches: 18
+      share: 0.5
+    - role: Solo
+      matches: 16
+      share: 0.44
+    - role: Support
+      matches: 2
+      share: 0.06
+    base_role: Solo
+    base_role_share: 0.44
+    role_shift: null
+    items:
+    - name: Berserker's Shield
+      share: 0.64
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 8
+        matches: 23
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 8 of the 23 matches that bought it are older
+    - name: Tyrfing
+      share: 0.47
+    - name: Shogun's Ofuda
+      share: 0.36
+    - name: Devourer's Gauntlet
+      share: 0.31
+    - name: Sanguine Lash
+      share: 0.31
+    - name: Kinetic Cuirass
+      share: 0.28
+    - name: Riptalon
+      share: 0.25
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 3
+        matches: 9
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 3 of the 9 matches that bought it are older
+    - name: Silverbranch Bow
+      share: 0.22
+    starters:
+    - name: Hunter's Cowl
+      share: 0.56
+    - name: Death's Embrace
+      share: 0.08
+    - name: Death's Toll
+      share: 0.08
+    relics:
+    - name: Agility Relic
+      share: 0.42
+    - name: Sundering Arc
+      share: 0.22
+    - name: Aegis of Acceleration
+      share: 0.11
     matches_by_window:
       ob47: 4
       ob46: 18
       ob45: 14
       ob44: 33
+    unmapped_slugs:
+    - brawlers-ruin
 ---

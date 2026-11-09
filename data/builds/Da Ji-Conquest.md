@@ -780,14 +780,98 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Ferocity
-    status: below minimum
+    status: shown
+    windows:
+    - ob44
+    - ob45
+    - ob46
+    - ob47
+    patches: OB44–OB47
+    window_rule: pooled back
+    window_start: '2026-09-22'
+    window_end: '2026-11-08'
+    matches: 38
+    wins: 16
+    win_share: 0.42
+    aggregate:
+      aspect_matches: 41
+      aspect_win_rate: 0.39
+      no_aspect_matches: 2196
+      no_aspect_win_rate: 0.556
+    roles:
+    - role: Jungle
+      matches: 23
+      share: 0.61
+    - role: Solo
+      matches: 11
+      share: 0.29
+    - role: Carry
+      matches: 3
+      share: 0.08
+    - role: Mid
+      matches: 1
+      share: 0.03
+    base_role: Jungle
+    base_role_share: 0.61
+    role_shift: null
+    items:
+    - name: Dagger of Frenzy
+      share: 0.61
+    - name: Riptalon
+      share: 0.5
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 14
+        matches: 19
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 14 of the 19 matches that bought it are older
+    - name: Devourer's Gauntlet
+      share: 0.45
+    - name: Tyrfing
+      share: 0.39
+    - name: Berserker's Shield
+      share: 0.34
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 9
+        matches: 13
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 9 of the 13 matches that bought it are older
+    - name: Dominance
+      share: 0.34
+    - name: Deathbringer
+      share: 0.32
+    - name: Qin's Blade
+      share: 0.18
+    starters:
+    - name: Hunter's Cowl
+      share: 0.37
+    - name: Leather Cowl
+      share: 0.16
+    - name: Sharpshooter's Arrow
+      share: 0.13
+    relics:
+    - name: Purification Beads
+      share: 0.42
+    - name: Aegis of Acceleration
+      share: 0.24
+    - name: Agility Relic
+      share: 0.13
     matches_by_window:
       ob47: 3
       ob46: 8
       ob45: 13
       ob44: 14
+    unmapped_slugs:
+    - brawlers-ruin
 ---

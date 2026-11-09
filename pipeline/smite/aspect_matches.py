@@ -98,15 +98,87 @@ whole run and the store is left exactly as it was, the contract
 the next run's walk recovers it.
 
 THE BUILD-NOTE ENTRY (`community_aspects:` in each Conquest note), per aspect:
-  * WINDOW RULE: the newest patch window, unless it holds fewer than
-    `MIN_MATCHES` of this aspect's matches, in which case the last CLOSED one;
-    if that is thin too the entry says so and claims nothing. The entry names
-    the window it describes and which branch of the rule chose it.
+  * WINDOW RULE (`choose_windows`, reach-back agreed 2026-11-09): the newest
+    patch window, unless it holds fewer than `MIN_MATCHES` of this aspect's
+    matches; then the last CLOSED one; then the newest windows POOLED — the
+    newest and the last closed together, then one more closed window at a
+    time — until the pool holds `MIN_MATCHES`; if every stored window together
+    is still short the entry says so and claims nothing. The entry names the
+    windows it reads (`windows`, oldest first, and `patches`, "OB45–OB47"),
+    and which branch chose them. The first two branches are #129's rule
+    unchanged, so the 65 entries it showed read the same windows, matches and
+    shares now (checked entry by entry on 2026-11-09); only the 21 it left
+    below the minimum can move.
+  * WHY POOL, AND WHY THIS WAY — measured 2026-11-09 on the store as #129 left
+    it (36,947 matches, 86 aspects, 21 below the minimum):
+
+        rule                                   shown  of the 21
+        #129 (newest, else last closed)          65        0
+        walk back, pooled, flag changed items    78       13   <- shipped
+        walk back, STOP at a changed item        69-70    4-5
+        the newest single window holding 30      74        9
+        every stored window pooled               78       13, but rewrites all 65
+
+    The 13: Amaterasu 36, Atlas 64, Cupid 45, Mordred 74, Nu Wa 75 and
+    Tsukuyomi 57 (OB45–OB47); Apollo 43, Cerberus 34, Chronos 35, Ix Chel 34
+    and Jormungandr 34 (OB46–OB47); Da Ji 38 and Horus 36 (OB44–OB47). Still
+    below: Geb (28 with everything pooled), Rama 23, Hercules 17 and The
+    Morrigan's five copied aspects. Pooling from the newest rather than
+    reading the deepest single window keeps the entry as recent as the floor
+    allows: Jormungandr reads 34 matches from OB46–OB47, not OB45's 104.
+  * ITEM CHANGES ARE FLAGGED, NEVER A STOP (`item_changes`, `_change_flag`).
+    A pooled match may have bought an item since changed, so every listed
+    item, starter and relic whose cost, tier or stats moved at a patch AFTER
+    the oldest window read carries `changed`: the patch, and how many of the
+    pooled matches that bought it are older. It applies to every shown entry,
+    not only pooled ones: #129's last-closed reads already showed Cabrakan's
+    and Osiris' OB46 builds holding Ancient Signet, which OB47 changed (9 of 9
+    and 11 of 11 buys older), unflagged. A STOP rule was measured and
+    refused: visibility then hinges on the quality of the change data (see
+    the next point; Tsukuyomi is shown or hidden on one unplaceable +5
+    Intelligence), and one peripheral item hides real evidence (Chronos' 35
+    matches over the 7 that bought War Flag).
+  * THE CHANGE SOURCE IS THE SNAPSHOT STORE, and it has two measured blind
+    spots. (1) Item data was scraped under OB40 (2026-08-01, 08-29), OB46
+    (11-02) and OB47 (11-03) and never in between, so OB46 -> OB47 is exact
+    (Ancient Signet, Selflessness, War Flag) and everything else is ONE
+    OB40 -> OB46 diff of 35 items with no patch attached. Such an item is
+    flagged with the whole span ("OB41–OB46", `exact: false`, "up to N
+    older"). (2) A snapshot holds cost, tier and stats, not passives, so a
+    passive change is never flagged. The wiki's OB41–OB47 patch-notes pages
+    were read once to size both (2026-11-09, 7 requests, not committed and
+    not read by this code): they name OB45 Heartwood Charm, Lotus Sickle,
+    Dominance, Gluttonous Grimoire; OB46 Devourer's Gauntlet, Sanguine Lash,
+    Eye of the Storm, Eros' Bow, Midgardian Mail, Alchemist Coat, Riptalon,
+    Xibalban Effigy; OB47 Ancient Signet, Lifebinder, Soul Locket,
+    Selflessness, War Flag. They date Obsidian Shard and Polynomicon to OB44,
+    which no pool crosses, so the span over-flags those two; and they name
+    five of the 35 stat diffs NOWHERE — Rod of Tahuti (Intelligence 80 -> 85),
+    Berserker's Shield, Death Metal, Musashi's Dual Swords, Rage — so neither
+    source can date every change. The passive-only changes the snapshots miss
+    are the price of reading a source the daily job keeps — the largest is
+    Devourer's Gauntlet, changed in OB46 and among the six most-bought items
+    of 5 shown builds that read OB45 or older. A hand transcription of the
+    notes would be exact today and stale from OB48. From OB47 on, each
+    patch's snapshot is exact for stats. The daily job re-derives the entries
+    after the snapshot step, so a patch day's flags are that day's.
+  * NOT GUARDED: a GOD's or an aspect's own balance changes. Nothing in the
+    repo records them per patch. By the same wiki pages, 5 of the 78 entries
+    read a window older than a patch that changed the god: Hou Yi and Nut
+    (last closed OB46, changed in OB47, both #129 reads), and Cupid, Horus
+    and Jormungandr (pooled).
+  * THE RULE DEPENDS ON WHAT THE STORE RETAINS. The walk has no depth limit
+    of its own: it reaches as far back as the store holds, so a retention
+    policy (undecided, Jacob's call) is also its reach-back limit. Dropping
+    OB44 today hides Da Ji and Horus; dropping OB45 too hides 8 of the 13,
+    Tsukuyomi among them. Kept forever, a thin aspect pools as many patches
+    as it needs (Geb would need about five).
   * `MIN_MATCHES` IS `tierlist.MIN_MATCHES` (30), imported, not restated — the
     repo's existing floor below which "the interval is so wide the god is
     better described as unmeasured". The entry's claims are binomial shares
     with the same interval, so the same floor applies. It was NOT chosen
-    against Tsukuyomi, and it leaves him without an entry (below).
+    against Tsukuyomi, and it is not lowered for him: pooling is what reaches
+    him, and nothing measured here says 30 is wrong.
   * ROLE SHIFT: said when the god's base role (his god note's `role`) is not
     what most of the aspect's players play — the 95% Wilson UPPER bound of the
     base role's share is under 0.5 — and the most-played role is another. A
@@ -119,17 +191,20 @@ THE BUILD-NOTE ENTRY (`community_aspects:` in each Conquest note), per aspect:
     which it does not, so the entry's `matches` is all it can claim, and a
     reader of a thin aspect's item shares should assume a few people.
 
-TSUKUYOMI, the acceptance case (2026-11-08, Obsidian+): Mangetsu holds 6
-matches in OB47 and 21 in OB46, both under 30, so his entry is a stated
-`below minimum` with the per-window counts (OB44 17, OB45 30, OB46 21, OB47
-6). OB45 reaches the floor exactly, and the rule does not read it: it falls
-back ONE window, to the last closed, and no further, since any patch can move
-the kit or the items. Nine of the 21 below-minimum aspects, him included, reach
-30 in OB45 or OB44, and 13 reach it pooled. Pooled across the store's four windows
-he has 74 matches, 57% Mid and 27% Jungle, buying Rod of Tahuti 81%, Book of
-Thoth 73%, Chronos' Pendant 58%. At about 1.6 matches a day he cannot count on
-30 inside one 14-day patch, so whether to pool windows is the next session's
-decision, and the store keeps them apart so it can be made.
+TSUKUYOMI, the acceptance case (Obsidian+). 2026-11-08: Mangetsu held 6
+matches in OB47 and 21 in OB46, so #129's rule, which falls back one window
+only, left him `below minimum` (OB44 17, OB45 30, OB46 21, OB47 6). At about
+1.6 matches a day he cannot count on 30 inside one 14-day patch. 2026-11-09,
+under the reach-back rule: the two-window read is 27, so the walk adds OB45
+and stops at 57 matches, "OB45–OB47". 56% Mid, 26% Jungle, 11% Carry — a role
+shift off Jungle (the Wilson upper bound of the Jungle share is 0.39). He
+buys Rod of Tahuti 86%, Book of Thoth 79%, Chronos' Pendant 72%, Obsidian
+Shard 63%, Polynomicon 33%, Spear of Desolation 23%; starter Bluestone Brooch
+42%; relic Purification Beads 60%. Four listed items carry the OB41–OB46 span
+(Rod of Tahuti, Obsidian Shard, Polynomicon, Spear of the Magus — blind spot
+(1) above); nothing OB47 changed is in his build. Pinned on a frozen copy of
+his store in `tests/fixtures/aspect_store_tsukuyomi`. This is the community's
+build, not Ichor's: his model build still cannot change role (STATE.md §5).
 
     python -m smite.aspect_matches refresh    # the daily job's step
     python -m smite.aspect_matches derive     # rewrite the notes from the store
@@ -587,18 +662,125 @@ def item_name_lookup(items_root: Path = ITEMS_ROOT) -> dict:
     return out
 
 
-def _share_list(counter: Counter, n: int, names: dict, limit: int) -> list:
+def _share_list(counter: Counter, n: int, names: dict, limit: int, flag=None) -> list:
+    """The `limit` most-bought, as shares of matches. `flag(slug)` adds a
+    `changed` key to an item whose stats moved after the oldest pooled window."""
     ranked = sorted(counter.items(), key=lambda kv: (-kv[1], kv[0]))[:limit]
-    return [{"name": names.get(slug, slug), "share": round(c / n, 2)} for slug, c in ranked]
+    out = []
+    for slug, c in ranked:
+        row = {"name": names.get(slug, slug), "share": round(c / n, 2)}
+        changed = flag(slug) if flag else None
+        if changed:
+            row["changed"] = changed
+        out.append(row)
+    return out
 
 
-def choose_window(counts: dict, windows: list):
-    """`(window, rule)`. Newest, else the last closed, else none."""
+def choose_windows(counts: dict, windows: list):
+    """`(pool, rule)`: the windows an entry reads, NEWEST FIRST, and which
+    branch of the rule chose them. `windows` is the store's, newest first.
+
+      newest       the newest window alone, when it holds MIN_MATCHES;
+      last closed  else the last closed window alone, when it does;
+      pooled back  else the newest windows together — the newest and the last
+                   closed, then one more closed window at a time — until the
+                   pool holds MIN_MATCHES;
+      below minimum when every stored window together is still short.
+
+    The first two branches are the rule as #129 shipped it, unchanged, so an
+    entry that showed before reads the same windows now. The walk has no depth
+    limit: it reaches as far back as the store holds, so a retention policy is
+    also this rule's reach-back limit (module docstring)."""
     if windows and counts.get(windows[0], 0) >= MIN_MATCHES:
-        return windows[0], "newest"
+        return [windows[0]], "newest"
     if len(windows) > 1 and counts.get(windows[1], 0) >= MIN_MATCHES:
-        return windows[1], "last closed"
-    return None, "below minimum"
+        return [windows[1]], "last closed"
+    total = 0
+    for i, w in enumerate(windows):
+        total += counts.get(w, 0)
+        if i and total >= MIN_MATCHES:
+            return list(windows[: i + 1]), "pooled back"
+    return [], "below minimum"
+
+
+def window_patch(window: str):
+    """47 from "ob47": SmiteBrain names its patch windows after the patch."""
+    m = re.fullmatch(r"ob(\d+)", str(window or ""))
+    return int(m.group(1)) if m else None
+
+
+def patch_label(windows: list) -> str:
+    """"OB47", or "OB45–OB47" for a pool. `windows` oldest first."""
+    first, last = windows[0].upper(), windows[-1].upper()
+    return first if first == last else f"{first}–{last}"
+
+
+# -- which items changed since a window ----------------------------------------
+
+def item_changes(snapshots_dir: Path = None, history_path: Path = None) -> list:
+    """Every item whose cost, tier or stats moved between two consecutive
+    item-stat snapshots: `[{slug, name, after, through}]`, where the change
+    happened at a patch in `(after, through]` — or DURING `through` when the
+    two are equal (a wiki correction or a hotfix inside one patch). Patches
+    are attributed the way the patch-notes page attributes them, by when ITEM
+    DATA was scraped under each label (`snapshots.data_history`), and `after`
+    is None when the older snapshot predates every label.
+
+    This is the only per-patch record of item changes the repo keeps, and it
+    has two blind spots, both measured 2026-11-09 (module docstring): it holds
+    no item data between OB40 and OB46, so a change in that span carries the
+    whole span; and a snapshot holds cost, tier and stats only, so a PASSIVE
+    change is never seen. Imported here: `snapshots` pulls in the scoring
+    stack, and the daily refresh step needs none of it."""
+    from smite import snapshots
+    history = snapshots.data_history(snapshots.load_patch_history(
+        history_path or snapshots.PATCH_HISTORY_PATH))
+    paths = sorted(Path(snapshots_dir or snapshots.SNAPSHOTS_DIR).glob("*.json"),
+                   key=lambda p: p.stem)
+    out = []
+    for old, new in zip(paths, paths[1:]):
+        diff = snapshots.diff_snapshots(snapshots.load_snapshot(old), snapshots.load_snapshot(new))
+        after = snapshots.patch_number(snapshots.patch_at(history, old.stem))
+        through = snapshots.patch_number(snapshots.patch_at(history, new.stem))
+        if through is None:
+            continue
+        for entry in diff["changed"]:
+            out.append({"slug": god_slug(_fold(entry["name"])), "name": entry["name"],
+                        "after": after, "through": through})
+    return out
+
+
+def _change_flag(slug: str, recs_by_w: dict, pool: list, changes: list, bought):
+    """The flag for one listed item, or None: its LATEST change at a patch
+    after the oldest pooled window, and how many of the pooled matches that
+    bought it are older than that patch. `pool` newest first; `bought(record)`
+    says whether a record bought the item."""
+    oldest = window_patch(pool[-1])
+    hits = [c for c in changes if c["slug"] == slug and c["through"] > oldest]
+    if not hits:
+        return None
+    c = max(hits, key=lambda c: (c["through"], c["after"] or -1))
+    exact = c["after"] is not None and c["after"] + 1 == c["through"]
+    mine = [w for w in pool for r in recs_by_w[w] if bought(r)]
+    # Matches in a window before `through` predate the change if it came at
+    # `through`, the latest patch it can have come at; so for a range this is
+    # an upper bound, and for a change during one patch a lower one.
+    older = sum(window_patch(w) < c["through"] for w in mine)
+    of = f"{older} of the {len(mine)} matches that bought it are older"
+    through = f"OB{c['through']}"
+    if exact:
+        patch, says = through, f"changed in {through}; {of}"
+    elif c["after"] == c["through"]:
+        patch, says = through, f"its stats moved during {through}; at least {of}"
+    elif c["after"] is None:
+        patch = f"{through} or earlier"
+        says = f"its stats moved at {through} or earlier, at a patch not recorded; up to {of}"
+    else:
+        patch = f"OB{c['after'] + 1}–{through}"
+        says = (f"its stats moved between Ichor's OB{c['after']} and {through} item data, "
+                f"at a patch not recorded; up to {of}")
+    return {"patch": patch, "exact": exact, "older_matches": older,
+            "matches": len(mine), "says": says}
 
 
 def _aggregate_row(aggregate: dict, window: str, god: str, aspect_name):
@@ -608,18 +790,30 @@ def _aggregate_row(aggregate: dict, window: str, god: str, aspect_name):
     return None
 
 
+def _pooled_aggregate(aggregate: dict, pool: list, god: str, aspect_name):
+    """`(matches, win_rate)` summed over the pooled windows' split index rows,
+    or `(None, None)` when any pooled window has no row: a sum over part of the
+    pool would describe different windows from the record beside it."""
+    rows = [_aggregate_row(aggregate, w, god, aspect_name) for w in pool]
+    if not rows or any(r is None for r in rows):
+        return None, None
+    played = sum(r["matches_played"] or 0 for r in rows)
+    won = sum(r["matches_won"] or 0 for r in rows)
+    return played, (round(won / played, 3) if played else None)
+
+
 def aspect_entry(god: str, base_role: str, aspect: dict, by_window: dict,
-                 meta: dict, aggregate: dict, names: dict) -> dict:
+                 meta: dict, aggregate: dict, names: dict, changes=()) -> dict:
     windows = ordered_windows(meta)
     recs_by_w = {w: [r for r in by_window.get(w, []) if r["aspect"] == aspect["value"]]
                  for w in windows}
     counts = {w: len(v) for w, v in recs_by_w.items() if v}
-    window, rule = choose_window(counts, windows)
-    entry = {"aspect": aspect["name"], "status": "shown" if window else "below minimum"}
-    if window is None:
+    pool, rule = choose_windows(counts, windows)
+    entry = {"aspect": aspect["name"], "status": "shown" if pool else "below minimum"}
+    if not pool:
         entry["matches_by_window"] = counts
         return entry
-    recs = recs_by_w[window]
+    recs = [r for w in pool for r in recs_by_w[w]]
     n = len(recs)
     decided = [r for r in recs if r["placement"] in (1, 2)]
     wins = sum(r["placement"] == 1 for r in decided)
@@ -640,33 +834,38 @@ def aspect_entry(god: str, base_role: str, aspect: dict, by_window: dict,
     items = Counter(s for r in recs for s in set(r["items"]) if s)
     starters = Counter(r["starter"] for r in recs if r["starter"])
     relics = Counter(r["relic"] for r in recs if r["relic"])
-    agg = _aggregate_row(aggregate, window, god, aspect["name"])
-    agg_none = _aggregate_row(aggregate, window, god, None)
-    win = meta["windows"][window]
+
+    def flag(field):
+        test = ((lambda slug: lambda r: slug in r["items"]) if field == "items"
+                else (lambda slug: lambda r: r[field] == slug))
+        return lambda slug: _change_flag(slug, recs_by_w, pool, changes, test(slug))
+
+    agg_n, agg_rate = _pooled_aggregate(aggregate, pool, god, aspect["name"])
+    none_n, none_rate = _pooled_aggregate(aggregate, pool, god, None)
+    oldest_first = pool[::-1]
     entry.update({
-        "window": window,
+        "windows": oldest_first,
+        "patches": patch_label(oldest_first),
         "window_rule": rule,
-        "window_start": win["start"][:10],
-        "window_end": (win.get("end") or "")[:10] or None,
+        "window_start": meta["windows"][pool[-1]]["start"][:10],
+        "window_end": (meta["windows"][pool[0]].get("end") or "")[:10] or None,
         "matches": n,
         "wins": wins,
         "win_share": round(wins / len(decided), 2) if decided else None,
         "aggregate": {
-            "aspect_matches": agg and agg["matches_played"],
-            "aspect_win_rate": (round(agg["matches_won"] / agg["matches_played"], 3)
-                                if agg and agg["matches_played"] else None),
-            "no_aspect_matches": agg_none and agg_none["matches_played"],
-            "no_aspect_win_rate": (round(agg_none["matches_won"] / agg_none["matches_played"], 3)
-                                   if agg_none and agg_none["matches_played"] else None),
+            "aspect_matches": agg_n,
+            "aspect_win_rate": agg_rate,
+            "no_aspect_matches": none_n,
+            "no_aspect_win_rate": none_rate,
         },
         "roles": [{"role": r, "matches": c, "share": round(c / n, 2)}
                   for r, c in sorted(roles.items(), key=lambda kv: (-kv[1], kv[0]))],
         "base_role": base_role,
         "base_role_share": round(base_share, 2),
         "role_shift": shift,
-        "items": _share_list(items, n, names, ITEMS_SHOWN),
-        "starters": _share_list(starters, n, names, STARTERS_SHOWN),
-        "relics": _share_list(relics, n, names, RELICS_SHOWN),
+        "items": _share_list(items, n, names, ITEMS_SHOWN, flag("items")),
+        "starters": _share_list(starters, n, names, STARTERS_SHOWN, flag("starter")),
+        "relics": _share_list(relics, n, names, RELICS_SHOWN, flag("relic")),
         "matches_by_window": counts,
     })
     unmapped = sorted({s for c in (items, starters, relics) for s in c if s not in names})
@@ -675,8 +874,10 @@ def aspect_entry(god: str, base_role: str, aspect: dict, by_window: dict,
     return entry
 
 
-def note_block(god: str, base_role: str, root: Path, meta: dict, aggregate: dict, names: dict):
-    """The `community_aspects` value for one god's Conquest note, or None."""
+def note_block(god: str, base_role: str, root: Path, meta: dict, aggregate: dict, names: dict,
+               changes=()):
+    """The `community_aspects` value for one god's Conquest note, or None.
+    `changes` is `item_changes()`: what flags a listed item."""
     aspects = meta.get("aspects", {}).get(god_slug(god)) or []
     if not aspects:
         return None
@@ -689,9 +890,13 @@ def note_block(god: str, base_role: str, root: Path, meta: dict, aggregate: dict
         **({"complete_from": meta["complete_from"][:10]} if meta.get("complete_from") else {}),
         **({"partial_windows": dict(sorted(partial.items()))} if partial else {}),
         "minimum_matches": MIN_MATCHES,
-        "window_rule": "the newest patch window, or the last closed one when the newest "
-                       "holds fewer than minimum_matches of the aspect's matches",
-        "aspects": [aspect_entry(god, base_role, a, by_window, meta, aggregate, names)
+        "window_rule": "the newest patch window; else the last closed one; else the newest "
+                       "windows pooled, reaching back one closed window at a time, until "
+                       "they hold minimum_matches of the aspect's matches",
+        "item_changes": "an item is flagged when its cost, tier or stats moved at a patch "
+                        "after the oldest window read (data/Analysis/snapshots); a passive "
+                        "change is not recorded there and is never flagged",
+        "aspects": [aspect_entry(god, base_role, a, by_window, meta, aggregate, names, changes)
                     for a in aspects],
     }
 
@@ -705,13 +910,15 @@ def write_notes(root: Path = STORE_ROOT, builds_root: Path = BUILDS_ROOT,
                 gods_root: Path = GODS_ROOT, items_root: Path = ITEMS_ROOT) -> int:
     """Rewrite `community_aspects` in every Conquest note. Returns notes changed."""
     meta, aggregate, names = load_meta(root), load_aggregate(root), item_name_lookup(items_root)
+    changes = item_changes()
     changed = 0
     for path in sorted(builds_root.glob("*-Conquest.md")):
         fm, body = notes.read_note(path)
         god = fm.get("god")
         if not god:
             continue
-        block = note_block(god, base_role_of(god, gods_root), root, meta, aggregate, names)
+        block = note_block(god, base_role_of(god, gods_root), root, meta, aggregate, names,
+                           changes)
         if fm.get("community_aspects") == block:
             continue
         if block is None:
@@ -733,9 +940,10 @@ def depth_rows(root: Path = STORE_ROOT) -> list:
         stored = load_god(root, slug)
         for a in aspects:
             counts = {w: sum(r["aspect"] == a["value"] for r in stored.get(w, [])) for w in windows}
-            window, rule = choose_window(counts, windows)
+            pool, rule = choose_windows(counts, windows)
             rows.append({"god": slug, "aspect": a["name"], "counts": counts,
-                         "window": window, "rule": rule})
+                         "windows": pool[::-1], "rule": rule,
+                         "matches": sum(counts.get(w, 0) for w in pool)})
     return rows
 
 
@@ -763,7 +971,8 @@ def main(argv=None) -> int:
     for r in sorted(rows, key=lambda r: -sum(r["counts"].values())):
         print(f"{r['god']:16} {r['aspect'][:34]:34} "
               + " ".join(f"{r['counts'].get(w, 0):5}" for w in windows)
-              + f"  {r['window'] or '-'} ({r['rule']})")
+              + (f"  {patch_label(r['windows'])} {r['matches']} ({r['rule']})" if r["windows"]
+                 else f"  - ({r['rule']})"))
     return 0
 
 

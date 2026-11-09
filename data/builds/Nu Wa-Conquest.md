@@ -936,11 +936,98 @@ community_aspects:
   partial_windows:
     ob44: '2026-09-24'
   minimum_matches: 30
-  window_rule: the newest patch window, or the last closed one when the newest holds
-    fewer than minimum_matches of the aspect's matches
+  window_rule: the newest patch window; else the last closed one; else the newest
+    windows pooled, reaching back one closed window at a time, until they hold minimum_matches
+    of the aspect's matches
+  item_changes: an item is flagged when its cost, tier or stats moved at a patch after
+    the oldest window read (data/Analysis/snapshots); a passive change is not recorded
+    there and is never flagged
   aspects:
   - aspect: Aspect of Shining Mist
-    status: below minimum
+    status: shown
+    windows:
+    - ob45
+    - ob46
+    - ob47
+    patches: OB45–OB47
+    window_rule: pooled back
+    window_start: '2026-10-06'
+    window_end: '2026-11-08'
+    matches: 75
+    wins: 41
+    win_share: 0.55
+    aggregate:
+      aspect_matches: 91
+      aspect_win_rate: 0.484
+      no_aspect_matches: 1153
+      no_aspect_win_rate: 0.55
+    roles:
+    - role: Carry
+      matches: 36
+      share: 0.48
+    - role: Solo
+      matches: 32
+      share: 0.43
+    - role: Jungle
+      matches: 3
+      share: 0.04
+    - role: Mid
+      matches: 2
+      share: 0.03
+    - role: Support
+      matches: 2
+      share: 0.03
+    base_role: Mid
+    base_role_share: 0.03
+    role_shift:
+      role: Carry
+      share: 0.48
+      says: 'most Aspect of Shining Mist players do not play Mid: Carry 48%, Mid 3%'
+    items:
+    - name: Tyrfing
+      share: 0.72
+    - name: Riptalon
+      share: 0.51
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 22
+        matches: 38
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 22 of the 38 matches that bought it are older
+    - name: Devourer's Gauntlet
+      share: 0.47
+    - name: Odysseus' Bow
+      share: 0.45
+    - name: Hastened Fatalis
+      share: 0.33
+    - name: Silverbranch Bow
+      share: 0.33
+    - name: Berserker's Shield
+      share: 0.31
+      changed:
+        patch: OB41–OB46
+        exact: false
+        older_matches: 17
+        matches: 23
+        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
+          not recorded; up to 17 of the 23 matches that bought it are older
+    - name: The Executioner
+      share: 0.31
+    starters:
+    - name: Death's Embrace
+      share: 0.43
+    - name: Sharpshooter's Arrow
+      share: 0.23
+    - name: Death's Toll
+      share: 0.12
+    relics:
+    - name: Aegis of Acceleration
+      share: 0.35
+    - name: Purification Beads
+      share: 0.33
+    - name: Agility Relic
+      share: 0.28
     matches_by_window:
       ob47: 6
       ob46: 23
