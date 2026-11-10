@@ -105,6 +105,27 @@ describe("CommandField — the chips wrap", () => {
     expect(row()).toHaveClass("flex-wrap");
   });
 
+  /* Jacob, 2026-11-09: "tighten it so two chips fit". On a 390px phone the
+   * page field's row had 222px beside Clear and Go, and "ra aspect" needs
+   * 271px. Measured in a browser after: "ra joust", "ra aspect" and "ra
+   * arena" sit on one 56px line. */
+  it("on the page: no Clear button and a narrower Go, so two chips and the input share a line", () => {
+    const { field } = setup({ variant: "page" });
+    fireEvent.change(field, { target: { value: "ra aspect " } });
+    expect(screen.queryByRole("button", { name: "Clear" })).not.toBeInTheDocument();
+    const go = screen.getByRole("button", { name: "Go" });
+    expect(go).toHaveClass("px-2", "h-11");
+    // Each chip still has its own remove, at the 24px floor or more.
+    expect(screen.getByRole("button", { name: "Remove Ra" })).toHaveClass("w-7", "h-8");
+  });
+
+  it("in the bar: Clear and Go as they were", () => {
+    const { field } = setup();
+    fireEvent.change(field, { target: { value: "ra aspect " } });
+    expect(screen.getByRole("button", { name: "Clear" })).toHaveClass("h-9", "w-9");
+    expect(screen.getByRole("button", { name: "Go" })).toHaveClass("px-3", "h-8");
+  });
+
   it("still pulls the last chip back into text on Backspace in an empty input, and keeps focus", () => {
     const { field } = setup({ variant: "page" });
     field.focus();

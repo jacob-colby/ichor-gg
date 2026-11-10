@@ -262,6 +262,15 @@ export function CommandField({
   // line inside the 1px border (56 − 2, 44 − 2).
   const h = page ? "min-h-14" : "min-h-11";
   const line = page ? "h-[54px]" : "h-[42px]";
+  // The page field (a phone's god select) budgets its line so two chips and
+  // the input fit on one line at 390px: "ra aspect" needs 93.7 + 4 + 105.5 +
+  // 4 + 64 = 271.2px of row, and the row had 222px beside Clear and Go. So
+  // there it has no Clear button (40px with its gap; each chip's ✕ and
+  // Backspace still remove chips) and Go is 8px a side, not 14 (12px). That
+  // gives the row 274px (Jacob, 2026-11-09; the budget table is in the PR).
+  // The bar keeps both as they were.
+  const showClear = !page;
+  const showGo = !!(full.you || full.enemies.length > 0 || itemHits.length > 0 || (!holdBack && suggestions.length > 0));
   const chipH = page ? "h-11" : "h-9";
 
   const chip = (t: QueryToken, i: number) => {
@@ -395,16 +404,18 @@ export function CommandField({
             className={`${chipH} min-w-[64px] flex-1 bg-transparent font-medium text-ink placeholder:text-quiet focus:outline-none focus-visible:outline-none ${
               page ? "text-[17px]" : "text-copy"}`} />
         </div>
-        {hasText ? (
+        {hasText ? (showClear || showGo) && (
           <span className={`flex ${line} flex-none items-center gap-1 self-end`}>
-            <button type="button" aria-label="Clear" onPointerDown={(e) => e.preventDefault()}
-              onClick={() => { setCommitted(""); setTail(""); input.current?.focus(); }}
-              className="press flex h-9 w-9 flex-none items-center justify-center rounded-[8px] text-quiet hover:text-ink">
-              <CloseGlyph size={16} />
-            </button>
-            {(full.you || full.enemies.length > 0 || itemHits.length > 0 || (!holdBack && suggestions.length > 0)) && (
+            {showClear && (
+              <button type="button" aria-label="Clear" onPointerDown={(e) => e.preventDefault()}
+                onClick={() => { setCommitted(""); setTail(""); input.current?.focus(); }}
+                className="press flex h-9 w-9 flex-none items-center justify-center rounded-[8px] text-quiet hover:text-ink">
+                <CloseGlyph size={16} />
+              </button>
+            )}
+            {showGo && (
               <button type="button" onPointerDown={(e) => e.preventDefault()} onClick={() => choose(undefined)}
-                className={`press ${page ? "h-11 px-3.5 text-[18px]" : "h-8 px-3 text-[16px]"} flex-none rounded-[9px] bg-accent font-cond font-bold uppercase text-accent-ink`}>
+                className={`press ${page ? "h-11 px-2 text-[18px]" : "h-8 px-3 text-[16px]"} flex-none rounded-[9px] bg-accent font-cond font-bold uppercase text-accent-ink`}>
                 Go
               </button>
             )}
