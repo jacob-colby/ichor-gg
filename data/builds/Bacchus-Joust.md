@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.69
-    win_rate: 0.6162
-    matches: 448
+    pick_rate: 0.68
+    win_rate: 0.6226
+    matches: 505
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.51
     win_rate: 0.63
-    matches: 331
+    matches: 378
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -609,13 +609,13 @@ builds:
       pick: 0.0
       fit: 0.64
   swaps:
-  - added: Devourer's Gauntlet
-    removed: Brawler’s Beat Stick
-    reason: Conquest community 63% win over 428 matches (vs 58% on this god), taking
-      the model's weakest slot from Brawler’s Beat Stick
   - added: Hussar's Wings
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 71% win over 67 matches (vs 58% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  - added: Devourer's Gauntlet
     removed: Draconic Scale
-    reason: Conquest community 71% win over 58 matches (vs 58% on this god), taking
+    reason: Conquest community 63% win over 490 matches (vs 58% on this god), taking
       the model's weakest slot from Draconic Scale
   borrowed_from: Conquest
   starter: *id001

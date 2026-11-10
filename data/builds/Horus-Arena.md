@@ -71,15 +71,15 @@ builds:
     base: Selflessness
     upgrade: Heroism
     pick_rate: 0.46
-    win_rate: 0.6028
-    matches: 150
+    win_rate: 0.5852
+    matches: 172
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
     pick_rate: 0.42
-    win_rate: 0.51
-    matches: 136
+    win_rate: 0.49
+    matches: 158
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -410,6 +410,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.75
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shield Splitter
+  - Shell of Rebuke
+  - Freya's Tears
+  - Amanita Charm
+  flex_slots:
+  - Magi's Cloak
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Magi's Cloak:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Shell of Rebuke:
+      total: 0.37
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.34
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Amanita Charm:
+      total: 0.71
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+  swaps:
+  - added: Shell of Rebuke
+    removed: Jotunn's Revenge
+    reason: Conquest community 67% win over 71 matches (vs 53% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

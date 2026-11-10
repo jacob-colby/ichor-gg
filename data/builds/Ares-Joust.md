@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.47
-    win_rate: 0.5834
-    matches: 143
+    pick_rate: 0.45
+    win_rate: 0.5798
+    matches: 148
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
     pick_rate: 0.54
     win_rate: 0.59
-    matches: 164
+    matches: 177
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -476,6 +476,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.63
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shell of Rebuke
+  - Freya's Tears
+  - Draconic Scale
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Draconic Scale
+  - Shell of Rebuke
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.66
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Shell of Rebuke:
+      total: 0.42
+      efficiency: 0.41
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Draconic Scale:
+      total: 0.57
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Erosion:
+      total: 0.57
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+  swaps:
+  - added: Shell of Rebuke
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 69% win over 49 matches (vs 55% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

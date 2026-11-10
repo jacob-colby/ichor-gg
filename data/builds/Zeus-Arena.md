@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.32
-    win_rate: 0.4987
-    matches: 89
+    pick_rate: 0.34
+    win_rate: 0.5306
+    matches: 109
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.52
-    win_rate: 0.64
-    matches: 144
+    pick_rate: 0.5
+    win_rate: 0.63
+    matches: 160
     basis: community
     borrowed_from: Conquest
 - source: suggested

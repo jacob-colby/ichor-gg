@@ -71,15 +71,15 @@ builds:
     base: Death's Toll
     upgrade: Death's Embrace
     pick_rate: 0.8
-    win_rate: 0.5962
-    matches: 268
+    win_rate: 0.5834
+    matches: 313
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.59
-    win_rate: 0.56
-    matches: 198
+    pick_rate: 0.58
+    win_rate: 0.57
+    matches: 227
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -743,7 +743,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Qin's Blade
-    reason: Conquest community 76% win over 54 matches (vs 58% on this god), taking
+    reason: Conquest community 72% win over 59 matches (vs 58% on this god), taking
       the model's weakest slot from Qin's Blade
   borrowed_from: Conquest
   starter: *id001

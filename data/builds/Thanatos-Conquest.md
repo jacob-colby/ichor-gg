@@ -6,183 +6,183 @@ builds:
 - source: community
   aspect: Aspect of Reaping
   aspect_pick_rate: 0.28
-  aspect_win_rate: 0.59
+  aspect_win_rate: 0.58
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.56
-    win_rate: 0.57
-    alternates:
-    - name: Hydra's Lament
-      pick_rate: 0.23
-      win_rate: 0.53
-    - name: Daybreak Gavel
-      pick_rate: 0.07
-      win_rate: 0.54
-  - name: Hydra's Lament
-    pick_rate: 0.36
+    pick_rate: 0.57
     win_rate: 0.56
     alternates:
-    - name: Jotunn's Revenge
+    - name: Hydra's Lament
       pick_rate: 0.22
-      win_rate: 0.58
+      win_rate: 0.56
+    - name: Daybreak Gavel
+      pick_rate: 0.07
+      win_rate: 0.5
+  - name: Hydra's Lament
+    pick_rate: 0.37
+    win_rate: 0.55
+    alternates:
+    - name: Jotunn's Revenge
+      pick_rate: 0.21
+      win_rate: 0.6
     - name: The Reaper
       pick_rate: 0.13
       win_rate: 0.53
   - name: The Reaper
-    pick_rate: 0.35
+    pick_rate: 0.33
     win_rate: 0.58
     alternates:
     - name: Hydra's Lament
-      pick_rate: 0.1
-      win_rate: 0.59
-    - name: The Crusher
-      pick_rate: 0.07
-      win_rate: 0.52
+      pick_rate: 0.09
+      win_rate: 0.62
+    - name: Heartseeker
+      pick_rate: 0.08
+      win_rate: 0.53
   - name: Heartseeker
-    pick_rate: 0.29
-    win_rate: 0.49
+    pick_rate: 0.28
+    win_rate: 0.52
     alternates:
     - name: The Crusher
       pick_rate: 0.1
-      win_rate: 0.68
+      win_rate: 0.71
     - name: The Reaper
-      pick_rate: 0.09
-      win_rate: 0.56
+      pick_rate: 0.1
+      win_rate: 0.55
   - name: Titan's Bane
-    pick_rate: 0.1
-    win_rate: 0.54
+    pick_rate: 0.11
+    win_rate: 0.55
     alternates:
     - name: Heartseeker
       pick_rate: 0.2
-      win_rate: 0.64
+      win_rate: 0.62
     - name: Avatar's Parashu
       pick_rate: 0.08
-      win_rate: 0.55
+      win_rate: 0.57
   - name: Skeggox
-    pick_rate: 0.12
-    win_rate: 0.71
+    pick_rate: 0.11
+    win_rate: 0.72
     alternates:
     - name: Avatar's Parashu
-      pick_rate: 0.09
+      pick_rate: 0.08
       win_rate: 0.87
-    - name: Lucerne Hammer
+    - name: Titan's Bane
       pick_rate: 0.07
-      win_rate: 0.5
+      win_rate: 0.56
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.44
-    win_rate: 0.65
+    pick_rate: 0.43
+    win_rate: 0.66
   - name: Bumba's Cudgel
-    pick_rate: 0.21
-    win_rate: 0.44
+    pick_rate: 0.2
+    win_rate: 0.45
   - name: Hunter's Cowl
-    pick_rate: 0.13
-    win_rate: 0.58
+    pick_rate: 0.14
+    win_rate: 0.56
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.57
   - name: Blink Rune
-    pick_rate: 0.33
-    win_rate: 0.54
+    pick_rate: 0.32
+    win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.15
-    win_rate: 0.62
+    win_rate: 0.61
   starter_sightings:
   - name: Bumba's Hammer
-    pick_rate: 0.44
-    win_rate: 0.65
+    pick_rate: 0.43
+    win_rate: 0.66
   - name: Bumba's Cudgel
-    pick_rate: 0.21
-    win_rate: 0.44
+    pick_rate: 0.2
+    win_rate: 0.45
   - name: Hunter's Cowl
-    pick_rate: 0.13
-    win_rate: 0.58
+    pick_rate: 0.14
+    win_rate: 0.56
   - name: Leather Cowl
-    pick_rate: 0.09
-    win_rate: 0.42
+    pick_rate: 0.1
+    win_rate: 0.4
   - name: Sundering Axe
     pick_rate: 0.04
-    win_rate: 0.73
+    win_rate: 0.75
   - name: Warrior's Axe
     pick_rate: 0.03
-    win_rate: 0.6
+    win_rate: 0.5
   - name: Bumba's Spear
     pick_rate: 0.02
-    win_rate: 0.89
+    win_rate: 0.9
   - name: Archmage's Gem
-    pick_rate: 0.008
+    pick_rate: 0.009
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.009
+    win_rate: 0.25
+  - name: Conduit Gem
+    pick_rate: 0.007
     win_rate: 0.33
   - name: Blood-soaked Shroud
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.0
   - name: Bluestone Pendant
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.5
-  - name: Conduit Gem
-    pick_rate: 0.005
-    win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.004
+    win_rate: 0.5
   - name: Gilded Arrow
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.0
   - name: Heroism
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.5
   - name: Selflessness
-    pick_rate: 0.005
-    win_rate: 1.0
-  - name: Bluestone Brooch
-    pick_rate: 0.003
-    win_rate: 0.0
-  - name: Bumba's Golden Dagger
-    pick_rate: 0.003
+    pick_rate: 0.004
     win_rate: 1.0
   - name: Death's Embrace
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 0.0
   - name: Sharpshooter's Arrow
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.57
   - name: Blink Rune
-    pick_rate: 0.33
-    win_rate: 0.54
+    pick_rate: 0.32
+    win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.15
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Phantom Shell
     pick_rate: 0.03
     win_rate: 0.5
   - name: Agility Relic
     pick_rate: 0.02
-    win_rate: 0.57
+    win_rate: 0.44
   - name: Sundering Arc
     pick_rate: 0.02
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/thanatos/
-  last_verified: '2026-11-09'
-  god_win_rate: 0.5664160401002506
-  god_matches_won: 226
-  god_matches_played: 399
+  last_verified: '2026-11-10'
+  god_win_rate: 0.5659955257270693
+  god_matches_won: 253
+  god_matches_played: 447
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-09'
-  god_matches_analyzed: 6470
+  god_window_end: '2026-11-10'
+  god_matches_analyzed: 7420
   starter:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.65
-    win_rate: 0.5822
-    matches: 259
+    pick_rate: 0.63
+    win_rate: 0.5933
+    matches: 282
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.57
-    matches: 184
+    matches: 210
     basis: community
 - source: suggested
   archetype: core
@@ -194,8 +194,8 @@ builds:
   - Titan's Bane
   - Avatar's Parashu
   flex_slots:
-  - Hydra's Lament
   - Titan's Bane
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -219,38 +219,38 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 1.0
     Hydra's Lament:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
-      win: 0.56
-      pick: 0.49
+      win: 0.55
+      pick: 0.5
       fit: 0.71
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.91
     The Crusher:
-      total: 0.64
+      total: 0.66
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 1.0
     Titan's Bane:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
-      win: 0.54
-      pick: 0.22
+      win: 0.55
+      pick: 0.24
       fit: 1.0
     Avatar's Parashu:
       total: 0.7
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.91
   community_ordered:
   - Jotunn's Revenge
@@ -262,15 +262,15 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.65
-    win_rate: 0.5822
-    matches: 259
+    pick_rate: 0.63
+    win_rate: 0.5933
+    matches: 282
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.46
+    pick_rate: 0.47
     win_rate: 0.57
-    matches: 184
+    matches: 210
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -306,11 +306,11 @@ builds:
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 0.71
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.5
       win: 0.56
       pick: 0.0
@@ -318,26 +318,26 @@ builds:
     Hydra's Lament:
       total: 0.56
       efficiency: 0.55
-      win: 0.56
-      pick: 0.49
+      win: 0.55
+      pick: 0.5
       fit: 0.63
     The Reaper:
       total: 0.54
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.47
     The Crusher:
-      total: 0.58
+      total: 0.59
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 0.57
     Avatar's Parashu:
-      total: 0.64
+      total: 0.63
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.47
   community_ordered:
   - Jotunn's Revenge
@@ -354,11 +354,11 @@ builds:
   - Hydra's Lament
   - The Reaper
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   - Avatar's Parashu
   flex_slots:
   - Hydra's Lament
-  - Titan's Bane
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -381,45 +381,45 @@ builds:
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 0.78
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
-      win: 0.56
-      pick: 0.49
+      win: 0.55
+      pick: 0.5
       fit: 0.54
     The Reaper:
       total: 0.55
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.56
     The Crusher:
-      total: 0.59
+      total: 0.6
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 0.66
-    Titan's Bane:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.54
-      pick: 0.22
-      fit: 0.66
+    Heartseeker:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.52
+      pick: 0.47
+      fit: 0.76
     Avatar's Parashu:
       total: 0.65
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.56
   community_ordered:
   - Jotunn's Revenge
   - Hydra's Lament
   - The Reaper
   - The Crusher
-  - Titan's Bane
+  - Heartseeker
   - Avatar's Parashu
   starter: *id001
   relic: *id002
@@ -433,7 +433,7 @@ builds:
   - Avatar's Parashu
   - Amanita Charm
   flex_slots:
-  - The Crusher
+  - The Reaper
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -459,11 +459,11 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
       win: 0.56
       pick: 0.0
@@ -472,19 +472,19 @@ builds:
       total: 0.57
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.7
     The Crusher:
-      total: 0.57
+      total: 0.58
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 0.5
     Avatar's Parashu:
-      total: 0.63
+      total: 0.62
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.4
     Amanita Charm:
       total: 0.62
@@ -505,8 +505,8 @@ builds:
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
-  - Titan's Bane
   - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   flex_slots:
   - Titan's Bane
@@ -534,45 +534,45 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 1.0
     The Reaper:
       total: 0.61
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.94
     The Crusher:
-      total: 0.64
+      total: 0.66
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 1.0
-    Titan's Bane:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.54
-      pick: 0.22
-      fit: 1.0
     Heartseeker:
-      total: 0.55
+      total: 0.57
       efficiency: 0.45
-      win: 0.49
-      pick: 0.48
+      win: 0.52
+      pick: 0.47
+      fit: 1.0
+    Titan's Bane:
+      total: 0.58
+      efficiency: 0.48
+      win: 0.55
+      pick: 0.24
       fit: 1.0
     Avatar's Parashu:
       total: 0.71
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.94
   community_ordered:
   - Jotunn's Revenge
   - The Reaper
   - The Crusher
-  - Titan's Bane
   - Heartseeker
+  - Titan's Bane
   - Avatar's Parashu
   starter: *id001
   relic: *id002
@@ -611,8 +611,8 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 0.37
     Tyrfing:
       total: 0.56
@@ -633,16 +633,16 @@ builds:
       pick: 0.0
       fit: 0.69
     The Crusher:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 0.43
     Avatar's Parashu:
-      total: 0.62
+      total: 0.61
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.33
   community_ordered:
   - Jotunn's Revenge
@@ -686,17 +686,17 @@ builds:
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 0.85
     Hydra's Lament:
       total: 0.58
       efficiency: 0.55
-      win: 0.56
-      pick: 0.49
+      win: 0.55
+      pick: 0.5
       fit: 0.75
     Arondight:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
       win: 0.56
       pick: 0.0
@@ -705,19 +705,19 @@ builds:
       total: 0.52
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.35
     The Crusher:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 0.45
     Avatar's Parashu:
       total: 0.62
       efficiency: 0.46
       win: 0.87
-      pick: 0.28
+      pick: 0.25
       fit: 0.35
   community_ordered:
   - Jotunn's Revenge
@@ -762,38 +762,38 @@ builds:
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
-      win: 0.57
-      pick: 0.56
+      win: 0.56
+      pick: 0.57
       fit: 1.0
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.5
       win: 0.56
       pick: 0.0
       fit: 0.52
     The Reaper:
-      total: 0.61
+      total: 0.6
       efficiency: 0.52
       win: 0.58
-      pick: 0.55
+      pick: 0.51
       fit: 0.91
     The Crusher:
-      total: 0.64
+      total: 0.66
       efficiency: 0.51
-      win: 0.68
+      win: 0.71
       pick: 0.17
       fit: 1.0
     Heartseeker:
-      total: 0.55
+      total: 0.57
       efficiency: 0.45
-      win: 0.49
-      pick: 0.48
+      win: 0.52
+      pick: 0.47
       fit: 1.0
     Titan's Bane:
-      total: 0.57
+      total: 0.58
       efficiency: 0.48
-      win: 0.54
-      pick: 0.22
+      win: 0.55
+      pick: 0.24
       fit: 1.0
   community_ordered:
   - Jotunn's Revenge
