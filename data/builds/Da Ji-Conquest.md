@@ -861,6 +861,14 @@ community_aspects:
       share: 0.16
     - name: Sharpshooter's Arrow
       share: 0.13
+    - name: Death's Embrace
+      share: 0.11
+    - name: Gilded Arrow
+      share: 0.11
+    - name: Bumba's Golden Dagger
+      share: 0.08
+    - name: Bumba's Spear
+      share: 0.05
     relics:
     - name: Purification Beads
       share: 0.42

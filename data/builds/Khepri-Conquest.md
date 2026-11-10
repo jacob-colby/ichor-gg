@@ -842,6 +842,16 @@ community_aspects:
       share: 0.2
     - name: Bluestone Brooch
       share: 0.18
+    - name: Heroism
+      share: 0.18
+    - name: Pendulum of the Ages
+      share: 0.09
+    - name: Conduit Gem
+      share: 0.05
+    - name: Archmage's Gem
+      share: 0.04
+    - name: War Banner
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.41

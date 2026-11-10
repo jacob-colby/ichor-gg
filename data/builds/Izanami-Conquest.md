@@ -930,6 +930,26 @@ community_aspects:
       share: 0.35
     - name: Conduit Gem
       share: 0.07
+    - name: Bluestone Brooch
+      share: 0.06
+    - name: Sands Of Time
+      share: 0.04
+    - name: Hunter's Cowl
+      share: 0.04
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Leather Cowl
+      share: 0.01
+    - name: Sharpshooter's Arrow
+      share: 0.01
+    - name: Death's Toll
+      share: 0.0
+    - name: Gilded Arrow
+      share: 0.0
+    - name: Bumba's Cudgel
+      share: 0.0
+    - name: Bumba's Hammer
+      share: 0.0
     relics:
     - name: Purification Beads
       share: 0.64

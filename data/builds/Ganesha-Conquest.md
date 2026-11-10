@@ -850,6 +850,20 @@ community_aspects:
       share: 0.29
     - name: Bluestone Pendant
       share: 0.12
+    - name: Bluestone Brooch
+      share: 0.1
+    - name: Sundering Axe
+      share: 0.05
+    - name: Blood-soaked Shroud
+      share: 0.03
+    - name: Selflessness
+      share: 0.02
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
     relics:
     - name: Phantom Shell
       share: 0.31

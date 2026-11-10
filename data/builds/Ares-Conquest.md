@@ -800,6 +800,30 @@ community_aspects:
       share: 0.11
     - name: Hunter's Cowl
       share: 0.11
+    - name: War Flag
+      share: 0.11
+    - name: Bluestone Pendant
+      share: 0.1
+    - name: War Banner
+      share: 0.1
+    - name: Leather Cowl
+      share: 0.08
+    - name: Archmage's Gem
+      share: 0.05
+    - name: Selflessness
+      share: 0.05
+    - name: Bumba's Cudgel
+      share: 0.03
+    - name: Bumba's Hammer
+      share: 0.03
+    - name: Bumba's Spear
+      share: 0.03
+    - name: Blood-soaked Shroud
+      share: 0.02
+    - name: Conduit Gem
+      share: 0.02
+    - name: Sundering Axe
+      share: 0.02
     relics:
     - name: Blink Rune
       share: 0.49

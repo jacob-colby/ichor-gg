@@ -1076,6 +1076,10 @@ community_aspects:
       share: 0.23
     - name: Conduit Gem
       share: 0.06
+    - name: Sands Of Time
+      share: 0.06
+    - name: Bluestone Brooch
+      share: 0.03
     relics:
     - name: Purification Beads
       share: 0.55

@@ -22,9 +22,10 @@
  * aggregates ignore `aspect=`. So it is never shown as an aspect's build. With
  * the aspect on, the Community side hands its whole build area (starter,
  * relic and six) to one slot in GodPage.tsx, `data-testid=
- * "community-aspect-slot"`, which the per-aspect community session fills
- * from the SmiteBrain match records (#129). Until then the slot says there is
- * no per-aspect community build yet (`noAspectBuildLine`).
+ * "community-aspect-slot"`, which draws the god's per-aspect record from the
+ * SmiteBrain match records (`AspectCommunity`, `pipeline/smite/
+ * aspect_matches.py`). When that record has no build to show, the slot says
+ * why and points at the any-aspect six (`anyAspectLine`).
  *
  * Pure. Tested in communityBuild.test.ts.
  */
@@ -63,7 +64,8 @@ export function communityLines(c: CommunitySix, god: string): string[] {
   return lines;
 }
 
-/** What the aspect slot says while no per-aspect community build exists. */
-export function noAspectBuildLine(aspect: string, god: string): string {
-  return `There's no community build for ${aspect} yet. Switch the aspect off to see what all ${god} players buy, on any aspect.`;
+/** Where the any-aspect six is, when the aspect slot has no aspect build to
+ *  show (below the minimum, no record, or a mode with no per-aspect record). */
+export function anyAspectLine(god: string): string {
+  return `Switch the aspect off to see what all ${god} players buy, on any aspect.`;
 }

@@ -821,6 +821,10 @@ community_aspects:
       share: 0.38
     - name: Archmage's Gem
       share: 0.05
+    - name: Pendulum of the Ages
+      share: 0.03
+    - name: Warrior's Axe
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.49

@@ -901,6 +901,22 @@ community_aspects:
       share: 0.19
     - name: Sharpshooter's Arrow
       share: 0.07
+    - name: Gilded Arrow
+      share: 0.04
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Bumba's Spear
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Sundering Axe
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.01
+    - name: Bumba's Golden Dagger
+      share: 0.01
+    - name: Leather Cowl
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.53

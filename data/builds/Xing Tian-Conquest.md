@@ -855,6 +855,16 @@ community_aspects:
       share: 0.27
     - name: Blood-soaked Shroud
       share: 0.13
+    - name: Archmage's Gem
+      share: 0.07
+    - name: Pendulum of the Ages
+      share: 0.07
+    - name: Conduit Gem
+      share: 0.03
+    - name: Sands Of Time
+      share: 0.03
+    - name: Vampiric Shroud
+      share: 0.03
     relics:
     - name: Sundering Arc
       share: 0.4

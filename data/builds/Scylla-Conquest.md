@@ -853,6 +853,20 @@ community_aspects:
       share: 0.32
     - name: Bluestone Brooch
       share: 0.05
+    - name: Bluestone Pendant
+      share: 0.03
+    - name: Sundering Axe
+      share: 0.03
+    - name: War Banner
+      share: 0.03
+    - name: Bumba's Hammer
+      share: 0.02
+    - name: Death's Embrace
+      share: 0.02
+    - name: Sands Of Time
+      share: 0.02
+    - name: Warrior's Axe
+      share: 0.02
     relics:
     - name: Sundering Arc
       share: 0.32

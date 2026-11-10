@@ -1595,6 +1595,34 @@ community_aspects:
         older_matches: 6
         matches: 6
         says: changed in OB47; 6 of the 6 matches that bought it are older
+    - name: Hunter's Cowl
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Leather Cowl
+      share: 0.05
+    - name: Conduit Gem
+      share: 0.03
+    - name: Gilded Arrow
+      share: 0.03
+    - name: Bumba's Spear
+      share: 0.02
+    - name: Death's Embrace
+      share: 0.02
+    - name: Death's Toll
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Selflessness
+      share: 0.02
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
+    - name: Sundering Axe
+      share: 0.02
     relics:
     - name: Aegis of Acceleration
       share: 0.45

@@ -1005,6 +1005,18 @@ community_aspects:
       share: 0.24
     - name: Bluestone Pendant
       share: 0.16
+    - name: Death's Toll
+      share: 0.16
+    - name: Conduit Gem
+      share: 0.05
+    - name: Heroism
+      share: 0.03
+    - name: Leather Cowl
+      share: 0.03
+    - name: Sands Of Time
+      share: 0.03
+    - name: War Banner
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.41

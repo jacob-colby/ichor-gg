@@ -852,6 +852,16 @@ community_aspects:
       share: 0.15
     - name: Bluestone Pendant
       share: 0.15
+    - name: Conduit Gem
+      share: 0.15
+    - name: Pendulum of the Ages
+      share: 0.07
+    - name: Bumba's Hammer
+      share: 0.01
+    - name: Sands Of Time
+      share: 0.01
+    - name: Vampiric Shroud
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.53

@@ -860,6 +860,12 @@ community_aspects:
       share: 0.36
     - name: Leather Cowl
       share: 0.05
+    - name: Sharpshooter's Arrow
+      share: 0.05
+    - name: Sundering Axe
+      share: 0.02
+    - name: War Banner
+      share: 0.02
     relics:
     - name: Aegis of Acceleration
       share: 0.45

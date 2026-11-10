@@ -683,6 +683,18 @@ community_aspects:
       share: 0.28
     - name: Leather Cowl
       share: 0.23
+    - name: Death's Toll
+      share: 0.17
+    - name: War Banner
+      share: 0.03
+    - name: War Flag
+      share: 0.03
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
     relics:
     - name: Agility Relic
       share: 0.53
