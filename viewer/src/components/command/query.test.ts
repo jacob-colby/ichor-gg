@@ -155,6 +155,18 @@ describe("suggest", () => {
     expect(suggest("asp", p("ymir "), gods)).toEqual([]);
   });
 
+  /* The word toggles, so the row says what choosing it does: on, or off once
+   * the aspect is on. Typed or offered, it is the same row. */
+  it("offers the aspect as on, or as 'Aspect off' once it is on, typed or not", () => {
+    const row = (tail: string, text: string) => suggest(tail, p(text), gods).filter((x) => x.kind === "aspect")
+      .map((x) => [x.label, x.on]);
+    expect(row("", "ra ")).toEqual([["Aspect of Thermotherapy", true]]);
+    expect(row("asp", "ra ")).toEqual([["Aspect of Thermotherapy", true]]);
+    expect(row("", "ra aspect ")).toEqual([["Aspect off", false]]);
+    expect(row("asp", "ra aspect ")).toEqual([["Aspect off", false]]);
+    expect(row("aspect", "ra aspect ")).toEqual([["Aspect off", false]]);
+  });
+
   it("offers the next step of the grammar on an empty word", () => {
     expect(suggest("", p(""), gods)).toEqual([]);
     expect(suggest("", p("ra "), gods).map((x) => x.label)).toEqual(["vs", "Conquest", "Joust", "Arena", "Aspect of Thermotherapy"]);

@@ -464,7 +464,9 @@ function OptionBody({ o, gods, items, parsed }: {
   return (
     <>
       <span aria-hidden="true" className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] border border-line font-cond text-[15px] font-bold text-muted">
-        {s.kind === "vs" ? "vs" : s.kind === "mode" ? s.label.slice(0, 1) : "A"}
+        {/* The aspect row draws the aspect's own mark: filled when choosing it
+            turns the aspect on, the outline for "Aspect off". */}
+        {s.kind === "vs" ? "vs" : s.kind === "mode" ? s.label.slice(0, 1) : <AspectHex on={!!s.on} className="h-5 w-5" />}
       </span>
       <span className="min-w-0 flex-1 font-cond text-[20px] font-bold leading-tight text-ink">{s.label}</span>
       <span className="flex-none text-cap text-quiet">
