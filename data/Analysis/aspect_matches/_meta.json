@@ -461,6 +461,10 @@
     "value": "aspect-of-agony"
    },
    {
+    "name": "Aspect of Heartbreak",
+    "value": "aspect-of-heartbreak"
+   },
+   {
     "name": "Aspect of Laceration",
     "value": "aspect-of-laceration"
    },
@@ -479,6 +483,10 @@
    {
     "name": "Aspect of Victorious Conquest",
     "value": "aspect-of-victorious-conquest"
+   },
+   {
+    "name": "Aspect of War",
+    "value": "aspect-of-war"
    }
   ],
   "thor": [
@@ -538,7 +546,7 @@
    "start": "2026-10-20T11:48:48.610Z"
   },
   "ob47": {
-   "end": "2026-11-08T20:22:04.330Z",
+   "end": "2026-11-09T18:17:55.767Z",
    "start": "2026-11-03T11:30:13.083Z"
   }
  }

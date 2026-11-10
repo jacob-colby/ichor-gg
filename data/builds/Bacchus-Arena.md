@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.67
-    win_rate: 0.6261
-    matches: 354
+    pick_rate: 0.69
+    win_rate: 0.6162
+    matches: 448
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.51
-    win_rate: 0.64
-    matches: 270
+    win_rate: 0.63
+    matches: 331
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.61
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Freya's Tears
+  - Mantle Of Discord
+  - Hussar's Wings
+  - Amanita Charm
+  flex_slots:
+  - Mantle Of Discord
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.66
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Magi's Cloak:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Mantle Of Discord:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Hussar's Wings:
+      total: 0.6
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.81
+    Amanita Charm:
+      total: 0.77
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.86
+  swaps:
+  - added: Hussar's Wings
+    removed: Erosion
+    reason: Conquest community 71% win over 58 matches (vs 58% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

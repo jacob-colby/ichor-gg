@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.58
-    win_rate: 0.5095
-    matches: 240
+    pick_rate: 0.55
+    win_rate: 0.5098
+    matches: 285
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.52
-    win_rate: 0.46
-    matches: 215
+    pick_rate: 0.54
+    win_rate: 0.48
+    matches: 280
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Spear of Desolation
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Dreamer's Idol
+  - Lotus Sickle
+  - Soul Gem
+  flex_slots:
+  - Lotus Sickle
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Talisman of Purification — CC-immunity / cleanse
+    swap_item: Talisman of Purification
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Spear of Desolation:
+      total: 0.8
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Obsidian Shard:
+      total: 0.67
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Rod of Tahuti:
+      total: 0.77
+      efficiency: 0.82
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Dreamer's Idol:
+      total: 0.73
+      efficiency: 0.54
+      win: 0.5
+      pick: 0.0
+      fit: 0.92
+    Lotus Sickle:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.77
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Obsidian Shard
+    removed: Book of Thoth
+    reason: Conquest community 61% win over 124 matches (vs 52% on this god), taking
+      the model's weakest slot from Book of Thoth
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 - source: suggested
@@ -1077,6 +1149,79 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+  starter: *id001
+  relic: *id002
+  aspect: Aspect of Thermotherapy
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Void Stone
+  - Spear of Desolation
+  - Obsidian Shard
+  - Lotus Sickle
+  - Soul Gem
+  - Doublet of Binding
+  flex_slots:
+  - Doublet of Binding
+  - Obsidian Shard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Void Stone:
+      total: 0.61
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Spear of Desolation:
+      total: 0.62
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Obsidian Shard:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Lotus Sickle:
+      total: 0.68
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.77
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Doublet of Binding:
+      total: 0.57
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  swaps:
+  - added: Obsidian Shard
+    removed: Genji's Guard
+    reason: Conquest community 61% win over 124 matches (vs 52% on this god), taking
+      the model's weakest slot from Genji's Guard
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
   aspect: Aspect of Thermotherapy

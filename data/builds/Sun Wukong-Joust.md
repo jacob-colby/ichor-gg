@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.74
-    win_rate: 0.5654
-    matches: 171
+    pick_rate: 0.72
+    win_rate: 0.5867
+    matches: 224
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.31
+    pick_rate: 0.3
     win_rate: 0.6
-    matches: 72
+    matches: 93
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -419,18 +419,18 @@ builds:
   - Toxic Blade
   - Berserker's Shield
   - Kinetic Cuirass
-  - Devourer's Gauntlet
-  - Runeforged Hammer
+  - Freya's Tears
+  - Amanita Charm
   flex_slots:
-  - Runeforged Hammer
-  - Devourer's Gauntlet
+  - Kinetic Cuirass
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -464,22 +464,22 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.5
-    Devourer's Gauntlet:
-      total: 0.5
-      efficiency: 0.4
+    Freya's Tears:
+      total: 0.43
+      efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.6
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.55
+      fit: 0.26
+    Amanita Charm:
+      total: 0.68
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.68
   swaps:
-  - added: Devourer's Gauntlet
+  - added: Freya's Tears
     removed: Tyrfing
-    reason: Conquest community 66% win over 97 matches (vs 55% on this god), taking
+    reason: Conquest community 67% win over 68 matches (vs 55% on this god), taking
       the model's weakest slot from Tyrfing
   borrowed_from: Conquest
   starter: *id001

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.42
-    win_rate: 0.6038
-    matches: 98
+    pick_rate: 0.41
+    win_rate: 0.6029
+    matches: 124
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.73
-    win_rate: 0.57
-    matches: 171
+    pick_rate: 0.7
+    win_rate: 0.59
+    matches: 211
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -740,6 +740,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - The Executioner
+  - Toxic Blade
+  - Death Metal
+  - Bragi's Harp
+  - The Reaper
+  - Soul Gem
+  flex_slots:
+  - Toxic Blade
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    The Executioner:
+      total: 0.3
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.3
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Death Metal:
+      total: 0.55
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
+    Bragi's Harp:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    The Reaper:
+      total: 0.58
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.6
+    Soul Gem:
+      total: 0.71
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+  swaps:
+  - added: The Executioner
+    removed: Jotunn's Revenge
+    reason: Conquest community 72% win over 45 matches (vs 57% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

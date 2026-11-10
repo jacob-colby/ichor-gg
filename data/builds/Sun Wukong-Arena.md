@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.74
-    win_rate: 0.5654
-    matches: 171
+    pick_rate: 0.72
+    win_rate: 0.5867
+    matches: 224
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.31
+    pick_rate: 0.3
     win_rate: 0.6
-    matches: 72
+    matches: 93
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -410,6 +410,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.65
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Toxic Blade
+  - Berserker's Shield
+  - Kinetic Cuirass
+  - Freya's Tears
+  - Amanita Charm
+  flex_slots:
+  - Toxic Blade
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.61
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Toxic Blade:
+      total: 0.55
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Berserker's Shield:
+      total: 0.56
+      efficiency: 0.72
+      win: 0.5
+      pick: 0.0
+      fit: 0.4
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.5
+    Freya's Tears:
+      total: 0.43
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.26
+    Amanita Charm:
+      total: 0.66
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+  swaps:
+  - added: Freya's Tears
+    removed: Tyrfing
+    reason: Conquest community 67% win over 68 matches (vs 55% on this god), taking
+      the model's weakest slot from Tyrfing
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

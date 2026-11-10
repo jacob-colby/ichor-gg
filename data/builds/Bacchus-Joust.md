@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.67
-    win_rate: 0.6261
-    matches: 354
+    pick_rate: 0.69
+    win_rate: 0.6162
+    matches: 448
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.51
-    win_rate: 0.64
-    matches: 270
+    win_rate: 0.63
+    matches: 331
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,82 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Devourer's Gauntlet
+  - Freya's Tears
+  - Shifter's Shield
+  - Hussar's Wings
+  - Erosion
+  flex_slots:
+  - Hussar's Wings
+  - Devourer's Gauntlet
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.66
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    Devourer's Gauntlet:
+      total: 0.4
+      efficiency: 0.4
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Hussar's Wings:
+      total: 0.5
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Erosion:
+      total: 0.58
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+  swaps:
+  - added: Devourer's Gauntlet
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 63% win over 428 matches (vs 58% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  - added: Hussar's Wings
+    removed: Draconic Scale
+    reason: Conquest community 71% win over 58 matches (vs 58% on this god), taking
+      the model's weakest slot from Draconic Scale
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---
