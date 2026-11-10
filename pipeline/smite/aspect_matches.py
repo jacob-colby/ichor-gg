@@ -64,7 +64,50 @@ in the store whole. A window that starts before it is either absent from the
 registry or carries `partial_from` equal to it — the source's retention cut
 its start — and the note entry names it, so no window is silently short.
 `_aggregate.json` holds the split index's aspect / no-aspect rows per window.
-Records are assigned to the newest window whose start is not after them.
+Records are assigned to the newest window whose start is not after them, and
+none later than the newest window's end is stored (next section).
+
+A PATCH BOUNDARY (`known_extent`, `misfiled`; 2026-11-09). The feed is the
+newest matches whatever patch they were played on; the window a record is
+FILED in comes from the range selector's windows (`window_of`), and the store
+is append-only. So a match played after a new patch opens, fetched on a run
+whose selector does not list that patch yet, would be filed in the old window,
+and from the day the selector lists the new one `window_of` names it —
+`test_aspect_store`'s committed-store test red on every run after, with
+nothing to move the record, and "Pipeline suite" blocking every daily data PR
+(#139 reported it; `test_aspect_matches` replays it: 14 matches stranded in
+ob47 by day N+1 on the old rule). The selector does lag a patch, measured on
+the community record, which read the newest LISTED window before 11-05, fresh
+on each scheduled run (`data/_cache` is not kept between runs): the 11-03 run
+(started 16:59Z, 61754eb0) still read ob46, at least 5.5 hours after ob47's
+first match (11:30:13Z), and the 09-22 run (started 14:01Z, 900bf284) still
+read the 09-08 window, at least 2h27m after ob44's first (11:33:41Z).
+
+  * HOLD BACK, don't refuse. A run files nothing later than the newest
+    window's `end` — SmiteBrain's newest match in it: on 11-09 ob47's end,
+    18:17:55.767Z, was exactly the newest stored record — and holds the rest
+    for the next run. Nothing is lost: a held match is newer than every stored
+    one, and each walk runs down to the newest stored match, so the next run
+    fetches it again (inside retention; the walk's 800-page cap is ~76 days of
+    the busiest feed). The no-aspect SAMPLE's held matches are not fetched
+    again: the next run samples its own newest page. A newest window with no
+    `end` vouches for nothing after its start. Refusing the run instead would
+    lose the whole day to one match the index had not counted yet, and every
+    day of a lag; the store would gain nothing by it.
+  * WHY `end` IS A SAFE EXTENT. All 38,433 stored records (11-09) sit inside
+    `[start, end]` of their own window; the three boundaries on record leave
+    gaps (ob44 -> ob45 1h31m, ob45 -> ob46 51m, ob46 -> ob47 2m11s), never an
+    overlap; and during the 11-03 lag ob46's end read 11-02, BEHIND the
+    boundary, not past it. One lag observed at day precision is not proof
+    that SmiteBrain never extends an old window into the new patch, so:
+  * THE GUARD FOR THE DAY IT IS NOT. If a refreshed window's start ever lands
+    under a match already stored, `refresh` refuses the run (`misfiled`,
+    FeedCollapse, before any feed is walked, nothing written). The store
+    keeps agreeing with its committed meta, so CI stays green, and the refusal
+    takes the workflow's `rejected` path: the day's other data lands, the run
+    is red. It refuses every run until someone moves those records, which an
+    append-only store has no step for — a human's call, not this module's.
+    0.4 s over the 11-09 store.
 
 THE BACKFILL (2026-11-08) walked all 86 aspect feeds to the end of retention,
 in two passes: OB46 and OB47 first (1,636 requests), then OB45 and the
@@ -87,7 +130,8 @@ WHAT ONE RUN FETCHES (`refresh`), about 217 requests at 2.5 s (~9 min) for
     newest at the time of the run, so it leans to that time of day);
   * every aspect feed walked back to the newest match already stored, or, for
     a feed with nothing stored, to the start of the newest window. A missed
-    day costs nothing: the next run walks further back.
+    day costs nothing: the next run walks further back. So does a held-back
+    match (A PATCH BOUNDARY above).
 
 ALL OR NOTHING (`FeedCollapse`). Every page is validated before anything is
 written — the feed's shape, every record's hard fields, that the `godSlug` and
@@ -515,6 +559,33 @@ def window_of(ts: str, meta: dict):
     return None
 
 
+def known_extent(meta: dict):
+    """The latest instant a run may file a match at: the newest window's `end`
+    (SmiteBrain's newest match in it), or its start when the index gave no
+    end; None with no windows. Anything later is held back (module docstring,
+    A PATCH BOUNDARY)."""
+    windows = ordered_windows(meta)
+    if not windows:
+        return None
+    span = meta["windows"][windows[0]]
+    return span.get("end") or span["start"]
+
+
+def misfiled(root: Path, meta: dict) -> list:
+    """`(window dir, god slug, t, window_of)` for every stored match that
+    `meta` would file in another window — what `test_aspect_store`'s
+    committed-store test would fail on."""
+    out = []
+    for path in sorted(root.glob("*/*.jsonl")):
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                t = json.loads(line)["t"]
+                w = window_of(t, meta)
+                if w != path.parent.name:
+                    out.append((path.parent.name, path.stem, t, w))
+    return out
+
+
 # -- store ---------------------------------------------------------------------
 
 def _read_json(path: Path, default):
@@ -610,9 +681,16 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
         meta["windows"][w] = {**meta["windows"].get(w, {}),
                               "start": split["start"], "end": split["end"]}
         aggregate[w] = {"start": split["start"], "end": split["end"], "rows": split["rows"]}
+    wrong = misfiled(root, meta)
+    if wrong:
+        w, slug, t, now = wrong[0]
+        raise FeedCollapse(f"these windows would refile {len(wrong)} stored matches (first: "
+                           f"{slug} {t} sits in {w}, would be {now}) — SmiteBrain redrew a "
+                           "boundary under data already stored; the store cannot move them")
     newest_start = meta["windows"][ordered_windows(meta)[0]]["start"]
+    extent = known_extent(meta)
 
-    pending, empty_none_pages, summary = {}, 0, {}
+    pending, empty_none_pages, summary, held = {}, 0, {}, 0
     for god in gods:
         slug = god_slug(god)
         records, available, _ = parse_page(fetch(feed_url(slug, "none")), god)
@@ -629,7 +707,9 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
             fresh = walk_feed(fetch, slug, god, aspect, floor)
             got.extend(fresh)
             summary[f"{slug}/{aspect['value']}"] = len(fresh)
-        pending[slug] = got
+        kept = [r for r in got if r["t"] <= extent]
+        held += len(got) - len(kept)
+        pending[slug] = kept
     if gods and empty_none_pages > len(gods) / 2:
         raise FeedCollapse(f"{empty_none_pages} of {len(gods)} gods returned no matches at all")
 
@@ -640,8 +720,10 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
     save_json(root / META_FILE, meta)
     save_json(root / AGGREGATE_FILE, aggregate)
     log(f"  aspect matches: {sum(added.values())} new across {len(pending)} gods "
-        f"({', '.join(f'{w} +{n}' for w, n in sorted(added.items()))})")
-    return {"added": added, "feeds": summary}
+        f"({', '.join(f'{w} +{n}' for w, n in sorted(added.items()))})"
+        + (f"; {held} later than {ordered_windows(meta)[0]}'s end ({extent}) held for "
+           "the next run" if held else ""))
+    return {"added": added, "feeds": summary, "held": held}
 
 
 # -- the build-note entry ------------------------------------------------------
