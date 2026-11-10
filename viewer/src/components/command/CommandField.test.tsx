@@ -73,6 +73,51 @@ describe("CommandField — a second mode replaces the first", () => {
   });
 });
 
+/* Jacob, 2026-11-09: the chips wrap onto further lines instead of scrolling
+ * sideways, so every chip stays whole. jsdom has no layout, so this pins the
+ * contract the geometry rests on; the geometry itself was measured in a
+ * browser at 390 and 1024–1280px (numbers in the PR). */
+describe("CommandField — the chips wrap", () => {
+  const row = () => document.querySelector("[data-command-input]")!.parentElement!;
+  const box = () => row().parentElement!;
+
+  it("on the page: a minimum height, and a row that wraps instead of scrolling", () => {
+    const { field } = setup({ variant: "page" });
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust aspect " } });
+    expect(box()).toHaveClass("min-h-14");
+    expect(box()).not.toHaveClass("h-14");
+    expect(row()).toHaveClass("flex-wrap");
+    expect(row()).not.toHaveClass("overflow-x-auto");
+    // The input takes the rest of the last line and keeps its 64px floor.
+    expect(field).toHaveClass("min-w-[64px]", "flex-1");
+  });
+
+  it("in the bar: keeps the bar's 44px, hangs the box from it, and wraps while open", () => {
+    const { field } = setup();
+    const root = screen.getByTestId("command-bar");
+    expect(root).toHaveClass("h-11");
+    expect(box().parentElement).toHaveClass("absolute", "inset-x-0", "top-0");
+    expect(box()).toHaveClass("min-h-11");
+    // At rest it keeps one line.
+    expect(row()).toHaveClass("flex-nowrap");
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust aspect " } });
+    expect(root).toHaveAttribute("data-command-open");
+    expect(row()).toHaveClass("flex-wrap");
+  });
+
+  it("still pulls the last chip back into text on Backspace in an empty input, and keeps focus", () => {
+    const { field } = setup({ variant: "page" });
+    field.focus();
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust " } });
+    expect(chips("mode")).toEqual(["Joust"]);
+    fireEvent.keyDown(field, { key: "Backspace" });
+    expect(chips("mode")).toEqual([]);
+    expect(field).toHaveValue("joust");
+    expect(field).toHaveFocus();
+    expect(chips("enemy")).toEqual(["Hecate", "Ymir"]);
+  });
+});
+
 /* Jacob, 2026-11-09: the aspect is marked with the game's orange hexagon
  * everywhere, the same `AspectHex` as the god page's switch. */
 describe("CommandField — the aspect chip", () => {
