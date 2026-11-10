@@ -205,17 +205,24 @@ class FakeFeed:
     """Serves getBuilds pages from an in-memory feed, newest first, honouring
     the cursor the way the real endpoint does (exclusive)."""
 
-    def __init__(self, gods, broken=None):
+    def __init__(self, gods, broken=None, windows=None):
         self.gods = gods                    # {slug: {"name", "aspects", "feeds": {aspect|none: [raw]}}}
         self.broken = broken or set()
+        self.windows = windows or META["windows"]   # what the split index answers, per window
         self.urls = []
 
     def __call__(self, url):
         self.urls.append(url)
         if url.startswith(am.INDEX_URL):
             window = re.search(r"time=(ob\d+)", url).group(1)
-            w = META["windows"][window]
+            w = self.windows[window]
             return json.dumps(_index_payload(window, w["start"], w["end"]))
+        if not url.startswith(am.FEED_URL):
+            # The range selector: every window the index answers for, newest first.
+            options = "".join(f'<option value="{w}">{w}</option>'
+                              for w in sorted(self.windows, key=lambda w: self.windows[w]["start"],
+                                              reverse=True))
+            return f'<select><option value="1w">1w</option>{options}</select>'
         inp = json.loads(unquote(url.split("input=", 1)[1]))
         god = self.gods[inp["godSlug"]]
         if (inp["godSlug"], inp.get("aspect")) in self.broken:
@@ -302,6 +309,148 @@ def test_the_cli_exits_non_zero_on_a_refusal(monkeypatch, capsys):
     monkeypatch.setattr(am, "PoliteFetcher", lambda: type("F", (), {"requests": 0})())
     assert am.main(["refresh"]) == 1
     assert "::error::aspect feed refused" in capsys.readouterr().out
+
+
+# -- a patch boundary the range selector has not caught up with ----------------
+#
+# The feed is not filtered by window: it is the newest matches, whatever patch
+# they were played on. The window a record is FILED in comes from the range
+# selector's windows (`window_of`), and the store is append-only. So a match
+# played after a new patch opens, fetched on a run whose selector does not list
+# that patch yet, must not be filed in the old window: once the new window is
+# listed, `window_of` names it, and the committed store's own test
+# (`test_aspect_store.test_every_committed_record_sits_in_its_own_window`)
+# goes red with nothing to move the record. Modelled on OB47's real boundary
+# (ob46 ends 11-03 11:28:02Z, ob47 starts 11:30:13Z; the 11-03 17:30Z refresh
+# still read ob46, ending 11-02).
+
+OB47 = {"start": "2026-11-03T11:30:13.083Z", "end": "2026-11-17T11:28:00.000Z"}
+OB48_START = "2026-11-17T11:31:00.000Z"
+#: Day N, 2026-11-17 17:30Z: the selector still lists ob47 (and ob46) only.
+DAY_N = {"ob46": META["windows"]["ob46"], "ob47": OB47}
+#: Day N+1: ob48 is listed; ob47's end is final.
+DAY_N1 = {**DAY_N, "ob48": {"start": OB48_START, "end": "2026-11-18T17:00:00.000Z"}}
+
+
+def _hours(day, hours):
+    return [f"2026-11-{day:02d}T{h:02d}:00:00.000Z" for h in hours]
+
+
+#: Mangetsu: 15 ob47 matches (the last at 11-17 10:00, before the boundary), 8
+#: ob48 matches played on day N, and 7 more played after day N's run.
+OB47_TIMES = _hours(3, [12, 14, 16, 18, 20]) + _hours(9, [12, 14, 16, 18, 20]) \
+    + _hours(17, [6, 7, 8, 9, 10])
+OB48_DAY_N = _hours(17, [12, 13, 14, 15, 16]) + ["2026-11-17T11:31:00.000Z",
+                                                 "2026-11-17T11:45:00.000Z",
+                                                 "2026-11-17T17:00:00.000Z"]
+OB48_AFTER = _hours(18, [1, 3, 5, 7, 9, 11, 13])
+NONE_OB47 = _hours(17, [5, 6, 7, 8])
+NONE_OB48 = _hours(17, [12, 13, 14, 15, 16, 17]) + _hours(18, [2, 4, 6])
+
+
+def _raws(times, aspect_name, offset):
+    base = _raw("aspect_feed_tsukuyomi_mangetsu.json")
+    ordered = sorted(times, reverse=True)                     # the feed is newest first
+    return [_raw_at(base, t, aspect_name, offset + sorted(times).index(t)) for t in ordered]
+
+
+def _boundary_feed(day_n1=False):
+    mangetsu = OB47_TIMES + OB48_DAY_N + (OB48_AFTER if day_n1 else [])
+    none = NONE_OB47 + [t for t in NONE_OB48 if day_n1 or t <= "2026-11-17T17:30:00.000Z"]
+    return FakeFeed({"tsukuyomi": {"aspects": [MANGETSU],
+                                   "feeds": {"aspect-of-mangetsu": _raws(mangetsu, "Aspect of Mangetsu", 0),
+                                             "none": _raws(none, None, 1000)}}},
+                    windows=DAY_N1 if day_n1 else DAY_N)
+
+
+def _committed_store_problems(root):
+    """`test_aspect_store.test_every_committed_record_sits_in_its_own_window`,
+    word for word, run on a store under `root` instead of the committed one."""
+    meta, problems = am.load_meta(root), []
+    for path in sorted(root.glob("*/*.jsonl")):
+        times = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            r = json.loads(line)
+            if am.window_of(r["t"], meta) != path.parent.name:
+                problems.append((path.parent.name, path.stem, r["t"], am.window_of(r["t"], meta)))
+            times.append((r["t"], r["m"]))
+        if not (times == sorted(times) and len({m for _, m in times}) == len(times)):
+            problems.append((path.parent.name, path.stem, "order or duplicate"))
+    return problems
+
+
+def _times(root, window, aspect="aspect-of-mangetsu"):
+    return sorted(r["t"] for r in am.load_god(root, "tsukuyomi").get(window, [])
+                  if r["aspect"] == aspect)
+
+
+def test_a_boundary_the_selector_has_not_listed_strands_nothing(tmp_path):
+    """The replay: day N, the selector lacks ob48 while ob48 matches are in the
+    feed; day N+1, it lists ob48. The store is green after both runs, and every
+    ob48 match held back on day N is in ob48 after day N+1."""
+    quiet = lambda *_: None
+    day_n = am.refresh(_boundary_feed(), ["Tsukuyomi"], tmp_path, log=quiet)
+    assert set(am.load_meta(tmp_path)["windows"]) == {"ob46", "ob47"}
+    assert _committed_store_problems(tmp_path) == []
+    assert _times(tmp_path, "ob47") == sorted(OB47_TIMES)          # nothing past ob47's end
+    assert "ob48" not in am.load_god(tmp_path, "tsukuyomi")
+    assert day_n["held"] == len(OB48_DAY_N) + 6                    # 6: no-aspect, newest page
+
+    day_n1 = am.refresh(_boundary_feed(day_n1=True), ["Tsukuyomi"], tmp_path, log=quiet)
+    assert set(am.load_meta(tmp_path)["windows"]) == {"ob46", "ob47", "ob48"}
+    assert _committed_store_problems(tmp_path) == []
+    assert _times(tmp_path, "ob47") == sorted(OB47_TIMES)
+    assert _times(tmp_path, "ob48") == sorted(OB48_DAY_N + OB48_AFTER)   # day N's held ones too
+    assert day_n1["held"] == 0
+
+
+def test_on_the_old_rule_day_n_files_ob48_matches_in_ob47(tmp_path):
+    """What the hold-back prevents, pinned so it cannot quietly come back: the
+    day-N feed holds matches later than every listed window's end, and
+    `window_of` alone would file them in ob47."""
+    meta = {"windows": DAY_N}
+    assert {am.window_of(t, meta) for t in OB48_DAY_N} == {"ob47"}
+    assert all(t > OB47["end"] for t in OB48_DAY_N)
+    assert {am.window_of(t, {"windows": DAY_N1}) for t in OB48_DAY_N} == {"ob48"}
+
+
+def test_a_match_newer_than_the_newest_windows_end_waits_for_the_next_run(tmp_path):
+    """Inside one patch too: a match the feed has and the split index has not
+    counted yet is held, and the next run's walk, which starts above the
+    newest stored match, fetches it again."""
+    quiet = lambda *_: None
+    early = dict(META["windows"], ob47={**META["windows"]["ob47"], "end": "2026-11-05T09:00:00.000Z"})
+    feeds = {"aspect-of-mangetsu": _feed(25, 0, "Aspect of Mangetsu", 0), "none": _feed(12, 0, None, 1000)}
+    gods = {"tsukuyomi": {"aspects": [MANGETSU], "feeds": feeds}}
+    first = am.refresh(FakeFeed(gods, windows=early), ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=quiet)
+    assert max(_times(tmp_path, "ob47")) == "2026-11-05T09:00:00.000Z"
+    assert first["held"] == 15 + 2                 # 10:00 .. 24:00 Mangetsu; the sample's 10:00, 11:00
+    second = am.refresh(FakeFeed(gods), ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=quiet)
+    assert len(_times(tmp_path, "ob47")) == 25 and second["held"] == 0
+
+
+def test_a_newest_window_with_no_end_vouches_for_nothing_after_its_start(tmp_path):
+    no_end = dict(META["windows"], ob47={**META["windows"]["ob47"], "end": None})
+    assert am.known_extent({"windows": no_end}) == no_end["ob47"]["start"]
+    assert am.known_extent({"windows": DAY_N}) == OB47["end"]
+    assert am.known_extent({"windows": {}}) is None
+
+
+def test_a_run_whose_windows_would_refile_a_stored_match_writes_nothing(tmp_path):
+    """The write-time guard behind the hold-back: if SmiteBrain ever draws a
+    new window's start under a match already stored (its old window's end ran
+    past the boundary), the run is refused and nothing is written — the
+    store keeps agreeing with its committed meta, so CI stays green and the
+    refusal is the workflow's loud `rejected` path, not a red data PR."""
+    quiet = lambda *_: None
+    overlapping = {**DAY_N, "ob47": {**OB47, "end": "2026-11-17T17:00:00.000Z"}}
+    am.refresh(FakeFeed(_boundary_feed().gods, windows=overlapping), ["Tsukuyomi"], tmp_path, log=quiet)
+    assert "2026-11-17T12:00:00.000Z" in _times(tmp_path, "ob47")     # filed under the overlap
+    before = {p: p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()}
+    with pytest.raises(am.FeedCollapse, match="would refile"):
+        am.refresh(_boundary_feed(day_n1=True), ["Tsukuyomi"], tmp_path, log=quiet)
+    assert {p: p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()} == before
+    assert am.misfiled(tmp_path, am.load_meta(tmp_path)) == []
 
 
 # -- the build-note entry ------------------------------------------------------
