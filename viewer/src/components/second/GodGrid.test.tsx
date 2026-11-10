@@ -34,9 +34,21 @@ describe("GodGrid", () => {
       .toEqual(["#/god/Ra", "#/god/Hera"]);
   });
 
-  it("offers the last god you opened", () => {
-    render(<GodGrid gods={gods} lastGod="Ymir" />);
-    expect(screen.getByRole("link", { name: /Back to Ymir/ })).toHaveAttribute("href", "#/god/Ymir");
+  /* A list of gods, not matchups (Jacob, 2026-11-09): portrait and name, the
+   * last god first, each opening the build exactly as its grid card does. */
+  it("lists the recent gods above the grid, each linking where its card does", () => {
+    render(<GodGrid gods={gods} recents={["Ymir", "Nobody", "Ra"]} onClearRecents={() => {}} />);
+    const row = within(screen.getByTestId("recents"));
+    expect(row.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")]))
+      .toEqual([["Ymir", "#/god/Ymir"], ["Ra", "#/god/Ra"]]);
+    expect(screen.queryByRole("link", { name: /Back to/ })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Clear" })).toBeInTheDocument();
+  });
+
+  it("hides the recent gods while the roster is filtered", () => {
+    render(<GodGrid gods={gods} recents={["Ymir"]} />);
+    fireEvent.click(screen.getByRole("button", { name: "Mid" }));
+    expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
   });
 });
 

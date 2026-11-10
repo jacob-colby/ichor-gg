@@ -412,6 +412,19 @@ describe("App — the command field on desktop", () => {
     expect(draftStored().enemies?.[0]).toBe("Ymir");
   });
 
+  it("offers the same recent gods when the field is empty, each opening that god's build", async () => {
+    localStorage.setItem("ichor:recent-gods", JSON.stringify(["Ymir"]));
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    const field = await barField();
+    fireEvent.focus(field);
+    const offers = await screen.findAllByRole("option");
+    expect(offers.map((o) => o.textContent)).toEqual(["ChironCarryRecent", "YmirSoloRecent"]);
+    fireEvent.click(offers[1]);
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Ymir"));
+  });
+
   it("filters god select from the top bar's field", async () => {
     render(<App />);
     const field = await barField();
@@ -525,13 +538,45 @@ describe("App — the command field on a phone", () => {
     expect(await screen.findByRole("button", { name: "Enemy 1: Ymir. Change" })).toBeInTheDocument();
   });
 
-  it("shows recent matchups above the grid while the field is empty", async () => {
+  /* Recent gods, not matchups (Jacob, 2026-11-09). A returning visitor keeps
+   * their row: it is seeded from the retired query and last-god stores. */
+  it("shows the recent gods above the grid, the last god first, seeded from the old stores", async () => {
     localStorage.setItem("ichor:recent-queries", JSON.stringify(["Chiron vs Ymir Joust"]));
+    localStorage.setItem("ichor:last-god", "Ymir");
     render(<App />);
-    const recents = await screen.findByTestId("recents");
-    expect(within(recents).getByRole("link", { name: /Chiron.*vs Ymir · Joust/ }))
-      .toHaveAttribute("href", "#/god/Chiron?mode=joust&vs=Ymir");
+    const recents = within(await screen.findByTestId("recents"));
+    expect(recents.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")]))
+      .toEqual([["Ymir", "#/god/Ymir"], ["Chiron", "#/god/Chiron"]]);
+    expect(screen.queryByRole("link", { name: /Back to/ })).not.toBeInTheDocument();
     fireEvent.change(await pageField(), { target: { value: "y" } });
+    expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
+  });
+
+  it("records a god whenever its page opens, by a link or a grid card", async () => {
+    atUrl(toHash.god("Chiron"));
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
+    fireEvent.click(tabs.getByRole("link", { name: "Gods" }));
+    const first = await screen.findByTestId("recents");
+    expect(within(first).getAllByRole("link").map((a) => a.textContent)).toEqual(["Chiron"]);
+    fireEvent.click(within(screen.getByTestId("god-grid")).getByRole("link", { name: /Ymir/ }));
+    await screen.findByRole("heading", { level: 1, name: "Ymir" });
+    fireEvent.click(tabs.getByRole("link", { name: "Gods" }));
+    await waitFor(() => expect(within(screen.getByTestId("recents")).getAllByRole("link").map((a) => a.textContent))
+      .toEqual(["Ymir", "Chiron"]));
+    expect(JSON.parse(localStorage.getItem("ichor:recent-gods") ?? "null")).toEqual(["Ymir", "Chiron"]);
+  });
+
+  it("clears the row for good: the retired stores do not bring it back", async () => {
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Chiron vs Ymir"]));
+    const { unmount } = render(<App />);
+    await screen.findByTestId("recents");
+    fireEvent.click(screen.getByRole("button", { name: "Clear" }));
+    expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
+    unmount();
+    render(<App />);
+    await screen.findByRole("heading", { level: 1, name: /who are you playing/i });
     expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
   });
 });

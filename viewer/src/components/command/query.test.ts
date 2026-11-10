@@ -1,8 +1,8 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import {
   parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches, keepLastMode,
 } from "./query";
-import { readRecents, pushRecent, MAX_RECENTS } from "./recents";
+import { readRecentGods, pushRecentGod, clearRecentGods, MAX_RECENT_GODS } from "./recents";
 import { decodePageQuery } from "../second/pageState";
 
 const gods = [
@@ -221,21 +221,55 @@ describe("keepLastMode — a second mode replaces the first", () => {
   });
 });
 
-describe("recents", () => {
+/* One list of recent gods, not queries (Jacob, 2026-11-09): the god select
+ * row, its first card (the old "Back to"), and the empty field's offers. */
+describe("recent gods", () => {
   beforeEach(() => localStorage.clear());
+  afterEach(() => vi.restoreAllMocks());
 
-  it("keeps the newest first, de-duplicated, and capped", () => {
-    pushRecent("Ra vs Hecate");
-    pushRecent("Ymir");
-    pushRecent("ra vs hecate");
-    expect(readRecents()).toEqual(["ra vs hecate", "Ymir"]);
-    for (let i = 0; i < 10; i += 1) pushRecent(`Ra vs ${i}`);
-    expect(readRecents()).toHaveLength(MAX_RECENTS);
+  it("keeps the newest first, once each, and capped", () => {
+    pushRecentGod("Ra", gods);
+    pushRecentGod("Ymir", gods);
+    pushRecentGod("Ra", gods);
+    expect(readRecentGods(gods)).toEqual(["Ra", "Ymir"]);
+    for (const g of gods) pushRecentGod(g.name, gods);
+    expect(readRecentGods(gods)).toHaveLength(MAX_RECENT_GODS);
+    expect(readRecentGods(gods)[0]).toBe("Cu Chulainn");
+  });
+
+  it("drops a god the roster no longer has", () => {
+    localStorage.setItem("ichor:recent-gods", JSON.stringify(["Nobody", "Ra", 7]));
+    expect(readRecentGods(gods)).toEqual(["Ra"]);
   });
 
   it("reads garbage as no recents", () => {
-    localStorage.setItem("ichor:recent-queries", "{not json");
-    expect(readRecents()).toEqual([]);
+    localStorage.setItem("ichor:recent-gods", "{not json");
+    expect(readRecentGods(gods)).toEqual([]);
+  });
+
+  it("seeds once from the retired stores: the last god first, then each old query's own god", () => {
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Morgan Le Fay vs Ra Joust", "Ra vs Hecate", "zz vs Ymir"]));
+    localStorage.setItem("ichor:last-god", "Ymir");
+    expect(readRecentGods(gods)).toEqual(["Ymir", "Morgan Le Fay", "Ra"]);
+    // The first write carries the seed and retires both old stores.
+    expect(pushRecentGod("Hera", gods)).toEqual(["Hera", "Ymir", "Morgan Le Fay", "Ra"]);
+    expect(localStorage.getItem("ichor:recent-queries")).toBeNull();
+    expect(localStorage.getItem("ichor:last-god")).toBeNull();
+  });
+
+  it("stays clear once cleared, even with the retired stores still there", () => {
+    pushRecentGod("Ra", gods);
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Hera vs Ymir"]));
+    clearRecentGods();
+    expect(readRecentGods(gods)).toEqual([]);
+  });
+
+  it("degrades to no recents when storage is blocked", () => {
+    vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => { throw new Error("SecurityError"); });
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new Error("SecurityError"); });
+    expect(readRecentGods(gods)).toEqual([]);
+    expect(pushRecentGod("Ra", gods)).toEqual(["Ra"]);
+    expect(() => clearRecentGods()).not.toThrow();
   });
 });
 

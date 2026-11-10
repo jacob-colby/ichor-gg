@@ -52,7 +52,8 @@ export interface CommandFieldProps {
   onItem?: (name: string) => void;
   /** Every edit, as the whole text and its parse — the grid filters on it. */
   onText?: (text: string, parsed: ParsedQuery) => void;
-  /** Recent queries, newest first; offered when the field is empty. */
+  /** Recent gods, newest first (`recents.ts`, the same list god select shows);
+   *  offered when the field is empty, each opening that god's build. */
   recents?: string[];
   variant: "bar" | "page";
   label: string;
@@ -413,15 +414,13 @@ function OptionBody({ o, gods, items, parsed }: {
     );
   }
   if (o.kind === "recent") {
-    const q = parseQuery(o.recent!, gods);
     return (
       <>
-        <span className="flex flex-none -space-x-2">
-          {[q.you, ...q.enemies].filter(Boolean).slice(0, 4).map((n, i) => (
-            <Art key={n! + i} name={n!} kind="head" className={`h-9 w-9 rounded-[8px] ring-2 ring-surface ${i ? "" : "relative z-10"}`} />
-          ))}
+        <Art name={o.recent!} kind="head" className="h-9 w-9 rounded-[8px]" />
+        <span className="min-w-0 flex-1">
+          <span className="block font-cond text-[20px] font-bold leading-tight text-ink">{o.recent}</span>
+          <span className="block text-cap text-quiet">{roleOf(gods, o.recent!)}</span>
         </span>
-        <span className="min-w-0 flex-1 truncate text-copy text-ink">{o.recent}</span>
         <span className="flex-none text-cap text-quiet">Recent</span>
       </>
     );

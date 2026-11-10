@@ -53,7 +53,7 @@ import { KitTile, type KitAlternative } from "./KitTile";
 import { MostPicked, TransferNotes } from "./MostPicked";
 import { anyAspectLine, communityLines, communitySix } from "./communityBuild";
 import { AspectCommunity, aspectCount, aspectEntry } from "./AspectCommunity";
-import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, writeLastGod, aspectNote } from "./pageState";
+import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, aspectNote } from "./pageState";
 import { VerdictLine } from "./VerdictLine";
 import { ItemRow } from "./ItemRow";
 import { EnemyStrip } from "./EnemyStrip";
@@ -80,8 +80,6 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
   const { mode } = q;
   const modeLabel = MODE_NAME[mode];
   const wide = useWide();
-
-  useEffect(() => { writeLastGod(god.name); }, [god.name]);
 
   // ── The enemy team: the shared draft, with you in ally slot 1. ──────────
   const { draft, mode: draftMode, setMode: setDraftMode, setEnemy, setAlly } = useDraft();
