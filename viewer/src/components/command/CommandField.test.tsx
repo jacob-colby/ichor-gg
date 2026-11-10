@@ -86,4 +86,18 @@ describe("CommandField — the aspect chip", () => {
     expect(hexes("aspect")).toEqual(["on", "off"]);
     expect(hexes("mode")).toEqual([]);
   });
+
+  it("draws the hexagon on the aspect suggestion row: filled to turn it on, the outline for Aspect off", () => {
+    const { field } = setup();
+    const rowHex = (name: RegExp) => screen.getByRole("option", { name }).querySelector("svg[data-aspect-hex]")
+      ?.getAttribute("data-aspect-hex");
+    fireEvent.change(field, { target: { value: "ra asp" } });
+    expect(rowHex(/Aspect of Thermotherapy/)).toBe("on");
+    // No boxed "A" left beside it.
+    expect(screen.getByRole("option", { name: /Aspect of Thermotherapy/ }).querySelector("span[aria-hidden='true']")?.textContent).toBe("");
+    fireEvent.change(field, { target: { value: "ra aspect " } });
+    expect(rowHex(/Aspect off/)).toBe("off");
+    // The mode rows keep their letter.
+    expect(screen.getByRole("option", { name: /Joust/ }).querySelector("svg[data-aspect-hex]")).toBeNull();
+  });
 });
