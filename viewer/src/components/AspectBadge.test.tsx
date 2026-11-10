@@ -86,3 +86,20 @@ describe("AspectToggle — what it says it is", () => {
     expect(onParent).not.toHaveBeenCalled();
   });
 });
+
+/* Jacob, 2026-11-09: the aspect mark is always bright orange. Off used to be
+ * `text-faint` (grey) until hovered; it is the orange outline now, the same
+ * `AspectHex` the new surfaces draw. */
+describe("AspectToggle — always the aspect's orange", () => {
+  it("is the orange outline when off and the filled hexagon when on", () => {
+    const { rerender } = render(toggle());
+    const button = screen.getByRole("button");
+    expect(button.className).not.toMatch(/text-faint/);
+    const hex = () => button.querySelector("svg[data-aspect-hex]")!;
+    expect(hex()).toHaveAttribute("data-aspect-hex", "off");
+    expect(hex().querySelector("path")).toHaveAttribute("stroke", "var(--color-aspect)");
+    rerender(toggle({ on: true }));
+    expect(hex()).toHaveAttribute("data-aspect-hex", "on");
+    expect(hex().querySelector("path")).toHaveAttribute("fill-opacity", "1");
+  });
+});
