@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { CommandField } from "./CommandField";
 import type { God } from "../../types";
 
@@ -81,10 +81,39 @@ describe("CommandField — the aspect chip", () => {
 
   it("leads with the aspect's hexagon: filled for Aspect, the outline for No aspect", () => {
     const { field } = setup();
-    fireEvent.change(field, { target: { value: "ra aspect aspect joust " } });
-    expect(chips("aspect")).toEqual(["Aspect", "No aspect"]);
-    expect(hexes("aspect")).toEqual(["on", "off"]);
+    fireEvent.change(field, { target: { value: "ra aspect joust " } });
+    expect(chips("aspect")).toEqual(["Aspect"]);
+    expect(hexes("aspect")).toEqual(["on"]);
     expect(hexes("mode")).toEqual([]);
+    fireEvent.change(field, { target: { value: "no aspect " } });
+    expect(chips("aspect")).toEqual(["No aspect"]);
+    expect(hexes("aspect")).toEqual(["off"]);
+  });
+
+  /* Jacob, 2026-11-09: never both. The last aspect word wins, as the last
+   * mode does, so the field shows the one the query runs on. */
+  it("keeps one aspect chip, the last word's, however it is typed", () => {
+    for (const [text, left, on] of [
+      ["ra aspect no aspect ", ["No aspect"], false], ["ra no aspect aspect ", ["Aspect"], true],
+      ["ra aspect aspect ", ["Aspect"], true], ["ra aspect off ", ["No aspect"], false],
+    ] as const) {
+      cleanup();
+      const { field, onSubmit } = setup();
+      fireEvent.change(field, { target: { value: text } });
+      expect(document.querySelectorAll("[data-chip]").length).toBe(2);
+      expect(chips("aspect")).toEqual(left);
+      expect(chips("you")).toEqual(["Ra"]);
+      fireEvent.keyDown(field, { key: "Enter" });
+      expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({ you: "Ra", enemies: [], aspect: on }));
+    }
+  });
+
+  it("'Aspect off' writes the off state itself: the on chip goes, one No aspect chip is left", () => {
+    const { field } = setup();
+    fireEvent.change(field, { target: { value: "ra aspect " } });
+    fireEvent.click(screen.getByRole("option", { name: /Aspect off/ }));
+    expect(chips("aspect")).toEqual(["No aspect"]);
+    expect(field).toHaveValue("");
   });
 
   it("draws the hexagon on the aspect suggestion row: filled to turn it on, the outline for Aspect off", () => {

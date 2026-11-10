@@ -14,9 +14,10 @@
  * Each finished word becomes a chip (you ringed in violet, enemies ringed in
  * ink, mode and aspect as plain chips, the aspect one led by the game's
  * hexagon (`AspectHex`); anything not understood stays visible,
- * struck through, with the reason as its name). There is one mode chip at
- * most: a second mode word, typed or picked, replaces the first in the text
- * (`keepLastMode`) instead of standing beside it. The word being typed drives a
+ * struck through, with the reason as its name). There is one mode chip and
+ * one aspect chip at most: a later mode word, or a later aspect word
+ * ("aspect", "no aspect", "aspect off"), typed or picked, replaces the earlier
+ * one in the text (`keepLastKeyword`) instead of standing beside it. The word being typed drives a
  * suggestion list that overlays the page — it never pushes layout. Tapping a
  * suggestion is the same as typing it. Enter takes the top suggestion for the
  * unfinished word and goes.
@@ -29,7 +30,7 @@ import type { God, Item } from "../../types";
 import type { Mode } from "../second/verdict";
 import { Art, AspectHex, CloseGlyph, SearchGlyph } from "../second/art";
 import {
-  itemMatches, keepLastMode, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
+  itemMatches, keepLastKeyword, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
 } from "./query";
 import { recentModeWord, recentQuery, type RecentGod } from "./recents";
 import { useKeyboardInset } from "./useKeyboardInset";
@@ -75,10 +76,10 @@ export function CommandField({
   gods, items, seedText = "", seedMode = "conquest", onSubmit, onItem, onText, recents = [], variant,
   label, placeholder, autoFocus, clearOnSubmit, gridBelow,
 }: CommandFieldProps) {
-  // Every commit goes through `keepLastMode`: a second mode word replaces the
-  // first in the text, so there is only ever one mode chip.
-  const seeded = () => (seedText ? keepLastMode(`${seedText} `, gods, seedMode) : "");
-  const commit = (text: string) => keepLastMode(text, gods, seedMode);
+  // Every commit goes through `keepLastKeyword`: a later mode or aspect word
+  // replaces the earlier one in the text, so there is only ever one of each.
+  const seeded = () => (seedText ? keepLastKeyword(`${seedText} `, gods, seedMode) : "");
+  const commit = (text: string) => keepLastKeyword(text, gods, seedMode);
   const [committed, setCommitted] = useState(seeded);
   const [tail, setTail] = useState("");
   const [open, setOpen] = useState(false);
