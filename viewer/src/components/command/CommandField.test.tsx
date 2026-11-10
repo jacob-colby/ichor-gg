@@ -72,3 +72,18 @@ describe("CommandField — a second mode replaces the first", () => {
     expect(chips("mode")).toEqual(["Arena"]);
   });
 });
+
+/* Jacob, 2026-11-09: the aspect is marked with the game's orange hexagon
+ * everywhere, the same `AspectHex` as the god page's switch. */
+describe("CommandField — the aspect chip", () => {
+  const hexes = (kind: string) => [...document.querySelectorAll(`[data-chip='${kind}'] svg[data-aspect-hex]`)]
+    .map((s) => s.getAttribute("data-aspect-hex"));
+
+  it("leads with the aspect's hexagon: filled for Aspect, the outline for No aspect", () => {
+    const { field } = setup();
+    fireEvent.change(field, { target: { value: "ra aspect aspect joust " } });
+    expect(chips("aspect")).toEqual(["Aspect", "No aspect"]);
+    expect(hexes("aspect")).toEqual(["on", "off"]);
+    expect(hexes("mode")).toEqual([]);
+  });
+});

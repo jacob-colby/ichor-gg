@@ -72,3 +72,38 @@ export const CheckGlyph = (p: GlyphProps) => <Glyph {...p}><path d="m5 12.5 4.5 
 export const SwapGlyph = (p: GlyphProps) => (
   <Glyph {...p}><path d="M7 7h11l-3-3M17 17H6l3 3" /></Glyph>
 );
+
+/** The aspect's mark: the pointy-top hexagon SMITE puts on an aspected
+ *  portrait. The only hexagon on the site. The aspect switch (god page and
+ *  draft board), the command field's aspect chip, a recent god opened with
+ *  its aspect on (god select's row and the field's suggestions) and the kept
+ *  routes' portrait badge all draw this one, so none of them can drift.
+ *
+ *  Always Aspect Ember, on and off, at rest and on hover (Jacob, 2026-11-09:
+ *  "always bright orange"). The colour is set here, not taken from the
+ *  caller's text colour, so no surrounding `text-muted` or hover can grey it.
+ *  Off is the outline. On fills it and keeps the notch out of the middle, so
+ *  "on" reads as a shape and not only as more orange. The kept badge is 20px
+ *  on artwork whose colour nobody controls. The outline stays drawn in both
+ *  states, so the mark is the same size either way and only the fill changes.
+ *  The fill fades in over 150ms on `--ease-standard`, and with no transition
+ *  under `prefers-reduced-motion`.
+ *
+ *  Against every plane it sits on, #ef8034 clears WCAG 1.4.11's 3:1 for a
+ *  graphical object: 7.0:1 on ground (the switch, off), 6.7:1 on surface
+ *  (the command field's chip, a recent card), 6.0:1 on surface-2 (a recent
+ *  card on hover), 6.0:1 on the switch's on-state wash (ember at 12% over
+ *  ground composites to #2b1e18). The notch (ground) on the fill is 7.0:1.
+ *  The on-state border (ember at 45%) is 2.3:1, which is decoration: the
+ *  fill is what says "on". The app is dark only, so that is every theme.
+ *  Measured 2026-11-09 from the browser's computed colours. */
+export function AspectHex({ on, className = "" }: { on: boolean; className?: string }) {
+  const fade = "transition-[fill-opacity,opacity] duration-150 ease-[var(--ease-standard)] motion-reduce:transition-none";
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" data-aspect-hex={on ? "on" : "off"} className={`flex-none ${className}`}>
+      <path d="M12 1.6 21 6.8v10.4L12 22.4 3 17.2V6.8z" fill="var(--color-aspect)" fillOpacity={on ? 1 : 0}
+        stroke="var(--color-aspect)" strokeWidth={2.4} strokeLinejoin="round" className={fade} />
+      <path d="M12 6.4 17 9.3v5.4L12 17.6 7 14.7V9.3z" fill="var(--color-bg0)" opacity={on ? 1 : 0} className={fade} />
+    </svg>
+  );
+}

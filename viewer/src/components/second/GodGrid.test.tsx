@@ -46,12 +46,15 @@ describe("GodGrid", () => {
       { god: "Ares", mode: "arena", aspect: false },
     ]} />);
     const row = within(screen.getByTestId("recents"));
+    // "Aspect" is the filled hexagon's screen-reader text; sighted, the mark is the hexagon.
     expect(row.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")])).toEqual([
       ["Ymir", "#/god/Ymir"],
-      ["RaJoust · Aspect", "#/god/Ra?mode=joust&aspect=1"],
+      ["RaJoustAspect", "#/god/Ra?mode=joust&aspect=1"],
       ["HeraAspect", "#/god/Hera?aspect=1"],
       ["AresArena", "#/god/Ares?mode=arena"],
     ]);
+    expect(row.getAllByRole("link").map((a) => a.querySelector("svg[data-aspect-hex]")?.getAttribute("data-aspect-hex") ?? null))
+      .toEqual([null, "on", "on", null]);
     expect(screen.queryByRole("link", { name: /Back to/ })).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Clear" })).toBeInTheDocument();
   });
