@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.38
-    win_rate: 0.5605
-    matches: 76
+    pick_rate: 0.4
+    win_rate: 0.558
+    matches: 92
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Aegis of Acceleration
-    pick_rate: 0.48
-    win_rate: 0.59
-    matches: 96
+    name: Purification Beads
+    pick_rate: 0.49
+    win_rate: 0.44
+    matches: 113
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -740,78 +740,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Lernaean Bow
-  - Tyrfing
-  - Dagger of Frenzy
-  - Death Metal
-  - The Reaper
-  - Soul Gem
-  flex_slots:
-  - Lernaean Bow
-  - Dagger of Frenzy
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Sanguine Lash — magical protection
-    swap_item: Sanguine Lash
-  - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Arena — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Lernaean Bow:
-      total: 0.55
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.63
-    Tyrfing:
-      total: 0.56
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Dagger of Frenzy:
-      total: 0.36
-      efficiency: 0.42
-      win: 0.5
-      pick: 0.0
-      fit: 0.3
-    Death Metal:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.48
-    The Reaper:
-      total: 0.62
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    Soul Gem:
-      total: 0.63
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-  swaps:
-  - added: Dagger of Frenzy
-    removed: Toxic Blade
-    reason: Conquest community 69% win over 32 matches (vs 51% on this god), taking
-      the model's weakest slot from Toxic Blade
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

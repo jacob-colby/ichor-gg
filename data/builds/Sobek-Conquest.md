@@ -5,170 +5,170 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Prey
-  aspect_pick_rate: 0.02
-  aspect_win_rate: 0.33
+  aspect_pick_rate: 0.04
+  aspect_win_rate: 0.64
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.54
-    win_rate: 0.52
+    pick_rate: 0.53
+    win_rate: 0.51
     alternates:
     - name: Stampede
-      pick_rate: 0.2
-      win_rate: 0.5
+      pick_rate: 0.18
+      win_rate: 0.52
     - name: Yogi's Necklace
-      pick_rate: 0.05
-      win_rate: 0.71
+      pick_rate: 0.07
+      win_rate: 0.68
   - name: Stampede
     pick_rate: 0.24
-    win_rate: 0.42
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.15
-      win_rate: 0.4
-    - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.69
-  - name: Shell of Rebuke
-    pick_rate: 0.15
     win_rate: 0.43
     alternates:
-    - name: Freya's Tears
-      pick_rate: 0.15
-      win_rate: 0.4
+    - name: Genji's Guard
+      pick_rate: 0.14
+      win_rate: 0.41
+    - name: Prophetic Cloak
+      pick_rate: 0.1
+      win_rate: 0.66
+  - name: Freya's Tears
+    pick_rate: 0.14
+    win_rate: 0.36
+    alternates:
     - name: Stampede
       pick_rate: 0.15
-      win_rate: 0.62
-  - name: Freya's Tears
-    pick_rate: 0.17
-    win_rate: 0.57
-    alternates:
+      win_rate: 0.56
     - name: Shell of Rebuke
-      pick_rate: 0.16
-      win_rate: 0.52
-    - name: Genji's Guard
-      pick_rate: 0.06
-      win_rate: 0.47
-  - name: Genji's Guard
-    pick_rate: 0.05
-    win_rate: 0.77
+      pick_rate: 0.14
+      win_rate: 0.45
+  - name: Shell of Rebuke
+    pick_rate: 0.16
+    win_rate: 0.49
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.14
-      win_rate: 0.53
+      pick_rate: 0.16
+      win_rate: 0.6
+    - name: Genji's Guard
+      pick_rate: 0.08
+      win_rate: 0.55
+  - name: Genji's Guard
+    pick_rate: 0.06
+    win_rate: 0.68
+    alternates:
+    - name: Freya's Tears
+      pick_rate: 0.15
+      win_rate: 0.52
     - name: Shell of Rebuke
       pick_rate: 0.09
-      win_rate: 0.65
-  - name: Engraved Guard
+      win_rate: 0.63
+  - name: Veve Charm
     pick_rate: 0.07
-    win_rate: 0.45
+    win_rate: 0.53
     alternates:
     - name: Medal of Defense
       pick_rate: 0.07
-      win_rate: 0.27
-    - name: Shell of Rebuke
+      win_rate: 0.4
+    - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.7
+      win_rate: 0.46
   community_starters:
   - name: Bluestone Pendant
-    pick_rate: 0.37
-    win_rate: 0.46
+    pick_rate: 0.36
+    win_rate: 0.47
   - name: Bluestone Brooch
-    pick_rate: 0.23
-    win_rate: 0.57
+    pick_rate: 0.25
+    win_rate: 0.56
   - name: Selflessness
     pick_rate: 0.14
     win_rate: 0.47
   community_relics:
   - name: Phantom Shell
-    pick_rate: 0.41
+    pick_rate: 0.39
     win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.31
-    win_rate: 0.54
+    pick_rate: 0.32
+    win_rate: 0.55
   - name: Sundering Arc
-    pick_rate: 0.15
-    win_rate: 0.51
+    pick_rate: 0.16
+    win_rate: 0.52
   starter_sightings:
   - name: Bluestone Pendant
-    pick_rate: 0.37
-    win_rate: 0.46
+    pick_rate: 0.36
+    win_rate: 0.47
   - name: Bluestone Brooch
-    pick_rate: 0.23
-    win_rate: 0.57
+    pick_rate: 0.25
+    win_rate: 0.56
   - name: Selflessness
     pick_rate: 0.14
     win_rate: 0.47
   - name: Heroism
     pick_rate: 0.09
-    win_rate: 0.63
+    win_rate: 0.61
+  - name: Sundering Axe
+    pick_rate: 0.04
+    win_rate: 0.5
   - name: War Flag
     pick_rate: 0.04
-    win_rate: 0.54
-  - name: Sundering Axe
-    pick_rate: 0.03
-    win_rate: 0.36
+    win_rate: 0.57
+  - name: Warrior's Axe
+    pick_rate: 0.04
+    win_rate: 0.79
   - name: War Banner
     pick_rate: 0.03
     win_rate: 0.82
-  - name: Warrior's Axe
-    pick_rate: 0.03
-    win_rate: 0.73
   - name: Archmage's Gem
-    pick_rate: 0.02
+    pick_rate: 0.01
     win_rate: 0.2
   - name: Conduit Gem
-    pick_rate: 0.02
+    pick_rate: 0.01
     win_rate: 0.6
   - name: Leather Cowl
     pick_rate: 0.003
     win_rate: 0.0
   relic_sightings:
   - name: Phantom Shell
-    pick_rate: 0.41
+    pick_rate: 0.39
     win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.31
-    win_rate: 0.54
+    pick_rate: 0.32
+    win_rate: 0.55
   - name: Sundering Arc
-    pick_rate: 0.15
-    win_rate: 0.51
+    pick_rate: 0.16
+    win_rate: 0.52
   - name: Aegis of Acceleration
     pick_rate: 0.06
-    win_rate: 0.43
+    win_rate: 0.48
   - name: Purification Beads
-    pick_rate: 0.06
-    win_rate: 0.39
+    pick_rate: 0.05
+    win_rate: 0.37
   - name: Agility Relic
-    pick_rate: 0.003
-    win_rate: 0.0
+    pick_rate: 0.005
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/sobek/
-  last_verified: '2026-11-09'
-  god_win_rate: 0.5198776758409785
-  god_matches_won: 170
-  god_matches_played: 327
+  last_verified: '2026-11-10'
+  god_win_rate: 0.5268542199488491
+  god_matches_won: 206
+  god_matches_played: 391
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-09'
-  god_matches_analyzed: 6470
+  god_window_end: '2026-11-10'
+  god_matches_analyzed: 7420
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.6
-    win_rate: 0.5022
-    matches: 196
+    pick_rate: 0.61
+    win_rate: 0.5069
+    matches: 239
     basis: community
   relic:
     name: Phantom Shell
-    pick_rate: 0.41
+    pick_rate: 0.39
     win_rate: 0.54
-    matches: 134
+    matches: 152
     basis: community
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
+  - Genji's Guard
+  - Prophetic Cloak
   - Draconic Scale
   - Amanita Charm
   - Erosion
@@ -189,65 +189,65 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Amanita Charm, Kinetic Cuirass, Rod of Tahuti, Draconic
-    Scale, Gluttonous Grimoire, Shield of the Phoenix, Erosion, Breastplate of Valor,
-    Soul Gem, Eye of Providence, Shifter''s Shield, Oni Hunter''s Garb, Helm of Darkness,
-    Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle Of Discord, Screeching
-    Gargoyle, Leviathan''s Hide, Spear of Desolation, Helm of Radiance, Hide of the
-    Nemean Lion, Gladiator''s Shield, Ancile, Prophetic Cloak, Blood-Bound Book, Void
-    Stone.'
+    this god: Genji''s Guard, Amanita Charm, Kinetic Cuirass, Prophetic Cloak, Rod
+    of Tahuti, Draconic Scale, Gluttonous Grimoire, Shield of the Phoenix, Erosion,
+    Breastplate of Valor, Soul Gem, Eye of Providence, Shifter''s Shield, Oni Hunter''s
+    Garb, Helm of Darkness, Stone of Binding, Midgardian Mail, Magi''s Cloak, Mantle
+    Of Discord, Screeching Gargoyle, Leviathan''s Hide, Spear of Desolation, Helm
+    of Radiance, Hide of the Nemean Lion, Gladiator''s Shield, Ancile, Blood-Bound
+    Book, Void Stone.'
   slot_scores:
-    Genji's Guard:
-      total: 0.65
-      efficiency: 0.71
-      win: 0.77
-      pick: 0.11
-      fit: 0.35
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.74
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.57
-      pick: 0.28
+    Genji's Guard:
+      total: 0.61
+      efficiency: 0.71
+      win: 0.68
+      pick: 0.13
+      fit: 0.35
+    Prophetic Cloak:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.66
+      pick: 0.14
       fit: 0.57
     Draconic Scale:
-      total: 0.5
+      total: 0.51
       efficiency: 0.53
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
     Erosion:
-      total: 0.49
+      total: 0.5
       efficiency: 0.51
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
   community_ordered:
   - Genji's Guard
-  - Freya's Tears
+  - Prophetic Cloak
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.6
-    win_rate: 0.5022
-    matches: 196
+    pick_rate: 0.61
+    win_rate: 0.5069
+    matches: 239
     basis: community
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.41
+    pick_rate: 0.39
     win_rate: 0.54
-    matches: 134
+    matches: 152
     basis: community
 - source: suggested
   archetype: bruiser
@@ -255,11 +255,11 @@ builds:
   - Yogi's Necklace
   - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
+  - Prophetic Cloak
   - Draconic Scale
   - Amanita Charm
   flex_slots:
-  - Kinetic Cuirass
+  - Prophetic Cloak
   - Draconic Scale
   situational_swaps:
   - vs_tag: heavy_cc
@@ -275,7 +275,7 @@ builds:
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Yogi''s Necklace, Amanita Charm, Shield of the Phoenix,
+    this god: Genji''s Guard, Amanita Charm, Yogi''s Necklace, Shield of the Phoenix,
     Soul Gem, Kinetic Cuirass, Rod of Tahuti, Gluttonous Grimoire, Blood-Bound Book,
     Phoenix Feather, Draconic Scale, Ethereal Staff, Erosion, Oni Hunter''s Garb,
     Eye of Providence, Chandra''s Grace, Breastplate of Valor, Shifter''s Shield,
@@ -284,56 +284,56 @@ builds:
     Gargoyle, Helm of Darkness.'
   slot_scores:
     Yogi's Necklace:
-      total: 0.6
+      total: 0.59
       efficiency: 0.56
-      win: 0.71
-      pick: 0.05
+      win: 0.68
+      pick: 0.07
       fit: 0.54
     Genji's Guard:
-      total: 0.65
+      total: 0.61
       efficiency: 0.71
-      win: 0.77
-      pick: 0.11
+      win: 0.68
+      pick: 0.13
       fit: 0.32
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.72
-    Freya's Tears:
-      total: 0.56
-      efficiency: 0.61
-      win: 0.57
-      pick: 0.28
+    Prophetic Cloak:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.66
+      pick: 0.14
       fit: 0.51
     Draconic Scale:
       total: 0.5
       efficiency: 0.53
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.62
     Amanita Charm:
-      total: 0.59
+      total: 0.6
       efficiency: 0.68
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.92
   community_ordered:
   - Yogi's Necklace
   - Genji's Guard
-  - Freya's Tears
+  - Prophetic Cloak
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Screeching Gargoyle
-  - Yogi's Necklace
   - Genji's Guard
-  - Freya's Tears
   - Kinetic Cuirass
+  - Prophetic Cloak
   - Spear of Desolation
+  - Amanita Charm
   flex_slots:
   - Screeching Gargoyle
   - Spear of Desolation
@@ -342,11 +342,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
+    swap: Stone of Binding — magical protection
     swap_item: Stone of Binding
+  - vs_tag: physical_heavy
+    swap: Void Shield — physical protection
+    swap_item: Void Shield
   - vs_tag: sustain
     swap: Stygian Anchor — anti-heal
     swap_item: Stygian Anchor
@@ -360,45 +360,44 @@ builds:
     Cloak.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.5
+      total: 0.51
       efficiency: 0.53
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.65
-    Yogi's Necklace:
-      total: 0.54
-      efficiency: 0.56
-      win: 0.71
-      pick: 0.05
-      fit: 0.13
     Genji's Guard:
-      total: 0.64
+      total: 0.6
       efficiency: 0.71
-      win: 0.77
-      pick: 0.11
+      win: 0.68
+      pick: 0.13
       fit: 0.25
-    Freya's Tears:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.57
-      pick: 0.28
-      fit: 0.41
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.55
+    Prophetic Cloak:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.66
+      pick: 0.14
+      fit: 0.41
     Spear of Desolation:
-      total: 0.5
+      total: 0.51
       efficiency: 0.6
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.47
+    Amanita Charm:
+      total: 0.53
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
   community_ordered:
-  - Yogi's Necklace
   - Genji's Guard
-  - Freya's Tears
+  - Prophetic Cloak
   starter: *id001
   relic: *id002
 - source: suggested
@@ -406,8 +405,8 @@ builds:
   slot_order:
   - Yogi's Necklace
   - Genji's Guard
+  - Prophetic Cloak
   - Bracer of The Abyss
-  - Freya's Tears
   - Nimble Ring
   - Bragi's Harp
   flex_slots:
@@ -436,54 +435,54 @@ builds:
     Metal.'
   slot_scores:
     Yogi's Necklace:
-      total: 0.53
+      total: 0.52
       efficiency: 0.56
-      win: 0.71
-      pick: 0.05
+      win: 0.68
+      pick: 0.07
       fit: 0.1
     Genji's Guard:
-      total: 0.63
+      total: 0.59
       efficiency: 0.71
-      win: 0.77
-      pick: 0.11
+      win: 0.68
+      pick: 0.13
       fit: 0.2
+    Prophetic Cloak:
+      total: 0.51
+      efficiency: 0.45
+      win: 0.66
+      pick: 0.14
+      fit: 0.33
     Bracer of The Abyss:
       total: 0.44
       efficiency: 0.52
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.24
-    Freya's Tears:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.57
-      pick: 0.28
-      fit: 0.33
     Nimble Ring:
-      total: 0.46
+      total: 0.47
       efficiency: 0.57
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.31
     Bragi's Harp:
-      total: 0.45
+      total: 0.46
       efficiency: 0.47
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.44
   community_ordered:
   - Yogi's Necklace
   - Genji's Guard
-  - Freya's Tears
+  - Prophetic Cloak
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Genji's Guard
   - Breastplate of Valor
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
+  - Prophetic Cloak
   - Spear of Desolation
   - Soul Gem
   flex_slots:
@@ -503,60 +502,60 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, Rod of Tahuti, Amanita
-    Charm, Soul Gem, Kinetic Cuirass, Breastplate of Valor, Shield of the Phoenix,
-    Spear of Desolation, Screeching Gargoyle, Gluttonous Grimoire, Chronos'' Pendant,
-    Gladiator''s Shield, Draconic Scale, Oni Hunter''s Garb, Prophetic Cloak, Erosion,
+    + fit + win/pick). Underrated for this god: Genji''s Guard, Prophetic Cloak, Rod
+    of Tahuti, Amanita Charm, Soul Gem, Kinetic Cuirass, Breastplate of Valor, Shield
+    of the Phoenix, Spear of Desolation, Screeching Gargoyle, Gluttonous Grimoire,
+    Chronos'' Pendant, Gladiator''s Shield, Draconic Scale, Oni Hunter''s Garb, Erosion,
     Eye of Providence, Helm of Radiance, Blood-Bound Book, Shifter''s Shield, Gem
     of Focus, Heartwood Charm, Helm of Darkness, Midgardian Mail, Chandra''s Grace,
     Stone of Binding, Leviathan''s Hide, Regrowth Striders.'
   slot_scores:
-    Genji's Guard:
-      total: 0.67
-      efficiency: 0.71
-      win: 0.77
-      pick: 0.11
-      fit: 0.45
     Breastplate of Valor:
       total: 0.51
       efficiency: 0.63
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.45
+    Genji's Guard:
+      total: 0.63
+      efficiency: 0.71
+      win: 0.68
+      pick: 0.13
+      fit: 0.45
     Kinetic Cuirass:
-      total: 0.51
+      total: 0.52
       efficiency: 0.61
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.52
-    Freya's Tears:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.57
-      pick: 0.28
+    Prophetic Cloak:
+      total: 0.55
+      efficiency: 0.45
+      win: 0.66
+      pick: 0.14
       fit: 0.6
     Spear of Desolation:
-      total: 0.49
+      total: 0.5
       efficiency: 0.6
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.42
     Soul Gem:
-      total: 0.51
+      total: 0.52
       efficiency: 0.58
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.59
   community_ordered:
   - Genji's Guard
-  - Freya's Tears
+  - Prophetic Cloak
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
   - Kinetic Cuirass
+  - Genji's Guard
   - Freya's Tears
   - Draconic Scale
   - Amanita Charm
@@ -586,40 +585,40 @@ builds:
     Radiance, Hide of the Nemean Lion, Gladiator''s Shield, Ancile, Prophetic Cloak,
     Blood-Bound Book, Void Stone.'
   slot_scores:
-    Genji's Guard:
-      total: 0.65
-      efficiency: 0.71
-      win: 0.77
-      pick: 0.11
-      fit: 0.35
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.74
+    Genji's Guard:
+      total: 0.61
+      efficiency: 0.71
+      win: 0.68
+      pick: 0.13
+      fit: 0.35
     Freya's Tears:
-      total: 0.57
+      total: 0.47
       efficiency: 0.61
-      win: 0.57
-      pick: 0.28
+      win: 0.36
+      pick: 0.22
       fit: 0.57
     Draconic Scale:
-      total: 0.5
+      total: 0.51
       efficiency: 0.53
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
     Amanita Charm:
-      total: 0.55
+      total: 0.56
       efficiency: 0.68
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
     Erosion:
-      total: 0.49
+      total: 0.5
       efficiency: 0.51
-      win: 0.48
+      win: 0.5
       pick: 0.0
       fit: 0.64
   community_ordered:
