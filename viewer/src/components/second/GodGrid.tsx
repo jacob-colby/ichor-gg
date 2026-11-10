@@ -13,10 +13,12 @@
  * Enter into the adapted build instead.
  *
  * Above the grid, while the field is empty, the recent gods (this browser
- * only, newest first): portrait and name, each opening the god's build
- * exactly as its card below does. The first is the god you were last on, so
- * there is no separate "Back to" card. It was a row of recent queries, enemy
- * heads and all, until 2026-11-09: Jacob wanted a plain list of gods. */
+ * only, newest first): portrait and name, each reopening the god's build in
+ * the mode and aspect state it was last viewed in, and saying so under the
+ * name when that isn't the default ("Joust · Aspect"). The first is the god
+ * you were last on, so there is no separate "Back to" card. It was a row of
+ * recent queries, enemy heads and all, until 2026-11-09: Jacob wanted a list
+ * of gods, keeping the mode and aspect and dropping the enemies. */
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { God, Item } from "../../types";
 import { LANES, godInLane, godLane, laneTextClass, type Lane } from "../../lib/roleAccent";
@@ -26,6 +28,7 @@ import { Art } from "./art";
 import { useWide } from "./useWide";
 import { CommandField } from "../command/CommandField";
 import { godRank, gridFilterText, queryHash, type ParsedQuery } from "../command/query";
+import { recentHash, recentModeWord, type RecentGod } from "../command/recents";
 
 interface Filter { q: string; role: Lane | "" }
 const decode = (p: URLSearchParams): Filter => {
@@ -57,8 +60,9 @@ export function RoleFilter({ role, onChange, className = "" }: {
 export interface GodGridProps {
   gods: God[];
   items?: Item[];
-  /** Recent gods, newest first (this browser only); the first is the last one opened. */
-  recents?: string[];
+  /** Recent gods, newest first (this browser only), each with the mode and
+   *  aspect it was last viewed in; the first is the last one opened. */
+  recents?: RecentGod[];
   onRun?: (q: ParsedQuery) => void;
   onItem?: (name: string) => void;
   onClearRecents?: () => void;
@@ -98,7 +102,7 @@ export function GodGrid({ gods, items, recents = [], onRun, onItem, onClearRecen
       .filter((g) => (!f.role || godInLane(g.role, f.role)) && (!q || g.name.toLowerCase().includes(q)))
       .sort((a, b) => rank(a.name) - rank(b.name) || byLength(a, b) || a.name.localeCompare(b.name));
   }, [gods, f]);
-  const recentGods = useMemo(() => recents.filter((n) => gods.some((g) => g.name === n)), [recents, gods]);
+  const recentGods = useMemo(() => recents.filter((e) => gods.some((g) => g.name === e.god)), [recents, gods]);
   const idle = !f.q && !f.role;
 
   return (
@@ -135,15 +139,27 @@ export function GodGrid({ gods, items, recents = [], onRun, onItem, onClearRecen
           {/* Phone: one row that scrolls sideways. From lg it wraps instead:
               a mouse has no sideways swipe, and the row shows no scrollbar. */}
           <ul className="-mx-4 mt-2 flex snap-x scroll-px-4 gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0" data-testid="recents">
-            {recentGods.map((name) => (
-              <li key={name} className="snap-start">
-                <a href={toHash.god(name)}
-                  className="press flex h-14 items-center gap-2.5 rounded-[12px] border border-line bg-surface pl-1.5 pr-3.5 hover:bg-surface-2">
-                  <Art name={name} kind="head" eager className="h-10 w-10 rounded-[9px]" />
-                  <span className="whitespace-nowrap font-cond text-[19px] font-bold leading-none text-ink">{name}</span>
-                </a>
-              </li>
-            ))}
+            {recentGods.map((e) => {
+              // What a tap gives, and only when it isn't the default: no
+              // "Conquest", no "No aspect".
+              const mode = recentModeWord(e);
+              return (
+                <li key={e.god} className="snap-start">
+                  <a href={recentHash(e)} data-mode={e.mode} data-aspect={e.aspect || undefined}
+                    className="press flex h-14 items-center gap-2.5 rounded-[12px] border border-line bg-surface pl-1.5 pr-3.5 hover:bg-surface-2">
+                    <Art name={e.god} kind="head" eager className="h-10 w-10 rounded-[9px]" />
+                    <span>
+                      <span className="block whitespace-nowrap font-cond text-[19px] font-bold leading-none text-ink">{e.god}</span>
+                      {(mode || e.aspect) && (
+                        <span className="mt-1 block whitespace-nowrap text-cap leading-none text-muted" data-testid="recent-state">
+                          {[mode, e.aspect ? "Aspect" : null].filter(Boolean).join(" · ")}
+                        </span>
+                      )}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )}

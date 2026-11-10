@@ -62,6 +62,7 @@ import { CompareDetail } from "./CompareDetail";
 import { WhyPanel } from "./WhyPanel";
 import { useWide } from "./useWide";
 import { Disclosure } from "./Disclosure";
+import type { RecentGod } from "../command/recents";
 
 const sameOrder = (a: string[] = [], b: string[] = []) => a.length === b.length && a.every((x, i) => x === b[i]);
 
@@ -75,11 +76,19 @@ const MOST_PICKED = 10;
 const pctOf = (r: number) => `${Math.round(r * 100)}%`;
 const shortAspect = (a: string) => a.replace(/^Aspect of /, "").replace(/^the /i, "");
 
-export function GodPage({ god, data }: { god: God; data: IndexData }) {
+export function GodPage({ god, data, onView }: {
+  god: God; data: IndexData;
+  /** Told the god and the mode and aspect it is on, whenever any of them
+   *  changes: the recent gods list (`command/recents.ts`) reopens it there. */
+  onView?: (view: RecentGod) => void;
+}) {
   const [q, setQ] = useUrlState(decodePageQuery, encodePageQuery);
   const { mode } = q;
   const modeLabel = MODE_NAME[mode];
   const wide = useWide();
+
+  const viewedAspect = q.aspect && !!god.aspects?.length;
+  useEffect(() => { onView?.({ god: god.name, mode, aspect: viewedAspect }); }, [onView, god.name, mode, viewedAspect]);
 
   // ── The enemy team: the shared draft, with you in ally slot 1. ──────────
   const { draft, mode: draftMode, setMode: setDraftMode, setEnemy, setAlly } = useDraft();

@@ -35,18 +35,29 @@ describe("GodGrid", () => {
   });
 
   /* A list of gods, not matchups (Jacob, 2026-11-09): portrait and name, the
-   * last god first, each opening the build exactly as its grid card does. */
-  it("lists the recent gods above the grid, each linking where its card does", () => {
-    render(<GodGrid gods={gods} recents={["Ymir", "Nobody", "Ra"]} onClearRecents={() => {}} />);
+   * last god first, each reopening the god in the mode and aspect it was last
+   * on, and saying so only when that isn't the default. No enemies. */
+  it("lists the recent gods above the grid, each saying and linking to what a tap gives", () => {
+    render(<GodGrid gods={gods} onClearRecents={() => {}} recents={[
+      { god: "Ymir", mode: "conquest", aspect: false },
+      { god: "Nobody", mode: "conquest", aspect: false },
+      { god: "Ra", mode: "joust", aspect: true },
+      { god: "Hera", mode: "conquest", aspect: true },
+      { god: "Ares", mode: "arena", aspect: false },
+    ]} />);
     const row = within(screen.getByTestId("recents"));
-    expect(row.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")]))
-      .toEqual([["Ymir", "#/god/Ymir"], ["Ra", "#/god/Ra"]]);
+    expect(row.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")])).toEqual([
+      ["Ymir", "#/god/Ymir"],
+      ["RaJoust · Aspect", "#/god/Ra?mode=joust&aspect=1"],
+      ["HeraAspect", "#/god/Hera?aspect=1"],
+      ["AresArena", "#/god/Ares?mode=arena"],
+    ]);
     expect(screen.queryByRole("link", { name: /Back to/ })).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Clear" })).toBeInTheDocument();
   });
 
   it("hides the recent gods while the roster is filtered", () => {
-    render(<GodGrid gods={gods} recents={["Ymir"]} />);
+    render(<GodGrid gods={gods} recents={[{ god: "Ymir", mode: "conquest", aspect: false }]} />);
     fireEvent.click(screen.getByRole("button", { name: "Mid" }));
     expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
   });

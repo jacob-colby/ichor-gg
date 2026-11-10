@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import {
   parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches, keepLastMode,
 } from "./query";
-import { readRecentGods, pushRecentGod, clearRecentGods, MAX_RECENT_GODS } from "./recents";
+import { readRecentGods, pushRecentGod, clearRecentGods, recentHash, recentModeWord, MAX_RECENT_GODS } from "./recents";
 import { decodePageQuery } from "../second/pageState";
 
 const gods = [
@@ -222,24 +222,45 @@ describe("keepLastMode — a second mode replaces the first", () => {
 });
 
 /* One list of recent gods, not queries (Jacob, 2026-11-09): the god select
- * row, its first card (the old "Back to"), and the empty field's offers. */
+ * row, its first card (the old "Back to"), and the empty field's offers. Each
+ * god keeps the mode and aspect it was last viewed in; the enemies go. */
 describe("recent gods", () => {
   beforeEach(() => localStorage.clear());
   afterEach(() => vi.restoreAllMocks());
+  const view = (god: string, mode: "conquest" | "joust" | "arena" = "conquest", aspect = false) => ({ god, mode, aspect });
+  const names = () => readRecentGods(gods).map((e) => e.god);
 
-  it("keeps the newest first, once each, and capped", () => {
-    pushRecentGod("Ra", gods);
-    pushRecentGod("Ymir", gods);
-    pushRecentGod("Ra", gods);
-    expect(readRecentGods(gods)).toEqual(["Ra", "Ymir"]);
-    for (const g of gods) pushRecentGod(g.name, gods);
-    expect(readRecentGods(gods)).toHaveLength(MAX_RECENT_GODS);
-    expect(readRecentGods(gods)[0]).toBe("Cu Chulainn");
+  it("keeps the newest first, one entry per god, and capped", () => {
+    pushRecentGod(view("Ra"), gods);
+    pushRecentGod(view("Ymir"), gods);
+    pushRecentGod(view("Ra"), gods);
+    expect(names()).toEqual(["Ra", "Ymir"]);
+    for (const g of gods) pushRecentGod(view(g.name), gods);
+    expect(names()).toHaveLength(MAX_RECENT_GODS);
+    expect(names()[0]).toBe("Cu Chulainn");
   });
 
-  it("drops a god the roster no longer has", () => {
-    localStorage.setItem("ichor:recent-gods", JSON.stringify(["Nobody", "Ra", 7]));
-    expect(readRecentGods(gods)).toEqual(["Ra"]);
+  it("a newer visit to a god moves it up and replaces its mode and aspect", () => {
+    pushRecentGod(view("Ra", "joust", true), gods);
+    pushRecentGod(view("Ymir", "arena"), gods);
+    expect(readRecentGods(gods)).toEqual([view("Ymir", "arena"), view("Ra", "joust", true)]);
+    pushRecentGod(view("Ra"), gods);
+    expect(readRecentGods(gods)).toEqual([view("Ra"), view("Ymir", "arena")]);
+  });
+
+  it("reopens the god in that mode and aspect, with the defaults left out of the link", () => {
+    expect(recentHash(view("Ra"))).toBe("#/god/Ra");
+    expect(recentHash(view("Ra", "joust", true))).toBe("#/god/Ra?mode=joust&aspect=1");
+    expect(recentHash(view("Morgan Le Fay", "arena"))).toBe("#/god/Morgan%20Le%20Fay?mode=arena");
+    expect(recentModeWord(view("Ra"))).toBeNull();
+    expect(recentModeWord(view("Ra", "joust"))).toBe("Joust");
+  });
+
+  it("drops a god the roster no longer has, and anything that isn't an entry", () => {
+    localStorage.setItem("ichor:recent-gods", JSON.stringify([
+      view("Nobody"), { god: "Ra", mode: "duel", aspect: "yes" }, 7, { mode: "joust" }, view("Ymir", "joust"),
+    ]));
+    expect(readRecentGods(gods)).toEqual([view("Ra"), view("Ymir", "joust")]);
   });
 
   it("reads garbage as no recents", () => {
@@ -247,18 +268,26 @@ describe("recent gods", () => {
     expect(readRecentGods(gods)).toEqual([]);
   });
 
-  it("seeds once from the retired stores: the last god first, then each old query's own god", () => {
-    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Morgan Le Fay vs Ra Joust", "Ra vs Hecate", "zz vs Ymir"]));
+  it("seeds once from the retired stores, keeping each old query's mode and aspect", () => {
+    localStorage.setItem("ichor:recent-queries",
+      JSON.stringify(["Morgan Le Fay vs Ra Joust", "Ra vs Hecate Arena aspect", "zz vs Ymir", "Ra vs Zeus"]));
+    // The last god has no mode or aspect of its own: Conquest, aspect off.
     localStorage.setItem("ichor:last-god", "Ymir");
-    expect(readRecentGods(gods)).toEqual(["Ymir", "Morgan Le Fay", "Ra"]);
+    expect(readRecentGods(gods)).toEqual([view("Ymir"), view("Morgan Le Fay", "joust"), view("Ra", "arena", true)]);
     // The first write carries the seed and retires both old stores.
-    expect(pushRecentGod("Hera", gods)).toEqual(["Hera", "Ymir", "Morgan Le Fay", "Ra"]);
+    expect(pushRecentGod(view("Hera"), gods).map((e) => e.god)).toEqual(["Hera", "Ymir", "Morgan Le Fay", "Ra"]);
     expect(localStorage.getItem("ichor:recent-queries")).toBeNull();
     expect(localStorage.getItem("ichor:last-god")).toBeNull();
   });
 
+  it("seeds the last god with its old query's state when one names it, as its old card linked", () => {
+    localStorage.setItem("ichor:recent-queries", JSON.stringify(["Hera vs Ymir", "Ra vs Hecate Joust aspect"]));
+    localStorage.setItem("ichor:last-god", "Ra");
+    expect(readRecentGods(gods)).toEqual([view("Ra", "joust", true), view("Hera")]);
+  });
+
   it("stays clear once cleared, even with the retired stores still there", () => {
-    pushRecentGod("Ra", gods);
+    pushRecentGod(view("Ra"), gods);
     localStorage.setItem("ichor:recent-queries", JSON.stringify(["Hera vs Ymir"]));
     clearRecentGods();
     expect(readRecentGods(gods)).toEqual([]);
@@ -268,7 +297,7 @@ describe("recent gods", () => {
     vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => { throw new Error("SecurityError"); });
     vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => { throw new Error("SecurityError"); });
     expect(readRecentGods(gods)).toEqual([]);
-    expect(pushRecentGod("Ra", gods)).toEqual(["Ra"]);
+    expect(pushRecentGod(view("Ra"), gods)).toEqual([view("Ra")]);
     expect(() => clearRecentGods()).not.toThrow();
   });
 });

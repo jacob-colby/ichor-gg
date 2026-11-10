@@ -19,7 +19,7 @@ import { DraftBoard } from "./components/second/DraftBoard";
 import { useWide } from "./components/second/useWide";
 import { CommandField } from "./components/command/CommandField";
 import { gridFilterText, queryHash, type ParsedQuery } from "./components/command/query";
-import { clearRecentGods, pushRecentGod, readRecentGods } from "./components/command/recents";
+import { clearRecentGods, pushRecentGod, readRecentGods, type RecentGod } from "./components/command/recents";
 import { useDraft, MODE_TEAM_SIZE } from "./lib/draft";
 import { flushQuery, hashQuery } from "./lib/urlState";
 import { freshness } from "./lib/freshness";
@@ -49,16 +49,17 @@ function App() {
   const { setMode: setDraftMode, setEnemy } = useDraft();
   const isDev = import.meta.env.DEV;
 
-  /* Recent gods: every god whose build page is opened, by any route. Read
-   * once the roster is in (the first read may seed from the retired query and
-   * last-god stores, which name gods by text); set during render, so the row
-   * is there on the first frame rather than pushing the grid down a frame
-   * later. */
-  const [recents, setRecents] = useState<string[] | null>(null);
+  /* Recent gods: every god whose build page is opened, by any route, with
+   * the mode and aspect it was last on (the page reports both, so a switch
+   * flipped there counts). Read once the roster is in (the first read may
+   * seed from the retired query and last-god stores, which name gods by
+   * text); set during render, so the row is there on the first frame rather
+   * than pushing the grid down a frame later. */
+  const [recents, setRecents] = useState<RecentGod[] | null>(null);
   if (data && recents === null) setRecents(readRecentGods(data.gods));
-  const viewed = data && route.god && route.lens === "builds" && data.gods.some((g) => g.name === route.god)
-    ? route.god : null;
-  useEffect(() => { if (data && viewed) setRecents(pushRecentGod(viewed, data.gods)); }, [data, viewed]);
+  const recordView = useCallback((view: RecentGod) => {
+    if (data) setRecents(pushRecentGod(view, data.gods));
+  }, [data]);
 
   /* Submit a query. A god of your own lands on its page with the enemies as
    * `vs=` and the mode in the URL; that page writes them into the shared draft
@@ -243,7 +244,7 @@ function App() {
                 modeLabel="Conquest" />
             </GodSubPage>
           ) : (
-            <GodPage key={god.name} god={god} data={data} />
+            <GodPage key={god.name} god={god} data={data} onView={recordView} />
           )
         ) : route.lens === "draft" ? (
           <DraftBoard gods={data.gods} items={data.items} builds={data.builds}

@@ -412,17 +412,19 @@ describe("App — the command field on desktop", () => {
     expect(draftStored().enemies?.[0]).toBe("Ymir");
   });
 
-  it("offers the same recent gods when the field is empty, each opening that god's build", async () => {
-    localStorage.setItem("ichor:recent-gods", JSON.stringify(["Ymir"]));
+  it("offers the same recent gods when the field is empty, each reopening that god's mode", async () => {
+    localStorage.setItem("ichor:recent-gods", JSON.stringify([{ god: "Ymir", mode: "arena", aspect: false }]));
     atUrl(toHash.god("Chiron"));
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
     const field = await barField();
     fireEvent.focus(field);
     const offers = await screen.findAllByRole("option");
-    expect(offers.map((o) => o.textContent)).toEqual(["ChironCarryRecent", "YmirSoloRecent"]);
+    expect(offers.map((o) => o.textContent)).toEqual(["ChironCarryRecent", "YmirSolo · ArenaRecent"]);
     fireEvent.click(offers[1]);
-    await waitFor(() => expect(window.location.hash).toBe("#/god/Ymir"));
+    await waitFor(() => expect(window.location.hash).toBe("#/god/Ymir?mode=arena"));
+    await screen.findByRole("heading", { level: 1, name: "Ymir" });
+    expect(screen.getByRole("button", { name: "Arena" })).toHaveAttribute("aria-pressed", "true");
   });
 
   it("filters god select from the top bar's field", async () => {
@@ -545,27 +547,44 @@ describe("App — the command field on a phone", () => {
     localStorage.setItem("ichor:last-god", "Ymir");
     render(<App />);
     const recents = within(await screen.findByTestId("recents"));
+    // The old query's mode is kept and its enemies dropped; the last god had
+    // no mode of its own, so it reads as Conquest.
     expect(recents.getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")]))
-      .toEqual([["Ymir", "#/god/Ymir"], ["Chiron", "#/god/Chiron"]]);
+      .toEqual([["Ymir", "#/god/Ymir"], ["ChironJoust", "#/god/Chiron?mode=joust"]]);
     expect(screen.queryByRole("link", { name: /Back to/ })).not.toBeInTheDocument();
     fireEvent.change(await pageField(), { target: { value: "y" } });
     expect(screen.queryByTestId("recents")).not.toBeInTheDocument();
   });
 
-  it("records a god whenever its page opens, by a link or a grid card", async () => {
-    atUrl(toHash.god("Chiron"));
+  it("records a god whenever its page opens, by a link or a grid card, in the mode it was left on", async () => {
+    atUrl(`${toHash.god("Chiron")}?mode=joust&vs=Ymir`);
     render(<App />);
     await screen.findByRole("heading", { level: 1, name: "Chiron" });
     const tabs = within(screen.getByRole("navigation", { name: "Tabs" }));
     fireEvent.click(tabs.getByRole("link", { name: "Gods" }));
     const first = await screen.findByTestId("recents");
-    expect(within(first).getAllByRole("link").map((a) => a.textContent)).toEqual(["Chiron"]);
+    // The mode is kept; the enemies the link named are not.
+    expect(within(first).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/god/Chiron?mode=joust"]);
     fireEvent.click(within(screen.getByTestId("god-grid")).getByRole("link", { name: /Ymir/ }));
     await screen.findByRole("heading", { level: 1, name: "Ymir" });
     fireEvent.click(tabs.getByRole("link", { name: "Gods" }));
     await waitFor(() => expect(within(screen.getByTestId("recents")).getAllByRole("link").map((a) => a.textContent))
-      .toEqual(["Ymir", "Chiron"]));
-    expect(JSON.parse(localStorage.getItem("ichor:recent-gods") ?? "null")).toEqual(["Ymir", "Chiron"]);
+      .toEqual(["Ymir", "ChironJoust"]));
+    expect(JSON.parse(localStorage.getItem("ichor:recent-gods") ?? "null")).toEqual([
+      { god: "Ymir", mode: "conquest", aspect: false }, { god: "Chiron", mode: "joust", aspect: false }]);
+  });
+
+  it("moves a god up on a newer visit and takes that visit's mode", async () => {
+    localStorage.setItem("ichor:recent-gods", JSON.stringify([
+      { god: "Ymir", mode: "conquest", aspect: false }, { god: "Chiron", mode: "joust", aspect: false }]));
+    render(<App />);
+    fireEvent.click(within(await screen.findByTestId("recents")).getByRole("link", { name: /Chiron/ }));
+    await screen.findByRole("heading", { level: 1, name: "Chiron" });
+    expect(screen.getByRole("button", { name: "Joust" })).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(screen.getByRole("button", { name: "Conquest" }));
+    fireEvent.click(within(screen.getByRole("navigation", { name: "Tabs" })).getByRole("link", { name: "Gods" }));
+    await waitFor(() => expect(within(screen.getByTestId("recents")).getAllByRole("link").map((a) => a.getAttribute("href")))
+      .toEqual(["#/god/Chiron", "#/god/Ymir"]));
   });
 
   it("clears the row for good: the retired stores do not bring it back", async () => {
