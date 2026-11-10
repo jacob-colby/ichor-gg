@@ -10,7 +10,15 @@
  * grid through `query`. Either way a plain name filters the grid exactly as
  * the old box did, and the grid's first card is what Enter opens — the grid
  * sorts by the same rank the parser resolves a word with. Typing "vs …" turns
- * Enter into the adapted build instead. */
+ * Enter into the adapted build instead.
+ *
+ * Above the grid, while the field is empty, the recent gods (this browser
+ * only, newest first): portrait and name, each reopening the god's build in
+ * the mode and aspect state it was last viewed in, and saying so under the
+ * name when that isn't the default ("Joust · Aspect"). The first is the god
+ * you were last on, so there is no separate "Back to" card. It was a row of
+ * recent queries, enemy heads and all, until 2026-11-09: Jacob wanted a list
+ * of gods, keeping the mode and aspect and dropping the enemies. */
 import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { God, Item } from "../../types";
 import { LANES, godInLane, godLane, laneTextClass, type Lane } from "../../lib/roleAccent";
@@ -19,7 +27,8 @@ import { toHash } from "../../lib/useHashRoute";
 import { Art } from "./art";
 import { useWide } from "./useWide";
 import { CommandField } from "../command/CommandField";
-import { godRank, gridFilterText, parseQuery, queryHash, type ParsedQuery } from "../command/query";
+import { godRank, gridFilterText, queryHash, type ParsedQuery } from "../command/query";
+import { recentHash, recentModeWord, type RecentGod } from "../command/recents";
 
 interface Filter { q: string; role: Lane | "" }
 const decode = (p: URLSearchParams): Filter => {
@@ -50,10 +59,10 @@ export function RoleFilter({ role, onChange, className = "" }: {
 
 export interface GodGridProps {
   gods: God[];
-  lastGod?: string | null;
   items?: Item[];
-  /** Recent queries, newest first (this browser only). */
-  recents?: string[];
+  /** Recent gods, newest first (this browser only), each with the mode and
+   *  aspect it was last viewed in; the first is the last one opened. */
+  recents?: RecentGod[];
   onRun?: (q: ParsedQuery) => void;
   onItem?: (name: string) => void;
   onClearRecents?: () => void;
@@ -63,7 +72,7 @@ export interface GodGridProps {
   query?: string | null;
 }
 
-export function GodGrid({ gods, lastGod, items, recents = [], onRun, onItem, onClearRecents, fieldInBar = false, query = null }: GodGridProps) {
+export function GodGrid({ gods, items, recents = [], onRun, onItem, onClearRecents, fieldInBar = false, query = null }: GodGridProps) {
   const [f, setF] = useUrlState(decode, encode);
   const wide = useWide();
 
@@ -93,11 +102,8 @@ export function GodGrid({ gods, lastGod, items, recents = [], onRun, onItem, onC
       .filter((g) => (!f.role || godInLane(g.role, f.role)) && (!q || g.name.toLowerCase().includes(q)))
       .sort((a, b) => rank(a.name) - rank(b.name) || byLength(a, b) || a.name.localeCompare(b.name));
   }, [gods, f]);
-  const last = lastGod ? gods.find((g) => g.name === lastGod) : undefined;
-  const parsedRecents = useMemo(() => recents.map((text) => ({ text, q: parseQuery(text, gods) }))
-    .filter((r) => r.q.you), [recents, gods]);
+  const recentGods = useMemo(() => recents.filter((e) => gods.some((g) => g.name === e.god)), [recents, gods]);
   const idle = !f.q && !f.role;
-  const lastInRecents = parsedRecents.some((r) => r.q.you === last?.name);
 
   return (
     <div className="mx-auto w-full max-w-[1240px] px-4 pt-6 lg:px-6 lg:pt-10">
@@ -121,7 +127,7 @@ export function GodGrid({ gods, lastGod, items, recents = [], onRun, onItem, onC
         </div>
       </div>
 
-      {idle && parsedRecents.length > 0 && (
+      {idle && recentGods.length > 0 && (
         <section aria-labelledby="recent-h" className="mt-5">
           <div className="flex items-baseline justify-between">
             <h2 id="recent-h" className="font-cond text-[16px] font-bold uppercase text-muted">Recent</h2>
@@ -130,43 +136,32 @@ export function GodGrid({ gods, lastGod, items, recents = [], onRun, onItem, onC
                 className="press -my-3 h-11 px-1 text-cap font-semibold text-quiet hover:text-ink">Clear</button>
             )}
           </div>
-          <ul className="-mx-4 mt-2 flex snap-x scroll-px-4 gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" data-testid="recents">
-            {parsedRecents.map(({ text, q }) => (
-              <li key={text} className="snap-start">
-                <a href={queryHash({ you: q.you!, enemies: q.enemies, mode: q.mode, aspect: q.aspect })}
-                  onClick={(e) => { if (onRun) { e.preventDefault(); onRun(q); } }}
-                  className="press flex h-14 items-center gap-2.5 rounded-[12px] border border-line bg-surface pl-1.5 pr-3 hover:bg-surface-2">
-                  <span className="flex flex-none items-center -space-x-1.5">
-                    <Art name={q.you!} kind="head" className="relative z-10 h-10 w-10 rounded-[9px] ring-[1.5px] ring-accent" />
-                    {q.enemies.slice(0, 3).map((n) => (
-                      <Art key={n} name={n} kind="head" className="h-8 w-8 rounded-[7px] ring-2 ring-surface" />
-                    ))}
-                  </span>
-                  <span className="max-w-[24ch]">
-                    <span className="block whitespace-nowrap font-cond text-[18px] font-bold leading-none text-ink">{q.you}</span>
-                    <span className="mt-0.5 block truncate text-cap text-muted">
-                      {q.enemies.length ? `vs ${q.enemies.join(", ")}` : "Build"}
-                      {q.mode && q.mode !== "conquest" ? ` · ${q.mode[0].toUpperCase()}${q.mode.slice(1)}` : ""}
-                      {q.aspect ? " · Aspect" : ""}
+          {/* Phone: one row that scrolls sideways. From lg it wraps instead:
+              a mouse has no sideways swipe, and the row shows no scrollbar. */}
+          <ul className="-mx-4 mt-2 flex snap-x scroll-px-4 gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0" data-testid="recents">
+            {recentGods.map((e) => {
+              // What a tap gives, and only when it isn't the default: no
+              // "Conquest", no "No aspect".
+              const mode = recentModeWord(e);
+              return (
+                <li key={e.god} className="snap-start">
+                  <a href={recentHash(e)} data-mode={e.mode} data-aspect={e.aspect || undefined}
+                    className="press flex h-14 items-center gap-2.5 rounded-[12px] border border-line bg-surface pl-1.5 pr-3.5 hover:bg-surface-2">
+                    <Art name={e.god} kind="head" eager className="h-10 w-10 rounded-[9px]" />
+                    <span>
+                      <span className="block whitespace-nowrap font-cond text-[19px] font-bold leading-none text-ink">{e.god}</span>
+                      {(mode || e.aspect) && (
+                        <span className="mt-1 block whitespace-nowrap text-cap leading-none text-muted" data-testid="recent-state">
+                          {[mode, e.aspect ? "Aspect" : null].filter(Boolean).join(" · ")}
+                        </span>
+                      )}
                     </span>
-                  </span>
-                </a>
-              </li>
-            ))}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </section>
-      )}
-
-      {last && idle && !lastInRecents && (
-        <a href={toHash.god(last.name)} aria-label={`Back to ${last.name}'s build`}
-          className="press mt-5 flex min-h-14 items-center gap-3 rounded-[14px] border border-line bg-surface px-3 py-2 hover:bg-surface-2">
-          <Art name={last.name} kind="head" eager className="h-10 w-10 rounded-[10px]" />
-          <span className="min-w-0 flex-1">
-            <span className="block text-cap text-quiet">Back to</span>
-            <span className="block font-cond text-[22px] font-extrabold uppercase leading-none text-ink">{last.name}</span>
-          </span>
-          <span className="font-cond text-[16px] font-bold uppercase text-accent">Build</span>
-        </a>
       )}
 
       <p className="sr-only" aria-live="polite">{shown.length} gods shown</p>

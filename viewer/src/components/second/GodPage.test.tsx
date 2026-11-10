@@ -267,6 +267,20 @@ describe("God page — controls", () => {
     await waitFor(() => expect(window.location.hash).toContain("aspect=1"));
   });
 
+  /* Recent gods keep the mode and aspect a god was last viewed in (Jacob,
+   * 2026-11-09), so a switch flipped on the page is what the card reopens. */
+  it("records the mode and aspect it is left on for the recent gods row", async () => {
+    render(<App />);
+    fireEvent.click(await screen.findByRole("switch", { name: /Aspect of Thermotherapy/ }));
+    fireEvent.click(screen.getByRole("button", { name: "Joust" }));
+    await waitFor(() => expect(JSON.parse(localStorage.getItem("ichor:recent-gods") ?? "[]"))
+      .toEqual([{ god: "Ra", mode: "joust", aspect: true }]));
+    fireEvent.click(within(screen.getByRole("navigation", { name: "Tabs" })).getByRole("link", { name: "Gods" }));
+    const card = within(await screen.findByTestId("recents")).getByRole("link");
+    expect(card).toHaveAttribute("href", "#/god/Ra?mode=joust&aspect=1");
+    expect(card).toHaveTextContent("RaJoust · Aspect");
+  });
+
   it("adjusts the one six with a focus: the swapped slot is marked and the swap is named", async () => {
     render(<App />);
     const strip = await screen.findByRole("group", { name: "Adjust the build" });

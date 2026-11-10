@@ -11,8 +11,8 @@
  * "Gods" is one tab for both halves of the same job: picking a god and reading
  * its build. It used to be two tabs, Build (your god's page) and Gods (the
  * roster), which Jacob read as the same thing twice. The tab lands on the
- * roster; the roster's "Back to <god>" card is the one-tap return to the last
- * build, and the tab stays current on every god page.
+ * roster, whose Recent row starts with the god you were last on (the one-tap
+ * return to the last build), and the tab stays current on every god page.
  */
 import { useState, type ReactNode } from "react";
 import { toHash } from "../../lib/useHashRoute";

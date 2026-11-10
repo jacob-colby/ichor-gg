@@ -1,5 +1,6 @@
 /** Non-component state for the god page: what the URL query holds, which
- *  build is "the" build, the last god you opened, and the aspect line. */
+ *  build is "the" build, and the aspect line. The god you were last on is the
+ *  first of the recent gods (`command/recents.ts`), which the app records. */
 import type { Mode } from "./verdict";
 import type { Whose } from "./WhoseSwitch";
 
@@ -38,14 +39,6 @@ export const encodePageQuery = (q: PageQuery) => ({
   whose: q.whose === "community" ? "community" : undefined,
   vs: q.vs?.length ? q.vs.join(",") : undefined,
 });
-
-const LAST_GOD_KEY = "ichor:last-god";
-export function readLastGod(): string | null {
-  try { return localStorage.getItem(LAST_GOD_KEY); } catch { return null; }
-}
-export function writeLastGod(name: string): void {
-  try { localStorage.setItem(LAST_GOD_KEY, name); } catch { /* private mode */ }
-}
 
 /** The one line under the header when the aspect is on. */
 export function aspectNote(aspect: string, changesBuild: boolean, god: string): string {
