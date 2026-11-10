@@ -16,36 +16,20 @@
  * them is how a decorative badge ends up with button semantics: `AspectMark`
  * is a static marker, `AspectToggle` is a real toggle button.
  */
+import { AspectHex } from "./second/art";
 
-/** Pointy-top hexagon, the shape SMITE uses. Drawn rather than shipped as an
- *  asset so it inherits `currentColor` and stays crisp at 14px. */
-function Hex({ filled }: { filled: boolean }) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-full w-full">
-      <path
-        d="M12 1.6 21 6.8v10.4L12 22.4 3 17.2V6.8z"
-        fill={filled ? "currentColor" : "none"}
-        stroke="currentColor"
-        strokeWidth={filled ? 0 : 2.4}
-        strokeLinejoin="round"
-      />
-      {filled && (
-        // A notch out of the middle, so the "on" state is legible as a shape
-        // and not only as a fill — the badge is 14px and sits on artwork whose
-        // colour we do not control.
-        <path d="M12 6.4 17 9.3v5.4L12 17.6 7 14.7V9.3z" fill="var(--color-bg0)" />
-      )}
-    </svg>
-  );
-}
+/* The hexagon itself is `AspectHex` (second/art.tsx), the one aspect mark the
+ * site draws: the same shape, notch and Aspect Ember as the new surfaces'
+ * switch and the command field's chip. It was a private `Hex` here until
+ * 2026-11-09, when it moved there so all of them share one copy. */
 
 /** Non-interactive "this god has an aspect" marker, for a face that is not a
  *  control (a picker tile, a threat row). */
 export function AspectMark({ on = true, className = "" }: { on?: boolean; className?: string }) {
   return (
     <span aria-hidden="true"
-      className={`pointer-events-none absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 text-aspect drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] ${className}`}>
-      <Hex filled={on} />
+      className={`pointer-events-none absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] ${className}`}>
+      <AspectHex on={on} className="h-full w-full" />
     </span>
   );
 }
@@ -95,11 +79,12 @@ export function AspectToggle({ aspectName, on, onToggle, changesBuild = true, cl
       aria-pressed={on}
       aria-label={label}
       title={label}
-      className={`press absolute -bottom-1.5 -right-1.5 z-10 h-6 w-6 p-0.5 rounded-sm transition-colors duration-150 ease-standard
-        ${on ? "text-aspect" : "text-faint hover:text-aspect"}
+      className={`press absolute -bottom-1.5 -right-1.5 z-10 h-6 w-6 p-0.5 rounded-sm
         drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)] ${className}`}
     >
-      <Hex filled={on} />
+      {/* Off is the orange outline, not `text-faint` (until 2026-11-09):
+          the mark is always the game's orange; only the fill says "on". */}
+      <AspectHex on={on} className="h-full w-full" />
     </button>
   );
 }

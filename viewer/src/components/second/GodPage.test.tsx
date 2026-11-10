@@ -278,7 +278,8 @@ describe("God page — controls", () => {
     fireEvent.click(within(screen.getByRole("navigation", { name: "Tabs" })).getByRole("link", { name: "Gods" }));
     const card = within(await screen.findByTestId("recents")).getByRole("link");
     expect(card).toHaveAttribute("href", "#/god/Ra?mode=joust&aspect=1");
-    expect(card).toHaveTextContent("RaJoust · Aspect");
+    expect(card).toHaveTextContent("RaJoustAspect");
+    expect(card.querySelector("svg[data-aspect-hex]")).toHaveAttribute("data-aspect-hex", "on");
   });
 
   it("adjusts the one six with a focus: the swapped slot is marked and the swap is named", async () => {

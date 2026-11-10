@@ -12,7 +12,8 @@
  * there, and one screen gets one control.
  *
  * Each finished word becomes a chip (you ringed in violet, enemies ringed in
- * ink, mode and aspect as plain chips; anything not understood stays visible,
+ * ink, mode and aspect as plain chips, the aspect one led by the game's
+ * hexagon (`AspectHex`); anything not understood stays visible,
  * struck through, with the reason as its name). There is one mode chip at
  * most: a second mode word, typed or picked, replaces the first in the text
  * (`keepLastMode`) instead of standing beside it. The word being typed drives a
@@ -26,7 +27,7 @@
 import { useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { God, Item } from "../../types";
 import type { Mode } from "../second/verdict";
-import { Art, CloseGlyph, SearchGlyph } from "../second/art";
+import { Art, AspectHex, CloseGlyph, SearchGlyph } from "../second/art";
 import {
   itemMatches, keepLastMode, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
 } from "./query";
@@ -295,6 +296,8 @@ export function CommandField({
       return (
         <span key={key} data-chip={t.kind}
           className={`flex ${chipH} flex-none items-center gap-0.5 rounded-[10px] border border-line px-2 font-cond text-[17px] font-bold text-muted`}>
+          {/* The game's aspect mark before the word: filled for "Aspect", the outline for "No aspect". */}
+          {t.kind === "aspect" && <AspectHex on={t.value === "on"} className="mr-1 h-4 w-4" />}
           {text}{remove}
         </span>
       );
@@ -421,8 +424,9 @@ function OptionBody({ o, gods, items, parsed }: {
         <Art name={o.recent!.god} kind="head" className="h-9 w-9 rounded-[8px]" />
         <span className="min-w-0 flex-1">
           <span className="block font-cond text-[20px] font-bold leading-tight text-ink">{o.recent!.god}</span>
-          <span className="block text-cap text-quiet">
-            {[roleOf(gods, o.recent!.god), recentModeWord(o.recent!), o.recent!.aspect ? "Aspect" : null].filter(Boolean).join(" · ")}
+          <span className="flex items-center gap-1 text-cap text-quiet">
+            {[roleOf(gods, o.recent!.god), recentModeWord(o.recent!)].filter(Boolean).join(" · ")}
+            {o.recent!.aspect && <><AspectHex on className="h-3.5 w-3.5" /><span className="sr-only">Aspect</span></>}
           </span>
         </span>
         <span className="flex-none text-cap text-quiet">Recent</span>
@@ -460,7 +464,9 @@ function OptionBody({ o, gods, items, parsed }: {
   return (
     <>
       <span aria-hidden="true" className="flex h-9 w-9 flex-none items-center justify-center rounded-[8px] border border-line font-cond text-[15px] font-bold text-muted">
-        {s.kind === "vs" ? "vs" : s.kind === "mode" ? s.label.slice(0, 1) : "A"}
+        {/* The aspect row draws the aspect's own mark: filled when choosing it
+            turns the aspect on, the outline for "Aspect off". */}
+        {s.kind === "vs" ? "vs" : s.kind === "mode" ? s.label.slice(0, 1) : <AspectHex on={!!s.on} className="h-5 w-5" />}
       </span>
       <span className="min-w-0 flex-1 font-cond text-[20px] font-bold leading-tight text-ink">{s.label}</span>
       <span className="flex-none text-cap text-quiet">

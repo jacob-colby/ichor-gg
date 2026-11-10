@@ -288,6 +288,9 @@ export interface Suggestion {
   side?: "you" | "enemy";
   /** For a mode, the value. */
   mode?: Mode;
+  /** For the aspect: whether choosing it turns the aspect on. The word
+   *  toggles, so with the aspect already on it is the "Aspect off" row. */
+  on?: boolean;
 }
 
 /** What the field offers for the word being typed (`tail`), given what is
@@ -299,6 +302,11 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
   const hasAspect = !!youGod?.aspects?.length;
   const out: Suggestion[] = [];
   const modes = (Object.keys(MODE_WORDS) as Mode[]).filter((m) => m !== committed.mode);
+  // One aspect row, read the way the parser will read the word: it toggles,
+  // so with the aspect on it switches it off and says so.
+  const aspectRow = (): Suggestion => committed.aspect
+    ? { kind: "aspect", label: "Aspect off", insert: "aspect", on: false }
+    : { kind: "aspect", label: youGod!.aspects![0].name, insert: "aspect", on: true };
 
   if (!t) {
     // Nothing typed yet: offer the grammar's next step, never a god list.
@@ -307,13 +315,13 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
       out.push({ kind: "vs", label: "vs", insert: "vs" });
     }
     for (const m of modes) out.push({ kind: "mode", label: MODE_LABEL[m], insert: m, mode: m });
-    if (hasAspect) out.push({ kind: "aspect", label: committed.aspect ? "Aspect off" : (youGod!.aspects![0].name), insert: "aspect" });
+    if (hasAspect) out.push(aspectRow());
     return out.slice(0, limit);
   }
 
   if (VS_WORDS.has(t) && committed.you) out.push({ kind: "vs", label: "vs", insert: "vs" });
   if (MODE_WORDS[t]) out.push({ kind: "mode", label: MODE_LABEL[MODE_WORDS[t]], insert: t, mode: MODE_WORDS[t] });
-  if (t === "aspect" && hasAspect) out.push({ kind: "aspect", label: youGod!.aspects![0].name, insert: "aspect" });
+  if (t === "aspect" && hasAspect) out.push(aspectRow());
 
   const taken = new Set(committed.enemies);
   for (const g of godMatches(t, gods)) {
@@ -326,7 +334,7 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
     for (const k of KEYWORDS) {
       if (k.word === t || !k.word.startsWith(t)) continue;
       if (k.kind === "mode" && k.value !== committed.mode) out.push({ kind: "mode", label: MODE_LABEL[k.value!], insert: k.word, mode: k.value });
-      if (k.kind === "aspect" && hasAspect) out.push({ kind: "aspect", label: youGod!.aspects![0].name, insert: "aspect" });
+      if (k.kind === "aspect" && hasAspect) out.push(aspectRow());
       if (k.kind === "vs" && committed.you && !VS_WORDS.has(t)) out.push({ kind: "vs", label: "vs", insert: "vs" });
     }
   }

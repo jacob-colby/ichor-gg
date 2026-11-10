@@ -15,7 +15,8 @@
  * Above the grid, while the field is empty, the recent gods (this browser
  * only, newest first): portrait and name, each reopening the god's build in
  * the mode and aspect state it was last viewed in, and saying so under the
- * name when that isn't the default ("Joust · Aspect"). The first is the god
+ * name when that isn't the default: the mode word, and the aspect's filled
+ * hexagon (`AspectHex`) when it opens with the aspect on. The first is the god
  * you were last on, so there is no separate "Back to" card. It was a row of
  * recent queries, enemy heads and all, until 2026-11-09: Jacob wanted a list
  * of gods, keeping the mode and aspect and dropping the enemies. */
@@ -24,7 +25,7 @@ import type { God, Item } from "../../types";
 import { LANES, godInLane, godLane, laneTextClass, type Lane } from "../../lib/roleAccent";
 import { useUrlState } from "../../lib/urlState";
 import { toHash } from "../../lib/useHashRoute";
-import { Art } from "./art";
+import { Art, AspectHex } from "./art";
 import { useWide } from "./useWide";
 import { CommandField } from "../command/CommandField";
 import { godRank, gridFilterText, queryHash, type ParsedQuery } from "../command/query";
@@ -151,8 +152,10 @@ export function GodGrid({ gods, items, recents = [], onRun, onItem, onClearRecen
                     <span>
                       <span className="block whitespace-nowrap font-cond text-[19px] font-bold leading-none text-ink">{e.god}</span>
                       {(mode || e.aspect) && (
-                        <span className="mt-1 block whitespace-nowrap text-cap leading-none text-muted" data-testid="recent-state">
-                          {[mode, e.aspect ? "Aspect" : null].filter(Boolean).join(" · ")}
+                        <span className="mt-1 flex items-center gap-1 whitespace-nowrap text-cap leading-none text-muted" data-testid="recent-state">
+                          {mode}
+                          {/* The aspect's own mark, filled: this card opens with it on. */}
+                          {e.aspect && <><AspectHex on className="h-3.5 w-3.5" /><span className="sr-only">Aspect</span></>}
                         </span>
                       )}
                     </span>
