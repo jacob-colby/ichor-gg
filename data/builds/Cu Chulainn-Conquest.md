@@ -688,6 +688,16 @@ community_aspects:
       share: 0.19
     - name: Death's Embrace
       share: 0.19
+    - name: Hunter's Cowl
+      share: 0.19
+    - name: Leather Cowl
+      share: 0.1
+    - name: Death's Toll
+      share: 0.05
+    - name: Blood-soaked Shroud
+      share: 0.02
+    - name: Bumba's Hammer
+      share: 0.02
     relics:
     - name: Agility Relic
       share: 0.26

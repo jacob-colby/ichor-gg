@@ -837,6 +837,26 @@ community_aspects:
       share: 0.11
     - name: Bluestone Pendant
       share: 0.11
+    - name: Conduit Gem
+      share: 0.11
+    - name: Sundering Axe
+      share: 0.11
+    - name: Archmage's Gem
+      share: 0.08
+    - name: Sands Of Time
+      share: 0.06
+    - name: Warrior's Axe
+      share: 0.06
+    - name: Pendulum of the Ages
+      share: 0.03
+    - name: Selflessness
+      share: 0.03
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
     relics:
     - name: Sundering Arc
       share: 0.33

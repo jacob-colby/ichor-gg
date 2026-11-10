@@ -855,6 +855,22 @@ community_aspects:
       share: 0.2
     - name: War Banner
       share: 0.18
+    - name: War Flag
+      share: 0.17
+    - name: Sands Of Time
+      share: 0.09
+    - name: Pendulum of the Ages
+      share: 0.08
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Bluestone Brooch
+      share: 0.01
+    - name: Death's Embrace
+      share: 0.01
+    - name: Sharpshooter's Arrow
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.5

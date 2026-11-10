@@ -791,6 +791,12 @@ community_aspects:
       share: 0.32
     - name: Bluestone Pendant
       share: 0.06
+    - name: Conduit Gem
+      share: 0.06
+    - name: Sundering Axe
+      share: 0.06
+    - name: Blood-soaked Shroud
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.39

@@ -858,6 +858,26 @@ community_aspects:
       share: 0.2
     - name: Bluestone Brooch
       share: 0.16
+    - name: Pendulum of the Ages
+      share: 0.16
+    - name: Conduit Gem
+      share: 0.12
+    - name: Sands Of Time
+      share: 0.08
+    - name: Bumba's Hammer
+      share: 0.02
+    - name: Bumba's Cudgel
+      share: 0.01
+    - name: War Banner
+      share: 0.01
+    - name: Blood-soaked Shroud
+      share: 0.01
+    - name: Gilded Arrow
+      share: 0.01
+    - name: Heroism
+      share: 0.01
+    - name: Selflessness
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.38

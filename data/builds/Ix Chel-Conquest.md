@@ -837,6 +837,22 @@ community_aspects:
       share: 0.16
     - name: Heroism
       share: 0.13
+    - name: Selflessness
+      share: 0.13
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 4
+        matches: 5
+        says: changed in OB47; 4 of the 5 matches that bought it are older
+    - name: War Flag
+      share: 0.08
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 3
+        says: changed in OB47; 1 of the 3 matches that bought it are older
     relics:
     - name: Phantom Shell
       share: 0.55

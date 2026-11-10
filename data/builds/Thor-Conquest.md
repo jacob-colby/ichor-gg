@@ -847,6 +847,22 @@ community_aspects:
       share: 0.17
     - name: Bumba's Hammer
       share: 0.15
+    - name: Sundering Axe
+      share: 0.05
+    - name: Hunter's Cowl
+      share: 0.04
+    - name: Leather Cowl
+      share: 0.04
+    - name: Bumba's Cudgel
+      share: 0.03
+    - name: Warrior's Axe
+      share: 0.02
+    - name: War Flag
+      share: 0.01
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Selflessness
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.38

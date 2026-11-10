@@ -1135,6 +1135,24 @@ community_aspects:
       share: 0.13
     - name: Death's Embrace
       share: 0.11
+    - name: Death's Toll
+      share: 0.09
+    - name: Hunter's Cowl
+      share: 0.09
+    - name: War Banner
+      share: 0.09
+    - name: War Flag
+      share: 0.07
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 3
+        matches: 3
+        says: changed in OB47; 3 of the 3 matches that bought it are older
+    - name: Heroism
+      share: 0.04
+    - name: Sands Of Time
+      share: 0.02
     relics:
     - name: Phantom Shell
       share: 0.43

@@ -849,6 +849,12 @@ community_aspects:
       share: 0.36
     - name: Blood-soaked Shroud
       share: 0.05
+    - name: Hunter's Cowl
+      share: 0.05
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Conduit Gem
+      share: 0.02
     relics:
     - name: Sundering Arc
       share: 0.34

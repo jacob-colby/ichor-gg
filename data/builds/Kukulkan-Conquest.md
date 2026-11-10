@@ -830,6 +830,12 @@ community_aspects:
       share: 0.28
     - name: Pendulum of the Ages
       share: 0.09
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.02
+    - name: Sands Of Time
+      share: 0.02
     relics:
     - name: Aegis of Acceleration
       share: 0.49

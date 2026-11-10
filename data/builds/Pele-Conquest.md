@@ -855,6 +855,12 @@ community_aspects:
       share: 0.17
     - name: Leather Cowl
       share: 0.15
+    - name: Hunter's Cowl
+      share: 0.09
+    - name: Blood-soaked Shroud
+      share: 0.04
+    - name: Sundering Axe
+      share: 0.02
     relics:
     - name: Phantom Shell
       share: 0.37

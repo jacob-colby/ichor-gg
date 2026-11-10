@@ -51,7 +51,8 @@ import { AspectToggle } from "./AspectToggle";
 import { FocusStrip } from "./FocusStrip";
 import { KitTile, type KitAlternative } from "./KitTile";
 import { MostPicked, TransferNotes } from "./MostPicked";
-import { communityLines, communitySix, noAspectBuildLine } from "./communityBuild";
+import { anyAspectLine, communityLines, communitySix } from "./communityBuild";
+import { AspectCommunity, aspectCount, aspectEntry } from "./AspectCommunity";
 import { MAIN_ARCHETYPE, decodePageQuery, encodePageQuery, writeLastGod, aspectNote } from "./pageState";
 import { VerdictLine } from "./VerdictLine";
 import { ItemRow } from "./ItemRow";
@@ -358,9 +359,17 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
     <AspectToggle aspect={aspectName} on={q.aspect} changesBuild={changesBuild}
       onChange={(on) => setQ((p) => ({ ...p, aspect: on }))} />
   ) : undefined;
+  // What the aspect's own players buy: Conquest's per-aspect record, drawn in
+  // the aspect slot on the Community side. Ichor's side points at it.
+  const aspectRecord = noteFor(data.builds, god.name, "Conquest")?.community_aspects;
+  const aspectShown = mode === "conquest" && !!aspectName && hasCommunity
+    && aspectEntry(aspectRecord, aspectName)?.status === "shown";
+  const aspectMoved = isMain && aspectSwaps.length > 0;
   const aspectLine = q.aspect && aspectName ? (
-    isMain && aspectSwaps.length > 0 ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
+    aspectMoved ? `Built for ${shortAspect(aspectName)}.` : aspectNote(aspectName, aspectChangesBuild, god.name)
   ) : null;
+  const aspectPointer = aspectShown ? "What its players buy is on the Community side." : null;
+  const slotCount = aspectSlot ? aspectCount(aspectRecord, aspectName!, mode) : null;
 
   return (
     <div className="mx-auto w-full max-w-[1240px] px-4 lg:grid lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-12 lg:px-6 lg:pt-8">
@@ -412,12 +421,24 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
                 aspect={aspectSwitch(aspectChangesBuild)} />
               {(aspectLine || !isMain) && (
                 <div className="mt-1 space-y-2 lg:mt-2" data-testid="adjust-line" aria-live="polite">
+                  {/* The aspect's swaps fold away on a phone the way a focus's
+                      do (#138's swapDetail): one summary line, the list one
+                      tap away, so the six starts on the first screen. With no
+                      swap there is nothing to fold, and it stays one line. */}
                   {aspectLine && (
-                    <div>
-                      <p className="text-note text-muted" data-testid="aspect-note">
-                        {aspectLine}{isMain && aspectSwaps.length > 0 && <> {swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of)}</>}
-                      </p>
-                      {isMain && aspectSwaps.length > 0 && swapList(aspectSwaps)}
+                    <div data-testid="aspect-line">
+                      {swapDetail(
+                        <span data-testid="aspect-note">
+                          {aspectLine}
+                          {aspectMoved
+                            ? <> {noColon(swapLead({ swaps: aspectSwaps, sameAs: null, reordered: false, six: [] }, god.name, of))}</>
+                            : aspectPointer && <> {aspectPointer}</>}
+                        </span>,
+                        aspectMoved && <>
+                          {swapList(aspectSwaps)}
+                          {aspectPointer && <p className="mt-1 text-cap text-quiet">{aspectPointer}</p>}
+                        </>,
+                        "text-note text-muted")}
                     </div>
                   )}
                   {!isMain && selected && (
@@ -438,11 +459,13 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
             </div>
           )}
 
-          <div className="mt-2 flex items-baseline justify-between px-1 text-cap text-quiet lg:mt-3">
+          <div className="mt-2 flex items-baseline justify-between gap-3 px-1 text-cap text-quiet lg:mt-3">
             <h2 id="six-h" className="font-cond text-[16px] font-bold uppercase text-muted">
               {aspectSlot ? `The community's ${shortAspect(aspectName!)} build` : `${listLabel} · buy order`}
             </h2>
-            {!aspectSlot && <span aria-hidden="true">Gold spent</span>}
+            {aspectSlot
+              ? slotCount && <span className="num whitespace-nowrap" data-testid="aspect-community-span">{slotCount}</span>
+              : <span aria-hidden="true">Gold spent</span>}
           </div>
 
           {aspectSlot ? (
@@ -450,15 +473,14 @@ export function GodPage({ god, data }: { god: God; data: IndexData }) {
                session. On Community with the aspect on, this one block owns
                the whole build area: starter, relic and six. Nothing else
                renders beside it (no KitTile, no ItemRow list, no asterisk
-               notes). That session replaces its contents with
-               <AspectCommunity aspect={aspectName} mode={mode}
-                 communityAspects={<the Conquest note's community_aspects>}
-                 itemsByName={r.itemsByName} />.
-               Until then it says there is no per-aspect community build. */
+               notes). It holds <AspectCommunity>, the god's Conquest
+               per-aspect record (`pipeline/smite/aspect_matches.py`), which
+               draws all three itself and says so when there is nothing to
+               show (below the minimum, no record, or Joust/Arena). */
             <div className="mt-1.5" data-testid="community-aspect-slot">
-              <p className="rounded-[12px] border border-dashed border-line p-4 text-copy text-muted">
-                {noAspectBuildLine(shortAspect(aspectName!), god.name)}
-              </p>
+              <AspectCommunity bare aspect={aspectName!} mode={mode} communityAspects={aspectRecord}
+                itemsByName={r.itemsByName} />
+              {!slotCount && <p className="mt-1.5 px-1 text-note text-muted" data-testid="any-aspect-line">{anyAspectLine(god.name)}</p>}
             </div>
           ) : (
             <>

@@ -875,6 +875,32 @@ community_aspects:
       share: 0.2
     - name: War Flag
       share: 0.14
+    - name: War Banner
+      share: 0.07
+    - name: Heroism
+      share: 0.04
+    - name: Sundering Axe
+      share: 0.04
+    - name: Warrior's Axe
+      share: 0.04
+    - name: Bumba's Cudgel
+      share: 0.03
+    - name: Bumba's Hammer
+      share: 0.03
+    - name: Conduit Gem
+      share: 0.02
+    - name: Hunter's Cowl
+      share: 0.02
+    - name: Leather Cowl
+      share: 0.02
+    - name: Pendulum of the Ages
+      share: 0.02
+    - name: Archmage's Gem
+      share: 0.01
+    - name: Death's Embrace
+      share: 0.01
+    - name: Vampiric Shroud
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.33

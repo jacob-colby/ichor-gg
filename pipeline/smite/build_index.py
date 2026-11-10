@@ -511,11 +511,42 @@ def _god_item_damage(gods, items, weights) -> dict:
 
 
 #: Build-note keys the viewer does not read and the index does not carry.
-#: `community_aspects` (`smite.aspect_matches`, 2026-11-08) is evidence for a
-#: later session's aspect builds; ~1 KB per god in an index every visitor
-#: downloads, with no page that reads it yet. The session that gives it a
-#: page removes it from here.
-NOT_SHIPPED_BUILD_KEYS = ("community_aspects",)
+#: Empty since 2026-11-09, when the god page started showing
+#: `community_aspects`; kept so the next evidence-only key has a place to go.
+NOT_SHIPPED_BUILD_KEYS = ()
+
+#: What the god page reads of a Conquest note's `community_aspects`
+#: (`smite.aspect_matches`; viewer `AspectCommunity`). The note keeps the
+#: whole entry as evidence; the index carries the part a page shows, because
+#: every visitor downloads it: 153 KB compact for all 81 notes in full on
+#: 2026-11-09. Left out: the win share and the split index's win rates (the
+#: page shows what aspect players BUY, and a win rate beside it would read as
+#: a verdict on a build nobody measured), the window dates, unmapped slugs,
+#: and the items past the six the page lists. Every starter stays: the page
+#: sums a base -> upgrade path's two ends, as the main starter tile does.
+SHIPPED_ASPECT_BLOCK_KEYS = ("source", "minimum_matches", "complete_from", "partial_windows",
+                             "item_changes", "aspects")
+SHIPPED_ASPECT_KEYS = ("aspect", "status", "matches_by_window", "windows", "patches",
+                       "window_rule", "matches", "roles", "base_role", "base_role_share",
+                       "role_shift", "items", "starters", "relics")
+SHIPPED_ASPECT_ITEMS = 6
+
+
+def shipped_community_aspects(block: dict) -> dict:
+    """The slim view of one note's `community_aspects` that `index.json` carries."""
+    out = {k: block[k] for k in SHIPPED_ASPECT_BLOCK_KEYS if k in block}
+    out["aspects"] = []
+    for entry in block.get("aspects") or []:
+        slim = {k: entry[k] for k in SHIPPED_ASPECT_KEYS if k in entry}
+        if "items" in slim:
+            slim["items"] = slim["items"][:SHIPPED_ASPECT_ITEMS]
+        out["aspects"].append(slim)
+    return out
+
+
+def _shipped_note(note: dict) -> dict:
+    return {k: (shipped_community_aspects(v) if k == "community_aspects" else v)
+            for k, v in note.items() if k not in NOT_SHIPPED_BUILD_KEYS}
 
 
 def build_index(repo_root: Path) -> dict:
@@ -612,7 +643,7 @@ def _build_index(repo_root: Path, weights: dict) -> dict:
     if efficiency.numeric_cost_items(raw_items):
         eff, gold_values = efficiency.efficiency_scores(raw_items)
     items = _enrich_items(raw_items, tags_map, eff)
-    builds = [{k: v for k, v in note.items() if k not in NOT_SHIPPED_BUILD_KEYS}
+    builds = [_shipped_note(note)
               for note in _all(builds_dir)]
     gods = _all(gods_dir)
     _enrich_gods(gods, weights)

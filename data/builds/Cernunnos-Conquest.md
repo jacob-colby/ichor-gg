@@ -1600,6 +1600,20 @@ community_aspects:
       share: 0.16
     - name: Bumba's Cudgel
       share: 0.03
+    - name: Death's Embrace
+      share: 0.03
+    - name: Death's Toll
+      share: 0.03
+    - name: Gilded Arrow
+      share: 0.03
+    - name: Sharpshooter's Arrow
+      share: 0.03
+    - name: Bluestone Brooch
+      share: 0.01
+    - name: Bluestone Pendant
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.52

@@ -1780,6 +1780,28 @@ community_aspects:
       share: 0.14
     - name: Bumba's Hammer
       share: 0.14
+    - name: Selflessness
+      share: 0.14
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 5
+        matches: 5
+        says: changed in OB47; 5 of the 5 matches that bought it are older
+    - name: Pendulum of the Ages
+      share: 0.09
+    - name: Sands Of Time
+      share: 0.09
+    - name: War Banner
+      share: 0.09
+    - name: Bluestone Brooch
+      share: 0.03
+    - name: Bluestone Pendant
+      share: 0.03
+    - name: Heroism
+      share: 0.03
+    - name: Leather Cowl
+      share: 0.03
     relics:
     - name: Phantom Shell
       share: 0.71

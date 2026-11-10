@@ -702,6 +702,20 @@ community_aspects:
       share: 0.26
     - name: Bluestone Pendant
       share: 0.15
+    - name: Warrior's Axe
+      share: 0.1
+    - name: Archmage's Gem
+      share: 0.05
+    - name: Bumba's Hammer
+      share: 0.03
+    - name: Conduit Gem
+      share: 0.03
+    - name: Gilded Arrow
+      share: 0.03
+    - name: Hunter's Cowl
+      share: 0.03
+    - name: Leather Cowl
+      share: 0.03
     relics:
     - name: Sundering Arc
       share: 0.54

@@ -869,6 +869,28 @@ community_aspects:
       share: 0.15
     - name: Bumba's Cudgel
       share: 0.09
+    - name: Hunter's Cowl
+      share: 0.08
+    - name: Warrior's Axe
+      share: 0.08
+    - name: Blood-soaked Shroud
+      share: 0.02
+    - name: Leather Cowl
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.01
+    - name: Death's Embrace
+      share: 0.01
+    - name: Gilded Arrow
+      share: 0.01
+    - name: Heroism
+      share: 0.01
+    - name: Selflessness
+      share: 0.01
+    - name: Sharpshooter's Arrow
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.33

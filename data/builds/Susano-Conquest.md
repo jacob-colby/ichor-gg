@@ -852,6 +852,20 @@ community_aspects:
       share: 0.25
     - name: Bumba's Cudgel
       share: 0.19
+    - name: Bumba's Hammer
+      share: 0.12
+    - name: Warrior's Axe
+      share: 0.05
+    - name: War Banner
+      share: 0.04
+    - name: Heroism
+      share: 0.02
+    - name: Selflessness
+      share: 0.02
+    - name: Sundering Axe
+      share: 0.02
+    - name: War Flag
+      share: 0.02
     relics:
     - name: Phantom Shell
       share: 0.42

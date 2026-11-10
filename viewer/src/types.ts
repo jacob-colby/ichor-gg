@@ -241,6 +241,67 @@ export interface BuildNote {
   mode: string;
   builds: BuildEntry[];
   last_verified?: string;
+  /** What the god's aspect PLAYERS buy, per aspect — Conquest notes only
+   *  (`pipeline/smite/aspect_matches.py`). COMMUNITY data, not the model: no
+   *  score reads it, and Ichor's own aspect six cannot change role. */
+  community_aspects?: CommunityAspects;
+}
+
+/** An item whose cost, tier or stats moved at a patch after the oldest
+ *  window an aspect entry reads, so some of the games that bought it bought
+ *  an older version. `exact` is false when Ichor's item snapshots cannot
+ *  place the change in one patch (`patch` is then a span, "OB41–OB46"), or
+ *  when it moved during one. A passive change is never flagged: the
+ *  snapshots do not record passives. */
+export interface AspectItemChange {
+  patch: string;
+  exact: boolean;
+  older_matches: number;
+  matches: number;
+  says: string;
+}
+
+/** One listed item, starter or relic: the share of the entry's games that
+ *  hold it at the end. Inventory, not a buy order. */
+export interface AspectShare {
+  name: string;
+  share: number;
+  changed?: AspectItemChange;
+}
+
+export interface AspectCommunityEntry {
+  aspect: string;
+  status: "shown" | "below minimum";
+  /** Matches per stored patch window, e.g. `{ob47: 6, ob46: 21}`. */
+  matches_by_window: Record<string, number>;
+  /** Shown entries only, from here down. The windows read, oldest first. */
+  windows?: string[];
+  /** "OB47", or "OB45–OB47" for a pool. */
+  patches?: string;
+  /** "newest" | "last closed" | "pooled back": which branch of the rule chose
+   *  the windows. A pool means no recent patch alone held the minimum. */
+  window_rule?: string;
+  matches?: number;
+  roles?: { role: string; matches: number; share: number }[];
+  base_role?: string;
+  base_role_share?: number;
+  /** Set when the god's base role is a clear minority among the aspect's
+   *  players (a Wilson bound under one half). */
+  role_shift?: { role: string; share: number; says: string } | null;
+  items?: AspectShare[];
+  /** EVERY starter seen, so a base -> upgrade path's share can be summed. */
+  starters?: AspectShare[];
+  relics?: AspectShare[];
+}
+
+export interface CommunityAspects {
+  source: string;
+  minimum_matches: number;
+  complete_from?: string;
+  /** Windows the store holds only part of (the source's retention cut them). */
+  partial_windows?: Record<string, string>;
+  item_changes?: string;
+  aspects: AspectCommunityEntry[];
 }
 
 export interface RosterGod {

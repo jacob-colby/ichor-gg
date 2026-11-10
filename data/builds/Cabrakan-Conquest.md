@@ -873,6 +873,12 @@ community_aspects:
       share: 0.29
     - name: Bluestone Pendant
       share: 0.16
+    - name: Conduit Gem
+      share: 0.1
+    - name: Bumba's Hammer
+      share: 0.03
+    - name: Sands Of Time
+      share: 0.03
     relics:
     - name: Aegis of Acceleration
       share: 0.52

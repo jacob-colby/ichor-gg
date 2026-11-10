@@ -807,6 +807,20 @@ community_aspects:
       share: 0.26
     - name: Sundering Axe
       share: 0.16
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: Bumba's Cudgel
+      share: 0.02
+    - name: Death's Toll
+      share: 0.02
+    - name: Gilded Arrow
+      share: 0.02
+    - name: Heroism
+      share: 0.02
+    - name: War Banner
+      share: 0.02
+    - name: Warrior's Axe
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.33

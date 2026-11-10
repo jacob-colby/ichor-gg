@@ -299,7 +299,11 @@ MIN_INTERVAL = 2.5
 MIN_MATCHES = tierlist.MIN_MATCHES
 WILSON_Z = tierlist.WILSON_Z
 ITEMS_SHOWN = 8
-STARTERS_SHOWN = 3
+#: Every starter seen, not a top 3: a starter is a PATH (base, then its one
+#: upgrade), each match holds one end, and a path's share is the two ends
+#: summed — a path whose ends sit 3rd and 4th is invisible in a top 3. The
+#: viewer's main starter tile learned this first (`lib/starters.ts`).
+STARTERS_SHOWN = None
 RELICS_SHOWN = 3
 MATCH_KEY_LEN = 16
 

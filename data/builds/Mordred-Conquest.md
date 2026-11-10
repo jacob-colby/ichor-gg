@@ -1014,6 +1014,16 @@ community_aspects:
       share: 0.17
     - name: Hunter's Cowl
       share: 0.17
+    - name: Bluestone Pendant
+      share: 0.13
+    - name: Bumba's Cudgel
+      share: 0.13
+    - name: Leather Cowl
+      share: 0.1
+    - name: Blood-soaked Shroud
+      share: 0.07
+    - name: Sundering Axe
+      share: 0.03
     relics:
     - name: Purification Beads
       share: 0.33

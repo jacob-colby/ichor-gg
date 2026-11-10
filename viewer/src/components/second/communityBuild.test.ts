@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { communityLines, communitySix, noAspectBuildLine } from "./communityBuild";
+import { anyAspectLine, communityLines, communitySix } from "./communityBuild";
 import type { SideBySideData } from "../SideBySide";
 
 // Ullr's real file, 2026-11-09: the record's slot 6 is Blinking Abyss, a
@@ -46,9 +46,8 @@ describe("communityLines", () => {
   });
 });
 
-describe("noAspectBuildLine", () => {
-  it("says there is no per-aspect build, and where the any-aspect one is", () => {
-    expect(noAspectBuildLine("Thermotherapy", "Ra")).toBe(
-      "There's no community build for Thermotherapy yet. Switch the aspect off to see what all Ra players buy, on any aspect.");
+describe("anyAspectLine", () => {
+  it("says where the any-aspect six is", () => {
+    expect(anyAspectLine("Ra")).toBe("Switch the aspect off to see what all Ra players buy, on any aspect.");
   });
 });

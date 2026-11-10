@@ -780,6 +780,18 @@ community_aspects:
       share: 0.28
     - name: Death's Toll
       share: 0.1
+    - name: Leather Cowl
+      share: 0.08
+    - name: Sharpshooter's Arrow
+      share: 0.07
+    - name: Gilded Arrow
+      share: 0.05
+    - name: Bumba's Spear
+      share: 0.03
+    - name: Sundering Axe
+      share: 0.02
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Purification Beads
       share: 0.43

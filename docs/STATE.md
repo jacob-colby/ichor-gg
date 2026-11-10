@@ -2595,7 +2595,7 @@ so the switches ship as `method.pricing` and the page reads them.
 `test_the_index_ships_the_fit_that_chooses_the_builds` pins residuals, tiers,
 gold prices, the draft tables' flag state, the restore, and the receipt.
 
-### The per-aspect community record reaches back to 30 and flags changed items; no aspect build reads it (2026-11-08, rule 2026-11-09)
+### The per-aspect community record reaches back to 30, flags changed items, and the god page shows it; no aspect build reads it (2026-11-08, rule and page 2026-11-09)
 What aspect PLAYERS buy, from SmiteBrain's per-match feed (the tRPC call
 behind "More Builds", which paginates; the `__data.json` page never does).
 Verified first: placement 1 is the win (mirror test 14/14, the site's own
@@ -2607,8 +2607,15 @@ matches over OB44–OB47, 86 feeds; `complete_from` is the floor, 2026-09-24,
 and OB44 is marked `partial_from` because its first 2.5 days had already aged
 out), and the daily job adds ~217 requests to keep it. Each Conquest
 note gains `community_aspects`, under the tier list's own 30-match floor; a
-role shift named on a Wilson bound. It is kept out of `index.json`
-(`build_index.NOT_SHIPPED_BUILD_KEYS`).
+role shift named on a Wilson bound. **The god page shows it (2026-11-09)**:
+on the Community side of the whose-build switch with the aspect on, as the
+whole build area (`community-aspect-slot`), labelled community and not the
+model — the starter path, the relic and the six most held, by share of games,
+with the games and the patches pooled, the role shift said in words, and each
+changed item asterisked and explained. Joust and Arena say they have no
+per-aspect record. `index.json` carries a slim view
+(`build_index.shipped_community_aspects`: no win rates, the six, every
+starter); the note keeps the whole entry.
 
 **The window rule reaches back (2026-11-09).** #129's rule read the newest
 window, else the last closed one, and left 21 of 86 aspects below the floor,
@@ -3802,8 +3809,8 @@ default-ON one (`price_crit_multipliers`, `price_conversions`,
 **Use `npm run build`, not `tsc --noEmit`** — the latter misses errors that the
 project reference build catches.
 
-Tests: `cd pipeline && python -m pytest smite/tests -q` (1651) ·
-`cd viewer && npm test -- --run` (1072).
+Tests: `cd pipeline && python -m pytest smite/tests -q` (1652) ·
+`cd viewer && npm test -- --run` (1081).
 
 **A new patch's community window lands by itself** (Jacob, 2026-11-08; done
 2026-11-09). No test pins a value the live window moves, daily (2026-11-07) or
@@ -3941,7 +3948,7 @@ signal, and `stats_refresh` logs a `[patch sources]` cross-check against
 | Gods at 0% coverage | **Live in [CURRENT.md](CURRENT.md).** Dated readings, newest first. 3 — Cernunnos, Cupid, Mercury. (2026-11-08, the #124 refresh alone, which touched only `data/` and `viewer/public/`; recorded, not investigated.) Cernunnos is on it for the third reading running, 6 pairs and none matching. Cupid and Mercury are back, at 5 pairs each, after reading 20% on 2026-11-06 — the same two that were on it on 2026-11-03. Ah Puch, Athena, Atlas, Gilgamesh and Mordred now read 60%, 20%, 40%, 33% and 33%. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 6 — Ah Puch, Athena, Atlas, Cernunnos, Gilgamesh, Mordred (2026-11-06, the #117 refresh to the OB47 window alone, which changed no code, weights or tags; recorded, not investigated.) Each of the six has 5 or 6 community pairs and matches none, so one item either way moves a god on or off this row. Cernunnos is the only one carried over: Cupid, Guan Yu and Mercury now read 20%, 60% and 20%, on 5 pairs each. CHECKED THAT THIS IS REAL: all 95 gods are in `validate.compute`'s per-god denominator. Before that, 4 — Cernunnos, Cupid, Guan Yu, Mercury (2026-11-03, OB47; not investigated in that pass). On the 25 Aug – 7 Sep window it was 1, Mercury: The community window rebuilding (see Community sample) took Khepri off it, to 20% coverage; Mercury is the one god that crossed into it fresh, at 0.0% coverage and 0.0% win-weighted (`n=5` pairs, none matching). That is the third consecutive refresh window in which the single occupant of this row has been a different god — Ares/Yemoja, then Khepri, now Mercury — which is the strongest available sign that this row tracks the DATA and not the model. CHECKED THAT THIS IS REAL: all 90 gods are still in `validate.compute`'s per-god denominator, so nobody left by dropping out of the measure, which is the failure mode this row would otherwise hide |
 | Expert claims | 4 recorded · 3 resolved · 1 open (1 open by decision) |
 | Item effect-tag coverage | 132 of 140 buildable tagged · 8 reviewed, no tag warranted · 0 unreviewed |
-| Tests | 1651 pipeline · 1072 viewer |
+| Tests | 1652 pipeline · 1081 viewer |
 
 A row that opens **Live in [CURRENT.md](CURRENT.md).** is DAILY: its live figure
 is generated into [`docs/CURRENT.md`](CURRENT.md) by `python -m smite.doc_figures

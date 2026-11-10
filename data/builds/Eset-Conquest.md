@@ -1025,6 +1025,34 @@ community_aspects:
         says: changed in OB47; 15 of the 15 matches that bought it are older
     - name: Bumba's Cudgel
       share: 0.13
+    - name: Heroism
+      share: 0.13
+    - name: Conduit Gem
+      share: 0.09
+    - name: Archmage's Gem
+      share: 0.06
+    - name: Bluestone Pendant
+      share: 0.05
+    - name: Pendulum of the Ages
+      share: 0.05
+    - name: Bluestone Brooch
+      share: 0.04
+    - name: Sands Of Time
+      share: 0.02
+    - name: War Banner
+      share: 0.02
+    - name: Sharpshooter's Arrow
+      share: 0.01
+    - name: War Flag
+      share: 0.01
+      changed:
+        patch: OB47
+        exact: true
+        older_matches: 1
+        matches: 1
+        says: changed in OB47; 1 of the 1 matches that bought it are older
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Phantom Shell
       share: 0.4

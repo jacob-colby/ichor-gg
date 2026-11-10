@@ -879,6 +879,12 @@ community_aspects:
       share: 0.27
     - name: Bluestone Brooch
       share: 0.13
+    - name: Sands Of Time
+      share: 0.1
+    - name: Warrior's Axe
+      share: 0.07
+    - name: Bluestone Pendant
+      share: 0.03
     relics:
     - name: Agility Relic
       share: 0.5

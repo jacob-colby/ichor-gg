@@ -1766,6 +1766,18 @@ community_aspects:
       share: 0.25
     - name: Death's Embrace
       share: 0.12
+    - name: Leather Cowl
+      share: 0.1
+    - name: Bluestone Brooch
+      share: 0.06
+    - name: Gilded Arrow
+      share: 0.06
+    - name: Pendulum of the Ages
+      share: 0.04
+    - name: Archmage's Gem
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.02
     relics:
     - name: Purification Beads
       share: 0.65
