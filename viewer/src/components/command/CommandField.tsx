@@ -14,9 +14,10 @@
  * Each finished word becomes a chip (you ringed in violet, enemies ringed in
  * ink, mode and aspect as plain chips, the aspect one led by the game's
  * hexagon (`AspectHex`); anything not understood stays visible,
- * struck through, with the reason as its name). There is one mode chip at
- * most: a second mode word, typed or picked, replaces the first in the text
- * (`keepLastMode`) instead of standing beside it. The word being typed drives a
+ * struck through, with the reason as its name). There is one mode chip and
+ * one aspect chip at most: a later mode word, or a later aspect word
+ * ("aspect", "no aspect", "aspect off"), typed or picked, replaces the earlier
+ * one in the text (`keepLastKeyword`) instead of standing beside it. The word being typed drives a
  * suggestion list that overlays the page — it never pushes layout. Tapping a
  * suggestion is the same as typing it. Enter takes the top suggestion for the
  * unfinished word and goes.
@@ -29,7 +30,7 @@ import type { God, Item } from "../../types";
 import type { Mode } from "../second/verdict";
 import { Art, AspectHex, CloseGlyph, SearchGlyph } from "../second/art";
 import {
-  itemMatches, keepLastMode, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
+  itemMatches, keepLastKeyword, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
 } from "./query";
 import { recentModeWord, recentQuery, type RecentGod } from "./recents";
 import { useKeyboardInset } from "./useKeyboardInset";
@@ -75,17 +76,16 @@ export function CommandField({
   gods, items, seedText = "", seedMode = "conquest", onSubmit, onItem, onText, recents = [], variant,
   label, placeholder, autoFocus, clearOnSubmit, gridBelow,
 }: CommandFieldProps) {
-  // Every commit goes through `keepLastMode`: a second mode word replaces the
-  // first in the text, so there is only ever one mode chip.
-  const seeded = () => (seedText ? keepLastMode(`${seedText} `, gods, seedMode) : "");
-  const commit = (text: string) => keepLastMode(text, gods, seedMode);
+  // Every commit goes through `keepLastKeyword`: a later mode or aspect word
+  // replaces the earlier one in the text, so there is only ever one of each.
+  const seeded = () => (seedText ? keepLastKeyword(`${seedText} `, gods, seedMode) : "");
+  const commit = (text: string) => keepLastKeyword(text, gods, seedMode);
   const [committed, setCommitted] = useState(seeded);
   const [tail, setTail] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const input = useRef<HTMLInputElement>(null);
   const root = useRef<HTMLDivElement>(null);
-  const chipRow = useRef<HTMLDivElement>(null);
   const listId = useId();
   const page = variant === "page";
 
@@ -120,12 +120,6 @@ export function CommandField({
   }, [tail, parsed, itemHits, holdBack, suggestions, committed, recents, gridBelow]);
 
   useEffect(() => { setActive(0); }, [tail, committed]);
-
-  // Keep the word being typed in view as chips pile up.
-  useEffect(() => {
-    const row = chipRow.current;
-    if (row) row.scrollLeft = row.scrollWidth;
-  }, [committed]);
 
   // Close on a press outside.
   useEffect(() => {
@@ -264,7 +258,10 @@ export function CommandField({
   const notes = full.notes;
   const activeId = open && options[active] ? `${listId}-${options[active].id}` : undefined;
   const hasText = !!(committed.trim() || tail);
-  const h = page ? "h-14" : "h-11";
+  // A minimum, not a height: the chips wrap onto further lines. `line` is one
+  // line inside the 1px border (56 − 2, 44 − 2).
+  const h = page ? "min-h-14" : "min-h-11";
+  const line = page ? "h-[54px]" : "h-[42px]";
   const chipH = page ? "h-11" : "h-9";
 
   const chip = (t: QueryToken, i: number) => {
@@ -352,17 +349,40 @@ export function CommandField({
     // hides everything else in it while the field is open), not to a fixed
     // width — a fixed 640px ended part-way across the reading links, leaving
     // one half under the field and the next one showing beside it.
+    //
+    // The chips WRAP onto further lines rather than scrolling sideways, so
+    // every chip stays whole (Jacob, 2026-11-09; until then the row scrolled
+    // to keep the input in view, and on a 390px phone any second chip pushed
+    // your god's chip off the left). The input takes the rest of the last
+    // line, and keeps its 64px minimum by dropping to a line of its own. On
+    // the page a taller field pushes the grid down, as any page field does.
+    // In the top bar it must not grow the 56px bar, so there the field is
+    // laid over the page from the bar's own line: the root keeps the bar's
+    // 44px, and the box (with its suggestion list under it) hangs from it
+    // and grows downward over the page.
     <div ref={root} data-testid={page ? "command-page" : "command-bar"} data-command-open={open || undefined}
-      className={`relative scroll-mt-3 ${page ? "" : `z-10 transition-[width] duration-150 ease-[var(--ease-standard)] ${
+      className={`relative scroll-mt-3 ${page ? "" : `z-10 h-11 transition-[width] duration-150 ease-[var(--ease-standard)] ${
         open ? "w-[100cqw]" : "w-full"}`}`}>
+      <div className={page ? "" : "absolute inset-x-0 top-0"}>
       <div onClick={(e) => {
         // Anywhere on the field that isn't its own button starts typing.
         if (!(e.target as HTMLElement).closest("button")) { input.current?.focus(); setOpen(true); }
       }}
-        className={`flex ${h} min-w-0 items-center gap-1 rounded-[12px] border bg-surface pl-3 pr-1.5 transition-colors duration-150 ${
+        className={`flex ${h} min-w-0 items-stretch gap-1 rounded-[12px] border bg-surface pl-3 pr-1.5 transition-colors duration-150 ${
           open ? "border-accent" : "border-line hover:border-quiet"}`}>
-        <SearchGlyph size={page ? 20 : 18} className="flex-none text-quiet" />
-        <div ref={chipRow} className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto px-[2px] py-[3px] [scrollbar-width:none]">
+        {/* One line's height each: the glyph stays on the first line and
+            Clear / Go on the last, beside the input, however many lines the
+            chips take. A single line looks exactly as it did. */}
+        <span className={`flex ${line} flex-none items-center self-start`}>
+          <SearchGlyph size={page ? 20 : 18} className="flex-none text-quiet" />
+        </span>
+        {/* The top bar's field wraps only while it is open. Closed, it is
+            220–440px wide, and a whole draft wrapped there hung 364px over
+            the page at 1024px (measured 2026-11-09), so at rest it keeps the
+            bar's one line, your god first, and opens to the wide wrapped
+            field on a tap or Tab. */}
+        <div className={`flex min-w-0 flex-1 items-center gap-1 px-[2px] ${page ? "py-[5px]" : "py-[3px]"} ${
+          page || open ? "flex-wrap" : "flex-nowrap overflow-hidden"}`}>
           {chips.map(chip)}
           <input ref={input} value={tail} role="combobox" aria-expanded={open && !!panel} aria-controls={listId}
             aria-autocomplete="list" aria-activedescendant={activeId} aria-label={label}
@@ -376,7 +396,7 @@ export function CommandField({
               page ? "text-[17px]" : "text-copy"}`} />
         </div>
         {hasText ? (
-          <>
+          <span className={`flex ${line} flex-none items-center gap-1 self-end`}>
             <button type="button" aria-label="Clear" onPointerDown={(e) => e.preventDefault()}
               onClick={() => { setCommitted(""); setTail(""); input.current?.focus(); }}
               className="press flex h-9 w-9 flex-none items-center justify-center rounded-[8px] text-quiet hover:text-ink">
@@ -388,13 +408,14 @@ export function CommandField({
                 Go
               </button>
             )}
-          </>
+          </span>
         ) : !page ? (
           <kbd aria-hidden="true" title="Press / or Ctrl K to search"
-            className="mr-1 flex-none rounded-[6px] border border-line px-1.5 py-0.5 text-cap font-semibold text-quiet">/</kbd>
+            className="mr-1 flex-none self-center rounded-[6px] border border-line px-1.5 py-0.5 text-cap font-semibold text-quiet">/</kbd>
         ) : null}
       </div>
       {panel}
+      </div>
     </div>
   );
 }

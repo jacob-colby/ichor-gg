@@ -10,8 +10,12 @@
  *    second god typed straight after you, because "ra hecate" can only mean
  *    one thing in a draft;
  *  - "conquest" / "joust" / "arena" set the mode (last one wins; the field
- *    drops the earlier word when a later one is committed — `keepLastMode`);
- *  - "aspect" toggles your god's aspect;
+ *    drops the earlier word when a later one is committed — `keepLastKeyword`);
+ *  - "aspect" turns your god's aspect on, and "no aspect" or "aspect off"
+ *    turns it off. The last of them wins, exactly as the last mode does
+ *    (Jacob, 2026-11-09; until then "aspect" toggled, so a second one meant
+ *    off). "no aspect" is read as one keyword before any god name, so its
+ *    "no" is never Nox; "no" alone, or before anything else, still is;
  *  - "and", "playing", "as" … are filler and read as nothing.
  *
  * A word resolves to a god by the same ranking the suggestions list shows, so
@@ -42,6 +46,9 @@ export interface QueryToken {
   end: number;
   /** Why a token was dropped or not understood, in words. */
   note?: string;
+  /** On a dropped token, what it would have been ("aspect" for "ymir
+   *  aspect"), so the last-keyword rule still sees it. */
+  was?: TokenKind;
 }
 
 export interface ParsedQuery {
@@ -166,10 +173,24 @@ export function parseQuery(text: string, gods: GodLike[], defaultMode: Mode = "c
     st.last = tok;
   };
 
+  const setAspect = (on: boolean, start: number, end: number) => {
+    aspect = on;
+    tokens.push({ kind: "aspect", text: text.slice(start, end), value: on ? "on" : "off", start, end });
+    st.last = null;
+  };
+
   for (let i = 0; i < ws.length; i += 1) {
     const w = ws[i];
     const lower = w.lower;
 
+    // "no aspect" / "aspect off": one keyword, read before any god name the
+    // way a multi-word god is, so the "no" is never Nox.
+    const next = ws[i + 1]?.lower;
+    if ((lower === "no" && next === "aspect") || (lower === "aspect" && next === "off")) {
+      setAspect(false, w.start, ws[i + 1].end);
+      i += 1;
+      continue;
+    }
     if (VS_WORDS.has(lower)) {
       tokens.push({ kind: "vs", text: w.text, start: w.start, end: w.end });
       st.enemySide = true; st.last = null;
@@ -183,9 +204,7 @@ export function parseQuery(text: string, gods: GodLike[], defaultMode: Mode = "c
       continue;
     }
     if (lower === "aspect") {
-      aspect = !aspect;
-      tokens.push({ kind: "aspect", text: w.text, value: aspect ? "on" : "off", start: w.start, end: w.end });
-      st.last = null;
+      setAspect(true, w.start, w.end);
       continue;
     }
     if (FILLER.has(lower)) {
@@ -211,9 +230,7 @@ export function parseQuery(text: string, gods: GodLike[], defaultMode: Mode = "c
       continue;
     }
     if (kw?.kind === "aspect") {
-      aspect = !aspect;
-      tokens.push({ kind: "aspect", text: w.text, value: aspect ? "on" : "off", start: w.start, end: w.end });
-      st.last = null;
+      setAspect(true, w.start, w.end);
       continue;
     }
     const note = `“${w.text}” isn't a god or a mode`;
@@ -227,7 +244,9 @@ export function parseQuery(text: string, gods: GodLike[], defaultMode: Mode = "c
     const g = gods.find((x) => x.name === you);
     if (!g?.aspects?.length) {
       aspect = false;
-      for (const t of tokens) if (t.kind === "aspect") { t.kind = "dropped"; t.note = you ? `${you} has no aspect` : "Aspect needs your god first"; }
+      for (const t of tokens) {
+        if (t.kind === "aspect") { t.kind = "dropped"; t.was = "aspect"; t.note = you ? `${you} has no aspect` : "Aspect needs your god first"; }
+      }
       notes.push(you ? `${you} has no aspect` : "Aspect needs your god first");
     }
   }
@@ -288,8 +307,8 @@ export interface Suggestion {
   side?: "you" | "enemy";
   /** For a mode, the value. */
   mode?: Mode;
-  /** For the aspect: whether choosing it turns the aspect on. The word
-   *  toggles, so with the aspect already on it is the "Aspect off" row. */
+  /** For the aspect: whether choosing it turns the aspect on ("aspect") or
+   *  off ("no aspect", the "Aspect off" row). */
   on?: boolean;
 }
 
@@ -302,11 +321,12 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
   const hasAspect = !!youGod?.aspects?.length;
   const out: Suggestion[] = [];
   const modes = (Object.keys(MODE_WORDS) as Mode[]).filter((m) => m !== committed.mode);
-  // One aspect row, read the way the parser will read the word: it toggles,
-  // so with the aspect on it switches it off and says so.
-  const aspectRow = (): Suggestion => committed.aspect
-    ? { kind: "aspect", label: "Aspect off", insert: "aspect", on: false }
-    : { kind: "aspect", label: youGod!.aspects![0].name, insert: "aspect", on: true };
+  // The aspect rows, each inserting the words that mean it: "aspect" is on,
+  // "no aspect" is off. A typed "no aspect" renders as a "No aspect" chip, so
+  // "Aspect off" inserts exactly that, and the last-keyword rule drops the
+  // "Aspect" chip it replaces.
+  const onRow = (): Suggestion => ({ kind: "aspect", label: youGod!.aspects![0].name, insert: "aspect", on: true });
+  const offRow = (): Suggestion => ({ kind: "aspect", label: "Aspect off", insert: "no aspect", on: false });
 
   if (!t) {
     // Nothing typed yet: offer the grammar's next step, never a god list.
@@ -315,13 +335,13 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
       out.push({ kind: "vs", label: "vs", insert: "vs" });
     }
     for (const m of modes) out.push({ kind: "mode", label: MODE_LABEL[m], insert: m, mode: m });
-    if (hasAspect) out.push(aspectRow());
+    if (hasAspect) out.push(committed.aspect ? offRow() : onRow());
     return out.slice(0, limit);
   }
 
   if (VS_WORDS.has(t) && committed.you) out.push({ kind: "vs", label: "vs", insert: "vs" });
   if (MODE_WORDS[t]) out.push({ kind: "mode", label: MODE_LABEL[MODE_WORDS[t]], insert: t, mode: MODE_WORDS[t] });
-  if (t === "aspect" && hasAspect) out.push(aspectRow());
+  if (t === "aspect" && hasAspect) out.push(onRow());
 
   const taken = new Set(committed.enemies);
   for (const g of godMatches(t, gods)) {
@@ -330,11 +350,14 @@ export function suggest(tail: string, committed: ParsedQuery, gods: GodLike[], l
     if (g.name === committed.you && !committed.tokens.some((x) => x.kind === "vs")) continue;
     out.push({ kind: "god", label: g.name, insert: g.name, side });
   }
+  // "no" alone is Nox, which the parser reads first, so Nox leads; "no
+  // aspect" is the off keyword, so it is offered after.
+  if (t === "no" && hasAspect) out.push(offRow());
   if (t.length >= 1) {
     for (const k of KEYWORDS) {
       if (k.word === t || !k.word.startsWith(t)) continue;
       if (k.kind === "mode" && k.value !== committed.mode) out.push({ kind: "mode", label: MODE_LABEL[k.value!], insert: k.word, mode: k.value });
-      if (k.kind === "aspect" && hasAspect) out.push(aspectRow());
+      if (k.kind === "aspect" && hasAspect) out.push(onRow());
       if (k.kind === "vs" && committed.you && !VS_WORDS.has(t)) out.push({ kind: "vs", label: "vs", insert: "vs" });
     }
   }
@@ -353,20 +376,31 @@ export function removeSpan(text: string, start: number, end: number): string {
   return (text.slice(0, start) + text.slice(end)).replace(/\s{2,}/g, " ").replace(/^\s+/, "");
 }
 
-/** A second mode REPLACES the first: every mode word but the last leaves the
- *  text. The parser already reads the last mode as the mode; this makes the
- *  text agree, so the field shows one mode chip — the one the query runs in —
- *  rather than "Joust Arena" and a note saying Arena won. The field applies
- *  it whenever words are committed (typed, picked or Tab-completed) and to a
- *  linked `?q=`. Covers a keyword prefix ("jou") too, since that parses as a
- *  mode token. Not applied to "aspect": that word TOGGLES, so a second one
- *  means off, and keeping only the last would turn it back on. */
-export function keepLastMode(text: string, gods: GodLike[], defaultMode: Mode = "conquest"): string {
+/** A later keyword REPLACES an earlier one of its kind. Every mode word but
+ *  the last leaves the text, and so does every aspect word but the last.
+ *  The parser already reads the last of each as the value; this makes the
+ *  text agree, so the field shows one mode chip and at most one aspect chip
+ *  (the ones the query runs on), rather than "Joust Arena" with a note
+ *  saying Arena won, or "Aspect" beside "No aspect".
+ *
+ *  The field applies it whenever words are committed (typed, picked or
+ *  Tab-completed) and to a linked `?q=`. It covers a keyword prefix ("jou",
+ *  "asp") too, since that parses as a keyword token. It also covers an aspect
+ *  word struck out because the god has none (`was: "aspect"`), so "ymir
+ *  aspect aspect" leaves one struck chip.
+ *
+ *  It was modes only (#137) while "aspect" toggled, because keeping the last
+ *  of two toggles would have turned an "off" back on. Since 2026-11-09 the
+ *  aspect words carry their value ("aspect" on; "no aspect" / "aspect off"
+ *  off), so the same rule holds for both. */
+export function keepLastKeyword(text: string, gods: GodLike[], defaultMode: Mode = "conquest"): string {
   let out = text;
   for (;;) {
-    const modes = parseQuery(out, gods, defaultMode).tokens.filter((t) => t.kind === "mode");
-    if (modes.length < 2) return out;
-    out = removeSpan(out, modes[0].start, modes[0].end);
+    const tokens = parseQuery(out, gods, defaultMode).tokens;
+    const of = (kind: TokenKind) => tokens.filter((t) => t.kind === kind || t.was === kind);
+    const extra = [of("mode"), of("aspect")].find((ts) => ts.length > 1);
+    if (!extra) return out;
+    out = removeSpan(out, extra[0].start, extra[0].end);
   }
 }
 
@@ -401,8 +435,10 @@ export function itemMatches<I extends { name: string }>(text: string, items: I[]
 /* ── God select ─────────────────────────────────────────────────────────── */
 
 /** What the grid filters on, given the field. A plain name filters by that
- *  text; once the query has a "vs", a mode or an aspect, by your god alone. */
+ *  text; once the query has a "vs", a mode or an aspect word, by your god
+ *  alone. Any aspect word counts, on or off: "ra no aspect" is Ra's card, not
+ *  a search for a god called "ra no aspect". */
 export function gridFilterText(text: string, q: ParsedQuery): string {
-  const query = q.enemies.length || q.mode || q.aspect || q.tokens.some((t) => t.kind === "vs");
+  const query = q.enemies.length || q.mode || q.tokens.some((t) => t.kind === "vs" || t.kind === "aspect" || t.was === "aspect");
   return query ? q.you ?? "" : text.trim();
 }

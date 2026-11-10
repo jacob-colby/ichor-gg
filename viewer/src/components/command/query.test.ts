@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import {
-  parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches, keepLastMode,
+  parseQuery, serializeQuery, queryHash, suggest, splitTail, removeSpan, godMatches, itemMatches, keepLastKeyword,
+  gridFilterText,
 } from "./query";
 import { readRecentGods, pushRecentGod, clearRecentGods, recentHash, recentModeWord, MAX_RECENT_GODS } from "./recents";
 import { decodePageQuery } from "../second/pageState";
@@ -38,12 +39,40 @@ describe("parseQuery — the grammar", () => {
     expect(q.notes).toContain("Two modes typed — using Arena");
   });
 
-  it("toggles the aspect, and refuses it for a god without one", () => {
+  /* The aspect words carry their value (Jacob, 2026-11-09): "aspect" is on,
+   * "no aspect" / "aspect off" is off, and the last one wins, as the last
+   * mode does. Until then "aspect" toggled, so "ra aspect aspect" was off. */
+  it("reads 'aspect' as on and 'no aspect' or 'aspect off' as off, the last one winning", () => {
     expect(p("ra aspect").aspect).toBe(true);
-    expect(p("ra aspect aspect").aspect).toBe(false);
+    expect(p("ra aspect aspect").aspect).toBe(true);
+    expect(p("ra aspect no aspect").aspect).toBe(false);
+    expect(p("ra no aspect aspect").aspect).toBe(true);
+    expect(p("ra aspect off").aspect).toBe(false);
+    const off = p("ra no aspect").tokens.find((t) => t.kind === "aspect")!;
+    expect(off).toMatchObject({ value: "off", text: "no aspect", start: 3, end: 12 });
+    expect(p("ra aspect off").tokens.filter((t) => t.kind !== "filler").map((t) => [t.kind, t.value]))
+      .toEqual([["you", "Ra"], ["aspect", "off"]]);
+  });
+
+  it("refuses the aspect for a god without one, and lets it say no aspect", () => {
     const ymir = p("ymir aspect");
     expect(ymir.aspect).toBe(false);
     expect(ymir.notes).toContain("Ymir has no aspect");
+    expect(ymir.tokens[1]).toMatchObject({ kind: "dropped", was: "aspect" });
+    expect(p("ymir no aspect")).toMatchObject({ aspect: false, notes: [] });
+  });
+
+  /* "no aspect" is one keyword, read before any god name the way a
+   * multi-word god is, so its "no" is never Nox. "no" alone still is. */
+  it("reads 'no aspect' before god names, and 'no' alone as Nox", () => {
+    const roster = [...gods, { name: "Nox", aspects: [] }];
+    const q = (s: string) => parseQuery(s, roster);
+    expect(q("ra no aspect")).toMatchObject({ you: "Ra", enemies: [], aspect: false });
+    expect(q("ra vs no aspect")).toMatchObject({ you: "Ra", enemies: [], aspect: false });
+    expect(q("ra vs nox")).toMatchObject({ enemies: ["Nox"], aspect: false });
+    expect(q("ra no")).toMatchObject({ enemies: ["Nox"] });
+    expect(q("ra no ymir")).toMatchObject({ enemies: ["Nox", "Ymir"] });
+    expect(q("ra no asp")).toMatchObject({ enemies: ["Nox"], aspect: true });
   });
 
   it("finishes partial names, best match first", () => {
@@ -129,6 +158,22 @@ describe("serializeQuery / queryHash — the link reproduces the chips", () => {
     // And it re-parses to the same query.
     expect(p(serializeQuery(p("ra vs hecate ymir joust")))).toMatchObject({ you: "Ra", enemies: ["Hecate", "Ymir"], mode: "joust" });
   });
+
+  it("writes the aspect's last word: on into the link, off left out as the default", () => {
+    const hash = (s: string) => { const q = p(s); return queryHash({ ...q, you: q.you! }); };
+    expect(hash("ra no aspect aspect")).toBe("#/god/Ra?aspect=1");
+    expect(hash("ra aspect no aspect")).toBe("#/god/Ra");
+    expect(hash("ra aspect off joust")).toBe("#/god/Ra?mode=joust");
+    expect(serializeQuery(p("ra aspect no aspect"))).toBe("Ra");
+    expect(p(serializeQuery(p("ra no aspect aspect")))).toMatchObject({ you: "Ra", aspect: true });
+  });
+
+  it("filters god select by your god once any aspect word is in, on or off", () => {
+    expect(gridFilterText("ra no aspect", p("ra no aspect"))).toBe("Ra");
+    expect(gridFilterText("ra aspect", p("ra aspect"))).toBe("Ra");
+    expect(gridFilterText("ymir aspect", p("ymir aspect"))).toBe("Ymir");
+    expect(gridFilterText("her", p("her"))).toBe("her");
+  });
 });
 
 describe("suggest", () => {
@@ -155,16 +200,27 @@ describe("suggest", () => {
     expect(suggest("asp", p("ymir "), gods)).toEqual([]);
   });
 
-  /* The word toggles, so the row says what choosing it does: on, or off once
-   * the aspect is on. Typed or offered, it is the same row. */
-  it("offers the aspect as on, or as 'Aspect off' once it is on, typed or not", () => {
+  /* Each row inserts the words that mean it: the next step offers the other
+   * state, a typed "asp" means on, and "Aspect off" inserts "no aspect",
+   * never a second "aspect". */
+  it("offers the aspect as on, or as 'Aspect off' once it is on, inserting the words that mean it", () => {
     const row = (tail: string, text: string) => suggest(tail, p(text), gods).filter((x) => x.kind === "aspect")
-      .map((x) => [x.label, x.on]);
-    expect(row("", "ra ")).toEqual([["Aspect of Thermotherapy", true]]);
-    expect(row("asp", "ra ")).toEqual([["Aspect of Thermotherapy", true]]);
-    expect(row("", "ra aspect ")).toEqual([["Aspect off", false]]);
-    expect(row("asp", "ra aspect ")).toEqual([["Aspect off", false]]);
-    expect(row("aspect", "ra aspect ")).toEqual([["Aspect off", false]]);
+      .map((x) => [x.label, x.on, x.insert]);
+    expect(row("", "ra ")).toEqual([["Aspect of Thermotherapy", true, "aspect"]]);
+    expect(row("asp", "ra ")).toEqual([["Aspect of Thermotherapy", true, "aspect"]]);
+    expect(row("", "ra aspect ")).toEqual([["Aspect off", false, "no aspect"]]);
+    expect(row("", "ra no aspect ")).toEqual([["Aspect of Thermotherapy", true, "aspect"]]);
+    // A typed word means what it says, so "asp" is the on row even when on.
+    expect(row("asp", "ra aspect ")).toEqual([["Aspect of Thermotherapy", true, "aspect"]]);
+  });
+
+  it("offers Nox and then 'Aspect off' while the word is only 'no'", () => {
+    const roster = [...gods, { name: "Nox", aspects: [] }];
+    const rows = (text: string) => suggest("no", parseQuery(text, roster), roster).map((x) => [x.kind, x.label, x.insert]);
+    expect(rows("ra ")).toEqual([["god", "Nox", "Nox"], ["aspect", "Aspect off", "no aspect"]]);
+    expect(rows("ra vs ")).toEqual([["god", "Nox", "Nox"], ["aspect", "Aspect off", "no aspect"]]);
+    // No aspect to turn off: just Nox.
+    expect(rows("ymir ")).toEqual([["god", "Nox", "Nox"]]);
   });
 
   it("offers the next step of the grammar on an empty word", () => {
@@ -194,8 +250,8 @@ describe("field text helpers", () => {
   });
 });
 
-describe("keepLastMode — a second mode replaces the first", () => {
-  const k = (s: string, mode?: "conquest" | "joust" | "arena") => keepLastMode(s, gods, mode);
+describe("keepLastKeyword — a later mode or aspect word replaces the earlier one", () => {
+  const k = (s: string, mode?: "conquest" | "joust" | "arena") => keepLastKeyword(s, gods, mode);
 
   it("drops every mode word but the last, wherever they sit", () => {
     expect(k("ra joust arena ")).toBe("ra arena ");
@@ -227,9 +283,20 @@ describe("keepLastMode — a second mode replaces the first", () => {
     expect(p(k("ra joust arena ")).notes).toEqual([]);
   });
 
-  it("does not touch aspect words: those toggle, they do not replace", () => {
-    expect(k("ra aspect aspect ")).toBe("ra aspect aspect ");
-    expect(k("ra aspect joust arena ")).toBe("ra aspect arena ");
+  /* The same rule for the aspect since its words carry a value (Jacob,
+   * 2026-11-09). It used to leave them alone, because they toggled. */
+  it("drops every aspect word but the last, on or off, and leaves the modes to their own rule", () => {
+    expect(k("ra aspect aspect ")).toBe("ra aspect ");
+    expect(k("ra aspect no aspect ")).toBe("ra no aspect ");
+    expect(k("ra no aspect aspect ")).toBe("ra aspect ");
+    expect(k("ra aspect joust aspect off ")).toBe("ra joust aspect off ");
+    expect(k("ra aspect joust arena no aspect ")).toBe("ra arena no aspect ");
+    expect(k("ra asp no aspect ")).toBe("ra no aspect ");
+  });
+
+  it("counts an aspect word struck out for a god without one, so one struck chip is left", () => {
+    expect(k("ymir aspect aspect ")).toBe("ymir aspect ");
+    expect(p(k("ymir aspect aspect ")).tokens.filter((t) => t.was === "aspect")).toHaveLength(1);
   });
 });
 

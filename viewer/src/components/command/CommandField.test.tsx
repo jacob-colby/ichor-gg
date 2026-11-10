@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import { CommandField } from "./CommandField";
 import type { God } from "../../types";
 
@@ -73,6 +73,51 @@ describe("CommandField — a second mode replaces the first", () => {
   });
 });
 
+/* Jacob, 2026-11-09: the chips wrap onto further lines instead of scrolling
+ * sideways, so every chip stays whole. jsdom has no layout, so this pins the
+ * contract the geometry rests on; the geometry itself was measured in a
+ * browser at 390 and 1024–1280px (numbers in the PR). */
+describe("CommandField — the chips wrap", () => {
+  const row = () => document.querySelector("[data-command-input]")!.parentElement!;
+  const box = () => row().parentElement!;
+
+  it("on the page: a minimum height, and a row that wraps instead of scrolling", () => {
+    const { field } = setup({ variant: "page" });
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust aspect " } });
+    expect(box()).toHaveClass("min-h-14");
+    expect(box()).not.toHaveClass("h-14");
+    expect(row()).toHaveClass("flex-wrap");
+    expect(row()).not.toHaveClass("overflow-x-auto");
+    // The input takes the rest of the last line and keeps its 64px floor.
+    expect(field).toHaveClass("min-w-[64px]", "flex-1");
+  });
+
+  it("in the bar: keeps the bar's 44px, hangs the box from it, and wraps while open", () => {
+    const { field } = setup();
+    const root = screen.getByTestId("command-bar");
+    expect(root).toHaveClass("h-11");
+    expect(box().parentElement).toHaveClass("absolute", "inset-x-0", "top-0");
+    expect(box()).toHaveClass("min-h-11");
+    // At rest it keeps one line.
+    expect(row()).toHaveClass("flex-nowrap");
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust aspect " } });
+    expect(root).toHaveAttribute("data-command-open");
+    expect(row()).toHaveClass("flex-wrap");
+  });
+
+  it("still pulls the last chip back into text on Backspace in an empty input, and keeps focus", () => {
+    const { field } = setup({ variant: "page" });
+    field.focus();
+    fireEvent.change(field, { target: { value: "ra vs hecate ymir joust " } });
+    expect(chips("mode")).toEqual(["Joust"]);
+    fireEvent.keyDown(field, { key: "Backspace" });
+    expect(chips("mode")).toEqual([]);
+    expect(field).toHaveValue("joust");
+    expect(field).toHaveFocus();
+    expect(chips("enemy")).toEqual(["Hecate", "Ymir"]);
+  });
+});
+
 /* Jacob, 2026-11-09: the aspect is marked with the game's orange hexagon
  * everywhere, the same `AspectHex` as the god page's switch. */
 describe("CommandField — the aspect chip", () => {
@@ -81,10 +126,39 @@ describe("CommandField — the aspect chip", () => {
 
   it("leads with the aspect's hexagon: filled for Aspect, the outline for No aspect", () => {
     const { field } = setup();
-    fireEvent.change(field, { target: { value: "ra aspect aspect joust " } });
-    expect(chips("aspect")).toEqual(["Aspect", "No aspect"]);
-    expect(hexes("aspect")).toEqual(["on", "off"]);
+    fireEvent.change(field, { target: { value: "ra aspect joust " } });
+    expect(chips("aspect")).toEqual(["Aspect"]);
+    expect(hexes("aspect")).toEqual(["on"]);
     expect(hexes("mode")).toEqual([]);
+    fireEvent.change(field, { target: { value: "no aspect " } });
+    expect(chips("aspect")).toEqual(["No aspect"]);
+    expect(hexes("aspect")).toEqual(["off"]);
+  });
+
+  /* Jacob, 2026-11-09: never both. The last aspect word wins, as the last
+   * mode does, so the field shows the one the query runs on. */
+  it("keeps one aspect chip, the last word's, however it is typed", () => {
+    for (const [text, left, on] of [
+      ["ra aspect no aspect ", ["No aspect"], false], ["ra no aspect aspect ", ["Aspect"], true],
+      ["ra aspect aspect ", ["Aspect"], true], ["ra aspect off ", ["No aspect"], false],
+    ] as const) {
+      cleanup();
+      const { field, onSubmit } = setup();
+      fireEvent.change(field, { target: { value: text } });
+      expect(document.querySelectorAll("[data-chip]").length).toBe(2);
+      expect(chips("aspect")).toEqual(left);
+      expect(chips("you")).toEqual(["Ra"]);
+      fireEvent.keyDown(field, { key: "Enter" });
+      expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({ you: "Ra", enemies: [], aspect: on }));
+    }
+  });
+
+  it("'Aspect off' writes the off state itself: the on chip goes, one No aspect chip is left", () => {
+    const { field } = setup();
+    fireEvent.change(field, { target: { value: "ra aspect " } });
+    fireEvent.click(screen.getByRole("option", { name: /Aspect off/ }));
+    expect(chips("aspect")).toEqual(["No aspect"]);
+    expect(field).toHaveValue("");
   });
 
   it("draws the hexagon on the aspect suggestion row: filled to turn it on, the outline for Aspect off", () => {
