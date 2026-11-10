@@ -30,13 +30,14 @@ import { Art, CloseGlyph, SearchGlyph } from "../second/art";
 import {
   itemMatches, keepLastMode, parseQuery, suggest, removeSpan, type ParsedQuery, type QueryToken, type Suggestion,
 } from "./query";
+import { recentModeWord, recentQuery, type RecentGod } from "./recents";
 import { useKeyboardInset } from "./useKeyboardInset";
 
 interface Option {
   id: string;
   kind: "go" | "suggestion" | "recent" | "item";
   suggestion?: Suggestion;
-  recent?: string;
+  recent?: RecentGod;
   item?: string;
 }
 
@@ -52,8 +53,10 @@ export interface CommandFieldProps {
   onItem?: (name: string) => void;
   /** Every edit, as the whole text and its parse — the grid filters on it. */
   onText?: (text: string, parsed: ParsedQuery) => void;
-  /** Recent queries, newest first; offered when the field is empty. */
-  recents?: string[];
+  /** Recent gods, newest first (`recents.ts`, the same entries god select
+   *  shows); offered when the field is empty, each reopening that god in the
+   *  mode and aspect state it was last viewed in. */
+  recents?: RecentGod[];
   variant: "bar" | "page";
   label: string;
   placeholder: string;
@@ -210,7 +213,7 @@ export function CommandField({
   const choose = (o: Option | undefined) => {
     if (!o) { go(resolved()); return; }
     if (o.kind === "go") go(parsed);
-    else if (o.kind === "recent") go(parseQuery(o.recent!, gods));
+    else if (o.kind === "recent") go(recentQuery(o.recent!));
     else if (o.kind === "item") { finish(); onItem?.(o.item!); }
     else if (o.suggestion) take(o.suggestion);
   };
@@ -413,15 +416,15 @@ function OptionBody({ o, gods, items, parsed }: {
     );
   }
   if (o.kind === "recent") {
-    const q = parseQuery(o.recent!, gods);
     return (
       <>
-        <span className="flex flex-none -space-x-2">
-          {[q.you, ...q.enemies].filter(Boolean).slice(0, 4).map((n, i) => (
-            <Art key={n! + i} name={n!} kind="head" className={`h-9 w-9 rounded-[8px] ring-2 ring-surface ${i ? "" : "relative z-10"}`} />
-          ))}
+        <Art name={o.recent!.god} kind="head" className="h-9 w-9 rounded-[8px]" />
+        <span className="min-w-0 flex-1">
+          <span className="block font-cond text-[20px] font-bold leading-tight text-ink">{o.recent!.god}</span>
+          <span className="block text-cap text-quiet">
+            {[roleOf(gods, o.recent!.god), recentModeWord(o.recent!), o.recent!.aspect ? "Aspect" : null].filter(Boolean).join(" · ")}
+          </span>
         </span>
-        <span className="min-w-0 flex-1 truncate text-copy text-ink">{o.recent}</span>
         <span className="flex-none text-cap text-quiet">Recent</span>
       </>
     );

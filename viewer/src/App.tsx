@@ -9,7 +9,7 @@ import { AppSkeleton, HomeSkeleton } from "./components/Skeleton";
 import { AppNav, Mark, type MoreLink, type NavTab } from "./components/second/AppNav";
 import { GodGrid } from "./components/second/GodGrid";
 import { GodPage } from "./components/second/GodPage";
-import { MAIN_ARCHETYPE, readLastGod } from "./components/second/pageState";
+import { MAIN_ARCHETYPE } from "./components/second/pageState";
 import { GodSubPage } from "./components/second/GodSubPage";
 import { TiersPage } from "./components/second/TiersPage";
 import { ItemsPage } from "./components/second/ItemsPage";
@@ -18,8 +18,8 @@ import { MethodPage } from "./components/second/MethodPage";
 import { DraftBoard } from "./components/second/DraftBoard";
 import { useWide } from "./components/second/useWide";
 import { CommandField } from "./components/command/CommandField";
-import { gridFilterText, queryHash, serializeQuery, type ParsedQuery } from "./components/command/query";
-import { clearRecents, pushRecent, readRecents } from "./components/command/recents";
+import { gridFilterText, queryHash, type ParsedQuery } from "./components/command/query";
+import { clearRecentGods, pushRecentGod, readRecentGods, type RecentGod } from "./components/command/recents";
 import { useDraft, MODE_TEAM_SIZE } from "./lib/draft";
 import { flushQuery, hashQuery } from "./lib/urlState";
 import { freshness } from "./lib/freshness";
@@ -45,10 +45,21 @@ function App() {
   const [legendOpen, setLegendOpen] = useState(false);
   const [scraping, setScraping] = useState(false);
   const [addOpen, setAddOpen] = useState(false);
-  const [recents, setRecents] = useState<string[]>(readRecents);
   const wide = useWide();
   const { setMode: setDraftMode, setEnemy } = useDraft();
   const isDev = import.meta.env.DEV;
+
+  /* Recent gods: every god whose build page is opened, by any route, with
+   * the mode and aspect it was last on (the page reports both, so a switch
+   * flipped there counts). Read once the roster is in (the first read may
+   * seed from the retired query and last-god stores, which name gods by
+   * text); set during render, so the row is there on the first frame rather
+   * than pushing the grid down a frame later. */
+  const [recents, setRecents] = useState<RecentGod[] | null>(null);
+  if (data && recents === null) setRecents(readRecentGods(data.gods));
+  const recordView = useCallback((view: RecentGod) => {
+    if (data) setRecents(pushRecentGod(view, data.gods));
+  }, [data]);
 
   /* Submit a query. A god of your own lands on its page with the enemies as
    * `vs=` and the mode in the URL; that page writes them into the shared draft
@@ -59,7 +70,6 @@ function App() {
   const run = useCallback((q: ParsedQuery) => {
     flushQuery(); // a queued filter write must not land on the page we open
     if (q.you) {
-      setRecents(pushRecent(serializeQuery(q)));
       window.location.hash = queryHash({ you: q.you, enemies: q.enemies, mode: q.mode, aspect: q.aspect });
       return;
     }
@@ -69,7 +79,7 @@ function App() {
     window.location.hash = toHash.draft();
   }, [setDraftMode, setEnemy]);
   const openItem = useCallback((name: string) => { flushQuery(); window.location.hash = toHash.item(name); }, []);
-  const forgetRecents = useCallback(() => { clearRecents(); setRecents([]); }, []);
+  const forgetRecents = useCallback(() => { clearRecentGods(); setRecents([]); }, []);
 
   /* `/` (outside a text field) or Ctrl/⌘K focuses the command field. */
   useEffect(() => {
@@ -155,7 +165,6 @@ function App() {
 
   const god = route.god ? data.gods.find((g) => g.name === route.god) : undefined;
   const missingGod = !!route.god && !god;
-  const lastGod = readLastGod();
 
   const active: NavTab = route.god || route.lens === "board" ? "gods"
     : route.lens === "draft" ? "draft" : "more";
@@ -170,7 +179,7 @@ function App() {
   const onBoard = !route.god && route.lens === "board";
   const barField = wide ? (
     <CommandField key={onBoard ? "board" : "bar"} variant="bar" gods={data.gods} items={data.items}
-      onSubmit={run} onItem={openItem} recents={recents} clearOnSubmit
+      onSubmit={run} onItem={openItem} recents={recents ?? []} clearOnSubmit
       seedText={onBoard ? hashQuery(window.location.hash).get("q") ?? "" : ""}
       onText={onBoard ? onBarText : undefined} autoFocus={onBoard}
       label="Search a god, a matchup or an item" placeholder="ra vs hecate ymir" />
@@ -235,7 +244,7 @@ function App() {
                 modeLabel="Conquest" />
             </GodSubPage>
           ) : (
-            <GodPage key={god.name} god={god} data={data} />
+            <GodPage key={god.name} god={god} data={data} onView={recordView} />
           )
         ) : route.lens === "draft" ? (
           <DraftBoard gods={data.gods} items={data.items} builds={data.builds}
@@ -252,7 +261,7 @@ function App() {
           <MethodPage method={data.method} goldValues={data.item_gold_values ?? {}}
               items={data.items} godCount={data.gods.length} />
         ) : (
-          <GodGrid gods={data.gods} lastGod={lastGod} items={data.items} recents={recents}
+          <GodGrid gods={data.gods} items={data.items} recents={recents ?? []}
             onRun={run} onItem={openItem} onClearRecents={forgetRecents}
             fieldInBar={wide} query={boardText} />
         )}
