@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.67
   starter: &id001
-    base: Bluestone Pendant
-    upgrade: Bluestone Brooch
-    pick_rate: 0.33
-    win_rate: 0.3761
-    matches: 66
+    base: Bumba's Cudgel
+    upgrade: Bumba's Hammer
+    pick_rate: 0.32
+    win_rate: 0.5569
+    matches: 76
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.38
-    win_rate: 0.54
-    matches: 76
+    pick_rate: 0.41
+    win_rate: 0.57
+    matches: 98
     basis: community
     borrowed_from: Conquest
 - source: suggested

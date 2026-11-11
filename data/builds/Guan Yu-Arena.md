@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.4
-    win_rate: 0.6312
-    matches: 54
+    pick_rate: 0.45
+    win_rate: 0.5867
+    matches: 72
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.38
+    pick_rate: 0.4
     win_rate: 0.59
-    matches: 51
+    matches: 64
     basis: community
     borrowed_from: Conquest
 - source: suggested

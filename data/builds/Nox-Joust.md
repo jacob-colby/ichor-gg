@@ -71,15 +71,15 @@ builds:
     base: Sands Of Time
     upgrade: Pendulum of the Ages
     pick_rate: 0.34
-    win_rate: 0.3988
-    matches: 337
+    win_rate: 0.4082
+    matches: 367
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Aegis of Acceleration
+    name: Purification Beads
     pick_rate: 0.32
-    win_rate: 0.44
-    matches: 317
+    win_rate: 0.43
+    matches: 345
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Chronos' Pendant
     removed: Erosion
-    reason: Conquest community 53% win over 109 matches (vs 43% on this god), taking
+    reason: Conquest community 53% win over 119 matches (vs 43% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001

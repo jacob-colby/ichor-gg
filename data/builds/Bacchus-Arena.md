@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.68
-    win_rate: 0.6226
-    matches: 505
+    win_rate: 0.6094
+    matches: 568
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
-    pick_rate: 0.51
-    win_rate: 0.63
-    matches: 378
+    pick_rate: 0.49
+    win_rate: 0.62
+    matches: 410
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Hussar's Wings
     removed: Erosion
-    reason: Conquest community 71% win over 67 matches (vs 58% on this god), taking
+    reason: Conquest community 70% win over 67 matches (vs 58% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001

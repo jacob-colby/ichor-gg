@@ -71,15 +71,15 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.39
-    win_rate: 0.6577
-    matches: 393
+    win_rate: 0.6523
+    matches: 437
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.66
-    win_rate: 0.64
-    matches: 665
+    pick_rate: 0.65
+    win_rate: 0.63
+    matches: 729
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -608,78 +608,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.73
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Lernaean Bow
-  - Toxic Blade
-  - Tyrfing
-  - Riptalon
-  - Rod of Tahuti
-  - Soul Gem
-  flex_slots:
-  - Lernaean Bow
-  - Rod of Tahuti
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Arena — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Lernaean Bow:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.59
-    Toxic Blade:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Tyrfing:
-      total: 0.54
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Riptalon:
-      total: 0.61
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
-    Rod of Tahuti:
-      total: 0.5
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.19
-    Soul Gem:
-      total: 0.66
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.73
-  swaps:
-  - added: Rod of Tahuti
-    removed: Death Metal
-    reason: Conquest community 71% win over 181 matches (vs 64% on this god), taking
-      the model's weakest slot from Death Metal
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

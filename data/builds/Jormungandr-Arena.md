@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.72
-    win_rate: 0.5394
-    matches: 99
+    pick_rate: 0.65
+    win_rate: 0.5489
+    matches: 117
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Phantom Shell
-    pick_rate: 0.34
-    win_rate: 0.57
-    matches: 47
+    name: Aegis of Acceleration
+    pick_rate: 0.41
+    win_rate: 0.54
+    matches: 74
     basis: community
     borrowed_from: Conquest
 - source: suggested
