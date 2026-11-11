@@ -71,15 +71,15 @@ builds:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
     pick_rate: 0.8
-    win_rate: 0.5291
-    matches: 410
+    win_rate: 0.5325
+    matches: 463
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.63
+    pick_rate: 0.62
     win_rate: 0.52
-    matches: 323
+    matches: 359
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -743,7 +743,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Golden Blade
-    reason: Conquest community 65% win over 102 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 110 matches (vs 52% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

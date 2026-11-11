@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.42
-    win_rate: 0.5626
-    matches: 89
+    win_rate: 0.5767
+    matches: 103
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.57
-    matches: 61
+    name: Purification Beads
+    pick_rate: 0.3
+    win_rate: 0.56
+    matches: 74
     basis: community
     borrowed_from: Conquest
 - source: suggested

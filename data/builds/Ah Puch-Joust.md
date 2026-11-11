@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.7
-    win_rate: 0.5386
-    matches: 105
+    pick_rate: 0.69
+    win_rate: 0.5387
+    matches: 118
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
     pick_rate: 0.47
-    win_rate: 0.39
-    matches: 70
+    win_rate: 0.41
+    matches: 80
     basis: community
     borrowed_from: Conquest
 - source: suggested

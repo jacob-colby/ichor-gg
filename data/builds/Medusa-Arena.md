@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.42
-    win_rate: 0.5657
-    matches: 123
+    win_rate: 0.5664
+    matches: 138
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Aegis of Acceleration
-    pick_rate: 0.49
-    win_rate: 0.58
-    matches: 143
+    name: Purification Beads
+    pick_rate: 0.51
+    win_rate: 0.52
+    matches: 167
     basis: community
     borrowed_from: Conquest
 - source: suggested

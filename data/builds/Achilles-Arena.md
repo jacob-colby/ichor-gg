@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.8
   starter: &id001
-    base: Bumba's Cudgel
-    upgrade: Bumba's Hammer
+    base: Warrior's Axe
+    upgrade: Sundering Axe
     pick_rate: 0.3
-    win_rate: 0.586
-    matches: 56
+    win_rate: 0.4733
+    matches: 69
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Phantom Shell
-    pick_rate: 0.26
-    win_rate: 0.39
-    matches: 48
+    name: Sundering Arc
+    pick_rate: 0.27
+    win_rate: 0.52
+    matches: 62
     basis: community
     borrowed_from: Conquest
 - source: suggested

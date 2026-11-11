@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.59
-    win_rate: 0.5749
-    matches: 420
+    pick_rate: 0.6
+    win_rate: 0.5693
+    matches: 490
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
-    pick_rate: 0.54
-    win_rate: 0.57
-    matches: 384
+    pick_rate: 0.55
+    win_rate: 0.58
+    matches: 449
     basis: community
     borrowed_from: Conquest
 - source: suggested

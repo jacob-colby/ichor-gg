@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.86
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
     pick_rate: 0.42
-    win_rate: 0.6169
-    matches: 145
+    win_rate: 0.6536
+    matches: 168
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.67
-    win_rate: 0.6
-    matches: 232
+    win_rate: 0.61
+    matches: 267
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.51
-    win_rate: 0.5057
-    matches: 65
+    pick_rate: 0.5
+    win_rate: 0.5036
+    matches: 73
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
     pick_rate: 0.3
-    win_rate: 0.34
-    matches: 38
+    win_rate: 0.36
+    matches: 44
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -473,8 +473,16 @@
     "value": "aspect-of-mischief"
    },
    {
+    "name": "Aspect of Revelry",
+    "value": "aspect-of-revelry"
+   },
+   {
     "name": "Aspect of Spirits",
     "value": "aspect-of-spirits"
+   },
+   {
+    "name": "Aspect of the Thickbark",
+    "value": "aspect-of-the-thickbark"
    },
    {
     "name": "Aspect of Thunderstruck",
@@ -546,7 +554,7 @@
    "start": "2026-10-20T11:48:48.610Z"
   },
   "ob47": {
-   "end": "2026-11-09T18:17:55.767Z",
+   "end": "2026-11-11T16:40:37.813Z",
    "start": "2026-11-03T11:30:13.083Z"
   }
  }

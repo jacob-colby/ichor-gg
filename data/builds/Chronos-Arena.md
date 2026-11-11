@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.68
-    win_rate: 0.5329
-    matches: 189
+    pick_rate: 0.69
+    win_rate: 0.5287
+    matches: 211
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.55
+    pick_rate: 0.54
     win_rate: 0.54
-    matches: 153
+    matches: 165
     basis: community
     borrowed_from: Conquest
 - source: suggested
