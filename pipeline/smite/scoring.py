@@ -472,6 +472,18 @@ def lookup_rates(god_build, item_name, weights=None):
     as a miss — exactly the judgement the tool exists to make. The within-god
     rank correlation, which this does not distort, is unchanged at 0.564. See
     the leakage probe in calibrate.py."""
+    pick, win, _ = lookup_sighting(god_build, item_name, weights)
+    return pick, win
+
+
+def lookup_sighting(god_build, item_name, weights=None):
+    """`lookup_rates`, plus the RAW pick rate of the sighting it chose:
+    `(conditional pick, win, raw pick)`, or `(0.0, None, 0.0)`.
+
+    The raw rate is a share of the god's matches, so `raw x
+    god_matches_played` is how many matches the win rate beside it rests on
+    (`sighting_matches`). The conditional rate cannot say that: it has been
+    divided by the slot's reach."""
     reach = slot_reach(weights)
     # A rate can exceed 1.0 in principle once divided by a reach below 1; it
     # never does in the shipped data (the largest is 0.16 / 0.325 = 0.49), but
@@ -492,7 +504,8 @@ def lookup_rates(god_build, item_name, weights=None):
                 # a higher-pick alternate in another slot, and preferring that
                 # sighting detaches the item from the rate it is graded against
                 # (measured: rank correlation 0.564 -> 0.453).
-                return conditional(slot.get("pick_rate", 0.0), index), slot.get("win_rate")
+                return (conditional(slot.get("pick_rate", 0.0), index), slot.get("win_rate"),
+                        slot.get("pick_rate", 0.0) or 0.0)
             for alt in slot.get("alternates") or []:
                 if alt.get("name") != item_name:
                     continue
@@ -501,8 +514,78 @@ def lookup_rates(god_build, item_name, weights=None):
                 # earliest slot it turned up in.
                 rate = conditional(alt.get("pick_rate") or 0.0, index)
                 if best_alternate is None or rate > best_alternate[0]:
-                    best_alternate = (rate, alt.get("win_rate"))
-    return best_alternate or (0.0, None)
+                    best_alternate = (rate, alt.get("win_rate"), alt.get("pick_rate") or 0.0)
+    return best_alternate or (0.0, None, 0.0)
+
+
+#: SHRINKING A THIN WIN RATE (2026-11-11). SHIPS OFF AT 0.
+#:
+#: SmiteBrain prints a win rate to two decimals whatever it rests on, and the
+#: blend reads it at the largest weight in the model. Measured on main
+#: 1a9ca2d5 (fingerprint 89eb181b72f1, 8,406 matches, thinnest god 110): of
+#: the 1,718 win rates in the Conquest notes, 578 rest on fewer than 30
+#: matches and 49 on fewer than 10; a rate of 0.70 and over or 0.30 and under
+#: turns up 124 times in that thin third against 75 in the rest. Jormungandr's
+#: note carries a 1.00 on about 7 matches. Of 570 shipped `core` slots, 87
+#: hold an item whose record is under 30 matches.
+#:
+#: The repair is the textbook one: read each rate as `m` matches of evidence
+#: beside a prior worth `k` matches at the GOD'S OWN win rate,
+#:
+#:     win' = (win x m + god_win x k) / (m + k),    m = raw pick x god matches
+#:
+#: so a rate on 7 matches moves most of the way to the god's and one on 400
+#: barely moves. `k` is `win_shrink_matches`. Nothing here is invented except
+#: `k`: the prior is the god index's own `matches_won / matches_played`.
+#:
+#: WHAT IT MOVES (the same fingerprint), and what the two gates read:
+#:
+#:     k     cores changed   slots      leakage-free   held-out ww / Spearman
+#:     0      0 of 95         0 of 570  41.4912%       0.5140 / 0.5573
+#:     10    23              24         41.4912%       0.5064 / 0.4907
+#:     30    45              51         41.4912%       0.4797 / 0.4116
+#:     100   61              81         41.4912%       0.4566 / 0.2918
+#:
+#: WHY IT SHIPS OFF. No instrument here can say it helps, and the table is
+#: both of them saying so. `calibrate` zeroes `win`, so the leakage-free
+#: measure reads identically at every `k`; the held-out metrics use the RAW
+#: win rate as their target, so shrinking the input toward anything else
+#: lowers them by construction, further the harder it shrinks. That is section
+#: 4.26's position exactly, one step over: 4.26 is about the item with NO
+#: record, this is about the item with a thin one. What could judge it is
+#: match outcomes the win rates were not computed from: builds made from the
+#: record as of one day, scored on matches played after it
+#: (`build_outcomes`, once the no-aspect census holds enough days). Until
+#: that reading exists this is a switch with a measured reach and no verdict.
+WIN_SHRINK_MATCHES = 0.0
+
+
+def _community_entry(god_build):
+    return next((b for b in (god_build or {}).get("builds", []) if b.get("source") == "community"), None)
+
+
+def sighting_matches(raw_pick, god_build):
+    """How many matches a sighting's win rate rests on, or None when the god
+    index gave no match count."""
+    played = (_community_entry(god_build) or {}).get("god_matches_played")
+    if not isinstance(played, (int, float)) or isinstance(played, bool) or played <= 0:
+        return None
+    return (raw_pick or 0.0) * played
+
+
+def shrunk_win_rate(win, raw_pick, god_build, weights=None):
+    """`win` pulled toward the god's own win rate by a prior worth
+    `win_shrink_matches` matches. Returns `win` unchanged when the switch is
+    off, when there is no rate, or when the god index lacks the counts."""
+    k = (weights or {}).get("win_shrink_matches", WIN_SHRINK_MATCHES) or 0.0
+    if win is None or k <= 0:
+        return win
+    entry = _community_entry(god_build) or {}
+    played, won = entry.get("god_matches_played"), entry.get("god_matches_won")
+    m = sighting_matches(raw_pick, god_build)
+    if m is None or not isinstance(won, (int, float)) or isinstance(won, bool):
+        return win
+    return (win * m + (won / played) * k) / (m + k)
 
 
 def slot_positions(god_build, weights=None, include_picks=True,
@@ -767,7 +850,8 @@ def signal_score(item, god, god_build, eff_score, weights, item_tags,
                  stat_overlay=None, tag_bonus=None, base_map=None,
                  stat_reference=None, adaptive_grant=0.0, denom_exclude=()):
     w = weights["signals"]
-    pick, win = lookup_rates(god_build, item["name"], weights)
+    pick, win, raw_pick = lookup_sighting(god_build, item["name"], weights)
+    win = shrunk_win_rate(win, raw_pick, god_build, weights)
     win_norm = win if win is not None else god_unknown_win_rate(god_build, weights)
     fit = god_fit_score(item, god, weights, item_tags, stat_overlay, tag_bonus,
                         base_map=base_map, stat_reference=stat_reference,

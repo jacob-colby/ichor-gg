@@ -1316,3 +1316,48 @@ def test_fit_map_returns_an_empty_map_for_an_archetype_bypass_flavor():
     assert scoring.fit_map(god, [], weights, {"archetype_bypass": True}) == ({}, ())
     base, _ = scoring.fit_map(god, [], weights, {})
     assert base.get("Strength")
+
+
+# -- shrinking a thin win rate (2026-11-11, ships OFF) --------------------------
+
+def _thin_note(played=200, won=110):
+    return {"builds": [{"source": "community", "god_matches_played": played, "god_matches_won": won,
+                        "slot_order": [
+                            {"name": "Staple", "pick_rate": 0.60, "win_rate": 0.50,
+                             "alternates": [{"name": "Fluke", "pick_rate": 0.02, "win_rate": 1.00}]},
+                            {"name": "Second", "pick_rate": 0.30, "win_rate": 0.60}]}]}
+
+
+def test_the_sighting_carries_the_raw_pick_rate_and_lookup_rates_is_unchanged():
+    note = _thin_note()
+    pick, win, raw = scoring.lookup_sighting(note, "Second")
+    assert (pick, win) == scoring.lookup_rates(note, "Second")
+    assert raw == 0.30 and pick > raw                    # slot two: divided by its reach
+    assert scoring.lookup_sighting(note, "Fluke")[1:] == (1.00, 0.02)
+    assert scoring.lookup_sighting(note, "Nobody") == (0.0, None, 0.0)
+
+
+def test_shrinkage_is_off_by_default_and_changes_nothing():
+    assert scoring.WIN_SHRINK_MATCHES == 0.0
+    note = _thin_note()
+    assert scoring.shrunk_win_rate(1.00, 0.02, note, {}) == 1.00
+    assert scoring.shrunk_win_rate(1.00, 0.02, note, {"win_shrink_matches": 0}) == 1.00
+
+
+def test_a_thin_rate_moves_most_of_the_way_and_a_thick_one_barely():
+    note, w = _thin_note(), {"win_shrink_matches": 30}
+    god = 110 / 200
+    fluke = scoring.shrunk_win_rate(1.00, 0.02, note, w)          # 4 matches
+    assert fluke == pytest.approx((1.00 * 4 + god * 30) / 34)
+    staple = scoring.shrunk_win_rate(0.50, 0.60, note, w)         # 120 matches
+    assert staple == pytest.approx((0.50 * 120 + god * 30) / 150)
+    assert abs(fluke - god) < 0.06 and abs(staple - 0.50) < 0.011
+
+
+def test_shrinkage_never_invents_a_rate_or_a_prior():
+    w = {"win_shrink_matches": 30}
+    assert scoring.shrunk_win_rate(None, 0.5, _thin_note(), w) is None
+    no_counts = {"builds": [{"source": "community", "slot_order": []}]}
+    assert scoring.shrunk_win_rate(0.9, 0.5, no_counts, w) == 0.9
+    assert scoring.sighting_matches(0.5, no_counts) is None
+    assert scoring.sighting_matches(0.02, _thin_note()) == pytest.approx(4.0)
