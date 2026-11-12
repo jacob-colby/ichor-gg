@@ -5,48 +5,48 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Fulmination
-  aspect_pick_rate: 0.23
+  aspect_pick_rate: 0.21
   aspect_win_rate: 0.48
   slot_order:
   - name: Bancroft's Talon
-    pick_rate: 0.26
-    win_rate: 0.55
+    pick_rate: 0.29
+    win_rate: 0.57
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.15
-      win_rate: 0.44
+      pick_rate: 0.16
+      win_rate: 0.42
     - name: Shifter's Shield
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.33
   - name: Breastplate of Valor
     pick_rate: 0.17
-    win_rate: 0.42
+    win_rate: 0.43
     alternates:
     - name: Prophetic Cloak
       pick_rate: 0.17
-      win_rate: 0.47
+      win_rate: 0.48
     - name: Genji's Guard
-      pick_rate: 0.12
-      win_rate: 0.38
+      pick_rate: 0.13
+      win_rate: 0.44
   - name: Genji's Guard
-    pick_rate: 0.16
+    pick_rate: 0.14
     win_rate: 0.59
     alternates:
-    - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.27
     - name: Gem of Focus
-      pick_rate: 0.09
-      win_rate: 0.6
+      pick_rate: 0.11
+      win_rate: 0.62
+    - name: Freya's Tears
+      pick_rate: 0.11
+      win_rate: 0.31
   - name: Freya's Tears
     pick_rate: 0.15
-    win_rate: 0.33
+    win_rate: 0.35
     alternates:
     - name: Genji's Guard
       pick_rate: 0.11
-      win_rate: 0.45
+      win_rate: 0.54
     - name: Gem of Focus
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.43
   - name: Gem of Focus
     pick_rate: 0.06
@@ -54,59 +54,56 @@ builds:
     alternates:
     - name: Freya's Tears
       pick_rate: 0.15
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Shell of Rebuke
       pick_rate: 0.05
       win_rate: 0.2
   - name: Sundering Echo
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.6
     alternates:
     - name: Sage's Ring
-      pick_rate: 0.08
+      pick_rate: 0.07
       win_rate: 0.6
     - name: Captain's Ring
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.5
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.48
+    pick_rate: 0.49
     win_rate: 0.51
   - name: Bluestone Pendant
-    pick_rate: 0.25
-    win_rate: 0.36
+    pick_rate: 0.26
+    win_rate: 0.39
   - name: Pendulum of the Ages
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.67
   community_relics:
   - name: Blink Rune
     pick_rate: 0.27
-    win_rate: 0.5
+    win_rate: 0.52
   - name: Purification Beads
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.48
   - name: Sundering Arc
-    pick_rate: 0.21
-    win_rate: 0.43
+    pick_rate: 0.2
+    win_rate: 0.46
   starter_sightings:
   - name: Bluestone Brooch
-    pick_rate: 0.48
+    pick_rate: 0.49
     win_rate: 0.51
   - name: Bluestone Pendant
-    pick_rate: 0.25
-    win_rate: 0.36
+    pick_rate: 0.26
+    win_rate: 0.39
   - name: Pendulum of the Ages
-    pick_rate: 0.08
-    win_rate: 0.67
-  - name: Archmage's Gem
-    pick_rate: 0.03
+    pick_rate: 0.07
     win_rate: 0.67
   - name: Sundering Axe
     pick_rate: 0.03
+    win_rate: 0.5
+  - name: Archmage's Gem
+    pick_rate: 0.02
     win_rate: 0.67
-  - name: War Flag
-    pick_rate: 0.03
-    win_rate: 1.0
   - name: Blood-soaked Shroud
     pick_rate: 0.02
     win_rate: 0.5
@@ -115,59 +112,62 @@ builds:
     win_rate: 0.0
   - name: Sands Of Time
     pick_rate: 0.02
-    win_rate: 0.5
+    win_rate: 0.33
+  - name: War Flag
+    pick_rate: 0.02
+    win_rate: 1.0
   - name: Warrior's Axe
     pick_rate: 0.02
     win_rate: 0.0
   - name: Leather Cowl
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.0
   - name: Vampiric Shroud
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.0
   - name: War Banner
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.0
   relic_sightings:
   - name: Blink Rune
     pick_rate: 0.27
-    win_rate: 0.5
+    win_rate: 0.52
   - name: Purification Beads
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.48
   - name: Sundering Arc
-    pick_rate: 0.21
-    win_rate: 0.43
+    pick_rate: 0.2
+    win_rate: 0.46
   - name: Phantom Shell
-    pick_rate: 0.16
-    win_rate: 0.33
+    pick_rate: 0.17
+    win_rate: 0.3
   - name: Aegis of Acceleration
     pick_rate: 0.13
-    win_rate: 0.64
+    win_rate: 0.63
   - name: Agility Relic
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-11-11'
-  god_win_rate: 0.4727272727272727
-  god_matches_won: 52
-  god_matches_played: 110
+  last_verified: '2026-11-12'
+  god_win_rate: 0.47107438016528924
+  god_matches_won: 57
+  god_matches_played: 121
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-11'
-  god_matches_analyzed: 8406
+  god_window_end: '2026-11-12'
+  god_matches_analyzed: 9582
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.73
-    win_rate: 0.4586
-    matches: 80
+    pick_rate: 0.75
+    win_rate: 0.4684
+    matches: 91
     basis: community
   relic:
     name: Blink Rune
     pick_rate: 0.27
-    win_rate: 0.5
-    matches: 30
+    win_rate: 0.52
+    matches: 33
     basis: community
 - source: suggested
   archetype: core
@@ -206,21 +206,21 @@ builds:
     Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.37
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.23
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.61
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.51
     Gem of Focus:
@@ -232,13 +232,13 @@ builds:
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.28
     Amanita Charm:
       total: 0.52
       efficiency: 0.68
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.41
   community_ordered:
@@ -247,15 +247,15 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.73
-    win_rate: 0.4586
-    matches: 80
+    pick_rate: 0.75
+    win_rate: 0.4684
+    matches: 91
     basis: community
   relic: &id002
     name: Blink Rune
     pick_rate: 0.27
-    win_rate: 0.5
-    matches: 30
+    win_rate: 0.52
+    matches: 33
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -295,25 +295,25 @@ builds:
     Book of Thoth:
       total: 0.42
       efficiency: 0.48
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.23
     Genji's Guard:
       total: 0.57
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.27
     Jotunn's Revenge:
       total: 0.51
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.43
     Transcendence:
       total: 0.43
       efficiency: 0.5
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.23
     Gem of Focus:
@@ -323,9 +323,9 @@ builds:
       pick: 0.13
       fit: 0.26
     Rod of Tahuti:
-      total: 0.55
+      total: 0.56
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.34
   community_ordered:
@@ -369,21 +369,21 @@ builds:
     Hide, Arondight, Jade Scepter, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.52
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.45
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.26
     Kinetic Cuirass:
       total: 0.5
       efficiency: 0.61
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.46
     Gem of Focus:
@@ -395,13 +395,13 @@ builds:
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.32
     Soul Gem:
-      total: 0.51
+      total: 0.52
       efficiency: 0.58
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.61
   community_ordered:
@@ -447,14 +447,14 @@ builds:
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.61
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.49
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.2
     Gem of Focus:
       total: 0.52
@@ -465,19 +465,19 @@ builds:
     Rod of Tahuti:
       total: 0.55
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.29
     Amanita Charm:
       total: 0.56
       efficiency: 0.68
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.69
     Soul Gem:
       total: 0.55
       efficiency: 0.58
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.85
   community_ordered:
@@ -488,15 +488,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
+  - Book of Thoth
   - Genji's Guard
-  - Kinetic Cuirass
-  - Gem of Focus
+  - Jotunn's Revenge
+  - Transcendence
   - Gluttonous Grimoire
   - Rod of Tahuti
   flex_slots:
-  - Gem of Focus
-  - Kinetic Cuirass
+  - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -505,8 +505,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Kinetic Cuirass — physical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -520,45 +520,44 @@ builds:
     Death Metal, Doom Orb, Ancient Signet, Helm of Darkness, Erosion, Eye of Providence,
     The World Stone, Midgardian Mail, Polynomicon, Shifter''s Shield.'
   slot_scores:
+    Book of Thoth:
+      total: 0.41
+      efficiency: 0.48
+      win: 0.49
+      pick: 0.0
+      fit: 0.12
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.71
+      win: 0.59
+      pick: 0.22
+      fit: 0.19
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.46
-    Genji's Guard:
-      total: 0.56
-      efficiency: 0.71
-      win: 0.59
-      pick: 0.25
-      fit: 0.19
-    Kinetic Cuirass:
-      total: 0.5
-      efficiency: 0.61
-      win: 0.48
+    Transcendence:
+      total: 0.41
+      efficiency: 0.5
+      win: 0.49
       pick: 0.0
-      fit: 0.46
-    Gem of Focus:
-      total: 0.51
-      efficiency: 0.51
-      win: 0.67
-      pick: 0.13
-      fit: 0.19
+      fit: 0.13
     Gluttonous Grimoire:
       total: 0.52
       efficiency: 0.58
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.64
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.38
   community_ordered:
   - Genji's Guard
-  - Gem of Focus
   starter: *id001
   relic: *id002
 - source: suggested
@@ -599,25 +598,25 @@ builds:
     Berserker's Shield:
       total: 0.53
       efficiency: 0.72
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.37
     Genji's Guard:
       total: 0.55
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.17
     Tyrfing:
       total: 0.48
       efficiency: 0.53
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.47
     Nimble Ring:
       total: 0.47
       efficiency: 0.57
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.33
     Gem of Focus:
@@ -627,9 +626,9 @@ builds:
       pick: 0.13
       fit: 0.16
     Amanita Charm:
-      total: 0.5
+      total: 0.51
       efficiency: 0.68
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.31
   community_ordered:
@@ -676,19 +675,19 @@ builds:
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.47
     Genji's Guard:
       total: 0.59
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.4
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.51
       efficiency: 0.61
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.48
     Gem of Focus:
@@ -698,15 +697,15 @@ builds:
       pick: 0.13
       fit: 0.35
     Rod of Tahuti:
-      total: 0.53
+      total: 0.54
       efficiency: 0.82
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.21
     Soul Gem:
       total: 0.52
       efficiency: 0.58
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.64
   community_ordered:
@@ -753,37 +752,37 @@ builds:
     Berserker's Shield:
       total: 0.49
       efficiency: 0.66
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.26
     Genji's Guard:
       total: 0.56
       efficiency: 0.71
       win: 0.59
-      pick: 0.25
+      pick: 0.22
       fit: 0.23
     Jotunn's Revenge:
-      total: 0.5
+      total: 0.51
       efficiency: 0.65
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.37
     Kinetic Cuirass:
       total: 0.51
       efficiency: 0.61
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.51
     Shield Splitter:
       total: 0.49
       efficiency: 0.58
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.45
     Amanita Charm:
       total: 0.52
       efficiency: 0.68
-      win: 0.48
+      win: 0.49
       pick: 0.0
       fit: 0.41
   community_ordered:

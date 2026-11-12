@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.59
-    win_rate: 0.5124
-    matches: 267
+    pick_rate: 0.6
+    win_rate: 0.522
+    matches: 315
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.39
+    pick_rate: 0.41
     win_rate: 0.54
-    matches: 176
+    matches: 215
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -410,6 +410,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Genji's Guard
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Freya's Tears
+  - Mantle Of Discord
+  - Amanita Charm
+  flex_slots:
+  - Mantle Of Discord
+  - Genji's Guard
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Genji's Guard:
+      total: 0.53
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.35
+    Kinetic Cuirass:
+      total: 0.67
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Magi's Cloak:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Freya's Tears:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Mantle Of Discord:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+  swaps:
+  - added: Genji's Guard
+    removed: Erosion
+    reason: Conquest community 71% win over 32 matches (vs 54% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

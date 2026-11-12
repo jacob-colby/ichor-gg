@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.5
-    win_rate: 0.5508
-    matches: 160
+    pick_rate: 0.52
+    win_rate: 0.5169
+    matches: 190
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.36
-    win_rate: 0.67
-    matches: 115
+    win_rate: 0.65
+    matches: 131
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,6 +674,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shield Splitter
+  - Bracer of The Abyss
+  - Mantle Of Discord
+  - Amanita Charm
+  flex_slots:
+  - Mantle Of Discord
+  - Bracer of The Abyss
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.59
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Magi's Cloak:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Shield Splitter:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Bracer of The Abyss:
+      total: 0.24
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.04
+    Mantle Of Discord:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Amanita Charm:
+      total: 0.7
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+  swaps:
+  - added: Bracer of The Abyss
+    removed: Jotunn's Revenge
+    reason: Conquest community 72% win over 58 matches (vs 57% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.53
-    win_rate: 0.6183
-    matches: 179
+    pick_rate: 0.5
+    win_rate: 0.6186
+    matches: 193
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
-    pick_rate: 0.52
-    win_rate: 0.61
-    matches: 175
+    pick_rate: 0.53
+    win_rate: 0.6
+    matches: 205
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.54
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  - Shogun's Ofuda
+  flex_slots:
+  - Erosion
+  - Shogun's Ofuda
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
+    Amanita Charm:
+      total: 0.74
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Erosion:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Shogun's Ofuda:
+      total: 0.4
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.36
+  swaps:
+  - added: Shogun's Ofuda
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 72% win over 58 matches (vs 60% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

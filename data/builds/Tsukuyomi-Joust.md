@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.8
-    win_rate: 0.5325
-    matches: 463
+    pick_rate: 0.79
+    win_rate: 0.5285
+    matches: 499
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.62
-    win_rate: 0.52
-    matches: 359
+    pick_rate: 0.61
+    win_rate: 0.51
+    matches: 386
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -743,7 +743,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Bragi's Harp
-    reason: Conquest community 63% win over 110 matches (vs 52% on this god), taking
+    reason: Conquest community 62% win over 114 matches (vs 52% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001
