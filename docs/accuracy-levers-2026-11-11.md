@@ -366,3 +366,33 @@ and are not committed.
   by `(win x m + prior x k) / (m + k)`, `m = pick_rate x god_matches_played`,
   prior the god's own win rate; shipped-blend cores rebuilt with
   `assemble.assemble_core_converged` and compared with the unshrunk cores.
+
+## Addendum, same day: the levers worked through, and one correction
+
+Written after the report, when the levers were run. Everything above stands as
+written at the time except the correction below.
+
+**Correction to 4e and to the case for lever 1. [M]** The +1.38pp for the
+`model` build came from the store as it then was: 94% aspect players, four
+patches. With the no-aspect feed stored whole for OB47 (28,676 base-kit
+matches), the same statistic on base-kit finished sixes in the god's primary
+role (5,360 matches, 59 gods) reads `model` +0.44pp (-1.37 to +2.23), `core`
++2.53pp (+0.83 to +4.32), the community's six +2.82pp (+1.73 to +4.06), a
+random legal six +0.19pp (sd 1.87). The `model` build does not separate from
+zero on outcomes; the community's six does. Lever 1 was still the right first
+lever, and for a stronger reason than the one given: it produced a result the
+agreement instruments could not, and it was not the result the probe
+suggested.
+
+| # | Lever | What was done | Where |
+|---|---|---|---|
+| 1 | No-aspect census and outcome diagnostic | Built; OB47 backfilled (3,031 requests, 27,168 matches). Standing cost about 15 minutes a day and 1.1 MB a day in git [M] | #158, draft |
+| 2 | Stated-zero rule | Built, 25 items vetted against their full text, 13 left out. Conquest readable 57 to 78, Carry 10 to 18; Joust 46 to 43; Arena 44 to 46 [M]. Fewer than the 81 estimated in section 5, because four ally items also carry a healing clause | #152, draft |
+| 3 | Community window | Built as a depth floor, not pooling. Holds the old window one or two runs after a patch on every boundary on record [M] | #153, draft, held until OB48 has been watched |
+| 4 | Shrink thin win rates | Built as a switch that ships off. Judged on post-dated outcomes (cores from the 11-06 record, 3,909 later matches): a null at every setting [M] | #157, draft |
+| 5 | Aspect builds | The instrument only: the toggle's build holds 19% of what aspect players hold [M]. The role-seam model change is not built | #156 |
+| 6 | Zero-coverage gods | Traced to the hybrid gate: 0.30 opened the magical pool to ten physical Carries and Junglers. Threshold moved to 0.54: held-out +0.0312 / +0.0162, leakage-free mixed against chance (7.21x to 6.79x, and 6.61x to 6.92x) [M]. One test is red for a real reason (Tsukuyomi's derived aspect overlay) | #155, draft |
+| 7 | Majority aspect kits | Blocked. The aspect text for Gilgamesh and Nike carries no numbers; it needs in-game readings | none |
+| 8 | Scorer and simulator gap | Nothing run. The register's refusal stands; lever 6 is one instance of that gap | none |
+| 9, 10, 12 | Gap threshold, `core` scope, more simulation | Nothing to run, as ranked | none |
+| 11 | Other sources | Re-checked. Still no per-god Joust or Arena source; smite2.live now has global Arena item win rates | #154 |
