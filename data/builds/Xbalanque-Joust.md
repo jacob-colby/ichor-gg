@@ -313,7 +313,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.91
     Tyrfing:
       total: 0.56
       efficiency: 0.53
@@ -385,7 +385,7 @@ builds:
       efficiency: 0.35
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Tyrfing:
       total: 0.64
       efficiency: 0.53
@@ -445,7 +445,7 @@ builds:
       efficiency: 0.35
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Chandra's Grace:
       total: 0.51
       efficiency: 0.45
@@ -511,7 +511,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.65
     Death Metal:
       total: 0.56
       efficiency: 0.63
@@ -573,7 +573,7 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.56
+      total: 0.57
       efficiency: 0.44
       win: 0.5
       pick: 0.0

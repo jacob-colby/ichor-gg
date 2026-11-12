@@ -38,7 +38,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -117,11 +117,11 @@ builds:
       pick: 0.0
       fit: 0.54
     Toxic Blade:
-      total: 0.54
+      total: 0.55
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Berserker's Shield:
       total: 0.58
       efficiency: 0.72
@@ -183,11 +183,11 @@ builds:
       pick: 0.0
       fit: 0.66
     Toxic Blade:
-      total: 0.62
+      total: 0.63
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -253,7 +253,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Berserker's Shield:
       total: 0.57
       efficiency: 0.72
@@ -290,8 +290,8 @@ builds:
   - Shield of the Phoenix
   - Freya's Tears
   flex_slots:
-  - Freya's Tears
   - Toxic Blade
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -313,7 +313,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Genji's Guard:
       total: 0.52
       efficiency: 0.71
@@ -381,7 +381,7 @@ builds:
       pick: 0.0
       fit: 0.58
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0

@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
-  - Bragi's Harp
+  - Tekko-Kagi
   - Riptalon
   flex_slots:
-  - Death Metal
-  - Bragi's Harp
+  - Tekko-Kagi
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -26,47 +26,47 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Toxic Blade:
-      total: 0.62
+      total: 0.64
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.85
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.52
     Tyrfing:
-      total: 0.63
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Death Metal:
-      total: 0.57
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
-    Bragi's Harp:
+      fit: 0.77
+    Tekko-Kagi:
       total: 0.56
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Riptalon:
-      total: 0.61
+      total: 0.63
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.87
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
@@ -87,20 +87,20 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Death Metal
-  - Bragi's Harp
-  - Rod of Tahuti
-  - Soul Gem
+  - Tyrfing
+  - Hydra's Lament
+  - The Reaper
+  - Heartseeker
   flex_slots:
-  - Bragi's Harp
+  - Hydra's Lament
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -122,30 +122,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.28
-    Death Metal:
-      total: 0.58
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
-    Bragi's Harp:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Rod of Tahuti:
-      total: 0.62
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.42
-    Soul Gem:
-      total: 0.68
+    Tyrfing:
+      total: 0.54
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.54
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    The Reaper:
+      total: 0.55
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Heartseeker:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
   starter: *id001
   relic: *id002
 - source: suggested
@@ -177,41 +177,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.53
+      fit: 0.55
     Toxic Blade:
-      total: 0.59
+      total: 0.61
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.75
     Berserker's Shield:
-      total: 0.57
+      total: 0.58
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.44
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.51
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.59
       efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.61
     Amanita Charm:
-      total: 0.7
+      total: 0.71
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   starter: *id001
   relic: *id002
 - source: suggested
@@ -219,10 +219,10 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
+  - The Reaper
   - Silverbranch Bow
   - The Crusher
   - Heartseeker
-  - Soul Gem
   flex_slots:
   - The Crusher
   - Silverbranch Bow
@@ -237,61 +237,61 @@ builds:
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.67
+      total: 0.69
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.94
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.65
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.61
-    Silverbranch Bow:
-      total: 0.58
-      efficiency: 0.49
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
-    The Crusher:
-      total: 0.59
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.67
-    Heartseeker:
-      total: 0.61
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.77
-    Soul Gem:
-      total: 0.69
-      efficiency: 0.53
+      fit: 0.64
+    The Reaper:
+      total: 0.68
+      efficiency: 0.52
       win: 0.5
       pick: 0.0
       fit: 0.85
+    Silverbranch Bow:
+      total: 0.6
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.71
+    The Crusher:
+      total: 0.6
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+    Heartseeker:
+      total: 0.63
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Tyrfing
-  - Qin's Blade
+  - The Reaper
   - Riptalon
   - Silverbranch Bow
-  - Soul Gem
   flex_slots:
   - Silverbranch Bow
-  - Qin's Blade
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -303,65 +303,65 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
     Toxic Blade:
-      total: 0.61
+      total: 0.63
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.82
     Tyrfing:
-      total: 0.6
+      total: 0.61
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.67
-    Qin's Blade:
-      total: 0.51
-      efficiency: 0.39
+      fit: 0.69
+    The Reaper:
+      total: 0.6
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.63
     Riptalon:
-      total: 0.67
+      total: 0.69
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.93
     Silverbranch Bow:
-      total: 0.53
+      total: 0.54
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.57
-    Soul Gem:
-      total: 0.63
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.68
+      fit: 0.59
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
   - Toxic Blade
-  - Chronos' Pendant
+  - Chandra's Grace
   - Jotunn's Revenge
+  - Tyrfing
   - Hydra's Lament
-  - Spear of Desolation
-  - Soul Gem
+  - Pendulum Blade
   flex_slots:
-  - Toxic Blade
-  - Chronos' Pendant
+  - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -369,8 +369,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -379,51 +379,51 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Chronos' Pendant:
-      total: 0.51
-      efficiency: 0.56
+      fit: 0.63
+    Chandra's Grace:
+      total: 0.52
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.45
+      fit: 0.59
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.59
+    Tyrfing:
+      total: 0.5
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.47
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Spear of Desolation:
-      total: 0.6
-      efficiency: 0.6
+    Pendulum Blade:
+      total: 0.49
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.59
-    Soul Gem:
-      total: 0.75
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.97
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: model
   slot_order:
+  - Golden Blade
   - Toxic Blade
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
-  - Bragi's Harp
+  - Tekko-Kagi
   - Riptalon
   flex_slots:
-  - Death Metal
-  - Bragi's Harp
+  - Tekko-Kagi
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -435,47 +435,47 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Golden Blade:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.67
     Toxic Blade:
-      total: 0.62
+      total: 0.64
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.8
+      fit: 0.85
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.52
     Tyrfing:
-      total: 0.63
+      total: 0.65
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.73
-    Death Metal:
-      total: 0.57
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
-    Bragi's Harp:
+      fit: 0.77
+    Tekko-Kagi:
       total: 0.56
-      efficiency: 0.47
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.64
     Riptalon:
-      total: 0.61
+      total: 0.63
       efficiency: 0.39
       win: 0.5
       pick: 0.0
-      fit: 0.83
+      fit: 0.87
   starter: *id001
   relic: *id002
 ---

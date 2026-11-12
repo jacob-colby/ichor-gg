@@ -180,17 +180,17 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
   - Dominance
+  - The Reaper
   - Riptalon
-  - Soul Gem
+  - Silverbranch Bow
   flex_slots:
-  - Jotunn's Revenge
-  - Soul Gem
+  - Silverbranch Bow
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -201,54 +201,53 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Death Metal, Tyrfing, Soul Gem, The Reaper, Tekko-Kagi, Nimble Ring,
-    Bragi''s Harp, Spear of Desolation, Gluttonous Grimoire, Lernaean Bow, The Crusher,
-    Hydra''s Lament, Heartseeker, Blood-Bound Book, Titan''s Bane, Golden Blade, Bracer
-    of The Abyss, Demon Blade, Rage, Spear of the Magus, Ancient Signet, Toxic Blade,
-    Deathbringer, Dreamer''s Idol, Arondight, Qin''s Blade, Avatar''s Parashu, Chronos''
-    Pendant, Doom Orb, Bancroft''s Talon, The World Stone, Bloodforge, Runeforged
-    Hammer, Obsidian Shard.'
+    this god: Tyrfing, The Reaper, Tekko-Kagi, Lernaean Bow, The Crusher, Hydra''s
+    Lament, Heartseeker, Titan''s Bane, Golden Blade, Demon Blade, Rage, Toxic Blade,
+    Deathbringer, Arondight, Qin''s Blade, Avatar''s Parashu, Bloodforge, Barbed Carver,
+    Runeforged Hammer, Berserker''s Shield, Musashi''s Dual Swords, Pendulum Blade,
+    Shield Splitter, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
       win: 0.56
       pick: 0.15
-      fit: 0.37
+      fit: 0.39
     Tyrfing:
       total: 0.55
       efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.58
-    Death Metal:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.6
-      pick: 0.0
-      fit: 0.48
+      fit: 0.61
     Dominance:
-      total: 0.58
+      total: 0.59
       efficiency: 0.47
       win: 0.73
       pick: 0.18
-      fit: 0.53
+      fit: 0.55
+    The Reaper:
+      total: 0.54
+      efficiency: 0.57
+      win: 0.6
+      pick: 0.0
+      fit: 0.45
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
       win: 0.67
       pick: 0.28
-      fit: 0.55
-    Soul Gem:
+      fit: 0.58
+    Silverbranch Bow:
       total: 0.54
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.43
+      efficiency: 0.49
+      win: 0.64
+      pick: 0.24
+      fit: 0.48
   community_ordered:
   - Jotunn's Revenge
   - Dominance
   - Riptalon
+  - Silverbranch Bow
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
@@ -265,19 +264,19 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Death Metal
+  - Transcendence
+  - Tyrfing
+  - Hydra's Lament
   - Dominance
-  - Rod of Tahuti
-  - Soul Gem
+  - Riptalon
   flex_slots:
-  - Jotunn's Revenge
-  - Book of Thoth
+  - Riptalon
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -287,55 +286,54 @@ builds:
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
-  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Death
-    Metal, Soul Gem, Spear of Desolation, Tyrfing, Nimble Ring, Bragi''s Harp, Hydra''s
-    Lament, Gluttonous Grimoire, The Reaper, Ancient Signet, Blood-Bound Book, Heartseeker,
-    Tekko-Kagi, Spear of the Magus, Chronos'' Pendant, The Crusher, Bracer of The
-    Abyss, Lernaean Bow, Dreamer''s Idol, Doom Orb, Bancroft''s Talon, Heartwood Charm,
-    Soul Reaver, The World Stone, Titan''s Bane, Arondight, Gem of Focus, Golden Blade,
-    Rage, Deathbringer, Avatar''s Parashu, Demon Blade, Obsidian Shard.'
+  rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Tyrfing,
+    Hydra''s Lament, The Reaper, Heartseeker, Tekko-Kagi, The Crusher, Lernaean Bow,
+    Titan''s Bane, Arondight, Golden Blade, Rage, Deathbringer, Avatar''s Parashu,
+    Demon Blade, Genji''s Guard, Toxic Blade, Runeforged Hammer, Qin''s Blade, Bloodforge,
+    Barbed Carver, Pendulum Blade, Damaru, Shield Splitter, Eye of the Storm, Avenging
+    Blade.'
   slot_scores:
-    Book of Thoth:
-      total: 0.49
-      efficiency: 0.48
-      win: 0.62
-      pick: 0.22
-      fit: 0.24
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
       win: 0.56
       pick: 0.15
       fit: 0.44
-    Death Metal:
-      total: 0.57
-      efficiency: 0.63
+    Transcendence:
+      total: 0.47
+      efficiency: 0.5
+      win: 0.55
+      pick: 0.29
+      fit: 0.24
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.51
+      fit: 0.48
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.6
+      pick: 0.0
+      fit: 0.42
     Dominance:
       total: 0.58
       efficiency: 0.47
       win: 0.73
       pick: 0.18
       fit: 0.5
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.82
-      win: 0.59
-      pick: 0.18
-      fit: 0.35
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.54
+    Riptalon:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.67
+      pick: 0.28
+      fit: 0.38
   community_ordered:
-  - Book of Thoth
   - Jotunn's Revenge
+  - Transcendence
   - Dominance
-  - Rod of Tahuti
+  - Riptalon
   starter: *id001
   relic: *id002
 - source: suggested
@@ -343,17 +341,17 @@ builds:
   slot_order:
   - Rage
   - Tyrfing
-  - Death Metal
   - Dominance
   - Riptalon
   - Demon Blade
+  - Deathbringer
   flex_slots:
   - Rage
-  - Demon Blade
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -364,50 +362,48 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Crit / auto-attack skew (efficiency + fit + win/pick). Underrated for
-    this god: Death Metal, Soul Gem, Tyrfing, The Reaper, Nimble Ring, Tekko-Kagi,
-    Spear of Desolation, Gluttonous Grimoire, Bragi''s Harp, The Crusher, Lernaean
-    Bow, Blood-Bound Book, Hydra''s Lament, Heartseeker, Titan''s Bane, Rage, Demon
-    Blade, Spear of the Magus, Bracer of The Abyss, Golden Blade, Ancient Signet,
-    Deathbringer, Dreamer''s Idol, Toxic Blade, Arondight, Qin''s Blade, Chronos''
-    Pendant, Doom Orb, Avatar''s Parashu, Bancroft''s Talon, The World Stone, Bloodforge,
-    Soul Reaver, Musashi''s Dual Swords, Obsidian Shard.'
+    this god: Tyrfing, The Reaper, Tekko-Kagi, Lernaean Bow, The Crusher, Hydra''s
+    Lament, Heartseeker, Demon Blade, Rage, Titan''s Bane, Golden Blade, Deathbringer,
+    Toxic Blade, Arondight, Qin''s Blade, Avatar''s Parashu, Musashi''s Dual Swords,
+    Bloodforge, Berserker''s Shield, Barbed Carver, Runeforged Hammer, Pendulum Blade,
+    Shield Splitter, Eye of the Storm.'
   slot_scores:
     Rage:
       total: 0.5
       efficiency: 0.46
       win: 0.6
       pick: 0.0
-      fit: 0.44
+      fit: 0.46
     Tyrfing:
       total: 0.54
       efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.54
-    Death Metal:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.6
-      pick: 0.0
-      fit: 0.49
+      fit: 0.56
     Dominance:
       total: 0.58
       efficiency: 0.47
       win: 0.73
       pick: 0.18
-      fit: 0.48
+      fit: 0.5
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
       win: 0.67
       pick: 0.28
-      fit: 0.54
+      fit: 0.56
     Demon Blade:
-      total: 0.5
+      total: 0.51
       efficiency: 0.36
       win: 0.6
       pick: 0.0
-      fit: 0.67
+      fit: 0.7
+    Deathbringer:
+      total: 0.5
+      efficiency: 0.44
+      win: 0.6
+      pick: 0.0
+      fit: 0.46
   community_ordered:
   - Dominance
   - Riptalon
@@ -416,19 +412,19 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
+  - Tyrfing
+  - Hydra's Lament
   - Dominance
-  - Rod of Tahuti
-  - Soul Gem
+  - Riptalon
+  - Silverbranch Bow
   flex_slots:
-  - Book of Thoth
-  - Transcendence
+  - Tyrfing
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -439,56 +435,53 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Soul Gem, Death Metal, Spear of Desolation, Gluttonous Grimoire, The Reaper,
-    Tyrfing, Nimble Ring, Hydra''s Lament, Tekko-Kagi, Bragi''s Harp, Spear of the
-    Magus, Blood-Bound Book, The Crusher, Heartseeker, Dreamer''s Idol, Chronos''
-    Pendant, Ancient Signet, Titan''s Bane, Bracer of The Abyss, Doom Orb, Lernaean
-    Bow, Arondight, The World Stone, Gem of Focus, Heartwood Charm, Toxic Blade, Bancroft''s
-    Talon, Avatar''s Parashu, Soul Reaver, Golden Blade, Rage, Pendulum Blade, The
-    Cosmic Horror, Deathbringer, Obsidian Shard.'
+    god: The Reaper, Tyrfing, Hydra''s Lament, Tekko-Kagi, The Crusher, Heartseeker,
+    Titan''s Bane, Lernaean Bow, Arondight, Toxic Blade, Avatar''s Parashu, Golden
+    Blade, Rage, Pendulum Blade, Deathbringer, Qin''s Blade, Demon Blade, Damaru,
+    Genji''s Guard, Runeforged Hammer, Bloodforge, Barbed Carver, Berserker''s Shield,
+    Shield Splitter, Eye of the Storm.'
   slot_scores:
-    Book of Thoth:
-      total: 0.48
-      efficiency: 0.48
-      win: 0.62
-      pick: 0.22
-      fit: 0.13
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
       win: 0.56
       pick: 0.15
       fit: 0.46
-    Transcendence:
-      total: 0.46
-      efficiency: 0.5
-      win: 0.55
-      pick: 0.29
-      fit: 0.13
+    Tyrfing:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.44
+    Hydra's Lament:
+      total: 0.52
+      efficiency: 0.55
+      win: 0.6
+      pick: 0.0
+      fit: 0.36
     Dominance:
       total: 0.56
       efficiency: 0.47
       win: 0.73
       pick: 0.18
       fit: 0.4
-    Rod of Tahuti:
-      total: 0.61
-      efficiency: 0.82
-      win: 0.59
-      pick: 0.18
-      fit: 0.33
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.63
+    Riptalon:
+      total: 0.54
+      efficiency: 0.45
+      win: 0.67
+      pick: 0.28
+      fit: 0.48
+    Silverbranch Bow:
+      total: 0.53
+      efficiency: 0.49
+      win: 0.64
+      pick: 0.24
+      fit: 0.41
   community_ordered:
-  - Book of Thoth
   - Jotunn's Revenge
-  - Transcendence
   - Dominance
-  - Rod of Tahuti
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
   relic: *id002
 - source: suggested
@@ -517,51 +510,49 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Berserker''s Shield, Soul Gem, The Reaper, Shield of
-    the Phoenix, Kinetic Cuirass, Blood-Bound Book, Genji''s Guard, Death Metal, Gluttonous
-    Grimoire, Yogi''s Necklace, Phoenix Feather, Shield Splitter, Tyrfing, Ethereal
-    Staff, Freya''s Tears, Golden Blade, Runeforged Hammer, Bancroft''s Talon, Oni
-    Hunter''s Garb, Breastplate of Valor, Chandra''s Grace, Nimble Ring, Draconic
-    Scale, Spear of Desolation, Bloodforge, Shogun''s Ofuda, Hydra''s Lament, Tekko-Kagi,
-    Pharaoh''s Curse, Erosion, Bragi''s Harp, Midgardian Mail, Eye of Providence,
-    Toxic Blade, Regrowth Striders, The Crusher, Leviathan''s Hide.'
+    this god: Amanita Charm, Berserker''s Shield, The Reaper, Shield of the Phoenix,
+    Kinetic Cuirass, Genji''s Guard, Yogi''s Necklace, Phoenix Feather, Tyrfing, Shield
+    Splitter, Freya''s Tears, Golden Blade, Runeforged Hammer, Oni Hunter''s Garb,
+    Breastplate of Valor, Chandra''s Grace, Draconic Scale, Bloodforge, Shogun''s
+    Ofuda, Tekko-Kagi, Pharaoh''s Curse, Erosion, Hydra''s Lament, Midgardian Mail,
+    Toxic Blade, Eye of Providence, The Crusher, Regrowth Striders.'
   slot_scores:
     Genji's Guard:
       total: 0.54
       efficiency: 0.71
       win: 0.6
       pick: 0.0
-      fit: 0.12
+      fit: 0.13
     Berserker's Shield:
-      total: 0.58
+      total: 0.59
       efficiency: 0.72
       win: 0.6
       pick: 0.0
-      fit: 0.39
+      fit: 0.41
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.61
       win: 0.6
       pick: 0.0
-      fit: 0.43
+      fit: 0.44
     Dominance:
       total: 0.56
       efficiency: 0.47
       win: 0.73
       pick: 0.18
-      fit: 0.39
+      fit: 0.4
     Riptalon:
       total: 0.57
       efficiency: 0.45
       win: 0.67
       pick: 0.28
-      fit: 0.67
+      fit: 0.68
     Amanita Charm:
-      total: 0.6
+      total: 0.61
       efficiency: 0.68
       win: 0.6
       pick: 0.0
-      fit: 0.63
+      fit: 0.64
   community_ordered:
   - Dominance
   - Riptalon
@@ -571,18 +562,18 @@ builds:
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
-  - Death Metal
+  - Tyrfing
   - Dominance
   - Tekko-Kagi
   - Riptalon
   - Silverbranch Bow
   flex_slots:
-  - Death Metal
   - Tekko-Kagi
+  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -593,50 +584,48 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Soul Gem, The Reaper, Death Metal, Tekko-Kagi, Spear of Desolation,
-    Gluttonous Grimoire, Tyrfing, The Crusher, Heartseeker, Titan''s Bane, Spear of
-    the Magus, Nimble Ring, Dreamer''s Idol, Bragi''s Harp, Toxic Blade, Hydra''s
-    Lament, Lernaean Bow, Blood-Bound Book, Doom Orb, Avatar''s Parashu, Avenging
-    Blade, The World Stone, Ancient Signet, Bracer of The Abyss, Golden Blade, Rage,
-    Arondight, Pendulum Blade, The Cosmic Horror, Demon Blade, Chronos'' Pendant,
-    Deathbringer, Qin''s Blade, Bancroft''s Talon, Obsidian Shard.'
+    for this god: The Reaper, Tekko-Kagi, Tyrfing, The Crusher, Heartseeker, Titan''s
+    Bane, Toxic Blade, Lernaean Bow, Hydra''s Lament, Avatar''s Parashu, Avenging
+    Blade, Golden Blade, Rage, Pendulum Blade, Demon Blade, Arondight, Deathbringer,
+    Qin''s Blade, Oath-Sworn Spear, Runeforged Hammer, Bloodforge, Barbed Carver,
+    Berserker''s Shield.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
       win: 0.56
       pick: 0.15
-      fit: 0.48
-    Death Metal:
-      total: 0.55
-      efficiency: 0.63
+      fit: 0.5
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.39
+      fit: 0.51
     Dominance:
       total: 0.57
       efficiency: 0.47
       win: 0.73
       pick: 0.18
-      fit: 0.45
+      fit: 0.46
     Tekko-Kagi:
-      total: 0.54
+      total: 0.55
       efficiency: 0.49
       win: 0.6
       pick: 0.0
-      fit: 0.65
+      fit: 0.68
     Riptalon:
       total: 0.57
       efficiency: 0.45
       win: 0.67
       pick: 0.28
-      fit: 0.63
+      fit: 0.66
     Silverbranch Bow:
-      total: 0.55
+      total: 0.56
       efficiency: 0.49
       win: 0.64
       pick: 0.24
-      fit: 0.55
+      fit: 0.58
   community_ordered:
   - Jotunn's Revenge
   - Dominance
@@ -647,19 +636,19 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
   - Dominance
+  - The Reaper
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   flex_slots:
-  - Silverbranch Bow
-  - Death Metal
+  - Jotunn's Revenge
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -670,73 +659,71 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Tyrfing, Death Metal, Soul Gem, Nimble Ring, The Reaper, Tekko-Kagi,
-    Bragi''s Harp, Spear of Desolation, Gluttonous Grimoire, Golden Blade, Lernaean
-    Bow, Blood-Bound Book, The Crusher, Hydra''s Lament, Toxic Blade, Qin''s Blade,
-    Heartseeker, Bracer of The Abyss, Ancient Signet, Spear of the Magus, Titan''s
-    Bane, Dreamer''s Idol, Demon Blade, Rage, Chronos'' Pendant, Arondight, Deathbringer,
-    Doom Orb, Bancroft''s Talon, The World Stone, Avatar''s Parashu, Berserker''s
-    Shield, Soul Reaver, Obsidian Shard.'
+    this god: Tyrfing, The Reaper, Tekko-Kagi, Golden Blade, Lernaean Bow, Toxic Blade,
+    The Crusher, Hydra''s Lament, Qin''s Blade, Heartseeker, Titan''s Bane, Demon
+    Blade, Rage, Arondight, Deathbringer, Avatar''s Parashu, Berserker''s Shield,
+    Bloodforge, Runeforged Hammer, Sun Beam Bow, Barbed Carver, Odysseus'' Bow, Musashi''s
+    Dual Swords, Damaru.'
   slot_scores:
+    Jotunn's Revenge:
+      total: 0.53
+      efficiency: 0.65
+      win: 0.56
+      pick: 0.15
+      fit: 0.29
     Tyrfing:
-      total: 0.55
+      total: 0.56
       efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.62
-    Death Metal:
-      total: 0.55
-      efficiency: 0.63
-      win: 0.6
-      pick: 0.0
-      fit: 0.37
+      fit: 0.64
     Dominance:
-      total: 0.57
+      total: 0.58
       efficiency: 0.47
       win: 0.73
       pick: 0.18
-      fit: 0.46
+      fit: 0.48
+    The Reaper:
+      total: 0.52
+      efficiency: 0.57
+      win: 0.6
+      pick: 0.0
+      fit: 0.35
     Riptalon:
       total: 0.56
       efficiency: 0.45
       win: 0.67
       pick: 0.28
-      fit: 0.6
+      fit: 0.62
     Silverbranch Bow:
       total: 0.55
       efficiency: 0.49
       win: 0.64
       pick: 0.24
-      fit: 0.52
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.82
-      win: 0.59
-      pick: 0.18
-      fit: 0.17
+      fit: 0.54
   community_ordered:
+  - Jotunn's Revenge
   - Dominance
   - Riptalon
   - Silverbranch Bow
-  - Rod of Tahuti
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
+  - Tyrfing
+  - Hydra's Lament
+  - Arondight
   - Dominance
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
+  - Riptalon
   flex_slots:
-  - Spear of Desolation
-  - Book of Thoth
+  - Tyrfing
+  - Arondight
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -747,55 +734,52 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Soul Gem, Spear of Desolation, Death
-    Metal, Hydra''s Lament, Chronos'' Pendant, Tyrfing, Nimble Ring, Gluttonous Grimoire,
-    Arondight, The Reaper, Blood-Bound Book, Bragi''s Harp, Gem of Focus, Heartwood
-    Charm, Ancient Signet, Tekko-Kagi, Spear of the Magus, Bracer of The Abyss, The
-    Crusher, Lernaean Bow, Damaru, Genji''s Guard, Heartseeker, Dreamer''s Idol, Totem
-    of Death, Titan''s Bane, Pendulum Blade, Doom Orb, Bancroft''s Talon, Golden Blade,
-    Toxic Blade, Soul Reaver, The World Stone, Rage, Obsidian Shard.'
+    + fit + win/pick). Underrated for this god: Hydra''s Lament, Tyrfing, Arondight,
+    The Reaper, Tekko-Kagi, The Crusher, Lernaean Bow, Damaru, Genji''s Guard, Heartseeker,
+    Titan''s Bane, Pendulum Blade, Golden Blade, Toxic Blade, Rage, Qin''s Blade,
+    Breastplate of Valor, Chandra''s Grace, Deathbringer, Demon Blade, Avatar''s Parashu,
+    Berserker''s Shield, Runeforged Hammer, Bloodforge.'
   slot_scores:
-    Book of Thoth:
-      total: 0.47
-      efficiency: 0.48
-      win: 0.62
-      pick: 0.22
-      fit: 0.08
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
       win: 0.56
       pick: 0.15
       fit: 0.48
+    Tyrfing:
+      total: 0.52
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.41
+    Hydra's Lament:
+      total: 0.53
+      efficiency: 0.55
+      win: 0.6
+      pick: 0.0
+      fit: 0.47
+    Arondight:
+      total: 0.51
+      efficiency: 0.53
+      win: 0.6
+      pick: 0.0
+      fit: 0.37
     Dominance:
       total: 0.56
       efficiency: 0.47
       win: 0.73
       pick: 0.18
       fit: 0.37
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.6
-      win: 0.6
-      pick: 0.0
-      fit: 0.48
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.82
-      win: 0.59
-      pick: 0.18
-      fit: 0.2
-    Soul Gem:
-      total: 0.57
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.65
+    Riptalon:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.67
+      pick: 0.28
+      fit: 0.41
   community_ordered:
-  - Book of Thoth
   - Jotunn's Revenge
   - Dominance
-  - Rod of Tahuti
+  - Riptalon
   starter: *id001
   relic: *id002
 - source: suggested
@@ -954,19 +938,19 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
+  - Dominance
   - The Reaper
   - Tekko-Kagi
-  - Soul Gem
   flex_slots:
-  - The Reaper
-  - Tekko-Kagi
+  - Lernaean Bow
+  - Dominance
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -977,52 +961,51 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Death Metal, Tyrfing, Soul Gem, The Reaper, Tekko-Kagi,
-    Nimble Ring, Bragi''s Harp, Spear of Desolation, Gluttonous Grimoire, Lernaean
-    Bow, The Crusher, Hydra''s Lament, Heartseeker, Blood-Bound Book, Obsidian Shard,
-    Titan''s Bane, Golden Blade, Bracer of The Abyss, Demon Blade, Rage, Spear of
-    the Magus, Ancient Signet, Toxic Blade, Deathbringer, Dreamer''s Idol, Arondight,
-    Qin''s Blade, Avatar''s Parashu, Chronos'' Pendant, Doom Orb, Bancroft''s Talon,
-    The World Stone, Bloodforge, Runeforged Hammer.'
+    Underrated for this god: Tyrfing, The Reaper, Tekko-Kagi, Lernaean Bow, The Crusher,
+    Hydra''s Lament, Heartseeker, Titan''s Bane, Golden Blade, Demon Blade, Rage,
+    Toxic Blade, Deathbringer, Arondight, Qin''s Blade, Avatar''s Parashu, Bloodforge,
+    Barbed Carver, Runeforged Hammer, Berserker''s Shield, Musashi''s Dual Swords,
+    Pendulum Blade, Shield Splitter, Eye of the Storm.'
   slot_scores:
+    Lernaean Bow:
+      total: 0.52
+      efficiency: 0.47
+      win: 0.6
+      pick: 0.0
+      fit: 0.55
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
       win: 0.56
       pick: 0.15
-      fit: 0.37
+      fit: 0.39
     Tyrfing:
       total: 0.55
       efficiency: 0.53
       win: 0.6
       pick: 0.0
-      fit: 0.58
-    Death Metal:
-      total: 0.56
-      efficiency: 0.63
-      win: 0.6
-      pick: 0.0
-      fit: 0.48
+      fit: 0.61
+    Dominance:
+      total: 0.59
+      efficiency: 0.47
+      win: 0.73
+      pick: 0.18
+      fit: 0.55
     The Reaper:
       total: 0.54
       efficiency: 0.57
       win: 0.6
       pick: 0.0
-      fit: 0.43
+      fit: 0.45
     Tekko-Kagi:
       total: 0.53
       efficiency: 0.49
       win: 0.6
       pick: 0.0
-      fit: 0.58
-    Soul Gem:
-      total: 0.54
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.43
+      fit: 0.61
   community_ordered:
   - Jotunn's Revenge
+  - Dominance
   starter: *id001
   relic: *id002
 community_aspects:

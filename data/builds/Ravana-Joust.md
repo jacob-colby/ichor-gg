@@ -181,7 +181,7 @@ builds:
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
@@ -319,7 +319,7 @@ builds:
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.78
     Jotunn's Revenge:
       total: 0.66
       efficiency: 0.65
@@ -385,7 +385,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.82
     Berserker's Shield:
       total: 0.56
       efficiency: 0.72

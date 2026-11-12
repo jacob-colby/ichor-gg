@@ -111,11 +111,11 @@ builds:
     data).
   slot_scores:
     Toxic Blade:
-      total: 0.49
+      total: 0.5
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.56
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -309,11 +309,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.64
+      total: 0.65
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.86
     Tekko-Kagi:
       total: 0.54
       efficiency: 0.49
@@ -385,7 +385,7 @@ builds:
       efficiency: 0.35
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Tyrfing:
       total: 0.64
       efficiency: 0.53

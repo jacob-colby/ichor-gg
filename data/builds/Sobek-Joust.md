@@ -217,11 +217,11 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
-  - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Nimble Ring
@@ -237,11 +237,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.47
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.48
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.61
@@ -266,12 +272,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
-    Freya's Tears:
-      total: 0.47
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
     Amanita Charm:
       total: 0.66
       efficiency: 0.68

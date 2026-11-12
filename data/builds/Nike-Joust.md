@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Jotunn's Revenge
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
@@ -14,7 +14,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Jotunn's Revenge
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Brawler’s Beat Stick:
       total: 0.52
-      efficiency: 0.65
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.6
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.61
@@ -243,7 +243,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -349,7 +349,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Jotunn's Revenge
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
@@ -357,7 +357,7 @@ builds:
   - Erosion
   flex_slots:
   - Erosion
-  - Jotunn's Revenge
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -369,17 +369,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Brawler’s Beat Stick:
       total: 0.52
-      efficiency: 0.65
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.39
+      fit: 0.6
     Kinetic Cuirass:
       total: 0.61
       efficiency: 0.61

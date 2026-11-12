@@ -385,7 +385,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.86
+      fit: 0.87
     Tyrfing:
       total: 0.64
       efficiency: 0.53

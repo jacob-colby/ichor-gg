@@ -1379,9 +1379,55 @@ coherence: 0.0
 # `min_abilities` is the confidence floor kit.py already uses: under 3 parsed
 # scaling abilities the share is an artifact of a sparse scrape (Artio and
 # Ullr scrape 2 abilities each), and those gods keep the strict label.
+#
+# RE-MEASURED 2026-11-11 AND MOVED TO 0.54. The 2026-08-05 sweep above read
+# `validate.compute`, the gate STATE.md section 1 says cannot choose a
+# parameter, and found it flat. Re-measured on main 1a9ca2d5 (fingerprint
+# 89eb181b72f1): leakage-free coverage at eff 0.70 / eff 0.45, then the
+# held-out split of the shipped blend, win-weighted / Spearman.
+#
+#     min_off_share  hybrid gods   leakage-free      held-out
+#     0.30                24       41.49% / 38.07%   0.5140 / 0.5573
+#     0.40                18       41.86% / 38.56%   0.5140 / 0.5595
+#     0.45                11       41.61% / 40.58%   0.5140 / 0.5571
+#     0.50                 8       41.68% / 41.09%   0.5200 / 0.5585
+#     0.54                 3       41.84% / 42.65%   0.5452 / 0.5735   <- shipped
+#     off                  0       41.81% / 42.58%   0.5452 / 0.5735
+#
+# READ THE LEAKAGE-FREE COLUMN AGAINST CHANCE, BECAUSE CHANCE MOVES HERE. A
+# god that stops being hybrid loses the other damage type's items from its
+# pool (about 136 items down to about 97), so a random six hits more often:
+# the exact baseline (`calibrate.exact_random_core_baseline`) goes 5.76% ->
+# 6.16%. As a multiple of chance the probe split FALLS, 7.21x -> 6.79x, and
+# the second split rises, 6.61x -> 6.92x. So the leakage-free measure is
+# mixed, not a win: the +0.35pp at eff 0.70 is smaller than the +0.41pp chance
+# gained. The held-out agreement metrics are both clearly up (+0.0312
+# win-weighted, +0.0162 Spearman; tuning +0.0198 / +0.0083).
+#
+# What 0.30 was doing: it opened the other damage type's whole item pool to a
+# god whose abilities scale a third on it, and `scaling_profile` does not read
+# the basic attack. So ten physical Carries and Junglers were hybrid, and the
+# shipped Conquest `core` held Intelligence-only items on seven of them (Rod
+# of Tahuti, Nimble Ring and Soul Gem on Cupid, Cernunnos and Izanami) where
+# the community sixes of the ten gods at 0% leakage-free coverage hold 22
+# Intelligence a build. Of the 21 gods that stop being hybrid, 13 gain
+# shipped coverage, 6 do not move and 2 lose (Izanami 20% -> 0%; Nut 40% ->
+# 0%, while her leakage-free figure goes 40% -> 100%). No other god moves.
+#
+# Why 0.54 and not off: the three it keeps are the gods the gate was written
+# for (Neith 0.555, the motivating case above; Amaterasu 0.551; Cabrakan
+# 0.594), and 0.54 is the middle of the widest gap in the shares near it
+# (0.529 Jormungandr to 0.551 Amaterasu), so a small kit re-scrape does not
+# flip one. Artio (0.526 Strength on a magical label, the stance-god case in
+# `scoring.py`) falls under the line.
+#
+# THE LIMIT: every instrument above rewards agreement with the community, and
+# the community does not build hybrid. They cannot say a hybrid build is
+# worse, only that it is unconventional (STATE.md section 2). What they do
+# say is that 0.30 was not the flat optimum its comment claimed.
 hybrid_scaling:
   enabled: true
-  min_off_share: 0.30
+  min_off_share: 0.54
   min_abilities: 3
 
 kit_blend: 0.3       # how much the parsed ability-scaling profile skews god-fit (0 = role map only).

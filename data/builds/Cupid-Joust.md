@@ -7,18 +7,18 @@ builds:
   archetype: core
   slot_order:
   - Toxic Blade
-  - Death Metal
-  - Bragi's Harp
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
   - Riptalon
-  - Rod of Tahuti
-  - Soul Gem
+  - Demon Blade
   flex_slots:
-  - Toxic Blade
-  - Bragi's Harp
+  - Tyrfing
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -26,47 +26,47 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Death Metal:
+      fit: 0.69
+    Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.47
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.47
+      fit: 0.45
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
+    The Reaper:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Riptalon:
-      total: 0.58
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.82
+      fit: 0.8
+    Demon Blade:
+      total: 0.49
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.29
-    Soul Gem:
-      total: 0.72
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.86
+      fit: 0.61
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
@@ -85,31 +85,37 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
+  - Toxic Blade
   - Jotunn's Revenge
   - Transcendence
-  - Death Metal
-  - Bragi's Harp
-  - Rod of Tahuti
-  - Soul Gem
+  - Tyrfing
+  - The Reaper
+  - Heartseeker
   flex_slots:
-  - Bragi's Harp
+  - Toxic Blade
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: mana-stack (efficiency + fit). Joust — math + mode profile (no meta win/pick
     data).
   slot_scores:
+    Toxic Blade:
+      total: 0.49
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -122,30 +128,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.24
-    Death Metal:
-      total: 0.57
-      efficiency: 0.63
+    Tyrfing:
+      total: 0.51
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.51
-    Bragi's Harp:
-      total: 0.54
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Rod of Tahuti:
+      fit: 0.48
+    The Reaper:
       total: 0.58
-      efficiency: 0.82
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.35
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.58
+      fit: 0.6
+    Heartseeker:
+      total: 0.5
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.55
   starter: *id001
   relic: *id002
 - source: suggested
@@ -154,16 +154,16 @@ builds:
   - Toxic Blade
   - Rage
   - Jotunn's Revenge
-  - Death Metal
+  - Riptalon
   - Demon Blade
-  - Soul Gem
+  - Deathbringer
   flex_slots:
-  - Demon Blade
   - Rage
+  - Deathbringer
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -171,47 +171,47 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Crit / auto-attack skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.52
+      total: 0.55
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.67
     Rage:
-      total: 0.4
+      total: 0.43
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.35
+      fit: 0.4
     Jotunn's Revenge:
-      total: 0.51
+      total: 0.55
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.37
-    Death Metal:
-      total: 0.56
-      efficiency: 0.63
+      fit: 0.44
+    Riptalon:
+      total: 0.61
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.78
     Demon Blade:
-      total: 0.45
+      total: 0.49
       efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.53
-    Soul Gem:
-      total: 0.72
-      efficiency: 0.58
+      fit: 0.62
+    Deathbringer:
+      total: 0.42
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.85
+      fit: 0.4
   starter: *id001
   relic: *id002
 - source: suggested
@@ -219,17 +219,17 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
+  - Tyrfing
+  - The Reaper
+  - The Crusher
+  - Heartseeker
   flex_slots:
-  - Spear of Desolation
-  - Death Metal
+  - Heartseeker
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -237,8 +237,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability / burst skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
@@ -254,30 +254,30 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Death Metal:
-      total: 0.53
-      efficiency: 0.63
+    Tyrfing:
+      total: 0.49
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+    The Reaper:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    The Crusher:
+      total: 0.47
+      efficiency: 0.51
       win: 0.5
       pick: 0.0
       fit: 0.43
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.6
+    Heartseeker:
+      total: 0.49
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.46
-    Rod of Tahuti:
-      total: 0.57
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.33
-    Soul Gem:
-      total: 0.74
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.91
+      fit: 0.53
   starter: *id001
   relic: *id002
 - source: suggested
@@ -285,65 +285,65 @@ builds:
   slot_order:
   - Toxic Blade
   - Berserker's Shield
+  - Jotunn's Revenge
   - Kinetic Cuirass
-  - Death Metal
+  - Shield of the Phoenix
   - Amanita Charm
-  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Death Metal
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Lifesteal bruiser skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.54
+      total: 0.56
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.67
     Berserker's Shield:
-      total: 0.53
+      total: 0.55
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.34
+      fit: 0.38
+    Jotunn's Revenge:
+      total: 0.48
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.31
     Kinetic Cuirass:
-      total: 0.5
+      total: 0.51
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.38
-    Death Metal:
-      total: 0.48
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
-    Amanita Charm:
-      total: 0.65
-      efficiency: 0.68
+      fit: 0.42
+    Shield of the Phoenix:
+      total: 0.59
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Soul Gem:
-      total: 0.68
-      efficiency: 0.58
+    Amanita Charm:
+      total: 0.66
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.65
   starter: *id001
   relic: *id002
 - source: suggested
@@ -351,17 +351,17 @@ builds:
   slot_order:
   - Toxic Blade
   - Jotunn's Revenge
-  - Death Metal
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
+  - The Reaper
+  - Silverbranch Bow
+  - The Crusher
+  - Heartseeker
   flex_slots:
-  - Spear of Desolation
-  - Death Metal
+  - Silverbranch Bow
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
@@ -369,65 +369,65 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Full-penetration anti-tank skew (efficiency + fit). Joust — math + mode
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.61
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.78
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.47
-    Death Metal:
+      fit: 0.54
+    The Reaper:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Silverbranch Bow:
       total: 0.52
-      efficiency: 0.63
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.41
-    Spear of Desolation:
+      fit: 0.55
+    The Crusher:
+      total: 0.52
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
+    Heartseeker:
       total: 0.54
-      efficiency: 0.6
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.48
-    Rod of Tahuti:
-      total: 0.6
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.39
-    Soul Gem:
-      total: 0.76
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.93
+      fit: 0.63
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: attack-speed
   slot_order:
   - Toxic Blade
+  - Jotunn's Revenge
   - Tyrfing
-  - Death Metal
+  - The Reaper
   - Riptalon
-  - Rod of Tahuti
-  - Soul Gem
+  - Silverbranch Bow
   flex_slots:
-  - Rod of Tahuti
-  - Death Metal
+  - Jotunn's Revenge
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -435,65 +435,65 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.73
+    Jotunn's Revenge:
+      total: 0.51
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.37
     Tyrfing:
-      total: 0.53
+      total: 0.56
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.53
-    Death Metal:
-      total: 0.51
-      efficiency: 0.63
+      fit: 0.59
+    The Reaper:
+      total: 0.57
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.58
     Riptalon:
-      total: 0.6
+      total: 0.64
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.76
-    Rod of Tahuti:
-      total: 0.53
-      efficiency: 0.82
+      fit: 0.83
+    Silverbranch Bow:
+      total: 0.5
+      efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.25
-    Soul Gem:
-      total: 0.68
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
+      fit: 0.51
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
   - Toxic Blade
+  - Chandra's Grace
   - Jotunn's Revenge
+  - Tyrfing
   - Hydra's Lament
-  - Spear of Desolation
-  - Lotus Sickle
-  - Soul Gem
+  - Pendulum Blade
   flex_slots:
-  - Toxic Blade
-  - Hydra's Lament
+  - Tyrfing
+  - Pendulum Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -501,8 +501,8 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
@@ -511,37 +511,37 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.58
+      fit: 0.59
+    Chandra's Grace:
+      total: 0.49
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.53
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
       win: 0.5
       pick: 0.0
       fit: 0.49
+    Tyrfing:
+      total: 0.47
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Hydra's Lament:
       total: 0.5
       efficiency: 0.55
       win: 0.5
       pick: 0.0
       fit: 0.46
-    Spear of Desolation:
-      total: 0.55
-      efficiency: 0.6
+    Pendulum Blade:
+      total: 0.44
+      efficiency: 0.39
       win: 0.5
       pick: 0.0
       fit: 0.49
-    Lotus Sickle:
-      total: 0.53
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Soul Gem:
-      total: 0.76
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.94
   starter: *id001
   relic: *id002
 - source: suggested
@@ -680,18 +680,18 @@ builds:
   archetype: model
   slot_order:
   - Toxic Blade
-  - Death Metal
-  - Bragi's Harp
+  - Jotunn's Revenge
+  - Tyrfing
+  - The Reaper
   - Riptalon
-  - Rod of Tahuti
-  - Soul Gem
+  - Demon Blade
   flex_slots:
-  - Toxic Blade
-  - Bragi's Harp
+  - Tyrfing
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -699,47 +699,47 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
+    swap: Contagion — anti-heal
+    swap_item: Contagion
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.62
-    Death Metal:
+      fit: 0.69
+    Jotunn's Revenge:
       total: 0.55
-      efficiency: 0.63
+      efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.47
-    Bragi's Harp:
-      total: 0.52
-      efficiency: 0.47
+      fit: 0.45
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.55
+    The Reaper:
+      total: 0.61
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
     Riptalon:
-      total: 0.58
+      total: 0.62
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.72
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.82
+      fit: 0.8
+    Demon Blade:
+      total: 0.49
+      efficiency: 0.36
       win: 0.5
       pick: 0.0
-      fit: 0.29
-    Soul Gem:
-      total: 0.72
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.86
+      fit: 0.61
   starter: *id001
   relic: *id002
 ---

@@ -42,7 +42,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
     Tyrfing:
       total: 0.61
       efficiency: 0.53
@@ -181,7 +181,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.65
     Rage:
       total: 0.49
       efficiency: 0.46
@@ -253,7 +253,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.64
+      fit: 0.65
     Berserker's Shield:
       total: 0.58
       efficiency: 0.72
@@ -313,7 +313,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.82
+      fit: 0.83
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
@@ -451,7 +451,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.52
+      fit: 0.53
     Chandra's Grace:
       total: 0.5
       efficiency: 0.45
@@ -517,7 +517,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
     Tyrfing:
       total: 0.61
       efficiency: 0.53

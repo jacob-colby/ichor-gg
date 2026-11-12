@@ -36,7 +36,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65
@@ -115,7 +115,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.57
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -445,7 +445,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.76
+      fit: 0.77
     Tyrfing:
       total: 0.59
       efficiency: 0.53
@@ -507,11 +507,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.6
     Chandra's Grace:
       total: 0.49
       efficiency: 0.45
@@ -577,7 +577,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.75
     Jotunn's Revenge:
       total: 0.52
       efficiency: 0.65

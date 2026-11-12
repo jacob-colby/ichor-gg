@@ -177,7 +177,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.51
+      total: 0.52
       efficiency: 0.4
       win: 0.5
       pick: 0.0

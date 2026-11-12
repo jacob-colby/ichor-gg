@@ -177,7 +177,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.44
       win: 0.5
       pick: 0.0
@@ -243,7 +243,7 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.46
       win: 0.5
       pick: 0.0
@@ -313,7 +313,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.9
+      fit: 0.91
     Jotunn's Revenge:
       total: 0.77
       efficiency: 0.65
@@ -385,7 +385,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.85
     Tyrfing:
       total: 0.63
       efficiency: 0.53
@@ -445,7 +445,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.57
     Chandra's Grace:
       total: 0.57
       efficiency: 0.45
