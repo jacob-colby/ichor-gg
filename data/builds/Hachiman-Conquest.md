@@ -887,25 +887,25 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 118
-    wins: 66
-    win_share: 0.56
+    window_end: '2026-11-12'
+    matches: 122
+    wins: 70
+    win_share: 0.57
     aggregate:
-      aspect_matches: 151
-      aspect_win_rate: 0.523
-      no_aspect_matches: 579
-      no_aspect_win_rate: 0.466
+      aspect_matches: 156
+      aspect_win_rate: 0.532
+      no_aspect_matches: 618
+      no_aspect_win_rate: 0.464
     roles:
     - role: Jungle
-      matches: 72
+      matches: 74
       share: 0.61
     - role: Carry
       matches: 28
-      share: 0.24
+      share: 0.23
     - role: Mid
-      matches: 8
-      share: 0.07
+      matches: 10
+      share: 0.08
     - role: Solo
       matches: 8
       share: 0.07
@@ -913,36 +913,36 @@ community_aspects:
       matches: 2
       share: 0.02
     base_role: Carry
-    base_role_share: 0.24
+    base_role_share: 0.23
     role_shift:
       role: Jungle
       share: 0.61
       says: 'most Aspect of the Steel Wind players do not play Carry: Jungle 61%,
-        Carry 24%'
+        Carry 23%'
     items:
     - name: Jotunn's Revenge
-      share: 0.83
+      share: 0.84
     - name: Heartseeker
-      share: 0.73
+      share: 0.74
     - name: The Crusher
       share: 0.68
     - name: Hydra's Lament
-      share: 0.47
+      share: 0.45
     - name: Pendulum Blade
-      share: 0.36
+      share: 0.38
     - name: Titan's Bane
-      share: 0.36
+      share: 0.35
     - name: Transcendence
-      share: 0.3
+      share: 0.29
     - name: Avatar's Parashu
-      share: 0.17
+      share: 0.19
     starters:
     - name: Archmage's Gem
-      share: 0.32
+      share: 0.34
     - name: Bumba's Hammer
-      share: 0.26
+      share: 0.25
     - name: Bumba's Cudgel
-      share: 0.14
+      share: 0.13
     - name: Bluestone Brooch
       share: 0.08
     - name: Conduit Gem
@@ -961,13 +961,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Aegis of Acceleration
-      share: 0.53
+      share: 0.52
     - name: Purification Beads
-      share: 0.44
+      share: 0.45
     - name: Agility Relic
       share: 0.02
     matches_by_window:
-      ob47: 118
+      ob47: 122
       ob46: 154
       ob45: 120
       ob44: 111

@@ -807,61 +807,61 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 174
-    wins: 98
+    window_end: '2026-11-12'
+    matches: 183
+    wins: 103
     win_share: 0.56
     aggregate:
-      aspect_matches: 223
-      aspect_win_rate: 0.547
-      no_aspect_matches: 93
-      no_aspect_win_rate: 0.624
+      aspect_matches: 235
+      aspect_win_rate: 0.545
+      no_aspect_matches: 97
+      no_aspect_win_rate: 0.619
     roles:
     - role: Mid
-      matches: 64
-      share: 0.37
+      matches: 70
+      share: 0.38
     - role: Solo
-      matches: 61
-      share: 0.35
+      matches: 62
+      share: 0.34
     - role: Support
-      matches: 47
+      matches: 49
       share: 0.27
     - role: Jungle
       matches: 2
       share: 0.01
     base_role: Mid Support
-    base_role_share: 0.64
+    base_role_share: 0.65
     role_shift: null
     items:
     - name: Freya's Tears
-      share: 0.44
+      share: 0.43
     - name: Rod of Tahuti
-      share: 0.35
+      share: 0.36
     - name: Spear of Desolation
-      share: 0.33
+      share: 0.34
     - name: Breastplate of Valor
-      share: 0.29
-    - name: Genji's Guard
-      share: 0.24
+      share: 0.28
     - name: Chronos' Pendant
       share: 0.24
+    - name: Genji's Guard
+      share: 0.23
     - name: Alchemist Coat
-      share: 0.2
+      share: 0.19
     - name: Stampede
       share: 0.15
     starters:
-    - name: Archmage's Gem
-      share: 0.21
     - name: Bluestone Brooch
+      share: 0.21
+    - name: Archmage's Gem
       share: 0.2
     - name: Bluestone Pendant
-      share: 0.17
+      share: 0.16
     - name: Pendulum of the Ages
-      share: 0.14
+      share: 0.15
     - name: Conduit Gem
       share: 0.13
     - name: Sands Of Time
-      share: 0.07
+      share: 0.08
     - name: Bumba's Hammer
       share: 0.02
     - name: Bumba's Cudgel
@@ -882,11 +882,11 @@ community_aspects:
     - name: Purification Beads
       share: 0.34
     - name: Aegis of Acceleration
-      share: 0.3
+      share: 0.31
     - name: Phantom Shell
-      share: 0.24
+      share: 0.23
     matches_by_window:
-      ob47: 174
+      ob47: 183
       ob46: 240
       ob45: 244
       ob44: 234

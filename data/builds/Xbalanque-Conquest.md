@@ -942,69 +942,69 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 40
-    wins: 26
-    win_share: 0.65
+    window_end: '2026-11-12'
+    matches: 46
+    wins: 29
+    win_share: 0.63
     aggregate:
-      aspect_matches: 50
-      aspect_win_rate: 0.66
-      no_aspect_matches: 403
-      no_aspect_win_rate: 0.563
+      aspect_matches: 56
+      aspect_win_rate: 0.643
+      no_aspect_matches: 429
+      no_aspect_win_rate: 0.562
     roles:
     - role: Mid
       matches: 19
-      share: 0.47
+      share: 0.41
     - role: Solo
-      matches: 15
-      share: 0.38
+      matches: 19
+      share: 0.41
     - role: Carry
-      matches: 6
-      share: 0.15
+      matches: 8
+      share: 0.17
     base_role: Carry
-    base_role_share: 0.15
+    base_role_share: 0.17
     role_shift:
       role: Mid
-      share: 0.47
-      says: 'most Aspect of the Nightstalker players do not play Carry: Mid 48%, Carry
-        15%'
+      share: 0.41
+      says: 'most Aspect of the Nightstalker players do not play Carry: Mid 41%, Carry
+        17%'
     items:
     - name: Rod of Tahuti
-      share: 0.85
+      share: 0.87
     - name: Spear of Desolation
-      share: 0.75
+      share: 0.76
     - name: Obsidian Shard
-      share: 0.62
+      share: 0.63
     - name: Helm of Darkness
-      share: 0.33
-    - name: Chronos' Pendant
-      share: 0.3
+      share: 0.39
     - name: Blinking Abyss
-      share: 0.28
+      share: 0.3
+    - name: Gem of Focus
+      share: 0.3
+    - name: Chronos' Pendant
+      share: 0.26
     - name: The Cosmic Horror
-      share: 0.28
-    - name: Totem of Death
-      share: 0.25
+      share: 0.24
     starters:
     - name: Pendulum of the Ages
-      share: 0.6
+      share: 0.65
     - name: Archmage's Gem
-      share: 0.2
+      share: 0.17
     - name: Bluestone Brooch
-      share: 0.1
+      share: 0.09
     - name: Conduit Gem
-      share: 0.05
+      share: 0.04
     - name: Sands Of Time
-      share: 0.05
+      share: 0.04
     relics:
     - name: Purification Beads
-      share: 0.57
+      share: 0.63
     - name: Aegis of Acceleration
-      share: 0.4
+      share: 0.35
     - name: Blink Rune
-      share: 0.03
+      share: 0.02
     matches_by_window:
-      ob47: 40
+      ob47: 46
       ob46: 71
       ob45: 52
       ob44: 62

@@ -977,22 +977,25 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 30
-    wins: 16
-    win_share: 0.53
+    window_end: '2026-11-12'
+    matches: 33
+    wins: 18
+    win_share: 0.55
     aggregate:
-      aspect_matches: 34
-      aspect_win_rate: 0.529
-      no_aspect_matches: 182
-      no_aspect_win_rate: 0.56
+      aspect_matches: 38
+      aspect_win_rate: 0.526
+      no_aspect_matches: 188
+      no_aspect_win_rate: 0.564
     roles:
     - role: Support
-      matches: 21
-      share: 0.7
+      matches: 22
+      share: 0.67
     - role: Solo
-      matches: 8
+      matches: 9
       share: 0.27
+    - role: Carry
+      matches: 1
+      share: 0.03
     - role: Mid
       matches: 1
       share: 0.03
@@ -1000,56 +1003,58 @@ community_aspects:
     base_role_share: 0.03
     role_shift:
       role: Support
-      share: 0.7
-      says: 'most Aspect of the Lifewarden players do not play Mid: Support 70%, Mid
+      share: 0.67
+      says: 'most Aspect of the Lifewarden players do not play Mid: Support 67%, Mid
         3%'
     items:
     - name: Freya's Tears
       share: 0.67
     - name: Shell of Rebuke
-      share: 0.53
-    - name: Gauntlet of Thebes
-      share: 0.47
+      share: 0.55
     - name: Stampede
-      share: 0.47
+      share: 0.45
+    - name: Gauntlet of Thebes
+      share: 0.42
     - name: Genji's Guard
       share: 0.33
     - name: Chandra's Grace
-      share: 0.3
+      share: 0.27
     - name: Breastplate of Valor
-      share: 0.17
+      share: 0.18
     - name: Shifter's Shield
-      share: 0.17
+      share: 0.15
     starters:
-    - name: Selflessness
-      share: 0.23
     - name: Bumba's Hammer
-      share: 0.17
+      share: 0.21
+    - name: Selflessness
+      share: 0.21
     - name: Archmage's Gem
-      share: 0.1
+      share: 0.09
     - name: Bumba's Cudgel
-      share: 0.1
+      share: 0.09
     - name: Conduit Gem
-      share: 0.1
+      share: 0.09
     - name: War Banner
-      share: 0.1
+      share: 0.09
     - name: Bluestone Brooch
-      share: 0.07
+      share: 0.06
     - name: Heroism
-      share: 0.07
+      share: 0.06
     - name: Blood-soaked Shroud
+      share: 0.03
+    - name: Gilded Arrow
       share: 0.03
     - name: War Flag
       share: 0.03
     relics:
     - name: Aegis of Acceleration
-      share: 0.37
+      share: 0.36
     - name: Purification Beads
       share: 0.33
     - name: Phantom Shell
       share: 0.27
     matches_by_window:
-      ob47: 30
+      ob47: 33
       ob46: 82
       ob45: 97
       ob44: 76

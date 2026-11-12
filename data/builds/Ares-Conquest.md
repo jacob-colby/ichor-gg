@@ -760,48 +760,48 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 67
-    wins: 35
+    window_end: '2026-11-12'
+    matches: 69
+    wins: 36
     win_share: 0.52
     aggregate:
-      aspect_matches: 89
-      aspect_win_rate: 0.449
-      no_aspect_matches: 287
-      no_aspect_win_rate: 0.582
+      aspect_matches: 91
+      aspect_win_rate: 0.451
+      no_aspect_matches: 300
+      no_aspect_win_rate: 0.577
     roles:
     - role: Support
       matches: 31
-      share: 0.46
+      share: 0.45
     - role: Solo
-      matches: 25
-      share: 0.37
+      matches: 27
+      share: 0.39
     - role: Jungle
       matches: 11
       share: 0.16
     base_role: Support
-    base_role_share: 0.46
+    base_role_share: 0.45
     role_shift: null
     items:
     - name: Freya's Tears
       share: 0.48
     - name: Gauntlet of Thebes
-      share: 0.36
-    - name: Shifter's Shield
-      share: 0.31
+      share: 0.35
     - name: Kinetic Cuirass
+      share: 0.3
+    - name: Shifter's Shield
       share: 0.3
     - name: Genji's Guard
       share: 0.28
     - name: Berserker's Shield
-      share: 0.24
+      share: 0.25
     - name: Mystical Mail
-      share: 0.19
-    - name: Yogi's Necklace
-      share: 0.16
+      share: 0.2
+    - name: Sundering Echo
+      share: 0.17
     starters:
     - name: Bluestone Brooch
-      share: 0.16
+      share: 0.17
     - name: War Flag
       share: 0.12
     - name: Bluestone Pendant
@@ -813,7 +813,7 @@ community_aspects:
     - name: War Banner
       share: 0.1
     - name: Leather Cowl
-      share: 0.07
+      share: 0.09
     - name: Archmage's Gem
       share: 0.04
     - name: Selflessness
@@ -834,11 +834,11 @@ community_aspects:
     - name: Blink Rune
       share: 0.48
     - name: Phantom Shell
-      share: 0.24
+      share: 0.23
     - name: Sundering Arc
       share: 0.16
     matches_by_window:
-      ob47: 67
+      ob47: 69
       ob46: 160
       ob45: 210
       ob44: 347

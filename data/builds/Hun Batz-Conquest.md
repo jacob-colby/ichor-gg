@@ -854,7 +854,7 @@ community_aspects:
     - name: Phantom Shell
       share: 0.07
     matches_by_window:
-      ob47: 26
+      ob47: 28
       ob46: 46
       ob45: 38
       ob44: 48

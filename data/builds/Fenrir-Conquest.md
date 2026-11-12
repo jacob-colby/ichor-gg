@@ -821,7 +821,7 @@ community_aspects:
     aggregate:
       aspect_matches: 50
       aspect_win_rate: 0.66
-      no_aspect_matches: 537
+      no_aspect_matches: 538
       no_aspect_win_rate: 0.533
     roles:
     - role: Support

@@ -814,19 +814,19 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 45
-    wins: 23
+    window_end: '2026-11-12'
+    matches: 47
+    wins: 24
     win_share: 0.51
     aggregate:
-      aspect_matches: 51
-      aspect_win_rate: 0.51
-      no_aspect_matches: 536
-      no_aspect_win_rate: 0.509
+      aspect_matches: 53
+      aspect_win_rate: 0.509
+      no_aspect_matches: 563
+      no_aspect_win_rate: 0.506
     roles:
     - role: Solo
-      matches: 34
-      share: 0.76
+      matches: 36
+      share: 0.77
     - role: Mid
       matches: 5
       share: 0.11
@@ -840,38 +840,38 @@ community_aspects:
     base_role_share: 0.11
     role_shift:
       role: Solo
-      share: 0.76
-      says: 'most Aspect of Fortification players do not play Mid: Solo 76%, Mid 11%'
+      share: 0.77
+      says: 'most Aspect of Fortification players do not play Mid: Solo 77%, Mid 11%'
     items:
     - name: Shrapnel Mod
-      share: 0.82
+      share: 0.83
     - name: Surplus Mod
-      share: 0.53
+      share: 0.55
     - name: Genji's Guard
-      share: 0.49
+      share: 0.47
     - name: Book of Thoth
-      share: 0.44
+      share: 0.43
     - name: Breastplate of Valor
-      share: 0.42
+      share: 0.43
     - name: Masterwork Mod
-      share: 0.42
+      share: 0.4
     - name: Freya's Tears
-      share: 0.31
-    - name: The World Stone
-      share: 0.31
+      share: 0.34
+    - name: Ethereal Staff
+      share: 0.32
     starters:
     - name: Archmage's Gem
-      share: 0.22
+      share: 0.21
     - name: Pendulum of the Ages
-      share: 0.2
+      share: 0.21
     - name: Sands Of Time
-      share: 0.2
+      share: 0.21
     - name: Bluestone Pendant
-      share: 0.16
+      share: 0.15
     - name: Bluestone Brooch
-      share: 0.07
+      share: 0.06
     - name: Conduit Gem
-      share: 0.07
+      share: 0.06
     - name: War Banner
       share: 0.04
     - name: Sundering Axe
@@ -880,13 +880,13 @@ community_aspects:
       share: 0.02
     relics:
     - name: Aegis of Acceleration
-      share: 0.4
+      share: 0.43
     - name: Purification Beads
-      share: 0.33
+      share: 0.32
     - name: Phantom Shell
-      share: 0.2
+      share: 0.19
     matches_by_window:
-      ob47: 45
+      ob47: 47
       ob46: 94
       ob45: 78
       ob44: 48

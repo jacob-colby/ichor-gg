@@ -2073,16 +2073,16 @@
     "matches_won": 386
    },
    {
-    "aspect": "Aspect of Strife",
-    "god": "Cernunnos",
-    "matches_played": 578,
-    "matches_won": 345
-   },
-   {
     "aspect": "Aspect of Victorious Conquest",
     "god": "Nike",
-    "matches_played": 1093,
-    "matches_won": 639
+    "matches_played": 1094,
+    "matches_won": 640
+   },
+   {
+    "aspect": "Aspect of Strife",
+    "god": "Cernunnos",
+    "matches_played": 579,
+    "matches_won": 345
    },
    {
     "aspect": "Aspect of War",
@@ -2104,27 +2104,27 @@
    },
    {
     "aspect": null,
+    "god": "Cabrakan",
+    "matches_played": 390,
+    "matches_won": 234
+   },
+   {
+    "aspect": null,
     "god": "Sobek",
-    "matches_played": 1031,
+    "matches_played": 1032,
     "matches_won": 598
    },
    {
     "aspect": null,
-    "god": "Cabrakan",
-    "matches_played": 389,
-    "matches_won": 233
-   },
-   {
-    "aspect": null,
     "god": "Loki",
-    "matches_played": 1264,
-    "matches_won": 728
+    "matches_played": 1265,
+    "matches_won": 729
    },
    {
     "aspect": null,
     "god": "Cupid",
-    "matches_played": 952,
-    "matches_won": 551
+    "matches_played": 953,
+    "matches_won": 552
    },
    {
     "aspect": null,
@@ -2134,15 +2134,15 @@
    },
    {
     "aspect": null,
-    "god": "Xbalanque",
-    "matches_played": 523,
-    "matches_won": 308
-   },
-   {
-    "aspect": null,
     "god": "Vulcan",
     "matches_played": 958,
     "matches_won": 553
+   },
+   {
+    "aspect": null,
+    "god": "Xbalanque",
+    "matches_played": 524,
+    "matches_won": 308
    },
    {
     "aspect": null,
@@ -2176,15 +2176,15 @@
    },
    {
     "aspect": null,
-    "god": "Gilgamesh",
-    "matches_played": 197,
-    "matches_won": 119
+    "god": "Da Ji",
+    "matches_played": 639,
+    "matches_won": 366
    },
    {
     "aspect": null,
-    "god": "Da Ji",
-    "matches_played": 638,
-    "matches_won": 365
+    "god": "Gilgamesh",
+    "matches_played": 199,
+    "matches_won": 120
    },
    {
     "aspect": null,
@@ -2200,33 +2200,33 @@
    },
    {
     "aspect": null,
+    "god": "Poseidon",
+    "matches_played": 839,
+    "matches_won": 473
+   },
+   {
+    "aspect": null,
     "god": "The Morrigan",
     "matches_played": 488,
     "matches_won": 280
    },
    {
     "aspect": null,
-    "god": "Bastet",
-    "matches_played": 837,
-    "matches_won": 471
-   },
-   {
-    "aspect": null,
-    "god": "Poseidon",
-    "matches_played": 837,
-    "matches_won": 471
+    "god": "Hades",
+    "matches_played": 349,
+    "matches_won": 203
    },
    {
     "aspect": null,
     "god": "Thor",
-    "matches_played": 1085,
-    "matches_won": 606
+    "matches_played": 1086,
+    "matches_won": 607
    },
    {
     "aspect": null,
-    "god": "Hades",
-    "matches_played": 348,
-    "matches_won": 202
+    "god": "Bastet",
+    "matches_played": 837,
+    "matches_won": 471
    },
    {
     "aspect": null,
@@ -2249,8 +2249,8 @@
    {
     "aspect": null,
     "god": "Apollo",
-    "matches_played": 1000,
-    "matches_won": 553
+    "matches_played": 1002,
+    "matches_won": 554
    },
    {
     "aspect": null,
@@ -2284,27 +2284,27 @@
    },
    {
     "aspect": null,
-    "god": "Charon",
-    "matches_played": 391,
-    "matches_won": 221
-   },
-   {
-    "aspect": null,
     "god": "Ganesha",
     "matches_played": 430,
     "matches_won": 242
    },
    {
     "aspect": null,
-    "god": "Scylla",
-    "matches_played": 1084,
-    "matches_won": 591
-   },
-   {
-    "aspect": null,
     "god": "Eset",
     "matches_played": 369,
     "matches_won": 209
+   },
+   {
+    "aspect": null,
+    "god": "Charon",
+    "matches_played": 395,
+    "matches_won": 223
+   },
+   {
+    "aspect": null,
+    "god": "Scylla",
+    "matches_played": 1085,
+    "matches_won": 591
    },
    {
     "aspect": null,
@@ -2315,12 +2315,6 @@
    {
     "aspect": "Aspect of Laceration",
     "god": "Khepri",
-    "matches_played": 239,
-    "matches_won": 138
-   },
-   {
-    "aspect": "Aspect of Wind",
-    "god": "Neith",
     "matches_played": 239,
     "matches_won": 138
    },
@@ -2349,6 +2343,12 @@
     "matches_won": 289
    },
    {
+    "aspect": "Aspect of Wind",
+    "god": "Neith",
+    "matches_played": 240,
+    "matches_won": 138
+   },
+   {
     "aspect": null,
     "god": "Nemesis",
     "matches_played": 417,
@@ -2369,7 +2369,7 @@
    {
     "aspect": null,
     "god": "Aladdin",
-    "matches_played": 705,
+    "matches_played": 706,
     "matches_won": 385
    },
    {
@@ -2387,8 +2387,8 @@
    {
     "aspect": null,
     "god": "Zeus",
-    "matches_played": 702,
-    "matches_won": 382
+    "matches_played": 704,
+    "matches_won": 383
    },
    {
     "aspect": null,
@@ -2447,13 +2447,13 @@
    {
     "aspect": null,
     "god": "Kukulkan",
-    "matches_played": 817,
-    "matches_won": 434
+    "matches_played": 820,
+    "matches_won": 436
    },
    {
     "aspect": null,
     "god": "Hou Yi",
-    "matches_played": 1671,
+    "matches_played": 1672,
     "matches_won": 869
    },
    {
@@ -2463,22 +2463,16 @@
     "matches_won": 308
    },
    {
+    "aspect": null,
+    "god": "Discordia",
+    "matches_played": 745,
+    "matches_won": 396
+   },
+   {
     "aspect": "Aspect of Unbound Destruction",
     "god": "Kali",
     "matches_played": 116,
     "matches_won": 68
-   },
-   {
-    "aspect": null,
-    "god": "Thanatos",
-    "matches_played": 801,
-    "matches_won": 424
-   },
-   {
-    "aspect": null,
-    "god": "Discordia",
-    "matches_played": 741,
-    "matches_won": 393
    },
    {
     "aspect": "Aspect of Hysteria",
@@ -2497,6 +2491,12 @@
     "god": "Nike",
     "matches_played": 533,
     "matches_won": 286
+   },
+   {
+    "aspect": null,
+    "god": "Thanatos",
+    "matches_played": 802,
+    "matches_won": 424
    },
    {
     "aspect": "Aspect of Disruption",
@@ -2518,15 +2518,15 @@
    },
    {
     "aspect": null,
-    "god": "Xing Tian",
-    "matches_played": 1016,
-    "matches_won": 530
+    "god": "Fenrir",
+    "matches_played": 538,
+    "matches_won": 287
    },
    {
     "aspect": null,
-    "god": "Fenrir",
-    "matches_played": 537,
-    "matches_won": 286
+    "god": "Xing Tian",
+    "matches_played": 1017,
+    "matches_won": 530
    },
    {
     "aspect": "Aspect of Mischief",
@@ -2549,8 +2549,8 @@
    {
     "aspect": null,
     "god": "Agni",
-    "matches_played": 1092,
-    "matches_won": 561
+    "matches_played": 1093,
+    "matches_won": 562
    },
    {
     "aspect": "Aspect of the Devourer",
@@ -2561,8 +2561,8 @@
    {
     "aspect": null,
     "god": "Janus",
-    "matches_played": 1525,
-    "matches_won": 768
+    "matches_played": 1528,
+    "matches_won": 771
    },
    {
     "aspect": null,
@@ -2573,8 +2573,14 @@
    {
     "aspect": null,
     "god": "Hua Mulan",
-    "matches_played": 349,
+    "matches_played": 350,
     "matches_won": 185
+   },
+   {
+    "aspect": null,
+    "god": "Ratatoskr",
+    "matches_played": 817,
+    "matches_won": 414
    },
    {
     "aspect": null,
@@ -2590,12 +2596,6 @@
    },
    {
     "aspect": null,
-    "god": "Ratatoskr",
-    "matches_played": 815,
-    "matches_won": 412
-   },
-   {
-    "aspect": null,
     "god": "Anubis",
     "matches_played": 378,
     "matches_won": 197
@@ -2605,6 +2605,12 @@
     "god": "Bacchus",
     "matches_played": 506,
     "matches_won": 260
+   },
+   {
+    "aspect": "Aspect of the Squall",
+    "god": "Kukulkan",
+    "matches_played": 161,
+    "matches_won": 88
    },
    {
     "aspect": null,
@@ -2617,12 +2623,6 @@
     "god": "Bastet",
     "matches_played": 146,
     "matches_won": 80
-   },
-   {
-    "aspect": "Aspect of the Squall",
-    "god": "Kukulkan",
-    "matches_played": 158,
-    "matches_won": 86
    },
    {
     "aspect": "Aspect of Conflagration",
@@ -2703,12 +2703,6 @@
     "matches_won": 35
    },
    {
-    "aspect": "Aspect of the Trident",
-    "god": "Poseidon",
-    "matches_played": 61,
-    "matches_won": 35
-   },
-   {
     "aspect": null,
     "god": "Aphrodite",
     "matches_played": 158,
@@ -2717,8 +2711,8 @@
    {
     "aspect": "Aspect of Divergence",
     "god": "Hel",
-    "matches_played": 433,
-    "matches_won": 213
+    "matches_played": 434,
+    "matches_won": 214
    },
    {
     "aspect": "Aspect of the Storm Front",
@@ -2739,6 +2733,12 @@
     "matches_won": 147
    },
    {
+    "aspect": "Aspect of the Trident",
+    "god": "Poseidon",
+    "matches_played": 62,
+    "matches_won": 35
+   },
+   {
     "aspect": null,
     "god": "Jing Wei",
     "matches_played": 365,
@@ -2747,14 +2747,14 @@
    {
     "aspect": null,
     "god": "Guan Yu",
-    "matches_played": 109,
-    "matches_won": 58
+    "matches_played": 111,
+    "matches_won": 59
    },
    {
     "aspect": null,
     "god": "Osiris",
-    "matches_played": 213,
-    "matches_won": 107
+    "matches_played": 214,
+    "matches_won": 108
    },
    {
     "aspect": "Aspect of the Cosmos",
@@ -2777,7 +2777,7 @@
    {
     "aspect": null,
     "god": "Hercules",
-    "matches_played": 327,
+    "matches_played": 328,
     "matches_won": 159
    },
    {
@@ -2841,16 +2841,16 @@
     "matches_won": 588
    },
    {
+    "aspect": null,
+    "god": "Chaac",
+    "matches_played": 202,
+    "matches_won": 96
+   },
+   {
     "aspect": "Aspect of Reverberation",
     "god": "Ares",
     "matches_played": 189,
     "matches_won": 90
-   },
-   {
-    "aspect": null,
-    "god": "Chaac",
-    "matches_played": 201,
-    "matches_won": 95
    },
    {
     "aspect": null,
@@ -2913,16 +2913,16 @@
     "matches_won": 85
    },
    {
-    "aspect": "Aspect of the Tollkeeper",
-    "god": "Charon",
-    "matches_played": 74,
-    "matches_won": 37
-   },
-   {
     "aspect": "Aspect of the Warped",
     "god": "Cu Chulainn",
     "matches_played": 132,
     "matches_won": 62
+   },
+   {
+    "aspect": "Aspect of the Tollkeeper",
+    "god": "Charon",
+    "matches_played": 75,
+    "matches_won": 37
    },
    {
     "aspect": "Aspect of Pandemonium",
@@ -3051,16 +3051,16 @@
     "matches_won": 11
    },
    {
+    "aspect": "Aspect of the Rotund Jotunn",
+    "god": "Cabrakan",
+    "matches_played": 43,
+    "matches_won": 13
+   },
+   {
     "aspect": "Aspect of Calamity",
     "god": "Geb",
     "matches_played": 16,
     "matches_won": 6
-   },
-   {
-    "aspect": "Aspect of the Rotund Jotunn",
-    "god": "Cabrakan",
-    "matches_played": 42,
-    "matches_won": 12
    },
    {
     "aspect": "Aspect of Precision",
@@ -3084,571 +3084,595 @@
   "start": "2026-10-20T11:48:48.610Z"
  },
  "ob47": {
-  "end": "2026-11-11T16:40:37.813Z",
+  "end": "2026-11-12T02:25:34.780Z",
   "rows": [
    {
     "aspect": "Aspect of the Sickle",
     "god": "Izanami",
-    "matches_played": 932,
-    "matches_won": 591
+    "matches_played": 988,
+    "matches_won": 625
+   },
+   {
+    "aspect": "Aspect of Revelry",
+    "god": "Bacchus",
+    "matches_played": 724,
+    "matches_won": 431
+   },
+   {
+    "aspect": "Aspect of War",
+    "god": "Athena",
+    "matches_played": 189,
+    "matches_won": 119
+   },
+   {
+    "aspect": "Aspect of the Thickbark",
+    "god": "Ratatoskr",
+    "matches_played": 397,
+    "matches_won": 239
+   },
+   {
+    "aspect": null,
+    "god": "Rama",
+    "matches_played": 413,
+    "matches_won": 248
+   },
+   {
+    "aspect": null,
+    "god": "Cupid",
+    "matches_played": 421,
+    "matches_won": 252
    },
    {
     "aspect": "Aspect of the General",
     "god": "Guan Yu",
-    "matches_played": 23,
+    "matches_played": 24,
     "matches_won": 18
    },
    {
     "aspect": "Aspect of Prowess",
     "god": "Achilles",
-    "matches_played": 39,
-    "matches_won": 28
-   },
-   {
-    "aspect": "Aspect of the Thickbark",
-    "god": "Ratatoskr",
-    "matches_played": 359,
-    "matches_won": 220
-   },
-   {
-    "aspect": "Aspect of Revelry",
-    "god": "Bacchus",
-    "matches_played": 669,
-    "matches_won": 399
-   },
-   {
-    "aspect": "Aspect of War",
-    "god": "Athena",
-    "matches_played": 179,
-    "matches_won": 113
-   },
-   {
-    "aspect": null,
-    "god": "Amaterasu",
-    "matches_played": 328,
-    "matches_won": 198
+    "matches_played": 43,
+    "matches_won": 30
    },
    {
     "aspect": null,
     "god": "Izanami",
-    "matches_played": 189,
-    "matches_won": 117
-   },
-   {
-    "aspect": null,
-    "god": "Sol",
-    "matches_played": 189,
-    "matches_won": 117
-   },
-   {
-    "aspect": null,
-    "god": "Rama",
-    "matches_played": 387,
-    "matches_won": 230
-   },
-   {
-    "aspect": null,
-    "god": "Ratatoskr",
-    "matches_played": 476,
-    "matches_won": 279
-   },
-   {
-    "aspect": null,
-    "god": "Cupid",
-    "matches_played": 393,
-    "matches_won": 232
+    "matches_played": 196,
+    "matches_won": 121
    },
    {
     "aspect": null,
     "god": "The Morrigan",
-    "matches_played": 299,
-    "matches_won": 178
-   },
-   {
-    "aspect": null,
-    "god": "Mordred",
-    "matches_played": 310,
-    "matches_won": 184
-   },
-   {
-    "aspect": null,
-    "god": "Susano",
-    "matches_played": 414,
-    "matches_won": 242
-   },
-   {
-    "aspect": null,
-    "god": "Geb",
-    "matches_played": 440,
-    "matches_won": 256
-   },
-   {
-    "aspect": null,
-    "god": "Ymir",
-    "matches_played": 817,
-    "matches_won": 464
-   },
-   {
-    "aspect": null,
-    "god": "Zeus",
-    "matches_played": 362,
-    "matches_won": 211
-   },
-   {
-    "aspect": "Aspect of the Passionate Storm",
-    "god": "Ishtar",
-    "matches_played": 130,
-    "matches_won": 80
-   },
-   {
-    "aspect": null,
-    "god": "Aladdin",
-    "matches_played": 413,
-    "matches_won": 238
-   },
-   {
-    "aspect": null,
-    "god": "Aphrodite",
-    "matches_played": 120,
-    "matches_won": 74
-   },
-   {
-    "aspect": null,
-    "god": "Thor",
-    "matches_played": 652,
-    "matches_won": 367
-   },
-   {
-    "aspect": null,
-    "god": "Ares",
-    "matches_played": 287,
-    "matches_won": 167
-   },
-   {
-    "aspect": null,
-    "god": "Artemis",
-    "matches_played": 382,
-    "matches_won": 219
-   },
-   {
-    "aspect": null,
-    "god": "Baron Samedi",
-    "matches_played": 93,
-    "matches_won": 58
-   },
-   {
-    "aspect": null,
-    "god": "Odin",
-    "matches_played": 196,
-    "matches_won": 116
-   },
-   {
-    "aspect": null,
-    "god": "Thanatos",
-    "matches_played": 374,
-    "matches_won": 214
-   },
-   {
-    "aspect": "Aspect of the Nightstalker",
-    "god": "Xbalanque",
-    "matches_played": 50,
-    "matches_won": 33
-   },
-   {
-    "aspect": null,
-    "god": "Cernunnos",
-    "matches_played": 263,
-    "matches_won": 153
-   },
-   {
-    "aspect": null,
-    "god": "Ullr",
-    "matches_played": 593,
-    "matches_won": 331
-   },
-   {
-    "aspect": "Aspect of Laceration",
-    "god": "Khepri",
-    "matches_played": 122,
-    "matches_won": 74
-   },
-   {
-    "aspect": null,
-    "god": "Ishtar",
-    "matches_played": 333,
-    "matches_won": 190
-   },
-   {
-    "aspect": null,
-    "god": "Xbalanque",
-    "matches_played": 403,
-    "matches_won": 227
-   },
-   {
-    "aspect": null,
-    "god": "Hades",
-    "matches_played": 198,
-    "matches_won": 115
-   },
-   {
-    "aspect": "Aspect of Shamash",
-    "god": "Gilgamesh",
-    "matches_played": 147,
-    "matches_won": 87
-   },
-   {
-    "aspect": null,
-    "god": "Athena",
-    "matches_played": 449,
-    "matches_won": 250
-   },
-   {
-    "aspect": "Aspect of Disruption",
-    "god": "Hun Batz",
-    "matches_played": 34,
-    "matches_won": 23
-   },
-   {
-    "aspect": null,
-    "god": "Cu Chulainn",
-    "matches_played": 421,
-    "matches_won": 234
-   },
-   {
-    "aspect": "Aspect of Reaping",
-    "god": "Thanatos",
-    "matches_played": 132,
-    "matches_won": 78
-   },
-   {
-    "aspect": "Aspect of Victorious Conquest",
-    "god": "Nike",
-    "matches_played": 390,
-    "matches_won": 216
-   },
-   {
-    "aspect": null,
-    "god": "Ra",
-    "matches_played": 652,
-    "matches_won": 353
-   },
-   {
-    "aspect": null,
-    "god": "Bastet",
-    "matches_played": 437,
-    "matches_won": 239
-   },
-   {
-    "aspect": "Aspect of the Denmother",
-    "god": "Artio",
-    "matches_played": 115,
-    "matches_won": 68
-   },
-   {
-    "aspect": null,
-    "god": "Charon",
-    "matches_played": 132,
-    "matches_won": 77
-   },
-   {
-    "aspect": "Aspect of Righteous Flame",
-    "god": "Ne Zha",
-    "matches_played": 132,
-    "matches_won": 77
-   },
-   {
-    "aspect": null,
-    "god": "Apollo",
-    "matches_played": 562,
-    "matches_won": 303
-   },
-   {
-    "aspect": null,
-    "god": "Xing Tian",
-    "matches_played": 487,
-    "matches_won": 264
-   },
-   {
-    "aspect": null,
-    "god": "Scylla",
-    "matches_played": 467,
-    "matches_won": 253
-   },
-   {
-    "aspect": null,
-    "god": "Janus",
-    "matches_played": 857,
-    "matches_won": 454
-   },
-   {
-    "aspect": null,
-    "god": "Horus",
-    "matches_played": 427,
-    "matches_won": 232
-   },
-   {
-    "aspect": null,
-    "god": "Merlin",
-    "matches_played": 539,
-    "matches_won": 290
-   },
-   {
-    "aspect": null,
-    "god": "Sylvanus",
-    "matches_played": 329,
-    "matches_won": 180
-   },
-   {
-    "aspect": "Aspect of Conflagration",
-    "god": "Sol",
-    "matches_played": 154,
-    "matches_won": 88
-   },
-   {
-    "aspect": "Aspect of Wind",
-    "god": "Neith",
-    "matches_played": 115,
-    "matches_won": 67
-   },
-   {
-    "aspect": null,
-    "god": "Cerberus",
-    "matches_played": 265,
-    "matches_won": 146
-   },
-   {
-    "aspect": null,
-    "god": "Chiron",
-    "matches_played": 421,
-    "matches_won": 226
-   },
-   {
-    "aspect": null,
-    "god": "Medusa",
-    "matches_played": 328,
-    "matches_won": 178
-   },
-   {
-    "aspect": null,
-    "god": "Loki",
-    "matches_played": 657,
-    "matches_won": 346
-   },
-   {
-    "aspect": null,
-    "god": "Eset",
-    "matches_played": 182,
-    "matches_won": 102
-   },
-   {
-    "aspect": null,
-    "god": "Hun Batz",
-    "matches_played": 230,
-    "matches_won": 127
-   },
-   {
-    "aspect": null,
-    "god": "Da Ji",
-    "matches_played": 370,
-    "matches_won": 199
-   },
-   {
-    "aspect": null,
-    "god": "Hou Yi",
-    "matches_played": 687,
-    "matches_won": 360
-   },
-   {
-    "aspect": null,
-    "god": "Sun Wukong",
-    "matches_played": 357,
-    "matches_won": 192
-   },
-   {
-    "aspect": null,
-    "god": "Bellona",
-    "matches_played": 285,
-    "matches_won": 155
-   },
-   {
-    "aspect": null,
-    "god": "Tsukuyomi",
-    "matches_played": 562,
-    "matches_won": 296
-   },
-   {
-    "aspect": "Aspect of the Watchful Pride",
-    "god": "Bastet",
-    "matches_played": 92,
-    "matches_won": 54
-   },
-   {
-    "aspect": null,
-    "god": "Mercury",
-    "matches_played": 298,
-    "matches_won": 161
-   },
-   {
-    "aspect": null,
-    "god": "Sobek",
-    "matches_played": 428,
-    "matches_won": 227
-   },
-   {
-    "aspect": null,
-    "god": "Neith",
-    "matches_played": 180,
-    "matches_won": 100
-   },
-   {
-    "aspect": "Aspect of Thunderstruck",
-    "god": "Thor",
-    "matches_played": 293,
-    "matches_won": 158
-   },
-   {
-    "aspect": "Aspect of Hysteria",
-    "god": "Baron Samedi",
-    "matches_played": 223,
-    "matches_won": 122
-   },
-   {
-    "aspect": null,
-    "god": "Pele",
-    "matches_played": 279,
-    "matches_won": 150
-   },
-   {
-    "aspect": null,
-    "god": "Nemesis",
-    "matches_played": 155,
-    "matches_won": 86
-   },
-   {
-    "aspect": null,
-    "god": "Anhur",
-    "matches_played": 543,
-    "matches_won": 281
-   },
-   {
-    "aspect": null,
-    "god": "Ix Chel",
-    "matches_played": 181,
-    "matches_won": 99
-   },
-   {
-    "aspect": "Aspect of Heartbreak",
-    "god": "Aphrodite",
-    "matches_played": 334,
-    "matches_won": 176
-   },
-   {
-    "aspect": null,
-    "god": "Nut",
-    "matches_played": 481,
-    "matches_won": 249
-   },
-   {
-    "aspect": null,
-    "god": "Gilgamesh",
-    "matches_played": 98,
-    "matches_won": 56
-   },
-   {
-    "aspect": null,
-    "god": "Nu Wa",
-    "matches_played": 225,
-    "matches_won": 120
-   },
-   {
-    "aspect": null,
-    "god": "Vulcan",
-    "matches_played": 536,
-    "matches_won": 273
-   },
-   {
-    "aspect": "Aspect of Prey",
-    "god": "Sobek",
-    "matches_played": 24,
-    "matches_won": 16
-   },
-   {
-    "aspect": null,
-    "god": "Anubis",
-    "matches_played": 182,
-    "matches_won": 98
-   },
-   {
-    "aspect": null,
-    "god": "Ne Zha",
-    "matches_played": 455,
-    "matches_won": 232
-   },
-   {
-    "aspect": null,
-    "god": "Discordia",
-    "matches_played": 317,
-    "matches_won": 164
-   },
-   {
-    "aspect": null,
-    "god": "Poseidon",
-    "matches_played": 381,
+    "matches_played": 326,
     "matches_won": 195
    },
    {
     "aspect": null,
-    "god": "Ravana",
+    "god": "Amaterasu",
+    "matches_played": 353,
+    "matches_won": 209
+   },
+   {
+    "aspect": null,
+    "god": "Geb",
+    "matches_played": 475,
+    "matches_won": 276
+   },
+   {
+    "aspect": null,
+    "god": "Ymir",
+    "matches_played": 866,
+    "matches_won": 493
+   },
+   {
+    "aspect": null,
+    "god": "Ratatoskr",
+    "matches_played": 510,
+    "matches_won": 294
+   },
+   {
+    "aspect": null,
+    "god": "Sol",
+    "matches_played": 201,
+    "matches_won": 121
+   },
+   {
+    "aspect": null,
+    "god": "Susano",
+    "matches_played": 434,
+    "matches_won": 251
+   },
+   {
+    "aspect": null,
+    "god": "Mordred",
+    "matches_played": 331,
+    "matches_won": 193
+   },
+   {
+    "aspect": null,
+    "god": "Zeus",
+    "matches_played": 391,
+    "matches_won": 226
+   },
+   {
+    "aspect": null,
+    "god": "Thanatos",
+    "matches_played": 408,
+    "matches_won": 235
+   },
+   {
+    "aspect": null,
+    "god": "Thor",
+    "matches_played": 682,
+    "matches_won": 385
+   },
+   {
+    "aspect": null,
+    "god": "Artemis",
     "matches_played": 396,
-    "matches_won": 202
+    "matches_won": 228
+   },
+   {
+    "aspect": "Aspect of the Passionate Storm",
+    "god": "Ishtar",
+    "matches_played": 136,
+    "matches_won": 83
    },
    {
     "aspect": null,
-    "god": "Awilix",
-    "matches_played": 271,
-    "matches_won": 141
+    "god": "Cernunnos",
+    "matches_played": 281,
+    "matches_won": 164
    },
    {
     "aspect": null,
-    "god": "Kukulkan",
-    "matches_played": 432,
-    "matches_won": 218
+    "god": "Aladdin",
+    "matches_played": 443,
+    "matches_won": 252
+   },
+   {
+    "aspect": "Aspect of Shamash",
+    "god": "Gilgamesh",
+    "matches_played": 153,
+    "matches_won": 92
    },
    {
     "aspect": null,
-    "god": "Jormungandr",
-    "matches_played": 141,
+    "god": "Odin",
+    "matches_played": 214,
+    "matches_won": 126
+   },
+   {
+    "aspect": null,
+    "god": "Ares",
+    "matches_played": 300,
+    "matches_won": 173
+   },
+   {
+    "aspect": null,
+    "god": "Ullr",
+    "matches_played": 637,
+    "matches_won": 356
+   },
+   {
+    "aspect": null,
+    "god": "Baron Samedi",
+    "matches_played": 97,
+    "matches_won": 60
+   },
+   {
+    "aspect": "Aspect of Laceration",
+    "god": "Khepri",
+    "matches_played": 136,
+    "matches_won": 82
+   },
+   {
+    "aspect": null,
+    "god": "Aphrodite",
+    "matches_played": 124,
+    "matches_won": 75
+   },
+   {
+    "aspect": null,
+    "god": "Hades",
+    "matches_played": 207,
+    "matches_won": 121
+   },
+   {
+    "aspect": null,
+    "god": "Athena",
+    "matches_played": 476,
+    "matches_won": 267
+   },
+   {
+    "aspect": "Aspect of the Denmother",
+    "god": "Artio",
+    "matches_played": 126,
     "matches_won": 76
    },
    {
     "aspect": null,
+    "god": "Horus",
+    "matches_played": 464,
+    "matches_won": 260
+   },
+   {
+    "aspect": null,
+    "god": "Xbalanque",
+    "matches_played": 429,
+    "matches_won": 241
+   },
+   {
+    "aspect": "Aspect of the Watchful Pride",
+    "god": "Bastet",
+    "matches_played": 105,
+    "matches_won": 64
+   },
+   {
+    "aspect": null,
+    "god": "Charon",
+    "matches_played": 143,
+    "matches_won": 85
+   },
+   {
+    "aspect": "Aspect of the Nightstalker",
+    "god": "Xbalanque",
+    "matches_played": 56,
+    "matches_won": 36
+   },
+   {
+    "aspect": "Aspect of Reaping",
+    "god": "Thanatos",
+    "matches_played": 138,
+    "matches_won": 82
+   },
+   {
+    "aspect": null,
+    "god": "Cu Chulainn",
+    "matches_played": 439,
+    "matches_won": 244
+   },
+   {
+    "aspect": null,
+    "god": "Ra",
+    "matches_played": 709,
+    "matches_won": 387
+   },
+   {
+    "aspect": null,
+    "god": "Ishtar",
+    "matches_played": 358,
+    "matches_won": 200
+   },
+   {
+    "aspect": null,
+    "god": "Gilgamesh",
+    "matches_played": 110,
+    "matches_won": 66
+   },
+   {
+    "aspect": "Aspect of Victorious Conquest",
+    "god": "Nike",
+    "matches_played": 412,
+    "matches_won": 228
+   },
+   {
+    "aspect": null,
+    "god": "Scylla",
+    "matches_played": 503,
+    "matches_won": 275
+   },
+   {
+    "aspect": null,
+    "god": "Mercury",
+    "matches_played": 322,
+    "matches_won": 179
+   },
+   {
+    "aspect": null,
+    "god": "Janus",
+    "matches_played": 919,
+    "matches_won": 490
+   },
+   {
+    "aspect": null,
+    "god": "Xing Tian",
+    "matches_played": 515,
+    "matches_won": 280
+   },
+   {
+    "aspect": null,
+    "god": "Bastet",
+    "matches_played": 462,
+    "matches_won": 252
+   },
+   {
+    "aspect": "Aspect of Righteous Flame",
+    "god": "Ne Zha",
+    "matches_played": 139,
+    "matches_won": 81
+   },
+   {
+    "aspect": null,
+    "god": "Loki",
+    "matches_played": 697,
+    "matches_won": 373
+   },
+   {
+    "aspect": null,
+    "god": "Apollo",
+    "matches_played": 605,
+    "matches_won": 325
+   },
+   {
+    "aspect": null,
+    "god": "Merlin",
+    "matches_played": 580,
+    "matches_won": 311
+   },
+   {
+    "aspect": null,
+    "god": "Sun Wukong",
+    "matches_played": 382,
+    "matches_won": 208
+   },
+   {
+    "aspect": null,
+    "god": "Medusa",
+    "matches_played": 340,
+    "matches_won": 186
+   },
+   {
+    "aspect": null,
+    "god": "Chiron",
+    "matches_played": 481,
+    "matches_won": 259
+   },
+   {
+    "aspect": null,
+    "god": "Cerberus",
+    "matches_played": 275,
+    "matches_won": 152
+   },
+   {
+    "aspect": null,
+    "god": "Eset",
+    "matches_played": 188,
+    "matches_won": 106
+   },
+   {
+    "aspect": null,
+    "god": "Sobek",
+    "matches_played": 451,
+    "matches_won": 242
+   },
+   {
+    "aspect": null,
+    "god": "Neith",
+    "matches_played": 195,
+    "matches_won": 109
+   },
+   {
+    "aspect": "Aspect of Disruption",
+    "god": "Hun Batz",
+    "matches_played": 37,
+    "matches_won": 24
+   },
+   {
+    "aspect": null,
+    "god": "Da Ji",
+    "matches_played": 393,
+    "matches_won": 211
+   },
+   {
+    "aspect": null,
+    "god": "Hun Batz",
+    "matches_played": 248,
+    "matches_won": 136
+   },
+   {
+    "aspect": null,
+    "god": "Sylvanus",
+    "matches_played": 347,
+    "matches_won": 186
+   },
+   {
+    "aspect": null,
+    "god": "Nut",
+    "matches_played": 513,
+    "matches_won": 270
+   },
+   {
+    "aspect": null,
+    "god": "Hou Yi",
+    "matches_played": 724,
+    "matches_won": 376
+   },
+   {
+    "aspect": "Aspect of Hysteria",
+    "god": "Baron Samedi",
+    "matches_played": 235,
+    "matches_won": 128
+   },
+   {
+    "aspect": null,
+    "god": "Anhur",
+    "matches_played": 578,
+    "matches_won": 301
+   },
+   {
+    "aspect": null,
+    "god": "Pele",
+    "matches_played": 295,
+    "matches_won": 158
+   },
+   {
+    "aspect": null,
+    "god": "Tsukuyomi",
+    "matches_played": 588,
+    "matches_won": 305
+   },
+   {
+    "aspect": "Aspect of Wind",
+    "god": "Neith",
+    "matches_played": 128,
+    "matches_won": 72
+   },
+   {
+    "aspect": "Aspect of Thunderstruck",
+    "god": "Thor",
+    "matches_played": 311,
+    "matches_won": 165
+   },
+   {
+    "aspect": null,
+    "god": "Nu Wa",
+    "matches_played": 244,
+    "matches_won": 131
+   },
+   {
+    "aspect": null,
+    "god": "Anubis",
+    "matches_played": 191,
+    "matches_won": 104
+   },
+   {
+    "aspect": null,
+    "god": "Ix Chel",
+    "matches_played": 193,
+    "matches_won": 105
+   },
+   {
+    "aspect": "Aspect of Conflagration",
+    "god": "Sol",
+    "matches_played": 161,
+    "matches_won": 88
+   },
+   {
+    "aspect": "Aspect of Heartbreak",
+    "god": "Aphrodite",
+    "matches_played": 361,
+    "matches_won": 188
+   },
+   {
+    "aspect": null,
+    "god": "Nemesis",
+    "matches_played": 171,
+    "matches_won": 93
+   },
+   {
+    "aspect": null,
+    "god": "Discordia",
+    "matches_played": 341,
+    "matches_won": 178
+   },
+   {
+    "aspect": null,
+    "god": "Poseidon",
+    "matches_played": 416,
+    "matches_won": 215
+   },
+   {
+    "aspect": null,
+    "god": "Bellona",
+    "matches_played": 310,
+    "matches_won": 162
+   },
+   {
+    "aspect": null,
+    "god": "Ravana",
+    "matches_played": 419,
+    "matches_won": 215
+   },
+   {
+    "aspect": null,
+    "god": "Vulcan",
+    "matches_played": 563,
+    "matches_won": 285
+   },
+   {
+    "aspect": null,
     "god": "Chronos",
-    "matches_played": 293,
-    "matches_won": 150
+    "matches_played": 310,
+    "matches_won": 161
    },
    {
     "aspect": null,
-    "god": "Agni",
-    "matches_played": 433,
-    "matches_won": 217
-   },
-   {
-    "aspect": null,
-    "god": "Hel",
-    "matches_played": 385,
-    "matches_won": 194
-   },
-   {
-    "aspect": null,
-    "god": "Guan Yu",
-    "matches_played": 136,
-    "matches_won": 73
+    "god": "Jormungandr",
+    "matches_played": 159,
+    "matches_won": 86
    },
    {
     "aspect": null,
     "god": "Artio",
-    "matches_played": 257,
-    "matches_won": 132
+    "matches_played": 272,
+    "matches_won": 142
+   },
+   {
+    "aspect": null,
+    "god": "Ne Zha",
+    "matches_played": 483,
+    "matches_won": 245
+   },
+   {
+    "aspect": null,
+    "god": "Morgan Le Fay",
+    "matches_played": 186,
+    "matches_won": 99
+   },
+   {
+    "aspect": null,
+    "god": "Guan Yu",
+    "matches_played": 150,
+    "matches_won": 81
+   },
+   {
+    "aspect": null,
+    "god": "Kukulkan",
+    "matches_played": 476,
+    "matches_won": 240
+   },
+   {
+    "aspect": "Aspect of Prey",
+    "god": "Sobek",
+    "matches_played": 28,
+    "matches_won": 18
+   },
+   {
+    "aspect": "Aspect of Obsidian",
+    "god": "Pele",
+    "matches_played": 43,
+    "matches_won": 26
+   },
+   {
+    "aspect": null,
+    "god": "Agni",
+    "matches_played": 464,
+    "matches_won": 232
+   },
+   {
+    "aspect": null,
+    "god": "Awilix",
+    "matches_played": 285,
+    "matches_won": 146
+   },
+   {
+    "aspect": "Aspect of the Steel Wind",
+    "god": "Hachiman",
+    "matches_played": 156,
+    "matches_won": 83
+   },
+   {
+    "aspect": null,
+    "god": "Hel",
+    "matches_played": 407,
+    "matches_won": 204
+   },
+   {
+    "aspect": "Aspect of Agony",
+    "god": "Loki",
+    "matches_played": 122,
+    "matches_won": 66
    },
    {
     "aspect": "Aspect Of Valor",
@@ -3658,291 +3682,291 @@
    },
    {
     "aspect": null,
-    "god": "Morgan Le Fay",
-    "matches_played": 175,
-    "matches_won": 92
+    "god": "Fenrir",
+    "matches_played": 229,
+    "matches_won": 116
    },
    {
     "aspect": "Aspect of the Death March",
     "god": "Ah Puch",
-    "matches_played": 61,
-    "matches_won": 35
-   },
-   {
-    "aspect": "Aspect of Obsidian",
-    "god": "Pele",
-    "matches_played": 38,
-    "matches_won": 23
-   },
-   {
-    "aspect": "Aspect of the Steel Wind",
-    "god": "Hachiman",
-    "matches_played": 151,
-    "matches_won": 79
-   },
-   {
-    "aspect": "Aspect of Agony",
-    "god": "Loki",
-    "matches_played": 112,
-    "matches_won": 60
-   },
-   {
-    "aspect": null,
-    "god": "Atlas",
-    "matches_played": 223,
-    "matches_won": 112
-   },
-   {
-    "aspect": null,
-    "god": "Kuzenbo",
-    "matches_played": 321,
-    "matches_won": 157
+    "matches_played": 66,
+    "matches_won": 37
    },
    {
     "aspect": null,
     "god": "Ah Puch",
-    "matches_played": 110,
-    "matches_won": 58
-   },
-   {
-    "aspect": "Aspect of the Unyielding",
-    "god": "Jormungandr",
-    "matches_played": 39,
-    "matches_won": 23
-   },
-   {
-    "aspect": null,
-    "god": "Kali",
-    "matches_played": 144,
-    "matches_won": 74
+    "matches_played": 119,
+    "matches_won": 63
    },
    {
     "aspect": null,
     "god": "Danzaburou",
-    "matches_played": 236,
-    "matches_won": 117
+    "matches_played": 243,
+    "matches_won": 122
    },
    {
     "aspect": null,
     "god": "Yemoja",
-    "matches_played": 140,
-    "matches_won": 72
-   },
-   {
-    "aspect": "Aspect of the Squall",
-    "god": "Kukulkan",
-    "matches_played": 82,
-    "matches_won": 44
+    "matches_played": 145,
+    "matches_won": 75
    },
    {
     "aspect": null,
-    "god": "Hachiman",
-    "matches_played": 579,
-    "matches_won": 270
+    "god": "Kali",
+    "matches_played": 156,
+    "matches_won": 80
    },
    {
-    "aspect": "Aspect of the Devourer",
-    "god": "Scylla",
-    "matches_played": 89,
-    "matches_won": 47
-   },
-   {
-    "aspect": null,
-    "god": "Khepri",
-    "matches_played": 60,
-    "matches_won": 33
-   },
-   {
-    "aspect": null,
-    "god": "Hecate",
-    "matches_played": 196,
-    "matches_won": 96
-   },
-   {
-    "aspect": "Aspect of Divergence",
-    "god": "Hel",
-    "matches_played": 179,
-    "matches_won": 88
-   },
-   {
-    "aspect": null,
-    "god": "Bacchus",
-    "matches_played": 167,
-    "matches_won": 82
+    "aspect": "Aspect of the Unyielding",
+    "god": "Jormungandr",
+    "matches_played": 41,
+    "matches_won": 24
    },
    {
     "aspect": null,
     "god": "Cabrakan",
-    "matches_played": 148,
-    "matches_won": 73
+    "matches_played": 156,
+    "matches_won": 79
    },
    {
     "aspect": null,
-    "god": "Fenrir",
-    "matches_played": 202,
-    "matches_won": 97
+    "god": "Hecate",
+    "matches_played": 212,
+    "matches_won": 105
+   },
+   {
+    "aspect": null,
+    "god": "Atlas",
+    "matches_played": 239,
+    "matches_won": 117
+   },
+   {
+    "aspect": null,
+    "god": "Hachiman",
+    "matches_played": 618,
+    "matches_won": 287
+   },
+   {
+    "aspect": "Aspect of the Squall",
+    "god": "Kukulkan",
+    "matches_played": 83,
+    "matches_won": 44
+   },
+   {
+    "aspect": null,
+    "god": "Bacchus",
+    "matches_played": 176,
+    "matches_won": 87
+   },
+   {
+    "aspect": "Aspect of the Devourer",
+    "god": "Scylla",
+    "matches_played": 93,
+    "matches_won": 48
+   },
+   {
+    "aspect": null,
+    "god": "Kuzenbo",
+    "matches_played": 344,
+    "matches_won": 161
    },
    {
     "aspect": "Aspect of the Cursed Crown",
     "god": "Morgan Le Fay",
-    "matches_played": 112,
-    "matches_won": 56
+    "matches_played": 127,
+    "matches_won": 63
    },
    {
-    "aspect": "Aspect of Downpour",
-    "god": "Yemoja",
-    "matches_played": 23,
-    "matches_won": 14
+    "aspect": "Aspect of the Unburdened",
+    "god": "Atlas",
+    "matches_played": 19,
+    "matches_won": 12
    },
    {
-    "aspect": null,
-    "god": "Achilles",
-    "matches_played": 191,
-    "matches_won": 91
-   },
-   {
-    "aspect": null,
-    "god": "Ganesha",
-    "matches_played": 162,
-    "matches_won": 78
-   },
-   {
-    "aspect": "Aspect of the Triumphant",
-    "god": "Ganesha",
-    "matches_played": 40,
-    "matches_won": 22
-   },
-   {
-    "aspect": null,
-    "god": "Hua Mulan",
-    "matches_played": 156,
-    "matches_won": 74
-   },
-   {
-    "aspect": null,
-    "god": "Hercules",
-    "matches_played": 136,
-    "matches_won": 65
-   },
-   {
-    "aspect": null,
-    "god": "Princess Bari",
-    "matches_played": 164,
-    "matches_won": 77
+    "aspect": "Aspect of Vindication",
+    "god": "Bellona",
+    "matches_played": 8,
+    "matches_won": 6
    },
    {
     "aspect": "Aspect of the Wild",
     "god": "Artemis",
-    "matches_played": 34,
-    "matches_won": 19
+    "matches_played": 35,
+    "matches_won": 20
+   },
+   {
+    "aspect": "Aspect of Divergence",
+    "god": "Hel",
+    "matches_played": 188,
+    "matches_won": 90
    },
    {
     "aspect": null,
-    "god": "Jing Wei",
-    "matches_played": 225,
-    "matches_won": 103
+    "god": "Hua Mulan",
+    "matches_played": 162,
+    "matches_won": 78
    },
    {
     "aspect": null,
-    "god": "Nox",
-    "matches_played": 767,
-    "matches_won": 328
-   },
-   {
-    "aspect": "Aspect of Silent Night",
-    "god": "Nox",
-    "matches_played": 312,
-    "matches_won": 139
-   },
-   {
-    "aspect": "Aspect of the Trident",
-    "god": "Poseidon",
+    "god": "Khepri",
     "matches_played": 65,
-    "matches_won": 33
+    "matches_won": 34
    },
    {
-    "aspect": "Aspect of Unbound Destruction",
-    "god": "Kali",
-    "matches_played": 43,
-    "matches_won": 23
-   },
-   {
-    "aspect": "Aspect of Pride",
-    "god": "Anhur",
-    "matches_played": 88,
-    "matches_won": 43
-   },
-   {
-    "aspect": "Aspect of Strife",
-    "god": "Cernunnos",
-    "matches_played": 102,
-    "matches_won": 49
+    "aspect": null,
+    "god": "Princess Bari",
+    "matches_played": 185,
+    "matches_won": 87
    },
    {
     "aspect": "Aspect of the Storm Front",
     "god": "Susano",
-    "matches_played": 105,
-    "matches_won": 50
+    "matches_played": 110,
+    "matches_won": 54
    },
    {
-    "aspect": "Aspect of Mischief",
-    "god": "The Morrigan",
-    "matches_played": 53,
-    "matches_won": 27
+    "aspect": null,
+    "god": "Nox",
+    "matches_played": 792,
+    "matches_won": 343
    },
    {
-    "aspect": "Aspect of Transformation",
-    "god": "Sun Wukong",
-    "matches_played": 42,
-    "matches_won": 22
+    "aspect": "Aspect of Silent Night",
+    "god": "Nox",
+    "matches_played": 342,
+    "matches_won": 153
    },
    {
-    "aspect": "Aspect of Fortification",
-    "god": "Vulcan",
-    "matches_played": 51,
-    "matches_won": 26
-   },
-   {
-    "aspect": "Aspect of Combustion",
-    "god": "Agni",
-    "matches_played": 29,
-    "matches_won": 16
-   },
-   {
-    "aspect": "Aspect of Justice",
-    "god": "Nemesis",
-    "matches_played": 65,
-    "matches_won": 32
+    "aspect": null,
+    "god": "Jing Wei",
+    "matches_played": 233,
+    "matches_won": 106
    },
    {
     "aspect": "Aspect of the Tollkeeper",
     "god": "Charon",
-    "matches_played": 27,
-    "matches_won": 15
+    "matches_played": 28,
+    "matches_won": 16
+   },
+   {
+    "aspect": "Aspect of the Trident",
+    "god": "Poseidon",
+    "matches_played": 67,
+    "matches_won": 34
+   },
+   {
+    "aspect": null,
+    "god": "Achilles",
+    "matches_played": 199,
+    "matches_won": 91
+   },
+   {
+    "aspect": "Aspect of the Triumphant",
+    "god": "Ganesha",
+    "matches_played": 43,
+    "matches_won": 23
+   },
+   {
+    "aspect": null,
+    "god": "Ganesha",
+    "matches_played": 177,
+    "matches_won": 81
+   },
+   {
+    "aspect": "Aspect of Mischief",
+    "god": "The Morrigan",
+    "matches_played": 57,
+    "matches_won": 29
+   },
+   {
+    "aspect": null,
+    "god": "Hercules",
+    "matches_played": 143,
+    "matches_won": 66
+   },
+   {
+    "aspect": "Aspect of Unbound Destruction",
+    "god": "Kali",
+    "matches_played": 46,
+    "matches_won": 24
    },
    {
     "aspect": null,
     "god": "Nike",
-    "matches_played": 232,
-    "matches_won": 101
+    "matches_played": 247,
+    "matches_won": 109
    },
    {
-    "aspect": "Aspect of Spirits",
-    "god": "Kuzenbo",
-    "matches_played": 238,
-    "matches_won": 103
+    "aspect": "Aspect of Transformation",
+    "god": "Sun Wukong",
+    "matches_played": 44,
+    "matches_won": 23
+   },
+   {
+    "aspect": "Aspect of Fortification",
+    "god": "Vulcan",
+    "matches_played": 53,
+    "matches_won": 27
+   },
+   {
+    "aspect": "Aspect of Combustion",
+    "god": "Agni",
+    "matches_played": 31,
+    "matches_won": 17
+   },
+   {
+    "aspect": "Aspect of Justice",
+    "god": "Nemesis",
+    "matches_played": 67,
+    "matches_won": 33
+   },
+   {
+    "aspect": "Aspect of Downpour",
+    "god": "Yemoja",
+    "matches_played": 29,
+    "matches_won": 16
+   },
+   {
+    "aspect": "Aspect of Strife",
+    "god": "Cernunnos",
+    "matches_played": 112,
+    "matches_won": 52
    },
    {
     "aspect": null,
     "god": "Chaac",
-    "matches_played": 85,
-    "matches_won": 40
+    "matches_played": 91,
+    "matches_won": 43
    },
    {
     "aspect": "Aspect of the Lifewarden",
     "god": "Eset",
-    "matches_played": 34,
-    "matches_won": 18
+    "matches_played": 38,
+    "matches_won": 20
+   },
+   {
+    "aspect": "Aspect of Grover's Wrath",
+    "god": "Sylvanus",
+    "matches_played": 75,
+    "matches_won": 36
+   },
+   {
+    "aspect": "Aspect of Pride",
+    "god": "Anhur",
+    "matches_played": 94,
+    "matches_won": 44
+   },
+   {
+    "aspect": "Aspect of Spirits",
+    "god": "Kuzenbo",
+    "matches_played": 249,
+    "matches_won": 106
+   },
+   {
+    "aspect": "Aspect of the Warped",
+    "god": "Cu Chulainn",
+    "matches_played": 85,
+    "matches_won": 39
    },
    {
     "aspect": "Aspect of Fellowship",
@@ -3951,28 +3975,16 @@
     "matches_won": 8
    },
    {
-    "aspect": "Aspect of Grover's Wrath",
-    "god": "Sylvanus",
-    "matches_played": 69,
-    "matches_won": 32
-   },
-   {
-    "aspect": "Aspect of the Warped",
-    "god": "Cu Chulainn",
-    "matches_played": 79,
-    "matches_won": 36
-   },
-   {
     "aspect": "Aspect of Reverberation",
     "god": "Ares",
-    "matches_played": 89,
-    "matches_won": 40
+    "matches_played": 91,
+    "matches_won": 41
    },
    {
     "aspect": null,
     "god": "Osiris",
-    "matches_played": 105,
-    "matches_won": 46
+    "matches_played": 108,
+    "matches_won": 47
    },
    {
     "aspect": "Aspect of the Mother's Light",
@@ -3981,10 +3993,10 @@
     "matches_won": 18
    },
    {
-    "aspect": "Aspect of the Unburdened",
-    "god": "Atlas",
-    "matches_played": 16,
-    "matches_won": 9
+    "aspect": "Aspect of Ruin",
+    "god": "Hecate",
+    "matches_played": 25,
+    "matches_won": 13
    },
    {
     "aspect": "Aspect of the Heroic Tutor",
@@ -3995,7 +4007,7 @@
    {
     "aspect": "Aspect of the Mark",
     "god": "Hou Yi",
-    "matches_played": 35,
+    "matches_played": 36,
     "matches_won": 17
    },
    {
@@ -4005,16 +4017,28 @@
     "matches_won": 10
    },
    {
+    "aspect": "Aspect of Rage",
+    "god": "Mordred",
+    "matches_played": 17,
+    "matches_won": 9
+   },
+   {
+    "aspect": "Aspect of the Fragmented",
+    "god": "Osiris",
+    "matches_played": 45,
+    "matches_won": 20
+   },
+   {
     "aspect": "Aspect of Thermotherapy",
     "god": "Ra",
-    "matches_played": 29,
+    "matches_played": 30,
     "matches_won": 14
    },
    {
-    "aspect": "Aspect of Ruin",
-    "god": "Hecate",
-    "matches_played": 22,
-    "matches_won": 11
+    "aspect": "Aspect of Preservation",
+    "god": "Hercules",
+    "matches_played": 4,
+    "matches_won": 3
    },
    {
     "aspect": "Aspect of Fulmination",
@@ -4023,46 +4047,28 @@
     "matches_won": 12
    },
    {
-    "aspect": "Aspect of Vindication",
-    "god": "Bellona",
-    "matches_played": 6,
-    "matches_won": 4
-   },
-   {
-    "aspect": "Aspect of the Fragmented",
-    "god": "Osiris",
-    "matches_played": 41,
-    "matches_won": 18
+    "aspect": "Aspect of the Gilded Victor",
+    "god": "Discordia",
+    "matches_played": 35,
+    "matches_won": 15
    },
    {
     "aspect": "Aspect of Relativity",
     "god": "Chronos",
-    "matches_played": 13,
-    "matches_won": 7
-   },
-   {
-    "aspect": "Aspect of the Gilded Victor",
-    "god": "Discordia",
-    "matches_played": 33,
-    "matches_won": 14
-   },
-   {
-    "aspect": "Aspect of Shining Mist",
-    "god": "Nu Wa",
     "matches_played": 14,
     "matches_won": 7
    },
    {
-    "aspect": "Aspect of the Cosmos",
-    "god": "Nut",
-    "matches_played": 9,
-    "matches_won": 5
+    "aspect": "Aspect of Pandemonium",
+    "god": "Merlin",
+    "matches_played": 29,
+    "matches_won": 12
    },
    {
     "aspect": "Aspect of Relentless Spite",
     "god": "Xing Tian",
-    "matches_played": 51,
-    "matches_won": 19
+    "matches_played": 54,
+    "matches_won": 20
    },
    {
     "aspect": "Aspect of Harmony",
@@ -4071,16 +4077,10 @@
     "matches_won": 11
    },
    {
-    "aspect": "Aspect of Rage",
-    "god": "Mordred",
+    "aspect": "Aspect of the Cosmos",
+    "god": "Nut",
     "matches_played": 10,
     "matches_won": 5
-   },
-   {
-    "aspect": "Aspect of Pandemonium",
-    "god": "Merlin",
-    "matches_played": 28,
-    "matches_won": 11
    },
    {
     "aspect": "Aspect of the Rotund Jotunn",
@@ -4089,16 +4089,16 @@
     "matches_won": 7
    },
    {
+    "aspect": "Aspect of Shining Mist",
+    "god": "Nu Wa",
+    "matches_played": 16,
+    "matches_won": 7
+   },
+   {
     "aspect": "Aspect of Mangetsu",
     "god": "Tsukuyomi",
     "matches_played": 17,
     "matches_won": 7
-   },
-   {
-    "aspect": "Aspect of Preservation",
-    "god": "Hercules",
-    "matches_played": 3,
-    "matches_won": 2
    },
    {
     "aspect": "Aspect of the Rakshasa King",
@@ -4119,6 +4119,12 @@
     "matches_won": 2
    },
    {
+    "aspect": "Aspect of Calamity",
+    "god": "Geb",
+    "matches_played": 8,
+    "matches_won": 2
+   },
+   {
     "aspect": "Aspect of Ferocity",
     "god": "Da Ji",
     "matches_played": 3,
@@ -4131,15 +4137,9 @@
     "matches_won": 1
    },
    {
-    "aspect": "Aspect of Calamity",
-    "god": "Geb",
-    "matches_played": 7,
-    "matches_won": 1
-   },
-   {
     "aspect": "Aspect of Precision",
     "god": "Rama",
-    "matches_played": 3,
+    "matches_played": 4,
     "matches_won": 0
    }
   ],

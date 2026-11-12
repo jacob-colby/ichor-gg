@@ -782,24 +782,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 105
-    wins: 62
+    window_end: '2026-11-12'
+    matches: 111
+    wins: 65
     win_share: 0.59
     aggregate:
-      aspect_matches: 130
-      aspect_win_rate: 0.615
-      no_aspect_matches: 333
-      no_aspect_win_rate: 0.571
+      aspect_matches: 136
+      aspect_win_rate: 0.61
+      no_aspect_matches: 358
+      no_aspect_win_rate: 0.559
     roles:
     - role: Solo
       matches: 42
-      share: 0.4
+      share: 0.38
     - role: Jungle
-      matches: 36
-      share: 0.34
+      matches: 40
+      share: 0.36
     - role: Carry
-      matches: 25
+      matches: 27
       share: 0.24
     - role: Mid
       matches: 2
@@ -808,37 +808,37 @@ community_aspects:
     base_role_share: 0.24
     role_shift:
       role: Solo
-      share: 0.4
-      says: 'most Aspect of the Passionate Storm players do not play Carry: Solo 40%,
+      share: 0.38
+      says: 'most Aspect of the Passionate Storm players do not play Carry: Solo 38%,
         Carry 24%'
     items:
     - name: Devourer's Gauntlet
-      share: 0.75
+      share: 0.76
     - name: Riptalon
       share: 0.5
     - name: Berserker's Shield
-      share: 0.44
+      share: 0.43
     - name: Hastened Fatalis
       share: 0.38
     - name: Silverbranch Bow
-      share: 0.36
+      share: 0.37
     - name: Dagger of Frenzy
       share: 0.27
     - name: Deathbringer
-      share: 0.26
+      share: 0.25
     - name: Musashi's Dual Swords
-      share: 0.22
+      share: 0.21
     starters:
     - name: Sharpshooter's Arrow
       share: 0.33
     - name: Hunter's Cowl
-      share: 0.2
+      share: 0.21
     - name: Death's Embrace
       share: 0.12
     - name: Leather Cowl
       share: 0.1
     - name: Death's Toll
-      share: 0.07
+      share: 0.06
     - name: Gilded Arrow
       share: 0.05
     - name: Bluestone Brooch
@@ -847,9 +847,9 @@ community_aspects:
       share: 0.03
     - name: Sundering Axe
       share: 0.03
-    - name: Archmage's Gem
-      share: 0.01
     - name: Bumba's Spear
+      share: 0.02
+    - name: Archmage's Gem
       share: 0.01
     - name: Warrior's Axe
       share: 0.01
@@ -857,11 +857,11 @@ community_aspects:
     - name: Aegis of Acceleration
       share: 0.45
     - name: Purification Beads
-      share: 0.34
+      share: 0.35
     - name: Agility Relic
-      share: 0.2
+      share: 0.19
     matches_by_window:
-      ob47: 105
+      ob47: 111
       ob46: 259
       ob45: 245
       ob44: 235

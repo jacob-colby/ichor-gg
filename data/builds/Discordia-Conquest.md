@@ -797,62 +797,62 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 31
-    wins: 13
-    win_share: 0.42
+    window_end: '2026-11-12'
+    matches: 32
+    wins: 14
+    win_share: 0.44
     aggregate:
-      aspect_matches: 33
-      aspect_win_rate: 0.424
-      no_aspect_matches: 317
-      no_aspect_win_rate: 0.517
+      aspect_matches: 35
+      aspect_win_rate: 0.429
+      no_aspect_matches: 341
+      no_aspect_win_rate: 0.522
     roles:
     - role: Carry
-      matches: 22
-      share: 0.71
+      matches: 23
+      share: 0.72
     - role: Mid
       matches: 8
-      share: 0.26
+      share: 0.25
     - role: Solo
       matches: 1
       share: 0.03
     base_role: Mid
-    base_role_share: 0.26
+    base_role_share: 0.25
     role_shift:
       role: Carry
-      share: 0.71
-      says: 'most Aspect of the Gilded Victor players do not play Mid: Carry 71%,
-        Mid 26%'
+      share: 0.72
+      says: 'most Aspect of the Gilded Victor players do not play Mid: Carry 72%,
+        Mid 25%'
     items:
     - name: Bragi's Harp
-      share: 0.58
+      share: 0.59
     - name: Tyrfing
-      share: 0.58
-    - name: The Executioner
-      share: 0.42
+      share: 0.59
     - name: Riptalon
-      share: 0.39
-    - name: Bracer of The Abyss
-      share: 0.26
-    - name: Nimble Ring
-      share: 0.26
+      share: 0.41
+    - name: The Executioner
+      share: 0.41
     - name: Odysseus' Bow
-      share: 0.26
+      share: 0.28
     - name: Silverbranch Bow
-      share: 0.26
+      share: 0.28
+    - name: Bracer of The Abyss
+      share: 0.25
+    - name: Nimble Ring
+      share: 0.25
     starters:
     - name: Hunter's Cowl
-      share: 0.19
+      share: 0.22
     - name: Archmage's Gem
       share: 0.16
     - name: Sharpshooter's Arrow
       share: 0.16
     - name: Death's Embrace
-      share: 0.13
+      share: 0.12
     - name: Gilded Arrow
-      share: 0.1
+      share: 0.09
     - name: Leather Cowl
-      share: 0.1
+      share: 0.09
     - name: Death's Toll
       share: 0.06
     - name: Pendulum of the Ages
@@ -861,13 +861,13 @@ community_aspects:
       share: 0.03
     relics:
     - name: Purification Beads
-      share: 0.45
+      share: 0.47
     - name: Aegis of Acceleration
-      share: 0.39
+      share: 0.38
     - name: Agility Relic
-      share: 0.13
+      share: 0.12
     matches_by_window:
-      ob47: 31
+      ob47: 32
       ob46: 49
       ob45: 60
       ob44: 39

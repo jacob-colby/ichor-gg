@@ -798,22 +798,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 70
-    wins: 38
-    win_share: 0.54
+    window_end: '2026-11-12'
+    matches: 76
+    wins: 39
+    win_share: 0.51
     aggregate:
-      aspect_matches: 88
-      aspect_win_rate: 0.489
-      no_aspect_matches: 543
-      no_aspect_win_rate: 0.517
+      aspect_matches: 94
+      aspect_win_rate: 0.468
+      no_aspect_matches: 578
+      no_aspect_win_rate: 0.521
     roles:
     - role: Carry
-      matches: 60
-      share: 0.86
+      matches: 66
+      share: 0.87
     - role: Solo
       matches: 7
-      share: 0.1
+      share: 0.09
     - role: Jungle
       matches: 2
       share: 0.03
@@ -821,36 +821,38 @@ community_aspects:
       matches: 1
       share: 0.01
     base_role: Carry
-    base_role_share: 0.86
+    base_role_share: 0.87
     role_shift: null
     items:
     - name: Devourer's Gauntlet
-      share: 0.79
-    - name: Silverbranch Bow
-      share: 0.59
+      share: 0.78
     - name: The Executioner
-      share: 0.59
-    - name: Riptalon
+      share: 0.61
+    - name: Silverbranch Bow
       share: 0.57
+    - name: Riptalon
+      share: 0.54
     - name: Dominance
-      share: 0.53
+      share: 0.5
     - name: Dagger of Frenzy
       share: 0.47
     - name: Odysseus' Bow
-      share: 0.44
+      share: 0.47
     - name: Tyrfing
-      share: 0.4
+      share: 0.39
     starters:
-    - name: Sharpshooter's Arrow
-      share: 0.33
     - name: Hunter's Cowl
-      share: 0.31
+      share: 0.32
+    - name: Sharpshooter's Arrow
+      share: 0.32
     - name: Leather Cowl
-      share: 0.21
+      share: 0.22
     - name: Gilded Arrow
-      share: 0.06
+      share: 0.05
     - name: Death's Embrace
       share: 0.03
+    - name: Bluestone Pendant
+      share: 0.01
     - name: Bumba's Golden Dagger
       share: 0.01
     - name: Bumba's Spear
@@ -861,14 +863,16 @@ community_aspects:
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.53
+      share: 0.54
     - name: Aegis of Acceleration
-      share: 0.44
+      share: 0.43
     - name: Agility Relic
       share: 0.03
     matches_by_window:
-      ob47: 70
+      ob47: 76
       ob46: 132
       ob45: 145
       ob44: 166
+    unmapped_slugs:
+    - brawlers-ruin
 ---

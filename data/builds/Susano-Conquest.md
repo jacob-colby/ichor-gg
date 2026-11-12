@@ -809,18 +809,18 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 77
-    wins: 40
-    win_share: 0.52
+    window_end: '2026-11-12'
+    matches: 80
+    wins: 42
+    win_share: 0.53
     aggregate:
-      aspect_matches: 105
-      aspect_win_rate: 0.476
-      no_aspect_matches: 414
-      no_aspect_win_rate: 0.585
+      aspect_matches: 110
+      aspect_win_rate: 0.491
+      no_aspect_matches: 434
+      no_aspect_win_rate: 0.578
     roles:
     - role: Support
-      matches: 70
+      matches: 73
       share: 0.91
     - role: Solo
       matches: 5
@@ -840,28 +840,28 @@ community_aspects:
         Jungle 1%'
     items:
     - name: Runeforged Hammer
-      share: 0.68
+      share: 0.69
     - name: Freya's Tears
       share: 0.61
     - name: Stone of Binding
-      share: 0.52
+      share: 0.54
     - name: Genji's Guard
-      share: 0.35
+      share: 0.36
+    - name: Breastplate of Valor
+      share: 0.34
     - name: Stampede
       share: 0.34
-    - name: Breastplate of Valor
-      share: 0.32
     - name: Shell of Rebuke
-      share: 0.32
+      share: 0.33
     - name: brawlers-ruin
-      share: 0.25
+      share: 0.24
     starters:
     - name: Bluestone Brooch
       share: 0.35
     - name: Bluestone Pendant
-      share: 0.26
+      share: 0.28
     - name: Bumba's Cudgel
-      share: 0.16
+      share: 0.15
     - name: Bumba's Hammer
       share: 0.09
     - name: Warrior's Axe
@@ -878,13 +878,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Phantom Shell
-      share: 0.39
-    - name: Purification Beads
-      share: 0.22
+      share: 0.4
     - name: Blink Rune
       share: 0.21
+    - name: Purification Beads
+      share: 0.21
     matches_by_window:
-      ob47: 77
+      ob47: 80
       ob46: 272
       ob45: 355
     unmapped_slugs:

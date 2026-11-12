@@ -876,49 +876,49 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 759
-    wins: 486
+    window_end: '2026-11-12'
+    matches: 795
+    wins: 509
     win_share: 0.64
     aggregate:
-      aspect_matches: 932
-      aspect_win_rate: 0.634
-      no_aspect_matches: 189
-      no_aspect_win_rate: 0.619
+      aspect_matches: 988
+      aspect_win_rate: 0.633
+      no_aspect_matches: 196
+      no_aspect_win_rate: 0.617
     roles:
     - role: Mid
-      matches: 533
-      share: 0.7
+      matches: 562
+      share: 0.71
     - role: Carry
-      matches: 117
+      matches: 120
       share: 0.15
     - role: Jungle
-      matches: 72
+      matches: 75
       share: 0.09
     - role: Solo
-      matches: 37
+      matches: 38
       share: 0.05
     base_role: Carry
     base_role_share: 0.15
     role_shift:
       role: Mid
-      share: 0.7
-      says: 'most Aspect of the Sickle players do not play Carry: Mid 70%, Carry 15%'
+      share: 0.71
+      says: 'most Aspect of the Sickle players do not play Carry: Mid 71%, Carry 15%'
     items:
     - name: Rod of Tahuti
       share: 0.86
     - name: Spear of Desolation
-      share: 0.56
+      share: 0.55
     - name: Obsidian Shard
-      share: 0.43
+      share: 0.44
     - name: Chronos' Pendant
       share: 0.39
     - name: Ancient Signet
-      share: 0.36
+      share: 0.37
     - name: Spear of the Magus
       share: 0.32
     - name: The Cosmic Horror
-      share: 0.26
+      share: 0.27
     - name: Totem of Death
       share: 0.26
     starters:
@@ -935,7 +935,7 @@ community_aspects:
     - name: Hunter's Cowl
       share: 0.03
     - name: Bluestone Pendant
-      share: 0.01
+      share: 0.02
     - name: Leather Cowl
       share: 0.01
     - name: Sharpshooter's Arrow
@@ -950,13 +950,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Purification Beads
-      share: 0.64
+      share: 0.63
     - name: Aegis of Acceleration
-      share: 0.36
+      share: 0.37
     - name: Blink Rune
       share: 0.0
     matches_by_window:
-      ob47: 759
+      ob47: 795
     unmapped_slugs:
     - brawlers-ruin
 ---

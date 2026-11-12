@@ -812,50 +812,50 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 237
-    wins: 128
-    win_share: 0.54
+    window_end: '2026-11-12'
+    matches: 256
+    wins: 134
+    win_share: 0.52
     aggregate:
-      aspect_matches: 293
-      aspect_win_rate: 0.539
-      no_aspect_matches: 652
-      no_aspect_win_rate: 0.563
+      aspect_matches: 311
+      aspect_win_rate: 0.531
+      no_aspect_matches: 682
+      no_aspect_win_rate: 0.565
     roles:
     - role: Solo
-      matches: 161
+      matches: 175
       share: 0.68
     - role: Jungle
-      matches: 46
+      matches: 48
       share: 0.19
     - role: Support
-      matches: 30
+      matches: 33
       share: 0.13
     base_role: Jungle Solo
     base_role_share: 0.87
     role_shift: null
     items:
     - name: Freya's Tears
-      share: 0.57
+      share: 0.58
     - name: Shifter's Shield
-      share: 0.57
+      share: 0.58
     - name: Genji's Guard
       share: 0.38
     - name: brawlers-ruin
-      share: 0.34
+      share: 0.32
     - name: Kinetic Cuirass
-      share: 0.27
+      share: 0.28
     - name: Breastplate of Valor
       share: 0.27
-    - name: Jotunn's Revenge
-      share: 0.24
     - name: Devourer's Gauntlet
+      share: 0.24
+    - name: Jotunn's Revenge
       share: 0.24
     starters:
     - name: Bluestone Brooch
-      share: 0.46
+      share: 0.47
     - name: Bumba's Hammer
-      share: 0.18
+      share: 0.17
     - name: Bluestone Pendant
       share: 0.17
     - name: Sundering Axe
@@ -867,14 +867,14 @@ community_aspects:
     - name: Leather Cowl
       share: 0.03
     - name: Warrior's Axe
-      share: 0.01
+      share: 0.02
     - name: Death's Embrace
+      share: 0.01
+    - name: Selflessness
       share: 0.01
     - name: War Flag
       share: 0.01
     - name: Archmage's Gem
-      share: 0.0
-    - name: Selflessness
       share: 0.0
     - name: War Banner
       share: 0.0
@@ -882,11 +882,11 @@ community_aspects:
     - name: Purification Beads
       share: 0.36
     - name: Sundering Arc
-      share: 0.23
-    - name: Phantom Shell
+      share: 0.24
+    - name: Aegis of Acceleration
       share: 0.19
     matches_by_window:
-      ob47: 237
+      ob47: 256
       ob46: 654
       ob45: 1004
       ob44: 714

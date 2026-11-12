@@ -2657,6 +2657,21 @@ reference builds are the only gate. Numbers, the full depth table and the
 proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
 `aspect_matches`' docstring.
 
+**The store now holds base-kit matches whole, and outcomes are read against
+builds (2026-11-11).** The no-aspect feed is walked like an aspect feed
+(`aspect_matches`, THE NO-ASPECT CENSUS): OB47 holds 28,676 base-kit matches,
+86% of the aggregate's, at a standing cost of about 15 minutes on the daily
+job and 1.1 MB a day in git; retention is undecided. `python -m
+smite.build_outcomes` asks whether a match holding more of a six wins more,
+within god, on finished sixes. On OB47's base kit in the god's primary role
+(5,360 matches, 59 gods): the community's six +2.82pp per shared item (+1.73
+to +4.06), `core` +2.53 (+0.83 to +4.32, and it reads win rates computed from
+these matches), the meta-free `model` build +0.44 (-1.37 to +2.23), a random
+legal six +0.19 (sd 1.87). **The `model` build does not separate from zero on
+outcomes**; held out in time, a `core` built from the 11-06 record scores
++0.99pp (-0.64 to +2.54) on the matches after it. It is observational and it
+feeds nothing; the reading and its limits are in `build_outcomes`' docstring.
+
 **A lead for the draft feature, not built on:** every stored match carries its
 five enemy gods and the outcome — 184,735 god-vs-god outcome pairs from 24,032
 distinct matches on 2026-11-08, ~8,000 more a day, skewed to aspect players.
@@ -3542,6 +3557,7 @@ python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
 python -m smite.build_quality --ward-economy  # the `ward-economy` carriers against a core built without them (~20s)
 python -m smite.side_by_side             # criterion 2: ours vs community, passives SIMULATED (~40s)
+python -m smite.build_outcomes           # do matches holding more of a build win more? (~10s)
 python -m smite.side_by_side --god Medusa    # one god's side-by-side, item diffs and verdict
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split

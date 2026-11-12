@@ -894,18 +894,18 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 219
-    wins: 105
-    win_share: 0.48
+    window_end: '2026-11-12'
+    matches: 236
+    wins: 115
+    win_share: 0.49
     aggregate:
-      aspect_matches: 312
-      aspect_win_rate: 0.446
-      no_aspect_matches: 767
-      no_aspect_win_rate: 0.428
+      aspect_matches: 342
+      aspect_win_rate: 0.447
+      no_aspect_matches: 792
+      no_aspect_win_rate: 0.433
     roles:
     - role: Support
-      matches: 216
+      matches: 233
       share: 0.99
     - role: Carry
       matches: 2
@@ -918,7 +918,7 @@ community_aspects:
     role_shift: null
     items:
     - name: Freya's Tears
-      share: 0.64
+      share: 0.65
     - name: Genji's Guard
       share: 0.51
     - name: Breastplate of Valor
@@ -926,26 +926,26 @@ community_aspects:
     - name: Gauntlet of Thebes
       share: 0.44
     - name: Shell of Rebuke
-      share: 0.43
+      share: 0.42
     - name: Stampede
-      share: 0.33
+      share: 0.32
     - name: Stone of Binding
-      share: 0.22
+      share: 0.23
     - name: Chandra's Grace
       share: 0.21
     starters:
     - name: Heroism
-      share: 0.27
+      share: 0.26
     - name: Selflessness
-      share: 0.21
+      share: 0.22
     - name: War Flag
       share: 0.17
     - name: War Banner
-      share: 0.16
+      share: 0.15
     - name: Sands Of Time
-      share: 0.08
+      share: 0.09
     - name: Pendulum of the Ages
-      share: 0.07
+      share: 0.08
     - name: Bluestone Pendant
       share: 0.01
     - name: Archmage's Gem
@@ -958,13 +958,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Phantom Shell
-      share: 0.5
+      share: 0.51
     - name: Aegis of Acceleration
-      share: 0.19
+      share: 0.18
     - name: Purification Beads
       share: 0.16
     matches_by_window:
-      ob47: 219
+      ob47: 236
     unmapped_slugs:
     - brawlers-ruin
 ---

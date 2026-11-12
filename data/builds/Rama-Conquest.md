@@ -846,7 +846,7 @@ community_aspects:
   - aspect: Aspect of Precision
     status: below minimum
     matches_by_window:
-      ob47: 3
+      ob47: 4
       ob46: 7
       ob45: 9
       ob44: 4

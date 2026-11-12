@@ -655,8 +655,8 @@ community_aspects:
     aggregate:
       aspect_matches: 46
       aspect_win_rate: 0.5
-      no_aspect_matches: 1031
-      no_aspect_win_rate: 0.58
+      no_aspect_matches: 1032
+      no_aspect_win_rate: 0.579
     roles:
     - role: Solo
       matches: 21
@@ -725,7 +725,7 @@ community_aspects:
     - name: Purification Beads
       share: 0.1
     matches_by_window:
-      ob47: 22
+      ob47: 26
       ob46: 39
       ob45: 32
       ob44: 21

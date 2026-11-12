@@ -804,14 +804,14 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 39
     wins: 14
     win_share: 0.36
     aggregate:
       aspect_matches: 43
       aspect_win_rate: 0.395
-      no_aspect_matches: 862
+      no_aspect_matches: 872
       no_aspect_win_rate: 0.549
     roles:
     - role: Solo

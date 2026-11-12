@@ -827,63 +827,63 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 84
-    wins: 56
+    window_end: '2026-11-12'
+    matches: 93
+    wins: 62
     win_share: 0.67
     aggregate:
-      aspect_matches: 115
-      aspect_win_rate: 0.591
-      no_aspect_matches: 257
-      no_aspect_win_rate: 0.514
+      aspect_matches: 126
+      aspect_win_rate: 0.603
+      no_aspect_matches: 272
+      no_aspect_win_rate: 0.522
     roles:
     - role: Support
-      matches: 50
-      share: 0.6
-    - role: Mid
-      matches: 17
-      share: 0.2
+      matches: 51
+      share: 0.55
     - role: Solo
-      matches: 13
-      share: 0.15
+      matches: 20
+      share: 0.22
+    - role: Mid
+      matches: 18
+      share: 0.19
     - role: Jungle
       matches: 4
-      share: 0.05
+      share: 0.04
     base_role: Solo Support
-    base_role_share: 0.75
+    base_role_share: 0.76
     role_shift: null
     items:
     - name: Rod of Asclepius
-      share: 0.52
+      share: 0.49
     - name: Chandra's Grace
-      share: 0.51
+      share: 0.46
     - name: Freya's Tears
-      share: 0.39
+      share: 0.43
     - name: Shell of Rebuke
-      share: 0.32
-    - name: Stampede
-      share: 0.2
+      share: 0.33
     - name: Chronos' Pendant
-      share: 0.19
-    - name: Genji's Guard
-      share: 0.15
-    - name: Heartwood Charm
-      share: 0.13
+      share: 0.18
+    - name: Stampede
+      share: 0.18
+    - name: Shifter's Shield
+      share: 0.17
+    - name: Devourer's Gauntlet
+      share: 0.16
     starters:
     - name: Bluestone Brooch
-      share: 0.32
+      share: 0.38
     - name: Selflessness
-      share: 0.18
+      share: 0.16
     - name: Bluestone Pendant
       share: 0.12
     - name: Conduit Gem
-      share: 0.1
+      share: 0.09
     - name: Archmage's Gem
       share: 0.08
     - name: Heroism
-      share: 0.06
+      share: 0.05
     - name: Bumba's Hammer
-      share: 0.04
+      share: 0.03
     - name: Pendulum of the Ages
       share: 0.02
     - name: War Banner
@@ -897,14 +897,14 @@ community_aspects:
     - name: Sundering Axe
       share: 0.01
     relics:
-    - name: Phantom Shell
-      share: 0.31
-    - name: Purification Beads
-      share: 0.29
     - name: Aegis of Acceleration
-      share: 0.24
+      share: 0.3
+    - name: Phantom Shell
+      share: 0.28
+    - name: Purification Beads
+      share: 0.26
     matches_by_window:
-      ob47: 84
+      ob47: 93
       ob46: 215
       ob45: 287
       ob44: 218

@@ -849,24 +849,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 153
-    wins: 100
+    window_end: '2026-11-12'
+    matches: 162
+    wins: 106
     win_share: 0.65
     aggregate:
-      aspect_matches: 179
-      aspect_win_rate: 0.631
-      no_aspect_matches: 449
-      no_aspect_win_rate: 0.557
+      aspect_matches: 189
+      aspect_win_rate: 0.63
+      no_aspect_matches: 476
+      no_aspect_win_rate: 0.561
     roles:
     - role: Jungle
-      matches: 113
+      matches: 120
       share: 0.74
     - role: Solo
-      matches: 24
-      share: 0.16
+      matches: 25
+      share: 0.15
     - role: Support
-      matches: 14
+      matches: 15
       share: 0.09
     - role: Mid
       matches: 2
@@ -879,30 +879,30 @@ community_aspects:
       says: 'most Aspect of War players do not play Support: Jungle 74%, Support 9%'
     items:
     - name: Jotunn's Revenge
-      share: 0.5
+      share: 0.51
     - name: Hydra's Lament
-      share: 0.48
-    - name: Shifter's Shield
-      share: 0.33
+      share: 0.47
     - name: Kinetic Cuirass
-      share: 0.32
+      share: 0.34
+    - name: Shifter's Shield
+      share: 0.34
     - name: Transcendence
-      share: 0.25
-    - name: Book of Thoth
-      share: 0.23
+      share: 0.24
     - name: Genji's Guard
       share: 0.23
-    - name: Breastplate of Valor
-      share: 0.21
+    - name: Hide of the Nemean Lion
+      share: 0.22
+    - name: Book of Thoth
+      share: 0.22
     starters:
     - name: Bumba's Hammer
-      share: 0.6
+      share: 0.62
     - name: Bumba's Cudgel
       share: 0.2
     - name: Sharpshooter's Arrow
       share: 0.07
     - name: Gilded Arrow
-      share: 0.05
+      share: 0.04
     - name: Bumba's Spear
       share: 0.02
     - name: Archmage's Gem
@@ -919,13 +919,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.55
-    - name: Blink Rune
-      share: 0.16
+      share: 0.56
     - name: Aegis of Acceleration
       share: 0.15
+    - name: Blink Rune
+      share: 0.15
     matches_by_window:
-      ob47: 153
+      ob47: 162
       ob46: 208
       ob45: 328
       ob44: 201

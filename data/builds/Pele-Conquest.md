@@ -894,19 +894,19 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 33
-    wins: 21
-    win_share: 0.64
+    window_end: '2026-11-12'
+    matches: 37
+    wins: 24
+    win_share: 0.65
     aggregate:
-      aspect_matches: 38
+      aspect_matches: 43
       aspect_win_rate: 0.605
-      no_aspect_matches: 279
-      no_aspect_win_rate: 0.538
+      no_aspect_matches: 295
+      no_aspect_win_rate: 0.536
     roles:
     - role: Solo
-      matches: 31
-      share: 0.94
+      matches: 35
+      share: 0.95
     - role: Jungle
       matches: 1
       share: 0.03
@@ -917,44 +917,44 @@ community_aspects:
     base_role_share: 0.03
     role_shift:
       role: Solo
-      share: 0.94
-      says: 'most Aspect of Obsidian players do not play Jungle: Solo 94%, Jungle
+      share: 0.95
+      says: 'most Aspect of Obsidian players do not play Jungle: Solo 95%, Jungle
         3%'
     items:
     - name: brawlers-ruin
-      share: 0.7
+      share: 0.73
     - name: Shifter's Shield
-      share: 0.67
+      share: 0.68
     - name: Freya's Tears
-      share: 0.55
+      share: 0.57
     - name: Yogi's Necklace
-      share: 0.55
+      share: 0.54
     - name: Kinetic Cuirass
-      share: 0.36
-    - name: Contagion
-      share: 0.21
-    - name: Devourer's Gauntlet
-      share: 0.21
+      share: 0.35
     - name: Hussar's Wings
-      share: 0.21
+      share: 0.22
+    - name: Contagion
+      share: 0.19
+    - name: Devourer's Gauntlet
+      share: 0.19
     starters:
     - name: Bluestone Brooch
-      share: 0.7
+      share: 0.68
     - name: Bluestone Pendant
-      share: 0.21
+      share: 0.24
     - name: Leather Cowl
-      share: 0.06
+      share: 0.05
     - name: Sundering Axe
       share: 0.03
     relics:
     - name: Phantom Shell
       share: 0.76
-    - name: Sundering Arc
-      share: 0.09
     - name: Aegis of Acceleration
-      share: 0.06
+      share: 0.08
+    - name: Sundering Arc
+      share: 0.08
     matches_by_window:
-      ob47: 33
+      ob47: 37
       ob46: 46
       ob45: 89
       ob44: 77

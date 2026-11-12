@@ -804,22 +804,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 71
-    wins: 45
-    win_share: 0.63
+    window_end: '2026-11-12'
+    matches: 77
+    wins: 50
+    win_share: 0.65
     aggregate:
-      aspect_matches: 92
-      aspect_win_rate: 0.587
-      no_aspect_matches: 437
-      no_aspect_win_rate: 0.547
+      aspect_matches: 105
+      aspect_win_rate: 0.61
+      no_aspect_matches: 462
+      no_aspect_win_rate: 0.545
     roles:
     - role: Support
-      matches: 65
-      share: 0.92
+      matches: 70
+      share: 0.91
     - role: Solo
-      matches: 5
-      share: 0.07
+      matches: 6
+      share: 0.08
     - role: Jungle
       matches: 1
       share: 0.01
@@ -827,22 +827,22 @@ community_aspects:
     base_role_share: 0.01
     role_shift:
       role: Support
-      share: 0.92
+      share: 0.91
       says: 'most Aspect of the Watchful Pride players do not play Jungle: Support
-        92%, Jungle 1%'
+        91%, Jungle 1%'
     items:
     - name: Freya's Tears
-      share: 0.72
+      share: 0.73
     - name: Genji's Guard
-      share: 0.54
+      share: 0.53
     - name: Shell of Rebuke
-      share: 0.48
+      share: 0.47
     - name: Breastplate of Valor
       share: 0.44
     - name: Shifter's Shield
-      share: 0.42
+      share: 0.43
     - name: Sundering Echo
-      share: 0.41
+      share: 0.42
     - name: Gauntlet of Thebes
       share: 0.35
     - name: Stone of Binding
@@ -851,7 +851,7 @@ community_aspects:
     - name: Bluestone Brooch
       share: 0.51
     - name: Bluestone Pendant
-      share: 0.37
+      share: 0.38
     - name: Bumba's Hammer
       share: 0.04
     - name: Warrior's Axe
@@ -866,13 +866,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.28
+      share: 0.3
     - name: Phantom Shell
-      share: 0.25
+      share: 0.23
     - name: Aegis of Acceleration
-      share: 0.21
+      share: 0.22
     matches_by_window:
-      ob47: 71
+      ob47: 77
       ob46: 121
       ob45: 66
       ob44: 48

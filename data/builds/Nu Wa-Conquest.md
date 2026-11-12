@@ -956,22 +956,22 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
-    matches: 33
+    window_end: '2026-11-12'
+    matches: 34
     wins: 18
-    win_share: 0.55
+    win_share: 0.53
     aggregate:
-      aspect_matches: 43
-      aspect_win_rate: 0.465
-      no_aspect_matches: 609
-      no_aspect_win_rate: 0.535
+      aspect_matches: 45
+      aspect_win_rate: 0.444
+      no_aspect_matches: 628
+      no_aspect_win_rate: 0.537
     roles:
     - role: Carry
-      matches: 18
-      share: 0.55
+      matches: 19
+      share: 0.56
     - role: Solo
       matches: 10
-      share: 0.3
+      share: 0.29
     - role: Jungle
       matches: 2
       share: 0.06
@@ -985,30 +985,30 @@ community_aspects:
     base_role_share: 0.03
     role_shift:
       role: Carry
-      share: 0.55
-      says: 'most Aspect of Shining Mist players do not play Mid: Carry 55%, Mid 3%'
+      share: 0.56
+      says: 'most Aspect of Shining Mist players do not play Mid: Carry 56%, Mid 3%'
     items:
     - name: Riptalon
-      share: 0.61
-    - name: Devourer's Gauntlet
-      share: 0.55
+      share: 0.62
     - name: Tyrfing
-      share: 0.55
+      share: 0.56
+    - name: Devourer's Gauntlet
+      share: 0.53
     - name: Silverbranch Bow
-      share: 0.42
+      share: 0.44
     - name: Dagger of Frenzy
-      share: 0.33
+      share: 0.35
     - name: Dominance
-      share: 0.3
+      share: 0.29
     - name: The Executioner
-      share: 0.3
+      share: 0.29
     - name: Deathbringer
-      share: 0.27
+      share: 0.26
     starters:
     - name: Death's Embrace
-      share: 0.36
+      share: 0.35
     - name: Sharpshooter's Arrow
-      share: 0.3
+      share: 0.32
     - name: Gilded Arrow
       share: 0.12
     - name: Hunter's Cowl
@@ -1023,13 +1023,13 @@ community_aspects:
       share: 0.03
     relics:
     - name: Aegis of Acceleration
-      share: 0.36
+      share: 0.35
     - name: Purification Beads
-      share: 0.33
+      share: 0.35
     - name: Agility Relic
       share: 0.21
     matches_by_window:
-      ob47: 10
+      ob47: 11
       ob46: 23
       ob45: 46
       ob44: 37

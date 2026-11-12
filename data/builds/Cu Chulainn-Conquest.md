@@ -638,18 +638,18 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 56
-    wins: 27
-    win_share: 0.48
+    window_end: '2026-11-12'
+    matches: 59
+    wins: 28
+    win_share: 0.47
     aggregate:
-      aspect_matches: 79
-      aspect_win_rate: 0.456
-      no_aspect_matches: 421
+      aspect_matches: 85
+      aspect_win_rate: 0.459
+      no_aspect_matches: 439
       no_aspect_win_rate: 0.556
     roles:
     - role: Solo
-      matches: 45
+      matches: 47
       share: 0.8
     - role: Jungle
       matches: 7
@@ -657,54 +657,57 @@ community_aspects:
     - role: Support
       matches: 4
       share: 0.07
+    - role: Mid
+      matches: 1
+      share: 0.02
     base_role: Solo
     base_role_share: 0.8
     role_shift: null
     items:
-    - name: Kinetic Cuirass
-      share: 0.52
     - name: Devourer's Gauntlet
-      share: 0.5
+      share: 0.49
+    - name: Kinetic Cuirass
+      share: 0.49
     - name: Berserker's Shield
-      share: 0.45
+      share: 0.47
+    - name: Riptalon
+      share: 0.37
     - name: Freya's Tears
       share: 0.36
-    - name: Riptalon
-      share: 0.36
     - name: Shifter's Shield
-      share: 0.3
+      share: 0.29
     - name: Mystical Mail
-      share: 0.23
+      share: 0.22
     - name: Shogun's Ofuda
-      share: 0.18
+      share: 0.19
     starters:
     - name: Bluestone Brooch
-      share: 0.27
+      share: 0.25
     - name: Hunter's Cowl
-      share: 0.21
+      share: 0.24
     - name: Bluestone Pendant
-      share: 0.18
+      share: 0.17
     - name: Death's Embrace
       share: 0.14
     - name: Leather Cowl
-      share: 0.09
+      share: 0.08
     - name: Death's Toll
       share: 0.05
+    - name: War Banner
+      share: 0.03
     - name: Blood-soaked Shroud
       share: 0.02
     - name: Bumba's Hammer
       share: 0.02
-    - name: War Banner
-      share: 0.02
     relics:
     - name: Purification Beads
-      share: 0.23
+      share: 0.24
     - name: Sundering Arc
-      share: 0.23
+      share: 0.22
     - name: Agility Relic
       share: 0.2
     matches_by_window:
-      ob47: 56
+      ob47: 59
       ob46: 112
       ob45: 55
       ob44: 90

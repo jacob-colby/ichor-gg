@@ -985,72 +985,72 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 45
-    wins: 24
+    window_end: '2026-11-12'
+    matches: 49
+    wins: 26
     win_share: 0.53
     aggregate:
-      aspect_matches: 53
+      aspect_matches: 57
       aspect_win_rate: 0.509
-      no_aspect_matches: 299
-      no_aspect_win_rate: 0.595
+      no_aspect_matches: 326
+      no_aspect_win_rate: 0.598
     roles:
     - role: Solo
-      matches: 14
-      share: 0.31
+      matches: 16
+      share: 0.33
     - role: Support
       matches: 10
-      share: 0.22
-    - role: Mid
-      matches: 9
       share: 0.2
     - role: Carry
-      matches: 7
-      share: 0.16
+      matches: 9
+      share: 0.18
+    - role: Mid
+      matches: 9
+      share: 0.18
     - role: Jungle
       matches: 5
-      share: 0.11
+      share: 0.1
     base_role: Mid
-    base_role_share: 0.2
+    base_role_share: 0.18
     role_shift:
       role: Solo
-      share: 0.31
-      says: 'most Aspect of Mischief players do not play Mid: Solo 31%, Mid 20%'
+      share: 0.33
+      says: 'most Aspect of Mischief players do not play Mid: Solo 33%, Mid 18%'
     items:
     - name: The World Stone
-      share: 0.53
+      share: 0.51
     - name: Genji's Guard
-      share: 0.36
+      share: 0.35
     - name: Lifebinder
-      share: 0.31
+      share: 0.33
     - name: Spear of Desolation
       share: 0.31
     - name: Breastplate of Valor
       share: 0.27
     - name: Chronos' Pendant
-      share: 0.24
+      share: 0.22
     - name: Freya's Tears
       share: 0.22
     - name: Polynomicon
       share: 0.22
     starters:
     - name: Archmage's Gem
-      share: 0.2
+      share: 0.18
     - name: Conduit Gem
       share: 0.18
     - name: Sundering Axe
-      share: 0.13
+      share: 0.14
     - name: Pendulum of the Ages
-      share: 0.09
+      share: 0.1
     - name: Sands Of Time
-      share: 0.09
+      share: 0.08
     - name: Gilded Arrow
-      share: 0.07
+      share: 0.06
+    - name: Sharpshooter's Arrow
+      share: 0.06
     - name: Bluestone Brooch
       share: 0.04
     - name: Bluestone Pendant
-      share: 0.04
-    - name: Sharpshooter's Arrow
       share: 0.04
     - name: Warrior's Axe
       share: 0.04
@@ -1062,13 +1062,13 @@ community_aspects:
       share: 0.02
     relics:
     - name: Purification Beads
-      share: 0.58
+      share: 0.61
     - name: Aegis of Acceleration
-      share: 0.29
+      share: 0.27
     - name: Sundering Arc
-      share: 0.07
+      share: 0.06
     matches_by_window:
-      ob47: 45
+      ob47: 49
       ob46: 123
       ob45: 81
       ob44: 112
@@ -1093,7 +1093,7 @@ community_aspects:
   - aspect: Aspect of Victorious Conquest
     status: below minimum
     matches_by_window:
-      ob47: 1
+      ob47: 2
       ob45: 1
   - aspect: Aspect of War
     status: below minimum

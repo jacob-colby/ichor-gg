@@ -976,22 +976,22 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
-    matches: 31
-    wins: 14
-    win_share: 0.45
+    window_end: '2026-11-12'
+    matches: 34
+    wins: 15
+    win_share: 0.44
     aggregate:
-      aspect_matches: 40
-      aspect_win_rate: 0.45
-      no_aspect_matches: 918
-      no_aspect_win_rate: 0.564
+      aspect_matches: 47
+      aspect_win_rate: 0.468
+      no_aspect_matches: 939
+      no_aspect_win_rate: 0.561
     roles:
     - role: Jungle
       matches: 20
-      share: 0.65
+      share: 0.59
     - role: Solo
-      matches: 10
-      share: 0.32
+      matches: 13
+      share: 0.38
     - role: Support
       matches: 1
       share: 0.03
@@ -999,48 +999,48 @@ community_aspects:
     base_role_share: 0.97
     role_shift: null
     items:
-    - name: Barbed Carver
-      share: 0.26
-    - name: Shield of the Phoenix
-      share: 0.26
     - name: Shifter's Shield
-      share: 0.26
-    - name: Bracer of The Abyss
-      share: 0.23
+      share: 0.29
+    - name: Barbed Carver
+      share: 0.24
     - name: Devourer's Gauntlet
-      share: 0.23
+      share: 0.24
     - name: Genji's Guard
-      share: 0.23
+      share: 0.24
+    - name: Shield of the Phoenix
+      share: 0.24
+    - name: Bracer of The Abyss
+      share: 0.21
     - name: Nimble Ring
-      share: 0.23
+      share: 0.21
     - name: Sanguine Lash
-      share: 0.23
+      share: 0.21
     starters:
     - name: Bluestone Brooch
-      share: 0.19
-    - name: Bluestone Pendant
-      share: 0.16
+      share: 0.21
     - name: Bumba's Hammer
-      share: 0.16
-    - name: Hunter's Cowl
-      share: 0.16
+      share: 0.18
+    - name: Bluestone Pendant
+      share: 0.15
     - name: Bumba's Cudgel
-      share: 0.13
+      share: 0.15
+    - name: Hunter's Cowl
+      share: 0.15
     - name: Leather Cowl
-      share: 0.1
+      share: 0.09
     - name: Blood-soaked Shroud
       share: 0.06
     - name: Sundering Axe
       share: 0.03
     relics:
     - name: Purification Beads
-      share: 0.35
+      share: 0.38
     - name: Aegis of Acceleration
-      share: 0.23
+      share: 0.24
     - name: Sundering Arc
-      share: 0.23
+      share: 0.21
     matches_by_window:
-      ob47: 8
+      ob47: 11
       ob46: 23
       ob45: 45
       ob44: 53

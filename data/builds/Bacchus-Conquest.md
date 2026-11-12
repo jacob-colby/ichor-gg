@@ -921,24 +921,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 559
-    wins: 339
+    window_end: '2026-11-12'
+    matches: 588
+    wins: 359
     win_share: 0.61
     aggregate:
-      aspect_matches: 669
-      aspect_win_rate: 0.596
-      no_aspect_matches: 167
-      no_aspect_win_rate: 0.491
+      aspect_matches: 724
+      aspect_win_rate: 0.595
+      no_aspect_matches: 176
+      no_aspect_win_rate: 0.494
     roles:
     - role: Solo
-      matches: 488
+      matches: 514
       share: 0.87
     - role: Support
-      matches: 50
+      matches: 51
       share: 0.09
     - role: Jungle
-      matches: 16
+      matches: 18
       share: 0.03
     - role: Mid
       matches: 3
@@ -955,7 +955,7 @@ community_aspects:
         9%'
     items:
     - name: Berserker's Shield
-      share: 0.89
+      share: 0.9
     - name: Devourer's Gauntlet
       share: 0.83
     - name: Kinetic Cuirass
@@ -963,11 +963,11 @@ community_aspects:
     - name: Shogun's Ofuda
       share: 0.53
     - name: Freya's Tears
-      share: 0.39
+      share: 0.38
     - name: Hussar's Wings
       share: 0.28
     - name: Shifter's Shield
-      share: 0.14
+      share: 0.15
     - name: Hide of the Nemean Lion
       share: 0.13
     starters:
@@ -983,23 +983,23 @@ community_aspects:
       share: 0.02
     - name: Bluestone Brooch
       share: 0.01
-    - name: War Flag
-      share: 0.01
     - name: Death's Toll
+      share: 0.01
+    - name: War Flag
       share: 0.01
     - name: Sundering Axe
       share: 0.01
-    - name: Heroism
-      share: 0.0
     - name: Sharpshooter's Arrow
+      share: 0.01
+    - name: Bumba's Spear
+      share: 0.0
+    - name: Heroism
       share: 0.0
     - name: Bumba's Cudgel
       share: 0.0
     - name: Bumba's Golden Dagger
       share: 0.0
     - name: Bumba's Hammer
-      share: 0.0
-    - name: Bumba's Spear
       share: 0.0
     - name: Gilded Arrow
       share: 0.0
@@ -1009,13 +1009,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Agility Relic
-      share: 0.62
+      share: 0.61
     - name: Purification Beads
-      share: 0.16
+      share: 0.17
     - name: Sundering Arc
       share: 0.08
     matches_by_window:
-      ob47: 559
+      ob47: 588
       ob46: 659
       ob45: 521
       ob44: 221

@@ -89,8 +89,8 @@ read the 09-08 window, at least 2h27m after ob44's first (11:33:41Z).
     for the next run. Nothing is lost: a held match is newer than every stored
     one, and each walk runs down to the newest stored match, so the next run
     fetches it again (inside retention; the walk's 800-page cap is ~76 days of
-    the busiest feed). The no-aspect SAMPLE's held matches are not fetched
-    again: the next run samples its own newest page. A newest window with no
+    the busiest feed). That now holds for the no-aspect feed too, which is
+    walked the same way since the census. A newest window with no
     `end` vouches for nothing after its start. Refusing the run instead would
     lose the whole day to one match the index had not counted yet, and every
     day of a lag; the store would gain nothing by it.
@@ -122,12 +122,43 @@ fetched again. 36,947 matches: OB44 9,336 (71% of the aggregate's aspect
 matches, the 2.5 missing days), OB45 11,912 (85%), OB46 10,711 (85%), OB47
 4,178 plus the 810-match no-aspect sample (85%).
 
-WHAT ONE RUN FETCHES (`refresh`), about 217 requests at 2.5 s (~9 min) for
-2026-11-08's volumes, on top of the ~100 the community refresh already sends:
+THE NO-ASPECT CENSUS (2026-11-11; `NONE_CENSUS`, `meta["census_from"]`).
+Through 2026-11-10 the no-aspect feed was stored as a SAMPLE, the ten newest
+matches per god per run, so 94% of the store was aspect players (38,204 of
+40,616 matches) and a god with no aspect (14 of 95) had no file at all. The
+builds this repo ships are base-kit builds, and the one question the store
+can answer that nothing else here can (does a match holding more of a build
+win more, `build_outcomes`) could only be asked of the wrong kit. So the
+no-aspect feed is now walked whole, exactly as an aspect feed is.
+  * `census_from[slug]` is the instant from which that god's no-aspect
+    matches are ALL stored. It matters because a sampled store has gaps below
+    its newest no-aspect match: until a god has it, the walk ignores what is
+    stored and starts over at the newest window's start; after, it stops at
+    the newest stored no-aspect match like any other feed.
+  * THE BACKFILL was OB47 only: 2026-11-11, 3,031 requests, 27,168 matches
+    added, no retry. OB47 then held 28,676 no-aspect matches against the
+    aggregate's 33,514 (86%, the feed's usual share). Every god's
+    `census_from` is OB47's start, 2026-11-03T11:30:13.083Z. OB44-OB46 keep
+    their samples and are NOT a census: the page that crosses a window's
+    start also files a few older matches (515 landed in OB46), and
+    `census_from` is what says they are stragglers. The 45-day retention
+    would still have reached back to late September on that day; it was not
+    walked, because those matches are other patches' items.
+  * WHAT IT COSTS, and it is a standing cost. About 3,300 no-aspect matches a
+    day at OB47's rate: roughly 330 more requests and 15 minutes on the daily
+    job, and about 1.1 MB a day in git (the store went 13 MB -> 23 MB on the
+    backfill). A retention policy for the store is undecided and is Jacob's
+    call; `NONE_CENSUS = False` restores the sample.
+  * Nothing in the notes changes for it: `community_aspects` reads aspect
+    records and the aggregate, never a no-aspect record.
+
+WHAT ONE RUN FETCHES (`refresh`), about 550 requests at 2.5 s (~24 min) at
+2026-11-11's volumes, on top of the ~100 the community refresh already sends
+(217 and ~9 min before the census):
   * the newest two windows' split index (start/end + aspect aggregates);
-  * one `aspect=none` page per god: its `availableAspects`, and the 10 newest
-    no-aspect matches as a SAMPLE — a contrast, not a census (it is the 10
-    newest at the time of the run, so it leans to that time of day);
+  * every god's `aspect=none` feed: its `availableAspects` off the first
+    page, and the no-aspect matches walked back to the newest one stored
+    (THE NO-ASPECT CENSUS above);
   * every aspect feed walked back to the newest match already stored, or, for
     a feed with nothing stored, to the start of the newest window. A missed
     day costs nothing: the next run walks further back. So does a held-back
@@ -285,8 +316,13 @@ GOD_PAGE_URL = "https://smitebrain.com/gods/{slug}/"
 #: narrower bands are recoverable from `rank` (Master+ is rank >= 4400).
 DIVISION = "obsidian"
 PAGE_SIZE = 10
-#: No-aspect pages per god per run — the contrast sample, deliberately capped.
+#: No-aspect pages per god per run when the census is off — the contrast
+#: sample #129 stored, deliberately capped.
 NONE_PAGES = 1
+#: Walk every god's no-aspect feed whole, like an aspect feed (THE NO-ASPECT
+#: CENSUS in the module docstring). `meta["census_from"][slug]` is the instant
+#: from which that god's no-aspect matches are all in the store.
+NONE_CENSUS = True
 #: The newest two windows get their split index refreshed each run: the
 #: current one is still growing, and the one before is what the fallback reads.
 WINDOWS_REFRESHED = 2
@@ -505,19 +541,25 @@ def parse_page(text: str, god_name: str, aspect=None, cursor=None):
     return records, [{"name": a["name"].strip(), "value": a["value"]} for a in available], oldest_raw
 
 
-def walk_feed(fetch, slug, god_name, aspect, floor):
-    """Every record of one aspect feed newer than `floor` (plus the page that
-    crosses it — the merge dedupes). Stops at a short page: the end of the
-    source's retention."""
+def walk_feed(fetch, slug, god_name, aspect, floor, first=None):
+    """Every record of one feed newer than `floor` (plus the page that crosses
+    it — the merge dedupes). `aspect` is the `{name, value}` the feed is
+    filtered on, or None for the no-aspect feed. Stops at a short page: the
+    end of the source's retention. `first` is page one as `(records,
+    raw_oldest_timestamp)` when the caller has already fetched it."""
+    value = aspect["value"] if aspect else "none"
     out, cursor = [], None
-    for _ in range(MAX_PAGES_PER_FEED):
-        records, _, oldest_raw = parse_page(fetch(feed_url(slug, aspect["value"], cursor)),
-                                            god_name, aspect, cursor)
+    for page in range(MAX_PAGES_PER_FEED):
+        if page == 0 and first is not None:
+            records, oldest_raw = first
+        else:
+            records, _, oldest_raw = parse_page(fetch(feed_url(slug, value, cursor)),
+                                                god_name, aspect, cursor)
         out.extend(records)
         if len(records) < PAGE_SIZE or (floor and records[-1]["t"] <= floor):
             return out
         cursor = oldest_raw
-    raise FeedCollapse(f"{god_name} {aspect['value']}: {MAX_PAGES_PER_FEED} pages without "
+    raise FeedCollapse(f"{god_name} {value}: {MAX_PAGES_PER_FEED} pages without "
                        "reaching the stored data or the end of the feed")
 
 
@@ -666,7 +708,8 @@ def conquest_gods(builds_root: Path = BUILDS_ROOT) -> list:
     return out
 
 
-def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=print) -> dict:
+def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=print,
+            census=None) -> dict:
     """Fetch, validate, and only then write. See the module docstring."""
     meta, aggregate = load_meta(root), load_aggregate(root)
     if window_ids is None:
@@ -690,17 +733,30 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
     newest_start = meta["windows"][ordered_windows(meta)[0]]["start"]
     extent = known_extent(meta)
 
+    census = NONE_CENSUS if census is None else census
+    census_from = dict(meta.get("census_from") or {})
     pending, empty_none_pages, summary, held = {}, 0, {}, 0
     for god in gods:
         slug = god_slug(god)
-        records, available, _ = parse_page(fetch(feed_url(slug, "none")), god)
+        records, available, oldest_raw = parse_page(fetch(feed_url(slug, "none")), god)
         if not records:
             empty_none_pages += 1
         meta["aspects"][slug] = available
-        if not available:
+        if not available and not census:
             continue
         stored = [r for recs in load_god(root, slug).values() for r in recs]
-        got = list(records[: NONE_PAGES * PAGE_SIZE])
+        if census:
+            # Whole from `census_from` on, so the newest stored no-aspect match
+            # is a safe floor; before a god's first census run the store holds
+            # only samples with gaps between them, and the walk starts over at
+            # the newest window's start.
+            mine = [r["t"] for r in stored if r["aspect"] is None]
+            floor = max(mine) if slug in census_from and mine else newest_start
+            got = walk_feed(fetch, slug, god, None, floor, first=(records, oldest_raw))
+            census_from.setdefault(slug, newest_start)
+            summary[f"{slug}/none"] = len(got)
+        else:
+            got = list(records[: NONE_PAGES * PAGE_SIZE])
         for aspect in available:
             mine = [r["t"] for r in stored if r["aspect"] == aspect["value"]]
             floor = max(mine) if mine else newest_start
@@ -717,6 +773,8 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
     for slug, records in pending.items():
         for w, n in store_records(root, slug, records, meta).items():
             added[w] = added.get(w, 0) + n
+    if census:
+        meta["census_from"] = census_from
     save_json(root / META_FILE, meta)
     save_json(root / AGGREGATE_FILE, aggregate)
     log(f"  aspect matches: {sum(added.values())} new across {len(pending)} gods "

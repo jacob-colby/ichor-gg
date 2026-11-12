@@ -1738,7 +1738,7 @@ community_aspects:
     aggregate:
       aspect_matches: 58
       aspect_win_rate: 0.345
-      no_aspect_matches: 1092
+      no_aspect_matches: 1093
       no_aspect_win_rate: 0.514
     roles:
     - role: Carry
@@ -1806,7 +1806,7 @@ community_aspects:
     - name: Agility Relic
       share: 0.02
     matches_by_window:
-      ob47: 27
+      ob47: 29
       ob46: 48
       ob45: 85
       ob44: 83

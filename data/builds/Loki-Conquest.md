@@ -813,22 +813,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 93
-    wins: 50
+    window_end: '2026-11-12'
+    matches: 100
+    wins: 54
     win_share: 0.54
     aggregate:
-      aspect_matches: 112
-      aspect_win_rate: 0.536
-      no_aspect_matches: 657
-      no_aspect_win_rate: 0.527
+      aspect_matches: 122
+      aspect_win_rate: 0.541
+      no_aspect_matches: 697
+      no_aspect_win_rate: 0.535
     roles:
     - role: Solo
-      matches: 78
-      share: 0.84
+      matches: 85
+      share: 0.85
     - role: Jungle
       matches: 9
-      share: 0.1
+      share: 0.09
     - role: Support
       matches: 5
       share: 0.05
@@ -836,33 +836,33 @@ community_aspects:
       matches: 1
       share: 0.01
     base_role: Jungle
-    base_role_share: 0.1
+    base_role_share: 0.09
     role_shift:
       role: Solo
-      share: 0.84
-      says: 'most Aspect of Agony players do not play Jungle: Solo 84%, Jungle 10%'
+      share: 0.85
+      says: 'most Aspect of Agony players do not play Jungle: Solo 85%, Jungle 9%'
     items:
     - name: Freya's Tears
       share: 0.54
     - name: Shifter's Shield
-      share: 0.49
-    - name: Prophetic Cloak
-      share: 0.32
+      share: 0.52
     - name: Yogi's Necklace
+      share: 0.32
+    - name: Prophetic Cloak
       share: 0.31
     - name: Genji's Guard
       share: 0.27
     - name: brawlers-ruin
-      share: 0.25
+      share: 0.26
     - name: Kinetic Cuirass
-      share: 0.24
+      share: 0.23
     - name: Gladiator's Shield
       share: 0.22
     starters:
     - name: Bluestone Brooch
-      share: 0.4
+      share: 0.42
     - name: Sundering Axe
-      share: 0.23
+      share: 0.21
     - name: Bluestone Pendant
       share: 0.13
     - name: Warrior's Axe
@@ -881,13 +881,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Sundering Arc
-      share: 0.45
+      share: 0.44
     - name: Purification Beads
-      share: 0.17
+      share: 0.19
     - name: Aegis of Acceleration
-      share: 0.16
+      share: 0.17
     matches_by_window:
-      ob47: 93
+      ob47: 100
       ob46: 235
       ob45: 217
       ob44: 197

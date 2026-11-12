@@ -761,19 +761,19 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 55
-    wins: 31
+    window_end: '2026-11-12'
+    matches: 57
+    wins: 32
     win_share: 0.56
     aggregate:
-      aspect_matches: 65
-      aspect_win_rate: 0.492
-      no_aspect_matches: 155
-      no_aspect_win_rate: 0.555
+      aspect_matches: 67
+      aspect_win_rate: 0.493
+      no_aspect_matches: 171
+      no_aspect_win_rate: 0.544
     roles:
     - role: Solo
-      matches: 47
-      share: 0.85
+      matches: 49
+      share: 0.86
     - role: Support
       matches: 4
       share: 0.07
@@ -787,32 +787,32 @@ community_aspects:
     base_role_share: 0.04
     role_shift:
       role: Solo
-      share: 0.85
-      says: 'most Aspect of Justice players do not play Jungle: Solo 85%, Jungle 4%'
+      share: 0.86
+      says: 'most Aspect of Justice players do not play Jungle: Solo 86%, Jungle 4%'
     items:
     - name: Berserker's Shield
-      share: 0.73
+      share: 0.74
     - name: Kinetic Cuirass
-      share: 0.62
+      share: 0.61
     - name: Devourer's Gauntlet
-      share: 0.58
+      share: 0.6
     - name: Freya's Tears
-      share: 0.36
+      share: 0.37
     - name: Sundering Echo
       share: 0.33
     - name: Avenging Blade
-      share: 0.2
+      share: 0.19
     - name: Hussar's Wings
-      share: 0.16
+      share: 0.18
     - name: Vital Amplifier
       share: 0.16
     starters:
     - name: Hunter's Cowl
       share: 0.42
     - name: Leather Cowl
-      share: 0.25
+      share: 0.26
     - name: Sundering Axe
-      share: 0.15
+      share: 0.14
     - name: Bluestone Brooch
       share: 0.04
     - name: Bumba's Hammer
@@ -831,13 +831,13 @@ community_aspects:
       share: 0.02
     relics:
     - name: Purification Beads
-      share: 0.33
+      share: 0.32
     - name: Sundering Arc
-      share: 0.27
+      share: 0.26
     - name: Phantom Shell
-      share: 0.15
+      share: 0.14
     matches_by_window:
-      ob47: 55
+      ob47: 57
       ob46: 125
       ob45: 144
       ob44: 63

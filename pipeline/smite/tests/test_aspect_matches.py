@@ -270,11 +270,59 @@ def test_an_empty_store_walks_back_to_the_newest_window_and_writes_everything(tm
     am.refresh(fake, ["Tsukuyomi"], tmp_path, window_ids=["ob47", "ob46"], log=lambda *_: None)
     stored = am.load_god(tmp_path, "tsukuyomi")["ob47"]
     assert sum(r["aspect"] == "aspect-of-mangetsu" for r in stored) == 25
-    assert sum(r["aspect"] is None for r in stored) == am.NONE_PAGES * am.PAGE_SIZE
+    assert sum(r["aspect"] is None for r in stored) == 12        # the census: every page
     meta = am.load_meta(tmp_path)
+    assert meta["census_from"] == {"tsukuyomi": META["windows"]["ob47"]["start"]}
     assert meta["aspects"]["tsukuyomi"] == [MANGETSU]
     assert set(meta["windows"]) == {"ob46", "ob47"}
     assert set(am.load_aggregate(tmp_path)) == {"ob46", "ob47"}
+
+
+def test_with_the_census_off_the_no_aspect_feed_is_one_sampled_page(tmp_path):
+    """#129's behaviour, kept behind the switch: ten newest, and no claim that
+    the god's no-aspect matches are whole."""
+    am.refresh(_fake(), ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=lambda *_: None,
+               census=False)
+    stored = am.load_god(tmp_path, "tsukuyomi")["ob47"]
+    assert sum(r["aspect"] is None for r in stored) == am.NONE_PAGES * am.PAGE_SIZE
+    assert "census_from" not in am.load_meta(tmp_path)
+
+
+def test_a_store_of_samples_is_walked_whole_on_its_first_census_run(tmp_path):
+    """A sampled store has gaps below its newest no-aspect match, so that match
+    is not a floor until `census_from` says the feed is whole. The first census
+    run walks back to the newest window's start; the one after stops at the
+    store."""
+    quiet = lambda *_: None
+    feeds = {"aspect-of-mangetsu": _feed(3, 0, "Aspect of Mangetsu", 0), "none": _feed(35, 0, None, 1000)}
+    gods = {"tsukuyomi": {"aspects": [MANGETSU], "feeds": feeds}}
+    late = dict(META["windows"], ob47={**META["windows"]["ob47"], "end": "2026-11-06T12:00:00.000Z"})
+    am.refresh(FakeFeed(gods, windows=late), ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=quiet,
+               census=False)
+    none = lambda: [r for r in am.load_god(tmp_path, "tsukuyomi")["ob47"] if r["aspect"] is None]
+    assert len(none()) == 10                       # the newest page only: 25 older ones missing
+
+    first = FakeFeed(gods, windows=late)
+    am.refresh(first, ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=quiet)
+    assert len(none()) == 35
+    assert len([u for u in first.urls if '"aspect":"none"' in unquote(u)]) == 4   # three full pages and the short one
+
+    second = FakeFeed(gods, windows=late)
+    am.refresh(second, ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=quiet)
+    assert len([u for u in second.urls if '"aspect":"none"' in unquote(u)]) == 1
+    assert len(none()) == 35
+
+
+def test_a_god_with_no_aspect_is_stored_by_the_census_and_skipped_without_it(tmp_path):
+    """14 of 95 gods have no aspect. #129 stored nothing for them; the census
+    is about base-kit matches, and theirs are all base-kit."""
+    quiet = lambda *_: None
+    gods = {"tsukuyomi": {"aspects": [], "feeds": {"none": _feed(12, 0, None, 1000)}}}
+    am.refresh(FakeFeed(gods), ["Tsukuyomi"], tmp_path / "off", window_ids=["ob47"], log=quiet,
+               census=False)
+    assert not any((tmp_path / "off").rglob("*.jsonl"))
+    am.refresh(FakeFeed(gods), ["Tsukuyomi"], tmp_path / "on", window_ids=["ob47"], log=quiet)
+    assert len(am.load_god(tmp_path / "on", "tsukuyomi")["ob47"]) == 12
 
 
 def test_a_second_run_stops_at_the_stored_data(tmp_path):

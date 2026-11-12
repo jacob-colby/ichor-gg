@@ -817,24 +817,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 115
-    wins: 66
-    win_share: 0.57
+    window_end: '2026-11-12'
+    matches: 123
+    wins: 71
+    win_share: 0.58
     aggregate:
-      aspect_matches: 132
+      aspect_matches: 139
       aspect_win_rate: 0.583
-      no_aspect_matches: 455
-      no_aspect_win_rate: 0.51
+      no_aspect_matches: 483
+      no_aspect_win_rate: 0.507
     roles:
     - role: Support
-      matches: 59
-      share: 0.51
+      matches: 64
+      share: 0.52
     - role: Solo
-      matches: 38
+      matches: 40
       share: 0.33
     - role: Jungle
-      matches: 16
+      matches: 17
       share: 0.14
     - role: Carry
       matches: 1
@@ -846,20 +846,20 @@ community_aspects:
     base_role_share: 0.14
     role_shift:
       role: Support
-      share: 0.51
-      says: 'most Aspect of Righteous Flame players do not play Jungle: Support 51%,
+      share: 0.52
+      says: 'most Aspect of Righteous Flame players do not play Jungle: Support 52%,
         Jungle 14%'
     items:
     - name: Freya's Tears
-      share: 0.44
+      share: 0.45
     - name: Shifter's Shield
-      share: 0.36
-    - name: Genji's Guard
       share: 0.35
+    - name: Genji's Guard
+      share: 0.33
     - name: Runeforged Hammer
       share: 0.25
     - name: Shell of Rebuke
-      share: 0.23
+      share: 0.24
     - name: Regrowth Striders
       share: 0.23
     - name: Gauntlet of Thebes
@@ -868,7 +868,7 @@ community_aspects:
       share: 0.2
     starters:
     - name: Bluestone Brooch
-      share: 0.31
+      share: 0.3
     - name: Bluestone Pendant
       share: 0.2
     - name: War Flag
@@ -877,21 +877,23 @@ community_aspects:
       share: 0.07
     - name: Bumba's Hammer
       share: 0.05
+    - name: Heroism
+      share: 0.05
     - name: Sundering Axe
       share: 0.05
-    - name: Heroism
-      share: 0.03
     - name: Warrior's Axe
-      share: 0.03
+      share: 0.04
     - name: Bumba's Cudgel
-      share: 0.03
+      share: 0.02
     - name: Conduit Gem
-      share: 0.03
+      share: 0.02
     - name: Hunter's Cowl
       share: 0.02
     - name: Leather Cowl
       share: 0.02
     - name: Pendulum of the Ages
+      share: 0.02
+    - name: Sands Of Time
       share: 0.02
     - name: Archmage's Gem
       share: 0.01
@@ -901,13 +903,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Phantom Shell
-      share: 0.34
-    - name: Blink Rune
-      share: 0.18
+      share: 0.33
     - name: Sundering Arc
-      share: 0.18
+      share: 0.19
+    - name: Blink Rune
+      share: 0.17
     matches_by_window:
-      ob47: 115
+      ob47: 123
       ob46: 146
       ob45: 140
       ob44: 139

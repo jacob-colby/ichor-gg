@@ -1110,7 +1110,7 @@ community_aspects:
   - aspect: Aspect of Preservation
     status: below minimum
     matches_by_window:
-      ob47: 3
+      ob47: 4
       ob46: 9
       ob45: 6
 ---

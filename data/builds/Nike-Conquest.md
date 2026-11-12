@@ -656,24 +656,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 304
-    wins: 183
+    window_end: '2026-11-12'
+    matches: 323
+    wins: 193
     win_share: 0.6
     aggregate:
-      aspect_matches: 390
-      aspect_win_rate: 0.554
-      no_aspect_matches: 232
-      no_aspect_win_rate: 0.435
+      aspect_matches: 412
+      aspect_win_rate: 0.553
+      no_aspect_matches: 247
+      no_aspect_win_rate: 0.441
     roles:
     - role: Jungle
-      matches: 158
+      matches: 169
       share: 0.52
     - role: Mid
-      matches: 90
+      matches: 96
       share: 0.3
     - role: Solo
-      matches: 50
+      matches: 52
       share: 0.16
     - role: Carry
       matches: 4
@@ -692,7 +692,7 @@ community_aspects:
     - name: Jotunn's Revenge
       share: 0.89
     - name: Heartseeker
-      share: 0.84
+      share: 0.83
     - name: The Crusher
       share: 0.69
     - name: Transcendence
@@ -700,18 +700,18 @@ community_aspects:
     - name: Blinking Abyss
       share: 0.29
     - name: Avatar's Parashu
-      share: 0.24
+      share: 0.23
     - name: Titan's Bane
       share: 0.19
-    - name: brawlers-ruin
+    - name: Pendulum Blade
       share: 0.15
     starters:
     - name: Archmage's Gem
-      share: 0.47
+      share: 0.48
     - name: Bluestone Brooch
-      share: 0.22
+      share: 0.21
     - name: Conduit Gem
-      share: 0.12
+      share: 0.11
     - name: Pendulum of the Ages
       share: 0.09
     - name: Bluestone Pendant
@@ -730,7 +730,7 @@ community_aspects:
     - name: Blink Rune
       share: 0.14
     matches_by_window:
-      ob47: 304
+      ob47: 323
       ob46: 900
       ob45: 614
     unmapped_slugs:

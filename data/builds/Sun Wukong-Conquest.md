@@ -661,69 +661,69 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 36
-    wins: 17
+    window_end: '2026-11-12'
+    matches: 38
+    wins: 18
     win_share: 0.47
     aggregate:
-      aspect_matches: 42
-      aspect_win_rate: 0.524
-      no_aspect_matches: 357
-      no_aspect_win_rate: 0.538
+      aspect_matches: 44
+      aspect_win_rate: 0.523
+      no_aspect_matches: 382
+      no_aspect_win_rate: 0.545
     roles:
     - role: Solo
-      matches: 28
-      share: 0.78
+      matches: 30
+      share: 0.79
     - role: Mid
       matches: 5
-      share: 0.14
+      share: 0.13
     - role: Support
       matches: 3
       share: 0.08
     base_role: Solo
-    base_role_share: 0.78
+    base_role_share: 0.79
     role_shift: null
     items:
     - name: Ancient Signet
-      share: 0.5
+      share: 0.53
     - name: Rod of Tahuti
-      share: 0.42
-    - name: Shifter's Shield
-      share: 0.39
+      share: 0.45
     - name: Spear of Desolation
       share: 0.39
-    - name: Freya's Tears
-      share: 0.36
+    - name: Shifter's Shield
+      share: 0.37
     - name: Chronos' Pendant
-      share: 0.31
-    - name: brawlers-ruin
-      share: 0.28
+      share: 0.34
+    - name: Freya's Tears
+      share: 0.34
     - name: Divine Ruin
-      share: 0.28
+      share: 0.29
+    - name: brawlers-ruin
+      share: 0.26
     starters:
     - name: Archmage's Gem
-      share: 0.47
+      share: 0.5
     - name: Bluestone Brooch
-      share: 0.28
+      share: 0.26
     - name: Bluestone Pendant
-      share: 0.06
+      share: 0.05
     - name: Conduit Gem
-      share: 0.06
+      share: 0.05
     - name: Pendulum of the Ages
-      share: 0.06
+      share: 0.05
     - name: Sundering Axe
-      share: 0.06
+      share: 0.05
     - name: Blood-soaked Shroud
       share: 0.03
     relics:
     - name: Aegis of Acceleration
-      share: 0.36
+      share: 0.34
     - name: Purification Beads
-      share: 0.31
+      share: 0.34
     - name: Sundering Arc
-      share: 0.25
+      share: 0.24
     matches_by_window:
-      ob47: 36
+      ob47: 38
       ob46: 50
       ob45: 73
       ob44: 84

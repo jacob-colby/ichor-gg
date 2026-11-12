@@ -811,38 +811,38 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 196
-    wins: 88
+    window_end: '2026-11-12'
+    matches: 204
+    wins: 91
     win_share: 0.45
     aggregate:
-      aspect_matches: 238
-      aspect_win_rate: 0.433
-      no_aspect_matches: 321
-      no_aspect_win_rate: 0.489
+      aspect_matches: 249
+      aspect_win_rate: 0.426
+      no_aspect_matches: 344
+      no_aspect_win_rate: 0.468
     roles:
     - role: Solo
-      matches: 139
-      share: 0.71
+      matches: 143
+      share: 0.7
     - role: Support
-      matches: 38
-      share: 0.19
+      matches: 40
+      share: 0.2
     - role: Jungle
       matches: 10
       share: 0.05
     - role: Mid
-      matches: 8
-      share: 0.04
+      matches: 10
+      share: 0.05
     - role: Carry
       matches: 1
-      share: 0.01
+      share: 0.0
     base_role: Support
-    base_role_share: 0.19
+    base_role_share: 0.2
     role_shift:
       role: Solo
-      share: 0.71
-      says: 'most Aspect of Spirits players do not play Support: Solo 71%, Support
-        19%'
+      share: 0.7
+      says: 'most Aspect of Spirits players do not play Support: Solo 70%, Support
+        20%'
     items:
     - name: Freya's Tears
       share: 0.54
@@ -853,7 +853,7 @@ community_aspects:
     - name: Mystical Mail
       share: 0.3
     - name: Prophetic Cloak
-      share: 0.26
+      share: 0.25
     - name: Gladiator's Shield
       share: 0.19
     - name: Ethereal Staff
@@ -874,36 +874,36 @@ community_aspects:
     - name: Warrior's Axe
       share: 0.03
     - name: Conduit Gem
-      share: 0.03
+      share: 0.02
+    - name: War Banner
+      share: 0.02
     - name: Blood-soaked Shroud
       share: 0.02
     - name: Selflessness
       share: 0.02
-    - name: War Banner
-      share: 0.02
-    - name: Heroism
-      share: 0.02
-    - name: War Flag
-      share: 0.02
     - name: Bumba's Cudgel
+      share: 0.01
+    - name: Heroism
+      share: 0.01
+    - name: War Flag
       share: 0.01
     - name: Sands Of Time
       share: 0.01
     - name: Vampiric Shroud
       share: 0.01
     - name: Bumba's Hammer
-      share: 0.01
+      share: 0.0
     - name: Hunter's Cowl
-      share: 0.01
+      share: 0.0
     relics:
     - name: Sundering Arc
-      share: 0.39
+      share: 0.38
     - name: Phantom Shell
-      share: 0.22
+      share: 0.24
     - name: Purification Beads
-      share: 0.16
+      share: 0.15
     matches_by_window:
-      ob47: 196
+      ob47: 204
       ob46: 207
     unmapped_slugs:
     - brawlers-ruin

@@ -107,10 +107,11 @@ jobs:
         run: python -m smite.refresh --community
 
       # What aspect PLAYERS buy, per match, into data/Analysis/aspect_matches
-      # and each Conquest note's `community_aspects`. ~217 requests at a 2.5s
-      # floor, ~9 min (measured 2026-11-08): the newest two windows' split
-      # index, one no-aspect page per god, and every aspect feed walked back to
-      # the newest match already stored. All or nothing: a page it does not
+      # and each Conquest note's `community_aspects`. ~550 requests at a 2.5s
+      # floor, ~24 min (2026-11-11, with the no-aspect census; ~217 and ~9 min
+      # before it): the newest two windows' split index, and every god's
+      # no-aspect feed and aspect feeds walked back to the newest match
+      # already stored. All or nothing: a page it does not
       # trust writes nothing, and the walk recovers the day on the next run, so
       # a refusal must not cost the rest of the day's data. It sets `rejected`
       # and the last step turns the run red. See smite/aspect_matches.py.
