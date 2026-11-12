@@ -71,15 +71,15 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.88
-    win_rate: 0.5473
-    matches: 440
+    win_rate: 0.5373
+    matches: 489
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
     pick_rate: 0.25
-    win_rate: 0.53
-    matches: 125
+    win_rate: 0.54
+    matches: 139
     basis: community
     borrowed_from: Conquest
 - source: suggested

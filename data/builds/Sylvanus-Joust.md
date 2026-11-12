@@ -72,14 +72,14 @@ builds:
     upgrade: Heroism
     pick_rate: 0.43
     win_rate: 0.5435
-    matches: 171
+    matches: 196
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.47
-    win_rate: 0.49
-    matches: 187
+    pick_rate: 0.48
+    win_rate: 0.47
+    matches: 219
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -71,15 +71,15 @@ builds:
     base: Sands Of Time
     upgrade: Pendulum of the Ages
     pick_rate: 0.34
-    win_rate: 0.4082
-    matches: 367
+    win_rate: 0.4271
+    matches: 404
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.32
-    win_rate: 0.43
-    matches: 345
+    name: Aegis of Acceleration
+    pick_rate: 0.31
+    win_rate: 0.44
+    matches: 368
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.9
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Chronos' Pendant
-  - Kinetic Cuirass
-  - Freya's Tears
-  - Spear of Desolation
-  - Rod of Tahuti
-  - Soul Gem
-  flex_slots:
-  - Freya's Tears
-  - Chronos' Pendant
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Chronos' Pendant:
-      total: 0.43
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Freya's Tears:
-      total: 0.52
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.43
-    Spear of Desolation:
-      total: 0.52
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.44
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.34
-    Soul Gem:
-      total: 0.74
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.9
-  swaps:
-  - added: Chronos' Pendant
-    removed: Erosion
-    reason: Conquest community 53% win over 119 matches (vs 43% on this god), taking
-      the model's weakest slot from Erosion
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

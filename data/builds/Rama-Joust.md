@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.71
-    win_rate: 0.6314
-    matches: 277
+    pick_rate: 0.7
+    win_rate: 0.6306
+    matches: 318
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.67
-    win_rate: 0.63
-    matches: 261
+    win_rate: 0.62
+    matches: 305
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -608,6 +608,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Silverbranch Bow
+  - Demon Blade
+  flex_slots:
+  - Demon Blade
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.59
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Tyrfing:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    The Reaper:
+      total: 0.63
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.66
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Silverbranch Bow:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+    Demon Blade:
+      total: 0.53
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.7
+  swaps:
+  - added: Silverbranch Bow
+    removed: Jotunn's Revenge
+    reason: Conquest community 70% win over 77 matches (vs 59% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

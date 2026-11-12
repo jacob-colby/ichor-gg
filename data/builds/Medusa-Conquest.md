@@ -9,119 +9,119 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.68
-    win_rate: 0.52
+    pick_rate: 0.67
+    win_rate: 0.53
     alternates:
     - name: Tyrfing
-      pick_rate: 0.09
-      win_rate: 0.54
+      pick_rate: 0.08
+      win_rate: 0.55
     - name: Transcendence
       pick_rate: 0.08
-      win_rate: 0.56
+      win_rate: 0.57
   - name: Dagger of Frenzy
-    pick_rate: 0.27
-    win_rate: 0.57
+    pick_rate: 0.29
+    win_rate: 0.59
     alternates:
     - name: Barbed Carver
       pick_rate: 0.13
-      win_rate: 0.51
+      win_rate: 0.5
     - name: Avenging Blade
-      pick_rate: 0.12
+      pick_rate: 0.11
       win_rate: 0.51
   - name: Dominance
-    pick_rate: 0.26
+    pick_rate: 0.25
     win_rate: 0.57
     alternates:
     - name: The Executioner
-      pick_rate: 0.1
-      win_rate: 0.56
+      pick_rate: 0.11
+      win_rate: 0.55
     - name: The Crusher
       pick_rate: 0.1
       win_rate: 0.53
   - name: Riptalon
-    pick_rate: 0.29
+    pick_rate: 0.28
     win_rate: 0.53
     alternates:
     - name: The Executioner
-      pick_rate: 0.15
-      win_rate: 0.57
+      pick_rate: 0.16
+      win_rate: 0.59
     - name: Dominance
       pick_rate: 0.09
-      win_rate: 0.57
-  - name: The Executioner
-    pick_rate: 0.12
-    win_rate: 0.56
+      win_rate: 0.63
+  - name: Silverbranch Bow
+    pick_rate: 0.11
+    win_rate: 0.64
     alternates:
     - name: Riptalon
       pick_rate: 0.12
-      win_rate: 0.77
-    - name: Silverbranch Bow
+      win_rate: 0.76
+    - name: The Executioner
       pick_rate: 0.11
-      win_rate: 0.68
-  - name: Silverbranch Bow
+      win_rate: 0.58
+  - name: Manchu Bow
     pick_rate: 0.09
-    win_rate: 0.65
+    win_rate: 0.41
     alternates:
-    - name: Manchu Bow
+    - name: Silverbranch Bow
       pick_rate: 0.09
-      win_rate: 0.42
+      win_rate: 0.67
     - name: Hunter's Bow
       pick_rate: 0.07
       win_rate: 0.5
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.67
+    pick_rate: 0.28
+    win_rate: 0.66
   - name: Sharpshooter's Arrow
-    pick_rate: 0.26
-    win_rate: 0.59
+    pick_rate: 0.25
+    win_rate: 0.6
   - name: Leather Cowl
     pick_rate: 0.15
-    win_rate: 0.38
+    win_rate: 0.41
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.51
-    win_rate: 0.52
+    pick_rate: 0.5
+    win_rate: 0.54
   - name: Aegis of Acceleration
     pick_rate: 0.47
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Agility Relic
-    pick_rate: 0.009
-    win_rate: 0.33
+    pick_rate: 0.01
+    win_rate: 0.5
   starter_sightings:
   - name: Hunter's Cowl
-    pick_rate: 0.27
-    win_rate: 0.67
+    pick_rate: 0.28
+    win_rate: 0.66
   - name: Sharpshooter's Arrow
-    pick_rate: 0.26
-    win_rate: 0.59
+    pick_rate: 0.25
+    win_rate: 0.6
   - name: Leather Cowl
     pick_rate: 0.15
-    win_rate: 0.38
+    win_rate: 0.41
   - name: Gilded Arrow
     pick_rate: 0.13
-    win_rate: 0.4
+    win_rate: 0.43
   - name: Bluestone Brooch
     pick_rate: 0.05
     win_rate: 0.67
   - name: Death's Embrace
-    pick_rate: 0.03
-    win_rate: 0.6
+    pick_rate: 0.04
+    win_rate: 0.62
   - name: Archmage's Gem
     pick_rate: 0.02
-    win_rate: 0.88
+    win_rate: 0.78
   - name: Bluestone Pendant
     pick_rate: 0.02
-    win_rate: 0.17
-  - name: Conduit Gem
-    pick_rate: 0.02
-    win_rate: 0.4
-  - name: Death's Toll
-    pick_rate: 0.02
-    win_rate: 0.0
+    win_rate: 0.13
   - name: Pendulum of the Ages
     pick_rate: 0.02
     win_rate: 0.57
+  - name: Conduit Gem
+    pick_rate: 0.01
+    win_rate: 0.4
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.0
   - name: Bumba's Spear
     pick_rate: 0.006
     win_rate: 0.5
@@ -130,41 +130,41 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.51
-    win_rate: 0.52
+    pick_rate: 0.5
+    win_rate: 0.54
   - name: Aegis of Acceleration
     pick_rate: 0.47
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Agility Relic
-    pick_rate: 0.009
-    win_rate: 0.33
-  - name: Blink Rune
-    pick_rate: 0.006
+    pick_rate: 0.01
     win_rate: 0.5
+  - name: Blink Rune
+    pick_rate: 0.008
+    win_rate: 0.33
   - name: Phantom Shell
     pick_rate: 0.006
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/medusa/
-  last_verified: '2026-11-11'
-  god_win_rate: 0.5426829268292683
-  god_matches_won: 178
-  god_matches_played: 328
+  last_verified: '2026-11-12'
+  god_win_rate: 0.5484764542936288
+  god_matches_won: 198
+  god_matches_played: 361
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-11'
-  god_matches_analyzed: 8406
+  god_window_end: '2026-11-12'
+  god_matches_analyzed: 9582
   starter:
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.42
-    win_rate: 0.5664
-    matches: 138
+    pick_rate: 0.43
+    win_rate: 0.5728
+    matches: 155
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.51
-    win_rate: 0.52
-    matches: 167
+    pick_rate: 0.5
+    win_rate: 0.54
+    matches: 180
     basis: community
 - source: suggested
   archetype: core
@@ -209,8 +209,8 @@ builds:
     Tyrfing:
       total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.09
+      win: 0.55
+      pick: 0.08
       fit: 0.56
     Death Metal:
       total: 0.52
@@ -219,16 +219,16 @@ builds:
       pick: 0.0
       fit: 0.43
     Dominance:
-      total: 0.52
+      total: 0.51
       efficiency: 0.47
       win: 0.57
-      pick: 0.4
+      pick: 0.39
       fit: 0.49
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.45
     Soul Gem:
       total: 0.51
@@ -243,15 +243,15 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.42
-    win_rate: 0.5664
-    matches: 138
+    pick_rate: 0.43
+    win_rate: 0.5728
+    matches: 155
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.51
-    win_rate: 0.52
-    matches: 167
+    pick_rate: 0.5
+    win_rate: 0.54
+    matches: 180
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -263,7 +263,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
+  - Silverbranch Bow
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -282,9 +282,9 @@ builds:
     of Tahuti, Death Metal, Jotunn''s Revenge, Soul Gem, Tyrfing, Spear of Desolation,
     Nimble Ring, Bragi''s Harp, Hydra''s Lament, Gluttonous Grimoire, The Reaper,
     Ancient Signet, Blood-Bound Book, Polynomicon, Obsidian Shard, Heartseeker, Tekko-Kagi,
-    Spear of the Magus, Chronos'' Pendant, Bracer of The Abyss, Lernaean Bow, Dreamer''s
-    Idol, Doom Orb, Bancroft''s Talon, Transcendence, Heartwood Charm, Soul Reaver,
-    The World Stone, Titan''s Bane, Arondight, Gem of Focus, Golden Blade, Rage, Deathbringer,
+    Spear of the Magus, Chronos'' Pendant, Bracer of The Abyss, Lernaean Bow, Transcendence,
+    Dreamer''s Idol, Doom Orb, Bancroft''s Talon, Heartwood Charm, Soul Reaver, The
+    World Stone, Titan''s Bane, Arondight, Gem of Focus, Golden Blade, Rage, Deathbringer,
     Avatar''s Parashu, Book of Thoth, Demon Blade.'
   slot_scores:
     Jotunn's Revenge:
@@ -296,7 +296,7 @@ builds:
     Transcendence:
       total: 0.47
       efficiency: 0.5
-      win: 0.56
+      win: 0.57
       pick: 0.08
       fit: 0.24
     Death Metal:
@@ -306,10 +306,10 @@ builds:
       pick: 0.0
       fit: 0.51
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.32
     Rod of Tahuti:
       total: 0.58
@@ -375,10 +375,10 @@ builds:
       pick: 0.0
       fit: 0.38
     Tyrfing:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.09
+      win: 0.55
+      pick: 0.08
       fit: 0.53
     Death Metal:
       total: 0.53
@@ -387,10 +387,10 @@ builds:
       pick: 0.0
       fit: 0.46
     Silverbranch Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.43
     Demon Blade:
       total: 0.46
@@ -456,10 +456,10 @@ builds:
       pick: 0.0
       fit: 0.46
     Silverbranch Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.42
     Rod of Tahuti:
       total: 0.57
@@ -505,7 +505,7 @@ builds:
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Berserker''s Shield, Rod of Tahuti, Soul Gem, Shield
     of the Phoenix, The Reaper, Kinetic Cuirass, Genji''s Guard, Blood-Bound Book,
-    Jotunn''s Revenge, Gluttonous Grimoire, Death Metal, Yogi''s Necklace, Tyrfing,
+    Jotunn''s Revenge, Gluttonous Grimoire, Death Metal, Tyrfing, Yogi''s Necklace,
     Phoenix Feather, Freya''s Tears, Ethereal Staff, Shield Splitter, Breastplate
     of Valor, Chandra''s Grace, Bancroft''s Talon, Golden Blade, Spear of Desolation,
     Runeforged Hammer, Oni Hunter''s Garb, Nimble Ring, Draconic Scale, Hydra''s Lament,
@@ -534,8 +534,8 @@ builds:
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.31
     Amanita Charm:
       total: 0.57
@@ -606,10 +606,10 @@ builds:
       pick: 0.0
       fit: 0.42
     Silverbranch Bow:
-      total: 0.56
+      total: 0.55
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.55
     Rod of Tahuti:
       total: 0.57
@@ -668,10 +668,10 @@ builds:
       pick: 0.0
       fit: 0.32
     Tyrfing:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.54
-      pick: 0.09
+      win: 0.55
+      pick: 0.08
       fit: 0.59
     Death Metal:
       total: 0.51
@@ -683,13 +683,13 @@ builds:
       total: 0.51
       efficiency: 0.47
       win: 0.57
-      pick: 0.4
+      pick: 0.39
       fit: 0.44
     Silverbranch Bow:
-      total: 0.55
+      total: 0.54
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.49
     Soul Gem:
       total: 0.5
@@ -730,7 +730,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Jotunn''s
-    Revenge, Spear of Desolation, Death Metal, Hydra''s Lament, Tyrfing, Chronos''
+    Revenge, Spear of Desolation, Death Metal, Tyrfing, Hydra''s Lament, Chronos''
     Pendant, Nimble Ring, Gluttonous Grimoire, Arondight, The Reaper, Blood-Bound
     Book, Bragi''s Harp, Gem of Focus, Heartwood Charm, Obsidian Shard, Ancient Signet,
     Tekko-Kagi, Spear of the Magus, Bracer of The Abyss, Polynomicon, Lernaean Bow,
@@ -757,10 +757,10 @@ builds:
       pick: 0.0
       fit: 0.48
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.35
     Rod of Tahuti:
       total: 0.55
@@ -805,7 +805,7 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
     + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Death Metal, Jotunn''s
-    Revenge, Spear of Desolation, Nimble Ring, Gluttonous Grimoire, Tyrfing, Bragi''s
+    Revenge, Spear of Desolation, Tyrfing, Nimble Ring, Gluttonous Grimoire, Bragi''s
     Harp, Blood-Bound Book, Obsidian Shard, The Reaper, Spear of the Magus, Ancient
     Signet, Chronos'' Pendant, Bracer of The Abyss, Hydra''s Lament, Polynomicon,
     Dreamer''s Idol, Tekko-Kagi, Doom Orb, Heartseeker, Lernaean Bow, Gem of Focus,
@@ -834,8 +834,8 @@ builds:
     Silverbranch Bow:
       total: 0.53
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.37
     Rod of Tahuti:
       total: 0.58
@@ -895,10 +895,10 @@ builds:
       pick: 0.0
       fit: 0.39
     Tyrfing:
-      total: 0.51
+      total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.09
+      win: 0.55
+      pick: 0.08
       fit: 0.51
     Death Metal:
       total: 0.54
@@ -909,8 +909,8 @@ builds:
     Silverbranch Bow:
       total: 0.53
       efficiency: 0.49
-      win: 0.65
-      pick: 0.28
+      win: 0.64
+      pick: 0.24
       fit: 0.38
     Rod of Tahuti:
       total: 0.57
@@ -973,8 +973,8 @@ builds:
     Tyrfing:
       total: 0.52
       efficiency: 0.53
-      win: 0.54
-      pick: 0.09
+      win: 0.55
+      pick: 0.08
       fit: 0.56
     Death Metal:
       total: 0.52
