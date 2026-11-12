@@ -1339,8 +1339,9 @@ unknown_win_shrink: 0.0
 # rate in proportion to how few matches the rate rests on. 0 is off, and it
 # SHIPS OFF: 578 of the 1,718 win rates in the notes rest on under 30 matches,
 # and at 10 / 30 / 100 this moves 23 / 45 / 61 of 95 Conquest cores, but no
-# instrument here can say whether that helps (`scoring.WIN_SHRINK_MATCHES`
-# has the measurement and what would judge it).
+# agreement instrument can say whether that helps, and the one outcome test
+# run so far (cores from the 11-06 record on the 3,909 matches after it) is a
+# null at every setting (`scoring.WIN_SHRINK_MATCHES` has both).
 win_shrink_matches: 0
 
 # ── Build coherence — measured, and shipped OFF ────────────────────────────

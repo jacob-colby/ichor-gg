@@ -554,9 +554,25 @@ def lookup_sighting(god_build, item_name, weights=None):
 #: 4.26's position exactly, one step over: 4.26 is about the item with NO
 #: record, this is about the item with a thin one. What could judge it is
 #: match outcomes the win rates were not computed from: builds made from the
-#: record as of one day, scored on matches played after it
-#: (`build_outcomes`, once the no-aspect census holds enough days). Until
-#: that reading exists this is a switch with a measured reach and no verdict.
+#: record as of one day, scored on matches played after it.
+#:
+#: THAT READING, 2026-11-11, IS A NULL. Cores rebuilt from the community
+#: record as committed on 2026-11-06 (d1c6f091: OB47 day 3, 2,859 matches, the
+#: thinnest record on hand, where shrinking moves the most), scored with
+#: `build_outcomes`' statistic on the 3,909 finished-six base-kit matches
+#: played after it (57 gods; the no-aspect census of #158):
+#:
+#:     k     cores differing   win rate per shared item    minus k = 0
+#:     0      0                +0.99pp (-0.64 to +2.54)
+#:     10    48                +1.17pp (-0.57 to +2.77)    +0.18pp (-0.49 to +0.93)
+#:     30    70                +0.49pp (-1.16 to +2.03)    -0.49pp (-1.52 to +0.51)
+#:     100   83                +0.64pp (-1.06 to +2.23)    -0.34pp (-1.44 to +0.75)
+#:
+#: Every paired difference spans zero, the signs disagree, and none of the
+#: four cores separates from zero on its own. So shrinking changes most cores
+#: and outcomes cannot tell the results apart at this sample: about five days
+#: of one patch. It stays at 0. REVISIT when the census holds a whole patch
+#: of matches after a day-3 record, which is roughly three times this sample.
 WIN_SHRINK_MATCHES = 0.0
 
 
