@@ -1307,6 +1307,100 @@ def lookup(item):
     return Passive(NOT_SIMULATED, _clip(text), ("no simulator written yet",))
 
 
+# ── THE STATED ZERO (2026-11-11) ──────────────────────────────────────────
+#
+# A refused passive counts as MISSING gold in `side_by_side`'s coverage test,
+# and one item is ~1/6 of a build, so a single refusal on one side withholds
+# the verdict. On 2026-11-11 (main 1a9ca2d5, fingerprint 89eb181b72f1) that
+# withheld 31 of 95 Conquest gods, 24 of them on a movement passive: Tekko-Kagi
+# on Ichor's side (10), Stampede (9) and Hussar's Wings (5) on the community's.
+#
+# The comparison is a duel in range for the whole window. Its own docstring
+# lists what is NOT in it: crowd control, peel, mobility, allies, waves,
+# objectives. A passive whose WHOLE effect lies in one of those is not
+# "unmeasured" inside this comparison. It is exactly zero, for both builds,
+# and saying so is more accurate than withholding: the duel would read the
+# same number however well the passive were modelled. STATE.md section 5 left
+# this as a rule to decide ("a stated zero, and counting it as covered, or
+# leaving those gods withheld"); this is the stated zero.
+#
+# THE TEST AN ITEM MUST PASS, read off its full text, not off its recorded
+# reason: if every clause were computed, would damage dealt to the one enemy
+# god or damage survived from it change, with no crowd control landing on
+# either side, no movement, no ally and no ward? If no, it is listed here with
+# the dimension(s) its effect lives in. If yes, it stays withheld, whatever
+# its reason says. Reasons alone are not enough, and these are the cases that
+# showed it, each refused for an absent dimension and each LEFT OUT:
+#
+#   Ragnarok's Wake    "Enemies near where you land take 600 Magical Damage"
+#   Radiant Bulwark    "and yourself 20% Damage Mitigation"
+#   Chandra's Grace, Heartwood Charm, Rod of Asclepius, Soul Locket
+#                      "+10/15% Increased Healing and Shielding" acts on our
+#                      own heals, which the HEALING block carries and nothing
+#                      here reads; Soul Locket also grants damage reduction
+#   Damaru             "Adaptive Stat: +35 Strength or +50 Intelligence" sits
+#                      in the passive text and this entry grants nothing
+#   Circe's Hexstone   +60 protections with no stated duration
+#   Mantle Of Discord, Spectral Armor, Alchemist Coat, Wyrmskin Hide
+#                      Dampening or Plating on our god mitigates damage; that
+#                      it reads 0 here is the instrument's blind spot (4.19)
+#   Ring of Dispel, Pharaoh's Curse, Midgardian Mail
+#                      a debuff on the enemy's output
+#   Erosion, the Echo items, the Acorns, Typhon's Heart, War Banner,
+#   Sharpshooter's Arrow, Xibalban Effigy, Infused Axe, Oracle Staff
+#                      the effect is damage, health or a resource in the duel
+#
+# What the listed items share: a trigger or a payload the duel cannot contain.
+# "When Hard Crowd Controlled" never fires because the enemy here lands no
+# crowd control; "Hard Crowd Control a God" never fires because ours is not in
+# the rotation; an ally-gated item has no ally; pathfinding, slow immunity and
+# movement speed move nothing in a fight that is in range throughout.
+#
+# NOT A VALUE. A stated zero says the passive is worth nothing IN THIS
+# COMPARISON. It is not a price, `efficiency` does not read it, and the item
+# stays NOT_SIMULATED: the page still names it with its reason beside the
+# build. `side_by_side` prints which items a verdict counted this way.
+OUT_OF_SCOPE = {
+    # movement: pathfinding, movement speed, slows, slow immunity, stealth
+    "Tekko-Kagi": ("movement",),
+    "Gem of Focus": ("movement",),
+    "Gem of Isolation": ("movement",),
+    "Hastened Fatalis": ("movement",),
+    "Hussar's Wings": ("movement",),
+    "Kopesh": ("movement",),
+    "Musashi's Dual Swords": ("movement",),
+    "Stampede": ("movement",),
+    "Helm of Darkness": ("movement",),
+    # crowd control: given or taken
+    "Ancile": ("crowd control",),
+    "Caestus": ("crowd control",),
+    "Jade Scepter": ("crowd control",),
+    "Magi's Cloak": ("crowd control",),
+    "Resolute Mantle": ("crowd control",),
+    "Runeforged Hammer": ("crowd control",),
+    "Scepter of Dominion": ("crowd control",),
+    "Shroud of Vengeance": ("crowd control",),
+    "Spirit Robe": ("crowd control",),
+    "Stone of Binding": ("crowd control",),
+    # an ally
+    "Doublet of Binding": ("ally",),
+    "Eros' Bow": ("ally",),
+    "Lotus Sickle": ("ally",),
+    "Umbral Link": ("ally",),
+    "Heroism": ("ally", "crowd control"),
+    # wards
+    "Eye of Providence": ("wards",),
+}
+
+
+def stated_zero(item):
+    """The dimensions outside the comparison that this item's whole passive
+    lives in, or `()`. Only ever non-empty for a NOT_SIMULATED item."""
+    if lookup(item).status != NOT_SIMULATED:
+        return ()
+    return OUT_OF_SCOPE.get(item.get("name"), ())
+
+
 def _clip(text, limit=110):
     """The item's own text, cut at a word boundary with an ellipsis."""
     if len(text) <= limit:

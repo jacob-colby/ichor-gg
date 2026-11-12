@@ -660,7 +660,7 @@
       "Tekko-Kagi"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "level",
     "verdict_unwithheld": "level"
    },
    "Joust": {
@@ -881,7 +881,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "trade-off",
     "verdict_unwithheld": "trade-off"
    },
    "Joust": {
@@ -951,7 +951,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "Ichor better",
     "verdict_unwithheld": "Ichor better"
    },
    "role": "Support"
@@ -1016,7 +1016,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "community better",
+    "verdict": "not enough simulated",
     "verdict_unwithheld": "community better"
    },
    "Conquest": {
@@ -1078,7 +1078,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "not enough simulated",
+    "verdict": "community better",
     "verdict_unwithheld": "community better"
    },
    "Joust": {
@@ -1140,7 +1140,7 @@
       "Erosion"
      ]
     },
-    "verdict": "level",
+    "verdict": "not enough simulated",
     "verdict_unwithheld": "level"
    },
    "role": "Solo"
@@ -2391,7 +2391,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "Ichor better",
+    "verdict": "not enough simulated",
     "verdict_unwithheld": "Ichor better"
    },
    "Joust": {
@@ -2469,7 +2469,7 @@
       "Amanita Charm"
      ]
     },
-    "verdict": "Ichor better",
+    "verdict": "not enough simulated",
     "verdict_unwithheld": "Ichor better"
    },
    "role": "Support"

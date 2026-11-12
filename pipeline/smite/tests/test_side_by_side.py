@@ -661,3 +661,80 @@ def test_the_shipped_match_count_agrees_with_the_documented_community_sample():
     assert int(doc_count.replace(",", "")) <= count, (doc_count, count)
     end = doc_audit.day_near(doc_end, start)
     assert start <= end <= date.fromisoformat(table["window_end"]), (doc_end, table["window_end"])
+
+
+# ── The stated zero (2026-11-11) ──────────────────────────────────────────
+
+#: A reason that names a dimension the comparison does not contain.
+ABSENT = ("no movement", "the comparison contains no movement", "no crowd control",
+          "the comparison contains no crowd control", "the comparison contains no ally", "no wards",
+          "the active displaces our god", "the knock-up is crowd control")
+#: Refused for an absent dimension, and NOT a stated zero: the item's text
+#: holds a clause that is damage, mitigation, healing or a stat in the duel.
+#: Each was read against its text when the rule was written
+#: (`passive_sim.OUT_OF_SCOPE`); listing one here is the decision.
+IN_THE_DUEL_ANYWAY = {
+    "Ragnarok's Wake", "Radiant Bulwark", "Chandra's Grace", "Heartwood Charm", "Rod of Asclepius",
+    "Soul Locket", "Damaru", "Circe's Hexstone", "Mantle Of Discord", "Spectral Armor",
+    "Ring of Dispel", "Pharaoh's Curse", "War Banner",
+}
+
+
+def _absent(reason):
+    return reason.startswith(ABSENT)
+
+
+def test_every_stated_zero_is_a_refused_item_with_an_absent_dimension_on_record():
+    for name, outside in ps.OUT_OF_SCOPE.items():
+        p = ps.REGISTRY[name]
+        assert p.status == ps.NOT_SIMULATED, name
+        assert outside and any(_absent(a) for a in p.assumptions), name
+
+
+def test_a_new_refusal_for_an_absent_dimension_has_to_be_decided():
+    """Every registry item refused for movement, crowd control, an ally or
+    wards is either a stated zero or named as in the duel anyway. A new
+    refusal lands in neither set and fails here until its text is read."""
+    refused = {n for n, p in ps.REGISTRY.items()
+               if p.status == ps.NOT_SIMULATED and any(_absent(a) for a in p.assumptions)}
+    assert refused == set(ps.OUT_OF_SCOPE) | IN_THE_DUEL_ANYWAY
+    assert not set(ps.OUT_OF_SCOPE) & IN_THE_DUEL_ANYWAY
+
+
+def test_a_stated_zero_is_only_ever_read_off_a_refused_item():
+    assert ps.stated_zero({"name": "Tekko-Kagi", "passive": "x"}) == ("movement",)
+    assert ps.stated_zero({"name": "Deathbringer", "passive": "x"}) == ()
+    assert ps.stated_zero({"name": "Ragnarok's Wake", "passive": "x"}) == ()
+    assert ps.stated_zero({"name": "Some New Item", "passive": "Does a thing."}) == ()
+
+
+def _toy(names):
+    return {n: {"name": n, "cost": 1000, "passive": "x", "stats": {}} for n in names}
+
+
+def test_the_counted_share_adds_stated_zeros_and_nothing_else(monkeypatch):
+    names = ["Tekko-Kagi", "Erosion", "Deathbringer", "Ragnarok's Wake"]
+    items = _toy(names)
+    assert sbs.simulated_share(names, items) == pytest.approx(0.25)       # Deathbringer
+    assert sbs.counted_share(names, items) == pytest.approx(0.50)         # and Tekko-Kagi
+    monkeypatch.setattr(sbs, "STATED_ZERO", False)
+    assert sbs.counted_share(names, items) == pytest.approx(0.25)
+
+
+def test_one_movement_item_no_longer_withholds_and_one_in_duel_refusal_still_does():
+    full = ["Deathbringer"] * 5
+    items = _toy(full + ["Tekko-Kagi", "Erosion"])
+    share = lambda six: sbs.counted_share(six, items)
+    assert sbs.coverage_check(share(full + ["Tekko-Kagi"]), share(full + ["Deathbringer"]))[0]
+    assert not sbs.coverage_check(share(full + ["Erosion"]), share(full + ["Deathbringer"]))[0]
+    # The pair that used to cancel no longer does: one is zero here, one is not.
+    assert not sbs.coverage_check(share(full + ["Erosion"]), share(full + ["Tekko-Kagi"]))[0]
+
+
+def test_the_words_name_each_item_counted_as_zero_once():
+    cov = {"stated_zero": {"ichor": [{"item": "Tekko-Kagi", "outside": ["movement"]}],
+                           "community": [{"item": "Tekko-Kagi", "outside": ["movement"]},
+                                         {"item": "Heroism", "outside": ["ally", "crowd control"]}]}}
+    assert sbs.stated_zero_words(cov) == ("; counted as zero here, outside the comparison: "
+                                          "Tekko-Kagi (movement), Heroism (ally, crowd control)")
+    assert sbs.stated_zero_words({"stated_zero": {"ichor": [], "community": []}}) == ""

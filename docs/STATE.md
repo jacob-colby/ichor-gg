@@ -2803,10 +2803,24 @@ EHP rises 4–31% on the gods it reaches (Chaac +31%, Mordred +23%). Known
 gap: Sun Wukong's cloud heals "every 0.5 seconds" with no stated duration and
 is cast once at full health, so it lands nothing.
 
-Left, in order: (1) decide what a movement/CC/ward passive is worth in a
-comparison that has no movement, CC or wards — the honest options are a
-stated zero (and counting it as covered) or leaving those gods withheld, and
-that is a rule for Jacob, not a constant; (2) a measured farm/takedown rate
+**The stated zero (2026-11-11, fingerprint `89eb181b72f1`).** Item (1) of the
+list below is decided: a refused passive whose WHOLE effect lies outside the
+comparison (movement, crowd control, an ally, wards) is zero in it for both
+builds, so the coverage test counts it as covered and the page names it.
+Twenty-five items pass, each read against its full text rather than its
+recorded reason; thirteen refused for the same dimensions do not, because
+their text also holds damage, mitigation, healing or a stat (Ragnarok's Wake's
+600 damage, Radiant Bulwark's 20% mitigation). Readable verdicts: Conquest 57
+→ 78 of 95 (Carry 10 → 18 of 19), Joust 46 → 43, Arena 44 → 46. It is not a
+one-way loosening: a pair of refusals that used to cancel stops cancelling
+when only one of them is zero in the duel, which closes five Conquest gods and
+more Joust gods than it opens. No verdict changes for a god readable both
+ways. `COVERAGE_GAP` and `COVERAGE_MIN` did not move. The list, the test and
+the exclusions are in `passive_sim.OUT_OF_SCOPE`; the switch and the per-mode
+table are at `side_by_side.STATED_ZERO`.
+
+Left, in order: (1) ~~decide what a movement/CC/ward passive is worth in a
+comparison that has no movement, CC or wards~~ decided 2026-11-11, above; (2) a measured farm/takedown rate
 for `STACK_MINUTES_TO_FULL`, which is reasoned, not measured; (3) a
 phone/desktop pass by Jacob; (4) the seven aspect kits, most-played first;
 (5) for each surviving "community better" god, a model change or a stated

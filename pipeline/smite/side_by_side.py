@@ -152,6 +152,31 @@ SQUISHY_ROLE, TANK_ROLE = "Mid", "Support"
 COVERAGE_MIN = 0.50
 COVERAGE_GAP = 0.14
 NOT_ENOUGH_SIMULATED = "not enough simulated"
+#: THE STATED ZERO (2026-11-11). The coverage test counts a refused passive as
+#: covered when its whole effect lies outside this comparison (movement, crowd
+#: control, an ally, wards): it is exactly zero here for both builds, not
+#: unmeasured. Which items, the test each one passed and the ones left out are
+#: in `passive_sim.OUT_OF_SCOPE`. `simulated_share` is unchanged and still
+#: printed; `counted_share` is what the rule reads. Neither constant above
+#: moved. Measured on main 1a9ca2d5 (fingerprint 89eb181b72f1), readable
+#: verdicts off -> on:
+#:
+#:     Conquest  57 -> 78 of 95   Carry 10 -> 18 of 19, Solo 8 -> 15,
+#:                                Jungle 13 -> 17, Support 6 -> 9, Mid 20 -> 19
+#:     Joust     46 -> 43         10 open, 13 close
+#:     Arena     44 -> 46         11 open, 9 close
+#:
+#: IT IS NOT A ONE-WAY LOOSENING, and the modes show it. A god was readable
+#: before when both sides held one refusal each, whatever the refusals were.
+#: Now a refusal counts only if it is zero in the duel, so a pair that used to
+#: cancel can stop cancelling: Conquest closes five (Sobek, Xing Tian and Ymir
+#: hold Erosion against a community movement item; Eset and Hecate hold Lotus
+#: Sickle against the community's PARTIAL Time-lock Aegis), and Joust closes
+#: more than it opens because its mode builds hold more in-duel refusals
+#: (Erosion, the PARTIAL anti-heal items). No god readable both ways changes
+#: verdict in any mode: the rule decides whether a verdict is shown, never
+#: what it is. False restores the rule as it stood through 2026-11-10.
+STATED_ZERO = True
 
 #: EARLY GAME (2026-11-02). The verdict weighs the 2-, 4- and 6-item points
 #: equally: each axis is the weighted geometric mean of the per-point axes.
@@ -466,6 +491,21 @@ def simulated_share(names, items_by_name):
         gold = float(items_by_name[n].get("cost") or 0.0)
         total += gold
         if passive_sim.lookup(items_by_name[n]).status in (passive_sim.SIMULATED, passive_sim.NO_PASSIVE):
+            ok += gold
+    return ok / total if total else 1.0
+
+
+def counted_share(names, items_by_name):
+    """Share of the build's gold the coverage test counts: `simulated_share`
+    plus, under `STATED_ZERO`, items whose refused passive is exactly zero in
+    this comparison (`passive_sim.stated_zero`)."""
+    total = ok = 0.0
+    for n in names:
+        item = items_by_name[n]
+        gold = float(item.get("cost") or 0.0)
+        total += gold
+        if passive_sim.lookup(item).status in (passive_sim.SIMULATED, passive_sim.NO_PASSIVE) \
+                or (STATED_ZERO and passive_sim.stated_zero(item)):
             ok += gold
     return ok / total if total else 1.0
 
@@ -1323,7 +1363,9 @@ def profile(god, names, items_by_name, targets):
     for n in names:
         pv = passive_sim.lookup(items_by_name[n])
         passives.append({"item": n, "status": pv.status, "summary": pv.summary,
-                         "assumptions": list(pv.assumptions)})
+                         "assumptions": list(pv.assumptions),
+                         "stated_zero": list(passive_sim.stated_zero(items_by_name[n]))
+                         if STATED_ZERO else []})
     keep = lambda pw: {m: pw[m] for m in DAMAGE_KEYS + SURVIVAL_KEYS}
     stacking = any(passive_sim.lookup(items_by_name[n]).stacking for n in names)
     breakpoints, full_stacks, old_stacks = {}, {}, {}
@@ -1360,6 +1402,7 @@ def profile(god, names, items_by_name, targets):
         **{f"breakpoints_stacks_{m:g}min": brackets[m] for m in STACK_MINUTES_BRACKET},
         "passives": passives,
         "simulated_share": simulated_share(names, items_by_name),
+        "counted_share": counted_share(names, items_by_name),
         "dropped_abilities": s.dropped,
     }
 
@@ -1621,7 +1664,8 @@ def phase(bp, band=BAND):
 
 
 def coverage_check(ours_share, theirs_share):
-    """`(ok, reason)` under COVERAGE_MIN and COVERAGE_GAP."""
+    """`(ok, reason)` under COVERAGE_MIN and COVERAGE_GAP. The shares are
+    `counted_share`s: simulated gold plus stated zeros."""
     low = min(ours_share, theirs_share)
     gap = abs(ours_share - theirs_share)
     if low < COVERAGE_MIN:
@@ -1686,7 +1730,11 @@ def compare(god, build_note, items_by_name, targets, model_rows=None, mode_note=
     p_theirs = profile(god, community, items_by_name, targets)
     d, s = axes(p_ours, p_theirs)
     bp = breakpoint_axes(p_ours, p_theirs)
-    ok, why = coverage_check(p_ours["simulated_share"], p_theirs["simulated_share"])
+    ok, why = coverage_check(p_ours["counted_share"], p_theirs["counted_share"])
+    ok_simulated, _ = coverage_check(p_ours["simulated_share"], p_theirs["simulated_share"])
+    zeros = {side: [{"item": x["item"], "outside": x["stated_zero"]}
+                    for x in p["passives"] if x["stated_zero"]]
+             for side, p in (("ichor", p_ours), ("community", p_theirs))}
     rows = model_rows or {}
 
     diffs = []
@@ -1722,9 +1770,16 @@ def compare(god, build_note, items_by_name, targets, model_rows=None, mode_note=
         "breakpoint_axes_old_stacks": breakpoint_axes(p_ours, p_theirs, "breakpoints_old_stacks"),
         **{f"breakpoint_axes_stacks_{m:g}min": breakpoint_axes(p_ours, p_theirs, f"breakpoints_stacks_{m:g}min")
            for m in STACK_MINUTES_BRACKET},
+        # `ichor` and `community` stay the SIMULATED shares, which is what the
+        # page says they are; `counted` is what the rule read, and `gap` is
+        # the gap it tested. `ok_simulated_only` is the rule before the stated
+        # zero, kept so the report can print old against new.
         "coverage": {"ichor": p_ours["simulated_share"], "community": p_theirs["simulated_share"],
-                     "gap": abs(p_ours["simulated_share"] - p_theirs["simulated_share"]),
-                     "ok": ok, "reason": why},
+                     "counted": {"ichor": p_ours["counted_share"],
+                                 "community": p_theirs["counted_share"]},
+                     "gap": abs(p_ours["counted_share"] - p_theirs["counted_share"]),
+                     "stated_zero": zeros,
+                     "ok": ok, "reason": why, "ok_simulated_only": ok_simulated},
         "diffs": diffs,
     }
     out["verdict"] = judge(out)
@@ -1837,7 +1892,7 @@ def conquest_reference(god, conquest_note, items_by_name, targets, row, excluded
     vs_mode = breakpoint_axes(p_mode, p_conq)
     vs_comm = {"breakpoint_axes": breakpoint_axes(p_conq, p_comm), "kit": row["kit"],
                "coverage": dict(zip(("ok", "reason"), coverage_check(
-                   p_conq["simulated_share"], p_comm["simulated_share"])))}
+                   p_conq["counted_share"], p_comm["counted_share"])))}
     return dict(note, items=conq, same_as_mode_build=conq == row["ichor"]["items"],
                 mode_over_conquest=weighted_axes(vs_mode),
                 verdict_vs_community=judge(vs_comm),
@@ -1901,6 +1956,22 @@ def kit_line(k):
     return f"{k['aspect']} ({played})"
 
 
+def stated_zero_words(coverage):
+    """"; counted as zero here, outside the comparison: X (movement)" or ""."""
+    names = []
+    for side in ("ichor", "community"):
+        for z in (coverage.get("stated_zero") or {}).get(side, []):
+            word = f"{z['item']} ({', '.join(z['outside'])})"
+            if word not in names:
+                names.append(word)
+    return ("; counted as zero here, outside the comparison: " + ", ".join(names)) if names else ""
+
+
+def readable(rows):
+    """Rows with a verdict the page can state: a kit match and coverage."""
+    return [r for r in rows if r["verdict"] not in (ASPECT_NOT_SIMULATED, NOT_ENOUGH_SIMULATED)]
+
+
 def god_lines(r):
     i, c = r["ichor"], r["community"]
     L = [f"## {r['god']} ({r['role']}, {r['damage_type']}, {'melee' if r['melee'] else 'ranged'})",
@@ -1913,7 +1984,7 @@ def god_lines(r):
          f"(six-item rule: {r['verdict_six_only']})",
          "",
          f"Simulated: {r['coverage']['ichor']:.0%} of Ichor's gold, {r['coverage']['community']:.0%} "
-         "of the community's",
+         "of the community's" + stated_zero_words(r["coverage"]),
          "",
          f"Kit: {kit_line(r['kit'])}",
          "",
@@ -2062,7 +2133,13 @@ def report_lines(rows, skipped, targets, data_patch, no_assists=None, sensitivit
           + " / ".join(f"{w:.2f}" for w in BREAKPOINT_WEIGHTS.values())
           + "; a god ahead early and behind at six (or the reverse) is a phase verdict; withheld as "
           f"\"{NOT_ENOUGH_SIMULATED}\" when either build has under {COVERAGE_MIN:.0%} of its gold "
-          f"simulated or the two differ by more than {COVERAGE_GAP:.0%}.", ""]
+          f"simulated or the two differ by more than {COVERAGE_GAP:.0%}."
+          + (" A refused passive whose whole effect lies outside the comparison (movement, crowd "
+             "control, an ally, wards) counts as covered: it is zero here for both builds "
+             "(`passive_sim.OUT_OF_SCOPE`). "
+             f"Readable verdicts: {len(readable(rows))} of {len(rows)}; without that rule "
+             f"{sum(1 for r in judged(rows) if r['coverage']['ok_simulated_only'])}."
+             if STATED_ZERO else ""), ""]
     L += count_table(verdict_counts(rows))
     L += ["", f"Old rule against new, all roles ({len(judged(rows))} gods with a kit match). "
           "The bracket column re-runs the 2/4/6 rule with stacking passives FULL at 2 and 4 items "
