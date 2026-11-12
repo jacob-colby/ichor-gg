@@ -727,18 +727,18 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 34
-    wins: 24
-    win_share: 0.71
+    window_end: '2026-11-12'
+    matches: 36
+    wins: 25
+    win_share: 0.69
     aggregate:
-      aspect_matches: 39
-      aspect_win_rate: 0.718
-      no_aspect_matches: 191
-      no_aspect_win_rate: 0.476
+      aspect_matches: 43
+      aspect_win_rate: 0.698
+      no_aspect_matches: 199
+      no_aspect_win_rate: 0.457
     roles:
     - role: Jungle
-      matches: 33
+      matches: 35
       share: 0.97
     - role: Support
       matches: 1
@@ -749,25 +749,25 @@ community_aspects:
     items:
     - name: Hydra's Lament
       share: 0.97
-    - name: Shifter's Shield
+    - name: Jotunn's Revenge
       share: 0.44
     - name: Avenging Blade
-      share: 0.41
+      share: 0.42
+    - name: Shifter's Shield
+      share: 0.42
     - name: Heartseeker
-      share: 0.41
-    - name: Jotunn's Revenge
-      share: 0.41
+      share: 0.39
     - name: brawlers-ruin
-      share: 0.35
+      share: 0.33
     - name: Freya's Tears
-      share: 0.26
-    - name: The Crusher
-      share: 0.24
+      share: 0.25
+    - name: Kinetic Cuirass
+      share: 0.22
     starters:
     - name: Bumba's Hammer
-      share: 0.68
+      share: 0.67
     - name: Bumba's Cudgel
-      share: 0.15
+      share: 0.17
     - name: Leather Cowl
       share: 0.06
     - name: Archmage's Gem
@@ -780,13 +780,13 @@ community_aspects:
       share: 0.03
     relics:
     - name: Purification Beads
-      share: 0.38
+      share: 0.39
     - name: Blink Rune
-      share: 0.35
+      share: 0.33
     - name: Aegis of Acceleration
-      share: 0.21
+      share: 0.19
     matches_by_window:
-      ob47: 34
+      ob47: 36
       ob46: 48
       ob45: 67
       ob44: 70

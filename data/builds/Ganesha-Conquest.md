@@ -800,72 +800,72 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 35
-    wins: 21
-    win_share: 0.6
+    window_end: '2026-11-12'
+    matches: 37
+    wins: 22
+    win_share: 0.59
     aggregate:
-      aspect_matches: 40
-      aspect_win_rate: 0.55
-      no_aspect_matches: 162
-      no_aspect_win_rate: 0.481
+      aspect_matches: 43
+      aspect_win_rate: 0.535
+      no_aspect_matches: 177
+      no_aspect_win_rate: 0.458
     roles:
     - role: Support
       matches: 21
-      share: 0.6
+      share: 0.57
     - role: Solo
-      matches: 9
-      share: 0.26
+      matches: 11
+      share: 0.3
     - role: Jungle
       matches: 3
-      share: 0.09
+      share: 0.08
     - role: Mid
       matches: 2
-      share: 0.06
+      share: 0.05
     base_role: Support
-    base_role_share: 0.6
+    base_role_share: 0.57
     role_shift: null
     items:
     - name: Freya's Tears
-      share: 0.49
+      share: 0.46
     - name: brawlers-ruin
-      share: 0.34
+      share: 0.32
     - name: Chronos' Pendant
-      share: 0.34
+      share: 0.32
     - name: Gladiator's Shield
-      share: 0.29
+      share: 0.27
     - name: Spear of Desolation
-      share: 0.29
+      share: 0.27
     - name: The World Stone
-      share: 0.29
+      share: 0.27
     - name: Prophetic Cloak
-      share: 0.26
+      share: 0.24
     - name: Spirit Robe
-      share: 0.23
+      share: 0.22
     starters:
     - name: Archmage's Gem
-      share: 0.4
+      share: 0.41
     - name: Bluestone Brooch
-      share: 0.23
+      share: 0.22
     - name: Bluestone Pendant
       share: 0.11
     - name: Conduit Gem
-      share: 0.09
+      share: 0.11
     - name: Sundering Axe
-      share: 0.09
+      share: 0.08
     - name: Warrior's Axe
-      share: 0.06
+      share: 0.05
     - name: Pendulum of the Ages
       share: 0.03
     relics:
     - name: Phantom Shell
-      share: 0.54
+      share: 0.51
     - name: Purification Beads
-      share: 0.17
+      share: 0.16
     - name: Aegis of Acceleration
       share: 0.14
     matches_by_window:
-      ob47: 35
+      ob47: 37
       ob46: 59
       ob45: 74
       ob44: 40

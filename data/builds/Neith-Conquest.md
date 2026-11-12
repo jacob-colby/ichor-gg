@@ -1022,22 +1022,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 94
-    wins: 57
-    win_share: 0.61
+    window_end: '2026-11-12'
+    matches: 99
+    wins: 59
+    win_share: 0.6
     aggregate:
-      aspect_matches: 115
-      aspect_win_rate: 0.583
-      no_aspect_matches: 180
-      no_aspect_win_rate: 0.556
+      aspect_matches: 128
+      aspect_win_rate: 0.562
+      no_aspect_matches: 195
+      no_aspect_win_rate: 0.559
     roles:
     - role: Carry
-      matches: 86
+      matches: 90
       share: 0.91
     - role: Mid
-      matches: 7
-      share: 0.07
+      matches: 8
+      share: 0.08
     - role: Jungle
       matches: 1
       share: 0.01
@@ -1047,48 +1047,48 @@ community_aspects:
     items:
     - name: Silverbranch Bow
       share: 0.7
-    - name: Odysseus' Bow
-      share: 0.55
     - name: The Executioner
+      share: 0.55
+    - name: Odysseus' Bow
       share: 0.54
     - name: Riptalon
-      share: 0.52
+      share: 0.54
     - name: Tyrfing
-      share: 0.47
+      share: 0.48
     - name: Devourer's Gauntlet
-      share: 0.46
+      share: 0.45
     - name: Dominance
-      share: 0.37
+      share: 0.36
     - name: Dagger of Frenzy
-      share: 0.3
+      share: 0.29
     starters:
     - name: Death's Embrace
-      share: 0.3
+      share: 0.31
     - name: Sharpshooter's Arrow
       share: 0.21
     - name: Hunter's Cowl
-      share: 0.18
+      share: 0.17
     - name: Death's Toll
-      share: 0.11
+      share: 0.1
     - name: Gilded Arrow
       share: 0.07
     - name: Leather Cowl
       share: 0.06
     - name: Bumba's Spear
-      share: 0.04
+      share: 0.05
     - name: Pendulum of the Ages
       share: 0.01
     - name: Sands Of Time
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.62
+      share: 0.63
     - name: Aegis of Acceleration
-      share: 0.35
+      share: 0.34
     - name: Agility Relic
       share: 0.03
     matches_by_window:
-      ob47: 94
+      ob47: 99
       ob46: 217
       ob45: 145
       ob44: 122

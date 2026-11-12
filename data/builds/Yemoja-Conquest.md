@@ -865,7 +865,7 @@ community_aspects:
     - name: Sundering Arc
       share: 0.04
     matches_by_window:
-      ob47: 16
+      ob47: 22
       ob46: 75
       ob45: 78
       ob44: 56

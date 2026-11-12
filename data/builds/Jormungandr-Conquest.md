@@ -808,72 +808,72 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 30
-    wins: 19
-    win_share: 0.63
+    window_end: '2026-11-12'
+    matches: 32
+    wins: 20
+    win_share: 0.62
     aggregate:
-      aspect_matches: 39
-      aspect_win_rate: 0.59
-      no_aspect_matches: 141
-      no_aspect_win_rate: 0.539
+      aspect_matches: 41
+      aspect_win_rate: 0.585
+      no_aspect_matches: 159
+      no_aspect_win_rate: 0.541
     roles:
     - role: Solo
-      matches: 16
-      share: 0.53
+      matches: 18
+      share: 0.56
     - role: Support
       matches: 11
-      share: 0.37
+      share: 0.34
     - role: Mid
       matches: 2
-      share: 0.07
+      share: 0.06
     - role: Jungle
       matches: 1
       share: 0.03
     base_role: Solo Support
-    base_role_share: 0.9
+    base_role_share: 0.91
     role_shift: null
     items:
     - name: Devourer's Gauntlet
-      share: 0.63
+      share: 0.66
     - name: Sun Beam Bow
-      share: 0.57
+      share: 0.56
     - name: Silverbranch Bow
       share: 0.5
     - name: Avatar's Parashu
-      share: 0.37
+      share: 0.34
     - name: Freya's Tears
-      share: 0.3
+      share: 0.31
     - name: Dominance
-      share: 0.27
+      share: 0.25
     - name: Shell of Rebuke
-      share: 0.23
+      share: 0.25
     - name: Bow
-      share: 0.13
+      share: 0.12
     starters:
     - name: Death's Embrace
-      share: 0.5
+      share: 0.53
     - name: Death's Toll
-      share: 0.17
+      share: 0.16
     - name: Selflessness
-      share: 0.1
+      share: 0.09
     - name: War Flag
-      share: 0.1
+      share: 0.09
     - name: Bluestone Pendant
-      share: 0.07
+      share: 0.06
     - name: Bluestone Brooch
       share: 0.03
     - name: Heroism
       share: 0.03
     relics:
     - name: Aegis of Acceleration
-      share: 0.73
+      share: 0.72
     - name: Blink Rune
-      share: 0.1
+      share: 0.12
     - name: Phantom Shell
-      share: 0.1
+      share: 0.09
     matches_by_window:
-      ob47: 30
+      ob47: 32
       ob46: 24
       ob45: 104
       ob44: 53

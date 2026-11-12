@@ -794,57 +794,57 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 90
-    wins: 62
+    window_end: '2026-11-12'
+    matches: 97
+    wins: 67
     win_share: 0.69
     aggregate:
-      aspect_matches: 122
-      aspect_win_rate: 0.607
-      no_aspect_matches: 60
-      no_aspect_win_rate: 0.55
+      aspect_matches: 136
+      aspect_win_rate: 0.603
+      no_aspect_matches: 65
+      no_aspect_win_rate: 0.523
     roles:
     - role: Support
-      matches: 64
-      share: 0.71
+      matches: 68
+      share: 0.7
     - role: Mid
-      matches: 16
-      share: 0.18
+      matches: 19
+      share: 0.2
     - role: Solo
       matches: 9
-      share: 0.1
+      share: 0.09
     - role: Jungle
       matches: 1
       share: 0.01
     base_role: Support
-    base_role_share: 0.71
+    base_role_share: 0.7
     role_shift: null
     items:
     - name: Gauntlet of Thebes
       share: 0.47
-    - name: Freya's Tears
-      share: 0.34
-    - name: Stampede
-      share: 0.33
     - name: The Cosmic Horror
-      share: 0.33
+      share: 0.34
     - name: Totem of Death
+      share: 0.34
+    - name: Freya's Tears
       share: 0.33
-    - name: Genji's Guard
+    - name: Stampede
       share: 0.32
+    - name: Genji's Guard
+      share: 0.31
     - name: Shell of Rebuke
       share: 0.3
     - name: Damaru
-      share: 0.28
+      share: 0.29
     starters:
-    - name: Selflessness
-      share: 0.23
     - name: Bluestone Pendant
-      share: 0.21
+      share: 0.23
+    - name: Selflessness
+      share: 0.22
     - name: Bluestone Brooch
-      share: 0.19
+      share: 0.2
     - name: Heroism
-      share: 0.17
+      share: 0.15
     - name: Pendulum of the Ages
       share: 0.08
     - name: Conduit Gem
@@ -852,18 +852,18 @@ community_aspects:
     - name: Archmage's Gem
       share: 0.03
     - name: Sands Of Time
-      share: 0.02
+      share: 0.03
     - name: War Banner
       share: 0.02
     relics:
     - name: Phantom Shell
-      share: 0.37
+      share: 0.36
     - name: Purification Beads
       share: 0.28
     - name: Aegis of Acceleration
-      share: 0.18
+      share: 0.19
     matches_by_window:
-      ob47: 90
+      ob47: 97
       ob46: 191
       ob45: 235
       ob44: 229

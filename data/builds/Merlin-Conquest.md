@@ -848,7 +848,7 @@ community_aspects:
     - name: Blink Rune
       share: 0.02
     matches_by_window:
-      ob47: 21
+      ob47: 22
       ob46: 51
       ob45: 41
       ob44: 64

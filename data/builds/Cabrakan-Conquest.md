@@ -833,10 +833,10 @@ community_aspects:
     wins: 10
     win_share: 0.32
     aggregate:
-      aspect_matches: 42
-      aspect_win_rate: 0.286
-      no_aspect_matches: 389
-      no_aspect_win_rate: 0.599
+      aspect_matches: 43
+      aspect_win_rate: 0.302
+      no_aspect_matches: 390
+      no_aspect_win_rate: 0.6
     roles:
     - role: Mid
       matches: 17

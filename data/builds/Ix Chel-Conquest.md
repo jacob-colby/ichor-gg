@@ -783,14 +783,14 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 50
     wins: 29
     win_share: 0.58
     aggregate:
       aspect_matches: 77
       aspect_win_rate: 0.442
-      no_aspect_matches: 601
+      no_aspect_matches: 613
       no_aspect_win_rate: 0.512
     roles:
     - role: Support

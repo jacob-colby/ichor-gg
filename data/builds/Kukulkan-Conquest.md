@@ -783,19 +783,19 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 72
+    window_end: '2026-11-12'
+    matches: 73
     wins: 38
-    win_share: 0.53
+    win_share: 0.52
     aggregate:
-      aspect_matches: 82
-      aspect_win_rate: 0.537
-      no_aspect_matches: 432
-      no_aspect_win_rate: 0.505
+      aspect_matches: 83
+      aspect_win_rate: 0.53
+      no_aspect_matches: 476
+      no_aspect_win_rate: 0.504
     roles:
     - role: Solo
-      matches: 47
-      share: 0.65
+      matches: 48
+      share: 0.66
     - role: Mid
       matches: 15
       share: 0.21
@@ -809,30 +809,30 @@ community_aspects:
     base_role_share: 0.21
     role_shift:
       role: Solo
-      share: 0.65
-      says: 'most Aspect of the Squall players do not play Mid: Solo 65%, Mid 21%'
+      share: 0.66
+      says: 'most Aspect of the Squall players do not play Mid: Solo 66%, Mid 21%'
     items:
     - name: Book of Thoth
       share: 0.92
-    - name: Breastplate of Valor
-      share: 0.68
     - name: Genji's Guard
       share: 0.68
+    - name: Breastplate of Valor
+      share: 0.67
     - name: Rod of Tahuti
-      share: 0.57
+      share: 0.56
     - name: Blinking Abyss
       share: 0.42
     - name: Yogi's Necklace
-      share: 0.25
+      share: 0.26
     - name: Ancient Signet
       share: 0.21
     - name: Spear of Desolation
       share: 0.19
     starters:
     - name: Archmage's Gem
-      share: 0.6
+      share: 0.59
     - name: Conduit Gem
-      share: 0.25
+      share: 0.26
     - name: Pendulum of the Ages
       share: 0.1
     - name: Bluestone Brooch
@@ -845,13 +845,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Aegis of Acceleration
-      share: 0.54
+      share: 0.55
     - name: Purification Beads
-      share: 0.38
+      share: 0.37
     - name: Blink Rune
       share: 0.04
     matches_by_window:
-      ob47: 72
+      ob47: 73
       ob46: 144
       ob45: 124
       ob44: 152

@@ -821,82 +821,82 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
-    matches: 35
-    wins: 16
-    win_share: 0.46
+    window_end: '2026-11-12'
+    matches: 38
+    wins: 19
+    win_share: 0.5
     aggregate:
-      aspect_matches: 49
-      aspect_win_rate: 0.408
-      no_aspect_matches: 687
-      no_aspect_win_rate: 0.476
+      aspect_matches: 52
+      aspect_win_rate: 0.442
+      no_aspect_matches: 703
+      no_aspect_win_rate: 0.472
     roles:
     - role: Mid
-      matches: 21
-      share: 0.6
+      matches: 24
+      share: 0.63
     - role: Solo
       matches: 8
-      share: 0.23
+      share: 0.21
     - role: Support
       matches: 4
       share: 0.11
     - role: Carry
       matches: 2
-      share: 0.06
+      share: 0.05
     base_role: Support
     base_role_share: 0.11
     role_shift:
       role: Mid
-      share: 0.6
-      says: 'most Aspect of the Unburdened players do not play Support: Mid 60%, Support
+      share: 0.63
+      says: 'most Aspect of the Unburdened players do not play Support: Mid 63%, Support
         11%'
     items:
     - name: Spear of Desolation
-      share: 0.54
+      share: 0.55
     - name: Rod of Tahuti
-      share: 0.49
-    - name: Book of Thoth
-      share: 0.4
+      share: 0.5
     - name: Ancient Signet
-      share: 0.37
+      share: 0.39
       changed:
         patch: OB47
         exact: true
         older_matches: 10
-        matches: 13
-        says: changed in OB47; 10 of the 13 matches that bought it are older
-    - name: Gladiator's Shield
+        matches: 15
+        says: changed in OB47; 10 of the 15 matches that bought it are older
+    - name: Book of Thoth
       share: 0.37
-    - name: Shifter's Shield
+    - name: Gladiator's Shield
       share: 0.34
-    - name: Genji's Guard
-      share: 0.31
+    - name: Shifter's Shield
+      share: 0.32
     - name: Ethereal Staff
+      share: 0.29
+    - name: Genji's Guard
       share: 0.29
     starters:
     - name: Sundering Axe
-      share: 0.34
+      share: 0.32
     - name: Pendulum of the Ages
-      share: 0.29
+      share: 0.26
     - name: Bluestone Brooch
-      share: 0.14
+      share: 0.18
     - name: Sands Of Time
       share: 0.11
-    - name: Warrior's Axe
-      share: 0.06
     - name: Archmage's Gem
-      share: 0.03
+      share: 0.05
+    - name: Warrior's Axe
+      share: 0.05
     - name: Bluestone Pendant
       share: 0.03
     relics:
     - name: Agility Relic
-      share: 0.49
+      share: 0.45
     - name: Aegis of Acceleration
-      share: 0.31
+      share: 0.29
     - name: Purification Beads
-      share: 0.14
+      share: 0.21
     matches_by_window:
-      ob47: 10
+      ob47: 13
       ob46: 25
       ob45: 37
       ob44: 28

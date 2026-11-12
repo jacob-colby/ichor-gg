@@ -941,25 +941,25 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 265
-    wins: 147
+    window_end: '2026-11-12'
+    matches: 282
+    wins: 155
     win_share: 0.55
     aggregate:
-      aspect_matches: 334
-      aspect_win_rate: 0.527
-      no_aspect_matches: 120
-      no_aspect_win_rate: 0.617
+      aspect_matches: 361
+      aspect_win_rate: 0.521
+      no_aspect_matches: 124
+      no_aspect_win_rate: 0.605
     roles:
     - role: Mid
-      matches: 199
+      matches: 211
       share: 0.75
     - role: Solo
-      matches: 59
-      share: 0.22
+      matches: 64
+      share: 0.23
     - role: Jungle
       matches: 4
-      share: 0.02
+      share: 0.01
     - role: Carry
       matches: 2
       share: 0.01
@@ -973,11 +973,11 @@ community_aspects:
     - name: Rod of Tahuti
       share: 0.79
     - name: Spear of Desolation
-      share: 0.72
+      share: 0.71
     - name: Blinking Abyss
-      share: 0.4
+      share: 0.39
     - name: Obsidian Shard
-      share: 0.35
+      share: 0.37
     - name: Book of Thoth
       share: 0.33
     - name: Spear of the Magus
@@ -990,13 +990,13 @@ community_aspects:
     - name: Pendulum of the Ages
       share: 0.43
     - name: Archmage's Gem
-      share: 0.25
+      share: 0.26
     - name: Conduit Gem
       share: 0.11
     - name: Sands Of Time
-      share: 0.09
+      share: 0.1
     - name: Bluestone Brooch
-      share: 0.08
+      share: 0.07
     - name: Bluestone Pendant
       share: 0.02
     - name: Bumba's Hammer
@@ -1006,14 +1006,14 @@ community_aspects:
     - name: Bumba's Cudgel
       share: 0.0
     relics:
-    - name: Aegis of Acceleration
-      share: 0.48
     - name: Purification Beads
-      share: 0.47
+      share: 0.48
+    - name: Aegis of Acceleration
+      share: 0.46
     - name: Blink Rune
-      share: 0.03
+      share: 0.04
     matches_by_window:
-      ob47: 265
+      ob47: 282
       ob46: 518
       ob45: 577
     unmapped_slugs:

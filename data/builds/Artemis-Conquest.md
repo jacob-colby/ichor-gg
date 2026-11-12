@@ -864,15 +864,15 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 31
     wins: 19
     win_share: 0.61
     aggregate:
-      aspect_matches: 34
-      aspect_win_rate: 0.559
-      no_aspect_matches: 382
-      no_aspect_win_rate: 0.573
+      aspect_matches: 35
+      aspect_win_rate: 0.571
+      no_aspect_matches: 396
+      no_aspect_win_rate: 0.576
     roles:
     - role: Carry
       matches: 22

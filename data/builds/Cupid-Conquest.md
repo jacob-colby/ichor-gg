@@ -1008,15 +1008,15 @@ community_aspects:
     patches: OB45–OB47
     window_rule: pooled back
     window_start: '2026-10-06'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 48
     wins: 24
     win_share: 0.5
     aggregate:
       aspect_matches: 58
       aspect_win_rate: 0.448
-      no_aspect_matches: 2270
-      no_aspect_win_rate: 0.584
+      no_aspect_matches: 2299
+      no_aspect_win_rate: 0.586
     roles:
     - role: Solo
       matches: 23

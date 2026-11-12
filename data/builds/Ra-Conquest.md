@@ -1481,7 +1481,7 @@ community_aspects:
     - name: Aegis of Acceleration
       share: 0.11
     matches_by_window:
-      ob47: 20
+      ob47: 21
       ob46: 44
       ob45: 52
       ob44: 65

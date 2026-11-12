@@ -950,22 +950,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 119
+    window_end: '2026-11-12'
+    matches: 123
     wins: 67
-    win_share: 0.56
+    win_share: 0.54
     aggregate:
-      aspect_matches: 154
-      aspect_win_rate: 0.571
-      no_aspect_matches: 189
-      no_aspect_win_rate: 0.619
+      aspect_matches: 161
+      aspect_win_rate: 0.547
+      no_aspect_matches: 201
+      no_aspect_win_rate: 0.602
     roles:
     - role: Mid
-      matches: 75
-      share: 0.63
+      matches: 79
+      share: 0.64
     - role: Solo
       matches: 36
-      share: 0.3
+      share: 0.29
     - role: Jungle
       matches: 6
       share: 0.05
@@ -973,7 +973,7 @@ community_aspects:
       matches: 2
       share: 0.02
     base_role: Mid Carry
-    base_role_share: 0.65
+    base_role_share: 0.66
     role_shift: null
     items:
     - name: Rod of Tahuti
@@ -983,26 +983,26 @@ community_aspects:
     - name: Book of Thoth
       share: 0.59
     - name: Soul Gem
-      share: 0.55
+      share: 0.54
     - name: Obsidian Shard
-      share: 0.47
+      share: 0.46
     - name: Gem of Focus
-      share: 0.44
+      share: 0.43
     - name: Evil Eye
-      share: 0.18
-    - name: Bancroft's Talon
+      share: 0.17
+    - name: Spear of the Magus
       share: 0.17
     starters:
     - name: Archmage's Gem
-      share: 0.59
+      share: 0.58
     - name: Conduit Gem
-      share: 0.16
+      share: 0.17
     - name: Hunter's Cowl
-      share: 0.13
+      share: 0.12
     - name: Pendulum of the Ages
       share: 0.07
     - name: Sands Of Time
-      share: 0.03
+      share: 0.04
     - name: Blood-soaked Shroud
       share: 0.01
     - name: Leather Cowl
@@ -1011,13 +1011,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Aegis of Acceleration
-      share: 0.84
+      share: 0.85
     - name: Purification Beads
       share: 0.13
     - name: Blink Rune
-      share: 0.03
+      share: 0.02
     matches_by_window:
-      ob47: 119
+      ob47: 123
       ob46: 178
       ob45: 210
       ob44: 216

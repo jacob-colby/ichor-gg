@@ -815,22 +815,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 60
-    wins: 27
-    win_share: 0.45
+    window_end: '2026-11-12'
+    matches: 64
+    wins: 30
+    win_share: 0.47
     aggregate:
-      aspect_matches: 69
-      aspect_win_rate: 0.464
-      no_aspect_matches: 329
-      no_aspect_win_rate: 0.547
+      aspect_matches: 75
+      aspect_win_rate: 0.48
+      no_aspect_matches: 347
+      no_aspect_win_rate: 0.536
     roles:
     - role: Solo
-      matches: 55
-      share: 0.92
+      matches: 57
+      share: 0.89
     - role: Carry
-      matches: 3
-      share: 0.05
+      matches: 5
+      share: 0.08
     - role: Jungle
       matches: 2
       share: 0.03
@@ -838,36 +838,36 @@ community_aspects:
     base_role_share: 0.0
     role_shift:
       role: Solo
-      share: 0.92
-      says: 'most Aspect of Grover''s Wrath players do not play Support: Solo 92%,
+      share: 0.89
+      says: 'most Aspect of Grover''s Wrath players do not play Support: Solo 89%,
         Support 0%'
     items:
     - name: Berserker's Shield
-      share: 0.87
+      share: 0.88
     - name: Tyrfing
-      share: 0.87
+      share: 0.86
     - name: Bragi's Harp
       share: 0.67
     - name: Shogun's Ofuda
       share: 0.55
-    - name: Shifter's Shield
+    - name: Freya's Tears
       share: 0.17
     - name: Circe's Hexstone
-      share: 0.15
-    - name: Freya's Tears
-      share: 0.15
+      share: 0.16
+    - name: Shifter's Shield
+      share: 0.16
     - name: Hussar's Wings
-      share: 0.13
+      share: 0.12
     starters:
     - name: Death's Embrace
       share: 0.53
     - name: Death's Toll
-      share: 0.32
+      share: 0.31
     - name: Hunter's Cowl
       share: 0.05
-    - name: Leather Cowl
-      share: 0.03
     - name: Sharpshooter's Arrow
+      share: 0.05
+    - name: Leather Cowl
       share: 0.03
     - name: Sundering Axe
       share: 0.02
@@ -875,13 +875,13 @@ community_aspects:
       share: 0.02
     relics:
     - name: Aegis of Acceleration
-      share: 0.43
+      share: 0.45
     - name: Phantom Shell
-      share: 0.32
+      share: 0.3
     - name: Purification Beads
-      share: 0.18
+      share: 0.17
     matches_by_window:
-      ob47: 60
+      ob47: 64
       ob46: 188
       ob45: 199
       ob44: 107

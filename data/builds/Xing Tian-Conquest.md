@@ -809,73 +809,76 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 42
-    wins: 16
+    window_end: '2026-11-12'
+    matches: 45
+    wins: 17
     win_share: 0.38
     aggregate:
-      aspect_matches: 51
-      aspect_win_rate: 0.373
-      no_aspect_matches: 487
-      no_aspect_win_rate: 0.542
+      aspect_matches: 54
+      aspect_win_rate: 0.37
+      no_aspect_matches: 515
+      no_aspect_win_rate: 0.544
     roles:
     - role: Solo
-      matches: 35
-      share: 0.83
+      matches: 37
+      share: 0.82
     - role: Mid
       matches: 4
-      share: 0.1
+      share: 0.09
     - role: Support
       matches: 3
       share: 0.07
+    - role: Jungle
+      matches: 1
+      share: 0.02
     base_role: Support Solo
-    base_role_share: 0.9
+    base_role_share: 0.89
     role_shift: null
     items:
     - name: Shifter's Shield
-      share: 0.71
+      share: 0.73
     - name: Ethereal Staff
-      share: 0.45
+      share: 0.47
     - name: Freya's Tears
-      share: 0.43
+      share: 0.44
     - name: Genji's Guard
-      share: 0.31
+      share: 0.33
     - name: Yogi's Necklace
-      share: 0.24
-    - name: Shield of the Phoenix
-      share: 0.21
+      share: 0.22
     - name: brawlers-ruin
-      share: 0.19
+      share: 0.2
+    - name: Shield of the Phoenix
+      share: 0.2
     - name: Breastplate of Valor
-      share: 0.19
+      share: 0.18
     starters:
-    - name: Bluestone Pendant
-      share: 0.36
     - name: Bluestone Brooch
       share: 0.33
+    - name: Bluestone Pendant
+      share: 0.33
     - name: Blood-soaked Shroud
-      share: 0.1
-    - name: Archmage's Gem
-      share: 0.05
-    - name: Heroism
-      share: 0.05
-    - name: Pendulum of the Ages
-      share: 0.05
+      share: 0.09
     - name: Conduit Gem
-      share: 0.02
+      share: 0.07
+    - name: Archmage's Gem
+      share: 0.04
+    - name: Heroism
+      share: 0.04
+    - name: Pendulum of the Ages
+      share: 0.04
     - name: Sands Of Time
       share: 0.02
     - name: Vampiric Shroud
       share: 0.02
     relics:
     - name: Sundering Arc
-      share: 0.38
+      share: 0.4
     - name: Phantom Shell
-      share: 0.29
+      share: 0.27
     - name: Purification Beads
-      share: 0.19
+      share: 0.2
     matches_by_window:
-      ob47: 42
+      ob47: 45
       ob46: 129
       ob45: 129
       ob44: 191

@@ -815,9 +815,9 @@ community_aspects:
     wins: 35
     win_share: 0.58
     aggregate:
-      aspect_matches: 74
-      aspect_win_rate: 0.5
-      no_aspect_matches: 391
+      aspect_matches: 75
+      aspect_win_rate: 0.493
+      no_aspect_matches: 395
       no_aspect_win_rate: 0.565
     roles:
     - role: Mid
@@ -879,7 +879,7 @@ community_aspects:
     - name: Phantom Shell
       share: 0.08
     matches_by_window:
-      ob47: 23
+      ob47: 24
       ob46: 60
       ob45: 97
       ob44: 136

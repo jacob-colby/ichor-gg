@@ -678,7 +678,7 @@ community_aspects:
     aggregate:
       aspect_matches: 96
       aspect_win_rate: 0.552
-      no_aspect_matches: 109
+      no_aspect_matches: 111
       no_aspect_win_rate: 0.532
     roles:
     - role: Support
@@ -754,7 +754,7 @@ community_aspects:
     - name: Sundering Arc
       share: 0.12
     matches_by_window:
-      ob47: 20
+      ob47: 21
       ob46: 76
       ob45: 62
       ob44: 86

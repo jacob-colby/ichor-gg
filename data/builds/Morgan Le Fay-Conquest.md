@@ -1741,58 +1741,58 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 102
-    wins: 53
-    win_share: 0.52
+    window_end: '2026-11-12'
+    matches: 117
+    wins: 60
+    win_share: 0.51
     aggregate:
-      aspect_matches: 112
-      aspect_win_rate: 0.5
-      no_aspect_matches: 175
-      no_aspect_win_rate: 0.526
+      aspect_matches: 127
+      aspect_win_rate: 0.496
+      no_aspect_matches: 186
+      no_aspect_win_rate: 0.532
     roles:
     - role: Solo
-      matches: 86
-      share: 0.84
+      matches: 99
+      share: 0.85
     - role: Support
-      matches: 14
-      share: 0.14
+      matches: 15
+      share: 0.13
     - role: Jungle
-      matches: 2
-      share: 0.02
+      matches: 3
+      share: 0.03
     base_role: Mid
     base_role_share: 0.0
     role_shift:
       role: Solo
-      share: 0.84
-      says: 'most Aspect of the Cursed Crown players do not play Mid: Solo 84%, Mid
+      share: 0.85
+      says: 'most Aspect of the Cursed Crown players do not play Mid: Solo 85%, Mid
         0%'
     items:
     - name: Freya's Tears
-      share: 0.55
+      share: 0.52
     - name: Ethereal Staff
-      share: 0.46
+      share: 0.48
     - name: Shield of the Phoenix
-      share: 0.4
+      share: 0.42
     - name: Genji's Guard
-      share: 0.38
+      share: 0.39
     - name: Shifter's Shield
-      share: 0.3
+      share: 0.29
     - name: Hussar's Wings
-      share: 0.28
-    - name: Breastplate of Valor
-      share: 0.21
-    - name: Lifebinder
+      share: 0.27
+    - name: Gem of Isolation
       share: 0.2
+    - name: Breastplate of Valor
+      share: 0.19
     starters:
     - name: Bluestone Brooch
       share: 0.55
     - name: Bluestone Pendant
-      share: 0.26
-    - name: Warrior's Axe
-      share: 0.07
+      share: 0.27
     - name: Sundering Axe
-      share: 0.05
+      share: 0.06
+    - name: Warrior's Axe
+      share: 0.06
     - name: Leather Cowl
       share: 0.02
     - name: War Flag
@@ -1805,13 +1805,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Sundering Arc
-      share: 0.29
+      share: 0.33
     - name: Phantom Shell
       share: 0.2
     - name: Blink Rune
       share: 0.19
     matches_by_window:
-      ob47: 102
+      ob47: 117
       ob46: 158
       ob45: 141
       ob44: 158

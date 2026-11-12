@@ -950,66 +950,66 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 56
-    wins: 28
+    window_end: '2026-11-12'
+    matches: 58
+    wins: 29
     win_share: 0.5
     aggregate:
-      aspect_matches: 65
-      aspect_win_rate: 0.508
-      no_aspect_matches: 381
-      no_aspect_win_rate: 0.512
+      aspect_matches: 67
+      aspect_win_rate: 0.507
+      no_aspect_matches: 416
+      no_aspect_win_rate: 0.517
     roles:
     - role: Carry
-      matches: 32
+      matches: 33
       share: 0.57
     - role: Mid
       matches: 11
-      share: 0.2
+      share: 0.19
     - role: Jungle
-      matches: 8
-      share: 0.14
+      matches: 9
+      share: 0.16
     - role: Solo
       matches: 5
       share: 0.09
     base_role: Mid
-    base_role_share: 0.2
+    base_role_share: 0.19
     role_shift:
       role: Carry
       share: 0.57
-      says: 'most Aspect of the Trident players do not play Mid: Carry 57%, Mid 20%'
+      says: 'most Aspect of the Trident players do not play Mid: Carry 57%, Mid 19%'
     items:
     - name: Devourer's Gauntlet
-      share: 0.73
+      share: 0.74
     - name: Silverbranch Bow
-      share: 0.59
+      share: 0.57
     - name: Riptalon
       share: 0.55
-    - name: The Executioner
-      share: 0.43
     - name: Dagger of Frenzy
       share: 0.41
+    - name: The Executioner
+      share: 0.41
     - name: Odysseus' Bow
-      share: 0.34
+      share: 0.33
     - name: Dominance
-      share: 0.3
+      share: 0.29
     - name: Hastened Fatalis
-      share: 0.27
+      share: 0.26
     starters:
     - name: Sharpshooter's Arrow
-      share: 0.34
+      share: 0.33
     - name: Hunter's Cowl
       share: 0.29
     - name: Leather Cowl
       share: 0.12
     - name: Gilded Arrow
-      share: 0.07
+      share: 0.09
     - name: Death's Embrace
       share: 0.05
     - name: Death's Toll
       share: 0.05
     - name: Pendulum of the Ages
-      share: 0.04
+      share: 0.03
     - name: Archmage's Gem
       share: 0.02
     - name: Bluestone Brooch
@@ -1022,7 +1022,7 @@ community_aspects:
     - name: Agility Relic
       share: 0.07
     matches_by_window:
-      ob47: 56
+      ob47: 58
       ob46: 56
       ob45: 54
       ob44: 62

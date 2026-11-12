@@ -800,25 +800,25 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 126
-    wins: 66
+    window_end: '2026-11-12'
+    matches: 135
+    wins: 70
     win_share: 0.52
     aggregate:
-      aspect_matches: 179
-      aspect_win_rate: 0.492
-      no_aspect_matches: 385
-      no_aspect_win_rate: 0.504
+      aspect_matches: 188
+      aspect_win_rate: 0.479
+      no_aspect_matches: 407
+      no_aspect_win_rate: 0.501
     roles:
     - role: Support
-      matches: 87
-      share: 0.69
+      matches: 95
+      share: 0.7
     - role: Mid
       matches: 34
-      share: 0.27
+      share: 0.25
     - role: Carry
-      matches: 3
-      share: 0.02
+      matches: 4
+      share: 0.03
     - role: Jungle
       matches: 1
       share: 0.01
@@ -830,17 +830,17 @@ community_aspects:
     role_shift: null
     items:
     - name: Chandra's Grace
-      share: 0.55
+      share: 0.53
     - name: Rod of Asclepius
-      share: 0.43
+      share: 0.41
     - name: Freya's Tears
       share: 0.34
     - name: Rod of Tahuti
       share: 0.26
     - name: Genji's Guard
-      share: 0.24
-    - name: Lotus Sickle
       share: 0.23
+    - name: Lotus Sickle
+      share: 0.22
     - name: Spear of Desolation
       share: 0.22
     - name: Shell of Rebuke
@@ -849,23 +849,23 @@ community_aspects:
     - name: Pendulum of the Ages
       share: 0.29
     - name: Sands Of Time
-      share: 0.29
+      share: 0.28
     - name: Archmage's Gem
-      share: 0.12
+      share: 0.11
     - name: Heroism
-      share: 0.06
-    - name: Selflessness
-      share: 0.06
+      share: 0.07
     - name: War Flag
       share: 0.06
+    - name: Selflessness
+      share: 0.05
     - name: War Banner
-      share: 0.04
+      share: 0.05
     - name: Conduit Gem
       share: 0.03
     - name: Bumba's Cudgel
-      share: 0.02
+      share: 0.01
     - name: Gilded Arrow
-      share: 0.02
+      share: 0.01
     - name: Bluestone Pendant
       share: 0.01
     - name: Bumba's Hammer
@@ -876,13 +876,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Phantom Shell
-      share: 0.46
+      share: 0.47
     - name: Aegis of Acceleration
-      share: 0.31
+      share: 0.3
     - name: Purification Beads
       share: 0.21
     matches_by_window:
-      ob47: 126
+      ob47: 135
       ob46: 332
       ob45: 963
       ob44: 788

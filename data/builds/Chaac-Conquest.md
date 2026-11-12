@@ -817,8 +817,8 @@ community_aspects:
     aggregate:
       aspect_matches: 56
       aspect_win_rate: 0.375
-      no_aspect_matches: 201
-      no_aspect_win_rate: 0.473
+      no_aspect_matches: 202
+      no_aspect_win_rate: 0.475
     roles:
     - role: Solo
       matches: 30

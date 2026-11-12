@@ -890,22 +890,22 @@ community_aspects:
     patches: OB44–OB47
     window_rule: pooled back
     window_start: '2026-09-22'
-    window_end: '2026-11-11'
-    matches: 30
-    wins: 12
-    win_share: 0.4
+    window_end: '2026-11-12'
+    matches: 31
+    wins: 13
+    win_share: 0.42
     aggregate:
-      aspect_matches: 36
-      aspect_win_rate: 0.361
-      no_aspect_matches: 2380
+      aspect_matches: 37
+      aspect_win_rate: 0.378
+      no_aspect_matches: 2415
       no_aspect_win_rate: 0.589
     roles:
     - role: Carry
-      matches: 17
-      share: 0.57
+      matches: 18
+      share: 0.58
     - role: Solo
       matches: 11
-      share: 0.37
+      share: 0.35
     - role: Jungle
       matches: 1
       share: 0.03
@@ -913,21 +913,21 @@ community_aspects:
       matches: 1
       share: 0.03
     base_role: Support Carry
-    base_role_share: 0.6
+    base_role_share: 0.61
     role_shift: null
     items:
     - name: Devourer's Gauntlet
-      share: 0.6
+      share: 0.58
     - name: Deathbringer
-      share: 0.5
+      share: 0.48
     - name: Dagger of Frenzy
-      share: 0.43
-    - name: Dominance
-      share: 0.33
+      share: 0.42
     - name: Tyrfing
-      share: 0.33
+      share: 0.35
+    - name: Dominance
+      share: 0.32
     - name: Riptalon
-      share: 0.3
+      share: 0.29
       changed:
         patch: OB41–OB46
         exact: false
@@ -936,7 +936,7 @@ community_aspects:
         says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
           not recorded; up to 2 of the 9 matches that bought it are older
     - name: Musashi's Dual Swords
-      share: 0.27
+      share: 0.26
       changed:
         patch: OB41–OB46
         exact: false
@@ -944,24 +944,17 @@ community_aspects:
         matches: 8
         says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
           not recorded; up to 3 of the 8 matches that bought it are older
-    - name: Berserker's Shield
-      share: 0.2
-      changed:
-        patch: OB41–OB46
-        exact: false
-        older_matches: 1
-        matches: 6
-        says: its stats moved between Ichor's OB40 and OB46 item data, at a patch
-          not recorded; up to 1 of the 6 matches that bought it are older
+    - name: Odysseus' Bow
+      share: 0.23
     starters:
     - name: Sharpshooter's Arrow
-      share: 0.53
+      share: 0.55
     - name: Death's Embrace
       share: 0.13
     - name: Gilded Arrow
       share: 0.13
     - name: Hunter's Cowl
-      share: 0.07
+      share: 0.06
     - name: Bluestone Brooch
       share: 0.03
     - name: Death's Toll
@@ -972,13 +965,13 @@ community_aspects:
       share: 0.03
     relics:
     - name: Agility Relic
-      share: 0.67
+      share: 0.65
+    - name: Purification Beads
+      share: 0.16
     - name: Aegis of Acceleration
       share: 0.13
-    - name: Purification Beads
-      share: 0.13
     matches_by_window:
-      ob47: 6
+      ob47: 7
       ob46: 13
       ob45: 6
       ob44: 5

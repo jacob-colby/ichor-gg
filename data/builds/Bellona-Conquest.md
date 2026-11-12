@@ -709,7 +709,7 @@ community_aspects:
     - name: Purification Beads
       share: 0.12
     matches_by_window:
-      ob47: 5
+      ob47: 7
       ob46: 41
       ob45: 79
       ob44: 79

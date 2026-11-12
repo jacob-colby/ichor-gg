@@ -640,74 +640,74 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 33
-    wins: 15
-    win_share: 0.45
+    window_end: '2026-11-12'
+    matches: 37
+    wins: 18
+    win_share: 0.49
     aggregate:
-      aspect_matches: 41
-      aspect_win_rate: 0.439
-      no_aspect_matches: 105
-      no_aspect_win_rate: 0.438
+      aspect_matches: 45
+      aspect_win_rate: 0.444
+      no_aspect_matches: 108
+      no_aspect_win_rate: 0.435
     roles:
     - role: Solo
-      matches: 22
-      share: 0.67
+      matches: 25
+      share: 0.68
     - role: Mid
-      matches: 7
-      share: 0.21
+      matches: 8
+      share: 0.22
     - role: Jungle
       matches: 3
-      share: 0.09
+      share: 0.08
     - role: Support
       matches: 1
       share: 0.03
     base_role: Solo
-    base_role_share: 0.67
+    base_role_share: 0.68
     role_shift: null
     items:
     - name: Ancient Signet
-      share: 0.42
+      share: 0.46
     - name: Shifter's Shield
-      share: 0.39
+      share: 0.35
+    - name: Prophetic Cloak
+      share: 0.32
     - name: Freya's Tears
       share: 0.3
-    - name: Prophetic Cloak
+    - name: Sphere of Negation
       share: 0.3
+    - name: Helm of Radiance
+      share: 0.27
     - name: Rod of Tahuti
       share: 0.27
-    - name: Sphere of Negation
-      share: 0.27
-    - name: Gladiator's Shield
-      share: 0.24
-    - name: Helm of Radiance
+    - name: Spear of Desolation
       share: 0.24
     starters:
     - name: Sundering Axe
       share: 0.27
     - name: Bluestone Brooch
-      share: 0.24
+      share: 0.22
     - name: Archmage's Gem
-      share: 0.18
+      share: 0.19
     - name: Conduit Gem
-      share: 0.12
-    - name: Bluestone Pendant
-      share: 0.06
+      share: 0.14
     - name: Warrior's Axe
-      share: 0.06
+      share: 0.08
+    - name: Bluestone Pendant
+      share: 0.05
     - name: Death's Toll
       share: 0.03
     - name: War Flag
       share: 0.03
     relics:
     - name: Purification Beads
-      share: 0.45
+      share: 0.41
     - name: Aegis of Acceleration
-      share: 0.24
+      share: 0.3
     - name: Phantom Shell
-      share: 0.21
+      share: 0.22
     matches_by_window:
-      ob47: 33
+      ob47: 37
       ob46: 45
       ob45: 43
       ob44: 72

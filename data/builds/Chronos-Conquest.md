@@ -1724,22 +1724,22 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
-    matches: 39
+    window_end: '2026-11-12'
+    matches: 40
     wins: 22
-    win_share: 0.56
+    win_share: 0.55
     aggregate:
-      aspect_matches: 50
-      aspect_win_rate: 0.5
-      no_aspect_matches: 1045
-      no_aspect_win_rate: 0.509
+      aspect_matches: 51
+      aspect_win_rate: 0.49
+      no_aspect_matches: 1062
+      no_aspect_win_rate: 0.511
     roles:
     - role: Support
-      matches: 32
+      matches: 33
       share: 0.82
     - role: Solo
       matches: 5
-      share: 0.13
+      share: 0.12
     - role: Jungle
       matches: 1
       share: 0.03
@@ -1752,27 +1752,27 @@ community_aspects:
       role: Support
       share: 0.82
       says: 'most Aspect of Relativity players do not play Mid/Carry: Support 82%,
-        Mid/Carry 3%'
+        Mid/Carry 2%'
     items:
     - name: Chandra's Grace
-      share: 0.64
+      share: 0.65
     - name: Gauntlet of Thebes
-      share: 0.44
+      share: 0.45
     - name: Freya's Tears
-      share: 0.41
+      share: 0.42
     - name: Lotus Sickle
-      share: 0.31
+      share: 0.33
     - name: Prophetic Cloak
-      share: 0.23
+      share: 0.25
     - name: Regrowth Striders
-      share: 0.21
+      share: 0.2
     - name: Breastplate of Valor
       share: 0.15
-    - name: Genji's Guard
+    - name: Captain's Ring
       share: 0.15
     starters:
     - name: War Flag
-      share: 0.21
+      share: 0.2
       changed:
         patch: OB47
         exact: true
@@ -1782,9 +1782,9 @@ community_aspects:
     - name: Bumba's Cudgel
       share: 0.15
     - name: Bumba's Hammer
-      share: 0.13
+      share: 0.15
     - name: Selflessness
-      share: 0.13
+      share: 0.12
       changed:
         patch: OB47
         exact: true
@@ -1796,7 +1796,7 @@ community_aspects:
     - name: War Banner
       share: 0.1
     - name: Sands Of Time
-      share: 0.08
+      share: 0.07
     - name: Bluestone Brooch
       share: 0.03
     - name: Bluestone Pendant
@@ -1809,11 +1809,11 @@ community_aspects:
     - name: Phantom Shell
       share: 0.72
     - name: Aegis of Acceleration
-      share: 0.13
+      share: 0.12
     - name: Purification Beads
       share: 0.1
     matches_by_window:
-      ob47: 11
+      ob47: 12
       ob46: 28
       ob45: 84
       ob44: 26

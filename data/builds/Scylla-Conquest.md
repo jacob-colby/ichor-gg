@@ -804,63 +804,63 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 71
-    wins: 39
-    win_share: 0.55
+    window_end: '2026-11-12'
+    matches: 75
+    wins: 40
+    win_share: 0.53
     aggregate:
-      aspect_matches: 89
-      aspect_win_rate: 0.528
-      no_aspect_matches: 467
-      no_aspect_win_rate: 0.542
+      aspect_matches: 93
+      aspect_win_rate: 0.516
+      no_aspect_matches: 503
+      no_aspect_win_rate: 0.547
     roles:
     - role: Support
-      matches: 57
+      matches: 60
       share: 0.8
     - role: Solo
-      matches: 8
-      share: 0.11
+      matches: 9
+      share: 0.12
     - role: Mid
       matches: 4
-      share: 0.06
+      share: 0.05
     - role: Carry
       matches: 2
       share: 0.03
     base_role: Mid
-    base_role_share: 0.06
+    base_role_share: 0.05
     role_shift:
       role: Support
       share: 0.8
       says: 'most Aspect of the Devourer players do not play Mid: Support 80%, Mid
-        6%'
+        5%'
     items:
     - name: Yogi's Necklace
-      share: 0.69
+      share: 0.71
     - name: Genji's Guard
-      share: 0.55
+      share: 0.56
     - name: Breastplate of Valor
-      share: 0.49
+      share: 0.51
     - name: Freya's Tears
-      share: 0.44
+      share: 0.41
     - name: Shell of Rebuke
-      share: 0.38
+      share: 0.39
     - name: Prophetic Cloak
-      share: 0.31
+      share: 0.29
     - name: Dwarven Plate
-      share: 0.24
+      share: 0.23
     - name: Book of Thoth
-      share: 0.2
+      share: 0.19
     starters:
     - name: Conduit Gem
-      share: 0.42
+      share: 0.43
     - name: Archmage's Gem
-      share: 0.35
+      share: 0.33
     - name: Bluestone Brooch
-      share: 0.07
+      share: 0.08
     - name: Bluestone Pendant
       share: 0.04
     - name: Sundering Axe
-      share: 0.03
+      share: 0.04
     - name: War Banner
       share: 0.03
     - name: Bumba's Hammer
@@ -872,14 +872,14 @@ community_aspects:
     - name: Warrior's Axe
       share: 0.01
     relics:
-    - name: Sundering Arc
-      share: 0.28
     - name: Aegis of Acceleration
-      share: 0.25
+      share: 0.27
+    - name: Sundering Arc
+      share: 0.27
     - name: Phantom Shell
       share: 0.2
     matches_by_window:
-      ob47: 71
+      ob47: 75
       ob46: 123
       ob45: 108
       ob44: 121

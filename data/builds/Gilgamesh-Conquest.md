@@ -723,21 +723,21 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 125
-    wins: 75
+    window_end: '2026-11-12'
+    matches: 129
+    wins: 78
     win_share: 0.6
     aggregate:
-      aspect_matches: 147
-      aspect_win_rate: 0.592
-      no_aspect_matches: 98
-      no_aspect_win_rate: 0.571
+      aspect_matches: 153
+      aspect_win_rate: 0.601
+      no_aspect_matches: 110
+      no_aspect_win_rate: 0.6
     roles:
     - role: Jungle
-      matches: 81
+      matches: 84
       share: 0.65
     - role: Solo
-      matches: 40
+      matches: 41
       share: 0.32
     - role: Support
       matches: 3
@@ -750,26 +750,26 @@ community_aspects:
     role_shift: null
     items:
     - name: Barbed Carver
-      share: 0.59
+      share: 0.6
     - name: Jotunn's Revenge
-      share: 0.46
+      share: 0.47
     - name: Heartseeker
-      share: 0.42
+      share: 0.43
     - name: Devourer's Gauntlet
-      share: 0.4
+      share: 0.39
     - name: The Reaper
       share: 0.36
     - name: The Crusher
-      share: 0.31
+      share: 0.32
     - name: Freya's Tears
       share: 0.27
     - name: Sanguine Lash
-      share: 0.27
+      share: 0.26
     starters:
     - name: Hunter's Cowl
       share: 0.39
     - name: Bluestone Brooch
-      share: 0.23
+      share: 0.24
     - name: Leather Cowl
       share: 0.12
     - name: Archmage's Gem
@@ -777,7 +777,7 @@ community_aspects:
     - name: Bumba's Hammer
       share: 0.08
     - name: Bluestone Pendant
-      share: 0.06
+      share: 0.05
     - name: Death's Embrace
       share: 0.01
     - name: Death's Toll
@@ -794,9 +794,9 @@ community_aspects:
     - name: Purification Beads
       share: 0.29
     - name: Aegis of Acceleration
-      share: 0.2
+      share: 0.19
     matches_by_window:
-      ob47: 125
+      ob47: 129
       ob46: 247
       ob45: 383
       ob44: 284

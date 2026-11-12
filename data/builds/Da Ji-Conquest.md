@@ -797,14 +797,14 @@ community_aspects:
     patches: OB44–OB47
     window_rule: pooled back
     window_start: '2026-09-22'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 38
     wins: 16
     win_share: 0.42
     aggregate:
       aspect_matches: 41
       aspect_win_rate: 0.39
-      no_aspect_matches: 2315
+      no_aspect_matches: 2339
       no_aspect_win_rate: 0.554
     roles:
     - role: Jungle

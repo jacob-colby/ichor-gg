@@ -881,15 +881,15 @@ community_aspects:
     patches: OB46–OB47
     window_rule: pooled back
     window_start: '2026-10-20'
-    window_end: '2026-11-11'
+    window_end: '2026-11-12'
     matches: 49
     wins: 28
     win_share: 0.57
     aggregate:
       aspect_matches: 57
       aspect_win_rate: 0.526
-      no_aspect_matches: 1562
-      no_aspect_win_rate: 0.548
+      no_aspect_matches: 1607
+      no_aspect_win_rate: 0.547
     roles:
     - role: Support
       matches: 26

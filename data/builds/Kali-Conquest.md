@@ -741,69 +741,69 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 35
-    wins: 17
+    window_end: '2026-11-12'
+    matches: 37
+    wins: 18
     win_share: 0.49
     aggregate:
-      aspect_matches: 43
-      aspect_win_rate: 0.535
-      no_aspect_matches: 144
-      no_aspect_win_rate: 0.514
+      aspect_matches: 46
+      aspect_win_rate: 0.522
+      no_aspect_matches: 156
+      no_aspect_win_rate: 0.513
     roles:
     - role: Carry
-      matches: 29
-      share: 0.83
+      matches: 31
+      share: 0.84
     - role: Solo
       matches: 4
       share: 0.11
     - role: Jungle
       matches: 2
-      share: 0.06
+      share: 0.05
     base_role: Jungle
-    base_role_share: 0.06
+    base_role_share: 0.05
     role_shift:
       role: Carry
-      share: 0.83
+      share: 0.84
       says: 'most Aspect of Unbound Destruction players do not play Jungle: Carry
-        83%, Jungle 6%'
+        84%, Jungle 5%'
     items:
     - name: Odysseus' Bow
       share: 0.86
     - name: Tyrfing
-      share: 0.86
+      share: 0.84
     - name: Silverbranch Bow
-      share: 0.8
+      share: 0.78
     - name: Hastened Fatalis
-      share: 0.54
+      share: 0.57
     - name: The Executioner
-      share: 0.54
+      share: 0.51
     - name: Riptalon
-      share: 0.34
+      share: 0.32
     - name: Hunter's Bow
-      share: 0.29
-    - name: Dominance
-      share: 0.23
+      share: 0.3
+    - name: Berserker's Shield
+      share: 0.24
     starters:
     - name: Death's Embrace
       share: 0.49
     - name: Hunter's Cowl
-      share: 0.17
+      share: 0.16
     - name: Death's Toll
       share: 0.14
     - name: Sharpshooter's Arrow
-      share: 0.11
+      share: 0.14
     - name: Leather Cowl
-      share: 0.09
+      share: 0.08
     relics:
     - name: Purification Beads
-      share: 0.51
-    - name: Aegis of Acceleration
-      share: 0.26
+      share: 0.49
     - name: Agility Relic
-      share: 0.23
+      share: 0.27
+    - name: Aegis of Acceleration
+      share: 0.24
     matches_by_window:
-      ob47: 35
+      ob47: 37
       ob46: 104
       ob45: 135
       ob44: 137

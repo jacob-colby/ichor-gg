@@ -930,54 +930,54 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 47
-    wins: 31
-    win_share: 0.66
+    window_end: '2026-11-12'
+    matches: 51
+    wins: 33
+    win_share: 0.65
     aggregate:
-      aspect_matches: 61
-      aspect_win_rate: 0.574
-      no_aspect_matches: 110
-      no_aspect_win_rate: 0.527
+      aspect_matches: 66
+      aspect_win_rate: 0.561
+      no_aspect_matches: 119
+      no_aspect_win_rate: 0.529
     roles:
     - role: Solo
-      matches: 44
-      share: 0.94
+      matches: 47
+      share: 0.92
+    - role: Mid
+      matches: 2
+      share: 0.04
     - role: Support
       matches: 2
       share: 0.04
-    - role: Mid
-      matches: 1
-      share: 0.02
     base_role: Mid
-    base_role_share: 0.02
+    base_role_share: 0.04
     role_shift:
       role: Solo
-      share: 0.94
-      says: 'most Aspect of the Death March players do not play Mid: Solo 94%, Mid
-        2%'
+      share: 0.92
+      says: 'most Aspect of the Death March players do not play Mid: Solo 92%, Mid
+        4%'
     items:
     - name: Shield of the Phoenix
-      share: 0.79
+      share: 0.8
     - name: Gem of Isolation
-      share: 0.55
+      share: 0.59
     - name: Freya's Tears
       share: 0.51
     - name: Genji's Guard
-      share: 0.43
+      share: 0.45
     - name: Ancile
-      share: 0.28
+      share: 0.25
     - name: Breastplate of Valor
-      share: 0.26
+      share: 0.25
     - name: Shifter's Shield
-      share: 0.26
+      share: 0.25
     - name: Soul Reaver
-      share: 0.19
+      share: 0.18
     starters:
     - name: Bluestone Brooch
-      share: 0.62
+      share: 0.61
     - name: Bluestone Pendant
-      share: 0.28
+      share: 0.29
     - name: Blood-soaked Shroud
       share: 0.06
     - name: Bumba's Cudgel
@@ -986,13 +986,13 @@ community_aspects:
       share: 0.02
     relics:
     - name: Aegis of Acceleration
-      share: 0.4
+      share: 0.37
     - name: Phantom Shell
-      share: 0.34
+      share: 0.37
     - name: Purification Beads
-      share: 0.21
+      share: 0.22
     matches_by_window:
-      ob47: 47
+      ob47: 51
       ob46: 144
       ob45: 60
       ob44: 95

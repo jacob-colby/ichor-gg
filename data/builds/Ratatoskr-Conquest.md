@@ -828,52 +828,52 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 320
-    wins: 202
+    window_end: '2026-11-12'
+    matches: 343
+    wins: 215
     win_share: 0.63
     aggregate:
-      aspect_matches: 359
-      aspect_win_rate: 0.613
-      no_aspect_matches: 476
-      no_aspect_win_rate: 0.586
+      aspect_matches: 397
+      aspect_win_rate: 0.602
+      no_aspect_matches: 510
+      no_aspect_win_rate: 0.576
     roles:
     - role: Solo
-      matches: 214
+      matches: 231
       share: 0.67
     - role: Support
-      matches: 69
+      matches: 74
       share: 0.22
     - role: Jungle
-      matches: 37
-      share: 0.12
+      matches: 38
+      share: 0.11
     base_role: Jungle
-    base_role_share: 0.12
+    base_role_share: 0.11
     role_shift:
       role: Solo
       share: 0.67
       says: 'most Aspect of the Thickbark players do not play Jungle: Solo 67%, Jungle
-        12%'
+        11%'
     items:
     - name: Ashwhorl Acorn
       share: 1.0
     - name: Briskberry Acorn
       share: 0.99
     - name: Thistlethorn Acorn
-      share: 0.86
+      share: 0.85
     - name: Genji's Guard
-      share: 0.51
+      share: 0.52
     - name: Shield of the Phoenix
-      share: 0.48
+      share: 0.49
     - name: Freya's Tears
-      share: 0.32
+      share: 0.31
     - name: Breastplate of Valor
-      share: 0.27
+      share: 0.26
     - name: Shifter's Shield
-      share: 0.12
+      share: 0.13
     starters:
     - name: Bluestone Brooch
-      share: 0.65
+      share: 0.64
     - name: Bluestone Pendant
       share: 0.25
     - name: Bumba's Hammer
@@ -892,6 +892,8 @@ community_aspects:
       share: 0.01
     - name: Archmage's Gem
       share: 0.0
+    - name: Bumba's Cudgel
+      share: 0.0
     - name: Conduit Gem
       share: 0.0
     - name: Death's Toll
@@ -908,11 +910,11 @@ community_aspects:
     - name: Sundering Arc
       share: 0.31
     - name: Purification Beads
-      share: 0.31
+      share: 0.3
     - name: Phantom Shell
-      share: 0.2
+      share: 0.21
     matches_by_window:
-      ob47: 320
+      ob47: 343
       ob46: 372
       ob45: 221
       ob44: 169
