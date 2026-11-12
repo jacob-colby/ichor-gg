@@ -2661,7 +2661,11 @@ proposal: `docs/plans/2026-11-08-aspect-community-record.md`; evidence:
 five enemy gods and the outcome — 184,735 god-vs-god outcome pairs from 24,032
 distinct matches on 2026-11-08, ~8,000 more a day, skewed to aspect players.
 SmiteBrain also has a
-`/gods/[godSlug]/matchups` route, not probed.
+`/gods/[godSlug]/matchups` route. Probed 2026-11-11: it is god-vs-god, with a
+`__data.json` form carrying `enemy_god`, `win_rate`, `god_overall_win_rate`,
+`delta`, `matches_played` and `matches_won` per opponent, scoped to role,
+division and patch window. Agni's OB47 page lists 61 opponents at 20 to 79
+matches each (median 33), so most single matchups sit near the 30-match floor.
 
 ### Done criterion 2 — engine and page built; the per-god follow-through is not
 
@@ -2826,6 +2830,20 @@ and ignores every mode query param, smite2.live ships a Joust/Arena selector
 with zero rows behind it, SmiteTracker's meta report is Conquest-only. The
 builds now disclose it in the reader's own terms — "no outcome data exists for
 Joust … read this as a shortlist rather than a buy order".
+
+**Re-checked 2026-11-11: still no per-god source, and one thing changed.**
+smite2.live now publishes ARENA item win rates: `/items?mode=arena` read
+"17,270 player builds analyzed" for OB47 across ranked and casual queues, 175
+item rows with `Purchase % (Arena)` and `Win Rate (Arena)`. It is global, not
+per god (its god pages have no mode selector and its Joust/Arena tier lists
+are empty), and its Joust table (9,348 builds) carries purchase counts and no
+win-rate column. So Arena has a first outcome signal an item-level check could
+read, Joust has popularity only, and neither can score a god's build.
+SmiteBrain is unchanged: no mode or queue field anywhere, and
+`builds.getBuilds` returns byte-identical pages with `mode`, `queue` or
+`gameMode` added. smitesource.com is ranked Conquest only. tracker.gg and
+smite.guru refuse automated fetches and were not read. No public SMITE 2 API
+was found. Nothing here is wired in.
 
 178 of 267 build groups are Joust and Arena. Those modes have no community data
 at all, so the recommender falls back to efficiency + fit alone — the
