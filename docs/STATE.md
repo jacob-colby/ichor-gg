@@ -2647,6 +2647,15 @@ Sickle 70% Mid on a Carry) and 6 of the 13 pooled (Tsukuyomi Jungle → Mid,
 Apollo, Atlas, Chronos, Cupid, Nu Wa). Three of the seven hand overlays (Agni,
 Ra, Morgan Le Fay) are role shifts.
 
+**The instrument that change will be read on (2026-11-11):**
+`python -m smite.aspect_agreement` compares the build the aspect toggle shows
+with the six tier-3 items most held by that aspect's players. First reading,
+79 shown aspects: the toggle's build holds 19% of them, where the same gods'
+base `core` holds 48% of their pooled community target; 10% where the aspect
+is played in another role, 28% where it is not; 35 aspects share no item. The
+six hand overlays with a record hold 6% against the base build's 0%. It is
+agreement, not quality, and it feeds nothing (`aspect_agreement`'s docstring).
+
 **Next, and it is a MODEL change:** an aspect build cannot change role through
 today's seam. An overlay carries only stat weights; `fit_map` reads the role
 from the god note, and §4.33 measured how narrow that channel is. A variant god
@@ -3560,6 +3569,7 @@ python -m smite.build_quality --god Medusa   # one god, to stdout
 python -m smite.build_quality --role Carry    # one role's verdict on its own objective
 python -m smite.build_quality --ward-economy  # the `ward-economy` carriers against a core built without them (~20s)
 python -m smite.side_by_side             # criterion 2: ours vs community, passives SIMULATED (~40s)
+python -m smite.aspect_agreement         # the aspect toggle's build vs what aspect players hold (~5s)
 python -m smite.side_by_side --god Medusa    # one god's side-by-side, item diffs and verdict
 python -m smite.order_agreement          # does our buy ORDER contradict the community's? (~40s)
 python -m smite.order_agreement --sweep  # community_weight 0.00 -> 1.00, with the held-out split
