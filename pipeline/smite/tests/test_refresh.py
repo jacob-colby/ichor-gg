@@ -1009,8 +1009,9 @@ def _boundary_fetcher(monkeypatch, newest_gods):
 def test_a_newer_window_the_coverage_rule_chose_is_accepted(monkeypatch):
     """The boundary end to end through the two guards Jacob named: the chooser
     takes ob48 the first day it covers as many gods as ob47, and the write
-    accepts it at a tenth of ob47's size. How deep it is is not this check's
-    business; `choose_community_window`'s docstring has that measurement."""
+    accepts it at a tenth of ob47's size. These rows are deep enough for the
+    depth floor (100 matches a god); a thin window is the section at the end
+    of this file."""
     window, gods = refresh.choose_community_window(_boundary_fetcher(monkeypatch, 95), "Achilles")
     assert (window, gods) == ("ob48", 95)
     refresh._refuse_window_regression(
