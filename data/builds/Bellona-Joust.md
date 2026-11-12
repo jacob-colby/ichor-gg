@@ -6,15 +6,15 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Erosion
-  - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,11 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.61
@@ -49,12 +55,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Draconic Scale:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Amanita Charm:
       total: 0.75
       efficiency: 0.68
@@ -247,7 +247,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Berserker's Shield:
       total: 0.58
       efficiency: 0.72
@@ -349,15 +349,15 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Shield Splitter
   - Freya's Tears
-  - Draconic Scale
   - Amanita Charm
   - Erosion
   flex_slots:
   - Erosion
-  - Draconic Scale
+  - Brawler’s Beat Stick
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -369,11 +369,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.53
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Kinetic Cuirass:
       total: 0.62
       efficiency: 0.61
@@ -392,12 +398,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
-    Draconic Scale:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
     Amanita Charm:
       total: 0.75
       efficiency: 0.68

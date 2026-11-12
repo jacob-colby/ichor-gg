@@ -20,8 +20,8 @@ builds:
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -32,41 +32,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.42
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Magi's Cloak:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Shield Splitter:
-      total: 0.55
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.54
     Mantle Of Discord:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Amanita Charm:
-      total: 0.7
+      total: 0.71
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
@@ -85,22 +85,22 @@ builds:
 - source: suggested
   archetype: mana-stack
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield Splitter
   - Transcendence
-  - Rod of Tahuti
-  - Soul Gem
+  - Heartseeker
+  - Amanita Charm
   flex_slots:
+  - Shield Splitter
   - Transcendence
-  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -110,12 +110,6 @@ builds:
   rationale: mana-stack (efficiency + fit). Arena — math + mode profile (no meta win/pick
     data).
   slot_scores:
-    Book of Thoth:
-      total: 0.35
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.23
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
@@ -128,45 +122,51 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.44
+    Shield Splitter:
+      total: 0.5
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.41
     Transcendence:
       total: 0.36
       efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.23
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.82
+    Heartseeker:
+      total: 0.5
+      efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.34
-    Soul Gem:
-      total: 0.68
-      efficiency: 0.58
+      fit: 0.54
+    Amanita Charm:
+      total: 0.64
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.59
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
+  - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
   - Magi's Cloak
   - Freya's Tears
-  - Spear of Desolation
-  - Soul Gem
+  - Amanita Charm
   flex_slots:
-  - Freya's Tears
   - Magi's Cloak
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
+    swap: Mantle Of Discord — CC-immunity / cleanse
+    swap_item: Mantle Of Discord
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -176,6 +176,12 @@ builds:
   rationale: Ability / burst skew (efficiency + fit). Arena — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Genji's Guard:
+      total: 0.48
+      efficiency: 0.71
+      win: 0.5
+      pick: 0.0
+      fit: 0.26
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -200,18 +206,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.38
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.6
+    Amanita Charm:
+      total: 0.64
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.45
-    Soul Gem:
-      total: 0.72
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.86
+      fit: 0.61
   starter: *id001
   relic: *id002
 - source: suggested
@@ -221,8 +221,8 @@ builds:
   - Kinetic Cuirass
   - Magi's Cloak
   - Shield Splitter
+  - Shield of the Phoenix
   - Amanita Charm
-  - Soul Gem
   flex_slots:
   - Shield Splitter
   - Magi's Cloak
@@ -234,8 +234,8 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -243,38 +243,38 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.41
+      fit: 0.43
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.59
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.57
     Magi's Cloak:
-      total: 0.5
+      total: 0.51
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.48
+      fit: 0.49
     Shield Splitter:
-      total: 0.52
+      total: 0.53
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.46
+      fit: 0.48
+    Shield of the Phoenix:
+      total: 0.65
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
     Amanita Charm:
-      total: 0.72
+      total: 0.73
       efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.75
-    Soul Gem:
-      total: 0.67
-      efficiency: 0.58
       win: 0.5
       pick: 0.0
       fit: 0.77
@@ -288,7 +288,7 @@ builds:
   - Avenging Blade
   - Jotunn's Revenge
   - Void Stone
-  - Soul Gem
+  - Amanita Charm
   flex_slots:
   - Avenging Blade
   - Void Stone
@@ -297,8 +297,8 @@ builds:
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -313,37 +313,37 @@ builds:
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Stone of Binding:
       total: 0.59
       efficiency: 0.49
       win: 0.5
       pick: 0.0
-      fit: 0.68
+      fit: 0.69
     Avenging Blade:
       total: 0.57
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.66
+      fit: 0.67
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.59
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.5
+      fit: 0.52
     Void Stone:
       total: 0.56
       efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.65
-    Soul Gem:
-      total: 0.7
-      efficiency: 0.58
+      fit: 0.66
+    Amanita Charm:
+      total: 0.67
+      efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.81
+      fit: 0.66
   starter: *id001
   relic: *id002
 - source: suggested
@@ -375,41 +375,41 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Golden Blade:
-      total: 0.55
+      total: 0.56
       efficiency: 0.51
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.62
     Toxic Blade:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.73
     Berserker's Shield:
-      total: 0.56
+      total: 0.57
       efficiency: 0.72
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.42
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.44
+      fit: 0.45
     Riptalon:
-      total: 0.58
+      total: 0.59
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.73
     Amanita Charm:
       total: 0.64
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.6
   starter: *id001
   relic: *id002
 - source: suggested
@@ -418,12 +418,12 @@ builds:
   - Genji's Guard
   - Jotunn's Revenge
   - Kinetic Cuirass
+  - Shield of the Phoenix
+  - Gladiator's Shield
   - Freya's Tears
-  - Spear of Desolation
-  - Soul Gem
   flex_slots:
   - Kinetic Cuirass
-  - Spear of Desolation
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -432,8 +432,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Glorious Pridwen — physical protection
+    swap_item: Glorious Pridwen
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -458,24 +458,24 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.48
+    Shield of the Phoenix:
+      total: 0.67
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.77
+    Gladiator's Shield:
+      total: 0.52
+      efficiency: 0.43
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
-    Soul Gem:
-      total: 0.73
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.89
   starter: *id001
   relic: *id002
 - source: suggested
@@ -627,8 +627,8 @@ builds:
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -639,41 +639,41 @@ builds:
     + mode profile (no meta win/pick data).
   slot_scores:
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.54
       efficiency: 0.65
       win: 0.5
       pick: 0.0
-      fit: 0.4
+      fit: 0.42
     Kinetic Cuirass:
-      total: 0.59
+      total: 0.6
       efficiency: 0.61
       win: 0.5
       pick: 0.0
-      fit: 0.57
+      fit: 0.59
     Magi's Cloak:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Shield Splitter:
-      total: 0.55
+      total: 0.56
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.51
+      fit: 0.54
     Mantle Of Discord:
-      total: 0.53
+      total: 0.54
       efficiency: 0.53
       win: 0.5
       pick: 0.0
-      fit: 0.54
+      fit: 0.55
     Amanita Charm:
-      total: 0.7
+      total: 0.71
       efficiency: 0.68
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.74
   starter: *id001
   relic: *id002
 ---

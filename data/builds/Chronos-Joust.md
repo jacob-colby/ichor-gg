@@ -507,11 +507,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
@@ -577,7 +577,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.78
+      fit: 0.79
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
@@ -1155,7 +1155,7 @@ builds:
   - Soul Gem
   - Triton's Conch
   flex_slots:
-  - Toxic Blade
+  - Triton's Conch
   - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
@@ -1178,7 +1178,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.73
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.65
@@ -1245,7 +1245,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.75
+      fit: 0.76
     Rod of Tahuti:
       total: 0.57
       efficiency: 0.82

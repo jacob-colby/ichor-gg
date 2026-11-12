@@ -36,7 +36,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.61
@@ -283,10 +283,10 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Brawler’s Beat Stick
   - Kinetic Cuirass
   - Nimble Ring
   - Bragi's Harp
-  - Freya's Tears
   - Eros' Bow
   - Amanita Charm
   flex_slots:
@@ -303,11 +303,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: Basic-attack DPS skew (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
+    Brawler’s Beat Stick:
+      total: 0.48
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
     Kinetic Cuirass:
       total: 0.55
       efficiency: 0.61
@@ -326,12 +332,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.42
-    Freya's Tears:
-      total: 0.48
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
     Eros' Bow:
       total: 0.38
       efficiency: 0.41
@@ -441,11 +441,11 @@ builds:
     — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.73
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
@@ -517,7 +517,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Berserker's Shield:
       total: 0.54
       efficiency: 0.72
@@ -577,7 +577,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.61
+      fit: 0.62
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.61

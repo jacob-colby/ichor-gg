@@ -181,7 +181,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Rage:
       total: 0.47
       efficiency: 0.46
@@ -319,7 +319,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.69
+      fit: 0.7
     Berserker's Shield:
       total: 0.57
       efficiency: 0.72
@@ -379,7 +379,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.84
+      fit: 0.85
     The Reaper:
       total: 0.71
       efficiency: 0.57
@@ -511,7 +511,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.56
+      fit: 0.57
     Chandra's Grace:
       total: 0.5
       efficiency: 0.45

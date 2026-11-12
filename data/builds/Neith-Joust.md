@@ -243,11 +243,11 @@ builds:
     (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.53
+      total: 0.54
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.63
+      fit: 0.64
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
@@ -313,7 +313,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.62
+      fit: 0.63
     Berserker's Shield:
       total: 0.53
       efficiency: 0.72
@@ -375,11 +375,11 @@ builds:
     profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.57
+      total: 0.58
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
@@ -445,7 +445,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.67
+      fit: 0.68
     Tyrfing:
       total: 0.54
       efficiency: 0.53
@@ -547,7 +547,7 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Jotunn's Revenge
+  - Toxic Blade
   - Death Metal
   - Bragi's Harp
   - Spear of Desolation
@@ -555,7 +555,7 @@ builds:
   - Soul Gem
   flex_slots:
   - Spear of Desolation
-  - Jotunn's Revenge
+  - Toxic Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -567,17 +567,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: Off-type Intelligence build — this kit scales on it (efficiency + fit).
     Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    Jotunn's Revenge:
+    Toxic Blade:
       total: 0.51
-      efficiency: 0.65
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.59
     Death Metal:
       total: 0.56
       efficiency: 0.63

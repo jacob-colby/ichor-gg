@@ -247,7 +247,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.49
+      fit: 0.5
     Kinetic Cuirass:
       total: 0.54
       efficiency: 0.61
@@ -379,7 +379,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.66
     Berserker's Shield:
       total: 0.53
       efficiency: 0.72
@@ -445,7 +445,7 @@ builds:
       efficiency: 0.46
       win: 0.5
       pick: 0.0
-      fit: 0.59
+      fit: 0.6
     Berserker's Shield:
       total: 0.5
       efficiency: 0.72

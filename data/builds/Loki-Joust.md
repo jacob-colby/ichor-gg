@@ -247,7 +247,7 @@ builds:
       efficiency: 0.4
       win: 0.5
       pick: 0.0
-      fit: 0.71
+      fit: 0.72
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.61
@@ -381,11 +381,11 @@ builds:
       pick: 0.0
       fit: 0.69
     Toxic Blade:
-      total: 0.67
+      total: 0.68
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.91
+      fit: 0.92
     Tyrfing:
       total: 0.66
       efficiency: 0.53

@@ -488,8 +488,8 @@ builds:
   - Heartseeker
   - Soul Gem
   flex_slots:
-  - Heartseeker
   - Toxic Blade
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -511,7 +511,7 @@ builds:
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.7
+      fit: 0.71
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
@@ -573,11 +573,11 @@ builds:
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
     Toxic Blade:
-      total: 0.6
+      total: 0.61
       efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.77
+      fit: 0.78
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65

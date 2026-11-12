@@ -6,7 +6,7 @@ builds:
 - source: suggested
   archetype: core
   slot_order:
-  - Genji's Guard
+  - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -14,7 +14,7 @@ builds:
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Genji's Guard
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -26,17 +26,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: Top weighted-score core (efficiency + fit). Joust — math + mode profile
     (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.71
+    Stygian Anchor:
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.64
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.61
@@ -481,7 +481,7 @@ builds:
 - source: suggested
   archetype: model
   slot_order:
-  - Genji's Guard
+  - Stygian Anchor
   - Kinetic Cuirass
   - Freya's Tears
   - Draconic Scale
@@ -489,7 +489,7 @@ builds:
   - Erosion
   flex_slots:
   - Draconic Scale
-  - Genji's Guard
+  - Stygian Anchor
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
@@ -501,17 +501,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Stygian Anchor — anti-heal
-    swap_item: Stygian Anchor
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: The model's own answer — no meta signal (efficiency + fit). Joust — math
     + mode profile (no meta win/pick data).
   slot_scores:
-    Genji's Guard:
-      total: 0.53
-      efficiency: 0.71
+    Stygian Anchor:
+      total: 0.54
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.36
+      fit: 0.64
     Kinetic Cuirass:
       total: 0.64
       efficiency: 0.61

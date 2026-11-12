@@ -1151,146 +1151,146 @@
      "anti-tank": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Rod of Tahuti",
-      "Dreamer's Idol",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "anti-tank @ Aspect of Strife": [
       "Avenging Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Soul Gem"
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "attack-speed": [
+      "Golden Blade",
+      "Lernaean Bow",
       "Toxic Blade",
       "Tyrfing",
-      "Death Metal",
-      "Bragi's Harp",
-      "Riptalon",
-      "Soul Gem"
+      "The Reaper",
+      "Riptalon"
      ],
      "attack-speed @ Aspect of Strife": [
       "Golden Blade",
+      "Lernaean Bow",
       "Toxic Blade",
       "Tyrfing",
-      "Death Metal",
-      "Riptalon",
-      "Soul Gem"
+      "The Reaper",
+      "Riptalon"
      ],
      "bruiser": [
       "Golden Blade",
       "Toxic Blade",
       "Berserker's Shield",
       "Kinetic Cuirass",
-      "Amanita Charm",
-      "Soul Gem"
+      "The Reaper",
+      "Amanita Charm"
      ],
      "bruiser @ Aspect of Strife": [
+      "Golden Blade",
       "Toxic Blade",
       "Berserker's Shield",
       "Kinetic Cuirass",
-      "Death Metal",
-      "Amanita Charm",
-      "Soul Gem"
+      "The Reaper",
+      "Amanita Charm"
      ],
      "burst": [
+      "Lernaean Bow",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Bragi's Harp",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "Heartseeker"
      ],
      "burst @ Aspect of Strife": [
+      "Golden Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Dreamer's Idol",
-      "Soul Gem"
+      "Transcendence",
+      "The Reaper",
+      "Heartseeker"
      ],
      "cooldown": [
+      "Lernaean Bow",
       "Toxic Blade",
+      "Chandra's Grace",
       "Jotunn's Revenge",
-      "Hydra's Lament",
-      "Death Metal",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Tyrfing",
+      "Hydra's Lament"
      ],
      "cooldown @ Aspect of Strife": [
+      "Golden Blade",
       "Toxic Blade",
+      "Chandra's Grace",
       "Jotunn's Revenge",
-      "Hydra's Lament",
-      "Death Metal",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Tyrfing",
+      "Hydra's Lament"
      ],
      "core": [
+      "Lernaean Bow",
+      "Toxic Blade",
+      "Jotunn's Revenge",
       "Tyrfing",
-      "Death Metal",
-      "Bragi's Harp",
       "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Riptalon"
      ],
      "core @ Aspect of Strife": [
       "Golden Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
+      "Tyrfing",
       "The Reaper",
-      "Soul Gem"
+      "Riptalon"
      ],
      "crit": [
       "Toxic Blade",
       "Rage",
-      "Death Metal",
-      "Bragi's Harp",
+      "Jotunn's Revenge",
+      "Riptalon",
       "Demon Blade",
-      "Soul Gem"
+      "Deathbringer"
      ],
      "crit @ Aspect of Strife": [
       "Golden Blade",
       "Toxic Blade",
       "Rage",
-      "Death Metal",
+      "The Reaper",
       "Demon Blade",
-      "Soul Gem"
+      "Deathbringer"
      ],
      "mana-stack": [
+      "Lernaean Bow",
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Bragi's Harp",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "Heartseeker"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Book of Thoth",
+      "Golden Blade",
+      "Toxic Blade",
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "The Reaper",
+      "Heartseeker"
      ],
      "model": [
+      "Lernaean Bow",
+      "Toxic Blade",
+      "Jotunn's Revenge",
       "Tyrfing",
-      "Death Metal",
-      "Bragi's Harp",
       "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Riptalon"
      ],
      "model @ Aspect of Strife": [
       "Golden Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
+      "Tyrfing",
       "The Reaper",
-      "Soul Gem"
+      "Riptalon"
      ]
     },
     "verdict": "aspect not simulated",
@@ -1300,147 +1300,147 @@
     "builds": {
      "anti-tank": [
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Obsidian Shard",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Transcendence",
+      "The Reaper",
+      "Tekko-Kagi",
+      "The Crusher",
+      "Heartseeker"
      ],
      "anti-tank @ Aspect of Strife": [
-      "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Obsidian Shard",
-      "Rod of Tahuti",
-      "Soul Gem"
-     ],
-     "attack-speed": [
-      "Jotunn's Revenge",
-      "Death Metal",
-      "Nimble Ring",
-      "Bragi's Harp",
-      "Riptalon",
-      "Rod of Tahuti"
-     ],
-     "attack-speed @ Aspect of Strife": [
+      "Avenging Blade",
       "Berserker's Shield",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Nimble Ring",
+      "Transcendence",
+      "The Reaper",
+      "The Crusher"
+     ],
+     "attack-speed": [
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "The Reaper",
+      "Tekko-Kagi",
       "Riptalon",
-      "Rod of Tahuti"
+      "Silverbranch Bow"
+     ],
+     "attack-speed @ Aspect of Strife": [
+      "Golden Blade",
+      "Toxic Blade",
+      "Berserker's Shield",
+      "Jotunn's Revenge",
+      "Riptalon",
+      "The Reaper"
      ],
      "bruiser": [
       "Genji's Guard",
       "Berserker's Shield",
-      "Death Metal",
-      "Rod of Tahuti",
-      "Amanita Charm",
-      "Soul Gem"
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "The Reaper",
+      "Amanita Charm"
      ],
      "bruiser @ Aspect of Strife": [
+      "Genji's Guard",
       "Berserker's Shield",
+      "Jotunn's Revenge",
       "Kinetic Cuirass",
-      "Death Metal",
-      "Rod of Tahuti",
-      "Amanita Charm",
-      "Soul Gem"
+      "The Reaper",
+      "Amanita Charm"
      ],
      "burst": [
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Obsidian Shard",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Transcendence",
+      "Hydra's Lament",
+      "The Reaper",
+      "Tekko-Kagi",
+      "The Crusher"
      ],
      "burst @ Aspect of Strife": [
       "Berserker's Shield",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Transcendence",
+      "Hydra's Lament",
+      "The Reaper",
+      "The Crusher"
      ],
      "cooldown": [
+      "Berserker's Shield",
       "Jotunn's Revenge",
       "Hydra's Lament",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Arondight",
+      "The Reaper",
+      "Tekko-Kagi"
      ],
      "cooldown @ Aspect of Strife": [
+      "Chandra's Grace",
+      "Berserker's Shield",
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Hydra's Lament",
+      "Arondight"
      ],
      "core": [
       "Jotunn's Revenge",
-      "Death Metal",
-      "Gluttonous Grimoire",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Transcendence",
+      "The Reaper",
+      "Tekko-Kagi",
+      "Riptalon",
+      "Deathbringer"
      ],
      "core @ Aspect of Strife": [
+      "Golden Blade",
+      "Berserker's Shield",
       "Jotunn's Revenge",
-      "Transcendence",
-      "Death Metal",
-      "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Runeforged Hammer",
+      "Riptalon",
+      "The Reaper"
      ],
      "crit": [
       "Rage",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Deathbringer",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "The Reaper",
+      "Tekko-Kagi",
+      "Demon Blade",
+      "Deathbringer"
      ],
      "crit @ Aspect of Strife": [
       "Rage",
+      "Berserker's Shield",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Deathbringer",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "The Reaper",
+      "Demon Blade",
+      "Deathbringer"
      ],
      "mana-stack": [
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Hydra's Lament",
+      "Dominance",
+      "The Reaper",
+      "Heartseeker"
      ],
      "mana-stack @ Aspect of Strife": [
+      "Berserker's Shield",
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Hydra's Lament",
+      "Runeforged Hammer",
+      "The Reaper"
      ],
      "model": [
       "Jotunn's Revenge",
-      "Death Metal",
-      "Nimble Ring",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Transcendence",
+      "Tyrfing",
+      "Hydra's Lament",
+      "The Reaper",
+      "Tekko-Kagi"
      ],
      "model @ Aspect of Strife": [
+      "Golden Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "The Reaper",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "Runeforged Hammer",
+      "Riptalon",
+      "The Reaper"
      ]
     },
     "verdict": "aspect not simulated",
@@ -1451,146 +1451,146 @@
      "anti-tank": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "anti-tank @ Aspect of Strife": [
       "Avenging Blade",
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "attack-speed": [
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Tyrfing",
-      "Death Metal",
+      "The Reaper",
       "Riptalon",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Silverbranch Bow"
      ],
      "attack-speed @ Aspect of Strife": [
       "Golden Blade",
       "Toxic Blade",
+      "Jotunn's Revenge",
       "Tyrfing",
-      "Death Metal",
-      "Riptalon",
-      "Soul Gem"
+      "The Reaper",
+      "Riptalon"
      ],
      "bruiser": [
       "Toxic Blade",
       "Berserker's Shield",
       "Kinetic Cuirass",
-      "Death Metal",
-      "Amanita Charm",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "Amanita Charm"
      ],
      "bruiser @ Aspect of Strife": [
       "Toxic Blade",
       "Berserker's Shield",
+      "Jotunn's Revenge",
       "Kinetic Cuirass",
-      "Death Metal",
-      "Amanita Charm",
-      "Soul Gem"
+      "The Reaper",
+      "Amanita Charm"
      ],
      "burst": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "burst @ Aspect of Strife": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "The Reaper",
+      "The Crusher",
+      "Heartseeker"
      ],
      "cooldown": [
+      "Toxic Blade",
+      "Chandra's Grace",
       "Jotunn's Revenge",
+      "Tyrfing",
       "Hydra's Lament",
-      "Death Metal",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Pendulum Blade"
      ],
      "cooldown @ Aspect of Strife": [
       "Toxic Blade",
+      "Chandra's Grace",
       "Jotunn's Revenge",
+      "Tyrfing",
       "Hydra's Lament",
-      "Death Metal",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Pendulum Blade"
      ],
      "core": [
-      "Tyrfing",
-      "Death Metal",
-      "Bragi's Harp",
-      "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
-     ],
-     "core @ Aspect of Strife": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
+      "Tyrfing",
       "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Riptalon",
+      "Demon Blade"
+     ],
+     "core @ Aspect of Strife": [
+      "Golden Blade",
+      "Toxic Blade",
+      "Jotunn's Revenge",
+      "Tyrfing",
+      "The Reaper",
+      "Riptalon"
      ],
      "crit": [
       "Rage",
-      "Death Metal",
-      "Bragi's Harp",
+      "Jotunn's Revenge",
+      "Tyrfing",
+      "Riptalon",
       "Demon Blade",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Deathbringer"
      ],
      "crit @ Aspect of Strife": [
       "Toxic Blade",
       "Rage",
-      "Death Metal",
-      "Bragi's Harp",
+      "Jotunn's Revenge",
+      "The Reaper",
       "Demon Blade",
-      "Soul Gem"
+      "Deathbringer"
      ],
      "mana-stack": [
       "Jotunn's Revenge",
       "Transcendence",
-      "Death Metal",
-      "Bragi's Harp",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Tyrfing",
+      "Hydra's Lament",
+      "The Reaper",
+      "Heartseeker"
      ],
      "mana-stack @ Aspect of Strife": [
-      "Jotunn's Revenge",
-      "Transcendence",
-      "Death Metal",
-      "Bragi's Harp",
-      "Rod of Tahuti",
-      "Soul Gem"
-     ],
-     "model": [
-      "Tyrfing",
-      "Death Metal",
-      "Bragi's Harp",
-      "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
-     ],
-     "model @ Aspect of Strife": [
       "Toxic Blade",
       "Jotunn's Revenge",
-      "Death Metal",
+      "Transcendence",
+      "Hydra's Lament",
       "The Reaper",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Heartseeker"
+     ],
+     "model": [
+      "Toxic Blade",
+      "Jotunn's Revenge",
+      "Tyrfing",
+      "The Reaper",
+      "Riptalon",
+      "Demon Blade"
+     ],
+     "model @ Aspect of Strife": [
+      "Golden Blade",
+      "Toxic Blade",
+      "Jotunn's Revenge",
+      "Tyrfing",
+      "The Reaper",
+      "Riptalon"
      ]
     },
     "verdict": "aspect not simulated",
@@ -1607,7 +1607,7 @@
       "Avenging Blade",
       "Jotunn's Revenge",
       "Void Stone",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "attack-speed": [
       "Golden Blade",
@@ -1615,31 +1615,31 @@
       "Berserker's Shield",
       "Kinetic Cuirass",
       "Riptalon",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "bruiser": [
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Magi's Cloak",
       "Shield Splitter",
-      "Amanita Charm",
-      "Soul Gem"
+      "The Reaper",
+      "Amanita Charm"
      ],
      "burst": [
+      "Genji's Guard",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Magi's Cloak",
       "Freya's Tears",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "cooldown": [
       "Genji's Guard",
+      "Breastplate of Valor",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
-      "Freya's Tears",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Shield of the Phoenix",
+      "Freya's Tears"
      ],
      "core": [
       "Jotunn's Revenge",
@@ -1647,15 +1647,15 @@
       "Magi's Cloak",
       "Shield Splitter",
       "Mantle Of Discord",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "mana-stack": [
-      "Book of Thoth",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
+      "Shield Splitter",
       "Transcendence",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Heartseeker",
+      "Amanita Charm"
      ],
      "model": [
       "Jotunn's Revenge",
@@ -1663,7 +1663,7 @@
       "Magi's Cloak",
       "Shield Splitter",
       "Mantle Of Discord",
-      "Soul Gem"
+      "Amanita Charm"
      ]
     },
     "verdict": "not enough simulated",
@@ -1673,35 +1673,35 @@
     "builds": {
      "anti-tank": [
       "Jotunn's Revenge",
-      "Genji's Guard",
-      "Shell of Rebuke",
-      "Gluttonous Grimoire",
-      "Soul Reaver",
-      "Rod of Tahuti"
-     ],
-     "attack-speed": [
-      "Berserker's Shield",
-      "Tyrfing",
-      "Genji's Guard",
-      "Nimble Ring",
-      "Shell of Rebuke",
-      "Soul Reaver"
-     ],
-     "bruiser": [
-      "Shell of Rebuke",
-      "Genji's Guard",
-      "Soul Reaver",
-      "Rod of Tahuti",
-      "Amanita Charm",
-      "Soul Gem"
-     ],
-     "burst": [
-      "Jotunn's Revenge",
+      "Kinetic Cuirass",
       "Genji's Guard",
       "Shell of Rebuke",
       "Freya's Tears",
-      "Soul Reaver",
-      "Soul Gem"
+      "Amanita Charm"
+     ],
+     "attack-speed": [
+      "Golden Blade",
+      "Berserker's Shield",
+      "Genji's Guard",
+      "Tyrfing",
+      "Shell of Rebuke",
+      "Amanita Charm"
+     ],
+     "bruiser": [
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Genji's Guard",
+      "Shell of Rebuke",
+      "The Reaper",
+      "Amanita Charm"
+     ],
+     "burst": [
+      "Jotunn's Revenge",
+      "Kinetic Cuirass",
+      "Genji's Guard",
+      "Shell of Rebuke",
+      "Freya's Tears",
+      "Amanita Charm"
      ],
      "cooldown": [
       "Breastplate of Valor",
@@ -1709,30 +1709,30 @@
       "Genji's Guard",
       "Shell of Rebuke",
       "Freya's Tears",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "core": [
+      "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Genji's Guard",
       "Shell of Rebuke",
       "Freya's Tears",
-      "Soul Reaver",
       "Amanita Charm"
      ],
      "mana-stack": [
-      "Book of Thoth",
+      "Jotunn's Revenge",
       "Transcendence",
       "Genji's Guard",
       "Shell of Rebuke",
-      "Soul Reaver",
-      "Rod of Tahuti"
+      "Freya's Tears",
+      "Amanita Charm"
      ],
      "model": [
-      "Berserker's Shield",
       "Jotunn's Revenge",
-      "Genji's Guard",
       "Kinetic Cuirass",
+      "Genji's Guard",
       "Shield Splitter",
+      "Freya's Tears",
       "Amanita Charm"
      ]
     },
@@ -1747,7 +1747,7 @@
       "Jotunn's Revenge",
       "Void Shield",
       "Void Stone",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "attack-speed": [
       "Toxic Blade",
@@ -1755,55 +1755,55 @@
       "Kinetic Cuirass",
       "Tyrfing",
       "Riptalon",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "bruiser": [
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
-      "Rod of Tahuti",
-      "Amanita Charm",
-      "Soul Gem"
+      "Runeforged Hammer",
+      "The Reaper",
+      "Amanita Charm"
      ],
      "burst": [
+      "Genji's Guard",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
+      "Shield Splitter",
       "Freya's Tears",
-      "Spear of Desolation",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Amanita Charm"
      ],
      "cooldown": [
       "Genji's Guard",
       "Jotunn's Revenge",
       "Kinetic Cuirass",
-      "Freya's Tears",
-      "Spear of Desolation",
-      "Soul Gem"
+      "Shield of the Phoenix",
+      "Gladiator's Shield",
+      "Freya's Tears"
      ],
      "core": [
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
       "Freya's Tears",
-      "Erosion",
-      "Soul Gem"
+      "Amanita Charm",
+      "Erosion"
      ],
      "mana-stack": [
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
       "Transcendence",
-      "Rod of Tahuti",
-      "Soul Gem"
+      "Heartseeker",
+      "Amanita Charm"
      ],
      "model": [
       "Jotunn's Revenge",
       "Kinetic Cuirass",
       "Shield Splitter",
       "Freya's Tears",
-      "Erosion",
-      "Soul Gem"
+      "Amanita Charm",
+      "Erosion"
      ]
     },
     "verdict": "not enough simulated",
