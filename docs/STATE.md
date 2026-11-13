@@ -3856,7 +3856,12 @@ behind, it is history, and `doc_audit` prints a warning that never fails. The
 declaration checklist is retired. The rule and the snapshot evidence are in
 `pipeline/smite/tests/live_window.py`. How deep a window is on the day the
 chooser takes it (a day old at four of the seven boundaries on record) is
-measured in `choose_community_window`'s docstring and is not acted on.
+measured in `choose_community_window`'s docstring, and since 2026-11-11 it is
+acted on: a window covering the roster is not read while more than one of its
+gods holds fewer than 30 matches and the window behind it is free of that
+(`WINDOW_DEPTH_FLOOR`, `WINDOW_THIN_SLACK`). On every boundary on record that
+holds the old window one or two runs. A god added in the new patch has no
+community record until the switch.
 
 Scheduled: `.github/workflows/refresh-data.yml` (09:15 UTC, SmiteBrain +
 patch feed + wiki stats when due + snapshot + reindex + `docs/CURRENT.md`,
