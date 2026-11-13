@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.58
-    win_rate: 0.5967
-    matches: 131
+    pick_rate: 0.6
+    win_rate: 0.63
+    matches: 155
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
     pick_rate: 0.39
-    win_rate: 0.67
-    matches: 88
+    win_rate: 0.69
+    matches: 101
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -476,6 +476,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shield Splitter
+  - Freya's Tears
+  - Mantle Of Discord
+  - Amanita Charm
+  flex_slots:
+  - Mantle Of Discord
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.6
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Magi's Cloak:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Shield Splitter:
+      total: 0.56
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Freya's Tears:
+      total: 0.52
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.44
+    Mantle Of Discord:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Amanita Charm:
+      total: 0.71
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+  swaps:
+  - added: Freya's Tears
+    removed: Jotunn's Revenge
+    reason: Conquest community 77% win over 44 matches (vs 61% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

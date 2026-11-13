@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.73
-    win_rate: 0.5808
-    matches: 329
+    pick_rate: 0.74
+    win_rate: 0.6011
+    matches: 377
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.6
-    matches: 122
+    win_rate: 0.62
+    matches: 138
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -410,78 +410,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.68
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Golden Blade
-  - Toxic Blade
-  - Berserker's Shield
-  - Kinetic Cuirass
-  - Devourer's Gauntlet
-  - Runeforged Hammer
-  flex_slots:
-  - Runeforged Hammer
-  - Devourer's Gauntlet
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Contagion — anti-heal
-    swap_item: Contagion
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Golden Blade:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Toxic Blade:
-      total: 0.56
-      efficiency: 0.46
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.5
-      pick: 0.0
-      fit: 0.4
-    Kinetic Cuirass:
-      total: 0.55
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.5
-    Devourer's Gauntlet:
-      total: 0.5
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Runeforged Hammer:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
-  swaps:
-  - added: Devourer's Gauntlet
-    removed: Tyrfing
-    reason: Conquest community 61% win over 207 matches (vs 54% on this god), taking
-      the model's weakest slot from Tyrfing
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

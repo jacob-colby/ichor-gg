@@ -9,109 +9,109 @@ builds:
   aspect_win_rate: 0.38
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.67
-    win_rate: 0.53
+    pick_rate: 0.66
+    win_rate: 0.52
     alternates:
     - name: Tyrfing
       pick_rate: 0.2
       win_rate: 0.57
     - name: Avenging Blade
       pick_rate: 0.04
-      win_rate: 0.5
+      win_rate: 0.48
   - name: Dagger of Frenzy
     pick_rate: 0.47
     win_rate: 0.51
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.16
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Tyrfing
-      pick_rate: 0.09
-      win_rate: 0.51
+      pick_rate: 0.1
+      win_rate: 0.49
   - name: Dominance
     pick_rate: 0.26
-    win_rate: 0.49
+    win_rate: 0.53
     alternates:
     - name: The Executioner
-      pick_rate: 0.2
-      win_rate: 0.55
+      pick_rate: 0.19
+      win_rate: 0.53
     - name: Odysseus' Bow
-      pick_rate: 0.11
-      win_rate: 0.59
+      pick_rate: 0.1
+      win_rate: 0.57
   - name: Silverbranch Bow
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.57
     alternates:
     - name: The Executioner
       pick_rate: 0.17
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Riptalon
       pick_rate: 0.15
-      win_rate: 0.48
+      win_rate: 0.5
   - name: Riptalon
     pick_rate: 0.18
-    win_rate: 0.65
+    win_rate: 0.63
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.15
-      win_rate: 0.51
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: The Executioner
-      pick_rate: 0.12
-      win_rate: 0.56
+      pick_rate: 0.11
+      win_rate: 0.53
   - name: Manchu Bow
-    pick_rate: 0.11
-    win_rate: 0.53
+    pick_rate: 0.1
+    win_rate: 0.52
     alternates:
     - name: Riptalon
       pick_rate: 0.1
       win_rate: 0.71
     - name: Hunter's Bow
       pick_rate: 0.09
-      win_rate: 0.59
+      win_rate: 0.62
   community_starters:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.36
-    win_rate: 0.55
+    pick_rate: 0.35
+    win_rate: 0.54
   - name: Hunter's Cowl
-    pick_rate: 0.21
-    win_rate: 0.62
+    pick_rate: 0.22
+    win_rate: 0.59
   - name: Gilded Arrow
-    pick_rate: 0.12
-    win_rate: 0.41
+    pick_rate: 0.13
+    win_rate: 0.4
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.52
+    pick_rate: 0.58
+    win_rate: 0.51
   - name: Aegis of Acceleration
     pick_rate: 0.33
-    win_rate: 0.57
+    win_rate: 0.55
   - name: Agility Relic
     pick_rate: 0.06
-    win_rate: 0.5
+    win_rate: 0.47
   starter_sightings:
   - name: Sharpshooter's Arrow
-    pick_rate: 0.36
-    win_rate: 0.55
+    pick_rate: 0.35
+    win_rate: 0.54
   - name: Hunter's Cowl
-    pick_rate: 0.21
-    win_rate: 0.62
+    pick_rate: 0.22
+    win_rate: 0.59
   - name: Gilded Arrow
-    pick_rate: 0.12
-    win_rate: 0.41
+    pick_rate: 0.13
+    win_rate: 0.4
   - name: Death's Embrace
     pick_rate: 0.11
-    win_rate: 0.49
+    win_rate: 0.51
   - name: Leather Cowl
     pick_rate: 0.11
     win_rate: 0.53
   - name: Death's Toll
     pick_rate: 0.06
-    win_rate: 0.51
+    win_rate: 0.5
   - name: War Banner
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.67
   - name: War Flag
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.33
   - name: Bumba's Hammer
     pick_rate: 0.004
@@ -139,44 +139,44 @@ builds:
     win_rate: 1.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.52
+    pick_rate: 0.58
+    win_rate: 0.51
   - name: Aegis of Acceleration
     pick_rate: 0.33
-    win_rate: 0.57
+    win_rate: 0.55
   - name: Agility Relic
     pick_rate: 0.06
-    win_rate: 0.5
+    win_rate: 0.47
   - name: Phantom Shell
     pick_rate: 0.02
     win_rate: 0.5
   - name: Blink Rune
-    pick_rate: 0.01
+    pick_rate: 0.009
     win_rate: 0.14
   - name: Sundering Arc
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-11-12'
-  god_win_rate: 0.5291545189504373
-  god_matches_won: 363
-  god_matches_played: 686
+  last_verified: '2026-11-13'
+  god_win_rate: 0.5210526315789473
+  god_matches_won: 396
+  god_matches_played: 760
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-12'
-  god_matches_analyzed: 9582
+  god_window_end: '2026-11-13'
+  god_matches_analyzed: 10711
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.48
-    win_rate: 0.515
-    matches: 329
+    win_rate: 0.5021
+    matches: 365
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.52
-    matches: 391
+    pick_rate: 0.58
+    win_rate: 0.51
+    matches: 441
     basis: community
 - source: suggested
   archetype: core
@@ -184,12 +184,12 @@ builds:
   - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
-  - The Reaper
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   flex_slots:
+  - Jotunn's Revenge
   - Lernaean Bow
-  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -211,15 +211,15 @@ builds:
     Parashu, Shield Splitter, Eye of the Storm, Avenging Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.5
+      total: 0.49
       efficiency: 0.47
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.3
     Tyrfing:
@@ -228,40 +228,41 @@ builds:
       win: 0.57
       pick: 0.2
       fit: 0.7
-    The Reaper:
-      total: 0.5
-      efficiency: 0.57
-      win: 0.54
-      pick: 0.0
-      fit: 0.37
+    Dominance:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.53
+      pick: 0.4
+      fit: 0.6
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.45
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.56
   community_ordered:
   - Tyrfing
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.48
-    win_rate: 0.515
-    matches: 329
+    win_rate: 0.5021
+    matches: 365
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.52
-    matches: 391
+    pick_rate: 0.58
+    win_rate: 0.51
+    matches: 441
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -269,11 +270,11 @@ builds:
   - Jotunn's Revenge
   - Transcendence
   - Tyrfing
-  - Hydra's Lament
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   flex_slots:
-  - Hydra's Lament
+  - Silverbranch Bow
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -296,15 +297,15 @@ builds:
     of the Storm, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.44
     Transcendence:
       total: 0.45
       efficiency: 0.5
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.24
     Tyrfing:
@@ -313,26 +314,27 @@ builds:
       win: 0.57
       pick: 0.2
       fit: 0.49
-    Hydra's Lament:
+    Dominance:
       total: 0.5
-      efficiency: 0.55
-      win: 0.54
-      pick: 0.0
-      fit: 0.42
+      efficiency: 0.47
+      win: 0.53
+      pick: 0.4
+      fit: 0.5
     Silverbranch Bow:
       total: 0.5
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.33
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.39
   community_ordered:
   - Tyrfing
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   starter: *id001
@@ -372,7 +374,7 @@ builds:
     Rage:
       total: 0.48
       efficiency: 0.46
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.52
     Tyrfing:
@@ -385,24 +387,24 @@ builds:
       total: 0.51
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.43
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.54
     Demon Blade:
-      total: 0.49
+      total: 0.48
       efficiency: 0.36
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.79
     Deathbringer:
-      total: 0.48
+      total: 0.47
       efficiency: 0.44
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.52
   community_ordered:
@@ -421,7 +423,7 @@ builds:
   - Riptalon
   - Amanita Charm
   flex_slots:
-  - Tyrfing
+  - Kinetic Cuirass
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -447,19 +449,19 @@ builds:
     Genji's Guard:
       total: 0.51
       efficiency: 0.71
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.14
     Berserker's Shield:
       total: 0.56
       efficiency: 0.72
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.47
     Tyrfing:
@@ -469,15 +471,15 @@ builds:
       pick: 0.2
       fit: 0.48
     Riptalon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.65
     Amanita Charm:
       total: 0.58
       efficiency: 0.68
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.67
   community_ordered:
@@ -513,14 +515,14 @@ builds:
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
     for this god: Jotunn''s Revenge, The Reaper, Tekko-Kagi, The Crusher, Heartseeker,
     Titan''s Bane, Toxic Blade, Lernaean Bow, Hydra''s Lament, Avatar''s Parashu,
-    Golden Blade, Rage, Pendulum Blade, Demon Blade, Avenging Blade, Arondight, Qin''s
-    Blade, Deathbringer, Oath-Sworn Spear, Transcendence, Bloodforge, Runeforged Hammer,
+    Golden Blade, Rage, Pendulum Blade, Demon Blade, Arondight, Qin''s Blade, Deathbringer,
+    Avenging Blade, Oath-Sworn Spear, Transcendence, Bloodforge, Runeforged Hammer,
     Berserker''s Shield, Barbed Carver.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.5
     Tyrfing:
@@ -530,27 +532,27 @@ builds:
       pick: 0.2
       fit: 0.53
     Tekko-Kagi:
-      total: 0.52
+      total: 0.51
       efficiency: 0.49
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.68
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.61
     Riptalon:
-      total: 0.57
+      total: 0.56
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.69
     The Crusher:
-      total: 0.51
+      total: 0.5
       efficiency: 0.51
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.57
   community_ordered:
@@ -563,14 +565,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Lernaean Bow
   - Jotunn's Revenge
   - Tyrfing
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   flex_slots:
+  - Jotunn's Revenge
   - Golden Blade
-  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -594,19 +596,13 @@ builds:
     Golden Blade:
       total: 0.49
       efficiency: 0.45
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.6
-    Lernaean Bow:
-      total: 0.49
-      efficiency: 0.47
-      win: 0.54
-      pick: 0.0
-      fit: 0.52
     Jotunn's Revenge:
       total: 0.5
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.22
     Tyrfing:
@@ -615,20 +611,27 @@ builds:
       win: 0.57
       pick: 0.2
       fit: 0.7
+    Dominance:
+      total: 0.5
+      efficiency: 0.47
+      win: 0.53
+      pick: 0.4
+      fit: 0.52
     Silverbranch Bow:
       total: 0.52
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.5
     Riptalon:
-      total: 0.56
+      total: 0.55
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.59
   community_ordered:
   - Tyrfing
+  - Dominance
   - Silverbranch Bow
   - Riptalon
   starter: *id001
@@ -666,9 +669,9 @@ builds:
     Berserker''s Shield, Transcendence, Runeforged Hammer, Bloodforge, Barbed Carver.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.43
     Tyrfing:
@@ -680,25 +683,25 @@ builds:
     Hydra's Lament:
       total: 0.51
       efficiency: 0.55
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.5
     Arondight:
-      total: 0.49
+      total: 0.48
       efficiency: 0.53
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.4
     Silverbranch Bow:
       total: 0.5
       efficiency: 0.49
       win: 0.57
-      pick: 0.47
+      pick: 0.45
       fit: 0.31
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.38
   community_ordered:
@@ -740,15 +743,15 @@ builds:
     Avatar''s Parashu, Shield Splitter, Eye of the Storm, Avenging Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.5
+      total: 0.49
       efficiency: 0.47
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.3
     Tyrfing:
@@ -758,21 +761,21 @@ builds:
       pick: 0.2
       fit: 0.7
     Dominance:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.49
+      win: 0.53
       pick: 0.4
       fit: 0.6
     The Reaper:
-      total: 0.5
+      total: 0.49
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.37
     Tekko-Kagi:
-      total: 0.5
+      total: 0.49
       efficiency: 0.49
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.55
   community_ordered:
@@ -814,15 +817,15 @@ builds:
     Blade.'
   slot_scores:
     Lernaean Bow:
-      total: 0.5
+      total: 0.49
       efficiency: 0.47
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.6
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.51
       efficiency: 0.65
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.3
     Tyrfing:
@@ -832,21 +835,21 @@ builds:
       pick: 0.2
       fit: 0.7
     Dominance:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.49
+      win: 0.53
       pick: 0.4
       fit: 0.6
     The Reaper:
-      total: 0.5
+      total: 0.49
       efficiency: 0.57
-      win: 0.54
+      win: 0.53
       pick: 0.0
       fit: 0.37
     Riptalon:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
-      win: 0.65
+      win: 0.63
       pick: 0.39
       fit: 0.56
   community_ordered:
@@ -856,7 +859,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Tekko-Kagi
-    reason: community 65% win over 123 matches (vs 53% on this god), taking the model's
+    reason: community 63% win over 137 matches (vs 52% on this god), taking the model's
       weakest slot from Tekko-Kagi
   starter: *id001
   relic: *id002

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.41
-    win_rate: 0.3812
-    matches: 257
+    pick_rate: 0.42
+    win_rate: 0.4043
+    matches: 285
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.37
-    win_rate: 0.41
-    matches: 232
+    pick_rate: 0.38
+    win_rate: 0.42
+    matches: 258
     basis: community
     borrowed_from: Conquest
 - source: suggested

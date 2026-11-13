@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.52
-    win_rate: 0.5169
-    matches: 190
+    pick_rate: 0.5
+    win_rate: 0.516
+    matches: 210
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.36
-    win_rate: 0.65
-    matches: 131
+    pick_rate: 0.37
+    win_rate: 0.63
+    matches: 156
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -743,7 +743,7 @@ builds:
   swaps:
   - added: Bracer of The Abyss
     removed: Erosion
-    reason: Conquest community 72% win over 58 matches (vs 57% on this god), taking
+    reason: Conquest community 69% win over 76 matches (vs 57% on this god), taking
       the model's weakest slot from Erosion
   borrowed_from: Conquest
   starter: *id001
