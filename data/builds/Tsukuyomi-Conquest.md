@@ -6,168 +6,174 @@ builds:
 - source: community
   aspect: Aspect of Mangetsu
   aspect_pick_rate: 0.03
-  aspect_win_rate: 0.42
+  aspect_win_rate: 0.41
   slot_order:
   - name: Transcendence
     pick_rate: 0.56
-    win_rate: 0.53
+    win_rate: 0.54
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.25
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Hydra's Lament
       pick_rate: 0.09
-      win_rate: 0.48
+      win_rate: 0.5
   - name: Book of Thoth
-    pick_rate: 0.24
-    win_rate: 0.5
+    pick_rate: 0.25
+    win_rate: 0.52
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.21
       win_rate: 0.53
     - name: Jotunn's Revenge
       pick_rate: 0.19
-      win_rate: 0.53
+      win_rate: 0.54
   - name: Hydra's Lament
     pick_rate: 0.16
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Book of Thoth
-      pick_rate: 0.19
+      pick_rate: 0.18
       win_rate: 0.53
     - name: Heartseeker
       pick_rate: 0.12
-      win_rate: 0.4
+      win_rate: 0.41
   - name: Heartseeker
     pick_rate: 0.4
-    win_rate: 0.52
+    win_rate: 0.53
     alternates:
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.59
+      win_rate: 0.6
     - name: Avatar's Parashu
       pick_rate: 0.06
-      win_rate: 0.45
+      win_rate: 0.43
   - name: Titan's Bane
-    pick_rate: 0.18
-    win_rate: 0.62
+    pick_rate: 0.17
+    win_rate: 0.63
     alternates:
     - name: Heartseeker
       pick_rate: 0.15
-      win_rate: 0.64
+      win_rate: 0.63
     - name: Avatar's Parashu
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.54
   - name: Skeggox
     pick_rate: 0.11
-    win_rate: 0.48
+    win_rate: 0.49
     alternates:
     - name: Titan's Bane
       pick_rate: 0.08
-      win_rate: 0.36
+      win_rate: 0.4
     - name: Heartseeker
       pick_rate: 0.07
-      win_rate: 0.71
+      win_rate: 0.73
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.52
-    win_rate: 0.59
+    pick_rate: 0.5
+    win_rate: 0.6
   - name: Bumba's Cudgel
-    pick_rate: 0.27
-    win_rate: 0.41
+    pick_rate: 0.28
+    win_rate: 0.43
   - name: Bluestone Brooch
     pick_rate: 0.08
-    win_rate: 0.52
+    win_rate: 0.51
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.51
+    pick_rate: 0.6
+    win_rate: 0.52
   - name: Aegis of Acceleration
-    pick_rate: 0.35
-    win_rate: 0.53
+    pick_rate: 0.36
+    win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.03
-    win_rate: 0.44
+    pick_rate: 0.02
+    win_rate: 0.47
   starter_sightings:
   - name: Bumba's Hammer
-    pick_rate: 0.52
-    win_rate: 0.59
+    pick_rate: 0.5
+    win_rate: 0.6
   - name: Bumba's Cudgel
-    pick_rate: 0.27
-    win_rate: 0.41
+    pick_rate: 0.28
+    win_rate: 0.43
   - name: Bluestone Brooch
     pick_rate: 0.08
-    win_rate: 0.52
+    win_rate: 0.51
   - name: Archmage's Gem
-    pick_rate: 0.04
-    win_rate: 0.62
+    pick_rate: 0.05
+    win_rate: 0.56
   - name: Bluestone Pendant
-    pick_rate: 0.04
-    win_rate: 0.35
-  - name: Pendulum of the Ages
     pick_rate: 0.03
-    win_rate: 0.44
+    win_rate: 0.33
   - name: Conduit Gem
     pick_rate: 0.02
     win_rate: 0.33
+  - name: Pendulum of the Ages
+    pick_rate: 0.02
+    win_rate: 0.47
+  - name: Hunter's Cowl
+    pick_rate: 0.004
+    win_rate: 1.0
   - name: Leather Cowl
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.0
+  - name: Bumba's Golden Dagger
+    pick_rate: 0.003
+    win_rate: 0.0
+  - name: Bumba's Spear
+    pick_rate: 0.003
+    win_rate: 1.0
   - name: Death's Toll
     pick_rate: 0.003
     win_rate: 1.0
-  - name: Hunter's Cowl
-    pick_rate: 0.003
-    win_rate: 1.0
   - name: Sands Of Time
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   - name: Sundering Axe
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   - name: War Flag
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.51
+    pick_rate: 0.6
+    win_rate: 0.52
   - name: Aegis of Acceleration
-    pick_rate: 0.35
-    win_rate: 0.53
+    pick_rate: 0.36
+    win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.03
-    win_rate: 0.44
+    pick_rate: 0.02
+    win_rate: 0.47
   - name: Phantom Shell
     pick_rate: 0.01
-    win_rate: 0.57
+    win_rate: 0.5
   - name: Sundering Arc
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.33
   - name: Agility Relic
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/tsukuyomi/
-  last_verified: '2026-11-12'
-  god_win_rate: 0.5158227848101266
-  god_matches_won: 326
-  god_matches_played: 632
+  last_verified: '2026-11-13'
+  god_win_rate: 0.5235378031383737
+  god_matches_won: 367
+  god_matches_played: 701
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-12'
-  god_matches_analyzed: 9582
+  god_window_end: '2026-11-13'
+  god_matches_analyzed: 10711
   starter:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.79
-    win_rate: 0.5285
-    matches: 499
+    pick_rate: 0.78
+    win_rate: 0.539
+    matches: 547
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.51
-    matches: 386
+    pick_rate: 0.6
+    win_rate: 0.52
+    matches: 421
     basis: community
 - source: suggested
   archetype: core
@@ -204,40 +210,40 @@ builds:
     Blood-Bound Book, Dagger of Frenzy.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.49
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
     Death Metal:
-      total: 0.53
+      total: 0.54
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.51
     The Crusher:
       total: 0.53
       efficiency: 0.51
-      win: 0.59
+      win: 0.6
       pick: 0.12
       fit: 0.54
     Heartseeker:
-      total: 0.52
+      total: 0.53
       efficiency: 0.45
-      win: 0.52
+      win: 0.53
       pick: 0.67
       fit: 0.64
     Titan's Bane:
       total: 0.55
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.54
   community_ordered:
   - Jotunn's Revenge
@@ -247,28 +253,28 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.79
-    win_rate: 0.5285
-    matches: 499
+    pick_rate: 0.78
+    win_rate: 0.539
+    matches: 547
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.51
-    matches: 386
+    pick_rate: 0.6
+    win_rate: 0.52
+    matches: 421
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
+  - Book of Thoth
   - Death Metal
   - Titan's Bane
   - Rod of Tahuti
   flex_slots:
-  - Hydra's Lament
   - Transcendence
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -294,43 +300,43 @@ builds:
     Jotunn's Revenge:
       total: 0.56
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.52
     Transcendence:
-      total: 0.48
+      total: 0.49
       efficiency: 0.5
-      win: 0.53
+      win: 0.54
       pick: 0.56
       fit: 0.28
-    Hydra's Lament:
-      total: 0.53
-      efficiency: 0.55
-      win: 0.55
-      pick: 0.25
-      fit: 0.49
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.48
+      win: 0.52
+      pick: 0.34
+      fit: 0.28
     Death Metal:
       total: 0.54
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.54
     Titan's Bane:
-      total: 0.53
+      total: 0.54
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.44
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.42
   community_ordered:
   - Jotunn's Revenge
   - Transcendence
-  - Hydra's Lament
+  - Book of Thoth
   - Titan's Bane
   starter: *id001
   relic: *id002
@@ -369,39 +375,39 @@ builds:
     Totem of Death, Rage, Damaru.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.57
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.56
     Death Metal:
-      total: 0.52
+      total: 0.53
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.56
     The Crusher:
-      total: 0.52
+      total: 0.53
       efficiency: 0.51
-      win: 0.59
+      win: 0.6
       pick: 0.12
       fit: 0.5
     Titan's Bane:
       total: 0.54
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.5
     Rod of Tahuti:
-      total: 0.58
+      total: 0.59
       efficiency: 0.82
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.4
   community_ordered:
@@ -424,8 +430,8 @@ builds:
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Magi's Cloak — CC-immunity / cleanse
+    swap_item: Magi's Cloak
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -446,39 +452,39 @@ builds:
     Leviathan''s Hide, Regrowth Striders, Hide of the Nemean Lion.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.42
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.3
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.61
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.49
     Shield of the Phoenix:
       total: 0.53
       efficiency: 0.57
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.6
     Titan's Bane:
       total: 0.52
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.37
     Amanita Charm:
-      total: 0.58
+      total: 0.59
       efficiency: 0.68
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
   community_ordered:
@@ -521,40 +527,40 @@ builds:
     Demon Blade, Deathbringer, Oath-Sworn Spear, Blood-Bound Book.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.58
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.6
     Spear of Desolation:
       total: 0.52
       efficiency: 0.6
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.47
     Tekko-Kagi:
-      total: 0.52
+      total: 0.53
       efficiency: 0.49
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.76
     The Crusher:
       total: 0.55
       efficiency: 0.51
-      win: 0.59
+      win: 0.6
       pick: 0.12
       fit: 0.67
     Heartseeker:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
-      win: 0.52
+      win: 0.53
       pick: 0.67
       fit: 0.77
     Titan's Bane:
       total: 0.57
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.67
   community_ordered:
   - Jotunn's Revenge
@@ -577,8 +583,8 @@ builds:
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -600,38 +606,38 @@ builds:
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.3
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.66
     Death Metal:
       total: 0.51
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.32
     Nimble Ring:
-      total: 0.49
+      total: 0.5
       efficiency: 0.57
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.39
     Silverbranch Bow:
-      total: 0.49
+      total: 0.5
       efficiency: 0.49
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.56
     Titan's Bane:
-      total: 0.52
+      total: 0.53
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.37
   community_ordered:
   - Jotunn's Revenge
@@ -642,14 +648,14 @@ builds:
   archetype: cooldown
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
   - Spear of Desolation
-  - Titan's Bane
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
-  - Titan's Bane
+  - Hydra's Lament
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -676,43 +682,43 @@ builds:
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.59
+    Transcendence:
+      total: 0.46
+      efficiency: 0.5
+      win: 0.54
+      pick: 0.56
+      fit: 0.1
     Hydra's Lament:
       total: 0.53
       efficiency: 0.55
-      win: 0.55
+      win: 0.54
       pick: 0.25
       fit: 0.55
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.59
-    Titan's Bane:
-      total: 0.52
-      efficiency: 0.48
-      win: 0.62
-      pick: 0.39
-      fit: 0.34
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.82
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.24
     Soul Gem:
       total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
   community_ordered:
   - Jotunn's Revenge
+  - Transcendence
   - Hydra's Lament
-  - Titan's Bane
   starter: *id001
   relic: *id002
 - source: suggested
@@ -752,37 +758,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.46
     Death Metal:
       total: 0.54
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.54
     Spear of Desolation:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.54
     Titan's Bane:
       total: 0.53
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.43
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.41
     Soul Gem:
-      total: 0.52
+      total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.64
   community_ordered:
@@ -827,37 +833,37 @@ builds:
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.44
     Transcendence:
-      total: 0.47
+      total: 0.48
       efficiency: 0.5
-      win: 0.53
+      win: 0.54
       pick: 0.56
       fit: 0.22
     Book of Thoth:
-      total: 0.44
+      total: 0.45
       efficiency: 0.48
-      win: 0.5
-      pick: 0.33
+      win: 0.52
+      pick: 0.34
       fit: 0.22
     Death Metal:
       total: 0.55
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.59
     Titan's Bane:
-      total: 0.54
+      total: 0.55
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.51
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.41
   community_ordered:
@@ -902,39 +908,39 @@ builds:
     Hammer, Blood-Bound Book, Dagger of Frenzy.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.49
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
     Death Metal:
-      total: 0.53
+      total: 0.54
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.66
     Tekko-Kagi:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
     The Crusher:
       total: 0.53
       efficiency: 0.51
-      win: 0.59
+      win: 0.6
       pick: 0.12
       fit: 0.54
   community_ordered:
@@ -977,40 +983,40 @@ builds:
     Blade, Runeforged Hammer, Blood-Bound Book, Dagger of Frenzy.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
-      win: 0.53
+      win: 0.54
       pick: 0.26
       fit: 0.49
     Tyrfing:
       total: 0.53
       efficiency: 0.53
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
     Death Metal:
-      total: 0.53
+      total: 0.54
       efficiency: 0.63
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Bragi's Harp:
-      total: 0.5
+      total: 0.51
       efficiency: 0.47
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.66
     Tekko-Kagi:
-      total: 0.51
+      total: 0.52
       efficiency: 0.49
-      win: 0.53
+      win: 0.54
       pick: 0.0
       fit: 0.69
     Titan's Bane:
       total: 0.55
       efficiency: 0.48
-      win: 0.62
-      pick: 0.39
+      win: 0.63
+      pick: 0.37
       fit: 0.54
   community_ordered:
   - Jotunn's Revenge
@@ -1018,7 +1024,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: The Crusher
-    reason: community 62% win over 114 matches (vs 52% on this god), taking the model's
+    reason: community 63% win over 119 matches (vs 52% on this god), taking the model's
       weakest slot from The Crusher
   starter: *id001
   relic: *id002

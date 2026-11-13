@@ -71,15 +71,15 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.46
-    win_rate: 0.543
-    matches: 140
+    win_rate: 0.5263
+    matches: 155
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.45
-    win_rate: 0.53
-    matches: 137
+    pick_rate: 0.44
+    win_rate: 0.54
+    matches: 148
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.68
-    win_rate: 0.6094
-    matches: 645
+    pick_rate: 0.7
+    win_rate: 0.6064
+    matches: 739
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.49
     win_rate: 0.62
-    matches: 465
+    matches: 517
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.64
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Kinetic Cuirass
-  - Devourer's Gauntlet
-  - Freya's Tears
-  - Draconic Scale
-  - Shifter's Shield
-  - Erosion
-  flex_slots:
-  - Shifter's Shield
-  - Devourer's Gauntlet
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Kinetic Cuirass:
-      total: 0.66
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.71
-    Devourer's Gauntlet:
-      total: 0.4
-      efficiency: 0.4
-      win: 0.5
-      pick: 0.0
-      fit: 0.41
-    Freya's Tears:
-      total: 0.58
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Draconic Scale:
-      total: 0.57
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Shifter's Shield:
-      total: 0.56
-      efficiency: 0.5
-      win: 0.5
-      pick: 0.0
-      fit: 0.61
-    Erosion:
-      total: 0.58
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.64
-  swaps:
-  - added: Devourer's Gauntlet
-    removed: Brawler’s Beat Stick
-    reason: Conquest community 62% win over 626 matches (vs 57% on this god), taking
-      the model's weakest slot from Brawler’s Beat Stick
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

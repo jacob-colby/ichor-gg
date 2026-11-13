@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.7
-    win_rate: 0.5773
-    matches: 367
+    pick_rate: 0.69
+    win_rate: 0.5765
+    matches: 404
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.45
-    win_rate: 0.64
-    matches: 236
+    pick_rate: 0.44
+    win_rate: 0.62
+    matches: 258
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -608,6 +608,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Glorious Pridwen
+  - Freya's Tears
+  - Mantle Of Discord
+  - Hussar's Wings
+  flex_slots:
+  - Mantle Of Discord
+  - Freya's Tears
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
+  - vs_tag: magic_heavy
+    swap: Amanita Charm — magical protection
+    swap_item: Amanita Charm
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.63
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    Magi's Cloak:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Glorious Pridwen:
+      total: 0.56
+      efficiency: 0.38
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Mantle Of Discord:
+      total: 0.56
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.59
+    Hussar's Wings:
+      total: 0.57
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+  swaps:
+  - added: Glorious Pridwen
+    removed: Erosion
+    reason: Conquest community 74% win over 35 matches (vs 58% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

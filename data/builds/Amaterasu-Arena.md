@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.5
-    win_rate: 0.6186
-    matches: 193
+    win_rate: 0.6052
+    matches: 216
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
-    pick_rate: 0.53
+    pick_rate: 0.52
     win_rate: 0.6
-    matches: 205
+    matches: 225
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Shogun's Ofuda
     removed: Freya's Tears
-    reason: Conquest community 72% win over 58 matches (vs 60% on this god), taking
+    reason: Conquest community 70% win over 65 matches (vs 59% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

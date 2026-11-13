@@ -5,185 +5,188 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Shamash
-  aspect_pick_rate: 0.6
+  aspect_pick_rate: 0.61
   aspect_win_rate: 0.59
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.27
-    win_rate: 0.58
+    win_rate: 0.61
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.21
-      win_rate: 0.56
+      pick_rate: 0.2
+      win_rate: 0.54
     - name: Barbed Carver
       pick_rate: 0.11
-      win_rate: 0.59
+      win_rate: 0.57
   - name: Berserker's Shield
     pick_rate: 0.19
-    win_rate: 0.51
+    win_rate: 0.56
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.14
-      win_rate: 0.61
+      win_rate: 0.6
     - name: The Reaper
-      pick_rate: 0.11
-      win_rate: 0.61
+      pick_rate: 0.12
+      win_rate: 0.63
   - name: Barbed Carver
-    pick_rate: 0.18
-    win_rate: 0.6
+    pick_rate: 0.19
+    win_rate: 0.62
     alternates:
     - name: Kinetic Cuirass
-      pick_rate: 0.12
-      win_rate: 0.47
+      pick_rate: 0.11
+      win_rate: 0.51
     - name: Berserker's Shield
       pick_rate: 0.09
       win_rate: 0.63
   - name: Heartseeker
-    pick_rate: 0.22
-    win_rate: 0.62
+    pick_rate: 0.21
+    win_rate: 0.61
     alternates:
+    - name: Sanguine Lash
+      pick_rate: 0.11
+      win_rate: 0.64
     - name: Kinetic Cuirass
       pick_rate: 0.1
-      win_rate: 0.69
-    - name: Sanguine Lash
-      pick_rate: 0.1
-      win_rate: 0.62
+      win_rate: 0.71
   - name: Freya's Tears
     pick_rate: 0.12
-    win_rate: 0.63
+    win_rate: 0.65
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.61
     - name: The Crusher
-      pick_rate: 0.07
-      win_rate: 0.5
+      pick_rate: 0.06
+      win_rate: 0.47
   - name: Blinking Abyss
     pick_rate: 0.07
     win_rate: 0.69
     alternates:
     - name: Brawler’s Beat Stick
       pick_rate: 0.07
-      win_rate: 0.62
+      win_rate: 0.56
     - name: Sage's Ring
       pick_rate: 0.06
-      win_rate: 0.82
+      win_rate: 0.85
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.26
-    win_rate: 0.63
+    win_rate: 0.64
   - name: Bluestone Brooch
-    pick_rate: 0.22
-    win_rate: 0.62
+    pick_rate: 0.23
+    win_rate: 0.63
   - name: Leather Cowl
-    pick_rate: 0.13
-    win_rate: 0.53
+    pick_rate: 0.12
+    win_rate: 0.55
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.32
-    win_rate: 0.54
+    pick_rate: 0.31
+    win_rate: 0.55
   - name: Blink Rune
     pick_rate: 0.25
-    win_rate: 0.58
+    win_rate: 0.59
   - name: Aegis of Acceleration
-    pick_rate: 0.14
-    win_rate: 0.67
+    pick_rate: 0.15
+    win_rate: 0.69
   starter_sightings:
   - name: Hunter's Cowl
     pick_rate: 0.26
-    win_rate: 0.63
+    win_rate: 0.64
   - name: Bluestone Brooch
-    pick_rate: 0.22
-    win_rate: 0.62
+    pick_rate: 0.23
+    win_rate: 0.63
   - name: Leather Cowl
-    pick_rate: 0.13
-    win_rate: 0.53
+    pick_rate: 0.12
+    win_rate: 0.55
   - name: Bluestone Pendant
     pick_rate: 0.11
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Bumba's Hammer
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.65
-  - name: Archmage's Gem
-    pick_rate: 0.04
-    win_rate: 0.67
   - name: Death's Embrace
     pick_rate: 0.04
-    win_rate: 0.73
+    win_rate: 0.69
+  - name: Archmage's Gem
+    pick_rate: 0.03
+    win_rate: 0.67
   - name: Bumba's Cudgel
     pick_rate: 0.03
-    win_rate: 0.56
+    win_rate: 0.64
   - name: Death's Toll
     pick_rate: 0.02
-    win_rate: 0.14
+    win_rate: 0.25
   - name: Sundering Axe
     pick_rate: 0.02
-    win_rate: 0.6
+    win_rate: 0.71
   - name: War Banner
     pick_rate: 0.02
     win_rate: 0.71
   - name: Warrior's Axe
     pick_rate: 0.02
-    win_rate: 0.2
+    win_rate: 0.29
   - name: War Flag
-    pick_rate: 0.01
+    pick_rate: 0.009
     win_rate: 0.67
   - name: Bumba's Golden Dagger
     pick_rate: 0.003
     win_rate: 0.0
+  - name: Conduit Gem
+    pick_rate: 0.003
+    win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.32
-    win_rate: 0.54
+    pick_rate: 0.31
+    win_rate: 0.55
   - name: Blink Rune
     pick_rate: 0.25
-    win_rate: 0.58
+    win_rate: 0.59
   - name: Aegis of Acceleration
-    pick_rate: 0.14
-    win_rate: 0.67
+    pick_rate: 0.15
+    win_rate: 0.69
   - name: Agility Relic
-    pick_rate: 0.13
-    win_rate: 0.67
+    pick_rate: 0.12
+    win_rate: 0.66
   - name: Sundering Arc
-    pick_rate: 0.08
-    win_rate: 0.5
+    pick_rate: 0.09
+    win_rate: 0.59
   - name: Phantom Shell
     pick_rate: 0.07
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/gilgamesh/
-  last_verified: '2026-11-12'
-  god_win_rate: 0.5939597315436241
-  god_matches_won: 177
-  god_matches_played: 298
+  last_verified: '2026-11-13'
+  god_win_rate: 0.6075581395348837
+  god_matches_won: 209
+  god_matches_played: 344
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-12'
-  god_matches_analyzed: 9582
+  god_window_end: '2026-11-13'
+  god_matches_analyzed: 10711
   starter:
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.39
-    win_rate: 0.5967
-    matches: 116
+    pick_rate: 0.38
+    win_rate: 0.6116
+    matches: 131
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.32
-    win_rate: 0.54
-    matches: 95
+    pick_rate: 0.31
+    win_rate: 0.55
+    matches: 107
     basis: community
 - source: suggested
   archetype: core
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Tyrfing
   - Freya's Tears
   - Amanita Charm
   flex_slots:
+  - Genji's Guard
   - Tyrfing
-  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -202,7 +205,7 @@ builds:
     Runeforged Hammer, Tekko-Kagi, Hydra''s Lament, Oni Hunter''s Garb, Breastplate
     of Valor, Toxic Blade, Shield of the Phoenix, Lernaean Bow, Dominance, Draconic
     Scale, Titan''s Bane, Avenging Blade, Shogun''s Ofuda, Pharaoh''s Curse, Midgardian
-    Mail, Silverbranch Bow, Erosion, Riptalon.'
+    Mail, Silverbranch Bow, Erosion, Riptalon, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -211,17 +214,17 @@ builds:
       pick: 0.0
       fit: 0.11
     Berserker's Shield:
-      total: 0.55
+      total: 0.57
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.37
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.21
-      fit: 0.34
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.17
+      fit: 0.39
     Tyrfing:
       total: 0.54
       efficiency: 0.53
@@ -229,9 +232,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.63
+      win: 0.65
       pick: 0.26
       fit: 0.19
     Amanita Charm:
@@ -242,20 +245,20 @@ builds:
       fit: 0.29
   community_ordered:
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.39
-    win_rate: 0.5967
-    matches: 116
+    pick_rate: 0.38
+    win_rate: 0.6116
+    matches: 131
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.32
-    win_rate: 0.54
-    matches: 95
+    pick_rate: 0.31
+    win_rate: 0.55
+    matches: 107
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -267,15 +270,15 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Berserker's Shield
+  - Jotunn's Revenge
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Kinetic Cuirass — magical protection
+    swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
@@ -287,7 +290,7 @@ builds:
     Hammer, Shield Splitter, Golden Blade, Oni Hunter''s Garb, Shield of the Phoenix,
     Dominance, Tekko-Kagi, Lernaean Bow, Titan''s Bane, Screeching Gargoyle, Arondight,
     Yogi''s Necklace, Avenging Blade, Draconic Scale, Midgardian Mail, Eye of Providence,
-    Toxic Blade, Leviathan''s Hide.'
+    Toxic Blade, Leviathan''s Hide, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.55
@@ -296,16 +299,16 @@ builds:
       pick: 0.0
       fit: 0.19
     Berserker's Shield:
-      total: 0.53
+      total: 0.56
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.25
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.56
-      pick: 0.21
+      win: 0.54
+      pick: 0.2
       fit: 0.39
     Transcendence:
       total: 0.48
@@ -314,9 +317,9 @@ builds:
       pick: 0.0
       fit: 0.21
     Freya's Tears:
-      total: 0.54
+      total: 0.55
       efficiency: 0.61
-      win: 0.63
+      win: 0.65
       pick: 0.26
       fit: 0.19
     Amanita Charm:
@@ -336,13 +339,13 @@ builds:
   slot_order:
   - Genji's Guard
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   - The Reaper
   - Amanita Charm
   flex_slots:
+  - Freya's Tears
   - Genji's Guard
-  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -361,7 +364,7 @@ builds:
     Yogi''s Necklace, Shield Splitter, Riptalon, Tyrfing, Golden Blade, Runeforged
     Hammer, Oni Hunter''s Garb, Breastplate of Valor, Draconic Scale, Bloodforge,
     Chandra''s Grace, Hydra''s Lament, Erosion, Tekko-Kagi, Eye of Providence, Midgardian
-    Mail, Toxic Blade, Shogun''s Ofuda, Shifter''s Shield, Pharaoh''s Curse.'
+    Mail, Toxic Blade, Shogun''s Ofuda, Shifter''s Shield, Pharaoh''s Curse, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -370,28 +373,28 @@ builds:
       pick: 0.0
       fit: 0.14
     Berserker's Shield:
-      total: 0.55
+      total: 0.58
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.4
-    Jotunn's Revenge:
-      total: 0.54
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.21
-      fit: 0.3
-    Freya's Tears:
-      total: 0.55
+    Kinetic Cuirass:
+      total: 0.57
       efficiency: 0.61
-      win: 0.63
+      win: 0.61
+      pick: 0.17
+      fit: 0.47
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.65
       pick: 0.26
       fit: 0.25
     The Reaper:
-      total: 0.58
+      total: 0.59
       efficiency: 0.57
-      win: 0.61
-      pick: 0.15
+      win: 0.63
+      pick: 0.16
       fit: 0.65
     Amanita Charm:
       total: 0.61
@@ -401,7 +404,7 @@ builds:
       fit: 0.67
   community_ordered:
   - Berserker's Shield
-  - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   - The Reaper
   starter: *id001
@@ -409,15 +412,15 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Avenging Blade
   - Berserker's Shield
   - Jotunn's Revenge
-  - Transcendence
+  - Kinetic Cuirass
+  - Freya's Tears
   - The Reaper
   - Heartseeker
   flex_slots:
-  - Avenging Blade
-  - Transcendence
+  - Heartseeker
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -426,8 +429,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -436,47 +439,49 @@ builds:
     Tekko-Kagi, Tyrfing, Stone of Binding, Void Stone, Void Shield, Toxic Blade, Titan''s
     Bane, Runeforged Hammer, Shield Splitter, Golden Blade, Silverbranch Bow, Riptalon,
     Breastplate of Valor, Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix,
-    Lernaean Bow, Dominance, Avatar''s Parashu.'
+    Lernaean Bow, Dominance, Avatar''s Parashu, The Crusher.'
   slot_scores:
-    Avenging Blade:
-      total: 0.54
-      efficiency: 0.47
-      win: 0.61
-      pick: 0.0
-      fit: 0.66
     Berserker's Shield:
-      total: 0.54
+      total: 0.56
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.56
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.21
-      fit: 0.45
-    Transcendence:
-      total: 0.47
-      efficiency: 0.5
-      win: 0.61
-      pick: 0.0
-      fit: 0.15
-    The Reaper:
       total: 0.55
-      efficiency: 0.57
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.2
+      fit: 0.45
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.61
       win: 0.61
-      pick: 0.15
+      pick: 0.17
+      fit: 0.34
+    Freya's Tears:
+      total: 0.54
+      efficiency: 0.61
+      win: 0.65
+      pick: 0.26
+      fit: 0.16
+    The Reaper:
+      total: 0.56
+      efficiency: 0.57
+      win: 0.63
+      pick: 0.16
       fit: 0.49
     Heartseeker:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
-      win: 0.62
-      pick: 0.37
+      win: 0.61
+      pick: 0.35
       fit: 0.62
   community_ordered:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Kinetic Cuirass
+  - Freya's Tears
   - The Reaper
   - Heartseeker
   starter: *id001
@@ -485,24 +490,24 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
-  - Genji's Guard
   - Berserker's Shield
+  - Kinetic Cuirass
   - Tyrfing
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Golden Blade
   - Freya's Tears
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Shield Splitter — physical protection
+    swap_item: Shield Splitter
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -511,7 +516,7 @@ builds:
     Splitter, Runeforged Hammer, Silverbranch Bow, Breastplate of Valor, Tekko-Kagi,
     Oni Hunter''s Garb, Riptalon, Shield of the Phoenix, Lernaean Bow, Shogun''s Ofuda,
     Dominance, Hydra''s Lament, Pharaoh''s Curse, Draconic Scale, Midgardian Mail,
-    Qin''s Blade, Leviathan''s Hide, Erosion.'
+    Qin''s Blade, Leviathan''s Hide, Erosion, The Crusher.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -519,18 +524,18 @@ builds:
       win: 0.61
       pick: 0.0
       fit: 0.56
-    Genji's Guard:
-      total: 0.54
-      efficiency: 0.71
-      win: 0.61
-      pick: 0.0
-      fit: 0.09
     Berserker's Shield:
-      total: 0.55
+      total: 0.57
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.38
+    Kinetic Cuirass:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.17
+      fit: 0.34
     Tyrfing:
       total: 0.54
       efficiency: 0.53
@@ -538,9 +543,9 @@ builds:
       pick: 0.0
       fit: 0.55
     Freya's Tears:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
-      win: 0.63
+      win: 0.65
       pick: 0.26
       fit: 0.16
     Amanita Charm:
@@ -551,6 +556,7 @@ builds:
       fit: 0.24
   community_ordered:
   - Berserker's Shield
+  - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
   relic: *id002
@@ -560,12 +566,12 @@ builds:
   - Genji's Guard
   - Berserker's Shield
   - Jotunn's Revenge
-  - Breastplate of Valor
+  - Kinetic Cuirass
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Breastplate of Valor
-  - Berserker's Shield
+  - Kinetic Cuirass
+  - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -574,8 +580,8 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -585,7 +591,7 @@ builds:
     Arondight, Runeforged Hammer, Shield Splitter, Oni Hunter''s Garb, Golden Blade,
     Gladiator''s Shield, Chandra''s Grace, Draconic Scale, Midgardian Mail, Toxic
     Blade, Eye of Providence, Tekko-Kagi, Eye of Erebus, Damaru, Leviathan''s Hide,
-    Shogun''s Ofuda.'
+    Shogun''s Ofuda, The Crusher.'
   slot_scores:
     Genji's Guard:
       total: 0.57
@@ -594,27 +600,27 @@ builds:
       pick: 0.0
       fit: 0.31
     Berserker's Shield:
-      total: 0.54
+      total: 0.56
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.28
     Jotunn's Revenge:
-      total: 0.55
-      efficiency: 0.65
-      win: 0.56
-      pick: 0.21
-      fit: 0.42
-    Breastplate of Valor:
       total: 0.54
-      efficiency: 0.63
-      win: 0.61
-      pick: 0.0
-      fit: 0.31
-    Freya's Tears:
-      total: 0.56
+      efficiency: 0.65
+      win: 0.54
+      pick: 0.2
+      fit: 0.42
+    Kinetic Cuirass:
+      total: 0.54
       efficiency: 0.61
-      win: 0.63
+      win: 0.61
+      pick: 0.17
+      fit: 0.32
+    Freya's Tears:
+      total: 0.57
+      efficiency: 0.61
+      win: 0.65
       pick: 0.26
       fit: 0.37
     Amanita Charm:
@@ -626,6 +632,7 @@ builds:
   community_ordered:
   - Berserker's Shield
   - Jotunn's Revenge
+  - Kinetic Cuirass
   - Freya's Tears
   starter: *id001
   relic: *id002
@@ -656,10 +663,10 @@ builds:
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
     Underrated for this god: Amanita Charm, Genji''s Guard, Tyrfing, Golden Blade,
-    Shield Splitter, Runeforged Hammer, Tekko-Kagi, Hydra''s Lament, Oni Hunter''s
-    Garb, Breastplate of Valor, Toxic Blade, Shield of the Phoenix, Lernaean Bow,
-    Dominance, Draconic Scale, Titan''s Bane, Avenging Blade, Shogun''s Ofuda, Pharaoh''s
-    Curse, Midgardian Mail, Silverbranch Bow, Erosion, Riptalon.'
+    Shield Splitter, Runeforged Hammer, Tekko-Kagi, The Crusher, Hydra''s Lament,
+    Oni Hunter''s Garb, Breastplate of Valor, Toxic Blade, Shield of the Phoenix,
+    Lernaean Bow, Dominance, Draconic Scale, Titan''s Bane, Avenging Blade, Shogun''s
+    Ofuda, Pharaoh''s Curse, Midgardian Mail, Silverbranch Bow, Erosion, Riptalon.'
   slot_scores:
     Genji's Guard:
       total: 0.54
@@ -668,22 +675,22 @@ builds:
       pick: 0.0
       fit: 0.11
     Berserker's Shield:
-      total: 0.55
+      total: 0.57
       efficiency: 0.72
-      win: 0.51
+      win: 0.56
       pick: 0.26
       fit: 0.37
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
-      win: 0.56
-      pick: 0.21
+      win: 0.54
+      pick: 0.2
       fit: 0.34
     Kinetic Cuirass:
-      total: 0.49
+      total: 0.55
       efficiency: 0.61
-      win: 0.47
-      pick: 0.19
+      win: 0.61
+      pick: 0.17
       fit: 0.39
     Tyrfing:
       total: 0.54

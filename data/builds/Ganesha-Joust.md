@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.57
-    win_rate: 0.4758
-    matches: 137
+    pick_rate: 0.58
+    win_rate: 0.4686
+    matches: 153
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.56
-    win_rate: 0.43
-    matches: 135
+    pick_rate: 0.58
+    win_rate: 0.44
+    matches: 153
     basis: community
     borrowed_from: Conquest
 - source: suggested

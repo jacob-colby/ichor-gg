@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.73
-    win_rate: 0.5808
-    matches: 329
+    pick_rate: 0.74
+    win_rate: 0.6011
+    matches: 377
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.6
-    matches: 122
+    win_rate: 0.62
+    matches: 138
     basis: community
     borrowed_from: Conquest
 - source: suggested
