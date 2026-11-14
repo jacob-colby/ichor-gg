@@ -481,6 +481,10 @@
     "value": "aspect-of-spirits"
    },
    {
+    "name": "Aspect of the Sickle",
+    "value": "aspect-of-the-sickle"
+   },
+   {
     "name": "Aspect of the Thickbark",
     "value": "aspect-of-the-thickbark"
    },
@@ -554,7 +558,7 @@
    "start": "2026-10-20T11:48:48.610Z"
   },
   "ob47": {
-   "end": "2026-11-11T16:40:37.813Z",
+   "end": "2026-11-14T14:31:01.530Z",
    "start": "2026-11-03T11:30:13.083Z"
   }
  }

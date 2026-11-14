@@ -71,15 +71,15 @@ builds:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
     pick_rate: 0.47
-    win_rate: 0.5796
-    matches: 378
+    win_rate: 0.5851
+    matches: 423
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
     pick_rate: 0.35
-    win_rate: 0.54
-    matches: 281
+    win_rate: 0.55
+    matches: 315
     basis: community
     borrowed_from: Conquest
 - source: suggested

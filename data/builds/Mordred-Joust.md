@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.5
-    win_rate: 0.516
-    matches: 210
+    pick_rate: 0.48
+    win_rate: 0.5167
+    matches: 225
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.37
-    win_rate: 0.63
-    matches: 156
+    pick_rate: 0.35
+    win_rate: 0.61
+    matches: 164
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -683,10 +683,10 @@ builds:
   - Kinetic Cuirass
   - Shield Splitter
   - Bracer of The Abyss
-  - Freya's Tears
+  - Bragi's Harp
   - Amanita Charm
   flex_slots:
-  - Freya's Tears
+  - Bragi's Harp
   - Bracer of The Abyss
   situational_swaps:
   - vs_tag: heavy_cc
@@ -728,12 +728,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.04
-    Freya's Tears:
-      total: 0.52
-      efficiency: 0.61
+    Bragi's Harp:
+      total: 0.38
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.42
+      fit: 0.32
     Amanita Charm:
       total: 0.72
       efficiency: 0.68
@@ -743,8 +743,12 @@ builds:
   swaps:
   - added: Bracer of The Abyss
     removed: Erosion
-    reason: Conquest community 69% win over 76 matches (vs 57% on this god), taking
+    reason: Conquest community 70% win over 98 matches (vs 58% on this god), taking
       the model's weakest slot from Erosion
+  - added: Bragi's Harp
+    removed: Freya's Tears
+    reason: Conquest community 68% win over 112 matches (vs 58% on this god), taking
+      the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
   relic: *id002

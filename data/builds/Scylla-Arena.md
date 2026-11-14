@@ -72,14 +72,14 @@ builds:
     upgrade: Archmage's Gem
     pick_rate: 0.9
     win_rate: 0.5242
-    matches: 635
+    matches: 710
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.56
-    matches: 332
+    win_rate: 0.55
+    matches: 371
     basis: community
     borrowed_from: Conquest
 - source: suggested

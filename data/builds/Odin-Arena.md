@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.6
-    win_rate: 0.63
-    matches: 155
+    pick_rate: 0.61
+    win_rate: 0.6346
+    matches: 174
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
     pick_rate: 0.39
-    win_rate: 0.69
-    matches: 101
+    win_rate: 0.68
+    matches: 112
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -545,7 +545,7 @@ builds:
   swaps:
   - added: Freya's Tears
     removed: Jotunn's Revenge
-    reason: Conquest community 77% win over 44 matches (vs 61% on this god), taking
+    reason: Conquest community 76% win over 46 matches (vs 60% on this god), taking
       the model's weakest slot from Jotunn's Revenge
   borrowed_from: Conquest
   starter: *id001

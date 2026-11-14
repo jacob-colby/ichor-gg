@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the Watchful Pride
   aspect_pick_rate: 0.17
-  aspect_win_rate: 0.62
+  aspect_win_rate: 0.6
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.7
@@ -14,13 +14,13 @@ builds:
     alternates:
     - name: Transcendence
       pick_rate: 0.07
-      win_rate: 0.65
+      win_rate: 0.62
     - name: Gauntlet of Thebes
       pick_rate: 0.06
-      win_rate: 0.62
+      win_rate: 0.6
   - name: Pendulum Blade
     pick_rate: 0.24
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Transcendence
       pick_rate: 0.2
@@ -34,97 +34,97 @@ builds:
     alternates:
     - name: The Crusher
       pick_rate: 0.18
-      win_rate: 0.62
+      win_rate: 0.6
     - name: Pendulum Blade
       pick_rate: 0.14
-      win_rate: 0.53
+      win_rate: 0.52
   - name: Heartseeker
-    pick_rate: 0.32
+    pick_rate: 0.33
     win_rate: 0.58
     alternates:
     - name: The Crusher
-      pick_rate: 0.15
+      pick_rate: 0.16
       win_rate: 0.46
     - name: Pendulum Blade
       pick_rate: 0.06
-      win_rate: 0.62
+      win_rate: 0.59
   - name: Titan's Bane
     pick_rate: 0.12
     win_rate: 0.62
     alternates:
     - name: Heartseeker
       pick_rate: 0.18
-      win_rate: 0.6
+      win_rate: 0.58
     - name: The Crusher
-      pick_rate: 0.07
-      win_rate: 0.57
+      pick_rate: 0.08
+      win_rate: 0.59
   - name: Skeggox
     pick_rate: 0.09
-    win_rate: 0.63
+    win_rate: 0.59
     alternates:
     - name: Titan's Bane
       pick_rate: 0.11
-      win_rate: 0.66
+      win_rate: 0.63
     - name: Avatar's Parashu
       pick_rate: 0.06
-      win_rate: 0.61
+      win_rate: 0.6
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.4
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Bluestone Pendant
-    pick_rate: 0.24
-    win_rate: 0.48
+    pick_rate: 0.23
+    win_rate: 0.45
   - name: Archmage's Gem
-    pick_rate: 0.08
-    win_rate: 0.55
+    pick_rate: 0.09
+    win_rate: 0.57
   community_relics:
   - name: Purification Beads
     pick_rate: 0.62
     win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.21
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Blink Rune
     pick_rate: 0.06
-    win_rate: 0.55
+    win_rate: 0.5
   starter_sightings:
   - name: Bluestone Brooch
     pick_rate: 0.4
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Bluestone Pendant
-    pick_rate: 0.24
-    win_rate: 0.48
+    pick_rate: 0.23
+    win_rate: 0.45
   - name: Archmage's Gem
-    pick_rate: 0.08
-    win_rate: 0.55
+    pick_rate: 0.09
+    win_rate: 0.57
   - name: Bumba's Hammer
     pick_rate: 0.07
-    win_rate: 0.64
+    win_rate: 0.63
   - name: Bumba's Cudgel
     pick_rate: 0.05
     win_rate: 0.74
   - name: Pendulum of the Ages
     pick_rate: 0.05
-    win_rate: 0.63
+    win_rate: 0.65
   - name: Conduit Gem
     pick_rate: 0.04
-    win_rate: 0.41
+    win_rate: 0.43
   - name: Hunter's Cowl
     pick_rate: 0.02
-    win_rate: 0.56
+    win_rate: 0.53
   - name: Leather Cowl
     pick_rate: 0.02
     win_rate: 0.38
   - name: Sands Of Time
     pick_rate: 0.02
     win_rate: 0.25
+  - name: Selflessness
+    pick_rate: 0.005
+    win_rate: 0.5
   - name: Warrior's Axe
     pick_rate: 0.004
     win_rate: 0.33
-  - name: Selflessness
-    pick_rate: 0.003
-    win_rate: 0.5
   - name: Heroism
     pick_rate: 0.001
     win_rate: 1.0
@@ -137,37 +137,37 @@ builds:
     win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.21
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Blink Rune
     pick_rate: 0.06
-    win_rate: 0.55
+    win_rate: 0.5
   - name: Sundering Arc
     pick_rate: 0.06
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Phantom Shell
     pick_rate: 0.05
-    win_rate: 0.51
+    win_rate: 0.48
   source_url: https://smitebrain.com/gods/bastet/
-  last_verified: '2026-11-13'
-  god_win_rate: 0.5567010309278351
-  god_matches_won: 378
-  god_matches_played: 679
+  last_verified: '2026-11-14'
+  god_win_rate: 0.5487804878048781
+  god_matches_won: 405
+  god_matches_played: 738
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-13'
-  god_matches_analyzed: 10711
+  god_window_end: '2026-11-14'
+  god_matches_analyzed: 11799
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.64
-    win_rate: 0.5487
-    matches: 435
+    pick_rate: 0.63
+    win_rate: 0.5325
+    matches: 465
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.62
     win_rate: 0.55
-    matches: 421
+    matches: 458
     basis: community
 - source: suggested
   archetype: core
@@ -207,22 +207,22 @@ builds:
       pick: 0.7
       fit: 1.0
     The Reaper:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 1.0
     Heartseeker:
       total: 0.6
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 1.0
     Titan's Bane:
       total: 0.61
@@ -233,7 +233,7 @@ builds:
     Avatar's Parashu:
       total: 0.58
       efficiency: 0.46
-      win: 0.61
+      win: 0.6
       pick: 0.18
       fit: 0.91
   community_ordered:
@@ -245,15 +245,15 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.64
-    win_rate: 0.5487
-    matches: 435
+    pick_rate: 0.63
+    win_rate: 0.5325
+    matches: 465
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.62
     win_rate: 0.55
-    matches: 421
+    matches: 458
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -301,20 +301,20 @@ builds:
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.63
     The Crusher:
-      total: 0.56
+      total: 0.55
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 0.57
     Heartseeker:
       total: 0.56
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 0.77
     Titan's Bane:
       total: 0.54
@@ -376,20 +376,20 @@ builds:
     Hydra's Lament:
       total: 0.54
       efficiency: 0.55
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.54
     The Crusher:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 0.66
     Heartseeker:
       total: 0.56
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 0.76
     Titan's Bane:
       total: 0.56
@@ -439,9 +439,9 @@ builds:
     Blade, Hide of the Nemean Lion, Ancile, Stone of Binding.'
   slot_scores:
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.66
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.39
     Jotunn's Revenge:
@@ -453,25 +453,25 @@ builds:
     Kinetic Cuirass:
       total: 0.58
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.66
     Shield Splitter:
-      total: 0.56
+      total: 0.55
       efficiency: 0.58
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.57
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.57
       efficiency: 0.57
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.73
     Amanita Charm:
-      total: 0.64
+      total: 0.63
       efficiency: 0.68
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.86
   community_ordered:
@@ -518,20 +518,20 @@ builds:
     The Reaper:
       total: 0.59
       efficiency: 0.52
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.94
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 1.0
     Heartseeker:
       total: 0.6
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 1.0
     Titan's Bane:
       total: 0.61
@@ -540,9 +540,9 @@ builds:
       pick: 0.26
       fit: 1.0
     Avatar's Parashu:
-      total: 0.59
+      total: 0.58
       efficiency: 0.46
-      win: 0.61
+      win: 0.6
       pick: 0.18
       fit: 0.94
   community_ordered:
@@ -558,13 +558,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
+  - The Reaper
   - Tekko-Kagi
   - Riptalon
-  - The Crusher
   - Silverbranch Bow
   flex_slots:
-  - The Crusher
   - Tekko-Kagi
+  - The Reaper
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -593,36 +593,35 @@ builds:
     Tyrfing:
       total: 0.57
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.79
+    The Reaper:
+      total: 0.53
+      efficiency: 0.57
+      win: 0.58
+      pick: 0.0
+      fit: 0.44
     Tekko-Kagi:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.65
     Riptalon:
       total: 0.54
       efficiency: 0.45
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.79
-    The Crusher:
-      total: 0.54
-      efficiency: 0.51
-      win: 0.62
-      pick: 0.28
-      fit: 0.43
     Silverbranch Bow:
       total: 0.54
       efficiency: 0.49
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.69
   community_ordered:
   - Jotunn's Revenge
-  - The Crusher
   starter: *id001
   relic: *id002
 - source: suggested
@@ -635,7 +634,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - Heartseeker
+  - The Crusher
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
@@ -666,26 +665,26 @@ builds:
     Hydra's Lament:
       total: 0.57
       efficiency: 0.55
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.75
     Arondight:
       total: 0.55
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.65
     The Crusher:
-      total: 0.54
+      total: 0.53
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 0.45
     Heartseeker:
       total: 0.53
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 0.55
     Titan's Bane:
       total: 0.53
@@ -744,22 +743,22 @@ builds:
       pick: 0.27
       fit: 0.52
     The Reaper:
-      total: 0.59
+      total: 0.58
       efficiency: 0.52
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.91
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.62
+      win: 0.6
       pick: 0.28
       fit: 1.0
     Heartseeker:
       total: 0.6
       efficiency: 0.45
       win: 0.58
-      pick: 0.53
+      pick: 0.55
       fit: 1.0
     Titan's Bane:
       total: 0.61
@@ -795,22 +794,22 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 71
-    wins: 45
+    window_end: '2026-11-14'
+    matches: 91
+    wins: 57
     win_share: 0.63
     aggregate:
-      aspect_matches: 92
-      aspect_win_rate: 0.587
-      no_aspect_matches: 437
-      no_aspect_win_rate: 0.547
+      aspect_matches: 125
+      aspect_win_rate: 0.6
+      no_aspect_matches: 613
+      no_aspect_win_rate: 0.538
     roles:
     - role: Support
-      matches: 65
-      share: 0.92
+      matches: 82
+      share: 0.9
     - role: Solo
-      matches: 5
-      share: 0.07
+      matches: 8
+      share: 0.09
     - role: Jungle
       matches: 1
       share: 0.01
@@ -818,52 +817,52 @@ community_aspects:
     base_role_share: 0.01
     role_shift:
       role: Support
-      share: 0.92
+      share: 0.9
       says: 'most Aspect of the Watchful Pride players do not play Jungle: Support
-        92%, Jungle 1%'
+        90%, Jungle 1%'
     items:
     - name: Freya's Tears
-      share: 0.72
+      share: 0.69
     - name: Genji's Guard
-      share: 0.54
+      share: 0.56
     - name: Shell of Rebuke
-      share: 0.48
+      share: 0.45
     - name: Breastplate of Valor
       share: 0.44
+    - name: Sundering Echo
+      share: 0.43
     - name: Shifter's Shield
       share: 0.42
-    - name: Sundering Echo
-      share: 0.41
     - name: Gauntlet of Thebes
-      share: 0.35
+      share: 0.36
     - name: Stone of Binding
       share: 0.32
     starters:
     - name: Bluestone Brooch
-      share: 0.51
+      share: 0.49
     - name: Bluestone Pendant
-      share: 0.37
+      share: 0.4
     - name: Bumba's Hammer
-      share: 0.04
-    - name: Warrior's Axe
       share: 0.03
+    - name: Selflessness
+      share: 0.02
+    - name: Warrior's Axe
+      share: 0.02
     - name: Archmage's Gem
       share: 0.01
     - name: Heroism
-      share: 0.01
-    - name: Selflessness
       share: 0.01
     - name: War Banner
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.28
+      share: 0.29
     - name: Phantom Shell
-      share: 0.25
+      share: 0.23
     - name: Aegis of Acceleration
       share: 0.21
     matches_by_window:
-      ob47: 71
+      ob47: 91
       ob46: 121
       ob45: 66
       ob44: 48

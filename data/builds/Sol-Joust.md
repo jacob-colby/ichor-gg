@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
+    base: Gilded Arrow
+    upgrade: Sharpshooter's Arrow
     pick_rate: 0.32
-    win_rate: 0.5763
-    matches: 136
+    win_rate: 0.5384
+    matches: 148
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
     pick_rate: 0.59
-    win_rate: 0.6
-    matches: 251
+    win_rate: 0.58
+    matches: 272
     basis: community
     borrowed_from: Conquest
 - source: suggested
