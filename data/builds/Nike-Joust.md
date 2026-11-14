@@ -71,15 +71,15 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.49
-    win_rate: 0.5063
-    matches: 363
+    win_rate: 0.4924
+    matches: 387
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.33
-    win_rate: 0.52
-    matches: 244
+    pick_rate: 0.34
+    win_rate: 0.5
+    matches: 269
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -410,6 +410,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Shield Splitter
+  - Transcendence
+  - Freya's Tears
+  - Amanita Charm
+  - Erosion
+  flex_slots:
+  - Erosion
+  - Transcendence
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Shield Splitter:
+      total: 0.58
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Transcendence:
+      total: 0.35
+      efficiency: 0.5
+      win: 0.5
+      pick: 0.0
+      fit: 0.21
+    Freya's Tears:
+      total: 0.56
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Amanita Charm:
+      total: 0.74
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Erosion:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+  swaps:
+  - added: Transcendence
+    removed: Jotunn's Revenge
+    reason: Conquest community 58% win over 198 matches (vs 51% on this god), taking
+      the model's weakest slot from Jotunn's Revenge
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

@@ -6,30 +6,30 @@ builds:
 - source: community
   aspect: Aspect of the Devourer
   aspect_pick_rate: 0.16
-  aspect_win_rate: 0.55
+  aspect_win_rate: 0.54
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.39
+    pick_rate: 0.4
     win_rate: 0.53
     alternates:
     - name: Book of Thoth
       pick_rate: 0.22
       win_rate: 0.59
     - name: Yogi's Necklace
-      pick_rate: 0.09
-      win_rate: 0.54
+      pick_rate: 0.08
+      win_rate: 0.55
   - name: Book of Thoth
-    pick_rate: 0.17
-    win_rate: 0.49
+    pick_rate: 0.18
+    win_rate: 0.47
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.27
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Polynomicon
-      pick_rate: 0.16
-      win_rate: 0.5
+      pick_rate: 0.15
+      win_rate: 0.52
   - name: Rod of Tahuti
-    pick_rate: 0.27
+    pick_rate: 0.28
     win_rate: 0.54
     alternates:
     - name: Polynomicon
@@ -37,37 +37,37 @@ builds:
       win_rate: 0.54
     - name: Spear of Desolation
       pick_rate: 0.06
-      win_rate: 0.45
+      win_rate: 0.49
   - name: Obsidian Shard
-    pick_rate: 0.22
-    win_rate: 0.5
+    pick_rate: 0.23
+    win_rate: 0.51
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.34
       win_rate: 0.57
     - name: Polynomicon
-      pick_rate: 0.07
-      win_rate: 0.38
+      pick_rate: 0.08
+      win_rate: 0.37
   - name: Evil Eye
     pick_rate: 0.07
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: Obsidian Shard
-      pick_rate: 0.27
-      win_rate: 0.58
+      pick_rate: 0.26
+      win_rate: 0.57
     - name: Rod of Tahuti
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.65
   - name: Blinking Abyss
-    pick_rate: 0.1
-    win_rate: 0.62
+    pick_rate: 0.11
+    win_rate: 0.63
     alternates:
     - name: Killing Stone
       pick_rate: 0.08
-      win_rate: 0.71
-    - name: Evil Eye
+      win_rate: 0.69
+    - name: Obsidian Shard
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.7
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.53
@@ -76,18 +76,18 @@ builds:
     pick_rate: 0.37
     win_rate: 0.43
   - name: Pendulum of the Ages
-    pick_rate: 0.03
-    win_rate: 0.67
+    pick_rate: 0.04
+    win_rate: 0.71
   community_relics:
   - name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.43
-    win_rate: 0.51
+    win_rate: 0.52
   - name: Sundering Arc
     pick_rate: 0.05
-    win_rate: 0.53
+    win_rate: 0.49
   starter_sightings:
   - name: Archmage's Gem
     pick_rate: 0.53
@@ -96,10 +96,10 @@ builds:
     pick_rate: 0.37
     win_rate: 0.43
   - name: Pendulum of the Ages
-    pick_rate: 0.03
-    win_rate: 0.67
+    pick_rate: 0.04
+    win_rate: 0.71
   - name: Sands Of Time
-    pick_rate: 0.03
+    pick_rate: 0.02
     win_rate: 0.47
   - name: Bluestone Brooch
     pick_rate: 0.01
@@ -107,6 +107,9 @@ builds:
   - name: Sundering Axe
     pick_rate: 0.01
     win_rate: 1.0
+  - name: Warrior's Axe
+    pick_rate: 0.006
+    win_rate: 0.0
   - name: Bluestone Pendant
     pick_rate: 0.004
     win_rate: 0.33
@@ -122,49 +125,46 @@ builds:
   - name: War Flag
     pick_rate: 0.001
     win_rate: 1.0
-  - name: Warrior's Axe
-    pick_rate: 0.001
-    win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.56
+    win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.43
-    win_rate: 0.51
+    win_rate: 0.52
   - name: Sundering Arc
     pick_rate: 0.05
-    win_rate: 0.53
+    win_rate: 0.49
   - name: Phantom Shell
-    pick_rate: 0.04
-    win_rate: 0.28
+    pick_rate: 0.03
+    win_rate: 0.31
   - name: Blink Rune
     pick_rate: 0.02
-    win_rate: 0.93
+    win_rate: 0.88
   - name: Agility Relic
     pick_rate: 0.003
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/scylla/
-  last_verified: '2026-11-13'
-  god_win_rate: 0.5354107648725213
-  god_matches_won: 378
-  god_matches_played: 706
+  last_verified: '2026-11-14'
+  god_win_rate: 0.5348542458808618
+  god_matches_won: 422
+  god_matches_played: 789
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-13'
-  god_matches_analyzed: 10711
+  god_window_end: '2026-11-14'
+  god_matches_analyzed: 11799
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.9
     win_rate: 0.5242
-    matches: 635
+    matches: 710
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.56
-    matches: 332
+    win_rate: 0.55
+    matches: 371
     basis: community
 - source: suggested
   archetype: core
@@ -203,7 +203,7 @@ builds:
       total: 0.62
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 1.0
     Doom Orb:
       total: 0.54
@@ -221,13 +221,13 @@ builds:
       total: 0.67
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.79
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.5
-      pick: 0.37
+      win: 0.51
+      pick: 0.38
       fit: 0.89
     Soul Gem:
       total: 0.58
@@ -244,13 +244,13 @@ builds:
     upgrade: Archmage's Gem
     pick_rate: 0.9
     win_rate: 0.5242
-    matches: 635
+    matches: 710
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.56
-    matches: 332
+    win_rate: 0.55
+    matches: 371
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -285,16 +285,16 @@ builds:
     Staff, Damaru, Helm of Radiance.'
   slot_scores:
     Book of Thoth:
-      total: 0.46
+      total: 0.45
       efficiency: 0.48
-      win: 0.49
-      pick: 0.23
+      win: 0.47
+      pick: 0.25
       fit: 0.39
     Spear of Desolation:
       total: 0.56
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 0.61
     Polynomicon:
       total: 0.53
@@ -312,7 +312,7 @@ builds:
       total: 0.64
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.57
     Soul Gem:
       total: 0.54
@@ -369,7 +369,7 @@ builds:
       total: 0.59
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 0.78
     Spear of the Magus:
       total: 0.52
@@ -381,13 +381,13 @@ builds:
       total: 0.63
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.56
     Obsidian Shard:
       total: 0.53
       efficiency: 0.53
-      win: 0.5
-      pick: 0.37
+      win: 0.51
+      pick: 0.38
       fit: 0.66
     Soul Gem:
       total: 0.56
@@ -428,11 +428,11 @@ builds:
     swap_item: Stygian Anchor
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Shield of the Phoenix, Kinetic Cuirass, Genji''s
-    Guard, Ethereal Staff, Gluttonous Grimoire, Phoenix Feather, Freya''s Tears, Yogi''s
-    Necklace, Blood-Bound Book, Draconic Scale, Breastplate of Valor, Chandra''s Grace,
-    Oni Hunter''s Garb, Helm of Radiance, Sphere of Negation, Erosion, Helm of Darkness,
-    Eye of Providence, Spear of the Magus, Shifter''s Shield, Jade Scepter, Lifebinder,
-    Dreamer''s Idol, Midgardian Mail.'
+    Guard, Ethereal Staff, Gluttonous Grimoire, Yogi''s Necklace, Phoenix Feather,
+    Freya''s Tears, Blood-Bound Book, Draconic Scale, Breastplate of Valor, Chandra''s
+    Grace, Oni Hunter''s Garb, Helm of Radiance, Sphere of Negation, Erosion, Helm
+    of Darkness, Eye of Providence, Spear of the Magus, Shifter''s Shield, Jade Scepter,
+    Lifebinder, Dreamer''s Idol, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
       total: 0.53
@@ -444,7 +444,7 @@ builds:
       total: 0.54
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 0.49
     Kinetic Cuirass:
       total: 0.55
@@ -456,7 +456,7 @@ builds:
       total: 0.61
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.39
     Amanita Charm:
       total: 0.6
@@ -512,7 +512,7 @@ builds:
       total: 0.62
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 1.0
     Doom Orb:
       total: 0.55
@@ -530,13 +530,13 @@ builds:
       total: 0.68
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.85
     Obsidian Shard:
-      total: 0.57
+      total: 0.58
       efficiency: 0.53
-      win: 0.5
-      pick: 0.37
+      win: 0.51
+      pick: 0.38
       fit: 0.95
     Soul Gem:
       total: 0.58
@@ -592,7 +592,7 @@ builds:
       total: 0.53
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 0.4
     Nimble Ring:
       total: 0.51
@@ -610,7 +610,7 @@ builds:
       total: 0.6
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.32
     Soul Gem:
       total: 0.53
@@ -666,7 +666,7 @@ builds:
       total: 0.6
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 0.86
     Gem of Focus:
       total: 0.51
@@ -684,7 +684,7 @@ builds:
       total: 0.61
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.37
     Soul Gem:
       total: 0.57
@@ -734,7 +734,7 @@ builds:
       total: 0.62
       efficiency: 0.6
       win: 0.53
-      pick: 0.39
+      pick: 0.4
       fit: 1.0
     Doom Orb:
       total: 0.54
@@ -752,13 +752,13 @@ builds:
       total: 0.67
       efficiency: 0.82
       win: 0.54
-      pick: 0.42
+      pick: 0.44
       fit: 0.79
     Obsidian Shard:
-      total: 0.56
+      total: 0.57
       efficiency: 0.53
-      win: 0.5
-      pick: 0.37
+      win: 0.51
+      pick: 0.38
       fit: 0.89
     Soul Gem:
       total: 0.58
@@ -792,72 +792,74 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 71
-    wins: 39
-    win_share: 0.55
+    window_end: '2026-11-14'
+    matches: 100
+    wins: 56
+    win_share: 0.56
     aggregate:
-      aspect_matches: 89
-      aspect_win_rate: 0.528
-      no_aspect_matches: 467
-      no_aspect_win_rate: 0.542
+      aspect_matches: 124
+      aspect_win_rate: 0.54
+      no_aspect_matches: 665
+      no_aspect_win_rate: 0.534
     roles:
     - role: Support
-      matches: 57
-      share: 0.8
+      matches: 70
+      share: 0.7
     - role: Solo
-      matches: 8
-      share: 0.11
+      matches: 21
+      share: 0.21
     - role: Mid
-      matches: 4
-      share: 0.06
+      matches: 7
+      share: 0.07
     - role: Carry
       matches: 2
-      share: 0.03
+      share: 0.02
     base_role: Mid
-    base_role_share: 0.06
+    base_role_share: 0.07
     role_shift:
       role: Support
-      share: 0.8
-      says: 'most Aspect of the Devourer players do not play Mid: Support 80%, Mid
-        6%'
+      share: 0.7
+      says: 'most Aspect of the Devourer players do not play Mid: Support 70%, Mid
+        7%'
     items:
     - name: Yogi's Necklace
-      share: 0.69
+      share: 0.63
     - name: Genji's Guard
-      share: 0.55
+      share: 0.52
     - name: Breastplate of Valor
-      share: 0.49
+      share: 0.5
     - name: Freya's Tears
-      share: 0.44
+      share: 0.45
     - name: Shell of Rebuke
-      share: 0.38
+      share: 0.33
     - name: Prophetic Cloak
-      share: 0.31
+      share: 0.25
     - name: Dwarven Plate
-      share: 0.24
+      share: 0.22
     - name: Book of Thoth
-      share: 0.2
+      share: 0.21
     starters:
     - name: Conduit Gem
-      share: 0.42
+      share: 0.39
     - name: Archmage's Gem
-      share: 0.35
+      share: 0.28
     - name: Bluestone Brooch
-      share: 0.07
-    - name: Bluestone Pendant
-      share: 0.04
+      share: 0.08
     - name: Sundering Axe
+      share: 0.08
+    - name: Warrior's Axe
+      share: 0.05
+    - name: Bluestone Pendant
       share: 0.03
+    - name: Pendulum of the Ages
+      share: 0.03
+    - name: Sands Of Time
+      share: 0.02
     - name: War Banner
-      share: 0.03
+      share: 0.02
     - name: Bumba's Hammer
       share: 0.01
     - name: Death's Embrace
-      share: 0.01
-    - name: Sands Of Time
-      share: 0.01
-    - name: Warrior's Axe
       share: 0.01
     relics:
     - name: Sundering Arc
@@ -865,9 +867,9 @@ community_aspects:
     - name: Aegis of Acceleration
       share: 0.25
     - name: Phantom Shell
-      share: 0.2
+      share: 0.18
     matches_by_window:
-      ob47: 71
+      ob47: 100
       ob46: 123
       ob45: 108
       ob44: 121

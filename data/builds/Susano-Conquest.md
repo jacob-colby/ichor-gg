@@ -6,31 +6,31 @@ builds:
 - source: community
   aspect: Aspect of the Storm Front
   aspect_pick_rate: 0.19
-  aspect_win_rate: 0.5
+  aspect_win_rate: 0.48
   slot_order:
   - name: Hydra's Lament
     pick_rate: 0.31
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Barbed Carver
-      pick_rate: 0.21
+      pick_rate: 0.22
       win_rate: 0.53
     - name: Jotunn's Revenge
       pick_rate: 0.2
-      win_rate: 0.56
+      win_rate: 0.55
   - name: Barbed Carver
     pick_rate: 0.22
-    win_rate: 0.59
+    win_rate: 0.57
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.35
       win_rate: 0.53
     - name: Jotunn's Revenge
-      pick_rate: 0.11
-      win_rate: 0.65
+      pick_rate: 0.1
+      win_rate: 0.63
   - name: Jotunn's Revenge
     pick_rate: 0.17
-    win_rate: 0.52
+    win_rate: 0.51
     alternates:
     - name: The Crusher
       pick_rate: 0.11
@@ -39,89 +39,92 @@ builds:
       pick_rate: 0.1
       win_rate: 0.61
   - name: Heartseeker
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.54
     alternates:
     - name: Blinking Abyss
-      pick_rate: 0.11
-      win_rate: 0.55
+      pick_rate: 0.12
+      win_rate: 0.54
     - name: The Crusher
       pick_rate: 0.06
-      win_rate: 0.65
+      win_rate: 0.63
   - name: Titan's Bane
-    pick_rate: 0.1
-    win_rate: 0.47
+    pick_rate: 0.09
+    win_rate: 0.46
     alternates:
     - name: Heartseeker
       pick_rate: 0.19
-      win_rate: 0.68
+      win_rate: 0.67
     - name: Blinking Abyss
       pick_rate: 0.09
       win_rate: 0.63
   - name: Skeggox
-    pick_rate: 0.09
-    win_rate: 0.56
+    pick_rate: 0.1
+    win_rate: 0.58
     alternates:
-    - name: Avatar's Parashu
-      pick_rate: 0.08
-      win_rate: 0.79
     - name: Magi's Cloak
       pick_rate: 0.08
-      win_rate: 0.54
+      win_rate: 0.5
+    - name: Avatar's Parashu
+      pick_rate: 0.08
+      win_rate: 0.81
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.49
-    win_rate: 0.61
+    pick_rate: 0.5
+    win_rate: 0.6
   - name: Bumba's Cudgel
     pick_rate: 0.24
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Bluestone Brooch
-    pick_rate: 0.09
-    win_rate: 0.63
+    pick_rate: 0.08
+    win_rate: 0.62
   community_relics:
   - name: Purification Beads
     pick_rate: 0.53
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.23
-    win_rate: 0.59
+    pick_rate: 0.22
+    win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.13
     win_rate: 0.6
   starter_sightings:
   - name: Bumba's Hammer
-    pick_rate: 0.49
-    win_rate: 0.61
+    pick_rate: 0.5
+    win_rate: 0.6
   - name: Bumba's Cudgel
     pick_rate: 0.24
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Bluestone Brooch
-    pick_rate: 0.09
-    win_rate: 0.63
+    pick_rate: 0.08
+    win_rate: 0.62
   - name: Bluestone Pendant
     pick_rate: 0.08
-    win_rate: 0.42
+    win_rate: 0.39
   - name: Hunter's Cowl
     pick_rate: 0.02
-    win_rate: 0.53
+    win_rate: 0.5
   - name: Archmage's Gem
     pick_rate: 0.01
     win_rate: 0.78
   - name: Leather Cowl
     pick_rate: 0.01
-    win_rate: 0.44
+    win_rate: 0.5
   - name: War Banner
     pick_rate: 0.009
     win_rate: 0.5
   - name: War Flag
-    pick_rate: 0.006
-    win_rate: 0.5
+    pick_rate: 0.007
+    win_rate: 0.4
   - name: Warrior's Axe
     pick_rate: 0.006
     win_rate: 0.5
   - name: Selflessness
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.33
+  - name: Conduit Gem
+    pick_rate: 0.003
+    win_rate: 1.0
   - name: Heroism
     pick_rate: 0.003
     win_rate: 0.5
@@ -129,57 +132,54 @@ builds:
     pick_rate: 0.003
     win_rate: 0.0
   - name: Bumba's Golden Dagger
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
-  - name: Conduit Gem
-    pick_rate: 0.002
-    win_rate: 1.0
   - name: Sands Of Time
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   - name: Sundering Axe
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.53
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Blink Rune
-    pick_rate: 0.23
-    win_rate: 0.59
+    pick_rate: 0.22
+    win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.13
     win_rate: 0.6
   - name: Phantom Shell
     pick_rate: 0.09
-    win_rate: 0.45
+    win_rate: 0.43
   - name: Sundering Arc
     pick_rate: 0.02
-    win_rate: 0.46
+    win_rate: 0.47
   - name: Agility Relic
     pick_rate: 0.003
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/susano/
-  last_verified: '2026-11-13'
-  god_win_rate: 0.5532915360501567
-  god_matches_won: 353
-  god_matches_played: 638
+  last_verified: '2026-11-14'
+  god_win_rate: 0.5430656934306569
+  god_matches_won: 372
+  god_matches_played: 685
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-13'
-  god_matches_analyzed: 10711
+  god_window_end: '2026-11-14'
+  god_matches_analyzed: 11799
   starter:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.73
-    win_rate: 0.564
-    matches: 466
+    pick_rate: 0.74
+    win_rate: 0.5546
+    matches: 507
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.53
-    win_rate: 0.55
-    matches: 338
+    win_rate: 0.54
+    matches: 363
     basis: community
 - source: suggested
   archetype: core
@@ -213,21 +213,21 @@ builds:
     Spear, Devourer''s Gauntlet, Riptalon, Deathbringer, Damaru, Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 1.0
     Hydra's Lament:
-      total: 0.58
+      total: 0.57
       efficiency: 0.55
-      win: 0.58
+      win: 0.57
       pick: 0.31
       fit: 0.71
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.5
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.52
     The Crusher:
@@ -240,12 +240,12 @@ builds:
       total: 0.58
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 1.0
     Avatar's Parashu:
       total: 0.67
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.91
   community_ordered:
@@ -257,15 +257,15 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.73
-    win_rate: 0.564
-    matches: 466
+    pick_rate: 0.74
+    win_rate: 0.5546
+    matches: 507
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.53
-    win_rate: 0.55
-    matches: 338
+    win_rate: 0.54
+    matches: 363
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -302,19 +302,19 @@ builds:
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 0.71
     Hydra's Lament:
       total: 0.56
       efficiency: 0.55
-      win: 0.58
+      win: 0.57
       pick: 0.31
       fit: 0.63
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.5
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.39
     The Crusher:
@@ -327,12 +327,12 @@ builds:
       total: 0.55
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 0.77
     Avatar's Parashu:
-      total: 0.6
+      total: 0.61
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.47
   community_ordered:
@@ -377,19 +377,19 @@ builds:
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 0.78
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
-      win: 0.58
+      win: 0.57
       pick: 0.31
       fit: 0.54
     Transcendence:
       total: 0.46
       efficiency: 0.5
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.22
     The Crusher:
@@ -399,15 +399,15 @@ builds:
       pick: 0.17
       fit: 0.66
     Heartseeker:
-      total: 0.55
+      total: 0.54
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 0.76
     Avatar's Parashu:
-      total: 0.61
+      total: 0.62
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.56
   community_ordered:
@@ -432,8 +432,8 @@ builds:
   - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
@@ -454,37 +454,37 @@ builds:
     Berserker's Shield:
       total: 0.54
       efficiency: 0.66
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.39
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.66
     Shield Splitter:
       total: 0.54
       efficiency: 0.58
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.57
     Shield of the Phoenix:
       total: 0.56
       efficiency: 0.57
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.73
     Avatar's Parashu:
-      total: 0.59
+      total: 0.6
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.4
     Amanita Charm:
       total: 0.62
       efficiency: 0.68
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.86
   community_ordered:
@@ -524,21 +524,21 @@ builds:
     Gauntlet.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 1.0
     The Reaper:
-      total: 0.58
+      total: 0.57
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.94
     Tekko-Kagi:
-      total: 0.55
+      total: 0.54
       efficiency: 0.43
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.94
     The Crusher:
@@ -551,12 +551,12 @@ builds:
       total: 0.58
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 1.0
     Avatar's Parashu:
-      total: 0.67
+      total: 0.68
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.94
   community_ordered:
@@ -601,37 +601,37 @@ builds:
     Jotunn's Revenge:
       total: 0.53
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 0.37
     Tyrfing:
       total: 0.56
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.79
     Tekko-Kagi:
       total: 0.52
       efficiency: 0.49
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.65
     Riptalon:
-      total: 0.53
+      total: 0.52
       efficiency: 0.45
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.79
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.69
     Avatar's Parashu:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.33
   community_ordered:
@@ -675,37 +675,37 @@ builds:
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 0.85
     Hydra's Lament:
       total: 0.58
       efficiency: 0.55
-      win: 0.58
+      win: 0.57
       pick: 0.31
       fit: 0.75
     Arondight:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.65
     Pendulum Blade:
       total: 0.52
       efficiency: 0.39
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.85
     Heartseeker:
       total: 0.51
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 0.55
     Avatar's Parashu:
-      total: 0.58
+      total: 0.59
       efficiency: 0.46
-      win: 0.79
+      win: 0.81
       pick: 0.25
       fit: 0.35
   community_ordered:
@@ -748,21 +748,21 @@ builds:
     Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
-      win: 0.52
+      win: 0.51
       pick: 0.26
       fit: 1.0
     Transcendence:
-      total: 0.51
+      total: 0.5
       efficiency: 0.5
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.52
     The Reaper:
       total: 0.57
       efficiency: 0.52
-      win: 0.56
+      win: 0.55
       pick: 0.0
       fit: 0.91
     The Crusher:
@@ -775,13 +775,13 @@ builds:
       total: 0.58
       efficiency: 0.45
       win: 0.54
-      pick: 0.6
+      pick: 0.58
       fit: 1.0
     Titan's Bane:
-      total: 0.54
+      total: 0.53
       efficiency: 0.48
-      win: 0.47
-      pick: 0.22
+      win: 0.46
+      pick: 0.19
       fit: 1.0
   community_ordered:
   - Jotunn's Revenge
@@ -810,82 +810,82 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 77
-    wins: 40
+    window_end: '2026-11-14'
+    matches: 91
+    wins: 47
     win_share: 0.52
     aggregate:
-      aspect_matches: 105
-      aspect_win_rate: 0.476
-      no_aspect_matches: 414
-      no_aspect_win_rate: 0.585
+      aspect_matches: 128
+      aspect_win_rate: 0.477
+      no_aspect_matches: 557
+      no_aspect_win_rate: 0.558
     roles:
     - role: Support
-      matches: 70
-      share: 0.91
+      matches: 81
+      share: 0.89
     - role: Solo
-      matches: 5
-      share: 0.06
+      matches: 6
+      share: 0.07
+    - role: Jungle
+      matches: 3
+      share: 0.03
     - role: Carry
       matches: 1
       share: 0.01
-    - role: Jungle
-      matches: 1
-      share: 0.01
     base_role: Jungle
-    base_role_share: 0.01
+    base_role_share: 0.03
     role_shift:
       role: Support
-      share: 0.91
-      says: 'most Aspect of the Storm Front players do not play Jungle: Support 91%,
-        Jungle 1%'
+      share: 0.89
+      says: 'most Aspect of the Storm Front players do not play Jungle: Support 89%,
+        Jungle 3%'
     items:
     - name: Runeforged Hammer
       share: 0.68
     - name: Freya's Tears
-      share: 0.61
+      share: 0.62
     - name: Stone of Binding
-      share: 0.52
+      share: 0.53
     - name: Genji's Guard
-      share: 0.35
-    - name: Stampede
-      share: 0.34
+      share: 0.37
+    - name: Shell of Rebuke
+      share: 0.33
     - name: Breastplate of Valor
       share: 0.32
-    - name: Shell of Rebuke
-      share: 0.32
+    - name: Stampede
+      share: 0.31
     - name: brawlers-ruin
-      share: 0.25
+      share: 0.23
     starters:
     - name: Bluestone Brooch
-      share: 0.35
+      share: 0.33
     - name: Bluestone Pendant
-      share: 0.26
+      share: 0.27
     - name: Bumba's Cudgel
-      share: 0.16
+      share: 0.13
     - name: Bumba's Hammer
-      share: 0.09
-    - name: Warrior's Axe
-      share: 0.05
-    - name: Selflessness
-      share: 0.03
+      share: 0.1
     - name: War Banner
-      share: 0.03
+      share: 0.05
+    - name: Warrior's Axe
+      share: 0.04
+    - name: Selflessness
+      share: 0.02
+    - name: War Flag
+      share: 0.02
     - name: Heroism
       share: 0.01
     - name: Sundering Axe
       share: 0.01
-    - name: War Flag
-      share: 0.01
     relics:
     - name: Phantom Shell
-      share: 0.39
-    - name: Purification Beads
-      share: 0.22
+      share: 0.37
     - name: Blink Rune
-      share: 0.21
+      share: 0.23
+    - name: Purification Beads
+      share: 0.2
     matches_by_window:
-      ob47: 77
+      ob47: 91
       ob46: 272
       ob45: 355
     unmapped_slugs:

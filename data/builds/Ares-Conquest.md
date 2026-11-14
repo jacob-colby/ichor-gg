@@ -5,138 +5,138 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Reverberation
-  aspect_pick_rate: 0.23
+  aspect_pick_rate: 0.22
   aspect_win_rate: 0.44
   slot_order:
   - name: Gauntlet of Thebes
-    pick_rate: 0.41
+    pick_rate: 0.39
     win_rate: 0.55
     alternates:
     - name: Stampede
-      pick_rate: 0.15
-      win_rate: 0.63
+      pick_rate: 0.16
+      win_rate: 0.6
     - name: Circe's Hexstone
-      pick_rate: 0.08
-      win_rate: 0.69
+      pick_rate: 0.09
+      win_rate: 0.67
   - name: Stampede
     pick_rate: 0.24
     win_rate: 0.52
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.1
-      win_rate: 0.67
+      pick_rate: 0.11
+      win_rate: 0.63
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.38
+      win_rate: 0.36
   - name: Shell of Rebuke
-    pick_rate: 0.15
-    win_rate: 0.65
+    pick_rate: 0.14
+    win_rate: 0.64
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.54
     - name: Screeching Gargoyle
-      pick_rate: 0.1
-      win_rate: 0.55
+      pick_rate: 0.09
+      win_rate: 0.56
   - name: Freya's Tears
-    pick_rate: 0.19
+    pick_rate: 0.18
     win_rate: 0.6
     alternates:
     - name: Shell of Rebuke
       pick_rate: 0.17
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Genji's Guard
       pick_rate: 0.05
-      win_rate: 0.55
+      win_rate: 0.52
   - name: Draconic Scale
     pick_rate: 0.06
     win_rate: 0.64
     alternates:
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.73
+      win_rate: 0.7
     - name: Shell of Rebuke
-      pick_rate: 0.05
-      win_rate: 0.61
+      pick_rate: 0.06
+      win_rate: 0.68
   - name: Olmec Blue
-    pick_rate: 0.09
+    pick_rate: 0.08
     win_rate: 0.48
     alternates:
     - name: Medal of Defense
-      pick_rate: 0.07
-      win_rate: 0.88
+      pick_rate: 0.08
+      win_rate: 0.84
     - name: Veve Charm
       pick_rate: 0.06
       win_rate: 0.47
   community_starters:
   - name: Selflessness
-    pick_rate: 0.29
+    pick_rate: 0.28
     win_rate: 0.56
   - name: Heroism
     pick_rate: 0.15
     win_rate: 0.64
-  - name: War Banner
-    pick_rate: 0.11
-    win_rate: 0.67
-  community_relics:
-  - name: Blink Rune
-    pick_rate: 0.52
-    win_rate: 0.56
-  - name: Phantom Shell
-    pick_rate: 0.31
-    win_rate: 0.56
-  - name: Sundering Arc
-    pick_rate: 0.12
-    win_rate: 0.5
-  starter_sightings:
-  - name: Selflessness
-    pick_rate: 0.29
-    win_rate: 0.56
-  - name: Heroism
-    pick_rate: 0.15
-    win_rate: 0.64
-  - name: War Banner
-    pick_rate: 0.11
-    win_rate: 0.67
   - name: Bluestone Pendant
     pick_rate: 0.1
-    win_rate: 0.5
+    win_rate: 0.51
+  community_relics:
+  - name: Blink Rune
+    pick_rate: 0.51
+    win_rate: 0.57
+  - name: Phantom Shell
+    pick_rate: 0.3
+    win_rate: 0.54
+  - name: Sundering Arc
+    pick_rate: 0.13
+    win_rate: 0.52
+  starter_sightings:
+  - name: Selflessness
+    pick_rate: 0.28
+    win_rate: 0.56
+  - name: Heroism
+    pick_rate: 0.15
+    win_rate: 0.64
+  - name: Bluestone Pendant
+    pick_rate: 0.1
+    win_rate: 0.51
+  - name: War Banner
+    pick_rate: 0.1
+    win_rate: 0.67
   - name: War Flag
     pick_rate: 0.1
-    win_rate: 0.52
+    win_rate: 0.51
   - name: Bluestone Brooch
     pick_rate: 0.06
-    win_rate: 0.52
+    win_rate: 0.53
   - name: Warrior's Axe
-    pick_rate: 0.05
-    win_rate: 0.57
+    pick_rate: 0.06
+    win_rate: 0.61
   - name: Leather Cowl
     pick_rate: 0.03
-    win_rate: 0.14
+    win_rate: 0.13
   - name: Sundering Axe
     pick_rate: 0.03
-    win_rate: 0.83
-  - name: Archmage's Gem
-    pick_rate: 0.02
-    win_rate: 0.57
+    win_rate: 0.8
   - name: Conduit Gem
     pick_rate: 0.02
-    win_rate: 0.38
+    win_rate: 0.33
   - name: Hunter's Cowl
     pick_rate: 0.02
     win_rate: 0.63
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.57
   - name: Bumba's Cudgel
     pick_rate: 0.01
-    win_rate: 0.6
+    win_rate: 0.5
   - name: Bumba's Hammer
     pick_rate: 0.01
     win_rate: 0.4
+  - name: Sands Of Time
+    pick_rate: 0.006
+    win_rate: 0.0
   - name: Bumba's Spear
     pick_rate: 0.004
     win_rate: 0.5
-  - name: Sands Of Time
-    pick_rate: 0.004
-    win_rate: 0.0
   - name: Blood-soaked Shroud
     pick_rate: 0.002
     win_rate: 0.0
@@ -145,44 +145,44 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Blink Rune
-    pick_rate: 0.52
-    win_rate: 0.56
+    pick_rate: 0.51
+    win_rate: 0.57
   - name: Phantom Shell
-    pick_rate: 0.31
-    win_rate: 0.56
+    pick_rate: 0.3
+    win_rate: 0.54
   - name: Sundering Arc
-    pick_rate: 0.12
-    win_rate: 0.5
+    pick_rate: 0.13
+    win_rate: 0.52
+  - name: Aegis of Acceleration
+    pick_rate: 0.02
+    win_rate: 0.67
   - name: Purification Beads
     pick_rate: 0.02
     win_rate: 0.5
-  - name: Aegis of Acceleration
-    pick_rate: 0.01
-    win_rate: 0.83
   - name: Agility Relic
-    pick_rate: 0.009
+    pick_rate: 0.01
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/ares/
-  last_verified: '2026-11-13'
-  god_win_rate: 0.5584988962472406
-  god_matches_won: 253
-  god_matches_played: 453
+  last_verified: '2026-11-14'
+  god_win_rate: 0.5548780487804879
+  god_matches_won: 273
+  god_matches_played: 492
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-13'
-  god_matches_analyzed: 10711
+  god_window_end: '2026-11-14'
+  god_matches_analyzed: 11799
   starter:
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.44
-    win_rate: 0.5873
-    matches: 199
+    pick_rate: 0.43
+    win_rate: 0.5879
+    matches: 212
     basis: community
   relic:
     name: Blink Rune
-    pick_rate: 0.52
-    win_rate: 0.56
-    matches: 236
+    pick_rate: 0.51
+    win_rate: 0.57
+    matches: 251
     basis: community
 - source: suggested
   archetype: core
@@ -210,21 +210,21 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Amanita Charm, Kinetic Cuirass, Rod of Tahuti, Draconic
-    Scale, Berserker''s Shield, Shield of the Phoenix, Shield Splitter, Gluttonous
-    Grimoire, Breastplate of Valor, Soul Gem, Erosion, Eye of Providence, Shifter''s
-    Shield, Oni Hunter''s Garb, Jotunn''s Revenge, Stone of Binding, Midgardian Mail,
-    Helm of Darkness, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Spear of
-    Desolation, Hide of the Nemean Lion, Helm of Radiance, Gladiator''s Shield, Lotus
-    Sickle, Runeforged Hammer, Prophetic Cloak, Ancile, Blood-Bound Book, Void Stone,
+    this god: Amanita Charm, Kinetic Cuirass, Rod of Tahuti, Draconic Scale, Berserker''s
+    Shield, Shield of the Phoenix, Shield Splitter, Gluttonous Grimoire, Breastplate
+    of Valor, Soul Gem, Erosion, Eye of Providence, Shifter''s Shield, Oni Hunter''s
+    Garb, Jotunn''s Revenge, Stone of Binding, Midgardian Mail, Helm of Darkness,
+    Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Spear of Desolation, Hide
+    of the Nemean Lion, Helm of Radiance, Gladiator''s Shield, Lotus Sickle, Runeforged
+    Hammer, Prophetic Cloak, Screeching Gargoyle, Ancile, Blood-Bound Book, Void Stone,
     Phoenix Feather, Hydra''s Lament, Void Shield, Spectral Armor, The Reaper, Doublet
     of Binding, Hussar''s Wings.'
   slot_scores:
     Genji's Guard:
-      total: 0.61
+      total: 0.59
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.34
     Berserker's Shield:
       total: 0.56
@@ -242,7 +242,7 @@ builds:
       total: 0.58
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.56
     Draconic Scale:
       total: 0.57
@@ -263,15 +263,15 @@ builds:
   starter: &id001
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.44
-    win_rate: 0.5873
-    matches: 199
+    pick_rate: 0.43
+    win_rate: 0.5879
+    matches: 212
     basis: community
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.52
-    win_rate: 0.56
-    matches: 236
+    pick_rate: 0.51
+    win_rate: 0.57
+    matches: 251
     basis: community
 - source: suggested
   archetype: bruiser
@@ -299,21 +299,21 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Genji''s Guard, Shield of the Phoenix, Soul Gem, Kinetic
-    Cuirass, Rod of Tahuti, Draconic Scale, Berserker''s Shield, Phoenix Feather,
-    Blood-Bound Book, Gluttonous Grimoire, The Reaper, Yogi''s Necklace, Ethereal
-    Staff, Chandra''s Grace, Breastplate of Valor, Oni Hunter''s Garb, Erosion, Jotunn''s
-    Revenge, Shield Splitter, Eye of Providence, Shifter''s Shield, Regrowth Striders,
-    Midgardian Mail, Glorious Pridwen, Bancroft''s Talon, Leviathan''s Hide, Rod of
-    Asclepius, Runeforged Hammer, Spear of Desolation, Hide of the Nemean Lion, Soul
-    Locket, Gladiator''s Shield, Lotus Sickle, Ancile, Stone of Binding, Helm of Darkness,
-    Void Stone, Helm of Radiance.'
+    this god: Amanita Charm, Shield of the Phoenix, Soul Gem, Kinetic Cuirass, Rod
+    of Tahuti, Draconic Scale, Berserker''s Shield, Phoenix Feather, Blood-Bound Book,
+    Gluttonous Grimoire, The Reaper, Yogi''s Necklace, Ethereal Staff, Chandra''s
+    Grace, Breastplate of Valor, Oni Hunter''s Garb, Erosion, Jotunn''s Revenge, Shield
+    Splitter, Eye of Providence, Shifter''s Shield, Regrowth Striders, Midgardian
+    Mail, Glorious Pridwen, Bancroft''s Talon, Leviathan''s Hide, Rod of Asclepius,
+    Runeforged Hammer, Spear of Desolation, Hide of the Nemean Lion, Soul Locket,
+    Gladiator''s Shield, Lotus Sickle, Ancile, Stone of Binding, Helm of Darkness,
+    Void Stone, Helm of Radiance, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
-      total: 0.6
+      total: 0.59
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.31
     Kinetic Cuirass:
       total: 0.59
@@ -331,7 +331,7 @@ builds:
       total: 0.57
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.49
     Draconic Scale:
       total: 0.57
@@ -377,15 +377,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: Rod of Tahuti, Genji''s Guard, Amanita Charm, Gluttonous Grimoire,
-    Soul Gem, Jotunn''s Revenge, Kinetic Cuirass, Stone of Binding, Spear of Desolation,
-    Draconic Scale, Berserker''s Shield, Void Stone, Void Shield, The Reaper, Breastplate
-    of Valor, Shield Splitter, Shield of the Phoenix, Obsidian Shard, Avenging Blade,
-    Oni Hunter''s Garb, Spear of the Magus, The Crusher, Erosion, Eye of Providence,
-    Heartseeker, Dreamer''s Idol, Shifter''s Shield, Midgardian Mail, Titan''s Bane,
-    Lotus Sickle, Helm of Radiance, Leviathan''s Hide, Doom Orb, Runeforged Hammer,
-    Blood-Bound Book, Magi''s Cloak, Mantle Of Discord, Helm of Darkness, Hide of
-    the Nemean Lion, Hydra''s Lament.'
+    for this god: Rod of Tahuti, Amanita Charm, Gluttonous Grimoire, Soul Gem, Jotunn''s
+    Revenge, Kinetic Cuirass, Stone of Binding, Spear of Desolation, Draconic Scale,
+    Berserker''s Shield, Screeching Gargoyle, Void Stone, Void Shield, The Reaper,
+    Breastplate of Valor, Shield Splitter, Shield of the Phoenix, Obsidian Shard,
+    Avenging Blade, Oni Hunter''s Garb, Spear of the Magus, The Crusher, Erosion,
+    Eye of Providence, Heartseeker, Dreamer''s Idol, Shifter''s Shield, Midgardian
+    Mail, Titan''s Bane, Lotus Sickle, Helm of Radiance, Leviathan''s Hide, Doom Orb,
+    Runeforged Hammer, Blood-Bound Book, Magi''s Cloak, Mantle Of Discord, Helm of
+    Darkness, Hide of the Nemean Lion, Hydra''s Lament.'
   slot_scores:
     Stone of Binding:
       total: 0.55
@@ -394,10 +394,10 @@ builds:
       pick: 0.0
       fit: 0.71
     Genji's Guard:
-      total: 0.6
+      total: 0.58
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.25
     Jotunn's Revenge:
       total: 0.57
@@ -409,7 +409,7 @@ builds:
       total: 0.56
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.41
     Kinetic Cuirass:
       total: 0.56
@@ -454,15 +454,15 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Genji''s Guard, Berserker''s Shield, Rod of Tahuti, Amanita Charm, Kinetic
-    Cuirass, Tyrfing, Draconic Scale, Jotunn''s Revenge, Shield Splitter, Golden Blade,
-    Breastplate of Valor, Gluttonous Grimoire, Soul Gem, Shield of the Phoenix, Oni
-    Hunter''s Garb, Nimble Ring, Runeforged Hammer, Shogun''s Ofuda, Hydra''s Lament,
-    Pharaoh''s Curse, Erosion, Spear of Desolation, Eye of Providence, Lotus Sickle,
-    Toxic Blade, Bragi''s Harp, Shifter''s Shield, Midgardian Mail, The Reaper, Blood-Bound
-    Book, Helm of Radiance, Stone of Binding, Eros'' Bow, Lernaean Bow, Dominance,
-    Leviathan''s Hide, Silverbranch Bow, Magi''s Cloak, Mantle Of Discord, Hide of
-    the Nemean Lion.'
+    this god: Berserker''s Shield, Rod of Tahuti, Amanita Charm, Kinetic Cuirass,
+    Tyrfing, Draconic Scale, Jotunn''s Revenge, Shield Splitter, Golden Blade, Breastplate
+    of Valor, Gluttonous Grimoire, Soul Gem, Shield of the Phoenix, Oni Hunter''s
+    Garb, Nimble Ring, Runeforged Hammer, Shogun''s Ofuda, Hydra''s Lament, Pharaoh''s
+    Curse, Erosion, Spear of Desolation, Eye of Providence, Lotus Sickle, Toxic Blade,
+    Bragi''s Harp, Shifter''s Shield, Midgardian Mail, The Reaper, Blood-Bound Book,
+    Helm of Radiance, Stone of Binding, Eros'' Bow, Lernaean Bow, Dominance, Leviathan''s
+    Hide, Silverbranch Bow, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion,
+    Screeching Gargoyle.'
   slot_scores:
     Golden Blade:
       total: 0.53
@@ -471,10 +471,10 @@ builds:
       pick: 0.0
       fit: 0.53
     Genji's Guard:
-      total: 0.59
+      total: 0.57
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.21
     Berserker's Shield:
       total: 0.59
@@ -530,10 +530,10 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Genji''s Guard, Rod of Tahuti, Amanita
-    Charm, Soul Gem, Jotunn''s Revenge, Kinetic Cuirass, Breastplate of Valor, Shield
-    of the Phoenix, Spear of Desolation, Draconic Scale, Lotus Sickle, Berserker''s
-    Shield, Hydra''s Lament, Gluttonous Grimoire, Shield Splitter, Chronos'' Pendant,
+    + fit + win/pick). Underrated for this god: Rod of Tahuti, Amanita Charm, Soul
+    Gem, Jotunn''s Revenge, Kinetic Cuirass, Breastplate of Valor, Shield of the Phoenix,
+    Spear of Desolation, Draconic Scale, Lotus Sickle, Berserker''s Shield, Hydra''s
+    Lament, Gluttonous Grimoire, Shield Splitter, Screeching Gargoyle, Chronos'' Pendant,
     Gladiator''s Shield, Oni Hunter''s Garb, Prophetic Cloak, Arondight, Erosion,
     Eye of Providence, Helm of Radiance, Runeforged Hammer, Blood-Bound Book, Shifter''s
     Shield, Gem of Focus, Heartwood Charm, Helm of Darkness, Midgardian Mail, Chandra''s
@@ -542,10 +542,10 @@ builds:
     Erebus.'
   slot_scores:
     Genji's Guard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.45
     Breastplate of Valor:
       total: 0.56
@@ -563,7 +563,7 @@ builds:
       total: 0.59
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.6
     Kinetic Cuirass:
       total: 0.56
@@ -608,21 +608,21 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Off-type Strength build — this kit scales on it (efficiency + fit +
-    win/pick). Underrated for this god: Genji''s Guard, Rod of Tahuti, Berserker''s
-    Shield, Amanita Charm, Jotunn''s Revenge, Kinetic Cuirass, Shield Splitter, Gluttonous
-    Grimoire, Draconic Scale, Soul Gem, The Reaper, Tyrfing, Breastplate of Valor,
-    Runeforged Hammer, Hydra''s Lament, Golden Blade, Spear of Desolation, Shield
-    of the Phoenix, The Crusher, Oni Hunter''s Garb, Heartseeker, Erosion, Eye of
-    Providence, Tekko-Kagi, Titan''s Bane, Death Metal, Shifter''s Shield, Lotus Sickle,
-    Midgardian Mail, Stone of Binding, Bragi''s Harp, Helm of Radiance, Blood-Bound
-    Book, Obsidian Shard, Arondight, Avenging Blade, Leviathan''s Hide, Magi''s Cloak,
-    Mantle Of Discord, Nimble Ring.'
+    win/pick). Underrated for this god: Rod of Tahuti, Berserker''s Shield, Amanita
+    Charm, Jotunn''s Revenge, Kinetic Cuirass, Shield Splitter, Gluttonous Grimoire,
+    Draconic Scale, Soul Gem, The Reaper, Tyrfing, Breastplate of Valor, Runeforged
+    Hammer, Hydra''s Lament, Golden Blade, Spear of Desolation, Shield of the Phoenix,
+    The Crusher, Oni Hunter''s Garb, Heartseeker, Erosion, Eye of Providence, Tekko-Kagi,
+    Titan''s Bane, Death Metal, Shifter''s Shield, Lotus Sickle, Midgardian Mail,
+    Stone of Binding, Bragi''s Harp, Helm of Radiance, Blood-Bound Book, Obsidian
+    Shard, Arondight, Avenging Blade, Leviathan''s Hide, Magi''s Cloak, Mantle Of
+    Discord, Nimble Ring, Screeching Gargoyle.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.57
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.22
     Berserker's Shield:
       total: 0.57
@@ -640,7 +640,7 @@ builds:
       total: 0.55
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.36
     Kinetic Cuirass:
       total: 0.56
@@ -685,21 +685,21 @@ builds:
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: Amanita Charm, Kinetic Cuirass, Rod of Tahuti, Genji''s
-    Guard, Berserker''s Shield, Shield of the Phoenix, Draconic Scale, Shield Splitter,
-    Gluttonous Grimoire, Breastplate of Valor, Soul Gem, Erosion, Eye of Providence,
-    Shifter''s Shield, Oni Hunter''s Garb, Jotunn''s Revenge, Stone of Binding, Midgardian
-    Mail, Helm of Darkness, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide, Spear
-    of Desolation, Hide of the Nemean Lion, Helm of Radiance, Gladiator''s Shield,
+    Underrated for this god: Amanita Charm, Kinetic Cuirass, Rod of Tahuti, Berserker''s
+    Shield, Shield of the Phoenix, Draconic Scale, Shield Splitter, Gluttonous Grimoire,
+    Breastplate of Valor, Soul Gem, Erosion, Eye of Providence, Shifter''s Shield,
+    Oni Hunter''s Garb, Jotunn''s Revenge, Stone of Binding, Midgardian Mail, Screeching
+    Gargoyle, Helm of Darkness, Magi''s Cloak, Mantle Of Discord, Leviathan''s Hide,
+    Spear of Desolation, Hide of the Nemean Lion, Helm of Radiance, Gladiator''s Shield,
     Lotus Sickle, Runeforged Hammer, Prophetic Cloak, Ancile, Blood-Bound Book, Void
     Stone, Phoenix Feather, Hydra''s Lament, Void Shield, Spectral Armor, The Reaper,
     Doublet of Binding, Hussar''s Wings.'
   slot_scores:
     Genji's Guard:
-      total: 0.61
+      total: 0.59
       efficiency: 0.71
-      win: 0.67
-      pick: 0.14
+      win: 0.63
+      pick: 0.15
       fit: 0.34
     Berserker's Shield:
       total: 0.56
@@ -717,7 +717,7 @@ builds:
       total: 0.58
       efficiency: 0.61
       win: 0.6
-      pick: 0.32
+      pick: 0.3
       fit: 0.56
     Draconic Scale:
       total: 0.57
@@ -757,85 +757,87 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-11'
-    matches: 67
-    wins: 35
-    win_share: 0.52
+    window_end: '2026-11-14'
+    matches: 81
+    wins: 40
+    win_share: 0.49
     aggregate:
-      aspect_matches: 89
-      aspect_win_rate: 0.449
-      no_aspect_matches: 287
-      no_aspect_win_rate: 0.582
+      aspect_matches: 108
+      aspect_win_rate: 0.435
+      no_aspect_matches: 384
+      no_aspect_win_rate: 0.589
     roles:
     - role: Support
-      matches: 31
-      share: 0.46
+      matches: 34
+      share: 0.42
     - role: Solo
-      matches: 25
-      share: 0.37
+      matches: 31
+      share: 0.38
     - role: Jungle
-      matches: 11
-      share: 0.16
+      matches: 16
+      share: 0.2
     base_role: Support
-    base_role_share: 0.46
+    base_role_share: 0.42
     role_shift: null
     items:
     - name: Freya's Tears
-      share: 0.48
+      share: 0.46
     - name: Gauntlet of Thebes
-      share: 0.36
-    - name: Shifter's Shield
-      share: 0.31
+      share: 0.33
     - name: Kinetic Cuirass
+      share: 0.33
+    - name: Shifter's Shield
       share: 0.3
-    - name: Genji's Guard
-      share: 0.28
     - name: Berserker's Shield
-      share: 0.24
+      share: 0.26
+    - name: Genji's Guard
+      share: 0.26
     - name: Mystical Mail
-      share: 0.19
-    - name: Yogi's Necklace
-      share: 0.16
+      share: 0.22
+    - name: Devourer's Gauntlet
+      share: 0.17
     starters:
     - name: Bluestone Brooch
-      share: 0.16
-    - name: War Flag
+      share: 0.19
+    - name: Leather Cowl
       share: 0.12
-    - name: Bluestone Pendant
-      share: 0.1
-    - name: Heroism
-      share: 0.1
     - name: Hunter's Cowl
       share: 0.1
     - name: War Banner
       share: 0.1
-    - name: Leather Cowl
-      share: 0.07
+    - name: War Flag
+      share: 0.1
+    - name: Bluestone Pendant
+      share: 0.09
+    - name: Heroism
+      share: 0.09
+    - name: Selflessness
+      share: 0.06
     - name: Archmage's Gem
       share: 0.04
-    - name: Selflessness
-      share: 0.04
     - name: Bumba's Cudgel
-      share: 0.03
+      share: 0.02
     - name: Bumba's Hammer
-      share: 0.03
+      share: 0.02
     - name: Bumba's Spear
-      share: 0.03
+      share: 0.02
     - name: Blood-soaked Shroud
       share: 0.01
     - name: Conduit Gem
       share: 0.01
     - name: Sundering Axe
       share: 0.01
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Blink Rune
-      share: 0.48
+      share: 0.47
     - name: Phantom Shell
-      share: 0.24
+      share: 0.22
     - name: Sundering Arc
-      share: 0.16
+      share: 0.19
     matches_by_window:
-      ob47: 67
+      ob47: 81
       ob46: 160
       ob45: 210
       ob44: 347
