@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.69
-    win_rate: 0.6154
-    matches: 397
+    win_rate: 0.6054
+    matches: 446
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.67
-    win_rate: 0.6
-    matches: 385
+    pick_rate: 0.66
+    win_rate: 0.59
+    matches: 427
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -608,6 +608,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Silverbranch Bow
+  flex_slots:
+  - Lernaean Bow
+  - Silverbranch Bow
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.56
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.64
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Tyrfing:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    The Reaper:
+      total: 0.63
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.69
+    Riptalon:
+      total: 0.66
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+    Silverbranch Bow:
+      total: 0.51
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.0
+      fit: 0.52
+  swaps:
+  - added: Silverbranch Bow
+    removed: Golden Blade
+    reason: Conquest community 69% win over 116 matches (vs 58% on this god), taking
+      the model's weakest slot from Golden Blade
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

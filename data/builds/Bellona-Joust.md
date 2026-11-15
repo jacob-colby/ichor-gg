@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.5
-    win_rate: 0.526
-    matches: 208
+    pick_rate: 0.51
+    win_rate: 0.53
+    matches: 243
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.52
-    win_rate: 0.51
-    matches: 217
+    win_rate: 0.52
+    matches: 248
     basis: community
     borrowed_from: Conquest
 - source: suggested

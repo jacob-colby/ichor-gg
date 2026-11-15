@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Warrior's Axe
     upgrade: Sundering Axe
-    pick_rate: 0.31
-    win_rate: 0.4677
-    matches: 88
+    pick_rate: 0.3
+    win_rate: 0.4733
+    matches: 91
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.27
-    win_rate: 0.49
-    matches: 77
+    pick_rate: 0.28
+    win_rate: 0.48
+    matches: 85
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.55
-    win_rate: 0.5242
-    matches: 537
+    pick_rate: 0.54
+    win_rate: 0.5267
+    matches: 589
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.53
-    win_rate: 0.52
-    matches: 517
+    win_rate: 0.53
+    matches: 578
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -1147,7 +1147,7 @@ builds:
   swaps:
   - added: Obsidian Shard
     removed: Genji's Guard
-    reason: Conquest community 61% win over 244 matches (vs 54% on this god), taking
+    reason: Conquest community 61% win over 262 matches (vs 54% on this god), taking
       the model's weakest slot from Genji's Guard
   borrowed_from: Conquest
   starter: *id001
