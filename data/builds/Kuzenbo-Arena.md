@@ -72,14 +72,14 @@ builds:
     upgrade: Bluestone Brooch
     pick_rate: 0.41
     win_rate: 0.4022
-    matches: 305
+    matches: 334
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
     pick_rate: 0.36
-    win_rate: 0.41
-    matches: 268
+    win_rate: 0.4
+    matches: 293
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.62
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Freya's Tears
+  - Mantle Of Discord
+  - Draconic Scale
+  - Amanita Charm
+  flex_slots:
+  - Mantle Of Discord
+  - Draconic Scale
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.66
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.72
+    Magi's Cloak:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Freya's Tears:
+      total: 0.58
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Mantle Of Discord:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Draconic Scale:
+      total: 0.58
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.62
+    Amanita Charm:
+      total: 0.78
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+  swaps:
+  - added: Draconic Scale
+    removed: Erosion
+    reason: Conquest community 61% win over 41 matches (vs 45% on this god), taking
+      the model's weakest slot from Erosion
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

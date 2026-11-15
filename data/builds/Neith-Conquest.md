@@ -5,88 +5,88 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Wind
-  aspect_pick_rate: 0.38
-  aspect_win_rate: 0.58
+  aspect_pick_rate: 0.39
+  aspect_win_rate: 0.56
   slot_order:
   - name: Spear of Desolation
-    pick_rate: 0.2
-    win_rate: 0.55
+    pick_rate: 0.19
+    win_rate: 0.56
     alternates:
-    - name: Devourer's Gauntlet
+    - name: Transcendence
       pick_rate: 0.16
-      win_rate: 0.68
+      win_rate: 0.49
     - name: Book of Thoth
       pick_rate: 0.16
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Book of Thoth
     pick_rate: 0.13
-    win_rate: 0.51
+    win_rate: 0.5
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.14
-      win_rate: 0.53
-    - name: Dagger of Frenzy
+      pick_rate: 0.13
+      win_rate: 0.52
+    - name: The World Stone
       pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.54
   - name: Rod of Tahuti
     pick_rate: 0.16
-    win_rate: 0.68
+    win_rate: 0.66
     alternates:
     - name: The Executioner
       pick_rate: 0.1
-      win_rate: 0.62
+      win_rate: 0.59
     - name: Odysseus' Bow
-      pick_rate: 0.09
-      win_rate: 0.7
+      pick_rate: 0.1
+      win_rate: 0.63
   - name: Silverbranch Bow
-    pick_rate: 0.12
-    win_rate: 0.62
+    pick_rate: 0.11
+    win_rate: 0.59
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.22
-      win_rate: 0.5
+      pick_rate: 0.21
+      win_rate: 0.52
     - name: Obsidian Shard
       pick_rate: 0.1
-      win_rate: 0.56
+      win_rate: 0.53
   - name: Obsidian Shard
     pick_rate: 0.14
     win_rate: 0.58
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.09
-      win_rate: 0.77
+      pick_rate: 0.08
+      win_rate: 0.78
     - name: Rod of Tahuti
-      pick_rate: 0.07
-      win_rate: 0.5
+      pick_rate: 0.08
+      win_rate: 0.52
   - name: Dreamer's Idol
     pick_rate: 0.07
-    win_rate: 0.59
+    win_rate: 0.55
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.08
-      win_rate: 0.79
+      win_rate: 0.76
     - name: Killing Stone
-      pick_rate: 0.05
-      win_rate: 0.46
+      pick_rate: 0.06
+      win_rate: 0.47
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.31
     win_rate: 0.58
   - name: Conduit Gem
     pick_rate: 0.16
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Death's Embrace
     pick_rate: 0.12
-    win_rate: 0.68
+    win_rate: 0.63
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.58
+    pick_rate: 0.58
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.42
-    win_rate: 0.55
+    pick_rate: 0.4
+    win_rate: 0.53
   - name: Agility Relic
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.67
   starter_sightings:
   - name: Archmage's Gem
@@ -94,93 +94,93 @@ builds:
     win_rate: 0.58
   - name: Conduit Gem
     pick_rate: 0.16
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Death's Embrace
     pick_rate: 0.12
-    win_rate: 0.68
+    win_rate: 0.63
   - name: Death's Toll
     pick_rate: 0.06
-    win_rate: 0.63
+    win_rate: 0.59
   - name: Hunter's Cowl
     pick_rate: 0.06
-    win_rate: 0.67
+    win_rate: 0.62
   - name: Pendulum of the Ages
     pick_rate: 0.06
-    win_rate: 0.63
+    win_rate: 0.59
   - name: Sharpshooter's Arrow
     pick_rate: 0.06
-    win_rate: 0.48
+    win_rate: 0.52
   - name: Bluestone Brooch
     pick_rate: 0.04
-    win_rate: 0.59
+    win_rate: 0.56
   - name: Leather Cowl
     pick_rate: 0.04
-    win_rate: 0.33
-  - name: Sands Of Time
-    pick_rate: 0.04
-    win_rate: 0.4
+    win_rate: 0.29
   - name: Gilded Arrow
     pick_rate: 0.03
-    win_rate: 0.5
+    win_rate: 0.53
+  - name: Sands Of Time
+    pick_rate: 0.03
+    win_rate: 0.38
   - name: Bumba's Spear
     pick_rate: 0.01
     win_rate: 0.6
   - name: Bluestone Pendant
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.67
   - name: War Flag
     pick_rate: 0.002
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.58
+    pick_rate: 0.58
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.42
-    win_rate: 0.55
+    pick_rate: 0.4
+    win_rate: 0.53
   - name: Agility Relic
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.67
   - name: Phantom Shell
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.33
   - name: Blink Rune
     pick_rate: 0.002
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/neith/
-  last_verified: '2026-11-14'
-  god_win_rate: 0.5656324582338902
-  god_matches_won: 237
-  god_matches_played: 419
+  last_verified: '2026-11-15'
+  god_win_rate: 0.5541125541125541
+  god_matches_won: 256
+  god_matches_played: 462
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-14'
-  god_matches_analyzed: 11799
+  god_window_end: '2026-11-15'
+  god_matches_analyzed: 12984
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.47
-    win_rate: 0.5528
-    matches: 197
+    win_rate: 0.5562
+    matches: 217
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.58
-    matches: 239
+    pick_rate: 0.58
+    win_rate: 0.57
+    matches: 268
     basis: community
 - source: suggested
   archetype: core
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Death Metal
   - Nimble Ring
+  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
+  - Spear of Desolation
   - Nimble Ring
-  - Tyrfing
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -199,72 +199,73 @@ builds:
     Grimoire, Bragi''s Harp, The Reaper, Blood-Bound Book, Tekko-Kagi, Spear of the
     Magus, Hydra''s Lament, Ancient Signet, Bracer of The Abyss, The Crusher, Polynomicon,
     Chronos'' Pendant, Lernaean Bow, Dominance, Heartseeker, Riptalon, Doom Orb, Titan''s
-    Bane, The World Stone, Bancroft''s Talon, Arondight, Golden Blade, Toxic Blade,
+    Bane, Bancroft''s Talon, Arondight, Golden Blade, The World Stone, Toxic Blade,
     Soul Reaver, Gem of Focus, Heartwood Charm, Rage, Demon Blade, Qin''s Blade, Deathbringer,
     The Cosmic Horror.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.36
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.49
     Death Metal:
-      total: 0.56
+      total: 0.54
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.49
     Nimble Ring:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.44
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.56
+      pick: 0.19
+      fit: 0.38
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.3
     Soul Gem:
-      total: 0.56
+      total: 0.54
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.56
   community_ordered:
+  - Spear of Desolation
   - Rod of Tahuti
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.47
-    win_rate: 0.5528
-    matches: 197
+    win_rate: 0.5562
+    matches: 217
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.58
-    matches: 239
+    pick_rate: 0.58
+    win_rate: 0.57
+    matches: 268
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Tyrfing
   - Death Metal
+  - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Tyrfing
+  - Spear of Desolation
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -284,46 +285,48 @@ builds:
     Lament, Gluttonous Grimoire, The Reaper, Ancient Signet, Blood-Bound Book, Polynomicon,
     Heartseeker, Dominance, Tekko-Kagi, Spear of the Magus, Chronos'' Pendant, The
     Crusher, Bracer of The Abyss, Lernaean Bow, Doom Orb, Bancroft''s Talon, Heartwood
-    Charm, Soul Reaver, The World Stone, Titan''s Bane, Arondight, Gem of Focus, Golden
-    Blade, Riptalon, Rage, Transcendence, Deathbringer, Avatar''s Parashu, Demon Blade.'
+    Charm, Soul Reaver, Titan''s Bane, Arondight, The World Stone, Gem of Focus, Golden
+    Blade, Riptalon, Rage, Deathbringer, Avatar''s Parashu, Demon Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.44
     Transcendence:
-      total: 0.48
+      total: 0.44
       efficiency: 0.5
-      win: 0.6
-      pick: 0.0
+      win: 0.49
+      pick: 0.16
       fit: 0.24
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.48
     Death Metal:
-      total: 0.57
+      total: 0.55
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.51
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.56
+      pick: 0.19
+      fit: 0.38
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.35
     Soul Gem:
-      total: 0.55
+      total: 0.54
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.54
   community_ordered:
+  - Transcendence
+  - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
   relic: *id002
@@ -357,44 +360,44 @@ builds:
     Tyrfing, The Reaper, Bragi''s Harp, Blood-Bound Book, Spear of the Magus, Tekko-Kagi,
     Hydra''s Lament, Ancient Signet, Bracer of The Abyss, The Crusher, Polynomicon,
     Chronos'' Pendant, Heartseeker, Lernaean Bow, Dominance, Riptalon, Doom Orb, Titan''s
-    Bane, The World Stone, Bancroft''s Talon, Rage, Arondight, Soul Reaver, Gem of
+    Bane, Bancroft''s Talon, Rage, Arondight, The World Stone, Soul Reaver, Gem of
     Focus, Golden Blade, Heartwood Charm, Toxic Blade, Deathbringer, Demon Blade,
     Qin''s Blade, The Cosmic Horror.'
   slot_scores:
     Rage:
-      total: 0.49
+      total: 0.47
       efficiency: 0.46
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.36
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.35
     Death Metal:
-      total: 0.57
+      total: 0.55
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.51
     Deathbringer:
-      total: 0.48
+      total: 0.46
       efficiency: 0.44
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.36
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.3
     Soul Gem:
-      total: 0.56
+      total: 0.54
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.56
   community_ordered:
@@ -411,7 +414,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Death Metal
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -436,27 +439,27 @@ builds:
     Pendulum Blade, The Cosmic Horror, Deathbringer.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.46
     Death Metal:
-      total: 0.55
+      total: 0.54
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.43
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.55
-      pick: 0.2
+      win: 0.56
+      pick: 0.19
       fit: 0.46
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.33
     Obsidian Shard:
@@ -466,9 +469,9 @@ builds:
       pick: 0.3
       fit: 0.43
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -513,39 +516,39 @@ builds:
     Polynomicon, Midgardian Mail, Erosion, Shogun''s Ofuda.'
   slot_scores:
     Genji's Guard:
-      total: 0.54
+      total: 0.52
       efficiency: 0.71
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.15
     Berserker's Shield:
-      total: 0.57
+      total: 0.56
       efficiency: 0.72
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.35
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.52
       efficiency: 0.61
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.39
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.21
     Amanita Charm:
-      total: 0.6
+      total: 0.58
       efficiency: 0.68
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.59
     Soul Gem:
-      total: 0.58
+      total: 0.57
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.73
   community_ordered:
@@ -562,8 +565,8 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
   - Obsidian Shard
+  - Death Metal
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -581,33 +584,33 @@ builds:
     for this god: Soul Gem, Jotunn''s Revenge, Death Metal, Gluttonous Grimoire, The
     Reaper, Spear of the Magus, Tekko-Kagi, Nimble Ring, Tyrfing, The Crusher, Heartseeker,
     Blood-Bound Book, Bragi''s Harp, Riptalon, Titan''s Bane, Doom Orb, Ancient Signet,
-    Hydra''s Lament, The World Stone, Polynomicon, Bracer of The Abyss, Chronos''
+    Hydra''s Lament, Polynomicon, The World Stone, Bracer of The Abyss, Chronos''
     Pendant, Toxic Blade, Lernaean Bow, Dominance, Avenging Blade, The Cosmic Horror,
     Avatar''s Parashu, Bancroft''s Talon, Arondight, Soul Reaver, Gem of Focus, Golden
     Blade, Heartwood Charm, Pendulum Blade, Rage.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.45
     Death Metal:
-      total: 0.55
+      total: 0.53
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.42
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.55
-      pick: 0.2
+      win: 0.56
+      pick: 0.19
       fit: 0.47
     Rod of Tahuti:
       total: 0.66
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.4
     Obsidian Shard:
@@ -617,9 +620,9 @@ builds:
       pick: 0.3
       fit: 0.5
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.64
   community_ordered:
@@ -658,44 +661,44 @@ builds:
     Grimoire, Bragi''s Harp, The Reaper, Blood-Bound Book, Tekko-Kagi, Ancient Signet,
     Riptalon, Hydra''s Lament, Spear of the Magus, Bracer of The Abyss, Polynomicon,
     The Crusher, Chronos'' Pendant, Lernaean Bow, Dominance, Golden Blade, Heartseeker,
-    Toxic Blade, Qin''s Blade, Titan''s Bane, Doom Orb, Bancroft''s Talon, The World
-    Stone, Arondight, Soul Reaver, Gem of Focus, Heartwood Charm, Rage, Dagger of
-    Frenzy, Demon Blade, Deathbringer.'
+    Toxic Blade, Qin''s Blade, Titan''s Bane, Doom Orb, Bancroft''s Talon, Arondight,
+    Soul Reaver, The World Stone, Gem of Focus, Heartwood Charm, Rage, Demon Blade,
+    Dagger of Frenzy, Deathbringer.'
   slot_scores:
     Tyrfing:
-      total: 0.54
+      total: 0.52
       efficiency: 0.53
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.54
     Death Metal:
-      total: 0.55
+      total: 0.53
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.41
     Nimble Ring:
-      total: 0.53
+      total: 0.51
       efficiency: 0.57
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.39
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.25
     Silverbranch Bow:
-      total: 0.53
+      total: 0.51
       efficiency: 0.49
-      win: 0.62
-      pick: 0.2
+      win: 0.59
+      pick: 0.18
       fit: 0.46
     Soul Gem:
-      total: 0.55
+      total: 0.53
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.49
   community_ordered:
@@ -735,42 +738,42 @@ builds:
     Charm, Tekko-Kagi, Ancient Signet, Spear of the Magus, The Crusher, Bracer of
     The Abyss, Polynomicon, Lernaean Bow, Heartseeker, Dominance, Riptalon, Damaru,
     Genji''s Guard, Titan''s Bane, Totem of Death, Pendulum Blade, Doom Orb, Toxic
-    Blade, Bancroft''s Talon, The World Stone, Golden Blade, Soul Reaver, Qin''s Blade.'
+    Blade, Bancroft''s Talon, Golden Blade, Soul Reaver, Qin''s Blade, The World Stone.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.55
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.49
     Hydra's Lament:
-      total: 0.53
+      total: 0.51
       efficiency: 0.55
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.46
     Death Metal:
-      total: 0.54
+      total: 0.52
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.35
     Spear of Desolation:
-      total: 0.54
+      total: 0.55
       efficiency: 0.6
-      win: 0.55
-      pick: 0.2
+      win: 0.56
+      pick: 0.19
       fit: 0.49
     Rod of Tahuti:
-      total: 0.64
+      total: 0.63
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.21
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.66
   community_ordered:
@@ -788,7 +791,7 @@ builds:
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Jotunn's Revenge
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -808,32 +811,32 @@ builds:
     Nimble Ring, Gluttonous Grimoire, Bragi''s Harp, Blood-Bound Book, Tyrfing, The
     Reaper, Spear of the Magus, Ancient Signet, Chronos'' Pendant, Bracer of The Abyss,
     Polynomicon, Hydra''s Lament, Tekko-Kagi, The Crusher, Doom Orb, Heartseeker,
-    Gem of Focus, Lernaean Bow, The World Stone, Heartwood Charm, Dominance, Bancroft''s
-    Talon, Riptalon, Soul Reaver, Titan''s Bane, Arondight, The Cosmic Horror, Golden
-    Blade, Toxic Blade, Rage, Totem of Death, Typhon’s Heart, Qin''s Blade.'
+    Gem of Focus, Lernaean Bow, Heartwood Charm, Dominance, Bancroft''s Talon, The
+    World Stone, Riptalon, Soul Reaver, Titan''s Bane, Arondight, The Cosmic Horror,
+    Golden Blade, Toxic Blade, Rage, Totem of Death, Typhon’s Heart, Qin''s Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.56
+      total: 0.55
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.5
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.55
-      pick: 0.2
+      win: 0.56
+      pick: 0.19
       fit: 0.46
     Rod of Tahuti:
-      total: 0.66
+      total: 0.65
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.35
     Obsidian Shard:
@@ -843,9 +846,9 @@ builds:
       pick: 0.3
       fit: 0.45
     Soul Gem:
-      total: 0.57
+      total: 0.55
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -858,14 +861,14 @@ builds:
   archetype: str-int
   slot_order:
   - Jotunn's Revenge
-  - Tyrfing
   - Death Metal
-  - Bragi's Harp
+  - Nimble Ring
+  - Spear of Desolation
   - Rod of Tahuti
-  - Soul Gem
+  - Obsidian Shard
   flex_slots:
-  - Tyrfing
-  - Bragi's Harp
+  - Obsidian Shard
+  - Nimble Ring
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -884,48 +887,50 @@ builds:
     Tyrfing, Nimble Ring, Gluttonous Grimoire, Bragi''s Harp, The Reaper, Blood-Bound
     Book, Tekko-Kagi, Hydra''s Lament, Spear of the Magus, Ancient Signet, The Crusher,
     Bracer of The Abyss, Polynomicon, Heartseeker, Lernaean Bow, Dominance, Chronos''
-    Pendant, Titan''s Bane, Doom Orb, Riptalon, Arondight, The World Stone, Bancroft''s
-    Talon, Golden Blade, Soul Reaver, Rage, Gem of Focus, Heartwood Charm, Toxic Blade,
-    Deathbringer, Demon Blade, Avatar''s Parashu, The Cosmic Horror.'
+    Pendant, Titan''s Bane, Doom Orb, Riptalon, Arondight, Bancroft''s Talon, Golden
+    Blade, The World Stone, Soul Reaver, Rage, Gem of Focus, Heartwood Charm, Toxic
+    Blade, Deathbringer, Demon Blade, Avatar''s Parashu, The Cosmic Horror.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.54
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.39
-    Tyrfing:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.6
-      pick: 0.0
-      fit: 0.51
     Death Metal:
-      total: 0.57
+      total: 0.55
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.53
-    Bragi's Harp:
-      total: 0.53
-      efficiency: 0.47
-      win: 0.6
+    Nimble Ring:
+      total: 0.51
+      efficiency: 0.57
+      win: 0.56
       pick: 0.0
-      fit: 0.63
+      fit: 0.43
+    Spear of Desolation:
+      total: 0.53
+      efficiency: 0.6
+      win: 0.56
+      pick: 0.19
+      fit: 0.39
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.31
-    Soul Gem:
-      total: 0.56
-      efficiency: 0.58
-      win: 0.6
-      pick: 0.0
-      fit: 0.56
+    Obsidian Shard:
+      total: 0.53
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.3
+      fit: 0.41
   community_ordered:
+  - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   starter: *id001
   relic: *id002
 - source: suggested
@@ -963,39 +968,39 @@ builds:
     Blade, Qin''s Blade, Deathbringer, The Cosmic Horror.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.53
       efficiency: 0.65
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.36
     Death Metal:
-      total: 0.56
+      total: 0.54
       efficiency: 0.63
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.49
     Nimble Ring:
-      total: 0.53
+      total: 0.52
       efficiency: 0.57
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.44
     Spear of Desolation:
       total: 0.53
       efficiency: 0.6
-      win: 0.55
-      pick: 0.2
+      win: 0.56
+      pick: 0.19
       fit: 0.38
     Rod of Tahuti:
-      total: 0.65
+      total: 0.64
       efficiency: 0.82
-      win: 0.68
+      win: 0.66
       pick: 0.25
       fit: 0.3
     Soul Gem:
-      total: 0.56
+      total: 0.54
       efficiency: 0.58
-      win: 0.6
+      win: 0.56
       pick: 0.0
       fit: 0.56
   community_ordered:
@@ -1023,21 +1028,21 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-14'
-    matches: 123
-    wins: 76
-    win_share: 0.62
+    window_end: '2026-11-15'
+    matches: 135
+    wins: 81
+    win_share: 0.6
     aggregate:
-      aspect_matches: 161
-      aspect_win_rate: 0.578
-      no_aspect_matches: 258
-      no_aspect_win_rate: 0.558
+      aspect_matches: 178
+      aspect_win_rate: 0.556
+      no_aspect_matches: 284
+      no_aspect_win_rate: 0.553
     roles:
     - role: Carry
-      matches: 113
-      share: 0.92
+      matches: 123
+      share: 0.91
     - role: Mid
-      matches: 8
+      matches: 10
       share: 0.07
     - role: Jungle
       matches: 1
@@ -1046,32 +1051,32 @@ community_aspects:
       matches: 1
       share: 0.01
     base_role: Carry Mid
-    base_role_share: 0.98
+    base_role_share: 0.99
     role_shift: null
     items:
     - name: Silverbranch Bow
-      share: 0.68
+      share: 0.65
     - name: The Executioner
-      share: 0.59
+      share: 0.58
     - name: Odysseus' Bow
-      share: 0.54
-    - name: Tyrfing
-      share: 0.51
+      share: 0.56
     - name: Riptalon
       share: 0.5
+    - name: Tyrfing
+      share: 0.48
     - name: Devourer's Gauntlet
-      share: 0.44
+      share: 0.42
     - name: Dominance
-      share: 0.33
-    - name: Dagger of Frenzy
-      share: 0.28
+      share: 0.34
+    - name: Transcendence
+      share: 0.27
     starters:
     - name: Death's Embrace
-      share: 0.33
+      share: 0.36
     - name: Hunter's Cowl
-      share: 0.19
-    - name: Sharpshooter's Arrow
       share: 0.17
+    - name: Sharpshooter's Arrow
+      share: 0.16
     - name: Death's Toll
       share: 0.13
     - name: Gilded Arrow
@@ -1088,13 +1093,13 @@ community_aspects:
       share: 0.01
     relics:
     - name: Purification Beads
-      share: 0.61
+      share: 0.63
     - name: Aegis of Acceleration
-      share: 0.37
+      share: 0.35
     - name: Agility Relic
       share: 0.02
     matches_by_window:
-      ob47: 123
+      ob47: 135
       ob46: 217
       ob45: 145
       ob44: 122

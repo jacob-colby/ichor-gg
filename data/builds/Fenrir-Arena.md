@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Leather Cowl
-    upgrade: Hunter's Cowl
-    pick_rate: 0.3
-    win_rate: 0.568
-    matches: 101
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.29
+    win_rate: 0.5086
+    matches: 106
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.47
-    win_rate: 0.53
-    matches: 158
+    pick_rate: 0.48
+    win_rate: 0.54
+    matches: 176
     basis: community
     borrowed_from: Conquest
 - source: suggested

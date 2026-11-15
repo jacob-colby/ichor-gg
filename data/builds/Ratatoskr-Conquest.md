@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of the Thickbark
   aspect_pick_rate: 0.47
-  aspect_win_rate: 0.6
+  aspect_win_rate: 0.61
   slot_order:
   - name: Briskberry Acorn
     pick_rate: 0.45
@@ -20,11 +20,11 @@ builds:
       win_rate: 0.57
   - name: Thistlethorn Acorn
     pick_rate: 0.34
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Briskberry Acorn
       pick_rate: 0.38
-      win_rate: 0.6
+      win_rate: 0.61
     - name: Ashwhorl Acorn
       pick_rate: 0.11
       win_rate: 0.65
@@ -33,58 +33,58 @@ builds:
     win_rate: 0.59
     alternates:
     - name: Thistlethorn Acorn
-      pick_rate: 0.29
+      pick_rate: 0.3
       win_rate: 0.59
     - name: Briskberry Acorn
       pick_rate: 0.11
-      win_rate: 0.58
+      win_rate: 0.56
   - name: Heartseeker
     pick_rate: 0.14
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.13
-      win_rate: 0.61
+      win_rate: 0.6
     - name: Shield of the Phoenix
-      pick_rate: 0.1
+      pick_rate: 0.11
       win_rate: 0.59
   - name: The Crusher
     pick_rate: 0.08
     win_rate: 0.63
     alternates:
     - name: Heartseeker
-      pick_rate: 0.22
-      win_rate: 0.59
+      pick_rate: 0.23
+      win_rate: 0.6
     - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.66
   - name: Titan's Bane
-    pick_rate: 0.07
-    win_rate: 0.62
+    pick_rate: 0.06
+    win_rate: 0.63
     alternates:
     - name: Heartseeker
       pick_rate: 0.06
-      win_rate: 0.75
-    - name: Avatar's Parashu
+      win_rate: 0.74
+    - name: Freya's Tears
       pick_rate: 0.05
-      win_rate: 0.69
+      win_rate: 0.59
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.32
     win_rate: 0.66
   - name: Bumba's Hammer
-    pick_rate: 0.24
-    win_rate: 0.59
+    pick_rate: 0.23
+    win_rate: 0.6
   - name: Bluestone Pendant
     pick_rate: 0.17
-    win_rate: 0.5
+    win_rate: 0.51
   community_relics:
   - name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.21
-    win_rate: 0.59
+    win_rate: 0.6
   - name: Sundering Arc
     pick_rate: 0.16
     win_rate: 0.62
@@ -93,56 +93,56 @@ builds:
     pick_rate: 0.32
     win_rate: 0.66
   - name: Bumba's Hammer
-    pick_rate: 0.24
-    win_rate: 0.59
+    pick_rate: 0.23
+    win_rate: 0.6
   - name: Bluestone Pendant
     pick_rate: 0.17
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Bumba's Cudgel
     pick_rate: 0.09
-    win_rate: 0.51
+    win_rate: 0.5
   - name: Archmage's Gem
     pick_rate: 0.05
     win_rate: 0.7
   - name: Hunter's Cowl
     pick_rate: 0.03
-    win_rate: 0.7
+    win_rate: 0.69
   - name: Pendulum of the Ages
     pick_rate: 0.03
-    win_rate: 0.57
+    win_rate: 0.59
   - name: Conduit Gem
     pick_rate: 0.02
-    win_rate: 0.3
+    win_rate: 0.28
   - name: Leather Cowl
     pick_rate: 0.01
-    win_rate: 0.5
-  - name: Warrior's Axe
-    pick_rate: 0.007
-    win_rate: 0.38
+    win_rate: 0.47
+  - name: Blood-soaked Shroud
+    pick_rate: 0.006
+    win_rate: 0.63
   - name: Sundering Axe
     pick_rate: 0.006
-    win_rate: 0.57
+    win_rate: 0.63
   - name: Vampiric Shroud
     pick_rate: 0.006
-    win_rate: 0.29
-  - name: Blood-soaked Shroud
-    pick_rate: 0.005
-    win_rate: 0.67
+    win_rate: 0.25
+  - name: Warrior's Axe
+    pick_rate: 0.006
+    win_rate: 0.38
   - name: Sands Of Time
     pick_rate: 0.005
     win_rate: 0.67
   - name: Bumba's Golden Dagger
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 0.33
-  - name: Heroism
-    pick_rate: 0.003
-    win_rate: 0.67
   - name: Bumba's Spear
     pick_rate: 0.002
     win_rate: 0.5
   - name: Death's Toll
     pick_rate: 0.002
     win_rate: 0.5
+  - name: Heroism
+    pick_rate: 0.002
+    win_rate: 0.67
   - name: Gilded Arrow
     pick_rate: 0.001
     win_rate: 0.0
@@ -158,57 +158,57 @@ builds:
     win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.21
-    win_rate: 0.59
+    win_rate: 0.6
   - name: Sundering Arc
     pick_rate: 0.16
     win_rate: 0.62
   - name: Phantom Shell
     pick_rate: 0.12
-    win_rate: 0.57
+    win_rate: 0.59
   - name: Blink Rune
     pick_rate: 0.04
-    win_rate: 0.46
+    win_rate: 0.49
   - name: Agility Relic
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-11-14'
-  god_win_rate: 0.5860899067005937
-  god_matches_won: 691
-  god_matches_played: 1179
+  last_verified: '2026-11-15'
+  god_win_rate: 0.5873261205564142
+  god_matches_won: 760
+  god_matches_played: 1294
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-14'
-  god_matches_analyzed: 11799
+  god_window_end: '2026-11-15'
+  god_matches_analyzed: 12984
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.49
-    win_rate: 0.6045
-    matches: 578
+    win_rate: 0.608
+    matches: 634
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.58
-    matches: 554
+    matches: 608
     basis: community
 - source: suggested
   archetype: core
   slot_order:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
   - Titan's Bane
-  - Avatar's Parashu
   flex_slots:
-  - Briskberry Acorn
   - Titan's Bane
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -219,11 +219,18 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
-    this god: The Reaper, Hydra''s Lament, Tyrfing, Pendulum Blade, Tekko-Kagi, Arondight,
-    Transcendence, Runeforged Hammer, Dominance, Shield Splitter, Eye of the Storm,
-    Avenging Blade, Golden Blade, Lernaean Bow, Bloodforge, Rage, Barbed Carver, Silverbranch
-    Bow, Toxic Blade, Oath-Sworn Spear, Devourer''s Gauntlet, Deathbringer.'
+    this god: The Reaper, Hydra''s Lament, Avatar''s Parashu, Tyrfing, Pendulum Blade,
+    Tekko-Kagi, Arondight, Transcendence, Runeforged Hammer, Dominance, Shield Splitter,
+    Eye of the Storm, Avenging Blade, Golden Blade, Lernaean Bow, Bloodforge, Rage,
+    Barbed Carver, Silverbranch Bow, Toxic Blade, Oath-Sworn Spear, Devourer''s Gauntlet,
+    Deathbringer.'
   slot_scores:
+    Ashwhorl Acorn:
+      total: 0.61
+      efficiency: 0.68
+      win: 0.6
+      pick: 0.37
+      fit: 0.52
     Briskberry Acorn:
       total: 0.61
       efficiency: 0.73
@@ -231,9 +238,9 @@ builds:
       pick: 0.45
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.61
     Jotunn's Revenge:
@@ -251,34 +258,28 @@ builds:
     Titan's Bane:
       total: 0.61
       efficiency: 0.48
-      win: 0.62
-      pick: 0.22
+      win: 0.63
+      pick: 0.18
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.62
-      efficiency: 0.46
-      win: 0.69
-      pick: 0.15
-      fit: 0.91
   community_ordered:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
   - Titan's Bane
-  - Avatar's Parashu
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.49
-    win_rate: 0.6045
-    matches: 578
+    win_rate: 0.608
+    matches: 634
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.58
-    matches: 554
+    matches: 608
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -306,10 +307,10 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Hydra''s
-    Lament, The Reaper, Arondight, Tyrfing, Transcendence, Pendulum Blade, Dominance,
-    Tekko-Kagi, Runeforged Hammer, Genji''s Guard, Shield Splitter, Eye of the Storm,
-    Avenging Blade, Damaru, Breastplate of Valor, Chandra''s Grace, Lernaean Bow,
-    Golden Blade, Bloodforge, Rage, Barbed Carver, Yogi''s Necklace.'
+    Lament, The Reaper, Arondight, Tyrfing, Transcendence, Avatar''s Parashu, Pendulum
+    Blade, Dominance, Tekko-Kagi, Runeforged Hammer, Genji''s Guard, Shield Splitter,
+    Eye of the Storm, Avenging Blade, Damaru, Breastplate of Valor, Chandra''s Grace,
+    Lernaean Bow, Golden Blade, Bloodforge, Rage, Barbed Carver, Yogi''s Necklace.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.57
@@ -324,9 +325,9 @@ builds:
       pick: 0.45
       fit: 0.29
     Thistlethorn Acorn:
-      total: 0.6
+      total: 0.59
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.43
     Jotunn's Revenge:
@@ -362,14 +363,14 @@ builds:
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
-  - Avatar's Parashu
+  - Titan's Bane
   flex_slots:
-  - Avatar's Parashu
   - Ashwhorl Acorn
+  - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Genji's Guard — magical protection
     swap_item: Genji's Guard
@@ -380,10 +381,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
-    god: Hydra''s Lament, The Reaper, Pendulum Blade, Arondight, Tyrfing, Tekko-Kagi,
-    Damaru, Genji''s Guard, Transcendence, Runeforged Hammer, Dominance, Silverbranch
-    Bow, Shield Splitter, Eye of the Storm, Avenging Blade, Breastplate of Valor,
-    Toxic Blade, Chandra''s Grace, Lernaean Bow, Golden Blade, Bloodforge, Riptalon.'
+    god: Hydra''s Lament, The Reaper, Pendulum Blade, Arondight, Avatar''s Parashu,
+    Tyrfing, Tekko-Kagi, Damaru, Genji''s Guard, Transcendence, Runeforged Hammer,
+    Dominance, Silverbranch Bow, Shield Splitter, Eye of the Storm, Avenging Blade,
+    Breastplate of Valor, Toxic Blade, Chandra''s Grace, Lernaean Bow, Golden Blade,
+    Bloodforge, Riptalon.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.56
@@ -400,7 +402,7 @@ builds:
     Thistlethorn Acorn:
       total: 0.6
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.44
     Jotunn's Revenge:
@@ -415,19 +417,19 @@ builds:
       win: 0.63
       pick: 0.17
       fit: 0.66
-    Avatar's Parashu:
+    Titan's Bane:
       total: 0.56
-      efficiency: 0.46
-      win: 0.69
-      pick: 0.15
-      fit: 0.56
+      efficiency: 0.48
+      win: 0.63
+      pick: 0.18
+      fit: 0.66
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
-  - Avatar's Parashu
+  - Titan's Bane
   starter: *id001
   relic: *id002
 - source: suggested
@@ -437,18 +439,18 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Freya's Tears
+  - Kinetic Cuirass
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Freya's Tears
+  - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
+    swap: Stampede — CC-immunity / cleanse
+    swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Kinetic Cuirass — magical protection
-    swap_item: Kinetic Cuirass
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -475,9 +477,9 @@ builds:
       pick: 0.45
       fit: 0.44
     Thistlethorn Acorn:
-      total: 0.65
+      total: 0.64
       efficiency: 0.81
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.48
     Jotunn's Revenge:
@@ -486,14 +488,14 @@ builds:
       win: 0.59
       pick: 0.42
       fit: 0.44
-    Freya's Tears:
+    Kinetic Cuirass:
       total: 0.58
       efficiency: 0.61
-      win: 0.67
-      pick: 0.17
-      fit: 0.38
+      win: 0.59
+      pick: 0.0
+      fit: 0.66
     Amanita Charm:
-      total: 0.64
+      total: 0.63
       efficiency: 0.68
       win: 0.59
       pick: 0.0
@@ -503,25 +505,24 @@ builds:
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Freya's Tears
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
   - Titan's Bane
-  - Avatar's Parashu
   flex_slots:
-  - Thistlethorn Acorn
   - Briskberry Acorn
+  - Ashwhorl Acorn
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
@@ -532,11 +533,18 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Full-penetration anti-tank skew (efficiency + fit + win/pick). Underrated
-    for this god: The Reaper, Tekko-Kagi, Pendulum Blade, Hydra''s Lament, Avenging
-    Blade, Tyrfing, Silverbranch Bow, Arondight, Toxic Blade, Oath-Sworn Spear, Transcendence,
-    Runeforged Hammer, Riptalon, Dominance, Shield Splitter, Eye of the Storm, Lernaean
-    Bow, Golden Blade, Bloodforge, Rage, Barbed Carver, Screeching Gargoyle.'
+    for this god: The Reaper, Avatar''s Parashu, Tekko-Kagi, Pendulum Blade, Hydra''s
+    Lament, Avenging Blade, Tyrfing, Silverbranch Bow, Arondight, Toxic Blade, Oath-Sworn
+    Spear, Transcendence, Runeforged Hammer, Riptalon, Dominance, Shield Splitter,
+    Eye of the Storm, Lernaean Bow, Golden Blade, Bloodforge, Rage, Barbed Carver,
+    Screeching Gargoyle.'
   slot_scores:
+    Ashwhorl Acorn:
+      total: 0.58
+      efficiency: 0.68
+      win: 0.6
+      pick: 0.37
+      fit: 0.33
     Briskberry Acorn:
       total: 0.58
       efficiency: 0.73
@@ -546,7 +554,7 @@ builds:
     Thistlethorn Acorn:
       total: 0.59
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.38
     Jotunn's Revenge:
@@ -564,22 +572,16 @@ builds:
     Titan's Bane:
       total: 0.61
       efficiency: 0.48
-      win: 0.62
-      pick: 0.22
+      win: 0.63
+      pick: 0.18
       fit: 1.0
-    Avatar's Parashu:
-      total: 0.62
-      efficiency: 0.46
-      win: 0.69
-      pick: 0.15
-      fit: 0.94
   community_ordered:
+  - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - The Crusher
   - Titan's Bane
-  - Avatar's Parashu
   starter: *id001
   relic: *id002
 - source: suggested
@@ -610,8 +612,9 @@ builds:
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Tyrfing, Riptalon, Silverbranch Bow, Tekko-Kagi, The Reaper, Golden
     Blade, Toxic Blade, Lernaean Bow, Dominance, Qin''s Blade, Hydra''s Lament, Dagger
-    of Frenzy, Arondight, Berserker''s Shield, Sun Beam Bow, Bloodforge, Barbed Carver,
-    Transcendence, Runeforged Hammer, Odysseus'' Bow, Pendulum Blade, Shield Splitter.'
+    of Frenzy, Arondight, Avatar''s Parashu, Berserker''s Shield, Sun Beam Bow, Bloodforge,
+    Barbed Carver, Transcendence, Runeforged Hammer, Odysseus'' Bow, Pendulum Blade,
+    Shield Splitter.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.62
@@ -628,7 +631,7 @@ builds:
     Thistlethorn Acorn:
       total: 0.59
       efficiency: 0.74
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.31
     Jotunn's Revenge:
@@ -684,9 +687,9 @@ builds:
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Hydra''s Lament, Arondight, Pendulum
     Blade, Damaru, Genji''s Guard, Breastplate of Valor, The Reaper, Chandra''s Grace,
-    Tyrfing, Screeching Gargoyle, Eye of Erebus, Tekko-Kagi, Transcendence, Runeforged
-    Hammer, Dominance, Gladiator''s Shield, Shield Splitter, Eye of the Storm, Avenging
-    Blade, Silverbranch Bow.'
+    Tyrfing, Avatar''s Parashu, Screeching Gargoyle, Eye of Erebus, Tekko-Kagi, Transcendence,
+    Runeforged Hammer, Dominance, Gladiator''s Shield, Shield Splitter, Eye of the
+    Storm, Avenging Blade, Silverbranch Bow.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.55
@@ -703,7 +706,7 @@ builds:
     Thistlethorn Acorn:
       total: 0.63
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.65
     Jotunn's Revenge:
@@ -757,11 +760,11 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'The model''s own answer — no meta signal (efficiency + fit + win/pick).
-    Underrated for this god: The Reaper, Hydra''s Lament, Tyrfing, Pendulum Blade,
-    Tekko-Kagi, Arondight, Transcendence, Runeforged Hammer, Dominance, Shield Splitter,
-    Eye of the Storm, Avenging Blade, Golden Blade, Lernaean Bow, Bloodforge, Rage,
-    Barbed Carver, Silverbranch Bow, Toxic Blade, Oath-Sworn Spear, Devourer''s Gauntlet,
-    Deathbringer.'
+    Underrated for this god: The Reaper, Hydra''s Lament, Avatar''s Parashu, Tyrfing,
+    Pendulum Blade, Tekko-Kagi, Arondight, Transcendence, Runeforged Hammer, Dominance,
+    Shield Splitter, Eye of the Storm, Avenging Blade, Golden Blade, Lernaean Bow,
+    Bloodforge, Rage, Barbed Carver, Silverbranch Bow, Toxic Blade, Oath-Sworn Spear,
+    Devourer''s Gauntlet, Deathbringer.'
   slot_scores:
     Ashwhorl Acorn:
       total: 0.61
@@ -776,9 +779,9 @@ builds:
       pick: 0.45
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.7
-      win: 0.59
+      win: 0.58
       pick: 0.46
       fit: 0.61
     Jotunn's Revenge:
@@ -796,8 +799,8 @@ builds:
     Titan's Bane:
       total: 0.61
       efficiency: 0.48
-      win: 0.62
-      pick: 0.22
+      win: 0.63
+      pick: 0.18
       fit: 1.0
   community_ordered:
   - Ashwhorl Acorn
@@ -828,32 +831,35 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-14'
-    matches: 475
-    wins: 298
+    window_end: '2026-11-15'
+    matches: 519
+    wins: 325
     win_share: 0.63
     aggregate:
-      aspect_matches: 550
-      aspect_win_rate: 0.604
-      no_aspect_matches: 629
+      aspect_matches: 611
+      aspect_win_rate: 0.606
+      no_aspect_matches: 683
       no_aspect_win_rate: 0.571
     roles:
     - role: Solo
-      matches: 328
+      matches: 360
       share: 0.69
     - role: Support
-      matches: 97
+      matches: 104
       share: 0.2
     - role: Jungle
-      matches: 50
-      share: 0.11
+      matches: 54
+      share: 0.1
+    - role: Mid
+      matches: 1
+      share: 0.0
     base_role: Jungle
-    base_role_share: 0.11
+    base_role_share: 0.1
     role_shift:
       role: Solo
       share: 0.69
       says: 'most Aspect of the Thickbark players do not play Jungle: Solo 69%, Jungle
-        11%'
+        10%'
     items:
     - name: Ashwhorl Acorn
       share: 1.0
@@ -862,9 +868,9 @@ community_aspects:
     - name: Thistlethorn Acorn
       share: 0.86
     - name: Shield of the Phoenix
-      share: 0.52
+      share: 0.53
     - name: Genji's Guard
-      share: 0.52
+      share: 0.51
     - name: Freya's Tears
       share: 0.3
     - name: Breastplate of Valor
@@ -873,18 +879,18 @@ community_aspects:
       share: 0.13
     starters:
     - name: Bluestone Brooch
-      share: 0.63
+      share: 0.64
     - name: Bluestone Pendant
       share: 0.27
     - name: Bumba's Hammer
       share: 0.02
     - name: Warrior's Axe
       share: 0.01
+    - name: Sundering Axe
+      share: 0.01
     - name: Vampiric Shroud
       share: 0.01
     - name: Blood-soaked Shroud
-      share: 0.01
-    - name: Sundering Axe
       share: 0.01
     - name: Heroism
       share: 0.01
@@ -908,13 +914,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Sundering Arc
-      share: 0.31
+      share: 0.32
     - name: Purification Beads
-      share: 0.27
+      share: 0.25
     - name: Phantom Shell
-      share: 0.24
+      share: 0.25
     matches_by_window:
-      ob47: 475
+      ob47: 519
       ob46: 372
       ob45: 221
       ob44: 169
