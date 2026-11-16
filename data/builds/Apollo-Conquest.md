@@ -5,29 +5,29 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Harmony
-  aspect_pick_rate: 0.04
+  aspect_pick_rate: 0.03
   aspect_win_rate: 0.38
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.67
-    win_rate: 0.52
+    pick_rate: 0.68
+    win_rate: 0.53
     alternates:
     - name: Tyrfing
       pick_rate: 0.2
       win_rate: 0.55
     - name: Avenging Blade
-      pick_rate: 0.04
+      pick_rate: 0.03
       win_rate: 0.44
   - name: Dagger of Frenzy
-    pick_rate: 0.46
-    win_rate: 0.5
+    pick_rate: 0.47
+    win_rate: 0.51
     alternates:
     - name: Odysseus' Bow
-      pick_rate: 0.18
-      win_rate: 0.53
+      pick_rate: 0.17
+      win_rate: 0.52
     - name: Tyrfing
       pick_rate: 0.1
-      win_rate: 0.54
+      win_rate: 0.53
   - name: Dominance
     pick_rate: 0.25
     win_rate: 0.53
@@ -36,42 +36,42 @@ builds:
       pick_rate: 0.19
       win_rate: 0.54
     - name: Odysseus' Bow
-      pick_rate: 0.11
+      pick_rate: 0.1
       win_rate: 0.53
   - name: Silverbranch Bow
     pick_rate: 0.26
     win_rate: 0.58
     alternates:
     - name: The Executioner
-      pick_rate: 0.17
-      win_rate: 0.52
+      pick_rate: 0.16
+      win_rate: 0.53
     - name: Riptalon
-      pick_rate: 0.15
-      win_rate: 0.49
+      pick_rate: 0.14
+      win_rate: 0.5
   - name: Riptalon
     pick_rate: 0.19
-    win_rate: 0.61
+    win_rate: 0.63
     alternates:
     - name: Silverbranch Bow
       pick_rate: 0.16
-      win_rate: 0.52
+      win_rate: 0.55
     - name: The Executioner
       pick_rate: 0.11
-      win_rate: 0.52
+      win_rate: 0.51
   - name: Manchu Bow
     pick_rate: 0.1
     win_rate: 0.52
     alternates:
     - name: Riptalon
       pick_rate: 0.1
-      win_rate: 0.7
+      win_rate: 0.69
     - name: Hunter's Bow
       pick_rate: 0.09
       win_rate: 0.54
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.36
-    win_rate: 0.55
+    win_rate: 0.56
   - name: Hunter's Cowl
     pick_rate: 0.21
     win_rate: 0.59
@@ -81,17 +81,17 @@ builds:
   community_relics:
   - name: Purification Beads
     pick_rate: 0.59
-    win_rate: 0.51
+    win_rate: 0.52
   - name: Aegis of Acceleration
     pick_rate: 0.33
     win_rate: 0.55
   - name: Agility Relic
-    pick_rate: 0.05
+    pick_rate: 0.06
     win_rate: 0.48
   starter_sightings:
   - name: Sharpshooter's Arrow
     pick_rate: 0.36
-    win_rate: 0.55
+    win_rate: 0.56
   - name: Hunter's Cowl
     pick_rate: 0.21
     win_rate: 0.59
@@ -100,28 +100,34 @@ builds:
     win_rate: 0.56
   - name: Gilded Arrow
     pick_rate: 0.12
-    win_rate: 0.39
+    win_rate: 0.4
   - name: Leather Cowl
     pick_rate: 0.11
-    win_rate: 0.45
+    win_rate: 0.46
   - name: Death's Toll
     pick_rate: 0.05
     win_rate: 0.49
-  - name: War Flag
-    pick_rate: 0.008
-    win_rate: 0.29
   - name: War Banner
     pick_rate: 0.007
-    win_rate: 0.67
+    win_rate: 0.57
+  - name: War Flag
+    pick_rate: 0.007
+    win_rate: 0.29
   - name: Bumba's Hammer
+    pick_rate: 0.003
+    win_rate: 0.33
+  - name: Bumba's Spear
     pick_rate: 0.003
     win_rate: 0.33
   - name: Bluestone Pendant
     pick_rate: 0.002
     win_rate: 0.0
-  - name: Bumba's Spear
+  - name: Bumba's Golden Dagger
     pick_rate: 0.002
-    win_rate: 0.0
+    win_rate: 0.5
+  - name: Heroism
+    pick_rate: 0.002
+    win_rate: 0.5
   - name: Selflessness
     pick_rate: 0.002
     win_rate: 0.5
@@ -134,55 +140,49 @@ builds:
   - name: Bumba's Cudgel
     pick_rate: 0.001
     win_rate: 0.0
-  - name: Bumba's Golden Dagger
-    pick_rate: 0.001
-    win_rate: 1.0
-  - name: Heroism
-    pick_rate: 0.001
-    win_rate: 0.0
   - name: Sundering Axe
     pick_rate: 0.001
     win_rate: 1.0
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.59
-    win_rate: 0.51
+    win_rate: 0.52
   - name: Aegis of Acceleration
     pick_rate: 0.33
     win_rate: 0.55
   - name: Agility Relic
-    pick_rate: 0.05
+    pick_rate: 0.06
     win_rate: 0.48
   - name: Phantom Shell
     pick_rate: 0.01
-    win_rate: 0.46
+    win_rate: 0.43
   - name: Blink Rune
     pick_rate: 0.008
-    win_rate: 0.14
+    win_rate: 0.25
   - name: Sundering Arc
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.67
   source_url: https://smitebrain.com/gods/apollo/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5175438596491229
-  god_matches_won: 472
-  god_matches_played: 912
+  last_verified: '2026-11-16'
+  god_win_rate: 0.5256147540983607
+  god_matches_won: 513
+  god_matches_played: 976
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.48
-    win_rate: 0.51
-    matches: 438
+    win_rate: 0.52
+    matches: 468
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.59
-    win_rate: 0.51
-    matches: 538
+    win_rate: 0.52
+    matches: 576
     basis: community
 - source: suggested
   archetype: core
@@ -249,7 +249,7 @@ builds:
     Riptalon:
       total: 0.54
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.56
   community_ordered:
@@ -261,14 +261,14 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.48
-    win_rate: 0.51
-    matches: 438
+    win_rate: 0.52
+    matches: 468
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.59
-    win_rate: 0.51
-    matches: 538
+    win_rate: 0.52
+    matches: 576
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -333,9 +333,9 @@ builds:
       pick: 0.43
       fit: 0.33
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.39
   community_ordered:
@@ -396,9 +396,9 @@ builds:
       pick: 0.43
       fit: 0.43
     Riptalon:
-      total: 0.53
+      total: 0.54
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.54
     Demon Blade:
@@ -477,9 +477,9 @@ builds:
       pick: 0.2
       fit: 0.48
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.65
     Amanita Charm:
@@ -550,9 +550,9 @@ builds:
       pick: 0.43
       fit: 0.61
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.69
     The Crusher:
@@ -630,9 +630,9 @@ builds:
       pick: 0.43
       fit: 0.5
     Riptalon:
-      total: 0.54
+      total: 0.55
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.59
   community_ordered:
@@ -705,9 +705,9 @@ builds:
       pick: 0.43
       fit: 0.31
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.38
   community_ordered:
@@ -855,7 +855,7 @@ builds:
     Riptalon:
       total: 0.54
       efficiency: 0.45
-      win: 0.61
+      win: 0.63
       pick: 0.41
       fit: 0.56
   community_ordered:
@@ -865,7 +865,7 @@ builds:
   swaps:
   - added: Riptalon
     removed: Tekko-Kagi
-    reason: community 61% win over 173 matches (vs 52% on this god), taking the model's
+    reason: community 63% win over 185 matches (vs 53% on this god), taking the model's
       weakest slot from Tekko-Kagi
   starter: *id001
   relic: *id002
@@ -885,105 +885,86 @@ community_aspects:
   - aspect: Aspect of Harmony
     status: shown
     windows:
-    - ob46
     - ob47
-    patches: OB46–OB47
-    window_rule: pooled back
-    window_start: '2026-10-20'
-    window_end: '2026-11-15'
-    matches: 54
-    wins: 29
-    win_share: 0.54
+    patches: OB47
+    window_rule: newest
+    window_start: '2026-11-03'
+    window_end: '2026-11-16'
+    matches: 30
+    wins: 11
+    win_share: 0.37
     aggregate:
-      aspect_matches: 62
-      aspect_win_rate: 0.5
-      no_aspect_matches: 1891
-      no_aspect_win_rate: 0.538
+      aspect_matches: 34
+      aspect_win_rate: 0.382
+      no_aspect_matches: 942
+      no_aspect_win_rate: 0.531
     roles:
     - role: Support
-      matches: 28
-      share: 0.52
+      matches: 16
+      share: 0.53
     - role: Solo
-      matches: 21
-      share: 0.39
+      matches: 10
+      share: 0.33
     - role: Carry
-      matches: 5
-      share: 0.09
+      matches: 4
+      share: 0.13
     base_role: Carry
-    base_role_share: 0.09
+    base_role_share: 0.13
     role_shift:
       role: Support
-      share: 0.52
-      says: 'most Aspect of Harmony players do not play Carry: Support 52%, Carry
-        9%'
+      share: 0.53
+      says: 'most Aspect of Harmony players do not play Carry: Support 53%, Carry
+        13%'
     items:
     - name: Berserker's Shield
-      share: 0.52
+      share: 0.47
     - name: Shogun's Ofuda
-      share: 0.43
-    - name: Gauntlet of Thebes
-      share: 0.3
+      share: 0.4
     - name: Golden Blade
-      share: 0.28
+      share: 0.3
+    - name: Gauntlet of Thebes
+      share: 0.27
+    - name: Contagion
+      share: 0.2
     - name: Leviathan's Hide
-      share: 0.22
-    - name: The Executioner
-      share: 0.22
-    - name: Tyrfing
+      share: 0.2
+    - name: Freya's Tears
       share: 0.17
     - name: Yogi's Necklace
       share: 0.17
     starters:
+    - name: War Banner
+      share: 0.23
     - name: Death's Embrace
-      share: 0.22
+      share: 0.2
     - name: War Flag
       share: 0.17
-      changed:
-        patch: OB47
-        exact: true
-        older_matches: 4
-        matches: 9
-        says: changed in OB47; 4 of the 9 matches that bought it are older
-    - name: War Banner
-      share: 0.13
-    - name: Selflessness
-      share: 0.11
-      changed:
-        patch: OB47
-        exact: true
-        older_matches: 4
-        matches: 6
-        says: changed in OB47; 4 of the 6 matches that bought it are older
-    - name: Death's Toll
+    - name: Bluestone Pendant
+      share: 0.07
+    - name: Bumba's Hammer
       share: 0.07
     - name: Heroism
       share: 0.07
-    - name: Bumba's Hammer
-      share: 0.06
-    - name: Bluestone Brooch
-      share: 0.04
-    - name: Bluestone Pendant
-      share: 0.04
-    - name: Sundering Axe
-      share: 0.04
+    - name: Selflessness
+      share: 0.07
     - name: Blood-soaked Shroud
-      share: 0.02
-    - name: Hunter's Cowl
-      share: 0.02
-    - name: Sharpshooter's Arrow
-      share: 0.02
+      share: 0.03
+    - name: Bluestone Brooch
+      share: 0.03
+    - name: Death's Toll
+      share: 0.03
+    - name: Sundering Axe
+      share: 0.03
     relics:
     - name: Phantom Shell
-      share: 0.3
+      share: 0.37
     - name: Blink Rune
-      share: 0.19
-    - name: Purification Beads
-      share: 0.19
+      share: 0.2
+    - name: Aegis of Acceleration
+      share: 0.1
     matches_by_window:
-      ob47: 28
+      ob47: 30
       ob46: 26
       ob45: 14
       ob44: 32
-    unmapped_slugs:
-    - brawlers-ruin
 ---

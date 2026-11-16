@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.38
-    win_rate: 0.6021
-    matches: 165
+    win_rate: 0.6053
+    matches: 176
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.31
     win_rate: 0.56
-    matches: 135
+    matches: 143
     basis: community
     borrowed_from: Conquest
 - source: suggested

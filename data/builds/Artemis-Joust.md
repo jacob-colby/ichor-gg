@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.51
-    win_rate: 0.54
-    matches: 311
+    win_rate: 0.5573
+    matches: 330
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.56
     win_rate: 0.58
-    matches: 341
+    matches: 362
     basis: community
     borrowed_from: Conquest
 - source: suggested

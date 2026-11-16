@@ -71,15 +71,15 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.48
-    win_rate: 0.5088
-    matches: 416
+    win_rate: 0.4988
+    matches: 443
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.51
-    matches: 295
+    pick_rate: 0.36
+    win_rate: 0.5
+    matches: 332
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -479,7 +479,7 @@ builds:
   swaps:
   - added: Jotunn's Revenge
     removed: Mantle Of Discord
-    reason: Conquest community 57% win over 338 matches (vs 51% on this god), taking
+    reason: Conquest community 57% win over 360 matches (vs 51% on this god), taking
       the model's weakest slot from Mantle Of Discord
   borrowed_from: Conquest
   starter: *id001

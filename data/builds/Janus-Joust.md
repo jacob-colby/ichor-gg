@@ -71,15 +71,15 @@ builds:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.86
-    win_rate: 0.5447
-    matches: 1202
+    win_rate: 0.5429
+    matches: 1307
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.6
     win_rate: 0.53
-    matches: 839
+    matches: 912
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Dreamer's Idol
     removed: Spear of the Magus
-    reason: Conquest community 62% win over 182 matches (vs 54% on this god), taking
+    reason: Conquest community 64% win over 198 matches (vs 55% on this god), taking
       the model's weakest slot from Spear of the Magus
   borrowed_from: Conquest
   starter: *id001

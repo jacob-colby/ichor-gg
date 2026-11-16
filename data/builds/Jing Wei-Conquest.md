@@ -24,7 +24,7 @@ builds:
     alternates:
     - name: Manchu Bow
       pick_rate: 0.02
-      win_rate: 0.2
+      win_rate: 0.17
     - name: Tyrfing
       pick_rate: 0.02
       win_rate: 0.2
@@ -34,12 +34,12 @@ builds:
     alternates:
     - name: The Executioner
       pick_rate: 0.25
-      win_rate: 0.4
+      win_rate: 0.41
     - name: Musashi's Dual Swords
       pick_rate: 0.06
       win_rate: 0.47
   - name: Deathbringer
-    pick_rate: 0.28
+    pick_rate: 0.29
     win_rate: 0.48
     alternates:
     - name: Silverbranch Bow
@@ -47,44 +47,44 @@ builds:
       win_rate: 0.49
     - name: Riptalon
       pick_rate: 0.18
-      win_rate: 0.58
+      win_rate: 0.57
   - name: Riptalon
-    pick_rate: 0.28
+    pick_rate: 0.27
     win_rate: 0.49
     alternates:
     - name: Deathbringer
-      pick_rate: 0.26
+      pick_rate: 0.25
       win_rate: 0.61
     - name: Dominance
       pick_rate: 0.1
-      win_rate: 0.62
+      win_rate: 0.59
   - name: Blinking Abyss
     pick_rate: 0.1
-    win_rate: 0.75
+    win_rate: 0.76
     alternates:
     - name: Deathbringer
-      pick_rate: 0.15
+      pick_rate: 0.14
       win_rate: 0.48
     - name: Skeggox
       pick_rate: 0.09
-      win_rate: 0.44
+      win_rate: 0.45
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.68
     win_rate: 0.55
   - name: Gilded Arrow
     pick_rate: 0.26
-    win_rate: 0.26
+    win_rate: 0.28
   - name: Hunter's Cowl
     pick_rate: 0.03
     win_rate: 0.8
   community_relics:
   - name: Purification Beads
     pick_rate: 0.55
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Aegis of Acceleration
-    pick_rate: 0.43
-    win_rate: 0.4
+    pick_rate: 0.44
+    win_rate: 0.41
   - name: Agility Relic
     pick_rate: 0.01
     win_rate: 0.5
@@ -94,7 +94,7 @@ builds:
     win_rate: 0.55
   - name: Gilded Arrow
     pick_rate: 0.26
-    win_rate: 0.26
+    win_rate: 0.28
   - name: Hunter's Cowl
     pick_rate: 0.03
     win_rate: 0.8
@@ -102,7 +102,7 @@ builds:
     pick_rate: 0.02
     win_rate: 0.2
   - name: Death's Toll
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.0
   - name: Death's Embrace
     pick_rate: 0.003
@@ -113,10 +113,10 @@ builds:
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.55
-    win_rate: 0.53
+    win_rate: 0.52
   - name: Aegis of Acceleration
-    pick_rate: 0.43
-    win_rate: 0.4
+    pick_rate: 0.44
+    win_rate: 0.41
   - name: Agility Relic
     pick_rate: 0.01
     win_rate: 0.5
@@ -124,26 +124,26 @@ builds:
     pick_rate: 0.003
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.4717607973421927
-  god_matches_won: 142
-  god_matches_played: 301
+  last_verified: '2026-11-16'
+  god_win_rate: 0.4716981132075472
+  god_matches_won: 150
+  god_matches_played: 318
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.94
-    win_rate: 0.4698
-    matches: 283
+    win_rate: 0.4753
+    matches: 299
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.55
-    win_rate: 0.53
-    matches: 166
+    win_rate: 0.52
+    matches: 175
     basis: community
 - source: suggested
   archetype: core
@@ -205,7 +205,7 @@ builds:
       total: 0.48
       efficiency: 0.44
       win: 0.48
-      pick: 0.47
+      pick: 0.48
       fit: 0.54
     Demon Blade:
       total: 0.47
@@ -222,14 +222,14 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.94
-    win_rate: 0.4698
-    matches: 283
+    win_rate: 0.4753
+    matches: 299
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.55
-    win_rate: 0.53
-    matches: 166
+    win_rate: 0.52
+    matches: 175
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -364,7 +364,7 @@ builds:
       total: 0.48
       efficiency: 0.44
       win: 0.48
-      pick: 0.47
+      pick: 0.48
       fit: 0.57
     Demon Blade:
       total: 0.47
@@ -507,7 +507,7 @@ builds:
       total: 0.51
       efficiency: 0.45
       win: 0.49
-      pick: 0.61
+      pick: 0.58
       fit: 0.72
     The Crusher:
       total: 0.48
@@ -593,7 +593,7 @@ builds:
       total: 0.46
       efficiency: 0.36
       win: 0.49
-      pick: 0.61
+      pick: 0.58
       fit: 0.59
   community_ordered:
   - Dagger of Frenzy

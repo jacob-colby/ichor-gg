@@ -5,108 +5,108 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Transformation
-  aspect_pick_rate: 0.1
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.11
+  aspect_win_rate: 0.53
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.45
-    win_rate: 0.62
+    pick_rate: 0.44
+    win_rate: 0.61
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.24
       win_rate: 0.55
     - name: Ancient Signet
-      pick_rate: 0.04
-      win_rate: 0.36
+      pick_rate: 0.05
+      win_rate: 0.39
   - name: Sanguine Lash
-    pick_rate: 0.16
+    pick_rate: 0.15
     win_rate: 0.63
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.14
-      win_rate: 0.65
+      win_rate: 0.64
     - name: Pendulum Blade
       pick_rate: 0.08
       win_rate: 0.57
   - name: Freya's Tears
-    pick_rate: 0.24
-    win_rate: 0.59
+    pick_rate: 0.23
+    win_rate: 0.58
     alternates:
     - name: Genji's Guard
       pick_rate: 0.1
       win_rate: 0.52
     - name: Shifter's Shield
       pick_rate: 0.08
-      win_rate: 0.67
+      win_rate: 0.66
   - name: Sundering Echo
-    pick_rate: 0.1
-    win_rate: 0.51
+    pick_rate: 0.11
+    win_rate: 0.53
     alternates:
     - name: Freya's Tears
       pick_rate: 0.18
       win_rate: 0.6
     - name: Gladiator's Shield
       pick_rate: 0.06
-      win_rate: 0.68
+      win_rate: 0.65
   - name: Brawler’s Beat Stick
     pick_rate: 0.05
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
+    - name: Sundering Echo
+      pick_rate: 0.09
+      win_rate: 0.57
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.73
-    - name: Sundering Echo
-      pick_rate: 0.08
-      win_rate: 0.6
+      win_rate: 0.72
   - name: Sage's Ring
     pick_rate: 0.04
-    win_rate: 0.47
+    win_rate: 0.5
     alternates:
     - name: Sundering Echo
-      pick_rate: 0.04
-      win_rate: 0.78
+      pick_rate: 0.05
+      win_rate: 0.8
     - name: Freya's Tears
-      pick_rate: 0.04
-      win_rate: 0.83
+      pick_rate: 0.05
+      win_rate: 0.85
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.51
+    pick_rate: 0.5
     win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.24
-    win_rate: 0.5
+    win_rate: 0.48
   - name: Archmage's Gem
-    pick_rate: 0.07
-    win_rate: 0.38
+    pick_rate: 0.08
+    win_rate: 0.42
   community_relics:
   - name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.62
+    win_rate: 0.6
   - name: Aegis of Acceleration
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Phantom Shell
-    pick_rate: 0.22
-    win_rate: 0.56
+    pick_rate: 0.21
+    win_rate: 0.57
   starter_sightings:
   - name: Bluestone Brooch
-    pick_rate: 0.51
+    pick_rate: 0.5
     win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.24
-    win_rate: 0.5
+    win_rate: 0.48
   - name: Archmage's Gem
-    pick_rate: 0.07
-    win_rate: 0.38
+    pick_rate: 0.08
+    win_rate: 0.42
   - name: Hunter's Cowl
     pick_rate: 0.07
-    win_rate: 0.61
+    win_rate: 0.63
   - name: Conduit Gem
     pick_rate: 0.03
-    win_rate: 0.29
+    win_rate: 0.39
   - name: Leather Cowl
     pick_rate: 0.03
-    win_rate: 0.59
+    win_rate: 0.61
   - name: Sundering Axe
     pick_rate: 0.01
     win_rate: 0.71
@@ -116,64 +116,64 @@ builds:
   - name: Pendulum of the Ages
     pick_rate: 0.009
     win_rate: 0.67
+  - name: Sands Of Time
+    pick_rate: 0.006
+    win_rate: 0.5
   - name: Selflessness
     pick_rate: 0.006
     win_rate: 0.25
-  - name: Sands Of Time
-    pick_rate: 0.005
-    win_rate: 0.33
   - name: Blood-soaked Shroud
     pick_rate: 0.003
     win_rate: 0.0
-  - name: Bumba's Cudgel
-    pick_rate: 0.002
-    win_rate: 0.0
   - name: Bumba's Hammer
-    pick_rate: 0.002
+    pick_rate: 0.003
+    win_rate: 0.5
+  - name: Bumba's Cudgel
+    pick_rate: 0.001
     win_rate: 0.0
   - name: Vampiric Shroud
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   relic_sightings:
   - name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.62
+    win_rate: 0.6
   - name: Aegis of Acceleration
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Phantom Shell
-    pick_rate: 0.22
-    win_rate: 0.56
-  - name: Purification Beads
     pick_rate: 0.21
     win_rate: 0.57
+  - name: Purification Beads
+    pick_rate: 0.21
+    win_rate: 0.58
   - name: Blink Rune
-    pick_rate: 0.08
-    win_rate: 0.52
+    pick_rate: 0.09
+    win_rate: 0.53
   - name: Agility Relic
     pick_rate: 0.009
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/sun-wukong/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5620214395099541
-  god_matches_won: 367
-  god_matches_played: 653
+  last_verified: '2026-11-16'
+  god_win_rate: 0.5617021276595745
+  god_matches_won: 396
+  god_matches_played: 705
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.75
-    win_rate: 0.5952
-    matches: 490
+    pick_rate: 0.74
+    win_rate: 0.5881
+    matches: 522
     basis: community
   relic:
     name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.62
-    matches: 176
+    win_rate: 0.6
+    matches: 190
     basis: community
 - source: suggested
   archetype: core
@@ -181,22 +181,22 @@ builds:
   - Berserker's Shield
   - Jotunn's Revenge
   - Kinetic Cuirass
-  - Gladiator's Shield
+  - Shield Splitter
   - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Jotunn's Revenge
-  - Gladiator's Shield
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
   - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -228,17 +228,17 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.5
-    Gladiator's Shield:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.68
-      pick: 0.1
-      fit: 0.43
+    Shield Splitter:
+      total: 0.52
+      efficiency: 0.58
+      win: 0.55
+      pick: 0.0
+      fit: 0.45
     Freya's Tears:
-      total: 0.54
+      total: 0.53
       efficiency: 0.61
-      win: 0.59
-      pick: 0.37
+      win: 0.58
+      pick: 0.36
       fit: 0.26
     Amanita Charm:
       total: 0.55
@@ -247,43 +247,42 @@ builds:
       pick: 0.0
       fit: 0.4
   community_ordered:
-  - Gladiator's Shield
   - Freya's Tears
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.75
-    win_rate: 0.5952
-    matches: 490
+    pick_rate: 0.74
+    win_rate: 0.5881
+    matches: 522
     basis: community
   relic: &id002
     name: Sundering Arc
     pick_rate: 0.27
-    win_rate: 0.62
-    matches: 176
+    win_rate: 0.6
+    matches: 190
     basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
   - Berserker's Shield
   - Kinetic Cuirass
+  - Shield Splitter
   - Shield of the Phoenix
-  - Gladiator's Shield
   - Freya's Tears
   - Amanita Charm
   flex_slots:
   - Freya's Tears
-  - Gladiator's Shield
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Phoenix Feather — magical protection
+    swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Shifter's Shield — physical protection
-    swap_item: Shifter's Shield
+    swap: Gladiator's Shield — physical protection
+    swap_item: Gladiator's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -309,23 +308,23 @@ builds:
       win: 0.55
       pick: 0.0
       fit: 0.59
+    Shield Splitter:
+      total: 0.52
+      efficiency: 0.58
+      win: 0.55
+      pick: 0.0
+      fit: 0.5
     Shield of the Phoenix:
       total: 0.55
       efficiency: 0.57
       win: 0.55
       pick: 0.0
       fit: 0.67
-    Gladiator's Shield:
-      total: 0.53
-      efficiency: 0.43
-      win: 0.68
-      pick: 0.1
-      fit: 0.47
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.59
-      pick: 0.37
+      win: 0.58
+      pick: 0.36
       fit: 0.33
     Amanita Charm:
       total: 0.6
@@ -334,7 +333,6 @@ builds:
       pick: 0.0
       fit: 0.79
   community_ordered:
-  - Gladiator's Shield
   - Freya's Tears
   starter: *id001
   relic: *id002
@@ -358,8 +356,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Gladiator's Shield — physical protection
-    swap_item: Gladiator's Shield
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -394,8 +392,8 @@ builds:
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
-      win: 0.59
-      pick: 0.37
+      win: 0.58
+      pick: 0.36
       fit: 0.19
     Gluttonous Grimoire:
       total: 0.55
@@ -423,7 +421,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Golden Blade
+  - Freya's Tears
   - Kinetic Cuirass
   situational_swaps:
   - vs_tag: heavy_cc
@@ -475,8 +473,8 @@ builds:
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
-      win: 0.59
-      pick: 0.37
+      win: 0.58
+      pick: 0.36
       fit: 0.19
     Amanita Charm:
       total: 0.53
@@ -498,8 +496,8 @@ builds:
   - Freya's Tears
   - Soul Gem
   flex_slots:
-  - Jotunn's Revenge
   - Berserker's Shield
+  - Gladiator's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -514,8 +512,8 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
-    + fit + win/pick). Underrated for this god: Gladiator''s Shield, Rod of Tahuti,
-    Soul Gem, Jotunn''s Revenge, Berserker''s Shield, Breastplate of Valor, Amanita
+    + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Jotunn''s
+    Revenge, Berserker''s Shield, Gladiator''s Shield, Breastplate of Valor, Amanita
     Charm, Spear of Desolation, Shield of the Phoenix, Kinetic Cuirass, Hydra''s Lament,
     Gluttonous Grimoire, Screeching Gargoyle, Chronos'' Pendant, Arondight, Shield
     Splitter, Blood-Bound Book, Runeforged Hammer, Gem of Focus, Heartwood Charm,
@@ -543,16 +541,16 @@ builds:
       pick: 0.0
       fit: 0.45
     Gladiator's Shield:
-      total: 0.56
+      total: 0.54
       efficiency: 0.43
-      win: 0.68
+      win: 0.65
       pick: 0.1
       fit: 0.63
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.59
-      pick: 0.37
+      win: 0.58
+      pick: 0.36
       fit: 0.48
     Soul Gem:
       total: 0.55
@@ -642,88 +640,6 @@ builds:
   - Genji's Guard
   starter: *id001
   relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Genji's Guard
-  - Berserker's Shield
-  - Jotunn's Revenge
-  - Devourer's Gauntlet
-  - Kinetic Cuirass
-  - Rod of Tahuti
-  flex_slots:
-  - Genji's Guard
-  - Devourer's Gauntlet
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Stampede — CC-immunity / cleanse
-    swap_item: Stampede
-  - vs_tag: magic_heavy
-    swap: Amanita Charm — magical protection
-    swap_item: Amanita Charm
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
-    swap_item: Shield Splitter
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: 'The model''s core, corrected where the community is clearly right (efficiency
-    + fit + win/pick). Underrated for this god: Berserker''s Shield, Rod of Tahuti,
-    Amanita Charm, Kinetic Cuirass, Jotunn''s Revenge, Gluttonous Grimoire, Shield
-    Splitter, Golden Blade, Runeforged Hammer, Tyrfing, The Reaper, Soul Gem, Oni
-    Hunter''s Garb, Hydra''s Lament, Shield of the Phoenix, Draconic Scale, Breastplate
-    of Valor, Avenging Blade, Death Metal, Bragi''s Harp, Nimble Ring, Blood-Bound
-    Book, Erosion, Eye of Providence, Midgardian Mail, The Crusher, Spear of Desolation,
-    Leviathan''s Hide, Wyrmskin Hide, Lernaean Bow, Dominance, Heartseeker, Hide of
-    the Nemean Lion, Tekko-Kagi, Shogun''s Ofuda, Pharaoh''s Curse, Triton''s Conch,
-    Helm of Radiance.'
-  slot_scores:
-    Genji's Guard:
-      total: 0.51
-      efficiency: 0.71
-      win: 0.52
-      pick: 0.16
-      fit: 0.15
-    Berserker's Shield:
-      total: 0.56
-      efficiency: 0.72
-      win: 0.55
-      pick: 0.0
-      fit: 0.4
-    Jotunn's Revenge:
-      total: 0.53
-      efficiency: 0.65
-      win: 0.55
-      pick: 0.0
-      fit: 0.33
-    Devourer's Gauntlet:
-      total: 0.49
-      efficiency: 0.4
-      win: 0.62
-      pick: 0.45
-      fit: 0.35
-    Kinetic Cuirass:
-      total: 0.54
-      efficiency: 0.61
-      win: 0.55
-      pick: 0.0
-      fit: 0.5
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.82
-      win: 0.55
-      pick: 0.0
-      fit: 0.11
-  community_ordered:
-  - Genji's Guard
-  - Devourer's Gauntlet
-  swaps:
-  - added: Devourer's Gauntlet
-    removed: Shield Splitter
-    reason: community 62% win over 294 matches (vs 56% on this god), taking the model's
-      weakest slot from Shield Splitter
-  starter: *id001
-  relic: *id002
 community_aspects:
   source: SmiteBrain per-match feed, obsidian+ (data/Analysis/aspect_matches)
   complete_from: '2026-09-24'
@@ -744,69 +660,69 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-15'
-    matches: 59
-    wins: 28
-    win_share: 0.47
+    window_end: '2026-11-16'
+    matches: 67
+    wins: 32
+    win_share: 0.48
     aggregate:
-      aspect_matches: 68
-      aspect_win_rate: 0.515
-      no_aspect_matches: 585
-      no_aspect_win_rate: 0.568
+      aspect_matches: 78
+      aspect_win_rate: 0.526
+      no_aspect_matches: 627
+      no_aspect_win_rate: 0.566
     roles:
     - role: Solo
-      matches: 41
-      share: 0.69
+      matches: 47
+      share: 0.7
     - role: Mid
-      matches: 13
-      share: 0.22
+      matches: 14
+      share: 0.21
     - role: Support
-      matches: 5
-      share: 0.08
+      matches: 6
+      share: 0.09
     base_role: Solo
-    base_role_share: 0.69
+    base_role_share: 0.7
     role_shift: null
     items:
     - name: Ancient Signet
-      share: 0.59
+      share: 0.63
     - name: Rod of Tahuti
       share: 0.51
     - name: Spear of Desolation
-      share: 0.44
+      share: 0.46
     - name: Chronos' Pendant
-      share: 0.39
+      share: 0.42
     - name: Divine Ruin
-      share: 0.32
+      share: 0.36
     - name: Shifter's Shield
-      share: 0.29
+      share: 0.25
     - name: Freya's Tears
-      share: 0.27
+      share: 0.24
     - name: Obsidian Shard
-      share: 0.2
+      share: 0.21
     starters:
     - name: Archmage's Gem
-      share: 0.54
+      share: 0.55
     - name: Bluestone Brooch
-      share: 0.19
+      share: 0.16
     - name: Conduit Gem
-      share: 0.08
+      share: 0.12
     - name: Bluestone Pendant
-      share: 0.07
+      share: 0.06
     - name: Pendulum of the Ages
-      share: 0.07
+      share: 0.06
     - name: Sundering Axe
       share: 0.03
     - name: Blood-soaked Shroud
-      share: 0.02
+      share: 0.01
     relics:
-    - name: Aegis of Acceleration
-      share: 0.36
     - name: Purification Beads
-      share: 0.36
+      share: 0.4
+    - name: Aegis of Acceleration
+      share: 0.33
     - name: Sundering Arc
-      share: 0.19
+      share: 0.18
     matches_by_window:
-      ob47: 59
+      ob47: 67
       ob46: 50
       ob45: 73
       ob44: 84

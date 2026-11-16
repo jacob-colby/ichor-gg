@@ -9,15 +9,15 @@ builds:
   aspect_win_rate: 0.6
   slot_order:
   - name: Devourer's Gauntlet
-    pick_rate: 0.67
+    pick_rate: 0.66
     win_rate: 0.62
     alternates:
     - name: Gauntlet of Thebes
       pick_rate: 0.1
-      win_rate: 0.53
+      win_rate: 0.54
     - name: Stampede
       pick_rate: 0.05
-      win_rate: 0.47
+      win_rate: 0.48
   - name: Berserker's Shield
     pick_rate: 0.47
     win_rate: 0.6
@@ -29,52 +29,52 @@ builds:
       pick_rate: 0.06
       win_rate: 0.53
   - name: Kinetic Cuirass
-    pick_rate: 0.27
+    pick_rate: 0.26
     win_rate: 0.65
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.16
-      win_rate: 0.64
+      win_rate: 0.62
     - name: Shogun's Ofuda
-      pick_rate: 0.13
-      win_rate: 0.6
+      pick_rate: 0.14
+      win_rate: 0.59
   - name: Freya's Tears
     pick_rate: 0.13
-    win_rate: 0.58
+    win_rate: 0.56
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.21
       win_rate: 0.64
     - name: Shogun's Ofuda
       pick_rate: 0.09
-      win_rate: 0.65
+      win_rate: 0.66
   - name: Hussar's Wings
     pick_rate: 0.08
-    win_rate: 0.69
+    win_rate: 0.67
     alternates:
     - name: Freya's Tears
       pick_rate: 0.15
-      win_rate: 0.68
+      win_rate: 0.67
     - name: Kinetic Cuirass
       pick_rate: 0.07
       win_rate: 0.57
   - name: Medal of Defense
     pick_rate: 0.1
-    win_rate: 0.62
+    win_rate: 0.63
     alternates:
     - name: Hussar's Wings
       pick_rate: 0.07
       win_rate: 0.69
     - name: Hide of the Nemean Lion
       pick_rate: 0.06
-      win_rate: 0.43
+      win_rate: 0.42
   community_starters:
   - name: Hunter's Cowl
     pick_rate: 0.44
     win_rate: 0.63
   - name: Leather Cowl
     pick_rate: 0.26
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Bluestone Pendant
     pick_rate: 0.05
     win_rate: 0.56
@@ -83,60 +83,60 @@ builds:
     pick_rate: 0.48
     win_rate: 0.62
   - name: Phantom Shell
-    pick_rate: 0.15
-    win_rate: 0.54
+    pick_rate: 0.16
+    win_rate: 0.55
   - name: Purification Beads
-    pick_rate: 0.15
-    win_rate: 0.54
+    pick_rate: 0.14
+    win_rate: 0.53
   starter_sightings:
   - name: Hunter's Cowl
     pick_rate: 0.44
     win_rate: 0.63
   - name: Leather Cowl
     pick_rate: 0.26
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Bluestone Pendant
     pick_rate: 0.05
     win_rate: 0.56
   - name: Bluestone Brooch
     pick_rate: 0.03
-    win_rate: 0.56
+    win_rate: 0.54
   - name: Death's Embrace
     pick_rate: 0.03
-    win_rate: 0.57
+    win_rate: 0.54
   - name: Selflessness
     pick_rate: 0.03
-    win_rate: 0.35
+    win_rate: 0.38
   - name: War Banner
     pick_rate: 0.03
     win_rate: 0.74
   - name: War Flag
     pick_rate: 0.03
-    win_rate: 0.31
-  - name: Death's Toll
-    pick_rate: 0.02
-    win_rate: 0.55
+    win_rate: 0.3
   - name: Heroism
     pick_rate: 0.02
-    win_rate: 0.64
+    win_rate: 0.67
   - name: Sundering Axe
     pick_rate: 0.02
-    win_rate: 0.43
+    win_rate: 0.46
   - name: Warrior's Axe
     pick_rate: 0.02
-    win_rate: 0.5
+    win_rate: 0.52
+  - name: Death's Toll
+    pick_rate: 0.01
+    win_rate: 0.55
   - name: Bumba's Cudgel
     pick_rate: 0.006
     win_rate: 0.38
   - name: Bumba's Hammer
     pick_rate: 0.006
-    win_rate: 0.57
-  - name: Conduit Gem
-    pick_rate: 0.006
-    win_rate: 0.57
+    win_rate: 0.5
   - name: Sharpshooter's Arrow
     pick_rate: 0.006
-    win_rate: 0.14
+    win_rate: 0.25
+  - name: Conduit Gem
+    pick_rate: 0.005
+    win_rate: 0.57
   - name: Gilded Arrow
     pick_rate: 0.004
     win_rate: 0.8
@@ -144,51 +144,51 @@ builds:
     pick_rate: 0.002
     win_rate: 0.0
   - name: Bumba's Golden Dagger
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   - name: Bumba's Spear
-    pick_rate: 0.002
+    pick_rate: 0.001
     win_rate: 0.0
   relic_sightings:
   - name: Agility Relic
     pick_rate: 0.48
     win_rate: 0.62
   - name: Phantom Shell
-    pick_rate: 0.15
-    win_rate: 0.54
+    pick_rate: 0.16
+    win_rate: 0.55
   - name: Purification Beads
-    pick_rate: 0.15
-    win_rate: 0.54
+    pick_rate: 0.14
+    win_rate: 0.53
   - name: Sundering Arc
     pick_rate: 0.11
-    win_rate: 0.54
+    win_rate: 0.55
   - name: Aegis of Acceleration
     pick_rate: 0.06
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Blink Rune
     pick_rate: 0.05
     win_rate: 0.57
   source_url: https://smitebrain.com/gods/bacchus/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5826771653543307
-  god_matches_won: 740
-  god_matches_played: 1270
+  last_verified: '2026-11-16'
+  god_win_rate: 0.5820341499628805
+  god_matches_won: 784
+  god_matches_played: 1347
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.7
-    win_rate: 0.6189
-    matches: 889
+    win_rate: 0.6151
+    matches: 943
     basis: community
   relic:
     name: Agility Relic
     pick_rate: 0.48
     win_rate: 0.62
-    matches: 610
+    matches: 647
     basis: community
 - source: suggested
   archetype: core
@@ -228,7 +228,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
@@ -241,24 +241,24 @@ builds:
       total: 0.63
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.71
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.58
+      win: 0.56
       pick: 0.22
       fit: 0.55
     Draconic Scale:
       total: 0.55
       efficiency: 0.53
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.6
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.61
   community_ordered:
@@ -269,14 +269,14 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.7
-    win_rate: 0.6189
-    matches: 889
+    win_rate: 0.6151
+    matches: 943
     basis: community
   relic: &id002
     name: Agility Relic
     pick_rate: 0.48
     win_rate: 0.62
-    matches: 610
+    matches: 647
     basis: community
 - source: suggested
   archetype: bruiser
@@ -314,9 +314,9 @@ builds:
     Stone, Helm of Radiance, Sphere of Negation, Magi''s Cloak, Stampede.'
   slot_scores:
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.3
     Berserker's Shield:
@@ -329,24 +329,24 @@ builds:
       total: 0.63
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.69
     Shield of the Phoenix:
-      total: 0.6
+      total: 0.59
       efficiency: 0.57
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.83
     Freya's Tears:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
-      win: 0.58
+      win: 0.56
       pick: 0.22
       fit: 0.49
     Amanita Charm:
-      total: 0.65
+      total: 0.64
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.89
   community_ordered:
@@ -391,15 +391,15 @@ builds:
     Mantle Of Discord, Helm of Darkness, The World Stone.'
   slot_scores:
     Screeching Gargoyle:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.64
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.24
     Berserker's Shield:
@@ -412,18 +412,18 @@ builds:
       total: 0.61
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.54
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.44
   community_ordered:
@@ -434,25 +434,25 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
+  - Golden Blade
   - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
   - Tyrfing
-  - Shogun's Ofuda
   - Amanita Charm
   flex_slots:
   - Tyrfing
-  - Shogun's Ofuda
+  - Golden Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Hussar's Wings — CC-immunity / cleanse
     swap_item: Hussar's Wings
   - vs_tag: magic_heavy
-    swap: Freya's Tears — magical protection
-    swap_item: Freya's Tears
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -466,10 +466,16 @@ builds:
     Lernaean Bow, Dominance, Leviathan''s Hide, Silverbranch Bow, Magi''s Cloak, Mantle
     Of Discord, Helm of Darkness.'
   slot_scores:
+    Golden Blade:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.59
+      pick: 0.0
+      fit: 0.54
     Genji's Guard:
       total: 0.55
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.2
     Berserker's Shield:
@@ -482,30 +488,23 @@ builds:
       total: 0.6
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.47
     Tyrfing:
-      total: 0.54
+      total: 0.53
       efficiency: 0.53
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.53
-    Shogun's Ofuda:
-      total: 0.53
-      efficiency: 0.49
-      win: 0.64
-      pick: 0.2
-      fit: 0.43
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.37
   community_ordered:
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shogun's Ofuda
   starter: *id001
   relic: *id002
 - source: suggested
@@ -545,9 +544,9 @@ builds:
     Discord, The Reaper, Eye of Erebus.'
   slot_scores:
     Genji's Guard:
-      total: 0.59
+      total: 0.58
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.45
     Berserker's Shield:
@@ -557,27 +556,27 @@ builds:
       pick: 0.64
       fit: 0.27
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.52
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.58
+      win: 0.56
       pick: 0.22
       fit: 0.6
     Soul Gem:
-      total: 0.57
+      total: 0.56
       efficiency: 0.58
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.59
   community_ordered:
@@ -623,9 +622,9 @@ builds:
     Ring.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.21
     Berserker's Shield:
@@ -635,27 +634,27 @@ builds:
       pick: 0.64
       fit: 0.33
     Jotunn's Revenge:
-      total: 0.57
+      total: 0.56
       efficiency: 0.65
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.49
     Shield Splitter:
-      total: 0.55
+      total: 0.54
       efficiency: 0.58
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.49
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.39
   community_ordered:
@@ -700,9 +699,9 @@ builds:
     Hide, Magi''s Cloak.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.55
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.21
     Berserker's Shield:
@@ -712,27 +711,27 @@ builds:
       pick: 0.64
       fit: 0.25
     Jotunn's Revenge:
-      total: 0.56
+      total: 0.55
       efficiency: 0.65
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.38
     Kinetic Cuirass:
       total: 0.6
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.49
     Shield Splitter:
       total: 0.54
       efficiency: 0.58
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.44
     Amanita Charm:
-      total: 0.57
+      total: 0.56
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.39
   community_ordered:
@@ -778,7 +777,7 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.33
     Berserker's Shield:
@@ -791,24 +790,24 @@ builds:
       total: 0.63
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.71
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.58
+      win: 0.56
       pick: 0.22
       fit: 0.55
     Draconic Scale:
       total: 0.55
       efficiency: 0.53
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.61
     Amanita Charm:
       total: 0.6
       efficiency: 0.68
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.61
   community_ordered:
@@ -822,12 +821,12 @@ builds:
   slot_order:
   - Genji's Guard
   - Devourer's Gauntlet
+  - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
   - Rod of Tahuti
-  - Hussar's Wings
   flex_slots:
-  - Hussar's Wings
+  - Berserker's Shield
   - Devourer's Gauntlet
   situational_swaps:
   - vs_tag: heavy_cc
@@ -837,8 +836,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Draconic Scale — physical protection
+    swap_item: Draconic Scale
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -855,53 +854,49 @@ builds:
     Genji's Guard:
       total: 0.57
       efficiency: 0.71
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.33
     Devourer's Gauntlet:
-      total: 0.48
+      total: 0.47
       efficiency: 0.4
       win: 0.62
-      pick: 0.67
+      pick: 0.66
       fit: 0.16
+    Berserker's Shield:
+      total: 0.59
+      efficiency: 0.66
+      win: 0.6
+      pick: 0.64
+      fit: 0.39
     Kinetic Cuirass:
       total: 0.63
       efficiency: 0.61
       win: 0.65
-      pick: 0.42
+      pick: 0.4
       fit: 0.71
     Freya's Tears:
-      total: 0.57
+      total: 0.56
       efficiency: 0.61
-      win: 0.58
+      win: 0.56
       pick: 0.22
       fit: 0.55
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.82
-      win: 0.61
+      win: 0.59
       pick: 0.0
       fit: 0.11
-    Hussar's Wings:
-      total: 0.55
-      efficiency: 0.39
-      win: 0.69
-      pick: 0.17
-      fit: 0.61
   community_ordered:
   - Devourer's Gauntlet
+  - Berserker's Shield
   - Kinetic Cuirass
   - Freya's Tears
-  - Hussar's Wings
   swaps:
-  - added: Hussar's Wings
-    removed: Draconic Scale
-    reason: community 69% win over 102 matches (vs 58% on this god), taking the model's
-      weakest slot from Draconic Scale
   - added: Devourer's Gauntlet
-    removed: Berserker's Shield
-    reason: community 62% win over 851 matches (vs 58% on this god), taking the model's
-      weakest slot from Berserker's Shield
+    removed: Draconic Scale
+    reason: community 62% win over 889 matches (vs 58% on this god), taking the model's
+      weakest slot from Draconic Scale
   starter: *id001
   relic: *id002
 community_aspects:
@@ -924,25 +919,25 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-15'
-    matches: 816
-    wins: 501
+    window_end: '2026-11-16'
+    matches: 864
+    wins: 526
     win_share: 0.61
     aggregate:
-      aspect_matches: 1040
-      aspect_win_rate: 0.603
-      no_aspect_matches: 230
-      no_aspect_win_rate: 0.491
+      aspect_matches: 1104
+      aspect_win_rate: 0.599
+      no_aspect_matches: 243
+      no_aspect_win_rate: 0.506
     roles:
     - role: Solo
-      matches: 711
+      matches: 751
       share: 0.87
     - role: Support
-      matches: 71
+      matches: 79
       share: 0.09
     - role: Jungle
       matches: 29
-      share: 0.04
+      share: 0.03
     - role: Mid
       matches: 3
       share: 0.0
@@ -958,9 +953,9 @@ community_aspects:
         9%'
     items:
     - name: Berserker's Shield
-      share: 0.89
+      share: 0.88
     - name: Devourer's Gauntlet
-      share: 0.83
+      share: 0.81
     - name: Kinetic Cuirass
       share: 0.71
     - name: Shogun's Ofuda
@@ -968,7 +963,7 @@ community_aspects:
     - name: Freya's Tears
       share: 0.39
     - name: Hussar's Wings
-      share: 0.26
+      share: 0.25
     - name: Shifter's Shield
       share: 0.14
     - name: Contagion
@@ -984,21 +979,21 @@ community_aspects:
       share: 0.03
     - name: Death's Toll
       share: 0.02
+    - name: Bluestone Brooch
+      share: 0.02
+    - name: Bluestone Pendant
+      share: 0.01
     - name: War Flag
       share: 0.01
-    - name: Bluestone Brooch
-      share: 0.01
-    - name: Bluestone Pendant
+    - name: Sharpshooter's Arrow
       share: 0.01
     - name: Sundering Axe
       share: 0.01
-    - name: Sharpshooter's Arrow
+    - name: Bumba's Hammer
       share: 0.0
     - name: Heroism
       share: 0.0
     - name: Bumba's Cudgel
-      share: 0.0
-    - name: Bumba's Hammer
       share: 0.0
     - name: Bumba's Spear
       share: 0.0
@@ -1014,11 +1009,11 @@ community_aspects:
     - name: Agility Relic
       share: 0.59
     - name: Purification Beads
-      share: 0.18
+      share: 0.17
     - name: Sundering Arc
-      share: 0.08
+      share: 0.09
     matches_by_window:
-      ob47: 816
+      ob47: 864
       ob46: 659
       ob45: 521
       ob44: 221

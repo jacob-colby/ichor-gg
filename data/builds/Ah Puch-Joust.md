@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.63
-    win_rate: 0.531
-    matches: 161
+    pick_rate: 0.64
+    win_rate: 0.5275
+    matches: 175
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.45
-    win_rate: 0.47
-    matches: 115
+    pick_rate: 0.47
+    win_rate: 0.48
+    matches: 128
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,6 +674,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Chronos' Pendant
+  - Spear of Desolation
+  - Spear of the Magus
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Spear of the Magus
+  - Chronos' Pendant
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Helm of Radiance — physical protection
+    swap_item: Helm of Radiance
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Chronos' Pendant:
+      total: 0.6
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.63
+    Spear of Desolation:
+      total: 0.8
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Spear of the Magus:
+      total: 0.67
+      efficiency: 0.56
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Obsidian Shard:
+      total: 0.71
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.89
+    Rod of Tahuti:
+      total: 0.8
+      efficiency: 0.82
+      win: 0.5
+      pick: 0.0
+      fit: 0.79
+    Soul Gem:
+      total: 0.77
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Chronos' Pendant
+    removed: Doom Orb
+    reason: Conquest community 73% win over 30 matches (vs 55% on this god), taking
+      the model's weakest slot from Doom Orb
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

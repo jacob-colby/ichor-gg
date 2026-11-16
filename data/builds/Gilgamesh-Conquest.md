@@ -6,24 +6,24 @@ builds:
 - source: community
   aspect: Aspect of Shamash
   aspect_pick_rate: 0.63
-  aspect_win_rate: 0.59
+  aspect_win_rate: 0.58
   slot_order:
   - name: Devourer's Gauntlet
     pick_rate: 0.27
-    win_rate: 0.62
+    win_rate: 0.6
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.21
+      pick_rate: 0.22
       win_rate: 0.55
     - name: Transcendence
       pick_rate: 0.12
       win_rate: 0.57
   - name: Berserker's Shield
-    pick_rate: 0.19
-    win_rate: 0.52
+    pick_rate: 0.18
+    win_rate: 0.51
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.15
+      pick_rate: 0.14
       win_rate: 0.58
     - name: The Reaper
       pick_rate: 0.13
@@ -50,75 +50,75 @@ builds:
       win_rate: 0.63
   - name: Freya's Tears
     pick_rate: 0.12
-    win_rate: 0.67
+    win_rate: 0.66
     alternates:
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.48
     - name: Kinetic Cuirass
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.6
   - name: Brawler’s Beat Stick
-    pick_rate: 0.08
+    pick_rate: 0.07
     win_rate: 0.62
     alternates:
     - name: Blinking Abyss
       pick_rate: 0.06
-      win_rate: 0.61
+      win_rate: 0.58
     - name: The Crusher
       pick_rate: 0.06
       win_rate: 0.71
   community_starters:
   - name: Hunter's Cowl
-    pick_rate: 0.26
+    pick_rate: 0.27
     win_rate: 0.64
   - name: Bluestone Brooch
     pick_rate: 0.25
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Leather Cowl
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.52
   community_relics:
   - name: Purification Beads
     pick_rate: 0.31
     win_rate: 0.56
   - name: Blink Rune
-    pick_rate: 0.25
-    win_rate: 0.59
+    pick_rate: 0.26
+    win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.17
-    win_rate: 0.61
+    win_rate: 0.62
   starter_sightings:
   - name: Hunter's Cowl
-    pick_rate: 0.26
+    pick_rate: 0.27
     win_rate: 0.64
   - name: Bluestone Brooch
     pick_rate: 0.25
-    win_rate: 0.6
+    win_rate: 0.59
   - name: Leather Cowl
-    pick_rate: 0.12
+    pick_rate: 0.11
     win_rate: 0.52
   - name: Bluestone Pendant
-    pick_rate: 0.11
-    win_rate: 0.54
+    pick_rate: 0.1
+    win_rate: 0.52
   - name: Bumba's Hammer
     pick_rate: 0.07
-    win_rate: 0.71
-  - name: Death's Embrace
-    pick_rate: 0.04
-    win_rate: 0.69
+    win_rate: 0.74
   - name: Archmage's Gem
     pick_rate: 0.03
-    win_rate: 0.62
+    win_rate: 0.64
   - name: Bumba's Cudgel
     pick_rate: 0.03
-    win_rate: 0.64
+    win_rate: 0.67
+  - name: Death's Embrace
+    pick_rate: 0.03
+    win_rate: 0.69
   - name: Death's Toll
     pick_rate: 0.02
-    win_rate: 0.3
+    win_rate: 0.27
   - name: Sundering Axe
     pick_rate: 0.02
-    win_rate: 0.5
+    win_rate: 0.55
   - name: War Banner
     pick_rate: 0.02
     win_rate: 0.71
@@ -126,15 +126,15 @@ builds:
     pick_rate: 0.02
     win_rate: 0.25
   - name: War Flag
-    pick_rate: 0.007
+    pick_rate: 0.006
     win_rate: 0.67
   - name: Bumba's Spear
-    pick_rate: 0.005
+    pick_rate: 0.004
     win_rate: 0.5
-  - name: Bumba's Golden Dagger
-    pick_rate: 0.002
-    win_rate: 0.0
   - name: Conduit Gem
+    pick_rate: 0.004
+    win_rate: 0.0
+  - name: Bumba's Golden Dagger
     pick_rate: 0.002
     win_rate: 0.0
   relic_sightings:
@@ -142,41 +142,41 @@ builds:
     pick_rate: 0.31
     win_rate: 0.56
   - name: Blink Rune
-    pick_rate: 0.25
-    win_rate: 0.59
+    pick_rate: 0.26
+    win_rate: 0.58
   - name: Aegis of Acceleration
     pick_rate: 0.17
-    win_rate: 0.61
+    win_rate: 0.62
   - name: Agility Relic
     pick_rate: 0.12
     win_rate: 0.61
   - name: Sundering Arc
     pick_rate: 0.08
-    win_rate: 0.6
+    win_rate: 0.58
   - name: Phantom Shell
-    pick_rate: 0.07
-    win_rate: 0.69
+    pick_rate: 0.06
+    win_rate: 0.67
   source_url: https://smitebrain.com/gods/gilgamesh/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5921658986175116
-  god_matches_won: 257
-  god_matches_played: 434
+  last_verified: '2026-11-16'
+  god_win_rate: 0.5909090909090909
+  god_matches_won: 273
+  god_matches_played: 462
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.38
-    win_rate: 0.6021
-    matches: 165
+    win_rate: 0.6053
+    matches: 176
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.31
     win_rate: 0.56
-    matches: 135
+    matches: 143
     basis: community
 - source: suggested
   archetype: core
@@ -219,8 +219,8 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.72
-      win: 0.52
-      pick: 0.26
+      win: 0.51
+      pick: 0.25
       fit: 0.37
     Tyrfing:
       total: 0.54
@@ -229,9 +229,9 @@ builds:
       pick: 0.0
       fit: 0.51
     Freya's Tears:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
-      win: 0.67
+      win: 0.66
       pick: 0.26
       fit: 0.19
     The Reaper:
@@ -255,14 +255,14 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.38
-    win_rate: 0.6021
-    matches: 165
+    win_rate: 0.6053
+    matches: 176
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.31
     win_rate: 0.56
-    matches: 135
+    matches: 143
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -303,10 +303,10 @@ builds:
       pick: 0.0
       fit: 0.19
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
       win: 0.55
-      pick: 0.21
+      pick: 0.22
       fit: 0.39
     Transcendence:
       total: 0.47
@@ -315,9 +315,9 @@ builds:
       pick: 0.12
       fit: 0.21
     Freya's Tears:
-      total: 0.56
+      total: 0.55
       efficiency: 0.61
-      win: 0.67
+      win: 0.66
       pick: 0.26
       fit: 0.19
     The Reaper:
@@ -379,15 +379,15 @@ builds:
       pick: 0.0
       fit: 0.14
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.52
-      pick: 0.26
+      win: 0.51
+      pick: 0.25
       fit: 0.4
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.67
+      win: 0.66
       pick: 0.26
       fit: 0.25
     The Reaper:
@@ -418,7 +418,7 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Berserker's Shield
+  - Avenging Blade
   - Jotunn's Revenge
   - Freya's Tears
   - The Reaper
@@ -426,7 +426,7 @@ builds:
   - Heartseeker
   flex_slots:
   - Freya's Tears
-  - Berserker's Shield
+  - Avenging Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -435,8 +435,8 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Stone of Binding — physical protection
-    swap_item: Stone of Binding
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -447,22 +447,22 @@ builds:
     Breastplate of Valor, Hydra''s Lament, Oni Hunter''s Garb, Shield of the Phoenix,
     Lernaean Bow, Dominance, Avatar''s Parashu.'
   slot_scores:
-    Berserker's Shield:
-      total: 0.55
-      efficiency: 0.72
-      win: 0.52
-      pick: 0.26
-      fit: 0.31
+    Avenging Blade:
+      total: 0.54
+      efficiency: 0.47
+      win: 0.62
+      pick: 0.0
+      fit: 0.66
     Jotunn's Revenge:
       total: 0.55
       efficiency: 0.65
       win: 0.55
-      pick: 0.21
+      pick: 0.22
       fit: 0.45
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.67
+      win: 0.66
       pick: 0.26
       fit: 0.16
     The Reaper:
@@ -484,7 +484,6 @@ builds:
       pick: 0.35
       fit: 0.62
   community_ordered:
-  - Berserker's Shield
   - Jotunn's Revenge
   - Freya's Tears
   - The Reaper
@@ -531,10 +530,10 @@ builds:
       pick: 0.0
       fit: 0.56
     Berserker's Shield:
-      total: 0.56
+      total: 0.55
       efficiency: 0.72
-      win: 0.52
-      pick: 0.26
+      win: 0.51
+      pick: 0.25
       fit: 0.38
     Tyrfing:
       total: 0.55
@@ -586,8 +585,8 @@ builds:
     swap: Screeching Gargoyle — magical protection
     swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -615,12 +614,12 @@ builds:
       total: 0.55
       efficiency: 0.65
       win: 0.55
-      pick: 0.21
+      pick: 0.22
       fit: 0.42
     Freya's Tears:
       total: 0.58
       efficiency: 0.61
-      win: 0.67
+      win: 0.66
       pick: 0.26
       fit: 0.37
     The Crusher:
@@ -682,14 +681,14 @@ builds:
     Berserker's Shield:
       total: 0.55
       efficiency: 0.72
-      win: 0.52
-      pick: 0.26
+      win: 0.51
+      pick: 0.25
       fit: 0.37
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
       win: 0.55
-      pick: 0.21
+      pick: 0.22
       fit: 0.34
     Kinetic Cuirass:
       total: 0.51
@@ -735,21 +734,21 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-15'
-    matches: 213
-    wins: 126
+    window_end: '2026-11-16'
+    matches: 229
+    wins: 135
     win_share: 0.59
     aggregate:
-      aspect_matches: 274
-      aspect_win_rate: 0.588
-      no_aspect_matches: 160
-      no_aspect_win_rate: 0.6
+      aspect_matches: 291
+      aspect_win_rate: 0.584
+      no_aspect_matches: 171
+      no_aspect_win_rate: 0.602
     roles:
     - role: Jungle
-      matches: 154
-      share: 0.72
+      matches: 167
+      share: 0.73
     - role: Solo
-      matches: 51
+      matches: 54
       share: 0.24
     - role: Support
       matches: 5
@@ -761,13 +760,13 @@ community_aspects:
       matches: 1
       share: 0.0
     base_role: Solo Jungle
-    base_role_share: 0.96
+    base_role_share: 0.97
     role_shift: null
     items:
     - name: Barbed Carver
-      share: 0.58
+      share: 0.59
     - name: Jotunn's Revenge
-      share: 0.53
+      share: 0.55
     - name: Heartseeker
       share: 0.45
     - name: The Reaper
@@ -775,30 +774,32 @@ community_aspects:
     - name: The Crusher
       share: 0.37
     - name: Devourer's Gauntlet
-      share: 0.33
+      share: 0.32
     - name: Transcendence
-      share: 0.26
+      share: 0.27
     - name: Sanguine Lash
-      share: 0.24
+      share: 0.23
     starters:
     - name: Hunter's Cowl
-      share: 0.36
+      share: 0.37
     - name: Bluestone Brooch
       share: 0.3
     - name: Leather Cowl
-      share: 0.11
+      share: 0.1
     - name: Bumba's Hammer
       share: 0.07
-    - name: Archmage's Gem
-      share: 0.06
     - name: Bluestone Pendant
       share: 0.06
+    - name: Archmage's Gem
+      share: 0.05
     - name: Sundering Axe
       share: 0.02
     - name: Bumba's Cudgel
       share: 0.01
     - name: Warrior's Axe
       share: 0.01
+    - name: Conduit Gem
+      share: 0.0
     - name: Death's Embrace
       share: 0.0
     - name: Death's Toll
@@ -807,13 +808,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Purification Beads
-      share: 0.34
+      share: 0.35
     - name: Blink Rune
       share: 0.34
     - name: Aegis of Acceleration
-      share: 0.19
+      share: 0.18
     matches_by_window:
-      ob47: 213
+      ob47: 229
       ob46: 247
       ob45: 383
       ob44: 284

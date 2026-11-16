@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.42
-    win_rate: 0.5233
-    matches: 223
+    pick_rate: 0.41
+    win_rate: 0.5366
+    matches: 243
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
     pick_rate: 0.34
-    win_rate: 0.48
-    matches: 181
+    win_rate: 0.5
+    matches: 201
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Freya's Tears
-    reason: Conquest community 67% win over 53 matches (vs 54% on this god), taking
+    reason: Conquest community 69% win over 53 matches (vs 55% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001
