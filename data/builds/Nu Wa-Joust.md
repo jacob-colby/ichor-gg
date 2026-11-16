@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.69
-    win_rate: 0.6178
-    matches: 300
+    pick_rate: 0.7
+    win_rate: 0.6236
+    matches: 335
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.56
-    win_rate: 0.6
-    matches: 244
+    pick_rate: 0.57
+    win_rate: 0.63
+    matches: 273
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,78 +674,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Ancient Signet
-  - Spear of Desolation
-  - Spear of the Magus
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Soul Gem
-  flex_slots:
-  - Spear of the Magus
-  - Ancient Signet
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Dreamer's Idol — CC-immunity / cleanse
-    swap_item: Dreamer's Idol
-  - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Ancient Signet:
-      total: 0.55
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    Spear of Desolation:
-      total: 0.8
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Obsidian Shard:
-      total: 0.71
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.89
-    Rod of Tahuti:
-      total: 0.8
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Soul Gem:
-      total: 0.77
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  swaps:
-  - added: Ancient Signet
-    removed: Lotus Sickle
-    reason: Conquest community 69% win over 104 matches (vs 60% on this god), taking
-      the model's weakest slot from Lotus Sickle
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

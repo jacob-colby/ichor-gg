@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.7
-    win_rate: 0.6189
-    matches: 889
+    win_rate: 0.6151
+    matches: 943
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.48
     win_rate: 0.62
-    matches: 610
+    matches: 647
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -550,16 +550,16 @@ builds:
   - Kinetic Cuirass
   - Devourer's Gauntlet
   - Freya's Tears
+  - Draconic Scale
   - Shifter's Shield
-  - Hussar's Wings
   - Erosion
   flex_slots:
-  - Hussar's Wings
+  - Shifter's Shield
   - Devourer's Gauntlet
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
   - vs_tag: magic_heavy
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
@@ -590,15 +590,15 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.55
-    Shifter's Shield:
-      total: 0.56
-      efficiency: 0.5
+    Draconic Scale:
+      total: 0.57
+      efficiency: 0.53
       win: 0.5
       pick: 0.0
       fit: 0.61
-    Hussar's Wings:
-      total: 0.5
-      efficiency: 0.39
+    Shifter's Shield:
+      total: 0.56
+      efficiency: 0.5
       win: 0.5
       pick: 0.0
       fit: 0.61
@@ -609,14 +609,10 @@ builds:
       pick: 0.0
       fit: 0.64
   swaps:
-  - added: Hussar's Wings
-    removed: Brawler’s Beat Stick
-    reason: Conquest community 69% win over 102 matches (vs 58% on this god), taking
-      the model's weakest slot from Brawler’s Beat Stick
   - added: Devourer's Gauntlet
-    removed: Draconic Scale
-    reason: Conquest community 62% win over 851 matches (vs 58% on this god), taking
-      the model's weakest slot from Draconic Scale
+    removed: Brawler’s Beat Stick
+    reason: Conquest community 62% win over 889 matches (vs 58% on this god), taking
+      the model's weakest slot from Brawler’s Beat Stick
   borrowed_from: Conquest
   starter: *id001
   relic: *id002

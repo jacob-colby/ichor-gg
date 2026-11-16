@@ -14,10 +14,10 @@ builds:
     alternates:
     - name: Hydra's Lament
       pick_rate: 0.05
-      win_rate: 0.52
+      win_rate: 0.5
     - name: Jotunn's Revenge
       pick_rate: 0.03
-      win_rate: 0.58
+      win_rate: 0.54
   - name: Hydra's Lament
     pick_rate: 0.7
     win_rate: 0.53
@@ -27,7 +27,7 @@ builds:
       win_rate: 0.54
     - name: Transcendence
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.54
   - name: Jotunn's Revenge
     pick_rate: 0.61
     win_rate: 0.52
@@ -36,71 +36,71 @@ builds:
       pick_rate: 0.2
       win_rate: 0.55
     - name: Heartseeker
-      pick_rate: 0.05
-      win_rate: 0.41
+      pick_rate: 0.06
+      win_rate: 0.38
   - name: Heartseeker
     pick_rate: 0.68
     win_rate: 0.55
     alternates:
     - name: The Crusher
       pick_rate: 0.09
-      win_rate: 0.48
+      win_rate: 0.47
     - name: Titan's Bane
-      pick_rate: 0.08
-      win_rate: 0.51
+      pick_rate: 0.07
+      win_rate: 0.53
   - name: Titan's Bane
     pick_rate: 0.31
     win_rate: 0.56
     alternates:
     - name: Heartseeker
       pick_rate: 0.15
-      win_rate: 0.56
+      win_rate: 0.57
     - name: The Crusher
       pick_rate: 0.1
       win_rate: 0.58
   - name: Blinking Abyss
-    pick_rate: 0.15
-    win_rate: 0.65
+    pick_rate: 0.14
+    win_rate: 0.63
     alternates:
     - name: Titan's Bane
       pick_rate: 0.13
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Skeggox
       pick_rate: 0.11
       win_rate: 0.45
   community_starters:
   - name: Bumba's Hammer
     pick_rate: 0.63
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Bumba's Cudgel
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.44
   - name: Bluestone Brooch
     pick_rate: 0.07
-    win_rate: 0.4
+    win_rate: 0.42
   community_relics:
   - name: Purification Beads
     pick_rate: 0.69
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Aegis of Acceleration
     pick_rate: 0.3
-    win_rate: 0.57
+    win_rate: 0.55
   - name: Blink Rune
     pick_rate: 0.006
     win_rate: 0.5
   starter_sightings:
   - name: Bumba's Hammer
     pick_rate: 0.63
-    win_rate: 0.59
+    win_rate: 0.58
   - name: Bumba's Cudgel
-    pick_rate: 0.25
+    pick_rate: 0.24
     win_rate: 0.44
   - name: Bluestone Brooch
     pick_rate: 0.07
-    win_rate: 0.4
+    win_rate: 0.42
   - name: Bluestone Pendant
     pick_rate: 0.04
-    win_rate: 0.31
+    win_rate: 0.3
   - name: Sharpshooter's Arrow
     pick_rate: 0.006
     win_rate: 0.33
@@ -128,10 +128,10 @@ builds:
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.69
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Aegis of Acceleration
     pick_rate: 0.3
-    win_rate: 0.57
+    win_rate: 0.55
   - name: Blink Rune
     pick_rate: 0.006
     win_rate: 0.5
@@ -142,26 +142,26 @@ builds:
     pick_rate: 0.001
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/ullr/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5254413291796469
-  god_matches_won: 506
-  god_matches_played: 963
+  last_verified: '2026-11-16'
+  god_win_rate: 0.524170616113744
+  god_matches_won: 553
+  god_matches_played: 1055
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.88
-    win_rate: 0.5474
-    matches: 847
+    pick_rate: 0.87
+    win_rate: 0.5414
+    matches: 918
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.69
-    win_rate: 0.5
-    matches: 664
+    win_rate: 0.51
+    matches: 728
     basis: community
 - source: suggested
   archetype: core
@@ -240,15 +240,15 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.88
-    win_rate: 0.5474
-    matches: 847
+    pick_rate: 0.87
+    win_rate: 0.5414
+    matches: 918
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.69
-    win_rate: 0.5
-    matches: 664
+    win_rate: 0.51
+    matches: 728
     basis: community
 - source: suggested
   archetype: mana-stack

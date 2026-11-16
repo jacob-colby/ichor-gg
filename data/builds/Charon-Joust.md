@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.71
-    win_rate: 0.5779
-    matches: 219
+    pick_rate: 0.72
+    win_rate: 0.5867
+    matches: 239
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.44
-    win_rate: 0.54
-    matches: 136
+    pick_rate: 0.42
+    win_rate: 0.55
+    matches: 139
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Shell of Rebuke
     removed: Shifter's Shield
-    reason: Conquest community 73% win over 34 matches (vs 56% on this god), taking
+    reason: Conquest community 72% win over 37 matches (vs 56% on this god), taking
       the model's weakest slot from Shifter's Shield
   borrowed_from: Conquest
   starter: *id001

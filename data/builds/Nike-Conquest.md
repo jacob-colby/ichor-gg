@@ -17,120 +17,120 @@ builds:
       win_rate: 0.47
     - name: Transcendence
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.52
   - name: Transcendence
     pick_rate: 0.25
     win_rate: 0.59
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.13
-      win_rate: 0.54
+      win_rate: 0.53
     - name: Prophetic Cloak
-      pick_rate: 0.06
-      win_rate: 0.4
+      pick_rate: 0.07
+      win_rate: 0.39
   - name: The Crusher
-    pick_rate: 0.21
-    win_rate: 0.56
+    pick_rate: 0.2
+    win_rate: 0.55
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
-      win_rate: 0.49
+      win_rate: 0.48
     - name: Heartseeker
-      pick_rate: 0.11
-      win_rate: 0.62
+      pick_rate: 0.1
+      win_rate: 0.63
   - name: Heartseeker
     pick_rate: 0.24
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.53
+      win_rate: 0.52
     - name: The Crusher
       pick_rate: 0.07
-      win_rate: 0.46
+      win_rate: 0.45
   - name: Titan's Bane
     pick_rate: 0.06
     win_rate: 0.63
     alternates:
     - name: Heartseeker
       pick_rate: 0.11
-      win_rate: 0.59
+      win_rate: 0.6
     - name: Blinking Abyss
-      pick_rate: 0.06
+      pick_rate: 0.05
       win_rate: 0.59
   - name: Skeggox
-    pick_rate: 0.11
-    win_rate: 0.54
+    pick_rate: 0.1
+    win_rate: 0.55
     alternates:
+    - name: Avatar's Parashu
+      pick_rate: 0.07
+      win_rate: 0.56
     - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.63
-    - name: Avatar's Parashu
-      pick_rate: 0.06
-      win_rate: 0.55
+      win_rate: 0.62
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.33
-    win_rate: 0.54
+    win_rate: 0.53
   - name: Archmage's Gem
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.63
   - name: Bluestone Pendant
     pick_rate: 0.15
-    win_rate: 0.44
+    win_rate: 0.43
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.51
+    pick_rate: 0.36
+    win_rate: 0.5
   - name: Aegis of Acceleration
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
-    win_rate: 0.48
+    win_rate: 0.49
   starter_sightings:
   - name: Bluestone Brooch
     pick_rate: 0.33
-    win_rate: 0.54
+    win_rate: 0.53
   - name: Archmage's Gem
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.63
   - name: Bluestone Pendant
     pick_rate: 0.15
-    win_rate: 0.44
+    win_rate: 0.43
   - name: Conduit Gem
-    pick_rate: 0.12
-    win_rate: 0.39
+    pick_rate: 0.11
+    win_rate: 0.4
   - name: Pendulum of the Ages
-    pick_rate: 0.05
-    win_rate: 0.54
+    pick_rate: 0.06
+    win_rate: 0.57
   - name: Sands Of Time
     pick_rate: 0.03
-    win_rate: 0.21
+    win_rate: 0.19
   - name: Sundering Axe
     pick_rate: 0.03
-    win_rate: 0.59
+    win_rate: 0.64
   - name: Warrior's Axe
     pick_rate: 0.02
-    win_rate: 0.29
+    win_rate: 0.31
   - name: Selflessness
     pick_rate: 0.009
     win_rate: 0.25
   - name: Bumba's Cudgel
-    pick_rate: 0.007
-    win_rate: 0.33
-  - name: Heroism
-    pick_rate: 0.006
-    win_rate: 0.2
-  - name: Hunter's Cowl
+    pick_rate: 0.008
+    win_rate: 0.29
+  - name: Bumba's Hammer
     pick_rate: 0.005
-    win_rate: 0.75
+    win_rate: 0.2
+  - name: Heroism
+    pick_rate: 0.005
+    win_rate: 0.2
   - name: War Banner
     pick_rate: 0.005
+    win_rate: 0.6
+  - name: Hunter's Cowl
+    pick_rate: 0.004
     win_rate: 0.75
-  - name: Bumba's Hammer
-    pick_rate: 0.003
-    win_rate: 0.33
   - name: Leather Cowl
     pick_rate: 0.003
     win_rate: 0.0
@@ -142,16 +142,16 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.51
+    pick_rate: 0.36
+    win_rate: 0.5
   - name: Aegis of Acceleration
-    pick_rate: 0.24
+    pick_rate: 0.23
     win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
-    win_rate: 0.48
+    win_rate: 0.49
   - name: Blink Rune
-    pick_rate: 0.14
+    pick_rate: 0.13
     win_rate: 0.52
   - name: Phantom Shell
     pick_rate: 0.11
@@ -160,26 +160,26 @@ builds:
     pick_rate: 0.003
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/nike/
-  last_verified: '2026-11-15'
-  god_win_rate: 0.5098039215686274
-  god_matches_won: 442
-  god_matches_played: 867
+  last_verified: '2026-11-16'
+  god_win_rate: 0.5070422535211268
+  god_matches_won: 468
+  god_matches_played: 923
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-15'
-  god_matches_analyzed: 12984
+  god_window_end: '2026-11-16'
+  god_matches_analyzed: 13939
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.48
-    win_rate: 0.5088
-    matches: 416
+    win_rate: 0.4988
+    matches: 443
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.51
-    matches: 295
+    pick_rate: 0.36
+    win_rate: 0.5
+    matches: 332
     basis: community
 - source: suggested
   archetype: core
@@ -257,14 +257,14 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.48
-    win_rate: 0.5088
-    matches: 416
+    win_rate: 0.4988
+    matches: 443
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.51
-    matches: 295
+    pick_rate: 0.36
+    win_rate: 0.5
+    matches: 332
     basis: community
 - source: suggested
   archetype: bruiser
@@ -548,7 +548,7 @@ builds:
     Freya's Tears:
       total: 0.53
       efficiency: 0.61
-      win: 0.49
+      win: 0.48
       pick: 0.22
       fit: 0.59
     Amanita Charm:
@@ -623,7 +623,7 @@ builds:
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
-      win: 0.49
+      win: 0.48
       pick: 0.22
       fit: 0.51
     Amanita Charm:
@@ -698,7 +698,7 @@ builds:
     Freya's Tears:
       total: 0.52
       efficiency: 0.61
-      win: 0.49
+      win: 0.48
       pick: 0.22
       fit: 0.51
     Amanita Charm:
@@ -713,7 +713,7 @@ builds:
   swaps:
   - added: Transcendence
     removed: Jotunn's Revenge
-    reason: community 59% win over 217 matches (vs 51% on this god), taking the model's
+    reason: community 59% win over 231 matches (vs 51% on this god), taking the model's
       weakest slot from Jotunn's Revenge
   starter: *id001
   relic: *id002
@@ -737,47 +737,47 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-15'
-    matches: 412
-    wins: 240
-    win_share: 0.58
+    window_end: '2026-11-16'
+    matches: 435
+    wins: 255
+    win_share: 0.59
     aggregate:
-      aspect_matches: 525
-      aspect_win_rate: 0.543
-      no_aspect_matches: 342
-      no_aspect_win_rate: 0.459
+      aspect_matches: 559
+      aspect_win_rate: 0.54
+      no_aspect_matches: 364
+      no_aspect_win_rate: 0.456
     roles:
     - role: Jungle
-      matches: 214
-      share: 0.52
+      matches: 231
+      share: 0.53
     - role: Mid
-      matches: 122
-      share: 0.3
+      matches: 125
+      share: 0.29
     - role: Solo
-      matches: 68
-      share: 0.17
+      matches: 69
+      share: 0.16
     - role: Carry
-      matches: 5
+      matches: 6
       share: 0.01
     - role: Support
-      matches: 3
+      matches: 4
       share: 0.01
     base_role: Solo
-    base_role_share: 0.17
+    base_role_share: 0.16
     role_shift:
       role: Jungle
-      share: 0.52
-      says: 'most Aspect of Victorious Conquest players do not play Solo: Jungle 52%,
-        Solo 17%'
+      share: 0.53
+      says: 'most Aspect of Victorious Conquest players do not play Solo: Jungle 53%,
+        Solo 16%'
     items:
     - name: Jotunn's Revenge
       share: 0.89
     - name: Heartseeker
-      share: 0.8
+      share: 0.79
     - name: Transcendence
       share: 0.68
     - name: The Crusher
-      share: 0.67
+      share: 0.65
     - name: Blinking Abyss
       share: 0.27
     - name: Avatar's Parashu
@@ -785,24 +785,24 @@ community_aspects:
     - name: Titan's Bane
       share: 0.19
     - name: brawlers-ruin
-      share: 0.17
+      share: 0.19
     starters:
     - name: Archmage's Gem
-      share: 0.44
+      share: 0.43
     - name: Bluestone Brooch
       share: 0.21
-    - name: Conduit Gem
-      share: 0.11
     - name: Pendulum of the Ages
+      share: 0.12
+    - name: Conduit Gem
       share: 0.11
     - name: Bluestone Pendant
       share: 0.08
     - name: Sands Of Time
       share: 0.02
+    - name: Bumba's Hammer
+      share: 0.01
     - name: Bumba's Cudgel
       share: 0.01
-    - name: Bumba's Hammer
-      share: 0.0
     - name: Hunter's Cowl
       share: 0.0
     - name: Sundering Axe
@@ -811,13 +811,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Purification Beads
-      share: 0.5
+      share: 0.51
     - name: Aegis of Acceleration
-      share: 0.31
+      share: 0.3
     - name: Blink Rune
       share: 0.12
     matches_by_window:
-      ob47: 412
+      ob47: 435
       ob46: 900
       ob45: 614
     unmapped_slugs:

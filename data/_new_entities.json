@@ -64,14 +64,14 @@
     }
   ],
   "last_run": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "status": "nothing-new",
     "excluded": [],
     "skipped": [
       {
         "name": "Kumbhakarna",
         "kind": "god",
-        "why": "no page yet (HTTP 404)"
+        "why": "incomplete: base stats read as zero (a placeholder page): ['health', 'attack_speed', 'attack_power', 'move_speed']"
       },
       {
         "name": "Heimdallr",

@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.43
-    win_rate: 0.6567
-    matches: 313
+    win_rate: 0.663
+    matches: 341
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.68
+    pick_rate: 0.66
     win_rate: 0.59
-    matches: 494
+    matches: 523
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -745,14 +745,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - Toxic Blade
   - Death Metal
   - Bragi's Harp
-  - Riptalon
+  - The Reaper
   - Silverbranch Bow
-  - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Bragi's Harp
+  - Toxic Blade
   - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
@@ -765,11 +765,17 @@ builds:
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
+    Toxic Blade:
+      total: 0.52
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
     Death Metal:
       total: 0.55
       efficiency: 0.63
@@ -782,24 +788,18 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.57
-    Riptalon:
+    The Reaper:
       total: 0.58
-      efficiency: 0.45
+      efficiency: 0.57
       win: 0.5
       pick: 0.0
-      fit: 0.72
+      fit: 0.6
     Silverbranch Bow:
       total: 0.44
       efficiency: 0.49
       win: 0.5
       pick: 0.0
       fit: 0.4
-    Rod of Tahuti:
-      total: 0.55
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.29
     Soul Gem:
       total: 0.71
       efficiency: 0.58
@@ -809,12 +809,8 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Jotunn's Revenge
-    reason: Conquest community 67% win over 174 matches (vs 59% on this god), taking
+    reason: Conquest community 67% win over 190 matches (vs 59% on this god), taking
       the model's weakest slot from Jotunn's Revenge
-  - added: Riptalon
-    removed: Toxic Blade
-    reason: Conquest community 67% win over 153 matches (vs 59% on this god), taking
-      the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001
   relic: *id002

@@ -71,15 +71,15 @@ builds:
     base: Leather Cowl
     upgrade: Hunter's Cowl
     pick_rate: 0.43
-    win_rate: 0.6567
-    matches: 313
+    win_rate: 0.663
+    matches: 341
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.68
+    pick_rate: 0.66
     win_rate: 0.59
-    matches: 494
+    matches: 523
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -809,7 +809,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Bragi's Harp
-    reason: Conquest community 67% win over 174 matches (vs 59% on this god), taking
+    reason: Conquest community 67% win over 190 matches (vs 59% on this god), taking
       the model's weakest slot from Bragi's Harp
   borrowed_from: Conquest
   starter: *id001
