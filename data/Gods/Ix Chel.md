@@ -110,11 +110,11 @@ abilities:
   cooldown:
   - 6.0
   cost:
-  - 40.0
-  - 45.0
   - 50.0
   - 55.0
   - 60.0
+  - 65.0
+  - 70.0
   details:
   - 'Damage: 60 | 105 | 150 | 195 | 240'
   - 'Damage Scaling: 80% Intelligence'
@@ -123,7 +123,7 @@ abilities:
   - 'Range: 10 meters'
   - 'Cone Angle: 19.6 degrees'
   - 'Cooldown: 6 seconds'
-  - 'Cost: 40 | 45 | 50 | 55 | 60 mana'
+  - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
   detail_kinds:
   - magical
   - magical
@@ -146,7 +146,7 @@ abilities:
   - 70.0
   - 75.0
   - 80.0
-  - 95.0
+  - 85.0
   details:
   - 'Damage: 80 | 145 | 195 | 245 | 295'
   - 'Damage Scaling: 60% Intelligence'
@@ -155,7 +155,7 @@ abilities:
   - 'Range: 8.8 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 seconds'
-  - 'Cost: 65 | 70 | 75 | 80 | 95 mana'
+  - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
   detail_kinds:
   - magical
   - magical
@@ -253,7 +253,7 @@ aspects:
     now shields ally gods and slows enemy gods. Lunar Invocation and the Great End
     have greatly increased healing.
 source_url: https://wiki.smite2.com/w/Ix_Chel
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Ix Chel Basic Attack

@@ -8,7 +8,7 @@ stats:
   Magical Protection: '25'
   Plating: '5'
   Max Health: '300'
-passive: 'Damaged by 3 Attacks from gods: Gain Kinetic. Stacks up to 2 times. Kinetic
+passive: 'Damaged by 4 Attacks from gods: Gain Kinetic. Stacks up to 2 times. Kinetic
   makes your next Attack unleash a shockwave, even if it misses, dealing 40 (+4% of
   your Health) Physical Damage.'
 builds_from:
@@ -16,8 +16,8 @@ builds_from:
 - Engraved Guard
 builds_into: []
 source_url: https://wiki.smite2.com/w/Kinetic_Cuirass
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
-Damaged by 3 Attacks from gods: Gain Kinetic. Stacks up to 2 times. Kinetic makes your next Attack unleash a shockwave, even if it misses, dealing 40 (+4% of your Health) Physical Damage.
+Damaged by 4 Attacks from gods: Gain Kinetic. Stacks up to 2 times. Kinetic makes your next Attack unleash a shockwave, even if it misses, dealing 40 (+4% of your Health) Physical Damage.
 <!-- WIKI:END -->

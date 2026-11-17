@@ -60,7 +60,7 @@ abilities:
   detail_kinds:
   - buff
   - buff
-  description: NEARBY PLAYERS GRANT PROTECTIONS Gain Physical Protection and Magical
+  description: Nearby Players Grant Protections Gain Physical Protection and Magical
     Protection for each friendly or enemy god nearby
 - slot: 1st Ability
   name: Kiss
@@ -182,8 +182,7 @@ abilities:
   details:
   - On fire, Aphrodite and her Soul Mate start Healing repeatedly over time and have
     their active cooldowns decreased per tick
-  - This ability Heals 7 times over 3 seconds
-  - This ability deals Magical Damage 7 times over 3 seconds
+  - This ability ticks 7 times over 3 seconds
   - This ability passes through and damages all enemies, and passes through walls
   - 'Damage Per Tick: 10 | 18 | 26 | 34 | 40'
   - 'Damage Scaling Per Tick: 5% Intelligence'
@@ -196,8 +195,7 @@ abilities:
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
   detail_kinds:
   - heal
-  - heal
-  - magical
+  - null
   - null
   - magical
   - magical
@@ -239,9 +237,16 @@ abilities:
   - mechanic
   description: You and your Soul Mate become Damage Immune , CC Immune , and your
     Soul Mate gains the Jealousy effect for a short duration
-aspects: []
+aspects:
+- name: Aspect of Heartbreak
+  kit_changes: You can no longer Link to allies with Kiss. Kiss Charms enemies it
+    hits and Links to them. Links start to break at a shorter distance. Back Off!
+    deals Magical Damage in a circle around all Linked enemies. Love Birds deals Magical
+    Damage equal to its Heal to all Linked enemies. Undying Love no longer grants
+    damage immunity, but fires a kiss projectile at each enemy within 8m, dealing
+    damage and Linking to them.
 source_url: https://wiki.smite2.com/w/Aphrodite
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Aphrodite Basic Attack

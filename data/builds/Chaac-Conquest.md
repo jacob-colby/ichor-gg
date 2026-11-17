@@ -6,51 +6,51 @@ builds:
 - source: community
   aspect: Aspect of Fulmination
   aspect_pick_rate: 0.25
-  aspect_win_rate: 0.4
+  aspect_win_rate: 0.43
   slot_order:
   - name: Bancroft's Talon
-    pick_rate: 0.26
-    win_rate: 0.58
+    pick_rate: 0.25
+    win_rate: 0.59
     alternates:
     - name: Devourer's Gauntlet
       pick_rate: 0.14
-      win_rate: 0.42
+      win_rate: 0.44
     - name: Transcendence
       pick_rate: 0.11
-      win_rate: 0.79
+      win_rate: 0.8
   - name: Breastplate of Valor
-    pick_rate: 0.18
+    pick_rate: 0.17
     win_rate: 0.53
     alternates:
+    - name: Prophetic Cloak
+      pick_rate: 0.16
+      win_rate: 0.5
     - name: Genji's Guard
       pick_rate: 0.15
       win_rate: 0.54
-    - name: Prophetic Cloak
-      pick_rate: 0.15
-      win_rate: 0.46
   - name: Genji's Guard
-    pick_rate: 0.13
+    pick_rate: 0.12
     win_rate: 0.67
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.48
     - name: Gem of Focus
-      pick_rate: 0.1
-      win_rate: 0.59
+      pick_rate: 0.11
+      win_rate: 0.61
   - name: Freya's Tears
     pick_rate: 0.19
-    win_rate: 0.5
+    win_rate: 0.52
     alternates:
     - name: Genji's Guard
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.5
-    - name: Gem of Focus
+    - name: Brawler’s Beat Stick
       pick_rate: 0.06
-      win_rate: 0.56
+      win_rate: 0.5
   - name: Heartseeker
     pick_rate: 0.05
-    win_rate: 0.29
+    win_rate: 0.38
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
@@ -71,17 +71,17 @@ builds:
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.48
-    win_rate: 0.57
+    win_rate: 0.59
   - name: Bluestone Pendant
     pick_rate: 0.25
-    win_rate: 0.45
+    win_rate: 0.43
   - name: Pendulum of the Ages
     pick_rate: 0.07
     win_rate: 0.5
   community_relics:
   - name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.58
+    pick_rate: 0.28
+    win_rate: 0.59
   - name: Purification Beads
     pick_rate: 0.2
     win_rate: 0.5
@@ -91,16 +91,16 @@ builds:
   starter_sightings:
   - name: Bluestone Brooch
     pick_rate: 0.48
-    win_rate: 0.57
+    win_rate: 0.59
   - name: Bluestone Pendant
     pick_rate: 0.25
-    win_rate: 0.45
+    win_rate: 0.43
   - name: Pendulum of the Ages
     pick_rate: 0.07
     win_rate: 0.5
   - name: Sundering Axe
     pick_rate: 0.04
-    win_rate: 0.33
+    win_rate: 0.43
   - name: Archmage's Gem
     pick_rate: 0.03
     win_rate: 0.6
@@ -136,8 +136,8 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.58
+    pick_rate: 0.28
+    win_rate: 0.59
   - name: Purification Beads
     pick_rate: 0.2
     win_rate: 0.5
@@ -145,8 +145,8 @@ builds:
     pick_rate: 0.2
     win_rate: 0.47
   - name: Phantom Shell
-    pick_rate: 0.18
-    win_rate: 0.33
+    pick_rate: 0.19
+    win_rate: 0.36
   - name: Aegis of Acceleration
     pick_rate: 0.13
     win_rate: 0.57
@@ -154,25 +154,25 @@ builds:
     pick_rate: 0.006
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/chaac/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.49404761904761907
-  god_matches_won: 83
-  god_matches_played: 168
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5
+  god_matches_won: 87
+  god_matches_played: 174
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.73
-    win_rate: 0.5289
-    matches: 123
+    win_rate: 0.5352
+    matches: 127
     basis: community
   relic:
     name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.58
+    pick_rate: 0.28
+    win_rate: 0.59
     matches: 49
     basis: community
 - source: suggested
@@ -198,8 +198,8 @@ builds:
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Top weighted-score core (efficiency + fit + win/pick). Underrated for
     this god: Rod of Tahuti, Amanita Charm, Kinetic Cuirass, Gluttonous Grimoire,
     Jotunn''s Revenge, Soul Gem, Berserker''s Shield, Shield Splitter, Spear of Desolation,
@@ -212,7 +212,7 @@ builds:
     Heartseeker.'
   slot_scores:
     Book of Thoth:
-      total: 0.43
+      total: 0.42
       efficiency: 0.48
       win: 0.53
       pick: 0.0
@@ -221,7 +221,7 @@ builds:
       total: 0.59
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.23
     Jotunn's Revenge:
       total: 0.52
@@ -238,7 +238,7 @@ builds:
     Transcendence:
       total: 0.56
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.16
     Amanita Charm:
@@ -254,13 +254,13 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.73
-    win_rate: 0.5289
-    matches: 123
+    win_rate: 0.5352
+    matches: 127
     basis: community
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.58
+    pick_rate: 0.28
+    win_rate: 0.59
     matches: 49
     basis: community
 - source: suggested
@@ -286,8 +286,8 @@ builds:
     swap: Breastplate of Valor — physical protection
     swap_item: Breastplate of Valor
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'mana-stack (efficiency + fit + win/pick). Underrated for this god: Rod
     of Tahuti, Jotunn''s Revenge, Amanita Charm, Soul Gem, Gluttonous Grimoire, Kinetic
     Cuirass, Spear of Desolation, Shield Splitter, Berserker''s Shield, Hydra''s Lament,
@@ -308,7 +308,7 @@ builds:
       total: 0.6
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.27
     Jotunn's Revenge:
       total: 0.53
@@ -319,11 +319,11 @@ builds:
     Transcendence:
       total: 0.57
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.23
     Rod of Tahuti:
-      total: 0.58
+      total: 0.57
       efficiency: 0.82
       win: 0.53
       pick: 0.0
@@ -359,11 +359,11 @@ builds:
     swap: Amanita Charm — magical protection
     swap_item: Amanita Charm
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Ability / burst skew (efficiency + fit + win/pick). Underrated for this
     god: Rod of Tahuti, Soul Gem, Jotunn''s Revenge, Amanita Charm, Gluttonous Grimoire,
     Kinetic Cuirass, Spear of Desolation, Berserker''s Shield, Shield Splitter, The
@@ -384,7 +384,7 @@ builds:
       total: 0.6
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.26
     Jotunn's Revenge:
       total: 0.53
@@ -393,9 +393,9 @@ builds:
       pick: 0.0
       fit: 0.45
     Transcendence:
-      total: 0.55
+      total: 0.56
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.13
     Rod of Tahuti:
@@ -432,14 +432,14 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
     this god: Amanita Charm, Soul Gem, Rod of Tahuti, The Reaper, Shield of the Phoenix,
     Gluttonous Grimoire, Blood-Bound Book, Kinetic Cuirass, Jotunn''s Revenge, Berserker''s
@@ -460,10 +460,10 @@ builds:
       total: 0.59
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.2
     Kinetic Cuirass:
-      total: 0.53
+      total: 0.52
       efficiency: 0.61
       win: 0.53
       pick: 0.0
@@ -471,7 +471,7 @@ builds:
     Transcendence:
       total: 0.56
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.16
     Amanita Charm:
@@ -536,10 +536,10 @@ builds:
       total: 0.59
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.19
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.53
       efficiency: 0.65
       win: 0.53
       pick: 0.0
@@ -547,11 +547,11 @@ builds:
     Transcendence:
       total: 0.56
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.13
     Gluttonous Grimoire:
-      total: 0.54
+      total: 0.53
       efficiency: 0.58
       win: 0.53
       pick: 0.0
@@ -587,8 +587,8 @@ builds:
     swap: Kinetic Cuirass — magical protection
     swap_item: Kinetic Cuirass
   - vs_tag: physical_heavy
-    swap: Breastplate of Valor — physical protection
-    swap_item: Breastplate of Valor
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -603,7 +603,7 @@ builds:
     Eye of Providence, Bracer of The Abyss, Midgardian Mail, The Crusher.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.54
       efficiency: 0.72
       win: 0.53
       pick: 0.0
@@ -612,22 +612,22 @@ builds:
       total: 0.59
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.17
     Transcendence:
       total: 0.55
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.09
     Tyrfing:
-      total: 0.5
+      total: 0.49
       efficiency: 0.53
       win: 0.53
       pick: 0.0
       fit: 0.47
     Nimble Ring:
-      total: 0.49
+      total: 0.48
       efficiency: 0.57
       win: 0.53
       pick: 0.0
@@ -653,7 +653,7 @@ builds:
   - Freya's Tears
   - Soul Gem
   flex_slots:
-  - Freya's Tears
+  - Jotunn's Revenge
   - Breastplate of Valor
   situational_swaps:
   - vs_tag: heavy_cc
@@ -666,8 +666,8 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
+    swap: Stygian Anchor — anti-heal
+    swap_item: Stygian Anchor
   rationale: 'Ability-uptime skew — Cooldown Rate is a rate, not a reduction (efficiency
     + fit + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Jotunn''s
     Revenge, Amanita Charm, Kinetic Cuirass, Spear of Desolation, Shield of the Phoenix,
@@ -683,13 +683,13 @@ builds:
       total: 0.53
       efficiency: 0.63
       win: 0.53
-      pick: 0.25
+      pick: 0.23
       fit: 0.4
     Genji's Guard:
       total: 0.62
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.4
     Jotunn's Revenge:
       total: 0.54
@@ -700,13 +700,13 @@ builds:
     Transcendence:
       total: 0.55
       efficiency: 0.5
-      win: 0.79
+      win: 0.8
       pick: 0.11
       fit: 0.08
     Freya's Tears:
-      total: 0.53
+      total: 0.54
       efficiency: 0.61
-      win: 0.5
+      win: 0.52
       pick: 0.32
       fit: 0.54
     Soul Gem:
@@ -768,7 +768,7 @@ builds:
       total: 0.59
       efficiency: 0.71
       win: 0.67
-      pick: 0.2
+      pick: 0.19
       fit: 0.23
     Jotunn's Revenge:
       total: 0.52
@@ -818,65 +818,65 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-16'
-    matches: 36
-    wins: 14
-    win_share: 0.39
+    window_end: '2026-11-17'
+    matches: 38
+    wins: 16
+    win_share: 0.42
     aggregate:
-      aspect_matches: 42
-      aspect_win_rate: 0.405
-      no_aspect_matches: 126
-      no_aspect_win_rate: 0.524
+      aspect_matches: 44
+      aspect_win_rate: 0.432
+      no_aspect_matches: 130
+      no_aspect_win_rate: 0.523
     roles:
     - role: Solo
-      matches: 30
-      share: 0.83
+      matches: 31
+      share: 0.82
     - role: Jungle
-      matches: 2
-      share: 0.06
+      matches: 3
+      share: 0.08
     - role: Mid
       matches: 2
-      share: 0.06
+      share: 0.05
     - role: Support
       matches: 2
-      share: 0.06
+      share: 0.05
     base_role: Solo
-    base_role_share: 0.83
+    base_role_share: 0.82
     role_shift: null
     items:
     - name: Genji's Guard
-      share: 0.44
-    - name: Breastplate of Valor
-      share: 0.31
-    - name: Devourer's Gauntlet
-      share: 0.31
+      share: 0.42
     - name: Shifter's Shield
-      share: 0.31
+      share: 0.34
+    - name: Breastplate of Valor
+      share: 0.29
+    - name: Devourer's Gauntlet
+      share: 0.29
     - name: Freya's Tears
-      share: 0.25
+      share: 0.24
     - name: Heartseeker
-      share: 0.22
+      share: 0.24
     - name: Sundering Echo
-      share: 0.22
+      share: 0.21
     - name: brawlers-ruin
-      share: 0.14
+      share: 0.16
     starters:
     - name: Bluestone Brooch
-      share: 0.33
+      share: 0.37
     - name: Bluestone Pendant
-      share: 0.25
+      share: 0.24
     - name: Archmage's Gem
       share: 0.08
     - name: Blood-soaked Shroud
-      share: 0.06
+      share: 0.05
     - name: Leather Cowl
-      share: 0.06
+      share: 0.05
     - name: Pendulum of the Ages
-      share: 0.06
+      share: 0.05
     - name: Sundering Axe
-      share: 0.06
+      share: 0.05
     - name: War Flag
-      share: 0.06
+      share: 0.05
     - name: Bumba's Cudgel
       share: 0.03
     - name: Hunter's Cowl
@@ -885,11 +885,11 @@ community_aspects:
     - name: Blink Rune
       share: 0.39
     - name: Sundering Arc
-      share: 0.36
+      share: 0.34
     - name: Purification Beads
-      share: 0.17
+      share: 0.16
     matches_by_window:
-      ob47: 36
+      ob47: 38
       ob46: 44
       ob45: 74
       ob44: 87

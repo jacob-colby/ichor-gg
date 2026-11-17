@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 316.32
     per_level: 42.0
+  mana_regen:
+    base: 1.57
+    per_level: 0.14
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 40.85
     per_level: 2.21
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.57
-    per_level: 0.14
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Baron Samedi Basic Attack
@@ -46,14 +46,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - debuff
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Hysteria
   details:
@@ -65,13 +65,6 @@ abilities:
   - 'Damage: 40 + 13 Per Level'
   - 'Damage Reduction: 20%'
   - 'Hysteria Applied Per Hit: 30'
-  description: 'Gods can have a max of 70 Gods at Max deal Reduced Damage to Baron
-    Samedi Baron''s Brew can be thrown at enemies to deal Magical Damage and apply
-    drains at a rate of 2 per second. This drain stops on the target for 5 seconds
-    when baron Samedi applies to them Damage applies , granting your abilities bonus
-    effects when enough is applied. Your team can also purchase Baron''s Brew from
-    the Item Store Applied Per Hit: 30'
-  damage_type: magical
   detail_kinds:
   - null
   - debuff
@@ -80,6 +73,13 @@ abilities:
   - magical
   - debuff
   - debuff
+  damage_type: magical
+  description: 'Gods can have a max of 70 Gods at Max deal Reduced Damage to Baron
+    Samedi Baron''s Brew can be thrown at enemies to deal Magical Damage and apply
+    drains at a rate of 2 per second. This drain stops on the target for 5 seconds
+    when baron Samedi applies to them Damage applies , granting your abilities bonus
+    effects when enough is applied. Your team can also purchase Baron''s Brew from
+    the Item Store Applied Per Hit: 30'
 - slot: 1st Ability
   name: Vivid Gaze
   cooldown:
@@ -106,16 +106,13 @@ abilities:
   - 'Overlap Damage: +25%'
   - 'Power Reduction: 20%'
   - 'Attack Speed Reduction: 20%'
-  - '% Reduction Scaling: 5% Protections'
-  - 'Debuff Duration: 3 | 3.5 | 4 | 4.5 | 5 seconds'
+  - '% Reduction Scaling: 6% Protections'
+  - 'Debuff Duration: 4 | 4.5 | 5 | 5.5 | 6 seconds'
   - 'Hysteria Applied Per Hit: 15'
   - 'Range: 9.6 meters'
   - 'Radius: 1.28 meters'
   - 'Cooldown: 11 | 10.5 | 10 | 9.5 | 9 seconds'
   - 'Cost: 55 | 60 | 65 | 70 | 75 mana'
-  description: will trigger its Hysteria effect if its own damage brings targets above
-    the Hysteria threshold Summon skulls that deal Magical Damage in an X shape
-  damage_type: magical
   detail_kinds:
   - magical
   - debuff
@@ -133,6 +130,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: will trigger its Hysteria effect if its own damage brings targets above
+    the Hysteria threshold Summon skulls that deal Magical Damage in an X shape
 - slot: 2nd Ability
   name: Consign Spirits
   cooldown:
@@ -156,9 +156,6 @@ abilities:
   - 'Radius: 2.88 meters'
   - 'Cooldown: 14 seconds'
   - 'Cost: 60 mana'
-  description: Allies within 8.8 meters of Baron Samedi or the center of will receive
-    the Heal Call spirits that deal Magical Damage to enemies in an area
-  damage_type: magical
   detail_kinds:
   - heal
   - heal
@@ -175,6 +172,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Allies within 8.8 meters of Baron Samedi or the center of will receive
+    the Heal Call spirits that deal Magical Damage to enemies in an area
 - slot: 3rd Ability
   name: Wrap It Up
   cooldown:
@@ -210,11 +210,6 @@ abilities:
   - 'Radius: 0.8 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Hitting a god above 30 Hysteria causes the snake to explode when it
-    Roots , applying a Mesmerize to nearby enemies Enemies must be at or above 30
-    Hysteria when hits to trigger its Hysteria effect Throw a snake that constricts
-    enemy gods, Slowing them to a Root
-  damage_type: magical
   detail_kinds:
   - magical
   - magical
@@ -233,6 +228,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Hitting a god above 30 Hysteria causes the snake to explode when it
+    Roots , applying a Mesmerize to nearby enemies Enemies must be at or above 30
+    Hysteria when hits to trigger its Hysteria effect Throw a snake that constricts
+    enemy gods, Slowing them to a Root
 - slot: Ultimate
   name: Life of the Party
   cooldown:
@@ -266,8 +266,6 @@ abilities:
   - 'Cone Angle: 60 degrees'
   - 'Cooldown: 110 | 105 | 100 | 95 | 90 seconds'
   - 'Cost: 70 | 75 | 80 | 85 | 90 mana'
-  description: Open a Coffin that Vortexes enemies towards Baron Samedi. Gods Vortexed
-    into the Coffin take Magical Damage and are Stunned
   detail_kinds:
   - stun
   - stun
@@ -287,6 +285,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Open a Coffin that Vortexes enemies towards Baron Samedi. Gods Vortexed
+    into the Coffin take Magical Damage and are Stunned
 aspects:
 - name: Aspect of Hysteria
   kit_changes: Hysteria applied over max deals damage. Max Hysteria no longer reduces
@@ -294,7 +294,7 @@ aspects:
     over time, but no debuff. Wrap It Up explosion and DoT apply Bonus Hysteria, but
     the explosion no longer Mesmerizes. Your personal Brew can be thrown every 20s.
 source_url: https://wiki.smite2.com/w/Baron_Samedi
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Baron Samedi Basic Attack

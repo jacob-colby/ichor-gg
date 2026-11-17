@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.43
-    win_rate: 0.5002
-    matches: 282
+    pick_rate: 0.44
+    win_rate: 0.5073
+    matches: 304
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.35
-    win_rate: 0.48
-    matches: 230
+    pick_rate: 0.34
+    win_rate: 0.49
+    matches: 235
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Hydra's Lament
     removed: Shield Splitter
-    reason: Conquest community 65% win over 72 matches (vs 49% on this god), taking
+    reason: Conquest community 68% win over 76 matches (vs 50% on this god), taking
       the model's weakest slot from Shield Splitter
   borrowed_from: Conquest
   starter: *id001

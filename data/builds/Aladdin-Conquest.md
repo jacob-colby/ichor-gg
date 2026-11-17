@@ -10,16 +10,16 @@ builds:
   slot_order:
   - name: Genie's Lamp
     pick_rate: 0.76
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.1
-      win_rate: 0.46
+      win_rate: 0.49
     - name: Jotunn's Revenge
       pick_rate: 0.04
-      win_rate: 0.55
+      win_rate: 0.58
   - name: Spear of Desolation
-    pick_rate: 0.35
+    pick_rate: 0.36
     win_rate: 0.56
     alternates:
     - name: Book of Thoth
@@ -30,27 +30,27 @@ builds:
       win_rate: 0.58
   - name: Polynomicon
     pick_rate: 0.17
-    win_rate: 0.54
+    win_rate: 0.53
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.16
-      win_rate: 0.55
+      win_rate: 0.54
     - name: Book of Thoth
       pick_rate: 0.15
-      win_rate: 0.55
+      win_rate: 0.54
   - name: Rod of Tahuti
     pick_rate: 0.26
-    win_rate: 0.5
+    win_rate: 0.49
     alternates:
     - name: Polynomicon
       pick_rate: 0.16
-      win_rate: 0.56
+      win_rate: 0.57
     - name: Soul Gem
       pick_rate: 0.1
-      win_rate: 0.57
+      win_rate: 0.58
   - name: Obsidian Shard
     pick_rate: 0.15
-    win_rate: 0.47
+    win_rate: 0.46
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.3
@@ -59,8 +59,8 @@ builds:
       pick_rate: 0.11
       win_rate: 0.6
   - name: Heartseeker
-    pick_rate: 0.07
-    win_rate: 0.56
+    pick_rate: 0.06
+    win_rate: 0.57
     alternates:
     - name: Obsidian Shard
       pick_rate: 0.21
@@ -71,51 +71,51 @@ builds:
   community_starters:
   - name: Archmage's Gem
     pick_rate: 0.56
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Conduit Gem
     pick_rate: 0.2
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Bumba's Hammer
-    pick_rate: 0.1
-    win_rate: 0.62
+    pick_rate: 0.09
+    win_rate: 0.6
   community_relics:
   - name: Purification Beads
     pick_rate: 0.71
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Aegis of Acceleration
     pick_rate: 0.26
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Blink Rune
     pick_rate: 0.01
-    win_rate: 0.5
+    win_rate: 0.45
   starter_sightings:
   - name: Archmage's Gem
     pick_rate: 0.56
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Conduit Gem
     pick_rate: 0.2
-    win_rate: 0.47
+    win_rate: 0.46
   - name: Bumba's Hammer
-    pick_rate: 0.1
-    win_rate: 0.62
+    pick_rate: 0.09
+    win_rate: 0.6
   - name: Bluestone Brooch
     pick_rate: 0.04
-    win_rate: 0.48
+    win_rate: 0.52
   - name: Bumba's Cudgel
     pick_rate: 0.04
-    win_rate: 0.52
+    win_rate: 0.5
   - name: Hunter's Cowl
     pick_rate: 0.03
-    win_rate: 0.68
+    win_rate: 0.71
   - name: Pendulum of the Ages
     pick_rate: 0.02
     win_rate: 0.75
   - name: Sands Of Time
     pick_rate: 0.01
-    win_rate: 0.57
+    win_rate: 0.5
   - name: Bluestone Pendant
-    pick_rate: 0.007
-    win_rate: 0.4
+    pick_rate: 0.008
+    win_rate: 0.33
   - name: Bumba's Golden Dagger
     pick_rate: 0.001
     win_rate: 0.0
@@ -125,13 +125,13 @@ builds:
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.71
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Aegis of Acceleration
     pick_rate: 0.26
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Blink Rune
     pick_rate: 0.01
-    win_rate: 0.5
+    win_rate: 0.45
   - name: Sundering Arc
     pick_rate: 0.01
     win_rate: 0.56
@@ -139,39 +139,39 @@ builds:
     pick_rate: 0.001
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/aladdin/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5539971949509116
-  god_matches_won: 395
-  god_matches_played: 713
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5516339869281046
+  god_matches_won: 422
+  god_matches_played: 765
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.76
-    win_rate: 0.5511
-    matches: 542
+    win_rate: 0.5411
+    matches: 581
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.71
-    win_rate: 0.55
-    matches: 506
+    win_rate: 0.54
+    matches: 543
     basis: community
 - source: suggested
   archetype: core
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
+  - Hydra's Lament
   - Spear of Desolation
-  - Transcendence
-  - Rod of Tahuti
+  - The Crusher
+  - Heartseeker
   - Soul Gem
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - The Crusher
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -194,61 +194,59 @@ builds:
     of the Storm, Avenging Blade, Blood-Bound Book, Damaru, Genji''s Guard, Triton''s
     Conch, Golden Blade, Soul Reaver, Lernaean Bow.'
   slot_scores:
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.48
-      win: 0.55
-      pick: 0.23
-      fit: 0.1
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.9
+    Hydra's Lament:
+      total: 0.55
+      efficiency: 0.55
+      win: 0.56
+      pick: 0.0
+      fit: 0.68
     Spear of Desolation:
       total: 0.58
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.62
-    Transcendence:
-      total: 0.5
-      efficiency: 0.5
-      win: 0.58
-      pick: 0.16
-      fit: 0.38
-    Rod of Tahuti:
-      total: 0.59
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.43
-      fit: 0.42
+    The Crusher:
+      total: 0.55
+      efficiency: 0.51
+      win: 0.56
+      pick: 0.0
+      fit: 0.79
+    Heartseeker:
+      total: 0.56
+      efficiency: 0.45
+      win: 0.57
+      pick: 0.18
+      fit: 0.89
     Soul Gem:
       total: 0.56
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.72
   community_ordered:
-  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
-  - Transcendence
-  - Rod of Tahuti
+  - Heartseeker
   - Soul Gem
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
     pick_rate: 0.76
-    win_rate: 0.5511
-    matches: 542
+    win_rate: 0.5411
+    matches: 581
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.71
-    win_rate: 0.55
-    matches: 506
+    win_rate: 0.54
+    matches: 543
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -287,20 +285,20 @@ builds:
     Book of Thoth:
       total: 0.48
       efficiency: 0.48
-      win: 0.55
+      win: 0.54
       pick: 0.23
       fit: 0.39
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.71
     Spear of Desolation:
       total: 0.58
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.61
     Transcendence:
       total: 0.5
@@ -309,15 +307,15 @@ builds:
       pick: 0.16
       fit: 0.39
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.57
     Soul Gem:
       total: 0.56
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.71
   community_ordered:
@@ -366,20 +364,20 @@ builds:
     Book of Thoth:
       total: 0.46
       efficiency: 0.48
-      win: 0.55
+      win: 0.54
       pick: 0.23
       fit: 0.22
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.61
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.78
     Spear of Desolation:
       total: 0.6
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.78
     Transcendence:
       total: 0.48
@@ -388,15 +386,15 @@ builds:
       pick: 0.16
       fit: 0.22
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.56
     Soul Gem:
-      total: 0.58
+      total: 0.59
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.88
   community_ordered:
@@ -412,14 +410,14 @@ builds:
   archetype: bruiser
   slot_order:
   - Genji's Guard
+  - Berserker's Shield
   - Jotunn's Revenge
-  - Spear of Desolation
   - Kinetic Cuirass
   - Shield of the Phoenix
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Spear of Desolation
+  - Berserker's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
@@ -428,13 +426,13 @@ builds:
     swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Freya's Tears — physical protection
+    swap_item: Freya's Tears
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Kinetic Cuirass, Jotunn''s Revenge,
+    this god: Amanita Charm, Shield of the Phoenix, Jotunn''s Revenge, Kinetic Cuirass,
     Genji''s Guard, Berserker''s Shield, Shield Splitter, The Reaper, Phoenix Feather,
     Freya''s Tears, Yogi''s Necklace, Runeforged Hammer, Ethereal Staff, Draconic
     Scale, Breastplate of Valor, Chandra''s Grace, Oni Hunter''s Garb, Gluttonous
@@ -446,56 +444,55 @@ builds:
     Genji's Guard:
       total: 0.54
       efficiency: 0.71
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.26
+    Berserker's Shield:
+      total: 0.53
+      efficiency: 0.66
+      win: 0.56
+      pick: 0.0
+      fit: 0.35
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.56
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.45
-    Spear of Desolation:
-      total: 0.53
-      efficiency: 0.6
-      win: 0.56
-      pick: 0.48
-      fit: 0.31
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.56
       efficiency: 0.61
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.6
     Shield of the Phoenix:
       total: 0.56
       efficiency: 0.57
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.75
     Amanita Charm:
       total: 0.61
       efficiency: 0.68
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.8
   community_ordered:
   - Jotunn's Revenge
-  - Spear of Desolation
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
-  - The Crusher
   - Rod of Tahuti
   - Heartseeker
   - Soul Gem
   flex_slots:
   - Heartseeker
-  - The Crusher
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -519,43 +516,44 @@ builds:
     Gargoyle, Soul Reaver, Shield Splitter, Eye of the Storm.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.63
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.93
+    Transcendence:
+      total: 0.48
+      efficiency: 0.5
+      win: 0.58
+      pick: 0.16
+      fit: 0.26
     Spear of Desolation:
       total: 0.6
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.74
-    The Crusher:
-      total: 0.56
-      efficiency: 0.51
-      win: 0.55
-      pick: 0.0
-      fit: 0.89
     Rod of Tahuti:
       total: 0.62
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.6
     Heartseeker:
       total: 0.57
       efficiency: 0.45
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.18
       fit: 0.99
     Soul Gem:
       total: 0.58
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.84
   community_ordered:
   - Jotunn's Revenge
+  - Transcendence
   - Spear of Desolation
   - Rod of Tahuti
   - Heartseeker
@@ -588,7 +586,7 @@ builds:
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
-    this god: Tyrfing, Jotunn''s Revenge, Silverbranch Bow, Riptalon, Nimble Ring,
+    this god: Jotunn''s Revenge, Tyrfing, Silverbranch Bow, Riptalon, Nimble Ring,
     The Reaper, Tekko-Kagi, Bragi''s Harp, Golden Blade, Gluttonous Grimoire, Lernaean
     Bow, Dominance, Hydra''s Lament, Toxic Blade, The Crusher, Qin''s Blade, Blood-Bound
     Book, Bracer of The Abyss, Death Metal, Titan''s Bane, Spear of the Magus, Ancient
@@ -597,39 +595,39 @@ builds:
     Gem of Focus, Heartwood Charm, Sun Beam Bow, Soul Reaver.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.54
+      total: 0.55
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.39
     Tyrfing:
-      total: 0.54
+      total: 0.55
       efficiency: 0.53
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.71
     Riptalon:
       total: 0.51
       efficiency: 0.45
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.7
     Silverbranch Bow:
       total: 0.51
       efficiency: 0.49
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.61
     Rod of Tahuti:
       total: 0.56
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.2
     Soul Gem:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.49
   community_ordered:
@@ -674,39 +672,39 @@ builds:
     Tekko-Kagi.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.54
+      total: 0.55
       efficiency: 0.56
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.62
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.85
     Spear of Desolation:
-      total: 0.61
+      total: 0.62
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.85
     Hydra's Lament:
-      total: 0.55
+      total: 0.56
       efficiency: 0.55
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.75
     Rod of Tahuti:
       total: 0.58
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.35
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.95
   community_ordered:
@@ -719,15 +717,15 @@ builds:
 - source: suggested
   archetype: strength
   slot_order:
-  - Book of Thoth
   - Jotunn's Revenge
+  - Tyrfing
   - Spear of Desolation
-  - Transcendence
-  - Rod of Tahuti
+  - Tekko-Kagi
+  - The Crusher
   - Heartseeker
   flex_slots:
-  - Transcendence
-  - Book of Thoth
+  - Tekko-Kagi
+  - The Crusher
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -750,48 +748,45 @@ builds:
     World Stone, Shield Splitter, Eye of the Storm, Avenging Blade, Bracer of The
     Abyss, Nimble Ring, Riptalon, Gem of Focus, Heartwood Charm, The Cosmic Horror.'
   slot_scores:
-    Book of Thoth:
-      total: 0.44
-      efficiency: 0.48
-      win: 0.55
-      pick: 0.23
-      fit: 0.07
     Jotunn's Revenge:
-      total: 0.59
+      total: 0.61
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.78
+    Tyrfing:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.56
+      pick: 0.0
+      fit: 0.7
     Spear of Desolation:
       total: 0.56
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.46
-    Transcendence:
-      total: 0.5
-      efficiency: 0.5
-      win: 0.58
-      pick: 0.16
-      fit: 0.38
-    Rod of Tahuti:
-      total: 0.58
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.43
-      fit: 0.33
+    Tekko-Kagi:
+      total: 0.54
+      efficiency: 0.49
+      win: 0.56
+      pick: 0.0
+      fit: 0.8
+    The Crusher:
+      total: 0.54
+      efficiency: 0.51
+      win: 0.56
+      pick: 0.0
+      fit: 0.74
     Heartseeker:
       total: 0.55
       efficiency: 0.45
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.18
       fit: 0.84
   community_ordered:
-  - Book of Thoth
   - Jotunn's Revenge
   - Spear of Desolation
-  - Transcendence
-  - Rod of Tahuti
   - Heartseeker
   starter: *id001
   relic: *id002
@@ -832,20 +827,20 @@ builds:
     Book of Thoth:
       total: 0.47
       efficiency: 0.48
-      win: 0.55
+      win: 0.54
       pick: 0.23
       fit: 0.31
     Jotunn's Revenge:
-      total: 0.58
+      total: 0.6
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.69
     Spear of Desolation:
       total: 0.59
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.69
     Transcendence:
       total: 0.49
@@ -854,15 +849,15 @@ builds:
       pick: 0.16
       fit: 0.31
     Rod of Tahuti:
-      total: 0.62
+      total: 0.61
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.56
     Soul Gem:
       total: 0.57
       efficiency: 0.53
-      win: 0.57
+      win: 0.58
       pick: 0.17
       fit: 0.79
   community_ordered:
@@ -911,20 +906,20 @@ builds:
     Book of Thoth:
       total: 0.44
       efficiency: 0.48
-      win: 0.55
+      win: 0.54
       pick: 0.23
       fit: 0.1
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.63
       efficiency: 0.65
-      win: 0.55
+      win: 0.58
       pick: 0.04
       fit: 0.9
     Spear of Desolation:
       total: 0.58
       efficiency: 0.6
       win: 0.56
-      pick: 0.48
+      pick: 0.49
       fit: 0.62
     Transcendence:
       total: 0.5
@@ -935,13 +930,13 @@ builds:
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.5
+      win: 0.49
       pick: 0.43
       fit: 0.42
     The Crusher:
-      total: 0.54
+      total: 0.55
       efficiency: 0.51
-      win: 0.55
+      win: 0.56
       pick: 0.0
       fit: 0.79
   community_ordered:

@@ -12,9 +12,15 @@ base_stats:
   health:
     base: 619.0
     per_level: 94.0
+  health_regen:
+    base: 1.82
+    per_level: 0.2
   mana:
     base: 319.68
     per_level: 45.36
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 17.72
     per_level: 3.0
@@ -24,18 +30,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 375.0
-    per_level: 0.0
   attack_power:
     base: 40.85
     per_level: 2.21
-  health_regen:
-    base: 1.82
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 375.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Anubis Basic Attack
@@ -44,13 +44,13 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: The Scales
   details:
@@ -61,8 +61,6 @@ abilities:
   - 'Bonus Lifesteal: +0.5% per stack'
   - 'Bonus Protections: +2 per stack'
   - 'Max Stacks: 8'
-  description: Gain Lifesteal and Protections . Gain bonus Lifesteal and Protections
-    scaled from missing Health
   detail_kinds:
   - null
   - null
@@ -71,6 +69,8 @@ abilities:
   - buff
   - buff
   - buff
+  description: Gain Lifesteal and Protections . Gain bonus Lifesteal and Protections
+    scaled from missing Health
 - slot: 1st Ability
   name: Plague of Locusts
   cooldown:
@@ -97,9 +97,6 @@ abilities:
   - 'Cone Angle: 110 degrees'
   - 'Cooldown: 10 | 9.5 | 9 | 8.5 | 8 seconds'
   - 'Cost: 30 | 40 | 50 | 60 | 70 mana'
-  description: Locusts fly from your mouth, repeatedly dealing Magical Damage in an
-    area in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - mechanic
@@ -112,6 +109,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Locusts fly from your mouth, repeatedly dealing Magical Damage in an
+    area in front of you
 - slot: 2nd Ability
   name: Mummify
   cooldown:
@@ -135,9 +135,6 @@ abilities:
   - 'Radius: 0.56 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Fire a bandage projectile, dealing Magical Damage , mummifying, and
-    Stunning the first god hit
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -147,6 +144,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a bandage projectile, dealing Magical Damage , mummifying, and
+    Stunning the first god hit
 - slot: 3rd Ability
   name: Grasping Hands
   cooldown:
@@ -172,9 +172,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 40 | 50 | 60 | 70 | 80 mana'
-  description: Summon allies from the underworld, Slowing and dealing Magical Damage
-    repeatedly to enemies in an area
-  damage_type: magical
   detail_kinds:
   - null
   - slow
@@ -186,6 +183,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Summon allies from the underworld, Slowing and dealing Magical Damage
+    repeatedly to enemies in an area
 - slot: Ultimate
   name: Death Gaze
   cooldown:
@@ -193,6 +193,7 @@ abilities:
   cost:
   - 90.0
   details:
+  - This is a channeled ability
   - This deals an initial burst of Magical Damage
   - Then Channels to repeatedly deal Magical Damage
   - You are CC Immune while using this ability
@@ -208,10 +209,8 @@ abilities:
   - 'Radius: 0.72 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 90 mana'
-  description: The Scales is always at full strength during Your piercing gaze burns
-    enemies in a line
-  damage_type: magical
   detail_kinds:
+  - null
   - magical
   - magical
   - mechanic
@@ -227,9 +226,12 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: The Scales is always at full strength during Your piercing gaze burns
+    enemies in a line
 aspects: []
 source_url: https://wiki.smite2.com/w/Anubis
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Anubis Basic Attack

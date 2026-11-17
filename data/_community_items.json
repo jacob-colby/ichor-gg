@@ -2,1430 +2,1430 @@
   "division": "obsidian",
   "items": {
     "Adamantine Sickle": {
-      "matches_played": 152,
-      "matches_won": 80,
-      "use_rate": 0.002348832537511783,
-      "win_rate": 0.5263157894736842
+      "matches_played": 162,
+      "matches_won": 88,
+      "use_rate": 0.0023587309445115825,
+      "win_rate": 0.5432098765432098
     },
     "Adroit Ring": {
-      "matches_played": 438,
-      "matches_won": 212,
-      "use_rate": 0.006768346390987901,
-      "win_rate": 0.4840182648401826
+      "matches_played": 478,
+      "matches_won": 236,
+      "use_rate": 0.00695971229306504,
+      "win_rate": 0.49372384937238495
     },
     "Aegis of Acceleration": {
-      "matches_played": 17883,
-      "matches_won": 9838,
-      "use_rate": 0.2763432386073896,
-      "win_rate": 0.5501314097187273
+      "matches_played": 19050,
+      "matches_won": 10479,
+      "use_rate": 0.27736928699349167,
+      "win_rate": 0.5500787401574803
     },
     "Agility Greaves": {
-      "matches_played": 98,
-      "matches_won": 55,
-      "use_rate": 0.0015143788728694389,
-      "win_rate": 0.5612244897959183
+      "matches_played": 108,
+      "matches_won": 60,
+      "use_rate": 0.001572487296341055,
+      "win_rate": 0.5555555555555556
     },
     "Agility Relic": {
-      "matches_played": 2925,
-      "matches_won": 1718,
-      "use_rate": 0.0451995735014603,
-      "win_rate": 0.5873504273504273
+      "matches_played": 3102,
+      "matches_won": 1820,
+      "use_rate": 0.045165329567129195,
+      "win_rate": 0.5867182462927144
     },
     "Alchemist Coat": {
-      "matches_played": 216,
-      "matches_won": 106,
-      "use_rate": 0.0033378146585693754,
-      "win_rate": 0.49074074074074076
+      "matches_played": 231,
+      "matches_won": 114,
+      "use_rate": 0.003363375606062812,
+      "win_rate": 0.4935064935064935
     },
     "Alternator Mod": {
       "matches_played": 5,
       "matches_won": 1,
-      "use_rate": 7.726422820762444e-05,
+      "use_rate": 7.280033779356736e-05,
       "win_rate": 0.2
     },
     "Amanita Charm": {
-      "matches_played": 656,
-      "matches_won": 375,
-      "use_rate": 0.010137066740840325,
-      "win_rate": 0.5716463414634146
+      "matches_played": 687,
+      "matches_won": 391,
+      "use_rate": 0.010002766412836156,
+      "win_rate": 0.5691411935953421
     },
     "Ancient Signet": {
-      "matches_played": 3944,
-      "matches_won": 2185,
-      "use_rate": 0.06094602321017415,
-      "win_rate": 0.5540060851926978
+      "matches_played": 4267,
+      "matches_won": 2356,
+      "use_rate": 0.06212780827303039,
+      "win_rate": 0.5521443637215843
     },
     "Ancile": {
-      "matches_played": 738,
-      "matches_won": 383,
-      "use_rate": 0.011404200083445367,
-      "win_rate": 0.518970189701897
+      "matches_played": 805,
+      "matches_won": 423,
+      "use_rate": 0.011720854384764345,
+      "win_rate": 0.5254658385093167
     },
     "Archmage's Gem": {
-      "matches_played": 7475,
-      "matches_won": 4365,
-      "use_rate": 0.11551002117039853,
-      "win_rate": 0.5839464882943144
+      "matches_played": 7943,
+      "matches_won": 4646,
+      "use_rate": 0.11565061661886111,
+      "win_rate": 0.5849175374543624
     },
     "Arondight": {
-      "matches_played": 533,
-      "matches_won": 289,
-      "use_rate": 0.008236366726932764,
-      "win_rate": 0.5422138836772983
+      "matches_played": 583,
+      "matches_won": 320,
+      "use_rate": 0.008488519386729955,
+      "win_rate": 0.548885077186964
     },
     "Ashwhorl Acorn": {
-      "matches_played": 776,
-      "matches_won": 465,
-      "use_rate": 0.011991408217823312,
-      "win_rate": 0.5992268041237113
+      "matches_played": 801,
+      "matches_won": 476,
+      "use_rate": 0.011662614114529492,
+      "win_rate": 0.5942571785268415
     },
     "Avatar's Parashu": {
-      "matches_played": 2203,
-      "matches_won": 1326,
-      "use_rate": 0.03404261894827933,
-      "win_rate": 0.601906491148434
+      "matches_played": 2342,
+      "matches_won": 1413,
+      "use_rate": 0.03409967822250695,
+      "win_rate": 0.60333048676345
     },
     "Avenging Blade": {
-      "matches_played": 1738,
-      "matches_won": 935,
-      "use_rate": 0.026857045724970253,
-      "win_rate": 0.5379746835443038
+      "matches_played": 1834,
+      "matches_won": 986,
+      "use_rate": 0.02670316390268051,
+      "win_rate": 0.5376226826608506
     },
     "Axe": {
-      "matches_played": 1458,
-      "matches_won": 748,
-      "use_rate": 0.022530248945343286,
-      "win_rate": 0.5130315500685871
+      "matches_played": 1554,
+      "matches_won": 796,
+      "use_rate": 0.022626344986240735,
+      "win_rate": 0.5122265122265123
     },
     "Bancroft's Talon": {
-      "matches_played": 870,
-      "matches_won": 471,
-      "use_rate": 0.013443975708126651,
-      "win_rate": 0.5413793103448276
+      "matches_played": 921,
+      "matches_won": 494,
+      "use_rate": 0.013409822221575107,
+      "win_rate": 0.5363735070575462
     },
     "Barbed Carver": {
-      "matches_played": 4230,
-      "matches_won": 2300,
-      "use_rate": 0.06536553706365027,
-      "win_rate": 0.5437352245862884
+      "matches_played": 4476,
+      "matches_won": 2419,
+      "use_rate": 0.0651708623928015,
+      "win_rate": 0.540437890974084
     },
     "Battle Axe": {
-      "matches_played": 124,
-      "matches_won": 71,
-      "use_rate": 0.001916152859549086,
-      "win_rate": 0.5725806451612904
+      "matches_played": 128,
+      "matches_won": 73,
+      "use_rate": 0.0018636886475153244,
+      "win_rate": 0.5703125
     },
     "Berserker's Shield": {
-      "matches_played": 5331,
-      "matches_won": 3060,
-      "use_rate": 0.08237912011496917,
-      "win_rate": 0.5740011254924029
+      "matches_played": 5655,
+      "matches_won": 3231,
+      "use_rate": 0.08233718204452468,
+      "win_rate": 0.5713527851458886
     },
     "Blink Rune": {
-      "matches_played": 5608,
-      "matches_won": 3142,
-      "use_rate": 0.08665955835767157,
-      "win_rate": 0.5602710413694721
+      "matches_played": 5974,
+      "matches_won": 3350,
+      "use_rate": 0.08698184359575428,
+      "win_rate": 0.560763307666555
     },
     "Blinking Abyss": {
-      "matches_played": 4383,
-      "matches_won": 2483,
-      "use_rate": 0.06772982244680358,
-      "win_rate": 0.566506958704084
+      "matches_played": 4671,
+      "matches_won": 2652,
+      "use_rate": 0.06801007556675064,
+      "win_rate": 0.5677585099550417
     },
     "Blood-Bound Book": {
-      "matches_played": 394,
-      "matches_won": 228,
-      "use_rate": 0.006088421182760806,
-      "win_rate": 0.5786802030456852
+      "matches_played": 419,
+      "matches_won": 239,
+      "use_rate": 0.0061006683071009446,
+      "win_rate": 0.5704057279236276
     },
     "Blood-soaked Shroud": {
-      "matches_played": 137,
-      "matches_won": 79,
-      "use_rate": 0.0021170398528889095,
-      "win_rate": 0.5766423357664233
+      "matches_played": 148,
+      "matches_won": 86,
+      "use_rate": 0.002154889998689594,
+      "win_rate": 0.581081081081081
     },
     "Bloodforge": {
-      "matches_played": 219,
-      "matches_won": 120,
-      "use_rate": 0.0033841731954939503,
-      "win_rate": 0.547945205479452
+      "matches_played": 228,
+      "matches_won": 124,
+      "use_rate": 0.003319695403386672,
+      "win_rate": 0.543859649122807
     },
     "Bluestone Brooch": {
-      "matches_played": 6489,
-      "matches_won": 3812,
-      "use_rate": 0.10027351536785499,
-      "win_rate": 0.5874556942518108
+      "matches_played": 6892,
+      "matches_won": 4062,
+      "use_rate": 0.10034798561465325,
+      "win_rate": 0.5893789901334882
     },
     "Bluestone Pendant": {
-      "matches_played": 4314,
-      "matches_won": 1885,
-      "use_rate": 0.06666357609753837,
-      "win_rate": 0.4369494668521094
+      "matches_played": 4610,
+      "matches_won": 2010,
+      "use_rate": 0.0671219114456691,
+      "win_rate": 0.4360086767895879
     },
     "Book of Thoth": {
-      "matches_played": 7321,
-      "matches_won": 3928,
-      "use_rate": 0.1131302829416037,
-      "win_rate": 0.536538724218003
+      "matches_played": 7744,
+      "matches_won": 4156,
+      "use_rate": 0.11275316317467714,
+      "win_rate": 0.5366735537190083
     },
     "Bow": {
-      "matches_played": 948,
-      "matches_won": 508,
-      "use_rate": 0.014649297668165593,
-      "win_rate": 0.5358649789029536
+      "matches_played": 1002,
+      "matches_won": 536,
+      "use_rate": 0.014589187693830899,
+      "win_rate": 0.5349301397205589
     },
     "Bowl Drum": {
-      "matches_played": 48,
-      "matches_won": 19,
-      "use_rate": 0.0007417365907931945,
-      "win_rate": 0.3958333333333333
+      "matches_played": 51,
+      "matches_won": 22,
+      "use_rate": 0.000742563445494387,
+      "win_rate": 0.43137254901960786
     },
     "Bracer of The Abyss": {
-      "matches_played": 621,
-      "matches_won": 364,
-      "use_rate": 0.009596217143386954,
-      "win_rate": 0.5861513687600645
+      "matches_played": 669,
+      "matches_won": 395,
+      "use_rate": 0.009740685196779312,
+      "win_rate": 0.5904334828101644
     },
     "Bragi's Harp": {
-      "matches_played": 1415,
-      "matches_won": 798,
-      "use_rate": 0.021865776582757714,
-      "win_rate": 0.5639575971731449
+      "matches_played": 1509,
+      "matches_won": 850,
+      "use_rate": 0.02197114194609863,
+      "win_rate": 0.5632869449966865
     },
     "Brawler's Beat Stick": {
-      "matches_played": 3349,
-      "matches_won": 1875,
-      "use_rate": 0.05175158005346685,
-      "win_rate": 0.5598686174977605
+      "matches_played": 3578,
+      "matches_won": 1998,
+      "use_rate": 0.05209592172507681,
+      "win_rate": 0.558412520961431
     },
     "Breastplate of Valor": {
-      "matches_played": 4105,
-      "matches_won": 2240,
-      "use_rate": 0.06343393135845966,
-      "win_rate": 0.5456760048721072
+      "matches_played": 4360,
+      "matches_won": 2379,
+      "use_rate": 0.06348189455599074,
+      "win_rate": 0.5456422018348623
     },
     "Briskberry Acorn": {
-      "matches_played": 1364,
-      "matches_won": 799,
-      "use_rate": 0.021077681455039944,
-      "win_rate": 0.5857771260997068
+      "matches_played": 1420,
+      "matches_won": 820,
+      "use_rate": 0.020675295933373132,
+      "win_rate": 0.5774647887323944
     },
     "Bumba's Cudgel": {
-      "matches_played": 3216,
-      "matches_won": 1458,
-      "use_rate": 0.04969635158314403,
-      "win_rate": 0.4533582089552239
+      "matches_played": 3420,
+      "matches_won": 1552,
+      "use_rate": 0.049795431050800074,
+      "win_rate": 0.45380116959064326
     },
     "Bumba's Golden Dagger": {
-      "matches_played": 94,
-      "matches_won": 44,
-      "use_rate": 0.0014525674903033393,
-      "win_rate": 0.46808510638297873
+      "matches_played": 97,
+      "matches_won": 46,
+      "use_rate": 0.0014123265531952069,
+      "win_rate": 0.4742268041237113
     },
     "Bumba's Hammer": {
-      "matches_played": 5857,
-      "matches_won": 3541,
-      "use_rate": 0.09050731692241126,
-      "win_rate": 0.6045757213590576
+      "matches_played": 6242,
+      "matches_won": 3780,
+      "use_rate": 0.0908839417014895,
+      "win_rate": 0.6055751361743031
     },
     "Bumba's Spear": {
-      "matches_played": 173,
-      "matches_won": 115,
-      "use_rate": 0.0026733422959838056,
-      "win_rate": 0.6647398843930635
+      "matches_played": 177,
+      "matches_won": 118,
+      "use_rate": 0.0025771319578922845,
+      "win_rate": 0.6666666666666666
     },
     "Caestus": {
-      "matches_played": 90,
-      "matches_won": 47,
-      "use_rate": 0.0013907561077372399,
-      "win_rate": 0.5222222222222223
+      "matches_played": 99,
+      "matches_won": 52,
+      "use_rate": 0.0014414466883126338,
+      "win_rate": 0.5252525252525253
     },
     "Captain's Ring": {
-      "matches_played": 911,
-      "matches_won": 431,
-      "use_rate": 0.014077542379429172,
-      "win_rate": 0.47310647639956094
+      "matches_played": 970,
+      "matches_won": 456,
+      "use_rate": 0.014123265531952069,
+      "win_rate": 0.47010309278350515
     },
     "Chandra's Grace": {
-      "matches_played": 1528,
-      "matches_won": 896,
-      "use_rate": 0.023611948140250028,
-      "win_rate": 0.5863874345549738
+      "matches_played": 1613,
+      "matches_won": 943,
+      "use_rate": 0.02348538897220483,
+      "win_rate": 0.5846249225046497
     },
     "Chronos' Pendant": {
-      "matches_played": 5688,
-      "matches_won": 3016,
-      "use_rate": 0.08789578600899356,
-      "win_rate": 0.530239099859353
+      "matches_played": 6024,
+      "matches_won": 3208,
+      "use_rate": 0.08770984697368996,
+      "win_rate": 0.5325365205843293
     },
     "Circe's Hexstone": {
-      "matches_played": 1039,
-      "matches_won": 574,
-      "use_rate": 0.01605550662154436,
-      "win_rate": 0.5524542829643888
+      "matches_played": 1091,
+      "matches_won": 607,
+      "use_rate": 0.0158850337065564,
+      "win_rate": 0.5563703024747938
     },
     "Circle of Protection": {
-      "matches_played": 390,
-      "matches_won": 183,
-      "use_rate": 0.006026609800194706,
-      "win_rate": 0.46923076923076923
+      "matches_played": 423,
+      "matches_won": 200,
+      "use_rate": 0.006158908577335799,
+      "win_rate": 0.4728132387706856
     },
     "Circlet": {
-      "matches_played": 314,
-      "matches_won": 150,
-      "use_rate": 0.004852193531438814,
-      "win_rate": 0.47770700636942676
+      "matches_played": 341,
+      "matches_won": 163,
+      "use_rate": 0.004964983037521294,
+      "win_rate": 0.4780058651026393
     },
     "Cleric's Cloak": {
-      "matches_played": 87,
-      "matches_won": 39,
-      "use_rate": 0.0013443975708126651,
-      "win_rate": 0.4482758620689655
+      "matches_played": 98,
+      "matches_won": 44,
+      "use_rate": 0.0014268866207539203,
+      "win_rate": 0.4489795918367347
     },
     "Combat Boots": {
       "matches_played": 6,
       "matches_won": 2,
-      "use_rate": 9.271707384914932e-05,
+      "use_rate": 8.736040535228084e-05,
       "win_rate": 0.3333333333333333
     },
     "Conduit Gem": {
-      "matches_played": 4444,
-      "matches_won": 2010,
-      "use_rate": 0.0686724460309366,
-      "win_rate": 0.4522952295229523
+      "matches_played": 4711,
+      "matches_won": 2135,
+      "use_rate": 0.06859247826909917,
+      "win_rate": 0.45319465081723626
     },
     "Contagion": {
-      "matches_played": 1976,
-      "matches_won": 1094,
-      "use_rate": 0.030534822987653178,
-      "win_rate": 0.5536437246963563
+      "matches_played": 2100,
+      "matches_won": 1158,
+      "use_rate": 0.030576141873298292,
+      "win_rate": 0.5514285714285714
     },
     "Cursed Sickle": {
-      "matches_played": 464,
-      "matches_won": 206,
-      "use_rate": 0.007170120377667548,
-      "win_rate": 0.44396551724137934
+      "matches_played": 496,
+      "matches_won": 222,
+      "use_rate": 0.0072217935091218825,
+      "win_rate": 0.4475806451612903
     },
     "Dagger of Frenzy": {
-      "matches_played": 7070,
-      "matches_won": 3842,
-      "use_rate": 0.10925161868558095,
-      "win_rate": 0.5434229137199434
+      "matches_played": 7542,
+      "matches_won": 4098,
+      "use_rate": 0.109812029527817,
+      "win_rate": 0.543357199681782
     },
     "Damaru": {
-      "matches_played": 715,
-      "matches_won": 402,
-      "use_rate": 0.011048784633690294,
-      "win_rate": 0.5622377622377622
+      "matches_played": 754,
+      "matches_won": 421,
+      "use_rate": 0.010978290939269959,
+      "win_rate": 0.5583554376657824
     },
     "Daybreak Gavel": {
-      "matches_played": 212,
-      "matches_won": 111,
-      "use_rate": 0.003276003276003276,
-      "win_rate": 0.5235849056603774
+      "matches_played": 224,
+      "matches_won": 118,
+      "use_rate": 0.003261455133151818,
+      "win_rate": 0.5267857142857143
     },
     "Death Metal": {
-      "matches_played": 31,
-      "matches_won": 13,
-      "use_rate": 0.0004790382148872715,
-      "win_rate": 0.41935483870967744
+      "matches_played": 36,
+      "matches_won": 17,
+      "use_rate": 0.000524162432113685,
+      "win_rate": 0.4722222222222222
     },
     "Death's Embrace": {
-      "matches_played": 2276,
-      "matches_won": 1327,
-      "use_rate": 0.03517067668011064,
-      "win_rate": 0.5830404217926186
+      "matches_played": 2415,
+      "matches_won": 1407,
+      "use_rate": 0.03516256315429304,
+      "win_rate": 0.5826086956521739
     },
     "Death's Toll": {
-      "matches_played": 1020,
-      "matches_won": 467,
-      "use_rate": 0.015761902554355386,
-      "win_rate": 0.45784313725490194
+      "matches_played": 1088,
+      "matches_won": 502,
+      "use_rate": 0.01584135350388026,
+      "win_rate": 0.46139705882352944
     },
     "Deathbringer": {
-      "matches_played": 3425,
-      "matches_won": 1923,
-      "use_rate": 0.05292599632222274,
-      "win_rate": 0.5614598540145985
+      "matches_played": 3636,
+      "matches_won": 2059,
+      "use_rate": 0.05294040564348219,
+      "win_rate": 0.5662816281628162
     },
     "Demon Blade": {
-      "matches_played": 608,
-      "matches_won": 337,
-      "use_rate": 0.009395330150047131,
-      "win_rate": 0.5542763157894737
+      "matches_played": 636,
+      "matches_won": 354,
+      "use_rate": 0.009260202967341768,
+      "win_rate": 0.5566037735849056
     },
     "Devourer's Gauntlet": {
-      "matches_played": 11554,
-      "matches_won": 6377,
-      "use_rate": 0.17854217854217855,
-      "win_rate": 0.5519300675090878
+      "matches_played": 12242,
+      "matches_won": 6751,
+      "use_rate": 0.17824434705377032,
+      "win_rate": 0.5514621793824539
     },
     "Divine Ruin": {
-      "matches_played": 2029,
-      "matches_won": 1076,
-      "use_rate": 0.031353823806653996,
-      "win_rate": 0.5303104977821587
+      "matches_played": 2166,
+      "matches_won": 1155,
+      "use_rate": 0.03153710633217338,
+      "win_rate": 0.5332409972299169
     },
     "Dominance": {
-      "matches_played": 5673,
-      "matches_won": 3065,
-      "use_rate": 0.08766399332437068,
-      "win_rate": 0.5402785122510135
+      "matches_played": 6027,
+      "matches_won": 3253,
+      "use_rate": 0.0877535271763661,
+      "win_rate": 0.5397378463580554
     },
     "Doom Orb": {
-      "matches_played": 1065,
-      "matches_won": 584,
-      "use_rate": 0.016457280608224004,
-      "win_rate": 0.5483568075117371
+      "matches_played": 1106,
+      "matches_won": 607,
+      "use_rate": 0.0161034347199371,
+      "win_rate": 0.5488245931283906
     },
     "Doublet of Binding": {
-      "matches_played": 120,
-      "matches_won": 72,
-      "use_rate": 0.0018543414769829863,
-      "win_rate": 0.6
+      "matches_played": 124,
+      "matches_won": 74,
+      "use_rate": 0.0018054483772804706,
+      "win_rate": 0.5967741935483871
     },
     "Draconic Scale": {
-      "matches_played": 1338,
-      "matches_won": 779,
-      "use_rate": 0.0206759074683603,
-      "win_rate": 0.5822122571001495
+      "matches_played": 1406,
+      "matches_won": 813,
+      "use_rate": 0.02047145498755114,
+      "win_rate": 0.5782361308677099
     },
     "Dreamer's Idol": {
-      "matches_played": 1253,
-      "matches_won": 793,
-      "use_rate": 0.019362415588830683,
-      "win_rate": 0.6328810853950518
+      "matches_played": 1307,
+      "matches_won": 827,
+      "use_rate": 0.01903000829923851,
+      "win_rate": 0.6327467482785004
     },
     "Dwarven Plate": {
-      "matches_played": 361,
-      "matches_won": 215,
-      "use_rate": 0.005578477276590484,
-      "win_rate": 0.5955678670360111
+      "matches_played": 393,
+      "matches_won": 231,
+      "use_rate": 0.0057221065505743945,
+      "win_rate": 0.5877862595419847
     },
     "Efficiency Mod": {
-      "matches_played": 138,
-      "matches_won": 65,
-      "use_rate": 0.002132492698530434,
-      "win_rate": 0.47101449275362317
+      "matches_played": 144,
+      "matches_won": 68,
+      "use_rate": 0.00209664972845474,
+      "win_rate": 0.4722222222222222
     },
     "Enchanted Bracelet": {
-      "matches_played": 128,
-      "matches_won": 64,
-      "use_rate": 0.0019779642421151856,
-      "win_rate": 0.5
+      "matches_played": 138,
+      "matches_won": 67,
+      "use_rate": 0.0020092893231024593,
+      "win_rate": 0.4855072463768116
     },
     "Engraved Guard": {
-      "matches_played": 1368,
-      "matches_won": 673,
-      "use_rate": 0.021139492837606046,
-      "win_rate": 0.4919590643274854
+      "matches_played": 1437,
+      "matches_won": 703,
+      "use_rate": 0.02092281708187126,
+      "win_rate": 0.4892136395267919
     },
     "Eros' Bow": {
-      "matches_played": 15,
-      "matches_won": 8,
-      "use_rate": 0.0002317926846228733,
-      "win_rate": 0.5333333333333333
+      "matches_played": 17,
+      "matches_won": 10,
+      "use_rate": 0.00024752114849812905,
+      "win_rate": 0.5882352941176471
     },
     "Erosion": {
-      "matches_played": 554,
-      "matches_won": 285,
-      "use_rate": 0.008560876485404788,
-      "win_rate": 0.5144404332129964
+      "matches_played": 586,
+      "matches_won": 300,
+      "use_rate": 0.008532199589406094,
+      "win_rate": 0.5119453924914675
     },
     "Ethereal Staff": {
-      "matches_played": 1057,
-      "matches_won": 598,
-      "use_rate": 0.016333657843091806,
-      "win_rate": 0.565752128666036
+      "matches_played": 1108,
+      "matches_won": 628,
+      "use_rate": 0.016132554855054528,
+      "win_rate": 0.5667870036101083
     },
     "Evil Eye": {
-      "matches_played": 2495,
-      "matches_won": 1157,
-      "use_rate": 0.03855484987560459,
-      "win_rate": 0.46372745490981965
+      "matches_played": 2640,
+      "matches_won": 1221,
+      "use_rate": 0.03843857835500357,
+      "win_rate": 0.4625
     },
     "Eye of Erebus": {
-      "matches_played": 592,
-      "matches_won": 328,
-      "use_rate": 0.009148084619782733,
-      "win_rate": 0.5540540540540541
+      "matches_played": 633,
+      "matches_won": 351,
+      "use_rate": 0.009216522764665627,
+      "win_rate": 0.5545023696682464
     },
     "Eye of Providence": {
-      "matches_played": 63,
-      "matches_won": 43,
-      "use_rate": 0.0009735292754160679,
-      "win_rate": 0.6825396825396826
+      "matches_played": 72,
+      "matches_won": 50,
+      "use_rate": 0.00104832486422737,
+      "win_rate": 0.6944444444444444
     },
     "Eye of the Storm": {
-      "matches_played": 94,
-      "matches_won": 51,
-      "use_rate": 0.0014525674903033393,
-      "win_rate": 0.5425531914893617
+      "matches_played": 102,
+      "matches_won": 55,
+      "use_rate": 0.001485126890988774,
+      "win_rate": 0.5392156862745098
     },
     "Flaming Pearl": {
-      "matches_played": 202,
-      "matches_won": 95,
-      "use_rate": 0.003121474819588027,
-      "win_rate": 0.47029702970297027
+      "matches_played": 209,
+      "matches_won": 99,
+      "use_rate": 0.0030430541197711157,
+      "win_rate": 0.47368421052631576
     },
     "Freya's Tears": {
-      "matches_played": 11203,
-      "matches_won": 6270,
-      "use_rate": 0.1731182297220033,
-      "win_rate": 0.5596715165580648
+      "matches_played": 11953,
+      "matches_won": 6694,
+      "use_rate": 0.17403648752930215,
+      "win_rate": 0.5600267715217937
     },
     "Gauntlet of Thebes": {
-      "matches_played": 4957,
-      "matches_won": 2660,
-      "use_rate": 0.07659975584503886,
-      "win_rate": 0.5366148880371192
+      "matches_played": 5238,
+      "matches_won": 2812,
+      "use_rate": 0.07626563387254116,
+      "win_rate": 0.5368461244749905
     },
     "Gem": {
-      "matches_played": 738,
-      "matches_won": 423,
-      "use_rate": 0.011404200083445367,
-      "win_rate": 0.573170731707317
+      "matches_played": 782,
+      "matches_won": 446,
+      "use_rate": 0.011385972830913936,
+      "win_rate": 0.5703324808184144
     },
     "Gem of Focus": {
-      "matches_played": 1911,
-      "matches_won": 1039,
-      "use_rate": 0.02953038802095406,
-      "win_rate": 0.543694400837258
+      "matches_played": 2030,
+      "matches_won": 1106,
+      "use_rate": 0.02955693714418835,
+      "win_rate": 0.5448275862068965
     },
     "Gem of Isolation": {
-      "matches_played": 361,
-      "matches_won": 206,
-      "use_rate": 0.005578477276590484,
-      "win_rate": 0.5706371191135734
+      "matches_played": 396,
+      "matches_won": 228,
+      "use_rate": 0.005765786753250535,
+      "win_rate": 0.5757575757575758
     },
     "Genie's Lamp": {
-      "matches_played": 539,
-      "matches_won": 298,
-      "use_rate": 0.008329083800781914,
-      "win_rate": 0.5528756957328386
+      "matches_played": 578,
+      "matches_won": 314,
+      "use_rate": 0.008415719048936387,
+      "win_rate": 0.5432525951557093
     },
     "Genji's Guard": {
-      "matches_played": 7689,
-      "matches_won": 4241,
-      "use_rate": 0.11881693013768485,
-      "win_rate": 0.5515671738847705
+      "matches_played": 8152,
+      "matches_won": 4501,
+      "use_rate": 0.11869367073863223,
+      "win_rate": 0.552134445534838
     },
     "Gilded Arrow": {
-      "matches_played": 1944,
-      "matches_won": 764,
-      "use_rate": 0.03004033192712438,
-      "win_rate": 0.39300411522633744
+      "matches_played": 2048,
+      "matches_won": 808,
+      "use_rate": 0.02981901836024519,
+      "win_rate": 0.39453125
     },
     "Gladiator's Shield": {
-      "matches_played": 1504,
-      "matches_won": 801,
-      "use_rate": 0.023241079844853428,
-      "win_rate": 0.5325797872340425
+      "matches_played": 1599,
+      "matches_won": 850,
+      "use_rate": 0.023281548026382843,
+      "win_rate": 0.5315822388993121
     },
     "Glorious Pridwen": {
-      "matches_played": 395,
-      "matches_won": 237,
-      "use_rate": 0.00610387402840233,
-      "win_rate": 0.6
+      "matches_played": 413,
+      "matches_won": 246,
+      "use_rate": 0.006013307901748664,
+      "win_rate": 0.5956416464891041
     },
     "Gluttonous Grimoire": {
-      "matches_played": 250,
-      "matches_won": 145,
-      "use_rate": 0.0038632114103812217,
-      "win_rate": 0.58
+      "matches_played": 257,
+      "matches_won": 150,
+      "use_rate": 0.0037419373625893625,
+      "win_rate": 0.5836575875486382
     },
     "Golden Blade": {
-      "matches_played": 1002,
-      "matches_won": 593,
-      "use_rate": 0.015483751332807936,
-      "win_rate": 0.591816367265469
+      "matches_played": 1079,
+      "matches_won": 632,
+      "use_rate": 0.015710312895851838,
+      "win_rate": 0.5857275254865616
     },
     "Hastened Fatalis": {
-      "matches_played": 688,
-      "matches_won": 386,
-      "use_rate": 0.010631557801369122,
-      "win_rate": 0.561046511627907
+      "matches_played": 730,
+      "matches_won": 414,
+      "use_rate": 0.010628849317860834,
+      "win_rate": 0.5671232876712329
     },
     "Heartseeker": {
-      "matches_played": 8778,
-      "matches_won": 4929,
-      "use_rate": 0.13564507904130546,
-      "win_rate": 0.5615174299384825
+      "matches_played": 9351,
+      "matches_won": 5266,
+      "use_rate": 0.13615119174152968,
+      "win_rate": 0.5631483263822051
     },
     "Heartwood Charm": {
-      "matches_played": 174,
-      "matches_won": 101,
-      "use_rate": 0.0026887951416253303,
-      "win_rate": 0.5804597701149425
+      "matches_played": 180,
+      "matches_won": 105,
+      "use_rate": 0.002620812160568425,
+      "win_rate": 0.5833333333333334
     },
     "Helm of Darkness": {
-      "matches_played": 227,
-      "matches_won": 125,
-      "use_rate": 0.003507795960626149,
-      "win_rate": 0.5506607929515418
+      "matches_played": 247,
+      "matches_won": 136,
+      "use_rate": 0.0035963366870022276,
+      "win_rate": 0.5506072874493927
     },
     "Helm of Radiance": {
-      "matches_played": 333,
-      "matches_won": 170,
-      "use_rate": 0.005145797598627788,
-      "win_rate": 0.5105105105105106
+      "matches_played": 348,
+      "matches_won": 175,
+      "use_rate": 0.005066903510432289,
+      "win_rate": 0.5028735632183908
     },
     "Heroism": {
-      "matches_played": 1483,
-      "matches_won": 939,
-      "use_rate": 0.022916570086381406,
-      "win_rate": 0.6331759946055293
+      "matches_played": 1548,
+      "matches_won": 977,
+      "use_rate": 0.022538984580888457,
+      "win_rate": 0.6311369509043928
     },
     "Hide of the Nemean Lion": {
-      "matches_played": 1971,
-      "matches_won": 984,
-      "use_rate": 0.03045755875944555,
-      "win_rate": 0.4992389649923896
+      "matches_played": 2103,
+      "matches_won": 1049,
+      "use_rate": 0.030619822075974433,
+      "win_rate": 0.4988112220637185
     },
     "Hooked Sword": {
-      "matches_played": 31,
-      "matches_won": 11,
-      "use_rate": 0.0004790382148872715,
-      "win_rate": 0.3548387096774194
+      "matches_played": 34,
+      "matches_won": 12,
+      "use_rate": 0.0004950422969962581,
+      "win_rate": 0.35294117647058826
     },
     "Hunter's Bow": {
-      "matches_played": 1646,
-      "matches_won": 771,
-      "use_rate": 0.025435383925949965,
-      "win_rate": 0.468408262454435
+      "matches_played": 1746,
+      "matches_won": 813,
+      "use_rate": 0.025421877957513724,
+      "win_rate": 0.46563573883161513
     },
     "Hunter's Cowl": {
-      "matches_played": 5544,
-      "matches_won": 3392,
-      "use_rate": 0.08567057623661398,
-      "win_rate": 0.6118326118326118
+      "matches_played": 5886,
+      "matches_won": 3588,
+      "use_rate": 0.0857005576505875,
+      "win_rate": 0.6095820591233435
     },
     "Hussar's Wings": {
-      "matches_played": 1697,
-      "matches_won": 1052,
-      "use_rate": 0.026223479053667734,
-      "win_rate": 0.619917501473188
+      "matches_played": 1774,
+      "matches_won": 1097,
+      "use_rate": 0.0258295598491577,
+      "win_rate": 0.6183765501691093
     },
     "Hydra's Lament": {
-      "matches_played": 7310,
-      "matches_won": 3962,
-      "use_rate": 0.11296030163954693,
-      "win_rate": 0.5419972640218879
+      "matches_played": 7780,
+      "matches_won": 4222,
+      "use_rate": 0.11327732560679081,
+      "win_rate": 0.5426735218508998
     },
     "Infused Axe": {
-      "matches_played": 996,
-      "matches_won": 395,
-      "use_rate": 0.015391034258958788,
-      "win_rate": 0.3965863453815261
+      "matches_played": 1058,
+      "matches_won": 418,
+      "use_rate": 0.015404551477118854,
+      "win_rate": 0.3950850661625709
     },
     "Jade Scepter": {
       "matches_played": 40,
       "matches_won": 16,
-      "use_rate": 0.0006181138256609955,
+      "use_rate": 0.0005824027023485389,
       "win_rate": 0.4
     },
     "Jotunn's Revenge": {
-      "matches_played": 10692,
-      "matches_won": 5859,
-      "use_rate": 0.16522182559918408,
-      "win_rate": 0.547979797979798
+      "matches_played": 11389,
+      "matches_won": 6230,
+      "use_rate": 0.16582460942618774,
+      "win_rate": 0.547019053472649
     },
     "Killing Stone": {
-      "matches_played": 1052,
-      "matches_won": 564,
-      "use_rate": 0.01625639361488418,
-      "win_rate": 0.5361216730038023
+      "matches_played": 1117,
+      "matches_won": 597,
+      "use_rate": 0.01626359546308295,
+      "win_rate": 0.5344673231871083
     },
     "Kinetic Cuirass": {
-      "matches_played": 5241,
-      "matches_won": 2995,
-      "use_rate": 0.08098836400723193,
-      "win_rate": 0.5714558290402595
+      "matches_played": 5565,
+      "matches_won": 3185,
+      "use_rate": 0.08102677596424047,
+      "win_rate": 0.5723270440251572
     },
     "Kopesh": {
-      "matches_played": 386,
-      "matches_won": 183,
-      "use_rate": 0.0059647984176286065,
-      "win_rate": 0.4740932642487047
+      "matches_played": 415,
+      "matches_won": 194,
+      "use_rate": 0.006042428036866091,
+      "win_rate": 0.4674698795180723
     },
     "Leather Cowl": {
-      "matches_played": 3055,
-      "matches_won": 1437,
-      "use_rate": 0.04720844343485853,
-      "win_rate": 0.4703764320785597
+      "matches_played": 3225,
+      "matches_won": 1517,
+      "use_rate": 0.04695621787685095,
+      "win_rate": 0.4703875968992248
     },
     "Legionnaire Armor": {
-      "matches_played": 633,
-      "matches_won": 317,
-      "use_rate": 0.009781651291085254,
-      "win_rate": 0.5007898894154819
+      "matches_played": 675,
+      "matches_won": 337,
+      "use_rate": 0.009828045602131593,
+      "win_rate": 0.49925925925925924
     },
     "Lernaean Bow": {
-      "matches_played": 96,
+      "matches_played": 98,
       "matches_won": 44,
-      "use_rate": 0.001483473181586389,
-      "win_rate": 0.4583333333333333
+      "use_rate": 0.0014268866207539203,
+      "win_rate": 0.4489795918367347
     },
     "Leviathan's Hide": {
-      "matches_played": 624,
-      "matches_won": 335,
-      "use_rate": 0.00964257568031153,
-      "win_rate": 0.5368589743589743
+      "matches_played": 668,
+      "matches_won": 359,
+      "use_rate": 0.0097261251292206,
+      "win_rate": 0.5374251497005988
     },
     "Lifebinder": {
-      "matches_played": 216,
-      "matches_won": 114,
-      "use_rate": 0.0033378146585693754,
-      "win_rate": 0.5277777777777778
+      "matches_played": 242,
+      "matches_won": 126,
+      "use_rate": 0.0035235363492086605,
+      "win_rate": 0.5206611570247934
     },
     "Lively Acorn": {
-      "matches_played": 52,
+      "matches_played": 55,
       "matches_won": 30,
-      "use_rate": 0.0008035479733592941,
-      "win_rate": 0.5769230769230769
+      "use_rate": 0.000800803715729241,
+      "win_rate": 0.5454545454545454
     },
     "Lotus Sickle": {
-      "matches_played": 225,
-      "matches_won": 143,
-      "use_rate": 0.0034768902693430997,
-      "win_rate": 0.6355555555555555
+      "matches_played": 243,
+      "matches_won": 156,
+      "use_rate": 0.0035380964167673738,
+      "win_rate": 0.6419753086419753
     },
     "Lucerne Hammer": {
-      "matches_played": 1210,
-      "matches_won": 595,
-      "use_rate": 0.018697943226245115,
-      "win_rate": 0.49173553719008267
+      "matches_played": 1288,
+      "matches_won": 625,
+      "use_rate": 0.01875336701562295,
+      "win_rate": 0.48524844720496896
     },
     "Magi's Cloak": {
-      "matches_played": 1119,
-      "matches_won": 639,
-      "use_rate": 0.017291734272866347,
-      "win_rate": 0.5710455764075067
+      "matches_played": 1182,
+      "matches_won": 672,
+      "use_rate": 0.017209999854399326,
+      "win_rate": 0.5685279187817259
     },
     "Magic Acorn": {
-      "matches_played": 184,
-      "matches_won": 97,
-      "use_rate": 0.0028433235980405793,
-      "win_rate": 0.5271739130434783
+      "matches_played": 195,
+      "matches_won": 102,
+      "use_rate": 0.002839213173949127,
+      "win_rate": 0.5230769230769231
     },
     "Mana Tome": {
-      "matches_played": 639,
-      "matches_won": 299,
-      "use_rate": 0.009874368364934402,
-      "win_rate": 0.4679186228482003
+      "matches_played": 669,
+      "matches_won": 310,
+      "use_rate": 0.009740685196779312,
+      "win_rate": 0.4633781763826607
     },
     "Manchu Bow": {
-      "matches_played": 1222,
-      "matches_won": 604,
-      "use_rate": 0.01888337737394341,
-      "win_rate": 0.49427168576104746
+      "matches_played": 1303,
+      "matches_won": 638,
+      "use_rate": 0.018971768029003654,
+      "win_rate": 0.4896392939370683
     },
     "Mantle of Discord": {
-      "matches_played": 413,
-      "matches_won": 243,
-      "use_rate": 0.006382025249949778,
-      "win_rate": 0.5883777239709443
+      "matches_played": 441,
+      "matches_won": 257,
+      "use_rate": 0.006420989793392642,
+      "win_rate": 0.5827664399092971
     },
     "Masterwork Mod": {
       "matches_played": 40,
       "matches_won": 23,
-      "use_rate": 0.0006181138256609955,
+      "use_rate": 0.0005824027023485389,
       "win_rate": 0.575
     },
     "Medal of Defense": {
-      "matches_played": 1232,
-      "matches_won": 617,
-      "use_rate": 0.01903790583035866,
-      "win_rate": 0.5008116883116883
+      "matches_played": 1300,
+      "matches_won": 654,
+      "use_rate": 0.018928087826327513,
+      "win_rate": 0.5030769230769231
     },
     "Medal of Disruption": {
-      "matches_played": 555,
-      "matches_won": 273,
-      "use_rate": 0.008576329331046312,
-      "win_rate": 0.4918918918918919
+      "matches_played": 578,
+      "matches_won": 285,
+      "use_rate": 0.008415719048936387,
+      "win_rate": 0.4930795847750865
     },
     "Medallion": {
-      "matches_played": 713,
-      "matches_won": 386,
-      "use_rate": 0.011017878942407244,
-      "win_rate": 0.541374474053296
+      "matches_played": 761,
+      "matches_won": 416,
+      "use_rate": 0.011080211412180952,
+      "win_rate": 0.5466491458607096
     },
     "Mercury's Talaria": {
-      "matches_played": 82,
-      "matches_won": 44,
-      "use_rate": 0.0012671333426050406,
-      "win_rate": 0.5365853658536586
+      "matches_played": 87,
+      "matches_won": 48,
+      "use_rate": 0.0012667258776080722,
+      "win_rate": 0.5517241379310345
     },
     "Midgardian Mail": {
-      "matches_played": 369,
-      "matches_won": 183,
-      "use_rate": 0.005702100041722683,
-      "win_rate": 0.4959349593495935
+      "matches_played": 386,
+      "matches_won": 193,
+      "use_rate": 0.0056201860776634,
+      "win_rate": 0.5
     },
     "Mote of Chaos": {
-      "matches_played": 1774,
-      "matches_won": 916,
-      "use_rate": 0.02741334816806515,
-      "win_rate": 0.5163472378804961
+      "matches_played": 1869,
+      "matches_won": 966,
+      "use_rate": 0.02721276626723548,
+      "win_rate": 0.5168539325842697
     },
     "Musashi's Dual Swords": {
-      "matches_played": 682,
-      "matches_won": 392,
-      "use_rate": 0.010538840727519972,
-      "win_rate": 0.5747800586510264
+      "matches_played": 724,
+      "matches_won": 417,
+      "use_rate": 0.010541488912508555,
+      "win_rate": 0.5759668508287292
     },
     "Mystical Mail": {
-      "matches_played": 950,
-      "matches_won": 532,
-      "use_rate": 0.014680203359448642,
-      "win_rate": 0.56
+      "matches_played": 1001,
+      "matches_won": 561,
+      "use_rate": 0.014574627626272187,
+      "win_rate": 0.5604395604395604
     },
     "Necronomicon": {
-      "matches_played": 390,
-      "matches_won": 227,
-      "use_rate": 0.006026609800194706,
-      "win_rate": 0.5820512820512821
+      "matches_played": 407,
+      "matches_won": 237,
+      "use_rate": 0.005925947496396383,
+      "win_rate": 0.5823095823095823
     },
     "Nimble Ring": {
-      "matches_played": 1831,
-      "matches_won": 1037,
-      "use_rate": 0.028294160369632067,
-      "win_rate": 0.5663571818678318
+      "matches_played": 1952,
+      "matches_won": 1096,
+      "use_rate": 0.0284212518746087,
+      "win_rate": 0.5614754098360656
     },
     "Oath-Sworn Spear": {
-      "matches_played": 392,
-      "matches_won": 218,
-      "use_rate": 0.0060575154914777555,
-      "win_rate": 0.5561224489795918
+      "matches_played": 414,
+      "matches_won": 228,
+      "use_rate": 0.0060278679693073775,
+      "win_rate": 0.5507246376811594
     },
     "Obsidian Shard": {
-      "matches_played": 7086,
-      "matches_won": 3969,
-      "use_rate": 0.10949886421584534,
-      "win_rate": 0.5601185436071127
+      "matches_played": 7538,
+      "matches_won": 4219,
+      "use_rate": 0.10975378925758215,
+      "win_rate": 0.55969753250199
     },
     "Odigba": {
       "matches_played": 31,
       "matches_won": 14,
-      "use_rate": 0.0004790382148872715,
+      "use_rate": 0.00045136209432011765,
       "win_rate": 0.45161290322580644
     },
     "Odysseus' Bow": {
-      "matches_played": 3776,
-      "matches_won": 2175,
-      "use_rate": 0.058349945142397976,
-      "win_rate": 0.5760063559322034
+      "matches_played": 3970,
+      "matches_won": 2284,
+      "use_rate": 0.057803468208092484,
+      "win_rate": 0.5753148614609572
     },
     "Olmec Blue": {
-      "matches_played": 999,
-      "matches_won": 458,
-      "use_rate": 0.015437392795883362,
-      "win_rate": 0.45845845845845845
+      "matches_played": 1049,
+      "matches_won": 482,
+      "use_rate": 0.015273510869090432,
+      "win_rate": 0.45948522402287895
     },
     "Omen Drum": {
-      "matches_played": 802,
-      "matches_won": 455,
-      "use_rate": 0.012393182204502959,
-      "win_rate": 0.5673316708229427
+      "matches_played": 840,
+      "matches_won": 475,
+      "use_rate": 0.012230456749319317,
+      "win_rate": 0.5654761904761905
     },
     "Oni Hunter's Garb": {
-      "matches_played": 563,
-      "matches_won": 318,
-      "use_rate": 0.008699952096178512,
-      "win_rate": 0.5648312611012434
+      "matches_played": 604,
+      "matches_won": 337,
+      "use_rate": 0.008794280805462937,
+      "win_rate": 0.5579470198675497
     },
     "Oracle Staff": {
-      "matches_played": 906,
-      "matches_won": 456,
-      "use_rate": 0.014000278151221547,
-      "win_rate": 0.5033112582781457
+      "matches_played": 964,
+      "matches_won": 482,
+      "use_rate": 0.014035905126599788,
+      "win_rate": 0.5
     },
     "Pendulum Blade": {
-      "matches_played": 1585,
-      "matches_won": 848,
-      "use_rate": 0.024492760341816945,
-      "win_rate": 0.5350157728706625
+      "matches_played": 1706,
+      "matches_won": 927,
+      "use_rate": 0.024839475255165184,
+      "win_rate": 0.5433763188745604
     },
     "Pendulum of The Ages": {
-      "matches_played": 4682,
-      "matches_won": 2709,
-      "use_rate": 0.07235022329361952,
-      "win_rate": 0.5785988893635199
+      "matches_played": 4957,
+      "matches_won": 2862,
+      "use_rate": 0.07217425488854268,
+      "win_rate": 0.5773653419406899
     },
     "Phantom Shell": {
-      "matches_played": 7551,
-      "matches_won": 3871,
-      "use_rate": 0.11668443743915442,
-      "win_rate": 0.5126473314792742
+      "matches_played": 7993,
+      "matches_won": 4093,
+      "use_rate": 0.11637861999679679,
+      "win_rate": 0.5120730639309395
     },
     "Pharaoh's Curse": {
-      "matches_played": 161,
-      "matches_won": 83,
-      "use_rate": 0.0024879081482855068,
-      "win_rate": 0.515527950310559
+      "matches_played": 172,
+      "matches_won": 90,
+      "use_rate": 0.0025043316200987174,
+      "win_rate": 0.5232558139534884
     },
     "Phoenix Feather": {
-      "matches_played": 187,
-      "matches_won": 93,
-      "use_rate": 0.002889682134965154,
-      "win_rate": 0.49732620320855614
+      "matches_played": 198,
+      "matches_won": 95,
+      "use_rate": 0.0028828933766252675,
+      "win_rate": 0.4797979797979798
     },
     "Plated Metal": {
-      "matches_played": 109,
-      "matches_won": 46,
-      "use_rate": 0.0016843601749262126,
-      "win_rate": 0.42201834862385323
+      "matches_played": 112,
+      "matches_won": 47,
+      "use_rate": 0.001630727566575909,
+      "win_rate": 0.41964285714285715
     },
     "Polynomicon": {
-      "matches_played": 2652,
-      "matches_won": 1446,
-      "use_rate": 0.040980946641324,
-      "win_rate": 0.5452488687782805
+      "matches_played": 2835,
+      "matches_won": 1548,
+      "use_rate": 0.041277791528952695,
+      "win_rate": 0.546031746031746
     },
     "Prophetic Cloak": {
-      "matches_played": 2432,
-      "matches_won": 1326,
-      "use_rate": 0.037581320600188525,
-      "win_rate": 0.5452302631578947
+      "matches_played": 2570,
+      "matches_won": 1397,
+      "use_rate": 0.03741937362589363,
+      "win_rate": 0.5435797665369649
     },
     "Purification Beads": {
-      "matches_played": 26745,
-      "matches_won": 14180,
-      "use_rate": 0.4132863566825831,
-      "win_rate": 0.5301925593568891
+      "matches_played": 28297,
+      "matches_won": 14998,
+      "use_rate": 0.41200623170891515,
+      "win_rate": 0.5300208502668128
     },
     "Qin's Blade": {
-      "matches_played": 1066,
-      "matches_won": 565,
-      "use_rate": 0.01647273345386553,
-      "win_rate": 0.5300187617260788
+      "matches_played": 1174,
+      "matches_won": 629,
+      "use_rate": 0.017093519313929616,
+      "win_rate": 0.5357751277683135
     },
     "Rage": {
-      "matches_played": 735,
-      "matches_won": 391,
-      "use_rate": 0.011357841546520793,
-      "win_rate": 0.5319727891156463
+      "matches_played": 778,
+      "matches_won": 416,
+      "use_rate": 0.011327732560679081,
+      "win_rate": 0.5347043701799485
     },
     "Ragnarok's Wake": {
-      "matches_played": 174,
-      "matches_won": 107,
-      "use_rate": 0.0026887951416253303,
-      "win_rate": 0.6149425287356322
+      "matches_played": 180,
+      "matches_won": 111,
+      "use_rate": 0.002620812160568425,
+      "win_rate": 0.6166666666666667
     },
     "Regrowth Striders": {
-      "matches_played": 499,
-      "matches_won": 288,
-      "use_rate": 0.007710969975120919,
-      "win_rate": 0.5771543086172345
+      "matches_played": 530,
+      "matches_won": 307,
+      "use_rate": 0.00771683580611814,
+      "win_rate": 0.5792452830188679
     },
     "Reliquary": {
-      "matches_played": 111,
-      "matches_won": 53,
-      "use_rate": 0.0017152658662092624,
-      "win_rate": 0.4774774774774775
+      "matches_played": 119,
+      "matches_won": 57,
+      "use_rate": 0.0017326480394869032,
+      "win_rate": 0.4789915966386555
     },
     "Resolute Mantle": {
-      "matches_played": 380,
-      "matches_won": 209,
-      "use_rate": 0.005872081343779457,
-      "win_rate": 0.55
+      "matches_played": 398,
+      "matches_won": 220,
+      "use_rate": 0.005794906888367962,
+      "win_rate": 0.5527638190954773
     },
     "Resonator Mod": {
-      "matches_played": 13,
+      "matches_played": 14,
       "matches_won": 6,
-      "use_rate": 0.00020088699333982354,
-      "win_rate": 0.46153846153846156
+      "use_rate": 0.00020384094582198863,
+      "win_rate": 0.42857142857142855
     },
     "Ring": {
-      "matches_played": 559,
-      "matches_won": 308,
-      "use_rate": 0.008638140713612411,
-      "win_rate": 0.5509838998211091
+      "matches_played": 587,
+      "matches_won": 322,
+      "use_rate": 0.008546759656964808,
+      "win_rate": 0.5485519591141397
     },
     "Ring of Dispel": {
-      "matches_played": 597,
-      "matches_won": 297,
-      "use_rate": 0.009225348847990358,
-      "win_rate": 0.49748743718592964
+      "matches_played": 640,
+      "matches_won": 319,
+      "use_rate": 0.009318443237576622,
+      "win_rate": 0.4984375
     },
     "Riptalon": {
-      "matches_played": 6191,
-      "matches_won": 3586,
-      "use_rate": 0.09566856736668057,
-      "win_rate": 0.5792279114844129
+      "matches_played": 6520,
+      "matches_won": 3768,
+      "use_rate": 0.09493164048281184,
+      "win_rate": 0.5779141104294478
     },
     "Rod of Asclepius": {
-      "matches_played": 468,
-      "matches_won": 279,
-      "use_rate": 0.007231931760233647,
-      "win_rate": 0.5961538461538461
+      "matches_played": 498,
+      "matches_won": 295,
+      "use_rate": 0.007250913644239309,
+      "win_rate": 0.5923694779116466
     },
     "Rod of Tahuti": {
-      "matches_played": 13806,
-      "matches_won": 7717,
-      "use_rate": 0.21334198692689257,
-      "win_rate": 0.5589598725191945
+      "matches_played": 14637,
+      "matches_won": 8193,
+      "use_rate": 0.2131157088568891,
+      "win_rate": 0.5597458495593359
     },
     "Rune": {
-      "matches_played": 354,
-      "matches_won": 185,
-      "use_rate": 0.0054703073570998096,
-      "win_rate": 0.5225988700564972
+      "matches_played": 374,
+      "matches_won": 196,
+      "use_rate": 0.005445465266958839,
+      "win_rate": 0.5240641711229946
     },
     "Runeforged Hammer": {
-      "matches_played": 840,
-      "matches_won": 457,
-      "use_rate": 0.012980390338880906,
-      "win_rate": 0.544047619047619
+      "matches_played": 893,
+      "matches_won": 488,
+      "use_rate": 0.013002140329931132,
+      "win_rate": 0.5464725643896976
     },
     "Runic Hide": {
       "matches_played": 7,
       "matches_won": 6,
-      "use_rate": 0.00010816991949067421,
+      "use_rate": 0.00010192047291099431,
       "win_rate": 0.8571428571428571
     },
     "Sabre": {
       "matches_played": 69,
       "matches_won": 39,
-      "use_rate": 0.001066246349265217,
+      "use_rate": 0.0010046446615512297,
       "win_rate": 0.5652173913043478
     },
     "Sage's Ring": {
-      "matches_played": 1457,
-      "matches_won": 692,
-      "use_rate": 0.02251479609970176,
-      "win_rate": 0.47494852436513385
+      "matches_played": 1560,
+      "matches_won": 729,
+      "use_rate": 0.022713705391593016,
+      "win_rate": 0.4673076923076923
     },
     "Sands of Time": {
-      "matches_played": 2544,
-      "matches_won": 1112,
-      "use_rate": 0.03931203931203931,
-      "win_rate": 0.4371069182389937
+      "matches_played": 2700,
+      "matches_won": 1169,
+      "use_rate": 0.039312182408526374,
+      "win_rate": 0.43296296296296294
     },
     "Sanguine Lash": {
-      "matches_played": 926,
-      "matches_won": 491,
-      "use_rate": 0.014309335064052044,
-      "win_rate": 0.5302375809935205
+      "matches_played": 968,
+      "matches_won": 514,
+      "use_rate": 0.014094145396834642,
+      "win_rate": 0.53099173553719
     },
     "Sash": {
-      "matches_played": 44,
-      "matches_won": 21,
-      "use_rate": 0.000679925208227095,
-      "win_rate": 0.4772727272727273
+      "matches_played": 50,
+      "matches_won": 25,
+      "use_rate": 0.0007280033779356736,
+      "win_rate": 0.5
     },
     "Scepter of Dominion": {
-      "matches_played": 168,
-      "matches_won": 79,
-      "use_rate": 0.002596078067776181,
-      "win_rate": 0.47023809523809523
+      "matches_played": 174,
+      "matches_won": 84,
+      "use_rate": 0.0025334517552161443,
+      "win_rate": 0.4827586206896552
     },
     "Screeching Gargoyle": {
-      "matches_played": 919,
-      "matches_won": 483,
-      "use_rate": 0.014201165144561372,
-      "win_rate": 0.5255712731229597
+      "matches_played": 963,
+      "matches_won": 504,
+      "use_rate": 0.014021345059041073,
+      "win_rate": 0.5233644859813084
     },
     "Scythe": {
-      "matches_played": 177,
-      "matches_won": 99,
-      "use_rate": 0.0027351536785499048,
-      "win_rate": 0.559322033898305
+      "matches_played": 188,
+      "matches_won": 107,
+      "use_rate": 0.0027372927010381326,
+      "win_rate": 0.5691489361702128
     },
     "Seismic Mod": {
-      "matches_played": 85,
-      "matches_won": 38,
-      "use_rate": 0.0013134918795296153,
-      "win_rate": 0.4470588235294118
+      "matches_played": 93,
+      "matches_won": 41,
+      "use_rate": 0.0013540862829603529,
+      "win_rate": 0.44086021505376344
     },
     "Selflessness": {
-      "matches_played": 2372,
-      "matches_won": 1196,
-      "use_rate": 0.03665414986169703,
-      "win_rate": 0.5042158516020236
+      "matches_played": 2487,
+      "matches_won": 1256,
+      "use_rate": 0.036210888018520404,
+      "win_rate": 0.505026135906715
     },
     "Sharpshooter's Arrow": {
-      "matches_played": 4315,
-      "matches_won": 2525,
-      "use_rate": 0.06667902894317988,
-      "win_rate": 0.5851680185399768
+      "matches_played": 4582,
+      "matches_won": 2683,
+      "use_rate": 0.06671422955402513,
+      "win_rate": 0.5855521606285465
     },
     "Shell of Rebuke": {
-      "matches_played": 5323,
-      "matches_won": 3027,
-      "use_rate": 0.08225549734983698,
-      "win_rate": 0.5686642870561713
+      "matches_played": 5623,
+      "matches_won": 3198,
+      "use_rate": 0.08187125988264586,
+      "win_rate": 0.5687355504179263
     },
     "Shield": {
-      "matches_played": 687,
-      "matches_won": 352,
-      "use_rate": 0.010616104955727597,
-      "win_rate": 0.512372634643377
+      "matches_played": 726,
+      "matches_won": 378,
+      "use_rate": 0.010570609047625981,
+      "win_rate": 0.5206611570247934
     },
     "Shield Splitter": {
-      "matches_played": 33,
-      "matches_won": 11,
-      "use_rate": 0.0005099439061703213,
+      "matches_played": 36,
+      "matches_won": 12,
+      "use_rate": 0.000524162432113685,
       "win_rate": 0.3333333333333333
     },
     "Shield of the Phoenix": {
-      "matches_played": 1091,
-      "matches_won": 633,
-      "use_rate": 0.016859054594903652,
-      "win_rate": 0.5802016498625114
+      "matches_played": 1140,
+      "matches_won": 661,
+      "use_rate": 0.016598477016933358,
+      "win_rate": 0.5798245614035088
     },
     "Shifter's Shield": {
-      "matches_played": 6505,
-      "matches_won": 3555,
-      "use_rate": 0.10052076089811939,
-      "win_rate": 0.5465026902382782
+      "matches_played": 6963,
+      "matches_won": 3807,
+      "use_rate": 0.10138175041132191,
+      "win_rate": 0.5467470917707885
     },
     "Shogun's Ofuda": {
-      "matches_played": 2594,
-      "matches_won": 1566,
-      "use_rate": 0.04008468159411556,
-      "win_rate": 0.6037008481110254
+      "matches_played": 2760,
+      "matches_won": 1653,
+      "use_rate": 0.040185786462049185,
+      "win_rate": 0.5989130434782609
     },
     "Shrapnel Mod": {
-      "matches_played": 501,
-      "matches_won": 278,
-      "use_rate": 0.007741875666403968,
-      "win_rate": 0.5548902195608783
+      "matches_played": 524,
+      "matches_won": 291,
+      "use_rate": 0.00762947540076586,
+      "win_rate": 0.5553435114503816
     },
     "Shroud Of Vengeance": {
-      "matches_played": 124,
-      "matches_won": 60,
-      "use_rate": 0.001916152859549086,
-      "win_rate": 0.4838709677419355
+      "matches_played": 132,
+      "matches_won": 65,
+      "use_rate": 0.0019219289177501784,
+      "win_rate": 0.49242424242424243
     },
     "Silverbranch Bow": {
-      "matches_played": 5182,
-      "matches_won": 3000,
-      "use_rate": 0.08007664611438196,
-      "win_rate": 0.5789270551910459
+      "matches_played": 5452,
+      "matches_won": 3152,
+      "use_rate": 0.07938148833010585,
+      "win_rate": 0.578136463683052
     },
     "Skeggox": {
-      "matches_played": 1967,
-      "matches_won": 945,
-      "use_rate": 0.030395747376879452,
-      "win_rate": 0.4804270462633452
+      "matches_played": 2087,
+      "matches_won": 1007,
+      "use_rate": 0.030386860995035018,
+      "win_rate": 0.4825107810253953
     },
     "Soul Gem": {
-      "matches_played": 4845,
-      "matches_won": 2744,
-      "use_rate": 0.07486903713318807,
-      "win_rate": 0.5663570691434469
+      "matches_played": 5136,
+      "matches_won": 2915,
+      "use_rate": 0.07478050698155239,
+      "win_rate": 0.5675623052959502
     },
     "Soul Locket": {
-      "matches_played": 50,
-      "matches_won": 29,
-      "use_rate": 0.0007726422820762443,
-      "win_rate": 0.58
+      "matches_played": 54,
+      "matches_won": 32,
+      "use_rate": 0.0007862436481705275,
+      "win_rate": 0.5925925925925926
     },
     "Soul Reaver": {
-      "matches_played": 2179,
-      "matches_won": 1160,
-      "use_rate": 0.03367175065288273,
-      "win_rate": 0.5323542909591555
+      "matches_played": 2361,
+      "matches_won": 1261,
+      "use_rate": 0.03437631950612251,
+      "win_rate": 0.5340957221516307
     },
     "Soul Reliquary": {
-      "matches_played": 182,
-      "matches_won": 81,
-      "use_rate": 0.0028124179067575295,
-      "win_rate": 0.44505494505494503
+      "matches_played": 196,
+      "matches_won": 86,
+      "use_rate": 0.0028537732415078406,
+      "win_rate": 0.4387755102040816
     },
     "Spear Of The Magus": {
-      "matches_played": 2614,
-      "matches_won": 1441,
-      "use_rate": 0.04039373850694605,
-      "win_rate": 0.5512624330527927
+      "matches_played": 2773,
+      "matches_won": 1528,
+      "use_rate": 0.04037506734031246,
+      "win_rate": 0.5510277677605482
     },
     "Spear of Desolation": {
-      "matches_played": 12593,
-      "matches_won": 6712,
-      "use_rate": 0.1945976851637229,
-      "win_rate": 0.5329945207655047
+      "matches_played": 13333,
+      "matches_won": 7104,
+      "use_rate": 0.19412938076032674,
+      "win_rate": 0.5328133203330083
     },
     "Spectral Armor": {
-      "matches_played": 870,
-      "matches_won": 450,
-      "use_rate": 0.013443975708126651,
-      "win_rate": 0.5172413793103449
+      "matches_played": 914,
+      "matches_won": 472,
+      "use_rate": 0.013307901748664114,
+      "win_rate": 0.5164113785557987
     },
     "Sphere of Negation": {
-      "matches_played": 609,
-      "matches_won": 325,
-      "use_rate": 0.009410782995688656,
-      "win_rate": 0.5336617405582923
+      "matches_played": 650,
+      "matches_won": 346,
+      "use_rate": 0.009464043913163757,
+      "win_rate": 0.5323076923076923
     },
     "Spirit Robe": {
-      "matches_played": 1462,
-      "matches_won": 822,
-      "use_rate": 0.022592060327909384,
-      "win_rate": 0.5622435020519836
+      "matches_played": 1562,
+      "matches_won": 875,
+      "use_rate": 0.022742825526710444,
+      "win_rate": 0.560179257362356
     },
     "Staff of Myrddin": {
-      "matches_played": 566,
-      "matches_won": 272,
-      "use_rate": 0.008746310633103086,
-      "win_rate": 0.48056537102473496
+      "matches_played": 611,
+      "matches_won": 300,
+      "use_rate": 0.008896201278373931,
+      "win_rate": 0.4909983633387889
     },
     "Stalwart Sigil": {
-      "matches_played": 210,
-      "matches_won": 113,
-      "use_rate": 0.0032450975847202264,
-      "win_rate": 0.5380952380952381
+      "matches_played": 220,
+      "matches_won": 119,
+      "use_rate": 0.003203214862916964,
+      "win_rate": 0.5409090909090909
     },
     "Stampede": {
-      "matches_played": 5626,
-      "matches_won": 3069,
-      "use_rate": 0.08693770957921901,
-      "win_rate": 0.5455030216850337
+      "matches_played": 5925,
+      "matches_won": 3221,
+      "use_rate": 0.08626840028537733,
+      "win_rate": 0.5436286919831224
     },
     "Stone of Binding": {
-      "matches_played": 867,
-      "matches_won": 493,
-      "use_rate": 0.013397617171202077,
-      "win_rate": 0.5686274509803921
+      "matches_played": 926,
+      "matches_won": 530,
+      "use_rate": 0.013482622559368676,
+      "win_rate": 0.572354211663067
     },
     "Stygian Anchor": {
-      "matches_played": 567,
-      "matches_won": 304,
-      "use_rate": 0.00876176347874461,
-      "win_rate": 0.5361552028218695
+      "matches_played": 605,
+      "matches_won": 326,
+      "use_rate": 0.008808840873021652,
+      "win_rate": 0.5388429752066116
     },
     "Sun Beam Bow": {
-      "matches_played": 551,
-      "matches_won": 287,
-      "use_rate": 0.008514517948480212,
-      "win_rate": 0.5208711433756806
+      "matches_played": 575,
+      "matches_won": 304,
+      "use_rate": 0.008372038846260246,
+      "win_rate": 0.528695652173913
     },
     "Sundering Arc": {
-      "matches_played": 3952,
-      "matches_won": 2123,
-      "use_rate": 0.061069645975306355,
-      "win_rate": 0.5371963562753036
+      "matches_played": 4215,
+      "matches_won": 2270,
+      "use_rate": 0.061370684759977284,
+      "win_rate": 0.538552787663108
     },
     "Sundering Axe": {
-      "matches_played": 783,
-      "matches_won": 471,
-      "use_rate": 0.012099578137313986,
-      "win_rate": 0.6015325670498084
+      "matches_played": 856,
+      "matches_won": 507,
+      "use_rate": 0.012463417830258732,
+      "win_rate": 0.5922897196261683
     },
     "Sundering Echo": {
-      "matches_played": 1674,
-      "matches_won": 964,
-      "use_rate": 0.02586806360391266,
-      "win_rate": 0.5758661887694145
+      "matches_played": 1834,
+      "matches_won": 1048,
+      "use_rate": 0.02670316390268051,
+      "win_rate": 0.5714285714285714
     },
     "Surplus Mod": {
-      "matches_played": 699,
-      "matches_won": 365,
-      "use_rate": 0.010801539103425895,
-      "win_rate": 0.5221745350500715
+      "matches_played": 733,
+      "matches_won": 383,
+      "use_rate": 0.010672529520536975,
+      "win_rate": 0.5225102319236017
     },
     "Survivor's Sash": {
-      "matches_played": 924,
-      "matches_won": 480,
-      "use_rate": 0.014278429372768995,
-      "win_rate": 0.5194805194805194
+      "matches_played": 980,
+      "matches_won": 510,
+      "use_rate": 0.014268866207539203,
+      "win_rate": 0.5204081632653061
     },
     "Talisman of Purification": {
-      "matches_played": 1427,
-      "matches_won": 757,
-      "use_rate": 0.022051210730456013,
-      "win_rate": 0.5304835318850736
+      "matches_played": 1530,
+      "matches_won": 814,
+      "use_rate": 0.022276903364831614,
+      "win_rate": 0.5320261437908497
     },
     "Tekko-Kagi": {
-      "matches_played": 484,
-      "matches_won": 288,
-      "use_rate": 0.007479177290498045,
-      "win_rate": 0.5950413223140496
+      "matches_played": 515,
+      "matches_won": 307,
+      "use_rate": 0.007498434792737438,
+      "win_rate": 0.596116504854369
     },
     "The Cosmic Horror": {
-      "matches_played": 1189,
-      "matches_won": 655,
-      "use_rate": 0.01837343346777309,
-      "win_rate": 0.5508830950378469
+      "matches_played": 1249,
+      "matches_won": 687,
+      "use_rate": 0.018185524380833127,
+      "win_rate": 0.5500400320256205
     },
     "The Crusher": {
-      "matches_played": 4970,
-      "matches_won": 2815,
-      "use_rate": 0.07680064283837869,
-      "win_rate": 0.5663983903420523
+      "matches_played": 5250,
+      "matches_won": 2972,
+      "use_rate": 0.07644035468324573,
+      "win_rate": 0.5660952380952381
     },
     "The Executioner": {
-      "matches_played": 5841,
-      "matches_won": 3254,
-      "use_rate": 0.09026007139214687,
-      "win_rate": 0.5570963876048621
+      "matches_played": 6202,
+      "matches_won": 3457,
+      "use_rate": 0.09030153899914095,
+      "win_rate": 0.5574008384392132
     },
     "The Reaper": {
-      "matches_played": 2408,
-      "matches_won": 1408,
-      "use_rate": 0.037210452304791926,
-      "win_rate": 0.584717607973422
+      "matches_played": 2530,
+      "matches_won": 1468,
+      "use_rate": 0.036836970923545084,
+      "win_rate": 0.5802371541501976
     },
     "The World Stone": {
-      "matches_played": 4931,
-      "matches_won": 2651,
-      "use_rate": 0.07619798185835922,
-      "win_rate": 0.5376191441898195
+      "matches_played": 5194,
+      "matches_won": 2798,
+      "use_rate": 0.07562499089995778,
+      "win_rate": 0.5386984982672314
     },
     "Thermal Mod": {
-      "matches_played": 371,
-      "matches_won": 174,
-      "use_rate": 0.005733005733005733,
-      "win_rate": 0.46900269541778977
+      "matches_played": 389,
+      "matches_won": 182,
+      "use_rate": 0.005663866280339541,
+      "win_rate": 0.46786632390745503
     },
     "Thistlethorn Acorn": {
-      "matches_played": 1253,
-      "matches_won": 743,
-      "use_rate": 0.019362415588830683,
-      "win_rate": 0.592976855546688
+      "matches_played": 1301,
+      "matches_won": 761,
+      "use_rate": 0.01894264789388623,
+      "win_rate": 0.584934665641814
     },
     "Time-lock Aegis": {
-      "matches_played": 995,
-      "matches_won": 535,
-      "use_rate": 0.015375581413317262,
-      "win_rate": 0.5376884422110553
+      "matches_played": 1060,
+      "matches_won": 575,
+      "use_rate": 0.01543367161223628,
+      "win_rate": 0.5424528301886793
     },
     "Titan's Bane": {
-      "matches_played": 3428,
-      "matches_won": 1936,
-      "use_rate": 0.052972354859147315,
-      "win_rate": 0.5647607934655776
+      "matches_played": 3646,
+      "matches_won": 2067,
+      "use_rate": 0.05308600631906932,
+      "win_rate": 0.5669226549643445
     },
     "Totem of Death": {
-      "matches_played": 1024,
-      "matches_won": 587,
-      "use_rate": 0.015823713936921485,
-      "win_rate": 0.5732421875
+      "matches_played": 1079,
+      "matches_won": 617,
+      "use_rate": 0.015710312895851838,
+      "win_rate": 0.571825764596849
     },
     "Toxic Blade": {
-      "matches_played": 873,
-      "matches_won": 477,
-      "use_rate": 0.013490334245051225,
-      "win_rate": 0.5463917525773195
+      "matches_played": 913,
+      "matches_won": 498,
+      "use_rate": 0.0132933416811054,
+      "win_rate": 0.5454545454545454
     },
     "Transcendence": {
-      "matches_played": 5189,
-      "matches_won": 2844,
-      "use_rate": 0.08018481603387263,
-      "win_rate": 0.5480824821738293
+      "matches_played": 5549,
+      "matches_won": 3062,
+      "use_rate": 0.08079381488330106,
+      "win_rate": 0.5518111371418274
     },
     "Triton's Conch": {
-      "matches_played": 128,
-      "matches_won": 74,
-      "use_rate": 0.0019779642421151856,
-      "win_rate": 0.578125
+      "matches_played": 135,
+      "matches_won": 81,
+      "use_rate": 0.0019656091204263188,
+      "win_rate": 0.6
     },
     "Typhon's Heart": {
-      "matches_played": 178,
-      "matches_won": 99,
-      "use_rate": 0.00275060652419143,
-      "win_rate": 0.5561797752808989
+      "matches_played": 186,
+      "matches_won": 103,
+      "use_rate": 0.0027081725659207057,
+      "win_rate": 0.553763440860215
     },
     "Tyrfing": {
-      "matches_played": 4437,
-      "matches_won": 2434,
-      "use_rate": 0.06856427611144593,
-      "win_rate": 0.5485688528284877
+      "matches_played": 4700,
+      "matches_won": 2584,
+      "use_rate": 0.06843231752595332,
+      "win_rate": 0.5497872340425531
     },
     "Umbral Link": {
-      "matches_played": 163,
-      "matches_won": 85,
-      "use_rate": 0.0025188138395685566,
-      "win_rate": 0.5214723926380368
+      "matches_played": 168,
+      "matches_won": 86,
+      "use_rate": 0.002446091349863863,
+      "win_rate": 0.5119047619047619
     },
     "Vampiric Shroud": {
-      "matches_played": 82,
+      "matches_played": 85,
       "matches_won": 32,
-      "use_rate": 0.0012671333426050406,
-      "win_rate": 0.3902439024390244
+      "use_rate": 0.001237605742490645,
+      "win_rate": 0.3764705882352941
     },
     "Veve Charm": {
-      "matches_played": 1075,
-      "matches_won": 534,
-      "use_rate": 0.016611809064639254,
-      "win_rate": 0.4967441860465116
+      "matches_played": 1120,
+      "matches_won": 559,
+      "use_rate": 0.01630727566575909,
+      "win_rate": 0.49910714285714286
     },
     "Vital Amplifier": {
-      "matches_played": 369,
-      "matches_won": 205,
-      "use_rate": 0.005702100041722683,
-      "win_rate": 0.5555555555555556
+      "matches_played": 381,
+      "matches_won": 211,
+      "use_rate": 0.005547385739869833,
+      "win_rate": 0.5538057742782152
     },
     "Void Shard": {
-      "matches_played": 2112,
-      "matches_won": 956,
-      "use_rate": 0.03263640999490056,
-      "win_rate": 0.45265151515151514
+      "matches_played": 2258,
+      "matches_won": 1030,
+      "use_rate": 0.03287663254757502,
+      "win_rate": 0.4561558901682905
     },
     "Void Shield": {
-      "matches_played": 143,
-      "matches_won": 91,
-      "use_rate": 0.002209756926738059,
-      "win_rate": 0.6363636363636364
+      "matches_played": 152,
+      "matches_won": 94,
+      "use_rate": 0.0022131302689244476,
+      "win_rate": 0.618421052631579
     },
     "Void Stone": {
-      "matches_played": 163,
-      "matches_won": 93,
-      "use_rate": 0.0025188138395685566,
-      "win_rate": 0.5705521472392638
+      "matches_played": 175,
+      "matches_won": 97,
+      "use_rate": 0.0025480118227748576,
+      "win_rate": 0.5542857142857143
     },
     "War Banner": {
-      "matches_played": 700,
-      "matches_won": 460,
-      "use_rate": 0.010816991949067422,
-      "win_rate": 0.6571428571428571
+      "matches_played": 738,
+      "matches_won": 480,
+      "use_rate": 0.010745329858330543,
+      "win_rate": 0.6504065040650406
     },
     "War Flag": {
-      "matches_played": 936,
-      "matches_won": 427,
-      "use_rate": 0.014463863520467295,
-      "win_rate": 0.4561965811965812
+      "matches_played": 977,
+      "matches_won": 446,
+      "use_rate": 0.014225186004863062,
+      "win_rate": 0.4564994882292733
     },
     "Warrior's Axe": {
-      "matches_played": 778,
-      "matches_won": 336,
-      "use_rate": 0.012022313909106361,
-      "win_rate": 0.4318766066838046
+      "matches_played": 849,
+      "matches_won": 373,
+      "use_rate": 0.012361497357347737,
+      "win_rate": 0.43934040047114253
     },
     "Wish-Granting Pearl": {
-      "matches_played": 80,
-      "matches_won": 51,
-      "use_rate": 0.001236227651321991,
-      "win_rate": 0.6375
+      "matches_played": 87,
+      "matches_won": 54,
+      "use_rate": 0.0012667258776080722,
+      "win_rate": 0.6206896551724138
     },
     "Wyrmskin Hide": {
-      "matches_played": 405,
-      "matches_won": 221,
-      "use_rate": 0.006258402484817579,
-      "win_rate": 0.5456790123456791
+      "matches_played": 429,
+      "matches_won": 236,
+      "use_rate": 0.0062462689826880795,
+      "win_rate": 0.5501165501165501
     },
     "Xibalban Effigy": {
-      "matches_played": 251,
-      "matches_won": 148,
-      "use_rate": 0.0038786642560227464,
-      "win_rate": 0.5896414342629482
+      "matches_played": 266,
+      "matches_won": 155,
+      "use_rate": 0.0038729779706177837,
+      "win_rate": 0.5827067669172933
     },
     "Yogi's Necklace": {
-      "matches_played": 1201,
-      "matches_won": 662,
-      "use_rate": 0.01855886761547139,
-      "win_rate": 0.5512073272273106
+      "matches_played": 1296,
+      "matches_won": 714,
+      "use_rate": 0.01886984755609266,
+      "win_rate": 0.5509259259259259
     },
     "Zither": {
-      "matches_played": 15,
-      "matches_won": 8,
-      "use_rate": 0.0002317926846228733,
-      "win_rate": 0.5333333333333333
+      "matches_played": 16,
+      "matches_won": 9,
+      "use_rate": 0.00023296108093941555,
+      "win_rate": 0.5625
     }
   },
-  "matches_analyzed": 13939,
+  "matches_analyzed": 14757,
   "window": "ob47",
-  "window_end": "2026-11-16",
+  "window_end": "2026-11-17",
   "window_start": "2026-11-03"
 }

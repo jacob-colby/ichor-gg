@@ -22,68 +22,68 @@ builds:
     pick_rate: 0.84
     win_rate: 0.5
     alternates:
+    - name: Tyrfing
+      pick_rate: 0.02
+      win_rate: 0.43
     - name: Manchu Bow
       pick_rate: 0.02
       win_rate: 0.17
-    - name: Tyrfing
-      pick_rate: 0.02
-      win_rate: 0.2
   - name: Dominance
-    pick_rate: 0.39
+    pick_rate: 0.4
     win_rate: 0.48
     alternates:
     - name: The Executioner
-      pick_rate: 0.25
-      win_rate: 0.41
+      pick_rate: 0.24
+      win_rate: 0.42
     - name: Musashi's Dual Swords
       pick_rate: 0.06
       win_rate: 0.47
   - name: Deathbringer
     pick_rate: 0.29
-    win_rate: 0.48
+    win_rate: 0.49
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.2
-      win_rate: 0.49
+      pick_rate: 0.19
+      win_rate: 0.5
     - name: Riptalon
-      pick_rate: 0.18
-      win_rate: 0.57
+      pick_rate: 0.17
+      win_rate: 0.56
   - name: Riptalon
     pick_rate: 0.27
-    win_rate: 0.49
+    win_rate: 0.5
     alternates:
     - name: Deathbringer
       pick_rate: 0.25
-      win_rate: 0.61
+      win_rate: 0.59
     - name: Dominance
       pick_rate: 0.1
-      win_rate: 0.59
+      win_rate: 0.61
   - name: Blinking Abyss
-    pick_rate: 0.1
+    pick_rate: 0.09
     win_rate: 0.76
     alternates:
     - name: Deathbringer
       pick_rate: 0.14
-      win_rate: 0.48
+      win_rate: 0.5
     - name: Skeggox
       pick_rate: 0.09
       win_rate: 0.45
   community_starters:
   - name: Sharpshooter's Arrow
     pick_rate: 0.68
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Gilded Arrow
     pick_rate: 0.26
-    win_rate: 0.28
+    win_rate: 0.29
   - name: Hunter's Cowl
     pick_rate: 0.03
-    win_rate: 0.8
+    win_rate: 0.73
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.55
-    win_rate: 0.52
+    pick_rate: 0.54
+    win_rate: 0.53
   - name: Aegis of Acceleration
-    pick_rate: 0.44
+    pick_rate: 0.45
     win_rate: 0.41
   - name: Agility Relic
     pick_rate: 0.01
@@ -91,13 +91,13 @@ builds:
   starter_sightings:
   - name: Sharpshooter's Arrow
     pick_rate: 0.68
-    win_rate: 0.55
+    win_rate: 0.54
   - name: Gilded Arrow
     pick_rate: 0.26
-    win_rate: 0.28
+    win_rate: 0.29
   - name: Hunter's Cowl
     pick_rate: 0.03
-    win_rate: 0.8
+    win_rate: 0.73
   - name: Leather Cowl
     pick_rate: 0.02
     win_rate: 0.2
@@ -112,10 +112,10 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.55
-    win_rate: 0.52
+    pick_rate: 0.54
+    win_rate: 0.53
   - name: Aegis of Acceleration
-    pick_rate: 0.44
+    pick_rate: 0.45
     win_rate: 0.41
   - name: Agility Relic
     pick_rate: 0.01
@@ -124,26 +124,26 @@ builds:
     pick_rate: 0.003
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/jing-wei/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.4716981132075472
-  god_matches_won: 150
-  god_matches_played: 318
+  last_verified: '2026-11-17'
+  god_win_rate: 0.47289156626506024
+  god_matches_won: 157
+  god_matches_played: 332
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.94
-    win_rate: 0.4753
-    matches: 299
+    win_rate: 0.4709
+    matches: 312
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.55
-    win_rate: 0.52
-    matches: 175
+    pick_rate: 0.54
+    win_rate: 0.53
+    matches: 179
     basis: community
 - source: suggested
   archetype: core
@@ -155,7 +155,7 @@ builds:
   - Deathbringer
   - Demon Blade
   flex_slots:
-  - Deathbringer
+  - Lernaean Bow
   - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
@@ -199,12 +199,12 @@ builds:
       total: 0.51
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.64
     Deathbringer:
       total: 0.48
       efficiency: 0.44
-      win: 0.48
+      win: 0.49
       pick: 0.48
       fit: 0.54
     Demon Blade:
@@ -222,26 +222,26 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.94
-    win_rate: 0.4753
-    matches: 299
+    win_rate: 0.4709
+    matches: 312
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.55
-    win_rate: 0.52
-    matches: 175
+    pick_rate: 0.54
+    win_rate: 0.53
+    matches: 179
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Jotunn's Revenge
   - Transcendence
-  - Tyrfing
-  - Dominance
   - Hydra's Lament
-  - The Reaper
+  - Dominance
+  - Riptalon
+  - Silverbranch Bow
   flex_slots:
-  - Tyrfing
+  - Silverbranch Bow
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -275,33 +275,34 @@ builds:
       win: 0.48
       pick: 0.0
       fit: 0.24
-    Tyrfing:
-      total: 0.46
-      efficiency: 0.53
-      win: 0.44
-      pick: 0.03
-      fit: 0.49
-    Dominance:
-      total: 0.49
-      efficiency: 0.47
-      win: 0.48
-      pick: 0.61
-      fit: 0.5
     Hydra's Lament:
       total: 0.47
       efficiency: 0.55
       win: 0.48
       pick: 0.0
       fit: 0.42
-    The Reaper:
-      total: 0.47
-      efficiency: 0.57
+    Dominance:
+      total: 0.49
+      efficiency: 0.47
       win: 0.48
-      pick: 0.0
-      fit: 0.35
+      pick: 0.62
+      fit: 0.5
+    Riptalon:
+      total: 0.47
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.58
+      fit: 0.39
+    Silverbranch Bow:
+      total: 0.46
+      efficiency: 0.49
+      win: 0.5
+      pick: 0.32
+      fit: 0.33
   community_ordered:
-  - Tyrfing
   - Dominance
+  - Riptalon
+  - Silverbranch Bow
   starter: *id001
   relic: *id002
 - source: suggested
@@ -352,7 +353,7 @@ builds:
       total: 0.5
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.6
     Musashi's Dual Swords:
       total: 0.43
@@ -361,9 +362,9 @@ builds:
       pick: 0.09
       fit: 0.57
     Deathbringer:
-      total: 0.48
+      total: 0.49
       efficiency: 0.44
-      win: 0.48
+      win: 0.49
       pick: 0.48
       fit: 0.57
     Demon Blade:
@@ -435,7 +436,7 @@ builds:
       total: 0.48
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.42
     Shield of the Phoenix:
       total: 0.48
@@ -495,18 +496,18 @@ builds:
       total: 0.48
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.46
     Silverbranch Bow:
-      total: 0.5
+      total: 0.51
       efficiency: 0.49
-      win: 0.49
-      pick: 0.33
+      win: 0.5
+      pick: 0.32
       fit: 0.63
     Riptalon:
-      total: 0.51
+      total: 0.52
       efficiency: 0.45
-      win: 0.49
+      win: 0.5
       pick: 0.58
       fit: 0.72
     The Crusher:
@@ -537,8 +538,8 @@ builds:
   - Dominance
   - Riptalon
   flex_slots:
-  - Lernaean Bow
   - Riptalon
+  - Lernaean Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -584,15 +585,15 @@ builds:
       pick: 0.03
       fit: 0.75
     Dominance:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.55
     Riptalon:
-      total: 0.46
+      total: 0.47
       efficiency: 0.36
-      win: 0.49
+      win: 0.5
       pick: 0.58
       fit: 0.59
   community_ordered:
@@ -663,7 +664,7 @@ builds:
       total: 0.47
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.4
     Arondight:
       total: 0.46
@@ -731,7 +732,7 @@ builds:
       total: 0.51
       efficiency: 0.47
       win: 0.48
-      pick: 0.61
+      pick: 0.62
       fit: 0.64
     Tyrfing:
       total: 0.5

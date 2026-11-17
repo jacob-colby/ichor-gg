@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.47
-    win_rate: 0.5562
-    matches: 232
+    pick_rate: 0.48
+    win_rate: 0.5352
+    matches: 247
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.58
-    win_rate: 0.57
-    matches: 286
+    pick_rate: 0.59
+    win_rate: 0.56
+    matches: 304
     basis: community
     borrowed_from: Conquest
 - source: suggested

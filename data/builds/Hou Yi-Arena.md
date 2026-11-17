@@ -62,24 +62,24 @@ builds:
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.61
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.77
-    win_rate: 0.5123
-    matches: 934
+    pick_rate: 0.76
+    win_rate: 0.5143
+    matches: 974
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.67
     win_rate: 0.53
-    matches: 813
+    matches: 858
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -337,7 +337,7 @@ builds:
       efficiency: 0.45
       win: 0.5
       pick: 0.0
-      fit: 0.65
+      fit: 0.64
     Soul Gem:
       total: 0.7
       efficiency: 0.58
@@ -409,7 +409,7 @@ builds:
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.55
+      fit: 0.56
   starter: *id001
   relic: *id002
 - source: suggested
@@ -541,7 +541,7 @@ builds:
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.87
+      fit: 0.88
   starter: *id001
   relic: *id002
 - source: suggested
@@ -669,11 +669,11 @@ builds:
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.61
   starter: *id001
   relic: *id002
 - source: suggested
@@ -735,15 +735,15 @@ builds:
       pick: 0.0
       fit: 0.46
     Soul Gem:
-      total: 0.59
+      total: 0.6
       efficiency: 0.58
       win: 0.5
       pick: 0.0
-      fit: 0.6
+      fit: 0.61
   swaps:
   - added: Deathbringer
     removed: Golden Blade
-    reason: Conquest community 59% win over 218 matches (vs 52% on this god), taking
+    reason: Conquest community 60% win over 231 matches (vs 52% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

@@ -7,14 +7,15 @@ stats:
   Attack Damage: '30'
   Attack Speed: 25%
 passive: 'Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health
-  +5% Target Item Health'
+  & +5% Target Item Health (+1% for every 30 Attack Damage and Strength from your
+  items)'
 builds_from:
 - Manchu Bow
 - Hunter's Bow
 builds_into: []
 source_url: https://wiki.smite2.com/w/Qin's_Blade
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
-Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health +5% Target Item Health
+Attack Hit: +Bonus Physical Damage. Bonus Damage = +2% Target Base Health & +5% Target Item Health (+1% for every 30 Attack Damage and Strength from your items)
 <!-- WIKI:END -->

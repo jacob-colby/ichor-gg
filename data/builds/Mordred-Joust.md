@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.47
-    win_rate: 0.626
-    matches: 259
+    pick_rate: 0.48
+    win_rate: 0.6333
+    matches: 283
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.34
+    pick_rate: 0.33
     win_rate: 0.6
-    matches: 188
+    matches: 195
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -741,13 +741,13 @@ builds:
       pick: 0.0
       fit: 0.75
   swaps:
-  - added: Bragi's Harp
-    removed: Erosion
-    reason: Conquest community 68% win over 144 matches (vs 57% on this god), taking
-      the model's weakest slot from Erosion
   - added: Bracer of The Abyss
+    removed: Erosion
+    reason: Conquest community 70% win over 148 matches (vs 57% on this god), taking
+      the model's weakest slot from Erosion
+  - added: Bragi's Harp
     removed: Freya's Tears
-    reason: Conquest community 68% win over 127 matches (vs 57% on this god), taking
+    reason: Conquest community 68% win over 159 matches (vs 57% on this god), taking
       the model's weakest slot from Freya's Tears
   borrowed_from: Conquest
   starter: *id001

@@ -5,79 +5,79 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Nightstalker
-  aspect_pick_rate: 0.12
-  aspect_win_rate: 0.56
+  aspect_pick_rate: 0.13
+  aspect_win_rate: 0.57
   slot_order:
   - name: Tyrfing
     pick_rate: 0.54
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Devourer's Gauntlet
-      pick_rate: 0.25
+      pick_rate: 0.24
       win_rate: 0.57
     - name: Spear of Desolation
       pick_rate: 0.06
-      win_rate: 0.51
+      win_rate: 0.53
   - name: Odysseus' Bow
     pick_rate: 0.26
-    win_rate: 0.56
+    win_rate: 0.55
     alternates:
     - name: Dagger of Frenzy
       pick_rate: 0.18
       win_rate: 0.63
     - name: Berserker's Shield
       pick_rate: 0.15
-      win_rate: 0.62
+      win_rate: 0.61
   - name: Dominance
     pick_rate: 0.21
-    win_rate: 0.56
+    win_rate: 0.57
     alternates:
     - name: Odysseus' Bow
       pick_rate: 0.15
-      win_rate: 0.66
+      win_rate: 0.65
     - name: Silverbranch Bow
       pick_rate: 0.15
-      win_rate: 0.61
+      win_rate: 0.6
   - name: Silverbranch Bow
     pick_rate: 0.2
-    win_rate: 0.63
+    win_rate: 0.61
     alternates:
     - name: Riptalon
       pick_rate: 0.13
-      win_rate: 0.62
+      win_rate: 0.63
     - name: Dominance
       pick_rate: 0.13
       win_rate: 0.64
   - name: The Executioner
     pick_rate: 0.14
-    win_rate: 0.7
+    win_rate: 0.67
     alternates:
     - name: Silverbranch Bow
-      pick_rate: 0.15
-      win_rate: 0.65
+      pick_rate: 0.14
+      win_rate: 0.64
     - name: Riptalon
       pick_rate: 0.13
       win_rate: 0.54
   - name: Hunter's Bow
     pick_rate: 0.12
-    win_rate: 0.58
+    win_rate: 0.59
     alternates:
     - name: Manchu Bow
       pick_rate: 0.11
-      win_rate: 0.53
+      win_rate: 0.52
     - name: Riptalon
       pick_rate: 0.09
-      win_rate: 0.72
+      win_rate: 0.7
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.59
+    pick_rate: 0.58
     win_rate: 0.62
   - name: Death's Toll
     pick_rate: 0.2
     win_rate: 0.51
   - name: Pendulum of the Ages
     pick_rate: 0.06
-    win_rate: 0.56
+    win_rate: 0.58
   community_relics:
   - name: Purification Beads
     pick_rate: 0.59
@@ -87,26 +87,26 @@ builds:
     win_rate: 0.6
   - name: Agility Relic
     pick_rate: 0.11
-    win_rate: 0.57
+    win_rate: 0.55
   starter_sightings:
   - name: Death's Embrace
-    pick_rate: 0.59
+    pick_rate: 0.58
     win_rate: 0.62
   - name: Death's Toll
     pick_rate: 0.2
     win_rate: 0.51
   - name: Pendulum of the Ages
     pick_rate: 0.06
-    win_rate: 0.56
+    win_rate: 0.58
   - name: Sharpshooter's Arrow
     pick_rate: 0.04
-    win_rate: 0.56
+    win_rate: 0.54
   - name: Gilded Arrow
     pick_rate: 0.03
     win_rate: 0.3
   - name: Archmage's Gem
     pick_rate: 0.02
-    win_rate: 0.8
+    win_rate: 0.78
   - name: Hunter's Cowl
     pick_rate: 0.02
     win_rate: 0.67
@@ -115,15 +115,15 @@ builds:
     win_rate: 0.75
   - name: Conduit Gem
     pick_rate: 0.01
-    win_rate: 0.13
+    win_rate: 0.22
   - name: Leather Cowl
     pick_rate: 0.01
     win_rate: 0.33
   - name: Sands Of Time
     pick_rate: 0.01
-    win_rate: 0.44
+    win_rate: 0.4
   - name: Bluestone Pendant
-    pick_rate: 0.001
+    pick_rate: 0.003
     win_rate: 0.0
   - name: War Banner
     pick_rate: 0.001
@@ -137,7 +137,7 @@ builds:
     win_rate: 0.6
   - name: Agility Relic
     pick_rate: 0.11
-    win_rate: 0.57
+    win_rate: 0.55
   - name: Blink Rune
     pick_rate: 0.004
     win_rate: 0.33
@@ -145,26 +145,26 @@ builds:
     pick_rate: 0.003
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/xbalanque/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5790172642762285
-  god_matches_won: 436
-  god_matches_played: 753
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5778061224489796
+  god_matches_won: 453
+  god_matches_played: 784
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.79
-    win_rate: 0.5922
-    matches: 595
+    pick_rate: 0.78
+    win_rate: 0.5918
+    matches: 612
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.59
     win_rate: 0.57
-    matches: 444
+    matches: 463
     basis: community
 - source: suggested
   archetype: core
@@ -174,10 +174,10 @@ builds:
   - Lernaean Bow
   - Dagger of Frenzy
   - Dominance
-  - Silverbranch Bow
+  - Demon Blade
   flex_slots:
   - Lernaean Bow
-  - Silverbranch Bow
+  - Demon Blade
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -206,7 +206,7 @@ builds:
     Tyrfing:
       total: 0.6
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.83
     Lernaean Bow:
@@ -224,32 +224,31 @@ builds:
     Dominance:
       total: 0.53
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.64
-    Silverbranch Bow:
+    Demon Blade:
       total: 0.52
-      efficiency: 0.4
-      win: 0.63
-      pick: 0.33
-      fit: 0.52
+      efficiency: 0.36
+      win: 0.57
+      pick: 0.0
+      fit: 0.87
   community_ordered:
   - Tyrfing
   - Dagger of Frenzy
   - Dominance
-  - Silverbranch Bow
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.79
-    win_rate: 0.5922
-    matches: 595
+    pick_rate: 0.78
+    win_rate: 0.5918
+    matches: 612
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.59
     win_rate: 0.57
-    matches: 444
+    matches: 463
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -258,10 +257,10 @@ builds:
   - Tyrfing
   - Transcendence
   - Hydra's Lament
+  - Dominance
   - Silverbranch Bow
-  - The Reaper
   flex_slots:
-  - The Reaper
+  - Dominance
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -290,9 +289,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.53
     Transcendence:
@@ -307,20 +306,21 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.42
+    Dominance:
+      total: 0.51
+      efficiency: 0.47
+      win: 0.57
+      pick: 0.33
+      fit: 0.5
     Silverbranch Bow:
-      total: 0.53
+      total: 0.52
       efficiency: 0.49
-      win: 0.63
+      win: 0.61
       pick: 0.33
       fit: 0.37
-    The Reaper:
-      total: 0.51
-      efficiency: 0.57
-      win: 0.57
-      pick: 0.0
-      fit: 0.35
   community_ordered:
   - Tyrfing
+  - Dominance
   - Silverbranch Bow
   starter: *id001
   relic: *id002
@@ -362,9 +362,9 @@ builds:
       pick: 0.0
       fit: 0.69
     Tyrfing:
-      total: 0.6
+      total: 0.59
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.79
     Rage:
@@ -374,9 +374,9 @@ builds:
       pick: 0.0
       fit: 0.57
     Dominance:
-      total: 0.52
+      total: 0.53
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.6
     Demon Blade:
@@ -438,13 +438,13 @@ builds:
     Berserker's Shield:
       total: 0.61
       efficiency: 0.72
-      win: 0.62
+      win: 0.61
       pick: 0.2
       fit: 0.48
     Tyrfing:
       total: 0.56
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.54
     Kinetic Cuirass:
@@ -474,14 +474,14 @@ builds:
   archetype: anti-tank
   slot_order:
   - Tyrfing
-  - The Executioner
   - The Reaper
   - Tekko-Kagi
   - Silverbranch Bow
   - The Crusher
+  - Heartseeker
   flex_slots:
-  - The Executioner
   - The Crusher
+  - Heartseeker
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -503,17 +503,11 @@ builds:
     Musashi''s Dual Swords.'
   slot_scores:
     Tyrfing:
-      total: 0.57
+      total: 0.56
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.58
-    The Executioner:
-      total: 0.53
-      efficiency: 0.3
-      win: 0.7
-      pick: 0.3
-      fit: 0.62
     The Reaper:
       total: 0.54
       efficiency: 0.57
@@ -527,9 +521,9 @@ builds:
       pick: 0.0
       fit: 0.69
     Silverbranch Bow:
-      total: 0.57
+      total: 0.56
       efficiency: 0.49
-      win: 0.63
+      win: 0.61
       pick: 0.33
       fit: 0.69
     The Crusher:
@@ -538,9 +532,14 @@ builds:
       win: 0.57
       pick: 0.0
       fit: 0.57
+    Heartseeker:
+      total: 0.52
+      efficiency: 0.45
+      win: 0.57
+      pick: 0.0
+      fit: 0.67
   community_ordered:
   - Tyrfing
-  - The Executioner
   - Silverbranch Bow
   starter: *id001
   relic: *id002
@@ -554,8 +553,8 @@ builds:
   - Dominance
   - Silverbranch Bow
   flex_slots:
-  - Silverbranch Bow
   - Lernaean Bow
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -585,7 +584,7 @@ builds:
     Tyrfing:
       total: 0.59
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.75
     Lernaean Bow:
@@ -603,13 +602,13 @@ builds:
     Dominance:
       total: 0.52
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.55
     Silverbranch Bow:
-      total: 0.51
+      total: 0.5
       efficiency: 0.4
-      win: 0.63
+      win: 0.61
       pick: 0.33
       fit: 0.49
   community_ordered:
@@ -658,9 +657,9 @@ builds:
       pick: 0.0
       fit: 0.41
     Tyrfing:
-      total: 0.56
+      total: 0.55
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.52
     Hydra's Lament:
@@ -676,9 +675,9 @@ builds:
       pick: 0.25
       fit: 0.32
     Dominance:
-      total: 0.49
+      total: 0.5
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.4
     Arondight:
@@ -696,15 +695,15 @@ builds:
 - source: suggested
   archetype: intelligence
   slot_order:
-  - Jotunn's Revenge
+  - Book of Thoth
   - Tyrfing
+  - Jotunn's Revenge
   - Death Metal
-  - Silverbranch Bow
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Jotunn's Revenge
-  - Silverbranch Bow
+  - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -720,38 +719,38 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Off-type Intelligence build — this kit scales on it (efficiency + fit
     + win/pick). Underrated for this god: Rod of Tahuti, Soul Gem, Death Metal, Jotunn''s
-    Revenge, Nimble Ring, Gluttonous Grimoire, Blood-Bound Book, Bragi''s Harp, Obsidian
-    Shard, Spear of Desolation, Spear of the Magus, The Reaper, Ancient Signet, Chronos''
-    Pendant, Bracer of The Abyss, Polynomicon, Hydra''s Lament, Dreamer''s Idol, Tekko-Kagi,
-    Doom Orb, The Crusher, Heartseeker, Gem of Focus, The World Stone, Heartwood Charm,
-    Lernaean Bow, Bancroft''s Talon, Soul Reaver, Titan''s Bane, Arondight, Golden
-    Blade, Toxic Blade, Qin''s Blade, The Cosmic Horror, Rage, Totem of Death, Typhon’s
-    Heart.'
+    Revenge, Nimble Ring, Gluttonous Grimoire, Spear of Desolation, Blood-Bound Book,
+    Bragi''s Harp, Obsidian Shard, Spear of the Magus, The Reaper, Ancient Signet,
+    Chronos'' Pendant, Bracer of The Abyss, Polynomicon, Hydra''s Lament, Dreamer''s
+    Idol, Tekko-Kagi, Doom Orb, The Crusher, Heartseeker, Gem of Focus, The World
+    Stone, Heartwood Charm, Lernaean Bow, Bancroft''s Talon, Soul Reaver, Titan''s
+    Bane, Arondight, Golden Blade, Toxic Blade, Qin''s Blade, The Cosmic Horror, Rage,
+    Totem of Death, Typhon’s Heart.'
   slot_scores:
+    Book of Thoth:
+      total: 0.46
+      efficiency: 0.48
+      win: 0.57
+      pick: 0.0
+      fit: 0.21
+    Tyrfing:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.58
+      pick: 0.54
+      fit: 0.49
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
       win: 0.57
       pick: 0.0
       fit: 0.36
-    Tyrfing:
-      total: 0.55
-      efficiency: 0.53
-      win: 0.59
-      pick: 0.54
-      fit: 0.49
     Death Metal:
       total: 0.55
       efficiency: 0.63
       win: 0.57
       pick: 0.0
       fit: 0.5
-    Silverbranch Bow:
-      total: 0.53
-      efficiency: 0.49
-      win: 0.63
-      pick: 0.33
-      fit: 0.42
     Rod of Tahuti:
       total: 0.6
       efficiency: 0.82
@@ -766,7 +765,6 @@ builds:
       fit: 0.63
   community_ordered:
   - Tyrfing
-  - Silverbranch Bow
   starter: *id001
   relic: *id002
 - source: suggested
@@ -799,15 +797,15 @@ builds:
     Ring, Bragi''s Harp, Gluttonous Grimoire, Soul Gem, The Reaper, Blood-Bound Book,
     Obsidian Shard, Tekko-Kagi, Spear of the Magus, The Crusher, Ancient Signet, Bracer
     of The Abyss, Heartseeker, Dreamer''s Idol, Lernaean Bow, Polynomicon, Titan''s
-    Bane, Golden Blade, Jotunn''s Revenge, Doom Orb, The World Stone, Toxic Blade,
-    Bancroft''s Talon, Rage, Soul Reaver, Spear of Desolation, Hydra''s Lament, Demon
+    Bane, Golden Blade, Jotunn''s Revenge, Doom Orb, Spear of Desolation, The World
+    Stone, Toxic Blade, Bancroft''s Talon, Rage, Soul Reaver, Hydra''s Lament, Demon
     Blade, Qin''s Blade, Deathbringer, Avatar''s Parashu, The Cosmic Horror, Transcendence,
     Runeforged Hammer, Typhon’s Heart.'
   slot_scores:
     Tyrfing:
       total: 0.57
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.6
     Death Metal:
@@ -829,9 +827,9 @@ builds:
       pick: 0.0
       fit: 0.67
     Silverbranch Bow:
-      total: 0.54
+      total: 0.53
       efficiency: 0.49
-      win: 0.63
+      win: 0.61
       pick: 0.33
       fit: 0.47
     Rod of Tahuti:
@@ -886,7 +884,7 @@ builds:
     Tyrfing:
       total: 0.6
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.83
     Lernaean Bow:
@@ -898,7 +896,7 @@ builds:
     Dominance:
       total: 0.53
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.64
     Qin's Blade:
@@ -965,19 +963,19 @@ builds:
     Tyrfing:
       total: 0.6
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.54
       fit: 0.83
     The Executioner:
-      total: 0.5
+      total: 0.49
       efficiency: 0.3
-      win: 0.7
+      win: 0.67
       pick: 0.3
       fit: 0.43
     Dominance:
       total: 0.53
       efficiency: 0.47
-      win: 0.56
+      win: 0.57
       pick: 0.33
       fit: 0.64
     Demon Blade:
@@ -993,7 +991,7 @@ builds:
   swaps:
   - added: The Executioner
     removed: Qin's Blade
-    reason: community 70% win over 105 matches (vs 58% on this god), taking the model's
+    reason: community 67% win over 110 matches (vs 58% on this god), taking the model's
       weakest slot from Qin's Blade
   starter: *id001
   relic: *id002
@@ -1017,66 +1015,68 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-16'
-    matches: 75
-    wins: 42
-    win_share: 0.56
+    window_end: '2026-11-17'
+    matches: 82
+    wins: 47
+    win_share: 0.57
     aggregate:
-      aspect_matches: 91
-      aspect_win_rate: 0.56
-      no_aspect_matches: 662
-      no_aspect_win_rate: 0.582
+      aspect_matches: 99
+      aspect_win_rate: 0.566
+      no_aspect_matches: 689
+      no_aspect_win_rate: 0.581
     roles:
     - role: Solo
-      matches: 29
-      share: 0.39
+      matches: 33
+      share: 0.4
     - role: Mid
-      matches: 28
+      matches: 30
       share: 0.37
     - role: Carry
       matches: 15
-      share: 0.2
+      share: 0.18
     - role: Jungle
-      matches: 2
-      share: 0.03
+      matches: 3
+      share: 0.04
     - role: Support
       matches: 1
       share: 0.01
     base_role: Carry
-    base_role_share: 0.2
+    base_role_share: 0.18
     role_shift:
       role: Solo
-      share: 0.39
-      says: 'most Aspect of the Nightstalker players do not play Carry: Solo 39%,
-        Carry 20%'
+      share: 0.4
+      says: 'most Aspect of the Nightstalker players do not play Carry: Solo 40%,
+        Carry 18%'
     items:
     - name: Rod of Tahuti
-      share: 0.85
+      share: 0.84
     - name: Spear of Desolation
-      share: 0.69
+      share: 0.7
     - name: Obsidian Shard
-      share: 0.64
+      share: 0.62
     - name: Helm of Darkness
       share: 0.37
     - name: Gem of Focus
       share: 0.32
     - name: Blinking Abyss
-      share: 0.31
-    - name: The Cosmic Horror
-      share: 0.28
+      share: 0.29
     - name: Chronos' Pendant
-      share: 0.25
+      share: 0.26
+    - name: The Cosmic Horror
+      share: 0.26
     starters:
     - name: Pendulum of the Ages
-      share: 0.6
+      share: 0.57
     - name: Archmage's Gem
-      share: 0.15
+      share: 0.17
     - name: Bluestone Brooch
-      share: 0.11
+      share: 0.1
     - name: Conduit Gem
       share: 0.07
     - name: Sands Of Time
       share: 0.05
+    - name: Bluestone Pendant
+      share: 0.01
     - name: Death's Embrace
       share: 0.01
     - name: Leather Cowl
@@ -1089,7 +1089,7 @@ community_aspects:
     - name: Blink Rune
       share: 0.04
     matches_by_window:
-      ob47: 75
+      ob47: 82
       ob46: 71
       ob45: 52
       ob44: 62

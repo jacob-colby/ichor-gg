@@ -72,14 +72,14 @@ builds:
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.59
     win_rate: 0.5051
-    matches: 609
+    matches: 653
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.6
     win_rate: 0.5
-    matches: 620
+    matches: 664
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Silverbranch Bow
     removed: Golden Blade
-    reason: Conquest community 62% win over 165 matches (vs 51% on this god), taking
+    reason: Conquest community 61% win over 177 matches (vs 51% on this god), taking
       the model's weakest slot from Golden Blade
   borrowed_from: Conquest
   starter: *id001

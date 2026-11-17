@@ -235,7 +235,7 @@ abilities:
   - 'Cost: 80 | 85 | 90 | 95 | 100 mana'
   detail_kinds:
   - physical
-  - physical
+  - debuff
   - null
   - null
   - null
@@ -252,9 +252,13 @@ abilities:
   damage_type: physical
   description: Summon a typhoon which repeatedly deals Physical Damage as it grows
     in size
-aspects: []
+aspects:
+- name: Aspect of the Storm Front
+  kit_changes: Storm's Edge deals reduced damage but applies additional effects. Jet
+    stream now attaches to friendly gods, granting Critical Strike Chance and Movement
+    Speed. Typhoon no longer deals damage over time but Vortexes enemies.
 source_url: https://wiki.smite2.com/w/Susano
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Susano Basic Attack

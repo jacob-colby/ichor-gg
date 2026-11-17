@@ -77,7 +77,7 @@ abilities:
   - Ricochet bounces an additional time if you have 400 or more Intelligence
   - This ability passes through and damages all enemies, but bounces off walls
   - 'Damage: 85 | 130 | 175 | 220 | 265'
-  - 'Damage Scaling: 60% Strength + 55% Intelligence'
+  - 'Damage Scaling: 60% Strength + 70% Intelligence'
   - 'Bonus Damage: +40% Per Ricochet'
   - 'Stun Duration: 1 second'
   - 'Range: 11.2 meters'
@@ -150,7 +150,7 @@ abilities:
   - You can stay in the air for 1.5 seconds before selecting a landing location
   - You can move freely while in the air, but are Slowed
   - 'Damage: 70 | 110 | 150 | 190 | 230'
-  - 'Damage Scaling: 60% Strength + 40% Intelligence'
+  - 'Damage Scaling: 60% Strength + 65% Intelligence'
   - 'Range: 7.2 meters'
   - 'Radius: 3.2 meters'
   - 'Cooldown: 17 | 16.5 | 16 | 15.5 | 15 seconds'
@@ -211,7 +211,7 @@ aspects:
     Mark of the Golden Crow on its first hit. If already marked, the mark spreads.
     Attacks hitting marked targets bounce to a nearby enemy.
 source_url: https://wiki.smite2.com/w/Hou_Yi
-last_verified: '2026-11-03'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Hou Yi Basic Attack

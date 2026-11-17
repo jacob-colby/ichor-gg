@@ -6,131 +6,131 @@ builds:
 - source: community
   aspect: Aspect of Loyalty
   aspect_pick_rate: 0.07
-  aspect_win_rate: 0.66
+  aspect_win_rate: 0.67
   slot_order:
   - name: Tyrfing
-    pick_rate: 0.24
+    pick_rate: 0.25
     win_rate: 0.59
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.23
-      win_rate: 0.54
+      pick_rate: 0.22
+      win_rate: 0.55
     - name: Golden Blade
       pick_rate: 0.14
-      win_rate: 0.52
+      win_rate: 0.53
   - name: Bragi's Harp
-    pick_rate: 0.18
-    win_rate: 0.54
+    pick_rate: 0.19
+    win_rate: 0.55
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.15
-      win_rate: 0.6
+      win_rate: 0.62
     - name: Shifter's Shield
       pick_rate: 0.07
-      win_rate: 0.54
+      win_rate: 0.52
   - name: Kinetic Cuirass
     pick_rate: 0.14
     win_rate: 0.64
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.12
-      win_rate: 0.63
-    - name: Shifter's Shield
+      pick_rate: 0.13
+      win_rate: 0.65
+    - name: Sundering Echo
       pick_rate: 0.09
-      win_rate: 0.67
+      win_rate: 0.41
   - name: Freya's Tears
     pick_rate: 0.11
-    win_rate: 0.6
+    win_rate: 0.61
     alternates:
     - name: Kinetic Cuirass
       pick_rate: 0.09
-      win_rate: 0.63
+      win_rate: 0.66
     - name: Sundering Echo
-      pick_rate: 0.09
-      win_rate: 0.5
+      pick_rate: 0.08
+      win_rate: 0.51
   - name: Sundering Echo
-    pick_rate: 0.07
-    win_rate: 0.62
+    pick_rate: 0.09
+    win_rate: 0.67
     alternates:
     - name: Freya's Tears
       pick_rate: 0.11
       win_rate: 0.78
     - name: Kinetic Cuirass
       pick_rate: 0.07
-      win_rate: 0.64
+      win_rate: 0.62
   - name: Hide of the Nemean Lion
     pick_rate: 0.09
-    win_rate: 0.41
+    win_rate: 0.44
     alternates:
-    - name: Skeggox
-      pick_rate: 0.04
-      win_rate: 0.7
     - name: Olmec Blue
       pick_rate: 0.04
       win_rate: 0.8
+    - name: Medal of Defense
+      pick_rate: 0.04
+      win_rate: 0.8
   community_starters:
-  - name: Hunter's Cowl
-    pick_rate: 0.21
-    win_rate: 0.6
   - name: Death's Embrace
     pick_rate: 0.2
-    win_rate: 0.56
+    win_rate: 0.57
+  - name: Hunter's Cowl
+    pick_rate: 0.2
+    win_rate: 0.62
   - name: Bumba's Hammer
-    pick_rate: 0.17
-    win_rate: 0.69
+    pick_rate: 0.18
+    win_rate: 0.7
   community_relics:
   - name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.54
   - name: Sundering Arc
     pick_rate: 0.21
-    win_rate: 0.55
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.17
-    win_rate: 0.65
+    pick_rate: 0.16
+    win_rate: 0.64
   starter_sightings:
-  - name: Hunter's Cowl
-    pick_rate: 0.21
-    win_rate: 0.6
   - name: Death's Embrace
     pick_rate: 0.2
-    win_rate: 0.56
+    win_rate: 0.57
+  - name: Hunter's Cowl
+    pick_rate: 0.2
+    win_rate: 0.62
   - name: Bumba's Hammer
-    pick_rate: 0.17
-    win_rate: 0.69
+    pick_rate: 0.18
+    win_rate: 0.7
   - name: Death's Toll
-    pick_rate: 0.1
-    win_rate: 0.45
+    pick_rate: 0.11
+    win_rate: 0.47
   - name: Bumba's Cudgel
     pick_rate: 0.09
     win_rate: 0.38
   - name: Leather Cowl
-    pick_rate: 0.08
-    win_rate: 0.5
+    pick_rate: 0.07
+    win_rate: 0.48
   - name: Bluestone Brooch
     pick_rate: 0.02
     win_rate: 0.78
-  - name: Bluestone Pendant
-    pick_rate: 0.02
-    win_rate: 0.33
-  - name: Bumba's Spear
-    pick_rate: 0.02
-    win_rate: 0.67
-  - name: Sundering Axe
-    pick_rate: 0.02
-    win_rate: 0.67
   - name: War Banner
     pick_rate: 0.02
     win_rate: 0.78
+  - name: Bluestone Pendant
+    pick_rate: 0.01
+    win_rate: 0.33
   - name: Bumba's Golden Dagger
     pick_rate: 0.01
     win_rate: 0.4
-  - name: Heroism
+  - name: Bumba's Spear
     pick_rate: 0.01
-    win_rate: 0.75
+    win_rate: 0.67
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.67
   - name: War Flag
     pick_rate: 0.01
     win_rate: 0.2
+  - name: Heroism
+    pick_rate: 0.009
+    win_rate: 0.75
   - name: Archmage's Gem
     pick_rate: 0.005
     win_rate: 0.5
@@ -144,10 +144,10 @@ builds:
     pick_rate: 0.005
     win_rate: 0.0
   - name: Blood-soaked Shroud
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 0.0
   - name: Warrior's Axe
-    pick_rate: 0.003
+    pick_rate: 0.002
     win_rate: 1.0
   relic_sightings:
   - name: Purification Beads
@@ -155,40 +155,40 @@ builds:
     win_rate: 0.54
   - name: Sundering Arc
     pick_rate: 0.21
-    win_rate: 0.55
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.17
-    win_rate: 0.65
+    pick_rate: 0.16
+    win_rate: 0.64
   - name: Phantom Shell
     pick_rate: 0.08
     win_rate: 0.56
   - name: Blink Rune
-    pick_rate: 0.05
-    win_rate: 0.38
+    pick_rate: 0.06
+    win_rate: 0.46
   - name: Agility Relic
     pick_rate: 0.01
-    win_rate: 1.0
+    win_rate: 0.83
   source_url: https://smitebrain.com/gods/fenrir/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5575447570332481
-  god_matches_won: 218
-  god_matches_played: 391
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5630841121495327
+  god_matches_won: 241
+  god_matches_played: 428
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.3
-    win_rate: 0.5233
-    matches: 117
+    pick_rate: 0.31
+    win_rate: 0.5345
+    matches: 133
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.54
-    matches: 184
+    matches: 201
     basis: community
 - source: suggested
   archetype: core
@@ -224,10 +224,10 @@ builds:
     Guard.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 1.0
     Transcendence:
       total: 0.52
@@ -264,15 +264,15 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.3
-    win_rate: 0.5233
-    matches: 117
+    pick_rate: 0.31
+    win_rate: 0.5345
+    matches: 133
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.47
     win_rate: 0.54
-    matches: 184
+    matches: 201
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -309,8 +309,8 @@ builds:
     Jotunn's Revenge:
       total: 0.59
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.71
     Transcendence:
       total: 0.5
@@ -381,8 +381,8 @@ builds:
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.78
     Transcendence:
       total: 0.48
@@ -425,11 +425,11 @@ builds:
   - Kinetic Cuirass
   - Shield Splitter
   - Shield of the Phoenix
-  - Shifter's Shield
+  - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Shifter's Shield
   - Shield Splitter
+  - Freya's Tears
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
@@ -438,23 +438,23 @@ builds:
     swap: Phoenix Feather — magical protection
     swap_item: Phoenix Feather
   - vs_tag: physical_heavy
-    swap: Freya's Tears — physical protection
-    swap_item: Freya's Tears
+    swap: Draconic Scale — physical protection
+    swap_item: Draconic Scale
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
   rationale: 'Lifesteal bruiser skew (efficiency + fit + win/pick). Underrated for
-    this god: Amanita Charm, Shield of the Phoenix, Shifter''s Shield, Shield Splitter,
-    The Reaper, Phoenix Feather, Genji''s Guard, Runeforged Hammer, Yogi''s Necklace,
-    Draconic Scale, Oni Hunter''s Garb, Erosion, Eye of Providence, Breastplate of
-    Valor, Chandra''s Grace, The Crusher, Midgardian Mail, Heartseeker, Leviathan''s
-    Hide, Hydra''s Lament, Wyrmskin Hide, Avenging Blade, Titan''s Bane, Ancile, Stone
-    of Binding.'
+    this god: Amanita Charm, Shield of the Phoenix, Shield Splitter, The Reaper, Phoenix
+    Feather, Genji''s Guard, Runeforged Hammer, Yogi''s Necklace, Draconic Scale,
+    Oni Hunter''s Garb, Erosion, Eye of Providence, Breastplate of Valor, Chandra''s
+    Grace, The Crusher, Midgardian Mail, Heartseeker, Leviathan''s Hide, Hydra''s
+    Lament, Wyrmskin Hide, Avenging Blade, Titan''s Bane, Ancile, Stone of Binding,
+    Shifter''s Shield.'
   slot_scores:
     Berserker's Shield:
-      total: 0.57
+      total: 0.58
       efficiency: 0.66
-      win: 0.6
+      win: 0.62
       pick: 0.2
       fit: 0.39
     Kinetic Cuirass:
@@ -475,12 +475,12 @@ builds:
       win: 0.6
       pick: 0.0
       fit: 0.73
-    Shifter's Shield:
-      total: 0.57
-      efficiency: 0.5
-      win: 0.67
-      pick: 0.14
-      fit: 0.56
+    Freya's Tears:
+      total: 0.55
+      efficiency: 0.61
+      win: 0.61
+      pick: 0.18
+      fit: 0.38
     Amanita Charm:
       total: 0.64
       efficiency: 0.68
@@ -490,7 +490,7 @@ builds:
   community_ordered:
   - Berserker's Shield
   - Kinetic Cuirass
-  - Shifter's Shield
+  - Freya's Tears
   starter: *id001
   relic: *id002
 - source: suggested
@@ -527,10 +527,10 @@ builds:
     Gauntlet, Golden Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 1.0
     The Reaper:
       total: 0.59
@@ -593,22 +593,22 @@ builds:
     swap_item: Toxic Blade
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Riptalon, Silverbranch Bow, Tekko-Kagi, The Reaper, Toxic Blade, Lernaean
-    Bow, Dominance, Qin''s Blade, The Crusher, Heartseeker, Hydra''s Lament, Titan''s
-    Bane, Golden Blade, Dagger of Frenzy, Arondight, Avatar''s Parashu, Sun Beam Bow,
-    Bloodforge, Barbed Carver, Transcendence, Runeforged Hammer, Odysseus'' Bow, Pendulum
-    Blade, Shield Splitter, Eye of the Storm, Avenging Blade, Damaru.'
+    Bow, Dominance, Qin''s Blade, The Crusher, Heartseeker, Hydra''s Lament, Golden
+    Blade, Titan''s Bane, Dagger of Frenzy, Arondight, Avatar''s Parashu, Sun Beam
+    Bow, Bloodforge, Barbed Carver, Transcendence, Runeforged Hammer, Odysseus'' Bow,
+    Pendulum Blade, Shield Splitter, Eye of the Storm, Avenging Blade, Damaru.'
   slot_scores:
     Jotunn's Revenge:
       total: 0.54
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.37
     Tyrfing:
       total: 0.58
       efficiency: 0.53
       win: 0.59
-      pick: 0.24
+      pick: 0.25
       fit: 0.79
     The Reaper:
       total: 0.54
@@ -681,8 +681,8 @@ builds:
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 0.85
     Hydra's Lament:
       total: 0.58
@@ -746,10 +746,10 @@ builds:
     Genji''s Guard.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.64
       efficiency: 0.65
-      win: 0.54
-      pick: 0.23
+      win: 0.55
+      pick: 0.22
       fit: 1.0
     Transcendence:
       total: 0.52
@@ -889,7 +889,7 @@ community_aspects:
     - name: Blink Rune
       share: 0.13
     matches_by_window:
-      ob47: 26
+      ob47: 28
       ob46: 31
       ob45: 52
       ob44: 57

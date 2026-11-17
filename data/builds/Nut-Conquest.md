@@ -5,8 +5,8 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Cosmos
-  aspect_pick_rate: 0.02
-  aspect_win_rate: 0.67
+  aspect_pick_rate: 0.03
+  aspect_win_rate: 0.68
   slot_order:
   - name: Tyrfing
     pick_rate: 0.55
@@ -14,39 +14,39 @@ builds:
     alternates:
     - name: Spear of Desolation
       pick_rate: 0.19
-      win_rate: 0.51
+      win_rate: 0.52
     - name: Devourer's Gauntlet
       pick_rate: 0.11
-      win_rate: 0.61
+      win_rate: 0.58
   - name: Bragi's Harp
-    pick_rate: 0.5
+    pick_rate: 0.49
     win_rate: 0.53
     alternates:
     - name: Tyrfing
       pick_rate: 0.09
-      win_rate: 0.57
+      win_rate: 0.54
     - name: Staff of Myrddin
       pick_rate: 0.08
-      win_rate: 0.52
+      win_rate: 0.54
   - name: Barbed Carver
-    pick_rate: 0.31
-    win_rate: 0.54
+    pick_rate: 0.3
+    win_rate: 0.53
     alternates:
     - name: The Executioner
       pick_rate: 0.1
-      win_rate: 0.55
+      win_rate: 0.53
     - name: Rod of Tahuti
       pick_rate: 0.08
-      win_rate: 0.5
+      win_rate: 0.51
   - name: The Executioner
     pick_rate: 0.25
-    win_rate: 0.55
+    win_rate: 0.54
     alternates:
     - name: Rod of Tahuti
-      pick_rate: 0.13
-      win_rate: 0.56
-    - name: Riptalon
       pick_rate: 0.12
+      win_rate: 0.57
+    - name: Riptalon
+      pick_rate: 0.11
       win_rate: 0.44
   - name: Riptalon
     pick_rate: 0.11
@@ -54,71 +54,71 @@ builds:
     alternates:
     - name: The Executioner
       pick_rate: 0.13
-      win_rate: 0.52
+      win_rate: 0.53
     - name: Silverbranch Bow
       pick_rate: 0.08
-      win_rate: 0.57
+      win_rate: 0.56
   - name: Blinking Abyss
-    pick_rate: 0.07
-    win_rate: 0.5
+    pick_rate: 0.08
+    win_rate: 0.49
     alternates:
     - name: Riptalon
-      pick_rate: 0.07
+      pick_rate: 0.06
       win_rate: 0.69
     - name: Hunter's Bow
       pick_rate: 0.06
-      win_rate: 0.52
+      win_rate: 0.55
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.47
-    win_rate: 0.54
+    pick_rate: 0.46
+    win_rate: 0.53
   - name: Death's Toll
-    pick_rate: 0.2
-    win_rate: 0.5
+    pick_rate: 0.19
+    win_rate: 0.51
   - name: Archmage's Gem
     pick_rate: 0.14
-    win_rate: 0.59
+    win_rate: 0.61
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.57
+    pick_rate: 0.56
     win_rate: 0.49
   - name: Aegis of Acceleration
     pick_rate: 0.42
     win_rate: 0.57
   - name: Phantom Shell
-    pick_rate: 0.006
-    win_rate: 0.8
+    pick_rate: 0.007
+    win_rate: 0.67
   starter_sightings:
   - name: Death's Embrace
-    pick_rate: 0.47
-    win_rate: 0.54
+    pick_rate: 0.46
+    win_rate: 0.53
   - name: Death's Toll
-    pick_rate: 0.2
-    win_rate: 0.5
+    pick_rate: 0.19
+    win_rate: 0.51
   - name: Archmage's Gem
     pick_rate: 0.14
-    win_rate: 0.59
+    win_rate: 0.61
   - name: Conduit Gem
     pick_rate: 0.08
-    win_rate: 0.36
+    win_rate: 0.34
   - name: Bluestone Brooch
     pick_rate: 0.03
-    win_rate: 0.56
+    win_rate: 0.62
+  - name: Bluestone Pendant
+    pick_rate: 0.02
+    win_rate: 0.53
   - name: Hunter's Cowl
     pick_rate: 0.02
-    win_rate: 0.8
+    win_rate: 0.72
   - name: Sharpshooter's Arrow
     pick_rate: 0.02
-    win_rate: 0.46
-  - name: Bluestone Pendant
+    win_rate: 0.4
+  - name: Leather Cowl
     pick_rate: 0.01
-    win_rate: 0.55
+    win_rate: 0.67
   - name: Pendulum of the Ages
     pick_rate: 0.01
     win_rate: 0.64
-  - name: Leather Cowl
-    pick_rate: 0.009
-    win_rate: 0.71
   - name: Gilded Arrow
     pick_rate: 0.006
     win_rate: 0.4
@@ -133,41 +133,41 @@ builds:
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.57
+    pick_rate: 0.56
     win_rate: 0.49
   - name: Aegis of Acceleration
     pick_rate: 0.42
     win_rate: 0.57
   - name: Phantom Shell
-    pick_rate: 0.006
-    win_rate: 0.8
+    pick_rate: 0.007
+    win_rate: 0.67
   - name: Agility Relic
     pick_rate: 0.005
     win_rate: 0.25
   - name: Blink Rune
-    pick_rate: 0.001
-    win_rate: 0.0
+    pick_rate: 0.002
+    win_rate: 0.5
   source_url: https://smitebrain.com/gods/nut/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5263835263835264
-  god_matches_won: 409
-  god_matches_played: 777
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5251196172248804
+  god_matches_won: 439
+  god_matches_played: 836
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.67
-    win_rate: 0.5281
-    matches: 521
+    pick_rate: 0.65
+    win_rate: 0.5242
+    matches: 543
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.57
+    pick_rate: 0.56
     win_rate: 0.49
-    matches: 443
+    matches: 468
     basis: community
 - source: suggested
   archetype: core
@@ -219,19 +219,19 @@ builds:
       total: 0.54
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.71
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.48
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.38
     Soul Gem:
       total: 0.55
@@ -247,15 +247,15 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.67
-    win_rate: 0.5281
-    matches: 521
+    pick_rate: 0.65
+    win_rate: 0.5242
+    matches: 543
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.57
+    pick_rate: 0.56
     win_rate: 0.49
-    matches: 443
+    matches: 468
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -267,7 +267,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Soul Gem
+  - Tyrfing
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -313,13 +313,13 @@ builds:
       total: 0.54
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.71
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.42
     Soul Gem:
       total: 0.54
@@ -368,7 +368,7 @@ builds:
     Cosmic Horror, Soul Reaver, Qin''s Blade, Totem of Death.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.56
       efficiency: 0.65
       win: 0.54
       pick: 0.0
@@ -383,19 +383,19 @@ builds:
       total: 0.53
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.62
     Spear of Desolation:
-      total: 0.53
+      total: 0.54
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.56
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.4
     Soul Gem:
       total: 0.56
@@ -446,7 +446,7 @@ builds:
     Shogun''s Ofuda, Pharaoh''s Curse, Tekko-Kagi.'
   slot_scores:
     Berserker's Shield:
-      total: 0.55
+      total: 0.56
       efficiency: 0.72
       win: 0.54
       pick: 0.0
@@ -466,17 +466,17 @@ builds:
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.25
     Amanita Charm:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
       win: 0.54
       pick: 0.0
       fit: 0.64
     Soul Gem:
-      total: 0.56
+      total: 0.57
       efficiency: 0.58
       win: 0.54
       pick: 0.0
@@ -536,19 +536,19 @@ builds:
       total: 0.53
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.61
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.57
     Rod of Tahuti:
-      total: 0.62
+      total: 0.63
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.49
     Soul Gem:
       total: 0.56
@@ -598,7 +598,7 @@ builds:
     The Cosmic Horror, Avatar''s Parashu, Berserker''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.52
+      total: 0.53
       efficiency: 0.65
       win: 0.54
       pick: 0.0
@@ -613,13 +613,13 @@ builds:
       total: 0.53
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.63
     Rod of Tahuti:
-      total: 0.59
+      total: 0.6
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.31
     Riptalon:
       total: 0.52
@@ -645,13 +645,13 @@ builds:
   slot_order:
   - Jotunn's Revenge
   - Tyrfing
-  - Bragi's Harp
+  - Hydra's Lament
   - Spear of Desolation
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
   - Tyrfing
-  - Bragi's Harp
+  - Hydra's Lament
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -687,23 +687,23 @@ builds:
       win: 0.53
       pick: 0.55
       fit: 0.5
-    Bragi's Harp:
+    Hydra's Lament:
       total: 0.52
-      efficiency: 0.47
-      win: 0.53
-      pick: 0.68
-      fit: 0.52
+      efficiency: 0.55
+      win: 0.54
+      pick: 0.0
+      fit: 0.54
     Spear of Desolation:
       total: 0.54
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.6
     Rod of Tahuti:
       total: 0.59
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.26
     Soul Gem:
       total: 0.56
@@ -713,7 +713,6 @@ builds:
       fit: 0.78
   community_ordered:
   - Tyrfing
-  - Bragi's Harp
   - Spear of Desolation
   - Rod of Tahuti
   starter: *id001
@@ -728,7 +727,7 @@ builds:
   - Rod of Tahuti
   - Soul Gem
   flex_slots:
-  - Tyrfing
+  - Bragi's Harp
   - Spear of Desolation
   situational_swaps:
   - vs_tag: heavy_cc
@@ -768,19 +767,19 @@ builds:
       total: 0.54
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.7
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.49
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.39
     Soul Gem:
       total: 0.55
@@ -846,22 +845,22 @@ builds:
       total: 0.55
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.75
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.48
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.38
     Soul Gem:
-      total: 0.54
+      total: 0.55
       efficiency: 0.58
       win: 0.54
       pick: 0.0
@@ -923,19 +922,19 @@ builds:
       total: 0.54
       efficiency: 0.47
       win: 0.53
-      pick: 0.68
+      pick: 0.67
       fit: 0.71
     Spear of Desolation:
-      total: 0.52
+      total: 0.53
       efficiency: 0.6
-      win: 0.51
+      win: 0.52
       pick: 0.19
       fit: 0.48
     Rod of Tahuti:
       total: 0.61
       efficiency: 0.82
-      win: 0.56
-      pick: 0.22
+      win: 0.57
+      pick: 0.2
       fit: 0.38
     Soul Gem:
       total: 0.55
@@ -977,8 +976,8 @@ community_aspects:
     aggregate:
       aspect_matches: 43
       aspect_win_rate: 0.581
-      no_aspect_matches: 1131
-      no_aspect_win_rate: 0.565
+      no_aspect_matches: 1132
+      no_aspect_win_rate: 0.564
     roles:
     - role: Support
       matches: 20
@@ -1039,7 +1038,7 @@ community_aspects:
     - name: Phantom Shell
       share: 0.16
     matches_by_window:
-      ob47: 12
+      ob47: 19
       ob46: 37
       ob45: 39
       ob44: 43
