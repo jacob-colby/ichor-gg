@@ -154,7 +154,7 @@ abilities:
   - null
   - buff
   - buff
-  - null
+  - buff
   - buff
   - mechanic
   - mechanic
@@ -259,7 +259,7 @@ aspects:
     damage to nearby enemies. No Escape no longer pulls or stuns but deals increased
     damage and roots.
 source_url: https://wiki.smite2.com/w/Ares
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Ares Basic Attack

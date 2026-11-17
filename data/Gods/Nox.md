@@ -3,7 +3,10 @@ type: smite-god
 name: Nox
 pantheon: Roman
 role: Mid Support
-specializations: []
+specializations:
+- Area Control
+- Lockdown
+- Burst Damage
 damage_type: magical
 release_date: November 3, 2026
 base_stats:
@@ -79,8 +82,8 @@ abilities:
   - This ability ticks 4 times over 2 seconds
   - This ability passes through and damages non-god enemies, and passes through walls,
     but stops on enemy gods
-  - 'Damage Per Tick: 40 | 60 | 75 | 95 | 100'
-  - 'Damage Scaling Per Tick: 10% Intelligence'
+  - 'Damage Per Tick: 45 | 60 | 75 | 90 | 105'
+  - 'Damage Scaling Per Tick: 12% Intelligence'
   - 'Minion Damage: 80 | 125 | 170 | 215 | 260'
   - 'Minion Damage Scaling: 60% Intelligence'
   - 'Root Duration: 2 seconds'
@@ -122,7 +125,7 @@ abilities:
   details:
   - Cancels the channeled abilities of enemy gods on cast
   - 'Damage: 90 | 160 | 230 | 300 | 370'
-  - 'Damage Scaling: 80% Intelligence'
+  - 'Damage Scaling: 100% Intelligence'
   - 'Exit Damage: 50% of the Explosion Damage'
   - 'Silence Duration: 2 seconds'
   - 'Slow: 30 | 32.5 | 35 | 37.5 | 40%'
@@ -182,19 +185,15 @@ abilities:
   name: Night Terror
   cooldown:
   - 90.0
-  - 85.0
-  - 80.0
-  - 75.0
-  - 70.0
   cost:
   - 100.0
   details:
   - You are CC Immune while casting
-  - This ability ticks 6 times over 5 seconds
+  - This ability ticks 5 times over 5 seconds
   - This ability passes through and damages non-god enemies, but stops on walls and
     enemy gods
   - 'Damage: 200 | 250 | 300 | 350 | 400'
-  - 'Damage Scaling: 40% Intelligence'
+  - 'Damage Scaling: 50% Intelligence'
   - 'Damage Per Tick: 20 | 25 | 30 | 35 | 40'
   - 'Damage Scaling Per Tick: 10% Intelligence'
   - 'Silence Duration: 1.5 seconds'
@@ -202,7 +201,7 @@ abilities:
   - 'Weaken Duration: 5 seconds'
   - 'Range: 19.2 meters'
   - 'Radius: 3.5 meters'
-  - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
+  - 'Cooldown: 90 seconds'
   - 'Cost: 100 mana'
   detail_kinds:
   - mechanic
@@ -226,9 +225,13 @@ abilities:
     Silenced . Enemies hit are Weakened , dealing less damage
 aspects:
 - name: Aspect of Silent Night
-  kit_changes: Coming Soon
+  kit_changes: Flame of the Night provides Dampening and a Magical Shield. Shadow
+    Lock scales with Protections. Siphon Darkness Silences and Slows for its duration
+    but deals no damage. Shadow Step provides a Magical Shield to Nox and an ally,
+    fears when exiting an ally, but does no damage. Night Terror does less damage
+    but spawns a dome of darkness on hit which Weakens and Slows enemies inside.
 source_url: https://wiki.smite2.com/w/Nox
-last_verified: '2026-11-04'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Nox Basic Attack

@@ -10,27 +10,27 @@ builds:
   slot_order:
   - name: Briskberry Acorn
     pick_rate: 0.46
-    win_rate: 0.58
+    win_rate: 0.57
     alternates:
     - name: Ashwhorl Acorn
       pick_rate: 0.37
-      win_rate: 0.6
+      win_rate: 0.59
     - name: Thistlethorn Acorn
       pick_rate: 0.12
-      win_rate: 0.56
+      win_rate: 0.54
   - name: Thistlethorn Acorn
-    pick_rate: 0.35
-    win_rate: 0.59
+    pick_rate: 0.36
+    win_rate: 0.58
     alternates:
     - name: Briskberry Acorn
       pick_rate: 0.38
       win_rate: 0.6
     - name: Ashwhorl Acorn
       pick_rate: 0.1
-      win_rate: 0.65
+      win_rate: 0.64
   - name: Jotunn's Revenge
     pick_rate: 0.27
-    win_rate: 0.59
+    win_rate: 0.58
     alternates:
     - name: Thistlethorn Acorn
       pick_rate: 0.3
@@ -40,70 +40,70 @@ builds:
       win_rate: 0.56
   - name: Heartseeker
     pick_rate: 0.14
-    win_rate: 0.58
+    win_rate: 0.56
     alternates:
     - name: Jotunn's Revenge
-      pick_rate: 0.13
-      win_rate: 0.58
+      pick_rate: 0.14
+      win_rate: 0.57
     - name: Shield of the Phoenix
       pick_rate: 0.11
-      win_rate: 0.59
+      win_rate: 0.58
   - name: The Crusher
     pick_rate: 0.08
-    win_rate: 0.63
+    win_rate: 0.6
     alternates:
     - name: Heartseeker
-      pick_rate: 0.23
+      pick_rate: 0.22
       win_rate: 0.59
-    - name: Shield of the Phoenix
+    - name: Freya's Tears
       pick_rate: 0.08
-      win_rate: 0.56
+      win_rate: 0.62
   - name: Titan's Bane
     pick_rate: 0.06
     win_rate: 0.62
     alternates:
     - name: Heartseeker
       pick_rate: 0.06
-      win_rate: 0.72
+      win_rate: 0.68
     - name: Freya's Tears
       pick_rate: 0.06
-      win_rate: 0.57
+      win_rate: 0.58
   community_starters:
   - name: Bluestone Brooch
     pick_rate: 0.32
-    win_rate: 0.65
+    win_rate: 0.64
   - name: Bumba's Hammer
     pick_rate: 0.23
-    win_rate: 0.6
+    win_rate: 0.58
   - name: Bluestone Pendant
     pick_rate: 0.17
     win_rate: 0.52
   community_relics:
   - name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.2
-    win_rate: 0.59
+    pick_rate: 0.21
+    win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
     win_rate: 0.62
   starter_sightings:
   - name: Bluestone Brooch
     pick_rate: 0.32
-    win_rate: 0.65
+    win_rate: 0.64
   - name: Bumba's Hammer
     pick_rate: 0.23
-    win_rate: 0.6
+    win_rate: 0.58
   - name: Bluestone Pendant
     pick_rate: 0.17
     win_rate: 0.52
   - name: Bumba's Cudgel
     pick_rate: 0.09
-    win_rate: 0.48
+    win_rate: 0.49
   - name: Archmage's Gem
     pick_rate: 0.05
-    win_rate: 0.72
+    win_rate: 0.71
   - name: Hunter's Cowl
     pick_rate: 0.03
     win_rate: 0.7
@@ -112,17 +112,17 @@ builds:
     win_rate: 0.58
   - name: Conduit Gem
     pick_rate: 0.02
-    win_rate: 0.29
+    win_rate: 0.25
   - name: Leather Cowl
     pick_rate: 0.01
     win_rate: 0.5
-  - name: Warrior's Axe
-    pick_rate: 0.007
-    win_rate: 0.4
-  - name: Blood-soaked Shroud
-    pick_rate: 0.006
-    win_rate: 0.67
   - name: Sands Of Time
+    pick_rate: 0.008
+    win_rate: 0.55
+  - name: Warrior's Axe
+    pick_rate: 0.008
+    win_rate: 0.42
+  - name: Blood-soaked Shroud
     pick_rate: 0.006
     win_rate: 0.67
   - name: Sundering Axe
@@ -155,43 +155,43 @@ builds:
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.58
+    win_rate: 0.57
   - name: Aegis of Acceleration
-    pick_rate: 0.2
-    win_rate: 0.59
+    pick_rate: 0.21
+    win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
     win_rate: 0.62
   - name: Phantom Shell
-    pick_rate: 0.12
-    win_rate: 0.59
+    pick_rate: 0.13
+    win_rate: 0.58
   - name: Blink Rune
     pick_rate: 0.04
-    win_rate: 0.5
+    win_rate: 0.48
   - name: Agility Relic
     pick_rate: 0.002
     win_rate: 1.0
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5863309352517986
-  god_matches_won: 815
-  god_matches_played: 1390
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5777470628887353
+  god_matches_won: 836
+  god_matches_played: 1447
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.49
-    win_rate: 0.6049
-    matches: 681
+    win_rate: 0.5984
+    matches: 709
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.58
-    matches: 653
+    win_rate: 0.57
+    matches: 680
     basis: community
 - source: suggested
   archetype: core
@@ -226,33 +226,33 @@ builds:
     Deathbringer.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.68
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.52
     Briskberry Acorn:
-      total: 0.62
+      total: 0.61
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.67
+      total: 0.66
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 1.0
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.63
+      win: 0.6
       pick: 0.17
       fit: 1.0
     Titan's Bane:
@@ -272,14 +272,14 @@ builds:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
     pick_rate: 0.49
-    win_rate: 0.6049
-    matches: 681
+    win_rate: 0.5984
+    matches: 709
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.47
-    win_rate: 0.58
-    matches: 653
+    win_rate: 0.57
+    matches: 680
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -315,37 +315,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.57
       efficiency: 0.68
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.29
     Briskberry Acorn:
       total: 0.58
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.29
     Thistlethorn Acorn:
       total: 0.6
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.43
     Jotunn's Revenge:
       total: 0.62
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 0.71
     Transcendence:
-      total: 0.5
+      total: 0.49
       efficiency: 0.5
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.39
     Hydra's Lament:
       total: 0.55
       efficiency: 0.55
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.63
   community_ordered:
@@ -365,7 +365,7 @@ builds:
   - The Crusher
   - Titan's Bane
   flex_slots:
-  - Ashwhorl Acorn
+  - The Crusher
   - Titan's Bane
   situational_swaps:
   - vs_tag: heavy_cc
@@ -390,31 +390,31 @@ builds:
     Ashwhorl Acorn:
       total: 0.56
       efficiency: 0.68
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.22
     Briskberry Acorn:
       total: 0.57
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.22
     Thistlethorn Acorn:
       total: 0.6
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.44
     Jotunn's Revenge:
       total: 0.63
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 0.78
     The Crusher:
-      total: 0.57
+      total: 0.55
       efficiency: 0.51
-      win: 0.63
+      win: 0.6
       pick: 0.17
       fit: 0.66
     Titan's Bane:
@@ -467,37 +467,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.63
       efficiency: 0.79
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.44
     Briskberry Acorn:
-      total: 0.65
+      total: 0.64
       efficiency: 0.84
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.44
     Thistlethorn Acorn:
-      total: 0.65
+      total: 0.64
       efficiency: 0.81
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.48
     Jotunn's Revenge:
       total: 0.58
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.58
+      total: 0.57
       efficiency: 0.61
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.66
     Amanita Charm:
       total: 0.63
       efficiency: 0.68
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.86
   community_ordered:
@@ -542,31 +542,31 @@ builds:
     Briskberry Acorn:
       total: 0.59
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.33
     Thistlethorn Acorn:
       total: 0.59
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.38
     Jotunn's Revenge:
-      total: 0.67
+      total: 0.66
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 1.0
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.63
+      win: 0.6
       pick: 0.17
       fit: 1.0
     Heartseeker:
-      total: 0.58
+      total: 0.57
       efficiency: 0.45
-      win: 0.58
+      win: 0.56
       pick: 0.23
       fit: 1.0
     Titan's Bane:
@@ -617,39 +617,39 @@ builds:
     Shield Splitter.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.62
+      total: 0.61
       efficiency: 0.73
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.48
     Briskberry Acorn:
-      total: 0.57
+      total: 0.56
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.17
     Thistlethorn Acorn:
       total: 0.59
       efficiency: 0.74
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.31
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 0.37
     Tyrfing:
       total: 0.57
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.79
     Riptalon:
       total: 0.54
       efficiency: 0.45
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.79
   community_ordered:
@@ -694,37 +694,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.55
       efficiency: 0.68
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.15
     Briskberry Acorn:
       total: 0.56
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.15
     Thistlethorn Acorn:
       total: 0.63
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.65
     Jotunn's Revenge:
       total: 0.64
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 0.85
     Hydra's Lament:
       total: 0.57
       efficiency: 0.55
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.55
+      total: 0.54
       efficiency: 0.53
-      win: 0.59
+      win: 0.58
       pick: 0.0
       fit: 0.65
   community_ordered:
@@ -767,33 +767,33 @@ builds:
     Devourer''s Gauntlet, Deathbringer.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.61
+      total: 0.6
       efficiency: 0.68
-      win: 0.6
+      win: 0.59
       pick: 0.37
       fit: 0.52
     Briskberry Acorn:
-      total: 0.62
+      total: 0.61
       efficiency: 0.73
-      win: 0.58
+      win: 0.57
       pick: 0.46
       fit: 0.52
     Thistlethorn Acorn:
-      total: 0.63
+      total: 0.62
       efficiency: 0.7
-      win: 0.59
-      pick: 0.48
+      win: 0.58
+      pick: 0.49
       fit: 0.61
     Jotunn's Revenge:
-      total: 0.67
+      total: 0.66
       efficiency: 0.65
-      win: 0.59
+      win: 0.58
       pick: 0.42
       fit: 1.0
     The Crusher:
-      total: 0.62
+      total: 0.61
       efficiency: 0.51
-      win: 0.63
+      win: 0.6
       pick: 0.17
       fit: 1.0
     Titan's Bane:
@@ -831,24 +831,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-16'
-    matches: 557
-    wins: 347
+    window_end: '2026-11-17'
+    matches: 576
+    wins: 356
     win_share: 0.62
     aggregate:
-      aspect_matches: 654
-      aspect_win_rate: 0.602
-      no_aspect_matches: 736
-      no_aspect_win_rate: 0.572
+      aspect_matches: 681
+      aspect_win_rate: 0.595
+      no_aspect_matches: 770
+      no_aspect_win_rate: 0.56
     roles:
     - role: Solo
-      matches: 392
+      matches: 406
       share: 0.7
     - role: Support
-      matches: 107
+      matches: 109
       share: 0.19
     - role: Jungle
-      matches: 57
+      matches: 60
       share: 0.1
     - role: Mid
       matches: 1
@@ -866,7 +866,7 @@ community_aspects:
     - name: Briskberry Acorn
       share: 0.99
     - name: Thistlethorn Acorn
-      share: 0.87
+      share: 0.86
     - name: Shield of the Phoenix
       share: 0.54
     - name: Genji's Guard
@@ -874,9 +874,9 @@ community_aspects:
     - name: Freya's Tears
       share: 0.32
     - name: Breastplate of Valor
-      share: 0.22
+      share: 0.23
     - name: Shifter's Shield
-      share: 0.15
+      share: 0.14
     starters:
     - name: Bluestone Brooch
       share: 0.64
@@ -914,13 +914,13 @@ community_aspects:
       share: 0.0
     relics:
     - name: Sundering Arc
-      share: 0.32
+      share: 0.31
+    - name: Phantom Shell
+      share: 0.26
     - name: Purification Beads
       share: 0.25
-    - name: Phantom Shell
-      share: 0.25
     matches_by_window:
-      ob47: 557
+      ob47: 576
       ob46: 372
       ob45: 221
       ob44: 169

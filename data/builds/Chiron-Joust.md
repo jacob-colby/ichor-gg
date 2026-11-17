@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.49
-    win_rate: 0.5757
-    matches: 367
+    pick_rate: 0.48
+    win_rate: 0.5688
+    matches: 393
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.5
+    name: Aegis of Acceleration
+    pick_rate: 0.49
     win_rate: 0.53
-    matches: 374
+    matches: 401
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -677,7 +677,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Demon Blade
-    reason: Conquest community 62% win over 142 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 155 matches (vs 53% on this god), taking
       the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
@@ -1352,7 +1352,7 @@ builds:
   swaps:
   - added: Titan's Bane
     removed: Toxic Blade
-    reason: Conquest community 62% win over 142 matches (vs 53% on this god), taking
+    reason: Conquest community 63% win over 155 matches (vs 53% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

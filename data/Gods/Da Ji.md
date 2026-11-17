@@ -12,9 +12,15 @@ base_stats:
   health:
     base: 569.5
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 296.0
     per_level: 42.0
+  mana_regen:
+    base: 1.46
+    per_level: 0.13
   physical_prot:
     base: 17.7
     per_level: 3.0
@@ -24,18 +30,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.61
-  move_speed:
-    base: 380.0
-    per_level: 0.0
   attack_power:
     base: 48.0
     per_level: 2.58
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.46
-    per_level: 0.13
+  move_speed:
+    base: 380.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Da Ji Basic Attack
@@ -46,14 +46,14 @@ abilities:
   - 'Base Attack Damage: 39'
   - 'Range: 1.92 meters'
   - 'Radius: 120 degrees'
-  description: Deal Physical Damage to an enemy in front of you
-  damage_type: physical
   detail_kinds:
   - null
   - physical
   - physical
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Deal Physical Damage to an enemy in front of you
 - slot: Passive
   name: Torture Blades
   details:
@@ -61,13 +61,13 @@ abilities:
     times on the same target
   - 'Damage: 7'
   - 'Damage Scaling: 5% Strength'
-  description: Attacks and non-ultimate abilities cause enemies to Bleed, dealing
-    Physical Damage every 1 second for 2 seconds
-  damage_type: physical
   detail_kinds:
   - null
   - physical
   - physical
+  damage_type: physical
+  description: Attacks and non-ultimate abilities cause enemies to Bleed, dealing
+    Physical Damage every 1 second for 2 seconds
 - slot: 1st Ability
   name: Horrible Burns
   cooldown:
@@ -89,9 +89,6 @@ abilities:
   - 'Enemy Health Threshold: 30%'
   - 'Cooldown: 9 seconds'
   - 'Cost: 50 mana'
-  description: While active, your next successful Attack Slows , deals bonus Physical
-    Damage , and Physical Damage every 1 second for 3 seconds
-  damage_type: physical
   detail_kinds:
   - null
   - null
@@ -106,6 +103,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: While active, your next successful Attack Slows , deals bonus Physical
+    Damage , and Physical Damage every 1 second for 3 seconds
 - slot: 2nd Ability
   name: One Thousand Cuts
   cooldown:
@@ -121,17 +121,13 @@ abilities:
     Backpedal movement penalties, and Mitigate Damage dealt by enemies gods behind
     you
   - 'Damage: 35 | 50 | 65 | 80 | 95'
-  - 'Damage Scaling: 35% Strength'
+  - 'Damage Scaling: 30% Strength'
   - 'Movement Speed: 30%'
-  - 'Damage Mitigation: 20 | 25 | 30 | 35 | 40%'
+  - 'Damage Mitigation: 15 | 20 | 25 | 30 | 35%'
   - 'Range: 3.2 meters'
   - 'Cone Angle: 180 degrees'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: While Channeling you gain Movement Speed , Slow Immunity , immunity
-    to Strafe and Backpedal movement penalties , and Mitigate Damage dealt by enemies
-    gods behind you Strike enemies ahead of you 4 times, dealing Physical Damage
-  damage_type: physical
   detail_kinds:
   - buff
   - physical
@@ -142,6 +138,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: While Channeling you gain Movement Speed , Slow Immunity , immunity
+    to Strafe and Backpedal movement penalties , and Mitigate Damage dealt by enemies
+    gods behind you Strike enemies ahead of you 4 times, dealing Physical Damage
 - slot: 3rd Ability
   name: Trickster Spirit
   cooldown:
@@ -161,9 +161,6 @@ abilities:
   - 'Radius: 1.6 meters'
   - 'Cooldown: 15 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Teleport to a target character or ward after a short delay, dealing
-    Physical Damage in an area
-  damage_type: physical
   detail_kinds:
   - null
   - physical
@@ -172,6 +169,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: Teleport to a target character or ward after a short delay, dealing
+    Physical Damage in an area
 - slot: Ultimate
   name: Paolao
   cooldown:
@@ -194,11 +194,6 @@ abilities:
   - 'Pulse Radius: 3.2 meters'
   - 'Cooldown: 120 seconds'
   - 'Cost: 50 mana'
-  description: If a chained god reaches the , they are Stunned and take Physical Damage
-    Enemies near the also take Physical Damage every 0.25 seconds Rise onto your for
-    up to 5 seconds and fire 3 ensnaring chains. Chains deal Physical Damage , Cripple
-    , and Vortex enemy gods towards the
-  damage_type: physical
   detail_kinds:
   - null
   - stun
@@ -215,6 +210,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: physical
+  description: If a chained god reaches the , they are Stunned and take Physical Damage
+    Enemies near the also take Physical Damage every 0.25 seconds Rise onto your for
+    up to 5 seconds and fire 3 ensnaring chains. Chains deal Physical Damage , Cripple
+    , and Vortex enemy gods towards the
 aspects:
 - name: Aspect of Ferocity
   kit_changes: Horrible Burns no longer burns but provides Lifesteal and lasts for
@@ -222,7 +222,7 @@ aspects:
     thresholds and deals Attack damage. Trickster Sprit does less damage but provides
     an Attack Speed buff.
 source_url: https://wiki.smite2.com/w/Da_Ji
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Da Ji Basic Attack

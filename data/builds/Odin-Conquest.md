@@ -9,69 +9,69 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.53
-    win_rate: 0.62
+    pick_rate: 0.52
+    win_rate: 0.61
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.14
-      win_rate: 0.57
+      win_rate: 0.56
     - name: Breastplate of Valor
       pick_rate: 0.04
-      win_rate: 0.6
+      win_rate: 0.63
   - name: Breastplate of Valor
     pick_rate: 0.28
-    win_rate: 0.61
+    win_rate: 0.6
     alternates:
     - name: Genji's Guard
       pick_rate: 0.17
-      win_rate: 0.67
+      win_rate: 0.68
     - name: Hydra's Lament
       pick_rate: 0.09
-      win_rate: 0.6
+      win_rate: 0.59
   - name: Genji's Guard
     pick_rate: 0.2
-    win_rate: 0.69
+    win_rate: 0.68
     alternates:
     - name: Breastplate of Valor
-      pick_rate: 0.18
+      pick_rate: 0.17
       win_rate: 0.64
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.43
+      win_rate: 0.45
   - name: Freya's Tears
     pick_rate: 0.16
-    win_rate: 0.74
+    win_rate: 0.7
     alternates:
     - name: Genji's Guard
       pick_rate: 0.14
-      win_rate: 0.54
+      win_rate: 0.52
     - name: Kinetic Cuirass
-      pick_rate: 0.06
-      win_rate: 0.75
+      pick_rate: 0.07
+      win_rate: 0.72
   - name: Sundering Echo
     pick_rate: 0.06
-    win_rate: 0.71
+    win_rate: 0.65
     alternates:
     - name: Freya's Tears
-      pick_rate: 0.1
-      win_rate: 0.67
+      pick_rate: 0.11
+      win_rate: 0.65
     - name: Brawler’s Beat Stick
       pick_rate: 0.05
-      win_rate: 0.47
-  - name: Engraved Guard
-    pick_rate: 0.07
-    win_rate: 0.54
-    alternates:
-    - name: Hide of the Nemean Lion
-      pick_rate: 0.07
-      win_rate: 0.85
-    - name: Sage's Ring
-      pick_rate: 0.06
       win_rate: 0.5
+  - name: Hide of the Nemean Lion
+    pick_rate: 0.07
+    win_rate: 0.81
+    alternates:
+    - name: Sage's Ring
+      pick_rate: 0.07
+      win_rate: 0.47
+    - name: Medal of Defense
+      pick_rate: 0.07
+      win_rate: 0.57
   community_starters:
   - name: Bumba's Hammer
-    pick_rate: 0.37
-    win_rate: 0.7
+    pick_rate: 0.36
+    win_rate: 0.69
   - name: Bumba's Cudgel
     pick_rate: 0.23
     win_rate: 0.48
@@ -80,18 +80,18 @@ builds:
     win_rate: 0.6
   community_relics:
   - name: Blink Rune
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.68
   - name: Purification Beads
-    pick_rate: 0.25
-    win_rate: 0.53
-  - name: Phantom Shell
+    pick_rate: 0.24
+    win_rate: 0.52
+  - name: Sundering Arc
     pick_rate: 0.15
-    win_rate: 0.49
+    win_rate: 0.6
   starter_sightings:
   - name: Bumba's Hammer
-    pick_rate: 0.37
-    win_rate: 0.7
+    pick_rate: 0.36
+    win_rate: 0.69
   - name: Bumba's Cudgel
     pick_rate: 0.23
     win_rate: 0.48
@@ -100,39 +100,39 @@ builds:
     win_rate: 0.6
   - name: Bluestone Pendant
     pick_rate: 0.08
-    win_rate: 0.46
+    win_rate: 0.45
   - name: Warrior's Axe
     pick_rate: 0.04
-    win_rate: 0.58
+    win_rate: 0.62
+  - name: Sundering Axe
+    pick_rate: 0.03
+    win_rate: 0.73
   - name: Sands Of Time
     pick_rate: 0.02
     win_rate: 0.43
-  - name: Sundering Axe
+  - name: War Banner
     pick_rate: 0.02
-    win_rate: 0.75
+    win_rate: 0.67
   - name: War Flag
     pick_rate: 0.02
-    win_rate: 0.13
+    win_rate: 0.11
+  - name: Archmage's Gem
+    pick_rate: 0.01
+    win_rate: 0.75
   - name: Pendulum of the Ages
     pick_rate: 0.01
     win_rate: 1.0
-  - name: War Banner
-    pick_rate: 0.01
-    win_rate: 0.8
   - name: Selflessness
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.33
-  - name: Archmage's Gem
-    pick_rate: 0.006
-    win_rate: 0.5
   - name: Conduit Gem
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.5
   - name: Death's Toll
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.5
   - name: Hunter's Cowl
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.5
   - name: Bumba's Golden Dagger
     pick_rate: 0.003
@@ -142,44 +142,44 @@ builds:
     win_rate: 1.0
   relic_sightings:
   - name: Blink Rune
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.68
   - name: Purification Beads
-    pick_rate: 0.25
-    win_rate: 0.53
-  - name: Phantom Shell
-    pick_rate: 0.15
-    win_rate: 0.49
+    pick_rate: 0.24
+    win_rate: 0.52
   - name: Sundering Arc
-    pick_rate: 0.13
-    win_rate: 0.58
+    pick_rate: 0.15
+    win_rate: 0.6
+  - name: Phantom Shell
+    pick_rate: 0.14
+    win_rate: 0.48
   - name: Aegis of Acceleration
     pick_rate: 0.07
-    win_rate: 0.56
+    win_rate: 0.54
   - name: Agility Relic
-    pick_rate: 0.009
-    win_rate: 0.33
+    pick_rate: 0.01
+    win_rate: 0.4
   source_url: https://smitebrain.com/gods/odin/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5905044510385756
-  god_matches_won: 199
-  god_matches_played: 337
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5863013698630137
+  god_matches_won: 214
+  god_matches_played: 365
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.6
-    win_rate: 0.6157
-    matches: 202
+    pick_rate: 0.59
+    win_rate: 0.6081
+    matches: 215
     basis: community
   relic:
     name: Blink Rune
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.68
-    matches: 131
+    matches: 139
     basis: community
 - source: suggested
   archetype: core
@@ -215,39 +215,39 @@ builds:
     Hide, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.42
     Genji's Guard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.27
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.63
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.59
     Hide of the Nemean Lion:
-      total: 0.63
+      total: 0.61
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.31
     Freya's Tears:
-      total: 0.63
+      total: 0.61
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.44
     Amanita Charm:
-      total: 0.59
+      total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.49
   community_ordered:
@@ -259,15 +259,15 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.6
-    win_rate: 0.6157
-    matches: 202
+    pick_rate: 0.59
+    win_rate: 0.6081
+    matches: 215
     basis: community
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.39
+    pick_rate: 0.38
     win_rate: 0.68
-    matches: 131
+    matches: 139
     basis: community
 - source: suggested
   archetype: mana-stack
@@ -279,7 +279,7 @@ builds:
   - Freya's Tears
   - Hide of the Nemean Lion
   flex_slots:
-  - Jotunn's Revenge
+  - Freya's Tears
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -302,39 +302,39 @@ builds:
     Arondight, Magi''s Cloak, Mantle Of Discord, Avenging Blade, Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.43
     Genji's Guard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.27
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.44
     Transcendence:
-      total: 0.49
+      total: 0.48
       efficiency: 0.5
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.23
     Freya's Tears:
-      total: 0.61
+      total: 0.59
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.33
     Hide of the Nemean Lion:
-      total: 0.61
+      total: 0.6
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.22
   community_ordered:
@@ -355,7 +355,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Freya's Tears
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -379,39 +379,39 @@ builds:
     Shifter''s Shield.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.44
     Genji's Guard:
       total: 0.61
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.24
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.63
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.57
     Hide of the Nemean Lion:
-      total: 0.63
+      total: 0.61
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.33
     Freya's Tears:
-      total: 0.62
+      total: 0.6
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.39
     Amanita Charm:
       total: 0.63
       efficiency: 0.68
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.77
   community_ordered:
@@ -432,7 +432,7 @@ builds:
   - Freya's Tears
   - Amanita Charm
   flex_slots:
-  - Genji's Guard
+  - Freya's Tears
   - Amanita Charm
   situational_swaps:
   - vs_tag: heavy_cc
@@ -458,37 +458,37 @@ builds:
     Jotunn's Revenge:
       total: 0.61
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.52
     Genji's Guard:
-      total: 0.61
+      total: 0.6
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.22
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.5
     Hide of the Nemean Lion:
-      total: 0.62
+      total: 0.6
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.26
     Freya's Tears:
-      total: 0.61
+      total: 0.6
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.37
     Amanita Charm:
-      total: 0.58
+      total: 0.57
       efficiency: 0.68
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.4
   community_ordered:
@@ -503,10 +503,10 @@ builds:
   archetype: attack-speed
   slot_order:
   - Golden Blade
+  - Genji's Guard
   - Berserker's Shield
   - Kinetic Cuirass
   - Tyrfing
-  - Freya's Tears
   - Hide of the Nemean Lion
   flex_slots:
   - Tyrfing
@@ -516,8 +516,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Freya's Tears — magical protection
+    swap_item: Freya's Tears
   - vs_tag: physical_heavy
     swap: Amanita Charm — physical protection
     swap_item: Amanita Charm
@@ -535,42 +535,42 @@ builds:
     Golden Blade:
       total: 0.53
       efficiency: 0.51
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.52
+    Genji's Guard:
+      total: 0.6
+      efficiency: 0.71
+      win: 0.68
+      pick: 0.31
+      fit: 0.19
     Berserker's Shield:
       total: 0.59
       efficiency: 0.72
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.42
     Kinetic Cuirass:
-      total: 0.62
+      total: 0.61
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.45
     Tyrfing:
       total: 0.54
       efficiency: 0.53
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.52
-    Freya's Tears:
-      total: 0.61
-      efficiency: 0.61
-      win: 0.74
-      pick: 0.27
-      fit: 0.32
     Hide of the Nemean Lion:
-      total: 0.62
+      total: 0.6
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.23
   community_ordered:
+  - Genji's Guard
   - Kinetic Cuirass
-  - Freya's Tears
   - Hide of the Nemean Lion
   starter: *id001
   relic: *id002
@@ -610,37 +610,37 @@ builds:
     Jotunn's Revenge:
       total: 0.6
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.46
     Breastplate of Valor:
-      total: 0.58
+      total: 0.57
       efficiency: 0.63
-      win: 0.61
+      win: 0.6
       pick: 0.38
       fit: 0.41
     Genji's Guard:
-      total: 0.64
+      total: 0.63
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.41
     Kinetic Cuirass:
-      total: 0.63
+      total: 0.62
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.48
     Freya's Tears:
-      total: 0.64
+      total: 0.62
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.55
     Hide of the Nemean Lion:
-      total: 0.62
+      total: 0.6
       efficiency: 0.54
-      win: 0.85
+      win: 0.81
       pick: 0.22
       fit: 0.25
   community_ordered:
@@ -686,39 +686,39 @@ builds:
     Hide, Avenging Blade.'
   slot_scores:
     Jotunn's Revenge:
-      total: 0.6
+      total: 0.59
       efficiency: 0.65
-      win: 0.62
-      pick: 0.53
+      win: 0.61
+      pick: 0.52
       fit: 0.42
     Genji's Guard:
-      total: 0.62
+      total: 0.61
       efficiency: 0.71
-      win: 0.69
+      win: 0.68
       pick: 0.31
       fit: 0.27
     Kinetic Cuirass:
-      total: 0.64
+      total: 0.63
       efficiency: 0.61
-      win: 0.75
-      pick: 0.1
+      win: 0.72
+      pick: 0.12
       fit: 0.59
     Shield Splitter:
       total: 0.56
       efficiency: 0.58
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.54
     Freya's Tears:
-      total: 0.63
+      total: 0.61
       efficiency: 0.61
-      win: 0.74
+      win: 0.7
       pick: 0.27
       fit: 0.44
     Amanita Charm:
-      total: 0.59
+      total: 0.58
       efficiency: 0.68
-      win: 0.61
+      win: 0.6
       pick: 0.0
       fit: 0.49
   community_ordered:

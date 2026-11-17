@@ -221,9 +221,11 @@ abilities:
     , CC Immunity , and move freely in all directions
 aspects:
 - name: Aspect of Spirits
-  kit_changes: Coming Soon
+  kit_changes: Water Bowl no longer provides Mitigation but instead causes you to
+    spawn orbiting Kappa Spirits. Shell Spikes no longer reflects damage but instead
+    causes you to throw Sprit Kappas.
 source_url: https://wiki.smite2.com/w/Kuzenbo
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Kuzenbo Basic Attack

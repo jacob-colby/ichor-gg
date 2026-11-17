@@ -12,9 +12,15 @@ base_stats:
   health:
     base: 569.48
     per_level: 86.48
+  health_regen:
+    base: 1.7
+    per_level: 0.2
   mana:
     base: 316.32
     per_level: 42.0
+  mana_regen:
+    base: 1.56
+    per_level: 0.12
   physical_prot:
     base: 17.48
     per_level: 2.76
@@ -24,18 +30,12 @@ base_stats:
   attack_speed:
     base: 1.0
     per_level: 1.51
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 44.76
     per_level: 2.76
-  health_regen:
-    base: 1.7
-    per_level: 0.2
-  mana_regen:
-    base: 1.56
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Sol Basic Attack
@@ -46,8 +46,6 @@ abilities:
   - 'Heat Generated: 5'
   - 'Range: 8.8 meters'
   - 'Radius: 0.48 meters'
-  description: Fire a projectile that deals Magical Damage to the first enemy hit
-  damage_type: magical
   detail_kinds:
   - null
   - null
@@ -55,6 +53,8 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Fire a projectile that deals Magical Damage to the first enemy hit
 - slot: Passive
   name: Unstable Manifestation
   details:
@@ -67,8 +67,6 @@ abilities:
   - 'Intelligence: 0.25%'
   - 'Attack Speed: 0.3%'
   - 'Attack Damage: 15%'
-  description: Heat grants increased Strength , Intelligence , and Attack Speed from
-    items Hit enemies with Attacks or use abilities to gain Heat
   detail_kinds:
   - buff
   - buff
@@ -79,6 +77,8 @@ abilities:
   - buff
   - buff
   - buff
+  description: Heat grants increased Strength , Intelligence , and Attack Speed from
+    items Hit enemies with Attacks or use abilities to gain Heat
 - slot: 1st Ability
   name: Radiance
   cooldown:
@@ -100,12 +100,9 @@ abilities:
   - 'Heal Per Tick: 2.5% Missing Health'
   - 'Heal Scaling Per Tick: 2% Intelligence'
   - 'Heat Generated: 30 | 40 | 50 | 60 | 70'
-  - 'Radius: 2.08 meters'
+  - 'Radius: 2.4 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: Create a pool of flames and Heal yourself over time for a percentage
-    of your missing Health
-  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -120,6 +117,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Create a pool of flames and Heal yourself over time for a percentage
+    of your missing Health
 - slot: 2nd Ability
   name: Stellar Burst
   cooldown:
@@ -143,9 +143,6 @@ abilities:
   - 'Radius: 3.2 meters'
   - 'Cooldown: 10 seconds'
   - 'Cost: 50 | 60 | 70 | 80 | 90 mana'
-  description: Your next Attack fires a projectile that explodes on hit or upon reaching
-    max range, then retracts, and generates Heat
-  damage_type: magical
   detail_kinds:
   - magical
   - null
@@ -159,6 +156,9 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Your next Attack fires a projectile that explodes on hit or upon reaching
+    max range, then retracts, and generates Heat
 - slot: 3rd Ability
   name: Disapparate
   cooldown:
@@ -187,11 +187,6 @@ abilities:
   - 'Radius: 1 meter'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 mana'
-  description: This Immune state makes you Damage Immune , Healing Immune , CC Immune
-    , Untargetable , and lets you pass through allies, enemies, and Impediments Gain
-    Movement Speed and Slow Immunity , gaining Heat and leaving a trail of fire behind
-    you
-  damage_type: magical
   detail_kinds:
   - magical
   - mechanic
@@ -208,6 +203,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: This Immune state makes you Damage Immune , Healing Immune , CC Immune
+    , Untargetable , and lets you pass through allies, enemies, and Impediments Gain
+    Movement Speed and Slow Immunity , gaining Heat and leaving a trail of fire behind
+    you
 - slot: Ultimate
   name: Supernova
   cooldown:
@@ -232,10 +232,6 @@ abilities:
   - 'Radius: 1.92 meters'
   - 'Cooldown: 90 | 85 | 80 | 75 | 70 seconds'
   - 'Cost: 100 mana'
-  description: Each strike deals Magical Damage ; subsequent hits deal reduced Damage
-    Unleash flame and fury, gaining Heat and striking 8 times along a moveable ground
-    target location
-  damage_type: magical
   detail_kinds:
   - magical
   - stun
@@ -249,13 +245,19 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Each strike deals Magical Damage ; subsequent hits deal reduced Damage
+    Unleash flame and fury, gaining Heat and striking 8 times along a moveable ground
+    target location
 aspects:
 - name: Aspect of Conflagration
-  kit_changes: Sol's Heat provides Intelligence and Ability Damage, but no longer
-    provides Strength, Attack Speed, and Attack Damage. Sol erupts and deals damage
-    around her when becomes immune in Disapparate.
+  kit_changes: Heat grants Intelligence as it increases and Ability Damage at full
+    heat, but no longer grants Strength, Attack Speed or Basic Attack Damage. Radiance
+    is placed at a target location and lasts longer. When Stellar Burst retracts,
+    it relays a burst to each of your Radiance pools. Disapparate no longer leaves
+    a trail; you erupt when you become Immune instead.
 source_url: https://wiki.smite2.com/w/Sol
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Sol Basic Attack

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Selflessness
     upgrade: Heroism
-    pick_rate: 0.44
-    win_rate: 0.6148
-    matches: 250
+    pick_rate: 0.43
+    win_rate: 0.6072
+    matches: 257
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.51
-    win_rate: 0.6
-    matches: 290
+    pick_rate: 0.5
+    win_rate: 0.59
+    matches: 298
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -13,9 +13,15 @@ base_stats:
   health:
     base: 705.3
     per_level: 101.52
+  health_regen:
+    base: 1.84
+    per_level: 0.22
   mana:
     base: 299.0
     per_level: 45.37
+  mana_regen:
+    base: 1.45
+    per_level: 0.12
   physical_prot:
     base: 20.5
     per_level: 3.24
@@ -25,18 +31,12 @@ base_stats:
   attack_speed:
     base: 0.96
     per_level: 1.4
-  move_speed:
-    base: 370.0
-    per_level: 0.0
   attack_power:
     base: 44.0
     per_level: 2.42
-  health_regen:
-    base: 1.84
-    per_level: 0.22
-  mana_regen:
-    base: 1.45
-    per_level: 0.12
+  move_speed:
+    base: 370.0
+    per_level: 0.0
 abilities:
 - slot: Basic Attack
   name: Atlas Basic Attack
@@ -48,14 +48,14 @@ abilities:
   - 'Damage Scaling: 100% Strength + 20% Intelligence + 100% Attack Damage'
   - 'Range: 1.92 meters'
   - 'Cone Angle: 120 degrees'
-  description: Deal Magical Damage to an enemy in front of you
-  damage_type: magical
   detail_kinds:
   - null
   - null
   - magical
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Deal Magical Damage to an enemy in front of you
 - slot: Passive
   name: The Astrolabe
   cost:
@@ -75,12 +75,8 @@ abilities:
   - 'Energy from Gods: 1.25'
   - 'Energy from Minions: 0.125'
   - 'Max Energy: 30'
-  - 'Radius: 1.5 meters'
+  - 'Empowered Attack Radius: 1.5 meters'
   - 'Cost: 20 energy'
-  description: You gain Energy in your Astrolabe when you take damage from enemy gods
-    or deal damage with your Attacks or Abilities (minions grant reduced Energy).
-    At enough Energy, you may press your interact key to unleash an Empowered Astrolabe
-    Strike, consuming Energy. This does not trigger automatically from your next Attack
   detail_kinds:
   - debuff
   - null
@@ -94,6 +90,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: You gain Energy in your Astrolabe when you take damage from enemy gods
+    or deal damage with your Attacks or Abilities (minions grant reduced Energy).
+    At enough Energy, you may press your interact key to unleash an Empowered Astrolabe
+    Strike, consuming Energy. This does not trigger automatically from your next Attack
 - slot: 1st Ability
   name: Unburden
   cooldown:
@@ -123,10 +123,6 @@ abilities:
   - 'Cooldown: 14 | 13 | 12 | 11 | 10 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
   - 'Cost Per Attack: 5 mana'
-  description: Throw your Astrolabe to a target location, dealing Magical Damage and
-    Slowing enemies. While deployed, your Attacks cause explosions at the Astrolabe
-    that deal Magical Damage to enemies and cost Mana per explosion. The Astrolabe
-    returns after 5 seconds or on refire
   detail_kinds:
   - buff
   - null
@@ -142,6 +138,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Throw your Astrolabe to a target location, dealing Magical Damage and
+    Slowing enemies. While deployed, your Attacks cause explosions at the Astrolabe
+    that deal Magical Damage to enemies and cost Mana per explosion. The Astrolabe
+    returns after 5 seconds or on refire
 - slot: 2nd Ability
   name: Gravity Pull
   cooldown:
@@ -164,11 +164,6 @@ abilities:
   - 'Cone Angle: 75 degrees'
   - 'Cooldown: 16 seconds'
   - 'Cost: 50 | 55 | 60 | 65 | 70 mana'
-  description: Pull enemies toward your Astrolabe. Enemy gods who are too close are
-    pulled into it. If you are holding your Astrolabe, you become Knock Up Immune
-    , and enemies pulled into the Astrolabe are held in front of you before being
-    Launched in the direction you are facing. If your Astrolabe is deployed, held
-    enemies are Launched toward you from its location
   detail_kinds:
   - stun
   - stun
@@ -181,6 +176,11 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Pull enemies toward your Astrolabe. Enemy gods who are too close are
+    pulled into it. If you are holding your Astrolabe, you become Knock Up Immune
+    , and enemies pulled into the Astrolabe are held in front of you before being
+    Launched in the direction you are facing. If your Astrolabe is deployed, held
+    enemies are Launched toward you from its location
 - slot: 3rd Ability
   name: Kinetic Charge
   cooldown:
@@ -207,12 +207,6 @@ abilities:
   - 'Explosion Radius: 2.4 meters'
   - 'Cooldown: 16 | 15.5 | 15 | 14.5 | 14 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
-  description: Dash forward, dealing Magical Damage to minions and cleansing yourself
-    of Slows . Each allied god you pass near is cleansed of Slows and gains Movement
-    Speed . While Dashing , you are Slow and Knock Up Immune . Hitting an enemy god
-    stops the Dash and releases an explosion that Slows ; each Slow you cleanse from
-    an ally during the Dash strengthens that explosion's Slow
-  damage_type: magical
   detail_kinds:
   - null
   - magical
@@ -225,6 +219,12 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  damage_type: magical
+  description: Dash forward, dealing Magical Damage to minions and cleansing yourself
+    of Slows . Each allied god you pass near is cleansed of Slows and gains Movement
+    Speed . While Dashing , you are Slow and Knock Up Immune . Hitting an enemy god
+    stops the Dash and releases an explosion that Slows ; each Slow you cleanse from
+    an ally during the Dash strengthens that explosion's Slow
 - slot: Ultimate
   name: Gamma-Ray Burst
   cooldown:
@@ -252,10 +252,6 @@ abilities:
   - 'Final Radius: 3.2 meters'
   - 'Cooldown: 90 seconds'
   - 'Cost: 65 | 70 | 75 | 80 | 85 mana'
-  description: Tear open the sky and call down a . Enemies in the area take Magical
-    Damage over time and gain Radiation stacks that reduce their Protections and Power
-    . After 5 seconds or when you refire, the burst focuses into a traveling beam
-    that deals Magical Damage and applies 3 stacks of Radiation
   detail_kinds:
   - null
   - null
@@ -273,6 +269,10 @@ abilities:
   - mechanic
   - mechanic
   - mechanic
+  description: Tear open the sky and call down a . Enemies in the area take Magical
+    Damage over time and gain Radiation stacks that reduce their Protections and Power
+    . After 5 seconds or when you refire, the burst focuses into a traveling beam
+    that deals Magical Damage and applies 3 stacks of Radiation
 aspects:
 - name: Aspect of the Unburdened
   kit_changes: Your Attack now throws your astrolabe. Unburden is used to reposition
@@ -280,7 +280,7 @@ aspects:
     Charge can be used to kick the astrolabe forward. Your passive now reduces the
     cooldown of Gamma-Ray Burst.
 source_url: https://wiki.smite2.com/w/Atlas
-last_verified: '2026-08-01'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Atlas Basic Attack

@@ -102,8 +102,6 @@ abilities:
   - 'Bleed Damage: 5 | 10 | 15 | 20 | 25 + 30% Intelligence over 4 ticks'
   - 'Max Debuff Stacks: 3'
   - 'Debuff Duration: 2 seconds'
-  - 'Range: 8.8 meters'
-  - 'Radius: 0.48 meters'
   - 'Cooldown: 11 seconds'
   - 'Cost: 60 | 65 | 70 | 75 | 80 mana'
   detail_kinds:
@@ -119,8 +117,6 @@ abilities:
   - debuff
   - debuff
   - debuff
-  - mechanic
-  - mechanic
   - mechanic
   - mechanic
   damage_type: physical
@@ -240,9 +236,13 @@ abilities:
   damage_type: physical
   description: Summon a dark portal which deals instant Physical Damage and Physical
     Damage over time
-aspects: []
+aspects:
+- name: Aspect of the Sickle
+  kit_changes: Your Attacks no longer pierce. Sickle Storm deals damage over time
+    in an area and wounds enemy gods. Your attacks and other abilities burst all wound
+    stacks to deal bonus damage.
 source_url: https://wiki.smite2.com/w/Izanami
-last_verified: '2026-11-02'
+last_verified: '2026-11-17'
 ---
 <!-- WIKI:START -->
 - Izanami Basic Attack

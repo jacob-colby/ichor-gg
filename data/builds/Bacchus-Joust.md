@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Leather Cowl
     upgrade: Hunter's Cowl
-    pick_rate: 0.7
-    win_rate: 0.6151
-    matches: 943
+    pick_rate: 0.68
+    win_rate: 0.6116
+    matches: 958
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.48
-    win_rate: 0.62
-    matches: 647
+    win_rate: 0.61
+    matches: 676
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Devourer's Gauntlet
     removed: Brawler’s Beat Stick
-    reason: Conquest community 62% win over 889 matches (vs 58% on this god), taking
+    reason: Conquest community 62% win over 930 matches (vs 58% on this god), taking
       the model's weakest slot from Brawler’s Beat Stick
   borrowed_from: Conquest
   starter: *id001

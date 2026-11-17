@@ -6,7 +6,7 @@ builds:
 - source: community
   aspect: Aspect of Victorious Conquest
   aspect_pick_rate: 0.61
-  aspect_win_rate: 0.54
+  aspect_win_rate: 0.55
   slot_order:
   - name: Jotunn's Revenge
     pick_rate: 0.39
@@ -14,70 +14,70 @@ builds:
     alternates:
     - name: Shifter's Shield
       pick_rate: 0.21
-      win_rate: 0.47
+      win_rate: 0.49
     - name: Transcendence
       pick_rate: 0.13
-      win_rate: 0.52
+      win_rate: 0.53
   - name: Transcendence
     pick_rate: 0.25
-    win_rate: 0.59
+    win_rate: 0.6
     alternates:
     - name: Jotunn's Revenge
       pick_rate: 0.13
       win_rate: 0.53
     - name: Prophetic Cloak
       pick_rate: 0.07
-      win_rate: 0.39
+      win_rate: 0.42
   - name: The Crusher
     pick_rate: 0.2
-    win_rate: 0.55
+    win_rate: 0.56
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
       win_rate: 0.48
     - name: Heartseeker
-      pick_rate: 0.1
-      win_rate: 0.63
+      pick_rate: 0.11
+      win_rate: 0.62
   - name: Heartseeker
     pick_rate: 0.24
-    win_rate: 0.53
+    win_rate: 0.55
     alternates:
     - name: Freya's Tears
       pick_rate: 0.09
-      win_rate: 0.52
+      win_rate: 0.53
     - name: The Crusher
       pick_rate: 0.07
       win_rate: 0.45
   - name: Titan's Bane
     pick_rate: 0.06
-    win_rate: 0.63
+    win_rate: 0.64
     alternates:
     - name: Heartseeker
       pick_rate: 0.11
       win_rate: 0.6
-    - name: Blinking Abyss
-      pick_rate: 0.05
-      win_rate: 0.59
+    - name: Avatar's Parashu
+      pick_rate: 0.06
+      win_rate: 0.71
   - name: Skeggox
     pick_rate: 0.1
     win_rate: 0.55
     alternates:
     - name: Avatar's Parashu
       pick_rate: 0.07
-      win_rate: 0.56
+      win_rate: 0.55
     - name: Blinking Abyss
-      pick_rate: 0.07
-      win_rate: 0.62
+      pick_rate: 0.06
+      win_rate: 0.64
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.33
-    win_rate: 0.53
+    pick_rate: 0.32
+    win_rate: 0.54
   - name: Archmage's Gem
     pick_rate: 0.23
-    win_rate: 0.63
+    win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.15
-    win_rate: 0.43
+    win_rate: 0.45
   community_relics:
   - name: Purification Beads
     pick_rate: 0.36
@@ -87,37 +87,37 @@ builds:
     win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
-    win_rate: 0.49
+    win_rate: 0.5
   starter_sightings:
   - name: Bluestone Brooch
-    pick_rate: 0.33
-    win_rate: 0.53
+    pick_rate: 0.32
+    win_rate: 0.54
   - name: Archmage's Gem
     pick_rate: 0.23
-    win_rate: 0.63
+    win_rate: 0.64
   - name: Bluestone Pendant
     pick_rate: 0.15
-    win_rate: 0.43
+    win_rate: 0.45
   - name: Conduit Gem
     pick_rate: 0.11
-    win_rate: 0.4
+    win_rate: 0.39
   - name: Pendulum of the Ages
     pick_rate: 0.06
-    win_rate: 0.57
+    win_rate: 0.58
   - name: Sands Of Time
     pick_rate: 0.03
-    win_rate: 0.19
+    win_rate: 0.17
   - name: Sundering Axe
     pick_rate: 0.03
-    win_rate: 0.64
+    win_rate: 0.67
   - name: Warrior's Axe
     pick_rate: 0.02
-    win_rate: 0.31
+    win_rate: 0.28
   - name: Selflessness
-    pick_rate: 0.009
+    pick_rate: 0.008
     win_rate: 0.25
   - name: Bumba's Cudgel
-    pick_rate: 0.008
+    pick_rate: 0.007
     win_rate: 0.29
   - name: Bumba's Hammer
     pick_rate: 0.005
@@ -149,10 +149,10 @@ builds:
     win_rate: 0.57
   - name: Sundering Arc
     pick_rate: 0.16
-    win_rate: 0.49
+    win_rate: 0.5
   - name: Blink Rune
-    pick_rate: 0.13
-    win_rate: 0.52
+    pick_rate: 0.14
+    win_rate: 0.54
   - name: Phantom Shell
     pick_rate: 0.11
     win_rate: 0.42
@@ -160,26 +160,26 @@ builds:
     pick_rate: 0.003
     win_rate: 0.33
   source_url: https://smitebrain.com/gods/nike/
-  last_verified: '2026-11-16'
-  god_win_rate: 0.5070422535211268
-  god_matches_won: 468
-  god_matches_played: 923
+  last_verified: '2026-11-17'
+  god_win_rate: 0.5148717948717949
+  god_matches_won: 502
+  god_matches_played: 975
   god_division: obsidian
   god_window_start: '2026-11-03'
-  god_window_end: '2026-11-16'
-  god_matches_analyzed: 13939
+  god_window_end: '2026-11-17'
+  god_matches_analyzed: 14757
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.48
-    win_rate: 0.4988
-    matches: 443
+    pick_rate: 0.47
+    win_rate: 0.5113
+    matches: 458
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.36
     win_rate: 0.5
-    matches: 332
+    matches: 351
     basis: community
 - source: suggested
   archetype: core
@@ -235,7 +235,7 @@ builds:
     Transcendence:
       total: 0.49
       efficiency: 0.5
-      win: 0.59
+      win: 0.6
       pick: 0.34
       fit: 0.21
     Shield Splitter:
@@ -256,15 +256,15 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.48
-    win_rate: 0.4988
-    matches: 443
+    pick_rate: 0.47
+    win_rate: 0.5113
+    matches: 458
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.36
     win_rate: 0.5
-    matches: 332
+    matches: 351
     basis: community
 - source: suggested
   archetype: bruiser
@@ -320,7 +320,7 @@ builds:
     Transcendence:
       total: 0.49
       efficiency: 0.5
-      win: 0.59
+      win: 0.6
       pick: 0.34
       fit: 0.21
     Shield of the Phoenix:
@@ -343,25 +343,25 @@ builds:
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Screeching Gargoyle
   - Genji's Guard
   - Jotunn's Revenge
+  - Transcendence
   - Kinetic Cuirass
   - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Screeching Gargoyle
+  - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
     swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Stone of Binding — magical protection
-    swap_item: Stone of Binding
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
+    swap: Stone of Binding — physical protection
+    swap_item: Stone of Binding
   - vs_tag: sustain
     swap: Toxic Blade — anti-heal
     swap_item: Toxic Blade
@@ -373,12 +373,6 @@ builds:
     Eye of Providence, Midgardian Mail, Leviathan''s Hide, Magi''s Cloak, Mantle Of
     Discord.'
   slot_scores:
-    Screeching Gargoyle:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.55
-      pick: 0.0
-      fit: 0.64
     Genji's Guard:
       total: 0.53
       efficiency: 0.71
@@ -391,6 +385,12 @@ builds:
       win: 0.57
       pick: 0.39
       fit: 0.54
+    Transcendence:
+      total: 0.48
+      efficiency: 0.5
+      win: 0.6
+      pick: 0.34
+      fit: 0.16
     Kinetic Cuirass:
       total: 0.53
       efficiency: 0.61
@@ -400,7 +400,7 @@ builds:
     Titan's Bane:
       total: 0.54
       efficiency: 0.48
-      win: 0.63
+      win: 0.64
       pick: 0.13
       fit: 0.53
     Amanita Charm:
@@ -411,6 +411,7 @@ builds:
       fit: 0.39
   community_ordered:
   - Jotunn's Revenge
+  - Transcendence
   - Titan's Bane
   starter: *id001
   relic: *id002
@@ -686,7 +687,7 @@ builds:
     Transcendence:
       total: 0.49
       efficiency: 0.5
-      win: 0.59
+      win: 0.6
       pick: 0.34
       fit: 0.21
     Shield Splitter:
@@ -713,7 +714,7 @@ builds:
   swaps:
   - added: Transcendence
     removed: Jotunn's Revenge
-    reason: community 59% win over 231 matches (vs 51% on this god), taking the model's
+    reason: community 60% win over 244 matches (vs 51% on this god), taking the model's
       weakest slot from Jotunn's Revenge
   starter: *id001
   relic: *id002
@@ -737,24 +738,24 @@ community_aspects:
     patches: OB47
     window_rule: newest
     window_start: '2026-11-03'
-    window_end: '2026-11-16'
-    matches: 435
-    wins: 255
+    window_end: '2026-11-17'
+    matches: 463
+    wins: 273
     win_share: 0.59
     aggregate:
-      aspect_matches: 559
-      aspect_win_rate: 0.54
-      no_aspect_matches: 364
-      no_aspect_win_rate: 0.456
+      aspect_matches: 592
+      aspect_win_rate: 0.546
+      no_aspect_matches: 384
+      no_aspect_win_rate: 0.466
     roles:
     - role: Jungle
-      matches: 231
+      matches: 244
       share: 0.53
     - role: Mid
-      matches: 125
+      matches: 133
       share: 0.29
     - role: Solo
-      matches: 69
+      matches: 76
       share: 0.16
     - role: Carry
       matches: 6
@@ -771,28 +772,28 @@ community_aspects:
         Solo 16%'
     items:
     - name: Jotunn's Revenge
-      share: 0.89
+      share: 0.88
     - name: Heartseeker
       share: 0.79
     - name: Transcendence
       share: 0.68
     - name: The Crusher
-      share: 0.65
+      share: 0.63
     - name: Blinking Abyss
       share: 0.27
     - name: Avatar's Parashu
-      share: 0.24
-    - name: Titan's Bane
-      share: 0.19
+      share: 0.25
     - name: brawlers-ruin
+      share: 0.2
+    - name: Titan's Bane
       share: 0.19
     starters:
     - name: Archmage's Gem
-      share: 0.43
+      share: 0.42
     - name: Bluestone Brooch
       share: 0.21
     - name: Pendulum of the Ages
-      share: 0.12
+      share: 0.13
     - name: Conduit Gem
       share: 0.11
     - name: Bluestone Pendant
@@ -803,9 +804,9 @@ community_aspects:
       share: 0.01
     - name: Bumba's Cudgel
       share: 0.01
-    - name: Hunter's Cowl
-      share: 0.0
     - name: Sundering Axe
+      share: 0.01
+    - name: Hunter's Cowl
       share: 0.0
     - name: Warrior's Axe
       share: 0.0
@@ -817,7 +818,7 @@ community_aspects:
     - name: Blink Rune
       share: 0.12
     matches_by_window:
-      ob47: 435
+      ob47: 463
       ob46: 900
       ob45: 614
     unmapped_slugs:
