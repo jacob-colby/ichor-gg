@@ -1,9 +1,17 @@
 """`ally_kit`: the gate that keeps an ally-dependent item off a god whose kit
 cannot buff, heal or shield an allied god (2026-11-04).
 
-The counts here are pins, not targets. A wiki rewording that drops a god out
-of the qualifying set, or a new item with the same trigger, should turn one of
-these red rather than silently change a shipped build.
+The NAMED cases here are pins, not targets: a wiki rewording that drops one of
+them out of the qualifying set, or flips a rejection case in, should turn a test
+red rather than silently change a shipped build.
+
+The roster SIZE is not pinned (2026-11-14). It was, at 31 base / 37 with
+aspects, and that pin rejected the wiki stats refresh on every daily run from
+2026-11-10: the wiki filled in Nox's Aspect of Silent Night ("Shadow Step
+provides a Magical Shield to Nox and a ally"), a real ally shield, and the
+count went to 38 for a correct reason. An exact count cannot tell that from a
+parser regression, so it blocks a correct patch as readily as a bad one. What
+it stood for is held instead by the named gods below plus a sanity range.
 """
 import pytest
 
@@ -20,9 +28,24 @@ def _items():
 
 # ── the item half: the TRIGGER, not the recipient ────────────────────────────
 
-def test_the_gated_items_are_the_four_that_demand_an_ally_buff():
-    assert ally_kit.ally_dependent_items(_items()) == {
-        "Lotus Sickle", "Soul Locket", "Eros' Bow", "Rod of Asclepius"}
+def test_the_gated_items_include_the_four_that_demand_an_ally_buff():
+    """A superset, not an equality (2026-11-14). The item half is derived from
+    live text precisely so that an item a refresh discovers with the same
+    trigger is gated "the moment it arrives, with no hand edit" (`ally_kit`'s
+    docstring). An exact set would turn that arrival into a red test, and since
+    `stats_gate` rejects a refresh on a red test, it would freeze every item
+    and god stat until someone edited this line. The four named items must stay
+    gated; the size bound is a reader-collapse alarm, since the trigger phrase
+    is rare and a regex that started matching "ally" alone would gate dozens."""
+    gated = ally_kit.ally_dependent_items(_items())
+    assert {"Lotus Sickle", "Soul Locket", "Eros' Bow", "Rod of Asclepius"} <= gated
+    assert len(gated) <= 10, sorted(gated)
+
+
+def test_a_new_item_with_the_trigger_is_gated_with_no_hand_edit():
+    new = {"name": "Unreleased Charm (fixture)", "passive":
+           "If your Ability Buffed, Healed, or Shielded another Allied God, gain a stack."}
+    assert ally_kit.requires_allied_god(new)
 
 
 def test_ally_directed_items_that_need_nothing_of_your_kit_are_not_gated():
@@ -51,13 +74,23 @@ def test_the_named_pair_from_the_defect_report():
     assert not ally_kit.buffs_allied_god(g["Agni"])
 
 
-def test_roster_counts():
+def test_roster_shape():
+    """Properties, not counts (see the module docstring). An aspect only ever
+    ADDS to a kit for this gate, so the base set sits inside the aspect set.
+    The range is a parser-collapse alarm, not a pin: 31 / 38 of 95 on
+    2026-11-14, and either bound moving means the reader broke, not that a
+    patch landed. A count anywhere inside it is a patch's business, and the
+    named cases in this file say whether the reader still reads."""
     gods = recommend.load_gods()
-    base = [g for g in gods if ally_kit.buffs_allied_god(g)]
-    with_aspects = [g for g in gods
-                    if ally_kit.buffs_allied_god(g, include_aspects=True)]
-    assert len(base) == 31
-    assert len(with_aspects) == 37
+    base = {g["name"] for g in gods if ally_kit.buffs_allied_god(g)}
+    with_aspects = {g["name"] for g in gods
+                    if ally_kit.buffs_allied_god(g, include_aspects=True)}
+    assert base <= with_aspects, sorted(base - with_aspects)
+    assert 20 <= len(base) <= 50, len(base)
+    assert 20 <= len(with_aspects) <= 55, len(with_aspects)
+    # Most of the roster cannot buff an ally; a reader that says most can has
+    # started accepting the minion / gold / wall clauses the rejection tests name.
+    assert len(with_aspects) < len(gods) * 0.6, (len(with_aspects), len(gods))
 
 
 def test_a_text_match_for_allied_god_would_have_been_far_too_narrow():
@@ -107,13 +140,34 @@ def test_the_ferry_and_the_wall_are_not_cited_as_evidence():
 # ── aspects are a different kit ──────────────────────────────────────────────
 
 def test_an_aspect_can_be_the_only_thing_that_qualifies_a_god():
-    """Five gods buff an ally only with their aspect selected. Hercules and
+    """These gods buff an ally only with their aspect selected. Hercules and
     Chronos are the two of them that ship an aspect variant, so they are the
     two where the distinction changes a build."""
     g = _gods()
     for name in ("Hercules", "Chronos", "Bastet", "Fenrir", "Jormungandr", "Nut"):
         assert not ally_kit.buffs_allied_god(g[name]), name
         assert ally_kit.buffs_allied_god(g[name], include_aspects=True), name
+
+
+def test_nox_silent_night_shields_an_ally():
+    """The clause that took the old roster pin from 37 to 38 (2026-11-14), when
+    the wiki replaced Aspect of Silent Night's "Coming Soon" with its kit text.
+    Held as TEXT, not off Nox's live note, so it passes on the stats either
+    side of that refresh: the property is that the reader reads this shape of
+    sentence as an ally shield, and the gate keeping Nox's aspect build
+    eligible follows from it."""
+    nox = {"name": "Nox (fixture)", "abilities": [], "aspects": [{
+        "name": "Aspect of Silent Night",
+        "kit_changes": ("Flame of the Night provides Damening and a Magical "
+                        "Shield. Shadow Step provides a Magical Shield to Nox "
+                        "and a ally, fears when exiting an ally, but deals no "
+                        "damage."),
+    }]}
+    assert not ally_kit.buffs_allied_god(nox)
+    assert ally_kit.buffs_allied_god(nox, include_aspects=True)
+    (evidence,) = ally_kit.ally_evidence(nox)
+    assert evidence[0] == "Aspect of Silent Night"
+    assert "Magical Shield to Nox and a ally" in evidence[2]
 
 
 def test_the_base_kit_is_the_default():
