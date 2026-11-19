@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.7
   starter: &id001
-    base: Sands Of Time
-    upgrade: Pendulum of the Ages
-    pick_rate: 0.48
-    win_rate: 0.5708
-    matches: 135
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.4
+    win_rate: 0.6625
+    matches: 6
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.43
-    win_rate: 0.57
-    matches: 121
+    pick_rate: 0.53
+    win_rate: 0.63
+    matches: 8
     basis: community
     borrowed_from: Conquest
 - source: suggested

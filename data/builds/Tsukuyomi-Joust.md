@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.76
-    win_rate: 0.5582
-    matches: 736
+    pick_rate: 0.72
+    win_rate: 0.4918
+    matches: 53
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.59
-    win_rate: 0.53
-    matches: 572
+    pick_rate: 0.58
+    win_rate: 0.6
+    matches: 42
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,78 +674,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.69
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Toxic Blade
-  - Jotunn's Revenge
-  - Tyrfing
-  - Death Metal
-  - Titan's Bane
-  - Soul Gem
-  flex_slots:
-  - Death Metal
-  - Titan's Bane
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Berserker's Shield — physical protection
-    swap_item: Berserker's Shield
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Toxic Blade:
-      total: 0.6
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.76
-    Jotunn's Revenge:
-      total: 0.57
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Tyrfing:
-      total: 0.61
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-    Death Metal:
-      total: 0.57
-      efficiency: 0.63
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
-    Titan's Bane:
-      total: 0.51
-      efficiency: 0.48
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
-    Soul Gem:
-      total: 0.61
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.69
-  swaps:
-  - added: Titan's Bane
-    removed: Bragi's Harp
-    reason: Conquest community 63% win over 145 matches (vs 54% on this god), taking
-      the model's weakest slot from Bragi's Harp
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

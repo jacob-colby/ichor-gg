@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
-    pick_rate: 0.46
-    win_rate: 0.51
-    matches: 288
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.42
+    win_rate: 0.4829
+    matches: 29
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.5
-    win_rate: 0.53
-    matches: 312
+    name: Aegis of Acceleration
+    pick_rate: 0.56
+    win_rate: 0.62
+    matches: 39
     basis: community
     borrowed_from: Conquest
 - source: suggested

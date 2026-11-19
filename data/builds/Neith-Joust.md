@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: &id001
-    base: Conduit Gem
-    upgrade: Archmage's Gem
-    pick_rate: 0.48
-    win_rate: 0.5352
-    matches: 247
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.31
+    win_rate: 0.4987
+    matches: 12
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.59
-    win_rate: 0.56
-    matches: 304
+    pick_rate: 0.64
+    win_rate: 0.4
+    matches: 25
     basis: community
     borrowed_from: Conquest
 - source: suggested

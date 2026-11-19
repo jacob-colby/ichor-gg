@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.86
-    win_rate: 0.5429
-    matches: 1384
+    pick_rate: 0.9
+    win_rate: 0.6356
+    matches: 112
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.6
-    win_rate: 0.53
-    matches: 965
+    pick_rate: 0.65
+    win_rate: 0.63
+    matches: 81
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Spear of Desolation
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Dreamer's Idol
-  - Lotus Sickle
-  - Soul Gem
-  flex_slots:
-  - Lotus Sickle
-  - Dreamer's Idol
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Talisman of Purification — CC-immunity / cleanse
-    swap_item: Talisman of Purification
-  - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Spear of Desolation:
-      total: 0.8
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Obsidian Shard:
-      total: 0.71
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.88
-    Rod of Tahuti:
-      total: 0.8
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
-    Dreamer's Idol:
-      total: 0.66
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
-    Lotus Sickle:
-      total: 0.68
-      efficiency: 0.57
-      win: 0.5
-      pick: 0.0
-      fit: 0.8
-    Soul Gem:
-      total: 0.77
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  swaps:
-  - added: Dreamer's Idol
-    removed: Spear of the Magus
-    reason: Conquest community 65% win over 209 matches (vs 54% on this god), taking
-      the model's weakest slot from Spear of the Magus
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

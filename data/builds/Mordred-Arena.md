@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.72
   starter: &id001
-    base: Leather Cowl
-    upgrade: Hunter's Cowl
-    pick_rate: 0.48
-    win_rate: 0.6333
-    matches: 283
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.5
+    win_rate: 0.5688
+    matches: 23
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.33
-    win_rate: 0.6
-    matches: 195
+    pick_rate: 0.39
+    win_rate: 0.61
+    matches: 18
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,82 +674,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.72
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Kinetic Cuirass
-  - Magi's Cloak
-  - Shield Splitter
-  - Bracer of The Abyss
-  - Bragi's Harp
-  - Amanita Charm
-  flex_slots:
-  - Bragi's Harp
-  - Bracer of The Abyss
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
-  - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Arena — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Kinetic Cuirass:
-      total: 0.59
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.57
-    Magi's Cloak:
-      total: 0.53
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.54
-    Shield Splitter:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.51
-    Bracer of The Abyss:
-      total: 0.24
-      efficiency: 0.43
-      win: 0.5
-      pick: 0.0
-      fit: 0.04
-    Bragi's Harp:
-      total: 0.38
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.32
-    Amanita Charm:
-      total: 0.7
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.72
-  swaps:
-  - added: Bracer of The Abyss
-    removed: Jotunn's Revenge
-    reason: Conquest community 70% win over 148 matches (vs 57% on this god), taking
-      the model's weakest slot from Jotunn's Revenge
-  - added: Bragi's Harp
-    removed: Mantle Of Discord
-    reason: Conquest community 68% win over 159 matches (vs 57% on this god), taking
-      the model's weakest slot from Mantle Of Discord
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

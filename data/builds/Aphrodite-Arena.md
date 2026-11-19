@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.89
   starter: &id001
-    base: Sands Of Time
-    upgrade: Pendulum of the Ages
-    pick_rate: 0.53
-    win_rate: 0.5611
-    matches: 420
+    base: Conduit Gem
+    upgrade: Archmage's Gem
+    pick_rate: 0.56
+    win_rate: 0.6086
+    matches: 38
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.43
-    win_rate: 0.52
-    matches: 341
+    pick_rate: 0.42
+    win_rate: 0.46
+    matches: 28
     basis: community
     borrowed_from: Conquest
 - source: suggested
