@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.53
   starter: &id001
-    base: Bumba's Cudgel
-    upgrade: Bumba's Hammer
-    pick_rate: 0.39
-    win_rate: 0.5318
-    matches: 253
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.31
+    win_rate: 0.6942
+    matches: 23
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Phantom Shell
-    pick_rate: 0.34
-    win_rate: 0.5
-    matches: 220
+    pick_rate: 0.35
+    win_rate: 0.62
+    matches: 26
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.53
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Kinetic Cuirass
-  - Shield Splitter
-  - Shell of Rebuke
-  - Freya's Tears
-  - Amanita Charm
-  - Erosion
-  flex_slots:
-  - Erosion
-  - Shell of Rebuke
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Hussar's Wings — CC-immunity / cleanse
-    swap_item: Hussar's Wings
-  - vs_tag: magic_heavy
-    swap: Phoenix Feather — magical protection
-    swap_item: Phoenix Feather
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Brawler’s Beat Stick — anti-heal
-    swap_item: Brawler’s Beat Stick
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Kinetic Cuirass:
-      total: 0.6
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.6
-    Shield Splitter:
-      total: 0.56
-      efficiency: 0.58
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Shell of Rebuke:
-      total: 0.38
-      efficiency: 0.41
-      win: 0.5
-      pick: 0.0
-      fit: 0.35
-    Freya's Tears:
-      total: 0.53
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.45
-    Amanita Charm:
-      total: 0.73
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.78
-    Erosion:
-      total: 0.52
-      efficiency: 0.51
-      win: 0.5
-      pick: 0.0
-      fit: 0.53
-  swaps:
-  - added: Shell of Rebuke
-    removed: Draconic Scale
-    reason: Conquest community 68% win over 65 matches (vs 55% on this god), taking
-      the model's weakest slot from Draconic Scale
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

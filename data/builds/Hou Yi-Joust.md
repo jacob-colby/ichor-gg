@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.76
-    win_rate: 0.5143
-    matches: 974
+    pick_rate: 0.74
+    win_rate: 0.4818
+    matches: 97
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.67
-    win_rate: 0.53
-    matches: 858
+    pick_rate: 0.68
+    win_rate: 0.52
+    matches: 89
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -679,15 +679,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
+  - The Executioner
   - Tyrfing
   - Death Metal
   - Riptalon
   - Demon Blade
-  - Deathbringer
   - Soul Gem
   flex_slots:
   - Demon Blade
-  - Deathbringer
+  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -704,6 +704,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
+    The Executioner:
+      total: 0.34
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.38
     Tyrfing:
       total: 0.61
       efficiency: 0.53
@@ -728,12 +734,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.74
-    Deathbringer:
-      total: 0.45
-      efficiency: 0.44
-      win: 0.5
-      pick: 0.0
-      fit: 0.46
     Soul Gem:
       total: 0.61
       efficiency: 0.58
@@ -741,9 +741,9 @@ builds:
       pick: 0.0
       fit: 0.64
   swaps:
-  - added: Deathbringer
+  - added: The Executioner
     removed: Toxic Blade
-    reason: Conquest community 60% win over 231 matches (vs 52% on this god), taking
+    reason: Conquest community 63% win over 31 matches (vs 45% on this god), taking
       the model's weakest slot from Toxic Blade
   borrowed_from: Conquest
   starter: *id001

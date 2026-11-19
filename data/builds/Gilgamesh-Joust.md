@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.57
   starter: &id001
-    base: Leather Cowl
-    upgrade: Hunter's Cowl
-    pick_rate: 0.37
-    win_rate: 0.6103
-    matches: 182
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.38
+    win_rate: 0.7482
+    matches: 16
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.3
+    name: Blink Rune
+    pick_rate: 0.38
     win_rate: 0.56
-    matches: 147
+    matches: 16
     basis: community
     borrowed_from: Conquest
 - source: suggested

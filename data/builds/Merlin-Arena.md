@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.61
-    win_rate: 0.5139
-    matches: 657
+    pick_rate: 0.64
+    win_rate: 0.4544
+    matches: 84
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.57
-    win_rate: 0.49
-    matches: 614
+    name: Aegis of Acceleration
+    pick_rate: 0.5
+    win_rate: 0.52
+    matches: 66
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Spear of Desolation
-  - Spear of the Magus
-  - Obsidian Shard
-  - Rod of Tahuti
-  - Dreamer's Idol
-  - Soul Gem
-  flex_slots:
-  - Obsidian Shard
-  - Spear of the Magus
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Talisman of Purification — CC-immunity / cleanse
-    swap_item: Talisman of Purification
-  - vs_tag: magic_heavy
-    swap: Sphere of Negation — magical protection
-    swap_item: Sphere of Negation
-  - vs_tag: physical_heavy
-    swap: Helm of Radiance — physical protection
-    swap_item: Helm of Radiance
-  - vs_tag: sustain
-    swap: Divine Ruin — anti-heal
-    swap_item: Divine Ruin
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Arena — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Spear of Desolation:
-      total: 0.8
-      efficiency: 0.6
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-    Spear of the Magus:
-      total: 0.67
-      efficiency: 0.56
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Obsidian Shard:
-      total: 0.71
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 0.89
-    Rod of Tahuti:
-      total: 0.8
-      efficiency: 0.82
-      win: 0.5
-      pick: 0.0
-      fit: 0.79
-    Dreamer's Idol:
-      total: 0.76
-      efficiency: 0.54
-      win: 0.5
-      pick: 0.0
-      fit: 0.99
-    Soul Gem:
-      total: 0.77
-      efficiency: 0.53
-      win: 0.5
-      pick: 0.0
-      fit: 1.0
-  swaps:
-  - added: Spear of the Magus
-    removed: Doom Orb
-    reason: Conquest community 65% win over 97 matches (vs 51% on this god), taking
-      the model's weakest slot from Doom Orb
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

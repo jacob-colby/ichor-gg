@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.73
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
-    pick_rate: 0.4
-    win_rate: 0.565
-    matches: 245
+    base: Leather Cowl
+    upgrade: Hunter's Cowl
+    pick_rate: 0.46
+    win_rate: 0.6567
+    matches: 29
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.51
-    win_rate: 0.56
-    matches: 312
+    name: Aegis of Acceleration
+    pick_rate: 0.52
+    win_rate: 0.59
+    matches: 32
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.44
-    win_rate: 0.5073
-    matches: 304
+    pick_rate: 0.65
+    win_rate: 0.6066
+    matches: 38
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.34
-    win_rate: 0.49
-    matches: 235
+    pick_rate: 0.41
+    win_rate: 0.54
+    matches: 24
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,78 +542,6 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.7
-  starter: *id001
-  relic: *id002
-- source: suggested
-  archetype: hybrid
-  slot_order:
-  - Jotunn's Revenge
-  - Kinetic Cuirass
-  - Hydra's Lament
-  - Runeforged Hammer
-  - Heartseeker
-  - Amanita Charm
-  flex_slots:
-  - Runeforged Hammer
-  - Hydra's Lament
-  situational_swaps:
-  - vs_tag: heavy_cc
-    swap: Avatar's Parashu — CC-immunity / cleanse
-    swap_item: Avatar's Parashu
-  - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
-  - vs_tag: physical_heavy
-    swap: Shield of the Phoenix — physical protection
-    swap_item: Shield of the Phoenix
-  - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
-  rationale: The model's core, corrected where the community is clearly right (efficiency
-    + fit). Joust — math + mode profile (no meta win/pick data).
-  slot_scores:
-    Jotunn's Revenge:
-      total: 0.62
-      efficiency: 0.65
-      win: 0.5
-      pick: 0.0
-      fit: 0.58
-    Kinetic Cuirass:
-      total: 0.57
-      efficiency: 0.61
-      win: 0.5
-      pick: 0.0
-      fit: 0.52
-    Hydra's Lament:
-      total: 0.52
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.49
-    Runeforged Hammer:
-      total: 0.55
-      efficiency: 0.55
-      win: 0.5
-      pick: 0.0
-      fit: 0.55
-    Heartseeker:
-      total: 0.55
-      efficiency: 0.45
-      win: 0.5
-      pick: 0.0
-      fit: 0.65
-    Amanita Charm:
-      total: 0.69
-      efficiency: 0.68
-      win: 0.5
-      pick: 0.0
-      fit: 0.7
-  swaps:
-  - added: Hydra's Lament
-    removed: Shield Splitter
-    reason: Conquest community 68% win over 76 matches (vs 50% on this god), taking
-      the model's weakest slot from Shield Splitter
-  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

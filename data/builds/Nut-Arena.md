@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.65
-    win_rate: 0.5242
-    matches: 543
+    pick_rate: 0.55
+    win_rate: 0.412
+    matches: 46
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.56
+    pick_rate: 0.49
     win_rate: 0.49
-    matches: 468
+    matches: 41
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: &id001
-    base: Death's Toll
-    upgrade: Death's Embrace
-    pick_rate: 0.44
-    win_rate: 0.4489
-    matches: 103
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.31
+    win_rate: 0.429
+    matches: 7
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Phantom Shell
-    pick_rate: 0.3
-    win_rate: 0.36
-    matches: 70
+    name: Aegis of Acceleration
+    pick_rate: 0.43
+    win_rate: 0.4
+    matches: 10
     basis: community
     borrowed_from: Conquest
 - source: suggested
