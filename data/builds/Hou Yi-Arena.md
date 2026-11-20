@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.74
-    win_rate: 0.4818
-    matches: 97
+    pick_rate: 0.73
+    win_rate: 0.507
+    matches: 147
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.68
+    pick_rate: 0.66
     win_rate: 0.52
-    matches: 89
+    matches: 133
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -679,14 +679,14 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - Lernaean Bow
   - The Executioner
   - Tyrfing
   - Death Metal
   - Riptalon
+  - Deathbringer
   - Soul Gem
   flex_slots:
-  - Lernaean Bow
+  - Deathbringer
   - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
@@ -704,12 +704,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    Lernaean Bow:
-      total: 0.57
-      efficiency: 0.47
-      win: 0.5
-      pick: 0.0
-      fit: 0.66
     The Executioner:
       total: 0.34
       efficiency: 0.3
@@ -734,6 +728,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Deathbringer:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
     Soul Gem:
       total: 0.6
       efficiency: 0.58
@@ -741,10 +741,14 @@ builds:
       pick: 0.0
       fit: 0.61
   swaps:
-  - added: The Executioner
+  - added: Deathbringer
     removed: Golden Blade
-    reason: Conquest community 63% win over 31 matches (vs 45% on this god), taking
+    reason: Conquest community 71% win over 40 matches (vs 48% on this god), taking
       the model's weakest slot from Golden Blade
+  - added: The Executioner
+    removed: Lernaean Bow
+    reason: Conquest community 61% win over 52 matches (vs 48% on this god), taking
+      the model's weakest slot from Lernaean Bow
   borrowed_from: Conquest
   starter: *id001
   relic: *id002
