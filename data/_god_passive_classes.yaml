@@ -1,0 +1,720 @@
+# DRAFT — god passive classes (2026-11-03). NOT REVIEWED, NOT READ BY ANY CODE.
+#
+# A regex classification of each god's Passive-slot text, the way
+# _passive_classes.yaml classifies items, for a diagnosis: how much value do
+# god passives carry that Ichor ignores? Classes, primary first (the class
+# whose cue appears EARLIEST in the text); `conditional` is a modifier, listed
+# last, never primary unless it is the only cue:
+#   stat_grant  combat_effect  sustain  ally  utility_cc  summon  conditional
+# `scaling_line`: the passive carries a Damage/Heal Scaling line, which is the
+# only part kit.py reads (stat orientation). `kit_fit_ally_support`: kit_fit
+# already reads this god's ability text as helping an ally.
+#
+# Known misreads to fix in review: the cues are lexical, so "Health" stat
+# grants and heals were split by hand-tuned patterns; Mordred and Hua Mulan's
+# passives are mostly kit-mechanics (Wrath, weapon Skill) and read as
+# conditional/utility. Treat every row as a proposal.
+Achilles:
+  passive: Gift of the Gods
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Agni:
+  passive: Combustion
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Ah Puch:
+  passive: Hollow Ground
+  classes:
+  - summon
+  - utility_cc
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Aladdin:
+  passive: Three Wishes
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Amaterasu:
+  passive: Illuminating Strike
+  classes:
+  - combat_effect
+  scaling_line: false
+  kit_fit_ally_support: false
+Anhur:
+  passive: Enfeeble
+  classes:
+  - combat_effect
+  scaling_line: false
+  kit_fit_ally_support: false
+Anubis:
+  passive: The Scales
+  classes:
+  - stat_grant
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Aphrodite:
+  passive: Center of Attention
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Apollo:
+  passive: Audacity
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ares:
+  passive: Blessed Armaments
+  classes:
+  - ally
+  - stat_grant
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: true
+Artemis:
+  passive: Still Target
+  classes:
+  - combat_effect
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Artio:
+  passive: Decompose
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Athena:
+  passive: Reach
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: true
+Atlas:
+  passive: The Astrolabe
+  classes:
+  - combat_effect
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Awilix:
+  passive: Initiative
+  classes:
+  - stat_grant
+  - summon
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Bacchus:
+  passive: Drunk-O-Meter
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Baron Samedi:
+  passive: Hysteria
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Bastet:
+  passive: Nightstalker
+  classes:
+  - sustain
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Bellona:
+  passive: Master Of War
+  classes:
+  - utility_cc
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Cabrakan:
+  passive: Shadow Zone
+  classes:
+  - ally
+  - combat_effect
+  scaling_line: false
+  kit_fit_ally_support: false
+Cerberus:
+  passive: Spirit of Death
+  classes:
+  - sustain
+  scaling_line: false
+  kit_fit_ally_support: false
+Cernunnos:
+  passive: Heavy Glaive
+  classes:
+  - combat_effect
+  scaling_line: true
+  kit_fit_ally_support: false
+Chaac:
+  passive: Overflow
+  classes:
+  - utility_cc
+  - sustain
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Charon:
+  passive: Ferryman of Souls
+  classes:
+  - utility_cc
+  - ally
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Chiron:
+  passive: Herbal Medicine
+  classes:
+  - ally
+  - sustain
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Chronos:
+  passive: Time Lord
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Cu Chulainn:
+  passive: Berserk
+  classes:
+  - utility_cc
+  - sustain
+  - stat_grant
+  - ally
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Cupid:
+  passive: Lovestruck
+  classes:
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Da Ji:
+  passive: Torture Blades
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Danzaburou:
+  passive: Dishonest Duplication
+  classes:
+  - summon
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Discordia:
+  passive: Contest of Gods
+  classes:
+  - stat_grant
+  - sustain
+  scaling_line: false
+  kit_fit_ally_support: false
+Eset:
+  passive: Funeral Rites
+  classes:
+  - stat_grant
+  - sustain
+  - utility_cc
+  - ally
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Fenrir:
+  passive: Unbound Runes
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ganesha:
+  passive: Good Fortune
+  classes:
+  - ally
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Geb:
+  passive: Hard as Rock
+  classes:
+  - combat_effect
+  scaling_line: false
+  kit_fit_ally_support: true
+Gilgamesh:
+  passive: Epic of Gilgamesh
+  classes:
+  - combat_effect
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Guan Yu:
+  passive: Battle Fervor
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Hachiman:
+  passive: Master of Arms
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Hades:
+  passive: Blight
+  classes:
+  - unclassified
+  scaling_line: false
+  kit_fit_ally_support: true
+Hecate:
+  passive: Mythic Ritual
+  classes:
+  - ally
+  - utility_cc
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Hel:
+  passive: Stance Attunement
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Hercules:
+  passive: Apotheosis
+  classes:
+  - utility_cc
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Horus:
+  passive: Resolute
+  classes:
+  - sustain
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Hou Yi:
+  passive: Suntouched
+  classes:
+  - combat_effect
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Hua Mulan:
+  passive: Training Arc
+  classes:
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Hun Batz:
+  passive: Infused Strikes
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ishtar:
+  passive: Mark of Vengeance
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ix Chel:
+  passive: Rainbow Weaver
+  classes:
+  - ally
+  - combat_effect
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Izanami:
+  passive: Death Draws Nigh
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Janus:
+  passive: Passages
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Jing Wei:
+  passive: Rapid Reincarnation
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Jormungandr:
+  passive: Immovable
+  classes:
+  - utility_cc
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Kali:
+  passive: Marked for Death
+  classes:
+  - stat_grant
+  - sustain
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Khepri:
+  passive: Fortitude
+  classes:
+  - sustain
+  - ally
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Kukulkan:
+  passive: Power of the Wind Jewel
+  classes:
+  - utility_cc
+  - stat_grant
+  scaling_line: false
+  kit_fit_ally_support: false
+Kuzenbo:
+  passive: Water Bowl
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Loki:
+  passive: Behind You
+  classes:
+  - combat_effect
+  scaling_line: false
+  kit_fit_ally_support: false
+Medusa:
+  passive: Sidewinder
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Mercury:
+  passive: Fastest God Alive
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Merlin:
+  passive: Overload
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Mordred:
+  passive: Wrath of the Forsaken
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Morgan Le Fay:
+  passive: Empowered Blade
+  classes:
+  - utility_cc
+  - stat_grant
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ne Zha:
+  passive: Righteous Spirit
+  classes:
+  - utility_cc
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Neith:
+  passive: Broken Weave
+  classes:
+  - combat_effect
+  - utility_cc
+  - stat_grant
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Nemesis:
+  passive: Scales of Fate
+  classes:
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Nike:
+  passive: To Victory!
+  classes:
+  - ally
+  - sustain
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: true
+Nu Wa:
+  passive: Strength of Wood
+  classes:
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: true
+Nut:
+  passive: Flux
+  classes:
+  - combat_effect
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Odin:
+  passive: Path to Valhalla
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Osiris:
+  passive: Fragmented
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Pele:
+  passive: Everlasting Flame
+  classes:
+  - sustain
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Poseidon:
+  passive: Changing Tides
+  classes:
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Princess Bari:
+  passive: Mystic Surge
+  classes:
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Ra:
+  passive: Speed of Light
+  classes:
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: true
+Rama:
+  passive: Astral Quiver
+  classes:
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Ratatoskr:
+  passive: Acorn of Yggdrasil
+  classes:
+  - summon
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Ravana:
+  passive: Chain of Blows
+  classes:
+  - stat_grant
+  - sustain
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Scylla:
+  passive: Quick Learner
+  classes:
+  - stat_grant
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Sobek:
+  passive: Blessing of the Nile
+  classes:
+  - combat_effect
+  - stat_grant
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Sol:
+  passive: Unstable Manifestation
+  classes:
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Sun Wukong:
+  passive: Undefeated Body
+  classes:
+  - stat_grant
+  - summon
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Susano:
+  passive: Storm's Edge
+  classes:
+  - utility_cc
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Sylvanus:
+  passive: Nature's Bounty
+  classes:
+  - utility_cc
+  - summon
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Thanatos:
+  passive: Harvester of Souls
+  classes:
+  - utility_cc
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+The Morrigan:
+  passive: Doomsayer
+  classes:
+  - unclassified
+  scaling_line: false
+  kit_fit_ally_support: false
+Thor:
+  passive: Warrior's Madness
+  classes:
+  - stat_grant
+  - combat_effect
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Tsukuyomi:
+  passive: Shingetsu & Mangetsu
+  classes:
+  - utility_cc
+  - combat_effect
+  - sustain
+  scaling_line: false
+  kit_fit_ally_support: false
+Ullr:
+  passive: Weapon Master
+  classes:
+  - utility_cc
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Vulcan:
+  passive: Master Craftsman
+  classes:
+  - utility_cc
+  scaling_line: false
+  kit_fit_ally_support: false
+Xbalanque:
+  passive: Dead of Night
+  classes:
+  - combat_effect
+  - stat_grant
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Xing Tian:
+  passive: Smouldering Rage
+  classes:
+  - sustain
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
+Yemoja:
+  passive: Omi
+  classes:
+  - utility_cc
+  - ally
+  - sustain
+  scaling_line: true
+  kit_fit_ally_support: true
+Ymir:
+  passive: Frostbite
+  classes:
+  - combat_effect
+  - utility_cc
+  - conditional
+  scaling_line: true
+  kit_fit_ally_support: false
+Zeus:
+  passive: Overcharge
+  classes:
+  - combat_effect
+  - conditional
+  scaling_line: false
+  kit_fit_ally_support: false
