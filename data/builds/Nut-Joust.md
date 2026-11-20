@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.55
-    win_rate: 0.412
-    matches: 46
+    pick_rate: 0.57
+    win_rate: 0.4226
+    matches: 66
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Purification Beads
-    pick_rate: 0.49
-    win_rate: 0.49
-    matches: 41
+    name: Aegis of Acceleration
+    pick_rate: 0.47
+    win_rate: 0.43
+    matches: 54
     basis: community
     borrowed_from: Conquest
 - source: suggested

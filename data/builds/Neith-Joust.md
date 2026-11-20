@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.84
   starter: &id001
-    base: Death's Toll
-    upgrade: Death's Embrace
-    pick_rate: 0.31
-    win_rate: 0.4987
-    matches: 12
+    base: Gilded Arrow
+    upgrade: Sharpshooter's Arrow
+    pick_rate: 0.28
+    win_rate: 0.3657
+    matches: 19
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.64
-    win_rate: 0.4
-    matches: 25
+    pick_rate: 0.61
+    win_rate: 0.41
+    matches: 41
     basis: community
     borrowed_from: Conquest
 - source: suggested

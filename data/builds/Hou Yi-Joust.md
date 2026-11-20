@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.74
-    win_rate: 0.4818
-    matches: 97
+    pick_rate: 0.73
+    win_rate: 0.507
+    matches: 147
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.68
+    pick_rate: 0.66
     win_rate: 0.52
-    matches: 89
+    matches: 133
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -683,10 +683,10 @@ builds:
   - Tyrfing
   - Death Metal
   - Riptalon
-  - Demon Blade
+  - Deathbringer
   - Soul Gem
   flex_slots:
-  - Demon Blade
+  - Deathbringer
   - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
@@ -728,12 +728,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
-    Demon Blade:
-      total: 0.55
-      efficiency: 0.36
+    Deathbringer:
+      total: 0.45
+      efficiency: 0.44
       win: 0.5
       pick: 0.0
-      fit: 0.74
+      fit: 0.46
     Soul Gem:
       total: 0.61
       efficiency: 0.58
@@ -741,10 +741,14 @@ builds:
       pick: 0.0
       fit: 0.64
   swaps:
-  - added: The Executioner
+  - added: Deathbringer
     removed: Toxic Blade
-    reason: Conquest community 63% win over 31 matches (vs 45% on this god), taking
+    reason: Conquest community 71% win over 40 matches (vs 48% on this god), taking
       the model's weakest slot from Toxic Blade
+  - added: The Executioner
+    removed: Demon Blade
+    reason: Conquest community 61% win over 52 matches (vs 48% on this god), taking
+      the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
   relic: *id002
