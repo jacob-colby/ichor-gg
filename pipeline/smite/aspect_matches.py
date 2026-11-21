@@ -100,14 +100,44 @@ read the 09-08 window, at least 2h27m after ob44's first (11:33:41Z).
     overlap; and during the 11-03 lag ob46's end read 11-02, BEHIND the
     boundary, not past it. One lag observed at day precision is not proof
     that SmiteBrain never extends an old window into the new patch, so:
-  * THE GUARD FOR THE DAY IT IS NOT. If a refreshed window's start ever lands
-    under a match already stored, `refresh` refuses the run (`misfiled`,
-    FeedCollapse, before any feed is walked, nothing written). The store
-    keeps agreeing with its committed meta, so CI stays green, and the refusal
-    takes the workflow's `rejected` path: the day's other data lands, the run
-    is red. It refuses every run until someone moves those records, which an
-    append-only store has no step for — a human's call, not this module's.
-    0.4 s over the 11-09 store.
+  * THE DAY IT IS NOT came on 2026-11-17, and the guard written for it is
+    the next section.
+
+A BOUNDARY REDRAWN AFTER STORAGE (`plan_refile`, `apply_refile`; 2026-11-21).
+The 11-17 run stored ob47 with SmiteBrain's end of that day, 18:01:01.607Z;
+its selector did not list OB48 yet. From 11-19 SmiteBrain answers ob47 ->
+11-17 11:29:23.093Z and ob48 from 11:32:50.007Z (a 3m27s gap, the shape of
+every earlier boundary). So during that lag the old window's end ran PAST the
+patch, and 275 stored records sat between the two answers: 11-17
+11:40:30.500Z .. 17:57:57.330Z, 72 gods, 94 games, 63 aspect and 212 from
+the no-aspect sample, none inside the 3-minute gap, no ob48 file yet. The
+old guard refused the run on that, every day (runs 44585350365 on 11-19 and
+44786199852 on 11-20, the same 275 both days), and a store that refuses
+every run fetches nothing while the 45-day feed ages out under it.
+
+  * REFILE, WITH A GUARD (Jacob, 2026-11-21: "Refile, with guard"). When the
+    windows a run reads would file stored records elsewhere, the run moves
+    them to the window the source now names — the patch they were played on
+    — provided the move loses and duplicates nothing: every such record
+    lands in a known window, no god's match hash sits in two windows before
+    or after, and each god's record count and hash set are unchanged. Each
+    move appends an audit entry to `_meta.json` `refiled`: date, from, to,
+    matches (aspect / no-aspect), and both the stored and the source's
+    boundary. Anything else is refused exactly as before.
+  * WHEN. Planned (and refused) before any feed is walked; written only
+    with the rest of the run, so a broken feed leaves the refile undone and
+    the store as committed. A refiled match is never fetched again into a
+    second window: each walk starts above the newest stored match, and
+    `merge` dedupes within the window it lands in.
+  * MEASURED on a scratch copy of the 11-20 store: 48,032 records before
+    and after, 0 misfiled after. Readers: no build reads this store; of 91
+    aspect entries most change only because ob48 joins the registry (rule
+    `newest` -> `last closed`, which any fix does), and the refile itself
+    takes 1-7 matches off some ob47 counts (Sol 178 -> 171).
+  * WHY NOT KEEP THE STORED BOUNDARY. It would leave 63 OB48 matches on the
+    OB47 label for good, need an exception list in the committed-store test,
+    and file any of them that was fetched again as a second copy in ob48:
+    `merge` dedupes within one window, not across them.
 
 THE BACKFILL (2026-11-08) walked all 86 aspect feeds to the end of retention,
 in two passes: OB46 and OB47 first (1,636 requests), then OB45 and the
@@ -263,7 +293,7 @@ import sys
 import time
 import urllib.parse
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from smite import notes, smitebrain_parser, tierlist
@@ -318,6 +348,14 @@ MIN_SLOTS = 6
 class FeedCollapse(Exception):
     """The feed came back in a shape this module does not trust. Nothing is
     written; the store keeps yesterday's data."""
+
+
+class RefileRefused(FeedCollapse):
+    """A redrawn boundary moves stored records and the move would lose or
+    duplicate one (A BOUNDARY REDRAWN AFTER STORAGE). Unlike every other
+    refusal this one does not clear itself: the next run reads the same
+    windows over the same store and refuses again, so the CLI exits 2 and the
+    workflow says so."""
 
 
 # -- source --------------------------------------------------------------------
@@ -586,6 +624,59 @@ def misfiled(root: Path, meta: dict) -> list:
     return out
 
 
+def plan_refile(root: Path, meta: dict) -> dict:
+    """What a redrawn boundary moves, checked whole before anything is written.
+
+    `{"layouts": {slug: (windows now on disk, {window: [records]})}, "moves":
+    {(from, to): Counter(aspect=, no_aspect=)}}`, empty when nothing is
+    misfiled. Raises FeedCollapse — the old refusal — unless the move loses
+    and duplicates nothing (module docstring, A BOUNDARY REDRAWN AFTER
+    STORAGE): every misfiled record lands in a known window, no god's match
+    sits in two windows before or after, and each god's record count and set
+    of match hashes are the same after as before."""
+    wrong = misfiled(root, meta)
+    if not wrong:
+        return {"layouts": {}, "moves": {}}
+    orphan = next((x for x in wrong if x[3] is None), None)
+    if orphan:
+        w, slug, t, _ = orphan
+        raise FeedCollapse(f"{slug} {t} sits in {w} and the redrawn windows file it nowhere — "
+                           "refile refused, nothing written")
+    layouts, moves = {}, {}
+    for slug in sorted({x[1] for x in wrong}):
+        stored = load_god(root, slug)
+        before = [r["m"] for recs in stored.values() for r in recs]
+        if len(set(before)) != len(before):
+            raise FeedCollapse(f"{slug}: a stored match already sits in two windows — "
+                               "refile refused, nothing written")
+        new = {}
+        for w, recs in stored.items():
+            for r in recs:
+                to = window_of(r["t"], meta)
+                new.setdefault(to, []).append(r)
+                if to != w:
+                    moves.setdefault((w, to), Counter())[
+                        "no_aspect" if r["aspect"] is None else "aspect"] += 1
+        new = {w: sorted(recs, key=lambda r: (r["t"], r["m"])) for w, recs in new.items()}
+        after = [r["m"] for recs in new.values() for r in recs]
+        if len(after) != len(before) or set(after) != set(before):
+            raise FeedCollapse(f"{slug}: a refile would change the stored matches "
+                               f"({len(before)} -> {len(after)}) — refused, nothing written")
+        layouts[slug] = (set(stored), new)
+    return {"layouts": layouts, "moves": moves}
+
+
+def apply_refile(root: Path, plan: dict) -> int:
+    """Write `plan_refile`'s layouts. A window a god no longer has a record in
+    loses its (then empty) file; no record is dropped. Returns records moved."""
+    for slug, (had, new) in plan["layouts"].items():
+        for w, recs in new.items():
+            _write_text(root / w / f"{slug}.jsonl", "".join(_record_line(r) + "\n" for r in recs))
+        for w in had - set(new):
+            (root / w / f"{slug}.jsonl").unlink()
+    return sum(sum(c.values()) for c in plan["moves"].values())
+
+
 # -- store ---------------------------------------------------------------------
 
 def _read_json(path: Path, default):
@@ -666,9 +757,11 @@ def conquest_gods(builds_root: Path = BUILDS_ROOT) -> list:
     return out
 
 
-def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=print) -> dict:
+def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=print,
+            today=None) -> dict:
     """Fetch, validate, and only then write. See the module docstring."""
     meta, aggregate = load_meta(root), load_aggregate(root)
+    was = {w: dict(span) for w, span in (meta.get("windows") or {}).items()}
     if window_ids is None:
         window_ids = smitebrain_parser.patch_windows(
             fetch(GOD_PAGE_URL.format(slug=god_slug(gods[0]))))[:WINDOWS_REFRESHED]
@@ -681,12 +774,14 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
         meta["windows"][w] = {**meta["windows"].get(w, {}),
                               "start": split["start"], "end": split["end"]}
         aggregate[w] = {"start": split["start"], "end": split["end"], "rows": split["rows"]}
-    wrong = misfiled(root, meta)
-    if wrong:
+    try:
+        refile = plan_refile(root, meta)
+    except FeedCollapse as exc:
+        wrong = misfiled(root, meta)
         w, slug, t, now = wrong[0]
-        raise FeedCollapse(f"these windows would refile {len(wrong)} stored matches (first: "
+        raise RefileRefused(f"these windows would refile {len(wrong)} stored matches (first: "
                            f"{slug} {t} sits in {w}, would be {now}) — SmiteBrain redrew a "
-                           "boundary under data already stored; the store cannot move them")
+                           f"boundary under data already stored, and {exc}") from exc
     newest_start = meta["windows"][ordered_windows(meta)[0]]["start"]
     extent = known_extent(meta)
 
@@ -713,6 +808,18 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
     if gods and empty_none_pages > len(gods) / 2:
         raise FeedCollapse(f"{empty_none_pages} of {len(gods)} gods returned no matches at all")
 
+    moved = apply_refile(root, refile)
+    for (frm, to), kinds in sorted(refile["moves"].items()):
+        meta.setdefault("refiled", []).append({
+            "on": today or datetime.now(timezone.utc).date().isoformat(),
+            "from": frm, "to": to, "matches": sum(kinds.values()),
+            "aspect": kinds["aspect"], "no_aspect": kinds["no_aspect"],
+            "stored_boundary": {f"{frm}_end": (was.get(frm) or {}).get("end"),
+                                f"{to}_start": (was.get(to) or {}).get("start")},
+            "source_boundary": {f"{frm}_end": meta["windows"][frm].get("end"),
+                                f"{to}_start": meta["windows"][to]["start"]}})
+        log(f"  aspect matches: refiled {sum(kinds.values())} stored matches {frm} -> {to} "
+            f"(SmiteBrain redrew the boundary; audit entry in {META_FILE})")
     added = {}
     for slug, records in pending.items():
         for w, n in store_records(root, slug, records, meta).items():
@@ -723,7 +830,7 @@ def refresh(fetch, gods: list, root: Path = STORE_ROOT, window_ids=None, log=pri
         f"({', '.join(f'{w} +{n}' for w, n in sorted(added.items()))})"
         + (f"; {held} later than {ordered_windows(meta)[0]}'s end ({extent}) held for "
            "the next run" if held else ""))
-    return {"added": added, "feeds": summary, "held": held}
+    return {"added": added, "feeds": summary, "held": held, "refiled": moved}
 
 
 # -- the build-note entry ------------------------------------------------------
@@ -1041,6 +1148,10 @@ def main(argv=None) -> int:
         fetch = PoliteFetcher()
         try:
             refresh(fetch, conquest_gods())
+        except RefileRefused as exc:
+            print(f"::error::aspect feed refused, store unchanged, and this repeats every run "
+                  f"until the store is moved by hand: {exc}")
+            return 2
         except FeedCollapse as exc:
             print(f"::error::aspect feed refused, store unchanged: {exc}")
             return 1

@@ -311,6 +311,15 @@ def test_the_cli_exits_non_zero_on_a_refusal(monkeypatch, capsys):
     assert "::error::aspect feed refused" in capsys.readouterr().out
 
 
+def test_a_refused_refile_exits_2_because_it_repeats_every_run(monkeypatch, capsys):
+    def boom(*a, **k):
+        raise am.RefileRefused("would refile 3 stored matches")
+    monkeypatch.setattr(am, "refresh", boom)
+    monkeypatch.setattr(am, "PoliteFetcher", lambda: type("F", (), {"requests": 0})())
+    assert am.main(["refresh"]) == 2
+    assert "repeats every run" in capsys.readouterr().out
+
+
 # -- a patch boundary the range selector has not caught up with ----------------
 #
 # The feed is not filtered by window: it is the newest matches, whatever patch
@@ -436,21 +445,139 @@ def test_a_newest_window_with_no_end_vouches_for_nothing_after_its_start(tmp_pat
     assert am.known_extent({"windows": {}}) is None
 
 
-def test_a_run_whose_windows_would_refile_a_stored_match_writes_nothing(tmp_path):
-    """The write-time guard behind the hold-back: if SmiteBrain ever draws a
-    new window's start under a match already stored (its old window's end ran
-    past the boundary), the run is refused and nothing is written — the
-    store keeps agreeing with its committed meta, so CI stays green and the
-    refusal is the workflow's loud `rejected` path, not a red data PR."""
+def test_a_window_end_run_past_the_boundary_is_refiled_on_the_next_run(tmp_path):
+    """The day the hold-back's premise failed (2026-11-17): SmiteBrain's old
+    window's end ran PAST the boundary while its selector lagged, so day N
+    filed ob48 matches in ob47 under that end; day N+1 draws ob48's start
+    under them. The run refiles them to ob48 — the window the source names —
+    and the store ends exactly where a correct day N would have left it."""
     quiet = lambda *_: None
     overlapping = {**DAY_N, "ob47": {**OB47, "end": "2026-11-17T17:00:00.000Z"}}
     am.refresh(FakeFeed(_boundary_feed().gods, windows=overlapping), ["Tsukuyomi"], tmp_path, log=quiet)
     assert "2026-11-17T12:00:00.000Z" in _times(tmp_path, "ob47")     # filed under the overlap
-    before = {p: p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()}
-    with pytest.raises(am.FeedCollapse, match="would refile"):
-        am.refresh(_boundary_feed(day_n1=True), ["Tsukuyomi"], tmp_path, log=quiet)
-    assert {p: p.read_bytes() for p in tmp_path.rglob("*") if p.is_file()} == before
-    assert am.misfiled(tmp_path, am.load_meta(tmp_path)) == []
+    stored = {r["m"] for recs in am.load_god(tmp_path, "tsukuyomi").values() for r in recs}
+
+    day_n1 = am.refresh(_boundary_feed(day_n1=True), ["Tsukuyomi"], tmp_path, log=quiet, today="2026-11-18")
+    assert _committed_store_problems(tmp_path) == []
+    assert _times(tmp_path, "ob47") == sorted(OB47_TIMES)
+    assert _times(tmp_path, "ob48") == sorted(OB48_DAY_N + OB48_AFTER)
+    after = [r["m"] for recs in am.load_god(tmp_path, "tsukuyomi").values() for r in recs]
+    assert len(after) == len(set(after)) and stored <= set(after)     # nothing lost, nothing twice
+    assert day_n1["refiled"] == sum(e["matches"] for e in am.load_meta(tmp_path)["refiled"])
+
+
+# The 2026-11-17 redraw as it is in the committed store (diagnosed 11-21): the
+# 11-17 run stored ob47 with SmiteBrain's end of the day, 18:01:01.607Z; from
+# 11-19 SmiteBrain answers ob47 -> 11:29:23.093Z and ob48 from 11:32:50.007Z.
+# 275 stored records, 11:40:30.500Z .. 17:57:57.330Z, across 72 gods and 94
+# games, 63 aspect and 212 from the no-aspect sample, sit in between.
+REDRAW_STORED = {"ob46": META["windows"]["ob46"],
+                 "ob47": {"start": "2026-11-03T11:30:13.083Z", "end": "2026-11-17T18:01:01.607Z"}}
+REDRAW_SOURCE = {"ob47": {"start": "2026-11-03T11:30:13.083Z", "end": "2026-11-17T11:29:23.093Z"},
+                 "ob48": {"start": "2026-11-17T11:32:50.007Z", "end": "2026-11-21T12:31:28.127Z"}}
+
+
+def _redraw_store(root):
+    """72 gods; each keeps two genuine ob47 matches and holds 3 or 4 of the
+    275, which share 94 games between them."""
+    gods = [f"god-{i:02d}" for i in range(72)]
+    first, last = "2026-11-17T11:40:30.500Z", "2026-11-17T17:57:57.330Z"
+    span = 25077 - 2430                        # seconds after 11:00, 11:40:30 .. 17:57:57
+    games = [am.match_key(f"redraw-{g}") for g in range(94)]
+    n = 0
+    for i, slug in enumerate(gods):
+        recs = [_rec(f"2026-11-1{i % 5}T09:00:{i % 60:02d}.000Z", m=am.match_key(f"{slug}-old-{k}"))
+                for k in range(2)]
+        for k in range(4 if i < 59 else 3):    # 59 * 4 + 13 * 3 = 275
+            secs = 2430 + (n * span) // 274
+            t = (first if n == 0 else last if n == 274 else
+                 f"2026-11-17T{11 + secs // 3600:02d}:{secs // 60 % 60:02d}:{secs % 60:02d}.000Z")
+            recs.append(_rec(t, aspect="aspect-of-x" if n < 63 else None, m=games[n % 94]))
+            n += 1
+        am.store_records(root, slug, recs, {"windows": REDRAW_STORED})
+    am.save_json(root / am.META_FILE, {"division": "obsidian", "windows": REDRAW_STORED, "aspects": {}})
+    return gods
+
+
+def _layout(root):
+    return {(p.parent.name, p.stem, r["m"]) for p in root.glob("*/*.jsonl")
+            for r in map(json.loads, p.read_text(encoding="utf-8").splitlines())}
+
+
+def test_the_2026_11_17_redraw_refiles_275_records_to_the_match(tmp_path):
+    gods = _redraw_store(tmp_path)
+    before = _layout(tmp_path)
+    assert len(before) == 72 * 2 + 275
+    assert len(am.misfiled(tmp_path, {"windows": {**REDRAW_STORED, **REDRAW_SOURCE}})) == 275
+    logged = []
+    out = am.refresh(FakeFeed({}, windows=REDRAW_SOURCE), [], tmp_path, window_ids=["ob48", "ob47"],
+                     log=logged.append, today="2026-11-21")
+    after = _layout(tmp_path)
+    assert out["refiled"] == 275 and len(after) == len(before)
+    assert {(g, m) for _, g, m in after} == {(g, m) for _, g, m in before}    # same matches, once each
+    moved = {(g, m) for w, g, m in after if w == "ob48"}
+    assert len(moved) == 275 and {(g, m) for w, g, m in before if w == "ob47"} >= moved
+    assert len({m for _, m in moved}) == 94 and len({g for g, _ in moved}) == len(gods)
+    assert _committed_store_problems(tmp_path) == []
+    meta = am.load_meta(tmp_path)
+    assert meta["refiled"] == [{
+        "on": "2026-11-21", "from": "ob47", "to": "ob48", "matches": 275, "aspect": 63, "no_aspect": 212,
+        "stored_boundary": {"ob47_end": "2026-11-17T18:01:01.607Z", "ob48_start": None},
+        "source_boundary": {"ob47_end": "2026-11-17T11:29:23.093Z", "ob48_start": "2026-11-17T11:32:50.007Z"}}]
+    assert any("refiled 275 stored matches ob47 -> ob48" in line for line in logged)
+    # A second run finds nothing to move and writes no second audit entry.
+    again = am.refresh(FakeFeed({}, windows=REDRAW_SOURCE), [], tmp_path, window_ids=["ob48", "ob47"],
+                       log=lambda *_: None, today="2026-11-22")
+    assert again["refiled"] == 0 and len(am.load_meta(tmp_path)["refiled"]) == 1
+    assert _layout(tmp_path) == after
+
+
+def _bytes(root):
+    return {p: p.read_bytes() for p in root.rglob("*") if p.is_file()}
+
+
+def test_a_refile_that_would_hold_a_match_twice_is_refused_and_writes_nothing(tmp_path):
+    """A god whose match already sits in two windows: the refile would have to
+    pick one copy, which is the store deciding which match to drop. Refused."""
+    _redraw_store(tmp_path)
+    twin = am.load_god(tmp_path, "god-00")["ob47"][-1]
+    am._write_text(tmp_path / "ob46" / "god-00.jsonl",
+                   am._record_line(dict(twin, t="2026-11-01T00:00:00.000Z")) + "\n")
+    before = _bytes(tmp_path)
+    with pytest.raises(am.RefileRefused, match="would refile 275 .*sits in two windows"):
+        am.refresh(FakeFeed({}, windows=REDRAW_SOURCE), [], tmp_path, window_ids=["ob48", "ob47"],
+                   log=lambda *_: None)
+    assert _bytes(tmp_path) == before
+
+
+def test_a_refile_into_no_window_is_refused_and_writes_nothing(tmp_path):
+    """Redrawn windows that start AFTER a stored match file it nowhere."""
+    _redraw_store(tmp_path)
+    meta = am.load_meta(tmp_path)
+    meta["windows"] = {"ob47": meta["windows"]["ob47"]}           # ob46 gone from the registry
+    am.save_json(tmp_path / am.META_FILE, meta)
+    am.store_records(tmp_path, "god-00", [_rec("2026-11-03T11:31:00.000Z", m=am.match_key("early"))], meta)
+    late = {"ob47": {**REDRAW_SOURCE["ob47"], "start": "2026-11-04T00:00:00.000Z"},
+            "ob48": REDRAW_SOURCE["ob48"]}
+    before = _bytes(tmp_path)
+    with pytest.raises(am.RefileRefused, match="file it nowhere"):
+        am.refresh(FakeFeed({}, windows=late), [], tmp_path, window_ids=["ob48", "ob47"],
+                   log=lambda *_: None)
+    assert _bytes(tmp_path) == before
+
+
+def test_a_refile_waits_for_the_whole_run_and_a_broken_feed_writes_nothing(tmp_path):
+    """The refile is planned before any feed is walked and written only with
+    the rest of the run, so a broken page leaves the store as it was."""
+    quiet = lambda *_: None
+    overlapping = {**DAY_N, "ob47": {**OB47, "end": "2026-11-17T17:00:00.000Z"}}
+    am.refresh(FakeFeed(_boundary_feed().gods, windows=overlapping), ["Tsukuyomi"], tmp_path, log=quiet)
+    before = _bytes(tmp_path)
+    broken = _boundary_feed(day_n1=True)
+    broken.broken = {("tsukuyomi", "aspect-of-mangetsu")}
+    with pytest.raises(am.FeedCollapse):
+        am.refresh(broken, ["Tsukuyomi"], tmp_path, log=quiet)
+    assert _bytes(tmp_path) == before
 
 
 # -- the build-note entry ------------------------------------------------------
