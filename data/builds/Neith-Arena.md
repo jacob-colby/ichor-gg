@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.81
   starter: &id001
-    base: Gilded Arrow
-    upgrade: Sharpshooter's Arrow
+    base: Conduit Gem
+    upgrade: Archmage's Gem
     pick_rate: 0.28
-    win_rate: 0.3657
-    matches: 19
+    win_rate: 0.41
+    matches: 26
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.41
-    matches: 41
+    pick_rate: 0.6
+    win_rate: 0.43
+    matches: 56
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.73
-    win_rate: 0.507
-    matches: 147
+    win_rate: 0.4941
+    matches: 202
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.66
-    win_rate: 0.52
-    matches: 133
+    pick_rate: 0.64
+    win_rate: 0.5
+    matches: 177
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -679,15 +679,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - The Executioner
+  - Lernaean Bow
   - Tyrfing
   - Death Metal
   - Riptalon
   - Deathbringer
   - Soul Gem
   flex_slots:
+  - Lernaean Bow
   - Deathbringer
-  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -704,12 +704,12 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Arena — math + mode profile (no meta win/pick data).
   slot_scores:
-    The Executioner:
-      total: 0.34
-      efficiency: 0.3
+    Lernaean Bow:
+      total: 0.57
+      efficiency: 0.47
       win: 0.5
       pick: 0.0
-      fit: 0.38
+      fit: 0.66
     Tyrfing:
       total: 0.61
       efficiency: 0.53
@@ -743,12 +743,8 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Golden Blade
-    reason: Conquest community 71% win over 40 matches (vs 48% on this god), taking
+    reason: Conquest community 75% win over 47 matches (vs 47% on this god), taking
       the model's weakest slot from Golden Blade
-  - added: The Executioner
-    removed: Lernaean Bow
-    reason: Conquest community 61% win over 52 matches (vs 48% on this god), taking
-      the model's weakest slot from Lernaean Bow
   borrowed_from: Conquest
   starter: *id001
   relic: *id002
