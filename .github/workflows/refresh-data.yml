@@ -113,14 +113,17 @@ jobs:
       # the newest match already stored. All or nothing: a page it does not
       # trust writes nothing, and the walk recovers the day on the next run, so
       # a refusal must not cost the rest of the day's data. It sets `rejected`
-      # and the last step turns the run red. See smite/aspect_matches.py.
+      # and the last step turns the run red. Exit 2 is the one refusal that
+      # does NOT clear itself (a boundary refile that would lose or duplicate a
+      # stored match): it also sets `recurs`. See smite/aspect_matches.py.
       - name: Pull per-aspect match records
         id: aspect_feed
         working-directory: pipeline
         run: |
-          if ! python -m smite.aspect_matches refresh; then
-            echo "rejected=true" >> "$GITHUB_OUTPUT"
-          fi
+          code=0
+          python -m smite.aspect_matches refresh || code=$?
+          if [ "$code" -ne 0 ]; then echo "rejected=true" >> "$GITHUB_OUTPUT"; fi
+          if [ "$code" -eq 2 ]; then echo "recurs=true" >> "$GITHUB_OUTPUT"; fi
 
       # The game's patch label, from Steam's announcement feed — read from
       # the title, the official notes link or the body, since Hi-Rez stopped
@@ -545,7 +548,11 @@ jobs:
       - name: Fail the run if the aspect feed was refused
         if: ${{ !cancelled() && steps.aspect_feed.outputs.rejected == 'true' }}
         run: |
-          echo "::error::The per-aspect match feed was refused and the aspect match store is unchanged; see the 'Pull per-aspect match records' step. The next run walks back over the missed day."
+          if [ "${{ steps.aspect_feed.outputs.recurs }}" = "true" ]; then
+            echo "::error::The per-aspect match feed was refused and the aspect match store is unchanged. This refusal does NOT recover by itself: SmiteBrain redrew a patch boundary under stored matches and moving them would lose or duplicate one, so every run will refuse the same way until the store is fixed by hand. Nothing is fetched meanwhile, and the feed keeps only ~45 days. See the 'Pull per-aspect match records' step and smite/aspect_matches.py, A BOUNDARY REDRAWN AFTER STORAGE."
+          else
+            echo "::error::The per-aspect match feed was refused and the aspect match store is unchanged; see the 'Pull per-aspect match records' step. A transient refusal (a page it did not trust, a source serving nothing) recovers by itself: the next run walks back over the missed days, inside the feed's ~45-day retention. If the next run refuses with the same message, the source changed shape and needs a code change."
+          fi
           exit 1
 
       # A data PR that carries yesterday's figures turns `doc_audit` red on

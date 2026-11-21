@@ -223,10 +223,23 @@ def test_the_aspect_feed_runs_after_the_community_pull_and_cannot_cost_the_day()
     assert feed.get("id") == "aspect_feed"
     assert not feed.get("continue-on-error")
     assert "rejected=true" in feed["run"] and "GITHUB_OUTPUT" in feed["run"]
-    assert feed["run"].strip().startswith("if ! python -m smite.aspect_matches refresh")
+    assert "python -m smite.aspect_matches refresh || code=$?" in feed["run"]
+    assert "recurs=true" in feed["run"]
     assert _index(runs, "smite.refresh --community") < at < _index(runs, "git commit")
     # Before the recompute and the index, so the day's notes and index see it.
     assert at < _index(runs, "smite.recommend --all")
+
+
+def test_the_aspect_failure_message_says_which_refusals_recover():
+    """A refused refile repeats every day (11-19 and 11-20 refused the same
+    275 matches) while the old message promised the next run would recover.
+    Exit 2 marks it and the reporter must not claim recovery for it."""
+    steps = _steps("refresh-data.yml")
+    fail = next(s for s in steps if "aspect feed was refused" in s.get("name", ""))
+    recurs, transient = fail["run"].split("else", 1)
+    assert "steps.aspect_feed.outputs.recurs" in recurs and "does NOT recover by itself" in recurs
+    assert "walks back over the missed days" in transient and "walks back" not in recurs
+    assert "exit 1" in transient
 
 
 def test_the_aspect_entries_are_rederived_after_every_step_that_feeds_them():
