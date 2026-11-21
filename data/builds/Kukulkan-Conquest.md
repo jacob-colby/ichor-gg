@@ -5,151 +5,154 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Squall
-  aspect_pick_rate: 0.37
-  aspect_win_rate: 0.51
+  aspect_pick_rate: 0.31
+  aspect_win_rate: 0.49
   slot_order:
   - name: Book of Thoth
-    pick_rate: 0.9
-    win_rate: 0.56
+    pick_rate: 0.87
+    win_rate: 0.55
     alternates:
     - name: Spear of Desolation
-      pick_rate: 0.03
+      pick_rate: 0.05
       win_rate: 0.4
     - name: Chronos' Pendant
-      pick_rate: 0.03
-      win_rate: 0.5
-  - name: Chronos' Pendant
-    pick_rate: 0.22
-    win_rate: 0.59
+      pick_rate: 0.04
+      win_rate: 0.63
+  - name: Spear of Desolation
+    pick_rate: 0.21
+    win_rate: 0.51
     alternates:
-    - name: Spear of Desolation
-      pick_rate: 0.21
-      win_rate: 0.57
+    - name: Chronos' Pendant
+      pick_rate: 0.19
+      win_rate: 0.63
     - name: Soul Gem
       pick_rate: 0.1
-      win_rate: 0.93
-  - name: Rod of Tahuti
-    pick_rate: 0.16
-    win_rate: 0.43
-    alternates:
-    - name: Genji's Guard
-      pick_rate: 0.15
-      win_rate: 0.77
-    - name: Soul Reaver
-      pick_rate: 0.15
-      win_rate: 0.57
+      win_rate: 0.81
   - name: Soul Reaver
     pick_rate: 0.16
-    win_rate: 0.41
-    alternates:
-    - name: Rod of Tahuti
-      pick_rate: 0.33
-      win_rate: 0.65
-    - name: Obsidian Shard
-      pick_rate: 0.1
-      win_rate: 0.57
-  - name: Obsidian Shard
-    pick_rate: 0.18
-    win_rate: 0.57
+    win_rate: 0.58
     alternates:
     - name: Rod of Tahuti
       pick_rate: 0.15
-      win_rate: 0.67
-    - name: Blinking Abyss
-      pick_rate: 0.1
       win_rate: 0.5
+    - name: Genji's Guard
+      pick_rate: 0.12
+      win_rate: 0.76
+  - name: Rod of Tahuti
+    pick_rate: 0.35
+    win_rate: 0.59
+    alternates:
+    - name: Soul Reaver
+      pick_rate: 0.16
+      win_rate: 0.5
+    - name: Obsidian Shard
+      pick_rate: 0.09
+      win_rate: 0.58
+  - name: Obsidian Shard
+    pick_rate: 0.19
+    win_rate: 0.61
+    alternates:
+    - name: Rod of Tahuti
+      pick_rate: 0.15
+      win_rate: 0.65
+    - name: Blinking Abyss
+      pick_rate: 0.09
+      win_rate: 0.44
   - name: Blinking Abyss
     pick_rate: 0.18
-    win_rate: 0.6
+    win_rate: 0.64
     alternates:
     - name: Mote of Chaos
       pick_rate: 0.08
-      win_rate: 0.71
-    - name: Obsidian Shard
-      pick_rate: 0.08
-      win_rate: 0.43
+      win_rate: 0.7
+    - name: Oracle Staff
+      pick_rate: 0.07
+      win_rate: 0.33
   community_starters:
   - name: Archmage's Gem
-    pick_rate: 0.47
-    win_rate: 0.6
+    pick_rate: 0.49
+    win_rate: 0.59
   - name: Conduit Gem
     pick_rate: 0.26
-    win_rate: 0.46
+    win_rate: 0.51
   - name: Pendulum of the Ages
     pick_rate: 0.11
-    win_rate: 0.5
+    win_rate: 0.39
   community_relics:
   - name: Aegis of Acceleration
-    pick_rate: 0.5
-    win_rate: 0.54
+    pick_rate: 0.49
+    win_rate: 0.56
   - name: Purification Beads
-    pick_rate: 0.46
-    win_rate: 0.58
+    pick_rate: 0.47
+    win_rate: 0.54
   - name: Phantom Shell
     pick_rate: 0.02
-    win_rate: 0.33
+    win_rate: 0.5
   starter_sightings:
   - name: Archmage's Gem
-    pick_rate: 0.47
-    win_rate: 0.6
+    pick_rate: 0.49
+    win_rate: 0.59
   - name: Conduit Gem
     pick_rate: 0.26
-    win_rate: 0.46
+    win_rate: 0.51
   - name: Pendulum of the Ages
     pick_rate: 0.11
-    win_rate: 0.5
+    win_rate: 0.39
   - name: Bumba's Hammer
-    pick_rate: 0.07
-    win_rate: 0.9
-  - name: Sands Of Time
     pick_rate: 0.06
-    win_rate: 0.38
+    win_rate: 0.85
+  - name: Sands Of Time
+    pick_rate: 0.05
+    win_rate: 0.4
   - name: Bluestone Pendant
-    pick_rate: 0.02
-    win_rate: 0.0
-  - name: Bluestone Brooch
     pick_rate: 0.01
+    win_rate: 0.0
+  - name: Blood-soaked Shroud
+    pick_rate: 0.009
+    win_rate: 0.5
+  - name: Bluestone Brooch
+    pick_rate: 0.009
     win_rate: 0.5
   - name: Bumba's Cudgel
-    pick_rate: 0.007
+    pick_rate: 0.005
     win_rate: 1.0
   relic_sightings:
   - name: Aegis of Acceleration
-    pick_rate: 0.5
-    win_rate: 0.54
+    pick_rate: 0.49
+    win_rate: 0.56
   - name: Purification Beads
-    pick_rate: 0.46
-    win_rate: 0.58
+    pick_rate: 0.47
+    win_rate: 0.54
   - name: Phantom Shell
     pick_rate: 0.02
-    win_rate: 0.33
+    win_rate: 0.5
   - name: Blink Rune
     pick_rate: 0.01
-    win_rate: 0.5
+    win_rate: 0.33
   - name: Sundering Arc
-    pick_rate: 0.01
+    pick_rate: 0.009
     win_rate: 0.5
   source_url: https://smitebrain.com/gods/kukulkan/
-  last_verified: '2026-11-20'
-  god_win_rate: 0.5517241379310345
-  god_matches_won: 80
-  god_matches_played: 145
+  last_verified: '2026-11-21'
+  god_win_rate: 0.5488372093023256
+  god_matches_won: 118
+  god_matches_played: 215
   god_division: obsidian
   god_window_start: '2026-11-17'
-  god_window_end: '2026-11-20'
-  god_matches_analyzed: 2341
+  god_window_end: '2026-11-21'
+  god_matches_analyzed: 3178
   starter:
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.73
-    win_rate: 0.5501
-    matches: 106
+    pick_rate: 0.75
+    win_rate: 0.5623
+    matches: 161
     basis: community
   relic:
     name: Aegis of Acceleration
-    pick_rate: 0.5
-    win_rate: 0.54
-    matches: 72
+    pick_rate: 0.49
+    win_rate: 0.56
+    matches: 105
     basis: community
 - source: suggested
   archetype: core
@@ -184,39 +187,39 @@ builds:
     Death Metal, Staff of Myrddin, Alchemist Coat.'
   slot_scores:
     Chronos' Pendant:
-      total: 0.57
+      total: 0.59
       efficiency: 0.56
-      win: 0.59
-      pick: 0.3
+      win: 0.63
+      pick: 0.26
       fit: 0.63
     Spear of Desolation:
-      total: 0.63
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
+      win: 0.51
       pick: 0.29
       fit: 1.0
     Spear of the Magus:
-      total: 0.57
+      total: 0.59
       efficiency: 0.56
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.61
+      total: 0.7
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.79
     Obsidian Shard:
-      total: 0.6
+      total: 0.62
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.89
     Soul Gem:
-      total: 0.76
+      total: 0.71
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 1.0
   community_ordered:
@@ -228,27 +231,27 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.73
-    win_rate: 0.5501
-    matches: 106
+    pick_rate: 0.75
+    win_rate: 0.5623
+    matches: 161
     basis: community
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.5
-    win_rate: 0.54
-    matches: 72
+    pick_rate: 0.49
+    win_rate: 0.56
+    matches: 105
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Book of Thoth
   - Genji's Guard
-  - Spear of Desolation
+  - Chronos' Pendant
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
+  - Chronos' Pendant
   - Book of Thoth
   situational_swaps:
   - vs_tag: heavy_cc
@@ -272,43 +275,43 @@ builds:
     Book of Thoth:
       total: 0.52
       efficiency: 0.48
-      win: 0.56
-      pick: 0.9
+      win: 0.55
+      pick: 0.87
       fit: 0.39
     Genji's Guard:
       total: 0.57
       efficiency: 0.51
-      win: 0.77
-      pick: 0.23
+      win: 0.76
+      pick: 0.19
       fit: 0.24
-    Spear of Desolation:
-      total: 0.57
-      efficiency: 0.6
-      win: 0.57
-      pick: 0.29
-      fit: 0.61
+    Chronos' Pendant:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.63
+      pick: 0.26
+      fit: 0.43
     Rod of Tahuti:
-      total: 0.58
+      total: 0.67
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.57
     Obsidian Shard:
-      total: 0.55
+      total: 0.57
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.57
     Soul Gem:
-      total: 0.72
+      total: 0.66
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 0.71
   community_ordered:
   - Book of Thoth
   - Genji's Guard
-  - Spear of Desolation
+  - Chronos' Pendant
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
@@ -317,15 +320,15 @@ builds:
 - source: suggested
   archetype: burst
   slot_order:
-  - Book of Thoth
   - Genji's Guard
+  - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Obsidian Shard
-  - Book of Thoth
+  - Genji's Guard
+  - Chronos' Pendant
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -346,45 +349,45 @@ builds:
     Damaru, Triton''s Conch, Bancroft''s Talon, Jade Scepter, Divine Ruin, Breastplate
     of Valor, Ethereal Staff.'
   slot_scores:
-    Book of Thoth:
-      total: 0.5
-      efficiency: 0.48
-      win: 0.56
-      pick: 0.9
-      fit: 0.22
     Genji's Guard:
-      total: 0.57
+      total: 0.56
       efficiency: 0.51
-      win: 0.77
-      pick: 0.23
+      win: 0.76
+      pick: 0.19
       fit: 0.22
+    Chronos' Pendant:
+      total: 0.56
+      efficiency: 0.56
+      win: 0.63
+      pick: 0.26
+      fit: 0.44
     Spear of Desolation:
-      total: 0.6
+      total: 0.57
       efficiency: 0.6
-      win: 0.57
+      win: 0.51
       pick: 0.29
       fit: 0.78
     Rod of Tahuti:
-      total: 0.57
+      total: 0.66
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.56
     Obsidian Shard:
-      total: 0.56
+      total: 0.58
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.66
     Soul Gem:
-      total: 0.74
+      total: 0.69
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 0.88
   community_ordered:
-  - Book of Thoth
   - Genji's Guard
+  - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
   - Obsidian Shard
@@ -396,12 +399,12 @@ builds:
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Spear of Desolation
   - Obsidian Shard
+  - Rod of Tahuti
   - Amanita Charm
   - Soul Gem
   flex_slots:
-  - Spear of Desolation
+  - Kinetic Cuirass
   - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
@@ -425,45 +428,45 @@ builds:
     Dreamer''s Idol, Midgardian Mail.'
   slot_scores:
     Genji's Guard:
-      total: 0.65
+      total: 0.64
       efficiency: 0.71
-      win: 0.77
-      pick: 0.23
+      win: 0.76
+      pick: 0.19
       fit: 0.26
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.58
       efficiency: 0.61
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.61
-    Spear of Desolation:
-      total: 0.56
-      efficiency: 0.6
-      win: 0.57
-      pick: 0.29
-      fit: 0.49
     Obsidian Shard:
-      total: 0.54
+      total: 0.56
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.49
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.82
+      win: 0.59
+      pick: 0.58
+      fit: 0.39
     Amanita Charm:
-      total: 0.62
+      total: 0.63
       efficiency: 0.68
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.81
     Soul Gem:
-      total: 0.75
+      total: 0.69
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 0.89
   community_ordered:
   - Genji's Guard
-  - Spear of Desolation
   - Obsidian Shard
+  - Rod of Tahuti
   - Soul Gem
   starter: *id001
   relic: *id002
@@ -500,39 +503,39 @@ builds:
     Bracer of The Abyss, Death Metal, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.63
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
+      win: 0.51
       pick: 0.29
       fit: 1.0
     Doom Orb:
-      total: 0.57
+      total: 0.58
       efficiency: 0.51
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.85
     Spear of the Magus:
-      total: 0.58
+      total: 0.6
       efficiency: 0.56
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.85
     Rod of Tahuti:
-      total: 0.62
+      total: 0.71
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.85
     Obsidian Shard:
-      total: 0.61
+      total: 0.62
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.95
     Soul Gem:
-      total: 0.76
+      total: 0.71
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 1.0
   community_ordered:
@@ -545,11 +548,11 @@ builds:
 - source: suggested
   archetype: attack-speed
   slot_order:
-  - Genji's Guard
   - Bracer of The Abyss
   - Nimble Ring
   - Bragi's Harp
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
   - Bragi's Harp
@@ -559,8 +562,8 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Genji's Guard — magical protection
+    swap_item: Genji's Guard
   - vs_tag: physical_heavy
     swap: Helm of Radiance — physical protection
     swap_item: Helm of Radiance
@@ -574,60 +577,60 @@ builds:
     Heartwood Charm, The Cosmic Horror, Typhon’s Heart, Totem of Death, Damaru, Jade
     Scepter, Divine Ruin.'
   slot_scores:
-    Genji's Guard:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.77
-      pick: 0.23
-      fit: 0.08
     Bracer of The Abyss:
-      total: 0.51
+      total: 0.52
       efficiency: 0.52
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.4
     Nimble Ring:
-      total: 0.53
+      total: 0.54
       efficiency: 0.57
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.48
     Bragi's Harp:
-      total: 0.52
+      total: 0.53
       efficiency: 0.47
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.63
     Rod of Tahuti:
-      total: 0.54
+      total: 0.63
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.32
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.61
+      pick: 0.41
+      fit: 0.42
     Soul Gem:
-      total: 0.72
+      total: 0.66
       efficiency: 0.58
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 0.58
   community_ordered:
-  - Genji's Guard
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
-  - Book of Thoth
   - Genji's Guard
   - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   flex_slots:
-  - Rod of Tahuti
-  - Book of Thoth
+  - Spear of Desolation
+  - Obsidian Shard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
@@ -649,48 +652,48 @@ builds:
     Harp, Staff of Myrddin, Screeching Gargoyle, Freya''s Tears, Eye of Erebus, Shield
     of the Phoenix.'
   slot_scores:
-    Book of Thoth:
-      total: 0.49
-      efficiency: 0.48
-      win: 0.56
-      pick: 0.9
-      fit: 0.14
     Genji's Guard:
-      total: 0.61
+      total: 0.6
       efficiency: 0.51
-      win: 0.77
-      pick: 0.23
+      win: 0.76
+      pick: 0.19
       fit: 0.48
     Chronos' Pendant:
-      total: 0.57
+      total: 0.59
       efficiency: 0.56
-      win: 0.59
-      pick: 0.3
+      win: 0.63
+      pick: 0.26
       fit: 0.63
     Spear of Desolation:
-      total: 0.61
+      total: 0.58
       efficiency: 0.6
-      win: 0.57
+      win: 0.51
       pick: 0.29
       fit: 0.86
     Rod of Tahuti:
-      total: 0.55
+      total: 0.64
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.37
-    Soul Gem:
-      total: 0.75
+    Obsidian Shard:
+      total: 0.55
       efficiency: 0.53
-      win: 0.93
+      win: 0.61
+      pick: 0.41
+      fit: 0.47
+    Soul Gem:
+      total: 0.7
+      efficiency: 0.53
+      win: 0.81
       pick: 0.14
       fit: 0.96
   community_ordered:
-  - Book of Thoth
   - Genji's Guard
   - Chronos' Pendant
   - Spear of Desolation
   - Rod of Tahuti
+  - Obsidian Shard
   - Soul Gem
   starter: *id001
   relic: *id002
@@ -727,39 +730,39 @@ builds:
     Death Metal, Staff of Myrddin, Alchemist Coat.'
   slot_scores:
     Spear of Desolation:
-      total: 0.63
+      total: 0.61
       efficiency: 0.6
-      win: 0.57
+      win: 0.51
       pick: 0.29
       fit: 1.0
     Doom Orb:
-      total: 0.56
+      total: 0.57
       efficiency: 0.51
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.79
     Spear of the Magus:
-      total: 0.57
+      total: 0.59
       efficiency: 0.56
-      win: 0.58
+      win: 0.61
       pick: 0.0
       fit: 0.79
     Rod of Tahuti:
-      total: 0.61
+      total: 0.7
       efficiency: 0.82
-      win: 0.43
-      pick: 0.25
+      win: 0.59
+      pick: 0.58
       fit: 0.79
     Obsidian Shard:
-      total: 0.6
+      total: 0.62
       efficiency: 0.53
-      win: 0.57
-      pick: 0.39
+      win: 0.61
+      pick: 0.41
       fit: 0.89
     Soul Gem:
-      total: 0.76
+      total: 0.71
       efficiency: 0.53
-      win: 0.93
+      win: 0.81
       pick: 0.14
       fit: 1.0
   community_ordered:
@@ -785,85 +788,75 @@ community_aspects:
   - aspect: Aspect of the Squall
     status: shown
     windows:
-    - ob47
-    patches: OB47
+    - ob48
+    patches: OB48
     window_rule: newest
-    window_start: '2026-11-03'
-    window_end: '2026-11-17'
-    matches: 129
-    wins: 70
+    window_start: '2026-11-17'
+    window_end: '2026-11-21'
+    matches: 54
+    wins: 29
     win_share: 0.54
     aggregate:
-      aspect_matches: 149
-      aspect_win_rate: 0.523
-      no_aspect_matches: 787
-      no_aspect_win_rate: 0.516
+      aspect_matches: 67
+      aspect_win_rate: 0.493
+      no_aspect_matches: 148
+      no_aspect_win_rate: 0.574
     roles:
     - role: Solo
-      matches: 93
-      share: 0.72
-    - role: Mid
-      matches: 18
-      share: 0.14
+      matches: 35
+      share: 0.65
     - role: Jungle
-      matches: 16
-      share: 0.12
-    - role: Support
-      matches: 2
+      matches: 18
+      share: 0.33
+    - role: Mid
+      matches: 1
       share: 0.02
     base_role: Mid
-    base_role_share: 0.14
+    base_role_share: 0.02
     role_shift:
       role: Solo
-      share: 0.72
-      says: 'most Aspect of the Squall players do not play Mid: Solo 72%, Mid 14%'
+      share: 0.65
+      says: 'most Aspect of the Squall players do not play Mid: Solo 65%, Mid 2%'
     items:
     - name: Book of Thoth
-      share: 0.94
-    - name: Genji's Guard
-      share: 0.72
+      share: 0.98
     - name: Breastplate of Valor
-      share: 0.67
-    - name: Rod of Tahuti
-      share: 0.5
+      share: 0.89
+    - name: Genji's Guard
+      share: 0.85
     - name: Blinking Abyss
-      share: 0.4
-    - name: Yogi's Necklace
-      share: 0.29
-    - name: Freya's Tears
-      share: 0.19
-    - name: Ancient Signet
-      share: 0.16
+      share: 0.56
+    - name: Rod of Tahuti
+      share: 0.43
+    - name: Soul Gem
+      share: 0.28
+    - name: Soul Reaver
+      share: 0.24
+    - name: Time-lock Aegis
+      share: 0.24
     starters:
     - name: Archmage's Gem
-      share: 0.6
-    - name: Conduit Gem
-      share: 0.19
-    - name: Pendulum of the Ages
-      share: 0.07
-    - name: Bluestone Brooch
-      share: 0.03
+      share: 0.52
     - name: Bumba's Hammer
-      share: 0.03
-    - name: Bumba's Cudgel
-      share: 0.02
-    - name: Sands Of Time
+      share: 0.24
+    - name: Conduit Gem
+      share: 0.17
+    - name: Pendulum of the Ages
+      share: 0.04
+    - name: Bluestone Brooch
       share: 0.02
     - name: Bluestone Pendant
       share: 0.02
-    - name: Hunter's Cowl
-      share: 0.01
-    - name: Vampiric Shroud
-      share: 0.01
     relics:
-    - name: Aegis of Acceleration
-      share: 0.54
     - name: Purification Beads
-      share: 0.36
-    - name: Phantom Shell
-      share: 0.05
+      share: 0.46
+    - name: Aegis of Acceleration
+      share: 0.43
+    - name: Blink Rune
+      share: 0.04
     matches_by_window:
-      ob47: 129
+      ob48: 54
+      ob47: 128
       ob46: 144
       ob45: 124
       ob44: 152

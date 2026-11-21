@@ -5,160 +5,163 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of the Thickbark
-  aspect_pick_rate: 0.44
-  aspect_win_rate: 0.6
+  aspect_pick_rate: 0.47
+  aspect_win_rate: 0.64
   slot_order:
   - name: Briskberry Acorn
-    pick_rate: 0.48
-    win_rate: 0.5
+    pick_rate: 0.47
+    win_rate: 0.56
     alternates:
     - name: Ashwhorl Acorn
-      pick_rate: 0.38
-      win_rate: 0.63
+      pick_rate: 0.39
+      win_rate: 0.64
     - name: Thistlethorn Acorn
-      pick_rate: 0.12
-      win_rate: 0.75
+      pick_rate: 0.1
+      win_rate: 0.7
   - name: Thistlethorn Acorn
-    pick_rate: 0.43
-    win_rate: 0.53
+    pick_rate: 0.38
+    win_rate: 0.55
     alternates:
     - name: Briskberry Acorn
-      pick_rate: 0.39
-      win_rate: 0.7
+      pick_rate: 0.41
+      win_rate: 0.67
     - name: Magic Acorn
-      pick_rate: 0.05
-      win_rate: 0.57
+      pick_rate: 0.07
+      win_rate: 0.54
   - name: Jotunn's Revenge
-    pick_rate: 0.31
+    pick_rate: 0.26
     win_rate: 0.55
     alternates:
     - name: Thistlethorn Acorn
-      pick_rate: 0.17
-      win_rate: 0.62
+      pick_rate: 0.28
+      win_rate: 0.67
     - name: Ashwhorl Acorn
-      pick_rate: 0.09
-      win_rate: 0.58
+      pick_rate: 0.1
+      win_rate: 0.56
   - name: Heartseeker
-    pick_rate: 0.2
-    win_rate: 0.64
+    pick_rate: 0.14
+    win_rate: 0.67
     alternates:
     - name: Thistlethorn Acorn
-      pick_rate: 0.2
-      win_rate: 0.6
+      pick_rate: 0.17
+      win_rate: 0.63
     - name: Jotunn's Revenge
-      pick_rate: 0.13
-      win_rate: 0.56
+      pick_rate: 0.14
+      win_rate: 0.62
   - name: Genji's Guard
-    pick_rate: 0.11
+    pick_rate: 0.14
     win_rate: 0.62
     alternates:
     - name: Heartseeker
       pick_rate: 0.25
-      win_rate: 0.67
+      win_rate: 0.63
     - name: The Crusher
-      pick_rate: 0.08
-      win_rate: 0.6
-  - name: Blinking Abyss
-    pick_rate: 0.08
-    win_rate: 0.75
+      pick_rate: 0.07
+      win_rate: 0.67
+  - name: Titan's Bane
+    pick_rate: 0.07
+    win_rate: 0.64
     alternates:
-    - name: Titan's Bane
+    - name: Heartseeker
       pick_rate: 0.07
-      win_rate: 0.71
-    - name: Lucerne Hammer
+      win_rate: 0.64
+    - name: Blinking Abyss
       pick_rate: 0.07
-      win_rate: 0.43
+      win_rate: 0.8
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.29
-    win_rate: 0.7
+    pick_rate: 0.3
+    win_rate: 0.69
   - name: Bumba's Hammer
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Bluestone Pendant
     pick_rate: 0.16
-    win_rate: 0.33
+    win_rate: 0.5
   community_relics:
   - name: Purification Beads
-    pick_rate: 0.41
-    win_rate: 0.57
+    pick_rate: 0.4
+    win_rate: 0.56
   - name: Aegis of Acceleration
-    pick_rate: 0.22
-    win_rate: 0.46
+    pick_rate: 0.2
+    win_rate: 0.51
   - name: Sundering Arc
-    pick_rate: 0.17
-    win_rate: 0.64
+    pick_rate: 0.2
+    win_rate: 0.61
   starter_sightings:
   - name: Bluestone Brooch
-    pick_rate: 0.29
-    win_rate: 0.7
+    pick_rate: 0.3
+    win_rate: 0.69
   - name: Bumba's Hammer
     pick_rate: 0.22
-    win_rate: 0.5
+    win_rate: 0.51
   - name: Bluestone Pendant
     pick_rate: 0.16
-    win_rate: 0.33
+    win_rate: 0.5
   - name: Bumba's Cudgel
-    pick_rate: 0.09
-    win_rate: 0.42
+    pick_rate: 0.11
+    win_rate: 0.48
   - name: Pendulum of the Ages
-    pick_rate: 0.07
-    win_rate: 0.89
+    pick_rate: 0.05
+    win_rate: 0.9
   - name: Archmage's Gem
-    pick_rate: 0.05
-    win_rate: 1.0
+    pick_rate: 0.04
+    win_rate: 0.88
   - name: Hunter's Cowl
-    pick_rate: 0.05
-    win_rate: 0.83
-  - name: Sands Of Time
-    pick_rate: 0.03
-    win_rate: 0.75
+    pick_rate: 0.04
+    win_rate: 0.88
   - name: Conduit Gem
     pick_rate: 0.02
-    win_rate: 0.0
+    win_rate: 0.25
+  - name: Sands Of Time
+    pick_rate: 0.02
+    win_rate: 0.75
   - name: Warrior's Axe
     pick_rate: 0.02
     win_rate: 0.67
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.5
   - name: Leather Cowl
-    pick_rate: 0.008
+    pick_rate: 0.005
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
-    pick_rate: 0.41
-    win_rate: 0.57
+    pick_rate: 0.4
+    win_rate: 0.56
   - name: Aegis of Acceleration
-    pick_rate: 0.22
-    win_rate: 0.46
+    pick_rate: 0.2
+    win_rate: 0.51
   - name: Sundering Arc
-    pick_rate: 0.17
-    win_rate: 0.64
+    pick_rate: 0.2
+    win_rate: 0.61
   - name: Phantom Shell
-    pick_rate: 0.16
-    win_rate: 0.65
+    pick_rate: 0.14
+    win_rate: 0.74
   - name: Blink Rune
-    pick_rate: 0.05
-    win_rate: 1.0
+    pick_rate: 0.06
+    win_rate: 0.92
   source_url: https://smitebrain.com/gods/ratatoskr/
-  last_verified: '2026-11-20'
-  god_win_rate: 0.5891472868217055
-  god_matches_won: 76
-  god_matches_played: 129
+  last_verified: '2026-11-21'
+  god_win_rate: 0.6082474226804123
+  god_matches_won: 118
+  god_matches_played: 194
   god_division: obsidian
   god_window_start: '2026-11-17'
-  god_window_end: '2026-11-20'
-  god_matches_analyzed: 2341
+  god_window_end: '2026-11-21'
+  god_matches_analyzed: 3178
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.45
-    win_rate: 0.5684
-    matches: 58
+    pick_rate: 0.46
+    win_rate: 0.6239
+    matches: 89
     basis: community
   relic:
     name: Purification Beads
-    pick_rate: 0.41
-    win_rate: 0.57
-    matches: 53
+    pick_rate: 0.4
+    win_rate: 0.56
+    matches: 78
     basis: community
 - source: suggested
   archetype: core
@@ -170,7 +173,7 @@ builds:
   - Heartseeker
   - Titan's Bane
   flex_slots:
-  - The Crusher
+  - Titan's Bane
   - Thistlethorn Acorn
   situational_swaps:
   - vs_tag: heavy_cc
@@ -195,37 +198,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.61
       efficiency: 0.7
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.61
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 1.0
     The Crusher:
-      total: 0.61
+      total: 0.64
       efficiency: 0.51
-      win: 0.6
-      pick: 0.17
+      win: 0.67
+      pick: 0.15
       fit: 1.0
     Heartseeker:
-      total: 0.61
+      total: 0.62
       efficiency: 0.45
-      win: 0.64
-      pick: 0.33
+      win: 0.67
+      pick: 0.23
       fit: 1.0
     Titan's Bane:
-      total: 0.65
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.64
       pick: 0.22
       fit: 1.0
   community_ordered:
@@ -238,27 +241,27 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.45
-    win_rate: 0.5684
-    matches: 58
+    pick_rate: 0.46
+    win_rate: 0.6239
+    matches: 89
     basis: community
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.41
-    win_rate: 0.57
-    matches: 53
+    pick_rate: 0.4
+    win_rate: 0.56
+    matches: 78
     basis: community
 - source: suggested
   archetype: mana-stack
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Transcendence
   - Heartseeker
-  - Titan's Bane
+  - Transcendence
   flex_slots:
-  - Thistlethorn Acorn
+  - Briskberry Acorn
   - Transcendence
   situational_swaps:
   - vs_tag: heavy_cc
@@ -280,61 +283,61 @@ builds:
     Golden Blade, Bloodforge, Rage, Barbed Carver, Yogi''s Necklace.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.58
+      total: 0.59
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
+      fit: 0.29
+    Briskberry Acorn:
+      total: 0.58
+      efficiency: 0.73
+      win: 0.56
+      pick: 0.47
       fit: 0.29
     Thistlethorn Acorn:
       total: 0.58
       efficiency: 0.7
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.43
     Jotunn's Revenge:
-      total: 0.61
+      total: 0.6
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 0.71
+    Heartseeker:
+      total: 0.59
+      efficiency: 0.45
+      win: 0.67
+      pick: 0.23
+      fit: 0.77
     Transcendence:
-      total: 0.5
+      total: 0.52
       efficiency: 0.5
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.39
-    Heartseeker:
-      total: 0.58
-      efficiency: 0.45
-      win: 0.64
-      pick: 0.33
-      fit: 0.77
-    Titan's Bane:
-      total: 0.58
-      efficiency: 0.48
-      win: 0.71
-      pick: 0.22
-      fit: 0.57
   community_ordered:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Heartseeker
-  - Titan's Bane
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: burst
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - The Crusher
   - Heartseeker
-  - Titan's Bane
+  - The Crusher
   flex_slots:
   - Ashwhorl Acorn
-  - The Crusher
+  - Briskberry Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -355,48 +358,48 @@ builds:
     Toxic Blade, Chandra''s Grace, Lernaean Bow, Golden Blade, Bloodforge, Riptalon.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.57
+      total: 0.58
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
+      fit: 0.22
+    Briskberry Acorn:
+      total: 0.57
+      efficiency: 0.73
+      win: 0.56
+      pick: 0.47
       fit: 0.22
     Thistlethorn Acorn:
-      total: 0.58
+      total: 0.59
       efficiency: 0.7
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.44
     Jotunn's Revenge:
-      total: 0.62
+      total: 0.61
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 0.78
-    The Crusher:
-      total: 0.55
-      efficiency: 0.51
-      win: 0.6
-      pick: 0.17
-      fit: 0.66
     Heartseeker:
-      total: 0.58
+      total: 0.59
       efficiency: 0.45
-      win: 0.64
-      pick: 0.33
+      win: 0.67
+      pick: 0.23
       fit: 0.76
-    Titan's Bane:
-      total: 0.6
-      efficiency: 0.48
-      win: 0.71
-      pick: 0.22
+    The Crusher:
+      total: 0.59
+      efficiency: 0.51
+      win: 0.67
+      pick: 0.15
       fit: 0.66
   community_ordered:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - The Crusher
   - Heartseeker
-  - Titan's Bane
+  - The Crusher
   starter: *id001
   relic: *id002
 - source: suggested
@@ -405,19 +408,19 @@ builds:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
+  - Genji's Guard
   - Kinetic Cuirass
-  - Titan's Bane
   - Amanita Charm
   flex_slots:
   - Kinetic Cuirass
-  - Titan's Bane
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Stampede — CC-immunity / cleanse
     swap_item: Stampede
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -435,44 +438,44 @@ builds:
     Ashwhorl Acorn:
       total: 0.65
       efficiency: 0.79
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
       fit: 0.44
     Briskberry Acorn:
-      total: 0.61
+      total: 0.64
       efficiency: 0.84
-      win: 0.5
-      pick: 0.48
+      win: 0.56
+      pick: 0.47
       fit: 0.44
     Thistlethorn Acorn:
       total: 0.63
       efficiency: 0.81
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.48
-    Kinetic Cuirass:
+    Genji's Guard:
       total: 0.58
+      efficiency: 0.71
+      win: 0.62
+      pick: 0.3
+      fit: 0.21
+    Kinetic Cuirass:
+      total: 0.6
       efficiency: 0.61
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.66
-    Titan's Bane:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.71
-      pick: 0.22
-      fit: 0.5
     Amanita Charm:
-      total: 0.64
+      total: 0.65
       efficiency: 0.68
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.86
   community_ordered:
   - Ashwhorl Acorn
   - Briskberry Acorn
   - Thistlethorn Acorn
-  - Titan's Bane
+  - Genji's Guard
   starter: *id001
   relic: *id002
 - source: suggested
@@ -508,39 +511,39 @@ builds:
     Screeching Gargoyle.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.59
+      total: 0.6
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
       fit: 0.33
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 1.0
     The Reaper:
-      total: 0.59
+      total: 0.61
       efficiency: 0.52
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.94
     The Crusher:
-      total: 0.61
+      total: 0.64
       efficiency: 0.51
-      win: 0.6
-      pick: 0.17
+      win: 0.67
+      pick: 0.15
       fit: 1.0
     Heartseeker:
-      total: 0.61
+      total: 0.62
       efficiency: 0.45
-      win: 0.64
-      pick: 0.33
+      win: 0.67
+      pick: 0.23
       fit: 1.0
     Titan's Bane:
-      total: 0.65
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.64
       pick: 0.22
       fit: 1.0
   community_ordered:
@@ -555,14 +558,14 @@ builds:
   archetype: attack-speed
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
-  - Jotunn's Revenge
   - Tyrfing
   - Riptalon
-  - Titan's Bane
+  - Silverbranch Bow
   flex_slots:
-  - Jotunn's Revenge
-  - Riptalon
+  - Briskberry Acorn
+  - Silverbranch Bow
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -586,58 +589,57 @@ builds:
     Ashwhorl Acorn:
       total: 0.63
       efficiency: 0.73
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
       fit: 0.48
-    Thistlethorn Acorn:
-      total: 0.57
-      efficiency: 0.74
-      win: 0.53
-      pick: 0.59
-      fit: 0.31
-    Jotunn's Revenge:
+    Briskberry Acorn:
       total: 0.56
-      efficiency: 0.65
-      win: 0.55
-      pick: 0.48
-      fit: 0.37
-    Tyrfing:
+      efficiency: 0.73
+      win: 0.56
+      pick: 0.47
+      fit: 0.17
+    Thistlethorn Acorn:
       total: 0.58
+      efficiency: 0.74
+      win: 0.55
+      pick: 0.52
+      fit: 0.31
+    Tyrfing:
+      total: 0.59
       efficiency: 0.53
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.79
     Riptalon:
-      total: 0.55
+      total: 0.56
       efficiency: 0.45
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.79
-    Titan's Bane:
+    Silverbranch Bow:
       total: 0.56
-      efficiency: 0.48
-      win: 0.71
-      pick: 0.22
-      fit: 0.43
+      efficiency: 0.49
+      win: 0.63
+      pick: 0.0
+      fit: 0.69
   community_ordered:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
-  - Jotunn's Revenge
-  - Titan's Bane
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: cooldown
   slot_order:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
   - Hydra's Lament
   - Arondight
-  - Titan's Bane
   flex_slots:
-  - Ashwhorl Acorn
   - Arondight
+  - Briskberry Acorn
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -659,46 +661,46 @@ builds:
     Shield Splitter, Eye of the Storm, Avenging Blade, Silverbranch Bow.'
   slot_scores:
     Ashwhorl Acorn:
-      total: 0.56
+      total: 0.57
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
+      fit: 0.15
+    Briskberry Acorn:
+      total: 0.55
+      efficiency: 0.73
+      win: 0.56
+      pick: 0.47
       fit: 0.15
     Thistlethorn Acorn:
-      total: 0.61
+      total: 0.62
       efficiency: 0.7
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.65
     Jotunn's Revenge:
-      total: 0.63
+      total: 0.62
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 0.85
     Hydra's Lament:
-      total: 0.58
+      total: 0.59
       efficiency: 0.55
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.75
     Arondight:
-      total: 0.55
+      total: 0.57
       efficiency: 0.53
-      win: 0.6
+      win: 0.63
       pick: 0.0
       fit: 0.65
-    Titan's Bane:
-      total: 0.57
-      efficiency: 0.48
-      win: 0.71
-      pick: 0.22
-      fit: 0.45
   community_ordered:
   - Ashwhorl Acorn
+  - Briskberry Acorn
   - Thistlethorn Acorn
   - Jotunn's Revenge
-  - Titan's Bane
   starter: *id001
   relic: *id002
 - source: suggested
@@ -736,37 +738,37 @@ builds:
     Ashwhorl Acorn:
       total: 0.62
       efficiency: 0.68
-      win: 0.63
-      pick: 0.38
+      win: 0.64
+      pick: 0.39
       fit: 0.52
     Briskberry Acorn:
-      total: 0.58
+      total: 0.61
       efficiency: 0.73
-      win: 0.5
-      pick: 0.48
+      win: 0.56
+      pick: 0.47
       fit: 0.52
     Thistlethorn Acorn:
       total: 0.61
       efficiency: 0.7
-      win: 0.53
-      pick: 0.59
+      win: 0.55
+      pick: 0.52
       fit: 0.61
     Jotunn's Revenge:
       total: 0.65
       efficiency: 0.65
       win: 0.55
-      pick: 0.48
+      pick: 0.4
       fit: 1.0
     The Crusher:
-      total: 0.61
+      total: 0.64
       efficiency: 0.51
-      win: 0.6
-      pick: 0.17
+      win: 0.67
+      pick: 0.15
       fit: 1.0
     Titan's Bane:
-      total: 0.65
+      total: 0.62
       efficiency: 0.48
-      win: 0.71
+      win: 0.64
       pick: 0.22
       fit: 1.0
   community_ordered:
@@ -794,105 +796,80 @@ community_aspects:
   - aspect: Aspect of the Thickbark
     status: shown
     windows:
-    - ob47
-    patches: OB47
+    - ob48
+    patches: OB48
     window_rule: newest
-    window_start: '2026-11-03'
-    window_end: '2026-11-17'
-    matches: 576
-    wins: 356
-    win_share: 0.62
+    window_start: '2026-11-17'
+    window_end: '2026-11-21'
+    matches: 85
+    wins: 56
+    win_share: 0.66
     aggregate:
-      aspect_matches: 681
-      aspect_win_rate: 0.595
-      no_aspect_matches: 770
-      no_aspect_win_rate: 0.56
+      aspect_matches: 91
+      aspect_win_rate: 0.637
+      no_aspect_matches: 103
+      no_aspect_win_rate: 0.583
     roles:
     - role: Solo
-      matches: 406
-      share: 0.7
+      matches: 69
+      share: 0.81
     - role: Support
-      matches: 109
-      share: 0.19
+      matches: 10
+      share: 0.12
     - role: Jungle
-      matches: 60
-      share: 0.1
-    - role: Mid
-      matches: 1
-      share: 0.0
+      matches: 6
+      share: 0.07
     base_role: Jungle
-    base_role_share: 0.1
+    base_role_share: 0.07
     role_shift:
       role: Solo
-      share: 0.7
-      says: 'most Aspect of the Thickbark players do not play Jungle: Solo 70%, Jungle
-        10%'
+      share: 0.81
+      says: 'most Aspect of the Thickbark players do not play Jungle: Solo 81%, Jungle
+        7%'
     items:
     - name: Ashwhorl Acorn
       share: 1.0
     - name: Briskberry Acorn
-      share: 0.99
+      share: 0.96
     - name: Thistlethorn Acorn
-      share: 0.86
-    - name: Shield of the Phoenix
-      share: 0.54
+      share: 0.95
     - name: Genji's Guard
-      share: 0.51
-    - name: Freya's Tears
-      share: 0.32
+      share: 0.69
+    - name: Shield of the Phoenix
+      share: 0.44
     - name: Breastplate of Valor
-      share: 0.23
+      share: 0.41
     - name: Shifter's Shield
-      share: 0.14
+      share: 0.13
+    - name: brawlers-ruin
+      share: 0.11
     starters:
     - name: Bluestone Brooch
-      share: 0.64
+      share: 0.65
     - name: Bluestone Pendant
       share: 0.27
     - name: Bumba's Hammer
-      share: 0.02
-    - name: Warrior's Axe
-      share: 0.02
-    - name: Blood-soaked Shroud
-      share: 0.01
+      share: 0.04
     - name: Sundering Axe
-      share: 0.01
-    - name: Vampiric Shroud
-      share: 0.01
-    - name: Heroism
-      share: 0.01
-    - name: Archmage's Gem
-      share: 0.0
-    - name: Hunter's Cowl
-      share: 0.0
-    - name: Bumba's Cudgel
-      share: 0.0
-    - name: Conduit Gem
-      share: 0.0
-    - name: Death's Toll
-      share: 0.0
-    - name: Leather Cowl
-      share: 0.0
+      share: 0.02
     - name: Pendulum of the Ages
-      share: 0.0
-    - name: Selflessness
-      share: 0.0
-    - name: War Flag
-      share: 0.0
+      share: 0.01
+    - name: Warrior's Axe
+      share: 0.01
     relics:
     - name: Sundering Arc
-      share: 0.31
+      share: 0.39
     - name: Phantom Shell
-      share: 0.26
+      share: 0.28
     - name: Purification Beads
-      share: 0.25
+      share: 0.21
     matches_by_window:
-      ob47: 576
+      ob48: 85
+      ob47: 575
       ob46: 372
       ob45: 221
       ob44: 169
     unmapped_slugs:
     - brawlers-ruin
-    - lively-acorn
     - magic-acorn
 ---
