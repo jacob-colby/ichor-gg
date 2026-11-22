@@ -5,183 +5,186 @@ mode: Conquest
 builds:
 - source: community
   aspect: Aspect of Victorious Conquest
-  aspect_pick_rate: 0.55
-  aspect_win_rate: 0.54
+  aspect_pick_rate: 0.5
+  aspect_win_rate: 0.51
   slot_order:
   - name: Jotunn's Revenge
-    pick_rate: 0.38
-    win_rate: 0.5
+    pick_rate: 0.37
+    win_rate: 0.47
     alternates:
     - name: Shifter's Shield
-      pick_rate: 0.29
-      win_rate: 0.55
+      pick_rate: 0.33
+      win_rate: 0.59
     - name: Transcendence
-      pick_rate: 0.12
-      win_rate: 0.68
+      pick_rate: 0.11
+      win_rate: 0.61
   - name: Transcendence
-    pick_rate: 0.26
-    win_rate: 0.5
+    pick_rate: 0.25
+    win_rate: 0.47
     alternates:
     - name: Freya's Tears
       pick_rate: 0.13
-      win_rate: 0.59
-    - name: Jotunn's Revenge
-      pick_rate: 0.11
-      win_rate: 0.72
+      win_rate: 0.54
+    - name: Prophetic Cloak
+      pick_rate: 0.12
+      win_rate: 0.54
   - name: Heartseeker
-    pick_rate: 0.25
-    win_rate: 0.53
+    pick_rate: 0.23
+    win_rate: 0.5
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
-      win_rate: 0.64
+      win_rate: 0.72
     - name: Gladiator's Shield
       pick_rate: 0.1
-      win_rate: 0.63
+      win_rate: 0.52
   - name: Blinking Abyss
-    pick_rate: 0.18
-    win_rate: 0.5
+    pick_rate: 0.17
+    win_rate: 0.48
     alternates:
     - name: Heartseeker
-      pick_rate: 0.15
-      win_rate: 0.61
+      pick_rate: 0.13
+      win_rate: 0.54
     - name: Sundering Echo
-      pick_rate: 0.09
-      win_rate: 0.64
+      pick_rate: 0.11
+      win_rate: 0.67
   - name: Avatar's Parashu
-    pick_rate: 0.15
-    win_rate: 0.59
+    pick_rate: 0.14
+    win_rate: 0.58
     alternates:
     - name: Sundering Echo
       pick_rate: 0.08
-      win_rate: 0.82
+      win_rate: 0.71
     - name: Brawler’s Beat Stick
-      pick_rate: 0.07
-      win_rate: 0.6
-  - name: Skeggox
+      pick_rate: 0.08
+      win_rate: 0.64
+  - name: The Crusher
     pick_rate: 0.12
-    win_rate: 0.36
+    win_rate: 0.71
     alternates:
-    - name: The Crusher
-      pick_rate: 0.12
-      win_rate: 0.79
-    - name: Lucerne Hammer
+    - name: Skeggox
+      pick_rate: 0.11
+      win_rate: 0.33
+    - name: Brawler’s Beat Stick
       pick_rate: 0.05
-      win_rate: 0.67
+      win_rate: 0.86
   community_starters:
   - name: Bluestone Brooch
-    pick_rate: 0.4
-    win_rate: 0.66
+    pick_rate: 0.43
+    win_rate: 0.65
   - name: Archmage's Gem
-    pick_rate: 0.2
-    win_rate: 0.58
-  - name: Pendulum of the Ages
-    pick_rate: 0.12
-    win_rate: 0.63
+    pick_rate: 0.17
+    win_rate: 0.56
+  - name: Bluestone Pendant
+    pick_rate: 0.13
+    win_rate: 0.38
   community_relics:
   - name: Purification Beads
     pick_rate: 0.37
-    win_rate: 0.54
+    win_rate: 0.55
   - name: Blink Rune
-    pick_rate: 0.2
-    win_rate: 0.5
+    pick_rate: 0.19
+    win_rate: 0.53
   - name: Aegis of Acceleration
     pick_rate: 0.17
-    win_rate: 0.56
+    win_rate: 0.53
   starter_sightings:
   - name: Bluestone Brooch
-    pick_rate: 0.4
-    win_rate: 0.66
+    pick_rate: 0.43
+    win_rate: 0.65
   - name: Archmage's Gem
-    pick_rate: 0.2
-    win_rate: 0.58
-  - name: Pendulum of the Ages
-    pick_rate: 0.12
-    win_rate: 0.63
+    pick_rate: 0.17
+    win_rate: 0.56
   - name: Bluestone Pendant
-    pick_rate: 0.11
-    win_rate: 0.28
-  - name: Conduit Gem
-    pick_rate: 0.09
-    win_rate: 0.43
-  - name: Sands Of Time
-    pick_rate: 0.05
+    pick_rate: 0.13
     win_rate: 0.38
+  - name: Pendulum of the Ages
+    pick_rate: 0.1
+    win_rate: 0.65
+  - name: Conduit Gem
+    pick_rate: 0.08
+    win_rate: 0.38
+  - name: Sands Of Time
+    pick_rate: 0.06
+    win_rate: 0.33
+  - name: Bumba's Cudgel
+    pick_rate: 0.01
+    win_rate: 1.0
+  - name: Sundering Axe
+    pick_rate: 0.01
+    win_rate: 0.0
   - name: Warrior's Axe
     pick_rate: 0.01
     win_rate: 1.0
-  - name: Bumba's Cudgel
-    pick_rate: 0.006
-    win_rate: 1.0
   - name: Bumba's Hammer
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.0
-  - name: Sundering Axe
-    pick_rate: 0.006
+  - name: Leather Cowl
+    pick_rate: 0.005
     win_rate: 0.0
   - name: War Banner
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.0
   relic_sightings:
   - name: Purification Beads
     pick_rate: 0.37
-    win_rate: 0.54
+    win_rate: 0.55
   - name: Blink Rune
-    pick_rate: 0.2
-    win_rate: 0.5
+    pick_rate: 0.19
+    win_rate: 0.53
   - name: Aegis of Acceleration
     pick_rate: 0.17
-    win_rate: 0.56
+    win_rate: 0.53
   - name: Sundering Arc
-    pick_rate: 0.14
-    win_rate: 0.61
+    pick_rate: 0.15
+    win_rate: 0.56
   - name: Phantom Shell
-    pick_rate: 0.11
+    pick_rate: 0.1
     win_rate: 0.67
   - name: Agility Relic
-    pick_rate: 0.006
+    pick_rate: 0.005
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/nike/
-  last_verified: '2026-11-21'
-  god_win_rate: 0.558282208588957
-  god_matches_won: 91
-  god_matches_played: 163
+  last_verified: '2026-11-22'
+  god_win_rate: 0.5528846153846154
+  god_matches_won: 115
+  god_matches_played: 208
   god_division: obsidian
   god_window_start: '2026-11-17'
-  god_window_end: '2026-11-21'
-  god_matches_analyzed: 3178
+  god_window_end: '2026-11-22'
+  god_matches_analyzed: 4116
   starter:
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.51
-    win_rate: 0.578
-    matches: 83
+    pick_rate: 0.56
+    win_rate: 0.5873
+    matches: 116
     basis: community
   relic:
     name: Purification Beads
     pick_rate: 0.37
-    win_rate: 0.54
-    matches: 60
+    win_rate: 0.55
+    matches: 77
     basis: community
 - source: suggested
   archetype: core
   slot_order:
   - Genji's Guard
   - Kinetic Cuirass
-  - Shield Splitter
   - Freya's Tears
+  - Shifter's Shield
   - The Crusher
   - Amanita Charm
   flex_slots:
   - Genji's Guard
-  - Shield Splitter
+  - Shifter's Shield
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Draconic Scale — magical protection
-    swap_item: Draconic Scale
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -194,59 +197,60 @@ builds:
     Hammer, Hydra''s Lament, Erosion, Oni Hunter''s Garb, Eye of Providence, The Reaper,
     Screeching Gargoyle, Midgardian Mail, Stone of Binding, Leviathan''s Hide, Magi''s
     Cloak, Mantle Of Discord, Hide of the Nemean Lion, Arondight, Wyrmskin Hide, Tyrfing,
-    Avenging Blade, Prophetic Cloak.'
+    Avenging Blade.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.71
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.32
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.55
       efficiency: 0.61
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.62
-    Shield Splitter:
-      total: 0.55
-      efficiency: 0.58
-      win: 0.59
-      pick: 0.0
-      fit: 0.58
     Freya's Tears:
-      total: 0.59
+      total: 0.62
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.51
+    Shifter's Shield:
+      total: 0.53
+      efficiency: 0.5
+      win: 0.59
+      pick: 0.33
+      fit: 0.52
     The Crusher:
-      total: 0.6
+      total: 0.57
       efficiency: 0.51
-      win: 0.79
+      win: 0.71
       pick: 0.37
       fit: 0.35
     Amanita Charm:
-      total: 0.58
+      total: 0.56
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.52
   community_ordered:
   - Freya's Tears
+  - Shifter's Shield
   - The Crusher
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.51
-    win_rate: 0.578
-    matches: 83
+    pick_rate: 0.56
+    win_rate: 0.5873
+    matches: 116
     basis: community
   relic: &id002
     name: Purification Beads
     pick_rate: 0.37
-    win_rate: 0.54
-    matches: 60
+    win_rate: 0.55
+    matches: 77
     basis: community
 - source: suggested
   archetype: bruiser
@@ -262,11 +266,11 @@ builds:
   - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
-    swap: Magi's Cloak — CC-immunity / cleanse
-    swap_item: Magi's Cloak
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Berserker's Shield — physical protection
     swap_item: Berserker's Shield
@@ -282,39 +286,39 @@ builds:
     Blade, Hide of the Nemean Lion, Wyrmskin Hide.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.71
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.29
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.55
       efficiency: 0.61
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.6
     Shield of the Phoenix:
-      total: 0.58
+      total: 0.56
       efficiency: 0.57
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.79
     Freya's Tears:
-      total: 0.58
+      total: 0.61
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.45
     The Crusher:
-      total: 0.61
+      total: 0.57
       efficiency: 0.51
-      win: 0.79
+      win: 0.71
       pick: 0.37
       fit: 0.36
     Amanita Charm:
-      total: 0.62
+      total: 0.6
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.8
   community_ordered:
@@ -356,39 +360,39 @@ builds:
     Mantle Of Discord.'
   slot_scores:
     Genji's Guard:
-      total: 0.55
+      total: 0.53
       efficiency: 0.71
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.24
     Jotunn's Revenge:
-      total: 0.55
+      total: 0.54
       efficiency: 0.65
-      win: 0.5
-      pick: 0.38
+      win: 0.47
+      pick: 0.37
       fit: 0.54
     Kinetic Cuirass:
-      total: 0.55
+      total: 0.53
       efficiency: 0.61
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.49
     Freya's Tears:
-      total: 0.57
+      total: 0.6
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.38
     The Crusher:
-      total: 0.63
+      total: 0.6
       efficiency: 0.51
-      win: 0.79
+      win: 0.71
       pick: 0.37
       fit: 0.53
     Amanita Charm:
-      total: 0.56
+      total: 0.54
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.39
   community_ordered:
@@ -420,8 +424,8 @@ builds:
     swap: Kinetic Cuirass — physical protection
     swap_item: Kinetic Cuirass
   - vs_tag: sustain
-    swap: Toxic Blade — anti-heal
-    swap_item: Toxic Blade
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
   rationale: 'Basic-attack DPS skew (efficiency + fit + win/pick). Underrated for
     this god: Berserker''s Shield, Amanita Charm, Genji''s Guard, Kinetic Cuirass,
     Tyrfing, Golden Blade, Shield Splitter, Breastplate of Valor, Shield of the Phoenix,
@@ -431,39 +435,39 @@ builds:
     Leviathan''s Hide, Silverbranch Bow, Magi''s Cloak.'
   slot_scores:
     Golden Blade:
-      total: 0.52
+      total: 0.5
       efficiency: 0.51
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.54
     Berserker's Shield:
-      total: 0.58
+      total: 0.56
       efficiency: 0.72
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.44
     Tyrfing:
-      total: 0.53
+      total: 0.51
       efficiency: 0.53
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.54
     Freya's Tears:
-      total: 0.57
+      total: 0.6
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.36
     The Crusher:
-      total: 0.59
+      total: 0.55
       efficiency: 0.51
-      win: 0.79
+      win: 0.71
       pick: 0.37
       fit: 0.24
     Amanita Charm:
-      total: 0.56
+      total: 0.54
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.37
   community_ordered:
@@ -488,8 +492,8 @@ builds:
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Screeching Gargoyle — magical protection
-    swap_item: Screeching Gargoyle
+    swap: Shifter's Shield — magical protection
+    swap_item: Shifter's Shield
   - vs_tag: physical_heavy
     swap: Shield of the Phoenix — physical protection
     swap_item: Shield of the Phoenix
@@ -500,45 +504,44 @@ builds:
     + fit + win/pick). Underrated for this god: Genji''s Guard, Amanita Charm, Kinetic
     Cuirass, Breastplate of Valor, Shield of the Phoenix, Berserker''s Shield, Screeching
     Gargoyle, Hydra''s Lament, Shield Splitter, Draconic Scale, Oni Hunter''s Garb,
-    Prophetic Cloak, Arondight, Erosion, Eye of Providence, Runeforged Hammer, Midgardian
-    Mail, Stone of Binding, Chandra''s Grace, Leviathan''s Hide, Regrowth Striders,
-    The Reaper, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion, Eye of
-    Erebus.'
+    Arondight, Erosion, Eye of Providence, Runeforged Hammer, Midgardian Mail, Stone
+    of Binding, Chandra''s Grace, Leviathan''s Hide, Regrowth Striders, The Reaper,
+    Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion, Eye of Erebus.'
   slot_scores:
     Genji's Guard:
-      total: 0.58
+      total: 0.56
       efficiency: 0.71
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.44
     Breastplate of Valor:
-      total: 0.55
+      total: 0.53
       efficiency: 0.63
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.44
     Kinetic Cuirass:
-      total: 0.56
+      total: 0.53
       efficiency: 0.61
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.51
     Freya's Tears:
-      total: 0.6
+      total: 0.64
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.59
     The Crusher:
-      total: 0.59
+      total: 0.55
       efficiency: 0.51
-      win: 0.79
+      win: 0.71
       pick: 0.37
       fit: 0.22
     Amanita Charm:
-      total: 0.57
+      total: 0.54
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.41
   community_ordered:
@@ -577,42 +580,42 @@ builds:
     Scale, Runeforged Hammer, Hydra''s Lament, Erosion, Oni Hunter''s Garb, Eye of
     Providence, The Reaper, Screeching Gargoyle, Midgardian Mail, Stone of Binding,
     Leviathan''s Hide, Magi''s Cloak, Mantle Of Discord, Hide of the Nemean Lion,
-    Arondight, Wyrmskin Hide, Tyrfing, Avenging Blade, Prophetic Cloak.'
+    Arondight, Wyrmskin Hide, Tyrfing, Avenging Blade.'
   slot_scores:
     Genji's Guard:
-      total: 0.56
+      total: 0.54
       efficiency: 0.71
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.32
     Jotunn's Revenge:
-      total: 0.53
+      total: 0.52
       efficiency: 0.65
-      win: 0.5
-      pick: 0.38
+      win: 0.47
+      pick: 0.37
       fit: 0.39
     Kinetic Cuirass:
-      total: 0.57
+      total: 0.55
       efficiency: 0.61
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.62
     Shield Splitter:
-      total: 0.55
+      total: 0.53
       efficiency: 0.58
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.58
     Freya's Tears:
-      total: 0.59
+      total: 0.62
       efficiency: 0.61
-      win: 0.64
+      win: 0.72
       pick: 0.22
       fit: 0.51
     Amanita Charm:
-      total: 0.58
+      total: 0.56
       efficiency: 0.68
-      win: 0.59
+      win: 0.54
       pick: 0.0
       fit: 0.52
   community_ordered:
@@ -640,73 +643,73 @@ community_aspects:
     patches: OB48
     window_rule: newest
     window_start: '2026-11-17'
-    window_end: '2026-11-21'
-    matches: 76
-    wins: 40
-    win_share: 0.53
+    window_end: '2026-11-22'
+    matches: 91
+    wins: 46
+    win_share: 0.51
     aggregate:
-      aspect_matches: 89
-      aspect_win_rate: 0.539
-      no_aspect_matches: 74
-      no_aspect_win_rate: 0.581
+      aspect_matches: 105
+      aspect_win_rate: 0.514
+      no_aspect_matches: 103
+      no_aspect_win_rate: 0.592
     roles:
     - role: Jungle
-      matches: 39
-      share: 0.51
+      matches: 47
+      share: 0.52
     - role: Mid
-      matches: 24
-      share: 0.32
+      matches: 28
+      share: 0.31
     - role: Solo
-      matches: 13
-      share: 0.17
+      matches: 16
+      share: 0.18
     base_role: Solo
-    base_role_share: 0.17
+    base_role_share: 0.18
     role_shift:
       role: Jungle
-      share: 0.51
-      says: 'most Aspect of Victorious Conquest players do not play Solo: Jungle 51%,
-        Solo 17%'
+      share: 0.52
+      says: 'most Aspect of Victorious Conquest players do not play Solo: Jungle 52%,
+        Solo 18%'
     items:
     - name: Jotunn's Revenge
       share: 0.96
     - name: Heartseeker
-      share: 0.88
+      share: 0.87
     - name: Transcendence
-      share: 0.75
+      share: 0.76
     - name: Blinking Abyss
-      share: 0.53
+      share: 0.52
     - name: The Crusher
-      share: 0.47
+      share: 0.48
     - name: Avatar's Parashu
-      share: 0.39
+      share: 0.37
     - name: Skeggox
       share: 0.24
     - name: Pendulum Blade
-      share: 0.18
+      share: 0.2
     starters:
     - name: Archmage's Gem
-      share: 0.43
+      share: 0.4
     - name: Pendulum of the Ages
-      share: 0.25
+      share: 0.22
     - name: Bluestone Brooch
-      share: 0.12
-    - name: Conduit Gem
-      share: 0.09
+      share: 0.13
     - name: Sands Of Time
-      share: 0.08
+      share: 0.11
+    - name: Conduit Gem
+      share: 0.1
     - name: Bluestone Pendant
-      share: 0.01
+      share: 0.03
     - name: Bumba's Hammer
       share: 0.01
     relics:
     - name: Purification Beads
       share: 0.54
     - name: Aegis of Acceleration
-      share: 0.25
+      share: 0.24
     - name: Blink Rune
       share: 0.11
     matches_by_window:
-      ob48: 76
+      ob48: 91
       ob47: 458
       ob46: 900
       ob45: 614

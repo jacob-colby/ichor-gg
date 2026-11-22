@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.38
-    win_rate: 0.6671
-    matches: 30
+    pick_rate: 0.4
+    win_rate: 0.67
+    matches: 39
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.34
-    win_rate: 0.48
-    matches: 27
+    pick_rate: 0.37
+    win_rate: 0.53
+    matches: 36
     basis: community
     borrowed_from: Conquest
 - source: suggested
