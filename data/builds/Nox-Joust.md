@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Sands Of Time
     upgrade: Pendulum of the Ages
-    pick_rate: 0.35
-    win_rate: 0.4869
-    matches: 117
+    pick_rate: 0.34
+    win_rate: 0.4712
+    matches: 146
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Aegis of Acceleration
-    pick_rate: 0.31
-    win_rate: 0.47
-    matches: 104
+    name: Purification Beads
+    pick_rate: 0.32
+    win_rate: 0.52
+    matches: 137
     basis: community
     borrowed_from: Conquest
 - source: suggested

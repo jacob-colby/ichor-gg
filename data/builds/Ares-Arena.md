@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 0.6
   starter: &id001
-    base: Selflessness
-    upgrade: Heroism
-    pick_rate: 0.29
-    win_rate: 0.3503
-    matches: 23
+    base: Bluestone Pendant
+    upgrade: Bluestone Brooch
+    pick_rate: 0.26
+    win_rate: 0.6919
+    matches: 26
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.48
-    win_rate: 0.66
-    matches: 38
+    pick_rate: 0.46
+    win_rate: 0.61
+    matches: 46
     basis: community
     borrowed_from: Conquest
 - source: suggested

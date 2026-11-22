@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.46
-    win_rate: 0.6378
-    matches: 66
+    pick_rate: 0.45
+    win_rate: 0.65
+    matches: 100
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
-    pick_rate: 0.51
-    win_rate: 0.58
-    matches: 73
+    pick_rate: 0.52
+    win_rate: 0.6
+    matches: 116
     basis: community
     borrowed_from: Conquest
 - source: suggested

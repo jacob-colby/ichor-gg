@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.47
-    win_rate: 0.5517
-    matches: 65
+    pick_rate: 0.44
+    win_rate: 0.5673
+    matches: 81
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
-    pick_rate: 0.32
-    win_rate: 0.57
-    matches: 44
+    pick_rate: 0.33
+    win_rate: 0.62
+    matches: 60
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.76
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Kinetic Cuirass
+  - Magi's Cloak
+  - Shield Splitter
+  - Mantle Of Discord
+  - Amanita Charm
+  - Shogun's Ofuda
+  flex_slots:
+  - Mantle Of Discord
+  - Shogun's Ofuda
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Hussar's Wings — CC-immunity / cleanse
+    swap_item: Hussar's Wings
+  - vs_tag: magic_heavy
+    swap: Glorious Pridwen — magical protection
+    swap_item: Glorious Pridwen
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Brawler’s Beat Stick — anti-heal
+    swap_item: Brawler’s Beat Stick
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Kinetic Cuirass:
+      total: 0.61
+      efficiency: 0.61
+      win: 0.5
+      pick: 0.0
+      fit: 0.61
+    Magi's Cloak:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Shield Splitter:
+      total: 0.57
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 0.55
+    Mantle Of Discord:
+      total: 0.55
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.57
+    Amanita Charm:
+      total: 0.72
+      efficiency: 0.68
+      win: 0.5
+      pick: 0.0
+      fit: 0.76
+    Shogun's Ofuda:
+      total: 0.39
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.33
+  swaps:
+  - added: Shogun's Ofuda
+    removed: Freya's Tears
+    reason: Conquest community 75% win over 33 matches (vs 54% on this god), taking
+      the model's weakest slot from Freya's Tears
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---
