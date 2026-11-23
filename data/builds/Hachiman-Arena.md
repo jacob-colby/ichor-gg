@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.54
-    win_rate: 0.51
-    matches: 223
+    win_rate: 0.5189
+    matches: 271
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.54
-    win_rate: 0.51
-    matches: 223
+    win_rate: 0.5
+    matches: 271
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -608,6 +608,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.88
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Lernaean Bow
+  - Toxic Blade
+  - Tyrfing
+  - The Reaper
+  - Riptalon
+  - Deathbringer
+  flex_slots:
+  - Lernaean Bow
+  - Deathbringer
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Contagion — anti-heal
+    swap_item: Contagion
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Lernaean Bow:
+      total: 0.57
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.66
+    Toxic Blade:
+      total: 0.58
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Tyrfing:
+      total: 0.59
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.65
+    The Reaper:
+      total: 0.66
+      efficiency: 0.57
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    Riptalon:
+      total: 0.66
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.88
+    Deathbringer:
+      total: 0.45
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.45
+  swaps:
+  - added: Deathbringer
+    removed: Golden Blade
+    reason: Conquest community 65% win over 60 matches (vs 50% on this god), taking
+      the model's weakest slot from Golden Blade
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

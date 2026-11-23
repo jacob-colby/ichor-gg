@@ -71,15 +71,15 @@ builds:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
     pick_rate: 0.86
-    win_rate: 0.5279
-    matches: 158
+    win_rate: 0.5298
+    matches: 208
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.53
-    win_rate: 0.52
-    matches: 98
+    pick_rate: 0.5
+    win_rate: 0.53
+    matches: 121
     basis: community
     borrowed_from: Conquest
 - source: suggested

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.81
-    win_rate: 0.6099
-    matches: 176
+    pick_rate: 0.78
+    win_rate: 0.5955
+    matches: 224
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.54
-    win_rate: 0.58
-    matches: 117
+    win_rate: 0.6
+    matches: 155
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
+  - Heartseeker
+  - Avatar's Parashu
+  flex_slots:
+  - Heartseeker
+  - Avatar's Parashu
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Resolute Mantle — CC-immunity / cleanse
+    swap_item: Resolute Mantle
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Reaper:
+      total: 0.76
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.75
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.74
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Heartseeker:
+      total: 0.73
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Avatar's Parashu:
+      total: 0.69
+      efficiency: 0.46
+      win: 0.5
+      pick: 0.0
+      fit: 0.91
+  swaps:
+  - added: Avatar's Parashu
+    removed: Pendulum Blade
+    reason: Conquest community 79% win over 34 matches (vs 62% on this god), taking
+      the model's weakest slot from Pendulum Blade
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---
