@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Conduit Gem
     upgrade: Archmage's Gem
-    pick_rate: 0.52
-    win_rate: 0.5415
-    matches: 195
+    pick_rate: 0.53
+    win_rate: 0.5557
+    matches: 240
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
     pick_rate: 0.59
-    win_rate: 0.56
-    matches: 221
+    win_rate: 0.57
+    matches: 267
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -674,6 +674,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Book of Thoth
+  - Bracer of The Abyss
+  - Spear of Desolation
+  - Obsidian Shard
+  - Rod of Tahuti
+  - Soul Gem
+  flex_slots:
+  - Bracer of The Abyss
+  - Book of Thoth
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Dreamer's Idol — CC-immunity / cleanse
+    swap_item: Dreamer's Idol
+  - vs_tag: magic_heavy
+    swap: Sphere of Negation — magical protection
+    swap_item: Sphere of Negation
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Book of Thoth:
+      total: 0.36
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 0.24
+    Bracer of The Abyss:
+      total: 0.53
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+    Spear of Desolation:
+      total: 0.59
+      efficiency: 0.6
+      win: 0.5
+      pick: 0.0
+      fit: 0.58
+    Obsidian Shard:
+      total: 0.54
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.56
+    Rod of Tahuti:
+      total: 0.64
+      efficiency: 0.82
+      win: 0.5
+      pick: 0.0
+      fit: 0.46
+    Soul Gem:
+      total: 0.79
+      efficiency: 0.58
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Book of Thoth
+    removed: Spear of the Magus
+    reason: Conquest community 73% win over 50 matches (vs 57% on this god), taking
+      the model's weakest slot from Spear of the Magus
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

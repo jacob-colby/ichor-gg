@@ -71,15 +71,15 @@ builds:
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
     pick_rate: 0.59
-    win_rate: 0.4664
-    matches: 158
+    win_rate: 0.5203
+    matches: 201
     basis: community
     borrowed_from: Conquest
   relic: &id002
-    name: Aegis of Acceleration
+    name: Purification Beads
     pick_rate: 0.5
-    win_rate: 0.52
-    matches: 134
+    win_rate: 0.53
+    matches: 170
     basis: community
     borrowed_from: Conquest
 - source: suggested

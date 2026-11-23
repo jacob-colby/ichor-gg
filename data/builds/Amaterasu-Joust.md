@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.44
-    win_rate: 0.5673
-    matches: 81
+    pick_rate: 0.47
+    win_rate: 0.5596
+    matches: 104
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Agility Relic
     pick_rate: 0.33
-    win_rate: 0.62
-    matches: 60
+    win_rate: 0.61
+    matches: 73
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -611,7 +611,7 @@ builds:
   swaps:
   - added: Shogun's Ofuda
     removed: Brawler’s Beat Stick
-    reason: Conquest community 75% win over 33 matches (vs 54% on this god), taking
+    reason: Conquest community 70% win over 38 matches (vs 53% on this god), taking
       the model's weakest slot from Brawler’s Beat Stick
   borrowed_from: Conquest
   starter: *id001

@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.55
-    win_rate: 0.5809
-    matches: 62
+    pick_rate: 0.54
+    win_rate: 0.5644
+    matches: 73
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.49
-    win_rate: 0.53
-    matches: 55
+    pick_rate: 0.5
+    win_rate: 0.52
+    matches: 68
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -476,6 +476,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.83
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Toxic Blade
+  - Jotunn's Revenge
+  - Tyrfing
+  - Death Metal
+  - Riptalon
+  - The Crusher
+  flex_slots:
+  - Death Metal
+  - The Crusher
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Divine Ruin — anti-heal
+    swap_item: Divine Ruin
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Joust — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Toxic Blade:
+      total: 0.62
+      efficiency: 0.44
+      win: 0.5
+      pick: 0.0
+      fit: 0.8
+    Jotunn's Revenge:
+      total: 0.57
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 0.49
+    Tyrfing:
+      total: 0.63
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.73
+    Death Metal:
+      total: 0.57
+      efficiency: 0.63
+      win: 0.5
+      pick: 0.0
+      fit: 0.51
+    Riptalon:
+      total: 0.61
+      efficiency: 0.39
+      win: 0.5
+      pick: 0.0
+      fit: 0.83
+    The Crusher:
+      total: 0.53
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 0.54
+  swaps:
+  - added: The Crusher
+    removed: Bragi's Harp
+    reason: Conquest community 73% win over 31 matches (vs 54% on this god), taking
+      the model's weakest slot from Bragi's Harp
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

@@ -9,115 +9,115 @@ builds:
   aspect_win_rate: null
   slot_order:
   - name: Golden Blade
-    pick_rate: 0.36
+    pick_rate: 0.35
     win_rate: 0.58
     alternates:
     - name: Berserker's Shield
       pick_rate: 0.15
-      win_rate: 0.64
+      win_rate: 0.62
     - name: Shifter's Shield
       pick_rate: 0.1
-      win_rate: 0.39
+      win_rate: 0.33
   - name: Berserker's Shield
     pick_rate: 0.33
-    win_rate: 0.63
+    win_rate: 0.58
     alternates:
     - name: Golden Blade
       pick_rate: 0.19
-      win_rate: 0.47
+      win_rate: 0.45
     - name: Shogun's Ofuda
-      pick_rate: 0.11
-      win_rate: 0.5
+      pick_rate: 0.14
+      win_rate: 0.57
   - name: Shogun's Ofuda
-    pick_rate: 0.18
-    win_rate: 0.75
+    pick_rate: 0.17
+    win_rate: 0.7
     alternates:
     - name: Berserker's Shield
-      pick_rate: 0.19
-      win_rate: 0.44
+      pick_rate: 0.21
+      win_rate: 0.5
     - name: Kinetic Cuirass
       pick_rate: 0.16
-      win_rate: 0.48
+      win_rate: 0.44
   - name: Freya's Tears
-    pick_rate: 0.17
-    win_rate: 0.6
+    pick_rate: 0.19
+    win_rate: 0.59
     alternates:
     - name: Shogun's Ofuda
-      pick_rate: 0.16
-      win_rate: 0.55
+      pick_rate: 0.15
+      win_rate: 0.48
     - name: Kinetic Cuirass
-      pick_rate: 0.13
+      pick_rate: 0.12
       win_rate: 0.65
   - name: Kinetic Cuirass
     pick_rate: 0.07
-    win_rate: 0.5
+    win_rate: 0.46
     alternates:
     - name: Freya's Tears
       pick_rate: 0.14
-      win_rate: 0.52
-    - name: Shogun's Ofuda
+      win_rate: 0.57
+    - name: Sundering Echo
       pick_rate: 0.06
-      win_rate: 0.7
+      win_rate: 0.45
   - name: Sundering Echo
-    pick_rate: 0.08
-    win_rate: 0.44
+    pick_rate: 0.07
+    win_rate: 0.55
     alternates:
     - name: Medal of Defense
-      pick_rate: 0.08
-      win_rate: 0.56
+      pick_rate: 0.07
+      win_rate: 0.45
     - name: Hussar's Wings
-      pick_rate: 0.04
+      pick_rate: 0.03
       win_rate: 0.8
   community_starters:
   - name: Death's Embrace
-    pick_rate: 0.32
-    win_rate: 0.66
-  - name: Hunter's Cowl
-    pick_rate: 0.23
+    pick_rate: 0.33
     win_rate: 0.64
-  - name: Leather Cowl
-    pick_rate: 0.13
-    win_rate: 0.42
+  - name: Hunter's Cowl
+    pick_rate: 0.22
+    win_rate: 0.59
+  - name: Death's Toll
+    pick_rate: 0.14
+    win_rate: 0.37
   community_relics:
   - name: Agility Relic
     pick_rate: 0.33
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Purification Beads
-    pick_rate: 0.22
-    win_rate: 0.41
+    pick_rate: 0.21
+    win_rate: 0.43
   - name: Sundering Arc
     pick_rate: 0.17
-    win_rate: 0.56
+    win_rate: 0.53
   starter_sightings:
   - name: Death's Embrace
-    pick_rate: 0.32
-    win_rate: 0.66
-  - name: Hunter's Cowl
-    pick_rate: 0.23
+    pick_rate: 0.33
     win_rate: 0.64
+  - name: Hunter's Cowl
+    pick_rate: 0.22
+    win_rate: 0.59
+  - name: Death's Toll
+    pick_rate: 0.14
+    win_rate: 0.37
   - name: Leather Cowl
     pick_rate: 0.13
-    win_rate: 0.42
-  - name: Death's Toll
-    pick_rate: 0.12
-    win_rate: 0.32
+    win_rate: 0.43
   - name: Archmage's Gem
     pick_rate: 0.06
-    win_rate: 0.64
-  - name: Pendulum of the Ages
-    pick_rate: 0.04
-    win_rate: 0.57
+    win_rate: 0.69
   - name: Conduit Gem
+    pick_rate: 0.05
+    win_rate: 0.3
+  - name: Pendulum of the Ages
     pick_rate: 0.03
-    win_rate: 0.17
+    win_rate: 0.57
   - name: Sands Of Time
-    pick_rate: 0.02
+    pick_rate: 0.01
     win_rate: 0.0
   - name: Sharpshooter's Arrow
-    pick_rate: 0.02
+    pick_rate: 0.01
     win_rate: 0.67
   - name: Warrior's Axe
-    pick_rate: 0.02
+    pick_rate: 0.01
     win_rate: 0.33
   - name: Bluestone Pendant
     pick_rate: 0.005
@@ -131,66 +131,66 @@ builds:
   relic_sightings:
   - name: Agility Relic
     pick_rate: 0.33
-    win_rate: 0.62
+    win_rate: 0.61
   - name: Purification Beads
-    pick_rate: 0.22
-    win_rate: 0.41
+    pick_rate: 0.21
+    win_rate: 0.43
   - name: Sundering Arc
     pick_rate: 0.17
-    win_rate: 0.56
+    win_rate: 0.53
   - name: Aegis of Acceleration
-    pick_rate: 0.15
-    win_rate: 0.61
+    pick_rate: 0.16
+    win_rate: 0.56
   - name: Phantom Shell
-    pick_rate: 0.11
-    win_rate: 0.43
+    pick_rate: 0.12
+    win_rate: 0.5
   - name: Blink Rune
-    pick_rate: 0.005
+    pick_rate: 0.009
     win_rate: 0.0
   source_url: https://smitebrain.com/gods/amaterasu/
-  last_verified: '2026-11-22'
-  god_win_rate: 0.5355191256830601
-  god_matches_won: 98
-  god_matches_played: 183
+  last_verified: '2026-11-23'
+  god_win_rate: 0.5294117647058824
+  god_matches_won: 117
+  god_matches_played: 221
   god_division: obsidian
   god_window_start: '2026-11-17'
-  god_window_end: '2026-11-22'
-  god_matches_analyzed: 4116
+  god_window_end: '2026-11-23'
+  god_matches_analyzed: 5251
   starter:
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.44
-    win_rate: 0.5673
-    matches: 81
+    pick_rate: 0.47
+    win_rate: 0.5596
+    matches: 104
     basis: community
   relic:
     name: Agility Relic
     pick_rate: 0.33
-    win_rate: 0.62
-    matches: 60
+    win_rate: 0.61
+    matches: 73
     basis: community
 - source: suggested
   archetype: core
   slot_order:
   - Genji's Guard
   - Berserker's Shield
+  - Shield Splitter
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
-  - Shogun's Ofuda
   - Genji's Guard
+  - Shield Splitter
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Shield Splitter — magical protection
-    swap_item: Shield Splitter
+    swap: Shogun's Ofuda — magical protection
+    swap_item: Shogun's Ofuda
   - vs_tag: physical_heavy
-    swap: Kinetic Cuirass — physical protection
-    swap_item: Kinetic Cuirass
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -211,28 +211,28 @@ builds:
       pick: 0.0
       fit: 0.29
     Berserker's Shield:
-      total: 0.59
+      total: 0.56
       efficiency: 0.66
-      win: 0.63
+      win: 0.58
       pick: 0.45
       fit: 0.33
+    Shield Splitter:
+      total: 0.55
+      efficiency: 0.58
+      win: 0.58
+      pick: 0.0
+      fit: 0.55
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.48
-    Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.75
-      pick: 0.28
-      fit: 0.33
     Hussar's Wings:
       total: 0.58
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.51
     Amanita Charm:
       total: 0.58
@@ -243,43 +243,42 @@ builds:
   community_ordered:
   - Berserker's Shield
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.44
-    win_rate: 0.5673
-    matches: 81
+    pick_rate: 0.47
+    win_rate: 0.5596
+    matches: 104
     basis: community
   relic: &id002
     name: Agility Relic
     pick_rate: 0.33
-    win_rate: 0.62
-    matches: 60
+    win_rate: 0.61
+    matches: 73
     basis: community
 - source: suggested
   archetype: bruiser
   slot_order:
-  - Shield of the Phoenix
+  - Genji's Guard
   - Berserker's Shield
+  - Shield of the Phoenix
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
   - Freya's Tears
-  - Shogun's Ofuda
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Magi's Cloak — CC-immunity / cleanse
     swap_item: Magi's Cloak
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -293,35 +292,35 @@ builds:
     Gargoyle, Hide of the Nemean Lion, Avenging Blade, Wyrmskin Hide, Death Metal,
     Helm of Radiance, Tyrfing, Stone of Binding, Gladiator''s Shield, Shifter''s Shield.'
   slot_scores:
+    Genji's Guard:
+      total: 0.55
+      efficiency: 0.71
+      win: 0.58
+      pick: 0.0
+      fit: 0.27
+    Berserker's Shield:
+      total: 0.57
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.45
+      fit: 0.34
     Shield of the Phoenix:
       total: 0.57
       efficiency: 0.57
       win: 0.58
       pick: 0.0
       fit: 0.76
-    Berserker's Shield:
-      total: 0.59
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.45
-      fit: 0.34
     Freya's Tears:
       total: 0.56
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.42
-    Shogun's Ofuda:
-      total: 0.56
-      efficiency: 0.44
-      win: 0.75
-      pick: 0.28
-      fit: 0.34
     Hussar's Wings:
       total: 0.58
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.49
     Amanita Charm:
       total: 0.62
@@ -332,29 +331,28 @@ builds:
   community_ordered:
   - Berserker's Shield
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   starter: *id001
   relic: *id002
 - source: suggested
   archetype: anti-tank
   slot_order:
-  - Jotunn's Revenge
+  - Genji's Guard
   - Berserker's Shield
+  - Jotunn's Revenge
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   - Amanita Charm
   flex_slots:
   - Freya's Tears
-  - Shogun's Ofuda
+  - Genji's Guard
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Genji's Guard — magical protection
-    swap_item: Genji's Guard
+    swap: Screeching Gargoyle — magical protection
+    swap_item: Screeching Gargoyle
   - vs_tag: physical_heavy
     swap: Stone of Binding — physical protection
     swap_item: Stone of Binding
@@ -371,35 +369,35 @@ builds:
     Blood-Bound Book, Helm of Radiance, Leviathan''s Hide, Doom Orb, Magi''s Cloak,
     Mantle Of Discord, Hide of the Nemean Lion, Helm of Darkness, Shifter''s Shield.'
   slot_scores:
+    Genji's Guard:
+      total: 0.54
+      efficiency: 0.71
+      win: 0.58
+      pick: 0.0
+      fit: 0.22
+    Berserker's Shield:
+      total: 0.55
+      efficiency: 0.66
+      win: 0.58
+      pick: 0.45
+      fit: 0.25
     Jotunn's Revenge:
       total: 0.57
       efficiency: 0.65
       win: 0.58
       pick: 0.0
       fit: 0.5
-    Berserker's Shield:
-      total: 0.57
-      efficiency: 0.66
-      win: 0.63
-      pick: 0.45
-      fit: 0.25
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.36
-    Shogun's Ofuda:
-      total: 0.54
-      efficiency: 0.44
-      win: 0.75
-      pick: 0.28
-      fit: 0.25
     Hussar's Wings:
       total: 0.56
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.39
     Amanita Charm:
       total: 0.56
@@ -410,7 +408,6 @@ builds:
   community_ordered:
   - Berserker's Shield
   - Freya's Tears
-  - Shogun's Ofuda
   - Hussar's Wings
   starter: *id001
   relic: *id002
@@ -453,31 +450,31 @@ builds:
       total: 0.54
       efficiency: 0.51
       win: 0.58
-      pick: 0.36
+      pick: 0.35
       fit: 0.53
     Berserker's Shield:
-      total: 0.62
+      total: 0.6
       efficiency: 0.72
-      win: 0.63
+      win: 0.58
       pick: 0.45
       fit: 0.43
     Freya's Tears:
-      total: 0.55
+      total: 0.54
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.34
     Shogun's Ofuda:
-      total: 0.59
+      total: 0.56
       efficiency: 0.49
-      win: 0.75
-      pick: 0.28
+      win: 0.7
+      pick: 0.26
       fit: 0.43
     Hussar's Wings:
       total: 0.56
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.36
     Amanita Charm:
       total: 0.55
@@ -503,7 +500,7 @@ builds:
   - Hussar's Wings
   - Soul Gem
   flex_slots:
-  - Soul Gem
+  - Berserker's Shield
   - Jotunn's Revenge
   situational_swaps:
   - vs_tag: heavy_cc
@@ -536,9 +533,9 @@ builds:
       pick: 0.0
       fit: 0.44
     Berserker's Shield:
-      total: 0.58
+      total: 0.55
       efficiency: 0.66
-      win: 0.63
+      win: 0.58
       pick: 0.45
       fit: 0.27
     Jotunn's Revenge:
@@ -548,16 +545,16 @@ builds:
       pick: 0.0
       fit: 0.42
     Freya's Tears:
-      total: 0.59
+      total: 0.58
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.59
     Hussar's Wings:
-      total: 0.57
+      total: 0.56
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.41
     Soul Gem:
       total: 0.55
@@ -614,9 +611,9 @@ builds:
       pick: 0.0
       fit: 0.24
     Berserker's Shield:
-      total: 0.57
+      total: 0.55
       efficiency: 0.66
-      win: 0.63
+      win: 0.58
       pick: 0.45
       fit: 0.24
     Jotunn's Revenge:
@@ -628,14 +625,14 @@ builds:
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.37
     Hussar's Wings:
       total: 0.56
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.37
     Soul Gem:
       total: 0.56
@@ -666,11 +663,11 @@ builds:
     swap: Dreamer's Idol — CC-immunity / cleanse
     swap_item: Dreamer's Idol
   - vs_tag: magic_heavy
-    swap: Shogun's Ofuda — magical protection
-    swap_item: Shogun's Ofuda
-  - vs_tag: physical_heavy
-    swap: Shield Splitter — physical protection
+    swap: Shield Splitter — magical protection
     swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Breastplate of Valor — physical protection
+    swap_item: Breastplate of Valor
   - vs_tag: sustain
     swap: Brawler’s Beat Stick — anti-heal
     swap_item: Brawler’s Beat Stick
@@ -692,9 +689,9 @@ builds:
       pick: 0.0
       fit: 0.22
     Berserker's Shield:
-      total: 0.57
+      total: 0.55
       efficiency: 0.66
-      win: 0.63
+      win: 0.58
       pick: 0.45
       fit: 0.25
     Jotunn's Revenge:
@@ -706,14 +703,14 @@ builds:
     Freya's Tears:
       total: 0.55
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.36
     Hussar's Wings:
       total: 0.56
       efficiency: 0.39
       win: 0.8
-      pick: 0.12
+      pick: 0.09
       fit: 0.38
     Amanita Charm:
       total: 0.56
@@ -776,9 +773,9 @@ builds:
       pick: 0.0
       fit: 0.34
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.52
       efficiency: 0.61
-      win: 0.5
+      win: 0.46
       pick: 0.15
       fit: 0.61
     Shield Splitter:
@@ -790,8 +787,8 @@ builds:
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.48
     Amanita Charm:
       total: 0.58
@@ -853,22 +850,22 @@ builds:
       pick: 0.0
       fit: 0.55
     Kinetic Cuirass:
-      total: 0.54
+      total: 0.52
       efficiency: 0.61
-      win: 0.5
+      win: 0.46
       pick: 0.15
       fit: 0.61
     Shogun's Ofuda:
-      total: 0.56
+      total: 0.53
       efficiency: 0.44
-      win: 0.75
-      pick: 0.28
+      win: 0.7
+      pick: 0.26
       fit: 0.33
     Freya's Tears:
       total: 0.57
       efficiency: 0.61
-      win: 0.6
-      pick: 0.28
+      win: 0.59
+      pick: 0.32
       fit: 0.48
     Amanita Charm:
       total: 0.58
@@ -883,7 +880,7 @@ builds:
   swaps:
   - added: Shogun's Ofuda
     removed: Jotunn's Revenge
-    reason: community 75% win over 33 matches (vs 54% on this god), taking the model's
+    reason: community 70% win over 38 matches (vs 53% on this god), taking the model's
       weakest slot from Jotunn's Revenge
   starter: *id001
   relic: *id002

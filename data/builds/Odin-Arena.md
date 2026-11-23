@@ -71,15 +71,15 @@ builds:
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
     pick_rate: 0.54
-    win_rate: 0.6267
-    matches: 48
+    win_rate: 0.6344
+    matches: 60
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Blink Rune
-    pick_rate: 0.29
-    win_rate: 0.46
-    matches: 26
+    pick_rate: 0.3
+    win_rate: 0.53
+    matches: 34
     basis: community
     borrowed_from: Conquest
 - source: suggested

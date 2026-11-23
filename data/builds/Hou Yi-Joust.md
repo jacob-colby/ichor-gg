@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.74
-    win_rate: 0.5101
-    matches: 256
+    pick_rate: 0.73
+    win_rate: 0.4999
+    matches: 323
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.6
-    win_rate: 0.5
-    matches: 208
+    pick_rate: 0.63
+    win_rate: 0.51
+    matches: 278
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -679,15 +679,15 @@ builds:
 - source: suggested
   archetype: hybrid
   slot_order:
-  - The Executioner
   - Tyrfing
   - Death Metal
   - Riptalon
+  - Demon Blade
   - Deathbringer
   - Soul Gem
   flex_slots:
+  - Demon Blade
   - Deathbringer
-  - The Executioner
   situational_swaps:
   - vs_tag: heavy_cc
     swap: Avatar's Parashu — CC-immunity / cleanse
@@ -704,12 +704,6 @@ builds:
   rationale: The model's core, corrected where the community is clearly right (efficiency
     + fit). Joust — math + mode profile (no meta win/pick data).
   slot_scores:
-    The Executioner:
-      total: 0.34
-      efficiency: 0.3
-      win: 0.5
-      pick: 0.0
-      fit: 0.38
     Tyrfing:
       total: 0.61
       efficiency: 0.53
@@ -728,6 +722,12 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.81
+    Demon Blade:
+      total: 0.55
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
     Deathbringer:
       total: 0.45
       efficiency: 0.44
@@ -743,12 +743,8 @@ builds:
   swaps:
   - added: Deathbringer
     removed: Toxic Blade
-    reason: Conquest community 75% win over 52 matches (vs 49% on this god), taking
+    reason: Conquest community 73% win over 57 matches (vs 49% on this god), taking
       the model's weakest slot from Toxic Blade
-  - added: The Executioner
-    removed: Demon Blade
-    reason: Conquest community 62% win over 83 matches (vs 49% on this god), taking
-      the model's weakest slot from Demon Blade
   borrowed_from: Conquest
   starter: *id001
   relic: *id002
