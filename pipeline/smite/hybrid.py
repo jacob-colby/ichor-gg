@@ -66,13 +66,18 @@ def community_records(community_entry):
         win, pick = slot.get("win_rate"), slot.get("pick_rate")
         if not name or not isinstance(win, (int, float)) or not isinstance(pick, (int, float)):
             continue
-        played = int(round(pick * played_total))
-        confidence = tierlist.wilson_lower_bound(int(round(win * played)), played)
-        out[name] = {
-            "win_rate": win, "pick_rate": pick,
-            "matches": played, "confidence": confidence,
-        }
+        out[name] = item_record(win, pick, played_total)
     return out
+
+
+def item_record(win, pick, played_total):
+    """One item's `{win_rate, pick_rate, matches, confidence}` — the derivation
+    `community_records` applies to each slot, exposed so a reader of an
+    ALTERNATE sighting (`item_evidence`) uses the same estimate and the same
+    Wilson bound rather than a second copy of them."""
+    played = int(round(pick * played_total))
+    confidence = tierlist.wilson_lower_bound(int(round(win * played)), played)
+    return {"win_rate": win, "pick_rate": pick, "matches": played, "confidence": confidence}
 
 
 def _reason(name, record, displaced, baseline, borrowed_from=None):

@@ -106,7 +106,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from smite import (ability_heals, build_quality as bq, combat, community_target, damage_value,
-                   efficiency, passive_sim, recommend, scoring)
+                   efficiency, item_evidence, passive_sim, recommend, scoring)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 REPORT_PATH = REPO_ROOT / "data" / "Analysis" / "_side_by_side.md"
@@ -1706,6 +1706,13 @@ def compare(god, build_note, items_by_name, targets, model_rows=None, mode_note=
             if pv.status in (passive_sim.SIMULATED, passive_sim.PARTIAL):
                 entry["passive"]["worth"] = passive_contribution(
                     god, mine, items_by_name, targets, name)
+            if side == "community" and MODE == "Conquest":
+                # Why the community buys it, in its own numbers. EXPLAINS,
+                # never ranks: `item_evidence` docstring (Jacob, 2026-11-06).
+                # Conquest only: the god page draws the detail in Conquest, and
+                # a borrowed six would need the record labelled as borrowed.
+                entry["evidence"] = item_evidence.label(
+                    entry["community"], item_evidence.community_entry(build_note))
             if side == "community" and ours_only:
                 entry["best_swap"] = best_swap(god, ours, name, ours_only, items_by_name, targets,
                                                p_ours)

@@ -61,6 +61,8 @@ const comparison = (over: Record<string, unknown> = {}) => ({
   kit: { kit: "base", aspect: "Aspect of Thermotherapy", pick_rate: 0.04, win_rate: 0.59, simulated: true },
   diffs: [{ item: "The World Stone", side: "community", gold: 2800,
     community: { pick_rate: 0.39, win_rate: 0.54, where: "slot 2" },
+    evidence: { label: "above average, not confidently", pick_rate: 0.39, win_rate: 0.54, god_win_rate: 0.523,
+      matches: 1170, matches_estimated: true, confidence: 0.511 },
     passive: { status: "simulated", summary: "-25% ultimate cooldown", assumptions: [] },
     model: { text: "model rank #10, quality 0.584 (efficiency 0.53, fit 0.72)" } }],
   ...over,
@@ -122,6 +124,38 @@ describe("God page — the answer", () => {
     for (const d of document.querySelectorAll("details")) d.open = true;
     expect(screen.getByTestId("compare-detail")).toBeInTheDocument();
     expect(document.querySelector("main")!.textContent).not.toMatch(/\b0\.\d+/);
+  });
+
+  it("says why the community buys an item Ichor doesn't, with an estimated sample", async () => {
+    render(<App />);
+    await waitFor(() => expect(screen.getByTestId("verdict-line")).toHaveAttribute("data-kind", "measured"));
+    const line = screen.getByTestId("item-evidence");
+    expect(line).toHaveAttribute("data-label", "above average, not confidently");
+    expect(line).toHaveTextContent(
+      "Above average, not confidently: won 54% against Ra's 52% over about 1,170 matches (estimated)");
+  });
+
+  it("shows the god's decimal when rounding would make below-average read as equal", async () => {
+    serve(comparison({ diffs: [{ item: "The World Stone", side: "community", gold: 2800,
+      community: { pick_rate: 0.68, win_rate: 0.51, where: "slot 2" },
+      evidence: { label: "below this god's average", pick_rate: 0.68, win_rate: 0.51, god_win_rate: 0.5112,
+        matches: 182, matches_estimated: true, confidence: 0.439 },
+      passive: { status: "simulated", summary: "", assumptions: [] }, model: { text: "" } }] }));
+    render(<App />);
+    const line = await screen.findByTestId("item-evidence", {}, { timeout: 2000 });
+    expect(line).toHaveTextContent("Below this god's average: won 51% against Ra's 51.1% over about 182 matches (estimated)");
+  });
+
+  it("says too few matches rather than a win rate on a thin record", async () => {
+    serve(comparison({ diffs: [{ item: "The World Stone", side: "community", gold: 2800,
+      community: { pick_rate: 0.01, win_rate: 0.9, where: "slot 6 alternate" },
+      evidence: { label: "too few matches", pick_rate: 0.01, win_rate: 0.9, god_win_rate: 0.523,
+        matches: 12, matches_estimated: true, confidence: null },
+      passive: { status: "simulated", summary: "", assumptions: [] }, model: { text: "" } }] }));
+    render(<App />);
+    const line = await screen.findByTestId("item-evidence", {}, { timeout: 2000 });
+    expect(line).toHaveTextContent("Too few matches: about 12 matches (estimated), too few to read a win rate from");
+    expect(line).not.toHaveTextContent("90%");
   });
 
   it("withholds the call when coverage fails, in words", async () => {

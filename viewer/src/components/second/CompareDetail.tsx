@@ -9,7 +9,7 @@
  * The community's six is NOT listed again: the whose-build switch's
  * Community side already shows it in place. What this adds is per-scenario percentages, the items
  * that differ and what each one does, and what the model can't see. */
-import type { SideBySideData } from "../SideBySide";
+import type { ItemEvidence, SideBySideData } from "../SideBySide";
 import type { CommunityBuildEntry } from "../../types";
 import type { ComparisonMeta } from "./useComparison";
 import { Art } from "./art";
@@ -31,6 +31,23 @@ const signedPct = (r: number) => {
   return `${p > 0 ? "+" : "−"}${Math.abs(p).toFixed(0)}%`;
 };
 const gold = (n: number) => Math.round(n).toLocaleString("en-US");
+const pctOf = (r: number) => `${Math.round(r * 100)}%`;
+
+/** The community's record for an item only it buys, in words and its own
+ * numbers. The label is decided in the pipeline (`item_evidence.py`); this
+ * only prints it. Match counts are estimates, and say so. */
+function evidenceLine(e: ItemEvidence, god: string) {
+  if (e.label === "no community record" || e.matches == null) return null;
+  const n = `about ${e.matches.toLocaleString("en-US")} matches (estimated)`;
+  if (e.label === "too few matches" || e.win_rate == null || e.god_win_rate == null)
+    return { label: e.label, text: `${n}, too few to read a win rate from` };
+  // SmiteBrain prints item rates to two decimals and the god's rate is exact,
+  // so 51% can be "below" a 51.1% god: show the decimal when they'd look equal.
+  const godPct = pctOf(e.god_win_rate) === pctOf(e.win_rate)
+    ? `${(e.god_win_rate * 100).toFixed(1)}%` : pctOf(e.god_win_rate);
+  return { label: e.label,
+    text: `won ${pctOf(e.win_rate)} against ${god}'s ${godPct} over ${n}` };
+}
 
 export function CompareDetail({ d, meta, god, community }: {
   d: SideBySideData; meta: ComparisonMeta | null; god: string; community?: CommunityBuildEntry;
@@ -100,6 +117,15 @@ export function CompareDetail({ d, meta, god, community }: {
                       {x.passive.summary ? ` · ${x.passive.summary}` : ""}
                       {x.passive.status !== "simulated" ? ` · ${x.passive.status}` : ""}
                     </p>
+                    {x.evidence && (() => {
+                      const ev = evidenceLine(x.evidence, god);
+                      return ev && (
+                        <p data-testid="item-evidence" data-label={ev.label} className="mt-0.5 text-note text-muted">
+                          <span className="font-semibold text-ink">{ev.label[0].toUpperCase() + ev.label.slice(1)}</span>
+                          {": "}{ev.text}
+                        </p>
+                      );
+                    })()}
                     {x.best_swap && (
                       <p className="mt-0.5 text-note text-muted">
                         In Ichor&rsquo;s six for {x.best_swap.replaces}: damage{" "}
