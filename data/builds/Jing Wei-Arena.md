@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Gilded Arrow
     upgrade: Sharpshooter's Arrow
-    pick_rate: 0.89
-    win_rate: 0.5983
-    matches: 64
+    pick_rate: 0.91
+    win_rate: 0.5968
+    matches: 85
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.61
-    win_rate: 0.55
-    matches: 44
+    pick_rate: 0.6
+    win_rate: 0.59
+    matches: 56
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 0.87
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Golden Blade
+  - Lernaean Bow
+  - The Executioner
+  - Tyrfing
+  - Riptalon
+  - Demon Blade
+  flex_slots:
+  - Riptalon
+  - The Executioner
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Sanguine Lash — magical protection
+    swap_item: Sanguine Lash
+  - vs_tag: physical_heavy
+    swap: Berserker's Shield — physical protection
+    swap_item: Berserker's Shield
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Golden Blade:
+      total: 0.6
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Lernaean Bow:
+      total: 0.61
+      efficiency: 0.47
+      win: 0.5
+      pick: 0.0
+      fit: 0.74
+    The Executioner:
+      total: 0.37
+      efficiency: 0.3
+      win: 0.5
+      pick: 0.0
+      fit: 0.43
+    Tyrfing:
+      total: 0.64
+      efficiency: 0.53
+      win: 0.5
+      pick: 0.0
+      fit: 0.75
+    Riptalon:
+      total: 0.59
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.82
+    Demon Blade:
+      total: 0.62
+      efficiency: 0.36
+      win: 0.5
+      pick: 0.0
+      fit: 0.87
+  swaps:
+  - added: The Executioner
+    removed: Dominance
+    reason: Conquest community 86% win over 30 matches (vs 58% on this god), taking
+      the model's weakest slot from Dominance
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

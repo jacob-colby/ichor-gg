@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bumba's Cudgel
     upgrade: Bumba's Hammer
-    pick_rate: 0.72
-    win_rate: 0.5778
-    matches: 45
+    pick_rate: 0.68
+    win_rate: 0.5374
+    matches: 52
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Sundering Arc
-    pick_rate: 0.29
-    win_rate: 0.56
-    matches: 18
+    pick_rate: 0.3
+    win_rate: 0.52
+    matches: 23
     basis: community
     borrowed_from: Conquest
 - source: suggested

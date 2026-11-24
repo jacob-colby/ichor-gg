@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Bluestone Pendant
     upgrade: Bluestone Brooch
-    pick_rate: 0.61
-    win_rate: 0.6198
-    matches: 159
+    pick_rate: 0.65
+    win_rate: 0.5962
+    matches: 214
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
-    pick_rate: 0.59
-    win_rate: 0.63
-    matches: 153
+    pick_rate: 0.61
+    win_rate: 0.59
+    matches: 201
     basis: community
     borrowed_from: Conquest
 - source: suggested
@@ -542,6 +542,78 @@ builds:
       win: 0.5
       pick: 0.0
       fit: 1.0
+  starter: *id001
+  relic: *id002
+- source: suggested
+  archetype: hybrid
+  slot_order:
+  - Jotunn's Revenge
+  - Magi's Cloak
+  - The Reaper
+  - The Crusher
+  - Titan's Bane
+  - Heartseeker
+  flex_slots:
+  - Heartseeker
+  - Magi's Cloak
+  situational_swaps:
+  - vs_tag: heavy_cc
+    swap: Avatar's Parashu — CC-immunity / cleanse
+    swap_item: Avatar's Parashu
+  - vs_tag: magic_heavy
+    swap: Shield Splitter — magical protection
+    swap_item: Shield Splitter
+  - vs_tag: physical_heavy
+    swap: Shield of the Phoenix — physical protection
+    swap_item: Shield of the Phoenix
+  - vs_tag: sustain
+    swap: Toxic Blade — anti-heal
+    swap_item: Toxic Blade
+  rationale: The model's core, corrected where the community is clearly right (efficiency
+    + fit). Arena — math + mode profile (no meta win/pick data).
+  slot_scores:
+    Jotunn's Revenge:
+      total: 0.83
+      efficiency: 0.65
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Magi's Cloak:
+      total: 0.23
+      efficiency: 0.26
+      win: 0.5
+      pick: 0.0
+      fit: 0.2
+    The Reaper:
+      total: 0.76
+      efficiency: 0.52
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    The Crusher:
+      total: 0.75
+      efficiency: 0.51
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Titan's Bane:
+      total: 0.74
+      efficiency: 0.48
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+    Heartseeker:
+      total: 0.73
+      efficiency: 0.45
+      win: 0.5
+      pick: 0.0
+      fit: 1.0
+  swaps:
+  - added: Magi's Cloak
+    removed: Transcendence
+    reason: Conquest community 80% win over 33 matches (vs 57% on this god), taking
+      the model's weakest slot from Transcendence
+  borrowed_from: Conquest
   starter: *id001
   relic: *id002
 ---

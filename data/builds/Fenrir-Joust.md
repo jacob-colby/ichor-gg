@@ -68,18 +68,18 @@ builds:
       pick: 0.0
       fit: 1.0
   starter: &id001
-    base: Bumba's Cudgel
-    upgrade: Bumba's Hammer
-    pick_rate: 0.35
-    win_rate: 0.5894
-    matches: 51
+    base: Death's Toll
+    upgrade: Death's Embrace
+    pick_rate: 0.36
+    win_rate: 0.4806
+    matches: 62
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Purification Beads
     pick_rate: 0.55
-    win_rate: 0.58
-    matches: 81
+    win_rate: 0.56
+    matches: 95
     basis: community
     borrowed_from: Conquest
 - source: suggested

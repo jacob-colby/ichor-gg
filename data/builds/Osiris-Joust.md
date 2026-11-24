@@ -70,16 +70,16 @@ builds:
   starter: &id001
     base: Death's Toll
     upgrade: Death's Embrace
-    pick_rate: 0.32
-    win_rate: 0.2656
-    matches: 20
+    pick_rate: 0.37
+    win_rate: 0.257
+    matches: 27
     basis: community
     borrowed_from: Conquest
   relic: &id002
     name: Aegis of Acceleration
     pick_rate: 0.3
-    win_rate: 0.5
-    matches: 18
+    win_rate: 0.55
+    matches: 22
     basis: community
     borrowed_from: Conquest
 - source: suggested
