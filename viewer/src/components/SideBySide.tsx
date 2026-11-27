@@ -32,6 +32,17 @@ interface Diff {
   passive: PassiveNote;
   model: { text: string };
   best_swap?: { replaces: string; damage_axis: number; survival_axis: number };
+  /** Community side, Conquest only: the record's label (`item_evidence.py`).
+   * Explains why players buy it; never feeds the build. */
+  evidence?: ItemEvidence;
+}
+
+export interface ItemEvidence {
+  label: "too few matches" | "below this god's average" | "above average, not confidently"
+    | "confidently above average" | "no community record";
+  pick_rate: number | null; win_rate: number | null; god_win_rate: number | null;
+  /** pick rate x god matches: an estimate, never a count. */
+  matches: number | null; matches_estimated: boolean; confidence: number | null;
 }
 
 export interface SideBySideData {
