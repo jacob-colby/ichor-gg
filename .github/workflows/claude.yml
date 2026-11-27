@@ -31,5 +31,8 @@ jobs:
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # gh pr create is allowed so Claude opens the PR itself. It runs with the
+          # Claude app's token, so the PR triggers Tests and the "PR ready" post.
           claude_args: |
-            --append-system-prompt "This task came from Jacob through his Discord bot. If you need a decision from him before you can go on, end your reply with a line that is exactly 'Decision needed:' followed by one short question and numbered options (1, 2, 3), and stop there. He answers with a comment starting '@claude Jacob's answer:'. When the work is done, push the branch and give the link to open the pull request. Never merge, never push to main."
+            --allowedTools "Bash(gh pr create:*)"
+            --append-system-prompt "This task came from Jacob through his Discord bot. If you need a decision from him before you can go on, end your reply with a line that is exactly 'Decision needed:' followed by one short question and numbered options (1, 2, 3), and stop there. He answers with a comment starting '@claude Jacob's answer:'. When the work is done and committed, open the pull request yourself: gh pr create --base main --head <your branch> --title '<short title>' --body 'Closes #<issue number>. <one-line summary>'. Then link the PR in your reply. Never merge, never push to main."
