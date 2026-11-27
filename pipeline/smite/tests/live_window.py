@@ -34,6 +34,14 @@ The first two are the guards Jacob named; the third only refuses a table
 going backwards, so it can never stop a new window. Nothing in this directory
 may stand between them and `main`.
 
+Since 2026-11-11 the coverage rule carries a DEPTH FLOOR as well: a window
+that covers the roster is not read while more than one of its gods holds
+fewer than `tierlist.MIN_MATCHES` matches and the window behind it is free of
+that. It is automatic in the same sense, nobody declares anything, and the run
+that finds the new window deep enough takes it: one or two runs after the
+patch on every boundary on record (`refresh.choose_community_window`, THE
+DEPTH FLOOR).
+
 THE WINDOW IS CUMULATIVE INSIDE A PATCH, AND KEEPS GROWING AFTER IT CLOSES.
 `choose_community_window` reads one SmiteBrain patch window (`?time=obNN`) per
 run, and that window keeps the same name and start date for the whole patch

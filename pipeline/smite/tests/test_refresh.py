@@ -1009,8 +1009,9 @@ def _boundary_fetcher(monkeypatch, newest_gods):
 def test_a_newer_window_the_coverage_rule_chose_is_accepted(monkeypatch):
     """The boundary end to end through the two guards Jacob named: the chooser
     takes ob48 the first day it covers as many gods as ob47, and the write
-    accepts it at a tenth of ob47's size. How deep it is is not this check's
-    business; `choose_community_window`'s docstring has that measurement."""
+    accepts it at a tenth of ob47's size. These rows are deep enough for the
+    depth floor (100 matches a god); a thin window is the section at the end
+    of this file."""
     window, gods = refresh.choose_community_window(_boundary_fetcher(monkeypatch, 95), "Achilles")
     assert (window, gods) == ("ob48", 95)
     refresh._refuse_window_regression(
@@ -1084,3 +1085,62 @@ def test_the_cli_step_fails_on_the_refusal(monkeypatch, capsys):
     monkeypatch.setattr(refresh, "refresh_community", refused)
     assert refresh.main(["--community"]) == 1
     assert "::error::community window went BACKWARDS" in capsys.readouterr().out
+
+
+# -- the depth floor on a community window (2026-11-11) -------------------------
+
+def _rows_with(played, start="2026-11-17T11:30:00.000Z"):
+    return [{"god": f"God{i}", "win_rate": 0.5, "matches_played": p, "matches_won": p // 2,
+             "aspect": None, "start_time": start, "end_time": "2026-11-18T17:00:00.000Z"}
+            for i, p in enumerate(played)]
+
+
+def _depth_fetcher(monkeypatch, newest, older):
+    html = (FIXTURES / "achilles_smitebrain_thin_window.html").read_text(encoding="utf-8")
+    monkeypatch.setattr(refresh.smitebrain_parser, "patch_windows", lambda _html: ["ob48", "ob47"])
+    monkeypatch.setattr(refresh.smitebrain_parser, "parse_god_index",
+                        lambda payload: payload["nodes"][0]["data"])
+    return _window_fetcher({"ob48": _rows_with(newest),
+                            "ob47": _rows_with(older, "2026-11-03T11:30:13.083Z")}, html)
+
+
+def test_a_window_that_covers_the_roster_but_is_thin_is_not_read_yet(monkeypatch):
+    """10-21, as the rule now sees it: the new window covers every god, 39 of
+    them on fewer than 30 matches, and the closed window behind it is deep."""
+    fetcher = _depth_fetcher(monkeypatch, [4] * 39 + [60] * 56, [180] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob47", 95)
+
+
+def test_the_new_window_is_read_the_run_it_is_deep_enough(monkeypatch):
+    """10-23: nobody under the floor, so the tie goes to the newer window."""
+    fetcher = _depth_fetcher(monkeypatch, [32] * 95, [180] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob48", 95)
+
+
+def test_one_thin_god_does_not_hold_the_roster_on_an_old_window(monkeypatch):
+    """The slack, and why it is one: 09-24 had a single god under the floor,
+    and a god disabled out of play must not pin every other god to last patch."""
+    assert refresh.WINDOW_THIN_SLACK == 1
+    fetcher = _depth_fetcher(monkeypatch, [7] + [90] * 94, [180] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob48", 95)
+    fetcher = _depth_fetcher(monkeypatch, [7, 7] + [90] * 93, [180] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob47", 95)
+
+
+def test_a_thin_window_is_kept_when_the_one_behind_it_is_no_deeper(monkeypatch):
+    """Nothing better to hold: the coverage rule alone decides, as before."""
+    fetcher = _depth_fetcher(monkeypatch, [5] * 95, [5] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob48", 95)
+
+
+def test_a_thin_window_with_a_new_god_still_waits(monkeypatch):
+    """The stated cost: the new window covers one god more, and he has no
+    community record until it is deep enough to read."""
+    fetcher = _depth_fetcher(monkeypatch, [4] * 40 + [60] * 56, [180] * 95)
+    assert refresh.choose_community_window(fetcher, "Achilles") == ("ob47", 95)
+
+
+def test_the_floor_is_the_tier_lists_and_a_row_with_no_count_is_thin():
+    from smite import tierlist
+    assert refresh.WINDOW_DEPTH_FLOOR == tierlist.MIN_MATCHES
+    assert refresh.thin_gods([{"matches_played": 29}, {"matches_played": 30}, {}]) == 2

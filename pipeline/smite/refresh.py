@@ -11,7 +11,7 @@ from pathlib import Path
 import requests
 import yaml
 
-from smite import notes, smitebrain_parser, wiki_parser
+from smite import notes, smitebrain_parser, tierlist, wiki_parser
 from smite.browser_fetch import BrowserFetcher
 from smite.cache import CachedFetcher
 
@@ -400,6 +400,19 @@ def _god_index_rows(community_fetcher, window=None, force: bool = False) -> list
             if r.get("aspect") in (None, "None")]
 
 
+#: The depth floor on a community window (`choose_community_window`, THE
+#: DEPTH FLOOR): the tier list's own "better described as unmeasured" line,
+#: imported, not restated, and how many gods may sit under it.
+WINDOW_DEPTH_FLOOR = tierlist.MIN_MATCHES
+WINDOW_THIN_SLACK = 1
+
+
+def thin_gods(rows: list) -> int:
+    """How many god-index rows hold fewer than `WINDOW_DEPTH_FLOOR` matches.
+    A row with no count is thin: an unmeasured god is not a deep one."""
+    return sum(1 for r in rows if (r.get("matches_played") or 0) < WINDOW_DEPTH_FLOOR)
+
+
 def choose_community_window(community_fetcher, probe_god: str, force: bool = False):
     """Which match window this run should read. `(window id, gods covered)`.
 
@@ -465,6 +478,39 @@ def choose_community_window(community_fetcher, probe_god: str, force: bool = Fal
     existed: the site default is the newest window, and every boundary from
     08-25 to 10-20 shipped its window's first day (08-26, 09-09, 09-23, 10-07,
     10-21). Whether a minimum depth belongs here is Jacob's call; none is set.
+
+    THE DEPTH FLOOR (2026-11-11; `WINDOW_DEPTH_FLOOR`, `WINDOW_THIN_SLACK`).
+    That call is taken: a window that covers the roster is still not read
+    while more than `WINDOW_THIN_SLACK` of its gods hold fewer than
+    `tierlist.MIN_MATCHES` matches, if the window before it is free of that.
+    Like the coverage rule it needs no declaration and cannot go stale: the
+    run that finds the new window deep enough takes it. The same snapshot
+    series, every boundary on record, gods under 30 matches by day:
+
+        boundary  first run       second run      third run
+        08-11     08-13   4       08-14   1       08-15   0
+        08-25     08-26  27       08-27   0
+        09-22     09-23  23       09-24   1       09-25   0
+        10-06     10-07  28       10-08  13       10-09   0
+        10-20     10-21  39       10-22   4       10-23   0
+
+    So the floor holds the old window for one or two runs after a patch and
+    never longer on this record; a closed window's thinnest god has held 129
+    to 257 matches at every boundary. What those runs otherwise read: on
+    10-21 the median god had 35 matches and the thinnest 4, and the community
+    six, the win rates and every shipped `core` were rebuilt from that.
+    Measured 2026-11-11 with the model held fixed (fingerprint 89eb181b72f1):
+    the 11-06 record, three days into OB47 at 2,859 matches, shares a target
+    set with the 11-11 record on 25 of 95 gods and scores the same model 2.3
+    points lower leakage-free (39.2% against 41.5%).
+
+    What it costs: a patch's first one or two days of data are not read, and
+    a god ADDED in that patch has no community record until the switch (the
+    old window does not know him). The slack is one for the reason
+    `COMMUNITY_COMPLETE_SLACK` is: a god disabled or reworked out of play
+    must not hold the roster on an old window. If the older candidate is
+    itself thin there is nothing better to hold, and the coverage rule alone
+    decides, as before.
     """
     try:
         windows = smitebrain_parser.patch_windows(
@@ -476,19 +522,32 @@ def choose_community_window(community_fetcher, probe_god: str, force: bool = Fal
         print("  [window] no patch windows offered — site default")
         return None, None
 
-    best, best_n = None, -1
+    best, best_n, read = None, -1, []
     for window in windows[:WINDOW_CANDIDATES]:        # newest first
         try:
-            n = len(_god_index_rows(community_fetcher, window, force=force))
+            rows = _god_index_rows(community_fetcher, window, force=force)
         except Exception as exc:
             print(f"  [window] {window}: {exc}")
             continue
-        print(f"  window {window}: {n} gods with a record")
+        n, thin = len(rows), thin_gods(rows)
+        read.append((window, n, thin))
+        print(f"  window {window}: {n} gods with a record"
+              + (f", {thin} under {WINDOW_DEPTH_FLOOR} matches" if thin else ""))
         if n > best_n:              # strict, so a tie keeps the NEWER window
             best, best_n = window, n
     if best is None:
         print("  [window] every candidate failed — site default")
         return None, None
+    # The depth floor: step back from a window the coverage rule chose while
+    # it is thin and the one behind it is not.
+    chosen = next(r for r in read if r[0] == best)
+    if chosen[2] > WINDOW_THIN_SLACK:
+        older = next((r for r in read[read.index(chosen) + 1:]
+                      if r[2] <= WINDOW_THIN_SLACK), None)
+        if older:
+            print(f"  window chosen: {older[0]} ({older[1]} gods) — {best} covers the roster but "
+                  f"{chosen[2]} of its gods are under {WINDOW_DEPTH_FLOOR} matches")
+            return older[0], older[1]
     print(f"  window chosen: {best} ({best_n} gods)"
           + ("" if best == windows[0] else f" — {windows[0]} is too young to carry the roster"))
     return best, best_n
