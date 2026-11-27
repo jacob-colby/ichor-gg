@@ -171,6 +171,20 @@ whole run and the store is left exactly as it was, the contract
 (a refresh never deletes a match), so a refused run loses a day at most, and
 the next run's walk recovers it.
 
+A NETWORK FAILURE IS NOT A REFUSAL (`FeedUnreachable`, exit 3). A run is ~217
+requests, and SmiteBrain occasionally drops one: read timeouts on 2026-11-18,
+and on 2026-11-23 (run 45267854788) request 184 closed without a response
+(`ConnectionError` wrapping `RemoteDisconnected`). One unretried request failed
+the whole run each time, with nothing wrong with the feed's shape. So
+`PoliteFetcher` retries a connection error, a timeout or an HTTP 5xx after
+`RETRY_DELAYS` (10s, 30s, 90s, each at least `MIN_INTERVAL`), one log line per
+retry. A 4xx is the request's fault and is never retried, and nothing
+retries a page that ARRIVED and failed validation: that is `FeedCollapse`,
+unchanged. If the retries run out the CLI exits 3, not 1, and the workflow
+reports a network failure that recovers on the next run, so two blips in a
+row are not read as a source that changed shape. The store is untouched
+either way (nothing is written before the last page is fetched).
+
 THE BUILD-NOTE ENTRY (`community_aspects:` in each Conquest note), per aspect:
   * WINDOW RULE (`choose_windows`, reach-back agreed 2026-11-09): the newest
     patch window, unless it holds fewer than `MIN_MATCHES` of this aspect's
@@ -325,6 +339,9 @@ WINDOWS_REFRESHED = 2
 #: across the whole 45-day retention.
 MAX_PAGES_PER_FEED = 800
 MIN_INTERVAL = 2.5
+#: Waits before each retry of a request the NETWORK failed (connection error,
+#: timeout, HTTP 5xx). Three retries, ~2 min in all; see A NETWORK FAILURE.
+RETRY_DELAYS = (10, 30, 90)
 
 MIN_MATCHES = tierlist.MIN_MATCHES
 WILSON_Z = tierlist.WILSON_Z
@@ -348,6 +365,12 @@ MIN_SLOTS = 6
 class FeedCollapse(Exception):
     """The feed came back in a shape this module does not trust. Nothing is
     written; the store keeps yesterday's data."""
+
+
+class FeedUnreachable(Exception):
+    """A request still failed at the network after every retry. NOT a
+    FeedCollapse: nothing came back to distrust, the store is untouched, and
+    the next run's walk recovers the day. The CLI exits 3."""
 
 
 class RefileRefused(FeedCollapse):
@@ -383,28 +406,59 @@ def index_url(window=None) -> str:
 class PoliteFetcher:
     """Uncached GET at `MIN_INTERVAL`. Uncached on purpose: every cursor page
     is a new URL, so a disk cache would only accumulate files, and a cached
-    FIRST page would hide a day's matches until the TTL ran out."""
+    FIRST page would hide a day's matches until the TTL ran out.
 
-    def __init__(self, min_interval: float = MIN_INTERVAL):
-        import requests
-        from smite.cache import USER_AGENT
-        self._session = requests.Session()
-        self._session.headers["User-Agent"] = USER_AGENT
+    Retries what the NETWORK failed — a connection error, a timeout, an HTTP
+    5xx — after each of `retry_delays`, and raises `FeedUnreachable` when they
+    run out. A 4xx raises at once, as before (A NETWORK FAILURE IS NOT A
+    REFUSAL). `session`, `sleep` and `clock` are injectable for tests."""
+
+    def __init__(self, min_interval: float = MIN_INTERVAL, retry_delays=RETRY_DELAYS,
+                 session=None, sleep=time.sleep, clock=time.time, log=print):
+        if session is None:
+            import requests
+            from smite.cache import USER_AGENT
+            session = requests.Session()
+            session.headers["User-Agent"] = USER_AGENT
+        self._session = session
         self.min_interval = min_interval
+        self.retry_delays = tuple(retry_delays)
+        self._sleep, self._clock, self._log = sleep, clock, log
         self._last = 0.0
         self.requests = 0
+        self.retries = 0
 
-    def __call__(self, url: str) -> str:
-        wait = self.min_interval - (time.time() - self._last)
+    def _get(self, url: str) -> str:
+        wait = self.min_interval - (self._clock() - self._last)
         if wait > 0:
-            time.sleep(wait)
+            self._sleep(wait)
         try:
             response = self._session.get(url, timeout=30)
             response.raise_for_status()
             return response.text
         finally:
-            self._last = time.time()
+            self._last = self._clock()
             self.requests += 1
+
+    def __call__(self, url: str) -> str:
+        import requests
+        for attempt in range(len(self.retry_delays) + 1):
+            try:
+                return self._get(url)
+            except (requests.ConnectionError, requests.Timeout, requests.HTTPError) as exc:
+                status = getattr(getattr(exc, "response", None), "status_code", None)
+                if isinstance(exc, requests.HTTPError) and not (status and status >= 500):
+                    raise
+                reason = f"HTTP {status}" if isinstance(exc, requests.HTTPError)                     else type(exc).__name__
+                if attempt == len(self.retry_delays):
+                    raise FeedUnreachable(
+                        f"{reason} on request {self.requests} after "
+                        f"{len(self.retry_delays)} retries: {url}") from exc
+                delay = max(self.retry_delays[attempt], self.min_interval)
+                self.retries += 1
+                self._log(f"  aspect feed: {reason} on request {self.requests}, retry "
+                          f"{attempt + 1}/{len(self.retry_delays)} in {delay:g}s")
+                self._sleep(delay)
 
 
 def match_key(guid: str) -> str:
@@ -1155,8 +1209,13 @@ def main(argv=None) -> int:
         except FeedCollapse as exc:
             print(f"::error::aspect feed refused, store unchanged: {exc}")
             return 1
+        except FeedUnreachable as exc:
+            print(f"::error::aspect feed unreachable (network failure, recovers on the next "
+                  f"run), store unchanged: {exc}")
+            return 3
         finally:
-            print(f"  aspect feed: {fetch.requests} requests")
+            print(f"  aspect feed: {fetch.requests} requests, "
+                  f"{getattr(fetch, 'retries', 0)} retries")
         print(f"  aspect entries: {write_notes()} Conquest notes changed")
         return 0
     if args.command == "derive":

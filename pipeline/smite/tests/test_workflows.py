@@ -225,6 +225,7 @@ def test_the_aspect_feed_runs_after_the_community_pull_and_cannot_cost_the_day()
     assert "rejected=true" in feed["run"] and "GITHUB_OUTPUT" in feed["run"]
     assert "python -m smite.aspect_matches refresh || code=$?" in feed["run"]
     assert "recurs=true" in feed["run"]
+    assert '[ "$code" -eq 3 ]; then echo "network=true"' in feed["run"]
     assert _index(runs, "smite.refresh --community") < at < _index(runs, "git commit")
     # Before the recompute and the index, so the day's notes and index see it.
     assert at < _index(runs, "smite.recommend --all")
@@ -236,10 +237,16 @@ def test_the_aspect_failure_message_says_which_refusals_recover():
     Exit 2 marks it and the reporter must not claim recovery for it."""
     steps = _steps("refresh-data.yml")
     fail = next(s for s in steps if "aspect feed was refused" in s.get("name", ""))
-    recurs, transient = fail["run"].split("else", 1)
+    recurs, rest = fail["run"].split("elif", 1)
+    network, transient = rest.split("else", 1)
     assert "steps.aspect_feed.outputs.recurs" in recurs and "does NOT recover by itself" in recurs
     assert "walks back over the missed days" in transient and "walks back" not in recurs
     assert "exit 1" in transient
+    # Exit 3: retries ran out at the network. It is not called a refusal, so
+    # two blips in a row are not read as a source shape change (11-23).
+    assert "steps.aspect_feed.outputs.network" in network
+    assert "network failure, recovers on the next run" in network
+    assert "refused" not in network and "shape" in network
 
 
 def test_the_aspect_entries_are_rederived_after_every_step_that_feeds_them():

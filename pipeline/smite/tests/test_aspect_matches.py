@@ -320,6 +320,95 @@ def test_a_refused_refile_exits_2_because_it_repeats_every_run(monkeypatch, caps
     assert "repeats every run" in capsys.readouterr().out
 
 
+# -- a network failure is retried, and is not a refusal ------------------------
+
+class _Resp:
+    def __init__(self, status=200, text="ok"):
+        self.status_code, self.text = status, text
+
+    def raise_for_status(self):
+        import requests
+        if self.status_code >= 400:
+            raise requests.HTTPError(f"{self.status_code}", response=self)
+
+
+class _Session:
+    """Answers each GET with the next scripted outcome: an exception is raised,
+    a `_Resp` is returned."""
+    def __init__(self, outcomes):
+        self.outcomes, self.calls = list(outcomes), 0
+
+    def get(self, url, timeout):
+        self.calls += 1
+        out = self.outcomes.pop(0)
+        if isinstance(out, BaseException):
+            raise out
+        return out
+
+
+def _fetcher(outcomes):
+    slept, lines = [], []
+    session = _Session(outcomes)
+    # The clock advances only by what was slept, so a politeness wait would show.
+    fetch = am.PoliteFetcher(session=session, sleep=slept.append, clock=lambda: 1e9 + sum(slept),
+                             log=lines.append)
+    return fetch, session, slept, lines
+
+
+def test_a_dropped_connection_is_retried_with_backoff_and_recovers():
+    import requests
+    fetch, session, slept, lines = _fetcher([
+        requests.ConnectionError("RemoteDisconnected"), requests.Timeout("read timed out"),
+        _Resp(200, "page")])
+    assert fetch("https://x/feed") == "page"
+    assert session.calls == 3 and fetch.requests == 3 and fetch.retries == 2
+    # The backoff, never a wall-clock sleep, and never under the politeness floor.
+    assert slept == [10, 30] and all(d >= am.MIN_INTERVAL for d in slept)
+    assert len(lines) == 2 and "retry 1/3 in 10s" in lines[0] and "retry 2/3 in 30s" in lines[1]
+
+
+def test_a_5xx_is_retried_like_a_dropped_connection():
+    fetch, session, slept, _ = _fetcher([_Resp(502), _Resp(200, "page")])
+    assert fetch("https://x/feed") == "page" and slept == [10]
+
+
+def test_retries_that_run_out_raise_feed_unreachable_not_a_refusal():
+    import requests
+    fetch, session, slept, lines = _fetcher(
+        [requests.ConnectionError("RemoteDisconnected")] * 4)
+    with pytest.raises(am.FeedUnreachable, match="after 3 retries") as caught:
+        fetch("https://x/feed")
+    assert not isinstance(caught.value, am.FeedCollapse)
+    assert session.calls == 4 and slept == list(am.RETRY_DELAYS) and len(lines) == 3
+
+
+def test_a_404_is_not_retried():
+    import requests
+    fetch, session, slept, lines = _fetcher([_Resp(404), _Resp(200, "never read")])
+    with pytest.raises(requests.HTTPError):
+        fetch("https://x/feed")
+    assert session.calls == 1 and slept == [] and lines == [] and fetch.retries == 0
+
+
+def test_a_page_that_arrives_and_fails_validation_is_not_retried(tmp_path):
+    """Retrying lives in the fetcher; a refusal is raised AFTER the text
+    arrived, so it fails the run once, exactly as before."""
+    fetch, session, slept, _ = _fetcher([_Resp(200, "{}"), _Resp(200, "never read")])
+    with pytest.raises(am.FeedCollapse):
+        am.refresh(fetch, ["Tsukuyomi"], tmp_path, window_ids=["ob47"], log=lambda *_: None)
+    assert session.calls == 1 and slept == []
+
+
+def test_the_cli_exits_3_when_the_network_fails_and_does_not_say_refused(monkeypatch, capsys):
+    def boom(*a, **k):
+        raise am.FeedUnreachable("ConnectionError on request 184 after 3 retries")
+    monkeypatch.setattr(am, "refresh", boom)
+    monkeypatch.setattr(am, "PoliteFetcher", lambda: type("F", (), {"requests": 184})())
+    assert am.main(["refresh"]) == 3
+    out = capsys.readouterr().out
+    assert "network failure, recovers on the next run" in out and "refused" not in out
+
+
 # -- a patch boundary the range selector has not caught up with ----------------
 #
 # The feed is not filtered by window: it is the newest matches, whatever patch
