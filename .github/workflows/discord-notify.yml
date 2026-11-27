@@ -1,0 +1,58 @@
+name: Discord notify
+
+# Posts to Jacob's #decisions channel when Claude finishes a run (with or without a
+# question for him) and when a pull request from a claude/ branch opens.
+# Secret: DISCORD_DECISIONS_WEBHOOK (the #decisions channel's webhook URL).
+on:
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+
+jobs:
+  run-finished:
+    # Claude edits one tracking comment; its last edit says "Claude finished".
+    if: >-
+      github.event_name == 'issue_comment'
+      && github.event.comment.user.type == 'Bot'
+      && contains(github.event.comment.body, 'Claude finished')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to #decisions
+        env:
+          HOOK: ${{ secrets.DISCORD_DECISIONS_WEBHOOK }}
+          BODY: ${{ github.event.comment.body }}
+          NUM: ${{ github.event.issue.number }}
+          TITLE: ${{ github.event.issue.title }}
+          URL: ${{ github.event.issue.html_url }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          if printf '%s' "$BODY" | grep -q 'Decision needed:'; then
+            q=$(printf '%s' "$BODY" | sed -n '/Decision needed:/,$p' | head -c 1400)
+            msg=$(printf 'Decision needed on %s#%s: %s\n%s\n%s' "$REPO" "$NUM" "$TITLE" "$q" "$URL")
+          else
+            msg=$(printf 'Claude finished %s#%s: %s\n%s' "$REPO" "$NUM" "$TITLE" "$URL")
+          fi
+          jq -n --arg c "$msg" '{content: $c, allowed_mentions: {parse: []}}' \
+            | curl -sS -f -X POST -H 'Content-Type: application/json' --data @- "$HOOK"
+
+  pr-opened:
+    if: >-
+      github.event_name == 'pull_request'
+      && startsWith(github.event.pull_request.head.ref, 'claude/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post to #decisions
+        env:
+          HOOK: ${{ secrets.DISCORD_DECISIONS_WEBHOOK }}
+          NUM: ${{ github.event.pull_request.number }}
+          TITLE: ${{ github.event.pull_request.title }}
+          URL: ${{ github.event.pull_request.html_url }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          msg=$(printf 'PR ready on %s#%s: %s\n%s' "$REPO" "$NUM" "$TITLE" "$URL")
+          jq -n --arg c "$msg" '{content: $c, allowed_mentions: {parse: []}}' \
+            | curl -sS -f -X POST -H 'Content-Type: application/json' --data @- "$HOOK"
